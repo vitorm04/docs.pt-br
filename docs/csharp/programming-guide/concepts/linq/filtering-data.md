@@ -2,12 +2,12 @@
 title: Filtrando dados (C#)
 ms.date: 07/20/2015
 ms.assetid: fbaece0d-0f23-47f7-89c5-f3ea8db692b6
-ms.openlocfilehash: 17d3a65b6042c9679a263eff0048f5360c4aa546
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: eb448c1c2ea6d9b3fcf0120043cafebc01cd3805
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594400"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418468"
 ---
 # <a name="filtering-data-c"></a>Filtrando dados (C#)
 A filtragem é a operação de restringir o conjunto de resultados de forma que ele contenha apenas os elementos correspondentes a uma condição especificada. Ela também é conhecida como seleção.  
@@ -20,7 +20,7 @@ A filtragem é a operação de restringir o conjunto de resultados de forma que 
   
 ## <a name="methods"></a>Métodos  
   
-|Nome do método|DESCRIÇÃO|Sintaxe de expressão de consulta C#|Mais informações|  
+|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |OfType|Seleciona valores, dependendo da capacidade de serem convertidos em um tipo especificado.|Não aplicável.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
 |Where|Seleciona valores com base em uma função de predicado.|`where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|  
@@ -50,7 +50,7 @@ foreach (string str in query)
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
 - [Cláusula where](../../../language-reference/keywords/where-clause.md)
-- [Como: Especificar filtros de predicado dinamicamente em tempo de execução](../../linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
-- [Como: Consultar metadados de um assembly com a reflexão (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [Como: Consultar arquivos com um atributo ou um nome especificado (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [Como: Classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Como especificar filtros predicados dinamicamente em tempo de execução](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)
+- [Como consultar metadados de um assembly com reflexão (LINQ) (C#)](./how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Como consultar arquivos com um atributo ou nome especificado (C#)](./how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

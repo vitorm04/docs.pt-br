@@ -2,15 +2,15 @@
 title: Sessões e filas
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 9d386cbeab68bea170b0f8a52f1ba2e4953708ca
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 6ab2b46325207a06f7ab12a7420765d1d8ae90e4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044733"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417066"
 ---
 # <a name="sessions-and-queues"></a>Sessões e filas
-Este exemplo demonstra como enviar e receber um conjunto de mensagens relacionadas na comunicação em fila por meio do transporte do MSMQ (enfileiramento de mensagens). Este exemplo usa a `netMsmqBinding` associação. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.  
+Este exemplo demonstra como enviar e receber um conjunto de mensagens relacionadas na comunicação em fila por meio do transporte do MSMQ (enfileiramento de mensagens). Este exemplo usa a associação de `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
@@ -20,7 +20,7 @@ Este exemplo demonstra como enviar e receber um conjunto de mensagens relacionad
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Session`  
   
@@ -30,7 +30,7 @@ Este exemplo demonstra como enviar e receber um conjunto de mensagens relacionad
   
  No exemplo, o cliente envia várias mensagens para o serviço como parte de uma sessão dentro do escopo de uma única transação.  
   
- O contrato de serviço `IOrderTaker`é, que define um serviço unidirecional que é adequado para uso com filas. O <xref:System.ServiceModel.SessionMode> usado no contrato mostrado no código de exemplo a seguir indica que as mensagens fazem parte da sessão.  
+ O contrato de serviço é `IOrderTaker`, que define um serviço unidirecional que é adequado para uso com filas. O <xref:System.ServiceModel.SessionMode> usado no contrato mostrado no código de exemplo a seguir indica que as mensagens fazem parte da sessão.  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
@@ -83,7 +83,7 @@ public class OrderTakerService : IOrderTaker
 }  
 ```
 
- O serviço é hospedado internamente. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém <xref:System.Messaging> o código para verificar a existência da fila e a cria, se necessário. O nome da fila é lido no arquivo de configuração usando <xref:System.Configuration.ConfigurationManager.AppSettings%2A> a classe.  
+ O serviço é hospedado internamente. Ao usar o transporte MSMQ, a fila usada deve ser criada com antecedência. Isso pode ser feito manualmente ou por meio de código. Neste exemplo, o serviço contém <xref:System.Messaging> código para verificar a existência da fila e a cria, se necessário. O nome da fila é lido no arquivo de configuração usando a classe <xref:System.Configuration.ConfigurationManager.AppSettings%2A>.  
 
 ```csharp
 // Host the service within this EXE console application.  
@@ -114,7 +114,7 @@ public static void Main()
 }  
 ```
 
- O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração. O ponto de extremidade para o serviço é definido na seção System. ServiceModel do arquivo de configuração e especifica `netMsmqBinding` a associação.  
+ O nome da fila MSMQ é especificado em uma seção appSettings do arquivo de configuração. O ponto de extremidade para o serviço é definido na seção System. serviceModel do arquivo de configuração e especifica a associação de `netMsmqBinding`.  
   
 ```xml  
 <appSettings>  
@@ -138,7 +138,7 @@ public static void Main()
 <system.serviceModel>  
 ```  
   
- O cliente cria um escopo de transação. Todas as mensagens na sessão são enviadas para a fila dentro do escopo da transação, fazendo com que ela seja tratada como uma unidade atômica onde todas as mensagens são bem sucedidas ou falham. A transação é confirmada <xref:System.Transactions.TransactionScope.Complete%2A>chamando.  
+ O cliente cria um escopo de transação. Todas as mensagens na sessão são enviadas para a fila dentro do escopo da transação, fazendo com que ela seja tratada como uma unidade atômica onde todas as mensagens são bem sucedidas ou falham. A transação é confirmada chamando <xref:System.Transactions.TransactionScope.Complete%2A>.  
 
 ```csharp
 //Create a transaction scope.  
@@ -176,7 +176,7 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
   
  No cliente.  
   
-```  
+```console  
 Purchase Order created  
 Adding 10 quantities of blue widget  
 Adding 23 quantities of red widget  
@@ -187,7 +187,7 @@ Press <ENTER> to terminate client.
   
  No serviço.  
   
-```  
+```console  
 The service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -213,11 +213,11 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
 3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- Por padrão, com <xref:System.ServiceModel.NetMsmqBinding>a segurança de transporte está habilitada. Há duas propriedades relevantes para a segurança de transporte do MSMQ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> , <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> e `.` por padrão, o modo de autenticação é `Windows` definido como e o nível de proteção `Sign`é definido como. Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio e a opção de integração do Active Directory para o MSMQ deve ser instalada. Se você executar esse exemplo em um computador que não atenda a esses critérios, receberá um erro.  
+ Por padrão, com a <xref:System.ServiceModel.NetMsmqBinding>, a segurança de transporte está habilitada. Há duas propriedades relevantes para segurança de transporte MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign`. Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio e a opção de integração do Active Directory para o MSMQ deve ser instalada. Se você executar esse exemplo em um computador que não atenda a esses critérios, receberá um erro.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Para executar o exemplo em um computador ingressado em um grupo de trabalho ou sem integração com o Active Directory  
   
-1. Se o seu computador não fizer parte de um domínio ou não tiver a integração do Active Directory instalada, desative a segurança de transporte definindo o modo de autenticação `None` e o nível de proteção como mostrado na seguinte configuração de exemplo.  
+1. Se o seu computador não fizer parte de um domínio ou não tiver a integração do Active Directory instalada, desative a segurança de transporte definindo o modo de autenticação e o nível de proteção como `None`, conforme mostrado na seguinte configuração de exemplo.  
   
     ```xml  
     <system.serviceModel>  
@@ -267,4 +267,4 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
 2. Certifique-se de alterar a configuração no servidor e no cliente antes de executar o exemplo.  
   
     > [!NOTE]
-    > Definir o modo de `None` segurança como é equivalente <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>a <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>definir, `Message` e segurança `None`para.  
+    > Definir o modo de segurança como `None` é equivalente a definir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>e segurança de `Message` para `None`.  

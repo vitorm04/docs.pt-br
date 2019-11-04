@@ -5,16 +5,16 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
-ms.openlocfilehash: 0388bd1fa29ce1caad93c917503dac9eed8974e1
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926395"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416683"
 ---
 # <a name="dependency-loading-in-net-core"></a>Carregamento de dependência no .NET Core
 
-Cada aplicativo .NET Core tem dependências. Até mesmo o `hello world` aplicativo simples tem dependências em partes das bibliotecas de classes do .NET Core.
+Cada aplicativo .NET Core tem dependências. Até mesmo o simples aplicativo de `hello world` tem dependências em partes das bibliotecas de classes do .NET Core.
 
 Entender a lógica de carregamento do assembly padrão do .NET Core pode ajudar a entender e depurar problemas de implantação típicos.
 
@@ -22,7 +22,7 @@ Em alguns aplicativos, as dependências são determinadas dinamicamente no tempo
 
 ## <a name="understanding-assemblyloadcontext"></a>Entendendo o AssemblyLoadContext
 
-A <xref:System.Runtime.Loader.AssemblyLoadContext> API é fundamental para o design de carregamento do .NET Core. O artigo [Understanding AssemblyLoadContext](understanding-assemblyloadcontext.md) fornece uma visão geral conceitual do design.
+A API de <xref:System.Runtime.Loader.AssemblyLoadContext> é fundamental para o design de carregamento do .NET Core. O artigo [Understanding AssemblyLoadContext](understanding-assemblyloadcontext.md) fornece uma visão geral conceitual do design.
 
 ## <a name="loading-details"></a>Carregando detalhes
 
@@ -39,4 +39,4 @@ O tutorial [criar um aplicativo .NET Core com plug-ins](../tutorials/creating-ap
 
 ## <a name="how-to-use-and-debug-assembly-unloadability-in-net-core"></a>Como usar e depurar a capacidade de descarregamento de assembly no .NET Core
 
-O artigo [como usar e depurar a descarga do assembly no .NET Core](../../standard/assembly/unloadability-howto.md) é um tutorial passo a passo. Ele mostra como carregar um aplicativo .NET Core, executá-lo e descarregá-lo. O artigo também fornece dicas de depuração.
+O artigo [como usar e depurar a descarga do assembly no .NET Core](../../standard/assembly/unloadability.md) é um tutorial passo a passo. Ele mostra como carregar um aplicativo .NET Core, executá-lo e descarregá-lo. O artigo também fornece dicas de depuração.

@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 description: Entenda os detalhes do fluxo de trabalho para o desenvolvimento de aplicativos baseados no Docker. Comece o passo a passo e obtenha alguns detalhes para otimizar Dockerfiles e concluir com o fluxo de trabalho simplificado disponível ao usar o Visual Studio.
 ms.date: 01/07/2019
-ms.openlocfilehash: cd599753a5e89504f11226e89837df7665bca641
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8a4d87d84ca59304266a52b0a977f878189108f0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771496"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417244"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento para aplicativos do Docker
 
@@ -117,7 +117,7 @@ Você pode especificar mais definições de configurações no Dockerfile, depen
 ### <a name="additional-resources"></a>Recursos adicionais
 
 - **Criando imagens do Docker para aplicativos do .NET Core** \
-  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
+  [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 
 - **Criar sua própria imagem**. Na documentação oficial do Docker.\
   <https://docs.docker.com/engine/tutorials/dockerimages/>
@@ -135,15 +135,15 @@ Um único repositório pode conter variantes de plataforma, como uma imagem do L
 Ao especificar uma marcação, você direciona a uma plataforma que é explícita, como nos seguintes casos:
 
 - `microsoft/dotnet:2.2-aspnetcore-runtime-stretch-slim` \
-  Destinos: .NET Core 2.2 somente em runtime no Linux
+  Destinos: .NET Core 2.2 somente em tempo de execução no Linux
 
 - `microsoft/dotnet:2.2-aspnetcore-runtime-nanoserver-1809` \
-  Destinos: .NET Core 2.2 somente em runtime no Windows Nano Server
+  Destinos: .NET Core 2.2 somente em tempo de execução no Windows Nano Server
 
 Mas, se você especificar o mesmo nome de imagem, mesmo com a mesma marca, as imagens para várias arquiteturas (como a imagem `aspnetcore`) usarão a versão do Linux ou do Windows, dependendo do sistema operacional do host do Docker em que você esteja implantando, conforme mostrado no exemplo a seguir:
 
 - `microsoft/dotnet:2.2-aspnetcore-runtime` \
-  Várias arquiteturas: .NET Core 2.2 somente em runtime no Linux ou no Windows Nano Server, dependendo do sistema operacional do host do Docker
+  Várias arquiteturas: .NET Core 2.2 somente em tempo de execução no Linux ou no Windows Nano Server, dependendo do sistema operacional do host do Docker
 
 Dessa forma, ao efetuar pull de uma imagem de um host do Windows, será efetuado o pull da variante do Windows e, ao efetuar pull do mesmo nome de imagem de um host do Linux, será efetuado pull da variante do Linux.
 
@@ -165,7 +165,7 @@ Resumindo, os builds de vários estágios permitem dividir a criação em "fases
 
 1. usar uma imagem base do SDK (não importa quão grande), com todos os componentes necessários para criar e publicar o aplicativo em uma pasta e, em seguida,
 
-2. usar uma imagem base pequena, somente em runtime e copiar a pasta de publicação do estágio anterior para produzir uma pequena imagem final.
+2. usar uma imagem base pequena, somente em tempo de execução e copiar a pasta de publicação do estágio anterior para produzir uma pequena imagem final.
 
 Provavelmente a melhor maneira de entender os vários estágios é percorrer um Dockerfile detalhadamente, linha por linha, então, vamos começar com o Dockerfile inicial criado pelo Visual Studio ao adicionar o suporte ao Docker a um projeto e entraremos em algumas otimizações mais tarde.
 

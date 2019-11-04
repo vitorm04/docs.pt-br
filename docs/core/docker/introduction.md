@@ -3,12 +3,12 @@ title: Introdução ao Docker
 description: Este artigo fornece uma visão geral e introdução ao Docker no contexto de um aplicativo .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: af1213eefb013f8911a865e7e2e318a8beadc9a5
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 7f19b12d84543e8ae69c2f8728872bf94ef0536f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038457"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416633"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
@@ -22,7 +22,7 @@ Há alguns conceitos que você deve conhecer. O cliente do Docker tem um program
 
 ### <a name="images"></a>Imagens
 
-Uma imagem é uma coleção ordenada de alterações no sistema de arquivos que formam a base de um contêiner. A imagem não tem um estado e é somente leitura. Na maior parte das vezes, uma imagem é baseada em outra imagem, mas com alguma personalização. Por exemplo, quando você cria uma nova imagem para o aplicativo, você a baseará em uma imagem existente que já contenha o runtime do .NET Core.
+Uma imagem é uma coleção ordenada de alterações no sistema de arquivos que formam a base de um contêiner. A imagem não tem um estado e é somente leitura. Na maior parte das vezes, uma imagem é baseada em outra imagem, mas com alguma personalização. Por exemplo, quando você cria uma nova imagem para o aplicativo, você a baseará em uma imagem existente que já contenha o tempo de execução do .NET Core.
 
 Como os contêineres são criados de imagens, as imagens têm um conjunto de parâmetros de execução (como um executável inicial) que são executados quando o contêiner é iniciado.
 
@@ -72,7 +72,7 @@ Armazene e gerencie imagens de contêiner em todos os tipos de implantações do
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Saiba como colocar em contêiner um aplicativo .NET Core.](build-docker-netcore-container.md)
+- [Saiba como colocar em contêiner um aplicativo .NET Core.](build-container.md)
 - [Aprenda a colocar em contêiner um aplicativo ASP.NET Core.](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
 - [Experimente o tutorial Saiba mais sobre o Microsserviço do ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [Saiba mais sobre as Ferramentas de Contêiner no Visual Studio](/visualstudio/containers/overview)

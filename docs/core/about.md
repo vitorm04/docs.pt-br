@@ -2,12 +2,12 @@
 title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 51e4f3784db58e23ab4293c2d9f4e52e0d6617b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093436"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416743"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -16,7 +16,7 @@ O .NET Core tem as seguintes características:
 - **Plataforma cruzada:** É executado em [sistemas operacionais](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)Windows, MacOS e Linux.
 - **Consistente entre arquiteturas:** executa o código com o mesmo comportamento em várias arquiteturas, incluindo x64, x86 e ARM.
 - **Ferramentas de Linha de Comando:** inclui ferramentas de linha de comando fáceis de usar, para desenvolvimento local e em cenários de integração contínua.
-- **Implantação flexível:** Pode ser incluído em seu aplicativo ou instalado lado a lado (instalações de todo o usuário ou do sistema). Pode ser usado com os [contêineres do Docker](docker/index.md).
+- **Implantação flexível:** Pode ser incluído em seu aplicativo ou instalado lado a lado (instalações de todo o usuário ou do sistema). Pode ser usado com os [contêineres do Docker](docker/introduction.md).
 - **Compatível:** o .NET Core é compatível com .NET Framework, Xamarin e mono, via [.net Standard](../standard/net-standard.md).
 - **Código-fonte aberto:** a plataforma do .NET Core é um software livre que usa licenças do MIT e Apache 2. O .NET Core é um projeto do [.NET Foundation](https://dotnetfoundation.org/).
 - **Suporte da Microsoft:** a Microsoft dá suporte ao .NET Core por meio do [Suporte do .NET Core](https://dotnet.microsoft.com/platform/support/policy).
@@ -75,7 +75,7 @@ O [.NET Core](https://github.com/dotnet/core) é um software livre ([licença MI
 
 O .NET Core foi criado como um produto muito semelhante, mas exclusivo, comparado a outros produtos .NET. Ele foi projetado para permitir maior adaptabilidade a novas plataformas e cargas de trabalho e tem várias portas de sistema operacional e CPU disponíveis (e pode ser portada para muitos outros).
 
-O produto é dividido em várias partes que podem se adaptar a novas plataformas em momentos diferentes. O runtime e as bibliotecas fundamentais específicas de plataformas devem ser transportados como uma unidade. Bibliotecas independentes de plataforma devem funcionar no estado em que se encontra em todas as plataformas como-está em todas as plataformas desde a construção. Há uma tendência de projeto em relação à redução de implementações específicas da plataforma para aumentar a eficiência do desenvolvedor C# , o código de plataforma neutra de preferência sempre que um algoritmo ou API pode ser implementado de forma completa ou parcial.
+O produto é dividido em várias partes que podem se adaptar a novas plataformas em momentos diferentes. O tempo de execução e as bibliotecas fundamentais específicas de plataformas devem ser transportados como uma unidade. Bibliotecas independentes de plataforma devem funcionar no estado em que se encontra em todas as plataformas como-está em todas as plataformas desde a construção. Há uma tendência de projeto em relação à redução de implementações específicas da plataforma para aumentar a eficiência do desenvolvedor C# , o código de plataforma neutra de preferência sempre que um algoritmo ou API pode ser implementado de forma completa ou parcial.
 
 As pessoas geralmente perguntam como o .NET Core é implementado para dar suporte a vários sistemas operacionais. Eles normalmente perguntam se há implementações separadas ou se a [compilação condicional](https://en.wikipedia.org/wiki/Conditional_compilation) é usada. A resposta é ambas, com uma forte tendência para a compilação condicional.
 
@@ -109,7 +109,7 @@ Principais diferenças entre o .NET Core e o .NET Framework:
 
 Embora o .NET Core seja exclusivo e tenha diferenças significativas no .NET Framework e em outras implementações do .NET, é simples compartilhar o código entre essas implementações, usando técnicas de compartilhamento de origem ou binária.
 
-Como o .NET Core é compatível com a instalação lado a lado, e seu runtime é completamente independente do .NET Framework, ele pode ser instalado em computadores com o .NET Framework instalado sem problemas.
+Como o .NET Core é compatível com a instalação lado a lado, e seu tempo de execução é completamente independente do .NET Framework, ele pode ser instalado em computadores com o .NET Framework instalado sem problemas.
 
 ### <a name="comparison-with-mono"></a>Comparação com Mono
 

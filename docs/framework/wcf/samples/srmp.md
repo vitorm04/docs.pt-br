@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: e3015e7185fd52a1161b91c74dee57f694fbeebd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 51b0e0513ba20bf7aeae461dee6ac864f1d55897
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044711"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417090"
 ---
 # <a name="srmp"></a>SRMP
 Este exemplo demonstra como executar a comunicação em fila transacionada usando o MSMQ (enfileiramento de mensagens) via HTTP.  
@@ -28,7 +28,7 @@ Este exemplo demonstra como executar a comunicação em fila transacionada usand
   
 5. Se você quiser ter certeza de que o HTTP é usado para comunicação, você pode habilitar o MSMQ para ser executado no modo protegido. Isso garante que nenhuma mensagem para qualquer fila hospedada no computador possa chegar usando qualquer transporte não HTTP.  
   
-6. Depois de selecionar o MSMQ para execução no modo de proteção, o computador exigirá uma reinicialização [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]em.  
+6. Depois de selecionar o MSMQ para execução no modo protegido, o computador requer uma reinicialização no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
   
 7. Executar o serviço.  
   
@@ -77,7 +77,7 @@ Este exemplo demonstra como executar a comunicação em fila transacionada usand
   
  A execução da amostra produz a saída a seguir.  
   
-```  
+```console  
 Processing Purchase Order: 556b70be-31ee-4a3b-8df4-ed5e538015a4   
 Customer: somecustomer.com   
 OrderDetails   
@@ -92,6 +92,6 @@ OrderDetails
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  

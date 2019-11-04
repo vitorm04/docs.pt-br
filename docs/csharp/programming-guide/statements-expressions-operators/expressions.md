@@ -6,12 +6,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: 2db08bd89b5e0fc612599f83cb02178aef5ee5fb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774175"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417690"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressões (Guia de Programação em C#)
 
@@ -47,7 +47,7 @@ System.Convert.ToInt32("35");
   
  [!code-csharp[csProgGuideStatements#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#2)]  
   
- Para obter mais informações sobre literais, consulte [Tipos](../../language-reference/keywords/types.md).  
+ Para obter mais informações sobre literais, consulte [Tipos](/dotnet/csharp/language-reference/keywords).  
   
  No exemplo anterior, `i` e `s` são nomes simples que identificam variáveis locais. Quando essas variáveis são usadas em uma expressão, o nome da variável é avaliado como o valor armazenado atualmente no local da variável na memória. Isso é mostrado no exemplo a seguir:  
   

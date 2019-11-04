@@ -2,12 +2,12 @@
 title: Programação orientada a objeto (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 50b38833582ebe46836ccfab4e1ebeb98b53a96e
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
-ms.translationtype: HT
+ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69659876"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418044"
 ---
 # <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
 
@@ -241,7 +241,7 @@ Os modificadores de acesso a seguir estão disponíveis:
 |[protected internal](../../language-reference/keywords/protected-internal.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|
 |[private protected](../../language-reference/keywords/private-protected.md)|O tipo ou membro pode ser acessado pelo código na mesma classe ou em uma classe derivada no assembly da classe base.|
 
-Para obter mais informações, consulte [Modificadores de Acesso](../classes-and-structs/access-modifiers.md).
+Para obter mais informações, consulte [Modificadores de acesso](../classes-and-structs/access-modifiers.md).
 
 ### <a name="InstantiatingClasses"></a> Instanciando classes
 
@@ -309,7 +309,7 @@ var sampleObject =
     new { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Para obter mais informações, consulte: [Tipos Anônimos](../classes-and-structs/anonymous-types.md).
+Para obter mais informações, consulte [Tipos Anônimos](../classes-and-structs/anonymous-types.md).
 
 ## <a name="Inheritance"></a> Herança
 
@@ -450,7 +450,7 @@ Para obter mais informações, consulte:
 
 - [Delegados](../delegates/index.md)
 
-- [delegate](../../language-reference/keywords/delegate.md)
+- [delegate](../../language-reference/builtin-types/reference-types.md)
 
 ## <a name="see-also"></a>Consulte também
 

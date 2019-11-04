@@ -2,12 +2,12 @@
 title: Convertendo Tipos de Dados (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 9e8b7726b94871a17a4be50a9b24d8b73abcf79c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ddd9407c3b7e25dbfb8fc0bddb5daab7db2e4e53
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594635"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418611"
 ---
 # <a name="converting-data-types-c"></a>Convertendo Tipos de Dados (C#)
 Os métodos de conversão alteram o tipo dos objetos de entrada.  
@@ -25,7 +25,7 @@ Os métodos de conversão alteram o tipo dos objetos de entrada.
   
  Os métodos de conversão nesta tabela cujos nomes começam com "As" alteram o tipo estático da coleção de origem, mas não a enumeram. Os métodos cujos nomes começam com "To" enumeram a coleção de origem e colocam os itens na coleção de tipo correspondente.  
   
-|Nome do método|DESCRIÇÃO|Sintaxe de expressão de consulta C#|Mais informações|  
+|Nome do método|Descrição|Sintaxe de expressão de consulta C#|Mais informações|  
 |-----------------|-----------------|---------------------------------|----------------------|  
 |AsEnumerable|Retorna a entrada digitada como <xref:System.Collections.Generic.IEnumerable%601>.|Não aplicável.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
 |AsQueryable|Converte um <xref:System.Collections.IEnumerable> (genérico) em um <xref:System.Linq.IQueryable> (genérico).|Não aplicável.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
@@ -79,5 +79,5 @@ static void Cast()
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)
 - [Cláusula From](../../../language-reference/keywords/from-clause.md)
-- [Expressões de consulta LINQ](../../linq-query-expressions/index.md)
-- [Como: Consultar uma ArrayList com LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)
+- [Expressões de consulta LINQ](../../../linq/index.md)
+- [Como consultar um ArrayList com LINQ (C#)](./how-to-query-an-arraylist-with-linq.md)

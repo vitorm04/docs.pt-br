@@ -8,18 +8,20 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 77db5201ab21dff1f04f76da5dd10d07aa377813
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a7ddaac56177d13248caf6559221fff26d2d2c00
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191814"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416728"
 ---
 # <a name="c-guide"></a>Guia de C#
 
 O guia do C# fornece muitos recursos sobre a linguagem C#. Este site tem vários públicos diferentes. Dependendo de sua experiência com programação ou com a linguagem C# e .NET, convém explorar as diferentes seções deste guia.
 
 - Para desenvolvedores novatos:
+  - Assista à [ C# série de vídeos 101](https://aka.ms/dotnet3-csharp). Ele fornece uma introdução aos conceitos importantes que você explorará nesses tutoriais.
+
   - Comece com os [tutoriais de introdução ao C#](tutorials/intro-to-csharp/index.md). Eles permitem explorar a linguagem C# de maneira interativa no seu navegador. Depois, você pode seguir para outros [tutoriais](tutorials/index.md). Esses tutoriais mostram como criar programas em C# desde o início. Os tutoriais fornecem um processo passo a passo para criar programas. Eles mostram os conceitos da linguagem e como você mesmo pode criar programas em C#. Se você preferir ler primeiro as informações da visão geral, faça o [Tour da linguagem C#](tour-of-csharp/index.md). Ele explica os conceitos da linguagem C#. Depois de ler isso, você terá uma compreensão básica da linguagem e estará pronto para experimentar os tutoriais ou criar algo por conta própria.
 
 - Para os desenvolvedores que não conhecem o C#:
@@ -61,7 +63,7 @@ Há várias seções no Guia do C#. Você pode lê-los em ordem ou ir diretament
 - [Referência de Linguagem](language-reference/index.md)
   - Esta seção contém o material de referência sobre a linguagem C#. Este material ajudar a entender a sintaxe e a semântica do C#. Ele também inclui um material de referência sobre tipos, operadores, atributos, diretivas de pré-processador, opções de compilador, erros de compilador e avisos de compilador do C#.
 
-- [C# Language Specification](./language-reference/language-specification/index.md) (Especificação da linguagem C#)
+- [C# Language Specification](/dotnet/csharp/language-reference/language-specification/introduction) (Especificação da linguagem C#)
   - Links para as versões mais recentes da especificação da linguagem C#.
 
 ## <a name="see-also"></a>Consulte também

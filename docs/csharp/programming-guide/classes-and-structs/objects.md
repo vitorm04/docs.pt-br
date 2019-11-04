@@ -6,20 +6,20 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 3319cfa6b98e3f4b9b8afa070c4784c03d2750ef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 1b3ceb2671a4c21f1df89599c9b8c0bc107a7435
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596379"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419265"
 ---
 # <a name="objects-c-programming-guide"></a>Objetos (Guia de Programação em C#)
 Uma definição de classe ou struct é como um esquema que especifica o que o tipo pode fazer. Um objeto é basicamente um bloco de memória que foi alocado e configurado de acordo com o esquema. Um programa pode criar vários objetos da mesma classe. Objetos também são chamados de instâncias e podem ser armazenados em uma variável nomeada ou em uma matriz ou coleção. O código de cliente é o código que usa essas variáveis para chamar os métodos e acessar as propriedades públicas do objeto. Em uma linguagem orientada a objetos, como o C#, um programa típico consiste em vários objetos que interagem dinamicamente.  
   
 > [!NOTE]
-> Tipos estáticos se comportam de modo diferente do que está descrito aqui. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](./static-classes-and-static-class-members.md).
+> Tipos estáticos se comportam de modo diferente do que está descrito aqui. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](./static-classes-and-static-class-members.md).
   
-## <a name="struct-instances-vs-class-instances"></a>Instâncias de struct versus Instâncias de Classe  
+## <a name="struct-instances-vs-class-instances"></a>Instâncias de struct versus instâncias de classe  
  Como as classes são tipos de referência, uma variável de um objeto de classe contém uma referência ao endereço do objeto no heap gerenciado. Se um segundo objeto do mesmo tipo for atribuído ao primeiro objeto, as duas variáveis farão referência ao objeto nesse endereço. Esse ponto é abordado com mais detalhes posteriormente neste tópico.  
   
  Instâncias de classes são criadas usando o [operador new](../../language-reference/operators/new-operator.md). No exemplo a seguir, `Person` é o tipo e `person1` e `person 2` são instâncias ou objetos desse tipo.  
@@ -35,7 +35,7 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
 > [!NOTE]
 > A alocação e a desalocação de memória no heap gerenciado é altamente otimizada no Common Language Runtime. Na maioria dos casos, não há uma diferença significativa quanto ao custo do desempenho de alocar uma instância da classe no heap em vez de alocar uma instância de struct na pilha.
   
-## <a name="object-identity-vs-value-equality"></a>Identidade de objeto versus Igualdade de Valor  
+## <a name="object-identity-vs-value-equality"></a>Identidade do objeto versus igualdade de valor  
  Quando compara dois objetos quanto à igualdade, primeiro você precisa distinguir se quer saber se as duas variáveis representam o mesmo objeto na memória ou se os valores de um ou mais de seus campos são equivalentes. Se estiver pretendendo comparar valores, você precisa considerar se os objetos são instâncias de tipos de valor (structs) ou tipos de referência (classes, delegados, matrizes).  
   
 - Para determinar se duas instâncias de classe se referem ao mesmo local na memória (o que significa que elas têm a mesma *identidade*), use o método <xref:System.Object.Equals%2A> estático. (<xref:System.Object?displayProperty=nameWithType> é a classe base implícita para todos os tipos de valor e tipos de referência, incluindo classes e structs definidos pelo usuário.)  
@@ -53,7 +53,7 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
   
 - [Classes](./classes.md)  
   
-- [Estruturas](./structs.md)  
+- [Structs](./structs.md)  
   
 - [Construtores](./constructors.md)  
   
@@ -64,7 +64,7 @@ Uma definição de classe ou struct é como um esquema que especifica o que o ti
 ## <a name="see-also"></a>Consulte também
 
 - [Guia de Programação em C#](../index.md)
-- [object](../../language-reference/keywords/object.md)
+- [object](../../language-reference/builtin-types/reference-types.md)
 - [Herança](./inheritance.md)
 - [class](../../language-reference/keywords/class.md)
 - [struct](../../language-reference/keywords/struct.md)

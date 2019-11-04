@@ -2,18 +2,20 @@
 title: Tutoriais do C#
 description: Explore estes tutoriais do c# para aprender a criar programas em c# e conhecer os recursos da linguagem c#.
 ms.date: 10/25/2018
-ms.openlocfilehash: c2dd00505afbf4d8bc3f213a2f87751fe452f253
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
-ms.translationtype: HT
+ms.openlocfilehash: 3f3ca31c0fdeb5d7c60b25c4b45399569cc919b4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557176"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417107"
 ---
 # <a name="c-tutorials"></a>Tutoriais do C#
 
 Bem-vindo aos tutoriais do C#. Eles começam com lições interativas que podem ser executadas em seu navegador. Os tutoriais posteriores e os tutoriais mais avançados ajudam você a trabalhar com as ferramentas de desenvolvimento do .NET para criar programas em C# em seu computador.
 
 ## <a name="introduction-to-c-interactive-tutorials"></a>Tutoriais interativos de introdução ao C#
+
+Se você quiser iniciar sua exploração em formato de vídeo, a [ C# série de vídeos 101](https://aka.ms/dotnet3-csharp) fornece uma introdução C#ao. Você aprenderá sobre os conceitos que pode explorar nesses tutoriais.
 
 As primeiras lições explicam os conceitos de C# usando pequenos snippets de código. Você aprenderá os conceitos básicos da sintaxe de C# e como trabalhar com tipos de dados como cadeias de caracteres, números e valores boolianos. É tudo interativo e você começará a gravar e executar o código em questão de minutos. Estas primeiras lições não exigem conhecimento prévio de programação ou da linguagem C#.
 
@@ -37,7 +39,7 @@ Esse tutorial pressupõe a conclusão das lições [Olá, Mundo](intro-to-csharp
 
 A lição [Coleções de lista](intro-to-csharp/list-collection.yml) fornece um tour pelo tipo Coleções de lista que armazena as sequências de dados. Você aprenderá a adicionar e remover itens, pesquisar itens e classificar listas. Você explorará os diferentes tipos de listas. Este tutorial também está disponível [para execução local no seu computador](intro-to-csharp/arrays-and-collections.md).
 
-Este tutorial pressupõe a conclusão das lições listadas acima.
+Esse tutorial pressupõe a conclusão das lições listadas acima.
 
 ## <a name="introduction-to-c----work-locallyintro-to-csharplocal-environmentmd"></a>[Introdução ao C# – trabalhar localmente](intro-to-csharp/local-environment.md)
 
@@ -45,12 +47,12 @@ Todos os tutoriais de introdução posteriores à lição Olá, Mundo estão dis
 
 ## <a name="explore-new-features-in-c"></a>Explore novos recursos no C\#
 
-* [Experimente interativamente os novos recursos no C# 6](exploration/csharp-6.yml): Explore os recursos adicionados no [C# 6](../whats-new/csharp-6.md) interativamente no navegador.
+* [Experimente os novos recursos C# em 6 de forma interativa](exploration/csharp-6.yml): Explore os recursos adicionados em [ C# 6](../whats-new/csharp-6.md) de forma interativa em seu navegador.
 * [Interpolação de cadeia de caracteres](string-interpolation.md): demonstra como usar interpolação de cadeia de caracteres para criar cadeias de caracteres formatadas em C#.
 * [Tipos de referência nula](nullable-reference-types.md): demonstra como usar tipos de referência nula para expressar sua intenção para referências nulas.
 * [Atualizar um projeto para usar tipos de referência que permitem valor nulo](upgrade-to-nullable-references.md): demonstra técnicas para atualizar um projeto existente a fim de usar tipos de referência que permitem valor nulo.
 * [Estender recursos de dados usando a correspondência de padrões](pattern-matching.md): demonstra como usar a correspondência de padrões a fim de estender os tipos para além dos principais recursos.
-* [Trabalhar com sequências de dados, usando índices e intervalos](ranges-indexes.md): Demonstra a nova sintaxe conveniente para acessar os elementos únicos ou intervalos de um contêiner de dados sequencial.
+* [Trabalhar com sequências de dados usando índices e intervalos](ranges-indexes.md): demonstra uma nova sintaxe conveniente para acessar elementos únicos ou intervalos de um contêiner de dados sequenciais.
 
 ## <a name="general-tutorials"></a>Tutoriais gerais
 

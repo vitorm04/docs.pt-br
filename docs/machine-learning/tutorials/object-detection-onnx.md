@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 08/27/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6d13e7e4788dfd2bad6fd26015d76342b38f1142
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774444"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420049"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: detectar objetos usando ONNX no ML.NET
 
@@ -45,7 +45,7 @@ Este exemplo cria um aplicativo de console .NET Core que detecta objetos em uma 
 
 A detecção de objetos é um problema da pesquisa visual computacional. Embora esteja bem relacionada à classificação de imagem, a detecção de objetos executa a classificação de imagem em uma escala mais granular. A detecção de objetos localiza _e_ categoriza entidades dentro de imagens. Use a detecção de objetos quando as imagens contiverem vários objetos de tipos diferentes.
 
-![Imagens lado a lado mostrando a classificação de imagem de um cachorro à esquerda e a classificação de objeto de um grupo em um cachorro mostrada à direita](./media/object-detection-onnx/img-classification-obj-detection.PNG)
+![Capturas de tela mostrando classificação de imagem versus classificação de objeto.](./media/object-detection-onnx/img-classification-obj-detection.png)
 
 Alguns casos de uso para detecção de objetos incluem:
 
@@ -66,7 +66,7 @@ Há diferentes tipos de redes neurais, as mais comuns são a MLP (Perceptron Mul
 
 A detecção de objetos é uma tarefa de processamento de imagem. Portanto, os modelos de aprendizado profundo mais treinados para resolver esse problema são as CNNs. O modelo usado neste tutorial é o pequeno modelo de YOLOv2, uma versão mais compacta do modelo YOLOv2 descrito no documento: ["YOLO9000: melhor, mais rápido e mais forte" por Redmon e Fadhari](https://arxiv.org/pdf/1612.08242.pdf). O Tiny YOLOv2 é treinado no conjunto de dados do Pascal VOC e é composto por 15 camadas que podem prever 20 classes diferentes de objetos. Como o Tiny YOLOv2 é uma versão condensada do modelo YOLOv2 original, é feita uma compensação entre velocidade e precisão. As diferentes camadas que compõem o modelo podem ser visualizadas usando ferramentas como o Netron. Inspecionar o modelo produziria um mapeamento das conexões entre todas as camadas que compõem a rede neural, em que cada camada conteria o nome da camada junto com as dimensões da respectiva entrada/saída. As estruturas de dados usadas para descrever as entradas e as saídas do modelo são conhecidas como tensores. Os tensores podem ser entendidos como contêineres que armazenam dados em N dimensões. No caso do Tiny YOLOv2, o nome da camada de entrada é `image` e ele espera um tensor de dimensões `3 x 416 x 416`. O nome da camada de saída é `grid` e gera um tensor de saída de dimensões `125 x 13 x 13`.
 
-![Camada de entrada sendo dividida em camadas ocultas e, em seguida, camada de saída](./media/object-detection-onnx/netron-model-map.png)
+![Camada de entrada sendo dividida em camadas ocultas e, em seguida, camada de saída](./media/object-detection-onnx/netron-model-map-layers.png)
 
 O modelo YOLO usa uma imagem `3(RGB) x 416px x 416px`. O modelo usa essa entrada e a passa pelas diferentes camadas para produzir uma saída. A saída divide a imagem de entrada em uma grade `13 x 13`, com cada célula na grade consistindo em `125` valores.
 
@@ -74,11 +74,11 @@ O modelo YOLO usa uma imagem `3(RGB) x 416px x 416px`. O modelo usa essa entrada
 
 O ONNX (Open Neural Network Exchange) é um formato de software livre para modelos de IA. O ONNX é compatível com a interoperabilidade entre estruturas. Isso significa que você pode treinar um modelo em uma das muitas estruturas de aprendizado de máquina populares, como PyTorch, convertê-la em formato ONNX e consumir o modelo ONNX em uma estrutura diferente, como ML.NET. Para saber mais, visite o [site do ONNX](https://onnx.ai/).
 
-![Formatos com suporte ONNX sendo importados para ONNX e, em seguida, usados por outros formatos com suporte do ONNX](./media/object-detection-onnx/onnx-frameworks.png)
+![Diagrama de formatos com suporte ONNX que estão sendo usados.](./media/object-detection-onnx/onyx-supported-formats.png)
 
 O modelo Tiny YOLOv2 pré-treinado é armazenado no formato ONNX, uma representação serializada das camadas e dos padrões aprendidos dessas camadas. No ML.NET, a interoperabilidade com o ONNX é obtida com os pacotes NuGet [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) e [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer). O pacote [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) contém uma série de transformações que pegam uma imagem e a codificam em valores numéricos que podem ser usados como entrada em um pipeline de previsão ou de treinamento. O pacote [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) aproveita o tempo de execução do ONNX para carregar um modelo ONNX e usá-lo para fazer previsões com base na entrada fornecida.
 
-![Fluxo de dados do arquivo ONNX para o tempo de execução do ONNX e C# , finalmente, para o aplicativo](./media/object-detection-onnx/onnx-ml-net-integration.png)
+![Fluxo de dados do arquivo ONNX para o tempo de execução do ONNX.](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
 ## <a name="set-up-the-net-core-project"></a>Configurar o projeto do .NET Core
 
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 Para ver as imagens com as caixas delimitadoras, navegue até o diretório `assets/images/output/`. Abaixo está um exemplo de uma das imagens processadas.
 
-![Exemplo de imagem processada de uma sala dinning](./media/object-detection-onnx/image3.jpg)
+![Exemplo de imagem processada de uma sala dinning](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
 Parabéns! Você criou com êxito um modelo de machine learning para detecção de objetos reutilizando um modelo `ONNX` pré-treinado no ML.NET.
 

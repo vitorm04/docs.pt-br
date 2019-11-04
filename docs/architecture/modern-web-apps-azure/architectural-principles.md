@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Pr
 author: ardalis
 ms.author: wiwagn
 ms.date: 02/16/2019
-ms.openlocfilehash: 91bb3be207c9919eb7eb0119e96e76aae94858be
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373760"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416694"
 ---
 # <a name="architectural-principles"></a>Princípios de arquitetura
 
@@ -75,7 +75,7 @@ Em vez de duplicar a lógica, encapsule-a em um constructo de programação. Tor
 
 ### <a name="persistence-ignorance"></a>Ignorância de persistência
 
-A **PI** (ignorância de persistência) refere-se aos tipos que precisam ser persistidos, mas cujo código não é afetado pela opção de tecnologia de persistência. Esses tipos no .NET são, às vezes, chamados de POCOs (Objetos CRL Básicos), pois não precisam herdar de uma classe base específica nem implementar uma interface específica. A ignorância de persistência é importante porque permite que o mesmo modelo de negócios seja persistente de várias maneiras, oferecendo flexibilidade adicional ao aplicativo. As opções de persistência podem ser alteradas ao longo do tempo, de uma tecnologia de banco de dados para outra ou outras formas de persistência podem ser necessárias, além daquela com a qual o aplicativo começou (por exemplo, o uso do Cache Redis ou do Azure DocumentDB, além um banco de dados relacional).
+A **PI** (ignorância de persistência) refere-se aos tipos que precisam ser persistidos, mas cujo código não é afetado pela opção de tecnologia de persistência. Esses tipos no .NET são, às vezes, chamados de POCOs (Objetos CRL Básicos), pois não precisam herdar de uma classe base específica nem implementar uma interface específica. A ignorância de persistência é importante porque permite que o mesmo modelo de negócios seja persistente de várias maneiras, oferecendo flexibilidade adicional ao aplicativo. As escolhas de persistência podem mudar ao longo do tempo, de uma tecnologia de banco de dados para outra, ou podem ser necessárias formas adicionais de persistência além de qualquer coisa com que o aplicativo foi iniciado (por exemplo, usando um cache Redis ou Azure Cosmos DB além de um banco de dados relacional).
 
 Alguns exemplos de violações desse princípio incluem:
 
@@ -101,7 +101,7 @@ No mínimo, os aplicativos Web individuais devem tentar ser seu próprio context
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- [JAVA Design Patterns: Principles](https://java-design-patterns.com/principles/) (Padrões de design do JAVA: princípios)
+- [Padrões de design JAVA: princípios](https://java-design-patterns.com/principles/)
 - [Contexto limitado](https://martinfowler.com/bliki/BoundedContext.html)
 
 >[!div class="step-by-step"]

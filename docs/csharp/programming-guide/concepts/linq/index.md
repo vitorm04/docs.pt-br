@@ -2,12 +2,12 @@
 title: LINQ (Consulta Integrada à Linguagem) (C#)
 ms.date: 02/02/2017
 ms.assetid: 19dd1782-905b-4a9d-a3e9-618453037fa2
-ms.openlocfilehash: d75c34cd63eb439203ef6757e62e18936eb3606a
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 07a9d68c042d524ee9faba8122b406a81e816378
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773917"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418237"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ (Consulta Integrada à Linguagem)
 
@@ -40,7 +40,7 @@ A seguinte ilustração do Visual Studio mostra uma consulta LINQ parcialmente c
 
 Para obter mais detalhes sobre o LINQ, comece se familiarizando com alguns conceitos básicos em [Noções básicas sobre expressões de consulta](../../../linq/query-expression-basics.md), e, em seguida, leia a documentação para a tecnologia LINQ na qual você está interessado:
 
-- Documentos XML: [LINQ to XML](linq-to-xml.md)  
+- Documentos XML: [LINQ to XML](linq-to-xml-overview.md)  
 - ADO.NET Entity Framework: [LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - Coleções do .NET, arquivos, cadeias de caracteres, etc.: [LINQ to Objects](linq-to-objects.md)
 

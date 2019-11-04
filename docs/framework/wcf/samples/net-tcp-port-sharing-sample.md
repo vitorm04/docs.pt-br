@@ -2,12 +2,12 @@
 title: Exemplo de compartilhamento de porta Net.TCP
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 56d248a8349e4f38bfdef6a887fc41b117402d02
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 240579ef36405d730bb04ea171846c8e5ef9322e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039194"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416752"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Exemplo de compartilhamento de porta Net.TCP
 O protocolo TCP/IP usa um número de 16 bits, chamado de porta, para diferenciar as conexões a vários aplicativos de rede em execução no mesmo computador. Se um aplicativo estiver escutando em uma porta, todo o tráfego TCP dessa porta vai para esse aplicativo. Outros aplicativos não podem escutar nessa porta ao mesmo tempo.  
@@ -17,7 +17,7 @@ O protocolo TCP/IP usa um número de 16 bits, chamado de porta, para diferenciar
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\PortSharing`  
   
@@ -25,16 +25,16 @@ O protocolo TCP/IP usa um número de 16 bits, chamado de porta, para diferenciar
   
  O compartilhamento de porta NetTcp é um recurso de Windows Communication Foundation (WCF) que, de maneira semelhante, permite que vários aplicativos de rede compartilhem uma única porta. O serviço de compartilhamento de porta NetTcp aceita conexões usando o protocolo net. TCP e encaminha mensagens com base em seu endereço de destino.  
   
- O serviço de compartilhamento de porta NetTcp não está habilitado por padrão. Antes de executar este exemplo, você deve habilitar manualmente o serviço. Para obter mais informações, confira [Como: Habilite o serviço](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)de compartilhamento de porta Net. TCP. Se o serviço estiver desabilitado, uma exceção será lançada quando o aplicativo do servidor for iniciado.  
+ O serviço de compartilhamento de porta NetTcp não está habilitado por padrão. Antes de executar este exemplo, você deve habilitar manualmente o serviço. Para obter mais informações, consulte [como habilitar o serviço de compartilhamento de porta Net. TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md). Se o serviço estiver desabilitado, uma exceção será lançada quando o aplicativo do servidor for iniciado.  
   
-```  
+```console
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
 ```  
   
- O compartilhamento de porta está habilitado no servidor definindo a <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> propriedade <xref:System.ServiceModel.NetTcpBinding> da associação ou o <xref:System.ServiceModel.Channels.TcpTransportBindingElement> elemento de associação. O cliente não precisa saber como o compartilhamento de porta foi configurado para usá-lo no servidor.  
+ O compartilhamento de porta está habilitado no servidor, definindo a propriedade <xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> da Associação <xref:System.ServiceModel.NetTcpBinding> ou o elemento de associação <xref:System.ServiceModel.Channels.TcpTransportBindingElement>. O cliente não precisa saber como o compartilhamento de porta foi configurado para usá-lo no servidor.  
   
 ## <a name="enabling-port-sharing"></a>Habilitando o compartilhamento de porta  
- O código a seguir demonstra como habilitar o compartilhamento de porta no servidor. Ele inicia uma instância do `ICalculator` serviço em uma porta fixa com um caminho de URI aleatório. Embora dois serviços possam compartilhar a mesma porta, seus endereços de ponto de extremidade gerais ainda devem ser exclusivos para que o serviço de compartilhamento de porta NetTcp possa rotear mensagens para o aplicativo correto.  
+ O código a seguir demonstra como habilitar o compartilhamento de porta no servidor. Ele inicia uma instância do serviço de `ICalculator` em uma porta fixa com um caminho de URI aleatório. Embora dois serviços possam compartilhar a mesma porta, seus endereços de ponto de extremidade gerais ainda devem ser exclusivos para que o serviço de compartilhamento de porta NetTcp possa rotear mensagens para o aplicativo correto.  
 
 ```csharp
 // Configure a binding with TCP port sharing enabled  
@@ -49,9 +49,9 @@ host.AddServiceEndpoint(typeof(ICalculator), binding, address);
 host.Open();  
 ```
 
- Com o compartilhamento de porta habilitado, você pode executar o serviço várias vezes sem ter um conflito no número da porta. Se você alterar o código para desabilitar o compartilhamento de porta, a inicialização de duas cópias do serviço resultará na segunda falha <xref:System.ServiceModel.AddressAlreadyInUseException>com um.  
+ Com o compartilhamento de porta habilitado, você pode executar o serviço várias vezes sem ter um conflito no número da porta. Se você alterar o código para desabilitar o compartilhamento de porta, a inicialização de duas cópias do serviço resultará na segunda falha com um <xref:System.ServiceModel.AddressAlreadyInUseException>.  
   
-```  
+```console  
 Unhandled Exception: System.ServiceModel.AddressAlreadyInUseException: There is already a listener on IP endpoint 0.0.0.0:9000.  Make sure that you are not trying to use this endpoint multiple times in your application and that there are no other applications listening on this endpoint. ---> System.Net.Sockets.SocketException: Only one usage of each socket address (protocol/network address/port) is normally permitted  
 ```  
   
@@ -104,14 +104,14 @@ class client
 
  Cada instância do serviço imprime seu número e endereço exclusivos. Por exemplo, você pode ver o texto a seguir ao executar o Service. exe.  
   
-```  
+```console  
 Service #4381 listening on net.tcp://localhost:9000/calculator/4381.  
 Press <ENTER> to terminate service.  
 ```  
   
  Insira o número de serviço que você vê aqui ao executar o Client. exe.  
   
-```  
+```console  
 Enter the service number to test: 4381  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -127,7 +127,7 @@ Press <ENTER> to terminate client.
   
 1. Instale o ASP.NET 4,0 usando o comando a seguir.  
   
-    ```  
+    ```console  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

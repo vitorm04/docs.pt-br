@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: criar e usar objetos dinâmicos (C# e Visual Basic)'
+title: 'Passo a passo: Criando e usando objetos dinâmicos (C# e Visual Basic)'
 ms.date: 07/20/2015
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: a4cb85eb94584cff20c9ff26b4aa6bacee4f9883
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: aa902ffaf93c8e1f273ed476dc7d413bcfce914c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252962"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417584"
 ---
-# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Passo a passo: criar e usar objetos dinâmicos (C# e Visual Basic)
+# <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Passo a passo: Criando e usando objetos dinâmicos (C# e Visual Basic)
 
 Os objetos dinâmicos expõem membros como propriedades e métodos em tempo de execução, em vez de em tempo de compilação. Isso permite que você crie objetos para trabalhar com estruturas que não correspondem a um formato ou tipo estático. Por exemplo, você pode usar um objeto dinâmico para fazer referência ao DOM (Modelo de Objeto do Documento) HTML, que pode conter qualquer combinação de atributos e elementos de marcação HTML válidos. Como cada documento HTML é único, os membros de um determinado documento HTML são determinados em tempo de execução. Um método comum para fazer referência a um atributo de um elemento HTML é passar o nome do atributo para o método `GetProperty` do elemento. Para fazer referência ao atributo `id` do elemento HTML `<div id="Div1">`, primeiro você obtém uma referência ao elemento `<div>` e, depois, usa `divElement.GetProperty("id")`. Se usar um objeto dinâmico, você poderá fazer referência ao atributo `id` como `divElement.id`.  
   
  Objetos dinâmicos também fornecem acesso conveniente a linguagens dinâmicas, como IronPython e IronRuby. É possível usar um objeto dinâmico para fazer referência a um script dinâmico que é interpretado em tempo de execução.  
   
- Você faz referência a um objeto dinâmico usando a associação tardia. Em C#, você especifica o tipo de um objeto com associação tardia como `dynamic`. No Visual Basic, você especifica o tipo de um objeto de associação tardia como `Object`. Para obter mais informações, consulte [dynamic](../../language-reference/keywords/dynamic.md) e [Associação antecipada e tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
+ Você faz referência a um objeto dinâmico usando a associação tardia. Em C#, você especifica o tipo de um objeto com associação tardia como `dynamic`. No Visual Basic, você especifica o tipo de um objeto de associação tardia como `Object`. Para obter mais informações, consulte [dynamic](../../language-reference/builtin-types/reference-types.md) e [Associação antecipada e tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md).  
   
  Você pode criar objetos dinâmicos personalizados usando classes no namespace <xref:System.Dynamic?displayProperty=nameWithType>. Por exemplo, é possível criar um <xref:System.Dynamic.ExpandoObject> e especificar os membros desse objeto em tempo de execução. Você também pode criar seu próprio tipo que herda da classe <xref:System.Dynamic.DynamicObject>. Em seguida, você pode substituir os membros da classe <xref:System.Dynamic.DynamicObject> para fornecer funcionalidade dinâmica de tempo de execução.  
   
@@ -32,7 +32,7 @@ Os objetos dinâmicos expõem membros como propriedades e métodos em tempo de e
   
 - Criar um projeto que usa uma biblioteca `IronPython`.  
   
-## <a name="prerequisites"></a>Pré-requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 
 É necessário ter o [IronPython](https://ironpython.net/) para .NET para concluir este passo a passo. Navegue até a respectiva [página de download](https://ironpython.net/download/) para obter a versão mais recente.
   
@@ -135,7 +135,7 @@ O próximo projeto que você cria neste passo a passo acessa uma biblioteca escr
   
 2. Na caixa de diálogo **Novo Projeto**, no painel **Tipos de Projetos**, certifique-se de que **Windows** esteja selecionado. Selecione **Aplicativo de Console** no painel **Modelos**. Na caixa **Nome**, digite `DynamicIronPythonSample` e clique em **OK**. O novo projeto é criado.  
   
-3. Se você estiver usando o Visual Basic, clique com o botão direito do mouse no projeto DynamicIronPythonSample e, em seguida, clique em **Propriedades**. Clique na guia **Referências**. Clique no botão **Adicionar**. Se você estiver usando o Visual C#, no **Gerenciador de Soluções**, clique com botão direito do mouse na pasta **Referências** e, em seguida, clique em **Adicionar Referência**.  
+3. Se você estiver usando o Visual Basic, clique com o botão direito do mouse no projeto DynamicIronPythonSample e, em seguida, clique em **Propriedades**. Clique na guia **referências** . Clique no botão **Adicionar** . Se você estiver usando o Visual C#, no **Gerenciador de Soluções**, clique com botão direito do mouse na pasta **Referências** e, em seguida, clique em **Adicionar Referência**.  
   
 4. Na guia **Procurar**, navegue até a pasta em que as bibliotecas do IronPython estão instaladas. Por exemplo, C:\Program Files\IronPython 2.6 for .NET 4.0. Selecione as bibliotecas **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll** e **Microsoft.Dynamic.dll**. Clique em **OK**.  
   
@@ -164,5 +164,5 @@ O próximo projeto que você cria neste passo a passo acessa uma biblioteca escr
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
 - [Usando o tipo dynamic](./using-type-dynamic.md)
 - [Associação Antecipada e Tardia](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [Implementando interfaces dinâmicas (PDF baixável do Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

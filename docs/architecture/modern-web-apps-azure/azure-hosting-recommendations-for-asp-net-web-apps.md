@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Re
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/06/2019
-ms.openlocfilehash: ed8771a4d79b45d8fad0e5309c886c2e00402ec7
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: 5587b8b20da8a6801d77b722e9c3326f6e695574
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71331997"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73416721"
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Recomendações de hospedagem do Azure para aplicativos Web ASP.NET Core
 
@@ -116,7 +116,7 @@ O Azure oferece uma ampla variedade de opções de armazenamento de dados, de mo
 
 Para dados transacionais e relacionais, os Bancos de Dados SQL do Azure são a melhor opção. Para dados de alto desempenho em sua maior parte de leitura, um Cache Redis com o apoio de um Banco de Dados SQL do Azure é uma boa solução.
 
-Dados JSON não estruturados podem ser armazenados de várias maneiras que variam de colunas do Banco de Dados SQL, Blobs ou Tabelas no Armazenamento do Azure ao DocumentDB. Entre essas opções, o DocumentDB oferece a melhor funcionalidade de consulta e é a opção recomendada para uma grande quantidade de documentos baseados em JSON que devem dar suporte à consulta.
+Os dados JSON não estruturados podem ser armazenados de várias maneiras, de colunas do banco do dados SQL a BLOBs ou tabelas no armazenamento do Azure, para Azure Cosmos DB. Desses, Azure Cosmos DB oferece a melhor funcionalidade de consulta e é a opção recomendada para grandes números de documentos baseados em JSON que devem dar suporte à consulta.
 
 Dados transitórios baseados em comando ou evento usados para orquestrar o comportamento do aplicativo podem usar o Barramento de Serviço do Azure ou as Filas do Armazenamento do Azure. O Barramento do Armazenamento do Azure oferece mais flexibilidade e é o serviço recomendado para mensagens não triviais enviadas dentro e entre aplicativos.
 
