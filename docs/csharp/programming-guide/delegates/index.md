@@ -6,15 +6,15 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 80878ec1a592a368db246fc294ebc42556874832
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a0c5592f2f4cca8173f9b777f2c3f14fe468feac
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921940"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423313"
 ---
 # <a name="delegates-c-programming-guide"></a>Delegados (Guia de Programação em C#)
-Um [delegado](../../language-reference/keywords/delegate.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  
+Um [delegado](../../language-reference/builtin-types/reference-types.md) é um tipo que representa referências aos métodos com lista de parâmetros e tipo de retorno específicos. Ao instanciar um delegado, você pode associar sua instância a qualquer método com assinatura e tipo de retorno compatíveis. Você pode invocar (ou chamar) o método através da instância de delegado.  
   
  Delegados são usados para passar métodos como argumentos a outros métodos. Os manipuladores de eventos nada mais são do que métodos chamados por meio de delegados. Ao criar um método personalizado, uma classe como um controle do Windows poderá chamá-lo quando um determinado evento ocorrer. O seguinte exemplo mostra uma declaração de delegado:  
   
@@ -48,22 +48,22 @@ Um [delegado](../../language-reference/keywords/delegate.md) é um tipo que repr
   
 - [Quando usar delegados em vez de interfaces (Guia de Programação em C#)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
-- [Delegados com métodos nomeados vs. métodos anônimos](./delegates-with-named-vs-anonymous-methods.md)  
+- [Delegados com métodos nomeados vs. anônimos](./delegates-with-named-vs-anonymous-methods.md)  
   
 - [Usando Variação em Delegações](../concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
-- [Como: combinar delegados (delegados multicast)](./how-to-combine-delegates-multicast-delegates.md)  
+- [Como combinar delegados (delegados multicast)](./how-to-combine-delegates-multicast-delegates.md)  
   
-- [Como: declarar, instanciar e usar um delegado](./how-to-declare-instantiate-and-use-a-delegate.md)  
+- [Como declarar e usar um delegado e criar uma instância dele](./how-to-declare-instantiate-and-use-a-delegate.md)  
 
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
-Para obter mais informações, veja [Delegados](~/_csharplang/spec/delegates.md) na [Especificação da linguagem C#](../../language-reference/language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+Para obter mais informações, veja [Delegados](~/_csharplang/spec/delegates.md) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="featured-book-chapters"></a>Capítulos do Livro em Destaque  
- [Delegados, eventos e expressões lambda](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) no [Manual de instruções C# 3.0, terceira edição: mais de 250 soluções para programadores do C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
+ [Expressões lambda, eventos e delegados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518994%28v=orm.10%29) em [C# 3.0 Cookbook, Third Edition: More than 250 solutions for C# 3.0 programmers](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff518995%28v=orm.10%29)  
   
- [Delegados e eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) em [Aprendizado de C# 3.0: domine os princípios básicos de C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
+ [Delegados e eventos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652490%28v=orm.10%29) em [Learning C# 3.0: Master the fundamentals of C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v=orm.10%29)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exception handling [C#], about exception handling
 - exceptions [C#], handling
 ms.assetid: b4e4ecf2-b907-4e58-891f-2563762258e9
-ms.openlocfilehash: 5013738e74aaa260ab6f5bcd4d73904cfbdcc3c8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 895f561c15941d851980ea9b392d2e86db2462f3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590269"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423280"
 ---
 # <a name="exception-handling-c-programming-guide"></a>Manipulação de exceções (Guia de Programação em C#)
 Um bloco [try](../../language-reference/keywords/try-catch.md) é usado por programadores de C# para particionar o código que pode ser afetado por uma exceção. Os blocos [catch](../../language-reference/keywords/try-catch.md) associados são usados para tratar qualquer exceção resultante. Um bloco [finally](../../language-reference/keywords/try-finally.md) contém código que será executado independentemente de uma exceção ser ou não ser lançada no bloco `try`, como a liberação de recursos que estão alocados no bloco `try`. Um bloco `try` exige um ou mais blocos `catch` associados ou um bloco `finally` ou ambos.  
@@ -54,7 +54,7 @@ Um bloco [try](../../language-reference/keywords/try-catch.md) é usado por prog
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
-Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.md) e [A declaração try](~/_csharplang/spec/statements.md#the-try-statement) na [Especificação da Linguagem C#](../../language-reference/language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+Para obter mais informações, veja [Exceções](~/_csharplang/spec/exceptions.md) e [A declaração try](~/_csharplang/spec/statements.md#the-try-statement) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="see-also"></a>Consulte também
 

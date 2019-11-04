@@ -1,19 +1,19 @@
 ---
-title: 'Como: substituir o método ToString – Guia de Programação em C#'
+title: 'Como: substituir o método ToString – C# guia de programação'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: a2cf05dc6b288ffdaf1a20cf594231f48046a724
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 9dd567e537768ceb8b9f61ce58dccd443db38ec7
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596754"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419348"
 ---
-# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Como: substituir o método ToString (Guia de Programação em C#)
+# <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Como substituir o método ToString (Guia de Programação em C#)
 
 Cada classe ou struct no C# herda implicitamente a classe <xref:System.Object>. Portanto, cada objeto no C# obtém o método <xref:System.Object.ToString%2A>, que retorna uma representação de cadeia de caracteres desse objeto. Por exemplo, todas as variáveis do tipo `int` tem um método `ToString`, que permite retornar seus conteúdos como uma cadeia de caracteres:  
   
@@ -50,7 +50,7 @@ Substituir o método `ToString` na classe ou struct:
 - [Guia de Programação em C#](../index.md)
 - [Classes e Structs](./index.md)
 - [Cadeias de Caracteres](../strings/index.md)
-- [string](../../language-reference/keywords/string.md)
+- [string](../../language-reference/builtin-types/reference-types.md)
 - [override](../../language-reference/keywords/override.md)
 - [virtual](../../language-reference/keywords/virtual.md)
 - [Formatando Tipos](../../../standard/base-types/formatting-types.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - implicitly-typed arrays [C#]
 - C# language, implicitly typed arrays
 ms.assetid: e05be95c-6732-403d-ae42-b35f057cbbea
-ms.openlocfilehash: 36ca18adc392643107b43a947656846f3b94a2eb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ac47ec6e69b7910f474378eebd91d58c171a802e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597347"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419559"
 ---
 # <a name="implicitly-typed-arrays-c-programming-guide"></a>Matrizes de tipo implícito (Guia de Programação em C#)
 
@@ -40,4 +40,4 @@ Ao criar um tipo anônimo que contém uma matriz, ela deve ser de tipo implícit
 - [Tipos Anônimos](../classes-and-structs/anonymous-types.md)
 - [Inicializadores de objeto e coleção](../classes-and-structs/object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [Expressões de consulta LINQ](../linq-query-expressions/index.md)
+- [LINQ em C#](../../linq/index.md)

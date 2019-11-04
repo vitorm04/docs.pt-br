@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
-ms.openlocfilehash: 2a2e4bb45d21708ea3971d2f5b784280b9d13d0d
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 81660e6a56efe5737600122d4ff7e182654f9a9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605888"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422890"
 ---
 # <a name="const-c-reference"></a>const (Referência de C#)
 
@@ -68,5 +68,5 @@ Este exemplo demonstra como usar constantes como variáveis ​​locais.
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](./index.md)
-- [Modificadores](./modifiers.md)
+- [Modificadores](index.md)
 - [readonly](./readonly.md)

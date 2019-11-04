@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir o conteúdo de texto de um controle TextBox'
+title: Como definir o conteúdo de texto de um controle TextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - text content [WPF], setting
 - TextBox control [WPF], setting text content
 ms.assetid: bcd25fc7-a52f-4453-b802-2c8d2b335ab8
-ms.openlocfilehash: 2e2bc70b108991fd4e3c138bfac5bff942173e33
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 9b16f2d99295a28725255361b0be3ef7f4245fd2
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70856116"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459307"
 ---
-# <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Como: Definir o conteúdo de texto de um controle TextBox
+# <a name="how-to-set-the-text-content-of-a-textbox-control"></a>Como definir o conteúdo de texto de um controle TextBox
 
-Este exemplo mostra como usar a <xref:System.Windows.Controls.TextBox.Text%2A> propriedade para definir o conteúdo de texto inicial de um <xref:System.Windows.Controls.TextBox> controle.
+Este exemplo mostra como usar a propriedade <xref:System.Windows.Controls.TextBox.Text%2A> para definir o conteúdo de texto inicial de um controle de <xref:System.Windows.Controls.TextBox>.
 
 > [!NOTE]
-> Embora a [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] versão do exemplo possa usar as `<TextBox.Text>` marcas em volta do <xref:System.Windows.Controls.TextBox> texto do conteúdo de cada botão, isso não é <xref:System.Windows.Controls.TextBox.Text%2A> necessário porque o <xref:System.Windows.Controls.TextBox> aplica o <xref:System.Windows.Markup.ContentPropertyAttribute> atributo à propriedade . Para obter mais informações, consulte [visão geral de XAML (WPF)](../advanced/xaml-overview-wpf.md).
+> Embora a versão [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] do exemplo possa usar as marcas de `<TextBox.Text>` ao texto do conteúdo de cada botão <xref:System.Windows.Controls.TextBox>, não é necessário porque o <xref:System.Windows.Controls.TextBox> aplica o atributo <xref:System.Windows.Markup.ContentPropertyAttribute> à propriedade <xref:System.Windows.Controls.TextBox.Text%2A>. Para obter mais informações, consulte [visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md).
 
 ## <a name="example"></a>Exemplo
 

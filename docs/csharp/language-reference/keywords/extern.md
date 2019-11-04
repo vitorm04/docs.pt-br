@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 387ef707166705c4df501bd6740d438683aa2d69
-ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
-ms.translationtype: HT
+ms.openlocfilehash: 5f4a4b143578603a3285b1a3bc0b1efa11840e77
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2019
-ms.locfileid: "70203009"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422819"
 ---
 # <a name="extern-c-reference"></a>extern (Referência de C#)
 
@@ -25,7 +25,7 @@ O modificador `extern` é usado para declarar um método implementado externamen
 private static extern void AVIFileInit();
 ```
 
-A palavra-chave `extern` também pode definir um alias de assembly externo que possibilita referenciar diferentes versões do mesmo componente de dentro de um único assembly. Para obter mais informações, consulte [alias extern](extern-alias.md).
+A palavra-chave `extern` também pode definir um alias de assembly externo que possibilita referenciar diferentes versões do mesmo componente de dentro de um único assembly. Para obter mais informações, consulte [alias externo](extern-alias.md).
 
 É um erro usar os modificadores [abstract](abstract.md) e `extern` juntos para modificar o mesmo membro. Usar o modificador `extern` significa que esse método é implementado fora do código C#, enquanto que usar o modificador `abstract` significa que a implementação do método não é fornecida na classe.
 
@@ -94,4 +94,4 @@ Este exemplo ilustra um programa C# que chama uma biblioteca em C (uma DLL nativ
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Modificadores](modifiers.md)
+- [Modificadores](index.md)

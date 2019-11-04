@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: b5ef70967c8404dc5ce5b816bb9a1c3b1d7e4230
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c7e314e9712c3b569ecc813a72670942651feda1
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117347"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454747"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando
 
@@ -19,7 +19,7 @@ Este tópico mostra como começar a desenvolver aplicativos de plataforma cruzad
 
 Se não estiver familiarizado com o conjunto de ferramentas da CLI do .NET Core, leia a [Visão geral do SDK do .NET Core](../tools/index.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - [SDK do .NET Core 2,1](https://dotnet.microsoft.com/download) ou versões posteriores.
 - Um editor de texto ou de código de sua escolha.
@@ -39,18 +39,18 @@ Vejamos um breve passo a passo:
 
 1. `dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md) cria um arquivo de projeto `Hello.csproj` atualizado com as dependências necessárias para criar um aplicativo de console.  Ele também cria um `Program.cs`, um arquivo básico que contém o ponto de entrada para o aplicativo.
+   [`dotnet new`](../tools/dotnet-new.md) cria um arquivo de projeto *Hello. csproj* atualizado com as dependências necessárias para criar um aplicativo de console. Ele também cria um *Program.cs*, um arquivo básico que contém o ponto de entrada para o aplicativo.
 
-   `Hello.csproj`:
+   *Olá. csproj*:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    O arquivo de projeto especifica tudo o que é necessário para restaurar as dependências e compilar o programa.
 
    - A marca `OutputType` especifica que estamos copilando um executável, em outras palavras, um aplicativo de console.
    - A marca `TargetFramework` especifica qual implementação do .NET estamos direcionando. Em um cenário avançado, é possível especificar várias estruturas de destino e criar para todas elas em uma única operação. Neste tutorial, veremos apenas a compilação para .NET Core 2.1.
 
-   `Program.cs`:
+   *Program.cs*:
 
    [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 
@@ -156,7 +156,7 @@ Vamos nos basear no exemplo de Fibonacci anterior armazenando em cache alguns va
 
 ## <a name="publish-your-app"></a>Publicar seu aplicativo
 
-Quando você estiver pronto para distribuir seu aplicativo, use o comando [`dotnet publish`](../tools/dotnet-publish.md) para gerar a pasta _publicar_ em _bin\\debug\\netcoreapp2.1\\publicar\\_ (use `/` para sistemas não Windows). Você pode distribuir o conteúdo da pasta _publicar_ para outras plataformas, desde que já tenha instalado o tempo de execução dotnet.
+Quando você estiver pronto para distribuir seu aplicativo, use o comando [`dotnet publish`](../tools/dotnet-publish.md) para gerar a pasta _publicar_ em _bin\\debug\\netcoreapp2.1\\publicar\\_ (use `/` para sistemas não Windows). Você pode distribuir o conteúdo da pasta _publicar_ para outras plataformas, desde que já tenha instalado o runtime dotnet.
 
 Você pode executar o aplicativo publicado com o comando [dotnet](../tools/dotnet.md):
 

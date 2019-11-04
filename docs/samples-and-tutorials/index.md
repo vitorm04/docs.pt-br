@@ -4,12 +4,12 @@ description: Informações sobre exemplos e tutoriais para .NET Core, ASP.NET Co
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70855778"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423566"
 ---
 # <a name="net-samples-and-tutorials"></a>Exemplos e tutoriais do .NET
 
@@ -25,7 +25,7 @@ Este guia mostra como criar um aplicativo Web do ASP.NET Core e testes de unidad
 
 ### <a name="tutorials"></a>Tutoriais
 
-**[Escrevendo aplicativos de console do .NET Core usando as ferramentas de CLI: um guia passo a passo](../core/tutorials/using-with-xplat-cli.md)**
+**[Gravando aplicativos de console do .NET Core usando as ferramentas de CLI: um guia passo a passo](../core/tutorials/using-with-xplat-cli.md)**
 
 Este guia mostra como usar as ferramentas de CLI do .NET Core para criar aplicativos de console de plataforma cruzada. Ele começa com o aplicativo de console básico e, por fim, abrange vários projetos, incluindo testes. Você adiciona recursos passo a passo, ampliando seu conhecimento durante o processo. O [exemplo completo](https://github.com/dotnet/samples/tree/master/core/console-apps) está disponível no repositório de exemplos/dotnet no GitHub.
 
@@ -49,7 +49,7 @@ Este exemplo demonstra a sintaxe e os recursos para criar e consumir iteradores 
 
 Este exemplo demonstra o uso de muitos recursos de indexadores C#. O [exemplo completo](https://github.com/dotnet/samples/tree/master/csharp/indexers) está disponível no repositório de exemplos/dotnet no GitHub.
 
-**[Delegados e Eventos](../csharp/delegates-events.md)**
+**[Delegados e Eventos](../csharp/delegates-overview.md)**
 
 Este exemplo demonstra a sintaxe e os recursos para eventos e delegados C#. O [exemplo completo](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) está disponível no repositório de exemplos/dotnet no GitHub. Um [segundo exemplo](https://github.com/dotnet/samples/tree/master/csharp/events), voltado para eventos, também está no mesmo repositório.
 
@@ -95,15 +95,11 @@ Este tutorial mostra como compilar uma solução completa do .NET Core que inclu
 
 Este tutorial mostra como criar um aplicativo simples no .NET Core compatível com uma arquitetura de plug-in. O [exemplo completo](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) está disponível no repositório de exemplos/dotnet no GitHub.
 
-## <a name="deploying-to-containers"></a>Implantação em contêineres
+## <a name="deploy-to-containers"></a>Implantar em contêineres
 
-**[Executando aplicativos ASP.NET MVC em contêineres do Windows Docker](../framework/docker/aspnetmvc.md)**
+**[Executando aplicativos ASP.NET MVC em contêineres do Windows Docker](/aspnet/mvc/overview/deployment/docker-aspnetmvc)**
 
 Este tutorial demonstra como implantar um aplicativo ASP.NET MVC existente em um contêiner do Windows Docker. O [exemplo completo](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator) está disponível no repositório de exemplos/dotnet no GitHub.
-
-**[Executando aplicativos de console do .NET Framework em contêineres do Windows](../framework/docker/console.md)**
-
-Este tutorial demonstra como implantar um aplicativo de console existente em um contêiner do Windows. O [exemplo completo](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) está disponível no repositório de exemplos/dotnet no GitHub.
 
 ## <a name="viewing-and-downloading-samples"></a>Exibição e download de exemplos
 
@@ -115,7 +111,7 @@ Muitos tópicos mostram código-fonte e exemplos que estão disponíveis para ex
    * Clone o repositório localmente. Se você clonar um repositório de documentos diretamente em seu sistema local, não será possível confirmar diretamente no repositório oficial, de modo que não será possível colaborar na documentação posteriormente. Use o procedimento de bifurcação e clonagem anteriormente descrito se quiser preservar a oportunidade de colaborar na documentação posteriormente.
 1. Navegue nas pastas do repositório para o local do exemplo. O caminho relativo até o local do exemplo aparece na barra de endereços do navegador quando você segue o link para o exemplo.
 1. Há várias opções para executar um exemplo:
-   * Usar as [ferramentas de CLI do dotnet](../core/tools/index.md): Em uma janela de console, navegue até a pasta do exemplo e use comandos da CLI do dotnet.
-   * Usar o [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ou o [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): Abra o exemplo selecionando **Arquivo > Abrir > Projeto/Solução** na barra de menus, navegue até a pasta do projeto de exemplo e selecione o arquivo de projeto ( *.csproj* ou *.fsproj*).
-   * Usar o [Visual Studio Code](https://code.visualstudio.com/): Abra o exemplo selecionando **Arquivo > Abrir Pasta** na barra de menus e selecionando a pasta do projeto de exemplo.
+   * Usar as [ferramentas da CLI dotnet](../core/tools/index.md): em uma janela de console, navegue até a pasta do exemplo e use comandos da CLI dotnet.
+   * Usar o [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) ou [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link): abra o exemplo selecionando **Arquivo > Abrir > Projeto/Solução** na barra de menus, navegue até a pasta do projeto de exemplo e selecione o arquivo de projeto ( *.csproj* ou *.fsproj*).
+   * Usar o [Visual Studio Code](https://code.visualstudio.com/): abra o exemplo selecionando **Arquivo > Abrir Pasta** na barra de menus e selecionando a pasta do projeto de exemplo.
    * Usar um IDE diferente que dê suporte a projetos do .NET Core.

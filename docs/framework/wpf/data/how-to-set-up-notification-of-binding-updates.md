@@ -1,25 +1,25 @@
 ---
-title: 'Como: Configurar notificação das atualizações de associação'
+title: Como configurar notificação das atualizações de associação
 ms.date: 03/30/2017
 helpviewer_keywords:
 - notifications [WPF], binding updates
 - data binding [WPF], notification of binding updates
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
-ms.openlocfilehash: 4185198312ed98f9aaa1388626600d9f21abae55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfa0f9264247f7585c1743e40fd980906556efd0
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051982"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454955"
 ---
-# <a name="how-to-set-up-notification-of-binding-updates"></a>Como: Configurar notificação das atualizações de associação
+# <a name="how-to-set-up-notification-of-binding-updates"></a>Como configurar notificação das atualizações de associação
 Este exemplo mostra como configurar para ser notificado quando o destino de associação (destino) ou a origem da associação (origem) de uma associação foi atualizada.  
   
 ## <a name="example"></a>Exemplo  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] levanta um evento de atualização de dados cada vez que a fonte de associação ou destino foi atualizada. Internamente este evento é usado para informar [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que ele deve atualizar, porque os dados associados foram alterados. Observe que, para esses eventos funcionem e também para a associação unidirecional ou bidirecional funcione corretamente, você precisa implementar a classe de dados usando o <xref:System.ComponentModel.INotifyPropertyChanged> interface. Para obter mais informações, consulte [Implementar notificação de alteração da propriedade](how-to-implement-property-change-notification.md).  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] levanta um evento de atualização de dados cada vez que a fonte de associação ou destino foi atualizada. Internamente este evento é usado para informar [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que ele deve atualizar, porque os dados associados foram alterados. Observe que para que esses eventos funcionem e também para que a ligação unidirecional ou bidirecional funcione corretamente, você precisa implementar sua classe de dados usando a interface <xref:System.ComponentModel.INotifyPropertyChanged>. Para obter mais informações, consulte [Implementar notificação de alteração da propriedade](how-to-implement-property-change-notification.md).  
   
- Defina as <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> ou <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> propriedade (ou ambos) para `true` na associação. O manipulador fornecido para ouvir este evento deve ser anexado diretamente ao elemento do qual se espera informações de mudanças ou ao contexto geral de dados, se é preciso estar ciente de qualquer mudança no contexto.  
+ Defina a propriedade <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A> ou <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A> (ou ambas) como `true` na associação. O manipulador fornecido para ouvir este evento deve ser anexado diretamente ao elemento do qual se espera informações de mudanças ou ao contexto geral de dados, se é preciso estar ciente de qualquer mudança no contexto.  
   
  Aqui temos um exemplo que mostra como configurar a notificação quando uma propriedade de destino foi atualizada.  
   
@@ -34,5 +34,5 @@ Este exemplo mostra como configurar para ser notificado quando o destino de asso
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visão geral da vinculação de dados](data-binding-overview.md)
-- [Tópicos de instruções](data-binding-how-to-topics.md)
+- [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)
+- [Tópicos explicativos](data-binding-how-to-topics.md)

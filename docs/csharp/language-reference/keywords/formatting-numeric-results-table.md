@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66421961"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422748"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabela de formatação de resultados numéricos (Referência de C#)
 
@@ -26,7 +26,7 @@ A tabela a seguir mostra os especificadores de formato compatíveis para formata
 |"E" ou "e"|Exponencial|`string s = $"{250000:E2}";`|2.50E+005|  
 |F ou f|Ponto fixo|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2,50<br /><br /> 3|  
 |"G" ou "g"|Geral|`string s = $"{2.5:G}";`|2.5|  
-|"N" ou "n"|Numeric|`string s = $"{2500000:N}";`|2.500.000,00|  
+|"N" ou "n"|Numeric|`string s = $"{2500000:N}";`|2\.500.000,00|  
 |P ou p|Porcentagem|`string s = $"{0.25:P}";`|25,00%|  
 |R ou r|Ida e volta|`string s = $"{2.5:R}";`|2.5|  
 |"X" ou "x"|Hexadecimal|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
@@ -57,4 +57,4 @@ Para obter mais informações, confira [Cadeias de caracteres de formato numéri
 - [Formatando tipos](../../../standard/base-types/formatting-types.md)
 - [Formatação de composição](../../../standard/base-types/composite-formatting.md)
 - [Interpolação de cadeia de caracteres](../tokens/interpolated.md)
-- [string](string.md)
+- [string](../builtin-types/reference-types.md)

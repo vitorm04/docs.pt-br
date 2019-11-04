@@ -2,12 +2,12 @@
 title: Implementando a camada de aplicativos de microsserviço usando a API Web
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Compreenda a injeção de dependência e os padrões de mediador e seus detalhes de implementação na camada de aplicativo de API Web.
 ms.date: 10/08/2018
-ms.openlocfilehash: 38c0bdb32666ab727c573d466d3e30d739bdd3b3
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771112"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454853"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -398,10 +398,10 @@ Aqui estão etapas adicionais que um manipulador de comandos deve realizar:
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Comandos e eventos** \
-  <http://cqrs.nu/Faq/commands-and-events>
+  <https://cqrs.nu/Faq/commands-and-events>
 
 - **O que faz um manipulador de comandos?** \
-  <http://cqrs.nu/Faq/command-handlers>
+  <https://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard. Padrões de comando de domínio – manipuladores**  \
   <https://jimmybogard.com/domain-command-patterns-handlers/>

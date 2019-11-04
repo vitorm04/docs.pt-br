@@ -2,12 +2,12 @@
 title: Visão geral dos eixos do LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: b775a37869f0c8baa7d482475e301347cb77c538
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b984232f03815ac78b792af2289f15eeb0578cd5
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69591928"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418198"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Visão geral dos eixos do LINQ to XML (C#)
 Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, você poderá consultá-la para localizar elementos e atributos, e recuperar seus valores. Você recupera coleções por meio dos *métodos de eixo*, também denominados *eixos*. Alguns eixos são métodos nas classes <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument> que retornam coleções <xref:System.Collections.Generic.IEnumerable%601>. Alguns eixos são métodos de extensão na classe <xref:System.Xml.Linq.Extensions>. Os eixos implementados como métodos de extensão operam em coleções e retornam coleções.  
@@ -23,7 +23,7 @@ Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, voc
 ## <a name="methods-for-retrieving-a-collection-of-elements"></a>Métodos para recuperar uma coleção de elementos  
  Este é um resumo dos métodos da classe <xref:System.Xml.Linq.XElement> (ou de suas classes base) que você chama em um <xref:System.Xml.Linq.XElement> para retornar uma coleção de elementos.  
   
-|Método|DESCRIÇÃO|  
+|Método|Descrição|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XNode.Ancestors%2A?displayProperty=nameWithType>|Retorna um <xref:System.Collections.Generic.IEnumerable%601> do <xref:System.Xml.Linq.XElement> dos ancestrais desse elemento. Uma sobrecarga retorna um <xref:System.Collections.Generic.IEnumerable%601> do <xref:System.Xml.Linq.XElement> dos ancestrais que têm o <xref:System.Xml.Linq.XName> especificado.|  
 |<xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>|Retorna um <xref:System.Collections.Generic.IEnumerable%601> do <xref:System.Xml.Linq.XElement> dos descendentes desse elemento. Uma sobrecarga retorna um <xref:System.Collections.Generic.IEnumerable%601> do <xref:System.Xml.Linq.XElement> dos descendentes que têm o <xref:System.Xml.Linq.XName> especificado.|  
@@ -36,24 +36,24 @@ Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, voc
 ## <a name="method-for-retrieving-a-single-element"></a>Método para recuperar um único elemento  
  O método a seguir recupera um único filho de um objeto <xref:System.Xml.Linq.XElement>.  
   
-|Método|DESCRIÇÃO|  
+|Método|Descrição|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.Element%2A?displayProperty=nameWithType>|Retorna o primeiro objeto filho <xref:System.Xml.Linq.XElement> que tem o <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="method-for-retrieving-a-collection-of-attributes"></a>Método para recuperar uma coleção de atributos  
  O método a seguir recupera atributos de um objeto <xref:System.Xml.Linq.XElement>.  
   
-|Método|DESCRIÇÃO|  
+|Método|Descrição|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>|Retorna um <xref:System.Collections.Generic.IEnumerable%601> do <xref:System.Xml.Linq.XAttribute> de todos os atributos.|  
   
 ## <a name="method-for-retrieving-a-single-attribute"></a>Método para recuperar um único atributo  
  O método a seguir recupera um único atributo de um objeto <xref:System.Xml.Linq.XElement>.  
   
-|Método|DESCRIÇÃO|  
+|Método|Descrição|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Retorna o <xref:System.Xml.Linq.XAttribute> que tem o <xref:System.Xml.Linq.XName> especificado.|  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Eixos do LINQ to XML (C#)](./linq-to-xml-axes.md)
+- [Eixos do LINQ to XML (C#)](linq-to-xml-axes-overview.md)

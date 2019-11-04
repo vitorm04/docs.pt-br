@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Escrevendo consultas em C# (LINQ)'
+title: 'Instruções passo a passo: escrevendo consultas em C# (LINQ)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], walkthroughs
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 9b6592405d3047c8663b48137aa5b1f0eb14bdb4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: f2135c6c3649ba2fc87e3b49770439688a58269b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924106"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418061"
 ---
-# <a name="walkthrough-writing-queries-in-c-linq"></a>Passo a passo: Escrevendo consultas em C# (LINQ)
+# <a name="walkthrough-writing-queries-in-c-linq"></a>Instruções passo a passo: escrevendo consultas em C# (LINQ)
 Essas instruções passo a passo demonstram os recursos de linguagem C# que são usados para gravar expressões de consulta LINQ.  
   
 ## <a name="create-a-c-project"></a>Criar um Projeto C#  
@@ -185,4 +185,4 @@ Essas instruções passo a passo demonstram os recursos de linguagem C# que são
 ## <a name="see-also"></a>Consulte também
 
 - [LINQ (consulta integrada à linguagem) (C#)](./index.md)
-- [Expressões de consulta LINQ](../../linq-query-expressions/index.md)
+- [Expressões de consulta LINQ](../../../linq/index.md)

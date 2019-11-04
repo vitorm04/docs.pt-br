@@ -1,18 +1,18 @@
 ---
-title: 'Como: declarar e usar um delegado e criar uma instância dele – Guia de Programação em C#'
+title: 'Como: declarar, instanciar e usar um guia de C# programação de delegação'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 565ae2a6c42de57570f564edc9d0bde5cab8efa8
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: bd3d80023f6cb382f057e976dba01daf5e28db50
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590620"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423318"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Como: declarar e usar um delegado e criar uma instância dele (Guia de Programação em C#)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Como declarar e usar um delegado e criar uma instância dele (Guia de Programação em C#)
 No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostrado no exemplo a seguir.  
   
  [!code-csharp[csProgGuideDelegates#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#13)]  
@@ -23,7 +23,7 @@ No C# 1.0 e versões posteriores, é possível declarar delegados conforme mostr
   
  [!code-csharp[csProgGuideDelegates#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#32)]  
   
- No C# 2.0 e versões posteriores, também é possível usar um método anônimo para declarar e inicializar um [delegado](../../language-reference/keywords/delegate.md), conforme mostrado no exemplo a seguir.  
+ No C# 2.0 e versões posteriores, também é possível usar um método anônimo para declarar e inicializar um [delegado](../../language-reference/builtin-types/reference-types.md), conforme mostrado no exemplo a seguir.  
   
  [!code-csharp[csProgGuideDelegates#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#15)]  
   

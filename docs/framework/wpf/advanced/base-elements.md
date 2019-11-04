@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d0d3c5198c6c4146cf92201b08781041043c4a72
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926397"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73453602"
 ---
 # <a name="base-elements"></a>Elementos base
-Quatro classes - chave<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, e <xref:System.Windows.FrameworkContentElement>– implementar uma porcentagem significativa da funcionalidade de elemento comum disponível na programação do WPF. Essas quatro classes é chamado neste SDK como as classes de elemento base.  
+Quatro classes principais –<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>e <xref:System.Windows.FrameworkContentElement>--implementam uma porcentagem substancial da funcionalidade de elemento comum disponível na programação do WPF. Essas quatro classes são referenciadas neste SDK como as classes de elemento base.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral de elementos base](base-elements-overview.md)  
  [Visão geral de objetos congeláveis](freezable-objects-overview.md)  
  [Visão geral de alinhamento, margens e preenchimento](alignment-margins-and-padding-overview.md)  
- [Tópicos de instruções](base-elements-how-to-topics.md)  
+ [Tópicos explicativos](base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.UIElement>  
@@ -39,5 +39,5 @@ Quatro classes - chave<xref:System.Windows.UIElement>, <xref:System.Windows.Cont
   [Eventos](events-wpf.md)  
   [Entrada](input-wpf.md)  
   [Recursos](resources-wpf.md)  
-  [Estilo e modelagem](../controls/styling-and-templating.md)  
+  [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)  
   [Modelo de threading](threading-model.md)

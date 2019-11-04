@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 9aba83bd3e05e3f390b3d1553bd7974c64c41037
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 180de3f571426441155a19b98ab750fcdbb3888e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321342"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420653"
 ---
 # <a name="wcf-client-overview"></a>Visão geral do cliente WCF
 Esta seção descreve o que os aplicativos cliente fazem, como configurar, criar e usar um cliente Windows Communication Foundation (WCF) e como proteger aplicativos cliente.  
@@ -43,7 +43,7 @@ Esta seção descreve o que os aplicativos cliente fazem, como configurar, criar
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>Obter o contrato de serviço, as associações e os endereços  
  No WCF, os serviços e os clientes modelam contratos usando atributos, interfaces e métodos gerenciados. Para se conectar a um serviço em um aplicativo cliente, é necessário obter as informações de tipo do contrato de serviço. Normalmente, você faz isso usando a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), que baixa os metadados do serviço, converte-os em um arquivo de código-fonte gerenciado no idioma de sua escolha e cria um arquivo de configuração de aplicativo cliente que você pode usar para configurar seu objeto de cliente WCF. Por exemplo, se você pretende criar um objeto de cliente WCF para invocar um `MyCalculatorService` e souber que os metadados desse serviço são publicados em `http://computerName/MyCalculatorService/Service.svc?wsdl`, o exemplo de código a seguir mostra como usar svcutil. exe para obter um arquivo `ClientCode.vb` que contém o serviço contrato em código gerenciado.  
   
-```  
+```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
 ```  
   

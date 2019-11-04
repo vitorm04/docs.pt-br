@@ -14,12 +14,12 @@ helpviewer_keywords:
 - events [.NET Core]
 - events [.NET Framework]
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
-ms.openlocfilehash: 67cba143957b50e8e8d7fa68e62b52775ca2f144
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a53a8123db64948503bd6d2da9a27fc414dc1e1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131627"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423536"
 ---
 # <a name="handling-and-raising-events"></a>Manipulando e acionando eventos
 
@@ -50,7 +50,7 @@ O .NET fornece os representantes <xref:System.EventHandler> e <xref:System.Event
   
 Os representantes são [multicast](xref:System.MulticastDelegate), o que significa que eles podem manter referências a mais de um método de manipulação de eventos. Para obter detalhes, consulte a página de referência <xref:System.Delegate>. Os representantes proporcionam flexibilidade e controle refinado na manipulação de eventos. Um representante atua como um dispatcher de evento para a classe que aciona o evento ao manter uma lista de manipuladores de eventos registrados para o evento.  
   
-Para cenários em que os representantes <xref:System.EventHandler> e <xref:System.EventHandler%601> não funcionam, você pode definir um representante. Os cenários que exigem que você defina um representante são muito raros; por exemplo, quando você deve trabalhar com código que não reconhece genéricos. Marque um representante com a palavra-chave [`delegate`](../../csharp/language-reference/keywords/delegate.md) no C# e [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) no Visual Basic na declaração. O exemplo a seguir mostra como declarar um representante chamado `ThresholdReachedEventHandler`.  
+Para cenários em que os representantes <xref:System.EventHandler> e <xref:System.EventHandler%601> não funcionam, você pode definir um representante. Os cenários que exigem que você defina um representante são muito raros; por exemplo, quando você deve trabalhar com código que não reconhece genéricos. Marque um representante com a palavra-chave [`delegate`](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) no C# e [`Delegate`](../../visual-basic/language-reference/statements/delegate-statement.md) no Visual Basic na declaração. O exemplo a seguir mostra como declarar um representante chamado `ThresholdReachedEventHandler`.  
   
 [!code-csharp[EventsOverview#4](~/samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programtruncated.cs#4)]
 [!code-vb[EventsOverview#4](~/samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1truncated.vb#4)]  

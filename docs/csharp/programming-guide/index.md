@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 25b686e654c5d6bb44a56b96cbf4045d14e95b62
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392431"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423241"
 ---
 # <a name="c-programming-guide"></a>Guia de programação em C#
 Esta seção fornece informações detalhadas sobre os principais recursos da linguagem C# e os recursos acessíveis para C# por meio do .NET Framework.  
   
  Grande parte dessa seção pressupõe que você já sabe algo sobre o C# e conceitos gerais de programação. Se você for um principiante completo com programação ou C#com, talvez queira visitar o tutorial [introdução aos C# tutoriais](../tutorials/intro-to-csharp/index.md) ou ao [navegador .net](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), no qual não é necessário nenhum conhecimento prévio de programação.  
   
- Para obter informações sobre palavras-chave específicas, operadores e diretivas de pré-processador, consulte [Referência de C#](../language-reference/index.md). Para obter mais informações sobre as especificações da linguagem C#, consulte [Especificações da linguagem C#](../language-reference/language-specification/index.md).  
+ Para obter informações sobre palavras-chave específicas, operadores e diretivas de pré-processador, consulte [Referência de C#](../language-reference/index.md). Para obter mais informações sobre as especificações da linguagem C#, consulte [Especificações da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).  
   
 ## <a name="program-sections"></a>Seções de programa
 
@@ -56,7 +56,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Iteradores](./concepts/iterators.md)
   
- [Expressões de consulta LINQ](./linq-query-expressions/index.md)  
+ [Expressões de consulta LINQ](../linq/index.md)  
   
  [Expressões Lambda](./statements-expressions-operators/lambda-expressions.md)  
   

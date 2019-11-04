@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a6c0ac86689c5d095fc077beb39d6281f77aab24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69606152"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422951"
 ---
 # <a name="abstract-c-reference"></a>abstract (Referência de C#)
 O modificador `abstract` indica que o item que está sendo modificado tem uma implementação ausente ou incompleta. O modificador abstrato pode ser usado com classes, métodos, propriedades, indexadores e eventos. Use o modificador `abstract` em uma declaração de classe para indicar que uma classe se destina somente a ser uma classe base de outras classes, não instanciada por conta própria. Membros marcados como abstratos precisam ser implementados por classes não abstratas que derivam da classe abstrata.
@@ -85,7 +85,7 @@ Você receberá uma mensagem de erro informando que o compilador não pode criar
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
-- [Modificadores](./modifiers.md)
+- [Modificadores](index.md)
 - [virtual](./virtual.md)
 - [override](./override.md)
 - [Palavras-chave do C#](./index.md)

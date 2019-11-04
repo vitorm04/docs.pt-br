@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291600"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421579"
 ---
 # <a name="tour-of-net"></a>Tour do .NET
 
@@ -27,7 +27,7 @@ Para saber como configurar um ambiente de desenvolvimento para executar os exemp
 
 O .NET dá suporte a várias linguagens de programação. As implementações do .NET implementam o [CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre outras coisas, especifica um tempo de execução independente de linguagem e interoperabilidade de linguagem. Isso significa que você escolhe qualquer linguagem .NET para criar aplicativos e serviços no .NET.
 
-A Microsoft desenvolve e dá suporte ativamente a três linguagens do .NET: C#, F# e VB (Visual Basic). 
+A Microsoft desenvolve ativamente e dá suporte a três linguagens de .NET: C#, F# e VB (Visual Basic). 
 
 * A C# é simples, poderosa, fortemente tipada e orientada a objeto, mantendo a expressividade e elegância das linguagens de estilo C. Qualquer pessoa familiarizada com C e linguagens semelhantes encontra poucos problemas para adaptar-se à C#. Confira o [Guia de C#](../csharp/index.md) para saber mais sobre o C#.
 
@@ -37,7 +37,7 @@ A Microsoft desenvolve e dá suporte ativamente a três linguagens do .NET: C#, 
 
 ## <a name="automatic-memory-management"></a>Gerenciamento automático de memória
 
-O .NET usa a [(GC) coleta de lixo](garbagecollection/index.md) para fornecer gerenciamento automático de memória para os programas. A GC opera em uma abordagem lenta no gerenciamento de memória, dando prioridade à taxa de transferência do aplicativo em relação à coleta imediata da memória. Para saber mais sobre o GC do .NET, confira [Noções básicas da coleta de lixo (GC)](garbagecollection/fundamentals.md).
+O .NET usa a [(GC) coleta de lixo](garbage-collection/index.md) para fornecer gerenciamento automático de memória para os programas. A GC opera em uma abordagem lenta no gerenciamento de memória, dando prioridade à taxa de transferência do aplicativo em relação à coleta imediata da memória. Para saber mais sobre o GC do .NET, confira [Noções básicas da coleta de lixo (GC)](garbage-collection/fundamentals.md).
 
 As duas linhas a seguir alocam memória:
 
@@ -55,7 +55,7 @@ No exemplo a seguir, o tempo de execução aciona uma exceção `InvalidIndexExc
 
 Alguns objetos fazem referência a *recursos não gerenciados*. Os recursos não gerenciados são recursos que não são mantidos automaticamente pelo tempo de execução do .NET. Por exemplo, um identificador de arquivo é um recurso não gerenciado. Um objeto <xref:System.IO.FileStream> é um objeto gerenciado, mas ele faz referência a um identificador de arquivo, que não é gerenciado. Quando você termina de usar o <xref:System.IO.FileStream>, é necessário liberar o identificador de arquivo.
 
-No .NET, objetos que fazem referência a recursos não gerenciados implementam a interface <xref:System.IDisposable>. Quando você termina de usar o objeto, você chama o método <xref:System.IDisposable.Dispose> do objeto, responsável por liberar quaisquer recursos não gerenciados. As linguagens .NET fornecem uma [instrução `using`](../csharp/language-reference/keywords/using.md) conveniente para tais objetos, conforme mostrado no exemplo a seguir:
+No .NET, objetos que fazem referência a recursos não gerenciados implementam a interface <xref:System.IDisposable>. Quando você termina de usar o objeto, você chama o método <xref:System.IDisposable.Dispose> do objeto, responsável por liberar quaisquer recursos não gerenciados. As linguagens .NET fornecem uma [instrução`using`](../csharp/language-reference/keywords/using.md) conveniente para tais objetos, conforme mostrado no exemplo a seguir:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
@@ -64,7 +64,7 @@ Uma vez que o bloco `using` é concluído, o tempo de execução do .NET automat
 Para obter mais detalhes, consulte os seguintes tópicos:
 
 * Para C#, consulte o tópico [Instrução Using (referência de C#)](../csharp/language-reference/keywords/using-statement.md).
-* Para F#, confira [Gerenciamento de recursos: a palavra-chave use](../fsharp/language-reference/resource-management-the-use-keyword.md).
+* Para F#, consulte [Gerenciamento de recursos: a palavra-chave Use](../fsharp/language-reference/resource-management-the-use-keyword.md).
 * Para VB, consulte o tópico [Instrução Using (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md).
 
 ## <a name="type-safety"></a>Segurança de tipos

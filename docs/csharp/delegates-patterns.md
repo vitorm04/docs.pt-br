@@ -3,12 +3,12 @@ title: Padrões Comuns para Delegados
 description: Saiba mais sobre os padrões comuns para usar delegados em seu código para evitar acoplamento forte entre os componentes.
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095692"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454072"
 ---
 # <a name="common-patterns-for-delegates"></a>Padrões Comuns para Delegados
 
@@ -58,7 +58,7 @@ Vamos começar pequeno: a implementação inicial aceitará novas mensagens e as
 
 A classe estática acima é a coisa mais simples que pode funcionar. Precisamos escrever a única implementação do método que grava mensagens no console: 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 Por fim, você precisa conectar o delegado anexando-o ao delegado WriteMessage declarado no agente:
 
@@ -70,7 +70,7 @@ Até agora, nossa amostra é bastante simples, mas ainda demonstra algumas das d
 
 Usar os tipos de delegados definidos no Core Framework torna mais fácil para os usuários trabalhem com os delegados. Você não precisa definir novos tipos e os desenvolvedores que usam sua biblioteca não precisam aprender novos tipos de delegados especializadas.
 
-As interfaces utilizadas são tão mínimas e flexíveis quanto possível: Para criar um novo agente de saída, você deve criar um método. O método pode ser um método estático ou um método de instância. Ele pode ter qualquer acesso.
+As interfaces usadas são tão mínimas e flexíveis quanto possível: para criar um novo agente de saída, você precisa criar um método. O método pode ser um método estático ou um método de instância. Ele pode ter qualquer acesso.
 
 ## <a name="formatting-output"></a>Saída de formatação
 
@@ -107,13 +107,13 @@ Os dois não são mutuamente exclusivos. Você pode anexar os dois métodos de l
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 Posteriormente, mesmo no mesmo aplicativo, você pode remover um dos delegados sem problemas para o sistema:
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>Práticas

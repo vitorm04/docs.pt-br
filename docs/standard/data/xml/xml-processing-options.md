@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 585a6e568bde6e6eca15477eaa10b5c91c91c5a4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: HT
+ms.openlocfilehash: 3fc7def48bff71935fce7c6ed914ad20c66e5182
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835545"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425172"
 ---
 # <a name="xml-processing-options"></a>Opções de processamento XML
 Veja nas tabelas a seguir uma lista das tecnologias da Microsoft que você pode usar para processar dados XML.  
@@ -19,7 +19,7 @@ Veja nas tabelas a seguir uma lista das tecnologias da Microsoft que você pode 
   
 |**Opção**|**Tipo de processamento**|**Descrição**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) <br/> [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br />(namespace <xref:System.Xml.Linq>)|Na memória|-   Com base na tecnologia LINQ (Consulta Integrada à Linguagem) do .NET Framework.<br />-   Fornece a experiência de consulta que é semelhante ao SQL para objetos, dados relacionais e dados XML.<br />-   Fornece recursos intuitivos de criação e transformação de documentos.<br />-   Use esta opção se estiver escrevendo um novo código.|  
+|[LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) <br/> [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) <br />(namespace <xref:System.Xml.Linq>)|Na memória|-   Com base na tecnologia LINQ (Consulta Integrada à Linguagem) do .NET Framework.<br />-   Fornece a experiência de consulta que é semelhante ao SQL para objetos, dados relacionais e dados XML.<br />-   Fornece recursos intuitivos de criação e transformação de documentos.<br />-   Use esta opção se estiver escrevendo um novo código.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Com base em fluxo|-   Fornece uma maneira rápida, não armazenado em cache, somente de encaminhamento, de acessar dados XML.<br />-   Você pode criar objetos usando o método <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> e especificar o conjunto de recursos para habilitar no objeto usando a classe <xref:System.Xml.XmlReaderSettings>.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Com base em fluxo|-   Fornece uma maneira rápida, não armazenado em cache, somente de encaminhamento, de gerar dados XML.<br />-   Você pode criar objetos usando o método <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> e especificar o conjunto de recursos para habilitar no objeto usando a classe <xref:System.Xml.XmlWriterSettings>.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|Na memória|-   Implementa as recomendações do [DOM (Modelo de Objeto do Documento) Core do W3C nível 1](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) e do [DOM Core nível 2](https://www.w3.org/TR/DOM-Level-2-Core/).<br />-   Os nós podem ser criados, inseridos, removidos e alterados usando os métodos e propriedades com base no modelo DOM familiar.<br />-   Use esta opção se você estiver modificando um código existente que utiliza o DOM do W3C.|  

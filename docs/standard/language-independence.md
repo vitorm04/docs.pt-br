@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: af266a551a194f55bc4951a8bdb0e9af6f823663
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663003"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423631"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Componentes de independência de linguagem e componentes independentes da linguagem
 
@@ -65,7 +65,7 @@ Neste artigo:
 
 ## <a name="cls-compliance-rules"></a>Regras de conformidade com CLS
 
-Esta seção discute as regras para criar um componente compatível com CLS. Para obter uma lista completa de regras, confira a Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
+Esta seção discute as regras para criar um componente compatível com CLS. Para obter uma lista completa de regras, consulte Partição I, Cláusula 11 do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
 > A Common Language Specification aborda cada regra de conformidade com CLS à medida que se aplica a consumidores (desenvolvedores que estão acessando programaticamente um componente compatível com CLS), estruturas (desenvolvedores que estão usando um compilador de linguagem para criar bibliotecas compatíveis com CLS) e extensores (desenvolvedores que estão criando uma ferramenta, como um compilador de linguagem ou um analisador de código que cria componentes compatíveis com CLS). Este artigo enfoca as regras que se aplicam às estruturas. Entretanto, algumas das regras que se aplicam a extensores também podem ser aplicadas a assemblies criados usando [Reflection.Emit](xref:System.Reflection.Emit).
@@ -150,7 +150,7 @@ A interface pública de uma biblioteca consiste no seguinte:
 
 * Parâmetros e tipos de retorno de métodos públicos de classes públicas e parâmetros e tipos de retorno de métodos acessíveis para classes derivadas.
 
-As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras foi retirado palavra por palavra do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.
+As regras de conformidade com CLS estão listadas na tabela a seguir. O texto das regras é tirado literalmente do [Padrão ECMA-335: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm), com direitos autorais de 2012 da Ecma International. Informações mais detalhadas sobre essas regras são encontradas nas seções a seguir.
 
 Categoria | Consulte | Regra | Número da regra
 -------- | --- | ---- | -----------
@@ -158,7 +158,7 @@ Acessibilidade | [Acessibilidade de membro](#member-accessibility) | A acessibil
 Acessibilidade | [Acessibilidade de membro](#member-accessibility) | A visibilidade e a acessibilidade de tipos e membros deverão ser de tal forma que os tipos na assinatura de qualquer membro sejam visíveis e acessíveis sempre que o próprio membro estiver visível e acessível. Por exemplo, um método público visível fora do assembly não deve ter um argumento cujo tipo seja visível somente dentro do assembly. A visibilidade e a acessibilidade dos tipos que compõem um tipo genérico instanciado usado na assinatura de qualquer membro deverão estar visíveis e acessíveis sempre que o próprio membro estiver visível e acessível. Por exemplo, um tipo genérico instanciado presente na assinatura de um membro visível fora do assembly não deverá ter um argumento genérico cujo tipo seja visível somente dentro do assembly. | 12
 Matrizes | [Matrizes](#arrays) | As matrizes deverão ter elementos com um tipo compatível com CLS e todas as dimensões da matriz deverão ter limites inferiores iguais a zero. Se o item for uma matriz, o tipo do elemento da matriz será necessário para diferenciar as sobrecargas. Quando a sobrecarga é baseada em dois ou mais tipos de matriz, os tipos de elemento deverão ser chamados de tipos. | 16
 Atributos | [Atributos](#attributes) | Os atributos deverão ser do tipo [System.Attribute](xref:System.Attribute) ou de um tipo herdado dele. | 41
-Atributos | [Atributos](#attributes) | A CLS só permite um subconjunto das codificações de atributos personalizados. Os únicos tipos que devem ser exibidos nessas codificações são (confira a Partição IV): [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) e qualquer tipo de enumeração com base em um tipo inteiro básico compatível com o CLS. | 34
+Atributos | [Atributos](#attributes) | A CLS só permite um subconjunto das codificações de atributos personalizados. Os únicos tipos que devem ser exibidos nessas codificações são (consulte a Partição IV) [System.Type](xref:System.Type), [System.String](xref:System.String), [System.Char](xref:System.Char), [System.Boolean](xref:System.Boolean), [System.Byte](xref:System.Byte), [System.Int16](xref:System.Int16), [System.Int32](xref:System.Int32), [System.Int64](xref:System.Int64), [System.Single](xref:System.Single), [System.Double](xref:System.Double) e qualquer tipo de enumeração com base em um tipo de inteiro básico compatível com CLS. | 34
 Atributos | [Atributos](#attributes) | A CLS não permite modificadores obrigatórios visíveis publicamente (`modreq`, consulte a Partição II), mas permite modificadores opcionais (`modopt`, consulte a Partição II) que ela não entende. | 35
 Construtores | [Construtores](#constructors) | Um construtor de objeto deverá chamar um construtor de instância de sua classe base antes de qualquer acesso aos dados da instância herdados. (Isso não se aplica a tipos de valor, que não precisam ter construtores.)  | 21
 Construtores | [Construtores](#constructors) | Um construtor de objeto não deverá ser chamado, exceto como parte da criação de um objeto e um objeto não deve ser inicializado duas vezes. | 22
@@ -230,7 +230,7 @@ public class Counter
 
    public override string ToString()
    {
-      return String.Format("{0}). ", ctr);
+      return $"{ctr}). ";
    }
 
    public UInt32 Value
@@ -276,7 +276,7 @@ Public Class Counter
    End Sub
 
    Public Overrides Function ToString() As String
-      Return String.Format("{0}). ", ctr)
+      Return $"{ctr}). "
    End Function
 
    Public ReadOnly Property Value As UInt32
@@ -315,7 +315,7 @@ Todos os tipos exibidos em assinaturas de membro, incluindo um tipo de retorno d
 
 O [Common Type System](common-type-system.md) do .NET inclui vários tipos internos com suporte diretamente com o Common Language Runtime e codificados especialmente nos metadados de um assembly. Desses tipos intrínsecos, os tipos listados na tabela a seguir são compatíveis com CLS.
 
-Tipo compatível com CLS | DESCRIÇÃO
+Tipo compatível com CLS | Descrição
 ------------------ | -----------
 [Byte](xref:System.Byte) | Inteiro sem sinal de 8 bits
 [Int16](xref:System.Int16) | Inteiro com sinal de 16 bits
@@ -331,7 +331,7 @@ Tipo compatível com CLS | DESCRIÇÃO
 
 Os tipos intrínsecos listados na tabela a seguir não são compatíveis com CLS.
 
-Tipo não compatível | DESCRIÇÃO | Alternativa compatível com CLS
+Tipo não compatível | Descrição | Alternativa compatível com CLS
 ------------------ | ----------- | -------------------------
 [SByte](xref:System.SByte) | Tipo de dados inteiro com sinal de 8 bits | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | Inteiro sem sinal de 16 bits | [Int32](xref:System.Int32)

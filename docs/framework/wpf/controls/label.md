@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 131eb251493b77f13b5dc59a3a03504be8868e8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73f36325a2621cc834e1bef8d2060dec1a8c133d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052047"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423767"
 ---
 # <a name="label"></a>Rotular
-<xref:System.Windows.Controls.Label> os controles geralmente fornecem informações no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Historicamente, um <xref:System.Windows.Controls.Label> continha apenas texto, mas, como o <xref:System.Windows.Controls.Label> que acompanha [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é uma <xref:System.Windows.Controls.ContentControl>, ele pode conter texto ou um <xref:System.Windows.UIElement>.  
+os controles de <xref:System.Windows.Controls.Label> geralmente fornecem informações no [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Historicamente, um <xref:System.Windows.Controls.Label> continha apenas texto, mas como o <xref:System.Windows.Controls.Label> fornecido com [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] é um <xref:System.Windows.Controls.ContentControl>, ele pode conter texto ou um <xref:System.Windows.UIElement>.  
   
- Um <xref:System.Windows.Controls.Label> fornece suporte visual e funcional para chaves de acesso. Ele é frequentemente usado para habilitar o acesso rápido do teclado para controles, como um <xref:System.Windows.Controls.TextBox>. Para atribuir uma <xref:System.Windows.Controls.Label> para um <xref:System.Windows.Controls.Control>, defina o <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> propriedade para o controle que deve receber o foco quando o usuário pressiona a tecla de acesso.  
+ Uma <xref:System.Windows.Controls.Label> fornece suporte funcional e Visual para chaves de acesso. Ele é usado frequentemente para habilitar o acesso rápido de teclado a controles como um <xref:System.Windows.Controls.TextBox>. Para atribuir um <xref:System.Windows.Controls.Label> a um <xref:System.Windows.Controls.Control>, defina a propriedade <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> como o controle que deve ser focalizado quando o usuário pressionar a tecla de acesso.  
   
- A imagem a seguir mostra uma <xref:System.Windows.Controls.Label> "Temas" que tem como alvo um <xref:System.Windows.Controls.ComboBox>.  Quando o usuário pressiona, o <xref:System.Windows.Controls.ComboBox> recebe o foco.  Para obter mais informações, confira [Como: Defina a propriedade de destino de um rótulo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
+ A imagem a seguir mostra uma <xref:System.Windows.Controls.Label> "Themes" que tem como alvo uma <xref:System.Windows.Controls.ComboBox>.  Quando o usuário pressiona, o <xref:System.Windows.Controls.ComboBox> recebe o foco.  Para obter mais informações, consulte [como: definir a propriedade de destino de um rótulo](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752101(v=vs.90)).  
   
- ![Propriedades de exibição mostra rotulado pelo uso](./media/labeledby.JPG "LabeledBy")  
+ ![Captura de tela da caixa de diálogo Propriedades de exibição mostrando rotulada por uso.](./media/label/display-properties-labeled-by.png "LabeledBy")  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Como: Criar um controle que tem uma chave de acesso e disposição do texto](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
+ [Como criar um controle contendo uma tecla de acesso e disposição do texto](how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Controls.Label>

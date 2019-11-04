@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: 81cf336f94815dd3f2c88995eb34ae03b8220097
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 9588ec73250e8745426f6f6020c8d555a174d627
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179915"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422953"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (opções do compilador C#)
 
@@ -25,7 +25,7 @@ Faz com que o compilador aceite somente a sintaxe incluída na especificação d
 -langversion:option
 ```
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a>Arguments
 
  `option`  
  Os seguintes valores são válidos:
@@ -33,7 +33,7 @@ Faz com que o compilador aceite somente a sintaxe incluída na especificação d
 |Opção|Significado|
 |------------|-------------|
 |versão prévia|O compilador aceita toda as sintaxes de linguagem válidas da versão prévia mais recente à qual dá suporte.|
-|latest|O compilador aceita toda as sintaxes de linguagem válidas da versão (incluindo versões secundárias) mais recente à qual dá suporte.|
+|mais recente|O compilador aceita toda as sintaxes de linguagem válidas da versão (incluindo versões secundárias) mais recente à qual dá suporte.|
 |latestMajor|O compilador aceita toda a sintaxe de linguagem válida da versão principal mais recente à qual dá suporte.|
 |8.0|O compilador aceita somente a sintaxe incluída no C# 8.0 ou inferior.|
 |7.3|O compilador aceita somente a sintaxe incluída no C# 7.3 ou inferior.|
@@ -65,15 +65,15 @@ Para saber mais sobre como definir essa opção do compilador programaticamente,
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-|Versão|Link|Descrição|
+|Version|Link|Descrição|
 |-------|----|-----------|
 |C# 7.0 e posterior||não disponível atualmente|
-|C# 6.0|[Link](../language-specification/index.md)|Especificação da Linguagem C# Versão 6 – Rascunho não oficial: .NET Foundation|
+|C# 6.0|[Link](/dotnet/csharp/language-reference/language-specification/introduction)|Especificação da Linguagem C# Versão 6 – Rascunho não oficial: .NET Foundation|
 |C# 5.0|[Baixar PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)|Padrão ECMA-334 – 5ª Edição|
-|C# 3.0|[Baixar DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Especificação da linguagem C# versão 3.0: Microsoft Corporation|
+|C# 3.0|[Baixar DOC](https://download.microsoft.com/download/3/8/8/388e7205-bc10-4226-b2a8-75351c669b09/CSharp%20Language%20Specification.doc)|Especificação da Linguagem C# Versão 3.0: Microsoft Corporation|
 |C# 2.0|[Baixar PDF](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%204th%20edition%20June%202006.pdf)|Padrão ECMA-334 – 4ª Edição|
-|C# 1.2|[Baixar DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|Especificação da linguagem C# versão 1.2: Microsoft Corporation|
-|C# 1.0|[Baixar DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|Especificação da linguagem C# versão 1.0: Microsoft Corporation|
+|C# 1.2|[Baixar DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%202nd%20edition%20December%202002.pdf)|Especificação da Linguagem C# Versão 1.2: Microsoft Corporation|
+|C# 1.0|[Baixar DOC](https://www.ecma-international.org/publications/files/ECMA-ST-ARCH/ECMA-334%201st%20edition%20December%202001.pdf)|Especificação da Linguagem C# Versão 1.0: Microsoft Corporation|
 
 ## <a name="minimum-sdk-version-needed-to-support-all-language-features"></a>Versão mínima do SDK necessária para dar suporte a todos os recursos de idioma
 
@@ -89,7 +89,7 @@ A tabela a seguir lista as versões mínimas do SDK com C# o compilador que dá 
 |C# 6| Microsoft Visual Studio/Ferramentas de Build 2015 |
 |C#05| Microsoft Visual Studio/Ferramentas de Build 2012 ou compilador do .NET Framework 4.5 em pacote |
 |C# 4| Microsoft Visual Studio/Ferramentas de Build 2010 ou compilador do .NET Framework 4.0 em pacote |
-|C#BETA| Microsoft Visual Studio/Ferramentas de Build 2008 ou compilador do .NET Framework 3.5 em pacote |
+|C#Beta| Microsoft Visual Studio/Ferramentas de Build 2008 ou compilador do .NET Framework 3.5 em pacote |
 |C#2| Microsoft Visual Studio/Ferramentas de Build 2005 ou compilador do .NET Framework 2.0 em pacote |
 |C#1,0/1.2 | Compilador de ferramentas Microsoft Visual Studio/Build .NET 2002 ou pacotes .NET Framework 1,0 em pacote |
 

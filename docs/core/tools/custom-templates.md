@@ -3,12 +3,12 @@ title: Modelos personalizados para dotnet new
 description: Saiba mais sobre modelos personalizados para qualquer tipo de projeto ou de arquivos do .NET.
 author: thraka
 ms.date: 06/14/2019
-ms.openlocfilehash: 7a599973a1914f0df187557e48718263f16546f3
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117803"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420875"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Modelos personalizados para dotnet new
 
@@ -18,7 +18,7 @@ O [SDK do .NET Core](https://dotnet.microsoft.com/download) apresenta muitos mod
 
 O mecanismo de modelo é um software livre e o repositório de código online fica em [dotnet/modelagem](https://github.com/dotnet/templating/) no GitHub. Acesse o repositório [dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) para obter exemplos de modelos. Mais modelos, incluindo modelos de terceiros, são encontrados em [Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new) (Modelos disponíveis para dotnet new) no GitHub. Para obter mais informações sobre a criação e o uso de modelos personalizados, consulte [How to create your own templates for dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/) (Como criar seus próprios modelos para dotnet new) e o [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki).
 
-Para seguir um passo a passo e criar um modelo, consulte o tutorial [Create a custom template for dotnet new](../tutorials/create-custom-template.md) (Criar um modelo personalizado para dotnet new).
+Para seguir um passo a passo e criar um modelo, consulte o tutorial [Create a custom template for dotnet new](../tutorials/cli-templates-create-item-template.md) (Criar um modelo personalizado para dotnet new).
 
 ### <a name="net-default-templates"></a>Modelos padrão do .NET
 
@@ -52,7 +52,7 @@ Os arquivos gerados pelo modelo podem ser modificados com base na lógica e nas 
 
 O arquivo *template.json* é colocado em uma pasta *.template.config* no diretório raiz do modelo. O arquivo fornece informações de configuração para o mecanismo de modelo. A configuração mínima requer os membros mostrados na tabela a seguir, suficiente para criar um modelo funcional.
 
-| Membro            | Tipo          | Descrição |
+| Membro            | Digite          | Descrição |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | O esquema JSON do arquivo *template.json*. Os editores que dão suporte a esquemas JSON habilitam recursos de edição de JSON quando o esquema é especificado. Por exemplo, o [Visual Studio Code](https://code.visualstudio.com/) requer que esse membro habilite o IntelliSense. Use um valor de `http://json.schemastore.org/template`. |
 | `author`          | cadeia de caracteres        | O autor do modelo. |
@@ -250,7 +250,7 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>Consulte também
 
-- [Criar um modelo personalizado para dotnet new (tutorial)](../tutorials/create-custom-template.md)
+- [Criar um modelo personalizado para dotnet new (tutorial)](../tutorials/cli-templates-create-item-template.md)
 - [Wiki do repositório GitHub dotnet/modelagem](https://github.com/dotnet/templating/wiki)
 - [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
 - [Como criar seus próprios modelos para dotnet new](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)

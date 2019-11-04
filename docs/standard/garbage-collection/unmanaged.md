@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 04bed819b472abe23ae6a9e89de149e715272505
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141356"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423034"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>Limpando recursos não gerenciados
 
@@ -25,7 +25,7 @@ Para a maioria dos objetos criados pelo aplicativo, você pode contar com o cole
 
 Se seus tipos usam recursos não gerenciados, você deve fazer o seguinte:
 
-- Implementar o [padrão de descarte](../../../docs/standard/design-guidelines/dispose-pattern.md). Isso exige que você forneça uma implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para habilitar a liberação determinística dos recursos não gerenciados. Um consumidor do seu tipo chama <xref:System.IDisposable.Dispose%2A> quando o objeto (e os recursos que ele usa) não são mais necessários. O método <xref:System.IDisposable.Dispose%2A> libera imediatamente os recursos não gerenciados.
+- Implementar o [padrão de descarte](implementing-dispose.md). Isso exige que você forneça uma implementação de <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> para habilitar a liberação determinística dos recursos não gerenciados. Um consumidor do seu tipo chama <xref:System.IDisposable.Dispose%2A> quando o objeto (e os recursos que ele usa) não são mais necessários. O método <xref:System.IDisposable.Dispose%2A> libera imediatamente os recursos não gerenciados.
 
 - Fazer com que seus recursos não gerenciados sejam liberados se um consumidor do seu tipo esquecer chamar <xref:System.IDisposable.Dispose%2A>. Há duas formas de fazer isso:
 
@@ -39,7 +39,7 @@ Os consumidores do seu tipo poderão então chamar sua implementação de <xref:
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Implementar um método de descarte](../../../docs/standard/garbage-collection/implementing-dispose.md) Descreve como implementar o [padrão de descarte](../../../docs/standard/design-guidelines/dispose-pattern.md) para liberar recursos não gerenciados.
+[Implementar um método de descarte](../../../docs/standard/garbage-collection/implementing-dispose.md) Descreve como implementar o [padrão de descarte](implementing-dispose.md) para liberar recursos não gerenciados.
 
 [Usar objetos que implementam IDisposable](../../../docs/standard/garbage-collection/using-objects.md) Descreve como os consumidores de um tipo garantem que sua implementação de <xref:System.IDisposable.Dispose%2A> seja chamada. Recomendamos usar a instrução `using` do C# ou a instrução `Using` do Visual Basic para fazer isso.
 

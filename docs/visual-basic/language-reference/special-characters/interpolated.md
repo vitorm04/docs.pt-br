@@ -1,16 +1,16 @@
 ---
-title: $ (Referência do Visual Basic)
+title: $ (Referência de Visual Basic)
 ms.date: 10/31/2017
-ms.openlocfilehash: 1927e8277b0fdeda13d715b62c6e7cede28b3c52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9de6f0d8289b4f37ced347eda0683a4db331369
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945152"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423655"
 ---
-# <a name="-visual-basic-reference"></a>$ (Referência do Visual Basic)
+# <a name="-visual-basic-reference"></a>$ (Referência de Visual Basic)
 
-Identifica um literal de cadeia de caracteres como uma [cadeia de caracteres interpolada](../../programming-guide/language-features/strings/interpolated-strings.md). Uma cadeia de caracteres interpolada é uma cadeia de caracteres semelhante ao modelo que contém texto literal juntamente com *expressões interpoladas*. Quando a cadeia de caracteres interpolada é resolvida, por exemplo em uma instrução de atribuição ou uma chamada de método, suas expressões interpoladas são substituídas por suas representações de cadeia de caracteres na cadeia de caracteres resultante. As cadeias de caracteres interpoladas são substituições para as [cadeias de caracteres de formato de composição](../../../standard/base-types/composite-format.md) com suporte pelo .NET Framework.
+Identifica um literal de cadeia de caracteres como uma [cadeia de caracteres interpolada](../../programming-guide/language-features/strings/interpolated-strings.md). Uma cadeia de caracteres interpolada é uma cadeia de caracteres semelhante ao modelo que contém texto literal juntamente com *expressões interpoladas*. Quando a cadeia de caracteres interpolada é resolvida, por exemplo em uma instrução de atribuição ou uma chamada de método, suas expressões interpoladas são substituídas por suas representações de cadeia de caracteres na cadeia de caracteres resultante. As cadeias de caracteres interpoladas são substituições para as [cadeias de caracteres de formato de composição](../../../standard/base-types/composite-formatting.md) com suporte pelo .NET Framework.
 
 O exemplo a seguir usa o caractere `$` para definir uma cadeia de caracteres interpolada.
 
@@ -21,4 +21,4 @@ Para obter mais informações sobre cadeias de caracteres interpoladas, consulte
 ## <a name="see-also"></a>Consulte também
 
 - [Referência do Visual Basic](../index.md)
-- [Caracteres especiais do Visual Basic](index.md)
+- [Visual Basic caracteres especiais](index.md)

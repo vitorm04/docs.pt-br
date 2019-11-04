@@ -9,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534885"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422758"
 ---
 # <a name="group-clause-c-reference"></a>Cláusula group (Referência de C#)
 
@@ -54,7 +54,7 @@ O exemplo a seguir mostra o uso de um valor booliano para uma chave dividir os r
 
 ### <a name="grouping-by-numeric-range"></a>Agrupar por alcance numérico
 
-O próximo exemplo usa uma expressão para criar chaves de grupo numéricas que representam um intervalo de percentil. Observe o uso de [let](let-clause.md) como um local conveniente para armazenar um resultado de chamada de método, para que não seja necessário chamar o método duas vezes na cláusula `group`. Para saber mais sobre como usar métodos com segurança em expressões de consulta, confira [Como manipular exceções em expressões de consulta](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+O próximo exemplo usa uma expressão para criar chaves de grupo numéricas que representam um intervalo de percentil. Observe o uso de [let](let-clause.md) como um local conveniente para armazenar um resultado de chamada de método, para que não seja necessário chamar o método duas vezes na cláusula `group`. Para obter mais informações sobre como usar métodos com segurança em expressões de consulta, consulte [Como Manipular Exceções em Expressões de Consulta](../../linq/handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -66,7 +66,7 @@ Use uma chave composta para agrupar elementos de acordo com mais de uma chave. U
 group person by new {name = person.surname, city = person.city};
 ```
 
-Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Confira mais informações em [Como implementar uma classe leve com propriedades autoimplementadas](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [Como consultar arquivos duplicados em uma árvore de diretório](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último artigo apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.
+Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Para obter mais informações, consulte [Como implementar uma classe leve com propriedades autoimplementadas](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [Como consultar arquivos duplicados em uma árvore de diretório](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último artigo apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.
 
 ## <a name="example"></a>Exemplo
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: e9e10957e7ebe93a6dea9bbb6233ca7733f68e20
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: df3df279d2dbdb59a0a94d9afad37d1a7ddf7b57
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633456"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422693"
 ---
 # <a name="let-clause-c-reference"></a>Cláusula let (Referência de C#)
 
@@ -35,5 +35,5 @@ No exemplo a seguir, `let` é usado de duas maneiras:
 - [Referência de C#](../../language-reference/index.md)
 - [Palavras-chave de Consulta (LINQ)](query-keywords.md)
 - [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)
-- [Introdução a LINQ em C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Introdução a LINQ em C#](/dotnet/csharp/programming-guide/concepts/linq/)
 - [Manipular exceções em expressões de consultas](../../linq/handle-exceptions-in-query-expressions.md)

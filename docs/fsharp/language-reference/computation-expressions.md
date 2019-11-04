@@ -2,12 +2,12 @@
 title: Expressões de computação
 description: Saiba como criar uma sintaxe conveniente para escrever cálculos no F# que pode ser sequenciada e combinada usando construções e associações de fluxo de controle.
 ms.date: 03/15/2019
-ms.openlocfilehash: ea560bb6eec82672544c7c442b671b63e405474c
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799053"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424749"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
@@ -304,7 +304,7 @@ module Eventually =
     // This is boilerplate in terms of "result", "catch", and "bind".
     let tryFinally expr compensation =
         catch (expr)
-        |> bind (fun res -> 
+        |> bind (fun res ->
             compensation();
             match res with
             | Ok value -> result value
@@ -335,9 +335,9 @@ module Eventually =
     // This is boilerplate in terms of "catch", "result", and "bind".
     let forLoop (collection:seq<_>) func =
         let ie = collection.GetEnumerator()
-        tryFinally 
-            (whileLoop 
-                (fun () -> ie.MoveNext()) 
+        tryFinally
+            (whileLoop
+                (fun () -> ie.MoveNext())
                 (delay (fun () -> let value = ie.Current in func value)))
             (fun () -> ie.Dispose())
 
@@ -375,7 +375,7 @@ comp |> step |> step
 // prints "x = 1"
 // prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step 
+comp |> step |> step |> step |> step
 ```
 
 Uma expressão de computação tem um tipo subjacente, que a expressão retorna. O tipo subjacente pode representar um resultado calculado ou uma computação atrasada que pode ser executada ou pode fornecer uma maneira de iterar por meio de algum tipo de coleção. No exemplo anterior, o tipo subjacente era **eventualmente**. Para uma expressão de sequência, o tipo subjacente é <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Para uma expressão de consulta, o tipo subjacente é <xref:System.Linq.IQueryable?displayProperty=nameWithType>. Para um fluxo de trabalho assíncrono, o tipo subjacente é [`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7). O objeto `Async` representa o trabalho a ser executado para calcular o resultado. Por exemplo, você chama [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b) para executar uma computação e retornar o resultado.

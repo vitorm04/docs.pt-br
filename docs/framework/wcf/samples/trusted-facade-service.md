@@ -2,12 +2,12 @@
 title: Serviço de fachada confiável
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: ea2aa3840c48ba24bafeee3f10d0cb903b25dcac
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: f49d0ee2a8f58e12ba8e250e2eacf4012c30cec8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045427"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424250"
 ---
 # <a name="trusted-facade-service"></a>Serviço de fachada confiável
 Este exemplo de cenário demonstra como fluir informações de identidade do chamador de um serviço para outro usando a infraestrutura de segurança do Windows Communication Foundation (WCF).  
@@ -22,7 +22,7 @@ Este exemplo de cenário demonstra como fluir informações de identidade do cha
   
 - Serviço de back-end da calculadora  
   
- O serviço de fachada é responsável por validar a solicitação e autenticar o chamador. Após a autenticação e a validação bem-sucedidas, ele encaminha a solicitação para o serviço de back-end usando o canal de comunicação controlado da rede de perímetro para a rede interna. Como parte da solicitação encaminhada, o serviço de fachada inclui informações sobre a identidade do chamador para que o serviço de back-end possa usar essas informações em seu processamento. A identidade do chamador é transmitida usando `Username` um token de segurança dentro `Security` do cabeçalho da mensagem. O exemplo usa a infraestrutura de segurança do WCF para transmitir e extrair essas informações `Security` do cabeçalho.  
+ O serviço de fachada é responsável por validar a solicitação e autenticar o chamador. Após a autenticação e a validação bem-sucedidas, ele encaminha a solicitação para o serviço de back-end usando o canal de comunicação controlado da rede de perímetro para a rede interna. Como parte da solicitação encaminhada, o serviço de fachada inclui informações sobre a identidade do chamador para que o serviço de back-end possa usar essas informações em seu processamento. A identidade do chamador é transmitida usando um token de segurança `Username` dentro do cabeçalho `Security` de mensagem. O exemplo usa a infraestrutura de segurança do WCF para transmitir e extrair essas informações do cabeçalho `Security`.  
   
 > [!IMPORTANT]
 > O serviço de back-end confia no serviço de fachada para autenticar o chamador. Por isso, o serviço de back-end não autentica o chamador novamente; Ele usa as informações de identidade fornecidas pelo serviço de fachada na solicitação encaminhada. Devido a essa relação de confiança, o serviço de back-end deve autenticar o serviço de fachada para garantir que a mensagem encaminhada venha de uma fonte confiável – nesse caso, o serviço de fachada.  
@@ -31,7 +31,7 @@ Este exemplo de cenário demonstra como fluir informações de identidade do cha
  Há dois caminhos de comunicação neste exemplo. O primeiro é entre o cliente e o serviço de fachada, o segundo é entre o serviço de fachada e o serviço de back-end.  
   
 ### <a name="communication-path-between-client-and-faade-service"></a>Caminho de comunicação entre o cliente e o serviço de fachada  
- O cliente para o caminho de comunicação do serviço `wsHttpBinding` de fachada `UserName` usa com um tipo de credencial de cliente. Isso significa que o cliente usa o nome de usuário e a senha para autenticar o serviço de fachada e o serviço de fachada usa o certificado X. 509 para autenticar o cliente. A configuração de associação é semelhante ao exemplo a seguir.  
+ O cliente para o caminho de comunicação do serviço de fachada usa `wsHttpBinding` com um tipo de credencial de cliente `UserName`. Isso significa que o cliente usa o nome de usuário e a senha para autenticar o serviço de fachada e o serviço de fachada usa o certificado X. 509 para autenticar o cliente. A configuração de associação é semelhante ao exemplo a seguir.  
   
 ```xml  
 <bindings>  
@@ -45,9 +45,9 @@ Este exemplo de cenário demonstra como fluir informações de identidade do cha
 </bindings>  
 ```  
   
- O serviço de fachada autentica o chamador usando a `UserNamePasswordValidator` implementação personalizada. Para fins de demonstração, a autenticação só garante que o nome de usuário do chamador corresponda à senha apresentada. Na situação do mundo real, o usuário provavelmente é autenticado usando Active Directory ou provedor de associação ASP.NET personalizado. A implementação do validador reside no `FacadeService.cs` arquivo.  
+ O serviço de fachada autentica o chamador usando a implementação de `UserNamePasswordValidator` personalizada. Para fins de demonstração, a autenticação só garante que o nome de usuário do chamador corresponda à senha apresentada. Na situação do mundo real, o usuário provavelmente é autenticado usando Active Directory ou provedor de associação ASP.NET personalizado. A implementação do validador reside no arquivo `FacadeService.cs`.  
   
-```  
+```csharp  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
 {  
     public override void Validate(string userName, string password)  
@@ -63,7 +63,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- O validador personalizado está configurado para ser usado dentro `serviceCredentials` do comportamento no arquivo de configuração do serviço de fachada. Esse comportamento também é usado para configurar o certificado X. 509 do serviço.  
+ O validador personalizado é configurado para ser usado dentro do comportamento de `serviceCredentials` no arquivo de configuração do serviço de fachada. Esse comportamento também é usado para configurar o certificado X. 509 do serviço.  
   
 ```xml  
 <behaviors>  
@@ -93,7 +93,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 ```  
   
 ### <a name="communication-path-between-faade-service-and-backend-service"></a>Caminho de comunicação entre o serviço de fachada e de back-end  
- O serviço de fachada para o caminho de comunicação do serviço `customBinding` de back-end usa um que consiste em vários elementos de ligação. Essa associação realiza duas coisas. Ele autentica o serviço de fachada e o serviço de back-end para garantir que a comunicação seja segura e proveniente de uma fonte confiável. Além disso, ele também transmite a identidade do chamador inicial dentro do `Username` token de segurança. Nesse caso, somente o nome de usuário do chamador inicial é transmitido para o serviço de back-end, a senha não é incluída na mensagem. Isso ocorre porque o serviço de back-end confia no serviço de fachada para autenticar o chamador antes de encaminhar a solicitação para ele. Como o serviço de fachada se autentica no serviço de back-end, o serviço de back-end pode confiar nas informações contidas na solicitação encaminhada.  
+ O serviço de fachada para o caminho de comunicação do serviço de back-end usa um `customBinding` que consiste em vários elementos de ligação. Essa associação realiza duas coisas. Ele autentica o serviço de fachada e o serviço de back-end para garantir que a comunicação seja segura e proveniente de uma fonte confiável. Além disso, ele também transmite a identidade do chamador inicial dentro do token de segurança `Username`. Nesse caso, somente o nome de usuário do chamador inicial é transmitido para o serviço de back-end, a senha não é incluída na mensagem. Isso ocorre porque o serviço de back-end confia no serviço de fachada para autenticar o chamador antes de encaminhar a solicitação para ele. Como o serviço de fachada se autentica no serviço de back-end, o serviço de back-end pode confiar nas informações contidas na solicitação encaminhada.  
   
  A seguir está a configuração de associação para este caminho de comunicação.  
   
@@ -109,13 +109,13 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- O [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) elemento de associação de > de segurança cuida da transmissão e extração de nome de usuário do chamador inicial. O [ \<windowsstreamsecurity está >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) e [ \<o tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) cuidam da autenticação de serviços de fachada e de back-end e proteção de mensagens.  
+ O elemento de associação de [> de segurança\<](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) cuida da transmissão e da extração do nome de usuário do chamador inicial. O [\<windowsstreamsecurity está >](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md) e [\<o tcpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md) cuidam da autenticação de serviços de fachada e de back-end e proteção de mensagens.  
   
- Para encaminhar a solicitação, a implementação do serviço de fachada deve fornecer o nome de usuário do chamador inicial para que a infraestrutura de segurança do WCF possa colocá-la na mensagem encaminhada. O nome de usuário do chamador inicial é fornecido na implementação do serviço de fachada, definindo `ClientCredentials` -o na propriedade na instância de proxy do cliente que o serviço de fachada usa para se comunicar com o serviço de back-end.  
+ Para encaminhar a solicitação, a implementação do serviço de fachada deve fornecer o nome de usuário do chamador inicial para que a infraestrutura de segurança do WCF possa colocá-la na mensagem encaminhada. O nome de usuário do chamador inicial é fornecido na implementação do serviço de fachada, definindo-o na propriedade `ClientCredentials` na instância de proxy do cliente que o serviço de fachada usa para se comunicar com o serviço de back-end.  
   
- O código a seguir mostra `GetCallerIdentity` como o método é implementado no serviço de fachada. Outros métodos usam o mesmo padrão.  
+ O código a seguir mostra como `GetCallerIdentity` método é implementado no serviço de fachada. Outros métodos usam o mesmo padrão.  
   
-```  
+```csharp  
 public string GetCallerIdentity()  
 {  
     CalculatorClient client = new CalculatorClient();  
@@ -126,11 +126,11 @@ public string GetCallerIdentity()
 }  
 ```  
   
- Conforme mostrado no código anterior, a senha não é definida na `ClientCredentials` Propriedade, somente o nome de usuário é definido. A infraestrutura de segurança do WCF cria um token de segurança de nome de usuário sem uma senha nesse caso, que é exatamente o que é necessário nesse cenário.  
+ Conforme mostrado no código anterior, a senha não é definida na propriedade `ClientCredentials`, somente o nome de usuário é definido. A infraestrutura de segurança do WCF cria um token de segurança de nome de usuário sem uma senha nesse caso, que é exatamente o que é necessário nesse cenário.  
   
- No serviço de back-end, as informações contidas no token de segurança de nome de usuário devem ser autenticadas. Por padrão, a segurança do WCF tenta mapear o usuário para uma conta do Windows usando a senha fornecida. Nesse caso, não há nenhuma senha fornecida e o serviço de back-end não é necessário para autenticar o nome de usuário porque a autenticação já foi executada pelo serviço de fachada. Para implementar essa funcionalidade no WCF, é fornecido `UserNamePasswordValidator` um personalizado que apenas impõe que um nome de usuário seja especificado no token e não execute nenhuma autenticação adicional.  
+ No serviço de back-end, as informações contidas no token de segurança de nome de usuário devem ser autenticadas. Por padrão, a segurança do WCF tenta mapear o usuário para uma conta do Windows usando a senha fornecida. Nesse caso, não há nenhuma senha fornecida e o serviço de back-end não é necessário para autenticar o nome de usuário porque a autenticação já foi executada pelo serviço de fachada. Para implementar essa funcionalidade no WCF, é fornecida uma `UserNamePasswordValidator` personalizada que apenas impõe que um nome de usuário seja especificado no token e não execute nenhuma autenticação adicional.  
   
-```  
+```csharp  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
 {  
     public override void Validate(string userName, string password)  
@@ -149,7 +149,7 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 }  
 ```  
   
- O validador personalizado está configurado para ser usado dentro `serviceCredentials` do comportamento no arquivo de configuração do serviço de fachada.  
+ O validador personalizado é configurado para ser usado dentro do comportamento de `serviceCredentials` no arquivo de configuração do serviço de fachada.  
   
 ```xml  
 <behaviors>  
@@ -166,9 +166,9 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </behaviors>  
 ```  
   
- Para extrair as informações de nome de usuário e informações sobre a conta de serviço de fachada confiável, a `ServiceSecurityContext` implementação do serviço de back-end usa a classe. O código a seguir mostra como `GetCallerIdentity` o método é implementado.  
+ Para extrair as informações de nome de usuário e informações sobre a conta de serviço de fachada confiável, a implementação do serviço de back-end usa a classe `ServiceSecurityContext`. O código a seguir mostra como o método `GetCallerIdentity` é implementado.  
   
-```  
+```csharp  
 public string GetCallerIdentity()  
 {  
     // Facade service is authenticated using Windows authentication.  
@@ -209,12 +209,12 @@ public string GetCallerIdentity()
 }  
 ```  
   
- As informações da conta do serviço de fachada são `ServiceSecurityContext.Current.WindowsIdentity` extraídas usando a propriedade. Para acessar as informações sobre o chamador inicial, o serviço de back `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` -end usa a propriedade. Ele procura uma `Identity` declaração com um tipo `Name`. Essa declaração é gerada automaticamente pela infraestrutura de segurança do WCF por meio das informações `Username` contidas no token de segurança.  
+ As informações da conta do serviço de fachada são extraídas usando a propriedade `ServiceSecurityContext.Current.WindowsIdentity`. Para acessar as informações sobre o chamador inicial, o serviço de back-end usa a propriedade `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets`. Ele procura uma declaração de `Identity` com um tipo `Name`. Essa declaração é gerada automaticamente pela infraestrutura de segurança do WCF por meio das informações contidas no token de segurança `Username`.  
   
 ## <a name="running-the-sample"></a>Executando o exemplo  
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente. Você pode pressionar ENTER nas janelas do console do serviço de back-end e de fachada para desligar os serviços.  
   
-```  
+```console  
 Username authentication required.  
 Provide a valid machine or domain ac  
    Enter username:  
@@ -238,7 +238,7 @@ Press <ENTER> to terminate client.
   
      As linhas a seguir do arquivo em lotes setup. bat criam o certificado do servidor a ser usado.  
   
-    ```  
+    ```console  
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -248,13 +248,13 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     A `%SERVER_NAME%` variável especifica o nome do servidor-o valor padrão é localhost. O certificado é armazenado no armazenamento LocalMachine.  
+     A variável `%SERVER_NAME%` especifica o nome do servidor-o valor padrão é localhost. O certificado é armazenado no armazenamento LocalMachine.  
   
 - Instalar o certificado do serviço de fachada no repositório de certificados confiáveis do cliente.  
   
      A linha a seguir copia o certificado do serviço de fachada para o repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — essa etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.  
   
-    ```  
+    ```console  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
@@ -274,7 +274,7 @@ Press <ENTER> to terminate client.
   
 4. Iniciar o FacadeService. exe do diretório \FacadeService\bin em uma janela de console separada  
   
-5. Inicie o Client.exe no \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
+5. Inicie o Client. exe em \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
   
 6. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -287,6 +287,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

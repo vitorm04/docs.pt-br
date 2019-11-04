@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: bca12c1dd8c79a5ae17e4a9b7b75d3c7b302fb89
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
-ms.translationtype: HT
+ms.openlocfilehash: aa22eac9d4ae06753bbed1fd5733eddeddd81a46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875869"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422267"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (Referência de C#)
 
@@ -51,7 +51,7 @@ Para compilar o código não seguro, você deve especificar a opção do compila
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-Para saber mais, confira [código unsafe](~/_csharplang/spec/unsafe-code.md) na [Especificação da Linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+Para saber mais, confira [código unsafe](~/_csharplang/spec/unsafe-code.md) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
 ## <a name="see-also"></a>Consulte também
 

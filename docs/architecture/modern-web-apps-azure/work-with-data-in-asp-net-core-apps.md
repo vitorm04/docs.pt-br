@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9d9e75767f5ed5010f618d5dbe1e58fe79454597
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: ff517aef93acf8c3a241c8fd8f240f7018467793
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117299"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419978"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
@@ -240,7 +240,7 @@ Quando novas tentativas são habilitadas em conexões do EF Core, cada operaçã
 
 No entanto, se o código iniciar uma transação usando BeginTransaction, você estará definindo seu próprio grupo de operações que precisam ser tratadas como uma unidade: tudo dentro da transação precisará ser revertido caso ocorra uma falha. Você verá uma exceção como a mostrada a seguir se tentar executar essa transação ao usar uma estratégia de execução do EF (política de repetição) e incluir várias chamadas SaveChanges de diversos DbContexts na transação.
 
-System.InvalidOperationException: A estratégia de execução configurada 'SqlServerRetryingExecutionStrategy' não é compatível com transações iniciadas pelo usuário. Use a estratégia de execução retornada por 'DbContext.Database.CreateExecutionStrategy()' para executar todas as operações na transação como uma unidade repetível.
+System.InvalidOperationException: a estratégia de execução configurada 'SqlServerRetryingExecutionStrategy' não dá suporte a transações iniciadas pelo usuário. Use a estratégia de execução retornada por 'DbContext.Database.CreateExecutionStrategy()' para executar todas as operações na transação como uma unidade repetível.
 
 A solução é invocar manualmente a estratégia de execução do EF com um delegado que representa tudo que precisa ser executado. Se ocorrer uma falha temporária, a estratégia de execução invocará o delegado novamente. O seguinte código mostra como implementar essa abordagem:
 
@@ -342,20 +342,20 @@ Em bancos de dados NoSQL, é possível armazenar várias versões de objetos, al
 
 Normalmente, os bancos de dados NoSQL não impõem o [ACID](https://en.wikipedia.org/wiki/ACID), o que significa que eles trazem vantagens de desempenho e escalabilidade comparado aos bancos de dados relacionais. Eles são adequados para conjuntos de dados extremamente grandes e objetos que não são apropriados para o armazenamento em estruturas de tabela normalizadas. Não há nenhum motivo pelo qual um único aplicativo não possa aproveitar ambos os bancos de dados relacional e NoSQL, usando cada um deles nos casos em que for mais adequado.
 
-## <a name="azure-documentdb"></a>Azure DocumentDB
+## <a name="azure-cosmos-db"></a>Azure Cosmos DB
 
-O Azure DocumentDB é um serviço de banco de dados NoSQL totalmente gerenciado que oferece armazenamento de dados sem esquemas baseado em nuvem. O DocumentDB foi criado para desempenho rápido e previsível, alta disponibilidade, dimensionamento elástico e distribuição global. Apesar de ser um banco de dados NoSQL, os desenvolvedores podem usar funcionalidades avançadas e conhecidas de consultas SQL em dados JSON. Todos os recursos do DocumentDB são armazenados como documentos JSON. Os recursos são gerenciados como _itens_, que são documentos que contém metadados, e _feeds_, que são coleções de itens. A Figura 8-2 mostra a relação entre os diferentes recursos do DocumentDB.
+O Azure Cosmos DB é um serviço de banco de dados NoSQL totalmente gerenciado que oferece armazenamento baseado em nuvem sem esquemas. O Azure Cosmos DB é criado para desempenho rápido e previsível, alta disponibilidade, dimensionamento elástico e distribuição global. Apesar de ser um banco de dados NoSQL, os desenvolvedores podem usar funcionalidades avançadas e conhecidas de consultas SQL em dados JSON. Todos os recursos no Azure Cosmos DB são armazenados como documentos JSON. Os recursos são gerenciados como _itens_, que são documentos que contém metadados, e _feeds_, que são coleções de itens. A Figura 8-2 mostra a relação entre diferentes recursos de Azure Cosmos DB.
 
-![A relação hierárquica entre os recursos do DocumentDB, um banco de dados JSON NoSQL](./media/image8-2.png)
+![A relação hierárquica entre os recursos no Azure Cosmos DB, um banco de dados JSON NoSQL](./media/image8-2.png)
 
-**Figura 8-2.** Organização de recursos do DocumentDB.
+**Figura 8-2.** Azure Cosmos DB organização de recursos.
 
-A linguagem de consulta do DocumentDB é uma interface simples mas avançada para a consulta de documentos JSON. A linguagem é compatível com um subconjunto da gramática ANSI SQL e adiciona integração profunda de objeto JavaScript, matrizes, construção de objeto e invocação de função.
+A linguagem de consulta Azure Cosmos DB é uma interface simples, mas poderosa, para consultar documentos JSON. A linguagem é compatível com um subconjunto da gramática ANSI SQL e adiciona integração profunda de objeto JavaScript, matrizes, construção de objeto e invocação de função.
 
-**Referências – DocumentDB**
+**Referências – Azure Cosmos DB**
 
-- Introdução ao DocumentDB  
-  <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
+- Introdução Azure Cosmos DB  
+  <https://docs.microsoft.com/azure/cosmos-db/introduction>
 
 ## <a name="other-persistence-options"></a>Outras opções de persistência
 
@@ -439,7 +439,6 @@ public class CachedCatalogService : ICatalogService
     private readonly CatalogService _catalogService;
     private static readonly string _brandsKey = "brands";
     private static readonly string _typesKey = "types";
-    private static readonly string _itemsKeyTemplate = "items-{0}-{1}-{2}-{3}";
     private static readonly TimeSpan _defaultCacheDuration = TimeSpan.FromSeconds(30);
     public CachedCatalogService(IMemoryCache cache,
     CatalogService catalogService)
@@ -459,7 +458,7 @@ public class CachedCatalogService : ICatalogService
 
     public async Task<Catalog> GetCatalogItems(int pageIndex, int itemsPage, int? brandID, int? typeId)
     {
-        string cacheKey = String.Format(_itemsKeyTemplate, pageIndex, itemsPage, brandID, typeId);
+        string cacheKey = $"items-{pageIndex}-{itemsPage}-{brandID}-{typeId}";
         return await _cache.GetOrCreateAsync(cacheKey, async entry =>
         {
             entry.SlidingExpiration = _defaultCacheDuration;

@@ -5,32 +5,32 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b42a71993cb120c88b90e867b7af23873b99d280
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 3b397c8cac989fb7d1cbc1982cc2ce40a8777983
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71039591"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454754"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Compilar um aplicativo Olá, Mundo em C# com o SDK do .NET Core no Visual Studio 2017
 
-Este tópico fornece uma introdução passo a passo para compilação, depuração e publicação de um aplicativo de console simples do .NET Core usando C# no Visual Studio 2017. O Visual Studio 2017 fornece um ambiente de desenvolvimento completo para compilar aplicativos .NET Core. Desde que o aplicativo não tenha dependências específicas da plataforma, ele pode ser executado em qualquer plataforma que tenha como alvo o .NET Core e em qualquer sistema que tenha o .NET Core instalado.
+Este artigo fornece uma introdução passo a passo para criar, depurar e publicar um aplicativo simples de console .NET Core usando C# o no Visual Studio 2017. O Visual Studio 2017 fornece um ambiente de desenvolvimento completo para compilar aplicativos .NET Core. Desde que o aplicativo não tenha dependências específicas da plataforma, ele pode ser executado em qualquer plataforma que tenha como alvo o .NET Core e em qualquer sistema que tenha o .NET Core instalado.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-O [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. Você pode desenvolver seu aplicativo com o .NET Core 2,1 ou versões posteriores.
+[Visual Studio 2017 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada. Você pode desenvolver seu aplicativo com o .NET Core 2,1 ou versões posteriores.
 
-Para obter mais informações, consulte o tópico [Pré-requisitos para .NET Core no Windows](../windows-prerequisites.md).
+Para obter mais informações, consulte o artigo [pré-requisitos do .NET Core no Windows](../windows-prerequisites.md) .
 
 ## <a name="a-simple-hello-world-application"></a>Um aplicativo simples Olá, Mundo
 
 Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas:
 
-1. Inicie o Visual Studio 2017. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo *Novo projeto*\*, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
+1. Inicie o Visual Studio. Selecione **Arquivo** > **Novo** > **Projeto** na barra de menus. Na caixa de diálogo **Novo Projeto**, selecione o nó **Visual C#** seguido pelo nó **.NET Core**. Em seguida, selecione o modelo de projeto **Aplicativo de console (.NET Core)** . Na caixa de texto **Name**, digite "HelloWorld". Selecione o botão **OK**.
 
    ![Caixa de diálogo Novo Projeto com Aplicativo de Console selecionado](./media/with-visual-studio/visual-studio-new-project.png)
 
-1. O Visual Studio usa o modelo para criar seu projeto. O modelo de aplicativo do console C# para o .NET Core automaticamente define uma classe, `Program`, com um único método, `Main`, que usa uma matriz <xref:System.String> como um argumento. `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo tempo de execução quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
+1. O Visual Studio usa o modelo para criar seu projeto. O modelo de aplicativo do console C# para o .NET Core automaticamente define uma classe, `Program`, com um único método, `Main`, que usa uma matriz <xref:System.String> como um argumento. `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo runtime quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
 
    ![O Visual Studio e o novo projeto HelloWorld](./media/with-visual-studio/visual-studio-main-window.png)
 
@@ -57,9 +57,9 @@ Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas
 
 Aprimore seu aplicativo para solicitar ao usuário seu nome e exibi-lo junto com a data e hora. Para modificar e testar o programa, faça o seguinte:
 
-1. Insira o código C# a seguir na janela de código imediatamente após o colchete de abertura que segue a linha `static void Main(string[] args)` e antes do primeiro colchete de fechamento:
+1. Insira o código C# a seguir na janela de código imediatamente após o colchete de abertura que segue a linha de `static void Main(string[] args)` e antes da primeira chave de fechamento:
 
-   [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
+   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
    Esse código substitui o conteúdo do método `Main`.
 
@@ -81,7 +81,7 @@ Você criou e executou seu aplicativo. Para desenvolver um aplicativo profission
 
 - Para obter informações de como desenvolver e publicar uma versão distribuível do seu aplicativo, confira [Publicar um aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017](publishing-with-visual-studio.md).
 
-## <a name="related-topics"></a>Tópicos relacionados
+## <a name="related-articles"></a>Artigos relacionados
 
 Em vez de um aplicativo de console, você também pode compilar uma biblioteca de classes com o .NET Core e o Visual Studio 2017. Para obter uma introdução passo a passo, consulte [Compilando uma biblioteca de classes com C# e .NET Core no Visual Studio 2017](library-with-visual-studio.md).
 

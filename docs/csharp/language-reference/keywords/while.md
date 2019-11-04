@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 486936ae29552891c6a58913b6d5cf9a0d725a69
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: ab0a8ba0b724757b4f239daf1d3319b989c4531a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422486"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421910"
 ---
 # <a name="while-c-reference"></a>while (Referência de C#)
 
@@ -33,7 +33,7 @@ O exemplo a seguir mostra o uso da instrução `while`. Selecione **Executar** p
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-Para saber mais, confira a seção [A instrução while](~/_csharplang/spec/statements.md#the-while-statement) na [Especificação da linguagem C#](../language-specification/index.md).
+Para saber mais, confira a seção [A instrução while](~/_csharplang/spec/statements.md#the-while-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="see-also"></a>Consulte também
 

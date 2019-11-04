@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 712e1644ea21e500265bc2a9bf9b4df9d20450a6
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: dcbf1073c12650101efdcf6022db0b29ace2eb3f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037791"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420767"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -113,7 +113,7 @@ Para saber mais sobre a ferramenta Vinculador de IL, confira a [documentação](
 
 ### <a name="tiered-compilation"></a>Compilação em camadas
 
-A TC ([compilação em camadas](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o runtime use de modo mais adaptável o compilador JIT (just-in-time) para obter um melhor desempenho.
+A TC ([compilação em camadas](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o tempo de execução use de modo mais adaptável o compilador JIT (just-in-time) para obter um melhor desempenho.
 
 O principal benefício de TC é habilitar métodos de (re)jitting com uma camada de qualidade inferior, porém mais rápida, ou uma camada de qualidade superior, porém mais lenta. Isso ajuda a aumentar o desempenho de um aplicativo quando ele passa por vários estágios da execução, desde a inicialização até o estado estável. Isso contrasta com a abordagem de não TC, em que cada método é compilado de uma única maneira (o mesmo que a camada de alta qualidade) que é mais voltada para o estado estável em detrimento do desempenho de inicialização.
 
@@ -210,7 +210,7 @@ O .NET Core 3.0 apresenta ferramentas locais. Ferramentas locais são semelhante
 
 As ferramentas locais dependem de um nome de arquivo de manifesto `dotnet-tools.json` no seu diretório atual. Esse arquivo de manifesto define as ferramentas que estarão disponíveis nessa pasta e abaixo. Você pode distribuir o arquivo de manifesto com o seu código para garantir que qualquer pessoa que trabalha com o seu código possa restaurar e usar as mesmas ferramentas.
 
-Para ferramentas globais e locais, é necessária uma versão compatível do runtime. Muitas ferramentas que estão atualmente em NuGet.org direcionam para o runtime do .NET Core 2.1. Para instalar essas ferramentas, de forma global ou local, você ainda precisará instalar o [Tempo de execução do NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+Para ferramentas globais e locais, é necessária uma versão compatível do tempo de execução. Muitas ferramentas que estão atualmente em NuGet.org direcionam para o tempo de execução do .NET Core 2.1. Para instalar essas ferramentas, de forma global ou local, você ainda precisará instalar o [Tempo de execução do NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Tamanhos menores de heap de coleta de lixo
 
@@ -245,7 +245,7 @@ dotnet new winforms
 
 O Visual Studio 2019 adiciona modelos de **Novo Projeto** ao Windows Forms e WPF no .NET Core 3.0.
 
-Para obter mais informações sobre como portar um aplicativo existente do .NET Framework, consulte [Portar projetos do WPF](../porting/wpf.md) e [Portar projetos do Windows Forms](../porting/winforms.md).
+Para obter mais informações sobre como portar um aplicativo existente do .NET Framework, consulte [Portar projetos do WPF](../../desktop-wpf/migration/convert-project-from-net-framework.md) e [Portar projetos do Windows Forms](../porting/winforms.md).
 
 #### <a name="winforms-high-dpi"></a>WinForms com DPI alto
 

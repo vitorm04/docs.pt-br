@@ -1,5 +1,5 @@
 ---
-title: 'Como: converter uma cadeia de caracteres em um número – Guia de Programação em C#'
+title: Como converter uma cadeia de caracteres em um guia de C# programação de número
 ms.custom: seodec18
 ms.date: 02/11/2019
 helpviewer_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 377074bf09cf1e24ec022cee506588a9dcb8cb80
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
-ms.translationtype: HT
+ms.openlocfilehash: c39602afbece4faaf6599a5c76f5746defffe03a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133714"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417641"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como: converter uma cadeia de caracteres em um número (Guia de Programação em C#)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como converter uma cadeia de caracteres em um número (Guia de Programação em C#)
 
-É possível converter uma [cadeia de caracteres](../../language-reference/keywords/string.md) em um número chamando o método `Parse` ou `TryParse` encontrado nos diversos tipos numéricos (`int`, `long`, `double` etc.) ou usando os métodos na classe <xref:System.Convert?displayProperty=nameWithType>.  
+É possível converter uma [cadeia de caracteres](../../language-reference/builtin-types/reference-types.md) em um número chamando o método `Parse` ou `TryParse` encontrado nos diversos tipos numéricos (`int`, `long`, `double` etc.) ou usando os métodos na classe <xref:System.Convert?displayProperty=nameWithType>.  
   
  Caso haja uma cadeia de caracteres, será um pouco mais eficiente e simples chamar um método `TryParse` (por exemplo, [`int.TryParse("11", out number)`](xref:System.Int32.TryParse%2A)) ou o método `Parse` (por exemplo, [`var number = int.Parse("11")`](xref:System.Int32.Parse%2A)).  Usar um método <xref:System.Convert> é mais útil para objetos gerais que implementam <xref:System.IConvertible>.  
   
@@ -58,5 +58,5 @@ A tabela a seguir lista alguns dos métodos da classe <xref:System.Convert> que 
 ## <a name="see-also"></a>Consulte também
 
 - [Tipos](./index.md)
-- [Como: determinar se uma cadeia de caracteres representa um valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
+- [Como determinar se uma cadeia de caracteres representa um valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)
 - [Amostra: Utilitário de Formatação do WinForms do .NET Core (C#)](https://docs.microsoft.com/samples/dotnet/samples/winforms-formatting-utility-cs)

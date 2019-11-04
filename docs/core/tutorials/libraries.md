@@ -4,18 +4,18 @@ description: Saiba como criar bibliotecas do .NET Core usando ferramentas da CLI
 author: cartermp
 ms.date: 05/01/2017
 ms.custom: seodec18
-ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117420"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420468"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Desenvolvendo bibliotecas com as Ferramentas de Plataforma Cruzada
 
-Esse artigo aborda como escrever bibliotecas para .NET usando as ferramentas de plataforma cruzada da CLI. A CLI fornece uma experiência eficiente e de baixo nível que funciona em qualquer sistema operacional com suporte. Você ainda pode criar bibliotecas com o Visual Studio e, se essa for sua experiência preferida, [consultar o guia do Visual Studio](libraries-with-vs.md).
+Esse artigo aborda como escrever bibliotecas para .NET usando as ferramentas de plataforma cruzada da CLI. A CLI fornece uma experiência eficiente e de baixo nível que funciona em qualquer sistema operacional com suporte. Você ainda pode criar bibliotecas com o Visual Studio e, se essa for sua experiência preferida, [consultar o guia do Visual Studio](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Você precisa da [CLI e do SDK do .NET Core](https://dotnet.microsoft.com/download) instalados no seu computador.
 
@@ -78,7 +78,7 @@ Se desejar alcançar o número máximo de projetos e desenvolvedores, use o .NET
 | .NET Framework 3.0     | `net30`  |
 | .NET Framework 3,5     | `net35`  |
 | .NET Framework 4.0     | `net40`  |
-| .NET Framework 4.5     | `net45`  |
+| .NET Framework 4,5     | `net45`  |
 | .NET Framework 4.5.1   | `net451` |
 | .NET Framework 4.5.2   | `net452` |
 | .NET Framework 4.6     | `net46`  |

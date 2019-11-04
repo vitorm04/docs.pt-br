@@ -2,18 +2,18 @@
 title: Comando dotnet new
 description: O comando dotnet new cria novos projetos .NET Core com base no modelo especificado.
 ms.date: 05/06/2019
-ms.openlocfilehash: b61b5fd53f470c30b636026fa19ebfad834d6354
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c9529e135f48c80f445c91038294a3e7266486f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117665"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420475"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet new` – Cria um novo projeto, arquivo de configuração ou solução com base no modelo especificado.
 
@@ -776,6 +776,6 @@ Crie um *global.json* no diretório atual definindo a versão do SDK como 2.0.0 
 ## <a name="see-also"></a>Consulte também
 
 - [Modelos personalizados para dotnet new](custom-templates.md)
-- [Create a custom template for dotnet new](../tutorials/create-custom-template.md) (Criar um modelo personalizado para dotnet new)
+- [Create a custom template for dotnet new](../tutorials/cli-templates-create-item-template.md) (Criar um modelo personalizado para dotnet new)
 - [Repositório do GitHub de dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples)
 - [Modelos disponíveis para dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

@@ -1,19 +1,19 @@
 ---
-title: 'Como: Criar uma árvore com base em um XmlReader (C#)'
+title: Como criar uma árvore de um XmlReader (C#)
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: f632bbdad7d52ea37e2587516792dfd13178d702
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a0cff596e0a6d50aefab3645a99beec3277d05ec
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593879"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418316"
 ---
-# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Como: Criar uma árvore com base em um XmlReader (C#)
+# <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>Como criar uma árvore de um XmlReader (C#)
 Este tópico mostra como criar uma árvore de XML diretamente de <xref:System.Xml.XmlReader>. Para criar um <xref:System.Xml.Linq.XElement> de um <xref:System.Xml.XmlReader>, você deverá posicionar o <xref:System.Xml.XmlReader> em um nó de elemento. O <xref:System.Xml.XmlReader> ignorará comentários e instruções de processamento, mas se o <xref:System.Xml.XmlReader> estiver posicionado em um nó de texto, um erro será gerado. Para evitar esses erros, sempre posicione o <xref:System.Xml.XmlReader> em um elemento antes de criar uma árvore de XML do <xref:System.Xml.XmlReader>.  
   
 ## <a name="example"></a>Exemplo  
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Livros (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
  O código a seguir cria um objeto `T:System.Xml.XmlReader` e depois lê os nós até encontrar o primeiro nó do elemento. Ele em seguida carrega o objeto <xref:System.Xml.Linq.XElement>.  
   
@@ -53,4 +53,4 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>Consulte também
 
-- [Analisando XML (C#)](./parsing-xml.md)
+- [Analisando XML (C#)](how-to-parse-a-string.md)

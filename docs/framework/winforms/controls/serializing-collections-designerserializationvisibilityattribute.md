@@ -1,5 +1,5 @@
 ---
-title: 'Passo a passo: Serializar coleções de tipos padrão com a DesignerSerializationVisibilityAttribute'
+title: 'Instruções passo a passo: serializando coleções de tipos padrão com DesignerSerializationVisibilityAttribute'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,23 +11,23 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f051d7a51a5f4ff8debf40fafbb8acfd8f7098f5
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: 297a7080b0c34fa10f976cbbbfb48d8c35786aca
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182632"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458086"
 ---
-# <a name="walkthrough-serialize-collections-of-standard-types"></a>Passo a passo: Serializar coleções de tipos padrão
+# <a name="walkthrough-serialize-collections-of-standard-types"></a>Walkthrough: serializar coleções de tipos padrão
 
-Seus controles personalizados às vezes exporão uma coleção como uma propriedade. Este tutorial demonstra como usar a <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> classe para controlar como uma coleção é serializada em tempo de design. Aplicar o <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valor à sua propriedade de coleção garante que a propriedade será serializada.
+Seus controles personalizados às vezes exporão uma coleção como uma propriedade. Este tutorial demonstra como usar a classe <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> para controlar como uma coleção é serializada em tempo de design. Aplicar o valor de <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> à sua propriedade de coleção garante que a propriedade será serializada.
 
-Para copiar o código deste tópico como uma única listagem, confira [Como: Serialize coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
+Para copiar o código neste tópico como uma lista única, consulte [Como serializar coleções de tipos padrão com o DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 É necessário o Visual Studio para concluir este passo a passo.
 
@@ -39,13 +39,13 @@ A primeira etapa é criar um controle que tem uma coleção serializável como u
 
 2. Renomeie `UserControl1` como `SerializationDemoControl`. Para obter mais informações, consulte [renomear uma refatoração de símbolo de código](/visualstudio/ide/reference/rename).
 
-3. Na janela **Propriedades** , defina o valor da <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> Propriedade como **10**.
+3. Na janela **Propriedades** , defina o valor da propriedade <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> como **10**.
 
-4. Coloque um <xref:System.Windows.Forms.TextBox> controle `SerializationDemoControl`no.
+4. Coloque um controle de <xref:System.Windows.Forms.TextBox> na `SerializationDemoControl`.
 
 5. Selecione o controle <xref:System.Windows.Forms.TextBox>. Na janela **Propriedades**, defina as propriedades a seguir.
 
-    |Propriedade|Altere para|
+    |propriedade|Altere para|
     |--------------|---------------|
     |**Multilinha**|`true`|
     |**Encaixar**|<xref:System.Windows.Forms.DockStyle.Fill>|
@@ -61,7 +61,7 @@ A primeira etapa é criar um controle que tem uma coleção serializável como u
 7. Defina a propriedade `Strings` no `SerializationDemoControl`.
 
    > [!NOTE]
-   > O <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> valor é usado para habilitar a serialização da coleção.
+   > O valor de <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> é usado para habilitar a serialização da coleção.
 
    [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
    [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
@@ -69,12 +69,12 @@ A primeira etapa é criar um controle que tem uma coleção serializável como u
 
 8. Pressione **F5** para compilar o projeto e executar o controle no **contêiner de teste do UserControl**.
 
-9. Localize a propriedade **Strings** no <xref:System.Windows.Forms.PropertyGrid> do contêiner de **teste UserControl**. Selecione a propriedade **cadeias de caracteres** e, em![seguida, selecione as reticências (o botão de reticências (.](./media/visual-studio-ellipsis-button.png)..) no botão janela Propriedades do Visual Studio) para abrir o **Editor de coleção de cadeia de caracteres**.
+9. Localize a propriedade **Strings** no <xref:System.Windows.Forms.PropertyGrid> do contêiner de **teste UserControl**. Selecione a propriedade **cadeias de caracteres** e, em seguida, selecione as reticências (![botão de reticências (...) no botão janela Propriedades do Visual Studio](./media/visual-studio-ellipsis-button.png)) para abrir o **Editor de coleção de cadeias de caracteres**.
 
 10. Insira várias cadeias de caracteres no **Editor de Conjunto de Cadeia de Caracteres**. Separe-os pressionando a tecla **Enter** no final de cada cadeia de caracteres. Clique em **OK** quando terminar de inserir cadeias de caracteres.
 
    > [!NOTE]
-   > As cadeias de caracteres digitadas <xref:System.Windows.Forms.TextBox> aparecem no `SerializationDemoControl`do.
+   > As cadeias de caracteres digitadas aparecem na <xref:System.Windows.Forms.TextBox> do `SerializationDemoControl`.
 
 ## <a name="serialize-a-collection-property"></a>Serializar uma propriedade de coleção
 
@@ -82,16 +82,16 @@ Para testar o comportamento de serialização do seu controle, coloque-o em um f
 
 1. Adicione um projeto de Aplicativos do Windows à solução. Nomeie o projeto `SerializationDemoControlTest`.
 
-2. Na **Caixa de Ferramentas**, localize a guia chamada **Componentes da SerializationDemoControlLib**. Nessa guia, você encontrará o `SerializationDemoControl`. Para obter mais informações, confira [Passo a passo: Populando automaticamente a caixa de](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)ferramentas com componentes personalizados.
+2. Na **Caixa de Ferramentas**, localize a guia chamada **Componentes da SerializationDemoControlLib**. Nessa guia, você encontrará o `SerializationDemoControl`. Para mais informações, consulte [Instruções passo a passo: preenchendo de forma automática a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).
 
 3. Coloque um `SerializationDemoControl` em seu formulário.
 
-4. Localize a propriedade `Strings` na janela **Propriedades**. Clique na `Strings` Propriedade e, em seguida, clique![nas reticências (o botão de reticências (...) no](./media/visual-studio-ellipsis-button.png)botão janela Propriedades do Visual Studio.) para abrir o **Editor de coleção de cadeia de caracteres**.
+4. Localize a propriedade `Strings` na janela **Propriedades**. Clique na propriedade `Strings` e, em seguida, clique nas reticências (![botão de reticências (...) no botão janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) para abrir o **Editor de coleção de cadeia de caracteres**.
 
 5. Digite várias cadeias de caracteres no **Editor de Conjunto de Cadeia de Caracteres**. Separe-os pressionando **Enter** no final de cada cadeia de caracteres. Clique em **OK** quando terminar de inserir cadeias de caracteres.
 
     > [!NOTE]
-    > As cadeias de caracteres digitadas <xref:System.Windows.Forms.TextBox> aparecem no `SerializationDemoControl`do.
+    > As cadeias de caracteres digitadas aparecem na <xref:System.Windows.Forms.TextBox> do `SerializationDemoControl`.
 
 6. Em **Gerenciador de Soluções**, clique no botão **Mostrar Todos os Arquivos**.
 
@@ -110,7 +110,7 @@ Para testar o comportamento de serialização do seu controle, coloque-o em um f
     Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}
     ```
 
-9. No **Editor de código**, altere o valor <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> de na `Strings` propriedade para <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.
+9. No **Editor de código**, altere o valor do <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> na propriedade `Strings` para <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.
 
     ```csharp
     [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
@@ -135,9 +135,9 @@ Se você souber como serializar uma coleção de tipos padrão, considere integr
 
 - [Visão geral da serialização do designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 
-- [Passo a passo: Criando um controle de Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)
+- [Instruções passo a passo: criando um controle do Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)
 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [Passo a passo: Populando automaticamente a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [Instruções passo a passo: preenchendo de forma automática a caixa de ferramentas com componentes personalizados](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

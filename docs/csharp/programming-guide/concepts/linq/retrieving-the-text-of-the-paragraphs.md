@@ -2,12 +2,12 @@
 title: Recuperando o texto dos parágrafos (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: cedca9df84ee687a9e304cde0015b46d07956364
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253052"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423333"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>Recuperando o texto dos parágrafos (C#)
 Este exemplo é criado com base no exemplo anterior, [Recuperando os parágrafos e seus estilos (C#)](./retrieving-the-paragraphs-and-their-styles.md). Esse novo exemplo recupera o texto de cada parágrafo como uma cadeia de caracteres.  
@@ -18,7 +18,7 @@ Este exemplo é criado com base no exemplo anterior, [Recuperando os parágrafos
   
  Naturalmente, seria possível escrever uma única consulta que contém a funcionalidade para recuperar os parágrafos, o estilo de cada parágrafo, e o texto de cada parágrafo. No entanto, geralmente é útil dividir uma consulta mais complexa em consultas múltiplas porque o código resultante é mais modular e fácil de manter. Além disso, se você precisar de reutilizar parte de consulta, é mais fácil refatorar se as consultas são gravadas dessa maneira.  
   
- Essas consultas, que são encadeadas, usam o modelo de processamento que é examinado em detalhes no tópico [Tutorial: Encadeando consultas (C#)](./tutorial-chaining-queries-together.md).  
+ Essas consultas, que são encadeadas juntas, usam o modelo de processamento que é examinado em detalhes no tópico [Tutorial: encadear consultas juntas (C#)](deferred-execution-and-lazy-evaluation-in-linq-to-xml.md).  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, determinando o nó do elemento, o nome do estilo, e o texto de cada parágrafo. Este exemplo cria nos exemplos anteriores neste tutorial. A nova consulta é chamada nos comentários no código a seguir.  
@@ -144,5 +144,5 @@ StyleName:Code >Hello World<
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](shape-of-wordprocessingml-documents.md)
 - [Execução adiada e avaliação lenta em LINQ to XML (C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

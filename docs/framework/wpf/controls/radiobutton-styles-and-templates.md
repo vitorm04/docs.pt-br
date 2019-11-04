@@ -9,21 +9,21 @@ helpviewer_keywords:
 - templates [WPF], RadioButton
 - parts [WPF], RadioButton
 ms.assetid: 9acf93f7-dd2f-4010-8ce0-1edd81c52ae2
-ms.openlocfilehash: f11a8338c96d14c3c518713865061e4095ff23b1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 892b4bead6ef6db3a6c007e34fb333ebf1e39850
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031831"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459867"
 ---
 # <a name="radiobutton-styles-and-templates"></a>Estilos e modelos RadioButton
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.RadioButton> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.RadioButton>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="radiobutton-parts"></a>Partes de botão de opção  
- O <xref:System.Windows.Controls.RadioButton> controle não tem nenhuma parte nomeada.  
+## <a name="radiobutton-parts"></a>Partes do botão de opção  
+ O controle de <xref:System.Windows.Controls.RadioButton> não tem nenhuma parte nomeada.  
   
 ## <a name="radiobutton-states"></a>Estados do botão de opção  
- A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.RadioButton> controle.  
+ A tabela a seguir lista os Estados visuais para o controle de <xref:System.Windows.Controls.RadioButton>.  
   
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |----------------------|---------------------------|-----------------|  
@@ -36,12 +36,12 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |Selecionado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> é `true`.|  
 |Não Selecionado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> é `false`.|  
 |Indeterminado|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> é `true` e <xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> é `null`.|  
-|Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
+|Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  
+|InvalidFocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle em foco.|  
+|InvalidUnfocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle não tem foco.|  
   
 ## <a name="radiobutton-controltemplate-example"></a>Exemplo de ControlTemplate de RadioButton  
- O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.RadioButton> controle.  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o controle de <xref:System.Windows.Controls.RadioButton>.  
   
  [!code-xaml[ControlTemplateExamples#RadioButton](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/radiobutton.xaml#radiobutton)]  
   
@@ -57,5 +57,5 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

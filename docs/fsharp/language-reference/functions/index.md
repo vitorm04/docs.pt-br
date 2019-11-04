@@ -2,12 +2,12 @@
 title: Funções
 description: Saiba mais sobre o F# Functions F# no e como o dá suporte a construções de programação funcional comuns.
 ms.date: 05/16/2016
-ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c6b8307f51ffcdc77fe4352b2305fca1f247ccbb
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630709"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423952"
 ---
 # <a name="functions"></a>Funções
 
@@ -76,7 +76,7 @@ O corpo de uma função pode conter definições de funções e variáveis locai
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
-Para saber mais, veja [Diretrizes de formatação de código](../code-formatting-guidelines.md) e [Sintaxe detalhada](../verbose-syntax.md).
+Para saber mais, veja [Diretrizes de formatação de código](../../style-guide/formatting.md) e [Sintaxe detalhada](../verbose-syntax.md).
 
 ## <a name="return-values"></a>Valores de Retorno
 
@@ -142,7 +142,7 @@ Uma *expressão lambda* é uma função sem nome. Nos exemplos anteriores, em ve
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-Defina expressões lambda usando a palavra-chave `fun`. Uma expressão lambda é semelhante a uma definição de função, com exceção de que em vez do token `=`, o token `->` é usado para separar a lista de argumentos do corpo da função. Assim como em uma definição de função normal, os tipos de argumento podem ser inferidos ou explicitamente especificados, e o tipo de retorno da expressão lambda é inferido do tipo da última expressão no corpo. Para obter mais informações, [consulte expressões lambda: A `fun` palavra](../functions/lambda-expressions-the-fun-keyword.md)-chave.
+Defina expressões lambda usando a palavra-chave `fun`. Uma expressão lambda é semelhante a uma definição de função, com exceção de que em vez do token `=`, o token `->` é usado para separar a lista de argumentos do corpo da função. Assim como em uma definição de função normal, os tipos de argumento podem ser inferidos ou explicitamente especificados, e o tipo de retorno da expressão lambda é inferido do tipo da última expressão no corpo. Para saber mais, veja [Expressões lambda: a palavra-chave `fun`](../functions/lambda-expressions-the-fun-keyword.md).
 
 ## <a name="function-composition-and-pipelining"></a>Composição de Função e Pipelining
 
