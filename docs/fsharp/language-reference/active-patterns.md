@@ -2,12 +2,12 @@
 title: Padrões ativos
 description: Saiba como usar padrões ativos para definir partições nomeadas que subdividem dados de F# entrada na linguagem de programação.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0c1315f2386b3cea2def698f4725e4c1cf030609
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: f5ed4a8600cba10d23d01628aba6ca07e543c586
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71083080"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425101"
 ---
 # <a name="active-patterns"></a>Padrões ativos
 
@@ -48,7 +48,7 @@ A saída desse programa é a seguinte:
 32 is even
 ```
 
-Outro uso de padrões ativos é decompor tipos de dados de várias maneiras, como quando os mesmos dados subjacentes têm várias representações possíveis. Por exemplo, um `Color` objeto pode ser decomposto em uma representação RGB ou em uma representação HSB.
+Outro uso de padrões ativos é decompor tipos de dados de várias maneiras, como quando os mesmos dados subjacentes têm várias representações possíveis. Por exemplo, um objeto `Color` pode ser decomposto em uma representação RGB ou em uma representação HSB.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5003.fs)]
 
@@ -92,7 +92,7 @@ A saída do exemplo anterior é a seguinte:
 Something else : Not matched.
 ```
 
-Ao usar padrões ativos parciais, às vezes, as escolhas individuais podem ser separadas ou mutuamente exclusivas, mas não precisam ser. No exemplo a seguir, o quadrado padrão e o cubo de padrão não são contíguos, pois alguns números são quadrados e cubos, como 64. O programa a seguir usa o padrão e para combinar os padrões de cubo e quadrado. Ele imprime todos os inteiros de até 1000 que são quadrados e cubos, bem como aqueles que são apenas cubos. 
+Ao usar padrões ativos parciais, às vezes, as escolhas individuais podem ser separadas ou mutuamente exclusivas, mas não precisam ser. No exemplo a seguir, o quadrado padrão e o cubo de padrão não são contíguos, pois alguns números são quadrados e cubos, como 64. O programa a seguir usa o padrão e para combinar os padrões de cubo e quadrado. Ele imprime todos os inteiros de até 1000 que são quadrados e cubos, bem como aqueles que são apenas cubos.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
@@ -113,7 +113,7 @@ A saída é a seguinte:
 
 ## <a name="parameterized-active-patterns"></a>Padrões ativos com parâmetros
 
-Os padrões ativos sempre recebem pelo menos um argumento para o item que está sendo correspondido, mas também podem levar argumentos adicionais; nesse caso, o nome *padrão ativo com parâmetros* se aplica. Argumentos adicionais permitem que um padrão geral seja especializado. Por exemplo, padrões ativos que usam expressões regulares para analisar cadeias de caracteres geralmente incluem a expressão regular como um parâmetro extra, como no código a seguir, que também usa o `Integer` padrão ativo parcial definido no exemplo de código anterior. Neste exemplo, as cadeias de caracteres que usam expressões regulares para vários formatos de data são fornecidas para personalizar o padrão ativo ParseRegex geral. O padrão ativo inteiro é usado para converter as cadeias de caracteres correspondentes em números inteiros que podem ser passados para o Construtor DateTime.
+Os padrões ativos sempre recebem pelo menos um argumento para o item que está sendo correspondido, mas também podem levar argumentos adicionais; nesse caso, o nome *padrão ativo com parâmetros* se aplica. Argumentos adicionais permitem que um padrão geral seja especializado. Por exemplo, padrões ativos que usam expressões regulares para analisar cadeias de caracteres geralmente incluem a expressão regular como um parâmetro extra, como no código a seguir, que também usa o padrão ativo parcial `Integer` definido no exemplo de código anterior. Neste exemplo, as cadeias de caracteres que usam expressões regulares para vários formatos de data são fornecidas para personalizar o padrão ativo ParseRegex geral. O padrão ativo inteiro é usado para converter as cadeias de caracteres correspondentes em números inteiros que podem ser passados para o Construtor DateTime.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5006.fs)]
 

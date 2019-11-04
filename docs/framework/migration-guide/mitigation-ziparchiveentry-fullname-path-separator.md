@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .NET Framework 4.6.1 retargeting changes
 - retargeting changes
 ms.assetid: 8d575722-4fb6-49a2-8a06-f72d62dc3766
-ms.openlocfilehash: 495377403e2f0c0f5f4f166f51d738265c16ef7e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 021d22e90ba39a4d01cf7d64588fab2d724b6640
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126055"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457728"
 ---
 # <a name="mitigation-ziparchiveentryfullname-path-separator"></a>Mitigação: separador de caminho ZipArchiveEntry.FullName
 Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de caminho usado na propriedade <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> foi alterado da barra invertida ("\\") usada nas versões anteriores do .NET Framework para uma barra ("/").   Os objetos <xref:System.IO.Compression.ZipArchiveEntry?displayProperty=nameWithType> são criados chamando uma das sobrecargas do método <xref:System.IO.Compression.ZipFile.CreateFromDirectory%2A?displayProperty=nameWithType>.  
@@ -45,4 +45,4 @@ Começando com aplicativos direcionados ao .NET Framework 4.6.1, o separador de 
 ## <a name="see-also"></a>Consulte também
 
 - [Alterações de redirecionamento](retargeting-changes-in-the-net-framework-4-6-1.md)
-- [Compatibilidade de aplicativos na versão 4.6.1](application-compatibility-in-the-net-framework-4-6-1.md)
+- [Compatibilidade de aplicativos](application-compatibility.md)

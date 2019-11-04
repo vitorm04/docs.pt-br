@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: 1a3c23a70bc7dc519c824426f8939cb15e87a7fb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c3e2368bc5977d7f50ae7ecea8557c5c545e82a4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128047"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455599"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilidade de versão no .NET Framework
 
@@ -22,7 +22,7 @@ Compatibilidade com versões anteriores significa que um aplicativo desenvolvido
 
 Por padrão, um aplicativo executado na versão do .NET Framework para o qual foi compilado. Se essa versão não estiver presente e o arquivo de configuração de aplicativos não definir versões compatíveis, um erro de inicialização do .NET Framework poderá ocorrer. Nesse caso, a tentativa de executar o aplicativo falhará.
 
-Para definir as versões específicas nas quais seu aplicativo é executado, adicione um ou mais elementos [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) ao arquivo de configuração de aplicativo. Cada elemento `<supportedRuntime>` lista uma versão compatível do tempo de execução, com o primeiro especificando a versão mais preferida e o último especificando a versão menos preferida.
+Para definir as versões específicas nas quais seu aplicativo é executado, adicione um ou mais elementos [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) ao arquivo de configuração de aplicativo. Cada elemento `<supportedRuntime>` lista uma versão compatível do runtime, com o primeiro especificando a versão mais preferida e o último especificando a versão menos preferida.
 
 ```xml
 <configuration>
@@ -49,7 +49,7 @@ Na prática, essa compatibilidade pode ser desfeita por alterações aparentemen
 
 Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framework 4.5 (incluindo suas versões de ponto, o .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ou 4.8), use as seguintes listas de verificação:
 
-- Caso aplicativo tenha sido desenvolvido para ser executado em qualquer versão do .NET Framework, a partir do .NET Framework 4.0, consulte [Compatibilidade do aplicativo no .NET Framework](application-compatibility.md) para gerar listas de alterações entre a versão de destino do .NET Framework e a versão na qual o aplicativo está sendo executado.
+- Se seu aplicativo foi desenvolvido para ser executado em qualquer versão do .NET Framework a partir do .NET Framework 4,0, consulte [compatibilidade de aplicativos](application-compatibility.md) para gerar listas de alterações entre sua versão de .NET Framework de destino e a versão na qual seu aplicativo está sendo executado.
 
 - Se você tiver um aplicativo .NET Framework 3.5, consulte também [Problemas de migração do .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
 
@@ -59,7 +59,7 @@ Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framewo
 
 - Caso esteja recompilando o código-fonte existente para ser executado no .NET Framework 4.5 ou suas versões de ponto ou desenvolvendo uma nova versão de um aplicativo ou componente direcionado ao .NET Framework 4.5 ou suas versões de ponto de uma base de código-fonte existente, confira [O que está obsoleto na biblioteca de classes](../whats-new/whats-obsolete.md) para obter tipos e membros obsoletos e aplicar a solução alternativa descrita. (O código compilado anteriormente continuará sendo executado em tipos e membros marcados como obsoletos.)
 
-- Se você determinar que uma alteração no .NET Framework 4.5 interrompeu seu aplicativo, confira o [Esquema de configurações de tempo de execução](../configure-apps/file-schema/runtime/index.md) e, em especial, [\<AppContextSwitchOverrides> Element](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), para determinar se é possível usar uma configuração de tempo de execução em seu arquivo de configuração de aplicativo para restaurar o comportamento anterior.
+- Se você determinar que uma alteração no .NET Framework 4.5 interrompeu seu aplicativo, confira o [Esquema de configurações de runtime](../configure-apps/file-schema/runtime/index.md) e, em especial, [\<AppContextSwitchOverrides&gt; Element](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), para determinar se é possível usar uma configuração de runtime em seu arquivo de configuração de aplicativo para restaurar o comportamento anterior.
 
 - Se você encontrar um problema que não está documentado, abra um problema no [site da Comunidade de Desenvolvedores do .NET](https://developercommunity.visualstudio.com/spaces/61/index.html) ou no [repositório GitHub do Microsoft/dotnet](https://github.com/microsoft/dotnet/issues).
 

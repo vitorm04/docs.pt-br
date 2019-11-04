@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: 496589a0c1a5a0a029e464bfdd87caf8515bb9e3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bd84cb45de68ee86cb042e85695f4893c0ca6988
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044874"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424138"
 ---
 # <a name="message-security-certificate"></a>Certificado de mensagem de segurança
 Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com a autenticação de certificado X. 509 v3 para o cliente e requer autenticação de servidor usando o certificado X. 509 v3 do servidor. Este exemplo usa configurações padrão, de modo que todas as mensagens de aplicativo entre o cliente e o servidor sejam assinadas e criptografadas. Este exemplo se baseia na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) e consiste em um programa de console do cliente e uma biblioteca de serviços hospedada pelo serviços de informações da Internet (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
@@ -33,7 +33,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- O serviço expõe um ponto de extremidade para se comunicar com o serviço e um ponto de extremidade para expor o documento WSDL do serviço usando o protocolo WS-MetadataExchange, definido usando o arquivo de configuração (Web. config). O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com um elemento de [ \<> WSHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) padrão, que usa a segurança da mensagem como padrão. Este exemplo define o `clientCredentialType` atributo como certificado para exigir autenticação de cliente.  
+ O serviço expõe um ponto de extremidade para se comunicar com o serviço e um ponto de extremidade para expor o documento WSDL do serviço usando o protocolo WS-MetadataExchange, definido usando o arquivo de configuração (Web. config). O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com um elemento [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) padrão, que usa a segurança da mensagem como padrão. Este exemplo define o atributo `clientCredentialType` como certificado para exigir autenticação de cliente.  
   
 ```xml  
 <system.serviceModel>  
@@ -84,7 +84,7 @@ public class CalculatorService : ICalculator
   </system.serviceModel>  
 ```  
   
- O comportamento especifica as credenciais do serviço que são usadas quando o cliente autentica o serviço. O nome da entidade do certificado do servidor é `findValue` especificado no atributo [ \<do elemento ServiceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) .  
+ O comportamento especifica as credenciais do serviço que são usadas quando o cliente autentica o serviço. O nome da entidade do certificado do servidor é especificado no atributo `findValue` no elemento [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) .  
   
 ```xml  
 <!--For debugging purposes, set the includeExceptionDetailInFaults attribute to true.-->  
@@ -193,7 +193,7 @@ client.Close();
   
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console  
 CN=client.com  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
@@ -206,7 +206,7 @@ Press <ENTER> to terminate client.
   
 - Criando o certificado do cliente.  
   
-     A linha a seguir no arquivo em lotes cria o certificado do cliente. O nome do cliente especificado é usado no nome da entidade do certificado criado. O certificado é armazenado no `My` repositório no local `CurrentUser` da loja.  
+     A linha a seguir no arquivo em lotes cria o certificado do cliente. O nome do cliente especificado é usado no nome da entidade do certificado criado. O certificado é armazenado no repositório de `My` no local do repositório de `CurrentUser`.  
   
     ```bat
     echo ************  
@@ -246,7 +246,7 @@ Press <ENTER> to terminate client.
   
      A linha a seguir copia o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — essa etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.  
   
-    ```  
+    ```console  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
@@ -266,7 +266,7 @@ Press <ENTER> to terminate client.
     ```  
   
     > [!NOTE]
-    > Se você estiver usando um que não seja U. S. Edição em inglês do Windows, você deve editar o arquivo setup. bat e substituir o nome da conta "NT AUTHORITY\NETWORK SERVICE" pelo equivalente regional.  
+    > Se você estiver usando uma edição que não seja a U. S. inglês do Windows, deverá editar o arquivo setup. bat e substituir o nome da conta "NT AUTHORITY\NETWORK SERVICE" pelo equivalente regional.  
   
 > [!NOTE]
 > As ferramentas usadas neste arquivo em lotes estão localizadas em C:\Arquivos de Programas\microsoft Visual Studio 8 \ Common7\tools ou C:\Arquivos de Programas\microsoft SDKs\Windows\v6.0\bin. Um desses diretórios deve estar no caminho do sistema. Se você tiver o Visual Studio instalado, a maneira mais fácil de obter esse diretório em seu caminho é abrir o Prompt de Comando do Desenvolvedor para o Visual Studio. Clique em **Iniciar**e selecione **todos os programas**, **Visual Studio 2012**, **ferramentas**. Esse prompt de comando tem os caminhos apropriados já configurados. Caso contrário, você deve adicionar o diretório apropriado ao caminho manualmente.  
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está no seguinte diretório:  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está no seguinte diretório:  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   
@@ -295,7 +295,7 @@ Press <ENTER> to terminate client.
   
 2. Verifique o acesso ao serviço usando um navegador inserindo o endereço `http://localhost/servicemodelsamples/service.svc`.  
   
-3. Inicie o Client.exe no \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
+3. Inicie o Client. exe em \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
   
 4. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -311,7 +311,7 @@ Press <ENTER> to terminate client.
   
 5. No servidor, execute o **serviço setup. bat** em um prompt de comando do desenvolvedor para o Visual Studio com privilégios de administrador. A execução de **Setup. bat** com o argumento de **serviço** cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service. cer.  
   
-6. Edite Web. config para refletir o novo nome do certificado ( `findValue` no atributo no [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)do Service-Certificate), que é o mesmo que o nome de domínio totalmente qualificado do computador.  
+6. Edite o Web. config para refletir o novo nome do certificado (no atributo `findValue` no [> de\<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)ServiceName), que é o mesmo que o nome de domínio totalmente qualificado do computador.  
   
 7. Copie o arquivo Service. cer do diretório de serviço para o diretório cliente no computador cliente.  
   
@@ -332,4 +332,4 @@ Press <ENTER> to terminate client.
 - Execute o Cleanup. bat na pasta Samples depois de concluir a execução do exemplo.  
   
     > [!NOTE]
-    > Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+    > Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: dc1e2ee004c21bb3d05155eec3e42ea80bf641a1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ccb1463db51510d275b7053955a0257bd4fe621e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608645"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422708"
 ---
 # <a name="into-c-reference"></a>into (Referência de C#)
 
@@ -32,5 +32,5 @@ Para obter um exemplo do uso de `into` em uma cláusula `join`, consulte [cláus
 ## <a name="see-also"></a>Consulte também
 
 - [Palavras-chave de Consulta (LINQ)](query-keywords.md)
-- [Expressões de consulta LINQ](../../programming-guide/linq-query-expressions/index.md)
+- [LINQ em C#](../../linq/index.md)
 - [Cláusula group](group-clause.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Redimensionar controles nos Windows Forms'
+title: Como redimensionar controles nos Windows Forms
 ms.date: 03/30/2017
 f1_keywords:
 - Size.Height
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - size [Windows Forms], controls
 - Windows Forms controls, size
 ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
-author: gewarren
-ms.author: gewarren
+author: jillre
+ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 7e659bf02ea079afc10561e1d83f7ab7cef29a2e
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3aacc9434199eb7881e362a67e1fe0c08784c4a7
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987056"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459545"
 ---
-# <a name="how-to-resize-controls-on-windows-forms"></a>Como: Redimensionar controles em Windows Forms
+# <a name="how-to-resize-controls-on-windows-forms"></a>Como: redimensionar controles em Windows Forms
 
-Você pode redimensionar os controles individuais e pode redimensionar vários controles do mesmo tipo ou diferentes, <xref:System.Windows.Forms.Button> como controles e. <xref:System.Windows.Forms.GroupBox>
+Você pode redimensionar os controles individuais e pode redimensionar vários controles do mesmo tipo ou diferente, como <xref:System.Windows.Forms.Button> e <xref:System.Windows.Forms.GroupBox> controles.
 
 ## <a name="to-resize-a-control"></a>Para redimensionar um controle
 
@@ -42,4 +42,4 @@ No Visual Studio, selecione o controle a ser redimensionado e arraste um dos oit
 - [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)
-- [Como: Redimensionar Windows Forms usando o designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))
+- [Como redimensionar Windows Forms usando o designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))

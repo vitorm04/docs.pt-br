@@ -2,12 +2,12 @@
 title: Autenticador de token
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: a8a8713cd35e73b5126dadd7e0e17a3f8304188b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 835a158ba668a3aef749602c73fd9157e8d83a40
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045452"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425026"
 ---
 # <a name="token-authenticator"></a>Autenticador de token
 Este exemplo demonstra como implementar um autenticador de token personalizado. Um autenticador de token no Windows Communication Foundation (WCF) é usado para validar o token usado com a mensagem, verificar se ele é consistente e autenticar a identidade associada ao token.
@@ -30,7 +30,7 @@ Este exemplo demonstra como implementar um autenticador de token personalizado. 
 
  Este exemplo também mostra como a identidade do chamador pode ser acessada do WCF após o processo de autenticação de token personalizado.
 
- O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração app. config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com `wsHttpBinding`um padrão, com o modo de segurança definido como Message-o modo `wsHttpBinding`padrão do. Este exemplo define o padrão `wsHttpBinding` para usar a autenticação de nome de usuário do cliente. O serviço também configura o certificado de serviço usando `serviceCredentials` o comportamento. O `securityCredentials` comportamento permite que você especifique um certificado de serviço. Um certificado de serviço é usado por um cliente para autenticar o serviço e fornecer proteção de mensagem. A configuração a seguir faz referência ao certificado localhost instalado durante a configuração de exemplo, conforme descrito nas instruções de instalação a seguir.
+ O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração app. config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com um `wsHttpBinding`padrão, com o modo de segurança definido como Message-o modo padrão do `wsHttpBinding`. Este exemplo define o `wsHttpBinding` padrão para usar a autenticação de nome de usuário do cliente. O serviço também configura o certificado de serviço usando `serviceCredentials` comportamento. O comportamento de `securityCredentials` permite que você especifique um certificado de serviço. Um certificado de serviço é usado por um cliente para autenticar o serviço e fornecer proteção de mensagem. A configuração a seguir faz referência ao certificado localhost instalado durante a configuração de exemplo, conforme descrito nas instruções de instalação a seguir.
 
 ```xml
 <system.serviceModel>
@@ -81,7 +81,7 @@ Este exemplo demonstra como implementar um autenticador de token personalizado. 
   </system.serviceModel>
 ```
 
- A configuração de ponto de extremidade do cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurada `Mode` com `clientCredentialType`o e o.
+ A configuração de ponto de extremidade do cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurada com as `Mode` e `clientCredentialType`apropriadas.
 
 ```xml
 <system.serviceModel>
@@ -108,7 +108,7 @@ Este exemplo demonstra como implementar um autenticador de token personalizado. 
 
  A implementação do cliente define o nome de usuário e a senha a serem usados.
 
-```
+```csharp
 static void Main()
 {
      ...
@@ -123,9 +123,9 @@ static void Main()
 
 1. Escreva um autenticador de token personalizado.
 
-     O exemplo implementa um autenticador de token personalizado que valida se o nome de usuário tem um formato de email válido. Ele deriva o <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. O método mais importante nessa classe é <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. Nesse método, o autenticador valida o formato do nome de usuário e também que o nome do host não é de um domínio não autorizado. Se ambas as condições forem atendidas, ele retornará uma coleção somente leitura de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> instâncias que é usada para fornecer declarações que representam as informações armazenadas dentro do token de nome de usuário.
+     O exemplo implementa um autenticador de token personalizado que valida se o nome de usuário tem um formato de email válido. Ele deriva a <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>. O método mais importante nessa classe é <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>. Nesse método, o autenticador valida o formato do nome de usuário e também que o nome do host não é de um domínio não autorizado. Se ambas as condições forem atendidas, ele retornará uma coleção somente leitura de instâncias de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> que é usada para fornecer declarações que representam as informações armazenadas dentro do token de nome de usuário.
 
-    ```
+    ```csharp
     protected override ReadOnlyCollection<IAuthorizationPolicy> ValidateUserNamePasswordCore(string userName, string password)
     {
         if (!ValidateUserNameFormat(userName))
@@ -142,9 +142,9 @@ static void Main()
 
 2. Forneça uma política de autorização retornada pelo autenticador de token personalizado.
 
-     Este exemplo fornece sua própria implementação de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> chamada `UnconditionalPolicy` que retorna o conjunto de declarações e identidades que foram passadas a ele em seu construtor.
+     Este exemplo fornece sua própria implementação de <xref:System.IdentityModel.Policy.IAuthorizationPolicy> chamada `UnconditionalPolicy` que retorna o conjunto de declarações e identidades que foram passadas para ele em seu construtor.
 
-    ```
+    ```csharp
     class UnconditionalPolicy : IAuthorizationPolicy
     {
         String id = Guid.NewGuid().ToString();
@@ -212,9 +212,9 @@ static void Main()
 
 3. Escreva um Gerenciador de token de segurança personalizado.
 
-     O <xref:System.IdentityModel.Selectors.SecurityTokenManager> é usado para criar um <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> para `CreateSecurityTokenAuthenticator` objetos <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> específicos que são passados para ele no método. O Gerenciador de token de segurança também é usado para criar provedores de token e serializadores de token, mas eles não são cobertos por esse exemplo. Neste exemplo, o Gerenciador de token de segurança personalizado herda <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> da classe e substitui `CreateSecurityTokenAuthenticator` o método para retornar o autenticador de token de nome de usuário personalizado quando os requisitos de token passados indicam que o autenticador de nome de usuário é solicitado.
+     O <xref:System.IdentityModel.Selectors.SecurityTokenManager> é usado para criar um <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> para objetos de <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> específicos que são passados para ele no método `CreateSecurityTokenAuthenticator`. O Gerenciador de token de segurança também é usado para criar provedores de token e serializadores de token, mas eles não são cobertos por esse exemplo. Neste exemplo, o Gerenciador de token de segurança personalizado herda de <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> classe e substitui o método `CreateSecurityTokenAuthenticator` para retornar o autenticador de token de nome de usuário personalizado quando os requisitos de token passados indicam que o autenticador de nome de usuário é solicitado.
 
-    ```
+    ```csharp
     public class MySecurityTokenManager : ServiceCredentialsSecurityTokenManager
     {
         MyUserNameCredential myUserNameCredential;
@@ -244,7 +244,7 @@ static void Main()
 
      A classe de credenciais de serviço é usada para representar as credenciais que são configuradas para o serviço e cria um Gerenciador de token de segurança que é usado para obter autenticadores de token, provedores de token e serializadores de token.
 
-    ```
+    ```csharp
     public class MyUserNameCredential : ServiceCredentials
     {
 
@@ -270,7 +270,7 @@ static void Main()
 
      Para que o serviço use a credencial de serviço personalizado, excluímos a classe de credencial de serviço padrão depois de capturar o certificado de serviço que já está pré-configurado na credencial de serviço padrão e configurar a nova credencial de serviço instância para usar os certificados de serviço pré-configurados e adicionar essa nova instância de credencial de serviço a comportamentos de serviço.
 
-    ```
+    ```csharp
     ServiceCredentials sc = serviceHost.Credentials;
     X509Certificate2 cert = sc.ServiceCertificate.Certificate;
     MyUserNameCredential serviceCredential = new MyUserNameCredential();
@@ -281,7 +281,7 @@ static void Main()
 
  Para exibir as informações do chamador, você pode usar o <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> conforme mostrado no código a seguir. O <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> contém informações de declarações sobre o chamador atual.
 
-```
+```csharp
 static void DisplayIdentityInformation()
 {
     Console.WriteLine("\t\tSecurity context identity  :  {0}",
@@ -299,9 +299,9 @@ static void DisplayIdentityInformation()
 
 - Criando o certificado do servidor.
 
-     As linhas a seguir do arquivo em lotes setup. bat criam o certificado do servidor a ser usado. A `%SERVER_NAME%` variável especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O padrão neste arquivo em lotes é localhost.
+     As linhas a seguir do arquivo em lotes setup. bat criam o certificado do servidor a ser usado. A variável `%SERVER_NAME%` especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O padrão neste arquivo em lotes é localhost.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -315,7 +315,7 @@ static void DisplayIdentityInformation()
 
      As linhas a seguir no arquivo em lotes setup. bat copiam o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — esta etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
@@ -347,7 +347,7 @@ static void DisplayIdentityInformation()
   
 2. Copie os arquivos de programa do serviço para o diretório de serviço no computador do serviço. Copie também os arquivos Setup. bat e Cleanup. bat para o computador de serviço.  
   
-3. Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo app. config do serviço deve ser atualizado para refletir esse novo nome de certificado. Você pode criar um usando o setup. bat se definir a `%SERVER_NAME%` variável para o nome de host totalmente qualificado do computador no qual o serviço será executado. Observe que o arquivo setup. bat deve ser executado de um Prompt de Comando do Desenvolvedor para o Visual Studio aberto com privilégios de administrador.  
+3. Você deve ter um certificado de servidor com o nome da entidade que contém o nome de domínio totalmente qualificado do computador. O arquivo app. config do serviço deve ser atualizado para refletir esse novo nome de certificado. Você pode criar um usando o setup. bat se definir a variável `%SERVER_NAME%` como o nome de host totalmente qualificado do computador no qual o serviço será executado. Observe que o arquivo setup. bat deve ser executado de um Prompt de Comando do Desenvolvedor para o Visual Studio aberto com privilégios de administrador.  
   
 4. Copie o certificado do servidor no repositório CurrentUser-TrustedPeople do cliente. Você não precisa fazer isso, exceto quando o certificado do servidor é emitido por um emissor confiável do cliente.  
   

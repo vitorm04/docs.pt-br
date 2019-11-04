@@ -2,12 +2,12 @@
 title: Provedor de função e associação
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 139d85a1ec36509690f35f24c7ddf04716a7e909
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7fba608d6d0ed3b7caab62ff16926d7b03516ed1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039449"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424661"
 ---
 # <a name="membership-and-role-provider"></a>Provedor de função e associação
 O exemplo de provedor de associação e função demonstra como um serviço pode usar a associação ASP.NET e os provedores de função para autenticar e autorizar clientes.  
@@ -27,7 +27,7 @@ O exemplo de provedor de associação e função demonstra como um serviço pode
   
 - O servidor pode mapear o cliente autenticado para uma função usando o provedor de função ASP.NET.  
   
-- O servidor pode usar o `PrincipalPermissionAttribute` para controlar o acesso a determinados métodos que são expostos pelo serviço.  
+- O servidor pode usar o `PrincipalPermissionAttribute` para controlar o acesso a determinados métodos expostos pelo serviço.  
   
  Os provedores de associação e de função são configurados para usar um armazenamento apoiado por SQL Server. Uma cadeia de conexão e várias opções são especificadas no arquivo de configuração de serviço. O provedor de associação recebe o nome `SqlMembershipProvider` enquanto o provedor de função recebe o nome `SqlRoleProvider`.  
   
@@ -69,7 +69,7 @@ O exemplo de provedor de associação e função demonstra como um serviço pode
 </system.web>  
 ```  
   
- O serviço expõe um único ponto de extremidade para se comunicar com o serviço, que é definido usando o arquivo de configuração Web. config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com `wsHttpBinding`um padrão, que usa a autenticação do Windows por padrão. Este exemplo define o padrão `wsHttpBinding` para usar a autenticação de nome de usuário. O comportamento especifica que o certificado do servidor deve ser usado para autenticação de serviço. O certificado do servidor deve conter o mesmo valor para `SubjectName` o como `findValue` o atributo no elemento de configuração do [ \<> de certificados](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) . Além disso, o comportamento especifica que a autenticação de pares de nome de usuário-senha é executada pelo provedor de associação ASP.NET e o mapeamento de função é executado pelo provedor de função ASP.NET especificando os nomes definidos para os dois provedores.  
+ O serviço expõe um único ponto de extremidade para se comunicar com o serviço, que é definido usando o arquivo de configuração Web. config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com um `wsHttpBinding`padrão, que usa a autenticação do Windows por padrão. Este exemplo define o `wsHttpBinding` padrão para usar a autenticação de nome de usuário. O comportamento especifica que o certificado do servidor deve ser usado para autenticação de serviço. O certificado do servidor deve conter o mesmo valor para o `SubjectName` como o atributo `findValue` no elemento de configuração [> do\<de certificado](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) . Além disso, o comportamento especifica que a autenticação de pares de nome de usuário-senha é executada pelo provedor de associação ASP.NET e o mapeamento de função é executado pelo provedor de função ASP.NET especificando os nomes definidos para os dois provedores.  
   
 ```xml  
 <system.serviceModel>  
@@ -136,7 +136,7 @@ O exemplo de provedor de associação e função demonstra como um serviço pode
   
 2. Execute setup. bat da pasta de instalação de exemplo em um Prompt de Comando do Desenvolvedor para o Visual Studio executar com privilégios de administrador. Isso instala os certificados de serviço necessários para executar o exemplo.  
   
-3. Inicie o Client.exe no \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
+3. Inicie o Client. exe em \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
   
 4. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -150,9 +150,9 @@ O exemplo de provedor de associação e função demonstra como um serviço pode
   
 4. Copie os arquivos de programa do cliente para o diretório cliente no computador cliente. Copie também os arquivos Setup. bat, Cleanup. bat e ImportServiceCert. bat para o cliente.  
   
-5. No servidor, abra um Prompt de Comando do Desenvolvedor para o Visual Studio com privilégios administrativos e execute `setup.bat service`. A `setup.bat` execução com `service` o argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service. cer.  
+5. No servidor, abra um Prompt de Comando do Desenvolvedor para o Visual Studio com privilégios administrativos e execute `setup.bat service`. A execução de `setup.bat` com o argumento `service` cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service. cer.  
   
-6. Edite o Web. config para refletir o novo nome do certificado `findValue` (no atributo no [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)do Service-Certificate), que é o mesmo que o nome de domínio totalmente qualificado do computador.  
+6. Edite Web. config para refletir o novo nome de certificado (no atributo `findValue` no [> de\<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)ServiceName), que é o mesmo que o nome de domínio totalmente qualificado do computador.  
   
 7. Copie o arquivo Service. cer do diretório de serviço para o diretório cliente no computador cliente.  
   
@@ -167,7 +167,7 @@ O exemplo de provedor de associação e função demonstra como um serviço pode
 - Execute o Cleanup. bat na pasta Samples depois de concluir a execução do exemplo.  
   
 > [!NOTE]
-> Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+> Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>O arquivo em lotes de instalação  
  O arquivo em lotes setup. bat incluído com este exemplo permite que você configure o servidor com certificados relevantes para executar um aplicativo auto-hospedado que requer segurança baseada em certificado do servidor. Esse arquivo em lotes deve ser modificado para funcionar em computadores ou para funcionar em um caso não hospedado.  
@@ -180,7 +180,7 @@ O exemplo de provedor de associação e função demonstra como um serviço pode
   
      O certificado é armazenado no meu repositório (pessoal) no local de armazenamento de LocalMachine.  
   
-    ```  
+    ```console
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  
@@ -194,6 +194,6 @@ O exemplo de provedor de associação e função demonstra como um serviço pode
   
      As linhas a seguir no arquivo em lotes setup. bat copiam o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — essa etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.  
   
-    ```  
+    ```bat  
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  

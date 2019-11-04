@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: 8a29584dd5ed47ad1e8a336a7283cba9271f3abd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 95726d4bfae6da43cd845d461caf8f1848d774f1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121205"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424329"
 ---
 # <a name="implementing-a-dispose-method"></a>Como implementar um método Dispose
 
 Você implementa um método <xref:System.IDisposable.Dispose%2A> para liberar recursos não gerenciados usados pelo seu aplicativo. O coletor de lixo .NET não alocar nem libera memória não gerenciada.  
   
-O padrão para o descarte um objeto, conhecido como [padrão Dispose](../../../docs/standard/design-guidelines/dispose-pattern.md), impõe ordem no tempo de vida de um objeto. O padrão de descarte é usado somente para os objetos que acessam recursos não gerenciados, como identificadores de arquivo e pipe, identificadores de Registro, identificadores de espera ou ponteiros para blocos de memória não gerenciada. Isso ocorre porque o coletor de lixo é muito eficiente para recuperar objetos gerenciados não usados, mas não é capaz de recuperar objetos não gerenciados.  
+O padrão para o descarte um objeto, conhecido como [padrão Dispose](implementing-dispose.md), impõe ordem no tempo de vida de um objeto. O padrão de descarte é usado somente para os objetos que acessam recursos não gerenciados, como identificadores de arquivo e pipe, identificadores de Registro, identificadores de espera ou ponteiros para blocos de memória não gerenciada. Isso ocorre porque o coletor de lixo é muito eficiente para recuperar objetos gerenciados não usados, mas não é capaz de recuperar objetos não gerenciados.  
   
 O padrão de descarte tem duas variações:  
   
@@ -167,4 +167,4 @@ O exemplo a seguir ilustra o padrão de descarte para uma classe derivada, `Disp
 - <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>
 - <xref:System.Object.Finalize%2A?displayProperty=nameWithType>
 - [Como definir e consumir classes e structs (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)
-- [Padrão de descarte](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- [Padrão de descarte](implementing-dispose.md)

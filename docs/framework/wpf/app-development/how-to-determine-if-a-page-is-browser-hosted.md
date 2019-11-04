@@ -1,5 +1,5 @@
 ---
-title: 'Como: Determinar se uma página está hospedada no navegador'
+title: 'Como: determinar se uma página é hospedada pelo navegador'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - hosted pages in browser [WPF]
 - pages [WPF], hosted in browser
 ms.assetid: 737e0f26-8371-49b4-9579-70879e51e1aa
-ms.openlocfilehash: d154de2f885101d1bd0c4613dfb1604be8acbe6a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4cb1065807d16c1d1f5a95c8ac9c9cbe5a0fdab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947804"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424696"
 ---
-# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Como: Determinar se uma página está hospedada no navegador
+# <a name="how-to-determine-if-a-page-is-browser-hosted"></a>Como: determinar se uma página é hospedada pelo navegador
 Este exemplo demonstra como determinar se um <xref:System.Windows.Controls.Page> está hospedado em um navegador.  
   
 ## <a name="example"></a>Exemplo  
- Um <xref:System.Windows.Controls.Page> pode ser independente de host e, consequentemente, pode ser carregado em vários tipos diferentes de hosts, incluindo uma <xref:System.Windows.Controls.Frame>, um <xref:System.Windows.Navigation.NavigationWindow>, ou um navegador. Isso pode acontecer quando você tem um assembly de biblioteca que contém uma ou mais páginas, e que é referenciado por várias autônomo e navegável ([!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]) hospedar aplicativos.  
+ Um <xref:System.Windows.Controls.Page> pode ser independente de host e, consequentemente, pode ser carregado em vários tipos diferentes de hosts, incluindo um <xref:System.Windows.Controls.Frame>, um <xref:System.Windows.Navigation.NavigationWindow>ou um navegador. Isso pode acontecer quando você tem um assembly de biblioteca que contém uma ou mais páginas e que é referenciado por vários aplicativos de host autônomos e navegáveis (aplicativo de navegador XAML (XBAP)).  
   
  O exemplo a seguir demonstra como usar <xref:System.Windows.Interop.BrowserInteropHelper.IsBrowserHosted%2A?displayProperty=nameWithType> para determinar se um <xref:System.Windows.Controls.Page> está hospedado em um navegador.  
   

@@ -2,12 +2,12 @@
 title: Controle de versão de serviço
 ms.date: 03/30/2017
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-ms.openlocfilehash: 68c41f2c349dbceb318976ee26db58fd00dae872
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3f9fd87eacf67a1b23568dcf87df086e935879ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321482"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423682"
 ---
 # <a name="service-versioning"></a>Controle de versão de serviço
 Após a implantação inicial e, potencialmente, várias vezes durante o tempo de vida, os serviços (e os pontos de extremidade que eles expõem) talvez precisem ser alterados por vários motivos, como mudanças nas necessidades dos negócios, requisitos de tecnologia da informação ou para resolver outros edições. Cada alteração introduz uma nova versão do serviço. Este tópico explica como considerar o controle de versão no Windows Communication Foundation (WCF).  
@@ -77,7 +77,7 @@ Após a implantação inicial e, potencialmente, várias vezes durante o tempo d
 ### <a name="round-trips-of-unknown-data"></a>Viagens de ida e volta de dados desconhecidos  
  Em alguns cenários, há a necessidade de "viagem de ida e volta" dados desconhecidos provenientes de membros adicionados em uma nova versão. Por exemplo, um serviço "versionNew" envia dados com alguns membros adicionados recentemente a um cliente "versionOld". O cliente ignora os membros recém-adicionados ao processar a mensagem, mas reenvia os mesmos dados, incluindo os membros adicionados recentemente, de volta ao serviço versionNew. O cenário típico para isso são as atualizações de dados em que os dados são recuperados do serviço, alterados e retornados.  
   
- Para habilitar a ida e volta para um tipo específico, o tipo deve implementar a interface <xref:System.Runtime.Serialization.IExtensibleDataObject>. A interface contém uma propriedade, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> que retorna o tipo <xref:System.Runtime.Serialization.ExtensionDataObject>. A propriedade é usada para armazenar quaisquer dados de versões futuras do contrato de dados que são desconhecidos para a versão atual. Esses dados são opacos para o cliente, mas quando a instância é serializada, o conteúdo da propriedade <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> é gravado com o restante dos dados dos membros do contrato de dados.  
+ Para habilitar a ida e volta para um tipo específico, o tipo deve implementar a interface <xref:System.Runtime.Serialization.IExtensibleDataObject>. A interface contém uma propriedade, <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> que retorna o tipo de <xref:System.Runtime.Serialization.ExtensionDataObject>. A propriedade é usada para armazenar quaisquer dados de versões futuras do contrato de dados que são desconhecidos para a versão atual. Esses dados são opacos para o cliente, mas quando a instância é serializada, o conteúdo da propriedade <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> é escrito com o restante dos dados dos membros do contrato de dados.  
   
  É recomendável que todos os seus tipos implementem essa interface para acomodar Membros futuros novos e desconhecidos.  
   
@@ -132,7 +132,7 @@ Após a implantação inicial e, potencialmente, várias vezes durante o tempo d
   
  Um desses mecanismos é usar interfaces para definir os membros de cada contrato de dados e escrever o código de implementação interno em termos das interfaces em vez das classes de contrato de dados que implementam as interfaces. O código a seguir para a versão 1 de um serviço mostra uma interface `IPurchaseOrderV1` e um `PurchaseOrderV1`:  
   
-```  
+```csharp  
 public interface IPurchaseOrderV1  
 {  
     string OrderId { get; set; }  
@@ -153,7 +153,7 @@ public class PurchaseOrderV1 : IPurchaseOrderV1
   
  Embora as operações do contrato de serviço sejam gravadas em termos de `PurchaseOrderV1`, a lógica de negócios real seria em termos de `IPurchaseOrderV1`. Em seguida, na versão 2, haveria uma nova interface `IPurchaseOrderV2` e uma nova classe `PurchaseOrderV2`, conforme mostrado no código a seguir:  
   
-```  
+```csharp
 public interface IPurchaseOrderV2  
 {  
     DateTime OrderDate { get; set; }  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: cac7a7552d1a24480d614b7b90fdd8cf0ef8a3e8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197793"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424430"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilando um aplicativo WPF (WPF)
 
@@ -136,13 +136,13 @@ A etapa de compilação principal envolve a compilação de arquivos de código.
 
 No final do processo de compilação, depois que todos os assemblies de aplicativo e arquivos de conteúdo estiverem prontos, os manifestos ClickOnce para o aplicativo serão gerados.
 
-O arquivo de manifesto de implantação descreve o modelo de implantação: a versão atual, o comportamento de atualização e a identidade do editor junto com a assinatura digital. Esse manifesto deve ser criado pelos administradores que lidam com a implantação. A extensão de arquivo é .xbap (para o [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]) e .application para aplicativos instalados. A primeira é determinada pela propriedade do projeto `HostInBrowser` e, como resultado, o manifesto identifica o aplicativo como hospedado pelo navegador.
+O arquivo de manifesto de implantação descreve o modelo de implantação: a versão atual, o comportamento de atualização e a identidade do editor junto com a assinatura digital. Esse manifesto deve ser criado pelos administradores que lidam com a implantação. A extensão de arquivo é. XBAP (para aplicativos de navegador XAML (XBAPs)) e. Application para aplicativos instalados. A primeira é determinada pela propriedade do projeto `HostInBrowser` e, como resultado, o manifesto identifica o aplicativo como hospedado pelo navegador.
 
 O manifesto do aplicativo (um arquivo de manifesto .exe) descreve os assemblies do aplicativo e as bibliotecas dependentes e permissões de lista exigidas pelo aplicativo. Esse arquivo deve ser criado pelo desenvolvedor do aplicativo. Para iniciar um aplicativo ClickOnce, um usuário abre o arquivo de manifesto de implantação do aplicativo.
 
-Esses arquivos de manifesto são sempre criados para o [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Para aplicativos instalados, eles não são criados, a menos que a propriedade `GenerateManifests` seja especificada no arquivo de projeto com o valor `true`.
+Esses arquivos de manifesto sempre são criados para XBAPs. Para aplicativos instalados, eles não são criados, a menos que a propriedade `GenerateManifests` seja especificada no arquivo de projeto com o valor `true`.
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] obter duas permissões adicionais acima e acima dessas permissões atribuídas a aplicativos de zona da Internet típicos: <xref:System.Security.Permissions.WebBrowserPermission> e <xref:System.Security.Permissions.MediaPermission>. O sistema de build do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] declara essas permissões no manifesto do aplicativo.
+XBAPs obtêm duas permissões adicionais acima das permissões atribuídas a aplicativos de zona da Internet típicos: <xref:System.Security.Permissions.WebBrowserPermission> e <xref:System.Security.Permissions.MediaPermission>. O sistema de build do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] declara essas permissões no manifesto do aplicativo.
 
 <a name="Incremental_Build_Support"></a>
 

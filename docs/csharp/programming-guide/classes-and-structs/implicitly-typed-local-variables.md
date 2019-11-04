@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 8c09ddc5a9db71a4e0bef0434d2fc14a4c088352
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 7010c38797ab64e5106c96c06cd814c143ca9c24
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65635560"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73419381"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Variáveis locais de tipo implícito (Guia de Programação em C#)
 
@@ -45,11 +45,11 @@ A palavra-chave `var` pode ser usada nos seguintes contextos:
     using (var file = new StreamReader("C:\\myfile.txt")) {...}
     ```
 
-Para obter mais informações, confira [Como: usar matrizes e variáveis locais de tipo implícito em uma expressão de consulta](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
+Para obter mais informações, consulte [Como usar matrizes e variáveis locais de tipo implícito em uma expressão de consulta](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).
 
 ## <a name="var-and-anonymous-types"></a>Tipos var e anônimos
 
-Em muitos casos, o uso de `var` é opcional e é apenas uma conveniência sintática. No entanto, quando uma variável é inicializada com um tipo anônimo você deve declarar a variável como `var` se precisar acessar as propriedades do objeto em um momento posterior. Esse é um cenário comum em expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações, consulte [Tipos Anônimos](anonymous-types.md).
+Em muitos casos, o uso de `var` é opcional e é apenas uma conveniência sintática. No entanto, quando uma variável é inicializada com um tipo anônimo você deve declarar a variável como `var` se precisar acessar as propriedades do objeto em um momento posterior. Esse é um cenário comum em expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações, consulte [Tipos anônimos](anonymous-types.md).
 
 Da perspectiva do código-fonte, um tipo anônimo não tem nome. Portanto, se uma variável de consulta tiver sido inicializada com `var`, a única maneira de acessar as propriedades na sequência retornada será usar `var` como o tipo da variável de iteração na instrução `foreach`.
 
@@ -95,11 +95,11 @@ No entanto, o uso de `var` tem pelo menos o potencial de tornar seu código mais
 
 - [Referência de C#](../../language-reference/index.md)
 - [Matrizes de tipo implícito](../arrays/implicitly-typed-arrays.md)
-- [Como: usar matrizes e variáveis locais de tipo implícito em uma expressão de consulta](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
+- [Como usar matrizes e variáveis locais de tipo implícito em uma expressão de consulta](how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)
 - [Tipos Anônimos](anonymous-types.md)
 - [Inicializadores de objeto e coleção](object-and-collection-initializers.md)
 - [var](../../language-reference/keywords/var.md)
-- [Expressões de consulta LINQ](../linq-query-expressions/index.md)
+- [LINQ em C#](../../linq/index.md)
 - [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)
 - [for](../../language-reference/keywords/for.md)
 - [foreach, in](../../language-reference/keywords/foreach-in.md)

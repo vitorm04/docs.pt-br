@@ -2,24 +2,24 @@
 title: Rota por corpo
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: 6df95a23aa66f39ab716912bae770a160c79da25
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dfe6d9e5a640efd9b516e0c0ff006ae0ed659834
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038948"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424259"
 ---
 # <a name="route-by-body"></a>Rota por corpo
-Este exemplo demonstra como implementar um serviço que aceita objetos de mensagem com qualquer ação SOAP. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. O serviço implementa uma única `Calculate` operação que aceita um <xref:System.ServiceModel.Channels.Message> parâmetro de solicitação e retorna <xref:System.ServiceModel.Channels.Message> uma resposta.  
+Este exemplo demonstra como implementar um serviço que aceita objetos de mensagem com qualquer ação SOAP. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. O serviço implementa uma única operação de `Calculate` que aceita um parâmetro de solicitação de <xref:System.ServiceModel.Channels.Message> e retorna uma resposta <xref:System.ServiceModel.Channels.Message>.  
   
  Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado no IIS.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O exemplo demonstra a expedição de mensagens com base no conteúdo do corpo. O mecanismo interno de expedição de mensagens do modelo de serviço Windows Communication Foundation (WCF) baseia-se nas ações de mensagem. No entanto, há muitos serviços Web existentes que definem todas as suas operações com Action = "". É impossível criar um serviço baseado em WSDL que mantém a expedição de mensagens de solicitação com base nas informações de ação. Este exemplo demonstra um contrato de serviço baseado em WSDL (o WSDL está contido em Service. WSDL que é incluído com o exemplo). O contrato de serviço é calculadora, semelhante ao usado em [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). No entanto `Action=""` , o `[OperationContract]` especifica para todas as operações.  
+ O exemplo demonstra a expedição de mensagens com base no conteúdo do corpo. O mecanismo interno de expedição de mensagens do modelo de serviço Windows Communication Foundation (WCF) baseia-se nas ações de mensagem. No entanto, há muitos serviços Web existentes que definem todas as suas operações com Action = "". É impossível criar um serviço baseado em WSDL que mantém a expedição de mensagens de solicitação com base nas informações de ação. Este exemplo demonstra um contrato de serviço baseado em WSDL (o WSDL está contido em Service. WSDL que é incluído com o exemplo). O contrato de serviço é calculadora, semelhante ao usado em [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). No entanto, o `[OperationContract]` especifica `Action=""` para todas as operações.  
   
-```  
+```csharp  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
                  XmlSerializerFormat, DispatchByBodyBehavior]  
     public interface ICalculator  
@@ -35,11 +35,11 @@ Este exemplo demonstra como implementar um serviço que aceita objetos de mensag
     }  
 ```  
   
- Dado um contrato, um serviço requer comportamento `DispatchByBodyBehavior` de expedição personalizado para permitir que as mensagens sejam expedidas entre as operações. Esse comportamento de expedição Inicializa `DispatchByBodyElementOperationSelector` o seletor de operação personalizada com uma tabela dos nomes de operação com chave por QName dos respectivos elementos de wrapper. `DispatchByBodyElementOperationSelector`examina a marca de início do primeiro filho do corpo e seleciona a operação usando a tabela mencionada anteriormente.  
+ Dado um contrato, um serviço requer o comportamento de expedição personalizado `DispatchByBodyBehavior` para permitir que as mensagens sejam expedidas entre as operações. Esse comportamento de expedição Inicializa o `DispatchByBodyElementOperationSelector` seletor de operação personalizada com uma tabela dos nomes de operação com chave por QName dos respectivos elementos de wrapper. `DispatchByBodyElementOperationSelector` examina a marca de início do primeiro filho do corpo e seleciona a operação usando a tabela mencionada anteriormente.  
   
  O cliente usa um proxy gerado automaticamente do WSDL exportado pelo serviço usando a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
-```  
+```console  
 svcutil.exe  /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples /uxs http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedProxy.cs  
 ```  
   
@@ -47,7 +47,7 @@ svcutil.exe  /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Sam
   
  O código do cliente executa vários cálculos. Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
-```  
+```console
 Add(100, 15.99) = 115.99  
 Subtract(145, 76.54) = 68.46  
 Multiply(9, 81.25) = 731.25  
@@ -69,6 +69,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  

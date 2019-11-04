@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 073b28d353bb7ea43775c7e20ddf7241cabf7d9a
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664010"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424860"
 ---
 # <a name="xml-documents-and-data"></a>Documentos e dados XML
 
@@ -34,7 +34,7 @@ As classes nesses namespaces suportam recomendações World Wide Web Consortium 
 
 - As classes <xref:System.Xml.XmlReader?displayProperty=nameWithType> e <xref:System.Xml.XmlWriter?displayProperty=nameWithType> dão suporte para as recomendações [W3C XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/) e [Namespaces em XML](https://www.w3.org/TR/REC-xml-names/).
 
-- Os esquemas na classe <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> dão suporte às recomendações [XML Schema Part 1: Structures](https://www.w3.org/TR/xmlschema-1/) (Esquema XML Parte 1: Estruturas) e [XML Schema Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/) (Esquema XML Parte 2: Tipos de dados) do W3C.
+- Os esquemas na classe <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> dão suporte para as recomendações do [W3C XML Schema Part 1: Structures](https://www.w3.org/TR/xmlschema-1/) (Esquema XML do W3C Parte 1: estruturas) e do [XML Schema Part 2: Datatypes](https://www.w3.org/TR/xmlschema-2/) (Esquema XML Parte 2: tipos de dados).
 
 - As classes no namespace <xref:System.Xml.Xsl?displayProperty=nameWithType> dão suporte para as transformações XSLT que estão em conformidade com a recomendação [W3C XSLT 1.0](https://www.w3.org/TR/xslt).
 
@@ -62,7 +62,7 @@ As classes XML do .NET Framework fornecem esses benefícios:
 
 [Opções de processamento XML](../../../../docs/standard/data/xml/xml-processing-options.md) Discute opções para processar dados XML.
 
-[Processamento de Dados XML na memória](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) Discute os três modelos para processar dados XML na memória: [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), a classe <xref:System.Xml.XmlDocument> (com base no Modelo de Objeto do Documento do W3C) e a classe <xref:System.Xml.XPath.XPathDocument> (com base no modelo de dados do XPath).
+[Processando dados XML na memória](../../../../docs/standard/data/xml/processing-xml-data-in-memory.md) Discute os três modelos para processamento de dados XML na memória: [LINQ to XMLC#()](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md), a classe <xref:System.Xml.XmlDocument> (com base na modelo de objeto do documento W3C) e a classe <xref:System.Xml.XPath.XPathDocument> (com base no modelo de dados XPath).
 
 [XSLT Transformations](../../../../docs/standard/data/xml/xslt-transformations.md)\
 Descreve como usar o processador XSLT.

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424118"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422291"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
@@ -44,7 +44,7 @@ A expressão de correspondência fornece o valor para corresponder aos padrões 
 No C# 6 e versões anteriores, a expressão de correspondência deve ser uma expressão que retorna um valor dos seguintes tipos:
 
 - um [char](char.md).
-- um [string](string.md).
+- um [string](../builtin-types/reference-types.md).
 - um [bool](bool.md).
 - um valor de inteiro, como um [int](../builtin-types/integral-numeric-types.md) ou um [long](../builtin-types/integral-numeric-types.md).
 - um valor [enum](enum.md).
@@ -59,7 +59,7 @@ Uma instrução `switch` pode incluir qualquer número de seções switch e cada
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "O controle não pode passar de um rótulo de caso para outro (\<case label>) para outro."
+Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "o controle não pode passar de um rótulo case (\<rótulo case >) para outro".
 
 ```csharp
 switch (caseSwitch)
@@ -125,7 +125,7 @@ em que *constant* é o valor para testar. *constant* pode ser qualquer uma das e
 - O nome de uma variável `const` declarada.
 - Uma constante de enumeração.
 - Um literal [char](char.md).
-- Um literal [string](string.md).
+- Um literal [string](../builtin-types/reference-types.md).
 
 A expressão de constante é avaliada da seguinte forma:
 
@@ -195,7 +195,7 @@ Observe que a cláusula `when` no exemplo que tenta testar se um objeto `Shape` 
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 
-Para obter mais informações, consulte [A instrução switch](~/_csharplang/spec/statements.md#the-switch-statement) na [Especificação da linguagem C#](../language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+Para obter mais informações, consulte [A instrução switch](~/_csharplang/spec/statements.md#the-switch-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
 ## <a name="see-also"></a>Consulte também
 

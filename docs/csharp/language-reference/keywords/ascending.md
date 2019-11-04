@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ascending keyword [C#]
 ms.assetid: 57fbb619-8187-481c-b68e-3a91996fde69
-ms.openlocfilehash: 479e15b8c1103ea1e5fdd803812944d25d965a81
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: f0b183f9e7cf0997947e5a8cdd73fb90fd7e44ea
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602335"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422914"
 ---
 # <a name="ascending-c-reference"></a>ascending (Referência de C#)
 A palavra-chave contextual `ascending` é usada na [cláusula orderby](./orderby-clause.md) em expressões de consulta para especificar que a ordem de classificação é do menor para o maior. Como `ascending` é a ordem de classificação padrão, não é necessário especificá-la.  
@@ -26,5 +26,5 @@ A palavra-chave contextual `ascending` é usada na [cláusula orderby](./orderby
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Expressões de consulta LINQ](../../programming-guide/linq-query-expressions/index.md)
+- [LINQ em C#](../../linq/index.md)
 - [descending](./descending.md)

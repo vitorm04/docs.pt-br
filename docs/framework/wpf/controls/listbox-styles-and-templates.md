@@ -9,23 +9,23 @@ helpviewer_keywords:
 - parts [WPF], ListBox
 - ListBox [WPF], styles and templates
 ms.assetid: fc5764cb-c27b-495b-88d4-d969a8213ccb
-ms.openlocfilehash: 441db59a6d04787985245db057074798bed6b3e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 279683752e6767bbf3e5bc359ec1e72193602c00
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766852"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459287"
 ---
 # <a name="listbox-styles-and-templates"></a>Estilos e modelos ListBox
-Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.ListBox> controle. Você pode modificar o padrão <xref:System.Windows.Controls.ControlTemplate> para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.ListBox>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
   
-## <a name="listbox-parts"></a>Partes de ListBox  
- O <xref:System.Windows.Controls.ListBox> controle não tem nenhuma parte nomeada.  
+## <a name="listbox-parts"></a>Partes da caixa de listagem  
+ O controle de <xref:System.Windows.Controls.ListBox> não tem nenhuma parte nomeada.  
   
- Quando você cria um <xref:System.Windows.Controls.ControlTemplate> para um <xref:System.Windows.Controls.ListBox>, o modelo pode conter um <xref:System.Windows.Controls.ItemsPresenter> dentro de um <xref:System.Windows.Controls.ScrollViewer>. (O <xref:System.Windows.Controls.ItemsPresenter> exibe cada item em de <xref:System.Windows.Controls.ListBox>; o <xref:System.Windows.Controls.ScrollViewer> habilita a rolagem no controle).  Se o <xref:System.Windows.Controls.ItemsPresenter> não é filho direto do <xref:System.Windows.Controls.ScrollViewer>, você deve dar a <xref:System.Windows.Controls.ItemsPresenter> o nome, `ItemsPresenter`.  
+ Quando você cria um <xref:System.Windows.Controls.ControlTemplate> para uma <xref:System.Windows.Controls.ListBox>, seu modelo pode conter uma <xref:System.Windows.Controls.ItemsPresenter> em um <xref:System.Windows.Controls.ScrollViewer>. (O <xref:System.Windows.Controls.ItemsPresenter> exibe cada item na <xref:System.Windows.Controls.ListBox>; o <xref:System.Windows.Controls.ScrollViewer> habilita a rolagem dentro do controle).  Se o <xref:System.Windows.Controls.ItemsPresenter> não for o filho direto do <xref:System.Windows.Controls.ScrollViewer>, você deverá dar ao <xref:System.Windows.Controls.ItemsPresenter> o nome `ItemsPresenter`.  
   
-## <a name="listbox-states"></a>Estados de ListBox  
- A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.ListBox> controle.  
+## <a name="listbox-states"></a>Estados da caixa de listagem  
+ A tabela a seguir lista os Estados visuais para o controle de <xref:System.Windows.Controls.ListBox>.  
   
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
@@ -34,10 +34,10 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |InvalidUnfocused|ValidationStates|O controle não é válido e não tem o foco.|  
   
 ## <a name="listboxitem-parts"></a>Partes de ListBoxItem  
- O <xref:System.Windows.Controls.ListBoxItem> controle não tem nenhuma parte nomeada.  
+ O controle de <xref:System.Windows.Controls.ListBoxItem> não tem nenhuma parte nomeada.  
   
 ## <a name="listboxitem-states"></a>Estados de ListBoxItem  
- A tabela a seguir lista os estados visuais para o <xref:System.Windows.Controls.ListBox> controle.  
+ A tabela a seguir lista os Estados visuais para o controle de <xref:System.Windows.Controls.ListBox>.  
   
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
@@ -45,16 +45,16 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 |MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o controle.|  
 |Disabled|CommonStates|O item está desabilitado.|  
 |Focalizado|FocusStates|O item tem o foco.|  
-|Sem foco|FocusStates|O item não tem o foco.|  
+|Sem foco|FocusStates|O item não tem foco.|  
 |Não selecionado|SelectionStates|O item não está selecionado.|  
 |Selecionado|SelectionStates|O item é currentlyplate selecionado.|  
 |SelectedUnfocused|SelectionStates|O item está selecionado, mas não tem o foco.|  
-|Válido|ValidationStates|O controle usa o <xref:System.Windows.Controls.Validation> classe e o <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `false`.|  
-|InvalidFocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle tem foco.|  
-|InvalidUnfocused|ValidationStates|O <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> propriedade anexada é `true` tem o controle não tem o foco.|  
+|Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  
+|InvalidFocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle em foco.|  
+|InvalidUnfocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle não tem foco.|  
   
 ## <a name="listbox-controltemplate-example"></a>Exemplo de ControlTemplate de ListBox  
- O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para o <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListBoxItem> controles.  
+ O exemplo a seguir mostra como definir um <xref:System.Windows.Controls.ControlTemplate> para os controles <xref:System.Windows.Controls.ListBox> e <xref:System.Windows.Controls.ListBoxItem>.  
   
  [!code-xaml[ControlTemplateExamples#ListBox](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/listbox.xaml#listbox)]  
   
@@ -70,5 +70,5 @@ Este tópico descreve os estilos e modelos para o <xref:System.Windows.Controls.
 - <xref:System.Windows.Controls.ControlTemplate>
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
 - [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)

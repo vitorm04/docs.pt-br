@@ -4,12 +4,12 @@ description: Saiba como criar um aplicativo de detecção de anomalias para dado
 ms.date: 07/17/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: ed4c24fac2348c021982ad593417b33d50347dd1
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 37c6b99fbd7db63c19201e0c6dce9b2b6d9f1932
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774433"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423593"
 ---
 # <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: detectar anomalias em vendas de produtos com o ML.NET
 
@@ -127,7 +127,7 @@ Os dados do ML.NET são representados como uma [classe IDataView](xref:Microsoft
 
 Detecção de anomalias sinaliza comportamentos ou eventos incomuns ou inesperados. Ela dá dicas de em que local procurar problemas e ajuda a responder à pergunta "Isso é estranho?".
 
-![Isso é estranho](./media/sales-anomaly-detection/anomalydetection.png)
+![Exemplo da detecção de anomalias "é estranha".](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 A detecção de anomalias é o processo de detectar exceções de dados de série temporal; pontos em uma série temporal de entrada em que o comportamento não é o esperado ou "estranho".
 
@@ -152,7 +152,7 @@ Você vai analisar os mesmos dados de vendas do produto para detectar picos e po
 
 A meta da detecção de pico é identificar picos repentinos, mas temporários, que diferem significativamente da maioria dos valores de dados de série temporal. É importante detectar esses itens raros, eventos ou observações suspeitos de maneira oportuna para que sejam minimizados. A abordagem a seguir pode ser usada para detectar uma variedade de anomalias, como: interrupções, ataques cibernéticos ou conteúdo da Web viral. A imagem a seguir é um exemplo de picos em um conjunto de dados de série temporal:
 
-![SpikeDetection](./media/sales-anomaly-detection/SpikeDetection.png)
+![Captura de tela que mostra duas detecções de pico.](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>Adicionar o método CreateEmptyDataView()
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points` são alterações persistentes em uma distribuição de valores de fluxo de evento de série temporal, como alterações de nível e tendências. Essas alterações persistentes duram muito mais que `spikes` e podem indicar eventos catastróficos. `Change points` normalmente não estão visíveis a olho nu, mas podem ser detectados em seus dados usando abordagens como o método a seguir.  A imagem a seguir é um exemplo de uma detecção de ponto de alteração:
 
-![ChangePointDetection](./media/sales-anomaly-detection/ChangePointDetection.png)
+![Captura de tela que mostra uma detecção de ponto de alteração.](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>Crie o método DetectChangepoint()
 

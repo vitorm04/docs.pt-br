@@ -2,19 +2,19 @@
 title: Utilitário de configuração de transações WS-Atomic (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 5333c9c5caad502ce925fe4a45a039c553812ba6
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 161ac59e64e1a933049ed36ebb7140901686929c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320193"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425265"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilitário de configuração de transações WS-Atomic (wsatConfig.exe)
 O utilitário de configuração WS-AtomicTransaction é usado para definir configurações básicas de suporte WS-AtomicTransaction.  
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```console  
 wsatConfig [Options]  
 ```  
   
@@ -42,7 +42,7 @@ wsatConfig [Options]
 |-Port: \<portNum >|Define a porta HTTPS para WS-AtomicTransaction.<br /><br /> Se você já tiver habilitado o firewall antes de executar essa ferramenta, a porta será automaticamente registrada na lista de exceções. Se o firewall estiver desabilitado antes da execução dessa ferramenta, nada adicional será configurado com relação ao firewall.<br /><br /> Se você habilitar o firewall depois de configurar o WS-AT, você precisará executar essa ferramenta novamente e fornecer o número da porta usando esse parâmetro. Se você desabilitar o firewall após a configuração, o WS-AT continuará funcionando sem entrada adicional.|  
 |-timeout: \<sec >|Especifica o tempo limite padrão em segundos. Os valores válidos são de 1 a 3600.|  
 |-traceActivity: \<enable&#124;desabilitar >|Habilita ou desabilita o rastreamento de eventos de atividade.|  
-|-traceLevel: @no__t-informações&#124;&#124; de&#124;aviso&#124;&#124;crítico de erro&#124;de 0Off detalhados todos os >}|Especifica o nível de rastreamento.|  
+|-traceLevel:\<desativar&#124;informações&#124;&#124; de&#124;aviso&#124;crítico de&#124;erro, tudo >}|Especifica o nível de rastreamento.|  
 |-tracePII: \<enable&#124;desabilitar >|Habilita ou desabilita o rastreamento de informações de identificação pessoal.|  
 |-traceProp: \<enable&#124;desabilitar >|Habilita ou desabilita o rastreamento de eventos de propagação.|  
 |-reiniciar|Reinicia o MSDTC para ativar as alterações imediatamente. Se isso não for especificado, as alterações entrarão em vigor quando o MSDTC for reiniciado.|  

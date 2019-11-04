@@ -1,13 +1,13 @@
 ---
 title: Referência de símbolos e operadores
-description: Saiba mais sobre os símbolos e operadores que são usados no F# linguagem de programação.
+description: Saiba mais sobre os símbolos e operadores usados na linguagem de F# programação.
 ms.date: 02/11/2019
-ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 0c177242991c39aa1a2b7566415b50385f3403d1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306181"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424056"
 ---
 # <a name="symbol-and-operator-reference"></a>Referência de símbolos e operadores
 
@@ -30,7 +30,7 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`$`|Não há mais informações disponíveis.|<ul><li>Usado internamente para determinados nomes de variáveis e de funções gerados pelo compilador.<br /></li></ul>|
 |`%`|[Operadores Aritméticos](arithmetic-operators.md)<br /><br />[Citações de Código](../code-quotations.md)|<ul><li>Calcula o resto inteiro.<br /></li><li>Usado para união de expressões em cotações de códigos digitados.<br /></li></ul>|
 |`%%`|[Citações de Código](../code-quotations.md)|<ul><li>Usado para união de expressões em cotações de códigos não digitados.<br /></li></ul>|
-|`%?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula o resto inteiro, quando o lado direito for um tipo anulável.<br /></li></ul>|
+|`%?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula o resto inteiro, quando o lado direito é um tipo anulável.<br /></li></ul>|
 |`&`|[Expressões Match](../match-expressions.md)|<ul><li>Calcula o endereço de um valor mutável, para uso ao interoperar com outros idiomas.<br /></li><li>Usado em padrões AND.<br /></li></ul>|
 |`&&`|[Operadores Boolianos](boolean-operators.md)|<ul><li>Calcula a operação AND booleana.<br /></li></ul>|
 |`&&&`|[Operadores Bit a Bit](bitwise-operators.md)|<ul><li>Calcula a operação AND bit a bit.<br /></li></ul>|
@@ -49,9 +49,9 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`-`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Quando usado como um operador binário, subtrai o lado direito do lado esquerdo.<br /></li><li>Quando usado como um operador unário, executa uma operação de negação.<br /></li></ul>|
 |`-?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Subtrai o lado direito do lado esquerdo, quando o lado direito for um tipo que permite valor nulo.<br /></li></ul>|
 |`->`|[Funções](../functions/index.md)<br /><br />[Expressões Match](../match-expressions.md)|<ul><li>Em tipos de função, delimita argumentos e valores de retorno.<br /></li><li>Gera uma expressão (em expressões de sequência); equivalente à palavra-chave `yield`.<br /></li><li>Usado em expressões de correspondência<br /></li></ul>|
-|`.`|[Membros](../members/index.md)<br /><br />[Tipos Primitivos](../primitive-types.md)|<ul><li>Acessa um membro e separa nomes individuais em um nome totalmente qualificado.<br /></li><li>Especifica um ponto decimal em números de ponto flutuante.<br /></li></ul>|
-|`..`|[Loops: `for...in` Expressão](../loops-for-in-expression.md)|<ul><li>Especifica um intervalo.<br /></li></ul>|
-|`.. ..`|[Loops: `for...in` Expressão](../loops-for-in-expression.md)|<ul><li>Especifica um intervalo com um incremento.<br /></li></ul>|
+|`.`|[Membros](../members/index.md)<br /><br />[Tipos Primitivos](../basic-types.md)|<ul><li>Acessa um membro e separa nomes individuais em um nome totalmente qualificado.<br /></li><li>Especifica um ponto decimal em números de ponto flutuante.<br /></li></ul>|
+|`..`|[Loops: `for...in` expressão](../loops-for-in-expression.md)|<ul><li>Especifica um intervalo.<br /></li></ul>|
+|`.. ..`|[Loops: `for...in` expressão](../loops-for-in-expression.md)|<ul><li>Especifica um intervalo com um incremento.<br /></li></ul>|
 |`.[...]`|[Matrizes](../arrays.md)|<ul><li>Acessa um elemento de matriz.<br /></li></ul>|
 |`/`|[Operadores Aritméticos](arithmetic-operators.md)<br /><br />[Unidades de Medida](../units-of-measure.md)|<ul><li>Divide o lado esquerdo (numerador) pelo direito (denominador).<br /></li><li>Usado em unidades de tipos de medida.<br /></li></ul>|
 |`/?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Divide o lado esquerdo pelo lado direito, quando o lado direito for um tipo que permite valor nulo.<br /></li></ul>|
@@ -61,7 +61,7 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`::`|[Listas](../lists.md)<br /><br />[Expressões Match](../match-expressions.md)|<ul><li>Cria uma lista. O elemento no lado esquerdo é anexado à lista no lado direito.<br /></li><li>Usado na correspondência de padrões para separar as partes de uma lista.<br /></li></ul>|
 |`:=`|[Células de Referência](../reference-cells.md)|<ul><li>Atribui um valor a uma célula de referência.<br /></li></ul>|
 |`:>`|[Conversões Cast e conversões](../casting-and-conversions.md)|<ul><li>Converte um tipo em um tipo que seja superior na hierarquia.<br /></li></ul>|
-|`:?`|[Expressões Match](../match-expressions.md)|<ul><li>Retorna `true` se o valor corresponde ao tipo especificado (incluindo se ele é um subtipo); caso contrário, retornará `false` (operador de teste de tipo).<br /></li></ul>|
+|`:?`|[Expressões Match](../match-expressions.md)|<ul><li>Retorna `true` se o valor corresponde ao tipo especificado (incluindo se for um subtipo); caso contrário, retorna `false` (operador de teste de tipo).<br /></li></ul>|
 |`:?>`|[Conversões Cast e conversões](../casting-and-conversions.md)|<ul><li>Converte um tipo em um tipo que seja inferior na hierarquia.<br /></li></ul>|
 |`;`|[Sintaxe Detalhada](../verbose-syntax.md)<br /><br />[Listas](../lists.md)<br /><br />[Registros](../records.md)|<ul><li>Separa expressões (usadas principalmente na sintaxe detalhada).<br /></li><li>Separa elementos de uma lista.<br /></li><li>Separa campos de um registro.<br /></li></ul>|
 |`<`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Calcula a operação menor que.<br /></li></ul>|
@@ -69,7 +69,7 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`<<`|[Funções](../functions/index.md)|<ul><li>Compõe duas funções em ordem inversa; a segunda é executada primeiro (operador de composição invertida).<br /></li></ul>|
 |`<<<`|[Operadores Bit a Bit](bitwise-operators.md)|<ul><li>Desloca bits na quantidade no lado esquerdo para a esquerda pelo número de bits especificado no lado direito.<br /></li></ul>|
 |`<-`|[Valores](../values/index.md)|<ul><li>Atribui um valor a uma variável.<br /></li></ul>|
-|`<...>`|[Generalização automática](../generics/automatic-generalization.md)|<ul><li>Delimita parâmetros de tipo.<br /></li></ul>|
+|`<...>`|[Generalização Automática](../generics/automatic-generalization.md)|<ul><li>Delimita parâmetros de tipo.<br /></li></ul>|
 |`<>`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado esquerdo não for igual ao direito; caso contrário, retorna false.<br /></li></ul>|
 |`<>?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "diferente de", quando o lado direito for um tipo que permite valor nulo.<br /></li></ul>|
 |`<=`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado esquerdo for menor ou igual ao lado direito; caso contrário, retorna `false`.<br /></li></ul>|
@@ -83,10 +83,10 @@ A tabela a seguir descreve os símbolos usados na linguagem F#, fornece links pa
 |`=?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "igual", quando o lado direito for um tipo que permite valor nulo.<br /></li></ul>|
 |`==`|Não aplicável.|<ul><li>Não é usada em F#. Use `=` para operações de igualdade.<br /></li></ul>|
 |`>`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado esquerdo for maior que o lado direito; caso contrário, retorna `false`.<br /></li></ul>|
-|`>?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "maior que" quando o lado direito for um tipo anulável.<br /></li></ul>|
+|`>?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Computa a operação "maior que" quando o lado direito é um tipo anulável.<br /></li></ul>|
 |`>>`|[Funções](../functions/index.md)|<ul><li>Compõe duas funções (operador de composição direta).<br /></li></ul>|
 |`>>>`|[Operadores Bit a Bit](bitwise-operators.md)|<ul><li>Desloca bits na quantidade no lado esquerdo para a direita pelo número de casas especificado no lado direito.<br /></li></ul>|
-|`>=`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado esquerdo for maior que ou igual ao lado direito; caso contrário, retornará `false`.<br /></li></ul>|
+|`>=`|[Operadores Aritméticos](arithmetic-operators.md)|<ul><li>Retorna `true` se o lado esquerdo for maior ou igual ao lado direito; caso contrário, retorna `false`.<br /></li></ul>|
 |`>=?`|[Operadores Anuláveis](nullable-operators.md)|<ul><li>Calcula a operação "maior ou igual a", quando o lado direito for um tipo que permite valor nulo.<br /></li></ul>|
 |`?`|[Parâmetros e Argumentos](../parameters-and-arguments.md)|<ul><li>Especifica um argumento opcional.<br /></li><li>Usado como um operador de chamadas de método e propriedade dinâmicas. Você deve fornecer sua própria implementação.<br /></li></ul>|
 |`? ... <- ...`|Não há mais informações disponíveis.|<ul><li>Usado como um operador de propriedades de configuração dinâmica. Você deve fornecer sua própria implementação.<br /></li></ul>|
@@ -122,7 +122,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |--------|-------------|
 |`as`|Direita|
 |`when`|Direita|
-|<code>&#124;</code> (barra vertical)|Esquerda|
+|<code>&#124;</code> (pipe)|Esquerda|
 |`;`|Direita|
 |`let`|Não associativo|
 |`function`, `fun`, `match`, `try`|Não associativo|
@@ -134,7 +134,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |`or`, <code>&#124;&#124;</code>|Esquerda|
 |`&`, `&&`|Esquerda|
 |`:>`, `:?>`|Direita|
-|`<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(incluindo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Esquerda|
+|`<`*op*, `>`*op*, `=`, <code>&#124;</code>*op*, `&`*op*, `&`<br /><br />(incluindo `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>`&&&`)|Esquerda|
 |`^`*op*<br /><br />(incluindo `^^^`)|Direita|
 |`::`|Direita|
 |`:?`|Não associativo|
@@ -142,7 +142,7 @@ A tabela a seguir mostra a ordem de precedência de operadores e outras palavras
 |`*`*op*, `/`*op*, `%`*op*|Esquerda|
 |`**`*op*|Direita|
 |`f x` (aplicativo de função)|Esquerda|
-|<code>&#124;</code> (correspondência padrão)|Direita|
+|<code>&#124;</code> (correspondência de padrões)|Direita|
 |operadores de prefixo (`+`*op*, `-`*op*, `%`, `%%`, `&`, `&&`, `!`*op*, `~`*op*)|Esquerda|
 |`.`|Esquerda|
 |`f(x)`|Esquerda|

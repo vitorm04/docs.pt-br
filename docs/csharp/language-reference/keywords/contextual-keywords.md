@@ -5,23 +5,23 @@ ms.date: 03/07/2017
 helpviewer_keywords:
 - contextual keywords [C#]
 ms.assetid: 7c76bc29-a754-4389-b0ab-f6b441018298
-ms.openlocfilehash: d16d8fee58f4480bc83da884caf0ff15981b09af
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
-ms.translationtype: HT
+ms.openlocfilehash: 9197ebb1fa48011c60a6d224497e57a604870fc3
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168615"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422862"
 ---
 # <a name="contextual-keywords-c-reference"></a>Palavras-chave contextuais (Referência de C#)
 
 Uma palavra-chave contextual é usada para fornecer um significado específico no código, mas não é uma palavra reservada no C#. As seguintes palavras-chave contextuais são apresentadas nesta seção:  
   
-|Palavra-chave|DESCRIÇÃO|  
+|Palavra-chave|Descrição|  
 |-------------|-----------------|  
 |[add](./add.md)|Define um acessador de evento personalizado que é invocado quando o código de cliente assina o evento.|  
 |[async](./async.md)|Indica que o método modificado, expressão lambda ou método anônimo é assíncrono.|  
 |[await](../operators/await.md)|Suspende um método assíncrono até que uma tarefa esperada seja concluída.|  
-|[dynamic](./dynamic.md)|Define um tipo de referência, que habilita operações nas quais ele ocorre, para ignorar a verificação de tipo em tempo de compilação.|  
+|[dynamic](../builtin-types/reference-types.md)|Define um tipo de referência, que habilita operações nas quais ele ocorre, para ignorar a verificação de tipo em tempo de compilação.|  
 |[get](./get.md)|Define um método do acessador de uma propriedade ou um indexador.|  
 |[global](../operators/namespace-alias-qualifier.md)|Alias do namespace global que, de outra forma, não tem nome.|  
 |[partial](./partial-type.md)|Define classes parciais, structs e interfaces ao longo da mesma unidade de compilação.|  

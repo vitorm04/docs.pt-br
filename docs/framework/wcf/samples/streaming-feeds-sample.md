@@ -2,26 +2,26 @@
 title: Exemplo de Streaming Feeds
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: f37e7791bc407a57432fb9f6900ad8f19ff4eb52
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1eb9f2194b2c7e4879cf9e443fea337c73986361
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044686"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425352"
 ---
 # <a name="streaming-feeds-sample"></a>Exemplo de Streaming Feeds
-Este exemplo demonstra como gerenciar feeds de distribuição que contêm um grande número de itens. No servidor, o exemplo demonstra como atrasar a criação de objetos individuais <xref:System.ServiceModel.Syndication.SyndicationItem> no feed até imediatamente antes que o item seja gravado no fluxo de rede.  
+Este exemplo demonstra como gerenciar feeds de distribuição que contêm um grande número de itens. No servidor, o exemplo demonstra como atrasar a criação de objetos <xref:System.ServiceModel.Syndication.SyndicationItem> individuais no feed até imediatamente antes que o item seja gravado no fluxo de rede.  
   
  No cliente, o exemplo mostra como um formatador de feed de agregação personalizado pode ser usado para ler itens individuais do fluxo de rede para que o feed que está sendo lido nunca seja totalmente armazenado em buffer na memória.  
   
- Para demonstrar melhor o recurso de streaming da API de distribuição, este exemplo usa um cenário um pouco improvável, no qual o servidor expõe um feed que contém um número infinito de itens. Nesse caso, o servidor continua gerando novos itens no feed até determinar que o cliente leu um número especificado de itens do feed (por padrão, 10). Para simplificar, o cliente e o servidor são implementados no mesmo processo e usam um objeto `ItemCounter` compartilhado para controlar quantos itens o cliente produziu. O `ItemCounter` tipo existe somente para permitir que o cenário de exemplo seja encerrado corretamente e não seja um elemento básico do padrão que está sendo demonstrado.  
+ Para demonstrar melhor o recurso de streaming da API de distribuição, este exemplo usa um cenário um pouco improvável, no qual o servidor expõe um feed que contém um número infinito de itens. Nesse caso, o servidor continua gerando novos itens no feed até determinar que o cliente leu um número especificado de itens do feed (por padrão, 10). Para simplificar, o cliente e o servidor são implementados no mesmo processo e usam um objeto `ItemCounter` compartilhado para manter o controle de quantos itens o cliente produziu. O tipo de `ItemCounter` existe somente para permitir que o cenário de exemplo seja encerrado corretamente e não seja um elemento básico do padrão que está sendo demonstrado.  
   
- A demonstração usa iteradores visuais C# (usando a construção de `yield return` palavra-chave). Para obter mais informações sobre iteradores, consulte o tópico "usando iteradores" no MSDN.  
+ A demonstração usa os iteradores C# visuais (usando a construção de palavra-chave `yield return`). Para obter mais informações sobre iteradores, consulte o tópico "usando iteradores" no MSDN.  
   
 ## <a name="service"></a>Serviço  
- O serviço implementa um contrato <xref:System.ServiceModel.Web.WebGetAttribute> básico que consiste em uma operação, conforme mostrado no código a seguir.  
+ O serviço implementa um contrato de <xref:System.ServiceModel.Web.WebGetAttribute> básico que consiste em uma operação, conforme mostrado no código a seguir.  
   
-```  
+```csharp  
 [ServiceContract]  
 interface IStreamingFeedService  
 {  
@@ -31,9 +31,9 @@ interface IStreamingFeedService
 }  
 ```  
   
- O serviço implementa esse contrato usando uma `ItemGenerator` classe para criar um fluxo potencialmente infinito de <xref:System.ServiceModel.Syndication.SyndicationItem> instâncias usando um iterador, conforme mostrado no código a seguir.  
+ O serviço implementa esse contrato usando uma classe `ItemGenerator` para criar um fluxo potencialmente infinito de instâncias de <xref:System.ServiceModel.Syndication.SyndicationItem> usando um iterador, conforme mostrado no código a seguir.  
   
-```  
+```csharp  
 class ItemGenerator  
 {  
     public IEnumerable<SyndicationItem> GenerateItems()  
@@ -49,9 +49,9 @@ class ItemGenerator
 }  
 ```  
   
- Quando a implementação do serviço cria o feed, a saída `ItemGenerator.GenerateItems()` do é usada em vez de uma coleção de itens em buffer.  
+ Quando a implementação do serviço cria o feed, a saída de `ItemGenerator.GenerateItems()` é usada em vez de uma coleção de itens em buffer.  
   
-```  
+```csharp  
 public Atom10FeedFormatter StreamedFeed()  
 {  
     SyndicationFeed feed = new SyndicationFeed("Streamed feed", "Feed to test streaming", null);  
@@ -65,21 +65,21 @@ public Atom10FeedFormatter StreamedFeed()
 }  
 ```  
   
- Como resultado, o fluxo de itens nunca é totalmente armazenado em buffer na memória. Você pode observar esse comportamento definindo um ponto de interrupção na `yield return` instrução dentro `ItemGenerator.GenerateItems()` do método e observando que esse ponto de interrupção é encontrado pela primeira vez após o serviço ter `StreamedFeed()` retornado o resultado do método.  
+ Como resultado, o fluxo de itens nunca é totalmente armazenado em buffer na memória. Você pode observar esse comportamento definindo um ponto de interrupção na instrução `yield return` dentro do método `ItemGenerator.GenerateItems()` e observando que esse ponto de interrupção é encontrado pela primeira vez depois que o serviço retornou o resultado do método `StreamedFeed()`.  
   
 ## <a name="client"></a>Cliente  
- O cliente neste exemplo usa uma implementação personalizada <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> que atrasa a materialização de itens individuais no feed em vez de armazenar em buffer na memória. A instância `StreamedAtom10FeedFormatter` personalizada é usada da seguinte maneira.  
+ O cliente neste exemplo usa uma implementação de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> personalizada que atrasa a materialização de itens individuais no feed em vez de armazenar em buffer na memória. A instância de `StreamedAtom10FeedFormatter` personalizada é usada da seguinte maneira.  
   
-```  
+```csharp  
 XmlReader reader = XmlReader.Create("http://localhost:8000/Service/Feeds/StreamedFeed");  
 StreamedAtom10FeedFormatter formatter = new StreamedAtom10FeedFormatter(counter);  
   
 SyndicationFeed feed = formatter.ReadFrom(reader);  
 ```  
   
- Normalmente, uma chamada para <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> não retorna até que todo o conteúdo do feed tenha sido lido da rede e armazenado em buffer na memória. No entanto `StreamedAtom10FeedFormatter` , o <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> objeto substitui para retornar um iterador em vez de uma coleção em buffer, conforme mostrado no código a seguir.  
+ Normalmente, uma chamada para <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter.ReadFrom%28System.Xml.XmlReader%29> não retorna até que todo o conteúdo do feed tenha sido lido da rede e armazenado em buffer na memória. No entanto, o objeto `StreamedAtom10FeedFormatter` substitui <xref:System.ServiceModel.Syndication.Atom10FeedFormatter.ReadItems%28System.Xml.XmlReader%2CSystem.ServiceModel.Syndication.SyndicationFeed%2CSystem.Boolean%40%29> para retornar um iterador em vez de uma coleção em buffer, conforme mostrado no código a seguir.  
   
-```  
+```csharp  
 protected override IEnumerable<SyndicationItem> ReadItems(XmlReader reader, SyndicationFeed feed, out bool areAllItemsRead)  
 {  
     areAllItemsRead = false;  
@@ -97,7 +97,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 }  
 ```  
   
- Como resultado, cada item não é lido da rede até que o aplicativo cliente que atravessa os resultados `ReadItems()` esteja pronto para usá-lo. Você pode observar esse comportamento definindo um ponto de interrupção na `yield return` instrução dentro de `StreamedAtom10FeedFormatter.DelayReadItems()` e percebendo que esse ponto de interrupção é encontrado pela primeira vez após a chamada `ReadFrom()` a ser concluída.  
+ Como resultado, cada item não é lido da rede até que o aplicativo cliente que atravessa os resultados de `ReadItems()` esteja pronto para usá-lo. Você pode observar esse comportamento definindo um ponto de interrupção na instrução `yield return` dentro de `StreamedAtom10FeedFormatter.DelayReadItems()` e percebendo que esse ponto de interrupção é encontrado pela primeira vez após a chamada para `ReadFrom()` ser concluída.  
   
  As instruções a seguir mostram como compilar e executar o exemplo. Observe que, embora o servidor pare de gerar itens depois que o cliente leu 10 itens, a saída mostra que o cliente lê significativamente mais de 10 itens. Isso ocorre porque a associação de rede usada pelo exemplo transmite dados em segmentos de quatro kilobytes (KB). Como tal, o cliente recebe 4 KB de dados do item antes de ter a oportunidade de ler até mesmo um item. Esse comportamento é normal (o envio de dados HTTP transmitidos em segmentos de tamanho razoável aumenta o desempenho).  
   
@@ -114,7 +114,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

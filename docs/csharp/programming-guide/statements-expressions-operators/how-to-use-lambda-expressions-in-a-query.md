@@ -1,18 +1,18 @@
 ---
-title: 'Como: usar expressões lambda em uma consulta – Guia de Programação em C#'
+title: 'Como: usar expressões lambda em um guia de C# programação de consulta'
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: bb784528226c706417166025a2469ed9f72f9cc2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: e7e7da211599b5ce0263377ecaf25b404399ce9c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588658"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423162"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Como: usar expressões lambda em uma consulta (Guia de Programação em C#)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Como usar expressões lambda em uma consulta (Guia de Programação em C#)
 Você não usa expressões lambda diretamente na sintaxe da consulta, mas as usa em chamadas de método e as expressões de consulta podem conter chamadas de método. Na verdade, algumas operações de consulta podem ser expressas na sintaxe de método. Para obter mais informações sobre a diferença entre a sintaxe de consulta e sintaxe de método, consulte [Sintaxe de consulta e sintaxe de método em LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Exemplo  
@@ -28,7 +28,7 @@ Você não usa expressões lambda diretamente na sintaxe da consulta, mas as usa
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Para executar esse código, copie e cole o método para o `StudentClass` que é fornecido em [Como consultar uma coleção de objetos](../linq-query-expressions/how-to-query-a-collection-of-objects.md) e chame-o do método `Main`.  
+ Para executar esse código, copie e cole o método no `StudentClass` que é fornecido em [Como consultar uma coleção de objetos](../../linq/query-a-collection-of-objects.md) e chame-o do método `Main`.  
   
 ## <a name="see-also"></a>Consulte também
 

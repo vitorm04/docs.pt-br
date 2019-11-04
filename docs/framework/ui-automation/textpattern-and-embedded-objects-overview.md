@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: ba4df55c3359e2a81eef0b4947a744d80ed49497
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a718a85ed42c4f8081348de20a195899f3c18c0a
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040599"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458125"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern Visão geral de objetos inseridos
 > [!NOTE]
@@ -20,7 +20,7 @@ ms.locfileid: "73040599"
   
  Esta visão geral descreve como o [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] expõe objetos inseridos ou elementos filho, dentro de um documento de texto ou contêiner.  
   
- Em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] um objeto incorporado é qualquer elemento que tenha limites não textuais; por exemplo, uma imagem, um hiperlink, uma tabela ou um tipo de documento, como uma planilha [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] ou um arquivo do Microsoft Windows Media. Isso difere da definição padrão, em que um elemento é criado em um aplicativo e inserido, ou vinculado, dentro de outro. Se o objeto pode ser editado em seu aplicativo original é irrelevante no contexto de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+ Em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] um objeto incorporado é qualquer elemento que tenha limites não textuais; por exemplo, uma imagem, um hiperlink, uma tabela ou um tipo de documento, como uma planilha do Microsoft Excel ou um arquivo do Microsoft Windows Media. Isso difere da definição padrão, em que um elemento é criado em um aplicativo e inserido, ou vinculado, dentro de outro. Se o objeto pode ser editado em seu aplicativo original é irrelevante no contexto de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Embedded_Objects_and_the_UI_Automation_Tree"></a>   
 ## <a name="embedded-objects-and-the-ui-automation-tree"></a>Objetos incorporados e a árvore de automação da interface do usuário  

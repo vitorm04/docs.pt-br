@@ -24,16 +24,16 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: c82bba5612e943eb261777074acffec7af330f22
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
-ms.translationtype: MT
+ms.openlocfilehash: 5a5c4c62799e1d2c190c2f7eaab12fff31e457ab
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920351"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425278"
 ---
 # <a name="navigation-overview"></a>Visão geral de navegação
 
-O Windows Presentation Foundation (WPF) dá suporte à navegação em estilo de navegador que pode ser usada em dois tipos de aplicativos: aplicativos autônomos e [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Para empacotar conteúdo para navegação, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece a classe <xref:System.Windows.Controls.Page>. Você pode navegar de um <xref:System.Windows.Controls.Page> para outro de forma declarativa, usando um <xref:System.Windows.Documents.Hyperlink>, ou programaticamente, usando o <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa o diário para lembrar as páginas que foram navegadas e navegar de volta para elas.
+O Windows Presentation Foundation (WPF) dá suporte à navegação em estilo de navegador que pode ser usada em dois tipos de aplicativos: aplicativos autônomos e aplicativos de navegador XAML (XBAPs). Para empacotar conteúdo para navegação, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece a classe <xref:System.Windows.Controls.Page>. Você pode navegar de um <xref:System.Windows.Controls.Page> para outro de forma declarativa, usando um <xref:System.Windows.Documents.Hyperlink>, ou programaticamente, usando o <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usa o diário para lembrar as páginas que foram navegadas e navegar de volta para elas.
 
 <xref:System.Windows.Controls.Page>, <xref:System.Windows.Documents.Hyperlink>, <xref:System.Windows.Navigation.NavigationService>e o diário formam o núcleo do suporte de navegação oferecido pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Esta visão geral explora esses recursos em detalhes antes de abordar o suporte de navegação avançada que inclui a navegação para arquivos soltos [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], arquivos HTML e objetos.
 
@@ -42,10 +42,10 @@ O Windows Presentation Foundation (WPF) dá suporte à navegação em estilo de 
 
 ## <a name="navigation-in-wpf-applications"></a>Navegação em aplicativos WPF
 
-Este tópico fornece uma visão geral dos principais recursos de navegação no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Esses recursos estão disponíveis para aplicativos autônomos e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], embora este tópico os apresente dentro do contexto de um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
+Este tópico fornece uma visão geral dos principais recursos de navegação no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Esses recursos estão disponíveis para aplicativos autônomos e XBAPs, embora este tópico os apresente dentro do contexto de um XBAP.
 
 > [!NOTE]
-> Este tópico não aborda como criar e implantar [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Para obter mais informações sobre [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], consulte [visão geral de aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md).
+> Este tópico não aborda como compilar e implantar XBAPs. Para obter mais informações sobre XBAPs, consulte [visão geral de aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md).
 
 Esta seção explica e demonstra os seguintes aspectos da navegação:
 
@@ -85,7 +85,7 @@ Usando <xref:System.Windows.Controls.Page>, você pode implementar declarativame
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-Uma <xref:System.Windows.Controls.Page> implementada na marcação [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem `Page` como seu elemento raiz e requer a declaração de namespace[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. O elemento `Page` contém o conteúdo que você deseja navegar e exibir. Você adiciona conteúdo definindo o elemento de propriedade `Page.Content`, conforme mostrado na marcação a seguir.
+Uma <xref:System.Windows.Controls.Page> implementada na marcação [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem `Page` como seu elemento raiz e requer a declaração de namespace [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. O elemento `Page` contém o conteúdo que você deseja navegar e exibir. Você adiciona conteúdo definindo o elemento de propriedade `Page.Content`, conforme mostrado na marcação a seguir.
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -121,16 +121,16 @@ Quando tiver um <xref:System.Windows.Controls.Page>, você poderá navegar até 
 
 ### <a name="configuring-a-start-page"></a>Configurar uma página inicial
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] exige que uma certa quantidade de infraestrutura de aplicativos sejam hospedados em um navegador. Em [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], a classe <xref:System.Windows.Application> faz parte de uma definição de aplicativo que estabelece a infraestrutura de aplicativo necessária (consulte [visão geral do gerenciamento de aplicativos](application-management-overview.md)).
+XBAPs exigem uma determinada quantidade de infraestrutura de aplicativo a ser hospedada em um navegador. Em [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], a classe <xref:System.Windows.Application> faz parte de uma definição de aplicativo que estabelece a infraestrutura de aplicativo necessária (consulte [visão geral do gerenciamento de aplicativos](application-management-overview.md)).
 
-Uma definição de aplicativo geralmente é implementada usando marcação e code-behind, com o arquivo de marcação configurado como um item de `ApplicationDefinition` do MSBuild. A seguir está uma definição de aplicativo para um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
+Uma definição de aplicativo geralmente é implementada usando marcação e code-behind, com o arquivo de marcação configurado como um item de `ApplicationDefinition` do MSBuild. A seguir está uma definição de aplicativo para um XBAP.
 
 [!code-xaml[XBAPAppDefSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
 [!code-csharp[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/XBAPAppDefSnippets/CSharp/App.xaml.cs#xbapapplicationdefinitioncodebehind)]
 [!code-vb[XBAPAppDefSnippets#XBAPApplicationDefinitionCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XBAPAppDefSnippets/VisualBasic/Application.xaml.vb#xbapapplicationdefinitioncodebehind)]
 
-Um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] pode usar sua definição de aplicativo para especificar um <xref:System.Windows.Controls.Page>de início, que é o <xref:System.Windows.Controls.Page> carregado automaticamente quando o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é iniciado. Você faz isso definindo a propriedade <xref:System.Windows.Application.StartupUri%2A> com o URI (Uniform Resource Identifier) para o <xref:System.Windows.Controls.Page>desejado.
+Um XBAP pode usar sua definição de aplicativo para especificar um <xref:System.Windows.Controls.Page>de início, que é o <xref:System.Windows.Controls.Page> que é carregado automaticamente quando o XBAP é iniciado. Você faz isso definindo a propriedade <xref:System.Windows.Application.StartupUri%2A> com o URI (Uniform Resource Identifier) para o <xref:System.Windows.Controls.Page>desejado.
 
 > [!NOTE]
 > Na maioria dos casos, a <xref:System.Windows.Controls.Page> é compilada ou implantada com um aplicativo. Nesses casos, o URI que identifica uma <xref:System.Windows.Controls.Page> é um pack URI, que é um URI que está de acordo com o esquema do *pacote* . URIs de pacote são abordados mais detalhadamente em [URIs de pacote no WPF](pack-uris-in-wpf.md). Você também pode navegar para o conteúdo usando o esquema http, que é discutido abaixo.
@@ -139,18 +139,18 @@ Você pode definir <xref:System.Windows.Application.StartupUri%2A> declarativame
 
 [!code-xaml[NavigationOverviewSnippets#XBAPApplicationDefinitionMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/App.xaml#xbapapplicationdefinitionmarkup)]
 
-Neste exemplo, o atributo `StartupUri` é definido com um URI de pacote relativo que identifica HomePage. XAML. Quando o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] é iniciado, HomePage. XAML é automaticamente navegado para e exibido. Isso é demonstrado pela figura a seguir, que mostra um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] que foi iniciado em um servidor Web.
+Neste exemplo, o atributo `StartupUri` é definido com um URI de pacote relativo que identifica HomePage. XAML. Quando o XBAP é iniciado, HomePage. XAML é automaticamente navegado para e exibido. Isso é demonstrado pela figura a seguir, que mostra um XBAP que foi iniciado a partir de um servidor Web.
 
 ![Página XBAP](./media/navigation-overview/xbap-launched-from-a-web-server.png "Isso mostra um XBAP iniciado a partir de um servidor Web.")
 
 > [!NOTE]
-> Para obter mais informações sobre o desenvolvimento e a implantação do [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], consulte [visão geral dos aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md) e [implantação de um aplicativo do WPF](deploying-a-wpf-application-wpf.md).
+> Para obter mais informações sobre o desenvolvimento e a implantação de XBAPs, consulte [visão geral dos aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md) e [implantando um aplicativo do WPF](deploying-a-wpf-application-wpf.md).
 
 <a name="ConfiguringAXAMLPage"></a>
 
 ### <a name="configuring-the-host-windows-title-width-and-height"></a>Configurar o título, largura e altura da janela do host
 
-Uma coisa que você pode ter observado na figura anterior é que o título do navegador e do painel de guias é o URI para o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Além de ser longo, o título não é atraente nem informativo. Por esse motivo, o <xref:System.Windows.Controls.Page> oferece uma maneira de alterar o título, definindo a propriedade <xref:System.Windows.Controls.Page.WindowTitle%2A>. Além disso, você pode configurar a largura e a altura da janela do navegador definindo <xref:System.Windows.Controls.Page.WindowWidth%2A> e <xref:System.Windows.Controls.Page.WindowHeight%2A>, respectivamente.
+Uma coisa que você pode ter observado na figura anterior é que o título do navegador e do painel de guias é o URI para o XBAP. Além de ser longo, o título não é atraente nem informativo. Por esse motivo, o <xref:System.Windows.Controls.Page> oferece uma maneira de alterar o título, definindo a propriedade <xref:System.Windows.Controls.Page.WindowTitle%2A>. Além disso, você pode configurar a largura e a altura da janela do navegador definindo <xref:System.Windows.Controls.Page.WindowWidth%2A> e <xref:System.Windows.Controls.Page.WindowHeight%2A>, respectivamente.
 
 <xref:System.Windows.Controls.Page.WindowTitle%2A>, <xref:System.Windows.Controls.Page.WindowWidth%2A>e <xref:System.Windows.Controls.Page.WindowHeight%2A> podem ser definidos declarativamente na marcação, conforme mostrado no exemplo a seguir.
 
@@ -164,7 +164,7 @@ O resultado é mostrado na figura a seguir.
 
 ### <a name="hyperlink-navigation"></a>Navegação de hiperlink
 
-Um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] típico compreende várias páginas. A maneira mais simples de navegar de uma página para outra é usar uma <xref:System.Windows.Documents.Hyperlink>. Você pode adicionar declarativamente um <xref:System.Windows.Documents.Hyperlink> a um <xref:System.Windows.Controls.Page> usando o elemento `Hyperlink`, que é mostrado na marcação a seguir.
+Um XBAP típico é composto por várias páginas. A maneira mais simples de navegar de uma página para outra é usar uma <xref:System.Windows.Documents.Hyperlink>. Você pode adicionar declarativamente um <xref:System.Windows.Documents.Hyperlink> a um <xref:System.Windows.Controls.Page> usando o elemento `Hyperlink`, que é mostrado na marcação a seguir.
 
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML1](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml1)]
 [!code-xaml[NavigationOverviewSnippets#HyperlinkXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/PageWithHyperlink.xaml#hyperlinkxaml2)]
@@ -176,11 +176,11 @@ Um elemento `Hyperlink` requer o seguinte:
 
 - O conteúdo no qual um usuário pode clicar para iniciar a navegação, como texto e imagens (para o conteúdo que o elemento `Hyperlink` pode conter, consulte <xref:System.Windows.Documents.Hyperlink>).
 
-A figura a seguir mostra um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] com uma <xref:System.Windows.Controls.Page> que tem um <xref:System.Windows.Documents.Hyperlink>.
+A figura a seguir mostra um XBAP com um <xref:System.Windows.Controls.Page> que tem um <xref:System.Windows.Documents.Hyperlink>.
 
 ![Página com hiperlink](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "Isso mostra um XBAP com uma página com um hiperlink.")
 
-Como esperado, clicar no <xref:System.Windows.Documents.Hyperlink> faz com que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] navegue para o <xref:System.Windows.Controls.Page> que é identificado pelo atributo `NavigateUri`. Além disso, o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] adiciona uma entrada para o <xref:System.Windows.Controls.Page> anterior à lista de páginas recentes no Internet Explorer. Isso será mostrado na figura a seguir.
+Como esperado, clicar no <xref:System.Windows.Documents.Hyperlink> faz com que o XBAP navegue até o <xref:System.Windows.Controls.Page> identificado pelo atributo `NavigateUri`. Além disso, o XBAP adiciona uma entrada para o <xref:System.Windows.Controls.Page> anterior à lista de páginas recentes no Internet Explorer. Isso será mostrado na figura a seguir.
 
 ![Botões voltar e avançar](./media/navigation-overview/back-and-forward-navigation.png "Navegue com os botões voltar e avançar.")
 
@@ -371,10 +371,10 @@ Conceitualmente, o diário opera da mesma forma que os botões **voltar** e **Av
 
 ![Botões voltar e avançar](./media/navigation-overview/back-and-forward-navigation.png "Navegue com os botões voltar e avançar.")
 
-Para [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] hospedados pelo Internet Explorer, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integra o diário ao [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de navegação do Internet Explorer. Isso permite que os usuários naveguem por páginas em um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] usando os botões **voltar**, **Avançar**e **recentes** no Internet Explorer.
+Para XBAPs hospedados pelo Internet Explorer, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] integra o diário ao [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de navegação do Internet Explorer. Isso permite que os usuários naveguem por páginas em um XBAP usando os botões **voltar**, **Avançar**e **recente** no Internet Explorer.
 
 > [!IMPORTANT]
-> No Internet Explorer, quando um usuário navega para fora de e para um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], somente as entradas de diário para páginas que não são mantidas ativas são mantidas no diário. Para discussão sobre como manter as páginas ativas, consulte [tempo de vida da página e o diário](#PageLifetime) mais adiante neste tópico.
+> No Internet Explorer, quando um usuário navega para fora de e para um XBAP, somente as entradas de diário para páginas que não são mantidas ativas são mantidas no diário. Para discussão sobre como manter as páginas ativas, consulte [tempo de vida da página e o diário](#PageLifetime) mais adiante neste tópico.
 
 Por padrão, o texto para cada <xref:System.Windows.Controls.Page> que aparece na lista **páginas recentes** do Internet Explorer é o URI para o <xref:System.Windows.Controls.Page>. Em muitos casos, isso não é especialmente significativo para o usuário. Felizmente, você pode alterar o texto usando uma das seguintes opções:
 
@@ -425,7 +425,7 @@ O diário também pode ser manipulado programaticamente, conforme discutido em [
 
 ### <a name="page-lifetime-and-the-journal"></a>Tempo de vida da página e o diário
 
-Considere um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] com várias páginas que contêm conteúdo avançado, incluindo gráficos, animações e mídia. O volume de memória de páginas como essas poderá ser muito grande, especialmente se mídia de áudio e vídeo for usada. Considerando que as páginas de "Remembers" do diário que foram navegadas, tal [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] poderia consumir rapidamente uma quantidade grande e perceptível de memória.
+Considere um XBAP com várias páginas que contêm conteúdo avançado, incluindo gráficos, animações e mídia. O volume de memória de páginas como essas poderá ser muito grande, especialmente se mídia de áudio e vídeo for usada. Considerando que as páginas "Remembers" do diário que foram navegadas, tal XBAP poderia consumir rapidamente uma quantidade grande e perceptível de memória.
 
 Por esse motivo, o comportamento padrão do diário é armazenar <xref:System.Windows.Controls.Page> metadados em cada entrada de diário, em vez de uma referência a um objeto <xref:System.Windows.Controls.Page>. Quando uma entrada de diário é navegada, seu <xref:System.Windows.Controls.Page> metadados é usado para criar uma nova instância do <xref:System.Windows.Controls.Page> especificado. Como consequência, cada <xref:System.Windows.Controls.Page> navegada tem o tempo de vida ilustrado pela figura a seguir.
 
@@ -533,21 +533,21 @@ Você recupera os cookies persistentes e de sessão chamando o método <xref:Sys
 
 A seguir estão algumas das maneiras com que os cookies têm suporte no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:
 
-- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] autônomos podem criar e gerenciar cookies.
+- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos e XBAPs podem criar e gerenciar cookies.
 
-- Os cookies criados por um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] podem ser acessados no navegador.
+- Os cookies criados por um XBAP podem ser acessados no navegador.
 
-- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] do mesmo domínio podem criar e compartilhar cookies.
+- XBAPs do mesmo domínio podem criar e compartilhar cookies.
 
-- as páginas [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] e HTML do mesmo domínio podem criar e compartilhar cookies.
+- XBAPs e páginas HTML do mesmo domínio podem criar e compartilhar cookies.
 
-- Os cookies são expedidos quando as páginas de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] e soltas fazem solicitações da Web.
+- Os cookies são expedidos quando as páginas de XBAPs e soltas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] fazem solicitações da Web.
 
-- Os [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] de nível superior e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] hospedados em IFRAMEs podem acessar cookies.
+- XBAPs de nível superior e XBAPs hospedados em IFRAMEs podem acessar cookies.
 
 - O suporte a cookies no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é o mesmo para todos os navegadores com suporte.
 
-- No Internet Explorer, a política de P3P que pertence a cookies é respeitada pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], particularmente em relação ao [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]de terceiros e de terceiros.
+- No Internet Explorer, a política de P3P que pertence a cookies é respeitada pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], particularmente em relação aos XBAPs primários e de terceiros.
 
 <a name="Structured_Navigation"></a>
 
@@ -561,7 +561,7 @@ Como alternativa, sua <xref:System.Windows.Controls.Page> pode implementar propr
 
 ## <a name="the-navigationwindow-class"></a>A classe NavigationWindow
 
-Neste ponto, você viu a gama de serviços de navegação que você provavelmente utilizará para criar aplicativos com conteúdo navegável. Esses serviços foram discutidos no contexto de [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], embora não estejam limitados a [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Os sistemas operacionais modernos e os aplicativos do Windows aproveitam a experiência do navegador de usuários modernos para incorporar a navegação no estilo de navegador em aplicativos autônomos. Exemplos comuns incluem:
+Neste ponto, você viu a gama de serviços de navegação que você provavelmente utilizará para criar aplicativos com conteúdo navegável. Esses serviços foram discutidos no contexto de XBAPs, embora não estejam limitados a XBAPs. Os sistemas operacionais modernos e os aplicativos do Windows aproveitam a experiência do navegador de usuários modernos para incorporar a navegação no estilo de navegador em aplicativos autônomos. Exemplos comuns incluem:
 
 - **Dicionário de sinônimos de palavras**: navegue por opções de palavras.
 
@@ -569,7 +569,7 @@ Neste ponto, você viu a gama de serviços de navegação que você provavelment
 
 - **Assistentes**: dividir uma tarefa complexa em várias páginas entre as quais se pode navegar. Um exemplo é o assistente de componentes do Windows que lida com a adição e remoção de recursos do Windows.
 
-Para incorporar a navegação no estilo de navegador em seus aplicativos autônomos, você pode usar a classe <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow> deriva de <xref:System.Windows.Window> e a estende com o mesmo suporte para navegação que [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] fornecer. Você pode usar <xref:System.Windows.Navigation.NavigationWindow> como a janela principal do seu aplicativo autônomo ou como uma janela secundária, como uma caixa de diálogo.
+Para incorporar a navegação no estilo de navegador em seus aplicativos autônomos, você pode usar a classe <xref:System.Windows.Navigation.NavigationWindow>. <xref:System.Windows.Navigation.NavigationWindow> deriva de <xref:System.Windows.Window> e a estende com o mesmo suporte para navegação que XBAPs fornecem. Você pode usar <xref:System.Windows.Navigation.NavigationWindow> como a janela principal do seu aplicativo autônomo ou como uma janela secundária, como uma caixa de diálogo.
 
 Para implementar uma <xref:System.Windows.Navigation.NavigationWindow>, assim como a maioria das classes de nível superior no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] (<xref:System.Windows.Window>, <xref:System.Windows.Controls.Page>e assim por diante), use uma combinação de marcação e code-behind. Isso é mostrado no exemplo a seguir.
 
@@ -618,7 +618,7 @@ Como alternativa, você pode usar o suporte à personalização no [!INCLUDE[TLA
 
 ## <a name="the-frame-class"></a>A classe Frame
 
-O navegador e o <xref:System.Windows.Navigation.NavigationWindow> são janelas que hospedam conteúdo navegável. Em alguns casos, os aplicativos têm conteúdo que não precisa ser hospedado por uma janela inteira. Em vez disso, esse tipo de conteúdo pode ser hospedado dentro de outro conteúdo. Você pode inserir conteúdo navegável em outro conteúdo usando a classe <xref:System.Windows.Controls.Frame>. <xref:System.Windows.Controls.Frame> fornece o mesmo suporte que <xref:System.Windows.Navigation.NavigationWindow> e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)].
+O navegador e o <xref:System.Windows.Navigation.NavigationWindow> são janelas que hospedam conteúdo navegável. Em alguns casos, os aplicativos têm conteúdo que não precisa ser hospedado por uma janela inteira. Em vez disso, esse tipo de conteúdo pode ser hospedado dentro de outro conteúdo. Você pode inserir conteúdo navegável em outro conteúdo usando a classe <xref:System.Windows.Controls.Frame>. <xref:System.Windows.Controls.Frame> fornece o mesmo suporte que <xref:System.Windows.Navigation.NavigationWindow> e XBAPs.
 
 O exemplo a seguir mostra como adicionar um <xref:System.Windows.Controls.Frame> a um <xref:System.Windows.Controls.Page> declarativamente usando o elemento `Frame`.
 
@@ -626,13 +626,13 @@ O exemplo a seguir mostra como adicionar um <xref:System.Windows.Controls.Frame>
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML2](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml2)]
 [!code-xaml[NavigationOverviewSnippets#FrameHostPageXAML3](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHostPage.xaml#framehostpagexaml3)]
 
-Essa marcação define o atributo `Source` do elemento `Frame` com um URI de pacote para o <xref:System.Windows.Controls.Page> no qual o <xref:System.Windows.Controls.Frame> deve navegar inicialmente. A figura a seguir mostra um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] com uma <xref:System.Windows.Controls.Page> que tem uma <xref:System.Windows.Controls.Frame> que navegou entre várias páginas.
+Essa marcação define o atributo `Source` do elemento `Frame` com um URI de pacote para o <xref:System.Windows.Controls.Page> no qual o <xref:System.Windows.Controls.Frame> deve navegar inicialmente. A figura a seguir mostra um XBAP com um <xref:System.Windows.Controls.Page> que tem uma <xref:System.Windows.Controls.Frame> que navegou entre várias páginas.
 
 ![Um quadro que navegou entre várias páginas](./media/navigation-overview/frame-navigation-between-multiple-pages.png "Isso mostra uma navegação de quadro entre várias páginas.")
 
 Você não precisa apenas usar <xref:System.Windows.Controls.Frame> dentro do conteúdo de um <xref:System.Windows.Controls.Page>. Também é comum hospedar um <xref:System.Windows.Controls.Frame> dentro do conteúdo de um <xref:System.Windows.Window>.
 
-Por padrão, <xref:System.Windows.Controls.Frame> usa apenas seu próprio diário na ausência de outro diário. Se um <xref:System.Windows.Controls.Frame> fizer parte do conteúdo hospedado dentro de um <xref:System.Windows.Navigation.NavigationWindow> ou de um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame> usará o diário que pertence ao <xref:System.Windows.Navigation.NavigationWindow> ou [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. No entanto, às vezes, um <xref:System.Windows.Controls.Frame> pode precisar ser responsável por seu próprio diário. Um motivo para fazer isso é permitir a navegação do diário dentro das páginas que são hospedadas por um <xref:System.Windows.Controls.Frame>. Isso é ilustrado pela figura a seguir.
+Por padrão, <xref:System.Windows.Controls.Frame> usa apenas seu próprio diário na ausência de outro diário. Se um <xref:System.Windows.Controls.Frame> fizer parte do conteúdo hospedado dentro de um <xref:System.Windows.Navigation.NavigationWindow> ou XBAP, <xref:System.Windows.Controls.Frame> usará o diário que pertence ao <xref:System.Windows.Navigation.NavigationWindow> ou XBAP. No entanto, às vezes, um <xref:System.Windows.Controls.Frame> pode precisar ser responsável por seu próprio diário. Um motivo para fazer isso é permitir a navegação do diário dentro das páginas que são hospedadas por um <xref:System.Windows.Controls.Frame>. Isso é ilustrado pela figura a seguir.
 
 ![Diagrama de quadro e de página](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "Isso mostra a navegação do diário em páginas hospedadas por um quadro.")
 
@@ -665,7 +665,7 @@ Se sua experiência de usuário exigir um <xref:System.Windows.Controls.Frame> p
 
 ![Diagramas de navegador](./media/navigation-overview/navigation-host-construction.png "Construção básica de um host de navegação")
 
-Essencialmente, isso permite que <xref:System.Windows.Navigation.NavigationWindow> e <xref:System.Windows.Controls.Frame> forneçam o mesmo suporte de navegação que um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] fornece quando hospedado no navegador.
+Essencialmente, isso permite que <xref:System.Windows.Navigation.NavigationWindow> e <xref:System.Windows.Controls.Frame> forneçam o mesmo suporte de navegação que um XBAP fornece quando hospedado no navegador.
 
 Além de usar <xref:System.Windows.Navigation.NavigationService> e um diário, os hosts de navegação implementam os mesmos membros que <xref:System.Windows.Navigation.NavigationService> implementa. Isso é ilustrado pela figura a seguir.
 
@@ -681,7 +681,7 @@ Conforme mencionado anteriormente, mais de um diário pode existir dentro de um 
 
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>Navegar para conteúdo que não seja páginas XAML
 
-Ao longo deste tópico, <xref:System.Windows.Controls.Page> e [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] de pacote foram usados para demonstrar os vários recursos de navegação do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. No entanto, um <xref:System.Windows.Controls.Page> que é compilado em um aplicativo não é o único tipo de conteúdo que pode ser navegado, e o Pack [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] não é a única maneira de identificar o conteúdo.
+Ao longo deste tópico, os XBAPs <xref:System.Windows.Controls.Page> e Pack foram usados para demonstrar os vários recursos de navegação do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. No entanto, um <xref:System.Windows.Controls.Page> que é compilado em um aplicativo não é o único tipo de conteúdo que pode ser navegado e Pack XBAPs não é a única maneira de identificar o conteúdo.
 
 Como esta seção demonstra, você também pode navegar até arquivos soltos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], arquivos HTML e objetos.
 
@@ -728,7 +728,7 @@ Como você pode esperar, você também pode navegar para HTML. Você simplesment
 
 [!code-xaml[NavigationOverviewSnippets#FrameHtmlNavMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/FrameHTMLNavPage.xaml#framehtmlnavmarkup)]
 
-Navegar para HTML requer permissões especiais. Por exemplo, você não pode navegar de um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] que está em execução na área restrita de segurança de confiança parcial da zona da Internet. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](../wpf-partial-trust-security.md).
+Navegar para HTML requer permissões especiais. Por exemplo, você não pode navegar de um XBAP que está em execução na área restrita de segurança de confiança parcial da zona da Internet. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](../wpf-partial-trust-security.md).
 
 <a name="Navigating_to_HTML_Files_Using_WebBrowser"></a>
 
@@ -778,7 +778,7 @@ Para obter mais informações sobre modelos de dados, consulte [visão geral de 
 
 ## <a name="security"></a>Segurança
 
-o suporte à navegação [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] permite que o [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] seja navegado pela Internet e permite que os aplicativos hospedem conteúdo de terceiros. Para proteger aplicativos e usuários contra comportamentos prejudiciais, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece uma variedade de recursos de segurança que são [discutidos em segurança](../security-wpf.md) e [segurança de confiança parcial do WPF](../wpf-partial-trust-security.md).
+o suporte à navegação [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] permite que XBAPs sejam navegados pela Internet e permite que os aplicativos hospedem conteúdo de terceiros. Para proteger aplicativos e usuários contra comportamentos prejudiciais, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece uma variedade de recursos de segurança que são [discutidos em segurança](../security-wpf.md) e [segurança de confiança parcial do WPF](../wpf-partial-trust-security.md).
 
 ## <a name="see-also"></a>Consulte também
 

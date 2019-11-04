@@ -2,20 +2,20 @@
 title: Configuração simplificada
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
-ms.openlocfilehash: 567f03e8f35ed72ba7e2a602bf47257158741fb3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 3bed6fe961712c976d5e1446ace43e7073036697
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321164"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423715"
 ---
 # <a name="simplified-configuration"></a>Configuração simplificada
-Configurar os serviços Windows Communication Foundation (WCF) pode ser uma tarefa complexa. Há muitas opções diferentes e nem sempre é fácil determinar quais configurações são necessárias. Embora os arquivos de configuração aumentem a flexibilidade dos serviços WCF, eles também são a fonte de muitos problemas difíceis de encontrar. o [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] resolve esses problemas e fornece uma maneira de reduzir o tamanho e a complexidade da configuração de serviço.  
+Configurar os serviços Windows Communication Foundation (WCF) pode ser uma tarefa complexa. Há muitas opções diferentes e nem sempre é fácil determinar quais configurações são necessárias. Embora os arquivos de configuração aumentem a flexibilidade dos serviços WCF, eles também são a fonte de muitos problemas difíceis de encontrar. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] resolve esses problemas e fornece uma maneira de reduzir o tamanho e a complexidade da configuração de serviço.  
   
 ## <a name="simplified-configuration"></a>Configuração simplificada  
- Nos arquivos de configuração do serviço WCF, a seção < `system.serviceModel` > contém um elemento @no__t < >-1 para cada serviço hospedado. O elemento < `service` > contém uma coleção de elementos < `endpoint` > que especificam os pontos de extremidade expostos para cada serviço e, opcionalmente, um conjunto de comportamentos de serviço. Os elementos < `endpoint` > especificam o endereço, a associação e o contrato expostos pelo ponto de extremidade e, opcionalmente, associando a configuração e os comportamentos de ponto de extremidade. A seção < `system.serviceModel` > também contém um elemento @no__t < >-1 que permite especificar comportamentos de serviço ou ponto de extremidade. O exemplo a seguir mostra a < `system.serviceModel` > seção de um arquivo de configuração.  
+ Nos arquivos de configuração do serviço WCF, a seção <`system.serviceModel`> contém um elemento <`service`> para cada serviço hospedado. O elemento < `service` > contém uma coleção de elementos < `endpoint` > que especificam os pontos de extremidade expostos para cada serviço e, opcionalmente, um conjunto de comportamentos de serviço. Os elementos < `endpoint` > especificam o endereço, a associação e o contrato expostos pelo ponto de extremidade e, opcionalmente, associando a configuração e os comportamentos de ponto de extremidade. A seção <`system.serviceModel`> também contém um elemento <`behaviors`> que permite especificar comportamentos de serviço ou ponto de extremidade. O exemplo a seguir mostra a < `system.serviceModel` > seção de um arquivo de configuração.  
   
-```  
+```xml  
 <system.serviceModel>  
   <behaviors>  
     <serviceBehaviors>  
@@ -46,7 +46,7 @@ Configurar os serviços Windows Communication Foundation (WCF) pode ser uma tare
 </system.serviceModel>  
 ```  
   
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] torna a configuração de um serviço WCF mais fácil, removendo o requisito para o elemento < `service` >. Se você não adicionar uma seção < `service` > ou adicionar pontos de extremidade em uma seção < `service` > e o serviço não definir programaticamente nenhum ponto de extremidade, um conjunto de pontos de extremidade padrão será adicionado automaticamente ao seu serviço, um para cada endereço básico do serviço e para cada contrato implementado pelo seu serviço. Em cada uma dessas extremidades, o endereço do ponto de extremidade corresponde ao endereço base, a associação é determinada pelo esquema de endereço base e o contrato é o que é implementado pelo seu serviço. Se você não precisar especificar pontos de extremidade ou comportamentos de serviço ou fazer alterações de configuração de associação, não será necessário especificar um arquivo de configuração de serviço. Se um serviço implementar dois contratos e o host habilitar transportes HTTP e TCP, o host de serviço criará quatro pontos de extremidade padrão, um para cada contrato usando cada transporte. Para criar pontos de extremidade padrão, o host de serviço deve saber quais associações usar. Essas configurações são especificadas em uma seção < `protocolMappings` > na seção < `system.serviceModel` >. A seção < `protocolMappings` > contém uma lista de esquemas de protocolo de transporte mapeados para tipos de associação. O host de serviço usa os endereços base passados para ele para determinar qual associação usar. O exemplo a seguir usa o elemento < `protocolMappings` >.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] facilita a configuração de um serviço WCF, removendo o requisito para o elemento >`service`<. Se você não adicionar uma seção < `service` > ou adicionar pontos de extremidade em uma seção < `service` > e o serviço não definir programaticamente nenhum ponto de extremidade, um conjunto de pontos de extremidade padrão será adicionado automaticamente ao seu serviço, um para cada endereço básico do serviço e para cada contrato implementado pelo seu serviço. Em cada uma dessas extremidades, o endereço do ponto de extremidade corresponde ao endereço base, a associação é determinada pelo esquema de endereço base e o contrato é o que é implementado pelo seu serviço. Se você não precisar especificar pontos de extremidade ou comportamentos de serviço ou fazer alterações de configuração de associação, não será necessário especificar um arquivo de configuração de serviço. Se um serviço implementar dois contratos e o host habilitar transportes HTTP e TCP, o host de serviço criará quatro pontos de extremidade padrão, um para cada contrato usando cada transporte. Para criar pontos de extremidade padrão, o host de serviço deve saber quais associações usar. Essas configurações são especificadas em uma seção < `protocolMappings` > na seção < `system.serviceModel` >. A seção < `protocolMappings` > contém uma lista de esquemas de protocolo de transporte mapeados para tipos de associação. O host de serviço usa os endereços base passados para ele para determinar qual associação usar. O exemplo a seguir usa o elemento < `protocolMappings` >.  
   
 > [!WARNING]
 > Alterar os elementos de configuração padrão, como associações ou comportamentos, pode afetar os serviços definidos em níveis inferiores da hierarquia de configuração, pois eles podem estar usando essas associações e comportamentos padrão. Assim, quem altera as associações e os comportamentos padrão precisa estar ciente de que essas alterações podem afetar outros serviços na hierarquia.  

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 2a3e7f02ee9d210acae881edd170edbced82dab6
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353755"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422207"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
 Há dois tipos de valor:
 
-- [Estruturas](struct.md)
+- [Structs](struct.md)
 
 - [Enumerações](enum.md)
 
@@ -54,7 +54,7 @@ Os tipos simples diferem de outros tipos de struct, pois permitem determinadas o
 
 - As expressões constantes, cujos operandos são todos constantes de tipo simples, são avaliadas em tempo de compilação.
 
-Para saber mais, confira a seção [Tipos simples](~/_csharplang/spec/types.md#simple-types) na [Especificação da linguagem C#](../language-specification/index.md).
+Para saber mais, confira a seção [Tipos simples](~/_csharplang/spec/types.md#simple-types) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).
 
 ## <a name="initializing-value-types"></a>Inicializando tipos de valor
 
@@ -107,6 +107,6 @@ Para saber mais sobre a formatação da saída de tipos numéricos, consulte [Ta
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Tipos](types.md)
+- [Tipos](/dotnet/csharp/language-reference/keywords)
 - [Tipos de referência](reference-types.md)
 - [Tipos de valor anuláveis](../../programming-guide/nullable-types/index.md)

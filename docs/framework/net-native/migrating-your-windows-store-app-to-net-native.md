@@ -2,18 +2,18 @@
 title: Migrando seu aplicativo da Windows Store para .NET Nativo
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 7eea089ef9b492e156758d170394b17d74a60a64
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1942574e832ca7593d91c71370cc0af0c3051617
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128318"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455617"
 ---
-# <a name="migrating-your-windows-store-app-to-net-native"></a>Migrando seu aplicativo da Windows Store para .NET Nativo
+# <a name="migrate-your-windows-store-app-to-net-native"></a>Migre seu aplicativo da Windows Store para .NET Native
 
 .NET Native fornece compilação estática de aplicativos na Windows Store ou no computador do desenvolvedor. Isso difere da compilação dinâmica realizada para Aplicativos da Windows Store pelo compilador JIT (just-in-time) ou o [Gerador de Imagem Nativa (Ngen.exe)](../tools/ngen-exe-native-image-generator.md) no dispositivo. Apesar das diferenças, .NET Native tenta manter a compatibilidade com o [.net para aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29). Para a maior parte, as coisas que funcionam no .NET para aplicativos da Windows Store também funcionam com .NET Native.  No entanto, em alguns casos, você pode encontrar alterações de comportamento. Este documento discute essas diferenças entre o .NET Standard para aplicativos da Windows Store e .NET Native nas seguintes áreas:
 
-- [Diferenças de tempo de execução geral](#Runtime)
+- [Diferenças de runtime geral](#Runtime)
 
 - [Diferenças de programação dinâmica](#Dynamic)
 
@@ -53,7 +53,7 @@ ms.locfileid: "73128318"
 
 Por exemplo, a associação de dados necessita de um aplicativo para conseguir mapear nomes de propriedade às funções. Nos aplicativos .NET para Windows Store, o Common Language Runtime usa reflexão automaticamente para fornecer esse recurso para tipos nativos gerenciados e disponíveis publicamente. No .NET Native, o compilador inclui automaticamente metadados para os tipos aos quais você associa dados.
 
-O compilador de .NET Native também pode manipular tipos genéricos comumente usados, como <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.Dictionary%602>, que funcionam sem a necessidade de dicas ou diretivas. A palavra-chave [dynamic](../../csharp/language-reference/keywords/dynamic.md) também tem suporte dentro de certos limites.
+O compilador de .NET Native também pode manipular tipos genéricos comumente usados, como <xref:System.Collections.Generic.List%601> e <xref:System.Collections.Generic.Dictionary%602>, que funcionam sem a necessidade de dicas ou diretivas. A palavra-chave [dynamic](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) também tem suporte dentro de certos limites.
 
 > [!NOTE]
 > Você deve testar completamente todos os caminhos de código dinâmico ao portar seu aplicativo para .NET Native.
@@ -65,7 +65,7 @@ A configuração padrão para .NET Native é suficiente para a maioria dos desen
 - Como o compilador não pode determinar as instanciações, um tipo genérico sobre o qual você deseja refletir deverá ser especificado por diretivas de runtime. Isso não é apenas porque todo o código deve ser incluído, mas sim porque a reflexão em tipos genéricos pode formar um ciclo infinito (por exemplo, quando um método genérico é invocado em um tipo genérico).
 
 > [!NOTE]
-> Diretivas de runtime são definidas em um arquivo de diretivas de runtime (.rd.xml). Para obter mais informações sobre como usar essa arquivo, consulte [Introdução](getting-started-with-net-native.md). Para obter informações sobre as diretivas de tempo de execução, consulte [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).
+> Diretivas de runtime são definidas em um arquivo de diretivas de runtime (.rd.xml). Para obter mais informações sobre como usar essa arquivo, consulte [Introdução](getting-started-with-net-native.md). Para obter informações sobre as diretivas de runtime, consulte [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md).
 
 .NET Native também inclui ferramentas de criação de perfil que ajudam o desenvolvedor a determinar quais tipos fora do conjunto padrão devem dar suporte à reflexão.
 
@@ -664,6 +664,6 @@ A habilitação de .NET Native em uma biblioteca de teste de unidade para um pro
 ## <a name="see-also"></a>Consulte também
 
 - [Introdução](getting-started-with-net-native.md)
-- [Referência do arquivo de configuração das diretivas de tempo de execução (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
+- [Referência do arquivo de configuração das diretivas de runtime (rd.xml)](runtime-directives-rd-xml-configuration-file-reference.md)
 - [Visão geral dos aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)
 - [Suporte do .NET Framework para Aplicativos da Windows Store e Windows Runtime](../../standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

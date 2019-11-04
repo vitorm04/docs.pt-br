@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: b288e57d9241e294a0fa18edafe72eec675327a7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: cbd0f6b4ef7976ccc2da2a735ccbba2bf23177e4
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633183"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422326"
 ---
 # <a name="static-c-reference"></a>static (Referência de C#)
 
-Use o modificador `static` para declarar um membro estático que pertença ao próprio tipo, em vez de um objeto específico. O modificador `static` pode ser usado com classes, campos, métodos, propriedades, operadores, eventos e construtores, mas não pode ser usado com indexadores, finalizadores ou tipos diferentes de classes. Para obter mais informações, consulte [Classes estáticas e membros de classes estáticas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
+Use o modificador `static` para declarar um membro estático que pertença ao próprio tipo, em vez de um objeto específico. O modificador `static` pode ser usado com classes, campos, métodos, propriedades, operadores, eventos e construtores, mas não pode ser usado com indexadores, finalizadores ou tipos diferentes de classes. Para obter mais informações, consulte [Classes Estáticas e Membros de Classes Estáticas](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -71,5 +71,5 @@ Este exemplo mostra que, embora seja possível inicializar um campo estático us
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Modificadores](modifiers.md)
+- [Modificadores](index.md)
 - [Classes static e membros de classes static](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

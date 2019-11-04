@@ -4,12 +4,12 @@ description: Aprenda sobre as classes do .NET Framework que dão suporte a deleg
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 7aca2d3ba7aefd103ac927a6ce905938262ae39c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037446"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420360"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate e a palavra-chave `delegate`
 
@@ -32,7 +32,7 @@ Vamos continuar a usar o método List.Sort() como nosso exemplo. A primeira etap
 public delegate int Comparison<in T>(T left, T right);
 ```
 
-O compilador gera uma classe, derivada de `System.Delegate`, que corresponde à assinatura usada (nesse caso, um método que retorna um inteiro e tem dois argumentos). O tipo do delegado é `Comparison`. O tipo delegado `Comparison` é um tipo genérico. Para obter detalhes sobre os genéricos, consulte [aqui](generics.md).
+O compilador gera uma classe, derivada de `System.Delegate`, que corresponde à assinatura usada (nesse caso, um método que retorna um inteiro e tem dois argumentos). O tipo do delegado é `Comparison`. O tipo delegado `Comparison` é um tipo genérico. Para obter detalhes sobre os genéricos, consulte [aqui](programming-guide/generics/index.md).
 
 Observe que a sintaxe pode aparecer como se estivesse declarando uma variável, mas na verdade está declarando um *tipo*. Você pode definir tipos de delegado dentro de classes, diretamente dentro de namespaces ou até mesmo no namespace global.
 

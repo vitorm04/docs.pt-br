@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 0c79ba3dd42f2e65eb241409946e921577ced5f1
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 6d7401f9614e663351968dc6a2f85548735a176d
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920049"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460423"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Personalizando a aparência de um controle existente criando um ControlTemplate
 <a name="introduction"></a>Um <xref:System.Windows.Controls.ControlTemplate> especifica a estrutura visual e o comportamento visual de um controle. Você pode personalizar a aparência de um controle dando a ele um novo <xref:System.Windows.Controls.ControlTemplate>. Ao criar uma <xref:System.Windows.Controls.ControlTemplate>, você substitui a aparência de um controle existente sem alterar sua funcionalidade. Por exemplo, você pode fazer com que os botões em seu aplicativo sejam arredondados em vez da forma quadrada padrão, mas o botão ainda irá gerar o evento <xref:System.Windows.Controls.Primitives.ButtonBase.Click>.
@@ -262,4 +262,4 @@ Um botão que usa um modelo de controle personalizado no estado pressionado
 
 ## <a name="see-also"></a>Consulte também
 
-- [Estilo e modelagem](styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

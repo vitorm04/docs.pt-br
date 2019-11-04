@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 7559c7ec9aef8f95336d53e62ca9bf5861a9b22f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9c237c06de1388de4c1fe6a6edb3fb5b52522d1f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040720"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424623"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estratégia de segurança do WPF - segurança da plataforma
 Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviços de segurança, ele também aproveita os recursos de segurança da plataforma subjacente, que inclui o sistema operacional, o CLR e o Internet Explorer. Essas camadas se combinam para fornecer [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] um modelo de segurança forte e de defesa intensa que tenta evitar qualquer ponto único de falha, conforme mostrado na figura a seguir:  
@@ -70,7 +70,7 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Processos com direitos limitados para aplicativos hospedados pelo navegador  
  Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hospedados no navegador são executados na área restrita da zona da Internet. a integração do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] com o Microsoft Internet Explorer estende essa proteção com suporte adicional.  
   
- Como os [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] geralmente são protegidos pelo conjunto de permissões da zona da Internet, a remoção desses privilégios não prejudica [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] de uma perspectiva de compatibilidade. Em vez disso, é criada uma camada adicional de proteção extensa; se um aplicativo em área restrita puder explorar outras camadas e sequestrar o processo, ainda assim, o processo apenas terá privilégios limitados.  
+ Como os aplicativos de navegador XAML (XBAPs) geralmente são protegidos pelo conjunto de permissões de zona da Internet, a remoção desses privilégios não danifica os aplicativos de navegador XAML (XBAPs) de uma perspectiva de compatibilidade. Em vez disso, é criada uma camada adicional de proteção extensa; se um aplicativo em área restrita puder explorar outras camadas e sequestrar o processo, ainda assim, o processo apenas terá privilégios limitados.  
   
  Consulte [usando uma conta de usuário com privilégios mínimos](https://docs.microsoft.com/previous-versions/tn-archive/cc700846%28v=technet.10%29).  
   
@@ -166,7 +166,7 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
  Observe que .NET Framework permite que o código confiável estenda a área restrita da zona da Internet do XBAP, permitindo que os desenvolvedores gravem assemblies gerenciados marcados com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) e implantados no GAC (cache de assembly global) do usuário. Marcar um assembly com um APTCA é uma operação de segurança altamente confidencial, pois permite que qualquer código chame esse assembly, incluindo um código mal-intencionado da Internet. Deve-se ter extremo cuidado e usar as melhores práticas ao fazer isso e os usuários devem optar por confiar nesse software para que ele seja instalado.  
   
 ## <a name="microsoft-internet-explorer-security"></a>Segurança do Microsoft Internet Explorer  
- Além de reduzir os problemas de segurança e simplificar a configuração de segurança, o Microsoft Internet Explorer 6 (SP2) contém vários recursos que aprimoram a segurança para os usuários de [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]. O foco desses recursos tenta permitir aos usuários um maior controle sobre sua experiência de navegação.  
+ Além de reduzir os problemas de segurança e simplificar a configuração de segurança, o Microsoft Internet Explorer 6 (SP2) contém vários recursos que aprimoram a segurança para usuários de aplicativos de navegador XAML (XBAPs). O foco desses recursos tenta permitir aos usuários um maior controle sobre sua experiência de navegação.  
   
  Antes do IE6 SP2, os usuários podem estar sujeitos a qualquer um dos seguintes:  
   
@@ -182,7 +182,7 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  A mesma lógica de inicialização do usuário também é aplicada para **abrir** /**salvar** prompts de segurança. As caixas de diálogo de instalação do ActiveX são sempre interceptadas na barra de informações, a menos que elas representem uma atualização de um controle instalado anteriormente. Essas medidas são combinadas para fornecer aos usuários uma experiência do usuário mais segura e mais controlada, já que eles estão protegidos contra sites que os induzem a instalar software indesejado ou mal-intencionado.  
   
- Esses recursos também protegem os clientes que usam o IE6 SP2 para navegar para sites que permitem que eles baixem e instalem aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Em particular, isso ocorre porque o IE6 SP2 oferece uma experiência de usuário melhor que reduz a chance de os usuários instalarem aplicativos mal-intencionados ou espertodos independentemente de qual tecnologia foi usada para compilá-lo, incluindo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. o [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] adiciona essas proteções usando o ClickOnce para facilitar o download de seus aplicativos pela Internet. Como [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../includes/tlasharptla-winfxwebappsharpplural-md.md)] executado em uma área restrita de segurança de zona da Internet, eles podem ser iniciados diretamente. Por outro lado, os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autônomos exigem confiança total para serem executados. Para esses aplicativos, o ClickOnce exibirá uma caixa de diálogo de segurança durante o processo de inicialização para notificar o uso dos requisitos de segurança adicionais do aplicativo. No entanto, isso deve ser iniciado pelo usuário, também será regido pela lógica iniciada pelo usuário e pode ser cancelado.  
+ Esses recursos também protegem os clientes que usam o IE6 SP2 para navegar para sites que permitem que eles baixem e instalem aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Em particular, isso ocorre porque o IE6 SP2 oferece uma experiência de usuário melhor que reduz a chance de os usuários instalarem aplicativos mal-intencionados ou espertodos independentemente de qual tecnologia foi usada para compilá-lo, incluindo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. o [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] adiciona essas proteções usando o ClickOnce para facilitar o download de seus aplicativos pela Internet. Como os aplicativos de navegador XAML (XBAPs) são executados em uma área restrita de segurança de zona da Internet, eles podem ser iniciados diretamente. Por outro lado, os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autônomos exigem confiança total para serem executados. Para esses aplicativos, o ClickOnce exibirá uma caixa de diálogo de segurança durante o processo de inicialização para notificar o uso dos requisitos de segurança adicionais do aplicativo. No entanto, isso deve ser iniciado pelo usuário, também será regido pela lógica iniciada pelo usuário e pode ser cancelado.  
   
  O Internet Explorer 7 incorpora e estende os recursos de segurança do IE6 SP2 como parte de um compromisso contínuo com a segurança.  
   

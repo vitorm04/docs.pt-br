@@ -2,12 +2,12 @@
 title: Parâmetros de tipo resolvidos estaticamente
 description: Saiba como usar um F# parâmetro de tipo estaticamente resolvido, que é substituído por um tipo real em tempo de compilação em vez de em tempo de execução.
 ms.date: 05/16/2016
-ms.openlocfilehash: bc3310192cdaa5ae4862b8aee46b6152f61da38a
-ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
+ms.openlocfilehash: 017c18dd3caaa484ddc653557573f548e3224ca0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71082922"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425004"
 ---
 # <a name="statically-resolved-type-parameters"></a>Parâmetros de tipo resolvidos estaticamente
 
@@ -21,7 +21,7 @@ Um *parâmetro de tipo estaticamente resolvido* é um parâmetro de tipo que é 
 
 ## <a name="remarks"></a>Comentários
 
-No F# idioma, há dois tipos distintos de parâmetros de tipo. O primeiro tipo é o parâmetro de tipo genérico padrão. Elas são indicadas por um apóstrofo ('), como em `'T` e `'U`. Eles são equivalentes a parâmetros de tipo genérico em outras linguagens de .NET Framework. O outro tipo é resolvido estaticamente e é indicado por um símbolo de cursor, como em `^T` e `^U`.
+No F# idioma, há dois tipos distintos de parâmetros de tipo. O primeiro tipo é o parâmetro de tipo genérico padrão. Eles são indicados por um apóstrofo ('), como em `'T` e `'U`. Eles são equivalentes a parâmetros de tipo genérico em outras linguagens de .NET Framework. O outro tipo é resolvido estaticamente e é indicado por um símbolo de cursor, como em `^T` e `^U`.
 
 Parâmetros de tipo estaticamente resolvidos são úteis principalmente em conjunto com restrições de membro, que são restrições que permitem especificar que um argumento de tipo deve ter um membro específico ou membros para serem usados. Não é possível criar esse tipo de restrição usando um parâmetro de tipo genérico regular.
 
@@ -42,7 +42,7 @@ Os métodos embutidos e as funções que usam operadores ou usam outras funçõe
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-3/snippet401.fs)]
 
-O tipo resolvido de `(+@)` é baseado no uso `(+)` de e `(*)`, ambos, causam a inferência de tipos para inferir restrições de membro nos parâmetros de tipo estaticamente resolvidos. O tipo resolvido, conforme mostrado no F# intérprete, é o seguinte.
+O tipo resolvido de `(+@)` é baseado no uso de `(+)` e `(*)`, e ambos causam a inferência de tipos para inferir restrições de membro nos parâmetros de tipo estaticamente resolvidos. O tipo resolvido, conforme mostrado no F# intérprete, é o seguinte.
 
 ```fsharp
 ^a -> ^c -> ^d
@@ -62,7 +62,7 @@ A F# partir do 4,1, você também pode especificar nomes de tipo concreto em ass
 ```fsharp
 let inline konst x _ = x
 
-type CFunctor() = 
+type CFunctor() =
     static member inline fmap (f: ^a -> ^b, a: ^a list) = List.map f a
     static member inline fmap (f: ^a -> ^b, a: ^a option) =
         match a with

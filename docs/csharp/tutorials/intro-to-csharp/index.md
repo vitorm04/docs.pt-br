@@ -3,16 +3,18 @@ title: Introdução ao C# – tutoriais interativos
 description: Aprenda C# em seu navegador e comece a trabalhar com seu próprio ambiente de desenvolvimento
 ms.date: 08/22/2019
 ms.custom: mvc
-ms.openlocfilehash: 1712e32175a95373ca85464bbdebed9ef99fb375
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 564af21fb0f9b6cf8b5c3591ff5622278a8cbb22
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850771"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423098"
 ---
 # <a name="introduction-to-c"></a>Introdução ao C\#
 
-Bem-vindo aos tutoriais de introdução ao C#. Eles começam com lições interativas que podem ser executadas em seu navegador.
+Bem-vindo aos tutoriais de introdução ao C#. Eles começam com lições interativas que podem ser executadas em seu navegador. Você pode aprender as noções básicas C# da [ C# série de vídeos 101](https://aka.ms/dotnet3-csharp) antes de iniciar essas lições interativas.
+
+> [!VIDEO https://channel9.msdn.com/Series/CSharp-101/What-is-C/player]
 
 As primeiras lições explicam os conceitos de C# usando pequenos snippets de código. Você aprenderá os conceitos básicos da sintaxe de C# e como trabalhar com tipos de dados como cadeias de caracteres, números e valores boolianos. É tudo interativo e você começará a gravar e executar o código em questão de minutos. Estas primeiras lições não exigem conhecimento prévio de programação ou da linguagem C#.
 
