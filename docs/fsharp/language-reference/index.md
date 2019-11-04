@@ -2,12 +2,12 @@
 title: Referência da linguagem F#
 description: Encontre F# informações de recursos de idioma dessa referência a tokens de idioma, conceitos, tipos, expressões e tópicos de construção com suporte do compilador.
 ms.date: 05/16/2016
-ms.openlocfilehash: b37f9ddcd4fbf6939631f283be95ebf08cf072d6
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: ac7e268b28d6bb654e4443d04695cb15fe756e9f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630687"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424995"
 ---
 # <a name="f-language-reference"></a>Referência da linguagem F#
 
@@ -30,7 +30,7 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |Título|Descrição|
 |-----|-----------|
 |[Funções](./functions/index.md)|As funções são a unidade fundamental de execução do programa em qualquer linguagem de programação. Como em outras linguagens, uma função do F# tem um nome, pode ter parâmetros e receber argumentos, e tem um corpo. O F# também oferece suporte a construções de programação funcional como tratamento de funções como valores, uso de funções sem nome em expressões, composição de funções para formar novas funções, funções via currying e a definição implícita de funções por meio da aplicação parcial dos argumentos da função.|
-|[Tipos do F#](fsharp-types.md)|Descreve os tipos que são usados no F# e como os tipos F# são nomeados e descritos.|
+|[Tipos F#](fsharp-types.md)|Descreve os tipos que são usados no F# e como os tipos F# são nomeados e descritos.|
 |[Inferência de Tipos](type-inference.md)|Descreve como o compilador do F# infere os tipos de valores, variáveis, parâmetros e valores de retorno.|
 |[Generalização Automática](./generics/automatic-generalization.md)|Descreve as construções genéricas no F#.|
 |[Herança](inheritance.md)|Descreve a herança, que é usada para modelar a relação "é um" ou subtipagem na programação orientada a objetos.|
@@ -42,13 +42,13 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |[Correspondência Padrão](pattern-matching.md)|Descreve os padrões, que são regras para transformar os dados de entrada que são usados em toda a linguagem F# para extrair dados de comparação com um padrão, decompor os dados em partes constituintes ou extrair informações de dados de várias maneiras.|
 |[Padrões Ativos](active-patterns.md)|Descreve padrões ativos. Padrões ativos permitem definir partições nomeadas que subdividem os dados de entrada. Você pode usar padrões ativos para decompor os dados de uma maneira personalizada para cada partição.|
 |[Asserções](assertions.md)|Descreve a expressão `assert`, que é um recurso de depuração que você pode usar para testar uma expressão. Em caso de falha no modo de depuração, uma asserção gera uma caixa de diálogo de erro do sistema.|
-|[Tratamento de Exceção](/.exception-handling/index.md)|Contém informações sobre suporte de manipulação de exceção na linguagem F#.|
+|[Tratamento de Exceção](./exception-handling/index.md)|Contém informações sobre suporte de manipulação de exceção na linguagem F#.|
 |[Atributos](attributes.md)|Descreve os atributos, que permitem os metadados a serem aplicados a uma construção de programação.|
-|[Gerenciamento de recursos: A Palavra-chave `use` ](resource-management-the-use-keyword.md)|Descreve as palavras-chave `use` e `using`, que podem controlar a inicialização e a liberação de recursos|
+|[Gerenciamento de Recursos: a palavra-chave `use`](resource-management-the-use-keyword.md)|Descreve as palavras-chave `use` e `using`, que podem controlar a inicialização e a liberação de recursos|
 |[namespaces](namespaces.md)|Descreve o suporte a namespace no F#. Um namespace permite organizar o código em áreas de funcionalidade relacionada ao permitir que você anexe um nome a um agrupamento de elementos de programação.|
 |[Módulos](modules.md)|Descreve os módulos. Um módulo do F# é um agrupamento de código F#, como valores, tipos e valores de função em um programa no F#. O agrupamento de código em módulos ajuda a manter junto o código relacionado e ajuda a evitar conflitos de nome em seu programa.|
-|[Declarações de importação: A Palavra-chave `open` ](import-declarations-the-open-keyword.md)|Descreve como `open` funciona. Uma declaração de importação especifica um módulo ou namespace cujos elementos você pode referenciar sem usar um nome totalmente qualificado.|
-|[Assinaturas](signatures.md)|Descreve as assinaturas e os arquivos de assinatura. Um arquivo de assinatura contém informações sobre as assinaturas públicas de um conjunto de elementos de programação de F#, como tipos, namespaces e módulos. Ele pode ser usado para especificar a acessibilidade desses elementos de programa.|
+|[Declarações de Importação: a palavra-chave `open`](import-declarations-the-open-keyword.md)|Descreve como `open` funciona. Uma declaração de importação especifica um módulo ou namespace cujos elementos você pode referenciar sem usar um nome totalmente qualificado.|
+|[Assinaturas](signature-files.md)|Descreve as assinaturas e os arquivos de assinatura. Um arquivo de assinatura contém informações sobre as assinaturas públicas de um conjunto de elementos de programação de F#, como tipos, namespaces e módulos. Ele pode ser usado para especificar a acessibilidade desses elementos de programa.|
 |[Documentação XML](xml-documentation.md)|Descreve o suporte para gerar arquivos de documentação para comentários de documento XML, também conhecidos como comentários de barra tripla. Você pode gerar documentação de comentários de código no F#, assim como em outras linguagens .NET.|
 |[Sintaxe Detalhada](verbose-syntax.md)|Descreve a sintaxe para construções no F# quando a sintaxe leve não está habilitada. A sintaxe detalhada está indicada pela diretiva `#light "off"` na parte superior do arquivo de código.|
 
@@ -63,7 +63,7 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |[Tipo Unit](unit-type.md)|Descreve o tipo `unit`, que é um tipo que indica a ausência de um valor específico; o tipo `unit` tem apenas um único valor, que atua como espaço reservado quando nenhum outro valor existe ou é necessário.|
 |[Cadeias de Caracteres](strings.md)|Descreve cadeias de caracteres no F#. O tipo `string` representa texto imutável, como uma sequência de caracteres Unicode. `string` é um alias para `System.String` no .NET Framework.|
 |[Tuplas](tuples.md)|Descreve as tuplas, que são agrupamentos de valores sem nome, mas valores ordenados de tipos possivelmente diferentes.|
-|[Tipos de Coleção do F#](fsharp-collection-types.md)|Visão geral dos tipos de coleção funcional do F#, incluindo tipos de matrizes, listas, sequências (seq), mapas e conjuntos.|
+|[Tipos de Coleção de F#](fsharp-collection-types.md)|Visão geral dos tipos de coleção funcional do F#, incluindo tipos de matrizes, listas, sequências (seq), mapas e conjuntos.|
 |[Listas](lists.md)|Descreve as listas. Uma lista no F# é uma série imutável, ordenada, de elementos do mesmo tipo.|
 |[Opções](options.md)|Descreve o tipo de opção. Uma opção no F# é usada quando um valor pode ou não existir. Uma opção tem um tipo subjacente e pode conter um valor desse tipo ou pode não ter um valor.|
 |[Sequências](sequences.md)|Descreve as sequências. Uma sequência é uma série lógica de elementos todos de um tipo. Os elementos individuais de sequência são computados somente se for necessário, para que a representação possa ser menor do que indicado por uma contagem do elemento literal.|
@@ -91,9 +91,9 @@ A tabela a seguir lista os tópicos que descrevem as expressões no F#.
 |-----|-----------|
 |[Expressões condicionais: `if...then...else`](conditional-expressions-if-then-else.md)|Descreve a expressão `if...then...else`, que executa diferentes ramificações do código e também é avaliada como um valor diferente dependendo da expressão booliana fornecida.|
 |[Expressões Match](match-expressions.md)|Descreve a expressão `match`, que fornece controle de ramificação com base na comparação de uma expressão com um conjunto de padrões.|
-|[Loops `for...to`Expressão](loops-for-to-expression.md)|Descreve a expressão `for...to`, que é usada para iterar em um loop em um intervalo de valores de uma variável de loop.|
-|[Loops `for...in`Expressão](loops-for-in-expression.md)|Descreve a expressão `for...in`, uma construção de loop usada para iterar sobre as correspondências de um padrão em uma coleção enumerável como uma expressão de intervalo, sequência, lista, matriz ou outra construção que oferece suporte à enumeração.|
-|[Loops `while...do`Expressão](loops-while-do-expression.md)|Descreve a expressão `while...do`, que é usada para uma execução iterativa (loop) enquanto uma condição de teste especificada é verdadeira.|
+|[Loops: `for...to` expressão](loops-for-to-expression.md)|Descreve a expressão `for...to`, que é usada para iterar em um loop em um intervalo de valores de uma variável de loop.|
+|[Loops: `for...in` expressão](loops-for-in-expression.md)|Descreve a expressão `for...in`, uma construção de loop usada para iterar sobre as correspondências de um padrão em uma coleção enumerável como uma expressão de intervalo, sequência, lista, matriz ou outra construção que oferece suporte à enumeração.|
+|[Loops: `while...do` expressão](loops-while-do-expression.md)|Descreve a expressão `while...do`, que é usada para uma execução iterativa (loop) enquanto uma condição de teste especificada é verdadeira.|
 |[Expressões de Objeto](object-expressions.md)|Descreve as expressões de objeto, que são expressões que criam novas instâncias de um tipo de objeto anônimo e criado dinamicamente, com base em um tipo base existente, interface ou conjunto de interfaces.|
 |[Expressões Lentas](lazy-expressions.md)|Descreve as expressões lentas, que são computações que não são avaliadas imediatamente, mas, em vez disso, são avaliadas quando o resultado é realmente necessário.|
 |[Expressões de Computação](computation-expressions.md)|Descreve expressões de computação no F#, que fornece uma sintaxe conveniente para criar cálculos que podem ser sequenciados e combinados usando construções de fluxo de controle e associações. Podem ser usados para fornecer uma sintaxe conveniente para *monads*, um recurso de programação funcional que pode ser usado para gerenciar dados, controle e efeitos colaterais em programas funcionais. Um tipo de expressão de computação, o fluxo de trabalho assíncrono, oferece suporte para computações paralelas e assíncronas. Para saber mais, consulte [Fluxos de Trabalho Assíncronos](asynchronous-workflows.md).|

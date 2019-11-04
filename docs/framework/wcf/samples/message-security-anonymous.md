@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: fdcf0c25e4e6cab2c99457112b892f5d2c5bd3b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0665ce331492a5322fdfde9e91fc1dae5b8e7ea8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930615"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424103"
 ---
 # <a name="message-security-anonymous"></a>Segurança de mensagem anônima
 O exemplo de segurança de mensagem anônima demonstra como implementar um aplicativo Windows Communication Foundation (WCF) que usa segurança em nível de mensagem sem autenticação de cliente, mas que requer autenticação de servidor usando X. 509 do servidor Certificate. Todas as mensagens de aplicativo entre o cliente e o servidor são assinadas e criptografadas. Este exemplo é baseado no exemplo de [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) . Este exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados pelo Serviços de Informações da Internet (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.
@@ -17,7 +17,7 @@ O exemplo de segurança de mensagem anônima demonstra como implementar um aplic
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
- Este exemplo adiciona uma nova operação à interface da calculadora que retorna `True` se o cliente não foi autenticado.
+ Este exemplo adiciona uma nova operação à interface de calculadora que retorna `True` se o cliente não foi autenticado.
 
 ```csharp
 public class CalculatorService : ICalculator
@@ -31,7 +31,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
- O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando um arquivo de configuração (Web. config). O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada `wsHttpBinding` com uma associação. O modo de segurança padrão para `wsHttpBinding` a associação `Message`é. O `clientCredentialType` atributo é definido como `None`.
+ O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando um arquivo de configuração (Web. config). O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com uma associação de `wsHttpBinding`. O modo de segurança padrão para a associação de `wsHttpBinding` é `Message`. O atributo `clientCredentialType` é definido como `None`.
 
 ```xml
 <system.serviceModel>
@@ -57,7 +57,7 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- As credenciais a serem usadas para autenticação de serviço são especificadas no [ \<comportamento >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md). O certificado do servidor deve conter o mesmo valor para `SubjectName` o como o valor especificado para `findValue` o atributo, conforme mostrado no código de exemplo a seguir.
+ As credenciais a serem usadas para autenticação de serviço são especificadas no [comportamento de\<](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md). O certificado do servidor deve conter o mesmo valor para o `SubjectName` como o valor especificado para o atributo `findValue`, conforme mostrado no código de exemplo a seguir.
 
 ```xml
 <behaviors>
@@ -78,7 +78,7 @@ public class CalculatorService : ICalculator
 </behaviors>
 ```
 
- A configuração de ponto de extremidade do cliente consiste em um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. O modo de segurança do cliente `wsHttpBinding` para a `Message`associação é. O `clientCredentialType` atributo é definido como `None`.
+ A configuração de ponto de extremidade do cliente consiste em um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. O modo de segurança do cliente para a associação de `wsHttpBinding` é `Message`. O atributo `clientCredentialType` é definido como `None`.
 
 ```xml
 <system.serviceModel>
@@ -106,9 +106,9 @@ public class CalculatorService : ICalculator
 </system.serviceModel>
 ```
 
- O exemplo define o <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> para <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> para autenticar o certificado do serviço. Isso é feito no arquivo app. config do cliente na `behaviors` seção. Isso significa que, se o certificado estiver no repositório de pessoas confiáveis do usuário, ele será confiável sem executar uma validação da cadeia do emissor do certificado. Essa configuração é usada aqui para conveniência para que o exemplo possa ser executado sem a necessidade de certificados emitidos por uma autoridade de certificação (CA). Essa configuração é menos segura do que o padrão, ChainTrust. As implicações de segurança dessa configuração devem ser consideradas cuidadosamente antes de `PeerOrChainTrust` usar no código de produção.
+ O exemplo define o <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> como <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerOrChainTrust> para autenticar o certificado do serviço. Isso é feito no arquivo app. config do cliente na seção `behaviors`. Isso significa que, se o certificado estiver no repositório de pessoas confiáveis do usuário, ele será confiável sem executar uma validação da cadeia do emissor do certificado. Essa configuração é usada aqui para conveniência para que o exemplo possa ser executado sem a necessidade de certificados emitidos por uma autoridade de certificação (CA). Essa configuração é menos segura do que o padrão, ChainTrust. As implicações de segurança dessa configuração devem ser consideradas cuidadosamente antes de usar `PeerOrChainTrust` no código de produção.
 
- A implementação do cliente adiciona uma chamada para `IsCallerAnonymous` o método e, caso contrário, não é diferente do exemplo de [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) .
+ A implementação do cliente adiciona uma chamada ao método `IsCallerAnonymous` e, caso contrário, não difere da amostra de [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) .
 
 ```csharp
 // Create a client with a client endpoint configuration.
@@ -135,7 +135,7 @@ Console.ReadLine();
 
  Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
-```
+```console
 IsCallerAnonymous returned: True
 Add(100,15.99) = 115.99
 Subtract(145,76.54) = 68.46
@@ -144,7 +144,7 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.
 ```
 
- O arquivo em lotes setup. bat incluído com a mensagem segurança de exemplo Anonymous permite que você configure o servidor com um certificado relevante para executar um aplicativo hospedado que requer segurança baseada em certificado. O arquivo em lotes pode ser executado em dois modos. Para executar o arquivo em lotes no modo de computador único, digite `setup.bat` na linha de comando. Para executá-lo no modo de serviço `setup.bat service`, digite. Use esse modo ao executar o exemplo entre computadores. Consulte o procedimento de instalação no final deste tópico para obter detalhes.
+ O arquivo em lotes setup. bat incluído com a mensagem segurança de exemplo Anonymous permite que você configure o servidor com um certificado relevante para executar um aplicativo hospedado que requer segurança baseada em certificado. O arquivo em lotes pode ser executado em dois modos. Para executar o arquivo em lotes no modo de computador único, digite `setup.bat` na linha de comando. Para executá-lo no modo de serviço, digite `setup.bat service`. Use esse modo ao executar o exemplo entre computadores. Consulte o procedimento de instalação no final deste tópico para obter detalhes.
 
  Veja a seguir uma breve visão geral das diferentes seções dos arquivos em lotes:
 
@@ -162,13 +162,13 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     A variável% SERVER_NAME% especifica o nome do servidor. O certificado é armazenado no armazenamento LocalMachine. Se o arquivo em lotes de instalação for executado com um argumento de serviço ( `setup.bat service`como),% server_name% conterá o nome de domínio totalmente qualificado do computador. Caso contrário, o padrão é localhost.
+     A variável% SERVER_NAME% especifica o nome do servidor. O certificado é armazenado no armazenamento LocalMachine. Se o arquivo em lotes de instalação for executado com um argumento de serviço (como `setup.bat service`), o% SERVER_NAME% conterá o nome de domínio totalmente qualificado do computador. Caso contrário, o padrão é localhost.
 
 - Instalar o certificado do servidor no repositório de certificados confiáveis do cliente.
 
      A linha a seguir copia o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — essa etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
@@ -187,7 +187,7 @@ Press <ENTER> to terminate client.
     ```
 
 > [!NOTE]
-> Se você estiver usando um que não seja U. S. Edição em inglês do Windows você deve editar o arquivo setup. bat e substituir `NT AUTHORITY\NETWORK SERVICE` o nome da conta pelo equivalente regional.
+> Se você estiver usando uma edição que não seja a U. S. em inglês do Windows, deverá editar o arquivo setup. bat e substituir o nome da conta de `NT AUTHORITY\NETWORK SERVICE` pelo equivalente regional.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
@@ -206,7 +206,7 @@ Press <ENTER> to terminate client.
   
 3. Verifique o acesso ao serviço usando um navegador inserindo o endereço `http://localhost/servicemodelsamples/service.svc`.  
   
-4. Inicie o Client.exe no \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
+4. Inicie o Client. exe em \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
   
 5. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -220,9 +220,9 @@ Press <ENTER> to terminate client.
   
 4. Copie os arquivos de programa do cliente para o diretório cliente no computador cliente. Copie também os arquivos Setup. bat, Cleanup. bat e ImportServiceCert. bat para o cliente.  
   
-5. No servidor, execute `setup.bat service` em um prompt de comando do desenvolvedor para Visual Studio aberto com privilégios de administrador. A `setup.bat` execução com `service` o argumento cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service. cer.  
+5. No servidor, execute `setup.bat service` em um Prompt de Comando do Desenvolvedor para o Visual Studio aberto com privilégios de administrador. A execução de `setup.bat` com o argumento `service` cria um certificado de serviço com o nome de domínio totalmente qualificado do computador e exporta o certificado de serviço para um arquivo chamado Service. cer.  
   
-6. Edite o Web. config para refletir o novo nome do certificado `findValue` (no atributo no [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)do Service-Certificate), que é o mesmo que o nome de domínio totalmente qualificado do computador.  
+6. Edite Web. config para refletir o novo nome de certificado (no atributo `findValue` no [> de\<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)ServiceName), que é o mesmo que o nome de domínio totalmente qualificado do computador.  
   
 7. Copie o arquivo Service. cer do diretório de serviço para o diretório cliente no computador cliente.  
   
@@ -237,4 +237,4 @@ Press <ENTER> to terminate client.
 - Execute o Cleanup. bat na pasta Samples depois de concluir a execução do exemplo.  
   
 > [!NOTE]
-> Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
+> Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`

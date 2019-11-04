@@ -2,12 +2,12 @@
 title: Usando o WCF Moniker com clientes COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 2836b8c034a62602822ca629189e38eff818180a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 321d59285b0ef86e4631634d90229a0d8e79657b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038724"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424717"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Usando o WCF Moniker com clientes COM
 Este exemplo demonstra como usar o moniker do serviço Windows Communication Foundation (WCF) para integrar serviços Web em ambientes de desenvolvimento baseados em COM, como Microsoft Office Visual Basic for Applications (Office VBA) ou Visual Basic 6,0. Este exemplo consiste em um cliente do Windows Script Host (. vbs), uma biblioteca de cliente de suporte (. dll) e uma biblioteca de serviço (. dll) hospedada pelo Serviços de Informações da Internet (IIS). O serviço é um serviço de calculadora e o cliente COM chama operações matemáticas — adicionar, subtrair, multiplicar e dividir — no serviço. A atividade do cliente fica visível nas janelas da caixa de mensagens.  
@@ -20,11 +20,11 @@ Este exemplo demonstra como usar o moniker do serviço Windows Communication Fou
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   
- O serviço implementa um `ICalculator` contrato definido conforme mostrado no exemplo de código a seguir.  
+ O serviço implementa um contrato de `ICalculator` definido, conforme mostrado no exemplo de código a seguir.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -62,7 +62,7 @@ svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samp
 [assembly: ComVisible(true)]  
 ```  
   
- Depois de criar o projeto, registre os tipos visíveis com usando `regasm` , conforme mostrado no exemplo a seguir.  
+ Depois de criar o projeto, registre os tipos visíveis COM usando `regasm`, conforme mostrado no exemplo a seguir.  
   
 ```console  
 regasm.exe /tlb:CalcProxy.tlb client.dll  
@@ -70,14 +70,14 @@ regasm.exe /tlb:CalcProxy.tlb client.dll
   
  O assembly criado deve ser adicionado ao cache de assembly global. Embora não seja estritamente necessário, isso simplifica o processo de tempo de execução que localiza o assembly. O comando a seguir adiciona o assembly ao cache de assembly global.  
   
-```  
+```console  
 gacutil.exe /i client.dll  
 ```  
   
 > [!NOTE]
 > O moniker do serviço requer apenas o registro do tipo e não usa o proxy para se comunicar com o serviço.  
   
- O aplicativo cliente ComCalcClient. vbs usa `GetObject` a função para construir um proxy para o serviço, usando a sintaxe do moniker do serviço para especificar o endereço, a associação e o contrato para o serviço.  
+ O aplicativo cliente ComCalcClient. vbs usa a função `GetObject` para construir um proxy para o serviço, usando a sintaxe do moniker do serviço para especificar o endereço, a associação e o contrato para o serviço.  
   
 ```vbscript
 Set typedServiceMoniker = GetObject(  
@@ -91,7 +91,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
 - A associação que o cliente deve usar para se conectar com esse ponto de extremidade. Nesse caso, a wsHttpBinding definida pelo sistema é usada por meio de associações personalizadas que podem ser definidas em arquivos de configuração do cliente. Para uso com o Windows Script Host, a associação personalizada é definida em um arquivo cscript. exe. config no mesmo diretório que cscript. exe.  
   
-- O tipo de contrato com suporte no ponto de extremidade. Esse é o tipo que foi gerado e registrado acima. Como Visual Basic script não fornece um ambiente COM fortemente tipado, um identificador para o contrato deve ser especificado. Esse GUID é o `interfaceID` de CalcProxy. tlb, que pode ser exibido usando ferramentas com, como o Visualizador de objetos OLE/com (Oleview. exe). Para ambientes fortemente tipados, como o Office VBA ou o Visual Basic 6,0, adicionar uma referência explícita à biblioteca de tipos e, em seguida, declarar o tipo do objeto proxy pode ser usado no lugar do parâmetro Contract. Isso também fornece suporte ao IntelliSense durante o desenvolvimento de aplicativos cliente.  
+- O tipo de contrato com suporte no ponto de extremidade. Esse é o tipo que foi gerado e registrado acima. Como Visual Basic script não fornece um ambiente COM fortemente tipado, um identificador para o contrato deve ser especificado. Esse GUID é o `interfaceID` de CalcProxy. tlb, que pode ser exibido usando ferramentas COM, como o Visualizador de objetos OLE/COM (OleView. exe). Para ambientes fortemente tipados, como o Office VBA ou o Visual Basic 6,0, adicionar uma referência explícita à biblioteca de tipos e, em seguida, declarar o tipo do objeto proxy pode ser usado no lugar do parâmetro Contract. Isso também fornece suporte ao IntelliSense durante o desenvolvimento de aplicativos cliente.  
   
  Tendo construído a instância de proxy com o moniker do serviço, o aplicativo cliente pode chamar métodos no proxy, o que resulta na infraestrutura do moniker do serviço que chama as operações de serviço correspondentes.  
   
@@ -105,7 +105,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
 ## <a name="wsdl-contract"></a>Contrato WSDL  
  Para usar o moniker com um contrato WSDL, nenhum registro de biblioteca de cliente é necessário, mas o contrato WSDL para o serviço deve ser recuperado por meio de um mecanismo fora de banda, como usar um navegador para acessar o ponto de extremidade WSDL para o serviço. O moniker pode então acessar esse contrato no momento da execução.  
   
- O aplicativo cliente ComCalcClient. vbs usa o `FileSystemObject` para acessar o arquivo WSDL salvo localmente e, em seguida, `GetObject` usa a função para construir um proxy para o serviço.  
+ O aplicativo cliente ComCalcClient. vbs usa o `FileSystemObject` para acessar o arquivo WSDL salvo localmente e, em seguida, usa a função `GetObject` para construir um proxy para o serviço.  
   
 ```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
@@ -150,7 +150,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
 ## <a name="metadata-exchange-contract"></a>Contrato de troca de metadados  
  Para usar o moniker com um contrato MEX, como com o contrato WSDL, nenhum registro de cliente é necessário. O contrato para o serviço é recuperado no momento da execução por meio do uso interno da troca de metadados.  
   
- O aplicativo cliente ComCalcClient. vbs novamente usa a `GetObject` função para construir um proxy para o serviço.  
+ O aplicativo cliente ComCalcClient. vbs usa novamente a função `GetObject` para construir um proxy para o serviço.  
   
 ```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
@@ -191,13 +191,13 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 3. Em um Prompt de Comando do Desenvolvedor para o Visual Studio, abra a pasta \client\bin, na pasta específica do idioma.  
   
     > [!NOTE]
-    > Se você estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)]o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], o Windows 7 ou o Windows Server 2008 R2, certifique-se de executar o prompt de comando com privilégios de administrador.  
+    > Se você estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 ou Windows Server 2008 R2, certifique-se de executar o prompt de comando com privilégios de administrador.  
   
-4. `tlbexp.exe client.dll /out:CalcProxy.tlb` Digite para exportar a dll para um arquivo tlb. Um "aviso de exportador da biblioteca de tipos" é esperado, mas não é um problema porque o tipo genérico não é necessário.  
+4. Digite `tlbexp.exe client.dll /out:CalcProxy.tlb` para exportar a dll para um arquivo tlb. Um "aviso de exportador da biblioteca de tipos" é esperado, mas não é um problema porque o tipo genérico não é necessário.  
   
-5. `regasm.exe /tlb:CalcProxy.tlb client.dll` Digite para registrar os tipos com com. Um "aviso de exportador da biblioteca de tipos" é esperado, mas não é um problema porque o tipo genérico não é necessário.  
+5. Digite `regasm.exe /tlb:CalcProxy.tlb client.dll` para registrar os tipos com com. Um "aviso de exportador da biblioteca de tipos" é esperado, mas não é um problema porque o tipo genérico não é necessário.  
   
-6. `gacutil.exe /i client.dll` Digite para adicionar o assembly ao cache de assembly global.  
+6. Digite `gacutil.exe /i client.dll` para adicionar o assembly ao cache de assembly global.  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>Para executar o exemplo no mesmo computador  
   
@@ -221,13 +221,13 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 6. Copie a biblioteca Client. dll da pasta \client\bin, na pasta específica do idioma, para um diretório no computador cliente.  
   
-7. Em um prompt de comando, navegue até o diretório de destino no computador cliente. Se estiver [!INCLUDE[wv](../../../../includes/wv-md.md)] usando [!INCLUDE[lserver](../../../../includes/lserver-md.md)]o ou o, certifique-se de executar o prompt de comando como administrador.  
+7. Em um prompt de comando, navegue até o diretório de destino no computador cliente. Se estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)] ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], certifique-se de executar o prompt de comando como administrador.  
   
-8. `tlbexp.exe client.dll /out:CalcProxy.tlb` Digite para exportar a dll para um arquivo tlb. Um "aviso de exportador da biblioteca de tipos" é esperado, mas não é um problema porque o tipo genérico não é necessário.  
+8. Digite `tlbexp.exe client.dll /out:CalcProxy.tlb` para exportar a dll para um arquivo tlb. Um "aviso de exportador da biblioteca de tipos" é esperado, mas não é um problema porque o tipo genérico não é necessário.  
   
-9. `regasm.exe /tlb:CalcProxy.tlb client.dll` Digite para registrar os tipos com com. Verifique se o caminho foi definido para a pasta que contém `regasm.exe` antes de executar o comando.  
+9. Digite `regasm.exe /tlb:CalcProxy.tlb client.dll` para registrar os tipos com com. Verifique se o caminho foi definido para a pasta que contém `regasm.exe` antes de executar o comando.  
   
-10. `gacutil.exe /i client.dll` Digite para adicionar o assembly ao cache de assembly global. Verifique se o caminho foi definido para a pasta que contém `gacutil.exe` antes de executar o comando.  
+10. Digite `gacutil.exe /i client.dll` para adicionar o assembly ao cache de assembly global. Verifique se o caminho foi definido para a pasta que contém `gacutil.exe` antes de executar o comando.  
   
 11. Teste se você pode acessar o serviço do computador cliente usando um navegador.  
   

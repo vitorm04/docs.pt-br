@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -deterministic compiler option [C#]
 - deterministic compiler option [C#]
 - /deterministic compiler option [C#]
-ms.openlocfilehash: 2f0f9680668d67867d4bd7b60cb54d48ed7c4776
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ed5d1db4618649391f88affad67e62dd9fc95925
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73086904"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73455179"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -46,7 +46,7 @@ O compilador considera as seguintes entradas com a finalidade de determinismo:
   - Arquivos adicionais que podem ser usados por analisadores
 - A cultura atual (para o idioma no qual as mensagens de diagnóstico e exceção são produzidas).
 - A codificação padrão (ou a página de código atual) se a codificação não for especificada.
-- A existência, a inexistência e o conteúdo dos arquivos em caminhos de pesquisa do compilador (especificados, por exemplo, por `/lib` ou `/recurse`).
+- A existência, a inexistência e o conteúdo dos arquivos em caminhos de pesquisa do compilador (especificados, por exemplo, por `-lib` ou `-recurse`).
 - A plataforma CLR na qual o compilador é executado.
 - O valor de `%LIBPATH%`, que pode afetar o carregamento de dependência do analisador.
 

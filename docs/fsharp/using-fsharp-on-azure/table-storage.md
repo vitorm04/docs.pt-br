@@ -3,14 +3,14 @@ title: Introdução ao armazenamento de Tabelas do Azure usando F#
 description: Armazene dados estruturados na nuvem usando o armazenamento de tabelas do Azure ou Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 30ffd5f099dbb8efbf57104a2ade6c26304b7cee
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395203"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424601"
 ---
-# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e ao Azure Cosmos DB API de Tabela usando F @ no__t-0
+# <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e ao Azure Cosmos DB API de Tabela usando F\#
 
 O armazenamento de tabelas do Azure é um serviço que armazena dados NoSQL estruturados na nuvem. O armazenamento de tabela é um repositório de chave/atributo com um design sem esquema. Como o armazenamento de tabelas não tem Esquema, é fácil adaptar seus dados à medida que as necessidades de seu aplicativo evoluem. O acesso aos dados é rápido e econômico para todos os tipos de aplicativos. O armazenamento de tabela normalmente é significativamente menor em relação ao custo do que o SQL tradicional para volumes de dados semelhantes.
 
@@ -54,7 +54,7 @@ Se você estiver se conectando ao serviço tabela de armazenamento do Azure, pre
 
 ### <a name="get-your-azure-cosmos-db-connection-string"></a>Obter sua cadeia de conexão do Azure Cosmos DB
 
-Se estiver se conectando ao Azure Cosmos DB, você precisará da sua cadeia de conexão para este tutorial. Você pode copiar a cadeia de conexão do portal do Azure. Na portal do Azure, na sua conta do Cosmos DB, vá para **configurações** > **cadeia de conexão**e clique no botão **copiar** para copiar a cadeia de conexão primária. 
+Se estiver se conectando ao Azure Cosmos DB, você precisará da sua cadeia de conexão para este tutorial. Você pode copiar a cadeia de conexão do portal do Azure. Na portal do Azure, na sua conta do Cosmos DB, vá para **configurações** > **cadeia de conexão**e clique no botão **copiar** para copiar a cadeia de conexão primária.
 
 Para o tutorial, insira sua cadeia de conexão em seu script, como no exemplo a seguir:
 

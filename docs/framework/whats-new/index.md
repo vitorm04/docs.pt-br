@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 2f9d1c7835c95c904104a165a556b8d527343c30
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: be6f6b2d2213e96bc4e695ffbf7bc77f755ed492
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197779"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454990"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -185,13 +185,13 @@ Para habilitar o suporte para ajuste de Alto DPI no Modo Misto, você pode defin
 
 #### <a name="common-language-runtime"></a>Common Language Runtime
 
-O tempo de execução no .NET Framework 4.8 inclui as seguintes mudanças e melhorias:
+O runtime no .NET Framework 4.8 inclui as seguintes mudanças e melhorias:
 
 **Melhorias no compilador JIT**. O compilador JIT (Just-in-time) no .NET Framework 4.8 baseia-se no compilador JIT do .NET Core 2.1. Muitas das otimizações e todas as correções de bugs feitas no compilador JIT do .NET Core 2.1 estão inclusas no compilador JIT do .NET Framework 4.8.
 
-**Aprimoramentos do NGEN**. O tempo de execução melhorou o gerenciamento de memória para imagens NGEN ([Gerador de Imagem Nativa](../tools/ngen-exe-native-image-generator.md)) para que os dados mapeados das imagens NGEN não residam na memória. Isso reduz a área de superfície disponível para ataques que tentam executar código arbitrário modificando a memória a ser executada.
+**Aprimoramentos do NGEN**. O runtime melhorou o gerenciamento de memória para imagens NGEN ([Gerador de Imagem Nativa](../tools/ngen-exe-native-image-generator.md)) para que os dados mapeados das imagens NGEN não residam na memória. Isso reduz a área de superfície disponível para ataques que tentam executar código arbitrário modificando a memória a ser executada.
 
-**Verificação antimalware em todos os assemblies**. Em versões anteriores do .NET Framework, o tempo de execução examina todos os assemblies carregados do disco usando o Windows Defender ou software antimalware de terceiros. No entanto, os assemblies carregados de outras fontes, como pelo método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, não são examinados e podem conter malware não detectado. A partir do .NET Framework 4.8 em execução no Windows 10, o tempo de execução dispara uma verificação por soluções antimalware que implementam a [AMSI (Interface de Verificação Antimalware)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
+**Verificação antimalware em todos os assemblies**. Em versões anteriores do .NET Framework, o runtime examina todos os assemblies carregados do disco usando o Windows Defender ou software antimalware de terceiros. No entanto, os assemblies carregados de outras fontes, como pelo método <xref:System.Reflection.Assembly.Load(System.Byte[])?displayProperty=nameWithType>, não são examinados e podem conter malware não detectado. A partir do .NET Framework 4.8 em execução no Windows 10, o runtime dispara uma verificação por soluções antimalware que implementam a [AMSI (Interface de Verificação Antimalware)](/windows/desktop/AMSI/antimalware-scan-interface-portal).
 
 <a name="v472" />
 
@@ -543,7 +543,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-Esse evento é gerado sempre que o tempo de execução resolve uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Os argumentos de <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrevem a resolução e indicam o objeto e a propriedade que hospedam a referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md) e a <xref:Windows.UI.Xaml.ResourceDictionary> e a chave usada para a resolução:
+Esse evento é gerado sempre que o runtime resolve uma referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Os argumentos de <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> descrevem a resolução e indicam o objeto e a propriedade que hospedam a referência [StaticResource](../wpf/advanced/staticresource-markup-extension.md) e a <xref:Windows.UI.Xaml.ResourceDictionary> e a chave usada para a resolução:
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -610,15 +610,15 @@ Para criar um construtor de configuração personalizado, derive seu construtor 
 
 **Detecção de recurso de tempo de execução**
 
-A classe <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> fornece um mecanismo para determinar se há suporte para um recurso predefinido em determinada implementação .NET no tempo de compilação ou no tempo de execução. No tempo de compilação, um compilador pode verificar se um campo especificado existe para determinar se há suporte para o recurso; se houver, ele pode emitir um código que aproveita tal recurso. No tempo de execução, um aplicativo pode chamar o método <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> antes de emitir o código no tempo de execução. Para obter mais informações, consulte [Adicionar método auxiliar para descrever os recursos com suporte no tempo de execução](https://github.com/dotnet/corefx/issues/17116).
+A classe <xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> fornece um mecanismo para determinar se há suporte para um recurso predefinido em determinada implementação .NET no tempo de compilação ou no tempo de execução. No tempo de compilação, um compilador pode verificar se um campo especificado existe para determinar se há suporte para o recurso; se houver, ele pode emitir um código que aproveita tal recurso. No runtime, um aplicativo pode chamar o método <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> antes de emitir o código no runtime. Para obter mais informações, consulte [Adicionar método auxiliar para descrever os recursos com suporte no runtime](https://github.com/dotnet/corefx/issues/17116).
 
 **Tipos de tupla de valor são serializáveis**
 
-A partir do .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> e seus tipos genéricos associados são marcados como [Serializable](xref:System.SerializableAttribute), o que permite a serialização binária. Isso deve facilitar bastante a migração de tipos de Tupla, como <xref:System.Tuple%603> e <xref:System.Tuple%604>, em tipos de tupla de valor. Para obter mais informações, consulte “Compilador -- ValueTuple é serializável” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
+A partir do .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> e seus tipos genéricos associados são marcados como [Serializable](xref:System.SerializableAttribute), o que permite a serialização binária. Isso deve facilitar bastante a migração de tipos de Tupla, como <xref:System.Tuple%603> e <xref:System.Tuple%604>, em tipos de tupla de valor. Para obter mais informações, consulte “Compilador -- ValueTuple é serializável” na postagem de blog [Runtime e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
 
 **Suporte para referências somente leitura**
 
-O .NET Framework 4.7.1 adiciona o <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Este atributo é usado por compiladores de linguagem para marcar membros que têm parâmetros ou tipos de retorno somente leitura de referência. Para obter mais informações, consulte “Compilador -- Suporte a ReadOnlyReferences” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/). Para saber mais sobre valores retornados de referência, consulte [Valores retornados de referência e locais de referência (Guia de C#)](../../csharp/programming-guide/classes-and-structs/ref-returns.md) e [Valores retornados de referência (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
+O .NET Framework 4.7.1 adiciona o <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Este atributo é usado por compiladores de linguagem para marcar membros que têm parâmetros ou tipos de retorno somente leitura de referência. Para obter mais informações, consulte “Compilador -- Suporte a ReadOnlyReferences” na postagem de blog [Runtime e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/). Para saber mais sobre valores retornados de referência, consulte [Valores retornados de referência e locais de referência (Guia de C#)](../../csharp/programming-guide/classes-and-structs/ref-returns.md) e [Valores retornados de referência (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
 
 <a name="clr" />
 
@@ -626,7 +626,7 @@ O .NET Framework 4.7.1 adiciona o <xref:System.Runtime.CompilerServices.IsReadOn
 
 **Melhorias de desempenho de coleta de lixo**
 
-As alterações na GC (coleta de lixo) no .NET Framework 4.7.1 melhoram o desempenho geral, especialmente para alocações de LOH (Heap de Objeto Grande). No .NET Framework 4.7.1, bloqueios separados são usados para alocações de SOH (Heap de Objeto Pequeno) e LOH, permitindo que alocações de LOH ocorram quando a BGC (coleta de lixo em segundo plano) está limpando o SOH. Como resultado, os aplicativos que compõem um grande número de alocações de LOH devem observar uma redução na contenção de bloqueio de alocação e melhoria no desempenho. Para obter mais informações, consulte a seção “Tempo de execução -- Melhorias de desempenho do GC” na postagem de blog [Tempo de execução e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
+As alterações na GC (coleta de lixo) no .NET Framework 4.7.1 melhoram o desempenho geral, especialmente para alocações de LOH (Heap de Objeto Grande). No .NET Framework 4.7.1, bloqueios separados são usados para alocações de SOH (Heap de Objeto Pequeno) e LOH, permitindo que alocações de LOH ocorram quando a BGC (coleta de lixo em segundo plano) está limpando o SOH. Como resultado, os aplicativos que compõem um grande número de alocações de LOH devem observar uma redução na contenção de bloqueio de alocação e melhoria no desempenho. Para obter mais informações, consulte a seção “Runtime -- Melhorias de desempenho do GC” na postagem de blog [Runtime e recursos do compilador do .NET Framework 4.7.1](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/).
 
 <a name="net471"/>
 
@@ -1264,7 +1264,7 @@ Para saber mais sobre o .NET Framework 4.6.1, consulte os seguintes tópicos:
 
 - [Lista de alterações do .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
 
-- [Compatibilidade de aplicativos na versão 4.6.1](../migration-guide/application-compatibility-in-the-net-framework-4-6-1.md)
+- [Compatibilidade de aplicativos na versão 4.6.1](../migration-guide/application-compatibility.md)
 
 - [Comparação da API do .NET Framework](https://go.microsoft.com/fwlink/?LinkId=622989) (no GitHub)
 
@@ -1691,7 +1691,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
   O valor padrão é 60 segundos. Se `value` estiver definido como 0, as solicitações de fora de ordem serão imediatamente rejeitadas com uma falha e o seguinte texto:
 
-  ```
+  ```console
   Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees.
   ```
 
@@ -1844,11 +1844,11 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
 - [Atualização 2 do Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=393658) inclui atualizações para modelos de Biblioteca de Classes Portátil para suporte destes cenários:
 
-  - É possível usar as APIs do Tempo de Execução do Windows em bibliotecas portáteis que tenham como destino Windows 8.1, Windows Phone 8.1 e Windows Phone Silverlight 8.1.
+  - É possível usar as APIs do Windows Runtime em bibliotecas portáteis que tenham como destino Windows 8.1, Windows Phone 8.1 e Windows Phone Silverlight 8.1.
 
   - Você pode incluir XAML (Windows.UI.XAML types) em bibliotecas portáteis quando o destino for Windows 8.1 ou Windows Phone 8.1. Os seguintes modelos XAML são compatíveis: Blank Page, Resource Dictionary, Templated Control e User Control.
 
-  - Você pode criar um componente de Tempo de Execução do Windows portátil (.winmd file) para uso em Store apps cujo destino seja Windows 8.1 e Windows Phone 8.1.
+  - Você pode criar um componente do Windows Runtime portátil (.winmd file) para uso em Store apps cujo destino seja Windows 8.1 e Windows Phone 8.1.
 
   - É possível redirecionar uma biblioteca de classes Windows Store ou Windows Phone Store novamente como uma Biblioteca de Classes Portátil.
 
@@ -1892,7 +1892,7 @@ Entre os aperfeiçoamentos durante a depuração de seus aplicativos do .NET Fra
 
 - Depuração async-aware. Para facilitar a depuração de aplicativos assíncronos no Visual Studio 2013, a pilha de chamadas oculta o código de infraestrutura fornecido por compiladores para dar suporte à programação assíncrona e também as cadeias em quadros pai lógicos para que você possa acompanhar a execução lógica do programa com mais clareza. Uma janela Tarefas substitui a janela Tarefas Paralelas e exibe tarefas relacionadas a um ponto de interrupção específico e também exibe outras tarefas que estão ativas ou agendadas no aplicativo. Leia sobre esse recurso na seção "Depuração async-aware" do [Comunicado do .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
-- Melhor suporte à exceção para componentes do Tempo de Execução do Windows. No [!INCLUDE[win81](../../../includes/win81-md.md)], as exceções surgidas de aplicativos da Windows Store preservam as informações sobre o erro que causou a exceção, mesmo entre os limites de linguagem. Leia sobre esse recurso na seção "Desenvolvimento de aplicativos para a Windows Store" do [Comunicado do .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
+- Melhor suporte à exceção para componentes do Windows Runtime. No [!INCLUDE[win81](../../../includes/win81-md.md)], as exceções surgidas de aplicativos da Windows Store preservam as informações sobre o erro que causou a exceção, mesmo entre os limites de linguagem. Leia sobre esse recurso na seção "Desenvolvimento de aplicativos para a Windows Store" do [Comunicado do .NET Framework 4.5.1](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/).
 
 A partir do Visual Studio 2013, você pode usar a [Ferramenta de Otimização Orientada de Perfil Gerenciado (Mpgo.exe)](../tools/mpgo-exe-managed-profile-guided-optimization-tool.md) para otimizar aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], bem como aplicativos da área de trabalho.
 

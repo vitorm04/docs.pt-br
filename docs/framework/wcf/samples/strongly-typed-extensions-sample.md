@@ -2,22 +2,22 @@
 title: Exemplo de extensões fortemente tipadas
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 1fd873e02dcc1fc824c8b17c52231c80c61e7c60
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 5ee2f13df9d3c0841b3e8b62b1633ea4520d3860
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045478"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421518"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Exemplo de extensões fortemente tipadas
-O exemplo usa a <xref:System.ServiceModel.Syndication.SyndicationFeed> classe para os fins do exemplo. No entanto, os padrões demonstrados neste exemplo podem ser usados com todas as classes de distribuição que dão suporte a dados de extensão.  
+O exemplo usa a classe <xref:System.ServiceModel.Syndication.SyndicationFeed> para os fins do exemplo. No entanto, os padrões demonstrados neste exemplo podem ser usados com todas as classes de distribuição que dão suporte a dados de extensão.  
   
- O modelo de objeto de<xref:System.ServiceModel.Syndication.SyndicationFeed>distribuição <xref:System.ServiceModel.Syndication.SyndicationItem>(,, e classes relacionadas) dá suporte ao acesso de tipo inflexível para dados <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> de <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> extensão usando as propriedades e. Este exemplo mostra como fornecer acesso fortemente tipado a dados de extensão implementando classes derivadas personalizadas do <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> disponibilizando determinadas extensões específicas do aplicativo como propriedades fortemente tipadas.  
+ O modelo de objeto de distribuição (<xref:System.ServiceModel.Syndication.SyndicationFeed>, <xref:System.ServiceModel.Syndication.SyndicationItem>e classes relacionadas) dá suporte ao acesso de tipo inflexível para dados de extensão usando as propriedades <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>. Este exemplo mostra como fornecer acesso fortemente tipado a dados de extensão implementando classes derivadas personalizadas de <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem> que disponibilizam determinadas extensões específicas do aplicativo como propriedades fortemente tipadas.  
   
  Por exemplo, este exemplo mostra como implementar um elemento de extensão definido na RFC de extensões de Threading Atom propostas. Isso é apenas para fins de demonstração e este exemplo não se destina a ser uma implementação completa da especificação proposta.  
   
 ## <a name="sample-xml"></a>XML de exemplo  
- O exemplo de XML a seguir mostra uma entrada Atom 1,0 com `<in-reply-to>` um elemento de extensão adicional.  
+ O exemplo de XML a seguir mostra uma entrada Atom 1,0 com um elemento de extensão de `<in-reply-to>` adicional.  
   
 ```xml  
 <entry>  
@@ -40,12 +40,12 @@ O exemplo usa a <xref:System.ServiceModel.Syndication.SyndicationFeed> classe pa
 </entry>  
 ```  
   
- O `<in-reply-to>` elemento especifica três atributos necessários (`ref`e `type` `href`), enquanto também permite a presença de atributos de extensão adicionais e elementos de extensão.  
+ O elemento `<in-reply-to>` especifica três atributos necessários (`ref`, `type` e `href`), enquanto também permite a presença de atributos de extensão adicionais e elementos de extensão.  
   
 ## <a name="modeling-the-in-reply-to-element"></a>Modelando o elemento in-reply-to  
- Neste exemplo, o `<in-reply-to>` elemento é modelado como CLR que implementa <xref:System.Xml.Serialization.IXmlSerializable>, que permite seu uso com o. <xref:System.Runtime.Serialization.DataContractSerializer> Ele também implementa alguns métodos e propriedades para acessar os dados do elemento, conforme mostrado no código de exemplo a seguir.  
+ Neste exemplo, o elemento `<in-reply-to>` é modelado como CLR que implementa <xref:System.Xml.Serialization.IXmlSerializable>, que permite seu uso com o <xref:System.Runtime.Serialization.DataContractSerializer>. Ele também implementa alguns métodos e propriedades para acessar os dados do elemento, conforme mostrado no código de exemplo a seguir.  
   
-```  
+```csharp  
 [XmlRoot(ElementName = "in-reply-to", Namespace = "http://contoso.org/syndication/thread/1.0")]  
 public class InReplyToElement : IXmlSerializable  
 {  
@@ -86,11 +86,11 @@ public class InReplyToElement : IXmlSerializable
 }  
 ```  
   
- A `InReplyToElement` classe implementa propriedades para o atributo necessário (`HRef`, `MediaType`, e `Source`), bem como coleções para manter <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>.  
+ A classe `InReplyToElement` implementa propriedades para o atributo necessário (`HRef`, `MediaType`e `Source`), bem como coleções para manter <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>.  
   
- A `InReplyToElement` classe implementa a <xref:System.Xml.Serialization.IXmlSerializable> interface, que permite o controle direto sobre como as instâncias de objeto são lidas e gravadas em XML. O `ReadXml` método primeiro lê os valores para as `Ref` `MediaType` propriedades `HRef`, `Source`, e do <xref:System.Xml.XmlReader> passado para ele. Todos os atributos desconhecidos são <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> armazenados na coleção. Quando todos os atributos foram lidos, <xref:System.Xml.XmlReader.ReadStartElement> é chamado para avançar o leitor para o próximo elemento. Como o elemento modelado por essa classe não tem filhos necessários, os elementos filho são armazenados em `XElement` buffer em instâncias e armazenadas <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> na coleção, conforme mostrado no código a seguir.  
+ A classe `InReplyToElement` implementa a interface <xref:System.Xml.Serialization.IXmlSerializable>, que permite o controle direto sobre como as instâncias de objeto são lidas e gravadas em XML. O método `ReadXml` primeiro lê os valores para as propriedades `Ref`, `HRef`, `Source`e `MediaType` do <xref:System.Xml.XmlReader> passado para ele. Todos os atributos desconhecidos são armazenados na coleção de <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A>. Quando todos os atributos tiverem sido lidos, <xref:System.Xml.XmlReader.ReadStartElement> será chamado para avançar o leitor para o próximo elemento. Como o elemento modelado por essa classe não tem filhos obrigatórios, os elementos filho são armazenados em buffer em instâncias de `XElement` e armazenadas na coleção de <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A>, conforme mostrado no código a seguir.  
   
-```  
+```csharp  
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -144,9 +144,9 @@ public void ReadXml(System.Xml.XmlReader reader)
 }  
 ```  
   
- No `WriteXml`, o `InReplyToElement` método primeiro escreve os `Ref` `HRef` `MediaType` `WriteXml` valores das propriedades,, e como atributos XML (não é responsável por gravar o elemento externo real `Source` em si, como feito pelo chamador de `WriteXml`). Ele também grava o conteúdo do <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> para o gravador, conforme mostrado no código a seguir.  
+ Em `WriteXml`, o método `InReplyToElement` primeiro escreve os valores das propriedades `Ref`, `HRef`, `Source`e `MediaType` como atributos XML (`WriteXml` não é responsável por gravar o próprio elemento externo propriamente dito , como isso é feito pelo chamador de `WriteXml`). Ele também grava o conteúdo do <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> ao gravador, conforme mostrado no código a seguir.  
   
-```  
+```csharp  
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
@@ -185,11 +185,11 @@ public void WriteXml(System.Xml.XmlWriter writer)
 ```  
   
 ## <a name="threadedfeed-and-threadeditem"></a>ThreadedFeed e ThreadedItem  
- No exemplo, `SyndicationItems` com `InReplyTo` extensões `ThreadedItem` são modeladas pela classe. Da mesma forma `ThreadedFeed` , a classe `SyndicationFeed` é uma cujos itens são todas `ThreadedItem`as instâncias de.  
+ No exemplo, `SyndicationItems` com extensões `InReplyTo` são modeladas pela classe `ThreadedItem`. Da mesma forma, a classe `ThreadedFeed` é uma `SyndicationFeed` cujos itens são todas as instâncias de `ThreadedItem`.  
   
- A `ThreadedFeed` classe é herdada de `OnCreateItem` `SyndicationFeed` e substitui para `ThreadedItem`retornar um. Ele também implementa um método para acessar a `Items` coleção como `ThreadedItems`, conforme mostrado no código a seguir.  
+ A classe `ThreadedFeed` herda de `SyndicationFeed` e substitui `OnCreateItem` para retornar um `ThreadedItem`. Ele também implementa um método para acessar a coleção de `Items` como `ThreadedItems`, conforme mostrado no código a seguir.  
   
-```  
+```csharp  
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -211,9 +211,9 @@ public class ThreadedFeed : SyndicationFeed
 }  
 ```  
   
- A classe `ThreadedItem` é herdada de `InReplyToElement` `SyndicationItem` e faz como uma propriedade fortemente tipada. Isso fornece acesso de programação conveniente aos dados `InReplyTo` de extensão. Ele também implementa `TryParseElement` e `WriteElementExtensions` para ler e gravar seus dados de extensão, conforme mostrado no código a seguir.  
+ A classe `ThreadedItem` herda de `SyndicationItem` e faz `InReplyToElement` como uma propriedade fortemente tipada. Isso fornece acesso de programação conveniente aos dados de extensão de `InReplyTo`. Ele também implementa `TryParseElement` e `WriteElementExtensions` para ler e gravar seus dados de extensão, conforme mostrado no código a seguir.  
   
-```  
+```csharp  
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  
@@ -283,6 +283,6 @@ public class ThreadedItem : SyndicationItem
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

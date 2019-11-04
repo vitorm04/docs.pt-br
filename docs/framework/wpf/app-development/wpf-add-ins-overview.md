@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: e1daf9efd59b89d5d5be5f51cf9ac5e00750dda3
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919735"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421093"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 
@@ -171,21 +171,21 @@ Os suplementos geralmente fornecem várias interfaces de usuário para que os ap
 
 ## <a name="add-ins-and-xaml-browser-applications"></a>Suplementos e aplicativos de navegação XAML
 
-Nos exemplos até agora, o aplicativo host tem sido um aplicativo autônomo instalado. Mas [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] também podem hospedar suplementos, embora com os seguintes requisitos adicionais de build e implementação:
+Nos exemplos até agora, o aplicativo host tem sido um aplicativo autônomo instalado. Mas os aplicativos de navegador XAML (XBAPs) também podem hospedar suplementos, embora com os seguintes requisitos adicionais de compilação e implementação:
 
-- O manifesto do aplicativo [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve ser configurado especialmente para baixar o pipeline (pastas e assemblies) e o assembly do suplemento para o cache de aplicativo do ClickOnce no computador cliente, na mesma pasta que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)].
+- O manifesto do aplicativo XBAP deve ser configurado especialmente para baixar o pipeline (pastas e assemblies) e o assembly do suplemento para o cache de aplicativo do ClickOnce no computador cliente, na mesma pasta que o XBAP.
 
-- O código de [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] para descobrir e carregar os suplementos deve usar o cache de aplicativo do ClickOnce para o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] como o pipeline e o local do suplemento.
+- O código XBAP para descobrir e carregar os suplementos deve usar o cache de aplicativo ClickOnce para o XBAP como o pipeline e o local do suplemento.
 
-- O [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deverá carregar o suplemento em um contexto de segurança especial se o suplemento fizer referência a arquivos flexíveis localizados no site de origem; quando hospedados por [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)], suplementos poderão referenciar apenas arquivos flexíveis localizados no site de origem do aplicativo host.
+- O XBAP deve carregar o suplemento em um contexto de segurança especial se o suplemento referenciar arquivos soltos que estão localizados no site de origem; Quando hospedado por XBAPs, os suplementos só podem fazer referência a arquivos soltos que estão localizados no site de origem do aplicativo host.
 
 Essas tarefas são descritas detalhadamente nas subseções a seguir.
 
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>Configurar o pipeline e o suplemento para a implantação do ClickOnce
 
-[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] são baixados e executados em uma pasta segura no cache de implantação do ClickOnce. Para que um [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] hospede um suplemento, o assembly do suplemento e do pipeline também devem ser baixados para a pasta segura. Para fazer isso, você precisa configurar o manifesto do aplicativo para incluir ambos o assembly do suplemento e do pipeline para baixar. Isso é feito com mais facilidade no Visual Studio, embora o pipeline e o assembly do suplemento precisem estar na pasta raiz do projeto [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] do host para que o Visual Studio detecte os assemblies de pipeline.
+XBAPs são baixados e executados em uma pasta segura no cache de implantação do ClickOnce. Para que um XBAP hospede um suplemento, o pipeline e o assembly do suplemento também devem ser baixados para a pasta segura. Para fazer isso, você precisa configurar o manifesto do aplicativo para incluir ambos o assembly do suplemento e do pipeline para baixar. Isso é feito com mais facilidade no Visual Studio, embora o pipeline e o assembly do suplemento precisem estar na pasta raiz do projeto XBAP do host para que o Visual Studio detecte os assemblies de pipeline.
 
-Consequentemente, a primeira etapa é compilar o assembly do suplemento e do pipeline para a raiz do projeto do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], definindo a saída de build de cada projeto de assembly do pipeline e do suplemento. A tabela a seguir mostra os caminhos de saída de build para projetos de assembly do pipeline e projetos de assembly do suplemento que estão na mesma solução e pasta raiz que o projeto do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] host.
+Consequentemente, a primeira etapa é criar o pipeline e o assembly do suplemento para a raiz do projeto XBAP definindo a saída de Build de cada assembly de pipeline e projetos de assembly de suplementos. A tabela a seguir mostra os caminhos de saída de compilação para projetos de assembly de pipeline e projeto de assembly de suplemento que estão na mesma solução e pasta raiz que o projeto XBAP de host.
 
 Tabela 1: caminhos de saída de build para os assemblies do pipeline hospedados por um XBAP
 
@@ -197,21 +197,21 @@ Tabela 1: caminhos de saída de build para os assemblies do pipeline hospedados 
 |Adaptador no lado do host|`..\HostXBAP\HostSideAdapters\`|
 |Suplemento|`..\HostXBAP\AddIns\WPFAddIn1`|
 
-A próxima etapa é especificar os assemblies de pipeline e o assembly de suplemento como os arquivos de conteúdo de [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] no Visual Studio fazendo o seguinte:
+A próxima etapa é especificar os assemblies de pipeline e o assembly de suplemento como os arquivos de conteúdo XBAPs no Visual Studio fazendo o seguinte:
 
 1. Incluindo o assembly do pipeline e do suplemento no projeto clicando com o botão direito do mouse em cada pasta de pipeline no Gerenciador de Soluções e escolhendo **Incluir no Projeto**.
 
 2. Definindo a **Ação de Build** de cada assembly do pipeline e assembly do suplemento para **Conteúdo** da janela **Propriedades**.
 
-A etapa final é configurar o manifesto do aplicativo para incluir os arquivos do assembly do pipeline e o arquivo do assembly do suplemento para download. Os arquivos devem estar localizados em pastas na raiz da pasta no cache do ClickOnce que o aplicativo [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] ocupa. A configuração pode ser obtida no Visual Studio fazendo o seguinte:
+A etapa final é configurar o manifesto do aplicativo para incluir os arquivos do assembly do pipeline e o arquivo do assembly do suplemento para download. Os arquivos devem estar localizados em pastas na raiz da pasta no cache do ClickOnce que o aplicativo XBAP ocupa. A configuração pode ser obtida no Visual Studio fazendo o seguinte:
 
-1. Clique com o botão direito do mouse no projeto do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], clique em **Propriedades**, clique em **Publicar** e, em seguida, clique no botão **Arquivos de Aplicativo**.
+1. Clique com o botão direito do mouse no projeto XBAP, clique em **Propriedades**, clique em **publicar**e, em seguida, clique no botão **arquivos de aplicativo** .
 
 2. Na caixa de diálogo **Arquivos de Aplicativo**, defina o **Status da Publicação** de cada DLL de suplemento e de pipeline a **Incluir (Auto)** e defina o **Grupo de Download** para cada DLL de pipeline e de suplemento para **(Obrigatório)** .
 
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>Usando o pipeline e o suplemento da base de aplicativo
 
-Quando o pipeline e o suplemento são configurados para implantação do ClickOnce, eles são baixados para a mesma pasta de cache do ClickOnce que o [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]. Para usar o pipeline e o suplemento por meio do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)], o código do [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] deve obtê-los da base de aplicativo. Os vários tipos e membros do modelo de suplemento .NET Framework para usar pipelines e suplementos fornecem suporte especial para esse cenário. Em primeiro lugar, o caminho é identificado pelo valor de enumeração <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>. Você pode usar esse valor com sobrecargas de membros de suplemento pertinentes para usar pipelines que incluem o seguinte:
+Quando o pipeline e o suplemento são configurados para implantação do ClickOnce, eles são baixados para a mesma pasta de cache do ClickOnce que o XBAP. Para usar o pipeline e o suplemento do XBAP, o código XBAP deve obtê-los na base do aplicativo. Os vários tipos e membros do modelo de suplemento .NET Framework para usar pipelines e suplementos fornecem suporte especial para esse cenário. Em primeiro lugar, o caminho é identificado pelo valor de enumeração <xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>. Você pode usar esse valor com sobrecargas de membros de suplemento pertinentes para usar pipelines que incluem o seguinte:
 
 - <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>
 

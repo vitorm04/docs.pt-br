@@ -5,12 +5,12 @@ author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
 ms.custom: seodec18
-ms.openlocfilehash: 9e40de3d95738a8af394690575010339e7faad19
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7b6265cb652e6f3db702584295fac948d06ad5fc
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925938"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73420836"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>Confira estes tutoriais para conhecer o .NET Core e as ferramentas do SDK do .NET Core
 
@@ -25,7 +25,7 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Building a class library with Visual Basic](vb-library-with-visual-studio.md) (Criando uma biblioteca de classes com o Visual Basic)
 - [Testing a class library](testing-library-with-visual-studio.md) (Testando uma biblioteca de classes)
 - [Consuming a class library](consuming-library-with-visual-studio.md) (Consumindo uma biblioteca de classes)
-- [Azure Cosmos DB: Introdução à API do SQL e ao .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB: introdução à API do SQL e ao .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Criando aplicativos Web com o Visual Studio Code
 
@@ -49,6 +49,6 @@ Os tutoriais a seguir estão disponíveis para aprender mais sobre o .NET Core.
 - [Teste de unidade com o MSTest e .NET Core](../testing/unit-testing-with-mstest.md)
 - [Desenvolvendo Bibliotecas com as Ferramentas de Plataforma Cruzada](libraries.md)
 - [Hospedando o .NET Core com base no código nativo](netcore-hosting.md)
-- [Create a custom template for dotnet new](create-custom-template.md) (Criar um modelo personalizado para dotnet new)
+- [Create a custom template for dotnet new](cli-templates-create-item-template.md) (Criar um modelo personalizado para dotnet new)
 
 Para ver tutoriais sobre como desenvolver aplicativos Web do ASP.NET Core, consulte a [documentação do ASP.NET Core](/aspnet/core/).

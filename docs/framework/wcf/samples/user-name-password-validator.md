@@ -2,12 +2,12 @@
 title: Validador de senha e nome de usuário
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 4db661e80663b7b5b22a17d244f0204717fef652
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 553ccd69a02e057c5131128378611a19502e713d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044557"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424157"
 ---
 # <a name="user-name-password-validator"></a>Validador de senha e nome de usuário
 Este exemplo demonstra como implementar um validador UserNamePassword personalizado. Isso é útil em casos em que nenhum dos modos de validação internos do UserNamePassword é apropriado para os requisitos do aplicativo; por exemplo, quando os pares de nome de usuário/senha são armazenados em algum repositório externo, como um banco de dados. Este exemplo mostra um serviço que tem um validador personalizado que verifica dois pares de nome de usuário/senha específicos. O cliente usa um par de nome de usuário/senha para se autenticar no serviço.
@@ -17,7 +17,7 @@ Este exemplo demonstra como implementar um validador UserNamePassword personaliz
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
@@ -32,7 +32,7 @@ Este exemplo demonstra como implementar um validador UserNamePassword personaliz
 
 - O servidor é autenticado usando o certificado X. 509 do servidor.
 
- O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração, app. config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com `wsHttpBinding` um padrão que usa o WS-Security e a autenticação de nome de usuário. O comportamento do serviço especifica `Custom` o modo para validar pares de nome de usuário/senha do cliente junto com o tipo da classe do validador. O comportamento também especifica o certificado do servidor usando `serviceCertificate` o elemento. O certificado do servidor deve conter o mesmo valor para o `SubjectName` `findValue` como no [ \<> de certificados](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
+ O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando o arquivo de configuração, app. config. O ponto de extremidade consiste em um endereço, uma associação e um contrato. A associação é configurada com um padrão `wsHttpBinding` que usa o WS-Security e a autenticação de nome de usuário. O comportamento do serviço especifica o modo de `Custom` para validar pares de nome de usuário/senha do cliente junto com o tipo da classe do validador. O comportamento também especifica o certificado do servidor usando o elemento `serviceCertificate`. O certificado do servidor deve conter o mesmo valor para o `SubjectName` como o `findValue` no [> do\<de certificados](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md).
 
 ```xml
 <system.serviceModel>
@@ -88,7 +88,7 @@ Este exemplo demonstra como implementar um validador UserNamePassword personaliz
 </system.serviceModel>
 ```
 
- A configuração de ponto de extremidade do cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurada com o modo `clientCredentialType`e a mensagem apropriados.
+ A configuração de ponto de extremidade do cliente consiste em um nome de configuração, um endereço absoluto para o ponto de extremidade de serviço, a associação e o contrato. A associação de cliente é configurada com o modo e a mensagem `clientCredentialType`apropriados.
 
 ```xml
 <system.serviceModel>
@@ -139,7 +139,7 @@ address="http://localhost:8001/servicemodelsamples/service/username"
 
  A implementação do cliente solicita que o usuário insira um nome de usuário e uma senha.
 
-```
+```csharp
 // Get the username and password
 Console.WriteLine("Username authentication required.");
 Console.WriteLine("Provide a username.");
@@ -197,9 +197,9 @@ try
 }
 ```
 
- Este exemplo usa um UserNamePasswordValidator personalizado para validar os pares de nome de usuário/senha. O exemplo implementa `CustomUserNamePasswordValidator`, derivado de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>. Consulte a documentação para <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> obter mais informações. Este exemplo de validador personalizado específico `Validate` implementa o método para aceitar dois pares de nome de usuário/senha específicos, conforme mostrado no código a seguir.
+ Este exemplo usa um UserNamePasswordValidator personalizado para validar os pares de nome de usuário/senha. O exemplo implementa `CustomUserNamePasswordValidator`, derivado de <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>. Consulte a documentação para obter <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> para obter mais informações. Este exemplo de validador personalizado específico implementa o método `Validate` para aceitar dois pares de nome de usuário/senha específicos, conforme mostrado no código a seguir.
 
-```
+```csharp
 public class CustomUserNameValidator : UserNamePasswordValidator
 {
  // This method validates users. It allows in two users,
@@ -224,7 +224,7 @@ public class CustomUserNameValidator : UserNamePasswordValidator
 
  Depois que o validador for implementado no código de serviço, o host de serviço deverá ser informado sobre a instância do validador a ser usada. Isso é feito usando o código a seguir.
 
-```
+```csharp
 serviceHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator = new CustomUserNamePasswordValidator();
 ```
@@ -258,7 +258,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
      As linhas a seguir do arquivo em lotes setup. bat criam o certificado do servidor a ser usado. A variável% SERVER_NAME% especifica o nome do servidor. Altere essa variável para especificar seu próprio nome de servidor. O valor padrão é localhost.
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -272,7 +272,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
      As linhas a seguir no arquivo em lotes setup. bat copiam o certificado do servidor no repositório de pessoas confiáveis do cliente. Essa etapa é necessária porque os certificados gerados pelo MakeCert. exe não são implicitamente confiáveis pelo sistema cliente. Se você já tiver um certificado com raiz em um certificado raiz confiável do cliente — por exemplo, um certificado emitido pela Microsoft — esta etapa de popular o repositório de certificados do cliente com o certificado do servidor não será necessária.
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
@@ -291,7 +291,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 2. Inicie o Service. exe em service\bin.  
   
-3. Inicie o Client.exe no \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
+3. Inicie o Client. exe em \client\bin. A atividade do cliente é exibida no aplicativo de console do cliente.  
   
 4. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   

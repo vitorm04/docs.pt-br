@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], indefinite number of argument values
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
-ms.openlocfilehash: 5a2813b81490e7c2fcf1abcf5fd36ca89d9d7929
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 285a5f10e2394fcb001a652fad66e8128b9fbc1a
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933854"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424611"
 ---
 # <a name="parameter-arrays-visual-basic"></a>Matrizes de parâmetros (Visual Basic)
 Normalmente, você não pode chamar um procedimento com mais argumentos do que a declaração de procedimento especifica. Quando você precisar de um número indefinido de argumentos, poderá declarar uma *matriz de parâmetros*, que permite que um procedimento aceite uma matriz de valores para um parâmetro. Você não precisa saber o número de elementos na matriz de parâmetros ao definir o procedimento. O tamanho da matriz é determinado individualmente por cada chamada para o procedimento.  
@@ -34,19 +34,19 @@ Normalmente, você não pode chamar um procedimento com mais argumentos do que a
 ## <a name="calling-a-paramarray"></a>Chamando um ParamArray  
  Ao chamar um procedimento que define uma matriz de parâmetros, você pode fornecer o argumento de qualquer uma das seguintes maneiras:  
   
-- Nada — ou seja, você pode omitir o argumento [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) . Nesse caso, uma matriz vazia é passada para o procedimento. Você também pode passar a palavra-chave [Nothing](../../../../visual-basic/language-reference/nothing.md) , com o mesmo efeito.  
+- Nada — ou seja, você pode omitir o argumento [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) . Nesse caso, uma matriz vazia é passada para o procedimento. Se você passar explicitamente a palavra-chave [Nothing](../../../../visual-basic/language-reference/nothing.md) , uma matriz NULL será passada para o procedimento e poderá resultar em uma NullReferenceException se o procedimento chamado não verificar essa condição.
   
-- Uma lista de um número arbitrário de argumentos, separados por vírgulas. O tipo de dados de cada argumento deve ser implicitamente conversível `ParamArray` para o tipo de elemento.  
+- Uma lista de um número arbitrário de argumentos, separados por vírgulas. O tipo de dados de cada argumento deve ser implicitamente conversível para o tipo de elemento `ParamArray`.  
   
 - Uma matriz com o mesmo tipo de elemento que o tipo de elemento da matriz de parâmetros.  
   
- Em todos os casos, o código dentro do procedimento trata a matriz de parâmetros como uma matriz unidimensional com elementos do mesmo tipo de dados `ParamArray` que o tipo de dados.  
+ Em todos os casos, o código dentro do procedimento trata a matriz de parâmetros como uma matriz unidimensional com elementos do mesmo tipo de dados que o tipo de dados `ParamArray`.  
   
 > [!IMPORTANT]
 > Sempre que você lida com uma matriz que pode ser indefinidamente grande, há um risco de sobreexecutar alguma capacidade interna de seu aplicativo. Se você aceitar uma matriz de parâmetros, deverá testar o tamanho da matriz que o código de chamada passou para ela. Siga as etapas apropriadas se for muito grande para seu aplicativo. Saiba mais em [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define e chama a `calcSum`função. O `ParamArray` modificador para o `args` parâmetro permite que a função aceite um número variável de argumentos.  
+ O exemplo a seguir define e chama a função `calcSum`. O modificador de `ParamArray` para o parâmetro `args` permite que a função aceite um número variável de argumentos.  
   
  [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]  
   

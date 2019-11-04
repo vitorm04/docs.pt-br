@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: eab8faa54aaf9031ac0809912bd659c43e39a11b
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 61dfa257676d6c274d846300c7ccae75a219cf4c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321390"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424905"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operações síncronas e assíncronas
 Este tópico discute como implementar e chamar as operações de serviço assíncronas.  
@@ -162,13 +162,13 @@ Function EndDoWork(ByRef inout As String, ByRef outonly As String, ByVal result 
   
  Ao usar o modelo baseado em tarefas, basta chamar a operação usando a palavra-chave de espera conforme mostrado no snippet de código a seguir.  
   
-```  
+```csharp  
 await simpleServiceClient.SampleMethodTaskAsync("hello, world");  
 ```  
   
  Usar o padrão assíncrono baseado em eventos requer apenas adicionar um manipulador de eventos para receber uma notificação da resposta -- e o evento resultante é gerado automaticamente no thread da interface do usuário. Para usar essa abordagem, especifique as opções de comando **/async** e **/tcv:Version35** com a [Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), como no exemplo a seguir.  
   
-```  
+```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
@@ -176,7 +176,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Versio
   
  O modelo assíncrono baseado em eventos, no entanto, está disponível apenas no [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]. Além disso, não é suportado nem no [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] quando um canal de cliente do WCF é criado usando <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType>. Com objetos de canal de cliente do WCF, você deve usar objetos <xref:System.IAsyncResult?displayProperty=nameWithType> para chamar suas operações de forma assíncrona. Para usar essa abordagem, especifique a opção de comando **/async** com a [Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md), como no exemplo a seguir.  
   
-```  
+```console  
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async   
 ```  
   

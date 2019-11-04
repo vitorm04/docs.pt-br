@@ -1,21 +1,21 @@
 ---
-title: 'Como: Gerenciar arquivos de texto no XML (C#)'
+title: Como gerenciar arquivos de texto de XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 9ad283f7-7cac-42ff-bf32-92aa866e6883
-ms.openlocfilehash: 76fcca69236ef97374855ebbb19259aa5e119ea0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 8e36bbda60bea207707dcf869afc059e645ec8ad
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253588"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418300"
 ---
-# <a name="how-to-generate-text-files-from-xml-c"></a>Como: Gerenciar arquivos de texto no XML (C#)
+# <a name="how-to-generate-text-files-from-xml-c"></a>Como gerenciar arquivos de texto de XML (C#)
 Este exemplo mostra como gerar um arquivo separado por vírgulas de (CSV) dos valores de um arquivo XML.  
   
 ## <a name="example"></a>Exemplo  
  A versão de C# este exemplo usa a sintaxe método e o operador de `Aggregate` para gerar um arquivo CSV de um documento XML em uma única expressão. Para obter mais informações, consulte [Sintaxe de consulta e sintaxe de método em LINQ](./query-syntax-and-method-syntax-in-linq.md).  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Clientes e ordens (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md).  
   
 ```csharp  
 XElement custOrd = XElement.Load("CustomersOrders.xml");  
@@ -55,4 +55,4 @@ LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,Sa
   
 ## <a name="see-also"></a>Consulte também
 
-- [Projeções e transformações (LINQ to XML) (C#)](./projections-and-transformations-linq-to-xml.md)
+- [Projeções e transformações (LINQ to XML) (C#)](how-to-work-with-dictionaries-using-linq-to-xml.md)

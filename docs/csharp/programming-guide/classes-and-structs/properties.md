@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: dec4d4239fd1a953da6e64a1e1aff9593e2863e2
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 16dbfddb6f947ca07b60ab0e676e8c0ed118ac40
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596144"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73418850"
 ---
 # <a name="properties-c-programming-guide"></a>Propriedades (Guia de Programação em C#)
 
@@ -72,7 +72,7 @@ Se uma propriedade tiver tanto um acessador `get` quanto um `set`, ambos deverã
   
 ## <a name="c-language-specification"></a>Especificação da Linguagem C#  
 
-Para obter mais informações, veja [Propriedades](~/_csharplang/spec/classes.md#properties) na [Especificação da Linguagem C#](../../language-reference/language-specification/index.md). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
+Para obter mais informações, veja [Propriedades](~/_csharplang/spec/classes.md#properties) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
 ## <a name="see-also"></a>Consulte também
 

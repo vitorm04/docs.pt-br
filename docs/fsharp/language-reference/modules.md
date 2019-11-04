@@ -2,12 +2,12 @@
 title: Módulos
 description: Saiba como um F# módulo é um agrupamento de F# código, como valores, tipos e valores de função, em um F# programa.
 ms.date: 04/24/2017
-ms.openlocfilehash: 685ab638e7e1b6c8d47d1a316483abcc18e40199
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: fbde0c8b001d88614ba2de49c4aa7bfa098c6945
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627429"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425060"
 ---
 # <a name="modules"></a>Módulos
 
@@ -26,7 +26,7 @@ module [accessibility-modifier] module-name =
 
 ## <a name="remarks"></a>Comentários
 
-Um F# módulo é um agrupamento de F# construções de código, como tipos, valores, valores de função e código em `do` associações. Ele é implementado como uma classe Common Language Runtime (CLR) que tem apenas membros estáticos. Há dois tipos de declarações de módulo, dependendo se o arquivo inteiro está incluído no módulo: uma declaração de módulo de nível superior e uma declaração de módulo local. Uma declaração de módulo de nível superior inclui o arquivo inteiro no módulo. Uma declaração de módulo de nível superior pode aparecer somente como a primeira declaração em um arquivo.
+Um F# módulo é um agrupamento de F# construções de código, como tipos, valores, valores de função e código em associações de `do`. Ele é implementado como uma classe Common Language Runtime (CLR) que tem apenas membros estáticos. Há dois tipos de declarações de módulo, dependendo se o arquivo inteiro está incluído no módulo: uma declaração de módulo de nível superior e uma declaração de módulo local. Uma declaração de módulo de nível superior inclui o arquivo inteiro no módulo. Uma declaração de módulo de nível superior pode aparecer somente como a primeira declaração em um arquivo.
 
 Na sintaxe para a declaração de módulo de nível superior, o *namespace qualificado* opcional é a sequência de nomes de namespace aninhados que contém o módulo. O namespace qualificado não precisa ser declarado anteriormente.
 
@@ -40,7 +40,7 @@ Esse arquivo seria compilado como se tivesse sido escrito desta maneira:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6602.fs)]
 
-Se você tiver vários módulos em um arquivo, deverá usar uma declaração de módulo local para cada módulo. Se um namespace delimitador for declarado, esses módulos serão parte do namespace delimitador. Se um namespace delimitador não for declarado, os módulos se tornarão parte do módulo de nível superior criado implicitamente. O exemplo de código a seguir mostra um arquivo de código que contém vários módulos. O compilador cria implicitamente um módulo de nível superior denominado `Multiplemodules` `MyModule1` e e `MyModule2` é aninhado nesse módulo de nível superior.
+Se você tiver vários módulos em um arquivo, deverá usar uma declaração de módulo local para cada módulo. Se um namespace delimitador for declarado, esses módulos serão parte do namespace delimitador. Se um namespace delimitador não for declarado, os módulos se tornarão parte do módulo de nível superior criado implicitamente. O exemplo de código a seguir mostra um arquivo de código que contém vários módulos. O compilador cria implicitamente um módulo de nível superior chamado `Multiplemodules`e `MyModule1` e `MyModule2` são aninhados nesse módulo de nível superior.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6603.fs)]
 
@@ -54,7 +54,7 @@ Ao fazer referência a funções, tipos e valores de outro módulo, você deve u
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-Você pode abrir o módulo ou um ou mais dos namespaces para simplificar o código. Para obter mais informações sobre como abrir módulos e namespaces [, consulte importar declarações: A `open` palavra](import-declarations-the-open-keyword.md)-chave.
+Você pode abrir o módulo ou um ou mais dos namespaces para simplificar o código. Para obter mais informações sobre como abrir módulos e namespaces, consulte [importar declarações: a palavra-chave `open`](import-declarations-the-open-keyword.md).
 
 O exemplo de código a seguir mostra um módulo de nível superior que contém todo o código até o final do arquivo.
 
@@ -66,14 +66,14 @@ Para usar esse código de outro arquivo no mesmo projeto, você pode usar nomes 
 
 ## <a name="nested-modules"></a>Módulos aninhados
 
-Os módulos podem ser aninhados. Os módulos internos devem ser recuados até o momento como declarações de módulo externas para indicar que são módulos internos, não novos módulos. Por exemplo, compare os dois exemplos a seguir. `Z` É um módulo interno no código a seguir.
+Os módulos podem ser aninhados. Os módulos internos devem ser recuados até o momento como declarações de módulo externas para indicar que são módulos internos, não novos módulos. Por exemplo, compare os dois exemplos a seguir. O módulo `Z` é um módulo interno no código a seguir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6607.fs)]
 
-Mas o `Z` módulo é um irmão para `Y` o módulo no código a seguir.
+Mas o módulo `Z` é um irmão para o módulo `Y` no código a seguir.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6608.fs)]
-O `Z` módulo também é um módulo irmão no código a seguir, porque ele não é recuado até outras declarações no módulo `Y`.
+O módulo `Z` também é um módulo irmão no código a seguir, porque ele não é recuado até outras declarações no módulo `Y`.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/modules/snippet6609.fs)]
 Finalmente, se o módulo externo não tiver declarações e for seguido imediatamente por outra declaração de módulo, a nova declaração de módulo será considerada um módulo interno, mas o compilador avisará se a segunda definição de módulo não for recuada além da primeiro.
@@ -88,7 +88,7 @@ Se você quiser que todo o código em um arquivo esteja em um único módulo ext
 
 ## <a name="recursive-modules"></a>Módulos recursivos
 
-F#4,1 apresenta a noção de módulos que permitem que todo o código independente seja recursivo mutuamente.  Isso é feito por `module rec`meio de.  O uso `module rec` de pode aliviar alguns problemas em não ser capaz de escrever código referencial mutuamente entre tipos e módulos.  Veja a seguir um exemplo disso:
+F#4,1 apresenta a noção de módulos que permitem que todo o código independente seja recursivo mutuamente.  Isso é feito por meio de `module rec`.  O uso de `module rec` pode aliviar alguns problemas em não poder escrever código referencial mutuamente entre tipos e módulos.  Veja a seguir um exemplo disso:
 
 ```fsharp
 module rec RecursiveModule =
@@ -112,7 +112,7 @@ module rec RecursiveModule =
         let peel (b: Banana) =
             let flip (banana: Banana) =
                 match banana.Orientation with
-                | Up -> 
+                | Up ->
                     banana.Orientation <- Down
                     banana
                 | Down -> banana
@@ -128,7 +128,7 @@ module rec RecursiveModule =
             | Down -> b |> peelSides
 ```
 
-Observe que a exceção `DontSqueezeTheBananaException` e a classe `Banana` fazem referência umas às outras.  Além disso, o `BananaHelpers` módulo e a `Banana` classe também se referem uns aos outros.  Isso não seria possível expressar em F# se você removesse a `rec` palavra-chave do `RecursiveModule` módulo.
+Observe que a exceção `DontSqueezeTheBananaException` e a classe `Banana` fazem referência umas às outras.  Além disso, o módulo `BananaHelpers` e a classe `Banana` também se referem uns aos outros.  Isso não seria possível expressar em F# se você removeu a palavra-chave `rec` do módulo `RecursiveModule`.
 
 Esse recurso também é possível em [namespaces](namespaces.md) com F# 4,1.
 

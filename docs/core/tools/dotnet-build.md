@@ -2,12 +2,12 @@
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
 ms.date: 10/14/2019
-ms.openlocfilehash: fe2135c150be46997699f756f7f0c9bc18bbb529
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: b85ef06aa445e4708487deed9ec6bfeffeab3657
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846823"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454220"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -24,8 +24,9 @@ ms.locfileid: "72846823"
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force] [--interactive] [--no-dependencies]
-    [--no-incremental] [--no-restore] [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
+    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo] 
+    [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
 ```
@@ -116,7 +117,7 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Especifica o runtime de destino. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md).
+  Especifica o runtime de destino. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md).
 
 - **`-v|--verbosity <LEVEL>`**
 

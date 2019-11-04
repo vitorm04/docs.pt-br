@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69588196"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423123"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -23,7 +23,7 @@ void* identifier; //allowed but not recommended
 
 O tipo especificado antes do `*` em um tipo de ponteiro é chamado de **tipo referent**. Somente um [tipo não gerenciado](../../language-reference/builtin-types/unmanaged-types.md) pode ser um tipo referent.
 
-Os tipos de ponteiro não são herdados de [objeto](../../language-reference/keywords/object.md) e não há nenhuma conversão entre tipos de ponteiro e `object`. Além disso, as conversões boxing e unboxing não oferecem suporte a ponteiros. No entanto, você pode converter entre diferentes tipos de ponteiro e tipos de ponteiro e tipos integrais.
+Os tipos de ponteiro não são herdados de [objeto](../../language-reference/builtin-types/reference-types.md) e não há nenhuma conversão entre tipos de ponteiro e `object`. Além disso, as conversões boxing e unboxing não oferecem suporte a ponteiros. No entanto, você pode converter entre diferentes tipos de ponteiro e tipos de ponteiro e tipos integrais.
 
 Quando você designa vários ponteiros na mesma declaração, o asterisco (*) é escrito junto apenas com o tipo subjacente; ele não é usado como um prefixo para cada nome de ponteiro. Por exemplo:
 
@@ -36,7 +36,7 @@ Um ponteiro não pode apontar para uma referência ou um [struct](../../language
 
 O valor da variável de ponteiro do tipo `myType*` é o endereço de uma variável do tipo `myType`. Estes são exemplos de declarações de tipos de ponteiro:
 
-|Exemplo|DESCRIÇÃO|
+|Exemplo|Descrição|
 |-------------|-----------------|
 |`int* p`|`p` é um ponteiro para um inteiro.|
 |`int** p`|`p` é um ponteiro para um ponteiro para um inteiro.|
@@ -87,5 +87,5 @@ Para saber mais, confira a seção [Tipos de ponteiro](~/_csharplang/spec/unsafe
 - [Guia de Programação em C#](../index.md)
 - [Código não seguro e ponteiros](index.md)
 - [Conversões de ponteiro](pointer-conversions.md)
-- [Tipos](../../language-reference/keywords/types.md)
+- [Tipos](/dotnet/csharp/language-reference/keywords)
 - [unsafe](../../language-reference/keywords/unsafe.md)

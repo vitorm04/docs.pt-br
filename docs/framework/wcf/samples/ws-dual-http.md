@@ -2,16 +2,16 @@
 title: WS Dual Http
 ms.date: 03/30/2017
 ms.assetid: 9997eba5-29ec-48db-86f3-fa77b241fb1a
-ms.openlocfilehash: 03cc5a2359c6430c04c6afb09f161b397fcb1afa
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: bc8958ab092f97e94a75bc366d576441c1a5bbbd
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038483"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424549"
 ---
 # <a name="ws-dual-http"></a>WS Dual Http
 
-O exemplo http duplo demonstra como configurar a `WSDualHttpBinding` associação. Este exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados pelo Serviços de Informações da Internet (IIS). O serviço implementa um contrato duplex. O contrato é definido pela `ICalculatorDuplex` interface, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). Neste exemplo, a `ICalculatorDuplex` interface permite que o cliente execute operações matemáticas, calculando um resultado em execução pela sessão. Independentemente, o serviço retorna resultados na `ICalculatorDuplexCallback` interface. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens que estão sendo enviadas entre o cliente e o serviço. A `WSDualHttpBinding` Associação dá suporte à comunicação duplex.
+O exemplo http duplo demonstra como configurar a associação de `WSDualHttpBinding`. Este exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados pelo Serviços de Informações da Internet (IIS). O serviço implementa um contrato duplex. O contrato é definido pela interface `ICalculatorDuplex`, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). Neste exemplo, a interface `ICalculatorDuplex` permite que o cliente execute operações matemáticas, calculando um resultado em execução pela sessão. Independentemente, o serviço retorna resultados na interface `ICalculatorDuplexCallback`. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens que estão sendo enviadas entre o cliente e o serviço. A associação de `WSDualHttpBinding` dá suporte à comunicação duplex.
 
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
@@ -21,11 +21,11 @@ O exemplo http duplo demonstra como configurar a `WSDualHttpBinding` associaçã
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\DualHttp`
 
-Para configurar um ponto de extremidade de `WSDualHttpBinding`serviço com o, especifique a associação na configuração do ponto de extremidade, conforme mostrado.
+Para configurar um ponto de extremidade de serviço com o `WSDualHttpBinding`, especifique a associação na configuração do ponto de extremidade, conforme mostrado.
 
 ```xml
 <endpoint address=""
@@ -61,7 +61,7 @@ No cliente, você deve configurar um endereço que o servidor pode usar para se 
 
 Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
-```
+```console
 Press <ENTER> to terminate client once the output is displayed.
 
 Result(100)
@@ -77,7 +77,7 @@ Ao executar o exemplo, você verá as mensagens retornadas para o cliente na int
 
 1. Instale o ASP.NET 4,0 usando o comando a seguir.
 
-    ```
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
@@ -88,7 +88,7 @@ Ao executar o exemplo, você verá as mensagens retornadas para o cliente na int
 4. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > Ao executar o cliente em uma configuração entre computadores, substitua localhost no `address` atributo `clientBaseAddress` [ \<do ponto de extremidade > do elemento > do \<cliente](../../configure-apps/file-schema/wcf/endpoint-of-client.md) e o atributo do [ Associação\<de >](../../../../docs/framework/misc/binding.md) elemento [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) do elemento de > WSDualHttpBinding com o nome do computador apropriado, conforme mostrado:
+    > Ao executar o cliente em uma configuração entre computadores, certifique-se de substituir localhost no atributo `address` do [> de ponto de extremidade\<do elemento \<client >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) e o atributo `clientBaseAddress` da [Associação\<](../../../../docs/framework/misc/binding.md) o elemento do elemento [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) com o nome do computador apropriado, conforme mostrado:
 
     ```xml
     <client>

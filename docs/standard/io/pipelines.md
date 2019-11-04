@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O [.NET], Pipelines
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: 9efd7a7581a1e8bd2cb5f544edd1b4c965aa1866
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 54b5f97aca131f52b9b5d9f54d7fa5ec00ba3d5b
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395922"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423669"
 ---
 # <a name="systemiopipelines-in-net"></a>System. IO. pipelines no .NET
 
@@ -159,7 +159,7 @@ Ao fazer e/s, é importante ter um controle refinado sobre onde a e/s é executa
 
 ### <a name="pipe-reset"></a>Redefinição de pipe
 
-Com frequência, é eficiente reutilizar o objeto `Pipe`. Para redefinir o pipe, chame <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A> quando o `PipeReader` e `PipeWriter` estiverem concluídos.
+Com frequência, é eficiente reutilizar o objeto `Pipe`. Para redefinir o pipe, chame <xref:System.IO.Pipelines.PipeReader> <xref:System.IO.Pipelines.Pipe.Reset%2A> quando os `PipeReader` e `PipeWriter` estiverem concluídos.
 
 ## <a name="pipereader"></a>PipeReader
 
@@ -311,8 +311,8 @@ O <xref:System.IO.Pipelines.PipeWriter> gerencia buffers para gravação em nome
 
 O código anterior:
 
-* Solicita um buffer de pelo menos 5 bytes do `PipeWriter` usando <xref:System.IO.Pipelines.PipeWriter.GetSpan%2A>.
-* Grava bytes para a cadeia de caracteres ASCII `"Hello"` no @no__t retornado-1.
+* Solicita um buffer de pelo menos 5 bytes do `PipeWriter` usando <xref:System.IO.Pipelines.PipeWriter.GetMemory%2A>.
+* Grava bytes para a cadeia de caracteres ASCII `"Hello"` para o `Memory<byte>`retornado.
 * Chama <xref:System.IO.Pipelines.PipeWriter.Advance%2A> para indicar quantos bytes foram gravados no buffer.
 * Libera o `PipeWriter`, que envia os bytes para o dispositivo subjacente.
 
@@ -325,7 +325,7 @@ O método anterior de gravação usa os buffers fornecidos pelo `PipeWriter`. Co
 
 ### <a name="cancellation"></a>Cancelamento
 
-<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> dá suporte à passagem de um <xref:System.Threading.CancellationToken>. Passar um `CancellationToken` resultará em um `OperationCanceledException` se o token for cancelado enquanto houver uma liberação pendente. `PipeWriter.FlushAsync` dá suporte a uma maneira de cancelar a operação de liberação atual por meio de <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> sem gerar uma exceção. Chamar `PipeWriter.CancelPendingFlush` faz com que a chamada atual ou seguinte para `PipeWriter.FlushAsync` ou `PipeWriter.WriteAsync` retorne um <xref:System.IO.Pipelines.FlushResult> com `IsCanceled` definido como `true`. Isso pode ser útil para interromper a liberação de rendimento de forma não destrutiva e não excepcional.
+<xref:System.IO.Pipelines.PipeWriter.FlushAsync%2A> dá suporte à passagem de um <xref:System.Threading.CancellationToken>. Passar um `CancellationToken` resultará em um `OperationCanceledException` se o token for cancelado enquanto houver uma liberação pendente. `PipeWriter.FlushAsync` dá suporte a uma maneira de cancelar a operação de liberação atual via <xref:System.IO.Pipelines.PipeWriter.CancelPendingFlush%2A?displayProperty=nameWithType> sem gerar uma exceção. Chamar `PipeWriter.CancelPendingFlush` faz com que a chamada atual ou seguinte para `PipeWriter.FlushAsync` ou `PipeWriter.WriteAsync` retorne um <xref:System.IO.Pipelines.FlushResult> com `IsCanceled` definido como `true`. Isso pode ser útil para interromper a liberação de rendimento de forma não destrutiva e não excepcional.
 
 <a name="pwcp"></a>
 
@@ -345,4 +345,4 @@ O <xref:System.IO.Pipelines.IDuplexPipe> é um contrato para tipos que dão supo
 
 ## <a name="streams"></a>Fluxos
 
-Ao ler ou gravar dados de fluxo, você normalmente lê dados usando um desserializador e grava dados usando um serializador. A maioria dessas APIs de leitura e gravação de fluxo tem um parâmetro `Stream`. Para facilitar a integração com essas APIs existentes, `PipeReader` e `PipeWriter` expõem um <xref:System.IO.Pipelines.PipeReader.AsStream%2A>.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> retorna uma implementação `Stream` em relação ao `PipeReader` ou `PipeWriter`.
+Ao ler ou gravar dados de fluxo, você normalmente lê dados usando um desserializador e grava dados usando um serializador. A maioria dessas APIs de leitura e gravação de fluxo tem um parâmetro `Stream`. Para facilitar a integração com essas APIs existentes, `PipeReader` e `PipeWriter` expor uma <xref:System.IO.Pipelines.PipeReader.AsStream%2A>.  <xref:System.IO.Pipelines.PipeWriter.AsStream%2A> retorna uma implementação de `Stream` em relação ao `PipeReader` ou `PipeWriter`.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - running a LINQ query [WPF], bind to results
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
-ms.openlocfilehash: 70f4b439d231d69e5671216bc4e62d0789ce66c7
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: d21ac5f366e001ea76d6eda64ed62583248796f6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920129"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454419"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>Como associar aos resultados de uma consulta LINQ
 
@@ -35,4 +35,4 @@ A segunda caixa de listagem é associada a essa coleção porque seu valor de <x
 - [Disponibilizar dados para associação em XAML](how-to-make-data-available-for-binding-in-xaml.md)
 - [Associar a uma coleção e exibir informações com base na seleção](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [Novidades no WPF versão 4.5](../getting-started/whats-new.md)
-- [Visão geral da vinculação de dados](data-binding-overview.md)
+- [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)

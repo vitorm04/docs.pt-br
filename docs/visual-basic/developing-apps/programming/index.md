@@ -5,12 +5,12 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 68c200b3e47a0f96963e5872c854633a7c24e938
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61812665"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423975"
 ---
 # <a name="programming-in-visual-basic"></a>Programando no Visual Basic
 Esta seção aborda tarefas de programação que você talvez queira saber mais sobre como criar seu aplicativo Visual Basic.  
@@ -34,7 +34,7 @@ Esta seção aborda tarefas de programação que você talvez queira saber mais 
  [Acessando configurações de aplicativo](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Contém documentação sobre acesso a configurações do aplicativo usando o objeto `My.Settings`.  
   
- [Processando unidades, diretórios e arquivos](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
+ [Processando unidades, diretórios e arquivos](drives-directories-files/index.md)  
  Contém documentação sobre como acessar o sistema de arquivos usando o objeto `My.Computer.FileSystem`.  
   
 ## <a name="see-also"></a>Consulte também

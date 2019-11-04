@@ -6,12 +6,12 @@ helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 44af3bf1a7c013c16c7b4a4528c3516621bea149
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608458"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422548"
 ---
 # <a name="query-keywords-c-reference"></a>Palavras-chave de consulta (Referência de C#)
 
@@ -19,7 +19,7 @@ Esta seção contém as palavras-chave contextuais usadas em expressões de cons
 
 ## <a name="in-this-section"></a>Nesta seção
 
-|Cláusula|DESCRIÇÃO|
+|Cláusula|Descrição|
 |------------|-----------------|
 |[from](from-clause.md)|Especifica uma fonte de dados e uma variável de intervalo (semelhante a uma variável de iteração).|
 |[where](where-clause.md)|Filtra elementos de origem baseados em uma ou mais expressões boolianas separadas por operadores AND e OR lógicos ( `&&` ou <code>&#124;&#124;</code> ).|
@@ -40,5 +40,5 @@ Esta seção contém as palavras-chave contextuais usadas em expressões de cons
 
 - [Palavras-chave do C#](index.md)
 - [LINQ (Consulta Integrada à Linguagem)](../../programming-guide/concepts/linq/index.md)
-- [Expressões de consulta LINQ](../../programming-guide/linq-query-expressions/index.md)
-- [Introdução a LINQ em C#](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ em C#](../../linq/index.md)
+- [Introdução a LINQ em C#](/dotnet/csharp/programming-guide/concepts/linq/)

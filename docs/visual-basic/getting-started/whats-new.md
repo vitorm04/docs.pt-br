@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 2798c436ddfabc8fedf1f2c36c25e8ee2651b476
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 1efcee0ac3bdba1b7e1379a0ac072ea714add756
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191984"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73423913"
 ---
 # <a name="whats-new-for-visual-basic"></a>Novidades do Visual Basic
 
@@ -212,7 +212,7 @@ Você pode obter o nome da cadeia de caracteres não qualificada de um tipo ou d
 
 [Interpolação de cadeia de caracteres](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)
 
-Você pode usar expressões de interpolação de cadeia de caracteres para construir cadeias de caracteres.  Uma expressão de cadeia de caracteres interpolada é semelhante a uma cadeia de caracteres de modelo que contém expressões.  Uma cadeia de caracteres interpolada é mais fácil de entender, em relação aos argumentos, do que a [formatação de composição](../../standard/base-types/composite-format.md).
+Você pode usar expressões de interpolação de cadeia de caracteres para construir cadeias de caracteres.  Uma expressão de cadeia de caracteres interpolada é semelhante a uma cadeia de caracteres de modelo que contém expressões.  Uma cadeia de caracteres interpolada é mais fácil de entender, em relação aos argumentos, do que a [formatação de composição](../../standard/base-types/composite-formatting.md).
 
 [Acesso de membro nulo condicional e indexação](../language-reference/operators/null-conditional-operators.md)
 

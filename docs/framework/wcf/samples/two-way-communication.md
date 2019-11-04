@@ -2,26 +2,26 @@
 title: Comunicação bidirecional
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 379197ee3dc041351f0b13ad1e336824a0f411ed
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7bc513d270a860c104255ac5df6f6d890f6b2b0d
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038714"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424218"
 ---
 # <a name="two-way-communication"></a>Comunicação bidirecional
-Este exemplo demonstra como executar a comunicação em fila de duas vias transacionada no MSMQ. Este exemplo usa a `netMsmqBinding` associação. Nesse caso, o serviço é um aplicativo de console auto-hospedado que permite que você observe o serviço que recebe mensagens enfileiradas.  
+Este exemplo demonstra como executar a comunicação em fila de duas vias transacionada no MSMQ. Este exemplo usa a associação de `netMsmqBinding`. Nesse caso, o serviço é um aplicativo de console auto-hospedado que permite que você observe o serviço que recebe mensagens enfileiradas.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Este exemplo é baseado na [associação MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)transacionada.  
+ Este exemplo é baseado na [associação MSMQ transacionada](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  Na comunicação em fila, o cliente se comunica com o serviço usando uma fila. O cliente envia mensagens para uma fila e o serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisam estar em execução ao mesmo tempo para se comunicarem usando uma fila.  
   
  Este exemplo demonstra a comunicação bidirecional usando filas. O cliente envia pedidos de compra para a fila de dentro do escopo de uma transação. O serviço recebe os pedidos, processa a ordem e, em seguida, chama o cliente com o status da ordem da fila dentro do escopo de uma transação. Para facilitar a comunicação bidirecional, o cliente e o serviço usam filas para enfileirar ordens de compra e status do pedido.  
   
- O contrato `IOrderProcessor` de serviço define operações de serviço unidirecionais que se adaptam ao uso do enfileiramento. A operação de serviço inclui o ponto de extremidade de resposta a ser usado para enviar os status do pedido para. O ponto de extremidade de resposta é o URI da fila para enviar o status do pedido de volta para o cliente. O aplicativo de processamento de pedidos implementa esse contrato.  
+ O `IOrderProcessor` de contrato de serviço define operações de serviço unidirecionais que se adaptam ao uso do enfileiramento. A operação de serviço inclui o ponto de extremidade de resposta a ser usado para enviar os status do pedido para. O ponto de extremidade de resposta é o URI da fila para enviar o status do pedido de volta para o cliente. O aplicativo de processamento de pedidos implementa esse contrato.  
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -44,7 +44,7 @@ public interface IOrderStatus
 }  
 ```
 
- A operação de serviço processa a ordem de compra enviada. O <xref:System.ServiceModel.OperationBehaviorAttribute> é aplicado à operação de serviço para especificar a inscrição automática em uma transação que é usada para receber a mensagem da fila e a conclusão automática de transações na conclusão da operação de serviço. A `Orders` classe encapsula a funcionalidade de processamento de pedidos. Nesse caso, ele adiciona a ordem de compra a um dicionário. A transação na qual a operação de serviço inscrito está disponível para as operações na `Orders` classe.  
+ A operação de serviço processa a ordem de compra enviada. O <xref:System.ServiceModel.OperationBehaviorAttribute> é aplicado à operação de serviço para especificar a inscrição automática em uma transação que é usada para receber a mensagem da fila e a conclusão automática de transações na conclusão da operação de serviço. A classe `Orders` encapsula a funcionalidade de processamento de pedidos. Nesse caso, ele adiciona a ordem de compra a um dicionário. A transação na qual a operação de serviço inscrito está disponível para as operações na classe `Orders`.  
   
  A operação de serviço, além de processar a ordem de compra enviada, responde de volta ao cliente no status do pedido.  
 
@@ -143,7 +143,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))
 }  
 ```
 
- O código do cliente implementa `IOrderStatus` o contrato para receber o status do pedido do serviço. Nesse caso, ele imprime o status do pedido.  
+ O código do cliente implementa o contrato de `IOrderStatus` para receber o status do pedido do serviço. Nesse caso, ele imprime o status do pedido.  
 
 ```csharp
 [ServiceBehavior]  
@@ -159,7 +159,7 @@ public class OrderStatusService : IOrderStatus
 }  
 ```
 
- A fila status do pedido é criada no `Main` método. A configuração do cliente inclui a configuração do serviço de status do pedido para hospedar o serviço de status do pedido, conforme mostrado na seguinte configuração de exemplo.  
+ A fila status do pedido é criada no método `Main`. A configuração do cliente inclui a configuração do serviço de status do pedido para hospedar o serviço de status do pedido, conforme mostrado na seguinte configuração de exemplo.  
   
 ```xml  
 <appSettings>  
@@ -194,7 +194,7 @@ public class OrderStatusService : IOrderStatus
   
  O serviço exibe as informações da ordem de compra e indica que está enviando de volta o status do pedido para a fila status do pedido.  
   
-```  
+```console  
 The service is ready.  
 Press <ENTER> to terminate service.  
   
@@ -211,7 +211,7 @@ Sending back order status information
   
  O cliente exibe as informações de status do pedido enviadas pelo serviço.  
   
-```  
+```console  
 Press <ENTER> to terminate client.  
 Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending  
 ```  
@@ -227,11 +227,11 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     > [!NOTE]
     > Se você usar svcutil. exe para regenerar a configuração para este exemplo, certifique-se de modificar os nomes dos pontos de extremidade na configuração do cliente para corresponder ao código do cliente.  
   
- Por padrão, com <xref:System.ServiceModel.NetMsmqBinding>a segurança de transporte está habilitada. Há duas propriedades relevantes para a <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> segurança de transporte do MSMQ e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` , por padrão, o modo de autenticação `Windows` é definido como e o nível de `Sign`proteção é definido como. Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio e a opção de integração do Active Directory para o MSMQ deve ser instalada. Se você executar esse exemplo em um computador que não atenda a esses critérios, receberá um erro.  
+ Por padrão, com a <xref:System.ServiceModel.NetMsmqBinding>, a segurança de transporte está habilitada. Há duas propriedades relevantes para a segurança de transporte do MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> e <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.` por padrão, o modo de autenticação é definido como `Windows` e o nível de proteção é definido como `Sign`. Para que o MSMQ forneça o recurso de autenticação e assinatura, ele deve fazer parte de um domínio e a opção de integração do Active Directory para o MSMQ deve ser instalada. Se você executar esse exemplo em um computador que não atenda a esses critérios, receberá um erro.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Para executar o exemplo em um computador ingressado em um grupo de trabalho ou sem integração com o Active Directory  
   
-1. Se o seu computador não fizer parte de um domínio ou não tiver a integração do Active Directory instalada, desative a segurança de transporte definindo o modo de autenticação `None` e o nível de proteção como mostrado na seguinte configuração de exemplo:  
+1. Se o seu computador não fizer parte de um domínio ou não tiver a integração do Active Directory instalada, desative a segurança de transporte definindo o modo de autenticação e o nível de proteção como `None`, conforme mostrado na seguinte configuração de exemplo:  
   
     ```xml  
     <configuration>  
@@ -310,7 +310,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
     </configuration>  
     ```  
   
-3. O serviço para este exemplo cria uma associação no `OrderProcessorService`. Adicione uma linha de código depois que a associação é instanciada para definir o modo de `None`segurança como.  
+3. O serviço para este exemplo cria uma associação no `OrderProcessorService`. Adicione uma linha de código depois que a associação é instanciada para definir o modo de segurança como `None`.  
   
     ```csharp
     NetMsmqBinding msmqCallbackBinding = new NetMsmqBinding();  
@@ -320,13 +320,13 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 4. Certifique-se de alterar a configuração no servidor e no cliente antes de executar o exemplo.  
   
     > [!NOTE]
-    > A `security mode` configuração `None` <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>como éequivalente`Message` à configuração `None`ou à segurança para. <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>  
+    > Definir `security mode` como `None` é equivalente a definir <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> ou `Message` segurança para `None`.  
   
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  

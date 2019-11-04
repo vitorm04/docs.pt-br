@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: bbdbcaf466e0b4dca4b78902ca9e7a49b02ac718
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 699887d635ab074fc9ffa4cd7fa354372eb82f25
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70394229"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73422628"
 ---
 # <a name="override-c-reference"></a>override (Referência de C#)
 
@@ -21,7 +21,7 @@ O modificador `override` é necessário para estender ou modificar a implementa�
 
 ## <a name="example"></a>Exemplo
 
-Neste exemplo, `Square` a classe deve fornecer uma implementação substituída de `GetArea` porque `GetArea` é herdada da classe abstrata: `Shape`
+Neste exemplo, a classe `Square` deve fornecer uma implementação substituída de `GetArea` porque `GetArea` é herdado da classe abstrata `Shape`:
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 
@@ -53,7 +53,7 @@ Este exemplo define uma classe base chamada `Employee` e uma classe derivada cha
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Herança](../../programming-guide/classes-and-structs/inheritance.md)
 - [Palavras-chave do C#](index.md)
-- [Modificadores](modifiers.md)
+- [Modificadores](index.md)
 - [abstract](abstract.md)
 - [virtual](virtual.md)
 - [new (modificador)](new-modifier.md)

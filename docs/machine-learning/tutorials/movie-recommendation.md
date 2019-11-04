@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 51dcf5cd85913f0e69ea51dff5101426cc57390f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2d960a43f7934e262fa0e19abfea0209aa4e9ff0
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774459"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73425219"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: criar um recomendador de filmes usando matriz factorizaton com ML.NET
 
@@ -73,7 +73,7 @@ Há várias maneiras de abordar problemas de recomendação, como recomendar uma
 
 2. No Gerenciador de Soluções, clique com o botão direito do mouse em cada um dos arquivos \*.csv e selecione **Propriedades**. Em **Avançado**, altere o valor de **Copiar para Diretório de Saída** para **Copiar se for mais novo**.
 
-   ![Copiar se for o mais recente no VS](./media/movie-recommendation/copytoout.gif)
+   ![GIF de um usuário selecionando copiar se mais recente no VS.](./media/movie-recommendation/copy-to-output-if-newer.gif)
 
 ## <a name="load-your-data"></a>Carregar os dados
 
@@ -83,7 +83,7 @@ Os dados de classificações de recomendação são divididos nos conjuntos de d
 
 Segue abaixo uma visualização dos dados nos arquivos \*.csv:
 
-![visualização de dados](./media/movie-recommendation/csv-dataset-preview.png)
+![Captura de tela da visualização do conjunto de uma do CVS.](./media/movie-recommendation/csv-file-dataset-preview.png)
 
 Nos arquivos \*.csv, há quatro colunas:
 
@@ -171,11 +171,11 @@ Há três conceitos principais em ML.NET: [Data](../resources/glossary.md#data),
 
 Os algoritmos de treinamento de aprendizado de máquina exigem que os dados estejam em determinado formato. `Transformers` são usados para transformar dados de tabela em um formato compatível.
 
-![imagem do transformador](./media/movie-recommendation/transformer.png)
+![Diagrama da Dataflow do transformador.](./media/movie-recommendation/data-transformer-transformed.png)
 
 Crie `Transformers` no ML.NET criando `Estimators`. `Estimators` usa dados e retorna `Transformers`.
 
-![imagem do avaliador](./media/movie-recommendation/estimator.png)
+![Diagrama do Dataflow do estimador.](./media/movie-recommendation/data-estimator-transformer.png)
 
 O algoritmo de treinamento de recomendação que você usará para treinar seu modelo é um exemplo de `Estimator`.
 

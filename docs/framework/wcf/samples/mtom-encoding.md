@@ -2,12 +2,12 @@
 title: Codificação de MTOM
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: 52fe91e5ab4967190d7654b232143adbf0a49d65
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ab8abdf79304037f2b4039407115a3f64a0afa4e
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039262"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73424067"
 ---
 # <a name="mtom-encoding"></a>Codificação de MTOM
 Este exemplo demonstra o uso da codificação de mensagens do mecanismo de otimização de transmissão de mensagens (MTOM) com uma WSHttpBinding. MTOM é um mecanismo para transmitir anexos binários grandes com mensagens SOAP como bytes brutos, permitindo mensagens menores.  
@@ -17,11 +17,11 @@ Este exemplo demonstra o uso da codificação de mensagens do mecanismo de otimi
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
   
- Por padrão, o WSHttpBinding envia e recebe mensagens como XML de texto normal. Para habilitar o envio e o recebimento de mensagens MTOM `messageEncoding` , defina o atributo na configuração da Associação (como no código de exemplo a seguir) ou diretamente na associação usando `MessageEncoding` a propriedade. O serviço ou cliente agora pode enviar e receber mensagens MTOM.  
+ Por padrão, o WSHttpBinding envia e recebe mensagens como XML de texto normal. Para habilitar o envio e o recebimento de mensagens MTOM, defina o atributo `messageEncoding` na configuração da Associação (como no código de exemplo a seguir) ou diretamente na associação usando a propriedade `MessageEncoding`. O serviço ou cliente agora pode enviar e receber mensagens MTOM.  
   
 ```xml  
 <wsHttpBinding>  
@@ -29,7 +29,7 @@ Este exemplo demonstra o uso da codificação de mensagens do mecanismo de otimi
 </wsHttpBinding>  
 ```  
   
- O codificador MTOM pode otimizar matrizes de bytes e fluxos. Neste exemplo, a operação usa um `Stream` parâmetro e, portanto, pode ser otimizada.  
+ O codificador MTOM pode otimizar matrizes de bytes e fluxos. Neste exemplo, a operação usa um parâmetro `Stream` e, portanto, pode ser otimizada.  
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -42,7 +42,7 @@ Este exemplo demonstra o uso da codificação de mensagens do mecanismo de otimi
   
  O contrato escolhido para este exemplo transmite dados binários para o serviço e recebe o número de bytes carregados como o valor de retorno. Quando o serviço é instalado e o cliente é executado, ele imprime o número 1000, que indica que todos os 1000 bytes foram recebidos. O restante da saída lista os tamanhos de mensagem otimizados e não otimizados para várias cargas.  
   
-```  
+```console
 Output:  
 1000  
   
@@ -70,7 +70,7 @@ Press <ENTER> to terminate client.
   
 1. Instale o ASP.NET 4,0 usando o comando a seguir.  
   
-    ```  
+    ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   

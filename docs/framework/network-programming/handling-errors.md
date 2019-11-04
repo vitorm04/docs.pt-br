@@ -31,19 +31,20 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 7084c4579dd5fca0075c7516754195f7cea9e27c
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71048507"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458046"
 ---
 # <a name="handling-errors"></a>Manipulando erros
+
 As classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> geram exceções do sistema (como <xref:System.ArgumentException>) e exceções específicas à Web (que são <xref:System.Net.WebException> geradas pelo método <xref:System.Net.WebRequest.GetResponse%2A>).  
   
- Cada **WebException** inclui uma propriedade <xref:System.Net.WebException.Status%2A> que contém um valor da enumeração <xref:System.Net.WebExceptionStatus>. Examine a propriedade **Status** para determinar o erro ocorrido e execute as etapas apropriadas para resolver o erro.  
+Cada **WebException** inclui uma propriedade <xref:System.Net.WebException.Status%2A> que contém um valor da enumeração <xref:System.Net.WebExceptionStatus>. Examine a propriedade **Status** para determinar o erro ocorrido e execute as etapas apropriadas para resolver o erro.  
   
- A tabela a seguir descreve os possíveis valores para a propriedade **Status**.  
+A tabela a seguir descreve os possíveis valores para a propriedade **Status**.  
   
 |Status|Descrição|  
 |------------|-----------------|  
@@ -66,9 +67,9 @@ As classes <xref:System.Net.WebRequest> e <xref:System.Net.WebResponse> geram ex
 |ProxyNameResolutionFailure|O serviço de resolvedor de nome não pôde resolver o nome de host do proxy.|  
 |UnknownError|Ocorreu uma exceção de tipo desconhecido.|  
   
- Quando a propriedade **Status** é **WebExceptionStatus.ProtocolError**, uma **WebResponse** que contém a resposta do servidor está disponível. Examine essa resposta para determinar a origem real do erro de protocolo.  
+Quando a propriedade **Status** é **WebExceptionStatus.ProtocolError**, uma **WebResponse** que contém a resposta do servidor está disponível. Examine essa resposta para determinar a origem real do erro de protocolo.  
   
- O exemplo a seguir mostra como capturar uma **WebException**.  
+O exemplo a seguir mostra como capturar uma **WebException**.  
   
 ```csharp  
 try   
@@ -163,11 +164,11 @@ Catch e As Exception
 End Try  
 ```  
   
- Os aplicativos que usam a classe <xref:System.Net.Sockets.Socket> geram <xref:System.Net.Sockets.SocketException> quando ocorrem erros no soquete do Windows. As classes <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient> são criadas com base na classe **Socket** e geram **SocketExceptions** também.  
+Os aplicativos que usam a classe <xref:System.Net.Sockets.Socket> geram <xref:System.Net.Sockets.SocketException> quando ocorrem erros no soquete do Windows. As classes <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> e <xref:System.Net.Sockets.UdpClient> são criadas com base na classe **Socket** e geram **SocketExceptions** também.  
   
- Quando uma **SocketException** é gerada, a classe **SocketException** define a propriedade <xref:System.Net.Sockets.SocketException.ErrorCode%2A> com o último erro de soquete do sistema operacional ocorrido. Para obter mais informações sobre códigos de erro de soquete, consulte a documentação de códigos de erro da API do Winsock 2.0 no MSDN.  
+Quando uma **SocketException** é gerada, a classe **SocketException** define a propriedade <xref:System.Net.Sockets.SocketException.ErrorCode%2A> com o último erro de soquete do sistema operacional ocorrido. Para obter mais informações sobre códigos de erro de soquete, consulte a documentação de códigos de erro da API do Winsock 2.0 no MSDN.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Fundamentos do tratamento de exceções](../../standard/exceptions/exception-handling-fundamentals.md)
+- [Tratando e gerando exceções no .NET](../../standard/exceptions/index.md)
 - [Solicitando dados](requesting-data.md)
