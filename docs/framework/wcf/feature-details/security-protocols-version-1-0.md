@@ -2,189 +2,189 @@
 title: Protocolos de segurança versão 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 71855b73bb08d5edef05747dcff9e1ac04fb951f
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: e22150d21638cffdf804008c32285f900bb1e263
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425092"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459047"
 ---
-# <a name="security-protocols-version-10"></a><span data-ttu-id="76c28-102">Protocolos de segurança versão 1.0</span><span class="sxs-lookup"><span data-stu-id="76c28-102">Security Protocols version 1.0</span></span>
-<span data-ttu-id="76c28-103">Os protocolos de segurança de serviços Web fornecem mecanismos de segurança de serviços Web que abrangem todos os empresariais existentes, requisitos de segurança de mensagens.</span><span class="sxs-lookup"><span data-stu-id="76c28-103">The Web Services Security Protocols provide Web services security mechanisms that cover all existing enterprise messaging security requirements.</span></span> <span data-ttu-id="76c28-104">Esta seção descreve os detalhes do Windows Communication Foundation (WCF) versão 1.0 (implementado de <xref:System.ServiceModel.Channels.SecurityBindingElement>) para protocolos de segurança de serviços da Web a seguir.</span><span class="sxs-lookup"><span data-stu-id="76c28-104">This section describes the Windows Communication Foundation (WCF) version 1.0 details (implemented in the <xref:System.ServiceModel.Channels.SecurityBindingElement>) for the following Web services security protocols.</span></span>  
+# <a name="security-protocols-version-10"></a><span data-ttu-id="82f52-102">Protocolos de segurança versão 1.0</span><span class="sxs-lookup"><span data-stu-id="82f52-102">Security Protocols version 1.0</span></span>
+<span data-ttu-id="82f52-103">Os protocolos especificação Web Services Security fornecem mecanismos de segurança de serviços da Web que abrangem todos os requisitos de segurança de mensagens empresariais existentes.</span><span class="sxs-lookup"><span data-stu-id="82f52-103">The Web Services Security Protocols provide Web services security mechanisms that cover all existing enterprise messaging security requirements.</span></span> <span data-ttu-id="82f52-104">Esta seção descreve os detalhes da versão 1,0 do Windows Communication Foundation (WCF) (implementados no <xref:System.ServiceModel.Channels.SecurityBindingElement>) para os seguintes protocolos de segurança de serviços da Web.</span><span class="sxs-lookup"><span data-stu-id="82f52-104">This section describes the Windows Communication Foundation (WCF) version 1.0 details (implemented in the <xref:System.ServiceModel.Channels.SecurityBindingElement>) for the following Web services security protocols.</span></span>  
   
-|<span data-ttu-id="76c28-105">Especificação/documento</span><span class="sxs-lookup"><span data-stu-id="76c28-105">Specification/Document</span></span>|<span data-ttu-id="76c28-106">Link</span><span class="sxs-lookup"><span data-stu-id="76c28-106">Link</span></span>|  
+|<span data-ttu-id="82f52-105">Especificação/documento</span><span class="sxs-lookup"><span data-stu-id="82f52-105">Specification/Document</span></span>|<span data-ttu-id="82f52-106">Link</span><span class="sxs-lookup"><span data-stu-id="82f52-106">Link</span></span>|  
 |-|-|  
-|<span data-ttu-id="76c28-107">WSS: Segurança de mensagem SOAP 1.0</span><span class="sxs-lookup"><span data-stu-id="76c28-107">WSS: SOAP Message Security 1.0</span></span>|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
-|<span data-ttu-id="76c28-108">WSS: Nome de usuário Token Profile 1.0</span><span class="sxs-lookup"><span data-stu-id="76c28-108">WSS: Username Token Profile 1.0</span></span>|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|<span data-ttu-id="76c28-109">WSS: X509 Token Profile 1.0</span><span class="sxs-lookup"><span data-stu-id="76c28-109">WSS: X509 Token Profile 1.0</span></span>|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
-|<span data-ttu-id="76c28-110">WSS: SAML 1.1 Token Profile 1.0</span><span class="sxs-lookup"><span data-stu-id="76c28-110">WSS: SAML 1.1 Token Profile 1.0</span></span>|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
-|<span data-ttu-id="76c28-111">WSS: Segurança de mensagem SOAP 1.1</span><span class="sxs-lookup"><span data-stu-id="76c28-111">WSS: SOAP Message Security 1.1</span></span>|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
-|<span data-ttu-id="76c28-112">Perfil de Token de nome de usuário 1.1 do WSS</span><span class="sxs-lookup"><span data-stu-id="76c28-112">WSS Username Token Profile 1.1</span></span>|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
-|<span data-ttu-id="76c28-113">WSS: Perfil de Token X.509 1.1</span><span class="sxs-lookup"><span data-stu-id="76c28-113">WSS: X.509 Token Profile 1.1</span></span>|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
-|<span data-ttu-id="76c28-114">WSS: Perfil de Token Kerberos 1.1</span><span class="sxs-lookup"><span data-stu-id="76c28-114">WSS: Kerberos Token Profile 1.1</span></span>|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
-|<span data-ttu-id="76c28-115">WSS: SAML 1.1 Profile 1.1 de Token</span><span class="sxs-lookup"><span data-stu-id="76c28-115">WSS: SAML 1.1 Token Profile 1.1</span></span>|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
-|<span data-ttu-id="76c28-116">WS-Secure Conversation</span><span class="sxs-lookup"><span data-stu-id="76c28-116">WS-Secure Conversation</span></span>|<http://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
-|<span data-ttu-id="76c28-117">WS-Trust</span><span class="sxs-lookup"><span data-stu-id="76c28-117">WS-Trust</span></span>|<http://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
-|<span data-ttu-id="76c28-118">Observação de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="76c28-118">Application Note:</span></span><br /><br /> <span data-ttu-id="76c28-119">Usando o WS-Trust para o Handshake TLS</span><span class="sxs-lookup"><span data-stu-id="76c28-119">Using WS-Trust for TLS Handshake</span></span>|<span data-ttu-id="76c28-120">Para serem publicados</span><span class="sxs-lookup"><span data-stu-id="76c28-120">To be published</span></span>|  
-|<span data-ttu-id="76c28-121">Observação de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="76c28-121">Application Note:</span></span><br /><br /> <span data-ttu-id="76c28-122">Usando o WS-Trust para SPNEGO</span><span class="sxs-lookup"><span data-stu-id="76c28-122">Using WS-Trust for SPNEGO</span></span>|<span data-ttu-id="76c28-123">Para serem publicados</span><span class="sxs-lookup"><span data-stu-id="76c28-123">To be published</span></span>|  
-|<span data-ttu-id="76c28-124">Observação de aplicativo:</span><span class="sxs-lookup"><span data-stu-id="76c28-124">Application Note:</span></span><br /><br /> <span data-ttu-id="76c28-125">Identidade e referências de endereçamento de ponto de extremidade de serviços Web</span><span class="sxs-lookup"><span data-stu-id="76c28-125">Web Services Addressing Endpoint References And Identity</span></span>|<span data-ttu-id="76c28-126">Para serem publicados</span><span class="sxs-lookup"><span data-stu-id="76c28-126">To be published</span></span>|  
-|<span data-ttu-id="76c28-127">O WS-SecurityPolicy 1.1</span><span class="sxs-lookup"><span data-stu-id="76c28-127">WS-SecurityPolicy 1.1</span></span><br /><br /> <span data-ttu-id="76c28-128">(2005/07)</span><span class="sxs-lookup"><span data-stu-id="76c28-128">(2005/07)</span></span>|<http://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> <span data-ttu-id="76c28-129">como corrigida por [errata](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) enviado ao OASIS WS-SX Technical Committee</span><span class="sxs-lookup"><span data-stu-id="76c28-129">as amended by [errata](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) submitted to OASIS WS-SX Technical Committee</span></span> |  
+|<span data-ttu-id="82f52-107">WSS: segurança de mensagem SOAP 1,0</span><span class="sxs-lookup"><span data-stu-id="82f52-107">WSS: SOAP Message Security 1.0</span></span>|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf>|
+|<span data-ttu-id="82f52-108">WSS: nome do perfil do token 1,0</span><span class="sxs-lookup"><span data-stu-id="82f52-108">WSS: Username Token Profile 1.0</span></span>|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|<span data-ttu-id="82f52-109">WSS: perfil de token X509 1,0</span><span class="sxs-lookup"><span data-stu-id="82f52-109">WSS: X509 Token Profile 1.0</span></span>|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf>|
+|<span data-ttu-id="82f52-110">WSS: perfil de token 1,1 SAML 1,0</span><span class="sxs-lookup"><span data-stu-id="82f52-110">WSS: SAML 1.1 Token Profile 1.0</span></span>|<https://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf>|
+|<span data-ttu-id="82f52-111">WSS: segurança de mensagem SOAP 1,1</span><span class="sxs-lookup"><span data-stu-id="82f52-111">WSS: SOAP Message Security 1.1</span></span>|<https://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf>|
+|<span data-ttu-id="82f52-112">Perfil de token de nome de usuário do WSS 1,1</span><span class="sxs-lookup"><span data-stu-id="82f52-112">WSS Username Token Profile 1.1</span></span>|<https://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf>|
+|<span data-ttu-id="82f52-113">WSS: X. 509 o perfil de token 1,1</span><span class="sxs-lookup"><span data-stu-id="82f52-113">WSS: X.509 Token Profile 1.1</span></span>|<https://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf>|
+|<span data-ttu-id="82f52-114">WSS: perfil de token Kerberos 1,1</span><span class="sxs-lookup"><span data-stu-id="82f52-114">WSS: Kerberos Token Profile 1.1</span></span>|<https://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf>|
+|<span data-ttu-id="82f52-115">WSS: perfil de token 1,1 SAML 1,1</span><span class="sxs-lookup"><span data-stu-id="82f52-115">WSS: SAML 1.1 Token Profile 1.1</span></span>|<https://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf>|
+|<span data-ttu-id="82f52-116">Conversa WS-Secure</span><span class="sxs-lookup"><span data-stu-id="82f52-116">WS-Secure Conversation</span></span>|<https://specs.xmlsoap.org/ws/2005/02/sc/WS-SecureConversation.pdf>|
+|<span data-ttu-id="82f52-117">WS-Trust</span><span class="sxs-lookup"><span data-stu-id="82f52-117">WS-Trust</span></span>|<https://specs.xmlsoap.org/ws/2005/02/trust/ws-trust.pdf>|
+|<span data-ttu-id="82f52-118">Observação do aplicativo:</span><span class="sxs-lookup"><span data-stu-id="82f52-118">Application Note:</span></span><br /><br /> <span data-ttu-id="82f52-119">Usando WS-Trust para handshake de TLS</span><span class="sxs-lookup"><span data-stu-id="82f52-119">Using WS-Trust for TLS Handshake</span></span>|<span data-ttu-id="82f52-120">A ser publicado</span><span class="sxs-lookup"><span data-stu-id="82f52-120">To be published</span></span>|  
+|<span data-ttu-id="82f52-121">Observação do aplicativo:</span><span class="sxs-lookup"><span data-stu-id="82f52-121">Application Note:</span></span><br /><br /> <span data-ttu-id="82f52-122">Usando WS-Trust para SPNEGO</span><span class="sxs-lookup"><span data-stu-id="82f52-122">Using WS-Trust for SPNEGO</span></span>|<span data-ttu-id="82f52-123">A ser publicado</span><span class="sxs-lookup"><span data-stu-id="82f52-123">To be published</span></span>|  
+|<span data-ttu-id="82f52-124">Observação do aplicativo:</span><span class="sxs-lookup"><span data-stu-id="82f52-124">Application Note:</span></span><br /><br /> <span data-ttu-id="82f52-125">Serviços Web que endereçam referências e identidades de ponto de extremidade</span><span class="sxs-lookup"><span data-stu-id="82f52-125">Web Services Addressing Endpoint References And Identity</span></span>|<span data-ttu-id="82f52-126">A ser publicado</span><span class="sxs-lookup"><span data-stu-id="82f52-126">To be published</span></span>|  
+|<span data-ttu-id="82f52-127">WS-SecurityPolicy 1,1</span><span class="sxs-lookup"><span data-stu-id="82f52-127">WS-SecurityPolicy 1.1</span></span><br /><br /> <span data-ttu-id="82f52-128">(2005/07)</span><span class="sxs-lookup"><span data-stu-id="82f52-128">(2005/07)</span></span>|<https://specs.xmlsoap.org/ws/2005/07/securitypolicy/ws-securitypolicy.pdf><br /><br /> <span data-ttu-id="82f52-129">conforme alterado por [errata](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) enviada para o comitê técnico WS-SX Oasis</span><span class="sxs-lookup"><span data-stu-id="82f52-129">as amended by [errata](https://lists.oasis-open.org/archives/ws-sx/200512/msg00017.html) submitted to OASIS WS-SX Technical Committee</span></span> |  
   
- <span data-ttu-id="76c28-130">O WCF, versão 1, oferece 17 modos de autenticação que podem ser usados como a base de configuração de segurança de serviços da Web.</span><span class="sxs-lookup"><span data-stu-id="76c28-130">WCF, version 1, provides 17 authentication modes that can be used as the basis for Web services security configuration.</span></span> <span data-ttu-id="76c28-131">Cada modo é otimizado para um conjunto comum de requisitos de implantação, tais como:</span><span class="sxs-lookup"><span data-stu-id="76c28-131">Each mode is optimized for a common set of deployment requirements, such as:</span></span>  
+ <span data-ttu-id="82f52-130">O WCF, versão 1, fornece 17 modos de autenticação que podem ser usados como base para a configuração de segurança de serviços Web.</span><span class="sxs-lookup"><span data-stu-id="82f52-130">WCF, version 1, provides 17 authentication modes that can be used as the basis for Web services security configuration.</span></span> <span data-ttu-id="82f52-131">Cada modo é otimizado para um conjunto comum de requisitos de implantação, como:</span><span class="sxs-lookup"><span data-stu-id="82f52-131">Each mode is optimized for a common set of deployment requirements, such as:</span></span>  
   
-- <span data-ttu-id="76c28-132">Credenciais usadas para autenticar o cliente e o serviço.</span><span class="sxs-lookup"><span data-stu-id="76c28-132">Credentials used to authenticate client and service.</span></span>  
+- <span data-ttu-id="82f52-132">Credenciais usadas para autenticar o cliente e o serviço.</span><span class="sxs-lookup"><span data-stu-id="82f52-132">Credentials used to authenticate client and service.</span></span>  
   
-- <span data-ttu-id="76c28-133">Mecanismos de proteção de segurança transporte ou de mensagem.</span><span class="sxs-lookup"><span data-stu-id="76c28-133">Message or transport security protection mechanisms.</span></span>  
+- <span data-ttu-id="82f52-133">Mecanismos de proteção de segurança de mensagens ou transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-133">Message or transport security protection mechanisms.</span></span>  
   
-- <span data-ttu-id="76c28-134">Padrões de troca de mensagem.</span><span class="sxs-lookup"><span data-stu-id="76c28-134">Message exchange patterns.</span></span>  
+- <span data-ttu-id="82f52-134">Padrões de troca de mensagens.</span><span class="sxs-lookup"><span data-stu-id="82f52-134">Message exchange patterns.</span></span>  
   
-|<span data-ttu-id="76c28-135">Modo de autenticação</span><span class="sxs-lookup"><span data-stu-id="76c28-135">Authentication Mode</span></span>|<span data-ttu-id="76c28-136">Autenticação de cliente</span><span class="sxs-lookup"><span data-stu-id="76c28-136">Client Authentication</span></span>|<span data-ttu-id="76c28-137">Autenticação de servidor</span><span class="sxs-lookup"><span data-stu-id="76c28-137">Server Authentication</span></span>|<span data-ttu-id="76c28-138">Modo</span><span class="sxs-lookup"><span data-stu-id="76c28-138">Mode</span></span>|  
+|<span data-ttu-id="82f52-135">Modo de autenticação</span><span class="sxs-lookup"><span data-stu-id="82f52-135">Authentication Mode</span></span>|<span data-ttu-id="82f52-136">Autenticação de cliente</span><span class="sxs-lookup"><span data-stu-id="82f52-136">Client Authentication</span></span>|<span data-ttu-id="82f52-137">Autenticação do servidor</span><span class="sxs-lookup"><span data-stu-id="82f52-137">Server Authentication</span></span>|<span data-ttu-id="82f52-138">Modo</span><span class="sxs-lookup"><span data-stu-id="82f52-138">Mode</span></span>|  
 |-------------------------|---------------------------|---------------------------|----------|  
-|<span data-ttu-id="76c28-139">UserNameOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-139">UserNameOverTransport</span></span>|<span data-ttu-id="76c28-140">Nome de usuário/senha</span><span class="sxs-lookup"><span data-stu-id="76c28-140">User name/password</span></span>|<span data-ttu-id="76c28-141">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-141">X509</span></span>|<span data-ttu-id="76c28-142">Transporte</span><span class="sxs-lookup"><span data-stu-id="76c28-142">Transport</span></span>|  
-|<span data-ttu-id="76c28-143">CertificateOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-143">CertificateOverTransport</span></span>|<span data-ttu-id="76c28-144">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-144">X509</span></span>|<span data-ttu-id="76c28-145">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-145">X509</span></span>|<span data-ttu-id="76c28-146">Transporte</span><span class="sxs-lookup"><span data-stu-id="76c28-146">Transport</span></span>|  
-|<span data-ttu-id="76c28-147">KerberosOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-147">KerberosOverTransport</span></span>|<span data-ttu-id="76c28-148">Windows</span><span class="sxs-lookup"><span data-stu-id="76c28-148">Windows</span></span>|<span data-ttu-id="76c28-149">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-149">X509</span></span>|<span data-ttu-id="76c28-150">Transporte</span><span class="sxs-lookup"><span data-stu-id="76c28-150">Transport</span></span>|  
-|<span data-ttu-id="76c28-151">IssuedTokenOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-151">IssuedTokenOverTransport</span></span>|<span data-ttu-id="76c28-152">Federado</span><span class="sxs-lookup"><span data-stu-id="76c28-152">Federated</span></span>|<span data-ttu-id="76c28-153">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-153">X509</span></span>|<span data-ttu-id="76c28-154">Transporte</span><span class="sxs-lookup"><span data-stu-id="76c28-154">Transport</span></span>|  
-|<span data-ttu-id="76c28-155">SspiNegotiatedOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-155">SspiNegotiatedOverTransport</span></span>|<span data-ttu-id="76c28-156">Sspi Windows negociado</span><span class="sxs-lookup"><span data-stu-id="76c28-156">Windows Sspi Negotiated</span></span>|<span data-ttu-id="76c28-157">Sspi Windows negociado</span><span class="sxs-lookup"><span data-stu-id="76c28-157">Windows Sspi Negotiated</span></span>|<span data-ttu-id="76c28-158">Transporte</span><span class="sxs-lookup"><span data-stu-id="76c28-158">Transport</span></span>|  
-|<span data-ttu-id="76c28-159">AnonymousForCertificate</span><span class="sxs-lookup"><span data-stu-id="76c28-159">AnonymousForCertificate</span></span>|<span data-ttu-id="76c28-160">Nenhum</span><span class="sxs-lookup"><span data-stu-id="76c28-160">None</span></span>|<span data-ttu-id="76c28-161">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-161">X509</span></span>|<span data-ttu-id="76c28-162">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-162">Message</span></span>|  
-|<span data-ttu-id="76c28-163">UserNameForCertificate</span><span class="sxs-lookup"><span data-stu-id="76c28-163">UserNameForCertificate</span></span>|<span data-ttu-id="76c28-164">Nome de usuário/senha</span><span class="sxs-lookup"><span data-stu-id="76c28-164">User name/password</span></span>|<span data-ttu-id="76c28-165">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-165">X509</span></span>|<span data-ttu-id="76c28-166">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-166">Message</span></span>|  
-|<span data-ttu-id="76c28-167">MutualCertificate</span><span class="sxs-lookup"><span data-stu-id="76c28-167">MutualCertificate</span></span>|<span data-ttu-id="76c28-168">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-168">X509</span></span>|<span data-ttu-id="76c28-169">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-169">X509</span></span>|<span data-ttu-id="76c28-170">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-170">Message</span></span>|  
-|<span data-ttu-id="76c28-171">MutualCertificateDuplex</span><span class="sxs-lookup"><span data-stu-id="76c28-171">MutualCertificateDuplex</span></span>|<span data-ttu-id="76c28-172">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-172">X509</span></span>|<span data-ttu-id="76c28-173">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-173">X509</span></span>|<span data-ttu-id="76c28-174">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-174">Message</span></span>|  
-|<span data-ttu-id="76c28-175">IssuedTokenForCertificate</span><span class="sxs-lookup"><span data-stu-id="76c28-175">IssuedTokenForCertificate</span></span>|<span data-ttu-id="76c28-176">Federado</span><span class="sxs-lookup"><span data-stu-id="76c28-176">Federated</span></span>|<span data-ttu-id="76c28-177">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-177">X509</span></span>|<span data-ttu-id="76c28-178">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-178">Message</span></span>|  
-|<span data-ttu-id="76c28-179">Kerberos</span><span class="sxs-lookup"><span data-stu-id="76c28-179">Kerberos</span></span>|<span data-ttu-id="76c28-180">Windows</span><span class="sxs-lookup"><span data-stu-id="76c28-180">Windows</span></span>|<span data-ttu-id="76c28-181">Windows</span><span class="sxs-lookup"><span data-stu-id="76c28-181">Windows</span></span>|<span data-ttu-id="76c28-182">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-182">Message</span></span>|  
-|<span data-ttu-id="76c28-183">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="76c28-183">IssuedToken</span></span>|<span data-ttu-id="76c28-184">Federado</span><span class="sxs-lookup"><span data-stu-id="76c28-184">Federated</span></span>|<span data-ttu-id="76c28-185">Federado</span><span class="sxs-lookup"><span data-stu-id="76c28-185">Federated</span></span>|<span data-ttu-id="76c28-186">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-186">Message</span></span>|  
-|<span data-ttu-id="76c28-187">SspiNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-187">SspiNegotiated</span></span>|<span data-ttu-id="76c28-188">Sspi Windows negociado</span><span class="sxs-lookup"><span data-stu-id="76c28-188">Windows Sspi Negotiated</span></span>|<span data-ttu-id="76c28-189">Sspi Windows negociado</span><span class="sxs-lookup"><span data-stu-id="76c28-189">Windows Sspi Negotiated</span></span>|<span data-ttu-id="76c28-190">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-190">Message</span></span>|  
-|<span data-ttu-id="76c28-191">AnonymousForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-191">AnonymousForSslNegotiated</span></span>|<span data-ttu-id="76c28-192">Nenhum</span><span class="sxs-lookup"><span data-stu-id="76c28-192">None</span></span>|<span data-ttu-id="76c28-193">X509, TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="76c28-193">X509, TLS-Nego</span></span>|<span data-ttu-id="76c28-194">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-194">Message</span></span>|  
-|<span data-ttu-id="76c28-195">UserNameForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-195">UserNameForSslNegotiated</span></span>|<span data-ttu-id="76c28-196">Nome de usuário/senha</span><span class="sxs-lookup"><span data-stu-id="76c28-196">User name/password</span></span>|<span data-ttu-id="76c28-197">X509, TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="76c28-197">X509, TLS-Nego</span></span>|<span data-ttu-id="76c28-198">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-198">Message</span></span>|  
-|<span data-ttu-id="76c28-199">MutualSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-199">MutualSslNegotiated</span></span>|<span data-ttu-id="76c28-200">X509</span><span class="sxs-lookup"><span data-stu-id="76c28-200">X509</span></span>|<span data-ttu-id="76c28-201">X509, TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="76c28-201">X509, TLS-Nego</span></span>|<span data-ttu-id="76c28-202">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-202">Message</span></span>|  
-|<span data-ttu-id="76c28-203">IssuedTokenForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-203">IssuedTokenForSslNegotiated</span></span>|<span data-ttu-id="76c28-204">Federado</span><span class="sxs-lookup"><span data-stu-id="76c28-204">Federated</span></span>|<span data-ttu-id="76c28-205">X509, TLS-Nego</span><span class="sxs-lookup"><span data-stu-id="76c28-205">X509, TLS-Nego</span></span>|<span data-ttu-id="76c28-206">Mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-206">Message</span></span>|  
+|<span data-ttu-id="82f52-139">UserNameOverTransport</span><span class="sxs-lookup"><span data-stu-id="82f52-139">UserNameOverTransport</span></span>|<span data-ttu-id="82f52-140">Nome de usuário/senha</span><span class="sxs-lookup"><span data-stu-id="82f52-140">User name/password</span></span>|<span data-ttu-id="82f52-141">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-141">X509</span></span>|<span data-ttu-id="82f52-142">Porta</span><span class="sxs-lookup"><span data-stu-id="82f52-142">Transport</span></span>|  
+|<span data-ttu-id="82f52-143">CertificateOverTransport</span><span class="sxs-lookup"><span data-stu-id="82f52-143">CertificateOverTransport</span></span>|<span data-ttu-id="82f52-144">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-144">X509</span></span>|<span data-ttu-id="82f52-145">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-145">X509</span></span>|<span data-ttu-id="82f52-146">Porta</span><span class="sxs-lookup"><span data-stu-id="82f52-146">Transport</span></span>|  
+|<span data-ttu-id="82f52-147">KerberosOverTransport</span><span class="sxs-lookup"><span data-stu-id="82f52-147">KerberosOverTransport</span></span>|<span data-ttu-id="82f52-148">Windows</span><span class="sxs-lookup"><span data-stu-id="82f52-148">Windows</span></span>|<span data-ttu-id="82f52-149">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-149">X509</span></span>|<span data-ttu-id="82f52-150">Porta</span><span class="sxs-lookup"><span data-stu-id="82f52-150">Transport</span></span>|  
+|<span data-ttu-id="82f52-151">IssuedTokenOverTransport</span><span class="sxs-lookup"><span data-stu-id="82f52-151">IssuedTokenOverTransport</span></span>|<span data-ttu-id="82f52-152">Federado</span><span class="sxs-lookup"><span data-stu-id="82f52-152">Federated</span></span>|<span data-ttu-id="82f52-153">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-153">X509</span></span>|<span data-ttu-id="82f52-154">Porta</span><span class="sxs-lookup"><span data-stu-id="82f52-154">Transport</span></span>|  
+|<span data-ttu-id="82f52-155">SspiNegotiatedOverTransport</span><span class="sxs-lookup"><span data-stu-id="82f52-155">SspiNegotiatedOverTransport</span></span>|<span data-ttu-id="82f52-156">Windows SSPI negociado</span><span class="sxs-lookup"><span data-stu-id="82f52-156">Windows Sspi Negotiated</span></span>|<span data-ttu-id="82f52-157">Windows SSPI negociado</span><span class="sxs-lookup"><span data-stu-id="82f52-157">Windows Sspi Negotiated</span></span>|<span data-ttu-id="82f52-158">Porta</span><span class="sxs-lookup"><span data-stu-id="82f52-158">Transport</span></span>|  
+|<span data-ttu-id="82f52-159">AnonymousForCertificate</span><span class="sxs-lookup"><span data-stu-id="82f52-159">AnonymousForCertificate</span></span>|<span data-ttu-id="82f52-160">Nenhum</span><span class="sxs-lookup"><span data-stu-id="82f52-160">None</span></span>|<span data-ttu-id="82f52-161">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-161">X509</span></span>|<span data-ttu-id="82f52-162">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-162">Message</span></span>|  
+|<span data-ttu-id="82f52-163">UserNameForCertificate</span><span class="sxs-lookup"><span data-stu-id="82f52-163">UserNameForCertificate</span></span>|<span data-ttu-id="82f52-164">Nome de usuário/senha</span><span class="sxs-lookup"><span data-stu-id="82f52-164">User name/password</span></span>|<span data-ttu-id="82f52-165">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-165">X509</span></span>|<span data-ttu-id="82f52-166">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-166">Message</span></span>|  
+|<span data-ttu-id="82f52-167">MutualCertificate</span><span class="sxs-lookup"><span data-stu-id="82f52-167">MutualCertificate</span></span>|<span data-ttu-id="82f52-168">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-168">X509</span></span>|<span data-ttu-id="82f52-169">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-169">X509</span></span>|<span data-ttu-id="82f52-170">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-170">Message</span></span>|  
+|<span data-ttu-id="82f52-171">MutualCertificateDuplex</span><span class="sxs-lookup"><span data-stu-id="82f52-171">MutualCertificateDuplex</span></span>|<span data-ttu-id="82f52-172">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-172">X509</span></span>|<span data-ttu-id="82f52-173">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-173">X509</span></span>|<span data-ttu-id="82f52-174">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-174">Message</span></span>|  
+|<span data-ttu-id="82f52-175">IssuedTokenForCertificate</span><span class="sxs-lookup"><span data-stu-id="82f52-175">IssuedTokenForCertificate</span></span>|<span data-ttu-id="82f52-176">Federado</span><span class="sxs-lookup"><span data-stu-id="82f52-176">Federated</span></span>|<span data-ttu-id="82f52-177">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-177">X509</span></span>|<span data-ttu-id="82f52-178">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-178">Message</span></span>|  
+|<span data-ttu-id="82f52-179">Kerberos</span><span class="sxs-lookup"><span data-stu-id="82f52-179">Kerberos</span></span>|<span data-ttu-id="82f52-180">Windows</span><span class="sxs-lookup"><span data-stu-id="82f52-180">Windows</span></span>|<span data-ttu-id="82f52-181">Windows</span><span class="sxs-lookup"><span data-stu-id="82f52-181">Windows</span></span>|<span data-ttu-id="82f52-182">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-182">Message</span></span>|  
+|<span data-ttu-id="82f52-183">IssuedToken</span><span class="sxs-lookup"><span data-stu-id="82f52-183">IssuedToken</span></span>|<span data-ttu-id="82f52-184">Federado</span><span class="sxs-lookup"><span data-stu-id="82f52-184">Federated</span></span>|<span data-ttu-id="82f52-185">Federado</span><span class="sxs-lookup"><span data-stu-id="82f52-185">Federated</span></span>|<span data-ttu-id="82f52-186">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-186">Message</span></span>|  
+|<span data-ttu-id="82f52-187">SspiNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-187">SspiNegotiated</span></span>|<span data-ttu-id="82f52-188">Windows SSPI negociado</span><span class="sxs-lookup"><span data-stu-id="82f52-188">Windows Sspi Negotiated</span></span>|<span data-ttu-id="82f52-189">Windows SSPI negociado</span><span class="sxs-lookup"><span data-stu-id="82f52-189">Windows Sspi Negotiated</span></span>|<span data-ttu-id="82f52-190">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-190">Message</span></span>|  
+|<span data-ttu-id="82f52-191">AnonymousForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-191">AnonymousForSslNegotiated</span></span>|<span data-ttu-id="82f52-192">Nenhum</span><span class="sxs-lookup"><span data-stu-id="82f52-192">None</span></span>|<span data-ttu-id="82f52-193">X509, TLS-nego</span><span class="sxs-lookup"><span data-stu-id="82f52-193">X509, TLS-Nego</span></span>|<span data-ttu-id="82f52-194">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-194">Message</span></span>|  
+|<span data-ttu-id="82f52-195">UserNameForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-195">UserNameForSslNegotiated</span></span>|<span data-ttu-id="82f52-196">Nome de usuário/senha</span><span class="sxs-lookup"><span data-stu-id="82f52-196">User name/password</span></span>|<span data-ttu-id="82f52-197">X509, TLS-nego</span><span class="sxs-lookup"><span data-stu-id="82f52-197">X509, TLS-Nego</span></span>|<span data-ttu-id="82f52-198">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-198">Message</span></span>|  
+|<span data-ttu-id="82f52-199">MutualSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-199">MutualSslNegotiated</span></span>|<span data-ttu-id="82f52-200">X509</span><span class="sxs-lookup"><span data-stu-id="82f52-200">X509</span></span>|<span data-ttu-id="82f52-201">X509, TLS-nego</span><span class="sxs-lookup"><span data-stu-id="82f52-201">X509, TLS-Nego</span></span>|<span data-ttu-id="82f52-202">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-202">Message</span></span>|  
+|<span data-ttu-id="82f52-203">IssuedTokenForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-203">IssuedTokenForSslNegotiated</span></span>|<span data-ttu-id="82f52-204">Federado</span><span class="sxs-lookup"><span data-stu-id="82f52-204">Federated</span></span>|<span data-ttu-id="82f52-205">X509, TLS-nego</span><span class="sxs-lookup"><span data-stu-id="82f52-205">X509, TLS-Nego</span></span>|<span data-ttu-id="82f52-206">Mensagem</span><span class="sxs-lookup"><span data-stu-id="82f52-206">Message</span></span>|  
   
- <span data-ttu-id="76c28-207">Pontos de extremidade usando esses modos de autenticação podem expressar seus requisitos de segurança usando o WS-SecurityPolicy (WS-SP).</span><span class="sxs-lookup"><span data-stu-id="76c28-207">Endpoints using such authentication modes can express their security requirements using WS-SecurityPolicy (WS-SP).</span></span> <span data-ttu-id="76c28-208">Este documento descreve a estrutura de cabeçalho de segurança e as mensagens de infraestrutura para cada modo de autenticação e fornece exemplos de políticas e mensagens.</span><span class="sxs-lookup"><span data-stu-id="76c28-208">This document describes the structure of security header and infrastructure messages for each authentication mode and provides examples of policies and messages.</span></span>  
+ <span data-ttu-id="82f52-207">Os pontos de extremidade que usam esses modos de autenticação podem expressar seus requisitos de segurança usando WS-SecurityPolicy (WS-SP).</span><span class="sxs-lookup"><span data-stu-id="82f52-207">Endpoints using such authentication modes can express their security requirements using WS-SecurityPolicy (WS-SP).</span></span> <span data-ttu-id="82f52-208">Este documento descreve a estrutura de mensagens de cabeçalho e de infraestrutura de segurança para cada modo de autenticação e fornece exemplos de políticas e mensagens.</span><span class="sxs-lookup"><span data-stu-id="82f52-208">This document describes the structure of security header and infrastructure messages for each authentication mode and provides examples of policies and messages.</span></span>  
   
- <span data-ttu-id="76c28-209">WCF aproveita o WS-SecureConversation para oferecer suportam a sessões seguras para proteger as trocas de várias mensagens entre aplicativos.</span><span class="sxs-lookup"><span data-stu-id="76c28-209">WCF leverages WS-SecureConversation to provide secure sessions support to protect multi-message exchanges between applications.</span></span>  <span data-ttu-id="76c28-210">Consulte "Secure sessões" abaixo para obter detalhes de implementação.</span><span class="sxs-lookup"><span data-stu-id="76c28-210">See "Secure Sessions" below for implementation details.</span></span>  
+ <span data-ttu-id="82f52-209">O WCF aproveita o WS-SecureConversation para fornecer suporte a sessões seguras para proteger as trocas de várias mensagens entre aplicativos.</span><span class="sxs-lookup"><span data-stu-id="82f52-209">WCF leverages WS-SecureConversation to provide secure sessions support to protect multi-message exchanges between applications.</span></span>  <span data-ttu-id="82f52-210">Consulte "sessões seguras" abaixo para obter detalhes de implementação.</span><span class="sxs-lookup"><span data-stu-id="82f52-210">See "Secure Sessions" below for implementation details.</span></span>  
   
- <span data-ttu-id="76c28-211">Além dos modos de autenticação, o WCF fornece as configurações para controlar os mecanismos de proteção comuns que se aplicam à maioria dos modos de autenticação com base em segurança de mensagem, por exemplo: ordem de assinatura versus operações de criptografia, conjuntos de algoritmo, derivação de chave e a confirmação de assinatura.</span><span class="sxs-lookup"><span data-stu-id="76c28-211">In addition to authentication modes, WCF provides settings to control common protection mechanisms that apply to most message security-based authentication modes, for example: order of signature versus encryption operations, algorithm suites, key derivation, and signature confirmation.</span></span>  
+ <span data-ttu-id="82f52-211">Além dos modos de autenticação, o WCF fornece configurações para controlar mecanismos de proteção comuns que se aplicam à maioria dos modos de autenticação baseados em segurança de mensagem, por exemplo: ordem de assinatura versus operações de criptografia, conjuntos de algoritmos, derivação de chave e confirmação de assinatura.</span><span class="sxs-lookup"><span data-stu-id="82f52-211">In addition to authentication modes, WCF provides settings to control common protection mechanisms that apply to most message security-based authentication modes, for example: order of signature versus encryption operations, algorithm suites, key derivation, and signature confirmation.</span></span>  
   
- <span data-ttu-id="76c28-212">Os prefixos e namespaces a seguir são usados neste documento.</span><span class="sxs-lookup"><span data-stu-id="76c28-212">The following prefixes and namespaces are used in this document.</span></span>  
+ <span data-ttu-id="82f52-212">Os seguintes prefixos e namespaces são usados neste documento.</span><span class="sxs-lookup"><span data-stu-id="82f52-212">The following prefixes and namespaces are used in this document.</span></span>  
   
-|<span data-ttu-id="76c28-213">Prefixo</span><span class="sxs-lookup"><span data-stu-id="76c28-213">Prefix</span></span>|<span data-ttu-id="76c28-214">Namespace</span><span class="sxs-lookup"><span data-stu-id="76c28-214">Namespace</span></span>|  
+|<span data-ttu-id="82f52-213">Prefixo</span><span class="sxs-lookup"><span data-stu-id="82f52-213">Prefix</span></span>|<span data-ttu-id="82f52-214">espaço de nome</span><span class="sxs-lookup"><span data-stu-id="82f52-214">Namespace</span></span>|  
 |------------|---------------|  
-|<span data-ttu-id="76c28-215">s</span><span class="sxs-lookup"><span data-stu-id="76c28-215">s</span></span>|<https://www.w3.org/2003/05/soap-envelope/>|
-|<span data-ttu-id="76c28-216">sp</span><span class="sxs-lookup"><span data-stu-id="76c28-216">sp</span></span>|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/>|
-|<span data-ttu-id="76c28-217">a</span><span class="sxs-lookup"><span data-stu-id="76c28-217">a</span></span>|<https://www.w3.org/2005/08/addressing>|  
-|<span data-ttu-id="76c28-218">wsse</span><span class="sxs-lookup"><span data-stu-id="76c28-218">wsse</span></span>|<span data-ttu-id="76c28-219">TBD – OASIS WSS 1.0 URI</span><span class="sxs-lookup"><span data-stu-id="76c28-219">TBD – OASIS WSS 1.0 URI</span></span>|  
-|<span data-ttu-id="76c28-220">wsse11</span><span class="sxs-lookup"><span data-stu-id="76c28-220">wsse11</span></span>|<span data-ttu-id="76c28-221">TBD – OASIS WSS 1.1 URI</span><span class="sxs-lookup"><span data-stu-id="76c28-221">TBD – OASIS WSS 1.1 URI</span></span>|  
-|<span data-ttu-id="76c28-222">wsu</span><span class="sxs-lookup"><span data-stu-id="76c28-222">wsu</span></span>|<span data-ttu-id="76c28-223">TBD – OASIS WSS 1.0 utilitário URI</span><span class="sxs-lookup"><span data-stu-id="76c28-223">TBD – OASIS WSS 1.0 Utility URI</span></span>|  
-|<span data-ttu-id="76c28-224">ds</span><span class="sxs-lookup"><span data-stu-id="76c28-224">ds</span></span>|<span data-ttu-id="76c28-225">TBD – W3C XMLDSig URI</span><span class="sxs-lookup"><span data-stu-id="76c28-225">TBD – W3C XMLDSig URI</span></span>|  
-|<span data-ttu-id="76c28-226">wst</span><span class="sxs-lookup"><span data-stu-id="76c28-226">wst</span></span>|<span data-ttu-id="76c28-227">TBD – WS-Trust 2005/02 URI</span><span class="sxs-lookup"><span data-stu-id="76c28-227">TBD – WS-Trust 2005/02 URI</span></span>|  
-|<span data-ttu-id="76c28-228">wssc</span><span class="sxs-lookup"><span data-stu-id="76c28-228">wssc</span></span>|<span data-ttu-id="76c28-229">TBD – URI de 2005 do WS-SecureConversation/02</span><span class="sxs-lookup"><span data-stu-id="76c28-229">TBD – WS-SecureConversation 2005/02 URI</span></span>|  
-|<span data-ttu-id="76c28-230">wsaw</span><span class="sxs-lookup"><span data-stu-id="76c28-230">wsaw</span></span>|<span data-ttu-id="76c28-231">TBD - namespace WS-Addressing de política</span><span class="sxs-lookup"><span data-stu-id="76c28-231">TBD - WS-Addressing policy namespace</span></span>|  
-|<span data-ttu-id="76c28-232">wsp</span><span class="sxs-lookup"><span data-stu-id="76c28-232">wsp</span></span>|<http://schemas.xmlsoap.org/ws/2004/09/policy>|  
-|<span data-ttu-id="76c28-233">mssp</span><span class="sxs-lookup"><span data-stu-id="76c28-233">mssp</span></span>|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
+|<span data-ttu-id="82f52-215">s</span><span class="sxs-lookup"><span data-stu-id="82f52-215">s</span></span>|<http://www.w3.org/2003/05/soap-envelope/>|
+|<span data-ttu-id="82f52-216">SP3</span><span class="sxs-lookup"><span data-stu-id="82f52-216">sp</span></span>|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/>|
+|<span data-ttu-id="82f52-217">a</span><span class="sxs-lookup"><span data-stu-id="82f52-217">a</span></span>|<http://www.w3.org/2005/08/addressing>|  
+|<span data-ttu-id="82f52-218">wsse</span><span class="sxs-lookup"><span data-stu-id="82f52-218">wsse</span></span>|<span data-ttu-id="82f52-219">TBD – OASIS WSS 1,0 URI</span><span class="sxs-lookup"><span data-stu-id="82f52-219">TBD – OASIS WSS 1.0 URI</span></span>|  
+|<span data-ttu-id="82f52-220">wsse11</span><span class="sxs-lookup"><span data-stu-id="82f52-220">wsse11</span></span>|<span data-ttu-id="82f52-221">TBD – OASIS WSS 1,1 URI</span><span class="sxs-lookup"><span data-stu-id="82f52-221">TBD – OASIS WSS 1.1 URI</span></span>|  
+|<span data-ttu-id="82f52-222">wsu</span><span class="sxs-lookup"><span data-stu-id="82f52-222">wsu</span></span>|<span data-ttu-id="82f52-223">TBD – URI do utilitário do WSS 1,0 OASIS</span><span class="sxs-lookup"><span data-stu-id="82f52-223">TBD – OASIS WSS 1.0 Utility URI</span></span>|  
+|<span data-ttu-id="82f52-224">AD</span><span class="sxs-lookup"><span data-stu-id="82f52-224">ds</span></span>|<span data-ttu-id="82f52-225">TBD – URI de XMLDSig do W3C</span><span class="sxs-lookup"><span data-stu-id="82f52-225">TBD – W3C XMLDSig URI</span></span>|  
+|<span data-ttu-id="82f52-226">WST</span><span class="sxs-lookup"><span data-stu-id="82f52-226">wst</span></span>|<span data-ttu-id="82f52-227">TBD – URI do WS-Trust 2005/02</span><span class="sxs-lookup"><span data-stu-id="82f52-227">TBD – WS-Trust 2005/02 URI</span></span>|  
+|<span data-ttu-id="82f52-228">wssc</span><span class="sxs-lookup"><span data-stu-id="82f52-228">wssc</span></span>|<span data-ttu-id="82f52-229">TBD – WS-SecureConversation 2005/02 URI</span><span class="sxs-lookup"><span data-stu-id="82f52-229">TBD – WS-SecureConversation 2005/02 URI</span></span>|  
+|<span data-ttu-id="82f52-230">wsaw</span><span class="sxs-lookup"><span data-stu-id="82f52-230">wsaw</span></span>|<span data-ttu-id="82f52-231">TBD-namespace de política de WS-Addressing</span><span class="sxs-lookup"><span data-stu-id="82f52-231">TBD - WS-Addressing policy namespace</span></span>|  
+|<span data-ttu-id="82f52-232">WSP</span><span class="sxs-lookup"><span data-stu-id="82f52-232">wsp</span></span>|<http://schemas.xmlsoap.org/ws/2004/09/policy>|  
+|<span data-ttu-id="82f52-233">mssp</span><span class="sxs-lookup"><span data-stu-id="82f52-233">mssp</span></span>|<http://schemas.xmlsoap.org/ws/2005/07/securitypolicy>|
   
-## <a name="1-token-profiles"></a><span data-ttu-id="76c28-234">1. Perfis de token</span><span class="sxs-lookup"><span data-stu-id="76c28-234">1. Token Profiles</span></span>  
- <span data-ttu-id="76c28-235">Especificações de segurança de serviços da Web representam credencial como tokens de segurança.</span><span class="sxs-lookup"><span data-stu-id="76c28-235">Web Services Security specifications represent credential as security tokens.</span></span> <span data-ttu-id="76c28-236">O WCF suporta os seguintes tipos de token:</span><span class="sxs-lookup"><span data-stu-id="76c28-236">WCF supports the following token types:</span></span>  
+## <a name="1-token-profiles"></a><span data-ttu-id="82f52-234">1. perfis de token</span><span class="sxs-lookup"><span data-stu-id="82f52-234">1. Token Profiles</span></span>  
+ <span data-ttu-id="82f52-235">As especificações de especificação Web Services Security representam credenciais como tokens de segurança.</span><span class="sxs-lookup"><span data-stu-id="82f52-235">Web Services Security specifications represent credential as security tokens.</span></span> <span data-ttu-id="82f52-236">O WCF dá suporte aos seguintes tipos de token:</span><span class="sxs-lookup"><span data-stu-id="82f52-236">WCF supports the following token types:</span></span>  
   
-### <a name="11-usernametoken"></a><span data-ttu-id="76c28-237">1.1 UsernameToken</span><span class="sxs-lookup"><span data-stu-id="76c28-237">1.1 UsernameToken</span></span>  
- <span data-ttu-id="76c28-238">WCF segue UsernameToken10 e UsernameToken11 perfis com as seguintes restrições:</span><span class="sxs-lookup"><span data-stu-id="76c28-238">WCF follows UsernameToken10 and UsernameToken11 profiles with the following constraints:</span></span>  
+### <a name="11-usernametoken"></a><span data-ttu-id="82f52-237">UsernameToken 1,1</span><span class="sxs-lookup"><span data-stu-id="82f52-237">1.1 UsernameToken</span></span>  
+ <span data-ttu-id="82f52-238">O WCF segue os perfis UsernameToken10 e UsernameToken11 com as seguintes restrições:</span><span class="sxs-lookup"><span data-stu-id="82f52-238">WCF follows UsernameToken10 and UsernameToken11 profiles with the following constraints:</span></span>  
   
- <span data-ttu-id="76c28-239">R1101 PasswordType atributo no elemento UsernameToken\Password deve ser omitido ou tem valor #PasswordText (padrão).</span><span class="sxs-lookup"><span data-stu-id="76c28-239">R1101 PasswordType attribute on UsernameToken\Password element MUST be either omitted or have value #PasswordText (default).</span></span>  
+ <span data-ttu-id="82f52-239">O atributo R1101 Passwordtype no elemento UsernameToken\Password deve ser omitido ou ter um valor #PasswordText (padrão).</span><span class="sxs-lookup"><span data-stu-id="82f52-239">R1101 PasswordType attribute on UsernameToken\Password element MUST be either omitted or have value #PasswordText (default).</span></span>  
   
- <span data-ttu-id="76c28-240">O #PasswordDigest usando a extensibilidade podem ser implementados.</span><span class="sxs-lookup"><span data-stu-id="76c28-240">One can implement the #PasswordDigest using extensibility.</span></span> <span data-ttu-id="76c28-241">Foi observado que #PasswordDigest geralmente estava errada para ser um mecanismo de proteção de senha segura o suficiente.</span><span class="sxs-lookup"><span data-stu-id="76c28-241">It has been observed that #PasswordDigest was often mistaken to be a secure enough password protection mechanism.</span></span> <span data-ttu-id="76c28-242">Mas #PasswordDigest não pode servir como um substituto para a criptografia de UsernameToken.</span><span class="sxs-lookup"><span data-stu-id="76c28-242">But #PasswordDigest cannot serve as a substitute for encryption of the UsernameToken.</span></span> <span data-ttu-id="76c28-243">O objetivo principal do #PasswordDigest é a proteção contra ataques de repetição.</span><span class="sxs-lookup"><span data-stu-id="76c28-243">The primary goal of #PasswordDigest is protection against replay attacks.</span></span> <span data-ttu-id="76c28-244">Nos modos de autenticação do WCF, ameaças de ataques de reprodução são atenuadas usando as assinaturas de mensagem.</span><span class="sxs-lookup"><span data-stu-id="76c28-244">In WCF authentication modes, replay attack threats are mitigated by using message signatures.</span></span>  
+ <span data-ttu-id="82f52-240">Uma delas pode implementar o #PasswordDigest usando a extensibilidade.</span><span class="sxs-lookup"><span data-stu-id="82f52-240">One can implement the #PasswordDigest using extensibility.</span></span> <span data-ttu-id="82f52-241">Foi observado que #PasswordDigest muitas vezes estava confundido como um mecanismo seguro de proteção de senha.</span><span class="sxs-lookup"><span data-stu-id="82f52-241">It has been observed that #PasswordDigest was often mistaken to be a secure enough password protection mechanism.</span></span> <span data-ttu-id="82f52-242">Mas #PasswordDigest não pode servir como um substituto para a criptografia do UsernameToken.</span><span class="sxs-lookup"><span data-stu-id="82f52-242">But #PasswordDigest cannot serve as a substitute for encryption of the UsernameToken.</span></span> <span data-ttu-id="82f52-243">O objetivo principal do #PasswordDigest é a proteção contra ataques de repetição.</span><span class="sxs-lookup"><span data-stu-id="82f52-243">The primary goal of #PasswordDigest is protection against replay attacks.</span></span> <span data-ttu-id="82f52-244">Nos modos de autenticação do WCF, a reprodução de ameaças de ataque é atenuada usando assinaturas de mensagens.</span><span class="sxs-lookup"><span data-stu-id="82f52-244">In WCF authentication modes, replay attack threats are mitigated by using message signatures.</span></span>  
   
- <span data-ttu-id="76c28-245">WCF B1102 nunca emite Nonce e criado subelementos UsernameToken.</span><span class="sxs-lookup"><span data-stu-id="76c28-245">B1102 WCF never emits Nonce and Created sub-elements of the UsernameToken.</span></span>  
+ <span data-ttu-id="82f52-245">O WCF B1102 nunca emite um nonce e cria subelementos do UsernameToken.</span><span class="sxs-lookup"><span data-stu-id="82f52-245">B1102 WCF never emits Nonce and Created sub-elements of the UsernameToken.</span></span>  
   
- <span data-ttu-id="76c28-246">Esses subelementos destinam-se a ajudar a detecção de reprodução.</span><span class="sxs-lookup"><span data-stu-id="76c28-246">These sub-elements are intended to help replay detection.</span></span> <span data-ttu-id="76c28-247">Em vez disso, o WCF usa assinaturas de mensagem.</span><span class="sxs-lookup"><span data-stu-id="76c28-247">WCF uses message signatures instead.</span></span>  
+ <span data-ttu-id="82f52-246">Esses subelementos destinam-se a ajudar a detecção de reprodução.</span><span class="sxs-lookup"><span data-stu-id="82f52-246">These sub-elements are intended to help replay detection.</span></span> <span data-ttu-id="82f52-247">Em vez disso, o WCF usa assinaturas de mensagens.</span><span class="sxs-lookup"><span data-stu-id="82f52-247">WCF uses message signatures instead.</span></span>  
   
- <span data-ttu-id="76c28-248">OASIS WSS SOAP mensagem Security UsernameToken Profile 1.1 (UsernameToken11) introduziu a derivação de chave de recurso de senha.</span><span class="sxs-lookup"><span data-stu-id="76c28-248">OASIS WSS SOAP Message Security UsernameToken Profile 1.1 (UsernameToken11) introduced key derivation from password feature.</span></span>  
+ <span data-ttu-id="82f52-248">O perfil de UsernameToken de segurança de mensagem SOAP do WSS 1,1 (UsernameToken11) introduziu a derivação de chave do recurso de senha.</span><span class="sxs-lookup"><span data-stu-id="82f52-248">OASIS WSS SOAP Message Security UsernameToken Profile 1.1 (UsernameToken11) introduced key derivation from password feature.</span></span>  
   
- <span data-ttu-id="76c28-249">B1103 UsernameToken senha não deve ser usada para derivação de chave e, portanto, para operações criptográficas.</span><span class="sxs-lookup"><span data-stu-id="76c28-249">B1103 UsernameToken password MUST not be used for key derivation and therefore for cryptographic operations.</span></span>  
+ <span data-ttu-id="82f52-249">A senha do UsernameToken B1103 não deve ser usada para a derivação de chave e, portanto, para operações criptográficas.</span><span class="sxs-lookup"><span data-stu-id="82f52-249">B1103 UsernameToken password MUST not be used for key derivation and therefore for cryptographic operations.</span></span>  
   
- <span data-ttu-id="76c28-250">Lógica: as senhas são geralmente consideradas muito fracas para ser usado para operações de criptografia.</span><span class="sxs-lookup"><span data-stu-id="76c28-250">Rationale: passwords are generally considered too weak to be used for cryptographic operations.</span></span>  
+ <span data-ttu-id="82f52-250">Lógica: as senhas geralmente são consideradas muito fracas para serem usadas para operações criptográficas.</span><span class="sxs-lookup"><span data-stu-id="82f52-250">Rationale: passwords are generally considered too weak to be used for cryptographic operations.</span></span>  
   
-### <a name="12-x509-token"></a><span data-ttu-id="76c28-251">1.2 x 509 Token</span><span class="sxs-lookup"><span data-stu-id="76c28-251">1.2 X509 Token</span></span>  
- <span data-ttu-id="76c28-252">O WCF oferece suporte a certificados X509v3 como um tipo de credencial e segue X509TokenProfile1.0 e X509TokenProfile1.1 com as seguintes restrições:</span><span class="sxs-lookup"><span data-stu-id="76c28-252">WCF supports X509v3 certificates as a credential type and follows X509TokenProfile1.0 and X509TokenProfile1.1 with the following constraints:</span></span>  
+### <a name="12-x509-token"></a><span data-ttu-id="82f52-251">1,2 token X509</span><span class="sxs-lookup"><span data-stu-id="82f52-251">1.2 X509 Token</span></span>  
+ <span data-ttu-id="82f52-252">O WCF dá suporte a certificados X509v3 como um tipo de credencial e segue o X509TokenProfile 1.0 e o X509TokenProfile 1.1 com as seguintes restrições:</span><span class="sxs-lookup"><span data-stu-id="82f52-252">WCF supports X509v3 certificates as a credential type and follows X509TokenProfile1.0 and X509TokenProfile1.1 with the following constraints:</span></span>  
   
- <span data-ttu-id="76c28-253">ValueType de R1201 o atributo no elemento BinarySecurityToken deve ter valor #X509v3 quando ela contém um certificado de X509v3.</span><span class="sxs-lookup"><span data-stu-id="76c28-253">R1201 The ValueType attribute on the BinarySecurityToken element must have value #X509v3 when it contains an X509v3 certificate.</span></span>  
+ <span data-ttu-id="82f52-253">R1201 o atributo ValueType no elemento BinarySecurityToken deve ter valor #X509v3 quando ele contiver um certificado X509v3.</span><span class="sxs-lookup"><span data-stu-id="82f52-253">R1201 The ValueType attribute on the BinarySecurityToken element must have value #X509v3 when it contains an X509v3 certificate.</span></span>  
   
- <span data-ttu-id="76c28-254">O WSS X509 Token Profile 1.0 e 1.1 definem também X509PKIPathv1 # e #PKCS7 como tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="76c28-254">WSS X509 Token Profile 1.0 and 1.1 define also #X509PKIPathv1 and #PKCS7 as value types.</span></span> <span data-ttu-id="76c28-255">O WCF não oferece suporte a esses tipos.</span><span class="sxs-lookup"><span data-stu-id="76c28-255">WCF does not support these types.</span></span>  
+ <span data-ttu-id="82f52-254">O perfil de token X509 do WSS 1,0 e 1,1 definem também #X509PKIPathv1 e #PKCS7 como tipos de valor.</span><span class="sxs-lookup"><span data-stu-id="82f52-254">WSS X509 Token Profile 1.0 and 1.1 define also #X509PKIPathv1 and #PKCS7 as value types.</span></span> <span data-ttu-id="82f52-255">O WCF não oferece suporte a esses tipos.</span><span class="sxs-lookup"><span data-stu-id="82f52-255">WCF does not support these types.</span></span>  
   
- <span data-ttu-id="76c28-256">R1202 se uma extensão SubjectKeyIdentifier SKI () está presente em um X509 certificado, wsse:KeyIdentifier deve ser usado para as referências externas ao token, com ValueType como #X509SubjectKeyIdentifier e seu conteúdo a codificada em base64 valor de atributo extensão de ESQUI do certificado.</span><span class="sxs-lookup"><span data-stu-id="76c28-256">R1202 If a SubjectKeyIdentifier (SKI) extension is present in an X509 certificate, wsse:KeyIdentifier should be used for external references to the token, with the ValueType attribute as #X509SubjectKeyIdentifier and its content the base64-encoded value of certificate's SKI extension.</span></span>  
+ <span data-ttu-id="82f52-256">R1202 se uma extensão SubjectKeyIdentifier (esqui) estiver presente em um certificado X509, wsse: KeyIdentifier deve ser usado para referências externas ao token, com o atributo ValueType como #X509SubjectKeyIdentifier e seu conteúdo com o valor codificado em Base64 de extensão de esqui do certificado.</span><span class="sxs-lookup"><span data-stu-id="82f52-256">R1202 If a SubjectKeyIdentifier (SKI) extension is present in an X509 certificate, wsse:KeyIdentifier should be used for external references to the token, with the ValueType attribute as #X509SubjectKeyIdentifier and its content the base64-encoded value of certificate's SKI extension.</span></span>  
   
- <span data-ttu-id="76c28-257">Referências de ESQUI são amplamente implementadas e provou para ser um tipo de referência externa altamente interoperável.</span><span class="sxs-lookup"><span data-stu-id="76c28-257">SKI references are widely implemented and proven to be a highly interoperable external reference type.</span></span>  
+ <span data-ttu-id="82f52-257">As referências de esqui são amplamente implementadas e comprovadas como um tipo de referência externa altamente interoperável.</span><span class="sxs-lookup"><span data-stu-id="82f52-257">SKI references are widely implemented and proven to be a highly interoperable external reference type.</span></span>  
   
- <span data-ttu-id="76c28-258">R1203 Uma referência externa como X509 Security Token não deve usar ds:X509IssuerSerial.</span><span class="sxs-lookup"><span data-stu-id="76c28-258">R1203 An external Reference to X509 Security Token SHOULD NOT use ds:X509IssuerSerial.</span></span>  
+ <span data-ttu-id="82f52-258">R1203 uma referência externa ao token de segurança X509 não deve usar DS: X509IssuerSerial.</span><span class="sxs-lookup"><span data-stu-id="82f52-258">R1203 An external Reference to X509 Security Token SHOULD NOT use ds:X509IssuerSerial.</span></span>  
   
- <span data-ttu-id="76c28-259">R1204 X509TokenProfile1.1 de se está em uso, uma referência externa como X509 Security Token deve usar a impressão digital introduzida por WS-Security 1.1.</span><span class="sxs-lookup"><span data-stu-id="76c28-259">R1204 If X509TokenProfile1.1 is in use, an external reference to X509 Security Token SHOULD use the thumbprint introduced by WS-Security 1.1.</span></span>  
+ <span data-ttu-id="82f52-259">R1204 se o X509TokenProfile 1.1 estiver em uso, uma referência externa ao token de segurança X509 deverá usar a impressão digital introduzida pelo WS-Security 1,1.</span><span class="sxs-lookup"><span data-stu-id="82f52-259">R1204 If X509TokenProfile1.1 is in use, an external reference to X509 Security Token SHOULD use the thumbprint introduced by WS-Security 1.1.</span></span>  
   
- <span data-ttu-id="76c28-260">O WCF oferece suporte a X509IssuerSerial.</span><span class="sxs-lookup"><span data-stu-id="76c28-260">WCF supports X509IssuerSerial.</span></span> <span data-ttu-id="76c28-261">No entanto, há problemas de interoperabilidade com X509IssuerSerial: O WCF usa uma cadeia de caracteres para comparar dois valores de X509IssuerSerial.</span><span class="sxs-lookup"><span data-stu-id="76c28-261">However There are interoperability issues with X509IssuerSerial: WCF uses a string to compare two values of X509IssuerSerial.</span></span> <span data-ttu-id="76c28-262">Portanto, se um reordena os componentes do nome da entidade e envia a um serviço WCF, uma referência a um certificado, ele não pode ser encontrado.</span><span class="sxs-lookup"><span data-stu-id="76c28-262">Therefore if one reorders components of the Subject Name and sends to an WCF service a reference to a certificate, it may not be found.</span></span>  
+ <span data-ttu-id="82f52-260">O WCF dá suporte a X509IssuerSerial.</span><span class="sxs-lookup"><span data-stu-id="82f52-260">WCF supports X509IssuerSerial.</span></span> <span data-ttu-id="82f52-261">No entanto, há problemas de interoperabilidade com o X509IssuerSerial: o WCF usa uma cadeia de caracteres para comparar dois valores de X509IssuerSerial.</span><span class="sxs-lookup"><span data-stu-id="82f52-261">However There are interoperability issues with X509IssuerSerial: WCF uses a string to compare two values of X509IssuerSerial.</span></span> <span data-ttu-id="82f52-262">Portanto, se um reordenar componentes do nome da entidade e enviar a um serviço WCF uma referência a um certificado, ele poderá não ser encontrado.</span><span class="sxs-lookup"><span data-stu-id="82f52-262">Therefore if one reorders components of the Subject Name and sends to an WCF service a reference to a certificate, it may not be found.</span></span>  
   
-### <a name="13-kerberos-token"></a><span data-ttu-id="76c28-263">1.3 Token Kerberos</span><span class="sxs-lookup"><span data-stu-id="76c28-263">1.3 Kerberos Token</span></span>  
- <span data-ttu-id="76c28-264">O WCF oferece suporte a KerberosTokenProfile1.1 para fins de autenticação do Windows com as seguintes restrições:</span><span class="sxs-lookup"><span data-stu-id="76c28-264">WCF supports KerberosTokenProfile1.1 for the purpose of Windows authentication with the following constraints:</span></span>  
+### <a name="13-kerberos-token"></a><span data-ttu-id="82f52-263">Token Kerberos 1,3</span><span class="sxs-lookup"><span data-stu-id="82f52-263">1.3 Kerberos Token</span></span>  
+ <span data-ttu-id="82f52-264">O WCF dá suporte ao KerberosTokenProfile 1.1 para fins de autenticação do Windows com as seguintes restrições:</span><span class="sxs-lookup"><span data-stu-id="82f52-264">WCF supports KerberosTokenProfile1.1 for the purpose of Windows authentication with the following constraints:</span></span>  
   
- <span data-ttu-id="76c28-265">Token do Kerberos R1301 um necessário realizar o valor de um GSS encapsulado Kerberos v4 AP_REQ conforme definido em GSS_API e a especificação de Kerberos e deve ter o atributo com o valor #GSS_Kerberosv5_AP_REQ ValueType.</span><span class="sxs-lookup"><span data-stu-id="76c28-265">R1301 A Kerberos Token must carry the value of a GSS wrapped Kerberos v4 AP_REQ as defined in GSS_API and the Kerberos specification, and must have the ValueType attribute with the value #GSS_Kerberosv5_AP_REQ.</span></span>  
+ <span data-ttu-id="82f52-265">R1301 um token Kerberos deve transportar o valor de um GSS AP_REQ do Kerberos v4 encapsulado, conforme definido em GSS_API e a especificação Kerberos, e deve ter o atributo ValueType com o valor #GSS_Kerberosv5_AP_REQ.</span><span class="sxs-lookup"><span data-stu-id="82f52-265">R1301 A Kerberos Token must carry the value of a GSS wrapped Kerberos v4 AP_REQ as defined in GSS_API and the Kerberos specification, and must have the ValueType attribute with the value #GSS_Kerberosv5_AP_REQ.</span></span>  
   
- <span data-ttu-id="76c28-266">O WCF usa GSS encapsulado AP-REQ Kerberos, não um bare AP-REQ.</span><span class="sxs-lookup"><span data-stu-id="76c28-266">WCF uses GSS wrapped Kerberos AP-REQ, not a bare AP-REQ.</span></span> <span data-ttu-id="76c28-267">Isso é uma prática recomendada de segurança.</span><span class="sxs-lookup"><span data-stu-id="76c28-267">This is a security best practice.</span></span>  
+ <span data-ttu-id="82f52-266">O WCF usa a GSS-REQ do Kerberos encapsulado no protocolo de autenticação, e não um ponto de acesso simples.</span><span class="sxs-lookup"><span data-stu-id="82f52-266">WCF uses GSS wrapped Kerberos AP-REQ, not a bare AP-REQ.</span></span> <span data-ttu-id="82f52-267">Essa é uma prática recomendada de segurança.</span><span class="sxs-lookup"><span data-stu-id="82f52-267">This is a security best practice.</span></span>  
   
-### <a name="14-saml-v11-token"></a><span data-ttu-id="76c28-268">1.4 SAML v1.1 Token</span><span class="sxs-lookup"><span data-stu-id="76c28-268">1.4 SAML v1.1 Token</span></span>  
- <span data-ttu-id="76c28-269">O WCF dá suporte a perfis de Token de SAML do WSS 1.0 e 1.1 para os tokens SAML versão 1.1.</span><span class="sxs-lookup"><span data-stu-id="76c28-269">WCF supports WSS SAML Token profiles 1.0 and 1.1 for SAML v1.1 tokens.</span></span> <span data-ttu-id="76c28-270">É possível implementar outras versões dos formatos de token SAML.</span><span class="sxs-lookup"><span data-stu-id="76c28-270">It is possible to implement other versions of SAML token formats.</span></span>  
+### <a name="14-saml-v11-token"></a><span data-ttu-id="82f52-268">Token do SAML v 1.1 1,4</span><span class="sxs-lookup"><span data-stu-id="82f52-268">1.4 SAML v1.1 Token</span></span>  
+ <span data-ttu-id="82f52-269">O WCF dá suporte a perfis de token SAML 1,0 e 1,1 para tokens SAML v 1.1.</span><span class="sxs-lookup"><span data-stu-id="82f52-269">WCF supports WSS SAML Token profiles 1.0 and 1.1 for SAML v1.1 tokens.</span></span> <span data-ttu-id="82f52-270">É possível implementar outras versões de formatos de token SAML.</span><span class="sxs-lookup"><span data-stu-id="82f52-270">It is possible to implement other versions of SAML token formats.</span></span>  
   
-### <a name="15-security-context-token"></a><span data-ttu-id="76c28-271">1.5 Token de contexto de segurança de</span><span class="sxs-lookup"><span data-stu-id="76c28-271">1.5 Security Context Token</span></span>  
- <span data-ttu-id="76c28-272">O WCF oferece suporte à segurança contexto Token (SCT) introduzidos no WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="76c28-272">WCF supports the Security Context Token (SCT) introduced in WS-SecureConversation.</span></span> <span data-ttu-id="76c28-273">SCT é usado para representar um contexto de segurança estabelecido em SecureConversation, bem como a negociação binária protocolos TLS e SSPI, descrito abaixo.</span><span class="sxs-lookup"><span data-stu-id="76c28-273">SCT is used to represent a security context established in SecureConversation as well as the binary negotiation protocols TLS and SSPI, described below.</span></span>  
+### <a name="15-security-context-token"></a><span data-ttu-id="82f52-271">Token de contexto de segurança 1,5</span><span class="sxs-lookup"><span data-stu-id="82f52-271">1.5 Security Context Token</span></span>  
+ <span data-ttu-id="82f52-272">O WCF dá suporte ao SCT (token de contexto de segurança) introduzido no WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="82f52-272">WCF supports the Security Context Token (SCT) introduced in WS-SecureConversation.</span></span> <span data-ttu-id="82f52-273">O SCT é usado para representar um contexto de segurança estabelecido no SecureConversation, bem como os protocolos de negociação binárias TLS e SSPI, descritos abaixo.</span><span class="sxs-lookup"><span data-stu-id="82f52-273">SCT is used to represent a security context established in SecureConversation as well as the binary negotiation protocols TLS and SSPI, described below.</span></span>  
   
-## <a name="2-common-message-security-parameters"></a><span data-ttu-id="76c28-274">2. Parâmetros comuns de segurança de mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-274">2. Common Message Security Parameters</span></span>  
+## <a name="2-common-message-security-parameters"></a><span data-ttu-id="82f52-274">2. parâmetros de segurança de mensagem comum</span><span class="sxs-lookup"><span data-stu-id="82f52-274">2. Common Message Security Parameters</span></span>  
   
-### <a name="21-timestamp"></a><span data-ttu-id="76c28-275">2.1 carimbo de hora</span><span class="sxs-lookup"><span data-stu-id="76c28-275">2.1 TimeStamp</span></span>  
- <span data-ttu-id="76c28-276">Presença de carimbo de hora é controlada usando o <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> propriedade do <xref:System.ServiceModel.Channels.SecurityBindingElement> classe.</span><span class="sxs-lookup"><span data-stu-id="76c28-276">Timestamp presence is controlled using the <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> property of the <xref:System.ServiceModel.Channels.SecurityBindingElement> class.</span></span> <span data-ttu-id="76c28-277">WCF sempre serializa wsse: timestamp com wsse: criado e wsse: campos de expirar.</span><span class="sxs-lookup"><span data-stu-id="76c28-277">WCF always serializes wsse:TimeStamp with wsse:Created and wsse:Expires fields.</span></span> <span data-ttu-id="76c28-278">O wsse: timestamp sempre está conectado quando a assinatura é usada.</span><span class="sxs-lookup"><span data-stu-id="76c28-278">The wsse:TimeStamp is always signed when signing is used.</span></span>  
+### <a name="21-timestamp"></a><span data-ttu-id="82f52-275">2,1 carimbo de data/hora</span><span class="sxs-lookup"><span data-stu-id="82f52-275">2.1 TimeStamp</span></span>  
+ <span data-ttu-id="82f52-276">A presença do carimbo de data/hora é controlada usando a propriedade <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> da classe <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="82f52-276">Timestamp presence is controlled using the <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> property of the <xref:System.ServiceModel.Channels.SecurityBindingElement> class.</span></span> <span data-ttu-id="82f52-277">O WCF sempre serializa wsse: TimeStamp com wsse: created e wsse: expira campos.</span><span class="sxs-lookup"><span data-stu-id="82f52-277">WCF always serializes wsse:TimeStamp with wsse:Created and wsse:Expires fields.</span></span> <span data-ttu-id="82f52-278">O carimbo de data/hora wsse: sempre é assinado quando a assinatura é usada.</span><span class="sxs-lookup"><span data-stu-id="82f52-278">The wsse:TimeStamp is always signed when signing is used.</span></span>  
   
-### <a name="22-protection-order"></a><span data-ttu-id="76c28-279">2.2 ordem de proteção de</span><span class="sxs-lookup"><span data-stu-id="76c28-279">2.2 Protection Order</span></span>  
- <span data-ttu-id="76c28-280">O WCF oferece suporte a ordem de proteção de mensagem "Logon antes de criptografar" e "Criptografar antes de entrar" (1.1 de política de segurança).</span><span class="sxs-lookup"><span data-stu-id="76c28-280">WCF supports the message protection order "Sign Before Encrypt" and "Encrypt Before Sign" (Security Policy 1.1).</span></span> <span data-ttu-id="76c28-281">"Entrar antes de criptografar" é recomendada para motivos, incluindo: mensagens protegidas com criptografar antes de sinal são abertas a ataques de substituição de assinatura, a menos que o mecanismo de WS-Security 1.1 SignatureConfirmation é usado, e faz com que uma assinatura sobre o conteúdo criptografado a auditoria mais difícil.</span><span class="sxs-lookup"><span data-stu-id="76c28-281">"Sign Before Encrypt" is recommended for reasons including: messages protected with Encrypt Before Sign are open to signature substitution attacks unless the WS-Security 1.1 SignatureConfirmation mechanism is used, and a signature over encrypted content makes auditing harder.</span></span>  
+### <a name="22-protection-order"></a><span data-ttu-id="82f52-279">2,2 ordem de proteção</span><span class="sxs-lookup"><span data-stu-id="82f52-279">2.2 Protection Order</span></span>  
+ <span data-ttu-id="82f52-280">O WCF dá suporte à ordem de proteção de mensagem "assinar antes de criptografar" e "criptografar antes de assinar" (política de segurança 1,1).</span><span class="sxs-lookup"><span data-stu-id="82f52-280">WCF supports the message protection order "Sign Before Encrypt" and "Encrypt Before Sign" (Security Policy 1.1).</span></span> <span data-ttu-id="82f52-281">A opção "assinar antes de criptografar" é recomendada por motivos, incluindo: mensagens protegidas com criptografar antes de assinar os ataques de substituição de assinatura, a menos que o mecanismo de SignatureConfirmation do WS-Security 1,1 seja usado e uma assinatura sobre conteúdo criptografado faça a auditoria é mais difícil.</span><span class="sxs-lookup"><span data-stu-id="82f52-281">"Sign Before Encrypt" is recommended for reasons including: messages protected with Encrypt Before Sign are open to signature substitution attacks unless the WS-Security 1.1 SignatureConfirmation mechanism is used, and a signature over encrypted content makes auditing harder.</span></span>  
   
-### <a name="23-signature-protection"></a><span data-ttu-id="76c28-282">2.3 proteção de assinatura</span><span class="sxs-lookup"><span data-stu-id="76c28-282">2.3 Signature Protection</span></span>  
- <span data-ttu-id="76c28-283">Ao criptografar antes de sinal é usado, é recomendável para proteger a assinatura para evitar ataques de força bruta para adivinhar o conteúdo criptografado ou a chave de assinatura (especialmente quando um token personalizado é usado com o material da chave fraca).</span><span class="sxs-lookup"><span data-stu-id="76c28-283">When Encrypt Before Sign is used, it is recommended to protect the signature to prevent brute force attacks for guessing the encrypted content or the signing key (especially when a custom token is used with weak key material).</span></span>  
+### <a name="23-signature-protection"></a><span data-ttu-id="82f52-282">Proteção de assinatura 2,3</span><span class="sxs-lookup"><span data-stu-id="82f52-282">2.3 Signature Protection</span></span>  
+ <span data-ttu-id="82f52-283">Quando o sinal de criptografia antes é usado, é recomendável proteger a assinatura para evitar ataques de força bruta para adivinhar o conteúdo criptografado ou a chave de assinatura (especialmente quando um token personalizado é usado com o material de chave fraco).</span><span class="sxs-lookup"><span data-stu-id="82f52-283">When Encrypt Before Sign is used, it is recommended to protect the signature to prevent brute force attacks for guessing the encrypted content or the signing key (especially when a custom token is used with weak key material).</span></span>  
   
-### <a name="24-algorithm-suite"></a><span data-ttu-id="76c28-284">2.4 pacote de algoritmos</span><span class="sxs-lookup"><span data-stu-id="76c28-284">2.4 Algorithm Suite</span></span>  
- <span data-ttu-id="76c28-285">O WCF oferece suporte a todos os conjuntos de algoritmo listados na 1.1 de política de segurança.</span><span class="sxs-lookup"><span data-stu-id="76c28-285">WCF supports all algorithm suites listed in Security Policy 1.1.</span></span>  
+### <a name="24-algorithm-suite"></a><span data-ttu-id="82f52-284">Pacote de algoritmos 2,4</span><span class="sxs-lookup"><span data-stu-id="82f52-284">2.4 Algorithm Suite</span></span>  
+ <span data-ttu-id="82f52-285">O WCF dá suporte a todos os conjuntos de algoritmos listados na política de segurança 1,1.</span><span class="sxs-lookup"><span data-stu-id="82f52-285">WCF supports all algorithm suites listed in Security Policy 1.1.</span></span>  
   
-### <a name="25-key-derivation"></a><span data-ttu-id="76c28-286">2.5 derivação de chave</span><span class="sxs-lookup"><span data-stu-id="76c28-286">2.5 Key Derivation</span></span>  
- <span data-ttu-id="76c28-287">O WCF usa "Derivação de chave para chaves simétricas", conforme descrito em WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="76c28-287">WCF uses "Key Derivation for symmetric keys" as described in WS-SecureConversation.</span></span>  
+### <a name="25-key-derivation"></a><span data-ttu-id="82f52-286">Derivação de chave 2,5</span><span class="sxs-lookup"><span data-stu-id="82f52-286">2.5 Key Derivation</span></span>  
+ <span data-ttu-id="82f52-287">O WCF usa "derivação de chave para chaves simétricas", conforme descrito em WS-SecureConversation.</span><span class="sxs-lookup"><span data-stu-id="82f52-287">WCF uses "Key Derivation for symmetric keys" as described in WS-SecureConversation.</span></span>  
   
-### <a name="26-signature-confirmation"></a><span data-ttu-id="76c28-288">2.6 confirmação de assinatura</span><span class="sxs-lookup"><span data-stu-id="76c28-288">2.6 Signature Confirmation</span></span>  
- <span data-ttu-id="76c28-289">Confirmação de assinatura pode ser como proteção contra ataques man intermediária para proteger o conjunto de assinaturas.</span><span class="sxs-lookup"><span data-stu-id="76c28-289">Signature confirmation can be as protection from middle man attacks to protect the set of signatures.</span></span>  
+### <a name="26-signature-confirmation"></a><span data-ttu-id="82f52-288">2,6 confirmação de assinatura</span><span class="sxs-lookup"><span data-stu-id="82f52-288">2.6 Signature Confirmation</span></span>  
+ <span data-ttu-id="82f52-289">A confirmação da assinatura pode ser como proteção contra ataques do Man Middle para proteger o conjunto de assinaturas.</span><span class="sxs-lookup"><span data-stu-id="82f52-289">Signature confirmation can be as protection from middle man attacks to protect the set of signatures.</span></span>  
   
-### <a name="27-security-header-layout"></a><span data-ttu-id="76c28-290">2.7 Layout de cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="76c28-290">2.7 Security Header Layout</span></span>  
- <span data-ttu-id="76c28-291">Cada modo de autenticação descreve um determinado layout para o cabeçalho de segurança.</span><span class="sxs-lookup"><span data-stu-id="76c28-291">Each authentication mode describes a certain layout for the security header.</span></span> <span data-ttu-id="76c28-292">Os elementos dentro do cabeçalho de segurança são semi-estruturados ordenados.</span><span class="sxs-lookup"><span data-stu-id="76c28-292">Elements within the security header are semi-ordered.</span></span> <span data-ttu-id="76c28-293">Para definir a ordem dos elementos de filho de cabeçalho de segurança, WS-Security Policy define os seguintes modos de layout de cabeçalho de segurança:</span><span class="sxs-lookup"><span data-stu-id="76c28-293">To define the order of security header child elements, WS-Security Policy defines the following security header layout modes:</span></span>  
+### <a name="27-security-header-layout"></a><span data-ttu-id="82f52-290">Layout do cabeçalho de segurança 2,7</span><span class="sxs-lookup"><span data-stu-id="82f52-290">2.7 Security Header Layout</span></span>  
+ <span data-ttu-id="82f52-291">Cada modo de autenticação descreve um determinado layout para o cabeçalho de segurança.</span><span class="sxs-lookup"><span data-stu-id="82f52-291">Each authentication mode describes a certain layout for the security header.</span></span> <span data-ttu-id="82f52-292">Os elementos dentro do cabeçalho de segurança são semiordenados.</span><span class="sxs-lookup"><span data-stu-id="82f52-292">Elements within the security header are semi-ordered.</span></span> <span data-ttu-id="82f52-293">Para definir a ordem dos elementos filho do cabeçalho de segurança, a política do WS-Security define os seguintes modos de layout de cabeçalho de segurança:</span><span class="sxs-lookup"><span data-stu-id="82f52-293">To define the order of security header child elements, WS-Security Policy defines the following security header layout modes:</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="76c28-294">Estrito</span><span class="sxs-lookup"><span data-stu-id="76c28-294">Strict</span></span>|<span data-ttu-id="76c28-295">Itens são adicionados para o seguinte cabeçalho de segurança, que as regras de layout numerada descrito na seção 7.7.1 acordo com um geral de política de segurança princípio de "declarar antes do uso".</span><span class="sxs-lookup"><span data-stu-id="76c28-295">Items are added to the security header following the numbered layout rules described in Security Policy section 7.7.1 according to a general principle of "declare before use".</span></span>|  
-|<span data-ttu-id="76c28-296">Incerto</span><span class="sxs-lookup"><span data-stu-id="76c28-296">Lax</span></span>|<span data-ttu-id="76c28-297">Itens são adicionados ao cabeçalho de segurança em qualquer ordem que está de acordo com o WSS: Segurança de mensagem SOAP.</span><span class="sxs-lookup"><span data-stu-id="76c28-297">Items are added to the security header in any order that conforms to WSS: SOAP Message Security.</span></span>|  
-|<span data-ttu-id="76c28-298">LaxTimestampFirst</span><span class="sxs-lookup"><span data-stu-id="76c28-298">LaxTimestampFirst</span></span>|<span data-ttu-id="76c28-299">Mesmo como Lax, exceto que o primeiro item no cabeçalho de segurança deve ser um wsse: timestamp</span><span class="sxs-lookup"><span data-stu-id="76c28-299">Same as Lax except that the first item in the security header must be a wsse:Timestamp</span></span>|  
-|<span data-ttu-id="76c28-300">LaxTimestampLast</span><span class="sxs-lookup"><span data-stu-id="76c28-300">LaxTimestampLast</span></span>|<span data-ttu-id="76c28-301">Mesmo que incerto, exceto pelo fato de que o último item no cabeçalho de segurança deve ser um wsse: timestamp</span><span class="sxs-lookup"><span data-stu-id="76c28-301">Same as lax except that the last item in the security header must be a wsse:Timestamp</span></span>|  
+|<span data-ttu-id="82f52-294">Strict</span><span class="sxs-lookup"><span data-stu-id="82f52-294">Strict</span></span>|<span data-ttu-id="82f52-295">Os itens são adicionados ao cabeçalho de segurança seguindo as regras de layout numeradas descritas na seção política de segurança 7.7.1 de acordo com um princípio geral de "declarar antes de usar".</span><span class="sxs-lookup"><span data-stu-id="82f52-295">Items are added to the security header following the numbered layout rules described in Security Policy section 7.7.1 according to a general principle of "declare before use".</span></span>|  
+|<span data-ttu-id="82f52-296">Incerto</span><span class="sxs-lookup"><span data-stu-id="82f52-296">Lax</span></span>|<span data-ttu-id="82f52-297">Os itens são adicionados ao cabeçalho de segurança em qualquer ordem que esteja de acordo com o WSS: segurança de mensagem SOAP.</span><span class="sxs-lookup"><span data-stu-id="82f52-297">Items are added to the security header in any order that conforms to WSS: SOAP Message Security.</span></span>|  
+|<span data-ttu-id="82f52-298">LaxTimestampFirst</span><span class="sxs-lookup"><span data-stu-id="82f52-298">LaxTimestampFirst</span></span>|<span data-ttu-id="82f52-299">O mesmo que LAX, exceto que o primeiro item no cabeçalho de segurança deve ser um wsse: timestamp</span><span class="sxs-lookup"><span data-stu-id="82f52-299">Same as Lax except that the first item in the security header must be a wsse:Timestamp</span></span>|  
+|<span data-ttu-id="82f52-300">LaxTimestampLast</span><span class="sxs-lookup"><span data-stu-id="82f52-300">LaxTimestampLast</span></span>|<span data-ttu-id="82f52-301">O mesmo que LAX, exceto que o último item no cabeçalho de segurança deve ser um wsse: timestamp</span><span class="sxs-lookup"><span data-stu-id="82f52-301">Same as lax except that the last item in the security header must be a wsse:Timestamp</span></span>|  
   
- <span data-ttu-id="76c28-302">WCF dá suporte a todos os quatro modos de layout de cabeçalho de segurança.</span><span class="sxs-lookup"><span data-stu-id="76c28-302">WCF supports all four modes for security header layout.</span></span> <span data-ttu-id="76c28-303">Exemplos de estrutura e a mensagem de cabeçalho de segurança para os modos de autenticação abaixo siga o modo "Estrito".</span><span class="sxs-lookup"><span data-stu-id="76c28-303">Security header structure and message examples for authentication modes below follow the "Strict" mode.</span></span>  
+ <span data-ttu-id="82f52-302">O WCF dá suporte a todos os quatro modos de layout de cabeçalho de segurança.</span><span class="sxs-lookup"><span data-stu-id="82f52-302">WCF supports all four modes for security header layout.</span></span> <span data-ttu-id="82f52-303">A estrutura de cabeçalho de segurança e os exemplos de mensagem para os modos de autenticação abaixo seguem o modo "estrito".</span><span class="sxs-lookup"><span data-stu-id="82f52-303">Security header structure and message examples for authentication modes below follow the "Strict" mode.</span></span>  
   
-## <a name="2-common-message-security-parameters"></a><span data-ttu-id="76c28-304">2. Parâmetros comuns de segurança de mensagem</span><span class="sxs-lookup"><span data-stu-id="76c28-304">2. Common Message Security Parameters</span></span>  
- <span data-ttu-id="76c28-305">Esta seção fornece exemplos de políticas para cada modo de autenticação junto com exemplos que mostram a estrutura de cabeçalho de segurança em mensagens trocadas por cliente e o serviço.</span><span class="sxs-lookup"><span data-stu-id="76c28-305">This section provides example policies for each authentication mode along with examples showing security header structure in messages exchanged by client and service.</span></span>  
+## <a name="2-common-message-security-parameters"></a><span data-ttu-id="82f52-304">2. parâmetros de segurança de mensagem comum</span><span class="sxs-lookup"><span data-stu-id="82f52-304">2. Common Message Security Parameters</span></span>  
+ <span data-ttu-id="82f52-305">Esta seção fornece as políticas de exemplo para cada modo de autenticação, juntamente com exemplos que mostram a estrutura de cabeçalho de segurança em mensagens trocadas por cliente e serviço.</span><span class="sxs-lookup"><span data-stu-id="82f52-305">This section provides example policies for each authentication mode along with examples showing security header structure in messages exchanged by client and service.</span></span>  
   
-### <a name="61-transport-protection"></a><span data-ttu-id="76c28-306">6.1 proteção de transporte</span><span class="sxs-lookup"><span data-stu-id="76c28-306">6.1 Transport Protection</span></span>  
- <span data-ttu-id="76c28-307">O WCF fornece cinco modos de autenticação que usam o transporte seguro para proteger as mensagens; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport e SspiNegotiatedOverTransport.</span><span class="sxs-lookup"><span data-stu-id="76c28-307">WCF provides five authentication modes that use secure transport to protect messages; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport and SspiNegotiatedOverTransport.</span></span>  
+### <a name="61-transport-protection"></a><span data-ttu-id="82f52-306">Proteção de transporte 6,1</span><span class="sxs-lookup"><span data-stu-id="82f52-306">6.1 Transport Protection</span></span>  
+ <span data-ttu-id="82f52-307">O WCF fornece cinco modos de autenticação que usam o transporte seguro para proteger mensagens; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport e SspiNegotiatedOverTransport.</span><span class="sxs-lookup"><span data-stu-id="82f52-307">WCF provides five authentication modes that use secure transport to protect messages; UserNameOverTransport, CertificateOverTransport, KerberosOverTransport, IssuedTokenOverTransport and SspiNegotiatedOverTransport.</span></span>  
   
- <span data-ttu-id="76c28-308">Esses modos de autenticação são construídos usando a associação de transporte descrita SecurityPolicy.</span><span class="sxs-lookup"><span data-stu-id="76c28-308">These authentication modes are constructed using the transport binding described in SecurityPolicy.</span></span> <span data-ttu-id="76c28-309">Para o UserNameOverTransport UsernameToken do modo de autenticação é um token de suporte com sinal.</span><span class="sxs-lookup"><span data-stu-id="76c28-309">For the UserNameOverTransport authentication mode the UsernameToken is a signed supporting token.</span></span> <span data-ttu-id="76c28-310">Para outros modos de autenticação o token será exibido como um token de endosso assinado.</span><span class="sxs-lookup"><span data-stu-id="76c28-310">For the other authentication modes the token appears as a signed endorsing token.</span></span> <span data-ttu-id="76c28-311">Apêndice C.1.2 e C.1.3 de SecurityPolicy descrevem o layout do cabeçalho de segurança em detalhes.</span><span class="sxs-lookup"><span data-stu-id="76c28-311">Appendix C.1.2 and C.1.3 of SecurityPolicy describe the security header layout in detail.</span></span> <span data-ttu-id="76c28-312">Os cabeçalhos de segurança de exemplo a seguir mostram o layout estrito para um modo de autenticação específico.</span><span class="sxs-lookup"><span data-stu-id="76c28-312">The following example security headers show the Strict layout for a given authentication mode.</span></span>  
+ <span data-ttu-id="82f52-308">Esses modos de autenticação são construídos usando a associação de transporte descrita em SecurityPolicy.</span><span class="sxs-lookup"><span data-stu-id="82f52-308">These authentication modes are constructed using the transport binding described in SecurityPolicy.</span></span> <span data-ttu-id="82f52-309">Para o modo de autenticação UserNameOverTransport, o UsernameToken é um token de suporte assinado.</span><span class="sxs-lookup"><span data-stu-id="82f52-309">For the UserNameOverTransport authentication mode the UsernameToken is a signed supporting token.</span></span> <span data-ttu-id="82f52-310">Para os outros modos de autenticação, o token aparece como um token de endosso assinado.</span><span class="sxs-lookup"><span data-stu-id="82f52-310">For the other authentication modes the token appears as a signed endorsing token.</span></span> <span data-ttu-id="82f52-311">O Apêndice C. 1.2 e o C. 1.3 de SecurityPolicy descrevem o layout do cabeçalho de segurança em detalhes.</span><span class="sxs-lookup"><span data-stu-id="82f52-311">Appendix C.1.2 and C.1.3 of SecurityPolicy describe the security header layout in detail.</span></span> <span data-ttu-id="82f52-312">Os cabeçalhos de segurança de exemplo a seguir mostram o layout estrito para um determinado modo de autenticação.</span><span class="sxs-lookup"><span data-stu-id="82f52-312">The following example security headers show the Strict layout for a given authentication mode.</span></span>  
   
- <span data-ttu-id="76c28-313">O valor da propriedade "Chaves derivadas" para os tokens em todos os casos é "false".</span><span class="sxs-lookup"><span data-stu-id="76c28-313">The value of the "Derived Keys" property for the tokens in all cases is "false".</span></span>  
+ <span data-ttu-id="82f52-313">O valor da propriedade "chaves derivadas" para os tokens em todos os casos é "false".</span><span class="sxs-lookup"><span data-stu-id="82f52-313">The value of the "Derived Keys" property for the tokens in all cases is "false".</span></span>  
   
- <span data-ttu-id="76c28-314">Os valores de várias propriedades da associação de transporte são da seguinte maneira:</span><span class="sxs-lookup"><span data-stu-id="76c28-314">The values of the various properties of the transport binding are as follows:</span></span>  
+ <span data-ttu-id="82f52-314">Os valores das várias propriedades da Associação de transporte são os seguintes:</span><span class="sxs-lookup"><span data-stu-id="82f52-314">The values of the various properties of the transport binding are as follows:</span></span>  
   
- <span data-ttu-id="76c28-315">Carimbo de hora: true</span><span class="sxs-lookup"><span data-stu-id="76c28-315">Timestamp: true</span></span>  
+ <span data-ttu-id="82f52-315">Carimbo de data/hora: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-315">Timestamp: true</span></span>  
   
- <span data-ttu-id="76c28-316">Layout de cabeçalho de segurança: Estrito</span><span class="sxs-lookup"><span data-stu-id="76c28-316">Security Header Layout: Strict</span></span>  
+ <span data-ttu-id="82f52-316">Layout do cabeçalho de segurança: estrito</span><span class="sxs-lookup"><span data-stu-id="82f52-316">Security Header Layout: Strict</span></span>  
   
- <span data-ttu-id="76c28-317">Pacote de algoritmos: Basic256</span><span class="sxs-lookup"><span data-stu-id="76c28-317">Algorithm Suite: Basic256</span></span>  
+ <span data-ttu-id="82f52-317">Conjunto de algoritmos: Basic256</span><span class="sxs-lookup"><span data-stu-id="82f52-317">Algorithm Suite: Basic256</span></span>  
   
-#### <a name="611-usernameovertransport"></a><span data-ttu-id="76c28-318">6.1.1 UsernameOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-318">6.1.1 UsernameOverTransport</span></span>  
- <span data-ttu-id="76c28-319">Com esse modo de autenticação, o cliente autentica com um Token de nome de usuário que aparece na camada de SOAP como um token de suporte com sinal que é sempre enviado do iniciador para o destinatário.</span><span class="sxs-lookup"><span data-stu-id="76c28-319">With this authentication mode, the client authenticates with a Username Token which appears at the SOAP layer as a signed supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="76c28-320">O serviço é autenticado usando um certificado X.509 na camada de transporte.</span><span class="sxs-lookup"><span data-stu-id="76c28-320">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="76c28-321">A associação usada é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="76c28-321">The binding used is a transport binding.</span></span>  
+#### <a name="611-usernameovertransport"></a><span data-ttu-id="82f52-318">UsernameOverTransport 6.1.1</span><span class="sxs-lookup"><span data-stu-id="82f52-318">6.1.1 UsernameOverTransport</span></span>  
+ <span data-ttu-id="82f52-319">Com esse modo de autenticação, o cliente é autenticado com um token de nome de usuário que aparece na camada SOAP como um token de suporte assinado que é sempre enviado do iniciador para o destinatário.</span><span class="sxs-lookup"><span data-stu-id="82f52-319">With this authentication mode, the client authenticates with a Username Token which appears at the SOAP layer as a signed supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="82f52-320">O serviço é autenticado usando um certificado X. 509 na camada de transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-320">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="82f52-321">A associação usada é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-321">The binding used is a transport binding.</span></span>  
   
- <span data-ttu-id="76c28-322">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-322">Policy</span></span>  
+ <span data-ttu-id="82f52-322">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-322">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='UsernameOverTransport_policy' >  
@@ -241,9 +241,9 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
- <span data-ttu-id="76c28-323">Layout de cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="76c28-323">Security Header Layout</span></span>  
+ <span data-ttu-id="82f52-323">Layout do cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="82f52-323">Security Header Layout</span></span>  
   
- <span data-ttu-id="76c28-324">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-324">Request</span></span>  
+ <span data-ttu-id="82f52-324">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-324">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -256,7 +256,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-325">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-325">Response</span></span>  
+ <span data-ttu-id="82f52-325">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-325">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -266,10 +266,10 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-#### <a name="612-certificateovertransport"></a><span data-ttu-id="76c28-326">6.1.2 CertificateOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-326">6.1.2 CertificateOverTransport</span></span>  
- <span data-ttu-id="76c28-327">Com esse modo de autenticação que o cliente é autenticado usando um X.509 do certificado que aparece na camada de SOAP como um token de suporte de endosso que é sempre enviado do iniciador para o destinatário.</span><span class="sxs-lookup"><span data-stu-id="76c28-327">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as an endorsing supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="76c28-328">O serviço é autenticado usando um certificado X.509 na camada de transporte.</span><span class="sxs-lookup"><span data-stu-id="76c28-328">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="76c28-329">A associação usada é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="76c28-329">The binding used is a transport binding.</span></span>  
+#### <a name="612-certificateovertransport"></a><span data-ttu-id="82f52-326">6.1.2 CertificateOverTransport</span><span class="sxs-lookup"><span data-stu-id="82f52-326">6.1.2 CertificateOverTransport</span></span>  
+ <span data-ttu-id="82f52-327">Com esse modo de autenticação, o cliente é autenticado usando um certificado X. 509 que aparece na camada SOAP como um token de suporte de endosso que é sempre enviado do iniciador para o destinatário.</span><span class="sxs-lookup"><span data-stu-id="82f52-327">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as an endorsing supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="82f52-328">O serviço é autenticado usando um certificado X. 509 na camada de transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-328">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="82f52-329">A associação usada é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-329">The binding used is a transport binding.</span></span>  
   
- <span data-ttu-id="76c28-330">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-330">Policy</span></span>  
+ <span data-ttu-id="82f52-330">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-330">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='CertificateOverTransport_policy' >  
@@ -331,9 +331,9 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsp:Policy>  
 ```  
   
- <span data-ttu-id="76c28-331">Layout de cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="76c28-331">Security Header Layout</span></span>  
+ <span data-ttu-id="82f52-331">Layout do cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="82f52-331">Security Header Layout</span></span>  
   
- <span data-ttu-id="76c28-332">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-332">Request</span></span>  
+ <span data-ttu-id="82f52-332">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-332">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -349,7 +349,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-333">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-333">Response</span></span>  
+ <span data-ttu-id="82f52-333">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-333">Response</span></span>  
   
 ```xml  
 <o:Security>  
@@ -359,10 +359,10 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </o:Security>  
 ```  
   
-#### <a name="613-issuedtokenovertransport"></a><span data-ttu-id="76c28-334">6.1.3 IssuedTokenOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-334">6.1.3 IssuedTokenOverTransport</span></span>  
- <span data-ttu-id="76c28-335">Com esse modo de autenticação o cliente não se autenticar no serviço, como tal, mas em vez disso, apresenta um token emitido por um Security Token Service (STS) e comprova o conhecimento de uma chave compartilhada.</span><span class="sxs-lookup"><span data-stu-id="76c28-335">With this authentication mode the client does not authenticate to the service, as such, but rather presents a token issued by a Security Token Service (STS) and proves knowledge of a shared key.</span></span> <span data-ttu-id="76c28-336">O token emitido é exibido na camada de SOAP como um token de suporte de endosso que é sempre enviado do iniciador para o destinatário.</span><span class="sxs-lookup"><span data-stu-id="76c28-336">The issued token appears at the SOAP layer as an endorsing supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="76c28-337">O serviço é autenticado usando um certificado X.509 na camada de transporte.</span><span class="sxs-lookup"><span data-stu-id="76c28-337">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="76c28-338">A associação é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="76c28-338">The binding is a transport binding.</span></span>  
+#### <a name="613-issuedtokenovertransport"></a><span data-ttu-id="82f52-334">6.1.3 IssuedTokenOverTransport</span><span class="sxs-lookup"><span data-stu-id="82f52-334">6.1.3 IssuedTokenOverTransport</span></span>  
+ <span data-ttu-id="82f52-335">Com esse modo de autenticação, o cliente não se autentica no serviço, como tal, mas apresenta um token emitido por um STS (serviço de token de segurança) e comprova o conhecimento de uma chave compartilhada.</span><span class="sxs-lookup"><span data-stu-id="82f52-335">With this authentication mode the client does not authenticate to the service, as such, but rather presents a token issued by a Security Token Service (STS) and proves knowledge of a shared key.</span></span> <span data-ttu-id="82f52-336">O token emitido é exibido na camada SOAP como um token de suporte de endosso que é sempre enviado do iniciador para o destinatário.</span><span class="sxs-lookup"><span data-stu-id="82f52-336">The issued token appears at the SOAP layer as an endorsing supporting token that is always sent from the initiator to the recipient.</span></span> <span data-ttu-id="82f52-337">O serviço é autenticado usando um certificado X. 509 na camada de transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-337">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="82f52-338">A associação é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-338">The binding is a transport binding.</span></span>  
   
- <span data-ttu-id="76c28-339">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-339">Policy</span></span>  
+ <span data-ttu-id="82f52-339">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-339">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='IssuedTokenOverTransport_policy' >  
@@ -428,9 +428,9 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsp:Policy>  
 ```  
   
- <span data-ttu-id="76c28-340">Layout de cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="76c28-340">Security Header Layout</span></span>  
+ <span data-ttu-id="82f52-340">Layout do cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="82f52-340">Security Header Layout</span></span>  
   
- <span data-ttu-id="76c28-341">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-341">Request</span></span>  
+ <span data-ttu-id="82f52-341">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-341">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1" >  
@@ -446,7 +446,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-342">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-342">Response</span></span>  
+ <span data-ttu-id="82f52-342">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-342">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -456,10 +456,10 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
-#### <a name="614-kerberosovertransport"></a><span data-ttu-id="76c28-343">6.1.4 KerberosOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-343">6.1.4 KerberosOverTransport</span></span>  
- <span data-ttu-id="76c28-344">Com esse modo de autenticação o cliente é autenticado para o serviço usando um tíquete Kerberos.</span><span class="sxs-lookup"><span data-stu-id="76c28-344">With this authentication mode the client authenticates to the service using a Kerberos ticket.</span></span> <span data-ttu-id="76c28-345">O token Kerberos é exibido na camada de SOAP como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="76c28-345">The Kerberos token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="76c28-346">O serviço é autenticado usando um certificado X.509 na camada de transporte.</span><span class="sxs-lookup"><span data-stu-id="76c28-346">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="76c28-347">A associação é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="76c28-347">The binding is a transport binding.</span></span>  
+#### <a name="614-kerberosovertransport"></a><span data-ttu-id="82f52-343">6.1.4 KerberosOverTransport</span><span class="sxs-lookup"><span data-stu-id="82f52-343">6.1.4 KerberosOverTransport</span></span>  
+ <span data-ttu-id="82f52-344">Com esse modo de autenticação, o cliente é autenticado para o serviço usando um tíquete Kerberos.</span><span class="sxs-lookup"><span data-stu-id="82f52-344">With this authentication mode the client authenticates to the service using a Kerberos ticket.</span></span> <span data-ttu-id="82f52-345">O token Kerberos é exibido na camada SOAP como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="82f52-345">The Kerberos token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="82f52-346">O serviço é autenticado usando um certificado X. 509 na camada de transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-346">The service is authenticated using an X.509 certificate at the transport layer.</span></span> <span data-ttu-id="82f52-347">A associação é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-347">The binding is a transport binding.</span></span>  
   
- <span data-ttu-id="76c28-348">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-348">Policy</span></span>  
+ <span data-ttu-id="82f52-348">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-348">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='KerberosOverTransport_policy' >  
@@ -520,9 +520,9 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsp:Policy>  
 ```  
   
- <span data-ttu-id="76c28-349">Layout de cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="76c28-349">Security Header Layout</span></span>  
+ <span data-ttu-id="82f52-349">Layout do cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="82f52-349">Security Header Layout</span></span>  
   
- <span data-ttu-id="76c28-350">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-350">Request</span></span>  
+ <span data-ttu-id="82f52-350">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-350">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1" >  
@@ -538,7 +538,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-351">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-351">Response</span></span>  
+ <span data-ttu-id="82f52-351">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-351">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -548,10 +548,10 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
-#### <a name="615-sspinegotiatedovertransport"></a><span data-ttu-id="76c28-352">6.1.5 SspiNegotiatedOverTransport</span><span class="sxs-lookup"><span data-stu-id="76c28-352">6.1.5 SspiNegotiatedOverTransport</span></span>  
- <span data-ttu-id="76c28-353">Com esse modo, um protocolo de negociação é usado para realizar a autenticação de cliente e servidor.</span><span class="sxs-lookup"><span data-stu-id="76c28-353">With this mode a negotiation protocol is used to perform client and server authentication.</span></span> <span data-ttu-id="76c28-354">Kerberos é usado, se possível, caso contrário, NTLM.</span><span class="sxs-lookup"><span data-stu-id="76c28-354">Kerberos is used if possible, otherwise NTLM.</span></span> <span data-ttu-id="76c28-355">O SCT resultante aparece na camada de SOAP como um token de suporte de endosso que é sempre enviado do iniciador ao destinatário.</span><span class="sxs-lookup"><span data-stu-id="76c28-355">The resulting SCT appears at the SOAP layer as an endorsing supporting token that is always sent from initiator to recipient.</span></span> <span data-ttu-id="76c28-356">Além disso, o serviço é autenticado na camada de transporte por um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-356">The service is additionally authenticated at the transport layer by an X.509 certificate.</span></span> <span data-ttu-id="76c28-357">A associação usada é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="76c28-357">The binding used is a transport binding.</span></span> <span data-ttu-id="76c28-358">"SPNEGO" (negociação) descreve como o WCF usa o protocolo de negociação binária de SSPI com o WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="76c28-358">"SPNEGO" (negotiation) describes how WCF uses SSPI binary negotiation protocol with WS-Trust.</span></span> <span data-ttu-id="76c28-359">Exemplos de cabeçalho de segurança nesta seção são depois SCT tiver sido estabelecido por meio de handshake de SPNEGO.</span><span class="sxs-lookup"><span data-stu-id="76c28-359">Security header examples in this section are after the SCT has been established through the SPNEGO handshake.</span></span>  
+#### <a name="615-sspinegotiatedovertransport"></a><span data-ttu-id="82f52-352">6.1.5 SspiNegotiatedOverTransport</span><span class="sxs-lookup"><span data-stu-id="82f52-352">6.1.5 SspiNegotiatedOverTransport</span></span>  
+ <span data-ttu-id="82f52-353">Com esse modo, um protocolo de negociação é usado para executar a autenticação de cliente e servidor.</span><span class="sxs-lookup"><span data-stu-id="82f52-353">With this mode a negotiation protocol is used to perform client and server authentication.</span></span> <span data-ttu-id="82f52-354">O Kerberos é usado se possível, caso contrário, NTLM.</span><span class="sxs-lookup"><span data-stu-id="82f52-354">Kerberos is used if possible, otherwise NTLM.</span></span> <span data-ttu-id="82f52-355">O SCT resultante aparece na camada SOAP como um token de suporte de endosso que sempre é enviado do iniciador para o destinatário.</span><span class="sxs-lookup"><span data-stu-id="82f52-355">The resulting SCT appears at the SOAP layer as an endorsing supporting token that is always sent from initiator to recipient.</span></span> <span data-ttu-id="82f52-356">O serviço também é autenticado na camada de transporte por um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-356">The service is additionally authenticated at the transport layer by an X.509 certificate.</span></span> <span data-ttu-id="82f52-357">A associação usada é uma associação de transporte.</span><span class="sxs-lookup"><span data-stu-id="82f52-357">The binding used is a transport binding.</span></span> <span data-ttu-id="82f52-358">"SPNEGO" (negociação) descreve como o WCF usa o protocolo de negociação binária SSPI com WS-Trust.</span><span class="sxs-lookup"><span data-stu-id="82f52-358">"SPNEGO" (negotiation) describes how WCF uses SSPI binary negotiation protocol with WS-Trust.</span></span> <span data-ttu-id="82f52-359">Os exemplos de cabeçalho de segurança nesta seção são após o SCT ter sido estabelecido por meio do handshake SPNEGO.</span><span class="sxs-lookup"><span data-stu-id="82f52-359">Security header examples in this section are after the SCT has been established through the SPNEGO handshake.</span></span>  
   
- <span data-ttu-id="76c28-360">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-360">Policy</span></span>  
+ <span data-ttu-id="82f52-360">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-360">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='SspiNegotiatedOverTransport_policy' >  
@@ -610,10 +610,10 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples"></a><span data-ttu-id="76c28-361">Exemplos de cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="76c28-361">Security Header Examples</span></span>  
- <span data-ttu-id="76c28-362">Quando o Token de contexto de segurança é estabelecido por meio do handshake SPNEGO usando WS-Trust a negociação binária, as mensagens de aplicativo têm cabeçalhos de segurança com a seguinte estrutura.</span><span class="sxs-lookup"><span data-stu-id="76c28-362">Once the Security Context Token is established through SPNEGO handshake using WS-Trust Binary Negotiation, the application messages have security headers with the following structure.</span></span>  
+### <a name="security-header-examples"></a><span data-ttu-id="82f52-361">Exemplos de cabeçalho de segurança</span><span class="sxs-lookup"><span data-stu-id="82f52-361">Security Header Examples</span></span>  
+ <span data-ttu-id="82f52-362">Depois que o token de contexto de segurança é estabelecido por meio de handshake SPNEGO usando a negociação binária de WS-Trust, as mensagens de aplicativo têm cabeçalhos de segurança com a seguinte estrutura.</span><span class="sxs-lookup"><span data-stu-id="82f52-362">Once the Security Context Token is established through SPNEGO handshake using WS-Trust Binary Negotiation, the application messages have security headers with the following structure.</span></span>  
   
- <span data-ttu-id="76c28-363">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-363">Request</span></span>  
+ <span data-ttu-id="82f52-363">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-363">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -629,7 +629,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-364">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-364">Response</span></span>  
+ <span data-ttu-id="82f52-364">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-364">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -639,27 +639,27 @@ Namespace='http://www.w3.org/2005/08/addressing' />
 </wsse:Security>  
 ```  
   
-### <a name="62-using-x509-certificates-for-service-authentication"></a><span data-ttu-id="76c28-365">6.2 usando certificados X.509 para autenticação de serviço</span><span class="sxs-lookup"><span data-stu-id="76c28-365">6.2 Using X.509 Certificates for Service Authentication</span></span>  
- <span data-ttu-id="76c28-366">Esta seção descreve os modos de autenticação a seguir: MutualCertificate WSS1.0, CertificateDuplex mútua, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate e IssuedTokenForCertificate.</span><span class="sxs-lookup"><span data-stu-id="76c28-366">This section describes the following authentication modes: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate and IssuedTokenForCertificate.</span></span>  
+### <a name="62-using-x509-certificates-for-service-authentication"></a><span data-ttu-id="82f52-365">6,2 usando certificados X. 509 para autenticação de serviço</span><span class="sxs-lookup"><span data-stu-id="82f52-365">6.2 Using X.509 Certificates for Service Authentication</span></span>  
+ <span data-ttu-id="82f52-366">Esta seção descreve os seguintes modos de autenticação: MutualCertificate WSS 1.0, Mutual CertificateDuplex, MutualCertificate WSS 1.1, AnonymousForCertificate, UserNameForCertificate e IssuedTokenForCertificate.</span><span class="sxs-lookup"><span data-stu-id="82f52-366">This section describes the following authentication modes: MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate and IssuedTokenForCertificate.</span></span>  
   
-#### <a name="621-mutualcertificate-wss10"></a><span data-ttu-id="76c28-367">6.2.1 MutualCertificate WSS1.0</span><span class="sxs-lookup"><span data-stu-id="76c28-367">6.2.1 MutualCertificate WSS1.0</span></span>  
- <span data-ttu-id="76c28-368">Com esse modo de autenticação que o cliente é autenticado usando um X.509 do certificado que aparece na camada de SOAP que o token de iniciador.</span><span class="sxs-lookup"><span data-stu-id="76c28-368">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as the initiator token.</span></span> <span data-ttu-id="76c28-369">O serviço também é autenticado usando um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-369">The service is also authenticated using an X.509 certificate.</span></span>  
+#### <a name="621-mutualcertificate-wss10"></a><span data-ttu-id="82f52-367">6.2.1 MutualCertificate WSS 1.0</span><span class="sxs-lookup"><span data-stu-id="82f52-367">6.2.1 MutualCertificate WSS1.0</span></span>  
+ <span data-ttu-id="82f52-368">Com esse modo de autenticação, o cliente é autenticado usando um certificado X. 509 que aparece na camada SOAP como o token do iniciador.</span><span class="sxs-lookup"><span data-stu-id="82f52-368">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as the initiator token.</span></span> <span data-ttu-id="82f52-369">O serviço também é autenticado usando um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-369">The service is also authenticated using an X.509 certificate.</span></span>  
   
- <span data-ttu-id="76c28-370">A associação usada é uma associação assimétrica com os seguintes valores de propriedade:</span><span class="sxs-lookup"><span data-stu-id="76c28-370">The binding used is an asymmetric binding with the following property values:</span></span>  
+ <span data-ttu-id="82f52-370">A associação usada é uma associação assimétrica com os seguintes valores de propriedade:</span><span class="sxs-lookup"><span data-stu-id="82f52-370">The binding used is an asymmetric binding with the following property values:</span></span>  
   
- <span data-ttu-id="76c28-371">Token de iniciador: o certificado do cliente x. 509, com o modo de inclusão definido como .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="76c28-371">Initiator Token: the client’s X.509 certificate, with inclusion mode set to …/IncludeToken/AlwaysToRecipient</span></span>  
+ <span data-ttu-id="82f52-371">Token do iniciador: o certificado X. 509 do cliente, com o modo de inclusão definido como. ../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="82f52-371">Initiator Token: the client’s X.509 certificate, with inclusion mode set to …/IncludeToken/AlwaysToRecipient</span></span>  
   
- <span data-ttu-id="76c28-372">Token de destinatário: Certificado X.509 do servidor, com o modo de inclusão é definido .../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="76c28-372">Recipient Token: Server’s X.509 Certificate, with inclusion mode is set …/IncludeToken/Never</span></span>  
+ <span data-ttu-id="82f52-372">Token do destinatário: o certificado X. 509 do servidor, com o modo de inclusão, está definido. ../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="82f52-372">Recipient Token: Server’s X.509 Certificate, with inclusion mode is set …/IncludeToken/Never</span></span>  
   
- <span data-ttu-id="76c28-373">Proteção de token: False</span><span class="sxs-lookup"><span data-stu-id="76c28-373">Token Protection: False</span></span>  
+ <span data-ttu-id="82f52-373">Proteção de token: false</span><span class="sxs-lookup"><span data-stu-id="82f52-373">Token Protection: False</span></span>  
   
- <span data-ttu-id="76c28-374">Todo o cabeçalho e corpo assinaturas: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-374">Entire Header And Body Signatures: True</span></span>  
+ <span data-ttu-id="82f52-374">Assinaturas inteiras de cabeçalho e corpo: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-374">Entire Header And Body Signatures: True</span></span>  
   
- <span data-ttu-id="76c28-375">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="76c28-375">Protection Order: SignBeforeEncrypt</span></span>  
+ <span data-ttu-id="82f52-375">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="82f52-375">Protection Order: SignBeforeEncrypt</span></span>  
   
- <span data-ttu-id="76c28-376">Criptografe assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-376">Encrypt Signature: True</span></span>  
+ <span data-ttu-id="82f52-376">Criptografar assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-376">Encrypt Signature: True</span></span>  
   
- <span data-ttu-id="76c28-377">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-377">Policy</span></span>  
+ <span data-ttu-id="82f52-377">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-377">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='MutualCertificate_WSS10_policy' >  
@@ -721,8 +721,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-378">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-378">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-379">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-379">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-378">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-378">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-379">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-379">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -744,7 +744,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-380">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-380">Response</span></span>  
+ <span data-ttu-id="82f52-380">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-380">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -763,9 +763,9 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-381">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-381">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-381">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-381">Security Header Examples: EncryptBeforeSign</span></span>  
   
- <span data-ttu-id="76c28-382">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-382">Request</span></span>  
+ <span data-ttu-id="82f52-382">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-382">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -787,7 +787,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-383">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-383">Response</span></span>  
+ <span data-ttu-id="82f52-383">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-383">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -806,24 +806,24 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-#### <a name="622-mutualcertificateduplex"></a><span data-ttu-id="76c28-384">6.2.2 MutualCertificateDuplex</span><span class="sxs-lookup"><span data-stu-id="76c28-384">6.2.2 MutualCertificateDuplex</span></span>  
- <span data-ttu-id="76c28-385">Com esse modo de autenticação que o cliente é autenticado usando um X.509 do certificado que aparece na camada de SOAP que o token de iniciador.</span><span class="sxs-lookup"><span data-stu-id="76c28-385">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as the initiator token.</span></span> <span data-ttu-id="76c28-386">O serviço também é autenticado usando um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-386">The service is also authenticated using an X.509 certificate.</span></span>  
+#### <a name="622-mutualcertificateduplex"></a><span data-ttu-id="82f52-384">6.2.2 MutualCertificateDuplex</span><span class="sxs-lookup"><span data-stu-id="82f52-384">6.2.2 MutualCertificateDuplex</span></span>  
+ <span data-ttu-id="82f52-385">Com esse modo de autenticação, o cliente é autenticado usando um certificado X. 509 que aparece na camada SOAP como o token do iniciador.</span><span class="sxs-lookup"><span data-stu-id="82f52-385">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as the initiator token.</span></span> <span data-ttu-id="82f52-386">O serviço também é autenticado usando um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-386">The service is also authenticated using an X.509 certificate.</span></span>  
   
- <span data-ttu-id="76c28-387">A associação usada é uma associação assimétrica com os seguintes valores de propriedade:</span><span class="sxs-lookup"><span data-stu-id="76c28-387">The binding used is an asymmetric binding with the following property values:</span></span>  
+ <span data-ttu-id="82f52-387">A associação usada é uma associação assimétrica com os seguintes valores de propriedade:</span><span class="sxs-lookup"><span data-stu-id="82f52-387">The binding used is an asymmetric binding with the following property values:</span></span>  
   
- <span data-ttu-id="76c28-388">Token de iniciador: X509 do cliente certificado, o modo de inclusão é definido como .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="76c28-388">Initiator Token: Client’s X509 Certificate, inclusion mode is set to …/IncludeToken/AlwaysToRecipient</span></span>  
+ <span data-ttu-id="82f52-388">Token do iniciador: certificado X509 do cliente, modo de inclusão definido como. ../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="82f52-388">Initiator Token: Client’s X509 Certificate, inclusion mode is set to …/IncludeToken/AlwaysToRecipient</span></span>  
   
- <span data-ttu-id="76c28-389">Token de destinatário: X509 do servidor certificado, o modo de inclusão é definido como .../IncludeToken/AlwaysToInitiator</span><span class="sxs-lookup"><span data-stu-id="76c28-389">Recipient Token: Server’s X509 Certificate, inclusion mode is set to …/IncludeToken/AlwaysToInitiator</span></span>  
+ <span data-ttu-id="82f52-389">Token do destinatário: certificado X509 do servidor, modo de inclusão definido como. ../IncludeToken/AlwaysToInitiator</span><span class="sxs-lookup"><span data-stu-id="82f52-389">Recipient Token: Server’s X509 Certificate, inclusion mode is set to …/IncludeToken/AlwaysToInitiator</span></span>  
   
- <span data-ttu-id="76c28-390">Proteção de token: False</span><span class="sxs-lookup"><span data-stu-id="76c28-390">Token Protection: False</span></span>  
+ <span data-ttu-id="82f52-390">Proteção de token: false</span><span class="sxs-lookup"><span data-stu-id="82f52-390">Token Protection: False</span></span>  
   
- <span data-ttu-id="76c28-391">Todo o cabeçalho e corpo assinaturas: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-391">Entire Header And Body Signatures: True</span></span>  
+ <span data-ttu-id="82f52-391">Assinaturas inteiras de cabeçalho e corpo: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-391">Entire Header And Body Signatures: True</span></span>  
   
- <span data-ttu-id="76c28-392">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="76c28-392">Protection Order: SignBeforeEncrypt</span></span>  
+ <span data-ttu-id="82f52-392">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="82f52-392">Protection Order: SignBeforeEncrypt</span></span>  
   
- <span data-ttu-id="76c28-393">Criptografe assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-393">Encrypt Signature: True</span></span>  
+ <span data-ttu-id="82f52-393">Criptografar assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-393">Encrypt Signature: True</span></span>  
   
- <span data-ttu-id="76c28-394">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-394">Policy</span></span>  
+ <span data-ttu-id="82f52-394">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-394">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='MutualCertificateDuplex_policy' >  
@@ -885,8 +885,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-395">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-395">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-396">Solicitação e resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-396">Request and Response</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-395">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-395">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-396">Solicitação e resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-396">Request and Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -908,8 +908,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-397">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-397">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-398">Solicitação e resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-398">Request and Response</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-397">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-397">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-398">Solicitação e resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-398">Request and Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -931,27 +931,27 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-#### <a name="623-using-symmetricbinding-with-x509-service-authentication"></a><span data-ttu-id="76c28-399">6.2.3 usando SymmetricBinding com autenticação do serviço de x. 509</span><span class="sxs-lookup"><span data-stu-id="76c28-399">6.2.3 Using SymmetricBinding with X.509 Service Authentication</span></span>  
- <span data-ttu-id="76c28-400">"WSS10" fornecido suporte limitado para cenários com X509 tokens.</span><span class="sxs-lookup"><span data-stu-id="76c28-400">"WSS10" provided limited support for scenarios with X509 tokens.</span></span> <span data-ttu-id="76c28-401">Por exemplo, não houve nenhuma maneira de fornecer proteção de assinatura e criptografia de mensagens usando apenas o token de serviço X509.</span><span class="sxs-lookup"><span data-stu-id="76c28-401">For example, there was no way to provide signature and encryption protection for messages using only service X509 token.</span></span> <span data-ttu-id="76c28-402">"WSS11" introduziu o uso de EncryptedKey como um token simétrico.</span><span class="sxs-lookup"><span data-stu-id="76c28-402">"WSS11" introduced the usage of EncryptedKey as a symmetric token.</span></span> <span data-ttu-id="76c28-403">Agora, uma chave temporária criptografada para o certificado do serviço x. 509 poderia ser usada para a proteção de mensagens de solicitação e resposta.</span><span class="sxs-lookup"><span data-stu-id="76c28-403">Now a temporary key encrypted for the service's X.509 certificate could be used for both request and response messages protection.</span></span> <span data-ttu-id="76c28-404">Os modos de autenticação descritos na seção 6.4 abaixo usam esse padrão.</span><span class="sxs-lookup"><span data-stu-id="76c28-404">The authentication modes described in the section 6.4 below use this pattern.</span></span>  
+#### <a name="623-using-symmetricbinding-with-x509-service-authentication"></a><span data-ttu-id="82f52-399">6.2.3 usando Simétricobinding com autenticação de serviço X. 509</span><span class="sxs-lookup"><span data-stu-id="82f52-399">6.2.3 Using SymmetricBinding with X.509 Service Authentication</span></span>  
+ <span data-ttu-id="82f52-400">"WSS10" forneceu suporte limitado para cenários com tokens X509.</span><span class="sxs-lookup"><span data-stu-id="82f52-400">"WSS10" provided limited support for scenarios with X509 tokens.</span></span> <span data-ttu-id="82f52-401">Por exemplo, não havia como fornecer proteção de assinatura e criptografia para mensagens usando apenas o token X509 do serviço.</span><span class="sxs-lookup"><span data-stu-id="82f52-401">For example, there was no way to provide signature and encryption protection for messages using only service X509 token.</span></span> <span data-ttu-id="82f52-402">"WSS11" introduziu o uso de EncryptedKey como um token simétrico.</span><span class="sxs-lookup"><span data-stu-id="82f52-402">"WSS11" introduced the usage of EncryptedKey as a symmetric token.</span></span> <span data-ttu-id="82f52-403">Agora, uma chave temporária criptografada para o certificado X. 509 do serviço pode ser usada para a proteção de mensagens de solicitação e resposta.</span><span class="sxs-lookup"><span data-stu-id="82f52-403">Now a temporary key encrypted for the service's X.509 certificate could be used for both request and response messages protection.</span></span> <span data-ttu-id="82f52-404">Os modos de autenticação descritos na seção 6,4 abaixo usam esse padrão.</span><span class="sxs-lookup"><span data-stu-id="82f52-404">The authentication modes described in the section 6.4 below use this pattern.</span></span>  
   
- <span data-ttu-id="76c28-405">O WS-SecurityPolicy descreve esse padrão usando SymmetricBinding com o serviço de token X509 que o token de proteção.</span><span class="sxs-lookup"><span data-stu-id="76c28-405">WS-SecurityPolicy describes this pattern using SymmetricBinding with Service X509 token as the protection token.</span></span>  
+ <span data-ttu-id="82f52-405">O WS-SecurityPolicy descreve esse padrão usando o Simétricobinding com o token X509 do serviço como o token de proteção.</span><span class="sxs-lookup"><span data-stu-id="82f52-405">WS-SecurityPolicy describes this pattern using SymmetricBinding with Service X509 token as the protection token.</span></span>  
   
- <span data-ttu-id="76c28-406">Modos de autenticação AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 e IssuedTokenForCertificate todos usam uma instância similar do sp:SymmetricBinding com os seguintes valores de propriedade:</span><span class="sxs-lookup"><span data-stu-id="76c28-406">Authentication modes AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 and IssuedTokenForCertificate all use a similar instance of sp:SymmetricBinding with the following property values:</span></span>  
+ <span data-ttu-id="82f52-406">Modos de autenticação AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 e IssuedTokenForCertificate usam uma instância semelhante de SP: Symmetricbinding com os seguintes valores de propriedade:</span><span class="sxs-lookup"><span data-stu-id="82f52-406">Authentication modes AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 and IssuedTokenForCertificate all use a similar instance of sp:SymmetricBinding with the following property values:</span></span>  
   
- <span data-ttu-id="76c28-407">Token de proteção: X509 do servidor certificado, o modo de inclusão é definido como .../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="76c28-407">Protection Token: Server’s X509 Certificate, inclusion mode is set to .../IncludeToken/Never</span></span>  
-<span data-ttu-id="76c28-408">Proteção de token: False</span><span class="sxs-lookup"><span data-stu-id="76c28-408">Token Protection: False</span></span>  
+ <span data-ttu-id="82f52-407">Token de proteção: certificado X509 do servidor, modo de inclusão definido como. ../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="82f52-407">Protection Token: Server’s X509 Certificate, inclusion mode is set to .../IncludeToken/Never</span></span>  
+<span data-ttu-id="82f52-408">Proteção de token: false</span><span class="sxs-lookup"><span data-stu-id="82f52-408">Token Protection: False</span></span>  
   
- <span data-ttu-id="76c28-409">Todo o cabeçalho e corpo assinaturas: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-409">Entire Header And Body Signatures: True</span></span>  
+ <span data-ttu-id="82f52-409">Assinaturas inteiras de cabeçalho e corpo: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-409">Entire Header And Body Signatures: True</span></span>  
   
- <span data-ttu-id="76c28-410">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="76c28-410">Protection Order: SignBeforeEncrypt</span></span>  
+ <span data-ttu-id="82f52-410">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="82f52-410">Protection Order: SignBeforeEncrypt</span></span>  
   
- <span data-ttu-id="76c28-411">Criptografe assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-411">Encrypt Signature: True</span></span>  
+ <span data-ttu-id="82f52-411">Criptografar assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-411">Encrypt Signature: True</span></span>  
   
- <span data-ttu-id="76c28-412">Os modos de autenticação acima diferem somente por tokens de suporte que eles usam.</span><span class="sxs-lookup"><span data-stu-id="76c28-412">The above authentication modes only differ by the supporting tokens they use.</span></span> <span data-ttu-id="76c28-413">AnonymousForCertificate não tem quaisquer tokens de suporte, MutualCertificate WSS 1.1 tem o cliente como um endosso que dão suporte a tokens de certificados X509, UserNameForCertificate tem um Token de nome de usuário como um token de suporte assinado e IssuedTokenForCertificate tem o token emitido como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="76c28-413">AnonymousForCertificate does not have any supporting tokens, MutualCertificate WSS 1.1 has the client’s X509 certificate as an endorsing supporting tokens, UserNameForCertificate has a UserName Token as a signed supporting token and IssuedTokenForCertificate has the issued token as an endorsing supporting token.</span></span>  
+ <span data-ttu-id="82f52-412">Os modos de autenticação acima diferem apenas pelos tokens de suporte que eles usam.</span><span class="sxs-lookup"><span data-stu-id="82f52-412">The above authentication modes only differ by the supporting tokens they use.</span></span> <span data-ttu-id="82f52-413">AnonymousForCertificate não tem nenhum token de suporte, o MutualCertificate WSS 1,1 tem o certificado X509 do cliente como um token de suporte de endosso, UserNameForCertificate tem um token de nome de usuário como um token de suporte assinado e IssuedTokenForCertificate tem o token emitido como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="82f52-413">AnonymousForCertificate does not have any supporting tokens, MutualCertificate WSS 1.1 has the client’s X509 certificate as an endorsing supporting tokens, UserNameForCertificate has a UserName Token as a signed supporting token and IssuedTokenForCertificate has the issued token as an endorsing supporting token.</span></span>  
   
- <span data-ttu-id="76c28-414">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-414">Policy</span></span>  
+ <span data-ttu-id="82f52-414">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-414">Policy</span></span>  
   
- <span data-ttu-id="76c28-415">Associação simétrica</span><span class="sxs-lookup"><span data-stu-id="76c28-415">Symmetric Binding</span></span>  
+ <span data-ttu-id="82f52-415">Associação simétrica</span><span class="sxs-lookup"><span data-stu-id="82f52-415">Symmetric Binding</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='SymmetricCert_policy' >  
@@ -1010,15 +1010,15 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsp:Policy>  
 ```  
   
-#### <a name="624-anonymousforcertificate"></a><span data-ttu-id="76c28-416">6.2.4 AnonymousForCertificate</span><span class="sxs-lookup"><span data-stu-id="76c28-416">6.2.4 AnonymousForCertificate</span></span>  
- <span data-ttu-id="76c28-417">Com esse modo de autenticação, o cliente é anônimo e o serviço é autenticado usando um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-417">With this authentication mode the client is anonymous and the service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="76c28-418">A associação usada é uma instância de associação simétrica, conforme descrito em 6.4.2.</span><span class="sxs-lookup"><span data-stu-id="76c28-418">The binding used is an instance of symmetric binding as described in 6.4.2.</span></span>  
+#### <a name="624-anonymousforcertificate"></a><span data-ttu-id="82f52-416">6.2.4 AnonymousForCertificate</span><span class="sxs-lookup"><span data-stu-id="82f52-416">6.2.4 AnonymousForCertificate</span></span>  
+ <span data-ttu-id="82f52-417">Com esse modo de autenticação, o cliente é anônimo e o serviço é autenticado usando um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-417">With this authentication mode the client is anonymous and the service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="82f52-418">A associação usada é uma instância da Associação simétrica, conforme descrito em 6.4.2.</span><span class="sxs-lookup"><span data-stu-id="82f52-418">The binding used is an instance of symmetric binding as described in 6.4.2.</span></span>  
   
- <span data-ttu-id="76c28-419">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-419">Policy</span></span>  
+ <span data-ttu-id="82f52-419">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-419">Policy</span></span>  
   
- <span data-ttu-id="76c28-420">Consulte "Política" 6.2.3 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="76c28-420">See "Policy" in 6.2.3 above for binding details</span></span>  
+ <span data-ttu-id="82f52-420">Consulte "política" em 6.2.3 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="82f52-420">See "Policy" in 6.2.3 above for binding details</span></span>  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-421">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-421">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-422">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-422">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-421">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-421">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-422">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-422">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1043,7 +1043,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-423">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-423">Response</span></span>  
+ <span data-ttu-id="82f52-423">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-423">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1068,8 +1068,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-424">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-424">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-425">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-425">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-424">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-424">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-425">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-425">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1094,7 +1094,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-426">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-426">Response</span></span>  
+ <span data-ttu-id="82f52-426">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-426">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1117,14 +1117,14 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-#### <a name="625-usernameforcertificate"></a><span data-ttu-id="76c28-427">6.2.5 UserNameForCertificate</span><span class="sxs-lookup"><span data-stu-id="76c28-427">6.2.5 UserNameForCertificate</span></span>  
- <span data-ttu-id="76c28-428">Com esse modo de autenticação o cliente é autenticado para o serviço usando um Token de nome de usuário que aparece na camada de SOAP como um token de suporte com sinal.</span><span class="sxs-lookup"><span data-stu-id="76c28-428">With this authentication mode the client authenticates to the service using a Username Token which appears at the SOAP layer as a signed supporting token.</span></span> <span data-ttu-id="76c28-429">O serviço autentica para o cliente usando um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-429">The service authenticates to the client using an X.509 certificate.</span></span> <span data-ttu-id="76c28-430">A associação usada é uma associação simétrica com o token de proteção sendo uma chave gerada pelo cliente, criptografado com a chave pública do serviço.</span><span class="sxs-lookup"><span data-stu-id="76c28-430">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
+#### <a name="625-usernameforcertificate"></a><span data-ttu-id="82f52-427">6.2.5 UserNameForCertificate</span><span class="sxs-lookup"><span data-stu-id="82f52-427">6.2.5 UserNameForCertificate</span></span>  
+ <span data-ttu-id="82f52-428">Com esse modo de autenticação, o cliente é autenticado no serviço usando um token de nome de usuário que aparece na camada SOAP como um token de suporte assinado.</span><span class="sxs-lookup"><span data-stu-id="82f52-428">With this authentication mode the client authenticates to the service using a Username Token which appears at the SOAP layer as a signed supporting token.</span></span> <span data-ttu-id="82f52-429">O serviço é autenticado no cliente usando um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-429">The service authenticates to the client using an X.509 certificate.</span></span> <span data-ttu-id="82f52-430">A associação usada é uma associação simétrica com o token de proteção sendo uma chave gerada pelo cliente, criptografada com a chave pública do serviço.</span><span class="sxs-lookup"><span data-stu-id="82f52-430">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
   
- <span data-ttu-id="76c28-431">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-431">Policy</span></span>  
+ <span data-ttu-id="82f52-431">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-431">Policy</span></span>  
   
- <span data-ttu-id="76c28-432">Consulte "Política" 6.2.3 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="76c28-432">See "Policy" in 6.2.3 above for binding details</span></span>  
+ <span data-ttu-id="82f52-432">Consulte "política" em 6.2.3 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="82f52-432">See "Policy" in 6.2.3 above for binding details</span></span>  
   
- <span data-ttu-id="76c28-433">Assinado um Token de suporte</span><span class="sxs-lookup"><span data-stu-id="76c28-433">Signed Supporting Token</span></span>  
+ <span data-ttu-id="82f52-433">Token de suporte assinado</span><span class="sxs-lookup"><span data-stu-id="82f52-433">Signed Supporting Token</span></span>  
   
 ```xml  
 <sp:SignedSupportingTokens>  
@@ -1138,8 +1138,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-434">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-434">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-435">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-435">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-434">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-434">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-435">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-435">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1167,7 +1167,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-436">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-436">Response</span></span>  
+ <span data-ttu-id="82f52-436">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-436">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1189,8 +1189,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-437">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-437">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-438">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-438">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-437">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-437">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-438">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-438">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1218,7 +1218,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-439">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-439">Response</span></span>  
+ <span data-ttu-id="82f52-439">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-439">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1240,14 +1240,14 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-#### <a name="626-mutualcertificate-wss-11"></a><span data-ttu-id="76c28-440">6.2.6 MutualCertificate (WSS 1.1)</span><span class="sxs-lookup"><span data-stu-id="76c28-440">6.2.6 MutualCertificate (WSS 1.1)</span></span>  
- <span data-ttu-id="76c28-441">Com esse modo de autenticação que o cliente é autenticado usando um X.509 do certificado que aparece na camada de SOAP como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="76c28-441">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="76c28-442">O serviço também é autenticado usando um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-442">The service is also authenticated using an X.509 certificate.</span></span> <span data-ttu-id="76c28-443">A associação usada é uma associação simétrica com o token de proteção sendo uma chave gerada pelo cliente, criptografado com a chave pública do serviço.</span><span class="sxs-lookup"><span data-stu-id="76c28-443">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
+#### <a name="626-mutualcertificate-wss-11"></a><span data-ttu-id="82f52-440">6.2.6 MutualCertificate (WSS 1,1)</span><span class="sxs-lookup"><span data-stu-id="82f52-440">6.2.6 MutualCertificate (WSS 1.1)</span></span>  
+ <span data-ttu-id="82f52-441">Com esse modo de autenticação, o cliente é autenticado usando um certificado X. 509 que aparece na camada SOAP como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="82f52-441">With this authentication mode the client authenticates using an X.509 certificate which appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="82f52-442">O serviço também é autenticado usando um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-442">The service is also authenticated using an X.509 certificate.</span></span> <span data-ttu-id="82f52-443">A associação usada é uma associação simétrica com o token de proteção sendo uma chave gerada pelo cliente, criptografada com a chave pública do serviço.</span><span class="sxs-lookup"><span data-stu-id="82f52-443">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
   
- <span data-ttu-id="76c28-444">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-444">Policy</span></span>  
+ <span data-ttu-id="82f52-444">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-444">Policy</span></span>  
   
- <span data-ttu-id="76c28-445">Consulte a política em 6.2.3 para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="76c28-445">See Policy in 6.2.3 for binding details</span></span>  
+ <span data-ttu-id="82f52-445">Consulte a política em 6.2.3 para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="82f52-445">See Policy in 6.2.3 for binding details</span></span>  
   
- <span data-ttu-id="76c28-446">Token de suporte de endosso</span><span class="sxs-lookup"><span data-stu-id="76c28-446">Endorsing Supporting Token</span></span>  
+ <span data-ttu-id="82f52-446">Token de suporte de endosso</span><span class="sxs-lookup"><span data-stu-id="82f52-446">Endorsing Supporting Token</span></span>  
   
 ```xml  
 <sp:EndorsingSupportingTokens>  
@@ -1262,8 +1262,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-447">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-447">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-448">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-448">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-447">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-447">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-448">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-448">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1294,7 +1294,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-449">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-449">Response</span></span>  
+ <span data-ttu-id="82f52-449">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-449">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1325,8 +1325,8 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-450">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-450">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-451">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-451">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-450">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-450">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-451">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-451">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1357,7 +1357,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-452">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-452">Response</span></span>  
+ <span data-ttu-id="82f52-452">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-452">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1384,14 +1384,14 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
 </wsse:Security>  
 ```  
   
-#### <a name="627-issuedtokenforcertificate"></a><span data-ttu-id="76c28-453">6.2.7 IssuedTokenForCertificate</span><span class="sxs-lookup"><span data-stu-id="76c28-453">6.2.7 IssuedTokenForCertificate</span></span>  
- <span data-ttu-id="76c28-454">Com essa autenticação modo que o cliente não se autenticar no serviço, como tal, mas em vez disso, apresenta um token emitido por um STS e comprova o conhecimento de uma chave compartilhada.</span><span class="sxs-lookup"><span data-stu-id="76c28-454">With this authentication mode the client does not authenticate to the service, as such, but instead presents a token issued by a STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="76c28-455">O token emitido é exibido na camada de SOAP como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="76c28-455">The issued token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="76c28-456">O serviço autentica para o cliente usando um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-456">The service authenticates to the client using an X.509 certificate.</span></span> <span data-ttu-id="76c28-457">A associação usada é uma associação simétrica com o token de proteção sendo uma chave gerada pelo cliente, criptografado com a chave pública do serviço.</span><span class="sxs-lookup"><span data-stu-id="76c28-457">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
+#### <a name="627-issuedtokenforcertificate"></a><span data-ttu-id="82f52-453">6.2.7 IssuedTokenForCertificate</span><span class="sxs-lookup"><span data-stu-id="82f52-453">6.2.7 IssuedTokenForCertificate</span></span>  
+ <span data-ttu-id="82f52-454">Com esse modo de autenticação, o cliente não se autentica no serviço, como tal, mas apresenta um token emitido por um STS e comprova o conhecimento de uma chave compartilhada.</span><span class="sxs-lookup"><span data-stu-id="82f52-454">With this authentication mode the client does not authenticate to the service, as such, but instead presents a token issued by a STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="82f52-455">O token emitido é exibido na camada SOAP como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="82f52-455">The issued token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="82f52-456">O serviço é autenticado no cliente usando um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-456">The service authenticates to the client using an X.509 certificate.</span></span> <span data-ttu-id="82f52-457">A associação usada é uma associação simétrica com o token de proteção sendo uma chave gerada pelo cliente, criptografada com a chave pública do serviço.</span><span class="sxs-lookup"><span data-stu-id="82f52-457">The binding used is a symmetric binding with the protection token being a key generated by the client, encrypted with the public key of the service.</span></span>  
   
- <span data-ttu-id="76c28-458">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-458">Policy</span></span>  
+ <span data-ttu-id="82f52-458">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-458">Policy</span></span>  
   
- <span data-ttu-id="76c28-459">Consulte a política em 6.2.3 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="76c28-459">See Policy in 6.2.3 above for binding details</span></span>  
+ <span data-ttu-id="82f52-459">Consulte a política no 6.2.3 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="82f52-459">See Policy in 6.2.3 above for binding details</span></span>  
   
- <span data-ttu-id="76c28-460">Token de suporte de endosso</span><span class="sxs-lookup"><span data-stu-id="76c28-460">Endorsing Supporting Token</span></span>  
+ <span data-ttu-id="82f52-460">Token de suporte de endosso</span><span class="sxs-lookup"><span data-stu-id="82f52-460">Endorsing Supporting Token</span></span>  
   
 ```xml  
 <sp:EndorsingSupportingTokens>  
@@ -1411,8 +1411,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-461">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-461">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-462">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-462">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-461">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-461">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-462">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-462">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1446,7 +1446,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-463">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-463">Response</span></span>  
+ <span data-ttu-id="82f52-463">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-463">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1474,8 +1474,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-464">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-464">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-465">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-465">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-464">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-464">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-465">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-465">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1509,7 +1509,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-466">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-466">Response</span></span>  
+ <span data-ttu-id="82f52-466">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-466">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1533,19 +1533,19 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-## <a name="63-kerberos"></a><span data-ttu-id="76c28-467">6.3 Kerberos</span><span class="sxs-lookup"><span data-stu-id="76c28-467">6.3 Kerberos</span></span>  
- <span data-ttu-id="76c28-468">Com esse modo de autenticação o cliente é autenticado para o serviço usando um tíquete Kerberos.</span><span class="sxs-lookup"><span data-stu-id="76c28-468">With this authentication mode the client authenticates to the service using a Kerberos ticket.</span></span> <span data-ttu-id="76c28-469">Esse tíquete mesmo também fornece autenticação de servidor.</span><span class="sxs-lookup"><span data-stu-id="76c28-469">That same ticket also provides server authentication.</span></span> <span data-ttu-id="76c28-470">A associação usada é uma associação simétrica com as seguintes propriedades;</span><span class="sxs-lookup"><span data-stu-id="76c28-470">The binding used is a symmetric binding with the following properties;</span></span>  
+## <a name="63-kerberos"></a><span data-ttu-id="82f52-467">6,3 Kerberos</span><span class="sxs-lookup"><span data-stu-id="82f52-467">6.3 Kerberos</span></span>  
+ <span data-ttu-id="82f52-468">Com esse modo de autenticação, o cliente é autenticado para o serviço usando um tíquete Kerberos.</span><span class="sxs-lookup"><span data-stu-id="82f52-468">With this authentication mode the client authenticates to the service using a Kerberos ticket.</span></span> <span data-ttu-id="82f52-469">Esse mesmo tíquete também fornece autenticação de servidor.</span><span class="sxs-lookup"><span data-stu-id="82f52-469">That same ticket also provides server authentication.</span></span> <span data-ttu-id="82f52-470">A associação usada é uma associação simétrica com as seguintes propriedades;</span><span class="sxs-lookup"><span data-stu-id="82f52-470">The binding used is a symmetric binding with the following properties;</span></span>  
   
- <span data-ttu-id="76c28-471">Token de proteção: Tíquete Kerberos, o modo de inclusão é definido como .../IncludeToken/Once</span><span class="sxs-lookup"><span data-stu-id="76c28-471">Protection Token: Kerberos Ticket, inclusion mode is set to .../IncludeToken/Once</span></span>  
-<span data-ttu-id="76c28-472">Proteção de token: False</span><span class="sxs-lookup"><span data-stu-id="76c28-472">Token Protection: False</span></span>  
+ <span data-ttu-id="82f52-471">Token de proteção: tíquete Kerberos, modo de inclusão é definido como. ../IncludeToken/Once</span><span class="sxs-lookup"><span data-stu-id="82f52-471">Protection Token: Kerberos Ticket, inclusion mode is set to .../IncludeToken/Once</span></span>  
+<span data-ttu-id="82f52-472">Proteção de token: false</span><span class="sxs-lookup"><span data-stu-id="82f52-472">Token Protection: False</span></span>  
   
- <span data-ttu-id="76c28-473">Todo o cabeçalho e corpo assinaturas: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-473">Entire Header And Body Signatures: True</span></span>  
+ <span data-ttu-id="82f52-473">Assinaturas inteiras de cabeçalho e corpo: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-473">Entire Header And Body Signatures: True</span></span>  
   
- <span data-ttu-id="76c28-474">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="76c28-474">Protection Order: SignBeforeEncrypt</span></span>  
+ <span data-ttu-id="82f52-474">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="82f52-474">Protection Order: SignBeforeEncrypt</span></span>  
   
- <span data-ttu-id="76c28-475">Criptografe assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-475">Encrypt Signature: True</span></span>  
+ <span data-ttu-id="82f52-475">Criptografar assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-475">Encrypt Signature: True</span></span>  
   
- <span data-ttu-id="76c28-476">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-476">Policy</span></span>  
+ <span data-ttu-id="82f52-476">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-476">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='Kerberos_policy' >  
@@ -1599,8 +1599,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-477">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-477">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-478">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-478">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-477">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-477">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-478">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-478">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1625,7 +1625,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-479">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-479">Response</span></span>  
+ <span data-ttu-id="82f52-479">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-479">Response</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1647,8 +1647,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-480">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-480">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-481">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-481">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-480">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-480">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-481">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-481">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1656,7 +1656,7 @@ TBD
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-482">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-482">Response</span></span>  
+ <span data-ttu-id="82f52-482">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-482">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1664,19 +1664,19 @@ TBD
 </wsse:Security>  
 ```  
   
-#### <a name="64-issuedtoken"></a><span data-ttu-id="76c28-483">6.4 IssuedToken</span><span class="sxs-lookup"><span data-stu-id="76c28-483">6.4 IssuedToken</span></span>  
- <span data-ttu-id="76c28-484">Com esse modo de autenticação que o cliente não se autenticar no serviço, assim, em vez disso, o cliente apresenta um token emitido por um STS e comprova o conhecimento de uma chave compartilhada.</span><span class="sxs-lookup"><span data-stu-id="76c28-484">With this authentication mode the client does not authenticate to the service, as such, rather the client presents a token issued by an STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="76c28-485">O serviço não está autenticado para o cliente, como tal, em vez disso, o STS criptografa a chave compartilhada como parte do token emitido, de modo que apenas o serviço pode descriptografar a chave.</span><span class="sxs-lookup"><span data-stu-id="76c28-485">The service is not authenticated to the client, as such, instead the STS encrypts the shared key as part of the issued token such that only the service can decrypt the key.</span></span> <span data-ttu-id="76c28-486">A associação usada é como simétrica associação com as seguintes propriedades;</span><span class="sxs-lookup"><span data-stu-id="76c28-486">The binding used is as symmetric binding with the following properties;</span></span>  
+#### <a name="64-issuedtoken"></a><span data-ttu-id="82f52-483">6,4 IssuedToken</span><span class="sxs-lookup"><span data-stu-id="82f52-483">6.4 IssuedToken</span></span>  
+ <span data-ttu-id="82f52-484">Com esse modo de autenticação, o cliente não se autentica no serviço, como tal, em vez disso, o cliente apresenta um token emitido por um STS e comprova o conhecimento de uma chave compartilhada.</span><span class="sxs-lookup"><span data-stu-id="82f52-484">With this authentication mode the client does not authenticate to the service, as such, rather the client presents a token issued by an STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="82f52-485">O serviço não é autenticado para o cliente, como tal, em vez disso, o STS criptografa a chave compartilhada como parte do token emitido, de modo que somente o serviço possa descriptografar a chave.</span><span class="sxs-lookup"><span data-stu-id="82f52-485">The service is not authenticated to the client, as such, instead the STS encrypts the shared key as part of the issued token such that only the service can decrypt the key.</span></span> <span data-ttu-id="82f52-486">A associação usada é como uma associação simétrica com as seguintes propriedades;</span><span class="sxs-lookup"><span data-stu-id="82f52-486">The binding used is as symmetric binding with the following properties;</span></span>  
   
- <span data-ttu-id="76c28-487">Token de proteção: Modo de inclusão de Token emitido, é definido como .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="76c28-487">Protection Token: Issued Token, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
-<span data-ttu-id="76c28-488">Proteção de token: False</span><span class="sxs-lookup"><span data-stu-id="76c28-488">Token Protection: False</span></span>  
+ <span data-ttu-id="82f52-487">Token de proteção: token emitido, o modo de inclusão é definido como. ../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="82f52-487">Protection Token: Issued Token, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
+<span data-ttu-id="82f52-488">Proteção de token: false</span><span class="sxs-lookup"><span data-stu-id="82f52-488">Token Protection: False</span></span>  
   
- <span data-ttu-id="76c28-489">Todo o cabeçalho e corpo assinaturas: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-489">Entire Header And Body Signatures: True</span></span>  
+ <span data-ttu-id="82f52-489">Assinaturas inteiras de cabeçalho e corpo: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-489">Entire Header And Body Signatures: True</span></span>  
   
- <span data-ttu-id="76c28-490">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="76c28-490">Protection Order: SignBeforeEncrypt</span></span>  
+ <span data-ttu-id="82f52-490">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="82f52-490">Protection Order: SignBeforeEncrypt</span></span>  
   
- <span data-ttu-id="76c28-491">Criptografe assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-491">Encrypt Signature: True</span></span>  
+ <span data-ttu-id="82f52-491">Criptografar assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-491">Encrypt Signature: True</span></span>  
   
- <span data-ttu-id="76c28-492">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-492">Policy</span></span>  
+ <span data-ttu-id="82f52-492">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-492">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='CustomBinding_ISimple3_policy' >  
@@ -1735,8 +1735,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-493">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-493">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-494">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-494">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-493">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-493">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-494">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-494">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1761,7 +1761,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-495">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-495">Response</span></span>  
+ <span data-ttu-id="82f52-495">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-495">Response</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1783,8 +1783,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-496">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-496">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-497">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-497">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-496">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-496">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-497">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-497">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1809,7 +1809,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-498">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-498">Response</span></span>  
+ <span data-ttu-id="82f52-498">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-498">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1831,22 +1831,22 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-### <a name="65-using-sslnegotiated-for-service-authentication"></a><span data-ttu-id="76c28-499">6.5 usando SslNegotiated para autenticação de serviço</span><span class="sxs-lookup"><span data-stu-id="76c28-499">6.5 Using SslNegotiated for Service Authentication</span></span>  
- <span data-ttu-id="76c28-500">Esta seção descreve um grupo de modos de autenticação que usam uma associação simétrica com o token de proteção sendo um Token de contexto de segurança por WS-SecureConversation (WS-SC) cujo valor da chave é negociado executando o protocolo TLS sobre WS-Trust (WS-T) RST / Mensagens RSTR.</span><span class="sxs-lookup"><span data-stu-id="76c28-500">This section describes a group of authentication modes that use a symmetric binding with the protection token being a Security Context Token per WS-SecureConversation (WS-SC) whose key value is negotiated by executing the TLS protocol over WS-Trust (WS-T) RST/RSTR messages.</span></span> <span data-ttu-id="76c28-501">Detalhes da implementação de handshake TLS usando WS-Trust estão descritos no TLSNEGO.</span><span class="sxs-lookup"><span data-stu-id="76c28-501">Details of the TLS handshake implementation using WS-Trust are described in TLSNEGO.</span></span> <span data-ttu-id="76c28-502">Aqui os exemplos de mensagem, vamos pressupor que SCT com um contexto de segurança associadas já foi estabelecida por meio de um handshake.</span><span class="sxs-lookup"><span data-stu-id="76c28-502">Here in the message examples we will assume that SCT with an associated security context is already established through a handshake.</span></span>  
+### <a name="65-using-sslnegotiated-for-service-authentication"></a><span data-ttu-id="82f52-499">6,5 usando SslNegotiated para autenticação de serviço</span><span class="sxs-lookup"><span data-stu-id="82f52-499">6.5 Using SslNegotiated for Service Authentication</span></span>  
+ <span data-ttu-id="82f52-500">Esta seção descreve um grupo de modos de autenticação que usam uma associação simétrica com o token de proteção sendo um token de contexto de segurança por WS-SecureConversation (WS-SC), cujo valor de chave é negociado pela execução do protocolo TLS por meio de WS-Trust (WS-T) RST/ Mensagens de RSTR.</span><span class="sxs-lookup"><span data-stu-id="82f52-500">This section describes a group of authentication modes that use a symmetric binding with the protection token being a Security Context Token per WS-SecureConversation (WS-SC) whose key value is negotiated by executing the TLS protocol over WS-Trust (WS-T) RST/RSTR messages.</span></span> <span data-ttu-id="82f52-501">Detalhes da implementação de handshake de TLS usando WS-Trust são descritos em TLSNEGO.</span><span class="sxs-lookup"><span data-stu-id="82f52-501">Details of the TLS handshake implementation using WS-Trust are described in TLSNEGO.</span></span> <span data-ttu-id="82f52-502">Aqui, nos exemplos de mensagem, vamos supor que o SCT com um contexto de segurança associado já foi estabelecido por meio de um handshake.</span><span class="sxs-lookup"><span data-stu-id="82f52-502">Here in the message examples we will assume that SCT with an associated security context is already established through a handshake.</span></span>  
   
- <span data-ttu-id="76c28-503">A associação usada é uma associação simétrica com as seguintes propriedades;</span><span class="sxs-lookup"><span data-stu-id="76c28-503">The binding used is a symmetric binding with the following properties;</span></span>  
+ <span data-ttu-id="82f52-503">A associação usada é uma associação simétrica com as seguintes propriedades;</span><span class="sxs-lookup"><span data-stu-id="82f52-503">The binding used is a symmetric binding with the following properties;</span></span>  
   
- <span data-ttu-id="76c28-504">Token de proteção: SslContextToken, o modo de inclusão é definido como .../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="76c28-504">Protection Token: SslContextToken, inclusion mode is set to .../IncludeToken/Never</span></span>  
-<span data-ttu-id="76c28-505">Proteção de token: False</span><span class="sxs-lookup"><span data-stu-id="76c28-505">Token Protection: False</span></span>  
+ <span data-ttu-id="82f52-504">Token de proteção: SslContextToken, o modo de inclusão é definido como. ../IncludeToken/Never</span><span class="sxs-lookup"><span data-stu-id="82f52-504">Protection Token: SslContextToken, inclusion mode is set to .../IncludeToken/Never</span></span>  
+<span data-ttu-id="82f52-505">Proteção de token: false</span><span class="sxs-lookup"><span data-stu-id="82f52-505">Token Protection: False</span></span>  
   
- <span data-ttu-id="76c28-506">Todo o cabeçalho e corpo assinaturas: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-506">Entire Header And Body Signatures: True</span></span>  
+ <span data-ttu-id="82f52-506">Assinaturas inteiras de cabeçalho e corpo: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-506">Entire Header And Body Signatures: True</span></span>  
   
- <span data-ttu-id="76c28-507">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="76c28-507">Protection Order: SignBeforeEncrypt</span></span>  
+ <span data-ttu-id="82f52-507">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="82f52-507">Protection Order: SignBeforeEncrypt</span></span>  
   
- <span data-ttu-id="76c28-508">Criptografe assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-508">Encrypt Signature: True</span></span>  
+ <span data-ttu-id="82f52-508">Criptografar assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-508">Encrypt Signature: True</span></span>  
   
-#### <a name="651-policy-for-sslnegotiated-service-authentication"></a><span data-ttu-id="76c28-509">6.5.1 diretiva SslNegotiated autenticação de serviço</span><span class="sxs-lookup"><span data-stu-id="76c28-509">6.5.1 Policy for SslNegotiated service authentication</span></span>  
- <span data-ttu-id="76c28-510">Política para todos os modos de autenticação nesta seção são semelhante e diferem apenas pelo suporte assinados específicos ou endossando tokens usados.</span><span class="sxs-lookup"><span data-stu-id="76c28-510">Policy for all authentication modes in this section are similar and differ only by specific signed supporting or endorsing tokens used.</span></span>  
+#### <a name="651-policy-for-sslnegotiated-service-authentication"></a><span data-ttu-id="82f52-509">política de 6.5.1 para autenticação do serviço SslNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-509">6.5.1 Policy for SslNegotiated service authentication</span></span>  
+ <span data-ttu-id="82f52-510">A política para todos os modos de autenticação nesta seção é semelhante e difere somente por tokens de suporte ou de endosso específicos assinados usados.</span><span class="sxs-lookup"><span data-stu-id="82f52-510">Policy for all authentication modes in this section are similar and differ only by specific signed supporting or endorsing tokens used.</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='SslNegotiated_policy' >  
@@ -1901,15 +1901,15 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-#### <a name="652-anonymousforsslnegotiated"></a><span data-ttu-id="76c28-511">6.5.2 AnonymousForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-511">6.5.2 AnonymousForSslNegotiated</span></span>  
- <span data-ttu-id="76c28-512">Com esse modo de autenticação, o cliente é anônimo e o serviço é autenticado usando um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-512">With this authentication mode the client is anonymous and the service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="76c28-513">A associação usada é uma instância de associação simétrica, conforme descrito em 6.5.1 acima.</span><span class="sxs-lookup"><span data-stu-id="76c28-513">The binding used is an instance of symmetric binding as described in 6.5.1 above.</span></span>  
+#### <a name="652-anonymousforsslnegotiated"></a><span data-ttu-id="82f52-511">6.5.2 AnonymousForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-511">6.5.2 AnonymousForSslNegotiated</span></span>  
+ <span data-ttu-id="82f52-512">Com esse modo de autenticação, o cliente é anônimo e o serviço é autenticado usando um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-512">With this authentication mode the client is anonymous and the service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="82f52-513">A associação usada é uma instância da Associação simétrica, conforme descrito em 6.5.1 acima.</span><span class="sxs-lookup"><span data-stu-id="82f52-513">The binding used is an instance of symmetric binding as described in 6.5.1 above.</span></span>  
   
- <span data-ttu-id="76c28-514">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-514">Policy</span></span>  
+ <span data-ttu-id="82f52-514">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-514">Policy</span></span>  
   
- <span data-ttu-id="76c28-515">Consulte a política em 6.5.1 acima para obter detalhes de associação.</span><span class="sxs-lookup"><span data-stu-id="76c28-515">See Policy in 6.5.1 above for binding details.</span></span>  
+ <span data-ttu-id="82f52-515">Consulte a política em 6.5.1 acima para obter detalhes de associação.</span><span class="sxs-lookup"><span data-stu-id="82f52-515">See Policy in 6.5.1 above for binding details.</span></span>  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-516">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-516">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-517">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-517">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-516">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-516">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-517">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-517">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1934,7 +1934,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-518">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-518">Response</span></span>  
+ <span data-ttu-id="82f52-518">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-518">Response</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -1956,8 +1956,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-519">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-519">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-520">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-520">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-519">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-519">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-520">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-520">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -1982,7 +1982,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-521">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-521">Response</span></span>  
+ <span data-ttu-id="82f52-521">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-521">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2004,14 +2004,14 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-#### <a name="653-usernameforsslnegotiated"></a><span data-ttu-id="76c28-522">6.5.3 UserNameForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-522">6.5.3 UserNameForSslNegotiated</span></span>  
- <span data-ttu-id="76c28-523">Com essa autenticação modo que é o cliente autentica usando um Token de nome de usuário que aparece na camada de SOAP como um token de suporte com sinal.</span><span class="sxs-lookup"><span data-stu-id="76c28-523">With this authentication mode the client is authenticates using a Username Token which appears at the SOAP layer as a signed supporting token.</span></span> <span data-ttu-id="76c28-524">O serviço é autenticado usando um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-524">The service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="76c28-525">A associação usada é uma instância de associação simétrica, conforme descrito em 6.5.1.</span><span class="sxs-lookup"><span data-stu-id="76c28-525">The binding used is an instance of symmetric binding as described in 6.5.1.</span></span>  
+#### <a name="653-usernameforsslnegotiated"></a><span data-ttu-id="82f52-522">6.5.3 UserNameForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-522">6.5.3 UserNameForSslNegotiated</span></span>  
+ <span data-ttu-id="82f52-523">Com esse modo de autenticação, o cliente é autenticado usando um token de nome de usuário que aparece na camada SOAP como um token de suporte assinado.</span><span class="sxs-lookup"><span data-stu-id="82f52-523">With this authentication mode the client is authenticates using a Username Token which appears at the SOAP layer as a signed supporting token.</span></span> <span data-ttu-id="82f52-524">O serviço é autenticado usando um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-524">The service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="82f52-525">A associação usada é uma instância da Associação simétrica, conforme descrito em 6.5.1.</span><span class="sxs-lookup"><span data-stu-id="82f52-525">The binding used is an instance of symmetric binding as described in 6.5.1.</span></span>  
   
- <span data-ttu-id="76c28-526">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-526">Policy</span></span>  
+ <span data-ttu-id="82f52-526">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-526">Policy</span></span>  
   
- <span data-ttu-id="76c28-527">Consulte a seção 6.5.1 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="76c28-527">See section 6.5.1 above for binding details</span></span>  
+ <span data-ttu-id="82f52-527">Consulte a seção 6.5.1 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="82f52-527">See section 6.5.1 above for binding details</span></span>  
   
- <span data-ttu-id="76c28-528">Assinado um Token de suporte</span><span class="sxs-lookup"><span data-stu-id="76c28-528">Signed Supporting Token</span></span>  
+ <span data-ttu-id="82f52-528">Token de suporte assinado</span><span class="sxs-lookup"><span data-stu-id="82f52-528">Signed Supporting Token</span></span>  
   
 ```xml  
 <sp:SignedSupportingTokens>  
@@ -2025,8 +2025,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:SignedSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-529">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-529">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-530">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-530">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-529">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-529">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-530">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-530">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2054,7 +2054,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-531">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-531">Response</span></span>  
+ <span data-ttu-id="82f52-531">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-531">Response</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2076,8 +2076,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-532">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-532">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-533">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-533">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-532">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-532">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-533">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-533">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2105,7 +2105,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-534">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-534">Response</span></span>  
+ <span data-ttu-id="82f52-534">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-534">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2127,14 +2127,14 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-#### <a name="654-issuedtokenforsslnegotiated"></a><span data-ttu-id="76c28-535">6.5.4 IssuedTokenForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-535">6.5.4 IssuedTokenForSslNegotiated</span></span>  
- <span data-ttu-id="76c28-536">Com essa autenticação modo que o cliente não se autenticar no serviço, como tal, mas em vez disso, apresenta um token emitido por um STS e comprova o conhecimento de uma chave compartilhada.</span><span class="sxs-lookup"><span data-stu-id="76c28-536">With this authentication mode the client does not authenticate to the service, as such, but instead presents a token issued by an STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="76c28-537">O token emitido é exibido na camada de SOAP como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="76c28-537">The issued token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="76c28-538">O serviço é autenticado usando um certificado X.509.</span><span class="sxs-lookup"><span data-stu-id="76c28-538">The service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="76c28-539">A associação usada é uma instância de associação simétrica, conforme descrito em 6.5.1 acima.</span><span class="sxs-lookup"><span data-stu-id="76c28-539">The binding used is an instance of symmetric binding as described in 6.5.1 above.</span></span>  
+#### <a name="654-issuedtokenforsslnegotiated"></a><span data-ttu-id="82f52-535">6.5.4 IssuedTokenForSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-535">6.5.4 IssuedTokenForSslNegotiated</span></span>  
+ <span data-ttu-id="82f52-536">Com esse modo de autenticação, o cliente não se autentica no serviço, como tal, mas apresenta um token emitido por um STS e comprova o conhecimento de uma chave compartilhada.</span><span class="sxs-lookup"><span data-stu-id="82f52-536">With this authentication mode the client does not authenticate to the service, as such, but instead presents a token issued by an STS and proves knowledge of a shared key.</span></span> <span data-ttu-id="82f52-537">O token emitido é exibido na camada SOAP como um token de suporte de endosso.</span><span class="sxs-lookup"><span data-stu-id="82f52-537">The issued token appears at the SOAP layer as an endorsing supporting token.</span></span> <span data-ttu-id="82f52-538">O serviço é autenticado usando um certificado X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-538">The service is authenticated using an X.509 certificate.</span></span> <span data-ttu-id="82f52-539">A associação usada é uma instância da Associação simétrica, conforme descrito em 6.5.1 acima.</span><span class="sxs-lookup"><span data-stu-id="82f52-539">The binding used is an instance of symmetric binding as described in 6.5.1 above.</span></span>  
   
- <span data-ttu-id="76c28-540">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-540">Policy</span></span>  
+ <span data-ttu-id="82f52-540">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-540">Policy</span></span>  
   
- <span data-ttu-id="76c28-541">Consulte a seção 6.5.1 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="76c28-541">See section 6.5.1 above for binding details</span></span>  
+ <span data-ttu-id="82f52-541">Consulte a seção 6.5.1 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="82f52-541">See section 6.5.1 above for binding details</span></span>  
   
- <span data-ttu-id="76c28-542">Token de suporte de endosso</span><span class="sxs-lookup"><span data-stu-id="76c28-542">Endorsing Supporting Token</span></span>  
+ <span data-ttu-id="82f52-542">Token de suporte de endosso</span><span class="sxs-lookup"><span data-stu-id="82f52-542">Endorsing Supporting Token</span></span>  
   
 ```xml  
 <sp:EndorsingSupportingTokens>  
@@ -2154,8 +2154,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-543">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-543">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-544">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-544">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-543">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-543">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-544">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-544">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2189,7 +2189,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-545">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-545">Response</span></span>  
+ <span data-ttu-id="82f52-545">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-545">Response</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2217,8 +2217,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-546">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-546">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-547">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-547">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-546">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-546">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-547">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-547">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2252,7 +2252,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-548">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-548">Response</span></span>  
+ <span data-ttu-id="82f52-548">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-548">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2276,14 +2276,14 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-#### <a name="655-mutualsslnegotiated"></a><span data-ttu-id="76c28-549">6.5.5 MutualSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-549">6.5.5 MutualSslNegotiated</span></span>  
- <span data-ttu-id="76c28-550">Com esse modo de autenticação de cliente e o serviço se autenticar usando certificados x. 509.</span><span class="sxs-lookup"><span data-stu-id="76c28-550">With this authentication mode the client and the service authenticate using X.509 certificates.</span></span> <span data-ttu-id="76c28-551">A associação usada é uma instância de associação simétrica, conforme descrito em 6.5.1 acima.</span><span class="sxs-lookup"><span data-stu-id="76c28-551">The binding used is an instance of symmetric binding as described in 6.5.1 above.</span></span>  
+#### <a name="655-mutualsslnegotiated"></a><span data-ttu-id="82f52-549">6.5.5 MutualSslNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-549">6.5.5 MutualSslNegotiated</span></span>  
+ <span data-ttu-id="82f52-550">Com esse modo de autenticação, o cliente e o serviço se autenticam usando certificados X. 509.</span><span class="sxs-lookup"><span data-stu-id="82f52-550">With this authentication mode the client and the service authenticate using X.509 certificates.</span></span> <span data-ttu-id="82f52-551">A associação usada é uma instância da Associação simétrica, conforme descrito em 6.5.1 acima.</span><span class="sxs-lookup"><span data-stu-id="82f52-551">The binding used is an instance of symmetric binding as described in 6.5.1 above.</span></span>  
   
- <span data-ttu-id="76c28-552">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-552">Policy</span></span>  
+ <span data-ttu-id="82f52-552">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-552">Policy</span></span>  
   
- <span data-ttu-id="76c28-553">Consulte a seção 6.5.1 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="76c28-553">See section 6.5.1 above for binding details</span></span>  
+ <span data-ttu-id="82f52-553">Consulte a seção 6.5.1 acima para obter detalhes de associação</span><span class="sxs-lookup"><span data-stu-id="82f52-553">See section 6.5.1 above for binding details</span></span>  
   
- <span data-ttu-id="76c28-554">Token de suporte de endosso</span><span class="sxs-lookup"><span data-stu-id="76c28-554">Endorsing Supporting Token</span></span>  
+ <span data-ttu-id="82f52-554">Token de suporte de endosso</span><span class="sxs-lookup"><span data-stu-id="82f52-554">Endorsing Supporting Token</span></span>  
   
 ```xml  
 <sp:EndorsingSupportingTokens>  
@@ -2298,8 +2298,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </sp:EndorsingSupportingTokens>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-555">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-555">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-556">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-556">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-555">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-555">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-556">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-556">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2324,7 +2324,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-557">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-557">Response</span></span>  
+ <span data-ttu-id="82f52-557">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-557">Response</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2346,8 +2346,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-558">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-558">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-559">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-559">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-558">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-558">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-559">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-559">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2372,7 +2372,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-560">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-560">Response</span></span>  
+ <span data-ttu-id="82f52-560">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-560">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2394,19 +2394,19 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-### <a name="66-sspinegotiated"></a><span data-ttu-id="76c28-561">6.6 SspiNegotiated</span><span class="sxs-lookup"><span data-stu-id="76c28-561">6.6 SspiNegotiated</span></span>  
- <span data-ttu-id="76c28-562">Com esse modo de autenticação, um protocolo de negociação é usado para realizar a autenticação de cliente e servidor.</span><span class="sxs-lookup"><span data-stu-id="76c28-562">With this authentication mode a negotiation protocol is used to perform client and server authentication.</span></span> <span data-ttu-id="76c28-563">Kerberos é usado, se possível, caso contrário, NTLM.</span><span class="sxs-lookup"><span data-stu-id="76c28-563">Kerberos is used if possible, otherwise NTLM.</span></span> <span data-ttu-id="76c28-564">A associação usada é uma associação simétrica com as seguintes propriedades;</span><span class="sxs-lookup"><span data-stu-id="76c28-564">The binding used is a symmetric binding with the following properties;</span></span>  
+### <a name="66-sspinegotiated"></a><span data-ttu-id="82f52-561">6,6 SspiNegotiated</span><span class="sxs-lookup"><span data-stu-id="82f52-561">6.6 SspiNegotiated</span></span>  
+ <span data-ttu-id="82f52-562">Com esse modo de autenticação, um protocolo de negociação é usado para executar a autenticação de cliente e servidor.</span><span class="sxs-lookup"><span data-stu-id="82f52-562">With this authentication mode a negotiation protocol is used to perform client and server authentication.</span></span> <span data-ttu-id="82f52-563">O Kerberos é usado se possível, caso contrário, NTLM.</span><span class="sxs-lookup"><span data-stu-id="82f52-563">Kerberos is used if possible, otherwise NTLM.</span></span> <span data-ttu-id="82f52-564">A associação usada é uma associação simétrica com as seguintes propriedades;</span><span class="sxs-lookup"><span data-stu-id="82f52-564">The binding used is a symmetric binding with the following properties;</span></span>  
   
- <span data-ttu-id="76c28-565">Token de proteção: SpnegoContextToken, o modo de inclusão é definido como .../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="76c28-565">Protection Token: SpnegoContextToken, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
-<span data-ttu-id="76c28-566">Proteção de token: False</span><span class="sxs-lookup"><span data-stu-id="76c28-566">Token Protection: False</span></span>  
+ <span data-ttu-id="82f52-565">Token de proteção: SpnegoContextToken, o modo de inclusão é definido como. ../IncludeToken/AlwaysToRecipient</span><span class="sxs-lookup"><span data-stu-id="82f52-565">Protection Token: SpnegoContextToken, inclusion mode is set to .../IncludeToken/AlwaysToRecipient</span></span>  
+<span data-ttu-id="82f52-566">Proteção de token: false</span><span class="sxs-lookup"><span data-stu-id="82f52-566">Token Protection: False</span></span>  
   
- <span data-ttu-id="76c28-567">Todo o cabeçalho e corpo assinaturas: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-567">Entire Header And Body Signatures: True</span></span>  
+ <span data-ttu-id="82f52-567">Assinaturas inteiras de cabeçalho e corpo: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-567">Entire Header And Body Signatures: True</span></span>  
   
- <span data-ttu-id="76c28-568">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="76c28-568">Protection Order: SignBeforeEncrypt</span></span>  
+ <span data-ttu-id="82f52-568">Ordem de proteção: SignBeforeEncrypt</span><span class="sxs-lookup"><span data-stu-id="82f52-568">Protection Order: SignBeforeEncrypt</span></span>  
   
- <span data-ttu-id="76c28-569">Criptografe assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="76c28-569">Encrypt Signature: True</span></span>  
+ <span data-ttu-id="82f52-569">Criptografar assinatura: verdadeiro</span><span class="sxs-lookup"><span data-stu-id="82f52-569">Encrypt Signature: True</span></span>  
   
- <span data-ttu-id="76c28-570">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-570">Policy</span></span>  
+ <span data-ttu-id="82f52-570">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-570">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='CustomBinding_ISimple13_policy' >  
@@ -2459,8 +2459,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-571">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-571">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-572">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-572">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-571">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-571">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-572">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-572">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2485,7 +2485,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-573">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-573">Response</span></span>  
+ <span data-ttu-id="82f52-573">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-573">Response</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2507,8 +2507,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-574">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-574">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-575">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-575">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-574">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-574">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-575">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-575">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2533,7 +2533,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-576">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-576">Response</span></span>  
+ <span data-ttu-id="82f52-576">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-576">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2555,10 +2555,10 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
-### <a name="67-secureconversation"></a><span data-ttu-id="76c28-577">6.7 SecureConversation</span><span class="sxs-lookup"><span data-stu-id="76c28-577">6.7 SecureConversation</span></span>  
- <span data-ttu-id="76c28-578">A associação usada é uma associação simétrica com o token de proteção sendo um SCT por WS-SecureConversation (WS-SC).</span><span class="sxs-lookup"><span data-stu-id="76c28-578">The binding used is a symmetric binding with the protection token being a SCT per WS-SecureConversation (WS-SC).</span></span> <span data-ttu-id="76c28-579">O SCT é negociado usando WS-Trust (WS-Trust) ou WS-SecureConversation (WS-SC) acordo com uma associação aninhada, que também é uma associação simétrica que usa um protocolo de negociação.</span><span class="sxs-lookup"><span data-stu-id="76c28-579">The SCT is negotiated using WS-Trust (WS-Trust) or WS-SecureConversation (WS-SC) according to a nested binding, which is itself a symmetric binding that uses a negotiation protocol.</span></span> <span data-ttu-id="76c28-580">O protocolo de negociação usam o Kerberos para realizar a autenticação de cliente e servidor se possível.</span><span class="sxs-lookup"><span data-stu-id="76c28-580">The negotiation protocol will use Kerberos to perform client and server authentication if possible.</span></span> <span data-ttu-id="76c28-581">Se o Kerberos não pode ser usado, ele fará o fallback para NTLM.</span><span class="sxs-lookup"><span data-stu-id="76c28-581">If Kerberos cannot be used, it will fall back to NTLM.</span></span>  
+### <a name="67-secureconversation"></a><span data-ttu-id="82f52-577">6,7 SecureConversation</span><span class="sxs-lookup"><span data-stu-id="82f52-577">6.7 SecureConversation</span></span>  
+ <span data-ttu-id="82f52-578">A associação usada é uma associação simétrica com o token de proteção sendo um SCT por WS-SecureConversation (WS-SC).</span><span class="sxs-lookup"><span data-stu-id="82f52-578">The binding used is a symmetric binding with the protection token being a SCT per WS-SecureConversation (WS-SC).</span></span> <span data-ttu-id="82f52-579">O SCT é negociado usando WS-Trust (WS-Trust) ou WS-SecureConversation (WS-SC) de acordo com uma associação aninhada, que, por sua vez, é uma ligação simétrica que usa um protocolo de negociação.</span><span class="sxs-lookup"><span data-stu-id="82f52-579">The SCT is negotiated using WS-Trust (WS-Trust) or WS-SecureConversation (WS-SC) according to a nested binding, which is itself a symmetric binding that uses a negotiation protocol.</span></span> <span data-ttu-id="82f52-580">O protocolo de negociação usará o Kerberos para executar a autenticação de cliente e servidor, se possível.</span><span class="sxs-lookup"><span data-stu-id="82f52-580">The negotiation protocol will use Kerberos to perform client and server authentication if possible.</span></span> <span data-ttu-id="82f52-581">Se o Kerberos não puder ser usado, ele retornará ao NTLM.</span><span class="sxs-lookup"><span data-stu-id="82f52-581">If Kerberos cannot be used, it will fall back to NTLM.</span></span>  
   
- <span data-ttu-id="76c28-582">Política</span><span class="sxs-lookup"><span data-stu-id="76c28-582">Policy</span></span>  
+ <span data-ttu-id="82f52-582">Política</span><span class="sxs-lookup"><span data-stu-id="82f52-582">Policy</span></span>  
   
 ```xml  
 <wsp:Policy wsu:Id='SecureConversation_policy' >  
@@ -2669,8 +2669,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsp:Policy>  
 ```  
   
-### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="76c28-583">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="76c28-583">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
- <span data-ttu-id="76c28-584">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-584">Request</span></span>  
+### <a name="security-header-examples-signbeforeencrypt-encryptsignature"></a><span data-ttu-id="82f52-583">Exemplos de cabeçalho de segurança: SignBeforeEncrypt, EncryptSignature</span><span class="sxs-lookup"><span data-stu-id="82f52-583">Security Header Examples: SignBeforeEncrypt, EncryptSignature</span></span>  
+ <span data-ttu-id="82f52-584">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-584">Request</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2695,7 +2695,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-585">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-585">Response</span></span>  
+ <span data-ttu-id="82f52-585">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-585">Response</span></span>  
   
 ```xml  
 <wsse:Security s:mustUnderstand="1">  
@@ -2717,8 +2717,8 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>    
 ```  
   
-### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="76c28-586">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="76c28-586">Security Header Examples: EncryptBeforeSign</span></span>  
- <span data-ttu-id="76c28-587">Solicitação</span><span class="sxs-lookup"><span data-stu-id="76c28-587">Request</span></span>  
+### <a name="security-header-examples-encryptbeforesign"></a><span data-ttu-id="82f52-586">Exemplos de cabeçalho de segurança: EncryptBeforeSign</span><span class="sxs-lookup"><span data-stu-id="82f52-586">Security Header Examples: EncryptBeforeSign</span></span>  
+ <span data-ttu-id="82f52-587">Solicitação</span><span class="sxs-lookup"><span data-stu-id="82f52-587">Request</span></span>  
   
 ```xml  
 <wsse:Security>  
@@ -2743,7 +2743,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
 </wsse:Security>  
 ```  
   
- <span data-ttu-id="76c28-588">Resposta</span><span class="sxs-lookup"><span data-stu-id="76c28-588">Response</span></span>  
+ <span data-ttu-id="82f52-588">Resposta</span><span class="sxs-lookup"><span data-stu-id="82f52-588">Response</span></span>  
   
 ```xml  
 <wsse:Security>  
