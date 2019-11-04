@@ -7,63 +7,63 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: 59fe870e623ca998f24161123dc020144b7cd055
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 4e5f0f3bfe27a02930bdb004cd78e254a6a38ad6
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920270"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459975"
 ---
-# <a name="data-binding-how-to-topics"></a><span data-ttu-id="5cd85-102">Tópicos de instruções sobre a vinculação de dados</span><span class="sxs-lookup"><span data-stu-id="5cd85-102">Data binding how-to topics</span></span>
+# <a name="data-binding-how-to-topics"></a><span data-ttu-id="db06b-102">Tópicos de instruções sobre a vinculação de dados</span><span class="sxs-lookup"><span data-stu-id="db06b-102">Data binding how-to topics</span></span>
 
-<span data-ttu-id="5cd85-103">Os tópicos nesta seção descrevem como usar a vinculação de dados para associar elementos a dados de uma variedade de fontes de dados na forma de XML e objetos do Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="5cd85-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>
+<span data-ttu-id="db06b-103">Os tópicos nesta seção descrevem como usar a vinculação de dados para associar elementos a dados de uma variedade de fontes de dados na forma de XML e objetos do Common Language Runtime (CLR).</span><span class="sxs-lookup"><span data-stu-id="db06b-103">The topics in this section describe how to use data binding to bind elements to data from a variety of data sources in the form of common language runtime (CLR) objects and XML.</span></span>
 
-## <a name="in-this-section"></a><span data-ttu-id="5cd85-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="5cd85-104">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="db06b-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="db06b-104">In this section</span></span>
 
-- [<span data-ttu-id="5cd85-105">Criar uma associação simples</span><span class="sxs-lookup"><span data-stu-id="5cd85-105">Create a Simple Binding</span></span>](how-to-create-a-simple-binding.md)
-- [<span data-ttu-id="5cd85-106">Especificar a origem da associação</span><span class="sxs-lookup"><span data-stu-id="5cd85-106">Specify the Binding Source</span></span>](how-to-specify-the-binding-source.md)
-- [<span data-ttu-id="5cd85-107">Disponibilizar dados para associação em XAML</span><span class="sxs-lookup"><span data-stu-id="5cd85-107">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
-- [<span data-ttu-id="5cd85-108">Controlar quando o texto da caixa de texto atualiza a origem</span><span class="sxs-lookup"><span data-stu-id="5cd85-108">Control When the TextBox Text Updates the Source</span></span>](how-to-control-when-the-textbox-text-updates-the-source.md)
-- [<span data-ttu-id="5cd85-109">Especificar a direção da associação</span><span class="sxs-lookup"><span data-stu-id="5cd85-109">Specify the Direction of the Binding</span></span>](how-to-specify-the-direction-of-the-binding.md)
-- [<span data-ttu-id="5cd85-110">Associar a uma coleção e exibir informações com base na seleção</span><span class="sxs-lookup"><span data-stu-id="5cd85-110">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [<span data-ttu-id="5cd85-111">Associar a uma enumeração</span><span class="sxs-lookup"><span data-stu-id="5cd85-111">Bind to an Enumeration</span></span>](how-to-bind-to-an-enumeration.md)
-- [<span data-ttu-id="5cd85-112">Associar as propriedades de dois controles</span><span class="sxs-lookup"><span data-stu-id="5cd85-112">Bind the Properties of Two Controls</span></span>](how-to-bind-the-properties-of-two-controls.md)
-- [<span data-ttu-id="5cd85-113">Implementar a validação de associação</span><span class="sxs-lookup"><span data-stu-id="5cd85-113">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)
-- [<span data-ttu-id="5cd85-114">Implementar a lógica de validação em objetos personalizados</span><span class="sxs-lookup"><span data-stu-id="5cd85-114">Implement Validation Logic on Custom Objects</span></span>](how-to-implement-validation-logic-on-custom-objects.md)
-- [<span data-ttu-id="5cd85-115">Obter o objeto de associação de uma propriedade de destino associada</span><span class="sxs-lookup"><span data-stu-id="5cd85-115">Get the Binding Object from a Bound Target Property</span></span>](how-to-get-the-binding-object-from-a-bound-target-property.md)
-- [<span data-ttu-id="5cd85-116">Implementar um CompositeCollection</span><span class="sxs-lookup"><span data-stu-id="5cd85-116">Implement a CompositeCollection</span></span>](how-to-implement-a-compositecollection.md)
-- [<span data-ttu-id="5cd85-117">Converter dados associados</span><span class="sxs-lookup"><span data-stu-id="5cd85-117">Convert Bound Data</span></span>](how-to-convert-bound-data.md)
-- [<span data-ttu-id="5cd85-118">Criar uma associação no código</span><span class="sxs-lookup"><span data-stu-id="5cd85-118">Create a Binding in Code</span></span>](how-to-create-a-binding-in-code.md)
-- [<span data-ttu-id="5cd85-119">Obter a exibição padrão de uma coleta de dados</span><span class="sxs-lookup"><span data-stu-id="5cd85-119">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
-- [<span data-ttu-id="5cd85-120">Navegar pelos objetos em um CollectionView de dados</span><span class="sxs-lookup"><span data-stu-id="5cd85-120">Navigate Through the Objects in a Data CollectionView</span></span>](how-to-navigate-through-the-objects-in-a-data-collectionview.md)
-- [<span data-ttu-id="5cd85-121">Filtrar dados em uma exibição</span><span class="sxs-lookup"><span data-stu-id="5cd85-121">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
-- [<span data-ttu-id="5cd85-122">Classificar dados em uma exibição</span><span class="sxs-lookup"><span data-stu-id="5cd85-122">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
-- [<span data-ttu-id="5cd85-123">Classificar e agrupar dados usando uma exibição em XAML</span><span class="sxs-lookup"><span data-stu-id="5cd85-123">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [<span data-ttu-id="5cd85-124">Usar o padrão de detalhes mestre com os dados hierárquicos</span><span class="sxs-lookup"><span data-stu-id="5cd85-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
-- [<span data-ttu-id="5cd85-125">Usar o padrão de detalhes mestre com os dados XML hierárquicos</span><span class="sxs-lookup"><span data-stu-id="5cd85-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
-- [<span data-ttu-id="5cd85-126">Produzir um valor com base em uma lista de itens associados</span><span class="sxs-lookup"><span data-stu-id="5cd85-126">Produce a Value Based on a List of Bound Items</span></span>](how-to-produce-a-value-based-on-a-list-of-bound-items.md)
-- [<span data-ttu-id="5cd85-127">Implementar notificação de alteração da propriedade</span><span class="sxs-lookup"><span data-stu-id="5cd85-127">Implement Property Change Notification</span></span>](how-to-implement-property-change-notification.md)
-- [<span data-ttu-id="5cd85-128">Criar e associar a um ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="5cd85-128">Create and Bind to an ObservableCollection</span></span>](how-to-create-and-bind-to-an-observablecollection.md)
-- [<span data-ttu-id="5cd85-129">Implementar PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="5cd85-129">Implement PriorityBinding</span></span>](how-to-implement-prioritybinding.md)
-- [<span data-ttu-id="5cd85-130">Associar dados XML usando um XMLDataProvider e consultas XPath</span><span class="sxs-lookup"><span data-stu-id="5cd85-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [<span data-ttu-id="5cd85-131">Associar a XDocument, XElement ou LINQ para resultados de consulta XML</span><span class="sxs-lookup"><span data-stu-id="5cd85-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
-- [<span data-ttu-id="5cd85-132">Associar aos resultados de uma consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="5cd85-132">Bind to the Results of a LINQ Query</span></span>](how-to-bind-to-the-results-of-a-linq-query.md)
-- [<span data-ttu-id="5cd85-133">Usar namespaces de XML na vinculação de dados</span><span class="sxs-lookup"><span data-stu-id="5cd85-133">Use XML Namespaces in Data Binding</span></span>](how-to-use-xml-namespaces-in-data-binding.md)
-- [<span data-ttu-id="5cd85-134">Associar a uma fonte de dados ADO.NET</span><span class="sxs-lookup"><span data-stu-id="5cd85-134">Bind to an ADO.NET Data Source</span></span>](how-to-bind-to-an-ado-net-data-source.md)
-- [<span data-ttu-id="5cd85-135">Associar a um método</span><span class="sxs-lookup"><span data-stu-id="5cd85-135">Bind to a Method</span></span>](how-to-bind-to-a-method.md)
-- [<span data-ttu-id="5cd85-136">Configurar notificação das atualizações de associação</span><span class="sxs-lookup"><span data-stu-id="5cd85-136">Set Up Notification of Binding Updates</span></span>](how-to-set-up-notification-of-binding-updates.md)
-- [<span data-ttu-id="5cd85-137">Limpar associações</span><span class="sxs-lookup"><span data-stu-id="5cd85-137">Clear Bindings</span></span>](how-to-clear-bindings.md)
-- [<span data-ttu-id="5cd85-138">Localizar elementos gerados por DataTemplate</span><span class="sxs-lookup"><span data-stu-id="5cd85-138">Find DataTemplate-Generated Elements</span></span>](how-to-find-datatemplate-generated-elements.md)
-- [<span data-ttu-id="5cd85-139">Associar a um serviço Web</span><span class="sxs-lookup"><span data-stu-id="5cd85-139">Bind to a Web Service</span></span>](how-to-bind-to-a-web-service.md)
+- [<span data-ttu-id="db06b-105">Criar uma associação simples</span><span class="sxs-lookup"><span data-stu-id="db06b-105">Create a Simple Binding</span></span>](how-to-create-a-simple-binding.md)
+- [<span data-ttu-id="db06b-106">Especificar a origem da associação</span><span class="sxs-lookup"><span data-stu-id="db06b-106">Specify the Binding Source</span></span>](how-to-specify-the-binding-source.md)
+- [<span data-ttu-id="db06b-107">Disponibilizar dados para associação em XAML</span><span class="sxs-lookup"><span data-stu-id="db06b-107">Make Data Available for Binding in XAML</span></span>](how-to-make-data-available-for-binding-in-xaml.md)
+- [<span data-ttu-id="db06b-108">Controlar quando o texto da caixa de texto atualiza a origem</span><span class="sxs-lookup"><span data-stu-id="db06b-108">Control When the TextBox Text Updates the Source</span></span>](how-to-control-when-the-textbox-text-updates-the-source.md)
+- [<span data-ttu-id="db06b-109">Especificar a direção da associação</span><span class="sxs-lookup"><span data-stu-id="db06b-109">Specify the Direction of the Binding</span></span>](how-to-specify-the-direction-of-the-binding.md)
+- [<span data-ttu-id="db06b-110">Associar a uma coleção e exibir informações com base na seleção</span><span class="sxs-lookup"><span data-stu-id="db06b-110">Bind to a Collection and Display Information Based on Selection</span></span>](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
+- [<span data-ttu-id="db06b-111">Associar a uma enumeração</span><span class="sxs-lookup"><span data-stu-id="db06b-111">Bind to an Enumeration</span></span>](how-to-bind-to-an-enumeration.md)
+- [<span data-ttu-id="db06b-112">Associar as propriedades de dois controles</span><span class="sxs-lookup"><span data-stu-id="db06b-112">Bind the Properties of Two Controls</span></span>](how-to-bind-the-properties-of-two-controls.md)
+- [<span data-ttu-id="db06b-113">Implementar a validação de associação</span><span class="sxs-lookup"><span data-stu-id="db06b-113">Implement Binding Validation</span></span>](how-to-implement-binding-validation.md)
+- [<span data-ttu-id="db06b-114">Implementar a lógica de validação em objetos personalizados</span><span class="sxs-lookup"><span data-stu-id="db06b-114">Implement Validation Logic on Custom Objects</span></span>](how-to-implement-validation-logic-on-custom-objects.md)
+- [<span data-ttu-id="db06b-115">Obter o objeto de associação de uma propriedade de destino associada</span><span class="sxs-lookup"><span data-stu-id="db06b-115">Get the Binding Object from a Bound Target Property</span></span>](how-to-get-the-binding-object-from-a-bound-target-property.md)
+- [<span data-ttu-id="db06b-116">Implementar um CompositeCollection</span><span class="sxs-lookup"><span data-stu-id="db06b-116">Implement a CompositeCollection</span></span>](how-to-implement-a-compositecollection.md)
+- [<span data-ttu-id="db06b-117">Converter dados associados</span><span class="sxs-lookup"><span data-stu-id="db06b-117">Convert Bound Data</span></span>](how-to-convert-bound-data.md)
+- [<span data-ttu-id="db06b-118">Criar uma associação no código</span><span class="sxs-lookup"><span data-stu-id="db06b-118">Create a Binding in Code</span></span>](how-to-create-a-binding-in-code.md)
+- [<span data-ttu-id="db06b-119">Obter a exibição padrão de uma coleta de dados</span><span class="sxs-lookup"><span data-stu-id="db06b-119">Get the Default View of a Data Collection</span></span>](how-to-get-the-default-view-of-a-data-collection.md)
+- [<span data-ttu-id="db06b-120">Navegar pelos objetos em um CollectionView de dados</span><span class="sxs-lookup"><span data-stu-id="db06b-120">Navigate Through the Objects in a Data CollectionView</span></span>](how-to-navigate-through-the-objects-in-a-data-collectionview.md)
+- [<span data-ttu-id="db06b-121">Filtrar dados em uma exibição</span><span class="sxs-lookup"><span data-stu-id="db06b-121">Filter Data in a View</span></span>](how-to-filter-data-in-a-view.md)
+- [<span data-ttu-id="db06b-122">Classificar dados em uma exibição</span><span class="sxs-lookup"><span data-stu-id="db06b-122">Sort Data in a View</span></span>](how-to-sort-data-in-a-view.md)
+- [<span data-ttu-id="db06b-123">Classificar e agrupar dados usando uma exibição em XAML</span><span class="sxs-lookup"><span data-stu-id="db06b-123">Sort and Group Data Using a View in XAML</span></span>](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [<span data-ttu-id="db06b-124">Usar o padrão de detalhes mestre com os dados hierárquicos</span><span class="sxs-lookup"><span data-stu-id="db06b-124">Use the Master-Detail Pattern with Hierarchical Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)
+- [<span data-ttu-id="db06b-125">Usar o padrão de detalhes mestre com os dados XML hierárquicos</span><span class="sxs-lookup"><span data-stu-id="db06b-125">Use the Master-Detail Pattern with Hierarchical XML Data</span></span>](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
+- [<span data-ttu-id="db06b-126">Produzir um valor com base em uma lista de itens associados</span><span class="sxs-lookup"><span data-stu-id="db06b-126">Produce a Value Based on a List of Bound Items</span></span>](how-to-produce-a-value-based-on-a-list-of-bound-items.md)
+- [<span data-ttu-id="db06b-127">Implementar notificação de alteração da propriedade</span><span class="sxs-lookup"><span data-stu-id="db06b-127">Implement Property Change Notification</span></span>](how-to-implement-property-change-notification.md)
+- [<span data-ttu-id="db06b-128">Criar e associar a um ObservableCollection</span><span class="sxs-lookup"><span data-stu-id="db06b-128">Create and Bind to an ObservableCollection</span></span>](how-to-create-and-bind-to-an-observablecollection.md)
+- [<span data-ttu-id="db06b-129">Implementar PriorityBinding</span><span class="sxs-lookup"><span data-stu-id="db06b-129">Implement PriorityBinding</span></span>](how-to-implement-prioritybinding.md)
+- [<span data-ttu-id="db06b-130">Associar dados XML usando um XMLDataProvider e consultas XPath</span><span class="sxs-lookup"><span data-stu-id="db06b-130">Bind to XML Data Using an XMLDataProvider and XPath Queries</span></span>](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [<span data-ttu-id="db06b-131">Associar a XDocument, XElement ou LINQ para resultados de consulta XML</span><span class="sxs-lookup"><span data-stu-id="db06b-131">Bind to XDocument, XElement, or LINQ for XML Query Results</span></span>](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
+- [<span data-ttu-id="db06b-132">Associar aos resultados de uma consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="db06b-132">Bind to the Results of a LINQ Query</span></span>](how-to-bind-to-the-results-of-a-linq-query.md)
+- [<span data-ttu-id="db06b-133">Usar namespaces de XML na vinculação de dados</span><span class="sxs-lookup"><span data-stu-id="db06b-133">Use XML Namespaces in Data Binding</span></span>](how-to-use-xml-namespaces-in-data-binding.md)
+- [<span data-ttu-id="db06b-134">Associar a uma fonte de dados ADO.NET</span><span class="sxs-lookup"><span data-stu-id="db06b-134">Bind to an ADO.NET Data Source</span></span>](how-to-bind-to-an-ado-net-data-source.md)
+- [<span data-ttu-id="db06b-135">Associar a um método</span><span class="sxs-lookup"><span data-stu-id="db06b-135">Bind to a Method</span></span>](how-to-bind-to-a-method.md)
+- [<span data-ttu-id="db06b-136">Configurar notificação das atualizações de associação</span><span class="sxs-lookup"><span data-stu-id="db06b-136">Set Up Notification of Binding Updates</span></span>](how-to-set-up-notification-of-binding-updates.md)
+- [<span data-ttu-id="db06b-137">Limpar associações</span><span class="sxs-lookup"><span data-stu-id="db06b-137">Clear Bindings</span></span>](how-to-clear-bindings.md)
+- [<span data-ttu-id="db06b-138">Localizar elementos gerados por DataTemplate</span><span class="sxs-lookup"><span data-stu-id="db06b-138">Find DataTemplate-Generated Elements</span></span>](how-to-find-datatemplate-generated-elements.md)
+- [<span data-ttu-id="db06b-139">Associar a um serviço Web</span><span class="sxs-lookup"><span data-stu-id="db06b-139">Bind to a Web Service</span></span>](how-to-bind-to-a-web-service.md)
 
-## <a name="reference"></a><span data-ttu-id="5cd85-140">Referência</span><span class="sxs-lookup"><span data-stu-id="5cd85-140">Reference</span></span>
+## <a name="reference"></a><span data-ttu-id="db06b-140">Referência</span><span class="sxs-lookup"><span data-stu-id="db06b-140">Reference</span></span>
 
 - <xref:System.Windows.Data>
 - <xref:System.Windows.Data.Binding>
 - <xref:System.Windows.DataTemplate>
 - <xref:System.Windows.Controls.DataTemplateSelector>
 
-## <a name="related-sections"></a><span data-ttu-id="5cd85-141">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="5cd85-141">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="db06b-141">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="db06b-141">Related sections</span></span>
 
-- [<span data-ttu-id="5cd85-142">Vinculação de dados no WPF</span><span class="sxs-lookup"><span data-stu-id="5cd85-142">Data binding in WPF</span></span>](data-binding-wpf.md)
-- [<span data-ttu-id="5cd85-143">Desempenho de associação de dados</span><span class="sxs-lookup"><span data-stu-id="5cd85-143">Data binding performance</span></span>](../advanced/optimizing-performance-data-binding.md)
+- [<span data-ttu-id="db06b-142">Vinculação de dados no WPF</span><span class="sxs-lookup"><span data-stu-id="db06b-142">Data binding in WPF</span></span>](../../../desktop-wpf/data/data-binding-overview.md)
+- [<span data-ttu-id="db06b-143">Desempenho de associação de dados</span><span class="sxs-lookup"><span data-stu-id="db06b-143">Data binding performance</span></span>](../advanced/optimizing-performance-data-binding.md)
