@@ -4,20 +4,20 @@ description: Saiba mais sobre cenários de Apache Spark e Big Data.
 ms.date: 10/15/2019
 ms.topic: conceptual
 ms.custom: mvc
-ms.openlocfilehash: 187a37897c23809d91820bd79b476e775fb5b99b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 653f355d09a045feabb3dee0f5737cb691cf2dc4
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583479"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458170"
 ---
 # <a name="what-is-apache-spark"></a>O que é Apache Spark?
 
-[Apache Spark](https://spark.apache.org/) é uma estrutura de processamento paralelo de software livre que dá suporte ao processamento na memória para melhorar o desempenho de aplicativos que analisam Big Data. As soluções de Big data são projetadas para lidar com os dados muito grandes ou complexos para os bancos tradicionais de dados. O Spark processa grandes quantidades de dados na memória, o que é muito mais rápido do que as alternativas baseadas em disco. 
+[Apache Spark](https://spark.apache.org/) é uma estrutura de processamento paralelo de software livre que dá suporte ao processamento na memória para melhorar o desempenho de aplicativos que analisam Big Data. As soluções de Big data são projetadas para lidar com os dados muito grandes ou complexos para os bancos tradicionais de dados. O Spark processa grandes quantidades de dados na memória, o que é muito mais rápido do que as alternativas baseadas em disco.
 
 ## <a name="common-big-data-scenarios"></a>Cenários comuns de Big Data
 
-Você pode considerar uma arquitetura de Big Data se precisar armazenar e processar grandes volumes de dados, transformar dados não estruturados ou processar dados de streaming. O Spark é um mecanismo de processamento distribuído de finalidade geral que pode ser usado para vários cenários de Big Data. 
+Você pode considerar uma arquitetura de Big Data se precisar armazenar e processar grandes volumes de dados, transformar dados não estruturados ou processar dados de streaming. O Spark é um mecanismo de processamento distribuído de finalidade geral que pode ser usado para vários cenários de Big Data.
 
 ### <a name="extract-transform-and-load-etl"></a>ETL (extração, transformação e carregamento)
 
@@ -33,7 +33,7 @@ Você pode considerar uma arquitetura de Big Data se precisar armazenar e proces
 
 ### <a name="real-time-data-stream-processing"></a>Processamento de fluxo de dados em tempo real
 
-Os dados em tempo real e de streaming são dados em movimento. A telemetria de dispositivos IoT, weblogs e cliques são exemplos de dados de streaming. Os dados em tempo real podem ser processados para fornecer informações úteis, como análise geoespacial, monitoramento remoto e detecção de anomalias. Assim como os dados relacionais, você pode filtrar, agregar e preparar dados de streaming antes de mover os dados para um coletor de saída. O Apache Spark dá suporte ao [processamento de fluxo de dados em tempo real](/azure/architecture/data-guide/big-data/real-time-processing) por meio do [streaming do Spark](https://spark.apache.org/streaming/). 
+Os dados em tempo real e de streaming são dados em movimento. A telemetria de dispositivos IoT, weblogs e cliques são exemplos de dados de streaming. Os dados em tempo real podem ser processados para fornecer informações úteis, como análise geoespacial, monitoramento remoto e detecção de anomalias. Assim como os dados relacionais, você pode filtrar, agregar e preparar dados de streaming antes de mover os dados para um coletor de saída. O Apache Spark dá suporte ao [processamento de fluxo de dados em tempo real](/azure/architecture/data-guide/big-data/real-time-processing) por meio do [streaming do Spark](https://spark.apache.org/streaming/).
 
 ### <a name="batch-processing"></a>Processamento em lotes
 
@@ -73,7 +73,7 @@ O Gerenciador de cluster se comunica com o driver e os executores para:
 * Gerenciar divisão de programa
 * Gerenciar a execução do programa
 
-## <a name="language-support"></a>Suporte a linguagens
+## <a name="language-support"></a>Suporte ao idioma
 
 O Apache Spark dá suporte às seguintes linguagens de programação:
 
