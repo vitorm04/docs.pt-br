@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 460accc4f0877265a5a3d72ad3272502da9e5119
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
+  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774040"
+  ms.lasthandoff: 10/27/2019
+  ms.locfileid: "72966972"
 items:
 - durationInMinutes: 2
   content: >
@@ -157,7 +157,7 @@ items:
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Você concluiu o tutorial interativo de interpolação de cadeias de caracteres. Clique no link **Coleções em C#** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A seção "próximas etapas" leva você de volta para esses tutoriais.
+    Você concluiu o tutorial interativo de interpolação de cadeias de caracteres. Visite o [site do .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto em seu computador e continuar criando códigos.
 
 
     Para saber mais, confira [Interpolação de cadeia de caracteres](../../language-reference/tokens/interpolated.md).
