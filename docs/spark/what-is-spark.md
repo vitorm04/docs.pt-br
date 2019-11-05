@@ -73,7 +73,7 @@ O Gerenciador de cluster se comunica com o driver e os executores para:
 * Gerenciar divisão de programa
 * Gerenciar a execução do programa
 
-## <a name="language-support"></a>Suporte ao idioma
+## <a name="language-support"></a>Suporte a linguagens
 
 O Apache Spark dá suporte às seguintes linguagens de programação:
 

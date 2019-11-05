@@ -25,7 +25,7 @@ Neste tutorial, você aprenderá como:
 > * Crie e execute uma ação de script do HDInsight.
 > * Execute um aplicativo .NET para Apache Spark em um cluster HDInsight.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, execute as seguintes tarefas:
 
@@ -57,7 +57,7 @@ Antes de começar, execute as seguintes tarefas:
 
 3. Em **noções básicas**, forneça os seguintes valores:
 
-    |Propriedade  |Descrição  |
+    |propriedade  |Descrição  |
     |---------|---------|
     |Assinatura  | Na lista suspensa, escolha uma das suas assinaturas ativas do Azure. |
     |Grupo de recursos | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém recursos relacionados para uma solução do Azure. |
@@ -71,7 +71,7 @@ Antes de começar, execute as seguintes tarefas:
 
 4. Selecione **Avançar: > de armazenamento >** para continuar na página **armazenamento** . Em **armazenamento**, forneça os seguintes valores:
 
-    |Propriedade  |Descrição  |
+    |propriedade  |Descrição  |
     |---------|---------|
     |Tipo de armazenamento primário|Use o valor padrão **armazenamento do Azure**.|
     |Método de seleção|Use o valor padrão **selecionar da lista**.|
@@ -148,10 +148,10 @@ Depois que o cluster estiver em execução e você carregou seus arquivos no Azu
 
 2. Selecione **+ Enviar novo** e forneça os seguintes valores:
 
-   |Propriedade  |Descrição  |
+   |propriedade  |Descrição  |
    |---------|---------|
    | Tipo de script |Personalizado|
-   | Nome | Instalar trabalho|
+   | Name | Instalar trabalho|
    | URI do script bash |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> Para confirmar esse URI, clique com o botão direito do mouse em install-worker.sh em Gerenciador de Armazenamento do Azure e selecione Propriedades. |
    | Tipo (s) de nó| Funcionários|
    | Parâmetros | Azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin

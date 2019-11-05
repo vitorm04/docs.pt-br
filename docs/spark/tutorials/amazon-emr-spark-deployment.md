@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá como:
 > * Implantar seu aplicativo no Amazon EMR Spark
 > * Executar seu aplicativo
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, faça o seguinte:
 

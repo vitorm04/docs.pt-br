@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá como:
 > - Crie um trabalho do Spark e um cluster Spark.
 > - Execute seu aplicativo no cluster do Spark.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Antes de começar, execute as seguintes tarefas:
 
@@ -46,7 +46,7 @@ Nesta seção, você cria um espaço de trabalho Azure Databricks usando o porta
 
 2. Em **Azure Databricks serviço**, forneça os valores para criar um espaço de trabalho do databricks.
 
-    |Propriedade  |Descrição  |
+    |propriedade  |Descrição  |
     |---------|---------|
     |**Nome do espaço de trabalho**     | Forneça um nome para seu espaço de trabalho do databricks.        |
     |**Assinatura**     | Na lista suspensa, selecione sua assinatura do Azure.        |
