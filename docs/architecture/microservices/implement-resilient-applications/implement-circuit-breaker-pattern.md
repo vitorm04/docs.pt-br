@@ -2,12 +2,12 @@
 title: Implementando o padrão de Disjuntor
 description: Saiba como implementar o padrão de disjuntor como um sistema complementar para repetições de HTTP.
 ms.date: 10/16/2018
-ms.openlocfilehash: a1a24094ae98d8c767ccf692fe8ded6e28d47854
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00ca39b4b6fac37ff60adf128c3f4e22c5fc14e2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094109"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732828"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Implementar o padrão de disjuntor
 
@@ -94,7 +94,7 @@ Por exemplo, quando o aplicativo estiver em execução, você poderá habilitar 
 
 Em seguida, você pode verificar o status usando o URI `http://localhost:5103/failing`, como mostra a Figura 8-5.
 
-![Exibição no navegador do resultado da verificação do status da simulação de middleware com falha](./media/image4.png)
+![Captura de tela da verificação do status da simulação de middleware com falha.](./media/implement-circuit-breaker-pattern/failing-middleware-simulation.png)
 
 **Figura 8-5**. Verificando o estado do middleware ASP.NET com "Falha" – neste caso, desabilitado.
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 
 Segue um resumo. A política de repetição tenta várias vezes fazer a solicitação HTTP e obtém os erros HTTP. Quando o número de repetições atinge o número máximo definido para a política de Disjuntor (nesse caso, 5), o aplicativo gera uma BrokenCircuitException. O resultado é uma mensagem amigável, como mostra a Figura 8-6.
 
-![Exibição no navegador do aplicativo Web MVC mostrando uma mensagem de "serviço de cesta inoperante" disparada pela política do disjuntor](./media/image5.png)
+![Captura de tela do aplicativo Web MVC com erro inoperante do serviço de cesta.](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 
 **Figura 8-6**. Disjuntor retornando um erro na interface do usuário
 

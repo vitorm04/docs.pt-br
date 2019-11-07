@@ -2,12 +2,12 @@
 title: Implementando um modelo de domínio de microsserviço com o .NET Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes de implementação de um modelo de domínio orientado a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2ad62c2a16dd3993b9624ec14f0070e934ac2de
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: be8dc9339f5815139616e9785b5b3e3e5931b57e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676583"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737244"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementar um modelo de domínio de microsserviço com o .NET Core
 
@@ -17,7 +17,9 @@ Na seção anterior, foram explicados os princípios de design fundamentais e os
 
 A organização de pastas usada para o aplicativo de referência eShopOnContainers demonstra o modelo DDD para o aplicativo. Você pode considerar que uma organização de pastas diferente comunica mais claramente as escolhas de design feitas para o seu aplicativo. Como é possível ver na Figura 7-10, no modelo de domínio de ordenação, há duas agregações: a agregação de ordem e a agregação de comprador. Cada agregação é um grupo de entidades de domínio e objetos de valor, embora você possa ter uma agregação composta por uma única entidade de domínio (a raiz de agregação ou entidade raiz) também.
 
-![A exibição do Gerenciador de Soluções do projeto Ordering.Domain, mostrando a pasta AggregatesModel que contém as pastas BuyerAggregate e OrderAggregate, cada uma contendo suas classes de entidade, arquivos-objeto de valor e assim por diante. ](./media/image11.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/ordering-microservice-container.png" alt-text="Captura de tela do projeto de ordenação. Domain no Gerenciador de Soluções.":::
+A exibição do Gerenciador de Soluções do projeto Ordering.Domain, mostrando a pasta AggregatesModel que contém as pastas BuyerAggregate e OrderAggregate, cada uma contendo suas classes de entidade, arquivos-objeto de valor e assim por diante.
+:::image-end:::
 
 **Figura 7-10**. Estrutura de modelo de domínio para o microsserviço de ordenação em eShopOnContainers
 
@@ -31,7 +33,9 @@ Uma agregação refere-se a um cluster de objetos de domínio agrupados de acord
 
 Consistência transacional significa que uma agregação está garantidamente consistente e atualizada ao final de uma ação de negócios. Por exemplo, a agregação de ordem do modelo de domínio de microsserviços de pedidos eShopOnContainers é composta conforme mostra a Figura 7-11.
 
-![Uma exibição detalhada da pasta OrderAggregate: Address.cs é um objeto de valor, IOrderRepository é uma interface de repositório, Order.cs é uma raiz agregada, OrderItem.cs é uma entidade filho e OrderStatus.cs é uma classe de enumeração.](./media/image12.png)
+:::image type="complex" source="./media/net-core-microservice-domain-model/vs-solution-explorer-order-aggregate.png" alt-text="Captura de tela da pasta OrderAggregate e suas classes.":::
+Uma exibição detalhada da pasta OrderAggregate: Address.cs é um objeto de valor, IOrderRepository é uma interface de repositório, Order.cs é uma raiz de agregação, OrderItem.cs é uma entidade filho e OrderStatus.cs é uma classe de enumeração.
+:::image-end:::
 
 **Figura 7-11**. A agregação de ordem na solução do Visual Studio
 
@@ -150,7 +154,7 @@ Além disso, a nova operação OrderItem(params) também será controlada e exec
 
 Quando você usar o Entity Framework Core 1.1 ou posterior, uma entidade DDD pode ser melhor expressada porque ela permite [mapear para os campos](https://docs.microsoft.com/ef/core/modeling/backing-field) além das propriedades. Isso é útil ao proteger as coleções de entidades filho ou objetos de valor. Com esse aprimoramento, você pode usar os campos privados, em vez das propriedades, e pode implementar qualquer atualização à coleção de campo nos métodos públicos e fornecer acesso somente leitura por meio do método AsReadOnly.
 
-No DDD, você deseja atualizar a entidade somente por meio de métodos na entidade (ou no construtor) para controlar qualquer invariável e a consistência dos dados, portanto, as propriedades são definidas somente com um acessador get. As propriedades têm o respaldo de campos privados. Membros privados só pode ser acessados de dentro da classe. No entanto, há uma exceção: o EF Core também precisa definir esses campos (para que ele possa retornar o objeto com os valores adequados).
+No DDD, você deseja atualizar a entidade somente por meio de métodos na entidade (ou no construtor) para controlar qualquer invariável e a consistência dos dados, portanto, as propriedades são definidas somente com um acessador get. As propriedades têm o respaldo de campos privados. Membros privados só pode ser acessados de dentro da classe. No entanto, há uma exceção: o EF Core precisa definir esses campos também (para poder retornar o objeto com os valores adequados).
 
 ### <a name="map-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mapear propriedades com apenas acessadores get para os campos na tabela de banco de dados
 
@@ -166,10 +170,10 @@ Por exemplo, no exemplo de código anterior, OrderAggregate, há vários campos 
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **Vaughn Vernon. Modelagem de agregações com DDD e Entity Framework.** Observe que este *não* é um Entity Framework Core. \
+- **Vaughn Vernon. A modelagem agrega com DDD e Entity Framework.** Observe que este *não* é um Entity Framework Core. \
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
-- **Julie Lerman. Codificando para o design controlado por domínio: dicas para desenvolvedores com foco em dados** \
+- **Julie Lerman. Pontos de dados-codificação para o design controlado por domínio: dicas para desenvolvedores com foco em dados** \
   <https://msdn.microsoft.com/magazine/dn342868.aspx>
 
 - **Udi Dahan. Como criar modelos de domínio totalmente encapsulados** \

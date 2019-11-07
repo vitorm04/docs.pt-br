@@ -2,12 +2,12 @@
 title: Assinando eventos
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entenda os detalhes de publicação e assinatura de eventos de integração.
 ms.date: 10/02/2018
-ms.openlocfilehash: 208b0f27aa1e6ceb6686e9e846b6e31d9f1c74df
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035647"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737038"
 ---
 # <a name="subscribing-to-events"></a>Assinando eventos
 
@@ -139,7 +139,7 @@ Ao implementar as etapas de publicação dos eventos, você tem estas opções:
 
 A Figura 6-22 mostra a arquitetura da primeira dessas abordagens.
 
-![Uma abordagem para lidar com a atomicidade ao publicar eventos: usar uma transação para confirmar o evento em uma tabela de log de eventos e, em seguida, outra transação para publicá-lo (usado em eShopOnContainers)](./media/image23.png)
+![Diagrama de atomicidade ao publicar sem um microserviço de trabalho.](./media/subscribe-events/atomicity-publish-event-bus.png)
 
 **Figura 6-22**. Atomicidade ao publicar eventos no barramento de eventos
 
@@ -147,7 +147,7 @@ A abordagem ilustrada na Figura 6-22 não tem um microsserviço de trabalho adic
 
 Em relação à segunda abordagem: você usa a tabela EventLog como uma fila e sempre usa um microsserviço de trabalho para publicar as mensagens. Nesse caso, o processo é como o mostrado na Figura 6-23. Ela mostra um microsserviço adicional, e a tabela é a única fonte durante a publicação de eventos.
 
-![Outra abordagem para lidar com a atomicidade: fazer a publicação em uma tabela de log de eventos e, em seguida, usar outro microsserviço (um trabalho em segundo plano) para publicar o evento.](./media/image24.png)
+![Diagrama de atomicidade ao publicar com um microserviço de trabalho.](./media/subscribe-events/atomicity-publish-worker-microservice.png)
 
 **Figura 6-23**. Atomicidade ao publicar eventos no barramento de eventos com um microsserviço de trabalho
 
@@ -279,7 +279,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 O manipulador de eventos deve verificar se o produto existe em qualquer uma das instâncias do carrinho de compras. Ele também atualiza o preço do item para cada item de linha relacionado ao carrinho. Por fim, ele cria um alerta sobre a alteração de preço, que será exibido para o usuário, conforme mostrado na Figura 6-24.
 
-![Exibição do navegador da notificação de alteração de processo no carrinho do usuário.](./media/image25.png)
+![Captura de tela de um navegador que mostra a notificação de alteração de preço no carrinho do usuário.](./media/subscribe-events/display-item-price-change.png)
 
 **Figura 6-24**. Exibindo uma alteração de preço de item em um carrinho de compras, conforme comunicado pelos eventos de integração
 

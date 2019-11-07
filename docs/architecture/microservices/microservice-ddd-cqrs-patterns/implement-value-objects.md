@@ -2,12 +2,12 @@
 title: Implementando objetos de valor
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes e as opções para implementar objetos de valor usando as novas funcionalidades do Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674143"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739853"
 ---
 # <a name="implement-value-objects"></a>Implementar objetos de valor
 
@@ -17,11 +17,11 @@ Um objeto de valor pode fazer referência a outras entidades. Por exemplo, em um
 
 A Figura 7-13 mostra o objeto de valor Endereço dentro da agregação Ordem.
 
-![O objeto de valor Endereço dentro da Agregação Ordem.](./media/image14.png)
+![Diagrama que mostra o valor de endereço-objeto dentro da agregação de ordem.](./media/implement-value-objects/value-object-within-aggregate.png)
 
 **Figura 7-13**. Tratar objeto de valor no agregado de Ordem
 
-Conforme mostrado na Figura 7-13, uma entidade geralmente é composta por vários atributos. Por exemplo, a entidade `Order` pode ser modelada como uma entidade com uma identidade e composta internamente por um conjunto de atributos como OrderId, OrderDate, OrderItems etc. Mas o endereço, que é simplesmente um valor complexo composto por país/região, rua, cidade, etc., e não tem nenhuma identidade nesse domínio, precisa ser modelado e tratado como um objeto de valor.
+Conforme mostrado na Figura 7-13, uma entidade geralmente é composta por vários atributos. Por exemplo, a entidade `Order` pode ser modelada como uma entidade com uma identidade e composta internamente por um conjunto de atributos, como OrderId, OrderDate, OrderItems, etc. Mas o endereço, que é simplesmente um valor complexo composto de país/região, rua, cidade etc. e não tem nenhuma identidade nesse domínio, deve ser modelado e tratado como um objeto de valor.
 
 ## <a name="important-characteristics-of-value-objects"></a>Características importantes de objetos de valor
 
@@ -307,13 +307,13 @@ public class Address
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Martin Fowler. Padrão de ValueObject** \
+- **Martin Fowler. Padrão de valor** \
   <https://martinfowler.com/bliki/ValueObject.html>
 
-- **Eric Evans. Design orientado por domínio: Lidando com a complexidade no núcleo do software.** (Livro; inclui uma discussão sobre objetos de valor) \
+- **Eric Evans. Design controlado por domínio: solução de complexidade no coração do software.** (Livro; inclui uma discussão sobre objetos de valor) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
-- **Vaughn Vernon. Implementando um design conduzido por domínio.** (Livro; inclui uma discussão sobre objetos de valor) \
+- **Vaughn Vernon. Implementando o design controlado por domínio.** (Livro; inclui uma discussão sobre objetos de valor) \
   <https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/>
 
 - **Propriedades de sombra** \

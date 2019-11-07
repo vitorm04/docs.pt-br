@@ -2,12 +2,12 @@
 title: Para qual sistema operacional direcionar com os contêineres do .NET
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Para qual sistema operacional direcionar com os contêineres do .NET
 ms.date: 01/07/2019
-ms.openlocfilehash: 8bcfa0212f84c575a63f76e05edec1e511cadc36
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: dcf91f5ab808a8704201979f6bab1140c3343bce
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772012"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736911"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Para qual sistema operacional direcionar com os contêineres do .NET
 
@@ -19,9 +19,11 @@ Para Linux, várias distribuições estão disponíveis e há compatibilidade co
 
 Na Figure 3-1, é possível ver a possível versão do sistema operacional dependendo do .NET Framework usado.
 
-![Ao implantar aplicativos .NET Framework herdados, é necessário definir o Windows Server Core como destino, compatível com aplicativos herdados e o IIS e com uma imagem maior. Ao implantar aplicativos .NET Core, é possível definir o Windows Nano Server como destino, que é otimizado para nuvem, usa o Kestrel, é menor e inicia mais rapidamente. Também é possível definir Linux, Debian de suporte, Alpine e outros como destino. Também usa o Kestrel, é menor e inicia mais rapidamente.](./media/image1.png)
+![Diagrama que mostra o sistema operacional a ser usado com os contêineres .NET.](./media/net-container-os-targets/targeting-operating-systems.png)
 
 **Figura 3-1.** Sistemas operacionais a serem direcionados dependendo das versões do .NET Framework
+
+Ao implantar aplicativos .NET Framework herdados, você precisa ter como alvo o Windows Server Core, compatível com aplicativos herdados e o IIS, mas tem uma imagem maior. Ao implantar aplicativos .NET Core, é possível definir o Windows Nano Server como destino, que é otimizado para nuvem, usa o Kestrel, é menor e inicia mais rapidamente. Também é possível definir Linux, Debian de suporte, Alpine e outros como destino. O também usa Kestrel, é menor e é iniciado mais rapidamente.
 
 Também é possível criar sua própria imagem do Docker em casos em que você deseja usar uma distribuição diferente do Linux ou em que você quer uma imagem com versões não fornecidas pela Microsoft. Por exemplo, você pode criar uma imagem com o ASP.NET Core em execução no .NET Framework tradicional e no Windows Server Core, que é um cenário não tão comum para Docker.
 

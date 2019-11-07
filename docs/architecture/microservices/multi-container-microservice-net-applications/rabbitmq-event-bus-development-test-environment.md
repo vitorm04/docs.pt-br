@@ -2,12 +2,12 @@
 title: Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Use o RabbitMQ para implementar mensagens de barramento de eventos para eventos de integração para os ambientes de desenvolvimento ou de teste.
 ms.date: 10/02/2018
-ms.openlocfilehash: 7d51054d444ce1e35fabab94cc803e74dbd96f19
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089736"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739495"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
 
@@ -17,11 +17,11 @@ Uma da implementação personalizada do barramento de eventos no eShopOnContaine
 
 A implementação do barramento de eventos com RabbitMQ permite que os microsserviços assinem, publiquem e recebam eventos, conforme mostrado na Figura 6-21.
 
-![O RabbitMQ é um intermediário entre o publicador da mensagem e os assinantes, para tratar da distribuição.](./media/image22.png)
+![Diagrama mostrando RabbitMQ entre remetente de mensagem e receptor de mensagem.](./media/rabbitmq-event-bus-development-test-environment/rabbitmq-implementation.png)
 
 **Figura 6-21.** Implementação de um barramento de eventos do RabbitMQ
 
-No código, a classe EventBusRabbitMQ implementa a interface IEventBus genérica. Isso se baseia na Injeção de dependência para que você possa trocar dessa versão de Desenvolvimento/Teste para uma versão de produção.
+O RabbitMQ é um intermediário entre o publicador da mensagem e os assinantes, para tratar da distribuição. No código, a classe EventBusRabbitMQ implementa a interface IEventBus genérica. Isso se baseia na Injeção de dependência para que você possa trocar dessa versão de Desenvolvimento/Teste para uma versão de produção.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable

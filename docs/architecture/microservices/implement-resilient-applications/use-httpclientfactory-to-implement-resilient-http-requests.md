@@ -2,12 +2,12 @@
 title: Usar HttpClientFactory implementar solicitações HTTP resilientes
 description: Saiba como usar o HttpClientFactory, disponível desde o .NET Core 2.1, para a criação de instâncias de `HttpClient`, facilitando o uso em seus aplicativos.
 ms.date: 08/08/2019
-ms.openlocfilehash: e32ffdd43ce8968ef9a0694873870b61510d7300
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9eff4a01361b3dc6f7471bc012c945d048b9a276
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093997"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737750"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Usar HttpClientFactory implementar solicitações HTTP resilientes
 
@@ -56,11 +56,13 @@ Portanto, o que é um "cliente tipado"? É apenas um `HttpClient` que é configu
 
 O diagrama a seguir mostra como os clientes tipados são usados com o `HttpClientFactory`:
 
-![Um ClientService (usado por um código de controlador ou cliente) usa um HttpClient criado pelo IHttpClientFactory registrado. Esse alocador atribui um HttpMessageHandler ao HttpClient de um pool que ele gerencia. O HttpClient pode ser configurado com políticas da Polly ao registrar o IHttpClientFactory no contêiner de injeção de dependência com o método de extensão AddHttpClient.](./media/image3.5.png)
+![Diagrama mostrando como os clientes digitados são usados com HttpClientFactory.](./media/use-httpclientfactory-to-implement-resilient-http-requests/client-application-code.png)
 
 **Figura 8-4**. Use o HttpClientFactory com classes de cliente tipado.
 
-Primeiro, a instalação `HttpClientFactory` em seu aplicativo instalando o pacote NuGet do `Microsoft.Extensions.Http` que inclui o método de extensão `AddHttpClient()` para `IServiceCollection`. Esse método de extensão registra o `DefaultHttpClientFactory` a ser usado como um singleton da interface `IHttpClientFactory`. Ele define uma configuração transitória para o `HttpMessageHandlerBuilder`. Esse manipulador de mensagens (objeto `HttpMessageHandler`), obtido de um pool, é usado pelo `HttpClient` retornado do alocador.
+Na imagem acima, um ClientService (usado por um controlador ou código de cliente) usa um `HttpClient` criado pelo `IHttpClientFactory`registrado. Essa fábrica atribui o `HttpClient` um `HttpMessageHandler` de um pool que ele gerencia. O `HttpClient` pode ser configurado com as políticas do Polly ao registrar o `IHttpClientFactory` no contêiner DI com o método de extensão `AddHttpClient`.
+
+Para configurar a estrutura acima, adicione `HttpClientFactory` em seu aplicativo instalando o pacote NuGet `Microsoft.Extensions.Http` que inclui o método de extensão `AddHttpClient()` para `IServiceCollection`. Esse método de extensão registra o `DefaultHttpClientFactory` a ser usado como um singleton da interface `IHttpClientFactory`. Ele define uma configuração transitória para o `HttpMessageHandlerBuilder`. Esse manipulador de mensagens (objeto `HttpMessageHandler`), obtido de um pool, é usado pelo `HttpClient` retornado do alocador.
 
 No próximo código, veja como `AddHttpClient()` pode ser usado para registrar clientes tipados (agentes de serviço) que precisam usar `HttpClient`.
 

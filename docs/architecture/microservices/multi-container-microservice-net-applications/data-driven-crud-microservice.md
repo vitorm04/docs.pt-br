@@ -2,12 +2,12 @@
 title: Criando um microsserviço de CRUD simples controlado por dados
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entenda a criação de um microsserviço CRUD simples (controlado por dados) dentro do contexto de um aplicativo de microsserviço.
 ms.date: 01/07/2019
-ms.openlocfilehash: db179d9d7d5be5b03f8409b823ee87e71e1c7135
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 56cec488c22b0f3b45b9c1dae9d2f4fd7ef7beaa
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771200"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737358"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Criando um microsserviço de CRUD simples controlado por dados
 
@@ -17,17 +17,17 @@ Esta seção descreve como criar um microsserviço simples que execute operaçõ
 
 Do ponto de vista do design, esse tipo de microsserviço em contêineres é muito simples. Talvez o problema a ser resolvido seja simples ou talvez a implementação seja apenas uma prova de conceito.
 
-![Um microsserviço CRUD simples é um padrão de design interno.](./media/image4.png)
+![Diagrama mostrando um padrão de design interno de microserviço CRUD simples.](./media/data-driven-crud-microservice/internal-design-simple-crud-microservices.png)
 
 **Figura 6-4**. Design interno para microsserviços de CRUD simples
 
 Um exemplo desse tipo de serviço de unidade de dados é o microsserviço de catálogo do aplicativo de exemplo eShopOnContainers. Esse tipo de serviço implementa todas as suas funcionalidades em um único projeto da API Web ASP.NET Core que inclui classes para seu modelo de dados, sua lógica de negócios e seu código de acesso a dados. Ele também armazena os dados relacionados em um banco de dados em execução no SQL Server (como outro contêiner para fins de Desenvolvimento/Teste), mas também pode ser qualquer host normal do SQL Server, conforme mostrado na Figura 6-5.
 
-![O microsserviço de Catálogo lógico inclui o banco de dados do Catálogo, que pode estar ou não no mesmo host do Docker. É bom ter o banco de dados no mesmo host do Docker para desenvolvimento, mas não para produção.](./media/image5.png)
+![Diagrama mostrando um contêiner de microserviço controlado por dados/CRUD.](./media/data-driven-crud-microservice/simple-data-driven-crud-microservice.png)
 
 **Figura 6-5**. Design de microsserviço controlado por dados/CRUD simples
 
-Quando estiver desenvolvendo esse tipo de serviço, você somente precisará do [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) e de uma API de acesso a dados ou de um ORM (mapeador relacional de objeto) como o [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Você também pode gerar metadados do [Swagger](https://swagger.io/) automaticamente por meio do [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) para fornecer uma descrição do que o serviço oferece, conforme será explicado na próxima seção.
+O diagrama anterior mostra o microserviço de catálogo lógico, que inclui seu banco de dados de catálogo, que pode estar ou não no mesmo host do Docker. Ter o banco de dados no mesmo host do Docker pode ser bom para desenvolvimento, mas não para produção. Quando estiver desenvolvendo esse tipo de serviço, você somente precisará do [ASP.NET Core](https://docs.microsoft.com/aspnet/core/) e de uma API de acesso a dados ou de um ORM (mapeador relacional de objeto) como o [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Você também pode gerar metadados do [Swagger](https://swagger.io/) automaticamente por meio do [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) para fornecer uma descrição do que o serviço oferece, conforme será explicado na próxima seção.
 
 Observe que executar um servidor de banco de dados como o SQL Server em um contêiner do Docker é ótimo para ambientes de desenvolvimento, porque todas as dependências podem funcionar sem precisar provisionar um banco de dados na nuvem ou localmente. Isso é muito conveniente ao executar testes de integração. No entanto, para ambientes de produção, executar um servidor de banco de dados em um contêiner não é recomendável, porque, geralmente, essa abordagem não oferece alta disponibilidade. Para um ambiente de produção no Azure, é recomendável usar o BD SQL do Azure ou qualquer outra tecnologia de banco de dados que possa fornecer alta disponibilidade e alta escalabilidade. Por exemplo, para uma abordagem NoSQL, você pode escolher o CosmosDB.
 
@@ -37,15 +37,17 @@ Por fim, editando os arquivos de metadados Dockerfile e docker-compose.yml, voc�
 
 Para implementar um microsserviço CRUD simples usando o .NET Core e o Visual Studio, comece criando um projeto simples de API Web do ASP.NET Core (em execução no .NET Core, para que ele possa ser executado em um host Linux do Docker), como é mostrado na Figura 6-6.
 
-![Para criar um Projeto de API Web do ASP.NET Core, primeiro selecione um Aplicativo Web do ASP.NET Core e, em seguida, selecione o tipo de API.](./media/image6.png)
+![Captura de tela do Visual estúdios mostrando a configuração do projeto.](./media/data-driven-crud-microservice/create-asp-net-core-web-api-project.png)
 
 **Figura 6-6**. Criando um projeto de API Web ASP.NET Core no Visual Studio
 
-Depois de criar o projeto, você poderá implementar os controladores de MVC como faria em qualquer outro projeto de API Web, usando a API do Entity Framework ou uma outra API. Em um novo projeto de API Web, você verá que a única dependência existente nesse microsserviço é em relação ao próprio ASP.NET Core. Internamente, dentro da dependência *Microsoft. AspNetCore. All* , ele faz referência a Entity Framework e a muitos outros pacotes NuGet do .NET Core, como mostra a Figura 6-7.
+Para criar um Projeto de API Web do ASP.NET Core, primeiro selecione um Aplicativo Web do ASP.NET Core e, em seguida, selecione o tipo de API. Depois de criar o projeto, você poderá implementar os controladores de MVC como faria em qualquer outro projeto de API Web, usando a API do Entity Framework ou uma outra API. Em um novo projeto de API Web, você verá que a única dependência existente nesse microsserviço é em relação ao próprio ASP.NET Core. Internamente, dentro da dependência *Microsoft. AspNetCore. All* , ele faz referência a Entity Framework e a muitos outros pacotes NuGet do .NET Core, como mostra a Figura 6-7.
 
-![O projeto de API inclui referências ao pacote NuGet Microsoft. AspNetCore. app, que inclui referências a todos os pacotes essenciais. Ele pode incluir alguns outros pacotes também.](./media/image8.png)
+![Captura de tela do VS mostrando as dependências do NuGet de Catalog. API.](./media/data-driven-crud-microservice/simple-crud-web-api-microservice-dependencies.png)
 
 **Figura 6-7**. Dependências em um microsserviço de API Web de CRUD simples
+
+O projeto de API inclui referências ao pacote NuGet Microsoft.AspNetCore.App, que inclui referências a todos os pacotes essenciais. Ele pode incluir alguns outros pacotes também.
 
 ### <a name="implementing-crud-web-api-services-with-entity-framework-core"></a>Implementando serviços da API Web de CRUD com o Entity Framework Core
 
@@ -340,11 +342,11 @@ O Swashbuckle combina o Gerenciador de API e o Swagger ou o [swagger-ui](https:/
 
 Isso significa que você pode complementar a API com uma ótima interface do usuário de descoberta para ajudar os desenvolvedores a usarem a API. Isso exige uma quantidade muito pequena de código e manutenção porque ela é gerada automaticamente, permitindo que você se concentre na API. O resultado do Gerenciador de API é semelhante ao da Figura 6-8.
 
-![A documentação da API de interface do usuário do Swagger gerada pelo Swashbuckle inclui todas as ações publicadas.](./media/image9.png)
+![Captura de tela do Gerenciador de API do Swagger exibindo a API eShopOContainers.](./media/data-driven-crud-microservice/swagger-metadata-eshoponcontainers-catalog-microservice.png)
 
 **Figura 6-8**. Gerenciador de API do Swashbuckle baseado nos metadados do Swagger – microsserviço de catálogo do eShopOnContainers
 
-O Gerenciador de API não é o mais importante aqui. Quando a API Web consegue se descrever nos metadados do Swagger, ela pode ser usada diretamente por meio das ferramentas baseadas no Swagger, incluindo geradores de código de classe de proxy de cliente que podem direcionar a várias plataformas. Por exemplo, conforme mencionado, o [AutoRest](https://github.com/Azure/AutoRest) gera as classes de cliente do .NET automaticamente. Mas ferramentas adicionais como [swagger-codegen](https://github.com/swagger-api/swagger-codegen) também estão disponíveis, permitindo automaticamente a geração de código das bibliotecas clientes da API, de stubs de servidor e da documentação.
+A documentação da API de interface do usuário do Swagger gerada pelo Swashbuckle inclui todas as ações publicadas. O Gerenciador de API não é o mais importante aqui. Quando a API Web consegue se descrever nos metadados do Swagger, ela pode ser usada diretamente por meio das ferramentas baseadas no Swagger, incluindo geradores de código de classe de proxy de cliente que podem direcionar a várias plataformas. Por exemplo, conforme mencionado, o [AutoRest](https://github.com/Azure/AutoRest) gera as classes de cliente do .NET automaticamente. Mas ferramentas adicionais como [swagger-codegen](https://github.com/swagger-api/swagger-codegen) também estão disponíveis, permitindo automaticamente a geração de código das bibliotecas clientes da API, de stubs de servidor e da documentação.
 
 Atualmente, o Swashbuckle consiste em vários pacotes NuGet internos no metapacote de alto nível [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore) para aplicativos ASP.NET Core.
 
@@ -401,13 +403,13 @@ Depois que isso for feito, você poderá iniciar o aplicativo e procurar o JSON 
 
 Você já viu a interface do usuário gerada, criada pelo Swashbuckle para uma URL como `http://<your-root-url>/swagger`. Na Figura 6-9, veja também como é possível testar qualquer método de API.
 
-![O detalhe da API de interface do usuário do Swagger apresenta uma amostra da resposta e pode ser usado para executar a API real, que é ótima para a descoberta do desenvolvedor.](./media/image10.png)
+![Captura de tela da interface do usuário do Swagger mostrando as ferramentas de teste disponíveis.](./media/data-driven-crud-microservice/swashbuckle-ui-testing.png)
 
 **Figura 6-9**. Interface do usuário do Swashbuckle testando o método da API de itens/catálogo
 
-A Figura 6-10 mostra os metadados JSON do Swagger gerados por meio do microsserviço eShopOnContainers (que é o que as ferramentas usam em segundo plano) quando você solicita `http://<your-root-url>/swagger/v1/swagger.json` usando o [Postman](https://www.getpostman.com/).
+O detalhe da API de interface do usuário do Swagger apresenta uma amostra da resposta e pode ser usado para executar a API real, que é ótima para a descoberta do desenvolvedor. A Figura 6-10 mostra os metadados JSON do Swagger gerados por meio do microsserviço eShopOnContainers (que é o que as ferramentas usam em segundo plano) quando você solicita `http://<your-root-url>/swagger/v1/swagger.json` usando o [Postman](https://www.getpostman.com/).
 
-![Interface do usuário de exemplo do Postman mostrando metadados JSON do Swagger](./media/image11.png)
+![Captura de tela de uma interface do usuário do postmaster de exemplo mostrando metadados de JSON do Swagger.](./media/data-driven-crud-microservice/swagger-json-metadata.png)
 
 **Figura 6-10**. Metadados JSON do Swagger
 

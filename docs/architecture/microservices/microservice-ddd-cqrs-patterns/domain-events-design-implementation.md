@@ -2,12 +2,12 @@
 title: Eventos de domínio. design e implementação
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Obtenha uma visão detalhada dos eventos de domínio, um conceito fundamental para estabelecer a comunicação entre agregações.
 ms.date: 10/08/2018
-ms.openlocfilehash: eea72633d3460f51821e8a939b14acff2f17965c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f0dbd6b0e70d825122d319611a327438df065588
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093962"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739910"
 ---
 # <a name="domain-events-design-and-implementation"></a>Eventos de domínio: design e implementação
 
@@ -47,11 +47,11 @@ Assim, a interface do barramento de eventos precisa de alguma infraestrutura que
 
 Se a execução de um comando relacionado a uma instância de agregação exigir regras de domínio adicionais para ser executado em uma ou mais agregações, você deverá projetar e implementar esses efeitos colaterais para que sejam disparados por eventos de domínio. Conforme mostrado na Figura 7-14 e como um dos mais importantes casos de uso, um evento de domínio deve ser usado para propagar alterações de estado entre várias agregações dentro do mesmo modelo de domínio.
 
-![A consistência entre agregações é obtida por eventos de domínio, a Agregação de Ordem envia um evento de domínio OrderStarted que é tratado para atualizar a Agregação de Comprador. ](./media/image15.png)
+![Diagrama mostrando um evento de domínio que controla dados para um comprador agregado.](./media/domain-events-design-implementation/domain-model-ordering-microservice.png)
 
 **Figura 7-14**. Eventos de domínio para impor consistência entre várias agregações dentro do mesmo domínio
 
-Na figura, quando o usuário dá início a um pedido, o evento de domínio OrderStarted dispara a criação de um objeto Comprador no microsserviço de pedidos, com base nas informações do usuário original, obtidas do microsserviço de identidade (com as informações fornecidas no comando CreateOrder). O evento de domínio é gerado pela agregação do pedido quando ela é criada pela primeira vez.
+A Figura 7-14 mostra como a consistência entre agregações é obtida por eventos de domínio. Quando o usuário inicia uma ordem, a agregação de ordem envia um evento de domínio `OrderStarted`. O evento de domínio OrderStarted é tratado pelo comprador agregado para criar um objeto de comprador no microserviço de ordenação, com base nas informações do usuário original do microserviço de identidade (com as informações fornecidas no comando CreateOrder).
 
 Como alternativa, você pode fazer com que a raiz da agregação assine eventos acionado pelos membros de suas respectivas agregações (entidades filho). Por exemplo, cada entidade filho OrderItem poderá acionar um evento quando o preço do item for maior que um valor específico, ou quando a quantidade de itens do produto for muito alta. Assim, a raiz de agregação poderá receber esses eventos e executar um cálculo global ou uma agregação.
 
@@ -78,11 +78,11 @@ Por outro lado, se você usa eventos de domínio, você pode criar uma implement
 
 Conforme mostrado na Figura 7-15, começando pelo mesmo evento de domínio, você pode manipular várias ações relacionadas a outras agregações do domínio ou ações de aplicativos adicionais que você precisa realizar entre microsserviços que se conectam com eventos de integração e o barramento de eventos.
 
-![Pode haver vários manipuladores para o mesmo evento de domínio na camada de aplicativo, um manipulador pode resolver a consistência entre agregações e outro manipulador pode publicar um evento de integração, para que outros microsserviços possam fazer algo com ele.](./media/image16.png)
+![Diagrama que mostra um evento de domínio passando dados para vários manipuladores de eventos.](./media/domain-events-design-implementation/aggregate-domain-event-handlers.png)
 
 **Figura 7-15**. Manipulando várias ações por domínio
 
-Os manipuladores de eventos normalmente ficam na camada de aplicativo, porque você usará objetos de infraestrutura, como repositórios, ou uma API de aplicativo para o comportamento do microsserviço. Nesse sentido, os manipuladores de eventos são semelhantes aos manipuladores de comandos, portanto, ambos fazem parte da camada de aplicativo. A diferença importante é que um comando deve ser processado apenas uma vez. Um evento de domínio pode ser processado zero ou *n* vezes, porque ele pode ser recebido por vários destinatários ou manipuladores de eventos, com uma finalidade diferente para cada manipulador.
+Pode haver vários manipuladores para o mesmo evento de domínio na camada de aplicativo, um manipulador pode resolver a consistência entre agregações e outro manipulador pode publicar um evento de integração, para que outros microsserviços possam fazer algo com ele. Os manipuladores de eventos normalmente ficam na camada de aplicativo, porque você usará objetos de infraestrutura, como repositórios, ou uma API de aplicativo para o comportamento do microsserviço. Nesse sentido, os manipuladores de eventos são semelhantes aos manipuladores de comandos, portanto, ambos fazem parte da camada de aplicativo. A diferença importante é que um comando deve ser processado apenas uma vez. Um evento de domínio pode ser processado zero ou *n* vezes, porque ele pode ser recebido por vários destinatários ou manipuladores de eventos, com uma finalidade diferente para cada manipulador.
 
 Ter um número aberto de manipuladores por evento de domínio permite que você adicione quantas regras de domínio forem necessárias, sem afetar o código atual. Por exemplo, a implementação da seguinte regra de negócios poderá ser tão fácil quanto adicionar alguns manipuladores de eventos (ou apenas um):
 
@@ -244,7 +244,7 @@ Uma abordagem é um sistema de mensagens real ou até mesmo um barramento de eve
 
 Outra maneira de mapear eventos para vários manipuladores de eventos é o uso de registro de tipos em um contêiner de IoC para que você possa inferir dinamicamente o local para expedir os eventos. Em outras palavras, você precisa saber quais manipuladores de eventos precisam obter um evento específico. A figura 7-16 mostra uma abordagem simplificada para esta abordagem.
 
-![A injeção de dependência pode ser usada para associar eventos a manipuladores de eventos, que é a abordagem usada pelo MediatR](./media/image17.png)
+![Diagrama que mostra um distribuidor de eventos de domínio enviando eventos para os manipuladores apropriados.](./media/domain-events-design-implementation/domain-event-dispatcher.png)
 
 **Figura 7-16**. Dispatcher de evento de domínio usando IoC
 

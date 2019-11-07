@@ -2,12 +2,12 @@
 title: Projetando um microsserviço orientado a DDD
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda o design do microsserviço de pedidos orientado a DDD e suas camadas de aplicativo.
 ms.date: 10/08/2018
-ms.openlocfilehash: 303f8909d12dddef93b20604a00b9ea8e8493ee5
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: c5ac55978ca979a3ae055d9b0cd2d3c6b3187b4e
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674343"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739942"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>Projetar um microsserviço orientado a DDD
 
@@ -37,13 +37,13 @@ Ao lidar com complexidade, é importante ter um modelo de domínio controlado po
 
 A Figura 7-5 mostra como um design em camadas é implementado no aplicativo eShopOnContainers.
 
-![As três camadas em um microsserviço de DDD como o de pedidos. Cada camada é um projeto do VS: A camada de aplicativo é Ordering.API, a camada de domínio é Ordering.Domain e a camada de infraestrutura é Ordering.Infrastructure.](./media/image6.png)
+![Diagrama mostrando as camadas em um microserviço de design controlado por domínio.](./media/ddd-oriented-microservice/domain-driven-design-microservice.png)
 
 **Figura 7-5**. Camadas DDD no microsserviço de ordenação em eShopOnContainers
 
-Você deseja criar o sistema de modo que cada camada se comunique apenas com determinadas outras camadas. Isso poderá ser mais fácil de impor se as camadas forem implementadas como bibliotecas de classes diferentes, porque você pode identificar claramente que dependências são definidas entre bibliotecas. Por exemplo, a camada de modelo de domínio não deve receber uma dependência de nenhuma outra camada (as classes de modelo de domínio devem ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) ou Plain Old CLR Objects). Conforme mostrado na Figura 7-6, a biblioteca de camada **Ordering.Domain** tem dependências apenas de bibliotecas .NET Core ou pacotes NuGet, mas não de nenhuma outra biblioteca personalizada, como a biblioteca de dados ou a biblioteca de persistência.
+As três camadas em um microsserviço de DDD como o de pedidos. Cada camada é um projeto do VS: a camada de aplicativo é Ordering.API, a camada de domínio é Ordering.Domain e a camada de infraestrutura é Ordering.Infrastructure. Você deseja criar o sistema de modo que cada camada se comunique apenas com determinadas outras camadas. Isso poderá ser mais fácil de impor se as camadas forem implementadas como bibliotecas de classes diferentes, porque você pode identificar claramente que dependências são definidas entre bibliotecas. Por exemplo, a camada de modelo de domínio não deve receber uma dependência de nenhuma outra camada (as classes de modelo de domínio devem ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) ou Plain Old CLR Objects). Conforme mostrado na Figura 7-6, a biblioteca de camada **Ordering.Domain** tem dependências apenas de bibliotecas .NET Core ou pacotes NuGet, mas não de nenhuma outra biblioteca personalizada, como a biblioteca de dados ou a biblioteca de persistência.
 
-![A exibição do Gerenciador de Soluções das dependências de Ordering.Domain, mostrá-la depende apenas de bibliotecas do .NET Core.](./media/image7.png)
+![Captura de tela de ordenação de dependências. domain.](./media/ddd-oriented-microservice/ordering-domain-dependencies.png)
 
 **Figura 7-6**. Camadas implementadas como bibliotecas permitem melhor controle de dependências entre as camadas
 
@@ -51,9 +51,9 @@ Você deseja criar o sistema de modo que cada camada se comunique apenas com det
 
 O excelente livro de Eric Evans, [Domain Driven Design](https://domainlanguage.com/ddd/) (Projeto Orientado a Domínio) diz o seguinte sobre a camada de modelo de domínio e a camada de aplicativo.
 
-**Camada de modelo de domínio**: Responsável por representar conceitos dos negócios, informações sobre a situação de negócios e as regras de negócios. O estado que reflete a situação de negócios é controlado e usado aqui, embora os detalhes técnicos de armazená-lo sejam delegados à infraestrutura. Essa camada é a essência do software de negócios.
+**Camada de modelo de domínio**: responsável por representar conceitos de negócios, informações sobre a situação de negócios e as regras de negócio. O estado que reflete a situação de negócios é controlado e usado aqui, embora os detalhes técnicos de armazená-lo sejam delegados à infraestrutura. Essa camada é a essência do software de negócios.
 
-A camada de modelo de domínio é o local em que os negócios são expressados. Quando você implementa uma camada de modelo de domínio de microsserviço em .NET, essa camada é codificada como uma biblioteca de classes com as entidades de domínio que capturam dados mais comportamento (métodos com lógica).
+A camada de modelo de domínio é onde os negócios é expresso. Quando você implementa uma camada de modelo de domínio de microsserviço em .NET, essa camada é codificada como uma biblioteca de classes com as entidades de domínio que capturam dados mais comportamento (métodos com lógica).
 
 Seguindo os princípios de [Ignorância da Persistência](https://deviq.com/persistence-ignorance/) e a [Ignorância da Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance), essa camada deve ignorar totalmente os detalhes de persistência de dados. Essas tarefas de persistência devem ser executadas pela camada de infraestrutura. Portanto, essa camada não deveria receber dependências diretas da infraestrutura, o que significa que uma regra importante é que suas classes de entidade do modelo de domínio devem ser [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object)s.
 
@@ -69,7 +69,7 @@ Além disso, isso não significa que você pode pegar um modelo criado para um b
 
 Passando para a camada de aplicativo, novamente podemos citar o livro de Eric Evans [Domain Driven Design](https://domainlanguage.com/ddd/) (Projeto Orientado a Domínio):
 
-**Camada de aplicativo:** Define os trabalhos que o software deve fazer e direciona os objetos de domínio expressivos para resolver problemas. As tarefas pelas quais esta camada é responsável são significativas para os negócios ou necessárias para a interação com as camadas do aplicativo de outros sistemas. Essa camada é mantida fina. Ele não contém regras de negócio nem conhecimento, mas apenas coordena o trabalho de tarefas e delegados para colaborações de objetos de domínio na próxima camada abaixo. Ele não tem um estado refletindo a situação de negócios, mas pode ter um estado que reflita o progresso de uma tarefa para o usuário ou o programa.
+**Camada de aplicativo:** define os trabalhos que o software deve fazer e direciona os objetos de domínio expressivos para resolver problemas. As tarefas pelas quais esta camada é responsável são significativas para os negócios ou necessárias para a interação com as camadas do aplicativo de outros sistemas. Essa camada é mantida fina. Ele não contém regras de negócio nem conhecimento, mas apenas coordena o trabalho de tarefas e delegados para colaborações de objetos de domínio na próxima camada abaixo. Ele não tem um estado refletindo a situação de negócios, mas pode ter um estado que reflita o progresso de uma tarefa para o usuário ou o programa.
 
 Uma camada de aplicativo do microsserviço no .NET é codificada como um projeto de API da Web do ASP.NET Core. O projeto implementa interação do microsserviço, o acesso remoto à rede e as APIs da Web externas usadas nos aplicativos de interface do usuário ou cliente. Ele incluirá consultas se estiver usando uma abordagem CQRS, comandos aceitos pelo microsserviço e até mesmo a comunicação controlada por evento entre microsserviços (eventos de integração). A API Web do ASP.NET Core que representa a camada de aplicativo não deve conter as regras de negócio nem o conhecimento do domínio (especialmente regras de domínio para transações ou atualizações); isso deve ser de propriedade da biblioteca de classes de modelo de domínio. A camada do aplicativo deve apenas coordenar tarefas e não deve reter nem definir qualquer estado de domínio (modelo de domínio). Ela delega a execução de regras de negócio para as classes de modelo de domínio em si (raízes agregadas e entidades de domínio), que, por fim, atualizarão os dados dentro dessas entidades de domínio.
 
@@ -81,25 +81,25 @@ A meta é que a lógica do domínio na camada de modelo de domínio, suas invari
 
 A camada de infraestrutura é como os dados inicialmente mantidos em entidades de domínio (em memória) são mantidos em bancos de dados ou outro repositório persistente. Um exemplo é usar o código do Entity Framework Core para implementar as classes padrão do repositório que usam um DBContext para manter os dados em um banco de dados relacional.
 
-Conforme mencionado anteriormente nos princípios de [Ignorância de Persistência](https://deviq.com/persistence-ignorance/) e [Ignorância de Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance), a camada de infraestrutura não deve "contaminar" a camada de modelo de domínio. Você deve manter as classes de entidade de modelo de domínio independentes da infraestrutura que você usa para manter os dados (EF ou qualquer outra estrutura) não obtendo dependências rígidas de estruturas. Sua biblioteca de classes de camada de modelo de domínio deve ter somente o código de domínio, apenas classes de entidade [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) implementando a essência do seu software e completamente separadas de tecnologias de infraestrutura.
+Conforme mencionado anteriormente nos princípios de [Ignorância de Persistência](https://deviq.com/persistence-ignorance/) e [Ignorância de Infraestrutura](https://ayende.com/blog/3137/infrastructure-ignorance), a camada de infraestrutura não deve ser "contaminar" a camada de modelo de domínio. Você deve manter as classes de entidade de modelo de domínio independentes da infraestrutura que você usa para manter os dados (EF ou qualquer outra estrutura) não obtendo dependências rígidas de estruturas. Sua biblioteca de classes de camada de modelo de domínio deve ter somente o código de domínio, apenas classes de entidade [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object) implementando a essência do seu software e completamente separadas de tecnologias de infraestrutura.
 
 Assim, suas camadas ou bibliotecas e projetos de classes devem, por fim, depender da sua camada de modelo de domínio (biblioteca), não vice-versa, conforme mostra a Figura 7-7.
 
-![Dependências em um serviço de DDD, a camada de aplicativo depende do domínio e da infraestrutura e a infraestrutura depende do domínio, mas o domínio não depende de nenhuma camada.](./media/image8.png)
+![Diagrama mostrando dependências que existem entre as camadas de serviço do DDD.](./media/ddd-oriented-microservice/ddd-service-layer-dependencies.png)
 
 **Figura 7-7**. Dependências entre camadas em DDD
 
-Esse design de camada deve ser independente de cada microsserviço. Conforme observado anteriormente, você pode implementar os microsserviços mais complexos seguindo padrões DDD ao mesmo tempo em que implementa microsserviços conduzidos por dados mais simples (CRUD simples em uma única camada) de maneira mais simples.
+Dependências em um serviço de DDD, a camada de aplicativo depende do domínio e da infraestrutura e a infraestrutura depende do domínio, mas o domínio não depende de nenhuma camada. Esse design de camada deve ser independente de cada microsserviço. Conforme observado anteriormente, você pode implementar os microsserviços mais complexos seguindo padrões DDD ao mesmo tempo em que implementa microsserviços conduzidos por dados mais simples (CRUD simples em uma única camada) de maneira mais simples.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **DevIQ. Princípio de Ignorância de persistência** \
+- **DevIQ.**  \ de princípio de ignorância de persistência
   <https://deviq.com/persistence-ignorance/>
 
-- **Oren Eini. Ignorância de infraestrutura** \
+- **Oren Eini. \ de infraestrutura ignorância**
   <https://ayende.com/blog/3137/infrastructure-ignorance>
 
-- **Angel Lopez. Arquitetura em camadas no design controlado por domínio** \
+- **Anjo Lopez. Arquitetura em camadas em \ de design controlado por domínio**
   <https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/>
 
 >[!div class="step-by-step"]

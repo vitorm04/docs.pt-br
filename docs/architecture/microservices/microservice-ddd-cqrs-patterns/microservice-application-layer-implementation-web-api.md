@@ -2,12 +2,12 @@
 title: Implementando a camada de aplicativos de microsserviço usando a API Web
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Compreenda a injeção de dependência e os padrões de mediador e seus detalhes de implementação na camada de aplicativo de API Web.
 ms.date: 10/08/2018
-ms.openlocfilehash: c73823a0449fdf81ba3d886efdef540bd1aa6121
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 08cb409b06a54c6b30afa393a817e14bd64fbcbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454853"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737480"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Implementar a camada de aplicativos de microsserviço usando a API Web
 
@@ -17,7 +17,9 @@ Conforme mencionado anteriormente, a camada de aplicativo pode ser implementada 
 
 Por exemplo, o código da camada de aplicativo do microsserviço de ordenação é implementado diretamente como parte do projeto **Ordering.API** (um projeto da API Web ASP.NET Core), como mostrado na Figura 7-23.
 
-![A exibição do Gerenciador de Soluções do microsserviço Ordering.API, mostrando as subpastas na pasta Aplicativo: Comportamentos, Comandos, DomainEventHandlers, IntegrationEvents, Modelos, Consultas e Validações.](./media/image20.png)
+:::image type="complex" source="./media/microservice-application-layer-implementation-web-api/ordering-api-microservice.png" alt-text="Captura de tela do microserviço de classificação. API no Gerenciador de Soluções.":::
+A exibição do Gerenciador de Soluções do microsserviço Ordering.API, mostrando as subpastas na pasta Aplicativo: Comportamentos, Comandos, DomainEventHandlers, IntegrationEvents, Modelos, Consultas e Validações.
+:::image-end:::
 
 **Figura 7-23**. A camada de aplicativo no projeto Ordering.API da API Web ASP.NET Core
 
@@ -181,9 +183,11 @@ O padrão Command é intrinsecamente relacionado ao padrão CQRS, apresentado an
 
 Conforme mostrado na Figura 7-24, o padrão é baseado em aceitar comandos do lado do cliente, processá-los com base nas regras do modelo de domínio e, por fim, persistir os estados com as transações.
 
-![A exibição de alto nível do lado de gravações no CQRS: aplicativo de interface do usuário envia um comando por meio da API que chega a um CommandHandler, que depende do modelo de domínio e da infraestrutura para atualizar o banco de dados.](./media/image21.png)
+![Diagrama que mostra o fluxo de dados de alto nível do cliente para o Database.](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
 **Figura 7-24**. Exibição de alto nível dos comandos ou do "lado transacional" em um padrão CQRS
+
+A Figura 7-24 mostra que o aplicativo de interface do usuário envia um comando por meio da API que chega a um `CommandHandler`, que depende do modelo de domínio e da infraestrutura, para atualizar o banco de dados.
 
 ### <a name="the-command-class"></a>A classe de comando
 
@@ -423,9 +427,11 @@ As outras duas opções principais, que são as opções recomendadas, são:
 
 Conforme mostrado na Figura 7-25, em uma abordagem CQRS você usa um mediador, semelhante a um barramento na memória, que é inteligente o suficiente para redirecionar para o manipulador de comandos correto com base no tipo de comando ou DTO que está sendo recebido. As setas pretas simples entre componentes representam as dependências entre objetos (em muitos casos, injetadas por meio da DI) com as respectivas interações.
 
-![Aumentando o zoom da imagem anterior: o controlador do ASP.NET Core envia o comando ao pipeline de comando do MediatR, de forma que ele chega ao manipulador adequado.](./media/image22.png)
+![Diagrama que mostra um fluxo de dados mais detalhado do cliente para o Database.](./media/microservice-application-layer-implementation-web-api/mediator-cqrs-microservice.png)
 
 **Figura 7-25**. Usando o padrão Mediador no processo em um único microsserviço CQRS
+
+O diagrama acima mostra um zoom da imagem 7-24: o controlador de ASP.NET Core envia o comando para o pipeline de comando do mediador, para que eles obtenham o manipulador apropriado.
 
 O motivo pelo qual o uso do padrão Mediador faz sentido é porque, em aplicativos empresariais, as solicitações de processamento podem ficar complicadas. Você almeja adicionar um número indefinido de interesses transversais como registro em log, validações, auditoria e segurança. Nesses casos, você pode confiar em um pipeline mediador (veja [Padrão mediador](https://en.wikipedia.org/wiki/Mediator_pattern)) para oferecer um meio para esses comportamentos adicionais ou interesses transversais.
 
@@ -439,11 +445,11 @@ Por exemplo, no microsserviço de pedidos eShopOnContainers, implementamos dois 
 
 Outra opção é usar mensagens assíncronas com base em agentes ou filas de mensagens, conforme mostrado na Figura 7-26. Essa opção também pode ser combinada com o componente mediador imediatamente antes do manipulador de comandos.
 
-![O pipeline do comando também pode ser tratado por uma fila de mensagens de alta disponibilidade para entregar os comandos ao manipulador adequado.](./media/image23.png)
+![Diagrama mostrando o Dataflow usando uma fila de mensagens de alta disponibilidade.](./media/microservice-application-layer-implementation-web-api/add-ha-message-queue.png)
 
 **Figura 7-26**. Usando filas de mensagens (comunicação fora do processo e entre processos) com comandos CQRS
 
-O uso de filas de mensagens para aceitar os comandos pode complicar ainda mais o pipeline do comando, porque você provavelmente precisará dividir o pipeline em dois processos conectados por meio da fila de mensagens externas. Ainda assim, isso deve ser usado se você precisa ter melhor escalabilidade e desempenho com base no sistema de mensagens assíncrono. Considere que, no caso da Figura 7-26, o controlador apenas posta a mensagem de comando na fila e retorna. Em seguida, o manipulador de comandos processa as mensagens em seu próprio ritmo. Esse é um grande benefício das filas: a fila de mensagens pode agir como um buffer nos casos em que a hiperescalabilidade é necessária, como para estoques ou qualquer outro cenário com um alto volume de dados de entrada.
+O pipeline do comando também pode ser tratado por uma fila de mensagens de alta disponibilidade para entregar os comandos ao manipulador adequado. O uso de filas de mensagens para aceitar os comandos pode complicar ainda mais o pipeline do comando, porque você provavelmente precisará dividir o pipeline em dois processos conectados por meio da fila de mensagens externas. Ainda assim, isso deve ser usado se você precisa ter melhor escalabilidade e desempenho com base no sistema de mensagens assíncrono. Considere que, no caso da Figura 7-26, o controlador apenas posta a mensagem de comando na fila e retorna. Em seguida, o manipulador de comandos processa as mensagens em seu próprio ritmo. Esse é um grande benefício das filas: a fila de mensagens pode agir como um buffer nos casos em que a hiperescalabilidade é necessária, como para estoques ou qualquer outro cenário com um alto volume de dados de entrada.
 
 No entanto, devido à natureza assíncrona das filas de mensagens, você precisa descobrir como se comunicar com o aplicativo cliente em relação ao êxito ou falha do processo do comando. Como regra, você nunca deve usar comandos do tipo "disparar e esquecer". Todos os aplicativos de negócios precisam saber se um comando foi processado com êxito ou, pelo menos, validado e aceito.
 

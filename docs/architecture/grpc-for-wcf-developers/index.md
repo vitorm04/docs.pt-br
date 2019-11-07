@@ -1,14 +1,14 @@
 ---
 title: ASP.NET Core gRPC para desenvolvedores do WCF – gRPC para desenvolvedores do WCF
-description: A SER ESCRITO
+description: Introdução à criação de serviços gRPCs no ASP.NET Core 3,0 para desenvolvedores do WCF
 author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6a5b4f6d0b47a272f7a753e22bfd61b06202944a
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b89f5974dd18e7005c6479c5b9eead039364e654
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72919376"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738075"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>ASP.NET Core gRPC para desenvolvedores do WCF
 
@@ -50,23 +50,15 @@ Editores:
 
 ## <a name="introduction"></a>Introdução
 
-TODO
-
-## <a name="purpose"></a>Finalidade
-
-TODO
+o gRPC é uma estrutura moderna para a criação de serviços em rede e aplicativos distribuídos. Imagine o desempenho das associações NetTCP do WCF com a interoperabilidade entre plataformas do SOAP. o gRPC se baseia no HTTP/2 e no protocolo de codificação de mensagens Protobuf para fornecer comunicação de alto desempenho e baixa largura de banda entre aplicativos e serviços. Ele dá suporte à geração de código de servidor e cliente em plataformas e linguagens de programação mais populares, incluindo .NET, Java, Python, C++ node. js, ir e muito mais. Com o suporte de primeira classe para gRPC no ASP.NET Core 3,0, juntamente com as ferramentas e as bibliotecas existentes do gRPC para o .NET 4. x, achamos que é uma excelente alternativa ao WCF para equipes de desenvolvimento que buscam adotar o .NET Core em suas organizações.
 
 ## <a name="who-should-use-this-guide"></a>Quem deve usar este guia
 
-**ATUALIZAR ESTE**
-
-O público-alvo deste guia são desenvolvedores do WCF, líderes de desenvolvimento e arquitetos interessados em migrar soluções WCF no .NET Framework 4 e versões anteriores para ASP.NET Core 3,0 usando os serviços gRPCs.
+Este guia foi escrito para desenvolvedores que trabalham em .NET Framework ou .NET Core que usaram anteriormente o WCF e que estão buscando migrar seus aplicativos para um ambiente de RPC moderno para .NET Core 3,0 e versões posteriores. O guia também pode ser usado mais geralmente para os desenvolvedores que estão atualizando ou considerando a atualização para o .NET Core 3,0 que desejam usar as ferramentas de gRPC internas.
 
 ## <a name="how-you-can-use-this-guide"></a>Como você pode usar este guia
 
-**ATUALIZAR ESTE**
-
-Esta é uma breve introdução à criação de serviços gRPCs no ASP.NET Core 3,0 com referência específica ao WCF como uma plataforma análoga. Ele explica os princípios de gRPC, relacionando cada conceito aos recursos equivalentes do WCF e oferece orientação para migrar um aplicativo WCF existente para o gRPC. Ele também é útil para desenvolvedores que têm experiência com o WCF e procuram aprender a gRPC para criar novos serviços. O aplicativo de exemplo pode ser usado como um modelo ou referência para seus próprios projetos, e você pode copiar e reutilizar o código do livro ou de seus exemplos.
+Esta é uma breve introdução à criação de serviços gRPCs no ASP.NET Core 3,0 com referência específica ao WCF como uma plataforma análoga. Ele explica os princípios de gRPC, relacionando cada conceito aos recursos equivalentes do WCF e oferece orientação para migrar um aplicativo WCF existente para o gRPC. Ele também é útil para desenvolvedores que têm experiência com o WCF e procuram aprender a gRPC para criar novos serviços. Os aplicativos de exemplo podem ser usados como um modelo ou referência para seus próprios projetos, e você pode copiar e reutilizar o código do livro ou de seus exemplos.
 
 Fique à vontade para encaminhar este guia para sua equipe para ajudar a garantir um entendimento comum dessas considerações e oportunidades. Quando todas as pessoas trabalham com um conjunto comum de terminologia e de princípios subjacentes é mais fácil garantir a aplicação consistente dos padrões e das práticas de arquitetura.
 

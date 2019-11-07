@@ -2,12 +2,12 @@
 title: Implementando leituras/consultas em um microsserviço CQRS
 description: Arquitetura de Microsserviços do .NET para aplicativos .NET em contêineres | Entenda a implementação do lado de consultas do CQRS no microsserviço de ordenação no eShopOnContainers usando o Dapper.
 ms.date: 10/08/2018
-ms.openlocfilehash: 6541a0cb7ce8ac3946e119483308d91158bdb522
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 064abd084ea6b99229f995f8ca899a99b69b7bc2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094062"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740032"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>Implementando leituras/consultas em um microsserviço CQRS
 
@@ -15,15 +15,15 @@ Para leituras/consultas, o microsserviço de ordenação do aplicativo de refer�
 
 A abordagem é simples, conforme mostra a Figura 7-3. A interface de API é implementada pelos controladores de API da Web usando qualquer infraestrutura, como um micro ORM (Mapeador Relacional de Objeto) como Dapper e retornando ViewModels dinâmicos dependendo das necessidades dos aplicativos de interface do usuário.
 
-![A abordagem mais simples para o lado de consultas em uma abordagem CQRS simplificada pode ser implementada consultando apenas o banco de dados com um Micro-ORM, como o Dapper, retornando ViewModels dinâmicos.](./media/image3.png)
+![Diagrama mostrando consultas de alto nível no CQRS simplificado.](./media/cqrs-microservice-reads/simple-approach-cqrs-queries.png)
 
 **Figura 7-3**. A abordagem mais simples para consultas em um microsserviço CQRS
 
-Essa é a abordagem mais simples possível para consultas. As definições de consulta consultam o banco de dados e retornam um ViewModel dinâmico criado dinamicamente para cada consulta. Uma vez que as consultas são idempotentes, elas não alteram os dados, não importa quantas vezes você execute uma consulta. Portanto, você não precisa estar restrito por nenhum padrão DDD usado no lado do transacional, como agregações e outros padrões, e é por isso que as consultas são separadas da área de trabalho transacional. Você simplesmente consulta o banco de dados para os dados de que a interface do usuário precisa e retorna um ViewModel dinâmico que não precisa ser estaticamente definido em nenhum lugar (nenhuma classe para os ViewModels), exceto nas próprias instruções SQL.
+A abordagem mais simples para o lado de consultas em uma abordagem CQRS simplificada pode ser implementada consultando apenas o banco de dados com um Micro-ORM, como o Dapper, retornando ViewModels dinâmicos. As definições de consulta consultam o banco de dados e retornam um ViewModel dinâmico criado dinamicamente para cada consulta. Uma vez que as consultas são idempotentes, elas não alteram os dados, não importa quantas vezes você execute uma consulta. Portanto, você não precisa estar restrito por nenhum padrão DDD usado no lado do transacional, como agregações e outros padrões, e é por isso que as consultas são separadas da área de trabalho transacional. Você simplesmente consulta o banco de dados para os dados de que a interface do usuário precisa e retorna um ViewModel dinâmico que não precisa ser estaticamente definido em nenhum lugar (nenhuma classe para os ViewModels), exceto nas próprias instruções SQL.
 
 Como essa é uma abordagem simples, o código necessário para o lado de consultas (como o código usando um micro ORM como [Dapper](https://github.com/StackExchange/Dapper)) pode ser implementado [dentro do mesmo projeto de API da Web](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/Queries/OrderQueries.cs). A Figura 7-4 mostra isso. As consultas são definidas no projeto de microsserviço **Ordering.API** dentro da solução eShopOnContainers.
 
-![Exibição do Gerenciador de Soluções do projeto Ordering.API, que mostra a pasta Aplicativo > Consultas.](./media/image4.png)
+![Captura de tela do da pasta de consultas do projeto de ordenação. API.](./media/cqrs-microservice-reads/ordering-api-queries-folder.png)
 
 **Figura 7-4**. Consultas no microsserviço de Ordenação em eShopOnContainers
 
@@ -41,7 +41,7 @@ Você pode usar qualquer micro ORM, Entity Framework Core ou até mesmo ADO.NET 
 
 O Dapper é um projeto de software livre (original criado por Sam Saffron) e faz parte dos blocos de construção usado no [Stack Overflow](https://stackoverflow.com/). Para usar o Dapper, basta instalá-lo por meio do [pacote Dapper NuGet](https://www.nuget.org/packages/Dapper), conforme mostra a figura a seguir:
 
-![O pacote Dapper, como exibido na exibição de gerenciar pacotes NuGet no VS.](./media/image4.1.png)
+![Captura de tela do pacote Dapper na exibição de pacotes NuGet.](./media/cqrs-microservice-reads/drapper-package-nuget.png)
 
 Você também precisa adicionar uma instrução de uso para que seu código tenha acesso aos métodos de extensão Dapper.
 
@@ -177,7 +177,7 @@ Essa é outra razão pela qual tipos retornados explícitos são melhores que ti
 
 Na imagem a seguir, você pode ver como a interface do usuário Swagger mostra as informações de ResponseType.
 
-![Exibição de navegador da página da interface do usuário do Swagger para a API de ordenação.](./media/image5.png)
+![Captura de tela da página da interface do usuário do Swagger para a API de ordenação.](./media/cqrs-microservice-reads/swagger-ordering-http-api.png)
 
 **Figura 7-5**. Interface do usuário do Swagger mostrando os tipos de resposta e possíveis códigos de status HTTP de uma API da Web
 

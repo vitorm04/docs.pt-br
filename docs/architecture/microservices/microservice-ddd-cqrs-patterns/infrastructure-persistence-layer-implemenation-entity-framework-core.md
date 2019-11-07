@@ -2,12 +2,12 @@
 title: Implementando a camada de persistência da infraestrutura com o Entity Framework Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explore os detalhes de implementação para a camada de persistência da infraestrutura usando o Entity Framework Core.
 ms.date: 10/08/2018
-ms.openlocfilehash: 7e3480999b115ac13f8d7ebcaed826b407aa7637
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: b70ede6b47cbf990d0435aef841416c68f6439b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674093"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737900"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementar a camada de persistência de infraestrutura com o Entity Framework Core
 
@@ -174,11 +174,11 @@ No entanto, a implementação de repositórios personalizados oferece vários be
 
 Na Figura 7-18, veja as diferenças entre não usar repositórios (usando diretamente o DbContext do EF) e usar repositórios, o que facilita a simulação desses repositórios.
 
-![Comparação entre o uso de um repositório personalizado e um DbContext simples: o repositório personalizado adiciona uma camada de abstração que pode ser usada para facilitar o teste simulando o repositório.](./media/image19.png)
+![Diagrama mostrando os componentes e Dataflow nos dois repositórios.](./media/infrastructure-persistence-layer-implemenation-entity-framework-core/custom-repo-versus-db-context.png)
 
 **Figura 7-18**. Usando repositórios personalizados em vez de um DbContext simples
 
-Existem várias alternativas para simulação. Você pode simular apenas repositórios ou simular toda a unidade de trabalho. Geralmente, simular apenas os repositórios já é suficiente e a complexidade de abstrair e simular toda a unidade de trabalho, normalmente, não é necessária.
+A Figura 7-18 mostra que o uso de um repositório personalizado adiciona uma camada de abstração que pode ser usada para facilitar o teste, simulando o repositório. Existem várias alternativas para simulação. Você pode simular apenas repositórios ou simular toda a unidade de trabalho. Geralmente, simular apenas os repositórios já é suficiente e a complexidade de abstrair e simular toda a unidade de trabalho, normalmente, não é necessária.
 
 Mais adiante, quando nos concentramos na camada de aplicativo, você verá como funciona a injeção de dependência no ASP.NET Core e como ela é implementada ao usar repositórios.
 
@@ -235,10 +235,10 @@ Observe que usar o tempo de vida singleton para o repositório poderá causar pr
 - **Implementando os padrões de repositório e de unidade de trabalho em um aplicativo ASP.NET MVC** \
   <https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application>
 
-- **Jonathan Allen. Estratégias de implementação para o padrão de repositório com o Entity Framework, o Dapper e o Chain** \
+- **Jonathan Allen. Estratégias de implementação para o padrão de repositório com Entity Framework, Dapper e cadeia** \
   <https://www.infoq.com/articles/repository-implementation-strategies>
 
-- **Cesar de la Torre. Comparando os tempos de vida do serviço de contêiner de IoC do ASP.NET Core com os escopos de instância de contêiner de IoC do Autofac** \
+- **Cesar de la Torre. Comparando ASP.NET Core tempos de vida do serviço de contêiner IoC com escopos de instância de contêiner Autofac IoC** \
   <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="table-mapping"></a>Mapeamento de tabela

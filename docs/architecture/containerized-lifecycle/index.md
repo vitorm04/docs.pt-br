@@ -2,16 +2,16 @@
 title: Introdução aos contêineres e ao Docker
 description: Obtenha uma visão geral de alto nível dos principais benefícios de usar o Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: a03c67ed4fbc55c84e69fba5b7978863c8305e00
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 9ac08a64cd2465b4b88a266c1ec0925f37680bf9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70295668"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738180"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Introdução aos contêineres e ao Docker
 
-*O transporte em contêineres é uma abordagem de desenvolvimento de software na qual um aplicativo ou serviço, suas dependências e sua configuração (abstraídos como arquivos de manifesto de implantação) são empacotados juntos como uma imagem de contêiner. Você poderá, então, testar o aplicativo em contêineres como uma unidade e implantá-lo como uma instância de imagem de contêiner no sistema operacional do host.*
+*A Containerização é uma abordagem para o desenvolvimento de software no qual um aplicativo ou serviço, suas dependências e sua configuração (abstratas como arquivos de manifesto de implantação) são empacotados juntos como uma imagem de contêiner. Em seguida, você pode testar o aplicativo em contêiner como uma unidade e implantá-lo como uma instância de imagem de contêiner no sistema operacional do host (SO).*
 
 Assim como os contêineres de remessa permitem que as mercadorias sejam transportadas por navio, trem ou caminhão, independentemente da carga que contenham, os contêineres de implantação de software agem como uma unidade de software padrão que pode conter diferentes dependências e códigos. Inserir o software em contêineres dessa maneira permite que desenvolvedores e profissionais de TI os implantem em diferentes ambientes com pouca ou sem nenhuma modificação.
 
@@ -19,7 +19,7 @@ Os contêineres também isolam os aplicativos uns dos outros em um sistema opera
 
 Cada contêiner pode executar um aplicativo Web ou um serviço inteiro, conforme mostrado na Figura 1-1. Neste exemplo, o host do Docker é um host de contêiner e App1, App2, Svc1 e Svc2 são aplicativos ou serviços em contêineres.
 
-![Dois aplicativos e dois serviços em execução no sistema operacional em uma VM ou em um servidor físico](./media/image1.png)
+![Diagrama mostrando quatro contêineres em execução em uma VM ou um servidor.](./media/index/multiple-containers-single-host.png)
 
 **Figura 1-1**. Vários contêineres em execução em um host de contêiner
 

@@ -2,12 +2,12 @@
 title: Criando um modelo de domínio de microsserviço
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda os principais conceitos ao projetar um modelo de domínio orientado a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: c6d2e84189ff542a2ed4c584c4a47bf7bf0e946a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68676443"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737475"
 ---
 # <a name="design-a-microservice-domain-model"></a>Projetar um modelo de domínio de microsserviço
 
@@ -31,11 +31,11 @@ Uma entidade de domínio no DDD precisa implementar a lógica do domínio ou o c
 
 A Figura 7-8 mostra uma entidade de domínio que, além de implementar os atributos de dados, também implementa as operações ou os métodos com a lógica de domínio relacionada.
 
-![Uma entidade de modelo de domínio implementa comportamentos por meio de métodos, ou seja, não é um modelo "anêmico".](./media/image9.png)
+![Diagrama mostrando o padrão de uma entidade de domínio.](./media/microservice-domain-model/domain-entity-pattern.png)
 
 **Figura 7-8**. Exemplo de um projeto de entidade de domínio implementando dados e também comportamento
 
-Obviamente, também é possível haver entidades que não implementam nenhuma lógica como parte da classe da entidade. Isso poderá ocorrer em entidades filhas dentro de uma agregação se a entidade filha não tiver nenhuma lógica especial porque a maioria da lógica está definida na raiz da agregação. Se houver um microsserviço complexo com muita lógica implementada em classes de serviço e não nas entidades de domínio, você poderá cair no modelo de domínio anêmico, que será explicado na próxima seção.
+Uma entidade de modelo de domínio implementa comportamentos por meio de métodos, ou seja, não é um modelo "anêmico". Obviamente, também é possível haver entidades que não implementam nenhuma lógica como parte da classe da entidade. Isso poderá ocorrer em entidades filhas dentro de uma agregação se a entidade filha não tiver nenhuma lógica especial porque a maioria da lógica está definida na raiz da agregação. Se houver um microsserviço complexo com muita lógica implementada em classes de serviço e não nas entidades de domínio, você poderá cair no modelo de domínio anêmico, que será explicado na próxima seção.
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>Modelo de domínio avançado em comparação com o modelo de domínio anêmico
 
@@ -55,7 +55,7 @@ Algumas pessoas dizem que o modelo de domínio anêmico é um antipadrão. Isso 
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **DevIQ. Entidade de domínio** \
+- **DevIQ.**  \ de entidade de domínio
   <https://deviq.com/entity/>
 
 - **Martin Fowler. O modelo de domínio** \
@@ -89,7 +89,7 @@ O EF Core 2.0 inclui o recurso [Entidades de Propriedade](https://devblogs.micro
 - **Objetos de valor no Desenvolvimento Orientado por Testes** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
-- **Eric Evans. Design orientado por domínio: Lidando com a complexidade no núcleo do software.** (Livro; inclui uma discussão sobre objetos de valor) \
+- **Eric Evans. Design controlado por domínio: solução de complexidade no coração do software.** (Livro; inclui uma discussão sobre objetos de valor) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>O padrão de agregação
@@ -108,11 +108,11 @@ A finalidade de uma raiz de agregação é garantir a consistência da agregaç�
 
 Na Figura 7-9, veja as agregações de exemplo, como a agregação de comprador, que contém uma única entidade (a raiz de agregação de comprador). A agregação de pedido contém várias entidades e um objeto de valor.
 
-![Um modelo de domínio de DDD é composto por agregações, uma agregação pode ter uma única entidade ou mais e pode incluir também objetos de valor.](./media/image10.png)
+![Diagrama comparando uma agregação de comprador e uma agregação de ordem.](./media/microservice-domain-model/buyer-order-aggregate-pattern.png)
 
 **Figura 7-9**. Exemplo de agregações com uma única entidade ou com várias entidades
 
-Observe que a agregação de comprador poderá ter entidades filhas adicionais, dependendo do domínio, como ocorre no microsserviço de pedidos no aplicativo eShopOnContainers de referência. A Figura 7-9 apenas ilustra um caso em que o comprador tem uma única entidade, como exemplo de uma agregação que contém somente uma raiz de agregação.
+Um modelo de domínio de DDD é composto por agregações, uma agregação pode ter uma única entidade ou mais e pode incluir também objetos de valor. Observe que a agregação de comprador poderá ter entidades filhas adicionais, dependendo do domínio, como ocorre no microsserviço de pedidos no aplicativo eShopOnContainers de referência. A Figura 7-9 apenas ilustra um caso em que o comprador tem uma única entidade, como exemplo de uma agregação que contém somente uma raiz de agregação.
 
 Para manter a separação de agregações e manter limites claros entre elas, uma prática recomendada em um modelo de domínio de DDD é não permitir a navegação direta entre as agregações e ter apenas o campo de FK (chave estrangeira), como foi implementado no [Modelo de domínio do microsserviço de pedidos](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) no eShopOnContainers. A entidade de pedido tem apenas um campo FK para o comprador, mas não uma propriedade de navegação do EF Core, conforme é mostrado no código a seguir:
 
@@ -133,22 +133,22 @@ Para identificar e trabalhar com agregações é necessário fazer pesquisas e t
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Vaughn Vernon. Design de agregação efetivo – parte I: Modelando uma única agregação** (de <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Design agregado efetivo-parte I: modelando uma única agregação** (de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon. Design de agregação efetivo – parte II: Fazendo com que agregações trabalhem em conjunto** (de <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Design agregado efetivo-parte II: fazer com que as agregações funcionem juntas** (de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon. Design de agregação efetivo – parte III: Obtendo insights por meio da descoberta** (de <http://dddcommunity.org/>) \
+- **Vaughn Vernon. Design agregado efetivo-parte III: obtendo informações sobre a descoberta** (de <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
-- **Sergey Grybniak. Padrões de design tático em DDD** \
+- **Sergey Grybniak. Padrões de design tático DDD** \
   <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
-- **Chris Richardson. Desenvolvendo microsserviços transacionais usando agregações** \
+- **Chris Richardson. Desenvolvendo um microserviço transacional usando agregações** \
   <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
-- **DevIQ. O padrão de agregação** \
+- **DevIQ. O padrão agregado** \
   <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]

@@ -2,12 +2,12 @@
 title: Testar serviços e aplicativos Web do ASP.NET Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explorar uma arquitetura para testar serviços e aplicativos Web do ASP.NET Core em contêineres.
 ms.date: 10/02/2018
-ms.openlocfilehash: 278d12b8215195351673a41149db5af6fcecddfb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 324b71d830bca43be71e8847fe2dd1b8b1593556
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772025"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739485"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
@@ -144,7 +144,7 @@ Os testes do aplicativo (eShopOnContainers) de referência foram recentemente re
 
 Os testes de unidade e de integração por microsserviço estão contidos em uma pasta de teste em cada microsserviço e o testes de carga e de aplicativo estão contidos na pasta teste da pasta da solução, conforme mostrado na Figura 6-25.
 
-![Estrutura de testes no eShopOnContainers: cada serviço tem uma pasta "teste" que inclui testes de unidade e funcionais. Na pasta "teste" da solução estão os testes funcionais de todo o aplicativo e o teste de carga.](./media/image42.png)
+![Captura de tela do VS apontando alguns dos projetos de teste na solução.](./media/test-aspnet-core-services-web-apps/eshoponcontainers-test-folder-structure.png)
 
 **Figura 6-25**. Estrutura da pastas de teste em eShopOnContainers
 

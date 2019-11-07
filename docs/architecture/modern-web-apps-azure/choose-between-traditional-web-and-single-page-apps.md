@@ -4,16 +4,16 @@ description: Saiba como escolher entre aplicativos Web tradicionais e SPAs (apli
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: d68c167dce791a31eeb5ca5729b50ec22c64f9b0
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: 9ede64249705aba3f22a9663b8a258e41f030aca
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675473"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739447"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Escolher entre aplicativos Web tradicionais e SPAs (aplicativos de página única)
 
-> "Lei de Atwood: qualquer aplicativo que possa ser escrito em JavaScript será, em última análise, escrito em JavaScript."  
+> "Lei de Atwood: qualquer aplicativo que pode ser escrito em JavaScript será, em última análise, escrito em JavaScript."  
 > _\- Jeff Atwood_
 
 Há duas abordagens gerais para a criação de aplicativos Web hoje: os aplicativos Web tradicionais que executam a maior parte da lógica do aplicativo no servidor e os SPAs (aplicativos de página única) que executam a maior parte da lógica da interface do usuário em um navegador da Web, comunicando-se com o servidor Web principalmente por meio de APIs Web. Uma abordagem híbrida também é possível, e a mais simples é hospedar um ou mais subaplicativos avançados semelhantes ao SPA dentro de um aplicativo Web tradicional maior.
@@ -40,7 +40,7 @@ As melhorias na experiência do usuário possibilitadas pelo modelo do SPA devem
 
 ## <a name="blazor"></a>Blazor
 
-O ASP.NET Core 3.0 apresenta um novo modelo para a criação de uma interface do usuário sofisticada, interativa e combinável chamado Blazor. O Blazor permite que os desenvolvedores criem uma interface do usuário com o Razor no servidor e que esse código seja entregue ao navegador e executado no lado do cliente usando uma biblioteca JavaScript chamada WebAssembly. O ASP.NET Core 3.0 ainda está em desenvolvimento, mas aguarde mais informações sobre essa tecnologia na atualização 3.0 deste livro eletrônico. Para saber mais sobre o Blazor, confira a [Introdução ao Blazor](https://blazor.net/docs/get-started.html).
+O ASP.NET Core 3.0 apresenta um novo modelo para a criação de uma interface do usuário sofisticada, interativa e combinável chamado Blazor. O lado do servidor mais incrivelmente permite que os desenvolvedores criem interface do usuário com o Razor no servidor e que esse código seja entregue ao navegador e executado no lado do cliente usando o [Webassembly](https://webassembly.org/). O ASP.NET Core 3.0 ainda está em desenvolvimento, mas aguarde mais informações sobre essa tecnologia na atualização 3.0 deste livro eletrônico. Para saber mais sobre o Blazor, confira a [Introdução ao Blazor](https://blazor.net/docs/get-started.html).
 
 ## <a name="when-to-choose-traditional-web-apps"></a>Quando escolher aplicativos Web tradicionais
 

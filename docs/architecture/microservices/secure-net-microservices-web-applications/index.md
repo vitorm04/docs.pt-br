@@ -4,12 +4,12 @@ description: Segurança nos Microsserviços do .NET e aplicativos Web – Conhe�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: f405b4199e8239e86c4799a649c3d87811d99828
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72798849"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736970"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>Proteger microsserviços .NET e aplicativos Web
 
@@ -21,15 +21,17 @@ Geralmente é necessário que os recursos e as APIs publicados por um serviço s
 
 Em cenários de microsserviço, normalmente a autenticação é manipulada centralmente. Se você estiver usando um Gateway de API, o gateway será um bom lugar para fazer a autenticação, conforme é mostrado na Figura 9-1. Se você usar esta abordagem, verifique se os microsserviços individuais não podem ser acessados diretamente (sem o Gateway de API), a não ser que haja uma segurança adicional em vigor para autenticar mensagens que entram ou não pelo gateway.
 
-![Quando o Gateway de API centraliza a autenticação, ele adiciona informações do usuário ao encaminhar solicitações para os microsserviços.](./media/image1.png)
+![Diagrama mostrando como o aplicativo móvel cliente interage com o back-end.](./media/index/api-gateway-centralized-authentication.png)
 
 **Figura 9-1**. Autenticação centralizada com um Gateway de API
 
-Se os serviços puderem ser acessados diretamente, um serviço de autenticação como o Azure Active Directory ou um microsserviço de autenticação dedicado agindo como um STS (serviço de token de segurança) poderá ser usado para autenticar os usuários. As decisões de confiança são compartilhadas entre os serviços com tokens de segurança ou cookies. (Esses tokens podem ser compartilhados entre ASP.NET Core aplicativos, se necessário, implementando o [compartilhamento de cookies](/aspnet/core/security/cookie-sharing).) Esse padrão é ilustrado na Figura 9-2.
+Quando o Gateway de API centraliza a autenticação, ele adiciona informações do usuário ao encaminhar solicitações para os microsserviços. Se os serviços puderem ser acessados diretamente, um serviço de autenticação como o Azure Active Directory ou um microsserviço de autenticação dedicado agindo como um STS (serviço de token de segurança) poderá ser usado para autenticar os usuários. As decisões de confiança são compartilhadas entre os serviços com tokens de segurança ou cookies. (Esses tokens podem ser compartilhados entre ASP.NET Core aplicativos, se necessário, implementando o [compartilhamento de cookies](/aspnet/core/security/cookie-sharing).) Esse padrão é ilustrado na Figura 9-2.
 
-![Quando os microservices são acessados diretamente, a confiança, que inclui autenticação e autorização, é tratada por um token de segurança emitido por um Microservice dedicado, compartilhado entre os microserviços.](./media/image2.png)
+![Diagrama mostrando a autenticação por meio de microserviços de back-end.](./media/index/identity-microservice-authentication.png)
 
 **Figura 9-2**. Autenticação por microsserviço de identidade; a confiança é compartilhada usando um token de autorização
+
+Quando os microsserviços são acessados diretamente, a confiança, que inclui autenticação e autorização, é tratada por um token de segurança emitido por um microsserviço dedicado, compartilhado entre os microsserviços.
 
 ### <a name="authenticate-with-aspnet-core-identity"></a>Autenticar usando o ASP.NET Core Identity
 
@@ -121,7 +123,7 @@ else
 
 Se você escolher a opção de autenticação **Conta de Usuário Individual** ao criar o projeto de aplicativo Web do ASP.NET Code no Visual Studio, todo o código necessário para entrar com um provedor externo já estará no projeto, conforme mostrado na Figura 9-3.
 
-![Caixa de diálogo para o novo aplicativo Web do ASP.NET Core, realçando o botão para alterar a autenticação.](./media/image3.png)
+![Captura de tela da caixa de diálogo novo ASP.NET Core aplicativo Web.](./media/index/select-external-authentication-option.png)
 
 **Figura 9-3**. Selecionando uma opção para usar a autenticação externa ao criar um projeto de aplicativo Web
 

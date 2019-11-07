@@ -2,12 +2,12 @@
 title: Comunicação em uma arquitetura de microsserviço
 description: Explore diferentes maneiras de comunicação entre microsserviços, compreendendo as implicações de maneiras síncronas e assíncronas.
 ms.date: 09/20/2018
-ms.openlocfilehash: 25d99d3d9b00b8c20c5ded6d8b40c77fcbe0eb46
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: add1ff74bee456e0fa7f2fb54d2cf4e536402db4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68673293"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738051"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicação em uma arquitetura de microsserviço
 
@@ -51,9 +51,11 @@ Além disso, as dependências de HTTP entre os microsserviços, como ao criar lo
 
 Quanto mais você adicionar dependências síncronas entre os microsserviços, como solicitações de consulta, pior será o tempo de resposta geral para os aplicativos clientes.
 
-![Na comunicação síncrona, uma “cadeia” de solicitações é criada entre microsserviços ao atender à solicitação do cliente. Isso é um antipadrão. Em microsserviços de comunicação assíncrona, use mensagens assíncronas ou a sondagem http para se comunicar com outros microsserviços, mas a solicitação do cliente é atendida imediatamente.](./media/image15.png)
+![Diagrama mostrando três tipos de comunicação entre os microserviços.](./media/communication-in-microservice-architecture/sync-vs-async-patterns-across-microservices.png)
 
 **Figura 4-15**. Antipadrões e padrões na comunicação entre microsserviços
+
+Conforme mostrado no diagrama acima, na comunicação síncrona, uma "cadeia" de solicitações é criada entre os microserviços enquanto atende à solicitação do cliente. Isso é um antipadrão. Em microsserviços de comunicação assíncrona, use mensagens assíncronas ou a sondagem http para se comunicar com outros microsserviços, mas a solicitação do cliente é atendida imediatamente.
 
 Se seu microsserviço precisar gerar uma ação adicional em outro microsserviço, se possível, não execute essa ação de forma síncrona e como parte da operação original de solicitação e resposta do microsserviço. Nesse caso, faça isso de forma assíncrona (usando o serviço de mensagens assíncrono ou eventos de integração, filas, etc.). No entanto, tanto quanto possível, não invoque a ação de forma síncrona como parte da operação de solicitação e resposta síncrona original.
 
@@ -75,7 +77,7 @@ Também há vários formatos de mensagem como JSON ou XML, ou até mesmo formato
 
 Quando um cliente usa a comunicação de solicitação/resposta, ele envia uma solicitação para um serviço e, em seguida, o serviço processa a solicitação e retorna uma resposta. A comunicação de solicitação/resposta é muito adequada principalmente para consultar dados de uma interface do usuário em tempo real (uma interface do usuário em tempo real) dos aplicativos clientes. Portanto, em uma arquitetura de microsserviço provavelmente você usará esse mecanismo de comunicação para a maioria das consultas, conforme mostrado na Figura 4-16.
 
-![É possível usar a comunicação de solicitação/resposta para consultas ao vivo quando o cliente envia a solicitação a um Gateway de API, supondo que a resposta de microsserviços chegará em um período muito curto.](./media/image16.png)
+![Diagrama mostrando os comentários de solicitação/resposta para consultas ao vivo e atualizações.](./media/communication-in-microservice-architecture/request-response-comms-live-queries-updates.png)
 
 **Figura 4-16**. Usando a comunicação de solicitação/resposta HTTP (síncrona ou assíncrona)
 
@@ -99,11 +101,11 @@ Outra possibilidade (geralmente para finalidades diferentes do REST) é uma comu
 
 Como mostra a Figura 4-17, a comunicação HTTP em tempo real significa que o código do servidor pode enviar conteúdo por push para os clientes conectados à medida que os dados ficam disponíveis, ou seja, o servidor não precisa esperar que um cliente solicite novos dados.
 
-![O SignalR é uma boa maneira de atingir a comunicação em tempo real para enviar por push o conteúdo para os clientes de um servidor de back-end.](./media/image17.png)
+![Diagrama mostrando os comentários de push e em tempo real com base no Signalr.](./media/communication-in-microservice-architecture/one-to-many-communication.png)
 
 **Figura 4-17**. Comunicação de mensagem assíncrona de um-para-um em tempo real
 
-Como a comunicação ocorre em tempo real, os aplicativos clientes mostram as alterações quase instantaneamente. Geralmente, isso é tratado por um protocolo como WebSockets, usando várias conexões de WebSocket (uma por cliente). Um exemplo típico é quando um serviço comunica uma alteração na pontuação de um jogo de esportes para vários aplicativos Web clientes simultaneamente.
+Signalr é uma boa maneira de obter comunicação em tempo real para enviar conteúdo aos clientes de um servidor back-end. Como a comunicação está em tempo real, os aplicativos cliente mostram as alterações quase instantaneamente. Geralmente, isso é tratado por um protocolo como WebSockets, usando várias conexões de WebSocket (uma por cliente). Um exemplo típico é quando um serviço comunica uma alteração na pontuação de um jogo de esportes para vários aplicativos Web clientes simultaneamente.
 
 >[!div class="step-by-step"]
 >[Anterior](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

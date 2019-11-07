@@ -2,12 +2,12 @@
 title: Projetando a camada de persistência da infraestrutura
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Explore o padrão de repositório no design da camada de persistência da infraestrutura.
 ms.date: 10/08/2018
-ms.openlocfilehash: 76f545403a1b595ce7a541a96d212b9406d89c10
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
-ms.translationtype: HT
+ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674113"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737927"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>Projetar a camada de persistência da infraestrutura
 
@@ -33,9 +33,11 @@ Se o usuário fizer alterações, os dados a serem atualizados virão da camada 
 
 É importante enfatizar novamente que você deve definir apenas um repositório para cada raiz de agregação, conforme mostrado na Figura 7-17. Para atingir a meta da raiz de agregação de manter a consistência transacional entre todos os objetos na agregação, você nunca deve criar um repositório para cada tabela no banco de dados.
 
-![Relações entre as camadas de domínio e de infraestrutura: A Agregação de Comprador depende de IBuyerRepository e a Agregação de Pedido depende das interfaces IOrderRepository; essas interfaces são implementadas na camada de infraestrutura pelos repositórios correspondentes que dependem de UnitOfWork, também implementados nela, que acessam as tabelas na camada de dados.](./media/image18.png)
+![Diagrama mostrando relações de domínio e outra infraestrutura.](./media/infrastructure-persistence-layer-design/repository-aggregate-database-table-relationships.png)
 
 **Figura 7-17**. A relação entre repositórios, agregações e tabelas de banco de dados
+
+O diagrama acima mostra as relações entre as camadas de infraestrutura e de domínio: o comprador agregado depende do IBuyerRepository e a agregação de ordem depende das interfaces IOrderRepository, essas interfaces são implementadas na camada de infraestrutura pelos repositórios correspondentes que dependem de UnitOfWork, também implementados ali, que acessam as tabelas na camada de dados.
 
 ### <a name="enforce-one-aggregate-root-per-repository"></a>Impor uma raiz de agregação por repositório
 
@@ -111,18 +113,18 @@ Os repositórios podem ser úteis, mas eles não são críticos para o design DD
 - **O Padrão de Repositório** \
   <https://deviq.com/repository-pattern/>
 
-- **Edward Hieatt e Rob Mee. Padrão de Repositório.** \
+- **Edward Hieatt e Rob me. Padrão de repositório.** \
   <https://martinfowler.com/eaaCatalog/repository.html>
 
 - **O Padrão de Repositório** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)>
 
-- **Eric Evans. Design orientado por domínio: Lidando com a complexidade no núcleo do software.** (Livro; inclui uma discussão sobre o padrão de Repositório) \
+- **Eric Evans. Design controlado por domínio: solução de complexidade no coração do software.** (Livro; inclui uma discussão sobre o padrão de Repositório) \
   <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="unit-of-work-pattern"></a>Padrão de unidade de trabalho
 
-- **Martin Fowler. Padrão de Unidade de Trabalho.** \
+- **Martin Fowler. Padrão de unidade de trabalho.** \
   <https://martinfowler.com/eaaCatalog/unitOfWork.html>
 
 - **Implementando os padrões de repositório e de unidade de trabalho em um aplicativo ASP.NET MVC** \

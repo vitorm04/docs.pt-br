@@ -2,12 +2,12 @@
 title: Projetando um aplicativo orientado a microsserviços
 description: Arquitetura de Microsserviços .NET para aplicativos .NET em contêineres | Entenda os benefícios e as desvantagens de um aplicativo orientado a microsserviços, para que você possa tomar uma decisão informada.
 ms.date: 10/02/2018
-ms.openlocfilehash: 1c2fe341c62111e915df35aab818b8a980004834
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: a783d582f39d25be0123f410553a54af970a4f67
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772054"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739553"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projetando um aplicativo orientado a microsserviços
 
@@ -65,9 +65,11 @@ Para que você possa se concentrar na arquitetura e nas tecnologias, em vez de p
 
 O aplicativo consiste em vários subsistemas, incluindo vários front-ends de interface do usuário da loja (um aplicativo Web e um aplicativo móvel nativo), juntamente com os microsserviços e contêineres de back-end para todas as operações necessárias do lado do servidor com vários Gateways de API como pontos de entrada consolidados para os microsserviços internos. A figura 6-1 mostra a arquitetura do aplicativo de referência.
 
-![Clientes móveis e SPA se comunicam com pontos de extremidade de gateway de API única que se comunicam com os microserviços. Os clientes Web tradicionais se comunicam com o microserviço MVC, que se comunica com os microserviços](./media/image1.png)
+![Diagrama de aplicativos cliente usando eShopOnContainers em um único host do Docker.](./media/microservice-application-design/eshoponcontainers-reference-application-architecture.png)
 
 **Figura 6-1**. A arquitetura do aplicativo de referência eShopOnContainers para o ambiente de desenvolvimento
+
+O diagrama acima mostra que os clientes móveis e SPA se comunicam com pontos de extremidade de gateway de API única, que se comunicam com os microservices. Os clientes Web tradicionais se comunicam com o microserviço MVC, que se comunica com os microserviços por meio do gateway de API.
 
 **Ambiente de hospedagem**. Na Figura 6-1, você vê vários contêineres implantados em um único host do Docker. Esse seria o caso ao implantar em um único host do Docker com o comando docker-compose up. No entanto, se você estiver usar um orquestrador ou cluster de contêineres, cada contêiner poderá ser executado em um host (nó) diferente, e qualquer nó poderá ser executado em qualquer número de contêineres, como explicado anteriormente na seção sobre arquitetura.
 
@@ -140,7 +142,7 @@ Conforme mencionado na seção de arquitetura, ao projetar e criar um aplicativo
 
 A arquitetura externa é a arquitetura de microsserviço composta por vários serviços, de acordo com os princípios descritos na seção de arquitetura deste guia. No entanto, dependendo da natureza de cada microsserviço e, independentemente da arquitetura de microsserviço de alto nível que você escolhe, é comum e muitas vezes aconselhável, ter arquiteturas internas distintas para os diferentes microsserviços, cada qual baseada em padrões diferentes. Os microsserviços podem até usar tecnologias e linguagens de programação diferentes. A figura 6-2 ilustra essa diversidade.
 
-![Diferença entre arquitetura externa: padrões de microsserviço, gateways de API, comunicação resilientes, pub/sub etc. e a arquitetura interna: controlado por dados/CRUD, padrões de DDD, injeção de dependência, várias bibliotecas etc.](./media/image2.png)
+![Diagrama comparando padrões de arquitetura externa e interna.](./media/microservice-application-design/external-versus-internal-architecture.png)
 
 **Figura 6-2**. Arquitetura e design externos versus internos
 
@@ -170,11 +172,11 @@ Você também pode criar microsserviços com várias tecnologias e linguagens, c
 
 O ponto importante é que não há um padrão de arquitetura ou estilo específico nem qualquer tecnologia em particular que seja ideal para todas as situações. A figura 6-3 mostra algumas abordagens e tecnologias (embora não estejam em nenhuma ordem específica) que podem ser usadas em microsserviços diferentes.
 
-![Os microsserviços poliglotas e de padrão de várias arquiteturas significam que você pode combinar linguagens e tecnologias com as necessidades de cada microsserviço e ainda fazer com que eles conversem entre si.](./media/image3.png)
+![Diagrama mostrando 12 microserviços complexos em uma arquitetura poliglota World.](./media/microservice-application-design/multi-architectural-patterns-polyglot-microservices.png)
 
 **Figura 6-3**. Padrões de várias arquitetura e o mundo de microsserviços poliglotas
 
-Conforme mostrado na Figura 6-3, em aplicativos compostos de muitos microsserviços (de contextos delimitados, na terminologia de design controlado por domínio ou simplesmente "subsistemas", como microsserviços autônomos), você pode implementar cada microsserviço de maneira diferente. Cada um pode ter um padrão de arquitetura diferente e usar linguagens e bancos de dados diferentes, dependendo da natureza, dos requisitos empresariais e das prioridades do aplicativo. Em alguns casos, o microsserviços podem ser semelhantes. Mas, geralmente, esse não é o caso, porque o limite de contexto e os requisitos de cada subsistema costumam ser diferentes.
+Os microsserviços poliglotas e de padrão de várias arquiteturas significam que você pode combinar linguagens e tecnologias com as necessidades de cada microsserviço e ainda fazer com que eles conversem entre si. Conforme mostrado na Figura 6-3, em aplicativos compostos de muitos microsserviços (de contextos delimitados, na terminologia de design controlado por domínio ou simplesmente "subsistemas", como microsserviços autônomos), você pode implementar cada microsserviço de maneira diferente. Cada um pode ter um padrão de arquitetura diferente e usar linguagens e bancos de dados diferentes, dependendo da natureza, dos requisitos empresariais e das prioridades do aplicativo. Em alguns casos, o microsserviços podem ser semelhantes. Mas, geralmente, esse não é o caso, porque o limite de contexto e os requisitos de cada subsistema costumam ser diferentes.
 
 Por exemplo, em um aplicativo CRUD simples de manutenção, não faz sentido projetar e implementar padrões de DDD. Mas, para seu negócio principal ou domínio principal, é interessante aplicar padrões mais avançados para lidar com a complexidade dos negócios e com as regras de negócio em constante mudança.
 

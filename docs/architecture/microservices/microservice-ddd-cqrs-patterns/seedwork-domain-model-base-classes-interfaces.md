@@ -2,12 +2,12 @@
 title: Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Use o conceito de seedwork como ponto de partida para iniciar a implementação para um modelo de domínio orientado para DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: 87cbc5ce96b66a9ac3e1c2bfc8c863d1b20714db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093798"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737223"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (classes e interfaces base reutilizáveis para seu modelo de domínio)
 
@@ -15,7 +15,9 @@ A pasta de solução contém uma pasta *SeedWork*. Essa pasta contém classes ba
 
 A figura 7-12 mostra as classes que formam o seedwork do modelo de domínio no microsserviço de ordenação. Ele tem algumas classes base personalizadas como Entity, ValueObject e Enumeration, além de algumas interfaces. Essas interfaces (IRepository e IUnitOfWork) informam a camada de infraestrutura sobre o que precisa ser implementado. Essas interfaces também são usadas por meio de Injeção de dependência da camada de aplicativo.
 
-![O conteúdo detalhado da pasta SeedWork, que contém interfaces e classes base: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs](./media/image13.PNG)
+:::image type="complex" source="./media/seedwork-domain-model-base-classes-interfaces/vs-solution-seedwork-classes.png" alt-text="Captura de tela das classes contidas na pasta de propagação.":::
+O conteúdo detalhado da pasta de contenção, que contém classes base e interfaces: Entity.cs, Enumeration.cs, IAggregateRoot.cs, IRepository.cs, IUnitOfWork.cs e ValueObject.cs.
+:::image-end:::
 
 **Figura 7-12**. Um exemplo do conjunto de interfaces e de classes base "seedwork" do modelo de domínio
 

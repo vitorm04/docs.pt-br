@@ -2,12 +2,12 @@
 title: Definindo o aplicativo de vários contêineres com o docker-compose.yml
 description: Como especificar a composição de microsserviços para um aplicativo de vários contêineres com o docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: 938a9aa192f82628051bd7dc065f661f510ba544
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416701"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737099"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml
 
@@ -177,9 +177,15 @@ Você pode usar um único arquivo docker-compose.yml, como nos exemplos simplifi
 
 Por padrão, o Compose lê dois arquivos, um docker-compose.yml e um arquivo docker-compose.override.yml opcional. Conforme mostrado na Figura 6-11, quando você estiver usando o Visual Studio e habilitar o suporte ao Docker, o Visual Studio também criará um arquivo docker-compose.vs.debug.g.yml adicional para depurar o aplicativo. Dê uma olhada nesse arquivo na pasta obj\\Docker\\ da pasta da solução principal.
 
-![Estrutura do arquivo de projeto de docker-compose: .dockerignore, para ignorar arquivos; docker-compose.yml, para compor microsserviços; docker-compose.override.yml, para configurar o ambiente de microsserviços.](./media/image12.png)
+![Captura de tela dos arquivos em um projeto do Docker Compose.](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **Figura 6-11**. Arquivos docker-compose no Visual Studio 2017
+
+estrutura do arquivo de projeto do **Docker-Compose** :
+
+* *. dockerignore* -usado para ignorar arquivos
+* *Docker-Compose. yml* -usado para compor microserviços
+* *Docker-Compose. Override. yml* -usado para configurar o ambiente de microserviços
 
 Edite os arquivos docker-compose com qualquer editor, como o Visual Studio Code ou o Sublime, e execute o aplicativo com o comando docker-compose up.
 
@@ -191,11 +197,11 @@ O arquivo docker-compose.override.yml, como o próprio nome sugere, contém defi
 
 Um caso de uso típico é aquele em que você define vários arquivos compose para destinar-se a vários ambientes, como de produção, de preparo, de CI ou de desenvolvimento. Para dar suporte a essas diferenças, você pode dividir a configuração do Compose em vários arquivos, conforme mostrado na Figura 6-12.
 
-![Você pode combinar vários arquivos docker-compose*.fml para lidar com diferentes ambientes.](./media/image13.png)
+![Diagrama de três arquivos Docker-Compose definidos para substituir o arquivo base.](./media/multi-container-applications-docker-compose/multiple-docker-compose-files-override-base.png)
 
 **Figura 6-12**. Vários arquivos docker-compose substituindo valores no arquivo base docker-compose.yml
 
-Você inicia com o arquivo base docker-compose.yml. Esse arquivo base deve conter as definições de configuração base ou estáticas que não se alteram de acordo com o ambiente. Por exemplo, o eShopOnContainers tem o arquivo docker-compose.yml a seguir (simplificado com menos serviços) como o arquivo base.
+Você pode combinar vários arquivos Docker-Compose*. yml para lidar com ambientes diferentes. Você inicia com o arquivo base docker-compose.yml. Esse arquivo base deve conter as definições de configuração base ou estáticas que não se alteram de acordo com o ambiente. Por exemplo, o eShopOnContainers tem o arquivo docker-compose.yml a seguir (simplificado com menos serviços) como o arquivo base.
 
 ```yml
 #docker-compose.yml (Base)
@@ -416,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 O docker-compose espera que cada linha de um arquivo .env esteja no formato \<variável\>=\<valor\>.
 
-Observe que os valores definidos no ambiente do tempo de execução sempre substituem os valores definidos no arquivo .env. De maneira semelhante, os valores passados por meio de argumentos de linha de comando também substituem os valores padrão definidos no arquivo .env.
+Observe que os valores definidos no ambiente do runtime sempre substituem os valores definidos no arquivo .env. De maneira semelhante, os valores passados por meio de argumentos de linha de comando também substituem os valores padrão definidos no arquivo .env.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
@@ -459,7 +465,7 @@ Para conseguir isso, a equipe do .NET fornece quatro variantes básicas em [dotn
 1. **runtime**: para cenários de produção do .NET
 1. **runtime-deps**: para cenários de produção de [aplicativos autossuficientes](../../../core/deploying/index.md#self-contained-deployments-scd).
 
-Para uma inicialização mais rápida, as imagens de tempo de execução também definem automaticamente aspnetcore\_urls para a porta 80 e usam o Ngen para criar um cache de imagens nativas de assemblies.
+Para uma inicialização mais rápida, as imagens de runtime também definem automaticamente aspnetcore\_urls para a porta 80 e usam o Ngen para criar um cache de imagens nativas de assemblies.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
