@@ -190,7 +190,7 @@
           href: linq/perform-a-subquery-on-a-grouping-operation.md
         - name: Agrupar resultados por chaves contíguas
           href: linq/group-results-by-contiguous-keys.md
-        - name: Especificar filtros predicados dinamicamente em tempo de execução
+        - name: Especificar filtros predicados dinamicamente em runtime
           href: linq/dynamically-specify-predicate-filters-at-runtime.md
         - name: Executar junções internas
           href: linq/perform-inner-joins.md
@@ -1152,14 +1152,6 @@
           href: programming-guide/namespaces/using-namespaces.md
         - name: Como usar o My Namespace
           href: programming-guide/namespaces/how-to-use-the-my-namespace.md
-    - name: Tipos de valor anuláveis
-      items:
-        - name: Visão geral
-          href: programming-guide/nullable-types/index.md
-        - name: Usar tipos de valor anuláveis
-          href: programming-guide/nullable-types/using-nullable-types.md
-        - name: Como identificar um tipo de valor anulável
-          href: programming-guide/nullable-types/how-to-identify-a-nullable-type.md
     - name: Código não seguro e ponteiros
       items:
         - name: Visão geral e restrições
@@ -1314,6 +1306,9 @@
                   href: language-reference/keywords/enum.md
                 - name: struct
                   href: language-reference/keywords/struct.md
+                - name: Tipos de valor anuláveis
+                  href: language-reference/builtin-types/nullable-value-types.md
+                  displayName: '? token, ? symbol'
             - name: Tipos de referência
               items:
                 - name: Recursos dos tipos de referência
