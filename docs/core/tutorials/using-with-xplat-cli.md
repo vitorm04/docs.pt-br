@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 08/07/2019
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c7e314e9712c3b569ecc813a72670942651feda1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cf8c3ae070f4c77789dc55ba4d7888c7b15c8653
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454747"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736984"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando
 
@@ -43,7 +43,7 @@ Vejamos um breve passo a passo:
 
    *Olá. csproj*:
 
-   [!code-xml[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+   [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    O arquivo de projeto especifica tudo o que é necessário para restaurar as dependências e compilar o programa.
 
@@ -52,9 +52,9 @@ Vejamos um breve passo a passo:
 
    *Program.cs*:
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
+   [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
 
-   O programa é iniciado pelo `using System`, que significa "colocar tudo no namespace `System` no escopo para este arquivo". O namespace `System` inclui construções básicas, como `string` ou tipos numéricos.
+   O programa é iniciado pelo `using System`, que significa "colocar tudo no namespace `System` no escopo para este arquivo". O namespace `System` inclui a classe `Console`.
 
    Em seguida, definimos um namespace chamado `Hello`. Você pode alterar isso de acordo com a sua vontade. Uma classe chamada `Program` é definida dentro desse namespace, com um método `Main` que usa uma matriz de cadeias de caracteres como argumento. Essa matriz contém a lista de argumentos passados quando o programa compilado é chamado. Assim, essa matriz não será usada: o que o programa faz é gravar: "Hello World!" no console. Posteriormente, faremos alterações no código que usará esse argumento.
 
@@ -116,7 +116,7 @@ Vamos alterar o programa um pouco. Números de Fibonacci são divertidos; portan
    15: 377
    ```
 
-E pronto.  Você pode ampliar `Program.cs` como desejar.
+E pronto.  Você pode aumentar o *Program.cs* da maneira que desejar.
 
 ## <a name="working-with-multiple-files"></a>Trabalhando com vários arquivos
 
@@ -125,11 +125,11 @@ Vamos nos basear no exemplo de Fibonacci anterior armazenando em cache alguns va
 
 1. Adicione um novo arquivo no diretório *Hello* chamado *FibonacciGenerator.cs* com o seguinte código:
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+   [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
 2. Altere o método `Main` no arquivo *Program.cs* para criar uma instância da nova classe e chame seu método como no seguinte exemplo:
 
-   [!code-csharp[New Program.cs](../../../samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+   [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
 
 3. Execute [`dotnet build`](../tools/dotnet-build.md) para compilar as alterações.
 

@@ -2,17 +2,14 @@
 title: Alterações significativas de criptografia, versão 2,2 a 3,0-.NET Core
 description: Lista as alterações significativas da versão 2,2 para a versão 3,0 do .NET Core, ASP.NET Core e EF Core.
 ms.date: 09/10/2019
-ms.openlocfilehash: ba330bdef4be8cfe0e74f5645adaf66b2e0051ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b2894e6988c0b475e45c6d5602a7f54943f3ed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089577"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739426"
 ---
 # <a name="breaking-changes-for-migration-from-version-22-to-30"></a>Alterações recentes de migração da versão 2,2 para a 3,0
-
-> [!IMPORTANT]
-> Este artigo está em construção. Esta não é uma lista completa de alterações significativas do .NET Core. Para obter mais informações sobre as alterações significativas no .NET Core, você pode examinar os problemas individuais de [alterações significativas](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) no repositório dotnet/docs no github. 
 
 Se você estiver migrando da versão 2,2 para a versão 3,0 do .NET Core, ASP.NET Core ou EF Core, examine os tópicos a seguir para obter alterações significativas que possam afetar seu aplicativo:
 

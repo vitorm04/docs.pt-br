@@ -2,12 +2,12 @@
 title: Valores ref return e ref local (Guia de C#)
 description: Saiba como definir e usar os valores ref return e ref local
 ms.date: 04/04/2018
-ms.openlocfilehash: 99e0f9d995cf3bf5c0486415b6f2d578147d3c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73114485"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736823"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Ref returns e ref locals
 
@@ -25,7 +25,7 @@ Há algumas restrições quanto à expressão que um método pode retornar como 
 
 - O valor retornado não pode ser um `null` literal. Retornar `null` gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
 
-   Um método com um retorno de referência pode retornar um alias para uma variável cujo valor é atualmente o valor nulo (sem instanciação) ou um [tipo de valor anulável](../nullable-types/index.md) para um tipo de valor.
+   Um método com um retorno de referência pode retornar um alias para uma variável cujo valor é atualmente o valor nulo (sem instanciação) ou um [tipo de valor anulável](../../language-reference/builtin-types/nullable-value-types.md) para um tipo de valor.
 
 - O valor retornado não pode ser uma constante, um membro de enumeração, o valor retornado por valor de uma propriedade ou um método `class` ou `struct`. Violar essa regra gera o erro do compilador CS8156, "Uma expressão não pode ser usada neste contexto porque ela não pode ser retornada por referência."
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 5c5586c2ee41b12e9b5706603b4c2f62207566ed
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7d101e72a94ec1fecf44d4c883efb4f74e6d1d88
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417713"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739206"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 
@@ -174,7 +174,7 @@ Conforme mencionado anteriormente, você pode digitar implicitamente uma variáv
 
 Em alguns casos, é inconveniente criar um tipo nomeado para conjuntos simples de valores relacionados que você não pretende armazenar ou transmitir fora dos limites de método. Você pode criar *tipos anônimos* para essa finalidade. Para obter mais informações, consulte [Tipos anônimos](../classes-and-structs/anonymous-types.md).
 
-Os tipos comuns de valor não podem ter um valor [nulo](../../language-reference/keywords/null.md). No entanto, você pode criar tipos de valor anulável afixando uma `?` após o tipo. Por exemplo, `int?` é um tipo `int` que também pode ter o valor [nulo](../../language-reference/keywords/null.md). Os tipos de valores anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601?displayProperty=nameWithType>. Os tipos de valor anulável são especialmente úteis quando você está passando dados de e para bancos de dado nos quais valores numéricos podem ser nulos. Para obter mais informações, consulte [tipos de valor anulável](../nullable-types/index.md).
+Os tipos comuns de valor não podem ter um valor [nulo](../../language-reference/keywords/null.md). No entanto, você pode criar tipos de valor anulável afixando uma `?` após o tipo. Por exemplo, `int?` é um tipo `int` que também pode ter o valor [nulo](../../language-reference/keywords/null.md). Os tipos de valores anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601?displayProperty=nameWithType>. Os tipos de valor anulável são especialmente úteis quando você está passando dados de e para bancos de dado nos quais valores numéricos podem ser nulos. Para obter mais informações, consulte [tipos de valor anulável](../../language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="related-sections"></a>Seções relacionadas
 

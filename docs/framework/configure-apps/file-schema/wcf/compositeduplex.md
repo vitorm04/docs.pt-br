@@ -2,22 +2,22 @@
 title: <compositeDuplex>
 ms.date: 03/30/2017
 ms.assetid: 725004d1-ce88-4405-a220-78e89844f81f
-ms.openlocfilehash: a73085320eaf248887422316e1b7787b8654d71d
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: c3bae4dfee36e9de62c27bbccecd9a31a5b7d459
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400483"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736784"
 ---
-# <a name="compositeduplex"></a>\<compositeDuplex>
+# <a name="compositeduplex"></a>\<compositeDuplex >
 Define o elemento de associação que é usado quando o cliente deve expor um ponto de extremidade para que o serviço envie mensagens de volta ao cliente.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de CustomBinding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> compositeDuplex**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<compositeDuplex >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,12 +41,12 @@ Define o elemento de associação que é usado quando o cliente deve expor um po
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<binding >](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento de configuração é usado com transportes que não permitem comunicações de duplex nativamente, por exemplo, HTTP. O TCP, por outro lado, permite comunicações duplex nativamente e não requer o uso desse elemento de ligação para que o serviço envie mensagens de volta para um cliente.  
   
- O cliente deve expor um endereço para que o serviço faça contato e estabeleça uma conexão. Esse endereço de `clientBaseAddress` cliente é fornecido pelo atributo. Observe que Windows Communication Foundation (WCF) gera automaticamente um ClientBaseAddress se um não é definido explicitamente pelo usuário.  
+ O cliente deve expor um endereço para que o serviço faça contato e estabeleça uma conexão. Esse endereço de cliente é fornecido pelo atributo `clientBaseAddress`. Observe que Windows Communication Foundation (WCF) gera automaticamente um ClientBaseAddress se um não é definido explicitamente pelo usuário.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -62,4 +62,4 @@ Define o elemento de associação que é usado quando o cliente deve expor um po
 - [Associações](../../../wcf/bindings.md)
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding](custombinding.md)

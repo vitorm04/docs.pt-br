@@ -2,12 +2,12 @@
 title: Gerador de EDM (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
-ms.openlocfilehash: e8bf82933d19c6b7e9ec90f70bfa990e0d08847c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 858525a81e7779e7631ee8ac959110ba946cf652
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040010"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738526"
 ---
 # <a name="edm-generator-edmgenexe"></a>Gerador de EDM (EdmGen.exe)
 
@@ -78,4 +78,4 @@ Ao usar a ferramenta EdmGen.exe, você deve especificar um dos modos a seguir.
 
 - [Ferramentas de Modelo de Dados de Entidade de ADO.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))
 - [Modelo de Dados de Entidade](../entity-data-model.md)
-- [CSDL, SSDL, and MSL Specifications](./language-reference/csdl-ssdl-and-msl-specifications.md) (Especificações CSDL, SSDL e MSL)
+- [CSDL, SSDL, and MSL Specifications](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec) (Especificações CSDL, SSDL e MSL)

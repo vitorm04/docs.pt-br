@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: b2530793bfe1a158a0df1c34b2768e0c7ca351f3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459355"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740786"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintaxe PropertyPath (XAML)
 
@@ -32,7 +32,7 @@ Algumas propriedades de estilo e modelo, como <xref:System.Windows.Setter.Proper
 
 A associação de dados é um recurso do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] por meio do qual é possível se associar ao valor de destino de qualquer propriedade de dependência. No entanto, a origem dessa associação de dados não precisa ser uma propriedade de dependência; pode ser qualquer tipo de propriedade que seja reconhecido pelo provedor de dados aplicável. Os caminhos de propriedade são usados principalmente para o <xref:System.Windows.Data.ObjectDataProvider>, que é usado para obter fontes de associação de objetos Common Language Runtime (CLR) e suas propriedades.
 
-Observe que a vinculação de dados com o [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] não usa <xref:System.Windows.PropertyPath>, porque não usa <xref:System.Windows.Data.Binding.Path%2A> no <xref:System.Windows.Data.Binding>. Em vez disso, você usa <xref:System.Windows.Data.Binding.XPath%2A> e especifica uma sintaxe XPath válida no [!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)] dos dados. <xref:System.Windows.Data.Binding.XPath%2A> também é especificado como uma cadeia de caracteres, mas não está documentado aqui; consulte [associar dados XML usando um XmlDataProvider e consultas XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
+Observe que a vinculação de dados a XML não usa <xref:System.Windows.PropertyPath>, porque não usa <xref:System.Windows.Data.Binding.Path%2A> no <xref:System.Windows.Data.Binding>. Em vez disso, você usa <xref:System.Windows.Data.Binding.XPath%2A> e especifica uma sintaxe XPath válida para o XML Modelo de Objeto do Documento (DOM) dos dados. <xref:System.Windows.Data.Binding.XPath%2A> também é especificado como uma cadeia de caracteres, mas não está documentado aqui; consulte [associar dados XML usando um XmlDataProvider e consultas XPath](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).
 
 A chave para entender os caminhos da propriedade na associação de dados é que você pode direcionar a associação a um valor da propriedade individual ou, em vez disso, pode associar a propriedades de destino que assumem listas ou coleções. Se você estiver associando coleções, por exemplo, associação de uma <xref:System.Windows.Controls.ListBox> que será expandida dependendo de quantos itens de dados estiverem na coleção, o caminho da propriedade deverá fazer referência ao objeto de coleção, não a itens de coleção individuais. O mecanismo de vinculação de dados corresponderá à coleção usada como a fonte de dados para o tipo de destino de associação automaticamente, resultando em comportamento como popular um <xref:System.Windows.Controls.ListBox> com uma matriz de itens.
 
@@ -76,7 +76,7 @@ Você pode especificar o tipo do índice, se necessário. Para obter detalhes so
 <object property="(ownerType.propertyName)" .../>
 ```
 
-Os parênteses indicam que essa propriedade em uma <xref:System.Windows.PropertyPath> deve ser construída usando uma qualificação parcial. Ela pode utilizar um namespace de XML para localizar o tipo com um mapeamento apropriado. O `ownerType` pesquisa os tipos aos quais um processador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem acesso, por meio das declarações de <xref:System.Windows.Markup.XmlnsDefinitionAttribute> em cada assembly. A maioria dos aplicativos tem o namespace de XML padrão mapeado para o namespace [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]; portanto, um prefixo geralmente é necessário apenas para tipos personalizados ou tipos fora desse namespace.  O `propertyName` deve ser o nome de uma propriedade existente no `ownerType`. Em geral, essa sintaxe é usada para um dos casos a seguir:
+Os parênteses indicam que essa propriedade em uma <xref:System.Windows.PropertyPath> deve ser construída usando uma qualificação parcial. Ela pode utilizar um namespace de XML para localizar o tipo com um mapeamento apropriado. O `ownerType` pesquisa os tipos aos quais um processador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem acesso, por meio das declarações de <xref:System.Windows.Markup.XmlnsDefinitionAttribute> em cada assembly. A maioria dos aplicativos tem o namespace de XML padrão mapeado para o namespace `http://schemas.microsoft.com/winfx/2006/xaml/presentation`; portanto, um prefixo geralmente é necessário apenas para tipos personalizados ou tipos fora desse namespace.  O `propertyName` deve ser o nome de uma propriedade existente no `ownerType`. Em geral, essa sintaxe é usada para um dos casos a seguir:
 
 - O caminho é especificado no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], que tem um estilo ou modelo sem um tipo de destino especificado. Um uso qualificado normalmente não é válido para casos diferentes deste, porque, em casos sem estilo e sem modelo, a propriedade existe em uma instância, não em um tipo.
 
@@ -97,7 +97,7 @@ Para usar como o destino do storyboard, a propriedade especificada como `propert
 A / nessa sintaxe é usada para navegar dentro de um objeto de fonte de dados hierárquicos; há suporte para várias etapas para a hierarquia com caracteres / sucessivos. A passagem de fonte explica a posição atual do ponteiro de registro, que é determinada pela sincronização dos dados com a interface do usuário do modo de exibição. Para ver detalhes sobre a associação com objetos de fonte de dados hierárquicos e o conceito do ponteiro de registro atual na associação de dados, consulte [Usar o padrão de detalhes mestre com os dados hierárquicos](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md) ou [Visão geral da associação de dados](../../../desktop-wpf/data/data-binding-overview.md).
 
 > [!NOTE]
-> Superficialmente, essa sintaxe é semelhante a [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]. Uma expressão de [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)] verdadeira para associação a uma fonte de dados de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] não é usada como um valor <xref:System.Windows.Data.Binding.Path%2A> e, em vez disso, deve ser usada para a propriedade <xref:System.Windows.Data.Binding.XPath%2A> mutuamente exclusiva.
+> Superficialmente, essa sintaxe é semelhante ao XPath. Uma expressão XPath verdadeira para associação a uma fonte de dados XML não é usada como um valor <xref:System.Windows.Data.Binding.Path%2A> e, em vez disso, deve ser usada para a propriedade <xref:System.Windows.Data.Binding.XPath%2A> mutuamente exclusiva.
 
 ### <a name="collection-views"></a>Modos de exibição de coleção
 
@@ -204,7 +204,7 @@ Por exemplo, a propriedade <xref:System.Windows.Controls.Panel.Background%2A> de
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
 ```
 
-Os parênteses indicam que essa propriedade em uma <xref:System.Windows.PropertyPath> deve ser construída usando uma qualificação parcial. Ela pode usar um namespace de XML para encontrar o tipo. O `ownerType` pesquisa os tipos aos quais um processador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem acesso, por meio das declarações de <xref:System.Windows.Markup.XmlnsDefinitionAttribute> em cada assembly. A maioria dos aplicativos tem o namespace de XML padrão mapeado para o namespace [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)]; portanto, um prefixo geralmente é necessário apenas para tipos personalizados ou tipos fora desse namespace. O `propertyName` deve ser o nome de uma propriedade existente no `ownerType`. A propriedade especificada como `propertyName` deve ser uma <xref:System.Windows.DependencyProperty>. (Todas as propriedades anexadas do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são implementadas como propriedades de dependência; portanto, o problema diz respeito apenas a propriedades anexadas personalizadas.)
+Os parênteses indicam que essa propriedade em uma <xref:System.Windows.PropertyPath> deve ser construída usando uma qualificação parcial. Ela pode usar um namespace de XML para encontrar o tipo. O `ownerType` pesquisa os tipos aos quais um processador de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem acesso, por meio das declarações de <xref:System.Windows.Markup.XmlnsDefinitionAttribute> em cada assembly. A maioria dos aplicativos tem o namespace de XML padrão mapeado para o namespace `http://schemas.microsoft.com/winfx/2006/xaml/presentation`; portanto, um prefixo geralmente é necessário apenas para tipos personalizados ou tipos fora desse namespace. O `propertyName` deve ser o nome de uma propriedade existente no `ownerType`. A propriedade especificada como `propertyName` deve ser uma <xref:System.Windows.DependencyProperty>. (Todas as propriedades anexadas do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] são implementadas como propriedades de dependência; portanto, o problema diz respeito apenas a propriedades anexadas personalizadas.)
 
 <a name="indexanim"></a>
 

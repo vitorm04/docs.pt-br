@@ -2,18 +2,18 @@
 title: Acesso seguro a dados
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 122bdaf8467994f8f56ce3f6c92457be6b8b3155
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782769"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735270"
 ---
 # <a name="secure-data-access"></a>Acesso seguro a dados
 Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos de segurança disponíveis no armazenamento de dados subjacente ou no Database. Você também precisa considerar as implicações de segurança de outros recursos ou componentes que seu aplicativo pode conter.  
   
 ## <a name="authentication-authorization-and-permissions"></a>Autenticação, autorização e permissões  
- Ao se conectar ao Microsoft SQL Server, você pode usar a autenticação do Windows, também conhecida como segurança integrada, que usa a identidade do usuário ativo do Windows atual em vez de passar uma ID de usuário e senha. Usar a autenticação do Windows é altamente recomendável porque as credenciais do usuário não são expostas na cadeia de conexão. Se você não puder usar a autenticação do Windows para se conectar ao SQL Server, considere criar cadeias de conexão <xref:System.Data.SqlClient.SqlConnectionStringBuilder>em tempo de execução usando o.  
+ Ao se conectar ao Microsoft SQL Server, você pode usar a autenticação do Windows, também conhecida como segurança integrada, que usa a identidade do usuário ativo do Windows atual em vez de passar uma ID de usuário e senha. Usar a autenticação do Windows é altamente recomendável porque as credenciais do usuário não são expostas na cadeia de conexão. Se você não puder usar a autenticação do Windows para se conectar ao SQL Server, considere criar cadeias de conexão em tempo de execução usando o <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
   
  As credenciais usadas para autenticação precisam ser tratadas de forma diferente com base no tipo de aplicativo. Por exemplo, em um aplicativo Windows Forms, o usuário pode ser solicitado a fornecer informações de autenticação ou as credenciais do Windows do usuário podem ser usadas. No entanto, um aplicativo Web geralmente acessa dados usando as credenciais fornecidas pelo próprio aplicativo em vez de pelo usuário.  
   
@@ -55,7 +55,7 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
 |Recurso|Descrição|  
 |--------------|-----------------|  
-|[Fundamentos do tratamento de exceções](../../../standard/exceptions/exception-handling-fundamentals.md)|Descreve as formas básicas de manipulação de exceção estruturada try/catch/finally.|  
+|[Tratando e gerando exceções no .NET](../../../standard/exceptions/index.md)|Descreve as formas básicas de manipulação de exceção estruturada try/catch/finally.|  
 |[Práticas recomendadas para exceções](../../../standard/exceptions/best-practices-for-exceptions.md)|Descreve as práticas recomendadas para lidar com exceções.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Protegendo fontes de dados do Microsoft Access e do Excel  
@@ -69,7 +69,7 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
 |[Compreendendo a função dos arquivos de informações do grupo de trabalho na segurança de acesso](https://support.microsoft.com/kb/305542)|Explica a função e a relação do arquivo de informações do grupo de trabalho no Access 2003 Security.|  
 |[Perguntas frequentes sobre a segurança do Microsoft Access para Microsoft Access versões 2,0 a 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Versão para download das perguntas frequentes sobre segurança do Microsoft Access.|  
 ## <a name="enterprise-services"></a>Serviços corporativos  
- O COM+ contém seu próprio modelo de segurança que se baseia em contas do Windows NT e na representação de processo/thread. O <xref:System.EnterpriseServices> namespace fornece wrappers que permitem que aplicativos .net integrem código gerenciado com os serviços de segurança <xref:System.EnterpriseServices.ServicedComponent> do com+ por meio da classe.  
+ O COM+ contém seu próprio modelo de segurança que se baseia em contas do Windows NT e na representação de processo/thread. O namespace <xref:System.EnterpriseServices> fornece wrappers que permitem que aplicativos .NET integrem código gerenciado com os serviços de segurança do COM+ por meio da classe <xref:System.EnterpriseServices.ServicedComponent>.  
   
  Para obter mais informações, consulte o recurso a seguir.  
   
@@ -78,7 +78,7 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
 |[Segurança baseada em Função](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Discute como integrar código gerenciado com os serviços de segurança do COM+.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Interoperação com código não gerenciado  
- O .NET Framework fornece a interação com código não gerenciado, incluindo componentes COM, serviços COM+, bibliotecas de tipo externo e muitos serviços de sistema operacional. Trabalhar com código não gerenciado envolve a saída fora do perímetro de segurança para código gerenciado. Seu código e qualquer código que chame ele deve ter permissão de código não gerenciado (<xref:System.Security.Permissions.SecurityPermission> com o <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> sinalizador especificado). O código não gerenciado pode introduzir vulnerabilidades de segurança não pretendidas em seu aplicativo. Portanto, você deve evitar a interoperação com código não gerenciado, a menos que seja absolutamente necessário.  
+ O .NET Framework fornece a interação com código não gerenciado, incluindo componentes COM, serviços COM+, bibliotecas de tipo externo e muitos serviços de sistema operacional. Trabalhar com código não gerenciado envolve a saída fora do perímetro de segurança para código gerenciado. Seu código e qualquer código que chame ele deve ter permissão de código não gerenciado (<xref:System.Security.Permissions.SecurityPermission> com o sinalizador de <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> especificado). O código não gerenciado pode introduzir vulnerabilidades de segurança não pretendidas em seu aplicativo. Portanto, você deve evitar a interoperação com código não gerenciado, a menos que seja absolutamente necessário.  
   
  Para obter mais informações, consulte os seguintes recursos.  
   

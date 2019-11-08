@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 940d21bdd90d4594a39edc20283ca6a45ccf81fe
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422207"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739668"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
@@ -32,7 +32,7 @@ Todos os tipos de valor são derivados implicitamente da <xref:System.ValueType?
 
 Ao contrário do que acontece com tipos de referência, você não pode derivar um novo tipo de um tipo de valor. No entanto, assim como com tipos de referência, os structs podem implementar interfaces.
 
-Variáveis de tipo de valor não podem ser `null` por padrão. No entanto, as variáveis dos [tipos de valores anuláveis](../../programming-guide/nullable-types/index.md) correspondentes podem ser `null`.
+Variáveis de tipo de valor não podem ser `null` por padrão. No entanto, as variáveis dos [tipos de valores anuláveis](../builtin-types/nullable-value-types.md) correspondentes podem ser `null`.
 
 Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o valor padrão desse tipo. Para saber mais sobre valores padrão de tipos de valor, consulte [Tabela de valores padrão](default-values-table.md).
 
@@ -105,8 +105,6 @@ Para saber mais sobre a formatação da saída de tipos numéricos, consulte [Ta
 ## <a name="see-also"></a>Consulte também
 
 - [Referência de C#](../index.md)
-- [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Tipos](/dotnet/csharp/language-reference/keywords)
 - [Tipos de referência](reference-types.md)
-- [Tipos de valor anuláveis](../../programming-guide/nullable-types/index.md)
+- [Tipos de valor anuláveis](../builtin-types/nullable-value-types.md)

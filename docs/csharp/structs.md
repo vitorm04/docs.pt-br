@@ -4,12 +4,12 @@ description: Saiba mais sobre os tipos de struct e como criá-los
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: 10971dc1a0b2c9d64ac8766734b3f6f630aa3ccf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 39bf44dc187fbbc7aac71a1d5c5f3a4d7f446eb8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423111"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739185"
 ---
 # <a name="structs"></a>Structs
 
@@ -53,21 +53,9 @@ Na maioria das vezes, os structs compartilham a mesma sintaxe das classes, embor
   
 - Um struct pode implementar interfaces.
 
-## <a name="literal-values"></a>Valores literais
-
-No C#, valores literais recebem um tipo do compilador. Você pode especificar como um literal numérico deve ser digitado anexando uma letra ao final do número. Por exemplo, para especificar que o valor 4,56 deve ser tratado como um float, acrescente um "f" ou "F" após o número: `4.56f`. Se nenhuma letra for anexada, o compilador inferirá o tipo `double` para o literal. Para obter mais informações sobre quais tipos podem ser especificados com sufixos de letra, consulte as páginas de referência de tipos individuais em [Tipos de valor](./language-reference/keywords/value-types.md).  
-  
-Como os literais são tipados e todos os tipos derivam basicamente de <xref:System.Object>, você pode escrever e compilar o código como o seguinte:  
-  
-[!code-csharp[Literal Values](../../samples/snippets/csharp/concepts/structs/literals.cs)]
-
-Os dois últimos exemplos demonstram os recursos de linguagem introduzidos no C# 7.0. O primeiro permite que você use um caractere de sublinhado como *separador de dígitos* dentro de literais numéricos. Você pode colocá-los onde quiser entre dígitos para melhorar a legibilidade. Eles não têm efeito sobre o valor.
-
-O segundo demonstra *literais binários*, que permitem especificar os padrões de bit diretamente, em vez de usar notação hexadecimal.
-
 ## <a name="nullable-value-types"></a>Tipos de valor anuláveis
 
-Os tipos comuns de valor não podem ter um valor [nulo](language-reference/keywords/null.md). No entanto, você pode criar tipos de valor anulável afixando uma `?` após o tipo. Por exemplo, `int?` é um tipo `int` que também pode ter o valor [nulo](./language-reference/keywords/null.md). Os tipos de valores anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601>. Os tipos de valor anulável são especialmente úteis quando você está passando dados de e para bancos de dado nos quais valores numéricos podem ser nulos ou indefinidos. Para obter mais informações, consulte [tipos de valor anulável](programming-guide/nullable-types/index.md).
+Os tipos comuns de valor não podem ter um valor [nulo](language-reference/keywords/null.md). No entanto, você pode criar tipos de valor anulável afixando uma `?` após o tipo. Por exemplo, `int?` é um tipo `int` que também pode ter o valor [nulo](./language-reference/keywords/null.md). Os tipos de valores anuláveis são instâncias do tipo struct genérico <xref:System.Nullable%601>. Os tipos de valor anulável são especialmente úteis quando você está passando dados de e para bancos de dado nos quais valores numéricos podem ser nulos ou indefinidos. Para obter mais informações, consulte [tipos de valor anulável](language-reference/builtin-types/nullable-value-types.md).
 
 ## <a name="see-also"></a>Consulte também
 

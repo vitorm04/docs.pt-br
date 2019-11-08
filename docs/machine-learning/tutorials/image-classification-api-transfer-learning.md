@@ -3,22 +3,19 @@ title: 'Tutorial: inspeção visual automatizada usando o aprendizado de transfe
 description: Este tutorial ilustra como usar o aprendizado de transferência para treinar um modelo de aprendizado profundo do TensorFlow no ML.NET usando a API de detecção de imagem para classificar imagens de superfícies concretas como rachadas ou não rachadas.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/25/2019
+ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: b8aec80134188811eb80ad1394e5a64d65a3c6f0
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: f5fc08b2944374c0be00249ec9e2a4b819762e13
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961983"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733215"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: inspeção visual automatizada usando o aprendizado de transferência com a API de classificação de imagem ML.NET
 
 Saiba como treinar um modelo de aprendizado profundo personalizado usando o aprendizado de transferência, um modelo TensorFlow pretreinado e a API de classificação de imagem ML.NET para classificar imagens de superfícies concretas como rachadas ou sem cracking.
-
-> [!NOTE]
-> Este tutorial usa uma versão de visualização da API de classificação de imagem ML.NET.
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
@@ -84,7 +81,7 @@ O modelo pretreinado usado neste tutorial é a variante de camada 101 do modelo 
 Agora que você tem uma compreensão geral do aprendizado de transferência e da API de classificação de imagem, é hora de criar o aplicativo.
 
 1. Crie um  **C# aplicativo de console do .NET Core** chamado "DeepLearning_ImageClassification_Binary".
-1. Instale o pacote NuGet **Microsoft.ml 1.4.0-Preview2** :
+1. Instale o pacote NuGet do **Microsoft.ml** versão **1.4.0** :
     1. No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.
     1. Escolha "nuget.org" como a origem do pacote.
     1. Selecione a guia **Procurar**.
@@ -92,7 +89,7 @@ Agora que você tem uma compreensão geral do aprendizado de transferência e da
     1. Procure **Microsoft.ml**.
     1. Selecione o botão **Instalar**.
     1. Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados.
-    1. Repita essas etapas para **Microsoft. ml. DNN 0.16.0-Preview2** e **Microsoft. ml. ImageAnalytics 1.4.0-Preview2**.
+    1. Repita essas etapas para o **Microsoft. ml. Vision** versão **1.4.0**, **SciSharp. TensorFlow. Redist** versão **1.15.0**e **Microsoft. ml. ImageAnalytics** versão **1.4.0** NuGet Packages.
 
 ### <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 
@@ -124,7 +121,15 @@ Neste tutorial, somente imagens de baralho de ponte são usadas.
 
 1. Abra o arquivo *Program.cs* e substitua as instruções de `using` existentes na parte superior do arquivo pelo seguinte:
 
-    [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L1-L7)]
+    ```csharp
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.IO;
+    using Microsoft.ML;
+    using static Microsoft.ML.DataOperationsCatalog;
+    using Microsoft.ML.Vision;
+    ```
 
 1. Abaixo da classe `Program` em *Program.cs*, crie uma classe chamada `ImageData`. Essa classe é usada para representar os dados carregados inicialmente. 
 
@@ -162,17 +167,27 @@ Neste tutorial, somente imagens de baralho de ponte são usadas.
 
         Semelhante à `ModelInput`, somente o `PredictedLabel` é necessário para fazer previsões, pois contém a previsão feita pelo modelo. As propriedades `ImagePath` e `Label` são mantidas por conveniência para acessar o nome e a categoria do arquivo de imagem original.
 
+### <a name="create-workspace-directory"></a>Criar diretório de espaço de trabalho
+
+Quando os dados de treinamento e validação não são alterados com frequência, é uma boa prática armazenar em cache os valores de afunilamento computados para execuções posteriores.
+
+1. Em seu projeto, crie um novo diretório chamado *espaço de trabalho* para armazenar os valores de afunilamento computados e a versão `.pb` do modelo.
+
 ### <a name="define-paths-and-initialize-variables"></a>Definir caminhos e inicializar variáveis
 
-1. Dentro do método `Main`, defina o local de seus ativos.
+1. Dentro do método `Main`, defina o local de seus ativos, os valores de afunilamento computados e a versão `.pb` do modelo.
 
-    [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L16)]
+    ```csharp
+    var projectDirectory = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../"));
+    var workspaceRelativePath = Path.Combine(projectDirectory, "workspace");
+    var assetsRelativePath = Path.Combine(projectDirectory, "assets");
+    ```
 
 1. Em seguida, inicialize a variável `mlContext` com uma nova instância de [MLContext](xref:Microsoft.ML.MLContext).
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L18)]
 
-A classe [MLContext](xref:Microsoft.ML.MLContext) é um ponto de partida para todas as operações de ml.net, e a inicialização de MLContext cria um novo ambiente ml.NET que pode ser compartilhado entre os objetos de fluxo de trabalho de criação de modelo. Ele é semelhante, conceitualmente, a `DBContext` no Entity Framework.
+    A classe [MLContext](xref:Microsoft.ML.MLContext) é um ponto de partida para todas as operações de ml.net, e a inicialização de MLContext cria um novo ambiente ml.NET que pode ser compartilhado entre os objetos de fluxo de trabalho de criação de modelo. Ele é semelhante, conceitualmente, a `DBContext` no Entity Framework.
 
 ## <a name="load-the-data"></a>Carregar os dados
 
@@ -226,9 +241,17 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
     [!code-csharp [ShuffleRows](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L24)]
 
-1. Os modelos de aprendizado de máquina esperam que a entrada esteja em formato numérico. Portanto, algum pré-processamento precisa ser feito nos dados antes do treinamento. Crie uma [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) composta das transformações de [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) e [`LoadImages`](xref:Microsoft.ML.ImageEstimatorsCatalog.LoadImages*) . A transformação `MapValueToKey` usa o valor categórico na coluna `Label`, converte-o em um valor de `KeyType` numérico e o armazena em uma nova coluna chamada `LabelAsKey`. O `LoadImages` usa os valores da coluna `ImagePath` junto com o parâmetro `imageFolder` para carregar imagens para treinamento. Definir a `useImageType` como `false` converte as imagens em uma `byte[]`. 
+1. Os modelos de aprendizado de máquina esperam que a entrada esteja em formato numérico. Portanto, algum pré-processamento precisa ser feito nos dados antes do treinamento. Crie uma [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) composta das transformações de [`MapValueToKey`](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey*) e `LoadRawImageBytes`. A transformação `MapValueToKey` usa o valor categórico na coluna `Label`, converte-o em um valor de `KeyType` numérico e o armazena em uma nova coluna chamada `LabelAsKey`. O `LoadImages` usa os valores da coluna `ImagePath` junto com o parâmetro `imageFolder` para carregar imagens para treinamento.
 
-    [!code-csharp [DefinePreprocessingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L26-L33)]
+    ```csharp
+    var preprocessingPipeline = mlContext.Transforms.Conversion.MapValueToKey(
+            inputColumnName: "Label",
+            outputColumnName: "LabelAsKey")
+        .Append(mlContext.Transforms.LoadRawImageBytes(
+            outputColumnName: "Image",
+            imageFolder: assetsRelativePath,
+            inputColumnName: "ImagePath"));
+    ```
 
 1. Use o método [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) para aplicar os dados ao `preprocessingPipeline` [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) seguido pelo método [`Transform`](xref:Microsoft.ML.Data.TransformerChain`1.Transform*) , que retorna um [`IDataView`](xref:Microsoft.ML.IDataView) contendo os dados previamente processados.
 
@@ -250,23 +273,41 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 O treinamento de modelo consiste em algumas etapas. Primeiro, a API de classificação de imagem é usada para treinar o modelo. Em seguida, os rótulos codificados na coluna `PredictedLabel` são convertidos de volta para seu valor categórico original usando a transformação `MapKeyToValue`. 
 
-1. Defina o pipeline de [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) de treinamento que consiste nas transformações `mapLabelEstimator` e `ImageClassification`.
+1. Crie uma nova variável para armazenar um conjunto de parâmetros obrigatórios e opcionais para um `ImageClassificationTrainer`. 
 
-    [!code-csharp [DefineTrainingPipeline](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L58)]    
+    ```csharp
+    var classifierOptions = new ImageClassificationTrainer.Options()
+    {
+        FeatureColumnName = "Image",
+        LabelColumnName = "LabelAsKey",
+        ValidationSet = validationSet,
+        Arch = ImageClassificationTrainer.Architecture.ResnetV2101,
+        MetricsCallback = (metrics) => Console.WriteLine(metrics),
+        TestOnTrainSet = false,
+        ReuseTrainSetBottleneckCachedValues = true,
+        ReuseValidationSetBottleneckCachedValues = true,
+        WorkspacePath=workspaceRelativePath
+    };
+    ```
 
-    O estimador de `ImageClassification` usa vários parâmetros:
+    Um `ImageClassificationTrainer` leva vários parâmetros opcionais:
 
-    - `featuresColumnName` é a coluna usada como entrada para o modelo.
-    - `labelColumnName` é a coluna do valor a prever.
-    - `arch` define qual das arquiteturas de modelo pretreinados usar. Este tutorial usa a variante de camada 101 do modelo ResNetv2.
-    - `epoch` especifica o número máximo de iterações em todo o conjunto de todos os processos de treinamento. Quanto maior o número, mais longo o modelo Treina e potencialmente o melhor modelo produzido.
-    - `batchSize` é o número de amostras a ser usado por vez para treinamento. Durante uma época, vários lotes iguais ao batchSize são usados para treinar e atualizar o modelo. Quanto menor o número, menor a memória necessária quando cada lote é processado.
-    - `testOnTrainSet` diz ao modelo para medir o desempenho em relação ao conjunto de treinamento quando nenhum conjunto de validação está presente.
-    - `metricsCallback` associa uma função para acompanhar o progresso durante o treinamento.
-    - `validationSet` é a [`IDataView`](xref:Microsoft.ML.IDataView) que contém os dados de validação.
-    - `reuseTrainSetBottleneckCachedValues` informa ao modelo se os valores armazenados em cache devem ser usados da fase de afunilamento nas execuções subsequentes. A fase de afunilamento é uma computação de passagem única que é computacionalmente intensiva na primeira vez em que é executada. Se os dados de treinamento não forem alterados e você quiser experimentar o uso de um número diferente de épocas ou do tamanho do lote, usar os valores armazenados em cache reduz significativamente o tempo necessário para treinar um modelo.
-    - `reuseValidationSetBottleneckCachedValues` é semelhante a `reuseTrainSetBottleneckCachedValues` apenas que, nesse caso, é para o conjunto de conjuntos de validação.
-    - `disableEarlyStopping` diz ao estimador ImageClassification se deve empregar uma estratégia de interrupção inicial. Como o modelo pesquisa os valores ideais que o ajudarão a fazer previsões precisas durante o treinamento, o desempenho pode aumentar ou diminuir. Por fim, se o modelo atingir a última época, pode ser o caso de que os padrões aprendidos do treinamento sejam subótimos. A parada inicial dos monitores de treinamento para esses Descartes no desempenho e interrompe o processo de treinamento em um esforço para preservar uma versão ideal do modelo.
+    - `FeatureColumnName` é a coluna usada como entrada para o modelo.
+    - `LabelColumnName` é a coluna do valor a prever.
+    - `ValidationSet` é a [`IDataView`](xref:Microsoft.ML.IDataView) que contém os dados de validação.
+    - `Arch` define qual das arquiteturas de modelo pretreinados usar. Este tutorial usa a variante de camada 101 do modelo ResNetv2.
+    - `MetricsCallback` associa uma função para acompanhar o progresso durante o treinamento.
+    - `TestOnTrainSet` diz ao modelo para medir o desempenho em relação ao conjunto de treinamento quando nenhum conjunto de validação está presente.
+    - `ReuseTrainSetBottleneckCachedValues` informa ao modelo se os valores armazenados em cache devem ser usados da fase de afunilamento nas execuções subsequentes. A fase de afunilamento é uma computação de passagem única que é computacionalmente intensiva na primeira vez em que é executada. Se os dados de treinamento não forem alterados e você quiser experimentar o uso de um número diferente de épocas ou do tamanho do lote, usar os valores armazenados em cache reduz significativamente o tempo necessário para treinar um modelo.
+    - `ReuseValidationSetBottleneckCachedValues` é semelhante a `ReuseTrainSetBottleneckCachedValues` apenas que, nesse caso, é para o conjunto de conjuntos de validação.
+    - `WorkspacePath` define o diretório onde armazenar os valores de afunilamento computados e `.pb` versão do modelo.
+
+1. Defina o pipeline de treinamento de [`EstimatorChain`](xref:Microsoft.ML.Data.EstimatorChain%601) que consiste no `mapLabelEstimator` e no `ImageClassificationTrainer`.
+
+    ```csharp
+    var trainingPipeline = mlContext.MulticlassClassification.Trainers.ImageClassification(classifierOptions)
+        .Append(mlContext.Transforms.Conversion.MapKeyToValue("PredictedLabel"));
+    ```
 
 1. Use o método [`Fit`](xref:Microsoft.ML.Data.EstimatorChain%601.Fit*) para treinar seu modelo.
 

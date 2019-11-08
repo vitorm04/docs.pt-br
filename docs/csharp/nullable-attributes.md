@@ -1,18 +1,18 @@
 ---
-title: Atualizar APIs com atributos para definir expectativas nulas
-description: Este artigo explica as motivações e técnicas para adicionar atributos descritivos para descrever o estado nulo de argumentos e retornar valores de APIs
+title: Atualizar APIs para tipos de referência anuláveis com atributos que definem expectativas para valores nulos
+description: Aprenda a usar os atributos descritivos AllowNull, DisallowNull, MaybeNull, não nulo e mais para descrever totalmente o estado nulo de suas APIs.
 ms.technology: csharp-null-safety
 ms.date: 07/31/2019
-ms.openlocfilehash: 102598843b091ea25e6456aeedcccf43f056250d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 64dcc70565de0c3094ef1c10866aafce9e18a5c9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039376"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737883"
 ---
 # <a name="update-libraries-to-use-nullable-reference-types-and-communicate-nullable-rules-to-callers"></a>Atualizar bibliotecas para usar tipos de referência anuláveis e comunicar regras anuláveis a chamadores
 
-A adição de [tipos de referência anuláveis](nullable-references.md) significa que você pode declarar se um valor `null` é ou não permitido ou esperado para cada variável. Isso fornece uma ótima experiência à medida que você escreve o código. Você receberá avisos se uma variável não anulável puder ser definida como `null`. Você receberá avisos se uma variável anulável não for marcada como nula antes de você desreferenciá-la. Atualizar suas bibliotecas pode levar tempo, mas os benefícios valem a pena. Quanto mais informações você fornecer ao compilador sobre *quando* um valor `null` é permitido ou proibido, os melhores avisos que os usuários da sua API obterão. Vamos começar com um exemplo familiar. Imagine que sua biblioteca tenha a seguinte API para recuperar uma cadeia de caracteres de recurso:
+A adição de [tipos de referência anuláveis](nullable-references.md) significa que você pode declarar se um valor `null` é ou não permitido ou esperado para cada variável. Além disso, você pode aplicar um número de atributos: `AllowNull`, `DisallowNull`, `MaybeNull`, `NotNull`, `NotNullWhen`, `MaybeNullWhen`e `NotNullWhenNotNull` para descrever completamente os Estados nulos dos valores de argumento e de retorno. Isso fornece uma ótima experiência à medida que você escreve o código. Você receberá avisos se uma variável não anulável puder ser definida como `null`. Você receberá avisos se uma variável anulável não for marcada como nula antes de você desreferenciá-la. Atualizar suas bibliotecas pode levar tempo, mas os benefícios valem a pena. Quanto mais informações você fornecer ao compilador sobre *quando* um valor `null` é permitido ou proibido, os melhores avisos que os usuários da sua API obterão. Vamos começar com um exemplo familiar. Imagine que sua biblioteca tenha a seguinte API para recuperar uma cadeia de caracteres de recurso:
 
 ```csharp
 bool TryGetMessage(string key, out string message)

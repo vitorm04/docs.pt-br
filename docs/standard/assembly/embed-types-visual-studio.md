@@ -5,12 +5,12 @@ ms.assetid: 55ed13c9-c5bb-4bc2-bcd8-0587eb568864
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 648aaaa86cf2d6bd2de989739694ba188c4bbc04
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 47a339de60301e01b52a4b8a3a85945624daf940
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041023"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733194"
 ---
 # <a name="walkthrough-embed-types-from-managed-assemblies-in-visual-studio"></a>Walkthrough: inserir tipos de assemblies gerenciados no Visual Studio
 
@@ -34,7 +34,7 @@ Neste tutorial, você:
 
 ## <a name="conditions-and-limitations"></a>Condições e limitações
 
-Você pode inserir informações de tipo de um assembly sob as seguintes condições: 
+Você pode inserir informações de tipo de um assembly sob as seguintes condições:
 
 - O assembly expõe pelo menos uma interface pública.
 - As interfaces inseridas são anotadas com atributos de `ComImport` e atributos de `Guid` com GUIDs exclusivos.
@@ -321,5 +321,4 @@ Vá para o local da pasta de saída da compilação e execute *TypeEquivalenceCl
 - [-link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)
 - [Guia de programação em C#](../../csharp/programming-guide/index.md)
 - [Conceitos de programação (Visual Basic)](../../visual-basic/programming-guide/concepts/index.md)
-- [Programa com assemblies](program.md)
 - [Assemblies no .NET](index.md)

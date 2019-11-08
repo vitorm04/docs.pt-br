@@ -2,22 +2,22 @@
 title: <security> de <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
-ms.openlocfilehash: 6c07d1ca18837f66548411262b84b9a326f5ec4a
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: ea029444cee331a235c7a2fc140b4321d7530063
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399738"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736320"
 ---
-# <a name="security-of-wsfederationhttpbinding"></a>\<> de segurança \<do WSFederationHttpBinding >
-Define as configurações de segurança do [ \<> WSFederationHttpBinding](wsfederationhttpbinding.md).  
+# <a name="security-of-wsfederationhttpbinding"></a>\<> de segurança do \<wsFederationHttpBinding >
+Define as configurações de segurança do [\<WSFederationHttpBinding](wsfederationhttpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> wsFederationHttpBinding**](wsfederationhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de segurança**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**security >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -86,7 +86,7 @@ Define as configurações de segurança do [ \<> WSFederationHttpBinding](wsfede
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|Modo|Opcional. Especifica o tipo de segurança que é aplicado. O valor padrão é `Message`. Esse atributo é do tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
+|Modo|Opcional. Especifica o tipo de segurança que é aplicado. O valor padrão é `Message`. Este atributo é do tipo <xref:System.ServiceModel.WSFederationHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atributo de modo  
   
@@ -100,13 +100,13 @@ Define as configurações de segurança do [ \<> WSFederationHttpBinding](wsfede
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<message>](message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança em nível de mensagem. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
+|[\<message >](message-element-of-wsfederationhttpbinding.md)|Define as configurações para a segurança em nível de mensagem. Este elemento é do tipo <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação do [ \<> WSDualHttpBinding](wsdualhttpbinding.md).|  
+|[\<binding >](bindings.md)|Define todos os recursos de associação do [\<wsDualHttpBinding >](wsdualhttpbinding.md).|  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -114,10 +114,10 @@ Define as configurações de segurança do [ \<> WSFederationHttpBinding](wsfede
 - <xref:System.ServiceModel.WSFederationHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement>
-- [Como: Criar um WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
+- [Como criar um WSFederationHttpBinding](../../../wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)
 - [Protegendo serviços e clientes](../../../wcf/feature-details/securing-services-and-clients.md)
 - [Selecionando um tipo de credencial](../../../wcf/feature-details/selecting-a-credential-type.md)
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

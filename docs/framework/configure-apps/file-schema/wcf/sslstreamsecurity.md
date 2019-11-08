@@ -2,22 +2,22 @@
 title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: 9b7092878c604142c29dcd8d27e3c458d203f9fa
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: c5c7ec2b18143ff4d71540a60e24b8225ca4db16
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399524"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738597"
 ---
-# <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
+# <a name="sslstreamsecurity"></a>\<sslStreamSecurity >
 Representa um elemento de associação personalizado que suporta segurança de canal usando um fluxo SSL.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de CustomBinding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> sslStreamSecurity**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sslStreamSecurity >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ Representa um elemento de associação personalizado que suporta segurança de c
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<binding >](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -53,4 +53,4 @@ Representa um elemento de associação personalizado que suporta segurança de c
 - [Associações](../../../wcf/bindings.md)
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding](custombinding.md)

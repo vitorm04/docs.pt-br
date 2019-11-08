@@ -2,22 +2,22 @@
 title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: d896953a7ed31fdaf5f357a8721c7d085d50bc56
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 99fb013e052329ae4b99c4db89565ace8935c456
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400065"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736515"
 ---
-# <a name="peertransport"></a>\<> peerTransport
+# <a name="peertransport"></a>\<peerTransport >
 Define um transporte de mesmo nível para uma associação personalizada.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de CustomBinding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> peerTransport**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<peerTransport >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,13 +47,13 @@ Define um transporte de mesmo nível para uma associação personalizada.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](security-of-peertransport.md)|Define as configurações de segurança para esse transporte. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
+|[\<Security >](security-of-peertransport.md)|Define as configurações de segurança para esse transporte. Este elemento é do tipo <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<binding >](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse transporte não pode ser usado com contratos que têm operações de solicitação/resposta.  
@@ -69,4 +69,4 @@ Define um transporte de mesmo nível para uma associação personalizada.
 - [Associações](../../../wcf/bindings.md)
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding](custombinding.md)

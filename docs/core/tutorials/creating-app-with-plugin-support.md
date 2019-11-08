@@ -4,12 +4,12 @@ description: Saiba como criar um aplicativo do .NET Core compatível com plug-in
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 10/16/2019
-ms.openlocfilehash: 5267a56d0742d8e1cae4a81c058bc4ee05e83b4e
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 16fc9d3c721ddd0618c980c7dc406b7ad7864ff5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72579497"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739705"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>Criar um aplicativo do .NET Core com plug-ins
 
@@ -284,4 +284,8 @@ Isso impede que os assemblies `A.PluginBase` sejam copiados para o diretório de
 
 ## <a name="plugin-target-framework-recommendations"></a>Recomendações de estrutura de destino do plug-in
 
-Como o carregamento de dependência do plug-in usa o arquivo *.deps.json*, há uma pegadinha em relação à estrutura de destino do plug-in. Especificamente, os plug-ins devem ser direcionados a um runtime como o .NET Core 3.0 e não a uma versão do .NET Standard. O arquivo *.deps.json* é gerado com base na estrutura de destino do projeto e, como muitos pacotes compatíveis com o .NET Standard enviam assemblies de referência para compilar no .NET Standard e assemblies de implementação para tempos de execução específicos, o *.deps.json* pode não reconhecer corretamente os assemblies de implementação ou obter a versão do .NET Standard de um assembly em vez da versão do .NET Core esperada.
+Como o carregamento de dependência do plug-in usa o arquivo *.deps.json*, há uma pegadinha em relação à estrutura de destino do plug-in. Especificamente, os plug-ins devem ser direcionados a um runtime como o .NET Core 3.0 e não a uma versão do .NET Standard. O arquivo *.deps.json* é gerado com base na estrutura de destino do projeto e, como muitos pacotes compatíveis com o .NET Standard enviam assemblies de referência para compilar no .NET Standard e assemblies de implementação para runtimes específicos, o *.deps.json* pode não reconhecer corretamente os assemblies de implementação ou obter a versão do .NET Standard de um assembly em vez da versão do .NET Core esperada.
+
+## <a name="plugin-framework-references"></a>Referências da estrutura do plugin
+
+Atualmente, os plug-ins não podem introduzir novas estruturas no processo. Por exemplo, você não pode carregar um plug-in que usa o `Microsoft.AspNetCore.App` Framework em um aplicativo que usa apenas a estrutura de `Microsoft.NETCore.App` raiz. O aplicativo host deve declarar referências a todas as estruturas necessárias para plugins.

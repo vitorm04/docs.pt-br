@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 6c06e18f7869f1b1041c4d5fb1608a87f2902d7b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460580"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740654"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Namespaces XAML e mapeamento de namespace para XAML WPF
 Este tópico oferece explicação adicional sobre a presença e a finalidade dos dois mapeamentos de namespace de XAML como frequentemente encontrados na marca raiz de um arquivo XAML do WPF. Ele também descreve como gerar mapeamentos semelhantes para usar elementos que são definidos em seu próprio código e/ou em assemblies separados.  
@@ -39,7 +39,7 @@ Este tópico oferece explicação adicional sobre a presença e a finalidade dos
   
  A relação entre essas declarações é que o mapeamento de prefixo `x:` dá suporte aos intrínsecos que fazem parte da definição de linguagem XAML e o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é uma implementação que usa XAML como uma linguagem e define um vocabulário de seus objetos para XAML. Como os usos do vocabulário do WPF serão muito mais comuns que os usos de intrínsecos do XAML, o vocabulário do WPF é mapeado como o padrão.  
   
- A convenção de prefixo `x:` para o mapeamento do suporte aos intrínsecos da linguagem XAML é seguida por modelos de projeto, código de exemplo e pela documentação dos recursos de linguagem dentro desse [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. O namespace de XAML define vários recursos comumente usados que são necessários até mesmo para aplicativos básicos do WPF. Por exemplo, para unir qualquer code-behind a um arquivo XAML por meio de uma classe parcial, você deve nomear essa classe como o atributo `x:Class` no elemento raiz do arquivo XAML relevante. Ou, qualquer elemento, conforme definido em uma página XAML que você deseja acessar como um recurso com chave, deve ter o atributo `x:Key` definido no elemento em questão. Para obter mais informações sobre esses e outros aspectos do XAML, consulte [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) ou [Sintaxe de XAML em detalhes](xaml-syntax-in-detail.md).  
+ A Convenção de prefixo de `x:` para mapear o suporte de intrínsecos da linguagem XAML é seguida por modelos de projeto, código de exemplo e a documentação dos recursos de linguagem nesse SDK. O namespace de XAML define vários recursos comumente usados que são necessários até mesmo para aplicativos básicos do WPF. Por exemplo, para unir qualquer code-behind a um arquivo XAML por meio de uma classe parcial, você deve nomear essa classe como o atributo `x:Class` no elemento raiz do arquivo XAML relevante. Ou, qualquer elemento, conforme definido em uma página XAML que você deseja acessar como um recurso com chave, deve ter o atributo `x:Key` definido no elemento em questão. Para obter mais informações sobre esses e outros aspectos do XAML, consulte [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md) ou [Sintaxe de XAML em detalhes](xaml-syntax-in-detail.md).  
   
 <a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
 ## <a name="mapping-to-custom-classes-and-assemblies"></a>Mapeando para assemblies e classes personalizadas  
@@ -105,7 +105,7 @@ End Namespace
   
 <a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>Mapeando namespaces de CLR para namespaces de XML em um assembly  
- O WPF define um atributo de CLR que é consumido pelos processadores XAML para mapear vários namespaces de CLR para um único namespace de XAML. Esse atributo, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, é colocado no nível do assembly no código-fonte que produz o assembly. O código-fonte do assembly do WPF usa esse atributo para mapear os vários namespaces comuns, como <xref:System.Windows> e <xref:System.Windows.Controls>, para o namespace [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)].  
+ O WPF define um atributo de CLR que é consumido pelos processadores XAML para mapear vários namespaces de CLR para um único namespace de XAML. Esse atributo, <xref:System.Windows.Markup.XmlnsDefinitionAttribute>, é colocado no nível do assembly no código-fonte que produz o assembly. O código-fonte do assembly do WPF usa esse atributo para mapear os vários namespaces comuns, como <xref:System.Windows> e <xref:System.Windows.Controls>, para o namespace `http://schemas.microsoft.com/winfx/2006/xaml/presentation`.  
   
  O <xref:System.Windows.Markup.XmlnsDefinitionAttribute> usa dois parâmetros: o nome do namespace XML/XAML e o nome do namespace CLR. Mais de um <xref:System.Windows.Markup.XmlnsDefinitionAttribute> pode existir para mapear vários namespaces CLR para o mesmo namespace de XML. Depois de mapeados, os membros desses namespaces também podem ser referenciados sem qualificação completa, se desejado, fornecendo a instrução `using` apropriada na página code-behind de classe parcial. Para obter mais detalhes, consulte <xref:System.Windows.Markup.XmlnsDefinitionAttribute>.  
   

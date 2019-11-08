@@ -3,12 +3,12 @@ title: Tipos de referência anuláveis
 description: Este artigo fornece uma visão geral dos tipos de referência anuláveis C# , adicionados em 8,0. Você aprenderá como o recurso fornece segurança com relação a exceções de referência nula para projetos novos e existentes.
 ms.technology: csharp-null-safety
 ms.date: 02/19/2019
-ms.openlocfilehash: e20ea6efa389ba1aa0d8432a408c0b2a06a61c30
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: ded7234ecb746ba03ba59505b7189272886f1cbf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039774"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73737829"
 ---
 # <a name="nullable-reference-types"></a>Tipos de referência anuláveis
 
@@ -28,7 +28,7 @@ Esse novo recurso oferece benefícios significativos com relação à manipulaç
 
 Com a adição de tipos de referência que permitem valor nulo, é possível declarar sua intenção mais claramente. O valor `null` é a maneira correta de representar que uma variável não se refere a um valor. Não use esse recurso para remover todos os valores `null` do seu código. Em vez disso, você deve declarar sua intenção par ao compilador e para outros desenvolvedores que leem seu código. Ao declarar sua intenção, o compilador informa quando você escreve um código inconsistente com essa intenção.
 
-Um **tipo de referência que permite valor nulo** é indicado usando a mesma sintaxe que [tipos de valor que permitem valor nulo](programming-guide/nullable-types/index.md): um `?` é acrescentado ao tipo da variável. Por exemplo, a seguinte declaração de variável representa uma variável de cadeia de caracteres que permite valor nulo, `name`:
+Um **tipo de referência que permite valor nulo** é indicado usando a mesma sintaxe que [tipos de valor que permitem valor nulo](language-reference/builtin-types/nullable-value-types.md): um `?` é acrescentado ao tipo da variável. Por exemplo, a seguinte declaração de variável representa uma variável de cadeia de caracteres que permite valor nulo, `name`:
 
 ```csharp
 string? name;

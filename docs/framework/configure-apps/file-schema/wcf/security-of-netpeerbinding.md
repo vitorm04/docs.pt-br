@@ -2,22 +2,22 @@
 title: <security> de <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 88aa2898472c20c9e52cfd5830c0e41e8ea9ba21
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 3d1ac85073c44f683fe0c054737c5ec7ed1cbf52
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399813"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738666"
 ---
-# <a name="security-of-netpeerbinding"></a>\<> de segurança \<do netpeerbinding >
-Define as configurações de segurança do [ \<> NetPeerTcpBinding](netpeertcpbinding.md), incluindo o tipo de autenticação usado e a segurança usada para o transporte de mensagens.  
+# <a name="security-of-netpeerbinding"></a>\<> de segurança do \<netpeerbinding >
+Define as configurações de segurança do [\<netPeerTcpBinding >](netpeertcpbinding.md), incluindo o tipo de autenticação usado e a segurança usada para o transporte de mensagens.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> netPeerTcpBinding**](netpeertcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de segurança**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netPeerTcpBinding >** ](netpeertcpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**security >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,7 +38,7 @@ Define as configurações de segurança do [ \<> NetPeerTcpBinding](netpeertcpbi
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|modo|Opcional. Especifica o tipo de segurança usado por pares configurados com essa associação. O valor padrão é `Message`. Esse atributo é do tipo <xref:System.ServiceModel.SecurityMode>.|  
+|modo|Opcional. Especifica o tipo de segurança usado por pares configurados com essa associação. O valor padrão é `Message`. Este atributo é do tipo <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atributo de modo  
   
@@ -53,13 +53,13 @@ Define as configurações de segurança do [ \<> NetPeerTcpBinding](netpeertcpbi
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<> de transporte](transport-of-netpeertcpbinding.md)|Define o tipo de transporte para mensagens protegidas enviadas por pares configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
+|[> de transporte de \<](transport-of-netpeertcpbinding.md)|Define o tipo de transporte para mensagens protegidas enviadas por pares configurados com essa associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação do [ \<> NetPeerTcpBinding](netpeertcpbinding.md).|  
+|[\<binding >](bindings.md)|Define todos os recursos de associação do [\<netPeerTcpBinding >](netpeertcpbinding.md).|  
   
 ## <a name="remarks"></a>Comentários  
  A segurança pode ser específica de mensagens ou de transporte.  
@@ -75,4 +75,4 @@ Define as configurações de segurança do [ \<> NetPeerTcpBinding](netpeertcpbi
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

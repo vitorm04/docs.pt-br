@@ -14,12 +14,12 @@ helpviewer_keywords:
 - wrappers [WPF], implementing
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
-ms.openlocfilehash: 00596911cf603ae9615eb64d0aedefe90c2520bc
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e3ac7207a5ef05b94e97f005ecd17d5078669a4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458995"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740891"
 ---
 # <a name="custom-dependency-properties"></a>Propriedades de dependência personalizada
 
@@ -35,7 +35,7 @@ Este tópico pressupõe que você entenda as propriedades de dependência da per
 
 ## <a name="what-is-a-dependency-property"></a>O que é uma propriedade de dependência?
 
-Você pode habilitar o que seria uma propriedade Common Language Runtime (CLR) para dar suporte a estilos, associação de dados, herança, animações e valores padrão implementando-o como uma propriedade de dependência. As propriedades de dependência são propriedades registradas com o sistema de propriedades [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] chamando o método <xref:System.Windows.DependencyProperty.Register%2A> (ou <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>) e que são apoiadas por um campo identificador de <xref:System.Windows.DependencyProperty>. As propriedades de dependência podem ser usadas somente por <xref:System.Windows.DependencyObject> tipos, mas <xref:System.Windows.DependencyObject> é muito alta na hierarquia de classes de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], portanto, a maioria das classes disponíveis no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode dar suporte a propriedades de dependência. Para obter mais informações sobre propriedades de dependência, bem como a terminologia e algumas convenções usadas para descrevê-las neste [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)], consulte [Visão geral das propriedades de dependência](dependency-properties-overview.md).
+Você pode habilitar o que seria uma propriedade Common Language Runtime (CLR) para dar suporte a estilos, associação de dados, herança, animações e valores padrão implementando-o como uma propriedade de dependência. As propriedades de dependência são propriedades registradas com o sistema de propriedades [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] chamando o método <xref:System.Windows.DependencyProperty.Register%2A> (ou <xref:System.Windows.DependencyProperty.RegisterReadOnly%2A>) e que são apoiadas por um campo identificador de <xref:System.Windows.DependencyProperty>. As propriedades de dependência podem ser usadas somente por <xref:System.Windows.DependencyObject> tipos, mas <xref:System.Windows.DependencyObject> é muito alta na hierarquia de classes de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], portanto, a maioria das classes disponíveis no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pode dar suporte a propriedades de dependência. Para obter mais informações sobre as propriedades de dependência e algumas das terminologias e das convenções usadas para a descrição delas neste SDK, consulte [visão geral das propriedades de dependência](dependency-properties-overview.md).
 
 <a name="example_dp"></a>
 

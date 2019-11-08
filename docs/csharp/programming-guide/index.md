@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 5eb9313003f767daf64a5b5c4f229c6c58a018ec
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c9d879d1760f543d5a4722977d4dee8bca856016
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423241"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739198"
 ---
 # <a name="c-programming-guide"></a>Guia de programação em C#
+
 Esta seção fornece informações detalhadas sobre os principais recursos da linguagem C# e os recursos acessíveis para C# por meio do .NET Framework.  
   
  Grande parte dessa seção pressupõe que você já sabe algo sobre o C# e conceitos gerais de programação. Se você for um principiante completo com programação ou C#com, talvez queira visitar o tutorial [introdução aos C# tutoriais](../tutorials/intro-to-csharp/index.md) ou ao [navegador .net](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1), no qual não é necessário nenhum conhecimento prévio de programação.  
@@ -28,8 +29,9 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
 [Por dentro de um programa em C#](./inside-a-program/index.md)  
   
 [Main() e argumentos de linha de comando](./main-and-command-args/index.md)  
- 
-## <a name="language-sections"></a>Seções da linguagem  
+
+## <a name="language-sections"></a>Seções da linguagem
+
 [Instruções, expressões e operadores](./statements-expressions-operators/index.md)  
 
  [Tipos](./types/index.md)  
@@ -41,7 +43,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
  [Tipos de enumeração](./enumeration-types.md)  
   
  [Delegados](./delegates/index.md)  
- 
+
  [Matrizes](./arrays/index.md)  
   
  [Cadeias de Caracteres](./strings/index.md)  
@@ -62,13 +64,12 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Namespaces](./namespaces/index.md)  
   
- [Tipos de valor anuláveis](./nullable-types/index.md)  
-  
  [Código não seguro e ponteiros](./unsafe-code-pointers/index.md)  
   
  [Comentários da documentação XML](./xmldoc/index.md)  
   
-## <a name="platform-sections"></a>Seções da plataforma  
+## <a name="platform-sections"></a>Seções da plataforma
+
  [Domínios do aplicativo](../../framework/app-domains/application-domains.md)  
   
  [Assemblies no .NET](../../standard/assembly/index.md)  

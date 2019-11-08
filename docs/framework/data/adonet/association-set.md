@@ -2,12 +2,12 @@
 title: conjunto de associações
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
-ms.openlocfilehash: 43ab6cf9f1ee8cb971810add6b9a89467726f3e2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: e279322f9e950cd4359db8c6dce39bfc46d188f6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785034"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732372"
 ---
 # <a name="association-set"></a>conjunto de associações
 Um *conjunto de associação* é um contêiner lógico para instâncias de [Associação](association-type.md) do mesmo tipo. Um conjunto de associações não é um dados que modelam a compilação; isto é, não descreve a estrutura de dados ou relações. Em vez disso, um conjunto de associações fornece uma compilação para um ambiente de hospedagem ou de armazenamento (como Common Language Runtime ou um base de dados SQL Server) às instâncias de associação do grupo de modo que eles possam ser mapeadas em um armazenamento de dados.  
@@ -27,11 +27,11 @@ Um *conjunto de associação* é um contêiner lógico para instâncias de [Asso
   
  ![Modelo de exemplo com três tipos de entidade](./media/association-set/example-model-three-entity-types.gif)  
   
- O exemplo a seguir mostra um conjunto de associações (`PublishedBy`) e dois conjuntos de entidades (`Books` e `Publishers`) com base no modelo conceitual mostrado acima. Bi no conjunto `Books` de entidades representa uma instância `Book` do tipo de entidade em tempo de execução. Da mesma forma, PJ `Publisher` representa uma instância `Publishers` no conjunto de entidades. BiPj representa uma instância da `PublishedBy` Associação `PublishedBy` no conjunto de associação.  
+ O exemplo a seguir mostra um conjunto de associações (`PublishedBy`) e dois conjuntos de entidades (`Books` e `Publishers`) com base no modelo conceitual mostrado acima. O bi no conjunto de entidades de `Books` representa uma instância do tipo de entidade `Book` em tempo de execução. Da mesma forma, PJ representa uma instância de `Publisher` no conjunto de entidades `Publishers`. BiPj representa uma instância da Associação de `PublishedBy` no conjunto de associação `PublishedBy`.  
   
  ![Captura de tela que mostra um exemplo de conjuntos.](./media/association-set/sets-example-association.gif)  
   
- O [Entity Framework ADO.net](./ef/index.md) usa uma DSL (linguagem específica de domínio) chamada[CSDL](./ef/language-reference/csdl-specification.md)(linguagem de definição de esquema conceitual) para definir modelos conceituais. CSDL seguir define um contêiner de entidade com um conjunto de associações para cada associação no diagrama anterior. Observe que o nome e a associação para cada conjunto de associações são definidos usando atributos XML.  
+ O [Entity Framework ADO.net](./ef/index.md) usa uma DSL (linguagem específica de domínio) chamada[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)(linguagem de definição de esquema conceitual) para definir modelos conceituais. CSDL seguir define um contêiner de entidade com um conjunto de associações para cada associação no diagrama anterior. Observe que o nome e a associação para cada conjunto de associações são definidos usando atributos XML.  
   
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   

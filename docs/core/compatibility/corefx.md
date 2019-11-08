@@ -2,17 +2,14 @@
 title: CoreFx alterações significativas – .NET Core
 description: Lista as alterações significativas no .NET CoreFx, a biblioteca de classes base.
 ms.date: 09/20/2019
-ms.openlocfilehash: 04ae857b5f46748ad57c742b6ccf421f57bc3138
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 028a5c1059a855d1de644dde9fd9ad5f85f47ffe
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73093421"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739794"
 ---
 # <a name="corefx-breaking-changes"></a>CoreFx alterações significativas
-
-> [!IMPORTANT]
-> Este artigo está em construção. Esta não é uma lista completa de alterações significativas do .NET Core. Para obter mais informações sobre as alterações significativas no .NET Core, você pode examinar os problemas individuais de [alterações significativas](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) no repositório dotnet/docs no github.
 
 A seguir está uma lista de alterações significativas de CoreFx pela versão do .NET Core. O CoreFx fornece os primitivos e outros tipos gerais usados pelo .NET Core.
 

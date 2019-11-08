@@ -6,19 +6,19 @@ helpviewer_keywords:
 - fonts [WPF], OpenType font pack
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
-ms.openlocfilehash: 76438b85a12d75efa0fc106a645fb592b3205fad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a5b49e2a1f7536fb9d8e8f4dbfc53494dcd1f1ac
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69960977"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740774"
 ---
 # <a name="sample-opentype-font-pack"></a>Pacote de fontes OpenType de amostra
-Este tópico fornece uma visão geral das fontes OpenType de exemplo que são distribuídas [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)]com o. As fontes de exemplo dão suporte a recursos OpenType estendidos que [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] podem ser usados por aplicativos.  
+Este tópico fornece uma visão geral das fontes OpenType de exemplo que são distribuídas com o SDK do Windows. As fontes de exemplo dão suporte a recursos OpenType estendidos que podem ser usados por [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos.  
 
 <a name="overview"></a>   
 ## <a name="fonts-in-the-opentype-font-pack"></a>Fontes no pacote de fontes OpenType  
- O [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] fornece um conjunto de fontes OpenType de exemplo que você pode usar na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] criação de aplicativos. As fontes de exemplo são fornecidas sob licença da Ascender Corporation. Essas fontes implementam apenas um subconjunto do total de recursos definidos pelo formato OpenType. A tabela a seguir lista os nomes das fontes OpenType de exemplo.  
+ O SDK do Windows fornece um conjunto de fontes OpenType de exemplo que você pode usar na criação de aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. As fontes de exemplo são fornecidas sob licença da Ascender Corporation. Essas fontes implementam apenas um subconjunto do total de recursos definidos pelo formato OpenType. A tabela a seguir lista os nomes das fontes OpenType de exemplo.  
   
 |**Nome**|**Arquivo**|  
 |--------------|--------------|  
@@ -44,7 +44,7 @@ Este tópico fornece uma visão geral das fontes OpenType de exemplo que são di
 ## <a name="installing-the-fonts"></a>Instalando as fontes  
  Você tem a opção de instalar as fontes OpenType de exemplo no diretório padrão de fontes do Windows, **\WINDOWS\Fonts**. Use o painel de controle Fontes para instalar as fontes. Depois que essas fontes estiverem em seu computador, elas poderão ser acessadas por todos os aplicativos que fazem referência às fontes padrão do Windows. Você pode exibir um conjunto representativo de caracteres em vários tamanhos de fonte clicando duas vezes no arquivo de fonte. A captura de tela a seguir mostra o arquivo de fonte Lindsey, Linds.tff.  
   
- ![Fonte &#40;Lindsey OpenType&#41; ](./media/typographyinwpf-04.png "TypographyInWPF_04")  
+ ![Fonte Lindsey &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Exibindo a fonte Lindsey  
   
 <a name="using_the_fonts"></a>   

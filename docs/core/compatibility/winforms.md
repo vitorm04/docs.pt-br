@@ -2,17 +2,14 @@
 title: Windows Forms alterações significativas-.NET Core
 description: Lista as alterações significativas no Windows Forms para .NET Core.
 ms.date: 09/20/2019
-ms.openlocfilehash: 2aac8c81372a36f00df1b7f3ccd3432409f6c834
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7bdf17911ccefd19c5a3458f328b6ee41352acd9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092910"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739749"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Alterações recentes no Windows Forms
-
-> [!IMPORTANT]
-> Este artigo está em construção. Esta não é uma lista completa de alterações significativas do .NET Core. Para obter mais informações sobre as alterações significativas no .NET Core, você pode examinar os problemas individuais de [alterações significativas](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) no repositório dotnet/docs no github.
 
 Veja a seguir uma lista de alterações significativas no Windows Forms pela versão do .NET Core.
 

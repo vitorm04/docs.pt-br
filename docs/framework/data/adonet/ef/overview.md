@@ -2,12 +2,12 @@
 title: Visão geral do Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 92aa7b9c1f163c0496a821cca375c8b7e1b21a5f
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854348"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738499"
 ---
 # <a name="entity-framework-overview"></a>Visão geral de Entity Framework
 
@@ -34,7 +34,7 @@ O Entity Framework permite que os desenvolvedores trabalhem com dados na forma d
 
 O modelo e os mapeamentos de armazenamento podem ser alterados quando necessário sem necessidade de alterações no modelo conceitual, nas classes de dados ou no código do aplicativo. Como os modelos de armazenamento são específicos ao provedor, você pode trabalhar com um modelo conceitual consistente entre várias fontes de dados.
 
-O Entity Framework usa esses arquivos de modelo e de mapeamento para criar, ler, atualizar e excluir operações em relação a entidades e relações no modelo conceitual para operações equivalentes na fonte de dados. O Entity Framework até mesmo dá suporte a entidades de mapeamento no modelo conceitual para procedimentos armazenados na fonte de dados. Para obter mais informações, consulte [especificações de CSDL, SSDL e MSL](./language-reference/csdl-ssdl-and-msl-specifications.md).
+O Entity Framework usa esses arquivos de modelo e de mapeamento para criar, ler, atualizar e excluir operações em relação a entidades e relações no modelo conceitual para operações equivalentes na fonte de dados. O Entity Framework até mesmo dá suporte a entidades de mapeamento no modelo conceitual para procedimentos armazenados na fonte de dados. Para obter mais informações, consulte [especificações de CSDL, SSDL e MSL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec).
 
 ## <a name="map-objects-to-data"></a>Mapear objetos para dados
  A programação orientada a objeto impõe um desafio para interagir com os sistemas de armazenamento de dados. Embora a organização das classes com frequência espelhe a organização de tabelas de banco de dados relacional, o ajuste não é perfeito. Com frequência, várias tabelas normalizadas correspondem a uma única classe, e as relações entre classes são representadas de maneira diferente de como as relações entre tabelas são representadas. Por exemplo, para representar o cliente para um pedido de venda, uma classe `Order` pode usar uma propriedade que contém uma referência a uma instância de uma classe `Customer`, enquanto uma linha da tabela `Order` em um banco de dados contém uma coluna (ou conjunto de colunas) de chave estrangeira com um valor que corresponde a um valor de chave primária na tabela `Customer`. Uma classe `Customer` pode ter uma propriedade denominada `Orders` que contém uma coleção de instâncias da classe `Order`, enquanto a tabela `Customer` em um banco de dados não tem nenhuma coluna comparável. O Entity Framework fornece aos desenvolvedores a flexibilidade para representar as relações dessa forma ou para relações de modelo mais próximas, conforme elas são representadas no banco de dados.
@@ -47,19 +47,19 @@ Mais do que apenas outra solução de mapeamento relacional de objeto, o Entity 
 
 - LINQ to Entities. Fornece suporte a LINQ (consulta integrada à linguagem) para consultar tipos de entidade que são definidos em um modelo conceitual. Para obter mais informações, consulte [LINQ to Entities](./language-reference/linq-to-entities.md).
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Um dialeto de SQL independente de armazenamento que funciona diretamente com entidades no modelo conceitual e que dá suporte a conceitos de Modelo de Dados de Entidade. [!INCLUDE[esql](../../../../../includes/esql-md.md)]é usado com consultas de objeto e consultas que são executadas usando o provedor EntityClient. Para obter mais informações, consulte [Entity SQL visão geral](./language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)] Um dialeto de SQL independente de armazenamento que funciona diretamente com entidades no modelo conceitual e que dá suporte a conceitos de Modelo de Dados de Entidade. [!INCLUDE[esql](../../../../../includes/esql-md.md)] é usado com consultas de objeto e consultas que são executadas usando o provedor EntityClient. Para obter mais informações, consulte [Entity SQL visão geral](./language-reference/entity-sql-overview.md).
 
-O Entity Framework inclui o provedor de dados EntityClient. Esse provedor gerencia as conexões, traduz as consultas de entidade em consultas específicas à fonte de dados e retorna um leitor de dados que o Entity Framework usa para materializar dados de entidade em objetos. Quando a materialização de objeto não é necessária, o provedor EntityClient também pode ser usado como um provedor de dados ADO.NET padrão, permitindo [!INCLUDE[esql](../../../../../includes/esql-md.md)] que os aplicativos executem consultas e consumam o leitor de dados somente leitura retornado. Para obter mais informações, consulte [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).
+O Entity Framework inclui o provedor de dados EntityClient. Esse provedor gerencia as conexões, traduz as consultas de entidade em consultas específicas à fonte de dados e retorna um leitor de dados que o Entity Framework usa para materializar dados de entidade em objetos. Quando a materialização do objeto não é necessária, o provedor EntityClient também pode ser usado como um provedor de dados ADO.NET padrão, permitindo que os aplicativos executem [!INCLUDE[esql](../../../../../includes/esql-md.md)] consultas e consumam o leitor de dados somente leitura retornado. Para obter mais informações, consulte [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 O diagrama a seguir ilustra a arquitetura de Entity Framework para acessar dados:
 
 ![Diagrama de arquitetura Entity Framework](./media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-As ferramentas de modelo de dados de entidade podem gerar uma classe derivada `System.Data.Objects.ObjectContext` de `System.Data.Entity.DbContext` ou que representa o contêiner de entidade no modelo conceitual. Esse contexto de objeto fornece os recursos para controlar alterações e gerenciar identidades, simultaneidade e relações. Essa classe também expõe um método `SaveChanges` que grava inserções, atualizações e exclusões na fonte de dados. Como consultas, essas alterações são feitas pelos comandos gerados automaticamente pelo sistema ou por procedimentos armazenados especificados pelo desenvolvedor.
+As ferramentas de Modelo de Dados de Entidade podem gerar uma classe derivada de `System.Data.Objects.ObjectContext` ou `System.Data.Entity.DbContext` que representa o contêiner de entidade no modelo conceitual. Esse contexto de objeto fornece os recursos para controlar alterações e gerenciar identidades, simultaneidade e relações. Essa classe também expõe um método `SaveChanges` que grava inserções, atualizações e exclusões na fonte de dados. Como consultas, essas alterações são feitas pelos comandos gerados automaticamente pelo sistema ou por procedimentos armazenados especificados pelo desenvolvedor.
 
 ## <a name="data-providers"></a>Provedores de dados
 
-O `EntityClient` provedor estende o modelo de provedor ADO.net acessando dados em termos de entidades conceituais e relações. Executa consultas que usam [!INCLUDE[esql](../../../../../includes/esql-md.md)]. O [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornece a linguagem de consulta subjacente que permite que o `EntityClient` se comunique com o banco de dados. Para obter mais informações, consulte [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).
+O provedor de `EntityClient` estende o modelo de provedor ADO.NET acessando dados em termos de entidades conceituais e relações. Executa consultas que usam [!INCLUDE[esql](../../../../../includes/esql-md.md)]. O [!INCLUDE[esql](../../../../../includes/esql-md.md)] fornece a linguagem de consulta subjacente que permite que o `EntityClient` se comunique com o banco de dados. Para obter mais informações, consulte [EntityClient Provider for the Entity Framework](entityclient-provider-for-the-entity-framework.md).
 
 O Entity Framework inclui um Provedor de Dados de SqlClient atualizado que dá suporte a árvores de comando canônicas. Para obter mais informações, consulte [SqlClient para o Entity Framework](sqlclient-for-the-entity-framework.md).
 

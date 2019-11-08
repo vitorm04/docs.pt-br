@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 22c2fd5fc5eaf7a5dc9b71a7335b0b844fa92b51
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: f0245feb710f33d5fcea2a7125b8753ba6064018
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291610"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740439"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>Como serializar e desserializar JSON no .NET
 
@@ -24,7 +24,7 @@ Este artigo mostra como usar o namespace <xref:System.Text.Json> para serializar
 
 ## <a name="namespaces"></a>Namespaces
 
-O namespace <xref:System.Text.Json> contém todos os pontos de entrada e os tipos principais. O namespace <xref:System.Text.Json.Serialization> contém atributos e APIs para cenários avançados e personalização específicas para serialização e desserialização. Portanto, os exemplos de código mostrados neste artigo exigem uma ou ambas as seguintes diretivas `using`:
+O namespace <xref:System.Text.Json> contém todos os pontos de entrada e os tipos principais. O namespace <xref:System.Text.Json.Serialization> contém atributos e APIs para cenários avançados e personalização específicas para serialização e desserialização. Os exemplos de código mostrados neste artigo exigem `using` diretivas para um ou ambos os namespaces:
 
 ```csharp
 using System.Text.Json;
@@ -35,23 +35,38 @@ Atualmente, não há suporte para atributos do namespace <xref:System.Runtime.Se
 
 ## <a name="how-to-write-net-objects-to-json-serialize"></a>Como gravar objetos .NET em JSON (Serialize)
 
-Para gravar JSON em uma cadeia de caracteres, chame o método <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>. O exemplo a seguir usa uma sobrecarga com um parâmetro de tipo genérico:
+Para gravar JSON em uma cadeia de caracteres ou em um arquivo, chame o método <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType>.
+
+O exemplo a seguir cria JSON como uma cadeia de caracteres:
 
 ```csharp
-WeatherForecast weatherForecast;
-//...
-string json = JsonSerializer.Serialize<WeatherForecast>(weatherForecast);
-```
-
-Você pode omitir o parâmetro de tipo genérico e usar a inferência de tipo genérico em vez disso:
-
-```csharp
-WeatherForecast weatherForecast;
-//...
 string json = JsonSerializer.Serialize(weatherForecast);
 ```
 
-Aqui está um tipo de exemplo a ser serializado, que contém coleções e classes aninhadas:
+O exemplo a seguir usa código síncrono para criar um arquivo JSON:
+
+```csharp
+File.WriteAllText(outputFileName, JsonSerializer.Serialize(weatherForecast));
+```
+
+O exemplo a seguir usa código assíncrono para criar um arquivo JSON:
+
+```csharp
+using (FileStream fs = File.Create(outputFileName))
+{
+    await JsonSerializer.SerializeAsync(fs, weatherForecast);
+}
+```
+
+Os exemplos anteriores usam a inferência de tipos para o tipo que está sendo serializado. Uma sobrecarga de `Serialize()` usa um parâmetro de tipo genérico:
+
+```csharp
+string json = JsonSerializer.Serialize<WeatherForecast>(weatherForecast);
+```
+
+### <a name="serialization-example"></a>Exemplo de serialização
+
+Aqui está um tipo de exemplo que contém coleções e classes aninhadas:
 
 ```csharp
 public class WeatherForecast
@@ -76,7 +91,7 @@ public class Temperature
 }
 ```
 
-A saída JSON é reduzidos por padrão: 
+A saída JSON da serialização de uma instância do tipo anterior é semelhante ao exemplo a seguir. A saída JSON é reduzidos por padrão: 
 
 ```json
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureC":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":{"DegreesCelsius":20},"Low":{"DegreesCelsius":-10}},"Hot":{"High":{"DegreesCelsius":60},"Low":{"DegreesCelsius":20}}},"SummaryWords":["Cool","Windy","Humid"]}
@@ -119,26 +134,24 @@ O exemplo a seguir mostra o mesmo JSON, formatado (ou seja, muito impresso com e
 }
 ```
 
-Sobrecargas de <xref:System.Text.Json.JsonSerializer.Serialize%2A> permitem que você Serialize para um <xref:System.IO.Stream>. As versões assíncronas das sobrecargas `Stream` estão disponíveis.
-
 ### <a name="serialize-to-utf-8"></a>Serializar para UTF-8
 
 Para serializar para UTF-8, chame o método <xref:System.Text.Json.JsonSerializer.SerializeToUtf8Bytes%2A?displayProperty=nameWithType>:
 
 ```csharp
-byte[] utf8Json = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherForecast);
+byte[] jsonUtf8Bytes = JsonSerializer.SerializeToUtf8Bytes<WeatherForecast>(weatherForecast);
 ```
 
-Como alternativa, uma sobrecarga <xref:System.Text.Json.JsonSerializer.Serialize%2A> que usa um <xref:System.Text.Json.Utf8JsonWriter> está disponível.
+Uma sobrecarga de <xref:System.Text.Json.JsonSerializer.Serialize%2A> que usa uma <xref:System.Text.Json.Utf8JsonWriter> também está disponível.
 
 A serialização para UTF-8 é de cerca de 5-10% mais rápida do que usar os métodos baseados em cadeia de caracteres. A diferença é porque os bytes (como UTF-8) não precisam ser convertidos em cadeias de caracteres (UTF-16).
 
 ## <a name="serialization-behavior"></a>Comportamento de serialização
 
-* Por padrão, todas as propriedades públicas são serializadas. Você pode [especificar propriedades a serem excluídas](#exclude-properties).
+* Por padrão, todas as propriedades públicas são serializadas. Você pode [especificar propriedades a serem excluídas](#exclude-properties-from-serialization).
 * O [codificador padrão](xref:System.Text.Encodings.Web.JavaScriptEncoder.Default) escapa caracteres não ASCII, caracteres sensíveis a HTML dentro do intervalo ASCII e caracteres que devem ser ignorados de acordo com [a especificação JSON](https://tools.ietf.org/html/rfc8259#section-7).
 * Por padrão, o JSON é reduzidos. Você pode [muito imprimir o JSON](#serialize-to-formatted-json).
-* Por padrão, a capitalização de nomes JSON corresponde aos nomes .NET. Você pode personalizar o uso de [maiúsculas e minúsculas de nomes](#customize-json-names).
+* Por padrão, a capitalização de nomes JSON corresponde aos nomes .NET. Você pode personalizar o uso de [maiúsculas e minúsculas de nomes](#customize-json-names-and-values).
 * Referências circulares são detectadas e exceções geradas. Para obter mais informações, consulte o [problema em referências circulares](https://github.com/dotnet/corefx/issues/38579) no repositório dotnet/Corefx no github.
 * No momento, os campos são excluídos.
 
@@ -147,41 +160,53 @@ Os tipos com suporte incluem:
 * Primitivos .NET que mapeiam para primitivos JavaScript, como tipos numéricos, cadeias de caracteres e booliano.
 * [Pocos (objetos CLR antigos)](https://stackoverflow.com/questions/250001/poco-definition)definidos pelo usuário.
 * Matrizes unidimensionais e denteadas (`ArrayName[][]`).
-* `Dictionary<string,TValue>` em que `TValue` é `object`, `JsonElement` ou um POCO.
+* `Dictionary<string,TValue>` em que `TValue` é `object`, `JsonElement`ou um POCO.
 * Coleções dos namespaces a seguir. Para obter mais informações, consulte o [problema no suporte de coleção](https://github.com/dotnet/corefx/issues/36643) no repositório dotnet/Corefx no github.
   * <xref:System.Collections>
   * <xref:System.Collections.Generic>
   * <xref:System.Collections.Immutable>
 
+Você pode [implementar conversores personalizados](system-text-json-converters-how-to.md) para lidar com tipos adicionais ou fornecer funcionalidade que não é suportada pelos conversores internos.
+
 ## <a name="how-to-read-json-into-net-objects-deserialize"></a>Como ler JSON em objetos .NET (desserializar)
 
-Para desserializar de uma cadeia de caracteres, chame o método <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>, conforme mostrado no exemplo a seguir:
+Para desserializar de uma cadeia de caracteres ou de um arquivo, chame o método <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType>.
+
+O exemplo a seguir lê JSON de uma cadeia de caracteres:
 
 ```csharp
-string json = ... ;
-
-var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
+var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString);
 ```
 
-Para obter um exemplo, consulte a seção [serializar](#how-to-write-net-objects-to-json-serialize) . O objeto JSON e .NET são os mesmos, mas a direção é invertida.
+Para desserializar de um arquivo usando código síncrono, leia o arquivo em uma cadeia de caracteres, conforme mostrado no exemplo a seguir:
 
-Sobrecargas de <xref:System.Text.Json.JsonSerializer.Deserialize*> permitem desserializar de um `Stream`.  As versões assíncronas das sobrecargas `Stream` estão disponíveis.
+```csharp
+string jsonString = File.ReadAllText(inputFileName);
+weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(jsonString);
+```
+
+Para desserializar de um arquivo usando código assíncrono, chame o método <xref:System.Text.Json.JsonSerializer.DeserializeAsync%2A>:
+
+```csharp
+using (FileStream fs = File.OpenRead(inputFileName))
+{
+    weatherForecast = await JsonSerializer.DeserializeAsync<WeatherForecast>(fs);
+}
+```
+
+Para obter um exemplo de tipo e JSON correspondente, consulte a seção [exemplo de serialização](#serialization-example) .
 
 ### <a name="deserialize-from-utf-8"></a>Desserializar de UTF-8
 
-Para desserializar de UTF-8, chame uma sobrecarga <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> que usa um `Utf8JsonReader` ou um `ReadOnlySpan<byte>`, conforme mostrado nos exemplos a seguir:
+Para desserializar do UTF-8, chame uma sobrecarga de <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> que usa uma `Utf8JsonReader` ou uma `ReadOnlySpan<byte>`, conforme mostrado nos exemplos a seguir. Os exemplos pressupõem que o JSON esteja em uma matriz de bytes chamada jsonUtf8Bytes.
 
 ```csharp
-byte[] utf8Json;
-//...
-var readOnlySpan = new ReadOnlySpan<byte>(utf8Json);
+var readOnlySpan = new ReadOnlySpan<byte>(jsonUtf8Bytes);
 weatherForecast = JsonSerializer.Deserialize<WeatherForecastMin>(readOnlySpan);
 ```
 
 ```csharp
-byte[] utf8Json;
-//...
-var utf8Reader = new Utf8JsonReader(utf8Json);
+var utf8Reader = new Utf8JsonReader(jsonUtf8Bytes);
 weatherForecast = JsonSerializer.Deserialize<WeatherForecastMin>(ref utf8Reader);
 ```
 
@@ -191,14 +216,16 @@ weatherForecast = JsonSerializer.Deserialize<WeatherForecastMin>(ref utf8Reader)
 * Se o JSON contiver um valor para uma propriedade somente leitura, o valor será ignorado e nenhuma exceção será lançada.
 * Não há suporte para desserialização para tipos de referência sem um construtor com parâmetros.
 * A desserialização para objetos imutáveis ou propriedades somente leitura não tem suporte. Para obter mais informações, consulte o [problema do GitHub no suporte a objetos imutáveis](https://github.com/dotnet/corefx/issues/38569) e o [problema no suporte à propriedade somente leitura](https://github.com/dotnet/corefx/issues/38163) no repositório dotnet/corefx no github.
-* Por padrão, há suporte para enums como números.
+* Por padrão, há suporte para enums como números. Você pode [serializar nomes de enumeração como cadeias de caracteres](#enums-as-strings).
 * Não há suporte para campos.
-* Por padrão, comentários ou vírgulas à direita nas exceções do JSON throw. Você pode [permitir comentários e vírgulas à direita](#allow-comments-and-trailing-commas) , se necessário.
+* Por padrão, comentários ou vírgulas à direita nas exceções do JSON throw. Você pode [permitir comentários e vírgulas à direita](#allow-comments-and-trailing-commas).
 * A [profundidade máxima padrão](xref:System.Text.Json.JsonReaderOptions.MaxDepth) é 64.
+
+Você pode [implementar conversores personalizados](system-text-json-converters-how-to.md) para fornecer funcionalidade que não é suportada pelos conversores internos.
 
 ## <a name="serialize-to-formatted-json"></a>Serializar para JSON formatado
 
-Para imprimir a saída JSON com muita impressão, defina <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> como `true`:
+Para imprimir a saída JSON, defina <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> como `true`:
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -208,7 +235,7 @@ var options = new JsonSerializerOptions
 json = JsonSerializer.Serialize(weatherForecast, options);
 ```
 
-Aqui está um tipo de exemplo a ser serializado e a saída JSON:
+Aqui está um tipo de exemplo a ser serializado e a saída JSON bem impressa:
 
 ```csharp
 class WeatherForecast
@@ -227,39 +254,17 @@ class WeatherForecast
 }
 ```
 
-## <a name="allow-comments-and-trailing-commas"></a>Permitir comentários e vírgulas à direita
+## <a name="customize-json-names-and-values"></a>Personalizar nomes e valores JSON
 
-Por padrão, comentários e vírgulas à direita não são permitidos em JSON. Para permitir comentários no JSON, defina a propriedade <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> como `JsonCommentHandling.Skip`. E para permitir vírgulas à direita, defina a propriedade <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> como `true`. O exemplo a seguir mostra como permitir:
-
-```csharp
-var options = new JsonSerializerOptions
-{
-    ReadCommentHandling = JsonCommentHandling.Skip,
-    AllowTrailingCommas = true
-};
-var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json, options);
-```
-
-Aqui está um exemplo de JSON com comentários e uma vírgula à direita:
-
-```json
-{
-  "Date": "2019-08-01T00:00:00-07:00",
-  "TemperatureC": 25, // Fahrenheit 77
-  "Summary": "Hot", /* Zharko */
-}
-```
-
-## <a name="customize-json-names"></a>Personalizar nomes JSON
-
-Por padrão, os nomes de propriedade e as chaves de dicionário são inalterados na saída JSON, incluindo maiúsculas e minúsculas. Esta seção explica como:
+Por padrão, os nomes de propriedade e as chaves de dicionário são inalterados na saída JSON, incluindo maiúsculas e minúsculas. Os valores de enumeração são representados como números. Esta seção explica como:
 
 * Personalizar nomes de propriedade individuais
 * Converter todos os nomes de propriedade em camel case
 * Implementar uma política de nomenclatura de propriedade personalizada
 * Converter chaves de dicionário em camel case
+* Converter enums em cadeias de caracteres e camel case 
 
-Atualmente, não há suporte para converter automaticamente enums para o camel case. Para obter mais informações, consulte o [problema em Enumeração camel case support](https://github.com/dotnet/corefx/issues/37725) no repositório dotnet/Corefx no github.
+Para outros cenários que exigem tratamento especial de valores e nomes de propriedade JSON, você pode [implementar conversores personalizados](system-text-json-converters-how-to.md).
 
 ### <a name="customize-individual-property-names"></a>Personalizar nomes de propriedade individuais
 
@@ -310,7 +315,7 @@ Aqui está uma classe de exemplo para serializar e a saída JSON:
 class WeatherForecast
 {
     public DateTimeOffset Date { get; set; }
-    public int TemperatureC { get; set; }
+    public int TemperatureCelsius { get; set; }
     public string Summary { get; set; }
     [JsonPropertyName("Wind")]
     public int WindSpeed { get; set; }
@@ -320,7 +325,7 @@ class WeatherForecast
 ```json
 {
   "date": "2019-08-01T00:00:00-07:00",
-  "temperatureC": 25,
+  "temperatureCelsius": 25,
   "summary": "Hot",
   "Wind": 35
 }
@@ -329,11 +334,11 @@ class WeatherForecast
 A política de nomenclatura de Propriedade do camel case:
 
 * Aplica-se à serialização e desserialização.
-* É substituído pelos atributos `[JsonPropertyName]`.
+* É substituído por `[JsonPropertyName]` atributos. É por isso que o nome da propriedade JSON `Wind` no exemplo não é o camel case.
 
 ### <a name="use-a-custom-json-property-naming-policy"></a>Usar uma política de nomenclatura de propriedade JSON personalizada
 
-Para usar uma política de nomenclatura de propriedade JSON personalizada, crie uma classe que derive de <xref:System.Text.Json.JsonNamingPolicy> e substitua o método <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A>, conforme mostrado no exemplo a seguir:
+Para usar uma política de nomenclatura de propriedade JSON personalizada, crie uma classe derivada de <xref:System.Text.Json.JsonNamingPolicy> e substitua o método <xref:System.Text.Json.JsonNamingPolicy.ConvertName%2A>, conforme mostrado no exemplo a seguir:
 
 ```csharp
 class UpperCaseNamingPolicy : JsonNamingPolicy
@@ -380,11 +385,11 @@ class WeatherForecast
 A política de nomenclatura de propriedade JSON:
 
 * Aplica-se à serialização e desserialização.
-* É substituído pelos atributos `[JsonPropertyName]`.
+* É substituído por `[JsonPropertyName]` atributos. É por isso que o nome da propriedade JSON `Wind` no exemplo não é maiúscula.
 
 ### <a name="camel-case-dictionary-keys"></a>Chaves de dicionário do camel case
 
-Se uma propriedade de um objeto a ser serializado for do tipo `Dictionary<string,TValue>`, as chaves `string` poderão ser convertidas em camel case. Para fazer isso, defina <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> como `JsonNamingPolicy.CamelCase`, conforme mostrado no exemplo a seguir:
+Se uma propriedade de um objeto a ser serializado for do tipo `Dictionary<string,TValue>`, as chaves de `string` poderão ser convertidas em camel case. Para fazer isso, defina <xref:System.Text.Json.JsonSerializerOptions.DictionaryKeyPolicy> como `JsonNamingPolicy.CamelCase`, conforme mostrado no exemplo a seguir:
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -394,14 +399,7 @@ var options = new JsonSerializerOptions
 json = JsonSerializer.Serialize(weatherForecast, options);
 ```
 
-Aqui está um objeto de exemplo para serializar e a saída JSON:
-
-|Propriedade |Valor  |
-|---------|---------|
-| Date    | 8/1/2019 12:00:00 AM-07:00|
-| TemperatureC| 25 |
-| Resumo| Pontos|
-| TemperatureRanges | Frio, 20<br>Quente, 40|
+A serialização de um objeto com um dicionário chamado `TemperatureRanges` que tem pares chave-valor `"ColdMinTemp", 20` e `"HotMinTemp", 40` resultaria na saída JSON, como no exemplo a seguir:
 
 ```json
 {
@@ -409,15 +407,71 @@ Aqui está um objeto de exemplo para serializar e a saída JSON:
   "TemperatureC": 25,
   "Summary": "Hot",
   "TemperatureRanges": {
-    "cold": 20,
-    "hot": 40
+    "coldMinTemp": 20,
+    "hotMinTemp": 40
   }
 }
 ```
 
-A política de nomenclatura do camel case se aplica somente à serialização.
+A política de nomenclatura do camel case para chaves de dicionário se aplica somente à serialização. Se você desserializar um dicionário, as chaves corresponderão ao arquivo JSON mesmo se você especificar `JsonNamingPolicy.CamelCase` para o `DictionaryKeyPolicy`.
 
-## <a name="exclude-properties"></a>Excluir propriedades
+### <a name="enums-as-strings"></a>Enumerações como cadeias de caracteres
+
+Por padrão, as enumerações são serializadas como números. Para serializar nomes de enumeração como cadeias de caracteres, use o <xref:System.Text.Json.Serialization.JsonStringEnumConverter>.
+
+Por exemplo, suponha que você precise serializar a seguinte classe que tem uma enumeração:
+
+```csharp
+class WeatherForecastWithEnum
+{
+    public DateTimeOffset Date { get; set; }
+    public int TemperatureC { get; set; }
+    public Summary Summary { get; set; }
+}
+
+public enum Summary
+{
+    Cold, Cool, Warm, Hot
+}
+```
+
+Se o resumo for `Hot`, por padrão, o JSON serializado terá o valor numérico 3:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureC": 25,
+  "Summary": 3
+}
+```
+
+O código de exemplo a seguir serializa os nomes de enumeração e os converte em camel case:
+
+```csharp
+options = new JsonSerializerOptions();
+options.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
+jsonWithEnumsAsStrings = JsonSerializer.Serialize(weatherForecastWithEnum, options);
+```
+
+O JSON resultante é semelhante ao exemplo a seguir:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureC": 25,
+  "Summary": "hot"
+}
+```
+
+O suporte a enums como cadeias de caracteres se aplica à desserialização também, conforme mostrado no exemplo a seguir:
+
+```csharp
+options = new JsonSerializerOptions();
+options.Converters.Add(new JsonStringEnumConverter(JsonNamingPolicy.CamelCase));
+weatherForecastWithEnum = JsonSerializer.Deserialize<WeatherForecastWithEnum>(jsonWithEnumsAsStrings, options);
+```
+
+## <a name="exclude-properties-from-serialization"></a>Excluir propriedades da serialização
 
 Por padrão, todas as propriedades públicas são serializadas. Se você não quiser que alguns deles apareçam na saída JSON, terá várias opções. Esta seção explica como excluir:
 
@@ -452,7 +506,7 @@ class WeatherForecast
 
 ### <a name="exclude-all-read-only-properties"></a>Excluir todas as propriedades somente leitura
 
-Para excluir todas as propriedades somente leitura, defina o <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> como `true`, conforme mostrado no exemplo a seguir:
+Uma propriedade será somente leitura se ela contiver um getter público, mas não um setter público. Para excluir todas as propriedades somente leitura, defina o <xref:System.Text.Json.JsonSerializerOptions.IgnoreReadOnlyProperties?displayProperty=nameWithType> como `true`, conforme mostrado no exemplo a seguir:
 
 ```csharp
 var options = new JsonSerializerOptions
@@ -482,7 +536,7 @@ class WeatherForecast
 }
 ```
 
-Essa opção se aplica somente à serialização. Durante a desserialização, as propriedades somente leitura são ignoradas por padrão. Uma propriedade será somente leitura se ela contiver um getter público, mas não um setter público.
+Essa opção se aplica somente à serialização. Durante a desserialização, as propriedades somente leitura são ignoradas por padrão.
 
 ### <a name="exclude-all-null-value-properties"></a>Excluir todas as propriedades de valor nulo
 
@@ -498,7 +552,7 @@ json = JsonSerializer.Serialize(weatherForecast, options);
 
 Aqui está um objeto de exemplo para serializar e a saída JSON:
 
-|Propriedade |Valor  |
+|propriedade |Valor  |
 |---------|---------|
 | Date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureC| 25 |
@@ -511,40 +565,107 @@ Aqui está um objeto de exemplo para serializar e a saída JSON:
 }
 ```
 
-Essa configuração se aplica à serialização e desserialização. Durante a desserialização, os valores nulos no JSON serão ignorados somente se forem válidos. Valores nulos para tipos de valores não anuláveis causam exceções. Para obter mais informações, consulte o [problema em tipos de valores não anuláveis](https://github.com/dotnet/corefx/issues/40922) no repositório dotnet/Corefx no github.
+Essa configuração se aplica à serialização e desserialização. Para obter informações sobre o efeito na desserialização, consulte [ignorar nulo ao desserializar](#ignore-null-when-deserializing).
 
-## <a name="case-insensitive-property-matching"></a>Correspondência de propriedade que não diferencia maiúsculas de minúsculas
+## <a name="customize-character-encoding"></a>Personalizar codificação de caracteres
 
-Por padrão, a desserialização procura as correspondências de nome de propriedade que diferenciam maiúsculas de minúsculas entre JSON e as propriedades do objeto de destino. Para alterar esse comportamento, defina o <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> como `true`:
+Por padrão, o serializador escapa todos os caracteres não ASCII.  Ou seja, ele os substitui por `\uxxxx` em que `xxxxx` é o código Unicode do caractere.  Por exemplo, se a propriedade `Summary` for definida como cirílico жарко, o objeto `WeatherForecast` será serializado, conforme mostrado neste exemplo:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureC": 25,
+  "Summary": "\u0436\u0430\u0440\u043A\u043E"
+}
+```
+
+### <a name="serialize-language-character-sets"></a>Serializar conjuntos de caracteres de idioma
+
+Para serializar os conjuntos de caracteres de um ou mais idiomas, especifique [intervalo (s) Unicode](xref:System.Text.Unicode.UnicodeRanges) ao criar uma instância de <xref:System.Text.Encodings.Web.JavaScriptEncoder?displayProperty=fullName>, conforme mostrado no exemplo a seguir:
+
+```csharp
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Unicode;
+```
 
 ```csharp
 var options = new JsonSerializerOptions
 {
-    PropertyNameCaseInsensitive = true,
+    Encoder = JavaScriptEncoder.Create(UnicodeRanges.Cyrillic, UnicodeRanges.GreekExtended)
 };
-var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(weatherForecast, options);
+json = JsonSerializer.Serialize(weatherForecast, options);
 ```
 
-Aqui está um exemplo de JSON com nomes de Propriedade do camel case. Ele pode ser desserializado no seguinte tipo que tem nomes de propriedade de caso de Pascal.
+Esse código serializa os caracteres cirílico e grego. Os caracteres cirílicos são mostrados no exemplo a seguir:
 
 ```json
 {
-  "date": "2019-08-01T00:00:00-07:00",
-  "temperatureC": 25,
-  "summary": "Hot",
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureC": 25,
+  "Summary": "жарко",
 }
+```
+
+Para especificar todos os idiomas, use <xref:System.Text.Unicode.UnicodeRanges.All?displayProperty=nameWithType>.
+
+### <a name="serialize-specific-characters"></a>Serializar caracteres específicos
+
+Uma alternativa é especificar os caracteres individuais que você deseja permitir sem ter escape. O exemplo a seguir serializa apenas os dois primeiros caracteres de жарко:
+
+```csharp
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Unicode;
 ```
 
 ```csharp
-class WeatherForecast
+var encoderSettings = new TextEncoderSettings();
+encoderSettings.AllowCharacters('\u0436', '\u0430');
+options = new JsonSerializerOptions
 {
-    public DateTimeOffset Date { get; set; }
-    public int TemperatureC { get; set; }
-    public string Summary { get; set; }
+    Encoder = JavaScriptEncoder.Create(encoderSettings)
+};
+json = JsonSerializer.Serialize(weatherForecast, options);
+```
+
+Aqui está um exemplo de JSON produzido pelo código anterior:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureC": 25,
+  "Summary": "жа\u0440\u043A\u043E"
 }
 ```
 
-## <a name="include-properties-of-derived-classes"></a>Incluir propriedades de classes derivadas
+### <a name="serialize-all-characters"></a>Serializar todos os caracteres
+
+Para minimizar a saída, você pode usar <xref:System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping?displayProperty=nameWithType>, conforme mostrado no exemplo a seguir:
+
+```csharp
+using System.Text.Encodings.Web;
+using System.Text.Json;
+```
+
+```csharp
+options = new JsonSerializerOptions
+{
+    Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping
+};
+json = JsonSerializer.Serialize(weatherForecast, options);
+```
+
+> [!CAUTION]
+> Ao contrário do codificador padrão, o codificador de `UnsafeRelaxedJsonEscaping`:
+>
+> * Não sai de caracteres sensíveis a HTML, como `<`, `>`, `&`e `'`.
+> * O não oferece nenhuma proteção adicional de defesa profunda contra ataques XSS ou de divulgação de informações, como aqueles que podem resultar do cliente e do servidor que desconcordem com o conjunto de *caracteres*.
+> * É mais permissivo do que o codificador padrão no qual os caracteres têm permissão para passar sem escape.
+>
+> Use o codificador não seguro somente quando for conhecido que o cliente irá interpretar a carga resultante como JSON codificado em UTF-8. Por exemplo, você pode usá-lo se o servidor estiver enviando o cabeçalho de resposta `Content-Type: application/json; charset=utf-8`. Nunca permita que a saída de `UnsafeRelaxedJsonEscaping` bruta seja emitida em uma página HTML ou em um elemento `<script>`.
+
+## <a name="serialize-properties-of-derived-classes"></a>Serializar Propriedades de classes derivadas
 
 Não há suporte para a serialização polimórfica quando você especifica no momento da compilação o tipo a ser serializado. Por exemplo, suponha que você tenha uma classe `WeatherForecast` e uma classe derivada `WeatherForecastWithWind`:
 
@@ -561,19 +682,13 @@ class WeatherForecastWithWind : WeatherForecast
 }
 ```
 
-E suponha que o tipo passado para, ou inferido por, o método `Serialize` em tempo de compilação seja `WeatherForecast`:
+E suponha que o argumento de tipo do método de `Serialize` em tempo de compilação seja `WeatherForecast`:
 
 ```csharp
 string json = JsonSerializer.Serialize<WeatherForecast>(weatherForecast);
 ```
 
-```csharp
-WeatherForecast weatherForecast;
-//...
-json = JsonSerializer.Serialize(weatherForecast);
-```
-
-Nesse cenário, a propriedade `WindSpeed` não é serializada mesmo que o objeto `weatherForecast` seja, na verdade, um objeto `WeatherForecastWithWind`. Somente as propriedades da classe base são serializadas:
+Nesse cenário, a propriedade `WindSpeed` não é serializada, mesmo que o objeto `weatherForecast` seja, na verdade, um objeto `WeatherForecastWithWind`. Somente as propriedades da classe base são serializadas:
 
 ```json
 {
@@ -610,6 +725,62 @@ No cenário de exemplo anterior, ambas as abordagens fazem com que a propriedade
 }
 ```
 
+Para obter informações sobre desserialização polimórfica, consulte [dar suporte à desserialização polimórfica](system-text-json-converters-how-to.md#support-polymorphic-deserialization).
+
+## <a name="allow-comments-and-trailing-commas"></a>Permitir comentários e vírgulas à direita
+
+Por padrão, comentários e vírgulas à direita não são permitidos em JSON. Para permitir comentários no JSON, defina a propriedade <xref:System.Text.Json.JsonSerializerOptions.ReadCommentHandling?displayProperty=nameWithType> como `JsonCommentHandling.Skip`. E para permitir vírgulas à direita, defina a propriedade <xref:System.Text.Json.JsonSerializerOptions.AllowTrailingCommas?displayProperty=nameWithType> como `true`. O exemplo a seguir mostra como permitir:
+
+```csharp
+var options = new JsonSerializerOptions
+{
+    ReadCommentHandling = JsonCommentHandling.Skip,
+    AllowTrailingCommas = true
+};
+var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(json);
+```
+
+Aqui está um exemplo de JSON com comentários e uma vírgula à direita:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureC": 25, // Fahrenheit 77
+  "Summary": "Hot", /* Zharko */
+}
+```
+
+## <a name="case-insensitive-property-matching"></a>Correspondência de propriedade que não diferencia maiúsculas de minúsculas
+
+Por padrão, a desserialização procura as correspondências de nome de propriedade que diferenciam maiúsculas de minúsculas entre JSON e as propriedades do objeto de destino. Para alterar esse comportamento, defina o <xref:System.Text.Json.JsonSerializerOptions.PropertyNameCaseInsensitive?displayProperty=nameWithType> como `true`:
+
+```csharp
+var options = new JsonSerializerOptions
+{
+    PropertyNameCaseInsensitive = true,
+};
+var weatherForecast = JsonSerializer.Deserialize<WeatherForecast>(weatherForecast, options);
+```
+
+Aqui está um exemplo de JSON com nomes de Propriedade do camel case. Ele pode ser desserializado no seguinte tipo que tem nomes de propriedade de caso de Pascal.
+
+```json
+{
+  "date": "2019-08-01T00:00:00-07:00",
+  "temperatureC": 25,
+  "summary": "Hot",
+}
+```
+
+```csharp
+class WeatherForecast
+{
+    public DateTimeOffset Date { get; set; }
+    public int TemperatureC { get; set; }
+    public string Summary { get; set; }
+}
+```
+
 ## <a name="handle-overflow-json"></a>Processar JSON de estouro
 
 Durante a desserialização, você pode receber dados no JSON que não são representados pelas propriedades do tipo de destino. Por exemplo, suponha que o tipo de destino seja o seguinte:
@@ -642,7 +813,7 @@ E o JSON a ser desserializado é o seguinte:
 }
 ```
 
-Se você desserializar o JSON mostrado no tipo mostrado, as propriedades `DatesAvailable` e `SummaryWords` terão em qualquer lugar e serão perdidas. Para capturar dados adicionais, como essas propriedades, aplique o atributo [JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) a uma propriedade do tipo `Dictionary<string,object>` ou `Dictionary<string,JsonElement>`:
+Se você desserializar o JSON mostrado no tipo mostrado, as propriedades `DatesAvailable` e `SummaryWords` ficarão em qualquer lugar e serão perdidas. Para capturar dados adicionais, como essas propriedades, aplique o atributo [JsonExtensionData](xref:System.Text.Json.Serialization.JsonExtensionDataAttribute) a uma propriedade do tipo `Dictionary<string,object>` ou `Dictionary<string,JsonElement>`:
 
 ```csharp
 class WeatherForecast
@@ -657,7 +828,7 @@ class WeatherForecast
 
 Quando você desserializar o JSON mostrado anteriormente neste tipo de exemplo, os dados extras se tornarão pares chave-valor da propriedade `ExtensionData`:
 
-|Propriedade |Valor  |Observações  |
+|propriedade |Valor  |Anotações  |
 |---------|---------|---------|
 | Date    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureC| 0 | Incompatibilidade de maiúsculas e minúsculas (`temperatureC` no JSON), portanto, a propriedade não está definida. |
@@ -688,9 +859,217 @@ Quando o objeto de destino é serializado, os pares de valor de chave de dados d
 
 Observe que o nome da propriedade `ExtensionData` não aparece no JSON. Esse comportamento permite que o JSON faça uma viagem de ida e volta sem perder nenhum dado extra que, de outra forma, não seria desserializado.
 
-## <a name="use-utf8jsonwriter-directly"></a>Usar o Utf8JsonWriter diretamente
+## <a name="ignore-null-when-deserializing"></a>Ignorar nulo ao desserializar
 
-O exemplo a seguir mostra como usar a classe <xref:System.Text.Json.Utf8JsonWriter> diretamente.
+Por padrão, se uma propriedade em JSON for nula, a propriedade correspondente no objeto de destino será definida como NULL. Em alguns cenários, a propriedade de destino pode ter um valor padrão e você não quer um valor nulo para substituir o padrão.
+
+Por exemplo, suponha que o código a seguir represente o objeto de destino:
+
+```csharp
+class WeatherForecastWithDefault
+{
+    public WeatherForecastWithDefault()
+    {
+        Summary = "No summary";
+    }
+    public DateTimeOffset Date { get; set; }
+    public int TemperatureC { get; set; }
+    public string Summary { get; set; }
+}
+```
+
+E suponha que o JSON a seguir seja desserializado:
+
+```json
+{
+  "Date": "2019-08-01T00:00:00-07:00",
+  "TemperatureC": 25,
+  "Summary": null,
+}
+```
+
+Após a desserialização, a propriedade `Summary` do objeto `WeatherForecastWithDefault` é nula.
+
+Para alterar esse comportamento, defina <xref:System.Text.Json.JsonSerializerOptions.IgnoreNullValues?displayProperty=nameWithType> como `true`, conforme mostrado no exemplo a seguir:
+
+```csharp
+var options = new JsonSerializerOptions
+{
+    IgnoreNullValues = true
+};
+weatherForecast = JsonSerializer.Deserialize<WeatherForecastWithDefault>(json, options);
+```
+
+Com essa opção, a propriedade `Summary` do objeto `WeatherForecastWithDefault` é o valor padrão "sem Resumo" após a desserialização.
+
+Os valores nulos no JSON serão ignorados somente se forem válidos. Valores nulos para tipos de valores não anuláveis causam exceções. Para obter mais informações, consulte o [problema em tipos de valores não anuláveis](https://github.com/dotnet/corefx/issues/40922) no repositório dotnet/Corefx no github.
+
+## <a name="utf8jsonreader-utf8jsonwriter-and-jsondocument"></a>Utf8JsonReader, Utf8JsonWriter e JsonDocument
+
+<xref:System.Text.Json.Utf8JsonReader?displayProperty=fullName> é um leitor de alto desempenho, baixa alocação e somente para encaminhamento para texto JSON codificado em UTF-8, lido de um `ReadOnlySpan<byte>`. O `Utf8JsonReader` é um tipo de baixo nível que pode ser usado para criar analisadores e desserializadores personalizados. O método <xref:System.Text.Json.JsonSerializer.Deserialize%2A?displayProperty=nameWithType> usa `Utf8JsonReader` nos bastidores.
+
+<xref:System.Text.Json.Utf8JsonWriter?displayProperty=fullName> é uma maneira de alto desempenho para escrever texto JSON codificado em UTF-8 de tipos comuns do .NET, como `String`, `Int32`e `DateTime`. O gravador é um tipo de baixo nível que pode ser usado para criar serializadores personalizados. O método <xref:System.Text.Json.JsonSerializer.Serialize%2A?displayProperty=nameWithType> usa `Utf8JsonWriter` nos bastidores.
+
+<xref:System.Text.Json.JsonDocument?displayProperty=fullName> fornece a capacidade de criar um Modelo de Objeto do Documento (DOM) somente leitura usando `Utf8JsonReader`. O DOM fornece acesso aleatório aos dados em uma carga JSON. Os elementos JSON que compõem a carga podem ser acessados por meio do tipo de <xref:System.Text.Json.JsonElement>. O `JsonElement` fornece enumeradores de matriz e de objeto juntamente com APIs para converter texto JSON em tipos .NET comuns. `JsonDocument` expõe uma propriedade <xref:System.Text.Json.JsonDocument.RootElement>.
+
+As seções a seguir mostram como usar essas ferramentas para ler e gravar o JSON.
+
+## <a name="use-jsondocument-for-access-to-data"></a>Usar o JsonDocument para acessar dados
+
+O exemplo a seguir mostra como usar a classe <xref:System.Text.Json.JsonDocument> para acesso aleatório aos dados:
+
+```csharp
+double sum = 0;
+int count = 0;
+
+using (JsonDocument document = JsonDocument.Parse(jsonString))
+{
+    JsonElement root = document.RootElement;
+    JsonElement studentsElement = root.GetProperty("Students");
+    foreach (JsonElement student in studentsElement.EnumerateArray())
+    {
+        if (student.TryGetProperty("Grade", out JsonElement gradeElement))
+        {
+            sum += gradeElement.GetDouble();
+        }
+        else
+        {
+            sum += 70;
+        }
+        count++;
+    }
+}
+
+double average = sum / count;
+Console.WriteLine($"Average grade: {average}");
+```
+
+O código anterior:
+
+* Assume que o JSON a ser analisado está em uma cadeia de caracteres chamada `jsonString`.
+* Calcula uma classificação média para objetos em uma matriz de `Students` que têm uma propriedade `Grade`. 
+* Atribui uma classificação padrão de 70 para alunos que não têm uma classificação.
+* Conta os alunos incrementando uma `count` variável com cada iteração. Uma alternativa é chamar <xref:System.Text.Json.JsonElement.GetArrayLength%2A>:
+
+  ```csharp
+  count = studentsElement.GetArrayLength();
+  ```
+
+Veja um exemplo do JSON que esse código processa:
+
+```json
+{
+  "Class Name": "Science",
+  "Teacher's Name": "Jane",
+  "Semester": "2019-01-01",
+  "Students": [
+    {
+      "Name": "John",
+      "Grade": 94.3
+    },
+    {
+      "Name": "James",
+      "Grade": 81.0
+    },
+    {
+      "Name": "Julia",
+      "Grade": 91.9
+    },
+    {
+      "Name": "Jessica",
+      "Grade": 72.4
+    },
+    {
+      "Name": "Johnathan"
+    }
+  ],
+  "Final": true
+}
+```
+
+## <a name="use-jsondocument-to-write-json"></a>Usar JsonDocument para gravar JSON
+
+O exemplo a seguir mostra como gravar JSON de um <xref:System.Text.Json.JsonDocument>:
+
+```csharp
+string jsonString = File.ReadAllText(inputFileName);
+
+var writerOptions = new JsonWriterOptions { Indented = true };
+var documentOptions = new JsonDocumentOptions { CommentHandling = JsonCommentHandling.Skip };
+
+using (FileStream fs = File.Create(outputFileName))
+using (var writer = new Utf8JsonWriter(fs, options: writerOptions))
+using (JsonDocument document = JsonDocument.Parse(jsonString, documentOptions))
+{
+    JsonElement root = document.RootElement;
+
+    if (root.ValueKind == JsonValueKind.Object)
+    {
+        writer.WriteStartObject();
+    }
+    else
+    {
+        return;
+    }
+
+    foreach (JsonProperty property in root.EnumerateObject())
+    {
+        property.WriteTo(writer);
+    }
+
+    writer.WriteEndObject();
+
+    writer.Flush();
+}
+```
+
+O código anterior:
+
+* Lê um arquivo JSON, carrega os dados em um `JsonDocument`e grava JSON formatado (bem impresso) em um arquivo.
+* Usa <xref:System.Text.Json.JsonDocumentOptions> para especificar que os comentários no JSON de entrada são permitidos, mas ignorados.
+* Quando terminar, o chamará <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> no gravador. Uma alternativa é deixar o gravador AutoFlush quando ele é Descartado. 
+
+Aqui está um exemplo de entrada JSON a ser processada pelo código de exemplo:
+
+```json
+{"Class Name": "Science","Teacher's Name": "Jane","Semester": "2019-01-01","Students": [{"Name": "John","Grade": 94.3},{"Name": "James","Grade": 81.0},{"Name": "Julia","Grade": 91.9},{"Name": "Jessica","Grade": 72.4},{"Name": "Johnathan"}],"Final": true}
+```
+
+O resultado é a seguinte saída JSON bem impressa:
+
+```json
+{
+  "Class Name": "Science",
+  "Teacher\u0027s Name": "Jane",
+  "Semester": "2019-01-01",
+  "Students": [
+    {
+      "Name": "John",
+      "Grade": 94.3
+    },
+    {
+      "Name": "James",
+      "Grade": 81.0
+    },
+    {
+      "Name": "Julia",
+      "Grade": 91.9
+    },
+    {
+      "Name": "Jessica",
+      "Grade": 72.4
+    },
+    {
+      "Name": "Johnathan"
+    }
+  ],
+  "Final": true
+}
+```
+
+## <a name="use-utf8jsonwriter"></a>Usar Utf8JsonWriter
+
+O exemplo a seguir mostra como usar a classe <xref:System.Text.Json.Utf8JsonWriter>:
 
 ```csharp
 var options = new JsonWriterOptions
@@ -713,9 +1092,9 @@ using (var stream = new MemoryStream())
 }
 ```
 
-## <a name="use-utf8jsonreader-directly"></a>Usar o Utf8JsonReader diretamente
+## <a name="use-utf8jsonreader"></a>Usar Utf8JsonReader
 
-O exemplo a seguir mostra como usar a classe <xref:System.Text.Json.Utf8JsonReader> diretamente. O código pressupõe que a variável `jsonUtf8` é uma matriz de bytes que contém um JSON válido, codificado como UTF-8.
+O exemplo a seguir mostra como usar a classe <xref:System.Text.Json.Utf8JsonReader>:
 
 ```csharp
 var options = new JsonReaderOptions
@@ -755,8 +1134,111 @@ while (reader.Read())
 }
 ```
 
+O código anterior pressupõe que a variável `jsonUtf8` é uma matriz de bytes que contém um JSON válido, codificado como UTF-8.
+
+### <a name="filter-data-using-utf8jsonreader"></a>Filtrar dados usando Utf8JsonReader
+
+O exemplo a seguir mostra como ler um arquivo de forma síncrona e procurar um valor:
+
+```csharp
+class Program
+{
+    private static readonly byte[] s_nameUtf8 = Encoding.UTF8.GetBytes("name");
+    private static readonly byte[] s_universityUtf8 = Encoding.UTF8.GetBytes("University");
+
+    private static void ReaderFromFileSync(string fileName)
+    {
+         string jsonString = File.ReadAllText(fileName);
+         ReadOnlySpan<byte> jsonReadOnlySpan = Encoding.UTF8.GetBytes(jsonString);
+
+        int count = 0;
+        int total = 0;
+
+        var json = new Utf8JsonReader(jsonReadOnlySpan, isFinalBlock: true, state: default);
+
+        while (json.Read())
+        {
+            JsonTokenType tokenType = json.TokenType;
+
+            switch (tokenType)
+            {
+                case JsonTokenType.StartObject:
+                    total++;
+                    break;
+                case JsonTokenType.PropertyName:
+                    if (json.ValueSpan.SequenceEqual(s_nameUtf8))
+                    {
+                        bool result = json.Read();
+
+                        Debug.Assert(result);  // Assume valid JSON
+                        Debug.Assert(json.TokenType == JsonTokenType.String);   // Assume known, valid JSON schema
+
+                        if (json.ValueSpan.EndsWith(s_universityUtf8))
+                        {
+                            count++;
+                        }
+                    }
+                    break;
+            }
+        }
+        Console.WriteLine($"{count} out of {total} have names that end with 'University'");
+    }
+}
+```
+
+O código anterior:
+
+* Pressupõe que o arquivo é codificado como UTF-16 e o codifica em UTF-8. Um arquivo codificado como UTF-8 pode ser lido diretamente em um `ReadOnlySpan<byte>`, usando o seguinte código:
+
+  ```csharp
+  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
+  ```
+
+* Assume que o JSON contém uma matriz de objetos e cada objeto pode conter uma propriedade "Name" do tipo cadeia de caracteres.
+* Conta objetos e `name` valores de propriedade que terminam com "University".
+
+Aqui está um exemplo de JSON que o código anterior pode ler. A mensagem de resumo resultante é "2 de 4 têm nomes que terminam com" University "":
+
+```json
+[
+  {
+    "web_pages": [ "https://contoso.edu/" ],
+    "alpha_two_code": "US",
+    "state-province": null,
+    "country": "United States",
+    "domains": [ "contoso.edu" ],
+    "name": "Contoso Community College"
+  },
+  {
+    "web_pages": [ "http://fabrikam.edu/" ],
+    "alpha_two_code": "US",
+    "state-province": null,
+    "country": "United States",
+    "domains": [ "fabrikam.edu" ],
+    "name": "Fabrikam Community College"
+  },
+  {
+    "web_pages": [ "http://www.contosouniversity.edu/" ],
+    "alpha_two_code": "US",
+    "state-province": null,
+    "country": "United States",
+    "domains": [ "contosouniversity.edu" ],
+    "name": "Contoso University"
+  },
+  {
+    "web_pages": [ "http://www.fabrikamuniversity.edu/" ],
+    "alpha_two_code": "US",
+    "state-province": null,
+    "country": "United States",
+    "domains": [ "fabrikamuniversity.edu" ],
+    "name": "Fabrikam University"
+  }
+]
+```
+
 ## <a name="additional-resources"></a>Recursos adicionais
 
 * [Visão geral de System. Text. JSON](system-text-json-overview.md)
 * [Referência da API System. Text. JSON](xref:System.Text.Json)
+* [Gravar conversores personalizados para System. Text. JSON](system-text-json-converters-how-to.md)
 * [Suporte a DateTime e DateTimeOffset em System. Text. JSON](../datetime/system-text-json-support.md)

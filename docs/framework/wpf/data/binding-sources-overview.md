@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding source
 - binding sources [WPF]
 ms.assetid: 2df2cd11-6aac-4bdf-ab7b-ea5f464cd5ca
-ms.openlocfilehash: 5d0d28213ed8b4a0d464793aeba6823db2405bbe
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e7546021fbfde3fceea7fd4f1eba10cdc90dff8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459021"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740616"
 ---
 # <a name="binding-sources-overview"></a>Visão geral das fontes de associação
 Na associação de dados, o objeto de origem da associação refere-se ao objeto do qual você obtém dados. Este tópico discute os tipos de objetos que você pode usar como a origem da associação.
@@ -25,7 +25,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
 |objetos Common Language Runtime (CLR)|Você pode associar a propriedades públicas, subpropriedades, bem como indexadores, de qualquer objeto Common Language Runtime (CLR). O mecanismo de associação usa a reflexão do CLR para obter os valores das propriedades. Como alternativa, os objetos que implementam <xref:System.ComponentModel.ICustomTypeDescriptor> ou têm um <xref:System.ComponentModel.TypeDescriptionProvider> registrado também funcionam com o mecanismo de associação.<br /><br /> Para obter mais informações sobre como implementar uma classe que pode servir como uma origem da associação, consulte [Implementando uma classe para a origem da associação](#classes) mais adiante neste tópico.|
 |objetos dinâmicos|Você pode associar a propriedades disponíveis e indexadores de um objeto que implementa a interface <xref:System.Dynamic.IDynamicMetaObjectProvider>. Se você pode acessar o membro no código, pode associar a ele. Por exemplo, se um objeto dinâmico permite que você acesse um membro no código por meio de `someObjet.AProperty`, você pode associar a ele, definindo o caminho de associação como `AProperty`.|
 |Objetos ADO.NET|Você pode associar a objetos ADO.NET, como <xref:System.Data.DataTable>. O <xref:System.Data.DataView> ADO.NET implementa a interface <xref:System.ComponentModel.IBindingList>, que fornece notificações de alteração que o mecanismo de associação escuta.|
-|Objetos [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]|Você pode associar e executar `XPath` consultas em um <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>ou <xref:System.Xml.XmlElement>. Uma maneira conveniente de acessar dados de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] que é a origem da associação na marcação é usar um objeto <xref:System.Windows.Data.XmlDataProvider>. Para obter mais informações, consulte [Associar a dados XML usando um XMLDataProvider e consultas XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Você também pode associar a um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>ou associar os resultados de consultas executadas em objetos desses tipos usando LINQ to XML. Uma maneira conveniente de usar LINQ to XML para acessar dados XML que é a origem da associação na marcação é usar um objeto <xref:System.Windows.Data.ObjectDataProvider>. Para obter mais informações, consulte [Associar a XDocument, XElement ou LINQ para resultados de Consulta XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|
+|Objetos XML|Você pode associar e executar `XPath` consultas em um <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>ou <xref:System.Xml.XmlElement>. Uma maneira conveniente de acessar dados XML que é a origem da associação na marcação é usar um objeto <xref:System.Windows.Data.XmlDataProvider>. Para obter mais informações, consulte [Associar a dados XML usando um XMLDataProvider e consultas XPath](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Você também pode associar a um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>ou associar os resultados de consultas executadas em objetos desses tipos usando LINQ to XML. Uma maneira conveniente de usar LINQ to XML para acessar dados XML que é a origem da associação na marcação é usar um objeto <xref:System.Windows.Data.ObjectDataProvider>. Para obter mais informações, consulte [Associar a XDocument, XElement ou LINQ para resultados de Consulta XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|
 |Objetos <xref:System.Windows.DependencyObject>|Você pode associar a propriedades de dependência de qualquer <xref:System.Windows.DependencyObject>. Para obter um exemplo, consulte [Associar as propriedades de dois controles](how-to-bind-the-properties-of-two-controls.md).|
 
 <a name="classes"></a>
@@ -86,7 +86,7 @@ Na associação de dados, o objeto de origem da associação refere-se ao objeto
 
 - Você sempre pode associar a propriedades de dependência.
 
- O requisito de permissão para a associação [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] é semelhante. Em uma área restrita de confiança parcial, <xref:System.Windows.Data.XmlDataProvider> falha quando não tem permissões para acessar os dados especificados.
+ O requisito de permissão para associação de XML é semelhante. Em uma área restrita de confiança parcial, <xref:System.Windows.Data.XmlDataProvider> falha quando não tem permissões para acessar os dados especificados.
 
  Objetos com um tipo anônimo são internos. Você pode associar a propriedades de tipos anônimos somente durante a execução em confiança total. Para obter mais informações sobre tipos anônimos, consulte [Tipos anônimos (Guia de programação em C#)](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md) ou [Tipos anônimos (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) (Visual Basic).
 

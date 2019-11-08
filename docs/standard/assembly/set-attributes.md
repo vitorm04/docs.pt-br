@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: fe003a6c74da59c1cb47a0f12a8597143916e320
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0e4e2e595ed4f95511bd23ab0ed00139f71b2c8b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138659"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740476"
 ---
 # <a name="set-assembly-attributes"></a>Definir atributos do assembly
 
@@ -37,7 +37,7 @@ A tabela a seguir descreve os atributos de versão e cultura.
 
 |Atributo de identidade do assembly|Descrição|
 |---------------------------------|-----------------|
-|<xref:System.Reflection.AssemblyCultureAttribute>|Campo enumerado que indica a cultura compatível com o assembly. Um assembly também pode especificar a independência da cultura, indicando que ela contém os recursos para a cultura padrão. **Observação:** o tempo de execução trata qualquer assembly que não tenha o atributo de cultura definido como nulo, como um assembly satélite. Esses assemblies estão sujeitos às regras de associação de assembly satélite. Para obter mais informações, consulte [como o tempo de execução localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
+|<xref:System.Reflection.AssemblyCultureAttribute>|Campo enumerado que indica a cultura compatível com o assembly. Um assembly também pode especificar a independência da cultura, indicando que ela contém os recursos para a cultura padrão. **Observação:** o runtime trata qualquer assembly que não tenha o atributo de cultura definido como nulo, como um assembly satélite. Esses assemblies estão sujeitos às regras de associação de assembly satélite. Para obter mais informações, consulte [como o tempo de execução localiza assemblies](../../framework/deployment/how-the-runtime-locates-assemblies.md).|
 |<xref:System.Reflection.AssemblyFlagsAttribute>|O valor que define os atributos de assembly; por exemplo, se o assembly pode ser executado lado a lado.|
 |<xref:System.Reflection.AssemblyVersionAttribute>|Valor numérico no formato *principal*.*secundário*.*compilação*.*revisão* (por exemplo, 2.4.0.0). O Common Language Runtime usa esse valor para executar operações de associação em assemblies com nome forte. **Observação:** se o atributo <xref:System.Reflection.AssemblyInformationalVersionAttribute> não for aplicado a um assembly, o número de versão especificado pelo atributo <xref:System.Reflection.AssemblyVersionAttribute> será usado pelas propriedades <xref:System.Windows.Forms.Application.ProductVersion%2A?displayProperty=nameWithType>, <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> e <xref:System.Windows.Forms.Application.UserAppDataRegistry%2A?displayProperty=nameWithType>.|
 
@@ -120,4 +120,3 @@ O exemplo de código a seguir mostra os atributos a serem aplicados ao usar a as
 ## <a name="see-also"></a>Consulte também
 
 - [Criar assemblies](create.md)
-- [Programa com assemblies](program.md)

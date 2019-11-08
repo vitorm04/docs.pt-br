@@ -2,22 +2,22 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 409d2e47b411c0bfaa2b0fe46fc242bd8453a042
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 6761d090206e55e58001ea2bb885eaa69f26d9eb
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399486"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738645"
 ---
-# <a name="tcptransport"></a>\<tcpTransport>
+# <a name="tcptransport"></a>\<tcpTransport >
 Define um transporte TCP que pode ser usado por um canal para transferir mensagens para uma associação personalizada.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de CustomBinding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> tcpTransport**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tcpTransport >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -53,7 +53,7 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 |channelInitializationTimeout|Obtém ou define o limite de tempo para inicializar um canal a ser aceito.  O tempo máximo que um canal pode estar no estado de inicialização antes de ser desconectado em segundos. Essa cota inclui o tempo que uma conexão TCP pode tomar para se autenticar usando o protocolo de enquadramento de mensagens .NET. Um cliente precisa enviar alguns dados iniciais antes que o servidor tenha informações suficientes para executar a autenticação. O padrão é 30 segundos.|  
 |connectionBufferSize|Obtém ou define o tamanho do buffer usado para transmitir uma parte da mensagem serializada na conexão do cliente ou do serviço.|  
 |hostNameComparisonMode|Obtém ou define um valor que indica se o nome do host é usado para alcançar o serviço ao fazer correspondência no URI.|  
-|listenBacklog|O número máximo de solicitações de conexão em fila que podem estar pendentes para um serviço Web. O `connectionLeaseTimeout` atributo limita a duração que o cliente aguardará para ser conectado antes de lançar uma exceção de conexão. Essa é uma propriedade de nível de soquete que controla o número máximo de solicitações de conexão em fila que podem estar pendentes para um serviço Web. Quando ListenBacklog for muito baixo, o WCF deixará de aceitar solicitações e, portanto, descartará novas conexões até que o servidor reconheça algumas das conexões em fila existentes. O padrão é 16 * número de processadores.|  
+|listenBacklog|O número máximo de solicitações de conexão em fila que podem estar pendentes para um serviço Web. O atributo `connectionLeaseTimeout` limita a duração que o cliente aguardará para ser conectado antes de lançar uma exceção de conexão. Essa é uma propriedade de nível de soquete que controla o número máximo de solicitações de conexão em fila que podem estar pendentes para um serviço Web. Quando ListenBacklog for muito baixo, o WCF deixará de aceitar solicitações e, portanto, descartará novas conexões até que o servidor reconheça algumas das conexões em fila existentes. O padrão é 16 * número de processadores.|  
 |manualAddressing|Obtém ou define um valor que indica se o endereçamento manual da mensagem é necessário.|  
 |maxBufferPoolSize|Obtém ou define o tamanho máximo de qualquer pool de buffer usado pelo transporte.|  
 |maxBufferSize|Obtém ou define o tamanho máximo do buffer a ser usado. Para mensagens transmitidas, este valor deve ser pelo menos o tamanho máximo possível dos cabeçalhos de mensagem, lidos em modo em buffer.|  
@@ -62,7 +62,7 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 |maxPendingConnections|Obtém ou define o número máximo de conexões aguardando a expedição no serviço.|  
 |maxReceivedMessageSize|Obtém e define o tamanho máximo de mensagem permitido que pode ser recebido.|  
 |portSharingEnabled|Um valor booliano que especifica se o compartilhamento de porta TCP está habilitado para esta conexão. Se isso for `false`, cada associação usará sua própria porta exclusiva. O padrão é `false`.<br /><br /> Essa configuração é relevante apenas para serviços do. Os clientes não são afetados.<br /><br /> O uso dessa configuração requer a habilitação do serviço de compartilhamento de porta TCP Windows Communication Foundation (WCF) alterando seu tipo de inicialização para manual ou automático|  
-|teredoEnabled|Um valor booliano que especifica se Teredo (uma tecnologia para endereçar clientes que estão atrás de firewalls) está habilitado. O padrão é `false`.<br /><br /> Essa propriedade habilita a Teredo para o soquete TCP subjacente. Para obter mais informações, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Essa propriedade é aplicável somente no [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]no. [!INCLUDE[wv](../../../../../includes/wv-md.md)]tem uma opção de configuração de todo o computador para Teredo, portanto, ao executar o vista, essa propriedade é ignorada. O Teredo requer que o cliente e as máquinas de serviço tenham a pilha do Microsoft IPv6 instalada e configurada corretamente para uso de Teredo. Para obter mais informações sobre como configurar o Teredo, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Para obter mais informações, consulte [Windows Server 2003 Technology Centers](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Um valor booliano que especifica se Teredo (uma tecnologia para endereçar clientes que estão atrás de firewalls) está habilitado. O padrão é `false`.<br /><br /> Essa propriedade habilita a Teredo para o soquete TCP subjacente. Para obter mais informações, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Essa propriedade é aplicável somente em [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. [!INCLUDE[wv](../../../../../includes/wv-md.md)] tem uma opção de configuração de todo o computador para Teredo, portanto, ao executar o vista, essa propriedade é ignorada. O Teredo requer que o cliente e as máquinas de serviço tenham a pilha do Microsoft IPv6 instalada e configurada corretamente para uso de Teredo. Para obter mais informações sobre como configurar o Teredo, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Para obter mais informações, consulte [Windows Server 2003 Technology Centers](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Obtém ou define um valor que indica se as mensagens são armazenadas em buffer ou transmitidas com o transporte voltado para a conexão.|  
 |connectionPoolSettings|Especifica configurações de pool de conexões adicionais para uma associação de pipe nomeado.|  
   
@@ -73,12 +73,12 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<binding >](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse transporte usa URIs no formato "net. TCP://hostname: port/path". Outros componentes de URI são opcionais.  
   
- O `tcpTransport` elemento é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte TCP. Esse transporte é otimizado para comunicação WCF para WCF.  
+ O elemento `tcpTransport` é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte TCP. Esse transporte é otimizado para comunicação WCF para WCF.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -91,4 +91,4 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 - [Associações](../../../wcf/bindings.md)
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding](custombinding.md)

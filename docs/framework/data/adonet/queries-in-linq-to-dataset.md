@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: 5aaf33e5e2379ace4d32c59bd842889d0f9e32da
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 15a27c743f54a8ba6ea52edfde08731d8b439645
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794541"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735412"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Consultas no LINQ to DataSet
 Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalmente, as consultas são expressas em uma linguagem de consulta especializada, como o SQL para bancos de dados relacionais e o XQuery para XML. Portanto, os desenvolvedores precisaram aprender uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados que consultam. O [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] oferece um modelo mais simples e consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], você sempre trabalha com objetos de programação.  
   
  Uma operação de consulta [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consiste em três ações: obter a fonte ou fontes de dados, criar a consulta e executá-la.  
   
- As fontes de dados que implementam a interface genérica <xref:System.Collections.Generic.IEnumerable%601> podem ser consultadas por meio do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Chamar <xref:System.Data.DataTableExtensions.AsEnumerable%2A> em um <xref:System.Data.DataTable> retorna um objeto que implementa a interface <xref:System.Collections.Generic.IEnumerable%601> genérica, que serve como fonte de dados para consultas de LINQ to DataSet.  
+ As fontes de dados que implementam a interface genérica <xref:System.Collections.Generic.IEnumerable%601> podem ser consultadas por meio do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]. Chamar <xref:System.Data.DataTableExtensions.AsEnumerable%2A> em um <xref:System.Data.DataTable> retorna um objeto que implementa a interface de <xref:System.Collections.Generic.IEnumerable%601> genérica, que serve como a fonte de dados para consultas de LINQ to DataSet.  
   
  Na consulta, você especifica exatamente as informações que deseja recuperar da fonte de dados. Uma consulta também pode especificar como essas informações devem ser classificadas, agrupadas e moldadas antes de serem retornadas. No [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)], uma consulta é armazenada em uma variável. Se a consulta for projetada para retornar uma sequência de valores, a variável de consulta em si deverá ser um tipo enumerável. Essa variável de consulta não toma nenhuma ação e não retorna nenhum dado, ela apenas armazena as informações da consulta. Depois de criar uma consulta, você deve executá-la para recuperar todos os dados.  
   
@@ -52,7 +52,7 @@ Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalm
  [!code-csharp[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#composing)]
  [!code-vb[DP LINQ to DataSet Examples#Composing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#composing)]  
   
- Depois que uma consulta foi executada, nenhuma consulta adicional pode ser composta, e todas as consultas subsequentes usarão os operadores do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] na memória. A execução da consulta ocorrerá quando você iterar a variável de `foreach` consulta `For Each` em uma instrução or ou por uma [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] chamada para um dos operadores de conversão que causam execução imediata. Esses operadores incluem: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> e <xref:System.Linq.Enumerable.ToDictionary%2A>.  
+ Depois que uma consulta foi executada, nenhuma consulta adicional pode ser composta, e todas as consultas subsequentes usarão os operadores do [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] na memória. A execução da consulta ocorrerá quando você iterar a variável de consulta em uma instrução `foreach` ou `For Each` ou por uma chamada para um dos operadores de conversão [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] que causam execução imediata. Esses operadores incluem: <xref:System.Linq.Enumerable.ToList%2A>, <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToLookup%2A> e <xref:System.Linq.Enumerable.ToDictionary%2A>.  
   
  No exemplo a seguir, a primeira consulta retorna todos os produtos ordenados pelo preço de lista. O método <xref:System.Linq.Enumerable.ToArray%2A> é usado para forçar a execução imediata da consulta:  
   
@@ -63,5 +63,5 @@ Uma consulta é uma expressão que recupera dados de uma fonte de dados. Normalm
 
 - [Guia de Programação](programming-guide-linq-to-dataset.md)
 - [Consultando DataSets](querying-datasets-linq-to-dataset.md)
-- [Introdução a LINQ em C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Introdução a LINQ em C#](../../../csharp/programming-guide/concepts/linq/index.md)
 - [Introdução ao LINQ no Visual Basic](../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)

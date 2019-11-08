@@ -2,17 +2,14 @@
 title: Visual Basic alterações significativas-.NET Core
 description: Lista as alterações significativas em Visual Basic usadas com o .NET Core.
 ms.date: 09/20/2019
-ms.openlocfilehash: c4db31079098ca48dfd0ef4708a55049dde619fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f7cd5160631ac696d542084a71dc44e65a94cabf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092804"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739334"
 ---
 # <a name="visual-basic-breaking-changes"></a>Visual Basic alterações significativas
-
-> [!IMPORTANT]
-> Este artigo está em construção. Esta não é uma lista completa de alterações significativas do .NET Core. Para obter mais informações sobre as alterações significativas no .NET Core, você pode examinar os problemas individuais de [alterações significativas](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) no repositório dotnet/docs no github.
 
 Veja a seguir uma lista de alterações significativas no Visual Basic pela versão do .NET Core.
 

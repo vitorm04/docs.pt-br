@@ -3,12 +3,12 @@ title: O histórico da linguagem C# – Guia do C#
 description: Qual era a aparência da linguagem nas primeiras versões e como ela evoluiu desde então?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 490f001d4ed648d6621f8ec059201830acb90af0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423094"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739096"
 ---
 # <a name="the-history-of-c"></a>O histórico da linguagem C\#
 
@@ -57,7 +57,7 @@ Neste momento, as coisas começam a ficar interessantes. Vamos dar uma olhada em
 - [Genéricos](../programming-guide/generics/index.md)
 - [Tipos parciais](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
 - [Métodos anônimos](../language-reference/operators/delegate-operator.md)
-- [Tipos de valor anuláveis](../programming-guide/nullable-types/index.md)
+- [Tipos de valor anuláveis](../language-reference/builtin-types/nullable-value-types.md)
 - [Iteradores](../programming-guide/concepts/iterators.md)
 - [Covariância e contravariância](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -111,7 +111,7 @@ A próxima versão introduziu alguns novos recursos interessantes:
 
 Os tipos de interoperabilidade inseridos atenuaram um problema de implantação. A contravariância e a covariância genérica oferecem maior capacidade para usar genéricos, mas eles são um tanto acadêmicos e provavelmente mais apreciados por autores de estruturas e bibliotecas. Os parâmetros nomeados e opcionais permitem eliminar várias sobrecargas de método e oferecem conveniência. Mas nenhum desses recursos é exatamente uma alteração de paradigma.
 
-O recurso principal foi a introdução da palavra-chave `dynamic`. A palavra-chave `dynamic` introduziu na versão 4.0 do C# a capacidade de substituir o compilador na tipagem em tempo de compilação. Com o uso da palavra-chave dinâmica, você pode criar constructos semelhantes a linguagens dinamicamente tipadas, como JavaScript. Você pode criar um `dynamic x = "a string"` e, em seguida, adicionar seis a ela, deixando que o tempo de execução decida o que acontece em seguida.
+O recurso principal foi a introdução da palavra-chave `dynamic`. A palavra-chave `dynamic` introduziu na versão 4.0 do C# a capacidade de substituir o compilador na tipagem em tempo de compilação. Com o uso da palavra-chave dinâmica, você pode criar constructos semelhantes a linguagens dinamicamente tipadas, como JavaScript. Você pode criar um `dynamic x = "a string"` e, em seguida, adicionar seis a ela, deixando que o runtime decida o que acontece em seguida.
 
 Associação dinâmica tem potencial de erros, mas também grande eficiência na linguagem.
 

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 04001f88e0f59fd4eb3ca84d846456be7740737e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460491"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740860"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta problemas que você deve estar atento ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização são definidos no .NET no namespace <xref:System.Globalization>.
 
 <a name="xaml_globalization"></a>
 ## <a name="xaml-globalization"></a>Globalização XAML
- O Extensible Application Markup Language (XAML) baseia-se em [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] e aproveita o suporte à globalização definido na especificação de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]. As seções a seguir descrevem alguns recursos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dos quais você deve estar atento.
+ O Extensible Application Markup Language (XAML) é baseado em XML e aproveita o suporte à globalização definido na especificação XML. As seções a seguir descrevem alguns recursos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] dos quais você deve estar atento.
 
 <a name="char_reference"></a>
 ### <a name="character-references"></a>Referências de Caractere
@@ -143,7 +143,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 <a name="mui"></a>
 ### <a name="multilingual-user-interface"></a>Interface do Usuário Multilíngue
- MUI (Multilingual User Interfaces) é um suporte da Microsoft para alternar interfaces de usuário de um idioma para outro. Um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa o modelo de assembly para dar suporte ao MUI. Um aplicativo contém assemblies de com neutralidade de idioma, bem como assemblies satélite dependentes de idioma em recursos. O ponto de entrada é .EXE gerenciado no assembly principal.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] carregador de recursos aproveita o Gerenciador de recursos do [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]para dar suporte à pesquisa e ao fallback de recursos. Vários assemblies satélite funcionam com o mesmo assembly principal. O assembly de recurso que é carregado depende da <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> do thread atual.
+ MUI (Multilingual User Interfaces) é um suporte da Microsoft para alternar interfaces de usuário de um idioma para outro. Um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa o modelo de assembly para dar suporte ao MUI. Um aplicativo contém assemblies de com neutralidade de idioma, bem como assemblies satélite dependentes de idioma em recursos. O ponto de entrada é .EXE gerenciado no assembly principal.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] carregador de recursos aproveita o Gerenciador de recursos da estrutura para dar suporte à pesquisa e ao fallback de recursos. Vários assemblies satélite funcionam com o mesmo assembly principal. O assembly de recurso que é carregado depende da <xref:System.Globalization.CultureInfo.CurrentUICulture%2A> do thread atual.
 
 <a name="localizable_ui"></a>
 ### <a name="localizable-user-interface"></a>Interface do usuário localizável
@@ -152,7 +152,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
  Do ponto de vista de um recurso, um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] projetado para descrever um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dependente de idioma é um elemento de recurso e, portanto, seu formato de distribuição final deve ser localizável para dar suporte a idiomas internacionais. Como [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] não pode manipular eventos muitos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplicativos contêm blocos de código para fazer isso. Para obter mais informações, consulte [visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md). O código é removido e compilado em binários diferentes quando um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é indexado na forma BAML do XAML. O formulário BAML de arquivos XAML, imagens e outros tipos de objetos de recursos gerenciados são inseridos no assembly de recursos satélite, que pode ser localizado em outros idiomas ou o assembly principal quando a localização não é necessária.
 
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos dão suporte a todos os [!INCLUDE[TLA2#tla_netframewk](../../../../includes/tla2sharptla-netframewk-md.md)]recursos CLR, incluindo tabelas de cadeias de caracteres, imagens e assim por diante.
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos dão suporte a todos os recursos FrameworkCLR, incluindo tabelas de cadeias de caracteres, imagens e assim por diante.
 
 <a name="building_localizable_apps"></a>
 ### <a name="building-localizable-applications"></a>Construindo aplicativos localizáveis

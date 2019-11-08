@@ -1,21 +1,21 @@
 ---
-title: 'Como: usar procedimentos armazenados que usam parâmetros'
+title: 'Como: Use os procedimentos armazenados que têm parâmetros'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b935fd84-cb9c-4205-8c48-658d5db2ec93
-ms.openlocfilehash: e9d77cd1dc82e1b103c5f0d9f3f447ed105acaec
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: faf4ea9c52b91c3fc0f2f775e7bd5dfe039c53a8
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72003249"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738117"
 ---
-# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Como: usar procedimentos armazenados que usam parâmetros
+# <a name="how-to-use-stored-procedures-that-take-parameters"></a>Como: Use os procedimentos armazenados que têm parâmetros
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapeia parâmetros de saída para definições de referência, e para tipos de valor declara o parâmetro como anulável.  
   
- Para obter um exemplo de como usar um parâmetro de entrada em uma consulta que retorna um conjunto de linhas, consulte [How para: Retornar conjuntos de linhas @ no__t-0.  
+ Para obter um exemplo de como usar um parâmetro de entrada em uma consulta que retorna um conjunto de linhas, consulte [How to: Return DataSets](how-to-return-rowsets.md).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir utiliza um único parâmetro de entrada (a identificação do cliente) e retorna um parâmetro de saída (o total de vendas para aquele cliente.)  
@@ -43,5 +43,5 @@ where O.CUSTOMERID = @CustomerID AND O.ORDERID = OD.ORDERID
 
 - [Procedimentos armazenados](stored-procedures.md)
 - [Downloading Sample Databases](downloading-sample-databases.md) (Baixando bancos de dados de amostra)
-- [Usando tipos de valor anulável](../../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
-- [Tipos de Valor Anulável](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [Tipos de valor AnulávelC#()](../../../../../csharp/language-reference/builtin-types/nullable-value-types.md)
+- [Tipos de valor que permitem valor nulo (Visual Basic)](../../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

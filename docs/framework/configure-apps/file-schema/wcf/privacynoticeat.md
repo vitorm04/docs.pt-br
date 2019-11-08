@@ -2,22 +2,22 @@
 title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: 624b52c0618362f48063c8f7e7c53c5a68d7de8f
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 2ff70d3a8636970434582e417e4549ab6b433fc1
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70400035"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738770"
 ---
-# <a name="privacynoticeat"></a>\<privacyNoticeAt>
+# <a name="privacynoticeat"></a>\<privacyNoticeAt >
 Representa um elemento de configuração que especifica um aviso de privacidade usado na associação `wsFederationHttp`.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de CustomBinding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> privacyNotice**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<privacyNotice >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,7 +26,7 @@ Representa um elemento de configuração que especifica um aviso de privacidade 
                version="Integer" />
 ```  
   
-## <a name="type"></a>Tipo  
+## <a name="type"></a>Digite  
  `Type`  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
@@ -46,7 +46,7 @@ Representa um elemento de configuração que especifica um aviso de privacidade 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<binding >](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -56,4 +56,4 @@ Representa um elemento de configuração que especifica um aviso de privacidade 
 - [Associações](../../../wcf/bindings.md)
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding](custombinding.md)

@@ -2,23 +2,23 @@
 title: <transport> de <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: 6ea0b1e374659bbbbb2f47630c009f823ccd4de9
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: d40178e59b89c2912123e1927e9e960f6d880871
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399328"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735965"
 ---
-# <a name="transport-of-netnamedpipebinding"></a>\<> de transporte \<do NetNamedPipeBinding >
+# <a name="transport-of-netnamedpipebinding"></a>> de transporte de \<de \<netNamedPipeBinding >
 Define as configurações de segurança de transporte para um pipe nomeado.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> netNamedPipeBinding**](netnamedpipebinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de segurança**](security-of-netnamedpipebinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de transporte**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netNamedPipeBinding >** ](netnamedpipebinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-of-netnamedpipebinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**transporte >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ Define as configurações de segurança de transporte para um pipe nomeado.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|protectionLevel|Define o nível de proteção do pipe nomeado. A assinatura de mensagens reduz o risco de violação de terceiros com a mensagem enquanto ela está sendo transferida. A criptografia fornece privacidade no nível de dados durante o transporte. Os valores válidos incluem o seguinte:<br /><br /> None Sem proteção.<br />Assine As mensagens são assinadas.<br />EncryptAndSign As mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é EncryptAndSign.|  
+|protectionLevel|Define o nível de proteção do pipe nomeado. A assinatura de mensagens reduz o risco de violação de terceiros com a mensagem enquanto ela está sendo transferida. A criptografia fornece privacidade no nível de dados durante o transporte. Os valores válidos incluem o seguinte:<br /><br /> -Nenhum: sem proteção.<br />-Sign: as mensagens são assinadas.<br />-EncryptAndSign: as mensagens são criptografadas e assinadas.<br /><br /> O valor padrão é EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -48,7 +48,7 @@ Define as configurações de segurança de transporte para um pipe nomeado.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](security-of-netnamedpipebinding.md)|Define as configurações de segurança para uma associação.|  
+|[\<Security >](security-of-netnamedpipebinding.md)|Define as configurações de segurança para uma associação.|  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -60,4 +60,4 @@ Define as configurações de segurança de transporte para um pipe nomeado.
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

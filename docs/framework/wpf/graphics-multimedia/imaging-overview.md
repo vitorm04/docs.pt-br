@@ -21,12 +21,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 7c0168d5ca8b1d3bda709f934e454b2603d37b71
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b60f2871062a12d3bee91a9c6d9883222b3034f4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039877"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733573"
 ---
 # <a name="imaging-overview"></a>Visão geral da geração de imagens
 Este tópico fornece uma introdução ao componente Microsoft Windows Presentation Foundation Imaging. A geração de imagens do WPF permite que os desenvolvedores exibam, transformem e formatem imagens.  
@@ -165,7 +165,7 @@ Os pincéis de imagem podem preencher formas, controles, texto e muito mais
 ## <a name="image-metadata"></a>Metadados de imagem  
  Alguns arquivos de imagem contêm metadados que descrevem o conteúdo ou as características do arquivo. Por exemplo, a maioria das câmeras digitais criam imagens que contêm metadados sobre a marca e modelo da câmera usada para capturar a imagem. Cada formato de imagem manipula metadados de maneira diferente, mas a geração de imagens do WPF fornece uma maneira uniforme de armazenar e recuperar metadados para cada formato de imagem com suporte.  
   
- O acesso aos metadados é fornecido por meio da propriedade <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> de um objeto <xref:System.Windows.Media.Imaging.BitmapSource>. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> retorna um objeto <xref:System.Windows.Media.Imaging.BitmapMetadata> que inclui todos os metadados contidos na imagem. Esses dados podem estar em um esquema de metadados ou em uma combinação de esquemas diferentes. A geração de imagens do WPF dá suporte aos seguintes esquemas de metadados de imagem: EXIF (arquivo de imagem intercambiável), texto (dados textuais PNG), IFD (diretório de arquivos de imagem), IPTC (International Press Telecommunications Council) e [!INCLUDE[TLA#tla_xmp](../../../../includes/tlasharptla-xmp-md.md)].  
+ O acesso aos metadados é fornecido por meio da propriedade <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> de um objeto <xref:System.Windows.Media.Imaging.BitmapSource>. <xref:System.Windows.Media.Imaging.BitmapSource.Metadata%2A> retorna um objeto <xref:System.Windows.Media.Imaging.BitmapMetadata> que inclui todos os metadados contidos na imagem. Esses dados podem estar em um esquema de metadados ou em uma combinação de esquemas diferentes. A geração de imagens do WPF dá suporte aos seguintes esquemas de metadados de imagem: EXIF (arquivo de imagem intercambiável), texto (dados textuais PNG), IFD (diretório de arquivos de imagem), IPTC (International Press Telecommunications Council) e XMP (plataforma de metadados extensível).  
   
  Para simplificar o processo de leitura de metadados, o <xref:System.Windows.Media.Imaging.BitmapMetadata> fornece várias propriedades nomeadas que podem ser acessadas facilmente, como <xref:System.Windows.Media.Imaging.BitmapMetadata.Author%2A>, <xref:System.Windows.Media.Imaging.BitmapMetadata.Title%2A>e <xref:System.Windows.Media.Imaging.BitmapMetadata.CameraModel%2A>. Muitas dessas propriedades nomeadas também podem ser usadas para gravar metadados. O suporte adicional para a leitura de metadados é fornecido pelo leitor de consulta de metadados. O método <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> é usado para recuperar um leitor de consulta de metadados, fornecendo uma consulta de cadeia de caracteres como *"/app1/exif/"* . No exemplo a seguir, <xref:System.Windows.Media.Imaging.BitmapMetadata.GetQuery%2A> é usado para obter o texto armazenado no local *"/Text/Description"* .  
   

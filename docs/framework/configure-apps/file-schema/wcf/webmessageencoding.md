@@ -2,22 +2,22 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: 1015c8b812d54288a7b2773282e6c935d7634bae
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 4aa87acaf9080959ba8b53e3ec3216314dc745b6
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399148"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732585"
 ---
-# <a name="webmessageencoding"></a>\<webMessageEncoding>
+# <a name="webmessageencoding"></a>\<webMessageEncoding >
 Habilita XML de texto simples, codificações mensagem JSON (JavaScript Object Notation) e conteúdo binário "bruto" para ser lido e gravado quando usado em uma associação WCF (Windows Communication Foundation).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de CustomBinding**](custombinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> webMessageEncoding**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**CustomBinding**](custombinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webMessageEncoding >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,32 +36,32 @@ Habilita XML de texto simples, codificações mensagem JSON (JavaScript Object N
 |---------------|-----------------|  
 |`maxReadPoolSize`|A quantidade de mensagens que podem ser lidas simultaneamente sem alocar novos leitores. Tamanhos de pool maiores tornam o sistema mais tolerante a picos de atividade no custo de um conjunto de trabalho maior. O padrão é 64 leitores para cada um dos codificadores internos (text, JSON e "RAW").<br /><br /> O aumento desse número aumenta o consumo de memória, mas prepara o codificador para lidar com picos repentinos de mensagens de entrada, pois ele é capaz de usar leitores do pool que já foram criados, em vez de criar novos.|  
 |`maxWritePoolSize`|A quantidade de mensagens que podem ser enviadas simultaneamente sem alocar novos gravadores. Tamanhos de pool maiores tornam o sistema mais tolerante a picos de atividade no custo de um conjunto de trabalho maior. O padrão é 16 gravadores para cada um dos codificadores internos (text, JSON e "RAW").<br /><br /> O aumento desse número aumenta o consumo de memória, mas prepara o codificador para lidar com picos repentinos de mensagens de saída, pois ele é capaz de usar gravadores do pool que já foram criados, em vez de criar novos.|  
-|`writeEncoding`|Especifica a codificação do conjunto de caracteres a ser usada para emitir mensagens na associação. Os valores válidos são:<br /><br /> -   UnicodeFffeTextEncoding: Codificação Big Endian Unicode.<br />- Utf16TextEncoding: Codificação Unicode.<br />- Utf8TextEncoding: codificação de 8 bits.<br /><br /> O padrão é Utf8TextEncoding. Esse atributo é do tipo <xref:System.Text.Encoding>.|  
+|`writeEncoding`|Especifica a codificação do conjunto de caracteres a ser usada para emitir mensagens na associação. Os valores válidos são:<br /><br /> -UnicodeFffeTextEncoding: codificação Unicode big endian.<br />-Utf16TextEncoding: codificação Unicode.<br />-Utf8TextEncoding: codificação de 8 bits.<br /><br /> O padrão é Utf8TextEncoding. Este atributo é do tipo <xref:System.Text.Encoding>.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<binding>](../../../misc/binding.md)|Define todos os recursos de associação da associação personalizada.|  
+|[\<binding >](bindings.md)|Define todos os recursos de associação da associação personalizada.|  
   
 ## <a name="remarks"></a>Comentários  
  A codificação é o processo de transformar uma mensagem em uma sequência de bytes. A decodificação é o processo reverso. Esses processos exigem a especificação de uma codificação de caracteres.  
   
- O `webMessageEncoding` elemento funciona delegando a uma série de codificadores internos para manipular as codificações XML e JSON de texto sem formatação e dados binários "brutos". Essa delegação é feita por um codificador de mensagem composta.  
+ O elemento `webMessageEncoding` funciona delegando a uma série de codificadores internos para manipular as codificações XML e JSON de texto sem formatação e dados binários "brutos". Essa delegação é feita por um codificador de mensagem composta.  
   
- Esse elemento Binding e seu codificador composto são usados para controlar a codificação em cenários que não usam mensagens SOAP usadas pelo `webHttpBinding` elemento. Esses cenários incluem "XML antigo" (POX), transferência de estado de reapresentação (REST), agregação real (RSS) e agregação Atom, além de JavaScript e XML assíncronos (AJAX). O codificador de mensagens compostas não dá suporte a SOAP ou WS-Addressing.  
+ Esse elemento Binding e seu codificador composto são usados para controlar a codificação em cenários que não usam mensagens SOAP usadas pelo elemento `webHttpBinding`. Esses cenários incluem "XML antigo" (POX), transferência de estado de reapresentação (REST), agregação real (RSS) e agregação Atom, além de JavaScript e XML assíncronos (AJAX). O codificador de mensagens compostas não dá suporte a SOAP ou WS-Addressing.  
   
- O elemento Binding pode ser configurado com uma codificação Write Character usando o `writeEncoding` atributo. O valor <xref:System.Text.Encoding> fornecido especifica o comportamento na gravação para os casos JSON e XML textual. Na leitura, qualquer codificação de mensagem e codificação de texto válidas são compreendidas.  
+ O elemento Binding pode ser configurado com uma codificação Write Character usando o atributo `writeEncoding`. O valor de <xref:System.Text.Encoding> fornecido especifica o comportamento na gravação para os casos JSON e XML textual. Na leitura, qualquer codificação de mensagem e codificação de texto válidas são compreendidas.  
   
- `maxReadPoolSize`e `maxWritePoolSize` também pode ser usado para definir o número máximo de leitores e gravadores a serem alocados, respectivamente. Por padrão, os leitores 64 e 16 gravadores são alocados.  
+ `maxReadPoolSize` e `maxWritePoolSize` também podem ser usados para definir o número máximo de leitores e gravadores a serem alocados, respectivamente. Por padrão, os leitores 64 e 16 gravadores são alocados.  
   
- As restrições de complexidade padrão também são definidas [ \<](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) usando o elemento de > readerQuotas para proteger contra uma classe de ataques de dos (negação de serviço) que tentam usar a complexidade da mensagem para vincular os recursos de processamento do ponto de extremidade.  
+ As restrições de complexidade padrão também são definidas usando o elemento [\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100)) para proteger contra uma classe de ataques de dos (negação de serviço) que tentam usar a complexidade da mensagem para vincular os recursos de processamento do ponto de extremidade.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -83,4 +83,4 @@ Habilita XML de texto simples, codificações mensagem JSON (JavaScript Object N
 - [Associações](../../../wcf/bindings.md)
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)
-- [\<customBinding>](custombinding.md)
+- [\<CustomBinding](custombinding.md)

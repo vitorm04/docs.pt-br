@@ -2,23 +2,23 @@
 title: <transport> de <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 2cf69c48a51ce2c687ebcfe9f87f7c22f5f86084
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: c563339e4f854cc4e60f92dd5b8c0b39112dc000
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399381"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736113"
 ---
-# <a name="transport-of-basichttpbinding"></a>\<> de transporte \<de BasicHttpBinding >
+# <a name="transport-of-basichttpbinding"></a>> de transporte de \<de \<basicHttpBinding >
 Define as propriedades que controlam os parâmetros de autenticação para o transporte HTTP.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<basicHttpBinding >** ](basichttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de segurança**](security-of-basichttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de transporte**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**BasicHttpBinding**](basichttpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<security >** ](security-of-basichttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**transporte >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,10 +47,10 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|clientCredentialType|-Especifica o tipo de credencial a ser usado ao executar a autenticação de cliente usando a autenticação HTTP.  O padrão é `None`. Esse atributo é do tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|proxyCredentialType|-Especifica o tipo de credencial a ser usado ao executar a autenticação de cliente de dentro de um domínio usando um proxy sobre HTTP. Esse atributo é aplicável somente quando o `mode` atributo do elemento pai `security` é `Transport` ou `TransportCredentialsOnly`. Esse atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|clientCredentialType|-Especifica o tipo de credencial a ser usado ao executar a autenticação de cliente usando a autenticação HTTP.  O padrão é `None`. Este atributo é do tipo <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|proxyCredentialType|-Especifica o tipo de credencial a ser usado ao executar a autenticação de cliente de dentro de um domínio usando um proxy sobre HTTP. Esse atributo é aplicável somente quando o atributo `mode` do elemento `security` pai é `Transport` ou `TransportCredentialsOnly`. Este atributo é do tipo <xref:System.ServiceModel.HttpProxyCredentialType>.|  
 |territórios|Uma cadeia de caracteres que especifica o realm usado pelo esquema de autenticação HTTP para Digest ou autenticação básica. O padrão é uma cadeia de caracteres vazia.|  
-|policyEnforcement|Essa enumeração especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> deve ser imposto.<br /><br /> 1.  Nunca – a política nunca é imposta (a proteção estendida está desabilitada).<br />2.  WhenSupported – a política será imposta somente se o cliente oferecer suporte à proteção estendida.<br />3.  Sempre – a política é sempre imposta. Os clientes que não dão suporte à proteção estendida não serão autenticados.|  
+|policyEnforcement|Essa enumeração especifica quando o <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> deve ser aplicado.<br /><br /> 1. nunca – a política nunca é imposta (a proteção estendida está desabilitada).<br />2. WhenSupported – a política será imposta somente se o cliente oferecer suporte à proteção estendida.<br />3. sempre – a política é sempre imposta. Os clientes que não dão suporte à proteção estendida não serão autenticados.|  
 |protectionScenario|Essa enumeração Especifica o cenário de proteção imposto pela política.|  
   
 ## <a name="clientcredentialtype-attribute"></a>Atributo clientCredentialtype  
@@ -68,11 +68,11 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhum|-As mensagens não são protegidas durante a transferência.|  
-|Basic|Especifica a autenticação básica, conforme definido pela RFC 2617 – autenticação HTTP: Autenticação básica e resumida.|  
-|Digest|Especifica a autenticação Digest, conforme definido pela RFC 2617 – autenticação HTTP: Autenticação básica e resumida.|  
+|Basic|Especifica a autenticação básica, conforme definido pela RFC 2617 – autenticação HTTP: autenticação básica e resumida.|  
+|Digest|Especifica a autenticação Digest, conforme definido pela RFC 2617 – autenticação HTTP: autenticação básica e resumida.|  
 |NTLM|Especifica a autenticação NTLM quando possível, e se a autenticação do Windows falhar.|  
 |Windows|Especifica a autenticação integrada do Windows.|  
-|Certificate|Executa a autenticação de cliente usando um certificado. Essa opção só funcionará se `Mode` o atributo do elemento `security` pai estiver definido como transporte e não funcionará se estiver definido como TransportCredentialOnly.|  
+|Certificate|Executa a autenticação de cliente usando um certificado. Essa opção só funcionará se o atributo `Mode` do elemento pai `security` for definido como transporte e não funcionará se estiver definido como TransportCredentialOnly.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  Nenhum  
@@ -81,7 +81,7 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<security>](security-of-basichttpbinding.md)|Define os recursos de segurança para o [ \<> BasicHttpBinding](basichttpbinding.md).|  
+|[\<Security >](security-of-basichttpbinding.md)|Define os recursos de segurança para o [\<basicHttpBinding >](basichttpbinding.md).|  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra o uso de segurança de transporte SSL com a associação básica. Por padrão, a associação básica dá suporte à comunicação HTTP.  
@@ -128,4 +128,4 @@ Define as propriedades que controlam os parâmetros de autenticação para o tra
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

@@ -2,17 +2,14 @@
 title: Alterações significativas de rede-.NET Core
 description: Lista as alterações significativas na rede no .NET Core.
 ms.date: 10/03/2019
-ms.openlocfilehash: fba784b7533ff571164bc87af58ece5a47b7766d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5f22b03683a6350d1ac46521202bb469f7f22427
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092954"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739369"
 ---
-# <a name="networking-breaking-changes"></a>Alterações de quebra de rede 
-
-> [!IMPORTANT]
-> Este artigo está em construção. Esta não é uma lista completa de alterações significativas do .NET Core. Para obter mais informações sobre as alterações significativas no .NET Core, você pode examinar os problemas individuais de [alterações significativas](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) no repositório dotnet/docs no github. 
+# <a name="networking-breaking-changes"></a>Alterações de quebra de rede
 
 A seguir está uma lista de alterações significativas na rede pela versão do .NET Core.
 

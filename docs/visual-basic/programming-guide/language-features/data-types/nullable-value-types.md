@@ -10,30 +10,30 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 072496a560775a8f79274f1d44dd389d6ed5b40d
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351770"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732930"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipos de valor que permitem valor nulo (Visual Basic)
 
 Às vezes, você trabalha com um tipo de valor que não tem um valor definido em determinadas circunstâncias. Por exemplo, um campo em um banco de dados pode ter que distinguir entre ter um valor atribuído que seja significativo e não tenha um valor atribuído. Os tipos de valor podem ser estendidos para obter seus valores normais ou um valor nulo. Essa extensão é chamada de *tipo anulável*.
 
-Cada tipo anulável é construído a partir da estrutura <xref:System.Nullable%601> genérica. Considere um banco de dados que controla atividades relacionadas ao trabalho. O exemplo a seguir constrói um tipo `Boolean` anulável e declara uma variável desse tipo. Você pode escrever a declaração de três maneiras:
+Cada tipo anulável é construído a partir da estrutura de <xref:System.Nullable%601> genérica. Considere um banco de dados que controla atividades relacionadas ao trabalho. O exemplo a seguir constrói um tipo de `Boolean` anulável e declara uma variável desse tipo. Você pode escrever a declaração de três maneiras:
 
 [!code-vb[VbVbalrNullableValue#1](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#1)]
 
-A variável `ridesBusToWork` pode conter um valor de `True`, um valor de `False` ou nenhum valor. Seu valor padrão inicial não é nenhum valor, que nesse caso pode significar que as informações ainda não foram obtidas para essa pessoa. Por outro lado, `False` pode significar que as informações foram obtidas e a pessoa não tem o barramento funcionar.
+A variável `ridesBusToWork` pode conter um valor de `True`, um valor de `False`ou nenhum valor. Seu valor padrão inicial não é nenhum valor, que nesse caso pode significar que as informações ainda não foram obtidas para essa pessoa. Por outro lado, `False` pode significar que as informações foram obtidas e a pessoa não tem o barramento funcionar.
 
 Você pode declarar variáveis e propriedades com tipos anuláveis, e pode declarar uma matriz com elementos de um tipo anulável. Você pode declarar procedimentos com tipos anuláveis como parâmetros e pode retornar um tipo anulável de um procedimento `Function`.
 
-Você não pode construir um tipo anulável em um tipo de referência, como uma matriz, uma `String` ou uma classe. O tipo subjacente deve ser um tipo de valor. Para obter mais informações, consulte [tipos de valor e tipos de referência](value-types-and-reference-types.md).
+Você não pode construir um tipo anulável em um tipo de referência, como uma matriz, uma `String`ou uma classe. O tipo subjacente deve ser um tipo de valor. Para obter mais informações, consulte [tipos de valor e tipos de referência](value-types-and-reference-types.md).
 
 ## <a name="using-a-nullable-type-variable"></a>Usando uma variável de tipo anulável
 
-Os membros mais importantes de um tipo anulável são suas propriedades <xref:System.Nullable%601.HasValue%2A> e <xref:System.Nullable%601.Value%2A>. Para uma variável de um tipo anulável, <xref:System.Nullable%601.HasValue%2A> informa se a variável contém um valor definido. Se <xref:System.Nullable%601.HasValue%2A> for `True`, você poderá ler o valor de <xref:System.Nullable%601.Value%2A>. Observe que <xref:System.Nullable%601.HasValue%2A> e <xref:System.Nullable%601.Value%2A> são propriedades `ReadOnly`.
+Os membros mais importantes de um tipo anulável são suas propriedades <xref:System.Nullable%601.HasValue%2A> e <xref:System.Nullable%601.Value%2A>. Para uma variável de um tipo anulável, <xref:System.Nullable%601.HasValue%2A> informa se a variável contém um valor definido. Se <xref:System.Nullable%601.HasValue%2A> for `True`, você poderá ler o valor de <xref:System.Nullable%601.Value%2A>. Observe que tanto <xref:System.Nullable%601.HasValue%2A> quanto <xref:System.Nullable%601.Value%2A> são `ReadOnly` Propriedades.
 
 ### <a name="default-values"></a>Valores padrão
 
@@ -41,7 +41,7 @@ Quando você declara uma variável com um tipo anulável, sua propriedade <xref:
 
 [!code-vb[VbVbalrNullableValue#2](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#2)]
 
-Um valor nulo é útil para indicar um valor indefinido ou desconhecido. Se `numberOfChildren` tiver sido declarado como `Integer`, não haveria nenhum valor que possa indicar que as informações não estão disponíveis no momento.
+Um valor nulo é útil para indicar um valor indefinido ou desconhecido. Se `numberOfChildren` tiver sido declarada como `Integer`, não haveria nenhum valor que possa indicar que as informações não estão disponíveis no momento.
 
 ### <a name="storing-values"></a>Armazenando valores
 
@@ -54,17 +54,17 @@ Se uma variável ou propriedade de um tipo anulável contiver um valor definido,
 [!code-vb[VbVbalrNullableValue#4](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#4)]
 
 > [!NOTE]
-> Embora você possa atribuir `Nothing` a uma variável de um tipo anulável, não é possível testá-lo para `Nothing` usando o sinal de igual. Comparação que usa o sinal de igual, `someVar = Nothing`, sempre é avaliada como `Nothing`. Você pode testar a propriedade <xref:System.Nullable%601.HasValue%2A> da variável para `False` ou testar usando o operador `Is` ou `IsNot`.
+> Embora você possa atribuir `Nothing` a uma variável de um tipo anulável, não é possível testá-la para `Nothing` usando o sinal de igual. Comparação que usa o sinal de igual, `someVar = Nothing`, sempre é avaliada como `Nothing`. Você pode testar a propriedade de <xref:System.Nullable%601.HasValue%2A> da variável para `False`ou testar usando o operador `Is` ou `IsNot`.
 
 ### <a name="retrieving-values"></a>Recuperando valores
 
-Para recuperar o valor de uma variável de um tipo anulável, você deve primeiro testar sua propriedade <xref:System.Nullable%601.HasValue%2A> para confirmar que ela tem um valor. Se você tentar ler o valor quando <xref:System.Nullable%601.HasValue%2A> for `False`, Visual Basic lançará uma exceção <xref:System.InvalidOperationException>. O exemplo a seguir mostra a maneira recomendada para ler a variável `numberOfChildren` dos exemplos anteriores.
+Para recuperar o valor de uma variável de um tipo anulável, você deve primeiro testar sua propriedade <xref:System.Nullable%601.HasValue%2A> para confirmar que ela tem um valor. Se você tentar ler o valor quando <xref:System.Nullable%601.HasValue%2A> for `False`, Visual Basic lançará uma exceção de <xref:System.InvalidOperationException>. O exemplo a seguir mostra a maneira recomendada para ler a variável `numberOfChildren` dos exemplos anteriores.
 
 [!code-vb[VbVbalrNullableValue#5](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrNullableValue/VB/Class1.vb#5)]
 
 ## <a name="comparing-nullable-types"></a>Comparando tipos anuláveis
 
-Quando variáveis `Boolean` anuláveis são usadas em expressões booleanas, o resultado pode ser `True`, `False` ou `Nothing`. A seguir está a tabela verdade para `And` e `Or`. Como `b1` e `b2` agora têm três valores possíveis, há nove combinações a serem avaliadas.
+Quando variáveis de `Boolean` anuláveis são usadas em expressões booleanas, o resultado pode ser `True`, `False`ou `Nothing`. A seguir está a tabela verdade para `And` e `Or`. Como `b1` e `b2` agora têm três valores possíveis, há nove combinações a serem avaliadas.
 
 |B1|B2|B1 e B2|B1 ou B2|
 |--------|--------|---------------|--------------|
@@ -89,7 +89,7 @@ Neste exemplo, `b1 And b2` é avaliada como `Nothing`. Como resultado, a cláusu
 `Expression is not false`
 
 > [!NOTE]
-> `AndAlso` e `OrElse`, que usam a avaliação de circuito curto, devem avaliar seus segundo operandos quando o primeiro é avaliado como `Nothing`.
+> `AndAlso` e `OrElse`, que usam a avaliação de circuito curto, devem avaliar seus segundos operando quando o primeiro é avaliado como `Nothing`.
 
 ## <a name="propagation"></a>Propagação
 
@@ -117,4 +117,4 @@ Um banco de dados é um dos lugares mais importantes para usar tipos anuláveis.
 - [Inferência de Tipo de Variável Local](../variables/local-type-inference.md)
 - [Operador Is](../../../language-reference/operators/is-operator.md)
 - [Operador IsNot](../../../language-reference/operators/isnot-operator.md)
-- [Usando tipos de valor AnulávelC#()](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
+- [Tipos de valor AnulávelC#()](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)

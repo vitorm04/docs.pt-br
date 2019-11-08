@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 02a70e65cd53a8998395987770cd32efc82293d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2ec979240b8fead10522817b77eef23e29409411
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459600"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740697"
 ---
 # <a name="wpf-architecture"></a>Arquitetura do WPF
 Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presentation Foundation (WPF). Ele aborda a maioria dos subsistemas principais do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve como eles interagem. Ele também detalha algumas das escolhas feitas pelos arquitetos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
@@ -42,7 +42,7 @@ Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presen
   
  Há na verdade dois conceitos principais a serem entendidos ao discutir a simultaneidade no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] – o dispatcher e afinidade de thread.  
   
- Durante a fase de design do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], a meta era mudar para um único thread de execução, mas um modelo não sujeito à afinidade de thread. A afinidade de thread ocorre quando um componente usa a identidade do thread em execução para armazenar algum tipo de estado. A forma mais comum disso é usar o armazenamento local de thread (TLS) para armazenar o estado. Afinidade de threads requer que cada thread lógica de execução pertença a apenas um thread físico no sistema operacional, que pode passar a fazer uso intensivo de memória. No final, o modelo de threading do WPF foi mantido em sincronização com o modelo de threading User32 existente, de execução em thread único com afinidade de thread. O principal motivo para isso foi interoperabilidade – sistemas como [!INCLUDE[TLA2#tla_ole2.0](../../../../includes/tla2sharptla-ole2-0-md.md)], a área de transferência e o Internet Explorer exigem, todos, execução STA (afinidade de thread único).  
+ Durante a fase de design do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], a meta era mudar para um único thread de execução, mas um modelo não sujeito à afinidade de thread. A afinidade de thread ocorre quando um componente usa a identidade do thread em execução para armazenar algum tipo de estado. A forma mais comum disso é usar o armazenamento local de thread (TLS) para armazenar o estado. Afinidade de threads requer que cada thread lógica de execução pertença a apenas um thread físico no sistema operacional, que pode passar a fazer uso intensivo de memória. No final, o modelo de threading do WPF foi mantido em sincronização com o modelo de threading User32 existente, de execução em thread único com afinidade de thread. O principal motivo para isso era a interoperabilidade – sistemas como o OLE 2,0, a área de transferência e o Internet Explorer todos exigem a execução do STA (afinidade de thread único).  
   
  Considerando que você tem objetos com threading STA, você precisa de uma maneira para se comunicar entre threads e validar que você está no thread correto. Eis aí a função do dispatcher. O dispatcher é um sistema básico de despacho de mensagens, com várias filas priorizadas. Exemplos de mensagens incluem notificações de entrada bruta (o mouse foi movido), funções de estrutura (layout) ou comandos do usuário (executar este método). Derivando de <xref:System.Windows.Threading.DispatcherObject>, você cria um objeto CLR com comportamento STA e receberá um ponteiro para um Dispatcher no momento da criação.  
   

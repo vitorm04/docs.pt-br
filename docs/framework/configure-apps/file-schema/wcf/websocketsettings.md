@@ -2,22 +2,22 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 80784f40130e572ae374bd9b26e701360dbfcaa5
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399140"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732558"
 ---
-# <a name="websocketsettings"></a>\<webSocketSettings>
+# <a name="websocketsettings"></a>\<webSocketSettings >
 Um elemento de configuração usado para especificar as configurações de soquete da Web.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> NetHttpBinding**](nethttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> webSocketSettings**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NetHttpBinding**](nethttpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webSocketSettings >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -49,7 +49,7 @@ Um elemento de configuração usado para especificar as configurações de soque
 |maxPendingConnections|Especifica o número máximo de conexões que estão aguardando despacho no serviço.|  
 |receiveBufferSize|Especifica o tamanho do buffer de recebimento.|  
 |sendBufferSize|Especifica o tamanho do buffer de envio.|  
-|subProtocol|Especifica o subprotocolo de soquete da Web.|  
+|subprotocolo|Especifica o subprotocolo de soquete da Web.|  
 |transportUsage|Especifica quando usar soquetes da Web.|  
   
 ## <a name="transportusage-attribute"></a>Atributo transportUsage  
@@ -67,10 +67,10 @@ Um elemento de configuração usado para especificar as configurações de soque
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|\<netHttpBinding>|Especifica o NetHttpBinding|  
+|> \<NetHttpBinding|Especifica o NetHttpBinding|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o \<elemento > webSocketSettings.  
+ O exemplo a seguir mostra como usar o elemento \<webSocketSettings >.  
   
 ```xml  
 <netHttpBinding>
@@ -96,4 +96,4 @@ Um elemento de configuração usado para especificar as configurações de soque
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

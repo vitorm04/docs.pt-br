@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 11087ed4da23d73fc8edc36680dd1b3587c011ce
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004918"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740726"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem qualidade e desempenho aprimorados de renderização de texto, suporte a tipografia OpenType, texto internacional aprimorado, suporte avançado a fontes e novas APIs (interfaces de programação de aplicativo) de texto.  
@@ -33,11 +33,11 @@ Texto com suavização da direção y do ClearType
   
  A fonte OpenType de Pericles contém glifos adicionais que fornecem alternativas estilísticos ao conjunto padrão de glifos. O texto a seguir exibe glifos alternativos estilísticos.  
   
- ![Texto usando glifos alternativos de texto alternativo OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "usando glifos alternativos estilísticos OpenType")  
+ ![Texto usando glifos alternativos estilísticos OpenType](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "Texto usando glifos alternativos estilísticos OpenType")  
   
  Swashes são glifos decorativos que utilizam ornamentação elaborada, geralmente associada à caligrafia. O texto a seguir exibe os glifos padrão e Swash para a fonte Pescadero.  
   
- ![Texto usando glifos OpenType padrão e traços violentos](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "usando glifos OpenType padrão e Swash")  
+ ![Texto usando glifos padrão e swash OpenType](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "Texto usando glifos padrão e swash OpenType")  
   
  Para obter mais detalhes sobre os recursos do OpenType, consulte [recursos de fonte OpenType](opentype-font-features.md).  
   
@@ -59,11 +59,11 @@ Texto com suavização da direção y do ClearType
   
 - Comportamento de fonte independente de configurações globais, como localidade do sistema.  
   
-- Separe os tipos <xref:System.Windows.FontWeight>, <xref:System.Windows.FontStretch> e <xref:System.Windows.FontStyle> para definir um <xref:System.Windows.Media.FontFamily>. Isso fornece maior flexibilidade do que na programação [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], em que as combinações boolianas de negrito e itálico são utilizadas para definir uma família de fontes.  
+- Separe <xref:System.Windows.FontWeight>tipos, <xref:System.Windows.FontStretch>e <xref:System.Windows.FontStyle> para definir um <xref:System.Windows.Media.FontFamily>. Isso fornece maior flexibilidade do que na programação [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], em que as combinações boolianas de negrito e itálico são utilizadas para definir uma família de fontes.  
   
 - Direção de escrita (horizontal versus vertical) manipulada de forma independente do nome da fonte.  
   
-- Vinculação e Fallback de fonte em um arquivo portátil [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], usando a tecnologia de fonte composta. Fontes compostas permitem a construção de fontes multilíngue de alcance completo. Fontes compostas também fornecem um mecanismo que evita exibir glifos que faltam. Para obter mais informações, consulte os comentários na classe <xref:System.Windows.Media.FontFamily>.  
+- Vinculação de fontes e fallback de fontes em um arquivo XML portátil, usando a tecnologia de fontes compostas. Fontes compostas permitem a construção de fontes multilíngue de alcance completo. Fontes compostas também fornecem um mecanismo que evita exibir glifos que faltam. Para obter mais informações, consulte os comentários na classe <xref:System.Windows.Media.FontFamily>.  
   
 - Fontes internacionais criadas por meio de fontes compostas, utilizando um grupo de fontes de único idioma. Isso economiza recurso ao desenvolver fontes para múltiplos idiomas.  
   
@@ -80,7 +80,7 @@ Texto com suavização da direção y do ClearType
 - **Formatação de texto avançada**. Permite que você implemente um mecanismo de texto personalizado.  
   
 ### <a name="layout-and-user-interface"></a>Layout e interface do usuário  
- No nível mais alto de funcionalidade, as APIs de texto fornecem controles [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] comuns, como <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock> e <xref:System.Windows.Controls.TextBox>. Esses controles fornecem os elementos básicos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dentro de um aplicativo e oferecem uma maneira fácil de apresentar e interagir com texto. Controles como <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.PasswordBox> permitem manipulação de texto mais avançada ou especializada. E classes como <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection> e <xref:System.Windows.Documents.TextPointer> habilitam a manipulação de texto útil. Esses controles [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] fornecem propriedades como <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A> e <xref:System.Windows.Controls.Control.FontStyle%2A>, que permitem controlar a fonte usada para renderizar o texto.  
+ No nível mais alto de funcionalidade, as APIs de texto fornecem controles de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] comuns, como <xref:System.Windows.Controls.Label>, <xref:System.Windows.Controls.TextBlock>e <xref:System.Windows.Controls.TextBox>. Esses controles fornecem os elementos básicos [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dentro de um aplicativo e oferecem uma maneira fácil de apresentar e interagir com texto. Controles como <xref:System.Windows.Controls.RichTextBox> e <xref:System.Windows.Controls.PasswordBox> permitem manipulação de texto mais avançada ou especializada. E classes como <xref:System.Windows.Documents.TextRange>, <xref:System.Windows.Documents.TextSelection>e <xref:System.Windows.Documents.TextPointer> habilitam a manipulação de texto útil. Esses controles de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] fornecem propriedades como <xref:System.Windows.Controls.Control.FontFamily%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>e <xref:System.Windows.Controls.Control.FontStyle%2A>, que permitem controlar a fonte usada para renderizar o texto.  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>Usando efeitos de Bitmap, transformações e efeitos de texto  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que você crie usos visualmente interessantes de texto utilizando características como efeitos de bitmap, transformações e efeitos de texto. O exemplo a seguir mostra um tipo comum de um efeito de sombra aplicado a texto.  
@@ -107,12 +107,12 @@ Texto com suavização da direção y do ClearType
   
  ![Texto inclinado usando SkewTransform](./media/typography-in-wpf/skewed-transformed-text.jpg)
   
- Um objeto <xref:System.Windows.Media.TextEffect> é um objeto auxiliar que permite tratar o texto como um ou mais grupos de caracteres em uma cadeia de texto. O exemplo a seguir mostra um caractere individual sendo rotacionado. Cada caractere é rotacionado de forma independente em intervalos de 1 segundo.  
+ Um objeto de <xref:System.Windows.Media.TextEffect> é um objeto auxiliar que permite tratar o texto como um ou mais grupos de caracteres em uma cadeia de texto. O exemplo a seguir mostra um caractere individual sendo rotacionado. Cada caractere é rotacionado de forma independente em intervalos de 1 segundo.  
   
  ![Captura de tela do texto de rotação do efeito de texto](./media/typography-in-wpf/rotating-text-effect.jpg) 
   
 #### <a name="using-flow-documents"></a>Usando os documentos de fluxo  
- Além dos controles comuns de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece um controle de layout para a apresentação de texto — o elemento <xref:System.Windows.Documents.FlowDocument>. O elemento <xref:System.Windows.Documents.FlowDocument>, em conjunto com o elemento <xref:System.Windows.Controls.DocumentViewer>, fornece um controle para grandes quantidades de texto com requisitos de layout variáveis. Os controles de layout fornecem acesso à tipografia avançada por meio do objeto <xref:System.Windows.Documents.Typography> e propriedades relacionadas à fonte de outros controles [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
+ Além dos controles comuns de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece um controle de layout para a apresentação de texto — o elemento <xref:System.Windows.Documents.FlowDocument>. O elemento <xref:System.Windows.Documents.FlowDocument>, em conjunto com o elemento <xref:System.Windows.Controls.DocumentViewer>, fornece um controle para grandes quantidades de texto com requisitos de layout variáveis. Os controles de layout fornecem acesso à tipografia avançada por meio do objeto <xref:System.Windows.Documents.Typography> e propriedades relacionadas à fonte de outros controles de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].  
   
  O exemplo a seguir mostra o conteúdo de texto hospedado em um <xref:System.Windows.Controls.FlowDocumentReader>, que fornece suporte de pesquisa, navegação, paginação e dimensionamento de conteúdo.  
   
@@ -121,7 +121,7 @@ Texto com suavização da direção y do ClearType
  Para obter mais informações, consulte [Documentos no WPF](documents-in-wpf.md).  
   
 ### <a name="lightweight-text-drawing"></a>Desenho de texto leve  
- Você pode desenhar texto diretamente em objetos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando o método <xref:System.Windows.Media.DrawingContext.DrawText%2A> do objeto <xref:System.Windows.Media.DrawingContext>. Para usar esse método, você cria um objeto <xref:System.Windows.Media.FormattedText>. Esse objeto permite que você desenhe texto de várias linhas, no qual cada caractere no texto pode ser formatado individualmente. A funcionalidade do objeto <xref:System.Windows.Media.FormattedText> contém grande parte da funcionalidade dos sinalizadores DrawText na API do Windows. Além disso, o objeto <xref:System.Windows.Media.FormattedText> contém funcionalidades, como suporte a reticências, em que uma elipse é exibida quando o texto excede seus limites. O exemplo a seguir mostra o texto que tem diversos formatos aplicados a ele, incluindo um gradiente linear na segunda e terceira palavras.  
+ Você pode desenhar texto diretamente para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] objetos usando o método <xref:System.Windows.Media.DrawingContext.DrawText%2A> do objeto <xref:System.Windows.Media.DrawingContext>. Para usar esse método, você cria um objeto <xref:System.Windows.Media.FormattedText>. Esse objeto permite que você desenhe texto de várias linhas, no qual cada caractere no texto pode ser formatado individualmente. A funcionalidade do objeto <xref:System.Windows.Media.FormattedText> contém grande parte da funcionalidade dos sinalizadores DrawText na API do Windows. Além disso, o objeto <xref:System.Windows.Media.FormattedText> contém funcionalidades como suporte a reticências, nas quais reticências são exibidas quando o texto excede seus limites. O exemplo a seguir mostra o texto que tem diversos formatos aplicados a ele, incluindo um gradiente linear na segunda e terceira palavras.  
   
  ![Texto exibido usando o objeto FormattedText](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   
@@ -140,7 +140,7 @@ Texto com suavização da direção y do ClearType
  Para obter mais informações sobre o objeto <xref:System.Windows.Media.FormattedText>, consulte [desenho de texto formatado](drawing-formatted-text.md).  
   
 ### <a name="advanced-text-formatting"></a>Formatação de texto avançada  
- No nível mais avançado das APIs de texto, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece a capacidade de criar layout de texto personalizado usando o objeto <xref:System.Windows.Media.TextFormatting.TextFormatter> e outros tipos no namespace <xref:System.Windows.Media.TextFormatting>. O <xref:System.Windows.Media.TextFormatting.TextFormatter> e as classes associadas permitem que você implemente o layout de texto personalizado que dá suporte à sua própria definição de formatos de caractere, estilos de parágrafo, regras de quebra de linha e outros recursos de layout para texto internacional. Há poucos casos em que você desejaria substituir a implementação padrão do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] suporte ao layout de texto. No entanto, se você estivesse criando um aplicativo ou controle de edição de texto, poderia exigir uma implementação diferente da implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] padrão.  
+ No nível mais avançado das APIs de texto, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece a capacidade de criar layout de texto personalizado usando o objeto <xref:System.Windows.Media.TextFormatting.TextFormatter> e outros tipos no namespace <xref:System.Windows.Media.TextFormatting>. O <xref:System.Windows.Media.TextFormatting.TextFormatter> e as classes associadas permitem que você implemente layout de texto personalizado que dá suporte à sua própria definição de formatos de caractere, estilos de parágrafo, regras de quebra de linha e outros recursos de layout para texto internacional. Há poucos casos em que você desejaria substituir a implementação padrão do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] suporte ao layout de texto. No entanto, se você estivesse criando um aplicativo ou controle de edição de texto, poderia exigir uma implementação diferente da implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] padrão.  
   
  Ao contrário de uma API de texto tradicional, o <xref:System.Windows.Media.TextFormatting.TextFormatter> interage com um cliente de layout de texto por meio de um conjunto de métodos de retorno de chamada. Ele requer que o cliente forneça esses métodos em uma implementação da classe <xref:System.Windows.Media.TextFormatting.TextSource>. O diagrama a seguir ilustra a interação de layout de texto entre o aplicativo cliente e <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
@@ -156,5 +156,5 @@ Texto com suavização da direção y do ClearType
 - [Recursos de fonte OpenType](opentype-font-features.md)
 - [Desenhando texto formatado](drawing-formatted-text.md)
 - [Formatação de texto avançada](advanced-text-formatting.md)
-- [Text](optimizing-performance-text.md)
+- [Texto](optimizing-performance-text.md)
 - [Tipografia da Microsoft](https://docs.microsoft.com/typography/)

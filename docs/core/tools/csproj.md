@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: d7fca40caaeb83152b8ae5260bf918981362d2c3
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522795"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739303"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -34,8 +34,8 @@ Os metapacotes são referenciados implicitamente de acordo com as estruturas de 
 Como os metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` são referenciados implicitamente, estas são nossas melhores práticas:
 
 - Durante o direcionamento do .NET Core ou do .NET Standard, nunca tenha uma referência explícita aos metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` por meio de um item `<PackageReference>` no arquivo de projeto.
-- Se precisar de uma versão específica do tempo de execução ao direcionar o .NET Core, use a propriedade `<RuntimeFrameworkVersion>` no projeto (por exemplo, `1.0.4`) em vez de referenciar o metapacote.
-  - Isso poderá ocorrer se você estiver usando [implantações independentes](../deploying/index.md#self-contained-deployments-scd) e precisar de uma versão de patch específica do tempo de execução do 1.0.0 LTS, por exemplo.
+- Se precisar de uma versão específica do runtime ao direcionar o .NET Core, use a propriedade `<RuntimeFrameworkVersion>` no projeto (por exemplo, `1.0.4`) em vez de referenciar o metapacote.
+  - Isso poderá ocorrer se você estiver usando [implantações independentes](../deploying/index.md#self-contained-deployments-scd) e precisar de uma versão de patch específica do runtime do 1.0.0 LTS, por exemplo.
 - Se precisar de uma versão específica do metapacote `NETStandard.Library` ao direcionar o .NET Core, use a propriedade `<NetStandardImplicitPackageVersion>` e defina a versão necessária.
 - Não adicione explicitamente nem atualize referências a nenhum dos metapacotes `Microsoft.NETCore.App` ou `NETStandard.Library` em projetos do .NET Framework. Se uma versão do `NETStandard.Library` for necessária ao usar um pacote NuGet baseado no .NET Standard, o NuGet automaticamente instalará essa versão.
 
@@ -186,7 +186,7 @@ Um elemento de item `<DotNetCliToolReference>` especifica a ferramenta da CLI qu
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 
-O elemento de propriedade `<RuntimeIdentifiers>` permite especificar uma lista delimitada por ponto e vírgula de [RIDs (Identificadores de Tempo de Execução)](../rid-catalog.md) para o projeto.
+O elemento de propriedade `<RuntimeIdentifiers>` permite especificar uma lista delimitada por ponto e vírgula de [RIDs (Identificadores de Runtime)](../rid-catalog.md) para o projeto.
 Os RIDs permitem publicar implantações autocontidas.
 
 ```xml
@@ -195,13 +195,13 @@ Os RIDs permitem publicar implantações autocontidas.
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
 
-O elemento de propriedade `<RuntimeIdentifier>` permite especificar somente um [RID (Identificador de Tempo de Execução)](../rid-catalog.md) para o projeto. O RID permite a publicação de uma implantação autossuficiente.
+O elemento de propriedade `<RuntimeIdentifier>` permite especificar somente um [RID (Identificador de Runtime)](../rid-catalog.md) para o projeto. O RID permite a publicação de uma implantação autossuficiente.
 
 ```xml
 <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
 ```
 
-Use `<RuntimeIdentifiers>` (plural) nesse caso, se você precisar publicar para vários tempos de execução. `<RuntimeIdentifier>` pode fornecer builds mais rápidos quando apenas um único tempo de execução é necessário.
+Use `<RuntimeIdentifiers>` (plural) nesse caso, se você precisar publicar para vários runtimes. `<RuntimeIdentifier>` pode fornecer builds mais rápidos quando apenas um único runtime é necessário.
 
 ### <a name="packagetargetfallback"></a>PackageTargetFallback
 
@@ -222,6 +222,31 @@ O exemplo a seguir especifica os fallbacks apenas para o destino `netcoreapp2.1`
     $(PackageTargetFallback);portable-net45+win8+wpa81+wp8
 </PackageTargetFallback >
 ```
+
+## <a name="build-events"></a>Eventos de build
+
+A maneira como os eventos de pré e pós-compilação são especificados no arquivo de projeto foi alterado. As propriedades PreBuildEvent e PostBuildEvent não são recomendadas no formato de projeto no estilo SDK, pois as macros como $ (ProjectDir) não são resolvidas. Por exemplo, o código a seguir não tem mais suporte:
+
+```xml
+<PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)PreBuildEvent.bat" "$(ProjectDir)..\" "$(ProjectDir)" "$(TargetDir)" />
+</PropertyGroup>
+```
+
+Em projetos em estilo SDK, use um destino do MSBuild chamado `PreBuild` ou `PostBuild` e defina a propriedade `BeforeTargets` para `PreBuild` ou a propriedade `AfterTargets` para `PostBuild`. Para o exemplo anterior, use o seguinte código:
+
+```xml
+<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="&quot;$(ProjectDir)PreBuildEvent.bat&quot; &quot;$(ProjectDir)..\&quot; &quot;$(ProjectDir)&quot; &quot;$(TargetDir)&quot;" />
+</Target>
+
+<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+   <Exec Command="echo Output written to $(TargetDir)" />
+</Target>
+```
+
+> [!NOTE]
+>Você pode usar qualquer nome para os destinos do MSBuild, mas o IDE do Visual Studio reconhece `PreBuild` e `PostBuild` destinos, portanto, é recomendável usar esses nomes para que você possa editar os comandos no IDE do Visual Studio. 
 
 ## <a name="nuget-metadata-properties"></a>Propriedades de metadados do NuGet
 

@@ -2,12 +2,12 @@
 title: Avaliar alterações da falha – .NET Core
 description: Saiba mais sobre as maneiras como o .NET Core tenta manter a compatibilidade para desenvolvedores em versões do .NET.
 ms.date: 06/10/2019
-ms.openlocfilehash: a4a1b5c4e81cec783248c6110b0af9844eb3f4af
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416655"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739353"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Avaliar alterações da falha no .NET Core
 
@@ -52,7 +52,7 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 - **✔️ Alterar um tipo de [struct](../../csharp/language-reference/keywords/struct.md) para um tipo `readonly struct`**
 
   A alteração de um tipo `readonly struct` para um tipo `struct` não é permitida.
-  
+
 - **✔️ Adicionar a palavra-chave [sealed](../../csharp/language-reference/keywords/sealed.md) ou [abstract](../../csharp/language-reference/keywords/abstract.md) a um tipo quando não há construtores *accessíveis* (públicos ou protegidos)**
 
 - **✔️ Expandir a visibilidade de um tipo**
@@ -138,9 +138,9 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 - **❌ renomear um parâmetro (incluindo a alteração de seu caso)**
 
   Isso é considerado significativo por dois motivos:
-  
+
   - Interrompe cenários de associação tardia, como o recurso de associação tardia no Visual Basic e [dinâmico](../../csharp/language-reference/builtin-types/reference-types.md#the-dynamic-type) no C#.
-  
+
   - Interrompe a [compatibilidade de origem](categories.md#source-compatibility) quando os desenvolvedores usam [argumentos nomeados](../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md#named-arguments).
 
 - **❌ alterar de um valor de retorno de `ref` para um valor de retorno `ref readonly`**
@@ -153,9 +153,9 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
   Embora isso geralmente não seja uma alteração significativa, pois o compilador C# tende a emitir instruções [callvirt](<xref:System.Reflection.Emit.OpCodes.Callvirt>) de IL (Intermediate Language) para chamar métodos não virtuais (`callvirt` executa uma verificação nula, enquanto uma chamada normal não), esse comportamento não é invariável por vários motivos:
   - C# não é a única linguagem de destino do .NET.
-  
+
   - O compilador C# tenta otimizar cada vez mais `callvirt` a uma chamada normal sempre que o método de destino é não virtual e provavelmente não é nulo (como um método acessado por meio de operador de propagação nula [?.](../../csharp/language-reference/operators/member-access-operators.md#null-conditional-operators--and-)).
-  
+
   Tornar um método virtual significa que o código do consumidor em geral acabaria chamando-o não virtualmente.
 
 - **❌ adicionar a palavra-chave [virtual](../../csharp/language-reference/keywords/virtual.md) a um membro**

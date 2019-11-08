@@ -2,22 +2,22 @@
 title: <security> de <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
-ms.openlocfilehash: 971b1ea979877f631766e438cc41bc0bdabfd346
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: aa01e906ddd2f15007c72bfc2a45122cfb15ba2c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399798"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736377"
 ---
-# <a name="security-of-nettcpbinding"></a>\<> de segurança \<de NetTcpBinding >
+# <a name="security-of-nettcpbinding"></a>\<> de segurança do \<netTcpbinding >
 Define as configurações de segurança para uma associação.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> netTcpbinding**](nettcpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de segurança**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<NetTcpBinding**](nettcpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**security >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,7 +37,7 @@ Define as configurações de segurança para uma associação.
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|modo|Opcional. Especifica o tipo de segurança que é aplicado. Os valores válidos são mostrados abaixo. O valor padrão é `Transport`.<br /><br /> Esse atributo é do tipo <xref:System.ServiceModel.SecurityMode>.|  
+|modo|Opcional. Especifica o tipo de segurança que é aplicado. Os valores válidos são mostrados abaixo. O valor padrão é `Transport`.<br /><br /> Este atributo é do tipo <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atributo de modo  
   
@@ -52,21 +52,21 @@ Define as configurações de segurança para uma associação.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<> de transporte](transport-of-nettcpbinding.md)|Define as configurações de segurança para o transporte. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
-|[\<message>](message-element-of-nettcpbinding.md)|Define as configurações de segurança para a mensagem. Esse elemento é do tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
+|[> de transporte de \<](transport-of-nettcpbinding.md)|Define as configurações de segurança para o transporte. Este elemento é do tipo <xref:System.ServiceModel.Configuration.TcpTransportSecurityElement>.|  
+|[\<message >](message-element-of-nettcpbinding.md)|Define as configurações de segurança para a mensagem. Este elemento é do tipo <xref:System.ServiceModel.Configuration.MessageSecurityOverTcpElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|associação|O elemento Binding da [ \<> NetTcpBinding](nettcpbinding.md).|  
+|associação|O elemento Binding da [\<NetTcpBinding](nettcpbinding.md).|  
   
 ## <a name="remarks"></a>Comentários  
  Cada uma das associações padrão fornece parâmetros para controlar os requisitos de segurança de transferência. Esses parâmetros normalmente incluem o modo de segurança que especificou se a segurança no nível de mensagem ou de transporte é usada e a escolha do tipo de credencial do cliente. Com base na escolha das opções que esses parâmetros apresentam, uma pilha de canais é construída com a segurança apropriada.  
   
  As associações fornecidas pelo sistema fornecidas pelo Windows Communication Foundation (WCF) são um conjunto projetado para atender a alguns dos requisitos de cenário mais comuns. Cada uma dessas associações permite a especificação de requisitos de segurança para alguns cenários específicos de destino.  
   
- Este elemento de configuração fornece as especificações de `netTcpBinding`segurança para o. Essa é uma associação segura, confiável e otimizada adequada para comunicação entre computadores. Por padrão, ele gera uma pilha de comunicação de tempo de execução que dá suporte a TCP para entrega de mensagens e segurança do Windows para segurança e autenticação de mensagens, WS-ReliableMessaging para confiabilidade e codificação de mensagens binárias.  
+ Este elemento de configuração fornece as especificações de segurança para `netTcpBinding`. Essa é uma associação segura, confiável e otimizada adequada para comunicação entre computadores. Por padrão, ele gera uma pilha de comunicação de tempo de execução que dá suporte a TCP para entrega de mensagens e segurança do Windows para segurança e autenticação de mensagens, WS-ReliableMessaging para confiabilidade e codificação de mensagens binárias.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -78,4 +78,4 @@ Define as configurações de segurança para uma associação.
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

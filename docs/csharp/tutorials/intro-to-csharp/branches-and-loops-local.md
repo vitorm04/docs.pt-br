@@ -3,12 +3,12 @@ title: Tutorial Branches e loops – introdução ao C#
 description: Neste tutorial sobre branches e loops, você escreve código em C# para explorar a sintaxe de linguagem que dá suporte a branches e loops condicionais para execução repetida de instruções.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: a0701a63d6c3aece6bac4263cbcf8a682a623cf7
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834120"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739128"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>Saiba mais sobre lógica condicional com instruções branch e loop
 
@@ -18,7 +18,13 @@ Este tutorial espera que você tenha um computador que possa usar para desenvolv
 
 ## <a name="make-decisions-using-the-if-statement"></a>Tome decisões usando a instrução `if`
 
-Crie um diretório chamado *branches-tutorial*. Torne-o o diretório atual e execute `dotnet new console -n BranchesAndLoops -o .`. Esse comando cria um novo aplicativo de console .NET Core no diretório atual.
+Crie um diretório chamado *branches-tutorial*. Faça com que o diretório atual e execute o seguinte comando:
+
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+Esse comando cria um novo aplicativo de console .NET Core no diretório atual.
 
 Abra *Program.cs* em seu editor favorito e substitua a linha `Console.WriteLine("Hello World!");` pelo seguinte código:
 

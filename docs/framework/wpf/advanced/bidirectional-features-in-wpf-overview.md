@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 7d648741676ba947d901d26e3ee7c1289d3d4bc3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 385ce8d263991361512371dcacff52fcf0bbe738
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453883"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740940"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Visão geral dos recursos bidirecionais no WPF
 
@@ -98,7 +98,7 @@ O gráfico a seguir mostra outro exemplo que usa números e expressões aritmét
 
 Os usuários desse aplicativo serão desapontados pela saída, mesmo que o <xref:System.Windows.FlowDirection> esteja correto, os números não serão formatados como números árabes.
 
-Elementos XAML podem incluir um atributo [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] (`xml:lang`) que define o idioma de cada elemento. O XAML também dá suporte a um princípio de linguagem [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] no qual `xml:lang` valores aplicados aos elementos pai na árvore são usados por elementos filho. No exemplo anterior, como um idioma não foi definido para o elemento <xref:System.Windows.Documents.Run> ou qualquer um de seus elementos de nível superior, o `xml:lang` padrão foi usado, que é `en-US` para XAML. O algoritmo de formatação de número interno de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] seleciona números no idioma correspondente – neste caso, inglês. Para fazer com que os números árabes sejam processados corretamente `xml:lang` precisa ser definido.
+Os elementos XAML podem incluir um atributo XML (`xml:lang`) que define o idioma de cada elemento. O XAML também dá suporte a um princípio de linguagem XML no qual `xml:lang` valores aplicados aos elementos pai na árvore são usados por elementos filho. No exemplo anterior, como um idioma não foi definido para o elemento <xref:System.Windows.Documents.Run> ou qualquer um de seus elementos de nível superior, o `xml:lang` padrão foi usado, que é `en-US` para XAML. O algoritmo de formatação de número interno de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] seleciona números no idioma correspondente – neste caso, inglês. Para fazer com que os números árabes sejam processados corretamente `xml:lang` precisa ser definido.
 
 O gráfico a seguir mostra o exemplo com `xml:lang` adicionado.
 

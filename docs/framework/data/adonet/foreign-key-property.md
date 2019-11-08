@@ -2,12 +2,12 @@
 title: propriedade de chave estrangeira
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: e2f41c2db9aea26c7954a99ebf3f40b03e8df735
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a77f7479ce38cb34830377021157f312916baca4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795035"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738400"
 ---
 # <a name="foreign-key-property"></a>propriedade de chave estrangeira
 Uma *propriedade de chave estrangeira* no modelo de dados de entidade (EDM) é uma [Propriedade](property.md) de tipo primitivo (ou um conjunto de propriedades de tipo primitivo) em um [tipo de entidade](entity-type.md) que contém a chave de [entidade](entity-key.md) de outro tipo de entidade.  
@@ -19,7 +19,7 @@ Uma *propriedade de chave estrangeira* no modelo de dados de entidade (EDM) é u
   
  ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "Exemplo de um modelo de restrição referencial")  
   
- O [Entity Framework ADO.net](./ef/index.md) usa uma DSL (linguagem específica de domínio) chamada[CSDL](./ef/language-reference/csdl-specification.md)(linguagem de definição de esquema conceitual) para definir modelos conceituais. CSDL seguir usa a propriedade `PublisherId` de chave externa para definir uma restrição de integridade referencial em associação de `PublishedBy` mostrada no modelo conceitual mostrado acima.  
+ O [Entity Framework ADO.net](./ef/index.md) usa uma DSL (linguagem específica de domínio) chamada[CSDL](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec)(linguagem de definição de esquema conceitual) para definir modelos conceituais. CSDL seguir usa a propriedade `PublisherId` de chave externa para definir uma restrição de integridade referencial em associação de `PublishedBy` mostrada no modelo conceitual mostrado acima.  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   

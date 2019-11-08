@@ -2,22 +2,22 @@
 title: <security> de <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 727cf3d2-6f56-48ad-a59f-ba423edb9c83
-ms.openlocfilehash: 2f0bc97e10fcd72f2f33cc20730320cbbfc42dd8
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: 77009dc950a608da9e0db3a7d09be67e1ed46137
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70399759"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738629"
 ---
-# <a name="security-of-webhttpbinding"></a>\<> de segurança \<de WebHttpBinding >
-Especifica os requisitos de segurança para um ponto de extremidade configurado com um [ \<WebHttpBinding >](webhttpbinding.md).  
+# <a name="security-of-webhttpbinding"></a>\<> de segurança do \<WebHttpBinding >
+Especifica os requisitos de segurança para um ponto de extremidade configurado com um [\<Webhttpbinding >](webhttpbinding.md).  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações >** ](bindings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> WebHttpBinding**](webhttpbinding.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de associação**\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> de segurança**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<associações**](bindings.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<WebHttpBinding**](webhttpbinding.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Binding** >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**security >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,21 +44,21 @@ Especifica os requisitos de segurança para um ponto de extremidade configurado 
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|modo|Especifica se a segurança em nível de transporte ou nenhuma segurança é usada por um ponto de extremidade. O padrão é `None`. Esse atributo é do tipo <xref:System.ServiceModel.WebHttpSecurityMode>.|  
+|modo|Especifica se a segurança em nível de transporte ou nenhuma segurança é usada por um ponto de extremidade. O padrão é `None`. Este atributo é do tipo <xref:System.ServiceModel.WebHttpSecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Atributo de modo  
   
 |Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhum|A segurança é desabilitada.|  
-|Porta|A proteção é fornecida usando HTTPS. O serviço precisa ser configurado com certificados SSL. A mensagem é totalmente protegida usando HTTPS e o serviço é autenticado pelo cliente usando o certificado SSL do serviço. A autenticação do cliente é controlada por `ClientCredentialType` meio do atributo [ \<do > de transporte](transport-of-webhttpbinding.md).|  
+|Porta|A proteção é fornecida usando HTTPS. O serviço precisa ser configurado com certificados SSL. A mensagem é totalmente protegida usando HTTPS e o serviço é autenticado pelo cliente usando o certificado SSL do serviço. A autenticação do cliente é controlada por meio do atributo `ClientCredentialType` do [> de transporte\<](transport-of-webhttpbinding.md).|  
 |TransportCredentialOnly|Esse modo não fornece confidencialidade e integridade de mensagens. Ele fornece autenticação de cliente baseada em HTTP. Esse modo deve ser usado com cautela. Ele deve ser usado em ambientes em que a segurança de transporte está sendo fornecida por outros meios (como IPSec) e somente a autenticação do cliente é fornecida pela infraestrutura do WCF.|  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<> de transporte](transport-of-webhttpbinding.md)|Define as configurações de segurança de transporte. Este elemento corresponde ao <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement> tipo.|  
+|[> de transporte de \<](transport-of-webhttpbinding.md)|Define as configurações de segurança de transporte. Esse elemento corresponde ao tipo de <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -78,5 +78,5 @@ Especifica os requisitos de segurança para um ponto de extremidade configurado 
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)
 - [Modelo de programação HTTP Web do WCF](../../../wcf/feature-details/wcf-web-http-programming-model.md)

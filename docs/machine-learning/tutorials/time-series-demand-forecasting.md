@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: Previsão de pressão de bicicletas – série temporal'
 description: Este tutorial mostra como prever a demanda por um serviço de aluguel de bicicletas usando análise de série temporal monovariável e ML.NET.
-ms.date: 10/31/2019
+ms.date: 11/07/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: f30aac5f8467c2410e9008bafea3cf35af3f4e2a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e913c27c3501c4c553d7d62f948de31abb3d6f49
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425635"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740541"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: prever a demanda de serviço de aluguel de bicicletas com análise de série temporal e ML.NET
 
@@ -26,9 +26,6 @@ Neste tutorial, você aprenderá como:
 > * Avaliar modelo de previsão
 > * Salvar um modelo de previsão
 > * Usar um modelo de previsão
-
-> [!NOTE]
-> Este tutorial usa uma versão de visualização do DatabaseLoader.
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -49,13 +46,13 @@ O algoritmo usado neste tutorial é [uma análise de espectro único (SSA)](http
 ## <a name="create-console-application"></a>Criar aplicativo de console
 
 1. Crie um novo  **C# aplicativo de console .NET Core** chamado "BikeDemandForecasting".
-1. Instalar o pacote NuGet do **Microsoft.ml** versão **1.4.0-Preview2**
+1. Instalar o pacote NuGet do **Microsoft.ml** Version **1.4.0**
     1. No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.
     1. Escolha "nuget.org" como a origem do pacote, selecione a guia **procurar** , procure **Microsoft.ml**.
     1. Marque a caixa de seleção **incluir pré-lançamento** .
     1. Selecione o botão **Instalar**.
     1. Selecione o botão **OK** na caixa de diálogo **Visualizar alterações** e, depois, o botão **Aceito** na caixa de diálogo Aceitação da Licença, se concordar com o termos de licença para os pacotes listados.
-    1. Repita essas etapas para **System. Data. SqlClient** versão **4.7.0**, **Microsoft. ml. experimental** Version **0.16.0-Preview2**e **Microsoft. ml. timeseries** versão **1.4.0-Preview2**.
+    1. Repita essas etapas para **System. Data. SqlClient** versão **4.7.0** e **Microsoft. ml. timeseries** versão **1.4.0**.
 
 ### <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 

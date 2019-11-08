@@ -5,32 +5,18 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: d3966ff15e06baf293ea02dad031bd5849b4a20f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 889e63feb71682065641fcdc56ada017dcf6c58c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126040"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735125"
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemas de migração do .NET Framework 4
 
-Este tópico descreve problemas de migração entre o .NET Framework versão 3.5 Service Pack 1 e o .NET Framework versão 4, incluindo correções, alterações para conformidade com os padrões e segurança e alterações baseadas nos comentários do cliente. A maioria dessas alterações não requer a modificação da programação dos seus aplicativos. Para as que talvez envolvam modificações, consulte a coluna Alterações recomendadas da tabela.
+Este tópico descreve problemas de migração entre o .NET Framework versão 3.5 Service Pack 1 e o .NET Framework versão 4, incluindo correções, alterações para conformidade com os padrões e segurança e alterações baseadas nos comentários do cliente. A maioria dessas alterações não requer a modificação da programação dos seus aplicativos. Para as que talvez envolvam modificações, consulte a coluna Alterações recomendadas da tabela. Alterações notáveis são divididas por área, por exemplo, ASP.NET e Windows Presentation Foundation (WPF).
 
-Esse tópico descreve alterações notáveis nas seguintes áreas:
-
-- [ASP.NET e Web](#aspnet-and-web)
-
-- [Core](#core)
-
-- [Dados](#data)
-
-- [WCF (Windows Communication Foundation)](#windows-communication-foundation-wcf)
-
-- [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
-
-- [XML](#xml)
-
-Para obter uma visão geral de nível superior dos problemas neste tópico, consulte o [Migration Guide to the .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29) (Guia de Migração para o .NET Framework 4).
+Para obter uma visão geral de nível superior dos problemas neste tópico, consulte o [Guia de migração para o .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29).
 
 Para obter informações sobre novos recursos, consulte [What's New in the .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29) (Novidades no .NET Framework 4).
 
@@ -113,7 +99,7 @@ Namespace: <xref:System.Reflection>; assembly: mscorlib (em mscorlib.dll)
 
 | Recurso | Diferenças de 3.5 SP1 | Alterações recomendadas |
 | ------- | ------------------------ | ------------------- |
-| **Algoritmos de hash do assembly** | A propriedade <xref:System.Reflection.AssemblyName.HashAlgorithm> retorna <xref:System.Configuration.Assemblies.AssemblyHashAlgorithm>, pois o tempo de execução não conhece o algoritmo de hash do assembly referenciado quando o assembly não está carregado. (Isso se refere ao uso da propriedade em um assembly referenciado como o retornado pelo método <xref:System.Reflection.Assembly.GetReferencedAssemblies%2A>.) | nenhuma. |
+| **Algoritmos de hash do assembly** | A propriedade <xref:System.Reflection.AssemblyName.HashAlgorithm> retorna <xref:System.Configuration.Assemblies.AssemblyHashAlgorithm>, pois o runtime não conhece o algoritmo de hash do assembly referenciado quando o assembly não está carregado. (Isso se refere ao uso da propriedade em um assembly referenciado como o retornado pelo método <xref:System.Reflection.Assembly.GetReferencedAssemblies%2A>.) | nenhuma. |
 | **Carregamento de assembly** | Para evitar o carregamento redundante de assemblies e para poupar espaço de endereço virtual, agora o CLR carrega assemblies usando apenas a função `MapViewOfFile` Win32. Ele também não chama mais a função `LoadLibrary`.<br><br>Essa alteração afeta os aplicativos de diagnóstico das seguintes maneiras:<br><br>* Um <xref:System.Diagnostics.ProcessModuleCollection> não conterá mais módulos de uma biblioteca de classes (arquivo .dll), conforme obtido de uma chamada para `Process.GetCurrentProcess().Modules`.<br>* Os aplicativos Win32 que usam a função `EnumProcessModules` não verão todos módulos gerenciados listados. | nenhuma. |
 | **Tipo declarativo** | Agora a propriedade <xref:System.Type.DeclaringType> retorna null corretamente quando o tipo não tem um tipo declarativo. | nenhuma. |
 | **Delegados** | Agora um delegado gera um <xref:System.ArgumentNullException> em vez de um <xref:System.NullReferenceException> quando um valor null é passado para o construtor do delegado. | Certifique-se de que qualquer tratamento de exceção capture <xref:System.ArgumentNullException>. |

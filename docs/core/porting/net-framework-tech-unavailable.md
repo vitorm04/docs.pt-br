@@ -3,16 +3,16 @@ title: Tecnologias do .NET Framework não disponíveis no .NET Core
 description: Saiba mais sobre as tecnologias do .NET Framework que não estão disponíveis no .NET Core
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: e5626d7b3e402848e2e84c49d4e98e109f62982d
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 47f93268c44682afeba87cde17fe9c39811b37bf
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846810"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739719"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>Tecnologias do .NET Framework não disponíveis no .NET Core
 
-Várias tecnologias disponíveis para as bibliotecas do .NET Framework não estão disponíveis para uso com o .NET Core, como AppDomains, Comunicação Remota, CAS (Segurança de acesso do código) e Transparência de segurança. Se suas bibliotecas dependerem de uma ou várias dessas tecnologias, considere as abordagens alternativas descritas abaixo. Para obter mais informações sobre compatibilidade de API, consulte o artigo [alterações significativas do .NET Core](../compatibility/breaking-changes.md) .
+Várias tecnologias disponíveis para .NET Framework bibliotecas não estão disponíveis para uso com o .NET Core, como AppDomains, comunicação remota, CAS (segurança de acesso a código), transparência de segurança e System. EnterpriseServices. Se suas bibliotecas dependerem de uma ou várias dessas tecnologias, considere as abordagens alternativas descritas abaixo. Para obter mais informações sobre compatibilidade de API, consulte o artigo [alterações significativas do .NET Core](../compatibility/breaking-changes.md) .
 
 Só porque uma API ou tecnologia não está implementada no momento, não significa que ela não tem suporte intencionalmente. Primeiro você deve pesquisar o .NET Core nos repositórios do GitHub para saber se um problema específico encontrado está relacionado ao design, mas se não encontrar esse tipo de indicação, envie um problema em [problemas no repositório dotnet/corefx](https://github.com/dotnet/corefx/issues) no GitHub para solicitar APIs e tecnologias específicas. [As solicitações de portabilidade nos problemas](https://github.com/dotnet/corefx/labels/port-to-core) são marcadas com o rótulo `port-to-core`.
 
@@ -32,7 +32,7 @@ Entre computadores, use uma solução baseada em rede como alternativa. De prefe
 
 ## <a name="code-access-security-cas"></a>CAS (Segurança de Acesso do Código)
 
-A área restrita, que depende do tempo de execução ou da estrutura para restringir quais recursos um aplicativo gerenciado ou uma biblioteca usa ou executa, [não é compatível com o .NET Framework](../../framework/misc/code-access-security.md) e, portanto, também não é compatível com o .NET Core. Há muitos casos no .NET Framework e no runtime em que ocorre uma elevação de privilégios para continuar a tratar a CAS como um limite de segurança. Além disso, a CAS complica mais a implementação e geralmente tem implicações de desempenho de exatidão em aplicativos que não pretendem usá-la.
+A área restrita, que depende do runtime ou da estrutura para restringir quais recursos um aplicativo gerenciado ou uma biblioteca usa ou executa, [não é compatível com o .NET Framework](../../framework/misc/code-access-security.md) e, portanto, também não é compatível com o .NET Core. Há muitos casos no .NET Framework e no runtime em que ocorre uma elevação de privilégios para continuar a tratar a CAS como um limite de segurança. Além disso, a CAS complica mais a implementação e geralmente tem implicações de desempenho de exatidão em aplicativos que não pretendem usá-la.
 
 Use os limites de segurança fornecidos pelo sistema operacional, como virtualização, contêineres ou contas de usuário para executar processos com o conjunto mínimo de privilégios.
 

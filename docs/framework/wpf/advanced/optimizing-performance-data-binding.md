@@ -5,15 +5,15 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: 31fdc3c31c8792fea5f3e71dedb7370ebd63c98e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9b302be3ed9f01ccd27470063f49966dc7d74708
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458551"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740802"
 ---
 # <a name="optimizing-performance-data-binding"></a>Otimizando desempenho: vinculação de dados
-A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados a dados de uma variedade de fontes de dados na forma de objetos CLR e [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece aos aplicativos uma maneira simples e consistente para apresentar e interagir com os dados. Os elementos podem ser associados a dados de uma variedade de fontes de dados na forma de objetos CLR e XML.  
   
  Este tópico apresenta recomendações de desempenho de vinculação de dados.  
 
@@ -69,7 +69,7 @@ A vinculação de dados do [!INCLUDE[TLA#tla_winclient](../../../../includes/tla
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Não converta objetos CLR em XML apenas para vinculação de dados.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que você associe dados a [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] conteúdo; no entanto, a vinculação de dados para [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] conteúdo é mais lenta do que a vinculação de dados com objetos CLR. Não converta os dados do objeto CLR em XML se a única finalidade for a associação de dados.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] permite que você associe dados ao conteúdo XML; no entanto, a vinculação de dados ao conteúdo XML é mais lenta do que a vinculação de dados com objetos CLR. Não converta os dados do objeto CLR em XML se a única finalidade for a associação de dados.  
   
 ## <a name="see-also"></a>Consulte também
 

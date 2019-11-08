@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 2abe89abf1ab246464c8f7a7ca7c87295b0b3946
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458983"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740853"
 ---
 # <a name="dependency-property-value-precedence"></a>Precedência do valor de propriedade da dependência
 <a name="introduction"></a> Este tópico explica como o funcionamento do sistema de propriedades do [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pode afetar o valor de uma propriedade de dependência e descreve a precedência pela qual os aspectos do sistema de propriedades são aplicados ao valor efetivo de uma propriedade.  
@@ -109,7 +109,7 @@ ms.locfileid: "73458983"
   
 <a name="animations"></a>   
 ## <a name="coercion-animations-and-base-value"></a>Coerção, animações e valor base  
- A coerção e a animação atuam em um valor que é designado o “valor base” neste [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]. O valor base é, portanto, qualquer valor determinado por meio da avaliação ascendente de itens até chegar ao item 2.  
+ A coerção e a animação agem em um valor que é chamado de "valor base" em todo esse SDK. O valor base é, portanto, qualquer valor determinado por meio da avaliação ascendente de itens até chegar ao item 2.  
   
  Para uma animação, o valor base pode ter um efeito sobre o valor animado, caso essa animação não especifique “De” e “Para” para alguns comportamentos ou caso a animação seja revertida deliberadamente para o valor base quando concluída. Para ver isso na prática, execute a [Amostra de valores de destino De, Para e Por da animação](https://go.microsoft.com/fwlink/?LinkID=159988). Tente definir os valores locais da altura do retângulo no exemplo, para que o valor local inicial seja diferente de qualquer “De” na animação. Você observará que as animações são iniciadas imediatamente usando os valores de “De” e substituem o valor base depois de iniciadas. A animação pode especificar para retornar ao valor encontrado antes da animação quando ela for concluída, especificando o <xref:System.Windows.Media.Animation.FillBehavior>de interrupção. Posteriormente, a precedência normal é usada para a determinação do valor base.  
   

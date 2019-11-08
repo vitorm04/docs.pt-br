@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 62d0aacc3464969366cbdc8107adbc9a5c364b0c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8159f24e92608677cc832448fd2d79a1846ab12a
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417793"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739214"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Restrições a parâmetros de tipo (Guia de Programação em C#)
 
@@ -20,7 +20,7 @@ Restrições informam o compilador sobre as funcionalidades que um argumento de 
 
 |Restrição|Descrição|
 |----------------|-----------------|
-|`where T : struct`|O argumento de tipo deve ser um tipo de valor. Qualquer valor de tipo com exceção de <xref:System.Nullable%601> pode ser especificado. Para obter mais informações sobre tipos de valor anulável, consulte [tipos de valor anulável](../nullable-types/index.md).|
+|`where T : struct`|O argumento de tipo deve ser um tipo de valor não anulável. Para obter informações sobre tipos de valor anulável, consulte [tipos de valor anulável](../../language-reference/builtin-types/nullable-value-types.md).|
 |`where T : class`|O argumento de tipo deve ser um tipo de referência. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
 |`where T : notnull`|O argumento de tipo deve ser um tipo não anulável. O argumento pode ser um tipo de referência não anulável em C# 8,0 ou posterior, ou um tipo de valor não anulável. Essa restrição se aplica também a qualquer classe, interface, delegado ou tipo de matriz.|
 |`where T : unmanaged`|O argumento de tipo deve ser um [tipo não gerenciado](../../language-reference/builtin-types/unmanaged-types.md).|

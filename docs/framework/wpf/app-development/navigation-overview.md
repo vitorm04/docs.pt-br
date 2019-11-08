@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 619dc101cd8851cee24651b7e3098ae12ef46259
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a0916a2957eab6ae340fe914395eda44860da3b7
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459776"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73733730"
 ---
 # <a name="navigation-overview"></a>Visão geral de navegação
 
@@ -85,7 +85,7 @@ Usando <xref:System.Windows.Controls.Page>, você pode implementar declarativame
 
 [!code-xaml[NavigationOverviewSnippets#Page1XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page1.xaml#page1xaml)]
 
-Uma <xref:System.Windows.Controls.Page> implementada na marcação [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem `Page` como seu elemento raiz e requer a declaração de namespace [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. O elemento `Page` contém o conteúdo que você deseja navegar e exibir. Você adiciona conteúdo definindo o elemento de propriedade `Page.Content`, conforme mostrado na marcação a seguir.
+Uma <xref:System.Windows.Controls.Page> implementada na marcação [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] tem `Page` como seu elemento raiz e requer a declaração de namespace XML [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. O elemento `Page` contém o conteúdo que você deseja navegar e exibir. Você adiciona conteúdo definindo o elemento de propriedade `Page.Content`, conforme mostrado na marcação a seguir.
 
 [!code-xaml[NavigationOverviewSnippets#Page2XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/NavigationOverviewSnippets/CSharp/Page2.xaml#page2xaml)]
 
@@ -106,7 +106,7 @@ Uma <xref:System.Windows.Controls.Page> somente marcação é útil para exibir 
 
 Para permitir que um arquivo de marcação e o arquivo code-behind funcionem juntos, a seguinte configuração é necessária:
 
-- Na marcação, o elemento `Page` deve incluir o atributo `x:Class`. Quando o aplicativo é compilado, a existência de `x:Class` no arquivo de marcação faz com que o Microsoft Build Engine (MSBuild) crie uma classe `partial` que deriva de <xref:System.Windows.Controls.Page> e tem o nome que é especificado pelo atributo `x:Class`. Isso requer a adição de uma declaração de namespace de [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] para o esquema de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). A classe `partial` gerada implementa `InitializeComponent`, que é chamado para registrar os eventos e definir as propriedades que são implementadas na marcação.
+- Na marcação, o elemento `Page` deve incluir o atributo `x:Class`. Quando o aplicativo é compilado, a existência de `x:Class` no arquivo de marcação faz com que o Microsoft Build Engine (MSBuild) crie uma classe `partial` que deriva de <xref:System.Windows.Controls.Page> e tem o nome que é especificado pelo atributo `x:Class`. Isso requer a adição de uma declaração de namespace XML para o esquema de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`). A classe `partial` gerada implementa `InitializeComponent`, que é chamado para registrar os eventos e definir as propriedades que são implementadas na marcação.
 
 - No code-behind, a classe deve ser uma classe `partial` com o mesmo nome que é especificado pelo atributo `x:Class` na marcação e deve derivar de <xref:System.Windows.Controls.Page>. Isso permite que o arquivo code-behind seja associado à classe `partial` que é gerada para o arquivo de marcação quando o aplicativo é compilado (consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md)).
 

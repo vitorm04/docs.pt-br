@@ -6,12 +6,12 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: 0416b92a6264e6a8261355197b4ab2fa61f80ef2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 5b9141d5df40d74c4682f418a8fb089fddcfcaa9
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582588"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740745"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>Limitações de serialização de XamlWriter.Save
 O <xref:System.Windows.Markup.XamlWriter.Save%2A> de API pode ser usado para serializar o conteúdo de um aplicativo de [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] como um arquivo de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. No entanto, existem algumas limitações importantes em exatamente o que é serializado. Essas limitações e algumas considerações gerais são documentadas neste tópico.  
@@ -30,7 +30,7 @@ O <xref:System.Windows.Markup.XamlWriter.Save%2A> de API pode ser usado para ser
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>A manipulação de eventos não é preservada  
- Quando os manipuladores de eventos que são adicionados por meio de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] são serializados, eles não são preservados. O [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sem code-behind (e também sem o mecanismo x:Code relacionado) não tem como serializar a lógica de procedimento de tempo de execução. Uma vez que a serialização é independente e limitada à árvore lógica, não há recurso para armazenar os manipuladores de eventos. Como resultado, os atributos de manipulador de eventos, tanto o atributo em si quanto o valor de cadeia de caracteres que nomeia o manipulador, são removidos da saída [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ Quando os manipuladores de eventos que são adicionados por meio de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] são serializados, eles não são preservados. O [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] sem code-behind (e também sem o mecanismo x:Code relacionado) não tem como serializar a lógica de procedimento de runtime. Uma vez que a serialização é independente e limitada à árvore lógica, não há recurso para armazenar os manipuladores de eventos. Como resultado, os atributos de manipulador de eventos, tanto o atributo em si quanto o valor de cadeia de caracteres que nomeia o manipulador, são removidos da saída [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>Cenários realistas para uso de XAMLWriter.Save  
@@ -40,4 +40,4 @@ O <xref:System.Windows.Markup.XamlWriter.Save%2A> de API pode ser usado para ser
   
 - Documentos de fluxo e rich text: texto e toda a formação e confinamento de elementos dentro dele são preservados na saída. Isso pode ser útil para mecanismos que se aproximam de uma funcionalidade de área de transferência.  
   
-- Preservando dados de objeto comercial: se você tiver dados armazenados em elementos personalizados, como dados [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], desde que seus objetos comerciais sigam regras [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] básicas, como fornecer construtores personalizados e conversão de valores de propriedade por referência, esses objetos comerciais poderão ser perpetuados por serialização.
+- Preservando dados de objeto comercial: se você armazenou dados em elementos personalizados, como dados XML, desde que seus objetos de negócios sigam as regras de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] básicas, como fornecer construtores personalizados e conversão para valores de propriedade por referência, esses negócios os objetos podem ser perpetuados por meio da serialização.

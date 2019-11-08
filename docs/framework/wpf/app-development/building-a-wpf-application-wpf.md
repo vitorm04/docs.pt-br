@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 04183b2404d26c783e14dc6f4cb4141bab0d7621
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424430"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740671"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilando um aplicativo WPF (WPF)
 
@@ -46,7 +46,7 @@ Antes de Compilar, o MSBuild determina o local de ferramentas e bibliotecas impo
 
 - O .NET Framework.
 
-- Os diretórios de [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)].
+- Os diretórios SDK do Windows.
 
 - O local dos assemblies de referência do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
 
@@ -64,7 +64,7 @@ O processo de build localiza e associa os assemblies necessários para compilar 
 
 ### <a name="markup-compilationpass-1"></a>Compilação de marcação — passo 1
 
-Nesta etapa, os arquivos [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] são analisados e compilados de modo que o tempo de execução não gaste tempo analisando [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] e validando valores da propriedade. O arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilado é pré-indexado para que, em tempo de execução, seu carregamento seja muito mais rápido do que carregar um arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
+Nesta etapa, [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivos são analisados e compilados para que o tempo de execução não gaste tempo analisando XML e validando valores de propriedade. O arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilado é pré-indexado para que, em tempo de execução, seu carregamento seja muito mais rápido do que carregar um arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 Durante esta etapa, as seguintes atividades ocorrem para cada arquivo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] que é um item de build `Page`:
 

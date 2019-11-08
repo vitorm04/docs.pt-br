@@ -2,22 +2,22 @@
 title: Categorias de alteração da falha – .NET Core
 description: Saiba mais sobre as maneiras como as alterações da falha são categorizadas no .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 058f2c2cdeed1e3e984f1de8ab493971d3937876
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089439"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739356"
 ---
 # <a name="breaking-change-categories"></a>Categorias de alteração significativa
 
-A *compatibilidade* refere-se à capacidade de compilar ou executar código em uma versão de uma implementação do .NET que não seja aquela com a qual o código foi originalmente desenvolvido. Uma alteração específica pode afetar a compatibilidade de seis maneiras diferentes. Os [tipos individuais de alterações consideradas ao avaliar a compatibilidade](index.md) se enquadram nas cinco primeiras categorias. 
+A *compatibilidade* refere-se à capacidade de compilar ou executar código em uma versão de uma implementação do .NET que não seja aquela com a qual o código foi originalmente desenvolvido. Uma alteração específica pode afetar a compatibilidade de seis maneiras diferentes. Os [tipos individuais de alterações consideradas ao avaliar a compatibilidade](index.md) se enquadram nas cinco primeiras categorias.
 
 ## <a name="behavioral-change"></a>Alteração de comportamento
 
 Uma alteração de comportamento representa uma alteração no comportamento de um membro. A alteração pode estar externamente visível (por exemplo, um método pode gerar uma exceção diferente) ou pode representar uma implementação alterada (por exemplo, uma alteração na maneira como um valor retornado é calculado, a adição ou a remoção de chamadas de método internas ou até mesmo uma melhoria significativa no desempenho).
 
-Quando alterações de comportamentais estão externamente visíveis e modificam o contrato público de um tipo, elas são fáceis de avaliar, pois afetam a compatibilidade binária. As alterações de implementação são muito mais difíceis de avaliar; dependendo da natureza da alteração e da frequência e dos padrões de uso da API, o impacto de uma alteração pode variar de severo a inofensivo.  
+Quando alterações de comportamentais estão externamente visíveis e modificam o contrato público de um tipo, elas são fáceis de avaliar, pois afetam a compatibilidade binária. As alterações de implementação são muito mais difíceis de avaliar; dependendo da natureza da alteração e da frequência e dos padrões de uso da API, o impacto de uma alteração pode variar de severo a inofensivo.
 
 ## <a name="binary-compatibility"></a>Compatibilidade binária
 
@@ -25,7 +25,7 @@ A compatibilidade binária refere-se à capacidade de um consumidor de uma API d
 
 ## <a name="source-compatibility"></a>Compatibilidade de origem
 
- A compatibilidade de origem refere-se à capacidade de os consumidores existentes de uma API recompilarem com relação a uma versão mais recente sem nenhuma alteração de origem. Uma *alteração incompatível de origem* ocorre quando um consumidor precisa modificar um código-fonte para que ele seja criado com êxito em uma versão mais recente de uma API.
+A compatibilidade de origem refere-se à capacidade de os consumidores existentes de uma API recompilarem com relação a uma versão mais recente sem nenhuma alteração de origem. Uma *alteração incompatível de origem* ocorre quando um consumidor precisa modificar um código-fonte para que ele seja criado com êxito em uma versão mais recente de uma API.
 
 ## <a name="design-time-compatibility"></a>Compatibilidade de tempo de design
 
@@ -39,9 +39,9 @@ Alterações que afetam a compatibilidade com versões anteriores são altamente
 
 ## <a name="forward-compatibility"></a>Compatibilidade com versões posteriores
 
-A compatibilidade com versões posteriores refere-se à capacidade de um consumidor existente de uma API de executar em uma versão mais antiga ao exibir o mesmo comportamento. Se um consumidor não puder executar ou se comportar de maneira diferente ao executar em uma versão mais antiga da API, a API será *incompatível com versões posteriores*. 
+A compatibilidade com versões posteriores refere-se à capacidade de um consumidor existente de uma API de executar em uma versão mais antiga ao exibir o mesmo comportamento. Se um consumidor não puder executar ou se comportar de maneira diferente ao executar em uma versão mais antiga da API, a API será *incompatível com versões posteriores*.
 
-Manter a compatibilidade com versões posteriores praticamente impede alterações ou adições de versão para versão, pois essas alterações impedem que um consumidor que direciona uma versão posterior execute em uma versão anterior. Os desenvolvedores esperam que um consumidor que depende de uma API mais recente talvez não funcione corretamente com a API mais antiga. 
+Manter a compatibilidade com versões posteriores praticamente impede alterações ou adições de versão para versão, pois essas alterações impedem que um consumidor que direciona uma versão posterior execute em uma versão anterior. Os desenvolvedores esperam que um consumidor que depende de uma API mais recente talvez não funcione corretamente com a API mais antiga.
 
 Manter a compatibilidade com versões futuras não é uma meta do .NET Core.
 

@@ -4,12 +4,12 @@ ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 7b6b46a33430a4a58c78245a0ab3bed1e0fbcd9c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 24b7d6f98e331110ddcd971d0d0b21003dbe023d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455381"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736843"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funções locais (Guia de Programação em C#)
 
@@ -43,11 +43,10 @@ Funções locais podem usar os modificadores [async](../../language-reference/ke
 
 Observe que todas as variáveis locais que estão definidas no membro recipiente, incluindo seus parâmetros de método, são acessíveis na função local. 
 
-Ao contrário de uma definição de método, uma definição de função local não pode incluir os seguintes elementos:
+Ao contrário de uma definição de método, uma definição de função local não pode incluir o modificador de acesso de membro. Já que todas as funções locais são privadas, incluir um modificador de acesso como a palavra-chave `private` gera o erro do compilador CS0106, "O modificador 'private' não é válido para este item".
 
-- O modificador de acesso de membro. Já que todas as funções locais são privadas, incluir um modificador de acesso como a palavra-chave `private` gera o erro do compilador CS0106, "O modificador 'private' não é válido para este item".
- 
-- A palavra-chave [static](../../language-reference/keywords/static.md). Incluir a palavra-chave `static` gera o erro do compilador CS0106, "O modificador 'static' não é válido para este item".
+> [!NOTE]
+> Antes de C# 8,0, as funções locais não podem incluir o modificador de `static`. Incluir a palavra-chave `static` gera o erro do compilador CS0106, "O modificador 'static' não é válido para este item".
 
 Além disso, os atributos não podem ser aplicados à função local ou aos respectivos parâmetros e parâmetros de tipo. 
  

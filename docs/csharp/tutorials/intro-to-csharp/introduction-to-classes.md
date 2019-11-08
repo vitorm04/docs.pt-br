@@ -3,12 +3,12 @@ title: Tutorial Classes e objetos – introdução ao C#
 description: Crie seu primeiro programa em C# e explore os conceitos de orientado a objeto
 ms.date: 10/11/2017
 ms.custom: mvc
-ms.openlocfilehash: f4199f709ee0011af9f00f6909193f08345bc49e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e4cf7912de69946289c0594944b8ac3a8c252ac2
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834114"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736833"
 ---
 # <a name="explore-object-oriented-programming-with-classes-and-objects"></a>Explorar programação orientada a objeto com classes e objetos
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-Construtores são chamados quando você cria um objeto usando [`new`](../../language-reference/operators/new-operator.md). Substitua a linha `Console.WriteLine("Hello World!");` em *Program.cs* com a seguinte linha (substitua `<name>` pelo seu nome):
+Construtores são chamados quando você cria um objeto usando [`new`](../../language-reference/operators/new-operator.md). Substitua a linha `Console.WriteLine("Hello World!");` em *Program.cs* pela linha a seguir (substitua `<name>` pelo seu nome):
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -106,7 +106,7 @@ Adicione a seguinte declaração de membro à classe `BankAccount`:
 private static int accountNumberSeed = 1234567890;
 ```
 
-Este é um membro de dados. Ele é `private`, o que significa que ele só pode ser acessado pelo código dentro da classe `BankAccount`. É uma maneira de separar as responsabilidades públicas (como ter um número de conta) da implementação privada (como os números de conta são gerados.) Ele também é `static`, o que significa que é compartilhado por todos os objetos `BankAccount`. O valor de uma variável não estática é exclusivo para cada instância do objeto `BankAccount`. Adicione as duas linhas a seguir ao construtor para atribuir o número da conta:
+Este é um membro de dados. Ele é `private`, o que significa que ele só pode ser acessado pelo código dentro da classe `BankAccount`. É uma maneira de separar as responsabilidades públicas (como ter um número de conta) da implementação privada (como os números de conta são gerados). Também é `static`, o que significa que ele é compartilhado por todos os objetos `BankAccount`. O valor de uma variável não estática é exclusivo para cada instância do objeto `BankAccount`. Adicione as duas linhas a seguir ao construtor para atribuir o número da conta:
 
 ```csharp
 this.Number = accountNumberSeed.ToString();
@@ -178,7 +178,7 @@ catch (ArgumentOutOfRangeException e)
 Use as [instruções `try` e `catch`](../../language-reference/keywords/try-catch.md) para marcar um bloco de código que possa gerar exceções e detectar esses erros esperados. Use a mesma técnica a fim de testar o código que gera uma exceção para um saldo negativo:
 
 ```csharp
-// Test for a negative balance:
+// Test for a negative balance.
 try
 {
     account.MakeWithdrawal(750, DateTime.Now, "Attempt to overdraw");
@@ -210,6 +210,6 @@ Digite `dotnet run` para ver os resultados.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Se você não conseguir avançar, veja a origem deste tutorial [em nosso repositório GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)
+Se você ficou preso, pode ver a origem deste tutorial [em nosso repositório GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/).
 
-Parabéns, você concluiu todos os nossos tutoriais de introdução ao C#. Se quiser saber mais, temos outros [tutoriais](../index.md) para você experimentar
+Parabéns, você concluiu todos os nossos tutoriais de introdução ao C#. Se você estiver ansiosos para saber mais, experimente mais nossos [tutoriais](../index.md).

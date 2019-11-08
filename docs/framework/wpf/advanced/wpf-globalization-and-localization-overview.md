@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: a912e0437bf986aff65fc722065e912571427189
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035794"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73740702"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Visão geral de globalização e localização do WPF
 
@@ -70,7 +70,7 @@ Ao localizar aplicativos baseados em [!INCLUDE[TLA2#tla_winclient](../../../../i
 
 ## <a name="localize-a-wpf-application"></a>Localizar um aplicativo WPF
 
-Ao localizar um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], você tem várias opções. Por exemplo, você pode associar os recursos localizáveis em seu aplicativo a um arquivo [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)], armazenar texto localizável em tabelas resx ou fazer com que seu localizador Use arquivos [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Esta seção descreve um fluxo de trabalho de localização que usa a forma de BAML do XAML, que fornece vários benefícios:
+Ao localizar um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], você tem várias opções. Por exemplo, você pode associar os recursos localizáveis em seu aplicativo a um arquivo XML, armazenar texto localizável em tabelas resx ou fazer com que seu localizador use [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] arquivos. Esta seção descreve um fluxo de trabalho de localização que usa a forma de BAML do XAML, que fornece vários benefícios:
 
 - Você pode localizar depois de Compilar.
 
@@ -265,7 +265,7 @@ Há muitos casos em que o conteúdo pode ser ambíguo e difícil de ser traduzid
 
 [!code-xaml[GlobalizationHomepage#LocalizationComment](~/samples/snippets/csharp/VS_Snippets_Wpf/GlobalizationHomepage/CS/Homepage.xaml#localizationcomment)]
 
-Esse comentário se torna associado ao conteúdo TextBlock_1's e, no caso da ferramenta LocBaml, (consulte [localizar um aplicativo](how-to-localize-an-application.md)), ele pode ser visto na 6º coluna da linha TextBlock_1 no arquivo output. csv:
+Esse comentário se torna associado ao conteúdo de TextBlock_1 e, no caso da ferramenta LocBaml, (consulte [localizar um aplicativo](how-to-localize-an-application.md)), ele pode ser visto na 6º coluna da linha de TextBlock_1 no arquivo de saída. csv:
 
 |Chave de Recurso|Categoria|Legível|Modificável|Comentário|Valor|
 |-|-|-|-|-|-|

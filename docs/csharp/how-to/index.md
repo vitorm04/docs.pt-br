@@ -2,12 +2,12 @@
 title: Artigos de instruções (Guia de C#)
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
-ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71591603"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736879"
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
@@ -65,8 +65,8 @@ Talvez seja necessário converter um objeto em um tipo diferente.
 - [Converta uma cadeia de caracteres em um número](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Use a correspondência de padrões, os operadores `as` e `is` para converter para um tipo diferente com segurança](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Define as conversões de tipo personalizado](../language-reference/operators/user-defined-conversion-operators.md).
-- [Determine se um tipo é um tipo de valor anulável](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Converta entre tipos de valor anuláveis e não anuláveis](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
+- [Determine se um tipo é um tipo de valor anulável](../language-reference/builtin-types/nullable-value-types.md#how-to-identify-a-nullable-value-type).
+- [Converta entre tipos de valor anuláveis e não anuláveis](../language-reference/builtin-types/nullable-value-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Comparações de ordem e igualdade
 
