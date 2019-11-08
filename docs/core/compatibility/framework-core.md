@@ -2,21 +2,18 @@
 title: Alterações significativas, .NET Framework no .NET Core 3,0-.NET Core
 description: Lista as alterações significativas de .NET Framework para o .NET Core 3,0 para Windows Forms e Windows Presentation Foundation.
 ms.date: 09/10/2019
-ms.openlocfilehash: a374e35192c7aad07e986e0e0b75039642744edc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 80c93dd7a8715a9bcc6d81605ffe5af4b0461257
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089569"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739445"
 ---
-# <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a><span data-ttu-id="ae8cd-103">Alterações recentes de migração do .NET Framework para o .NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="ae8cd-103">Breaking changes for migration from .NET Framework to .NET Core 3.0</span></span>
+# <a name="breaking-changes-for-migration-from-net-framework-to-net-core-30"></a><span data-ttu-id="9be80-103">Alterações recentes de migração do .NET Framework para o .NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="9be80-103">Breaking changes for migration from .NET Framework to .NET Core 3.0</span></span>
 
-> [!IMPORTANT]
-> <span data-ttu-id="ae8cd-104">Este artigo está em construção.</span><span class="sxs-lookup"><span data-stu-id="ae8cd-104">This article is under construction.</span></span> <span data-ttu-id="ae8cd-105">Esta não é uma lista completa de alterações significativas do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ae8cd-105">This is not a complete list of .NET Core breaking changes.</span></span> <span data-ttu-id="ae8cd-106">Para obter mais informações sobre as alterações significativas no .NET Core, você pode examinar os problemas individuais de [alterações significativas](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) no repositório dotnet/docs no github.</span><span class="sxs-lookup"><span data-stu-id="ae8cd-106">For more information on .NET Core breaking changes, you can examine individual [breaking changes issues](https://github.com/dotnet/docs/issues?q=is%3Aissue+is%3Aopen+label%3Abreaking-change) in the dotnet/docs repository on GitHub.</span></span> 
+<span data-ttu-id="9be80-104">Se você estiver migrando um aplicativo Windows Forms ou Windows Presentation Foundation do .NET Framework para o .NET Core 3,0, examine os seguintes tópicos para obter alterações significativas que possam afetar seu aplicativo:</span><span class="sxs-lookup"><span data-stu-id="9be80-104">If you're migrating a Windows Forms or Windows Presentation Foundation application from .NET Framework to .NET Core 3.0, review the following topics for breaking changes that may affect your app:</span></span>
 
-<span data-ttu-id="ae8cd-107">Se você estiver migrando um aplicativo Windows Forms ou Windows Presentation Foundation do .NET Framework para o .NET Core 3,0, examine os seguintes tópicos para obter alterações significativas que possam afetar seu aplicativo:</span><span class="sxs-lookup"><span data-stu-id="ae8cd-107">If you are migrating a Windows Forms or Windows Presentation Foundation application from .NET Framework to .NET Core 3.0, review the following topics for breaking changes that may affect your app:</span></span>
-
-## <a name="windows-forms"></a><span data-ttu-id="ae8cd-108">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ae8cd-108">Windows Forms</span></span>
+## <a name="windows-forms"></a><span data-ttu-id="9be80-105">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="9be80-105">Windows Forms</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/control-defaultfont-changed.md)]
 
