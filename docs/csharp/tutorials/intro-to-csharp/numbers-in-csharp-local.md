@@ -3,12 +3,12 @@ title: Tutorial Números em C# – introdução ao C#
 description: Aprenda C# explorando tipos numéricos, suas propriedades e métodos.
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: b392682a245101e37a182cb92d36ccb1dd34b13e
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a06bc57e5c979b62e19407747cb2c8a2447ca114
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039700"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739145"
 ---
 # <a name="manipulate-integral-and-floating-point-numbers-in-c"></a>Manipular números de ponto flutuante e integrais em C\#
 
@@ -18,7 +18,11 @@ Este tutorial espera que você tenha um computador que possa usar para desenvolv
 
 ## <a name="explore-integer-math"></a>Explorar a matemática de inteiros
 
-Crie um diretório chamado *numbers-quickstart*. Torne-o o diretório atual e execute `dotnet new console -n NumbersInCSharp -o .`.
+Crie um diretório chamado *numbers-quickstart*. Faça com que o diretório atual e execute o seguinte comando:
+
+```dotnetcli
+dotnet new console -n NumbersInCSharp -o .
+```
 
 Abra *Program.cs* em seu editor favorito e substitua a linha `Console.WriteLine("Hello World!");` pelo seguinte:
 
