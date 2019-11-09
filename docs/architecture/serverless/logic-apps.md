@@ -5,10 +5,10 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 7ece3d30209713d42ee44ef9c1be1cf0fe82464a
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577449"
 ---
 # <a name="azure-logic-apps"></a>Aplicativos Lógicos do Azure
@@ -25,7 +25,7 @@ Assim como Azure Functions, você inicia fluxos de trabalho de aplicativo lógic
 
 ![Gatilhos de aplicativos lógicos](./media/logic-app-triggers.png)
 
-Depois que o aplicativo é disparado, você pode usar o designer visual para criar etapas, loops, condições e ações. Todos os dados ingeridos em uma etapa anterior estão disponíveis para uso nas etapas subsequentes. O fluxo de trabalho a seguir carrega URLs de um banco de dados CosmosDB. Ele localiza aqueles com um host de `t.co` e, em seguida, pesquisa-os no Twitter. Se encontrar tweets correspondentes, ele atualizará os documentos com os tweets relacionados chamando uma função.
+Depois que o aplicativo é disparado, você pode usar o designer visual para criar etapas, loops, condições e ações. Todos os dados ingeridos em uma etapa anterior estão disponíveis para uso nas etapas subsequentes. O fluxo de trabalho a seguir carrega URLs de um banco de dados CosmosDB. Ele localiza aqueles com um host de `t.co`, em seguida, pesquisa-os no Twitter. Se encontrar tweets correspondentes, ele atualizará os documentos com os tweets relacionados chamando uma função.
 
 ![Fluxo de trabalho do aplicativo lógico](./media/logic-app-workflow.png)
 

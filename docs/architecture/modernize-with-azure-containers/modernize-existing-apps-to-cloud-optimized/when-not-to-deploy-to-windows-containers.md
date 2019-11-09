@@ -3,10 +3,10 @@ title: Quando não implantar Contêineres do Windows
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Quando não implantar em contêineres do Windows
 ms.date: 04/28/2018
 ms.openlocfilehash: 65e793b846b495e9a1be6db9ddfa38bbf0d49445
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577949"
 ---
 # <a name="when-not-to-deploy-to-windows-containers"></a>Quando não implantar Contêineres do Windows
@@ -33,7 +33,7 @@ Não há suporte para casos em contêineres do Windows, a partir de maio de 2018
 
 - As funções de infraestrutura do Windows (DNS, DHCP, DC, NTP, PRINT, servidor de arquivos, IAM etc.) não são cenários com suporte.
 
-Para cenários e solicitações adicionais sem suporte da Comunidade, consulte o fórum do UserVoice para contêineres do Windows <https://windowsserver.uservoice.com/forums/304624-containers>:.
+Para cenários e solicitações adicionais sem suporte da Comunidade, consulte o fórum do UserVoice para contêineres do Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
 
 ### <a name="additional-resources"></a>Recursos adicionais
 

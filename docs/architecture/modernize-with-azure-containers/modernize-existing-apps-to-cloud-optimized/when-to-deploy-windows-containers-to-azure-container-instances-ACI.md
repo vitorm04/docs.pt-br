@@ -3,15 +3,15 @@ title: Quando implantar contêineres do Windows em ACI (instâncias de contêine
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Quando implantar contêineres do Windows em ACI (instâncias de contêiner do Azure)
 ms.date: 04/29/2018
 ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577929"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Quando implantar contêineres do Windows em ACI (instâncias de contêiner do Azure)
 
-A principal proposta de valor das instâncias de contêiner do Azure é que você pode imediatamente implantar contêineres nela e não precisa manter esse ambiente, você não precisa atualizar/aplicar patch ao sistema operacional ou às VMs subjacentes, tudo isso é transparente e apenas implantar contêineres em um ambiente pronto para uso.
+A principal proposta de valor das instâncias de contêiner do Azure é que você pode imediatamente implantar contêineres nela e não precisa manter esse ambiente, não é necessário atualizar/corrigir o sistema operacional ou as VMs subjacentes, tudo isso é transparente e apenas implantar contêineres em um ambiente pronto para uso.
 
 Os motivos e cenários em que você desejaria usar o ACI são semelhantes aos principais cenários quando você usa VMs do Azure com contêineres, portanto, basicamente, os principais cenários para usar as instâncias de contêiner do Azure são:
 

@@ -3,10 +3,10 @@ title: Implantar aplicativos .NET existentes como contêineres do Windows
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Implantar aplicativos .NET existentes como contêineres do Windows
 ms.date: 04/29/2018
 ms.openlocfilehash: 28568ca363bfc8100f78b100f8a7f0242c4f04c9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "73089555"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Implantar aplicativos .NET existentes como contêineres do Windows

@@ -3,10 +3,10 @@ title: Quando implantar contêineres do Windows no serviço de contêiner do Azu
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Quando implantar contêineres do Windows no serviço de contêiner do Azure (ou seja, kubernetes)
 ms.date: 04/30/2018
 ms.openlocfilehash: 903082deba635dd0dfc22d0186fbc589f8d05b92
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 11/08/2019
 ms.locfileid: "69577939"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-service-that-is-kubernetes"></a>Quando implantar contêineres do Windows no serviço de contêiner do Azure (ou seja, kubernetes)
@@ -19,7 +19,7 @@ Todos esses orquestradores são ambientes maduros se você estiver usando contê
 
 Por exemplo, no kubernetes, o suporte para contêineres é nativo (cidadão de primeira classe). portanto, usar contêineres do Windows no kubernetes também é eficaz (em versão prévia no ACS a partir do início 2018).
 
-Observação importante: A versão evoluida e "mais PaaS" do ACS (serviço de contêiner do Azure) para kubernetes é AKS (serviço kubernetes do Azure). no entanto, os contêineres do Windows ainda não têm suporte a partir do segundo trimestre 2018, mas haverá suporte em breve.
+Observação importante: a versão evoluida e "mais PaaS" do ACS (serviço de contêiner do Azure) para kubernetes é AKS (serviço kubernetes do Azure). no entanto, os contêineres do Windows ainda não têm suporte a partir do segundo trimestre 2018, mas haverá suporte em breve.
 
 >[!div class="step-by-step"]
 >[Anterior](when-to-deploy-windows-containers-to-azure-container-instances-ACI.md)
