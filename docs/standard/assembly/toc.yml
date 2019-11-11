@@ -1,68 +1,66 @@
 - name: Assemblies no .NET
   href: index.md
+- name: Conteúdos do assembly
+  href: contents.md
+- name: Manifest
+  href: manifest.md
+- name: Considerações sobre segurança
+  href: security-considerations.md
+- name: Controle de versão
+  href: versioning.md
+- name: Execução lado a lado
+  href: side-by-side-execution.md
+- name: Formato de arquivo do assembly
+  href: file-format.md
+- name: Descarregamento no .NET Core
+  href: unloadability.md
+- name: Assemblies de referência
+  href: reference-assemblies.md
+- name: Resolver carregamentos de assembly
+  href: resolve-loads.md
+- name: Criar assemblies
+  href: create.md
+- name: Nomes de assembly
+  href: names.md
+- name: localizar o nome totalmente qualificado de um assembly
+  href: find-fully-qualified-name.md
+- name: Localização do assembly
+  href: location.md
+- name: Definir atributos do assembly
+  href: set-attributes.md
+- name: Assemblies de nome forte
   items:
-    - name: Conteúdos do assembly
-      href: contents.md
-    - name: Manifesto do assembly
-      href: manifest.md
-    - name: Assemblies de nome forte
+    - name: Visão geral
       href: strong-named.md
-    - name: Considerações sobre a segurança do assembly
-      href: security-considerations.md
-    - name: Controle de versão do assembly
-      href: versioning.md
-    - name: Assemblies e execução lado a lado
-      href: side-by-side-execution.md
-    - name: Formato de arquivo do assembly
-      href: file-format.md
-    - name: 'Como: usar e depurar a capacidade de descarregamento de assembly no .NET Core'
-      href: unloadability.md
-    - name: Assemblies de referência
-      href: reference-assemblies.md
-    - name: Resolver carregamentos de assembly
-      href: resolve-loads.md
-    - name: Programar com assemblies
-      href: program.md
-      items:
-        - name: Criar assemblies
-          href: create.md
-        - name: Nomes de assembly
-          href: names.md
-        - name: 'Como: localizar o nome totalmente qualificado de um assembly'
-          href: find-fully-qualified-name.md
-        - name: Localização do assembly
-          href: location.md
-        - name: Definir atributos do assembly
-          href: set-attributes.md
-        - name: Criar e usar assemblies com nome forte
-          href: create-use-strong-named.md
-          items:
-            - name: 'Como: criar um par de chaves público-privado'
-              href: create-public-private-key-pair.md
-            - name: 'Como: assinar um assembly com um nome forte'
-              href: sign-strong-name.md
-            - name: Nomenclatura forte aprimorada
-              href: enhanced-strong-naming.md
-            - name: 'Como: fazer referência a um assembly de nome forte'
-              href: reference-strong-named.md
-            - name: 'Como: desabilitar o recurso de bypass de nome forte'
-              href: disable-strong-name-bypass-feature.md
-        - name: Assinar um assembly com atraso
-          href: delay-sign.md
-        - name: 'Como: exibir o conteúdo do assembly'
-          href: view-contents.md
-        - name: Encaminhamento de tipo no Common Language Runtime
-          href: type-forwarding.md
-        - name: Assemblies amigáveis
-          href: friend.md
-          items:
-            - name: 'Como: criar assemblies amigáveis não assinados'
-              href: create-unsigned-friend.md
-            - name: 'Como: criar assemblies amigáveis assinados'
-              href: create-signed-friend.md
-        - name: 'Como: determinar se um arquivo é um assembly'
-          href: identify.md
-        - name: 'Como: carregar ou descarregar assemblies'
-          href: load-unload.md
-        - name: 'Passo a passo: Inserir tipos de assemblies gerenciados no Visual Studio'
-          href: embed-types-visual-studio.md
+    - name: Criar e usar assemblies com nome forte
+      href: create-use-strong-named.md
+    - name: criar um par de chaves público-privado
+      href: create-public-private-key-pair.md
+    - name: assinar um assembly com um nome forte
+      href: sign-strong-name.md
+    - name: Nomenclatura forte aprimorada
+      href: enhanced-strong-naming.md
+    - name: fazer referência a um assembly de nome forte
+      href: reference-strong-named.md
+    - name: Desabilitar bypass de nome forte
+      href: disable-strong-name-bypass-feature.md
+- name: Assinar um assembly com atraso
+  href: delay-sign.md
+- name: exibir o conteúdo do assembly
+  href: view-contents.md
+- name: Encaminhamento de tipo no CLR
+  href: type-forwarding.md
+- name: Assemblies amigáveis
+  items:
+    - name: Visão geral
+      href: friend.md
+    - name: criar assemblies amigáveis não assinados
+      href: create-unsigned-friend.md
+    - name: criar assemblies amigáveis assinados
+      href: create-signed-friend.md
+- name: determinar se um arquivo é um assembly
+  href: identify.md
+- name: carregar ou descarregar assemblies
+  href: load-unload.md
+- name: 'Passo a passo: Inserir tipos de assemblies gerenciados no Visual Studio'
+  href: embed-types-visual-studio.md
