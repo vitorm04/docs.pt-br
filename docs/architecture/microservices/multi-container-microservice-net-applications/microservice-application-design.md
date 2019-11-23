@@ -91,7 +91,7 @@ Portanto, as unidades de implantação para os microsserviços (e até mesmo par
 
 ### <a name="additional-resources"></a>Recursos adicionais
 
-- **repositório GitHub eShopOnContainers. Código-fonte para o aplicativo de referência**  \
+- **repositório GitHub eShopOnContainers. Código-fonte para o aplicativo de referência** \
   <https://aka.ms/eShopOnContainers/>
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Benefícios de uma solução baseada em microsserviços

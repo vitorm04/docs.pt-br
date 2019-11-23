@@ -48,13 +48,13 @@ No entanto, recomendamos que você use as seguintes referências para saber mais
 - **Interface do usuário composta usando o ASP.NET (workshop específico)**  
   <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
-- **Ruben Oostinga. O front-end monolítico na arquitetura de microserviços @ no__t-0  
+- **Ruben Oostinga. O front-end monolítico na arquitetura de microserviços**  
   <https://xebia.com/blog/the-monolithic-frontend-in-the-microservices-architecture/>
 
-- **Mauro Servienti. O segredo da melhor composição de interface do usuário @ no__t-0  
+- **Mauro Servienti. O segredo da melhor composição da interface do usuário**  
   <https://particular.net/blog/secret-of-better-ui-composition>
 
-- **Viktor Farcic. Incluindo componentes Web de front-end em microserviços @ no__t-0  
+- **Viktor Farcic. Incluindo componentes da Web de front-end em microserviços**  
   <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
 - **Gerenciando o front-end na arquitetura de microserviços**  

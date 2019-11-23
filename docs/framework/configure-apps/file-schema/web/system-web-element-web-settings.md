@@ -15,11 +15,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699100"
 ---
-# <a name="systemweb-element-web-settings"></a>Elemento @no__t -0system. Web > (configurações da Web)
+# <a name="systemweb-element-web-settings"></a>Elemento de > de \<System. Web (configurações da Web)
 Contém informações sobre como a camada de hospedagem ASP.NET gerencia o comportamento de todo o processo.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system. web >**  
+&nbsp;&nbsp; **\<System. web >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,11 +30,11 @@ Contém informações sobre como a camada de hospedagem ASP.NET gerencia o compo
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
 
-As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
 
-nenhuma.  
+None.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -42,7 +42,7 @@ nenhuma.
 |-------------|-----------------|  
 |[\<applicationPool>](applicationpool-element-web-settings.md)|Especifica as definições de configuração para pools de aplicativos do IIS em um arquivo Aspnet. config.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -50,9 +50,9 @@ nenhuma.
   
 ## <a name="remarks"></a>Comentários  
 
-O elemento `system.web` e seu elemento filho `applicationPool` foram adicionados à .NET Framework a partir do .NET Framework 3,5 SP1. Quando você executa o IIS 7,0 ou versões posteriores no modo integrado, essa combinação de elementos permite que você configure como o ASP.NET gerencia threads e como ele enfileira solicitações quando o ASP.NET está hospedado em um pool de aplicativos do IIS. Se você executar o IIS 7,0 ou versões posteriores no modo clássico ou ISAPI, essas configurações serão ignoradas.  
+O elemento `system.web` e seu elemento `applicationPool` filho foram adicionados à .NET Framework a partir do .NET Framework 3,5 SP1. Quando você executa o IIS 7,0 ou versões posteriores no modo integrado, essa combinação de elementos permite que você configure como o ASP.NET gerencia threads e como ele enfileira solicitações quando o ASP.NET está hospedado em um pool de aplicativos do IIS. Se você executar o IIS 7,0 ou versões posteriores no modo clássico ou ISAPI, essas configurações serão ignoradas.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
 
 O exemplo a seguir mostra como configurar o comportamento do ASP.NET em todo o processo no arquivo Aspnet. config quando o ASP.NET está hospedado em um pool de aplicativos do IIS. O exemplo supõe que o IIS está sendo executado no modo integrado e que o aplicativo está usando o .NET Framework 3,5 SP1 ou uma versão posterior. Esse comportamento não ocorre em versões do .NET Framework anteriores ao .NET Framework 3,5 SP1. Os valores no exemplo são os valores padrão.  
   
@@ -71,8 +71,8 @@ O exemplo a seguir mostra como configurar o comportamento do ASP.NET em todo o p
   
 |||  
 |-|-|  
-|Namespace||  
-|Nome do esquema||  
+|{1&gt;Namespace&lt;1}||  
+|Schema Name||  
 |Arquivo de validação||  
 |Pode estar vazio||  
   

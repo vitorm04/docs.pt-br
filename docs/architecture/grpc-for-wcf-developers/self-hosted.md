@@ -1,14 +1,13 @@
 ---
 title: Aplicativos gRPC de hospedagem interna – gRPC para desenvolvedores do WCF
 description: Implantando ASP.NET Core aplicativos gRPC como serviços hospedados internamente.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 4983cad1dd075480c6d83a5350a323ab348cdaaf
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846116"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967219"
 ---
 # <a name="self-hosted-grpc-applications"></a>Aplicativos gRPC auto-hospedados
 
@@ -153,7 +152,7 @@ Ao executar um aplicativo gRPC em produção, você deve usar um certificado TLS
 
 Em hosts do Windows, o certificado pode ser carregado de um [repositório de certificados](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) seguro usando a [classe X509Store](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0). A classe `X509Store` também pode ser usada com o armazenamento de chaves OpenSSL em alguns hosts Linux.
 
-Os certificados também podem ser criados usando um dos [construtores X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), seja de um arquivo (por exemplo, um arquivo `.pfx` protegido por uma senha forte) ou de dados binários recuperados de um serviço de armazenamento seguro, como [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) .
+Os certificados também podem ser criados usando um dos [construtores X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), seja de um arquivo (por exemplo, um arquivo `.pfx` protegido por uma senha forte) ou de dados binários recuperados de um serviço de armazenamento seguro, como [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 
 O Kestrel pode ser configurado para usar um certificado de duas maneiras: da configuração ou no código.
 

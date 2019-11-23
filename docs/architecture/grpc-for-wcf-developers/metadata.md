@@ -1,14 +1,13 @@
 ---
 title: Metadata-gRPC para desenvolvedores do WCF
 description: Como os metadados são usados no gRPC para passar o contexto adicional entre clientes e servidores
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 32559b3404b12f366fc1624299d04cff9faad9d6
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 723d877bfbf0c2b0785949ff15939aedbac4d4e9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846614"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971985"
 ---
 # <a name="metadata"></a>Metadados
 

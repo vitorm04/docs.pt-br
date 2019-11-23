@@ -18,7 +18,7 @@ Fabrica referências a uma entidade em um entityset.
 CreateRef(entityset_identifier, row_typed_expression)  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  `entityset_identifier`  
  O identificador de entityset, não um literal de cadeia de caracteres.  
   
@@ -26,7 +26,7 @@ CreateRef(entityset_identifier, row_typed_expression)
  Uma expressão linha tipada que corresponde a propriedades chave do tipo de objeto.  
   
 ## <a name="remarks"></a>Comentários  
- `row_typed_expression` deve ser estrutural equivalente ao tipo principal para a entidade. Isto é, deve ter o mesmo número e tipos de campos na mesma ordem como as chaves de entidade.  
+ `row_typed_expression` deve ser estruturalmente equivalente ao tipo de chave para a entidade. Isto é, deve ter o mesmo número e tipos de campos na mesma ordem como as chaves de entidade.  
   
  No exemplo abaixo, os pedidos e BadOrders são ambos os entitysets ordem de tipo, e é a identificação assumida para ser a única propriedade de chave pedido. O exemplo ilustra como nós podemos gerar uma referência a uma entidade em BadOrders. Observe que a referência pode oscilar.  Isto é, a referência não pode realmente identificar uma entidade específica. Nesses casos, uma operação de `DEREF` na referência retorna um zero.  
   
@@ -35,10 +35,10 @@ SELECT CreateRef(LOB.BadOrders, row(o.Id))
 FROM LOB.Orders AS o
 ```  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  A seguinte consulta SQL Entity usa o operador de CREATEREF para fabricar referências a uma entidade em um conjunto de entidades. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [How para: Executa uma consulta que retorna os resultados de Estruturaistype @ no__t-0.  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   

@@ -18,11 +18,11 @@ Retorna uma coleção de todos os valores distintos da expressão de consulta pa
 expression EXCEPT expression  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  `expression`  
  Qualquer expressão de consulta válida que retornar uma coleção para comparar com a coleção retornada de outra expressão de consulta.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Uma coleção de mesmos tipos ou uma base comum ou um tipo derivado como `expression`.  
   
 ## <a name="remarks"></a>Comentários  
@@ -35,10 +35,10 @@ expression EXCEPT expression
 ||EXCEPT|  
 |O menor|EXISTE<br /><br /> OVERLAPS<br /><br /> FLATTEN<br /><br /> SET|  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  A seguinte consulta SQL Entity usa A QUE operador NOT SER para retornar uma coleção de todos os valores diferentes de duas expressões de consulta. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [How para: Executa uma consulta que retorna os resultados de Estruturaistype @ no__t-0.  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   

@@ -240,14 +240,14 @@ A interface `IHostedService` fornece uma maneira conveniente de iniciar tarefas 
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Criando uma tarefa agendada no ASP.NET Core/Standard 2,0** 
-   <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
+- **Criando uma tarefa agendada no ASP.NET Core/Standard 2,0**
+  <https://blog.maartenballiauw.be/post/2017/08/01/building-a-scheduled-cache-updater-in-aspnet-core-2.html>
 
-- **Implementando o IHostedService no ASP.NET Core 2,0** 
-   <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
+- **Implementando o IHostedService no ASP.NET Core 2,0**
+  <https://www.stevejgordon.co.uk/asp-net-core-2-ihostedservice>
 
-- **Exemplo de GenericHost usando o ASP.NET Core 2,1** 
-   <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
+- **Exemplo de GenericHost usando o ASP.NET Core 2,1**
+  <https://github.com/aspnet/Hosting/tree/release/2.1/samples/GenericHostSample>
 
 >[!div class="step-by-step"]
 >[Anterior](test-aspnet-core-services-web-apps.md)

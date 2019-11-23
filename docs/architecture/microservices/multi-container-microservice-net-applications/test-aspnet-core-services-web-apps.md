@@ -11,7 +11,7 @@ ms.locfileid: "73739485"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testar serviços e aplicativos Web do ASP.NET Core
 
-Os controladores são uma parte central de qualquer serviço de API do ASP.NET Core e aplicativo Web ASP.NET MVC. Assim, você precisa estar confiante de que eles se comportarão conforme o esperado para o aplicativo. Testes automatizados podem fornecer essa confiança e detectar erros antes que eles atinjam a produção.
+Os controladores são uma parte central de qualquer serviço de API do ASP.NET Core e aplicativo Web ASP.NET MVC. Assim, você precisa estar confiante de que eles se comportarão conforme o esperado para o aplicativo. Testes automatizados podem fornecer essa confiança e podem detectar erros antes que eles atinjam a produção.
 
 É necessário testar como o controlador se comporta com base em entradas válidas ou inválidas, bem como testar suas respostas com base nos resultados da operação de negócios realizada. No entanto, você deveria ter esses tipos de testes nos seus microsserviços:
 

@@ -44,7 +44,7 @@ Embora eles forneçam muitos benefícios, os microserviços não são um almoço
 
 - A criptografia/descriptografia de mensagens se torna importante.
 
-Os microserviços do Book [.net: A arquitetura para aplicativos](https://docs.microsoft.com/dotnet/standard/microservices-architecture/).net em contêineres, disponível gratuitamente da Microsoft, fornece uma cobertura detalhada dos padrões de comunicação para aplicativos de microatendimento. Neste capítulo, fornecemos uma visão geral de alto nível desses padrões, juntamente com as opções de implementação disponíveis na nuvem do Azure.
+Os [microserviços do Book .net: arquitetura para aplicativos .net em contêineres](https://docs.microsoft.com/dotnet/standard/microservices-architecture/), disponíveis gratuitamente da Microsoft, fornece uma cobertura aprofundada dos padrões de comunicação para aplicativos de microatendimento. Neste capítulo, fornecemos uma visão geral de alto nível desses padrões, juntamente com as opções de implementação disponíveis na nuvem do Azure.
 
 Neste capítulo, primeiro abordaremos a comunicação entre os aplicativos de front-end e os microserviços de back-end. Em seguida, veremos que os microserviços de back-end se comunicam entre si. Exploraremos a tecnologia de comunicação para cima e gRPC. Por fim, examinaremos os novos padrões de comunicação inovadores usando a tecnologia de malha de serviço. Também veremos como a nuvem do Azure fornece diferentes tipos de *serviços de backup* para dar suporte à comunicação nativa de nuvem.
 

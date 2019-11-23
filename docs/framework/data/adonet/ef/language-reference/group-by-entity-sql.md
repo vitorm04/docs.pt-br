@@ -18,12 +18,12 @@ Especifica os grupos nos quais os objetos retornados por uma expressão de consu
 [ GROUP BY aliasedExpression [ ,...n ] ]  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  `aliasedExpression`  
- Qualquer expressão de consulta válida em que o agrupamento for executado. `expression` pode ser uma propriedade ou uma expressão de não agregação que referencia uma propriedade retornada pela cláusula. Cada expressão em um cláusula GROUP BY deve ser avaliada como um tipo que pode ser comparado para igualdade. Esses tipos são geralmente primitivos escalares como números, cadeias de caracteres, e datas. Você não pode agrupar por uma coleção.  
+ Qualquer expressão de consulta válida em que o agrupamento for executado. `expression` pode ser uma propriedade ou uma expressão não agregada que referencie uma propriedade retornada pela cláusula FROM. Cada expressão em um cláusula GROUP BY deve ser avaliada como um tipo que pode ser comparado para igualdade. Esses tipos são geralmente primitivos escalares como números, cadeias de caracteres, e datas. Você não pode agrupar por uma coleção.  
   
 ## <a name="remarks"></a>Comentários  
- Se as funções de agregação forem incluídas na cláusula SELECT \<select listar >, GROUP BY calculará um valor de resumo para cada grupo. Quando o GRUPO é especificado PERTO, ou cada nome de propriedade em qualquer expressão de nonaggregate na lista select deve ser incluído na lista GRUPO, ou o GROUP BY expressão deve coincidir exatamente com a expressão selecionar a lista.  
+ Se as funções de agregação forem incluídas na cláusula SELECT \<selecione list >, agrupar por calcula um valor de resumo para cada grupo. Quando o GRUPO é especificado PERTO, ou cada nome de propriedade em qualquer expressão de nonaggregate na lista select deve ser incluído na lista GRUPO, ou o GROUP BY expressão deve coincidir exatamente com a expressão selecionar a lista.  
   
 > [!NOTE]
 > Se a cláusula ORDER BY não for especificado, os grupos retornados pelo cláusula GROUP BY não estão em qualquer ordem específica. Para especificar ordem específica de dados, nós recomendamos que você sempre use a cláusula ORDER BY.  
@@ -59,10 +59,10 @@ GROUP BY 1   -- BAD, a constant is not allowed
   
  Para obter um exemplo de como usar GROUP BY, consulte [tendo](having-entity-sql.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  A seguinte consulta SQL Entity usa o GRUPO pelo operador para especificar os grupos em que os objetos são retornados por uma consulta. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [How para: Executar uma consulta que retorna os resultados de Primitivatype @ no__t-0.  
+1. Siga o procedimento em [como executar uma consulta que retorna os resultados de primitivatype](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecutePrimitiveTypeQuery`:  
   

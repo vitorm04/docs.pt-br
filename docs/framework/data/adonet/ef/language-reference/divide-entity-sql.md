@@ -18,20 +18,20 @@ Divide um número por outro.
 dividend / divisor  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  `dividend`  
- A expressão numérica a divisão. `dividend` é qualquer expressão válida de ambos os tipos de dados numéricos.  
+ A expressão numérica a divisão. `dividend` é qualquer expressão válida de qualquer um dos tipos de dados numéricos.  
   
  `divisor`  
- A expressão numérica para dividir pelo dividendo. `divisor` é qualquer expressão válida de ambos os tipos de dados numéricos.  
+ A expressão numérica para dividir pelo dividendo. `divisor` é qualquer expressão válida de qualquer um dos tipos de dados numéricos.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  O tipo de dados que resulta da promoção de tipos implícito dos dois argumentos. Para obter mais informações sobre a promoção de tipos implícitas, consulte [sistema de tipos](type-system-entity-sql.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  A consulta Entity SQL a seguir usa o operador/aritmética para dividir um número por outro. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [How para: Executa uma consulta que retorna os resultados de Estruturaistype @ no__t-0.  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   

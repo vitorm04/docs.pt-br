@@ -69,7 +69,7 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 
 <a name="bypass_PP"></a>
 ### <a name="bypassing-publisher-policy"></a>Ignorando a política do Publicador
- Você pode substituir a política do Publicador no arquivo de configuração do aplicativo, se necessário. Por exemplo, novas versões de assemblies que alegam ser compatíveis com versões anteriores ainda podem interromper um aplicativo. Se você quiser ignorar a política do Publicador, adicione um elemento [\<publisherPolicy >](./file-schema/runtime/publisherpolicy-element.md) ao elemento [> @no__t 3dependentAssembly](./file-schema/runtime/dependentassembly-element.md) no arquivo de configuração do aplicativo e defina o atributo **aplicar** como **não**, o que substitui qualquer configurações **Sim** anteriores.
+ Você pode substituir a política do Publicador no arquivo de configuração do aplicativo, se necessário. Por exemplo, novas versões de assemblies que alegam ser compatíveis com versões anteriores ainda podem interromper um aplicativo. Se você quiser ignorar a política do Publicador, adicione um elemento [\<publisherpolicy apply >](./file-schema/runtime/publisherpolicy-element.md) ao elemento [\<dependentAssembly >](./file-schema/runtime/dependentassembly-element.md) no arquivo de configuração do aplicativo e defina o atributo **aplicar** como **não**, que substitui as configurações **Sim** anteriores.
 
  `<publisherPolicy apply="no" />`
 
@@ -83,9 +83,9 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>Especificando a associação de assembly em arquivos de configuração
  Você usa o mesmo formato XML para especificar redirecionamentos de associação, seja no arquivo de configuração do aplicativo, no arquivo de configuração do computador ou no arquivo de política do Publicador. Para redirecionar uma versão de assembly para outra, use o elemento [\<bindingRedirect >](./file-schema/runtime/bindingredirect-element.md) . O atributo **OldVersion** pode especificar uma única versão de assembly ou um intervalo de versões. O atributo `newVersion` deve especificar uma única versão.  Por exemplo, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` especifica que o tempo de execução deve usar a versão 2.0.0.0 em vez das versões de assembly entre 1.1.0.0 e 1.2.0.0.
 
- O exemplo de código a seguir demonstra uma variedade de cenários de redirecionamento de associação. O exemplo especifica um redirecionamento para um intervalo de versões para `myAssembly` e um único redirecionamento de associação para `mySecondAssembly`. O exemplo também especifica que o arquivo de política do Publicador não substituirá os redirecionamentos de associação para `myThirdAssembly`.
+ O exemplo de código a seguir demonstra uma variedade de cenários de redirecionamento de associação. O exemplo especifica um redirecionamento para um intervalo de versões para `myAssembly`e um único redirecionamento de associação para `mySecondAssembly`. O exemplo também especifica que o arquivo de política do Publicador não substituirá os redirecionamentos de associação para `myThirdAssembly`.
 
- Para associar um assembly, você deve especificar a cadeia de caracteres "urn: schemas-microsoft-com: asm. v1" com o atributo **xmlns** na marca [> \<assemblyBinding](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
+ Para associar um assembly, você deve especificar a cadeia de caracteres "urn: schemas-microsoft-com: asm. v1" com o atributo **xmlns** na marca [\<assemblyBinding >](./file-schema/runtime/assemblybinding-element-for-runtime.md) .
 
 ```xml
 <configuration>
@@ -155,12 +155,12 @@ Você pode habilitar o redirecionamento de associação automática se seu aplic
 ## <a name="see-also"></a>Consulte também
 
 - [Como habilitar e desabilitar o redirecionamento automático de associações](how-to-enable-and-disable-automatic-binding-redirection.md)
-- [\<bindingRedirect > elemento](./file-schema/runtime/bindingredirect-element.md)
+- [\<o elemento > bindingRedirect](./file-schema/runtime/bindingredirect-element.md)
 - [Permissão de segurança para redirecionamento de associações de assemblies](assembly-binding-redirection-security-permission.md)
 - [Assemblies no .NET](../../standard/assembly/index.md)
 - [Programação com assemblies](../../standard/assembly/program.md)
-- [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
+- [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurando aplicativos](index.md)
-- [Esquema de configurações do tempo de execução](./file-schema/runtime/index.md)
+- [Esquema de configurações do runtime](./file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](./file-schema/index.md)
 - [Como criar uma política de editor](how-to-create-a-publisher-policy.md)

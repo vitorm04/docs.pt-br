@@ -35,18 +35,18 @@ Apresenta a propriedade `ImeMode`, que é usada para controlar o tipo de entrada
 
 - [Globalizando e localizando aplicativos do .NET](../../../standard/globalization-localization/index.md)
 
-- [Passo a passo: Como baixar assemblies satélite sob demanda com a API de implantação do ClickOnce usando o designer](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
+- [Passo a passo: baixando assemblies satélite sob demanda com a API de implantação do ClickOnce usando o designer](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer)
 
 - [Localizando aplicativos ClickOnce](/visualstudio/deployment/localizing-clickonce-applications)
 
-- [Passo a passo: Como baixar assemblies satélite sob demanda com a API de implantação do ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
+- [Instruções passo a passo: baixando assemblies satélite por demanda com a API de implantação do ClickOnce](/visualstudio/deployment/walkthrough-downloading-satellite-assemblies-on-demand-with-the-clickonce-deployment-api)
 
-- [Como: Definir a cultura e a cultura da interface do usuário para Windows Forms globalização @ no__t-0
+- [Como definir a cultura e a cultura da interface do usuário para Windows Forms globalização](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/b28bx3bh(v=vs.100))
 
-- [Como: Criar Windows Forms e controles espelhados @ no__t-0
+- [Como: criar Windows Forms e controles espelhados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xwbz5ws0(v=vs.100))
 
-- [Como: Suporte à localização em Windows Forms usando AutoSize e o controle TableLayoutPanel @ no__t-0
+- [Como: dar suporte à localização em Windows Forms usando AutoSize e o controle TableLayoutPanel](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1zkt8b33(v=vs.100))
 
-- [Passo a passo: Localizando Windows Forms @ no__t-0
+- [Walkthrough: Localizando Windows Forms](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/y99d1cd3(v=vs.100))
 
-- [Passo a passo: Criando um layout que ajusta a proporção para a localização @ no__t-0
+- [Walkthrough: Criando um layout que ajusta a proporção para localização](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))

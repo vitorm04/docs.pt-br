@@ -21,7 +21,7 @@ ms.locfileid: "73119275"
 Contém configurações de aplicativo personalizadas. Esta é uma seção de configuração predefinida fornecida pelo .NET Framework.
 
 [ **\<configuration>** ](../configuration-element.md)   
-&nbsp;&nbsp; **\<appsettings >**
+&nbsp;&nbsp; **\<appSettings>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -43,7 +43,7 @@ Contém configurações de aplicativo personalizadas. Esta é uma seção de con
 | --- | ----------- |
 | [ **> de configuração de\<** Elementos](../configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
 
-## <a name="child-elements"></a>Elementos filho
+## <a name="child-elements"></a>Child elements
 
 |     | Descrição |
 | --- | ----------- |
@@ -59,7 +59,7 @@ Você pode usar o atributo **File** no elemento **\<appSettings >** dos arquivos
 
 Os arquivos de configuração especificados pelo atributo de **arquivo** devem ter um nó raiz de **\<appSettings >** em vez de **\<> de configuração**.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir mostra um arquivo de configurações de aplicativo externo (*custom.config*) que define uma configuração de aplicativo personalizada:
 

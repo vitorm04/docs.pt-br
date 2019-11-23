@@ -43,19 +43,19 @@ Dessas, apenas as três primeiras serão abordadas ou introduzidas neste guia. O
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Mark Russinovich. Microsserviços: uma revolução de aplicativos proporcionada pela nuvem** \
+- **Mark Russinovich. Microserviços: uma revolução de aplicativo desativada pela nuvem** \
   <https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/>
 
-- **Martin Fowler. Microsserviços** \
+- **Martin Fowler. \ de microservices**
   <https://www.martinfowler.com/articles/microservices.html>
 
-- **Martin Fowler. Pré-requisitos de microsserviços** \
+- **Martin Fowler. Pré-requisitos de microserviço** \
   <https://martinfowler.com/bliki/MicroservicePrerequisites.html>
 
-- **Jimmy Nilsson. Computação em nuvem em partes** \
+- **Jimmy Nilsson.**  \ de computação em nuvem de partes
   <https://www.infoq.com/articles/CCC-Jimmy-Nilsson>
 
-- **Cesar de la Torre. Ciclo de vida do aplicativo do Docker em contêineres com a plataforma e as ferramentas da Microsoft** (livro eletrônico para download) \
+- **Cesar de la Torre. Ciclo de vida do aplicativo Docker em contêiner com a plataforma e as ferramentas da Microsoft** (livro eletrônico baixável) \
   <https://aka.ms/dockerlifecycleebook>
 
 >[!div class="step-by-step"]

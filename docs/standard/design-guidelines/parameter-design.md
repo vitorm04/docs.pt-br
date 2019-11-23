@@ -34,7 +34,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
   
  **✓ DO** colocar todos os `out` parâmetros após todos o por valor e `ref` parâmetros (excluindo matrizes de parâmetros), mesmo se ele resulta em uma inconsistência no parâmetro ordenação entre sobrecargas (consulte [membro Sobrecarga](../../../docs/standard/design-guidelines/member-overloading.md)).  
   
- Os parâmetros `out` podem ser vistos como valores de retorno extras, e agrupá-los juntos torna a assinatura do método mais fácil de entender.  
+ Os parâmetros de `out` podem ser vistos como valores de retorno extras e agrupá-los juntos torna a assinatura do método mais fácil de entender.  
   
  **✓ DO** seja consistente em nomes de parâmetros ao substituir membros ou implementar membros de interface.  
   
@@ -50,7 +50,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
  **✓ CONSIDER** usando boolianos para parâmetros de construtor que são valores de dois estados realmente e são usados simplesmente para inicializar propriedades Boolianas.  
   
 ### <a name="validating-arguments"></a>Validando argumentos  
- **✓ DO** validar argumentos passados para membros públicos, protegidos ou implementados explicitamente. Gere <xref:System.ArgumentException?displayProperty=nameWithType>, ou uma de suas subclasses, se a validação falhar.  
+ **✓ DO** validar argumentos passados para membros públicos, protegidos ou implementados explicitamente. Lance <xref:System.ArgumentException?displayProperty=nameWithType>, ou uma de suas subclasses, se a validação falhar.  
   
  Observe que a validação real não precisa necessariamente acontecer no próprio membro público ou protegido. Isso pode acontecer em um nível inferior em alguma rotina privada ou interna. O ponto principal é que toda a área de superfície exposta aos usuários finais verifica os argumentos.  
   
@@ -67,17 +67,17 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
  Se o membro for sensível à segurança, você será incentivado a fazer uma cópia e, em seguida, validar e processar o argumento.  
   
 ### <a name="parameter-passing"></a>Passagem de parâmetro  
- Da perspectiva de um designer de estrutura, há três grupos principais de parâmetros: parâmetros por valor, parâmetros `ref` e parâmetros de `out`.  
+ Da perspectiva de um designer de estrutura, há três grupos principais de parâmetros: parâmetros por valor, parâmetros de `ref` e parâmetros de `out`.  
   
  Quando um argumento é passado por um parâmetro por valor, o membro recebe uma cópia do argumento real passado. Se o argumento for um tipo de valor, uma cópia do argumento será colocada na pilha. Se o argumento for um tipo de referência, uma cópia da referência será colocada na pilha. As C#linguagens CLR mais populares, como, VB.net e C++, por padrão, passar parâmetros por valor.  
   
- Quando um argumento é passado através de um parâmetro `ref`, o membro recebe uma referência para o argumento real passado. Se o argumento for um tipo de valor, uma referência ao argumento será colocada na pilha. Se o argumento for um tipo de referência, uma referência à referência será colocada na pilha. parâmetros `Ref` podem ser usados para permitir que o membro modifique argumentos passados pelo chamador.  
+ Quando um argumento é passado através de um parâmetro `ref`, o membro recebe uma referência para o argumento real passado. Se o argumento for um tipo de valor, uma referência ao argumento será colocada na pilha. Se o argumento for um tipo de referência, uma referência à referência será colocada na pilha. `Ref` parâmetros podem ser usados para permitir que o membro modifique os argumentos passados pelo chamador.  
   
- os parâmetros `Out` são semelhantes aos parâmetros `ref`, com algumas pequenas diferenças. O parâmetro é inicialmente considerado não atribuído e não pode ser lido no corpo do membro antes de ser atribuído a um valor. Além disso, o parâmetro deve ser atribuído a um valor antes que o membro seja retornado.  
+ `Out` parâmetros são semelhantes aos parâmetros `ref`, com algumas pequenas diferenças. O parâmetro é inicialmente considerado não atribuído e não pode ser lido no corpo do membro antes de ser atribuído a um valor. Além disso, o parâmetro deve ser atribuído a um valor antes que o membro seja retornado.  
   
  **X AVOID** usando `out` ou `ref` parâmetros.  
   
- Usar parâmetros `out` ou `ref` requer experiência com ponteiros, compreendendo como tipos de valor e tipos de referência diferem e manipulando métodos com vários valores de retorno. Além disso, a diferença `out` entre `ref` os parâmetros e não é amplamente compreendida. Os arquitetos de estrutura que projetam para um público geral não devem esperar que os usuários façam o mestre de trabalho com parâmetros `out` ou `ref`.  
+ O uso de parâmetros `out` ou `ref` requer experiência com ponteiros, compreendendo como tipos de valor e tipos de referência diferem e manipulando métodos com vários valores de retorno. Além disso, a diferença entre os parâmetros `out` e `ref` não é amplamente compreendida. Os arquitetos de estrutura que projetam para um público geral não devem esperar que os usuários façam o mestre de trabalho com `out` ou `ref` parâmetros.  
   
  **X DO NOT** passar tipos de referência por referência.  
   
@@ -138,7 +138,7 @@ public class String {
   
  **X DO NOT** usar o `varargs` métodos, também conhecidos como o botão de reticências.  
   
- Algumas linguagens CLR, como C++, oferecem suporte a uma convenção alternativa para passar listas de parâmetros variáveis chamadas de métodos `varargs`. A Convenção não deve ser usada em estruturas, pois não é compatível com CLS.  
+ Algumas linguagens CLR, como C++, oferecem suporte a uma convenção alternativa para passar listas de parâmetros variáveis chamadas `varargs` métodos. A Convenção não deve ser usada em estruturas, pois não é compatível com CLS.  
   
 ### <a name="pointer-parameters"></a>Parâmetros do ponteiro  
  Em geral, os ponteiros não devem aparecer na área de superfície pública de uma estrutura de código gerenciada bem projetada. Na maioria das vezes, os ponteiros devem ser encapsulados. No entanto, em alguns casos, os ponteiros são necessários para motivos de interoperabilidade e o uso de ponteiros nesses casos é apropriado.  
@@ -151,9 +151,9 @@ public class String {
   
  Por exemplo, não há necessidade de passar o índice inicial, porque a aritmética simples de ponteiro pode ser usada para atingir o mesmo resultado.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reprinted por permissão do Pearson Education, Inc. de diretrizes de design [Framework: Convenções, idiomas e padrões para bibliotecas .NET reutilizáveis, 2ª edição @ no__t-0 por Krzysztof Cwalina e Brad Abrams, publicadas em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também
 

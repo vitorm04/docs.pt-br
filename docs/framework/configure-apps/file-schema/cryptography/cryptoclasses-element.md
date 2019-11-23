@@ -15,14 +15,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699751"
 ---
-# <a name="cryptoclasses-element"></a>\<cryptoClasses > elemento
+# <a name="cryptoclasses-element"></a>\<elemento de > cryptoClasses
 Contém uma lista de classes de criptografia que têm um mapeamento para um nome amigável no elemento [ \<nameEntry>](nameentry-element.md).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<cryptoClasses >**  
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptoClasses >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,10 +32,10 @@ Contém uma lista de classes de criptografia que têm um mapeamento para um nome
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ None.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -43,16 +43,16 @@ Contém uma lista de classes de criptografia que têm um mapeamento para um nome
 |-------------|-----------------|  
 |[\<cryptoClass>](cryptoclass-element.md)|Contém uma classe de criptografia que tem um mapeamento para um nome amigável no elemento **\<nameEntry>** .|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
 |`cryptographySettings`|Contém configurações de criptografia.|  
 |`cryptoNameMapping`|Contém mapeamentos de classes para nomes amigáveis.|  
-|`mscorlib`|Contém o `cryptographySettings` elemento.|  
+|`mscorlib`|Contém o elemento `cryptographySettings`.|  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir mostra como usar o elemento **\<cryptoClass >** para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usar o método <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> para retornar um objeto `MyCryptoRSAClass`.  
   
 ```xml  

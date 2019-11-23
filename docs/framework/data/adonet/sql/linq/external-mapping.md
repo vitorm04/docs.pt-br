@@ -16,18 +16,18 @@ o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suport
   
 - Você pode manipular um arquivo de mapeamento externo algo como um arquivo de configuração. Por exemplo, você pode atualizar como o aplicativo se comporta após enviar os binários apenas alternando para fora o arquivo de mapeamento externo.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  O arquivo de mapeamento deve ser um arquivo XML e o arquivo deve ser validado em relação a um arquivo de definição de esquema [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (. xsd).  
   
  As seguintes regras se aplicam:  
   
 - O arquivo de mapeamento deve ser um arquivo XML.  
   
-- O arquivo de mapeamento de XML deve ser válido no arquivo de definição de esquema XML. Para obter mais informações, confira [Como: Valide os arquivos DBML e de mapeamento externo @ no__t-0.  
+- O arquivo de mapeamento de XML deve ser válido no arquivo de definição de esquema XML. Para obter mais informações, consulte [como: validar o dbml e os arquivos de mapeamento externos](how-to-validate-dbml-and-external-mapping-files.md).  
   
 - As substituições externos de mapeamento atributos com o mapeamento. Ou seja quando você usa uma fonte externa de mapeamento para criar <xref:System.Data.Linq.DataContext>, <xref:System.Data.Linq.DataContext> ignora todos os atributos de mapeamento que você criou em classes. Esse comportamento é verdadeiro se a classe está incluída no arquivo de mapeamento externo.  
   
-- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não oferece suporte ao uso híbrido das duas abordagens mapeando (com base em atributos e externos).  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] não dá suporte ao uso híbrido das duas abordagens de mapeamento (baseadas em atributo e externa).  
   
 ## <a name="xml-schema-definition-file"></a>Arquivo de Definição de Esquema XML  
  O mapeamento externa em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deve ser válido com a seguinte definição de esquema XML.  
@@ -35,7 +35,7 @@ o [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dá suport
  Distinguir este arquivo de definição do esquema do arquivo de definição do esquema que é usado para validar um arquivo DBML. Para obter mais informações, consulte [geração de código no LINQ to SQL](code-generation-in-linq-to-sql.md)).  
   
 > [!NOTE]
-> Os usuários do Visual Studio também encontrarão esse arquivo XSD na caixa de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar esse arquivo corretamente para validar um arquivo de mapeamento externo, consulte [How para: Valide os arquivos DBML e de mapeamento externo @ no__t-0.  
+> Os usuários do Visual Studio também encontrarão esse arquivo XSD na caixa de diálogo esquemas XML como "LinqToSqlMapping. xsd". Para usar esse arquivo corretamente para validar um arquivo de mapeamento externo, consulte [como validar arquivos dbml e de mapeamento externo](how-to-validate-dbml-and-external-mapping-files.md).  
   
 ```xml  
 <?xml version="1.0" encoding="utf-16"?>  
@@ -145,4 +145,4 @@ elementFormDefault="qualified" >
 
 - [Geração de código em LINQ to SQL](code-generation-in-linq-to-sql.md)
 - [Referência](reference.md)
-- [Como: Gerar o modelo de objeto como um arquivo externo @ no__t-0
+- [Como gerar o modelo de objeto como um arquivo externo](how-to-generate-the-object-model-as-an-external-file.md)

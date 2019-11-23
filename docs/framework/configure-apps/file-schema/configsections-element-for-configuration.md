@@ -21,7 +21,7 @@ ms.locfileid: "73119014"
 Contém as declarações de namespace e seção de configuração.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<configsections >**
+&nbsp;&nbsp; **\<configSections>**
 
 ## <a name="attributes"></a>Atributos
 
@@ -33,12 +33,12 @@ Nenhum
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
 
-## <a name="child-elements"></a>Elementos filho
+## <a name="child-elements"></a>Child elements
 
 |     | Descrição |
 | --- | ----------- |
 | [ **\<seção >** ](section-element.md) | Contém uma declaração de seção de configuração. |
-| [ **\<> de seção**](sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
+| [ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
 | [ **\<remove>** ](remove-element-for-configsections.md) | Remove uma seção ou um grupo de seções predefinido. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Limpa todas as seções e grupos de seções definidos anteriormente. |
 
@@ -46,7 +46,7 @@ Nenhum
 
 Se esse elemento estiver em um arquivo de configuração, ele deverá ser o primeiro elemento filho do elemento **\<configuration >** .
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir mostra como definir uma seção de configuração e definir as configurações para essa seção:
 

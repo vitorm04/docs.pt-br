@@ -45,7 +45,7 @@ N"This is a string!"
 ## <a name="datetime"></a>DateTime  
  Um literal de datetime é independente da localidade e é composto de uma parte da data e uma parte de tempo. Partes de data e hora são imperativas e não há nenhum valor padrão.  
   
- A parte de data deve ter o formato: `YYYY` @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4, em que `YYYY` é um valor de ano de quatro dígitos entre 0001 e 9999, `MM` é o mês entre 1 e 12 e `DD` é o valor de dia válido para o mês determinado, `MM`.  
+ A parte de data deve ter o formato: `YYYY`-`MM`-`DD`, em que `YYYY` é um valor de ano de quatro dígitos entre 0001 e 9999, `MM` é o mês entre 1 e 12 e `DD` é o valor de dia válido para a `MM`de mês especificada.  
   
  A parte de tempo deve ter o formato: `HH`:`MM`[:`SS`[.fffffff]], onde `HH` é o valor de hora entre 0 e 23, `MM` é minúsculo o valor entre 0 e 59, `SS` é o segundo valor entre 0 e 59 e o fffffff são o segundo valor fracionário entre 0 e 9999999. Todos os intervalos de valores são incluindo. Os segundos fracionários são opcionais. Os segundos são opcionais a menos que os segundos fracionários são especificados; nesse caso, os segundos são necessários. Quando os segundos ou os segundos fracionários não for especificado, o valor padrão de zero será usado em vez disso.  
   
@@ -56,7 +56,7 @@ DATETIME'2006-10-1 23:11'
 DATETIME'2006-12-25 01:01:00.0000000' -- same as DATETIME'2006-12-25 01:01'  
 ```  
   
-## <a name="time"></a>Hora  
+## <a name="time"></a>Tempo  
  Um literal hora é independente da localidade e composta de uma parte de tempo somente. A parte de tempo é imperativa e não há nenhum valor padrão. Deve ter o formato HH:MM[:SS[.fffffff]], onde HH é o valor de hora entre 0 e 23, MM são o minuto valor entre 0 e 59, SS são o segundo valor entre 0 e 59, e fffffff é o segundo valor da fração entre 0 e 9999999. Todos os intervalos de valores são incluindo. Os segundos fracionários são opcionais. Os segundos são opcionais a menos que os segundos fracionários são especificados; nesse caso, os segundos são necessários. Quando os segundos ou frações não for especificado, o valor padrão de zero será usado em vez disso.  
   
  Pode haver qualquer número de espaços entre o símbolo de TEMPOS e a carga útil literal, mas nenhuma novas linhas.  
@@ -91,7 +91,7 @@ BINARY    '0f0f0f0F0F0F0F0F0F0F'
 X'' –- empty binary string  
 ```  
   
-## <a name="guid"></a>GUID  
+## <a name="guid"></a>{1&gt;Guid&lt;1}  
  Um literal de `GUID` representa um identificador exclusivo. É uma sequência formada pela palavra-chave `GUID` seguida por dígitos hexadecimais no formulário conhecido como formato de *registro* : 8-4-4-4-12 entre aspas simples. Os dígitos hexadecimais não diferenciam maiúsculas de minúsculas.  
   
  Pode haver qualquer número de espaços entre o símbolo de TEMPOS e a carga útil literal, mas nenhuma novas linhas.  

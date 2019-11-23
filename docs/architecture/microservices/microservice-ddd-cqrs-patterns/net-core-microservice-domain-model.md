@@ -2,12 +2,12 @@
 title: Implementando um modelo de domínio de microsserviço com o .NET Core
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes de implementação de um modelo de domínio orientado a DDD.
 ms.date: 10/08/2018
-ms.openlocfilehash: be8dc9339f5815139616e9785b5b3e3e5931b57e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: bff9cbda08e519038056268151a1721427f0ac01
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737244"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972042"
 ---
 # <a name="implement-a-microservice-domain-model-with-net-core"></a>Implementar um modelo de domínio de microsserviço com o .NET Core
 
@@ -174,7 +174,7 @@ Por exemplo, no exemplo de código anterior, OrderAggregate, há vários campos 
   <https://kalele.io/blog-posts/modeling-aggregates-with-ddd-and-entity-framework/>
 
 - **Julie Lerman. Pontos de dados-codificação para o design controlado por domínio: dicas para desenvolvedores com foco em dados** \
-  <https://msdn.microsoft.com/magazine/dn342868.aspx>
+  <https://docs.microsoft.com/archive/msdn-magazine/2013/august/data-points-coding-for-domain-driven-design-tips-for-data-focused-devs>
 
 - **Udi Dahan. Como criar modelos de domínio totalmente encapsulados** \
   <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>

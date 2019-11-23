@@ -40,15 +40,15 @@ ms.locfileid: "72005085"
 - [Tópicos relacionados] 
   
 <a name="table_basics"></a>   
-## <a name="table-basics"></a>Noções básicas sobre tabelas  
+## <a name="table-basics"></a>Conceitos básicos sobre tabelas  
   
 <a name="table_vs_Grid"></a>   
 ### <a name="how-is-table-different-then-grid"></a>De que modo a tabela difere da grade?  
- <xref:System.Windows.Documents.Table> e <xref:System.Windows.Controls.Grid> compartilham algumas funcionalidades comuns, mas cada uma é mais adequada para cenários diferentes. Um <xref:System.Windows.Documents.Table> foi projetado para uso no conteúdo do Flow (consulte [visão geral do documento de fluxo](flow-document-overview.md) para obter mais informações sobre o conteúdo do fluxo). As grades são melhor utilizadas em formulários (basicamente em qualquer lugar fora do conteúdo de fluxo). Em um <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> dá suporte a comportamentos de conteúdo de fluxo como paginação, refluxo de coluna e seleção de conteúdo, enquanto um <xref:System.Windows.Controls.Grid> não. Um <xref:System.Windows.Controls.Grid> por outro lado é melhor usado fora de um <xref:System.Windows.Documents.FlowDocument> por muitos motivos, incluindo <xref:System.Windows.Controls.Grid> adiciona elementos com base em um índice de linha e coluna, <xref:System.Windows.Documents.Table> não. O elemento <xref:System.Windows.Controls.Grid> permite a disposição em camadas de conteúdo filho, permitindo que mais de um elemento exista em uma única "célula". <xref:System.Windows.Documents.Table> não dá suporte a camadas. Os elementos filho de um <xref:System.Windows.Controls.Grid> podem ser absolutamente posicionados em relação à área de seus limites de "célula". <xref:System.Windows.Documents.Table> não oferece suporte a esse recurso. Por fim, um <xref:System.Windows.Controls.Grid> requer menos recursos e um <xref:System.Windows.Documents.Table>, portanto, considere usar um <xref:System.Windows.Controls.Grid> para melhorar o desempenho.  
+ <xref:System.Windows.Documents.Table> e <xref:System.Windows.Controls.Grid> compartilham algumas funcionalidades comuns, mas cada uma é mais adequada para cenários diferentes. Um <xref:System.Windows.Documents.Table> foi projetado para uso no conteúdo do Flow (consulte [visão geral do documento de fluxo](flow-document-overview.md) para obter mais informações sobre o conteúdo do fluxo). As grades são melhor utilizadas em formulários (basicamente em qualquer lugar fora do conteúdo de fluxo). Em um <xref:System.Windows.Documents.FlowDocument>, <xref:System.Windows.Documents.Table> dá suporte a comportamentos de conteúdo de fluxo como paginação, refluxo de coluna e seleção de conteúdo, enquanto um <xref:System.Windows.Controls.Grid> não. Uma <xref:System.Windows.Controls.Grid> por outro lado é melhor usada fora de um <xref:System.Windows.Documents.FlowDocument> por muitos motivos, incluindo <xref:System.Windows.Controls.Grid> adiciona elementos com base em um índice de linha e coluna, <xref:System.Windows.Documents.Table> não. O elemento <xref:System.Windows.Controls.Grid> permite a disposição em camadas de conteúdo filho, permitindo que mais de um elemento exista em uma única "célula". <xref:System.Windows.Documents.Table> não dá suporte a camadas. Os elementos filho de uma <xref:System.Windows.Controls.Grid> podem ser absolutamente posicionados em relação à área de seus limites de "célula". <xref:System.Windows.Documents.Table> não oferece suporte a esse recurso. Por fim, um <xref:System.Windows.Controls.Grid> requer menos recursos, então, um <xref:System.Windows.Documents.Table>, portanto, considere usar um <xref:System.Windows.Controls.Grid> para melhorar o desempenho.  
   
 <a name="basic_table_structure"></a>   
 ### <a name="basic-table-structure"></a>Estrutura básica da tabela  
- <xref:System.Windows.Documents.Table> fornece uma apresentação baseada em grade que consiste em colunas (representadas por elementos <xref:System.Windows.Documents.TableColumn>) e linhas (representadas por elementos <xref:System.Windows.Documents.TableRow>). os elementos <xref:System.Windows.Documents.TableColumn> não hospedam conteúdo; Elas simplesmente definem colunas e características de colunas. os elementos <xref:System.Windows.Documents.TableRow> devem ser hospedados em um elemento <xref:System.Windows.Documents.TableRowGroup>, que define um agrupamento de linhas para a tabela. os elementos <xref:System.Windows.Documents.TableCell>, que contêm o conteúdo real a ser apresentado pela tabela, devem ser hospedados em um elemento <xref:System.Windows.Documents.TableRow>. <xref:System.Windows.Documents.TableCell> pode conter apenas elementos que derivam de <xref:System.Windows.Documents.Block>.  Elementos filho válidos para um <xref:System.Windows.Documents.TableCell> incluem.  
+ <xref:System.Windows.Documents.Table> fornece uma apresentação baseada em grade que consiste em colunas (representadas por elementos de <xref:System.Windows.Documents.TableColumn>) e linhas (representadas por elementos de <xref:System.Windows.Documents.TableRow>). os elementos de <xref:System.Windows.Documents.TableColumn> não hospedam conteúdo; Elas simplesmente definem colunas e características de colunas. os elementos <xref:System.Windows.Documents.TableRow> devem ser hospedados em um elemento <xref:System.Windows.Documents.TableRowGroup>, que define um agrupamento de linhas para a tabela. <xref:System.Windows.Documents.TableCell> elementos, que contêm o conteúdo real a ser apresentado pela tabela, devem ser hospedados em um elemento <xref:System.Windows.Documents.TableRow>. <xref:System.Windows.Documents.TableCell> só pode conter elementos que derivam de <xref:System.Windows.Documents.Block>.  Elementos filho válidos para um <xref:System.Windows.Documents.TableCell> incluem.  
   
 - <xref:System.Windows.Documents.BlockUIContainer>  
   
@@ -61,7 +61,7 @@ ms.locfileid: "72005085"
 - <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
-> os elementos <xref:System.Windows.Documents.TableCell> podem não hospedar diretamente o conteúdo de texto. Para obter mais informações sobre as regras de confinamento para elementos de conteúdo de fluxo como <xref:System.Windows.Documents.TableCell>, consulte [visão geral do documento de fluxo](flow-document-overview.md).  
+> <xref:System.Windows.Documents.TableCell> elementos podem não hospedar diretamente o conteúdo de texto. Para obter mais informações sobre as regras de confinamento para elementos de conteúdo de fluxo como <xref:System.Windows.Documents.TableCell>, consulte [visão geral do documento de fluxo](flow-document-overview.md).  
   
 > [!NOTE]
 > <xref:System.Windows.Documents.Table> é semelhante ao elemento <xref:System.Windows.Controls.Grid>, mas tem mais recursos e, portanto, requer maior sobrecarga de recursos.  
@@ -76,7 +76,7 @@ ms.locfileid: "72005085"
   
 <a name="table_containment"></a>   
 ### <a name="table-containment"></a>Contenção de tabelas  
- <xref:System.Windows.Documents.Table> deriva do elemento <xref:System.Windows.Documents.Block> e adere às regras comuns para elementos de nível <xref:System.Windows.Documents.Block>.  Um elemento <xref:System.Windows.Documents.Table> pode estar contido em qualquer um dos seguintes elementos:  
+ <xref:System.Windows.Documents.Table> deriva do elemento <xref:System.Windows.Documents.Block> e adere às regras comuns para elementos de nível de <xref:System.Windows.Documents.Block>.  Um elemento <xref:System.Windows.Documents.Table> pode estar contido em qualquer um dos seguintes elementos:  
   
 - <xref:System.Windows.Documents.FlowDocument>  
   
@@ -102,7 +102,7 @@ ms.locfileid: "72005085"
   
  A figura a seguir mostra como esse exemplo é renderizado.  
   
- ![Screenshot: Grupos de linhas da tabela @ no__t-0(./media/table-rowgroups.png "Table_RowGroups")  
+ ![Captura de tela: grupos de linhas da tabela](./media/table-rowgroups.png "Table_RowGroups")  
   
 <a name="rendering_precedence"></a>   
 ### <a name="background-rendering-precedence"></a>Precedência de renderização em tela de fundo  
@@ -124,7 +124,7 @@ ms.locfileid: "72005085"
   
  A figura a seguir mostra como esse exemplo é renderizado (mostrando somente as cores da tela de fundo).  
   
- ![Screenshot: Ordem z&#45;da tabela @ no__t-1(./media/table-zorder.png "Table_ZOrder")  
+ ![Captura de tela: ordem Z da tabela](./media/table-zorder.png "Table_ZOrder")  
   
 <a name="spanning_rows_or_columns"></a>   
 ### <a name="spanning-rows-or-columns"></a>Abrangendo linhas ou colunas  
@@ -136,36 +136,36 @@ ms.locfileid: "72005085"
   
  A figura a seguir mostra como esse exemplo é renderizado.  
   
- ![Screenshot: Célula abrangendo todas as três colunas @ no__t-0(./media/table-columnspan.png "Table_ColumnSpan")  
+ ![Captura de tela: célula abrangendo todas as três colunas](./media/table-columnspan.png "Table_ColumnSpan")  
   
 <a name="building_a_table_with_code"></a>   
 ## <a name="building-a-table-with-code"></a>Criar uma tabela com código  
- Os exemplos a seguir mostram como criar programaticamente um <xref:System.Windows.Documents.Table> e preenchê-lo com conteúdo. O conteúdo da tabela é dividido em cinco linhas (representadas por objetos <xref:System.Windows.Documents.TableRow> contidos em um objeto <xref:System.Windows.Documents.Table.RowGroups%2A>) e seis colunas (representadas por objetos <xref:System.Windows.Documents.TableColumn>). As linhas são usadas para fins de apresentação diferentes, incluindo uma linha de título para ser usada como título da tabela inteira, uma linha de cabeçalho para descrever as colunas de dados na tabela e uma linha de rodapé com informações resumidas.  Observe que a noção das linhas de “título”, “cabeçalho” e “rodapé” não são inerentes à tabela; essas são apenas linhas com características diferentes. As células da tabela contêm o conteúdo real, que pode ser composto de texto, imagens ou quase qualquer outro elemento [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
+ Os exemplos a seguir mostram como criar programaticamente um <xref:System.Windows.Documents.Table> e preenchê-lo com conteúdo. O conteúdo da tabela é dividido em cinco linhas (representadas por <xref:System.Windows.Documents.TableRow> objetos contidos em um objeto <xref:System.Windows.Documents.Table.RowGroups%2A>) e seis colunas (representadas por objetos <xref:System.Windows.Documents.TableColumn>). As linhas são usadas para fins de apresentação diferentes, incluindo uma linha de título para ser usada como título da tabela inteira, uma linha de cabeçalho para descrever as colunas de dados na tabela e uma linha de rodapé com informações resumidas.  Observe que a noção de linhas de “título”, “cabeçalho” e “rodapé” não são inerentes à tabela; essas são apenas linhas com características diferentes. As células da tabela contêm o conteúdo real, que pode ser composto de texto, imagens ou praticamente qualquer outro elemento de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  
   
- Primeiro, um <xref:System.Windows.Documents.FlowDocument> é criado para hospedar o <xref:System.Windows.Documents.Table>, e um novo <xref:System.Windows.Documents.Table> é criado e adicionado ao conteúdo do <xref:System.Windows.Documents.FlowDocument>.  
+ Primeiro, um <xref:System.Windows.Documents.FlowDocument> é criado para hospedar o <xref:System.Windows.Documents.Table>e um novo <xref:System.Windows.Documents.Table> é criado e adicionado ao conteúdo da <xref:System.Windows.Documents.FlowDocument>.  
   
  [!code-csharp[TableSnippets#_TableCreate](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreate)]
  [!code-vb[TableSnippets#_TableCreate](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreate)]  
   
- Em seguida, seis objetos <xref:System.Windows.Documents.TableColumn> são criados e adicionados à coleção de <xref:System.Windows.Documents.Table.Columns%2A> da tabela, com alguma formatação aplicada.  
+ Em seguida, seis objetos <xref:System.Windows.Documents.TableColumn> são criados e adicionados à coleção de <xref:System.Windows.Documents.Table.Columns%2A> da tabela, com algumas formatações aplicadas.  
   
 > [!NOTE]
-> Observe que a coleção <xref:System.Windows.Documents.Table.Columns%2A> da tabela usa a indexação padrão baseada em zero.  
+> Observe que a coleção de <xref:System.Windows.Documents.Table.Columns%2A> da tabela usa a indexação padrão baseada em zero.  
   
  [!code-csharp[TableSnippets#_TableCreateColumns](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tablecreatecolumns)]
  [!code-vb[TableSnippets#_TableCreateColumns](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tablecreatecolumns)]  
   
- Em seguida, uma linha de título é criada e adicionada à tabela com alguma formatação aplicada.  Por coincidência, a linha de título contém uma única célula que abrange todas as seis colunas na tabela.  
+ Em seguida, uma linha de título é criada e adicionada à tabela com certa formatação aplicada.  Por coincidência, a linha de título contém uma única célula que abrange todas as seis colunas na tabela.  
   
  [!code-csharp[TableSnippets#_TableAddTitleRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddtitlerow)]
  [!code-vb[TableSnippets#_TableAddTitleRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddtitlerow)]  
   
- Em seguida, uma linha de cabeçalho é criada e adicionada à tabela e as células na linha de cabeçalho são criadas e populadas com conteúdo.  
+ Em seguida, uma linha de cabeçalho é criada e adicionada à tabela, e as células na linha de cabeçalho são criadas e populadas com conteúdo.  
   
  [!code-csharp[TableSnippets#_TableAddHeaderRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableaddheaderrow)]
  [!code-vb[TableSnippets#_TableAddHeaderRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddheaderrow)]  
   
- Em seguida, uma linha para os dados é criada e adicionada à tabela e as células nesta linha são criadas e populadas com conteúdo.  A criação dessa linha é semelhante à criação da linha de cabeçalho, com uma formatação ligeiramente diferente aplicada.  
+ Em seguida, uma linha para os dados é criada e adicionada à tabela, e as células nesta linha são criadas e populadas com conteúdo.  A criação dessa linha é semelhante à criação da linha de cabeçalho, com uma formatação ligeiramente diferente aplicada.  
   
  [!code-csharp[TableSnippets#_TableAddDataRow](~/samples/snippets/csharp/VS_Snippets_Wpf/TableSnippets/CSharp/Table.cs#_tableadddatarow)]
  [!code-vb[TableSnippets#_TableAddDataRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableadddatarow)]  

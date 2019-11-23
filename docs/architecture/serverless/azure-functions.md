@@ -35,14 +35,14 @@ Para obter mais informações, consulte [comparar 1. x e 2. x](https://docs.micr
 
 Os idiomas a seguir têm suporte em disponibilidade geral (GA), visualização ou experimental.
 
-|Idioma      |1.x         |2.x      |
+|Linguagem      |1.x         |2.x      |
 |--------------|------------|---------|
-|**C#**        |3º          |Visualizar  |
-|**JavaScript**|3º          |Visualizar  |
+|**C#**        |3º          |{1&gt;Preview&lt;1}  |
+|**JavaScript**|3º          |{1&gt;Preview&lt;1}  |
 |**F#**        |3º          |         |
-|**Java**      |            |Visualizar  |
+|**Java**      |            |{1&gt;Preview&lt;1}  |
 |**Python**    |Habilitação|         |
-|**DESTINADOS**       |Habilitação|         |
+|**PHP**       |Habilitação|         |
 |**TypeScript**|Habilitação|         |
 |**Lote**     |Habilitação|         |
 |**Raso**      |Habilitação|         |

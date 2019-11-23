@@ -37,7 +37,7 @@ A camada de aplicativo pode ser a própria API Web. O aspecto de design importan
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Greg Young. Controle de versão em um Sistema de Origem de Evento** (gratuito para ler o livro eletrônico online) \
+- **Greg Young. Controle de versão em um sistema de origem de eventos** (gratuito para ler o livro eletrônico online) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]

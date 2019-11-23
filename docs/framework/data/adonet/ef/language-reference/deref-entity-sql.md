@@ -18,20 +18,20 @@ Desreferencia um valor de referência e gera o resultado dessa desreferência.
 SELECT DEREF ( o.expression ) FROM Table AS o;
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  `expression`  
  Qualquer expressão de consulta válida que retorna uma coleção.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  O valor de entidade que é referenciada.  
   
 ## <a name="remarks"></a>Comentários  
- O operador de DEREF desreferencia um valor de referência e gerencia o resultado do desreferencia. Por exemplo, se `r` for uma referência do tipo ref @ no__t-1T >, `Deref(r)` será uma expressão do tipo `T` que produz a entidade referenciada por `r`. Se o valor de referência é zero, ou está oscilando (isto é, o destino de referência não existir), o resultado do operador de DEREF é nulo.  
+ O operador de DEREF desreferencia um valor de referência e gerencia o resultado do desreferencia. Por exemplo, se `r` for uma referência de tipo ref\<T >, `Deref(r)` será uma expressão do tipo `T` que produz a entidade referenciada por `r`. Se o valor de referência é zero, ou está oscilando (isto é, o destino de referência não existir), o resultado do operador de DEREF é nulo.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  A seguinte consulta de [!INCLUDE[esql](../../../../../../includes/esql-md.md)] usa o operador de DEREF para desreferenciar um valor de referência e para gerar o resultado do desreferenciar. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [How para: Executar uma consulta que retorna os resultados de Primitivatype @ no__t-0.  
+1. Siga o procedimento em [como executar uma consulta que retorna os resultados de primitivatype](../how-to-execute-a-query-that-returns-primitivetype-results.md).  
   
 2. Passe a seguinte consulta como um argumento para o método de ExecutePrimitiveTypeQuery:  
   

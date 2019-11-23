@@ -66,10 +66,10 @@ Este tópico descreve o que são contratos de serviço, como eles são definidos
  Os tipos primitivos são serializáveis por padrão, pois são muitos tipos na .NET Framework.  
   
 > [!NOTE]
-> O valor dos nomes de parâmetro na assinatura de operação faz parte do contrato e diferencia maiúsculas de minúsculas. Se você quiser usar o mesmo nome de parâmetro localmente, mas modificar o nome nos metadados publicados, consulte o <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
+> O valor dos nomes de parâmetro na assinatura de operação faz parte do contrato e diferencia maiúsculas de minúsculas. Se você quiser usar o mesmo nome de parâmetro localmente, mas modificar o nome nos metadados publicados, consulte a <xref:System.ServiceModel.MessageParameterAttribute?displayProperty=nameWithType>.  
   
 #### <a name="data-contracts"></a>Contratos de dados  
- Aplicativos orientados a serviços como os aplicativos Windows Communication Foundation (WCF) são projetados para interoperar com o número mais amplo possível de aplicativos cliente em plataformas Microsoft e não Microsoft. Para a maior interoperabilidade possível, é recomendável que você marque seus tipos com os atributos <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> para criar um contrato de dados, que é a parte do contrato de serviço que descreve os dados trocados por suas operações de serviço.  
+ Aplicativos orientados a serviços como os aplicativos Windows Communication Foundation (WCF) são projetados para interoperar com o número mais amplo possível de aplicativos cliente em plataformas Microsoft e não Microsoft. Para a interoperabilidade mais ampla possível, é recomendável que você marque seus tipos com os atributos <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> para criar um contrato de dados, que é a parte do contrato de serviço que descreve os dados trocados por suas operações de serviço.  
   
  Os contratos de dados são contratos de estilo de aceitação: nenhum tipo ou membro de dados é serializado, a menos que você aplique explicitamente o atributo de contrato de dados. Os contratos de dados não estão relacionados ao escopo de acesso do código gerenciado: os membros de dados privados podem ser serializados e enviados em outro lugar para serem acessados publicamente. (Para obter um exemplo básico de um contrato de dados, consulte [como: criar um contrato de dados básico para uma classe ou estrutura](./feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md).) O WCF lida com a definição das mensagens SOAP subjacentes que habilitam a funcionalidade da operação, bem como a serialização de seus tipos de dados para dentro e fora do corpo das mensagens. Desde que os tipos de dados sejam serializáveis, você não precisa pensar na infraestrutura de troca de mensagens subjacente ao projetar suas operações.  
   
@@ -114,7 +114,7 @@ Sub Hello (ByVal greeting As String)
 ##### <a name="one-way"></a>Unidirecional  
  Se o cliente de um aplicativo de serviço WCF não deve aguardar a conclusão da operação e não processar falhas de SOAP, a operação poderá especificar um padrão de mensagem unidirecional. Uma operação unidirecional é aquela na qual um cliente invoca uma operação e continua o processamento depois que o WCF grava a mensagem na rede. Normalmente, isso significa que, a menos que os dados enviados na mensagem de saída sejam extremamente grandes, o cliente continua sendo executado quase imediatamente (a menos que haja um erro ao enviar os dados). Esse tipo de padrão de troca de mensagens dá suporte ao comportamento de evento de um cliente para um aplicativo de serviço.  
   
- Uma troca de mensagens na qual uma mensagem é enviada e nenhuma é recebida não dá suporte a uma operação de serviço que especifica um valor de retorno diferente de `void`; Nesse caso, uma exceção <xref:System.InvalidOperationException> é lançada.  
+ Uma troca de mensagens na qual uma mensagem é enviada e nenhuma é recebida não dá suporte a uma operação de serviço que especifica um valor de retorno diferente de `void`; Nesse caso, uma exceção de <xref:System.InvalidOperationException> é lançada.  
   
  Nenhuma mensagem de retorno também significa que não pode haver nenhuma falha de SOAP retornada para indicar erros no processamento ou na comunicação. (Comunicar informações de erro quando as operações são operações unidirecionais requer um padrão de troca de mensagens duplex.)  
   
@@ -132,7 +132,7 @@ void Hello(string greeting);
 Sub Hello (ByVal greeting As String)  
 ```  
   
- Esse método é idêntico ao exemplo de solicitação/resposta anterior, mas a definição da propriedade <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> como `true` significa que, embora o método seja idêntico, a operação de serviço não envia uma mensagem de retorno e os clientes retornam imediatamente após a saída a mensagem foi enviada para a camada de canal. Para obter um exemplo, consulte [como: criar um contrato unidirecional](./feature-details/how-to-create-a-one-way-contract.md). Para obter mais informações sobre o padrão unidirecional, consulte [Serviços unidirecionais](./feature-details/one-way-services.md).  
+ Esse método é idêntico ao exemplo de solicitação/resposta anterior, mas a definição da propriedade <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> como `true` significa que, embora o método seja idêntico, a operação de serviço não envia uma mensagem de retorno e os clientes retornam imediatamente depois que a mensagem de saída tiver sido enviada para a camada de canal. Para obter um exemplo, consulte [como: criar um contrato unidirecional](./feature-details/how-to-create-a-one-way-contract.md). Para obter mais informações sobre o padrão unidirecional, consulte [Serviços unidirecionais](./feature-details/one-way-services.md).  
   
 ##### <a name="duplex"></a>Duplex  
  Um padrão duplex é caracterizado pela capacidade do serviço e do cliente de enviar mensagens entre si independentemente, seja usando mensagens unidirecionais ou de solicitação/resposta. Essa forma de comunicação bidirecional é útil para serviços que devem se comunicar diretamente com o cliente ou para fornecer uma experiência assíncrona a qualquer lado de uma troca de mensagens, incluindo comportamento semelhante a eventos.  
@@ -146,10 +146,10 @@ Sub Hello (ByVal greeting As String)
  Para obter um exemplo de como criar um serviço e um cliente que acessa esse serviço, consulte [como: criar um contrato duplex](./feature-details/how-to-create-a-duplex-contract.md) e [como acessar serviços com um contrato duplex](./feature-details/how-to-access-services-with-a-duplex-contract.md). Para obter um exemplo funcional, consulte [duplex](./samples/duplex.md). Para obter mais informações sobre problemas usando contratos duplex, consulte [Serviços duplex](./feature-details/duplex-services.md).  
   
 > [!CAUTION]
-> Quando um serviço recebe uma mensagem duplex, ele examina o elemento `ReplyTo` na mensagem de entrada para determinar para onde enviar a resposta. Se o canal usado para receber a mensagem não estiver protegido, um cliente não confiável poderá enviar uma mensagem mal-intencionada com o `ReplyTo` de um computador de destino, levando a uma negação de serviço (DOS) desse computador de destino.  
+> Quando um serviço recebe uma mensagem duplex, ele examina o elemento `ReplyTo` nessa mensagem de entrada para determinar para onde enviar a resposta. Se o canal usado para receber a mensagem não estiver protegido, um cliente não confiável poderá enviar uma mensagem mal-intencionada com o `ReplyTo`de um computador de destino, levando a uma negação de serviço (DOS) desse computador de destino.  
   
 ##### <a name="out-and-ref-parameters"></a>Parâmetros out e ref  
- Na maioria dos casos, você pode usar parâmetros `in` (`ByVal` em Visual Basic) e os parâmetros `out` e `ref` (`ByRef` em Visual Basic). Como os parâmetros `out` e `ref` indicam que os dados são retornados de uma operação, uma assinatura de operação como a seguinte especifica que uma operação de solicitação/resposta é necessária, mesmo que a assinatura de operação retorne `void`.  
+ Na maioria dos casos, você pode usar parâmetros de `in` (`ByVal` em Visual Basic) e `out` e `ref` parâmetros (`ByRef` em Visual Basic). Como os parâmetros `out` e `ref` indicam que os dados são retornados de uma operação, uma assinatura de operação como a seguinte especifica que uma operação de solicitação/resposta é necessária, embora a assinatura de operação retorne `void`.  
   
 ```csharp  
 [ServiceContractAttribute]  
@@ -170,9 +170,9 @@ Public Interface IMyContract
 End Interface  
 ```  
   
- As únicas exceções são os casos em que sua assinatura tem uma estrutura específica. Por exemplo, você pode usar a associação <xref:System.ServiceModel.NetMsmqBinding> para se comunicar com clientes somente se o método usado para declarar uma operação retornar `void`; Não pode haver nenhum valor de saída, seja um valor de retorno, `ref` ou parâmetro `out`.  
+ As únicas exceções são os casos em que sua assinatura tem uma estrutura específica. Por exemplo, você pode usar a associação <xref:System.ServiceModel.NetMsmqBinding> para se comunicar com clientes somente se o método usado para declarar uma operação retornar `void`; Não pode haver nenhum valor de saída, seja um valor de retorno, `ref`ou `out` parâmetro.  
   
- Além disso, o uso de parâmetros `out` ou `ref` requer que a operação tenha uma mensagem de resposta subjacente para executar o objeto modificado. Se a operação for uma operação unidirecional, uma exceção <xref:System.InvalidOperationException> será lançada em tempo de execução.  
+ Além disso, o uso de `out` ou `ref` parâmetros requer que a operação tenha uma mensagem de resposta subjacente para devolver o objeto modificado. Se a operação for uma operação unidirecional, uma exceção <xref:System.InvalidOperationException> será lançada em tempo de execução.  
   
 ### <a name="specify-message-protection-level-on-the-contract"></a>Especificar o nível de proteção da mensagem no contrato  
  Ao criar seu contrato, você também deve decidir o nível de proteção de mensagem dos serviços que implementam seu contrato. Isso será necessário apenas se a segurança da mensagem for aplicada à associação no ponto de extremidade do contrato. Se a associação tiver a segurança desativada (ou seja, se a associação fornecida pelo sistema definir o <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType> para o valor <xref:System.ServiceModel.SecurityMode.None?displayProperty=nameWithType>), você não precisará decidir sobre o nível de proteção da mensagem para o contrato. Na maioria dos casos, as associações fornecidas pelo sistema com segurança em nível de mensagem aplicada fornecem um nível de proteção suficiente e você não precisa considerar o nível de proteção para cada operação ou para cada mensagem.  
@@ -182,7 +182,7 @@ End Interface
 > [!IMPORTANT]
 > Decidir se deve definir explicitamente vários escopos de um contrato para menos do que o nível de proteção total de <xref:System.Net.Security.ProtectionLevel.EncryptAndSign?displayProperty=nameWithType> é geralmente uma decisão que compensa algum grau de segurança para aumentar o desempenho. Nesses casos, suas decisões devem girar em volta das operações e do valor dos dados que eles trocam. Para obter mais informações, consulte [Securing Services](securing-services.md).  
   
- Por exemplo, o exemplo de código a seguir não define a propriedade <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> ou <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> no contrato.  
+ Por exemplo, o exemplo de código a seguir não define o <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> ou a propriedade <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> no contrato.  
   
 ```csharp  
 [ServiceContract]  
@@ -211,9 +211,9 @@ Public Interface ISampleService
 End Interface  
 ```  
   
- Ao interagir com uma implementação `ISampleService` em um ponto de extremidade com um @no__t padrão-1 (o @no__t padrão-2, que é <xref:System.ServiceModel.SecurityMode.Message>), todas as mensagens são criptografadas e assinadas porque esse é o nível de proteção padrão. No entanto, quando um serviço `ISampleService` é usado com um @no__t padrão-1 (o @no__t padrão-2, que é <xref:System.ServiceModel.SecurityMode.None>), todas as mensagens são enviadas como texto porque não há segurança para essa associação e, portanto, o nível de proteção é ignorado (ou seja, as mensagens não são criptografadas nem assinado). Se o <xref:System.ServiceModel.SecurityMode> tiver sido alterado para <xref:System.ServiceModel.SecurityMode.Message>, essas mensagens seriam criptografadas e assinadas (porque isso seria o nível de proteção padrão da associação).  
+ Ao interagir com uma implementação de `ISampleService` em um ponto de extremidade com um <xref:System.ServiceModel.WSHttpBinding> padrão (o <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>padrão, que é <xref:System.ServiceModel.SecurityMode.Message>), todas as mensagens são criptografadas e assinadas porque esse é o nível de proteção padrão. No entanto, quando um serviço de `ISampleService` é usado com um <xref:System.ServiceModel.BasicHttpBinding> padrão (o <xref:System.ServiceModel.SecurityMode>padrão, que é <xref:System.ServiceModel.SecurityMode.None>), todas as mensagens são enviadas como texto porque não há segurança para essa associação e, portanto, o nível de proteção é ignorado (ou seja, as mensagens não são criptografadas nem assinadas). Se o <xref:System.ServiceModel.SecurityMode> foi alterado para <xref:System.ServiceModel.SecurityMode.Message>, essas mensagens seriam criptografadas e assinadas (porque isso seria o nível de proteção padrão da associação).  
   
- Se você quiser especificar ou ajustar explicitamente os requisitos de proteção para seu contrato, defina a propriedade <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> (ou qualquer uma das propriedades `ProtectionLevel` em um escopo menor) para o nível que seu contrato de serviço requer. Nesse caso, o uso de uma configuração explícita requer a associação para dar suporte a essa configuração no mínimo para o escopo usado. Por exemplo, o exemplo de código a seguir especifica um valor <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> explicitamente para a operação `GetGuid`.  
+ Se você quiser especificar explicitamente ou ajustar os requisitos de proteção para seu contrato, defina a propriedade <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> (ou qualquer uma das propriedades de `ProtectionLevel` em um escopo menor) para o nível que seu contrato de serviço requer. Nesse caso, o uso de uma configuração explícita requer a associação para dar suporte a essa configuração no mínimo para o escopo usado. Por exemplo, o exemplo de código a seguir especifica um valor <xref:System.ServiceModel.OperationContractAttribute.ProtectionLevel%2A> explicitamente para a operação `GetGuid`.  
   
 ```csharp  
 [ServiceContract]  
@@ -249,23 +249,23 @@ Public Interface IExplicitProtectionLevelSampleService
 End Interface  
 ```  
   
- Um serviço que implementa esse contrato `IExplicitProtectionLevelSampleService` e tem um ponto de extremidade que usa o @no__t padrão-1 (o @no__t padrão-2, que é <xref:System.ServiceModel.SecurityMode.Message>) tem o seguinte comportamento:  
+ Um serviço que implementa esse `IExplicitProtectionLevelSampleService` contrato e tem um ponto de extremidade que usa o <xref:System.ServiceModel.WSHttpBinding> padrão (o <xref:System.ServiceModel.SecurityMode?displayProperty=nameWithType>padrão, que é <xref:System.ServiceModel.SecurityMode.Message>) tem o seguinte comportamento:  
   
-- As mensagens de operação `GetString` são criptografadas e assinadas.  
+- As mensagens de operação de `GetString` são criptografadas e assinadas.  
   
-- As mensagens de operação `GetInt` são enviadas como texto não criptografado e não assinado (ou seja, sem formatação).  
+- As mensagens de operação de `GetInt` são enviadas como texto não criptografado e não assinado (ou seja, sem formatação).  
   
-- A operação `GetGuid` <xref:System.Guid?displayProperty=nameWithType> é retornada em uma mensagem criptografada e assinada.  
+- A operação de `GetGuid` <xref:System.Guid?displayProperty=nameWithType> é retornada em uma mensagem criptografada e assinada.  
   
  Para obter mais informações sobre os níveis de proteção e como usá-los, consulte [noções básicas sobre o nível de proteção](understanding-protection-level.md). Para obter mais informações sobre segurança, consulte [protegendo serviços](securing-services.md).  
   
 ##### <a name="other-operation-signature-requirements"></a>Outros requisitos de assinatura de operação  
- Alguns recursos de aplicativo exigem um tipo específico de assinatura de operação. Por exemplo, a associação <xref:System.ServiceModel.NetMsmqBinding> dá suporte a serviços e clientes duráveis, nos quais um aplicativo pode ser reiniciado no meio da comunicação e retomar de onde parou sem nenhuma mensagem. (Para obter mais informações, consulte [filas no WCF](./feature-details/queues-in-wcf.md).) No entanto, as operações duráveis devem usar apenas um parâmetro `in` e não ter nenhum valor de retorno.  
+ Alguns recursos de aplicativo exigem um tipo específico de assinatura de operação. Por exemplo, a associação de <xref:System.ServiceModel.NetMsmqBinding> dá suporte a serviços duráveis e clientes, nos quais um aplicativo pode ser reiniciado no meio da comunicação e retomar de onde parou sem nenhuma mensagem. (Para obter mais informações, consulte [filas no WCF](./feature-details/queues-in-wcf.md).) No entanto, as operações duráveis devem usar apenas um parâmetro `in` e não ter nenhum valor de retorno.  
   
- Outro exemplo é o uso de tipos <xref:System.IO.Stream> em operações. Como o parâmetro <xref:System.IO.Stream> inclui o corpo da mensagem inteiro, se uma entrada ou uma saída (ou seja, parâmetro `ref`, parâmetro `out` ou valor de retorno) for do tipo <xref:System.IO.Stream>, ela deverá ser a única entrada ou saída especificada em sua operação. Além disso, o parâmetro ou o tipo de retorno deve ser <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType> ou <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. Para obter mais informações sobre fluxos, consulte [grandes dados e streaming](./feature-details/large-data-and-streaming.md).  
+ Outro exemplo é o uso de tipos de <xref:System.IO.Stream> em operações. Como o parâmetro <xref:System.IO.Stream> inclui todo o corpo da mensagem, se uma entrada ou uma saída (ou seja, `ref` parâmetro, `out` parâmetro ou valor de retorno) for do tipo <xref:System.IO.Stream>, ela deverá ser a única entrada ou saída especificada em sua operação. Além disso, o parâmetro ou o tipo de retorno deve ser <xref:System.IO.Stream>, <xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>ou <xref:System.Xml.Serialization.IXmlSerializable?displayProperty=nameWithType>. Para obter mais informações sobre fluxos, consulte [grandes dados e streaming](./feature-details/large-data-and-streaming.md).  
   
 ##### <a name="names-namespaces-and-obfuscation"></a>Nomes, namespaces e ofuscação  
- Os nomes e namespaces dos tipos .NET na definição de contratos e operações são significativos quando os contratos são convertidos em WSDL e quando as mensagens de contrato são criadas e enviadas. Portanto, é altamente recomendável que os nomes e namespaces do contrato de serviço sejam definidos explicitamente usando as propriedades `Name` e `Namespace` de todos os atributos de contrato de suporte, como os contratos <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.Runtime.Serialization.DataMemberAttribute> e outro contrato atributos.  
+ Os nomes e namespaces dos tipos .NET na definição de contratos e operações são significativos quando os contratos são convertidos em WSDL e quando as mensagens de contrato são criadas e enviadas. Portanto, é altamente recomendável que os nomes e namespaces do contrato de serviço sejam definidos explicitamente usando as propriedades `Name` e `Namespace` de todos os atributos de contrato de suporte, como os atributos <xref:System.ServiceModel.ServiceContractAttribute>, <xref:System.ServiceModel.OperationContractAttribute>, <xref:System.Runtime.Serialization.DataContractAttribute>, <xref:System.Runtime.Serialization.DataMemberAttribute>e outros contratos.  
   
  Um resultado disso é que, se os nomes e namespaces não estiverem definidos explicitamente, o uso de ofuscação de IL no assembly altera os nomes e namespaces de tipo de contrato e resulta em trocas WSDL e de transmissão modificadas que normalmente falham. Se você não definir os nomes de contrato e os namespaces explicitamente, mas pretende usar a ofuscação, use os atributos <xref:System.Reflection.ObfuscationAttribute> e <xref:System.Reflection.ObfuscateAssemblyAttribute> para evitar a modificação dos nomes e namespaces de tipo de contrato.  
   

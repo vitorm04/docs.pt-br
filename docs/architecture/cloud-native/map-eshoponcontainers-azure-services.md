@@ -17,7 +17,8 @@ Embora não seja necessário, o Azure é bem adequado para dar suporte ao eShopO
 
 A arquitetura do aplicativo é mostrada na Figura 2-5. À esquerda estão os aplicativos cliente, divididos em tipos móveis, da Web tradicional e de SPA (aplicativo de página única) da Web. À direita estão os componentes do lado do servidor que compõem o sistema, cada um deles pode ser hospedado em contêineres e clusters kubernetes do Docker. O aplicativo Web tradicional é fornecido pela plataforma de ASP.NET Core aplicativos MVC mostrados em amarelo. Esse aplicativo e os aplicativos de SPA móveis e da Web se comunicam com os microserviços individuais por meio de um ou mais gateways de API. Os gateways de API seguem o padrão de "back-ends para front-ends" (BFF), o que significa que cada gateway é projetado para dar suporte a um determinado cliente front-end. Os microserviços individuais são listados à direita dos gateways de API e incluem a lógica de negócios e algum tipo de armazenamento de persistência. Os diferentes serviços fazem uso de bancos de dados SQL Server, instâncias de cache Redis e armazenamentos MongoDB/CosmosDB. Na extrema direita, está o barramento de evento do sistema, que é usado para a comunicação entre os microserviços.
 
-Arquitetura ![eShopOnContainers @ no__t-1**figura 2-5**. A arquitetura eShopOnContainers.
+![arquitetura eShopOnContainers](./media/eshoponcontainers-architecture.png)
+**figura 2-5**. A arquitetura eShopOnContainers.
 
 Todos os componentes do lado do servidor dessa arquitetura são mapeados facilmente para os serviços do Azure.
 

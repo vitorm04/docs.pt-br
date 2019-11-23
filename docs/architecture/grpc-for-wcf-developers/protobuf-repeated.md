@@ -1,14 +1,13 @@
 ---
 title: Campos repetidos para listas e matrizes-gRPC para desenvolvedores do WCF
 description: Entenda como as coleções são tratadas pelo Protobuf e como elas se relacionam com as coleções do .NET.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 740af8af39af9bf31be17ad831f481176e30d81f
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 17c579bc98ba62ea74b9452bdb28efd96fc51406
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846316"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967361"
 ---
 # <a name="repeated-fields-for-lists-and-arrays"></a>Campos repetidos para listas e matrizes
 

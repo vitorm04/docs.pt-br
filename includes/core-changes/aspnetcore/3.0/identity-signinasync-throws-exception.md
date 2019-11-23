@@ -16,7 +16,7 @@ Por padrão, `SignInAsync` gera uma exceção para entidades/identidades nas qua
 
 #### <a name="old-behavior"></a>Comportamento antigo
 
-`SignInAsync` aceita quaisquer entidades/identidades, incluindo identidades nas quais `IsAuthenticated` é `false`.
+`SignInAsync` aceita quaisquer entidades/identidades, incluindo identidades nas quais `IsAuthenticated` está `false`.
 
 #### <a name="new-behavior"></a>Novo comportamento
 
@@ -24,11 +24,11 @@ Por padrão, `SignInAsync` gera uma exceção para entidades/identidades nas qua
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
-O comportamento antigo era problemático porque, por padrão, essas entidades foram rejeitadas por `[Authorize]` @ no__t-1 @ no__t-2.
+O comportamento antigo era problemático porque, por padrão, essas entidades foram rejeitadas por `[Authorize]` / `RequireAuthenticatedUser()`.
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-No ASP.NET Core 3,0 Preview 6, há um sinalizador `RequireAuthenticatedSignIn` no `AuthenticationOptions` que é `true` por padrão. Defina esse sinalizador como `false` para restaurar o comportamento antigo.
+No ASP.NET Core 3,0 Preview 6, há um sinalizador de `RequireAuthenticatedSignIn` no `AuthenticationOptions` `true` por padrão. Defina esse sinalizador como `false` para restaurar o comportamento antigo.
 
 #### <a name="category"></a>Categoria
 

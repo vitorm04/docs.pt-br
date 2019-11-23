@@ -2,12 +2,12 @@
 title: Comunicação em uma arquitetura de microsserviço
 description: Explore diferentes maneiras de comunicação entre microsserviços, compreendendo as implicações de maneiras síncronas e assíncronas.
 ms.date: 09/20/2018
-ms.openlocfilehash: add1ff74bee456e0fa7f2fb54d2cf4e536402db4
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7bd45e0b8f8ea3330cf8d2b613e54111cc72f14f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738051"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966986"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Comunicação em uma arquitetura de microsserviço
 
@@ -105,7 +105,7 @@ Como mostra a Figura 4-17, a comunicação HTTP em tempo real significa que o c�
 
 **Figura 4-17**. Comunicação de mensagem assíncrona de um-para-um em tempo real
 
-Signalr é uma boa maneira de obter comunicação em tempo real para enviar conteúdo aos clientes de um servidor back-end. Como a comunicação está em tempo real, os aplicativos cliente mostram as alterações quase instantaneamente. Geralmente, isso é tratado por um protocolo como WebSockets, usando várias conexões de WebSocket (uma por cliente). Um exemplo típico é quando um serviço comunica uma alteração na pontuação de um jogo de esportes para vários aplicativos Web clientes simultaneamente.
+O SignalR é uma boa maneira de atingir a comunicação em tempo real para enviar por push o conteúdo para os clientes de um servidor de back-end. Como a comunicação ocorre em tempo real, os aplicativos clientes mostram as alterações quase instantaneamente. Geralmente, isso é tratado por um protocolo como WebSockets, usando várias conexões de WebSocket (uma por cliente). Um exemplo típico é quando um serviço comunica uma alteração na pontuação de um jogo de esportes para vários aplicativos Web clientes simultaneamente.
 
 >[!div class="step-by-step"]
 >[Anterior](direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md)

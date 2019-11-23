@@ -20,7 +20,7 @@ helpviewer_keywords:
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
 ms.openlocfilehash: 30c02cf367c461c3896a01538d03380627de294f
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72004861"
@@ -43,16 +43,16 @@ Quando dois elementos de programação compartilham o mesmo nome, um deles pode 
   
  ![Gráfico que mostra o sombreamento por meio do escopo.](./media/shadowing/shadow-scope-diagram.gif)
   
- Para obter um exemplo de sombreamento por meio de escopo, consulte [How para: Oculte uma variável com o mesmo nome que a variável @ no__t-0.  
+ Para obter um exemplo de sombreamento por meio de escopo, consulte [como ocultar uma variável com o mesmo nome que a variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md).  
   
 ### <a name="shadowing-through-inheritance"></a>Sombreamento por meio de herança  
  Se uma classe derivada redefinir um elemento de programação herdado de uma classe base, o elemento redefinindo sombreia o elemento original. Você pode sombrear qualquer tipo de elemento declarado ou conjunto de elementos sobrecarregados, com qualquer outro tipo. Por exemplo, uma variável `Integer` pode sombrear um procedimento `Function`. Se você sombrear um procedimento com outro procedimento, poderá usar uma lista de parâmetros diferente e um tipo de retorno diferente.  
   
- A ilustração a seguir mostra uma classe base `b` e uma classe derivada `d` que herda de `b`. A classe base define um procedimento chamado `proc`, e a classe derivada a sombreia com outro procedimento de mesmo nome. A primeira instrução `Call` acessa o sombreamento `proc` na classe derivada. No entanto, a palavra-chave `MyBase` ignora o sombreamento e acessa o procedimento sombreado na classe base.  
+ A ilustração a seguir mostra uma classe base `b` e uma classe derivada `d` que herda de `b`. A classe base define um procedimento chamado `proc`e a classe derivada a sombreia com outro procedimento de mesmo nome. A primeira instrução `Call` acessa o sombreamento `proc` na classe derivada. No entanto, a palavra-chave `MyBase` ignora o sombreamento e acessa o procedimento sombreado na classe base.  
   
  ![Diagrama gráfico de sombreamento por meio de herança](./media/shadowing/shadowing-inherit-diagram.gif)  
   
- Para obter um exemplo de sombreamento por meio de herança, consulte [How para: Oculte uma variável com o mesmo nome que a variável @ no__t-0 e [How para: Ocultar uma variável herdada @ no__t-0.  
+ Para obter um exemplo de sombreamento por meio de herança, consulte [como ocultar uma variável com o mesmo nome que a variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md) e [como ocultar uma variável herdada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md).  
   
 #### <a name="shadowing-and-access-level"></a>Sombra e nível de acesso  
  O elemento de sombreamento nem sempre é acessível do código usando a classe derivada. Por exemplo, ele pode ser declarado `Private`. Nesse caso, o sombreamento é derrotado e o compilador resolve qualquer referência ao mesmo elemento que ele teria se não tivesse ocorrido nenhum sombreamento. Esse elemento é o elemento acessível o menor número de etapas de derivação para trás da classe de sombreamento. Se o elemento sombreado for um procedimento, a resolução será a versão acessível mais próxima com o mesmo nome, lista de parâmetros e tipo de retorno.  
@@ -92,7 +92,7 @@ Module callDisplay
 End Module  
 ```  
   
- No exemplo anterior, a classe derivada `secondClass` sombreia `display` com um procedimento `Private`. Quando o módulo `callDisplay` chama `display` em `secondClass`, o código de chamada está fora do `secondClass` e, portanto, não pode acessar o procedimento privado `display`. O sombreamento é derrotado e o compilador resolve a referência à classe base `display` procedimento.  
+ No exemplo anterior, a classe derivada `secondClass` sombreia `display` com um procedimento `Private`. Quando o módulo `callDisplay` chama `display` em `secondClass`, o código de chamada está fora do `secondClass` e, portanto, não pode acessar o procedimento de `display` privado. O sombreamento é derrotado e o compilador resolve a referência à classe base `display` procedimento.  
   
  No entanto, a classe derivada adicional `thirdClass` declara `display` como `Public`, para que o código no `callDisplay` possa acessá-lo.  
   
@@ -105,7 +105,7 @@ End Module
 ## <a name="accessing-a-shadowed-element"></a>Acessando um elemento sombreado  
  Quando você acessa um elemento de uma classe derivada, normalmente faz isso por meio da instância atual dessa classe derivada, qualificando o nome do elemento com a palavra-chave `Me`. Se a classe derivada sombreia o elemento na classe base, você pode acessar o elemento da classe base qualificando-o com a palavra-chave `MyBase`.  
   
- Para obter um exemplo de como acessar um elemento sombreado, consulte [How para: Acessar uma variável ocultada por uma classe derivada @ no__t-0.  
+ Para obter um exemplo de como acessar um elemento sombreado, consulte [como acessar uma variável ocultada por uma classe derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md).  
   
 ### <a name="declaration-of-the-object-variable"></a>Declaração da variável de objeto  
  A maneira como você cria a variável de objeto também pode afetar se a classe derivada acessa um elemento de sombreamento ou o elemento sombreado. O exemplo a seguir cria dois objetos de uma classe derivada, mas um objeto é declarado como a classe base e o outro como a classe derivada.  
@@ -135,7 +135,7 @@ Public Class useClasses
 End Class  
 ```  
   
- No exemplo anterior, a variável `basObj` é declarada como a classe base. Atribuir um objeto `dervCls` a ele constitui uma conversão de ampliação e, portanto, é válido. No entanto, a classe base não pode acessar a versão de sombreamento da variável `z` na classe derivada, portanto, o compilador resolve `basObj.z` para o valor da classe base original.  
+ No exemplo anterior, a variável `basObj` é declarada como a classe base. Atribuir um objeto `dervCls` a ele constitui uma conversão de ampliação e, portanto, é válido. No entanto, a classe base não pode acessar a versão de sombreamento da variável `z` na classe derivada, portanto, o compilador resolve `basObj.z` ao valor da classe base original.  
   
 ## <a name="see-also"></a>Consulte também
 

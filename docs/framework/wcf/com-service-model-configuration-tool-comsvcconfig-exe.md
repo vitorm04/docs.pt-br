@@ -28,7 +28,7 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
  A ferramenta pode ser encontrada no seguinte local  
   
- %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation \  
+ %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\  
   
  Para obter mais informações sobre o ComSvcConfig. exe, consulte [como usar a ferramenta de configuração do modelo de serviço com+](./feature-details/how-to-use-the-com-service-model-configuration-tool.md).  
   
@@ -44,11 +44,11 @@ ComSvcConfig.exe /install | /uninstall | /list [/application:<ApplicationID | Ap
   
 |Opção|Descrição|  
 |------------|-----------------|  
-|`/application:` \<*ApplicationId* &#124; *ApplicationName*\>|Especifica o aplicativo COM+ a ser configurado.<br /><br /> Forma abreviada `/a`.|  
-|`/contract:` \<*ClassID* &#124; *ProgID* &#124; \*,*interface* &#124; *de interface do tipo* &#124; 1 @ no__t-12|Especifica o componente e a interface COM+ que serão configurados como o contrato para o serviço.<br /><br /> Forma abreviada `/c`.<br /><br /> Embora o caractere curinga (\*) possa ser usado quando você especifica os nomes do componente e da interface, é recomendável não usá-lo, pois você pode expor interfaces que não pretendiam.|  
-|`/hosting:` \<*ComPlus* &#124; *foi*\>|Especifica se o modo de hospedagem COM+ ou o modo de hospedagem da Web deve ser usado.<br /><br /> Forma abreviada `/h`.<br /><br /> Usar o modo de hospedagem COM+ requer ativação explícita do aplicativo COM+. O uso do modo de hospedagem da Web permite que o aplicativo COM+ seja ativado automaticamente conforme necessário. Se o aplicativo COM+ for um aplicativo de biblioteca, ele será executado no processo de Serviços de Informações da Internet (IIS). Se o aplicativo COM+ for um aplicativo de servidor, ele será executado no processo Dllhost. exe.|  
-|`/webSite:` \<*websitename*\>|Especifica o site para hospedagem quando o modo de hospedagem da Web é usado (consulte o sinalizador `/hosting`).<br /><br /> Forma abreviada `/w`.<br /><br /> Se nenhum site da Web for especificado, o site padrão será usado.|  
-|`/webDirectory:` \<*Webdirectoryname*\>|Especifica o diretório virtual para hospedagem quando a hospedagem Web é usada (consulte o sinalizador `/hosting`).<br /><br /> Forma abreviada `/d`.|  
+|`/application:` \<*ApplicationID* &#124; *ApplicationName*\>|Especifica o aplicativo COM+ a ser configurado.<br /><br /> Forma abreviada `/a`.|  
+|`/contract:` \< &#124; *progidid* &#124; \*, a*interface* &#124; de *interfiguraid* &#124; \*\>|Especifica o componente e a interface COM+ que serão configurados como o contrato para o serviço.<br /><br /> Forma abreviada `/c`.<br /><br /> Embora o caractere curinga (\*) possa ser usado quando você especifica os nomes do componente e da interface, é recomendável não usá-lo, pois você pode expor interfaces que não pretendiam.|  
+|`/hosting:` \<*complus*  &#124; *was*\>|Especifica se o modo de hospedagem COM+ ou o modo de hospedagem da Web deve ser usado.<br /><br /> Forma abreviada `/h`.<br /><br /> Usar o modo de hospedagem COM+ requer ativação explícita do aplicativo COM+. O uso do modo de hospedagem da Web permite que o aplicativo COM+ seja ativado automaticamente conforme necessário. Se o aplicativo COM+ for um aplicativo de biblioteca, ele será executado no processo de Serviços de Informações da Internet (IIS). Se o aplicativo COM+ for um aplicativo de servidor, ele será executado no processo Dllhost. exe.|  
+|`/webSite:` \<*WebsiteName*\>|Especifica o site para hospedagem quando o modo de hospedagem na Web é usado (consulte o sinalizador `/hosting`).<br /><br /> Forma abreviada `/w`.<br /><br /> Se nenhum site da Web for especificado, o site padrão será usado.|  
+|`/webDirectory:` \<*WebDirectoryName*\>|Especifica o diretório virtual para hospedagem quando a hospedagem Web é usada (consulte o sinalizador `/hosting`).<br /><br /> Forma abreviada `/d`.|  
 |`/mex`|Adiciona um ponto de extremidade de serviço de intercâmbio de metadados (MEX) à configuração de serviço padrão para dar suporte a clientes que desejam recuperar uma definição de contrato do serviço.<br /><br /> Forma abreviada `/x`.|  
 |`/id`|Exibe as informações de aplicativo, componente e interface como IDs.<br /><br /> Forma abreviada `/k`.|  
 |`/nologo`|Impede que o ComSvcConfig. exe exiba seu logotipo.<br /><br /> Forma abreviada `/n`.|  

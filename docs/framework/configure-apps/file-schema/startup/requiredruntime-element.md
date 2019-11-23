@@ -16,13 +16,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697494"
 ---
-# <a name="requiredruntime-element"></a>\<requiredRuntime > elemento
+# <a name="requiredruntime-element"></a>\<elemento de > requiredRuntime
 
 Especifica que o aplicativo dá suporte apenas à versão 1.0 do Common Language Runtime. Este elemento foi preterido e não deve mais ser usado. O elemento [`supportedRuntime`](supportedruntime-element.md) deve ser usado em seu lugar.
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<startup >** ](startup-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requiredRuntime >**  
+&nbsp;de inicialização do &nbsp;[ **\<>** ](startup-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requiredRuntime >**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,7 +34,7 @@ safemode="true|false"/>
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e elementos pai.
+As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.
 
 ### <a name="attributes"></a>Atributos
 
@@ -50,16 +50,16 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |`false`|O código de inicialização do tempo de execução procura no registro. Este é o valor padrão.|
 |`true`|O código de inicialização do tempo de execução não procura no registro.|
 
-### <a name="child-elements"></a>Elementos filho
+### <a name="child-elements"></a>Child elements
 
-nenhuma.
+None.
 
 ### <a name="parent-elements"></a>Elementos pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|
-|`startup`|Contém o `<requiredRuntime>` elemento.|
+|`startup`|Contém o elemento `<requiredRuntime>`.|
 
 ## <a name="remarks"></a>Comentários
  Os aplicativos criados para dar suporte apenas à versão 1,0 do tempo de execução devem usar o elemento `<requiredRuntime>`. Os aplicativos criados usando a versão 1,1 ou posterior do tempo de execução devem usar o elemento `<supportedRuntime>`.
@@ -72,7 +72,7 @@ nenhuma.
 > [!NOTE]
 > O código de inicialização para um aplicativo hospedado no Microsoft Internet Explorer ignora o elemento `<requiredRuntime>`.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir mostra como especificar a versão de tempo de execução em um arquivo de configuração.
 
@@ -88,4 +88,4 @@ O exemplo a seguir mostra como especificar a versão de tempo de execução em u
 
 - [Esquema de configurações de inicialização](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [Como: configurar um aplicativo para dar suporte ao .NET Framework 4 ou a versões posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Como configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

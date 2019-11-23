@@ -19,8 +19,8 @@ ms.locfileid: "71697835"
 Controla o mecanismo de cache para solicitações de rede.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<requestCaching >**  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<requestCaching >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ Controla o mecanismo de cache para solicitações de rede.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -65,15 +65,15 @@ Controla o mecanismo de cache para solicitações de rede.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[defaultHttpCachePolicy](defaulthttpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache HTTP está ativo e descreve a política de cache padrão.|  
-|[\<defaultFtpCachePolicy > elemento (configurações de rede)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache FTP está ativo e descreve a política de cache padrão.|  
+|[\<elemento de > defaultFtpCachePolicy (configurações de rede)](defaultftpcachepolicy-element-network-settings.md)|Elemento opcional.<br /><br /> Descreve se o cache FTP está ativo e descreve a política de cache padrão.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[system.net](system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir mostra como desabilitar todo o cache.  
   
 ```xml  

@@ -18,7 +18,7 @@ Os erros encontrados por um aplicativo WCF pertencem a um dos três grupos:
   
 3. Erros de aplicativo  
   
- Os erros de comunicação ocorrem quando uma rede não está disponível, um cliente usa um endereço incorreto ou o host de serviço não está escutando mensagens de entrada. Os erros desse tipo são retornados ao cliente como <xref:System.ServiceModel.CommunicationException> ou @no__t classes derivadas de-1.  
+ Os erros de comunicação ocorrem quando uma rede não está disponível, um cliente usa um endereço incorreto ou o host de serviço não está escutando mensagens de entrada. Erros desse tipo são retornados ao cliente como <xref:System.ServiceModel.CommunicationException> ou classes derivadas de <xref:System.ServiceModel.CommunicationException>.  
   
  Erros de proxy/canal são erros que ocorrem dentro do canal ou proxy em si. Os erros desse tipo incluem: tentativa de usar um proxy ou canal que foi fechado, uma incompatibilidade de contrato existe entre o cliente e o serviço ou as credenciais do cliente são rejeitadas pelo serviço. Há muitos tipos diferentes de erros nessa categoria, muitas para listar aqui. Erros desse tipo são retornados ao cliente como estão (nenhuma transformação é executada nos objetos de exceção).  
   
@@ -32,7 +32,7 @@ Os erros encontrados por um aplicativo WCF pertencem a um dos três grupos:
   
 - Implementando a interface <xref:System.ServiceModel.Dispatcher.IErrorHandler>  
   
-- Manipulando eventos <xref:System.ServiceModel.ServiceHost>  
+- Manipulando eventos de <xref:System.ServiceModel.ServiceHost>  
   
 ## <a name="fault-contracts"></a>Contratos de falha  
  Os contratos de falha permitem que você defina os erros que podem ocorrer durante a operação de serviço de forma independente de plataforma. Por padrão, todas as exceções geradas de dentro de uma operação de serviço serão retornadas ao cliente como um objeto <xref:System.ServiceModel.FaultException>. O objeto <xref:System.ServiceModel.FaultException> conterá muito pouca informação. Você pode controlar as informações enviadas ao cliente definindo um contrato de falha e retornando o erro como um <xref:System.ServiceModel.FaultException%601>. Para obter mais informações, consulte [especificando e manipulando falhas em contratos e serviços](specifying-and-handling-faults-in-contracts-and-services.md).  

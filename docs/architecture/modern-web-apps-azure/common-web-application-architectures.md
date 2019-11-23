@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 8985434467346acc360e9a89c052803f495e87d1
-ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71332004"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972139"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -116,7 +116,7 @@ A Figura 5-8 mostra um diagrama de camada horizontal mais tradicional que reflet
 
 **Figura 5-8.** Arquitetura Limpa; exibição de camada horizontal
 
-Observe que as setas sólidas representam as dependências em tempo de compilação, enquanto a seta tracejada representa uma dependência somente em tempo de execução. Usando a arquitetura limpa, a camada de interface do usuário funciona com as interfaces definidas no Núcleo do Aplicativo no tempo de compilação. O ideal é que ela não tenha conhecimento dos tipos de implementação definidos na camada de Infraestrutura. No entanto, no tempo de execução, esses tipos de implementação serão necessários para a execução do aplicativo e, portanto, precisam estar presentes e conectados às interfaces do Núcleo do Aplicativo por meio da injeção de dependência.
+Observe que as setas sólidas representam as dependências em tempo de compilação, enquanto a seta tracejada representa uma dependência somente em runtime. Usando a arquitetura limpa, a camada de interface do usuário funciona com as interfaces definidas no Núcleo do Aplicativo no tempo de compilação. O ideal é que ela não tenha conhecimento dos tipos de implementação definidos na camada de Infraestrutura. No entanto, no tempo de execução, esses tipos de implementação serão necessários para a execução do aplicativo e, portanto, precisam estar presentes e conectados às interfaces do Núcleo do Aplicativo por meio da injeção de dependência.
 
 A Figura 5-9 mostra uma exibição mais detalhada da arquitetura de um aplicativo ASP.NET Core quando criado seguindo essas recomendações.
 
@@ -136,17 +136,17 @@ Como o Núcleo do Aplicativo não depende da Infraestrutura, é muito fácil esc
 
 Como a camada de interface do usuário não tem nenhuma dependência direta dos tipos definidos no projeto de Infraestrutura, da mesma forma, é muito fácil alternar entre implementações, para facilitar o teste ou em resposta a alterações nos requisitos do aplicativo. O uso interno do ASP.NET Core e o suporte à injeção de dependência torna essa arquitetura a maneira mais apropriada de estruturar aplicativos monolíticos não triviais.
 
-Em aplicativos monolíticos, os projetos de Núcleo do Aplicativo, Infraestrutura e Interface do Usuário são todos executados como um único aplicativo. A arquitetura do aplicativo em tempo de execução pode ser semelhante à Figura 5-12.
+Em aplicativos monolíticos, os projetos de Núcleo do Aplicativo, Infraestrutura e Interface do Usuário são todos executados como um único aplicativo. A arquitetura do aplicativo em runtime pode ser semelhante à Figura 5-12.
 
 ![Arquitetura do ASP.NET Core 2](./media/image5-12.png)
 
-**Figura 5-12.** Arquitetura em tempo de execução de um aplicativo ASP.NET Core de exemplo.
+**Figura 5-12.** Arquitetura em runtime de um aplicativo ASP.NET Core de exemplo.
 
 ### <a name="organizing-code-in-clean-architecture"></a>Organizando o código na arquitetura limpa
 
 Em uma solução de Arquitetura Limpa, cada projeto tem responsabilidades bem-definidas. Assim, determinados tipos pertencem a cada projeto e, com frequência, haverá pastas correspondentes a esses tipos no projeto apropriado.
 
-O Núcleo do Aplicativo contém o modelo de negócios, que inclui entidades, serviços e interfaces. Essas interfaces incluem abstrações para operações que serão executadas por meio da Infraestrutura, como acesso a dados, acesso ao sistema de arquivos, chamadas de rede, etc. Às vezes, as interfaces ou os serviços definidos nessa camada precisarão trabalhar com tipos que não são de entidade que não têm dependências na interface do usuário ou na Infraestrutura. Eles podem ser definidos como DTOs (Objetos de Transferência de Dados) simples.
+O Núcleo do Aplicativo contém o modelo de negócios, que inclui entidades, serviços e interfaces. Essas interfaces incluem abstrações para operações que serão executadas usando a infraestrutura, como acesso a dados, acesso ao sistema de arquivos, chamadas de rede, etc. Às vezes, serviços ou interfaces definidos nessa camada precisarão trabalhar com tipos que não sejam de entidade que não tenham dependências na interface do usuário ou na infraestrutura. Eles podem ser definidos como DTOs (Objetos de Transferência de Dados) simples.
 
 ### <a name="application-core-types"></a>Tipos de Núcleo do Aplicativo
 
@@ -260,13 +260,12 @@ networks:
       name: nat
 ```
 
-O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Dockerfile` do `Web`:
+O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Web` do `Dockerfile`:
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
-COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore

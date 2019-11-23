@@ -59,7 +59,7 @@ O arquivo de projeto para um aplicativo Webassembly mais complicado parece um po
 
 Os projetos Webassembly de mais alto-alvo .NET Standard em vez do .NET Core porque eles são executados no navegador em um tempo de execução .NET baseado em Webassembly. Você não pode instalar o .NET em um navegador da Web como você pode em um computador de servidor ou de desenvolvedor. Consequentemente, o projeto faz referência à estrutura mais Incrivelmentea usando referências de pacote individuais.
 
-Por comparação, um projeto ASP.NET Web Forms padrão inclui quase 300 linhas de XML em seu arquivo *. csproj* , a maior parte deles está listando explicitamente os vários arquivos de código e conteúdo no projeto. Muitas das simplificações dos projetos baseados no .NET Core e no .NET Standard são provenientes dos destinos e das propriedades padrão importadas referenciando o SDK do `Microsoft.NET.Sdk.Web`, geralmente conhecido como simplesmente o SDK da Web. O SDK da Web inclui curingas e outras conveniências que simplificam a inclusão de código e arquivos de conteúdo no projeto. Você não precisa listar os arquivos explicitamente. Ao direcionar o .NET Core, o Web SDK também adiciona referências de estrutura às estruturas compartilhadas do .NET Core e do ASP.NET Core. As estruturas são visíveis no nó **dependências**  > **estruturas** , na janela **Gerenciador de soluções** . As estruturas compartilhadas são coleções de assemblies que foram instalados no computador durante a instalação do .NET Core.
+Por comparação, um projeto ASP.NET Web Forms padrão inclui quase 300 linhas de XML em seu arquivo *. csproj* , a maior parte deles está listando explicitamente os vários arquivos de código e conteúdo no projeto. Muitas das simplificações dos projetos baseados no .NET Core e no .NET Standard são provenientes dos destinos e das propriedades padrão importadas referenciando o SDK do `Microsoft.NET.Sdk.Web`, geralmente conhecido como simplesmente o SDK da Web. O SDK da Web inclui curingas e outras conveniências que simplificam a inclusão de código e arquivos de conteúdo no projeto. Você não precisa listar os arquivos explicitamente. Ao direcionar o .NET Core, o Web SDK também adiciona referências de estrutura às estruturas compartilhadas do .NET Core e do ASP.NET Core. As estruturas são visíveis no nó **dependências** > **estruturas** , na janela **Gerenciador de soluções** . As estruturas compartilhadas são coleções de assemblies que foram instalados no computador durante a instalação do .NET Core.
 
 Embora eles tenham suporte, as referências de assembly individuais são menos comuns em projetos do .NET Core. A maioria das dependências do projeto é tratada como referências de pacote NuGet. Você só precisa referenciar as dependências de pacote de nível superior em projetos do .NET Core. Dependências transitivas são incluídas automaticamente. Em vez de usar o arquivo *Packages. config* normalmente encontrado em ASP.NET Web Forms projetos para referenciar pacotes, as referências de pacote são adicionadas ao arquivo de projeto usando o elemento `<PackageReference>`.
 
@@ -137,7 +137,7 @@ Os arquivos *_Imports. Razor* não são arquivos de componente do Razor. Em vez 
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>Pages (Páginas)
+## <a name="pages"></a>Páginas
 
 Onde estão as páginas nos aplicativos mais incrivelmente? O mais incrivelmente não define uma extensão de arquivo separada para páginas endereçáveis, como os arquivos *. aspx* em ASP.NET Web Forms aplicativos. Em vez disso, as páginas são definidas por meio da atribuição de rotas a componentes. Uma rota é normalmente atribuída usando a diretiva `@page` Razor. Por exemplo, o componente `Counter` criado no arquivo *pages/Counter. Razor* define a seguinte rota:
 
@@ -151,7 +151,7 @@ As rotas de componentes não são inferidas no momento pelo local do arquivo do 
 
 Veremos mais detalhadamente no roteamento do, na seção [páginas, roteamento e layouts](./pages-routing-layouts.md) .
 
-## <a name="layout"></a>Layout
+## <a name="layout"></a>{1&gt;Layout&lt;1}
 
 No ASP.NET Web Forms aplicativos, o layout de página comum é manipulado usando páginas mestras (*site. Master*). Em aplicativos mais Incrivelmenteos, o layout da página é manipulado usando componentes de layout (*Shared/MainLayout. Razor*). Os componentes de layout serão discutidos em mais detalhes na seção [página, roteamento e layouts](./pages-routing-layouts.md) .
 
@@ -170,7 +170,7 @@ No aplicativo de servidor mais novo, a página host do componente raiz é defini
 |`RenderMode.ServerPrerendered`|Primeiro renderizado e, em seguida, renderizado interativamente|
 |`RenderMode.Static`           |Renderizado como conteúdo estático|
 
-A referência de script para *_framework/mais alto. Server. js* estabelece a conexão em tempo real com o servidor e, em seguida, lida com todas as interações de usuário e atualizações de interface de usuário.
+A referência de script para *_framework/blazor.Server.js* estabelece a conexão em tempo real com o servidor e, em seguida, lida com todas as interações do usuário e as atualizações da interface de usuário.
 
 ```razor
 @page "/"

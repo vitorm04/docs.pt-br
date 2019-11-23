@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: ff517aef93acf8c3a241c8fd8f240f7018467793
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7e84da784d34be1646df982fa2594764d43d99dd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419978"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966883"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
@@ -93,7 +93,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-É importante, no exemplo acima, adicionar a chamada a ToListAsync para executar a consulta imediatamente. Caso contrário, a instrução atribuirá um IQueryable\<SelectListItem> a brandItems, que não será executado enquanto não for enumerado. Há vantagens e desvantagens em retornar resultados IQueryable de métodos. Ele permite que a consulta construída pelo EF Core seja modificada ainda mais, mas também pode resultar em erros que ocorrem apenas em tempo de execução, caso as operações sejam adicionadas à consulta que o EF Core não pode converter. Em geral, é mais seguro passar todos os filtros para o método que executa o acesso a dados e retornar uma coleção em memória (por exemplo, List\<T>) como o resultado.
+É importante, no exemplo acima, adicionar a chamada a ToListAsync para executar a consulta imediatamente. Caso contrário, a instrução atribuirá um IQueryable\<SelectListItem> a brandItems, que não será executado enquanto não for enumerado. Há vantagens e desvantagens em retornar resultados IQueryable de métodos. Ele permite que a consulta construída pelo EF Core seja modificada ainda mais, mas também pode resultar em erros que ocorrem apenas em runtime, caso as operações sejam adicionadas à consulta que o EF Core não pode converter. Em geral, é mais seguro passar todos os filtros para o método que executa o acesso a dados e retornar uma coleção em memória (por exemplo, List\<T>) como o resultado.
 
 O EF Core controla as alterações nas entidades que ele busca da persistência. Para salvar as alterações em uma entidade controlada, basta chamar o método SaveChanges no DbContext, verificando se ela é a mesma instância de DbContext que foi usada para buscar a entidade. A adição e remoção de entidades é feita diretamente na propriedade DbSet apropriada, novamente com uma chamada a SaveChanges para executar os comandos de banco de dados. O exemplo a seguir demonstra como adicionar, atualizar e remover entidades da persistência.
 
@@ -282,7 +282,7 @@ O primeiro DbContext é o \_catalogContext e o segundo DbContext está dentro do
 
 Embora o EF Core seja uma ótima opção para o gerenciamento da persistência e, na maioria das vezes, encapsule os detalhes de banco de dados para abstraí-los dos desenvolvedores de aplicativos, ele não é a única opção. Outra alternativa de software livre popular é o [Dapper](https://github.com/StackExchange/Dapper), um assim chamado micro-ORM. Um micro-ORM é uma ferramenta leve e menos completa para o mapeamento de objetos para estruturas de dados. No caso do Dapper, seu design visa o foco no desempenho, em vez do encapsulamento total das consultas subjacentes usadas por ele para recuperar e atualizar os dados. Como ele não abstrai o SQL do desenvolvedor, o Dapper fica "mais próximo do metal" e permite aos desenvolvedores escreverem as consultas exatas que desejam usar para determinada operação de acesso a dados.
 
-O EF Core tem dois recursos significativos que os separam do Dapper, mas também contribuem com a sobrecarga de desempenho. O primeiro é a conversão de expressões LINQ em SQL. Essas conversões são armazenadas em cache, mas ainda assim há sobrecarga na execução na primeira vez. O segundo é o controle de alterações em entidades (de forma que instruções de atualização eficientes possam ser geradas). Esse comportamento pode ser desativado para consultas específicas com a extensão AsNotTracking. O EF Core também gera consultas SQL que geralmente são muito eficientes e, de qualquer modo, perfeitamente aceitáveis do ponto de vista de desempenho. No entanto, caso precise ter um controle refinado sobre a consulta precisa a ser executada, passe um SQL personalizado (ou execute um procedimento armazenado) usando o EF Core também. Nesse caso, o Dapper ainda supera o EF Core, mas somente um pouco. Julie Lerman apresenta alguns dados de desempenho em seu artigo do MSDN de maio de 2016 [Dapper, Entity Framework e aplicativos híbridos](https://msdn.microsoft.com/magazine/mt703432.aspx). Encontre dados de parâmetro de comparação de desempenho adicionais para uma variedade de métodos de acesso a dados [no site do Dapper](https://github.com/StackExchange/Dapper).
+O EF Core tem dois recursos significativos que os separam do Dapper, mas também contribuem com a sobrecarga de desempenho. O primeiro é a conversão de expressões LINQ em SQL. Essas conversões são armazenadas em cache, mas ainda assim há sobrecarga na execução na primeira vez. O segundo é o controle de alterações em entidades (de forma que instruções de atualização eficientes possam ser geradas). Esse comportamento pode ser desativado para consultas específicas com a extensão AsNotTracking. O EF Core também gera consultas SQL que geralmente são muito eficientes e, de qualquer modo, perfeitamente aceitáveis do ponto de vista de desempenho. No entanto, caso precise ter um controle refinado sobre a consulta precisa a ser executada, passe um SQL personalizado (ou execute um procedimento armazenado) usando o EF Core também. Nesse caso, o Dapper ainda supera o EF Core, mas somente um pouco. Julie Lerman apresenta alguns dados de desempenho em seu artigo do MSDN de maio de 2016 [Dapper, Entity Framework e aplicativos híbridos](https://docs.microsoft.com/archive/msdn-magazine/2016/may/data-points-dapper-entity-framework-and-hybrid-apps). Encontre dados de parâmetro de comparação de desempenho adicionais para uma variedade de métodos de acesso a dados [no site do Dapper](https://github.com/StackExchange/Dapper).
 
 Para ver a diferença entre a sintaxe do Dapper e do EF Core, considere estas duas versões do mesmo método para recuperar uma lista de itens:
 
@@ -326,7 +326,7 @@ var data = connection.Query<Post, User, Post>(sql,
 (post, user) => { post.Owner = user; return post;});
 ```
 
-Como ele oferece menos encapsulamento, o Dapper exige que os desenvolvedores saibam mais sobre como seus dados são armazenados, como consultá-los de forma eficiente e codificar mais para buscá-los. Quando o modelo é alterado, em vez de simplesmente criar uma nova migração (outro recurso do EF Core) e/ou atualizar as informações de mapeamento em um local em um DbContext, cada consulta afetada deve ser atualizada. Essas consultas não têm garantias de tempo de compilação e, portanto, podem ser interrompidas no tempo de execução em resposta a alterações no modelo ou no banco de dados, dificultando a detecção rápida de erros. Em compensação por essa vantagem, o Dapper oferece um desempenho extremamente rápido.
+Como ele oferece menos encapsulamento, o Dapper exige que os desenvolvedores saibam mais sobre como seus dados são armazenados, como consultá-los de forma eficiente e codificar mais para buscá-los. Quando o modelo é alterado, em vez de simplesmente criar uma nova migração (outro recurso do EF Core) e/ou atualizar as informações de mapeamento em um local em um DbContext, cada consulta afetada deve ser atualizada. Essas consultas não têm garantias de tempo de compilação e, portanto, podem ser interrompidas no runtime em resposta a alterações no modelo ou no banco de dados, dificultando a detecção rápida de erros. Em compensação por essa vantagem, o Dapper oferece um desempenho extremamente rápido.
 
 Para a maioria dos aplicativos e a maioria das partes de quase todos os aplicativos, o EF Core oferece um desempenho aceitável. Portanto, seus benefícios de produtividade do desenvolvedor provavelmente superam a sobrecarga de desempenho. Para consultas que podem se beneficiar com o cache, a consulta real pode ser executada apenas em um pequeno percentual do tempo, tornando irrelevantes as pequenas diferenças no desempenho da consulta.
 

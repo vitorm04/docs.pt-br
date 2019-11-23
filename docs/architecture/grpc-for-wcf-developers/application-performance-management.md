@@ -1,14 +1,13 @@
 ---
 title: Gerenciamento de desempenho de aplicativos-gRPC para desenvolvedores do WCF
 description: Registro em log, métricas e rastreamento para aplicativos ASP.NET Core gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6ba67fd069e7efc232f912e50c0e283facb79e9c
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 2b6a30ab68cb6e2fdc81c59e7faef81064b948c1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846718"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968174"
 ---
 # <a name="application-performance-management"></a>Gerenciamento de desempenho de aplicativos
 
@@ -160,7 +159,7 @@ public class Startup
 
 O pacote OpenTracing é uma camada de abstração e, como tal, requer uma implementação específica de back-end. As implementações da API OpenTracing estão disponíveis para os seguintes back-ends de software livre.
 
-| Name | Pacote | Site |
+| {1&gt;Nome&lt;1} | Pacote | Site |
 | ---- | ------- | -------- |
 | Jaeger | [Jaeger](https://www.nuget.org/packages/Jaeger/) | [jaegertracing.io](https://jaegertracing.io) |
 | APM elástico | [Elástico. APM. NetCoreAll](https://www.nuget.org/packages/Elastic.Apm.NetCoreAll/) | [elastic.co/products/apm](https://www.elastic.co/products/apm) |

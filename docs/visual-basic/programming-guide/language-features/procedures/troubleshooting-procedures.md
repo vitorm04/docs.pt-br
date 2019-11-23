@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: c74947e21de8ba26ffde01f6f28aea67346c2071
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72002082"
@@ -21,7 +21,7 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com pr
   
 ## <a name="returning-an-array-type-from-a-function-procedure"></a>Retornando um tipo de matriz de um procedimento de função
 
-Se um procedimento `Function` retornar um tipo de dados de matriz, você não poderá usar o nome de `Function` para armazenar valores nos elementos da matriz. Se você tentar fazer isso, o compilador o interpretará como uma chamada para o `Function`. O exemplo a seguir gera erros de compilador:
+Se um procedimento de `Function` retornar um tipo de dados de matriz, você não poderá usar o nome de `Function` para armazenar valores nos elementos da matriz. Se você tentar fazer isso, o compilador o interpretará como uma chamada para o `Function`. O exemplo a seguir gera erros de compilador:
   
 ```vb
 Function AllOnes(n As Integer) As Integer()
@@ -35,7 +35,7 @@ Function AllOnes(n As Integer) As Integer()
 End Function
 ```
 
-A instrução `AllOnes(i) = 1` gera um erro de compilador porque parece chamar `AllOnes` com um argumento do tipo de dados incorreto (um @no__t escalar-2, em vez de uma matriz `Integer`). A instrução `Return AllOnes()` gera um erro de compilador porque parece chamar `AllOnes` sem argumento.  
+A instrução `AllOnes(i) = 1` gera um erro de compilador porque ele parece chamar `AllOnes` com um argumento do tipo de dados incorreto (um `Integer` escalar em vez de uma matriz de `Integer`). A instrução `Return AllOnes()` gera um erro de compilador porque ele parece chamar `AllOnes` sem argumento.  
   
  **Abordagem correta:** Para poder modificar os elementos de uma matriz que deve ser retornada, defina uma matriz interna como uma variável local. O exemplo a seguir é compilado sem erro:
 
@@ -45,11 +45,11 @@ A instrução `AllOnes(i) = 1` gera um erro de compilador porque parece chamar `
 
 Se você pretende permitir que um procedimento altere um elemento de programação subjacente a um argumento no código de chamada, você deve passá-lo por referência. Mas um procedimento pode acessar os elementos de um argumento de tipo de referência mesmo se você passá-lo por valor.
 
-- **Variável subjacente**. Para permitir que o procedimento substitua o valor do elemento variável subjacente, o procedimento deve declarar o parâmetro [ByRef](../../../language-reference/modifiers/byref.md). Além disso, o código de chamada não deve colocar o argumento entre parênteses, porque isso substituiria o mecanismo de passagem `ByRef`.
+- **Variável subjacente**. Para permitir que o procedimento substitua o valor do elemento variável subjacente, o procedimento deve declarar o parâmetro [ByRef](../../../language-reference/modifiers/byref.md). Além disso, o código de chamada não deve colocar o argumento entre parênteses, porque isso substituiria o mecanismo de passagem de `ByRef`.
 
 - **Elementos de tipo de referência**. Se você declarar um parâmetro [ByVal](../../../language-reference/modifiers/byval.md), o procedimento não poderá modificar o elemento Variable subjacente. No entanto, se o argumento for um tipo de referência, o procedimento poderá modificar os membros do objeto para o qual ele aponta, mesmo que não possa substituir o valor da variável. Por exemplo, se o argumento for uma variável de matriz, o procedimento não poderá atribuir uma nova matriz a ele, mas poderá alterar um ou mais de seus elementos. Os elementos alterados são refletidos na variável de matriz subjacente no código de chamada.
 
-O exemplo a seguir define dois procedimentos que usam uma variável de matriz por valor e operam em seus elementos. O procedimento `increase` simplesmente adiciona um a cada elemento. O procedimento `replace` atribui uma nova matriz ao parâmetro `a()` e, em seguida, adiciona uma a cada elemento. No entanto, a reatribuição não afeta a variável de matriz subjacente no código de chamada porque `a()` é declarado `ByVal`.
+O exemplo a seguir define dois procedimentos que usam uma variável de matriz por valor e operam em seus elementos. O procedimento `increase` simplesmente adiciona um a cada elemento. O procedimento `replace` atribui uma nova matriz ao parâmetro `a()` e, em seguida, adiciona um a cada elemento. No entanto, a reatribuição não afeta a variável de matriz subjacente no código de chamada porque `a()` é declarada `ByVal`.
 
 [!code-vb[VbVbcnProcedures#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#35)]
 
@@ -59,9 +59,9 @@ O exemplo a seguir faz chamadas para `increase` e `replace`:
 
 [!code-vb[VbVbcnProcedures#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#37)]
   
-A primeira chamada `MsgBox` exibe "após o aumento (n): 11, 21, 31, 41 ". Como `n` é um tipo de referência, `increase` pode alterar seus membros, mesmo que seja passado `ByVal`.
+A primeira chamada de `MsgBox` exibe "após o aumento (n): 11, 21, 31, 41". Como `n` é um tipo de referência, `increase` pode alterar seus membros, mesmo que seja passado `ByVal`.
 
-A segunda chamada `MsgBox` exibe "após Replace (n): 11, 21, 31, 41 ". Como `n` é passado `ByVal`, `replace` não pode modificar a variável `n` atribuindo uma nova matriz a ela. Quando `replace` cria a nova instância de matriz `k` e a atribui à variável local `a`, ela perde a referência a `n` passado pelo código de chamada. Quando ele incrementa os membros de `a`, somente a matriz local `k` é afetada.
+A segunda `MsgBox` chamada exibe "Após replace (n): 11, 21, 31, 41". Como `n` é passado `ByVal`, `replace` não pode modificar a `n` variável atribuindo uma nova matriz a ela. Quando `replace` cria a nova instância de matriz `k` e a atribui à variável local `a`, ela perde a referência a `n` passada pelo código de chamada. Quando ele incrementa os membros de `a`, somente a matriz local `k` é afetada.
 
 **Abordagem correta:** Para poder modificar um elemento variável subjacente, passe-o por referência. O exemplo a seguir mostra a alteração na declaração de `replace` que permite substituir uma matriz por outra no código de chamada:
 
@@ -75,7 +75,7 @@ A *assinatura* de um procedimento é determinada pelo nome do procedimento e pel
 
 Os itens a seguir, embora eles pertençam à lista de parâmetros, não são componentes da assinatura de um procedimento:
 
-- Palavras-chave do modificador de procedimento, como `Public`, `Shared` e `Static`.
+- Palavras-chave do modificador de procedimento, como `Public`, `Shared`e `Static`.
 - Nomes de parâmetro.
 - Palavras-chave de modificador de parâmetro, como `ByRef` e `Optional`.
 - O tipo de dados do valor de retorno (exceto para um operador de conversão).
@@ -110,9 +110,9 @@ O exemplo a seguir ilustra o processo de resolução de sobrecarga:
 
 [!code-vb[VbVbcnProcedures#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#63)]
   
-Na primeira chamada, o compilador elimina a primeira sobrecarga porque o tipo do primeiro argumento (`Short`) é limitado ao tipo do parâmetro correspondente (`Byte`). Em seguida, ele elimina a terceira sobrecarga porque cada tipo de argumento na segunda sobrecarga (`Short` e `Single`) se amplia ao tipo correspondente na terceira sobrecarga (`Integer` e `Single`). A segunda sobrecarga requer menos alargamento, portanto o compilador a utiliza para a chamada.
+Na primeira chamada, o compilador elimina a primeira sobrecarga porque o tipo do primeiro argumento (`Short`) limita o tipo do parâmetro correspondente (`Byte`). Em seguida, ele elimina a terceira sobrecarga porque cada tipo de argumento na segunda sobrecarga (`Short` e `Single`) se amplia ao tipo correspondente na terceira sobrecarga (`Integer` e `Single`). A segunda sobrecarga requer menos alargamento, portanto o compilador a utiliza para a chamada.
 
-Na segunda chamada, o compilador não pode eliminar nenhuma das sobrecargas com base na restrição. Ele elimina a terceira sobrecarga pelo mesmo motivo que na primeira chamada, porque ela pode chamar a segunda sobrecarga com menos alargamento dos tipos de argumento. No entanto, o compilador não pode resolver entre a primeira e a segunda sobrecargas. Cada tem um tipo de parâmetro definido que amplia o tipo correspondente no outro (`Byte` a `Short`, mas `Single` a `Double`). O compilador, portanto, gera um erro de resolução de sobrecarga.
+Na segunda chamada, o compilador não pode eliminar nenhuma das sobrecargas com base na restrição. Ele elimina a terceira sobrecarga pelo mesmo motivo que na primeira chamada, porque ela pode chamar a segunda sobrecarga com menos alargamento dos tipos de argumento. No entanto, o compilador não pode resolver entre a primeira e a segunda sobrecargas. Cada tem um tipo de parâmetro definido que amplia o tipo correspondente no outro (`Byte` para `Short`, mas `Single` para `Double`). O compilador, portanto, gera um erro de resolução de sobrecarga.
 
 **Abordagem correta:** Para poder chamar um procedimento sobrecarregado sem ambigüidade, use a [função CType](../../../language-reference/functions/ctype-function.md) para corresponder os tipos de dados de argumento aos tipos de parâmetro. O exemplo a seguir mostra uma chamada para `z` que força a resolução para a segunda sobrecarga.
 

@@ -1,5 +1,5 @@
 ---
-title: Dimensionamento de contêineres e aplicativos sem servidor
+title: Escala de contêineres e aplicativos sem servidor
 description: Dimensionamento de aplicativos nativos de nuvem com o serviço kubernetes do Azure para atender à demanda do usuário, aumentando os recursos individuais da máquina ou aumentando o número de computadores em um cluster de aplicativos.
 ms.date: 09/23/2019
 ms.openlocfilehash: 2d0537fb3ed56beb4eccbf9b8c34a5d87793413b
@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184795"
 ---
-# <a name="scaling-containers-and-serverless-applications"></a>Dimensionamento de contêineres e aplicativos sem servidor
+# <a name="scaling-containers-and-serverless-applications"></a>Escala de contêineres e aplicativos sem servidor
 
 Há duas maneiras típicas de dimensionar um aplicativo: escalar verticalmente e escalar horizontalmente. O primeiro se refere à adição de recursos a um host, enquanto o último se refere à adição ao número total de hosts. Uma analogia comum a ser usada para pensar nisso é como se familiarizar com alguns amigos em toda a cidade. Se for apenas um amigo, você poderá entrar no carro de corrida de duas estações. Mas se for três ou quatro, talvez seja necessário pegar um de seus SUVs ou minivan, aumentando verticalmente para aumentar a capacidade. No entanto, quando o número total vai até uma dúzia ou mais, você provavelmente precisará realizar vários veículos (a menos que alguém retenha um barramento), que demonstra o conceito de expansão adicionando mais instâncias (neste caso, mais veículos). Vamos ver como isso se aplica aos nossos aplicativos.
 
@@ -42,7 +42,7 @@ O Azure Functions dá suporte automaticamente ao dimensionamento. O plano de con
 
 - [AKS vários pools de nós](https://docs.microsoft.com/azure/aks/use-multiple-node-pools)
 - [Autoescalar do cluster AKS](https://docs.microsoft.com/azure/aks/cluster-autoscaler)
-- [Tutorial: Dimensionar aplicativos no AKS](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
+- [Tutorial: dimensionar aplicativos em AKS](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-scale)
 - [Escala e Hospedagem de Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-scale)
 
 >[!div class="step-by-step"]

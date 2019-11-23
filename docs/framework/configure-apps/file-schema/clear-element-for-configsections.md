@@ -21,8 +21,8 @@ ms.locfileid: "73119078"
 Limpa todas as seções e grupos de seções definidos anteriormente.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp;[ **\<configsections >** ](configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp; **\<desmarque >**
+&nbsp;&nbsp;[ **\<configSections>** ](configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -42,7 +42,7 @@ Limpa todas as seções e grupos de seções definidos anteriormente.
 | --- | ----------- |
 | [ **\<configsections >** Elementos](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
 
-## <a name="child-elements"></a>Elementos filho
+## <a name="child-elements"></a>Child elements
 
 Nenhum
 
@@ -50,7 +50,7 @@ Nenhum
 
 O **\<limpar >** elemento remove todas as seções e os grupos de seções do aplicativo que foram definidos anteriormente no arquivo de configuração atual ou em um nível superior na hierarquia do arquivo de configuração.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 Este exemplo define um arquivo de configuração de computador e um arquivo de configuração de aplicativo e mostra como usar o **\<apagar >** elemento em um arquivo de configuração de aplicativo para limpar as seções definidas anteriormente no arquivo de configuração de computador.
 

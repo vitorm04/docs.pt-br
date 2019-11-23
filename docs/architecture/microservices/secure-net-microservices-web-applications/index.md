@@ -284,19 +284,19 @@ O middleware de autenticação de portador do JWT também pode dar suporte a cen
 - **Introdução ao Identity** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
-- **Rick Anderson. Autenticação de dois fatores com  \ de SMS**
+- **Rick Anderson. Autenticação de dois fatores com \ de SMS**
   [https://docs.microsoft.com/aspnet/core/security/authentication/2fa](/aspnet/core/security/authentication/2fa)
 
 - **Habilitando a autenticação usando o Facebook, o Google e outros provedores externos** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/social/](/aspnet/core/security/authentication/social/)
 
-- **Michell Anicas. Uma introdução ao OAuth 2**  \
+- **Michell Anicas. Uma introdução ao OAuth 2** \
   <https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2>
 
 - **AspNet.Security.OAuth.Providers** (repositório do GitHub para provedores do ASP.NET OAuth) \
   <https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src>
 
-- **IdentityServer4. Documentação oficial**  \
+- **IdentityServer4. Documentação oficial** \
   <https://identityserver4.readthedocs.io/en/latest/>
 
 >[!div class="step-by-step"]

@@ -1,5 +1,5 @@
 ---
-title: 'Como: usar procedimentos armazenados mapeados para várias formas de resultado'
+title: 'Como: Use os procedimentos armazenados mapeados para várias formas de resultado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003277"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Como: usar procedimentos armazenados mapeados para várias formas de resultado
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>Como: Use os procedimentos armazenados mapeados para várias formas de resultado
 Quando um procedimento armazenado pode retornar várias formas de resultado, o tipo de retorno não pode ser fortemente tipado a uma única forma de projeção. Embora [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] possa gerar todos os tipos de projeção possíveis, não é possível saber a ordem na qual eles serão retornados.  
   
- Compare este cenário com procedimentos armazenados que gerenciar várias formas de resultado seqüencialmente. Para obter mais informações, confira [Como: Use procedimentos armazenados mapeados para formas de resultado sequenciais @ no__t-0.  
+ Compare este cenário com procedimentos armazenados que gerenciar várias formas de resultado seqüencialmente. Para obter mais informações, consulte [como: usar procedimentos armazenados mapeados para formas de resultados sequenciais](how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md).  
   
  O atributo de <xref:System.Data.Linq.Mapping.ResultTypeAttribute> é aplicado aos procedimentos armazenados que vários tipos de retorno de resultado para especificar o conjunto de tipos podem retornar o procedimento.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  No exemplo de código SQL, a forma de resultado depende de entrada (`shape =1` ou `shape = 2`). Você não sabe que projeção será retornada primeiro.  
   
 ``` sql
@@ -34,7 +34,7 @@ else if(@shape = 2)
  [!code-csharp[DLinqSprox#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#4)]
  [!code-vb[DLinqSprox#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#4)]  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  Você usaria código semelhante ao seguinte para executar este procedimento armazenado.  
   
 > [!NOTE]

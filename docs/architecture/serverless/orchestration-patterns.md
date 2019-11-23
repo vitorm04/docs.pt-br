@@ -60,7 +60,7 @@ public static bool ProcessPayment([ActivityTrigger] DurableActivityContext conte
 
 Em alguns casos, os fluxos de trabalho podem conter atividades que levam um período de tempo relativamente longo para ser concluído. Imagine um processo que inicia o backup de arquivos de mídia no armazenamento de BLOBs. Dependendo do tamanho e da quantidade dos arquivos de mídia, esse processo de backup pode levar horas para ser concluído.
 
-Nesse cenário, a capacidade do `DurableOrchestrationClient` de verificar o status de um fluxo de trabalho em execução se torna útil. Ao usar um `HttpTrigger` para iniciar um fluxo de trabalho, o método `CreateCheckStatusResponse` pode ser usado para retornar uma instância do `HttpResponseMessage`. Essa resposta fornece ao cliente um URI no conteúdo que pode ser usado para verificar o status do processo em execução.
+Nesse cenário, a capacidade do `DurableOrchestrationClient`de verificar o status de um fluxo de trabalho em execução se torna útil. Ao usar um `HttpTrigger` para iniciar um fluxo de trabalho, o método `CreateCheckStatusResponse` pode ser usado para retornar uma instância do `HttpResponseMessage`. Essa resposta fornece ao cliente um URI no conteúdo que pode ser usado para verificar o status do processo em execução.
 
 ```csharp
 [FunctionName("OrderWorkflow")]
@@ -149,7 +149,7 @@ public static async Task CheckStockPrice([OrchestrationTrigger] DurableOrchestra
 }
 ```
 
-o método `CreateTimer` de `DurableOrchestrationContext` configura o agendamento para a próxima invocação do loop para verificar as alterações de preço de ações. `DurableOrchestrationContext` também tem uma propriedade `CurrentUtcDateTime` para obter o valor DateTime atual em UTC. É melhor usar essa propriedade em vez de `DateTime.UtcNow` porque ela é facilmente simulada para teste.
+o método `CreateTimer` de `DurableOrchestrationContext`configura o agendamento para a próxima invocação do loop para verificar as alterações de preço de ações. `DurableOrchestrationContext` também tem uma propriedade `CurrentUtcDateTime` para obter o valor DateTime atual em UTC. É melhor usar essa propriedade em vez de `DateTime.UtcNow` porque ela é facilmente simulada para teste.
 
 ## <a name="recommended-resources"></a>Recursos recomendados
 

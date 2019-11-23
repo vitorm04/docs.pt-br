@@ -14,7 +14,7 @@ ms.locfileid: "73100689"
 ---
 # <a name="whats-new-in-net-core-22"></a>Novidades do .NET Core 2.2
 
-O .NET Core 2.2 inclui aprimoramentos na implantação do aplicativo, na manipulação de eventos para serviços de tempo de execução, na autenticação de Bancos de Dados SQL do Azure, no desempenho do compilador JIT e na injeção de código antes da execução do método `Main`.
+O .NET Core 2.2 inclui aprimoramentos na implantação do aplicativo, na manipulação de eventos para serviços de runtime, na autenticação de Bancos de Dados SQL do Azure, no desempenho do compilador JIT e na injeção de código antes da execução do método `Main`.
 
 ## <a name="new-deployment-mode"></a>Novo modo de implantação
 
@@ -24,7 +24,7 @@ Esse novo modo de implantação tem a vantagem distinta da criar um executável 
 
 ## <a name="core"></a>Núcleo
 
-**Manipulação de eventos nos serviços de tempo de execução**
+**Manipulação de eventos nos serviços de runtime**
 
 Muitas vezes, convém monitorar o uso dos serviços de runtime do seu aplicativo, como o GC, o JIT e o ThreadPool, para entender como eles afetam seu aplicativo. Em sistemas Windows, isso é comumente feito monitorando os eventos ETW do processo atual. Embora isso continue funcionando bem, nem sempre é possível usar o ETW se você estiver executando em um ambiente de baixo privilégio ou no Linux ou no macOS. 
 

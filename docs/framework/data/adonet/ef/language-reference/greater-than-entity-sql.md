@@ -18,17 +18,17 @@ Compara duas expressões para determinar se a expressão da esquerda tem um valo
 expression > expression  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  `expression`  
  Qualquer expressão válida. As duas expressões devem ter os tipos de dados implicitamente conversíveis.  
   
 ## <a name="result-types"></a>Tipos de resultado  
  `true` se a expressão esquerda tem um valor maior que a expressão direita; caso contrário, `false`.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  A consulta Entity SQL a seguir usa > operador de comparação para comparar duas expressões para determinar se a expressão esquerda tem um valor maior que a expressão direita. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [How para: Executa uma consulta que retorna os resultados de Estruturaistype @ no__t-0.  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   

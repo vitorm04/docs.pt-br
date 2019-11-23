@@ -15,13 +15,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697148"
 ---
-# <a name="performancecounters-element"></a>\<performanceCounters > elemento
+# <a name="performancecounters-element"></a>Elemento \<performanceCounters >
 
 Especifica o tamanho da memória global compartilhada por contadores de desempenho.
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<performanceCounters >**  
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**performancecounters\<>**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,7 +31,7 @@ Especifica o tamanho da memória global compartilhada por contadores de desempen
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e elementos pai.
+As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.
 
 ### <a name="attributes"></a>Atributos
 
@@ -41,9 +41,9 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 ### <a name="child-elements"></a>Elementos filho
 
-nenhuma.
+None.
 
-### <a name="parent-elements"></a>Elementos pai
+### <a name="parent-elements"></a>Elementos Pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -56,7 +56,7 @@ Os contadores de desempenho usam um arquivo mapeado de memória ou memória comp
 
 O tamanho da memória compartilhada global só pode ser definido com um arquivo de configuração.  O tamanho padrão é 524.288 bSim, o tamanho máximo é de 33.554.432 bytes e o tamanho mínimo é de 32.768 bytes.  Como a memória compartilhada global é compartilhada por todos os processos e categorias, o primeiro criador especifica o tamanho.  Se você definir o tamanho em seu arquivo de configuração de aplicativo, esse tamanho será usado somente se seu aplicativo for o primeiro aplicativo que faz com que os contadores de desempenho sejam executados.  Portanto, o local correto para especificar o valor de `filemappingsize` é o arquivo Machine. config.  A memória na memória compartilhada global não pode ser liberada por contadores de desempenho individuais, portanto, eventualmente, a memória compartilhada global será esgotada se um grande número de instâncias de contador de desempenho com nomes diferentes for criado.
 
-Para o tamanho da memória compartilhada separada, o valor DWORD FileMappingSize na chave do registro HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services @ no__t-0 *\<category name >* \Performance é referenciado primeiro, seguido pelo valor especificado para a memória compartilhada global no arquivo de configuração. Se o valor de FileMappingSize não existir, o tamanho da memória compartilhada separada será definido como um quarto (1/4) a configuração global no arquivo de configuração.
+Para o tamanho da memória compartilhada separada, o valor DWORD FileMappingSize na chave do registro HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Services\\ *\<nome da categoria >* \Performance é referenciado primeiro, seguido pelo valor especificado para a memória global compartilhada no arquivo de configuração. Se o valor de FileMappingSize não existir, o tamanho da memória compartilhada separada será definido como um quarto (1/4) a configuração global no arquivo de configuração.
 
 ## <a name="see-also"></a>Consulte também
 

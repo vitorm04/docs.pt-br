@@ -97,7 +97,7 @@ status:
   loadBalancer: {}
 ```
 
-Ao usar a configuração declarativa, você pode visualizar as alterações que serão feitas antes de confirmá-las usando `kubectl diff -f FOLDERNAME` em relação à pasta em que os arquivos de configuração estão localizados. Quando tiver certeza de que deseja aplicar as alterações, execute `kubectl apply -f FOLDERNAME`. Adicione `-R` para processar recursivamente uma hierarquia de pastas.
+Ao usar a configuração declarativa, você pode visualizar as alterações que serão feitas antes de confirmá-las usando `kubectl diff -f FOLDERNAME` na pasta em que os arquivos de configuração estão localizados. Quando tiver certeza de que deseja aplicar as alterações, execute `kubectl apply -f FOLDERNAME`. Adicione `-R` para processar recursivamente uma hierarquia de pastas.
 
 Além dos serviços, você pode usar a configuração declarativa para outros recursos do kubernetes, como *implantações*. Implantações declarativas são usadas por controladores de implantação para atualizar recursos de cluster. As implantações são usadas para distribuir novas alterações, escalar verticalmente para dar suporte a mais carga ou reverter para uma revisão anterior. Se um cluster estiver instável, as implantações declarativas fornecerão um mecanismo para colocar automaticamente o cluster de volta para um estado desejado.
 
@@ -194,13 +194,13 @@ O comportamento padrão quando o aplicativo é executado é configurado para usa
 
 Além do desenvolvimento local, o [Azure dev Spaces](https://docs.microsoft.com/azure/dev-spaces/) fornece uma maneira conveniente para vários desenvolvedores trabalharem com suas próprias configurações de kubernetes no Azure. Como você pode ver na Figura 3-7, você também pode executar o aplicativo em Azure Dev Spaces.
 
-Se você não adicionar o suporte do Docker ao seu aplicativo ASP.NET Core ao criá-lo, você sempre poderá adicioná-lo mais tarde. No Gerenciador de Soluções do Visual Studio, clique com o botão direito do mouse no projeto e selecione **Adicionar** **suporte ao docker**de  > , conforme mostrado na Figura 3-8.
+Se você não adicionar o suporte do Docker ao seu aplicativo ASP.NET Core ao criá-lo, você sempre poderá adicioná-lo mais tarde. No Gerenciador de Soluções do Visual Studio, clique com o botão direito do mouse no projeto e selecione **adicionar** > **suporte do Docker**, conforme mostrado na Figura 3-8.
 
 ![Adicionar suporte ao Docker ao Visual Studio](./media/visual-studio-add-docker-support.png)
 
 **Figura 3-8**. Adicionar suporte ao Docker ao Visual Studio
 
-Além do suporte ao Docker, você também pode adicionar suporte à orquestração de contêiner, também mostrada na Figura 3-8. Por padrão, o orquestrador usa kubernetes e Helm. Depois de escolher o orquestrador, um arquivo `azds.yaml` é adicionado à raiz do projeto e uma pasta `charts` é adicionada contendo os gráficos do Helm usados para configurar e implantar o aplicativo no kubernetes. A Figura 3-9 mostra os arquivos resultantes em um novo projeto.
+Além do suporte ao Docker, você também pode adicionar suporte à orquestração de contêiner, também mostrada na Figura 3-8. Por padrão, o orquestrador usa kubernetes e Helm. Depois de escolher o orquestrador, um arquivo de `azds.yaml` é adicionado à raiz do projeto e uma pasta `charts` é adicionada contendo os gráficos Helm usados para configurar e implantar o aplicativo no kubernetes. A Figura 3-9 mostra os arquivos resultantes em um novo projeto.
 
 ![Adicionar suporte ao Orchestrator no Visual Studio](./media/visual-studio-add-orchestrator-support.png)
 

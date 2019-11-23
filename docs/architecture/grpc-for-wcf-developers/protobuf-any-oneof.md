@@ -1,14 +1,13 @@
 ---
 title: Protobuf any e oneof Fields for Variant Types-gRPC for WCF Developers
 description: Saiba como usar o tipo any e a palavra-chave oneof para representar tipos de objeto Variant em mensagens.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: 10f55288eb4a6aa603228da5b4850317d6bde614
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: af3ba22c238aa80a8c6119f62d5d8914770cad68
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846386"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971612"
 ---
 # <a name="protobuf-any-and-oneof-fields-for-variant-types"></a>Protobuf os campos any e oneof para tipos Variant
 
@@ -39,7 +38,7 @@ message ChangeNotification {
 }
 ```
 
-No C# código, a classe`Any`fornece métodos para definir o campo, extrair a mensagem e verificar o tipo.
+No C# código, a classe `Any` fornece métodos para definir o campo, extrair a mensagem e verificar o tipo.
 
 ```csharp
 public void FormatChangeNotification(ChangeNotification change)

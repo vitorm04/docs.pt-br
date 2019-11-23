@@ -28,7 +28,7 @@ Para obter mais informações, consulte [Covariância e contravariância](../../
 
 Você pode usar a palavra-chave `In` em delegados e interfaces genéricas.
   
-Um parâmetro de tipo pode ser declarado contravariant em uma interface genérica ou delegado se for usado apenas como um tipo de argumento de método e não usado como um tipo de retorno de método. parâmetros `ByRef` não podem ser covariantes ou contravariant.
+Um parâmetro de tipo pode ser declarado contravariant em uma interface genérica ou delegado se for usado apenas como um tipo de argumento de método e não usado como um tipo de retorno de método. parâmetros de `ByRef` não podem ser covariantes ou contravariant.
 
 Covariance e contravariância têm suporte para tipos de referência e não têm suporte para tipos de valor.
 
@@ -36,7 +36,7 @@ No Visual Basic, você não pode declarar eventos em interfaces contravariant se
 
 ## <a name="behavior"></a>Comportamento
 
-Uma interface que tem um parâmetro de tipo contravariante permite que os seus métodos aceitem argumentos de tipos menos derivados que aqueles especificados pelo parâmetro de tipo de interface. Por exemplo, como no .NET Framework 4, na interface <xref:System.Collections.Generic.IComparer%601>, o tipo T é contravariant, você pode atribuir um objeto do tipo `IComparer(Of Person)` a um objeto do tipo @no__t 2 sem usar nenhum método especial de conversão se `Employee` for herdado de `Person`.
+Uma interface que tem um parâmetro de tipo contravariante permite que os seus métodos aceitem argumentos de tipos menos derivados que aqueles especificados pelo parâmetro de tipo de interface. Por exemplo, como no .NET Framework 4, na interface <xref:System.Collections.Generic.IComparer%601>, o tipo T é contravariant, você pode atribuir um objeto do tipo `IComparer(Of Person)` a um objeto do tipo `IComparer(Of Employee)` sem usar nenhum método de conversão especial se `Employee` herdar de `Person`.
 
 Um delegado contravariante pode ser atribuído a outro delegado do mesmo tipo, mas com um parâmetro de tipo genérico menos derivado.
 

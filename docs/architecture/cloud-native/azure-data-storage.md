@@ -35,7 +35,7 @@ A Figura 5-12 mostra as opções de implantação para o banco de dados SQL do A
 
 Observe as alternativas na figura anterior ao implantar um banco de dados SQL:
 
-- Um [banco de dados individual](https://docs.microsoft.com/azure/sql-database/sql-database-single-database)  with seu próprio conjunto de recursos gerenciados por um [servidor de banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-servers). Um banco de dados individual é semelhante a um [banco de dados independente](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases)  in uma implantação de SQL Server local.
+- Um [único banco de dados](https://docs.microsoft.com/azure/sql-database/sql-database-single-database) com seu próprio conjunto de recursos gerenciados por um [servidor de banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-servers). Um banco de dados individual é semelhante a um [banco de dados independente](https://docs.microsoft.com/sql/relational-databases/databases/contained-databases) em uma implantação de SQL Server local.
 
 - Um [pool elástico](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-pool) no qual uma coleção de bancos de dados SQL compartilha um único servidor de banco de dados SQL por um preço definido. Bancos de dados individuais podem ser movidos para dentro e para fora de um pool elástico, conforme necessário, para otimizar o desempenho do preço de um grupo de bancos de dados.
 
@@ -53,7 +53,7 @@ Além da pilha de Microsoft SQL Server tradicional, o Azure também apresenta ve
 
 ## <a name="azure-database-for-mysql"></a>Banco de dados do Azure para MySQL
 
-O [MySQL](https://en.wikipedia.org/wiki/MySQL)  is um [banco de dados relacional](https://en.wikipedia.org/wiki/Relational_database_management_system) [de código aberto](https://en.wikipedia.org/wiki/Open-source_software). É um componente da pilha de [software da lâmpada](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) e é usado por muitas organizações de grande porte, incluindo o Facebook, o Twitter e o YouTube. A Community Edition está disponível gratuitamente e a Enterprise Edition requer uma compra de licença. Originalmente criado em 1995, o produto foi adquirido pela Sun Microsystems no 2008, que foi adquirido pela Oracle na 2010.
+O [MySQL](https://en.wikipedia.org/wiki/MySQL) é um [banco de dados relacional](https://en.wikipedia.org/wiki/Relational_database_management_system) [de código aberto](https://en.wikipedia.org/wiki/Open-source_software). É um componente da pilha de [software da lâmpada](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) e é usado por muitas organizações de grande porte, incluindo o Facebook, o Twitter e o YouTube. A Community Edition está disponível gratuitamente e a Enterprise Edition requer uma compra de licença. Originalmente criado em 1995, o produto foi adquirido pela Sun Microsystems no 2008, que foi adquirido pela Oracle na 2010.
 
 O [banco de dados do Azure para MySQL](https://azure.microsoft.com/services/mysql/) é um serviço de banco de dados relacional totalmente gerenciado e pronto para empresas com base no mecanismo de servidor MySQL de software livre. Implementando o MySQL Community Edition, ele inclui os seguintes recursos de PaaS sem custo adicional:
 
@@ -101,7 +101,7 @@ O [banco de dados do Azure para MariaDB](https://azure.microsoft.com/services/ma
 
 [PostgreSQL](https://www.postgresql.org/) é outro banco de dados relacional popular de código aberto com mais de 30 anos de desenvolvimento ativo. É uma finalidade geral e um sistema de gerenciamento de banco de dados relacional de objeto. Seu licenciamento é considerado "liberal" e o produto está livre para usar, modificar e distribuir em qualquer forma. Muitas empresas de grande porte, incluindo Apple, Red Hat e Fujitsu, têm produtos criados usando PostgreSQL.
 
-O [banco de dados do Azure para PostgreSQL](https://azure.microsoft.com/services/postgresql/) é um serviço de banco de dados relacional totalmente gerenciado, baseado no mecanismo de banco de dados Postgres de código aberto. Ele pode lidar com cargas de trabalho críticas com desempenho previsível, segurança, alta disponibilidade e escalabilidade dinâmica. Ele oferece suporte a várias estruturas e linguagens de software livre C++, incluindo Java, Python, Node, C \# e php. Ele permite a [migração](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) de bancos de dados PostgreSQL por meio de uma interface de linha de comando ou do [serviço de migração de dado do Azure](https://azure.microsoft.com/services/database-migration/).
+O [banco de dados do Azure para PostgreSQL](https://azure.microsoft.com/services/postgresql/) é um serviço de banco de dados relacional totalmente gerenciado, baseado no mecanismo de banco de dados Postgres de código aberto. Ele pode lidar com cargas de trabalho críticas com desempenho previsível, segurança, alta disponibilidade e escalabilidade dinâmica. Ele oferece suporte a várias estruturas e linguagens de software livre C++, incluindo Java, Python, Node, C\#e php. Ele permite a [migração](https://datamigration.microsoft.com/scenario/postgresql-to-azurepostgresql?step=1) de bancos de dados PostgreSQL por meio de uma interface de linha de comando ou do [serviço de migração de dado do Azure](https://azure.microsoft.com/services/database-migration/).
 
 O serviço inclui [inteligência interna](https://docs.microsoft.com/azure/postgresql/concepts-monitoring) que estuda seus padrões de banco de dados exclusivos e fornece recomendações e informações personalizadas para ajudá-lo a maximizar o desempenho do seu banco de dados PostgreSQL. A [proteção avançada contra ameaças](https://docs.microsoft.com/azure/postgresql/concepts-data-access-and-security-threat-protection) monitora o banco de dados em todo o relógio e detecta possíveis atividades mal-intencionadas, alertando você sobre a detecção para que você possa intervir imediatamente.
 
@@ -109,7 +109,7 @@ O banco de dados do Azure para PostgreSQL está disponível como duas opções d
 
 - A opção de implantação de [servidor único](https://docs.microsoft.com/azure/postgresql/concepts-servers) é um ponto administrativo central para vários bancos de dados. É o mesmo mecanismo de servidor PostgreSQL disponível para implantações locais. Com ele, você pode criar um único banco de dados por servidor para consumir todos os recursos ou criar vários bancos de dados para compartilhar os recursos. O preço é estruturado por servidor com base nos núcleos e no armazenamento.
 
-- A [opção de hiperescala (Citus)](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) é alimentada por [Citus data](https://www.citusdata.com/)  technology. Ele permite o dimensionamento de alto desempenho, dimensionando horizontalmente um único banco de dados em centenas de nós para fornecer desempenho e escala extremamente rápidos. Essa opção permite que o mecanismo caiba mais dados na memória, paraleliza consultas em centenas de nós e indexe dados mais rapidamente. O recurso de hiperescala é compatível com as inovações, versões e ferramentas mais recentes para PostgreSQL, para que você possa aproveitar sua experiência de PostgreSQL existente.
+- A [opção de hiperescala (Citus)](https://azure.microsoft.com/blog/get-high-performance-scaling-for-your-azure-database-workloads-with-hyperscale/) é alimentada pela tecnologia de de [dados do Citus](https://www.citusdata.com/) . Ele permite o dimensionamento de alto desempenho, dimensionando horizontalmente um único banco de dados em centenas de nós para fornecer desempenho e escala extremamente rápidos. Essa opção permite que o mecanismo caiba mais dados na memória, paraleliza consultas em centenas de nós e indexe dados mais rapidamente. O recurso de hiperescala é compatível com as inovações, versões e ferramentas mais recentes para PostgreSQL, para que você possa aproveitar sua experiência de PostgreSQL existente.
 
 ## <a name="cosmos-db"></a>Cosmos DB
 
@@ -169,7 +169,7 @@ O Azure Cosmos DB oferece um espectro de [cinco modelos de consistência bem def
 
 **Figura 5-16**: níveis de consistência de Cosmos DB
 
-### <a name="partitioning"></a>Divisão
+### <a name="partitioning"></a>Particionamento
 
 O Azure Cosmos DB usa o [particionamento](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) automático para dimensionar o banco de dados para atender às necessidades de desempenho do seu aplicativo.
 

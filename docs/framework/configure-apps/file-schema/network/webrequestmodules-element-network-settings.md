@@ -15,12 +15,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697470"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > elemento (configurações de rede)
+# <a name="webrequestmodules-element-network-settings"></a>\<elemento de > webRequestModules (configurações de rede)
 Especifica os módulos a serem usados para solicitar informações de hosts de rede.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4webRequestModules >  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<webRequestModules >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -30,10 +30,10 @@ Especifica os módulos a serem usados para solicitar informações de hosts de r
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ None.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -43,7 +43,7 @@ Especifica os módulos a serem usados para solicitar informações de hosts de r
 |[clear](clear-element-for-webrequestmodules-network-settings.md)|Remove todos os módulos de solicitação da Web registrados do aplicativo.|  
 |[remove](remove-element-for-webrequestmodules-network-settings.md)|Remove um módulo de solicitação da Web personalizado do aplicativo.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
@@ -52,12 +52,12 @@ Especifica os módulos a serem usados para solicitar informações de hosts de r
 ## <a name="remarks"></a>Comentários  
  O elemento `webRequestModules` registra os descendentes da classe <xref:System.Net.WebRequest> para tratar as solicitações de informações para os hosts de rede. Os módulos de solicitação da Web devem implementar a interface <xref:System.Net.IWebRequestCreate>.  
   
- O .NET Framework inclui módulos de solicitação da Web para URIs que começam com `http://`, `https://` e `file://`. Você pode substituir os módulos padrão somente registrando um módulo personalizado no arquivo de configuração.  
+ O .NET Framework inclui módulos de solicitação da Web para URIs que começam com `http://`, `https://`e `file://`. Você pode substituir os módulos padrão somente registrando um módulo personalizado no arquivo de configuração.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir registra o módulo HTTP padrão. Você deve substituir os valores de Version e PublicKeyToken pelos valores corretos para o módulo especificado.  
   
 ```xml  

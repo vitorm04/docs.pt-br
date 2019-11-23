@@ -132,7 +132,7 @@ O [Gerenciamento de API do Azure](https://azure.microsoft.com/services/api-manag
 
 **Figura 4-14**. Usando o Gerenciamento de API do Azure para o Gateway de API
 
-O gerenciamento de API do Azure resolve o gateway de API e as necessidades de gerenciamento, como log, segurança, medição, etc. Nesse caso, ao usar um produto como o gerenciamento de API do Azure, o fato de que você pode ter um único gateway de API não é tão arriscado porque esses tipos de gateways de API são "mais finos" C# , o que significa que você não implementa código personalizado que poderia evoluir para um componente monolítico.
+O gerenciamento de API do Azure resolve o gateway de API e as necessidades de gerenciamento, como log, segurança, medição, etc. Nesse caso, ao usar um produto como o gerenciamento de API do Azure, o fato de que você pode ter um único gateway de API não é tão arriscado porque esses tipos de gateways de API são "mais finos" C# , o que significa que você não implementa código personalizado que possa evoluir para um componente monolítico.
 
 Os produtos de Gateway de API costumam atuar como um proxy reverso para comunicação de entrada, em que você também pode filtrar as APIs dos microsserviços internos e aplicar a autorização para as APIs publicadas nessa camada única.
 
@@ -146,7 +146,7 @@ Neste guia e no aplicativo de exemplo de referência (eShopOnContainers), a arqu
 
 O [Ocelot](https://github.com/ThreeMammals/Ocelot) é um Gateway de API leve, recomendado para abordagens mais simples. O Ocelot é um Gateway de API baseado no .NET Core de Software Livre, feito especialmente para a arquitetura de microsserviços que precisa de pontos de entrada unificados no sistema. Ele é leve, rápido, escalonável e fornece roteamento e autenticação entre muitos outros recursos.
 
-O principal motivo para escolher Ocelot para o [aplicativo de referência eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) é porque o Ocelot é um gateway de API leve do .NET Core que pode ser implantado no mesmo ambiente de implantação de aplicativos em que você está implantando seus microserviços/ contêineres, como um host do Docker, kubernetes, etc. E, como ele é baseado no .NET Core, ele é multiplataforma que permite que você implante no Linux ou no Windows.
+O principal motivo para escolher Ocelot para o [aplicativo de referência eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) é porque o Ocelot é um gateway de API leve do .NET Core que pode ser implantado no mesmo ambiente de implantação de aplicativos em que você está implantando seus microserviços/contêineres, como um host do Docker, kubernetes, etc. E, como ele é baseado no .NET Core, ele é multiplataforma que permite que você implante no Linux ou no Windows.
 
 Os diagramas anteriores que mostram os Gateways de API personalizados em execução nos contêineres correspondem precisamente ao modo como você também pode executar o Ocelot em um contêiner e em um aplicativo baseado em microsserviço.
 
@@ -170,7 +170,7 @@ Após as seções iniciais de explicação sobre arquitetura e padrões, as pró
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-- **Chris Richardson. Padrão: gateway de API/back-end para front-end**  \
+- **Chris Richardson. Padrão: gateway de API/back-end para front-end** \
   <https://microservices.io/patterns/apigateway.html>
 
 - **Padrão de Gateway de API** \
