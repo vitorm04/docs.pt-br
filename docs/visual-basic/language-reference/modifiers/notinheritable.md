@@ -1,5 +1,5 @@
 ---
-title: NotInheritable (Visual Basic)
+title: NotInheritable
 ms.date: 07/20/2015
 f1_keywords:
 - NotInheritable
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - sealed classes [Visual Basic]
 - classes [Visual Basic], not inheritable
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
-ms.openlocfilehash: 05adafaf26cab7f7ed00c51ee23fafbe02f2a408
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c7e820fe4c6de78171be0510608d7b9da1f97f2f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920686"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351457"
 ---
-# <a name="notinheritable-visual-basic"></a><span data-ttu-id="5b8d7-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5b8d7-102">NotInheritable (Visual Basic)</span></span>
-<span data-ttu-id="5b8d7-103">Especifica que uma classe não pode ser usada como uma classe base.</span><span class="sxs-lookup"><span data-stu-id="5b8d7-103">Specifies that a class cannot be used as a base class.</span></span>  
+# <a name="notinheritable-visual-basic"></a><span data-ttu-id="e815d-102">NotInheritable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e815d-102">NotInheritable (Visual Basic)</span></span>
+<span data-ttu-id="e815d-103">Specifies that a class cannot be used as a base class.</span><span class="sxs-lookup"><span data-stu-id="e815d-103">Specifies that a class cannot be used as a base class.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5b8d7-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="5b8d7-104">Remarks</span></span>  
- <span data-ttu-id="5b8d7-105">**Termos de alternativo**.</span><span class="sxs-lookup"><span data-stu-id="5b8d7-105">**Alternate Terms**.</span></span> <span data-ttu-id="5b8d7-106">Uma classe que não pode ser herdada é chamada, às vezes, uma *lacrado* classe.</span><span class="sxs-lookup"><span data-stu-id="5b8d7-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e815d-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="e815d-104">Remarks</span></span>  
+ <span data-ttu-id="e815d-105">**Alternate Terms**.</span><span class="sxs-lookup"><span data-stu-id="e815d-105">**Alternate Terms**.</span></span> <span data-ttu-id="e815d-106">A class that cannot be inherited is sometimes called a *sealed* class.</span><span class="sxs-lookup"><span data-stu-id="e815d-106">A class that cannot be inherited is sometimes called a *sealed* class.</span></span>  
   
- <span data-ttu-id="5b8d7-107">O `NotInheritable` modificador pode ser usado neste contexto:</span><span class="sxs-lookup"><span data-stu-id="5b8d7-107">The `NotInheritable` modifier can be used in this context:</span></span>  
+ <span data-ttu-id="e815d-107">The `NotInheritable` modifier can be used in this context:</span><span class="sxs-lookup"><span data-stu-id="e815d-107">The `NotInheritable` modifier can be used in this context:</span></span>  
   
- [<span data-ttu-id="5b8d7-108">Instrução Class</span><span class="sxs-lookup"><span data-stu-id="5b8d7-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [<span data-ttu-id="e815d-108">Instrução Class</span><span class="sxs-lookup"><span data-stu-id="e815d-108">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="5b8d7-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b8d7-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e815d-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e815d-109">See also</span></span>
 
-- [<span data-ttu-id="5b8d7-110">Instrução Inherits</span><span class="sxs-lookup"><span data-stu-id="5b8d7-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [<span data-ttu-id="5b8d7-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="5b8d7-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [<span data-ttu-id="5b8d7-112">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="5b8d7-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="e815d-110">Instrução Inherits</span><span class="sxs-lookup"><span data-stu-id="e815d-110">Inherits Statement</span></span>](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [<span data-ttu-id="e815d-111">MustInherit</span><span class="sxs-lookup"><span data-stu-id="e815d-111">MustInherit</span></span>](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [<span data-ttu-id="e815d-112">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="e815d-112">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
