@@ -1,21 +1,21 @@
 ---
-title: Funções da cadeia de caracteres (Visual Basic)
+title: Funções da cadeia de caracteres
 ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 0002a3dd19b493f690f91f9b6c68a9241e6d6ea0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2608159e28ee63a0fdb10c82054fd65efe79ac62
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582998"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349975"
 ---
 # <a name="string-functions-visual-basic"></a>Funções da cadeia de caracteres (Visual Basic)
 
-A tabela a seguir lista as funções que Visual Basic fornece na classe <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> para pesquisar e manipular cadeias de caracteres. Eles podem ser considerados como Visual Basic funções intrínsecas; ou seja, você não precisa chamá-los como membros explícitos de uma classe, como mostram os exemplos. Métodos adicionais e, em alguns casos, métodos complementares, estão disponíveis na classe <xref:System.String?displayProperty=nameWithType>.
+The following table lists the functions that Visual Basic provides in the <xref:Microsoft.VisualBasic.Strings?displayProperty=nameWithType> class to search and manipulate strings. They can be regarded as Visual Basic intrinsic functions; that is, you do not have to call them as explicit members of a class, as the examples show. Additional methods, and in some cases complementary methods, are available in the <xref:System.String?displayProperty=nameWithType> class.
 
-|Método de .NET Framework|Descrição|
+|.NET Framework method|Descrição|
 |---------------------------|-----------------|
 |<xref:Microsoft.VisualBasic.Strings.Asc%2A>, <xref:Microsoft.VisualBasic.Strings.AscW%2A>|Retorna um valor de `Integer` que representa o código de caractere correspondente a um caractere.|
 |<xref:Microsoft.VisualBasic.Strings.Chr%2A>, <xref:Microsoft.VisualBasic.Strings.ChrW%2A>|Retorna o caractere associado ao código de caractere especificado.|
@@ -30,66 +30,66 @@ A tabela a seguir lista as funções que Visual Basic fornece na classe <xref:Mi
 |<xref:Microsoft.VisualBasic.Strings.Join%2A>|Retorna uma cadeia de caracteres criada unindo um número de subcadeias contidas em uma matriz.|
 |<xref:Microsoft.VisualBasic.Strings.LCase%2A>|Retorna uma cadeia de caracteres ou um caractere convertido em minúsculas.|
 |<xref:Microsoft.VisualBasic.Strings.Left%2A>|Retorna uma cadeia de caracteres que contém um número especificado de caracteres do lado esquerdo de uma cadeia de caracteres.|
-|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Retorna um número inteiro que contém o número de caracteres em uma cadeia.|
+|<xref:Microsoft.VisualBasic.Strings.Len%2A>|Returns an integer that contains the number of characters in a string.|
 |<xref:Microsoft.VisualBasic.Strings.LSet%2A>|Retorna uma cadeia de caracteres alinhada à esquerda que contém a cadeia especificada ajustada no tamanho especificado.|
-|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Retorna uma cadeia de caracteres que contém uma cópia de uma cadeia de caracteres especificada sem espaços à esquerda.|
-|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Retorna uma cadeia de caracteres que contém um número especificado de caracteres de uma cadeia.|
+|<xref:Microsoft.VisualBasic.Strings.LTrim%2A>|Returns a string containing a copy of a specified string with no leading spaces.|
+|<xref:Microsoft.VisualBasic.Strings.Mid%2A>|Returns a string containing a specified number of characters from a string.|
 |<xref:Microsoft.VisualBasic.Strings.Replace%2A>|Retorna uma cadeia de caracteres na qual uma subcadeia de caracteres especificada foi substituída por outra subcadeia de caracteres um número especificado de vezes.|
 |<xref:Microsoft.VisualBasic.Strings.Right%2A>|Retorna uma cadeia de caracteres que contém um número especificado de caracteres do lado direito de uma cadeia de caracteres.|
 |<xref:Microsoft.VisualBasic.Strings.RSet%2A>|Retorna uma cadeia de caracteres alinhada à direita que contém a cadeia especificada ajustada no tamanho especificado.|
-|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Retorna uma cadeia de caracteres que contém uma cópia de uma cadeia de caracteres especificada sem espaços à direita.|
+|<xref:Microsoft.VisualBasic.Strings.RTrim%2A>|Returns a string containing a copy of a specified string with no trailing spaces.|
 |<xref:Microsoft.VisualBasic.Strings.Space%2A>|Retorna uma cadeia de caracteres que consiste no número especificado de espaços.|
 |<xref:Microsoft.VisualBasic.Strings.Split%2A>|Retorna uma matriz unidimensional baseada em zero que contém um número especificado de subcadeias de caracteres.|
 |<xref:Microsoft.VisualBasic.Strings.StrComp%2A>|Retorna -1, 0 ou 1, com base no resultado de uma comparação de cadeia de caracteres.|
 |<xref:Microsoft.VisualBasic.Strings.StrConv%2A>|Retorna uma cadeia de caracteres convertida, conforme especificado.|
 |<xref:Microsoft.VisualBasic.Strings.StrDup%2A>|Retorna uma cadeia de caracteres ou um objeto que consiste no caractere especificado repetido no número de vezes especificado.|
 |<xref:Microsoft.VisualBasic.Strings.StrReverse%2A>|Retorna uma cadeia de caracteres na qual a ordem dos caracteres de uma cadeia de caracteres especificada é invertida.|
-|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Retorna uma cadeia de caracteres que contém uma cópia de uma cadeia de caracteres especificada sem espaços à esquerda ou à direita.|
+|<xref:Microsoft.VisualBasic.Strings.Trim%2A>|Returns a string containing a copy of a specified string with no leading or trailing spaces.|
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|Retorna uma cadeia de caracteres ou um caractere que contém a cadeia de caracteres especificada, convertida em maiúsculas.|
 
-Você pode usar a instrução [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) para definir se as cadeias de caracteres são comparadas usando uma ordem de classificação de texto que não diferencia maiúsculas de minúsculas determinada pela localidade do sistema (`Text`) ou pelas representações binárias internas dos caracteres (`Binary`). O método de comparação de texto padrão é `Binary`.
+You can use the [Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) statement to set whether strings are compared using a case-insensitive text sort order determined by your system's locale (`Text`) or by the internal binary representations of the characters (`Binary`). O método de comparação de texto padrão é `Binary`.
 
-## <a name="example-ucase"></a>Exemplo: UCase
+## <a name="example-ucase"></a>Example: UCase
 
-Este exemplo usa a função `UCase` para retornar uma versão em maiúsculas de uma cadeia de caracteres.
+This example uses the `UCase` function to return an uppercase version of a string.
 [!code-vb[VbVbalrStrings#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#31)]
 
-## <a name="example-ltrim"></a>Exemplo: LTrim
+## <a name="example-ltrim"></a>Example: LTrim
 
-Este exemplo usa a função `LTrim` para retirar espaços à esquerda e a função `RTrim` para retirar espaços à direita de uma variável de cadeia de caracteres. Ele usa a função `Trim` para retirar os dois tipos de espaços.
+This example uses the `LTrim` function to strip leading spaces and the `RTrim` function to strip trailing spaces from a string variable. It uses the `Trim` function to strip both types of spaces.
 
 [!code-vb[VbVbalrStrings#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#25)]
 
-## <a name="example-mid"></a>Exemplo: mid
+## <a name="example-mid"></a>Example: Mid
 
-Este exemplo usa a função `Mid` para retornar um número especificado de caracteres de uma cadeia de caractere.
+This example uses the `Mid` function to return a specified number of characters from a string.
 
 [!code-vb[VbVbalrStrings#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#17)]
 
-## <a name="example-len"></a>Exemplo: Len
+## <a name="example-len"></a>Example: Len
 
-Este exemplo usa `Len` para retornar o número de caracteres em uma cadeia.
+This example uses `Len` to return the number of characters in a string.
 
 [!code-vb[VbVbalrStrings#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#33)]
 
-## <a name="example-instr"></a>Exemplo: InStr
+## <a name="example-instr"></a>Example: InStr
 
-Este exemplo usa a função `InStr` para retornar a posição da primeira ocorrência de uma cadeia de caracteres dentro de outra.
+This example uses the `InStr` function to return the position of the first occurrence of one string within another.
 
 [!code-vb[VbVbalrStrings#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#8)]
 
-## <a name="example-format"></a>Exemplo: formato
+## <a name="example-format"></a>Example: Format
 
-Este exemplo mostra vários usos da função `Format` para formatar valores usando formatos `String` e formatos definidos pelo usuário. Para o separador de data (`/`), separador de tempo (`:`) e os indicadores AM/PM (`t` e `tt`), a saída formatada real exibida pelo seu sistema depende das configurações de localidade que o código está usando. Quando os horários e as datas são exibidos no ambiente de desenvolvimento, o formato de hora abreviada e o formato de data abreviada da localidade de código são usados.
+This example shows various uses of the `Format` function to format values using both `String` formats and user-defined formats. For the date separator (`/`), time separator (`:`), and the AM/PM indicators (`t` and `tt`), the actual formatted output displayed by your system depends on the locale settings the code is using. When times and dates are displayed in the development environment, the short time format and short date format of the code locale are used.
 
 > [!NOTE]
-> Para localidades que usam um relógio de 24 horas, os indicadores AM/PM (`t` e `tt`) não exibem nada.
+> For locales that use a 24-hour clock, the AM/PM indicators (`t` and `tt`) display nothing.
 
 [!code-vb[VbVbalrStrings#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#27)]
 
 ## <a name="see-also"></a>Consulte também
 
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
-- [Membros da Biblioteca em Tempo de Execução do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
+- [Membros da Biblioteca de Runtime do Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)
 - [Resumo de Manipulação da Cadeia de Caracteres](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
-- [Métodos de classe System. String](xref:System.String#methods)
+- [System.String class methods](xref:System.String#methods)

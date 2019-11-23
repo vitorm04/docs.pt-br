@@ -1,5 +1,5 @@
 ---
-title: NotOverridable (Visual Basic)
+title: NotOverridable
 ms.date: 07/20/2015
 f1_keywords:
 - vb.NotOverridable
@@ -16,32 +16,32 @@ helpviewer_keywords:
 - methods [Visual Basic], sealed
 - properties [Visual Basic], overriding
 ms.assetid: 66ec6984-f5f5-4857-b362-6a3907aaf9e0
-ms.openlocfilehash: 41c08a48fdb7501081e887fb5cf9f99c334c72ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c55d57bb3008b2825fe5382844908ea32f0d500c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920647"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351451"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Especifica que uma propriedade ou procedimento não pode ser substituído em uma classe derivada.  
+Specifies that a property or procedure cannot be overridden in a derived class.  
   
 ## <a name="remarks"></a>Comentários  
- O `NotOverridable` modificador impede que uma propriedade ou método que está sendo substituído em uma classe derivada.  O [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modificador permite que uma propriedade ou método em uma classe seja substituído em uma classe derivada. Para obter mais informações, consulte [Noções básicas de herança](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ The `NotOverridable` modifier prevents a property or method from being overridden in a derived class.  The [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modifier allows a property or method in a class to be overridden in a derived class. Para obter mais informações, consulte [Noções básicas de herança](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Se o `Overridable` ou `NotOverridable` modificador não for especificado, a configuração padrão depende se a propriedade ou método substitui um método ou propriedade de classe base. Se a propriedade ou método substitui um método ou propriedade de classe base, a configuração padrão é `Overridable`; caso contrário, ele é `NotOverridable`.  
+ If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
   
- Um elemento que não pode ser substituído é chamado, às vezes, uma *lacrado* elemento.  
+ An element that cannot be overridden is sometimes called a *sealed* element.  
   
- Você pode usar `NotOverridable` somente em uma instrução de declaração de propriedade ou procedimento. Você pode especificar `NotOverridable` somente em uma propriedade ou procedimento que substitui outra propriedade ou procedimento, ou seja, apenas em combinação com `Overrides`.  
+ You can use `NotOverridable` only in a property or procedure declaration statement. You can specify `NotOverridable` only on a property or procedure that overrides another property or procedure, that is, only in combination with `Overrides`.  
   
-## <a name="combined-modifiers"></a>Modificadores combinados  
- Não é possível especificar `Overridable` ou `NotOverridable` para um `Private` método.  
+## <a name="combined-modifiers"></a>Combined Modifiers  
+ You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
   
- Não é possível especificar `NotOverridable` junto com `MustOverride`, `Overridable`, ou `Shared` na mesma declaração.  
+ You cannot specify `NotOverridable` together with `MustOverride`, `Overridable`, or `Shared` in the same declaration.  
   
 ## <a name="usage"></a>Uso  
- O `NotOverridable` modificador pode ser usado nestes contextos:  
+ The `NotOverridable` modifier can be used in these contexts:  
   
  [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -57,4 +57,4 @@ Especifica que uma propriedade ou procedimento não pode ser substituído em uma
 - [Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Substituições](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
-- [Sombreamento no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

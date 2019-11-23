@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar um thread em segundo plano para pesquisar arquivos'
+title: Como usar um thread em segundo plano para procurar arquivos
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5dcb990266b94916bec715520a61f6a102c1e6ef
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: db9be1f57e15baac4820d33f6f245d69bd1ab430
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70015744"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351949"
 ---
-# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Como: Usar um thread em segundo plano para pesquisar arquivos
-O <xref:System.ComponentModel.BackgroundWorker> componente substitui e adiciona funcionalidade <xref:System.Threading> ao namespace; no entanto, <xref:System.Threading> o namespace é mantido para compatibilidade com versões anteriores e uso futuro, se você escolher. Para obter mais informações, consulte [Visão Geral do Componente BackgroundWorker](backgroundworker-component-overview.md).
+# <a name="how-to-use-a-background-thread-to-search-for-files"></a>Como usar um thread em segundo plano para procurar arquivos
+The <xref:System.ComponentModel.BackgroundWorker> component replaces and adds functionality to the <xref:System.Threading> namespace; however, the <xref:System.Threading> namespace is retained for both backward compatibility and future use, if you choose. Para obter mais informações, consulte [Visão Geral do Componente BackgroundWorker](backgroundworker-component-overview.md).
 
  O Windows Forms usa o modelo de single-threaded apartment (STA), pois Windows Forms é baseado em janelas nativas do Win32, que são inerentemente STA. O modelo STA implica que uma janela pode ser criada em qualquer thread, mas ela não pode mudar os threads já criados e todas as chamadas de função a ela devem ocorrer em seu thread de criação. Fora do Windows Forms, as classes do .NET Framework usam o modelo de threading livre. Para obter informações sobre threading no .NET Framework, consulte [Threading](../../../standard/threading/index.md).
 
- O modelo STA exige que qualquer método em um controle que precise ser chamado de fora do thread de criação do controle deve realizar marshaling (ser executado no) thread de criação do controle. A classe <xref:System.Windows.Forms.Control> base fornece vários métodos (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>e <xref:System.Windows.Forms.Control.EndInvoke%2A>) para essa finalidade. <xref:System.Windows.Forms.Control.Invoke%2A>faz chamadas de método síncronas; <xref:System.Windows.Forms.Control.BeginInvoke%2A> faz chamadas de método assíncronas.
+ O modelo STA exige que qualquer método em um controle que precise ser chamado de fora do thread de criação do controle deve realizar marshaling (ser executado no) thread de criação do controle. The base class <xref:System.Windows.Forms.Control> provides several methods (<xref:System.Windows.Forms.Control.Invoke%2A>, <xref:System.Windows.Forms.Control.BeginInvoke%2A>, and <xref:System.Windows.Forms.Control.EndInvoke%2A>) for this purpose. <xref:System.Windows.Forms.Control.Invoke%2A> makes synchronous method calls; <xref:System.Windows.Forms.Control.BeginInvoke%2A> makes asynchronous method calls.
 
  Se o multithreading for usado no controle em tarefas com uso intensivo de recursos, a interface do usuário poderá permanecer responsiva enquanto uma computação com uso intensivo de recursos é executada em um thread de tela de fundo.
 
@@ -32,15 +32,14 @@ O <xref:System.ComponentModel.BackgroundWorker> componente substitui e adiciona 
 
 - `DirectorySearcher` define o método `AddFiles` para adicionar arquivos a uma caixa de listagem; no entanto, `RecurseDirectory` não pode invocar diretamente `AddFiles`, porque `AddFiles` pode executar somente no thread de STA que criou `DirectorySearcher`.
 
-- A única maneira `RecurseDirectory` de chamar `AddFiles` é por meio de uma chamada entre threads, ou seja, <xref:System.Windows.Forms.Control.Invoke%2A> chamando <xref:System.Windows.Forms.Control.BeginInvoke%2A> ou para `AddFiles` realizar marshaling no thread `DirectorySearcher`de criação de. `RecurseDirectory`usa <xref:System.Windows.Forms.Control.BeginInvoke%2A> para que a chamada possa ser feita de forma assíncrona.
+- The only way `RecurseDirectory` can call `AddFiles` is through a cross-thread call — that is, by calling <xref:System.Windows.Forms.Control.Invoke%2A> or <xref:System.Windows.Forms.Control.BeginInvoke%2A> to marshal `AddFiles` to the creation thread of `DirectorySearcher`. `RecurseDirectory` uses <xref:System.Windows.Forms.Control.BeginInvoke%2A> so that the call can be made asynchronously.
 
-- O marshaling de um método requer o equivalente de um ponteiro de função ou retorno de chamada. Isso é feito usando delegados no .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A>usa um delegado como um argumento. `DirectorySearcher`Portanto, define um delegate`FileListDelegate`(), é `AddFiles` associado a uma instância `FileListDelegate` do em seu construtor e passa essa instância de delegado <xref:System.Windows.Forms.Control.BeginInvoke%2A>para. `DirectorySearcher` também define um delegado de evento terá o marshaling realizado quando a pesquisa for concluída.
+- O marshaling de um método requer o equivalente de um ponteiro de função ou retorno de chamada. Isso é feito usando delegados no .NET Framework. <xref:System.Windows.Forms.Control.BeginInvoke%2A> takes a delegate as an argument. `DirectorySearcher` therefore defines a delegate (`FileListDelegate`), binds `AddFiles` to an instance of `FileListDelegate` in its constructor, and passes this delegate instance to <xref:System.Windows.Forms.Control.BeginInvoke%2A>. `DirectorySearcher` também define um delegado de evento terá o marshaling realizado quando a pesquisa for concluída.
 
 ```vb
 Option Strict
 Option Explicit
 
-Imports System
 Imports System.IO
 Imports System.Threading
 Imports System.Windows.Forms
@@ -576,13 +575,12 @@ namespace Microsoft.Samples.DirectorySearcher
 Option Explicit
 Option Strict
 
-Imports Microsoft.Samples.DirectorySearcher
-Imports System
-Imports System.Drawing
 Imports System.Collections
 Imports System.ComponentModel
-Imports System.Windows.Forms
 Imports System.Data
+Imports System.Drawing
+Imports System.Windows.Forms
+Imports Microsoft.Samples.DirectorySearcher
 
 Namespace SampleUsage
 
@@ -664,14 +662,14 @@ End Namespace
 ```csharp
 namespace SampleUsage
 {
-   using Microsoft.Samples.DirectorySearcher;
    using System;
-   using System.Drawing;
    using System.Collections;
    using System.ComponentModel;
-   using System.Windows.Forms;
    using System.Data;
-
+   using System.Drawing;
+   using System.Windows.Forms;
+   using Microsoft.Samples.DirectorySearcher;
+   
    /// <summary>
    ///      Summary description for Form1.
    /// </summary>

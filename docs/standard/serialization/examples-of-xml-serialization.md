@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: eec46337-9696-435b-a375-dc5effae6992
-ms.openlocfilehash: c206faf81868d6e871327a73ef0680936b132918
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 17ad1b4b5eae38a4f1dc90e154841b1315dea1b2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459253"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349770"
 ---
 # <a name="examples-of-xml-serialization"></a>Exemplos de Serialização XML
 
@@ -74,7 +74,7 @@ private void SerializeDataSet(string filename){
 
 ## <a name="serializing-an-xmlelement-and-xmlnode"></a>Serializando um XmlElement e um XmlNode
 
-Você também pode serializar instâncias de uma classe <xref:System.Xml.XmlElement> ou <xref:System.Xml.XmlNode>, conforme mostrado no exemplo de código a seguir.
+You can also serialize instances of an <xref:System.Xml.XmlElement> or <xref:System.Xml.XmlNode> class, as shown in the following code example.
 
 ```vb
 private Sub SerializeElement(filename As String)
@@ -206,9 +206,8 @@ A instância de classe serializada pode ter a seguinte aparência, se dois itens
 Você pode criar suas próprias classes de coleção implementando a interface <xref:System.Collections.ICollection> e usar <xref:System.Xml.Serialization.XmlSerializer> para serializar as instâncias dessas classes. Observe que, quando uma classe implementa a interface <xref:System.Collections.ICollection>, somente a coleção contida na classe é serializada. Quaisquer propriedades ou campos públicos adicionados à classe não serão serializados. A classe deve incluir um método **Add** e uma propriedade **Item** (indexador C#) a ser serializado.
 
 ```vb
-Imports System
-Imports System.IO
 Imports System.Collections
+Imports System.IO
 Imports System.Xml.Serialization
 
 Public Class Test
@@ -298,8 +297,8 @@ End Class
 
 ```csharp
 using System;
-using System.IO;
 using System.Collections;
+using System.IO;
 using System.Xml.Serialization;
 
 public class Test {
@@ -370,13 +369,12 @@ Neste exemplo, uma classe denominada `PurchaseOrder` é serializada e desseriali
 
 O método `CreatePO` cria os objetos de classe `PurchaseOrder`, `Address` e `OrderedItem`, e define os valores de campo público. O método também cria uma instância da classe <xref:System.Xml.Serialization.XmlSerializer> que é usada para serializar e desserializar `PurchaseOrder`. Observe que o código passa o tipo da classe que será serializada para o construtor. O código também cria um `FileStream` que é usado para gravar o fluxo XML em um documento XML.
 
-O método `ReadPo` é um pouco mais simples. Ele apenas cria os objetos a serem desserializados e lê seus valores. Assim como com o método `CreatePo`, primeiro você deve construir um <xref:System.Xml.Serialization.XmlSerializer>, passando o tipo da classe a ser desserializada para o construtor. Além disso, <xref:System.IO.FileStream> é necessário para ler o documento XML. Para desserializar objetos, chame o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> com <xref:System.IO.FileStream> como um argumento. O objeto desserializado deve ser convertido em um variável de objeto do tipo `PurchaseOrder`. Em seguida, o código lê os valores de `PurchaseOrder` desserializado. Observe que você também pode ler o arquivo PO.xml que é criado para ver a saída XML real.
+O método `ReadPo` é um pouco mais simples. Ele apenas cria os objetos a serem desserializados e lê seus valores. As with the `CreatePo` method, you must first construct an <xref:System.Xml.Serialization.XmlSerializer>, passing the type of the class to be deserialized to the constructor. Além disso, <xref:System.IO.FileStream> é necessário para ler o documento XML. Para desserializar objetos, chame o método <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> com <xref:System.IO.FileStream> como um argumento. O objeto desserializado deve ser convertido em um variável de objeto do tipo `PurchaseOrder`. Em seguida, o código lê os valores de `PurchaseOrder` desserializado. Observe que você também pode ler o arquivo PO.xml que é criado para ver a saída XML real.
 
 ```vb
-Imports System
+Imports System.IO
 Imports System.Xml
 Imports System.Xml.Serialization
-Imports System.IO
 Imports Microsoft.VisualBasic
 
 ' The XmlRoot attribute allows you to set an alternate name
@@ -553,9 +551,9 @@ End Class 'Test
 
 ```csharp
 using System;
+using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
-using System.IO;
 
 // The XmlRoot attribute allows you to set an alternate name
 // (PurchaseOrder) for the XML element and its namespace. By
@@ -774,6 +772,6 @@ A saída XML pode ter a seguinte aparência.
 - [Apresentando a serialização XML](introducing-xml-serialization.md)
 - [Controlando a serialização XML usando atributos](controlling-xml-serialization-using-attributes.md)
 - [Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)
-- [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
 - [Como serializar um objeto](how-to-serialize-an-object.md)
 - [Como desserializar um objeto](how-to-deserialize-an-object.md)

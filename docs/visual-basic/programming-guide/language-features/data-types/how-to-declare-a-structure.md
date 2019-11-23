@@ -1,5 +1,5 @@
 ---
-title: Como declarar uma estrutura (Visual Basic)
+title: Como declarar uma estrutura
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], structures
@@ -7,36 +7,36 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: c3090b5b8e53e5a5a990ae11c91464797bde9803
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 41d2d03064dea703909218de56feb863526c220b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582299"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350004"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>Como declarar uma estrutura (Visual Basic)
-Você começa uma declaração de estrutura com a [instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)e a encerra com a instrução `End Structure`. Entre essas duas instruções, você deve declarar pelo menos um *elemento*. Os elementos podem ser de qualquer tipo de dados, mas pelo menos um deve ser uma variável não compartilhada ou um evento não compartilhado e não-personalizado.  
+You begin a structure declaration with the [Structure Statement](../../../../visual-basic/language-reference/statements/structure-statement.md), and you end it with the `End Structure` statement. Between these two statements you must declare at least one *element*. The elements can be of any data type, but at least one must be either a nonshared variable or a nonshared, noncustom event.  
   
- Você não pode inicializar nenhum dos elementos de estrutura na declaração de estrutura. Quando você declara uma variável para ser de um tipo de estrutura, você atribui valores aos elementos acessando-os por meio da variável.  
+ You cannot initialize any of the structure elements in the structure declaration. When you declare a variable to be of a structure type, you assign values to the elements by accessing them through the variable.  
   
- Para obter uma discussão sobre as diferenças entre estruturas e classes, consulte [estruturas e classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
+ For a discussion of the differences between structures and classes, see [Structures and Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md).  
   
- Para fins de demonstração, considere uma situação em que você deseja acompanhar o nome, a extensão do telefone e o salário de um funcionário. Uma estrutura permite que você faça isso em uma única variável.  
+ For demonstration purposes, consider a situation where you want to keep track of an employee's name, telephone extension, and salary. A structure allows you to do this in a single variable.  
   
-### <a name="to-declare-a-structure"></a>Para declarar uma estrutura  
+### <a name="to-declare-a-structure"></a>To declare a structure  
   
-1. Crie as instruções inicial e final para a estrutura.  
+1. Create the beginning and ending statements for the structure.  
   
-     Você pode especificar o nível de acesso de uma estrutura usando a palavra-chave [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)ou [Private](../../../../visual-basic/language-reference/modifiers/private.md) , ou pode deixar que ela seja padronizada para `Public`.  
+     You can specify the access level of a structure using the [Public](../../../../visual-basic/language-reference/modifiers/public.md), [Protected](../../../../visual-basic/language-reference/modifiers/protected.md), [Friend](../../../../visual-basic/language-reference/modifiers/friend.md), or [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword, or you can let it default to `Public`.  
   
     ```vb  
     Private Structure employee  
     End Structure  
     ```  
   
-2. Adicione elementos ao corpo da estrutura.  
+2. Add elements to the body of the structure.  
   
-     Uma estrutura deve ter pelo menos um elemento. Você deve declarar todos os elementos e especificar um nível de acesso para ele. Se você usar a [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) sem nenhuma palavra-chave, o padrão de acessibilidade será `Public`.  
+     A structure must have at least one element. You must declare every element and specify an access level for it. If you use the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) without any keywords, the accessibility defaults to `Public`.  
   
     ```vb  
     Private Structure employee  
@@ -51,9 +51,9 @@ Você começa uma declaração de estrutura com a [instrução Structure](../../
     End Structure  
     ```  
   
-     O campo `salary` no exemplo anterior é `Private`, o que significa que ele está inacessível fora da estrutura, mesmo da classe que a contém. No entanto, o procedimento de `giveRaise` é `Public`, portanto, ele pode ser chamado de fora da estrutura. Da mesma forma, você pode gerar o evento `salaryReviewTime` de fora da estrutura.  
+     The `salary` field in the preceding example is `Private`, which means it is inaccessible outside the structure, even from the containing class. However, the `giveRaise` procedure is `Public`, so it can be called from outside the structure. Similarly, you can raise the `salaryReviewTime` event from outside the structure.  
   
-     Além de variáveis, procedimentos de `Sub` e eventos, você também pode definir constantes, `Function` procedimentos e propriedades em uma estrutura. Você pode designar, no máximo, uma propriedade como a *propriedade padrão*, desde que ela aceite pelo menos um argumento. Você pode manipular um evento com um procedimento de `Sub` [compartilhado](../../../../visual-basic/language-reference/modifiers/shared.md) . Para obter mais informações, consulte [como: declarar e chamar uma propriedade padrão em Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
+     In addition to variables, `Sub` procedures, and events, you can also define constants, `Function` procedures, and properties in a structure. You can designate at most one property as the *default property*, provided it takes at least one argument. You can handle an event with a [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)`Sub` procedure. For more information, see [How to: Declare and Call a Default Property in Visual Basic](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md).  
   
 ## <a name="see-also"></a>Consulte também
 
