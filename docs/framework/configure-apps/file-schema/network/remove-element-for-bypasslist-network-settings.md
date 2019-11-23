@@ -17,17 +17,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697900"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a><span data-ttu-id="289eb-102">\<remove > elemento para BypassList (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="289eb-102">\<remove> Element for bypasslist (Network Settings)</span></span>
+# <a name="remove-element-for-bypasslist-network-settings"></a><span data-ttu-id="2e50d-102">\<remover > elemento para BypassList (configurações de rede)</span><span class="sxs-lookup"><span data-stu-id="2e50d-102">\<remove> Element for bypasslist (Network Settings)</span></span>
 
-<span data-ttu-id="289eb-103">Remove um endereço IP ou nome DNS da lista de bypass de proxy.</span><span class="sxs-lookup"><span data-stu-id="289eb-103">Removes an IP address or DNS name from the proxy bypass list.</span></span>
+<span data-ttu-id="2e50d-103">Remove um endereço IP ou nome DNS da lista de bypass de proxy.</span><span class="sxs-lookup"><span data-stu-id="2e50d-103">Removes an IP address or DNS name from the proxy bypass list.</span></span>
 
-[<span data-ttu-id="289eb-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="289eb-104">**\<configuration>**</span></span>](../configuration-element.md)  
-<span data-ttu-id="289eb-105">&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="289eb-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>  
-<span data-ttu-id="289eb-106">&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="289eb-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)</span></span>  
-<span data-ttu-id="289eb-107">&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="289eb-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)</span></span>  
-<span data-ttu-id="289eb-108">&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**</span><span class="sxs-lookup"><span data-stu-id="289eb-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>  
+[<span data-ttu-id="2e50d-104"> **\<configuration>** </span><span class="sxs-lookup"><span data-stu-id="2e50d-104">**\<configuration>**</span></span>](../configuration-element.md)  
+<span data-ttu-id="2e50d-105">&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="2e50d-105">&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)</span></span>  
+<span data-ttu-id="2e50d-106">&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultproxy >** ](defaultproxy-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="2e50d-106">&nbsp;&nbsp;&nbsp;&nbsp;[**\<defaultProxy>**](defaultproxy-element-network-settings.md)</span></span>  
+<span data-ttu-id="2e50d-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)</span><span class="sxs-lookup"><span data-stu-id="2e50d-107">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<bypasslist>**](bypasslist-element-network-settings.md)</span></span>  
+<span data-ttu-id="2e50d-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<remover >**</span><span class="sxs-lookup"><span data-stu-id="2e50d-108">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**</span></span>  
 
-## <a name="syntax"></a><span data-ttu-id="289eb-109">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="289eb-109">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="2e50d-109">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2e50d-109">Syntax</span></span>
 
 ```xml
 <remove
@@ -35,41 +35,41 @@ ms.locfileid: "71697900"
 />
 ```
 
-## <a name="attributes-and-elements"></a><span data-ttu-id="289eb-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="289eb-110">Attributes and Elements</span></span>
+## <a name="attributes-and-elements"></a><span data-ttu-id="2e50d-110">Atributos e elementos</span><span class="sxs-lookup"><span data-stu-id="2e50d-110">Attributes and Elements</span></span>
 
-<span data-ttu-id="289eb-111">As seções a seguir descrevem atributos, elementos filho e elementos pai.</span><span class="sxs-lookup"><span data-stu-id="289eb-111">The following sections describe attributes, child elements, and parent elements.</span></span>
+<span data-ttu-id="2e50d-111">As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.</span><span class="sxs-lookup"><span data-stu-id="2e50d-111">The following sections describe attributes, child elements, and parent elements.</span></span>
 
-### <a name="attributes"></a><span data-ttu-id="289eb-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="289eb-112">Attributes</span></span>
+### <a name="attributes"></a><span data-ttu-id="2e50d-112">Atributos</span><span class="sxs-lookup"><span data-stu-id="2e50d-112">Attributes</span></span>
 
-|<span data-ttu-id="289eb-113">**Atributo**</span><span class="sxs-lookup"><span data-stu-id="289eb-113">**Attribute**</span></span>|<span data-ttu-id="289eb-114">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="289eb-114">**Description**</span></span>|
+|<span data-ttu-id="2e50d-113">**Attribute**</span><span class="sxs-lookup"><span data-stu-id="2e50d-113">**Attribute**</span></span>|<span data-ttu-id="2e50d-114">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="2e50d-114">**Description**</span></span>|
 |-------------------|---------------------|
-|`address`|<span data-ttu-id="289eb-115">Uma expressão regular que descreve um endereço IP ou nome DNS.</span><span class="sxs-lookup"><span data-stu-id="289eb-115">A regular expression describing an IP address or DNS name.</span></span>|
+|`address`|<span data-ttu-id="2e50d-115">Uma expressão regular que descreve um endereço IP ou nome DNS.</span><span class="sxs-lookup"><span data-stu-id="2e50d-115">A regular expression describing an IP address or DNS name.</span></span>|
 
-### <a name="child-elements"></a><span data-ttu-id="289eb-116">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="289eb-116">Child Elements</span></span>
+### <a name="child-elements"></a><span data-ttu-id="2e50d-116">Elementos filho</span><span class="sxs-lookup"><span data-stu-id="2e50d-116">Child Elements</span></span>
 
-<span data-ttu-id="289eb-117">nenhuma.</span><span class="sxs-lookup"><span data-stu-id="289eb-117">None.</span></span>
+<span data-ttu-id="2e50d-117">None.</span><span class="sxs-lookup"><span data-stu-id="2e50d-117">None.</span></span>
 
-### <a name="parent-elements"></a><span data-ttu-id="289eb-118">Elementos pai</span><span class="sxs-lookup"><span data-stu-id="289eb-118">Parent Elements</span></span>
+### <a name="parent-elements"></a><span data-ttu-id="2e50d-118">Elementos Pai</span><span class="sxs-lookup"><span data-stu-id="2e50d-118">Parent Elements</span></span>
 
-|<span data-ttu-id="289eb-119">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="289eb-119">**Element**</span></span>|<span data-ttu-id="289eb-120">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="289eb-120">**Description**</span></span>|
+|<span data-ttu-id="2e50d-119">**Elemento**</span><span class="sxs-lookup"><span data-stu-id="2e50d-119">**Element**</span></span>|<span data-ttu-id="2e50d-120">**Descrição**</span><span class="sxs-lookup"><span data-stu-id="2e50d-120">**Description**</span></span>|
 |-----------------|---------------------|
-|[<span data-ttu-id="289eb-121">bypasslist</span><span class="sxs-lookup"><span data-stu-id="289eb-121">bypasslist</span></span>](bypasslist-element-network-settings.md)|<span data-ttu-id="289eb-122">Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.</span><span class="sxs-lookup"><span data-stu-id="289eb-122">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|
+|[<span data-ttu-id="2e50d-121">bypasslist</span><span class="sxs-lookup"><span data-stu-id="2e50d-121">bypasslist</span></span>](bypasslist-element-network-settings.md)|<span data-ttu-id="2e50d-122">Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.</span><span class="sxs-lookup"><span data-stu-id="2e50d-122">Provides a set of regular expressions that describe addresses that do not use a proxy.</span></span>|
 
-## <a name="remarks"></a><span data-ttu-id="289eb-123">Comentários</span><span class="sxs-lookup"><span data-stu-id="289eb-123">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="2e50d-123">Comentários</span><span class="sxs-lookup"><span data-stu-id="2e50d-123">Remarks</span></span>
 
-<span data-ttu-id="289eb-124">O elemento `remove` remove expressões regulares que descrevem endereços IP ou nomes de servidores DNS da lista de endereços que ignoram um servidor proxy.</span><span class="sxs-lookup"><span data-stu-id="289eb-124">The `remove` element removes regular expressions describing IP addresses or DNS server names from the list of addresses that bypass a proxy server.</span></span> <span data-ttu-id="289eb-125">Os endereços foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.</span><span class="sxs-lookup"><span data-stu-id="289eb-125">The addresses were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>
+<span data-ttu-id="2e50d-124">O elemento `remove` remove expressões regulares que descrevem endereços IP ou nomes de servidores DNS da lista de endereços que ignoram um servidor proxy.</span><span class="sxs-lookup"><span data-stu-id="2e50d-124">The `remove` element removes regular expressions describing IP addresses or DNS server names from the list of addresses that bypass a proxy server.</span></span> <span data-ttu-id="2e50d-125">Os endereços foram definidos anteriormente no arquivo de configuração ou em um nível superior na hierarquia de configuração.</span><span class="sxs-lookup"><span data-stu-id="2e50d-125">The addresses were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>
 
-<span data-ttu-id="289eb-126">O valor do atributo `address` deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.</span><span class="sxs-lookup"><span data-stu-id="289eb-126">The value for the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>
+<span data-ttu-id="2e50d-126">O valor do atributo `address` deve ser uma expressão regular que descreve um conjunto de endereços IP ou nomes de host.</span><span class="sxs-lookup"><span data-stu-id="2e50d-126">The value for the `address` attribute should be a regular expression that describes a set of IP addresses or host names.</span></span>
 
-<span data-ttu-id="289eb-127">Para obter mais informações sobre expressões regulares, consulte. [.NET Framework expressões regulares](../../../../standard/base-types/regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="289eb-127">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../standard/base-types/regular-expressions.md).</span></span>
+<span data-ttu-id="2e50d-127">Para obter mais informações sobre expressões regulares, consulte. [.NET Framework expressões regulares](../../../../standard/base-types/regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="2e50d-127">For more information about regular expressions, see .[.NET Framework Regular Expressions](../../../../standard/base-types/regular-expressions.md).</span></span>
 
-## <a name="configuration-files"></a><span data-ttu-id="289eb-128">Arquivos de Configuração</span><span class="sxs-lookup"><span data-stu-id="289eb-128">Configuration Files</span></span>
+## <a name="configuration-files"></a><span data-ttu-id="2e50d-128">Arquivos de Configuração</span><span class="sxs-lookup"><span data-stu-id="2e50d-128">Configuration Files</span></span>
 
-<span data-ttu-id="289eb-129">Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).</span><span class="sxs-lookup"><span data-stu-id="289eb-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>
+<span data-ttu-id="2e50d-129">Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).</span><span class="sxs-lookup"><span data-stu-id="2e50d-129">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>
 
-## <a name="example"></a><span data-ttu-id="289eb-130">Exemplo</span><span class="sxs-lookup"><span data-stu-id="289eb-130">Example</span></span>
+## <a name="example"></a><span data-ttu-id="2e50d-130">{1&gt;Exemplo&lt;1}</span><span class="sxs-lookup"><span data-stu-id="2e50d-130">Example</span></span>
 
-<span data-ttu-id="289eb-131">O exemplo a seguir remove qualquer definição anterior para o domínio adventure-works.com e, em seguida, adiciona o domínio contoso.com à lista de bypass.</span><span class="sxs-lookup"><span data-stu-id="289eb-131">The following example removes any previous definition for the adventure-works.com domain, and then adds the contoso.com domain to the bypass list.</span></span>
+<span data-ttu-id="2e50d-131">O exemplo a seguir remove qualquer definição anterior para o domínio adventure-works.com e, em seguida, adiciona o domínio contoso.com à lista de bypass.</span><span class="sxs-lookup"><span data-stu-id="2e50d-131">The following example removes any previous definition for the adventure-works.com domain, and then adds the contoso.com domain to the bypass list.</span></span>
 
 ```xml
 <configuration>
@@ -84,7 +84,7 @@ ms.locfileid: "71697900"
 </configuration>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="289eb-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="289eb-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2e50d-132">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2e50d-132">See also</span></span>
 
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [<span data-ttu-id="289eb-133">Esquema de configurações de rede</span><span class="sxs-lookup"><span data-stu-id="289eb-133">Network Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="2e50d-133">Esquema de configurações de rede</span><span class="sxs-lookup"><span data-stu-id="2e50d-133">Network Settings Schema</span></span>](index.md)

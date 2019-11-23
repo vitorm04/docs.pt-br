@@ -1,29 +1,28 @@
 ---
 title: Comparando o WCF com o gRPC-gRPC para desenvolvedores do WCF
 description: Uma comparação das estruturas do WCF e do gRPC para a criação de aplicativos distribuídos.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 5ab1380d4ded52abff08c35c430adf2f3ed7c58b
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 312492dcce4bdef61feff0bf924c6df287b9c676
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846063"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966961"
 ---
-# <a name="comparing-wcf-to-grpc"></a><span data-ttu-id="047ab-103">Comparando o WCF com o gRPC</span><span class="sxs-lookup"><span data-stu-id="047ab-103">Comparing WCF to gRPC</span></span>
+# <a name="comparing-wcf-to-grpc"></a><span data-ttu-id="bf952-103">Comparando o WCF com o gRPC</span><span class="sxs-lookup"><span data-stu-id="bf952-103">Comparing WCF to gRPC</span></span>
 
-<span data-ttu-id="047ab-104">O capítulo anterior deve ter dado a você uma boa visão do Protobuf e como o gRPC lida com as mensagens.</span><span class="sxs-lookup"><span data-stu-id="047ab-104">The previous chapter should have given you a good look at Protobuf and how gRPC handles messages.</span></span> <span data-ttu-id="047ab-105">Antes de trabalhar em uma conversão detalhada do WCF para o gRPC, é importante observar como a variedade de recursos disponíveis atualmente no WCF é tratada em gRPC e quais soluções alternativas você pode usar quando não parece haver um equivalente gRPC.</span><span class="sxs-lookup"><span data-stu-id="047ab-105">Before working through a detailed conversion from WCF to gRPC, it's important to look at how the range of features currently available in WCF are handled in gRPC and what workarounds you can use when there doesn't appear to be a gRPC equivalent.</span></span> <span data-ttu-id="047ab-106">Em particular, este capítulo abordará os seguintes assuntos:</span><span class="sxs-lookup"><span data-stu-id="047ab-106">In particular, this chapter will cover the following subjects:</span></span>
+<span data-ttu-id="bf952-104">O capítulo anterior deve ter dado a você uma boa visão do Protobuf e como o gRPC lida com as mensagens.</span><span class="sxs-lookup"><span data-stu-id="bf952-104">The previous chapter should have given you a good look at Protobuf and how gRPC handles messages.</span></span> <span data-ttu-id="bf952-105">Antes de trabalhar em uma conversão detalhada do WCF para o gRPC, é importante observar como a variedade de recursos disponíveis atualmente no WCF é tratada em gRPC e quais soluções alternativas você pode usar quando não parece haver um equivalente gRPC.</span><span class="sxs-lookup"><span data-stu-id="bf952-105">Before working through a detailed conversion from WCF to gRPC, it's important to look at how the range of features currently available in WCF are handled in gRPC and what workarounds you can use when there doesn't appear to be a gRPC equivalent.</span></span> <span data-ttu-id="bf952-106">Em particular, este capítulo abordará os seguintes assuntos:</span><span class="sxs-lookup"><span data-stu-id="bf952-106">In particular, this chapter will cover the following subjects:</span></span>
 
-- <span data-ttu-id="047ab-107">Operações e métodos</span><span class="sxs-lookup"><span data-stu-id="047ab-107">Operations and methods</span></span>
-- <span data-ttu-id="047ab-108">Associações e transportes</span><span class="sxs-lookup"><span data-stu-id="047ab-108">Bindings and transports</span></span>
-- <span data-ttu-id="047ab-109">Tipos de RPC</span><span class="sxs-lookup"><span data-stu-id="047ab-109">RPC types</span></span>
-- <span data-ttu-id="047ab-110">Metadados</span><span class="sxs-lookup"><span data-stu-id="047ab-110">Metadata</span></span>
-- <span data-ttu-id="047ab-111">Tratamento de erros</span><span class="sxs-lookup"><span data-stu-id="047ab-111">Error handling</span></span>
-- <span data-ttu-id="047ab-112">Protocolos WS-\*</span><span class="sxs-lookup"><span data-stu-id="047ab-112">WS-\* protocols</span></span>
+- <span data-ttu-id="bf952-107">Operações e métodos</span><span class="sxs-lookup"><span data-stu-id="bf952-107">Operations and methods</span></span>
+- <span data-ttu-id="bf952-108">Associações e transportes</span><span class="sxs-lookup"><span data-stu-id="bf952-108">Bindings and transports</span></span>
+- <span data-ttu-id="bf952-109">Tipos de RPC</span><span class="sxs-lookup"><span data-stu-id="bf952-109">RPC types</span></span>
+- <span data-ttu-id="bf952-110">Metadados</span><span class="sxs-lookup"><span data-stu-id="bf952-110">Metadata</span></span>
+- <span data-ttu-id="bf952-111">Tratamento de erros</span><span class="sxs-lookup"><span data-stu-id="bf952-111">Error handling</span></span>
+- <span data-ttu-id="bf952-112">Protocolos WS-\*</span><span class="sxs-lookup"><span data-stu-id="bf952-112">WS-\* protocols</span></span>
 
-## <a name="grpc-example"></a><span data-ttu-id="047ab-113">exemplo de gRPC</span><span class="sxs-lookup"><span data-stu-id="047ab-113">gRPC example</span></span>
+## <a name="grpc-example"></a><span data-ttu-id="bf952-113">exemplo de gRPC</span><span class="sxs-lookup"><span data-stu-id="bf952-113">gRPC example</span></span>
 
-<span data-ttu-id="047ab-114">Quando você cria um novo projeto ASP.NET Core 3,0 gRPC no Visual Studio 2019 ou na linha de comando, o equivalente de gRPC de "Olá, Mundo" é gerado para você.</span><span class="sxs-lookup"><span data-stu-id="047ab-114">When you create a new ASP.NET Core 3.0 gRPC project from Visual Studio 2019 or the command line, the gRPC equivalent of "Hello World" is generated for you.</span></span> <span data-ttu-id="047ab-115">Ele consiste em um arquivo de `greeter.proto` que define o serviço e suas mensagens, e um arquivo de `GreeterService.cs` com uma implementação do serviço.</span><span class="sxs-lookup"><span data-stu-id="047ab-115">It consists of a `greeter.proto` file that defines the service and its messages, and a `GreeterService.cs` file with an implementation of the service.</span></span>
+<span data-ttu-id="bf952-114">Quando você cria um novo projeto ASP.NET Core 3,0 gRPC no Visual Studio 2019 ou na linha de comando, o equivalente de gRPC de "Olá, Mundo" é gerado para você.</span><span class="sxs-lookup"><span data-stu-id="bf952-114">When you create a new ASP.NET Core 3.0 gRPC project from Visual Studio 2019 or the command line, the gRPC equivalent of "Hello World" is generated for you.</span></span> <span data-ttu-id="bf952-115">Ele consiste em um arquivo de `greeter.proto` que define o serviço e suas mensagens, e um arquivo de `GreeterService.cs` com uma implementação do serviço.</span><span class="sxs-lookup"><span data-stu-id="bf952-115">It consists of a `greeter.proto` file that defines the service and its messages, and a `GreeterService.cs` file with an implementation of the service.</span></span>
 
 ```protobuf
 syntax = "proto3";
@@ -75,9 +74,9 @@ namespace HelloGrpc
 }
 ```
 
-<span data-ttu-id="047ab-116">Este capítulo fará referência a este código de exemplo ao explicar vários conceitos e recursos do gRPC.</span><span class="sxs-lookup"><span data-stu-id="047ab-116">This chapter will refer to this example code when explaining various concepts and features of gRPC.</span></span>
+<span data-ttu-id="bf952-116">Este capítulo fará referência a este código de exemplo ao explicar vários conceitos e recursos do gRPC.</span><span class="sxs-lookup"><span data-stu-id="bf952-116">This chapter will refer to this example code when explaining various concepts and features of gRPC.</span></span>
 
 >[!div class="step-by-step"]
-><span data-ttu-id="047ab-117">[Anterior](protobuf-maps.md)
->[Próximo](wcf-endpoints-grpc-methods.md)</span><span class="sxs-lookup"><span data-stu-id="047ab-117">[Previous](protobuf-maps.md)
+><span data-ttu-id="bf952-117">[Anterior](protobuf-maps.md)
+>[Próximo](wcf-endpoints-grpc-methods.md)</span><span class="sxs-lookup"><span data-stu-id="bf952-117">[Previous](protobuf-maps.md)
 [Next](wcf-endpoints-grpc-methods.md)</span></span>
