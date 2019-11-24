@@ -1,113 +1,121 @@
-- name: Esquema de configurações do tempo de execução
+- name: Esquema de configurações do runtime
   href: index.md
+- name: Configuração do runtime
   items:
     - name: Elemento <runtime>
       href: runtime-element.md
+    - name: Elemento <alwaysFlowImpersonationPolicy>
+      href: alwaysflowimpersonationpolicy-element.md
+    - name: Elemento <AppContextSwitchOverrides>
+      href: appcontextswitchoverrides-element.md
+    - name: Elemento <appDomainManagerAssembly>
+      href: appdomainmanagerassembly-element.md
+    - name: Elemento <appDomainManagerType>
+      href: appdomainmanagertype-element.md
+    - name: Elemento <appDomainResourceMonitoring>
+      href: appdomainresourcemonitoring-element.md
+    - name: Elemento <assemblyBinding>
+      href: assemblybinding-element-for-runtime.md
       items:
-        - name: Elemento <alwaysFlowImpersonationPolicy>
-          href: alwaysflowimpersonationpolicy-element.md
-        - name: Elemento <AppContextSwitchOverrides>
-          href: appcontextswitchoverrides-element.md
-        - name: Elemento <appDomainManagerAssembly>
-          href: appdomainmanagerassembly-element.md
-        - name: Elemento <appDomainManagerType>
-          href: appdomainmanagertype-element.md
-        - name: Elemento <appDomainResourceMonitoring>
-          href: appdomainresourcemonitoring-element.md
-        - name: Elemento <assemblyBinding>
-          href: assemblybinding-element-for-runtime.md
+        - name: Elemento <dependentAssembly>
+          href: dependentassembly-element.md
           items:
-            - name: Elemento <dependentAssembly>
-              href: dependentassembly-element.md
-              items:
-                - name: Elemento <assemblyIdentity>
-                  href: assemblyidentity-element-for-runtime.md
-                - name: Elemento <bindingRedirect>
-                  href: bindingredirect-element.md
-                - name: Elemento <codeBase>
-                  href: codebase-element.md
-                - name: Elemento <publisherPolicy>
-                  href: publisherpolicy-element.md
-            - name: Elemento <probing>
-              href: probing-element.md
-            - name: Elemento <qualifyAssembly>
-              href: qualifyassembly-element.md
-            - name: Elemento <supportPortability>
-              href: supportportability-element.md
-        - name: Elemento <bypassTrustedAppStrongNames>
-          href: bypasstrustedappstrongnames-element.md
-        - name: Elemento <CompatSortNLSVersion>
-          href: compatsortnlsversion-element.md
-        - name: Elemento <Crst_DisableSpinWait>
-          href: crst-disablespinwait-element.md
-        - name: Elemento <developmentMode>
-          href: developmentmode-element.md
-        - name: Elemento <disableCachingBindingFailures>
-          href: disablecachingbindingfailures-element.md
-        - name: Elemento <disableCommitThreadStack>
-          href: disablecommitthreadstack-element.md
-        - name: Elemento <disableFusionUpdatesFromADManager>
-          href: disablefusionupdatesfromadmanager-element.md
-        - name: Elemento <EnableAmPmParseAdjustment>
-          href: enableampmparseadjustment-element.md
-        - name: Elemento <enforceFIPSPolicy>
-          href: enforcefipspolicy-element.md
-        - name: Elemento <etwEnable>
-          href: etwenable-element.md
-        - name: Elemento <forcePerformanceCounterUniqueSharedMemoryReads>
-          href: forceperformancecounteruniquesharedmemoryreads-element.md
-        - name: Elemento <gcAllowVeryLargeObjects>
-          href: gcallowverylargeobjects-element.md
-        - name: Elemento <gcConcurrent>
-          href: gcconcurrent-element.md
-        - name: Elemento <GCCpuGroup>
-          href: gccpugroup-element.md
-        - name: Elemento <gcServer>
-          href: gcserver-element.md
-        - name: Elemento <generatePublisherEvidence>
-          href: generatepublisherevidence-element.md
-        - name: Elemento <legacyCorruptedStateExceptionsPolicy>
-          href: legacycorruptedstateexceptionspolicy-element.md
-        - name: Elemento <legacyImpersonationPolicy>
-          href: legacyimpersonationpolicy-element.md
-        - name: <loadFromRemoteSources>
-          href: loadfromremotesources-element.md
-        - name: Elemento <NetFx40_LegacySecurityPolicy>
-          href: netfx40-legacysecuritypolicy-element.md
-        - name: Elemento <NetFx40_PInvokeStackResilience>
-          href: netfx40-pinvokestackresilience-element.md
-        - name: Elemento <NetFx45_CultureAwareComparerGetHashCode_LongStrings>
-          href: netfx45-cultureawarecomparergethashcode-longstrings-element.md
-        - name: Elemento <PreferComInsteadOfManagedRemoting>
-          href: prefercominsteadofmanagedremoting-element.md
-        - name: Elemento <relativeBindForResources>
-          href: relativebindforresources-element.md
-        - name: Elemento <shadowCopyVerifyByTimestamp>
-          href: shadowcopyverifybytimestamp-element.md
-        - name: Elemento <Thread_UseAllCpuGroups>
-          href: thread-useallcpugroups-element.md
-        - name: Elemento <ThrowUnobservedTaskExceptions>
-          href: throwunobservedtaskexceptions-element.md
-        - name: Elemento <TimeSpan_LegacyFormatMode>
-          href: timespan-legacyformatmode-element.md
-        - name: Elemento <useLegacyJit>
-          href: uselegacyjit-element.md
-        - name: Elemento <UseRandomizedStringHashAlgorithm>
-          href: userandomizedstringhashalgorithm-element.md
-        - name: Elemento <UseSmallInternalThreadStacks>
-          href: usesmallinternalthreadstacks-element.md
-    - name: Elemento <system.runtime.caching> (Configurações de cache)
+            - name: Elemento <assemblyIdentity>
+              href: assemblyidentity-element-for-runtime.md
+            - name: Elemento <bindingRedirect>
+              href: bindingredirect-element.md
+            - name: Elemento <codeBase>
+              href: codebase-element.md
+            - name: Elemento <publisherPolicy>
+              href: publisherpolicy-element.md
+        - name: Elemento <probing>
+          href: probing-element.md
+        - name: Elemento <qualifyAssembly>
+          href: qualifyassembly-element.md
+        - name: Elemento <supportPortability>
+          href: supportportability-element.md
+    - name: Elemento <bypassTrustedAppStrongNames>
+      href: bypasstrustedappstrongnames-element.md
+    - name: Elemento <CompatSortNLSVersion>
+      href: compatsortnlsversion-element.md
+    - name: Elemento <Crst_DisableSpinWait>
+      href: crst-disablespinwait-element.md
+    - name: Elemento <developmentMode>
+      href: developmentmode-element.md
+    - name: Elemento <disableCachingBindingFailures>
+      href: disablecachingbindingfailures-element.md
+    - name: Elemento <disableCommitThreadStack>
+      href: disablecommitthreadstack-element.md
+    - name: Elemento <disableFusionUpdatesFromADManager>
+      href: disablefusionupdatesfromadmanager-element.md
+    - name: Elemento <EnableAmPmParseAdjustment>
+      href: enableampmparseadjustment-element.md
+    - name: Elemento <enforceFIPSPolicy>
+      href: enforcefipspolicy-element.md
+    - name: Elemento <etwEnable>
+      href: etwenable-element.md
+    - name: Elemento <forcePerformanceCounterUniqueSharedMemoryReads>
+      href: forceperformancecounteruniquesharedmemoryreads-element.md
+    - name: Elemento <gcAllowVeryLargeObjects>
+      href: gcallowverylargeobjects-element.md
+    - name: Elemento <gcConcurrent>
+      href: gcconcurrent-element.md
+    - name: Elemento <GCCpuGroup>
+      href: gccpugroup-element.md
+    - name: Elemento <GCHeapAffinitizeMask>
+      href: gcheapaffinitizemask-element.md
+    - name: Elemento <GCHeapCount>
+      href: gcheapcount-element.md
+    - name: Elemento <GCLOHThreshold>
+      href: gclohthreshold-element.md
+    - name: Elemento <GCNoAffinitize>
+      href: gcnoaffinitize-element.md
+    - name: Elemento <gcServer>
+      href: gcserver-element.md
+    - name: Elemento <generatePublisherEvidence>
+      href: generatepublisherevidence-element.md
+    - name: Elemento <legacyCorruptedStateExceptionsPolicy>
+      href: legacycorruptedstateexceptionspolicy-element.md
+    - name: Elemento <legacyImpersonationPolicy>
+      href: legacyimpersonationpolicy-element.md
+    - name: <loadFromRemoteSources>
+      href: loadfromremotesources-element.md
+    - name: Elemento <NetFx40_LegacySecurityPolicy>
+      href: netfx40-legacysecuritypolicy-element.md
+    - name: Elemento <NetFx40_PInvokeStackResilience>
+      href: netfx40-pinvokestackresilience-element.md
+    - name: Elemento <NetFx45_CultureAwareComparerGetHashCode_LongStrings>
+      href: netfx45-cultureawarecomparergethashcode-longstrings-element.md
+    - name: Elemento <PreferComInsteadOfManagedRemoting>
+      href: prefercominsteadofmanagedremoting-element.md
+    - name: Elemento <relativeBindForResources>
+      href: relativebindforresources-element.md
+    - name: Elemento <shadowCopyVerifyByTimestamp>
+      href: shadowcopyverifybytimestamp-element.md
+    - name: Elemento <Thread_UseAllCpuGroups>
+      href: thread-useallcpugroups-element.md
+    - name: Elemento <ThrowUnobservedTaskExceptions>
+      href: throwunobservedtaskexceptions-element.md
+    - name: Elemento <TimeSpan_LegacyFormatMode>
+      href: timespan-legacyformatmode-element.md
+    - name: Elemento <useLegacyJit>
+      href: uselegacyjit-element.md
+    - name: Elemento <UseRandomizedStringHashAlgorithm>
+      href: userandomizedstringhashalgorithm-element.md
+    - name: Elemento <UseSmallInternalThreadStacks>
+      href: usesmallinternalthreadstacks-element.md
+- name: Cache de runtime
+  items:
+    - name: Elemento <system.runtime.caching>
       href: system-runtime-caching-element-cache-settings.md
+    - name: Elemento <memoryCache>
+      href: memorycache-element-cache-settings.md
+    - name: Elemento <namedCaches>
+      href: namedcaches-element-cache-settings.md
       items:
-        - name: Elemento <memoryCache> (Configurações de cache)
-          href: memorycache-element-cache-settings.md
-          items:
-            - name: Elemento <namedCaches> (Configurações de cache)
-              href: namedcaches-element-cache-settings.md
-              items:
-                - name: Elemento <add> para <namedCaches>
-                  href: add-element-for-namedcaches.md
-                - name: Elemento <clear> para <namedCaches>
-                  href: clear-element-for-namedcaches.md
-                - name: Elemento <remove> para <namedCaches>
-                  href: remove-element-for-namedcaches.md
+        - name: Elemento <add>
+          href: add-element-for-namedcaches.md
+        - name: Elemento <clear>
+          href: clear-element-for-namedcaches.md
+        - name: Elemento <remove>
+          href: remove-element-for-namedcaches.md
