@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: 1bf00b42-69da-4019-91b3-bf88026e83fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0ea379befab7711d1c6bc2d6005cb62d853acce9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0bb2ba56ed93af7861e53d683a0a777107578a6b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756969"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449743"
 ---
-# <a name="icorprofilerinfo3enummodules-method"></a><span data-ttu-id="cb0cb-102">Método ICorProfilerInfo3::EnumModules</span><span class="sxs-lookup"><span data-stu-id="cb0cb-102">ICorProfilerInfo3::EnumModules Method</span></span>
-<span data-ttu-id="cb0cb-103">Retorna um enumerador que fornece métodos para iterar de forma sequencial por meio de uma coleção de módulos gerenciados que são carregados no aplicativo.</span><span class="sxs-lookup"><span data-stu-id="cb0cb-103">Returns an enumerator that provides methods to sequentially iterate through a collection of managed modules that are loaded into the application.</span></span>  
+# <a name="icorprofilerinfo3enummodules-method"></a><span data-ttu-id="0dfda-102">Método ICorProfilerInfo3::EnumModules</span><span class="sxs-lookup"><span data-stu-id="0dfda-102">ICorProfilerInfo3::EnumModules Method</span></span>
+<span data-ttu-id="0dfda-103">Retorna um enumerador que fornece métodos para iterar em sequência por meio de uma coleção de módulos gerenciados que são carregados no aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0dfda-103">Returns an enumerator that provides methods to sequentially iterate through a collection of managed modules that are loaded into the application.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cb0cb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="cb0cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0dfda-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0dfda-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumModules([out] ICorProfilerModuleEnum** ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cb0cb-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="cb0cb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0dfda-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="0dfda-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="cb0cb-106">[out] Um ponteiro para um [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span><span class="sxs-lookup"><span data-stu-id="cb0cb-106">[out] A pointer to an [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span>  
+ <span data-ttu-id="0dfda-106">fora Um ponteiro para uma interface [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="0dfda-106">[out] A pointer to an [ICorProfilerModuleEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md) interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cb0cb-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="cb0cb-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0dfda-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="0dfda-107">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cb0cb-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="cb0cb-108">Requirements</span></span>  
- <span data-ttu-id="cb0cb-109">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cb0cb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0dfda-108">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="0dfda-108">Requirements</span></span>  
+ <span data-ttu-id="0dfda-109">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0dfda-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cb0cb-110">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="cb0cb-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0dfda-110">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="0dfda-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="cb0cb-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cb0cb-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0dfda-111">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0dfda-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cb0cb-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cb0cb-112">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="0dfda-112">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0dfda-112">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cb0cb-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cb0cb-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0dfda-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0dfda-113">See also</span></span>
 
-- [<span data-ttu-id="cb0cb-114">Interface ICorProfilerFunctionEnum</span><span class="sxs-lookup"><span data-stu-id="cb0cb-114">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [<span data-ttu-id="cb0cb-115">Interface ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="cb0cb-115">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [<span data-ttu-id="cb0cb-116">Interfaces de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="cb0cb-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="cb0cb-117">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="cb0cb-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [<span data-ttu-id="0dfda-114">Interface ICorProfilerFunctionEnum</span><span class="sxs-lookup"><span data-stu-id="0dfda-114">ICorProfilerFunctionEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
+- [<span data-ttu-id="0dfda-115">Interface ICorProfilerInfo3</span><span class="sxs-lookup"><span data-stu-id="0dfda-115">ICorProfilerInfo3 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
+- [<span data-ttu-id="0dfda-116">Interfaces de criação de perfil</span><span class="sxs-lookup"><span data-stu-id="0dfda-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="0dfda-117">Criação de perfil</span><span class="sxs-lookup"><span data-stu-id="0dfda-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
