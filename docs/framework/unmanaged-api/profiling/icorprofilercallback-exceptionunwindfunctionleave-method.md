@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ebaad1d5-ee0a-4cb0-96bc-8ba5d371b747
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 556048be66a7c60dd82a8d51391a86655db6802a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 645c9dd9319dfdf9cb070366d2c389f879e1b1d2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755931"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448052"
 ---
 # <a name="icorprofilercallbackexceptionunwindfunctionleave-method"></a>Método ICorProfilerCallback::ExceptionUnwindFunctionLeave
-Notifica o criador de perfil que a fase de desenrolamento de tratamento de exceções terminou o desenrolamento de uma função.  
+Notifies the profiler that the unwind phase of exception handling has finished unwinding a function.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,16 +32,16 @@ HRESULT ExceptionUnwindFunctionLeave();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Quando o `ExceptionUnwindFunctionLeave` método é chamado, a instância de função e seus dados de pilha são removidos da pilha.  
+ When the `ExceptionUnwindFunctionLeave` method is called, the function instance and its stack data are removed from the stack.  
   
- O criador de perfil não deve bloquear durante esta chamada porque a pilha não pode estar em um estado que permite a coleta de lixo e, portanto, a coleta de lixo preemptive não pode ser habilitada. Se você tentar aqui os blocos do criador de perfil e uma coleta de lixo, o tempo de execução bloqueará até que esse retorno de chamada retorne.  
+ The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.  
   
- Além disso, durante esta chamada, o criador de perfil não deve chamar código gerenciado ou em qualquer forma de causa uma alocação de memória gerenciada.  
+ Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

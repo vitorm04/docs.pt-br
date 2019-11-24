@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 315d9aa6f7db51342e71ba3f8fcdc091f7707743
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c12d3a7a7d1e52529435361aa12e22e4edeecf03
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777974"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448293"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>Método IMetaDataAssemblyImport::FindAssembliesByName
-Obtém uma matriz de assemblies com especificado `szAssemblyName` parâmetro, usando as regras padrão empregadas pelo common language runtime (CLR) para resolver referências.  
+Gets an array of assemblies with the specified `szAssemblyName` parameter, using the standard rules employed by the common language runtime (CLR) for resolving references.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,49 +40,49 @@ HRESULT FindAssembliesByName (
   
 ## <a name="parameters"></a>Parâmetros  
  `szAppBase`  
- [in] O diretório raiz no qual pesquisar o assembly determinado. Se esse valor é definido como `null`, `FindAssembliesByName` ficará apenas no cache de assembly global para o assembly.  
+ [in] The root directory in which to search for the given assembly. If this value is set to `null`, `FindAssembliesByName` will look only in the global assembly cache for the assembly.  
   
  `szPrivateBin`  
- [in] Uma lista de subdiretórios separados por ponto-e-vírgula (por exemplo, "bin; bin2"), sob o diretório raiz, no qual pesquisar o assembly. Esses diretórios são investigados, além daqueles especificados nas regras de investigação de padrão.  
+ [in] A list of semicolon-delimited subdirectories (for example, "bin;bin2"), under the root directory, in which to search for the assembly. These directories are probed in addition to those specified in the default probing rules.  
   
  `szAssemblyName`  
- [in] O nome do assembly para localizar. O formato dessa cadeia de caracteres é definido na página de referência de classe para <xref:System.Reflection.AssemblyName>.  
+ [in] The name of the assembly to find. The format of this string is defined in the class reference page for <xref:System.Reflection.AssemblyName>.  
   
  `ppIUnk`  
- [in] Uma matriz do tipo [IUnknown](/cpp/atl/iunknown) na qual colocar o `IMetadataAssemblyImport` ponteiros de interface.  
+ [in] An array of type [IUnknown](/cpp/atl/iunknown) in which to put the `IMetadataAssemblyImport` interface pointers.  
   
  `cMax`  
- [out] O número máximo de ponteiros de interface que pode ser colocado em `ppIUnk`.  
+ [out] The maximum number of interface pointers that can be placed in `ppIUnk`.  
   
  `pcAssemblies`  
- [out] O número de ponteiros de interface retornado. Ou seja, o número de ponteiros de interface realmente colocados nos `ppIUnk`.  
+ [out] The number of interface pointers returned. That is, the number of interface pointers actually placed in `ppIUnk`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`FindAssembliesByName` retornado com êxito.|  
-|`S_FALSE`|Não há nenhum assembly.|  
+|`S_OK`|`FindAssembliesByName` returned successfully.|  
+|`S_FALSE`|There are no assemblies.|  
   
 ## <a name="remarks"></a>Comentários  
- Recebe um nome de assembly, o `FindAssembliesByName` método encontra o assembly, seguindo as regras padrão para resolver referências de assembly. (Para obter mais informações, consulte [como o tempo de execução Localiza Assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` permite que o chamador configurar vários aspectos do contexto de resolvedor de assembly, como o caminho de pesquisa de base e privada de aplicativo.  
+ Given an assembly name, the `FindAssembliesByName` method finds the assembly by following the standard rules for resolving assembly references. (For more information, see [How the Runtime Locates Assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).) `FindAssembliesByName` allows the caller to configure various aspects of the assembly resolver context, such as application base and private search path.  
   
- O `FindAssembliesByName` método requer que o CLR a ser inicializado no processo para invocar a lógica de resolução de assembly. Portanto, você deve chamar [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passando COINITEE_DEFAULT) antes de chamar `FindAssembliesByName`e, em seguida, execute com uma chamada para [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
+ The `FindAssembliesByName` method requires the CLR to be initialized in the process in order to invoke the assembly resolution logic. Therefore, you must call [CoInitializeEE](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (passing COINITEE_DEFAULT) before calling `FindAssembliesByName`, and then follow with a call to [CoUninitializeCor](../../../../docs/framework/unmanaged-api/hosting/couninitializecor-function.md).  
   
- `FindAssembliesByName` Retorna um [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) ponteiro para o arquivo que contém o manifesto do assembly para o nome do assembly que é passado. Se o nome do assembly determinado não for totalmente especificado (por exemplo, se ele não inclui uma versão), vários assemblies podem ser retornados.  
+ `FindAssembliesByName` returns an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) pointer to the file containing the assembly manifest for the assembly name that is passed in. If the given assembly name is not fully specified (for example, if it does not include a version), multiple assemblies might be returned.  
   
- `FindAssembliesByName` é normalmente usado por um compilador que tenta localizar um assembly referenciado em tempo de compilação.  
+ `FindAssembliesByName` is commonly used by a compiler that attempts to find a referenced assembly at compile time.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como o tempo de execução localiza assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Como o runtime localiza assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b25c88f0-71b9-443b-8eea-1c94db0a44b9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a88a6c19a5c8b45576dd6f632adf70f7ec2eed55
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5b6c0159b432d2a70f583357bbcf714b27399633
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751881"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447178"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a>Método ICorProfilerInfo2::GetClassFromTokenAndTypeArgs
-Obtém o `ClassID` de um tipo usando o token de metadados especificado e o `ClassID` valores de qualquer tipo de argumentos.  
+Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,31 +38,31 @@ HRESULT GetClassFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleID`  
- [in] A ID do módulo no qual reside o tipo.  
+ [in] The ID of the module in which the type resides.  
   
  `typeDef`  
- [in] Um `mdTypeDef` token de metadados que faz referência ao tipo.  
+ [in] An `mdTypeDef` metadata token that references the type.  
   
  `cTypeArgs`  
- [in] O número de parâmetros de tipo para o tipo fornecido. Esse valor deve ser zero para tipos não genéricos.  
+ [in] The number of type parameters for the given type. This value must be zero for non-generic types.  
   
  `typeArgs`  
- [in] Uma matriz de `ClassID` valores, cada um deles é um argumento do tipo. O valor de `typeArgs` pode ser NULL se `cTypeArgs` é definido como zero.  
+ [in] An array of `ClassID` values, each of which is an argument of the type. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
   
  `pClassID`  
- [out] Um ponteiro para o `ClassID` do tipo especificado.  
+ [out] A pointer to the `ClassID` of the specified type.  
   
 ## <a name="remarks"></a>Comentários  
- Chamar o `GetClassFromTokenAndTypeArgs` método com um `mdTypeRef` em vez de uma `mdTypeDef` token de metadados pode ter resultados imprevisíveis; os chamadores devem resolver o `mdTypeRef` para um `mdTypeDef` ao passá-la.  
+ Calling the `GetClassFromTokenAndTypeArgs` method with an `mdTypeRef` instead of an `mdTypeDef` metadata token can have unpredictable results; callers should resolve the `mdTypeRef` to an `mdTypeDef` when passing it.  
   
- Se o tipo já não estiver carregado, chamando `GetClassFromTokenAndTypeArgs` irá disparar o carregamento, o que é uma operação perigosa em vários contextos. Por exemplo, chamar esse método durante o carregamento dos módulos ou outros tipos poderia levar a um loop infinito como o tempo de execução tenta carregar circularmente as coisas.  
+ If the type is not already loaded, calling `GetClassFromTokenAndTypeArgs` will trigger loading, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or other types could lead to an infinite loop as the runtime attempts to circularly load things.  
   
- Em geral, use de `GetClassFromTokenAndTypeArgs` não é recomendado. Se os criadores de perfis estiver interessados em eventos para um determinado tipo, deve armazenar o `ModuleID` e `mdTypeDef` do tipo e use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) para verificar se um determinado `ClassID` é o da tipo desejado.  
+ In general, use of `GetClassFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular type, they should store the `ModuleID` and `mdTypeDef` of that type, and use [ICorProfilerInfo2::GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) to check whether a given `ClassID` is that of the desired type.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 15cfc300-8231-4ecb-9a04-19851c3eb484
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ff18d52091ca75152c20667d1ec1b024f44d6129
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e25cbfabc10da0c7b1095a956583bb5c7450dba9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782912"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445812"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>Método ICorProfilerCallback::RemotingClientReceivingReply
-Notifica o criador de perfil que a parte do lado do servidor de uma chamada de comunicação remota foi concluída e o cliente agora está recebendo e prestes a processar a resposta.  
+Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,23 +35,23 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Parâmetros  
  `pCookie`  
- [in] Um valor que irá corresponder com o valor fornecido no [ICorProfilerCallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) sob estas condições:  
+ [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
   
-- Cookies GUID de comunicação remota estão ativos.  
+- Remoting GUID cookies are active.  
   
-- O canal é bem-sucedida na transmissão de mensagem.  
+- The channel succeeds in transmitting the message.  
   
-- Os cookies GUID são Active Directory sobre o processo do lado do servidor.  
+- GUID cookies are active on the server-side process.  
   
- Isso permite que o emparelhamento fácil de chamadas de comunicação remota.  
+ This allows easy pairing of remoting calls.  
   
  `fIsAsync`  
- [in] Um valor que é `true` se a chamada é assíncrona; caso contrário, `false`.  
+ [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

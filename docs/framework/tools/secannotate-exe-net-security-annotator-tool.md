@@ -5,17 +5,17 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: 7c9fad9b420044cce2c9d75cca66ecdb5b0558cd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cc57bd01c5626c889b5d94eac1e7358cafa4ab10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104680"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447312"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (ferramenta Anotador de Segurança do .NET)
 A ferramenta Anotador de Segurança do .NET (SecAnnotate.exe) é um aplicativo de linha de comando que identifica as partes `SecurityCritical` e `SecuritySafeCritical` de um ou mais assemblies.  
   
- Uma extensão do Visual Studio, [Anotador de Segurança](https://go.microsoft.com/fwlink/?LinkId=198007), fornece uma interface gráfica do usuário para SecAnnotate.exe e permite executar a ferramenta no Visual Studio.  
+ Uma extensão do Visual Studio, [Anotador de Segurança](https://marketplace.visualstudio.com/items?itemName=sheldonb.SecurityAnnotator), fornece uma interface gráfica do usuário para SecAnnotate.exe e permite executar a ferramenta no Visual Studio.  
   
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).  
   
@@ -50,6 +50,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>Comentários  
  Os parâmetros e os assemblies também podem ser fornecidos em um arquivo de resposta especificado na linha de comando e prefixado com uma arroba (@). Cada linha no arquivo de resposta deve conter um único parâmetro ou nome de assembly.  
   
- Para obter mais informações sobre o Anotador de Segurança do .NET, consulte a entrada [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations](https://go.microsoft.com/fwlink/?LinkId=187648) (Usando o SecAnnotate para analisar os assemblies quanto a violações de transparência) no .NET Security Blog.  
+ Para obter mais informações sobre o Anotador de Segurança do .NET, consulte a entrada [Using SecAnnotate to Analyze Your Assemblies for Transparency Violations](https://blogs.msdn.microsoft.com/shawnfa/2009/11/18/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example/) (Usando o SecAnnotate para analisar os assemblies quanto a violações de transparência) no .NET Security Blog.  
   
 ## <a name="examples"></a>Exemplos

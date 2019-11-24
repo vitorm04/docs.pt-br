@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e04a447c8562ff797ac98885bded150a3a167136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 766aeb31436101babeab31b615a1c633578bfcc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775790"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445528"
 ---
 # <a name="idebugautoattachautoattach-method"></a>Método IDebugAutoAttach::AutoAttach
-Executa automaticamente o depurador de servidor chamado attach.  
+Performs server-invoked debugger auto attach.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,25 +40,25 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>Parâmetros  
  `guidPort`  
- [in] Sempre definido como `GUID_NULL`.  
+ [in] Always set to `GUID_NULL`.  
   
  `dwPid`  
- [in] ID de processo, normalmente são recuperado com o `GetCurrentProcessId` função.  
+ [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
   
  `dwProgramType`  
- [in] Tipo de programa: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, ou `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
   
  `dwProgramId`  
- [in] ID do programa.  
+ [in] Program ID.  
   
  `pszSessionId`  
- [in] A cadeia de caracteres passada pelo verbo debug.  
+ [in] String passed by the debug verb.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** DbgAutoAttach.h  
+ **Header:** DbgAutoAttach.h  
   
 ## <a name="see-also"></a>Consulte também
 

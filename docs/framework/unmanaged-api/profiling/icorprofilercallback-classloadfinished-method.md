@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6508c989b143780090d582fd4175fe20bedeb770
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef2c518f8f3f3069e93f06de89add1385cb4e45e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745445"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445122"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>Método ICorProfilerCallback::ClassLoadFinished
-Notifica o criador de perfil de uma classe terminou o carregamento.  
+Notifies the profiler that a class has finished loading.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,20 +35,20 @@ HRESULT ClassLoadFinished(
   
 ## <a name="parameters"></a>Parâmetros  
  `classId`  
- [in] Identifica a classe que foi carregada.  
+ [in] Identifies the class that was loaded.  
   
  `hrStatus`  
- [in] Um HRESULT que indica se a classe é carregada com êxito.  
+ [in] An HRESULT that indicates whether the class loaded successfully.  
   
 ## <a name="remarks"></a>Comentários  
- O valor de `classId` não é válido para uma solicitação de informações até que o `ClassLoadFinished` método é chamado.  
+ The value of `classId` is not valid for an information request until the `ClassLoadFinished` method is called.  
   
- Algumas partes de carregamento de classe podem continuar após o `ClassLoadFinished` retorno de chamada. Uma falha HRESULT em `hrStatus` indica uma falha. No entanto, um HRESULT de sucesso em `hrStatus` indica apenas que a primeira parte de carregamento de classe teve êxito.  
+ Some parts of loading the class might continue after the `ClassLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the class has succeeded.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

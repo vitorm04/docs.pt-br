@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a70c041bc17f58a5e17877dd2e1f2aa2944e689
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777926"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449452"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>Método IMetaDataAssemblyImport::FindExportedTypeByName
-Obtém um ponteiro para um tipo exportado, dado seu nome e tipo de fechamento.  
+Gets a pointer to an exported type, given its name and enclosing type.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,27 +37,27 @@ HRESULT FindExportedTypeByName (
   
 ## <a name="parameters"></a>Parâmetros  
  `szName`  
- [in] O nome do tipo exportado.  
+ [in] The name of the exported type.  
   
  `mdtExportedType`  
- [in] O token de metadados para a classe delimitadora do tipo exportado. Esse valor é `mdExportedTypeNil` se exportado solicitada tipo não é um tipo aninhado.  
+ [in] The metadata token for the enclosing class of the exported type. This value is `mdExportedTypeNil` if the requested exported type is not a nested type.  
   
  `ptkExportedType`  
- [out] Um ponteiro para o `mdExportedType` token que representa o tipo exportado.  
+ [out] A pointer to the `mdExportedType` token that represents the exported type.  
   
 ## <a name="remarks"></a>Comentários  
- O `FindExportedTypeByName` método usa as regras padrão empregadas pelo common language runtime para resolver referências.  
+ The `FindExportedTypeByName` method uses the standard rules employed by the common language runtime for resolving references.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [Como o tempo de execução localiza assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+- [Como o runtime localiza assemblies](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

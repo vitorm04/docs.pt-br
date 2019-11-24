@@ -6,69 +6,69 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: 232bceba8286c2566a7df03b9001a5c43b348b20
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 073ff0727fc6aab1189f73a254aa95da60820cc3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71043455"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447153"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>Implementando o padrão de controle ExpandCollapse de interface de usuário
 
 > [!NOTE]
-> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]recentes sobre [o, consulte API de automação do Windows: Automação](https://go.microsoft.com/fwlink/?LinkID=156746)da interface do usuário.
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).
 
-Este tópico apresenta as diretrizes e convenções para <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>implementar o, incluindo informações sobre propriedades, métodos e eventos. Links para referências adicionais são listados no final da visão geral.
+This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>, including information about properties, methods, and events. Links to additional references are listed at the end of the overview.
 
-O <xref:System.Windows.Automation.ExpandCollapsePattern> padrão de controle é usado para dar suporte a controles que expandem visualmente para exibir mais conteúdo e recolher para ocultar o conteúdo. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).
+The <xref:System.Windows.Automation.ExpandCollapsePattern> control pattern is used to support controls that visually expand to display more content and collapse to hide content. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
-## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação
+## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions
 
-Ao implementar o padrão de controle ExpandCollapse, observe as seguintes diretrizes e convenções:
+When implementing the ExpandCollapse control pattern, note the following guidelines and conventions:
 
-- Controles de agregação — criados com objetos filho que fornecem a interface do usuário com funcionalidade de expandir/ <xref:System.Windows.Automation.ExpandCollapsePattern> recolher — devem oferecer suporte ao padrão de controle, enquanto seus elementos filho não. Por exemplo, um controle de caixa de combinação é criado com uma combinação de controles de caixa de listagem, botões e edição, mas é apenas a caixa de combinação pai que <xref:System.Windows.Automation.ExpandCollapsePattern>deve dar suporte ao.
+- Aggregate controls—built with child objects that provide the UI with expand/collapse functionality—must support the <xref:System.Windows.Automation.ExpandCollapsePattern> control pattern whereas their child elements do not. For example, a combo box control is built with a combination of list box, button, and edit controls, but it is only the parent combo box that must support the <xref:System.Windows.Automation.ExpandCollapsePattern>.
 
   > [!NOTE]
-  > Uma exceção é o controle de menu, que é uma agregação de objetos individuais MenuItem. Os objetos MenuItem podem dar suporte <xref:System.Windows.Automation.ExpandCollapsePattern> ao padrão de controle, mas o controle menu pai não pode. Uma exceção semelhante se aplica aos controles de item de árvore e árvore.
+  > An exception is the menu control, which is an aggregate of individual MenuItem objects. The MenuItem objects can support the <xref:System.Windows.Automation.ExpandCollapsePattern> control pattern, but the parent Menu control cannot. A similar exception applies to the Tree and Tree Item controls.
 
-- Quando o <xref:System.Windows.Automation.ExpandCollapseState> de um controle é definido como <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, qualquer <xref:System.Windows.Automation.ExpandCollapsePattern> funcionalidade está inativa no momento para o controle e as únicas informações que podem ser obtidas usando esse padrão de <xref:System.Windows.Automation.ExpandCollapseState>controle é o. Se qualquer objeto filho for adicionado posteriormente, as <xref:System.Windows.Automation.ExpandCollapseState> alterações e <xref:System.Windows.Automation.ExpandCollapsePattern> a funcionalidade serão ativadas.
+- When the <xref:System.Windows.Automation.ExpandCollapseState> of a control is set to <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>, any <xref:System.Windows.Automation.ExpandCollapsePattern> functionality is currently inactive for the control and the only information that can be obtained using this control pattern is the <xref:System.Windows.Automation.ExpandCollapseState>. If any child objects are subsequently added, the <xref:System.Windows.Automation.ExpandCollapseState> changes and <xref:System.Windows.Automation.ExpandCollapsePattern> functionality is activated.
 
-- <xref:System.Windows.Automation.ExpandCollapseState>refere-se apenas à visibilidade de objetos filho imediatos; Ele não se refere à visibilidade de todos os objetos descendentes.
+- <xref:System.Windows.Automation.ExpandCollapseState> refers to the visibility of immediate child objects only; it does not refer to the visibility of all descendant objects.
 
-- A funcionalidade de expandir e recolher é específica ao controle. Veja a seguir exemplos desse comportamento.
+- Expand and Collapse functionality is control-specific. The following are examples of this behavior.
 
-  - O menu pessoal do Office pode ser um MenuItem de três Estados<xref:System.Windows.Automation.ExpandCollapseState.Expanded>( <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> e <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) em que o controle Especifica o estado a ser adotado <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> quando um <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou é chamado.
+  - The Office Personal Menu can be a tri-state MenuItem (<xref:System.Windows.Automation.ExpandCollapseState.Expanded>, <xref:System.Windows.Automation.ExpandCollapseState.Collapsed> and <xref:System.Windows.Automation.ExpandCollapseState.PartiallyExpanded>) where the control specifies the state to adopt when an <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> is called.
 
-  - Chamar <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> em um TreeItem pode exibir todos os descendentes ou apenas filhos imediatos.
+  - Calling <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> on a TreeItem may display all descendants or only immediate children.
 
-  - Se chamar <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> em um controle mantiver o estado de seus descendentes, um evento de alteração de visibilidade deverá ser enviado, não um evento de alteração de estado se o controle pai não mantiver o estado de seus descendentes quando recolhido, o controle poderá destruir todos os descendentes que não estão mais visíveis e gerar um evento destruído; ou pode alterar o <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> para cada descendente e gerar um evento de alteração de visibilidade.
+  - If calling <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> on a control maintains the state of its descendants, a visibility change event should be sent, not a state change event If the parent control does not maintain the state of its descendants when collapsed, the control may destroy all the descendants that are no longer visible and raise a destroyed event; or it may change the <xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A> for each descendant and raise a visibility change event.
 
-- Para garantir a navegação, é desejável que um objeto esteja na [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore (com o estado de visibilidade apropriado), independentemente de seus pais. <xref:System.Windows.Automation.ExpandCollapseState> Se os descendentes forem gerados sob demanda, eles só poderão aparecer na [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] árvore depois de serem exibidos pela primeira vez ou somente enquanto estiverem visíveis.
+- To guarantee navigation, it is desirable for an object to be in the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree (with appropriate visibility state) regardless of its parents <xref:System.Windows.Automation.ExpandCollapseState>. If descendants are generated on demand, they may only appear in the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree after being displayed for the first time or only while they are visible.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
-## <a name="required-members-for-iexpandcollapseprovider"></a>Membros necessários para IExpandCollapseProvider
+## <a name="required-members-for-iexpandcollapseprovider"></a>Required Members for IExpandCollapseProvider
 
-As propriedades e os métodos a seguir são necessários <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>para implementar o.
+The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IExpandCollapseProvider>.
 
-|Membros necessários|Tipo de membro|Observações|
+|Required members|Member type|Anotações|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|Propriedade|Nenhum|
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|propriedade|Nenhum|
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|Método|Nenhum|
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|Método|Nenhum|
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|evento|Este controle não tem eventos associados; Use este delegado genérico.|
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|evento|This control has no associated events; use this generic delegate.|
 
 <a name="Exceptions"></a>
 
 ## <a name="exceptions"></a>Exceções
 
-Os provedores devem lançar as seguintes exceções.
+Providers must throw the following exceptions.
 
 |Tipo de exceção|Condição|
 |--------------------|---------------|
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> Ou é<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> chamado quando o <xref:System.Windows.Automation.ExpandCollapseState> . =  <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>|
+|<xref:System.InvalidOperationException>|Either <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> is called when the <xref:System.Windows.Automation.ExpandCollapseState> = <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>.|
 
 ## <a name="see-also"></a>Consulte também
 

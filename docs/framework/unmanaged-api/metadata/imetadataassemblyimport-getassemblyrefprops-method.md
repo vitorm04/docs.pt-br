@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c6b7fb4-cbca-4479-b650-ab9a99732ea0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aa633d554652050af51065e11221f898b34d5c63
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4149db74adfa26df221eed5c590766a023bb105e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772675"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448230"
 ---
 # <a name="imetadataassemblyimportgetassemblyrefprops-method"></a>Método IMetaDataAssemblyImport::GetAssemblyRefProps
-Obtém o conjunto de propriedades para a referência de assembly com a assinatura de metadados especificado.  
+Gets the set of properties for the assembly reference with the specified metadata signature.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,44 +44,44 @@ HRESULT GetAssemblyRefProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `mdar`  
- [in] O `mdAssemblyRef` token de metadados que representa a referência de assembly para o qual obter as propriedades.  
+ [in] The `mdAssemblyRef` metadata token that represents the assembly reference for which to get the properties.  
   
  `ppbPublicKeyOrToken`  
- [out] Um ponteiro para a chave pública ou token de metadados.  
+ [out] A pointer to the public key or the metadata token.  
   
  `pcbPublicKeyOrToken`  
- [out] O número de bytes na retornado chave pública ou token.  
+ [out] The number of bytes in the returned public key or token.  
   
  `szName`  
- [out] O nome simples do assembly.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] O tamanho, em caracteres largos, de `szName`.  
+ [in] The size, in wide chars, of `szName`.  
   
  `pchName`  
- [out] Um ponteiro para o número de caracteres largos, na verdade, é retornado no `szName`.  
+ [out] A pointer to the number of wide chars actually returned in `szName`.  
   
  `pMetaData`  
- [out] Um ponteiro para uma estrutura ASSEMBLYMETADATA que contém os metadados do assembly.  
+ [out] A pointer to an ASSEMBLYMETADATA structure that contains the assembly metadata.  
   
  `ppbHashValue`  
- [out] Um ponteiro para o valor de hash. Isso é o hash, usando o algoritmo SHA-1, do `PublicKey` propriedade do assembly referenciado, a menos que o arfFullOriginator do sinalizador do [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeração é definida.  
+ [out] A pointer to the hash value. This is the hash, using the SHA-1 algorithm, of the `PublicKey` property of the assembly being referenced, unless the arfFullOriginator flag of the [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) enumeration is set.  
   
  `pcbHashValue`  
- [out] O número de caracteres largos no valor de hash retornado.  
+ [out] The number of wide chars in the returned hash value.  
   
  `pdwAssemblyRefFlags`  
- [out] Um ponteiro para os sinalizadores que descrevem os metadados aplicados a um assembly. O valor de sinalizadores é uma combinação de um ou mais [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores.  
+ [out] A pointer to flags that describe the metadata applied to an assembly. The flags value is a combination of one or more [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values.  
   
-## <a name="return-value"></a>Valor de retorno  
- Este método retorna S_OK se for bem-sucedida; Caso contrário, ele retorna um dos códigos de erro definidos no arquivo de cabeçalho Winerror. h.  
+## <a name="return-value"></a>Valor retornado  
+ This method returns S_OK if it succeeds; otherwise, it returns one of the error codes defined in the Winerror.h header file.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

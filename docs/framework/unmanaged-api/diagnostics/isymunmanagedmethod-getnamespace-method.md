@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7fbbac42-b966-406d-9ae9-67bf3aea74ce
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 676c968bb48e493f9a4514235fbc3246cf395228
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b8bbedb4c60a2df6070373f2b6a104fff094869a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774653"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448971"
 ---
 # <a name="isymunmanagedmethodgetnamespace-method"></a>Método ISymUnmanagedMethod::GetNamespace
-Obtém o namespace no qual este método é definido.  
+Gets the namespace within which this method is defined.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +34,13 @@ HRESULT GetNamespace(
   
 ## <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Um ponteiro que é definido para retornado [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.  
+ [out] A pointer that is set to the returned [ISymUnmanagedNamespace](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md) interface.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

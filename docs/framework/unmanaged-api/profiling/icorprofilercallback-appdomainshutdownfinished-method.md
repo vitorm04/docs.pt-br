@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e214af178972623bad3536565aa9bc51edc97260
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8ff7d5a593388bd3a584e031aea411dfdb6c9845
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763103"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445203"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>Método ICorProfilerCallback::AppDomainShutdownFinished
-Notifica o criador de perfil que um domínio de aplicativo foi descarregado de um processo.  
+Notifies the profiler that an application domain has been unloaded from a process.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,20 +35,20 @@ HRESULT AppDomainShutdownFinished(
   
 ## <a name="parameters"></a>Parâmetros  
  `appDomainId`  
- [in] Identifica o domínio no qual os assemblies do aplicativo são armazenados.  
+ [in] Identifies the domain in which the application's assemblies are stored.  
   
  `hrStatus`  
- [in] Um HRESULT que indica se o domínio do aplicativo foi descarregado com êxito.  
+ [in] An HRESULT that indicates whether the application domain was unloaded successfully.  
   
 ## <a name="remarks"></a>Comentários  
- O valor de `appDomainId` não é válido para uma solicitação de informações após a [ICorProfilerCallback:: Appdomainshutdownstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) retorno do método.  
+ The value of `appDomainId` is not valid for an information request after the [ICorProfilerCallback::AppDomainShutdownStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) method returns.  
   
- Algumas partes de descarregar o domínio do aplicativo podem continuar após o `AppDomainCreationFinished` retorno de chamada. Uma falha HRESULT em `hrStatus` indica uma falha. No entanto, um HRESULT de sucesso em `hrStatus` indica apenas que a primeira parte de descarregar o domínio de aplicativo teve êxito.  
+ Some parts of unloading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the application domain has succeeded.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

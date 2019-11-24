@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: a3d7cf29-1414-49e6-8aae-9b3283c4f5f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 180eb1a3129cfcd96668ecfee11947c15c5e0915
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4bfad8b985a8ef059031464e99a8004842b276c0
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70776906"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445578"
 ---
 # <a name="setassemblyprops-method"></a>Método SetAssemblyProps
-Atribui propriedades no nível do assembly.  
+Assigns assembly-level properties.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,22 +37,22 @@ HRESULT SetAssemblyProps(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID do assembly.  
+ ID of the assembly.  
   
  `FileToken`  
- Arquivo que define a propriedade. Pode ser NULL se `AssemblyID` não indicar um netmodule não associado.  
+ File that defines the property. Can be NULL if `AssemblyID` does not indicate an unbound netmodule.  
   
  `Option`  
- Indica a opção a ser modificada.  
+ Indicates the option to modify.  
   
  `Value`  
- Novo valor da opção.  
+ New value of the option.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retornará S_OK se o método tiver sucesso.  
+## <a name="return-value"></a>Valor retornado  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Consulte também
 

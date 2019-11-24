@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f721c863-9642-4e64-917a-65f9e55c25b9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2a1f248cf800e9c2bf17d7849e449287cfc493f5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fd5e71071de9e6afebc8f1848e0af8835f22c9bf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67737205"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448130"
 ---
 # <a name="imetadataemitsetcustomattributevalue-method"></a>Método IMetaDataEmit::SetCustomAttributeValue
-Define ou atualiza o valor de um atributo personalizado definido por uma chamada anterior ao [imetadataemit:: Definecustomattribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
+Sets or updates the value of a custom attribute defined by a prior call to [IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,20 +37,20 @@ HRESULT SetCustomAttributeValue (
   
 ## <a name="parameters"></a>Parâmetros  
  `pcv`  
- [in] O token do atributo personalizado de destino.  
+ [in] The token of the target custom attribute.  
   
  `pCustomAttribute`  
- [in] Um ponteiro para a matriz que contém o atributo personalizado.  
+ [in] A pointer to the array that contains the custom attribute.  
   
  `cbCustomAttribute`  
- [in] O tamanho, em bytes, do atributo personalizado.  
+ [in] The size, in bytes, of the custom attribute.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

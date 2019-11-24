@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9e707abb-f905-4568-9356-12aa21d1b11c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1406c68f1f6abff4d140b131f5f630d0fd767e1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4dd104805d547613315335bc9c95b5c60a9cab14
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787692"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446675"
 ---
 # <a name="addfile-method"></a>Método AddFile
-Adiciona arquivos ao assembly. Também pode ser usado para criar módulos desvinculados.  
+Adds files to the assembly. Can also be used to create unbound modules.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,25 +39,25 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID exclusiva do assembly a ser aumentada.  
+ Unique ID of the assembly to be augmented.  
   
  `pszFilename`  
- Nome totalmente qualificado do arquivo a ser adicionado.  
+ Fully qualified name of file to be added.  
   
  `dwFlags`  
- Sinalizadores de `ffContainsNoMetaData` FileDef com+, como `ffWriteable`e. `dwFlags`é passado para o [método definofile](../metadata/imetadataassemblyemit-definefile-method.md).  
+ COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- Interface de [interface IMetaDataEmit](../metadata/imetadataemit-interface.md) a ser usada para emitir metadados, se necessário.  
+ [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
   
  `pFileToken`  
- Ponteiro para onde a ID exclusiva do arquivo adicionado será armazenada.  
+ Pointer to where the unique ID of the added file will be stored.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retornará S_OK se o método tiver sucesso.  
+## <a name="return-value"></a>Valor retornado  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Consulte também
 

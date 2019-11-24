@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: edeaefd0792a5cc03ae6d4385ff669a343ffdfc9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 690abec6104f6eed1ad5a0eae9a6b6bb18d35b0d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778814"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436679"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>Método IMetaDataImport::GetUserString
-Obtém a cadeia de caracteres literal, representada pelo token de metadados especificado.  
+Gets the literal string represented by the specified metadata token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,23 +38,23 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>Parâmetros  
  `stk`  
- [in] O token de cadeia de caracteres para retornar a cadeia de caracteres associada.  
+ [in] The String token to return the associated string for.  
   
  `szString`  
- [out] Uma cópia da cadeia de caracteres solicitada.  
+ [out] A copy of the requested string.  
   
  `cchString`  
- [in] O tamanho máximo em caracteres largos da solicitada `szString`.  
+ [in] The maximum size in wide characters of the requested `szString`.  
   
  `pchString`  
- [out] O tamanho em caracteres largos da retornado `szString`.  
+ [out] The size in wide characters of the returned `szString`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

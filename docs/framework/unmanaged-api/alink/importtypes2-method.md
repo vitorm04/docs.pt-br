@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce09eca30e1edb9e1afc02216a07955a5fed4fd2
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 8dae903ab76ab83ac0818c4bc4a76e81094bdf65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787262"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445668"
 ---
 # <a name="importtypes2-method"></a>Método ImportTypes2
-Inicia a importação de tipos. Chame esse método para começar a importar tipos de cada escopo importado por meio do [Método ImportFile](importfile-method.md).  
+Initiates the import of types. Call this method to begin importing types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes2(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID do assembly no qual importar.  
+ ID of assembly into which to import.  
   
  `FileToken`  
- ID do arquivo a partir do qual importar.  
+ ID of file to from which to import.  
   
  `dwScope`  
- Escopo de base zero do qual importar.  
+ Zero-based scope from which to import.  
   
  `phEnum`  
- Recebe o identificador do enumerador para os tipos no escopo fornecido.  
+ Receives enumerator handle for the types in the given scope.  
   
  `ppImportScope`  
- Opcionalmente, recebe a interface de [interface IMetaDataImport2](../metadata/imetadataimport2-interface.md) .  
+ Optionally receives [IMetaDataImport2 Interface](../metadata/imetadataimport2-interface.md) interface.  
   
  `pdwCountOfTypes`  
- Opcionalmente, recebe a contagem de tipos no escopo especificado.  
+ Optionally receives count of types in the specified scope.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retornará S_OK se o método tiver sucesso.  
+## <a name="return-value"></a>Valor retornado  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Consulte também
 

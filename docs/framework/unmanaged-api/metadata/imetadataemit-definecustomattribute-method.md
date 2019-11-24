@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7dd14854-b756-4401-b167-88ca576dc8f0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994e007eabf8b7fdcf5446d905c06eb4ab91bb3f
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e6a732b98ae02ba2b273b45921b7de61ab4fd29f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777680"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432643"
 ---
 # <a name="imetadataemitdefinecustomattribute-method"></a>Método IMetaDataEmit::DefineCustomAttribute
-Cria uma definição para um atributo personalizado com a assinatura de metadados especificado, a ser anexado ao objeto especificado e obtém um token a definição desse atributo personalizado.  
+Creates a definition for a custom attribute with the specified metadata signature, to be attached to the specified object, and gets a token to that custom attribute definition.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,26 +39,26 @@ HRESULT DefineCustomAttribute (
   
 ## <a name="parameters"></a>Parâmetros  
  `tkObj`  
- [in] O token para o item do proprietário.  
+ [in] The token for the owner item.  
   
  `tkType`  
- [in] O token que identifica o atributo personalizado.  
+ [in] The token that identifies the custom attribute.  
   
  `pCustomAttribute`  
- [in] Um ponteiro para o atributo personalizado.  
+ [in] A pointer to the custom attribute.  
   
  `cbCustomAttribute`  
- [in] A contagem de bytes em `pCustomAttribute`.  
+ [in] The count of bytes in `pCustomAttribute`.  
   
  `pcv`  
- [out] O `mdCustomAttribute` token atribuído.  
+ [out] The `mdCustomAttribute` token assigned.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

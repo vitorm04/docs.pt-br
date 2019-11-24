@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d500584afd608f79e41e932be259d29ae51db2db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781577"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445230"
 ---
 # <a name="imetadataimport2getversionstring-method"></a>Método IMetaDataImport2::GetVersionString
-Obtém o número de versão do tempo de execução que foi usado para compilar o assembly.  
+Gets the version number of the runtime that was used to build the assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,23 +37,23 @@ HRESULT GetVersionString (
   
 ## <a name="parameters"></a>Parâmetros  
  `pwzBuf`  
- [out] Uma matriz para armazenar a cadeia de caracteres que especifica a versão.  
+ [out] An array to store the string that specifies the version.  
   
  `ccBufSize`  
- [in] O tamanho, em caracteres largos, da `pwzBuf` matriz.  
+ [in] The size, in wide characters, of the `pwzBuf` array.  
   
  `pccBufSize`  
- [out] O número de caracteres largos, incluindo um terminador nulo, retornado no `pwzBuf` matriz.  
+ [out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.  
   
 ## <a name="remarks"></a>Comentários  
- O `GetVersionString` método obtém a versão criada do escopo de metadados atual. Se o escopo nunca tiver sido salvo, ele não terá uma versão criada para e uma cadeia de caracteres vazia será retornada.  
+ The `GetVersionString` method gets the built-for version of the current metadata scope. If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

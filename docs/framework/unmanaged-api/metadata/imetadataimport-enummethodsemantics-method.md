@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 715e53ae04532214d4011d4a40503b2ade5a014d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff6932b6040a19e0ccda2f8d2140fa131cdd9224
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782068"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450070"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>Método IMetaDataImport::EnumMethodSemantics
-Enumera as propriedades e os eventos de alteração de propriedade à qual o método especificado está relacionado.  
+Enumerates the properties and the property-change events to which the specified method is related.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,36 +39,36 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [no, out] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada desse método.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `mb`  
- [in] Um token de MethodDef que limita o escopo da enumeração.  
+ [in] A MethodDef token that limits the scope of the enumeration.  
   
  `rEventProp`  
- [out] A matriz usada para armazenar os eventos ou propriedades.  
+ [out] The array used to store the events or properties.  
   
  `cMax`  
- [in] O tamanho máximo da `rEventProp` matriz.  
+ [in] The maximum size of the `rEventProp` array.  
   
  `pcEventProp`  
- [out] O número de eventos ou propriedades retornadas no `rEventProp`.  
+ [out] The number of events or properties returned in `rEventProp`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` retornado com êxito.|  
-|`S_FALSE`|Não há eventos ou propriedades para enumerar. Nesse caso, `pcEventProp` é zero.|  
+|`S_OK`|`EnumMethodSemantics` returned successfully.|  
+|`S_FALSE`|There are no events or properties to enumerate. In that case, `pcEventProp` is zero.|  
   
 ## <a name="remarks"></a>Comentários  
- Definem muitos tipos common language runtime *propriedade* `Changed` eventos e `On` *propriedade* `Changed` métodos relacionados às suas propriedades. Por exemplo, o <xref:System.Windows.Forms.Control?displayProperty=nameWithType> tipo define uma <xref:System.Windows.Forms.Control.Font%2A> propriedade, um <xref:System.Windows.Forms.Control.FontChanged> eventos e um <xref:System.Windows.Forms.Control.OnFontChanged%2A> método. O método de acessador set do <xref:System.Windows.Forms.Control.Font%2A> chamadas de propriedade <xref:System.Windows.Forms.Control.OnFontChanged%2A> método, que por sua vez dispara o <xref:System.Windows.Forms.Control.FontChanged> eventos. Você chamaria `EnumMethodSemantics` usando o MethodDef para <xref:System.Windows.Forms.Control.OnFontChanged%2A> para obter referências para o <xref:System.Windows.Forms.Control.Font%2A> propriedade e o <xref:System.Windows.Forms.Control.FontChanged> eventos.  
+ Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties. For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method. The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event. You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 46c06258-831e-47c8-a50a-8650af6b637e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6081e2dfd64625697295f2ea2d1560bc597838da
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 94cda16466ea5a3d35a478a2ae80281e9414f719
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776864"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449365"
 ---
 # <a name="isymunmanagedbindergetreaderforfile-method"></a>Método ISymUnmanagedBinder::GetReaderForFile
-Dado uma interface de metadados e um nome de arquivo, retorna a correta [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface que lê os símbolos de depuração associados com o módulo.  
+Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.  
   
- Esse método abrirá o arquivo de programa (PDB) do banco de dados somente se ele está ao lado do arquivo executável. Essa alteração foi feita para fins de segurança. Se você precisar de uma pesquisa mais abrangente para o arquivo PDB, use o [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) método.  
+ This method will open the program database (PDB) file only if it is next to the executable file. This change has been made for security purposes. If you need a more extensive search for the PDB file, use the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) method.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,22 +39,22 @@ HRESULT GetReaderForFile(
   
 ## <a name="parameters"></a>Parâmetros  
  `importer`  
- [in] Um ponteiro para a interface de importação de metadados.  
+ [in] A pointer to the metadata import interface.  
   
  `fileName`  
- [in] Um ponteiro para o nome do arquivo.  
+ [in] A pointer to the file name.  
   
  `searchPath`  
- [in] Um ponteiro para o caminho de pesquisa.  
+ [in] A pointer to the search path.  
   
  `pRetVal`  
- [out] Um ponteiro que é definido para retornado [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
+ [out] A pointer that is set to the returned [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

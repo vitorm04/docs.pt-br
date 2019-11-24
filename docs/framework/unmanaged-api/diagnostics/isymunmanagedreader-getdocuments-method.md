@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e3b73a3f-d089-4101-a9a9-5e0765d05b61
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fad7fae41fed70d996fcaaa7a7cdf69403b6094
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c26c0a5f8c597613266e2e6d1998edfca8f17b82
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763355"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448332"
 ---
 # <a name="isymunmanagedreadergetdocuments-method"></a>Método ISymUnmanagedReader::GetDocuments
-Retorna uma matriz de todos os documentos definidos no repositório de símbolos.  
+Returns an array of all the documents defined in the symbol store.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,19 +37,19 @@ HRESULT GetDocuments (
   
 ## <a name="parameters"></a>Parâmetros  
  `cDocs`  
- [in] O tamanho do `pDocs` matriz.  
+ [in] The size of the `pDocs` array.  
   
  `pcDocs`  
- [out] Um ponteiro para uma variável que recebe o comprimento da matriz.  
+ [out] A pointer to a variable that receives the array length.  
   
  `pDocs`  
- [out] Um ponteiro para uma variável que recebe a matriz de documento.  
+ [out] A pointer to a variable that receives the document array.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

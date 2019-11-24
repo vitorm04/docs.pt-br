@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 2502d542513ace1173b6c33a2399ce010620b888
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044461"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449407"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
 
@@ -37,10 +37,10 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |**Salvar Tudo**|**Arquivo**||Salva as alterações feitas em todos os arquivos abertos atualmente dentro de MageUI.exe.|  
 |**Preferências**|**Arquivo**||Abre a caixa de diálogo **Preferências**. Consulte a seguinte seção para obter mais informações.|  
 |**Exit**|**Arquivo**|ALT+F4|Fecha MageUI.exe.|  
-|**Recortar**|**Editar**|CTRL+X|Remove o texto selecionado no momento do aplicativo e o move para a Área de Transferência do sistema.|  
-|**Copiar**|**Editar**|CTRL+C|Copia o texto selecionado no momento para a Área de Transferência do sistema.|  
-|**Colar**|**Editar**|CTRL+V|Cola o texto da Área de Transferência do sistema para o elemento de texto ativo no momento.|  
-|**Excluir**|**Editar**||Exclui um elemento selecionado no momento em uma lista, como uma licença de confiança na guia **Manifesto de Implantação**.|  
+|**Recortar**|**Editarar**|CTRL+X|Remove o texto selecionado no momento do aplicativo e o move para a Área de Transferência do sistema.|  
+|**Copiar**|**Editarar**|CTRL+C|Copia o texto selecionado no momento para a Área de Transferência do sistema.|  
+|**Colar**|**Editarar**|CTRL+V|Cola o texto da Área de Transferência do sistema para o elemento de texto ativo no momento.|  
+|**Excluir**|**Editarar**||Exclui um elemento selecionado no momento em uma lista, como uma licença de confiança na guia **Manifesto de Implantação**.|  
 |**Fechar Tudo**|**Janela**||Fecha todos os arquivos abertos no momento em MageUI.exe. Se um ou mais arquivos precisar de gravação, MageUI.exe solicitará que você os salve. MageUI.exe também solicita a seleção de uma chave de assinatura para cada arquivo não assinado ou alterado.|  
 |**Sobre**|**Ajuda**||Exibe informações de versão e direitos autorais sobre MageUI.exe.|  
   
@@ -66,7 +66,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |**Novo**|Gera um novo .pfx que não é verificável por meio de uma CA (Autoridade de Certificação). Para obter mais informações sobre os tipos de certificados usados na assinatura de implantações ClickOnce, consulte [Visão geral sobre implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview).|  
 |**Senha**|Fornece uma área para digitar a senha usada na assinatura desse certificado. Se não for aplicável, poderá ser deixado em branco.|  
 |**Assinar com certificado armazenado**|Exibe uma lista selecionável de certificados digitais armazenados no repositório de certificados do computador.|  
-|**URI de Carimbo de Data/Hora**|Exibe a URL (Uniform Resource Identifier) de um serviço de carimbo de data/hora digital. O carimbo de data/hora dos manifestos evita que você precise assinar novamente os manifestos, caso o certificado digital expire antes de implantar a próxima versão do aplicativo. Para obter mais informações, consulte [Membros do programa de certificado raiz do Windows](https://go.microsoft.com/fwlink/?LinkId=159000) e [ClickOnce e Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
+|**URI de Carimbo de Data/Hora**|Exibe a URL (Uniform Resource Identifier) de um serviço de carimbo de data/hora digital. O carimbo de data/hora dos manifestos evita que você precise assinar novamente os manifestos, caso o certificado digital expire antes de implantar a próxima versão do aplicativo. Para obter mais informações, consulte [Membros do programa de certificado raiz do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265983(v=ws.11)) e [ClickOnce e Authenticode](/visualstudio/deployment/clickonce-and-authenticode).|  
 |**Não Assinar**|Permite salvar o manifesto sem adicionar uma assinatura de um certificado digital.|  
   
 ## <a name="tab-and-panel-descriptions"></a>Descrições da Guia e do Painel  
@@ -120,7 +120,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |**Popular**|Adiciona todos os arquivos no diretório e subdiretórios do aplicativo ao manifesto do aplicativo. Se MageUI.exe localizar um único arquivo executável no diretório, ele o marcará automaticamente como o Ponto de Entrada, que é o arquivo executado primeiro quando o aplicativo ClickOnce é inicializado no cliente.|  
 |**Arquivos de Aplicativo**|Lista todos os arquivos no aplicativo. Cada arquivo tem três atributos editáveis, discutidos abaixo.|  
 |**Tipo de Arquivo**|O Tipo de Arquivo pode ser um dos quatro valores:<br /><br /> – Nenhum.<br />– Ponto de Entrada. O executável principal do aplicativo. Apenas um arquivo executável pode ser marcado como o ponto de entrada.<br />– Arquivo de Dados. Um arquivo, como um arquivo XML, que fornece dados para o aplicativo.<br />– Arquivo de Ícone. Um ícone do aplicativo, como aparece na área de trabalho ou no canto da janela do aplicativo.|  
-|**Opcional**|Arquivos marcados como opcionais não são baixados na instalação inicial ou na atualização, mas podem ser baixados em tempo de execução usando a API sob demanda System.Deployment. Para obter mais informações, confira [Passo a passo: como baixar assemblies sob demanda com a API de implantação ClickOnce usando o designer](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
+|**Opcional**|Arquivos marcados como opcionais não são baixados na instalação inicial ou na atualização, mas podem ser baixados em tempo de execução usando a API sob demanda System.Deployment. Para obter mais informações, consulte [Walkthrough: Downloading Assemblies on Demand with the ClickOnce Deployment API Using the Designer](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer) (Instruções passo a passo: baixando assemblies sob demanda com a API de implantação do ClickOnce usando o designer).|  
 |**Grupo**|Um rótulo para um conjunto de arquivos opcionais. Você pode aplicar um rótulo Grupo a um conjunto de arquivos e usar a API sob demanda para baixar um lote de arquivos com uma única chamada à API.|  
   
 ### <a name="permissions-required-tab"></a>Guia Permissões Necessárias  
@@ -179,7 +179,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |----------------|-----------------|  
 |**This application should check for updates (Este aplicativo deve procurar atualizações)**|Especifica se o ClickOnce deve verificar se há atualizações de aplicativo. Se essa caixa de seleção não estiver selecionada, o aplicativo não verificará se há atualizações, a menos que você o atualize programaticamente usando as APIs no namespace <xref:System.Deployment.Application>.|  
 |**Escolha quando o aplicativo deve verificar se há atualizações**|Fornece duas opções para verificações de atualização:<br /><br /> -   **Antes do aplicativo ser inicializado**. A verificação de atualização é executada antes da execução do aplicativo.<br />-   **Depois de o aplicativo ser inicializado**. A verificação de atualização começa quando o formulário principal do aplicativo é inicializado e será executada na próxima vez que o aplicativo for iniciado.|  
-|**Update check frequency (Frequência de verificação de atualização)**|Determina a frequência com que o ClickOnce deve verificar se há atualizações:<br /><br /> -   **Verificar toda vez que o aplicativo for executado**. O ClickOnce executará uma verificação de atualização sempre que o usuário abrir o aplicativo.<br />-   **Verifique cada**: selecione um intervalo de tempo e uma unidade (horas, dias ou semanas) que precisam ser percorridos antes da verificação de atualizações.|  
+|**Update check frequency (Frequência de verificação de atualização)**|Determina a frequência com que o ClickOnce deve verificar se há atualizações:<br /><br /> -   **Verificar toda vez que o aplicativo for executado**. O ClickOnce executará uma verificação de atualização sempre que o usuário abrir o aplicativo.<br />-   **Verificar a cada**: selecione um intervalo e uma unidade (horas, dias ou semanas) que deve decorrer antes de verificar se há atualizações.|  
 |**Especifique a versão mínima necessária para este aplicativo**|Opcional. Especifica que uma versão específica do seu aplicativo é uma instalação obrigatória, impedindo que os usuários trabalhem com uma versão anterior.|  
 |**Versão**|Necessário se a caixa de seleção **Especifique a versão mínima necessária para este aplicativo** estiver marcada. O número de versão fornecido deve estar no formato *N.N.N.N*. Somente o primeiro número de build principal é necessário. Por exemplo, para a versão 1.0 de um aplicativo, os valores válidos incluiriam `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
   
@@ -193,5 +193,5 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ## <a name="see-also"></a>Consulte também
 
 - [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
-- [Passo a passo: Como implantar manualmente aplicativos ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
+- [Passo a passo: implantando um aplicativo ClickOnce manualmente](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Mage.exe (Manifest Generation and Editing Tool)](mage-exe-manifest-generation-and-editing-tool.md)

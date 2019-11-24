@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7a3c97c3-1e31-47b1-bf23-386785c509c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0b410ef46e96f75d98ee750c760b19d2a77eec2b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f3d9bc94d25ca70e0589e1beb86b8ef96807a71
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780208"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448169"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>Método ICorProfilerInfo::GetAssemblyInfo
-Aceita uma ID de assembly e retorna o nome do assembly e a ID do seu módulo de manifesto.  
+Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,32 +40,32 @@ HRESULT GetAssemblyInfo(
   
 ## <a name="parameters"></a>Parâmetros  
  `assemblyId`  
- [in] O identificador do assembly.  
+ [in] The identifier of the assembly.  
   
  `cchName`  
- [in] O comprimento, em caracteres, de `szName`.  
+ [in] The length, in characters, of `szName`.  
   
  `pcchName`  
- [out] Um ponteiro para o total de caracteres do nome do assembly.  
+ [out] A pointer to the total character length of the assembly's name.  
   
  `szName`  
- [out] Um buffer de caractere largo fornecido pelo chamador. Quando a função retorna, ele conterá o nome do assembly.  
+ [out] A caller-provided wide character buffer. When the function returns, it will contain the assembly's name.  
   
  `pAppDomainId`  
- [out] Um ponteiro para a ID do domínio do aplicativo que contém o assembly.  
+ [out] A pointer to the ID of the application domain that contains the assembly.  
   
  `pModuleId`  
- [out] Um ponteiro para a ID do módulo de manifesto do assembly.  
+ [out] A pointer to the ID of the assembly's manifest module.  
   
 ## <a name="remarks"></a>Comentários  
- Após esse método retornar, você deve verificar se o `szName` buffer era grande o suficiente para conter o nome completo do assembly. Para fazer isso, o valor de comparação que `pcchName` aponta para com o valor da `cchName` parâmetro. Se `pcchName` aponta para um valor maior que `cchName`, alocar uma maior `szName` buffer, atualize `cchName` com o novo e maior tamanho e a chamada `GetAssemblyInfo` novamente.  
+ After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.  
   
- Como alternativa, você pode primeiro chamar `GetAssemblyInfo` com um comprimento de zero `szName` buffer para obter o tamanho do buffer correto. Em seguida, você pode ajustar o tamanho do buffer com base no valor retornado no `pcchName` e chamar `GetAssemblyInfo` novamente.  
+ Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

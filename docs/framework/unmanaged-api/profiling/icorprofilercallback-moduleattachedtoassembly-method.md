@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b595798a-5d40-4cac-ab4f-911c61d2c5d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3345e2e87ba41f750031deed2d15e13dbe4f06c8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d229b530062d759ab270612fa70b1799acbcadbe
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67769297"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448074"
 ---
 # <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a>Método ICorProfilerCallback::ModuleAttachedToAssembly
-Notifica o criador de perfil que um módulo está sendo anexado ao seu assembly pai.  
+Notifies the profiler that a module is being attached to its parent assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,18 +35,18 @@ HRESULT ModuleAttachedToAssembly(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleId`  
- [in] A ID do módulo que está sendo anexado.  
+ [in] The ID of the module that is being attached.  
   
  `AssemblyId`  
- [in] A ID do assembly pai ao qual o módulo está anexado.  
+ [in] The ID of the parent assembly to which the module is attached.  
   
 ## <a name="remarks"></a>Comentários  
- Um módulo pode ser carregado por meio de uma importação endereço IAT (tabela), por meio de uma chamada para `LoadLibrary`, ou por meio de uma referência de metadados. Como resultado, o carregador de runtime (CLR) de linguagem comum tem vários caminhos de código para determinar o assembly no qual reside um módulo. Portanto, é possível que, depois [ICorProfilerCallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) é chamado, o módulo não sabe qual assembly esteja em e não é possível obter a ID do assembly pai. O `ModuleAttachedToAssembly` método é chamado quando o módulo está conectado ao seu assembly pai e seu assembly pai ID pode ser obtida.  
+ A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference. As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives. Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible. The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

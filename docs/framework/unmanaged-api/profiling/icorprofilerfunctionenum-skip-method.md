@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 051465b9-e479-494a-804b-c880323b4cbe
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 755b022dde01a1d424fea58bcefe5df2bce401b3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2a0bff0d3d93ab8542699cffd3d0ecc032246ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780277"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448202"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>Método ICorProfilerFunctionEnum::Skip
-Avança o cursor do enumerador de sua posição atual para que o número especificado de elementos é ignorado.  
+Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,23 +33,23 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de elementos a serem ignoradas.  
+ [in] The number of elements to be skipped.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt` elementos foram ignorados.|  
-|S_FALSE|Menos de `celt` elementos foram ignorados, que indica que não há mais nenhum elemento.|  
+|S_OK|`celt` elements were skipped.|  
+|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
   
 ## <a name="remarks"></a>Comentários  
- A nova posição do cursor deste enumerador é (posição atual) + `celt`.  
+ The new position of this enumerator's cursor is (current position) + `celt`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

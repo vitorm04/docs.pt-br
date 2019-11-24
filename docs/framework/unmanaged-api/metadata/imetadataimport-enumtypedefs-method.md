@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e508711-da92-4381-aaf8-6803075cdaa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 621582536c07b269dd723c9014e23c50e561957a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3854cb4aa3d229c87466c0a35a72447ceb235624
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67774606"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449998"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>Método IMetaDataImport::EnumTypeDefs
-Enumera os tokens de TypeDef que representa todos os tipos dentro do escopo atual.  
+Enumerates TypeDef tokens representing all types within the current scope.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,33 +38,33 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out] Um ponteiro para o novo enumerador. Isso deve ser NULL para a primeira chamada desse método.  
+ [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
   
  `rTypeDefs`  
- [in] A matriz usada para armazenar os tokens de TypeDef.  
+ [in] The array used to store the TypeDef tokens.  
   
  `cMax`  
- [in] O tamanho máximo da `rTypeDefs` matriz.  
+ [in] The maximum size of the `rTypeDefs` array.  
   
  `pcTypeDefs`  
- [out] O número de tokens de TypeDef retornado no `rTypeDefs`.  
+ [out] The number of TypeDef tokens returned in `rTypeDefs`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` retornado com êxito.|  
-|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcTypeDefs` é zero.|  
+|`S_OK`|`EnumTypeDefs` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
   
 ## <a name="remarks"></a>Comentários  
- O token de TypeDef representa um tipo como uma classe ou uma interface, bem como qualquer tipo adicionado por meio de um mecanismo de extensibilidade.  
+ The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

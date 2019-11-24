@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 67e8209d-a0ca-4118-a6e6-c1ee0abc2221
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ace66630176149a18a174fad24f782a289b0e9d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 34744132442440ef160841db5a50bf75355f2410
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763004"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445166"
 ---
 # <a name="icorprofilercallbackassemblyloadstarted-method"></a>Método ICorProfilerCallback::AssemblyLoadStarted
-Notifica o criador de perfil que um assembly que está sendo carregado.  
+Notifies the profiler that an assembly is being loaded.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,15 +34,15 @@ HRESULT AssemblyLoadStarted(
   
 ## <a name="parameters"></a>Parâmetros  
  `assemblyId`  
- [in] Identifica o assembly que está sendo carregado.  
+ [in] Identifies the assembly that is being loaded.  
   
 ## <a name="remarks"></a>Comentários  
- O valor de `assemblyId` não é válido para uma solicitação de informações até que o [ICorProfilerCallback:: Assemblyloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) método é chamado.  
+ The value of `assemblyId` is not valid for an information request until the [ICorProfilerCallback::AssemblyLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyloadfinished-method.md) method is called.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

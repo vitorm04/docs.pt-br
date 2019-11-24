@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 64971319f592ee097e45cff10ef46b76e8b3b0a5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1bbdfa93913b9fdf8aa164c8ca6c35cd33a228df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782845"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449921"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>Método ICorProfilerCallback::JITCompilationFinished
-Notifica o criador de perfil que o compilador just-in-time (JIT) concluiu a compilação de uma função.  
+Notifies the profiler that the just-in-time (JIT) compiler has finished compiling a function.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,20 +36,20 @@ HRESULT JITCompilationFinished(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] A ID da função que foi compilada.  
+ [in] The ID of the function that was compiled.  
   
  `hrStatus`  
- [in] Um valor que indica se a compilação foi bem-sucedida.  
+ [in] A value indicating whether compilation was successful.  
   
  `fIsSafeToBlock`  
- [in] Um valor que indica o criador de perfil, se o bloqueio afetará a operação de tempo de execução. O valor será `true` se o bloqueio pode fazer com que o tempo de execução aguardar o thread de chamada de retorno desse retorno de chamada; caso contrário, `false`.  
+ [in] A value indicating to the profiler whether blocking will affect the operation of the runtime. The value is `true` if blocking may cause the runtime to wait for the calling thread to return from this callback; otherwise, `false`.  
   
- Embora um valor de `true` não danificará o tempo de execução, ele pode afetar os resultados de criação de perfil.  
+ Although a value of `true` will not harm the runtime, it can skew the profiling results.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

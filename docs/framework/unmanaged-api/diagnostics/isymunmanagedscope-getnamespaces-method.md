@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d2c64d7ead2f7ce3d76b40f4fdc604506ee85561
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b765294826a5da4010cdd2db79b50667a6f1cdb4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777882"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446309"
 ---
 # <a name="isymunmanagedscopegetnamespaces-method"></a>Método ISymUnmanagedScope::GetNamespaces
-Obtém os namespaces que estão sendo usados dentro desse escopo.  
+Gets the namespaces that are being used within this scope.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,19 +38,19 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parâmetros  
  `cNameSpaces`  
- [in] O tamanho do `namespaces` matriz.  
+ [in] The size of the `namespaces` array.  
   
  `pcNameSpaces`  
- [out] Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter os namespaces.  
+ [out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.  
   
  `namespaces`  
- [out] A matriz que recebe os namespaces.  
+ [out] The array that receives the namespaces.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

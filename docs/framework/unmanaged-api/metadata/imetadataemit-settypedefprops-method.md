@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 480d596a-759f-4d29-ac1a-3dbff8f3544d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: baee8566e923f9cb31868f8aa0e379ff1dfa42fc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3ab29fc8c983b354ad5088d26c547868940ec70a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777227"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447723"
 ---
 # <a name="imetadataemitsettypedefprops-method"></a>Método IMetaDataEmit::SetTypeDefProps
-Define os recursos de um tipo definido por uma chamada anterior a [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+Sets features of a type defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,23 +38,23 @@ HRESULT SetTypeDefProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `td`  
- [in] Uma `mdTypeDef` token obtido do chamada original à [imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
+ [in] An `mdTypeDef` token obtained from original call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` atributos. Esse é um bitmask de `CorTypeAttr` valores.  
+ [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
   
  `tkExtends`  
- [in] O `mdToken` da classe base. Obtido de uma chamada anterior a [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), ou `null`.  
+ [in] The `mdToken` of the base class. Obtained from a previous call to [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md), or `null`.  
   
  `rtkImplements[]`  
- [in] Uma matriz de tokens para as interfaces que esse tipo implementa. Eles `mdTypeRef` tokens são obtidos usando [imetadataemit:: Defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). É o último elemento da matriz deve ser `mdTokenNil`.  
+ [in] An array of tokens for the interfaces that this type implements. These `mdTypeRef` tokens are obtained using [IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md). The last element of the array is must be `mdTokenNil`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

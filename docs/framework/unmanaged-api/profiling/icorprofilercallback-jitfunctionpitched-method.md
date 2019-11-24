@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 116085df-7a77-404a-afac-d0557a12b986
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71df3bc707099cbad06742d964881ee629216b69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9bb3934be4a2f4de4a3a235a00522c801331e1eb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782813"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448421"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>Método ICorProfilerCallback::JITFunctionPitched
-Notifica o criador de perfil que uma função que tenha sido just-in-time (JIT)-compilado foi removido da memória.  
+Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +34,17 @@ HRESULT JITFunctionPitched(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] A ID da função que foi removida.  
+ [in] The ID of the function that was removed.  
   
 ## <a name="remarks"></a>Comentários  
- Se a função removida for chamada, o criador de perfil receberá novos eventos de compilação JIT quando a função é recompilada. Atualmente, o compilador JIT do common language runtime (CLR) não remove funções de memória, para que esse retorno de chamada não é usado atualmente e não será recebido pelo criador de perfil.  
+ If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled. Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.  
   
- O valor de `functionId` não é válida até que a função seja recompilada. Quando a função é recompilada, os mesmos `functionId` valor será usado.  
+ The value of `functionId` is not valid until the function is recompiled. When the function is recompiled, the same `functionId` value will be used.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

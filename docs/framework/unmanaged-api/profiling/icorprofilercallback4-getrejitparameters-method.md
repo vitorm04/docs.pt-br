@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 03b7ca218318df517832d198e72d4f79d30827b8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d81d7275d197de1dfc99b135377459f509c2651f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779243"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439443"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>Método ICorProfilerCallback4::GetReJITParameters
-Permite que o criador de perfil de código definir sinalizadores de geração de código alternativo para um novo corpo de método recompilada.  
+Allows the code profiler to set alternate code generation flags for a new recompiled method body.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,21 +33,21 @@ HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef met
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleID`  
- [in] O módulo que contém o método para o qual o CLR precisa de parâmetros de recompilação JIT.  
+ [in] The module that contains the method for which the CLR needs JIT recompilation parameters.  
   
  `methodId`  
- [in] O `MethodDef` do método para o qual o CLR precisa de parâmetros de recompilação JIT.  
+ [in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.  
   
  `pFunctionControl`  
- [in] Um ponteiro para um [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface que o criador de perfil pode usar para fornecer informações de recompilação JIT para o método que está sendo recompilado.  
+ [in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.  
   
 ## <a name="remarks"></a>Comentários  
- Os problemas CLR um `GetReJITParameters` retorno de chamada para que o criador de perfil pode especificar os parâmetros para recompilar um método em questão. O `GetReJITParameters` retorno de chamada é emitido apenas uma vez por função; os parâmetros fornecidos pelo criador de perfil se aplicam a todas as instâncias dessa função.  
+ The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method. The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

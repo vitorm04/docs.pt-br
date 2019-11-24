@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0ea9d9af-8709-4a46-872b-f54d9e840088
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e11886917964134a2530ae8484dba3cde5e7b61
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: da2906187c02bbc7a35c937663e3fc7db1ebda13
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759379"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433889"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>Método ISymUnmanagedNamespace::GetNamespaces
-Obtém o filho desse namespace.  
+Gets the children of this namespace.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,19 +37,19 @@ HRESULT GetNamespaces(
   
 ## <a name="parameters"></a>Parâmetros  
  `cNameSpaces`  
- [in] Um `ULONG32` que indica o tamanho do `namespaces` matriz.  
+ [in] A `ULONG32` that indicates the size of the `namespaces` array.  
   
  `pcNameSpaces`  
- [out] Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter os namespaces.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the namespaces.  
   
  `namespaces`  
- [out] Um ponteiro para o buffer que contém os namespaces.  
+ [out] A pointer to the buffer that contains the namespaces.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

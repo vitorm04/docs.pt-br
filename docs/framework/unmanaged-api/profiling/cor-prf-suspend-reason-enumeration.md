@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 75594833-bed3-47b2-a426-b75c5fe6fbcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e084bc957eca9474078ed5ca3aef0276361dbe1b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d2d9ca77e764fe439753f1174a42af5ef80faa59
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745532"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447710"
 ---
-# <a name="corprfsuspendreason-enumeration"></a>Enumeração COR_PRF_SUSPEND_REASON
-Indica o motivo que o tempo de execução é suspensa.  
+# <a name="cor_prf_suspend_reason-enumeration"></a>Enumeração COR_PRF_SUSPEND_REASON
+Indicates the reason that the runtime is suspended.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,22 +42,22 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_SUSPEND_OTHER`|O tempo de execução é suspensa por um motivo não especificado.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC`|O tempo de execução é suspensa para atender uma solicitação de coleta de lixo.<br /><br /> Os retornos de chamada relacionado à coleção lixo ocorrem entre o [ICorProfilerCallback:: Runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) e [ICorProfilerCallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) retornos de chamada.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|O tempo de execução é suspensa, de modo que um `AppDomain` pode ser desligado.<br /><br /> Embora o tempo de execução é suspensa, o tempo de execução determinará quais threads estão no `AppDomain` que é que está sendo desligado e defini-las para anular ao serem retomadas. Há nenhuma `AppDomain`-retornos de chamada específicos durante dessa suspensão.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|O tempo de execução é suspensa para que a densidade do código pode ocorrer.<br /><br /> Densidade do código massacre somente quando compilador just-in-time (JIT) está ativo com a densidade do código habilitado. Código de retornos de chamada de densidade ocorrem entre o `ICorProfilerCallback::RuntimeSuspendFinished` e `ICorProfilerCallback::RuntimeResumeStarted` retornos de chamada. **Observação:**  O CLR JIT não divulgue funções no .NET Framework versão 2.0, portanto, esse valor não é usado no 2.0.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|O tempo de execução é suspensa, de modo que seja desligado. Ele deve suspender todos os threads para concluir a operação.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|O tempo de execução é suspensa para depuração em andamento.|  
-|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|O tempo de execução é suspensa para se preparar para uma coleta de lixo.|  
-|`COR_PRF_SUSPEND_FOR_REJIT`|O tempo de execução é suspensa por recompilação JIT.|  
+|`COR_PRF_FIELD_SUSPEND_OTHER`|The runtime is suspended for an unspecified reason.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC`|The runtime is suspended to service a garbage collection request.<br /><br /> The garbage collection-related callbacks occur between the [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_APPDOMAIN_SHUTDOWN`|The runtime is suspended so that an `AppDomain` can be shut down.<br /><br /> While the runtime is suspended, the runtime will determine which threads are in the `AppDomain` that is being shut down and set them to abort when they resume. There are no `AppDomain`-specific callbacks during this suspension.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_CODE_PITCHING`|The runtime is suspended so that code pitching can occur.<br /><br /> Code pitching ensues only when the just-in-time (JIT) compiler is active with code pitching enabled. Code pitching callbacks occur between the `ICorProfilerCallback::RuntimeSuspendFinished` and `ICorProfilerCallback::RuntimeResumeStarted` callbacks. **Note:**  The CLR JIT does not pitch functions in the .NET Framework version 2.0, so this value is not used in 2.0.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_SHUTDOWN`|The runtime is suspended so that it can shut down. It must suspend all threads to complete the operation.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_INPROC_DEBUGGER`|The runtime is suspended for in-process debugging.|  
+|`COR_PRF_FIELD_SUSPEND_FOR_GC_PREP`|The runtime is suspended to prepare for a garbage collection.|  
+|`COR_PRF_SUSPEND_FOR_REJIT`|The runtime is suspended for JIT recompilation.|  
   
 ## <a name="remarks"></a>Comentários  
- Todos os threads de tempo de execução que estão em código não gerenciado têm permissão para continuar a execução até que eles tentarem inserir novamente o tempo de execução, no ponto em que eles serão também suspensos até que o tempo de execução é retomada. Isso também se aplica a novos threads que insira o tempo de execução. Todos os threads no tempo de execução são suspensos imediatamente se eles estiverem em código passível de interrupção ou solicitados a suspender quando atingem código passível de interrupção.  
+ All runtime threads that are in unmanaged code are permitted to continue running until they try to re-enter the runtime, at which point they will also be suspended until the runtime resumes. This also applies to new threads that enter the runtime. All threads within the runtime are either suspended immediately if they are in interruptible code, or asked to suspend when they do reach interruptible code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

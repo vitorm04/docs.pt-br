@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8cc3b0c3-d97d-4f71-9e7d-ef2a92b4959a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 187a5e673457d2d1eebb60cc1795e9885426c6d3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8e9e08ac903423b2e121f22cc9e43a660ccfac7b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781954"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450089"
 ---
 # <a name="imetadataimportenummethods-method"></a>Método IMetaDataImport::EnumMethods
-Enumera os tokens MethodDef que representam os métodos do tipo especificado.  
+Enumerates MethodDef tokens representing methods of the specified type.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,33 +39,33 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [no, out] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada desse método.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `cl`  
- [in] Um token de TypeDef que representa o tipo com os métodos para enumerar.  
+ [in] A TypeDef token representing the type with the methods to enumerate.  
   
  `rMethods`  
- [out] A matriz para armazenar os tokens MethodDef.  
+ [out] The array to store the MethodDef tokens.  
   
  `cMax`  
- [in] O tamanho máximo do MethodDef `rMethods` matriz.  
+ [in] The maximum size of the MethodDef `rMethods` array.  
   
  `pcTokens`  
- [out] O número de tokens MethodDef retornado no `rMethods`.  
+ [out] The number of MethodDef tokens returned in `rMethods`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` retornado com êxito.|  
-|`S_FALSE`|Não há nenhum token MethodDef para enumerar. Nesse caso, `pcTokens` é zero.|  
+|`S_OK`|`EnumMethods` returned successfully.|  
+|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

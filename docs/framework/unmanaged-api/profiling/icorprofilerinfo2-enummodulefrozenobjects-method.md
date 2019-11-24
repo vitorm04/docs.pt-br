@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 920b6483-7064-4d64-8613-fcc38ccf9b1e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3e044a9dedf96025981c1a77471c6abedfc26420
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 51e0c5b08b8a2ac3b8eaf38cdabd682078ba70c8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762379"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436044"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>Método ICorProfilerInfo2::EnumModuleFrozenObjects
-Obtém um enumerador que permite a iteração por meio de objetos congelados no módulo especificado. Este método é obsoleto.  
+Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,19 +35,19 @@ HRESULT EnumModuleFrozenObjects(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleID`  
- [in] A ID do módulo que contém os objetos congelados a ser enumerado.  
+ [in] The ID of the module that contains the frozen objects to be enumerated.  
   
  `ppEnum`  
- [out] Um ponteiro para o endereço de um [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, que enumera os objetos congelados.  
+ [out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0  
+ **.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0  
   
 ## <a name="see-also"></a>Consulte também
 

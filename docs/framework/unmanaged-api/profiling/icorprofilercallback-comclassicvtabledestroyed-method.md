@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f74e06ea4cb4d7a8eace8c7852f487bbdcbcd875
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0b0683d43778c4733b476e9feef459207b9d1ee6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964621"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445036"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>Método ICorProfilerCallback::COMClassicVTableDestroyed
-Notifica o criador de perfil de que uma interoperabilidade COM vtable está sendo destruída.  
+Notifies the profiler that a COM interop vtable is being destroyed.  
   
 > [!NOTE]
-> Esse retorno de chamada provavelmente nunca ocorrerá, pois a destruição de vtables ocorre muito perto do desligamento.  
+> This callback is likely never to occur, because the destruction of vtables occurs very close to shutdown.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,25 +39,25 @@ HRESULT COMClassicVTableDestroyed(
   
 ## <a name="parameters"></a>Parâmetros  
  `wrappedClassId`  
- no A ID da classe para a qual essa vtable foi criada.  
+ [in] The ID of the class for which this vtable was created.  
   
  `implementedIID`  
- no A ID da interface implementada pela classe. Esse valor pode ser nulo se a interface for somente interno.  
+ [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
   
  `pVTable`  
- no Um ponteiro para o início de vtable.  
+ [in] A pointer to the start of the vtable.  
   
 ## <a name="remarks"></a>Comentários  
- O criador de perfil não deve bloquear em sua implementação desse método porque a pilha pode não estar em um estado que permita a coleta de lixo e, portanto, a coleta de lixo preemptiva não pode ser habilitada. Se o criador de perfil for bloqueado aqui e a coleta de lixo for tentada, o tempo de execução será bloqueado até que esse retorno de chamada seja retornado.  
+ The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
   
- A implementação do criador de perfil desse método não deve chamar o código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
+ The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
   
 ## <a name="requirements"></a>Requisitos  
- **Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
- **Biblioteca** CorGuids.lib  
+ **Biblioteca:** CorGuids.lib  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
