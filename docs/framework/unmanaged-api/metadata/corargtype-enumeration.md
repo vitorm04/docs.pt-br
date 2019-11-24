@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3c1cb268-57a0-4664-91c7-f6908ff29e32
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ae7b61d056c08691e19e639353b6ab6fb8443c6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 689295610006824be1107577c50376e79551cddc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780939"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444367"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="8ef64-102">Enumeração CorArgType</span><span class="sxs-lookup"><span data-stu-id="8ef64-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="8ef64-103">Contém valores que descrevem o tipo nativo de um identificador de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="8ef64-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="1145a-102">Enumeração CorArgType</span><span class="sxs-lookup"><span data-stu-id="1145a-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="1145a-103">Contains values that describe the native type of a runtime handle.</span><span class="sxs-lookup"><span data-stu-id="1145a-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ef64-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8ef64-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1145a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1145a-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -46,13 +44,13 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="8ef64-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8ef64-105">Requirements</span></span>  
- <span data-ttu-id="8ef64-106">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8ef64-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1145a-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1145a-105">Requirements</span></span>  
+ <span data-ttu-id="1145a-106">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1145a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8ef64-107">**Cabeçalho:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8ef64-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="1145a-107">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="1145a-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="8ef64-108">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ef64-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1145a-108">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1145a-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8ef64-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8ef64-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1145a-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1145a-109">See also</span></span>
 
-- [<span data-ttu-id="8ef64-110">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="8ef64-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="1145a-110">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="1145a-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

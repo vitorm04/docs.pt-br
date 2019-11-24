@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: da941118-01b7-4197-ae5b-9f2f8adcd623
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c22e3c7c04a2b85723f1c0dba4543465faccab58
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6d8b408675127cde399a8346f2b9734a0e038cb5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745487"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427143"
 ---
-# <a name="corprftransitionreason-enumeration"></a><span data-ttu-id="54b81-102">Enumeração COR_PRF_TRANSITION_REASON</span><span class="sxs-lookup"><span data-stu-id="54b81-102">COR_PRF_TRANSITION_REASON Enumeration</span></span>
-<span data-ttu-id="54b81-103">Indica o motivo para uma transição de código gerenciado para não gerenciado ou vice-versa.</span><span class="sxs-lookup"><span data-stu-id="54b81-103">Indicates the reason for a transition from managed to unmanaged code, or vice versa.</span></span>  
+# <a name="cor_prf_transition_reason-enumeration"></a><span data-ttu-id="2b867-102">Enumeração COR_PRF_TRANSITION_REASON</span><span class="sxs-lookup"><span data-stu-id="2b867-102">COR_PRF_TRANSITION_REASON Enumeration</span></span>
+<span data-ttu-id="2b867-103">Indica o motivo para uma transição de código gerenciado para não gerenciado ou vice-versa.</span><span class="sxs-lookup"><span data-stu-id="2b867-103">Indicates the reason for a transition from managed to unmanaged code, or vice versa.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="54b81-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="54b81-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2b867-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2b867-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -35,21 +33,21 @@ typedef enum {
 } COR_PRF_TRANSITION_REASON;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="54b81-105">Membros</span><span class="sxs-lookup"><span data-stu-id="54b81-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2b867-105">Membros</span><span class="sxs-lookup"><span data-stu-id="2b867-105">Members</span></span>  
   
-|<span data-ttu-id="54b81-106">Membro</span><span class="sxs-lookup"><span data-stu-id="54b81-106">Member</span></span>|<span data-ttu-id="54b81-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="54b81-107">Description</span></span>|  
+|<span data-ttu-id="2b867-106">Membro</span><span class="sxs-lookup"><span data-stu-id="2b867-106">Member</span></span>|<span data-ttu-id="2b867-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="2b867-107">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|<span data-ttu-id="54b81-108">A transição é devido a uma chamada para uma função.</span><span class="sxs-lookup"><span data-stu-id="54b81-108">The transition is due to a call into a function.</span></span>|  
-|`COR_PRF_TRANSITION_RETURN`|<span data-ttu-id="54b81-109">A transição é devido a um retorno de uma função.</span><span class="sxs-lookup"><span data-stu-id="54b81-109">The transition is due to a return from a function.</span></span>|  
+|`COR_PRF_TRANSITION_CALL`|<span data-ttu-id="2b867-108">The transition is due to a call into a function.</span><span class="sxs-lookup"><span data-stu-id="2b867-108">The transition is due to a call into a function.</span></span>|  
+|`COR_PRF_TRANSITION_RETURN`|<span data-ttu-id="2b867-109">The transition is due to a return from a function.</span><span class="sxs-lookup"><span data-stu-id="2b867-109">The transition is due to a return from a function.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="54b81-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="54b81-110">Remarks</span></span>  
- <span data-ttu-id="54b81-111">Quando uma transição ocorre, o criador de perfil recebe um [ICorProfilerCallback:: Managedtounmanagedtransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) ou [ICorProfilerCallback:: Unmanagedtomanagedtransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) retorno de chamada, que Fornece um valor da `COR_PRF_TRANSITION_REASON` enumeração para indicar o motivo para a transição.</span><span class="sxs-lookup"><span data-stu-id="54b81-111">When a transition occurs, the profiler receives an [ICorProfilerCallback::ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) or [ICorProfilerCallback::UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, either of which provides a value of the `COR_PRF_TRANSITION_REASON` enumeration to indicate the reason for the transition.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2b867-110">Comentários</span><span class="sxs-lookup"><span data-stu-id="2b867-110">Remarks</span></span>  
+ <span data-ttu-id="2b867-111">When a transition occurs, the profiler receives an [ICorProfilerCallback::ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) or [ICorProfilerCallback::UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, either of which provides a value of the `COR_PRF_TRANSITION_REASON` enumeration to indicate the reason for the transition.</span><span class="sxs-lookup"><span data-stu-id="2b867-111">When a transition occurs, the profiler receives an [ICorProfilerCallback::ManagedToUnmanagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md) or [ICorProfilerCallback::UnmanagedToManagedTransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md) callback, either of which provides a value of the `COR_PRF_TRANSITION_REASON` enumeration to indicate the reason for the transition.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="54b81-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="54b81-112">Requirements</span></span>  
- <span data-ttu-id="54b81-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="54b81-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2b867-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2b867-112">Requirements</span></span>  
+ <span data-ttu-id="2b867-113">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2b867-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="54b81-114">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="54b81-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2b867-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2b867-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="54b81-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="54b81-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2b867-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2b867-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="54b81-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="54b81-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2b867-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2b867-116">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

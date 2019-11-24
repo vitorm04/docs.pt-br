@@ -14,19 +14,17 @@ helpviewer_keywords:
 ms.assetid: a656aad6-cc7e-4994-8251-004a6a45e18f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 906b5ef2795d8fad996185f66f145a8cd3618c41
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 086e17185df9caa823b44b51cf027f95d635c48d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781818"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450263"
 ---
-# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="ac6bb-102">Enumeração CorLinkerOptions</span><span class="sxs-lookup"><span data-stu-id="ac6bb-102">CorLinkerOptions Enumeration</span></span>
-<span data-ttu-id="ac6bb-103">Especifica os sinalizadores para selecionar opções para o vinculador de metadados.</span><span class="sxs-lookup"><span data-stu-id="ac6bb-103">Specifies flags to select options for the metadata linker.</span></span>  
+# <a name="corlinkeroptions-enumeration"></a><span data-ttu-id="983ed-102">Enumeração CorLinkerOptions</span><span class="sxs-lookup"><span data-stu-id="983ed-102">CorLinkerOptions Enumeration</span></span>
+<span data-ttu-id="983ed-103">Specifies flags to select options for the metadata linker.</span><span class="sxs-lookup"><span data-stu-id="983ed-103">Specifies flags to select options for the metadata linker.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ac6bb-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ac6bb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="983ed-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="983ed-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorLinkerOptions {  
@@ -35,20 +33,20 @@ typedef enum CorLinkerOptions {
 } CorLinkerOptions;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="ac6bb-105">Membros</span><span class="sxs-lookup"><span data-stu-id="ac6bb-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="983ed-105">Membros</span><span class="sxs-lookup"><span data-stu-id="983ed-105">Members</span></span>  
   
-|<span data-ttu-id="ac6bb-106">Membro</span><span class="sxs-lookup"><span data-stu-id="ac6bb-106">Member</span></span>|<span data-ttu-id="ac6bb-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="ac6bb-107">Description</span></span>|  
+|<span data-ttu-id="983ed-106">Membro</span><span class="sxs-lookup"><span data-stu-id="983ed-106">Member</span></span>|<span data-ttu-id="983ed-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="983ed-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDAssembly`|<span data-ttu-id="ac6bb-108">As funções globais e tipos privados não são preservadas.</span><span class="sxs-lookup"><span data-stu-id="ac6bb-108">The private types and global functions are not preserved.</span></span>|  
-|`MDNetModule`|<span data-ttu-id="ac6bb-109">As funções globais e tipos privados são preservadas.</span><span class="sxs-lookup"><span data-stu-id="ac6bb-109">The private types and global functions are preserved.</span></span>|  
+|`MDAssembly`|<span data-ttu-id="983ed-108">The private types and global functions are not preserved.</span><span class="sxs-lookup"><span data-stu-id="983ed-108">The private types and global functions are not preserved.</span></span>|  
+|`MDNetModule`|<span data-ttu-id="983ed-109">The private types and global functions are preserved.</span><span class="sxs-lookup"><span data-stu-id="983ed-109">The private types and global functions are preserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="ac6bb-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ac6bb-110">Requirements</span></span>  
- <span data-ttu-id="ac6bb-111">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac6bb-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="983ed-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="983ed-110">Requirements</span></span>  
+ <span data-ttu-id="983ed-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="983ed-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ac6bb-112">**Cabeçalho:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="ac6bb-112">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="983ed-112">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="983ed-112">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="ac6bb-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac6bb-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="983ed-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="983ed-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ac6bb-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ac6bb-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="983ed-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="983ed-114">See also</span></span>
 
-- [<span data-ttu-id="ac6bb-115">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="ac6bb-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="983ed-115">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="983ed-115">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

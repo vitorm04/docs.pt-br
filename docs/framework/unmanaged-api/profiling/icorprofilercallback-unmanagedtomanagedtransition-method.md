@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: ade2cc01-9b81-4e09-a5f9-b3b9dda27e96
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fa7dfe101b07ae6eb8d58daad85954f0ce29b02
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c4e132b90fa1f51bc6f858d75c159af212ec019
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747046"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439897"
 ---
-# <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a><span data-ttu-id="c962f-102">Método ICorProfilerCallback::UnmanagedToManagedTransition</span><span class="sxs-lookup"><span data-stu-id="c962f-102">ICorProfilerCallback::UnmanagedToManagedTransition Method</span></span>
-<span data-ttu-id="c962f-103">Notifica o criador de perfil que ocorreu uma transição de código não gerenciado para código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="c962f-103">Notifies the profiler that a transition from unmanaged code to managed code has occurred.</span></span>  
+# <a name="icorprofilercallbackunmanagedtomanagedtransition-method"></a><span data-ttu-id="43c4c-102">Método ICorProfilerCallback::UnmanagedToManagedTransition</span><span class="sxs-lookup"><span data-stu-id="43c4c-102">ICorProfilerCallback::UnmanagedToManagedTransition Method</span></span>
+<span data-ttu-id="43c4c-103">Notifies the profiler that a transition from unmanaged code to managed code has occurred.</span><span class="sxs-lookup"><span data-stu-id="43c4c-103">Notifies the profiler that a transition from unmanaged code to managed code has occurred.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c962f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c962f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43c4c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="43c4c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT UnmanagedToManagedTransition(  
@@ -35,30 +33,30 @@ HRESULT UnmanagedToManagedTransition(
     [in] COR_PRF_TRANSITION_REASON reason);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c962f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="c962f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="43c4c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="43c4c-105">Parameters</span></span>  
  `functionId`  
- <span data-ttu-id="c962f-106">[in] A ID da função que está sendo chamada.</span><span class="sxs-lookup"><span data-stu-id="c962f-106">[in] The ID of the function that is being called.</span></span>  
+ <span data-ttu-id="43c4c-106">[in] The ID of the function that is being called.</span><span class="sxs-lookup"><span data-stu-id="43c4c-106">[in] The ID of the function that is being called.</span></span>  
   
  `reason`  
- <span data-ttu-id="c962f-107">[in] Um valor igual a [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeração que indica se a transição ocorreu devido a uma chamada para o código gerenciado do código não gerenciado, ou devido a um retorno de uma função não gerenciada chamado por um gerenciado.</span><span class="sxs-lookup"><span data-stu-id="c962f-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.</span></span>  
+ <span data-ttu-id="43c4c-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.</span><span class="sxs-lookup"><span data-stu-id="43c4c-107">[in] A value of the [COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md) enumeration that indicates whether the transition occurred because of a call into managed code from unmanaged code, or because of a return from an unmanaged function called by a managed one.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c962f-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="c962f-108">Remarks</span></span>  
- <span data-ttu-id="c962f-109">Se o valor de `reason` é COR_PRF_TRANSITION_RETURN e `functionId` não for nulo, a função ID é o de função não gerenciada e nunca foram compilado usando o compilador just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="c962f-109">If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="c962f-110">Funções não gerenciadas têm algumas informações básicas associadas a eles, como um nome e alguns metadados.</span><span class="sxs-lookup"><span data-stu-id="c962f-110">Unmanaged functions have some basic information associated with them, such as a name and some metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="43c4c-108">Comentários</span><span class="sxs-lookup"><span data-stu-id="43c4c-108">Remarks</span></span>  
+ <span data-ttu-id="43c4c-109">If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler.</span><span class="sxs-lookup"><span data-stu-id="43c4c-109">If the value of `reason` is COR_PRF_TRANSITION_RETURN and `functionId` is not null, the function ID is that of the unmanaged function, and will never have been compiled using the just-in-time (JIT) compiler.</span></span> <span data-ttu-id="43c4c-110">Unmanaged functions have some basic information associated with them, such as a name and some metadata.</span><span class="sxs-lookup"><span data-stu-id="43c4c-110">Unmanaged functions have some basic information associated with them, such as a name and some metadata.</span></span>  
   
- <span data-ttu-id="c962f-111">Se o valor de `reason` é COR_PRF_TRANSITION_CALL, talvez seja possível que a função de chamada (ou seja, a função gerenciada) ainda não foi compilado por JIT.</span><span class="sxs-lookup"><span data-stu-id="c962f-111">If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.</span></span>  
+ <span data-ttu-id="43c4c-111">If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.</span><span class="sxs-lookup"><span data-stu-id="43c4c-111">If the value of `reason` is COR_PRF_TRANSITION_CALL, it may be possible that the called function (that is, the managed function) has not yet been JIT-compiled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c962f-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c962f-112">Requirements</span></span>  
- <span data-ttu-id="c962f-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c962f-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43c4c-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="43c4c-112">Requirements</span></span>  
+ <span data-ttu-id="43c4c-113">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="43c4c-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c962f-114">**Cabeçalho:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="c962f-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="43c4c-114">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="43c4c-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="c962f-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c962f-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="43c4c-115">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="43c4c-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c962f-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c962f-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="43c4c-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="43c4c-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c962f-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c962f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43c4c-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="43c4c-117">See also</span></span>
 
-- [<span data-ttu-id="c962f-118">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="c962f-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="c962f-119">Método ManagedToUnmanagedTransition</span><span class="sxs-lookup"><span data-stu-id="c962f-119">ManagedToUnmanagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)
-- [<span data-ttu-id="c962f-120">Usando PInvoke explícito no C++ (atributo DllImport)</span><span class="sxs-lookup"><span data-stu-id="c962f-120">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
-- [<span data-ttu-id="c962f-121">Usando interop do C++ (PInvoke implícito)</span><span class="sxs-lookup"><span data-stu-id="c962f-121">Using C++ Interop (Implicit PInvoke)</span></span>](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)
+- [<span data-ttu-id="43c4c-118">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="43c4c-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="43c4c-119">Método ManagedToUnmanagedTransition</span><span class="sxs-lookup"><span data-stu-id="43c4c-119">ManagedToUnmanagedTransition Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)
+- [<span data-ttu-id="43c4c-120">Usando PInvoke explícito no C++ (atributo DllImport)</span><span class="sxs-lookup"><span data-stu-id="43c4c-120">Using Explicit PInvoke in C++ (DllImport Attribute)</span></span>](/cpp/dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute)
+- [<span data-ttu-id="43c4c-121">Usando interop do C++ (PInvoke implícito)</span><span class="sxs-lookup"><span data-stu-id="43c4c-121">Using C++ Interop (Implicit PInvoke)</span></span>](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)

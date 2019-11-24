@@ -1,23 +1,23 @@
 ---
-title: CoreFx alterações significativas – .NET Core
-description: Lista as alterações significativas no .NET CoreFx, a biblioteca de classes base.
+title: Base class library breaking changes - .NET Core
+description: Lists the breaking changes in .NET CoreFx, the base class library.
 ms.date: 09/20/2019
-ms.openlocfilehash: 028a5c1059a855d1de644dde9fd9ad5f85f47ffe
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 859eb30b8f6fa48350f81ee1822247e72698fead
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739794"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429198"
 ---
-# <a name="corefx-breaking-changes"></a><span data-ttu-id="ffbe8-103">CoreFx alterações significativas</span><span class="sxs-lookup"><span data-stu-id="ffbe8-103">CoreFx breaking changes</span></span>
+# <a name="corefx-breaking-changes"></a><span data-ttu-id="1976d-103">CoreFx breaking changes</span><span class="sxs-lookup"><span data-stu-id="1976d-103">CoreFx breaking changes</span></span>
 
-<span data-ttu-id="ffbe8-104">A seguir está uma lista de alterações significativas de CoreFx pela versão do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ffbe8-104">The following is a list of CoreFx breaking changes by .NET Core version.</span></span> <span data-ttu-id="ffbe8-105">O CoreFx fornece os primitivos e outros tipos gerais usados pelo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="ffbe8-105">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
+<span data-ttu-id="1976d-104">The following is a list of CoreFx breaking changes by .NET Core version.</span><span class="sxs-lookup"><span data-stu-id="1976d-104">The following is a list of CoreFx breaking changes by .NET Core version.</span></span> <span data-ttu-id="1976d-105">CoreFx provides the primitives and other general types used by .NET Core.</span><span class="sxs-lookup"><span data-stu-id="1976d-105">CoreFx provides the primitives and other general types used by .NET Core.</span></span>
 
-## <a name="net-core-30-preview-7"></a><span data-ttu-id="ffbe8-106">.NET Core 3,0 Preview 7</span><span class="sxs-lookup"><span data-stu-id="ffbe8-106">.NET Core 3.0 Preview 7</span></span>
+## <a name="net-core-30-preview-7"></a><span data-ttu-id="1976d-106">.NET Core 3.0 Preview 7</span><span class="sxs-lookup"><span data-stu-id="1976d-106">.NET Core 3.0 Preview 7</span></span>
 
 [!INCLUDE[JsonElement API changes](~/includes/core-changes/corefx/jsonelement-api-changes.md)]
 
-## <a name="net-core-30-preview-8"></a><span data-ttu-id="ffbe8-107">.NET Core 3,0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="ffbe8-107">.NET Core 3.0 Preview 8</span></span>
+## <a name="net-core-30-preview-8"></a><span data-ttu-id="1976d-107">.NET Core 3.0 Preview 8</span><span class="sxs-lookup"><span data-stu-id="1976d-107">.NET Core 3.0 Preview 8</span></span>
 
 [!INCLUDE[Change in semantics of (string)null in Utf8JsonWriter](~/includes/core-changes/corefx/change-in-null-in-utf8jsonwriter.md)]
 
@@ -29,11 +29,11 @@ ms.locfileid: "73739794"
 
 [!INCLUDE[JsonFactoryConverter.CreateConverter signature changed](~/includes/core-changes/corefx/jsonfactoryconverter-createconverter.md)]
 
-## <a name="net-core-30-preview-9"></a><span data-ttu-id="ffbe8-108">.NET Core 3,0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="ffbe8-108">.NET Core 3.0 Preview 9</span></span>
+## <a name="net-core-30-preview-9"></a><span data-ttu-id="1976d-108">.NET Core 3.0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="1976d-108">.NET Core 3.0 Preview 9</span></span>
 
 [!INCLUDE[Json serializer exception type changed from JsonException to NotSupportedException](~/includes/core-changes/corefx/serializer-throws-notsupportedexception.md)]
 
-## <a name="net-core-30"></a><span data-ttu-id="ffbe8-109">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="ffbe8-109">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="1976d-109">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="1976d-109">.NET Core 3.0</span></span>
 
 [!INCLUDE[APIs that report version now report product and not file version](~/includes/core-changes/corefx/version-information-changes.md)]
 

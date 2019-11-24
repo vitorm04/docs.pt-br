@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: d6f9ac84-302a-4f5e-b990-e76f4269fceb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3f45423bb0ff4c755e657729c5725c8d9a22bde3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fcaf748413321f684336543e60f735af69894b51
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746769"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436002"
 ---
-# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="b03da-102">Método ISymUnmanagedReader::GetMethodVersion</span><span class="sxs-lookup"><span data-stu-id="b03da-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
-<span data-ttu-id="b03da-103">Obtém a versão do método.</span><span class="sxs-lookup"><span data-stu-id="b03da-103">Gets the method version.</span></span> <span data-ttu-id="b03da-104">A versão do método começa em 1 e é incrementada toda vez que o método for recompilado.</span><span class="sxs-lookup"><span data-stu-id="b03da-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="b03da-105">A recompilação pode acontecer sem alterações para o método.</span><span class="sxs-lookup"><span data-stu-id="b03da-105">Recompilation can happen without changes to the method.</span></span>  
+# <a name="isymunmanagedreadergetmethodversion-method"></a><span data-ttu-id="a07e2-102">Método ISymUnmanagedReader::GetMethodVersion</span><span class="sxs-lookup"><span data-stu-id="a07e2-102">ISymUnmanagedReader::GetMethodVersion Method</span></span>
+<span data-ttu-id="a07e2-103">Gets the method version.</span><span class="sxs-lookup"><span data-stu-id="a07e2-103">Gets the method version.</span></span> <span data-ttu-id="a07e2-104">The method version starts at 1 and is incremented each time the method is recompiled.</span><span class="sxs-lookup"><span data-stu-id="a07e2-104">The method version starts at 1 and is incremented each time the method is recompiled.</span></span> <span data-ttu-id="a07e2-105">Recompilation can happen without changes to the method.</span><span class="sxs-lookup"><span data-stu-id="a07e2-105">Recompilation can happen without changes to the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b03da-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b03da-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a07e2-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a07e2-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetMethodVersion (  
@@ -35,19 +33,19 @@ HRESULT GetMethodVersion (
     [out] int* version);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b03da-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="b03da-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a07e2-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a07e2-107">Parameters</span></span>  
  `pMethod`  
- <span data-ttu-id="b03da-108">[in] O método para o qual obter a versão.</span><span class="sxs-lookup"><span data-stu-id="b03da-108">[in] The method for which to get the version.</span></span>  
+ <span data-ttu-id="a07e2-108">[in] The method for which to get the version.</span><span class="sxs-lookup"><span data-stu-id="a07e2-108">[in] The method for which to get the version.</span></span>  
   
  `version`  
- <span data-ttu-id="b03da-109">[out] Um ponteiro para uma variável que recebe a versão do método.</span><span class="sxs-lookup"><span data-stu-id="b03da-109">[out] A pointer to a variable that receives the method version.</span></span>  
+ <span data-ttu-id="a07e2-109">[out] A pointer to a variable that receives the method version.</span><span class="sxs-lookup"><span data-stu-id="a07e2-109">[out] A pointer to a variable that receives the method version.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b03da-110">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="b03da-110">Return Value</span></span>  
- <span data-ttu-id="b03da-111">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="b03da-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a07e2-110">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="a07e2-110">Return Value</span></span>  
+ <span data-ttu-id="a07e2-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="a07e2-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b03da-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b03da-112">Requirements</span></span>  
- <span data-ttu-id="b03da-113">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b03da-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a07e2-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a07e2-112">Requirements</span></span>  
+ <span data-ttu-id="a07e2-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a07e2-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b03da-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b03da-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a07e2-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a07e2-114">See also</span></span>
 
-- [<span data-ttu-id="b03da-115">Interface ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="b03da-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="a07e2-115">Interface ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="a07e2-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

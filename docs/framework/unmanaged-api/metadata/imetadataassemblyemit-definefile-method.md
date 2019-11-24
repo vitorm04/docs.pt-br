@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54d5a233da2bf033d960fd02961ac89eb57151d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776292"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440214"
 ---
-# <a name="imetadataassemblyemitdefinefile-method"></a><span data-ttu-id="80a6f-102">Método IMetaDataAssemblyEmit::DefineFile</span><span class="sxs-lookup"><span data-stu-id="80a6f-102">IMetaDataAssemblyEmit::DefineFile Method</span></span>
-<span data-ttu-id="80a6f-103">Cria um `File` estrutura de metadados que contém metadados de assembly referenciados por esse assembly e retorna o token de metadados associados.</span><span class="sxs-lookup"><span data-stu-id="80a6f-103">Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.</span></span>  
+# <a name="imetadataassemblyemitdefinefile-method"></a><span data-ttu-id="ac314-102">Método IMetaDataAssemblyEmit::DefineFile</span><span class="sxs-lookup"><span data-stu-id="ac314-102">IMetaDataAssemblyEmit::DefineFile Method</span></span>
+<span data-ttu-id="ac314-103">Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.</span><span class="sxs-lookup"><span data-stu-id="ac314-103">Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="80a6f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="80a6f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ac314-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ac314-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT DefineFile (  
@@ -39,34 +37,34 @@ HRESULT DefineFile (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="80a6f-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="80a6f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ac314-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ac314-105">Parameters</span></span>  
  `szName`  
- <span data-ttu-id="80a6f-106">[in] O nome do arquivo a ser consumido.</span><span class="sxs-lookup"><span data-stu-id="80a6f-106">[in] The name of the file to be consumed.</span></span>  
+ <span data-ttu-id="ac314-106">[in] The name of the file to be consumed.</span><span class="sxs-lookup"><span data-stu-id="ac314-106">[in] The name of the file to be consumed.</span></span>  
   
  `pbHashValue`  
- <span data-ttu-id="80a6f-107">[in] Um ponteiro para o hash de dados associados ao assembly.</span><span class="sxs-lookup"><span data-stu-id="80a6f-107">[in] A pointer to the hash data associated with the assembly.</span></span>  
+ <span data-ttu-id="ac314-107">[in] A pointer to the hash data associated with the assembly.</span><span class="sxs-lookup"><span data-stu-id="ac314-107">[in] A pointer to the hash data associated with the assembly.</span></span>  
   
  `cbHashValue`  
- <span data-ttu-id="80a6f-108">[in] O tamanho em bytes do `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="80a6f-108">[in] The size in bytes of `pbHashValue`.</span></span>  
+ <span data-ttu-id="ac314-108">[in] The size in bytes of `pbHashValue`.</span><span class="sxs-lookup"><span data-stu-id="ac314-108">[in] The size in bytes of `pbHashValue`.</span></span>  
   
  `dwFileFlags`  
- <span data-ttu-id="80a6f-109">[in] Uma combinação bit a bit de `FileFlags` valores que especificam as configurações de propriedade.</span><span class="sxs-lookup"><span data-stu-id="80a6f-109">[in] A bitwise combination of `FileFlags` values that specify property settings.</span></span>  
+ <span data-ttu-id="ac314-109">[in] A bitwise combination of `FileFlags` values that specify property settings.</span><span class="sxs-lookup"><span data-stu-id="ac314-109">[in] A bitwise combination of `FileFlags` values that specify property settings.</span></span>  
   
  `pmdf`  
- <span data-ttu-id="80a6f-110">[out] Um ponteiro para retornado `File` token.</span><span class="sxs-lookup"><span data-stu-id="80a6f-110">[out] A pointer to the returned `File` token.</span></span>  
+ <span data-ttu-id="ac314-110">[out] A pointer to the returned `File` token.</span><span class="sxs-lookup"><span data-stu-id="ac314-110">[out] A pointer to the returned `File` token.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="80a6f-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="80a6f-111">Remarks</span></span>  
- <span data-ttu-id="80a6f-112">Um `File` estrutura de metadados deve ser definida para cada arquivo que foi parte desse assembly no momento em que este assembly foi compilado, excluindo o arquivo que contém os metadados.</span><span class="sxs-lookup"><span data-stu-id="80a6f-112">One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ac314-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="ac314-111">Remarks</span></span>  
+ <span data-ttu-id="ac314-112">One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.</span><span class="sxs-lookup"><span data-stu-id="ac314-112">One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="80a6f-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="80a6f-113">Requirements</span></span>  
- <span data-ttu-id="80a6f-114">**Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80a6f-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ac314-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ac314-113">Requirements</span></span>  
+ <span data-ttu-id="ac314-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ac314-114">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="80a6f-115">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="80a6f-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="ac314-115">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ac314-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="80a6f-116">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="80a6f-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="ac314-116">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ac314-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="80a6f-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80a6f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="ac314-117">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ac314-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="80a6f-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="80a6f-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ac314-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ac314-118">See also</span></span>
 
-- [<span data-ttu-id="80a6f-119">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="80a6f-119">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [<span data-ttu-id="ac314-119">Interface IMetaDataAssemblyEmit</span><span class="sxs-lookup"><span data-stu-id="ac314-119">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
