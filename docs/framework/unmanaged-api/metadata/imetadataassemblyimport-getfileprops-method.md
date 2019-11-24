@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4f3883b0cd1b7aca6265b738eace483c81eb37b9
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67760144"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447218"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>Método IMetaDataAssemblyImport::GetFileProps
-Obtém as propriedades do arquivo com a assinatura de metadados especificado.  
+Obtém as propriedades do arquivo com a assinatura de metadados especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,32 +41,32 @@ HRESULT GetFileProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `mdf`  
- [in] O `mdFile` token de metadados que representa o arquivo para o qual obter as propriedades.  
+ no O `mdFile` token de metadados que representa o arquivo para o qual obter as propriedades.  
   
  `szName`  
- [out] O nome simples do arquivo.  
+ fora O nome simples do arquivo.  
   
  `cchName`  
- [in] O tamanho, em caracteres largos, de `szName`.  
+ no O tamanho, em caracteres largos, de `szName`.  
   
  `pchName`  
- [out] O número de caracteres largos, na verdade, é retornado no `szName`.  
+ fora O número de caracteres largos realmente retornados em `szName`.  
   
  `ppbHashValue`  
- [out] Um ponteiro para o valor de hash. Isso é o hash, usando o algoritmo SHA-1, do arquivo.  
+ fora Um ponteiro para o valor de hash. Esse é o hash, usando o algoritmo SHA-1 do arquivo.  
   
  `pcbHashValue`  
- [out] O número de caracteres largos no valor de hash retornado.  
+ fora O número de caracteres largos no valor de hash retornado.  
   
  `pdwFileFlags`  
- [out] Um ponteiro para os sinalizadores que descrevem os metadados aplicado a um arquivo. O valor de sinalizadores é uma combinação de um ou mais [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) valores.  
+ fora Um ponteiro para os sinalizadores que descrevem os metadados aplicados a um arquivo. O valor de flags é uma combinação de um ou mais valores de [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) .  
   
-## <a name="requirements"></a>Requisitos  
- **Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataforma:** Consulte [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

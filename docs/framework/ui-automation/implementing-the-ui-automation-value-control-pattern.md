@@ -6,16 +6,16 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 75cf628b6faad1f8c52a70c77baa4ede21160510
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c178283b18aaf2c406292d9ab7e12a24c882c102
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458138"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447047"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>Implementando o Padrão Controle de Value de Automação de Interface de Usuário
 > [!NOTE]
-> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).  
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
  Este tópico apresenta as diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.IValueProvider>, incluindo informações sobre eventos e propriedades. Links para referências adicionais são listados no final do tópico.  
   
@@ -47,10 +47,10 @@ Exemplo de mapeamento de cadeia de caracteres de amostra de cor
 ## <a name="required-members-for-ivalueprovider"></a>Membros necessários para IValueProvider  
  As propriedades e os métodos a seguir são necessários para implementar <xref:System.Windows.Automation.Provider.IValueProvider>.  
   
-|Membros necessários|Tipo de membro|Anotações|  
+|Membros necessários|Tipo de membro|{1&gt;Observações&lt;1}|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|propriedade|Nenhum|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|Propriedade|Nenhum|  
 |<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|Método|Nenhum|  
   
 <a name="Exceptions"></a>   

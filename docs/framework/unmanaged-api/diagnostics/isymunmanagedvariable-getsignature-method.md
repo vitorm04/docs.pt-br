@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78c1ba28-a410-4360-805c-23a95408964a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: abd4bb00f5c1e703740462f1709407616ac8a8e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2939d9cf3991a9e0b8f93bb301925b1092eca50e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778234"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446040"
 ---
 # <a name="isymunmanagedvariablegetsignature-method"></a>Método ISymUnmanagedVariable::GetSignature
 Obtém a assinatura dessa variável.  
@@ -39,19 +37,19 @@ HRESULT GetSignature(
   
 ## <a name="parameters"></a>Parâmetros  
  `cSig`  
- [in] O comprimento do buffer apontado pelo `sig` parâmetro.  
+ no O comprimento do buffer apontado pelo parâmetro `sig`.  
   
  `pcSig`  
- [out] Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter a assinatura.  
+ fora Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter a assinatura.  
   
  `sig`  
- [out] O buffer que armazena a assinatura.  
+ fora O buffer que armazena a assinatura.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

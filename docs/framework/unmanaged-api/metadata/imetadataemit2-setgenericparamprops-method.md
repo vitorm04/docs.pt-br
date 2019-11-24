@@ -15,14 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0c9f104329818f47597e8735389e5e6205ca617
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7a93bbe0d7a9d9e6ff7505bbc215efa79176ad1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777109"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440442"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>Método IMetaDataEmit2::SetGenericParamProps
 Define valores de propriedade para a definição de parâmetro genérico referenciada pelo token especificado.  
@@ -41,26 +39,26 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `gp`  
- [in] O token para a definição de parâmetro genérico para o qual definir valores.  
+ no O token para a definição de parâmetro genérico para a qual definir valores.  
   
  `dwParamFlags`  
- [in] Um valor igual a [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) enumeração que descreve o tipo para o parâmetro genérico.  
+ no Um valor da enumeração [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) que descreve o tipo para o parâmetro genérico.  
   
  `szName`  
  [in] Opcional. O nome do parâmetro para o qual definir valores.  
   
  `reserved`  
- [in] Reservado para extensibilidade futura.  
+ no Reservado para extensibilidade futura.  
   
  `rtkConstraints`  
- [in] Opcional. Uma matriz terminada em zero de restrições de tipo. Membros da matriz devem ser um `mdTypeDef`, `mdTypeRef`, ou `mdTypeSpec` token de metadados.  
+ [in] Opcional. Uma matriz de restrições de tipo terminada em zero. Os membros da matriz devem ser um `mdTypeDef`, `mdTypeRef`ou `mdTypeSpec` token de metadados.  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

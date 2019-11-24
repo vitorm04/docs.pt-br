@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: decd4f46-f3b2-466f-9501-e74f2b86b846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c402dcda79f013b19b091c6309b3d71951018a18
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 23d293a87112c62cb2127b435faeca258a7de226
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776362"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444230"
 ---
 # <a name="assemblyrefflags-enumeration"></a>Enumeração AssemblyRefFlags
 Contém valores que descrevem os recursos de uma referência de assembly.  
@@ -38,12 +36,12 @@ typedef enum {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`arfFullOriginator`|Especifica que a referência do assembly contém completas, sem hash informações sobre o Editor do assembly.|  
+|`arfFullOriginator`|Especifica que a referência de assembly contém informações completas e sem hash sobre o Publicador do assembly.|  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

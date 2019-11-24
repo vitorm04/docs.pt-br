@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4729a8d3ac2c6f7ec51a032a07ebfd1c2838cb9a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ae9cb089ad6c0b0422063d3db413b97eb6ff1405
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782905"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445792"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>Método ICorProfilerCallback::RemotingClientSendingMessage
-Notifica o criador de perfil que o cliente está enviando uma solicitação ao servidor.  
+Notifica o criador de perfil de que o cliente está enviando uma solicitação para o servidor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,23 +35,23 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parâmetros  
  `pCookie`  
- [in] Um valor que corresponde com o valor fornecido no [ICorProfilerCallback:: Remotingserverreceivingmessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) sob estas condições:  
+ no Um valor que corresponde ao valor fornecido em [ICorProfilerCallback:: RemotingServerReceivingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverreceivingmessage-method.md) sob estas condições:  
   
-- Cookies GUID de comunicação remota estão ativos.  
+- Os cookies de GUID de comunicação remota estão ativos.  
   
-- O canal é bem-sucedida na transmissão de mensagem.  
+- O canal tem sucesso ao transmitir a mensagem.  
   
-- Os cookies GUID são Active Directory sobre o processo do lado do servidor.  
+- Os cookies de GUID estão ativos no processo do lado do servidor.  
   
- Isso permite que o emparelhamento fácil de chamadas de comunicação remota e a criação de uma pilha de chamadas lógicas.  
+ Isso permite um emparelhamento fácil de chamadas remotas e a criação de uma pilha de chamadas lógica.  
   
  `fIsAsync`  
- [in] Um valor que é `true` se a chamada é assíncrona; caso contrário, `false`.  
+ no Um valor que será `true` se a chamada for assíncrona; caso contrário, `false`.  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

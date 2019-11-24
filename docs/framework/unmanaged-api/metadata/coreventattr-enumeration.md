@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc2b3281-3820-487e-930d-350b66dc6417
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7562ec10b6822ae0ec1478cdb077578493ea0b7a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ec2972605c40f4ba292f5a5f58d6d3efed53f966
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781876"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443563"
 ---
 # <a name="coreventattr-enumeration"></a>Enumeração CorEventAttr
 Contém valores que descrevem os metadados de um evento.  
@@ -43,14 +41,14 @@ typedef enum CorEventAttr {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`evSpecialName`|Especifica que o evento é especial, e que seu nome descreve como.|  
-|`evReservedMask`|Reservado para uso interno pelo common language runtime.|  
-|`evRTSpecialName`|Especifica que o common language runtime deve verificar a codificação do nome do evento.|  
+|`evSpecialName`|Especifica que o evento é especial e que seu nome descreve como.|  
+|`evReservedMask`|Reservado para uso interno pelo Common Language Runtime.|  
+|`evRTSpecialName`|Especifica que a Common Language Runtime deve verificar a codificação do nome do evento.|  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

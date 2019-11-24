@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e47a72f1-9609-48ed-bb34-97170d7f6890
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 846c754aeb0a710fa70e906e666f694eaa77c576
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ef4788891e91608a394482319a89b8b0d258449f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781703"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436520"
 ---
 # <a name="cornativetype-enumeration"></a>Enumeração CorNativeType
-Contém valores que descrevem os tipos não gerenciados nativos.  
+Contém valores que descrevem os tipos nativos não gerenciados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -93,28 +91,28 @@ typedef enum CorNativeType {
 |------------|-----------------|  
 |`NATIVE_TYPE_END`|Obsoleto.|  
 |`NATIVE_TYPE_VOID`|Obsoleto.|  
-|`NATIVE_TYPE_BOOLEAN`|Um valor booliano de 4 bytes, onde TRUE é diferente de zero e FALSE é zero.|  
-|`NATIVE_TYPE_I1`|Um valor inteiro com sinal de 8 bits.|  
-|`NATIVE_TYPE_U1`|Um valor inteiro de 8 bits sem sinal.|  
-|`NATIVE_TYPE_I2`|Um valor inteiro com sinal de 16 bits.|  
+|`NATIVE_TYPE_BOOLEAN`|Um valor booliano de 4 bytes, em que TRUE é diferente de zero e FALSE é zero.|  
+|`NATIVE_TYPE_I1`|Um valor inteiro de 8 bits assinado.|  
+|`NATIVE_TYPE_U1`|Um valor inteiro de 8 bits não assinado.|  
+|`NATIVE_TYPE_I2`|Um valor inteiro de 16 bits assinado.|  
 |`NATIVE_TYPE_U2`|Um valor inteiro sem sinal de 16 bits.|  
 |`NATIVE_TYPE_I4`|Um valor inteiro de 32 bits com sinal.|  
 |`NATIVE_TYPE_U4`|Um valor inteiro de 32 bits sem sinal.|  
-|`NATIVE_TYPE_I8`|Um valor inteiro com sinal de 64 bits.|  
-|`NATIVE_TYPE_U8`|Um valor inteiro sem sinal de 64 bits.|  
-|`NATIVE_TYPE_R4`|Um valor numérico ponto flutuante de 4 bytes.|  
-|`NATIVE_TYPE_R8`|Um valor numérico ponto flutuante de 8 bytes.|  
+|`NATIVE_TYPE_I8`|Um valor inteiro de 64 bits assinado.|  
+|`NATIVE_TYPE_U8`|Um valor inteiro de 64 bits sem sinal.|  
+|`NATIVE_TYPE_R4`|Um valor numérico de ponto flutuante de 4 bytes.|  
+|`NATIVE_TYPE_R8`|Um valor numérico de ponto flutuante de 8 bytes.|  
 |`NATIVE_TYPE_SYSCHAR`|Obsoleto.|  
 |`NATIVE_TYPE_VARIANT`|Obsoleto.|  
-|`NATIVE_TYPE_CURRENCY`|Um tipo COM numérico que corresponde ao gerenciado <xref:System.Decimal> tipo.|  
+|`NATIVE_TYPE_CURRENCY`|Um tipo COM numérico que corresponde ao tipo de <xref:System.Decimal> gerenciado.|  
 |`NATIVE_TYPE_PTR`|Obsoleto.|  
 |`NATIVE_TYPE_DECIMAL`|Obsoleto.|  
 |`NATIVE_TYPE_DATE`|Obsoleto.|  
 |`NATIVE_TYPE_BSTR`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_LPSTR`|Um valor de cadeia de caracteres LPSTR.|  
 |`NATIVE_TYPE_LPWSTR`|Um valor de cadeia de caracteres LPWSTR.|  
-|`NATIVE_TYPE_LPTSTR`|Um valor de cadeia de caracteres LPTSTR.|  
-|`NATIVE_TYPE_FIXEDSYSSTRING`|Um valor de cadeia de caracteres fixa e definida pelo sistema.|  
+|`NATIVE_TYPE_LPTSTR`|Um valor de cadeia de caracteres do LPTSTR.|  
+|`NATIVE_TYPE_FIXEDSYSSTRING`|Um valor de cadeia de caracteres fixo definido pelo sistema.|  
 |`NATIVE_TYPE_OBJECTREF`|Obsoleto.|  
 |`NATIVE_TYPE_IUNKNOWN`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_IDISPATCH`|Interoperabilidade COM.|  
@@ -122,27 +120,27 @@ typedef enum CorNativeType {
 |`NATIVE_TYPE_INTF`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_SAFEARRAY`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_FIXEDARRAY`|Um valor de matriz de comprimento fixo.|  
-|`NATIVE_TYPE_INT`|Um valor inteiro com sinal de 16 bits nativo.|  
-|`NATIVE_TYPE_UINT`|Um valor inteiro sem sinal de 16 bits nativo.|  
+|`NATIVE_TYPE_INT`|Um valor inteiro de 16 bits com sinal nativo.|  
+|`NATIVE_TYPE_UINT`|Um valor inteiro nativo de 16 bits sem sinal.|  
 |`NATIVE_TYPE_NESTEDSTRUCT`|Obsoleto.<br /><br /> Use NATIVE_TYPE_STRUCT.|  
 |`NATIVE_TYPE_BYVALSTR`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_ANSIBSTR`|Interoperabilidade COM.|  
 |`NATIVE_TYPE_TBSTR`|Interoperabilidade COM.<br /><br /> Selecione BSTR ou ANSIBSTR dependendo da plataforma.|  
-|`NATIVE_TYPE_VARIANTBOOL`|Um 2 bytes valor booliano, em que verdadeiro é -1 e FALSE é zero.|  
+|`NATIVE_TYPE_VARIANTBOOL`|Um valor booliano de 2 bytes, em que TRUE é-1 e FALSE é zero.|  
 |`NATIVE_TYPE_FUNC`|Um ponteiro de função.|  
 |`NATIVE_TYPE_ASANY`|Uma referência a qualquer tipo nativo.|  
-|`NATIVE_TYPE_ARRAY`|Uma referência a uma matriz com os membros de um tipo não especificado.|  
+|`NATIVE_TYPE_ARRAY`|Uma referência a uma matriz com membros de um tipo não especificado.|  
 |`NATIVE_TYPE_LPSTRUCT`|Um ponteiro de inteiro de 32 bits para uma estrutura.|  
-|`NATIVE_TYPE_CUSTOMMARSHALER`|Um tipo nativo do empacotador personalizado.<br /><br /> Isso deve ser seguido por uma cadeia de caracteres de formato a seguir: "Tipo de marshaler 0Custom/nome de tipo nativo cookie de nome/0Optional/0" ou "{nativo digite GUID} / tipo de marshaler 0Custom cookie de nome/0Optional/0"|  
-|`NATIVE_TYPE_ERROR`|Interoperabilidade COM.<br /><br /> Com ELEMENT_TYPE_I4 esse tipo mapeia para VT_HRESULT.|  
-|`NATIVE_TYPE_IINSPECTABLE`|Um nativo `IInspectable` tipo.|  
-|`NATIVE_TYPE_HSTRING`|Um nativo `HString`.|  
+|`NATIVE_TYPE_CUSTOMMARSHALER`|Um tipo nativo do marshaler personalizado.<br /><br /> Isso deve ser seguido por uma cadeia de caracteres do seguinte formato: "nome do tipo nativo/0Custom do tipo de marshaler nome/0Optional cookie/0" ou "{GUID do tipo nativo}/0Custom nome do tipo do marshaler/0Optional cookie/0"|  
+|`NATIVE_TYPE_ERROR`|Interoperabilidade COM.<br /><br /> Com ELEMENT_TYPE_I4 esse tipo é mapeado para VT_HRESULT.|  
+|`NATIVE_TYPE_IINSPECTABLE`|Um tipo de `IInspectable` nativo.|  
+|`NATIVE_TYPE_HSTRING`|Um `HString`nativo.|  
 |`NATIVE_TYPE_MAX`|Um valor inválido.|  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

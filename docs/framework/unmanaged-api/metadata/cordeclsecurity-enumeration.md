@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 864f1267-d267-4696-8df7-1f83f8444d6f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5898f2f0900b0bbe392d4dbaa8fc1db5e0e45c9e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 98183ed02f8821b7c40852de2d040775d30f2518
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67767009"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443749"
 ---
 # <a name="cordeclsecurity-enumeration"></a>Enumeração CorDeclSecurity
 Especifica as ações de segurança que podem ser executadas usando a segurança declarativa.  
@@ -64,14 +62,14 @@ typedef enum CorDeclSecurity {
 |`dclActionNil`|Reservado.|  
 |`dclRequest`|Reservado.|  
 |`dclDemand`|Todos os chamadores na pilha de chamadas deverão ter a permissão especificada pelo objeto de permissão atual.|  
-|`dclAssert`|O código de chamada pode acessar o recurso identificado pelo objeto de permissão atual, mesmo que os chamadores na pilha não recebeu permissão para acessar o recurso|  
-|`dclDeny`|A capacidade de acessar o recurso especificado pelo objeto de permissão atual é negada aos chamadores, mesmo que eles tenham recebidos permissão para acessá-lo.|  
+|`dclAssert`|O código de chamada pode acessar o recurso identificado pelo objeto de permissão atual, mesmo que os chamadores mais altos na pilha não tenham recebido permissão para acessar o recurso|  
+|`dclDeny`|A capacidade de acessar o recurso especificado pelo objeto de permissão atual é negada aos chamadores, mesmo que eles tenham recebido permissão para acessá-lo.|  
 |`dclPermitOnly`|Somente os recursos especificados por esse objeto de permissão poderão ser acessados, mesmo que o código tenha recebido permissão para acessar outros recursos.|  
-|`dclLinktimeCheck`|O chamador imediato é necessário ter a permissão especificada para um determinado período de tempo.|  
-|`dclInheritanceCheck`|A classe derivada, herdar de outra classe ou substituindo um método é necessária ter a permissão especificada.|  
-|`dclRequestMinimum`|O chamador possa solicitar as permissões mínimas necessárias para a execução de código. Esta ação só pode ser usada no escopo do assembly.|  
-|`dclRequestOptional`|O chamador possa solicitar permissões adicionais que são opcionais (não é necessário para executar). Essa solicitação recusa implicitamente todas as outras permissões não solicitadas especificamente. Esta ação só pode ser usada no escopo do assembly.|  
-|`dclRequestRefuse`|A solicitação do chamador para permissões que podem ser usadas indevidamente não será concedida. Esta ação só pode ser usada no escopo do assembly.|  
+|`dclLinktimeCheck`|É necessário que o chamador imediato tenha recebido a permissão especificada para um determinado período de tempo.|  
+|`dclInheritanceCheck`|A classe derivada que herda outra classe ou a substituição de um método é necessária para ter recebido a permissão especificada.|  
+|`dclRequestMinimum`|O chamador pode solicitar as permissões mínimas necessárias para que o código seja executado. Esta ação só pode ser usada no escopo do assembly.|  
+|`dclRequestOptional`|O chamador pode solicitar permissões adicionais que são opcionais (não é necessário executar). Essa solicitação recusa implicitamente todas as outras permissões não solicitadas especificamente. Esta ação só pode ser usada no escopo do assembly.|  
+|`dclRequestRefuse`|A solicitação do chamador para permissões que podem ser usadas não será concedida. Esta ação só pode ser usada no escopo do assembly.|  
 |`dclPrejitGrant`|Reservado.|  
 |`dclPrejitDenied`|Reservado.|  
 |`dclNonCasDemand`|Reservado.|  
@@ -82,10 +80,10 @@ typedef enum CorDeclSecurity {
 |`dclDemandChoice`|Reservado.|  
 |`dclMaximumValue`|Reservado.|  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
