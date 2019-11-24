@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c44b0440-04bd-460a-84fb-41afecf44503
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d2c64d7ead2f7ce3d76b40f4fdc604506ee85561
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b765294826a5da4010cdd2db79b50667a6f1cdb4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777882"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446309"
 ---
-# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="da8e0-102">Método ISymUnmanagedScope::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="da8e0-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
-<span data-ttu-id="da8e0-103">Obtém os namespaces que estão sendo usados dentro desse escopo.</span><span class="sxs-lookup"><span data-stu-id="da8e0-103">Gets the namespaces that are being used within this scope.</span></span>  
+# <a name="isymunmanagedscopegetnamespaces-method"></a><span data-ttu-id="03cb3-102">Método ISymUnmanagedScope::GetNamespaces</span><span class="sxs-lookup"><span data-stu-id="03cb3-102">ISymUnmanagedScope::GetNamespaces Method</span></span>
+<span data-ttu-id="03cb3-103">Gets the namespaces that are being used within this scope.</span><span class="sxs-lookup"><span data-stu-id="03cb3-103">Gets the namespaces that are being used within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="da8e0-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="da8e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03cb3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="03cb3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetNamespaces(  
@@ -38,22 +36,22 @@ HRESULT GetNamespaces(
         ISymUnmanagedNamespace* namespaces[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="da8e0-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="da8e0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="03cb3-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="03cb3-105">Parameters</span></span>  
  `cNameSpaces`  
- <span data-ttu-id="da8e0-106">[in] O tamanho do `namespaces` matriz.</span><span class="sxs-lookup"><span data-stu-id="da8e0-106">[in] The size of the `namespaces` array.</span></span>  
+ <span data-ttu-id="03cb3-106">[in] The size of the `namespaces` array.</span><span class="sxs-lookup"><span data-stu-id="03cb3-106">[in] The size of the `namespaces` array.</span></span>  
   
  `pcNameSpaces`  
- <span data-ttu-id="da8e0-107">[out] Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter os namespaces.</span><span class="sxs-lookup"><span data-stu-id="da8e0-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
+ <span data-ttu-id="03cb3-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span><span class="sxs-lookup"><span data-stu-id="03cb3-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the namespaces.</span></span>  
   
  `namespaces`  
- <span data-ttu-id="da8e0-108">[out] A matriz que recebe os namespaces.</span><span class="sxs-lookup"><span data-stu-id="da8e0-108">[out] The array that receives the namespaces.</span></span>  
+ <span data-ttu-id="03cb3-108">[out] The array that receives the namespaces.</span><span class="sxs-lookup"><span data-stu-id="03cb3-108">[out] The array that receives the namespaces.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="da8e0-109">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="da8e0-109">Return Value</span></span>  
- <span data-ttu-id="da8e0-110">S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="da8e0-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="03cb3-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="03cb3-109">Return Value</span></span>  
+ <span data-ttu-id="03cb3-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="03cb3-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="da8e0-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="da8e0-111">Requirements</span></span>  
- <span data-ttu-id="da8e0-112">**Cabeçalho:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="da8e0-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03cb3-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="03cb3-111">Requirements</span></span>  
+ <span data-ttu-id="03cb3-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="03cb3-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="da8e0-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="da8e0-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03cb3-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="03cb3-113">See also</span></span>
 
-- [<span data-ttu-id="da8e0-114">Interface ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="da8e0-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [<span data-ttu-id="03cb3-114">Interface ISymUnmanagedScope</span><span class="sxs-lookup"><span data-stu-id="03cb3-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

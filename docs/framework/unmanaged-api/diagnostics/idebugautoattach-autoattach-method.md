@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3cf3bd9c-7d88-4afa-a476-94cdc7609aa6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e04a447c8562ff797ac98885bded150a3a167136
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 766aeb31436101babeab31b615a1c633578bfcc5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775790"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445528"
 ---
-# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="89313-102">Método IDebugAutoAttach::AutoAttach</span><span class="sxs-lookup"><span data-stu-id="89313-102">IDebugAutoAttach::AutoAttach Method</span></span>
-<span data-ttu-id="89313-103">Executa automaticamente o depurador de servidor chamado attach.</span><span class="sxs-lookup"><span data-stu-id="89313-103">Performs server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattachautoattach-method"></a><span data-ttu-id="a3125-102">Método IDebugAutoAttach::AutoAttach</span><span class="sxs-lookup"><span data-stu-id="a3125-102">IDebugAutoAttach::AutoAttach Method</span></span>
+<span data-ttu-id="a3125-103">Performs server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="a3125-103">Performs server-invoked debugger auto attach.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="89313-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="89313-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a3125-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a3125-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT AutoAttach  
@@ -40,28 +38,28 @@ HRESULT AutoAttach
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="89313-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="89313-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a3125-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a3125-105">Parameters</span></span>  
  `guidPort`  
- <span data-ttu-id="89313-106">[in] Sempre definido como `GUID_NULL`.</span><span class="sxs-lookup"><span data-stu-id="89313-106">[in] Always set to `GUID_NULL`.</span></span>  
+ <span data-ttu-id="a3125-106">[in] Always set to `GUID_NULL`.</span><span class="sxs-lookup"><span data-stu-id="a3125-106">[in] Always set to `GUID_NULL`.</span></span>  
   
  `dwPid`  
- <span data-ttu-id="89313-107">[in] ID de processo, normalmente são recuperado com o `GetCurrentProcessId` função.</span><span class="sxs-lookup"><span data-stu-id="89313-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
+ <span data-ttu-id="a3125-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span><span class="sxs-lookup"><span data-stu-id="a3125-107">[in] Process ID, normally retrieved with the `GetCurrentProcessId` function.</span></span>  
   
  `dwProgramType`  
- <span data-ttu-id="89313-108">[in] Tipo de programa: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, ou `AUTOATTACH_PROGRAM_UNKNOWN`.</span><span class="sxs-lookup"><span data-stu-id="89313-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
+ <span data-ttu-id="a3125-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span><span class="sxs-lookup"><span data-stu-id="a3125-108">[in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.</span></span>  
   
  `dwProgramId`  
- <span data-ttu-id="89313-109">[in] ID do programa.</span><span class="sxs-lookup"><span data-stu-id="89313-109">[in] Program ID.</span></span>  
+ <span data-ttu-id="a3125-109">[in] Program ID.</span><span class="sxs-lookup"><span data-stu-id="a3125-109">[in] Program ID.</span></span>  
   
  `pszSessionId`  
- <span data-ttu-id="89313-110">[in] A cadeia de caracteres passada pelo verbo debug.</span><span class="sxs-lookup"><span data-stu-id="89313-110">[in] String passed by the debug verb.</span></span>  
+ <span data-ttu-id="a3125-110">[in] String passed by the debug verb.</span><span class="sxs-lookup"><span data-stu-id="a3125-110">[in] String passed by the debug verb.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="89313-111">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="89313-111">Return Value</span></span>  
- <span data-ttu-id="89313-112">S_OK se o método for bem-sucedido.</span><span class="sxs-lookup"><span data-stu-id="89313-112">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="a3125-111">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="a3125-111">Return Value</span></span>  
+ <span data-ttu-id="a3125-112">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="a3125-112">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="89313-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="89313-113">Requirements</span></span>  
- <span data-ttu-id="89313-114">**Cabeçalho:** DbgAutoAttach.h</span><span class="sxs-lookup"><span data-stu-id="89313-114">**Header:** DbgAutoAttach.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a3125-113">Requisitos</span><span class="sxs-lookup"><span data-stu-id="a3125-113">Requirements</span></span>  
+ <span data-ttu-id="a3125-114">**Header:** DbgAutoAttach.h</span><span class="sxs-lookup"><span data-stu-id="a3125-114">**Header:** DbgAutoAttach.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="89313-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="89313-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3125-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a3125-115">See also</span></span>
 
-- [<span data-ttu-id="89313-116">Interface IDebugAutoAttach</span><span class="sxs-lookup"><span data-stu-id="89313-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)
+- [<span data-ttu-id="a3125-116">Interface IDebugAutoAttach</span><span class="sxs-lookup"><span data-stu-id="a3125-116">IDebugAutoAttach Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-interface.md)

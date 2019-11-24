@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 308183ee-fd44-4432-9d86-ef00d181b49b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d500584afd608f79e41e932be259d29ae51db2db
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0c9f667edf30feb23e1cdaa28950503283fce42e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781577"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445230"
 ---
-# <a name="imetadataimport2getversionstring-method"></a><span data-ttu-id="7f73e-102">Método IMetaDataImport2::GetVersionString</span><span class="sxs-lookup"><span data-stu-id="7f73e-102">IMetaDataImport2::GetVersionString Method</span></span>
-<span data-ttu-id="7f73e-103">Obtém o número de versão do tempo de execução que foi usado para compilar o assembly.</span><span class="sxs-lookup"><span data-stu-id="7f73e-103">Gets the version number of the runtime that was used to build the assembly.</span></span>  
+# <a name="imetadataimport2getversionstring-method"></a><span data-ttu-id="fb599-102">Método IMetaDataImport2::GetVersionString</span><span class="sxs-lookup"><span data-stu-id="fb599-102">IMetaDataImport2::GetVersionString Method</span></span>
+<span data-ttu-id="fb599-103">Gets the version number of the runtime that was used to build the assembly.</span><span class="sxs-lookup"><span data-stu-id="fb599-103">Gets the version number of the runtime that was used to build the assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f73e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7f73e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb599-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fb599-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVersionString (  
@@ -37,29 +35,29 @@ HRESULT GetVersionString (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7f73e-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7f73e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fb599-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="fb599-105">Parameters</span></span>  
  `pwzBuf`  
- <span data-ttu-id="7f73e-106">[out] Uma matriz para armazenar a cadeia de caracteres que especifica a versão.</span><span class="sxs-lookup"><span data-stu-id="7f73e-106">[out] An array to store the string that specifies the version.</span></span>  
+ <span data-ttu-id="fb599-106">[out] An array to store the string that specifies the version.</span><span class="sxs-lookup"><span data-stu-id="fb599-106">[out] An array to store the string that specifies the version.</span></span>  
   
  `ccBufSize`  
- <span data-ttu-id="7f73e-107">[in] O tamanho, em caracteres largos, da `pwzBuf` matriz.</span><span class="sxs-lookup"><span data-stu-id="7f73e-107">[in] The size, in wide characters, of the `pwzBuf` array.</span></span>  
+ <span data-ttu-id="fb599-107">[in] The size, in wide characters, of the `pwzBuf` array.</span><span class="sxs-lookup"><span data-stu-id="fb599-107">[in] The size, in wide characters, of the `pwzBuf` array.</span></span>  
   
  `pccBufSize`  
- <span data-ttu-id="7f73e-108">[out] O número de caracteres largos, incluindo um terminador nulo, retornado no `pwzBuf` matriz.</span><span class="sxs-lookup"><span data-stu-id="7f73e-108">[out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.</span></span>  
+ <span data-ttu-id="fb599-108">[out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.</span><span class="sxs-lookup"><span data-stu-id="fb599-108">[out] The number of wide characters, including a null terminator, returned in the `pwzBuf` array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7f73e-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="7f73e-109">Remarks</span></span>  
- <span data-ttu-id="7f73e-110">O `GetVersionString` método obtém a versão criada do escopo de metadados atual.</span><span class="sxs-lookup"><span data-stu-id="7f73e-110">The `GetVersionString` method gets the built-for version of the current metadata scope.</span></span> <span data-ttu-id="7f73e-111">Se o escopo nunca tiver sido salvo, ele não terá uma versão criada para e uma cadeia de caracteres vazia será retornada.</span><span class="sxs-lookup"><span data-stu-id="7f73e-111">If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fb599-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="fb599-109">Remarks</span></span>  
+ <span data-ttu-id="fb599-110">The `GetVersionString` method gets the built-for version of the current metadata scope.</span><span class="sxs-lookup"><span data-stu-id="fb599-110">The `GetVersionString` method gets the built-for version of the current metadata scope.</span></span> <span data-ttu-id="fb599-111">If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.</span><span class="sxs-lookup"><span data-stu-id="fb599-111">If the scope has never been saved, it will not have a built-for version, and an empty string will be returned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f73e-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7f73e-112">Requirements</span></span>  
- <span data-ttu-id="7f73e-113">**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f73e-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fb599-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fb599-112">Requirements</span></span>  
+ <span data-ttu-id="fb599-113">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fb599-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f73e-114">**Cabeçalho:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7f73e-114">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fb599-114">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fb599-114">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="7f73e-115">**Biblioteca:** Usado como um recurso em mscoree. dll</span><span class="sxs-lookup"><span data-stu-id="7f73e-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fb599-115">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fb599-115">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7f73e-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f73e-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="fb599-116">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb599-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f73e-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7f73e-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fb599-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fb599-117">See also</span></span>
 
-- [<span data-ttu-id="7f73e-118">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="7f73e-118">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
-- [<span data-ttu-id="7f73e-119">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="7f73e-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="fb599-118">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="fb599-118">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="fb599-119">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="fb599-119">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

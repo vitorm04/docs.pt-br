@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: b72f5409-79af-4fa7-90a7-7630eec170f1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: ec0a86e3396ad42152bc0a244f74ad13deba16e4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777445"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446514"
 ---
-# <a name="emitassemblycustomattribute-method"></a><span data-ttu-id="8264a-102">Método EmitAssemblyCustomAttribute</span><span class="sxs-lookup"><span data-stu-id="8264a-102">EmitAssemblyCustomAttribute Method</span></span>
-<span data-ttu-id="8264a-103">Chamada para definir atributos personalizados no nível do assembly.</span><span class="sxs-lookup"><span data-stu-id="8264a-103">Call to set assembly-level custom attributes.</span></span>  
+# <a name="emitassemblycustomattribute-method"></a><span data-ttu-id="1c841-102">Método EmitAssemblyCustomAttribute</span><span class="sxs-lookup"><span data-stu-id="1c841-102">EmitAssemblyCustomAttribute Method</span></span>
+<span data-ttu-id="1c841-103">Call to set assembly-level custom attributes.</span><span class="sxs-lookup"><span data-stu-id="1c841-103">Call to set assembly-level custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8264a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="8264a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c841-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1c841-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EmitAssemblyCustomAttribute(  
@@ -41,36 +39,36 @@ HRESULT EmitAssemblyCustomAttribute(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8264a-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="8264a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c841-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1c841-105">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="8264a-106">ID do assembly.</span><span class="sxs-lookup"><span data-stu-id="8264a-106">ID of the assembly.</span></span>  
+ <span data-ttu-id="1c841-106">ID of the assembly.</span><span class="sxs-lookup"><span data-stu-id="1c841-106">ID of the assembly.</span></span>  
   
  `FileToken`  
- <span data-ttu-id="8264a-107">Arquivo que rearquivou o atributo.</span><span class="sxs-lookup"><span data-stu-id="8264a-107">File that defiles the attribute.</span></span> <span data-ttu-id="8264a-108">Pode ser NULL se `AssemblyID` não indicar um netmodule não associado.</span><span class="sxs-lookup"><span data-stu-id="8264a-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
+ <span data-ttu-id="1c841-107">File that defiles the attribute.</span><span class="sxs-lookup"><span data-stu-id="1c841-107">File that defiles the attribute.</span></span> <span data-ttu-id="1c841-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span><span class="sxs-lookup"><span data-stu-id="1c841-108">Can be NULL if `AssemblyID` does not indicate an unbound netmodule.</span></span>  
   
  `tkType`  
- <span data-ttu-id="8264a-109">Tipo do atributo personalizado.</span><span class="sxs-lookup"><span data-stu-id="8264a-109">Type of the custom attribute.</span></span>  
+ <span data-ttu-id="1c841-109">Type of the custom attribute.</span><span class="sxs-lookup"><span data-stu-id="1c841-109">Type of the custom attribute.</span></span>  
   
  `pCustomValue`  
- <span data-ttu-id="8264a-110">Dados de valor personalizado.</span><span class="sxs-lookup"><span data-stu-id="8264a-110">Custom value data.</span></span>  
+ <span data-ttu-id="1c841-110">Custom value data.</span><span class="sxs-lookup"><span data-stu-id="1c841-110">Custom value data.</span></span>  
   
  `cbCustomValue`  
- <span data-ttu-id="8264a-111">Comprimento dos dados do valor personalizado.</span><span class="sxs-lookup"><span data-stu-id="8264a-111">Length of custom value data.</span></span>  
+ <span data-ttu-id="1c841-111">Length of custom value data.</span><span class="sxs-lookup"><span data-stu-id="1c841-111">Length of custom value data.</span></span>  
   
  `bSecurity`  
- <span data-ttu-id="8264a-112">TRUE se o atributo personalizado estiver relacionado à assinatura de assembly.</span><span class="sxs-lookup"><span data-stu-id="8264a-112">TRUE if the custom attribute is related to assembly signing.</span></span>  
+ <span data-ttu-id="1c841-112">TRUE if the custom attribute is related to assembly signing.</span><span class="sxs-lookup"><span data-stu-id="1c841-112">TRUE if the custom attribute is related to assembly signing.</span></span>  
   
  `bAllowMulti`  
- <span data-ttu-id="8264a-113">TRUE se vários atributos forem emitidos.</span><span class="sxs-lookup"><span data-stu-id="8264a-113">TRUE if multiple attributes are to be emitted.</span></span>  
+ <span data-ttu-id="1c841-113">TRUE if multiple attributes are to be emitted.</span><span class="sxs-lookup"><span data-stu-id="1c841-113">TRUE if multiple attributes are to be emitted.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8264a-114">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="8264a-114">Return Value</span></span>  
- <span data-ttu-id="8264a-115">Retornará S_OK se o método tiver sucesso.</span><span class="sxs-lookup"><span data-stu-id="8264a-115">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1c841-114">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="1c841-114">Return Value</span></span>  
+ <span data-ttu-id="1c841-115">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="1c841-115">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8264a-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="8264a-116">Requirements</span></span>  
- <span data-ttu-id="8264a-117">Requer ALink. h</span><span class="sxs-lookup"><span data-stu-id="8264a-117">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c841-116">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1c841-116">Requirements</span></span>  
+ <span data-ttu-id="1c841-117">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="1c841-117">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8264a-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8264a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1c841-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1c841-118">See also</span></span>
 
-- [<span data-ttu-id="8264a-119">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="8264a-119">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="8264a-120">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="8264a-120">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="8264a-121">API do ALink</span><span class="sxs-lookup"><span data-stu-id="8264a-121">ALink API</span></span>](index.md)
+- [<span data-ttu-id="1c841-119">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="1c841-119">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="1c841-120">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="1c841-120">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="1c841-121">API do ALink</span><span class="sxs-lookup"><span data-stu-id="1c841-121">ALink API</span></span>](index.md)
