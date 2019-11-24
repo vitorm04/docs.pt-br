@@ -1,5 +1,5 @@
 ---
-title: C#referência
+title: C# reference
 ms.date: 02/14/2017
 helpviewer_keywords:
 - Visual C#, language reference
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - C# language, reference
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
-ms.openlocfilehash: 4fed33272dbed50100a37aa9fcd30befc46435f9
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 4875e53327e24c4b5983a4a3b79b5beced368725
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771837"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428610"
 ---
-# <a name="c-reference"></a>C#referência
+# <a name="c-reference"></a>C# reference
 
 Esta seção fornece o material de referência sobre palavras-chave do C#, operadores, caracteres especiais, diretivas de pré-processador, opções de compilador e erros de compilador e avisos.  
   
@@ -40,30 +40,27 @@ Esta seção fornece o material de referência sobre palavras-chave do C#, opera
  Inclui snippets de código que demonstram a causa e a correção de erros do compilador do C# e avisos.  
   
  [C# Language Specification](../../../_csharplang/spec/introduction.md) (Especificação da linguagem C#)  
- Especificação de linguagem do C# 6.0. Este é um projeto de proposta da linguagem C# 6.0. Este documento será refinado por meio do trabalho C# com o Comitê de padrões ECMA. A versão 5.0 foi lançada em dezembro de 2017 como o documento [Padrão ECMA-334 – 5ª Edição](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
+ Especificação de linguagem do C# 6.0. Este é um projeto de proposta da linguagem C# 6.0. This document will be refined through work with the ECMA C# standards committee. A versão 5.0 foi lançada em dezembro de 2017 como o documento [Padrão ECMA-334 – 5ª Edição](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
 
-Os recursos que foram implementados nas versões do C# depois da 6.0 são representados em propostas de especificação de linguagem. Esses documentos descrevem os deltas para a especificação da linguagem a fim de adicionar os novos recursos. Eles estão no formulário de proposta de rascunho. Essas especificações serão refinadas e enviadas para o Comitê de padrões ECMA para revisão formal e Incorporation em uma versão futura C# do padrão.
+Os recursos que foram implementados nas versões do C# depois da 6.0 são representados em propostas de especificação de linguagem. Esses documentos descrevem os deltas para a especificação da linguagem a fim de adicionar os novos recursos. These are in draft proposal form. These specifications will be refined and submitted to the ECMA standards committee for formal review and incorporation into a future version of the C# Standard.
 
- [C#7,0 propostas de especificação](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
+ [C# 7.0 Specification Proposals](../../../_csharplang/proposals/csharp-7.0/pattern-matching.md)  
  Implementamos diversos recursos novos no C# 7.0. Entre eles estão correspondência de padrões, funções locais, declarações de variável out, expressões throw, literais binários e separadores de dígito. Esta pasta contém as especificações de cada um desses recursos.
   
- [C#7,1 propostas de especificação](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
+ [C# 7.1 Specification Proposals](../../../_csharplang/proposals/csharp-7.1/async-main.md)  
  Há novos recursos adicionados no C# 7.1. Primeiramente, você pode gravar um método `Main` que retorna `Task` ou `Task<int>`. Isso permite que você adicione o modificador `async` ao `Main`. A expressão `default` pode ser usada sem um tipo em locais onde o tipo pode ser inferido. Além disso, os nomes dos membros de tupla podem ser inferidos. Por fim, a correspondência de padrões pode ser usada com genéricos.
 
- [C#7,2 propostas de especificação](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
+ [C# 7.2 Specification Proposals](../../../_csharplang/proposals/csharp-7.2/readonly-ref.md)  
  O C# 7.2 adicionou a uma série de recursos pequenos. Você pode passar argumentos por referência de somente leitura usando a palavra-chave `in`. Há uma série de alterações de nível inferior para dar suporte à segurança de tempo de compilação para `Span` e tipos relacionados. Você pode usar argumentos nomeados nos quais os argumentos posteriores são posicionais, em algumas situações. O modificador de acesso `private protected` permite que você especifique que os chamadores são limitados aos tipos derivados, implementados no mesmo assembly. O operador `?:` pode resolver em uma referência a uma variável. Você também pode formatar números hexadecimais e binários usando um separador de dígito à esquerda.
 
- [C#7,3 propostas de especificação](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
- C# 7.3 é outra versão de ponto que inclui várias atualizações pequenas. Você pode usar novas restrições em parâmetros de tipo genérico. Outras alterações facilitam trabalhar com campos `fixed`, incluindo o uso de alocações [`stackalloc`](./operators/stackalloc.md). As variáveis locais declaradas com a palavra-chave `ref` podem ser reatribuídas para se referir ao novo armazenamento. Você pode colocar os atributos em propriedades autoimplementadas que direcionam o campo de suporte gerado pelo compilador. As variáveis de expressão podem ser usadas em inicializadores. As tuplas podem ser comparadas quanto à igualdade (ou desigualdade). Também houve algumas melhorias para a resolução de sobrecarga.
+ [C# 7.3 Specification Proposals](../../../_csharplang/proposals/csharp-7.3/blittable.md)  
+ C# 7.3 é outra versão de ponto que inclui várias atualizações pequenas. Você pode usar novas restrições em parâmetros de tipo genérico. Outras alterações facilitam trabalhar com campos `fixed`, incluindo o uso de alocações [`stackalloc`](./operators/stackalloc.md). Local variables declared with the `ref` keyword may be reassigned to refer to new storage. Você pode colocar os atributos em propriedades autoimplementadas que direcionam o campo de suporte gerado pelo compilador. As variáveis de expressão podem ser usadas em inicializadores. As tuplas podem ser comparadas quanto à igualdade (ou desigualdade). Também houve algumas melhorias para a resolução de sobrecarga.
   
- [C#8,0 propostas de especificação](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
- C#8,0 está disponível com o .NET Core 3,0. Os recursos incluem tipos de referência anuláveis, correspondência de padrões recursivos, métodos de interface padrão, fluxos assíncronos, intervalos e índices, com base em padrões usando e usando declarações, atribuição de União nula e membros de instância ReadOnly.
+ [C# 8.0 Specification Proposals](../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md)  
+ C# 8.0 is available with .NET Core 3.0. The features include nullable reference types, recursive pattern matching, default interface methods, async streams, ranges and indexes, pattern based using and using declarations, null coalescing assignment, and readonly instance members.
   
 ## <a name="related-sections"></a>Seções relacionadas  
 
- [Guia do C#](../index.md)  
- Fornece um portal para a documentação do Visual C#.  
-  
  [Usando o Ambiente de Desenvolvimento do Visual Studio para C#](/visualstudio/get-started/csharp)  
  Fornece links para tópicos conceituais e de tarefas que descrevem o IDE e o Editor.  
   

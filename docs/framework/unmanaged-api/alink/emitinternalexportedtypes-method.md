@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28c8b00d-2c14-40b4-aed5-a1db0e2428eb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04103ad305e0ae97669f3e07e06f03c2cdb4dfbd
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d4b7064b0339825c29e4001bc35c4a604098468a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787514"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446503"
 ---
 # <a name="emitinternalexportedtypes-method"></a>Método EmitInternalExportedTypes
-Emite tipos adicionados ao assembly. Chame esse método após a adição de tipos internos conhecidos.  
+Emits types added to the assembly. Call this method after known internal types have been added.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,13 +35,13 @@ HRESULT EmitInternalExportedTypes(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID do assembly.  
+ ID of assembly.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retornará S_OK se o método tiver sucesso.  
+## <a name="return-value"></a>Valor retornado  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4141c79502dae89ec228e4e39da121615f292786
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4f8cfd912a3d6f66f5f2586a8942c7ce9bd52a63
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782966"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445892"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>Método ICorProfilerCallback::ObjectReferences
-Notifica o criador de perfil sobre os objetos na memória que está sendo referenciado pelo objeto especificado.  
+Notifies the profiler about objects in memory that are being referenced by the specified object.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,30 +37,30 @@ HRESULT ObjectReferences(
   
 ## <a name="parameters"></a>Parâmetros  
  `objectId`  
- [in] A ID do objeto que faz referência a objetos.  
+ [in] The ID of the object that is referencing objects.  
   
  `classId`  
- [in] A ID da classe que o objeto especificado é uma instância do.  
+ [in] The ID of the class that the specified object is an instance of.  
   
  `cObjectRefs`  
- [in] O número de objetos referenciados pelo objeto especificado (ou seja, o número de elementos no `objectRefIds` matriz).  
+ [in] The number of objects referenced by the specified object (that is, the number of elements in the `objectRefIds` array).  
   
  `objectRefIds`  
- [in] Uma matriz de IDs de objetos que estão sendo referenciadas por `objectId`.  
+ [in] An array of IDs of objects that are being referenced by `objectId`.  
   
 ## <a name="remarks"></a>Comentários  
- O `ObjectReferences` método é chamado para cada objeto restante no heap após uma coleta de lixo. Se o criador de perfil retornará um erro desse retorno de chamada, os serviços de criação de perfil serão Descontinuado invocar esse retorno de chamada até a próxima coleta de lixo.  
+ The `ObjectReferences` method is called for each object remaining in the heap after a garbage collection has completed. If the profiler returns an error from this callback, the profiling services will discontinue invoking this callback until the next garbage collection.  
   
- O `ObjectReferences` retorno de chamada pode ser usado em conjunto com o [ICorProfilerCallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) retorno de chamada para criar um gráfico de referência de objeto completo para o tempo de execução. O common language runtime (CLR) garante que cada referência de objeto é relatada somente uma vez pelo `ObjectReferences` método.  
+ The `ObjectReferences` callback can be used in conjunction with the [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) callback to create a complete object reference graph for the runtime. The common language runtime (CLR) ensures that each object reference is reported only once by the `ObjectReferences` method.  
   
- As IDs de objeto retornado por `ObjectReferences` não são válidos durante o retorno de chamada em si, porque a coleta de lixo pode estar no meio de movimentação de objetos. Portanto, os criadores de perfis não devem tentar inspecionar objetos durante um `ObjectReferences` chamar. Quando [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) é chamado, o lixo coleção for concluída e a inspeção pode ser feita com segurança.  
+ The object IDs returned by `ObjectReferences` are not valid during the callback itself, because the garbage collection might be in the middle of moving objects. Therefore, profilers must not attempt to inspect objects during an `ObjectReferences` call. When [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) is called, the garbage collection is complete and inspection can be safely done.  
   
- Um valor nulo `ClassId` indica que `objectId` tem um tipo que está descarregando.  
+ A null `ClassId` indicates that `objectId` has a type that is unloading.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

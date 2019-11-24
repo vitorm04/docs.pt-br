@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 624672b5-1189-488a-85d2-3e12b49617c1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d00c28862036c21c44f46c23fb09e947628dcf3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5f98c35f77fdb200be2e96364c9ac06c386faa62
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67783044"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436027"
 ---
 # <a name="icorprofilerinfo2getboxclasslayout-method"></a>Método ICorProfilerInfo2::GetBoxClassLayout
-Obtém informações sobre onde o tipo de valor especificado está localizado quando ele é convertido.  
+Gets information about where the specified value type is located when it is boxed.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,18 +35,18 @@ HRESULT GetBoxClassLayout(
   
 ## <a name="parameters"></a>Parâmetros  
  `classId`  
- [in] A ID da classe que descreve o tipo de valor é convertido.  
+ [in] The ID of the class that describes the value type that is boxed.  
   
  `pBufferOffset`  
- [out] Um inteiro que é o deslocamento, em relação ao ponteiro de ID de objeto demarcado do tipo de valor.  
+ [out] An integer that is the offset, relative to the boxed object ID pointer, of the value type.  
   
 ## <a name="remarks"></a>Comentários  
- O `pBufferOffset` valor é o local do tipo de valor em uma caixa. Depois de `pBufferOffset` é aplicado a um objeto demarcado, o layout de classe de tipo de valor pode ser usado para interpretar o valor do objeto.  
+ The `pBufferOffset` value is the location of the value type within a box. After `pBufferOffset` is applied to a boxed object, the value type's class layout can be used to interpret the object's value.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -1,5 +1,5 @@
 ---
-title: Como compilar um assembly de multiarquivos
+title: 'How to: Build a multifile assembly'
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -17,23 +17,23 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
-ms.openlocfilehash: 150c0f63d52590ea9cf80a3e991375f10ce1a124
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0f8c6d57425657e321d80f9edffa20f27bc28770
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119933"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429562"
 ---
-# <a name="how-to-build-a-multifile-assembly"></a>Como compilar um assembly de multiarquivos
+# <a name="how-to-build-a-multifile-assembly"></a>How to: Build a multifile assembly
 
 Este artigo explica como criar um assembly de vários arquivos e fornece código que ilustra cada etapa no procedimento.
 
 > [!NOTE]
-> O IDE do Visual Studio para C# e Visual Basic pode ser usado apenas para criar assemblies de arquivo único. Se quiser criar assemblies de vários arquivos, você precisará usar os compiladores de linha de comando ou Visual Studio com o Visual C++. Os assemblies de multiarquivo têm suporte apenas pelo .NET Framework.
+> O IDE do Visual Studio para C# e Visual Basic pode ser usado apenas para criar assemblies de arquivo único. Se quiser criar assemblies de vários arquivos, você precisará usar os compiladores de linha de comando ou Visual Studio com o Visual C++. Multifile assemblies are supported by .NET Framework only.
 
-## <a name="create-a-multifile-assembly"></a>Criar um assembly de multiarquivos
+## <a name="create-a-multifile-assembly"></a>Create a multifile assembly
 
-1. Compile todos os arquivos que contêm namespaces referenciados por outros módulos no assembly nos módulos de código. A extensão padrão para módulos de código é *. netmodule*.
+1. Compile todos os arquivos que contêm namespaces referenciados por outros módulos no assembly nos módulos de código. The default extension for code modules is *.netmodule*.
 
    Por exemplo, digamos que o arquivo `Stringer` tem um namespace chamado `myStringer`, que inclui uma classe chamada `Stringer`. A classe `Stringer` contém um método chamado `StringerMethod` que grava uma única linha no console.
 
@@ -72,8 +72,6 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
    ```vb
    ' Assembly building example in the .NET Framework.
-   Imports System
-
    Namespace myStringer
        Public Class Stringer
            Public Sub StringerMethod()
@@ -97,11 +95,11 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
    vbc /t:module Stringer.vb
    ```
 
-   Especificar o parâmetro *module* com a opção do compilador **/t:** indica que o arquivo deve ser compilado como um módulo em vez de como um assembly. O compilador produz um módulo chamado *Stringer. netmodule*, que pode ser adicionado a um assembly.
+   Especificar o parâmetro *module* com a opção do compilador **/t:** indica que o arquivo deve ser compilado como um módulo em vez de como um assembly. The compiler produces a module called *Stringer.netmodule*, which can be added to an assembly.
 
 3. Compile todos os outros módulos, usando as opções do compilador necessárias para indicar os outros módulos que são referenciados no código. Esta etapa usa a opção do compilador **/addmodule**.
 
-   No exemplo a seguir, um módulo de código chamado *cliente* tem um ponto de entrada `Main` método que faz referência a um método no módulo *Stringer. dll* criado na etapa 1.
+   In the following example, a code module called *Client* has an entry point `Main` method that references a method in the *Stringer.dll* module created in step 1.
 
    ```cpp
    #using "Stringer.netmodule"
@@ -144,7 +142,6 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
    ```
 
    ```vb
-   Imports System
    Imports myStringer
 
    Class MainClientApp
@@ -171,7 +168,7 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
    vbc /addmodule:Stringer.netmodule /t:module Client.vb
    ```
 
-   Especifique a opção **/t:module** porque este módulo será adicionado a um assembly em uma etapa futura. Especifique a opção **/addmodule** porque o código no *cliente* faz referência a um namespace criado pelo código em *Stringer. netmodule*. O compilador produz um módulo chamado *Client. netmodule* que contém uma referência a outro módulo, *Stringer. netmodule*.
+   Especifique a opção **/t:module** porque este módulo será adicionado a um assembly em uma etapa futura. Specify the **/addmodule** option because the code in *Client* references a namespace created by the code in *Stringer.netmodule*. The compiler produces a module called *Client.netmodule* that contains a reference to another module, *Stringer.netmodule*.
 
    > [!NOTE]
    > Os compiladores C# e Visual Basic dão suporte à criação de assemblies de vários arquivos diretamente usando as duas sintaxes diferentes a seguir.
@@ -214,9 +211,9 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
     **al** \<*nome do módulo*> \<*nome do módulo*> … **/main:** \<*nome do método*>  **/out:** \<*nome de arquivo*>  **/target:** \<*tipo de arquivo do assembly*>
 
-    Neste comando, os argumentos *nome do módulo* especificam o nome de cada módulo a ser incluído no assembly. A opção **/main:** especifica o nome do método que é o ponto de entrada do assembly. A opção **/out:** especifica o nome do arquivo de saída, que contém metadados do assembly. A opção **/target:** especifica que o assembly é um arquivo executável do aplicativo de console ( *. exe*), um arquivo executável do Windows ( *. Win*) ou um arquivo de biblioteca ( *. lib*).
+    Neste comando, os argumentos *nome do módulo* especificam o nome de cada módulo a ser incluído no assembly. A opção **/main:** especifica o nome do método que é o ponto de entrada do assembly. A opção **/out:** especifica o nome do arquivo de saída, que contém metadados do assembly. The **/target:** option specifies that the assembly is a console application executable ( *.exe*) file, a Windows executable ( *.win*) file, or a library ( *.lib*) file.
 
-    No exemplo a seguir, *al. exe* cria um assembly que é um executável de aplicativo de console chamado *myAssembly. exe*. O aplicativo consiste em dois módulos chamados *Client. netmodule* e *Stringer. netmodule*, e o arquivo executável chamado *myAssembly. exe*, que contém apenas metadados do assembly. O ponto de entrada do assembly é o método `Main` na classe `MainClientApp`, que está localizada em *Client. dll*.
+    In the following example, *Al.exe* creates an assembly that is a console application executable called *myAssembly.exe*. The application consists of two modules called *Client.netmodule* and *Stringer.netmodule*, and the executable file called *myAssembly.exe*, which contains only assembly metadata. The entry point of the assembly is the `Main` method in the class `MainClientApp`, which is located in *Client.dll*.
 
     ```cmd
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe
@@ -226,7 +223,7 @@ Este artigo explica como criar um assembly de vários arquivos e fornece código
 
 ## <a name="see-also"></a>Consulte também
 
-- [Criar assemblies](../../standard/assembly/create.md)
-- [Como exibir o conteúdo do assembly](../../standard/assembly/view-contents.md)
-- [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
-- [Assemblies de multiarquivo](multifile-assemblies.md)
+- [Create assemblies](../../standard/assembly/create.md)
+- [How to: View assembly contents](../../standard/assembly/view-contents.md)
+- [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
+- [Multifile assemblies](multifile-assemblies.md)

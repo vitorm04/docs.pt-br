@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dda867b5-1050-49ba-b01c-fcc83b7a5617
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fa5a446ba7bfd70330601c7cbc129800761cdb7c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3f965ab215ff861c6df61de82dcbbea6b389c8da
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782614"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426773"
 ---
 # <a name="imetadataimportresetenum-method"></a>Método IMetaDataImport::ResetEnum
-Redefine o enumerador especificado na posição especificada.  
+Resets the specified enumerator to the specified position.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,17 +36,17 @@ HRESULT ResetEnum (
   
 ## <a name="parameters"></a>Parâmetros  
  `hEnum`  
- [in] O enumerador para redefinir.  
+ [in] The enumerator to reset.  
   
  `ulPos`  
- [in] A nova posição na qual colocar o enumerador.  
+ [in] The new position at which to place the enumerator.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

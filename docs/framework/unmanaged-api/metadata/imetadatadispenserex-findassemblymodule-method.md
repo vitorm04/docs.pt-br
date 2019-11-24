@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1fb65e1-7e19-4513-85b1-44f87c294d3e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0f6b38cefa1c9b36a660559c1d97fc88f7dbddc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e73c95d8c720ed3263d6a66c48bdb5b5582eb686
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777759"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442184"
 ---
 # <a name="imetadatadispenserexfindassemblymodule-method"></a>Método IMetaDataDispenserEx::FindAssemblyModule
-Este método não está implementado. Se chamado, ele retornará E_NOTIMPL.  
+Este método não está implementado. If called, it returns E_NOTIMPL.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,35 +42,35 @@ HRESULT FindAssemblyModule(
   
 ## <a name="parameters"></a>Parâmetros  
  `szAppBase`  
- [in] Não usado.  
+ [in] Not used.  
   
  `szPrivateBin`  
- [in] Não usado.  
+ [in] Not used.  
   
  `szGlobalBin`  
- [in] Não usado.  
+ [in] Not used.  
   
  `szAssemblyName`  
- [in] O nome do módulo.  
+ [in] The name of the module.  
   
  `szModuleName`  
- [in] O assembly a ser localizada.  
+ [in] The assembly to be found.  
   
  `szName`  
- [out] O nome simples do assembly.  
+ [out] The simple name of the assembly.  
   
  `cchName`  
- [in] O tamanho, em bytes, do `szName`.  
+ [in] The size, in bytes, of `szName`.  
   
  `pcName`  
- [out] O número de caracteres retornado de fato no `szName`.  
+ [out] The number of characters actually returned in `szName`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

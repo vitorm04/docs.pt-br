@@ -2,16 +2,16 @@
 title: Catálogo do RID (Identificador de Runtime) do .NET Core
 description: Saiba mais sobre o RID (Identificador de runtime) e como os RIDs são usados no .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: e6bc3f75858d4b67cc8598e49ff4ad75521f16d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f90aabf0d10ce61dc10fcd952d66ca00e66d282d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100914"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428742"
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de RIDs do .NET Core
 
-RID é a abreviação de *Identificador de Tempo de Execução*. Os valores do RID são usados para identificar plataformas de destino onde o aplicativo é executado.
+RID é a abreviação de *Identificador de Runtime*. Os valores do RID são usados para identificar plataformas de destino onde o aplicativo é executado.
 Eles são usados por pacotes .NET para representar ativos específicos de plataforma em pacotes NuGet. Os seguintes valores são exemplos de RIDs: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64` ou `osx.10.12-x64`.
 Para os pacotes com dependências nativas, o RID designará as plataformas em que o pacote pode ser restaurado.
 
@@ -52,7 +52,7 @@ O exemplo a seguir é a entrada real para o RID `osx.10.12-x64`:
 }
 ```
 
-O RID acima especifica que `osx.10.12-x64` importa `osx.10.11-x64`. Desse modo, quando o NuGet restaura pacotes, ele tenta encontrar uma correspondência exata para `osx.10.12-x64` no pacote. Se o NuGet não puder encontrar o tempo de execução específico, ele poderá restaurar pacotes que especificam tempos de execução `osx.10.11-x64`, por exemplo.
+O RID acima especifica que `osx.10.12-x64` importa `osx.10.11-x64`. Desse modo, quando o NuGet restaura pacotes, ele tenta encontrar uma correspondência exata para `osx.10.12-x64` no pacote. Se o NuGet não puder encontrar o runtime específico, ele poderá restaurar pacotes que especificam runtimes `osx.10.11-x64`, por exemplo.
 
 O seguinte exemplo mostra um gráfico RID ligeiramente maior, também definido no arquivo *runtime.json*:
 
@@ -108,7 +108,7 @@ Apenas os valores comuns são listados. Para obter a versão completa e mais rec
   - `win10-arm`
   - `win10-arm64`
 
-Consulte [Pré-requisitos para o .NET Core no Windows](windows-prerequisites.md) para obter mais informações.
+See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) for more information.
 
 ## <a name="linux-rids"></a>RIDs do Linux
 
@@ -126,7 +126,7 @@ Apenas os valores comuns são listados. Para obter a versão completa e mais rec
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-Consulte [Pré-requisitos para o .NET Core no Linux](linux-prerequisites.md) para obter mais informações.
+See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) for more information.
 
 ## <a name="macos-rids"></a>RIDs do macOS
 
@@ -145,8 +145,8 @@ Os RIDs do macOS usam a identidade visual “OSX” mais antiga. Apenas os valor
 - macOS 10.14 Mojave (.NET Core 1.1 ou versões posteriores)
   - `osx.10.14-x64`
 
-Consulte [Pré-requisitos para o .NET Core no macOS](macos-prerequisites.md) para obter mais informações.
+See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) for more information.
 
 ## <a name="see-also"></a>Consulte também
 
-- [IDs de Tempo de Execução](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [IDs de Runtime](https://github.com/dotnet/corefx/blob/master/src/pkg/Microsoft.NETCore.Platforms/readme.md)

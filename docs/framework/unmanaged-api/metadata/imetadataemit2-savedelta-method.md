@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b95739fe-d2fa-4776-ae0d-31d9707ef799
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 212625fd460e88201dd4799754297861826d3aa7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: afb0c09c09236267be2a999ce5c130feebb52b6f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777151"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447899"
 ---
 # <a name="imetadataemit2savedelta-method"></a>Método IMetaDataEmit2::SaveDelta
-Salva as alterações da sessão atual de editar e continuar para o arquivo especificado.  
+Saves changes from the current edit-and-continue session to the specified file.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,17 +36,17 @@ HRESULT SaveDelta (
   
 ## <a name="parameters"></a>Parâmetros  
  `szFile`  
- [in] O nome do arquivo no qual salvar as alterações.  
+ [in] The file name under which to save changes.  
   
  `dwSaveFlags`  
  [in] Reservado. Deve ser zero.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

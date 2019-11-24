@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36cffbf7-82ca-4cf9-bf60-50ab491ac2d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 16675e8bfde74c1f9c30ac9d52f8eeb919d22477
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4e11a52c977de7796043868e80c147d8cfd1f506
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777531"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431579"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a>Método IMetaDataEmit::DefinePermissionSet
-Cria uma definição para um conjunto de permissões com a assinatura de metadados especificado e obtém um token para essa definição de conjunto de permissões.  
+Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,26 +39,26 @@ HRESULT DefinePermissionSet (
   
 ## <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] O objeto a ser decorada.  
+ [in] The object to be decorated.  
   
  `dwAction`  
- [in] Um [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) valor que especifica o tipo de segurança declarativa a ser usado.  
+ [in] A [CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md) value that specifies the type of declarative security to be used.  
   
  `pvPermission`  
- [in] A permissão de BLOB.  
+ [in] The permission BLOB.  
   
  `cbPermission`  
- [in] O tamanho, em bytes, do `pvPermission`.  
+ [in] The size, in bytes, of `pvPermission`.  
   
  `ppm`  
- [out] O token retornado de permissão.  
+ [out] The returned permission token.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

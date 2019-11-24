@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 8bb5acf5-cf4b-4ccb-93f1-46db1f3f8bf3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57520b4a67eb164c8f8631dc4d63d32c655dafa2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 40698a49ac7012c4f67eb88b1ead04c80f3dea77
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753828"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428318"
 ---
-# <a name="corprffunction-structure"></a>Estrutura COR_PRF_FUNCTION
+# <a name="cor_prf_function-structure"></a>Estrutura COR_PRF_FUNCTION
 Fornece uma representação única de uma função pela combinação de sua ID com a ID de sua versão recompilada.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -36,15 +34,15 @@ typedef struct _COR_PRF_FUNCTION {    FunctionID functionId;    ReJITID    reJit
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`functionId`|A ID da função.|  
-|`reJitId`|A ID da função recompilada. Um valor de 0 (zero) representa a versão original da função.|  
+|`functionId`|The ID of the function.|  
+|`reJitId`|The ID of the recompiled function. A value of 0 (zero) represents the original version of the function.|  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

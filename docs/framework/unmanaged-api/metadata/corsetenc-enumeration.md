@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: fe4150e8-071d-43fb-8e06-c3c616dbeed2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2796be32154275387da891683cc5053095f534af
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 39f72e670ddc700c257f50f6bad6fab702ec21b6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67772317"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432765"
 ---
 # <a name="corsetenc-enumeration"></a>Enumeração CorSetENC
-Contém valores usados para influenciar o comportamento durante a geração de metadados.  
+Contains values used to influence behavior during the generation of metadata.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,17 +48,17 @@ typedef enum CorSetENC {
 |------------|-----------------|  
 |`MDSetENCOn`|Obsoleto.|  
 |`MDSetENCOff`|Obsoleto.|  
-|`MDUpdateENC`|Indica que, ao passo que os metadados podem ser atualizados, tokens não podem ser movidos.|  
-|`MDUpdateFull`|Indica que os tokens podem ser movidos durante as atualizações.|  
-|`MDUpdateExtension`|Indica que as atualizações podem consistir apenas adições. Tokens não podem ser movidos.|  
-|`MDUpdateIncremental`|Indica que a compilação é incremental.|  
-|`MDUpdateDelta`|Indica que somente metadados alterados devem ser salvos.|  
-|`MDUpdateMask`|Inclui `MDUpdateENC`, `MDUpdateFull` e `MDUpdateIncremental`.|  
+|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
+|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
+|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
+|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
+|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
+|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

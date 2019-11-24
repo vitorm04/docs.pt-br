@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c1bf9e572ee88bd299f23ebb435c1b4d24ed717
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b78d604a28ffe01000a763f7e0dd3c1630e2c186
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762924"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74435917"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>Método ICorProfilerCallback::ClassUnloadFinished
-Notifica o criador de perfil que uma classe concluiu a descarregar.  
+Notifies the profiler that a class has finished unloading.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,18 +35,18 @@ HRESULT ClassUnloadFinished(
   
 ## <a name="parameters"></a>Parâmetros  
  `classId`  
- [in] Identifica a classe que foi descarregada.  
+ [in] Identifies the class that was unloaded.  
   
  `hrStatus`  
- [in] Um HRESULT que indica se a classe foi descarregada com êxito.  
+ [in] An HRESULT that indicates whether the class was unloaded successfully.  
   
 ## <a name="remarks"></a>Comentários  
- Algumas partes de descarregar a classe podem continuar após o `ClassUnloadFinished` retorno de chamada. Uma falha HRESULT em `hrStatus` indica uma falha. No entanto, um HRESULT de sucesso em `hrStatus` indica apenas que a primeira parte de descarregar a classe teve êxito.  
+ Some parts of unloading the class might continue after the `ClassUnloadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of unloading the class has succeeded.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d8189365a73e85c0b9f5efb2aa03074385a3fb8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 57054bdb7e3b991bc81985c02ec72a4110f31d60
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750738"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436442"
 ---
 # <a name="couninitiee-enumeration"></a>Enumeração COUNINITIEE
-Especifica as constantes usadas pelo [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) ao inicializar o common language runtime.  
+Specifies constants used by [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) when initializing the common language runtime.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,15 +38,15 @@ typedef enum tagCOUNINITEE
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|Indica o modo de desinicialização padrão.|  
-|`COUNINITEE_DLL`|Indica o modo de desinicialização para descarregar um assembly.|  
+|`COUNINITEE_DEFAULT`|Indicates default uninitialization mode.|  
+|`COUNINITEE_DLL`|Indicates uninitialization mode for unloading an assembly.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

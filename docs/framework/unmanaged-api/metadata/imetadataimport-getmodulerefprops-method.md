@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: be4408758db1cbf7839c12cb66ff395625925f69
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: dce9b9c20cbc73c6a70a34afa6c348c23164ed9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779020"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437325"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>Método IMetaDataImport::GetModuleRefProps
-Obtém o nome do módulo referenciado pelo token de metadados especificado.  
+Gets the name of the module referenced by the specified metadata token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,23 +38,23 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `mur`  
- [in] O token de metadados ModuleRef que faz referência ao módulo para obter informações de metadados.  
+ [in] The ModuleRef metadata token that references the module to get metadata information for.  
   
  `szName`  
- [out] Um buffer para armazenar o nome do módulo.  
+ [out] A buffer to hold the module name.  
   
  `cchName`  
- [in] O tamanho solicitado do `szName` em caracteres largos.  
+ [in] The requested size of `szName` in wide characters.  
   
  `pchName`  
- [out] O tamanho retornado de `szName` em caracteres largos.  
+ [out] The returned size of `szName` in wide characters.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

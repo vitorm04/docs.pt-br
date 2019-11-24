@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd2bc956-7dbe-49fc-a646-daa0d267f2df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c194cea21901015153626dc5aead49ed1b2c3df7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6600ca7e70ac77ffba0c75812f27d388c354ece6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755113"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438321"
 ---
 # <a name="isymunmanagedwriter2defineconstant2-method"></a>Método ISymUnmanagedWriter2::DefineConstant2
-Define um nome para um valor constante.  
+Defines a name for a constant value.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,19 +36,19 @@ HRESULT DefineConstant2(
   
 ## <a name="parameters"></a>Parâmetros  
  `name`  
- [in] O nome de constante.  
+ [in] The constant name.  
   
  `value`  
- [in] O valor da constante.  
+ [in] The value of the constant.  
   
  `sigToken`  
- [in] O token de metadados da constante.  
+ [in] The metadata token of the constant.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

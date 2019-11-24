@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: b588d470-53c2-4492-be8c-957323eaca0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 62eb5782071b42df1a035a4553b6cf9da53e24ac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8477f53bec44675d7cb0a9bc6c4f11097a4fcc87
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778091"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446162"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpath-method"></a>Método ISymUnmanagedSymbolSearchInfo::GetSearchPath
-Obtém o caminho de pesquisa.  
+Gets the search path.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +34,13 @@ HRESULT GetSearchPathLength(
   
 ## <a name="parameters"></a>Parâmetros  
  `pcchPath`  
- [out] Um ponteiro para um `ULONG32` que recebe o tamanho, em caracteres, do buffer necessário para conter o caminho de pesquisa.  
+ [out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the search path.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

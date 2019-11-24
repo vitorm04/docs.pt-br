@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 52118dc9-fe6e-4b39-aa48-c3cc3ea4214d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d64a39dcdb6e3b26ff38106673719e475315f5dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e5fa3647c86d97730e7ad6a2576dd34af75251d6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782115"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433951"
 ---
 # <a name="imetadataimportenumparams-method"></a>Método IMetaDataImport::EnumParams
-Enumera os tokens de ParamDef que representam os parâmetros do método referenciada pelo token de MethodDef especificado.  
+Enumerates ParamDef tokens representing the parameters of the method referenced by the specified MethodDef token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,33 +39,33 @@ HRESULT EnumParams (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [no, out] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada desse método.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `mb`  
- [in] Um token MethodDef que representa o método com os parâmetros para enumerar.  
+ [in] A MethodDef token representing the method with the parameters to enumerate.  
   
  `rParams`  
- [out] A matriz usada para armazenar os tokens de ParamDef.  
+ [out] The array used to store the ParamDef tokens.  
   
  `cMax`  
- [in] O tamanho máximo da `rParams` matriz.  
+ [in] The maximum size of the `rParams` array.  
   
  `pcTokens`  
- [out] O número de tokens ParamDef retornado no `rParams`.  
+ [out] The number of ParamDef tokens returned in `rParams`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumParams` retornado com êxito.|  
-|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcTokens` é zero.|  
+|`S_OK`|`EnumParams` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

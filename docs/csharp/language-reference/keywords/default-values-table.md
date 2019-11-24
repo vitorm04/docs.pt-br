@@ -6,12 +6,12 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 02f86ef8ee73ff31a6c5c9d17a44a443f72ef05e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739287"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428526"
 ---
 # <a name="default-values-table-c-reference"></a>Tabela de valores padrão (referência de C#)
 
@@ -23,10 +23,10 @@ A seguinte tabela mostra os valores padrão de tipos C#:
 |Qualquer [tipo numérico integral interno](../builtin-types/integral-numeric-types.md)|0 (zero)|
 |Qualquer [tipo numérico de ponto flutuante interno](../builtin-types/floating-point-numeric-types.md)|0 (zero)|
 |[bool](bool.md)|`false`|
-|[char](char.md)|`'\0'` (U+0000)|
+|[char](../builtin-types/char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|O valor é produzido pela expressão `(E)0`, em que `E` é o identificador de enumeração.|
 |[struct](struct.md)|O valor produzido pela configuração de todos os campos tipo-valor para seus valores padrão e todos os campos tipo-referência para `null`.|
-|Qualquer [tipo de valor que permite valor nulo](../builtin-types/nullable-value-types.md)|Uma instância para a qual a propriedade <xref:System.Nullable%601.HasValue%2A> é `false` e a propriedade <xref:System.Nullable%601.Value%2A> não está definida. Esse valor padrão também é conhecido como o valor *nulo* de um tipo de valor anulável.|
+|Qualquer [tipo de valor que permite valor nulo](../builtin-types/nullable-value-types.md)|Uma instância para a qual a propriedade <xref:System.Nullable%601.HasValue%2A> é `false` e a propriedade <xref:System.Nullable%601.Value%2A> não está definida. That default value is also known as the *null* value of a nullable value type.|
 
 Use o [operador padrão](../operators/default.md) para produzir o valor padrão de um tipo, como mostra o exemplo a seguir:
 

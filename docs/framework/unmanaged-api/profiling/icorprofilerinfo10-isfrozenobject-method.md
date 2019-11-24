@@ -1,5 +1,5 @@
 ---
-title: 'ICorProfilerInfo10:: iscongeladoobject'
+title: ICorProfilerInfo10::IsFrozenObject
 ms.date: 08/06/2019
 dev_langs:
 - cpp
@@ -11,16 +11,16 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d212c06c7ddc9f22095c0b95f19fd1083482435c
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: 250021c9eb475d0cbcb1bd14c8515b969fc9d30b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69661231"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449829"
 ---
-# <a name="icorprofilerinfo10isfrozenobject-method"></a>Método ICorProfilerInfo10:: iscongeladoobject
+# <a name="icorprofilerinfo10isfrozenobject-method"></a>ICorProfilerInfo10::IsFrozenObject Method
 
-Dado um ObjectID, determina se o objeto está em um segmento somente leitura.
+Given an ObjectID, determines whether the object is in a read-only segment.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -32,21 +32,21 @@ HRESULT IsFrozenObject( [in]  ObjectID objectId,
 #### <a name="parameters"></a>Parâmetros
 
 `objectId` \
-no O objeto a ser examinado.
+[in] The object to examine.
 
 `pbFrozen` \
-fora Um `BOOL` que indica se o objeto está em um segmento somente leitura.
+[out] A `BOOL` indicating if the object is in a read-only segment.
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/windows-prerequisites.md#net-core-supported-operating-systems).
+**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Cabeçalho:** CorProf.idl, CorProf.h
+**Header:** CorProf.idl, CorProf.h
 
-**Biblioteca** CorGuids.lib
+**Biblioteca:** CorGuids.lib
 
-**Versões do .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
+**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
 ## <a name="see-also"></a>Consulte também
 
-- [Interface ICorProfilerInfo10](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)

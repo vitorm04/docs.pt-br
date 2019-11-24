@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 532da6ee-7f0a-401b-a61e-fc47ec235d2e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1acdc5d094fe93118e6cc62774f1cbf47a357dfc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5149e3fab023de42d03673ec5d3e5ae888a9ed5a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751811"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433292"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>Método ICorProfilerInfo2::GetCodeInfo2
-Obtém as extensões de código nativo associado especificado `FunctionID`.  
+Gets the extents of native code associated with the specified `FunctionID`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,28 +38,28 @@ HRESULT GetCodeInfo2(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionID`  
- [in] A ID da função à qual o código nativo está associado.  
+ [in] The ID of the function with which the native code is associated.  
   
  `cCodeInfos`  
- [in] O tamanho do `codeInfos` matriz.  
+ [in] The size of the `codeInfos` array.  
   
  `pcCodeInfos`  
- [out] Um ponteiro para o número total de [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) estruturas disponíveis.  
+ [out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.  
   
  `codeInfos`  
- [out] Um buffer fornecido pelo chamador. Depois que o método retorna, ele contém uma matriz de `COR_PRF_CODE_INFO` estruturas, cada um deles descreve um bloco de código nativo.  
+ [out] A caller-provided buffer. After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.  
   
 ## <a name="remarks"></a>Comentários  
- As extensões são classificadas em ordem crescente deslocamento do Microsoft intermediate language (MSIL).  
+ The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.  
   
- Após `GetCodeInfo2` é retornado, você deve verificar se o `codeInfos` buffer era grande o suficiente para conter todos o `COR_PRF_CODE_INFO` estruturas. Para fazer isso, comparar o valor de `cCodeInfos` com o valor da `cchName` parâmetro. Se `cCodeInfos` dividida pelo tamanho de um `COR_PRF_CODE_INFO` estrutura é menor que `pcCodeInfos`, alocar uma maior `codeInfos` buffer, atualize `cCodeInfos` com o novo e maior tamanho e a chamada `GetCodeInfo2` novamente.  
+ After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures. To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter. If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.  
   
- Como alternativa, você pode primeiro chamar `GetCodeInfo2` com um comprimento de zero `codeInfos` buffer para obter o tamanho do buffer correto. Em seguida, você pode definir a `codeInfos` buffers de tamanho para o valor retornado na `pcCodeInfos`, multiplicado pelo tamanho de um `COR_PRF_CODE_INFO` estrutura e chame `GetCodeInfo2` novamente.  
+ Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size. You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

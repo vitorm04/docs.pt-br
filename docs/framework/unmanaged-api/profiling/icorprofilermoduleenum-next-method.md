@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a3cea59d-7622-4323-897a-0a464c40f77f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9ff680b337334bdb9a3994daaebf92a966e2fe4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 361f08f8c787ad4c1288c56fb1bdb4d5136933e7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775181"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442694"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>Método ICorProfilerModuleEnum::Next
-Obtém o número especificado de módulos contíguos de uma coleção sequencial de módulos, começando na posição atual do enumerador na sequência.  
+Gets the specified number of contiguous modules from a sequential collection of modules, starting at the enumerator's current position in the sequence.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,26 +36,26 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de módulos para recuperar.  
+ [in] The number of modules to retrieve.  
   
  `ids`  
- [out] Uma matriz de `ModuleID` valores, cada um deles representa um módulo recuperado.  
+ [out] An array of `ModuleID` values, each of which represents a retrieved module.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de elementos realmente retornados no `ids` matriz.  
+ [out] A pointer to the number of elements actually returned in the `ids` array.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt` elementos foram retornados.|  
-|S_FALSE|Menos de `celt` elementos foram retornados, que indica que a enumeração foi concluída.|  
+|S_OK|`celt` elements were returned.|  
+|S_FALSE|Fewer than `celt` elements were returned, which indicates that the enumeration is complete.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

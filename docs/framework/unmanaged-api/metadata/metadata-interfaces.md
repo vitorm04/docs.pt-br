@@ -6,72 +6,70 @@ helpviewer_keywords:
 - metadata interfaces [.NET Framework]
 - interfaces (.NET Framework metadata]
 ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4672cb813cec4a127f7888a2273eb26c3f34c3d9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049811"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431593"
 ---
 # <a name="metadata-interfaces"></a>Interfaces de metadados
-Esta seção descreve as interfaces não gerenciadas que fornecem acesso aos metadados expostos pelos tipos do .NET Framework, métodos, campos e assim por diante.  
+This section describes the unmanaged interfaces that provide access to the metadata exposed by the .NET Framework types, methods, fields, and so on.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Interface ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)  
- Fornece métodos para compilação de código dinâmico.  
+ Provides methods for dynamic code compilation.  
   
  [Interface IHostFilter](../../../../docs/framework/unmanaged-api/metadata/ihostfilter-interface.md)  
- Fornece um método para o host de tempo de execução marcar tokens de metadados para processamento.  
+ Provides a method for the run-time host to mark metadata tokens for processing.  
   
  [Interface IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)  
- Fornece recursos de mapeamento entre importados e emitidos assinaturas de metadados.  
+ Provides mapping capabilities between imported and emitted metadata signatures.  
   
  [Interface IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)  
- Fornece métodos que dão suporte ao modelo autodescrição usado pelo common language runtime (CLR) para resolver e consomem recursos.  
+ Provides methods that support the self-description model used by the common language runtime (CLR) to resolve and consume resources.  
   
  [Interface IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)  
- Fornece métodos para acessar e examinar o conteúdo de um manifesto do assembly.  
+ Provides methods to access and examine the contents of an assembly manifest.  
   
  [Interface IMetaDataConverter](../../../../docs/framework/unmanaged-api/metadata/imetadataconverter-interface.md)  
- Fornece métodos para mapear as bibliotecas de tipos para suas assinaturas de metadados e para converter de um para outro.  
+ Provides methods to map type libraries to their metadata signatures, and to convert from one to the other.  
   
  [Interface IMetaDataDispenser](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)  
  `IMetaDataDispenser` é obsoleto. Use `IMetaDataDispenserEx` em seu lugar.  
   
  [Interface IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)  
- Fornece métodos que mapeiam as áreas de memória para criação ou modificação de metadados.  
+ Provides methods that map areas of memory for creating or modifying metadata.  
   
  [Interface IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- Fornece métodos para criar, modificar e armazenar os metadados sobre o assembly no escopo definido atualmente.  
+ Provides methods to create, modify and store metadata about the assembly in the currently defined scope.  
   
  [Interface IMetaDataEmit2](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)  
- Fornece métodos para definir e modificar as assinaturas de metadados de métodos e construtores com parâmetros de tipo <xref:System.Type?displayProperty=nameWithType>.  
+ Provides methods for defining and modifying the metadata signatures of methods and constructors with parameters of type <xref:System.Type?displayProperty=nameWithType>.  
   
  [Interface IMetaDataError](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)  
- Fornece um mecanismo de retorno de chamada para relatar erros durante a resolução da assinatura de metadados para um assembly.  
+ Provides a callback mechanism for reporting errors during the resolution of the metadata signature for an assembly.  
   
  [Interface IMetaDataFilter](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)  
- Fornece métodos para marcar e filtrar os tokens de metadados para evitar a repetição de ações que já foram realizadas.  
+ Provides methods for marking and filtering metadata tokens to avoid repeating actions that have already been taken.  
   
  [Interface IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- Fornece métodos para importação e manipulação de tipos de outros assemblies.  
+ Provides methods for importing and manipulating types from other assemblies.  
   
  [Interface IMetaDataImport2](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- Estende `IMetaDataImport` para fornecer a capacidade de trabalhar com tipos genéricos.  
+ Extends `IMetaDataImport` to provide the capability of working with generic types.  
   
  [Interface IMetaDataInfo](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)  
- Fornece um método que obtém informações sobre o mapeamento dos metadados de um arquivo em disco na memória.  
+ Provides a method that gets information about the mapping of metadata from an on-disk file into memory.  
   
  [Interface IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- Fornece métodos para o armazenamento e recuperação de informações de metadados nas tabelas.  
+ Provides methods for the storage and retrieval of metadata information in tables.  
   
  [Interface IMetaDataTables2](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
- Estende `IMetaDataTables` para incluir métodos para trabalhar com fluxos de metadados.  
+ Extends `IMetaDataTables` to include methods for working with metadata streams.  
   
  [Interface IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)  
- Fornece métodos para usar para validação de assinaturas de metadados.  
+ Provides methods to use for validation of metadata signatures.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  

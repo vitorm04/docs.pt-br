@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: c7c5b39a-d4ac-41f1-9d1e-44163f563a49
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 14ea8dab2c4258fe490ef362fd527d80bd8a0178
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8c8ecab9d957e72bb6c0817af07c863fcff97cde
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67746110"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436334"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>Método ICeeGen::GetMethodBuffer
-Obtém um buffer de tamanho apropriado para o método no endereço virtual relativo especificado.  
+Gets a buffer of the appropriate size for the method at the specified relative virtual address.  
   
- Esse método é obsoleto e não deve ser usado.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,17 +38,17 @@ HRESULT GetMethodBuffer (
   
 ## <a name="parameters"></a>Parâmetros  
  `RVA`  
- [in] O endereço virtual relativo do método para o qual retornar um buffer.  
+ [in] The relative virtual address of the method for which to return a buffer.  
   
  `lpBuffer`  
- [out] Um ponteiro para o buffer retornado.  
+ [out] A pointer to the returned buffer.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0db51881-b869-4677-a715-1726a9216489
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 61fc71c2ab0a9107f5e9fbb354fe0f8c2fb0dace
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 97b28c961f43388679615ac0d5b19c4c69df1e3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776340"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444254"
 ---
 # <a name="ceesectionattr-enumeration"></a>Enumeração CeeSectionAttr
-Fornece valores que especificam os atributos de uma seção para uso pela [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
+Provides values that specify attributes of a section for use by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,17 +41,17 @@ typedef enum  {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`sdNone`|Seção não tem atributos.|  
-|`sdReadOnly`|Seção contém dados inicializados que podem ser apenas ler, não atualizado.|  
-|`sdReadWrite`|Seção contém dados inicializados que podem ser lidos ou atualizados.|  
-|`sdExecute`|Seção contém código executável que pode ser lido e executado.|  
+|`sdNone`|Section has no attributes.|  
+|`sdReadOnly`|Section contains initialized data that can be only read, not updated.|  
+|`sdReadWrite`|Section contains initialized data that can be read or updated.|  
+|`sdExecute`|Section contains executable code that is allowed to be read and executed.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

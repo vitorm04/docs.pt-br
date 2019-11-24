@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7f74d9c5-1377-4958-b842-6306d611cbd5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3ed618847d398bb4dcccb8ecebabdc947390c874
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b29e66a4e124f6d593fc0c8aed9a63fcc660f8df
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778168"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428096"
 ---
 # <a name="isymunmanagedwriterclosenamespace-method"></a>Método ISymUnmanagedWriter::CloseNamespace
-Fecha abriu mais recentemente namespace.  
+Closes the most recently opened namespace.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,11 +31,11 @@ Fecha abriu mais recentemente namespace.
 HRESULT CloseNamespace();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

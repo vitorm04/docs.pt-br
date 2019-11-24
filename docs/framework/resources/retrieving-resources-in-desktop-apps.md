@@ -18,15 +18,16 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 3c14e251b6ca88fb864952c3411b5ea0c46da302
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 39bb518306b6e76aea1ae4a791fca79fbbb1b6c8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129934"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445748"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Recuperando recursos em aplicativos de área de trabalho
-Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  Para recuperar os recursos nos aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], consulte [Ccriando e recuperando recursos em aplicativos da Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674) no Centro de Desenvolvimento do Windows.  
+
+Quando você trabalha com recursos localizados em aplicativos de área de trabalho do .NET Framework, o ideal é empacotar os recursos para a cultura padrão ou neutra com o assembly principal e criar um assembly satélite separado para cada idioma ou cultura que oferece suporte ao seu aplicativo. Você pode usar a classe <xref:System.Resources.ResourceManager> conforme descrito na próxima seção para acessar recursos nomeados. Se você optar por não incorporar os recursos do assembly principal e os assemblies satélites, você também pode acessar os arquivos .resources binários diretamente, conforme discutido na seção [Recuperando recursos de arquivos .resources](#from_file) posteriormente neste artigo.  To retrieve resources in Windows 8.x Store apps, see [Creating and retrieving resources in Windows Store apps](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140)).  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>Recuperando recursos dos assemblies  
@@ -140,7 +141,7 @@ GetObject.exe
   
  Para habilitar o suporte de controle de versão completo do assembly, é recomendável você implantar assemblies de nome forte no [cache de assembly global](../app-domains/gac.md) e implantar assemblies que não tenham nomes fortes no diretório do aplicativo. Se você desejar implantar assemblies de nome forte no diretório do aplicativo, você não poderá incrementar o número da versão de um assembly satélite quando você atualiza o assembly. Em vez disso, você deve executar uma atualização no local onde você substitui o código existente pelo código atualizado e mantém o mesmo número de versão. Por exemplo, se você deseja atualizar a versão 1.0.0.0 de um assembly satélite com o nome de assembly totalmente especificado "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a", substitua-o pelo myApp.resources.dll atualizado que foi compilado com o mesmo nome de assembly totalmente especificado "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a". Observe que usar atualizações locais nos arquivos de assembly satélite torna difícil para um aplicativo determinar com precisão a versão de um assembly satélite.  
   
- Para obter mais informações sobre controle de versão do assembly, consulte [Controle de versão do Assembly](../../standard/assembly/versioning.md) e [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md).  
+ Para obter mais informações sobre controle de versão do assembly, consulte [Controle de versão do Assembly](../../standard/assembly/versioning.md) e [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md).  
   
 <a name="from_file"></a>   
 ## <a name="retrieving-resources-from-resources-files"></a>Para recuperar recursos dos arquivos .resources  
@@ -154,7 +155,7 @@ GetObject.exe
  ![Ilustração que mostra o diretório principal do aplicativo.](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
   
 ### <a name="using-the-resource-manager"></a>Usando o Gerenciador de Recursos  
- Depois de ter criado os recursos e colocando-os no diretório apropriado, você cria um objeto <xref:System.Resources.ResourceManager> para usar os recursos chamando o método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29>. O primeiro parâmetro especifica o nome da raiz do arquivo .resources padrão do aplicativo ("strings" para o exemplo na seção anterior). O segundo parâmetro especifica o local dos recursos ("Resources" no exemplo anterior). O terceiro parâmetro especifica a implementação de <xref:System.Resources.ResourceSet> a ser usada. Se o terceiro parâmetro for `null`, o tempo de execução padrão <xref:System.Resources.ResourceSet> será usado.  
+ Depois de ter criado os recursos e colocando-os no diretório apropriado, você cria um objeto <xref:System.Resources.ResourceManager> para usar os recursos chamando o método <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%28System.String%2CSystem.String%2CSystem.Type%29>. O primeiro parâmetro especifica o nome da raiz do arquivo .resources padrão do aplicativo ("strings" para o exemplo na seção anterior). O segundo parâmetro especifica o local dos recursos ("Resources" no exemplo anterior). O terceiro parâmetro especifica a implementação de <xref:System.Resources.ResourceSet> a ser usada. Se o terceiro parâmetro for `null`, o runtime padrão <xref:System.Resources.ResourceSet> será usado.  
   
 > [!NOTE]
 > Não implante aplicativos do ASP.NET usando arquivos .resources autônomos. Isso pode causar problemas de bloqueio e interrompe a implantação de XCOPY. É recomendável que você implante recursos do ASP.NET em assemblies satélites. Para obter mais informações, consulte [Visão geral dos recursos da página da Web do ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100)).  
@@ -204,5 +205,5 @@ csc Example.cs
 - <xref:System.Resources.ResourceManager>
 - [Recursos em aplicativos de área de trabalho](index.md)
 - [Empacotando e implantando recursos](packaging-and-deploying-resources-in-desktop-apps.md)
-- [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
-- [Criando e recuperando recursos em aplicativos da Windows Store](https://go.microsoft.com/fwlink/p/?LinkID=241674)
+- [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
+- [Criando e recuperando recursos em aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))

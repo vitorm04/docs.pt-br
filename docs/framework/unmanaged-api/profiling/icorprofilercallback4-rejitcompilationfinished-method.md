@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3b5cff02-2005-44eb-a2bc-50214c4b0e1d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 80bff6f06851206ff01b861001c6ed7c90db7d1e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a42198b1c89dbc47c6659564cf32738b683697b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758189"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439313"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a>Método ICorProfilerCallback4::ReJITCompilationFinished
-Notifica o criador de perfil que o compilador just-in-time (JIT) concluiu a recompilação de uma função.  
+Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,23 +36,23 @@ HRESULT ReJITCompilationFinished(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] A ID da função recompilada.  
+ [in] The ID of the function that was recompiled.  
   
  `rejitId`  
- [in] A identidade da função recompilado por JIT.  
+ [in] The identity of the JIT-recompiled function.  
   
  `hrStatus`  
- [in] Um valor que indica se a recompilação JIT foi bem-sucedida.  
+ [in] A value that indicates whether the JIT recompilation was successful.  
   
  `fIsSafeToBlock`  
- [in] `true` para indicar que o bloqueio pode causar o tempo de execução aguardar o thread de chamada de retorno desse retorno de chamada; `false` para indicar que a de bloqueio não afetará a operação de tempo de execução.  
+ [in] `true` to indicate that blocking may cause the runtime to wait for the calling thread to return from this callback; `false` to indicate that blocking will not affect the operation of the runtime.  
   
- Um valor de `true` não prejudicará o tempo de execução, mas podem afetar os resultados de criação de perfil.  
+ A value of `true` does not harm the runtime, but can affect the profiling results.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

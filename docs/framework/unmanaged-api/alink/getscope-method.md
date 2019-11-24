@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: e1555328-2c71-4ece-b357-9eb6d3a8efc4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 078168ae8860f18ff6f811dcc972e3eb3c857e1d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777213"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447199"
 ---
 # <a name="getscope-method"></a>Método GetScope
-Obtém um escopo de importação.  
+Gets an import scope.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,22 +37,22 @@ HRESULT GetScope(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID exclusiva do assembly para o qual importar.  
+ Unique ID of assembly to import to.  
   
  `FileToken`  
- ID exclusiva do arquivo do qual importar.  
+ Unique ID of the file to import from.  
   
  `dwScope`  
- Escopo de base zero para importar.  
+ Zero-based scope to import.  
   
  `ppImportScope`  
- Recebe a interface da [interface IMetaDataImport](../metadata/imetadataimport-interface.md) para o escopo.  
+ Receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface for the scope.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retornará S_OK se o método tiver sucesso.  
+## <a name="return-value"></a>Valor retornado  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9d1cf182eaf6f245baa5d898bac3ca7d3190234
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763099"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445187"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>Método ICorProfilerCallback::AppDomainShutdownStarted
-Notifica o criador de perfil que um domínio de aplicativo está sendo descarregado de um processo.  
+Notifies the profiler that an application domain is being unloaded from a process.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,15 +34,15 @@ HRESULT AppDomainShutdownStarted(
   
 ## <a name="parameters"></a>Parâmetros  
  `appDomainId`  
- [in] Identifica o domínio no qual os assemblies do aplicativo são armazenados.  
+ [in] Identifies the domain in which the application's assemblies are stored.  
   
 ## <a name="remarks"></a>Comentários  
- O valor de `appDomainId` não é válida para qualquer solicitação de informações após a `AppDomainShutdownStarted` retorno do método — esta é a última chance do criador de perfil para obter informações sobre esse domínio de aplicativo.  
+ The value of `appDomainId` is not valid for any information request after the `AppDomainShutdownStarted` method returns — this is the profiler's last chance to get information about this application domain.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

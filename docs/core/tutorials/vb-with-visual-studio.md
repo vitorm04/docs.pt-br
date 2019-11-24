@@ -5,12 +5,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 1200afb30c6bdebf66b2a1e080c62a776a7e9826
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 63f5b422f1d5c4843d6fadb5973eaf16e50ee961
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100883"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428575"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Criar um aplicativo Olá, Mundo em Visual Basic com o SDK do .NET Core no Visual Studio 2017
 
@@ -18,9 +18,9 @@ Este tópico fornece uma introdução passo a passo para compilação, depuraç�
 
 ## <a name="prerequisites"></a>Prerequisites
 
-O [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. Você pode desenvolver seu aplicativo com o .NET Core 2,1 ou versões posteriores.
+O [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada. You can develop your app with .NET Core 2.1 or later versions.
 
-Para obter mais informações, consulte [Pré-requisitos para .NET Core no Windows](../windows-prerequisites.md).
+For more information, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 ## <a name="a-simple-hello-world-application"></a>Um aplicativo simples Olá, Mundo
 
@@ -30,7 +30,7 @@ Comece criando um aplicativo de console simples "Olá, Mundo". Siga estas etapas
 
    ![Caixa de diálogo Novo Projeto com Aplicativo de Console selecionado](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
-1. O Visual Studio usa o modelo para criar seu projeto. O modelo de aplicativo de console em Visual Basic para o .NET Core define automaticamente uma classe, `Program`, com um único método, `Main`, que usa uma matriz <xref:System.String> como um argumento. `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo tempo de execução quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
+1. O Visual Studio usa o modelo para criar seu projeto. O modelo de aplicativo de console em Visual Basic para o .NET Core define automaticamente uma classe, `Program`, com um único método, `Main`, que usa uma matriz <xref:System.String> como um argumento. `Main` é o ponto de entrada do aplicativo, o método que é chamado automaticamente pelo runtime quando ele inicia o aplicativo. Quaisquer argumentos de linha de comando fornecidos quando o aplicativo for iniciado estão disponíveis na matriz *args*.
 
    ![O Visual Studio e o novo projeto HelloWorld](./media/vb-with-visual-studio/visual-studio-main-window.png)
 

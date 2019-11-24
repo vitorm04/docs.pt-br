@@ -4,12 +4,12 @@ description: Este tópico explica como compilar uma solução do .NET Core que i
 author: mairaw
 ms.date: 06/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 46d118cc4dc54e34db0f964aa3f8d76f0ad67249
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0081463c0a99acc5cb4e02bb96e2218bbcf61131
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70925990"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428618"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
 
@@ -23,13 +23,13 @@ Este tutorial mostra como criar um aplicativo que aceita uma palavra de pesquisa
 > - No Visual Studio para Mac, escolha **Ajuda** > **Relatar um Problema** no menu, ou **Relatar um Problema** na tela de boas-vindas. Isso abrirá uma janela para registrar um relatório de bug. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://developercommunity.visualstudio.com/spaces/41/index.html).
 > - Para fazer uma sugestão, escolha **Ajuda** > **Forneça uma Sugestão** no menu ou **Forneça uma Sugestão** na tela de boas-vindas. Isso leva você até a página da Web da [Comunidade de Desenvolvedores do Visual Studio para Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
-- OpenSSL (se estiver executando o .NET Core 1.1): Confira o tópico [Pré-requisitos para .NET Core no Mac](../macos-prerequisites.md).
+- OpenSSL (if running .NET Core 1.1): See the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos) topic.
 - [SDK 1.1 ou posterior do .NET Core](https://dotnet.microsoft.com/download)
 - [Visual Studio 2017 para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-Para saber mais sobre pré-requisitos, confira os [Pré-requisitos para .NET Core no Mac](../macos-prerequisites.md). Para conferir os requisitos de sistema completos do Visual Studio 2017 para Mac, veja [Requisitos de sistema da família de produtos do Visual Studio 2017 para Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
+For more information on prerequisites, see the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos). Para conferir os requisitos de sistema completos do Visual Studio 2017 para Mac, veja [Requisitos de sistema da família de produtos do Visual Studio 2017 para Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Compilar uma biblioteca
 
@@ -75,7 +75,7 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
 1. Para que a biblioteca de teste funcione com a classe `WordCount`, adicione uma referência ao projeto `TextUtils`. Na barra lateral **Solução**, clique com o botão direito do mouse em **Dependências** em **TestLibrary**. Selecione **Editar Referências** no menu de contexto.
 
-1. Na caixa de diálogo **Editar Referências**, selecione o projeto **TextUtils** na guia **Projetos**. Selecione **OK**.
+1. In the **Edit References** dialog, select the **TextUtils** project on the **Projects** tab. Select **OK**.
 
    ![Caixa de diálogo Editar Referências do Visual Studio para Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 
@@ -173,7 +173,7 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
    ![Janela do console do Visual Studio para Mac mostrando o aplicativo em execução](./media/using-on-mac-vs-full-solution/visual-studio-mac-console-window.png)
 
-1. O último recurso a ser explorado é a depuração com o Visual Studio para Mac. Defina um ponto de interrupção na instrução `Console.WriteLine`: Faça a seleção na margem esquerda da linha 23 e você verá um círculo vermelho aparecer ao lado da linha de código. Como alternativa, selecione qualquer lugar na linha de código e selecione **Executar** > **Alternar Ponto de Interrupção** no menu.
+1. O último recurso a ser explorado é a depuração com o Visual Studio para Mac. Defina um ponto de interrupção na instrução `Console.WriteLine`: selecione na margem esquerda da linha 23, e um círculo vermelho aparecerá ao lado da linha do código. Como alternativa, selecione qualquer lugar na linha de código e selecione **Executar** > **Alternar Ponto de Interrupção** no menu.
 
    ![Ponto de interrupção definido do Visual Studio para Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-breakpoint.png)
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0f7c5378490dce93599086819ee6fc806c707aa2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b98fab6c6127c3f78151d3b84160d4ca0434b6cd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777497"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428251"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>Método IMetaDataEmit::DefineSecurityAttributeSet
-Cria um conjunto de permissões de segurança para anexar ao objeto referenciado pelo token especificado.  
+Creates a set of security permissions to attach to the object referenced by the specified token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,23 +38,23 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>Parâmetros  
  `tkObj`  
- [in] O token ao qual as informações de segurança estão anexadas.  
+ [in] The token to which the security information is attached.  
   
  `rSecAttrs`  
- [in] Uma matriz de `COR_SECATTR` estruturas.  
+ [in] An array of `COR_SECATTR` structures.  
   
  `cSecAttrs`  
- [in] O número de elementos em `rSecAttrs`.  
+ [in] The number of elements in `rSecAttrs`.  
   
  `pulErrorAttr`  
- [out] Se o método falhar, especifica o índice no `rSecAttrs` do elemento que causou o problema.  
+ [out] If the method fails, specifies the index in `rSecAttrs` of the element that caused the problem.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

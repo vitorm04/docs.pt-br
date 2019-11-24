@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2e686e332cf1d35537e5d4306a3a9cbf9d46c47e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 3a628aec0823c5db07d31d33813a020606906163
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752373"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438128"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>Método ISymUnmanagedWriter3::OpenMethod2
-Abre um método e fornece seu deslocamento de seção real na imagem.  
+Opens a method and provides its real section offset in the image.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,19 +36,19 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>Parâmetros  
  `method`  
- [in] O token de metadados para o método a ser aberto.  
+ [in] The metadata token for the method to be opened.  
   
  `isect`  
- [in] O deslocamento de seção na imagem.  
+ [in] The section offset in the image.  
   
  `offset`  
- [in] O deslocamento na imagem.  
+ [in] The offset in the image.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

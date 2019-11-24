@@ -4,12 +4,12 @@ description: Informações sobre o uso do SDK do .NET Core e as respectivas ferr
 author: mairaw
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 629b7a9e1f2b59981adb77ab4d3125be7036ff02
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: 481d54904192ee82da1f9d34bbf62fa8ffe1cd3b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66299967"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428602"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Usando ferramentas e SDK do .NET Core na CI (Integração Contínua)
 
@@ -27,14 +27,14 @@ Você pode encontrar os binários estáveis mais recentes em [Downloads do .NET]
 
 ### <a name="using-the-installer-script"></a>Usando o script do instalador
 
-Usando o script do instalador, você viabiliza a instalação não-administrativa no servidor de build e facilita a automação para obter as ferramentas. O script trata de baixar as ferramentas e extrai-las em um local especificado ou padrão para uso. Você pode também especificar uma versão das ferramentas que deseja instalar e se deseja instalar o SDK inteiro ou apenas o tempo de execução compartilhado.
+Usando o script do instalador, você viabiliza a instalação não-administrativa no servidor de build e facilita a automação para obter as ferramentas. O script trata de baixar as ferramentas e extrai-las em um local especificado ou padrão para uso. Você pode também especificar uma versão das ferramentas que deseja instalar e se deseja instalar o SDK inteiro ou apenas o runtime compartilhado.
 
 O script do instalador é automatizado para execução no início do build para buscar e instalar a versão desejada do SDK. A *versão desejada* é qualquer versão do SDK necessária para a criação dos projetos. Com o script, você pode instalar o SDK em um diretório local no servidor, executar as ferramentas no local de instalação e fazer uma limpeza (ou deixar que o serviço CI faça a limpeza) após a criação. Ele proporciona o encapsulamento e isolamento de todo o processo de build. Você pode encontrar a referência do script de instalação no artigo [dotnet-install](dotnet-install-script.md).
 
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> Quando você usa o script do instalador, as dependências nativas não são instaladas automaticamente. Instale as dependências nativas, caso elas estejam ausentes no sistema operacional. Para saber mais, confira [Pré-requisitos para o .NET Core no Linux](../linux-prerequisites.md).
+> Quando você usa o script do instalador, as dependências nativas não são instaladas automaticamente. Instale as dependências nativas, caso elas estejam ausentes no sistema operacional. For more information, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
 
 ## <a name="ci-setup-examples"></a>Exemplos de instalação de CI
 
@@ -124,7 +124,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 Você pode configurar o [Travis CI](https://travis-ci.org/) para instalar o SDK do .NET Core usando a linguagem `csharp` e chave `dotnet`. Para saber mais, confira a documentação oficial do Travis CI no tópico [Criação de um projeto do C#, F# ou Visual Basic](https://docs.travis-ci.com/user/languages/csharp/). Observe que, quando você acessa as informações do Travis CI fornecidas pela comunidade, o identificador de idioma `language: csharp` funciona para todas as linguagens .NET., inclusive F# e Mono.
 
-O Travis CI é executado em trabalhos do macOS e do Linux em uma *matriz de builds*, na qual você especifica uma combinação de tempo de execução, ambiente e exclusões/inclusões para incluir as combinações de build do aplicativo. Para obter mais informações, confira o artigo [Personalizando o build](https://docs.travis-ci.com/user/customizing-the-build) na documentação do Travis CI. As ferramentas baseadas no MSBuild incluem o LTS (1.0.x) e tempos de execução atuais (1.1.x) no pacote. Por isso, instalando o SDK, você recebe todo o conteúdo necessário para o build.
+O Travis CI é executado em trabalhos do macOS e do Linux em uma *matriz de builds*, na qual você especifica uma combinação de runtime, ambiente e exclusões/inclusões para incluir as combinações de build do aplicativo. Para obter mais informações, confira o artigo [Personalizando o build](https://docs.travis-ci.com/user/customizing-the-build) na documentação do Travis CI. As ferramentas baseadas no MSBuild incluem o LTS (1.0.x) e runtimes atuais (1.1.x) no pacote. Por isso, instalando o SDK, você recebe todo o conteúdo necessário para o build.
 
 ### <a name="appveyor"></a>AppVeyor
 
@@ -161,7 +161,7 @@ Para usar um script de instalação manual no Azure DevOps Services, crie uma no
 
    ![Adicionando uma etapa de build](./media/using-ci-with-cli/add-build-step.png)
 
-1. Apresentamos o **Catálogo de tarefas**. O catálogo contém tarefas que você pode usar no build. Como você tem um script, escolha o botão **Adicionar** para o **PowerShell: Executar um script do PowerShell**.
+1. Apresentamos o **Catálogo de tarefas**. O catálogo contém tarefas que você pode usar no build. Quando tiver um script, escolha o botão **Adicionar** para o **PowerShell: execute um script do PowerShell**.
 
    ![Adicionando uma etapa de script do PowerShell](./media/using-ci-with-cli/add-powershell-script.png)
 

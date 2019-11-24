@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 60600178-c2b5-4cab-b3a5-f0f61acebaf1
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5d8bc90cc07c2390cc83860b8009a3705f927e80
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 134a89d62a0fc455a9579de1e577103f1fe6abcf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776669"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449127"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>Método ISymUnmanagedDocument::GetURL
-Retorna o localizador recursos uniforme (URL) para este documento.  
+Returns the uniform resource locator (URL) for this document.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +36,16 @@ HRESULT GetURL(
   
 ## <a name="parameters"></a>Parâmetros  
  `cchUrl`  
- [in] O tamanho, em caracteres, da `szURL` buffer.  
+ [in] The size, in characters, of the `szURL` buffer.  
   
  `pcchUrl`  
- [out] Um ponteiro para uma variável que recebe o tamanho da URL, incluindo a terminação nula.  
+ [out] A pointer to a variable that receives the size of the URL, including the null termination.  
   
  `szUrl`  
- [out] O buffer que contém a URL.  
+ [out] The buffer containing the URL.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, um código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, an error code.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 77f72fb7eb7b0542dc9a3179811a78b189d6b3b0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c9ac624e17223def206e86fd92ee4fd2de7f6082
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778832"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436753"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>Método IMetaDataImport::GetTypeDefProps
-Retorna informações de metadados para o <xref:System.Type> representado pelo token de TypeDef especificado.  
+Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,29 +40,29 @@ HRESULT GetTypeDefProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `td`  
- [in] O token de TypeDef que representa o tipo para retornar metadados.  
+ [in] The TypeDef token that represents the type to return metadata for.  
   
  `szTypeDef`  
- [out] Um buffer que contém o nome do tipo.  
+ [out] A buffer containing the type name.  
   
  `cchTypeDef`  
- [in] O tamanho em caracteres largos da `szTypeDef`.  
+ [in] The size in wide characters of `szTypeDef`.  
   
  `pchTypeDef`  
- [out] O número de caracteres largos retornado no `szTypeDef`.  
+ [out] The number of wide characters returned in `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out] Um ponteiro para os sinalizadores que modificam a definição de tipo. Esse valor é um bitmask do [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeração.  
+ [out] A pointer to any flags that modify the type definition. This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.  
   
  `ptkExtends`  
- [out] Um token de metadados de TypeDef ou TypeRef que representa o tipo base do tipo solicitado.  
+ [out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

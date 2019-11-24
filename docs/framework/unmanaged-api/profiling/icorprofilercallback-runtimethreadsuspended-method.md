@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: de830a8b-6ee1-4900-ace3-4237108f6b12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b6d03e760d2b08cd9ee8cdfd85e2e28223aeacd4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 509d6cd2e65c2eb8c92f6d79deae9e01e75298f6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747239"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433450"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>Método ICorProfilerCallback::RuntimeThreadSuspended
-Notifica o criador de perfil que o thread especificado foi suspenso ou está prestes a ser suspenso.  
+Notifies the profiler that the specified thread has been suspended or is about to be suspended.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +34,17 @@ HRESULT RuntimeThreadSuspended(
   
 ## <a name="parameters"></a>Parâmetros  
  `threadId`  
- [in] A ID do thread que foi suspenso.  
+ [in] The ID of the thread that has been suspended.  
   
 ## <a name="remarks"></a>Comentários  
- O `RuntimeThreadSuspended` notificação pode ocorrer a qualquer momento entre os [ICorProfilerCallback:: Runtimesuspendstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) e os respectivos [ICorProfilerCallback:: Runtimeresumestarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) retornos de chamada. As notificações que ocorrem entre [ICorProfilerCallback:: Runtimesuspendfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) e `RuntimeResumeStarted` são de threads que estavam sendo executados em código não gerenciado e foram suspensos durante a entrada para o tempo de execução.  
+ The `RuntimeThreadSuspended` notification can occur any time between the [ICorProfilerCallback::RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md) and the associated [ICorProfilerCallback::RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md) callbacks. Notifications that occur between [ICorProfilerCallback::RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md) and `RuntimeResumeStarted` are for threads that had been running in unmanaged code and were suspended upon entry to the runtime.  
   
- Em geral, esse retorno de chamada ocorre depois que um thread é suspenso. No entanto, se o thread em execução no momento (o thread que chamou esse retorno de chamada) é aquele que está sendo suspenso, esse retorno de chamada ocorrerá antes que o thread está suspenso.  
+ Generally, this callback occurs just after a thread is suspended. However, if the currently executing thread (the thread that called this callback) is the one that is being suspended, this callback will occur just before the thread is suspended.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

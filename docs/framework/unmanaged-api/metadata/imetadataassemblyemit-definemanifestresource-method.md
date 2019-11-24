@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 781953fe5bf209f195ef4887dff45e1902741f0c
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 83170815f4aa65988bb6a6394bd466a0ba376ebf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67775314"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432057"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>Método IMetaDataAssemblyEmit::DefineManifestResource
-Cria um `ManifestResource` estrutura que contém metadados para o recurso de manifesto especificado e retorna o token de metadados associados.  
+Creates a `ManifestResource` structure containing metadata for the specified manifest resource, and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,29 +39,29 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>Parâmetros  
  `szName`  
- [in] O nome do recurso.  
+ [in] The name of the resource.  
   
  `tkImplementation`  
- [in] Um token de metadados do tipo `mdtFile` ou `mdtAssemblyRef` que é mapeado para o provedor de recursos. Um valor NULL indica que o arquivo no qual os metadados é inserido é o provedor de recursos.  
+ [in] A metadata token of type `mdtFile` or `mdtAssemblyRef` that maps to the resource provider. A NULL value indicates that the file in which the metadata is embedded is the resource provider.  
   
  `dwOffset`  
- [in] O deslocamento para o início do recurso dentro do arquivo. Para obter recursos em arquivos autônomos, isso sempre será zero. Se o recurso estiver incorporado em um arquivo de PE (executável portátil), esse é um deslocamento do recurso BLOB, que é iniciado no local especificado no arquivo de cabeçalho cor.h.  
+ [in] The offset to the beginning of the resource within the file. For resources in standalone files, this will always be zero. If the resource is embedded in a PE (portable executable) file, this is an offset of the resource BLOB, which starts at the location specified in the cor.h header file.  
   
  `dwResourceFlags`  
- [in] Uma combinação bit a bit dos valores de sinalizador que especificam configurações de propriedade para a definição de recurso.  
+ [in] A bitwise combination of flag values that specify property settings for the resource definition.  
   
  `pmdmr`  
- [out] Um ponteiro para o token de metadados retornados.  
+ [out] A pointer to the returned metadata token.  
   
 ## <a name="remarks"></a>Comentários  
- Um `ManifestResource` estrutura de metadados deve ser definida para cada recurso que é implementado em cada um dos arquivos do assembly.  
+ One `ManifestResource` metadata structure must be defined for each resource that is implemented in each of the assembly's files.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

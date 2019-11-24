@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e0667ef7-1d31-4c89-a2d3-d426f023f8d2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 27b2867019085bf5b44f2ee364c07af66144d4b5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4a258ce9121a287929ca5bc39c480f1ca2596e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782339"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437467"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>Método IMetaDataImport::GetMethodProps
-Obtém o token de metadados associados com o método referenciado pelo MethodDef especificado.  
+Gets the metadata associated with the method referenced by the specified MethodDef token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `mb`  
- [in] O token MethodDef que representa o método para retornar metadados.  
+ [in] The MethodDef token that represents the method to return metadata for.  
   
  `pClass`  
- [out] Um ponteiro para um token de TypeDef que representa o tipo que implementa o método.  
+ [out] A Pointer to a TypeDef token that represents the type that implements the method.  
   
  `szMethod`  
- [out] Um ponteiro para um buffer que tem o nome do método.  
+ [out] A Pointer to a buffer that has the method's name.  
   
  `cchMethod`  
- [in] O tamanho solicitado do `szMethod`.  
+ [in] The requested size of `szMethod`.  
   
  `pchMethod`  
- [out] Um ponteiro para o tamanho em caracteres largos da `szMethod`, ou, no caso de truncamento, o número real de caracteres largos no nome do método.  
+ [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
   
  `pdwAttr`  
- [out] Um ponteiro para qualquer sinalizadores associados com o método.  
+ [out] A pointer to any flags associated with the method.  
   
  `ppvSigBlob`  
- [out] Um ponteiro para a assinatura de metadados de binários do método.  
+ [out] A pointer to the binary metadata signature of the method.  
   
  `pcbSigBlob`  
- [out] Um ponteiro para o tamanho em bytes do `ppvSigBlob`.  
+ [out] A Pointer to the size in bytes of `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] Um ponteiro para o endereço virtual relativo do método.  
+ [out] A pointer to the relative virtual address of the method.  
   
  `pdwImplFlags`  
- [out] Um ponteiro para os sinalizadores de implementação para o método.  
+ [out] A pointer to any implementation flags for the method.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

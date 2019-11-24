@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 944c641c39ddef7add0e9f382dc7d35068668455
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 718e41e16c07265d8a36b8f6124d99cd3490f7be
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781725"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436619"
 ---
 # <a name="cornativelinktype-enumeration"></a>Enumeração CorNativeLinkType
-Fornece valores que indicam o tipo vinculado no código nativo.  
+Provides values that indicate the type linked in native code.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,19 +42,19 @@ typedef enum
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`nltNone`|Indica que nenhuma das palavras-chave são especificadas.|  
-|`nltAnsi`|Indica que uma palavra-chave ANSI é especificada.|  
-|`nltUnicode`|Indica que uma palavra-chave Unicode foi especificada|  
-|`nltAuto`|Indica que uma palavra-chave auto é especificada.|  
-|`nltOle`|Indica que uma palavra-chave OLE é especificada.|  
+|`nltNone`|Indicates that none of the keywords are specified.|  
+|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
+|`nltUnicode`|Indicates that a Unicode keyword is specified|  
+|`nltAuto`|Indicates that an auto keyword is specified.|  
+|`nltOle`|Indicates that an OLE keyword is specified.|  
 |`nltMaxValue`|Não usado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

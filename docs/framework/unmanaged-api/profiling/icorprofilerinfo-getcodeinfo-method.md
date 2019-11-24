@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 90140b0f-a926-4a7e-b6fa-23e05f703cce
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2cc587edf763a352501a0d9097bdab2c54658d98
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2393468f78312511d11cbe0ab422c26c710e25d8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762847"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439231"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>Método ICorProfilerInfo::GetCodeInfo
-Obtém a extensão do código nativo associado com a ID da função especificada.  
+Gets the extent of native code associated with the specified function ID.  
   
- Esse método é obsoleto. Use o [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) método em vez disso.  
+ Esse método é obsoleto. Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,27 +38,27 @@ HRESULT GetCodeInfo(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] A ID da função à qual o código nativo está associado.  
+ [in] The ID of the function with which the native code is associated.  
   
  `pStart`  
- [out] Um ponteiro para uma matriz de bytes que compõem o código nativo da função.  
+ [out] A pointer to an array of bytes that compose the native code of the function.  
   
  `pcSize`  
- [out] Um ponteiro para um inteiro que especifica o tamanho, em bytes, do código nativo.  
+ [out] A pointer to an integer that specifies the size, in bytes, of the native code.  
   
 ## <a name="remarks"></a>Comentários  
- Para otimizar o desempenho, o tempo de execução no .NET Framework versão 2.0 divide o código nativo pré-compilado de uma função em várias regiões. Consequentemente, o `GetCodeInfo` método está obsoleto no .NET Framework 2.0, porque não é possível lidar com a extensão do código nativo da função. Os criadores de perfis devem passar a usar o mais geral `ICorProfilerInfo2::GetCodeInfo2` método em vez disso.  
+ To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions. Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code. Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.  
   
- Essa função usa buffers alocados pelo chamador.  
+ This function uses caller-allocated buffers.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   
- **Versões do .NET framework:** 1.0  
+ **.NET Framework Versions:** 1.0  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42145e8d-000f-4d0b-ae43-c08201190fa2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 71a2c7a61d573c1e17d0e8fefcd34d60e05ed3c5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: b240be3e5b0127de42cea43dd8e89a2cc656b28e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780480"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449516"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>Método IMetaDataImport::EnumFieldsWithName
-Enumera FieldDef tokens do tipo especificado com o nome especificado.  
+Enumerates FieldDef tokens of the specified type with the specified name.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,39 +40,39 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [no, out] Um ponteiro para o enumerador.  
+ [in, out] A pointer to the enumerator.  
   
  `cl`  
- [in] O token do tipo cujos campos são a serem enumerados.  
+ [in] The token of the type whose fields are to be enumerated.  
   
  `szName`  
- [in] O nome do campo que limita o escopo da enumeração.  
+ [in] The field name that limits the scope of the enumeration.  
   
  `rFields`  
- [out] Matriz usada para armazenar os tokens de FieldDef.  
+ [out] Array used to store the FieldDef tokens.  
   
  `cMax`  
- [in] O tamanho máximo da `rFields` matriz.  
+ [in] The maximum size of the `rFields` array.  
   
  `pcTokens`  
- [out] O número real de tokens FieldDef retornado no `rFields`.  
+ [out] The actual number of FieldDef tokens returned in `rFields`.  
   
 ## <a name="remarks"></a>Comentários  
- Diferentemente [imetadataimport:: Enumfields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` descarta todos os tokens de campo que não têm o nome especificado.  
+ Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` retornado com êxito.|  
-|`S_FALSE`|Não há nenhum campo para enumerar. Nesse caso, `pcTokens` é zero.|  
+|`S_OK`|`EnumFieldsWithName` returned successfully.|  
+|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

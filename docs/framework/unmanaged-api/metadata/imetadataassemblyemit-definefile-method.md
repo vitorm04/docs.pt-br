@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 54d5a233da2bf033d960fd02961ac89eb57151d2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776292"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440214"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>Método IMetaDataAssemblyEmit::DefineFile
-Cria um `File` estrutura de metadados que contém metadados de assembly referenciados por esse assembly e retorna o token de metadados associados.  
+Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,29 +39,29 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parâmetros  
  `szName`  
- [in] O nome do arquivo a ser consumido.  
+ [in] The name of the file to be consumed.  
   
  `pbHashValue`  
- [in] Um ponteiro para o hash de dados associados ao assembly.  
+ [in] A pointer to the hash data associated with the assembly.  
   
  `cbHashValue`  
- [in] O tamanho em bytes do `pbHashValue`.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwFileFlags`  
- [in] Uma combinação bit a bit de `FileFlags` valores que especificam as configurações de propriedade.  
+ [in] A bitwise combination of `FileFlags` values that specify property settings.  
   
  `pmdf`  
- [out] Um ponteiro para retornado `File` token.  
+ [out] A pointer to the returned `File` token.  
   
 ## <a name="remarks"></a>Comentários  
- Um `File` estrutura de metadados deve ser definida para cada arquivo que foi parte desse assembly no momento em que este assembly foi compilado, excluindo o arquivo que contém os metadados.  
+ One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataforma:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 886ea6c5-6b26-4b88-8bf6-448d6d191950
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb8112d6d2b5c2cbb257db2f20ff4be5a84e827b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: cc81ccd1c754e3d34c54737f4560b4f81d5cc916
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70787480"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438416"
 ---
 # <a name="exportnestedtypeforwarder-method"></a>Método ExportNestedTypeForwarder
-Adiciona um encaminhador de tipo para um tipo aninhado à tabela de tipos do assembly especificado.  
+Adds a type forwarder for a nested type to the type table of the given assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,31 +40,31 @@ HRESULT ExportNestedTypeForwarder(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID do assembly do qual exportar.  
+ ID of the assembly to export from.  
   
  `FileToken`  
- Token do arquivo ou ID do assembly do arquivo que define o tipo.  
+ File token or assembly ID of file that defines the type.  
   
  `TypeToken`  
- Token para o tipo.  
+ Token for the type.  
   
  `ParentType`  
- Token do tipo pai.  
+ Token of parent type.  
   
  `pszTypename`  
- Nome de tipo totalmente qualificado para exportar.  
+ Fully qualified type name to export.  
   
  `dwFlags`  
- `ComType`sinalizadores como `tdPublic` ou `tdNested`.  
+ `ComType` flags such as `tdPublic` or `tdNested`.  
   
  `pType`  
- Recebe o token do tipo de exportação. Isso é necessário apenas para emitir tipos aninhados.  
+ Receives token of export type. This is necessary only for emitting nested types.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retornará S_OK se o método tiver sucesso.  
+## <a name="return-value"></a>Valor retornado  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Consulte também
 

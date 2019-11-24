@@ -9,16 +9,16 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 806bc3de138ebae682d2e248593230c753eb7ba2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: dd14a4baf9967f41690e7978b8b6cf57c9275e36
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422758"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428508"
 ---
 # <a name="group-clause-c-reference"></a>Cláusula group (Referência de C#)
 
-A cláusula `group` retorna uma sequência de objetos <xref:System.Linq.IGrouping%602> que contêm zero ou mais itens que correspondem ao valor de chave do grupo. Por exemplo, é possível agrupar uma sequência de cadeias de caracteres de acordo com a primeira letra de cada cadeia de caracteres. Nesse caso, a primeira letra é a chave, tem um tipo [char](char.md) e é armazenada na propriedade `Key` de cada objeto <xref:System.Linq.IGrouping%602>. O compilador infere o tipo da chave.
+A cláusula `group` retorna uma sequência de objetos <xref:System.Linq.IGrouping%602> que contêm zero ou mais itens que correspondem ao valor de chave do grupo. Por exemplo, é possível agrupar uma sequência de cadeias de caracteres de acordo com a primeira letra de cada cadeia de caracteres. Nesse caso, a primeira letra é a chave, tem um tipo [char](../builtin-types/char.md) e é armazenada na propriedade `Key` de cada objeto <xref:System.Linq.IGrouping%602>. O compilador infere o tipo da chave.
 
 É possível finalizar uma expressão de consulta com uma cláusula `group`, conforme mostrado no exemplo a seguir:
 
@@ -66,7 +66,7 @@ Use uma chave composta para agrupar elementos de acordo com mais de uma chave. U
 group person by new {name = person.surname, city = person.city};
 ```
 
-Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. Para obter mais informações, consulte [Como implementar uma classe leve com propriedades autoimplementadas](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) e [Como consultar arquivos duplicados em uma árvore de diretório](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último artigo apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.
+Use um tipo nomeado se for necessário passar a variável de consulta para outro método. Crie uma classe especial usando as propriedades autoimplementadas das chaves e, em seguida, substitua os métodos <xref:System.Object.Equals%2A> e <xref:System.Object.GetHashCode%2A>. Também é possível usar um struct; nesse caso, não é exatamente necessário substituir esses métodos. For more information see [How to implement a lightweight class with auto-implemented properties](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) and [How to: Query for Duplicate Files in a Directory Tree](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). O último artigo apresenta um exemplo de código que demonstra como usar uma chave composta com um tipo nomeado.
 
 ## <a name="example"></a>Exemplo
 

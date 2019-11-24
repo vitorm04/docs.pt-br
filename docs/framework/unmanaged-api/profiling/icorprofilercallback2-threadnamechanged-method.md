@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c8bbd76d-a9ff-44f2-87a6-be052819da36
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6ffe25cae7122e65bed6aece7b0f6b2abe82c1eb
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1149298b4c5e521b37aae6ec48d463f395f18ae3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779288"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439565"
 ---
 # <a name="icorprofilercallback2threadnamechanged-method"></a>Método ICorProfilerCallback2::ThreadNameChanged
-Notifica o criador de perfil de código que o nome de um thread foi alterado.  
+Notifies the code profiler that the name of a thread has changed.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +36,18 @@ HRESULT ThreadNameChanged(
   
 ## <a name="parameters"></a>Parâmetros  
  `threadId`  
- [in] A ID do thread.  
+ [in] The ID of the thread.  
   
  `cchName`  
- [in] O comprimento do novo nome do thread.  
+ [in] The length of the new name of the thread.  
   
  `name`  
- [in] O novo nome do thread. O nome não é terminada em nulo.  
+ [in] The new name of the thread. The name is not null-terminated.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

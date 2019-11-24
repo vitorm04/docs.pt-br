@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: be232314-7f69-4855-bfab-63361bd22307
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a55a8575a3f8ae04bcc4a148b588cd2361f81cf6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cdbcdb9359d295ad9bed2050ed36499feba74d9e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67751502"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442278"
 ---
 # <a name="imetadataemitsetfieldmarshal-method"></a>Método IMetaDataEmit::SetFieldMarshal
-Define a informações de marshaling para o parâmetro de método, retorno de método ou campo referenciada pelo token especificado de PInvoke.  
+Sets the PInvoke marshaling information for the field, method return, or method parameter referenced by the specified token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,20 +37,20 @@ HRESULT SetFieldMarshal (
   
 ## <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] O token para o item de dados de destino. Isso é um `mdFieldDef` ou um `mdParamDef` token.  
+ [in] The token for target data item. This is either a `mdFieldDef` or a `mdParamDef` token.  
   
  `pvNativeType`  
- [in] A assinatura para o tipo não gerenciado.  
+ [in] The signature for unmanaged type.  
   
  `cbNativeType`  
- [in] A contagem de bytes em `pvNativeType`.  
+ [in] The count of bytes in `pvNativeType`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

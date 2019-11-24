@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8f35414d-f40b-4b99-8768-9adb675c622a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6094bbedcc5386d3f5c0400960e47ac91defe2a1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 8360a74e9e18e5b68ecc9edd7be2e3a711cb61c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782453"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437773"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>Método IMetaDataImport::GetClassLayout
-Obtém o token de informações de layout para a classe referenciada por TypeDef especificado.  
+Gets layout information for the class referenced by the specified TypeDef token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,29 +40,29 @@ HRESULT GetClassLayout  (
   
 ## <a name="parameters"></a>Parâmetros  
  `td`  
- [in] O token de TypeDef para a classe com o layout para retornar.  
+ [in] The TypeDef token for the class with the layout to return.  
   
  `pdwPackSize`  
- [out] Um dos valores 1, 2, 4, 8 ou 16, que representa o tamanho do pacote da classe.  
+ [out] One of the values 1, 2, 4, 8, or 16, representing the pack size of the class.  
   
  `rFieldOffset`  
- [out] Uma matriz de [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) valores.  
+ [out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) values.  
   
  `cMax`  
- [in] O tamanho máximo da `rFieldOffset` matriz.  
+ [in] The maximum size of the `rFieldOffset` array.  
   
  `pcFieldOffset`  
- [out] O número de elementos retornados em `rFieldOffset`.  
+ [out] The number of elements returned in `rFieldOffset`.  
   
  `pulClassSize`  
- [out] O tamanho em bytes da classe representada por `td`.  
+ [out] The size in bytes of the class represented by `td`.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

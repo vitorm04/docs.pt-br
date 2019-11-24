@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 22d70d0ee976d9c1a6aabd57e5d13dc70cd2d081
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 681328af3f3624a8398d5125b952593f2c0510c7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454261"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427663"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -167,7 +167,7 @@ Em aplicativos destinados ao .NET Framework 4.7.2 e versões anteriores, uma [di
 
 A figura a seguir mostrará a dica de ferramenta quando o usuário selecionar um botão com o teclado.
 
-![A dica de ferramenta quando o usuário navegar até um botão com o teclado](./media/tooltip.png)
+![Screenshot of tooltip when user navigates to button with the keyboard.](./media/whats-new-in-accessibility/select-tooltip-with-keyboard.png)
 
 <a name="wpf48" />
 
@@ -187,7 +187,7 @@ O .NET framework 4.8 adiciona uma nova propriedade, `SelectionTextBrush`, que pe
 
 Para usar essa propriedade, basta adicioná-la ao seu código XAML e usar a associação ou o pincel adequado. A seleção de texto resultante tem esta aparência:
 
-![A dica de ferramenta quando o usuário navegar até um botão com o teclado](./media/selectiontextbrush-property.png)
+![Screenshot of the app running with the words Hello World selected.](./media/whats-new-in-accessibility/selectiontextbrush-property.png)
 
 Você pode combinar o uso das propriedades `SelectionBrush` e `SelectionTextBrush` para gerar qualquer combinação de plano de fundo e cor de primeiro plano que julgar adequada.
 
@@ -480,11 +480,11 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
   Antes: 
 
-  ![Controle expansor com foco antes das melhorias de acessibilidade](./media/expander-before.png)
+  ![Screenshot of the expander control with focus and no focus visual.](./media/whats-new-in-accessibility/expander-control-before.png)
 
   Depois: 
 
-  ![Controle expansor com foco após as melhorias de acessibilidade](./media/expander-after.png)
+  ![Screenshot of the expander control with focus showing a dotted line around the control's text.](./media/whats-new-in-accessibility/expander-control-after.png)
 
 - Controles <xref:System.Windows.Controls.CheckBox> e <xref:System.Windows.Controls.RadioButton>
 
@@ -492,11 +492,11 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
   Antes: 
 
-  ![Botão de opção de alto contraste com foco antes das melhorias de acessibilidade](./media/radio-button-before.png)
+  ![Screenshot of radio and check buttons with poor text visibility on high contrast themes.](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
   Depois: 
 
-  ![Botão de opção de alto contraste com foco após as melhorias de acessibilidade](./media/radio-button-after.png)
+  ![Screenshot of radio and check buttons with better text visibility on high contrast themes.](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
 - Controle <xref:System.Windows.Controls.ComboBox>
 
@@ -504,31 +504,31 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
   Antes: 
 
-  ![Borda e texto desabilitados da ComboBox antes das melhorias de acessibilidade](./media/combo-disabled-before.png)
+  ![Screenshot of a disabled ComboBox with border and control text in different colors.](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
   Depois:   
 
-  ![Borda e texto desabilitados da ComboBox após as melhorias de acessibilidade](./media/combo-disabled-after.png)
+  ![Screenshot of a disabled ComboBox with border the same color as the control text.](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
   Além disso, os botões desabilitados e com foco usam a cor de tema correta.
 
   Antes:
 
-  ![Cores de tema do botão antes das melhorias de acessibilidade](./media/button-themes-before.png) 
+  ![Screenshot of a black button with gray text saying Focus Me.](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
 
   Depois: 
 
-  ![Cores de tema do botão após as melhorias de acessibilidade](./media/button-themes-after.png) 
+  ![Screenshot of a blue button with black text saying Focus Me.](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
 
   Por fim, no .NET Framework 4.7 e em versões anteriores, a configuração do estilo de um controle <xref:System.Windows.Controls.ComboBox> como `Toolbar.ComboBoxStyleKey` fazia com que a seta suspensa ficasse invisível. Esse problema é corrigido a partir do .NET Framework 4.7.1. Por exemplo:
 
   Antes: 
 
-  ![Toolbar.ComboBoxStyleKey antes das melhorias de acessibilidade](./media/comboboxstylekey-before.png) 
+  ![Screenshot of a ComboBox control with an invisible drop-down arrow.](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
 
   Depois: 
 
-  ![Toolbar.ComboBoxStyleKey após as melhorias de acessibilidade](./media/comboboxstylekey-after.png) 
+  ![Screenshot of a ComBoxBox control displaying the drop-down arrow.](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
 
 - Controle <xref:System.Windows.Controls.DataGrid>
 
@@ -536,21 +536,21 @@ A partir do .NET Framework 4.7.1, foram feitas melhorias de alto contraste em v�
 
   Antes: 
 
-  ![Seta do indicador de classificação antes das melhorias de acessibilidade](./media/sort-indicator-before.png) 
+  ![Screenshot of sort indicator arrow before improvements.](./media/whats-new-in-accessibility/sort-indicator-before.png) 
 
   Depois:   
 
-  ![Seta do indicador de classificação após as melhorias de acessibilidade](./media/sort-indicator-after.png) 
+  ![Screenshot of sort indicator arrow after improvements.](./media/whats-new-in-accessibility/sort-indicator-after.png) 
 
   Além disso, no .NET Framework 4.7 e em versões anteriores, o estilo de link padrão era alterado para uma cor incorreta ao passar o mouse nos modos de alto contraste. Isso é resolvido a partir do .NET Framework 4.7.1. Da mesma forma, as colunas da caixa de seleção <xref:System.Windows.Controls.DataGrid> usam as cores esperadas para os comentários do foco de teclado a partir do .NET Framework 4.7.1.
 
   Antes: 
 
-  ![Estilo de link padrão de DataGrid antes das melhorias de acessibilidade](./media/default-link-style-before.png) 
+  ![Screenshot of a link saying Click Me! in red.](./media/whats-new-in-accessibility/default-link-style-before.png) 
 
   Depois:    
 
-  ![Estilo de link padrão de DataGrid após as melhorias de acessibilidade](./media/default-link-style-after.png) 
+  ![Screenshot of a link saying Click Me! in yellow.](./media/whats-new-in-accessibility/default-link-style-after.png) 
 
 Para obter mais informações sobre as melhorias de acessibilidade do WPF no .NET Framework 4.7.1, consulte [Melhorias de acessibilidade no WPF](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf).
 
@@ -581,11 +581,11 @@ Alguns exemplos de alterações de alto contraste incluem:
 
   Antes:
 
-  ![Texto desabilitado antes das melhorias de acessibilidade](./media/wf-disabled-before.png) 
+  ![Screenshot of an app that uses different controls running in high contrast mode before accessibility improvements.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
 
   Depois:
 
-  ![Texto desabilitado após as melhorias de acessibilidade](./media/wf-disabled-after.png) 
+  ![Screenshot of an app that uses different controls running in high contrast mode after accessibility improvements.](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
 
 - Melhorias de alto contraste na caixa de diálogo Exceção de Thread.
 
@@ -626,7 +626,7 @@ A partir do .NET Framework 4.7.1, o Windows Forms inclui:
 
 ### <a name="aspnet-web-controls"></a>Controles da Web do ASP.NET
 
-A partir do .NET Framework 4.7.1 e do Visual Studio 2017 versão 15,3, o ASP.NET melhora a forma como os controles da Web do ASP.NET funcionam com a tecnologia de acessibilidade no Visual Studio. As alterações incluem as seguintes:
+Starting with .NET Framework 4.7.1 and Visual Studio 2017 version 15.3, ASP.NET improves how ASP.NET web controls work with accessibility technology in Visual Studio. As alterações incluem as seguintes:
 
 - Alterações para implementar padrões de acessibilidade de interface do usuário ausentes em controles como a caixa de diálogo **Adicionar Campo** no assistente de **Exibição de Detalhes** ou a caixa de diálogo **Configurar ListView** do assistente **ListView**.
 

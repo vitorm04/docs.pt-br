@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 8703532ff8551e8bd42128eb9e8cdcf2afd9dad8
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b264be5d2589455562a19ef55b5ddf1a4e74ce15
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739668"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428460"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
@@ -32,7 +32,7 @@ Todos os tipos de valor são derivados implicitamente da <xref:System.ValueType?
 
 Ao contrário do que acontece com tipos de referência, você não pode derivar um novo tipo de um tipo de valor. No entanto, assim como com tipos de referência, os structs podem implementar interfaces.
 
-Variáveis de tipo de valor não podem ser `null` por padrão. No entanto, as variáveis dos [tipos de valores anuláveis](../builtin-types/nullable-value-types.md) correspondentes podem ser `null`.
+Variáveis de tipo de valor não podem ser `null` por padrão. However, variables of the corresponding [nullable value types](../builtin-types/nullable-value-types.md) can be `null`.
 
 Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o valor padrão desse tipo. Para saber mais sobre valores padrão de tipos de valor, consulte [Tabela de valores padrão](default-values-table.md).
 
@@ -40,7 +40,7 @@ Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o 
 
 Os *tipos simples* são um conjunto de tipos de struct predefinidos fornecidos por C# e incluem os seguintes tipos:
 
-- [Tipos integrais](../builtin-types/integral-numeric-types.md): tipos numéricos inteiros e o tipo [char](char.md)
+- [Tipos integrais](../builtin-types/integral-numeric-types.md): tipos numéricos inteiros e o tipo [char](../builtin-types/char.md)
 - [Tipos de ponto flutuante](../builtin-types/floating-point-numeric-types.md)
 - [bool](bool.md)
 

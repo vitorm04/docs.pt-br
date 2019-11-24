@@ -15,19 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0451d752-1e5c-4c9a-8bad-6cd35b7ba3df
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 994f6668de3040cc9f2381356d6db06c18c9e984
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 87a70587027f283ef5976089b3f2daf1204e68ec
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67745888"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426110"
 ---
 # <a name="iceegentruncatesection-method"></a>Método ICeeGen::TruncateSection
-Trunca a seção de código especificado pelo comprimento especificado.  
+Truncates the specified code section by the specified length.  
   
- Esse método é obsoleto e não deve ser usado.  
+ This method is obsolete and should not be used.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,20 +38,20 @@ HRESULT TruncateSection (
   
 ## <a name="parameters"></a>Parâmetros  
  `section`  
- [in] A seção a ser truncado.  
+ [in] The section to truncate.  
   
  `len`  
- [in] O comprimento, em bytes, pelo qual a seção de truncar.  
+ [in] The length, in bytes, by which to truncate the section.  
   
 ## <a name="remarks"></a>Comentários  
- Chamar `TruncateSection` somente se você tiver requisitos especiais de seção que não são manipulados por outros métodos.  
+ Call `TruncateSection` only if you have special section requirements that are not handled by other methods.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

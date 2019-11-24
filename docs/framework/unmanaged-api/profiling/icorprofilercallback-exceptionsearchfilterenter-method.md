@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: acc239ce-3eef-418c-b1df-c5a6dd8e8a4c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d39dbf44b21400c8eb5a7abf361dc868b8d39a22
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 65765795c13948175a7eb5bd78843968d55953d8
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756101"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445375"
 ---
 # <a name="icorprofilercallbackexceptionsearchfilterenter-method"></a>Método ICorProfilerCallback::ExceptionSearchFilterEnter
-Notifica o criador de perfil que a fase de pesquisa de tratamento de exceções começou a execução de um filtro de exceção definidas pelo usuário.  
+Notifies the profiler that the search phase of exception handling has begun executing a user-defined exception filter.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,12 +34,12 @@ HRESULT ExceptionSearchFilterEnter(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] A ID da função que contém o filtro.  
+ [in] The ID of the function that contains the filter.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

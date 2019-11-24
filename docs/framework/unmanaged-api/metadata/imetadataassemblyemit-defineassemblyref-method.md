@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0b284b18-0084-4b3a-912a-5ebe9f29c88b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c150f4bda901627fc21ed54926c3cf959bb829a3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: c88b7a401a19b1bd0e02edab7ef7bbee1372199e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776295"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74432084"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>Método IMetaDataAssemblyEmit::DefineAssemblyRef
-Cria um `AssemblyRef` estrutura que contém metadados para o assembly que faz referência a esse assembly e retorna o token de metadados associados.  
+Creates an `AssemblyRef` structure containing metadata for the assembly that this assembly references, and returns the associated metadata token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,40 +42,40 @@ HRESULT DefineAssemblyRef (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbPublicKeyOrToken`  
- [in] A chave pública do Editor do assembly referenciado. A função auxiliar [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) pode ser usado para obter o hash da chave pública para passar como este parâmetro.  
+ [in] The public key of the publisher of the referenced assembly. The helper function [StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfromassembly-function.md) can be used to get the hash of the public key to pass as this parameter.  
   
  `cbPublicKeyOrToken`  
- [in] O tamanho em bytes do `pbPublicKeyOrToken`.  
+ [in] The size in bytes of `pbPublicKeyOrToken`.  
   
  `szName`  
- [in] O nome de texto legível do assembly. Esse valor não deve exceder 1024 caracteres.  
+ [in] The human-readable text name of the assembly. This value must not exceed 1024 characters.  
   
  `pMetaData`  
- [in] Uma instância ASSEMBLYMETADATA que contém as informações de versão, a plataforma e a localidade do assembly referenciado.  
+ [in] An ASSEMBLYMETADATA instance that contains the version, platform and locale information of the referenced assembly.  
   
  `pbHashValue`  
- [in] O hash de dados associados ao assembly referenciado. Opcional.  
+ [in] The hash data associated with the referenced assembly. Opcional.  
   
  `cbHashValue`  
- [in] O tamanho em bytes do `pbHashValue`.  
+ [in] The size in bytes of `pbHashValue`.  
   
  `dwAssemblyRefFlags`  
- [in] Uma combinação bit a bit de [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) valores que influenciam o comportamento do mecanismo de execução.  
+ [in] A bitwise combination of [CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md) values that influence the behavior of the execution engine.  
   
  `pmdar`  
- [out] Um ponteiro para retornado `AssemblyRef` token de metadados.  
+ [out] A pointer to the returned `AssemblyRef` metadata token.  
   
 ## <a name="remarks"></a>Comentários  
- Um `AssemblyRef` estrutura de metadados deve ser definida para cada assembly que faz referência a esse assembly.  
+ One `AssemblyRef` metadata structure must be defined for each assembly that this assembly references.  
   
- Em tempo de execução, os detalhes de um assembly referenciado são passados para o resolvedor de assembly com uma indicação de que eles representam as informações "no estado criado". O resolvedor de assembly, em seguida, aplica a política.  
+ At run time, the details of a referenced assembly are passed to the assembly resolver with an indication that they represent the "as built" information. The assembly resolver then applies policy.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

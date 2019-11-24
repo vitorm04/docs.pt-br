@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 535a6839-c443-405b-a6f4-e2af90725d5b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: efc097fd9b4da668aafce90ce601a3143ea57dc7
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 25c208c98802be540bde7532c53798e6f7b35446
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763175"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445956"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>Método ICLRProfiling::AttachProfiler
-Anexa o criador de perfil especificado para o processo especificado.  
+Attaches the specified profiler to the specified process.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,50 +39,50 @@ HRESULT AttachProfiler(
   
 ## <a name="parameters"></a>Parâmetros  
  `dwProfileeProcessID`  
- [in] A ID do processo do processo ao qual o criador de perfil deve ser anexado. Em um computador de 64 bits, número de bits do processo de criação de perfil deve corresponder ao número de bits do processo de gatilho que está chamando `AttachProfiler`. Se a conta de usuário sob a qual `AttachProfiler` é chamado tem privilégios administrativos, o processo de destino pode ser qualquer processo no sistema. Caso contrário, o processo de destino deve ser de propriedade da mesma conta de usuário.  
+ [in] The process ID of the process to which the profiler should be attached. On a 64-bit machine, the profiled process's bitness must match the bitness of the trigger process that is calling `AttachProfiler`. If the user account under which `AttachProfiler` is called has administrative privileges, the target process may be any process on the system. Otherwise, the target process must be owned by the same user account.  
   
  `dwMillisecondsMax`  
- [in] A duração de tempo, em milissegundos, para `AttachProfiler` para ser concluída. O processo de gatilho deve passar um tempo limite que é conhecido por ser suficiente para o criador de perfil específica concluir sua inicialização.  
+ [in] The time duration, in milliseconds, for `AttachProfiler` to complete. The trigger process should pass a timeout that is known to be sufficient for the particular profiler to complete its initialization.  
   
  `pClsidProfiler`  
- [in] Um ponteiro para o CLSID do criador de perfil a ser carregado. O processo de gatilho pode reutilizar essa memória após `AttachProfiler` retorna.  
+ [in] A pointer to the CLSID of the profiler to be loaded. The trigger process can reuse this memory after `AttachProfiler` returns.  
   
  `wszProfilerPath`  
- [in] O caminho completo para o arquivo DLL do criador de perfil a ser carregado. Essa cadeia de caracteres deve conter não mais do que 260 caracteres, incluindo o terminador nulo. Se `wszProfilerPath` é nulo ou uma cadeia de caracteres vazia, o common language runtime (CLR) tenta encontrar o local do arquivo DLL do criador de perfil ao procurar no Registro CLSID que `pClsidProfiler` aponta.  
+ [in] The full path to the profiler’s DLL file to be loaded. This string should contain no more than 260 characters, including the null terminator. If `wszProfilerPath` is null or an empty string, the common language runtime (CLR) will try to find the location of the profiler’s DLL file by looking in the registry for the CLSID that `pClsidProfiler` points to.  
   
  `pvClientData`  
- [in] Um ponteiro para dados a serem passados para o criador de perfil, o [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) método. O processo de gatilho pode reutilizar essa memória após `AttachProfiler` retorna. Se `pvClientData` for nulo, `cbClientData` deve ser 0 (zero).  
+ [in] A pointer to data to be passed to the profiler by the [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method. The trigger process can reuse this memory after `AttachProfiler` returns. If `pvClientData` is null, `cbClientData` must be 0 (zero).  
   
  `cbClientData`  
- [in] O tamanho, em bytes, dos dados que `pvClientData` aponta.  
+ [in] The size, in bytes, of the data that `pvClientData` points to.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs a seguir.  
+## <a name="return-value"></a>Valor retornado  
+ This method returns the following HRESULTs.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|O criador de perfil especificado foi anexado com êxito o processo de destino.|  
-|CORPROF_E_PROFILER_ALREADY_ACTIVE|Já existe um criador de perfil ativas ou anexando ao processo de destino.|  
-|CORPROF_E_PROFILER_NOT_ATTACHABLE|O criador de perfil especificado não oferece suporte para o anexo. O processo de gatilho pode tentar anexar um criador de perfil diferente.|  
-|CORPROF_E_PROFILEE_INCOMPATIBLE_WITH_TRIGGER|Não é possível solicitar um anexo do criador de perfil, porque a versão do processo de destino é incompatível com o processo atual que está chamando `AttachProfiler`.|  
-|HRESULT_FROM_WIN32(ERROR_ACCESS_DENIED)|O usuário do processo de gatilho não tem acesso ao processo de destino.|  
-|HRESULT_FROM_WIN32(ERROR_PRIVILEGE_NOT_HELD)|O usuário do processo de gatilho não tem os privilégios necessários para anexar um criador de perfil ao processo de destino fornecido. O log de eventos do aplicativo pode conter mais informações.|  
-|CORPROF_E_IPC_FAILED|Ocorreu uma falha ao se comunicar com o processo de destino. Isso normalmente acontece se o processo de destino estava sendo desligado.|  
-|HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)|O processo de destino não existe ou não está em execução um CLR que dá suporte ao anexo. Isso pode indicar que o CLR foi descarregado desde a chamada para o método de enumeração de tempo de execução.|  
-|HRESULT_FROM_WIN32(ERROR_TIMEOUT)|O tempo limite expirou sem início para carregar o criador de perfil. Você pode repetir a operação de anexação. Tempos limite ocorre quando um finalizador no processo de destino é executado por um período maior que o valor de tempo limite.|  
-|E_INVALIDARG|Um ou mais parâmetros possuem valores inválidos.|  
-|E_FAIL|Ocorreu falha de alguns outra, não especificada.|  
-|Outros códigos de erro|Se o criador de perfil [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) método retorna um HRESULT que indica falha, `AttachProfiler` Retorna ou mesmo HRESULT. Nesse caso, E_NOTIMPL é convertido em CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
+|S_OK|The specified profiler has successfully attached to the target process.|  
+|CORPROF_E_PROFILER_ALREADY_ACTIVE|There is already a profiler active or attaching to the target process.|  
+|CORPROF_E_PROFILER_NOT_ATTACHABLE|The specified profiler does not support attachment. The trigger process may attempt to attach a different profiler.|  
+|CORPROF_E_PROFILEE_INCOMPATIBLE_WITH_TRIGGER|Unable to request a profiler attachment, because the version of the target process is incompatible with the current process that is calling `AttachProfiler`.|  
+|HRESULT_FROM_WIN32(ERROR_ACCESS_DENIED)|The user of the trigger process does not have access to the target process.|  
+|HRESULT_FROM_WIN32(ERROR_PRIVILEGE_NOT_HELD)|The user of the trigger process does not have the privileges necessary to attach a profiler to the given target process. The application event log may contain more information.|  
+|CORPROF_E_IPC_FAILED|A failure occurred when communicating with the target process. This commonly happens if the target process was shutting down.|  
+|HRESULT_FROM_WIN32(ERROR_FILE_NOT_FOUND)|The target process does not exist or is not running a CLR that supports attachment. This may indicate that the CLR was unloaded since the call to the runtime enumeration method.|  
+|HRESULT_FROM_WIN32(ERROR_TIMEOUT)|The timeout expired without beginning to load the profiler. You can retry the attach operation. Timeouts occur when a finalizer in the target process runs for a longer time than the timeout value.|  
+|E_INVALIDARG|One or more parameters have invalid values.|  
+|E_FAIL|Some other, unspecified failure occurred.|  
+|Outros códigos de erro|If the profiler’s [ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md) method returns an HRESULT that indicates failure, `AttachProfiler` returns that same HRESULT. In this case, E_NOTIMPL is converted to CORPROF_E_PROFILER_NOT_ATTACHABLE.|  
   
 ## <a name="remarks"></a>Comentários  
   
 ## <a name="memory-management"></a>Gerenciamento de memória  
- Manter com as convenções de COM, o chamador de `AttachProfiler` (por exemplo, o código do gatilho criado pelo desenvolvedor do criador de perfil) é responsável por alocar e desalocar a memória para os dados que o `pvClientData` parâmetro aponta. Quando o CLR executa o `AttachProfiler` chamada, ele faz uma cópia da memória que `pvClientData` aponta para e a transmite para o processo de destino. Quando o CLR dentro do processo de destino recebe sua própria cópia da `pvClientData` bloco, ele passa o bloco para o criador de perfil por meio de `InitializeForAttach` método e, em seguida, desaloca sua cópia do `pvClientData` bloco do processo de destino.  
+ In keeping with COM conventions, the caller of `AttachProfiler` (for example, the trigger code authored by the profiler developer) is responsible for allocating and de-allocating the memory for the data that the `pvClientData` parameter points to. When the CLR executes the `AttachProfiler` call, it makes a copy of the memory that `pvClientData` points to and transmits it to the target process. When the CLR inside the target process receives its own copy of the `pvClientData` block, it passes the block to the profiler through the `InitializeForAttach` method, and then deallocates its copy of the `pvClientData` block from the target process.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

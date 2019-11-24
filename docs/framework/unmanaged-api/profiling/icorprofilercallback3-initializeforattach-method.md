@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: bed097b3-6d52-46c9-bee7-ac7910b6fc3f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e1a95b3078f4a592e28e0deb9869fc520cde811d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 047516574595f9ffcd61360f51823da73a2f9733
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779281"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74439520"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>Método ICorProfilerCallback3::InitializeForAttach
-Chamado pelo common language runtime (CLR) para dar uma oportunidade de inicializar seu estado após uma operação de anexação de criador de perfil.  
+Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,21 +36,21 @@ HRESULT InitializeForAttach(
   
 ## <a name="parameters"></a>Parâmetros  
  `pCorProfilerInfoUnk`  
- [in] Um ponteiro de interface para o `ICorProfilerInfo*` interface.  
+ [in] An interface pointer for the `ICorProfilerInfo*` interface.  
   
  `pvClientData`  
- [in] Um ponteiro para os dados passados para o [iclrprofiling:: Attachprofiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) método no seu `pvClientData` parâmetro. Se esse parâmetro for nulo, `cbClientData` será 0 (zero). O CLR libera essa memória quando ele retorna da `InitializeForAttach`.  
+ [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. If this parameter is null, `cbClientData` will be 0 (zero). The CLR frees this memory when it returns from `InitializeForAttach`.  
   
  `cbClientData`  
- [in] O tamanho, em bytes, dos dados que `pvClientData` aponta.  
+ [in] The size, in bytes, of the data that `pvClientData` points to.  
   
 ## <a name="remarks"></a>Comentários  
- O CLR chama `InitializeForAttach` para dar o criador de perfil uma oportunidade para retornos de chamada de solicitação.  
+ The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 3367166f-31fe-43d0-8107-2e786f984e50
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: af0b38e955ac10592dc5cd0d0e18b0cff08834af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce8129c2a6cc29717743f255c0aac86a0836fa31
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599527"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448474"
 ---
 # <a name="ibindingdisplay-interface"></a>Interface IBindingDisplay
-Fornece métodos que exibem as informações de associação atuais sobre o aplicativo em execução.  
+Provides methods that display current binding information about the running application.  
   
 ## <a name="methods"></a>Métodos  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetCurrentDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Retorna as informações de exibição de associação atual.|  
+|[Método GetCurrentDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-getcurrentdisplay-method.md)|Returns the current binding display information.|  
 |[Método InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)|Inicializa o objeto `IBindingDisplay`.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** BindingDisplay.h  
+ **Header:** BindingDisplay.h  
   
- **Biblioteca:** BindingDisplay.idl  
+ **Library:** BindingDisplay.idl  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

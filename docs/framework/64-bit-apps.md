@@ -6,17 +6,17 @@ helpviewer_keywords:
 - 64-bit applications [C++]
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
-ms.openlocfilehash: 3ef6d02023570f5ec4013b070317c272a94b8212
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120104"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429671"
 ---
 # <a name="64-bit-applications"></a>Aplicativos de 64 bits
 Ao compilar um aplicativo, você pode especificar se ele deve ser executado em um sistema operacional Windows de 64 bits como um aplicativo nativo ou no WOW64 (Windows de 32 bits em Windows de 64 bits). O WOW64 é um ambiente de compatibilidade que permite que um aplicativo de 32 bits seja executado em um sistema de 64 bits. O WOW64 está incluído em todas as versões de 64 bits do sistema operacional Windows.  
   
-## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Executando aplicativos de 32 bits versus 64 bits no Windows  
+## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Running 32-bit vs. 64-bit Applications on Windows  
  Todos os aplicativos criados no .NET Framework 1.0 ou 1.1 são tratados como aplicativos de 32 bits em um sistema operacional de 64 bits e são sempre executados no WOW64 e no CLR (Common Language Runtime) de 32 bits. Os aplicativos de 32 bits criados no .NET Framework 4 ou em versões posteriores também são executados no WOW64 em sistemas de 64 bits.  
   
  O Visual Studio instala a versão de 32 bits do CLR em um computador x86, e a versão de 32 bits e a versão de 64 bits apropriada do CLR em um computador Windows de 64 bits. (Como o Visual Studio é um aplicativo de 32 bits, quando ele é instalado em um sistema de 64 bits, ele é executado no WOW64.)  
@@ -41,11 +41,7 @@ Ao compilar um aplicativo, você pode especificar se ele deve ser executado em u
 ## <a name="general-64-bit-programming-information"></a>Informações de Programação em 64 Bits em Geral  
  Para obter informações gerais sobre a programação de 64 bits, confira os seguintes documentos:  
   
-- Para saber mais sobre a versão de 64 bits do CLR em um computador Windows de 64 bits, confira [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=37079) (Central de Desenvolvedores do .NET Framework) no site do MSDN.  
-  
-- Na documentação do SDK do Windows, confira [Programming Guide for 64-bit Windows](https://go.microsoft.com/fwlink/p/?LinkId=253512) (Guia de programação para Windows de 64 bits).  
-  
-- Para saber mais sobre como baixar uma versão de 64 bits do CLR, confira [.NET Framework Developer Center Downloads](https://go.microsoft.com/fwlink/?LinkId=50953) (Downloads da Central de desenvolvedores do .NET Framework) no site do MSDN.  
+- Na documentação do SDK do Windows, confira [Programming Guide for 64-bit Windows](/windows/win32/winprog64/programming-guide-for-64-bit-windows) (Guia de programação para Windows de 64 bits).  
   
 - Para saber mais sobre o suporte do Visual Studio para criar aplicativos de 64 bits, confira [Visual Studio IDE 64-Bit Support](/visualstudio/ide/visual-studio-ide-64-bit-support) (Suporte ao IDE do Visual Studio de 64 bits).  
   
@@ -54,9 +50,9 @@ Ao compilar um aplicativo, você pode especificar se ele deve ser executado em u
   
 |Compilador|Opção de compilador|  
 |--------------|---------------------|  
-|Visual Basic|[-plataforma (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
+|Visual Basic|[-platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform (opções do compilador do C#)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Você pode criar aplicativos MSIL (Microsoft Intermediate Language) independentes de plataforma usando **/clr:safe**. Para obter mais informações, consulte [-CLR (compilação em tempo de execução de linguagem comum)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> O Visual C++ inclui um compilador separado para cada sistema operacional de 64 bits. Para saber mais sobre como usar o Visual C++ para criar aplicativos nativos que são executados em um sistema operacional Windows de 64 bits, confira [Programação de 64 bits](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
+|Visual C++|Você pode criar aplicativos MSIL (Microsoft Intermediate Language) independentes de plataforma usando **/clr:safe**. For more information, see [-clr (Common Language Runtime Compilation)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> O Visual C++ inclui um compilador separado para cada sistema operacional de 64 bits. Para saber mais sobre como usar o Visual C++ para criar aplicativos nativos que são executados em um sistema operacional Windows de 64 bits, confira [Programação de 64 bits](/cpp/build/configuring-programs-for-64-bit-visual-cpp).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Determinando o Status de um Arquivo .exe ou .dll  
  Para determinar se um arquivo .exe ou .dll deve ser executado apenas em uma plataforma específica ou no WOW64, use [CorFlags.exe (Ferramenta de Conversão CorFlags)](./tools/corflags-exe-corflags-conversion-tool.md) sem opções. Você também pode usar CorFlags.exe para alterar o status da plataforma de um arquivo .exe ou .dll. O cabeçalho CLR de um assembly do Visual Studio tem o número de versão principal do runtime definido como 2 e o número de versão secundário do runtime definido como 5. Os aplicativos que têm a versão secundária do runtime definida como 0 são tratados como aplicativos herdados e são sempre executados no WOW64.  
