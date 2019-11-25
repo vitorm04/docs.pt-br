@@ -1,5 +1,5 @@
 ---
-title: + Operador (Visual Basic)
+title: + Operador
 ms.date: 07/20/2015
 f1_keywords:
 - vb.+
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
-ms.openlocfilehash: 3187551afb7d25470f48dad894188766a811bb0a
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 12c14b3be0562a31470ddbd2d5489ccdbdf3b62b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701005"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350287"
 ---
 # <a name="-operator-visual-basic"></a>Operador + (Visual Basic)
-Adiciona dois números ou retorna o valor positivo de uma expressão numérica. Também pode ser usado para concatenar duas expressões de cadeia de caracteres.  
+Adds two numbers or returns the positive value of a numeric expression. Can also be used to concatenate two string expressions.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,81 +36,81 @@ ou
   
 |Termo|Definição|  
 |---|---|  
-|`expression1`|Necessário. Qualquer expressão numérica ou de cadeia de caracteres.|  
-|`expression2`|Necessário, a `+` menos que o operador esteja calculando um valor negativo. Qualquer expressão numérica ou de cadeia de caracteres.|  
+|`expression1`|Necessário. Any numeric or string expression.|  
+|`expression2`|Required unless the `+` operator is calculating a negative value. Any numeric or string expression.|  
   
 ## <a name="result"></a>Resultado  
- Se `expression1` e`expression2` forem ambos numéricos, o resultado será sua soma aritmética.  
+ If `expression1` and `expression2` are both numeric, the result is their arithmetic sum.  
   
- Se `expression2` estiver ausente, o operador `+` será o operador de identidade *unário* para o valor inalterado de uma expressão. Nesse sentido, a operação consiste em reter o sinal de `expression1`, portanto, o resultado será negativo se `expression1` for negativo.  
+ If `expression2` is absent, the `+` operator is the *unary* identity operator for the unchanged value of an expression. In this sense, the operation consists of retaining the sign of `expression1`, so the result is negative if `expression1` is negative.  
   
- Se `expression1` e`expression2` forem as duas cadeias de caracteres, o resultado será a concatenação de seus valores.  
+ If `expression1` and `expression2` are both strings, the result is the concatenation of their values.  
   
- Se `expression1` e `expression2` forem de tipos mistos, a ação executada dependerá de seus tipos, do conteúdo e da configuração da [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md). Para obter mais informações, consulte as tabelas em "Comentários".  
+ If `expression1` and `expression2` are of mixed types, the action taken depends on their types, their contents, and the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). For more information, see the tables in "Remarks."  
   
-## <a name="supported-types"></a>Tipos com suporte  
- Todos os tipos numéricos, incluindo os tipos de ponto flutuante e não assinado `Decimal`e `String`e.  
+## <a name="supported-types"></a>Supported Types  
+ All numeric types, including the unsigned and floating-point types and `Decimal`, and `String`.  
   
 ## <a name="remarks"></a>Comentários  
- Em geral, `+` o executa a adição aritmética quando possível e concatena somente quando ambas as expressões são cadeias de caracteres.  
+ In general, `+` performs arithmetic addition when possible, and concatenates only when both expressions are strings.  
   
- Se nenhuma expressão for uma `Object`, Visual Basic executará as seguintes ações.  
+ If neither expression is an `Object`, Visual Basic takes the following actions.  
   
-|Tipos de dados de expressões|Ação por compilador|  
+|Data types of expressions|Action by compiler|  
 |---|---|  
-|As duas expressões são tipos de dados`SByte`numéricos `Short`( `UShort`, `Integer` `UInteger` `Decimal` `Single` ,,`Double`,,,, ,,ou)`ULong` `Byte` `Long`|Agrega. O tipo de dados de resultado é um tipo numérico apropriado para os tipos `expression1` de `expression2`dados de e. Consulte as tabelas "aritmética de inteiros" em [tipos de dados de resultados do operador](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
-|Ambas as expressões são do tipo`String`|Concatenar.|  
-|Uma expressão é um tipo de dados numérico e a outra é uma cadeia de caracteres|Se `Option Strict` for`On`, gere um erro do compilador.<br /><br /> Se `Option Strict` `String` `Double` for `Off`, converta implicitamente o para e adicione.<br /><br /> Se o `String` não puder ser convertido `Double`em, lance uma <xref:System.InvalidCastException> exceção.|  
-|Uma expressão é um tipo de dados numérico e a outra é [Nothing](../../../visual-basic/language-reference/nothing.md)|Adicionar, com `Nothing` valor igual a zero.|  
-|Uma expressão é uma cadeia de caracteres e a outra é`Nothing`|Concatenar, com `Nothing` valor como "".|  
+|Both expressions are numeric data types (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`)|Add. The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`. See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).|  
+|Both expressions are of type `String`|Concatenate.|  
+|One expression is a numeric data type and the other is a string|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
+|One expression is a numeric data type, and the other is [Nothing](../../../visual-basic/language-reference/nothing.md)|Add, with `Nothing` valued as zero.|  
+|One expression is a string, and the other is `Nothing`|Concatenate, with `Nothing` valued as "".|  
   
- Se uma expressão for uma `Object` expressão, Visual Basic executará as seguintes ações.  
+ If one expression is an `Object` expression, Visual Basic takes the following actions.  
   
-|Tipos de dados de expressões|Ação por compilador|  
+|Data types of expressions|Action by compiler|  
 |---|---|  
-|`Object`a expressão contém um valor numérico e o outro é um tipo de dados numérico|Se `Option Strict` for`On`, gere um erro do compilador.<br /><br /> Se `Option Strict` for`Off`, adicione.|  
-|`Object`a expressão contém um valor numérico e o outro é do tipo`String`|Se `Option Strict` for`On`, gere um erro do compilador.<br /><br /> Se `Option Strict` `String` `Double` for `Off`, converta implicitamente o para e adicione.<br /><br /> Se o `String` não puder ser convertido `Double`em, lance uma <xref:System.InvalidCastException> exceção.|  
-|`Object`a expressão contém uma cadeia de caracteres e a outra é um tipo de dados numérico|Se `Option Strict` for`On`, gere um erro do compilador.<br /><br /> Se `Option Strict` `Object` `Double` for `Off`, converta implicitamente a cadeia de caracteres para e adicione.<br /><br /> Se a cadeia `Object` de caracteres não puder `Double`ser convertida em <xref:System.InvalidCastException> , lance uma exceção.|  
-|`Object`a expressão contém uma cadeia de caracteres e a outra é do tipo`String`|Se `Option Strict` for`On`, gere um erro do compilador.<br /><br /> Se `Option Strict` `Object` for `Off` ,`String` então converta implicitamente e concatene.|  
+|`Object` expression holds a numeric value and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then add.|  
+|`Object` expression holds a numeric value and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the `String` to `Double` and add.<br /><br /> If the `String` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
+|`Object` expression holds a string and the other is a numeric data type|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to `Double`, then throw an <xref:System.InvalidCastException> exception.|  
+|`Object` expression holds a string and the other is of type `String`|If `Option Strict` is `On`, then generate a compiler error.<br /><br /> If `Option Strict` is `Off`, then implicitly convert `Object` to `String` and concatenate.|  
   
- Se ambas as expressões `Object` forem expressões, Visual Basic executará as seguintes`Option Strict Off` ações (somente).  
+ If both expressions are `Object` expressions, Visual Basic takes the following actions (`Option Strict Off` only).  
   
-|Tipos de dados de expressões|Ação por compilador|  
+|Data types of expressions|Action by compiler|  
 |---|---|  
-|Ambas `Object` as expressões contêm valores numéricos|Agrega.|  
-|Ambas `Object` as expressões são do tipo`String`|Concatenar.|  
-|Uma `Object` expressão contém um valor numérico e a outra contém uma cadeia de caracteres|Converta implicitamente a `Object` cadeia `Double` de caracteres para e adicione.<br /><br /> Se a cadeia `Object` de caracteres não puder ser convertida em um valor numérico <xref:System.InvalidCastException> , lance uma exceção.|  
+|Both `Object` expressions hold numeric values|Add.|  
+|Both `Object` expressions are of type `String`|Concatenate.|  
+|One `Object` expression holds a numeric value and the other holds a string|Implicitly convert the string `Object` to `Double` and add.<br /><br /> If the string `Object` cannot be converted to a numeric value, then throw an <xref:System.InvalidCastException> exception.|  
   
- Se qualquer expressão `Object` for avaliada como [Nothing](../../../visual-basic/language-reference/nothing.md) ou <xref:System.DBNull>, o operador `+` a tratará como um `String` com um valor de "".  
+ If either `Object` expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md) or <xref:System.DBNull>, the `+` operator treats it as a `String` with a value of "".  
   
 > [!NOTE]
-> Ao usar o operador `+` , talvez você não consiga determinar se a adição ou a concatenação de cadeia de caracteres ocorrerá. Use o `&` operador para concatenação para eliminar ambigüidade e fornecer código de autodocumentação.  
+> When you use the `+` operator, you might not be able to determine whether addition or string concatenation will occur. Use the `&` operator for concatenation to eliminate ambiguity and to provide self-documenting code.  
   
 ## <a name="overloading"></a>Sobrecarga  
- O operador `+` pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ The `+` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa `+` o operador para adicionar números. Se os operandos forem numéricos, Visual Basic calculará o resultado aritmético. O resultado aritmético representa a soma dos dois operandos.  
+ The following example uses the `+` operator to add numbers. If the operands are both numeric, Visual Basic computes the arithmetic result. The arithmetic result represents the sum of the two operands.  
   
  [!code-vb[VbVbalrOperators#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#6)]  
   
- Você também pode usar o `+` operador para concatenar cadeias de caracteres. Se os operandos forem as duas cadeias de caracteres, Visual Basic as concatena. O resultado da concatenação representa uma única cadeia de caracteres que consiste no conteúdo dos dois operandos um após o outro.  
+ You can also use the `+` operator to concatenate strings. If the operands are both strings, Visual Basic concatenates them. The concatenation result represents a single string consisting of the contents of the two operands one after the other.  
   
- Se os operandos forem de tipos mistos, o resultado dependerá da configuração da [instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md). O exemplo a seguir ilustra o resultado `Option Strict` quando `On`é.  
+ If the operands are of mixed types, the result depends on the setting of the [Option Strict Statement](../../../visual-basic/language-reference/statements/option-strict-statement.md). The following example illustrates the result when `Option Strict` is `On`.  
   
  [!code-vb[VbVbalrOperators#53](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class3.vb#53)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#51)]  
   
- O exemplo a seguir ilustra o resultado `Option Strict` quando `Off`é.  
+ The following example illustrates the result when `Option Strict` is `Off`.  
   
  [!code-vb[VbVbalrOperators#54](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#54)]  
   
  [!code-vb[VbVbalrOperators#50](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#50)]  
 [!code-vb[VbVbalrOperators#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class2.vb#52)]  
   
- Para eliminar a ambiguidade, você deve usar o `&` operador em vez `+` de para concatenação.  
+ To eliminate ambiguity, you should use the `&` operator instead of `+` for concatenation.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -119,5 +119,5 @@ ou
 - [Operadores Aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Operadores aritméticos no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [Instrução Option Strict](../../../visual-basic/language-reference/statements/option-strict-statement.md)

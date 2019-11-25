@@ -1,20 +1,20 @@
 ---
-title: -importações (Visual Basic)
+title: -imports
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /imports compiler option [Visual Basic]
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 929e24a1ffd02d4e21ab1b925ddd59050b5d3cc4
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 380e71e462f736d4564a37b83567007fa9461b05
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005569"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332963"
 ---
-# <a name="-imports-visual-basic"></a>-importações (Visual Basic)
-Importa namespaces de um assembly especificado.  
+# <a name="-imports-visual-basic"></a>-imports (Visual Basic)
+Imports namespaces from a specified assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,19 +26,19 @@ Importa namespaces de um assembly especificado.
   
 |Termo|Definição|  
 |---|---|  
-|`namespaceList`|Necessário. Lista delimitada por vírgulas de namespaces a serem importados.|  
+|`namespaceList`|Necessário. Comma-delimited list of namespaces to be imported.|  
   
 ## <a name="remarks"></a>Comentários  
- A opção `-imports` importa qualquer namespace definido dentro do conjunto atual de arquivos de origem ou de qualquer assembly referenciado.  
+ The `-imports` option imports any namespace defined within the current set of source files or from any referenced assembly.  
   
- Os membros em um namespace especificado com `-imports` estão disponíveis para todos os arquivos de código-fonte na compilação. Use a [instrução Imports (namespace e tipo do .net)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para usar um namespace em um único arquivo de código-fonte.  
+ The members in a namespace specified with `-imports` are available to all source-code files in the compilation. Use the [Imports Statement (.NET Namespace and Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to use a namespace in a single source-code file.  
   
-|Para definir/Imports no ambiente de desenvolvimento integrado do Visual Studio|  
+|To set /imports in the Visual Studio integrated development environment|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Referências**.<br />3.  Digite o nome do namespace na caixa ao lado do botão **Adicionar importação de usuário** .<br />4.  Clique no botão **Adicionar importação de usuário** .|  
+|1.  Have a project selected in **Solution Explorer**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Click the **References** tab.<br />3.  Enter the namespace name in the box beside the **Add User Import** button.<br />4.  Click the **Add User Import** button.|  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir é compilado quando `/imports:system.globalization` é especificado. Sem ele, a compilação bem-sucedida requer que uma instrução `Imports System.Globalization` seja incluída no início do arquivo de código-fonte ou que a propriedade seja totalmente qualificada como `System.Globalization.CultureInfo.CurrentCulture.Name`.
+ The following code compiles when `/imports:system.globalization` is specified. Without it, successful compilation requires either that an `Imports System.Globalization` statement be included at the beginning of the source code file, or that the property be fully qualified as `System.Globalization.CultureInfo.CurrentCulture.Name`.
 
 ```vb
 Module Example

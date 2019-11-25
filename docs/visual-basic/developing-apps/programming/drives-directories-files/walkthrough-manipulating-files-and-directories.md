@@ -1,5 +1,5 @@
 ---
-title: Manipulando arquivos e diretórios no Visual Basic
+title: criar arquivos e diretórios
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -15,14 +15,15 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 83dc6ce0d29c1c368c36b51fc84ecad34d72e01f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314679"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333803"
 ---
-# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Passo a passo: Manipulando arquivos e diretórios no Visual Basic
+# <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Instruções passo a passo: manipulando arquivos e diretórios no Visual Basic
+
 Este passo a passo fornece uma introdução para os fundamentos de E/S de arquivo em Visual Basic. Ele descreve como criar um pequeno aplicativo que lista e examina os arquivos de texto em um diretório. Para cada arquivo de texto selecionado, o aplicativo fornece atributos de arquivo e a primeira linha do conteúdo. Há uma opção para gravar as informações em um arquivo de log.  
   
  Este passo a passo usa os membros do `My.Computer.FileSystem Object`, que estão disponíveis no Visual Basic. Consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem> para obter mais informações. No final do passo a passo, será fornecido um exemplo equivalente que usa classes do namespace <xref:System.IO>.  
@@ -43,7 +44,7 @@ Este passo a passo fornece uma introdução para os fundamentos de E/S de arquiv
   
 4. Adicione os controles da tabela a seguir no formulário e defina os valores correspondentes para as respectivas propriedades.  
   
-    |Controle|Propriedade|Valor|  
+    |Controle|propriedade|Valor|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nome**|`filesListBox`|  
     |**Button**|**Nome**<br /><br /> **Texto**|`browseButton`<br /><br /> **Procurar**|  
@@ -150,11 +151,13 @@ Este passo a passo fornece uma introdução para os fundamentos de E/S de arquiv
 6. Execute o aplicativo. A caixa de seleção **Salvar Resultados** e o botão **Examinar** ficarão desabilitados se um item não for selecionado na `ListBox`.  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>Exemplo completo usando My.Computer.FileSystem  
+
  A seguir está o exemplo completo.  
   
  [!code-vb[VbVbcnMyFileSystem#101](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#101)]  
   
 ## <a name="full-example-using-systemio"></a>Exemplo completo usando System.IO  
+
  O exemplo equivalente a seguir usa classes do namespace <xref:System.IO> em vez de usar objetos `My.Computer.FileSystem`.  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
@@ -164,4 +167,4 @@ Este passo a passo fornece uma introdução para os fundamentos de E/S de arquiv
 - <xref:System.IO>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>
-- [Passo a passo: Manipulando arquivos usando métodos do .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+- [Instruções passo a passo: manipulando arquivos usando métodos do .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

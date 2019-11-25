@@ -1,5 +1,5 @@
 ---
-title: 'Como: Ler de arquivos binários em Visual Basic'
+title: Como ler a partir de arquivos binários
 ms.date: 07/20/2015
 helpviewer_keywords:
 - binary files [Visual Basic], reading from
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 72e9361193a5b099841d989e842ff36662cf690d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623713"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335288"
 ---
-# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Como: Ler de arquivos binários em Visual Basic
+# <a name="how-to-read-from-binary-files-in-visual-basic"></a>Como ler a partir de arquivos binários no Visual Basic
+
 O objeto `My.Computer.FileSystem` fornece o método `ReadAllBytes` para ler arquivos binários.  
   
 ### <a name="to-read-from-a-binary-file"></a>Para ler em um arquivo binário  
@@ -28,6 +29,7 @@ O objeto `My.Computer.FileSystem` fornece o método `ReadAllBytes` para ler arqu
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>Programação robusta  
+
  As seguintes condições podem causar o lançamento de uma exceção:  
   
 - O caminho não é válido por um destes motivos: é uma cadeia de caracteres de comprimento zero, contém somente espaço em branco, contém caracteres inválidos ou é um caminho de dispositivo (<xref:System.ArgumentException>).  
@@ -55,5 +57,5 @@ O objeto `My.Computer.FileSystem` fornece o método `ReadAllBytes` para ler arqu
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [Leitura de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [Como: Ler de arquivos de texto com vários formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
+- [Como ler a partir de arquivos de texto com vários formatos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
 - [Armazenando Dados e Lendo da Área de Transferência](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)

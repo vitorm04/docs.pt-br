@@ -1,5 +1,5 @@
 ---
-title: 'Como: Baixar um arquivo no Visual Basic'
+title: Como baixar um arquivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files [Visual Basic], downloading
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
-ms.openlocfilehash: 4dd45ef70dbe3b1949e6d787748bbb27bb88d52c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
-ms.translationtype: HT
+ms.openlocfilehash: 4923feb46ff638de9514a4d70fc00367491a6f44
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046607"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345629"
 ---
-# <a name="how-to-download-a-file-in-visual-basic"></a>Como: Baixar um arquivo no Visual Basic
+# <a name="how-to-download-a-file-in-visual-basic"></a>Como baixar um arquivo no Visual Basic
 
 O método <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> pode ser usado para baixar um arquivo remoto e armazená-lo em um local específico. Se o parâmetro `ShowUI` for definido como `True`, uma caixa de diálogo será exibida mostrando o andamento do download e permitindo que os usuários cancelem a operação. Por padrão, os arquivos existentes com o mesmo nome não são sobrescritos. Se você deseja sobrescrever os arquivos existentes, defina o parâmetro `overwrite` como `True`.
 
@@ -59,5 +59,5 @@ As seguintes condições podem causar uma exceção:
 
 - <xref:Microsoft.VisualBasic.Devices.Network>
 - <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A>
-- [Como: Carregar um arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
-- [Como: Analisar caminhos de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Como Carregar um Arquivo](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-upload-a-file.md)
+- [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

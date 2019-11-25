@@ -1,5 +1,5 @@
 ---
-title: Procedimentos recursivos (Visual Basic)
+title: Procedimentos recursivos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: b08a06a07f134b7c95251848862d39339e59fe61
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: 646d4e29ed7a0b6367d4b35a7f8641bcf659e616
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274349"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352549"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procedimentos recursivos (Visual Basic)
 
-Um procedimento *recursivo* é aquele que chama a si mesmo. Em geral, essa não é a maneira mais eficiente de escrever Visual Basic código.  
+A *recursive* procedure is one that calls itself. In general, this is not the most effective way to write Visual Basic code.  
   
- O procedimento a seguir usa a recursão para calcular o fatorial de seu argumento original.  
+ The following procedure uses recursion to calculate the factorial of its original argument.  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>Considerações com procedimentos recursivos
+## <a name="considerations-with-recursive-procedures"></a>Considerations with Recursive Procedures
 
- **Limitando condições**. Você deve criar um procedimento Recursivo para testar pelo menos uma condição que pode encerrar a recursão e também deve lidar com o caso em que nenhuma condição é satisfeita dentro de um número razoável de chamadas recursivas. Sem pelo menos uma condição que possa ser atendida sem falha, o procedimento executa um alto risco de execução em um loop infinito.
+ **Limiting Conditions**. You must design a recursive procedure to test for at least one condition that can terminate the recursion, and you must also handle the case where no such condition is satisfied within a reasonable number of recursive calls. Without at least one condition that can be met without fail, your procedure runs a high risk of executing in an infinite loop.
 
- **Uso de Memória**. Seu aplicativo tem uma quantidade limitada de espaço para variáveis locais. Cada vez que um procedimento chama a si mesmo, ele usa mais desse espaço para cópias adicionais de suas variáveis locais. Se esse processo continuar indefinidamente, ele eventualmente causará um <xref:System.StackOverflowException> erro.
+ **Uso de Memória**. Your application has a limited amount of space for local variables. Each time a procedure calls itself, it uses more of that space for additional copies of its local variables. If this process continues indefinitely, it eventually causes a <xref:System.StackOverflowException> error.
 
- **Eficiência**. Quase sempre é possível substituir um loop pela recursão. Um loop não tem a sobrecarga de passar argumentos, inicializar armazenamento adicional e retornar valores. Seu desempenho pode ser muito melhor sem chamadas recursivas.
+ **Efficiency**. You can almost always substitute a loop for recursion. A loop does not have the overhead of passing arguments, initializing additional storage, and returning values. Your performance can be much better without recursive calls.
 
- **Recursão mútua**. Você pode observar um desempenho muito ruim, ou até mesmo um loop infinito, se dois procedimentos chamarem uns aos outros. Esse tipo de design apresenta os mesmos problemas que um único procedimento Recursivo, mas pode ser mais difícil de detectar e depurar.
+ **Mutual Recursion**. You might observe very poor performance, or even an infinite loop, if two procedures call each other. Such a design presents the same problems as a single recursive procedure, but can be harder to detect and debug.
 
- **Chamada com parênteses**. Quando um `Function` procedimento chama-se recursivamente, você deve seguir o nome do procedimento com parênteses, mesmo se não houver nenhuma lista de argumentos. Caso contrário, o nome da função será obtido como representando o valor de retorno da função.
+ **Calling with Parentheses**. When a `Function` procedure calls itself recursively, you must follow the procedure name with parentheses, even if there is no argument list. Otherwise, the function name is taken as representing the return value of the function.
 
- **Testando**. Se você escrever um procedimento Recursivo, deverá testá-lo com muito cuidado para garantir que ele sempre atenda a alguma condição de limitação. Você também deve garantir que não seja possível ficar sem memória devido a ter muitas chamadas recursivas.
+ **Testing**. If you write a recursive procedure, you should test it very carefully to make sure it always meets some limiting condition. You should also ensure that you cannot run out of memory due to having too many recursive calls.
 
 ## <a name="see-also"></a>Consulte também
 

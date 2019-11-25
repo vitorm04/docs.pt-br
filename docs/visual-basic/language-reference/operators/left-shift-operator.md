@@ -1,5 +1,5 @@
 ---
-title: Operador de < de < (Visual Basic)
+title: Operador <<
 ms.date: 07/20/2015
 f1_keywords:
 - vb.<<
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 1300ab60e825e7910825be2c65dcab90135ba988
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 327d0e5cbd1ebcc43bd47fb068f4513940c2165a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71701120"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350976"
 ---
-# <a name="-operator-visual-basic"></a>\<\<Operador (Visual Basic)
-Executa um deslocamento aritmético para a esquerda em um padrão de bit.  
+# <a name="-operator-visual-basic"></a>\<\< Operator (Visual Basic)
+Performs an arithmetic left shift on a bit pattern.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,7 +26,7 @@ result = pattern << amount
   
 ## <a name="parts"></a>Partes  
  `result`  
- Necessário. Valor numérico integral. O resultado do deslocamento do padrão de bit. O tipo de dados é o mesmo que o de `pattern`.  
+ Necessário. Integral numeric value. O resultado do deslocamento do padrão de bit. O tipo de dados é o mesmo que o de `pattern`.  
   
  `pattern`  
  Necessário. Expressão numérica integral. O padrão de bit a ser deslocado. O tipo de dados deve ser um tipo integral (`SByte`, `Byte`, `Short`, `UShort`, `Integer`, `UInteger`, `Long` ou `ULong`).  
@@ -35,42 +35,42 @@ result = pattern << amount
  Necessário. Expressão numérica. O número de bits para deslocar o padrão de bit. O tipo de dados deve ser `Integer` ou ampliado para `Integer`.  
   
 ## <a name="remarks"></a>Comentários  
- Deslocamentos aritméticos não são circulares, o que significa que os bits deslocados uma extremidade do resultado não são reintroduzidos na outra extremidade. Em um deslocamento aritmético à esquerda, os bits deslocados além do intervalo do tipo de dados de resultado são descartados e as posições de bits vagadas à direita são definidas como zero.  
+ Arithmetic shifts are not circular, which means the bits shifted off one end of the result are not reintroduced at the other end. In an arithmetic left shift, the bits shifted beyond the range of the result data type are discarded, and the bit positions vacated on the right are set to zero.  
   
- Para evitar uma mudança de mais bits do que o resultado pode conter, Visual Basic mascara o valor de `amount` com uma máscara de tamanho que corresponde ao tipo de dados de `pattern`. O binário e desses valores é usado para o valor de deslocamento. As máscaras de tamanho são as seguintes:  
+ To prevent a shift by more bits than the result can hold, Visual Basic masks the value of `amount` with a size mask that corresponds to the data type of `pattern`. The binary AND of these values is used for the shift amount. The size masks are as follows:  
   
-|Tipo de dados de `pattern`|Máscara de tamanho (Decimal)|Máscara de tamanho (hexadecimal)|  
+|Data type of `pattern`|Size mask (decimal)|Size mask (hexadecimal)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|&H00000007|  
 |`Short`, `UShort`|15|&H0000000F|  
 |`Integer`, `UInteger`|31|&H0000001F|  
 |`Long`, `ULong`|63|&H0000003F|  
   
- Se `amount` for zero, o valor de `result` será idêntico ao valor de `pattern`. Se `amount` for negativo, ele será usado como um valor não assinado e mascarado com a máscara de tamanho apropriada.  
+ If `amount` is zero, the value of `result` is identical to the value of `pattern`. If `amount` is negative, it is taken as an unsigned value and masked with the appropriate size mask.  
   
- As turnos aritméticos nunca geram exceções de estouro.  
+ Arithmetic shifts never generate overflow exceptions.  
   
 > [!NOTE]
-> O operador `<<` pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Se o seu código usar esse operador em uma classe ou estrutura desse tipo, certifique-se de que você entendeu seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+> The `<<` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. If your code uses this operator on such a class or structure, be sure that you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa o operador `<<` para executar deslocamentos à esquerda aritméticos em valores integrais. O resultado sempre tem o mesmo tipo de dados que a expressão que está sendo deslocada.  
+ The following example uses the `<<` operator to perform arithmetic left shifts on integral values. The result always has the same data type as that of the expression being shifted.  
   
  [!code-vb[VbVbalrOperators#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#12)]  
   
- Os resultados do exemplo anterior são os seguintes:  
+ The results of the previous example are as follows:  
   
-- `result1` é 192 (0000 0000 1100 0000).  
+- `result1` is 192 (0000 0000 1100 0000).  
   
-- `result2` é 3072 (0000 1100 0000 0000).  
+- `result2` is 3072 (0000 1100 0000 0000).  
   
-- `result3` é-32768 (1000 0000 0000 0000).  
+- `result3` is -32768 (1000 0000 0000 0000).  
   
-- `result4` é 384 (0000 0001 1000 0000).  
+- `result4` is 384 (0000 0001 1000 0000).  
   
-- `result5` é 0 (deslocada 15 locais para a esquerda).  
+- `result5` is 0 (shifted 15 places to the left).  
   
- O valor de deslocamento para `result4` é calculado como 17 e 15, que é igual a 1.  
+ The shift amount for `result4` is calculated as 17 AND 15, which equals 1.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -79,4 +79,4 @@ result = pattern << amount
 - [Operador <<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)
 - [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Operadores aritméticos no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [Arithmetic Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b25d35f9c356b6d55806611a3ce39d193b42586
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: bb231df9ed33b89fa15cde998379b2964cf32ff9
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491030"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204768"
 ---
 # <a name="collections-and-data-structures"></a>Coleções e estruturas de dados
 Dados semelhantes podem normalmente ser tratados com mais eficiência quando armazenados e manipulados como uma coleção. Você pode usar a classe ou as classes <xref:System.Array?displayProperty=nameWithType> nos namespaces <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable para adicionar, remover e modificar elementos individuais ou um intervalo de elementos em uma coleção.  
   
- Há dois tipos principais de coleções; coleções genéricas e coleções não genéricas. Coleções genéricas foram adicionadas ao .NET Framework 2.0 e fornecem coleções que são fortemente tipadas no tempo de compilação. Por isso, coleções genéricas normalmente oferecem melhor desempenho. Coleções genéricas aceitam um parâmetro de tipo quando são criadas e não exigem que você converta de e para o tipo <xref:System.Object> ao adicionar ou remover itens da coleção.  Além disso, a maioria das coleções genéricas tem suporte nos aplicativos [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. Coleções não genéricas armazenam itens como <xref:System.Object>, exigem a conversão e a maioria não tem suporte para desenvolvimento de aplicativos [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]. No entanto, você pode ver as coleções não genéricas no código mais antigo.  
+ Há dois tipos principais de coleções; coleções genéricas e coleções não genéricas. Coleções genéricas foram adicionadas ao .NET Framework 2.0 e fornecem coleções que são fortemente tipadas no tempo de compilação. Por isso, coleções genéricas normalmente oferecem melhor desempenho. Coleções genéricas aceitam um parâmetro de tipo quando são criadas e não exigem que você converta de e para o tipo <xref:System.Object> ao adicionar ou remover itens da coleção.  In addition, most generic collections are supported in Windows Store apps. Non-generic collections store items as <xref:System.Object>, require casting, and most are not supported for Windows Store app development. No entanto, você pode ver as coleções não genéricas no código mais antigo.  
   
  Começando com o .NET Framework 4, as coleções no namespace <xref:System.Collections.Concurrent> fornecem operações thread-safe eficientes para acessar itens da coleção de vários threads. As classes de coleção imutáveis no namespace System.Collections.Immutable ([NuGet package](https://www.nuget.org/packages/System.Collections.Immutable)) são inerentemente thread-safe, pois as operações são executadas em uma cópia da coleção original e a coleção original não pode ser modificada.  
 

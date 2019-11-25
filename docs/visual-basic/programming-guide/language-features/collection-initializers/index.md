@@ -1,17 +1,17 @@
 ---
-title: Inicializadores de coleção (Visual Basic)
+title: Inicializadores de Coleção
 ms.date: 07/20/2015
 f1_keywords:
 - vb.CollectionInitializer
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: 538efc11e477a4e90b7bca286da4ed56105d7ecb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbdd116298c530ae54677631eff7dac2f22c0fe2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906822"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346777"
 ---
 # <a name="collection-initializers-visual-basic"></a>Inicializadores de coleção (Visual Basic)
 
@@ -39,7 +39,7 @@ Ao criar uma coleção, como uma <xref:System.Collections.Generic.List%601> ou u
 > [!NOTE]
 > Você não pode combinar um inicializador de coleção com um inicializador de objeto para inicializar o mesmo objeto de coleção. Você pode usar os inicializadores de objeto para inicializar objetos em um inicializador de coleção.
 
-## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Criação de uma coleção usando um inicializador de coleção
+## <a name="creating-a-collection-by-using-a-collection-initializer"></a>Creating a Collection by Using a Collection Initializer
 
 Ao criar uma coleção usando um inicializador de coleção, todo valor fornecido no inicializador de coleção será passado ao método `Add` apropriado da coleção. Por exemplo, se você criar uma <xref:System.Collections.Generic.List%601> usando um inicializador de coleção, todo valor de cadeia de caracteres no inicializador de coleção será passado ao método <xref:System.Collections.Generic.List%601.Add%2A>. Se desejar criar uma coleção usando um inicializador de coleção, o tipo especificado deverá ser um tipo de coleção válido. Os exemplos de tipos de coleção válidos incluem as classes que implementam a interface <xref:System.Collections.Generic.IEnumerable%601> ou que herdam a classe <xref:System.Collections.CollectionBase>. O tipo especificado também deve expor um método `Add` que atenda aos seguintes critérios.
 
@@ -57,7 +57,7 @@ O exemplo de código a seguir mostra o código equivalente que não usa um inici
 
 [!code-vb[VbVbalrCollectionInitializers#10](../../../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCollectionInitializers/VB/Module1.vb#10)]
 
-Se a coleção tiver um método `Add` com parâmetros correspondentes ao construtor do objeto `Customer`, você poderá aninhar os valores de parâmetro do método `Add` nos inicializadores de coleção, conforme será discutido na próxima seção. Se a coleção não tiver um método `Add`, você poderá criar um como um método de extensão. Para obter um exemplo de como criar uma `Add` método como um método de extensão para uma coleção, consulte [como: Criar um método para Adicionar extensão usado por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Para obter um exemplo de como criar uma coleção personalizada que pode ser usada com um inicializador de coleção, consulte [como: Criar uma coleção usada por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
+Se a coleção tiver um método `Add` com parâmetros correspondentes ao construtor do objeto `Customer`, você poderá aninhar os valores de parâmetro do método `Add` nos inicializadores de coleção, conforme será discutido na próxima seção. Se a coleção não tiver um método `Add`, você poderá criar um como um método de extensão. Para obter um exemplo de como criar um método `Add` como um método de extensão para uma coleção, consulte [Como criar um método de extensão Add usado por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md). Para obter um exemplo de como criar uma coleção personalizada que pode ser usada com um inicializador de coleção, consulte [Como criar uma coleção usada por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md).
 
 ## <a name="nesting-collection-initializers"></a>Aninhando inicializadores de coleção
 
@@ -77,18 +77,18 @@ Somente as listas de valores aninhados do primeiro nível de aninhamento são en
 
 |Título|Descrição|
 |---|---|
-|[Como: Criar um método para Adicionar extensão usado por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Mostra como criar um método de extensão chamado `Add`, que pode ser usado para preencher uma coleção com valores de um inicializador de coleção.|
-|[Como: Criar uma coleção usada por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Mostra como habilitar o uso de um inicializador de coleção, incluindo um método `Add` em uma classe de coleção que implementa `IEnumerable`.|
+|[Como criar um método para adicionar extensão usado por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Mostra como criar um método de extensão chamado `Add`, que pode ser usado para preencher uma coleção com valores de um inicializador de coleção.|
+|[Como criar uma coleção usada por um inicializador de coleção](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Mostra como habilitar o uso de um inicializador de coleção, incluindo um método `Add` em uma classe de coleção que implementa `IEnumerable`.|
 
 ## <a name="see-also"></a>Consulte também
 
 - [Coleções](../../../../visual-basic/programming-guide/concepts/collections.md)
 - [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [Inicializadores de objeto: tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Operador New](../../../../visual-basic/language-reference/operators/new-operator.md)
 - [Propriedades Autoimplementadas](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)
-- [Como: Inicializar uma variável de matriz no Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Como inicializar uma variável de matriz no Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
 - [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [Como: Criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [Como criar uma lista de itens](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

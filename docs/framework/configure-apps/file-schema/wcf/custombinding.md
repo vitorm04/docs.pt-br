@@ -2,12 +2,12 @@
 title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 766dab35541465da15ccb1090d41b22332aafd0e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: cdaaacf0dfa75209d001f6e8d6ac7175816048aa
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739046"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140797"
 ---
 # <a name="custombinding"></a>> \<CustomBinding
 
@@ -182,7 +182,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai
 |Atributo|Descrição|
 |---------------|-----------------|
 |closeTimeout|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de fechamento. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|
-|name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor é uma cadeia de caracteres definida pelo usuário que atua como a cadeia de caracteres de identificação para a associação personalizada. A partir do [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
+|name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor é uma cadeia de caracteres definida pelo usuário que atua como a cadeia de caracteres de identificação para a associação personalizada. A partir do .NET Framework 4, associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|
 |openTimeout|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de abertura. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|
 |receiveTimeout|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de recebimento. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|
 |sendTimeout|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de envio. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|
@@ -194,7 +194,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai
 |[\<compositeDuplex >](compositeduplex.md)|Especifica a mensagem de duas vias para a associação personalizada. Ele é usado com transportes que não permitem comunicações duplex nativamente, por exemplo, HTTP. O TCP, por outro lado, permite comunicações duplex nativamente e não requer o uso desse elemento de ligação para que o serviço envie mensagens de volta para um cliente.<br /><br /> O cliente deve expor um endereço para que o serviço faça contato e estabeleça uma conexão. Esse endereço de cliente é fornecido pelo atributo `ClientBaseAddress`.<br /><br /> Este elemento é do tipo <xref:System.ServiceModel.Configuration.CompositeDuplexElement>.|
 |[\<pnrpPeerResolver >](pnrppeerresolver.md)|Especifica um resolvedor de nome de par PNRP (Peer Name Resolution Protocol). Este elemento é do tipo <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>.|
 |[\<reliableSession >](reliablesession.md)|Especifica a configuração para mensagens WS-Reliable. Quando esse elemento é adicionado a uma associação personalizada, o canal resultante pode dar suporte a garantias de entrega exatamente uma vez. Este elemento é do tipo <xref:System.ServiceModel.Configuration.ReliableSessionElement>.|
-|[\<Security >](security-of-custombinding.md)|Especifica as opções de segurança da associação personalizada. Este elemento é do tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
+|[> \<segurança](security-of-custombinding.md)|Especifica as opções de segurança da associação personalizada. Este elemento é do tipo <xref:System.ServiceModel.Configuration.SecurityElement>.|
 |[\<sslStreamSecurity >](sslstreamsecurity.md)|Especifica as configurações de segurança para uma associação de fluxo SSL. Este elemento é do tipo <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>.|
 |[\<transactionFlow >](transactionflow.md)|Especifica que a associação dá suporte ao fluxo de transações e o protocolo a ser usado pelo atributo `transactionProtocol`. Este elemento é do tipo <xref:System.ServiceModel.Configuration.TransactionFlowElement>.|
 |[\<Windowsstreamsecurity está >](windowsstreamsecurity.md)|Especifica as opções de segurança de streaming da associação personalizada. Este elemento é do tipo <xref:System.ServiceModel.Configuration.WindowsStreamSecurityElement>.|
@@ -299,7 +299,7 @@ Para obter uma discussão sobre como usar uma associação personalizada para mo
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.Configuration.BindingsSection>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<binding >](bindings.md)
+- [> de associação de \<](bindings.md)
 - [Associações](../../../wcf/bindings.md)
 - [Estendendo associações](../../../wcf/extending/extending-bindings.md)
 - [Associações personalizadas](../../../wcf/extending/custom-bindings.md)

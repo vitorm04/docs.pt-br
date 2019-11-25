@@ -1,28 +1,28 @@
 ---
-title: Objeto My. Computer (Visual Basic)
+title: Objeto My.Computer
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: f0fbd2a795d90cb88a4b185669a6393c5ef22752
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c1d6113872f2196f2db4ac1849222cd69f95ffd7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031077"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332123"
 ---
 # <a name="mycomputer-object"></a>Objeto My.Computer
 Fornece propriedades para manipular componentes do computador, como o áudio, o relógio, o teclado, o sistema de arquivos e assim por diante.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter informações sobre os métodos e propriedades do `My.Computer` do objeto, consulte <xref:Microsoft.VisualBasic.Devices.Computer>. A classe base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornece os membros que estão disponíveis em todos os projetos.  
+ For information about the methods and properties of the `My.Computer` object, see <xref:Microsoft.VisualBasic.Devices.Computer>. The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Classe:** <xref:Microsoft.VisualBasic.Devices.Computer> (a classe base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornece os membros que estão disponíveis em todos os projetos).  
+ **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
   
- **Assembly:** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Consulte também
 

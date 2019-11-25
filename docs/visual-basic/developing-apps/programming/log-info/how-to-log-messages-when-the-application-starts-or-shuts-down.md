@@ -1,5 +1,5 @@
 ---
-title: 'Como: Registrar mensagens em log quando o aplicativo é iniciado ou desligado (Visual Basic)'
+title: Como registrar mensagens em log quando o aplicativo é iniciado ou encerrado
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, shutdown
@@ -9,14 +9,15 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: 8fc7b441c6e19d70ceefa3422cf9823007280b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 5a4ef3888ba8371d26204c3569b5fb9bae1f15f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330565"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352095"
 ---
-# <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Como: Registrar mensagens em log quando o aplicativo é iniciado ou desligado (Visual Basic)
+# <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>Como registrar mensagens em log quando o aplicativo é iniciado ou encerrado (Visual Basic)
+
 É possível usar os objetos `My.Application.Log` e `My.Log` para registrar em log as informações sobre eventos que ocorrem em seu aplicativo. Este exemplo mostra como usar o método `My.Application.Log.WriteEntry` com os eventos `Startup` e `Shutdown` para gravar informações de rastreamento.  
   
 ### <a name="to-access-the-applications-event-handler-code"></a>Para acessar o código do manipulador de eventos do aplicativo  
@@ -54,6 +55,7 @@ ms.locfileid: "59330565"
      [!code-vb[VbVbalrMyApplicationLog#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#2)]  
   
 ## <a name="example"></a>Exemplo  
+
  Você pode usar o **Designer de Projeto** para acessar os eventos do aplicativo no Editor de Códigos. Para obter mais informações, consulte [Página de aplicativo, Designer de Projeto (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
  [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  

@@ -1,5 +1,5 @@
 ---
-title: Instrução For...Next (Visual Basic)
+title: Instrução For...Next
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Step
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For...Next statements
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
-ms.openlocfilehash: a60293fc837b6d12810a211892c391f24a46d4e6
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 3cae44abb8e790542f11e6c5a5f1e317675ff988
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582959"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351194"
 ---
 # <a name="fornext-statement-visual-basic"></a>Instrução For...Next (Visual Basic)
 
-Repete um grupo de instruções um número especificado de vezes.
+Repeats a group of statements a specified number of times.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -50,107 +50,107 @@ Next [ counter ]
 
 |Parte|Descrição|
 |----------|-----------------|
-|`counter`|Necessário na instrução `For`. Variável numérica. A variável de controle para o loop. Para obter mais informações, consulte o [argumento Counter](#BKMK_Counter) mais adiante neste tópico.|
-|`datatype`|Opcional. Tipo de dados de `counter`. Para obter mais informações, consulte o [argumento Counter](#BKMK_Counter) mais adiante neste tópico.|
+|`counter`|Required in the `For` statement. Numeric variable. The control variable for the loop. For more information, see [Counter Argument](#BKMK_Counter) later in this topic.|
+|`datatype`|Opcional. Data type of `counter`. For more information, see [Counter Argument](#BKMK_Counter) later in this topic.|
 |`start`|Necessário. Expressão numérica. O valor inicial de `counter`.|
-|`end`|Necessário. Expressão numérica. O valor final de `counter`.|
-|`step`|Opcional. Expressão numérica. O valor pelo qual `counter` é incrementado a cada vez pelo loop.|
-|`statements`|Opcional. Uma ou mais instruções entre `For` e `Next` que executam o número especificado de vezes.|
-|`Continue For`|Opcional. Transfere o controle para a próxima iteração do loop.|
-|`Exit For`|Opcional. Transfere o controle do loop de `For`.|
-|`Next`|Necessário. Encerra a definição do loop de `For`.|
+|`end`|Necessário. Expressão numérica. The final value of `counter`.|
+|`step`|Opcional. Expressão numérica. The amount by which `counter` is incremented each time through the loop.|
+|`statements`|Opcional. One or more statements between `For` and `Next` that run the specified number of times.|
+|`Continue For`|Opcional. Transfers control to the next loop iteration.|
+|`Exit For`|Opcional. Transfers control out of the `For` loop.|
+|`Next`|Necessário. Terminates the definition of the `For` loop.|
 
 > [!NOTE]
-> A palavra-chave `To` é usada nesta instrução para especificar o intervalo para o contador. Você também pode usar essa palavra-chave na [marca de seleção... Instrução Case](../../../visual-basic/language-reference/statements/select-case-statement.md) e em declarações de matriz. Para obter mais informações sobre declarações de matriz, consulte [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md).
+> The `To` keyword is used in this statement to specify the range for the counter. You can also use this keyword in the [Select...Case Statement](../../../visual-basic/language-reference/statements/select-case-statement.md) and in array declarations. For more information about array declarations, see [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md).
 
-## <a name="simple-examples"></a>Exemplos simples
+## <a name="simple-examples"></a>Simple Examples
 
-Você usa um `For`... `Next` estrutura quando você deseja repetir um conjunto de instruções por um número definido de vezes.
+You use a `For`...`Next` structure when you want to repeat a set of statements a set number of times.
 
-No exemplo a seguir, a variável `index` começa com um valor de 1 e é incrementada com cada iteração do loop, terminando depois que o valor de `index` chega a 5.
+In the following example, the `index` variable starts with a value of 1 and is incremented with each iteration of the loop, ending after the value of `index` reaches 5.
 
 [!code-vb[VbVbalrStatements#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#111)]
 
-No exemplo a seguir, a variável `number` começa em 2 e é reduzida por 0,25 em cada iteração do loop, terminando depois que o valor de `number` chega a 0. O argumento `Step` de `-.25` reduz o valor de 0,25 em cada iteração do loop.
+In the following example, the `number` variable starts at 2 and is reduced by 0.25 on each iteration of the loop, ending after the value of `number` reaches 0. The `Step` argument of `-.25` reduces the value by 0.25 on each iteration of the loop.
 
 [!code-vb[VbVbalrStatements#112](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#112)]
 
 > [!TIP]
-> Um [tempo... Instrução End While](../../../visual-basic/language-reference/statements/while-end-while-statement.md) ou [do... Instrução de loop](../../../visual-basic/language-reference/statements/do-loop-statement.md) funciona bem quando você não sabe antecipadamente quantas vezes executar as instruções no loop. No entanto, quando você espera executar o loop um número específico de vezes, um `For`... `Next` loop é uma opção melhor. Você determina o número de iterações quando entra o loop pela primeira vez.
+> A [While...End While Statement](../../../visual-basic/language-reference/statements/while-end-while-statement.md) or [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md) works well when you don't know in advance how many times to run the statements in the loop. However, when you expect to run the loop a specific number of times, a `For`...`Next` loop is a better choice. You determine the number of iterations when you first enter the loop.
 
-## <a name="nesting-loops"></a>Loops de aninhamento
+## <a name="nesting-loops"></a>Nesting Loops
 
-Você pode aninhar loops de `For` colocando um loop dentro de outro. O exemplo a seguir demonstra `For` aninhados... `Next` estruturas que têm valores de etapa diferentes. O loop externo cria uma cadeia de caracteres para cada iteração do loop. O loop interno decrementa uma variável de contador de loop para cada iteração do loop.
+You can nest `For` loops by putting one loop within another. The following example demonstrates nested `For`...`Next` structures that have different step values. The outer loop creates a string for every iteration of the loop. The inner loop decrements a loop counter variable for every iteration of the loop.
 
 [!code-vb[VbVbalrStatements#113](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#113)]
 
-Ao aninhar loops, cada loop deve ter uma variável de `counter` exclusiva.
+When nesting loops, each loop must have a unique `counter` variable.
 
-Você também pode aninhar estruturas de controle de tipos diferentes entre si. Para obter mais informações, consulte [estruturas de controle aninhado](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+You can also nest different kinds control structures within each other. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
-## <a name="exit-for-and-continue-for"></a>Sair para e continuar para
+## <a name="exit-for-and-continue-for"></a>Exit For and Continue For
 
-A instrução `Exit For` encerra imediatamente o `For`... `Next` loop e transfere o controle para a instrução que segue a instrução `Next`.
+The `Exit For` statement immediately exits the `For`…`Next` loop and transfers control to the statement that follows the `Next` statement.
 
-A instrução `Continue For` transfere o controle imediatamente para a próxima iteração do loop. Para obter mais informações, consulte [instrução Continue](../../../visual-basic/language-reference/statements/continue-statement.md).
+The `Continue For` statement transfers control immediately to the next iteration of the loop. For more information, see [Continue Statement](../../../visual-basic/language-reference/statements/continue-statement.md).
 
-O exemplo a seguir ilustra o uso das instruções `Continue For` e `Exit For`.
+The following example illustrates the use of the `Continue For` and `Exit For` statements.
 
 [!code-vb[VbVbalrStatements#115](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#115)]
 
-Você pode colocar qualquer número de instruções `Exit For` em um `For`... `Next` While. Quando usado dentro de `For` aninhados... `Next` loops, `Exit For` sai do loop mais interno e transfere o controle para o próximo nível mais alto de aninhamento.
+You can put any number of `Exit For` statements in a `For`…`Next` loop. When used within nested `For`…`Next` loops, `Exit For` exits the innermost loop and transfers control to the next higher level of nesting.
 
-`Exit For` geralmente é usado depois que você avalia alguma condição (por exemplo, em uma estrutura `If`... `Then`... `Else`). Talvez você queira usar `Exit For` para as seguintes condições:
+`Exit For` is often used after you evaluate some condition (for example, in an `If`...`Then`...`Else` structure). You might want to use `Exit For` for the following conditions:
 
-- Continuar a iterar é desnecessário ou impossível. Um valor errado ou uma solicitação de encerramento pode criar essa condição.
+- Continuing to iterate is unnecessary or impossible. An erroneous value or a termination request might create this condition.
 
-- Um `Try`... `Catch`... `Finally` instrução captura uma exceção. Você pode usar `Exit For` no final do bloco de `Finally`.
+- A `Try`...`Catch`...`Finally` statement catches an exception. You might use `Exit For` at the end of the `Finally` block.
 
-- Você tem um loop infinito, que é um loop que poderia executar um número grande ou mesmo infinito de vezes. Se você detectar essa condição, poderá usar `Exit For` para escapar do loop. Para obter mais informações, consulte [do... Instrução loop](../../../visual-basic/language-reference/statements/do-loop-statement.md).
+- You have an endless loop, which is a loop that could run a large or even infinite number of times. If you detect such a condition, you can use `Exit For` to escape the loop. For more information, see [Do...Loop Statement](../../../visual-basic/language-reference/statements/do-loop-statement.md).
 
 ## <a name="technical-implementation"></a>Implementação Técnica
 
-Quando um `For`... `Next` loop é iniciado, Visual Basic avalia `start`, `end` e `step`. Visual Basic avalia esses valores somente no momento e atribui `start` ao `counter`. Antes de executar o bloco de instrução, Visual Basic compara `counter` com `end`. Se `counter` já for maior do que o valor de `end` (ou menor se `step` for negativo), o loop de `For` terminará e o controle passará para a instrução que segue a instrução de `Next`. Caso contrário, o bloco de instrução será executado.
+When a `For`...`Next` loop starts, Visual Basic evaluates `start`, `end`, and `step`. Visual Basic evaluates these values only at this time and then assigns `start` to `counter`. Before the statement block runs, Visual Basic compares `counter` to `end`. If `counter` is already larger than the `end` value (or smaller if `step` is negative), the `For` loop ends and control passes to the statement that follows the `Next` statement. Otherwise, the statement block runs.
 
-Cada vez que Visual Basic encontra a instrução `Next`, ele incrementa `counter` por `step` e retorna à instrução `For`. Novamente, ele compara `counter` com `end` e, novamente, executa o bloco ou sai do loop, dependendo do resultado. Esse processo continua até que `counter` passe `end` ou uma instrução `Exit For` seja encontrada.
+Each time Visual Basic encounters the `Next` statement, it increments `counter` by `step` and returns to the `For` statement. Again it compares `counter` to `end`, and again it either runs the block or exits the loop, depending on the result. This process continues until `counter` passes `end` or an `Exit For` statement is encountered.
 
-O loop não é interrompido até que `counter` tenha passado `end`. Se `counter` for igual a `end`, o loop continuará. A comparação que determina se o bloco será executado `counter`  <=  `end` se `step` for positiva e `counter`  >=  `end` se `step` for negativo.
+The loop doesn't stop until `counter` has passed `end`. If `counter` is equal to `end`, the loop continues. The comparison that determines whether to run the block is `counter` <= `end` if `step` is positive and `counter` >= `end` if `step` is negative.
 
-Se você alterar o valor de `counter` enquanto estiver dentro de um loop, seu código poderá ser mais difícil de ler e depurar. Alterar o valor de `start`, `end` ou `step` não afeta os valores de iteração que foram determinados quando o loop foi inserido pela primeira vez.
+If you change the value of `counter` while inside a loop, your code might be more difficult to read and debug. Changing the value of `start`, `end`, or `step` doesn't affect the iteration values that were determined when the loop was first entered.
 
-Se você aninhar loops, o compilador sinalizará um erro se encontrar a instrução `Next` de um nível de aninhamento externo antes da instrução `Next` de um nível interno. No entanto, o compilador pode detectar esse erro sobreposto somente se você especificar `counter` em cada instrução `Next`.
+If you nest loops, the compiler signals an error if it encounters the `Next` statement of an outer nesting level before the `Next` statement of an inner level. However, the compiler can detect this overlapping error only if you specify `counter` in every `Next` statement.
 
-### <a name="step-argument"></a>Argumento Step
+### <a name="step-argument"></a>Step Argument
 
-O valor de `step` pode ser positivo ou negativo. Esse parâmetro determina o processamento de loop de acordo com a tabela a seguir:
+The value of `step` can be either positive or negative. This parameter determines loop processing according to the following table:
 
-|**Valor da etapa**|**O loop é executado se**|
+|**Step value**|**Loop executes if**|
 |--------------------|--------------------------|
-|Positivo ou zero|`counter` <= `end`|
+|Positive or zero|`counter` <= `end`|
 |Negativo|`counter` >= `end`|
 
-O valor padrão de `step` é 1.
+The default value of `step` is 1.
 
-### <a name="BKMK_Counter"></a>Argumento do contador
+### <a name="BKMK_Counter"></a> Counter Argument
 
-A tabela a seguir indica se `counter` define uma nova variável local que tem como escopo o loop de `For…Next` inteiro. Essa determinação depende de se o `datatype` está presente e se `counter` já está definido.
+The following table indicates whether `counter` defines a new local variable that’s scoped to the entire `For…Next` loop. This determination depends on whether `datatype` is present and whether `counter` is already defined.
 
-|@No__t_0 está presente?|O `counter` já está definido?|Resultado (se `counter` define uma nova variável local que tem o escopo de todo o loop de `For...Next`)|
+|Is `datatype` present?|Is `counter` already defined?|Result (whether `counter` defines a new local variable that’s scoped to the entire `For...Next` loop)|
 |----------------------------|-----------------------------------|-------------------------------------------------------------------------------------------------------------|
-|Não|Sim|Não, porque `counter` já está definido. Se o escopo de `counter` não for local para o procedimento, ocorrerá um aviso de tempo de compilação.|
-|Não|Não|Sim. O tipo de dados é inferido das expressões `start`, `end` e `step`. Para obter informações sobre a inferência de tipos, consulte [instrução Option Infer](../../../visual-basic/language-reference/statements/option-infer-statement.md) e [inferência de tipo local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|
-|Sim|Sim|Sim, mas somente se a variável de `counter` existente for definida fora do procedimento. Essa variável permanece separada. Se o escopo da variável de `counter` existente for local para o procedimento, ocorrerá um erro em tempo de compilação.|
+|Não|Sim|No, because `counter` is already defined. If the scope of `counter` isn't local to the procedure, a compile-time warning occurs.|
+|Não|Não|Sim. The data type is inferred from the `start`, `end`, and `step` expressions. For information about type inference, see [Option Infer Statement](../../../visual-basic/language-reference/statements/option-infer-statement.md) and [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).|
+|Sim|Sim|Yes, but only if the existing `counter` variable is defined outside the procedure. That variable remains separate. If the scope of the existing `counter` variable is local to the procedure, a compile-time error occurs.|
 |Sim|Não|Sim.|
 
-O tipo de dados de `counter` determina o tipo da iteração, que deve ser um dos seguintes tipos:
+The data type of `counter` determines the type of the iteration, which must be one of the following types:
 
-- Um `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single` ou 0.
+- A `Byte`, `SByte`, `UShort`, `Short`, `UInteger`, `Integer`, `ULong`, `Long`, `Decimal`, `Single`, or `Double`.
 
-- Uma enumeração que você declara usando uma [instrução enum](../../../visual-basic/language-reference/statements/enum-statement.md).
+- An enumeration that you declare by using an [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).
 
 - Um `Object`.
 
-- Um tipo `T` que tem os seguintes operadores, em que `B` é um tipo que pode ser usado em uma expressão `Boolean`.
+- A type `T` that has the following operators, where `B` is a type that can be used in a `Boolean` expression.
 
   `Public Shared Operator >= (op1 As T, op2 As T) As B`
 
@@ -160,25 +160,25 @@ O tipo de dados de `counter` determina o tipo da iteração, que deve ser um dos
 
   `Public Shared Operator + (op1 As T, op2 As T) As T`
 
-Opcionalmente, você pode especificar a variável `counter` na instrução `Next`. Essa sintaxe melhora a legibilidade do programa, especialmente se você tiver aninhado loops de `For`. Você deve especificar a variável que aparece na instrução de `For` correspondente.
+You can optionally specify the `counter` variable in the `Next` statement. This syntax improves the readability of your program, especially if you have nested `For` loops. You must specify the variable that appears in the corresponding `For` statement.
 
-As expressões `start`, `end` e `step` podem ser avaliadas como qualquer tipo de dados que se expande para o tipo de `counter`. Se você usar um tipo definido pelo usuário para `counter`, talvez seja necessário definir o operador de conversão de `CType` para converter os tipos de `start`, `end` ou `step` no tipo de `counter`.
+The `start`, `end`, and `step` expressions can evaluate to any data type that widens to the type of `counter`. If you use a user-defined type for `counter`, you might have to define the `CType` conversion operator to convert the types of `start`, `end`, or `step` to the type of `counter`.
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir remove todos os elementos de uma lista genérica. Em vez de um [para cada... A próxima instrução](../../../visual-basic/language-reference/statements/for-each-next-statement.md), o exemplo mostra um `For`... `Next` instrução que itera em ordem decrescente. O exemplo usa essa técnica porque o método `removeAt` faz com que elementos depois do elemento removido tenham um valor de índice inferior.
+The following example removes all elements from a generic list. Instead of a [For Each...Next Statement](../../../visual-basic/language-reference/statements/for-each-next-statement.md), the example shows a `For`...`Next` statement that iterates in descending order. The example uses this technique because the `removeAt` method causes elements after the removed element to have a lower index value.
 
 [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir itera através de uma enumeração que é declarada usando uma [instrução enum](../../../visual-basic/language-reference/statements/enum-statement.md).
+The following example iterates through an enumeration that's declared by using an [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md).
 
 [!code-vb[VbVbalrStatements#116](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#116)]
 
 ## <a name="example"></a>Exemplo
 
-No exemplo a seguir, os parâmetros de instrução usam uma classe que tem sobrecargas de operador para os operadores `+`, `-`, `>=` e `<=`.
+In the following example, the statement parameters use a class that has operator overloads for the `+`, `-`, `>=`, and `<=` operators.
 
 [!code-vb[VbVbalrStatements#117](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#117)]
 

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Chamar um procedimento sobrecarregado (Visual Basic)'
+title: Como chamar um procedimento sobrecarregado
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure calls [Visual Basic], overloaded
 ms.assetid: 3bb331fb-f6bc-406f-9ca0-9609b497014c
-ms.openlocfilehash: d325c09516b4ce03facedce86f17ea49480b997a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d983f5f6183c33141079ed35171f7a73f254450f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666008"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340203"
 ---
-# <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Como: Chamar um procedimento sobrecarregado (Visual Basic)
-A vantagem de sobrecarregar um procedimento é a flexibilidade da chamada. O código de chamada pode obter as informações necessárias para passar para o procedimento e, em seguida, chamar um único nome de procedimento, não importa quais argumentos ele está passando.  
+# <a name="how-to-call-an-overloaded-procedure-visual-basic"></a>Como chamar um procedimento sobrecarregado (Visual Basic)
+The advantage of overloading a procedure is in the flexibility of the call. The calling code can obtain the information it needs to pass to the procedure and then call a single procedure name, no matter what arguments it is passing.  
   
-### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>Para chamar um procedimento que tem mais de uma versão definida  
+### <a name="to-call-a-procedure-that-has-more-than-one-version-defined"></a>To call a procedure that has more than one version defined  
   
-1. No código de chamada, determine quais dados a serem passados ao procedimento.  
+1. In the calling code, determine which data to pass to the procedure.  
   
-2. Gravar a chamada de procedimento da maneira normal, apresentação dos dados na lista de argumentos. Certifique-se de que os argumentos correspondam à lista de parâmetro em uma das versões definidas para o procedimento.  
+2. Write the procedure call in the normal way, presenting the data in the argument list. Be sure the arguments match the parameter list in one of the versions defined for the procedure.  
   
-3. Não é necessário determinar qual versão do procedimento de chamada. Visual Basic passa o controle para a versão correspondente a lista de argumentos.  
+3. You do not have to determine which version of the procedure to call. Visual Basic passes control to the version matching your argument list.  
   
-     A exemplo a seguir chama o `post` procedimento declarado no [como: Definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md). Obtém a identificação do cliente, determina se é um `String` ou um `Integer`e, em seguida, em ambos os casos chama o mesmo procedimento.  
+     The following example calls the `post` procedure declared in [How to: Define Multiple Versions of a Procedure](./how-to-define-multiple-versions-of-a-procedure.md). It obtains the customer identification, determines whether it is a `String` or an `Integer`, and then in either case calls the same procedure.  
   
      [!code-vb[VbVbcnProcedures#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#56)]  
   
@@ -38,9 +38,9 @@ A vantagem de sobrecarregar um procedimento é a flexibilidade da chamada. O có
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Sobrecarga de Procedimento](./procedure-overloading.md)
 - [Solução de problemas de Procedimentos](./troubleshooting-procedures.md)
-- [Como: Definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
-- [Como: Sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Como: Sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [Como definir várias versões de um procedimento](./how-to-define-multiple-versions-of-a-procedure.md)
+- [Como sobrecarregar um procedimento que usa parâmetros opcionais](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Como sobrecarregar um procedimento que usa um número indefinido de parâmetros](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [Considerações sobre Procedimentos de Sobrecarga](./considerations-in-overloading-procedures.md)
 - [Resolução de Sobrecarga](./overload-resolution.md)
 - [Sobrecargas](../../../../visual-basic/language-reference/modifiers/overloads.md)

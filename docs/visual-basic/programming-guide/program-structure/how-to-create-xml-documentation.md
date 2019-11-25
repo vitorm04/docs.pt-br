@@ -1,41 +1,41 @@
 ---
-title: Como criar documentação XML no Visual Basic
+title: Como criar documentação XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 5b317706e3e8e0c5958f5a3d0fd859d68600bc7a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 41b7ef1f435fd0a4f20c4ca2936e2d91e155f7c5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524493"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347415"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>Como criar documentação XML no Visual Basic
 
-Este exemplo mostra como adicionar comentários de documentação XML ao seu código.
+This example shows how to add XML documentation comments to your code.
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="to-create-xml-documentation-for-a-type-or-member"></a>Para criar a documentação XML para um tipo ou membro
+## <a name="to-create-xml-documentation-for-a-type-or-member"></a>To create XML documentation for a type or member
 
-1. No **Editor de código**, posicione o cursor na linha acima do tipo ou do membro para o qual você deseja criar a documentação.
+1. In the **Code Editor**, position your cursor on the line above the type or member for which you want to create documentation.
 
-2. Digite `'''` (três aspas simples).
+2. Type `'''` (three single-quotation marks).
 
-    Um esqueleto XML para o tipo ou membro é adicionado no **Editor de código**.
+    An XML skeleton for the type or member is added in the **Code Editor**.
 
-3. Adicione informações descritivas entre as marcas apropriadas.
+3. Add descriptive information between the appropriate tags.
 
     > [!NOTE]
-    > Se você adicionar linhas adicionais no bloco de documentação XML, cada linha deverá começar com `'''`.
+    > If you add additional lines within the XML documentation block, each line must begin with `'''`.
 
-4. Adicione um código adicional que use o tipo ou o membro com os novos comentários de documentação XML.
+4. Add additional code that uses the type or member with the new XML documentation comments.
 
-    O IntelliSense exibe o texto da marca de > de \<summary para o tipo ou o membro.
+    IntelliSense displays the text from the \<summary> tag for the type or member.
 
-5. Compile o código para gerar um arquivo XML contendo os comentários da documentação. Para obter mais informações, confira [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+5. Compile the code to generate an XML file containing the documentation comments. Para obter mais informações, confira [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
 ## <a name="see-also"></a>Consulte também
 

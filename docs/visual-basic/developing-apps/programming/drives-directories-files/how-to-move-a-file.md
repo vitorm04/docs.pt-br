@@ -1,17 +1,18 @@
 ---
-title: 'Como: Mover um arquivo no Visual Basic'
+title: Como mover um arquivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
-ms.openlocfilehash: e529e263353b08778eba338b20aef34762e66824
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 29c64a7a81028d47bf489212e6d8faec5e8dda75
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628860"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335365"
 ---
-# <a name="how-to-move-a-file-in-visual-basic"></a>Como: Mover um arquivo no Visual Basic
+# <a name="how-to-move-a-file-in-visual-basic"></a>Como mover um arquivo no Visual Basic
+
 O método `My.Computer.FileSystem.MoveFile` pode ser utilizado para mover um arquivo para outra pasta. Se a estrutura de destino não existir, ela será criada.  
   
 ### <a name="to-move-a-file"></a>Mover um arquivo  
@@ -27,6 +28,7 @@ O método `My.Computer.FileSystem.MoveFile` pode ser utilizado para mover um arq
      [!code-vb[VbVbcnMyFileSystem#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#25)]  
   
 ## <a name="robust-programming"></a>Programação robusta  
+
  As seguintes condições podem causar uma exceção:  
   
 - O caminho não é válido por um dos seguintes motivos: é uma cadeia de comprimento zero, contém apenas espaços em branco, contém caracteres inválidos ou é um caminho de dispositivo (começa com \\\\.\\) (<xref:System.ArgumentException>).  
@@ -52,6 +54,6 @@ O método `My.Computer.FileSystem.MoveFile` pode ser utilizado para mover um arq
 ## <a name="see-also"></a>Consulte também
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.MoveFile%2A>
-- [Como: Renomear um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
-- [Como: Criar uma cópia de um arquivo em outro diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
-- [Como: Analisar caminhos de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+- [Como renomear um arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-rename-a-file.md)
+- [Como criar uma cópia de um arquivo em um diretório diferente](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-create-a-copy-of-a-file-in-a-different-directory.md)
+- [Como analisar demarcadores de arquivo](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir uma classe que pode fornecer uma funcionalidade idêntica em tipos de dados diferentes (Visual Basic)'
+title: Como definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data type arguments [Visual Basic], using
@@ -26,51 +26,51 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 19988e766d0f9ec895a24dddfcd17d0854aaf8ad
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d80623d9e55358d37aa45f11f1525c80a09b91a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757401"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350048"
 ---
-# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Como: Definir uma classe que pode fornecer uma funcionalidade idêntica em tipos de dados diferentes (Visual Basic)
-Você pode definir uma classe da qual você pode criar objetos que fornecem uma funcionalidade idêntica em tipos de dados diferentes. Para fazer isso, você especifica um ou mais *parâmetros de tipo* na definição. A classe, em seguida, pode servir como um modelo para objetos que usam vários tipos de dados. Uma classe definida dessa maneira é chamada um *classe genérica*.  
+# <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>Como definir uma classe capaz de fornecer uma funcionalidade idêntica em tipos de dados diferentes (Visual Basic)
+You can define a class from which you can create objects that provide identical functionality on different data types. To do this, you specify one or more *type parameters* in the definition. The class can then serve as a template for objects that use various data types. A class defined in this way is called a *generic class*.  
   
- A vantagem de definir uma classe genérica é que você define apenas uma vez, e seu código pode usá-lo para criar vários objetos que usam uma ampla variedade de tipos de dados. Isso resulta em desempenho melhor do que a definição de classe com o `Object` tipo.  
+ The advantage of defining a generic class is that you define it just once, and your code can use it to create many objects that use a wide variety of data types. This results in better performance than defining the class with the `Object` type.  
   
- Além das classes, você também pode definir e usar delegados, interfaces, procedimentos e estruturas genéricas.  
+ In addition to classes, you can also define and use generic structures, interfaces, procedures, and delegates.  
   
-### <a name="to-define-a-class-with-a-type-parameter"></a>Para definir uma classe com um parâmetro de tipo  
+### <a name="to-define-a-class-with-a-type-parameter"></a>To define a class with a type parameter  
   
-1. Defina a classe da forma normal.  
+1. Define the class in the normal way.  
   
-2. Adicione `(Of` *typeparameter* `)` imediatamente após o nome de classe para especificar um parâmetro de tipo.  
+2. Add `(Of` *typeparameter*`)` immediately after the class name to specify a type parameter.  
   
-3. Se você tiver mais de um parâmetro de tipo, faça uma lista separada por vírgulas dentro dos parênteses. Não se repetem o `Of` palavra-chave.  
+3. If you have more than one type parameter, make a comma-separated list inside the parentheses. Do not repeat the `Of` keyword.  
   
-4. Se seu código executa operações em um parâmetro de tipo diferente de atribuição simples, siga esse parâmetro de tipo com uma `As` cláusula para adicionar um ou mais *restrições de*. Uma restrição garante que o tipo fornecido para esse parâmetro de tipo satisfaz um requisito, como o seguinte:  
+4. If your code performs operations on a type parameter other than simple assignment, follow that type parameter with an `As` clause to add one or more *constraints*. A constraint guarantees that the type supplied for that type parameter satisfies a requirement such as the following:  
   
-    - Oferece suporte a uma operação, como `>`, que executa o código  
+    - Supports an operation, such as `>`, that your code performs  
   
-    - Dá suporte a um membro, como um método, que acessa seu código  
+    - Supports a member, such as a method, that your code accesses  
   
-    - Expõe um construtor sem parâmetros  
+    - Exposes a parameterless constructor  
   
-     Se você não especificar quaisquer restrições, operações e membros que seu código pode usar somente são aquelas com suporte a [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md). Para obter mais informações, consulte [lista de tipos](../../../../visual-basic/language-reference/statements/type-list.md).  
+     If you do not specify any constraints, the only operations and members your code can use are those supported by the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). For more information, see [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-5. Identifique cada membro da classe que deve ser declarado com um tipo fornecido e declará-la `As` `typeparameter`. Isso se aplica ao armazenamento interno, parâmetros de procedimento e valores de retorno.  
+5. Identify every class member that is to be declared with a supplied type, and declare it `As` `typeparameter`. This applies to internal storage, procedure parameters, and return values.  
   
-6. Certifique-se de que seu código usa somente operações e métodos que são suportados por qualquer tipo de dados que ele pode fornecer a `itemType`.  
+6. Be sure your code uses only operations and methods that are supported by any data type it can supply to `itemType`.  
   
-     O exemplo a seguir define uma classe que gerencia uma lista muito simples. Ele contém a lista da matriz interna `items`e o usando o código pode declarar o tipo de dados dos elementos de lista. Um construtor parametrizado permite o uso de código para definir o limite superior de `items`, e o construtor sem parâmetro define isso como 9 (para um total de 10 itens).  
+     The following example defines a class that manages a very simple list. It holds the list in the internal array `items`, and the using code can declare the data type of the list elements. A parameterized constructor allows the using code to set the upper bound of `items`, and the parameterless constructor sets this to 9 (for a total of 10 items).  
   
      [!code-vb[VbVbalrDataTypes#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#7)]  
   
-     Você pode declarar uma classe de `simpleList` para manter uma lista de `Integer` valores, outra classe para conter uma lista de `String` valores e outra para conter `Date` valores. Com exceção do tipo de dados dos membros da lista, objetos criados a partir de todas essas classes têm comportamento idêntico.  
+     You can declare a class from `simpleList` to hold a list of `Integer` values, another class to hold a list of `String` values, and another to hold `Date` values. Except for the data type of the list members, objects created from all these classes behave identically.  
   
-     O argumento de tipo que o código usado fornece ao `itemType` pode ser um tipo intrínseco, como `Boolean` ou `Double`, uma estrutura, uma enumeração ou qualquer tipo de classe, incluindo um que define seu aplicativo.  
+     The type argument that the using code supplies to `itemType` can be an intrinsic type such as `Boolean` or `Double`, a structure, an enumeration, or any type of class, including one that your application defines.  
   
-     Você pode testar a classe `simpleList` com o código a seguir.  
+     You can test the class `simpleList` with the following code.  
   
      [!code-vb[VbVbalrDataTypes#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#8)]  
   
@@ -81,5 +81,5 @@ Você pode definir uma classe da qual você pode criar objetos que fornecem uma 
 - [Componentes de independência de linguagem e componentes independentes da linguagem](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [Lista de Tipos](../../../../visual-basic/language-reference/statements/type-list.md)
-- [Como: usar uma classe genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Como usar uma classe genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
 - [Tipo de Dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)

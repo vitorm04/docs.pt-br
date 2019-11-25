@@ -6,52 +6,62 @@ helpviewer_keywords:
 - garbage collection, intrusiveness
 - garbage collection, latency modes
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
-ms.openlocfilehash: 8833c88c3221c0a375011eb62dd712340f7e89cd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a8eaf0c80aa32978eead80c51a905cbcd66a537b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120913"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283591"
 ---
 # <a name="latency-modes"></a>Modos de latência
-Para recuperar objetos, o coletor de lixo deve interromper todos os threads em execução em um aplicativo. Em algumas situações, como quando um aplicativo recupera dados ou exibe conteúdo, uma coleta de lixo completa pode ocorrer em um momento crítico e impedir o desempenho. Você pode ajustar a intrusão do coletor de lixo, definindo a propriedade <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> como um dos valores <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
-  
- A latência refere-se à hora em que o coletor de lixo invade seu aplicativo. Durante períodos de baixa latência, o coletor de lixo é mais conservador e menos intrusivo na recuperação de objetos. A enumeração <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> fornece duas configurações de baixa latência:  
-  
-- <xref:System.Runtime.GCLatencyMode.LowLatency> suprime coletas da geração 2 e executa somente coletas da geração 0 e 1. Ela pode ser usada somente por curtos períodos. Em períodos mais longos, se o sistema estiver sob pressão de memória, o coletor de lixo disparará uma coleção, que pode pausar o aplicativo rapidamente e interromper uma operação de tempo crítico. Essa configuração está disponível somente para coleta de lixo de estação de trabalho.  
-  
-- <xref:System.Runtime.GCLatencyMode.SustainedLowLatency> suprime coletas da geração 2 em primeiro plano e executa somente a geração 0, 1 e coletas da geração 2 em segundo plano. Ela pode ser usada por longos períodos e está disponível para coleta de lixo de estação de trabalho e servidor. Essa configuração não poderá ser usada se a [coleta de lixo simultânea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) estiver desabilitada.  
-  
- Durante períodos de baixa latência, coletas da geração 2 são suprimidas, a menos que ocorra o seguinte:  
-  
-- O sistema recebe uma notificação de falta de memória do sistema operacional.  
-  
-- O código do aplicativo induz uma coleção chamando o método <xref:System.GC.Collect%2A?displayProperty=nameWithType> e especificando 2 para o parâmetro `generation`.  
-  
- A tabela a seguir lista os cenários de aplicativo para uso dos valores <xref:System.Runtime.GCLatencyMode>.  
-  
-|Modo de latência|Cenários de aplicativo|  
-|------------------|---------------------------|  
-|<xref:System.Runtime.GCLatencyMode.Batch>|Para aplicativos que não têm operações de interface do usuário ou do servidor.<br /><br /> Este é o modo padrão quando a [coleta de lixo simultânea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) está desabilitada.|  
-|<xref:System.Runtime.GCLatencyMode.Interactive>|Para a maioria dos aplicativos que têm uma interface do usuário.<br /><br /> Este é o modo padrão quando a [coleta de lixo simultânea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) está habilitada.|  
-|<xref:System.Runtime.GCLatencyMode.LowLatency>|Para aplicativos que têm operações de curto prazo, sensíveis ao tempo, durante o qual as interrupções do coletor de lixo podem ser prejudiciais. Por exemplo, os aplicativos com funções de aquisição de dados ou renderização de animação.|  
-|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|Para aplicativos que têm operações sensíveis ao tempo, por uma duração contida, mas potencialmente maior, durante a qual as interrupções do coletor de lixo poderiam ser prejudiciais. Por exemplo, aplicativos que precisam de tempos de resposta rápidos, como alterações de dados de mercado durante o horário comercial.<br /><br /> Esse modo resulta em um tamanho maior do heap gerenciado do que outros modos. Como ele não compacta o heap gerenciado, é possível maior fragmentação. Verifique se há memória suficiente disponível.|  
-  
-## <a name="guidelines-for-using-low-latency"></a>Diretrizes para uso de baixa latência  
- Ao usar o modo <xref:System.Runtime.GCLatencyMode.LowLatency>, considere as seguintes diretrizes:  
-  
-- Mantenha o período de baixa latência o mais curto possível.  
-  
-- Evite a alocação de grande quantidade de memória durante períodos de baixa latência. Notificações de memória insuficiente podem ocorrer porque a coleta de lixo recupera menos objetos.  
-  
-- No modo de baixa latência, minimize o número de alocações feitas, principalmente alocações em heap de objetos grandes e objetos fixados.  
-  
-- Esteja atento a ameaças que possam ser alocadas. Como a configuração da propriedade <xref:System.Runtime.GCSettings.LatencyMode%2A> é de todo o processo, você pode gerar uma <xref:System.OutOfMemoryException> em qualquer thread que possa ser alocado.  
-  
-- Encapsule o código de baixa latência em regiões de execução restrita (para saber mais, confira [Regiões de execução restrita](../../../docs/framework/performance/constrained-execution-regions.md)).  
-  
-- Você pode forçar coletas da geração 2 durante um período de baixa latência ao chamar o método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
-  
+
+Para recuperar objetos, o GC (coletor de lixo) deve parar todos os threads em execução em um aplicativo. O período de tempo durante o qual o coletor de lixo está ativo é conhecido como sua *latência*.
+
+Em algumas situações, como quando um aplicativo recupera dados ou exibe conteúdo, uma coleta de lixo completa pode ocorrer em um momento crítico e impedir o desempenho. Você pode ajustar a intrusão do coletor de lixo, definindo a propriedade <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> como um dos valores <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.
+
+## <a name="low-latency-settings"></a>Configurações de baixa latência
+
+Usar uma configuração de latência "baixa" significa que o coletor de lixo não faz menos em seu aplicativo. A coleta de lixo é mais conservadora sobre a recuperação de memória.
+
+A enumeração <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> fornece duas configurações de baixa latência:
+
+- [GCLatencyMode. LowLatency](xref:System.Runtime.GCLatencyMode.LowLatency) suprime as coleções de geração 2 e executa somente coleções de geração 0 e 1. Ela pode ser usada somente por curtos períodos. Em períodos mais longos, se o sistema estiver sob pressão de memória, o coletor de lixo disparará uma coleção, que pode pausar o aplicativo rapidamente e interromper uma operação de tempo crítico. Essa configuração está disponível somente para coleta de lixo de estação de trabalho.
+
+- [GCLatencyMode. SustainedLowLatency](xref:System.Runtime.GCLatencyMode.SustainedLowLatency) suprime as coleções da geração 2 de primeiro plano e executa somente coleções de geração 0, 1 e segundo plano 2. Ela pode ser usada por longos períodos e está disponível para coleta de lixo de estação de trabalho e servidor. Essa configuração não poderá ser usada se a coleta de lixo em segundo plano estiver desabilitada.
+
+Durante períodos de baixa latência, coletas da geração 2 são suprimidas, a menos que ocorra o seguinte:
+
+- O sistema recebe uma notificação de falta de memória do sistema operacional.
+
+- O código do aplicativo induzi uma coleção chamando o método <xref:System.GC.Collect%2A?displayProperty=nameWithType> e especificando 2 para o parâmetro `generation`.
+
+## <a name="scenarios"></a>Cenários
+
+A tabela a seguir lista os cenários de aplicativo para usar os valores de <xref:System.Runtime.GCLatencyMode>:
+
+|Modo de latência|Cenários de aplicativo|
+|------------------|---------------------------|
+|<xref:System.Runtime.GCLatencyMode.Batch>|Para aplicativos que não têm nenhuma interface do usuário ou operações do lado do servidor.<br /><br />Quando a coleta de lixo em segundo plano está desabilitada, esse é o modo padrão para a coleta de lixo da estação de trabalho e do servidor. o modo de <xref:System.Runtime.GCLatencyMode.Batch> também substitui a configuração [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) , ou seja, impede coleções em segundo plano ou simultâneas.|
+|<xref:System.Runtime.GCLatencyMode.Interactive>|Para a maioria dos aplicativos que têm uma interface do usuário.<br /><br />Este é o modo padrão para a coleta de lixo da estação de trabalho e do servidor. No entanto, se um aplicativo estiver hospedado, as configurações do coletor de lixo do processo de hospedagem têm precedência.|
+|<xref:System.Runtime.GCLatencyMode.LowLatency>|Para aplicativos que têm operações de curto prazo, sensíveis ao tempo, durante o qual as interrupções do coletor de lixo podem ser prejudiciais. Por exemplo, aplicativos que renderizam animações ou funções de aquisição de dados.|
+|<xref:System.Runtime.GCLatencyMode.SustainedLowLatency>|Para aplicativos que têm operações sensíveis ao tempo, por uma duração contida, mas potencialmente maior, durante a qual as interrupções do coletor de lixo poderiam ser prejudiciais. Por exemplo, aplicativos que precisam de tempos de resposta rápidos, como alterações de dados de mercado durante o horário comercial.<br /><br />Esse modo resulta em um tamanho maior do heap gerenciado do que outros modos. Como ele não compacta o heap gerenciado, é possível maior fragmentação. Verifique se há memória suficiente disponível.|
+
+## <a name="guidelines-for-using-low-latency"></a>Diretrizes para usar baixa latência
+
+Ao usar o modo [GCLatencyMode. LowLatency](xref:System.Runtime.GCLatencyMode.LowLatency) , considere as seguintes diretrizes:
+
+- Mantenha o período de baixa latência o mais curto possível.
+
+- Evite a alocação de grande quantidade de memória durante períodos de baixa latência. Notificações de memória insuficiente podem ocorrer porque a coleta de lixo recupera menos objetos.
+
+- No modo de baixa latência, minimize o número de novas alocações, em alocações específicas na heap de objeto grande e objetos fixados.
+
+- Esteja atento a ameaças que possam ser alocadas. Como a configuração da propriedade <xref:System.Runtime.GCSettings.LatencyMode%2A> é de todo o processo, <xref:System.OutOfMemoryException> exceções podem ser geradas em qualquer thread que esteja alocando.
+
+- Empacote o código de baixa latência em regiões de execução restrita. Para obter mais informações, consulte [regiões de execução restrita](../../../docs/framework/performance/constrained-execution-regions.md).
+
+- Você pode forçar coletas da geração 2 durante um período de baixa latência ao chamar o método <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.
+
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.GC?displayProperty=nameWithType>

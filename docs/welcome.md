@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 09/23/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: bc525aeefe2c247c610886fae6ae7d79cb9e6517
-ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.openlocfilehash: d0ea5aefa62dd4029610ab8a7f7ce9ed52a59600
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274330"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283930"
 ---
 # <a name="welcome-to-net"></a>Bem-vindo ao .NET
 
@@ -47,7 +47,7 @@ Esta documentação abrange a extensão do .NET entre plataformas e linguagens. 
 - [Guia do .NET](standard/index.md)
 - [Guia do .NET Core](core/index.md)
 - [Guia do .NET Framework](framework/index.md)
-- [Guia do C#](csharp/index.md)
+- [Guia do C#](csharp/index.yml)
 - [Guia do F#](fsharp/index.md)
 - [Guia do Visual Basic](visual-basic/index.md)
 - [Guia do ML.NET](machine-learning/index.yml)
@@ -68,7 +68,7 @@ Esta documentação é totalmente de [software livre](https://github.com/dotnet/
 
 - [Página inicial do .NET Core](https://github.com/dotnet/core)
 - [Bibliotecas do .NET](https://github.com/dotnet/corefx)
-- [Tempo de execução do .NET Core](https://github.com/dotnet/coreclr)
+- [Runtime do .NET Core](https://github.com/dotnet/coreclr)
 - [CLI do .NET Core](https://github.com/dotnet/cli)
 - [Ferramentas IDE e plataforma do compilador Roslyn (C# e Visual Basic)](https://github.com/dotnet/roslyn)
 - [Ferramentas IDE e compilador F#](https://github.com/microsoft/visualfsharp)

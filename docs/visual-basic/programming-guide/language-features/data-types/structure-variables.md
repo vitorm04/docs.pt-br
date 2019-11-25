@@ -1,5 +1,5 @@
 ---
-title: Variáveis de estrutura (Visual Basic)
+title: Variáveis de estrutura
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structures [Visual Basic], variables
@@ -7,16 +7,16 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: a86a60def9ac1b8140194ecb6f5e784c62a0e101
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 16b6cdc5a849b50f6caa8b7963dac5c12d63cf3e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630960"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346301"
 ---
 # <a name="structure-variables-visual-basic"></a>Variáveis de estrutura (Visual Basic)
 
-Depois de criar uma estrutura, você pode declarar variáveis em nível de procedimento e de módulo como esse tipo. Por exemplo, você pode criar uma estrutura que registra informações sobre um sistema de computador. O exemplo a seguir demonstra isso.
+Once you have created a structure, you can declare procedure-level and module-level variables as that type. For example, you can create a structure that records information about a computer system. O exemplo a seguir demonstra isso.
 
 ```vb
 Public Structure systemInfo
@@ -26,18 +26,18 @@ Public Structure systemInfo
 End Structure
 ```
 
-Agora você pode declarar variáveis desse tipo. A declaração a seguir ilustra isso.
+You can now declare variables of that type. The following declaration illustrates this.
 
 ```vb
 Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> Em classes e módulos, as estruturas declaradas usando a [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) assumem o acesso público como padrão. Se você pretende que uma estrutura seja privada, certifique-se de declará-la usando a palavra-chave [Private](../../../../visual-basic/language-reference/modifiers/private.md) .
+> In classes and modules, structures declared using the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) default to public access. If you intend a structure to be private, make sure you declare it using the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword.
 
-## <a name="access-to-structure-values"></a>Acesso a valores de estrutura
+## <a name="access-to-structure-values"></a>Access to Structure Values
 
-Para atribuir e recuperar valores dos elementos de uma variável de estrutura, use a mesma sintaxe usada para definir e obter propriedades em um objeto. Você coloca o operador de acesso de`.`membro () entre o nome da variável de estrutura e o nome do elemento. O exemplo a seguir acessa os elementos das variáveis declaradas anteriormente `systemInfo`como tipo.
+To assign and retrieve values from the elements of a structure variable, you use the same syntax as you use to set and get properties on an object. You place the member access operator (`.`) between the structure variable name and the element name. The following example accesses elements of the variables previously declared as type `systemInfo`.
 
 ```vb
 mySystem.cPU = "486"
@@ -45,15 +45,15 @@ Dim tooOld As Boolean
 If yourSystem.purchaseDate < #1/1/1992# Then tooOld = True
 ```
 
-## <a name="assigning-structure-variables"></a>Atribuindo variáveis de estrutura
+## <a name="assigning-structure-variables"></a>Assigning Structure Variables
 
-Você também pode atribuir uma variável a outra se ambas forem do mesmo tipo de estrutura. Isso copia todos os elementos de uma estrutura para os elementos correspondentes no outro. A declaração a seguir ilustra isso.
+You can also assign one variable to another if both are of the same structure type. This copies all the elements of one structure to the corresponding elements in the other. The following declaration illustrates this.
 
 ```vb
 yourSystem = mySystem
 ```
 
-Se um elemento de estrutura for um tipo de referência, como `String`uma `Object`matriz, ou, o ponteiro para os dados será copiado. No exemplo anterior, se `systemInfo` tiver incluído uma variável de objeto, o exemplo anterior teria copiado o ponteiro de `mySystem` para `yourSystem`e uma alteração nos dados do objeto por meio de uma estrutura estaria em vigor quando acessada por meio da outra estrutura.
+If a structure element is a reference type, such as a `String`, `Object`, or array, the pointer to the data is copied. In the previous example, if `systemInfo` had included an object variable, then the preceding example would have copied the pointer from `mySystem` to `yourSystem`, and a change to the object's data through one structure would be in effect when accessed through the other structure.
 
 ## <a name="see-also"></a>Consulte também
 
@@ -63,7 +63,7 @@ Se um elemento de estrutura for um tipo de referência, como `String`uma `Object
 - [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Como: declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [Como declarar uma estrutura](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Estruturas e Outros Elementos de Programação](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
 - [Estruturas e Classes](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
 - [Instrução Structure](../../../../visual-basic/language-reference/statements/structure-statement.md)

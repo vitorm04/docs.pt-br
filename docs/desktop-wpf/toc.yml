@@ -26,6 +26,8 @@
               href: fundamentals/styles-templates-overview.md
             - name: Criar e aplicar um estilo
               href: fundamentals/styles-templates-create-apply-style.md
+            - name: Criar e aplicar um modelo
+              href: themes/how-to-create-apply-template.md
     - name: Trabalhando com os dados
       items:
         - name: Visão geral de associação de dados

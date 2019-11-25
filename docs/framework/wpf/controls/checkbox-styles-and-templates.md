@@ -9,15 +9,15 @@ helpviewer_keywords:
 - CheckBox [WPF], styles and templates
 - styles [WPF], CheckBox
 ms.assetid: bfdaec96-d101-4d3d-864d-c27e6b621d03
-ms.openlocfilehash: b85e13b13c849e278a6535e09cd0dbaec396bf10
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b9eee48c01f53e12bbe4a72f84c20eab68d5de23
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460802"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283812"
 ---
 # <a name="checkbox-styles-and-templates"></a>Estilos e modelos CheckBox
-Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.CheckBox>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.CheckBox>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="checkbox-parts"></a>Partes de CheckBox  
  O controle de <xref:System.Windows.Controls.CheckBox> não tem nenhuma parte nomeada.  
@@ -58,4 +58,4 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
 - [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md)

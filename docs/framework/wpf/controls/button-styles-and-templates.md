@@ -9,15 +9,15 @@ helpviewer_keywords:
 - templates [WPF], Button
 - ControlTemplate [WPF], Button
 ms.assetid: e223c759-f8c4-4717-acfb-b1e40bdf5f3b
-ms.openlocfilehash: 64764d43191d30c191c5d6519982b16cfc86d26e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ef9f85848ebdda9dc4ae15d0f54847eacd46e24d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460961"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283576"
 ---
 # <a name="button-styles-and-templates"></a>Estilos e modelos de botão
-Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.Button>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.Button>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="button-parts"></a>Partes do botão  
  O controle de <xref:System.Windows.Controls.Button> não tem nenhuma parte nomeada.  
@@ -55,4 +55,4 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
 - [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md)

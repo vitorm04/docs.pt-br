@@ -1,15 +1,15 @@
 ---
-title: Eventos de LINQ to XML (Visual Basic)
+title: Eventos LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: d35f8063fe87ee4be3dd49a3c0221cb9c47cb22e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834977"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351932"
 ---
-# <a name="linq-to-xml-events-visual-basic"></a>Eventos de LINQ to XML (Visual Basic)
+# <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML Events (Visual Basic)
 Eventos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permitem que você seja notificado quando uma árvore XML é modificada.  
   
  Você pode adicionar eventos a uma instância de qualquer <xref:System.Xml.Linq.XObject>. O manipulador de eventos em receberá eventos para alterações ao <xref:System.Xml.Linq.XObject> e a qualquer um dos seus descendentes. Por exemplo, você pode adicionar um manipulador de eventos à raiz da árvore, e trata todas as alterações na árvore do manipulador de eventos.  
@@ -19,7 +19,7 @@ Eventos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] permitem que voc�
 ## <a name="types-and-events"></a>Tipos e eventos  
  Você usa os seguintes tipos ao trabalhar com eventos:  
   
-|Tipo|Descrição|  
+|Digite|Descrição|  
 |----------|-----------------|  
 |<xref:System.Xml.Linq.XObjectChange>|Especifica o tipo de evento quando um evento é gerado para <xref:System.Xml.Linq.XObject>.|  
 |<xref:System.Xml.Linq.XObjectChangeEventArgs>|Fornece dados para os eventos de <xref:System.Xml.Linq.XObject.Changing> e de <xref:System.Xml.Linq.XObject.Changed> .|  
@@ -116,4 +116,4 @@ Total:308
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programação de LINQ to XML avançada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

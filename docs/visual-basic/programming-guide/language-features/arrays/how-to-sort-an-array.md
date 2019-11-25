@@ -1,5 +1,5 @@
 ---
-title: 'Como: Classificar uma matriz no Visual Basic'
+title: 'How to: Sort An Array'
 ms.date: 07/20/2015
 f1_keywords:
 - Array.Sort
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], sorting
 - examples [Visual Basic], arrays
 ms.assetid: 9289aeaa-9626-4698-94a7-1d1fd3702b87
-ms.openlocfilehash: 467d1bcce6bda2feb5a8e59c152cb292d753e79b
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 3fb9af8de0fc86075fdccd64506c855c1c720660
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700969"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351849"
 ---
-# <a name="how-to-sort-an-array-in-visual-basic"></a>Como classificar uma matriz no Visual Basic
+# <a name="how-to-sort-an-array-in-visual-basic"></a>How to: sort an array in Visual Basic
 
-Este artigo mostra um exemplo de como classificar uma matriz de cadeias de caracteres no Visual Basic.
+This article shows an example of how to sort an array of strings in Visual Basic.
 
 ## <a name="example"></a>Exemplo
 
-Este exemplo declara uma matriz de objetos `String` chamados `zooAnimals`, popula-o e, em seguida, classifica-o em ordem alfabética:
+This example declares an array of `String` objects named `zooAnimals`, populates it, and then sorts it alphabetically:
   
 ```vb
 Private Sub SortAnimals()
@@ -36,9 +36,9 @@ End Sub
 
 As seguintes condições podem causar uma exceção:
 
-- A matriz está vazia (classe <xref:System.ArgumentNullException>).
-- A matriz é multidimensional (classe <xref:System.RankException>).
-- Um ou mais elementos da matriz não implementam a interface <xref:System.IComparable> (classe <xref:System.InvalidOperationException>).
+- Array is empty (<xref:System.ArgumentNullException> class).
+- Array is multidimensional (<xref:System.RankException> class).
+- One or more elements of the array don't implement the <xref:System.IComparable> interface (<xref:System.InvalidOperationException> class).
 
 ## <a name="see-also"></a>Consulte também
 

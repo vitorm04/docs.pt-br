@@ -1,5 +1,5 @@
 ---
-title: Interfaces (Visual Basic)
+title: Interfaces
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, interfaces
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interfaces
 - interfaces [Visual Basic]
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 968e5d9bb08f168e3c77b40ea42b16dc66e93e64
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 619aa6695db756e56a836fd76693cc8a3976f8e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956290"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345048"
 ---
 # <a name="interfaces-visual-basic"></a>Interfaces (Visual Basic)
 As *interfaces* definem as propriedades, os métodos e os eventos que as classes podem implementar. As interfaces permitem definir as funcionalidades como pequenos grupos de propriedades, de métodos e de eventos estreitamente relacionados. Isso reduz os problemas de compatibilidade, uma vez que é possível desenvolver implementações avançadas para as interfaces sem arriscar o código existente. Você pode adicionar novas funcionalidades a qualquer momento desenvolvendo interfaces e implementações adicionais.  
@@ -40,13 +40,13 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
  [!code-vb[VbVbalrOOP#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#17)]  
   
 ## <a name="implementing-interfaces"></a>Implementando interfaces  
- A palavra `Implements` reservada Visual Basic é usada de duas maneiras. A instrução `Implements` significa que uma classe ou estrutura implementa uma interface. A palavra-chave `Implements` significa que um membro de classe ou um membro da estrutura implementa um membro de interface específico.  
+ The Visual Basic reserved word `Implements` is used in two ways. A instrução `Implements` significa que uma classe ou estrutura implementa uma interface. A palavra-chave `Implements` significa que um membro de classe ou um membro da estrutura implementa um membro de interface específico.  
   
 ### <a name="implements-statement"></a>Instrução Implements  
  Se uma classe ou estrutura implementa uma ou mais interfaces, ela deve incluir a instrução `Implements` imediatamente após a instrução `Class` ou `Structure`. A instrução `Implements` exige uma lista de interfaces separadas por vírgula a serem implementadas por uma classe. A classe ou a estrutura deve implementar todos os membros da interface usando a palavra-chave `Implements`.  
   
 ### <a name="implements-keyword"></a>Palavra-chave Implements  
- A palavra-chave `Implements` exige uma lista dos membros de interface separados por vírgula a serem implementados. Em geral, apenas um único membro de interface é especificado, mas você pode especificar vários membros. A especificação de um membro de interface é composta pelo nome da interface, que deve ser especificado em uma instrução implements na classe, um período e o nome da função, da propriedade ou do evento do membro a ser implementado. O nome de um membro que implementa um membro de interface pode usar qualquer identificador legal e não está limitado à `InterfaceName_MethodName` convenção usada em versões anteriores do Visual Basic.  
+ A palavra-chave `Implements` exige uma lista dos membros de interface separados por vírgula a serem implementados. Em geral, apenas um único membro de interface é especificado, mas você pode especificar vários membros. A especificação de um membro de interface é composta pelo nome da interface, que deve ser especificado em uma instrução implements na classe, um período e o nome da função, da propriedade ou do evento do membro a ser implementado. The name of a member that implements an interface member can use any legal identifier, and it is not limited to the `InterfaceName_MethodName` convention used in earlier versions of Visual Basic.  
   
  Por exemplo, o código a seguir mostra como declarar uma sub-rotina chamada `Sub1` que implementa um método de uma interface:  
   
@@ -83,5 +83,5 @@ As *interfaces* definem as propriedades, os métodos e os eventos que as classes
   
 |Título|Descrição|  
 |-----------|-----------------|  
-|[Passo a passo: criação e implementação de interfaces](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Fornece um procedimento detalhado que o guiará pelo processo de definição e de implementação de sua própria interface.|  
+|[Instruções passo a passo: criando e implementando interfaces](../../../../visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md)|Fornece um procedimento detalhado que o guiará pelo processo de definição e de implementação de sua própria interface.|  
 |[Variação em Interfaces Genéricas](../../concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|
