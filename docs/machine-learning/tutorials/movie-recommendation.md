@@ -5,12 +5,12 @@ author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
 ms.topic: tutorial
-ms.openlocfilehash: 2d960a43f7934e262fa0e19abfea0209aa4e9ff0
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5b4541b527559ee05c9b97d84324e9e70599a014
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425219"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977376"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: criar um recomendador de filmes usando matriz factorizaton com ML.NET
 
@@ -102,7 +102,7 @@ Você deseja prever as classificações de filmes, portanto, a coluna de classif
 | `movieId`      |               |
 | `timestamp`     |               |
 
-Cabe a você decidir quais `Features` são usados para prever o `Label`. Você também pode usar métodos como [Importância de Permuta do Recurso](../how-to-guides/determine-global-feature-importance-in-model.md) para ajudar a selecionar os melhores `Features`.
+Cabe a você decidir quais `Features` são usados para prever o `Label`. Você também pode usar métodos como a [importância do recurso de permutação](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) para ajudar a selecionar a melhor `Features`.
 
 Nesse caso, você deve eliminar a coluna `timestamp` como um `Feature` porque o carimbo de data/hora não afeta como um usuário classifica determinado filme e, portanto, não contribui para uma previsão mais precisa:
 
@@ -373,7 +373,7 @@ Adicione o seguinte como a próxima linha de código no método `Main()` para ch
 
 ### <a name="use-your-saved-model"></a>Usar o modelo salvo
 
-Depois de salvar o modelo treinado, você poderá consumir o modelo em ambientes diferentes (confira o ["Guia de instruções"](../how-to-guides/consuming-model-ml-net.md) para saber como operacionalizar um modelo de machine learning treinado em aplicativos).
+Depois de salvar seu modelo treinado, você pode consumir o modelo em ambientes diferentes. Consulte [salvar e carregar modelos treinados](../how-to-guides/save-load-machine-learning-models-ml-net.md) para saber como colocar em operação um modelo de aprendizado de máquina treinado em aplicativos.
 
 ## <a name="results"></a>Resultados
 
@@ -420,7 +420,7 @@ Há várias maneiras de melhorar o desempenho do modelo para obter previsões ma
 
 A adição de mais dados de treinamento que tenham amostras suficientes para cada usuário e a ID de filme pode ajudar a melhorar a qualidade do modelo de recomendação.
 
-A [validação cruzada](../how-to-guides/train-cross-validation-ml-net.md) é uma técnica para avaliação de modelos que divide dados aleatoriamente em subconjuntos (em vez de extrair os dados de teste do conjunto de dados como você fez neste tutorial) e usa alguns dos grupos como dados de treinamento e alguns dos grupos como dados de teste. Esse método tem um melhor desempenho do que a divisão treinamento/teste em termos de qualidade do modelo.
+A [validação cruzada](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md) é uma técnica para avaliação de modelos que divide dados aleatoriamente em subconjuntos (em vez de extrair os dados de teste do conjunto de dados como você fez neste tutorial) e usa alguns dos grupos como dados de treinamento e alguns dos grupos como dados de teste. Esse método tem um melhor desempenho do que a divisão treinamento/teste em termos de qualidade do modelo.
 
 ### <a name="features"></a>Recursos
 
@@ -428,7 +428,7 @@ Neste tutorial, você só usará os três `Features` (`user id`, `movie id` e `r
 
 Embora esse seja um bom começo, na verdade, o ideal será adicionar outros atributos ou `Features` (por exemplo, idade, sexo, localização geográfica etc.) se eles forem incluídos no conjunto de dados. A adição de `Features` mais relevantes pode ajudar a melhorar o desempenho do modelo de recomendação.
 
-Caso não tenha certeza sobre quais `Features` podem ser mais relevantes para sua tarefa de aprendizado de máquina, use também o FCC (Cálculo de Contribuição do Recurso) e a [Importância de Permuta do Recurso](../how-to-guides/determine-global-feature-importance-in-model.md), fornecidos pelo ML.NET para descobrir `Features` mais influentes.
+Se você não tiver certeza sobre qual `Features` pode ser a mais relevante para sua tarefa de aprendizado de máquina, você também poderá usar o cálculo de contribuição de recurso (FCC) e a [importância do recurso de permuta](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md), que o ml.NET fornece para descobrir as `Features`mais influentes.
 
 ### <a name="algorithm-hyperparameters"></a>Hiperparâmetros de algoritmo
 

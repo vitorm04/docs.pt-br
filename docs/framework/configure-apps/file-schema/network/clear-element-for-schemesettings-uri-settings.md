@@ -2,21 +2,21 @@
 title: Elemento <clear> para schemeSettings (Configurações de URI)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: e954fef455d0279a945c33f2014913fea9d63064
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 90035c1c9ccdb8ac888aec84e506ccde41748c9f
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699438"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087441"
 ---
-# <a name="clear-element-for-schemesettings-uri-settings"></a>\<clear > elemento para schemeSettings (configurações de URI)
+# <a name="clear-element-for-schemesettings-uri-settings"></a>\<limpar > elemento para schemeSettings (configurações de URI)
 Limpa todas as configurações de esquema existentes.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<clear >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[**uri\<** ](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**desmarque >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -47,7 +47,7 @@ Limpa todas as configurações de esquema existentes.
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Por esse motivo, a classe <xref:System.Uri?displayProperty=nameWithType> primeiro cancela o escape dos delimitadores de caminho e, em seguida, aplica a compactação de caminho. O resultado da passagem da URL mal-intencionada acima para o construtor da classe <xref:System.Uri?displayProperty=nameWithType> resulta no seguinte URI:  
+ Por esse motivo, <xref:System.Uri?displayProperty=nameWithType> classe primeiro cancela o escape dos delimitadores de caminho e, em seguida, aplica a compactação de caminho. O resultado da passagem da URL mal-intencionada acima para <xref:System.Uri?displayProperty=nameWithType> Construtor de classe resulta no seguinte URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -57,7 +57,7 @@ Limpa todas as configurações de esquema existentes.
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra uma configuração usada pela classe <xref:System.Uri> que limpa todas as configurações de esquema e adiciona suporte para não escape de delimitadores de caminho codificados por porcentagem para o esquema http.  
+ O exemplo a seguir mostra uma configuração usada pela classe <xref:System.Uri> que limpa todas as configurações de esquema e, em seguida, adiciona suporte para não escape de delimitadores de caminho codificados por porcentagem para o esquema http.  
   
 ```xml  
 <configuration>  

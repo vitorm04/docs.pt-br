@@ -7,7 +7,7 @@
       items:
         - name: A API do ML.NET
           href: how-does-mldotnet-work.md
-    - name: Ferramentas
+    - name: Construtor de Modelo e CLI
       items:
         - name: A ferramenta do Construtor de Modelos do ML.NET
           href: automate-training-with-model-builder.md
@@ -97,7 +97,7 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Implantar um modelo em uma API Web
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: Ferramentas
+    - name: Construtor de Modelo e CLI
       items:
         - name: Carregar dados no Construtor de modelo
           href: how-to-guides/load-data-model-builder.md
@@ -109,18 +109,12 @@
           href: how-to-guides/how-to-use-the-automl-api.md
 - name: Referência
   items:
-    - name: API
-      items:
-        - name: Referência de API do ML.NET
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
-        - name: Referência de API da versão prévia do ML.NET
-          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
-    - name: Ferramentas
-      items:
-        - name: Referência da CLI
-          href: reference/ml-net-cli-reference.md
-        - name: Referência de API do AutoML do ML.NET
-          href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
+    - name: Referência de API do ML.NET
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+    - name: Referência de API da versão prévia do ML.NET
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+    - name: Referência da CLI
+      href: reference/ml-net-cli-reference.md
 - name: Recursos
   items:
     - name: Visão geral

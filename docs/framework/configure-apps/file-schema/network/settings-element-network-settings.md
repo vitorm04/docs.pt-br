@@ -8,20 +8,20 @@ helpviewer_keywords:
 - settings element
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
-ms.openlocfilehash: ba08f630dc602c950da309bf29482d85b41af7ef
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d510c445c585a36005ed415b14188efc4be03984
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697691"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089112"
 ---
-# <a name="settings-element-network-settings"></a>\<settings > elemento (configurações de rede)
+# <a name="settings-element-network-settings"></a>\<configurações de > elemento (configurações de rede)
 Configura as opções de rede básicaspara o namespace <xref:System.Net?displayProperty=nameWithType>.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<settings >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**configurações**\<
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -48,11 +48,11 @@ Configura as opções de rede básicaspara o namespace <xref:System.Net?displayP
 |-------------|-----------------|  
 |[httpListener](httplistener-element-network-settings.md)|Personaliza os parâmetros usados pela classe <xref:System.Net.HttpListener>.|  
 |[httpWebRequest](httpwebrequest-element-network-settings.md)|Personaliza os parâmetros de solicitação da Web.|  
-|[ipv6](ipv6-element-network-settings.md)|Habilita o suporte a IPv6 (protocolo IP versão 6).|  
-|[\<performanceCounter > elemento (configurações de rede)](performancecounter-element-network-settings.md)|Habilita contadores de desempenho de rede.|  
+|[protocolo](ipv6-element-network-settings.md)|Habilita o suporte a IPv6 (protocolo IP versão 6).|  
+|[Elemento \<performanceCounter > (configurações de rede)](performancecounter-element-network-settings.md)|Habilita contadores de desempenho de rede.|  
 |[servicePointManager](servicepointmanager-element-network-settings.md)|Configura conexões com recursos de rede.|  
-|[socket](socket-element-network-settings.md)|Especifica se as operações de soquete usam portas de conclusão.|  
-|[\<webProxyScript > elemento (configurações de rede)](webproxyscript-element-network-settings.md)|Configura as características do script usado para descobrir proxies da Web.|  
+|[SSA](socket-element-network-settings.md)|Especifica se as operações de soquete usam portas de conclusão.|  
+|[\<elemento de > webProxyScript (configurações de rede)](webproxyscript-element-network-settings.md)|Configura as características do script usado para descobrir proxies da Web.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

@@ -1,13 +1,13 @@
 ---
 title: Informações do chamador
 description: Descreve como usar atributos de argumento de informações do chamador para obter informações do chamador de um método.
-ms.date: 04/25/2017
-ms.openlocfilehash: e7bbc3830a95bd25cfc2fb369b204d367b775815
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.date: 11/04/2019
+ms.openlocfilehash: d995b37149277b7c7d1b6217ee484d3c90a7f8b3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106592"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976805"
 ---
 # <a name="caller-information"></a>Informações do chamador
 
@@ -15,7 +15,7 @@ Ao usar atributos de informações do chamador, você pode obter informações s
 
 Para obter essas informações, você deve usar os atributos que são aplicadas aos parâmetros opcionais, cada qual com um valor padrão. A tabela a seguir lista os atributos de informações do chamador que são definidos no namespace [System. Runtime. CompilerServices](/dotnet/api/system.runtime.compilerservices) :
 
-|Atributo|Descrição|Tipo|
+|Atributo|Descrição|Digite|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|O caminho completo do arquivo de origem que contém o chamador. Esse é o caminho do arquivo no momento da compilação.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Número da linha no arquivo fonte no qual o método é chamado.|`Integer`|
@@ -31,7 +31,7 @@ open System.Runtime.CompilerServices
 open System.Runtime.InteropServices
 
 type Tracer() =
-    member __.DoTrace(message: string,
+    member _.DoTrace(message: string,
                       [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
                       [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
                       [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
@@ -51,10 +51,10 @@ Você pode fornecer explicitamente os argumentos opcionais para controlar as inf
 
 ## <a name="member-names"></a>Nomes dos membros
 
-Você pode usar o [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo para evitar a especificação do nome do membro `String` como um argumento para o método chamado. Usando essa técnica, você evita o problema que a refatoração de renomeação `String` não altera os valores. Esse benefício é especialmente útil para as seguintes tarefas:
+Você pode usar o atributo [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) para evitar especificar o nome do membro como um argumento `String` para o método chamado. Usando essa técnica, você evita o problema que a refatoração de renomeação não altera os valores de `String`. Esse benefício é especialmente útil para as seguintes tarefas:
 
 - Usar rotinas de rastreamento e diagnóstico.
-- Implementando a interface [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) ao associar dados. Essa interface permite que a propriedade de um objeto notifique um controle associado sobre a alteração da propriedade de modo que o controle possa exibir as informações atualizadas. Sem o [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) atributo, você deve especificar o nome da propriedade como um literal.
+- Implementando a interface [INotifyPropertyChanged](/dotnet/api/system.componentmodel.inotifypropertychanged) ao associar dados. Essa interface permite que a propriedade de um objeto notifique um controle associado sobre a alteração da propriedade de modo que o controle possa exibir as informações atualizadas. Sem o atributo [`CallerMemberName`](/dotnet/api/system.runtime.compilerservices.callermembernameattribute) , você deve especificar o nome da propriedade como um literal.
 
 O gráfico a seguir mostra os nomes de membro que são retornados quando você usa o atributo CallerMemberName.
 

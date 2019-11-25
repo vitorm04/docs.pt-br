@@ -2,12 +2,12 @@
 title: Interceptor de mensagem personalizado
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: daa041bf63442dace0d33e1e3207d0857b6b7312
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 61f9bae24f5edb70430f4f3eaa16e42da221a7b4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928916"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978306"
 ---
 # <a name="custom-message-interceptor"></a>Interceptor de mensagem personalizado
 Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particular, ele mostra como implementar um elemento de ligação personalizado que cria fábricas de canal e ouvintes de canal para interceptar todas as mensagens recebidas e enviadas em um ponto específico na pilha de tempo de execução. O exemplo também inclui um cliente e um servidor que demonstram o uso dessas fábricas personalizadas.  
@@ -22,7 +22,7 @@ Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particula
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
@@ -37,14 +37,14 @@ Este exemplo demonstra o uso do modelo de extensibilidade do canal. Em particula
 4. Adicione uma seção de extensão de elemento de associação para expor o novo elemento de associação ao sistema de configuração.  
   
 ## <a name="channel-shapes"></a>Formas de canal  
- A primeira etapa na gravação de um canal personalizado em camadas é decidir quais formas são necessárias para o canal. Para nosso Inspetor de mensagem, damos suporte a qualquer forma com a qual a camada abaixo dá suporte (por exemplo, se a camada <xref:System.ServiceModel.Channels.IOutputChannel> abaixo <xref:System.ServiceModel.Channels.IDuplexSessionChannel>pode criar e, além <xref:System.ServiceModel.Channels.IOutputChannel> disso <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, também expõe e).  
+ A primeira etapa na gravação de um canal personalizado em camadas é decidir quais formas são necessárias para o canal. Para nosso Inspetor de mensagem, damos suporte a qualquer forma com a qual a camada abaixo dá suporte (por exemplo, se a camada abaixo pode criar <xref:System.ServiceModel.Channels.IOutputChannel> e <xref:System.ServiceModel.Channels.IDuplexSessionChannel>, também expõemos <xref:System.ServiceModel.Channels.IOutputChannel> e <xref:System.ServiceModel.Channels.IDuplexSessionChannel>).  
   
 ## <a name="channel-factory-and-listener-factory"></a>Fábrica de canais e fábrica de ouvintes  
- A próxima etapa na gravação de um canal personalizado em camadas é criar uma implementação do <xref:System.ServiceModel.Channels.IChannelFactory> para canais de cliente e <xref:System.ServiceModel.Channels.IChannelListener> de para canais de serviço.  
+ A próxima etapa na gravação de um canal personalizado em camadas é criar uma implementação de <xref:System.ServiceModel.Channels.IChannelFactory> para canais de cliente e de <xref:System.ServiceModel.Channels.IChannelListener> para canais de serviço.  
   
- Essas classes usam uma fábrica interna e um ouvinte e delegam todas `OnCreateChannel` as `OnAcceptChannel` chamadas de e para a fábrica interna e o ouvinte.  
+ Essas classes usam uma fábrica interna e um ouvinte e delegam todas as chamadas `OnCreateChannel` e `OnAcceptChannel` para a fábrica interna e o ouvinte.  
   
-```csharp  
+```csharp
 class InterceptingChannelFactory<TChannel> : ChannelFactoryBase<TChannel>  
 { 
     //... 
@@ -57,10 +57,10 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Adicionando um elemento de associação  
- O exemplo define um elemento de associação personalizado `InterceptingBindingElement`:. `InterceptingBindingElement`usa uma `ChannelMessageInterceptor` como entrada e `ChannelMessageInterceptor` a utiliza para manipular mensagens que passam por ela. Essa é a única classe que deve ser pública. A fábrica, o ouvinte e os canais podem ser implementações internas das interfaces de tempo de execução públicas.  
+ O exemplo define um elemento de associação personalizado: `InterceptingBindingElement`. `InterceptingBindingElement` usa uma `ChannelMessageInterceptor` como uma entrada e usa essa `ChannelMessageInterceptor` para manipular mensagens que passam por ela. Essa é a única classe que deve ser pública. A fábrica, o ouvinte e os canais podem ser implementações internas das interfaces de tempo de execução públicas.  
   
 ```csharp
-public class InterceptingBindingElement : BindingElement 
+public class InterceptingBindingElement : BindingElement
 {
 }
 ```  
@@ -76,12 +76,12 @@ public abstract class InterceptingElement : BindingElementExtensionElement
 ```  
   
 ## <a name="adding-policy"></a>Adicionando política  
- Para integrar com nosso sistema de política `InterceptingBindingElement` , implemente IPolicyExportExtension para sinalizar que devemos participar da geração de políticas. Para dar suporte à política de importação em um cliente gerado, o usuário pode registrar uma `InterceptingBindingElementImporter` classe derivada `CreateMessageInterceptor`de e substituir () para gerar sua `ChannelMessageInterceptor` classe habilitada para política.  
+ Para integrar com nosso sistema de política, `InterceptingBindingElement` implementa o IPolicyExportExtension para sinalizar que devemos participar da geração de políticas. Para dar suporte à política de importação em um cliente gerado, o usuário pode registrar uma classe derivada de `InterceptingBindingElementImporter` e substituir `CreateMessageInterceptor`() para gerar sua classe de `ChannelMessageInterceptor` habilitada para política.  
   
 ## <a name="example-droppable-message-inspector"></a>Exemplo: Inspetor de mensagem Dropper  
- Incluído no exemplo, há um exemplo de implementação `ChannelMessageInspector` de que descarta mensagens.  
+ Incluído no exemplo, há um exemplo de implementação de `ChannelMessageInspector` que descarta mensagens.  
   
-```csharp  
+```csharp
 class DroppingServerElement : InterceptingElement  
 {  
     protected override ChannelMessageInterceptor CreateMessageInterceptor()  
@@ -120,7 +120,7 @@ class DroppingServerElement : InterceptingElement
 </customBinding>  
 ```  
   
- O cliente usa a `MessageInterceptor` biblioteca para adicionar um cabeçalho personalizado a mensagens numeradas par. O serviço, por outro lado, `MessageInterceptor` usa a biblioteca para descartar todas as mensagens que não têm esse cabeçalho especial.  
+ O cliente usa a biblioteca de `MessageInterceptor` para adicionar um cabeçalho personalizado a mensagens numeradas par. O serviço, por outro lado, usa `MessageInterceptor` biblioteca para descartar as mensagens que não têm esse cabeçalho especial.  
   
  Você deverá ver a seguinte saída do cliente depois de executar o serviço e, em seguida, o cliente.  
   

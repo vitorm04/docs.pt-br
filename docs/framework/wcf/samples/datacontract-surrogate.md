@@ -2,12 +2,12 @@
 title: Alternativa de DataContract
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 32ac0b82a637e2fb1a62b81555648942d31c30de
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f08226d3d871caea2dea3eeaf1cd411557853e45
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928597"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976723"
 ---
 # <a name="datacontract-surrogate"></a>Alternativa de DataContract
 Este exemplo demonstra como processos como serialização, desserialização, exportação de esquema e importação de esquema podem ser personalizados usando uma classe substituta de contrato de dados. Este exemplo mostra como usar um substituto em um cenário de cliente e servidor em que os dados são serializados e transmitidos entre um cliente do Windows Communication Foundation (WCF) e um serviço.  
@@ -17,7 +17,7 @@ Este exemplo demonstra como processos como serialização, desserialização, ex
   
  O exemplo usa o seguinte contrato de serviço:  
   
-```csharp  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [AllowNonSerializableTypes]  
 public interface IPersonnelDataService  
@@ -30,11 +30,11 @@ public interface IPersonnelDataService
 }  
 ```  
   
- A `AddEmployee` operação permite aos usuários adicionar dados sobre novos funcionários e a `GetEmployee` operação dá suporte à pesquisa de funcionários com base no nome.  
+ A operação de `AddEmployee` permite aos usuários adicionar dados sobre novos funcionários e a operação de `GetEmployee` dá suporte à pesquisa de funcionários com base no nome.  
   
  Essas operações usam o seguinte tipo de dados:  
   
-```csharp  
+```csharp
 [DataContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 class Employee  
 {  
@@ -49,9 +49,9 @@ class Employee
 }  
 ```  
   
- No tipo, a `Person` classe (mostrada no código de exemplo a seguir) <xref:System.Runtime.Serialization.DataContractSerializer> não pode ser serializada pelo porque ela não é uma classe de contrato de dados válida. `Employee`  
+ No tipo de `Employee`, a classe `Person` (mostrada no código de exemplo a seguir) não pode ser serializada pelo <xref:System.Runtime.Serialization.DataContractSerializer> porque não é uma classe de contrato de dados válida.  
   
-```csharp  
+```csharp
 public class Person  
 {  
     public string firstName;  
@@ -64,13 +64,13 @@ public class Person
 }  
 ```  
   
- Você pode aplicar o <xref:System.Runtime.Serialization.DataContractAttribute> atributo `Person` à classe, mas isso nem sempre é possível. Por exemplo, a `Person` classe pode ser definida em um assembly separado sobre o qual você não tem controle.  
+ Você pode aplicar o atributo <xref:System.Runtime.Serialization.DataContractAttribute> à classe `Person`, mas isso nem sempre é possível. Por exemplo, a classe `Person` pode ser definida em um assembly separado sobre o qual você não tem controle.  
   
- Dada essa restrição, uma maneira de serializar `Person` a classe é substituí-la por outra classe marcada com <xref:System.Runtime.Serialization.DataContractAttribute> e copiar os dados necessários para a nova classe. O objetivo é fazer com que `Person` a classe apareça como um DataContract para <xref:System.Runtime.Serialization.DataContractSerializer>o. Observe que essa é uma maneira de serializar classes de contrato que não são de dados.  
+ Devido a essa restrição, uma maneira de serializar a classe `Person` é substituí-la por outra classe marcada com <xref:System.Runtime.Serialization.DataContractAttribute> e copiar sobre os dados necessários para a nova classe. O objetivo é fazer com que a classe de `Person` apareça como um DataContract para o <xref:System.Runtime.Serialization.DataContractSerializer>. Observe que essa é uma maneira de serializar classes de contrato que não são de dados.  
   
- O exemplo substitui logicamente a `Person` classe por uma classe diferente denominada. `PersonSurrogated`  
+ O exemplo substitui logicamente a classe `Person` por uma classe diferente chamada `PersonSurrogated`.  
   
-```csharp  
+```csharp
 [DataContract(Name="Person", Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public class PersonSurrogated  
 {  
@@ -85,11 +85,11 @@ public class PersonSurrogated
 }  
 ```  
   
- O substituto de contrato de dados é usado para obter essa substituição. Um substituto de contrato de dados é uma classe <xref:System.Runtime.Serialization.IDataContractSurrogate>que implementa. Neste exemplo, a `AllowNonSerializableTypesSurrogate` classe implementa essa interface.  
+ O substituto de contrato de dados é usado para obter essa substituição. Um substituto de contrato de dados é uma classe que implementa <xref:System.Runtime.Serialization.IDataContractSurrogate>. Neste exemplo, a classe `AllowNonSerializableTypesSurrogate` implementa essa interface.  
   
- Na implementação da interface, a primeira tarefa é estabelecer um mapeamento de tipo de `Person` para `PersonSurrogated`. Isso é usado no momento da serialização, bem como no momento da exportação do esquema. Esse mapeamento é obtido com a implementação <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> do método.  
+ Na implementação da interface, a primeira tarefa é estabelecer um mapeamento de tipo de `Person` para `PersonSurrogated`. Isso é usado no momento da serialização, bem como no momento da exportação do esquema. Esse mapeamento é obtido com a implementação do método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29>.  
   
-```csharp  
+```csharp
 public Type GetDataContractType(Type type)  
 {  
     if (typeof(Person).IsAssignableFrom(type))  
@@ -100,9 +100,9 @@ public Type GetDataContractType(Type type)
 }  
 ```  
   
- O <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> método mapeia uma `Person` instância do para `PersonSurrogated` uma instância do durante a serialização, conforme mostrado no código de exemplo a seguir.  
+ O método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> mapeia uma instância de `Person` para uma instância de `PersonSurrogated` durante a serialização, conforme mostrado no código de exemplo a seguir.  
   
-```csharp  
+```csharp
 public object GetObjectToSerialize(object obj, Type targetType)  
 {  
     if (obj is Person)  
@@ -118,9 +118,9 @@ public object GetObjectToSerialize(object obj, Type targetType)
 }  
 ```  
   
- O <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> método fornece o mapeamento reverso para desserialização, conforme mostrado no código de exemplo a seguir.  
+ O método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> fornece o mapeamento inverso para desserialização, conforme mostrado no código de exemplo a seguir.  
   
-```csharp  
+```csharp
 public object GetDeserializedObject(object obj,   
 Type targetType)  
 {  
@@ -137,9 +137,9 @@ Type targetType)
 }  
 ```  
   
- Para mapear `PersonSurrogated` o contrato de dados para `Person` a classe existente durante a importação de esquema, <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> o exemplo implementa o método, conforme mostrado no código de exemplo a seguir.  
+ Para mapear o contrato de dados de `PersonSurrogated` para a classe `Person` existente durante a importação de esquema, o exemplo implementa o método <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29>, conforme mostrado no código de exemplo a seguir.  
   
-```csharp  
+```csharp
 public Type GetReferencedTypeOnImport(string typeName,   
                string typeNamespace, object customData)  
 {  
@@ -156,9 +156,9 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
 }  
 ```  
   
- O código de exemplo a seguir conclui a implementação da <xref:System.Runtime.Serialization.IDataContractSurrogate> interface.  
+ O código de exemplo a seguir conclui a implementação da interface <xref:System.Runtime.Serialization.IDataContractSurrogate>.  
   
-```csharp  
+```csharp
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
           System.CodeDom.CodeTypeDeclaration typeDeclaration,   
           System.CodeDom.CodeCompileUnit compileUnit)  
@@ -184,13 +184,13 @@ public void GetKnownCustomDataTypes(
 }  
 ```  
   
- Neste exemplo, o substituto é habilitado em ServiceModel por um atributo chamado `AllowNonSerializableTypesAttribute`. Os desenvolvedores precisariam aplicar esse atributo em seu contrato de serviço, conforme mostrado `IPersonnelDataService` no contrato de serviço acima. Esse atributo implementa `IContractBehavior` e configura o substituto em operações em seus `ApplyClientBehavior` métodos e `ApplyDispatchBehavior` .  
+ Neste exemplo, o substituto é habilitado em ServiceModel por um atributo chamado `AllowNonSerializableTypesAttribute`. Os desenvolvedores precisariam aplicar esse atributo em seu contrato de serviço, conforme mostrado no contrato de serviço `IPersonnelDataService` acima. Esse atributo implementa `IContractBehavior` e configura o substituto nas operações em seus `ApplyClientBehavior` e `ApplyDispatchBehavior` métodos.  
   
- O atributo não é necessário nesse caso – ele é usado para fins de demonstração neste exemplo. Como alternativa `IContractBehavior`, `IEndpointBehavior` os usuários podem habilitar um substituto Adicionando manualmente um ou `IOperationBehavior` usando código ou usando a configuração.  
+ O atributo não é necessário nesse caso – ele é usado para fins de demonstração neste exemplo. Como alternativa, os usuários podem habilitar um substituto Adicionando manualmente um `IContractBehavior`semelhante, `IEndpointBehavior` ou `IOperationBehavior` usando código ou usando a configuração.  
   
- A `IContractBehavior` implementação procura operações que usam DataContract verificando se elas têm um `DataContractSerializerOperationBehavior` registrado. Se isso for feito, ele definirá a `DataContractSurrogate` Propriedade nesse comportamento. O código de exemplo a seguir mostra como isso é feito. A definição do substituto nesse comportamento de operação permite a serialização e a desserialização.  
+ A implementação de `IContractBehavior` procura operações que usam DataContract verificando se elas têm um `DataContractSerializerOperationBehavior` registrado. Se isso for feito, ele definirá a propriedade `DataContractSurrogate` nesse comportamento. O código de exemplo a seguir mostra como isso é feito. A definição do substituto nesse comportamento de operação permite a serialização e a desserialização.  
   
-```csharp  
+```csharp
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
 {  
     foreach (OperationDescription opDesc in description.Operations)  
@@ -218,11 +218,11 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
 }  
 ```  
   
- Etapas adicionais precisam ser tomadas para conectar o substituto para uso durante a geração de metadados. Um mecanismo para fazer isso é fornecer um `IWsdlExportExtension` que é o que este exemplo demonstra. Outra maneira é modificar o `WsdlExporter` diretamente.  
+ Etapas adicionais precisam ser tomadas para conectar o substituto para uso durante a geração de metadados. Um mecanismo para fazer isso é fornecer um `IWsdlExportExtension` que é demonstrado pelo exemplo. Outra maneira é modificar o `WsdlExporter` diretamente.  
   
- O `AllowNonSerializableTypesAttribute` atributo implementa `IWsdlExportExtension` e `IContractBehavior`. A extensão pode ser um `IContractBehavior` ou `IEndpointBehavior` , nesse caso. Sua `IWsdlExportExtension.ExportContract` implementação de método habilita o substituto adicionando-o ao `XsdDataContractExporter` usado durante a geração de esquema para DataContract. O trecho de código a seguir mostra como fazer isso.  
+ O atributo `AllowNonSerializableTypesAttribute` implementa `IWsdlExportExtension` e `IContractBehavior`. A extensão pode ser uma `IContractBehavior` ou `IEndpointBehavior` nesse caso. Sua implementação de método de `IWsdlExportExtension.ExportContract` habilita o substituto adicionando-o ao `XsdDataContractExporter` usado durante a geração de esquema para DataContract. O trecho de código a seguir mostra como fazer isso.  
   
-```csharp  
+```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
 {  
     if (exporter == null)  
@@ -265,6 +265,6 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  

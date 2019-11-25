@@ -3,12 +3,12 @@ title: Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.N
 description: Visão geral e instalação da ferramenta da CLI (Interface de Linha de Comando) do ML.NET.
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: baced9bbcc72153458d42d4b6d8206921bf187b8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118008"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977076"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.NET
 
@@ -25,11 +25,11 @@ A CLI (interface de linha de comando) do ML.NET é uma ferramenta que você pode
 
 Você pode executar os projetos de C# gerados com o Visual Studio F5 ou com o `dotnet run` (CLI do .NET Core).
 
-Observação: Se, depois de instalar o [SDK do .NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2) o comando `dotnet tool` não estiver funcionando, saia do Windows e entre novamente.
+Observação: se, depois de instalar o [SDK do .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2) , o comando `dotnet tool` não estiver funcionando, saia do Windows e entre novamente.
 
 ## <a name="install"></a>Instalar o
 
-A CLI do ML.NET é instalada como qualquer outra Ferramenta Global do dotnet. Você usa o comando da CLI do .NET Core `dotnet tool install`. 
+A CLI do ML.NET é instalada como qualquer outra Ferramenta Global do dotnet. Você usa o comando da CLI do .NET Core `dotnet tool install`.
 
 O exemplo a seguir mostra como instalar a CLI do ML.NET no local de feed do NuGet padrão:
 
@@ -112,7 +112,7 @@ No computador em que você deseja habilitar o preenchimento, você precisará fa
 
     ```console
     echo $profile
-    ``` 
+    ```
 
 (Para outros shells, [procure](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22) ou abra um [problema](https://github.com/dotnet/System.CommandLine/issues).)
 
@@ -136,5 +136,5 @@ Nesse caso, a CLI do .NET Core não adiciona esse local automaticamente à vari�
 
 - [Tutorial de "Introdução à ferramenta da CLI do ML.NET"](../tutorials/mlnet-cli.md)
 - [Como treinar automaticamente modelos com a ferramenta da CLI do ML.NET](../automate-training-with-cli.md)
-- [Guia de referência de comando auto-train da CLI do ML.NET](../reference/ml-net-cli-reference.md) 
+- [Guia de referência de comando auto-train da CLI do ML.NET](../reference/ml-net-cli-reference.md)
 - [Telemetria na CLI do ML.NET](../resources/ml-net-cli-telemetry.md)

@@ -4,12 +4,12 @@ description: Um glossário de termos essenciais sobre o aprendizado de máquina,
 ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: cb5681f1f72776ec9a8cbcfe45519befe02b8caf
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180184"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977295"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossário de aprendizado de máquina com termos importantes
 
@@ -29,9 +29,9 @@ Um caso de [classificação](#classification), em que o [rótulo](#label) é ape
 
 ## <a name="calibration"></a>Calibragem
 
-Calibragem é o processo de mapear uma pontuação bruta em uma associação de classe para classificação binária e multiclasse. Alguns treinadores do ML.NET têm um sufixo `NonCalibrated`. Esses algoritmos produzem uma pontuação bruta que deve ser mapeada para uma probabilidade de classe. 
+Calibragem é o processo de mapear uma pontuação bruta em uma associação de classe para classificação binária e multiclasse. Alguns treinadores do ML.NET têm um sufixo `NonCalibrated`. Esses algoritmos produzem uma pontuação bruta que deve ser mapeada para uma probabilidade de classe.
 
-## <a name="catalog"></a>Catálogo 
+## <a name="catalog"></a>Catálogo
 
 No ML.NET, um catálogo é uma coleção de funções de extensão agrupadas por um objetivo em comum.
 
@@ -170,7 +170,7 @@ O processo de identificar um [modelo](#model) para um determinado conjunto de da
 
 Uma classe do ML.NET que implemente a interface <xref:Microsoft.ML.ITransformer>.
 
-Um transformador transforma um <xref:Microsoft.ML.IDataView> em outro. Um transformador é criado pelo treinamento de um [estimador](#estimator) ou um pipeline de estimador. 
+Um transformador transforma um <xref:Microsoft.ML.IDataView> em outro. Um transformador é criado pelo treinamento de um [estimador](#estimator) ou um pipeline de estimador.
 
 ## <a name="unsupervised-machine-learning"></a>Aprendizado de máquina não supervisionado
 

@@ -1,13 +1,13 @@
 ---
 title: Expressões de computação
 description: Saiba como criar uma sintaxe conveniente para escrever cálculos no F# que pode ser sequenciada e combinada usando construções e associações de fluxo de controle.
-ms.date: 03/15/2019
-ms.openlocfilehash: 2f0eb7686378766f6b379f0401589490f01a1963
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424749"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976783"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
@@ -112,6 +112,34 @@ for sq in squares do
     printfn "%d" sq
 ```
 
+Na maioria dos casos, ele pode ser omitido por chamadores. A maneira mais comum de omitir `yield` é com o operador `->`:
+
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+Para expressões mais complexas que podem produzir muitos valores diferentes, e talvez condicionalmente, simplesmente omitir a palavra-chave pode fazer:
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
 Assim como acontece com a [palavra C#-chave yield em ](../../csharp/language-reference/keywords/yield.md), cada elemento na expressão de computação é devolvido conforme é iterado.
 
 `yield` é definido pelo membro `Yield(x)` no tipo de construtor, em que `x` é o item a ser devolvido.
@@ -143,6 +171,8 @@ printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 Quando avaliado, a expressão de computação chamada por `yield!` terá seus itens devolvidos um por um, mesclando o resultado.
 
 `yield!` é definido pelo membro `YieldFrom(x)` no tipo de construtor, em que `x` é uma coleção de valores.
+
+Ao contrário de `yield`, `yield!` deve ser especificado explicitamente. Seu comportamento não é implícito em expressões de computação.
 
 ### `return`
 
@@ -394,7 +424,7 @@ O exemplo a seguir mostra a extensão da classe de `Microsoft.FSharp.Linq.QueryB
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 

@@ -1,13 +1,13 @@
 ---
 title: Referência de palavras-chave
 description: Encontre links para informações sobre todas as palavras F# -chave de idioma.
-ms.date: 05/16/2016
-ms.openlocfilehash: 2be6d078653a4595cbdfe97be7aab8e3b3c10ea9
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 64bb680a0861f4b8287f887ea67edb6fcf4f88a6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425080"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976619"
 ---
 # <a name="keyword-reference"></a>Referência de palavras-chave
 
@@ -87,7 +87,7 @@ A tabela a seguir mostra F# todas as palavras-chave em ordem alfabética, juntam
 |`when`|[Restrições](./generics/constraints.md)|Usado para condições booleanas (*quando protetores*) em correspondências de padrões e para introduzir uma cláusula de restrição para um parâmetro de tipo genérico.|
 |`while`|[Loops: `while...do` expressão](loops-while-do-expression.md)|Apresenta uma construção de looping.|
 |`with`|[Expressões Match](match-expressions.md)<br /><br />[Expressões de Objeto](object-expressions.md)<br /><br />[Copiar e Atualizar Expressões de Registro](copy-and-update-record-expressions.md)<br /><br />[Extensões de Tipo](type-extensions.md)<br /><br />[Exceções: a expressão `try...with`](./exception-handling/the-try-with-expression.md)|Usado junto com a palavra-chave `match` em expressões de correspondência de padrões. Também usado em expressões de objeto, expressões de cópia de registro e extensões de tipo para introduzir definições de membro e para introduzir manipuladores de exceção.|
-|`yield`|[Sequências](sequences.md)|Usado em uma expressão de sequência para produzir um valor para uma sequência.|
+|`yield`|[Listas](lists.md), [matrizes](arrays.md), [sequências](sequences.md)|Usado em uma lista, matriz ou expressão de sequência para produzir um valor para uma sequência. Normalmente, pode ser omitido, pois é implícito na maioria das situações.|
 |`yield!`|[Expressões de Computação](computation-expressions.md)<br /><br />[Fluxos de Trabalho Assíncronos](asynchronous-workflows.md)|Usado em uma expressão de computação para acrescentar o resultado de uma determinada expressão de computação a uma coleção de resultados para a expressão de computação que a contém.|
 
 Os seguintes tokens são reservados F# no porque são palavras-chave no idioma OCaml:

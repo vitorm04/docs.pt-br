@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: 02a964506d976cb10f3f28f83f0655fecc447e59
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 46c18ab540c90c4147514685c2acc824755b435f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582757"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976856"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Estendendo o modelo de aplicativo do Visual Basic
 
@@ -82,6 +82,7 @@ Se o aplicativo for um aplicativo normal (aplicativo de várias instâncias) ou 
  O construtor de <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> chama a propriedade <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> para determinar qual mecanismo de renderização de texto a ser usado para os formulários do aplicativo. Por padrão, a propriedade <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> retorna `False`, indicando que o mecanismo de renderização de texto GDI será usado, que é o padrão no Visual Basic 2005 e versões posteriores. Você pode substituir a propriedade <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> para retornar `True`, que indica que o mecanismo de renderização de texto do GDI+ deve ser usado, que é o padrão em Visual Basic .NET 2002 e Visual Basic .NET 2003.
 
 ## <a name="configuring-the-application"></a>Configurando o aplicativo
+
  Como parte do modelo de aplicativo Visual Basic, a classe <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> fornece propriedades protegidas que configuram o aplicativo. Essas propriedades devem ser definidas no construtor da classe de implementação.
 
  Em um projeto de Windows Forms padrão, o **Designer de projeto** cria o código para definir as propriedades com as configurações de designer. As propriedades são usadas somente quando o aplicativo está sendo iniciado; configurá-los depois que o aplicativo é iniciado não tem nenhum efeito.

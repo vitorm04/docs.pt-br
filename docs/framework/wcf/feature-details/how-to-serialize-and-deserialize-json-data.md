@@ -2,23 +2,23 @@
 title: 'Como: usar DataContractJsonSerializer'
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: ad126616e0665c6de3aa7a64969c83b23be9f830
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 354f0c58a83e07ff3180977311adf85ae306dd21
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395992"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976867"
 ---
-# <a name="how-to-use-datacontractjsonserializer"></a>Como: usar DataContractJsonSerializer
+# <a name="how-to-use-datacontractjsonserializer"></a>Como usar o DataContractJsonSerializer
+
+> [!NOTE]
+> Este artigo é sobre <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. Para a maioria dos cenários que envolvem a serialização e desserialização do JSON, recomendamos as ferramentas no [namespace System. Text. JSON](../../../standard/serialization/system-text-json-overview.md).
 
 JSON (JavaScript Object Notation) é um formato eficiente de codificação de dados que permite a troca rápida de pequenas quantidades de dados entre navegadores cliente e serviços Web habilitados para AJAX.
 
 Este artigo demonstra como serializar objetos do tipo .NET em dados codificados em JSON e, em seguida, desserializar os dados no formato JSON de volta em instâncias de tipos .NET. Este exemplo usa um contrato de dados para demonstrar a serialização e a desserialização de um tipo `Person` definido pelo usuário e usa <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.
 
 Normalmente, a serialização e desserialização JSON são manipuladas automaticamente pelo Windows Communication Foundation (WCF) quando você usa tipos de contrato de dados em operações de serviço que são expostas em pontos de extremidade habilitados para AJAX. No entanto, em alguns casos, talvez seja necessário trabalhar diretamente com dados JSON.
-
-> [!NOTE]
-> Este artigo é sobre <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>. Para a maioria dos cenários que envolvem a serialização e desserialização do JSON, recomendamos as ferramentas no [namespace System. Text. JSON](../../../standard/serialization/system-text-json-overview.md).
 
 Este artigo se baseia no [exemplo de DataContractJsonSerializer](../samples/json-serialization.md).
 

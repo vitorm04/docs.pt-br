@@ -8,21 +8,21 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: 1dda43be8c0e0c94bdf7b57b67aa4d403b547f97
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7a6c1282c9ca8381d2dbb21ffdc82f95732c42b3
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699551"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087517"
 ---
-# <a name="bypasslist-element-network-settings"></a>\<bypasslist > elemento (configurações de rede)
+# <a name="bypasslist-element-network-settings"></a>\<elemento de > BypassList (configurações de rede)
 Fornece um conjunto de expressões regulares que descrevem endereços que não usam um proxy.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<bypasslist >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<bypasslist >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -51,9 +51,9 @@ Fornece um conjunto de expressões regulares que descrevem endereços que não u
 |[defaultProxy](defaultproxy-element-network-settings.md)|Configura o servidor proxy HTTP (Hypertext Transfer Protocol).|  
   
 ## <a name="remarks"></a>Comentários  
- A lista de bypass contém expressões regulares que descrevem URIs que <xref:System.Net.WebRequest> acessam diretamente em vez de por meio do servidor proxy.  
+ A lista de bypass contém expressões regulares que descrevem URIs que <xref:System.Net.WebRequest> instâncias acessam diretamente em vez de por meio do servidor proxy.  
   
- Tome cuidado ao especificar uma expressão regular para este elemento. A expressão regular "[a-z] + @no__t -0.contoso\\.com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para corresponder apenas a um host no domínio contoso.com, use uma âncora ("$"): "[a-z] + @no__t -0.contoso\\.com $".  
+ Tome cuidado ao especificar uma expressão regular para este elemento. A expressão regular "[a-z] +\\. contoso\\. com" corresponde a qualquer host no domínio contoso.com, mas também corresponde a qualquer host no domínio contoso.com.cpandl.com. Para corresponder apenas a um host no domínio contoso.com, use uma âncora ("$"): "[a-z] +\\. contoso\\. com $".  
   
  Para obter mais informações sobre expressões regulares, consulte. [.NET Framework expressões regulares](../../../../standard/base-types/regular-expressions.md).  
   

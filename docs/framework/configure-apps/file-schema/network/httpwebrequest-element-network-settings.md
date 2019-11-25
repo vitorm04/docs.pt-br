@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: fa00aed2cd1e96ec788d4bc9c1c63f20561d8d1c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: d33dadc14510feb00e05ca557b507b0cf8fa0dd0
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698180"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087450"
 ---
-# <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > elemento (configurações de rede)
+# <a name="httpwebrequest-element-network-settings"></a>\<o elemento > httpWebRequest (configurações de rede)
 Personaliza os parâmetros de solicitação da Web.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<httpWebRequest >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**configurações**](settings-element-network-settings.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**httpWebRequest >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -39,7 +39,7 @@ Personaliza os parâmetros de solicitação da Web.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descrição**|  
+|**Attribute**|**Descrição**|  
 |-------------------|---------------------|  
 |`maximumResponseHeadersLength`|Especifica o comprimento máximo de um cabeçalho de resposta, em kilobytes. O padrão é 64. Um valor de-1 indica que nenhum limite de tamanho será imposto nos cabeçalhos de resposta.|  
 |`maximumErrorResponseLength`|Especifica o comprimento máximo de uma resposta de erro, em quilobytes. O padrão é 64. Um valor de-1 indica que nenhum limite de tamanho será imposto sobre a resposta de erro.|  
@@ -53,10 +53,10 @@ Personaliza os parâmetros de solicitação da Web.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[settings](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[Configurações](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
- Por padrão, o .NET Framework impõe estritamente a RFC 2616 para análise de URI. Algumas respostas do servidor podem incluir caracteres de controle em campos proibidos, o que fará com que o método <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> lance um <xref:System.Net.WebException>. Se **UseUnsafeHeaderParsing** for definido como **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> não será gerado nesse caso; no entanto, seu aplicativo ficará vulnerável a várias formas de ataques de análise de URI. A melhor solução é alterar o servidor para que a resposta não inclua caracteres de controle.  
+ Por padrão, o .NET Framework impõe estritamente a RFC 2616 para análise de URI. Algumas respostas do servidor podem incluir caracteres de controle em campos proibidos, o que fará com que o método <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> gere um <xref:System.Net.WebException>. Se **UseUnsafeHeaderParsing** for definido como **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> não será lançada nesse caso; no entanto, seu aplicativo ficará vulnerável a várias formas de ataques de análise de URI. A melhor solução é alterar o servidor para que a resposta não inclua caracteres de controle.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

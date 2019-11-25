@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 - composite controls [WPF], hosting WPF in
 ms.assetid: 486369a9-606a-4a3b-b086-a06f2119c7b0
-ms.openlocfilehash: 748ab027fa8206c163578c89b94460665563cbce
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: f33adf6bac5efab87fecd9e95437ac8cff6d1f16
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197873"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976552"
 ---
 # <a name="walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms"></a>Instruções passo a passo: hospedando um controle composto do WPF 3D nos Windows Forms
 
@@ -40,7 +40,7 @@ Você precisa dos seguintes componentes para concluir esta instrução passo a p
 
 1. Crie um projeto de **biblioteca de controle de usuário do WPF** chamado `HostingWpfUserControlInWf`.
 
-2. Abra UserControl1.xaml no [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].
+2. Abra UserControl1. XAML no designer do WPF.
 
 3. Substitua o código gerado pelo código a seguir:
 

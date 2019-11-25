@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: 30ec24aefcf8c4d1e110238a2c60a958eded5545
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699392"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088942"
 ---
-# <a name="assert-element"></a>\<assert > elemento
+# <a name="assert-element"></a>Elemento \<Assert >
 Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>; também especifica o nome do arquivo no qual as mensagens serão gravadas.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<assert >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<assert >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -59,7 +59,7 @@ Especifica se uma caixa de mensagem deve ser exibida ao chamar o método <xref:S
  Ambos os atributos no elemento **\<assert >** são opcionais. Você pode desabilitar caixas de mensagens sem especificar um arquivo no qual gravar as mensagens ou pode especificar um arquivo para gravar mensagens enquanto deixa as caixas de mensagens habilitadas.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como desabilitar a exibição de caixas de mensagem quando você chama **debug. Assert** e grava as mensagens em `c:\log.txt`.  
+ O exemplo a seguir mostra como desabilitar a exibição de caixas de mensagem quando você chama **debug. Assert** e grava as mensagens para `c:\log.txt`.  
   
 ```xml  
 <configuration>  

@@ -4,12 +4,12 @@ description: Saiba como escolher um algoritmo do ML.NET para seu modelo de machi
 author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: dfea21908258e6eb0b696de7affe1b03cff5cb3b
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68972081"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976693"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Como escolher um algoritmo do ML.NET
 
@@ -19,9 +19,9 @@ Algoritmos operam em **recursos**. Recursos são valores numéricos calculados u
 
 ## <a name="trainer--algorithm--task"></a>Treinador = Algoritmo + Tarefa
 
-Um algoritmo é o cálculo executado para produzir um **modelo**. Diferentes algoritmos produzem modelos com características diferentes. 
+Um algoritmo é o cálculo executado para produzir um **modelo**. Diferentes algoritmos produzem modelos com características diferentes.
 
-Com o do ML.NET, o mesmo algoritmo pode ser aplicado para tarefas diferentes. Por exemplo, o Ascendente de coordenada dupla estocástico pode ser usado para Classificação binária, Classificação multiclasse e Regressão. A diferença está em como a saída do algoritmo é interpretada de acordo com a tarefa. 
+Com o do ML.NET, o mesmo algoritmo pode ser aplicado para tarefas diferentes. Por exemplo, o Ascendente de coordenada dupla estocástico pode ser usado para Classificação binária, Classificação multiclasse e Regressão. A diferença está em como a saída do algoritmo é interpretada de acordo com a tarefa.
 
 Para cada combinação de algoritmo/tarefa, o ML.NET fornece um componente que executa o algoritmo de treinamento e realiza a interpretação. Esses componentes são chamados de treinadores. Por exemplo, o <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> usa o algoritmo **StochasticDualCoordinatedAscent** aplicado à tarefa **Regressão**.
 

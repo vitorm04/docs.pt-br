@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 8f381a06aa916be378052d00f0d65f37ef910433
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740654"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976772"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Namespaces XAML e mapeamento de namespace para XAML WPF
 Este tópico oferece explicação adicional sobre a presença e a finalidade dos dois mapeamentos de namespace de XAML como frequentemente encontrados na marca raiz de um arquivo XAML do WPF. Ele também descreve como gerar mapeamentos semelhantes para usar elementos que são definidos em seu próprio código e/ou em assemblies separados.  
@@ -112,7 +112,7 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>Namespaces de designer e outros prefixos de modelos de XAML  
  Se você estiver trabalhando com ambientes de desenvolvimento e/ou com ferramentas de design para XAML do WPF, notará que há outros namespaces/prefixos de XAML definidos na marcação XAML.  
   
- O [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] usa um namespace de designer que é normalmente mapeado para o prefixo `d:`. Os modelos de projeto mais recentes para WPF podem mapear previamente esse namespace de XAML para dar suporte ao intercâmbio do XAML entre o [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] e outros ambientes de design. Esse namespace de XAML de design é usado para manter o estado de design durante a movimentação da interface do usuário baseada em XAML no designer. Ele também é usado para recursos como `d:IsDataSource`, que habilitam fontes de dados em runtime em um designer.  
+ O WPF Designer para Visual Studio usa um namespace de designer que é normalmente mapeado para o prefixo `d:`. Modelos de projeto mais recentes para o WPF podem mapear previamente esse namespace XAML para dar suporte ao intercâmbio do XAML entre o WPF Designer para Visual Studio e outros ambientes de design. Esse namespace de XAML de design é usado para manter o estado de design durante a movimentação da interface do usuário baseada em XAML no designer. Ele também é usado para recursos como `d:IsDataSource`, que habilitam fontes de dados em runtime em um designer.  
   
  Outro prefixo que talvez você veja mapeado é o `mc:`. O `mc:` é para a compatibilidade de marcação e aproveita um padrão de compatibilidade de marcação que não é, necessariamente, específico de XAML. Até certo ponto, os recursos de compatibilidade de marcação podem ser usados para a troca de XAML entre estruturas ou entre outros limites de implementação de suporte, para trabalhar entre contextos de esquema de XAML, para fornecer compatibilidade para modos limitados nos designers e assim por diante. Para obter mais informações sobre os conceitos de compatibilidade de marcação e como eles se relacionam com o WPF, consulte [Recursos de linguagem de compatibilidade de marcação (mc:)](markup-compatibility-mc-language-features.md).  
   

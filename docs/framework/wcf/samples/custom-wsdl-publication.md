@@ -2,29 +2,29 @@
 title: Publicação personalizada de WSDL
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 8674d852be45119b247ec10bbc639922850d5a90
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9d753ca30bdcf66f5225700245b9688c5226613e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928849"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978288"
 ---
 # <a name="custom-wsdl-publication"></a>Publicação personalizada de WSDL
 Este exemplo demonstra como:  
   
-- Implemente <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> um em um <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> atributo personalizado para exportar Propriedades de atributo como anotações WSDL.  
+- Implemente um <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> em um atributo de <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> personalizado para exportar Propriedades de atributo como anotações WSDL.  
   
 - Implemente <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> para importar as anotações WSDL personalizadas.  
   
-- <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> Implemente <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> e em um comportamento de contrato personalizado e um comportamento de operação personalizado, respectivamente, para gravar anotações importadas como comentários no CodeDOM para o contrato e a operação importados.  
+- Implemente <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> e <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> em um comportamento de contrato personalizado e um comportamento de operação personalizado, respectivamente, para gravar anotações importadas como comentários no CodeDom para o contrato e a operação importados.  
   
-- Use o <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> para baixar o WSDL <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> , a para importar o WSDL usando o importador de WSDL personalizado e o <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> para gerar o código do cliente Windows Communication Foundation (WCF) com as anotações WSDL como///e ' ' ' comentários C# em e Visual Basic.  
+- Use o <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> para baixar o WSDL, um <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> para importar o WSDL usando o importador WSDL personalizado e o <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> para gerar o código do cliente Windows Communication Foundation (WCF) com as anotações WSDL como///e ' ' ' comentários em C# e Visual Basic.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
 ## <a name="service"></a>Serviço  
- O serviço neste exemplo é marcado com dois atributos personalizados. O primeiro, o `WsdlDocumentationAttribute`, aceita uma cadeia de caracteres no construtor e pode ser aplicado para fornecer uma interface ou operação de contrato com uma cadeia de caracteres que descreve seu uso. O segundo, `WsdlParamOrReturnDocumentationAttribute`, pode ser aplicado a valores de retorno ou parâmetros para descrever esses valores na operação. O exemplo a seguir mostra um contrato de `ICalculator`serviço,, descrito usando esses atributos.  
+ O serviço neste exemplo é marcado com dois atributos personalizados. O primeiro, o `WsdlDocumentationAttribute`, aceita uma cadeia de caracteres no construtor e pode ser aplicado para fornecer uma interface ou operação de contrato com uma cadeia de caracteres que descreve seu uso. O segundo, `WsdlParamOrReturnDocumentationAttribute`, pode ser aplicado para valores de retorno ou parâmetros para descrever esses valores na operação. O exemplo a seguir mostra um contrato de serviço, `ICalculator`, descrito usando esses atributos.  
   
 ```csharp  
 // Define a service contract.      
@@ -67,47 +67,50 @@ public interface ICalculator
 }  
 ```  
   
- O `WsdlDocumentationAttribute` implementa <xref:System.ServiceModel.Description.IContractBehavior> e <xref:System.ServiceModel.Description.ContractDescription> <xref:System.ServiceModel.Description.OperationDescription> , portanto, as instâncias de atributo são adicionadas ao correspondente ou quando o serviço é aberto. <xref:System.ServiceModel.Description.IOperationBehavior> O atributo também implementa <xref:System.ServiceModel.Description.IWsdlExportExtension>. Quando <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> é chamado, o <xref:System.ServiceModel.Description.WsdlExporter> que é usado para exportar os metadados e o <xref:System.ServiceModel.Description.WsdlContractConversionContext> que contém os objetos de descrição do serviço é passado como parâmetros, permitindo a modificação dos metadados exportados.  
+ O `WsdlDocumentationAttribute` implementa <xref:System.ServiceModel.Description.IContractBehavior> e <xref:System.ServiceModel.Description.IOperationBehavior>, portanto, as instâncias de atributo são adicionadas ao <xref:System.ServiceModel.Description.ContractDescription> ou <xref:System.ServiceModel.Description.OperationDescription> correspondente quando o serviço é aberto. O atributo também implementa <xref:System.ServiceModel.Description.IWsdlExportExtension>. Quando <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%28System.ServiceModel.Description.WsdlExporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> é chamado, o <xref:System.ServiceModel.Description.WsdlExporter> usado para exportar os metadados e o <xref:System.ServiceModel.Description.WsdlContractConversionContext> que contém os objetos de descrição do serviço são passados como parâmetros, permitindo a modificação dos metadados exportados.  
   
  Neste exemplo, dependendo se o objeto de contexto de exportação tem um <xref:System.ServiceModel.Description.ContractDescription> ou um <xref:System.ServiceModel.Description.OperationDescription>, um comentário é extraído do atributo usando a propriedade Text e é adicionado ao elemento de anotação WSDL, conforme mostrado no código a seguir.  
   
-```csharp  
-public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
-{  
-    if (contractDescription != null)  
-    {  
-        // Inside this block it is the contract-level comment attribute.  
-        // This.Text returns the string for the contract attribute.  
-        // Set the doc element; if this isn't done first, there is no XmlElement in the   
-        // DocumentElement property.  
-        context.WsdlPortType.Documentation = string.Empty;  
-        // Contract comments.  
-        XmlDocument owner = context.WsdlPortType.DocumentationElement.OwnerDocument;  
-        XmlElement summaryElement = owner.CreateElement("summary");  
-        summaryElement.InnerText = this.Text;  
-        context.WsdlPortType.DocumentationElement.AppendChild(summaryElement);  
-    }  
-    else  
-    {  
-        Operation operation = context.GetOperation(operationDescription);  
-        if (operation != null)  
-        {  
-            // We are dealing strictly with the operation here.  
-            // This.Text returns the string for the operation-level attributes.  
-            // Set the doc element; if this isn't done first, there is no XmlElement in the   
-            // DocumentElement property.  
-            operation.Documentation = String.Empty;  
-  
-            // Operation C# triple comments.  
-            XmlDocument owner = operation.DocumentationElement.OwnerDocument;  
-            XmlElement newSummaryElement = owner.CreateElement("summary");  
-            newSummaryElement.InnerText = this.Text;  
-            operation.DocumentationElement.AppendChild(newSummaryElement);  
+```csharp
+public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)
+{
+    if (contractDescription != null)
+    {
+        // Inside this block it is the contract-level comment attribute.
+        // This.Text returns the string for the contract attribute.
+        // Set the doc element; if this isn't done first, there is no XmlElement in the
+        // DocumentElement property.
+        context.WsdlPortType.Documentation = string.Empty;
+        // Contract comments.
+        XmlDocument owner = context.WsdlPortType.DocumentationElement.OwnerDocument;
+        XmlElement summaryElement = owner.CreateElement("summary");
+        summaryElement.InnerText = this.Text;
+        context.WsdlPortType.DocumentationElement.AppendChild(summaryElement);
+    }
+    else
+    {
+        Operation operation = context.GetOperation(operationDescription);
+        if (operation != null)
+        {
+            // We are dealing strictly with the operation here.
+            // This.Text returns the string for the operation-level attributes.
+            // Set the doc element; if this isn't done first, there is no XmlElement in the
+            // DocumentElement property.
+            operation.Documentation = String.Empty;
+
+            // Operation C# triple comments.
+            XmlDocument owner = operation.DocumentationElement.OwnerDocument;
+            XmlElement newSummaryElement = owner.CreateElement("summary");
+            newSummaryElement.InnerText = this.Text;
+            operation.DocumentationElement.AppendChild(newSummaryElement);
+        }
+    }
+}
 ```  
   
- Se uma operação estiver sendo exportada, o exemplo usará a `WsdlParamOrReturnDocumentationAttribute` reflexão para obter quaisquer valores para parâmetros e valores de retorno e os adicionará aos elementos da anotação WSDL para essa operação da seguinte maneira.  
+ Se uma operação estiver sendo exportada, o exemplo usará a reflexão para obter quaisquer `WsdlParamOrReturnDocumentationAttribute` valores para parâmetros e valores de retorno e os adicionará aos elementos da anotação WSDL para essa operação da seguinte maneira.  
   
-```csharp  
+```csharp
 // Get returns information  
 ParameterInfo returnValue = operationDescription.SyncMethod.ReturnParameter;  
 object[] returnAttrs = returnValue.GetCustomAttributes(typeof(WsdlParamOrReturnDocumentationAttribute), false);  
@@ -167,14 +170,14 @@ for (int i = 0; i < args.Length; i++)
 ```  
   
 ## <a name="svcutil-client"></a>Cliente svcutil  
- Este exemplo não usa svcutil. exe. O contrato é fornecido no arquivo generatedClient.cs para que, após o exemplo, demonstrasse a importação de WSDL personalizada e a geração de código, o serviço pode ser invocado. Para usar o importador WSDL personalizado a seguir para este exemplo, você pode executar svcutil. exe e especificar `/svcutilConfig` a opção, fornecendo o caminho para o arquivo de configuração do cliente usado neste exemplo, que `WsdlDocumentation.dll` faz referência à biblioteca. Para carregar o `WsdlDocumentationImporter`, no entanto, o Svuctil. exe deve ser capaz de localizar `WsdlDocumentation.dll` e carregar a biblioteca, o que significa que ela está registrada no cache de assembly global, no caminho ou está no mesmo diretório que svcutil. exe. Para um exemplo básico como esse, a coisa mais fácil é copiar svcutil. exe e o arquivo de configuração do cliente no mesmo diretório que `WsdlDocumentation.dll` e executá-lo a partir daí.  
+ Este exemplo não usa svcutil. exe. O contrato é fornecido no arquivo generatedClient.cs para que, após o exemplo, demonstrasse a importação de WSDL personalizada e a geração de código, o serviço pode ser invocado. Para usar o seguinte importador WSDL personalizado para este exemplo, você pode executar svcutil. exe e especificar a opção `/svcutilConfig`, fornecendo o caminho para o arquivo de configuração do cliente usado neste exemplo, que faz referência à biblioteca de `WsdlDocumentation.dll`. Para carregar o `WsdlDocumentationImporter`, no entanto, o Svuctil. exe deve ser capaz de localizar e carregar a biblioteca de `WsdlDocumentation.dll`, o que significa que ela está registrada no cache de assembly global, no caminho ou está no mesmo diretório que svcutil. exe. Para um exemplo básico como esse, a coisa mais fácil é copiar svcutil. exe e o arquivo de configuração do cliente no mesmo diretório que `WsdlDocumentation.dll` e executá-lo a partir daí.  
   
 ## <a name="the-custom-wsdl-importer"></a>O importador WSDL personalizado  
- O objeto <xref:System.ServiceModel.Description.IWsdlImportExtension> <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> personalizado também implementa <xref:System.ServiceModel.Description.IContractBehavior> e<xref:System.ServiceModel.Description.IOperationBehavior> deve ser adicionado aos pontos de extremidade de importados e e a ser invocado para modificar a geração de código quando o contrato ou a operação `WsdlDocumentationImporter` o código está sendo criado.  
+ O objeto de <xref:System.ServiceModel.Description.IWsdlImportExtension> personalizado `WsdlDocumentationImporter` também implementa <xref:System.ServiceModel.Description.IContractBehavior> e <xref:System.ServiceModel.Description.IOperationBehavior> a serem adicionados aos ServiceEndpoints importados e <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> e <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> a serem invocados para modificar a geração de código quando o contrato ou o código de operação está sendo criado.  
   
- Primeiro, no <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> método, o exemplo determina se a anotação WSDL está no nível de contrato ou de operação e se adiciona como um comportamento no escopo apropriado, passando o texto de anotação importado para seu construtor.  
+ Primeiro, no método <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29>, o exemplo determina se a anotação WSDL está no nível de contrato ou de operação e se adiciona como um comportamento no escopo apropriado, passando o texto de anotação importado para seu construtor.  
   
-```csharp  
+```csharp
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
 {  
     // Contract Documentation  
@@ -199,9 +202,9 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
 }  
 ```  
   
- Em seguida, quando o código é gerado, o sistema invoca os <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> métodos <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> e, passando as informações de contexto apropriadas. O exemplo formata as anotações WSDL personalizadas e as insere como comentários no CodeDom.  
+ Em seguida, quando o código é gerado, o sistema invoca os métodos <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> e <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29>, passando as informações de contexto apropriadas. O exemplo formata as anotações WSDL personalizadas e as insere como comentários no CodeDom.  
   
-```csharp  
+```csharp
 public void GenerateContract(ServiceContractGenerationContext context)  
 {  
     Debug.WriteLine("In generate contract.");  
@@ -231,9 +234,9 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- Depois que o importador personalizado tiver sido especificado, o sistema de metadados do WCF carregará o importador personalizado em qualquer <xref:System.ServiceModel.Description.WsdlImporter> criado para essa finalidade. Este exemplo usa o <xref:System.ServiceModel.Description.MetadataExchangeClient> para baixar os metadados, o <xref:System.ServiceModel.Description.WsdlImporter> adequadamente configurado para importar os metadados usando o importador personalizado que o exemplo cria e o <xref:System.ServiceModel.Description.ServiceContractGenerator> para compilar as informações de contrato modificadas em ambos os Visual Basic e C# o código do cliente que pode ser usado no Visual Studio para dar suporte ao IntelliSense ou compilado na documentação XML.  
+ Depois que o importador personalizado tiver sido especificado, o sistema de metadados do WCF carregará o importador personalizado em qualquer <xref:System.ServiceModel.Description.WsdlImporter> criado para essa finalidade. Este exemplo usa o <xref:System.ServiceModel.Description.MetadataExchangeClient> para baixar os metadados, o <xref:System.ServiceModel.Description.WsdlImporter> configurado corretamente para importar os metadados usando o importador personalizado criado pelo exemplo e o <xref:System.ServiceModel.Description.ServiceContractGenerator> para compilar as informações de contrato modificadas em Visual Basic e C# código de cliente que pode ser usado no Visual Studio para dar suporte ao IntelliSense ou compilado na documentação XML.  
   
-```csharp  
+```csharp
 /// From WSDL Documentation:  
 ///   
 /// <summary>The ICalculator contract performs basic calculation   
@@ -300,6 +303,6 @@ public interface ICalculator
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

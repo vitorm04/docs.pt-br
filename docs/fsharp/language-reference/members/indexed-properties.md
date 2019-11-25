@@ -1,17 +1,17 @@
 ---
 title: Propriedades indexadas
 description: Saiba mais sobre propriedades indexadas no F#, que permitem o acesso do tipo matriz a dados ordenados.
-ms.date: 10/17/2018
-ms.openlocfilehash: 379417e31b8e178d8c939e5b23dc144bfb17e562
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 11/04/2019
+ms.openlocfilehash: f6cf3bfa737d2bf458e379594be5884696cee3e1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627564"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976604"
 ---
 # <a name="indexed-properties"></a>Propriedades indexadas
 
-Ao definir uma classe que abstrai os dados ordenados, às vezes pode ser útil fornecer acesso indexado a esses dados sem expor a implementação subjacente. Isso é feito com o `Item` membro.
+Ao definir uma classe que abstrai os dados ordenados, às vezes pode ser útil fornecer acesso indexado a esses dados sem expor a implementação subjacente. Isso é feito com o membro `Item`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -36,11 +36,11 @@ member self-identifier.Item
 
 ## <a name="remarks"></a>Comentários
 
-Os formulários da sintaxe anterior mostram como `get` definir propriedades indexadas que têm um e um `set` método, só têm um `get` método ou só têm um `set` método. Você também pode combinar a sintaxe mostrada somente para get e a sintaxe mostrada somente para Set e produzir uma propriedade que tenha Get e Set. Este último formulário permite que você coloque atributos e modificadores de acessibilidade diferentes nos métodos get e Set.
+Os formulários da sintaxe anterior mostram como definir propriedades indexadas que têm um `get` e um método `set`, ter apenas um método `get` ou ter apenas um método `set`. Você também pode combinar a sintaxe mostrada somente para get e a sintaxe mostrada somente para Set e produzir uma propriedade que tenha Get e Set. Este último formulário permite que você coloque atributos e modificadores de acessibilidade diferentes nos métodos get e Set.
 
 Usando o nome `Item`, o compilador trata a propriedade como uma propriedade indexada padrão. Uma *propriedade indexada padrão* é uma propriedade que você pode acessar usando a sintaxe do tipo matriz na instância do objeto. Por exemplo, se `o` for um objeto do tipo que define essa propriedade, a sintaxe `o.[index]` será usada para acessar a propriedade.
 
-A sintaxe para acessar uma propriedade indexada não padrão é fornecer o nome da propriedade e o índice entre parênteses, assim como um membro regular. Por exemplo, se a propriedade on `o` for chamada `Ordinal`, você escreverá `o.Ordinal(index)` para acessá-la.
+A sintaxe para acessar uma propriedade indexada não padrão é fornecer o nome da propriedade e o índice entre parênteses, assim como um membro regular. Por exemplo, se a propriedade em `o` for chamada `Ordinal`, você escreverá `o.Ordinal(index)` para acessá-la.
 
 Independentemente do formulário usado, você sempre deve usar o formulário na forma curried para o método set em uma propriedade indexada. Para obter informações sobre as funções do na forma curried, consulte [funções](../functions/index.md).
 
@@ -70,7 +70,7 @@ open System.Collections.Generic
 /// Basic implementation of a sparse matrix based on a dictionary
 type SparseMatrix() =
     let table = new Dictionary<(int * int), float>()
-    member __.Item
+    member _.Item
         // Because the key is comprised of two values, 'get' has two index values
         with get(key1, key2) = table.[(key1, key2)]
 

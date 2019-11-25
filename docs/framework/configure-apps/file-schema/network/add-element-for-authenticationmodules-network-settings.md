@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: a68434aaa118db60a502c2bcc0bb188b83b0f463
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9c011cf1216b98fa20e330e185e4cf2c331b31d4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698425"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087945"
 ---
-# <a name="add-element-for-authenticationmodules-network-settings"></a>\<add > elemento para authenticationModules (configurações de rede)
+# <a name="add-element-for-authenticationmodules-network-settings"></a>\<adicionar o elemento > para authenticationModules (configurações de rede)
 Adiciona um módulo de autenticação ao aplicativo.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**adicionar >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -38,7 +38,7 @@ Adiciona um módulo de autenticação ao aplicativo.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descrição**|  
+|**Attribute**|**Descrição**|  
 |-------------------|---------------------|  
 |`type`|O nome do tipo totalmente qualificado (indicado pela propriedade <xref:System.Type.FullName%2A>) e o nome do assembly (indicado pela propriedade <xref:System.Reflection.Assembly.FullName%2A>), separados por uma vírgula.|  
   
@@ -54,7 +54,7 @@ Adiciona um módulo de autenticação ao aplicativo.
 ## <a name="remarks"></a>Comentários  
  O elemento `add` adiciona um módulo de autenticação ao final da lista de módulos de autenticação registrados. Os módulos de autenticação são chamados na ordem em que foram adicionados à lista.  
   
- O valor do atributo `type` deve ser um nome de tipo válido e um nome de assembly correspondente, separados por uma vírgula.  
+ O valor para o atributo `type` deve ser um nome de tipo válido e um nome de assembly correspondente, separados por uma vírgula.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
