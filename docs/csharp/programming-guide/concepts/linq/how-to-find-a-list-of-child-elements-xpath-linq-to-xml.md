@@ -1,23 +1,23 @@
 ---
-title: 'Como: Localizar uma lista de elementos filho (XPath-LINQ to XML) (C#)'
+title: Como localizar uma lista de elementos filho (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589dd8-f680-4cdb-9d6a-78d57e2555e8
-ms.openlocfilehash: 63b0fec504ff8424e9e96318c46191a150b72f46
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 2b6f6031441e7d1bd015e25a8debad7dd7f3b261
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253833"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141221"
 ---
-# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="a7a87-102">Como: Localizar uma lista de elementos filho (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="a7a87-102">How to: Find a List of Child Elements (XPath-LINQ to XML) (C#)</span></span>
-<span data-ttu-id="a7a87-103">Este tópico compara o eixo de elementos filho XPath com o eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="a7a87-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
+# <a name="how-to-find-a-list-of-child-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="f902d-102">Como localizar uma lista de elementos filho (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f902d-102">How to find a list of child elements (XPath-LINQ to XML) (C#)</span></span>
+<span data-ttu-id="f902d-103">Este tópico compara o eixo de elementos filho XPath com o eixo [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A>.</span><span class="sxs-lookup"><span data-stu-id="f902d-103">This topic compares the XPath child elements axis to the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] <xref:System.Xml.Linq.XContainer.Elements%2A> axis.</span></span>  
   
- <span data-ttu-id="a7a87-104">A expressão XPath é: `./*`</span><span class="sxs-lookup"><span data-stu-id="a7a87-104">The XPath expression is: `./*`</span></span>  
+ <span data-ttu-id="f902d-104">A expressão XPath é: `./*`</span><span class="sxs-lookup"><span data-stu-id="f902d-104">The XPath expression is: `./*`</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a7a87-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a7a87-105">Example</span></span>  
- <span data-ttu-id="a7a87-106">Este exemplo localiza os elementos filho do elemento `Address`.</span><span class="sxs-lookup"><span data-stu-id="a7a87-106">This example finds all of the child elements of the `Address` element.</span></span>  
+## <a name="example"></a><span data-ttu-id="f902d-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="f902d-105">Example</span></span>  
+ <span data-ttu-id="f902d-106">Este exemplo localiza os elementos filho do elemento `Address`.</span><span class="sxs-lookup"><span data-stu-id="f902d-106">This example finds all of the child elements of the `Address` element.</span></span>  
   
- <span data-ttu-id="a7a87-107">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Várias ordens de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a7a87-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="f902d-107">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="f902d-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](./sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XDocument cpo = XDocument.Load("PurchaseOrders.xml");  
@@ -38,7 +38,7 @@ foreach (XElement el in list1)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="a7a87-108">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="a7a87-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="f902d-108">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="f902d-108">This example produces the following output:</span></span>  
   
 ```output  
 Results are identical  
