@@ -6,48 +6,30 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 833bf46b973988196fea37da18bac9923ecd6dcc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141376"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974760"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 
-<a name="top"></a> Este tópico descreve problemas relacionados ao uso de memória e coleta de lixo. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.
-
-Esse tópico contém as seguintes seções:
-
-- [Ferramentas de análise de desempenho](#performance_analysis_tools)
-
-- [Solucionando problemas de desempenho](#troubleshooting_performance_issues)
-
-- [Diretrizes de solução de problemas](#troubleshooting_guidelines)
-
-- [Procedimentos de verificação de desempenho](#performance_check_procedures)
-
-<a name="performance_analysis_tools"></a>
+Este tópico descreve problemas relacionados à coleta de lixo e ao uso de memória. Ele aborda problemas relacionados a heap gerenciado e explica como minimizar o efeito da coleta de lixo em seus aplicativos. Cada problema tem links para procedimentos que podem ser usados para investigar problemas.
 
 ## <a name="performance-analysis-tools"></a>Ferramentas de análise de desempenho
 
-As seções a seguir descrevem as ferramentas que estão disponíveis para investigar problemas de coleta de lixo e de uso de memória. Os [procedimentos](#performance_check_procedures) fornecidos mais adiante neste tópico se referem a essas ferramentas.
-
-<a name="perf_counters"></a>
+As seções a seguir descrevem as ferramentas que estão disponíveis para investigar problemas de coleta de lixo e de uso de memória. Os [procedimentos](#performance-check-procedures) fornecidos mais adiante neste tópico se referem a essas ferramentas.
 
 ### <a name="memory-performance-counters"></a>Contadores de desempenho da memória
 
-Você pode usar os contadores de desempenho para coletar dados de desempenho. Para obter instruções, consulte [Criação de perfil do tempo de execução](../../../docs/framework/debug-trace-profile/runtime-profiling.md). A categoria de contadores de desempenho de memória CLR do .NET, conforme descrito em [Contadores de desempenho no .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), fornece informações sobre o coletor de lixo.
-
-<a name="sos"></a>
+Você pode usar os contadores de desempenho para coletar dados de desempenho. Para obter instruções, consulte [Criação de perfil do runtime](../../../docs/framework/debug-trace-profile/runtime-profiling.md). A categoria de contadores de desempenho de memória CLR do .NET, conforme descrito em [Contadores de desempenho no .NET Framework](../../../docs/framework/debug-trace-profile/performance-counters.md), fornece informações sobre o coletor de lixo.
 
 ### <a name="debugging-with-sos"></a>Depuração com SOS
 
 Você pode usar o [Depurador do Windows (WinDbg)](/windows-hardware/drivers/debugger/index) para inspecionar objetos no heap gerenciado.
 
 Para instalar o WinDbg, instale as Ferramentas de Depuração para Windows da página [Download Debugging Tools for Windows](/windows-hardware/drivers/debugger/debugger-download-tools) (Baixar Ferramentas de Depuração para Windows).
-
-<a name="etw"></a>
 
 ### <a name="garbage-collection-etw-events"></a>Eventos ETW de coleta de lixo
 
@@ -61,8 +43,6 @@ O ETW (Rastreamento de Eventos para Windows) é um sistema de rastreamento que c
 
 O log de eventos ETW é eficiente e não mascarará nenhum problema de desempenho associado à coleta de lixo. Um processo pode fornecer seus próprios eventos junto com eventos ETW. Quando registrados em log, tanto os eventos de coleta de lixo quanto os eventos do aplicativo podem ser correlacionados para determinar como e quando os problemas de heap ocorrem. Por exemplo, um aplicativo para servidores pode fornecer eventos no início e no final de uma solicitação de cliente.
 
-<a name="profiling_api"></a>
-
 ### <a name="the-profiling-api"></a>A API de criação de perfil
 
 As interfaces de criação de perfil do CLR (Common Language Runtime) fornecem informações detalhadas sobre os objetos que foram afetados durante a coleta de lixo. Um criador de perfil pode ser notificado sobre quando uma coleta de lixo começa e termina. Ele pode fornecer relatórios sobre os objetos no heap gerenciado, incluindo uma identificação de objetos em cada geração. Para obter mais informações, consulte [Visão geral de ferramentas de criação de perfil](../../../docs/framework/unmanaged-api/profiling/profiling-overview.md).
@@ -72,10 +52,6 @@ Criadores de perfil podem fornecer informações abrangentes. No entanto, criado
 ### <a name="application-domain-resource-monitoring"></a>Monitoramento de recursos de domínio de aplicativo
 
 Do .NET Framework 4 em diante, o ARM (monitoramento de recursos de domínio de aplicativo) permite que os hosts monitorem o uso de CPU e memória por domínio de aplicativo. Para obter mais informações, consulte [Monitoramento de recursos de domínio do aplicativo](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md).
-
-[Voltar ao início](#top)
-
-<a name="troubleshooting_performance_issues"></a>
 
 ## <a name="troubleshooting-performance-issues"></a>Solucionando problemas de desempenho
 
@@ -213,10 +189,6 @@ A duração de uma coleta é essencialmente um fator do número de objetos que s
 |------------------------|
 |[Determine se o alto uso da CPU é causado pela coleta de lixo.](#HighCPU)<br /><br /> [Defina um ponto de interrupção no final da coleta de lixo.](#GenBreak)|
 
-[Voltar ao início](#top)
-
-<a name="troubleshooting_guidelines"></a>
-
 ## <a name="troubleshooting-guidelines"></a>Diretrizes de solução de problemas
 
 Esta seção descreve as diretrizes que você deve considerar ao começar suas investigações.
@@ -258,10 +230,6 @@ O procedimento a seguir descreve como definir um ponto de interrupção para que
   Esse comando força uma interrupção se **RestartEE** é executado após objetos da geração 2 serem recuperados para coleta de lixo.
 
   Na coleta de lixo do servidor, apenas um thread chama **RestartEE**, portanto, o ponto de interrupção ocorrerá apenas uma vez durante uma coleta de lixo da geração 2.
-
-[Voltar ao início](#top)
-
-<a name="performance_check_procedures"></a>
 
 ## <a name="performance-check-procedures"></a>Procedimentos de verificação de desempenho
 

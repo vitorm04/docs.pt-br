@@ -5,16 +5,16 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 9995a509bf997298d991a1f66cfdf3cae6cd0395
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4beaba24e42b15ebc45ece6e5319a2b14df54ab6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790958"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975390"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>Criando o aplicativo cliente do .NET Framework (Início rápido do WCF Data Services)
 
-Esta é a tarefa final do guia de início rápido do WCF Data Services. Nesta tarefa, você adicionará um aplicativo de console à solução, adicionará uma referência ao [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed nesse novo aplicativo cliente e acessará o feed OData do aplicativo cliente usando as classes de serviço de dados do cliente e as bibliotecas de cliente geradas .
+Esta é a tarefa final do guia de início rápido do WCF Data Services. Nesta tarefa, você adicionará um aplicativo de console à solução, adicionará uma referência ao feed Protocolo Open Data (OData) nesse novo aplicativo cliente e acessará o feed OData do aplicativo cliente usando as classes de serviço de dados do cliente e cliente gerados DLLs.
 
 > [!NOTE]
 > Um aplicativo cliente baseado no .NET framework não é necessário para acessar um feed de dados. O serviço de dados pode ser acessado por qualquer componente de aplicativo que consuma um feed OData. Para obter mais informações, consulte [usando um serviço de dados em um aplicativo cliente](using-a-data-service-in-a-client-application-wcf-data-services.md).
@@ -47,7 +47,7 @@ Esta é a tarefa final do guia de início rápido do WCF Data Services. Nesta ta
 
 2. Na caixa de diálogo **Adicionar referência** , clique na guia **.net** , selecione o assembly System. Data. Services. Client. dll e clique em **OK**.
 
-3. Em **Gerenciador de soluções** em **NorthwindClient**, abra a página de código do arquivo MainWindow. XAML e adicione a instrução a `using` seguir (`Imports` em Visual Basic).
+3. Em **Gerenciador de soluções** em **NorthwindClient**, abra a página de código do arquivo MainWindow. XAML e adicione a seguinte instrução `using` (`Imports` em Visual Basic).
 
     [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_client/cs/window1.xaml.cs#using)]
     [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_client/vb/window1.xaml.vb#using)]

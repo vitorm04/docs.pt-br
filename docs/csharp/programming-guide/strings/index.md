@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: ad8d7075e609a1b03ec403b91126bbce7084923f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423151"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969713"
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
@@ -37,7 +37,7 @@ Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é
   
  [!code-csharp[csProgGuideStrings#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#25)]  
   
- Para saber mais sobre como criar novas cadeias de caracteres que se baseiam em modificações, como operações de pesquisa e substituição na cadeia de caracteres original, confira [Como modificar o conteúdo da cadeia de caracteres](../../how-to/modify-string-contents.md).  
+ Para obter mais informações sobre como criar novas cadeias de caracteres com base em modificações, como operações de pesquisa e substituição na cadeia original, consulte [como modificar o conteúdo da cadeia de caracteres](../../how-to/modify-string-contents.md).  
   
 ## <a name="regular-and-verbatim-string-literals"></a>Literais de cadeia de caracteres regulares e textuais  
  Use literais de cadeia de caracteres regulares quando você precisar inserir caracteres de escape fornecidos por C#, conforme mostrado no seguinte exemplo:  
@@ -74,7 +74,7 @@ Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é
 > Em tempo de compilação, cadeias de caracteres textuais são convertidas em cadeias de caracteres comuns com as mesmas sequências de escape. Portanto, se exibir uma cadeia de caracteres textual na janela de observação do depurador, você verá os caracteres de escape que foram adicionados pelo compilador, não a versão textual do código-fonte. Por exemplo, a cadeia de caracteres textual `@"C:\files.txt"` será exibida na janela de inspeção como "C:\\\files.txt".  
   
 ## <a name="format-strings"></a>Cadeias de caracteres de formato  
- Uma cadeia de caracteres de formato é aquela cujo conteúdo pode é determinado dinamicamente no tempo de execução. Cadeias de caracteres de formato são criadas incorporando *expressões interpoladas* ou espaços reservados dentro de chaves dentro em uma cadeia de caracteres. Tudo dentro das chaves (`{...}`) será resolvido para um valor e uma saída como uma cadeia de caracteres formatada no tempo de execução. Há dois métodos para criar cadeias de caracteres de formato: cadeia de caracteres de interpolação e formatação de composição.
+ Uma cadeia de caracteres de formato é aquela cujo conteúdo pode é determinado dinamicamente no runtime. Cadeias de caracteres de formato são criadas incorporando *expressões interpoladas* ou espaços reservados dentro de chaves dentro em uma cadeia de caracteres. Tudo dentro das chaves (`{...}`) será resolvido para um valor e uma saída como uma cadeia de caracteres formatada no runtime. Há dois métodos para criar cadeias de caracteres de formato: cadeia de caracteres de interpolação e formatação de composição.
 
 ### <a name="string-interpolation"></a>Interpolação de cadeia de caracteres
 Disponíveis no C# 6.0 e posterior, as [*cadeias de caracteres interpoladas*](../../language-reference/tokens/interpolated.md) são identificadas pelo caractere especial `$` e incluem expressões interpoladas entre chaves. Se você não estiver familiarizado com a interpolação de cadeia de caracteres, confira o tutorial [Interpolação de cadeia de caracteres – tutorial interativo do C#](../../tutorials/exploration/interpolated-strings.yml).
@@ -91,7 +91,7 @@ O <xref:System.String.Format%2A?displayProperty=nameWithType> utiliza os espaço
 Para mais informações sobre formatação de tipos .NET, confira [Tipos de formatação em .NET](../../../standard/base-types/formatting-types.md).
   
 ## <a name="substrings"></a>Subcadeias de caracteres  
- Uma subcadeia de caracteres é qualquer sequência de caracteres contida em uma cadeia de caracteres. Use o método <xref:System.String.Substring%2A> para criar uma nova cadeia de caracteres com base em uma parte da cadeia de caracteres original. Você pode pesquisar uma ou mais ocorrências de uma subcadeia de caracteres usando o método <xref:System.String.IndexOf%2A>. Use o método <xref:System.String.Replace%2A> para substituir todas as ocorrências de uma subcadeia de caracteres especificada por uma nova cadeia de caracteres. Como o método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> retorna, na verdade, uma nova cadeia de caracteres e não a modifica a cadeia de caracteres original. Saiba mais em [Como pesquisar cadeias de caracteres](../../how-to/search-strings.md) e [Como modificar o conteúdo da cadeia de caracteres](../../how-to/modify-string-contents.md).  
+ Uma subcadeia de caracteres é qualquer sequência de caracteres contida em uma cadeia de caracteres. Use o método <xref:System.String.Substring%2A> para criar uma nova cadeia de caracteres com base em uma parte da cadeia de caracteres original. Você pode pesquisar uma ou mais ocorrências de uma subcadeia de caracteres usando o método <xref:System.String.IndexOf%2A>. Use o método <xref:System.String.Replace%2A> para substituir todas as ocorrências de uma subcadeia de caracteres especificada por uma nova cadeia de caracteres. Como o método <xref:System.String.Substring%2A>, <xref:System.String.Replace%2A> retorna, na verdade, uma nova cadeia de caracteres e não a modifica a cadeia de caracteres original. Para obter mais informações, consulte [como Pesquisar cadeias](../../how-to/search-strings.md) de [caracteres e como modificar o conteúdo da cadeia](../../how-to/modify-string-contents.md).
   
  [!code-csharp[csProgGuideStrings#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#9)]  
   
@@ -134,7 +134,7 @@ string s = String.Empty;
 |[Como modificar o conteúdo de uma cadeia de caracteres](../../how-to/modify-string-contents.md)|Ilustra as técnicas para transformar cadeias de caracteres e modificar o conteúdo delas.|  
 |[Como comparar cadeias de caracteres](../../how-to/compare-strings.md)|Mostra como executar comparações ordinais e específicas da cultura de cadeias de caracteres.|  
 |[Como concatenar várias cadeias de caracteres](../../how-to/concatenate-multiple-strings.md)|Demonstra várias maneiras de unir diversas cadeias de caracteres em uma só.|
-|[Como analisar cadeias de caracteres usando String.Split](../../how-to/parse-strings-using-split.md)|Contém exemplos de código que descrevem como usar o método `String.Split` para analisar cadeias de caracteres.|  
+|[Como analisar cadeias de caracteres usando String. Split](../../how-to/parse-strings-using-split.md)|Contém exemplos de código que descrevem como usar o método `String.Split` para analisar cadeias de caracteres.|  
 |[Como pesquisar cadeias de caracteres](../../how-to/search-strings.md)|Explica como usar a pesquisa para texto específico ou padrões em cadeias de caracteres.|  
 |[Como determinar se uma cadeia de caracteres representa um valor numérico](./how-to-determine-whether-a-string-represents-a-numeric-value.md)|Mostra como analisar com segurança uma cadeia de caracteres para ver se ela tem um valor numérico válido.|  
 |[Interpolação de cadeia de caracteres](../../language-reference/tokens/interpolated.md)|Descreve o recurso de interpolação de cadeia de caracteres que fornece uma sintaxe prática para cadeias de caracteres de formato.|

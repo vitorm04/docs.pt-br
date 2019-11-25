@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 15122984dbaf3245436ff21836065c05131f71d1
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 3abcd901bcb8a175aa6f30e53b142cbbde56a579
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894320"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975236"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hospedando o serviço de dados (WCF Data Services)
-Usando WCF Data Services, você pode criar um serviço que expõe dados como um [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed. Esse serviço de dados é definido como uma classe que herda <xref:System.Data.Services.DataService%601>de. Essa classe fornece a funcionalidade necessária para processar mensagens de solicitação, executar atualizações na fonte de dados e gerar mensagens de respostas, conforme exigido pelo OData. No entanto, um serviço de dados não pode se associar a e escutar em um soquete de rede para solicitações HTTP de entrada. Para essa funcionalidade necessária, o serviço de dados depende de um componente de hospedagem.
+Usando WCF Data Services, você pode criar um serviço que expõe dados como um feed Protocolo Open Data (OData). Esse serviço de dados é definido como uma classe que herda de <xref:System.Data.Services.DataService%601>. Essa classe fornece a funcionalidade necessária para processar mensagens de solicitação, executar atualizações na fonte de dados e gerar mensagens de respostas, conforme exigido pelo OData. No entanto, um serviço de dados não pode se associar a e escutar em um soquete de rede para solicitações HTTP de entrada. Para essa funcionalidade necessária, o serviço de dados depende de um componente de hospedagem.
 
  O host do serviço de dados executa as seguintes tarefas em nome do serviço de dados:
 
@@ -38,7 +38,7 @@ Usando WCF Data Services, você pode criar um serviço que expõe dados como um 
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>Hospedando um serviço de dados em um aplicativo ASP.NET
 
-Quando você usa a caixa de diálogo **Adicionar novo item** no Visual Studio 2015 para definir um serviço de dados em um aplicativo ASP.net, a ferramenta gera dois novos arquivos no projeto. O primeiro arquivo tem uma `.svc` extensão e instrui o tempo de execução do WCF a criar uma instância do serviço de dados. Este é um exemplo desse arquivo para o serviço de dados de exemplo Northwind criado quando você conclui o [início rápido](quickstart-wcf-data-services.md):
+Quando você usa a caixa de diálogo **Adicionar novo item** no Visual Studio 2015 para definir um serviço de dados em um aplicativo ASP.net, a ferramenta gera dois novos arquivos no projeto. O primeiro arquivo tem uma extensão `.svc` e instrui o tempo de execução do WCF a criar uma instância do serviço de dados. Este é um exemplo desse arquivo para o serviço de dados de exemplo Northwind criado quando você conclui o [início rápido](quickstart-wcf-data-services.md):
 
 ```aspx-csharp
 <%@ ServiceHost Language="C#"
@@ -48,9 +48,9 @@ Quando você usa a caixa de diálogo **Adicionar novo item** no Visual Studio 20
     Service="NorthwindService.Northwind" %>
 ```
 
- Essa diretiva informa o aplicativo para criar o host de serviço para a classe de serviço de dados nomeada <xref:System.Data.Services.DataServiceHostFactory> usando a classe.
+ Essa diretiva instrui o aplicativo a criar o host de serviço para a classe de serviço de dados nomeado usando a classe <xref:System.Data.Services.DataServiceHostFactory>.
 
- A página code-behind do `.svc` arquivo contém a classe que é a implementação do próprio serviço de dados, que é definida da seguinte maneira para o serviço de dados de exemplo Northwind:
+ A página code-behind do arquivo de `.svc` contém a classe que é a implementação do próprio serviço de dados, que é definida da seguinte maneira para o serviço de dados de exemplo Northwind:
 
  [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
  [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
@@ -58,16 +58,16 @@ Quando você usa a caixa de diálogo **Adicionar novo item** no Visual Studio 20
  Como um serviço de dados se comporta como um serviço WCF, o serviço de dados integra-se ao ASP.NET e segue o modelo de programação Web do WCF. Para obter mais informações, consulte [Serviços WCF e](../../wcf/feature-details/wcf-services-and-aspnet.md) [modelo de programação Web http](../../wcf/feature-details/wcf-web-http-programming-model.md)do ASP.net e WCF.
 
 ## <a name="self-hosted-wcf-services"></a>Serviços WCF auto-hospedados
- Como ele incorpora uma implementação do WCF, WCF Data Services dá suporte à hospedagem interna de um serviço de dados como um serviço WCF. Um serviço pode ser hospedado automaticamente em qualquer aplicativo .NET Framework, como um aplicativo de console. A <xref:System.Data.Services.DataServiceHost> classe, que é herdada de <xref:System.ServiceModel.Web.WebServiceHost>, é usada para instanciar o serviço de dados em um endereço específico.
+ Como ele incorpora uma implementação do WCF, WCF Data Services dá suporte à hospedagem interna de um serviço de dados como um serviço WCF. Um serviço pode ser hospedado automaticamente em qualquer aplicativo .NET Framework, como um aplicativo de console. A classe <xref:System.Data.Services.DataServiceHost>, que herda de <xref:System.ServiceModel.Web.WebServiceHost>, é usada para instanciar o serviço de dados em um endereço específico.
 
  A hospedagem interna pode ser usada para desenvolvimento e teste porque pode facilitar a implantação e a solução de problemas do serviço. No entanto, esse tipo de hospedagem não fornece recursos avançados de hospedagem e gerenciamento fornecidos pelo ASP.NET ou pelo Serviços de Informações da Internet (IIS). Para obter mais informações, consulte [hospedagem em um aplicativo gerenciado](../../wcf/feature-details/hosting-in-a-managed-application.md).
 
 ## <a name="defining-a-custom-data-service-host"></a>Definindo um host de serviço de dados personalizado
- Para casos em que a implementação do host do WCF é muito restritiva, você também pode definir um host personalizado para um serviço de dados. Qualquer classe que implemente <xref:System.Data.Services.IDataServiceHost> a interface pode ser usada como o host de rede para um serviço de dados. Um host personalizado deve implementar a <xref:System.Data.Services.IDataServiceHost> interface e ser capaz de lidar com as seguintes responsabilidades básicas do host do serviço de dados:
+ Para casos em que a implementação do host do WCF é muito restritiva, você também pode definir um host personalizado para um serviço de dados. Qualquer classe que implemente <xref:System.Data.Services.IDataServiceHost> interface pode ser usada como o host de rede para um serviço de dados. Um host personalizado deve implementar a interface <xref:System.Data.Services.IDataServiceHost> e ser capaz de lidar com as seguintes responsabilidades básicas do host do serviço de dados:
 
 - Forneça o serviço de dados com o caminho raiz do serviço.
 
-- Processar informações de cabeçalhos de solicitação e resposta para <xref:System.Data.Services.IDataServiceHost> a implementação de membro apropriada.
+- Processar informações de cabeçalhos de solicitação e resposta para a implementação de membro de <xref:System.Data.Services.IDataServiceHost> apropriada.
 
 - Tratar exceções geradas pelo serviço de dados.
 

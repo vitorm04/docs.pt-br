@@ -4,12 +4,12 @@ description: Este tutorial avançado fornece uma introdução aos tipos de refer
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 9cb9ac1b292e61d6a8a5f84be29a6a6c323725fc
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: d0faea19ac1c7c7f28d9775fc3b69c71a752fbcb
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039681"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969341"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: migrar código existente com tipos de referência anuláveis
 
@@ -32,7 +32,7 @@ Este tutorial pressupõe que você esteja familiarizado com o C# e .NET, incluin
 
 ## <a name="explore-the-sample-application"></a>Explorar o aplicativo de exemplo
 
-O aplicativo de exemplo que você migrará é aplicativo Web leitor de feed RSS. Ele lê de um único feed RSS e exibe resumos para os artigos mais recentes. Você pode clicar em qualquer um dos artigos para visitar o site. O aplicativo é relativamente novo, mas foi escrito antes da disponibilização de tipos de referência anuláveis. As decisões de design sobre o aplicativo representam princípios sólidos, mas não aproveitam esse recurso importante de linguagem.
+O aplicativo de exemplo que você migrará é aplicativo Web leitor de feed RSS. Ele lê de um único feed RSS e exibe resumos para os artigos mais recentes. Você pode selecionar qualquer um dos artigos para visitar o site. O aplicativo é relativamente novo, mas foi escrito antes da disponibilização de tipos de referência anuláveis. As decisões de design sobre o aplicativo representam princípios sólidos, mas não aproveitam esse recurso importante de linguagem.
 
 O aplicativo de exemplo inclui uma biblioteca de teste de unidade que valida a funcionalidade principal do aplicativo. Esse projeto facilitará a atualização com segurança, caso você altere qualquer implementação com base nos avisos gerados. Faça o download do código inicial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/start) do GitHub.
 
@@ -94,7 +94,7 @@ public class NewsStoryViewModel
 }
 ```
 
-A atribuição de `Title` e `Uri` a `default`, que é `null` para o tipo `string`, não altera o comportamento de tempo de execução do programa. O `NewsStoryViewModel` ainda é construído com valores nulos, mas agora o compilador não retorna avisos. O **operador que tolera valores nulos**, o caractere `!` logo após a expressão `default` informa ao compilador que a expressão anterior não é nula. Essa técnica pode ser adequada quando outras alterações forçam alterações muito maiores em uma base de código, mas nesse aplicativo há uma solução relativamente rápida e melhor: tornar o `NewsStoryViewModel` um tipo imutável em que todas as propriedades são definidas no construtor. Faça estas alterações em `NewsStoryViewModel`:
+A atribuição de `Title` e `Uri` a `default`, que é `null` para o tipo `string`, não altera o comportamento de runtime do programa. O `NewsStoryViewModel` ainda é construído com valores nulos, mas agora o compilador não retorna avisos. O **operador que tolera valores nulos**, o caractere `!` logo após a expressão `default` informa ao compilador que a expressão anterior não é nula. Essa técnica pode ser adequada quando outras alterações forçam alterações muito maiores em uma base de código, mas nesse aplicativo há uma solução relativamente rápida e melhor: tornar o `NewsStoryViewModel` um tipo imutável em que todas as propriedades são definidas no construtor. Faça estas alterações em `NewsStoryViewModel`:
 
 [!code-csharp[FinishedViewModel](~/samples/csharp/tutorials/nullable-reference-migration/finished/SimpleFeedReader/ViewModels/NewsStoryViewModel.cs#FinishedViewModel)]
 

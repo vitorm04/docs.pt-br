@@ -2,20 +2,20 @@
 title: Utilizando um resolvedor de contrato de dados
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9082d2979cf9bd0837635af567d69ef34c2e312
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918561"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975967"
 ---
 # <a name="using-a-data-contract-resolver"></a>Utilizando um resolvedor de contrato de dados
-Um resolvedor de contrato de dados permite que você configure tipos conhecidos dinamicamente. Tipos conhecidos são necessários ao serializar ou desserializar um tipo que não se espera por um contrato de dados. Para obter mais informações sobre tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Tipos conhecidos normalmente são especificados estaticamente. Isso significa que você precisaria saber todos os tipos possíveis de uma operação pode receber ao implementar a operação. Há cenários em que isso não é verdadeiro e é importante ser capaz de especificar tipos conhecidos dinamicamente.  
+Um resolvedor de contrato de dados permite que você configure tipos conhecidos dinamicamente. Tipos conhecidos são necessários ao serializar ou desserializar um tipo não esperado por um contrato de dados. Para obter mais informações sobre tipos conhecidos, consulte [tipos conhecidos de contrato de dados](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Tipos conhecidos normalmente são especificados estaticamente. Isso significa que você teria que saber todos os tipos possíveis que uma operação pode receber ao implementar a operação. Há cenários em que isso não é verdadeiro e poder especificar tipos conhecidos dinamicamente é importante.  
   
-## <a name="creating-a-data-contract-resolver"></a>Criação de um resolvedor de contrato de dados  
- A criação de um resolvedor de contrato de dados envolve implementar dois métodos, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> e <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Esses dois métodos implementam retornos de chamada que são usados durante a serialização e desserialização, respectivamente. O <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> método é invocado durante a serialização e usa um tipo de contrato de dados e mapeia-o para um `xsi:type` nome e namespace. O <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> método é invocado durante a desserialização e leva um `xsi:type` nome e o namespace e resolve para um tipo de contrato de dados. Esses dois métodos têm um `knownTypeResolver` parâmetro que pode ser usado para usar o padrão conhecido de resolvedor de tipo em sua implementação.  
+## <a name="creating-a-data-contract-resolver"></a>Criando um resolvedor de contrato de dados  
+ A criação de um resolvedor de contrato de dados envolve a implementação de dois métodos, <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> e <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A>. Esses dois métodos implementam retornos de chamada que são usados durante a serialização e desserialização, respectivamente. O método <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> é invocado durante a serialização e usa um tipo de contrato de dados e o mapeia para um nome de `xsi:type` e namespace. O método <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> é invocado durante a desserialização e usa um nome de `xsi:type` e um namespace e o resolve para um tipo de contrato de dados. Ambos os métodos têm um parâmetro `knownTypeResolver` que pode ser usado para usar o resolvedor de tipo conhecido padrão em sua implementação.  
   
- O exemplo a seguir mostra como implementar uma <xref:System.Runtime.Serialization.DataContractResolver> para mapear de e para um tipo de contrato de dados denominado `Customer` derivado de um tipo de contrato de dados `Person`.  
+ O exemplo a seguir mostra como implementar um <xref:System.Runtime.Serialization.DataContractResolver> para mapear de e para um tipo de contrato de dados denominado `Customer` derivado de um tipo de contrato de dados `Person`.  
   
 ```csharp  
 public class MyCustomerResolver : DataContractResolver  
@@ -49,15 +49,15 @@ public class MyCustomerResolver : DataContractResolver
 }  
 ```  
   
- Depois que você tiver definido uma <xref:System.Runtime.Serialization.DataContractResolver> você pode usá-lo, passando-o para o <xref:System.Runtime.Serialization.DataContractSerializer> construtor, conforme mostrado no exemplo a seguir.  
+ Depois de definir um <xref:System.Runtime.Serialization.DataContractResolver> você pode usá-lo passando-o para o Construtor <xref:System.Runtime.Serialization.DataContractSerializer>, conforme mostrado no exemplo a seguir.  
   
-```  
+```csharp
 XmlObjectSerializer serializer = new DataContractSerializer(typeof(Customer), null, Int32.MaxValue, false, false, null, new MyCustomerResolver());  
 ```  
   
- Você pode especificar uma <xref:System.Runtime.Serialization.DataContractResolver> em uma chamada para o <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> ou <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType> métodos, conforme mostrado no exemplo a seguir.  
+ Você pode especificar um <xref:System.Runtime.Serialization.DataContractResolver> em uma chamada para os métodos <xref:System.Runtime.Serialization.DataContractSerializer.ReadObject%2A?displayProperty=nameWithType> ou <xref:System.Runtime.Serialization.DataContractSerializer.WriteObject%2A?displayProperty=nameWithType>, conforme mostrado no exemplo a seguir.  
   
-```  
+```csharp
 MemoryStream ms = new MemoryStream();  
 DataContractSerializer serializer = new DataContractSerializer(typeof(Customer));  
 XmlDictionaryWriter writer = XmlDictionaryWriter.CreateDictionaryWriter(XmlWriter.Create(ms));  
@@ -67,9 +67,9 @@ ms.Position = 0;
 Console.WriteLine(((Customer)serializer.ReadObject(XmlDictionaryReader.CreateDictionaryReader(XmlReader.Create(ms)), false, new MyCustomerResolver()));  
 ```  
   
- Ou você pode defini-lo sobre a <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> conforme mostrado no exemplo a seguir.  
+ Ou você pode defini-lo no <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> conforme mostrado no exemplo a seguir.  
   
-```  
+```csharp
 ServiceHost host = new ServiceHost(typeof(MyService));  
   
 ContractDescription cd = host.Description.Endpoints[0].Contract;  
@@ -85,7 +85,7 @@ if (serializerBehavior == null)
 SerializerBehavior.DataContractResolver = new MyCustomerResolver();  
 ```  
   
- Declarativamente, você pode especificar um resolvedor de contrato de dados com a implementação de um atributo que pode ser aplicado a um serviço.  Para obter mais informações, consulte o [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) exemplo. Este exemplo implementa um atributo chamado "KnownAssembly" que adiciona um resolvedor de contrato de dados personalizados ao comportamento do serviço.  
+ Você pode especificar declarativamente um resolvedor de contrato de dados implementando um atributo que pode ser aplicado a um serviço.  Para obter mais informações, consulte o exemplo [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md) . Este exemplo implementa um atributo chamado "KnownAssembly" que adiciona um resolvedor de contrato de dados personalizado ao comportamento do serviço.  
   
 ## <a name="see-also"></a>Consulte também
 

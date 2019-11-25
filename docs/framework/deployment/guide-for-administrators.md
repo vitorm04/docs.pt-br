@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 91099b9b4d230839bc14c5fe4d5eafd05ac95541
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: dc842713a16df8e5ada5ad6c71ca19f91ecbc405
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052151"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975563"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Guia de implantação do .NET Framework para administradores
 
@@ -21,7 +21,7 @@ Este artigo passo a passo descreve como um administrador do sistema pode implant
 > [!NOTE]
 > Os softwares referenciados neste documento, incluindo, sem limitação, o .NET Framework 4.5, o System Center Configuration Manager e o Active Directory, estão sujeitos aos termos e condições da licença. Essas instruções assumem que esses termos de licença e condições foram examinados e aceitos pelos licenciados apropriados do software. Essas instruções não renunciam nenhum dos termos e condições dos contratos de tal licença.
 >
-> Para saber mais sobre suporte ao .NET Framework, confira [Política de ciclo de vida de suporte do Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) no site de Suporte da Microsoft.
+> Para obter informações sobre o suporte para o .NET Framework, consulte [.NET Framework a política de suporte oficial](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework) no site do suporte da Microsoft.
 
 Esse tópico contém as seguintes seções:
 
@@ -123,9 +123,9 @@ Para criar um pacote:
 
     2. **Linha de comando:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (as opções de linha de comando são descritas na tabela após estas etapas)
 
-    3. **Executar:** Escolha **Oculto**.
+    3. **Executar:** escolha **Oculto**.
 
-    4. **O programa pode ser executado:** Escolha a opção que especifica que o programa pode ser executado independentemente de um usuário estar conectado.
+    4. **O programa pode ser executado:** escolha a opção que especifica que o programa pode ser executado independentemente de um usuário estar conectado.
 
 8. Na página **Requisitos**, escolha **Avançar** para aceitar os valores padrão e conclua o assistente.
 
@@ -135,9 +135,9 @@ A tabela a seguir descreve as opções de linha de comando especificadas na etap
 |------------|-----------------|
 |**/q**|Define o modo silencioso. Nenhuma entrada do usuário é necessária e nenhuma saída é mostrada.|
 |**/norestart**|Impede que o programa de instalação reinicialize automaticamente. Se você usar essa opção, o Configuration Manager deverá processar a reinicialização do computador.|
-|**/chainingpackage** *PackageName*|Especifica o nome do pacote que está fazendo o encadeamento. Essa informação é relatada com outras informações da sessão de instalação para aqueles que se inscreveram no [Programa de Aperfeiçoamento da Experiência do Usuário da Microsoft (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Chaining Product"** .|
+|**/chainingpackage** *PackageName*|Especifica o nome do pacote que está fazendo o encadeamento. Essas informações são relatadas com outras informações de sessão de instalação para aqueles que se inscreveram no Microsoft Programa de Aperfeiçoamento da Experiência do Usuário (CEIP). Se o nome do pacote contiver espaços, use aspas duplas como delimitadores: **/chainingpackage "Chaining Product"** .|
 
-Estas etapas criam um pacote chamado .NET Framework 4.5. O programa implanta uma instalação silenciosa do .NET Framework 4.5. Em uma instalação silenciosa, os usuários não interagem com o processo de instalação e o aplicativo de encadeamento precisa capturar o código de retorno e manipular a reinicialização; consulte [Obtendo informações de progresso de um pacote de instalação](https://go.microsoft.com/fwlink/?LinkId=179606).
+Estas etapas criam um pacote chamado .NET Framework 4.5. O programa implanta uma instalação silenciosa do .NET Framework 4.5. Em uma instalação silenciosa, os usuários não interagem com o processo de instalação e o aplicativo de encadeamento precisa capturar o código de retorno e manipular a reinicialização; consulte [Obtendo informações de progresso de um pacote de instalação](https://docs.microsoft.com/previous-versions/cc825975(v=vs.100)).
 
 <a name="select_dist_point"></a>
 
@@ -190,7 +190,7 @@ Para implantar o pacote e o programa .NET Framework 4.5:
 9. Na página **Experiência do Usuário** do assistente, use os valores padrão e escolha **Avançar**.
 
     > [!WARNING]
-    > O ambiente de produção pode ter políticas que exijam diferentes seleções de agendamento de implantação. Para obter informações sobre essas opções, confira [Propriedades de nome de anúncio: Guia Agendamento](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
+    > O ambiente de produção pode ter políticas que exijam diferentes seleções de agendamento de implantação. Para obter informações sobre essas opções, confira [Propriedades de nome de anúncio: guia Agendamento](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
 
 10. Na página **Pontos de Distribuição** do assistente, use os valores padrão e escolha **Avançar**.
 

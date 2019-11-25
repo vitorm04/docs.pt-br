@@ -19,12 +19,12 @@ helpviewer_keywords:
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 ms.custom: seodec18
-ms.openlocfilehash: b427c579b4190acaf715147908b38ea57ab7aea3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd6b24a6dd893f0c522573a0e19914164c15141f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120635"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973939"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Práticas recomendadas para o uso de cadeias de caracteres no .NET
 
@@ -141,7 +141,7 @@ Nesse caso, como "file:" deve ser interpretado como um identificador não-lingu�
 
 Especificar o valor <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> ou <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> em uma chamada de método significa uma comparação não linguística em que os recursos de linguagens naturais são ignorados. Os métodos que são invocados com esses valores de <xref:System.StringComparison> baseiam as decisões de operação da cadeia de caracteres em comparações de byte simples em vez de no uso de maiúsculas e minúsculas ou tabelas de equivalência que são parametrizadas pela cultura. Na maioria dos casos, essa abordagem se adapta melhor à interpretação pretendida de cadeias de caracteres, enquanto torna o código mais rápido e confiável.
 
-Comparações ordinais são comparações de cadeia de caracteres nas quais cada byte de cada cadeia de caracteres é comparado sem a interpretação linguística, por exemplo, “windows” não corresponde a “Windows”. Isso é basicamente uma chamada para a função `strcmp` de tempo de execução de C. Use essa comparação quando o contexto determinar que as cadeias de caracteres devem corresponder exatamente ou exigir uma política de correspondência conservadora. Além disso, a comparação ordinal é a operação de comparação mais rápida porque ela não aplica nenhuma regra linguística ao determinar um resultado.
+Comparações ordinais são comparações de cadeia de caracteres nas quais cada byte de cada cadeia de caracteres é comparado sem a interpretação linguística, por exemplo, “windows” não corresponde a “Windows”. Isso é basicamente uma chamada para a função `strcmp` de runtime de C. Use essa comparação quando o contexto determinar que as cadeias de caracteres devem corresponder exatamente ou exigir uma política de correspondência conservadora. Além disso, a comparação ordinal é a operação de comparação mais rápida porque ela não aplica nenhuma regra linguística ao determinar um resultado.
 
 As cadeias de caracteres no .NET podem conter caracteres nulos inseridos. Uma das diferenças mais clara entre a comparação ordinal e a que leva em conta a cultura (incluindo comparações que usam a cultura invariável) diz respeito à manipulação de caracteres nulos inseridos em uma cadeia de caracteres. Esses caracteres são ignorados quando você usa os métodos <xref:System.String.Compare%2A?displayProperty=nameWithType> e <xref:System.String.Equals%2A?displayProperty=nameWithType> para realizar comparações que levam em conta a cultura (incluindo comparações que usam a cultura invariável). Como resultado, em comparações que levam em conta a cultura, cadeias de caracteres que contêm caracteres nulos inseridos podem ser consideradas iguais a cadeias de caracteres que não contêm.
 
@@ -340,7 +340,7 @@ Você pode manter os dados que não são de cadeias de caracteres como dados bin
 O exemplo a seguir ilustra a portabilidade limitada resultante do uso da formatação que leva em conta a cultura para manter os dados. O exemplo salva uma matriz de valores de data e hora em um arquivo. Eles são formatados usando as convenções da cultura do inglês (Estados Unidos). Depois que o aplicativo altera a cultura do thread atual para francês (Suíça), ele tenta ler os valores salvos usando as convenções de formatação da cultura atual. A tentativa de ler dois dos itens de dados gera uma exceção <xref:System.FormatException> e a matriz de datas agora contém dois elementos incorretos que são iguais a <xref:System.DateTime.MinValue>.
 
 [!code-csharp[Conceptual.Strings.BestPractices#21](~/samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/persistence.cs#21)]
- [!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
+[!code-vb[Conceptual.Strings.BestPractices#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/persistence.vb#21)]
 
 No entanto, se você substituir a propriedade <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> por <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> nas chamadas para <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> e <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>, os dados persistentes de data e hora serão restaurados com êxito, como mostra a seguinte saída:
 

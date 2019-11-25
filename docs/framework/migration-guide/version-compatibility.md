@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework, compatibility with earlier versions
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
-ms.openlocfilehash: c3e2368bc5977d7f50ae7ecea8557c5c545e82a4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455599"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974950"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Compatibilidade de versão no .NET Framework
 
@@ -53,9 +53,9 @@ Se o aplicativo ou o componente não funcionar conforme esperado no .NET Framewo
 
 - Se você tiver um aplicativo .NET Framework 3.5, consulte também [Problemas de migração do .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md).
 
-- Se você tiver um aplicativo .NET Framework 2.0, consulte também [Alterações no .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=186989).
+- Se você tiver um aplicativo .NET Framework 2.0, consulte também [Alterações no .NET Framework 3.5 SP1](https://docs.microsoft.com/previous-versions/dotnet/articles/dd310284(v=msdn.10)).
 
-- Se você tiver um aplicativo .NET Framework 1.1, consulte também [Alterações no .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125263).
+- Se você tiver um aplicativo .NET Framework 1.1, consulte também [Alterações no .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa570326(v=msdn.10)).
 
 - Caso esteja recompilando o código-fonte existente para ser executado no .NET Framework 4.5 ou suas versões de ponto ou desenvolvendo uma nova versão de um aplicativo ou componente direcionado ao .NET Framework 4.5 ou suas versões de ponto de uma base de código-fonte existente, confira [O que está obsoleto na biblioteca de classes](../whats-new/whats-obsolete.md) para obter tipos e membros obsoletos e aplicar a solução alternativa descrita. (O código compilado anteriormente continuará sendo executado em tipos e membros marcados como obsoletos.)
 
@@ -72,5 +72,5 @@ Se você não conseguir encontrar uma solução alternativa adequada para seu pr
 - [Novidades](../whats-new/index.md)
 - [O que está obsoleto na Biblioteca de Classes](../whats-new/whats-obsolete.md)
 - [Compatibilidade de aplicativos](../migration-guide/application-compatibility.md)
-- [Política de ciclo de vida de suporte do Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)
+- [.NET Framework a política de suporte oficial](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)
 - [Problemas de migração do .NET Framework 4](../migration-guide/net-framework-4-migration-issues.md)

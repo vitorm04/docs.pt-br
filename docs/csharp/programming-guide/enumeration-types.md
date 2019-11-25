@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 3573959a1e10b475a9867631767de5d10a08b9ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590553"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969769"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>Tipos de enumeração (Guia de Programação em C#)
 
@@ -21,7 +21,7 @@ Um tipo de enumeração (também chamado de uma enumeração ou enum) fornece um
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-Por padrão o tipo subjacente de cada elemento na enumeração é [int](../language-reference/builtin-types/integral-numeric-types.md). Você pode especificar outro tipo numérico integral usando dois-pontos, como mostrado no exemplo anterior. Para obter uma lista completa dos tipos possíveis, consulte [enum (Referência de C#)](../language-reference/keywords/enum.md).
+Por padrão, o tipo subjacente de cada elemento na enumeração é [int](../language-reference/builtin-types/integral-numeric-types.md). Você pode especificar outro tipo numérico integral usando dois-pontos, conforme mostrado no exemplo anterior. Para obter uma lista completa dos tipos possíveis, consulte [enum (Referência de C#)](../language-reference/keywords/enum.md).
 
 Você pode verificar os valores numéricos subjacentes com a conversão em tipo subjacente, como mostra o exemplo a seguir.
 
@@ -86,7 +86,7 @@ Todas as enumerações são instâncias do tipo <xref:System.Enum?displayPropert
 
 Para obter mais informações, consulte <xref:System.Enum?displayProperty=nameWithType>.
 
-Você também pode criar um novo método para uma enumeração usando um método de extensão. Para obter mais informações, confira [Como: criar um novo método para uma enumeração](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
+Você também pode criar um novo método para uma enumeração usando um método de extensão. Para obter mais informações, consulte [como criar um novo método para uma enumeração](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ## <a name="see-also"></a>Consulte também
 

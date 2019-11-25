@@ -17,15 +17,16 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: 5284eb52d7b50307e51945fc0b4a9deb8818f2e2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c699ed68606293b1a49a540e00636cf7f56bdf2f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121688"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972102"
 ---
 # <a name="standard-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan padrão
-<a name="Top"></a> Uma cadeia de caracteres de formato padrão <xref:System.TimeSpan> usa um único especificador de formato para definir a representação de texto de um valor <xref:System.TimeSpan> que resulta de uma operação de formatação. Qualquer sequência de formato que contenha mais de um caractere, incluindo espaço em branco, é interpretada como uma sequência de formato <xref:System.TimeSpan> personalizada. Para saber mais, confira [Cadeias de caracteres de formato TimeSpan personalizadas](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
+
+Uma sequência de formato padrão <xref:System.TimeSpan> usa um único especificador de formato para definir a representação de texto de um valor <xref:System.TimeSpan> que resulta de uma operação de formatação. Qualquer sequência de formato que contenha mais de um caractere, incluindo espaço em branco, é interpretada como uma sequência de formato <xref:System.TimeSpan> personalizada. Para saber mais, confira [Cadeias de caracteres de formato TimeSpan personalizadas](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
   
  As representações de sequência de valores <xref:System.TimeSpan> são produzidas por chamadas para as sobrecargas do método <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType>, bem como por métodos que oferecem suporte à formatação composta, como <xref:System.String.Format%2A?displayProperty=nameWithType>. Para obter mais informações, consulte [Tipos de formatação](../../../docs/standard/base-types/formatting-types.md) e [Formatação de composição](../../../docs/standard/base-types/composite-formatting.md). O exemplo a seguir ilustra o uso de sequências de formato padrão em operações de formatação.  
   
@@ -37,15 +38,14 @@ ms.locfileid: "73121688"
  [!code-csharp[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/parseexample1.cs#3)]
  [!code-vb[Conceptual.TimeSpan.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/parseexample1.vb#3)]  
   
-<a name="top"></a> A tabela a seguir lista os especificadores de formato de intervalo de tempo padrão.  
+A tabela a seguir lista os especificadores de formato de intervalo de tempo padrão.  
   
 |Especificador de formato|Name|Descrição|Exemplos|  
 |----------------------|----------|-----------------|--------------|  
-|"c"|Formato de constante (invariável)|Esse especificador não é sensível à cultura. Ele assume o formato `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (As sequências de formato "t" e "T" produzem os mesmos resultados).<br /><br /> Mais informações: [o especificador de formato de constante ("c")](#Constant).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
-|"g"|Formato curto geral|Esse especificador gera apenas o que é necessário. Ele é sensível à cultura e assume o formato `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Mais informações: [o especificador de formato curto geral ("g")](#GeneralShort).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
-|"G"|Formato longo geral|Esse especificador sempre gera dias e sete dígitos de fração. Ele é sensível à cultura e assume o formato `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Mais informações: [o especificador de formato longo geral ("G")](#GeneralLong).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
-  
-<a name="Constant"></a>   
+|"c"|Formato de constante (invariável)|Esse especificador não é sensível à cultura. Ele assume o formato `[-][d'.']hh':'mm':'ss['.'fffffff]`.<br /><br /> (As sequências de formato "t" e "T" produzem os mesmos resultados).<br /><br /> Mais informações: [o especificador de formato de constante ("c")](#the-constant-c-format-specifier).|`TimeSpan.Zero` -> 00:00:00<br /><br /> `New TimeSpan(0, 0, 30, 0)` -> 00:30:00<br /><br /> `New TimeSpan(3, 17, 25, 30, 500)` -> 3.17:25:30.5000000|  
+|"g"|Formato curto geral|Esse especificador gera apenas o que é necessário. Ele é sensível à cultura e assume o formato `[-][d':']h':'mm':'ss[.FFFFFFF]`.<br /><br /> Mais informações: [o especificador de formato curto geral ("g")](#the-general-short-g-format-specifier).|`New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50.5 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 500)` -> 1:3:16:50,5 (fr-FR)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50.599 (en-US)<br /><br /> `New TimeSpan(1, 3, 16, 50, 599)` -> 1:3:16:50,599 (fr-FR)|  
+|"G"|Formato longo geral|Esse especificador sempre gera dias e sete dígitos de fração. Ele é sensível à cultura e assume o formato `[-]d':'hh':'mm':'ss.fffffff`.<br /><br /> Mais informações: [o especificador de formato longo geral ("G")](#the-general-long-g-format-specifier).|`New TimeSpan(18, 30, 0)` -> 0:18:30:00.0000000 (en-US)<br /><br /> `New TimeSpan(18, 30, 0)` -> 0:18:30:00,0000000 (fr-FR)|  
+
 ## <a name="the-constant-c-format-specifier"></a>O especificador de formato de constante ("c")  
  O especificador de formato "c" retorna a representação de sequência de um valor <xref:System.TimeSpan> da seguinte forma:  
   
@@ -71,10 +71,7 @@ ms.locfileid: "73121688"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardc1.cs#1)]
  [!code-vb[Conceptual.TimeSpan.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardc1.vb#1)]  
-  
- [Voltar à tabela](#Top)  
-  
-<a name="GeneralShort"></a>   
+
 ## <a name="the-general-short-g-format-specifier"></a>O especificador de formato curto geral ("g")  
  O especificador de formato <xref:System.TimeSpan> de "g" retorna a representação de sequência de um valor <xref:System.TimeSpan> em um formato compacto, incluindo apenas os elementos que são necessários. Ele tem o seguinte formato:  
   
@@ -98,10 +95,7 @@ ms.locfileid: "73121688"
   
  [!code-csharp[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardshort1.cs#4)]
  [!code-vb[Conceptual.TimeSpan.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardshort1.vb#4)]  
-  
- [Voltar à tabela](#Top)  
-  
-<a name="GeneralLong"></a>   
+
 ## <a name="the-general-long-g-format-specifier"></a>O especificador de formato longo geral ("G")  
  O especificador de formato <xref:System.TimeSpan> de "G" retorna a representação de sequência de um valor <xref:System.TimeSpan> em um formato longo que sempre inclui dias e a fração de segundo. A sequência que resulta do especificador de formato padrão "G" tem o seguinte formato:  
   
@@ -124,9 +118,7 @@ ms.locfileid: "73121688"
  O exemplo a seguir instancia dois objetos <xref:System.TimeSpan>, usa-os para executar operações aritméticas e exibe o resultado. Em cada caso, ele usa formatação composta para exibir o valor <xref:System.TimeSpan> usando o especificador de formato "G". Além disso, ele formata o valor <xref:System.TimeSpan> usando as convenções de formatação da cultura atual do sistema (que, nesse caso, é Inglês - Estados Unidos ou en-US) e da cultura francês - França (fr-FR).  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/standardlong1.cs#5)]
- [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]  
-  
- [Voltar à tabela](#Top)  
+ [!code-vb[Conceptual.TimeSpan.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/standardlong1.vb#5)]
   
 ## <a name="see-also"></a>Consulte também
 

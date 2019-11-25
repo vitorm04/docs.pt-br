@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: 450463100782f98b6ded0781b1d3c19b0db97534
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151772"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972736"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opções do compilador de C# listadas em ordem alfabética
 
@@ -29,7 +29,7 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
 |[-baseaddress](baseaddress-compiler-option.md)|Especifica o endereço básico para a biblioteca a ser criada.|
 |[-bugreport](bugreport-compiler-option.md)|Cria um arquivo 'Bug Report'. Esse arquivo será enviado junto com informações de falha se for usado com -errorreport:prompt ou -errorreport:send.|
 |[/checked](checked-compiler-option.md)|Faz com que o compilador gere verificações de estouro.|
-|-checksumalgorithm:\<alg>|Especifica o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores compatíveis são: SHA256 (padrão) ou SHA1.<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256. |
+|-checksumalgorithm:\<alg>|Especifica o algoritmo para calcular a soma de verificação do arquivo de origem armazenada no PDB.  Os valores com suporte são: SHA256 (padrão) ou SHA1.<br>Em razão de problemas de colisão com SHA1, a Microsoft recomenda SHA256. |
 |[-codepage](codepage-compiler-option.md)|Especifica a página de código a ser usada ao abrir arquivos de origem.|
 |[-debug](debug-compiler-option.md)|Emite informações de depuração.|
 |[-define](define-compiler-option.md)|Define símbolos de compilação condicional.|
@@ -48,7 +48,7 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
 |-incremental|Habilita a compilação incremental [obsoleta].|
 |[-keycontainer](keycontainer-compiler-option.md)|Especifica um contêiner de chave de nome forte.|
 |[-keyfile](keyfile-compiler-option.md)|Especifica um arquivo de chave de nome forte.|
-|[/langversion:\<string>](langversion-compiler-option.md)|Especificar a versão do idioma: Padrão, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 ou a última |
+|[/langversion:\<string>](langversion-compiler-option.md)|Especificar a versão da linguagem: padrão, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 ou mais recente |
 |[/lib](lib-compiler-option.md)|Especifica diretórios adicionais para pesquisar referências.|
 |[-link](link-compiler-option.md)|Disponibiliza informações de tipo COM em assemblies especificados para o projeto.|
 |[-linkresource](linkresource-compiler-option.md)|Vincula o recurso especificado a esse assembly.|
@@ -90,5 +90,5 @@ As opções do compilador a seguir estão em ordem alfabética. Para obter uma l
 
 - [Opções do compilador de C#](index.md)
 - [Opções do compilador de C# listadas por categoria](listed-by-category.md)
-- [Como: Definir variáveis de ambiente para a linha de comando do Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Como definir variáveis de ambiente para a linha de comando do Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> Element](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

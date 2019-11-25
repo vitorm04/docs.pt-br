@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d7ddae58874c69468eb6ff1762db9083897b1acd
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: d6d0f6f357feba903e8345fc45251c146c5406db
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70854071"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975323"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante WCF Data Services
 
@@ -20,7 +20,7 @@ Este tópico fornece informações sobre como desenvolver e implantar WCF Data S
 
 ## <a name="develop-wcf-data-services"></a>Desenvolver WCF Data Services
 
-Ao usar WCF Data Services para criar um serviço de dados que ofereça suporte [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]ao, você deve executar as seguintes tarefas básicas durante o desenvolvimento:
+Ao usar WCF Data Services para criar um serviço de dados que ofereça suporte ao Protocolo Open Data (OData), você deve executar as seguintes tarefas básicas durante o desenvolvimento:
 
 1. **Definir o modelo de dados**
 
@@ -32,7 +32,7 @@ Ao usar WCF Data Services para criar um serviço de dados que ofereça suporte [
 
 3. **Configurar o serviço de dados**
 
-     Por padrão, WCF Data Services desabilita o acesso a recursos que são expostos por um contêiner de entidade. A <xref:System.Data.Services.DataServiceConfiguration> interface permite que você configure o acesso a recursos e operações de serviço, especifique a versão com suporte do OData e defina outros comportamentos de todo o serviço, como comportamentos de envio em lote ou o número máximo de entidades que podem ser retornadas em um único feed de resposta. Para obter mais informações, consulte [Configurando o serviço de dados](configuring-the-data-service-wcf-data-services.md).
+     Por padrão, WCF Data Services desabilita o acesso a recursos que são expostos por um contêiner de entidade. A interface <xref:System.Data.Services.DataServiceConfiguration> permite que você configure o acesso a recursos e operações de serviço, especifique a versão com suporte do OData e defina outros comportamentos de todo o serviço, como comportamentos de envio em lote ou o número máximo de entidades que podem ser retornadas em um único feed de resposta. Para obter mais informações, consulte [Configurando o serviço de dados](configuring-the-data-service-wcf-data-services.md).
 
 Este tópico aborda principalmente o desenvolvimento e a implantação de serviços de dados usando o Visual Studio. Para obter informações sobre a flexibilidade fornecida pelo WCF Data Services para expor seus dados como feeds OData, consulte [definindo WCF Data Services](defining-wcf-data-services.md).
 
@@ -42,7 +42,7 @@ Ao desenvolver um serviço de dados WCF como um aplicativo ASP.NET ou site ASP.N
 
 1. **Servidor IIS local**
 
-     Quando você cria um serviço de dados que é um aplicativo ASP.NET ou site ASP.NET que é executado em Serviços de Informações da Internet (IIS), recomendamos que você desenvolva e teste seu serviço de dados usando o IIS no computador local. Executar o serviço de dados no IIS facilita o rastreamento de solicitações HTTP durante a depuração. Isso também permite que você predetermine os direitos necessários exigidos pelo IIS para acessar arquivos, bancos de dados e outros recursos necessários pelo serviço de dados. Para executar o serviço de dados no IIS, você deve verificar se o IIS e o Windows Communication Foundation (WCF) estão instalados e configurados corretamente e conceder acesso a contas do IIS no sistema de arquivos e nos bancos de dados. Para obter mais informações, confira [Como: Desenvolva um serviço de dados WCF em](how-to-develop-a-wcf-data-service-running-on-iis.md)execução no IIS.
+     Quando você cria um serviço de dados que é um aplicativo ASP.NET ou site ASP.NET que é executado em Serviços de Informações da Internet (IIS), recomendamos que você desenvolva e teste seu serviço de dados usando o IIS no computador local. Executar o serviço de dados no IIS facilita o rastreamento de solicitações HTTP durante a depuração. Isso também permite que você predetermine os direitos necessários exigidos pelo IIS para acessar arquivos, bancos de dados e outros recursos necessários pelo serviço de dados. Para executar o serviço de dados no IIS, você deve verificar se o IIS e o Windows Communication Foundation (WCF) estão instalados e configurados corretamente e conceder acesso a contas do IIS no sistema de arquivos e nos bancos de dados. Para obter mais informações, consulte [como: desenvolver um serviço de dados WCF em execução no IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
     > [!NOTE]
     > Você deve executar o Visual Studio com direitos de administrador para habilitar o ambiente de desenvolvimento para configurar o servidor IIS local.
@@ -63,7 +63,7 @@ Ao desenvolver um serviço de dados WCF como um aplicativo ASP.NET ou site ASP.N
 
     - Esse servidor não pode tratar fluxos HTTP em partes, que são enviados por padrão pelo cliente WCF Data Services ao acessar dados binários grandes do serviço de dados. Para obter mais informações, consulte [streaming Provider](streaming-provider-wcf-data-services.md).
 
-    - Esse servidor tem problemas com o processamento do caractere`.`de ponto () em uma URL, embora esse caractere tenha suporte de WCF Data Services em valores de chave.
+    - Esse servidor tem problemas com o processamento do caractere de período (`.`) em uma URL, embora esse caractere tenha suporte WCF Data Services em valores de chave.
 
     > [!TIP]
     > Embora você possa usar o Visual Studio Development Server para testar seus serviços de dados durante o desenvolvimento, você deve testá-los novamente após a implantação em um servidor Web que esteja executando o IIS.
@@ -96,22 +96,22 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
 
   - **Tecnologias de implantação para aplicativos Web ASP.NET**
 
-    - [Como: Criar um pacote de implantação da Web no Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
+    - [Como: criar um pacote de implantação da Web no Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-    - [Como: Implantar um projeto Web usando a publicação com um clique no Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+    - [Como implantar um projeto Web usando a publicação com um clique no Visual Studio](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
   - **Tecnologias de implantação para sites da ASP.NET**
 
-    - [Como: Copiar arquivos de site com a ferramenta Copiar site da Web](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+    - [Como copiar arquivos de site com a ferramenta Copiar site da Web](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-    - [Como: Publicar sites](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+    - [Como publicar sites da Web](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-    - [Passo a passo: Implantando um aplicativo Web ASP.NET usando XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
+    - [Walkthrough: Implantando um aplicativo Web ASP.NET usando XCOPY](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
      Para obter mais informações sobre as opções de implantação para um aplicativo ASP.NET, consulte [visão geral da implantação da Web para Visual Studio e ASP.net](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110)).
 
     > [!TIP]
-    > Antes de tentar implantar o serviço de dados para o IIS, verifique se você testou a implantação para um servidor Web que esteja executando o IIS. Para obter mais informações, confira [Como: Desenvolva um serviço de dados WCF em](how-to-develop-a-wcf-data-service-running-on-iis.md)execução no IIS.
+    > Antes de tentar implantar o serviço de dados para o IIS, verifique se você testou a implantação para um servidor Web que esteja executando o IIS. Para obter mais informações, consulte [como: desenvolver um serviço de dados WCF em execução no IIS](how-to-develop-a-wcf-data-service-running-on-iis.md).
 
 - **Windows Azure**
 
@@ -121,7 +121,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
 
 Você deve considerar o seguinte ao implantar um serviço de dados:
 
-- Quando você implanta um serviço de dados que usa o provedor de Entity Framework para acessar um banco de dados do SQL Server, você também pode precisar propagar estruturas, dados ou ambos com a implantação do serviço de dados. O Visual Studio pode criar scripts automaticamente (arquivos. Sql) para fazer isso no banco de dados de destino, e esses scripts podem ser incluídos no pacote de implantação da Web de um aplicativo ASP.NET. Para obter mais informações, confira [Como: Implante um banco de dados com um projeto](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))de aplicativo Web. Para um site da Web do ASP.NET, você pode fazer isso usando o **Assistente de publicação de banco de dados** no Visual Studio. Para obter mais informações, consulte [publicando um banco de dados SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
+- Quando você implanta um serviço de dados que usa o provedor de Entity Framework para acessar um banco de dados do SQL Server, você também pode precisar propagar estruturas, dados ou ambos com a implantação do serviço de dados. O Visual Studio pode criar scripts automaticamente (arquivos. Sql) para fazer isso no banco de dados de destino, e esses scripts podem ser incluídos no pacote de implantação da Web de um aplicativo ASP.NET. Para obter mais informações, consulte [como: implantar um banco de dados com um projeto de aplicativo Web](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Para um site da Web do ASP.NET, você pode fazer isso usando o **Assistente de publicação de banco de dados** no Visual Studio. Para obter mais informações, consulte [publicando um banco de dados SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
 - Como o WCF Data Services inclui uma implementação básica do WCF, você pode usar o Windows Server AppFabric para monitorar um serviço de dados implantado no IIS em execução no Windows Server. Para obter mais informações sobre como usar o Windows Server AppFabric para monitorar um serviço de dados, consulte o WCF Data Services de rastreamento de postagem [com o Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=202005).
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f1d13c4c3e27b5af5b3c3e84995cae3df94a307d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052072"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975687"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implantando o .NET Framework e aplicativos
 
@@ -66,7 +66,7 @@ Use os links a seguir para outros tópicos do MSDN e veja as informações espec
 
 **Manutenção**
 
-- Para obter informações gerais, confira o [blog do .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=254977)
+- Para obter informações gerais, consulte o [blog .NET Framework](https://devblogs.microsoft.com/dotnet/).
 
 - [Como detectar versões](../migration-guide/how-to-determine-which-versions-are-installed.md)
 
@@ -154,7 +154,7 @@ O .NET Framework fornece as seguintes opções para distribuição de aplicativo
 
 ### <a name="installation-location"></a>Local de instalação
 
-Para determinar onde implantar assemblies do aplicativo para que eles possam ser encontrados pelo tempo de execução, confira [Como o tempo de execução localiza assemblies](how-the-runtime-locates-assemblies.md).
+Para determinar onde implantar assemblies do aplicativo para que eles possam ser encontrados pelo runtime, confira [Como o runtime localiza assemblies](how-the-runtime-locates-assemblies.md).
 
 As considerações de segurança também podem afetar como você implanta o aplicativo. As permissões de segurança são concedidas ao código gerenciado de acordo com o local do código. Implantar um aplicativo ou componente em um local em que ele recebe pouca confiança, como a Internet, limita o que o aplicativo ou componente pode fazer. Para saber mais sobre considerações de implantação e segurança, confira [Noções básicas sobre segurança de acesso do código](../misc/code-access-security-basics.md).
 
@@ -162,7 +162,7 @@ As considerações de segurança também podem afetar como você implanta o apli
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Como o tempo de execução localiza assemblies](how-the-runtime-locates-assemblies.md)|Descreve como o Common Language Runtime determina qual assembly usar para atender a uma solicitação de associação.|
+|[Como o runtime localiza assemblies](how-the-runtime-locates-assemblies.md)|Descreve como o Common Language Runtime determina qual assembly usar para atender a uma solicitação de associação.|
 |[Práticas recomendadas para carregamento de assemblies](best-practices-for-assembly-loading.md)|Descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros.|
 |[Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](reducing-system-restarts.md)|Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.|
 |[Guia de implantação para administradores](guide-for-administrators.md)|Explica como um administrador de sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede usando o SCCM (System Center Configuration Manager).|
@@ -171,7 +171,7 @@ As considerações de segurança também podem afetar como você implanta o apli
 |[Publicando aplicativos ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Descreve como empacotar um aplicativo do Windows Forms e implantá-lo com o ClickOnce em computadores cliente em uma rede.|
 |[Empacotando e implantando recursos](../resources/packaging-and-deploying-resources-in-desktop-apps.md)|Descreve o modelo de hub e spoke usado pelo .NET Framework para empacotar e implantar recursos; aborda convenções de nomenclatura de recurso, processo de fallback e alternativas de empacotamento.|
 |[Implantação de um aplicativo de interoperabilidade](../interop/deploying-an-interop-application.md)|Explica como enviar e instalar aplicativos de interoperabilidade, que geralmente incluem um assembly de cliente do .NET Framework, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipo COM e um ou mais componentes COM registrados.|
-|[Como: Acompanhar o progresso do Instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)|Descreve como inicializar e rastrear silenciosamente o processo de instalação do .NET Framework ao mesmo tempo que mostra sua própria exibição do progresso de instalação.|
+|[Como acompanhar o progresso do instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)|Descreve como inicializar e rastrear silenciosamente o processo de instalação do .NET Framework ao mesmo tempo que mostra sua própria exibição do progresso de instalação.|
 
 ## <a name="see-also"></a>Consulte também
 

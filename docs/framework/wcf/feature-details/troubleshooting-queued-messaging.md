@@ -2,214 +2,214 @@
 title: Mensagens em fila da solução de problemas
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 3b149d1b422848e1acdd954ebda4191496ddcc7e
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: dcff128a7718245fa765c57d3af80665699f4891
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662934"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976046"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
 
-Esta seção contém perguntas comuns e solução de problemas de ajuda para usar as filas no Windows Communication Foundation (WCF).
+Esta seção contém perguntas comuns e ajuda de solução de problemas para usar filas no Windows Communication Foundation (WCF).
 
 ## <a name="common-questions"></a>Perguntas comuns
 
-**P:** Eu usei a versão Beta 1 do WCF e instalei o hotfix do MSMQ. É necessário remover o hotfix?
+**P:** Usei o WCF beta 1 e instalei o hotfix MSMQ. É necessário remover o hotfix?
 
-**R:** Sim. Esse hotfix não é mais suportado. O WCF agora funciona em MSMQ sem um requisito de hotfix.
+**R:** Sim. Não há mais suporte para este hotfix. O WCF agora funciona no MSMQ sem um requisito de hotfix.
 
-**P:** Há duas associações para o MSMQ: <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. O que devo usar e quando?
+**P:** Há duas associações para MSMQ: <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. O que devo usar e quando?
 
-**R:** Use o <xref:System.ServiceModel.NetMsmqBinding> quando você quiser usar o MSMQ como um transporte para comunicação em fila entre dois aplicativos do WCF. Use o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> quando você quiser usar aplicativos existentes do MSMQ para se comunicar com os novos aplicativos do WCF.
+**R:** Use o <xref:System.ServiceModel.NetMsmqBinding> quando quiser usar o MSMQ como um transporte para a comunicação em fila entre dois aplicativos WCF. Use o <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> quando desejar usar aplicativos MSMQ existentes para se comunicar com os novos aplicativos WCF.
 
-**P:** É necessário atualizar o MSMQ para usar o <xref:System.ServiceModel.NetMsmqBinding> e `MsmqIntegration` associações?
+**P:** É necessário atualizar o MSMQ para usar as associações de <xref:System.ServiceModel.NetMsmqBinding> e `MsmqIntegration`?
 
-**R:** Nº Ambas as associações de trabalhar com o MSMQ 3.0 em [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Determinados recursos das associações são disponibilizados quando você atualiza para o MSMQ 4.0 em [!INCLUDE[wv](../../../../includes/wv-md.md)].
+**R:** não. Ambas as associações funcionam com o MSMQ 3,0 em [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Determinados recursos das associações ficam disponíveis quando você atualiza para o MSMQ 4,0 no [!INCLUDE[wv](../../../../includes/wv-md.md)].
 
-**P:** Quais recursos do <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> associações estão disponíveis no MSMQ 4.0, mas não no MSMQ 3.0?
+**P:** Quais recursos das associações de <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> estão disponíveis no MSMQ 4,0, mas não no MSMQ 3,0?
 
-**R:** Os seguintes recursos estão disponíveis no MSMQ 4.0, mas não no MSMQ 3.0:
+**R:** Os recursos a seguir estão disponíveis no MSMQ 4,0, mas não no MSMQ 3,0:
 
-- Fila de mensagens mortas personalizada tem suporte apenas no MSMQ 4.0.
+- A fila de mensagens mortas personalizada tem suporte apenas no MSMQ 4,0.
 
-- O MSMQ 3.0 e 4.0 tratar mensagens suspeitas de maneira diferente.
+- O MSMQ 3,0 e 4,0 lidam com mensagens suspeitas de forma diferente.
 
-- Somente o MSMQ 4.0 oferece suporte à leitura transacionada remota.
+- Somente o MSMQ 4,0 dá suporte à leitura transacionada remota.
 
-Para obter mais informações, consulte [diferenças nos recursos de enfileiramento de mensagens no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).
+Para obter mais informações, consulte [diferenças em recursos de enfileiramento no Windows Vista, no Windows Server 2003 e no Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md).
 
-**P:** Pode usar o MSMQ 3.0 em um lado de uma comunicação em fila e MSMQ 4.0 no outro lado?
+**P:** Posso usar o MSMQ 3,0 em um lado de uma comunicação em fila e o MSMQ 4,0 no outro lado?
 
 **R:** Sim.
 
-**P:** Eu quero integrar aplicativos existentes do MSMQ com novos clientes do WCF ou servidores. É necessário atualizar os dois lados da minha infraestrutura MSMQ?
+**P:** Quero integrar os aplicativos MSMQ existentes a novos clientes ou servidores WCF. É necessário atualizar ambos os lados da minha infraestrutura do MSMQ?
 
-**R:** Nº Não é necessário atualizar para o MSMQ 4.0 em ambos os lados.
+**R:** não. Não é necessário atualizar para o MSMQ 4,0 em ambos os lados.
 
 ## <a name="troubleshooting"></a>Solução de problemas
 
-Esta seção contém as respostas para problemas mais comuns de solução de problemas. Alguns problemas que são limitações conhecidos também são descritos nas notas de versão.
+Esta seção contém respostas para os problemas mais comuns de solução de problemas. Alguns problemas que são limitações conhecidas também são descritos nas notas de versão.
 
-**P:** Estou tentando usar uma fila particular e recebo a seguinte exceção: `System.InvalidOperationException`: A URL é inválida. A URL para a fila não pode conter o caractere '$'. Use a sintaxe MSMQ://machine/private/queueName para identificar uma fila particular.
+**P:** Estou tentando usar uma fila particular e obtenho a seguinte exceção: `System.InvalidOperationException`: a URL é inválida. A URL da fila não pode conter o caractere ' $ '. Use a sintaxe em net. MSMQ://machine/private/queueName para endereçar uma fila privada.
 
-**R:** Verifique se a fila de identificador de recurso uniforme (URI) em sua configuração e código. Não use o caractere "$" no URI. Por exemplo, para lidar com uma fila particular chamada OrdersQueue, especifique o URI como net.msmq://localhost/private/ordersQueue.
+**R:** Verifique a Uniform Resource Identifier da fila (URI) em sua configuração e código. Não use o caractere "$" no URI. Por exemplo, para endereçar uma fila particular chamada OrdersQueue, especifique o URI como net. MSMQ://localhost/private/ordersQueue.
 
-**P:** Chamando `ServiceHost.Open()` em meu aplicativo enfileirado gera a seguinte exceção: `System.ArgumentException`: Um endereço base não pode conter uma cadeia de caracteres de consulta do URI. Por quê?
+**P:** Chamar `ServiceHost.Open()` em meu aplicativo em fila gera a seguinte exceção: `System.ArgumentException`: um endereço base não pode conter uma cadeia de caracteres de consulta de URI. Por quê?
 
-**R:** Verifique a fila de URI em seu arquivo de configuração em seu código. Embora o uso de suportam a filas MSMQ o '?' caractere, URIs interpretar esse caractere como o início de uma consulta de cadeia de caracteres. Para evitar esse problema, use nomes de fila que não contêm '?' caracteres.
+**R:** Verifique o URI da fila no arquivo de configuração e no seu código. Enquanto as filas do MSMQ dão suporte ao uso do caractere '? ', os URIs interpretam esse caractere como o início de uma consulta de cadeia de caracteres. Para evitar esse problema, use nomes de fila que não contenham caracteres '? '.
 
-**P:** Meu envio foi bem-sucedida, mas nenhuma operação de serviço é invocada no receptor. Por quê?
+**P:** Meu envio foi bem-sucedido, mas nenhuma operação de serviço é invocada no receptor. Por quê?
 
-**R:** Para determinar a resposta, trabalhe com a lista de verificação a seguir:
+**R:** Para determinar a resposta, trabalhe na seguinte lista de verificação:
 
 - Verifique se os requisitos de fila transacional são compatíveis com as garantias especificadas. Observe os seguintes princípios:
 
-  - Você pode enviar mensagens duráveis (datagramas e sessões) com "exatamente uma vez" garantias (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) apenas para uma fila transacional.
+  - Você pode enviar mensagens duráveis (datagrams e sessões) com garantias "exatamente uma vez" (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) somente para uma fila transacional.
 
-  - Você pode enviar sessões somente com garantias de "exatamente uma vez".
+  - Você pode enviar sessões somente com garantias "exatamente uma vez".
 
   - Uma transação é necessária para receber mensagens em uma sessão de uma fila transacional.
 
-  - Você pode enviar ou receber duráveis ou voláteis mensagens (datagramas) com nenhuma garantia (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) somente a uma fila não transacional.
+  - Você pode enviar ou receber mensagens voláteis ou duráveis (somente de datagramas) sem garantias (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`) somente para uma fila não transacional.
 
-- Verificar a fila de inatividade. Se você achar que as mensagens de lá, determine por que eles não foram entregues.
+- Verifique a fila de mensagens mortas. Se você encontrar as mensagens lá, determine por que elas não foram entregues.
 
-- Verifique se as filas de saída para resolver problemas ou de conectividade.
+- Verifique as filas de saída para obter conectividade ou resolver problemas.
 
-**P:** Eu especifiquei uma fila de inatividade personalizada, mas quando eu iniciar o aplicativo de remetente, obtenho uma exceção que a fila de inatividade não for encontrada ou o aplicativo de envio não tem permissão para a fila de inatividade. Por que isso está acontecendo?
+**P:** Especifiquei uma fila de mensagens mortas personalizada, mas quando eu iniciar o aplicativo do remetente, recebo uma exceção de que a fila de mensagens mortas não foi encontrada ou o aplicativo de envio não tem permissão para a fila de mensagens mortas. Por que isso está acontecendo?
 
-**R:** O URI da fila mortas personalizada deve incluir "localhost" ou o nome do computador no primeiro segmento, por exemplo, net.msmq://localhost/private/myAppdead-letter fila.
+**R:** O URI de fila de mensagens mortas personalizado deve incluir um "localhost" ou o nome do computador no primeiro segmento, por exemplo, net. MSMQ://localhost/private/myAppdead-letter Queue.
 
-**P:** Ele sempre é necessário definir uma fila de inatividade personalizada ou há uma fila de inatividade padrão?
+**P:** É sempre necessário definir uma fila de mensagens mortas personalizada ou existe uma fila de mensagens mortas padrão?
 
-**R:** Se as garantias são "exatamente uma vez" (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`), e se você não especificar uma fila de inatividade personalizada, o padrão é uma fila de inatividade em todo o sistema transacional.
+**R:** Se as garantias forem "exatamente uma vez" (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `true`) e se você não especificar uma fila de mensagens mortas personalizada, o padrão será uma fila de mensagens mortas transacional em todo o sistema.
 
-Se as garantias são none (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`), em seguida, o padrão não é nenhuma funcionalidade de fila de inatividade.
+Se as garantias forem nenhuma (<xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> = `false`), o padrão será nenhuma funcionalidade de fila de mensagens mortas.
 
-**P:** Meu serviço lança em SvcHost.Open com uma mensagem "EndpointListener requisitos não podem ser atendidos, o ListenerFactory". Por quê?
+**P:** Meu serviço é acionado em SvcHost. Open com uma mensagem "os requisitos de EndpointListener não podem ser atendidos pelo ListenerFactory". Por quê?
 
-R. Verifique seu contrato de serviço. Você pode ter esquecido de colocar "IsOneWay =`true`" em todas as operações de serviço. As filas oferecem suporte apenas a operações de serviço unidirecional.
+R. Verifique seu contrato de serviço. Você pode ter esquecido de colocar "IsOneWay =`true`" em todas as operações de serviço. As filas dão suporte apenas a operações de serviço unidirecionais.
 
-**P:** Há mensagens na fila, mas nenhuma operação de serviço é invocada. O que é o problema?
+**P:** Há mensagens na fila, mas nenhuma operação de serviço é invocada. Qual é o problema?
 
-**R:** Determine se o seu host de serviço está com defeito. Você pode verificar examinar o rastreamento ou implementando `IErrorHandler`. Falhas de host de serviço, por padrão, se uma mensagem suspeita é detectada.
+**R:** Determine se o host de serviço está com falha. Você pode verificar examinando o rastreamento ou implementando `IErrorHandler`. Falhas de host de serviço, por padrão, se uma mensagem suspeita for detectada.
 
-**P:** Há mensagens na fila, mas meu na fila de serviço hospedado na Web não está obtendo ativado. Por quê?
+**P:** Há mensagens na fila, mas meu serviço enfileirado hospedado na Web não está sendo ativado. Por quê?
 
-**R:** O motivo mais comum é que as permissões.
+**R:** O motivo mais comum é as permissões.
 
-1. Certifique-se de que o `NetMsmqActivator` processo está em execução e a identidade do `NetMsmqActivator` processo é dada a leitura e busca de permissão na fila.
+1. Verifique se o processo de `NetMsmqActivator` está em execução e se a identidade do processo de `NetMsmqActivator` recebe a permissão de leitura e busca na fila.
 
-2. Se o `NetMsmqActivator` é o monitoramento de filas em um computador remoto, certifique-se de que `NetMsmqActivator` não é executado em um token restrito. Para executar o `NetMsmqActivator` com um token sem restrições:
+2. Se o `NetMsmqActivator` estiver monitorando filas em um computador remoto, verifique se `NetMsmqActivator` não é executado sob um token restrito. Para executar o `NetMsmqActivator` com um token irrestrito:
 
-    ```
+    ```console
     sc sidtype NetMsmqActivator unrestricted
     ```
 
-Para problemas de host da Web relacionados não são de segurança, consulte: [Um aplicativo na fila de hospedagem na Web](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md).
+Para problemas de host da Web relacionados à não segurança, consulte: [hospedagem Web de um aplicativo enfileirado](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md).
 
-**P:** O que é a maneira mais fácil para as sessões de acesso?
+**P:** Qual é a maneira mais fácil de acessar sessões?
 
-**R:** Definir o preenchimento automático =`true` na operação que corresponde à última mensagem na sessão e defina o preenchimento automático =`false` em todas as operações restantes do serviço.
+**R:** Defina preenchimento automático =`true` na operação que corresponde à última mensagem na sessão e defina AutoCompletar =`false` em todas as operações de serviço restantes.
 
-**P:** Onde posso encontrar respostas para perguntas comuns sobre o MSMQ
+**P:** Onde posso encontrar respostas para perguntas comuns sobre o MSMQ?
 
-**R:** Para obter mais informações sobre o MSMQ, consulte [Microsoft Message Queuing](https://go.microsoft.com/fwlink/?LinkId=87810).
+**R:** Para obter mais informações sobre o MSMQ, consulte [enfileiramento de mensagens da Microsoft](https://go.microsoft.com/fwlink/?LinkId=87810).
 
-**P:** Por que meu serviço lançar uma `ProtocolException` quando ler de uma fila que contém ambos na fila de mensagens da sessão e mensagens do datagrama na fila?
+**P:** Por que meu serviço lança um `ProtocolException` ao ler de uma fila que contém mensagens de sessão enfileiradas e mensagens de datagrama em fila?
 
-**R:** Há uma diferença fundamental nas mensagens de sessão na forma de fila e mensagens do datagrama na fila são compostas. Por isso, um serviço que está esperando para ler uma mensagem na fila de sessão não pode receber uma mensagem de datagrama na fila e um serviço que espera ler uma mensagem de datagrama na fila não pode receber uma mensagem da sessão. Ao tentar ler os dois tipos de mensagens da mesma fila gera a seguinte exceção:
+**R:** Há uma diferença fundamental no modo como as mensagens de sessão enfileiradas e as mensagens de datagrama em fila são compostas. Por isso, um serviço que está esperando ler uma mensagem de sessão em fila não pode receber uma mensagem de datagrama enfileirada e um serviço esperando ler uma mensagem de datagrama em fila não pode receber uma mensagem de sessão. A tentativa de ler os dois tipos de mensagens da mesma fila gera a seguinte exceção:
 
-```
+```console
 System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a poison message. This occurred because the message exceeded the maximum number of delivery attempts or because the channel detected a fundamental problem with the message. The inner exception may contain additional information.
 ---> System.ServiceModel.ProtocolException: An incoming MSMQ message contained invalid or unexpected .NET Message Framing information in its body. The message cannot be received. Ensure that the sender is using a compatible service contract with a matching SessionMode.
 ```
 
-A fila de inatividade do sistema, bem como qualquer fila mortas personalizada, é especialmente suscetíveis a esse problema se um aplicativo envia ambos na fila de mensagens da sessão e na fila de mensagens do datagrama do mesmo computador. Se uma mensagem não pode ser enviada com êxito, ele é movido para a fila de inatividade. Sob essas circunstâncias, é possível ter mensagens de sessão e o datagrama na fila de inatividade. Não há nenhuma maneira de separar os dois tipos de mensagens em tempo de execução durante a leitura de uma fila, portanto, aplicativos não devem enviar ambos na fila de mensagens da sessão e na fila de mensagens do datagrama do mesmo computador.
+A fila de mensagens mortas do sistema, bem como qualquer fila de mensagens mortas personalizada, é particularmente suscetível a esse problema se um aplicativo envia mensagens de sessão em fila e mensagens de datagrama em fila do mesmo computador. Se uma mensagem não puder ser enviada com êxito, ela será movida para a fila de mensagens mortas. Sob essas circunstâncias, é possível ter mensagens de mensagem e de datagrama na fila de mensagens mortas. Não há como separar os dois tipos de mensagens no tempo de execução ao ler de uma fila, portanto, os aplicativos não devem enviar mensagens de sessão em fila e mensagens de datagrama em fila do mesmo computador.
 
-### <a name="msmq-integration-specific-troubleshooting"></a>Integração de MSMQ com: Solução de problemas específicos
+### <a name="msmq-integration-specific-troubleshooting"></a>Integração do MSMQ: solução de problemas específica
 
-**P:** Quando eu enviar uma mensagem, ou quando eu abro o host de serviço, recebo um erro que indica que o esquema está errado. Por quê?
+**P:** Quando envio uma mensagem ou quando abro o host de serviço, recebo um erro indicando que o esquema está errado. Por quê?
 
-**R:** Quando você usa a associação de integração de MSMQ, você deve usar o esquema FormatName. Por exemplo, msmq.formatname:DIRECT=OS:.\private$\OrdersQueue. Mas quando você especifica a fila de inatividade personalizada, você deve usar o esquema de NET. MSMQ.
+**R:** Ao usar a associação de integração do MSMQ, você deve usar o esquema MSMQ. FormatName. Por exemplo, MSMQ. FormatName: DIRECT = OS: .\Private $ \OrdersQueue. Mas ao especificar a fila de mensagens mortas personalizada, você deve usar o esquema net. MSMQ.
 
-**P:** Quando posso usar um nome de formato público ou privado e abrir o host de serviço no [!INCLUDE[wv](../../../../includes/wv-md.md)], recebo um erro. Por quê?
+**P:** Quando uso um nome de formato público ou privado e abro o host de serviço no [!INCLUDE[wv](../../../../includes/wv-md.md)], recebo um erro. Por quê?
 
-**R:** O canal de integração do WCF no [!INCLUDE[wv](../../../../includes/wv-md.md)] verifica se uma subfila poderá ser aberta para a fila principal do aplicativo para tratar mensagens suspeitas. O nome de subfila deriva um FormatName que URI passado para o ouvinte. O nome de subfila no MSMQ só pode ser um nome de formato direto. Portanto, você verá o erro. Altere o URI da fila para um nome de formato direto.
+**R:** O canal de integração do WCF no [!INCLUDE[wv](../../../../includes/wv-md.md)] verifica se uma subfila pode ser aberta para a fila principal do aplicativo para lidar com mensagens suspeitas. O nome da subfila é derivado de um URI MSMQ. FormatName passado para o ouvinte. O nome da subfila no MSMQ só pode ser um nome de formato direto. Você verá o erro. Altere o URI da fila para um nome de formato direto.
 
-**P:** Ao receber uma mensagem de um aplicativo do MSMQ, a mensagem se encontra na fila e não é lido pelo aplicativo de recebimento de WCF. Por quê?
+**P:** Ao receber uma mensagem de um aplicativo MSMQ, a mensagem fica na fila e não é lida pelo aplicativo WCF receptor. Por quê?
 
-**R:** Verifique se a mensagem tem um corpo. Se a mensagem não tem nenhum corpo, o canal de integração de MSMQ ignora a mensagem. Implemente `IErrorHandler` para ser notificado sobre exceções e verificar os rastreamentos.
+**R:** Verifique se a mensagem tem um corpo. Se a mensagem não tiver corpo, o canal de integração do MSMQ ignorará a mensagem. Implemente `IErrorHandler` para ser notificado de exceções e verifique os rastreamentos.
 
-### <a name="security-related-troubleshooting"></a>Solução de problemas relacionados à segurança
+### <a name="security-related-troubleshooting"></a>Solução de problemas relacionada à segurança
 
-**P:** Quando executo a amostra que usa uma associação padrão no modo de grupo de trabalho, as mensagens parecem sejam enviados, mas nunca são recebidas pelo destinatário.
+**P:** Quando executo o exemplo que usa uma associação padrão no modo de grupo de trabalho, as mensagens parecem ser enviadas, mas nunca são recebidas pelo destinatário.
 
-**R:** Por padrão, as mensagens são assinadas usando um certificado interno do MSMQ que exige que o serviço de diretório do Active Directory. No modo de grupo de trabalho, porque o Active Directory não estiver disponível, a mensagem de assinatura falhará. Portanto, a mensagem chega à fila de inatividade e causa da falha, como "Assinatura incorreta", é indicada.
+**R:** Por padrão, as mensagens são assinadas usando um certificado interno do MSMQ que requer o serviço de diretório Active Directory. No modo de grupo de trabalho, como Active Directory não está disponível, a assinatura da mensagem falha. Assim, a mensagem chega à fila de mensagens mortas e a causa de falha, como "assinatura inadequada", é indicada.
 
-A solução é desativar a segurança. Isso é feito definindo <xref:System.ServiceModel.NetMsmqSecurity.Mode%2A>  =  <xref:System.ServiceModel.NetMsmqSecurityMode.None> fazê-lo funcionar no modo de grupo de trabalho.
+A solução alternativa é desativar a segurança. Isso é feito definindo <xref:System.ServiceModel.NetMsmqSecurity.Mode%2A> = <xref:System.ServiceModel.NetMsmqSecurityMode.None> para fazê-lo funcionar no modo de grupo de trabalho.
 
-Outra solução alternativa é obter o <xref:System.ServiceModel.MsmqTransportSecurity> do <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A> propriedade e defini-lo como <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>e defina o certificado do cliente.
+Outra solução alternativa é obter a <xref:System.ServiceModel.MsmqTransportSecurity> da propriedade <xref:System.ServiceModel.NetMsmqSecurity.Transport%2A> e defini-la como <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate>e definir o certificado do cliente.
 
-Outra solução alternativa é instalar o MSMQ com integração do Active Directory.
+Outra alternativa é instalar o MSMQ com a integração do Active Directory.
 
-**P:** Quando eu enviar uma mensagem com a associação padrão (ativada de segurança de transporte) no Active Directory para uma fila, receber uma mensagem de "certificado interno não encontrado". Como corrigir isso?
+**P:** Quando envio uma mensagem com associação padrão (segurança de transporte ativada) em Active Directory a uma fila, recebo uma mensagem "certificado interno não encontrado". Como fazer corrigir isso?
 
-**R:** Isso significa que o certificado no Active Directory para o remetente deve ser renovado. Para fazer isso, abra **painel de controle**, **ferramentas administrativas**, **gerenciamento do computador**, clique com botão direito **MSMQ**e selecione **Propriedades**. Selecione o **certificado de usuário** guia e clique no **Renew** botão.
+**R:** Isso significa que o certificado em Active Directory para o remetente deve ser renovado. Para fazer isso, abra **painel de controle**, **Ferramentas administrativas**, **Gerenciamento do computador**, clique com o botão direito do mouse em **MSMQ**e selecione **Propriedades**. Selecione a guia **certificado de usuário** e clique no botão **renovar** .
 
-**P:** Quando eu enviar uma mensagem usando <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> e especificar o certificado a ser usado, recebo uma mensagem de "Certificado inválido". Como corrigir isso?
+**P:** Quando envio uma mensagem usando <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> e especifico o certificado a ser usado, recebo uma mensagem de "certificado inválido". Como fazer corrigir isso?
 
-**R:** Você não pode usar um repositório de certificados do computador local com o modo de certificado. Você precisa copiar o certificado do repositório de certificados de computador para o armazenamento do usuário atual usando o snap-in de certificado. Para obter o certificado do snap-in:
+**R:** Você não pode usar um repositório de certificados do computador local com o modo de certificado. Você precisa copiar o certificado do repositório de certificados do computador para o repositório de usuários atual usando o snap-in de certificado. Para obter o snap-in de certificado:
 
-1. Clique em **inicie**, selecione **execute**, digite `mmc`e clique em **Okey**.
+1. Clique em **Iniciar**, selecione **executar**, digite `mmc`e clique em **OK**.
 
-2. No **Console de gerenciamento Microsoft**, abra o **arquivo** menu e selecione **Adicionar/Remover Snap-in**.
+2. No **console de gerenciamento Microsoft**, abra o menu **arquivo** e selecione **Adicionar/remover snap-in**.
 
-3. No **Adicionar/Remover Snap-in** caixa de diálogo, clique o **Add** botão.
+3. Na caixa de diálogo **Adicionar/remover snap-in** , clique no botão **Adicionar** .
 
-4. No **Adicionar Snap-in Standalone** caixa de diálogo, selecione certificados e clique em **Add**.
+4. Na caixa de diálogo **Adicionar Snap-in autônomo** , selecione certificados e clique em **Adicionar**.
 
-5. No **certificados** caixa de diálogo snap-in, selecione **minha conta de usuário** e clique em **concluir**.
+5. Na caixa de diálogo snap-in de **certificados** , selecione **minha conta de usuário** e clique em **concluir**.
 
-6. Em seguida, adicione um segundo certificados snap-in usando as etapas anteriores, mas desta vez selecione **conta de computador** e clique em **próxima**.
+6. Em seguida, adicione um segundo snap-in de certificados usando as etapas anteriores, mas desta vez selecione **conta de computador** e clique em **Avançar**.
 
-7. Selecione **computador Local** e clique em **concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados de computador para o armazenamento do usuário atual.
+7. Selecione **computador local** e clique em **concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados do computador para o repositório de usuários atual.
 
-**P:** Quando meu serviço lê uma fila em outro computador no modo de grupo de trabalho, eu obtenho uma exceção "acesso negado".
+**P:** Quando meu serviço lê de uma fila em outro computador no modo de grupo de trabalho, obtenho uma exceção de "acesso negado".
 
-**R:** No modo de grupo de trabalho, para um aplicativo remoto obter acesso à fila, o aplicativo deve ter permissão para acessar a fila. Adicionar "Logon anônimo" à lista de controle de acesso (ACL) da fila e dê a ele a permissão de leitura.
+**R:** No modo de grupo de trabalho, para que um aplicativo remoto tenha acesso à fila, o aplicativo deve ter permissão para acessar a fila. Adicione "logon anônimo" à ACL (lista de controle de acesso) da fila e conceda a ela permissão de leitura.
 
-**P:** Quando um cliente do serviço de rede (ou qualquer cliente que não tem uma conta de domínio) envia uma mensagem na fila, o envio falha com um certificado inválido. Como corrigir isso?
+**P:** Quando um cliente de serviço de rede (ou qualquer cliente que não tem uma conta de domínio) envia uma mensagem em fila, o envio falha com um certificado inválido. Como fazer corrigir isso?
 
-**R:** Verifique a configuração de associação. A associação padrão tem a segurança do transporte MSMQ ativada para assinar a mensagem. Para desativá-lo.
+**R:** Verifique a configuração de associação. A associação padrão tem a segurança de transporte MSMQ ativada para assinar a mensagem. Desative-o.
 
-### <a name="remote-transacted-receives"></a>Recebe remoto transacionado
+### <a name="remote-transacted-receives"></a>Recebimentos transacionados remotamente
 
-**P:** Quando há uma fila em um e um serviço WCF que lê mensagens de uma fila no computador B (cenário de recebimento remoto transacionado) da máquina, mensagens não lidas da fila. As informações de rastreamento indica o recebimento falhou com a mensagem "transação não pode ser importado." O que pode fazer para corrigir isso?
+**P:** Quando tenho uma fila no computador A e um serviço WCF que lê mensagens de uma fila no computador B (o cenário de recebimento remoto transacionado), as mensagens não são lidas da fila. Informações de rastreamento indicam que o recebimento falhou com a mensagem "a transação não pode ser importada". O que posso fazer para corrigir isso?
 
-**R:** Há três possíveis razões para isso:
+**R:** Há três motivos possíveis para isso:
 
-- Se você estiver no modo de domínio, remoto transacionado receber requer acesso de rede Microsoft Distributed Transaction coordenador (MSDTC). Você pode habilitá-lo usando **Adicionar/remover componentes**.
+- Se você estiver no modo de domínio, o recebimento remoto transacionado exigirá acesso à rede do Microsoft Coordenador de Transações Distribuídas (MSDTC). Você pode habilitar isso usando **Adicionar/remover componentes**.
 
-  ![Captura de tela que mostra a habilitação de DTC de rede acesso.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)
+  ![Captura de tela que mostra a habilitação do acesso DTC de rede.](./media/troubleshooting-queued-messaging/enable-distributed-transaction-coordinator-access.jpg)
 
-- Verifique o modo de autenticação para se comunicar com o Gerenciador de transações. Se você estiver no modo de grupo de trabalho, "Nenhuma autenticação necessária" deve ser selecionada. Se você estiver no modo de domínio, em seguida, "Autenticação mútua necessária" deve ser selecionada.
+- Verifique o modo de autenticação para se comunicar com o Gerenciador de transações. Se você estiver no modo de grupo de trabalho, "nenhuma autenticação necessária" deverá ser selecionada. Se você estiver no modo de domínio, a "autenticação mútua necessária" deverá ser selecionada.
 
   ![Habilitando transações XA](../../../../docs/framework/wcf/feature-details/media/4f3695e0-fb0b-4c5b-afac-75f8860d2bb0.jpg "4f3695e0-fb0b-4c5b-afac-75f8860d2bb0")
 
-- Certifique-se de que o MSDTC está na lista de exceções na **Firewall de Conexão com a Internet** configurações.
+- Verifique se o MSDTC está na lista de exceções nas configurações de **Firewall de conexão com a Internet** .
 
-- Certifique-se de que você está usando [!INCLUDE[wv](../../../../includes/wv-md.md)]. MSMQ em [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte à leitura transacionada remota. O MSMQ em versões anteriores do Windows não oferece suporte a leitura transacionada remota.
+- Verifique se você está usando [!INCLUDE[wv](../../../../includes/wv-md.md)]. O MSMQ on [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte à leitura transacionada remota. O MSMQ em versões anteriores do Windows não dá suporte à leitura transacionada remota.
 
-**P:** Quando a leitura da fila de serviço é um serviço de rede, por exemplo, em uma Web host, por que obtenho uma exceção de acesso negado é gerado durante a leitura da fila?
+**P:** Quando o serviço de leitura da fila é um serviço de rede, por exemplo, em um host da Web, por que obtenho uma exceção de acesso negado ao ler da fila?
 
-**R:** Acesso de leitura do serviço de rede deve ser adicionado à fila de ACL para garantir que um serviço de rede possa ler da fila.
+**R:** O acesso de leitura do serviço de rede deve ser adicionado à ACL da fila para garantir que um serviço de rede possa ler a partir da fila.
 
-**P:** Pode usar o serviço de ativação MSMQ para ativar aplicativos com base em mensagens em uma fila em um computador remoto?
+**P:** Posso usar o serviço de ativação MSMQ para ativar aplicativos com base em mensagens em uma fila em um computador remoto?
 
-**R:** Sim. Para fazer isso, você deve configurar o serviço de ativação MSMQ para ser executado como um serviço de rede e adicionar o acesso ao serviço de rede para a fila no computador remoto.
+**R:** Sim. Para fazer isso, você deve configurar o serviço de ativação MSMQ para ser executado como um serviço de rede e adicionar acesso ao serviço de rede à fila no computador remoto.
 
-## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Usando associações personalizadas de MSMQ com ReceiveContext habilitado
+## <a name="using-custom-msmq-bindings-with-receivecontext-enabled"></a>Usando associações MSMQ personalizadas com ReceiveContext habilitado
 
-Ao usar uma ligação personalizada de MSMQ com <xref:System.ServiceModel.Channels.ReceiveContext> habilitada para processar uma mensagem de entrada usará um pool de threads porque MSMQ nativo não oferece suporte a conclusão de e/s para assíncrona <xref:System.ServiceModel.Channels.ReceiveContext> recebe. Isso ocorre porque o processamento dessa mensagem usa transações internas para <xref:System.ServiceModel.Channels.ReceiveContext> e MSMQ não oferece suporte para processamento assíncrono. Para contornar esse problema, você pode adicionar um <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> ao ponto de extremidade para forçar síncrona de processamento ou defina <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> como 1.
+Ao usar uma associação do MSMQ personalizada com o <xref:System.ServiceModel.Channels.ReceiveContext> habilitado, o processamento de uma mensagem de entrada usará um thread do pool de threads porque o MSMQ nativo não dá suporte à conclusão de e/s para O recebimento assíncrono de <xref:System.ServiceModel.Channels.ReceiveContext>. Isso ocorre porque o processamento dessa mensagem usa transações internas para <xref:System.ServiceModel.Channels.ReceiveContext> e o MSMQ não oferece suporte ao processamento assíncrono. Para contornar esse problema, você pode adicionar um <xref:System.ServiceModel.Description.SynchronousReceiveBehavior> ao ponto de extremidade para forçar o processamento síncrono ou definir <xref:System.ServiceModel.Description.DispatcherSynchronizationBehavior.MaxPendingReceives%2A> como 1.

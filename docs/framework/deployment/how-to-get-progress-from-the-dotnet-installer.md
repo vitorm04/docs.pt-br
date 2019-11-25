@@ -1,5 +1,5 @@
 ---
-title: 'Como: Acompanhar o progresso do Instalador do .NET Framework 4.5'
+title: Como acompanhar o progresso do Instalador do .NET Framework 4.5
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdd2832f112706cef6050774ce3f6db5a940424a
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: e07bb3443fb9461fa707d66e74350a39980c60c0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052093"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975547"
 ---
-# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como: Acompanhar o progresso do Instalador do .NET Framework 4.5
+# <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Como acompanhar o progresso do Instalador do .NET Framework 4.5
 
-O .NET Framework 4.5 é um tempo de execução redistribuível. Se você desenvolver aplicativos para esta versão do .NET Framework, poderá incluir (encadear) a instalação do .NET Framework 4.5 como uma parte de pré-requisito da instalação do seu aplicativo. Para apresentar uma experiência de instalação personalizada ou unificada, talvez você queira iniciar silenciosamente a instalação do .NET Framework 4.5 e acompanhar seu progresso, mostrando simultaneamente o progresso da instalação do aplicativo. Para habilitar o acompanhamento silencioso, a instalação do .NET Framework 4.5 (que pode ser inspecionada) define um protocolo usando uma MMIO (E/S mapeada em memória) para se comunicar com a instalação (o observador ou encadeador). Esse protocolo define uma maneira para um encadeador obter informações sobre o progresso, obter resultados detalhados, responder às mensagens e cancelar a instalação do .NET Framework 4.5.
+O .NET Framework 4.5 é um runtime redistribuível. Se você desenvolver aplicativos para esta versão do .NET Framework, poderá incluir (encadear) a instalação do .NET Framework 4.5 como uma parte de pré-requisito da instalação do seu aplicativo. Para apresentar uma experiência de instalação personalizada ou unificada, talvez você queira iniciar silenciosamente a instalação do .NET Framework 4.5 e acompanhar seu progresso, mostrando simultaneamente o progresso da instalação do aplicativo. Para habilitar o acompanhamento silencioso, a instalação do .NET Framework 4.5 (que pode ser inspecionada) define um protocolo usando uma MMIO (E/S mapeada em memória) para se comunicar com a instalação (o observador ou encadeador). Esse protocolo define uma maneira para um encadeador obter informações sobre o progresso, obter resultados detalhados, responder às mensagens e cancelar a instalação do .NET Framework 4.5.
 
 - **Invocação**. Para chamar a instalação do .NET Framework 4.5 e receber informações sobre o progresso da seção da MMIO, seu programa de instalação deve fazer o seguinte:
 
@@ -34,7 +34,7 @@ O .NET Framework 4.5 é um tempo de execução redistribuível. Se você desenvo
 
         Substitua esses nomes por nomes que são exclusivos para seu programa de instalação.
 
-    2. Leia a seção MMIO. No .NET Framework 4.5, as operações de download e instalação são simultâneas: Uma parte do .NET Framework pode estar sendo instalada enquanto outra está sendo baixada. Como resultado, o progresso é enviado novamente (isto é, gravado) para a seção MMIO como dois números (`m_downloadSoFar` e `m_installSoFar`) que aumentam de 0 a 255. Quando 255 é gravado e o .NET Framework sai, a instalação está concluída.
+    2. Leia a seção MMIO. No .NET Framework 4,5, as operações de download e instalação são simultâneas: uma parte do .NET Framework pode estar sendo instalada enquanto outra parte está sendo baixada. Como resultado, o progresso é enviado novamente (isto é, gravado) para a seção MMIO como dois números (`m_downloadSoFar` e `m_installSoFar`) que aumentam de 0 a 255. Quando 255 é gravado e o .NET Framework sai, a instalação está concluída.
 
 - **Códigos de saída**. Os códigos de saída a seguir do comando para chamar o programa redistribuível .NET Framework 4.5 indicam se a instalação teve êxito ou falhou:
 
@@ -55,13 +55,13 @@ O exemplo de encadeador inicializa e controla silenciosamente a instalação do 
 > [!WARNING]
 > Você deve executar o exemplo como um administrador.
 
-Você pode baixar a solução completa do Visual Studio para o [.NET Framework 4.5 Chainer Sample](https://go.microsoft.com/fwlink/?LinkId=231345) na Galeria de Exemplos do MSDN.
+Você pode baixar a solução completa do Visual Studio para o [.NET Framework 4.5 Chainer Sample](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba) na Galeria de Exemplos do MSDN.
 
-As seguintes seções descrevem os arquivos significativos nesta amostra: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.
+As seções a seguir descrevem os arquivos significativos neste exemplo: MMIOChainer.h, ChainingdotNet4.cpp e IProgressObserver.h.
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- O arquivo MMIOChainer.h (consulte o [código completo](https://go.microsoft.com/fwlink/?LinkId=231369)) contém a definição da estrutura de dados e a classe base da qual a classe do encadeador deve ser derivada. O .NET Framework 4.5 estende a estrutura de dados MMIO para lidar com os dados que instalador do .NET Framework 4.5 precisa. As alterações na estrutura MMIO têm compatibilidade com versões anteriores, portanto, um encadeador do .NET Framework 4 pode funcionar com a instalação do .NET Framework 4.5 sem a necessidade de recompilação. No entanto, esse cenário não dá suporte ao recurso para reduzir as reinicializações do sistema.
+- O arquivo MMIOChainer.h (consulte o [código completo](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=663039622)) contém a definição da estrutura de dados e a classe base da qual a classe do encadeador deve ser derivada. O .NET Framework 4.5 estende a estrutura de dados MMIO para lidar com os dados que instalador do .NET Framework 4.5 precisa. As alterações na estrutura MMIO têm compatibilidade com versões anteriores, portanto, um encadeador do .NET Framework 4 pode funcionar com a instalação do .NET Framework 4.5 sem a necessidade de recompilação. No entanto, esse cenário não dá suporte ao recurso para reduzir as reinicializações do sistema.
 
     Um campo de versão fornece um meio de identificar as revisões do formato de mensagem e de estrutura. A instalação do .NET Framework determina a versão da interface do encadeador chamando a função `VirtualQuery` para determinar o tamanho do mapeamento de arquivo. Se o tamanho for grande o suficiente para acomodar o campo de versão, a instalação do .NET Framework usa o valor especificado. Se o mapeamento de arquivo for muito pequeno para conter um campo de versão, que é o caso com o .NET Framework 4, o processo de instalação assume a versão 0 (4). Se o encadeador não dá suporte à versão da mensagem que o instalador do .NET Framework deseja enviar, a instalação do .NET Framework assume uma resposta de ignorar.
 
@@ -98,7 +98,7 @@ As seguintes seções descrevem os arquivos significativos nesta amostra: MMIOCh
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
-- O arquivo IProgressObserver.h implementa um observador de progresso ([veja o código completo](https://go.microsoft.com/fwlink/?LinkId=231370)). Este observador é notificado sobre o progresso do download e da instalação (especificado como um `char` sem sinal, 0 a 255, que indica 1 a 100% concluído). O observador também é notificado quando o encadeador envia uma mensagem e o observador deve enviar uma resposta.
+- O arquivo IProgressObserver.h implementa um observador de progresso ([veja o código completo](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1263700592)). Este observador é notificado sobre o progresso do download e da instalação (especificado como um `char` sem sinal, 0 a 255, que indica 1 a 100% concluído). O observador também é notificado quando o encadeador envia uma mensagem e o observador deve enviar uma resposta.
 
     ```cpp
         class IProgressObserver
@@ -112,7 +112,7 @@ As seguintes seções descrevem os arquivos significativos nesta amostra: MMIOCh
 
 #### <a name="chainingdotnet45cpp"></a>ChainingdotNet4.5.cpp
 
-- O arquivo [ChainingdotNet4.5.cpp](https://go.microsoft.com/fwlink/?LinkId=231368) implementa a classe `Server`, que deriva da classe `MmioChainer` e substitui os métodos apropriados para exibir informações sobre o progresso. O MmioChainer cria uma seção com o nome da seção especificado e inicializa o encadeador com o nome do evento especificado. O nome do evento é salvo na estrutura de dados mapeada. Você deve tornar os nomes da seção e do evento exclusivos. A classe `Server` no código a seguir inicia o programa de instalação especificado, monitora o progresso e retorna um código de saída.
+- O arquivo [ChainingdotNet4.5.cpp](https://code.msdn.microsoft.com/NET-Framework-45-Developer-e416a0ba/sourcecode?fileId=47345&pathId=1757268882) implementa a classe `Server`, que deriva da classe `MmioChainer` e substitui os métodos apropriados para exibir informações sobre o progresso. O MmioChainer cria uma seção com o nome da seção especificado e inicializa o encadeador com o nome do evento especificado. O nome do evento é salvo na estrutura de dados mapeada. Você deve tornar os nomes da seção e do evento exclusivos. A classe `Server` no código a seguir inicia o programa de instalação especificado, monitora o progresso e retorna um código de saída.
 
     ```cpp
     class Server : public ChainerSample::MmioChainer, public ChainerSample::IProgressObserver

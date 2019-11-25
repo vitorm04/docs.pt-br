@@ -2,33 +2,36 @@
 title: Tratamento de erros HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 491c39d97c48e2f92ff258ac42b9576d407b898e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34912bccaefb645541f47d083c5c307b20ff77c5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648416"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975950"
 ---
 # <a name="wcf-web-http-error-handling"></a>Tratamento de erros HTTP Web do WCF
-Tratamento de erros do Windows Communication Foundation (WCF) HTTP da Web permite que você retorne erros de serviços do WCF Web HTTP que especificam um código de status HTTP e retornam detalhes do erro usando o mesmo formato, como a operação (por exemplo, XML ou JSON).  
+O tratamento de erros HTTP Web do Windows Communication Foundation (WCF) permite que você retorne erros de serviços HTTP Web WCF que especificam um código de status HTTP e retornam detalhes do erro usando o mesmo formato que a operação (por exemplo, XML ou JSON).  
   
 ## <a name="wcf-web-http-error-handling"></a>Tratamento de erros HTTP Web do WCF  
- O <xref:System.ServiceModel.Web.WebFaultException> classe define um construtor que permite que você especifique um código de status HTTP. Esse código de status é retornado ao cliente. Uma versão genérica do <xref:System.ServiceModel.Web.WebFaultException> classe, <xref:System.ServiceModel.Web.WebFaultException%601> permite que você retorne um tipo definido pelo usuário que contém informações sobre o erro que ocorreu. Esse objeto personalizado é serializado usando o formato especificado pela operação e retornado ao cliente. O exemplo a seguir mostra como retornar um código de status HTTP.  
+ A classe <xref:System.ServiceModel.Web.WebFaultException> define um construtor que permite que você especifique um código de status HTTP. Esse código de status é retornado para o cliente. Uma versão genérica da classe <xref:System.ServiceModel.Web.WebFaultException>, <xref:System.ServiceModel.Web.WebFaultException%601> permite que você retorne um tipo definido pelo usuário que contém informações sobre o erro que ocorreu. Esse objeto personalizado é serializado usando o formato especificado pela operação e retornado ao cliente. O exemplo a seguir mostra como retornar um código de status HTTP.  
   
-```  
-Public string Operation1()  
-{   // Operation logic  
-   // ...  
-   Throw new WebFaultException(HttpStatusCode.Forbidden);  
+```csharp
+public string Operation1()
+{
+    // Operation logic  
+   // ...
+   throw new WebFaultException(HttpStatusCode.Forbidden);
 }  
 ```  
   
- O exemplo a seguir mostra como retornar um código de status HTTP e informações extras em um tipo definido pelo usuário. `MyErrorDetail` é um tipo definido pelo usuário que contém informações adicionais sobre o erro que ocorreu.  
+ O exemplo a seguir mostra como retornar um código de status HTTP e informações extras em um tipo definido pelo usuário. `MyErrorDetail` é um tipo definido pelo usuário que contém informações adicionais sobre o erro ocorrido.  
   
-```  
-Public string Operation2()  
+```csharp
+public string Operation2()
+{
    // Operation logic  
-   // ...   MyErrorDetail detail = new MyErrorDetail  
+   // ...
+   MyErrorDetail detail = new MyErrorDetail()
    {  
       Message = "Error Message",  
       ErrorCode = 123,  
@@ -37,17 +40,17 @@ Public string Operation2()
 }  
 ```  
   
- O código anterior retorna uma resposta HTTP com o código de status "proibido" e um corpo que contém uma instância da `MyErrorDetails` objeto. O formato do `MyErrorDetails` objeto é determinado por:  
+ O código anterior retorna uma resposta HTTP com o código de status proibido e um corpo que contém uma instância do objeto `MyErrorDetails`. O formato do objeto `MyErrorDetails` é determinado por:  
   
-- O valor da `ResponseFormat` parâmetro do <xref:System.ServiceModel.Web.WebGetAttribute> ou <xref:System.ServiceModel.Web.WebInvokeAttribute> atributo especificado na operação de serviço.  
+- O valor do parâmetro `ResponseFormat` do atributo <xref:System.ServiceModel.Web.WebGetAttribute> ou <xref:System.ServiceModel.Web.WebInvokeAttribute> especificado na operação de serviço.  
   
 - O valor de <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>.  
   
-- O valor de <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> propriedade acessando o <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
+- O valor da propriedade <xref:System.ServiceModel.Web.OutgoingWebResponseContext.Format%2A> acessando o <xref:System.ServiceModel.Web.OutgoingWebResponseContext>.  
   
- Para obter mais informações sobre como esses valores afetam a formatação da operação, consulte [formatação do WCF Web HTTP](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
+ Para obter mais informações sobre como esses valores afetam a formatação da operação, consulte [formatação do WCF Web http](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).  
   
- <xref:System.ServiceModel.Web.WebFaultException> é um <xref:System.ServiceModel.FaultException> e, portanto, pode ser usado como o modelo de programação de exceção de falha para os serviços que expõem pontos de extremidade SOAP, bem como pontos de extremidade HTTP de web.  
+ <xref:System.ServiceModel.Web.WebFaultException> é um <xref:System.ServiceModel.FaultException> e, portanto, pode ser usado como o modelo de programação de exceção de falha para serviços que expõem pontos de extremidade SOAP, bem como pontos de extremidade HTTP da Web.  
   
 ## <a name="see-also"></a>Consulte também
 
