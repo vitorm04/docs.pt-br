@@ -1,27 +1,27 @@
 ---
-title: Como localizar nós irmãos (XPath-LINQ to XML) (Visual Basic)
+title: 'Como: Nós irmãos de alterações (XPath- LINQ para XML)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
-ms.openlocfilehash: 9640c8708082965515d4b90c979519f7efdaa2ba
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 52151c939bbf67df37a9535b1081ff902d357123
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582705"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344636"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="99325-102">Como localizar nós irmãos (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99325-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="5ca1b-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ca1b-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
 
-<span data-ttu-id="99325-103">Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico.</span><span class="sxs-lookup"><span data-stu-id="99325-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="99325-104">A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.</span><span class="sxs-lookup"><span data-stu-id="99325-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>
+<span data-ttu-id="5ca1b-103">Você pode desejar localizar todos os seus irmãos de um nó que têm um nome específico.</span><span class="sxs-lookup"><span data-stu-id="5ca1b-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="5ca1b-104">A coleção resultante pode incluir o nó de contexto se o nó de contexto também tem o nome específico.</span><span class="sxs-lookup"><span data-stu-id="5ca1b-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>
 
-<span data-ttu-id="99325-105">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="99325-105">The XPath expression is:</span></span>
+<span data-ttu-id="5ca1b-105">A expressão XPath é:</span><span class="sxs-lookup"><span data-stu-id="5ca1b-105">The XPath expression is:</span></span>
 
 `../Book`
 
-## <a name="example"></a><span data-ttu-id="99325-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="99325-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5ca1b-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5ca1b-106">Example</span></span>
 
-<span data-ttu-id="99325-107">Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`.</span><span class="sxs-lookup"><span data-stu-id="99325-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="99325-108">A coleção resultante inclui o nó de contexto.</span><span class="sxs-lookup"><span data-stu-id="99325-108">The resulting collection includes the context node.</span></span>
+<span data-ttu-id="5ca1b-107">Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`.</span><span class="sxs-lookup"><span data-stu-id="5ca1b-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="5ca1b-108">A coleção resultante inclui o nó de contexto.</span><span class="sxs-lookup"><span data-stu-id="5ca1b-108">The resulting collection includes the context node.</span></span>
 
-<span data-ttu-id="99325-109">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="99325-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>
+<span data-ttu-id="5ca1b-109">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="5ca1b-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>
 
 ```vb
 Dim books As XDocument = XDocument.Load("Books.xml")
@@ -44,7 +44,7 @@ For Each el As XElement In list1
 Next
 ```
 
-<span data-ttu-id="99325-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="99325-110">This example produces the following output:</span></span>
+<span data-ttu-id="5ca1b-110">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="5ca1b-110">This example produces the following output:</span></span>
 
 ```console
 Results are identical
@@ -69,6 +69,6 @@ Results are identical
 </Book>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="99325-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="99325-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ca1b-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5ca1b-111">See also</span></span>
 
-- [<span data-ttu-id="99325-112">LINQ to XML para usuários do XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="99325-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="5ca1b-112">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5ca1b-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

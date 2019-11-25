@@ -1,30 +1,31 @@
 ---
-title: 'Como: hospedar um serviço do WCF escrito com o .NET Framework 3.5 na execução do IIS no .NET Framework 4'
+title: Como hospedar em serviço do WCF escrito com o .NET Framework 3.5 na execução do IIS em .NET Framework 4
 ms.date: 03/30/2017
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
-ms.openlocfilehash: 6a87fd5e3997e9d15810a5efb079da629908f854
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d827fe82e8b355c8818d96645b463c1840910a9c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291529"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283272"
 ---
-# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a><span data-ttu-id="7ffed-102">Como: hospedar um serviço do WCF escrito com o .NET Framework 3.5 na execução do IIS no .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="7ffed-102">How to: Host a WCF Service Written with .NET Framework 3.5 in IIS Running Under .NET Framework 4</span></span>
-<span data-ttu-id="7ffed-103">Ao hospedar um serviço de Windows Communication Foundation (WCF) escrito com [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] em um computador executando o [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], você poderá obter um <xref:System.ServiceModel.ProtocolException> com o texto a seguir.</span><span class="sxs-lookup"><span data-stu-id="7ffed-103">When hosting a Windows Communication Foundation (WCF) service written with [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] on a machine running [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], you may get a <xref:System.ServiceModel.ProtocolException> with the following text.</span></span>  
+# <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a><span data-ttu-id="5495f-102">Como hospedar em serviço do WCF escrito com o .NET Framework 3.5 na execução do IIS em .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="5495f-102">How to: Host a WCF Service Written with .NET Framework 3.5 in IIS Running Under .NET Framework 4</span></span>
+
+<span data-ttu-id="5495f-103">Ao hospedar um serviço de Windows Communication Foundation (WCF) escrito com o .NET Framework 3,5 em um computador executando o .NET Framework 4, você poderá obter um <xref:System.ServiceModel.ProtocolException> com o texto a seguir.</span><span class="sxs-lookup"><span data-stu-id="5495f-103">When hosting a Windows Communication Foundation (WCF) service written with .NET Framework 3.5 on a machine running .NET Framework 4, you may get a <xref:System.ServiceModel.ProtocolException> with the following text.</span></span>
   
 ```output  
 Unhandled Exception: System.ServiceModel.ProtocolException: The content type text/html; charset=utf-8 of the response message does not match the content type of the binding (application/soap+xml; charset=utf-8). If using a custom encoder, be sure that the IsContentTypeSupported method is implemented properly. The first 1024 bytes of the response were: '<html>    <head>        <title>The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.</title>...  
 ```  
   
- <span data-ttu-id="7ffed-104">Ou, se você tentar navegar até o arquivo. svc do serviço, poderá ver uma página de erro com o texto a seguir.</span><span class="sxs-lookup"><span data-stu-id="7ffed-104">Or if you try to browse to the service's .svc file you may see an error page with the following text.</span></span>  
+ <span data-ttu-id="5495f-104">Ou, se você tentar navegar até o arquivo. svc do serviço, poderá ver uma página de erro com o texto a seguir.</span><span class="sxs-lookup"><span data-stu-id="5495f-104">Or if you try to browse to the service's .svc file you may see an error page with the following text.</span></span>  
   
 ```output  
 The application domain or application pool is currently running version 4.0 or later of the .NET Framework. This can occur if IIS settings have been set to 4.0 or later for this Web application, or if you are using version 4.0 or later of the ASP.NET Web Development Server. The <compilation> element in the Web.config file for this Web application does not contain the required 'targetFrameworkMoniker' attribute for this version of the .NET Framework (for example, '<compilation targetFrameworkMoniker=".NETFramework,Version=v4.0">'). Update the Web.config file with this attribute, or configure the Web application to use a different version of the .NET Framework.  
 ```  
   
- <span data-ttu-id="7ffed-105">Esses erros ocorrem porque o domínio do aplicativo em que o IIS está sendo executado está em execução [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] e o serviço WCF está esperando ser executado em [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].</span><span class="sxs-lookup"><span data-stu-id="7ffed-105">These errors occur because the application domain IIS is running within is running [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] and the WCF service is expecting to run under [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)].</span></span> <span data-ttu-id="7ffed-106">Este tópico explica as modificações necessárias para que o serviço seja executado.</span><span class="sxs-lookup"><span data-stu-id="7ffed-106">This topic explains the modifications required to get the service to run.</span></span>  
+ <span data-ttu-id="5495f-105">Esses erros ocorrem porque o domínio do aplicativo em que o IIS está sendo executado está em execução .NET Framework 4 e o serviço WCF está esperando ser executado em .NET Framework 3,5.</span><span class="sxs-lookup"><span data-stu-id="5495f-105">These errors occur because the application domain IIS is running within is running .NET Framework 4 and the WCF service is expecting to run under .NET Framework 3.5.</span></span> <span data-ttu-id="5495f-106">Este tópico explica as modificações necessárias para que o serviço seja executado.</span><span class="sxs-lookup"><span data-stu-id="5495f-106">This topic explains the modifications required to get the service to run.</span></span>
   
- <span data-ttu-id="7ffed-107">Em seguida, localize o elemento < `compilers` > e altere a opção do provedor CompilerVersion para que ele tenha um valor de 4,0.</span><span class="sxs-lookup"><span data-stu-id="7ffed-107">Next find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="7ffed-108">Por padrão, há dois elementos < `compiler` > no elemento < `compilers` >.</span><span class="sxs-lookup"><span data-stu-id="7ffed-108">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="7ffed-109">Você deve atualizar a opção de provedor CompilerVersion para ambos, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="7ffed-109">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
+ <span data-ttu-id="5495f-107">Em seguida, localize o elemento <`compilers`> e altere a opção do provedor CompilerVersion para que ele tenha um valor de 4,0.</span><span class="sxs-lookup"><span data-stu-id="5495f-107">Next find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="5495f-108">Por padrão, há dois <`compiler`> elementos no elemento <`compilers`>.</span><span class="sxs-lookup"><span data-stu-id="5495f-108">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="5495f-109">Você deve atualizar a opção de provedor CompilerVersion para ambos, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="5495f-109">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
   
 ```xml  
 <system.codedom>  
@@ -44,11 +45,11 @@ The application domain or application pool is currently running version 4.0 or l
     </system.codedom>  
 ```  
   
-### <a name="add-the-required-targetframework-attribute"></a><span data-ttu-id="7ffed-110">Adicionar o atributo targetFramework necessário</span><span class="sxs-lookup"><span data-stu-id="7ffed-110">Add the required targetFramework attribute</span></span>  
+### <a name="add-the-required-targetframework-attribute"></a><span data-ttu-id="5495f-110">Adicionar o atributo targetFramework necessário</span><span class="sxs-lookup"><span data-stu-id="5495f-110">Add the required targetFramework attribute</span></span>  
   
-1. <span data-ttu-id="7ffed-111">Abra o arquivo Web. config do serviço e procure o elemento < `compilation` >.</span><span class="sxs-lookup"><span data-stu-id="7ffed-111">Open the service's Web.config file and look for the <`compilation`> element.</span></span>  
+1. <span data-ttu-id="5495f-111">Abra o arquivo Web. config do serviço e procure o elemento <`compilation`>.</span><span class="sxs-lookup"><span data-stu-id="5495f-111">Open the service's Web.config file and look for the <`compilation`> element.</span></span>  
   
-2. <span data-ttu-id="7ffed-112">Adicione o atributo `targetFramework` ao elemento < `compilation` >, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="7ffed-112">Add the `targetFramework` attribute to the <`compilation`> element as shown in the following example.</span></span>  
+2. <span data-ttu-id="5495f-112">Adicione o atributo `targetFramework` à <`compilation`elemento >, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="5495f-112">Add the `targetFramework` attribute to the <`compilation`> element as shown in the following example.</span></span>  
   
     ```xml  
     <compilation debug="false"  
@@ -64,7 +65,7 @@ The application domain or application pool is currently running version 4.0 or l
           </compilation>  
     ```  
   
-3. <span data-ttu-id="7ffed-113">Localize o elemento < `compilers` > e altere a opção do provedor CompilerVersion para que ele tenha um valor de 4,0.</span><span class="sxs-lookup"><span data-stu-id="7ffed-113">Find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="7ffed-114">Por padrão, há dois elementos < `compiler` > no elemento < `compilers` >.</span><span class="sxs-lookup"><span data-stu-id="7ffed-114">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="7ffed-115">Você deve atualizar a opção de provedor CompilerVersion para ambos, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="7ffed-115">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
+3. <span data-ttu-id="5495f-113">Localize o elemento <`compilers`> e altere a opção do provedor CompilerVersion para ter um valor de 4,0.</span><span class="sxs-lookup"><span data-stu-id="5495f-113">Find the <`compilers`> element and change the CompilerVersion provider option to have a value of 4.0.</span></span> <span data-ttu-id="5495f-114">Por padrão, há dois <`compiler`> elementos no elemento <`compilers`>.</span><span class="sxs-lookup"><span data-stu-id="5495f-114">By default, there are two <`compiler`> elements under the <`compilers`> element.</span></span> <span data-ttu-id="5495f-115">Você deve atualizar a opção de provedor CompilerVersion para ambos, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="5495f-115">You must update the CompilerVersion provider option for both as shown in the following example.</span></span>  
   
     ```xml  
     <system.codedom>  

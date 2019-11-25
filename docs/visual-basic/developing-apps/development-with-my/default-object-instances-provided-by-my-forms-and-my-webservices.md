@@ -1,5 +1,5 @@
 ---
-title: Instâncias de objeto padrão fornecidas por My.Forms e My.WebServices (Visual Basic)
+title: Instâncias de objeto padrão fornecidas por My.Forms e My.WebServices
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.WebServices object [Visual Basic], developing applications
@@ -7,27 +7,29 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Forms
 - rapid application development (RAD), My.WebServices
 ms.assetid: de930027-9108-4f0c-b97c-5e7db4d6ef79
-ms.openlocfilehash: ca31e1c40c77bf7f42d246019d81f4ffaed646e8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d06df4bd023892429b2aaefdd624398a6546d06d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014447"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330213"
 ---
-# <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a><span data-ttu-id="4327a-102">Instâncias de objeto padrão fornecidas por My.Forms e My.WebServices (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4327a-102">Default Object Instances Provided by My.Forms and My.WebServices (Visual Basic)</span></span>
-<span data-ttu-id="4327a-103">O [My. Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) e [My. WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objetos fornecem acesso a formulários, fontes de dados e serviços Web XML usados por seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="4327a-103">The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application.</span></span> <span data-ttu-id="4327a-104">Eles fazem isso, fornecendo coleções de *instâncias padrão* de cada um desses objetos.</span><span class="sxs-lookup"><span data-stu-id="4327a-104">They do this by providing collections of *default instances* of each of these objects.</span></span>  
+# <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a><span data-ttu-id="f34a0-102">Instâncias de objeto padrão fornecidas por My.Forms e My.WebServices (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f34a0-102">Default Object Instances Provided by My.Forms and My.WebServices (Visual Basic)</span></span>
+
+<span data-ttu-id="f34a0-103">The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application.</span><span class="sxs-lookup"><span data-stu-id="f34a0-103">The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application.</span></span> <span data-ttu-id="f34a0-104">They do this by providing collections of *default instances* of each of these objects.</span><span class="sxs-lookup"><span data-stu-id="f34a0-104">They do this by providing collections of *default instances* of each of these objects.</span></span>  
   
-## <a name="default-instances"></a><span data-ttu-id="4327a-105">Instâncias padrão</span><span class="sxs-lookup"><span data-stu-id="4327a-105">Default Instances</span></span>  
- <span data-ttu-id="4327a-106">Uma instância padrão é uma instância da classe que é fornecida pelo tempo de execução e não precisa ser declarado e instanciado usando o `Dim` e `New` instruções.</span><span class="sxs-lookup"><span data-stu-id="4327a-106">A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements.</span></span> <span data-ttu-id="4327a-107">O exemplo a seguir demonstra como você pode ter declarado e instanciado uma instância de um <xref:System.Windows.Forms.Form> classe chamada `Form1`, e como você agora pode obter uma instância padrão disso <xref:System.Windows.Forms.Form> por meio de classe `My.Forms`.</span><span class="sxs-lookup"><span data-stu-id="4327a-107">The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.</span></span>  
+## <a name="default-instances"></a><span data-ttu-id="f34a0-105">Default Instances</span><span class="sxs-lookup"><span data-stu-id="f34a0-105">Default Instances</span></span>  
+
+ <span data-ttu-id="f34a0-106">A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements.</span><span class="sxs-lookup"><span data-stu-id="f34a0-106">A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements.</span></span> <span data-ttu-id="f34a0-107">The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.</span><span class="sxs-lookup"><span data-stu-id="f34a0-107">The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.</span></span>  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- <span data-ttu-id="4327a-108">O `My.Forms` objeto retorna uma coleção de instâncias padrão para cada `Form` classe existe em seu projeto.</span><span class="sxs-lookup"><span data-stu-id="4327a-108">The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project.</span></span> <span data-ttu-id="4327a-109">Da mesma forma, `My.WebServices` fornece uma instância padrão da classe de proxy para cada serviço da Web que você criou uma referência ao seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="4327a-109">Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.</span></span>  
+ <span data-ttu-id="f34a0-108">The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project.</span><span class="sxs-lookup"><span data-stu-id="f34a0-108">The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project.</span></span> <span data-ttu-id="f34a0-109">Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.</span><span class="sxs-lookup"><span data-stu-id="f34a0-109">Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4327a-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4327a-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f34a0-110">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f34a0-110">See also</span></span>
 
-- [<span data-ttu-id="4327a-111">Objeto My.Forms</span><span class="sxs-lookup"><span data-stu-id="4327a-111">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)
-- [<span data-ttu-id="4327a-112">Objeto My.WebServices</span><span class="sxs-lookup"><span data-stu-id="4327a-112">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
-- [<span data-ttu-id="4327a-113">Como My depende do tipo de projeto</span><span class="sxs-lookup"><span data-stu-id="4327a-113">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)
+- [<span data-ttu-id="f34a0-111">Objeto My.Forms</span><span class="sxs-lookup"><span data-stu-id="f34a0-111">My.Forms Object</span></span>](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [<span data-ttu-id="f34a0-112">Objeto My.WebServices</span><span class="sxs-lookup"><span data-stu-id="f34a0-112">My.WebServices Object</span></span>](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+- [<span data-ttu-id="f34a0-113">Como My depende do tipo de projeto</span><span class="sxs-lookup"><span data-stu-id="f34a0-113">How My Depends on Project Type</span></span>](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)

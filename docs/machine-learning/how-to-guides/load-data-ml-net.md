@@ -1,24 +1,26 @@
 ---
 title: Carregar dados de arquivos e outras fontes
-description: Estas instruções mostram como carregar dados para processamento e treinamento no ML.NET. Originalmente, os dados são armazenados em arquivos ou outras fontes de dados, como bancos de dados, JSON, XML ou coleções na memória.
+description: Learn how to load data for processing and training into ML.NET using the API. Data is stored in files, databases, JSON, XML or in-memory collections.
 ms.date: 11/07/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to, title-hack-0625
-ms.openlocfilehash: 07b3e7f5302a03f5fa4c936679c8a3c00d19a7b0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 83aaae2d2e75b3076841750bf5d505390a538bc0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740556"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344748"
 ---
-# <a name="load-data-from-files-and-other-sources"></a><span data-ttu-id="18331-104">Carregar dados de arquivos e outras fontes</span><span class="sxs-lookup"><span data-stu-id="18331-104">Load data from files and other sources</span></span>
+# <a name="load-data-from-files-and-other-sources"></a><span data-ttu-id="e01af-104">Carregar dados de arquivos e outras fontes</span><span class="sxs-lookup"><span data-stu-id="e01af-104">Load data from files and other sources</span></span>
 
-<span data-ttu-id="18331-105">Estas instruções mostram como carregar dados para processamento e treinamento no ML.NET.</span><span class="sxs-lookup"><span data-stu-id="18331-105">This how-to shows you how to load data for processing and training into ML.NET.</span></span> <span data-ttu-id="18331-106">Originalmente, os dados são armazenados em arquivos ou outras fontes de dados, como bancos de dados, JSON, XML ou coleções na memória.</span><span class="sxs-lookup"><span data-stu-id="18331-106">The data is originally stored in files or other data sources such as databases, JSON, XML or in-memory collections.</span></span>
+<span data-ttu-id="e01af-105">Learn how to load data for processing and training into ML.NET using the API.</span><span class="sxs-lookup"><span data-stu-id="e01af-105">Learn how to load data for processing and training into ML.NET using the API.</span></span> <span data-ttu-id="e01af-106">Originalmente, os dados são armazenados em arquivos ou outras fontes de dados, como bancos de dados, JSON, XML ou coleções na memória.</span><span class="sxs-lookup"><span data-stu-id="e01af-106">The data is originally stored in files or other data sources such as databases, JSON, XML or in-memory collections.</span></span>
 
-## <a name="create-the-data-model"></a><span data-ttu-id="18331-107">Criar o modelo de dados</span><span class="sxs-lookup"><span data-stu-id="18331-107">Create the data model</span></span>
+<span data-ttu-id="e01af-107">If you're using Model Builder, see [Load training data into Model Builder](load-data-model-builder.md).</span><span class="sxs-lookup"><span data-stu-id="e01af-107">If you're using Model Builder, see [Load training data into Model Builder](load-data-model-builder.md).</span></span>
 
-<span data-ttu-id="18331-108">O ML.NET permite que você defina modelos de dados por meio de classes.</span><span class="sxs-lookup"><span data-stu-id="18331-108">ML.NET enables you to define data models via classes.</span></span> <span data-ttu-id="18331-109">Por exemplo, considerando os seguintes dados de entrada:</span><span class="sxs-lookup"><span data-stu-id="18331-109">For example, given the following input data:</span></span>
+## <a name="create-the-data-model"></a><span data-ttu-id="e01af-108">Criar o modelo de dados</span><span class="sxs-lookup"><span data-stu-id="e01af-108">Create the data model</span></span>
+
+<span data-ttu-id="e01af-109">O ML.NET permite que você defina modelos de dados por meio de classes.</span><span class="sxs-lookup"><span data-stu-id="e01af-109">ML.NET enables you to define data models via classes.</span></span> <span data-ttu-id="e01af-110">Por exemplo, considerando os seguintes dados de entrada:</span><span class="sxs-lookup"><span data-stu-id="e01af-110">For example, given the following input data:</span></span>
 
 ```text
 Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($), Current Price ($)
@@ -26,7 +28,7 @@ Size (Sq. ft.), HistoricalPrice1 ($), HistoricalPrice2 ($), HistoricalPrice3 ($)
 1000, 600000, 400000, 650000, 700000
 ```
 
-<span data-ttu-id="18331-110">Crie um modelo de dados que represente o snippet a seguir:</span><span class="sxs-lookup"><span data-stu-id="18331-110">Create a data model that represents the snippet below:</span></span>
+<span data-ttu-id="e01af-111">Crie um modelo de dados que represente o snippet a seguir:</span><span class="sxs-lookup"><span data-stu-id="e01af-111">Create a data model that represents the snippet below:</span></span>
 
 ```csharp
 public class HousingData
@@ -44,27 +46,27 @@ public class HousingData
 }
 ```
 
-### <a name="annotating-the-data-model-with-column-attributes"></a><span data-ttu-id="18331-111">Anotando o modelo de dados com atributos de coluna</span><span class="sxs-lookup"><span data-stu-id="18331-111">Annotating the data model with column attributes</span></span>
+### <a name="annotating-the-data-model-with-column-attributes"></a><span data-ttu-id="e01af-112">Anotando o modelo de dados com atributos de coluna</span><span class="sxs-lookup"><span data-stu-id="e01af-112">Annotating the data model with column attributes</span></span>
 
-<span data-ttu-id="18331-112">Atributos dão ao ML.NET mais informações sobre o modelo de dados e a fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="18331-112">Attributes give ML.NET more information about the data model and the data source.</span></span>
+<span data-ttu-id="e01af-113">Atributos dão ao ML.NET mais informações sobre o modelo de dados e a fonte de dados.</span><span class="sxs-lookup"><span data-stu-id="e01af-113">Attributes give ML.NET more information about the data model and the data source.</span></span>
 
-<span data-ttu-id="18331-113">O atributo [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) especifica os índices de colunas de suas propriedades.</span><span class="sxs-lookup"><span data-stu-id="18331-113">The [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) attribute specifies your properties' column indices.</span></span>
+<span data-ttu-id="e01af-114">O atributo [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) especifica os índices de colunas de suas propriedades.</span><span class="sxs-lookup"><span data-stu-id="e01af-114">The [`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) attribute specifies your properties' column indices.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="18331-114">[`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) é necessário apenas ao carregar dados de um arquivo.</span><span class="sxs-lookup"><span data-stu-id="18331-114">[`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) is only required when loading data from a file.</span></span>
+> <span data-ttu-id="e01af-115">[`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) é necessário apenas ao carregar dados de um arquivo.</span><span class="sxs-lookup"><span data-stu-id="e01af-115">[`LoadColumn`](xref:Microsoft.ML.Data.LoadColumnAttribute) is only required when loading data from a file.</span></span>
 
-<span data-ttu-id="18331-115">Carregar colunas como:</span><span class="sxs-lookup"><span data-stu-id="18331-115">Load columns as:</span></span>
+<span data-ttu-id="e01af-116">Carregar colunas como:</span><span class="sxs-lookup"><span data-stu-id="e01af-116">Load columns as:</span></span>
 
-- <span data-ttu-id="18331-116">Colunas individuais como `Size` e `CurrentPrices` na classe `HousingData`.</span><span class="sxs-lookup"><span data-stu-id="18331-116">Individual columns like `Size` and `CurrentPrices` in the `HousingData` class.</span></span>
-- <span data-ttu-id="18331-117">Como várias colunas por vez na forma de um vetor `HistoricalPrices` na classe `HousingData`.</span><span class="sxs-lookup"><span data-stu-id="18331-117">Multiple columns at a time in the form of a vector like `HistoricalPrices` in the `HousingData` class.</span></span>
+- <span data-ttu-id="e01af-117">Colunas individuais como `Size` e `CurrentPrices` na classe `HousingData`.</span><span class="sxs-lookup"><span data-stu-id="e01af-117">Individual columns like `Size` and `CurrentPrices` in the `HousingData` class.</span></span>
+- <span data-ttu-id="e01af-118">Como várias colunas por vez na forma de um vetor `HistoricalPrices` na classe `HousingData`.</span><span class="sxs-lookup"><span data-stu-id="e01af-118">Multiple columns at a time in the form of a vector like `HistoricalPrices` in the `HousingData` class.</span></span>
 
-<span data-ttu-id="18331-118">Se você tiver uma propriedade de vetor, aplique o atributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) à propriedade em seu modelo de dados.</span><span class="sxs-lookup"><span data-stu-id="18331-118">If you have a vector property, apply the [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) attribute to the property in your data model.</span></span> <span data-ttu-id="18331-119">É importante observar que todos os elementos no vetor precisam ser do mesmo tipo.</span><span class="sxs-lookup"><span data-stu-id="18331-119">It's important to note that all of the elements in the vector need to be the same type.</span></span> <span data-ttu-id="18331-120">Manter as colunas separadas permite a facilidade e a flexibilidade da engenharia de recursos, mas, para um número muito grande de colunas, a operação nas colunas individuais causa um impacto na velocidade de treinamento.</span><span class="sxs-lookup"><span data-stu-id="18331-120">Keeping the columns separated allows for ease and flexibility of feature engineering, but for a very large number of columns, operating on the individual columns causes an impact on training speed.</span></span>
+<span data-ttu-id="e01af-119">Se você tiver uma propriedade de vetor, aplique o atributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) à propriedade em seu modelo de dados.</span><span class="sxs-lookup"><span data-stu-id="e01af-119">If you have a vector property, apply the [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) attribute to the property in your data model.</span></span> <span data-ttu-id="e01af-120">É importante observar que todos os elementos no vetor precisam ser do mesmo tipo.</span><span class="sxs-lookup"><span data-stu-id="e01af-120">It's important to note that all of the elements in the vector need to be the same type.</span></span> <span data-ttu-id="e01af-121">Manter as colunas separadas permite a facilidade e a flexibilidade da engenharia de recursos, mas, para um número muito grande de colunas, a operação nas colunas individuais causa um impacto na velocidade de treinamento.</span><span class="sxs-lookup"><span data-stu-id="e01af-121">Keeping the columns separated allows for ease and flexibility of feature engineering, but for a very large number of columns, operating on the individual columns causes an impact on training speed.</span></span>
 
-<span data-ttu-id="18331-121">O ML.NET opera por meio de nomes de coluna.</span><span class="sxs-lookup"><span data-stu-id="18331-121">ML.NET Operates through column names.</span></span> <span data-ttu-id="18331-122">Se você quiser alterar o nome de uma coluna para algo diferente do nome de propriedade, use o atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute).</span><span class="sxs-lookup"><span data-stu-id="18331-122">If you want to change the name of a column to something other than the property name, use the [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) attribute.</span></span> <span data-ttu-id="18331-123">Ao criar objetos na memória, você ainda cria objetos usando o nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="18331-123">When creating in-memory objects, you still create objects using the property name.</span></span> <span data-ttu-id="18331-124">No entanto, para processar e criar modelos de machine learning, o ML.NET substitui e faz referência à propriedade com o valor fornecido no atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute).</span><span class="sxs-lookup"><span data-stu-id="18331-124">However, for data processing and building machine learning models, ML.NET overrides and references the property with the value provided in the [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) attribute.</span></span>
+<span data-ttu-id="e01af-122">O ML.NET opera por meio de nomes de coluna.</span><span class="sxs-lookup"><span data-stu-id="e01af-122">ML.NET Operates through column names.</span></span> <span data-ttu-id="e01af-123">Se você quiser alterar o nome de uma coluna para algo diferente do nome de propriedade, use o atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute).</span><span class="sxs-lookup"><span data-stu-id="e01af-123">If you want to change the name of a column to something other than the property name, use the [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) attribute.</span></span> <span data-ttu-id="e01af-124">Ao criar objetos na memória, você ainda cria objetos usando o nome da propriedade.</span><span class="sxs-lookup"><span data-stu-id="e01af-124">When creating in-memory objects, you still create objects using the property name.</span></span> <span data-ttu-id="e01af-125">No entanto, para processar e criar modelos de machine learning, o ML.NET substitui e faz referência à propriedade com o valor fornecido no atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute).</span><span class="sxs-lookup"><span data-stu-id="e01af-125">However, for data processing and building machine learning models, ML.NET overrides and references the property with the value provided in the [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) attribute.</span></span>
 
-## <a name="load-data-from-a-single-file"></a><span data-ttu-id="18331-125">Carregar dados de um único arquivo</span><span class="sxs-lookup"><span data-stu-id="18331-125">Load data from a single file</span></span>
+## <a name="load-data-from-a-single-file"></a><span data-ttu-id="e01af-126">Carregar dados de um único arquivo</span><span class="sxs-lookup"><span data-stu-id="e01af-126">Load data from a single file</span></span>
 
-<span data-ttu-id="18331-126">Para carregar dados de um arquivo, use o método [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) juntamente com o modelo de dados para os dados a serem carregados.</span><span class="sxs-lookup"><span data-stu-id="18331-126">To load data from a file use the [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) method along with the data model for the data to be loaded.</span></span> <span data-ttu-id="18331-127">Uma vez que o parâmetro `separatorChar` é delimitado por tabulação por padrão, altere-o para seu arquivo de dados conforme necessário.</span><span class="sxs-lookup"><span data-stu-id="18331-127">Since `separatorChar` parameter is tab-delimited by default, change it for your data file as needed.</span></span> <span data-ttu-id="18331-128">Se o arquivo tiver um cabeçalho, defina o parâmetro `hasHeader` como `true` para ignorar a primeira linha no arquivo e começar a carregar dados da segunda linha.</span><span class="sxs-lookup"><span data-stu-id="18331-128">If your file has a header, set the `hasHeader` parameter to `true` to ignore the first line in the file and begin to load data from the second line.</span></span>
+<span data-ttu-id="e01af-127">Para carregar dados de um arquivo, use o método [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) juntamente com o modelo de dados para os dados a serem carregados.</span><span class="sxs-lookup"><span data-stu-id="e01af-127">To load data from a file use the [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) method along with the data model for the data to be loaded.</span></span> <span data-ttu-id="e01af-128">Uma vez que o parâmetro `separatorChar` é delimitado por tabulação por padrão, altere-o para seu arquivo de dados conforme necessário.</span><span class="sxs-lookup"><span data-stu-id="e01af-128">Since `separatorChar` parameter is tab-delimited by default, change it for your data file as needed.</span></span> <span data-ttu-id="e01af-129">Se o arquivo tiver um cabeçalho, defina o parâmetro `hasHeader` como `true` para ignorar a primeira linha no arquivo e começar a carregar dados da segunda linha.</span><span class="sxs-lookup"><span data-stu-id="e01af-129">If your file has a header, set the `hasHeader` parameter to `true` to ignore the first line in the file and begin to load data from the second line.</span></span>
 
 ```csharp
 //Create MLContext
@@ -74,13 +76,13 @@ MLContext mlContext = new MLContext();
 IDataView data = mlContext.Data.LoadFromTextFile<HousingData>("my-data-file.csv", separatorChar: ',', hasHeader: true);
 ```
 
-## <a name="load-data-from-multiple-files"></a><span data-ttu-id="18331-129">Carregar dados de vários arquivos</span><span class="sxs-lookup"><span data-stu-id="18331-129">Load data from multiple files</span></span>
+## <a name="load-data-from-multiple-files"></a><span data-ttu-id="e01af-130">Carregar dados de vários arquivos</span><span class="sxs-lookup"><span data-stu-id="e01af-130">Load data from multiple files</span></span>
 
-<span data-ttu-id="18331-130">Caso seus dados sejam armazenados em vários arquivos, desde que o esquema de dados seja o mesmo, o ML.NET permitirá que você carregue dados de vários arquivos que estejam no mesmo diretório ou em vários diretórios.</span><span class="sxs-lookup"><span data-stu-id="18331-130">In the event that your data is stored in multiple files, as long as the data schema is the same, ML.NET allows you to load data from multiple files that are either in the same directory or multiple directories.</span></span>
+<span data-ttu-id="e01af-131">Caso seus dados sejam armazenados em vários arquivos, desde que o esquema de dados seja o mesmo, o ML.NET permitirá que você carregue dados de vários arquivos que estejam no mesmo diretório ou em vários diretórios.</span><span class="sxs-lookup"><span data-stu-id="e01af-131">In the event that your data is stored in multiple files, as long as the data schema is the same, ML.NET allows you to load data from multiple files that are either in the same directory or multiple directories.</span></span>
 
-### <a name="load-from-files-in-a-single-directory"></a><span data-ttu-id="18331-131">Carregar de arquivos em um único diretório</span><span class="sxs-lookup"><span data-stu-id="18331-131">Load from files in a single directory</span></span>
+### <a name="load-from-files-in-a-single-directory"></a><span data-ttu-id="e01af-132">Carregar de arquivos em um único diretório</span><span class="sxs-lookup"><span data-stu-id="e01af-132">Load from files in a single directory</span></span>
 
-<span data-ttu-id="18331-132">Quando todos os seus arquivos de dados estão no mesmo diretório, use caracteres curinga no método [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*).</span><span class="sxs-lookup"><span data-stu-id="18331-132">When all of your data files are in the same directory, use wildcards in the [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) method.</span></span>
+<span data-ttu-id="e01af-133">Quando todos os seus arquivos de dados estão no mesmo diretório, use caracteres curinga no método [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*).</span><span class="sxs-lookup"><span data-stu-id="e01af-133">When all of your data files are in the same directory, use wildcards in the [`LoadFromTextFile`](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile*) method.</span></span>
 
 ```csharp
 //Create MLContext
@@ -90,9 +92,9 @@ MLContext mlContext = new MLContext();
 IDataView data = mlContext.Data.LoadFromTextFile<HousingData>("Data/*", separatorChar: ',', hasHeader: true);
 ```
 
-### <a name="load-from-files-in-multiple-directories"></a><span data-ttu-id="18331-133">Carregar de arquivos em vários diretórios</span><span class="sxs-lookup"><span data-stu-id="18331-133">Load from files in multiple directories</span></span>
+### <a name="load-from-files-in-multiple-directories"></a><span data-ttu-id="e01af-134">Carregar de arquivos em vários diretórios</span><span class="sxs-lookup"><span data-stu-id="e01af-134">Load from files in multiple directories</span></span>
 
-<span data-ttu-id="18331-134">Para carregar dados de vários diretórios, use o método [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader*) para criar um [`TextLoader`](xref:Microsoft.ML.Data.TextLoader).</span><span class="sxs-lookup"><span data-stu-id="18331-134">To load data from multiple directories, use the [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader*) method to create a [`TextLoader`](xref:Microsoft.ML.Data.TextLoader).</span></span> <span data-ttu-id="18331-135">Em seguida, use o método [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load*) e especifique os caminhos de arquivo individual (caracteres curinga não podem ser usados).</span><span class="sxs-lookup"><span data-stu-id="18331-135">Then, use the [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load*) method and specify the individual file paths (wildcards can't be used).</span></span>
+<span data-ttu-id="e01af-135">Para carregar dados de vários diretórios, use o método [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader*) para criar um [`TextLoader`](xref:Microsoft.ML.Data.TextLoader).</span><span class="sxs-lookup"><span data-stu-id="e01af-135">To load data from multiple directories, use the [`CreateTextLoader`](xref:Microsoft.ML.TextLoaderSaverCatalog.CreateTextLoader*) method to create a [`TextLoader`](xref:Microsoft.ML.Data.TextLoader).</span></span> <span data-ttu-id="e01af-136">Em seguida, use o método [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load*) e especifique os caminhos de arquivo individual (caracteres curinga não podem ser usados).</span><span class="sxs-lookup"><span data-stu-id="e01af-136">Then, use the [`TextLoader.Load`](xref:Microsoft.ML.DataLoaderExtensions.Load*) method and specify the individual file paths (wildcards can't be used).</span></span>
 
 ```csharp
 //Create MLContext
@@ -105,14 +107,14 @@ TextLoader textLoader = mlContext.Data.CreateTextLoader<HousingData>(separatorCh
 IDataView data = textLoader.Load("DataFolder/SubFolder1/1.txt", "DataFolder/SubFolder2/1.txt");
 ```
 
-## <a name="load-data-from-a-relational-database"></a><span data-ttu-id="18331-136">Carregar dados de um banco de dado relacional</span><span class="sxs-lookup"><span data-stu-id="18331-136">Load data from a relational database</span></span>
+## <a name="load-data-from-a-relational-database"></a><span data-ttu-id="e01af-137">Load data from a relational database</span><span class="sxs-lookup"><span data-stu-id="e01af-137">Load data from a relational database</span></span>
 
-<span data-ttu-id="18331-137">O ML.NET dá suporte ao carregamento de dados de uma variedade de bancos de dado relacionais com suporte de [`System.Data`](xref:System.Data) que incluem SQL Server, banco de dados SQL do Azure, Oracle, SQLite, PostgreSQL, progresso, IBM DB2 e muitos outros.</span><span class="sxs-lookup"><span data-stu-id="18331-137">ML.NET supports loading data from a variety of relational databases supported by [`System.Data`](xref:System.Data) that include SQL Server, Azure SQL Database, Oracle, SQLite, PostgreSQL, Progress, IBM DB2, and many more.</span></span>
+<span data-ttu-id="e01af-138">ML.NET supports loading data from a variety of relational databases supported by [`System.Data`](xref:System.Data) that include SQL Server, Azure SQL Database, Oracle, SQLite, PostgreSQL, Progress, IBM DB2, and many more.</span><span class="sxs-lookup"><span data-stu-id="e01af-138">ML.NET supports loading data from a variety of relational databases supported by [`System.Data`](xref:System.Data) that include SQL Server, Azure SQL Database, Oracle, SQLite, PostgreSQL, Progress, IBM DB2, and many more.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="18331-138">Para usar `DatabaseLoader`, faça referência ao pacote NuGet [System. Data. SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) .</span><span class="sxs-lookup"><span data-stu-id="18331-138">To use `DatabaseLoader`, reference the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet package.</span></span>
+> <span data-ttu-id="e01af-139">To use `DatabaseLoader`, reference the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet package.</span><span class="sxs-lookup"><span data-stu-id="e01af-139">To use `DatabaseLoader`, reference the [System.Data.SqlClient](https://www.nuget.org/packages/System.Data.SqlClient) NuGet package.</span></span>
 
-<span data-ttu-id="18331-139">Dado um banco de dados com uma tabela chamada `House` e o esquema a seguir:</span><span class="sxs-lookup"><span data-stu-id="18331-139">Given a database with a table named `House` and the following schema:</span></span>
+<span data-ttu-id="e01af-140">Given a database with a table named `House` and the following schema:</span><span class="sxs-lookup"><span data-stu-id="e01af-140">Given a database with a table named `House` and the following schema:</span></span>
 
 ```SQL
 CREATE TABLE [House] (
@@ -124,20 +126,20 @@ CREATE TABLE [House] (
 );
 ```
 
-<span data-ttu-id="18331-140">Os dados podem ser modelados por uma classe como `HouseData`.</span><span class="sxs-lookup"><span data-stu-id="18331-140">The data can be modeled by a class like `HouseData`.</span></span>
+<span data-ttu-id="e01af-141">Os dados podem ser modelados por uma classe como `HouseData`.</span><span class="sxs-lookup"><span data-stu-id="e01af-141">The data can be modeled by a class like `HouseData`.</span></span>
 
 ```csharp
 public class HouseData
 {
     public float Size { get; set; }
-    
+
     public float NumBed { get; set; }
 
     public float Price { get; set; }
 }
 ```
 
-<span data-ttu-id="18331-141">Em seguida, dentro do seu aplicativo, crie um `DatabaseLoader`.</span><span class="sxs-lookup"><span data-stu-id="18331-141">Then, inside of your application, create a `DatabaseLoader`.</span></span>
+<span data-ttu-id="e01af-142">Then, inside of your application, create a `DatabaseLoader`.</span><span class="sxs-lookup"><span data-stu-id="e01af-142">Then, inside of your application, create a `DatabaseLoader`.</span></span>
 
 ```csharp
 MLContext mlContext = new MLContext();
@@ -145,7 +147,7 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-<span data-ttu-id="18331-142">Defina a cadeia de conexão, bem como o comando SQL a ser executado no banco de dados e crie uma instância de `DatabaseSource`.</span><span class="sxs-lookup"><span data-stu-id="18331-142">Define your connection string as well as the SQL command to be executed on the database and create a `DatabaseSource` instance.</span></span> <span data-ttu-id="18331-143">Este exemplo usa um banco de dados SQL Server LocalDB com um caminho de arquivo.</span><span class="sxs-lookup"><span data-stu-id="18331-143">This sample uses a LocalDB SQL Server database with a file path.</span></span> <span data-ttu-id="18331-144">No entanto, o DatabaseLoader dá suporte a qualquer outra cadeia de conexão válida para bancos de dados locais e na nuvem.</span><span class="sxs-lookup"><span data-stu-id="18331-144">However, DatabaseLoader supports any other valid connection string for databases on-premises and in the cloud.</span></span>
+<span data-ttu-id="e01af-143">Define your connection string as well as the SQL command to be executed on the database and create a `DatabaseSource` instance.</span><span class="sxs-lookup"><span data-stu-id="e01af-143">Define your connection string as well as the SQL command to be executed on the database and create a `DatabaseSource` instance.</span></span> <span data-ttu-id="e01af-144">This sample uses a LocalDB SQL Server database with a file path.</span><span class="sxs-lookup"><span data-stu-id="e01af-144">This sample uses a LocalDB SQL Server database with a file path.</span></span> <span data-ttu-id="e01af-145">However, DatabaseLoader supports any other valid connection string for databases on-premises and in the cloud.</span><span class="sxs-lookup"><span data-stu-id="e01af-145">However, DatabaseLoader supports any other valid connection string for databases on-premises and in the cloud.</span></span>
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
@@ -155,24 +157,24 @@ string sqlCommand = "SELECT Size, CAST(NumBed as REAL) as NumBed, Price FROM Hou
 DatabaseSource dbSource = new DatabaseSource(SqlClientFactory.Instance, connectionString, sqlCommand);
 ```
 
-<span data-ttu-id="18331-145">Dados numéricos que não sejam do tipo [`Real`](xref:System.Data.SqlDbType) precisarão ser convertidos em [`Real`](xref:System.Data.SqlDbType).</span><span class="sxs-lookup"><span data-stu-id="18331-145">Numerical data that is not of type [`Real`](xref:System.Data.SqlDbType) has to be converted to [`Real`](xref:System.Data.SqlDbType).</span></span> <span data-ttu-id="18331-146">O tipo de [`Real`](xref:System.Data.SqlDbType) é representado como um valor de ponto flutuante de precisão simples ou [`Single`](xref:System.Single), o tipo de entrada esperado por algoritmos ml.net.</span><span class="sxs-lookup"><span data-stu-id="18331-146">The [`Real`](xref:System.Data.SqlDbType) type is represented as a single-precision floating-point value or [`Single`](xref:System.Single), the input type expected by ML.NET algorithms.</span></span> <span data-ttu-id="18331-147">Neste exemplo, a coluna `NumBed` é um número inteiro no banco de dados.</span><span class="sxs-lookup"><span data-stu-id="18331-147">In this sample, the `NumBed` column is an integer in the database.</span></span> <span data-ttu-id="18331-148">Usando a função interna `CAST`, ela é convertida em [`Real`](xref:System.Data.SqlDbType).</span><span class="sxs-lookup"><span data-stu-id="18331-148">Using the `CAST` built-in function, it's converted to [`Real`](xref:System.Data.SqlDbType).</span></span> <span data-ttu-id="18331-149">Como a propriedade `Price` já é do tipo [`Real`](xref:System.Data.SqlDbType) ela é carregada como está.</span><span class="sxs-lookup"><span data-stu-id="18331-149">Because the `Price` property is already of type [`Real`](xref:System.Data.SqlDbType) it is loaded as is.</span></span>
+<span data-ttu-id="e01af-146">Numerical data that is not of type [`Real`](xref:System.Data.SqlDbType) has to be converted to [`Real`](xref:System.Data.SqlDbType).</span><span class="sxs-lookup"><span data-stu-id="e01af-146">Numerical data that is not of type [`Real`](xref:System.Data.SqlDbType) has to be converted to [`Real`](xref:System.Data.SqlDbType).</span></span> <span data-ttu-id="e01af-147">The [`Real`](xref:System.Data.SqlDbType) type is represented as a single-precision floating-point value or [`Single`](xref:System.Single), the input type expected by ML.NET algorithms.</span><span class="sxs-lookup"><span data-stu-id="e01af-147">The [`Real`](xref:System.Data.SqlDbType) type is represented as a single-precision floating-point value or [`Single`](xref:System.Single), the input type expected by ML.NET algorithms.</span></span> <span data-ttu-id="e01af-148">In this sample, the `NumBed` column is an integer in the database.</span><span class="sxs-lookup"><span data-stu-id="e01af-148">In this sample, the `NumBed` column is an integer in the database.</span></span> <span data-ttu-id="e01af-149">Using the `CAST` built-in function, it's converted to [`Real`](xref:System.Data.SqlDbType).</span><span class="sxs-lookup"><span data-stu-id="e01af-149">Using the `CAST` built-in function, it's converted to [`Real`](xref:System.Data.SqlDbType).</span></span> <span data-ttu-id="e01af-150">Because the `Price` property is already of type [`Real`](xref:System.Data.SqlDbType) it is loaded as is.</span><span class="sxs-lookup"><span data-stu-id="e01af-150">Because the `Price` property is already of type [`Real`](xref:System.Data.SqlDbType) it is loaded as is.</span></span>
 
-<span data-ttu-id="18331-150">Use o método `Load` para carregar os dados em um [`IDataView`](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="18331-150">Use the `Load` method to load the data into an [`IDataView`](xref:Microsoft.ML.IDataView).</span></span>
+<span data-ttu-id="e01af-151">Use the `Load` method to load the data into an [`IDataView`](xref:Microsoft.ML.IDataView).</span><span class="sxs-lookup"><span data-stu-id="e01af-151">Use the `Load` method to load the data into an [`IDataView`](xref:Microsoft.ML.IDataView).</span></span>
 
 ```csharp
 IDataView data = loader.Load(dbSource);
 ```
 
-## <a name="load-data-from-other-sources"></a><span data-ttu-id="18331-151">Carregar dados de outras fontes</span><span class="sxs-lookup"><span data-stu-id="18331-151">Load data from other sources</span></span>
+## <a name="load-data-from-other-sources"></a><span data-ttu-id="e01af-152">Carregar dados de outras fontes</span><span class="sxs-lookup"><span data-stu-id="e01af-152">Load data from other sources</span></span>
 
-<span data-ttu-id="18331-152">Além de carregar os dados armazenados em arquivos, o ML.NET dá suporte ao carregamento de dados de várias fontes que incluem, mas não se limitam a:</span><span class="sxs-lookup"><span data-stu-id="18331-152">In addition to loading data stored in files, ML.NET supports loading data from sources that include but are not limited to:</span></span>
+<span data-ttu-id="e01af-153">Além de carregar os dados armazenados em arquivos, o ML.NET dá suporte ao carregamento de dados de várias fontes que incluem, mas não se limitam a:</span><span class="sxs-lookup"><span data-stu-id="e01af-153">In addition to loading data stored in files, ML.NET supports loading data from sources that include but are not limited to:</span></span>
 
-- <span data-ttu-id="18331-153">Coleções na memória</span><span class="sxs-lookup"><span data-stu-id="18331-153">In-memory collections</span></span>
-- <span data-ttu-id="18331-154">JSON/XML</span><span class="sxs-lookup"><span data-stu-id="18331-154">JSON/XML</span></span>
+- <span data-ttu-id="e01af-154">Coleções na memória</span><span class="sxs-lookup"><span data-stu-id="e01af-154">In-memory collections</span></span>
+- <span data-ttu-id="e01af-155">JSON/XML</span><span class="sxs-lookup"><span data-stu-id="e01af-155">JSON/XML</span></span>
 
-<span data-ttu-id="18331-155">Observe que, ao trabalhar com fontes de streaming, o ML.NET espera que a entrada esteja na forma de uma coleção em memória.</span><span class="sxs-lookup"><span data-stu-id="18331-155">Note that when working with streaming sources, ML.NET expects input to be in the form of an in-memory collection.</span></span> <span data-ttu-id="18331-156">Portanto, ao trabalhar com fontes, como JSON/XML, formate os dados em uma coleção em memória.</span><span class="sxs-lookup"><span data-stu-id="18331-156">Therefore, when working with sources like JSON/XML, make sure to format the data into an in-memory collection.</span></span>
+<span data-ttu-id="e01af-156">Observe que, ao trabalhar com fontes de streaming, o ML.NET espera que a entrada esteja na forma de uma coleção em memória.</span><span class="sxs-lookup"><span data-stu-id="e01af-156">Note that when working with streaming sources, ML.NET expects input to be in the form of an in-memory collection.</span></span> <span data-ttu-id="e01af-157">Portanto, ao trabalhar com fontes, como JSON/XML, formate os dados em uma coleção em memória.</span><span class="sxs-lookup"><span data-stu-id="e01af-157">Therefore, when working with sources like JSON/XML, make sure to format the data into an in-memory collection.</span></span>
 
-<span data-ttu-id="18331-157">Dada a coleção em memória a seguir:</span><span class="sxs-lookup"><span data-stu-id="18331-157">Given the following in-memory collection:</span></span>
+<span data-ttu-id="e01af-158">Dada a coleção em memória a seguir:</span><span class="sxs-lookup"><span data-stu-id="e01af-158">Given the following in-memory collection:</span></span>
 
 ```csharp
 HousingData[] inMemoryCollection = new HousingData[]
@@ -198,10 +200,10 @@ HousingData[] inMemoryCollection = new HousingData[]
 };
 ```
 
-<span data-ttu-id="18331-158">Carregue a coleção em memória em um [`IDataView`](xref:Microsoft.ML.IDataView) com o método [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*):</span><span class="sxs-lookup"><span data-stu-id="18331-158">Load the in-memory collection into an [`IDataView`](xref:Microsoft.ML.IDataView) with the [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) method:</span></span>
+<span data-ttu-id="e01af-159">Carregue a coleção em memória em um [`IDataView`](xref:Microsoft.ML.IDataView) com o método [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*):</span><span class="sxs-lookup"><span data-stu-id="e01af-159">Load the in-memory collection into an [`IDataView`](xref:Microsoft.ML.IDataView) with the [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) method:</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="18331-159">O [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) pressupõe que o [`IEnumerable`](xref:System.Collections.IEnumerable) carregado é thread-safe.</span><span class="sxs-lookup"><span data-stu-id="18331-159">[`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) assumes that the [`IEnumerable`](xref:System.Collections.IEnumerable) it loads from is thread-safe.</span></span>
+> <span data-ttu-id="e01af-160">O [`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) pressupõe que o [`IEnumerable`](xref:System.Collections.IEnumerable) carregado é thread-safe.</span><span class="sxs-lookup"><span data-stu-id="e01af-160">[`LoadFromEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.LoadFromEnumerable*) assumes that the [`IEnumerable`](xref:System.Collections.IEnumerable) it loads from is thread-safe.</span></span>
 
 ```csharp
 // Create MLContext
@@ -211,6 +213,7 @@ MLContext mlContext = new MLContext();
 IDataView data = mlContext.Data.LoadFromEnumerable<HousingData>(inMemoryCollection);
 ```
 
-## <a name="next-steps"></a><span data-ttu-id="18331-160">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="18331-160">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="e01af-161">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="e01af-161">Next steps</span></span>
 
-<span data-ttu-id="18331-161">Se você estiver usando o construtor de modelos para treinar o modelo de aprendizado de máquina, consulte [carregar dados de treinamento no construtor de modelos](load-data-model-builder.md).</span><span class="sxs-lookup"><span data-stu-id="18331-161">If you're using Model Builder to train the machine learning model, see [Load training data into Model Builder](load-data-model-builder.md).</span></span>
+- <span data-ttu-id="e01af-162">To clean or otherwise process data, see [Prepare data for building a model](prepare-data-ml-net.md).</span><span class="sxs-lookup"><span data-stu-id="e01af-162">To clean or otherwise process data, see [Prepare data for building a model](prepare-data-ml-net.md).</span></span>
+- <span data-ttu-id="e01af-163">When you're ready to build a model, see [Train and evaluate a model](train-machine-learning-model-ml-net.md).</span><span class="sxs-lookup"><span data-stu-id="e01af-163">When you're ready to build a model, see [Train and evaluate a model](train-machine-learning-model-ml-net.md).</span></span>
