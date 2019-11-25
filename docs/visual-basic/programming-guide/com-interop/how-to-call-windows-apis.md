@@ -1,5 +1,5 @@
 ---
-title: 'Como: Chamar APIs do Windows (Visual Basic)'
+title: Como chamar APIs do Windows
 ms.date: 07/20/2015
 helpviewer_keywords:
 - API calls [Visual Basic]
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 3769da28e1c9a27c8363b0d6ec639cedaf0f03be
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6f3c53243d7aeb73be81796d5ca185c3a3c41c72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624849"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348710"
 ---
-# <a name="how-to-call-windows-apis-visual-basic"></a>Como: Chamar APIs do Windows (Visual Basic)
-Este exemplo define e chama o `MessageBox` função na User32. dll e, em seguida, passa uma cadeia de caracteres para ele.  
+# <a name="how-to-call-windows-apis-visual-basic"></a>Como chamar APIs do Windows (Visual Basic)
+This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.  
   
 ## <a name="example"></a>Exemplo  
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
@@ -23,14 +23,14 @@ Este exemplo define e chama o `MessageBox` função na User32. dll e, em seguida
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
-- Uma referência para o <xref:System> namespace.  
+- A reference to the <xref:System> namespace.  
   
 ## <a name="robust-programming"></a>Programação robusta  
  As seguintes condições podem causar uma exceção:  
   
-- O método não é estático, é abstrato ou foi definido anteriormente. O tipo pai é uma interface ou o comprimento da *nome* ou *dllName* é zero. (<xref:System.ArgumentException>)  
+- The method is not static, is abstract, or has been previously defined. The parent type is an interface, or the length of *name* or *dllName* is zero. (<xref:System.ArgumentException>)  
   
-- O *nome* ou *dllName* é `Nothing`. (<xref:System.ArgumentNullException>)  
+- The *name* or *dllName* is `Nothing`. (<xref:System.ArgumentNullException>)  
   
 - O tipo recipiente foi criado anteriormente usando `CreateType`. (<xref:System.InvalidOperationException>)  
   
@@ -39,6 +39,6 @@ Este exemplo define e chama o `MessageBox` função na User32. dll e, em seguida
 - [Um olhar detalhado sobre invocação de plataforma](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Exemplos de invocação de plataforma](../../../framework/interop/platform-invoke-examples.md)
 - [Consumindo funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [Emissão de definição de um método com reflexão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
-- [Passo a passo: fazer chamadas de APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [Defining a Method with Reflection Emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
+- [Instruções passo a passo: chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)

@@ -1,5 +1,5 @@
 ---
-title: Desenvolvimento com My (Visual Basic)
+title: Desenvolvimento com My
 ms.date: 07/20/2015
 f1_keywords:
 - My.MyWpfExtension.Windows
@@ -9,23 +9,25 @@ helpviewer_keywords:
 - My feature
 - Visual Basic, programming in
 ms.assetid: f1d04509-5e46-4551-9f9f-94334a121fca
-ms.openlocfilehash: 1d9dc1cd26b4bf110526fe6d136e943be730a443
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2ee9373098d4355628a43ec46302c97c26de5bf9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014162"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74330278"
 ---
 # <a name="development-with-my-visual-basic"></a>Desenvolvimento com My (Visual Basic)
+
 O Visual Basic apresenta novos recursos para o método RAD que aumentam a produtividade, facilitam o uso e dão mais robustez. Um desses recursos, chamado `My`, oferece acesso a informações e a instâncias de objeto padrão relacionadas ao aplicativo e ao seu ambiente de tempo de execução. Essas informações são organizadas em um formato que pode ser descoberto por meio do IntelliSense e que é logicamente delineado de acordo com o uso.  
   
  Os membros de alto nível do `My` são expostos como objetos. Cada objeto se comporta de forma semelhante a um namespace ou uma classe com membros `Shared` e um conjunto de membros relacionados são expostos.  
   
  Esta tabela mostra objetos `My` de nível superior e suas relações uns com os outros.  
   
- ![Diagrama mostra o modelo de objeto para o meu.](./media/index/my-object-model-relationships.gif)  
+ ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Executando tarefas com My.Application, My.Computer e My.User](../../../visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md)  
  Descreve os três objetos `My` centrais `My.Application`, `My.Computer` e `My.User`, que fornecem acesso a informações e funcionalidade  
   
@@ -36,7 +38,7 @@ O Visual Basic apresenta novos recursos para o método RAD que aumentam a produt
  Descreve os objetos `My.Resources` e `My.Settings`, que fornecem acesso a recursos e configurações de um aplicativo.  
   
  [Visão geral do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Descreve o modelo de inicialização/desligamento do aplicativo Visual Basic.  
+ Describes the Visual Basic Application Startup/Shutdown model.  
   
  [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Fornece detalhes sobre quais os recursos `My` que estão disponíveis em diferentes tipos de projeto.  

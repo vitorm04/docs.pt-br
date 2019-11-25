@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 8a2904d02b34058a87a77bbedbed3ccba4c80c58
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421579"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283889"
 ---
 # <a name="tour-of-net"></a>Tour do .NET
 
@@ -25,11 +25,11 @@ Para saber como configurar um ambiente de desenvolvimento para executar os exemp
 
 ## <a name="programming-languages"></a>Linguagens de programação
 
-O .NET dá suporte a várias linguagens de programação. As implementações do .NET implementam o [CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre outras coisas, especifica um tempo de execução independente de linguagem e interoperabilidade de linguagem. Isso significa que você escolhe qualquer linguagem .NET para criar aplicativos e serviços no .NET.
+O .NET dá suporte a várias linguagens de programação. As implementações do .NET implementam o [CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre outras coisas, especifica um runtime independente de linguagem e interoperabilidade de linguagem. Isso significa que você escolhe qualquer linguagem .NET para criar aplicativos e serviços no .NET.
 
 A Microsoft desenvolve ativamente e dá suporte a três linguagens de .NET: C#, F# e VB (Visual Basic). 
 
-* A C# é simples, poderosa, fortemente tipada e orientada a objeto, mantendo a expressividade e elegância das linguagens de estilo C. Qualquer pessoa familiarizada com C e linguagens semelhantes encontra poucos problemas para adaptar-se à C#. Confira o [Guia de C#](../csharp/index.md) para saber mais sobre o C#.
+* A C# é simples, poderosa, fortemente tipada e orientada a objeto, mantendo a expressividade e elegância das linguagens de estilo C. Qualquer pessoa familiarizada com C e linguagens semelhantes encontra poucos problemas para adaptar-se à C#. Confira o [Guia de C#](../csharp/index.yml) para saber mais sobre o C#.
 
 * F# é uma linguagem de programação de plataforma cruzada com prioridade para a parte funcional e que também dá suporte à programação imperativa e orientada a objeto tradicional. Confira o [Guia de F#](../fsharp/index.md) para saber mais sobre o F#.
 
@@ -45,21 +45,21 @@ As duas linhas a seguir alocam memória:
 
 Não há nenhuma palavra-chave análoga para desalocar memória, pois a desalocação ocorre automaticamente quando o coletor de lixo recupera a memória por meio de sua execução agendada.
 
-O coletor de lixo é um dos serviços que ajudam a garantir a *segurança da memória*. Um programa é considerado de memória segura se ele acessa somente a memória alocada. Por exemplo, o tempo de execução garante que um aplicativo não acesse memória não alocada além dos limites de uma matriz.
+O coletor de lixo é um dos serviços que ajudam a garantir a *segurança da memória*. Um programa é considerado de memória segura se ele acessa somente a memória alocada. Por exemplo, o runtime garante que um aplicativo não acesse memória não alocada além dos limites de uma matriz.
 
-No exemplo a seguir, o tempo de execução aciona uma exceção `InvalidIndexException` para impor segurança da memória:
+No exemplo a seguir, o runtime aciona uma exceção `InvalidIndexException` para impor segurança da memória:
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>Trabalhando com recursos não gerenciados
 
-Alguns objetos fazem referência a *recursos não gerenciados*. Os recursos não gerenciados são recursos que não são mantidos automaticamente pelo tempo de execução do .NET. Por exemplo, um identificador de arquivo é um recurso não gerenciado. Um objeto <xref:System.IO.FileStream> é um objeto gerenciado, mas ele faz referência a um identificador de arquivo, que não é gerenciado. Quando você termina de usar o <xref:System.IO.FileStream>, é necessário liberar o identificador de arquivo.
+Alguns objetos fazem referência a *recursos não gerenciados*. Os recursos não gerenciados são recursos que não são mantidos automaticamente pelo runtime do .NET. Por exemplo, um identificador de arquivo é um recurso não gerenciado. Um objeto <xref:System.IO.FileStream> é um objeto gerenciado, mas ele faz referência a um identificador de arquivo, que não é gerenciado. Quando você termina de usar o <xref:System.IO.FileStream>, é necessário liberar o identificador de arquivo.
 
 No .NET, objetos que fazem referência a recursos não gerenciados implementam a interface <xref:System.IDisposable>. Quando você termina de usar o objeto, você chama o método <xref:System.IDisposable.Dispose> do objeto, responsável por liberar quaisquer recursos não gerenciados. As linguagens .NET fornecem uma [instrução`using`](../csharp/language-reference/keywords/using.md) conveniente para tais objetos, conforme mostrado no exemplo a seguir:
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-Uma vez que o bloco `using` é concluído, o tempo de execução do .NET automaticamente chama o método <xref:System.IDisposable.Dispose> do objeto `stream`, que libera o identificador de arquivo. O tempo de execução também faz isso se uma exceção faz com que o controle deixe o bloco.
+Uma vez que o bloco `using` é concluído, o runtime do .NET automaticamente chama o método `stream` do objeto <xref:System.IDisposable.Dispose>, que libera o identificador de arquivo. O runtime também faz isso se uma exceção faz com que o controle deixe o bloco.
 
 Para obter mais detalhes, consulte os seguintes tópicos:
 
@@ -71,7 +71,7 @@ Para obter mais detalhes, consulte os seguintes tópicos:
 
 Um objeto é uma instância de um tipo específico. As únicas operações permitidas para um determinado objeto são aquelas do seu tipo. Um tipo `Dog` pode ter os métodos `Jump` e `WagTail`, mas não um método `SumTotal`. Um programa só chama os métodos que pertencem a um determinado tipo. Todas as outras chamadas resultam em um erro em tempo de compilação ou uma exceção de tempo de execução (no caso de usar recursos dinâmicos ou `object`).
 
-As linguagens do .NET são orientadas a objeto, com hierarquias de classes base e classes derivadas. O tempo de execução do .NET só permite conversões de objeto e chamadas alinhadas à hierarquia do objeto. Lembre-se de que todos os tipos definidos em qualquer linguagem .NET derivam do tipo base <xref:System.Object>.
+As linguagens do .NET são orientadas a objeto, com hierarquias de classes base e classes derivadas. O runtime do .NET só permite conversões de objeto e chamadas alinhadas à hierarquia do objeto. Lembre-se de que todos os tipos definidos em qualquer linguagem .NET derivam do tipo base <xref:System.Object>.
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
@@ -97,7 +97,7 @@ No .NET, os delegados são comumente usados em manipuladores de eventos, na defi
 
 Os genéricos permitem que o programador introduza um *parâmetro de tipo* ao criar suas classes, o que permite que o código do cliente (os usuários do tipo) especifiquem o tipo exato a ser usado no lugar do parâmetro de tipo.
 
-Os genéricos foram adicionados para ajudar os programadores a implementar estruturas de dados genéricos. Antes de sua adição, para que um tipo como o `List` fosse genérico, seria necessário que ele trabalhasse com elementos do tipo `object`. Isso ocasionava vários problemas de desempenho e de semântica, junto com a possibilidade de erros sutis de tempo de execução. O mais notório deles é quando uma estrutura de dados contém, por exemplo, inteiros e cadeias de caracteres e uma `InvalidCastException` é gerada ao trabalhar com os membros da lista.
+Os genéricos foram adicionados para ajudar os programadores a implementar estruturas de dados genéricos. Antes de sua adição, para que um tipo como o `List` fosse genérico, seria necessário que ele trabalhasse com elementos do tipo `object`. Isso ocasionava vários problemas de desempenho e de semântica, junto com a possibilidade de erros sutis de runtime. O mais notório deles é quando uma estrutura de dados contém, por exemplo, inteiros e cadeias de caracteres e uma `InvalidCastException` é gerada ao trabalhar com os membros da lista.
 
 O exemplo a seguir mostra a execução de um programa básico usando uma instância de tipos <xref:System.Collections.Generic.List%601>:
 
@@ -107,7 +107,7 @@ Para obter mais informações, veja o tópico [Visão geral de tipos genéricos 
 
 ## <a name="async-programming"></a>Programação assíncrona
 
-Programação assíncrona é um conceito de primeira classe no .NET, com suporte assíncrono no tempo de execução, bibliotecas de estrutura e constructos da linguagem do .NET. Internamente, elas são baseadas em objetos (como `Task`) que aproveitam o sistema operacional para realizar trabalhos associados a E/S de modo tão eficiente quanto possível.
+Programação assíncrona é um conceito de primeira classe no .NET, com suporte assíncrono no runtime, bibliotecas de estrutura e constructos da linguagem do .NET. Internamente, elas são baseadas em objetos (como `Task`) que aproveitam o sistema operacional para realizar trabalhos associados a E/S de modo tão eficiente quanto possível.
 
 Para saber mais sobre programação assíncrona no .NET, comece com o tópico [Visão geral da assincronia](async.md).
 

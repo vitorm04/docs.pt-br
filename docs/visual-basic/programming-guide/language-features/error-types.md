@@ -1,5 +1,5 @@
 ---
-title: Tipos de erro (Visual Basic)
+title: Tipos de erro
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exceptions, types
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 5be91162d5c178fc032fba32605107c3fcd4d16b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 04320c7a2fd27749e6de24f0ad21cc51c86ddda2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197200"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345150"
 ---
 # <a name="error-types-visual-basic"></a>Tipos de erro (Visual Basic)
-No Visual Basic, os erros se enquadram em uma das três categorias: erros de sintaxe, erros de tempo de execução e erros de lógica.
+In Visual Basic, errors fall into one of three categories: syntax errors, run-time errors, and logic errors.
 
 ## <a name="syntax-errors"></a>Erros de sintaxe
- Os *erros de sintaxe* são aqueles que aparecem enquanto você escreve o código. Se você estiver usando o Visual Studio, Visual Basic verificará seu código ao digitá-lo na janela **Editor de código** e o alertará se cometer um erro, como grafar uma palavra incorreta ou usando um elemento de linguagem incorretamente. Se você compilar a partir da linha de comando, Visual Basic exibirá um erro do compilador com informações sobre o erro de sintaxe. Os erros de sintaxe são o tipo mais comum de erros. Você pode corrigi-los facilmente no ambiente de codificação assim que eles ocorrerem.
+ *Syntax errors* are those that appear while you write code. If you're using Visual Studio, Visual Basic checks your code as you type it in the **Code Editor** window and alerts you if you make a mistake, such as misspelling a word or using a language element improperly. If you compile from the command line, Visual Basic displays a compiler error with information about the syntax error. Syntax errors are the most common type of errors. You can fix them easily in the coding environment as soon as they occur.
 
 > [!NOTE]
-> A instrução `Option Explicit` é um meio de evitar erros de sintaxe. Ele força você a declarar, com antecedência, todas as variáveis a serem usadas no aplicativo. Portanto, quando essas variáveis são usadas no código, quaisquer erros tipográficos são capturados imediatamente e podem ser corrigidos.
+> The `Option Explicit` statement is one means of avoiding syntax errors. It forces you to declare, in advance, all the variables to be used in the application. Therefore, when those variables are used in the code, any typographic errors are caught immediately and can be fixed.
 
-## <a name="run-time-errors"></a>Erros de tempo de execução
- Os *erros de tempo de execução* são aqueles que aparecem somente depois que você compila e executa seu código. Eles envolvem código que podem parecer corretos para que não haja erros de sintaxe, mas que não serão executados. Por exemplo, você pode escrever corretamente uma linha de código para abrir um arquivo. Mas se o arquivo não existir, o aplicativo não poderá abrir o arquivo e lançar uma exceção. Você pode corrigir a maioria dos erros de tempo de execução reescrevendo o código com falha ou usando a [manipulação de exceções](../../language-reference/statements/try-catch-finally-statement.md)e, em seguida, recompilando-o e executando-o novamente.
+## <a name="run-time-errors"></a>Run-Time Errors
+ *Run-time errors* are those that appear only after you compile and run your code. These involve code that may appear to be correct in that it has no syntax errors, but that will not execute. For example, you might correctly write a line of code to open a file. But if the file does not exist, the application cannot open the file, and it throws an exception. You can fix most run-time errors by rewriting the faulty code or by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md), and then recompiling and rerunning it.
   
-## <a name="logic-errors"></a>Erros lógicos
- Os *erros lógicos* são aqueles que aparecem quando o aplicativo está em uso. Eles são geralmente suposições com falhas feitas pelo desenvolvedor ou resultados indesejados ou inesperados em resposta às ações do usuário. Por exemplo, uma chave digitada incorretamente pode fornecer informações incorretas para um método, ou você pode pressupor que um valor válido sempre é fornecido para um método quando esse não for o caso. Embora erros de lógica possam ser tratados usando a [manipulação de exceção](../../language-reference/statements/try-catch-finally-statement.md) (por exemplo, testando se um argumento é `Nothing` e lançando um <xref:System.ArgumentNullException>), mais comumente eles devem ser resolvidos corrigindo o erro na lógica e recompilando o aplicativo .
+## <a name="logic-errors"></a>Logic Errors
+ *Logic errors* are those that appear once the application is in use. They are most often faulty assumptions made by the developer, or unwanted or unexpected results in response to user actions. For example, a mistyped key might provide incorrect information to a method, or you may assume that a valid value is always supplied to a method when that is not the case. Although logic errors can be handled by using [exception handling](../../language-reference/statements/try-catch-finally-statement.md) (for example, by testing whether an argument is `Nothing` and throwing an <xref:System.ArgumentNullException>), most commonly they should be addressed by correcting the error in logic and recompiling the application.
 
 ## <a name="see-also"></a>Consulte também
 

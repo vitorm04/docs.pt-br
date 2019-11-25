@@ -4,12 +4,12 @@ description: Descubra os recursos de telemetria do SDK do .NET Core que coletam 
 author: KathleenDollard
 ms.date: 08/27/2019
 ms.custom: seodec18
-ms.openlocfilehash: 253f69392f034e330a75ed387d9346e8a5ae2a08
-ms.sourcegitcommit: 77e33b682db39955e331b8e8eda4ef1925a24e78
-ms.translationtype: HT
+ms.openlocfilehash: ecb8dbed036a04726867d004dbadf6205c1fa09f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70133695"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281769"
 ---
 # <a name="net-core-sdk-telemetry"></a>Telemetria do SDK do .NET Core
 
@@ -57,13 +57,13 @@ O recurso de telemetria coleta os seguintes dados:
 
 | Versões do SDK | Dados |
 |--------------|------|
-| Todos          | Carimbo de data/hora da invocação. |
-| Todos          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
-| Todos          | Três endereços IP de octeto usados para determinar a localização geográfica. |
-| Todos          | Sistema operacional e versão. |
-| Todos          | RID (ID de runtime) em que o SDK está em execução. |
-| Todos          | Versão do SDK do .NET Core. |
-| Todos          | Perfil de telemetria: um valor opcional usado somente com o consentimento explícito do usuário e usado internamente na Microsoft. |
+| Todas          | Carimbo de data/hora da invocação. |
+| Todas          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
+| Todas          | Três endereços IP de octeto usados para determinar a localização geográfica. |
+| Todas          | Sistema operacional e versão. |
+| Todas          | RID (ID de runtime) em que o SDK está em execução. |
+| Todas          | Versão do SDK do .NET Core. |
+| Todas          | Perfil de telemetria: um valor opcional usado somente com o consentimento explícito do usuário e usado internamente na Microsoft. |
 | >=2.0        | Opções e argumentos de comando: várias opções e vários argumentos são coletados (não cadeias de caracteres arbitrárias). Confira [Opções coletadas](#collected-options). Com hash após 2.1.300. |
 | >=2.0         | Se o SDK está em execução em um contêiner. |
 | >=2.0         | Estruturas de destino (do evento `TargetFramework`), com hash começando em 2.1. |
@@ -114,7 +114,7 @@ A CLI do .NET Core coleta informações apenas das exceções da CLI/do SDK, nã
 
 O seguinte exemplo mostra os tipos de dados coletados:
 
-```
+```console
 System.IO.IOException
 at System.ConsolePal.WindowsConsoleStream.Write(Byte[] buffer, Int32 offset, Int32 count)
 at System.IO.StreamWriter.Flush(Boolean flushStream, Boolean flushEncoder)

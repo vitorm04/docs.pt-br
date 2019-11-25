@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: 757cbce98c73821a19ee162b7828fa4ad952de3c
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73195491"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204597"
 ---
 # <a name="c-walkthroughs"></a>Explicações passo a passo sobre o C#
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  
@@ -23,8 +23,8 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Acessando a Web usando Async e Await](./programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
  Mostra como criar uma solução assíncrona usando [async](./language-reference/keywords/async.md) e [await](./language-reference/operators/await.md).  
   
- [Criando um componente do Tempo de Execução do Windows em C# ou no Visual Basic e chamando-o do JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Mostra como criar um tipo do Windows Runtime, empacotá-lo em um componente do Windows Runtime e chamar o componente de um aplicativo [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] que é compilado para Windows usando JavaScript.  
+ [Criando um componente do Windows Runtime em C# ou no Visual Basic e chamando-o do JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
+ Shows how to create a Windows Runtime type, package it in a Windows Runtime component, and then call the component from a Windows 8.x Store app that's built for Windows by using JavaScript.  
   
  [Programação do Office (C# e Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  Mostra como criar uma planilha do Excel e um documento do Word usando C# e Visual Basic.  

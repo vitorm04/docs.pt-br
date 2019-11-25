@@ -1,25 +1,27 @@
 ---
-title: Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
+title: Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: f9d898756b6b17ae69d1af7dd747c20a26d88417
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
-ms.translationtype: HT
+ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347997"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348926"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Classes usadas em E/S de arquivo do .NET Framework e o sistema de arquivos (Visual Basic)
+
 As tabelas a seguir listam as classes usadas comumente para E/S de arquivos do .NET Framework, categorizadas em classes de E/S de arquivos, classes usadas para criar fluxos e classes usadas para ler e gravar em fluxos.  
   
 Para obter uma listagem mais abrangente, consulte [Visão Geral da Biblioteca de Classes](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Classes básicas de E/S para arquivos, unidades e pastas  
+
  A tabela a seguir lista e descreve as principais classes usadas para E/S de arquivos.  
   
-|Classe|DESCRIÇÃO|  
+|Class|Descrição|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
@@ -34,9 +36,10 @@ Para obter uma listagem mais abrangente, consulte [Visão Geral da Biblioteca de
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|Controla o acesso de arquivos e pastas definindo permissões <xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>, <xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A> e <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A>.|  
   
 ## <a name="classes-used-to-create-streams"></a>Classes usadas para criar fluxos  
+
  A tabela a seguir lista e descreve as principais classes usadas para criar fluxos.  
   
-|Classe|DESCRIÇÃO|  
+|Class|Descrição|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Adiciona uma camada de armazenamento em buffer para ler e gravar operações em outro fluxo.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Dá suporte ao acesso aleatório a arquivos por meio de seu método <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> abre arquivos de forma síncrona por padrão, mas também dá suporte à operação assíncrona.|  
@@ -45,6 +48,7 @@ Para obter uma listagem mais abrangente, consulte [Visão Geral da Biblioteca de
 |<xref:System.Security.Cryptography.CryptoStream?displayProperty=nameWithType>|Define uma transmissão que liga fluxos de dados a transformações criptográficas.|  
   
 ## <a name="classes-used-to-read-from-and-write-to-streams"></a>Classes usadas para ler e gravar em fluxos  
+
  A tabela a seguir mostra as classes específicas usadas para ler e gravar em arquivos com fluxos.  
   
 |**Class**|**Descrição**|  

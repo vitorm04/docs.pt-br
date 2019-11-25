@@ -1,22 +1,22 @@
 ---
-title: 'Como: Chamar um método de extensão (Visual Basic)'
+title: Como chamar um método de extensão
 ms.date: 07/20/2015
 helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: f2058162ab939d2619d7255c884d88c35ee63715
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: a19705a8f90833d48869df26a18d19b0ad1488e0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512666"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74340404"
 ---
-# <a name="how-to-call-an-extension-method-visual-basic"></a>Como: Chamar um método de extensão (Visual Basic)
+# <a name="how-to-call-an-extension-method-visual-basic"></a>Como chamar um método de extensão (Visual Basic)
 
-Os métodos de extensão permitem adicionar métodos a uma classe existente. Depois que um método de extensão é declarado e colocado no escopo, você pode chamá-lo como um método de instância do tipo que ele estende. Para obter mais informações sobre como escrever um método de extensão, [consulte Como: Escreva um método](./how-to-write-an-extension-method.md)de extensão.
+Extension methods enable you to add methods to an existing class. After an extension method is declared and brought into scope, you can call it like an instance method of the type that it extends. For more information about how to write an extension method, see [How to: Write an Extension Method](./how-to-write-an-extension-method.md).
 
- As instruções a seguir se referem `PrintAndPunctuate`ao método de extensão, que exibirá a instância de cadeia de caracteres que a invoca, seguida por qualquer valor enviado para `punc`o segundo parâmetro,.
+ The following instructions refer to extension method `PrintAndPunctuate`, which will display the string instance that invokes it, followed by whatever value is sent in for the second parameter, `punc`.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -31,40 +31,40 @@ Module StringExtensions
 End Module
 ```
 
-O método deve estar no escopo quando for chamado.
+The method must be in scope when it is called.
 
-### <a name="to-call-an-extension-method"></a>Para chamar um método de extensão
+### <a name="to-call-an-extension-method"></a>To call an extension method
 
-1. Declare uma variável que tenha o tipo de dados do primeiro parâmetro do método de extensão. Para `PrintAndPunctuate`, você precisa de <xref:System.String> uma variável:
+1. Declare a variable that has the data type of the first parameter of the extension method. For `PrintAndPunctuate`, you need a <xref:System.String> variable:
 
     ```vb
     Dim example = "Ready"
     ```
 
-2. Essa variável invocará o método de extensão e seu valor será associado ao primeiro parâmetro, `aString`. A seguinte instrução de chamada será `Ready?`exibida.
+2. That variable will invoke the extension method, and its value is bound to the first parameter, `aString`. The following calling statement will display `Ready?`.
 
     ```vb
     example.PrintAndPunctuate("?")
     ```
 
-     Observe que a chamada para esse método de extensão é semelhante a uma chamada para qualquer um dos <xref:System.String> métodos de instância que exigem um parâmetro:
+     Notice that the call to this extension method looks just like a call to any one of the <xref:System.String> instance methods that require one parameter:
 
     ```vb
     example.EndsWith("dy")
     example.IndexOf("R")
     ```
 
-3. Declare outra variável de cadeia de caracteres e chame o método novamente para ver que ele funciona com qualquer cadeia de caracteres.
+3. Declare another string variable and call the method again to see that it works with any string.
 
     ```vb
     Dim example2 = " or not"
     example2.PrintAndPunctuate("!!!")
     ```
 
-     O resultado desta vez é: `or not!!!`.
+     The result this time is: `or not!!!`.
 
 ## <a name="example"></a>Exemplo
- O código a seguir é um exemplo completo da criação e uso de um método de extensão simples.
+ The following code is a complete example of the creation and use of a simple extension method.
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -97,6 +97,6 @@ End Module
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Gravar um método de extensão](./how-to-write-an-extension-method.md)
+- [Como escrever um método de extensão](./how-to-write-an-extension-method.md)
 - [Métodos de Extensão](./extension-methods.md)
-- [Escopo no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

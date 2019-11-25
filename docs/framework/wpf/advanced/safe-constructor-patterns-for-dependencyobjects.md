@@ -6,21 +6,21 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: fce17979fbd43df0496f972cac525fd79dcbfe32
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 66e380a9428395c772d0dcfe45a995374774aec6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991817"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283827"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Padrões de construtor seguro para DependencyObjects
-De modo geral, os construtores de classe não devem chamar retornos de chamada como métodos virtuais ou representantes, porque construtores podem ser chamados como inicialização de base dos construtores para uma classe derivada. O fornecimento do virtual pode ser feito em um estado de inicialização incompleta de um determinado objeto. No entanto, o sistema de propriedades chama e expõe os retornos de chamada internamente, como parte do sistema de propriedades de dependência. Como uma operação simples, a definição de um valor de <xref:System.Windows.DependencyObject.SetValue%2A> propriedade de dependência com chamada pode incluir um retorno de chamada em algum lugar na determinação. Por esse motivo, você deve ter cuidado ao definir valores de propriedade de dependência dentro do corpo de um construtor, o que poderá se tornar problemático se o tipo for usado como uma classe base. Há um padrão específico para implementar <xref:System.Windows.DependencyObject> construtores que evitam problemas específicos com Estados de propriedade de dependência e os retornos de chamada inerentes, documentados aqui.  
+De modo geral, os construtores de classe não devem chamar retornos de chamada como métodos virtuais ou representantes, porque construtores podem ser chamados como inicialização de base dos construtores para uma classe derivada. O fornecimento do virtual pode ser feito em um estado de inicialização incompleta de um determinado objeto. No entanto, o sistema de propriedades chama e expõe os retornos de chamada internamente, como parte do sistema de propriedades de dependência. Como uma operação simples, a definição de um valor de propriedade de dependência com <xref:System.Windows.DependencyObject.SetValue%2A> chamada potencialmente inclui um retorno de chamada em algum lugar na determinação. Por esse motivo, você deve ter cuidado ao definir valores de propriedade de dependência dentro do corpo de um construtor, o que poderá se tornar problemático se o tipo for usado como uma classe base. Há um padrão específico para implementar construtores de <xref:System.Windows.DependencyObject> que evitam problemas específicos com Estados de propriedade de dependência e os retornos de chamada inerentes, documentados aqui.  
 
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>Métodos virtuais do sistema de propriedades  
- Os seguintes métodos virtuais ou retornos de chamada são potencialmente chamados durante os cálculos da <xref:System.Windows.DependencyObject.SetValue%2A> chamada que define um valor de propriedade de <xref:System.Windows.ValidateValueCallback>dependência <xref:System.Windows.PropertyChangedCallback>: <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>,,. Cada um desses métodos virtuais ou retornos de chamada tem uma finalidade específica para expandir a versatilidade do sistema de propriedades [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e das propriedades de dependência. Para obter mais informações sobre como usar esses virtuais para personalizar a determinação do valor da propriedade, consulte [Retornos de chamada da propriedade de dependência e validação](dependency-property-callbacks-and-validation.md).  
+ Os seguintes métodos virtuais ou retornos de chamada são potencialmente chamados durante os cálculos da chamada <xref:System.Windows.DependencyObject.SetValue%2A> que define um valor de propriedade de dependência: <xref:System.Windows.ValidateValueCallback>, <xref:System.Windows.PropertyChangedCallback>, <xref:System.Windows.CoerceValueCallback>, <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>. Cada um desses métodos virtuais ou retornos de chamada tem uma finalidade específica para expandir a versatilidade do sistema de propriedades [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e das propriedades de dependência. Para obter mais informações sobre como usar esses virtuais para personalizar a determinação do valor da propriedade, consulte [Retornos de chamada da propriedade de dependência e validação](dependency-property-callbacks-and-validation.md).  
   
-### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Imposição da regra de FXCop versus virtuais do sistema de propriedades  
+### <a name="fxcop-rule-enforcement-vs-property-system-virtuals"></a>Imposição de regra do FXCop versus virtualidades do sistema de propriedades  
  Se você usar a ferramenta FXCop da Microsoft como parte do processo de build e derivar de determinadas classes de estrutura [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] que chamam o construtor base ou implementar suas próprias propriedades de dependência em classes derivadas, talvez você encontre uma violação de regra de FXCop específica. A cadeia de caracteres de nome dessa violação é:  
   
  `DoNotCallOverridableMethodsInConstructors`  
@@ -60,7 +60,7 @@ public class MyClass : DependencyObject
 }  
 ```  
   
- Quando o código do `new MyClass(objectvalue)`aplicativo chama, isso chama o construtor sem parâmetros e construtores de classe base. Em seguida, `Property1 = object1`ele define, que chama o `OnPropertyChanged` método virtual no `MyClass` proprietário <xref:System.Windows.DependencyObject>.  A substituição se refere a `_myList`, que ainda não foi inicializado.  
+ Quando o código do aplicativo chama `new MyClass(objectvalue)`, isso chama o construtor sem parâmetros e construtores de classe base. Em seguida, ele define `Property1 = object1`, que chama o método virtual `OnPropertyChanged` no <xref:System.Windows.DependencyObject>de `MyClass` proprietário.  A substituição se refere a `_myList`, que ainda não foi inicializado.  
   
  Uma maneira de evitar esses problemas é garantir que os retornos de chamada usem apenas outras propriedades de dependência e que cada propriedade de dependência tenha um valor padrão estabelecido como parte de seus metadados registrados.  
   
@@ -96,7 +96,7 @@ public MyClass : SomeBaseClass {
 #### <a name="non-default-convenience-constructors-which-do-match-base-signatures"></a>Construtores não padrão (de conveniência) que correspondem a assinaturas de base  
  Em vez de chamar o construtor base com a mesma parametrização, chame novamente seu próprio construtor sem parâmetros de classe. Não chame o inicializador de base; em vez disso, você deve chamar `this()`. Em seguida, reproduza o comportamento do construtor original usando os parâmetros passados como valores para definir as propriedades relevantes. Use a documentação do construtor de base original para ver diretrizes para determinar as propriedades que os parâmetros específicos devem definir:  
   
-```  
+```csharp  
 public MyClass : SomeBaseClass {  
     public MyClass(object toSetProperty1) : this() {  
         // Class initialization NOT done by default.  
@@ -110,10 +110,10 @@ public MyClass : SomeBaseClass {
  Para casos em que o tipo base tem várias assinaturas, você deve corresponder deliberadamente a todas as assinaturas possíveis com uma implementação de Construtor própria que usa o padrão recomendado para chamar o construtor sem parâmetros de classe antes de definir mais Properties.  
   
 #### <a name="setting-dependency-properties-with-setvalue"></a>Definindo propriedades de dependência com SetValue  
- Esses mesmos padrões se aplicam se você estiver definindo uma propriedade que não tem um wrapper para conveniência de configuração de propriedade e definir <xref:System.Windows.DependencyObject.SetValue%2A>valores com. Suas chamadas para <xref:System.Windows.DependencyObject.SetValue%2A> esses parâmetros de construtor de passagem também devem chamar o construtor sem parâmetros de classe para inicialização.  
+ Esses mesmos padrões se aplicam se você estiver definindo uma propriedade que não tem um wrapper para conveniência de configuração de propriedade e definir valores com <xref:System.Windows.DependencyObject.SetValue%2A>. Suas chamadas para <xref:System.Windows.DependencyObject.SetValue%2A> que passam por parâmetros de Construtor também devem chamar o construtor de sem parâmetros de classe para inicialização.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Propriedades de dependência personalizada](custom-dependency-properties.md)
+- [Propriedades de dependência personalizadas](custom-dependency-properties.md)
 - [Visão geral das propriedades da dependência](dependency-properties-overview.md)
 - [Segurança de propriedade da dependência](dependency-property-security.md)

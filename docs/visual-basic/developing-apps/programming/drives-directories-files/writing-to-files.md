@@ -1,5 +1,5 @@
 ---
-title: Gravando em arquivos no Visual Basic
+title: Gravando em arquivos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], writing to files
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - Visual Basic, writing to files
 ms.assetid: ac6fb453-0d6c-4ce4-93b4-1bbcd06de83e
-ms.openlocfilehash: 92e9d717eb52fa393d9215068d8fe70c84f613ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8511a96c7abcc28997c293a09ef10bad543dc261
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588113"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352131"
 ---
 # <a name="writing-to-files-in-visual-basic"></a>Gravando em arquivos no Visual Basic
+
 Esta seção explica como realizar tarefas que envolvem gravação em arquivos.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Como gravar texto em arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)  
  Demonstra como gravar em arquivos de texto.  
   
@@ -35,6 +37,7 @@ Esta seção explica como realizar tarefas que envolvem gravação em arquivos.
  Demonstra como gravar em um arquivo com um objeto <xref:System.IO.StreamWriter?displayProperty=nameWithType>.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Descreve o objeto `My.Computer.FileSystem` e seus métodos e propriedades.  
   
@@ -48,6 +51,7 @@ Esta seção explica como realizar tarefas que envolvem gravação em arquivos.
  Descreve o método `WriteAllText`.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Leitura de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Explica como realizar tarefas que envolvem a leitura de arquivos.  
   

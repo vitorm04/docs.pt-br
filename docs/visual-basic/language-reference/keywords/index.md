@@ -1,5 +1,5 @@
 ---
-title: Palavras-chave (Visual Basic)
+title: Palavras-chave
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reserved keywords, Visual Basic
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: 08444d757ed4186494100e54415e504c1ef117ce
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8fd6389db453da4352fee12e870edc3004ce8f1b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197515"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74338785"
 ---
 # <a name="keywords-visual-basic"></a>Palavras-chave (Visual Basic)
 
-As tabelas a seguir listam todas as palavras-chave do idioma Visual Basic.
+The following tables list all Visual Basic language keywords.
 
 ## <a name="reserved-keywords"></a>Palavras-chave reservadas
 
@@ -80,7 +80,7 @@ As seguintes palavras-chave são *reservadas*, o que significa que elas não pod
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`e `Wend` são retidos como palavras-chave reservadas, embora não sejam mais usadas em Visual Basic. O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../queries/let-clause.md).
+> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../queries/let-clause.md).
 
 ## <a name="unreserved-keywords"></a>Palavras-chave não reservadas
 
@@ -123,4 +123,4 @@ As seguintes palavras-chave não são reservadas, o que significa que elas podem
 
 ## <a name="see-also"></a>Consulte também
 
-- [Membros da Biblioteca em Tempo de Execução do Visual Basic](../runtime-library-members.md)
+- [Membros da Biblioteca de Runtime do Visual Basic](../runtime-library-members.md)
