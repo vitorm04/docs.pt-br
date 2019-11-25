@@ -1,21 +1,21 @@
 ---
-title: Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)
+title: Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: fa9efc51f72a47acfa32d42fc9ff8e5aadf61721
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 15e7666a5fcb5a16628216354c18599f87c7d905
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524130"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341510"
 ---
-# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)
+# <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)
 
 O exemplo a seguir mostra como classificar linhas de texto estruturado, como valores separados por vírgulas, por qualquer campo na linha. O campo pode ser especificado dinamicamente em runtime. Suponha que os campos em scores.csv representam o número de ID do aluno, seguido por uma série de quatro resultados de teste.
 
 ### <a name="to-create-a-file-that-contains-data"></a>Para criar um arquivo que contém dados
 
-Copie os dados Scores. csv do tópico [como: adicionar conteúdo de arquivos diferentes (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) e salvá-lo em sua pasta de solução.
+Copy the scores.csv data from the topic [How to: Join Content from Dissimilar Files (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md) and save it to your solution folder.
 
 ## <a name="example"></a>Exemplo
 
@@ -70,12 +70,12 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-Este exemplo também demonstra como retornar uma variável de consulta de uma função.
+This example also demonstrates how to return a query variable from a Function.
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
-Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

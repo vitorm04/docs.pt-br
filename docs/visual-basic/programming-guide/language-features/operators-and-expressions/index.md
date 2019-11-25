@@ -1,5 +1,5 @@
 ---
-title: Operadores e expressões no Visual Basic
+title: Operadores e expressões
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], operands
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operands
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
-ms.openlocfilehash: 40d71c5231b8d278f4ca8d9352e6e3cba5104f9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa410a739be2da8802e76a35068448263ddec1fc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649703"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343607"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Operadores e expressões no Visual Basic
 Um *operador* é um elemento de código que executa uma operação em um ou mais elementos de código que retêm valores. Os elementos de valor incluem variáveis, constantes, literais, propriedades, valores retornados dos procedimentos `Function` e `Operator`, bem como expressões.  
@@ -23,7 +23,7 @@ Um *operador* é um elemento de código que executa uma operação em um ou mais
  Uma *expressão* é uma série de elementos de valor combinada com operadores, que gera um novo valor. Os operadores agem em elementos de valor executando cálculos, comparações ou outras operações.  
   
 ## <a name="types-of-operators"></a>Tipos de operadores  
- Visual Basic oferece os seguintes tipos de operadores:  
+ Visual Basic provides the following types of operators:  
   
 - Os [operadores aritméticos](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md) executam cálculos familiares em valores numéricos, incluindo a mudança dos padrões de bit.  
   
@@ -60,7 +60,7 @@ Um *operador* é um elemento de código que executa uma operação em um ou mais
   
  [!code-vb[VbVbalrOperators#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#56)]  
   
- No exemplo anterior, o Visual Basic que executa as operações na expressão no lado direito do operador de atribuição (`=`), em seguida, atribui o valor resultante à variável `x` à esquerda. Não há nenhum limite prático para o número de operadores que podem ser combinados em uma expressão, mas é necessário entender a [Precedência do operador no Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) para assegurar que você obtenha os resultados esperados.  
+ In the preceding example, Visual Basic performs the operations in the expression on the right side of the assignment operator (`=`), then assigns the resulting value to the variable `x` on the left. Não há nenhum limite prático para o número de operadores que podem ser combinados em uma expressão, mas é necessário entender a [Precedência do operador no Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md) para assegurar que você obtenha os resultados esperados.  
 
 ## <a name="see-also"></a>Consulte também
 

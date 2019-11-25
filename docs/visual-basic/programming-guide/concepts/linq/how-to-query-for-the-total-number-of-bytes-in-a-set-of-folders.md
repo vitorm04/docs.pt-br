@@ -1,15 +1,15 @@
 ---
-title: 'Como: Consultar o número Total de Bytes em um conjunto de pastas (LINQ) (Visual Basic)'
+title: Como consultar o número total de bytes em um conjunto de pastas (LINQ)
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 4e69acbd42e703cdaca1d91f4597c980e6fd8508
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: b926a3e0ed973f449718ca5883aeabc0bfcf7b91
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593276"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347645"
 ---
-# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>Como: Consultar o número Total de Bytes em um conjunto de pastas (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>How to: Query for the Total Number of Bytes in a Set of Folders (LINQ) (Visual Basic)
 Este exemplo mostra como recuperar o número total de bytes usado por todos os arquivos em uma pasta especificada e todas as suas subpastas.  
   
 ## <a name="example"></a>Exemplo  
@@ -72,7 +72,7 @@ End Module
  A consulta chama um método separado para obter o tamanho de arquivo. Ela faz isso para consumir a possível exceção que será gerada se o arquivo tiver sido excluído em outro thread após o objeto <xref:System.IO.FileInfo> ter sido criado na chamada para `GetFiles`. Embora o objeto <xref:System.IO.FileInfo> já tenha sido criado, a exceção poderá ocorrer porque um objeto <xref:System.IO.FileInfo> tentará atualizar sua propriedade <xref:System.IO.FileInfo.Length%2A> com o tamanho mais atual na primeira vez que a propriedade foi acessada. Ao colocar essa operação em um bloco try-catch fora da consulta, o código segue a regra de evitar operações em consultas que podem causar efeitos colaterais. Em geral, deve-se ter muito cuidado ao consumir exceções para garantir que um aplicativo não seja deixado em um estado desconhecido.  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
-Criar um projeto de aplicativo do console do VB.NET, com um `Imports` instrução para o namespace System. Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
   
 ## <a name="see-also"></a>Consulte também
 

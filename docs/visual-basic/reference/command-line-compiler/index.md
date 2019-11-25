@@ -1,5 +1,5 @@
 ---
-title: Compilador de linha de comando do Visual Basic
+title: Command-line compiler
 ms.date: 02/20/2018
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - compiler options, Visual Basic
 - Visual Basic compiler, options
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
-ms.openlocfilehash: d5bccab71d790a7a70d012375d3f47676cf83c6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65f617a42e6281ca3b2336319d8a61d84e0386d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794102"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344236"
 ---
-# <a name="visual-basic-command-line-compiler"></a>Compilador de linha de comando do Visual Basic
+# <a name="visual-basic-command-line-compiler"></a>Visual Basic command-line compiler
 
-O compilador de linha de comando do Visual Basic fornece uma alternativa para compilar programas de dentro do ambiente de desenvolvimento integrado (IDE) do Visual Studio. Esta seção contém descrições para as opções de compilador do Visual Basic.
+The Visual Basic command-line compiler provides an alternative to compiling programs from within the Visual Studio integrated development environment (IDE). This section contains descriptions for the Visual Basic compiler options.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="in-this-section"></a>Nesta seção
 
 [Compilando da Linha de Comando](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-Descreve o compilador de linha de comando do Visual Basic, que é fornecido como uma alternativa para compilar programas de dentro do IDE do Visual Studio.
+Describes the Visual Basic command-line compiler, which is provided as an alternative to compiling programs from within the Visual Studio IDE.
 
 [Opções do compilador do Visual Basic listadas em ordem alfabética](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
-Lista as opções do compilador em uma tabela alfabética
+Lists compiler options in an alphabetical table
 
 [Opções do compilador do Visual Basic listadas por categoria](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
 Apresenta opções de compilador in grupos funcionais.
@@ -35,4 +35,4 @@ Apresenta opções de compilador in grupos funcionais.
 ## <a name="related-sections"></a>Seções relacionadas
 
 [Guia do Visual Basic](../../index.md)  
-O ponto de partida para a documentação do Visual Basic.
+The starting point for the Visual Basic documentation.

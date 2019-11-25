@@ -1,109 +1,109 @@
 ---
-title: Noções básicas de Aplicativo do Windows Forms (Visual Basic)
+title: Noções básicas de aplicativo dos Windows Forms
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: f1b70209d6daf412be56949f349c242a83578e71
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 1aa1edf0130e388c6cc87662d83591f41a8e2325
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524767"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349158"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Noções básicas de Aplicativo do Windows Forms (Visual Basic)
 
-Uma parte importante do Visual Basic é a capacidade de criar Windows Forms aplicativos que são executados localmente nos computadores dos usuários. Você pode usar o Visual Studio para criar o aplicativo e a interface do usuário usando Windows Forms. Um aplicativo Windows Forms é criado em classes do namespace <xref:System.Windows.Forms>.
+An important part of Visual Basic is the ability to create Windows Forms applications that run locally on users' computers. You can use Visual Studio to create the application and user interface using Windows Forms. A Windows Forms application is built on classes from the <xref:System.Windows.Forms> namespace.
 
-## <a name="designing-windows-forms-applications"></a>Criando Windows Forms aplicativos
+## <a name="designing-windows-forms-applications"></a>Designing Windows Forms Applications
 
-Você pode criar Windows Forms e aplicativos de serviço do Windows com o Visual Studio. Para mais informações, consulte os seguintes tópicos:
+You can create Windows Forms and Windows service applications with Visual Studio. Para mais informações, consulte os seguintes tópicos:
 
-- [Introdução com Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Fornece informações sobre como criar e programar Windows Forms.
+- [Getting Started with Windows Forms](../../../framework/winforms/getting-started-with-windows-forms.md). Provides information on how to create and program Windows Forms.
 
-- [Controles de Windows Forms](../../../framework/winforms/controls/index.md). Coleção de tópicos detalhando o uso de controles de Windows Forms.
+- [Windows Forms Controls](../../../framework/winforms/controls/index.md). Collection of topics detailing the use of Windows Forms controls.
 
-- [Aplicativos de serviço do Windows](../../../framework/windows-services/index.md). Lista os tópicos que explicam como criar serviços do Windows.
+- [Windows Service Applications](../../../framework/windows-services/index.md). Lists topics that explain how to create Windows services.
 
 ## <a name="building-rich-interactive-user-interfaces"></a>Compilando interfaces do usuário sofisticadas e interativas
 
-Windows Forms é o componente de cliente inteligente do .NET Framework, um conjunto de bibliotecas gerenciadas que habilitam tarefas comuns de aplicativos, como leitura e gravação no sistema de arquivos. Usando um ambiente de desenvolvimento como o Visual Studio, você pode criar Windows Forms aplicativos que exibem informações, solicitar entrada de usuários e se comunicar com computadores remotos por meio de uma rede.
+Windows Forms is the smart-client component of the .NET Framework, a set of managed libraries that enable common application tasks such as reading and writing to the file system. Using a development environment like Visual Studio, you can create Windows Forms applications that display information, request input from users, and communicate with remote computers over a network.
 
-No Windows Forms, um formulário é uma superfície visual na qual você exibe informações para o usuário. Normalmente, você cria Windows Forms aplicativos colocando controles em formulários e desenvolvendo respostas para ações do usuário, como cliques do mouse ou pressionamentos de tecla. Um *controle* é um elemento discreto de interface do usuário que exibe dados ou aceita a entrada de dados.
+In Windows Forms, a form is a visual surface on which you display information to the user. You commonly build Windows Forms applications by placing controls on forms and developing responses to user actions, such as mouse clicks or key presses. Um *controle* é um elemento discreto de interface do usuário que exibe dados ou aceita a entrada de dados.
 
 ### <a name="events"></a>Eventos
 
-Quando um usuário faz algo em seu formulário ou em um de seus controles, ele gera um evento. O seu aplicativo reage a esses eventos usando código e os processa quando eles acontecem. Para obter mais informações, consulte [Criando manipuladores de eventos nos Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md).
+When a user does something to your form or one of its controls, it generates an event. O seu aplicativo reage a esses eventos usando código e os processa quando eles acontecem. Para obter mais informações, consulte [Criando manipuladores de eventos nos Windows Forms](../../../framework/winforms/creating-event-handlers-in-windows-forms.md).
 
 ### <a name="controls"></a>Controles
 
-O Windows Forms contém uma variedade de controles que você pode colocar em formulários: controles que exibem caixas de texto, botões, caixas suspensas, botões de opção e até mesmo páginas da Web. Para obter uma lista de todos os controles que podem ser usados em um formulário, consulte [Controles que podem ser usados nos Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). Se um controle existente não atender às suas necessidades, Windows Forms também dará suporte à criação de seus próprios controles personalizados usando a classe <xref:System.Windows.Forms.UserControl>.
+Windows Forms contains a variety of controls that you can place on forms: controls that display text boxes, buttons, drop-down boxes, radio buttons, and even Web pages. Para obter uma lista de todos os controles que podem ser usados em um formulário, consulte [Controles que podem ser usados nos Windows Forms](../../../framework/winforms/controls/controls-to-use-on-windows-forms.md). If an existing control does not meet your needs, Windows Forms also supports creating your own custom controls using the <xref:System.Windows.Forms.UserControl> class.
 
-O Windows Forms tem controles avançados de interface do usuário que emulam recursos em aplicativos de alta tecnologia, como o Microsoft Office. Usando o controle de <xref:System.Windows.Forms.ToolStrip> e <xref:System.Windows.Forms.MenuStrip>, você pode criar barras de ferramentas e menus que contêm texto e imagens, exibir submenus e hospedar outros controles, como caixas de texto e caixas de combinação.
+O Windows Forms tem controles avançados de interface do usuário que emulam recursos em aplicativos de alta tecnologia, como o Microsoft Office. Using the <xref:System.Windows.Forms.ToolStrip> and <xref:System.Windows.Forms.MenuStrip> control, you can create toolbars and menus that contain text and images, display submenus, and host other controls such as text boxes and combo boxes.
 
-Com o designer de formulários do tipo "arrastar e soltar" do Visual Studio, você pode facilmente criar Windows Forms aplicativos: basta selecionar os controles com o cursor e colocá-los onde você deseja no formulário. O designer fornece ferramentas como linhas de grade e "linhas de alinhamento" para tirar as complicações do alinhamento dos controles. E se você usar o Visual Studio ou compilar na linha de comando, poderá usar os controles <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> e <xref:System.Windows.Forms.SplitContainer> para criar layouts de formulário avançados com tempo mínimo e esforço.
+With the Visual Studio drag-and-drop forms designer, you can easily create Windows Forms applications: just select the controls with your cursor and place them where you want on the form. The designer provides tools such as grid lines and "snap lines" to take the hassle out of aligning controls. And whether you use Visual Studio or compile at the command line, you can use the <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> and <xref:System.Windows.Forms.SplitContainer> controls to create advanced form layouts with minimal time and effort.
 
-### <a name="custom-ui-elements"></a>Elementos personalizados da interface do usuário
+### <a name="custom-ui-elements"></a>Custom UI Elements
 
-Por fim, se você precisar criar seus próprios elementos personalizados de interface do usuário, o namespace <xref:System.Drawing> conterá todas as classes necessárias para processar linhas, círculos e outras formas diretamente em um formulário.
+Finally, if you must create your own custom UI elements, the <xref:System.Drawing> namespace contains all of the classes you need to render lines, circles, and other shapes directly on a form.
 
-Para obter informações passo a passo sobre como usar esses recursos, consulte os tópicos da ajuda a seguir.
+For step-by-step information about using these features, see the following Help topics.
 
 |Para|Consulte|
 |--------|---------|
-|Criar um novo aplicativo Windows Forms com o Visual Studio|[Tutorial 1: criar um visualizador de imagens](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
-|Usar controles em formulários|[Como Adicionar Controles ao Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|Criar gráficos com <xref:System.Drawing>|[Introdução à Programação de Elementos Gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|Criar controles personalizados|[Como herdar da classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|Create a new Windows Forms application with Visual Studio|[Tutorial 1: Create a picture viewer](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|
+|Use controls on forms|[Como Adicionar Controles ao Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
+|Create graphics with <xref:System.Drawing>|[Introdução à Programação de Elementos Gráficos](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|
+|Create custom controls|[Como herdar da classe UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ## <a name="displaying-and-manipulating-data"></a>Exibindo e manipulando dados
 
-Muitos aplicativos precisam exibir dados obtidos de um banco de dados, de um arquivo XML, de um serviço Web XML ou de outra fonte de dados. Windows Forms fornece um controle flexível chamado de controle de <xref:System.Windows.Forms.DataGridView> para renderizar esses dados tabulares em um formato de linha e coluna tradicional, para que cada parte dos dados ocupe sua própria célula. Usando <xref:System.Windows.Forms.DataGridView> você pode personalizar a aparência de células individuais, bloquear linhas e colunas arbitrárias em vigor e exibir controles complexos dentro de células, entre outros recursos.
+Muitos aplicativos precisam exibir dados obtidos de um banco de dados, de um arquivo XML, de um serviço Web XML ou de outra fonte de dados. Windows Forms provides a flexible control called the <xref:System.Windows.Forms.DataGridView> control for rendering such tabular data in a traditional row and column format, so that every piece of data occupies its own cell. Using <xref:System.Windows.Forms.DataGridView> you can customize the appearance of individual cells, lock arbitrary rows and columns in place, and display complex controls inside cells, among other features.
 
-A conexão a fontes de dados pela rede é uma tarefa simples com clientes inteligentes dos Windows Forms. O componente <xref:System.Windows.Forms.BindingSource>, novo com o Windows Forms no Visual Studio 2005 e no .NET Framework 2,0, representa uma conexão com uma fonte de dados e expõe métodos para associação de dados a controles, navegação para os registros anteriores e posteriores, edição de registros e salvamento altera de volta para a fonte original. O controle <xref:System.Windows.Forms.BindingNavigator> fornece uma interface simples sobre o componente <xref:System.Windows.Forms.BindingSource> para que os usuários naveguem entre os registros.
+A conexão a fontes de dados pela rede é uma tarefa simples com clientes inteligentes dos Windows Forms. The <xref:System.Windows.Forms.BindingSource> component, new with Windows Forms in Visual Studio 2005 and the .NET Framework 2.0, represents a connection to a data source, and exposes methods for binding data to controls, navigating to the previous and next records, editing records, and saving changes back to the original source. The <xref:System.Windows.Forms.BindingNavigator> control provides a simple interface over the <xref:System.Windows.Forms.BindingSource> component for users to navigate between records.
 
-### <a name="data-bound-controls"></a>Controles vinculados a dados
+### <a name="data-bound-controls"></a>Data-Bound Controls
 
-Você pode criar controles vinculados a dados facilmente usando a janela fontes de dados, que exibe fontes de dados, como bancos de dados, serviços Web e objetos em seu projeto. Você pode criar controles de associação de dados ao arrastar itens dessa janela para os formulários do seu projeto. Você também pode associar controles existentes a dados ao arrastar objetos da janela Fontes de Dados para eles.
+You can create data-bound controls easily using the Data Sources window, which displays data sources such as databases, Web services, and objects in your project. Você pode criar controles de associação de dados ao arrastar itens dessa janela para os formulários do seu projeto. Você também pode associar controles existentes a dados ao arrastar objetos da janela Fontes de Dados para eles.
 
 ### <a name="settings"></a>Configurações
 
-Outro tipo de associação de dados que você pode gerenciar em Windows Forms é as configurações. A maioria dos aplicativos de cliente inteligente deve reter algumas informações sobre seu estado de tempo de execução, como o último tamanho de formulários conhecido e manter os dados de preferência do usuário, como locais padrão para arquivos salvos. O recurso de configurações de aplicativo resolve esses requisitos fornecendo uma maneira fácil de armazenar os dois tipos de configurações no computador cliente. Uma vez definido usando o Visual Studio ou um editor de código, essas configurações são mantidas como XML e são automaticamente lidas de volta na memória em tempo de execução.
+Another type of data binding you can manage in Windows Forms is settings. Most smart-client applications must retain some information about their run-time state, such as the last-known size of forms, and retain user-preference data, such as default locations for saved files. The application-settings feature addresses these requirements by providing an easy way to store both types of settings on the client computer. Once defined using either Visual Studio or a code editor, these settings are persisted as XML and automatically read back into memory at run time.
 
-Para obter informações passo a passo sobre como usar esses recursos, consulte os tópicos da ajuda a seguir.
+For step-by-step information about using these features, see the following Help topics.
 
 |Para|Consulte|
 |--------|---------|
-|Usar o componente <xref:System.Windows.Forms.BindingSource>|[Como associar controles dos Windows Forms ao componente BindingSource usando o designer](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|Trabalhar com fontes de dados ADO.NET|[Como classificar e filtrar dados ADO.NET com o componente BindingSource dos Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
-|Usar a janela fontes de dados|[Passo a passo: exibindo dados em um Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|
+|Use the <xref:System.Windows.Forms.BindingSource> component|[Como associar controles dos Windows Forms ao componente BindingSource usando o designer](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
+|Work with ADO.NET data sources|[Como classificar e filtrar dados ADO.NET com o componente BindingSource dos Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|Use the Data Sources window|[Passo a passo: exibindo dados em um Windows Form](/visualstudio/data-tools/accessing-data-in-visual-studio)|
 
 ## <a name="deploying-applications-to-client-computers"></a>Implantando aplicativos em computadores cliente
 
-Depois de escrever seu aplicativo, você deve enviá-lo aos seus usuários para que eles possam instalá-lo e executá-lo em seus próprios computadores cliente. Usando a tecnologia ClickOnce, você pode implantar seus aplicativos de dentro do Visual Studio usando apenas alguns cliques e fornecer uma URL apontando para seu aplicativo na Web. O ClickOnce gerencia todos os elementos e dependências em seu aplicativo e garante que o aplicativo esteja instalado corretamente no computador cliente.
+Once you have written your application, you must send it to your users so that they can install and run it on their own client computers. Using the ClickOnce technology, you can deploy your applications from within Visual Studio by using just a few clicks and provide users with a URL pointing to your application on the Web. ClickOnce manages all of the elements and dependencies in your application and ensures that the application is properly installed on the client computer.
 
-Os aplicativos ClickOnce podem ser configurados para serem executados somente quando o usuário estiver conectado à rede ou para serem executados online e offline. Quando você especifica que um aplicativo deve dar suporte à operação offline, o ClickOnce adiciona um link ao seu aplicativo no menu **Iniciar** do usuário, para que o usuário possa abri-lo sem usar a URL.
+ClickOnce applications can be configured to run only when the user is connected to the network, or to run both online and offline. When you specify that an application should support offline operation, ClickOnce adds a link to your application in the user's **Start** menu, so that the user can open it without using the URL.
 
-Quando você atualiza o seu aplicativo, publica um novo manifesto de implantação e uma nova cópia do seu aplicativo em seu servidor Web. O ClickOnce detecta que há uma atualização disponível e atualiza a instalação do usuário; nenhuma programação personalizada é necessária para atualizar assemblies antigos.
+Quando você atualiza o seu aplicativo, publica um novo manifesto de implantação e uma nova cópia do seu aplicativo em seu servidor Web. ClickOnce detects that there is an update available and upgrades the user's installation; no custom programming is required to update old assemblies.
 
-Para obter uma introdução completa ao ClickOnce, consulte [segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Para obter informações passo a passo sobre como usar esses recursos, consulte os seguintes tópicos da ajuda:
+For a full introduction to ClickOnce, see [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment). For step-by-step information about using these features, see the following Help topics:
 
 |Para|Consulte|
 |--------|---------|
-|Implantar um aplicativo com o ClickOnce|[Como publicar um aplicativo ClickOnce usando o Assistente de Publicação](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Passo a passo: implantando um aplicativo ClickOnce manualmente](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|Atualizar uma implantação do ClickOnce|[Como gerenciar atualizações para um aplicativo ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|Gerenciar a segurança com o ClickOnce|[Como habilitar configurações de segurança do ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|Deploy an application with ClickOnce|[Como publicar um aplicativo ClickOnce usando o Assistente de Publicação](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Passo a passo: implantando um aplicativo ClickOnce manualmente](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|Update a ClickOnce deployment|[Como gerenciar atualizações para um aplicativo ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|Manage security with ClickOnce|[Como habilitar configurações de segurança do ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ## <a name="other-controls-and-features"></a>Outros controles e recursos
 
-Existem muitos outros recursos dos Windows Forms que tornam as tarefas comuns de implementação mais fáceis e rápidas, como o suporte à criação de caixas de diálogo, impressão, adição da Ajuda e de documentação e localização do seu aplicativo para diversos idiomas. Além disso, Windows Forms se baseia no robusto sistema de segurança do .NET Framework, permitindo que você libere aplicativos mais seguros para seus clientes.
+Existem muitos outros recursos dos Windows Forms que tornam as tarefas comuns de implementação mais fáceis e rápidas, como o suporte à criação de caixas de diálogo, impressão, adição da Ajuda e de documentação e localização do seu aplicativo para diversos idiomas. In addition, Windows Forms relies on the robust security system of the .NET Framework, enabling you to release more secure applications to your customers.
 
-Para obter informações passo a passo sobre como usar esses recursos, consulte os seguintes tópicos da ajuda:
+For step-by-step information about using these features, see the following Help topics:
 
 |Para|Consulte|
 |--------|---------|
-|Imprimir o conteúdo de um formulário|[Como Imprimir Elementos Gráficos nos Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Como Imprimir um Arquivo de Texto de Várias Páginas nos Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|Print the contents of a form|[Como Imprimir Elementos Gráficos nos Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Como Imprimir um Arquivo de Texto de Várias Páginas nos Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
 |Saiba mais sobre a segurança dos Windows Forms|[Visão geral da segurança dos Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>Consulte também

@@ -1,5 +1,5 @@
 ---
-title: Cláusula Handles (Visual Basic)
+title: Cláusula Handles
 ms.date: 07/20/2015
 f1_keywords:
 - Handles
@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: ae05e77515e4e2b50cdf5f9a1908375fa311c3a3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 2fecad919722f3da25c48f133a9c92b5e683d5e4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581808"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345904"
 ---
 # <a name="handles-clause-visual-basic"></a>Cláusula Handles (Visual Basic)
-Declara que um procedimento manipula um evento especificado.  
+Declares that a procedure handles a specified event.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -25,32 +25,32 @@ proceduredeclaration Handles eventlist
   
 ## <a name="parts"></a>Partes  
  `proceduredeclaration`  
- A declaração de procedimento `Sub` para o procedimento que manipulará o evento.  
+ The `Sub` procedure declaration for the procedure that will handle the event.  
   
  `eventlist`  
- Lista de eventos para `proceduredeclaration` manipular, separados por vírgulas. Os eventos devem ser gerados pela classe base para a classe atual ou por um objeto declarado usando a palavra-chave `WithEvents`.  
+ List of the events for `proceduredeclaration` to handle, separated by commas. The events must be raised by either the base class for the current class, or by an object declared using the `WithEvents` keyword.  
   
 ## <a name="remarks"></a>Comentários  
- Use a palavra-chave `Handles` no final de uma declaração de procedimento para fazer com que ele manipule eventos gerados por uma variável de objeto declarada usando a palavra-chave `WithEvents`. A palavra-chave `Handles` também pode ser usada em uma classe derivada para manipular eventos de uma classe base.  
+ Use the `Handles` keyword at the end of a procedure declaration to cause it to handle events raised by an object variable declared using the `WithEvents` keyword. The `Handles` keyword can also be used in a derived class to handle events from a base class.  
   
- A palavra-chave `Handles` e a instrução `AddHandler` permitem que você especifique que procedimentos específicos manipulam eventos específicos, mas há diferenças. Use a palavra-chave `Handles` ao definir um procedimento para especificar que ele trata de um evento específico. A instrução `AddHandler` conecta procedimentos a eventos em tempo de execução. Para obter mais informações, consulte [instrução AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
+ The `Handles` keyword and the `AddHandler` statement both allow you to specify that particular procedures handle particular events, but there are differences. Use the `Handles` keyword when defining a procedure to specify that it handles a particular event. The `AddHandler` statement connects procedures to events at run time. For more information, see [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md).  
   
- Para eventos personalizados, o aplicativo invoca o acessador de `AddHandler` do evento ao adicionar o procedimento como um manipulador de eventos. Para obter mais informações sobre eventos personalizados, consulte [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
+ For custom events, the application invokes the event's `AddHandler` accessor when it adds the procedure as an event handler. For more information on custom events, see [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Exemplo  
  [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
   
- O exemplo a seguir demonstra como uma classe derivada pode usar a instrução `Handles` para manipular um evento de uma classe base.  
+ The following example demonstrates how a derived class can use the `Handles` statement to handle an event from a base class.  
   
  [!code-vb[VbVbalrEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#3)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir contém dois manipuladores de eventos de botão para um projeto de **aplicativo WPF** .  
+ The following example contains two button event handlers for a **WPF Application** project.  
   
  [!code-vb[VbVbalrEvents#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#41)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir é equivalente ao exemplo anterior. O `eventlist` na cláusula `Handles` contém os eventos para ambos os botões.  
+ The following example is equivalent to the previous example. The `eventlist` in the `Handles` clause contains the events for both buttons.  
   
  [!code-vb[VbVbalrEvents#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/class3.vb#42)]  
   

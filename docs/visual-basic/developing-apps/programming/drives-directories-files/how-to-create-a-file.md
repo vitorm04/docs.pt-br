@@ -1,27 +1,31 @@
 ---
-title: 'Como: Criar um arquivo no Visual Basic'
+title: Como criar um arquivo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: f24fdd6ce1fea7540c33e4a2fdfc06885825f76a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 20533ec01d3198d499312ed0c15ec8cca2ff70bd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628978"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348795"
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>Como: Criar um arquivo no Visual Basic
+# <a name="how-to-create-a-file-in-visual-basic"></a>Como criar um arquivo no Visual Basic
+
 Este exemplo cria um arquivo de texto vazio no caminho especificado usando o método <xref:System.IO.File.Create%2A> na classe <xref:System.IO.File>.  
   
 ## <a name="example"></a>Exemplo  
+
  [!code-vb[VbFileIOMisc#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/class2.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
+
  Use a variável `file` para gravar no arquivo.  
   
 ## <a name="robust-programming"></a>Programação robusta  
+
  Se o arquivo já existir, ele será substituído.  
   
  As seguintes condições podem causar uma exceção:  
@@ -39,6 +43,7 @@ Este exemplo cria um arquivo de texto vazio no caminho especificado usando o mé
 - O caminho é apenas dois-pontos ":" (<xref:System.NotSupportedException>).  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
+
  Uma <xref:System.Security.SecurityException> pode ser gerada em ambientes de confiança parcial.  
   
  A chamada para o método <xref:System.IO.File.Create%2A> requer <xref:System.Security.Permissions.FileIOPermission>.  

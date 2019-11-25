@@ -1,13 +1,13 @@
 ---
-title: AttributeUsage (Visual Basic)
+title: AttributeUsage
 ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
-ms.openlocfilehash: dbfbfaa6124eacfd9e4043eab9e4769103e554ca
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 7e54e82c1e9edfd0d9d393a014f9d91f82970363
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524310"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353540"
 ---
 # <a name="attributeusage-visual-basic"></a>AttributeUsage (Visual Basic)
 
@@ -36,10 +36,6 @@ End Class
 O primeiro argumento `AttributeUsage` deve ser um ou mais elementos da enumeração <xref:System.AttributeTargets>. Vários tipos de destino podem ser vinculados junto com o operador OR, dessa maneira:
 
 ```vb
-Imports System
-```
-
-```vb
 <AttributeUsage(AttributeTargets.Property Or AttributeTargets.Field)>
 Class NewPropertyOrFieldAttribute
     Inherits Attribute
@@ -47,10 +43,6 @@ End Class
 ```
 
 Se o argumento `AllowMultiple` for definido como `true`, o atributo resultante poderá ser aplicado mais de uma vez a uma única entidade, dessa maneira:
-
-```vb
-Imports System
-```
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, AllowMultiple:=True)>
@@ -66,10 +58,6 @@ End Class
 Nesse caso `MultiUseAttr` pode ser aplicado repetidas vezes porque `AllowMultiple` está definido como `true`. Os dois formatos mostrados para a aplicação de vários atributos são válidos.
 
 Se `Inherited` for definido como `false`, o atributo não será herdado por classes derivadas de uma classe que é atribuída. Por exemplo:
-
-```vb
-Imports System
-```
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -98,10 +86,6 @@ Para obter mais informações, consulte [Acessando atributos usando reflexão (V
 ## <a name="example"></a>Exemplo
 
 O exemplo a seguir demonstra o efeito dos argumentos `Inherited` e `AllowMultiple` no atributo `AttributeUsage` e como os atributos personalizados aplicados a uma classe podem ser enumerados.
-
-```vb
-Imports System
-```
 
 ```vb
 ' Create some custom attributes:

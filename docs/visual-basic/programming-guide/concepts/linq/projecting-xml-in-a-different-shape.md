@@ -1,15 +1,15 @@
 ---
-title: Projetando XML em uma forma diferente (Visual Basic)
+title: Projetando XML em uma forma diferente
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
-ms.openlocfilehash: e5639948cbc264a4b17cffe80de70b011e4d2a70
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd8b95ca442c9f2f17940423dde22f627669cd0b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666117"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347139"
 ---
-# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projetando XML em uma forma diferente (Visual Basic)
+# <a name="projecting-xml-in-a-different-shape-visual-basic"></a>Projecting XML in a Different Shape (Visual Basic)
 Este tópico mostra um exemplo de projetar XML que está em uma forma diferente do XML fonte.  
   
  Várias transformações típicas XML consistem em consultas encadeadas, como neste exemplo. É comum para iniciar com alguma forma XML, resultados intermediários de projeto como coleções de tipos anônimos ou tipos nomeados, e para projetar finalmente nos resultados de novo em XML que está em uma forma totalmente diferente do XML fonte.  
@@ -17,7 +17,7 @@ Este tópico mostra um exemplo de projetar XML que está em uma forma diferente 
 ## <a name="example"></a>Exemplo  
  Este exemplo processa um documento de WordprocessingML, recuperando os nós de parágrafo de um documento de WordprocessingML. Também identifica o estilo e o texto de cada parágrafo. Finalmente, o exemplo em XML com uma forma diferente. Este exemplo cria nos exemplos anteriores neste tutorial. A nova declaração que faz a projeção é chamada nos comentários no código a seguir.  
   
- Para obter instruções para criar o documento de origem para este exemplo, consulte [criando o código-fonte Office documento Open XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
+ For instructions for creating the source document for this example, see [Creating the Source Office Open XML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md).  
   
  Este exemplo usa classes do assembly WindowsBase. Ele usa tipos no namespace <xref:System.IO.Packaging?displayProperty=nameWithType>.  
   
@@ -230,8 +230,8 @@ End Module
 ## <a name="next-steps"></a>Próximas etapas  
  No exemplo a seguir, você consultará para localizar todo o texto em um documento do Word:  
   
-- [Localizando texto em documentos do Word (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Finding Text in Word Documents (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

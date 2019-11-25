@@ -1,5 +1,5 @@
 ---
-title: Solucionando problemas de matrizes (Visual Basic)
+title: Solucionando problemas de matrizes
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting arrays
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 3c50c68c2a39aa04cff2dd43b5dfde709aec290f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64913461"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349075"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Solucionando problemas de matrizes (Visual Basic)
-Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com matrizes.  
+This page lists some common problems that can occur when working with arrays.  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Declarar e inicializar uma matriz de erros de compilação  
- Erros de compilação podem surgir de compreensão das regras para declarar, criando e inicializando matrizes. As causas mais comuns de erros são as seguintes:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
+ Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
   
-- Fornecendo uma [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md) cláusula depois de especificar os tamanhos da dimensão na declaração da variável de matriz. As linhas de código a seguir mostram inválidas declarações desse tipo.  
+- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com ma
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Especificando os comprimentos de dimensão por mais de uma matriz de nível superior de uma matriz denteada. A linha de código a seguir mostra uma declaração inválida desse tipo.  
+- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Omitindo o `New` palavra-chave ao especificar os valores de elemento. A linha de código a seguir mostra uma declaração inválida desse tipo.  
+- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Fornecendo uma `New` cláusula sem as chaves (`{}`). As linhas de código a seguir mostram inválidas declarações desse tipo.  
+- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,16 +48,16 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com ma
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Acessar uma matriz fora dos limites  
- O processo de inicializar uma matriz atribui um limite superior e um limite inferior para cada dimensão. Todos os acessos a um elemento da matriz devem especificar um índice válido ou subscrito, para cada dimensão. Se qualquer índice estiver abaixo de seu limite inferior ou acima de seu limite superior, um <xref:System.IndexOutOfRangeException> resultados de exceção. O compilador não pode detectar o erro, portanto, ocorre um erro em tempo de execução.  
+## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
+ The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
   
-### <a name="determining-bounds"></a>Determinando limites  
- Se outro componente passa uma matriz para o seu código, por exemplo como um argumento de procedimento, você não sabe o tamanho da matriz ou os comprimentos de suas dimensões. Você sempre deve determinar o limite superior de cada dimensão de uma matriz antes de tentar acessar todos os elementos. Se a matriz tiver sido criada por meios que não seja um Visual Basic `New` cláusula, o limite inferior pode ser algo diferente de 0, e é mais seguro determinar o limite inferior também.  
+### <a name="determining-bounds"></a>Determining Bounds  
+ If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
   
-### <a name="specifying-the-dimension"></a>Especifica a dimensão  
- Ao determinar os limites de uma matriz multidimensional, lembre-se de como você especifica a dimensão. O `dimension` parâmetros do <xref:System.Array.GetLowerBound%2A> e <xref:System.Array.GetUpperBound%2A> métodos são baseados em 0, enquanto o `Rank` parâmetros do Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> e <xref:Microsoft.VisualBasic.Information.UBound%2A> funções são baseados em 1.  
+### <a name="specifying-the-dimension"></a>Specifying the Dimension  
+ When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [Como: Inicializar uma variável de matriz no Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [Como inicializar uma variável de matriz no Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

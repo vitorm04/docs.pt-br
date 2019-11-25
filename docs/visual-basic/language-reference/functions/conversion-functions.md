@@ -1,5 +1,5 @@
 ---
-title: Funções de conversão (Visual Basic)
+title: Funções de conversão
 ms.date: 07/20/2015
 helpviewer_keywords:
 - conversions [Visual Basic], conversion functions
@@ -12,36 +12,36 @@ helpviewer_keywords:
 - functions [Visual Basic], conversion
 - dates [Visual Basic], converting
 ms.assetid: 8a8fb553-a8ac-424e-8103-26eea25eaa71
-ms.openlocfilehash: ef85f695de9ba11fbab20bad82fa6b28663f9e27
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: ea3c170b01b3d7b745a66fcf9fdd3c5aac15fd89
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523841"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348102"
 ---
-# <a name="conversion-functions-visual-basic"></a>Funções de conversão (Visual Basic)
+# <a name="conversion-functions-visual-basic"></a>Conversion functions (Visual Basic)
 
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
-- [Função CBool](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CChar](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CDate](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CDbl](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CDec](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CBool Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CByte Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CChar Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CDate Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CDbl Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CDec Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>
 - <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
-- [Função CInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CLng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CObj](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CSByte](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CSng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CStr](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CInt Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CLng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CObj Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CSByte Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CShort Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CSng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CStr Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Função CType](../../../visual-basic/language-reference/functions/ctype-function.md)
-- [Função CUInt](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CULng](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [Função CUShort](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CUInt Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CULng Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [CUShort Function](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - <xref:Microsoft.VisualBasic.Strings.Format%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Oct%2A>
