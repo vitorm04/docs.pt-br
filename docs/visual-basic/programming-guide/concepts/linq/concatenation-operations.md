@@ -1,15 +1,15 @@
 ---
-title: Operações de concatenação (Visual Basic)
+title: Operações de concatenação
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 054f9253cead4d2632f6f4b5631da64159a6de48
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: db9bebb967faf3791fd28c4fd4dac9591fd2c9f8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054141"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345667"
 ---
-# <a name="concatenation-operations-visual-basic"></a>Operações de concatenação (Visual Basic)
+# <a name="concatenation-operations-visual-basic"></a>Concatenation Operations (Visual Basic)
 A concatenação refere-se a operação de acrescentar uma sequência à outra.  
   
  A ilustração a seguir mostra uma operação de concatenação em duas sequências de caracteres.  
@@ -20,7 +20,7 @@ A concatenação refere-se a operação de acrescentar uma sequência à outra.
   
 ## <a name="methods"></a>Métodos  
   
-|Nome do método|Descrição|Sintaxe de expressão de consulta do Visual Basic|Mais informações|  
+|Nome do método|Descrição|Visual Basic Query Expression Syntax|Mais informações|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |Concat|Concatena duas sequências para formar uma sequência.|Não aplicável.|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
@@ -28,4 +28,4 @@ A concatenação refere-se a operação de acrescentar uma sequência à outra.
 
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Como: Combinar e comparar coleções de cadeia de caracteres (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
+- [How to: Combine and Compare String Collections (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

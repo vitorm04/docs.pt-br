@@ -1,5 +1,5 @@
 ---
-title: Cláusula Of (Visual Basic)
+title: Cláusula Of
 ms.date: 07/20/2015
 f1_keywords:
 - Of
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - type parameters
 - data type arguments
 ms.assetid: 0db8f65c-65af-4089-ab7f-6fcfecb60444
-ms.openlocfilehash: c0cfbb5109d5b49f995028944e735c96440c9ab2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d88c43efe858d6b81b7d8d2470b234ff5d40632a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583501"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353840"
 ---
 # <a name="of-clause-visual-basic"></a>Cláusula Of (Visual Basic)
-Apresenta uma cláusula `Of`, que identifica um *parâmetro de tipo* em uma classe *genérica* , estrutura, interface, delegado ou procedimento. Para obter informações sobre tipos genéricos, consulte [tipos genéricos em Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
+Introduces an `Of` clause, which identifies a *type parameter* on a *generic* class, structure, interface, delegate, or procedure. For information on generic types, see [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md).  
   
-## <a name="using-the-of-keyword"></a>Usando a palavra-chave of  
- O exemplo de código a seguir usa a palavra-chave `Of` para definir o contorno de uma classe que usa dois parâmetros de tipo. Ele *restringe* o parâmetro `keyType` pela interface <xref:System.IComparable>, o que significa que o código de consumo deve fornecer um argumento de tipo que implemente <xref:System.IComparable>. Isso é necessário para que o procedimento de `add` possa chamar o método <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType>. Para obter mais informações sobre restrições, consulte [lista de tipos](../../../visual-basic/language-reference/statements/type-list.md).  
+## <a name="using-the-of-keyword"></a>Using the Of Keyword  
+ The following code example uses the `Of` keyword to define the outline of a class that takes two type parameters. It *constrains* the `keyType` parameter by the <xref:System.IComparable> interface, which means the consuming code must supply a type argument that implements <xref:System.IComparable>. This is necessary so that the `add` procedure can call the <xref:System.IComparable.CompareTo%2A?displayProperty=nameWithType> method. For more information on constraints, see [Type List](../../../visual-basic/language-reference/statements/type-list.md).  
   
 ```vb  
 Public Class Dictionary(Of entryType, keyType As IComparable)  
@@ -42,15 +42,15 @@ Public Class Dictionary(Of entryType, keyType As IComparable)
 End Class  
 ```  
   
- Se você concluir a definição de classe anterior, poderá construir uma variedade de classes de `dictionary` a partir dela. Os tipos fornecidos para `entryType` e `keyType` determinam que tipo de entrada a classe contém e que tipo de chave ela associa a cada entrada. Devido à restrição, você deve fornecer a `keyType` um tipo que implementa <xref:System.IComparable>.  
+ If you complete the preceding class definition, you can construct a variety of `dictionary` classes from it. The types you supply to `entryType` and `keyType` determine what type of entry the class holds and what type of key it associates with each entry. Because of the constraint, you must supply to `keyType` a type that implements <xref:System.IComparable>.  
   
- O exemplo de código a seguir cria um objeto que contém `String` entradas e associa uma chave de `Integer` a cada uma. `Integer` implementa <xref:System.IComparable> e, portanto, satisfaz a restrição em `keyType`.  
+ The following code example creates an object that holds `String` entries and associates an `Integer` key with each one. `Integer` implements <xref:System.IComparable> and therefore satisfies the constraint on `keyType`.  
   
 ```vb  
 Dim d As New dictionary(Of String, Integer)  
 ```  
   
- A palavra-chave `Of` pode ser usada nesses contextos:  
+ The `Of` keyword can be used in these contexts:  
   
  [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   

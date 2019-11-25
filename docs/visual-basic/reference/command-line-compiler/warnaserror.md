@@ -1,17 +1,17 @@
 ---
-title: -warnaserror (Visual Basic)
+title: -warnaserror
 ms.date: 03/13/2018
 helpviewer_keywords:
 - warnaserror compiler option [Visual Basic]
 - /warnaserror compiler option [Visual Basic]
 - -warnaserror compiler option [Visual Basic]
 ms.assetid: 49819f1d-a1bd-4201-affe-5afe6d9712e1
-ms.openlocfilehash: 8af6d3ef4efecd53dcf38c33d0aa2cf182f07d30
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: f9ca5575e2a042d68fc490494f2e86991d58b80c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004651"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351702"
 ---
 # <a name="-warnaserror-visual-basic"></a>-warnaserror (Visual Basic)
 Faz com que o compilador trate a primeira ocorrência de um aviso como um erro.  
@@ -41,11 +41,11 @@ Faz com que o compilador trate a primeira ocorrência de um aviso como um erro.
   
 |Para definir -warnaserror para tratar todos os avisos como erros no IDE do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Compilar**.<br />3.  Verifique se a caixa de seleção **Desabilitar todos os avisos** está desmarcada.<br />4.  Marque a caixa de seleção **Tratar todos os avisos como erros**.|  
+|1.  Have a project selected in **Solution Explorer**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
   
 |Para definir -warnaserror para tratar avisos específicos como erros no IDE do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**.<br />2.  Clique na guia **Compilar**.<br />3.  Verifique se a caixa de seleção **Desabilitar todos os avisos** está desmarcada.<br />4.  Verifique se a caixa de seleção **Tratar todos os avisos como erros** está desmarcada.<br />5.  Selecione **Erro** na coluna **Notificação** adjacente ao aviso que deve ser tratado como um erro.|  
+|1.  Have a project selected in **Solution Explorer**. No menu **Projeto**, clique em **Propriedades**.<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `In.vb` e direciona o compilador para exibir um erro para a primeira ocorrência de cada aviso que ele encontre.  

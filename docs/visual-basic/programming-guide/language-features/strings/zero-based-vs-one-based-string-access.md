@@ -1,24 +1,24 @@
 ---
-title: Acesso a cadeias de caracteres baseado em Acesso com base em uma cadeia de caracteres no Visual Basic
+title: Zero-based vs. One-based String Access
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: cc8f286de41d7e44225e889e73ff3c7b1fdbd881
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 97e60038bc7ec0f030939d0980b786bffebcfb9a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591755"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354295"
 ---
-# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Acesso a cadeias de caracteres baseado em Acesso com base em uma cadeia de caracteres no Visual Basic
-Este tópico compara como Visual Basic e o .NET Framework fornecem acesso aos caracteres em uma cadeia de caracteres. O .NET Framework sempre fornece acesso baseado em zero para os caracteres em uma cadeia de caracteres, enquanto o Visual Basic fornece acesso baseado em zero e um, dependendo da função.  
+# <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>Acesso à cadeia de caracteres com base em zero versus em um no Visual Basic
+This topic compares how Visual Basic and the .NET Framework provide access to the characters in a string. The .NET Framework always provides zero-based access to the characters in a string, whereas Visual Basic provides zero-based and one-based access, depending on the function.  
   
-## <a name="one-based"></a>Baseado em um  
- Para obter um exemplo de uma função do Visual Basic baseado em um, considere o `Mid` função. Ele usa um argumento que indica a posição do caractere no qual será iniciada a subcadeia de caracteres, começando pela posição 1. O .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> método utiliza um índice do caractere na cadeia de caracteres no qual a subcadeia de caracteres deve começar, começando pela posição 0. Portanto, se você tiver uma cadeia de caracteres "ABCDE", os caracteres individuais são numerados 1,2,3,4,5 para uso com o `Mid` função, mas 0,1,2,3,4 para uso com o <xref:System.String.Substring%2A?displayProperty=nameWithType> método.  
+## <a name="one-based"></a>One-Based  
+ For an example of a one-based Visual Basic function, consider the `Mid` function. It takes an argument that indicates the character position at which the substring will start, starting with position 1. The .NET Framework <xref:System.String.Substring%2A?displayProperty=nameWithType> method takes an index of the character in the string at which the substring is to start, starting with position 0. Thus, if you have a string "ABCDE", the individual characters are numbered 1,2,3,4,5 for use with the `Mid` function, but 0,1,2,3,4 for use with the <xref:System.String.Substring%2A?displayProperty=nameWithType> method.  
   
-## <a name="zero-based"></a>Com base em zero  
- Para obter um exemplo de uma função do Visual Basic com base em zero, considere o `Split` função. Ele divide uma cadeia de caracteres e retorna uma matriz que contém as subcadeias de caracteres. O .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> método também divide uma cadeia de caracteres e retorna uma matriz que contém as subcadeias de caracteres. Porque o `Split` função e <xref:System.String.Split%2A> método retornam matrizes do .NET Framework, eles devem ser baseado em zero.  
+## <a name="zero-based"></a>Zero-Based  
+ For an example of a zero-based Visual Basic function, consider the `Split` function. It splits a string and returns an array containing the substrings. The .NET Framework <xref:System.String.Split%2A?displayProperty=nameWithType> method also splits a string and returns an array containing the substrings. Because the `Split` function and <xref:System.String.Split%2A> method return .NET Framework arrays, they must be zero-based.  
   
 ## <a name="see-also"></a>Consulte também
 

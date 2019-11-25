@@ -1,20 +1,20 @@
 ---
-title: -langversion (Visual Basic)
+title: -langversion
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /langversion compiler option [Visual Basic]
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 5f59f1c4c269a52131a324bbd2bfbe817ab794a4
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 72a5638a5c5364381ffd68604b0d44830d53f365
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197092"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344208"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
-Faz com que o compilador aceite apenas a sintaxe que está incluída na versão especificada do idioma de Visual Basic.  
+Causes the compiler to accept only syntax that is included in the specified Visual Basic language version.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -24,21 +24,21 @@ Faz com que o compilador aceite apenas a sintaxe que está incluída na versão 
   
 ## <a name="arguments"></a>Arguments  
  `version`  
- Necessário. A versão de idioma a ser usada durante a compilação. Os valores aceitos são `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` e `latest`.
+ Necessário. The language version to be used during the compilation. Accepted values are `9`, `10`, `11`, `12`, `14`, `15`, `15.3`, `15.5`, `default` and `latest`.
 
- Qualquer um dos números inteiros também pode ser especificado usando `.0` como a versão secundária, por exemplo, `11.0`.
+ Any of the whole numbers may also be specified using `.0` as the minor version, for example, `11.0`.
 
- Você pode ver a lista de todos os valores possíveis especificando `-langversion:?` na linha de comando.  
+ You can see the list of all possible values by specifying `-langversion:?` on the command line.  
   
 ## <a name="remarks"></a>Comentários  
- A opção `-langversion` especifica a sintaxe aceita pelo compilador. Por exemplo, se você especificar que a versão do idioma é 9,0, o compilador gerará erros de sintaxe válida somente na versão 10,0 e posterior.  
+ The `-langversion` option specifies what syntax the compiler accepts. For example, if you specify that the language version is 9.0, the compiler generates errors for syntax that is valid only in version 10.0 and later.  
   
- Você pode usar essa opção ao desenvolver aplicativos direcionados a diferentes versões do .NET Framework. Por exemplo, se você estiver direcionando .NET Framework 3,5, poderá usar essa opção para garantir que não use a sintaxe da versão de linguagem 10,0.  
+ You can use this option when you develop applications that target different versions of the .NET Framework. For example, if you are targeting .NET Framework 3.5, you could use this option to ensure that you do not use syntax from language version 10.0.  
   
- Você pode definir `-langversion` diretamente usando a linha de comando. Para obter mais informações, consulte [Definindo uma Versão Específica do .NET Framework como Destino](/visualstudio/ide/visual-studio-multi-targeting-overview).  
+ You can set `-langversion` directly only by using the command line. Para obter mais informações, consulte [Definindo uma Versão Específica do .NET Framework como Destino](/visualstudio/ide/visual-studio-multi-targeting-overview).  
   
 ## <a name="example"></a>Exemplo  
- O código a seguir compila `sample.vb` para Visual Basic 9,0.  
+ The following code compiles `sample.vb` for Visual Basic 9.0.  
   
 ```console  
 vbc -langversion:9.0 sample.vb  

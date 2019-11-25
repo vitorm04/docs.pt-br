@@ -1,32 +1,32 @@
 ---
-title: Esta matriz é fixa ou está temporariamente bloqueada (Visual Basic)
+title: Esta matriz é fixa ou está temporariamente bloqueada
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: c7b5372b6046e25aad87131ba141cb71c580e12c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8d5e4add2d92a575126fb934ac3874a2e37685f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625936"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350784"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>Esta matriz é fixa ou está temporariamente bloqueada (Visual Basic)
-Esse erro tem as seguintes causas possíveis:  
+This error has the following possible causes:  
   
-- Usando `ReDim` para alterar o número de elementos de uma matriz de tamanho fixo.  
+- Using `ReDim` to change the number of elements of a fixed-size array.  
   
-- Redimensioning uma matriz dinâmica de nível de módulo, no qual um elemento foi passado como um argumento para um procedimento. Se um elemento for passado, a matriz é bloqueada para impedir desalocando memória para o parâmetro de referência dentro do procedimento.  
+- Redimensioning a module-level dynamic array, in which one element has been passed as an argument to a procedure. If an element is passed, the array is locked to prevent deallocating memory for the reference parameter within the procedure.  
   
-- Tentativa de atribuir um valor para um `Variant` variável que contém uma matriz, mas o `Variant` está bloqueado no momento.  
+- Attempting to assign a value to a `Variant` variable containing an array, but the `Variant` is currently locked.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Verifique a matriz original dinâmico e não fixados pelas declará-la com `ReDim` (se a matriz é declarada dentro de um procedimento), ou ao declará-la sem especificar o número de elementos (se a matriz é declarada no nível de módulo.  
+1. Make the original array dynamic rather than fixed by declaring it with `ReDim` (if the array is declared within a procedure), or by declaring it without specifying the number of elements (if the array is declared at the module level.  
   
-2. Determine se você realmente precisa passar o elemento, já que é visível em todos os procedimentos no módulo.  
+2. Determine whether you really need to pass the element, since it is visible within all procedures in the module.  
   
-3. Determinar o que está bloqueando o `Variant` e corrigi-lo.  
+3. Determine what is locking the `Variant` and remedy it.  
   
 ## <a name="see-also"></a>Consulte também
 

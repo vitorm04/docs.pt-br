@@ -9,15 +9,15 @@ helpviewer_keywords:
 - parts [WPF], DocumentViewer
 - styles [WPF], DocumentViewer
 ms.assetid: 6bd4ff8f-ea6a-4084-ac58-e7a67446ce1c
-ms.openlocfilehash: 7a812ff913703e3aa8408da8a11d28ee5adfa7fd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ac1dc4f74a8e8f3ad2e84c6d50239ec827306c28
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460339"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283525"
 ---
 # <a name="documentviewer-styles-and-templates"></a>Estilos e modelos DocumentViewer
-Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.DocumentViewer>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).  
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.DocumentViewer>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
   
 ## <a name="documentviewer-parts"></a>Partes do DocumentViewer  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.DocumentViewer>.  
@@ -54,4 +54,4 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
 - [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md)

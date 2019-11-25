@@ -1,5 +1,5 @@
 ---
-title: Conversões de matriz (Visual Basic)
+title: Conversões de matriz
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [Visual Basic], converting type
@@ -12,28 +12,28 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: 475f3f5357f7c989a30ca9e6c5d32b8cc989436f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 622ebe8a77f2dfbeb35e0408be48622d93d409c6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581857"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345856"
 ---
 # <a name="array-conversions-visual-basic"></a>Conversões de matriz (Visual Basic)
-Você pode converter um tipo de matriz em um tipo de matriz diferente, desde que atenda às seguintes condições:  
+You can convert an array type to a different array type provided you meet the following conditions:  
   
-- **Classificação igual.** As classificações das duas matrizes devem ser as mesmas, ou seja, devem ter o mesmo número de dimensões. No entanto, os comprimentos das respectivas dimensões não precisam ser os mesmos.  
+- **Equal Rank.** The ranks of the two arrays must be the same, that is, they must have the same number of dimensions. However, the lengths of the respective dimensions do not need to be the same.  
   
-- **Tipo de dados do elemento.** Os tipos de dados dos elementos de ambas as matrizes devem ser tipos de referência. Não é possível converter uma matriz de `Integer` em uma matriz de `Long` ou até mesmo em uma matriz de `Object`, porque pelo menos um tipo de valor está envolvido. Para obter mais informações, consulte [tipos de valor e tipos de referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+- **Element Data Type.** The data types of the elements of both arrays must be reference types. You cannot convert an `Integer` array to a `Long` array, or even to an `Object` array, because at least one value type is involved. For more information, see [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
-- **Convertibilidade.** Uma conversão, que pode ser ampliada ou estreita, deve ser possível entre os tipos de elemento das duas matrizes. Um exemplo que falha esse requisito é uma tentativa de conversão entre uma matriz de `String` e uma matriz de uma classe derivada de <xref:System.Attribute?displayProperty=nameWithType>. Esses dois tipos não têm nada em comum, e não existe nenhuma conversão de nenhum tipo entre eles.  
+- **Convertibility.** A conversion, either widening or narrowing, must be possible between the element types of the two arrays. An example that fails this requirement is an attempted conversion between a `String` array and an array of a class derived from <xref:System.Attribute?displayProperty=nameWithType>. These two types have nothing in common, and no conversion of any kind exists between them.  
   
- Uma conversão de um tipo de matriz para outro está ampliando ou estreitando dependendo se a conversão dos respectivos elementos está ampliando ou diminuindo. Para obter mais informações, consulte [Ampliando e restringindo conversões](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ A conversion of one array type to another is widening or narrowing depending on whether the conversion of the respective elements is widening or narrowing. Para obter mais informações, consulte [Ampliando e restringindo conversões](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
-## <a name="conversion-to-an-object-array"></a>Conversão para uma matriz de objeto  
- Quando você declara uma matriz de `Object` sem inicializá-la, seu tipo de elemento é `Object` desde que permaneça não inicializado. Quando você o define como uma matriz de uma classe específica, ela assume o tipo dessa classe. No entanto, seu tipo subjacente ainda é `Object`, e você pode defini-lo posteriormente como outra matriz de uma classe não relacionada. Como todas as classes derivam de `Object`, você pode alterar o tipo de elemento da matriz de qualquer classe para qualquer outra classe.  
+## <a name="conversion-to-an-object-array"></a>Conversion to an Object Array  
+ When you declare an `Object` array without initializing it, its element type is `Object` as long as it remains uninitialized. When you set it to an array of a specific class, it takes on the type of that class. However, its underlying type is still `Object`, and you can subsequently set it to another array of an unrelated class. Since all classes derive from `Object`, you can change the array's element type from any class to any other class.  
   
- No exemplo a seguir, não existe nenhuma conversão entre os tipos `student` e `String`, mas ambos derivam de `Object`, portanto, todas as atribuições são válidas.  
+ In the following example, no conversion exists between types `student` and `String`, but both derive from `Object`, so all assignments are valid.  
   
 ```vb  
 ' Assume student has already been defined as a class.  
@@ -46,10 +46,10 @@ testArray = names
 ' testArray is now a String array.  
 ```  
   
-### <a name="underlying-type-of-an-array"></a>Tipo subjacente de uma matriz  
- Se você declarar originalmente uma matriz com uma classe específica, seu tipo de elemento subjacente será essa classe. Se você defini-lo subsequentemente como uma matriz de outra classe, deverá haver uma conversão entre as duas classes.  
+### <a name="underlying-type-of-an-array"></a>Underlying Type of an Array  
+ If you originally declare an array with a specific class, its underlying element type is that class. If you subsequently set it to an array of another class, there must be a conversion between the two classes.  
   
- No exemplo a seguir, `students` é uma matriz `student`. Como não existe nenhuma conversão entre `String` e `student`, a última instrução falhará.  
+ In the following example, `students` is a `student` array. Since no conversion exists between `String` and `student`, the last statement fails.  
   
 ```vb  
 Dim students() As student  
@@ -62,10 +62,10 @@ students = names
 ## <a name="see-also"></a>Consulte também
 
 - [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversões Implícitas e Explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Conversões entre Cadeias de Caracteres e Outros Tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
-- [Como converter um objeto em outro tipo em Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [How to: Convert an Object to Another Type in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
 - [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)
 - [Funções de Conversão do Tipo](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Matrizes](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

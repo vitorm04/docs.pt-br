@@ -1,24 +1,24 @@
 ---
-title: Guia de programação do Visual Basic
+title: Guia de Programação
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, language guide
 - Visual Basic, programming in
 - Visual Basic, language reference
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
-ms.openlocfilehash: 32654012343fc919dbadbfa4515c1e8e2b686ed1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41b5e5cb99e5137dd25a953adba7ec931f84483d
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907693"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345440"
 ---
 # <a name="visual-basic-programming-guide"></a>Guia de programação do Visual Basic
-Assim como acontece com qualquer linguagem de programação moderna, o Visual Basic oferece suporte a muitas construções de programação comuns e elementos de linguagem. Este guia descreve os principais elementos de programação com o Visual Basic.  
+As with any modern programming language, Visual Basic supports many common programming constructs and language elements. This guide describes all the major elements of programming with Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Estrutura do Programa e Convenções de Código](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Contém documentação sobre as convenções básicas de estrutura e código do Visual Basic, como as convenções de nomenclatura, comentários no código e limitações do Visual Basic.  
+ Contains documentation on the basic structure and code conventions of Visual Basic, such as naming conventions, comments in code, and limitations within Visual Basic.  
   
  [Recursos da linguagem do Visual Basic](../../visual-basic/programming-guide/language-features/index.md)  
  Fornece links para tópicos que apresentam e discutem aspectos importantes do Visual Basic, como literais LINQ e XML.  
@@ -28,7 +28,7 @@ Assim como acontece com qualquer linguagem de programação moderna, o Visual Ba
   
 ## <a name="related-sections"></a>Seções relacionadas  
  [Referência da linguagem Visual Basic](../../visual-basic/language-reference/index.md)  
- Fornece informações de referência sobre vários aspectos da programação em Visual Basic.  
+ Provides reference information about various aspects of Visual Basic programming.  
   
  [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
- Oferece informações sobre como usar o compilador de linha de comando do Visual Basic, as opções do compilador e a ferramenta de atualização de palavra-chave.
+ Offers information on using the Visual Basic command-line compiler, the compiler options, and the Keyword Upgrade tool.
