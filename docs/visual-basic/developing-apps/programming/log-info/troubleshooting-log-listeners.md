@@ -1,45 +1,46 @@
 ---
-title: 'Solução de problemas: Ouvintes de log (Visual Basic)'
+title: 'Solucionando problemas: ouvintes de Log'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, troubleshooting
 - troubleshooting Visual Basic, event logs
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
-ms.openlocfilehash: 12282df50bc42d2a153a9aa8db01f2654acd91ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: dd139935dae7fe4d1334b861e6590df29bab7202
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299521"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346862"
 ---
-# <a name="troubleshooting-log-listeners-visual-basic"></a><span data-ttu-id="cf940-102">Solução de problemas: Ouvintes de log (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cf940-102">Troubleshooting: Log Listeners (Visual Basic)</span></span>
-<span data-ttu-id="cf940-103">É possível usar os objetos `My.Application.Log` e `My.Log` para registrar em log as informações sobre eventos que ocorrem em seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="cf940-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span>  
+# <a name="troubleshooting-log-listeners-visual-basic"></a><span data-ttu-id="16691-102">Solucionando problemas: ouvintes de log (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="16691-102">Troubleshooting: Log Listeners (Visual Basic)</span></span>
+
+<span data-ttu-id="16691-103">É possível usar os objetos `My.Application.Log` e `My.Log` para registrar em log as informações sobre eventos que ocorrem em seu aplicativo.</span><span class="sxs-lookup"><span data-stu-id="16691-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span>  
   
- <span data-ttu-id="cf940-104">Para determinar quais ouvintes de log recebem essas mensagens, confira [Passo a passo: Determinando o local em que My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span><span class="sxs-lookup"><span data-stu-id="cf940-104">To determine which log listeners receive those messages, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
+ <span data-ttu-id="16691-104">Para determinar quais ouvintes de log recebem essas mensagens, consulte [Instruções passo a passo: determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span><span class="sxs-lookup"><span data-stu-id="16691-104">To determine which log listeners receive those messages, see [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).</span></span>  
   
- <span data-ttu-id="cf940-105">O objeto `Log` pode usar filtragem de log para limitar a quantidade de informações que ele registra no log.</span><span class="sxs-lookup"><span data-stu-id="cf940-105">The `Log` object can use log filtering to limit the amount of information that it logs.</span></span> <span data-ttu-id="cf940-106">Se os filtros tiverem sido configurados incorretamente, os logs poderão conter informações incorretas.</span><span class="sxs-lookup"><span data-stu-id="cf940-106">If the filters are misconfigured, the logs might contain the wrong information.</span></span> <span data-ttu-id="cf940-107">Para obter mais informações sobre a filtragem, confira [Passo a passo: Filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span><span class="sxs-lookup"><span data-stu-id="cf940-107">For more information about filtering, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span></span>  
+ <span data-ttu-id="16691-105">O objeto `Log` pode usar filtragem de log para limitar a quantidade de informações que ele registra no log.</span><span class="sxs-lookup"><span data-stu-id="16691-105">The `Log` object can use log filtering to limit the amount of information that it logs.</span></span> <span data-ttu-id="16691-106">Se os filtros tiverem sido configurados incorretamente, os logs poderão conter informações incorretas.</span><span class="sxs-lookup"><span data-stu-id="16691-106">If the filters are misconfigured, the logs might contain the wrong information.</span></span> <span data-ttu-id="16691-107">Para obter informações sobre filtragem, consulte [Instruções passo a passo: filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span><span class="sxs-lookup"><span data-stu-id="16691-107">For more information about filtering, see [Walkthrough: Filtering My.Application.Log Output](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).</span></span>  
   
- <span data-ttu-id="cf940-108">No entanto, se um log tiver sido configurado incorretamente, talvez seja necessário obter mais informações sobre sua configuração atual.</span><span class="sxs-lookup"><span data-stu-id="cf940-108">However, if a log is configured incorrectly, you may need more information about its current configuration.</span></span> <span data-ttu-id="cf940-109">É possível obter essas informações por meio da propriedade `TraceSource` avançada do log.</span><span class="sxs-lookup"><span data-stu-id="cf940-109">You can get to this information through the log's advanced `TraceSource` property.</span></span>  
+ <span data-ttu-id="16691-108">No entanto, se um log tiver sido configurado incorretamente, talvez seja necessário obter mais informações sobre sua configuração atual.</span><span class="sxs-lookup"><span data-stu-id="16691-108">However, if a log is configured incorrectly, you may need more information about its current configuration.</span></span> <span data-ttu-id="16691-109">É possível obter essas informações por meio da propriedade `TraceSource` avançada do log.</span><span class="sxs-lookup"><span data-stu-id="16691-109">You can get to this information through the log's advanced `TraceSource` property.</span></span>  
   
-### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a><span data-ttu-id="cf940-110">Para determinar os ouvintes de log do objeto Log no código</span><span class="sxs-lookup"><span data-stu-id="cf940-110">To determine the log listeners for the Log object in code</span></span>  
+### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a><span data-ttu-id="16691-110">Para determinar os ouvintes de log do objeto Log no código</span><span class="sxs-lookup"><span data-stu-id="16691-110">To determine the log listeners for the Log object in code</span></span>  
   
-1. <span data-ttu-id="cf940-111">Importe o namespace <xref:System.Diagnostics> no início do arquivo de código.</span><span class="sxs-lookup"><span data-stu-id="cf940-111">Import the <xref:System.Diagnostics> namespace at the beginning of the code file.</span></span> <span data-ttu-id="cf940-112">Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="cf940-112">For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
+1. <span data-ttu-id="16691-111">Importe o namespace <xref:System.Diagnostics> no início do arquivo de código.</span><span class="sxs-lookup"><span data-stu-id="16691-111">Import the <xref:System.Diagnostics> namespace at the beginning of the code file.</span></span> <span data-ttu-id="16691-112">Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="16691-112">For more information, see [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#13)]  
   
-2. <span data-ttu-id="cf940-113">Crie uma função que retorna uma cadeia de caracteres que consiste de informações para cada um dos ouvintes de log.</span><span class="sxs-lookup"><span data-stu-id="cf940-113">Create a function that returns a string consisting of information for each of the log's listeners.</span></span>  
+2. <span data-ttu-id="16691-113">Crie uma função que retorna uma cadeia de caracteres que consiste de informações para cada um dos ouvintes de log.</span><span class="sxs-lookup"><span data-stu-id="16691-113">Create a function that returns a string consisting of information for each of the log's listeners.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#14)]  
   
-3. <span data-ttu-id="cf940-114">Passe a coleção dos ouvintes de rastreamento do log para a função `GetListeners` e exiba o valor retornado.</span><span class="sxs-lookup"><span data-stu-id="cf940-114">Pass the collection of the log's trace listeners to the `GetListeners` function, and display the return value.</span></span>  
+3. <span data-ttu-id="16691-114">Passe a coleção dos ouvintes de rastreamento do log para a função `GetListeners` e exiba o valor retornado.</span><span class="sxs-lookup"><span data-stu-id="16691-114">Pass the collection of the log's trace listeners to the `GetListeners` function, and display the return value.</span></span>  
   
      [!code-vb[VbVbalrMyApplicationLog#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#19)]  
   
-     <span data-ttu-id="cf940-115">Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.</span><span class="sxs-lookup"><span data-stu-id="cf940-115">For more information, see <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.</span></span>  
+     <span data-ttu-id="16691-115">Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.</span><span class="sxs-lookup"><span data-stu-id="16691-115">For more information, see <xref:Microsoft.VisualBasic.Logging.Log.TraceSource%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cf940-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cf940-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="16691-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="16691-116">See also</span></span>
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
-- [<span data-ttu-id="cf940-117">Trabalhando com logs de aplicativo</span><span class="sxs-lookup"><span data-stu-id="cf940-117">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [<span data-ttu-id="cf940-118">Passo a passo: determinando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="cf940-118">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
+- [<span data-ttu-id="16691-117">Trabalhando com logs de aplicativo</span><span class="sxs-lookup"><span data-stu-id="16691-117">Working with Application Logs</span></span>](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
+- [<span data-ttu-id="16691-118">Instruções passo a passo: determinando onde My.Application.Log grava informações</span><span class="sxs-lookup"><span data-stu-id="16691-118">Walkthrough: Determining Where My.Application.Log Writes Information</span></span>](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)

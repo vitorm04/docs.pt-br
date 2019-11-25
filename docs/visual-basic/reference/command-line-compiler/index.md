@@ -1,5 +1,5 @@
 ---
-title: Compilador de linha de comando do Visual Basic
+title: Command-line compiler
 ms.date: 02/20/2018
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -8,31 +8,31 @@ helpviewer_keywords:
 - compiler options, Visual Basic
 - Visual Basic compiler, options
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
-ms.openlocfilehash: d5bccab71d790a7a70d012375d3f47676cf83c6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65f617a42e6281ca3b2336319d8a61d84e0386d6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794102"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344236"
 ---
-# <a name="visual-basic-command-line-compiler"></a><span data-ttu-id="8d5e8-102">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8d5e8-102">Visual Basic command-line compiler</span></span>
+# <a name="visual-basic-command-line-compiler"></a><span data-ttu-id="7ba87-102">Visual Basic command-line compiler</span><span class="sxs-lookup"><span data-stu-id="7ba87-102">Visual Basic command-line compiler</span></span>
 
-<span data-ttu-id="8d5e8-103">O compilador de linha de comando do Visual Basic fornece uma alternativa para compilar programas de dentro do ambiente de desenvolvimento integrado (IDE) do Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="8d5e8-103">The Visual Basic command-line compiler provides an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span> <span data-ttu-id="8d5e8-104">Esta seção contém descrições para as opções de compilador do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8d5e8-104">This section contains descriptions for the Visual Basic compiler options.</span></span>
+<span data-ttu-id="7ba87-103">The Visual Basic command-line compiler provides an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span><span class="sxs-lookup"><span data-stu-id="7ba87-103">The Visual Basic command-line compiler provides an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span> <span data-ttu-id="7ba87-104">This section contains descriptions for the Visual Basic compiler options.</span><span class="sxs-lookup"><span data-stu-id="7ba87-104">This section contains descriptions for the Visual Basic compiler options.</span></span>
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
-## <a name="in-this-section"></a><span data-ttu-id="8d5e8-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="8d5e8-105">In this section</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="7ba87-105">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="7ba87-105">In this section</span></span>
 
-[<span data-ttu-id="8d5e8-106">Compilando da Linha de Comando</span><span class="sxs-lookup"><span data-stu-id="8d5e8-106">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
-<span data-ttu-id="8d5e8-107">Descreve o compilador de linha de comando do Visual Basic, que é fornecido como uma alternativa para compilar programas de dentro do IDE do Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="8d5e8-107">Describes the Visual Basic command-line compiler, which is provided as an alternative to compiling programs from within the Visual Studio IDE.</span></span>
+[<span data-ttu-id="7ba87-106">Compilando da Linha de Comando</span><span class="sxs-lookup"><span data-stu-id="7ba87-106">Building from the Command Line</span></span>](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
+<span data-ttu-id="7ba87-107">Describes the Visual Basic command-line compiler, which is provided as an alternative to compiling programs from within the Visual Studio IDE.</span><span class="sxs-lookup"><span data-stu-id="7ba87-107">Describes the Visual Basic command-line compiler, which is provided as an alternative to compiling programs from within the Visual Studio IDE.</span></span>
 
-[<span data-ttu-id="8d5e8-108">Opções do compilador do Visual Basic listadas em ordem alfabética</span><span class="sxs-lookup"><span data-stu-id="8d5e8-108">Visual Basic Compiler Options Listed Alphabetically</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
-<span data-ttu-id="8d5e8-109">Lista as opções do compilador em uma tabela alfabética</span><span class="sxs-lookup"><span data-stu-id="8d5e8-109">Lists compiler options in an alphabetical table</span></span>
+[<span data-ttu-id="7ba87-108">Opções do compilador do Visual Basic listadas em ordem alfabética</span><span class="sxs-lookup"><span data-stu-id="7ba87-108">Visual Basic Compiler Options Listed Alphabetically</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+<span data-ttu-id="7ba87-109">Lists compiler options in an alphabetical table</span><span class="sxs-lookup"><span data-stu-id="7ba87-109">Lists compiler options in an alphabetical table</span></span>
 
-[<span data-ttu-id="8d5e8-110">Opções do compilador do Visual Basic listadas por categoria</span><span class="sxs-lookup"><span data-stu-id="8d5e8-110">Visual Basic Compiler Options Listed by Category</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
-<span data-ttu-id="8d5e8-111">Apresenta opções de compilador in grupos funcionais.</span><span class="sxs-lookup"><span data-stu-id="8d5e8-111">Presents compiler options in functional groups.</span></span>
+[<span data-ttu-id="7ba87-110">Opções do compilador do Visual Basic listadas por categoria</span><span class="sxs-lookup"><span data-stu-id="7ba87-110">Visual Basic Compiler Options Listed by Category</span></span>](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+<span data-ttu-id="7ba87-111">Apresenta opções de compilador in grupos funcionais.</span><span class="sxs-lookup"><span data-stu-id="7ba87-111">Presents compiler options in functional groups.</span></span>
   
-## <a name="related-sections"></a><span data-ttu-id="8d5e8-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="8d5e8-112">Related sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="7ba87-112">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="7ba87-112">Related sections</span></span>
 
-[<span data-ttu-id="8d5e8-113">Guia do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8d5e8-113">Visual Basic Guide</span></span>](../../index.md)  
-<span data-ttu-id="8d5e8-114">O ponto de partida para a documentação do Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8d5e8-114">The starting point for the Visual Basic documentation.</span></span>
+[<span data-ttu-id="7ba87-113">Guia do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7ba87-113">Visual Basic Guide</span></span>](../../index.md)  
+<span data-ttu-id="7ba87-114">The starting point for the Visual Basic documentation.</span><span class="sxs-lookup"><span data-stu-id="7ba87-114">The starting point for the Visual Basic documentation.</span></span>
