@@ -2,12 +2,12 @@
 title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: 4bc8884b2d4cb6f8201e2038894c69d0805bddda
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 7456c6373c64e07b73e15e7e2bb229dce4032121
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738824"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140740"
 ---
 # <a name="netmsmqbinding"></a>\<netMsmqBinding >
 Define uma associação em fila adequada para comunicação entre computadores.  
@@ -75,7 +75,7 @@ Define uma associação em fila adequada para comunicação entre computadores.
 |`maxBufferPoolSize`|Um inteiro que especifica o tamanho máximo do pool de buffers para essa associação. O padrão é 8.|  
 |`maxReceivedMessageSize`|Um inteiro positivo que define o tamanho máximo da mensagem, em bytes, incluindo cabeçalhos, que é processado por essa associação. O remetente de uma mensagem que excede esse limite receberá uma falha de SOAP. O receptor remove a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536. Esse limite de tamanho de mensagem destina-se a limitar a exposição a ataques de negação de serviço (DoS).|  
 |`maxRetryCycles`|Um inteiro que indica o número de ciclos de repetição usados pelo recurso de detecção de mensagens suspeitas. Uma mensagem se torna uma mensagem suspeita quando ela falha em todas as tentativas de entrega de todos os ciclos. O padrão é 3. Para obter mais informações, consulte <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Atributo obrigatório. Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor deve ser exclusivo porque é usado como uma identificação para a associação. A partir do [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Atributo obrigatório. Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor deve ser exclusivo porque é usado como uma identificação para a associação. A partir do .NET Framework 4, associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de abertura. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
 |`QueueTransferProtocol`|Um valor de <xref:System.ServiceModel.QueueTransferProtocol> válido que especifica o transporte de canal de comunicação na fila que essa associação usa. O MSMQ não oferece suporte ao endereçamento de Active Directory ao usar o protocolo de mensagens confiáveis SOAP. Portanto, você não deve definir esse atributo como `Srmp` ou `Srmps` quando o atributo `useActiveDirectory` é definido como `true`.|  
 |`receiveErrorHandling`|Um valor <xref:System.ServiceModel.ReceiveErrorHandling> que especifica como as mensagens suspeitas e não expedidas são tratadas.|  
@@ -93,13 +93,13 @@ Define uma associação em fila adequada para comunicação entre computadores.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens SOAP que podem ser processadas por pontos de extremidade configurados com essa associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<Security >](security-of-netmsmqbinding.md)|Define as configurações de segurança para a associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
+|[> \<segurança](security-of-netmsmqbinding.md)|Define as configurações de segurança para a associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings >](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[associações de \<](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  A associação de `netMsmqBinding` fornece suporte para enfileiramento, aproveitando o MSMQ (enfileiramento de mensagens da Microsoft) como um transporte e habilita o suporte para aplicativos livremente acoplados, isolamento de falha, nivelamento de carga e operações desconectadas. Para obter uma discussão sobre esses recursos, consulte [filas no WCF](../../../wcf/feature-details/queues-in-wcf.md).  
@@ -142,7 +142,7 @@ Define uma associação em fila adequada para comunicação entre computadores.
 
 - <xref:System.ServiceModel.NetMsmqBinding>
 - <xref:System.ServiceModel.Configuration.NetMsmqBindingElement>
-- [\<binding >](bindings.md)
+- [> de associação de \<](bindings.md)
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)

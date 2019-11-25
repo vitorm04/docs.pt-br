@@ -2,12 +2,12 @@
 title: <webHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 423c9ddd041e61b2b44bb61bcc9eda7b11c8ebb5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0bb6d1f40fe38cb13ed8ab07957de5db22d48fcc
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732539"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140492"
 ---
 # <a name="webhttpbinding"></a>> \<WebHttpBinding
 Define um elemento de associação que é usado para configurar pontos de extremidade para serviços da Web Windows Communication Foundation (WCF) que respondem a solicitações HTTP em vez de mensagens SOAP.  
@@ -64,7 +64,7 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 |maxBufferPoolSize|Um inteiro que especifica o tamanho máximo do pool de buffers para essa associação. O padrão é 524.288 bytes (512 * 1024). Muitas partes de Windows Communication Foundation (WCF) usam buffers. Criar e destruir buffers cada vez que eles são usados é caro, e a coleta de lixo para buffers também é dispendiosa. Com os pools de buffers, você pode pegar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar. Portanto, a sobrecarga na criação e na destruição de buffers é evitada.|  
 |maxBufferSize|Um inteiro que especifica a quantidade máxima de memória alocada para uso pelo Gerenciador dos buffers de mensagens que recebem mensagens do canal. O valor padrão é 524.288 (0x80000) bytes.|  
 |maxReceivedMessageSize|Um inteiro positivo que especifica o tamanho máximo da mensagem, em bytes, incluindo cabeçalhos, que pode ser recebido em um canal configurado com essa associação. O remetente de uma mensagem que excede esse limite receberá uma falha. O receptor remove a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536. **Observação:**  Aumentar este valor sozinho não é suficiente no modo compatível com ASP.NET. Você também deve aumentar o valor de `httpRuntime` (consulte o [elemento httpRuntime (esquema de configurações ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100))).|  
-|name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor deve ser exclusivo porque é usado como uma identificação para a associação. A partir do [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor deve ser exclusivo porque é usado como uma identificação para a associação. A partir do .NET Framework 4, associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de abertura. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
 |proxyAddress|Um URI que especifica o endereço do proxy HTTP. Se `useSystemWebProxy` for `true`, essa configuração deverá ser `null`. O padrão é `null`.|  
 |receiveTimeout|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de recebimento. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
@@ -78,13 +78,13 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade de mensagens POX que podem ser processadas por pontos de extremidade configurados com essa associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
-|[\<Security >](security-of-webhttpbinding.md)|Define as configurações de segurança para a associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.WebHttpSecurityElement>.|  
+|[> \<segurança](security-of-webhttpbinding.md)|Define as configurações de segurança para a associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.WebHttpSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings >](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[associações de \<](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  O modelo de programação Web do WCF permite que os desenvolvedores exponham os serviços Web WCF por meio de solicitações HTTP que usam mensagens de estilo "de" XML antigo "(POX) em vez de mensagens baseadas em SOAP. Para que os clientes se comuniquem com um serviço usando solicitações HTTP, um ponto de extremidade do serviço deve ser configurado com o [> Webhttpbinding\<](webhttpbinding.md) que tem o \<WebHttpBehavior > anexado a ele.  
@@ -99,4 +99,4 @@ Define um elemento de associação que é usado para configurar pontos de extrem
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [> de associação de \<](bindings.md)

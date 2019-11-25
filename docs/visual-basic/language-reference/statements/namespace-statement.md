@@ -1,5 +1,5 @@
 ---
-title: Instrução Namespace (Visual Basic)
+title: Instrução Namespace
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Namespace
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 19207a42890640bd82ec547e53eb6d833668e4b5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784131"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74329651"
 ---
 # <a name="namespace-statement"></a>Instrução Namespace
-Declara o nome de um namespace e faz com que o código-fonte que segue a declaração seja compilado dentro desse namespace.  
+Declares the name of a namespace and causes the source code that follows the declaration to be compiled within that namespace.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,66 +32,66 @@ End Namespace
   
 ## <a name="parts"></a>Partes  
  Global  
- Opcional. Permite que você definir um namespace fora do namespace raiz do seu projeto. Ver [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Opcional. Allows you to define a namespace out of the root namespace of your project. See [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
  `name`  
- Necessário. Um nome exclusivo que identifica o namespace. Deve ser um identificador válido Visual Basic. Para obter mais informações, consulte [nomes de elemento declarado](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Necessário. A unique name that identifies the namespace. Must be a valid Visual Basic identifier. For more information, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `componenttypes`  
- Opcional. Elementos que compõem o namespace. Elas incluem, mas não estão limitadas a, enumerações, estruturas, interfaces, classes, módulos, delegados e outros namespaces.  
+ Opcional. Elements that make up the namespace. These include, but are not limited to, enumerations, structures, interfaces, classes, modules, delegates, and other namespaces.  
   
  `End Namespace`  
- Encerra um `Namespace` bloco.  
+ Terminates a `Namespace` block.  
   
 ## <a name="remarks"></a>Comentários  
- Namespaces são usados como um sistema organizacional. Eles fornecem uma maneira de classificar e apresentar os elementos de programação que são expostos a outros programas e aplicativos. Observe que um namespace não é um *tipo* no sentido de que uma classe ou estrutura é — você não pode declarar um elemento de programação para ter o tipo de dados de um namespace.  
+ Namespaces are used as an organizational system. They provide a way to classify and present programming elements that are exposed to other programs and applications. Note that a namespace is not a *type* in the sense that a class or structure is—you cannot declare a programming element to have the data type of a namespace.  
   
- Todos os elementos de programação declarados após um `Namespace` instrução pertencem a esse namespace. Visual Basic continua a compilar elementos para o último namespace declarado até encontrar um `End Namespace` instrução ou outro `Namespace` instrução.  
+ All programming elements declared after a `Namespace` statement belong to that namespace. Visual Basic continues to compile elements into the last declared namespace until it encounters either an `End Namespace` statement or another `Namespace` statement.  
   
- Se um namespace já estiver definido, até mesmo fora do seu projeto, você pode adicionar elementos de programação a ele. Para fazer isso, você deve usar um `Namespace` instrução para direcionar o Visual Basic para compilar os elementos para esse namespace.  
+ If a namespace is already defined, even outside your project, you can add programming elements to it. To do this, you use a `Namespace` statement to direct Visual Basic to compile elements into that namespace.  
   
- Você pode usar um `Namespace` instrução somente no nível de namespace ou arquivo. Isso significa que o *contexto de declaração* para um namespace deve ser um arquivo de origem ou namespace e não pode ser uma classe, estrutura, módulo, interface ou procedimento. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ You can use a `Namespace` statement only at the file or namespace level. This means the *declaration context* for a namespace must be a source file or another namespace, and cannot be a class, structure, module, interface, or procedure. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
- Você pode declarar um namespace dentro de outra. Não há nenhum limite estrito aos níveis de aninhamento, você pode declarar, mas lembre-se de que, quando outro código acessa os elementos declarados no namespace mais interno, ele deve usar uma cadeia de caracteres de qualificação que contém todos os nomes de namespace na hierarquia de aninhamento.  
+ You can declare one namespace within another. There is no strict limit to the levels of nesting you can declare, but remember that when other code accesses the elements declared in the innermost namespace, it must use a qualification string that contains all the namespace names in the nesting hierarchy.  
   
-## <a name="access-level"></a>Nível de acesso  
- Namespaces são tratados como se tivessem um `Public` nível de acesso. Um namespace pode ser acessado do código em qualquer lugar no mesmo projeto, de outros projetos que referenciem o projeto e de qualquer assembly criado a partir do projeto.  
+## <a name="access-level"></a>Access Level  
+ Namespaces are treated as if they have a `Public` access level. A namespace can be accessed from code anywhere in the same project, from other projects that reference the project, and from any assembly built from the project.  
   
- Elementos de programação declarados no nível de namespace, que significa que em um namespace, mas não dentro de qualquer outro elemento, podem ter `Public` ou `Friend` acesso. Se não for especificado, o nível de acesso de tais um elemento usa `Friend` por padrão. Você pode declarar no nível de namespace de elementos incluem classes, estruturas, módulos, interfaces, enumerações e delegados. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Programming elements declared at namespace level, meaning in a namespace but not inside any other element, can have `Public` or `Friend` access. If unspecified, the access level of such an element uses `Friend` by default. Elements you can declare at namespace level include classes, structures, modules, interfaces, enumerations, and delegates. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
-## <a name="root-namespace"></a>Namespace de raiz  
- Todos os nomes de namespace em seu projeto são baseados em um *namespace raiz*. Visual Studio atribui o nome do projeto como o namespace de raiz padrão para todo o código em seu projeto. Por exemplo, se seu projeto é nomeado `Payroll`, seus elementos de programação pertencem ao namespace `Payroll`. Se você declarar `Namespace funding`, o nome completo desse namespace é `Payroll.funding`.  
+## <a name="root-namespace"></a>Root Namespace  
+ All namespace names in your project are based on a *root namespace*. Visual Studio assigns your project name as the default root namespace for all code in your project. For example, if your project is named `Payroll`, its programming elements belong to namespace `Payroll`. If you declare `Namespace funding`, the full name of that namespace is `Payroll.funding`.  
   
- Se você quiser especificar um namespace existente em um `Namespace` instrução, como no exemplo de classe de lista genérico, você pode definir seu namespace raiz para um valor nulo. Para fazer isso, clique em **propriedades do projeto** da **Project** menu e desmarque o **namespace raiz** entrada para que a caixa estiver vazia. Se você não fizer isso no exemplo de classe de lista genérica, o compilador do Visual Basic levaria `System.Collections.Generic` como um novo namespace dentro do projeto `Payroll`, com o nome completo do `Payroll.System.Collections.Generic`.  
+ If you want to specify an existing namespace in a `Namespace` statement, such as in the generic list class example, you can set your root namespace to a null value. To do this, click **Project Properties** from the **Project** menu and then clear the **Root namespace** entry so that the box is empty. If you did not do this in the generic list class example, the Visual Basic compiler would take `System.Collections.Generic` as a new namespace within project `Payroll`, with the full name of `Payroll.System.Collections.Generic`.  
   
- Como alternativa, você pode usar o `Global` palavra-chave para se referir a elementos de namespaces definidos fora de seu projeto. Isso permite que você mantenha o nome do projeto como o namespace raiz. Isso reduz a chance de acidentalmente a mesclagem de elementos de programação, junto com os dos namespaces existentes. Para obter mais informações, consulte a seção "Global palavra-chave em nomes totalmente qualificados" [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ Alternatively, you can use the `Global` keyword to refer to elements of namespaces defined outside your project. Doing so lets you retain your project name as the root namespace. This reduces the chance of unintentionally merging your programming elements together with those of existing namespaces. For more information, see the "Global Keyword in Fully Qualified Names" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
- O `Global` palavra-chave também pode ser usado em uma declaração de Namespace. Isso permite que você definir um namespace fora do namespace raiz do seu projeto. Para obter mais informações, consulte a seção "Palavra-chave no Namespace instruções globais" [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
+ The `Global` keyword can also be used in a Namespace statement. This lets you define a namespace out of the root namespace of your project. For more information, see the "Global Keyword in Namespace Statements" section in [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
   
- **Solução de problemas.** O namespace raiz pode levar a concatenações inesperadas de nomes de namespace. Se você fizer referência a namespaces definidos fora de seu projeto, o compilador do Visual Basic pode construe-los como namespaces aninhados no namespace raiz. Nesse caso, o compilador não reconhece quaisquer tipos que já foram definidos em namespaces externos. Para evitar isso, defina seu namespace raiz para um valor nulo, conforme descrito em "Namespace raiz", ou use o `Global` palavra-chave para acessar elementos de namespaces externos.  
+ **Troubleshooting.** The root namespace can lead to unexpected concatenations of namespace names. If you make reference to namespaces defined outside your project, the Visual Basic compiler can construe them as nested namespaces in the root namespace. In such a case, the compiler does not recognize any types that have been already defined in the external namespaces. To avoid this, either set your root namespace to a null value as described in "Root Namespace," or use the `Global` keyword to access elements of external namespaces.  
   
-## <a name="attributes-and-modifiers"></a>Atributos e modificadores  
- Você não pode aplicar atributos a um namespace. Um atributo contribui com informações para metadados do assembly, que não é significativo para fontes classificadores como namespaces.  
+## <a name="attributes-and-modifiers"></a>Attributes and Modifiers  
+ You cannot apply attributes to a namespace. An attribute contributes information to the assembly's metadata, which is not meaningful for source classifiers such as namespaces.  
   
- É possível aplicar qualquer acesso ou modificadores de procedimento ou qualquer outros modificadores, a um namespace. Porque ele não é um tipo, esses modificadores não são significativos.  
+ You cannot apply any access or procedure modifiers, or any other modifiers, to a namespace. Because it is not a type, these modifiers are not meaningful.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir declara dois namespaces, um aninhado no outro.  
+ The following example declares two namespaces, one nested in the other.  
   
  [!code-vb[VbVbalrStatements#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#43)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir declara vários namespaces aninhados em uma única linha, e é equivalente ao exemplo anterior.  
+ The following example declares multiple nested namespaces on a single line, and it is equivalent to the previous example.  
   
  [!code-vb[VbVbalrStatements#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir acessa a classe definida nos exemplos anteriores.  
+ The following example accesses the class defined in the previous examples.  
   
  [!code-vb[VbVbalrStatements#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir define o esqueleto de uma nova classe list genérica e adiciona-o para o <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.  
+ The following example defines the skeleton of a new generic list class and adds it to the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace.  
   
 ```vb  
 Namespace System.Collections.Generic  
@@ -106,4 +106,4 @@ End Namespace
 
 - [Instrução Imports (Tipo e Namespace .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Nomes de Elementos Declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [Namespaces no Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [Namespaces in Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md)

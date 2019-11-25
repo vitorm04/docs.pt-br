@@ -2,16 +2,16 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: cd4c4cd4c1bfe7920c438eddc15aba00d995b8cb
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fe8f620668e35183890b8bba1f254a74c962f8d3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039619"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74139667"
 ---
 # <a name="bindings"></a>associações de \<
 
-Você pode usar o elemento `bindings` para configurar uma coleção de associações padrão e personalizadas para Windows Communication Foundation (WCF). Cada entrada é um elemento `binding` que pode ser identificado por seu `name`exclusivo. Os serviços usam associações vinculando-os usando o `name`. A partir do [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).
+Você pode usar o elemento `bindings` para configurar uma coleção de associações padrão e personalizadas para Windows Communication Foundation (WCF). Cada entrada é um elemento `binding` que pode ser identificado por seu `name`exclusivo. Os serviços usam associações vinculando-os usando o `name`. A partir do .NET Framework 4, associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).
 
 ## <a name="system-provided-bindings"></a>Associações fornecidas pelo sistema
 

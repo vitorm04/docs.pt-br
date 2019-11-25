@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
-ms.openlocfilehash: 95942e9818eccc018c123148949c6f2dee4fa6e0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ba28a81dd2ea0684ed863821afd3a8f31c0fb064
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736630"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140773"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding >
 Define uma associação que fornece suporte ao enfileiramento Roteando mensagens por meio do MSMQ.  
@@ -62,7 +62,7 @@ Define uma associação que fornece suporte ao enfileiramento Roteando mensagens
 |exactlyOnce|Um valor booliano que indica se cada mensagem é entregue apenas uma vez. O remetente será notificado de falhas de entrega. Quando `durable` é `false`, esse atributo é ignorado e as mensagens são transferidas sem a garantia de entrega. O padrão é `true`. Para obter mais informações, consulte <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A>.|  
 |maxReceivedMessageSize|Um inteiro positivo que define o tamanho máximo da mensagem, em bytes, incluindo cabeçalhos, que é processado por essa associação. O remetente de uma mensagem que excede esse limite receberá uma falha de SOAP. O receptor remove a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536. Esse limite de tamanho de mensagem destina-se a limitar a exposição a ataques de negação de serviço (DoS).|  
 |maxRetryCycles|Um inteiro que indica o número de ciclos de repetição usados pelo recurso de detecção de mensagens suspeitas. Uma mensagem se torna uma mensagem suspeita quando ela falha em todas as tentativas de entrega de todos os ciclos. O padrão é 2. Para obter mais informações, consulte <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor deve ser exclusivo porque é usado como uma identificação para a associação. A partir do [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|name|Uma cadeia de caracteres que contém o nome da configuração da associação. Esse valor deve ser exclusivo porque é usado como uma identificação para a associação. A partir do .NET Framework 4, associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de abertura. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
 |receiveErrorHandling|Um valor <xref:System.ServiceModel.ReceiveErrorHandling> que especifica como as mensagens suspeitas e não expedidas são tratadas.|  
 |receiveRetryCount|Um inteiro que especifica o número máximo de tentativas imediatas que o Gerenciador de fila deve tentar se a transmissão de uma mensagem da fila do aplicativo para o aplicativo falhar.<br /><br /> Se o número máximo de tentativas de entrega for atingido e a mensagem não for acessada pelo aplicativo, a mensagem será enviada a uma fila de repetição para entrega novamente mais tarde. A quantidade de tempo antes que a mensagem seja transferida de volta para a fila de envio é controlada por `retryCycleDelay`. Se os ciclos de repetição atingirem o valor de `maxRetryCycles`, a mensagem será enviada para a fila de mensagens suspeitas ou uma confirmação negativa será enviada de volta ao remetente.|  
@@ -89,13 +89,13 @@ Define uma associação que fornece suporte ao enfileiramento Roteando mensagens
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Security >](security-of-msmqintegrationbinding.md)|Define as configurações de segurança para a associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
+|[> \<segurança](security-of-msmqintegrationbinding.md)|Define as configurações de segurança para a associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings >](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[associações de \<](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento de associação pode ser usado para permitir que aplicativos Windows Communication Foundation (WCF) enviem mensagens para e recebam mensagens de aplicativos MSMQ existentes que usam COM, APIs nativas do MSMQ ou os tipos definidos no namespace de <xref:System.Messaging?displayProperty=nameWithType> que você pode usar Este elemento de configuração para especificar maneiras de endereçar a fila, garantir a transferência, se as mensagens devem ser permanentemente armazenadas e como as mensagens devem ser protegidas e autenticadas. Para obter mais informações, consulte [como: trocar mensagens com pontos de extremidade WCF e aplicativos de enfileiramento de mensagens](../../../wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md).  
@@ -137,7 +137,7 @@ Define uma associação que fornece suporte ao enfileiramento Roteando mensagens
 - <xref:System.ServiceModel.Configuration.MsmqIntegrationBindingElement>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>
 - <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
-- [\<binding >](bindings.md)
+- [> de associação de \<](bindings.md)
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)

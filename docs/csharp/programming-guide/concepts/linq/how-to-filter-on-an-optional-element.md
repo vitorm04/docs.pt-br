@@ -1,15 +1,15 @@
 ---
-title: 'Como: Filtrar em um elemento opcional (C#)'
+title: Como filtrar em um elemento opcional (C#)
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: c9f844619cbb3d7a66ca66989baa900e0fd7bc2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253826"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141245"
 ---
-# <a name="how-to-filter-on-an-optional-element-c"></a>Como: Filtrar em um elemento opcional (C#)
+# <a name="how-to-filter-on-an-optional-element-c"></a>Como filtrar em um elemento opcional (C#)
 Às vezes você deseja filtrar um elemento mesmo que você não tenha certeza ele existe em seu documento XML. A pesquisa deve ser executada de modo que se o elemento específico não tem o elemento filho, você não dispare uma exceção de referência nula filtragem para ele. No exemplo a seguir, o elemento de `Child5` não tiver um elemento filho de `Type` , mas a consulta ainda executa corretamente.  
   
 ## <a name="example"></a>Exemplo  

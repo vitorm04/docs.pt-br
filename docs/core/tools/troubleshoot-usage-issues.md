@@ -3,12 +3,12 @@ title: Solucionar problemas de uso da ferramenta .NET Core
 description: Descubra os problemas comuns ao executar as ferramentas do .NET Core e as possíveis soluções.
 author: kdollard
 ms.date: 09/23/2019
-ms.openlocfilehash: fc6c520ab57235c78148a6b77717cbd80a989451
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df896405a122050acba220923eee58e87e0b75b6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318293"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74282496"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>Solucionar problemas de uso da ferramenta .NET Core
 
@@ -25,7 +25,7 @@ Quando uma ferramenta do .NET Core não é executada, é muito provável que voc
 
 Se o arquivo executável não for encontrado, você verá uma mensagem semelhante à seguinte:
 
-```
+```console
 Could not execute because the specified command or file was not found.
 Possible reasons for this include:
   * You misspelled a built-in dotnet command.
@@ -101,7 +101,7 @@ Se você instalar o SDK do .NET Core em um local não padrão, precisará defini
 
 Há vários motivos pelos quais a instalação de uma ferramenta global ou local do .NET Core pode falhar. Quando a instalação da ferramenta falhar, você verá uma mensagem semelhante à seguinte:
 
-```
+```console
 Tool '{0}' failed to install. This failure may have been caused by:
 
 * You are attempting to install a preview release and did not use the --version option to specify the version.
@@ -152,7 +152,7 @@ Se você tentar instalar um pacote NuGet que é um pacote NuGet regular e não u
 
 * O feed NuGet necessário não pode ser acessado, talvez devido a um problema de conexão com a Internet.
 
-A instalação da ferramenta requer acesso ao feed do NuGet que contém o pacote de ferramentas. Ele falhará se o feed não estiver disponível. Você pode alterar feeds com `nuget.config`, solicitar um arquivo `nuget.config` específico ou especificar Feeds adicionais com a opção `--add-source`. Por padrão, o NuGet gera um erro para qualquer feed que não pode se conectar. O sinalizador `--ignore-failed-sources` pode ignorar essas fontes não acessíveis.
+A instalação da ferramenta requer acesso ao feed do NuGet que contém o pacote de ferramentas. Ele falhará se o feed não estiver disponível. Você pode alterar feeds com `nuget.config`, solicitar um arquivo de `nuget.config` específico ou especificar Feeds adicionais com o comutador `--add-source`. Por padrão, o NuGet gera um erro para qualquer feed que não pode se conectar. O sinalizador `--ignore-failed-sources` pode ignorar essas fontes não acessíveis.
 
 ### <a name="package-id-incorrect"></a>ID de pacote incorreta
 

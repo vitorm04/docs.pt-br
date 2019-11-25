@@ -3,16 +3,15 @@ title: Novidades do .NET Core 3.0
 description: Conheça os novos recursos encontrados no .NET Core 3.0.
 dev_langs:
 - csharp
-- vb
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: dcbf1073c12650101efdcf6022db0b29ace2eb3f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9cb2568aa36af9ced0525660962966375d69e35b
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420767"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140675"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -113,23 +112,36 @@ Para saber mais sobre a ferramenta Vinculador de IL, confira a [documentação](
 
 ### <a name="tiered-compilation"></a>Compilação em camadas
 
-A TC ([compilação em camadas](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o tempo de execução use de modo mais adaptável o compilador JIT (just-in-time) para obter um melhor desempenho.
+A TC ([compilação em camadas](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o runtime use de modo mais adaptável o compilador JIT (just-in-time) para obter um melhor desempenho.
 
 O principal benefício de TC é habilitar métodos de (re)jitting com uma camada de qualidade inferior, porém mais rápida, ou uma camada de qualidade superior, porém mais lenta. Isso ajuda a aumentar o desempenho de um aplicativo quando ele passa por vários estágios da execução, desde a inicialização até o estado estável. Isso contrasta com a abordagem de não TC, em que cada método é compilado de uma única maneira (o mesmo que a camada de alta qualidade) que é mais voltada para o estado estável em detrimento do desempenho de inicialização.
 
-Para habilitar o JIT rápido (código com compilação JIT de camada 0), use esta configuração em seu arquivo de projeto:
+Quando TC está habilitado, durante a inicialização para um método que é chamado:
+
+- Se o método tiver código compilado por AOT (ReadyToRun), o código gerado previamente será usado.
+- Caso contrário, o método será JIT. Normalmente, esses métodos atualmente são genéricos sobre tipos de valor.
+  - O Quick JIT produz código de menor qualidade mais rapidamente. O Quick JIT é habilitado por padrão no .NET Core 3,0 para métodos que não contêm loops e são preferenciais durante a inicialização.
+  - O JIT com otimização total produz um código de qualidade mais lento. Para métodos em que a JIT rápida não seria usada (por exemplo, se o método é atribuído com `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`), o JIT com otimização total é usado.
+
+Eventualmente, depois que os métodos são chamados várias vezes, eles são novamente JIT com o JIT totalmente otimizado em segundo plano.
+
+O código gerado pelo Quick JIT pode ser executado mais lentamente, alocar mais memória ou usar mais espaço de pilha. Se houver problemas, o Quick JIT poderá ser desabilitado usando essa configuração em seu arquivo de projeto:
 
 ```xml
 <PropertyGroup>
-  <TieredCompilationQuickJit>true</TieredCompilationQuickJit>
+  <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
 </PropertyGroup>
 ```
 
 Para desabilitar completamente a TC, use esta configuração em seu arquivo de projeto:
 
 ```xml
-<TieredCompilation>false</TieredCompilation>
+<PropertyGroup>
+  <TieredCompilation>false</TieredCompilation>
+</PropertyGroup>
 ```
+
+Qualquer alteração nas configurações acima no arquivo de projeto pode exigir que uma compilação limpa seja refletida (exclua os diretórios `obj` e `bin` e recompile).
 
 ### <a name="readytorun-images"></a>Imagens ReadyToRun
 
@@ -170,7 +182,7 @@ Exceções ao direcionamento cruzado:
 O .NET Core 3.0 introduz um recurso opcional que permite que seu aplicativo efetue roll forward para a versão principal mais recente do .NET Core. Adicionalmente, foi adicionada uma nova configuração para controlar como o roll forward é aplicado ao seu aplicativo. Isso pode ser configurado das seguintes maneiras:
 
 - Propriedade do arquivo de projeto: `RollForward`
-- Propriedade do arquivo de configuração de tempo de execução: `rollForward`
+- Propriedade do arquivo de configuração de runtime: `rollForward`
 - Variável de ambiente: `DOTNET_ROLL_FORWARD`
 - Argumento de linha de comando: `--roll-forward`
 
@@ -210,7 +222,7 @@ O .NET Core 3.0 apresenta ferramentas locais. Ferramentas locais são semelhante
 
 As ferramentas locais dependem de um nome de arquivo de manifesto `dotnet-tools.json` no seu diretório atual. Esse arquivo de manifesto define as ferramentas que estarão disponíveis nessa pasta e abaixo. Você pode distribuir o arquivo de manifesto com o seu código para garantir que qualquer pessoa que trabalha com o seu código possa restaurar e usar as mesmas ferramentas.
 
-Para ferramentas globais e locais, é necessária uma versão compatível do tempo de execução. Muitas ferramentas que estão atualmente em NuGet.org direcionam para o tempo de execução do .NET Core 2.1. Para instalar essas ferramentas, de forma global ou local, você ainda precisará instalar o [Tempo de execução do NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
+Para ferramentas globais e locais, é necessária uma versão compatível do runtime. Muitas ferramentas que estão atualmente em NuGet.org direcionam para o runtime do .NET Core 2.1. Para instalar essas ferramentas, de forma global ou local, você ainda precisará instalar o [Runtime do NET Core 2.1](https://dotnet.microsoft.com/download/dotnet-core/2.1).
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>Tamanhos menores de heap de coleta de lixo
 
@@ -279,7 +291,7 @@ O Windows oferece uma API nativa rica na forma de APIs C simples, COM e WinRT. E
 
 O [Projeto de Empacotamento de Aplicativos do Windows](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net), disponível no Visual Studio 2019, permite criar pacotes MSIX com aplicativos .NET Core [autossuficientes](../deploying/index.md#self-contained-deployments-scd).
 
-O arquivo de projeto do .NET Core precisa especificar os tempos de execução compatíveis na propriedade `<RuntimeIdentifiers>`:
+O arquivo de projeto do .NET Core precisa especificar os runtimes compatíveis na propriedade `<RuntimeIdentifiers>`:
 
 ```xml
 <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
@@ -332,12 +344,12 @@ O .NET Core agora faz proveito do [suporte a protocolo TLS 1.3 no OpenSSL 1.1.1]
 
 Quando disponíveis, o .NET Core 3.0 usa **OpenSSL 1.1.1**, **1.1.0** ou **1.0.2** em um sistema Linux. Quando o **OpenSSL 1.1.1** está disponível, ambos os tipos <xref:System.Net.Security.SslStream?displayProperty=nameWithType> e <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> usarão o **protocolo TLS 1.3** (supondo que o cliente e o servidor deem suporte ao **protocolo TLS 1.3**).
 
->[!IMPORTANT]
->Windows e macOS ainda não oferecem suporte a **TLS 1.3**. O .NET Core 3.0 será compatível com **TLS 1.3** nesses sistemas operacionais quando o suporte for disponibilizado.
+> [!IMPORTANT]
+> Windows e macOS ainda não oferecem suporte a **TLS 1.3**. O .NET Core 3.0 será compatível com **TLS 1.3** nesses sistemas operacionais quando o suporte for disponibilizado.
 
 O exemplo de C# 8.0 a seguir demonstra o .NET Core 3.0 no Ubuntu 18.10 conectando-se a <https://www.cloudflare.com>:
 
-[!CODE-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
+[!code-csharp[TLSExample](~/samples/snippets/core/whats-new/whats-new-in-30/cs/TLS.cs#TLS)]
 
 ### <a name="cryptography-ciphers"></a>Cifras de criptografia
 
@@ -345,7 +357,7 @@ O .NET 3.0 adiciona o suporte para as criptografias **AES-GCM** e **AES-CCM**, i
 
 O código a seguir demonstra como usar criptografia `AesGcm` para criptografar e descriptografar dados aleatórios.
 
-[!CODE-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
+[!code-csharp[AesGcm](~/samples/snippets/core/whats-new/whats-new-in-30/cs/Cipher.cs#AesGcm)]
 
 ### <a name="cryptographic-key-importexport"></a>Importar/exportar chave de criptografia
 
@@ -370,7 +382,7 @@ Chaves RSA também dão suporte a:
 
 Os métodos de exportação produzem dados binários codificados em DER e os métodos de importação esperam o mesmo. Se uma chave for armazenada no formato PEM compatível com texto, o chamador precisará decodificar o conteúdo em Base64 antes de chamar um método de importação.
 
-[!CODE-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
+[!code-csharp[RSA](~/samples/snippets/core/whats-new/whats-new-in-30/cs/RSA.cs#Rsa)]
 
 Arquivos **PKCS nº 8** podem ser inspecionados com <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo?displayProperty=nameWithType> e **arquivos PFX/PKCS nº 12** podem ser inspecionados com <xref:System.Security.Cryptography.Pkcs.Pkcs12Info?displayProperty=nameWithType>. Arquivos **PFX/PKCS nº 12** podem ser manipulados com <xref:System.Security.Cryptography.Pkcs.Pkcs12Builder?displayProperty=nameWithType>.
 
@@ -495,15 +507,15 @@ O tipo <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> dá suport
 
 O protocolo padrão permanece HTTP/1.1, mas o HTTP/2 pode ser ativado de duas maneiras diferentes. Primeiro, você pode definir a mensagem de solicitação HTTP para usar HTTP/2:
 
-[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+[!code-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
 
 Segundo, você pode alterar <xref:System.Net.Http.HttpClient> para usar HTTP/2 por padrão:
 
-[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+[!code-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
 
 Muitas vezes, quando você está desenvolvendo um aplicativo, quer usar uma conexão não criptografada. Se você souber que o ponto de extremidade estará usando HTTP/2, poderá ativar conexões não criptografadas para HTTP/2. Você pode ativá-lo definindo a variável de ambiente `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` como `1` ou ativando-a no contexto do aplicativo:
 
-[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
+[!code-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="next-steps"></a>Próximas etapas
 
