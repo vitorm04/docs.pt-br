@@ -9,7 +9,7 @@
 - name: Guia de área de trabalho do .NET – WPF (Windows Presentation Foundation)
   href: desktop-wpf/
 - name: 'Guia de C#'
-  href: csharp/
+  href: csharp/index.yml
 - name: 'Guia de F#'
   href: fsharp/
 - name: Guia do Visual Basic

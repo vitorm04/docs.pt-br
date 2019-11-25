@@ -1,20 +1,20 @@
 ---
-title: 'Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (C#)'
+title: Como computar valores de coluna em um arquivo de texto CSV (C#LINQ) ()
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 08b4f936532b3ba3744ec31dc691b166e7ba7109
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a48850e8f6229b80ebd9207bb1b7353f8b0c9e02
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594018"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141363"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="af69f-102">Como: Computar valores de coluna em um arquivo de texto CSV (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="af69f-102">How to: Compute Column Values in a CSV Text File (LINQ) (C#)</span></span>
-<span data-ttu-id="af69f-103">Este exemplo mostra como executar cálculos de agregação, como soma, média, mín. e máx. nas colunas de um arquivo .csv.</span><span class="sxs-lookup"><span data-stu-id="af69f-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="af69f-104">Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.</span><span class="sxs-lookup"><span data-stu-id="af69f-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a><span data-ttu-id="844d7-102">Como computar valores de coluna em um arquivo de texto CSV (C#LINQ) ()</span><span class="sxs-lookup"><span data-stu-id="844d7-102">How to compute column values in a CSV text file (LINQ) (C#)</span></span>
+<span data-ttu-id="844d7-103">Este exemplo mostra como executar cálculos de agregação, como soma, média, mín. e máx. nas colunas de um arquivo .csv.</span><span class="sxs-lookup"><span data-stu-id="844d7-103">This example shows how to perform aggregate computations such as Sum, Average, Min, and Max on the columns of a .csv file.</span></span> <span data-ttu-id="844d7-104">Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.</span><span class="sxs-lookup"><span data-stu-id="844d7-104">The example principles that are shown here can be applied to other types of structured text.</span></span>  
   
-## <a name="to-create-the-source-file"></a><span data-ttu-id="af69f-105">Para criar o arquivo de origem</span><span class="sxs-lookup"><span data-stu-id="af69f-105">To create the source file</span></span>  
+## <a name="to-create-the-source-file"></a><span data-ttu-id="844d7-105">Para criar o arquivo de origem</span><span class="sxs-lookup"><span data-stu-id="844d7-105">To create the source file</span></span>  
   
-1. <span data-ttu-id="af69f-106">Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto.</span><span class="sxs-lookup"><span data-stu-id="af69f-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="af69f-107">Suponha que a primeira coluna representa uma ID do aluno e as colunas subsequentes representam as notas de quatro provas.</span><span class="sxs-lookup"><span data-stu-id="af69f-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
+1. <span data-ttu-id="844d7-106">Copie as seguintes linhas para um arquivo chamado scores.csv e salve-o na sua pasta do projeto.</span><span class="sxs-lookup"><span data-stu-id="844d7-106">Copy the following lines into a file that is named scores.csv and save it in your project folder.</span></span> <span data-ttu-id="844d7-107">Suponha que a primeira coluna representa uma ID do aluno e as colunas subsequentes representam as notas de quatro provas.</span><span class="sxs-lookup"><span data-stu-id="844d7-107">Assume that the first column represents a student ID, and subsequent columns represent scores from four exams.</span></span>  
   
     ```csv
     111, 97, 92, 81, 60  
@@ -31,7 +31,7 @@ ms.locfileid: "69594018"
     122, 94, 92, 91, 91  
     ```  
   
-## <a name="example"></a><span data-ttu-id="af69f-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="af69f-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="844d7-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="844d7-108">Example</span></span>  
   
 ```csharp  
 class SumColumns  
@@ -156,12 +156,12 @@ class SumColumns
  */  
 ```  
   
- <span data-ttu-id="af69f-109">A consulta funciona usando o método <xref:System.String.Split%2A> para converter cada linha de texto em uma matriz.</span><span class="sxs-lookup"><span data-stu-id="af69f-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="af69f-110">Cada elemento da matriz representa uma coluna.</span><span class="sxs-lookup"><span data-stu-id="af69f-110">Each array element represents a column.</span></span> <span data-ttu-id="af69f-111">Por fim, o texto em cada coluna é convertido em sua representação numérica.</span><span class="sxs-lookup"><span data-stu-id="af69f-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="af69f-112">Se o arquivo for um arquivo separado por tabulações, é só atualizar o argumento no método `Split` para `\t`.</span><span class="sxs-lookup"><span data-stu-id="af69f-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
+ <span data-ttu-id="844d7-109">A consulta funciona usando o método <xref:System.String.Split%2A> para converter cada linha de texto em uma matriz.</span><span class="sxs-lookup"><span data-stu-id="844d7-109">The query works by using the <xref:System.String.Split%2A> method to convert each line of text into an array.</span></span> <span data-ttu-id="844d7-110">Cada elemento da matriz representa uma coluna.</span><span class="sxs-lookup"><span data-stu-id="844d7-110">Each array element represents a column.</span></span> <span data-ttu-id="844d7-111">Por fim, o texto em cada coluna é convertido em sua representação numérica.</span><span class="sxs-lookup"><span data-stu-id="844d7-111">Finally, the text in each column is converted to its numeric representation.</span></span> <span data-ttu-id="844d7-112">Se o arquivo for um arquivo separado por tabulações, é só atualizar o argumento no método `Split` para `\t`.</span><span class="sxs-lookup"><span data-stu-id="844d7-112">If your file is a tab-separated file, just update the argument in the `Split` method to `\t`.</span></span>  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="af69f-113">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="af69f-113">Compiling the Code</span></span>  
- <span data-ttu-id="af69f-114">Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="af69f-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="844d7-113">Compilando o código</span><span class="sxs-lookup"><span data-stu-id="844d7-113">Compiling the Code</span></span>  
+ <span data-ttu-id="844d7-114">Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.</span><span class="sxs-lookup"><span data-stu-id="844d7-114">Create a C# console application project, with `using` directives for the System.Linq and System.IO namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af69f-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="af69f-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="844d7-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="844d7-115">See also</span></span>
 
-- [<span data-ttu-id="af69f-116">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="af69f-116">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
-- [<span data-ttu-id="af69f-117">LINQ e diretórios de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="af69f-117">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
+- [<span data-ttu-id="844d7-116">LINQ e cadeias de caracteres (C#)</span><span class="sxs-lookup"><span data-stu-id="844d7-116">LINQ and Strings (C#)</span></span>](./linq-and-strings.md)
+- [<span data-ttu-id="844d7-117">LINQ e diretórios de arquivos (C#)</span><span class="sxs-lookup"><span data-stu-id="844d7-117">LINQ and File Directories (C#)</span></span>](./linq-and-file-directories.md)
