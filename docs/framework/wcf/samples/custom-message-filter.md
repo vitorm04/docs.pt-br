@@ -2,26 +2,26 @@
 title: Filtro de mensagem personalizado
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 30405800cd219f56fcc08b8e8d22f4fe0b907e32
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 9c0fe8ab3412976d9ccddac23e23d9c70f707a89
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928696"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978311"
 ---
-# <a name="custom-message-filter"></a><span data-ttu-id="3d5c9-102">Filtro de mensagem personalizado</span><span class="sxs-lookup"><span data-stu-id="3d5c9-102">Custom Message Filter</span></span>
-<span data-ttu-id="3d5c9-103">Este exemplo demonstra como substituir os filtros de mensagem que Windows Communication Foundation (WCF) usa para enviar mensagens para pontos de extremidade.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-103">This sample demonstrates how to replace the message filters that Windows Communication Foundation (WCF) uses to dispatch messages to endpoints.</span></span>  
+# <a name="custom-message-filter"></a><span data-ttu-id="571cb-102">Filtro de mensagem personalizado</span><span class="sxs-lookup"><span data-stu-id="571cb-102">Custom Message Filter</span></span>
+<span data-ttu-id="571cb-103">Este exemplo demonstra como substituir os filtros de mensagem que Windows Communication Foundation (WCF) usa para enviar mensagens para pontos de extremidade.</span><span class="sxs-lookup"><span data-stu-id="571cb-103">This sample demonstrates how to replace the message filters that Windows Communication Foundation (WCF) uses to dispatch messages to endpoints.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="3d5c9-104">O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+> <span data-ttu-id="571cb-104">O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.</span><span class="sxs-lookup"><span data-stu-id="571cb-104">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="3d5c9-105">Quando a primeira mensagem em um canal chega ao servidor, o servidor deve determinar qual (se houver) os pontos de extremidade associados a esse URI devem receber a mensagem.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-105">When the first message on a channel arrives at the server, the server must determine which (if any) of the endpoints associated with that URI should receive the message.</span></span> <span data-ttu-id="3d5c9-106">Esse processo é controlado pelos <xref:System.ServiceModel.Dispatcher.MessageFilter> objetos anexados <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>ao.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-106">This process is controlled by the <xref:System.ServiceModel.Dispatcher.MessageFilter> objects attached to the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.</span></span>  
+ <span data-ttu-id="571cb-105">Quando a primeira mensagem em um canal chega ao servidor, o servidor deve determinar qual (se houver) os pontos de extremidade associados a esse URI devem receber a mensagem.</span><span class="sxs-lookup"><span data-stu-id="571cb-105">When the first message on a channel arrives at the server, the server must determine which (if any) of the endpoints associated with that URI should receive the message.</span></span> <span data-ttu-id="571cb-106">Esse processo é controlado pelos objetos <xref:System.ServiceModel.Dispatcher.MessageFilter> anexados ao <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.</span><span class="sxs-lookup"><span data-stu-id="571cb-106">This process is controlled by the <xref:System.ServiceModel.Dispatcher.MessageFilter> objects attached to the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.</span></span>  
   
- <span data-ttu-id="3d5c9-107">Cada ponto de extremidade de um serviço tem <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>um único.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-107">Each endpoint of a service has a single <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.</span></span> <span data-ttu-id="3d5c9-108">O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> tem um <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> e um <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-108">The <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> has both an <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> and a <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>.</span></span> <span data-ttu-id="3d5c9-109">A União desses dois filtros é o filtro de mensagem usado para esse ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-109">The union of these two filters is the message filter used for that endpoint.</span></span>  
+ <span data-ttu-id="571cb-107">Cada ponto de extremidade de um serviço tem um único <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.</span><span class="sxs-lookup"><span data-stu-id="571cb-107">Each endpoint of a service has a single <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>.</span></span> <span data-ttu-id="571cb-108">O <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> tem um <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> e um <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>.</span><span class="sxs-lookup"><span data-stu-id="571cb-108">The <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> has both an <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> and a <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A>.</span></span> <span data-ttu-id="571cb-109">A União desses dois filtros é o filtro de mensagem usado para esse ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="571cb-109">The union of these two filters is the message filter used for that endpoint.</span></span>  
   
- <span data-ttu-id="3d5c9-110">Por padrão, o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> para um ponto de extremidade corresponde a qualquer mensagem que seja endereçada a um endereço que corresponda <xref:System.ServiceModel.EndpointAddress>ao ponto de extremidade de serviço.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-110">By default, the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> for an endpoint matches any message that is addressed to an address that matches the service endpoint's <xref:System.ServiceModel.EndpointAddress>.</span></span> <span data-ttu-id="3d5c9-111">Por padrão, o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> para um ponto de extremidade inspeciona a ação da mensagem de entrada e faz a correspondência de qualquer mensagem com uma ação que corresponda a uma das ações das operações do contrato de ponto `IsInitiating` de extremidade de serviço (somente = `true`as ações são consideradas).</span><span class="sxs-lookup"><span data-stu-id="3d5c9-111">By default, the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> for an endpoint inspects the action of the incoming message and matches any message with an action that corresponds to one of the actions of the service endpoint contract's operations (only `IsInitiating`=`true` actions are considered).</span></span> <span data-ttu-id="3d5c9-112">Como resultado, por padrão, o filtro para um ponto de extremidade só corresponde se o cabeçalho da mensagem para é o <xref:System.ServiceModel.EndpointAddress> do ponto de extremidade e a ação da mensagem corresponde a uma das ações da operação do ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-112">As a result, by default, the filter for an endpoint only matches if both the message's To header is the <xref:System.ServiceModel.EndpointAddress> of the endpoint and the message's action matches one of the endpoint operation's actions.</span></span>  
+ <span data-ttu-id="571cb-110">Por padrão, o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> para um ponto de extremidade corresponde a qualquer mensagem que seja endereçada a um endereço que corresponda à <xref:System.ServiceModel.EndpointAddress>do ponto de extremidade de serviço.</span><span class="sxs-lookup"><span data-stu-id="571cb-110">By default, the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> for an endpoint matches any message that is addressed to an address that matches the service endpoint's <xref:System.ServiceModel.EndpointAddress>.</span></span> <span data-ttu-id="571cb-111">Por padrão, o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> para um ponto de extremidade inspeciona a ação da mensagem de entrada e faz a correspondência de qualquer mensagem com uma ação que corresponda a uma das ações das operações do contrato de ponto de extremidade de serviço (somente `IsInitiating`=ações de `true` são consideradas).</span><span class="sxs-lookup"><span data-stu-id="571cb-111">By default, the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> for an endpoint inspects the action of the incoming message and matches any message with an action that corresponds to one of the actions of the service endpoint contract's operations (only `IsInitiating`=`true` actions are considered).</span></span> <span data-ttu-id="571cb-112">Como resultado, por padrão, o filtro para um ponto de extremidade só corresponde se o cabeçalho para a mensagem é o <xref:System.ServiceModel.EndpointAddress> do ponto de extremidade e a ação da mensagem corresponde a uma das ações da operação do ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="571cb-112">As a result, by default, the filter for an endpoint only matches if both the message's To header is the <xref:System.ServiceModel.EndpointAddress> of the endpoint and the message's action matches one of the endpoint operation's actions.</span></span>  
   
- <span data-ttu-id="3d5c9-113">Esses filtros podem ser alterados usando um comportamento.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-113">These filters can be changed using a behavior.</span></span> <span data-ttu-id="3d5c9-114">No exemplo, <xref:System.ServiceModel.Description.IEndpointBehavior> o serviço cria um que substitui o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> no <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>:</span><span class="sxs-lookup"><span data-stu-id="3d5c9-114">In the sample, the service creates an <xref:System.ServiceModel.Description.IEndpointBehavior> that replaces the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> and <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> on the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>:</span></span>  
+ <span data-ttu-id="571cb-113">Esses filtros podem ser alterados usando um comportamento.</span><span class="sxs-lookup"><span data-stu-id="571cb-113">These filters can be changed using a behavior.</span></span> <span data-ttu-id="571cb-114">No exemplo, o serviço cria um <xref:System.ServiceModel.Description.IEndpointBehavior> que substitui o <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> e <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> no <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>:</span><span class="sxs-lookup"><span data-stu-id="571cb-114">In the sample, the service creates an <xref:System.ServiceModel.Description.IEndpointBehavior> that replaces the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A> and <xref:System.ServiceModel.Dispatcher.EndpointDispatcher.ContractFilter%2A> on the <xref:System.ServiceModel.Dispatcher.EndpointDispatcher>:</span></span>  
   
 ```csharp
 class FilteringEndpointBehavior : IEndpointBehavior
@@ -30,24 +30,24 @@ class FilteringEndpointBehavior : IEndpointBehavior
 }
 ```  
   
- <span data-ttu-id="3d5c9-115">Dois filtros de endereço são definidos:</span><span class="sxs-lookup"><span data-stu-id="3d5c9-115">Two address filters are defined:</span></span>  
+ <span data-ttu-id="571cb-115">Dois filtros de endereço são definidos:</span><span class="sxs-lookup"><span data-stu-id="571cb-115">Two address filters are defined:</span></span>  
   
-```csharp  
+```csharp
 // Matches any message whose To address contains the letter 'e'  
-class MatchEAddressFilter : MessageFilter …  
+class MatchEAddressFilter : MessageFilter { }
 // Matches any message whose To address does not contain the letter 'e'  
-class MatchNoEAddressFilter : MessageFilter  
+class MatchNoEAddressFilter : MessageFilter { }  
 ```  
   
- <span data-ttu-id="3d5c9-116">O `FilteringEndpointBehavior` se torna configurável e permite duas variações diferentes.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-116">The `FilteringEndpointBehavior` is made configurable and allows for two different variations.</span></span>  
+ <span data-ttu-id="571cb-116">O `FilteringEndpointBehavior` se torna configurável e permite duas variações diferentes.</span><span class="sxs-lookup"><span data-stu-id="571cb-116">The `FilteringEndpointBehavior` is made configurable and allows for two different variations.</span></span>  
   
-```csharp  
-public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement  
+```csharp
+public class FilteringEndpointBehaviorExtension : BehaviorExtensionElement { }
 ```  
   
- <span data-ttu-id="3d5c9-117">A variação 1 corresponde apenas a endereços que contêm um ' e ' (mas que têm qualquer ação), enquanto a variação 2 corresponde apenas a endereços que não têm um ' e ':</span><span class="sxs-lookup"><span data-stu-id="3d5c9-117">Variation 1 matches only addresses that contain an 'e' (but that have any Action) whereas Variation 2 matches only addresses that lack an 'e':</span></span>  
+ <span data-ttu-id="571cb-117">A variação 1 corresponde apenas a endereços que contêm um ' e ' (mas que têm qualquer ação), enquanto a variação 2 corresponde apenas a endereços que não têm um ' e ':</span><span class="sxs-lookup"><span data-stu-id="571cb-117">Variation 1 matches only addresses that contain an 'e' (but that have any Action) whereas Variation 2 matches only addresses that lack an 'e':</span></span>  
   
-```csharp  
+```csharp
 if (Variation == 1)  
     return new FilteringEndpointBehavior(  
         new MatchEAddressFilter(), new MatchAllMessageFilter());  
@@ -56,7 +56,7 @@ else
         new MatchNoEAddressFilter(), new MatchAllMessageFilter());  
 ```  
   
- <span data-ttu-id="3d5c9-118">No arquivo de configuração, o serviço registra o novo comportamento:</span><span class="sxs-lookup"><span data-stu-id="3d5c9-118">In the configuration file, the service registers the new behavior:</span></span>  
+ <span data-ttu-id="571cb-118">No arquivo de configuração, o serviço registra o novo comportamento:</span><span class="sxs-lookup"><span data-stu-id="571cb-118">In the configuration file, the service registers the new behavior:</span></span>  
   
 ```xml  
 <extensions>  
@@ -66,7 +66,7 @@ else
 </extensions>      
 ```  
   
- <span data-ttu-id="3d5c9-119">Em seguida, o `endpointBehavior` serviço cria configurações para cada variação:</span><span class="sxs-lookup"><span data-stu-id="3d5c9-119">Then the service creates `endpointBehavior` configurations for each variation:</span></span>  
+ <span data-ttu-id="571cb-119">Em seguida, o serviço cria `endpointBehavior` configurações para cada variação:</span><span class="sxs-lookup"><span data-stu-id="571cb-119">Then the service creates `endpointBehavior` configurations for each variation:</span></span>  
   
 ```xml  
 <endpointBehaviors>  
@@ -79,7 +79,7 @@ else
 </endpointBehaviors>  
 ```  
   
- <span data-ttu-id="3d5c9-120">Por fim, o ponto de extremidade do serviço faz `behaviorConfigurations`referência a um dos:</span><span class="sxs-lookup"><span data-stu-id="3d5c9-120">Finally, the service's endpoint references one of the `behaviorConfigurations`:</span></span>  
+ <span data-ttu-id="571cb-120">Por fim, o ponto de extremidade do serviço faz referência a um dos `behaviorConfigurations`:</span><span class="sxs-lookup"><span data-stu-id="571cb-120">Finally, the service's endpoint references one of the `behaviorConfigurations`:</span></span>  
   
 ```xml  
 <endpoint address=""  
@@ -90,7 +90,7 @@ else
         behaviorConfiguration="endpoint2" />  
 ```  
   
- <span data-ttu-id="3d5c9-121">A implementação do aplicativo cliente é simples; Ele cria dois canais para o URI do serviço (passando esse valor como o segundo parâmetro (`via`) para <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> e envia uma única mensagem em cada canal, mas usa endereços de ponto de extremidade diferentes para cada um.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-121">The implementation of the client application is straightforward; it creates two channels to the service's URI (by passing in that value as the second (`via`) parameter to <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> and sends a single message on each channel, but it uses different endpoint addresses for each.</span></span> <span data-ttu-id="3d5c9-122">Como resultado, as mensagens de saída do cliente têm diferentes designações e o servidor responde de acordo, conforme demonstrado pela saída do cliente:</span><span class="sxs-lookup"><span data-stu-id="3d5c9-122">As a result, the outbound messages from the client have different To designations, and the server responds accordingly, as demonstrated by the client's output:</span></span>  
+ <span data-ttu-id="571cb-121">A implementação do aplicativo cliente é simples; Ele cria dois canais para o URI do serviço (passando esse valor como o segundo parâmetro (`via`) para <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> e envia uma única mensagem em cada canal, mas usa endereços de ponto de extremidade diferentes para cada um.</span><span class="sxs-lookup"><span data-stu-id="571cb-121">The implementation of the client application is straightforward; it creates two channels to the service's URI (by passing in that value as the second (`via`) parameter to <xref:System.ServiceModel.Channels.IChannelFactory%601.CreateChannel%28System.ServiceModel.EndpointAddress%29> and sends a single message on each channel, but it uses different endpoint addresses for each.</span></span> <span data-ttu-id="571cb-122">Como resultado, as mensagens de saída do cliente têm diferentes designações e o servidor responde de acordo, conforme demonstrado pela saída do cliente:</span><span class="sxs-lookup"><span data-stu-id="571cb-122">As a result, the outbound messages from the client have different To designations, and the server responds accordingly, as demonstrated by the client's output:</span></span>  
   
 ```console  
 Sending message to urn:e...  
@@ -100,7 +100,7 @@ Sending message to urn:a...
 Hello  
 ```  
   
- <span data-ttu-id="3d5c9-123">Alternar a variação no arquivo de configuração do servidor faz com que o filtro seja trocado e o cliente Veja o comportamento oposto (a mensagem `urn:e` a ser bem-sucedida, enquanto a `urn:a` mensagem falha).</span><span class="sxs-lookup"><span data-stu-id="3d5c9-123">Switching the variation in the server's configuration file causes the filter to be swapped and the client sees the opposite behavior (the message to `urn:e` succeeds, whereas the message to `urn:a` fails).</span></span>  
+ <span data-ttu-id="571cb-123">Alternar a variação no arquivo de configuração do servidor faz com que o filtro seja trocado e o cliente Veja o comportamento oposto (a mensagem a `urn:e` é bem-sucedida, enquanto a mensagem para `urn:a` falha).</span><span class="sxs-lookup"><span data-stu-id="571cb-123">Switching the variation in the server's configuration file causes the filter to be swapped and the client sees the opposite behavior (the message to `urn:e` succeeds, whereas the message to `urn:a` fails).</span></span>  
   
 ```xml  
 <endpoint address=""  
@@ -112,28 +112,28 @@ Hello
 ```  
   
 > [!IMPORTANT]
-> <span data-ttu-id="3d5c9-124">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="3d5c9-125">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-125">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="571cb-124">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="571cb-124">The samples may already be installed on your machine.</span></span> <span data-ttu-id="571cb-125">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="571cb-125">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="3d5c9-126">Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="3d5c9-127">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-127">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="571cb-126">Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras.</span><span class="sxs-lookup"><span data-stu-id="571cb-126">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="571cb-127">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="571cb-127">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageFilter`  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="3d5c9-128">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="3d5c9-128">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="571cb-128">Para configurar, compilar, e executar o exemplo</span><span class="sxs-lookup"><span data-stu-id="571cb-128">To set up, build, and run the sample</span></span>  
   
-1. <span data-ttu-id="3d5c9-129">Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="3d5c9-129">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
+1. <span data-ttu-id="571cb-129">Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="571cb-129">To build the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span>  
   
-2. <span data-ttu-id="3d5c9-130">Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="3d5c9-130">To run the sample in a single-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+2. <span data-ttu-id="571cb-130">Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).</span><span class="sxs-lookup"><span data-stu-id="571cb-130">To run the sample in a single-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-3. <span data-ttu-id="3d5c9-131">Para executar o exemplo em uma configuração entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md) e altere a linha a seguir em Client.cs.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-131">To run the sample in a cross-machine configuration, follow the instructions at [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md) and change the following line in Client.cs.</span></span>  
+3. <span data-ttu-id="571cb-131">Para executar o exemplo em uma configuração entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md) e altere a linha a seguir em Client.cs.</span><span class="sxs-lookup"><span data-stu-id="571cb-131">To run the sample in a cross-machine configuration, follow the instructions at [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md) and change the following line in Client.cs.</span></span>  
   
-    ```csharp  
+    ```csharp
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  
     ```  
   
-     <span data-ttu-id="3d5c9-132">Substitua localhost pelo nome do servidor.</span><span class="sxs-lookup"><span data-stu-id="3d5c9-132">Replace localhost with the name of server.</span></span>  
+     <span data-ttu-id="571cb-132">Substitua localhost pelo nome do servidor.</span><span class="sxs-lookup"><span data-stu-id="571cb-132">Replace localhost with the name of server.</span></span>  
   
-    ```csharp  
+    ```csharp
     Uri serviceVia = new Uri("http://servermachinename/ServiceModelSamples/service.svc");  
     ```  
