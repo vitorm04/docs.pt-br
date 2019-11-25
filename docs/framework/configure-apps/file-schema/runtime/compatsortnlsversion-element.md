@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: f13265e2056c8eca62cd510154dd7c096eeabb00
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73117676"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969250"
 ---
 # <a name="compatsortnlsversion-element"></a>\<elemento de > CompatSortNLSVersion
 Especifica que o runtime deve usar as ordens de classificação herdadas ao executar comparações de cadeias de caracteres.  
@@ -68,15 +68,15 @@ Especifica que o runtime deve usar as ordens de classificação herdadas ao exec
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- Quando você executa o exemplo no .NET Framework 4, ele exibe a saída a seguir.  
+ Quando você executa o exemplo no .NET Framework 4, ele exibe a seguinte saída:
   
-```  
+```console
 sta follows a in the sort order.  
 ```  
   
- Isso é completamente diferente da saída que é exibida quando você executa o exemplo no .NET Framework 3,5.  
+ Isso é completamente diferente da saída que é exibida quando você executa o exemplo no .NET Framework 3,5:
   
-```  
+```console
 sta equals a in the sort order.  
 ```  
   
@@ -93,5 +93,5 @@ sta equals a in the sort order.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de configurações do runtime](index.md)
 - [Esquema de arquivos de configuração](../index.md)

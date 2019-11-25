@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 36254062835b9ab70ba470f6286b7515003dec11
-  ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+  ms.openlocfilehash: 365cf0b2ef36dd0be624d022e3dea5e16a9eb58c
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 09/10/2019
-  ms.locfileid: "70850791"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969416"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Executar seu primeiro programa em C#
   durationInMinutes: 2
   content: >
-    Execute o seguinte código na janela interativa. Para fazer isso, digite o bloco de código a seguir na janela interativa e clique no botão **Executar**:
+    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa e selecione **executar**:
 
 
     ```csharp
@@ -96,7 +96,7 @@ items:
     ```
 
 
-    Clique em **Executar** novamente para ver os resultados.
+    Selecione **executar** novamente para ver os resultados.
 
 
     Você usou `+` para criar cadeias de caracteres com base em cadeias de caracteres de **variáveis** e de **constantes**. Há uma maneira melhor.
@@ -118,7 +118,7 @@ items:
     ```
 
 
-    Clique em **Executar** novamente para ver os resultados. Em vez de "Olá {aFriend}", a mensagem deve ser "Olá, Maira".
+    Selecione **executar** novamente para ver os resultados. Em vez de "Olá {aFriend}", a mensagem deve ser "Olá, Maira".
 
 
     > [!NOTE]
@@ -296,7 +296,7 @@ items:
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Você concluiu o tutorial de introdução à linguagem C# "Olá, C#". Clique no link **Números em C#** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A seção "próximas etapas" leva você de volta para esses tutoriais.
+    Você concluiu o tutorial de introdução à linguagem C# "Olá, C#". Você pode selecionar os **números no C# ** link abaixo para iniciar o próximo tutorial interativo ou pode visitar o site do [.net](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto em seu computador e manter a codificação. A seção "próximas etapas" leva você de volta para esses tutoriais.
 
 
     Para ler mais sobre o tipo `string`:

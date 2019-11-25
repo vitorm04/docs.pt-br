@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: ea780fc983ed46c8a5ccb54ab618d1a0a2a928d1
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 13597275460c075309b7457485a17655cf93f251
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597094"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971089"
 ---
 # <a name="constructors-c-programming-guide"></a>Construtores (Guia de Programação em C#)
 
@@ -55,7 +55,7 @@ Para obter mais informações e exemplos, consulte [Construtores Estáticos](./s
   
  [Construtores estáticos](./static-constructors.md)  
   
- [Como: escrever um construtor de cópia](./how-to-write-a-copy-constructor.md)  
+ [Como escrever um construtor de cópia](./how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -63,4 +63,4 @@ Para obter mais informações e exemplos, consulte [Construtores Estáticos](./s
 - [Classes e Structs](./index.md)
 - [Finalizadores](./destructors.md)
 - [static](../../language-reference/keywords/static.md)
-- [Por que os inicializadores são executados na ordem oposta, como construtores? Parte 1](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)
+- [Por que inicializadores são executados na ordem oposta como construtores? Parte um](https://blogs.msdn.microsoft.com/ericlippert/2008/02/15/why-do-initializers-run-in-the-opposite-order-as-constructors-part-one)

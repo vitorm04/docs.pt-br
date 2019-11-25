@@ -1,18 +1,18 @@
 ---
-title: 'Como: Definir constantes em C#'
+title: Como definir constantes emC#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
-ms.openlocfilehash: ba5bc3d03dcaf5c8be94936a453a439670e8dc1f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6681b1987ec9b5bce40b3abffb9b7d11d4a82bcc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924482"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970955"
 ---
-# <a name="how-to-define-constants-in-c"></a>Como: Definir constantes em C\#
+# <a name="how-to-define-constants-in-c"></a>Como definir constantes em C\#
 As constantes são campos cujos valores são definidos em tempo de compilação e nunca podem ser alterados. Use constantes para fornecer nomes significativos em vez de literais numéricos ("números mágicos") a valores especiais.  
   
 > [!NOTE]

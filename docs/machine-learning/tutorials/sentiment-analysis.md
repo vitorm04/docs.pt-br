@@ -4,12 +4,12 @@ description: Este tutorial mostra como criar um aplicativo de console do .NET Co
 ms.date: 09/30/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 454b9c94d717d7af098ee982d9eaffe18f1c347c
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 1b5a3f6c7d70c95916b99d386924347642e6d7e3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774412"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974768"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-with-binary-classification-in-mlnet"></a>Tutorial: analisar o sentimentos dos comentários do site com a classificação binária no ML.NET
 
@@ -80,6 +80,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
     [!code-csharp[DeclareTypes](~/samples/machine-learning/tutorials/SentimentAnalysis/SentimentData.cs#DeclareTypes "Declare data record types")]
 
 ### <a name="how-the-data-was-prepared"></a>Como os dados foram preparados
+
 A classe de conjunto de dados de entrada, `SentimentData`, tem um `string` para comentários do usuário (`SentimentText`) e um valor `bool` (`Sentiment`) de 1 (positivo) ou 0 (negativo) para sentimento. Ambos os campos têm atributos [LoadColumn](xref:Microsoft.ML.Data.LoadColumnAttribute.%23ctor%28System.Int32%29) anexados a eles, que descrevem a ordem do arquivo de dados de cada campo.  Além disso, a propriedade `Sentiment` tem um atributo [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute.%23ctor%2A) para designá-lo como o campo `Label`. O arquivo de exemplo a seguir não possui uma linha de cabeçalho e tem a seguinte aparência:
 
 |SentimentText                         |Sentimento (rótulo) |
@@ -96,6 +97,7 @@ A classe de saída `SentimentPrediction` contém duas outras propriedades calcul
 Para este tutorial, a propriedade mais importante é `Prediction`.
 
 ## <a name="load-the-data"></a>Carregar os dados
+
 Os dados do ML.NET são representados como uma [classe IDataView](xref:Microsoft.ML.IDataView). `IDataView` é uma maneira flexível e eficiente de descrever dados tabulares (numéricos e texto). Os dados podem ser carregados de um arquivo de texto ou em tempo real (por exemplo, banco de dados SQL ou arquivos de log) para um objeto `IDataView`.
 
 A [classe MLContext](xref:Microsoft.ML.MLContext) é um ponto de partida para todas as operações do ML.NET. Inicializar `mlContext` cria um novo ambiente do ML.NET que pode ser compartilhado entre os objetos do fluxo de trabalho de criação de modelo. Ele é semelhante, conceitualmente, a `DBContext` no Entity Framework.

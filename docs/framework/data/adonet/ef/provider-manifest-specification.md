@@ -2,12 +2,12 @@
 title: Especificação do manifesto do provedor
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: bef4868ccc52d287baaceca32c4943723be7531f
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a9dca140588be26035b235109c48049ce01e9ce1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040490"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973879"
 ---
 # <a name="provider-manifest-specification"></a>Especificação do manifesto do provedor
 Esta seção discute como um provedor de armazenamento de dados pode suportar os tipos e funções no armazenamento de dados.  
@@ -93,7 +93,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 #### <a name="using-a-provider-manifest-token"></a>Usando um token de manifesto de provedor  
  Para o cenário off-line, o símbolo é escolhido da representação de SSDL. O SSDL permite que você especifique um ProviderManifestToken (consulte o [elemento de esquema (SSDL)](/ef/ef6/modeling/designer/advanced/edmx/ssdl-spec#schema-element-ssdl) para obter mais informações). Por exemplo, se uma conexão não pode ser aberta, SSDL tem um token de manifesto de provedor que especifica informações sobre o manifesto.  
   
-```csharp  
+```csharp
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
   

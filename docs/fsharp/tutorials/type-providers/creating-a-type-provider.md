@@ -1,15 +1,15 @@
 ---
-title: 'Tutorial: Criar um provedor de tipos'
+title: 'Tutorial: criar um provedor de tipos'
 description: Saiba como criar seus próprios F# provedores de tipo no F# 3,0 examinando vários provedores de tipo simples para ilustrar os conceitos básicos.
-ms.date: 02/02/2019
-ms.openlocfilehash: 8d1a1fedf03437ccbacd40616cc7dc3e1da435b2
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.date: 11/04/2019
+ms.openlocfilehash: 8df893669b8ee04bad366dbe42a55c83d1f5a8fe
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71214277"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968368"
 ---
-# <a name="tutorial-create-a-type-provider"></a>Tutorial: Criar um provedor de tipos
+# <a name="tutorial-create-a-type-provider"></a>Tutorial: criar um provedor de tipos
 
 O mecanismo do provedor de F# tipos no é uma parte significativa de seu suporte para a programação de informações ricas. Este tutorial explica como criar seus próprios provedores de tipo orientando você pelo desenvolvimento de vários provedores de tipo simples para ilustrar os conceitos básicos. Para obter mais informações sobre o mecanismo do provedor F#de tipos no, consulte [provedores de tipos](index.md).
 
@@ -53,7 +53,7 @@ Os provedores de tipos são mais adequados para situações em que o esquema é 
 
 ## <a name="a-simple-type-provider"></a>Um provedor de tipo simples
 
-Este exemplo é Samples. HelloWorldTypeProvider, semelhante aos exemplos no `examples` diretório do SDK do [ F# provedor de tipos](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). O provedor disponibiliza um "espaço de tipo" que contém os tipos apagados 100, como mostra o código a seguir F# , usando a sintaxe de assinatura e omitindo os `Type1`detalhes para todos, exceto. Para obter mais informações sobre tipos apagados, consulte [detalhes sobre os tipos fornecidos e apagados](#details-about-erased-provided-types) mais adiante neste tópico.
+Este exemplo é Samples. HelloWorldTypeProvider, semelhante aos exemplos no diretório `examples` do SDK do [ F# provedor de tipos](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). O provedor disponibiliza um "espaço de tipo" que contém os tipos de 100 apagados, como mostra o código a F# seguir, usando a sintaxe de assinatura e omitindo os detalhes para todos, exceto `Type1`. Para obter mais informações sobre tipos apagados, consulte [detalhes sobre os tipos fornecidos e apagados](#details-about-erased-provided-types) mais adiante neste tópico.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -146,7 +146,7 @@ obj2.InstanceProperty
 let data1 = Samples.HelloWorldTypeProvider.Type1.NestedType.StaticProperty35
 ```
 
-Em seguida, procure os tipos no `Samples.HelloWorldTypeProvider` namespace que o provedor de tipos gerou.
+Em seguida, procure os tipos no namespace `Samples.HelloWorldTypeProvider` que o provedor de tipos gerou.
 
 Antes de recompilar o provedor, verifique se você fechou todas as instâncias do Visual Studio e F# interativas que estão usando a DLL do provedor. Caso contrário, ocorrerá um erro de compilação porque a DLL de saída será bloqueada.
 
@@ -164,7 +164,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 Como alternativa, abra o Visual Studio, abra o menu Depurar, escolha `Debug/Attach to process…`e anexe a outro `devenv` processo em que você está editando o script. Usando esse método, você pode direcionar com mais facilidade uma lógica específica no provedor de tipos, digitando expressões interativamente na segunda instância (com IntelliSense completo e outros recursos).
 
-Você pode desabilitar a depuração de Apenas Meu Código para identificar melhor os erros no código gerado. Para obter informações sobre como habilitar ou desabilitar esse recurso, consulte [navegando pelo código com o depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger). Além disso, você também pode definir a captura de exceção de primeira chance `Debug` abrindo o menu e `Exceptions` escolhendo ou escolhendo as teclas CTRL + ALT + E para abrir a `Exceptions` caixa de diálogo. Nessa caixa de diálogo, em `Common Language Runtime Exceptions`, marque a `Thrown` caixa de seleção.
+Você pode desabilitar a depuração de Apenas Meu Código para identificar melhor os erros no código gerado. Para obter informações sobre como habilitar ou desabilitar esse recurso, consulte [navegando pelo código com o depurador](/visualstudio/debugger/navigating-through-code-with-the-debugger). Além disso, você também pode definir a captura de exceção de primeira chance abrindo o menu `Debug` e escolhendo `Exceptions` ou escolhendo as teclas CTRL + ALT + E para abrir a caixa de diálogo `Exceptions`. Nessa caixa de diálogo, em `Common Language Runtime Exceptions`, marque a caixa de seleção `Thrown`.
 
 ### <a name="implementation-of-the-type-provider"></a>Implementação do provedor de tipos
 
@@ -177,7 +177,7 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
 
 Esse tipo deve ser público e você deve marcá-lo com o atributo [TypeProvider](https://msdn.microsoft.com/library/bdf7b036-7490-4ace-b79f-c5f1b1b37947) para que o compilador reconheça o provedor de tipos quando um F# projeto separado referencia o assembly que contém o tipo. O parâmetro *config* é opcional e, se presente, contém informações de configuração contextuais para a instância do provedor de F# tipos que o compilador cria.
 
-Em seguida, implemente a interface [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) . Nesse caso, você usa o `TypeProviderForNamespaces` tipo `ProvidedTypes` da API como um tipo base. Esse tipo de auxiliar pode fornecer uma coleção finita de namespaces fornecidos com mais adiantamento, cada um dos quais contém diretamente um número finito de tipos fixos e fornecidos com mais adiantamento. Nesse contexto, *o provedor gera* com mais regularidade tipos, mesmo que eles não sejam necessários ou usados.
+Em seguida, implemente a interface [ITypeProvider](https://msdn.microsoft.com/library/2c2b0571-843d-4a7d-95d4-0a7510ed5e2f) . Nesse caso, você usa o tipo de `TypeProviderForNamespaces` da API `ProvidedTypes` como um tipo base. Esse tipo de auxiliar pode fornecer uma coleção finita de namespaces fornecidos com mais adiantamento, cada um dos quais contém diretamente um número finito de tipos fixos e fornecidos com mais adiantamento. Nesse contexto, *o provedor gera* com mais regularidade tipos, mesmo que eles não sejam necessários ou usados.
 
 ```fsharp
 inherit TypeProviderForNamespaces(config)
@@ -217,7 +217,7 @@ do()
 
 ### <a name="providing-one-type-and-its-members"></a>Fornecendo um tipo e seus membros
 
-A `makeOneProvidedType` função faz o trabalho real de fornecer um dos tipos.
+A função `makeOneProvidedType` faz o trabalho real de fornecer um dos tipos.
 
 ```fsharp
 let makeOneProvidedType (n:int) =
@@ -306,7 +306,7 @@ O `InvokeCode` para o construtor retorna novamente uma F# cotação, que represe
 new Type10("ten")
 ```
 
-Uma instância do tipo fornecido é criada com os dados subjacentes "dez". Talvez você já tenha notado que a `InvokeCode` função retorna uma cotação. A entrada para essa função é uma lista de expressões, uma por parâmetro de construtor. Nesse caso, uma expressão que representa o valor de parâmetro único está disponível em `args.[0]`. O código para uma chamada para o Construtor impõe o valor de retorno para o tipo `obj`apagado. Depois de adicionar o segundo construtor fornecido ao tipo, você cria uma propriedade de instância fornecida:
+Uma instância do tipo fornecido é criada com os dados subjacentes "dez". Talvez você já tenha notado que a função `InvokeCode` retorna uma cotação. A entrada para essa função é uma lista de expressões, uma por parâmetro de construtor. Nesse caso, uma expressão que representa o valor de parâmetro único está disponível em `args.[0]`. O código para uma chamada para o Construtor impõe o valor de retorno para o tipo apagado `obj`. Depois de adicionar o segundo construtor fornecido ao tipo, você cria uma propriedade de instância fornecida:
 
 ```fsharp
 let instanceProp =
@@ -318,7 +318,7 @@ instanceProp.AddXmlDocDelayed(fun () -> "This is an instance property")
 t.AddMember instanceProp
 ```
 
-Obter essa propriedade retornará o comprimento da cadeia de caracteres, que é o objeto de representação. A `GetterCode` propriedade retorna uma F# cotação que especifica o código que o compilador host gera para obter a propriedade. Como `InvokeCode`, a `GetterCode` função retorna uma cotação. O compilador do host chama essa função com uma lista de argumentos. Nesse caso, os argumentos incluem apenas a única expressão que representa a instância sobre a qual o getter está sendo chamado, que você pode acessar usando `args.[0]`. A implementação de `GetterCode` , em seguida, se unirá à cotação resultante no tipo `obj`apagado, e uma conversão é usada para satisfazer o mecanismo do compilador para verificar os tipos que o objeto é uma cadeia de caracteres. A próxima parte de `makeOneProvidedType` fornece um método de instância com um parâmetro.
+Obter essa propriedade retornará o comprimento da cadeia de caracteres, que é o objeto de representação. A propriedade `GetterCode` retorna uma F# cotação que especifica o código que o compilador host gera para obter a propriedade. Como `InvokeCode`, a função `GetterCode` retorna uma cotação. O compilador do host chama essa função com uma lista de argumentos. Nesse caso, os argumentos incluem apenas a única expressão que representa a instância na qual o getter está sendo chamado, que você pode acessar usando `args.[0]`. A implementação de `GetterCode` se unirá à cotação resultante no tipo apagado `obj`e uma conversão é usada para satisfazer o mecanismo do compilador para verificar os tipos que o objeto é uma cadeia de caracteres. A próxima parte do `makeOneProvidedType` fornece um método de instância com um parâmetro.
 
 ```fsharp
 let instanceMeth =
@@ -341,19 +341,21 @@ t.AddMembersDelayed(fun () ->
 
   nestedType.AddMembersDelayed (fun () ->
     let staticPropsInNestedType =
-      [ for i in 1 .. 100 do
-          let valueOfTheProperty = "I am string "  + string i
-
-          let p =
-            ProvidedProperty(propertyName = "StaticProperty" + string i,
-              propertyType = typeof<string>,
-              isStatic = true,
-              getterCode= (fun args -> <@@ valueOfTheProperty @@>))
-
-          p.AddXmlDocDelayed(fun () ->
-              sprintf "This is StaticProperty%d on NestedType" i)
-
-          yield p ]
+      [
+          for i in 1 .. 100 ->
+              let valueOfTheProperty = "I am string "  + string i
+    
+              let p =
+                ProvidedProperty(propertyName = "StaticProperty" + string i,
+                  propertyType = typeof<string>,
+                  isStatic = true,
+                  getterCode= (fun args -> <@@ valueOfTheProperty @@>))
+    
+              p.AddXmlDocDelayed(fun () ->
+                  sprintf "This is StaticProperty%d on NestedType" i)
+    
+              p
+      ]
 
     staticPropsInNestedType)
 
@@ -370,7 +372,7 @@ O exemplo nesta seção fornece apenas os *tipos fornecidos e apagados*, que sã
 
 - Quando você está escrevendo um provedor para um espaço de informações tão grande e interconectado, não é tecnicamente viável gerar tipos .NET reais para o espaço de informações.
 
-Neste exemplo, cada tipo fornecido é apagado para o tipo `obj`, e todos os usos do tipo aparecerão como tipo `obj` no código compilado. Na verdade, os objetos subjacentes nesses exemplos são cadeias de caracteres, mas o tipo `System.Object` será exibido como no código compilado do .net. Assim como acontece com todos os usos do tipo erasureing, você pode usar boxing, unboxing e Cast explícitos para os tipos de subtextos apagados. Nesse caso, uma exceção de conversão que não é válida pode resultar quando o objeto é usado. Um tempo de execução do provedor pode definir seu próprio tipo de representação particular para ajudar a proteger contra representações falsas. Você não pode definir os tipos apagados em F# si. Somente tipos fornecidos podem ser apagados. Você deve entender as ramificações, práticas e semânticas, do uso de tipos apagados para seu provedor de tipos ou um provedor que fornece tipos apagados. Um tipo apagado não tem nenhum tipo .NET real. Portanto, você não pode fazer uma reflexão precisa sobre o tipo, e você pode subverter tipos apagados se usar conversões de tempo de execução e outras técnicas que dependem da semântica de tipo de tempo de execução exato. A subversão de tipos apagados frequentemente resulta em exceções de conversão de tipo em tempo de execução.
+Neste exemplo, cada tipo fornecido é apagado para o tipo `obj`, e todos os usos do tipo serão exibidos como tipo `obj` no código compilado. Na verdade, os objetos subjacentes nesses exemplos são cadeias de caracteres, mas o tipo será exibido como `System.Object` no código compilado do .NET. Assim como acontece com todos os usos do tipo erasureing, você pode usar boxing, unboxing e Cast explícitos para os tipos de subtextos apagados. Nesse caso, uma exceção de conversão que não é válida pode resultar quando o objeto é usado. Um tempo de execução do provedor pode definir seu próprio tipo de representação particular para ajudar a proteger contra representações falsas. Você não pode definir os tipos apagados em F# si. Somente tipos fornecidos podem ser apagados. Você deve entender as ramificações, práticas e semânticas, do uso de tipos apagados para seu provedor de tipos ou um provedor que fornece tipos apagados. Um tipo apagado não tem nenhum tipo .NET real. Portanto, você não pode fazer uma reflexão precisa sobre o tipo, e você pode subverter tipos apagados se usar conversões de tempo de execução e outras técnicas que dependem da semântica de tipo de tempo de execução exato. A subversão de tipos apagados frequentemente resulta em exceções de conversão de tipo em tempo de execução.
 
 ### <a name="choosing-representations-for-erased-provided-types"></a>Escolhendo representações para tipos fornecidos e apagados
 
@@ -382,11 +384,11 @@ Para alguns usos de tipos fornecidos e apagados, nenhuma representação é nece
 
 - A eliminação de um tipo de classe apagado fornecido é sempre o primeiro tipo base não apagado na cadeia de herança do tipo.
 
-- A eliminação de um tipo de interface apagado fornecido é `System.Object`sempre.
+- A eliminação de um tipo de interface apagado fornecido sempre é `System.Object`.
 
 **Quais são as representações de um tipo fornecido?**
 
-- O conjunto de objetos possíveis para um tipo fornecido apagado é chamado de suas representações. No exemplo deste documento, as representações de todos os tipos `Type1..Type100` fornecidos apagados são sempre objetos de cadeia de caracteres.
+- O conjunto de objetos possíveis para um tipo fornecido apagado é chamado de suas representações. No exemplo deste documento, as representações de todos os tipos fornecidos e apagados `Type1..Type100` são sempre objetos de cadeia de caracteres.
 
 Todas as representações de um tipo fornecido devem ser compatíveis com a eliminação do tipo fornecido. (Caso contrário, o F# compilador apresentará um erro para um uso do provedor de tipos, ou o código .net não verificável que não for válido será gerado. Um provedor de tipos não será válido se retornar um código que forneça uma representação que não seja válida.)
 
@@ -418,7 +420,7 @@ ProvidedConstructor(parameters = [],
     invokeCode= (fun args -> <@@ (new DataObject()) :> obj @@>))
 ```
 
-Nesse caso, você pode (opcionalmente) usar esse tipo como a eliminação de tipo, especificando esse tipo como o `baseType` ao construir o: `ProvidedTypeDefinition`
+Nesse caso, você pode (opcionalmente) usar esse tipo como a eliminação de tipo, especificando esse tipo como o `baseType` ao construir o `ProvidedTypeDefinition`:
 
 ```fsharp
 ProvidedTypeDefinition(…, baseType = Some typeof<DataObject> )
@@ -436,13 +438,13 @@ A capacidade de parametrizar provedores de tipo por dados estáticos permite mui
 
 ### <a name="type-checked-regex-provider"></a>Provedor de Regex de tipo verificado
 
-Imagine que você queira implementar um provedor de tipos para expressões regulares que encapsula as bibliotecas .NET <xref:System.Text.RegularExpressions.Regex> em uma interface que fornece as seguintes garantias de tempo de compilação:
+Imagine que você queira implementar um provedor de tipos para expressões regulares que encapsula as bibliotecas de <xref:System.Text.RegularExpressions.Regex> do .NET em uma interface que fornece as seguintes garantias de tempo de compilação:
 
 - Verificando se uma expressão regular é válida.
 
 - Fornecer propriedades nomeadas em correspondências que se baseiam em qualquer nome de grupo na expressão regular.
 
-Esta seção mostra como usar provedores de tipos para criar um `RegexTyped` tipo que o padrão de expressão regular parametriza para fornecer esses benefícios. O compilador relatará um erro se o padrão fornecido não for válido e o provedor de tipos puder extrair os grupos do padrão para que você possa acessá-los usando propriedades nomeadas em correspondências. Quando você cria um provedor de tipos, deve considerar como sua API exposta deve procurar os usuários finais e como esse design será traduzido para o código .NET. O exemplo a seguir mostra como usar essa API para obter os componentes do código de área:
+Esta seção mostra como usar provedores de tipos para criar um tipo de `RegexTyped` que o padrão de expressão regular parametriza para fornecer esses benefícios. O compilador relatará um erro se o padrão fornecido não for válido e o provedor de tipos puder extrair os grupos do padrão para que você possa acessá-los usando propriedades nomeadas em correspondências. Quando você cria um provedor de tipos, deve considerar como sua API exposta deve procurar os usuários finais e como esse design será traduzido para o código .NET. O exemplo a seguir mostra como usar essa API para obter os componentes do código de área:
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -461,13 +463,13 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 Observe os seguintes pontos:
 
-- O tipo Regex padrão representa o `RegexTyped` tipo parametrizado.
+- O tipo Regex padrão representa o tipo de `RegexTyped` parametrizado.
 
-- O `RegexTyped` Construtor resulta em uma chamada para o construtor Regex, passando o argumento de tipo estático para o padrão.
+- O construtor de `RegexTyped` resulta em uma chamada para o construtor Regex, passando o argumento de tipo estático para o padrão.
 
-- Os resultados do `Match` método são representados pelo tipo padrão <xref:System.Text.RegularExpressions.Match> .
+- Os resultados do método `Match` são representados pelo tipo de <xref:System.Text.RegularExpressions.Match> padrão.
 
-- Cada grupo nomeado resulta em uma propriedade fornecida e o acesso à propriedade resulta em um uso de um indexador na `Groups` coleção de uma correspondência.
+- Cada grupo nomeado resulta em uma propriedade fornecida e o acesso à propriedade resulta em um uso de um indexador na coleção de `Groups` de uma correspondência.
 
 O código a seguir é o núcleo da lógica para implementar tal provedor, e este exemplo omite a adição de todos os membros ao tipo fornecido. Para obter informações sobre cada membro adicionado, consulte a seção apropriada mais adiante neste tópico. Para o código completo, baixe o exemplo do [ F# pacote de exemplo 3,0](https://archive.codeplex.com/?p=fsharp3sample) no site do CodePlex.
 
@@ -527,19 +529,19 @@ do ()
 
 Observe os seguintes pontos:
 
-- O provedor de tipos usa dois parâmetros estáticos `pattern`: o, que é obrigatório e `options`o, que são opcionais (porque um valor padrão é fornecido).
+- O provedor de tipos usa dois parâmetros estáticos: o `pattern`, que é obrigatório e o `options`, que são opcionais (porque um valor padrão é fornecido).
 
 - Depois que os argumentos estáticos são fornecidos, você cria uma instância da expressão regular. Essa instância gerará uma exceção se o Regex estiver malformado e esse erro será relatado aos usuários.
 
-- `DefineStaticParameters` No retorno de chamada, você define o tipo que será retornado depois que os argumentos forem fornecidos.
+- No retorno de chamada `DefineStaticParameters`, você define o tipo que será retornado depois que os argumentos forem fornecidos.
 
-- Esse código define `HideObjectMethods` como true para que a experiência do IntelliSense permaneça simplificada. Esse atributo faz com `Equals`que `GetHashCode`os `Finalize`Membros, `GetType` , e sejam suprimidos das listas do IntelliSense para um objeto fornecido.
+- Esse código define `HideObjectMethods` como true para que a experiência do IntelliSense permaneça simplificada. Esse atributo faz com que os membros `Equals`, `GetHashCode`, `Finalize`e `GetType` sejam suprimidos das listas do IntelliSense para um objeto fornecido.
 
-- Você usa `obj` como o tipo base do método, mas usará um `Regex` objeto como a representação de tempo de execução desse tipo, como mostra o exemplo a seguir.
+- Você usa `obj` como o tipo base do método, mas usará um objeto `Regex` como a representação de tempo de execução desse tipo, como mostra o exemplo a seguir.
 
-- A chamada para o `Regex` Construtor gera um <xref:System.ArgumentException> quando uma expressão regular não é válida. O compilador captura essa exceção e relata uma mensagem de erro para o usuário no momento da compilação ou no editor do Visual Studio. Essa exceção permite que expressões regulares sejam validadas sem executar um aplicativo.
+- A chamada para o construtor de `Regex` gera uma <xref:System.ArgumentException> quando uma expressão regular não é válida. O compilador captura essa exceção e relata uma mensagem de erro para o usuário no momento da compilação ou no editor do Visual Studio. Essa exceção permite que expressões regulares sejam validadas sem executar um aplicativo.
 
-O tipo definido acima não é útil ainda porque ele não contém nenhum método ou Propriedade significativo. Primeiro, adicione um método `IsMatch` estático:
+O tipo definido acima não é útil ainda porque ele não contém nenhum método ou Propriedade significativo. Primeiro, adicione um método de `IsMatch` estático:
 
 ```fsharp
 let isMatch =
@@ -554,9 +556,9 @@ isMatch.AddXmlDoc "Indicates whether the regular expression finds a match in the
 ty.AddMember isMatch
 ```
 
-O código anterior define um método `IsMatch`, que usa uma cadeia de caracteres como entrada e `bool`retorna um. A única parte complicada é o uso do `args` argumento dentro da `InvokeCode` definição. Neste exemplo, `args` é uma lista de Cotações que representa os argumentos para esse método. Se o método for um método de instância, o primeiro argumento representará o `this` argumento. No entanto, para um método estático, os argumentos são apenas os argumentos explícitos para o método. Observe que o tipo de valor entre aspas deve corresponder ao tipo de retorno especificado (nesse caso, `bool`). Observe também que esse código usa o `AddXmlDoc` método para garantir que o método fornecido também tenha documentação útil, que você pode fornecer por meio do IntelliSense.
+O código anterior define um método `IsMatch`, que usa uma cadeia de caracteres como entrada e retorna um `bool`. A única parte complicada é o uso do argumento `args` dentro da definição de `InvokeCode`. Neste exemplo, `args` é uma lista de Cotações que representa os argumentos para esse método. Se o método for um método de instância, o primeiro argumento representará o argumento `this`. No entanto, para um método estático, os argumentos são apenas os argumentos explícitos para o método. Observe que o tipo de valor entre aspas deve corresponder ao tipo de retorno especificado (nesse caso, `bool`). Observe também que esse código usa o método `AddXmlDoc` para garantir que o método fornecido também tenha uma documentação útil, que você pode fornecer por meio do IntelliSense.
 
-Em seguida, adicione um método de correspondência de instância. No entanto, esse método deve retornar um valor de `Match` um tipo fornecido para que os grupos possam ser acessados de maneira fortemente tipada. Portanto, primeiro você declara o `Match` tipo. Como esse tipo depende do padrão que foi fornecido como um argumento estático, esse tipo deve ser aninhado dentro da definição de tipo com parâmetros:
+Em seguida, adicione um método de correspondência de instância. No entanto, esse método deve retornar um valor de um tipo de `Match` fornecido para que os grupos possam ser acessados de maneira fortemente tipada. Portanto, primeiro você declara o tipo de `Match`. Como esse tipo depende do padrão que foi fornecido como um argumento estático, esse tipo deve ser aninhado dentro da definição de tipo com parâmetros:
 
 ```fsharp
 let matchTy =
@@ -568,7 +570,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-Em seguida, você adiciona uma propriedade ao tipo de correspondência para cada grupo. Em tempo de execução, uma correspondência é representada <xref:System.Text.RegularExpressions.Match> como um valor, portanto, a cotação que define a <xref:System.Text.RegularExpressions.Match.Groups> propriedade deve usar a propriedade indexada para obter o grupo relevante.
+Em seguida, você adiciona uma propriedade ao tipo de correspondência para cada grupo. Em tempo de execução, uma correspondência é representada como um valor <xref:System.Text.RegularExpressions.Match>, portanto, a cotação que define a propriedade deve usar a propriedade indexada <xref:System.Text.RegularExpressions.Match.Groups> para obter o grupo relevante.
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -583,7 +585,7 @@ for group in r.GetGroupNames() do
     matchTy.AddMember prop
 ```
 
-Novamente, observe que você está adicionando a documentação XML à propriedade fornecida. Observe também que uma propriedade pode ser lida se uma `GetterCode` função for fornecida e a propriedade puder ser gravada se uma `SetterCode` função for fornecida, portanto, a propriedade resultante será somente leitura.
+Novamente, observe que você está adicionando a documentação XML à propriedade fornecida. Observe também que uma propriedade pode ser lida se uma função `GetterCode` for fornecida e a propriedade puder ser gravada se uma função `SetterCode` for fornecida, portanto, a propriedade resultante será somente leitura.
 
 Agora você pode criar um método de instância que retorna um valor desse `Match` tipo:
 
@@ -600,7 +602,7 @@ matchMeth.AddXmlDoc "Searches the specified input string for the first occurrenc
 ty.AddMember matchMeth
 ```
 
-Como você está criando um método de instância `args.[0]` , representa `RegexTyped` a instância na qual o método está sendo chamado e `args.[1]` é o argumento de entrada.
+Como você está criando um método de instância, `args.[0]` representa a instância de `RegexTyped` na qual o método está sendo chamado e `args.[1]` é o argumento de entrada.
 
 Por fim, forneça um construtor para que as instâncias do tipo fornecido possam ser criadas.
 
@@ -740,11 +742,11 @@ Como um exemplo simples, considere um provedor de tipos para acessar dados cient
 
 |Distância (medidor)|Tempo (segundo)|
 |----------------|-------------|
-|50.0|3.7|
-|100.0|5.2|
-|150.0|6.4|
+|50,0|3,7|
+|100,0|5,2|
+|150,0|6,4|
 
-Esta seção mostra como fornecer um tipo que você pode usar para `Distance` obter linhas com uma propriedade do tipo `float<meter>` e uma `Time` Propriedade do tipo `float<second>`. Para simplificar, são feitas as seguintes suposições:
+Esta seção mostra como fornecer um tipo que você pode usar para obter linhas com uma propriedade `Distance` do tipo `float<meter>` e uma propriedade `Time` do tipo `float<second>`. Para simplificar, são feitas as seguintes suposições:
 
 - Os nomes de cabeçalho são menos unitários ou têm a forma "nome (unidade)" e não contêm vírgulas.
 
@@ -756,7 +758,7 @@ Esta seção mostra como fornecer um tipo que você pode usar para `Distance` ob
 
 Um provedor mais completo desafrouxaria essas restrições.
 
-Novamente, a primeira etapa é considerar a aparência da API. Dado um `info.csv` arquivo com o conteúdo da tabela anterior (em formato separado por vírgula), os usuários do provedor devem ser capazes de escrever um código semelhante ao exemplo a seguir:
+Novamente, a primeira etapa é considerar a aparência da API. Dado um arquivo de `info.csv` com o conteúdo da tabela anterior (em formato separado por vírgula), os usuários do provedor devem ser capazes de escrever um código semelhante ao exemplo a seguir:
 
 ```fsharp
 let info = new MiniCsv<"info.csv">()
@@ -774,7 +776,7 @@ let (time:float) = row.[1]
 printfn "%f" (float time)
 ```
 
-A tradução ideal exigirá que o provedor de tipos defina um `CsvFile` tipo real no assembly do provedor de tipos. Provedores de tipo geralmente dependem de alguns tipos auxiliares e métodos para encapsular lógica importante. Como as medidas são apagadas no tempo de execução, você `float[]` pode usar um como o tipo apagado para uma linha. O compilador tratará colunas diferentes como tendo tipos de medidas diferentes. Por exemplo, a primeira coluna em nosso exemplo tem tipo `float<meter>`e a segunda tem. `float<second>` No entanto, a representação apagada pode permanecer bem simples.
+A tradução ideal exigirá que o provedor de tipos defina um tipo de `CsvFile` real no assembly do provedor de tipos. Provedores de tipo geralmente dependem de alguns tipos auxiliares e métodos para encapsular lógica importante. Como as medidas são apagadas em tempo de execução, você pode usar um `float[]` como o tipo apagado para uma linha. O compilador tratará colunas diferentes como tendo tipos de medidas diferentes. Por exemplo, a primeira coluna em nosso exemplo tem o tipo `float<meter>`e a segunda tem `float<second>`. No entanto, a representação apagada pode permanecer bem simples.
 
 O código a seguir mostra o núcleo da implementação.
 
@@ -783,10 +785,12 @@ O código a seguir mostra o núcleo da implementação.
 type CsvFile(filename) =
     // Cache the sequence of all data lines (all lines but the first)
     let data =
-        seq { for line in File.ReadAllLines(filename) |> Seq.skip 1 do
-                 yield line.Split(',') |> Array.map float }
+        seq {
+            for line in File.ReadAllLines(filename) |> Seq.skip 1 ->
+                line.Split(',') |> Array.map float
+        }
         |> Seq.cache
-    member __.Data = data
+    member _.Data = data
 
 [<TypeProvider>]
 type public MiniCsvProvider(cfg:TypeProviderConfig) as this =
@@ -875,9 +879,9 @@ Observe os seguintes pontos sobre a implementação:
 
 - Você pode usar o valor [TypeProviderConfig](https://msdn.microsoft.com/library/1cda7b9a-3d07-475d-9315-d65e1c97eb44) que é passado para o construtor do provedor de tipos para resolver nomes de arquivo relativos.
 
-- Você pode usar o `AddDefinitionLocation` método para definir o local das propriedades fornecidas. Portanto, se você usar `Go To Definition` o em uma propriedade fornecida, o arquivo CSV será aberto no Visual Studio.
+- Você pode usar o método `AddDefinitionLocation` para definir o local das propriedades fornecidas. Portanto, se você usar `Go To Definition` em uma propriedade fornecida, o arquivo CSV será aberto no Visual Studio.
 
-- Você pode usar o `ProvidedMeasureBuilder` tipo para pesquisar as unidades de si e gerar os tipos relevantes `float<_>` .
+- Você pode usar o tipo de `ProvidedMeasureBuilder` para pesquisar as unidades SI e gerar os tipos relevantes de `float<_>`.
 
 ### <a name="key-lessons"></a>Principais lições
 
@@ -889,7 +893,7 @@ As seções a seguir incluem sugestões para um estudo adicional.
 
 ### <a name="a-look-at-the-compiled-code-for-erased-types"></a>Uma olhada no código compilado para tipos apagados
 
-Para lhe dar uma ideia de como o uso do provedor de tipos corresponde ao código emitido, examine a seguinte função usando o `HelloWorldTypeProvider` que é usado anteriormente neste tópico.
+Para dar uma ideia de como o uso do provedor de tipos corresponde ao código emitido, examine a seguinte função usando o `HelloWorldTypeProvider` que é usado anteriormente neste tópico).
 
 ```fsharp
 let function1 () =
@@ -925,13 +929,13 @@ IL_0017:  ret
 } // end of class Module1
 ```
 
-Como mostra o exemplo, todas as menção do tipo `Type1` e da `InstanceProperty` Propriedade foram apagadas, deixando apenas as operações nos tipos de tempo de execução envolvidos.
+Como mostra o exemplo, todas as menção do tipo `Type1` e a propriedade `InstanceProperty` foram apagados, deixando apenas as operações nos tipos de tempo de execução envolvidos.
 
 ### <a name="design-and-naming-conventions-for-type-providers"></a>Design e convenções de nomenclatura para provedores de tipo
 
 Observe as seguintes convenções ao criar provedores de tipos.
 
-**Provedores para protocolos de conectividade** Em geral, os nomes da maioria das DLLs de provedor para dados e protocolos de conectividade de serviço, como conexões OData ou SQL `TypeProvider` , `TypeProviders`devem terminar no ou no. Por exemplo, use um nome de DLL que se assemelha à seguinte cadeia de caracteres:
+**Provedores para protocolos de conectividade** Em geral, os nomes da maioria das DLLs de provedor para dados e protocolos de conectividade de serviço, como conexões OData ou SQL, devem terminar em `TypeProvider` ou `TypeProviders`. Por exemplo, use um nome de DLL que se assemelha à seguinte cadeia de caracteres:
 
 `Fabrikam.Management.BasicTypeProviders.dll`
 
@@ -956,7 +960,7 @@ Nesse caso, o tipo fornecido apareceria em um ponto apropriado de acordo com as 
   let regex = new RegexTyped<"a+b+a+b+">()
 ```
 
-**Fontes de dados singleton**. Alguns provedores de tipos se conectam a uma única fonte de dados dedicada e fornecem apenas dados. Nesse caso, você deve remover o `TypeProvider` sufixo e usar convenções normais de nomenclatura do .net:
+**Fontes de dados singleton**. Alguns provedores de tipos se conectam a uma única fonte de dados dedicada e fornecem apenas dados. Nesse caso, você deve remover o sufixo de `TypeProvider` e usar convenções normais de nomenclatura do .NET:
 
 ```fsharp
 #r "Fabrikam.Data.Freebase.dll"
@@ -964,7 +968,7 @@ Nesse caso, o tipo fornecido apareceria em um ponto apropriado de acordo com as 
 let data = Fabrikam.Data.Freebase.Astronomy.Asteroids
 ```
 
-Para obter mais informações, consulte `GetConnection` a Convenção de design descrita mais adiante neste tópico.
+Para obter mais informações, consulte a Convenção de design de `GetConnection` que é descrita mais adiante neste tópico.
 
 ### <a name="design-patterns-for-type-providers"></a>Padrões de design para provedores de tipo
 
@@ -972,7 +976,7 @@ As seções a seguir descrevem os padrões de design que você pode usar ao cria
 
 #### <a name="the-getconnection-design-pattern"></a>O padrão de design getConnection
 
-A maioria dos provedores de tipo deve ser escrita `GetConnection` para usar o padrão usado pelos provedores de tipo em FSharp. Data. TypeProviders. dll, como mostra o exemplo a seguir:
+A maioria dos provedores de tipo deve ser escrita para usar o padrão de `GetConnection` usado pelos provedores de tipo em FSharp. Data. TypeProviders. dll, como mostra o exemplo a seguir:
 
 ```fsharp
 #r "Fabrikam.Data.WebDataStore.dll"
@@ -1020,7 +1024,7 @@ Essas versões são usadas para criar espaços de tipos sob demanda.
 
 ### <a name="providing-array-types-and-generic-type-instantiations"></a>Fornecendo tipos de matriz e instanciações de tipo genérico
 
-Você faz com que os membros fornecidos (cujas assinaturas incluem tipos de matriz, tipos ByRef e instanciações de tipos genéricos) usando `MakeArrayType`o `MakePointerType`normal, `MakeGenericType` e em qualquer instância <xref:System.Type>do, `ProvidedTypeDefinitions`incluindo.
+Você faz com que os membros fornecidos (cujas assinaturas incluam tipos de matriz, tipos ByRef e instanciações de tipos genéricos) usando o `MakeArrayType`normal, `MakePointerType`e `MakeGenericType` em qualquer instância de <xref:System.Type>, incluindo `ProvidedTypeDefinitions`.
 
 > [!NOTE]
 > Em alguns casos, talvez seja necessário usar o auxiliar no `ProvidedTypeBuilder.MakeGenericType`.  Consulte a [documentação do SDK do provedor de tipos](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) para obter mais detalhes.
@@ -1046,7 +1050,7 @@ A API ProvidedTypes fornece auxiliares para fornecer anotações de medida. Por 
 
 ### <a name="accessing-project-local-or-script-local-resources"></a>Acessando projetos-recursos locais ou de script local
 
-Cada instância de um provedor de tipos pode receber um `TypeProviderConfig` valor durante a construção. Esse valor contém a "pasta de resolução" para o provedor (ou seja, a pasta do projeto para a compilação ou o diretório que contém um script), a lista de assemblies referenciados e outras informações.
+Cada instância de um provedor de tipos pode receber um valor `TypeProviderConfig` durante a construção. Esse valor contém a "pasta de resolução" para o provedor (ou seja, a pasta do projeto para a compilação ou o diretório que contém um script), a lista de assemblies referenciados e outras informações.
 
 ### <a name="invalidation"></a>Invalidação
 
@@ -1054,11 +1058,11 @@ Os provedores podem gerar sinais de invalidação para notificar o F# serviço d
 
 ### <a name="caching-schema-information"></a>Armazenando em cache informações de esquema
 
-Os provedores geralmente devem armazenar em cache o acesso a informações de esquema. Os dados armazenados em cache devem ser armazenados usando um nome de arquivo que é fornecido como um parâmetro estático ou como dados do usuário. Um exemplo de cache de esquema é `LocalSchemaFile` o parâmetro nos provedores de tipos `FSharp.Data.TypeProviders` no assembly. Na implementação desses provedores, esse parâmetro estático direciona o provedor de tipos para usar as informações de esquema no arquivo local especificado em vez de acessar a fonte de dados pela rede. Para usar as informações de esquema em cache, você também deve definir o `ForceUpdate` parâmetro `false`estático como. Você pode usar uma técnica semelhante para habilitar o acesso a dados online e offline.
+Os provedores geralmente devem armazenar em cache o acesso a informações de esquema. Os dados armazenados em cache devem ser armazenados usando um nome de arquivo que é fornecido como um parâmetro estático ou como dados do usuário. Um exemplo de cache de esquema é o parâmetro `LocalSchemaFile` nos provedores de tipos no assembly `FSharp.Data.TypeProviders`. Na implementação desses provedores, esse parâmetro estático direciona o provedor de tipos para usar as informações de esquema no arquivo local especificado em vez de acessar a fonte de dados pela rede. Para usar as informações de esquema em cache, você também deve definir o parâmetro estático `ForceUpdate` como `false`. Você pode usar uma técnica semelhante para habilitar o acesso a dados online e offline.
 
 ### <a name="backing-assembly"></a>Assembly de backup
 
-Quando você compila um `.dll` arquivo `.exe` ou, o arquivo. dll de backup para tipos gerados é vinculado estaticamente ao assembly resultante. Esse link é criado copiando as definições de tipo IL (linguagem intermediária) e todos os recursos gerenciados do assembly de backup para o assembly final. Quando você usa F# interativo, o arquivo. dll de backup não é copiado e, em vez disso F# , é carregado diretamente no processo interativo.
+Quando você compila um arquivo de `.dll` ou `.exe`, o arquivo. dll de backup para tipos gerados é vinculado estaticamente ao assembly resultante. Esse link é criado copiando as definições de tipo IL (linguagem intermediária) e todos os recursos gerenciados do assembly de backup para o assembly final. Quando você usa F# interativo, o arquivo. dll de backup não é copiado e, em vez disso F# , é carregado diretamente no processo interativo.
 
 ### <a name="exceptions-and-diagnostics-from-type-providers"></a>Exceções e diagnósticos de provedores de tipos
 
@@ -1068,7 +1072,7 @@ Todos os usos de todos os membros de tipos fornecidos podem gerar exceções. Em
 
 - Os provedores de tipos não podem relatar avisos.
 
-- Quando um provedor de tipos é hospedado no F# compilador, em F# um ambiente de desenvolvimento F# ou interativo, todas as exceções desse provedor são detectadas. A propriedade Message sempre é o texto de erro e nenhum rastreamento de pilha é exibido. Se você for lançar uma exceção, poderá lançar os seguintes exemplos: `System.NotSupportedException`, `System.IO.IOException`, `System.Exception`.
+- Quando um provedor de tipos é hospedado no F# compilador, em F# um ambiente de desenvolvimento F# ou interativo, todas as exceções desse provedor são detectadas. A propriedade Message sempre é o texto de erro e nenhum rastreamento de pilha é exibido. Se você for lançar uma exceção, poderá lançar os seguintes exemplos: `System.NotSupportedException`, `System.IO.IOException``System.Exception`.
 
 #### <a name="providing-generated-types"></a>Fornecendo tipos gerados
 
@@ -1082,9 +1086,9 @@ type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/"
 
 O código auxiliar ProvidedTypes-0,2 que faz parte da versão F# 3,0 tem apenas suporte limitado para fornecer tipos gerados. As instruções a seguir devem ser verdadeiras para uma definição de tipo gerada:
 
-- `isErased`deve ser definido como `false`.
+- `isErased` deve ser definido como `false`.
 
-- O tipo gerado deve ser adicionado a um recém-criado `ProvidedAssembly()`, que representa um contêiner para fragmentos de código gerados.
+- O tipo gerado deve ser adicionado a um `ProvidedAssembly()`recentemente construído, que representa um contêiner para fragmentos de código gerados.
 
 - O provedor deve ter um assembly que tenha um arquivo .NET. dll de backup real com um arquivo. dll correspondente no disco.
 
@@ -1094,9 +1098,9 @@ Ao escrever provedores de tipo, mantenha as seguintes regras e limitações em m
 
 ### <a name="provided-types-must-be-reachable"></a>Os tipos fornecidos devem estar acessíveis
 
-Todos os tipos fornecidos devem ser acessíveis a partir de tipos não aninhados. Os tipos não aninhados são fornecidos na chamada ao `TypeProviderForNamespaces` Construtor ou a uma chamada para. `AddNamespace` Por exemplo, se o provedor fornecer um tipo `StaticClass.P : T`, você deve garantir que T seja um tipo não aninhado ou aninhado em um.
+Todos os tipos fornecidos devem ser acessíveis a partir de tipos não aninhados. Os tipos não aninhados são fornecidos na chamada para o construtor de `TypeProviderForNamespaces` ou uma chamada para `AddNamespace`. Por exemplo, se o provedor fornecer um tipo `StaticClass.P : T`, você deve garantir que T seja um tipo não aninhado ou aninhado em um.
 
-Por exemplo, alguns provedores têm uma classe estática, `DataTypes` como a que contém esses `T1, T2, T3, ...` tipos. Caso contrário, o erro indica que uma referência ao tipo T no assembly A foi encontrada, mas o tipo não pôde ser encontrado nesse assembly. Se esse erro for exibido, verifique se todos os seus subtipos podem ser acessados dos tipos de provedor. Observação: Esses `T1, T2, T3...` tipos são chamados de tipos *em tempo real* . Lembre-se de colocá-los em um namespace acessível ou em um tipo pai.
+Por exemplo, alguns provedores têm uma classe estática, como `DataTypes` que contêm esses tipos de `T1, T2, T3, ...`. Caso contrário, o erro indica que uma referência ao tipo T no assembly A foi encontrada, mas o tipo não pôde ser encontrado nesse assembly. Se esse erro for exibido, verifique se todos os seus subtipos podem ser acessados dos tipos de provedor. Observação: esses tipos de `T1, T2, T3...` são chamados de tipos *em tempo real* . Lembre-se de colocá-los em um namespace acessível ou em um tipo pai.
 
 ### <a name="limitations-of-the-type-provider-mechanism"></a>Limitações do mecanismo do provedor de tipos
 

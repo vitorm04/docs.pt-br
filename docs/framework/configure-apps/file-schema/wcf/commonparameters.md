@@ -2,23 +2,23 @@
 title: <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: ffc20832-34d6-4622-8174-81924fd53514
-ms.openlocfilehash: 6f187e9cdcabc358ee69d65e392bc59aa38e52ca
-ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+ms.openlocfilehash: ab21be7b5e2738ac6a7c9bea676d8180c69d1afd
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70398175"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968560"
 ---
-# <a name="commonparameters"></a>\<commonParameters>
+# <a name="commonparameters"></a>\<CommonParameters >
 Representa uma coleção de parâmetros que são usados globalmente em vários serviços. Normalmente, essa coleção inclui a cadeia de conexão do banco de dados que pode ser compartilhada por serviços duráveis.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comportamentos >** ](behaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de portais**](servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de comportamento**](behavior-of-servicebehaviors.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de workflowRuntime**](workflowruntime.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> CommonParameters**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**comportamentos**](behaviors.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<** ](servicebehaviors.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**comportamento**](behavior-of-servicebehaviors.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**WorkflowRuntime**](workflowruntime.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<commonparameters >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,21 +47,21 @@ Representa uma coleção de parâmetros que são usados globalmente em vários s
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<workflowRuntime>](workflowruntime.md)|Especifica as configurações para uma instância <xref:System.Workflow.Runtime.WorkflowRuntime> do para hospedar serviços de Windows Communication Foundation baseado em fluxo de trabalho (WCF).|  
+|[> \<workflowRuntime](workflowruntime.md)|Especifica as configurações para uma instância do <xref:System.Workflow.Runtime.WorkflowRuntime> para hospedar serviços de Windows Communication Foundation (WCF) baseados em fluxo de trabalho.|  
   
 ## <a name="remarks"></a>Comentários  
- O `<commonParameters>` elemento define todos os parâmetros que são usados globalmente em vários serviços, por `ConnectionString` exemplo, ao <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>usar o.  
+ O elemento `<commonParameters>` define todos os parâmetros que são usados globalmente em vários serviços, por exemplo `ConnectionString` ao usar o <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.  
   
 > [!NOTE]
-> O serviço de controle SQL não usa consistentemente o `ConnectionString` valor se for especificado `<commonParameters>` na seção. Algumas de suas operações, como recuperar a `StateMachineWorkflowInstance.StateHistory` Propriedade, podem falhar. Para solucionar esse problema, `ConnectionString` especifique o atributo na seção de configuração para o provedor de acompanhamento, conforme indicado no exemplo a seguir.  
+> O serviço de controle do SQL não usa consistentemente o valor `ConnectionString` se for especificado na seção `<commonParameters>`. Algumas de suas operações, como a recuperação da propriedade `StateMachineWorkflowInstance.StateHistory` podem falhar. Para solucionar esse problema, especifique o atributo `ConnectionString` na seção de configuração para o provedor de acompanhamento, conforme indicado no exemplo a seguir.  
+
+```xml  
+<add
+type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" 
+ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />
+```  
   
- `<add`  
-  
- `type="System.Workflow.Runtime.Tracking.SqlTrackingService, System.Workflow.Runtime, Version=3.0.00000.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"`  
-  
- `ConnectionString="Data Source=localhost;Initial Catalog=Partner20WFTP;Integrated Security=True;" />`  
-  
- Para serviços que confirmam lotes de trabalho para repositórios de <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> persistência <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, como e, você pode habilitá-los para repetir `EnableRetries` sua transação usando o parâmetro, conforme mostrado no exemplo a seguir:  
+ Para serviços que confirmam lotes de trabalho para repositórios de persistência, como <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> e <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, você pode habilitá-los para tentar novamente a transação usando o parâmetro `EnableRetries`, conforme mostrado no exemplo a seguir:  
   
 ```xml  
 <workflowRuntime name="SampleApplication"
@@ -80,19 +80,19 @@ Representa uma coleção de parâmetros que são usados globalmente em vários s
 </workflowRuntime>
 ```  
   
- Observe que o `EnableRetries` parâmetro pode ser definido em um nível global (conforme mostrado na seção *CommonParameters* ) ou para serviços individuais que dão suporte `EnableRetries` (conforme mostrado na seção de *Serviços* ).  
+ Observe que o parâmetro `EnableRetries` pode ser definido em um nível global (como mostrado na seção *CommonParameters* ) ou para serviços individuais que dão suporte a `EnableRetries` (conforme mostrado na seção *Serviços* ).  
   
- O código de exemplo a seguir mostra como alterar os parâmetros comuns programaticamente.  
+ O código de exemplo a seguir mostra como alterar os parâmetros comuns programaticamente:
   
-```  
-Configuration config=WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");  
-WorkflowRuntimeSection wfruntime=config.GetSection("WorkflowRuntime") as WorkflowRuntimeSection;  
-NameValueConfigurationCollection commonParameters=wfruntime.CommonParameters;  
+```csharp  
+Configuration config = WebConfigurationManager.OpenWebConfiguration("/Workflow", "Default Web Site", null, "localhost");
+var wfruntime = config.GetSection("WorkflowRuntime") as WorkflowRuntimeSection;  
+NameValueConfigurationCollection commonParameters = wfruntime.CommonParameters;
 commonParameters["ConnectionString"].Value="another connection string";  
 config.Save();  
 ```  
   
- Para obter mais informações sobre como usar um arquivo de configuração para controlar o <xref:System.Workflow.Runtime.WorkflowRuntime> comportamento de um objeto de um Windows Workflow Foundation aplicativo host, consulte [arquivos de configuração de fluxo de trabalho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
+ Para obter mais informações sobre como usar um arquivo de configuração para controlar o comportamento de um objeto <xref:System.Workflow.Runtime.WorkflowRuntime> de um aplicativo host Windows Workflow Foundation, consulte [arquivos de configuração de fluxo de trabalho](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).  
   
 ## <a name="example"></a>Exemplo  
   

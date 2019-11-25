@@ -2,12 +2,12 @@
 title: Avaliar alterações da falha – .NET Core
 description: Saiba mais sobre as maneiras como o .NET Core tenta manter a compatibilidade para desenvolvedores em versões do .NET.
 ms.date: 06/10/2019
-ms.openlocfilehash: f4e18a17f58452c9325f36390626ae690f5ed777
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739353"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973644"
 ---
 # <a name="evaluate-breaking-changes-in-net-core"></a>Avaliar alterações da falha no .NET Core
 
@@ -103,7 +103,7 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
   A introdução de uma substituição pode fazer com que os consumidores anteriores pulem a substituição ao chamar a [base](../../csharp/language-reference/keywords/base.md).
 
-- **✔ Adicionar um construtor a uma classe, junto com um construtor padrão (sem parâmetros) se a classe anteriormente não tinha construtores**
+- **✔️ Adicionar um construtor a uma classe, juntamente com um construtor sem parâmetros, se a classe anteriormente não tivesse construtores**
 
    No entanto, não é permitido adicionar um construtor a uma classe que anteriormente não tinha construtores *sem* adicionar o construtor sem parâmetros.
 

@@ -1,22 +1,22 @@
 ---
-title: 'Como: criar um serviço que retorna dados arbitrários usando o modelo de programação HTTP Web do WCF'
+title: Como criar um serviço que retorna dados arbitrários utilizando o Modelo de programação HTTP Web do Windows Communication Foundation (WCF)
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 6c7dd0debb5c491bca84ea9a4845f46b6b57b4a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586237"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976094"
 ---
-# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como: criar um serviço que retorna dados arbitrários usando o modelo de programação HTTP Web do WCF
-Às vezes, os desenvolvedores devem ter controle total sobre como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo WCF. Este tópico discute usando o modelo de programação WCF WEB HTTP para criar esse tipo de serviço. Esse serviço tem uma operação que retorna um fluxo.  
+# <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Como criar um serviço que retorna dados arbitrários utilizando o Modelo de programação HTTP Web do Windows Communication Foundation (WCF)
+Às vezes, os desenvolvedores devem ter controle total de como os dados são retornados de uma operação de serviço. Esse é o caso quando uma operação de serviço deve retornar dados em um formato sem suporte pelo WCF. Este tópico discute o uso do modelo de programação do WCF WEB HTTP para criar um serviço desse tipo. Esse serviço tem uma operação que retorna um fluxo.  
   
 ### <a name="to-implement-the-service-contract"></a>Para implementar o contrato de serviço  
   
-1. Defina o contrato de serviço. O contrato é chamado `IImageServer` e tem um método chamado `GetImage` que retorna um <xref:System.IO.Stream>.  
+1. Defina o contrato de serviço. O contrato é chamado de `IImageServer` e tem um método chamado `GetImage` que retorna uma <xref:System.IO.Stream>.  
   
-    ```  
+    ```csharp  
     [ServiceContract]  
         public interface IImageServer  
         {  
@@ -25,41 +25,41 @@ ms.locfileid: "64586237"
         }  
     ```  
   
-     Como o método retorna um <xref:System.IO.Stream>, WCF pressupõe que a operação tem controle total sobre os bytes que são retornados da operação de serviço e ele se aplica nenhuma formatação para os dados que são retornados.  
+     Como o método retorna um <xref:System.IO.Stream>, o WCF assume que a operação tem controle total sobre os bytes retornados da operação de serviço e não aplica formatação aos dados retornados.  
   
-2. Implemente o contrato de serviço. O contrato tem apenas uma operação (`GetImage`). Esse método gera um bitmap e, em seguida, salve-o em um <xref:System.IO.MemoryStream> no formato. jpg. A operação, em seguida, retorna o fluxo ao chamador.  
+2. Implemente o contrato de serviço. O contrato tem apenas uma operação (`GetImage`). Esse método gera um bitmap e, em seguida, salva-o em um <xref:System.IO.MemoryStream> no formato. jpg. Em seguida, a operação retorna esse fluxo para o chamador.  
   
+    ```csharp
+    public class Service : IImageServer
+    {
+        public Stream GetImage(int width, int height)
+        {
+            Bitmap bitmap = new Bitmap(width, height);
+            for (int i = 0; i < bitmap.Width; i++)
+            {
+                for (int j = 0; j < bitmap.Height; j++)
+                {
+                    bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);
+                }
+            }
+            MemoryStream ms = new MemoryStream();
+            bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            ms.Position = 0;
+            WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";
+            return ms;
+        }
+    }
     ```  
-    public class Service : IImageServer  
-       {  
-           public Stream GetImage(int width, int height)  
-           {  
-               Bitmap bitmap = new Bitmap(width, height);  
-               for (int i = 0; i < bitmap.Width; i++)  
-               {  
-                   for (int j = 0; j < bitmap.Height; j++)  
-                   {  
-                       bitmap.SetPixel(i, j, (Math.Abs(i - j) < 2) ? Color.Blue : Color.Yellow);  
-                   }  
-               }  
-               MemoryStream ms = new MemoryStream();  
-               bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);  
-               ms.Position = 0;  
-               WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";  
-               return ms;  
-           }  
-       }  
-    ```  
   
-     Observe o segundo a última linha do código: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
+     Observe a segunda para a última linha de código: `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";`  
   
-     Isso define o cabeçalho de tipo de conteúdo para `"image/jpeg"`. Embora este exemplo mostra como retornar um arquivo. jpg, ele pode ser modificado para retornar qualquer tipo de dados que são necessários, em qualquer formato. A operação deve recuperar ou gerar os dados e, em seguida, gravá-lo em um fluxo.  
+     Isso define o cabeçalho de tipo de conteúdo como `"image/jpeg"`. Embora este exemplo mostre como retornar um arquivo. jpg, ele pode ser modificado para retornar qualquer tipo de dados necessário, em qualquer formato. A operação deve recuperar ou gerar os dados e, em seguida, gravá-los em um fluxo.  
   
 ### <a name="to-host-the-service"></a>Para hospedar o serviço  
   
 1. Crie um aplicativo de console para hospedar o serviço.  
   
-    ```  
+    ```csharp
     class Program  
     {  
         static void Main(string[] args)  
@@ -68,33 +68,33 @@ ms.locfileid: "64586237"
     }  
     ```  
   
-2. Crie uma variável para manter o endereço básico para o serviço dentro de `Main` método.  
+2. Crie uma variável para manter o endereço base do serviço dentro do método `Main`.  
   
-    ```  
+    ```csharp
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3. Criar um <xref:System.ServiceModel.ServiceHost> instância para o serviço especificando a classe de serviço e o endereço básico.  
+3. Crie uma instância de <xref:System.ServiceModel.ServiceHost> para o serviço que especifica a classe de serviço e o endereço base.  
   
-    ```  
+    ```csharp
     ServiceHost host = new ServiceHost(typeof(Service), new Uri(baseAddress));  
     ```  
   
 4. Adicione um ponto de extremidade usando o <xref:System.ServiceModel.WebHttpBinding> e o <xref:System.ServiceModel.Description.WebHttpBehavior>.  
   
-    ```  
+    ```csharp  
     host.AddServiceEndpoint(typeof(IImageServer), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
 5. Abra o host do serviço.  
   
-    ```  
-    host.Open()  
+    ```csharp  
+    host.Open();  
     ```  
   
-6. Aguarde até que o usuário pressiona ENTER para encerrar o serviço.  
+6. Aguarde até que o usuário pressione ENTER para encerrar o serviço.  
   
-    ```  
+    ```csharp
     Console.WriteLine("Service is running");  
     Console.Write("Press ENTER to close the host");  
     Console.ReadLine();  
@@ -103,14 +103,14 @@ ms.locfileid: "64586237"
   
 ### <a name="to-call-the-raw-service-using-internet-explorer"></a>Para chamar o serviço bruto usando o Internet Explorer  
   
-1. Executar o serviço, você verá a seguinte saída do serviço. `Service is running Press ENTER to close the host`  
+1. Execute o serviço, você deverá ver a seguinte saída do serviço. `Service is running Press ENTER to close the host`  
   
-2. Abra o Internet Explorer e digite `http://localhost:8000/Service/GetImage?width=50&height=40` você deverá ver um retângulo amarelo com uma linha azul diagonal por meio do centro.  
+2. Abra o Internet Explorer e digite `http://localhost:8000/Service/GetImage?width=50&height=40` você deverá ver um retângulo amarelo com uma linha diagonal azul no centro.  
   
 ## <a name="example"></a>Exemplo  
- A seguir está uma listagem completa do código deste tópico.  
+ A seguir está uma lista completa do código para este tópico.  
   
-```  
+```csharp  
 using System;  
 using System.Collections.Generic;  
 using System.Text;  
@@ -173,7 +173,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>Compilando o código  
   
-- Quando compilar o código de exemplo faz referência ServiceModel. dll e System.  
+- Ao compilar a referência de código de exemplo System. ServiceModel. dll e System. ServiceModel. Web. dll.  
   
 ## <a name="see-also"></a>Consulte também
 

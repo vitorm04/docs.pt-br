@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: cf621ab5f423e2465999b26f32489af1132bece0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6b4a5379145ebdffde0d5b76d8c7b9ab57261007
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582447"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975785"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>Otimizando desempenho: outras recomendações
 <a name="introduction"></a> Este tópico apresenta recomendações de desempenho além daquelas abordadas pelos tópicos na seção [Otimizando o desempenho do aplicativo WPF](optimizing-wpf-application-performance.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "72582447"
   
 <a name="FontCache"></a>   
 ## <a name="configure-font-cache-service-to-reduce-start-up-time"></a>Configurar o serviço de cache de fonte para reduzir o tempo de inicialização  
- O serviço de Cache de Fontes [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] compartilha dados de fontes entre aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. O primeiro aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] executado iniciará esse serviço se o serviço ainda não estiver em execução. Se você estiver usando [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], poderá definir o serviço "Windows Presentation Foundation (WPF) 3.0.0.0 do cache de fonte" de "manual" (o padrão) como "automático (início atrasado)" para reduzir o tempo de inicialização inicial dos aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ O serviço de Cache de Fontes [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] compartilha dados de fontes entre aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. O primeiro aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] executado iniciará esse serviço se o serviço ainda não estiver em execução. Se você estiver usando o Windows Vista, poderá definir o serviço "Windows Presentation Foundation (WPF) 3.0.0.0 do cache de fonte" de "manual" (o padrão) como "automático (início atrasado)" para reduzir o tempo de inicialização inicial dos aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
 ## <a name="see-also"></a>Consulte também
 

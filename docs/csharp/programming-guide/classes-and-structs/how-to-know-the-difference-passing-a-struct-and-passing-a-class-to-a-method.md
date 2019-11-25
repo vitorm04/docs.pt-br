@@ -1,5 +1,5 @@
 ---
-title: 'Como: saber a diferença entre passar um struct e passar uma referência de classe para um método – Guia de Programação em C#'
+title: Como saber a diferença entre passar uma struct e passar uma referência de classe para um guia de C# programação de método
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - passing parameters [C#], structs vs. classes
 - methods [C#], passing classes vs. structs
 ms.assetid: 9c1313a6-32a8-4ea7-a59f-450f66af628b
-ms.openlocfilehash: 09b40a1ee8ab57a4b8a641acae49ab31a14d3d5b
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: 9bacc7b3913a6e353e39f1e45fa99ea2dcdbe668
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70893144"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970550"
 ---
-# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Como: saber a diferença entre passar um struct e passar uma referência de classe para um método (Guia de Programação em C#)
+# <a name="how-to-know-the-difference-between-passing-a-struct-and-passing-a-class-reference-to-a-method-c-programming-guide"></a>Como saber a diferença entre passar uma struct e passar uma referência de classe para um método (C# guia de programação)
 O exemplo a seguir demonstra como passar um [struct](../../language-reference/keywords/struct.md) para um método difere de passar uma instância de [classe](../../language-reference/keywords/class.md) para um método. No exemplo, ambos os argumentos (struct e instância de classe) são passados por valor e ambos os métodos alteram o valor de um campo do argumento. No entanto, os resultados dos dois métodos não são os mesmos, pois o que é passado ao passar um struct é diferente do que é passado ao passar uma instância de uma classe.  
   
  Como um struct é um [tipo de valor](../../language-reference/keywords/value-types.md), ao [passar um struct por valor](./passing-value-type-parameters.md) a um método, esse método receberá e operará em uma cópia do argumento do struct. O método não tem acesso ao struct original no método de chamada e, portanto, não é possível alterá-lo de forma alguma. O método pode alterar somente a cópia.  
@@ -30,5 +30,5 @@ O exemplo a seguir demonstra como passar um [struct](../../language-reference/ke
 
 - [Guia de Programação em C#](../index.md)
 - [Classes](./classes.md)
-- [Estruturas](./structs.md)
+- [Structs](./structs.md)
 - [Passando parâmetros](./passing-parameters.md)
