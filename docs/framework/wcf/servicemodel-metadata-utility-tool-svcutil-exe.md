@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 8fd623314c84a677ab5cef07271a48c5fdd581b8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1d466f18c730762b6989f95448bd2331c655b317
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321414"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281617"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Ferramenta Utilitário de Metadados ServiceModel (Svcutil.exe)
 
@@ -37,7 +37,7 @@ A tabela a seguir resume as várias funcionalidades fornecidas por essa ferramen
 > [!CAUTION]
 > SvcUtil substitui os arquivos existentes em um disco se os nomes fornecidos como parâmetros forem idênticos. Isso pode incluir arquivos de código, configuração ou arquivos de metadados. Para evitar isso ao gerar arquivos de código e de configuração, use a opção `/mergeConfig`.
 >
-> Além disso, as opções `/r` e `/ct` para referenciar tipos são para a geração de contratos de dados. Essas opções não funcionam ao usar XmlSerializer.
+> Além disso, as opções de `/r` e `/ct` para os tipos de referência são para a geração de contratos de dados. Essas opções não funcionam ao usar XmlSerializer.
 
 ### <a name="timeout"></a>Tempo limite
 
@@ -49,7 +49,7 @@ A ferramenta não dá suporte à multiplataforma. Se você quiser gerar um artef
 
 ### <a name="accessing-wsdl-documents"></a>Acessando documentos WSDL
 
-Quando você usa o Svcutil para acessar um documento WSDL que tem uma referência para um serviço de token de segurança (STS), o Svcutil faz uma chamada WS-MetadataExchange para o STS. No entanto, o serviço pode expor seus documentos WSDL usando WS-MetadataExchange ou HTTP GET. Portanto, se o STS tiver exposto apenas o documento WSDL usando HTTP GET, um cliente escrito em WinFX falhará. Para clientes escritos em [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], svcutil tenta usar WS-MetadataExchange e HTTP GET para obter o WSDL do STS.
+Quando você usa o Svcutil para acessar um documento WSDL que tem uma referência para um serviço de token de segurança (STS), o Svcutil faz uma chamada WS-MetadataExchange para o STS. No entanto, o serviço pode expor seus documentos WSDL usando WS-MetadataExchange ou HTTP GET. Portanto, se o STS tiver exposto apenas o documento WSDL usando HTTP GET, um cliente escrito em WinFX falhará. Para clientes escritos em .NET Framework 3,5, svcutil tenta usar WS-MetadataExchange e HTTP GET para obter o WSDL do STS.
 
 ## <a name="using-svcutilexe"></a>Usando SvcUtil.exe
 
@@ -59,11 +59,11 @@ A tabela a seguir mostra algumas opções comumente usadas para essa ferramenta:
 
 |Opção|Descrição|
 |------------|-----------------|
-|/diretório: \<directory >|Diretório no qual criar arquivos.<br /><br /> Padrão: o diretório atual.<br /><br /> Forma abreviada: `/d`|
+|/directory:\<directory>|Diretório no qual criar arquivos.<br /><br /> Padrão: o diretório atual.<br /><br /> Forma abreviada: `/d`|
 |/help|Exibe a sintaxe de comando e as opções para a ferramenta.<br /><br /> Forma abreviada: `/?`|
 |/noLogo|Suprime a mensagem de copyright e de banner.|
-|/svcutilConfig: \<configFile >|Especifica um arquivo de configuração personalizado para usar em vez do arquivo App.config. Isso pode ser usado para registrar extensões system.serviceModel sem alterar o arquivo de configuração da ferramenta.|
-|/Target: tipo de \<output >|Especifica a saída a ser gerada pela ferramenta.<br /><br /> Os valores válidos são código, metadados ou xmlSerializer.<br /><br /> Forma abreviada: `/t`|
+|/svcutilConfig:\<configFile>|Especifica um arquivo de configuração personalizado para usar em vez do arquivo App.config. Isso pode ser usado para registrar extensões system.serviceModel sem alterar o arquivo de configuração da ferramenta.|
+|/Target:\<tipo de saída >|Especifica a saída a ser gerada pela ferramenta.<br /><br /> Os valores válidos são código, metadados ou xmlSerializer.<br /><br /> Forma abreviada: `/t`|
 
 ### <a name="code-generation"></a>Geração de código
 
@@ -87,31 +87,31 @@ Para um serviço com um ponto de extremidade BasicHttpContextBinding, *svcutil. 
 |Opção|Descrição|
 |------------|-----------------|
 |/async|Gera assinaturas de método síncronas e assíncronas.<br /><br /> Padrão: gerar apenas assinaturas de método síncronas.<br /><br /> Forma abreviada: `/a`|
-|/collectionType: \<type >|Especifica o tipo de coleção de lista para um cliente WCF.<br/><br /> Padrão: o tipo de coleção é System. Array. <br /><br /> Forma abreviada: `/ct`|
-|/config: \<configFile >|Especifica o nome do arquivo para o arquivo de configuração gerado.<br /><br /> Padrão: output.config|
+|/collectionType:\<type>|Especifica o tipo de coleção de lista para um cliente WCF.<br/><br /> Padrão: o tipo de coleção é System. Array. <br /><br /> Forma abreviada: `/ct`|
+|/config:\<configFile>|Especifica o nome do arquivo para o arquivo de configuração gerado.<br /><br /> Padrão: output.config|
 |/dataContractOnly|Gera código somente para tipos de contrato de dados. Os tipos de contrato de serviço não são gerados.<br /><br /> Você deve especificar somente arquivos dos metadados locais para essa opção.<br /><br /> Forma abreviada: `/dconly`|
 |/enableDataBinding|Implementa a interface <xref:System.ComponentModel.INotifyPropertyChanged> em todos os tipos de Contrato de Dados para habilitar a vinculação de dados.<br /><br /> Forma abreviada: `/edb`|
-|/excludeType: \<type >|Especifica um nome de tipo totalmente qualificado ou qualificado do assembly a ser excluído dos tipos de contrato referenciados.<br /><br /> Ao usar essa opção junto com `/r` de DLL separadas, o nome completo da classe XSD é referenciado.<br /><br /> Forma abreviada: `/et`|
+|/excludeType:\<type>|Especifica um nome de tipo totalmente qualificado ou qualificado do assembly a ser excluído dos tipos de contrato referenciados.<br /><br /> Ao usar essa opção junto com `/r` de DLL separadas, o nome completo da classe XSD é referenciado.<br /><br /> Forma abreviada: `/et`|
 |/importXmlTypes|Configurar o serializador do Contrato de Dados para importar tipos de Contrato de não Dados como tipos IXmlSerializable.|
 |/internal|Gera as classes que são marcadas como internas. Padrão: gerar somente classes públicas.<br /><br /> Forma abreviada: `/i`|
-|/Language: \<language >|Especifica a linguagem de programação a ser usada para gerar o código. Você deve fornecer um nome de idioma registrado no arquivo Machine. config ou o nome totalmente qualificado de uma classe que herda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> Padrão: csharp<br /><br /> Forma abreviada: `/l`|
+|/language:\<language>|Especifica a linguagem de programação a ser usada para gerar o código. Você deve fornecer um nome de idioma registrado no arquivo Machine. config ou o nome totalmente qualificado de uma classe que herda de <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Valores: c#, cs, csharp, vb, visualbasic, c++, cpp<br /><br /> Padrão: csharp<br /><br /> Forma abreviada: `/l`|
 |/mergeConfig|Mescla a configuração gerada em um arquivo existente, em vez de substituir o arquivo existente.|
 |/messageContract|Gera tipos de contrato de mensagem.<br /><br /> Forma abreviada: `/mc`|
-|/namespace: \<string, Cadeia de caracteres >|Especifica um mapeamento de um targetNamespace do WSDL ou do esquema XML para um namespace de CLR. O uso de ' \* ' para o targetNamespace mapeia todos os targetNamespaces sem um mapeamento explícito para esse namespace CLR.<br /><br /> Para garantir que o nome do contrato da mensagem não colida com o nome da operação, você deverá qualificar a referência de tipo com `::` ou verificar se os nomes são exclusivos.<br /><br /> Padrão: derivado do namespace de destino do documento de esquema para Contratos de Dados. O namespace padrão é usado para todos os outros tipos gerados.<br /><br /> Forma abreviada: `/n` **Observação:** ao gerar tipos para usar com o XmlSerializer, há suporte para apenas um único mapeamento de namespace. Todos os tipos gerados estarão no namespace padrão ou no namespace especificado por ' * '.|
+|/namespace:\<string,string>|Especifica um mapeamento de um targetNamespace do WSDL ou do esquema XML para um namespace de CLR. O uso de '\*' para o targetNamespace mapeia todos os targetNamespaces sem um mapeamento explícito para esse namespace CLR.<br /><br /> Para garantir que o nome do contrato da mensagem não colida com o nome da operação, você deverá qualificar a referência de tipo com `::` ou verificar se os nomes são exclusivos.<br /><br /> Padrão: derivado do namespace de destino do documento de esquema para Contratos de Dados. O namespace padrão é usado para todos os outros tipos gerados.<br /><br /> Forma abreviada: `/n` **Observação:** ao gerar tipos para usar com o XmlSerializer, apenas um único mapeamento de namespace tem suporte. Todos os tipos gerados estarão no namespace padrão ou no namespace especificado por ' * '.|
 |/noConfig|Não gera arquivos de configuração.|
 |/noStdLib|Não faz referência às bibliotecas padrão.<br /><br /> Padrão: Mscorlib.dll e System.servicemodel.dll são referenciados.|
-|/out: \<file >|Especifica o nome do arquivo para o código gerado.<br /><br /> Padrão: derivado do nome de definição WSDL, serviço WSDL ou namespace de destino de um dos esquemas.<br /><br /> Forma abreviada: `/o`|
-|/Reference: caminho de \<file >|Os tipos de referência no assembly especificado. Ao gerar clientes, use esta opção para especificar os assemblies que podem conter tipos que representam os metadados que estão sendo importados.<br /><br /> Você não pode especificar os contratos de mensagem e os tipos <xref:System.Xml.Serialization.XmlSerializer> usando essa opção.<br /><br /> Se <xref:System.DateTimeOffset> for referenciado, esse tipo é usado em vez de gerar um novo tipo. Se o aplicativo estiver escrito usando [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], o SvcUtil.exe referenciará <xref:System.DateTimeOffset> automaticamente.<br /><br /> Forma abreviada: `/r`|
+|/out: arquivo de\<>|Especifica o nome do arquivo para o código gerado.<br /><br /> Padrão: derivado do nome de definição WSDL, serviço WSDL ou namespace de destino de um dos esquemas.<br /><br /> Forma abreviada: `/o`|
+|/Reference: caminho do arquivo de\<>|Os tipos de referência no assembly especificado. Ao gerar clientes, use esta opção para especificar os assemblies que podem conter tipos que representam os metadados que estão sendo importados.<br /><br /> Você não pode especificar os contratos de mensagem e os tipos <xref:System.Xml.Serialization.XmlSerializer> usando essa opção.<br /><br /> Se <xref:System.DateTimeOffset> for referenciado, esse tipo é usado em vez de gerar um novo tipo. Se o aplicativo for gravado usando .NET Framework 3,5, SvcUtil. exe fará referência <xref:System.DateTimeOffset> automaticamente.<br /><br /> Forma abreviada: `/r`|
 |/serializable|Gera classes marcadas com o atributo Serializable.<br /><br /> Forma abreviada: `/s`|
 |/serviceContract|Gerar código somente para contratos de serviço. A classe e a configuração do cliente não serão geradas<br /><br /> Forma abreviada: `/sc`|
 |/serializer:Auto|Selecionar automaticamente o serializador. Isso tentará usar o serializador de contrato de dados e usará o XmlSerializer se isso falhar.<br /><br /> Forma abreviada: `/ser`|
 |/serializer:DataContractSerializer|Gera os tipos de dados que usam o serializador Contrato de Dados para serialização e desserialização.<br /><br /> Forma abreviada: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|Gera os tipos de dados que usam o <xref:System.Xml.Serialization.XmlSerializer> para serialização e desserialização.<br /><br /> Forma abreviada: `/ser:XmlSerializer`|
-|/targetClientVersion|Especifique qual versão do .NET Framework o aplicativo está direcionando. Os valores válidos são `Version30` e `Version35`. O valor padrão é `Version30`.<br /><br /> Forma abreviada: `/tcv`<br /><br /> `Version30`: Use `/tcv:Version30` se você estiver gerando código para clientes que usam o WinFX.<br /><br /> `Version35`: Use `/tcv:Version35` se você estiver gerando o código para clientes que usam [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. Ao usar `/tcv:Version35` com a opção `/async`, os métodos assíncronos baseados em evento e baseados em retorno de chamada/representante são gerados. Além disso, o suporte para DataSets habilitados para LINQ e <xref:System.DateTimeOffset> está habilitado.|
+|/targetClientVersion|Especifique qual versão do .NET Framework o aplicativo está direcionando. Os valores válidos são `Version30` e `Version35`. O valor padrão é `Version30`.<br /><br /> Forma abreviada: `/tcv`<br /><br /> `Version30`: Use `/tcv:Version30` se você estiver gerando código para clientes que usam o WinFX.<br /><br /> `Version35`: Use `/tcv:Version35` se você estiver gerando código para clientes que usam o .NET Framework 3,5. Ao usar `/tcv:Version35` com a opção `/async`, os métodos assíncronos baseados em evento e baseados em retorno de chamada/representante são gerados. Além disso, o suporte para DataSets habilitados para LINQ e <xref:System.DateTimeOffset> está habilitado.|
 |/wrapped|Controla se a diferença entre maiúsculas e minúsculas é usada para documentos de estilo literal com parâmetros encapsulados. Use a opção **/wrapped** com a ferramenta de [Utilitário de metadados do modelo de serviço (svcutil. exe)](servicemodel-metadata-utility-tool-svcutil-exe.md) para especificar maiúsculas e minúsculas normais.|
 
 > [!NOTE]
-> Quando a associação de serviço é uma das associações fornecidas pelo sistema (consulte [associações fornecidas pelo sistema](system-provided-bindings.md)) e a propriedade <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> é definida como `None` ou `Sign`, SvcUtil gera um arquivo de configuração usando o [\<customBinding >](../configure-apps/file-schema/wcf/custombinding.md) elemento em vez do elemento fornecido pelo sistema esperado. Por exemplo, se o serviço usa o elemento `<wsHttpBinding>` com `ProtectionLevel` definido como `Sign`, a configuração gerada tem `<customBinding>` na seção de associação em vez de `<wsHttpBinding>`. Para obter mais informações sobre o nível de proteção, consulte [noções básicas](understanding-protection-level.md)sobre o nível de proteção.
+> Quando a associação de serviço é uma das associações fornecidas pelo sistema (consulte [associações fornecidas pelo sistema](system-provided-bindings.md)) e a propriedade <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> é definida como `None` ou `Sign`, SvcUtil gera um arquivo de configuração usando o elemento [\<CustomBinding >](../configure-apps/file-schema/wcf/custombinding.md) em vez do elemento fornecido pelo sistema esperado. Por exemplo, se o serviço usa o elemento `<wsHttpBinding>` com `ProtectionLevel` definido como `Sign`, a configuração gerada tem `<customBinding>` na seção de associação em vez de `<wsHttpBinding>`. Para obter mais informações sobre o nível de proteção, consulte [noções básicas](understanding-protection-level.md)sobre o nível de proteção.
 
 ### <a name="metadata-export"></a>Exportação de metadados
 
@@ -125,10 +125,10 @@ O Svcutil.exe pode exportar os metadados para serviços, contratos e tipos de da
 
 |Opção|Descrição|
 |------------|-----------------|
-|/serviceName: \<serviceConfigName >|Especifica o nome da configuração de um serviço a ser exportado. Se esta opção for usada, um assembly executável com um arquivo de configuração associado deverá ser passado como entrada. O Svcutil.exe procura todos os arquivos de configuração associados para a configuração do serviço. Se os arquivos de configuração contiverem tipos de extensão, os assemblies que contêm esses tipos deverão estar no GAC ou ser fornecidos explicitamente usando a opção `/reference`.|
-|/Reference: caminho de \<file >|Adiciona o assembly especificado ao conjunto de assemblies usados para resolver referências de tipo. Se você estiver exportando ou validando um serviço que usa extensões de terceiros (comportamentos, associações e BindingElements) registradas em configuração, use esta opção para localizar assemblies de extensão que não estão no GAC.<br /><br /> Forma abreviada: `/r`|
+|/serviceName:\<serviceConfigName>|Especifica o nome da configuração de um serviço a ser exportado. Se esta opção for usada, um assembly executável com um arquivo de configuração associado deverá ser passado como entrada. O Svcutil.exe procura todos os arquivos de configuração associados para a configuração do serviço. Se os arquivos de configuração contiverem tipos de extensão, os assemblies que contêm esses tipos deverão estar no GAC ou ser fornecidos explicitamente usando a opção `/reference`.|
+|/Reference: caminho do arquivo de\<>|Adiciona o assembly especificado ao conjunto de assemblies usados para resolver referências de tipo. Se você estiver exportando ou validando um serviço que usa extensões de terceiros (comportamentos, associações e BindingElements) registradas em configuração, use esta opção para localizar assemblies de extensão que não estão no GAC.<br /><br /> Forma abreviada: `/r`|
 |/dataContractOnly|Opera somente em tipos de contrato de dados. Contratos de serviço não são processados.<br /><br /> Você deve especificar somente arquivos dos metadados locais para essa opção.<br /><br /> Forma abreviada: `/dconly`|
-|/excludeType: \<type >|Especifica o nome totalmente qualificado ou qualificado do assembly de um tipo a ser excluído da exportação. Essa opção pode ser usada ao exportar metadados para um serviço, ou um conjunto de contratos de serviço para excluir tipos de serem exportados. Esta opção não pode ser usada junto com a opção `/dconly`.<br /><br /> Quando você tiver um único assembly contendo vários serviços, e cada um usar classes separadas com o mesmo nome XSD, deverá especificar o nome do serviço em vez do nome da classe XSD para essa opção.<br /><br /> XSD ou tipos de contrato de dados não têm suporte.<br /><br /> Forma abreviada: `/et`|
+|/excludeType:\<type>|Especifica o nome totalmente qualificado ou qualificado do assembly de um tipo a ser excluído da exportação. Essa opção pode ser usada ao exportar metadados para um serviço, ou um conjunto de contratos de serviço para excluir tipos de serem exportados. Esta opção não pode ser usada junto com a opção `/dconly`.<br /><br /> Quando você tiver um único assembly contendo vários serviços, e cada um usar classes separadas com o mesmo nome XSD, deverá especificar o nome do serviço em vez do nome da classe XSD para essa opção.<br /><br /> XSD ou tipos de contrato de dados não têm suporte.<br /><br /> Forma abreviada: `/et`|
 
 ### <a name="service-validation"></a>Validação de serviço
 
@@ -143,10 +143,10 @@ A validação pode ser usada para detectar erros em implementações de serviço
 |Opção|Descrição|
 |------------|-----------------|
 |/validate|Valida uma implementação de serviço especificada pela opção `/serviceName`. Se esta opção for usada, um assembly executável com um arquivo de configuração associado deverá ser passado como entrada.<br /><br /> Forma abreviada: `/v`|
-|/serviceName: \<serviceConfigName >|Especifica o nome da configuração de um serviço a ser validado. O Svcutil.exe procura todos os arquivos de configuração associados de todos os assemblies de entrada para a configuração do serviço. Se os arquivos de configuração contiverem tipos de extensão, os assemblies que contêm esses tipos deverão estar no GAC ou ser fornecidos explicitamente usando a opção `/reference`.|
-|/Reference: caminho de \<file >|Adiciona o assembly especificado ao conjunto de assemblies usados para resolver referências de tipo. Se você estiver exportando ou validando um serviço que usa extensões de terceiros (comportamentos, associações e BindingElements) registradas em configuração, use esta opção para localizar assemblies de extensão que não estão no GAC.<br /><br /> Forma abreviada: `/r`|
+|/serviceName:\<serviceConfigName>|Especifica o nome da configuração de um serviço a ser validado. O Svcutil.exe procura todos os arquivos de configuração associados de todos os assemblies de entrada para a configuração do serviço. Se os arquivos de configuração contiverem tipos de extensão, os assemblies que contêm esses tipos deverão estar no GAC ou ser fornecidos explicitamente usando a opção `/reference`.|
+|/Reference: caminho do arquivo de\<>|Adiciona o assembly especificado ao conjunto de assemblies usados para resolver referências de tipo. Se você estiver exportando ou validando um serviço que usa extensões de terceiros (comportamentos, associações e BindingElements) registradas em configuração, use esta opção para localizar assemblies de extensão que não estão no GAC.<br /><br /> Forma abreviada: `/r`|
 |/dataContractOnly|Opera somente em tipos de contrato de dados. Contratos de serviço não são processados.<br /><br /> Você deve especificar somente arquivos dos metadados locais para essa opção.<br /><br /> Forma abreviada: `/dconly`|
-|/excludeType: \<type >|Especifica o nome totalmente qualificado ou qualificado do assembly de um tipo a ser excluído da validação.<br /><br /> Forma abreviada: `/et`|
+|/excludeType:\<type>|Especifica o nome totalmente qualificado ou qualificado do assembly de um tipo a ser excluído da validação.<br /><br /> Forma abreviada: `/et`|
 
 ### <a name="metadata-download"></a>Download de metadados
 
@@ -171,7 +171,7 @@ Por padrão, o Svcutil.exe usa as associações definidas na classe <xref:System
 
 ### <a name="xmlserializer-type-generation"></a>Geração de tipo de XmlSerializer
 
-Os serviços e os aplicativos cliente que usam tipos de dados que são serializados usando <xref:System.Xml.Serialization.XmlSerializer> geram e compilam o código de serialização para esses tipos de dados em tempo de execução, o que pode levar a um desempenho de inicialização lento.
+Os serviços e os aplicativos cliente que usam tipos de dados que são serializados usando <xref:System.Xml.Serialization.XmlSerializer> geram e compilam o código de serialização para esses tipos de dados em runtime, o que pode levar a um desempenho de inicialização lento.
 
 > [!NOTE]
 > O código de serialização pré-gerado somente pode ser usado em aplicativos cliente e não em serviços.
@@ -189,9 +189,9 @@ O Svcutil.exe pode gerar o código de serialização de C# necessário a partir 
 
 |Opção|Descrição|
 |------------|-----------------|
-|/Reference: caminho de \<file >|Adiciona o assembly especificado ao conjunto de assemblies usados para resolver referências de tipo.<br /><br /> Forma abreviada: `/r`|
-|/excludeType: \<type >|Especifica o nome totalmente qualificado ou qualificado do assembly de um tipo a ser excluído da exportação ou validação.<br /><br /> Forma abreviada: `/et`|
-|/out: \<file >|Especifica o nome do arquivo para o código gerado. Essa opção será ignorada quando vários assemblies são passados como entrada para a ferramenta.<br /><br /> Padrão: derivado do nome do assembly.<br /><br /> Forma abreviada: `/o`|
+|/Reference: caminho do arquivo de\<>|Adiciona o assembly especificado ao conjunto de assemblies usados para resolver referências de tipo.<br /><br /> Forma abreviada: `/r`|
+|/excludeType:\<type>|Especifica o nome totalmente qualificado ou qualificado do assembly de um tipo a ser excluído da exportação ou validação.<br /><br /> Forma abreviada: `/et`|
+|/out: arquivo de\<>|Especifica o nome do arquivo para o código gerado. Essa opção será ignorada quando vários assemblies são passados como entrada para a ferramenta.<br /><br /> Padrão: derivado do nome do assembly.<br /><br /> Forma abreviada: `/o`|
 |/UseSerializerForFaults|Especifica que o <xref:System.Xml.Serialization.XmlSerializer> deve ser usado para ler e gravar falhas, em vez do <xref:System.Runtime.Serialization.DataContractSerializer> padrão.|
 
 ## <a name="examples"></a>Exemplos

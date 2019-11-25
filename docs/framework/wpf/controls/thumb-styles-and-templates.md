@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Thumb
 - parts [WPF], Thumb
 ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
-ms.openlocfilehash: c2114a02016db96d898a394b6892b6d3042d81ff
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0d0d88e3b527beacfa5f879027e696aa75b18147
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458241"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283691"
 ---
 # <a name="thumb-styles-and-templates"></a>Estilos e modelos Thumb
 
-Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.Primitives.Thumb>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md).
+Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.Primitives.Thumb>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md).
 
 ## <a name="thumb-parts"></a>Peças Thumb
 
@@ -59,4 +59,4 @@ Para ver o exemplo completo, consulte [Styling with ControlTemplates Sample (Est
 - [Estilos e modelos de controle](control-styles-and-templates.md)
 - [Personalização do controle](control-customization.md)
 - [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
-- [Personalizando a aparência de um controle existente criando um ControlTemplate](customizing-the-appearance-of-an-existing-control.md)
+- [Criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md)

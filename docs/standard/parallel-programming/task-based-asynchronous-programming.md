@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-ms.openlocfilehash: 36ff76db984a864a201313ddb7478cc1e93888fd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139988"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204535"
 ---
 # <a name="task-based-asynchronous-programming"></a>Programação assíncrona baseada em tarefas
 
@@ -268,7 +268,7 @@ A TPL possui vários novos tipos públicos que são úteis em cenários paralelo
 
 Recomendamos que você não herde de <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> ou de <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>. Em vez disso, recomenda-se usar a propriedade <xref:System.Threading.Tasks.Task.AsyncState%2A> para associar dados adicionais ou o estado a um objeto <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. Você também pode usar os métodos de extensão para estender a funcionalidade de <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Para obter mais informações sobre métodos de extensão, consulte [Métodos de extensão](../../csharp/programming-guide/classes-and-structs/extension-methods.md) e [Métodos de extensão](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md).
 
-Se for necessário herdar de <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>, você não poderá usar <xref:System.Threading.Tasks.Task.Run%2A>, <xref:System.Threading.Tasks.Task.Run%2A> ou <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>, ou as classes <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> para criar instâncias de seu tipo de tarefa personalizada, pois esses mecanismos criam somente objetos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>. Além disso, você não pode usar os mecanismos de continuação de tarefas fornecidos por <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> e <xref:System.Threading.Tasks.TaskFactory%601> para criar instâncias de seu tipo de tarefa personalizada porque esses mecanismos também criam apenas objetos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>.
+If you must inherit from <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>, you cannot use <xref:System.Threading.Tasks.Task.Run%2A>, or the <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>, or <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> classes to create instances of your custom task type because these mechanisms create only <xref:System.Threading.Tasks.Task> and <xref:System.Threading.Tasks.Task%601> objects. Além disso, você não pode usar os mecanismos de continuação de tarefas fornecidos por <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.TaskFactory> e <xref:System.Threading.Tasks.TaskFactory%601> para criar instâncias de seu tipo de tarefa personalizada porque esses mecanismos também criam apenas objetos <xref:System.Threading.Tasks.Task> e <xref:System.Threading.Tasks.Task%601>.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 

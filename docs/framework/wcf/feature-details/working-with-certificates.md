@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: ac69b38df3439932be7f65d871c64700585538cb
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774293"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283279"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 
@@ -72,7 +72,7 @@ Os certificados digitais são usados para autenticar uma entidade confiando ness
 
 Ao criar um novo serviço, você pode usar um certificado que não seja emitido por um certificado raiz confiável ou o próprio certificado de emissão pode não estar no repositório das Autoridades de Certificação Confiáveis. Somente para a finalidade de desenvolvimento, você pode desativar temporariamente o mecanismo que verifica a cadeia de confiança para um certificado. Para fazer isso, defina a propriedade `CertificateValidationMode` para `PeerTrust` ou `PeerOrChainTrust`. Qualquer um dos modos especifica que o certificado pode ser emitido por conta própria (confiança de par) ou parte de uma cadeia de confiança. Você pode definir a propriedade em qualquer uma das seguintes classes.
 
-|Class|propriedade|
+|Classe|Propriedade|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -141,7 +141,7 @@ Defina também o modo na configuração usando o atributo `revocationMode` da [\
 
 No WCF, em geral, você precisa especificar um certificado ou um conjunto de certificados que um serviço ou um cliente deve usar para autenticar, criptografar ou assinar digitalmente uma mensagem. Você pode fazer isso por meio de programação usando o método `SetCertificate` de várias classes que representam certificados X.509. As seguintes classes usam o método `SetCertificate` para especificar um certificado.
 
-|Class|Método|
+|Classe|Método|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -184,7 +184,7 @@ Com esse recurso ativado, você poderá definir a propriedade <xref:System.Servi
 
 Mapear um certificado X.509 para o símbolo que representa uma conta de usuário do Windows é considerado uma elevação de privilégio. Assim que for mapeado, o símbolo do Windows poderá ser usado para conceder acesso aos recursos protegidos. Portanto, a política de domínio exige que o certificado X.509 esteja em conformidade com sua política antes do mapeamento. O pacote de segurança *SChannel* impõe esse requisito.
 
-Ao usar o [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] ou posterior, o WCF garante que o certificado esteja em conformidade com a política de domínio antes de ser mapeado para uma conta do Windows.
+Ao usar o .NET Framework 3,5 ou versões posteriores, o WCF garante que o certificado esteja de acordo com a política de domínio antes de ser mapeado para uma conta do Windows.
 
 Na primeira versão do WCF, o mapeamento é feito sem consulta à política de domínio. Portanto, é possível que aplicativos mais antigos que funcionavam ao serem executados na primeira versão falhem se o mapeamento for habilitado e o certificado X.509 não atender a política de domínio.
 

@@ -1,16 +1,16 @@
 ---
-title: Introdução a Eventos
+title: Introdução aos eventos
 description: Saiba mais sobre eventos no .NET Core e nossas metas de design de linguagem para eventos nesta visão geral.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: b1fd2ebe2ae91b55c9179f280d8894f6b40ced9b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ceae2b9319a1de9f01102987735c7db2c2883f18
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771911"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138523"
 ---
-# <a name="introduction-to-events"></a>Introdução a Eventos
+# <a name="introduction-to-events"></a>Introdução aos eventos
 
 [Anterior](delegates-patterns.md)
 
@@ -24,20 +24,20 @@ Você pode definir os eventos que devem ser gerados para suas classes. Uma consi
 
 Assinar um evento também cria um acoplamento entre dois objetos (a origem do evento e o coletor do evento). Você precisa garantir que o coletor do evento cancele a assinatura da origem do evento quando não houver mais interesse nos eventos.
 
-## <a name="design-goals-for-event-support"></a>Metas de design para o suporte a eventos
+## <a name="design-goals-for-event-support"></a>Metas de design para suporte a eventos
 
-O design de linguagem para eventos tem como alvo essas metas.
+O design de idioma para eventos tem como alvo estas metas:
 
-Primeiro, habilite o acoplamento mínimo entre uma origem de evento e um coletor de evento. Esses dois componentes não podem ter sido escritos pela mesma organização e podem até mesmo ser atualizados segundo cronogramas totalmente diferentes.
+- Habilite um acoplamento muito mínimo entre uma origem do evento e um coletor de eventos. Esses dois componentes não podem ter sido escritos pela mesma organização e podem até mesmo ser atualizados segundo cronogramas totalmente diferentes.
 
-Em segundo lugar, deve ser muito simples assinar em um evento e cancelar a assinatura desse mesmo evento.
+- Deve ser muito simples assinar um evento e cancelar a assinatura desse mesmo evento.
 
-E, por fim, fontes de eventos devem dar suporte a vários assinantes do evento. Elas também devem dar suporte a não ter assinantes de evento anexados.
+- As origens de eventos devem dar suporte a vários assinantes de eventos. Elas também devem dar suporte a não ter assinantes de evento anexados.
 
 Você pode ver que as metas para os eventos são muito semelhantes às metas para delegados.
 É por isso que o suporte à linguagem do evento é baseado no suporte à linguagem do delegado.
 
-## <a name="language-support-for-events"></a>Suporte de linguagem para eventos
+## <a name="language-support-for-events"></a>Suporte a idiomas para eventos
 
 A sintaxe para definir eventos e se inscrever ou cancelar a inscrição em eventos é uma extensão da sintaxe de delegados.
 
@@ -69,7 +69,7 @@ EventHandler<FileListArgs> onProgress = (sender, eventArgs) =>
 fileLister.Progress += onProgress;
 ```
 
-O método do manipulador normalmente é o prefixo "On" seguido do nome do evento, conforme mostrado acima.
+O método Handler normalmente tem o prefixo ' on ' seguido pelo nome do evento, como mostrado acima.
 
 Cancele a assinatura usando o operador `-=`:
 

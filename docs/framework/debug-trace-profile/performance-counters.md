@@ -6,33 +6,17 @@ helpviewer_keywords:
 - performance counters
 - performance monitoring, counters
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
-ms.openlocfilehash: 02163f923bc93a1cf377cc608b5f390472c60edd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a592cbb49c1b9ec8f36b90f2ec1097f6c84efbe9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121593"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281819"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Contadores de desempenho no .NET Framework
+
 Este tópico fornece uma lista de contadores de desempenho que você pode encontrar no [Monitor de desempenho do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29).  
-  
-- [Contadores de desempenho de exceções](#exception)  
-  
-- [Contadores de desempenho de interoperabilidade](#interop)  
-  
-- [Contadores de desempenho JIT](#jit)  
-  
-- [Carregando contadores de desempenho](#loading)  
-  
-- [Contadores de desempenho de bloqueio e thread](#lockthread)  
-  
-- [Contadores de desempenho da memória](#memory)  
-  
-- [Contadores de desempenho de rede](#networking)  
-  
-- [Contadores de desempenho de segurança](#security)  
-  
-<a name="exception"></a>   
+
 ## <a name="exception-performance-counters"></a>Contadores de desempenho de exceções  
  A categoria Exceções do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre as exceções geradas por um aplicativo. A tabela a seguir descreve esses contadores de desempenho.  
   
@@ -43,8 +27,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**N. de filtros/s**|Exibe o número de filtros de exceção do .NET executados por segundo. Um filtro de exceção avalia independentemente de uma exceção ser manipulada ou não.<br /><br /> Esse contador não consiste numa média temporal; ele apresenta a diferença entre os valores observados nos dois últimos exemplos divididos pela duração do intervalo de amostragem.|  
 |**N. de Finallys/s**|Exibe o número de blocos finally executados por segundo. É certo que um bloco Finally será executado, independentemente de como o bloco try tiver sido encerrado.  Somente os blocos finally executados para uma exceção são contados; blocos finally em caminhos de código normais não são contabilizados por esse contador.<br /><br /> Esse contador não consiste numa média temporal; ele apresenta a diferença entre os valores observados nos dois últimos exemplos divididos pela duração do intervalo de amostragem.|  
 |**Extensão do início ao tratamento/s**|Exibe o número de registros ativação desviados, do quadro que gerou a exceção até o quadro que tratou a exceção, por segundo. Esse contador é reiniciado para zero quando um manipulador de exceção é inserido, de modo que as exceções aninhadas mostram a profundidade da pilha de manipulador a manipulador.<br /><br /> Esse contador não consiste numa média temporal; ele apresenta a diferença entre os valores observados nos dois últimos exemplos divididos pela duração do intervalo de amostragem.|  
-  
-<a name="interop"></a>   
+     
 ## <a name="interop-performance-counters"></a>Contadores de desempenho de interoperabilidade  
  A categoria de interoperabilidade do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre a interação de um aplicativo com componentes COM, serviços COM+ e bibliotecas de tipos externo. A tabela a seguir descreve esses contadores de desempenho.  
   
@@ -55,8 +38,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**N. de Stubs**|Exibe o número atual de stubs criado pelo Common Language Runtime. Os stubs são responsáveis pelo marshaling de argumentos e valores retornados de código gerenciado para não gerenciado e vice-versa; durante uma chamada de interoperabilidade COM ou uma chamada de invocação de plataforma.|  
 |**N. de exportações de TLB/s**|Reservado para uso futuro.|  
 |**N. de importações de TLB/s**|Reservado para uso futuro.|  
-  
-<a name="jit"></a>   
+    
 ## <a name="jit-performance-counters"></a>contadores de desempenho JIT  
  A categoria JIT do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre o código com compilação JIT. A tabela a seguir descreve esses contadores de desempenho.  
   
@@ -68,8 +50,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**N. de Bytes de IL com compilação JIT/s**|Exibe o número de bytes MSIL com compilação JIT por segundo. Esse contador não consiste numa média temporal; ele apresenta a diferença entre os valores observados nos dois últimos exemplos divididos pela duração do intervalo de amostragem.|  
 |**Falhas de JIT padrão**|Exibe o número máximo de métodos que o compilador JIT falhou ao compilar desde que o aplicativo foi iniciado. Essa falha pode ocorrer se o MSIL não pode ser verificado ou se há um erro interno no compilador JIT.|  
 |**N. de bytes de IL com compilação JIT total**|Exibe o total de bytes MSIL com compilação JIT desde que o aplicativo foi iniciado. Este contador é equivalente ao contador **N. de bytes de IL com compilação JIT**.|  
-  
-<a name="loading"></a>   
+     
 ## <a name="loading-performance-counters"></a>Carregando contadores de desempenho  
  A categoria Carregamento do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre os assemblies, as classes e os domínios de aplicativos que são carregados. A tabela a seguir descreve esses contadores de desempenho.  
   
@@ -91,8 +72,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**Total de AppDomains descarregados**|Exibe o número total de domínios do aplicativo descarregados desde que o aplicativo foi iniciado. Se um domínio de aplicativo for carregado e descarregado várias vezes, esse contador será incrementado sempre que o domínio de aplicativo for descarregado.|  
 |**Total de Assemblies**|Exibe o número total de assemblies carregados desde que o aplicativo foi iniciado. Se o assembly for carregado como um domínio neutro de vários domínios de aplicativo, esse contador será incrementado apenas uma vez.|  
 |**Total de Classes carregadas**|Exibe o número cumulativo de classes carregadas em todos os assemblies desde que o aplicativo foi iniciado.|  
-  
-<a name="lockthread"></a>   
+   
 ## <a name="lock-and-thread-performance-counters"></a>Contadores de desempenho de bloqueio e thread  
  A categoria LocksAndThreads do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre bloqueios e threads gerenciados e usos de aplicativo. A tabela a seguir descreve esses contadores de desempenho.  
   
@@ -108,8 +88,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**Tamanho máximo da fila**|Exibe o número total de threads que aguardaram para adquirir um bloqueio gerenciado desde que o aplicativo foi iniciado.|  
 |**taxa de threads reconhecidos/s**|Exibe o número de threads por segundo que foram reconhecidos atualmente pelo runtime. Esses threads são associados um objeto de thread gerenciado correspondente. O runtime não cria esses threads, mas eles foram executados dentro do runtime pelo menos uma vez.<br /><br /> Apenas os threads exclusivos são acompanhados; threads com a mesma ID de thread que adentram novamente o runtime ou são recriados depois da saída do thread não são contados duas vezes.<br /><br /> Esse contador não consiste numa média temporal; ele apresenta a diferença entre os valores observados nos dois últimos exemplos divididos pela duração do intervalo de amostragem.|  
 |**N. total de contenções**|Exibe o número total de vezes que os threads em runtime tentaram adquirir um bloqueio gerenciado sem êxito.|  
-  
-<a name="memory"></a>   
+    
 ## <a name="memory-performance-counters"></a>Contadores de desempenho da memória  
  A categoria Memória do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre o coletor de lixo. A tabela a seguir descreve esses contadores de desempenho.  
   
@@ -133,15 +112,15 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
 |**Tamanho do heap de geração 1**|Exibe o número atual de bytes na geração 1; esse contador não exibe o tamanho máximo da geração 1. Os objetos não são diretamente alocados nessa geração; eles são promovidos de coletas de lixo de geração 0 anteriores. Esse contador é atualizado no final de uma coleta de lixo e não em cada alocação.|  
 |**Bytes promovidos da geração 1/s**|Exibe os bytes por segundo que são promovidos da geração 1 para a geração 2. Objetos que são promovidos apenas porque estão aguardando a finalização não são incluídos nesse contador.<br /><br /> A memória é promovida quando sobrevive a uma coleta de lixo. Nenhum item é promovida da geração 2 porque ela é a geração mais antiga. Esse contador é um indicador dos objetos de vida muito longa criados por segundo.<br /><br /> Esse contador mostra a diferença entre os valores observados nos dois últimos exemplos divididos pela duração do intervalo de amostragem.|  
 |**Tamanho do heap de geração 2**|Exibe o número atual de bytes na geração 2. Os objetos não são diretamente alocados nessa geração; eles são promovidos da geração 1 durante coletas de lixo de geração 1 anteriores. Esse contador é atualizado no final de uma coleta de lixo e não em cada alocação.|  
-|**Tamanho de heap de Objeto Grande**|Exibe o tamanho atual, em bytes, do heap de Objeto Grande. Objetos que são maiores do que aproximadamente 85.000 bytes são tratados como objetos grandes pelo coletor de lixo, são diretamente alocados em um heap especial e não são promovidos através das gerações. Esse contador é atualizado no final de uma coleta de lixo e não em cada alocação.|  
-|**ID do Processo**|Exibe a ID do processo da instância do processo CLR que está sendo monitorada.|  
+|**Tamanho de heap de Objeto Grande**|Exibe o tamanho atual, em bytes, do heap de objeto grande. Objetos maiores que aproximadamente 85.000 bytes são tratados como objetos grandes pelo coletor de lixo e são diretamente alocados em um heap especial. Eles não são promovidos por meio das gerações. Esse contador é atualizado no final de uma coleta de lixo e não em cada alocação.|  
+|{1&gt;ID do Processo&lt;1}|Exibe a ID do processo da instância do processo CLR que está sendo monitorada.|  
 |**Finalização Promovida – Memória da Geração 0**|Exibe os bytes de memória que são promovidos da geração 0 para a geração 1 apenas porque estão aguardando a finalização. Esse contador não é cumulativo. ele exibe o valor observado no fim da última coleta de lixo.|  
 |**Memória Promovida da Geração 0**|Exibe os bytes de memória que sobrevivem à coleta de lixo e são promovidos da geração 0 para a geração 1. Objetos que são promovidos apenas porque estão aguardando a finalização não são incluídos nesse contador. Esse contador não é cumulativo. ele exibe o valor observado no fim da última coleta de lixo.|  
 |**Memória Promovida da Geração 1**|Exibe os bytes de memória que sobrevivem à coleta de lixo e são promovidos da geração 1 para a geração 2. Objetos que são promovidos apenas porque estão aguardando a finalização não são incluídos nesse contador. Esse contador não é cumulativo. ele exibe o valor observado no fim da última coleta de lixo. Esse contador é redefinido como 0 se a última coleta de lixo foi apenas de geração 0.|  
-  
-<a name="networking"></a>   
+     
 ## <a name="networking-performance-counters"></a>Contadores de desempenho de rede  
- A categoria Rede do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre dados que um aplicativo envia e recebe pela rede. A tabela a seguir descreve esses contadores de desempenho.  
+
+A categoria Rede do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre dados que um aplicativo envia e recebe pela rede. A tabela a seguir descreve esses contadores de desempenho.  
   
 |Contador de desempenho|Descrição|  
 |-------------------------|-----------------|  
@@ -167,7 +146,7 @@ Este tópico fornece uma lista de contadores de desempenho que você pode encont
   
 - Contadores por intervalo que medem o número de objetos que estão fazendo uma determinada transição por intervalo (normalmente por segundo).  
   
- Os contadores de desempenho de rede para eventos incluem o seguinte:  
+Os contadores de desempenho de rede para eventos incluem o seguinte:  
   
 - **Conexões estabelecidas**  
   
@@ -236,8 +215,7 @@ for (int i = 0; i < Array.Length; i++)
 - "Rede do .NET CLR 4.0.0.0" – todos os contadores de soquete acima mais os novos contadores de desempenho com suporte no .NET Framework Versão 4 e posteriores. Esses novos contadores fornecem informações de desempenho sobre objetos <xref:System.Net.HttpWebRequest>.  
   
  Para obter mais informações sobre como acessar e gerenciar os contadores de desempenho em um aplicativo, consulte [Contadores de desempenho](performance-counters.md).  
-  
-<a name="security"></a>   
+    
 ## <a name="security-performance-counters"></a>Contadores de desempenho de segurança  
  A categoria de Segurança do .NET CLR do Console de desempenho inclui contadores que fornecem informações sobre as verificações de segurança que o Common Language Runtime executa para um aplicativo. A tabela a seguir descreve esses contadores de desempenho.  
   
@@ -247,9 +225,9 @@ for (int i = 0; i < Array.Length; i++)
 |**% de tempo de verificações de RT**|Exibe o percentual do tempo decorrido que foi utilizado executando verificações de segurança de acesso do código de runtime desde a última amostra. Esse contador é atualizado no final de uma verificação de segurança do .NET Framework. Ele não é uma média; ele representa o último valor observado.|  
 |**% de tempo em autenticação de assinatura**|Reservado para uso futuro.|  
 |**Extensão do exame da pilha**|Exibe a profundidade da pilha durante essa última verificação de segurança de acesso do código de runtime. Verificações de segurança de acesso do código de runtime são realizadas movimentando a pilha. Esse contador não é uma média, ele exibe apenas o último valor observado.|  
-|**Verificações de tempo de execução total**|Exibe o número total de verificações de segurança de acesso do código de runtime realizadas desde que o aplicativo foi iniciado. Verificações de segurança de acesso de código de runtime são realizadas quando um chamador requer uma permissão específica. A verificação de runtime é feita em cada chamada pelo chamador e examina a pilha do thread atual do chamador. Quando usado com o contador **Extensão do exame da pilha**, esse contador indica a penalidade de desempenho que ocorre para verificações de segurança.|  
+|**Verificações de runtime total**|Exibe o número total de verificações de segurança de acesso do código de runtime realizadas desde que o aplicativo foi iniciado. Verificações de segurança de acesso de código de runtime são realizadas quando um chamador requer uma permissão específica. A verificação de runtime é feita em cada chamada pelo chamador e examina a pilha do thread atual do chamador. Quando usado com o contador **Extensão do exame da pilha**, esse contador indica a penalidade de desempenho que ocorre para verificações de segurança.|  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Contadores de desempenho](performance-counters.md)
-- [Criação de perfil do tempo de execução](runtime-profiling.md)
+- [Criação de perfil do runtime](runtime-profiling.md)

@@ -1,0 +1,113 @@
+### YamlMime:Landing
+title: C#sobre
+summary: Saiba como escrever qualquer aplicativo usando a C# linguagem de programação na plataforma .net.
+metadata:
+  title: C#Docs-introdução, tutoriais, referência.
+  description: Aprenda C# sobre programação – para desenvolvedores iniciantes, desenvolvedores novos C#e experientes C# /desenvolvedores .net
+  ms.topic: landing-page
+  author: billwagner
+  ms.author: wiwagn
+  ms.date: 11/19/2019
+  ms.openlocfilehash: 5af88b8a75ecd3cfca7c93b08cb262f161498903
+  ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+  ms.translationtype: MT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 11/21/2019
+  ms.locfileid: "74284013"
+landingContent:
+- title: Aprenda a programar emC#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Online, Olá, mundo interativo
+      url: tutorials/intro-to-csharp/hello-world.yml
+    - text: Matemática e números emC#
+      url: tutorials/intro-to-csharp/numbers-in-csharp.yml
+    - text: TUTORIAIS introdutórios
+      url: tutorials/intro-to-csharp/index.md
+    - text: Criar C# aplicativos com o Visual Studio
+      url: https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-console
+  - linkListType: video
+    links:
+    - text: O que é C#?
+      url: https://channel9.msdn.com/Series/CSharp-101/What-is-C/player
+    - text: C#série de vídeos 101
+      url: https://aka.ms/dotnet3-csharp
+  - linkListType: download
+    links:
+    - text: Baixar o SDK do .NET Core
+      url: https://dotnet.microsoft.com/download
+- title: C#conceitos básicos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Um tour peloC#
+      url: tour-of-csharp/index.md
+    - text: Por dentro de um programa em C#
+      url: programming-guide/inside-a-program/index.md
+    - text: Main() e argumentos de linha de comando
+      url: programming-guide/main-and-command-args/index.md
+  - linkListType: concept
+    links:
+    - text: O C# e o sistema de tipos .net
+      url: programming-guide/types/index.md
+    - text: LINQ (Consulta Integrada à Linguagem)
+      url: linq/index.md
+    - text: Async e Await
+      url: programming-guide/concepts/async/index.md
+  - linkListType: tutorial
+    links:
+    - text: Herança orientada a objeto
+      url: tutorials/inheritance.md
+    - text: Usar o LINQ para consultar dados
+      url: tutorials/working-with-linq.md
+    - text: Formatar texto usando interpolação de cadeia de caracteres
+      url: tutorials/string-interpolation.md
+    - text: Procurar todos os tutoriais
+      url: tutorials/index.md
+- title: Novos recursos no C# 8,0
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Novidades no C# 8.0
+      url: whats-new/csharp-8.md
+  - linkListType: overview
+    links:
+    - text: Correspondência de padrões
+      url: pattern-matching.md
+    - text: Tipos de referência anuláveis
+      url: nullable-references.md
+  - linkListType: concept
+    links:
+    - text: Anotar APIs para nulidade
+      url: nullable-attributes.md
+  - linkListType: tutorial
+    links:
+    - text: Consumir e gerar fluxos assíncronos
+      url: tutorials/generate-consume-asynchronous-stream.md
+    - text: Desenvolver com tipos de referência anuláveis
+      url: tutorials/nullable-reference-types.md
+    - text: Atualizar o código existente para usar tipos de referência anuláveis
+      url: tutorials/upgrade-to-nullable-references.md
+    - text: Usar correspondência de padrão para algoritmos mais expressivos
+      url: tutorials/pattern-matching.md
+    - text: Interfaces de versão com segurança com membros de interface padrão
+      url: tutorials/default-interface-methods-versions.md
+    - text: Misturar em funcionalidade com membros de interface padrão
+      url: tutorials/mixins-with-default-interface-methods.md
+    - text: Trabalhar com subconjuntos usando intervalos e índices
+      url: tutorials/ranges-indexes.md
+- title: Referência da linguagem C#
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Referência de linguagem
+      url: language-reference/index.md
+    - text: Palavras-chave de C#
+      url: language-reference/keywords/index.md
+    - text: Operadores C#
+      url: language-reference/operators/index.md
+    - text: Configurar versão da linguagem
+      url: language-reference/configure-language-version.md
+    - text: especificação da linguagem C#
+      url: ../../_csharplang/spec/introduction.md

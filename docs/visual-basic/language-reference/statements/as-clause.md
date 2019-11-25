@@ -1,5 +1,5 @@
 ---
-title: Cláusula As (Visual Basic)
+title: Cláusula As
 ms.date: 07/20/2015
 f1_keywords:
 - vb.as
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 4b0ebbb6a86cc2c71882427afd33e7d9e0fe7a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf1acbfeee150f1ea353ce134a4e94dab9928e8a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945087"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350168"
 ---
 # <a name="as-clause-visual-basic"></a>Cláusula As (Visual Basic)
-Apresenta um `As` cláusula, que identifica um tipo de dados em uma instrução de declaração ou uma lista de restrição em um parâmetro de tipo genérico.  
+Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
   
 ## <a name="remarks"></a>Comentários  
- O `As` palavra-chave pode ser usada nesses contextos:  
+ The `As` keyword can be used in these contexts:  
   
  [Cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -37,9 +37,9 @@ Apresenta um `As` cláusula, que identifica um tipo de dados em uma instrução 
   
  [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [Para... Próximas instruções](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [Para cada um... Próximas instruções](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,11 +57,11 @@ Apresenta um `As` cláusula, que identifica um tipo de dados em uma instrução 
   
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try... Catch... Instruções finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Criar uma nova variável](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+- [Como criar uma nova variável](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [Tipos de Dados](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Declaração de Variável](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strong-named assemblies, signing files
 - key pairs for signing files
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
-ms.openlocfilehash: dc9b8beafe1b174543afaf9da7e7180638d561ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 90cad6529b3ac2a8afedaca0c43d5c7561dcf9e6
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104350"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138968"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (Ferramenta de Nome Forte)
 A ferramenta Nome Forte (Sn.exe) ajuda a assinar assemblies com [nomes fortes](../../standard/assembly/strong-named.md). Sn.exe oferece opções para o gerenciamento de chaves, geração de assinaturas e verificação de assinaturas.  
@@ -55,7 +55,7 @@ sn [-quiet][option [parameter(s)]]
 |`-o infile [outfile]`|Extrai a chave pública do *infile* e a armazena em um arquivo .csv. Uma vírgula separa cada byte da chave pública. Esse formato é útil para referências codificadas para chaves como matrizes inicializadas no código-fonte. Se você não especificar um *outfile*, essa opção colocará a saída na Área de Transferência. **Observação:** essa opção não verifica se a entrada é somente uma chave pública. Se o `infile` contiver um par de chaves com uma chave privada, a chave privada também será extraída.|  
 |`-p infile outfile [hashalg]`|Extrai a chave pública do par de chaves em *infile* e a armazena em *outfile*. Outra opção é usar o algoritmo RSA especificado por *hashalg*. Essa chave pública pode ser usada para assinar com atraso um assembly usando as opções **/delaysign+** e **/keyfile** do [Vinculador de Assembly (Al.exe)](al-exe-assembly-linker.md). Quando um assembly é assinado com atraso, somente a chave pública é definida no tempo de compilação e o espaço é reservado no arquivo para a assinatura a ser adicionada posteriormente, quando o chave privada será conhecida.|  
 |`-pc container outfile [hashalg]`|Extrai a chave pública do par de chaves no *contêiner* e a armazena em *outfile*. Se você usar a opção *hashalg*, o algoritmo RSA será usado para extrair a chave pública.|  
-|`-Pb [y &#124; n]`|Especifica se a política de bypass de nome forte é imposta. Se você especificar *y*, os nomes fortes de assemblies de confiança total não serão validados em um <xref:System.AppDomain> de confiança total. Se você especificar *n*, a correção dos nomes fortes será validada, mas não para um nome forte específico. O <xref:System.Security.Permissions.StrongNameIdentityPermission> não tem efeito sobre assemblies de confiança total. Você deve realizar sua própria verificação de uma correspondência de nome forte.<br /><br /> Se nem `y` nem `n` for especificado, essa opção exibirá a configuração atual. O padrão é `y`. **Observação:** em computadores 64 bits, você deve definir esse parâmetro nas instâncias de 32 e 64 bits de Sn.exe.|  
+|`-Pb [y|n]`|Especifica se a política de bypass de nome forte é imposta. Se você especificar *y*, os nomes fortes de assemblies de confiança total não serão validados em um <xref:System.AppDomain> de confiança total. Se você especificar *n*, a correção dos nomes fortes será validada, mas não para um nome forte específico. O <xref:System.Security.Permissions.StrongNameIdentityPermission> não tem efeito sobre assemblies de confiança total. Você deve realizar sua própria verificação de uma correspondência de nome forte.<br /><br /> Se nem `y` nem `n` for especificado, essa opção exibirá a configuração atual. O padrão é `y`. **Observação:** em computadores 64 bits, você deve definir esse parâmetro nas instâncias de 32 e 64 bits de Sn.exe.|  
 |`-q[uiet]`|Especifica o modo silencioso; suprime a exibição de mensagens com êxito.|  
 |`-R[a] assembly infile`|Assina novamente um assembly assinado anteriormente ou com atraso usando o par de chaves em *infile*.<br /><br /> Se **-Ra** for usado, os hashes serão recomputados para todos os arquivos no assembly.|  
 |`-Rc[a] assembly container`|Assina novamente um assembly assinado anteriormente ou com atraso usando o par de chaves em *container*.<br /><br /> Se **-Rca** for usado, os hashes serão recomputados para todos os arquivos no assembly.|  

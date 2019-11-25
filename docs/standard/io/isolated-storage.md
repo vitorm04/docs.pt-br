@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df5601fb0dbf088bd28da91f7279a330f2bb3494
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170692"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204787"
 ---
 # <a name="isolated-storage"></a>Armazenamentos isolado
 <a name="top"></a> Para aplicativos desktop, o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.
 
 > [!IMPORTANT]
-> O armazenamento isolado não está disponível para aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.
+> Isolated storage is not available for Windows 8.x Store apps. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.
 
 Esse tópico contém as seguintes seções:
 
@@ -87,7 +87,7 @@ Para controlar o acesso ao armazenamento isolado, o Common Language Runtime util
 
 - Cota de armazenamento, conforme descrito na seção anterior.
 
-O tempo de execução exige a permissão <xref:System.Security.Permissions.IsolatedStorageFilePermission> quando o código tenta abrir um repositório pela primeira vez. Ele decide se essa permissão será concedida com base em quanto do código é confiável. Se a permissão é concedida, os valores de cota de armazenamento e de utilização permitida são determinados por política de segurança e pela solicitação do código para <xref:System.Security.Permissions.IsolatedStorageFilePermission>. A política de segurança é definida com o auxílio da .NET Framework Configuration Tool (Mscorcfg.msc). Todos os chamadores na pilha de chamadas são verificados para garantir que cada chamador tenha pelo menos a utilização permitida apropriada. O tempo de execução também verifica a cota imposta no código que abriu ou criou o depósito no qual o arquivo será salvo. Se essas condições forem atendidas, a permissão será concedida. A cota é verificada novamente sempre que um arquivo é gravado no repositório.
+O runtime exige a permissão <xref:System.Security.Permissions.IsolatedStorageFilePermission> quando o código tenta abrir um repositório pela primeira vez. Ele decide se essa permissão será concedida com base em quanto do código é confiável. Se a permissão é concedida, os valores de cota de armazenamento e de utilização permitida são determinados por política de segurança e pela solicitação do código para <xref:System.Security.Permissions.IsolatedStorageFilePermission>. A política de segurança é definida com o auxílio da .NET Framework Configuration Tool (Mscorcfg.msc). Todos os chamadores na pilha de chamadas são verificados para garantir que cada chamador tenha pelo menos a utilização permitida apropriada. O runtime também verifica a cota imposta no código que abriu ou criou o depósito no qual o arquivo será salvo. Se essas condições forem atendidas, a permissão será concedida. A cota é verificada novamente sempre que um arquivo é gravado no repositório.
 
 O código do aplicativo não é obrigado a solicitar permissão porque o Common Language Runtime concederá qualquer <xref:System.Security.Permissions.IsolatedStorageFilePermission> apropriada com base na política de segurança. No entanto, existem bons motivos para solicitar as permissões específicas de que seu aplicativo necessita, incluindo <xref:System.Security.Permissions.IsolatedStorageFilePermission>.
 
@@ -164,17 +164,17 @@ Muitos aplicativos usam bancos de dados para armazenar e isolar os dados. Nesse 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|DESCRIÇÃO|
+|Título|Descrição|
 |-----------|-----------------|
 |[Tipos de isolamento](../../../docs/standard/io/types-of-isolation.md)|Descreve os diferentes tipos de isolamento.|
-|[Como: Obter repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Fornece um exemplo de uso da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obter um armazenamento isolado por usuário e assembly.|
-|[Como: Enumerar repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Mostra como usar o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> para calcular o tamanho de todo o armazenamento isolado para o usuário.|
-|[Como: Excluir repositórios no armazenamento isolado](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Mostra como usar o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> de duas maneiras diferentes para excluir repositórios isolados.|
-|[Como: Prever condições de espaço insuficiente com o armazenamento isolado](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Mostra como a medir o espaço restante em um armazenamento isolado.|
-|[Como: Criar arquivos e diretórios no armazenamento isolado](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Fornece alguns exemplos de criação de arquivos e diretórios em um repositório isolado.|
-|[Como: Localizar arquivos e diretórios existentes no armazenamento isolado](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Demonstra como ler a estrutura de diretórios e arquivos no armazenamento isolado.|
-|[Como: Ler e gravar em arquivos no armazenamento isolado](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Fornece um exemplo de gravação de uma cadeia de caracteres em um arquivo de armazenamento isolado, seguida por sua leitura de volta.|
-|[Como: Excluir arquivos e diretórios no armazenamento isolado](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Demonstra como excluir arquivos e diretórios isolados.|
+|[Como obter repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Fornece um exemplo de uso da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obter um armazenamento isolado por usuário e assembly.|
+|[Como enumerar repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Mostra como usar o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> para calcular o tamanho de todo o armazenamento isolado para o usuário.|
+|[Como excluir repositórios no armazenamento isolado](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Mostra como usar o método <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> de duas maneiras diferentes para excluir repositórios isolados.|
+|[Como prever condições de espaço insuficiente com o armazenamento isolado](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Mostra como a medir o espaço restante em um armazenamento isolado.|
+|[Como criar arquivos e diretórios no armazenamento isolado](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Fornece alguns exemplos de criação de arquivos e diretórios em um repositório isolado.|
+|[Como localizar arquivos e diretórios existentes no armazenamento isolado](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Demonstra como ler a estrutura de diretórios e arquivos no armazenamento isolado.|
+|[Como ler e gravar em arquivos no armazenamento isolado](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Fornece um exemplo de gravação de uma cadeia de caracteres em um arquivo de armazenamento isolado, seguida por sua leitura de volta.|
+|[Como excluir arquivos e diretórios no armazenamento isolado](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Demonstra como excluir arquivos e diretórios isolados.|
 |[E/S de arquivo e de fluxo](../../../docs/standard/io/index.md)|Explica como você pode executar acesso síncrono e assíncrono a fluxos de dados e arquivos.|
 
 <a name="reference"></a>
