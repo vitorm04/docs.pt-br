@@ -1,5 +1,5 @@
 ---
-title: Cláusula Implements (Visual Basic)
+title: Cláusula Implements
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ImplementsClause
@@ -17,37 +17,37 @@ helpviewer_keywords:
 - members [Visual Basic], Implements keyword
 - reimplementation
 ms.assetid: 5252cdf9-964d-4fc6-af0f-0449b7126b5a
-ms.openlocfilehash: dcd20f21a989c327dcfcf27d5638d500b6e4b6da
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: f114aee75356e59eafd9d3ba6af9c64402cb374f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929311"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345869"
 ---
-# <a name="implements-clause-visual-basic"></a><span data-ttu-id="33aef-102">Cláusula Implements (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="33aef-102">Implements Clause (Visual Basic)</span></span>
-<span data-ttu-id="33aef-103">Indica que um membro de classe ou estrutura está fornecendo a implementação para um membro definido em uma interface.</span><span class="sxs-lookup"><span data-stu-id="33aef-103">Indicates that a class or structure member is providing the implementation for a member defined in an interface.</span></span>  
+# <a name="implements-clause-visual-basic"></a><span data-ttu-id="31e69-102">Cláusula Implements (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="31e69-102">Implements Clause (Visual Basic)</span></span>
+<span data-ttu-id="31e69-103">Indicates that a class or structure member is providing the implementation for a member defined in an interface.</span><span class="sxs-lookup"><span data-stu-id="31e69-103">Indicates that a class or structure member is providing the implementation for a member defined in an interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="33aef-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="33aef-104">Remarks</span></span>  
-<span data-ttu-id="33aef-105">A `Implements` palavra-chave não é a mesma que a [instrução Implements](../../../visual-basic/language-reference/statements/implements-statement.md).</span><span class="sxs-lookup"><span data-stu-id="33aef-105">The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span> <span data-ttu-id="33aef-106">Você usa a `Implements` instrução para especificar que uma classe ou estrutura implementa uma ou mais interfaces e, em seguida, para cada membro, `Implements` você usa a palavra-chave para especificar qual interface e qual membro ele implementa.</span><span class="sxs-lookup"><span data-stu-id="33aef-106">You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.</span></span>
+## <a name="remarks"></a><span data-ttu-id="31e69-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="31e69-104">Remarks</span></span>  
+<span data-ttu-id="31e69-105">The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span><span class="sxs-lookup"><span data-stu-id="31e69-105">The `Implements` keyword is not the same as the [Implements Statement](../../../visual-basic/language-reference/statements/implements-statement.md).</span></span> <span data-ttu-id="31e69-106">You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.</span><span class="sxs-lookup"><span data-stu-id="31e69-106">You use the `Implements` statement to specify that a class or structure implements one or more interfaces, and then for each member you use the `Implements` keyword to specify which interface and which member it implements.</span></span>
 
-<span data-ttu-id="33aef-107">Se uma classe ou estrutura implementa uma interface, ela deve incluir a `Implements` instrução imediatamente após a [instrução de classe](../../../visual-basic/language-reference/statements/class-statement.md) ou a [instrução de estrutura](../../../visual-basic/language-reference/statements/structure-statement.md)e deve implementar todos os membros definidos pela interface.</span><span class="sxs-lookup"><span data-stu-id="33aef-107">If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.</span></span>
+<span data-ttu-id="31e69-107">If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.</span><span class="sxs-lookup"><span data-stu-id="31e69-107">If a class or structure implements an interface, it must include the `Implements` statement immediately after the [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) or [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md), and it must implement all the members defined by the interface.</span></span>
 
-## <a name="reimplementation"></a><span data-ttu-id="33aef-108">Reimplementação</span><span class="sxs-lookup"><span data-stu-id="33aef-108">Reimplementation</span></span>  
-<span data-ttu-id="33aef-109">Em uma classe derivada, você pode reimplementar um membro de interface que a classe base já tenha implementado.</span><span class="sxs-lookup"><span data-stu-id="33aef-109">In a derived class, you can reimplement an interface member that the base class has already implemented.</span></span> <span data-ttu-id="33aef-110">Isso é diferente de substituir o membro da classe base nos seguintes aspectos:</span><span class="sxs-lookup"><span data-stu-id="33aef-110">This is different from overriding the base class member in the following respects:</span></span>
+## <a name="reimplementation"></a><span data-ttu-id="31e69-108">Reimplementation</span><span class="sxs-lookup"><span data-stu-id="31e69-108">Reimplementation</span></span>  
+<span data-ttu-id="31e69-109">In a derived class, you can reimplement an interface member that the base class has already implemented.</span><span class="sxs-lookup"><span data-stu-id="31e69-109">In a derived class, you can reimplement an interface member that the base class has already implemented.</span></span> <span data-ttu-id="31e69-110">This is different from overriding the base class member in the following respects:</span><span class="sxs-lookup"><span data-stu-id="31e69-110">This is different from overriding the base class member in the following respects:</span></span>
 
-- <span data-ttu-id="33aef-111">O membro da classe base não precisa ser [substituível](../../../visual-basic/language-reference/modifiers/overridable.md) para ser reimplementado.</span><span class="sxs-lookup"><span data-stu-id="33aef-111">The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.</span></span>
-- <span data-ttu-id="33aef-112">Você pode reimplementar o membro com um nome diferente.</span><span class="sxs-lookup"><span data-stu-id="33aef-112">You can reimplement the member with a different name.</span></span>
+- <span data-ttu-id="31e69-111">The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.</span><span class="sxs-lookup"><span data-stu-id="31e69-111">The base class member does not need to be [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) to be reimplemented.</span></span>
+- <span data-ttu-id="31e69-112">You can reimplement the member with a different name.</span><span class="sxs-lookup"><span data-stu-id="31e69-112">You can reimplement the member with a different name.</span></span>
 
-<span data-ttu-id="33aef-113">A `Implements` palavra-chave pode ser usada nos seguintes contextos:</span><span class="sxs-lookup"><span data-stu-id="33aef-113">The `Implements` keyword can be used in the following contexts:</span></span>
+<span data-ttu-id="31e69-113">The `Implements` keyword can be used in the following contexts:</span><span class="sxs-lookup"><span data-stu-id="31e69-113">The `Implements` keyword can be used in the following contexts:</span></span>
 
-- [<span data-ttu-id="33aef-114">Instrução Event</span><span class="sxs-lookup"><span data-stu-id="33aef-114">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="33aef-115">Instrução Function</span><span class="sxs-lookup"><span data-stu-id="33aef-115">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
-- [<span data-ttu-id="33aef-116">Instrução Property</span><span class="sxs-lookup"><span data-stu-id="33aef-116">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
-- [<span data-ttu-id="33aef-117">Instrução Sub</span><span class="sxs-lookup"><span data-stu-id="33aef-117">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [<span data-ttu-id="31e69-114">Instrução Event</span><span class="sxs-lookup"><span data-stu-id="31e69-114">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="31e69-115">Instrução Function</span><span class="sxs-lookup"><span data-stu-id="31e69-115">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="31e69-116">Instrução Property</span><span class="sxs-lookup"><span data-stu-id="31e69-116">Property Statement</span></span>](../../../visual-basic/language-reference/statements/property-statement.md)
+- [<span data-ttu-id="31e69-117">Instrução Sub</span><span class="sxs-lookup"><span data-stu-id="31e69-117">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="33aef-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="33aef-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="31e69-118">Consulte também</span><span class="sxs-lookup"><span data-stu-id="31e69-118">See also</span></span>
 
-- [<span data-ttu-id="33aef-119">Instrução Implements</span><span class="sxs-lookup"><span data-stu-id="33aef-119">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [<span data-ttu-id="33aef-120">Instrução Interface</span><span class="sxs-lookup"><span data-stu-id="33aef-120">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [<span data-ttu-id="33aef-121">Instrução Class</span><span class="sxs-lookup"><span data-stu-id="33aef-121">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)
-- [<span data-ttu-id="33aef-122">Instrução Structure</span><span class="sxs-lookup"><span data-stu-id="33aef-122">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [<span data-ttu-id="31e69-119">Instrução Implements</span><span class="sxs-lookup"><span data-stu-id="31e69-119">Implements Statement</span></span>](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [<span data-ttu-id="31e69-120">Instrução Interface</span><span class="sxs-lookup"><span data-stu-id="31e69-120">Interface Statement</span></span>](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [<span data-ttu-id="31e69-121">Instrução Class</span><span class="sxs-lookup"><span data-stu-id="31e69-121">Class Statement</span></span>](../../../visual-basic/language-reference/statements/class-statement.md)
+- [<span data-ttu-id="31e69-122">Instrução Structure</span><span class="sxs-lookup"><span data-stu-id="31e69-122">Structure Statement</span></span>](../../../visual-basic/language-reference/statements/structure-statement.md)
