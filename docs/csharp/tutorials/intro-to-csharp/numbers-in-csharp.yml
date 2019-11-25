@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Loops e branches em C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 31647906dd3e1286220077831d2ce90b65a5b73c
-  ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+  ms.openlocfilehash: b417ba7ff340019c74b0c3430242f59d6217b07f
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/22/2019
-  ms.locfileid: "72774007"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969360"
 items:
 - durationInMinutes: 1
   content: >
@@ -24,7 +24,7 @@ items:
 - title: Explorar a matemática de inteiros
   durationInMinutes: 4
   content: >
-    Execute o seguinte código na janela interativa. Para fazer isso, digite o bloco de código a seguir na janela interativa e clique no botão **Executar**:
+    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa e selecione **executar**:
 
 
     ```csharp
@@ -58,7 +58,7 @@ items:
     > Explorar por conta própria todo o tutorial interativo, modificando o código que você escreveu na janela interativa. Este tutorial fornece exemplos para teste a cada etapa.
 
 
-    Comece explorando essas diferentes operações. Modifique a terceira linha para testar cada uma dessas operações. Após cada edição, clique no botão **Executar**.
+    Comece explorando essas diferentes operações. Modifique a terceira linha para testar cada uma dessas operações. Depois de cada edição, selecione o botão **executar** .
 
 
     Subtração:
@@ -181,7 +181,7 @@ items:
     ```
 
 
-    Clique em **Executar** novamente para ver os resultados.
+    Selecione **executar** novamente para ver os resultados.
 
 
     > [!NOTE]
@@ -415,7 +415,7 @@ items:
 
     > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
-    Você concluiu o tutorial interativo "Números em C#". Clique no link **Branches e loops** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando. A seção "próximas etapas" leva você de volta para esses tutoriais.
+    Você concluiu o tutorial interativo "Números em C#". Você pode selecionar o link **ramificações e loops** abaixo para iniciar o próximo tutorial interativo, ou pode visitar o [site do .net](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto em seu computador e manter a codificação. A seção "próximas etapas" leva você de volta para esses tutoriais.
 
 
     Saiba mais sobre os números em C# nos tópicos a seguir:

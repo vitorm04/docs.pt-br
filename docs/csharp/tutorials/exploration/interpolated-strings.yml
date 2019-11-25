@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c3c4927a4afbf69f2101aa2596389e6f94cea243
-  ms.sourcegitcommit: 4aeac5d588ded58246f58030919e56b70a7674e4
+  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/27/2019
-  ms.locfileid: "72966972"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969437"
 items:
 - durationInMinutes: 2
   content: >
@@ -22,7 +22,7 @@ items:
 - title: Criar uma cadeia de caracteres interpolada
   durationInMinutes: 2
   content: >
-    Execute o seguinte código na janela interativa. Para fazer isso, digite o código na janela interativa (substitua "`<name>`" por seu nome) e selecione **Executar**:
+    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa (substitua `<name>` pelo seu nome) e selecione **executar**:
 
 
     ```csharp

@@ -1,5 +1,5 @@
 ### YamlMime:Tutorial
-title: <span data-ttu-id="14c17-101">Saiba mais sobre lógica condicional com instruções branch e loop</span><span class="sxs-lookup"><span data-stu-id="14c17-101">Learn conditional logic with branch and loop statements</span></span>
+title: Saiba mais sobre lógica condicional com instruções branch e loop
 metadata:
   title: Tutorial interativo Branches e loops – introdução ao C#
   description: Neste tutorial sobre loops e branches, você usará seu navegador para aprender C# interativamente. Escreva o código em C# e veja os resultados da compilação e execução de seu código diretamente no navegador.
@@ -10,21 +10,21 @@ metadata:
   displayType: two-column
   interactive: csharp
   nextTutorialHref: list-collection.yml
-  nextTutorialTitle: <span data-ttu-id="14c17-105">A coleção de lista</span><span class="sxs-lookup"><span data-stu-id="14c17-105">The list collection</span></span>
-  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
-  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  nextTutorialTitle: A coleção de lista
+  ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 10/09/2019
-  ms.locfileid: "72179880"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969423"
 items:
 - durationInMinutes: 1
   content: >
-    <span data-ttu-id="14c17-106">Esse tutorial ensina a escrever código que examina variáveis e muda o caminho de execução com base nessas variáveis.</span><span class="sxs-lookup"><span data-stu-id="14c17-106">This tutorial teaches you how to write code that examines variables and changes execution path based on those variables.</span></span> <span data-ttu-id="14c17-107">Você usará seu navegador para escrever em C# interativamente e ver os resultados da compilação e da execução de seu código.</span><span class="sxs-lookup"><span data-stu-id="14c17-107">You'll use your browser to write C# interactively and see the results of compiling and running your code.</span></span> <span data-ttu-id="14c17-108">Este tutorial contém uma série de lições que exploram construções de branches e loops em C#.</span><span class="sxs-lookup"><span data-stu-id="14c17-108">This tutorial contains a series of lessons that explore branching and looping constructs in C#.</span></span> <span data-ttu-id="14c17-109">Estas lições ensinam os princípios básicos da linguagem C#.</span><span class="sxs-lookup"><span data-stu-id="14c17-109">These lessons teach you the fundamentals of the C# language.</span></span>
-- title: <span data-ttu-id="14c17-110">Tomar decisões usando a instrução if</span><span class="sxs-lookup"><span data-stu-id="14c17-110">Make decisions using the if statement</span></span>
+    Esse tutorial ensina a escrever código que examina variáveis e muda o caminho de execução com base nessas variáveis. Você usará seu navegador para escrever em C# interativamente e ver os resultados da compilação e da execução de seu código. Este tutorial contém uma série de lições que exploram construções de branches e loops em C#. Estas lições ensinam os princípios básicos da linguagem C#.
+- title: Tomar decisões usando a instrução if
   durationInMinutes: 4
   content: >
-    <span data-ttu-id="14c17-111">Execute o seguinte código na janela interativa.</span><span class="sxs-lookup"><span data-stu-id="14c17-111">Run the following code in the interactive window.</span></span> <span data-ttu-id="14c17-112">Para fazer isso, digite o bloco de código a seguir na janela interativa e clique no botão **Executar**:</span><span class="sxs-lookup"><span data-stu-id="14c17-112">To do that, type the following code block in the interactive window and click the **Run** button:</span></span>
+    Execute o seguinte código na janela interativa. Selecione o botão **entrar no modo de foco** . Em seguida, digite o seguinte bloco de código na janela interativa e selecione **executar**:
 
 
     ```csharp
@@ -38,10 +38,10 @@ items:
     ```
 
 
-    <span data-ttu-id="14c17-113">Se você estiver executando isso em seu ambiente, deverá seguir as instruções para a [versão local](branches-and-loops-local.md) em vez disso.</span><span class="sxs-lookup"><span data-stu-id="14c17-113">If you are running this on your environment, you should follow the instructions for the [local version](branches-and-loops-local.md) instead.</span></span>
+    Se você estiver executando isso em seu ambiente, deverá seguir as instruções para a [versão local](branches-and-loops-local.md) em vez disso.
 
 
-    <span data-ttu-id="14c17-114">Modifique a declaração de `b` para que a soma seja inferior a 10:</span><span class="sxs-lookup"><span data-stu-id="14c17-114">Modify the declaration of `b` so that the sum is less than 10:</span></span>
+    Modifique a declaração de `b` para que a soma seja inferior a 10:
 
 
     ```csharp
@@ -51,32 +51,32 @@ items:
     ```
 
 
-    <span data-ttu-id="14c17-115">Clique no botão **Executar** novamente.</span><span class="sxs-lookup"><span data-stu-id="14c17-115">Click the **Run** button again.</span></span> <span data-ttu-id="14c17-116">Como a resposta é inferior a 10, nada é impresso.</span><span class="sxs-lookup"><span data-stu-id="14c17-116">Because the answer is less than 10, nothing is printed.</span></span> <span data-ttu-id="14c17-117">A **condição** que você está testando é falsa.</span><span class="sxs-lookup"><span data-stu-id="14c17-117">The **condition** you're testing is false.</span></span> <span data-ttu-id="14c17-118">Não há qualquer código para execução, porque você escreveu apenas uma das ramificações possíveis para uma instrução `if`: a ramificação verdadeira.</span><span class="sxs-lookup"><span data-stu-id="14c17-118">You don't have any code to execute because you've only written one of the possible branches for an `if` statement: the true branch.</span></span>
+    Selecione o botão **executar** novamente. Como a resposta é inferior a 10, nada é impresso. A **condição** que você está testando é falsa. Não há qualquer código para execução, porque você escreveu apenas uma das ramificações possíveis para uma instrução `if`: a ramificação verdadeira.
 
 
     > [!TIP]
 
-    > <span data-ttu-id="14c17-119">À medida que explora C# (ou qualquer linguagem de programação), você cometerá erros ao escrever o código.</span><span class="sxs-lookup"><span data-stu-id="14c17-119">As you explore C# (or any programming language), you'll make mistakes when you write code.</span></span> <span data-ttu-id="14c17-120">O **compilador** encontrará esses erros e os reportará a você.</span><span class="sxs-lookup"><span data-stu-id="14c17-120">The **compiler** will find those errors and report them to you.</span></span> <span data-ttu-id="14c17-121">Quando a saída contiver mensagens de erro, analise atentamente o código de exemplo e o código na janela interativa para ver o que deve ser corrigido.</span><span class="sxs-lookup"><span data-stu-id="14c17-121">When the output contains error messages, look closely at the example code, and the code in the interactive window to see what to fix.</span></span>
+    > À medida que explora C# (ou qualquer linguagem de programação), você cometerá erros ao escrever o código. O **compilador** encontrará esses erros e os reportará a você. Quando a saída contiver mensagens de erro, analise atentamente o código de exemplo e o código na janela interativa para ver o que deve ser corrigido.
 
-    > <span data-ttu-id="14c17-122">Esse exercício ajudará você a conhecer a estrutura do código C#.</span><span class="sxs-lookup"><span data-stu-id="14c17-122">That exercise will help you learn the structure of C# code.</span></span>
-
-
-    <span data-ttu-id="14c17-123">Este primeiro exemplo mostra o poder do `if` e dos tipos boolianos.</span><span class="sxs-lookup"><span data-stu-id="14c17-123">This first sample shows the power of `if` and boolean types.</span></span> <span data-ttu-id="14c17-124">Um *booliano* é uma variável que pode ter um dos dois valores: `true` ou `false`.</span><span class="sxs-lookup"><span data-stu-id="14c17-124">A *boolean* is a variable that can have one of two values: `true` or `false`.</span></span> <span data-ttu-id="14c17-125">C# define um tipo especial, `bool` para variáveis boolianas.</span><span class="sxs-lookup"><span data-stu-id="14c17-125">C# defines a special type, `bool` for boolean variables.</span></span> <span data-ttu-id="14c17-126">A instrução `if` verifica o valor de um `bool`.</span><span class="sxs-lookup"><span data-stu-id="14c17-126">The `if` statement checks the value of a `bool`.</span></span> <span data-ttu-id="14c17-127">Quando o valor é `true`, a instrução após `if` é executada.</span><span class="sxs-lookup"><span data-stu-id="14c17-127">When the value is `true`, the statement following the `if` executes.</span></span> <span data-ttu-id="14c17-128">Caso contrário, é ignorada.</span><span class="sxs-lookup"><span data-stu-id="14c17-128">Otherwise, it is skipped.</span></span>
+    > Esse exercício ajudará você a conhecer a estrutura do código C#.
 
 
-    <span data-ttu-id="14c17-129">Esse processo de verificação de condições e execução de instruções com base nessas condições é muito eficiente.</span><span class="sxs-lookup"><span data-stu-id="14c17-129">This process of checking conditions and executing statements based on those conditions is very powerful.</span></span> <span data-ttu-id="14c17-130">Vamos explorar mais.</span><span class="sxs-lookup"><span data-stu-id="14c17-130">Let's explore more.</span></span>
+    Este primeiro exemplo mostra o poder do `if` e dos tipos boolianos. Um *booliano* é uma variável que pode ter um dos dois valores: `true` ou `false`. C# define um tipo especial, `bool` para variáveis boolianas. A instrução `if` verifica o valor de um `bool`. Quando o valor é `true`, a instrução após `if` é executada. Caso contrário, é ignorada.
+
+
+    Esse processo de verificação de condições e execução de instruções com base nessas condições é muito eficiente. Vamos explorar mais.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="14c17-131">Esta experiência de codificação online está em versão prévia.</span><span class="sxs-lookup"><span data-stu-id="14c17-131">This online coding experience is in preview mode.</span></span> <span data-ttu-id="14c17-132">Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="14c17-132">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="14c17-133">Faça if e else funcionam juntas</span><span class="sxs-lookup"><span data-stu-id="14c17-133">Make if and else work together</span></span>
+    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
+- title: Faça if e else funcionam juntas
   durationInMinutes: 10
-  content: "\n<span data-ttu-id=\"14c17-134\">Para executar um código diferente nos branches true e false, crie um branch `else` que será executado quando a condição for false.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-134\">To execute different code in both the true and false branches, you create an `else` branch that executes when the condition is false.</span></span> <span data-ttu-id=\"14c17-135\">Experimente isto:</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-135\">Try this:</span></span>\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n<span data-ttu-id=\"14c17-136\">A instrução após a palavra-chave `else` é executada somente quando a condição que estiver sendo testada for `false`.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-136\">The statement following the `else` keyword executes only when the condition being tested is `false`.</span></span> <span data-ttu-id=\"14c17-137\">A combinação de `if` e `else` com condições boolianas fornece todos os recursos que você precisa.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-137\">Combining `if` and `else` with boolean conditions provides all the power you need.</span></span>\n\n> [!IMPORTANT]\n> <span data-ttu-id=\"14c17-138\">O recuo sob as instruções `if` e `else` é para leitores humanos.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-138\">The indentation under the `if` and `else` statements is for human readers.</span></span>\n> <span data-ttu-id=\"14c17-139\">A linguagem C# não considera recuos ou espaços em branco como significativos.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-139\">The C# language doesn't treat indentation or white space as significant.</span></span>\n> <span data-ttu-id=\"14c17-140\">A instrução após a palavra-chave `if` ou `else` será executada com base na condição.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-140\">The statement following the `if` or `else` keyword will be executed based on the condition.</span></span> <span data-ttu-id=\"14c17-141\">Todos os exemplos neste tutorial seguem uma prática comum para recuar linhas com base no fluxo de controle de instruções.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-141\">All the samples in this tutorial follow a common practice to indent lines based on the control flow of statements.</span></span>\n\n<span data-ttu-id=\"14c17-142\">Como o recuo não é significativo, você precisa usar `{` e `}` para indicar quando você quer que mais de uma instrução faça parte do bloco executado condicionalmente.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-142\">Because indentation is not significant, you need to use `{` and `}` to indicate when you want more than one statement to be part of the block that executes conditionally.</span></span> <span data-ttu-id=\"14c17-143\">Os programadores em C# normalmente usam essas chaves em todas as cláusulas `if` e `else`.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-143\">C# programmers typically use those braces on all `if` and `else` clauses.</span></span> <span data-ttu-id=\"14c17-144\">O exemplo a seguir é igual ao que você acabou de criar.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-144\">The following example is the same as what you just created.</span></span> <span data-ttu-id=\"14c17-145\">Experimente.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-145\">Try it.</span></span>\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> <span data-ttu-id=\"14c17-146\">No restante deste tutorial, todos os exemplos de código incluem as chaves, seguindo as práticas aceitas.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-146\">Through the rest of this tutorial, the code samples all include the braces, following accepted practices.</span></span>\n\n<span data-ttu-id=\"14c17-147\">Você pode testar condições mais complicadas:</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-147\">You can test more complicated conditions:</span></span>\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n<span data-ttu-id=\"14c17-148\">O símbolo `==` testa a *igualdade*.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-148\">The `==` symbol tests for *equality*.</span></span> <span data-ttu-id=\"14c17-149\">Usar `==` distingue o teste de igualdade de atribuição, que você viu em `a = 5`.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-149\">Using `==` distinguishes the test for equality from assignment, which you saw in `a = 5`.</span></span>\n\n<span data-ttu-id=\"14c17-150\">O `&&` representa \"e\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-150\">The `&&` represents \"and\".</span></span> <span data-ttu-id=\"14c17-151\">Isso significa que as duas condições devem ser verdadeiras para executar a instrução no branch verdadeiro.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-151\">It means both conditions must be true to execute the statement in the true branch.</span></span>  <span data-ttu-id=\"14c17-152\">Estes exemplos também mostram que você pode ter várias instruções em cada branch condicional, desde que você coloque-as entre `{` e `}`.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-152\">These examples also show that you can have multiple statements in each conditional branch, provided you enclose them in `{` and `}`.</span></span>\n\n<span data-ttu-id=\"14c17-153\">Você também pode usar `||` representar \"ou\":</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-153\">You can also use  `||` to represent \"or\":</span></span>\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n<span data-ttu-id=\"14c17-154\">Modifique os valores de `a`, `b` e `c` e alterne entre `&&` e `||` para explorar.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-154\">Modify the values of `a`, `b`, and `c` and switch between `&&` and `||` to explore.</span></span> <span data-ttu-id=\"14c17-155\">Você obterá mais compreensão de como os operadores `&&` e `||` funcionam.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-155\">You'll gain more understanding of how the `&&` and `||` operators work.</span></span>\n\n> [!NOTE]\n> <span data-ttu-id=\"14c17-156\">Esta experiência de codificação online está em versão prévia.</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-156\">This online coding experience is in preview mode.</span></span> <span data-ttu-id=\"14c17-157\">Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).</span><span class=\"sxs-lookup\"><span data-stu-id=\"14c17-157\">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>\n"
-- title: <span data-ttu-id="14c17-158">Use loops para repetir operações</span><span class="sxs-lookup"><span data-stu-id="14c17-158">Use loops to repeat operations</span></span>
+  content: "\nPara executar um código diferente nos branches true e false, crie um branch `else` que será executado quando a condição for false. Experimente isto:\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\nA instrução após a palavra-chave `else` é executada somente quando a condição que estiver sendo testada for `false`. A combinação de `if` e `else` com condições boolianas fornece todos os recursos que você precisa.\n\n> [!IMPORTANT]\n> O recuo sob as instruções `if` e `else` é para leitores humanos.\n> A linguagem C# não considera recuos ou espaços em branco como significativos.\n> A instrução após a palavra-chave `if` ou `else` será executada com base na condição. Todos os exemplos neste tutorial seguem uma prática comum para recuar linhas com base no fluxo de controle de instruções.\n\nComo o recuo não é significativo, você precisa usar `{` e `}` para indicar quando você quer que mais de uma instrução faça parte do bloco executado condicionalmente. Os programadores em C# normalmente usam essas chaves em todas as cláusulas `if` e `else`. O exemplo a seguir é igual ao que você acabou de criar. Experimente.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> No restante deste tutorial, todos os exemplos de código incluem as chaves, seguindo as práticas aceitas.\n\nVocê pode testar condições mais complicadas:\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\nO símbolo `==` testa a *igualdade*. Usar `==` distingue o teste de igualdade de atribuição, que você viu em `a = 5`.\n\nO `&&` representa \"e\". Isso significa que as duas condições devem ser verdadeiras para executar a instrução no branch verdadeiro.  Estes exemplos também mostram que você pode ter várias instruções em cada branch condicional, desde que você coloque-as entre `{` e `}`.\n\nVocê também pode usar `||` representar \"ou\":\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\nModifique os valores de `a`, `b` e `c` e alterne entre `&&` e `||` para explorar. Você obterá mais compreensão de como os operadores `&&` e `||` funcionam.\n\n> [!NOTE]\n> Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).\n"
+- title: Use loops para repetir operações
   durationInMinutes: 6
   content: >
-    <span data-ttu-id="14c17-159">Outro conceito importante para criar programas maiores são os **loops**.</span><span class="sxs-lookup"><span data-stu-id="14c17-159">Another important concept to create larger programs is **loops**.</span></span> <span data-ttu-id="14c17-160">Você usará loops para repetir as instruções que deseja executar mais de uma vez.</span><span class="sxs-lookup"><span data-stu-id="14c17-160">You'll use loops to repeat statements that you want executed more than once.</span></span> <span data-ttu-id="14c17-161">Experimente este código na janela interativa:</span><span class="sxs-lookup"><span data-stu-id="14c17-161">Try this code in the interactive window:</span></span>
+    Outro conceito importante para criar programas maiores são os **loops**. Você usará loops para repetir as instruções que deseja executar mais de uma vez. Experimente este código na janela interativa:
 
 
     ```csharp
@@ -93,18 +93,18 @@ items:
     ```
 
 
-    <span data-ttu-id="14c17-162">A instrução `while` verifica uma condição e executa a instrução após `while`.</span><span class="sxs-lookup"><span data-stu-id="14c17-162">The `while` statement checks a condition and executes the statement following the `while`.</span></span> <span data-ttu-id="14c17-163">Ela repetirá a verificação da condição e executará essas instruções até que a condição seja false.</span><span class="sxs-lookup"><span data-stu-id="14c17-163">It will repeat checking the condition and executing those statements until the condition is false.</span></span>
+    A instrução `while` verifica uma condição e executa a instrução após `while`. Ela repetirá a verificação da condição e executará essas instruções até que a condição seja false.
 
 
-    <span data-ttu-id="14c17-164">Há outro operador novo neste exemplo.</span><span class="sxs-lookup"><span data-stu-id="14c17-164">There's one other new operator in this example.</span></span> <span data-ttu-id="14c17-165">O `++` após a variável `counter` é o operador **increment**.</span><span class="sxs-lookup"><span data-stu-id="14c17-165">The `++` after the `counter` variable is the **increment** operator.</span></span> <span data-ttu-id="14c17-166">Ele adiciona 1 ao valor do contador e armazena esse valor na variável do contador.</span><span class="sxs-lookup"><span data-stu-id="14c17-166">It adds 1 to the value of counter, and stores that value in the counter variable.</span></span>
+    Há outro operador novo neste exemplo. O `++` após a variável `counter` é o operador **increment**. Ele adiciona 1 ao valor do contador e armazena esse valor na variável do contador.
 
 
     > [!IMPORTANT]
 
-    > <span data-ttu-id="14c17-167">Verifique se a condição de loop `while` muda para false quando ao executar o código.</span><span class="sxs-lookup"><span data-stu-id="14c17-167">Make sure that the `while` loop condition does switch to false as you execute the code.</span></span> <span data-ttu-id="14c17-168">Caso contrário, crie um **loop infinito**, para que seu programa nunca termine.</span><span class="sxs-lookup"><span data-stu-id="14c17-168">Otherwise, you create an **infinite loop** where your program never ends.</span></span> <span data-ttu-id="14c17-169">Não vamos demonstrar isso porque o mecanismo que executa o código ultrapassará o tempo limite, e você não verá uma saída de seu programa.</span><span class="sxs-lookup"><span data-stu-id="14c17-169">Let's not demonstrate that, because the engine that runs your code will time out and you'll see no output from your program.</span></span>
+    > Verifique se a condição de loop `while` muda para false quando ao executar o código. Caso contrário, crie um **loop infinito**, para que seu programa nunca termine. Não vamos demonstrar isso porque o mecanismo que executa o código ultrapassará o tempo limite, e você não verá uma saída de seu programa.
 
 
-    <span data-ttu-id="14c17-170">O loop `while` testa a condição antes de executar o código seguindo `while`.</span><span class="sxs-lookup"><span data-stu-id="14c17-170">The `while` loop tests the condition before executing the code following the `while`.</span></span> <span data-ttu-id="14c17-171">O loop `do` ... `while` executa o código primeiro e, em seguida, verifica a condição.</span><span class="sxs-lookup"><span data-stu-id="14c17-171">The `do` ... `while` loop executes the code first, and then checks the condition.</span></span> <span data-ttu-id="14c17-172">É semelhante ao seguinte:</span><span class="sxs-lookup"><span data-stu-id="14c17-172">It looks like this:</span></span>
+    O loop `while` testa a condição antes de executar o código seguindo `while`. O loop `do` ... `while` executa o código primeiro e, em seguida, verifica a condição. É semelhante ao seguinte:
 
 
     ```csharp
@@ -121,19 +121,19 @@ items:
     ```
 
 
-    <span data-ttu-id="14c17-173">Esse loop `do` e o loop `while` anterior funcionam da mesma maneira.</span><span class="sxs-lookup"><span data-stu-id="14c17-173">This `do` loop and the earlier `while` loop work the same.</span></span>
+    Esse loop `do` e o loop `while` anterior funcionam da mesma maneira.
 
 
-    <span data-ttu-id="14c17-174">Vamos passar para a última instrução de loop.</span><span class="sxs-lookup"><span data-stu-id="14c17-174">Let's move on to one last loop statement.</span></span>
+    Vamos passar para a última instrução de loop.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="14c17-175">Esta experiência de codificação online está em versão prévia.</span><span class="sxs-lookup"><span data-stu-id="14c17-175">This online coding experience is in preview mode.</span></span> <span data-ttu-id="14c17-176">Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="14c17-176">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="14c17-177">Trabalhar com o loop for</span><span class="sxs-lookup"><span data-stu-id="14c17-177">Work with the for loop</span></span>
+    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
+- title: Trabalhar com o loop for
   durationInMinutes: 5
   content: >
-    <span data-ttu-id="14c17-178">Outra instrução de loop comum que você verá no código C# é o loop `for`.</span><span class="sxs-lookup"><span data-stu-id="14c17-178">Another common loop statement that you'll see in C# code is the `for` loop.</span></span> <span data-ttu-id="14c17-179">Experimente este código na janela interativa:</span><span class="sxs-lookup"><span data-stu-id="14c17-179">Try this code in the interactive window:</span></span>
+    Outra instrução de loop comum que você verá no código C# é o loop `for`. Experimente este código na janela interativa:
 
 
     ```csharp
@@ -147,55 +147,55 @@ items:
     ```
 
 
-    <span data-ttu-id="14c17-180">Ele faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou.</span><span class="sxs-lookup"><span data-stu-id="14c17-180">This does the same work as the `while` loop and the `do` loop you've already used.</span></span> <span data-ttu-id="14c17-181">A instrução `for` tem três partes que controlam o modo como ela funciona.</span><span class="sxs-lookup"><span data-stu-id="14c17-181">The `for` statement has three parts that control how it works.</span></span>
+    Ele faz o mesmo trabalho que o loop `while` e o loop `do` que você já usou. A instrução `for` tem três partes que controlam o modo como ela funciona.
 
 
-    <span data-ttu-id="14c17-182">A primeira parte é o **inicializador for**: `int counter = 0;` declara que `counter` é a variável do loop, e define seu valor inicial como `0`.</span><span class="sxs-lookup"><span data-stu-id="14c17-182">The first part is the **for initializer**: `int counter = 0;` declares that `counter` is the loop variable, and sets its initial value to `0`.</span></span>
+    A primeira parte é o **inicializador for**: `int counter = 0;` declara que `counter` é a variável do loop, e define seu valor inicial como `0`.
 
 
-    <span data-ttu-id="14c17-183">A parte central é a **condição for**: `counter < 10` declara que este loop `for` continuará sendo executado desde que o valor do contador seja inferior a 10.</span><span class="sxs-lookup"><span data-stu-id="14c17-183">The middle part is the **for condition**: `counter < 10` declares that this `for` loop continues to execute as long as the value of counter is less than 10.</span></span>
+    A parte central é a **condição for**: `counter < 10` declara que este loop `for` continuará sendo executado desde que o valor do contador seja inferior a 10.
 
 
-    <span data-ttu-id="14c17-184">A parte final é o **iterador for**: `counter++` especifica como modificar a variável de loop depois de executar o bloco após a instrução `for`.</span><span class="sxs-lookup"><span data-stu-id="14c17-184">The final part is the **for iterator**: `counter++` specifies how to modify the loop variable after executing the block following the `for` statement.</span></span> <span data-ttu-id="14c17-185">Aqui, ela especifica que `counter` deve ser incrementado com 1 sempre que o bloco for executado.</span><span class="sxs-lookup"><span data-stu-id="14c17-185">Here, it specifies that `counter` should be incremented by 1 each time the block executes.</span></span>
+    A parte final é o **iterador for**: `counter++` especifica como modificar a variável de loop depois de executar o bloco após a instrução `for`. Aqui, ela especifica que `counter` deve ser incrementado com 1 sempre que o bloco for executado.
 
 
-    <span data-ttu-id="14c17-186">Experimente você mesmo.</span><span class="sxs-lookup"><span data-stu-id="14c17-186">Experiment with these yourself.</span></span> <span data-ttu-id="14c17-187">Tente o seguinte:</span><span class="sxs-lookup"><span data-stu-id="14c17-187">Try each of the following:</span></span>
+    Experimente você mesmo. Tente o seguinte:
 
 
-    - <span data-ttu-id="14c17-188">Altere o inicializador para iniciar em um valor diferente.</span><span class="sxs-lookup"><span data-stu-id="14c17-188">Change the initializer to start at a different value.</span></span>
+    - Altere o inicializador para iniciar em um valor diferente.
 
-    - <span data-ttu-id="14c17-189">Altere a condição para parar em um valor diferente.</span><span class="sxs-lookup"><span data-stu-id="14c17-189">Change the condition to stop at a different value.</span></span>
+    - Altere a condição para parar em um valor diferente.
 
 
-    <span data-ttu-id="14c17-190">Quando terminar, vamos escrever um código para usar o que você aprendeu.</span><span class="sxs-lookup"><span data-stu-id="14c17-190">When you're done, let's move on to write some code yourself to use what you've learned.</span></span>
+    Quando terminar, vamos escrever um código para usar o que você aprendeu.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="14c17-191">Esta experiência de codificação online está em versão prévia.</span><span class="sxs-lookup"><span data-stu-id="14c17-191">This online coding experience is in preview mode.</span></span> <span data-ttu-id="14c17-192">Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="14c17-192">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="14c17-193">Combinar branches e loops</span><span class="sxs-lookup"><span data-stu-id="14c17-193">Combine branches and loops</span></span>
+    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
+- title: Combinar branches e loops
   durationInMinutes: 12
   content: >
-    <span data-ttu-id="14c17-194">Agora que você viu a instrução `if` e as construções de loop na linguagem C#, verifique se você pode escrever o código C# para encontrar a soma de todos os inteiros de 1 a 20 divisíveis por 3.</span><span class="sxs-lookup"><span data-stu-id="14c17-194">Now that you've seen the `if` statement and the looping constructs in the C# language, see if you can write C# code to find the sum of all integers 1 through 20 that are divisible by 3.</span></span>  <span data-ttu-id="14c17-195">Veja algumas dicas:</span><span class="sxs-lookup"><span data-stu-id="14c17-195">Here are a few hints:</span></span>
+    Agora que você viu a instrução `if` e as construções de loop na linguagem C#, verifique se você pode escrever o código C# para encontrar a soma de todos os inteiros de 1 a 20 divisíveis por 3.  Veja algumas dicas:
 
 
-    - <span data-ttu-id="14c17-196">O operador `%` retorna o restante de uma operação de divisão.</span><span class="sxs-lookup"><span data-stu-id="14c17-196">The `%` operator gives you the remainder of a division operation.</span></span>
+    - O operador `%` retorna o restante de uma operação de divisão.
 
-    - <span data-ttu-id="14c17-197">A instrução `if` retorna a condição para ver se um número deve ser parte da soma.</span><span class="sxs-lookup"><span data-stu-id="14c17-197">The `if` statement gives you the condition to see if a number should be part of the sum.</span></span>
+    - A instrução `if` retorna a condição para ver se um número deve ser parte da soma.
 
-    - <span data-ttu-id="14c17-198">O loop `for` pode ajudar você a repetir uma série de etapas para todos os números de 1 a 20.</span><span class="sxs-lookup"><span data-stu-id="14c17-198">The `for` loop can help you repeat a series of steps for all the numbers 1 through 20.</span></span>
+    - O loop `for` pode ajudar você a repetir uma série de etapas para todos os números de 1 a 20.
 
 
-    <span data-ttu-id="14c17-199">Tente você mesmo.</span><span class="sxs-lookup"><span data-stu-id="14c17-199">Try it yourself.</span></span> <span data-ttu-id="14c17-200">Depois verifique como você fez.</span><span class="sxs-lookup"><span data-stu-id="14c17-200">Then check how you did.</span></span> <span data-ttu-id="14c17-201">Como dica, você deve obter 63 como resposta.</span><span class="sxs-lookup"><span data-stu-id="14c17-201">As a hint, you should get 63 for an answer.</span></span>
+    Tente você mesmo. Depois verifique como você fez. Como dica, você deve obter 63 como resposta.
 
 
     > [!NOTE]
 
-    > <span data-ttu-id="14c17-202">Esta experiência de codificação online está em versão prévia.</span><span class="sxs-lookup"><span data-stu-id="14c17-202">This online coding experience is in preview mode.</span></span> <span data-ttu-id="14c17-203">Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="14c17-203">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="14c17-204">Desafio concluído</span><span class="sxs-lookup"><span data-stu-id="14c17-204">Complete challenge</span></span>
+    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
+- title: Desafio concluído
   durationInMinutes: 1
   content: >
-    <span data-ttu-id="14c17-205">Você conseguiu algo semelhante a isto?</span><span class="sxs-lookup"><span data-stu-id="14c17-205">Did you come up with something like this?</span></span>
+    Você conseguiu algo semelhante a isto?
 
 
     ```csharp
@@ -218,19 +218,19 @@ items:
 
     > [!NOTE]
 
-    > <span data-ttu-id="14c17-206">Esta experiência de codificação online está em versão prévia.</span><span class="sxs-lookup"><span data-stu-id="14c17-206">This online coding experience is in preview mode.</span></span> <span data-ttu-id="14c17-207">Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).</span><span class="sxs-lookup"><span data-stu-id="14c17-207">If you encounter problems, please report them [on the dotnet/try repo](https://github.com/dotnet/try/issues).</span></span>
-- title: <span data-ttu-id="14c17-208">Parabéns!</span><span class="sxs-lookup"><span data-stu-id="14c17-208">Congratulations!</span></span>
+    > Esta experiência de codificação online está em versão prévia. Se você encontrar problemas, informe-os [no repositório dotnet/try](https://github.com/dotnet/try/issues).
+- title: Parabéns!
   content: >-
-    <span data-ttu-id="14c17-209">Você concluiu o tutorial interativo "branches e loops".</span><span class="sxs-lookup"><span data-stu-id="14c17-209">You've completed the "branches and loops" interactive tutorial.</span></span> <span data-ttu-id="14c17-210">Clique no link **coleções de listas** abaixo para iniciar o próximo tutorial interativo ou visite o [site do .NET](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto no computador e continuar codificando.</span><span class="sxs-lookup"><span data-stu-id="14c17-210">You can click the **list collection** link below to start the next interactive tutorial, or you can visit the [.NET site](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) to download the .NET Core SDK, create a project on your machine, and keep coding.</span></span> <span data-ttu-id="14c17-211">A seção "próximas etapas" leva você de volta para esses tutoriais.</span><span class="sxs-lookup"><span data-stu-id="14c17-211">The "Next steps" section brings you back to these tutorials.</span></span>
+    Você concluiu o tutorial interativo "branches e loops". Você pode selecionar o link de **coleção de lista** abaixo para iniciar o próximo tutorial interativo ou pode visitar o [site do .net](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) para baixar o SDK do .NET Core, criar um projeto em seu computador e manter a codificação. A seção "próximas etapas" leva você de volta para esses tutoriais.
 
 
-    <span data-ttu-id="14c17-212">Saiba mais sobre esses conceitos nestes tópicos:</span><span class="sxs-lookup"><span data-stu-id="14c17-212">You can learn more about these concepts in these topics:</span></span>
+    Saiba mais sobre esses conceitos nestes tópicos:
 
 
-    - [<span data-ttu-id="14c17-213">Instrução If e else</span><span class="sxs-lookup"><span data-stu-id="14c17-213">If and else statement</span></span>](../../language-reference/keywords/if-else.md)
+    - [Instrução If e else](../../language-reference/keywords/if-else.md)
 
-    - [<span data-ttu-id="14c17-214">Instrução while</span><span class="sxs-lookup"><span data-stu-id="14c17-214">While statement</span></span>](../../language-reference/keywords/while.md)
+    - [Instrução while](../../language-reference/keywords/while.md)
 
-    - [<span data-ttu-id="14c17-215">Instrução Do</span><span class="sxs-lookup"><span data-stu-id="14c17-215">Do statement</span></span>](../../language-reference/keywords/do.md)
+    - [Instrução Do](../../language-reference/keywords/do.md)
 
-    - [<span data-ttu-id="14c17-216">Instrução for</span><span class="sxs-lookup"><span data-stu-id="14c17-216">For statement</span></span>](../../language-reference/keywords/for.md)
+    - [Instrução for](../../language-reference/keywords/for.md)
