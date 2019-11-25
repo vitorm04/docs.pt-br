@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar uma chave do Registro e definir o valor no Visual Basic'
+title: Como criar uma chave do Registro e definir o valor
 ms.date: 07/20/2015
 f1_keywords:
 - RegistryKey.CreateSubKey
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 84fc824ad5911621c679d70f480d9b5e83c095ad
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 459c4b3f971009ee4b6b669c55bc058db0826595
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71054127"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349197"
 ---
-# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Como: Criar uma chave do Registro e definir o valor no Visual Basic
+# <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>Como criar uma chave do Registro e definir o valor no Visual Basic:
 
 O método `CreateSubKey` do objeto `My.Computer.Registry` pode ser usado para criar uma chave do Registro.
 

@@ -1,29 +1,30 @@
 ---
-title: Propriedades (Visual Basic)
+title: Propriedades
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
-ms.openlocfilehash: b7c0040a45da34d6b7c7123b585b0d6e5463278c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3801b0bf1e2350326613d4ef447d73501386ccc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663524"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74335418"
 ---
 # <a name="properties-visual-basic"></a>Propriedades (Visual Basic)
-Esta página lista as propriedades que são membros de módulos do Visual Basic. Outras propriedades que são membros de objetos específicos do Visual Basic são listadas na [objetos](../../visual-basic/language-reference/objects/index.md).  
+
+This page lists the properties that are members of Visual Basic modules. Other properties that are members of specific Visual Basic objects are listed in [Objects](../../visual-basic/language-reference/objects/index.md).  
   
-## <a name="visual-basic-properties"></a>Propriedades do Visual Basic  
+## <a name="visual-basic-properties"></a>Visual Basic Properties  
   
 |||  
 |---|---|  
 |<xref:Microsoft.VisualBasic.DateAndTime.DateString%2A>|Retorna ou define um valor `String` que representa a data atual de acordo com o sistema.|  
 |<xref:Microsoft.VisualBasic.DateAndTime.Now%2A>|Retorna um valor de `Date` que contém a data e hora atual de acordo com seu sistema.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Retorna um `String` que representa o tempo de execução em uso no momento.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Retorna um `Integer` que contém o número de versão de build do tempo de execução atualmente em uso.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Retorna um `Integer` que contém o número de versão principal do tempo de execução atualmente em uso.|  
-|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Retorna um `Integer` que contém o número de versão secundária do tempo de execução atualmente em uso.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngine%2A>|Retorna um `String` que representa o runtime em uso no momento.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineBuildVersion%2A>|Retorna um `Integer` que contém o número de versão de build do runtime atualmente em uso.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMajorVersion%2A>|Retorna um `Integer` que contém o número de versão principal do runtime atualmente em uso.|  
+|<xref:Microsoft.VisualBasic.Globals.ScriptEngineMinorVersion%2A>|Retorna um `Integer` que contém o número de versão secundária do runtime atualmente em uso.|  
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>|Retorna ou define um valor de `Date` que representa a hora atual do dia, de acordo com seu sistema.|  
 |<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|Retorna um valor `Double` que representa o número de segundos decorridos desde a meia-noite.|  
 |<xref:Microsoft.VisualBasic.DateAndTime.TimeString%2A>|Retorna ou define um valor de `String` que representa a hora atual do dia de acordo com o sistema.|  

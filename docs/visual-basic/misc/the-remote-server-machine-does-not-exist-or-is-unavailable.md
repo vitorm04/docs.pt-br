@@ -1,22 +1,22 @@
 ---
-title: A máquina de servidor remoto não existe ou está indisponível (Visual Basic)
+title: The remote server machine does not exist or is unavailable
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID462
 ms.assetid: fa2cf36e-2169-42db-8449-6aca579e8303
-ms.openlocfilehash: 5d4fafc0554b518bbd58788d1a017c37b519067c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0799773e2db94f2b2588f77b65f6abf575e07897
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619921"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348190"
 ---
-# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>A máquina de servidor remoto não existe ou está indisponível (Visual Basic)
-Você está tentando se conectar a um servidor remoto que não está disponível ou não existe. Esse erro pode ser causado por sua conexão de rede que está sendo perdida.  
+# <a name="the-remote-server-machine-does-not-exist-or-is-unavailable-visual-basic"></a>The remote server machine does not exist or is unavailable (Visual Basic)
+You are trying to connect to a remote server that is unavailable or does not exist. This error may be caused by your network connection being lost.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Reconectar-se à rede e tente novamente.  
+- Reconnect to the network and try again.  
   
 ## <a name="see-also"></a>Consulte também
 

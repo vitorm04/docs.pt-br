@@ -1,24 +1,24 @@
 ---
-title: Atributos (Visual Basic)
+title: Atributos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
-ms.openlocfilehash: 1a734823d1fedbbd7bb8196c501ac2ee149f3098
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 226187fc183b12055e9a67a8fdef0178edb317d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68869049"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347866"
 ---
 # <a name="attributes-visual-basic"></a>Atributos (Visual Basic)
 
-Visual Basic fornece vários atributos que permitem que os objetos interoperem com código não gerenciado e um atributo que permite que os membros do módulo sejam acessados sem o nome do módulo. A tabela a seguir lista os atributos usados pelo Visual Basic.  
+Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name. The following table lists the attributes used by Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Instrui o compilador a adicionar metadados que permitem que uma classe seja exposta como um objeto COM.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Permite que os membros do módulo sejam acessados usando apenas a qualificação necessária para o módulo.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Instructs the compiler to add metadata that allows a class to be exposed as a COM object.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows the module members to be accessed using only the qualification needed for the module.|
 |<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Indica que uma matriz em uma estrutura ou variável não local deve ser tratada como uma matriz de tamanho fixo.|
 |<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Indica que uma cadeia de caracteres deve ser tratada como se fosse de comprimento fixo.|
   

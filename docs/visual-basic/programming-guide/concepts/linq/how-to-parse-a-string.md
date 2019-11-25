@@ -1,21 +1,21 @@
 ---
-title: 'Como: Analisar uma cadeia de caracteres (Visual Basic)'
+title: Como analisar uma cadeia de caracteres
 ms.date: 07/20/2015
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-ms.openlocfilehash: b97ce93c1018ec48649ab8b259d5f1a07109b9fe
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 31bae00eb3ebf0d8e64fc657693e8c0767c4f5d4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69956371"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344494"
 ---
-# <a name="how-to-parse-a-string-visual-basic"></a>Como: Analisar uma cadeia de caracteres (Visual Basic)
-Este tópico mostra como criar uma árvore XML no C#.  
+# <a name="how-to-parse-a-string-visual-basic"></a>How to: Parse a String (Visual Basic)
+This topic shows how to create an XML tree in C#.  
   
 ## <a name="example"></a>Exemplo  
- Você pode analisar uma cadeia de caracteres em Visual Basic usando `XElement.Parse` o método. No entanto, é mais eficiente usar literais XML, como mostrado no código a seguir, porque os literais XML não sofrem com as mesmas penalidades de desempenho que a análise de XML de uma cadeia de caracteres.  
+ You can parse a string in Visual Basic by using the `XElement.Parse` method. However, it is more efficient to use XML literals, as shown in following code, because XML literals do not suffer from the same performance penalties as parsing XML from a string.  
   
- Usando literais XML, você pode simplesmente copiar e colar o XML em seu programa Visual Basic.  
+ By using XML literals, you can just copy and paste your XML into your Visual Basic program.  
   
 > [!NOTE]
 > Analisar texto ou carregar um documento XML de um arquivo de texto é menos eficiente do que a construção funcional. Se você estiver inicializando uma árvore XML de código, o tempo do processador é menor para usar a construção funcional do que para analisar texto.  
@@ -51,4 +51,4 @@ Dim contacts as XElement = _
   
 ## <a name="see-also"></a>Consulte também
 
-- [Analisando XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

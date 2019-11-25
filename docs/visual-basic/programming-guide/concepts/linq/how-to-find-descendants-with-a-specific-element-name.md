@@ -1,15 +1,15 @@
 ---
-title: 'Como: Localizar descendentes com um nome de elemento específico (Visual Basic)'
+title: Como localizar descendentes com um nome de elemento específico
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 5c4556ae7bf4c7560618781be51e066f659b0b4c
-ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
+ms.openlocfilehash: 1a8aa07a79d05e62e0d5517c1675bc715e87de42
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72249680"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344397"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>Como: Localizar descendentes com um nome de elemento específico (Visual Basic)
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>How to: Find Descendants with a Specific Element Name (Visual Basic)
 Às vezes, você deseja localizar todos os descendentes com um nome específico. Você poderia escrever um código para iterar por todos os descendentes, mas é mais fácil usar o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
 ## <a name="example"></a>Exemplo  
@@ -54,7 +54,7 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. Para obter mais informações, consulte [visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
+ O exemplo a seguir mostra a mesma consulta para XML que está em um namespace. For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -103,4 +103,4 @@ Some text that is broken up into multiple segments.
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
-- [Consultas básicas (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [Basic Queries (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

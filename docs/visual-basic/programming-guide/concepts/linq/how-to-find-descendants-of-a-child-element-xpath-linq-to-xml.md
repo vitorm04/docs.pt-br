@@ -1,15 +1,15 @@
 ---
-title: 'Como: Localizar descendentes de um elemento filho (XPath-LINQ to XML) (Visual Basic)'
+title: 'Como: Descendentes de alterações de um elemento filho (XPath- LINQ para XML)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: e5f92e645a06a93cee95d439fc858d82ebb6b240
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291678"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344679"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>Como: Localizar descendentes de um elemento filho (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>How to: Find Descendants of a Child Element (XPath-LINQ to XML) (Visual Basic)
 Este tópico mostra como obter os elementos descendentes de um elemento filho com um nome específico.  
   
  A expressão XPath é:  
@@ -71,4 +71,4 @@ This is the start of a sentence.  This is a second sentence.
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

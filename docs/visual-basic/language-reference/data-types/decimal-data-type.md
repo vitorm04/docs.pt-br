@@ -1,5 +1,5 @@
 ---
-title: Tipo de dados decimal (Visual Basic)
+title: Tipo de dados decimal
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Decimal
@@ -20,32 +20,32 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 892824b61cfb6a0172361d220c638cab0a78565d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6d62bcc1d043b45c0fc30154d9dc633b998f97b7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71700870"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344037"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Tipo de dados decimal (Visual Basic)
 
-Contém valores de 128 bits (16 bytes) assinados que representam os números de inteiro de 96 bits (12 bytes) dimensionados por uma potência variável de 10. O fator de dimensionamento especifica o número de dígitos à direita do ponto decimal; Ele varia de 0 a 28. Com uma escala de 0 (sem casas decimais), o maior valor possível é +/-79228162514264337593543950335 (+/-7.9228162514264337593543950335E + 28). Com 28 casas decimais, o maior valor é +/-7.9228162514264337593543950335 e o menor valor diferente de zero é +/-0, 1 (+/-1E-28).
+Holds signed 128-bit (16-byte) values representing 96-bit (12-byte) integer numbers scaled by a variable power of 10. The scaling factor specifies the number of digits to the right of the decimal point; it ranges from 0 through 28. With a scale of 0 (no decimal places), the largest possible value is +/-79,228,162,514,264,337,593,543,950,335 (+/-7.9228162514264337593543950335E+28). With 28 decimal places, the largest value is +/-7.9228162514264337593543950335, and the smallest nonzero value is +/-0.0000000000000000000000000001 (+/-1E-28).
 
 ## <a name="remarks"></a>Comentários
 
-O tipo de dados `Decimal` fornece o maior número de dígitos significativos para um número. Ele dá suporte a até 29 dígitos significativos e pode representar valores acima de 7,9228 x 10 ^ 28. Ele é particularmente adequado para cálculos, como financeiro, que exigem um grande número de dígitos, mas não podem tolerar erros de arredondamento.
+The `Decimal` data type provides the greatest number of significant digits for a number. It supports up to 29 significant digits and can represent values in excess of 7.9228 x 10^28. It is particularly suitable for calculations, such as financial, that require a large number of digits but cannot tolerate rounding errors.
 
 O valor padrão de `Decimal` é 0.
 
 ## <a name="programming-tips"></a>Dicas de programação
 
-- **Preciso.** `Decimal` não é um tipo de dados de ponto flutuante. A estrutura `Decimal` contém um valor inteiro binário, junto com um bit de sinal e um fator de dimensionamento inteiro que especifica qual parte do valor é uma fração decimal. Por isso, os números `Decimal` têm uma representação mais precisa na memória do que os tipos de ponto flutuante (`Single` e `Double`).
+- **Precision.** `Decimal` is not a floating-point data type. The `Decimal` structure holds a binary integer value, together with a sign bit and an integer scaling factor that specifies what portion of the value is a decimal fraction. Because of this, `Decimal` numbers have a more precise representation in memory than floating-point types (`Single` and `Double`).
 
-- **Desempenho.** O tipo de dados `Decimal` é o mais lento de todos os tipos numéricos. Você deve avaliar a importância da precisão em relação ao desempenho antes de escolher um tipo de dados.
+- **Desempenho.** The `Decimal` data type is the slowest of all the numeric types. You should weigh the importance of precision against performance before choosing a data type.
 
-- **Ampliação.** O tipo de dados `Decimal` amplia para `Single` ou `Double`. Isso significa que você pode converter `Decimal` em qualquer um desses tipos sem encontrar um erro de <xref:System.OverflowException?displayProperty=nameWithType>.
+- **Widening.** The `Decimal` data type widens to `Single` or `Double`. This means you can convert `Decimal` to either of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
 
-- **Zeros à direita.** Visual Basic não armazena zeros à direita em um literal `Decimal`. No entanto, uma variável `Decimal` preserva os zeros à direita adquiridos de computação. O exemplo a seguir ilustra essa situação.
+- **Trailing Zeros.** Visual Basic does not store trailing zeros in a `Decimal` literal. However, a `Decimal` variable preserves any trailing zeros acquired computationally. O exemplo a seguir ilustra essa situação.
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -57,18 +57,19 @@ O valor padrão de `Decimal` é 0.
         ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
   ```
 
-  A saída de `MsgBox` no exemplo anterior é a seguinte:
+  The output of `MsgBox` in the preceding example is as follows:
 
   ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
-- **Digite os caracteres.** Acrescentar o caractere de tipo literal `D` a um literal o força ao tipo de dados `Decimal`. Acrescentar o caractere de tipo identificador `@` a qualquer identificador o força ao tipo `Decimal`.
+- **Type Characters.** Acrescentar o caractere de tipo literal `D` a um literal o força ao tipo de dados `Decimal`. Acrescentar o caractere de tipo identificador `@` a qualquer identificador o força ao tipo `Decimal`.
 
-- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Decimal?displayProperty=nameWithType>.
+- **Framework Type.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Decimal?displayProperty=nameWithType>.
 
 ## <a name="range"></a>Intervalo
- Talvez seja necessário usar o caractere de tipo `D` para atribuir um valor grande a uma variável ou constante `Decimal`. Esse requisito é porque o compilador interpreta um literal como `Long`, a menos que um caractere de tipo literal siga o literal, como mostra o exemplo a seguir.
+
+ You might need to use the `D` type character to assign a large value to a `Decimal` variable or constant. This requirement is because the compiler interprets a literal as `Long` unless a literal type character follows the literal, as the following example shows.
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -76,11 +77,11 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-A declaração de `bigDec1` não produz um estouro porque o valor atribuído a ele está dentro do intervalo de `Long`. O valor `Long` pode ser atribuído à variável `Decimal`.
+The declaration for `bigDec1` doesn't produce an overflow because the value that's assigned to it falls within the range for `Long`. The `Long` value can be assigned to the `Decimal` variable.
 
-A declaração de `bigDec2` gera um erro de estouro porque o valor atribuído a ele é muito grande para `Long`. Como o literal numérico não pode ser interpretado primeiro como um `Long`, ele não pode ser atribuído à variável `Decimal`.
+The declaration for `bigDec2` generates an overflow error because the value that's assigned to it is too large for `Long`. Because the numeric literal can't first be interpreted as a `Long`, it can't be assigned to the `Decimal` variable.
 
-Para `bigDec3`, o caractere de tipo literal `D` resolve o problema forçando o compilador a interpretar o literal como um `Decimal` em vez de um `Long`.
+For `bigDec3`, the literal type character `D` solves the problem by forcing the compiler to interpret the literal as a `Decimal` instead of as a `Long`.
 
 ## <a name="see-also"></a>Consulte também
 

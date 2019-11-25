@@ -1,75 +1,75 @@
 ---
-title: Noções básicas de cadeias de caracteres no Visual Basic
+title: Noções básicas de cadeias de caracteres
 ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], Like operator
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: f1f6b98d7db510373f2729fab2a6e0ad993ea086
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7141966e3c8a8cbce42111c56a85a00709e8fe1a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591388"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344291"
 ---
 # <a name="string-basics-in-visual-basic"></a>Noções básicas de cadeias de caracteres no Visual Basic
-O `String` tipo de dados representa uma série de caracteres (cada uma instância de um por vez representando o `Char` tipo de dados). Este tópico apresenta os conceitos básicos de cadeias de caracteres no Visual Basic.  
+The `String` data type represents a series of characters (each representing in turn an instance of the `Char` data type). This topic introduces the basic concepts of strings in Visual Basic.  
   
-## <a name="string-variables"></a>Variáveis de cadeia de caracteres  
- Um valor literal que representa uma série de caracteres pode ser atribuída a uma instância de uma cadeia de caracteres. Por exemplo:  
+## <a name="string-variables"></a>String Variables  
+ An instance of a string can be assigned a literal value that represents a series of characters. Por exemplo:  
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
- Um `String` variável também pode aceitar qualquer expressão que é avaliada como uma cadeia de caracteres. São mostrados exemplos abaixo:  
+ A `String` variable can also accept any expression that evaluates to a string. São mostrados exemplos abaixo:  
   
  [!code-vb[VbVbalrStrings#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#64)]  
   
- Qualquer literal que é atribuído a um `String` variável deve ser colocada entre aspas (""). Isso significa que aspas dentro de uma cadeia de caracteres não pode ser representada por uma marca de aspas. Por exemplo, o código a seguir causa um erro do compilador:  
+ Any literal that is assigned to a `String` variable must be enclosed in quotation marks (""). This means that a quotation mark within a string cannot be represented by a quotation mark. For example, the following code causes a compiler error:  
   
  [!code-vb[VbVbalrStrings#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#65)]  
   
- Esse código causa um erro porque o compilador encerra a cadeia de caracteres após a segunda aspa, e o restante da cadeia de caracteres é interpretado como código. Para resolver esse problema, o Visual Basic interpreta duas aspas em uma cadeia de caracteres literal como uma aspa na cadeia de caracteres. O exemplo a seguir demonstra a maneira correta de incluir uma marca de aspas em uma cadeia de caracteres:  
+ This code causes an error because the compiler terminates the string after the second quotation mark, and the remainder of the string is interpreted as code. To solve this problem, Visual Basic interprets two quotation marks in a string literal as one quotation mark in the string. The following example demonstrates the correct way to include a quotation mark in a string:  
   
  [!code-vb[VbVbalrStrings#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#66)]  
   
- No exemplo anterior, as duas aspas antes da palavra `Look` se tornam uma aspas na cadeia de caracteres. As três aspas no final da linha representam uma aspas na cadeia de caracteres e o caractere de terminação da cadeia de caracteres.  
+ In the preceding example, the two quotation marks preceding the word `Look` become one quotation mark in the string. The three quotation marks at the end of the line represent one quotation mark in the string and the string termination character.  
   
- Literais de cadeia de caracteres podem conter várias linhas:  
+ String literals can contain multiple lines:  
   
 ```vb  
 Dim x = "hello  
 world"  
 ```  
   
- A cadeia de caracteres resultante contém sequências de nova linha que você usou em sua cadeia de caracteres literal (vbcr, vbcrlf, etc.).  Você não precisa usar a solução alternativa antiga:  
+ The resulting string contains newline sequences that you used in your string literal (vbcr, vbcrlf, etc.).  You no longer need to use the old workaround:  
   
 ```vb  
 Dim x = <xml><![CDATA[Hello  
 World]]></xml>.Value  
 ```  
   
-## <a name="characters-in-strings"></a>Caracteres em cadeias de caracteres  
- Uma cadeia de caracteres pode ser pensada como uma série de `Char` valores e o `String` tipo tem funções internas que permitem que você execute várias manipulações em uma cadeia de caracteres parecidas com as manipulações permitidas por arrays. Como todos os arrays no .NET Framework, essas são matrizes com base em zero. Você pode se referir a um caractere específico em uma cadeia de caracteres por meio de `Chars` propriedade, que fornece uma maneira de acessar um caractere pela posição em que aparece na cadeia de caracteres. Por exemplo:  
+## <a name="characters-in-strings"></a>Characters in Strings  
+ A string can be thought of as a series of `Char` values, and the `String` type has built-in functions that allow you to perform many manipulations on a string that resemble the manipulations allowed by arrays. Like all array in .NET Framework, these are zero-based arrays. You may refer to a specific character in a string through the `Chars` property, which provides a way to access a character by the position in which it appears in the string. Por exemplo:  
   
  [!code-vb[VbVbalrStrings#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#67)]  
   
- No exemplo acima, o `Chars` propriedade da cadeia de caracteres retorna o quarto caractere na cadeia de caracteres, que é `D`e a atribui `myChar`. Você também pode obter o comprimento de uma cadeia de caracteres específica por meio de `Length` propriedade. Se você precisar executar várias manipulações de tipo de matriz em uma cadeia de caracteres, você pode convertê-la para uma matriz de `Char` instâncias usando o `ToCharArray` função da cadeia de caracteres. Por exemplo:  
+ In the above example, the `Chars` property of the string returns the fourth character in the string, which is `D`, and assigns it to `myChar`. You can also get the length of a particular string through the `Length` property. If you need to perform multiple array-type manipulations on a string, you can convert it to an array of `Char` instances using the `ToCharArray` function of the string. Por exemplo:  
   
  [!code-vb[VbVbalrStrings#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#68)]  
   
- A variável `myArray` agora contém uma matriz de `Char` valores, cada um representando um caractere de `myString`.  
+ The variable `myArray` now contains an array of `Char` values, each representing a character from `myString`.  
   
-## <a name="the-immutability-of-strings"></a>A imutabilidade de cadeias de caracteres  
- É uma cadeia de caracteres *imutável*, que significa que seu valor não pode ser alterado quando ele foi criado. No entanto, isso não impede que você atribuir mais de um valor a uma variável de cadeia de caracteres. Considere o exemplo a seguir:  
+## <a name="the-immutability-of-strings"></a>The Immutability of Strings  
+ A string is *immutable*, which means its value cannot be changed once it has been created. However, this does not prevent you from assigning more than one value to a string variable. Considere o exemplo a seguir:  
   
  [!code-vb[VbVbalrStrings#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#69)]  
   
- Aqui, uma variável de cadeia de caracteres é criada, dado um valor, e, em seguida, seu valor é alterado.  
+ Here, a string variable is created, given a value, and then its value is changed.  
   
- Mais especificamente, na primeira linha, uma instância do tipo `String` é criado e receberá o valor `This string is immutable`. Na segunda linha do exemplo, uma nova instância é criada e recebe o valor `Or is it?`, e a variável de cadeia de caracteres descarta sua referência para a primeira instância e armazena uma referência para a nova instância.  
+ More specifically, in the first line, an instance of type `String` is created and given the value `This string is immutable`. In the second line of the example, a new instance is created and given the value `Or is it?`, and the string variable discards its reference to the first instance and stores a reference to the new instance.  
   
- Ao contrário de outros tipos de dados intrínsecos, `String` é um tipo de referência. Quando uma variável do tipo de referência é passada como um argumento para uma função ou sub-rotina, uma referência para o endereço de memória onde os dados são armazenados é passada em vez do valor real da cadeia de caracteres. Portanto, no exemplo anterior, o nome da variável permanece o mesmo, mas ele aponta para uma instância nova e diferente de `String` classe, que contém o novo valor.  
+ Unlike other intrinsic data types, `String` is a reference type. When a variable of reference type is passed as an argument to a function or subroutine, a reference to the memory address where the data is stored is passed instead of the actual value of the string. So in the previous example, the name of the variable remains the same, but it points to a new and different instance of the `String` class, which holds the new value.  
   
 ## <a name="see-also"></a>Consulte também
 
