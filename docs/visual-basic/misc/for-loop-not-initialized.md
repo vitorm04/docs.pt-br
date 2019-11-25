@@ -1,24 +1,24 @@
 ---
-title: Loop for não inicializado (Visual Basic)
+title: For loop not initialized
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
 ms.assetid: 7f5b8b87-1a28-474d-8639-9de97922ceab
-ms.openlocfilehash: 225a363e5e5578160acc5aa45e978a0339b546c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9daf284f5efcbe3dd8a0e18529c8b8702edbc7e2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052320"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348449"
 ---
-# <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="55208-102">Loop for não inicializado (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="55208-102">For loop not initialized (Visual Basic)</span></span>
-<span data-ttu-id="55208-103">Você entrou no meio de um `For...Next` loop.</span><span class="sxs-lookup"><span data-stu-id="55208-103">You jumped into the middle of a `For...Next` loop.</span></span>  
+# <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="8870d-102">For loop not initialized (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8870d-102">For loop not initialized (Visual Basic)</span></span>
+<span data-ttu-id="8870d-103">You jumped into the middle of a `For...Next` loop.</span><span class="sxs-lookup"><span data-stu-id="8870d-103">You jumped into the middle of a `For...Next` loop.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="55208-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="55208-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8870d-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="8870d-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="55208-105">Remova o salto para o loop.</span><span class="sxs-lookup"><span data-stu-id="55208-105">Remove the jump into the loop.</span></span>  
+1. <span data-ttu-id="8870d-105">Remove the jump into the loop.</span><span class="sxs-lookup"><span data-stu-id="8870d-105">Remove the jump into the loop.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="55208-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="55208-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8870d-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8870d-106">See also</span></span>
 
-- [<span data-ttu-id="55208-107">Instrução For Each...Next</span><span class="sxs-lookup"><span data-stu-id="55208-107">For Each...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [<span data-ttu-id="55208-108">Como: rotular instruções</span><span class="sxs-lookup"><span data-stu-id="55208-108">How to: Label Statements</span></span>](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)
+- [<span data-ttu-id="8870d-107">Instrução For Each...Next</span><span class="sxs-lookup"><span data-stu-id="8870d-107">For Each...Next Statement</span></span>](../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [<span data-ttu-id="8870d-108">Como rotular instruções</span><span class="sxs-lookup"><span data-stu-id="8870d-108">How to: Label Statements</span></span>](../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)

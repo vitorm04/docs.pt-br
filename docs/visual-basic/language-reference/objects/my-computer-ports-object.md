@@ -1,35 +1,35 @@
 ---
-title: Objeto My. Computer. Ports (Visual Basic)
+title: Objeto My.Computer.Ports
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Ports object
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
-ms.openlocfilehash: 2122dc099b36494aa44e538fdf3683dc9e9640fc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 83874131655fd0bc2aac788c3beeaa1ca74195a6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966023"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332017"
 ---
-# <a name="mycomputerports-object"></a><span data-ttu-id="916d9-102">Objeto My.Computer.Ports</span><span class="sxs-lookup"><span data-stu-id="916d9-102">My.Computer.Ports Object</span></span>
-<span data-ttu-id="916d9-103">Fornece uma propriedade e um método para acessar portas seriais do computador.</span><span class="sxs-lookup"><span data-stu-id="916d9-103">Provides a property and a method for accessing the computer's serial ports.</span></span>  
+# <a name="mycomputerports-object"></a><span data-ttu-id="b2dbd-102">Objeto My.Computer.Ports</span><span class="sxs-lookup"><span data-stu-id="b2dbd-102">My.Computer.Ports Object</span></span>
+<span data-ttu-id="b2dbd-103">Fornece uma propriedade e um método para acessar portas seriais do computador.</span><span class="sxs-lookup"><span data-stu-id="b2dbd-103">Provides a property and a method for accessing the computer's serial ports.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="916d9-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="916d9-104">Remarks</span></span>  
- <span data-ttu-id="916d9-105">Para obter informações sobre os métodos e as propriedades `My.Computer.Ports` do objeto, <xref:Microsoft.VisualBasic.Devices.Ports>consulte.</span><span class="sxs-lookup"><span data-stu-id="916d9-105">For information about the methods and properties of the `My.Computer.Ports` object, see <xref:Microsoft.VisualBasic.Devices.Ports>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2dbd-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="b2dbd-104">Remarks</span></span>  
+ <span data-ttu-id="b2dbd-105">For information about the methods and properties of the `My.Computer.Ports` object, see <xref:Microsoft.VisualBasic.Devices.Ports>.</span><span class="sxs-lookup"><span data-stu-id="b2dbd-105">For information about the methods and properties of the `My.Computer.Ports` object, see <xref:Microsoft.VisualBasic.Devices.Ports>.</span></span>  
   
- <span data-ttu-id="916d9-106">Para obter mais informações, consulte Acessando [as portas do computador](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).</span><span class="sxs-lookup"><span data-stu-id="916d9-106">For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).</span></span>  
+ <span data-ttu-id="b2dbd-106">For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).</span><span class="sxs-lookup"><span data-stu-id="b2dbd-106">For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="916d9-107">Você também pode usar propriedades e métodos da <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> classe para acessar as portas seriais do computador.</span><span class="sxs-lookup"><span data-stu-id="916d9-107">You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.</span></span>  
+> <span data-ttu-id="b2dbd-107">You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.</span><span class="sxs-lookup"><span data-stu-id="b2dbd-107">You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="916d9-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="916d9-108">Requirements</span></span>  
- <span data-ttu-id="916d9-109">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="916d9-109">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2dbd-108">Requisitos</span><span class="sxs-lookup"><span data-stu-id="b2dbd-108">Requirements</span></span>  
+ <span data-ttu-id="b2dbd-109">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="b2dbd-109">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="916d9-110">**Classe:** <xref:Microsoft.VisualBasic.Devices.Ports></span><span class="sxs-lookup"><span data-stu-id="916d9-110">**Class:** <xref:Microsoft.VisualBasic.Devices.Ports></span></span>  
+ <span data-ttu-id="b2dbd-110">**Class:** <xref:Microsoft.VisualBasic.Devices.Ports></span><span class="sxs-lookup"><span data-stu-id="b2dbd-110">**Class:** <xref:Microsoft.VisualBasic.Devices.Ports></span></span>  
   
- <span data-ttu-id="916d9-111">**)** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="916d9-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="b2dbd-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="b2dbd-111">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="916d9-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="916d9-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b2dbd-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b2dbd-112">See also</span></span>
 
-- [<span data-ttu-id="916d9-113">Objeto My. Computer</span><span class="sxs-lookup"><span data-stu-id="916d9-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [<span data-ttu-id="b2dbd-113">Objeto My. Computer</span><span class="sxs-lookup"><span data-stu-id="b2dbd-113">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

@@ -1,21 +1,21 @@
 ---
-title: Exemplo de execução adiada (Visual Basic)
+title: Exemplo de execução adiada
 ms.date: 07/20/2015
 ms.assetid: 9a22bea1-c755-4aac-800a-fcd9e5107ace
-ms.openlocfilehash: e0bb7f3d125cc48607a534e2c24cbf7083353945
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 6ab8f6434bb24b7a66ca4afd1d082911481671f6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583325"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354236"
 ---
-# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="c643a-102">Exemplo de execução adiada (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c643a-102">Deferred Execution Example (Visual Basic)</span></span>
+# <a name="deferred-execution-example-visual-basic"></a><span data-ttu-id="5680c-102">Deferred Execution Example (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5680c-102">Deferred Execution Example (Visual Basic)</span></span>
 
-<span data-ttu-id="c643a-103">Este tópico mostra como execução adiada e a avaliação lazy afetam a execução das consultas LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="c643a-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>
+<span data-ttu-id="5680c-103">Este tópico mostra como execução adiada e a avaliação lazy afetam a execução das consultas LINQ to XML.</span><span class="sxs-lookup"><span data-stu-id="5680c-103">This topic shows how deferred execution and lazy evaluation affect the execution of your LINQ to XML queries.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c643a-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c643a-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5680c-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5680c-104">Example</span></span>
 
-<span data-ttu-id="c643a-105">O exemplo a seguir mostra a ordem de execução para usar um método de extensão que use a execução adiada.</span><span class="sxs-lookup"><span data-stu-id="c643a-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="c643a-106">O exemplo declara uma matriz de três cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="c643a-106">The example declares an array of three strings.</span></span> <span data-ttu-id="c643a-107">Em itera através da coleção retornada por `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="c643a-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>
+<span data-ttu-id="5680c-105">O exemplo a seguir mostra a ordem de execução para usar um método de extensão que use a execução adiada.</span><span class="sxs-lookup"><span data-stu-id="5680c-105">The following example shows the order of execution when using an extension method that uses deferred execution.</span></span> <span data-ttu-id="5680c-106">O exemplo declara uma matriz de três cadeias de caracteres.</span><span class="sxs-lookup"><span data-stu-id="5680c-106">The example declares an array of three strings.</span></span> <span data-ttu-id="5680c-107">Em itera através da coleção retornada por `ConvertCollectionToUpperCase`.</span><span class="sxs-lookup"><span data-stu-id="5680c-107">It then iterates through the collection returned by `ConvertCollectionToUpperCase`.</span></span>
 
 ```vb
 Imports System.Runtime.CompilerServices
@@ -46,7 +46,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="c643a-108">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="c643a-108">This example produces the following output:</span></span>
+<span data-ttu-id="5680c-108">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="5680c-108">This example produces the following output:</span></span>
 
 ```console
 ToUpper: source abc
@@ -57,10 +57,10 @@ ToUpper: source ghi
 Main: str GHI
 ```
 
-<span data-ttu-id="c643a-109">Observe que para iterar através da coleção retornada por `ConvertCollectionToUpperCase`, cada item é recuperado de matriz de cadeias de caracteres de origem e convertido para maiúsculas antes que o próximo item é recuperado de matriz de cadeias de caracteres de origem.</span><span class="sxs-lookup"><span data-stu-id="c643a-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>
+<span data-ttu-id="5680c-109">Observe que para iterar através da coleção retornada por `ConvertCollectionToUpperCase`, cada item é recuperado de matriz de cadeias de caracteres de origem e convertido para maiúsculas antes que o próximo item é recuperado de matriz de cadeias de caracteres de origem.</span><span class="sxs-lookup"><span data-stu-id="5680c-109">Notice that when iterating through the collection returned by `ConvertCollectionToUpperCase`, each item is retrieved from the source string array and converted to uppercase before the next item is retrieved from the source string array.</span></span>
 
-<span data-ttu-id="c643a-110">Você pode ver que a matriz inteira de cadeias de caracteres não é convertida para maiúsculas antes que cada item na coleção retornada é processado no loop de `foreach` em `Main`.</span><span class="sxs-lookup"><span data-stu-id="c643a-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>
+<span data-ttu-id="5680c-110">Você pode ver que a matriz inteira de cadeias de caracteres não é convertida para maiúsculas antes que cada item na coleção retornada é processado no loop de `foreach` em `Main`.</span><span class="sxs-lookup"><span data-stu-id="5680c-110">You can see that the entire array of strings is not converted to uppercase before each item in the returned collection is processed in the `foreach` loop in `Main`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c643a-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c643a-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5680c-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5680c-111">See also</span></span>
 
-- [<span data-ttu-id="c643a-112">Tutorial: execução adiada (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c643a-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [<span data-ttu-id="5680c-112">Tutorial: Deferred Execution (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5680c-112">Tutorial: Deferred Execution (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
