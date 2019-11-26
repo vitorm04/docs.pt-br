@@ -23,14 +23,14 @@ sgen [options]
 |Opção|Descrição|  
 |------------|-----------------|  
 |**/a\[ssembly\]:** _filename_|Gera o código de serialização para todos os tipos contidos no assembly ou no executável especificado pelo *filename*. Somente um nome de arquivo pode ser fornecido. Se esse argumento for repetido, o último nome de arquivo será usado.|  
-|**/c @ no__t-1ompiler @ no__t-2:** _Opções_|Especifica as opções para passar para o compilador C#. Todas as opções csc.exe têm suporte quando são passadas para o compilador. Isso pode ser usado para especificar que o assembly deve ser assinado e para especificar o arquivo de chave.|  
+|**/c\[ackers\]:** _Opções_|Especifica as opções para passar para o compilador C#. Todas as opções csc.exe têm suporte quando são passadas para o compilador. Isso pode ser usado para especificar que o assembly deve ser assinado e para especificar o arquivo de chave.|  
 |**/d\[ebug\]**|Gera uma imagem que pode ser usada com um depurador.|  
 |**/f\[orce\]**|Força a substituição de um assembly existente de mesmo nome. O padrão é **false**.|  
 |**/help ou /?**|Exibe sintaxe de comando e opções para a ferramenta.|  
 |**/k\[eep\]**|Suprime a exclusão dos arquivos de origem gerados e outros arquivos temporários depois que tiverem sido compilados no assembly de serialização. Isso pode ser usado para determinar se a ferramenta está gerando o código de serialização para um tipo específico.|  
 |**/n\[ologo\]**|Suprime a exibição do banner de inicialização da Microsoft.|  
-|**/o\[ut\]:** _path_|Especifica o diretório no qual salvar o assembly gerado. **Observação:**  O nome do assembly gerado é composto do nome do assembly de entrada mais "xmlSerializers.dll".|  
-|**/p @ no__t-1roxytypes @ no__t-2**|Gera o código de serialização somente para os tipos de proxy de serviço Web XML.|  
+|**/o\[ut\]:** _path_|Especifica o diretório no qual salvar o assembly gerado. **Observação:** o nome do assembly gerado é composto pelo nome do assembly de entrada mais “xmlSerializers.dll”.|  
+|**/p\[roxytypes\]**|Gera o código de serialização somente para os tipos de proxy de serviço Web XML.|  
 |**/r\[eference\]:** _assemblyfiles_|Especifica os assemblies que são referenciados pelos tipos que exigem a serialização de XML. Aceita vários arquivos de assembly separados por vírgulas.|  
 |**/s\[ilent\]**|Suprime a exibição de mensagens de sucesso.|  
 |**/t\[ype\]:** _type_|Gera o código de serialização somente para o tipo especificado.|  

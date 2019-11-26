@@ -10,21 +10,21 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: 3742a040e8c16c38e495a0fd886c4c1f23780758
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 19ebbfba477eeba253a7af0742953cc6a4d45a0e
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698382"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088525"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<add > elemento para connectionManagement (configurações de rede)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>\<adicionar o elemento > para connectionManagement (configurações de rede)
 Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**adicionar >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -39,7 +39,7 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descrição**|  
+|**Attribute**|**Descrição**|  
 |-------------------|---------------------|  
 |`address`|Uma cadeia de caracteres que descreve um endereço IP ou nome DNS.|  
 |`maxconnection`|O número máximo de conexões permitidas a um servidor. Se não for fornecido, o padrão será 2.|  
@@ -56,7 +56,7 @@ Adiciona um endereço IP ou nome DNS à lista de gerenciamento de conexão.
 ## <a name="remarks"></a>Comentários  
  O valor do atributo `address` deve ser um asterisco para indicar todas as conexões ou uma cadeia de caracteres do formulário `<schema>://<idn_hostname>[:<port>]`.  
   
- Se o URI passado para qualquer API HTTP contiver Unicode, o nome será convertido internamente usando <xref:System.Uri.DnsSafeHost%2A>, que pode retornar uma cadeia de caracteres Punicode (comportamento dependente da configuração de IDN atual).  
+ Se o URI passado para qualquer API HTTP contiver Unicode, o nome será convertido internamente usando <xref:System.Uri.DnsSafeHost%2A> que pode retornar uma cadeia de caracteres Punicode (comportamento dependente da configuração de IDN atual).  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

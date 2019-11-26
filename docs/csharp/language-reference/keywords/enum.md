@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 417f02ce9e8ee88edeb2a4dab88111cae39a8a4b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 639a3a01c9c4da13e0212bd0230acbd2af170b25
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771863"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428514"
 ---
 # <a name="enum-c-reference"></a>enum (Referência de C#)
 
@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 Nesta enumeração, a sequência de elementos é forçada a iniciar a partir de `1` em vez de `0`. No entanto, incluir uma constante que tenha o valor de 0 é recomendado. Para obter mais informações, consulte [Tipos de enumeração](../../programming-guide/enumeration-types.md).
 
-Cada tipo de enumeração tem um tipo subjacente, que pode ser qualquer [tipo numérico integral](../builtin-types/integral-numeric-types.md). O tipo [char](char.md) não pode ser um tipo subjacente de um enum. O tipo subjacente padrão de elementos de enumeração é [int](../builtin-types/integral-numeric-types.md). Para declarar uma enumeração de outro tipo integral, como [byte](../builtin-types/integral-numeric-types.md), use dois-pontos após o identificador seguido pelo tipo, conforme mostrado no exemplo a seguir.
+Cada tipo de enumeração tem um tipo subjacente, que pode ser qualquer [tipo numérico integral](../builtin-types/integral-numeric-types.md). O tipo [char](../builtin-types/char.md) não pode ser um tipo subjacente de um enum. The default underlying type of enumeration elements is [int](../builtin-types/integral-numeric-types.md). To declare an enum of another integral type, such as [byte](../builtin-types/integral-numeric-types.md), use a colon after the identifier followed by the type, as shown in the following example.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};

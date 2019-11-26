@@ -17,16 +17,16 @@ A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas. As
   
 ## <a name="implicit-pointer-conversions"></a>Conversões de ponteiro implícitas  
   
-|De|Para|  
+|De|{1&gt;Para&lt;1}|  
 |----------|--------|  
 |Qualquer tipo de ponteiro|void*|  
-|nulo|Qualquer tipo de ponteiro|  
+|{1&gt;nulo&lt;1}|Qualquer tipo de ponteiro|  
   
  A conversão explícita de ponteiro é usada para realizar conversões para as quais não há conversão implícita, usando uma expressão de conversão. A tabela a seguir mostra essas conversões.  
   
 ## <a name="explicit-pointer-conversions"></a>Conversões de ponteiro explícitas  
   
-|De|Para|  
+|De|{1&gt;Para&lt;1}|  
 |----------|--------|  
 |Qualquer tipo de ponteiro|Qualquer outro tipo de ponteiro|  
 |sbyte, byte, short, ushort, int, uint, long ou ulong|Qualquer tipo de ponteiro|  

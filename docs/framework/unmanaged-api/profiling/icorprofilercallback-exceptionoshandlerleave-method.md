@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4d164676-0ee9-4f67-a8ea-cb474db09053
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 468c5b28bb5a574aacf623196f0c516992473707
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e54f87f5f02a1857fd9b7639d00d4bcb976665b1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67756231"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445408"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>Método ICorProfilerCallback::ExceptionOSHandlerLeave
-Não implementado. Um criador de perfil que precisa de informações de exceção não gerenciado deve obter essas informações por outros meios.  
+Não implementado. A profiler that needs unmanaged exception information must obtain this information through other means.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,9 +33,9 @@ HRESULT ExceptionOSHandlerLeave(
 ```  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 39bbdb30-6a7a-4202-8da3-67ae9a0ab3a8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: db5ed871734205d59c602cc8b5c0cc9e8ac4682a
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fc5356f097f869403212cd234a508f1f29c5ec94
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67762878"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450390"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>Método ICorProfilerInfo::GetCurrentThreadID
-Obtém a ID do thread atual, se ele for um thread gerenciado.  
+Gets the ID of the current thread, if it is a managed thread.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,15 +34,15 @@ HRESULT GetCurrentThreadID(
   
 ## <a name="parameters"></a>Parâmetros  
  `pThreadId`  
- [out] Um ponteiro para a ID retornada do thread gerenciado.  
+ [out] A pointer to the returned ID of the managed thread.  
   
 ## <a name="remarks"></a>Comentários  
- Se o thread atual é um segmento de tempo de execução interno ou de outro thread não gerenciado, `GetCurrentThreadID` retorna CORPROF_E_NOT_MANAGED_THREAD como o HRESULT e o valor retornado do `pThreadId` parâmetro será nulo.  
+ If the current thread is an internal runtime thread or other unmanaged thread, `GetCurrentThreadID` returns CORPROF_E_NOT_MANAGED_THREAD as the HRESULT, and the returned value of the `pThreadId` parameter will be null.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

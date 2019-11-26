@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025504"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204792"
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 
@@ -47,11 +47,11 @@ Você sempre deve fornecer tratamento de exceção robusto ao chamar métodos de
 
 Além de usar essas classes, os usuários do Visual Basic podem usar os métodos e as propriedades fornecidas pela classe <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> para E/S de arquivo.
 
-Confira [Como copiar diretórios](how-to-copy-directories.md), [Como criar uma listagem de diretório](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) e [como: enumerar diretórios e arquivos](how-to-enumerate-directories-and-files.md).
+Confira [Como copiar diretórios](how-to-copy-directories.md), [Como criar uma listagem de diretórios](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100)) e [Como enumerar diretórios e arquivos](how-to-enumerate-directories-and-files.md).
 
 ## <a name="streams"></a>Fluxos
 
-A classe base abstrata <xref:System.IO.Stream> dá suporte a leitura e gravação de bytes. Todas as classes que representam fluxos herdam da classe <xref:System.IO.Stream>. A classe <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão comum de fontes e repositórios de dados, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.
+A classe base abstrata <xref:System.IO.Stream> oferece suporte a leitura e gravação de bytes. Todas as classes que representam fluxos herdam da classe <xref:System.IO.Stream>. A classe <xref:System.IO.Stream> e suas classes derivadas fornecem uma visão comum de fontes e repositórios de dados, isolando o programador de detalhes específicos do sistema operacional e dispositivos subjacentes.
 
 Fluxos envolvem estas três operações fundamentais:
 
@@ -61,7 +61,7 @@ Fluxos envolvem estas três operações fundamentais:
 
 - Busca – Consulta e modificação da posição atual em um fluxo.
 
-Dependendo do repositório ou da fonte de dados subjacente, os fluxos podem dar suporte somente algumas dessas capacidades. Por exemplo, a classe <xref:System.IO.Pipes.PipeStream> não dar suporte à operação de busca. As propriedades <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> e <xref:System.IO.Stream.CanSeek%2A> de um fluxo especificam as operações às quais o fluxo dá suporte.
+Dependendo do repositório ou da fonte de dados subjacente, os fluxos podem oferecer suporte somente algumas dessas capacidades. Por exemplo, a classe <xref:System.IO.Pipes.PipeStream> não oferece suporte à operação de busca. As propriedades <xref:System.IO.Stream.CanRead%2A>, <xref:System.IO.Stream.CanWrite%2A> e <xref:System.IO.Stream.CanSeek%2A> de um fluxo especificam as operações às quais o fluxo oferece suporte.
 
 Algumas classes de fluxo comumente usadas são:
 
@@ -95,11 +95,11 @@ Algumas classes de leitores e gravadores comumente usadas são:
 
 - <xref:System.IO.TextReader> e <xref:System.IO.TextWriter> – Funcionam como as classes base abstratas para outros leitores e gravadores que leem e gravam caracteres e cadeias de caracteres, mas não dados binários.
 
-Confira [Como Ler Texto de um Arquivo](how-to-read-text-from-a-file.md), [como: Gravar Texto em um Arquivo](how-to-write-text-to-a-file.md), [como: Ler caracteres de uma cadeia de caracteres](how-to-read-characters-from-a-string.md) e [como: Gravar caracteres em uma cadeia de caracteres](how-to-write-characters-to-a-string.md).
+Confira [Como ler texto de um arquivo](how-to-read-text-from-a-file.md), [Como gravar texto em um arquivo](how-to-write-text-to-a-file.md), [Como ler caracteres em uma cadeia de caracteres](how-to-read-characters-from-a-string.md) e [Como gravar caracteres em uma cadeia de caracteres](how-to-write-characters-to-a-string.md).
 
 ## <a name="asynchronous-io-operations"></a>Operações de E/S assíncronas
 
-A leitura ou gravação de uma grande quantidade de dados pode consumir muitos recursos. Você deve executar essas tarefas de forma assíncrona se seu aplicativo precisar continuar respondendo ao usuário. Com as operações de E/S síncronas, o thread de interface do usuário é bloqueado até que a operação de uso intensivo seja concluída.  Use operações de E/S assíncronas durante o desenvolvimento de aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] para evitar causar a impressão de que o aplicativo parou de funcionar.
+A leitura ou gravação de uma grande quantidade de dados pode consumir muitos recursos. Você deve executar essas tarefas de forma assíncrona se seu aplicativo precisar continuar respondendo ao usuário. Com as operações de E/S síncronas, o thread de interface do usuário é bloqueado até que a operação de uso intensivo seja concluída.  Use asynchronous I/O operations when developing Windows 8.x Store apps to prevent creating the impression that your app has stopped working.
 
 Os membros assíncronas contêm `Async` em seus nomes, como os métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>. Você usa esses métodos com as palavras-chave `async` e `await`.
 
@@ -123,13 +123,13 @@ As classes a seguir são frequentemente usadas para compactar e descompactar arq
 
 - <xref:System.IO.Compression.GZipStream> – Para compactar e descompactar fluxos no formato de dados GZIP.
 
-Confira [Como Compactar e extrair arquivos](how-to-compress-and-extract-files.md).
+Confira [How to: Compress and Extract Files](how-to-compress-and-extract-files.md) (Como compactar e extrair arquivos).
 
 ## <a name="isolated-storage"></a>Armazenamento isolado
 
 Um armazenamento isolado é um mecanismo de armazenamento de dados que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos a dados salvos. O armazenamento fornece um sistema de arquivos virtual que é isolado por usuário, assembly e (opcionalmente) domínio. O armazenamento isolado é particularmente útil quando o aplicativo não tem permissão para acessar arquivos de usuários. Você pode salvar configurações ou arquivos para seu aplicativo de modo que ele seja controlado pela política de segurança do computador.
 
-O armazenamento isolado não está disponível para aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; em vez disso, use as classes de dados do aplicativo no namespace <xref:Windows.Storage?displayProperty=nameWithType>. Para saber mais, veja [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
+Isolated storage is not available for Windows 8.x Store apps; instead, use application data classes in the <xref:Windows.Storage?displayProperty=nameWithType> namespace. Para saber mais, veja [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
 
 As classes a seguir são usadas com frequência na implementação do armazenamento isolado:
 
@@ -145,7 +145,7 @@ Confira [Armazenamentos isolado](isolated-storage.md).
 
 O [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] contém muitos dos tipos para leitura e gravação em fluxos. No entanto, esse conjunto não inclui todos os tipos de E/S do .NET Framework.
 
-Algumas diferenças importantes que devem ser observadas ao usar operações de E/S em aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:
+Some important differences to note when using I/O operations in Windows 8.x Store apps:
 
 - Tipos especificamente relacionados às operações de arquivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, não estão incluídos no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Em vez disso, use os tipos no namespace <xref:Windows.Storage?displayProperty=nameWithType> do Windows Runtime, como <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
@@ -155,15 +155,15 @@ Algumas diferenças importantes que devem ser observadas ao usar operações de 
 
 - Os tipos de compactação com base em caminhos <xref:System.IO.Compression.ZipFile> e <xref:System.IO.Compression.ZipFileExtensions> não estão disponíveis. Em vez disso, use os tipos no namespace <xref:Windows.Storage.Compression?displayProperty=nameWithType>.
 
-É possível converter entre fluxos do .NET Framework e fluxos do Tempo de Execução do Windows, se necessário. Para obter mais informações, confira [Como: Fazer a conversão entre fluxos do .NET Framework e fluxos do Windows Runtime](how-to-convert-between-dotnet-streams-and-winrt-streams.md) ou <xref:System.IO.WindowsRuntimeStreamExtensions>.
+É possível converter entre fluxos do .NET Framework e fluxos do Windows Runtime, se necessário. For more information, see [How to: Convert Between .NET Framework Streams and Windows Runtime Streams](how-to-convert-between-dotnet-streams-and-winrt-streams.md) or <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
-Para mais informações sobre operações de E/S em um aplicativo do [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], confira [Início Rápido: Leitura e gravação de arquivos](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+For more information about I/O operations in a Windows 8.x Store app, see [Quickstart: Reading and writing files](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>E/S e segurança
 
-Ao usar as classes no namespace <xref:System.IO?displayProperty=nameWithType>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para obter mais informações, confira [Como: Adicionar ou remover entradas da lista de controle de acesso](how-to-add-or-remove-access-control-list-entries.md).
+Ao usar as classes no namespace <xref:System.IO?displayProperty=nameWithType>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](how-to-add-or-remove-access-control-list-entries.md).
 
-As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use [armazenamento isolado](isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) para aplicativos da [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
+As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Instead, use [isolated storage](isolated-storage.md) for traditional .NET Framework applications, or use [application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) for Windows 8.x Store apps.
 
 Uma verificação de segurança é executada somente quando o fluxo é construído. Consequentemente, não abra um fluxo para depois passá-lo para código ou domínios de aplicativos menos confiáveis.
 

@@ -27,7 +27,7 @@ Este tópico lista vários problemas conhecidos que os clientes têm ao desenvol
   
 5. [Meu serviço e cliente funcionam muito bem, mas não posso fazer com que eles funcionem quando o cliente está em outro computador? O que está acontecendo?](#BKMK_q4)  
   
-6. [Quando eu lanço uma FaultException @ no__t-1Exception > em que o tipo é uma exceção, sempre recebi um tipo FaultException geral no cliente e não no tipo genérico. O que está acontecendo?](#BKMK_q5)  
+6. [Quando lanço uma exceção de\<FaultException > em que o tipo é uma exceção, sempre recebi um tipo FaultException geral no cliente e não no tipo genérico. O que está acontecendo?](#BKMK_q5)  
   
 7. [Parece que as operações unidirecionais e de solicitação-resposta retornam com aproximadamente a mesma velocidade quando a resposta não contém dados. O que está acontecendo?](#BKMK_q6)  
   
@@ -51,7 +51,7 @@ Este tópico lista vários problemas conhecidos que os clientes têm ao desenvol
   
 <a name="BKMK_q1"></a>   
 ## <a name="sometimes-i-receive-a-messagesecurityexception-on-the-second-request-if-my-client-is-idle-for-a-while-after-the-first-request-what-is-happening"></a>Às vezes, recebo um MessageSecurityException na segunda solicitação se meu cliente estiver ocioso por um tempo após a primeira solicitação. O que está acontecendo?  
- A segunda solicitação pode falhar principalmente por dois motivos: (1) a sessão atingiu o tempo limite ou (2) o servidor Web que está hospedando o serviço é reciclado. No primeiro caso, a sessão é válida até que o serviço expire. Quando o serviço não recebe uma solicitação do cliente dentro do período de tempo especificado na associação do serviço (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), o serviço encerra a sessão de segurança. As mensagens de cliente subsequentes resultam no <xref:System.ServiceModel.Security.MessageSecurityException>. O cliente deve restabelecer uma sessão segura com o serviço para enviar mensagens futuras ou usar um token de contexto de segurança com estado. Tokens de contexto de segurança com estado também permitem que uma sessão segura sobreviver a um servidor Web sendo reciclado. Para obter mais informações sobre como usar tokens de contexto seguro com estado em uma sessão segura, consulte [como: criar um token de contexto de segurança para uma sessão segura](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Como alternativa, você pode desabilitar sessões seguras. Ao usar a associação de [> de @no__t 1wsHttpBinding](../configure-apps/file-schema/wcf/wshttpbinding.md) , você pode definir a propriedade `establishSecurityContext` como `false` para desabilitar as sessões seguras. Para desabilitar sessões seguras para outras associações, você deve criar uma associação personalizada. Para obter detalhes sobre como criar uma associação personalizada, consulte [como: criar uma associação personalizada usando o SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Antes de aplicar qualquer uma dessas opções, você deve entender os requisitos de segurança do aplicativo.  
+ A segunda solicitação pode falhar principalmente por dois motivos: (1) a sessão atingiu o tempo limite ou (2) o servidor Web que está hospedando o serviço é reciclado. No primeiro caso, a sessão é válida até que o serviço expire. Quando o serviço não recebe uma solicitação do cliente dentro do período de tempo especificado na associação do serviço (<xref:System.ServiceModel.Channels.Binding.ReceiveTimeout%2A>), o serviço encerra a sessão de segurança. As mensagens de cliente subsequentes resultam na <xref:System.ServiceModel.Security.MessageSecurityException>. O cliente deve restabelecer uma sessão segura com o serviço para enviar mensagens futuras ou usar um token de contexto de segurança com estado. Tokens de contexto de segurança com estado também permitem que uma sessão segura sobreviver a um servidor Web sendo reciclado. Para obter mais informações sobre como usar tokens de contexto seguro com estado em uma sessão segura, consulte [como: criar um token de contexto de segurança para uma sessão segura](./feature-details/how-to-create-a-security-context-token-for-a-secure-session.md). Como alternativa, você pode desabilitar sessões seguras. Ao usar a associação de [> de wsHttpBinding\<](../configure-apps/file-schema/wcf/wshttpbinding.md) , você pode definir a propriedade `establishSecurityContext` como `false` para desabilitar as sessões seguras. Para desabilitar sessões seguras para outras associações, você deve criar uma associação personalizada. Para obter detalhes sobre como criar uma associação personalizada, consulte [como: criar uma associação personalizada usando o SecurityBindingElement](./feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md). Antes de aplicar qualquer uma dessas opções, você deve entender os requisitos de segurança do aplicativo.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="my-service-starts-to-reject-new-clients-after-about-10-clients-are-interacting-with-it-what-is-happening"></a>Meu serviço começa a rejeitar novos clientes depois de cerca de 10 clientes interagindo com ele. O que está acontecendo?  
@@ -59,7 +59,7 @@ Este tópico lista vários problemas conhecidos que os clientes têm ao desenvol
   
 <a name="BKMK_q3"></a>   
 ## <a name="can-i-load-my-service-configuration-from-somewhere-other-than-the-wcf-applications-configuration-file"></a>Posso carregar minha configuração de serviço de algum lugar além do arquivo de configuração do aplicativo WCF?  
- Sim, no entanto, você precisa criar uma classe <xref:System.ServiceModel.ServiceHost> personalizada que substitua o método <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A>. Dentro desse método, você pode chamar a base para carregar a configuração primeiro (se desejar carregar as informações de configuração padrão também), mas também pode substituir totalmente o sistema de carregamento da configuração. Observe que, se você quiser carregar a configuração de um arquivo de configuração diferente do arquivo de configuração do aplicativo, deverá analisar o arquivo de configuração por conta própria e carregar a configuração.  
+ Sim, no entanto, você precisa criar uma classe de <xref:System.ServiceModel.ServiceHost> personalizada que substitua o método <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A>. Dentro desse método, você pode chamar a base para carregar a configuração primeiro (se desejar carregar as informações de configuração padrão também), mas também pode substituir totalmente o sistema de carregamento da configuração. Observe que, se você quiser carregar a configuração de um arquivo de configuração diferente do arquivo de configuração do aplicativo, deverá analisar o arquivo de configuração por conta própria e carregar a configuração.  
   
  O exemplo de código a seguir mostra como substituir o método <xref:System.ServiceModel.ServiceHostBase.ApplyConfiguration%2A> e configurar diretamente um ponto de extremidade.  
   
@@ -104,7 +104,7 @@ public class MyServiceHost : ServiceHost
   
 - Para outros problemas possíveis, consulte o tópico de exemplos [executando os exemplos de Windows Communication Foundation](./samples/running-the-samples.md).  
   
-- Se o cliente estiver usando credenciais do Windows e a exceção for um <xref:System.ServiceModel.Security.SecurityNegotiationException>, configure o Kerberos da seguinte maneira.  
+- Se o cliente estiver usando credenciais do Windows e a exceção for uma <xref:System.ServiceModel.Security.SecurityNegotiationException>, configure o Kerberos da seguinte maneira.  
   
     1. Adicione as credenciais de identidade ao elemento de ponto de extremidade no arquivo app. config do cliente:  
   
@@ -141,12 +141,12 @@ public class MyServiceHost : ServiceHost
 - [Explicações Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
-## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Quando eu lanço uma FaultException @ no__t-0Exception > em que o tipo é uma exceção, sempre recebi um tipo FaultException geral no cliente e não no tipo genérico. O que está acontecendo?  
+## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Quando lanço uma exceção de\<FaultException > em que o tipo é uma exceção, sempre recebi um tipo FaultException geral no cliente e não no tipo genérico. O que está acontecendo?  
  É altamente recomendável que você crie seu próprio tipo de dados de erro personalizado e declare-o como o tipo de detalhe em seu contrato de falha. O motivo é que usar tipos de exceção fornecidos pelo sistema:  
   
 - Cria uma dependência de tipo que remove um dos maiores pontos fortes dos aplicativos orientados a serviços.  
   
-- Não é possível depender da serialização de exceções de forma padrão. Alguns — como <xref:System.Security.SecurityException> — Talvez não sejam serializáveis.  
+- Não é possível depender da serialização de exceções de forma padrão. Alguns — como <xref:System.Security.SecurityException>— talvez não sejam serializáveis.  
   
 - Expõe detalhes de implementação interna aos clientes. Para obter mais informações, consulte [especificando e manipulando falhas em contratos e serviços](specifying-and-handling-faults-in-contracts-and-services.md).  
   
@@ -158,7 +158,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q77"></a>   
 ## <a name="im-using-an-x509-certificate-with-my-service-and-i-get-a-systemsecuritycryptographycryptographicexception-whats-happening"></a>Estou usando um certificado X. 509 com meu serviço e obtenho um System. Security. Cryptography. CryptographicException. O que está acontecendo?  
- Isso geralmente ocorre depois de alterar a conta de usuário na qual o processo de trabalho do IIS é executado. Por exemplo, no [!INCLUDE[wxp](../../../includes/wxp-md.md)], se você alterar a conta de usuário padrão que o aspnet_wp. exe executará em do ASPNET para uma conta de usuário personalizada, você poderá ver esse erro. Se você estiver usando uma chave privada, o processo que a usa precisará ter permissões para acessar o arquivo que armazena essa chave.  
+ Isso geralmente ocorre depois de alterar a conta de usuário na qual o processo de trabalho do IIS é executado. Por exemplo, em [!INCLUDE[wxp](../../../includes/wxp-md.md)], se você alterar a conta de usuário padrão em que o Aspnet_wp. exe é executado do ASPNET para uma conta de usuário personalizada, você poderá ver esse erro. Se você estiver usando uma chave privada, o processo que a usa precisará ter permissões para acessar o arquivo que armazena essa chave.  
   
  Se esse for o caso, você deverá conceder privilégios de acesso de leitura à conta do processo para o arquivo que contém a chave privada. Por exemplo, se o processo de trabalho do IIS estiver sendo executado na conta Bob, você precisará dar ao Bob acesso de leitura ao arquivo que contém a chave privada.  
   
@@ -170,7 +170,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q99"></a>   
 ## <a name="im-using-one-of-my-tracing-tools-and-i-get-an-endpointnotfoundexception-whats-happening"></a>Estou usando uma das minhas ferramentas de rastreamento e obtenho um EndpointNotFoundException. O que está acontecendo?  
- Se você estiver usando uma ferramenta de rastreamento que não seja o mecanismo de rastreamento do WCF fornecido pelo sistema e receber um <xref:System.ServiceModel.EndpointNotFoundException> que indica que houve uma incompatibilidade de filtro de endereço, você precisará usar a classe <xref:System.ServiceModel.Description.ClientViaBehavior> para direcionar as mensagens para o utilitário de rastreamento e fazer com que o utilitário redirecionar essas mensagens para o endereço do serviço. A classe <xref:System.ServiceModel.Description.ClientViaBehavior> altera o cabeçalho de endereçamento de `Via` para especificar o próximo endereço de rede separadamente do receptor final, indicado pelo cabeçalho de endereçamento `To`. No entanto, ao fazer isso, não altere o endereço do ponto de extremidade, que é usado para estabelecer o valor `To`.  
+ Se você estiver usando uma ferramenta de rastreamento que não seja o mecanismo de rastreamento do WCF fornecido pelo sistema e receber uma <xref:System.ServiceModel.EndpointNotFoundException> que indica que houve uma incompatibilidade de filtro de endereço, você precisará usar a classe <xref:System.ServiceModel.Description.ClientViaBehavior> para direcionar as mensagens para o utilitário de rastreamento e fazer com que o utilitário redirecione essas mensagens para o endereço do serviço. A classe <xref:System.ServiceModel.Description.ClientViaBehavior> altera o cabeçalho de endereçamento `Via` para especificar o próximo endereço de rede separadamente do receptor final, indicado pelo cabeçalho de endereçamento `To`. No entanto, ao fazer isso, não altere o endereço do ponto de extremidade, que é usado para estabelecer o valor de `To`.  
   
  O exemplo de código a seguir mostra um exemplo de arquivo de configuração de cliente.  
   
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>Qual é o endereço base? Como ele se relaciona a um endereço de ponto de extremidade?  
- Um endereço base é o endereço raiz para uma classe <xref:System.ServiceModel.ServiceHost>. Por padrão, se você adicionar uma classe <xref:System.ServiceModel.Description.ServiceMetadataBehavior> à sua configuração de serviço, o WSDL (Web Services Description Language) para todos os pontos de extremidade que o host publicar será recuperado do endereço base HTTP, mais qualquer endereço relativo fornecido ao comportamento de metadados, além de "? WSDL ". Se você estiver familiarizado com o ASP.NET e o IIS, o endereço base será equivalente ao diretório virtual.  
+ Um endereço base é o endereço raiz para uma classe de <xref:System.ServiceModel.ServiceHost>. Por padrão, se você adicionar uma classe de <xref:System.ServiceModel.Description.ServiceMetadataBehavior> à sua configuração de serviço, o WSDL (Web Services Description Language) para todos os pontos de extremidade que o host publicar será recuperado do endereço base HTTP, além de qualquer endereço relativo fornecido ao comportamento de metadados, além de "? WSDL". Se você estiver familiarizado com o ASP.NET e o IIS, o endereço base será equivalente ao diretório virtual.  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>Compartilhando uma porta entre um ponto de extremidade de serviço e um ponto de extremidade MEX usando o NetTcpbinding  
  Se você especificar o endereço base para um serviço como net. TCP://MyServer: 8080/MyService e adicionar os seguintes pontos de extremidade:  
@@ -237,7 +237,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BK_MK99"></a>   
 ## <a name="when-calling-a-wcf-web-http-application-from-a-wcf-soap-application-the-service-returns-the-following-error-405-method-not-allowed"></a>Ao chamar um aplicativo Web HTTP WCF de um aplicativo SOAP do WCF, o serviço retorna o seguinte erro: método 405 não permitido  
- Chamar um aplicativo Web HTTP do WCF (um serviço que usa o <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior>) de um serviço WCF pode gerar a seguinte exceção: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: o servidor remoto retornou uma resposta inesperada: método (405) não Permitido. ' essa exceção ocorre porque o WCF substitui o <xref:System.ServiceModel.OperationContext> de saída pelo @no__t de entrada-4. Para resolver esse problema, crie um <xref:System.ServiceModel.OperationContextScope> na operação de serviço HTTP Web do WCF. Por exemplo:  
+ Chamar um aplicativo Web HTTP WCF (um serviço que usa o <xref:System.ServiceModel.WebHttpBinding> e <xref:System.ServiceModel.Description.WebHttpBehavior>) de um serviço WCF pode gerar a seguinte exceção: `Unhandled Exception: System.ServiceModel.FaultException`1 [System. ServiceModel. ExceptionDetail]: o servidor remoto retornou uma resposta inesperada: o método (405) não é permitido. "essa exceção ocorre porque o WCF substitui o <xref:System.ServiceModel.OperationContext> de saída pelo <xref:System.ServiceModel.OperationContext>de entrada. Para resolver esse problema, crie um <xref:System.ServiceModel.OperationContextScope> dentro da operação do serviço HTTP Web do WCF. Por exemplo:  
   
 ```csharp
 public string Echo(string input)  

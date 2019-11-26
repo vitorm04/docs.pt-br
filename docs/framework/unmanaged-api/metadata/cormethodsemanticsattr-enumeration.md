@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4b09ccfdb33c9853ed97005461f2288f1e7e6fd1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bab215a8221696a0e43e228278085fcef52a40e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781745"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442815"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>Enumeração CorMethodSemanticsAttr
-Contém valores que descrevem a relação entre um método e um evento ou propriedade associada.  
+Contains values that describe the relationship between a method and an associated property or event.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,17 +43,17 @@ typedef enum CorMethodSemanticsAttr {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`msSetter`|Especifica que o método é um `set` acessador para uma propriedade.|  
-|`msGetter`|Especifica que o método é um `get` acessador para uma propriedade.|  
-|`msOther`|Especifica que o método tem uma relação com uma propriedade ou um evento diferente daqueles definidos aqui.|  
-|`msAddOn`|Especifica que o método adiciona métodos do manipulador para um evento.|  
-|`msRemoveOn`|Especifica que o método Remove métodos do manipulador para um evento.|  
-|`msFire`|Especifica que o método gera um evento.|  
+|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
+|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
+|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
+|`msAddOn`|Specifies that the method adds handler methods for an event.|  
+|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
+|`msFire`|Specifies that the method raises an event.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Procedimentos no Visual Basic
+title: Procedimentos
 ms.date: 04/28/2017
 helpviewer_keywords:
 - procedures [Visual Basic], structured code
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - structured code [Visual Basic], procedures
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
-ms.openlocfilehash: 4b6dfe30268aef7dc61f130c2775e2cc0d1503e8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b959f4b6986bc325c97c7cbe9aeee0341832f6cc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635626"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345987"
 ---
 # <a name="procedures-in-visual-basic"></a>Procedimentos no Visual Basic
-Um *procedimento* é um bloco de instruções do Visual Basic entre uma instrução de declaração (`Function`, `Sub`, `Operator`, `Get`, `Set`) e uma correspondência `End` declaração. Todas as instruções executáveis no Visual Basic devem estar dentro de algum procedimento.  
+A *procedure* is a block of Visual Basic statements enclosed by a declaration statement (`Function`, `Sub`, `Operator`, `Get`, `Set`) and a matching `End` declaration. All executable statements in Visual Basic must be within some procedure.  
   
 ## <a name="calling-a-procedure"></a>Chamar um procedimento  
  Você invoca um procedimento de algum outro lugar no código. Isso é conhecido como uma *chamada de procedimento*. Quando a execução do procedimento termina, ele retorna o controle para o código que o invocou, que é conhecido como o *código de chamada*. O código de chamada é um demonstrativo, ou uma expressão incluída em um demonstrativo, que especifica o procedimento pelo nome e transfere o controle a ele.  
@@ -34,7 +34,7 @@ Um *procedimento* é um bloco de instruções do Visual Basic entre uma instruç
  Na maioria dos casos, um procedimento precisa operar em diferentes dados cada vez que é chamado. Você pode transmitir essas informações para o procedimento como parte da chamada de procedimento. O procedimento define zero ou mais *parâmetros* e cada um deles representa um valor que se espera que seja transmitido. A correspondência com cada parâmetro na definição do procedimento é um *argumento* na chamada de procedimento. Um argumento representa o valor que você transmite ao parâmetro correspondente em uma determinada chamada de procedimento.  
   
 ## <a name="types-of-procedures"></a>Tipos de procedimentos  
- Visual Basic usa vários tipos de procedimentos:  
+ Visual Basic uses several types of procedures:  
   
 - Os [procedimentos Sub](./sub-procedures.md) executam ações, mas não retornam um valor para o código de chamada.  
   
@@ -63,7 +63,7 @@ Um *procedimento* é um bloco de instruções do Visual Basic entre uma instruç
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Criar um procedimento](./how-to-create-a-procedure.md)
+- [Como criar um procedimento](./how-to-create-a-procedure.md)
 - [Subprocedimentos](./sub-procedures.md)
 - [Procedimentos de Função](./function-procedures.md)
 - [Procedimentos de Propriedade](./property-procedures.md)
@@ -71,5 +71,5 @@ Um *procedimento* é um bloco de instruções do Visual Basic entre uma instruç
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Procedimentos Recursivos](./recursive-procedures.md)
 - [Sobrecarga de Procedimento](./procedure-overloading.md)
-- [Procedimentos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
 - [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

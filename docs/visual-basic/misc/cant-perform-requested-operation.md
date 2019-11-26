@@ -1,22 +1,22 @@
 ---
-title: Não é possível executar a operação solicitada (Visual Basic)
+title: Can't perform requested operation
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
 ms.assetid: eeab237c-4110-4abd-b601-bbb025c5d204
-ms.openlocfilehash: af4b405ff407775c5b5e58d4915f4cfbfb23928f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bb7b4834ede26b330ecd30c5293e4cab6654bc67
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643969"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353319"
 ---
-# <a name="cant-perform-requested-operation-visual-basic"></a>Não é possível executar a operação solicitada (Visual Basic)
-Uma operação não pode ser executada porque ele invalide o estado atual do projeto. Por exemplo, você pode ter tentado modificar programaticamente o código que está sendo executado.  
+# <a name="cant-perform-requested-operation-visual-basic"></a>Can't perform requested operation (Visual Basic)
+An operation cannot be carried out because it would invalidate the current state of the project. For example, you may have tried to programmatically modify code that is running.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Interromper a execução de código, fazer modificações, se necessário e, em seguida, repita a operação.  
+- Stop the code execution, make modifications if necessary, and then retry the operation.  
   
 ## <a name="see-also"></a>Consulte também
 

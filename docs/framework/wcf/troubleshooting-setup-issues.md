@@ -2,12 +2,12 @@
 title: Solucionando problemas de instalação
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 02e6446893e661a0ec0553b0ddf254c40595595c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321350"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74281603"
 ---
 # <a name="troubleshooting-setup-issues"></a>Solucionando problemas de instalação
 Este tópico descreve como solucionar problemas de configuração do Windows Communication Foundation (WCF).  
@@ -25,7 +25,7 @@ Este tópico descreve como solucionar problemas de configuração do Windows Com
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- As chaves não serão recriadas se você executar reparar usando o instalador .NET Framework 3,0 iniciado no miniaplicativo **Adicionar/remover programas** no painel de **controle**. Para recriar corretamente essas chaves, o usuário deverá desinstalar e reinstalar o .NET Framework 3.0.  
+ As chaves não serão recriadas se você executar o reparo usando o instalador do .NET Framework 3.0 iniciado do miniaplicativo **Adicionar/Remover Programas** no **Painel de Controle**. Para recriar corretamente essas chaves, o usuário deverá desinstalar e reinstalar o .NET Framework 3.0.  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>O WMI Service Corruption bloqueia a instalação do provedor WMI do Windows Communication Foundation durante a instalação do pacote do .NET Framework 3.0  
  O WMI Service Corruption pode bloquear a instalação do provedor WMI do Windows Communication Foundation. Durante a instalação, o instalador do Windows Communication Foundation não é capaz de registrar o arquivo .mof do WCF usando o componente mofcomp.exe. Veja a seguir uma lista de sintomas:  
@@ -54,20 +54,20 @@ Este tópico descreve como solucionar problemas de configuração do Windows Com
   
 1. Execute [o utilitário de diagnóstico WMI, versão 2,0,](https://go.microsoft.com/fwlink/?LinkId=94685) para reparar o serviço WMI. Para obter mais informações sobre como usar essa ferramenta, consulte o tópico [Utilitário de diagnóstico WMI](https://go.microsoft.com/fwlink/?LinkId=94686) .  
   
- Repare a instalação do .NET Framework 3,0 usando o miniaplicativo **Adicionar/remover programas** localizado no **painel de controle**ou desinstale/reinstale o .NET Framework 3,0.  
+ Repare a instalação do .NET Framework 3.0 usando o miniaplicativo **Adicionar/Remover Programas** localizado no **Painel de Controle** ou desinstale/reinstale o .NET Framework 3.0.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Reparar o .NET Framework 3.0 após a instalação do .NET Framework 3.5 remove os elementos de configuração introduzidos pelo .NET Framework 3.5 em machine.config  
- Se você fizer um reparo do .NET Framework 3.0 depois de instalar o [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], os elementos de configuração introduzidos pelo [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] em machine.config serão removidos. No entanto, o web.config permanecerá intacto. A solução alternativa é reparar [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] após isso via ARP ou usar a [ferramenta de registro do serviço de fluxo de trabalho (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) com a opção `/c`.  
+ Se você fizer um reparo do .NET Framework 3,0 depois de instalar o .NET Framework 3,5, os elementos de configuração introduzidos pelo .NET Framework 3,5 em Machine. config serão removidos. No entanto, o web.config permanecerá intacto. A solução alternativa é reparar .NET Framework 3,5 após isso via ARP ou usar a [ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) com a opção `/c`.  
   
  A [ferramenta de registro do serviço de fluxo de trabalho (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) pode ser encontrada em%windir%\Microsoft.NET\framework\v3.5\ ou%windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="configure-iis-properly-for-wcfwf-webhost-after-installing-net-framework-35"></a>Configure o IIS corretamente para WCF/WF Webhost após instalar o .NET Framework 3.5  
- Quando a instalação do [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] falha ao definir definições adicionais de configuração do IIS relacionadas ao WCF, ele registra um erro no log de instalação e continua. Qualquer tentativa de executar aplicativos do WorkflowServices falhará, porque os parâmetros de configuração necessários estão faltando. Por exemplo, carregar xoml ou o serviço de regras pode falhar.  
+ Quando .NET Framework instalação do 3,5 falha ao definir definições adicionais de configuração do IIS relacionadas ao WCF, ele registra um erro no log de instalação e continua. Qualquer tentativa de executar aplicativos do WorkflowServices falhará, porque os parâmetros de configuração necessários estão faltando. Por exemplo, carregar xoml ou o serviço de regras pode falhar.  
   
  Para solucionar esse problema, use a [ferramenta de registro do serviço de fluxo de trabalho (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) com a opção `/c` para configurar corretamente os mapas de script do IIS no computador. A [ferramenta de registro do serviço de fluxo de trabalho (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) pode ser encontrada em%windir%\Microsoft.NET\framework\v3.5\ ou%windir%\Microsoft.NET\framework64\v3.5\  
   
 ## <a name="could-not-load-type-systemservicemodelactivationhttpmodule-from-assembly-systemservicemodel-version-3000-cultureneutral-publickeytokenb77a5c561934e089"></a>Não foi possível carregar o tipo ‘System.ServiceModel.Activation.HttpModule’ do assembly ‘System.ServiceModel, Version 3.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089’  
- Esse erro ocorrerá se [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] estiver instalado e a ativação de HTTP do WCF estiver habilitada. Para resolver o problema, execute a seguinte linha de comando de dentro do Prompt de Comando do Desenvolvedor para Visual Studio:  
+ Esse erro ocorrerá se .NET Framework 4 estiver instalado e a ativação de HTTP do WCF estiver habilitada. Para resolver o problema, execute a seguinte linha de comando de dentro do Prompt de Comando do Desenvolvedor para Visual Studio:  
   
 ```console
 aspnet_regiis.exe -i -enable  

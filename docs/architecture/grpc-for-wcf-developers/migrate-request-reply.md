@@ -1,14 +1,13 @@
 ---
 title: Migrar um serviço de solicitação-resposta do WCF para gRPC-gRPC para desenvolvedores do WCF
 description: Saiba como migrar um serviço de solicitação-resposta simples do WCF para o gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 12e042e8e7e3683cc4da1fedce2482e7199b04a7
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: f0b20e7b374438f90d83aebc6035a4e4dd94ae18
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846607"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971781"
 ---
 # <a name="migrate-a-wcf-request-reply-service-to-a-grpc-unary-rpc"></a>Migrar um serviço de solicitação-resposta WCF para um RPC unário gRPC
 
@@ -193,13 +192,13 @@ namespace TraderSys.Portfolios.Services
 
 A classe base declara `virtual` métodos para `Get` e `GetAll` que podem ser substituídos para implementar o serviço. Os métodos são `virtual` em vez de `abstract` de forma que, se você não implementá-los, o serviço poderá retornar um código de status de `Unimplemented` gRPC explícito, assim como C# você pode lançar uma `NotImplementedException` em código regular.
 
-A assinatura para todos os métodos de serviço unário gRPC no ASP.NET Core é consistente. Há dois parâmetros: o primeiro é o tipo de mensagem declarado no arquivo de `.proto`, e o segundo é um `ServerCallContext` que funciona de forma semelhante à `HttpContext` de ASP.NET Core. Na verdade, há um método de extensão chamado `GetHttpContext` na classe `ServerCallContext` que você pode usar para obter o `HttpContext` subjacente, embora você não precise usá-lo com frequência. Vamos dar uma olhada em `ServerCallContext` mais adiante neste capítulo e também no capítulo que discute a autenticação.
+A assinatura para todos os métodos de serviço unário gRPC no ASP.NET Core é consistente. Há dois parâmetros: o primeiro é o tipo de mensagem declarado no arquivo de `.proto`, e o segundo é um `ServerCallContext` que funciona de forma semelhante à `HttpContext` de ASP.NET Core. Na verdade, há um método de extensão chamado `GetHttpContext` na classe `ServerCallContext` que você pode usar para obter o `HttpContext`subjacente, embora você não precise usá-lo com frequência. Vamos dar uma olhada em `ServerCallContext` mais adiante neste capítulo e também no capítulo que discute a autenticação.
 
 O tipo de retorno do método é um `Task<T>` em que `T` é o tipo de mensagem de resposta. Todos os métodos de serviço gRPC são assíncronos.
 
 ## <a name="migrate-the-portfoliodata-library-to-net-core"></a>Migrar a biblioteca PortfolioData para o .NET Core
 
-Neste ponto, o projeto precisa do repositório de portfólio e dos modelos contidos na biblioteca de classes `TraderSys.PortfolioData` na solução WCF. A maneira mais fácil de trazê-los é criar uma nova biblioteca de classes usando a caixa de diálogo **novo projeto** do Visual Studio com o modelo *biblioteca de classes (.net Standard)* ou na linha de comando usando o CLI do .NET Core, executando os seguintes comandos do diretório que contém o arquivo de `TraderSys.sln`.
+Neste ponto, o projeto precisa do repositório de portfólio e dos modelos contidos na biblioteca de classes `TraderSys.PortfolioData` na solução WCF. A maneira mais fácil de trazê-los é criar uma nova biblioteca de classes usando a caixa de diálogo **novo projeto** do Visual Studio com o modelo *biblioteca de classes (.net Standard)* ou na linha de comando usando o CLI do .NET Core, executando os seguintes comandos do diretório que contém o arquivo `TraderSys.sln`.
 
 ```dotnetcli
 dotnet new classlib -o src/TraderSys.PortfolioData
@@ -281,7 +280,7 @@ public override Task<GetResponse> Get(GetRequest request, ServerCallContext cont
 }
 ```
 
-O primeiro problema é que `request.TraderId` é uma cadeia de caracteres e o serviço requer uma `Guid`. Embora o formato esperado para a cadeia de caracteres seja um `UUID`, o código precisa lidar com a possibilidade de um chamador ter enviado um valor inválido e responder adequadamente. O serviço pode responder com erros lançando um `RpcException` e usar o código de status de `InvalidArgument` padrão para expressar o problema.
+O primeiro problema é que `request.TraderId` é uma cadeia de caracteres e o serviço requer uma `Guid`. Embora o formato esperado para a cadeia de caracteres seja um `UUID`, o código precisa lidar com a possibilidade de um chamador ter enviado um valor inválido e responder adequadamente. O serviço pode responder com erros lançando um `RpcException`e usar o código de status de `InvalidArgument` padrão para expressar o problema.
 
 ```csharp
 public override Task<GetResponse> Get(GetRequest request, ServerCallContext context)
@@ -348,7 +347,7 @@ namespace TraderSys.Portfolios.Protos
 ```
 
 > [!NOTE]
-> Você pode usar uma biblioteca como o [AutoMapper](https://automapper.org/) para lidar com essa conversão de classes de modelo internas para tipos Protobuf, contanto que configure as conversões de tipo de nível inferior como `string` / `Guid` ou `decimal` / `double` e o mapeamento de lista.
+> Você pode usar uma biblioteca como o [AutoMapper](https://automapper.org/) para lidar com essa conversão de classes de modelo internas para tipos Protobuf, contanto que configure as conversões de tipo de nível inferior como `string`/`Guid` ou `decimal`/`double` e o mapeamento de lista.
 
 Com o código de conversão em vigor, a implementação do método de `Get` pode ser concluída.
 
@@ -409,7 +408,7 @@ Navegue até o arquivo de `portfolios.proto` no projeto `TraderSys.Portfolios`, 
 > [!TIP]
 > Observe que essa caixa de diálogo também fornece um campo URL. Se sua organização mantém um diretório acessível pela Web de arquivos de `.proto`, você pode criar clientes apenas definindo esse endereço de URL.
 
-Ao usar o recurso **Adicionar serviço conectado** do Visual Studio, o arquivo de `portfolios.proto` é adicionado ao projeto de biblioteca de classes como um *arquivo vinculado*, em vez de copiado, portanto, as alterações no arquivo no projeto de serviço serão aplicadas automaticamente no cliente projeto. O elemento `<Protobuf>` no arquivo `csproj` tem a seguinte aparência:
+Ao usar o recurso **Adicionar serviço conectado** do Visual Studio, o arquivo de `portfolios.proto` é adicionado ao projeto de biblioteca de classes como um *arquivo vinculado*, em vez de copiado, portanto, as alterações no arquivo no projeto de serviço serão aplicadas automaticamente no projeto cliente. O elemento `<Protobuf>` no arquivo `csproj` tem a seguinte aparência:
 
 ```xml
 <Protobuf Include="..\TraderSys.Portfolios\Protos\portfolios.proto" GrpcServices="Client">

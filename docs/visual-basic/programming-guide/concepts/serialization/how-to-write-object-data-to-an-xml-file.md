@@ -1,15 +1,15 @@
 ---
-title: 'Como: Gravar dados de objeto para um arquivo XML (Visual Basic)'
+title: Como gravar dados de objeto em um arquivo XML
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 17f8463a4b905028d37a2e005562867f87f4bd2b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b2181a74c83782cf4737b2a94fc5fb08fee28a10
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624362"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345449"
 ---
-# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Como: Gravar dados de objeto para um arquivo XML (Visual Basic)
+# <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>How to: Write Object Data to an XML File (Visual Basic)
 Este exemplo grava o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
   
 ## <a name="example"></a>Exemplo  
@@ -57,5 +57,5 @@ End Module
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.IO.StreamWriter>
-- [Como: Ler dados de objeto de um arquivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
+- [Como ler dados de objeto de um arquivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
 - [Serialização (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)

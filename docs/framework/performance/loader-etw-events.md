@@ -7,32 +7,19 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6177bdff873feb75eb15dba53bcdb5197260fa9d
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046401"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974597"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de carregador
-<a name="top"></a> Esses eventos coletam informações relacionadas ao carregamento e descarregamento de domínios do aplicativo, assemblies e módulos.  
+Esses eventos coletam informações relacionadas ao carregamento e ao descarregamento de domínios, assemblies e módulos de aplicativos.  
   
  Todos os eventos de carregador são gerados sob a palavra-chave `LoaderKeyword` (0x8). Os eventos `DCStart` e `DCEnd` são gerados sob `LoaderRundownKeyword` (0x8) com `StartRundown`/`EndRundown` habilitado. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](clr-etw-keywords-and-levels.md).)  
-  
- Eventos de carregador são subdivididos no seguintes:  
-  
-- [Eventos de domínio do aplicativo](#application_domain_events)  
-  
-- [Eventos de assembly do carregador CLR](#clr_loader_assembly_events)  
-  
-- [Eventos de módulo](#module_events)  
-  
-- [Eventos de módulo de domínio CLR](#clr_domain_module_events)  
-  
-- [Eventos de intervalo de módulo](#module_range_events)  
-  
-<a name="application_domain_events"></a>   
-## <a name="application-domain-events"></a>Eventos de domínio do aplicativo  
+
+## <a name="application-domain-events"></a>Eventos de domínio do aplicativo
  A tabela a seguir mostra a palavra-chave e o nível.  
   
 |Palavra-chave para acionar o evento|evento|Nível|  
@@ -55,14 +42,11 @@ ms.locfileid: "71046401"
 |Nome do campo|Tipo de dados|Descrição|  
 |----------------|---------------|-----------------|  
 |AppDomainID|win:UInt64|O identificador exclusivo de um domínio do aplicativo.|  
-|AppDomainFlags|win:UInt32|0x1 Domínio padrão.<br /><br /> 0x2 Executá.<br /><br /> 0x4 Domínio do aplicativo, bit 28-31: Política de compartilhamento deste domínio.<br /><br /> 0: Um domínio compartilhado.|  
+|AppDomainFlags|win:UInt32|0x1: domínio padrão.<br /><br /> 0x2: executável.<br /><br /> 0x4: domínio do aplicativo, 28-31 bits: política de compartilhamento desse domínio.<br /><br /> 0: um domínio compartilhado.|  
 |AppDomainName|win:UnicodeString|Nome amigável de domínio do aplicativo. Pode ser alterado durante o tempo de vida do processo.|  
 |AppDomainIndex|Win:UInt32|O índice desse domínio do aplicativo.|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
-  
- [Voltar ao início](#top)  
-  
-<a name="clr_loader_assembly_events"></a>   
+
 ## <a name="clr-loader-assembly-events"></a>Eventos de assembly do carregador CLR  
  A tabela a seguir mostra a palavra-chave e o nível.  
   
@@ -88,14 +72,11 @@ ms.locfileid: "71046401"
 |AssemblyID|win:UInt64|ID exclusiva para o assembly.|  
 |AppDomainID|win:UInt64|ID do domínio desse assembly.|  
 |BindingID|win:UInt64|ID que identifica exclusivamente a associação do assembly.|  
-|AssemblyFlags|win:UInt32|0x1 Assembly de domínio neutro.<br /><br /> 0x2 Assembly dinâmico.<br /><br /> 0x4 O assembly tem uma imagem nativa.<br /><br /> 0x8 Assembly de coleção.|  
+|AssemblyFlags|win:UInt32|0x1: assembly de domínio neutro.<br /><br /> 0x2: assembly dinâmico.<br /><br /> 0x4: o assembly tem uma imagem nativa.<br /><br /> 0x8: assembly de coleção.|  
 |AssemblyName|win:UnicodeString|O nome totalmente qualificado do assembly.|  
-|ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
-  
- [Voltar ao início](#top)  
-  
-<a name="module_events"></a>   
-## <a name="module-events"></a>Eventos de módulo  
+|ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|   
+
+## <a name="module-events"></a>Eventos de módulo
  A tabela a seguir mostra a palavra-chave e o nível.  
   
 |Palavra-chave para acionar o evento|evento|Nível|  
@@ -120,7 +101,7 @@ ms.locfileid: "71046401"
 |----------------|---------------|-----------------|  
 |ModuleID|win:UInt64|ID exclusiva para o módulo.|  
 |AssemblyID|win:UInt64|ID do assembly em que esse módulo reside.|  
-|ModuleFlags|win:UInt32|0x1 Módulo neutro de domínio.<br /><br /> 0x2 O módulo tem uma imagem nativa.<br /><br /> 0x4 Módulo dinâmico.<br /><br /> 0x8 Módulo de manifesto.|  
+|ModuleFlags|win:UInt32|0x1: módulo de domínio neutro.<br /><br /> 0x2: o módulo tem uma imagem nativa.<br /><br /> 0x4: módulo dinâmico.<br /><br /> 0x8: módulo de manifesto.|  
 |Reserved1|win:UInt32|Campo reservado.|  
 |ModuleILPath|win:UnicodeString|O caminho da imagem MSIL (Microsoft Intermediate Language) para o módulo ou o nome de módulo dinâmico se ele é um assembly dinâmico (terminado em nulo).|  
 |ModuleNativePath|win:UnicodeString|Caminho da imagem nativa do módulo, se presente (terminado em nulo).|  
@@ -139,11 +120,8 @@ ms.locfileid: "71046401"
 - Os nomes de campo que começam com "ManagedPdb" referem-se ao PDB gerenciado correspondente ao módulo MSIL que foi gerado pelo compilador gerenciado (por exemplo, o compilador de C# ou de Visual Basic). Esse PDB usa o formato de PDB gerenciado e descreve como os elementos do código-fonte gerenciado original, tais como arquivos, números de linha e nomes de símbolo, são mapeados para elementos MSIL que são compilados no módulo MSIL.  
   
 - Os nomes de campo que começam com "NativePdb" se referem ao PDB NGen gerado chamando `NGEN createPDB`. Esse PDB usa o formato de PDB nativo e descreve como os elementos do código-fonte gerenciado original, tais como arquivos, números de linha e nomes de símbolo, são mapeados para elementos nativos que são compilados no módulo NGen.  
-  
- [Voltar ao início](#top)  
-  
-<a name="clr_domain_module_events"></a>   
-## <a name="clr-domain-module-events"></a>Eventos de módulo de domínio CLR  
+
+## <a name="clr-domain-module-events"></a>Eventos de módulo de domínio CLR
  A tabela a seguir mostra a palavra-chave e o nível.  
   
 |Palavra-chave para acionar o evento|evento|Nível|  
@@ -167,16 +145,13 @@ ms.locfileid: "71046401"
 |ModuleID|win:UInt64|Identifica o assembly ao qual este módulo pertence.|  
 |AssemblyID|win:UInt64|ID do assembly em que esse módulo reside.|  
 |AppDomainID|win:UInt64|ID do domínio do aplicativo no qual esse módulo é usado.|  
-|ModuleFlags|win:UInt32|0x1 Módulo neutro de domínio.<br /><br /> 0x2 O módulo tem uma imagem nativa.<br /><br /> 0x4 Módulo dinâmico.<br /><br /> 0x8 Módulo de manifesto.|  
+|ModuleFlags|win:UInt32|0x1: módulo de domínio neutro.<br /><br /> 0x2: o módulo tem uma imagem nativa.<br /><br /> 0x4: módulo dinâmico.<br /><br /> 0x8: módulo de manifesto.|  
 |Reserved1|win:UInt32|Campo reservado.|  
 |ModuleILPath|win:UnicodeString|O caminho da imagem MSIL para o módulo ou o nome de módulo dinâmico se ele é um assembly dinâmico (terminado em nulo).|  
 |ModuleNativePath|win:UnicodeString|Caminho da imagem nativa do módulo, se presente (terminado em nulo).|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
-  
- [Voltar ao início](#top)  
-  
-<a name="module_range_events"></a>   
-## <a name="module-range-events"></a>Eventos de intervalo de módulo  
+
+## <a name="module-range-events"></a>Eventos de intervalo de módulo
  A tabela a seguir mostra a palavra-chave e o nível.  
   
 |Palavra-chave para acionar o evento|evento|Nível|  

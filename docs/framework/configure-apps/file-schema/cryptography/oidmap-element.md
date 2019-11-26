@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: eec2c4745ad5a0492ccf04c8f23b901275f23c01
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5f055d6e665f68586191ab760fb5658eeb5c2cb2
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698445"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087988"
 ---
-# <a name="oidmap-element"></a>\<oidMap > elemento
+# <a name="oidmap-element"></a>\<elemento de > oidMap
 Contém mapeamentos de OID (identificador de objeto) ASN para classes.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<oidMap >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<oidMap >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -40,7 +40,7 @@ Contém mapeamentos de OID (identificador de objeto) ASN para classes.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<oidEntry>](oidentry-element.md)|Mapeia uma OID ASN. 1 para um nome amigável.|  
+|[\<oidEntry >](oidentry-element.md)|Mapeia uma OID ASN. 1 para um nome amigável.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
@@ -48,7 +48,7 @@ Contém mapeamentos de OID (identificador de objeto) ASN para classes.
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
 |`cryptographySettings`|Contém configurações de criptografia.|  
-|`mscorlib`|Contém o `cryptographySettings` elemento.|  
+|`mscorlib`|Contém o elemento `cryptographySettings`.|  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o elemento **\<oidMap >** para conter um mapeamento de um OID para o algoritmo de hash RIPEMD-160 para uma implementação desse algoritmo de hash.  

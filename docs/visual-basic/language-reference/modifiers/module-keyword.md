@@ -1,5 +1,5 @@
 ---
-title: Módulo <keyword> (Visual Basic)
+title: Módulo <keyword>
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ModuleAttribute
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Module modifier
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
-ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cd2f762181b5a702f0b0defd5b71bb7bdf129c7b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920699"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351546"
 ---
-# <a name="module-keyword-visual-basic"></a>Módulo \<palavra-chave > (Visual Basic)
-Especifica que um atributo no início de um arquivo de origem se aplica ao módulo assembly atual.  
+# <a name="module-keyword-visual-basic"></a>Module \<keyword> (Visual Basic)
+Specifies that an attribute at the beginning of a source file applies to the current assembly module.  
   
 ## <a name="remarks"></a>Comentários  
- Muitos atributos referem-se a um elemento de programação individual, como uma classe ou propriedade. Aplicar tal um atributo, anexando o bloco de atributo, entre colchetes angulares (`< >`), diretamente à instrução de declaração.  
+ Many attributes pertain to an individual programming element, such as a class or property. You apply such an attribute by attaching the attribute block, within angle brackets (`< >`), directly to the declaration statement.  
   
- Se um atributo pertence não apenas para o próximo elemento, mas para o módulo do assembly atual, coloque o bloco de atributo no início do arquivo de origem e identifica o atributo com o `Module` palavra-chave. Se ele se aplica a todo o assembly, você usa o [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) palavra-chave.  
+ If an attribute pertains not only to the following element but to the current assembly module, you place the attribute block at the beginning of the source file and identify the attribute with the `Module` keyword. If it applies to the entire assembly, you use the [Assembly](../../../visual-basic/language-reference/modifiers/assembly.md) keyword.  
   
- O `Module` modificador não é igual a [instrução Module](../../../visual-basic/language-reference/statements/module-statement.md).  
+ The `Module` modifier is not the same as the [Module Statement](../../../visual-basic/language-reference/statements/module-statement.md).  
   
 ## <a name="see-also"></a>Consulte também
 

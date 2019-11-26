@@ -2,12 +2,12 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 2f8cff87280f08af0c426b7a726949b9a9c40197
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 379552f461a79415e3140a8084901e0c1d6b2c32
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732518"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140484"
 ---
 # <a name="ws2007httpbinding"></a>\<ws2007HttpBinding >
 Define uma associação interoperável que fornece suporte para as versões corretas dos elementos de associação <xref:System.ServiceModel.WSHttpBinding.Security%2A>, <xref:System.ServiceModel.ReliableSession>e <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A>.  
@@ -72,7 +72,7 @@ Define uma associação interoperável que fornece suporte para as versões corr
 |`maxBufferPoolSize`|O tamanho máximo do pool de buffers para essa associação. O padrão é 524.288 bytes (512 × 1.024). Muitas partes de Windows Communication Foundation (WCF) usam buffers. Criar e destruir buffers cada vez que eles são usados é caro, assim como a coleta de lixo para buffers. Com os pools de buffers, você pode pegar um buffer do pool, usá-lo e retorná-lo ao pool quando terminar. Isso evita a sobrecarga na criação e destruição de buffers.|  
 |`maxReceivedMessageSize`|O tamanho máximo da mensagem, em bytes, incluindo cabeçalhos, que um canal configurado com essa associação, pode receber. O remetente de uma mensagem que excede esse limite recebe uma falha de SOAP. O receptor remove a mensagem e cria uma entrada do evento no log de rastreamento. O padrão é 65536.|  
 |`messageEncoding`|Define o codificador usado para codificar a mensagem. Os valores válidos incluem o seguinte:<br /><br /> -   `Text`: Use um codificador de mensagem de texto.<br />-   `Mtom`: Use um codificador MTOM (mecanismo de organização de transmissão de mensagens 1,0).<br /><br /> O padrão é `Text`.<br /><br /> Este atributo é do tipo <xref:System.ServiceModel.WSMessageEncoding>.|  
-|`name`|O nome da configuração da associação. Esse valor deve ser exclusivo porque é usado como uma identificação para a associação. A partir do [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)], associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|O nome da configuração da associação. Esse valor deve ser exclusivo porque é usado como uma identificação para a associação. A partir do .NET Framework 4, associações e comportamentos não precisam ter um nome. Para obter mais informações sobre configurações padrão e associações e comportamentos do sem nome, consulte [configuração simplificada](../../../wcf/simplified-configuration.md) e [configuração simplificada para serviços WCF](../../../wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de abertura. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
 |`proxyAddress`|Um URI que especifica o endereço do proxy HTTP. Se `useSystemWebProxy` for `true`, essa configuração deverá ser `null`. O padrão é `null`.|  
 |`receiveTimeout`|Um valor <xref:System.TimeSpan> que especifica o intervalo de tempo fornecido para a conclusão de uma operação de recebimento. Esse valor deve ser maior ou igual a <xref:System.TimeSpan.Zero>. O padrão é 00:01:00.|  
@@ -85,7 +85,7 @@ Define uma associação interoperável que fornece suporte para as versões corr
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<Security >](security-of-wshttpbinding.md)|Define as configurações de segurança para a associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
+|[> \<segurança](security-of-wshttpbinding.md)|Define as configurações de segurança para a associação. Este elemento é do tipo <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>.|  
 |[\<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|Define as restrições sobre a complexidade das mensagens SOAP que os pontos de extremidade configurados com essa associação podem processar. Este elemento é do tipo <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<reliableSession >](https://docs.microsoft.com/previous-versions/ms731375(v=vs.90))|Especifica se as sessões confiáveis são estabelecidas entre os pontos de extremidade do canal.|  
   
@@ -93,7 +93,7 @@ Define uma associação interoperável que fornece suporte para as versões corr
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<bindings >](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
+|[associações de \<](bindings.md)|Esse elemento contém uma coleção de associações padrão e personalizadas.|  
   
 ## <a name="remarks"></a>Comentários  
  O `WS2007HttpBinding` adiciona uma associação fornecida pelo sistema semelhante a `WSHttpBinding` mas usa a organização para o avanço das versões padrão do OASIS (padrões de informações estruturadas) dos protocolos ReliableSession, Security e TransactionFlow. Nenhuma alteração no modelo de objeto ou nas configurações padrão é necessária ao usar essa associação.  
@@ -143,4 +143,4 @@ Define uma associação interoperável que fornece suporte para as versões corr
 - [Associações](../../../wcf/bindings.md)
 - [Configurando associações fornecidas pelo sistema](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [Usando associações para configurar serviços e clientes](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding >](bindings.md)
+- [> de associação de \<](bindings.md)

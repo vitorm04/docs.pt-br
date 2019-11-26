@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4229332ef3a079a5a294e27b624dde0e1fb46691
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782958"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445861"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>Método ICorProfilerCallback::ObjectsAllocatedByClass
-Notifica o criador de perfil sobre o número de instâncias de cada classe especificada que foram criados desde a última coleta de lixo.  
+Notifica o criador de perfil sobre o número de instâncias de cada classe especificada que foram criadas desde a coleta de lixo mais recente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,25 +36,25 @@ HRESULT ObjectsAllocatedByClass(
   
 ## <a name="parameters"></a>Parâmetros  
  `cClassCount`  
- [in] O tamanho do `classIds` e `cObjects` matrizes.  
+ no O tamanho das matrizes `classIds` e `cObjects`.  
   
  `classIds`  
- [in] Uma matriz de IDs, onde cada ID Especifica uma classe com uma ou mais instâncias de classe.  
+ no Uma matriz de IDs de classe, em que cada ID especifica uma classe com uma ou mais instâncias.  
   
  `cObjects`  
- [in] Uma matriz de inteiros, onde cada inteiro Especifica o número de instâncias da classe correspondente no `classIds` matriz.  
+ no Uma matriz de inteiros, em que cada inteiro especifica o número de instâncias para a classe correspondente na matriz de `classIds`.  
   
 ## <a name="remarks"></a>Comentários  
- O `classIds` e `cObjects` matrizes são matrizes paralelas. Por exemplo, `classIds[i]` e `cObjects[i]` fazer referência à mesma classe. Se nenhuma instância de uma classe tiver sido criada desde a coleta de lixo anterior, a classe é omitida. O `ObjectsAllocatedByClass` retorno de chamada não relatará objetos alocados no heap de objeto grande.  
+ As matrizes `classIds` e `cObjects` são matrizes paralelas. Por exemplo, `classIds[i]` e `cObjects[i]` referenciam a mesma classe. Se nenhuma instância de uma classe tiver sido criada desde a coleta de lixo anterior, a classe será omitida. O retorno de chamada `ObjectsAllocatedByClass` não relatará objetos alocados na heap de objeto grande.  
   
- Os números relatados pelo `ObjectsAllocatedByClass` são apenas estimativas. Para a contagem exata, use [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
+ Os números relatados por `ObjectsAllocatedByClass` são apenas estimativas. Para contagens exatas, use [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).  
   
- O `classIds` matriz pode conter um ou mais entradas nulas se correspondente `cObjects` matriz tem tipos estão descarregando.  
+ A matriz de `classIds` pode conter uma ou mais entradas nulas se a matriz de `cObjects` correspondente tiver tipos que estão descarregando.  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

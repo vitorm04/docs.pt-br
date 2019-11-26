@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6bfd574-1da3-4ba7-82f2-46ca5efcbaba
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5a6fd0a9ae798fa5071d9b4b9fac1f8b3c759a20
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 4e2a78e2d049e952aa1be0b3a8fd640eb18d0320
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67750876"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440574"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>Método IMetaDataEmit::SetPinvokeMap
-Define ou altera os recursos de assinatura de PInvoke de um método, conforme definido por uma chamada anterior a [imetadataemit:: Definepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
+Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,23 +38,23 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] O `mdToken` para mapeamento de quais informações se aplicam.  
+ [in] The `mdToken` to which mapping information applies.  
   
  `dwMappingFlags`  
- [in] Sinalizadores usados por PInvoke para fazer o mapeamento. Esse é um bitmask de `CorPinvokeMap` valores.  
+ [in] Flags used by PInvoke to do the mapping. This is a bitmask of `CorPinvokeMap` values.  
   
  `szImportName`  
- [in] O nome do destino de exportação na DLL nativa.  
+ [in] The name of the target export in the native DLL.  
   
  `mrImportDLL`  
- [in] O `mdModuleRef` token para o destino não gerenciado a DLL.  
+ [in] The `mdModuleRef` token for the target unmanaged DLL.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MSCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

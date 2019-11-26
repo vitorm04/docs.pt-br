@@ -1,29 +1,29 @@
 ---
-title: 'Como: Inserir expressões em literais XML (Visual Basic)'
+title: Como inserir expressões em literais XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 9d0fd1e3713dc5b81cfca0ce54b571b38e648f87
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2e8dd10b334b0271e3c9de11ed155c9d5d7aae48
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879106"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74332937"
 ---
-# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Como: Inserir expressões em literais XML (Visual Basic)
-Você pode combinar literais XML com expressões incorporadas para criar um documento XML, fragmento ou elemento que contém o conteúdo criado no tempo de execução. Os exemplos a seguir demonstram como usar expressões inseridas para preencher os nomes de elementos, atributos e conteúdo do elemento no tempo de execução.  
+# <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Como inserir expressões em literais XML (Visual Basic)
+You can combine XML literals with embedded expressions to create an XML document, fragment, or element that contains content created at run time. The following examples demonstrate how to use embedded expressions to populate element content, attributes, and element names at run time.  
   
- É a sintaxe para uma expressão inserida `<%=` `exp` `%>`, que é a mesma sintaxe que o ASP.NET usa. Para obter mais informações, consulte [expressões inseridas no XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ The syntax for an embedded expression is `<%=` `exp` `%>`, which is the same syntax that ASP.NET uses. For more information, see [Embedded Expressions in XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- Você também pode usar o [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs para criar [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objetos. Para obter mais informações, consulte <xref:System.Xml.Linq.XElement>.  
+ You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects. Para obter mais informações, consulte <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="procedures"></a>Procedimentos  
   
-#### <a name="to-insert-text-as-element-content"></a>Para inserir texto como conteúdo do elemento  
+#### <a name="to-insert-text-as-element-content"></a>To insert text as element content  
   
-- O exemplo a seguir mostra como inserir o texto que está contido no `contactName` variável entre os nomes de elementos de abertura e fechamento.  
+- The following example shows how to insert the text that is contained in the `contactName` variable between the opening and closing name elements.  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -35,9 +35,9 @@ Você pode combinar literais XML com expressões incorporadas para criar um docu
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a>Para inserir texto como um valor de atributo  
+#### <a name="to-insert-text-as-an-attribute-value"></a>To insert text as an attribute value  
   
-- O exemplo a seguir mostra como inserir o texto que está contido na `phoneType` variável como o valor do `type` atributo.  
+- The following example shows how to insert the text that is contained in the `phoneType` variable as the value of the `type` attribute.  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -49,11 +49,11 @@ Você pode combinar literais XML com expressões incorporadas para criar um docu
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a>Para inserir texto para um nome de elemento  
+#### <a name="to-insert-text-for-an-element-name"></a>To insert text for an element name  
   
-- O exemplo a seguir mostra como inserir o texto que está contido no `elementName` variável como o nome de um elemento.  
+- The following example shows how to insert the text that is contained in the `elementName` variable as the name of an element.  
   
-     Ao criar elementos usando essa técnica, você deve fechá-los com o \</ > marca.  
+     When creating elements by using this technique, you must close them with the \</> tag.  
   
      [!code-vb[VbXMLSamples#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#41)]  
   
@@ -67,7 +67,7 @@ Você pode combinar literais XML com expressões incorporadas para criar um docu
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Criar literais XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
+- [Como criar literais XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)
 - [Expressões Inseridas no XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [Criando XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)

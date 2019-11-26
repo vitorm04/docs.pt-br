@@ -1,30 +1,30 @@
 ---
-title: 'Serviço: Falhas de Validação e Autenticação de Segurança'
+title: 'Serviço: falhas de autenticação e validação de segurança'
 ms.date: 03/30/2017
 ms.assetid: 55c98268-b1ad-459d-851b-25ef52248187
-ms.openlocfilehash: 5843d25eb26bdd9facc324a2af50c6b02c5ad7c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 399249926bcb1383fd33f60510c2c212c6f4261c
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613595"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204575"
 ---
-# <a name="service-security-validation-and-authentication-failures"></a>Serviço: Falhas de Validação e Autenticação de Segurança
-Nome do contador: Falhas de Validação e Autenticação de Segurança  
+# <a name="service-security-validation-and-authentication-failures"></a>Serviço: falhas de autenticação e validação de segurança
+Counter name: Security Validation and Authentication Failures  
   
 ## <a name="description"></a>Descrição  
- Esse contador é incrementado sempre que uma mensagem foi rejeitada devido a um problema de segurança não coberto pelo contador "Chamadas de segurança não autorizado". Esses problemas incluem:  
+ This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter. Such problems include:  
   
-- Não é possível ler o token de cliente da mensagem.  
+- Client token cannot be read from the message.  
   
-- Token de cliente falha na autenticação (por exemplo, senha incorreta).  
+- Client token has failed authentication (for example, bad password).  
   
-- Falha na verificação de assinatura (por exemplo, a mensagem foi violada).  
+- Signature verification has failed (for example, the message has been tampered).  
   
-- A mensagem é uma duplicata da anterior, o que pode ocorrer durante um ataque de repetição.  
+- The message is a duplicate from a previous one, which can happen during a replay attack.  
   
-- Ocorreu uma falha de descriptografia.  
+- A decryption failure has occurred.  
   
-- Alguns necessários elementos (por exemplo, carimbo de hora ausente ou bloquear os dados criptografados) estão ausentes da mensagem.  
+- Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.  
   
-- Ocorreram erros durante o handshake TLSNEGO/SPNEGO.
+- Errors have occurred during TLSNEGO/SPNEGO handshake.

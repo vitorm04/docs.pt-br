@@ -3,14 +3,14 @@ title: Criar tipos mescla usando métodos de interface padrão
 description: Usando membros de interface padrão, você pode estender interfaces com implementações padrão opcionais para implementadores.
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: 798413f0071159893de39f3e190a9b2693571bb7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039272"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140850"
 ---
-# <a name="tutorial-mix-in-functionality-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: misturar na funcionalidade ao criar classes usando interfaces com métodos de interface padrão
+# <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>Tutorial: misturar funcionalidade no ao criar classes usando interfaces com métodos de interface padrão
 
 Desde o C# 8.0 no .NET Core 3.0, é possível definir uma implementação em que você declara um membro de uma interface. Esse recurso fornece novos recursos em que você pode definir implementações padrão para recursos declarados em interfaces. As classes podem escolher quando substituir a funcionalidade, quando usar a funcionalidade padrão e quando não declarar suporte para recursos discretos.
 
@@ -65,7 +65,7 @@ Em seguida, vamos definir a interface para uma luz que pode desligar automaticam
 
 [!code-csharp[pure Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/UnusedExampleCode.cs?name=SnippetPureTimerInterface)]
 
-Você pode adicionar uma implementação básica à luz de sobrecarga, mas uma solução melhor é modificar essa definição de interface para fornecer uma implementação padrão `virtual`:
+Você pode adicionar uma implementação básica à luz de sobrecarga, mas uma solução melhor é modificar essa definição de interface para fornecer uma `virtual` implementação padrão:
 
 [!code-csharp[Timer interface](~/samples/csharp/tutorials/mixins-with-interfaces/ITimerLight.cs?name=SnippetTimerLightFinal)]
 
@@ -107,7 +107,7 @@ Em seguida, vamos escrever um código de teste. Você pode fazer uso do C#recurs
 
 [!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetTestLightFunctions)]
 
-O código a seguir no método `Main` cria cada tipo de luz em sequência e testa essa luz:
+O código a seguir em seu método `Main` cria cada tipo de luz em sequência e testa essa luz:
 
 [!code-csharp[Test a light's capabilities](~/samples/csharp/tutorials/mixins-with-interfaces/Program.cs?name=SnippetMainMethod)]
 
@@ -121,8 +121,8 @@ A implementação padrão pressupõe energia CA:
 
 [!code-csharp[Report a default power status](~/samples/csharp/tutorials/mixins-with-interfaces/ILight.cs?name=SnippetILightInterface)]
 
-Essas alterações são compiladas corretamente, mesmo que o `ExtraFancyLight` declare o suporte para a interface `ILight` e ambas as interfaces derivadas, `ITimerLight` e `IBlinkingLight`. Há apenas uma implementação "mais próxima" declarada na interface `ILight`. Qualquer classe que declarou uma substituição se tornaria a única implementação "mais próxima". Você viu exemplos nas classes anteriores que substituiu os membros de outras interfaces derivadas.
+Essas alterações são compiladas corretamente, mesmo que o `ExtraFancyLight` declare o suporte para a interface `ILight` e as interfaces derivadas `ITimerLight` e `IBlinkingLight`. Há apenas uma implementação "mais próxima" declarada na interface `ILight`. Qualquer classe que declarou uma substituição se tornaria a única implementação "mais próxima". Você viu exemplos nas classes anteriores que substituiu os membros de outras interfaces derivadas.
 
-Evite substituir o mesmo método em várias interfaces derivadas. Isso cria uma chamada de método ambígua sempre que uma classe implementa ambas as interfaces derivadas. O compilador não pode escolher um único método melhor para que ele emita um erro. Por exemplo, se o `IBlinkingLight` e o `ITimerLight` implementaram uma substituição de `PowerStatus`, o `OverheadLight` precisaria fornecer uma substituição mais específica. Caso contrário, o compilador não pode escolher entre as implementações nas duas interfaces derivadas. Normalmente, você pode evitar essa situação mantendo as definições de interface pequenas e concentradas em um recurso. Nesse cenário, cada recurso de uma luz é sua própria interface; várias interfaces são herdadas apenas por classes.
+Evite substituir o mesmo método em várias interfaces derivadas. Isso cria uma chamada de método ambígua sempre que uma classe implementa ambas as interfaces derivadas. O compilador não pode escolher um único método melhor para que ele emita um erro. Por exemplo, se o `IBlinkingLight` e `ITimerLight` implementarem uma substituição de `PowerStatus`, o `OverheadLight` precisaria fornecer uma substituição mais específica. Caso contrário, o compilador não pode escolher entre as implementações nas duas interfaces derivadas. Normalmente, você pode evitar essa situação mantendo as definições de interface pequenas e concentradas em um recurso. Nesse cenário, cada recurso de uma luz é sua própria interface; várias interfaces são herdadas apenas por classes.
 
 Este exemplo mostra um cenário em que você pode definir recursos discretos que podem ser misturados em classes. Você declara qualquer conjunto de funcionalidades com suporte declarando a quais interfaces uma classe dá suporte. O uso de métodos de interface padrão virtuais permite que as classes usem ou definam uma implementação diferente para qualquer ou todos os métodos de interface. Esse recurso de linguagem fornece novas maneiras de modelar os sistemas do mundo real que você está criando. Os métodos de interface padrão fornecem uma maneira mais clara de expressar classes relacionadas que podem misturar e corresponder recursos diferentes usando implementações virtuais desses recursos.

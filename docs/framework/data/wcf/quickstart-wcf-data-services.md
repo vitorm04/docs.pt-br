@@ -5,22 +5,22 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: df6806cd77e7ff109d79f7ba61866763de4c7fc1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70790365"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975137"
 ---
 # <a name="quickstart-wcf-data-services"></a>Guia de Início Rápido (WCF Data Services)
 
-Este [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] guia de início rápido ajuda você a se familiarizar com WCF Data Services e com uma série de tarefas que dão suporte aos tópicos em [introdução](getting-started-with-wcf-data-services.md).
+Este guia de início rápido ajuda você a se familiarizar com WCF Data Services e o Protocolo Open Data (OData) por meio de uma série de tarefas que dão suporte aos tópicos em [introdução](getting-started-with-wcf-data-services.md).
 
 ## <a name="what-youll-learn"></a>O que você aprenderá
 
 A primeira tarefa neste guia de início rápido mostra como criar um serviço de dados para expor um feed OData do banco de dados de exemplo Northwind. Nos tópicos posteriores, você acessará o feed OData usando um navegador da Web e também criará um aplicativo cliente Windows Presentation Foundation (WPF) que consome o feed OData usando bibliotecas de cliente.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 Para concluir este guia de início rápido, instale os seguintes componentes:
 

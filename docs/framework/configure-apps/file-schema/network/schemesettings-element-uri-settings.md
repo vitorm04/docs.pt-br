@@ -9,12 +9,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697766"
 ---
-# <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > elemento (configurações de URI)
+# <a name="schemesettings-element-uri-settings"></a>\<elemento de > schemeSettings (configurações de URI)
 Especifica como um <xref:System.Uri> será analisado quanto a esquemas específicos.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<schemeSettings >**  
+URI de\<de &nbsp;de &nbsp;[ **>** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<schemeSettings >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -24,7 +24,7 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
  Nenhum  
@@ -37,7 +37,7 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
 |[clear](clear-element-for-schemesettings-uri-settings.md)|Limpa todas as configurações de esquema existentes.|  
 |[remove](remove-element-for-schemesettings-uri-settings.md)|Remove uma configuração de esquema para um nome de esquema.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
@@ -52,7 +52,7 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- Por esse motivo, a classe <xref:System.Uri?displayProperty=nameWithType> primeiro cancela o escape dos delimitadores de caminho e, em seguida, aplica a compactação de caminho. O resultado da passagem da URL mal-intencionada acima para o construtor da classe <xref:System.Uri?displayProperty=nameWithType> resulta no seguinte URI:  
+ Por esse motivo, <xref:System.Uri?displayProperty=nameWithType> classe primeiro cancela o escape dos delimitadores de caminho e, em seguida, aplica a compactação de caminho. O resultado da passagem da URL mal-intencionada acima para <xref:System.Uri?displayProperty=nameWithType> Construtor de classe resulta no seguinte URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
@@ -61,7 +61,7 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir mostra uma configuração usada pela classe <xref:System.Uri> para dar suporte a não escapar delimitadores de caminho codificados por porcentagem para o esquema http.  
   
 ```xml  
@@ -78,8 +78,8 @@ Especifica como um <xref:System.Uri> será analisado quanto a esquemas específi
   
 |||
 |-|-|  
-|Namespace|Sistema|  
-|Nome do esquema||  
+|{1&gt;Namespace&lt;1}|{1&gt;Sistema&lt;1}|  
+|Schema Name||  
 |Arquivo de validação||  
 |Pode estar vazio||  
   

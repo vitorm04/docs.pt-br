@@ -35,11 +35,11 @@ As diretrizes de nomenclatura a seguir se aplicam à nomenclatura de tipo geral.
   
  **✓ CONSIDER** encerrar o nome de classes derivadas com o nome de classe base.  
   
- Isso é muito legível e explica a relação claramente. Alguns exemplos disso no código são: `ArgumentOutOfRangeException`, que é um tipo de `Exception` e `SerializableAttribute`, que é um tipo de `Attribute`. No entanto, é importante usar o julgamento razoável na aplicação dessa diretriz; por exemplo, a classe `Button` é um tipo de evento de `Control`, embora `Control` não apareça em seu nome.  
+ Isso é muito legível e explica a relação claramente. Alguns exemplos disso no código são: `ArgumentOutOfRangeException`, que é um tipo de `Exception`e `SerializableAttribute`, que é um tipo de `Attribute`. No entanto, é importante usar o julgamento razoável na aplicação dessa diretriz; por exemplo, a classe `Button` é um tipo de evento de `Control`, embora `Control` não apareça em seu nome.  
   
  **✓ DO** nomes de interface de prefixo com a letra que, para indicar que o tipo é uma interface.  
   
- Por exemplo, `IComponent` (substantivo descritivo), `ICustomAttributeProvider` (substantivo Phrase) e `IPersistable` (adjetivo) são nomes de interface apropriados. Assim como ocorre com outros nomes de tipo, evite abreviações.  
+ Por exemplo, `IComponent` (substantivo descritivo), `ICustomAttributeProvider` (substantivo, frase) e `IPersistable` (adjetivo) são nomes de interface apropriados. Assim como ocorre com outros nomes de tipo, evite abreviações.  
   
  **✓ DO** Certifique-se de que os nomes diferem somente por "I" prefixo no nome da interface quando você está definindo um par de classe – interface em que a classe é uma implementação padrão da interface.  
   
@@ -96,9 +96,9 @@ public interface ISessionChannel<TSession> where TSession : ISession {
   
  **X DO NOT** usar um prefixo nos nomes de valor de enumeração (por exemplo, "ad" para ADO enums.), "rtf" para enums RTF, etc.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reprinted por permissão do Pearson Education, Inc. de diretrizes de design [Framework: Convenções, idiomas e padrões para bibliotecas .NET reutilizáveis, 2ª edição @ no__t-0 por Krzysztof Cwalina e Brad Abrams, publicadas em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
 ## <a name="see-also"></a>Consulte também
 

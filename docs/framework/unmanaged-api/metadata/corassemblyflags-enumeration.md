@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: bb8db3b6-d81d-49fc-b74c-dbc908a9eab9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3532ca0a30d83aa8f61bc4397090f3d589b73257
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: fda890cee5f513ea8cf7e82e710f5451a860c49f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67780927"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443917"
 ---
 # <a name="corassemblyflags-enumeration"></a>Enumeração CorAssemblyFlags
-Contém valores que descrevem os metadados aplicados a uma compilação do assembly.  
+Contém valores que descrevem os metadados aplicados a uma compilação de assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,29 +57,29 @@ typedef enum CorAssemblyFlags {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`afPublicKey`|Indica que a referência de assembly retém a chave pública completa, sem hash.|  
-|`afPA_None`|Indica que a arquitetura do processador é especificada.|  
+|`afPublicKey`|Indica que a referência de assembly contém a chave pública completa sem hash.|  
+|`afPA_None`|Indica que a arquitetura do processador não está especificada.|  
 |`afPA_MSIL`|Indica que a arquitetura do processador é neutra (PE32).|  
-|`afPA_x86`|Indica que a arquitetura de processador x86 (PE32).|  
-|`afPA_IA64`|Indica que a arquitetura do processador Itanium (PE32 +).|  
-|`afPA_AMD64`|Indica que a arquitetura do processador AMD X64 (PE32 +).|  
-|`afPA_ARM`|Indica que a arquitetura do processador ARM (PE32).|  
-|`afPA_NoPlatform`|Indica que o assembly é um assembly de referência; ou seja, ele se aplica a qualquer arquitetura, mas não pode ser executado em qualquer arquitetura. Portanto, o sinalizador é o mesmo que `afPA_Mask`.|  
-|`afPA_Specified`|Indica que os sinalizadores de arquitetura de processador devem ser propagados para o `AssemblyRef` registro.|  
+|`afPA_x86`|Indica que a arquitetura do processador é x86 (PE32).|  
+|`afPA_IA64`|Indica que a arquitetura do processador é Itanium (PE32 +).|  
+|`afPA_AMD64`|Indica que a arquitetura do processador é AMD x64 (PE32 +).|  
+|`afPA_ARM`|Indica que a arquitetura do processador é ARM (PE32).|  
+|`afPA_NoPlatform`|Indica que o assembly é um assembly de referência; ou seja, ele se aplica a qualquer arquitetura, mas não pode ser executado em nenhuma arquitetura. Portanto, o sinalizador é o mesmo que `afPA_Mask`.|  
+|`afPA_Specified`|Indica que os sinalizadores de arquitetura do processador devem ser propagados para o registro de `AssemblyRef`.|  
 |`afPA_Mask`|Uma máscara que descreve a arquitetura do processador.|  
-|`afPA_FullMask`|Especifica que a descrição da arquitetura de processador está incluída.|  
-|`afPA_Shift`|Indica uma contagem de shift os sinalizadores de arquitetura do processador de e para o índice.|  
+|`afPA_FullMask`|Especifica que a descrição da arquitetura do processador está incluída.|  
+|`afPA_Shift`|Indica uma contagem de turnos nos sinalizadores de arquitetura do processador de e para o índice.|  
 |`afEnableJITcompileTracking`|Indica o valor correspondente do <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> do <xref:System.Diagnostics.DebuggableAttribute>.|  
 |`afDisableJITcompileOptimizer`|Indica o valor correspondente do <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> do <xref:System.Diagnostics.DebuggableAttribute>.|  
-|`afRetargetable`|Indica que o assembly pode ser redirecionado em tempo de execução a um assembly de um outro editor.|  
+|`afRetargetable`|Indica que o assembly pode ser redirecionado em tempo de execução para um assembly de um Publicador diferente.|  
 |`afContentType_Mask`|Uma máscara que descreve o tipo de conteúdo.|  
 |`afContentType_Default`|Indica o tipo de conteúdo padrão.|  
-|`afContentType_WindowsRuntime`|Indica o tipo de conteúdo de tempo de execução do Windows.|  
+|`afContentType_WindowsRuntime`|Indica o tipo de conteúdo de Windows Runtime.|  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

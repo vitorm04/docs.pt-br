@@ -1,5 +1,5 @@
 ---
-title: 'Como: compilar condicionalmente com Trace e Debug'
+title: Como compilar condicionalmente com Trace e Debug
 ms.date: 03/30/2017
 helpviewer_keywords:
 - trace compiler options
@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d06d1ef8e1508aefa8c9ed9327b89f58ff6976fa
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a2cb2ef473d6870da47e0e4c00fecf6bd60707f3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052755"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975577"
 ---
-# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Como: compilar condicionalmente com Trace e Debug
+# <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Como compilar condicionalmente com Trace e Debug
 Enquanto você estiver depurando um aplicativo durante o desenvolvimento, a saída de rastreamento e de depuração é enviada para a janela de Saída no Visual Studio. No entanto, para incluir recursos de rastreamento em um aplicativo implantado, compile os aplicativos instrumentados com a diretiva do compilador **TRACE** habilitada. Isso permite que o código de rastreamento seja compilado na versão de lançamento do aplicativo. Se você não habilitar a diretiva **TRACE**, todo o código de rastreamento será ignorado durante a compilação e não será incluído no código executável que será implantado.  
   
  Os métodos de rastreamento e de depuração têm atributos condicionais associados. Por exemplo, se o atributo condicional do rastreamento for **true**, todas as instruções de rastreamento serão incluídas em um assembly (um arquivo .exe ou .dll compilado); se o atributo condicional de **Trace** for **false**, as instruções de rastreamento não serão incluídas.  
   
- É possível ativar o atributo condicional **Trace** ou **Debug** em um build, ambos ou nenhum. Portanto, há quatro tipos de compilação: **Depurar**, **rastrear**, ambos ou nenhum. Alguns builds de versão para implantação de produção podem não conter nenhum dos dois; a maioria dos builds de depuração contém ambos.  
+ É possível ativar o atributo condicional **Trace** ou **Debug** em um build, ambos ou nenhum. Portanto, há quatro tipos de build: **Debug**, **Trace**, ambos ou nenhum. Alguns builds de versão para implantação de produção podem não conter nenhum dos dois; a maioria dos builds de depuração contém ambos.  
   
  É possível especificar as configurações do compilador para o aplicativo de várias maneiras:  
   
@@ -98,9 +98,9 @@ Comente a diretiva do compilador.
 ## <a name="see-also"></a>Consulte também
 
 - [Rastreando e instrumentando aplicativos](tracing-and-instrumenting-applications.md)
-- [Como: Criar, inicializar e configurar opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md)
+- [Como criar, inicializar e configurar as opções de rastreamento](how-to-create-initialize-and-configure-trace-switches.md)
 - [Opções de rastreamento](trace-switches.md)
 - [Ouvintes de rastreamento](trace-listeners.md)
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
-- [Como: Definir variáveis de ambiente para a linha de comando do Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
-- [Como: invocar o compilador de linha de comando](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)
+- [Como adicionar instruções de rastreamento ao código do aplicativo](how-to-add-trace-statements-to-application-code.md)
+- [Como definir variáveis de ambiente para a linha de comando do Visual Studio](../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Como invocar o compilador de linha de comando](../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)

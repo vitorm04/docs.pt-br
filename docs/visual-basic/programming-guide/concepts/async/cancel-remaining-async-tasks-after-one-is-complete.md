@@ -1,15 +1,15 @@
 ---
-title: Cancelar as tarefas assíncronas restantes após uma conclusão (Visual Basic)
+title: Cancelar as demais tarefas assíncronas depois que uma delas estiver concluída
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
-ms.openlocfilehash: 329c1eb738f065ae34540e9980c80d44248da05c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e6747f35e665611ac7a48a87f955c8b893ee2b99
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419796"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347920"
 ---
-# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancelar as tarefas assíncronas restantes após uma conclusão (Visual Basic)
+# <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>Cancel Remaining Async Tasks after One Is Complete (Visual Basic)
 
 Usando o método <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> juntamente com um <xref:System.Threading.CancellationToken>, você pode cancelar todas as tarefas restantes quando uma tarefa é concluída. O método `WhenAny` leva um argumento que é uma coleção de tarefas. O método inicia todas as tarefas e retorna uma única tarefa. A tarefa única será concluída quando qualquer tarefa na coleção for concluída.
 
@@ -40,11 +40,11 @@ Se não quiser baixar o projeto, você poderá examinar o arquivo MainWindow.xam
 
 ## <a name="building-the-example"></a>Compilando o Exemplo
 
-O exemplo neste tópico adiciona ao projeto que é desenvolvido em [cancelar uma tarefa assíncrona ou uma lista de tarefas](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) para cancelar uma lista de tarefas. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.
+The example in this topic adds to the project that's developed in [Cancel an Async Task or a List of Tasks](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md) to cancel a list of tasks. O exemplo usa a mesma interface do usuário, embora o botão **Cancelar** não seja explicitamente usado.
 
 Para compilar o exemplo você mesmo, passo a passo, siga as instruções na seção "Baixando o exemplo", mas escolha **CancelAListOfTasks** como o **Projeto de Inicialização**. Adicione as alterações deste tópico ao projeto.
 
-No arquivo MainWindow. XAML. vb do projeto **CancelAListOfTasks** , inicie a transição movendo as etapas de processamento para cada site do loop em `AccessTheWebAsync` para o seguinte método assíncrono.
+In the MainWindow.xaml.vb file of the **CancelAListOfTasks** project, start the transition by moving the processing steps for each website from the loop in `AccessTheWebAsync` to the following async method.
 
 ```vb
 ' ***Bundle the processing steps for a website into one async method.
@@ -107,7 +107,7 @@ Execute o programa várias vezes para verificar que diferentes downloads são co
 
 ## <a name="complete-example"></a>Exemplo completo
 
-O código a seguir é o arquivo MainWindow. XAML. vb ou MainWindow.xaml.cs completo para o exemplo. Os asteriscos marcam os elementos que foram adicionados para esse exemplo.
+The following code is the complete MainWindow.xaml.vb or MainWindow.xaml.cs file for the example. Os asteriscos marcam os elementos que foram adicionados para esse exemplo.
 
 Observe que você deve adicionar uma referência para <xref:System.Net.Http>.
 

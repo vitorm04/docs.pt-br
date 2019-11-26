@@ -17,15 +17,15 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697900"
 ---
-# <a name="remove-element-for-bypasslist-network-settings"></a>\<remove > elemento para BypassList (configurações de rede)
+# <a name="remove-element-for-bypasslist-network-settings"></a>\<remover > elemento para BypassList (configurações de rede)
 
 Remove um endereço IP ou nome DNS da lista de bypass de proxy.
 
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<remove >**  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultproxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<BypassList >** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<remover >**  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,19 +37,19 @@ Remove um endereço IP ou nome DNS da lista de bypass de proxy.
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e elementos pai.
+As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.
 
 ### <a name="attributes"></a>Atributos
 
-|**Atributo**|**Descrição**|
+|**Attribute**|**Descrição**|
 |-------------------|---------------------|
 |`address`|Uma expressão regular que descreve um endereço IP ou nome DNS.|
 
 ### <a name="child-elements"></a>Elementos filho
 
-nenhuma.
+None.
 
-### <a name="parent-elements"></a>Elementos pai
+### <a name="parent-elements"></a>Elementos Pai
 
 |**Elemento**|**Descrição**|
 |-----------------|---------------------|
@@ -67,7 +67,7 @@ Para obter mais informações sobre expressões regulares, consulte. [.NET Frame
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir remove qualquer definição anterior para o domínio adventure-works.com e, em seguida, adiciona o domínio contoso.com à lista de bypass.
 

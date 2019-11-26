@@ -1,21 +1,20 @@
 ---
-ms.openlocfilehash: 65bac44c84589fb55d2b04c39088c2825c451a6b
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b91cdc7a0d2e4258662155a840500ce21ab35760
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394265"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74100640"
 ---
 ### <a name="authorization-addauthorization-overload-moved-to-different-assembly"></a>Autorização: sobrecarga de addautoria movida para um assembly diferente
 
-Os métodos Core `AddAuthorization` que costumava residir em `Microsoft.AspNetCore.Authorization` foram renomeados para `AddAuthorizationCore`. Os métodos antigos de `AddAuthorization` ainda existem, mas estão no pacote `Microsoft.AspNetCore.Authorization.Policy`, em vez disso. Os aplicativos que usam os dois métodos não devem ter nenhum impacto. Os aplicativos que não estavam usando o pacote de política devem mudar para usando `AddAuthorizationCore`.
+Os métodos Core `AddAuthorization` que costumava residir em `Microsoft.AspNetCore.Authorization` foram renomeados para `AddAuthorizationCore`. Os métodos de `AddAuthorization` antigos ainda existem, mas estão no assembly `Microsoft.AspNetCore.Authorization.Policy` em vez disso. Os aplicativos que usam os dois métodos não devem ter nenhum impacto. Observe que `Microsoft.AspNetCore.Authorization.Policy` agora é fornecido na estrutura compartilhada, em vez de um pacote autônomo, conforme discutido em [estrutura compartilhada: assemblies removidos do Microsoft. AspNetCore. app](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
 3.0
 
 #### <a name="old-behavior"></a>Comportamento antigo
-
 os métodos `AddAuthorization` existiam no `Microsoft.AspNetCore.Authorization`.
 
 #### <a name="new-behavior"></a>Novo comportamento

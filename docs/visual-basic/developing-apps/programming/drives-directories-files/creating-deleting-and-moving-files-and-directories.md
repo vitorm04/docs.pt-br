@@ -1,5 +1,5 @@
 ---
-title: Criando, excluindo e movendo arquivos e diretórios no Visual Basic
+title: Criando, excluindo e movendo arquivos e diretórios
 ms.date: 07/20/2015
 helpviewer_keywords:
 - examples [Visual Basic], moving files and directories
@@ -22,17 +22,19 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming folders
 - I/O [Visual Basic], moving files
 ms.assetid: 8f814fcc-4c42-4dbb-a131-005ec445ac9e
-ms.openlocfilehash: 8b734b553e0ef4c14e372892e53b1184798390e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8e0b291c0bb526c21654a1e8c08bd168d95ac53a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590940"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348919"
 ---
 # <a name="creating-deleting-and-moving-files-and-directories-in-visual-basic"></a>Criando, excluindo e movendo arquivos e diretórios no Visual Basic
+
 Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arquivos e pastas no Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
+
  [Como copiar arquivos com um padrão específico para um diretório](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-copy-files-with-a-specific-pattern-to-a-directory.md)  
  Demonstra como copiar arquivos com um padrão de nome de arquivo específico, como somente arquivos .txt, para um diretório.  
   
@@ -76,6 +78,7 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
  Demonstra como usar métodos `My` para combinar caminhos de arquivo.  
   
 ## <a name="reference"></a>Referência  
+
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  Descreve o objeto `My.Computer.FileSystem` e seus membros.  
   
@@ -116,6 +119,7 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
  Descreve o objeto `SpecialDirectories`.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
+
  [Leitura de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Lista as tarefas associadas à leitura de arquivos.  
   

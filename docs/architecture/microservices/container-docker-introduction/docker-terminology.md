@@ -31,7 +31,7 @@ Esta seção lista os termos e definições que você deve conhecer antes de se 
 
 **Registro**: um serviço que dá acesso aos repositórios. O registro padrão para as imagens mais públicas é o [Docker Hub](https://hub.docker.com/) (propriedade da Docker como uma organização). Um registro geralmente contém repositórios de várias equipes. As empresas geralmente têm registros privados para armazenar e gerenciar as imagens que criaram. O Registro de Contêiner do Azure é outro exemplo.
 
-**Imagem de vários arcos**: para várias arquiteturas, é um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma em que o Docker está em execução, por exemplo, quando um Dockerfile solicita uma imagem base **do MCR.Microsoft.com/dotnet/Core/SDK:2.2** do registro, ele realmente Obtém **2,2-SDK-los-1709**, **2,2-SDK-los-1803**, **2,2-SDK-coserver-1809** ou **2,2-SDK-Stretch**, dependendo do sistema operacional e da versão em que o Docker está em execução .
+**Imagem de vários arcos**: para várias arquiteturas, é um recurso que simplifica a seleção da imagem apropriada, de acordo com a plataforma em que o Docker está em execução, por exemplo, quando um Dockerfile solicita uma imagem base **do MCR.Microsoft.com/dotnet/Core/SDK:2.2** do registro, ele realmente Obtém **2,2-SDK-los-1709**, **2,2-SDK-los-1803**, **2,2-SDK-coserver-1809** ou **2,2-SDK-Stretch**, dependendo do sistema operacional e da versão em que o Docker está em execução.
 
 **Docker Hub**: um registro público para carregar imagens e trabalhar com elas. O Docker Hub hospeda imagens do Docker, registros públicos ou privados, cria gatilhos e ganchos da Web e integra-se com o GitHub e o Bitbucket.
 

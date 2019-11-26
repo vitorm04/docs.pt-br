@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2b1f1418-4be8-4cdb-b418-b3abccc527a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea144784f82c192f41f68394eb2ccdf443db54c2
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1c9f15881d3515f24a63f29e9337a7a356937f2d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782548"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449948"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>Método IMetaDataImport::EnumUserStrings
-Enumera os tokens de cadeia de caracteres que representa cadeias de caracteres codificadas no escopo atual de metadados.  
+Enumerates String tokens representing hard-coded strings in the current metadata scope.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,33 +38,33 @@ HRESULT EnumUserStrings (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [no, out] Um ponteiro para o enumerador. Isso deve ser NULL para a primeira chamada desse método.  
+ [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
   
  `rStrings`  
- [out] A matriz usada para armazenar os tokens de cadeia de caracteres.  
+ [out] The array used to store the String tokens.  
   
  `cMax`  
- [in] O tamanho máximo da `rStrings` matriz.  
+ [in] The maximum size of the `rStrings` array.  
   
  `pcStrings`  
- [out] O número de tokens de cadeia de caracteres retornada no `rStrings`.  
+ [out] The number of String tokens returned in `rStrings`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUserStrings` retornado com êxito.|  
-|`S_FALSE`|Não há nenhum token para enumerar. Nesse caso, `pcStrings` é zero.|  
+|`S_OK`|`EnumUserStrings` returned successfully.|  
+|`S_FALSE`|There are no tokens to enumerate. In that case, `pcStrings` is zero.|  
   
 ## <a name="remarks"></a>Comentários  
- Os tokens de cadeia de caracteres são criados pela [imetadataemit:: Defineuserstring](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) método. Esse método é projetado para ser usado por um navegador de metadados em vez de um compilador.  
+ The String tokens are created by the [IMetaDataEmit::DefineUserString](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineuserstring-method.md) method. This method is designed to be used by a metadata browser rather than by a compiler.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

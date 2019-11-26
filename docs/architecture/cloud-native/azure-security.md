@@ -86,7 +86,7 @@ Na caixa, a maioria dos recursos de PaaS do Azure tem apenas a configuração de
 
 Felizmente, a maioria dos recursos do Azure pode ser colocada em uma rede virtual do Azure que permite um controle de acesso mais preciso. De forma semelhante à maneira como as redes locais estabelecem redes privadas que são protegidas do mundo mais amplo, as redes virtuais são ilhas de endereços IP privados localizados na rede do Azure.
 
-![Figure 10-1 uma rede virtual no Azure ](./media/virtual-network.png)
+![Figura 10-1 uma rede virtual no Azure](./media/virtual-network.png)
 **figura 10-1**. Uma rede virtual no Azure.
 
 Da mesma forma que as redes locais têm um firewall que rege o acesso à rede, você pode estabelecer um firewall semelhante no limite da rede virtual. Por padrão, todos os recursos em uma rede virtual ainda podem se comunicar com a Internet. São apenas conexões de entrada que exigem alguma forma de exceção de firewall explícita.
@@ -109,7 +109,7 @@ O RBAC é um sistema que fornece uma identidade para aplicativos em execução n
 
 O primeiro componente no RBAC é uma entidade de segurança. Uma entidade de segurança pode ser um usuário, grupo, entidade de serviço ou identidade gerenciada.
 
-![Figure 10-2 tipos diferentes de entidades de segurança ](./media/rbac-security-principal.png)
+![Figura 10-2 tipos diferentes de entidades de segurança](./media/rbac-security-principal.png)
 **figura 10-2**. Tipos diferentes de entidades de segurança.
 
 - Usuário-qualquer usuário que tenha uma conta no Azure Active Directory é um usuário.
@@ -123,7 +123,7 @@ A entidade de segurança pode ser aplicada à maioria dos recursos. Isso signifi
 
 Uma entidade de segurança pode assumir muitas funções ou, usando uma analogia mais sartorial, ter muitas chapéus. Cada função define uma série de permissões, como "ler mensagens do ponto de extremidade do barramento de serviço do Azure". O conjunto de permissões efetivas de uma entidade de segurança é a combinação de todas as permissões atribuídas a todas as funções que a entidade de segurança tem. O Azure tem um grande número de funções internas e os usuários podem definir suas próprias funções.
 
-![Figure definições de função RBAC 10-3 ](./media/rbac-role-definition.png)
+![Figura 10-3 definições de função RBAC](./media/rbac-role-definition.png)
 **figura 10-3**. Definições de função RBAC.
 
 O integrado ao Azure também é uma série de funções de alto nível, como proprietário, colaborador, leitor e administrador de conta de usuário. Com a função de proprietário, uma entidade de segurança pode acessar todos os recursos e atribuir permissões a outros. Um colaborador tem o mesmo nível de acesso a todos os recursos, mas não pode atribuir permissões. Um leitor só pode exibir recursos existentes do Azure e um administrador de conta de usuário pode gerenciar o acesso aos recursos do Azure.
@@ -148,7 +148,7 @@ As regras de negação têm precedência sobre regras de permissão. Agora que r
 
 Como você pode imaginar, ter um grande número de funções e escopos pode tornar a descoberta da permissão efetiva de uma entidade de serviço muito difícil. Empilhando regras de negação além disso, serve apenas para aumentar a complexidade. Felizmente, há uma calculadora de permissões que pode mostrar as permissões efetivas para qualquer entidade de serviço. Normalmente, ele é encontrado na guia IAM no portal, como mostra a Figura 10-3.
 
-![Figure calculadora de permissão 10-4 para um serviço de aplicativo ](./media/check-rbac.png)
+![Figura 10-4 a calculadora de permissão para um serviço de aplicativo](./media/check-rbac.png)
 **figura 10-4**. Calculadora de permissão para um serviço de aplicativo.
 
 ## <a name="securing-secrets"></a>Protegendo segredos
@@ -215,7 +215,7 @@ Essa verificação pode ser feita por um serviço externo, como o teste do servi
 
 Até mesmo serviços, como bancos de dados SQL do Azure, usam criptografia TLS para manter o dado oculto. A parte interessante sobre criptografar os dados em trânsito usando o TLS é que não é possível, mesmo para a Microsoft, escutar na conexão entre os computadores que executam o TLS. Isso deve ser confortável para as empresas que se preocupam que seus dados possam estar em risco da Microsoft apropriada ou até mesmo de um ator de estado com mais recursos do que o invasor padrão.
 
-![Figure relatório de laboratórios SSL 10-5 mostrando uma pontuação de um ponto de extremidade do barramento de serviço. ](./media/ssl-report.png)
+![Figura 10-5 relatório de laboratórios SSL mostrando uma pontuação de um ponto de extremidade do barramento de serviço.](./media/ssl-report.png)
 **figura 10-5**. Relatório de laboratórios de SSL mostrando uma pontuação de um ponto de extremidade do barramento de serviço.
 
 Embora esse nível de criptografia não seja suficiente para todo o tempo, deve inspirar a confiança de que as conexões do Azure TLS são bem seguras. O Azure continuará a desenvolver seus padrões de segurança conforme a criptografia melhora. É bom saber que há alguém assistindo aos padrões de segurança e atualizando o Azure à medida que eles melhoram.
@@ -234,7 +234,7 @@ Por padrão, as chaves usadas para criptografar o armazenamento do Azure são ge
 
 As máquinas virtuais usam o armazenamento criptografado, mas é possível fornecer outra camada de criptografia usando tecnologias como BitLocker no Windows ou DM-cript no Linux. Essas tecnologias significam que, mesmo que a imagem do disco tenha sido vazada fora do armazenamento, ela permaneceria quase impossível de ler.
 
-### <a name="azure-sql"></a>SQL do Azure
+### <a name="azure-sql"></a>Azure SQL
 
 Os bancos de dados hospedados no SQL do Azure usam uma tecnologia chamada [Transparent Data Encryption (TDE)](/sql/relational-databases/security/encryption/transparent-data-encryption) para garantir que os dados permaneçam criptografados. Ele é habilitado por padrão em todos os bancos de dados SQL recém-criados, mas deve ser habilitado manualmente para bancos de dados herdados. O TDE executa criptografia e descriptografia em tempo real, não apenas o banco de dados, mas também os logs de transações e backups.
 
@@ -244,7 +244,7 @@ A parte "transparente" do TDS é proveniente do fato de que não há alteraçõe
 
 A configuração dessa camada de criptografia requer a execução por meio de um assistente no SQL Server Management Studio para selecionar o tipo de criptografia e onde em Key Vault armazenar as chaves associadas.
 
-![Figure 10-6 selecionando colunas em uma tabela a ser criptografada usando Always Encrypted ](./media/always-encrypted.png)
+![Figura 10-6 selecionando colunas em uma tabela a ser criptografada usando Always Encrypted](./media/always-encrypted.png)
 **figura 10-6**. Selecionando colunas em uma tabela a ser criptografada usando Always Encrypted.
 
 Os aplicativos cliente que lêem informações dessas colunas criptografadas precisam fazer concessões especiais para ler dados criptografados. As cadeias de conexão precisam ser atualizadas com `Column Encryption Setting=Enabled` e as credenciais do cliente devem ser recuperadas do Key Vault. Em seguida, o cliente de SQL Server deve ser acessado com as chaves de criptografia de coluna. Quando isso for feito, as ações restantes usarão as interfaces padrão para o cliente SQL. Ou seja, ferramentas como Dapper e Entity Framework, que são criadas com base no cliente SQL, continuarão funcionando sem alterações. Always Encrypted pode ainda não estar disponível para cada driver de SQL Server em cada idioma.
@@ -255,7 +255,7 @@ A combinação de TDE e Always Encrypted, que pode ser usada com chaves específ
 
 Cosmos DB é o banco de dados mais recente fornecido pela Microsoft no Azure. Ele foi criado desde o início com a segurança e a criptografia em mente. A criptografia AES-256bit é padrão para todos os bancos de dados do Cosmos DB e não pode ser desabilitada. Junto com o requisito de TLS 1,2 para comunicação, toda a solução de armazenamento é criptografada.
 
-![Figure 10-7 o fluxo de criptografia de dados na Cosmos DB ](./media/cosmos-encryption.png)
+![Figura 10-7 o fluxo de criptografia de dados na Cosmos DB](./media/cosmos-encryption.png)
 **figura 10-7**. O fluxo de criptografia de dados no Cosmos DB.
 
 Embora Cosmos DB não forneça as chaves de criptografia do cliente, houve um trabalho significativo feito pela equipe para garantir que ela permaneça compatível com PCI-DSS sem isso. Cosmos DB também não dá suporte a nenhum tipo de criptografia de coluna única semelhante ao Always Encrypted do SQL do Azure ainda.

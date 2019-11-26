@@ -1,15 +1,15 @@
 ---
-title: Reflexão (Visual Basic)
+title: Reflexão
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: 6d1206d84dec4202a7dad8f03c3d88c8a97ff5ba
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 28f33c88f7aaaf51938a7d27fd2218a97b628acd
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972113"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349277"
 ---
-# <a name="reflection-visual-basic"></a>Reflexão (Visual Basic)
+# <a name="reflection-visual-basic"></a>Reflection (Visual Basic)
 A reflexão fornece objetos (do tipo <xref:System.Type>) que descrevem assemblies, módulos e tipos. É possível usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos. Se você estiver usando atributos em seu código, a reflexão permite acessá-los. Para obter mais informações, consulte [Atributos](../../../standard/attributes/index.md).  
   
  Veja um exemplo simples de reflexão usando o método estático `GetType` – herdado por todos os tipos da classe base `Object` – para obter o tipo de uma variável:  
@@ -44,7 +44,7 @@ System.Console.WriteLine(info)
   
 - Para examinar e instanciar tipos em um assembly.  
   
-- Para criar novos tipos em tempo de execução. Usar as classes em <xref:System.Reflection.Emit>.  
+- Para criar novos tipos em runtime. Usar as classes em <xref:System.Reflection.Emit>.  
   
 - Para executar a associação tardia, acessar métodos em tipos criados em tempo de execução. Consulte o tópico [Carregando e usando tipos dinamicamente](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   

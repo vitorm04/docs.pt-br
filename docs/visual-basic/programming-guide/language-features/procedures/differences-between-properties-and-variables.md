@@ -1,5 +1,5 @@
 ---
-title: Diferenças entre propriedades e variáveis no Visual Basic
+title: Diferenças entre Propriedades e Variáveis
 ms.date: 07/20/2015
 helpviewer_keywords:
 - property values [Visual Basic]
@@ -14,35 +14,35 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbed3248840803d36607a67c8373fed15c07445f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864568"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74341215"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Diferenças entre propriedades e variáveis no Visual Basic
-Variáveis e propriedades representam valores que você pode acessar. No entanto, há diferenças no armazenamento e na implementação.  
+Variables and properties both represent values that you can access. However, there are differences in storage and implementation.  
   
 ## <a name="variables"></a>Variáveis  
- Um *variável* corresponde diretamente a um local de memória. Você define uma variável com uma única declaração. Uma variável pode ser um *variável local*, definido dentro de um procedimento e disponíveis apenas dentro desse procedimento, ou pode ser um *variável de membro*, definidos em um módulo, classe ou estrutura, mas não dentro de qualquer procedimento. Uma variável de membro também é chamada de um *campo*.  
+ A *variable* corresponds directly to a memory location. You define a variable with a single declaration statement. A variable can be a *local variable*, defined inside a procedure and available only within that procedure, or it can be a *member variable*, defined in a module, class, or structure but not inside any procedure. A member variable is also called a *field*.  
   
 ## <a name="properties"></a>Propriedades  
- Um *propriedade* é um elemento de dados definido em um módulo, classe ou estrutura. Você define uma propriedade com um bloco de código entre o `Property` e `End Property` instruções. O bloco de código contém uma `Get` procedimento, uma `Set` procedimento, ou ambos. Esses procedimentos são chamados *procedimentos de propriedade* ou *acessadores de propriedade*. Além de recuperar ou armazenar o valor da propriedade, eles também podem executar ações personalizadas, como a atualização de um contador de acesso.  
+ A *property* is a data element defined on a module, class, or structure. You define a property with a code block between the `Property` and `End Property` statements. The code block contains a `Get` procedure, a `Set` procedure, or both. These procedures are called *property procedures* or *property accessors*. In addition to retrieving or storing the property's value, they can also perform custom actions, such as updating an access counter.  
   
-## <a name="differences"></a>Diferenças  
- A tabela a seguir mostra algumas diferenças importantes entre as variáveis e propriedades.  
+## <a name="differences"></a>Differences  
+ The following table shows some important differences between variables and properties.  
   
-|Ponto de diferença|Variável|Propriedade|  
+|Point of difference|Variável|propriedade|  
 |-------------------------|--------------|--------------|  
-|Declaração|Instrução de declaração único|Série de instruções em um bloco de código|  
-|Implementação|Único local de armazenamento|Código executável (procedimentos de propriedade)|  
-|Armazenamento|Diretamente associados com o valor da variável|Normalmente tem armazenamento interno não está disponível fora da classe ou módulo que contém a propriedade<br /><br /> Valor da propriedade pode ou não existir como um elemento armazenado <sup>1</sup>|  
-|Código executável|Nenhum|Deve ter pelo menos um procedimento|  
-|Acesso de leitura e gravação|Leitura/gravação ou somente leitura|Leitura/gravação, somente leitura ou somente gravação|  
-|Ações personalizadas (além de aceitar ou retornando valor)|Não é possível|Pode ser executada como parte da configuração ou recuperar o valor da propriedade|  
+|Declaração|Single declaration statement|Series of statements in a code block|  
+|Implementação|Single storage location|Executable code (property procedures)|  
+|Armazenamento|Directly associated with variable's value|Typically has internal storage not available outside the property's containing class or module<br /><br /> Property's value might or might not exist as a stored element <sup>1</sup>|  
+|Executable code|Nenhum|Must have at least one procedure|  
+|Read and write access|Read/write or read-only|Read/write, read-only, or write-only|  
+|Custom actions (in addition to accepting or returning value)|Not possible|Can be performed as part of setting or retrieving property value|  
   
- <sup>1</sup> Diferentemente de uma variável, o valor de uma propriedade pode não corresponder diretamente a um único item de armazenamento. O armazenamento pode ser dividido em partes para conveniência ou segurança, ou o valor pode ser armazenado em um formato criptografado. Nesses casos o `Get` procedimento seria montar as peças ou descriptografar o valor armazenado e o `Set` procedimento criptografar o novo valor ou dividir o armazenamento constituinte-lo. Um valor de propriedade pode ser efêmero, como hora do dia, caso em que o `Get` procedimento seria calculá-lo rapidamente sempre que você acessa a propriedade.  
+ <sup>1</sup> Unlike a variable, the value of a property might not correspond directly to a single item of storage. The storage might be split into pieces for convenience or security, or the value might be stored in an encrypted form. In these cases the `Get` procedure would assemble the pieces or decrypt the stored value, and the `Set` procedure would encrypt the new value or split it into the constituent storage. A property value might be ephemeral, like time of day, in which case the `Get` procedure would calculate it on the fly each time you access the property.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -50,9 +50,9 @@ Variáveis e propriedades representam valores que você pode acessar. No entanto
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [Como: Criar uma propriedade](./how-to-create-a-property.md)
-- [Como: Declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Como: Chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
-- [Como: Declarar e chamar uma propriedade padrão no Visual Basic](./how-to-declare-and-call-a-default-property.md)
-- [Como: Inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
-- [Como: Obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)
+- [Como criar uma propriedade](./how-to-create-a-property.md)
+- [Como declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Como chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
+- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Como inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
+- Como obter um valor de uma propriedade (Visual Basic)[Como obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)

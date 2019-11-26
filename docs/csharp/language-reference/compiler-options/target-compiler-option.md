@@ -9,18 +9,18 @@ helpviewer_keywords:
 - assemblies [C#], compiling
 - -target compiler options [C#]
 ms.assetid: a18bbd8e-bbf7-49e7-992c-717d0eb1f76f
-ms.openlocfilehash: 073660fa732c04cdc987af5617b894a277ebcc0f
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: af7bd917f57c8752a2026fbb98aa8b22adc98db7
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970121"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204510"
 ---
 # <a name="-target-c-compiler-options"></a>-target (opções do compilador C#)
 A opção do compilador **-target** pode ser especificada em uma das quatro formas:  
   
  [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
- Para criar um arquivo .exe para aplicativos [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)].  
+ To create an .exe file for Windows 8.x Store apps.  
   
  [/target:exe](./target-exe-compiler-option.md)  
  Para criar um arquivo .exe.  
@@ -37,7 +37,7 @@ A opção do compilador **-target** pode ser especificada em uma das quatro form
  [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  Para criar um arquivo .winmdobj intermediário.  
   
- A menos que você especifique **-target:module**, o **-target** faz com que um manifesto do assembly do .NET Framework seja colocado em um arquivo de saída. Para obter mais informações, consulte [assemblies no .net](../../../standard/assembly/index.md) e [atributos comuns](../../programming-guide/concepts/attributes/common-attributes.md).  
+ A menos que você especifique **-target:module**, o **-target** faz com que um manifesto do assembly do .NET Framework seja colocado em um arquivo de saída. For more information, see [Assemblies in .NET](../../../standard/assembly/index.md) and [Common Attributes](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  O manifesto do assembly é colocado no primeiro arquivo de saída .exe na compilação ou na primeira DLL, se não houver nenhum arquivo de saída .exe. Por exemplo, na linha de comando a seguir, o manifesto será colocado em `1.exe`:  
   

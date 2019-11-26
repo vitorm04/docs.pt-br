@@ -1,5 +1,5 @@
 ---
-title: Combinando contêineres e abordagens sem servidor
+title: Como combinar contêineres e abordagens sem servidor
 description: Combinando contêineres e kubernetes com abordagens sem servidor
 ms.date: 06/30/2019
 ms.openlocfilehash: 58aff43adbdd2e629370cc685f32c7b61c25f85e
@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183430"
 ---
-# <a name="combining-containers-and-serverless-approaches"></a>Combinando contêineres e abordagens sem servidor
+# <a name="combining-containers-and-serverless-approaches"></a>Como combinar contêineres e abordagens sem servidor
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -37,7 +37,7 @@ Escolha qual tempo de execução de trabalho você deseja nas seguintes opções
 - `node` (JavaScript)
 - `python`
 
-Quando o projeto for criado, ele incluirá um Dockerfile. Agora, você pode criar e testar sua função localmente. Compile e execute-o usando `docker build` os `docker run` comandos e. Para obter etapas detalhadas para começar a criar Azure Functions com o suporte do Docker, consulte o tutorial [criar uma função no Linux usando uma imagem personalizada](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image) .
+Quando o projeto for criado, ele incluirá um Dockerfile. Agora, você pode criar e testar sua função localmente. Compile e execute-o usando os comandos `docker build` e `docker run`. Para obter etapas detalhadas para começar a criar Azure Functions com o suporte do Docker, consulte o tutorial [criar uma função no Linux usando uma imagem personalizada](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image) .
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>Como combinar servidores e kubernetes com KEDA
 

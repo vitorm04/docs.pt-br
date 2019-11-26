@@ -1,19 +1,19 @@
 ---
-title: 'Tutorial: Analisar sentimentos – classificação binária'
+title: 'Tutorial: analisar sentimentos – classificação binária'
 description: Este tutorial mostra como criar um aplicativo Razor Pages que classifica as opiniões dos comentários do site e executa a ação apropriada. O classificador de sentimentos binários usa o construtor de modelos no Visual Studio.
 ms.date: 10/08/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4a97fb70caafd7b0003830259ddbb0ec72a2ca8a
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180266"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974803"
 ---
-# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: Analisar sentimentos de comentários do site em um aplicativo Web usando o ML.NET Model Builder
+# <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: analisar o sentimentos dos comentários do site em um aplicativo Web usando o ML.NET Model Builder
 
 Saiba como analisar as opiniões de comentários em tempo real dentro de um aplicativo Web.
 
@@ -117,8 +117,8 @@ Dois projetos serão criados como resultado do processo de treinamento.
 
     Os projetos a seguir devem aparecer no **Gerenciador de soluções**:
 
-    - *SentimentRazorML. ConsoleApp*: Um aplicativo de console .NET Core que contém o treinamento do modelo e o código de previsão.
-    - *SentimentRazorML. Model*: Uma .NET Standard biblioteca de classes que contém os modelos de dados que definem o esquema de dados de modelo de entrada e saída, bem como a versão salva do modelo de melhor desempenho durante o treinamento.
+    - *SentimentRazorML. ConsoleApp*: um aplicativo de console do .NET Core que contém o treinamento do modelo e o código de previsão.
+    - *SentimentRazorML. Model*: um .net Standard biblioteca de classes que contém os modelos de dados que definem o esquema de dados de modelo de entrada e saída, bem como a versão salva do modelo de melhor desempenho durante o treinamento.
 
     Para este tutorial, somente o projeto *SentimentRazorML. Model* é usado porque as previsões serão feitas no aplicativo Web *SentimentRazor* , e não no console. Embora o *SentimentRazorML. ConsoleApp* não seja usado para pontuação, ele pode ser usado para treinar novamente o modelo usando novos dados em um momento posterior. No entanto, o novo treinamento está fora do escopo deste tutorial.
 
@@ -150,7 +150,7 @@ Para fazer uma única previsão, você precisa criar um [`PredictionEngine`](xre
     private readonly string _modelPath;
     ```
 
-1. O arquivo de modelo é armazenado no diretório de compilação junto com os arquivos de assembly do seu aplicativo. Para facilitar o acesso, crie um método auxiliar chamado `GetAbsolutePath` após o método `Configure`
+1. O arquivo de modelo é armazenado no diretório de compilação junto com os arquivos de assembly do seu aplicativo. Para facilitar o acesso, crie um método auxiliar chamado `GetAbsolutePath` depois do método `Configure`
 
     ```csharp
     public static string GetAbsolutePath(string relativePath)
@@ -160,10 +160,10 @@ Para fazer uma única previsão, você precisa criar um [`PredictionEngine`](xre
 
         string fullPath = Path.Combine(assemblyFolderPath, relativePath);
         return fullPath;
-    }    
+    }
     ```
 
-1. Use o método `GetAbsolutePath` no construtor de classe `Startup` para definir o `_modelPath`.
+1. Use o método `GetAbsolutePath` no construtor da classe `Startup` para definir o `_modelPath`.
 
     ```csharp
     _modelPath = GetAbsolutePath("MLModel.zip");
@@ -187,9 +187,9 @@ As previsões serão feitas dentro da página principal do aplicativo. Portanto,
     using SentimentRazorML.Model;
     ```
 
-    Para usar o `PredictionEnginePool` configurado na classe `Startup`, é necessário inseri-lo no construtor do modelo em que você deseja usá-lo.
+    Para usar a `PredictionEnginePool` configurada na classe `Startup`, é necessário inseri-la no construtor do modelo em que você deseja usá-la.
 
-1. Adicione uma variável para fazer referência ao `PredictionEnginePool` dentro da classe `IndexModel`.
+1. Adicione uma variável para fazer referência à `PredictionEnginePool` dentro da classe `IndexModel`.
 
     ```csharp
     private readonly PredictionEnginePool<ModelInput, ModelOutput> _predictionEnginePool;
@@ -201,7 +201,7 @@ As previsões serão feitas dentro da página principal do aplicativo. Portanto,
     public IndexModel(PredictionEnginePool<ModelInput, ModelOutput> predictionEnginePool)
     {
         _predictionEnginePool = predictionEnginePool;
-    }    
+    }
     ```
 
 1. Crie um manipulador de método que usa o `PredictionEnginePool` para fazer previsões da entrada do usuário recebida da página da Web.
@@ -221,7 +221,7 @@ As previsões serão feitas dentro da página principal do aplicativo. Portanto,
         if (String.IsNullOrEmpty(text)) return Content("Neutral");
         ```
 
-    1. Dada uma entrada válida, crie uma nova instância de `ModelInput`.
+    1. Dada uma entrada válida, crie uma nova instância do `ModelInput`.
 
         ```csharp
         var input = new ModelInput { SentimentText = text };
@@ -233,7 +233,7 @@ As previsões serão feitas dentro da página principal do aplicativo. Portanto,
         var prediction = _predictionEnginePool.Predict(input);
         ```
 
-    1. Converta o valor `bool` previsto em tóxicos ou não tóxicos com o código a seguir.
+    1. Converta o valor de `bool` previsto em tóxicos ou não tóxicos com o código a seguir.
 
         ```csharp
         var sentiment = Convert.ToBoolean(prediction.Prediction) ? "Toxic" : "Not Toxic";
@@ -257,9 +257,9 @@ Os resultados retornados pelo `OnGetAnalyzeSentiment` serão exibidos dinamicame
 
     [!code-css [CssStyling](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/css/site.css#L61-L105)]
 
-1. Depois disso, adicione o código para enviar entradas da página da Web para o manipulador `OnGetAnalyzeSentiment`.
+1. Depois disso, adicione o código para enviar entradas da página da Web para o manipulador de `OnGetAnalyzeSentiment`.
 
-    1. No arquivo *site. js* localizado no diretório *wwwroot\js* , crie uma função chamada `getSentiment` para fazer uma solicitação HTTP Get com a entrada do usuário para o manipulador `OnGetAnalyzeSentiment`.
+    1. No arquivo *site. js* localizado no diretório *wwwroot\js* , crie uma função chamada `getSentiment` para fazer uma solicitação HTTP Get com a entrada do usuário para o manipulador de `OnGetAnalyzeSentiment`.
 
         [!code-javascript [GetSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L5-L10)]
 
@@ -267,7 +267,7 @@ Os resultados retornados pelo `OnGetAnalyzeSentiment` serão exibidos dinamicame
 
         [!code-javascript [UpdateMarkerMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L12-L15)]
 
-    1. Crie uma função de manipulador de eventos chamada `updateSentiment` para obter a entrada do usuário, envie-a para a função `OnGetAnalyzeSentiment` usando a função `getSentiment` e atualize o marcador com a função `updateMarker`.
+    1. Crie uma função de manipulador de eventos chamada `updateSentiment` para obter a entrada do usuário, enviá-la para a função `OnGetAnalyzeSentiment` usando a função `getSentiment` e atualize o marcador com a função `updateMarker`.
 
         [!code-javascript [UpdateSentimentMethod](~/machinelearning-samples/samples/modelbuilder/BinaryClassification_Sentiment_Razor/SentimentRazor/wwwroot/js/site.js#L17-L34)]
 

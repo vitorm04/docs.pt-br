@@ -1,14 +1,13 @@
 ---
 title: Criar bibliotecas de cliente do gRPC-gRPC para desenvolvedores do WCF
 description: Discussão de bibliotecas/pacotes de cliente compartilhado para serviços gRPCs.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b403e7e1638496947ac7f6fc976cbeab2f435bbf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 2135fe8b24a2311a31cb2bed191d290b1112bc66
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419928"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967882"
 ---
 # <a name="create-grpc-client-libraries"></a>Criar bibliotecas de cliente do gRPC
 
@@ -19,7 +18,7 @@ Uma vantagem de distribuir uma biblioteca de cliente é que você pode aprimorar
 > [!CAUTION]
 > Você **não** deve usar o código personalizado para fornecer funcionalidade essencial, pois isso significaria que a funcionalidade seria restrita às equipes do .NET usando a biblioteca compartilhada e não às equipes que usam outras linguagens ou plataformas como Python ou Java.
 
-Em um ambiente de várias plataformas em que equipes diferentes frequentemente usam estruturas e linguagens de programação diferentes, ou onde sua API está acessível externamente, basta compartilhar `.proto` arquivos para que os desenvolvedores possam gerar seus próprios clientes é a melhor maneira de garantir o máximo possível de equipes pode acessar o serviço gRPC.
+Em um ambiente de várias plataformas em que equipes diferentes frequentemente usam estruturas e linguagens de programação diferentes, ou onde sua API está acessível externamente, basta compartilhar `.proto` arquivos para que os desenvolvedores possam gerar seus próprios clientes é a melhor maneira de garantir que o máximo possível de equipes possam acessar o serviço gRPC.
 
 ## <a name="useful-extensions"></a>Extensões úteis
 

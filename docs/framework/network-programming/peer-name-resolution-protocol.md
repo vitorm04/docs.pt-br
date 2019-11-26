@@ -2,12 +2,12 @@
 title: Protocolo PNRP
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 5e301620008f1aaf64e1c1467d6db8bcdcb8f6be
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c8b7b2190349323bf212d816a77f5f7810f6ca2c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047512"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428217"
 ---
 # <a name="peer-name-resolution-protocol"></a>Protocolo PNRP
 Em ambientes de ponto a ponto, pares usam sistemas de resolução de nome específicos para resolver os locais de rede (endereços, protocolos e portas) uns dos outros, com base em nomes ou outros tipos de identificadores. No passado, a resolução de nome de par foi complicada devido à conectividade inerentemente transitória, bem como outras falhas dentro do sistema DNS (Sistema de Nomes de Domínio).  
@@ -36,19 +36,22 @@ O protocolo PNRP demonstra as seguintes propriedades:
   
 - Os tipos básicos usados para registrar e resolver os nomes com um serviço PNRP disponível são os seguintes:  
   
-- <xref:System.Net.PeerToPeer.Cloud>: Define as informações que descrevem uma nuvem PNRP disponível, incluindo seu escopo.  
+- <xref:System.Net.PeerToPeer.Cloud>: define as informações que descrevem uma nuvem PNRP disponíveis, incluindo o escopo dela.  
   
-- <xref:System.Net.PeerToPeer.PeerName>: Define um nome de par que pode ser usado para registrar e posteriormente resolver um par em uma nuvem.  
+- <xref:System.Net.PeerToPeer.PeerName>: define um nome de par que pode ser usado para registrar e subsequentemente resolver um par em uma nuvem.  
   
-- <xref:System.Net.PeerToPeer.PeerNameRecord>: Define o registro na nuvem PNRP que contém as informações de registro de um par, que incluem os pontos de extremidade de rede nos quais o par pode ser contatado.  
+- <xref:System.Net.PeerToPeer.PeerNameRecord>: Define o registro na nuvem PNRP que contém as informações de registro para um par, o que inclui os pontos de extremidade de rede em que o par pode ser contatado.  
   
-- <xref:System.Net.PeerToPeer.PeerNameRegistration>: Define o processo de registro de um nome de par, incluindo métodos para iniciar e interromper o registro de nome de par.  
+- <xref:System.Net.PeerToPeer.PeerNameRegistration>: define o processo de registro para um nome de par, incluindo métodos para iniciar e parar o registro de nome de par.  
   
-- <xref:System.Net.PeerToPeer.PeerNameResolver>: Define o processo de resolução de um nome de par para seus pontos de extremidade de rede, incluindo métodos síncronos e assíncronos para a resolução.  
+- <xref:System.Net.PeerToPeer.PeerNameResolver>: Define o processo de resolução de um nome de par para o respectivo ponto de extremidade da rede, incluindo métodos síncronos e assíncronos para a resolução.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
 - [Amostras de programação de rede](network-programming-samples.md)
-- [Amostra de tecnologia PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)
+
+<!-- to-do: review sample links
+- [PeerToPeer Technology Sample](https://go.microsoft.com/fwlink/?LinkID=179571)
+-->

@@ -2,12 +2,12 @@
 title: Isolamento de rede para Aplicativos da Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 0d08b09f4ed0314d4f235f10b69bbf1343935841
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 34b8865781079f45a68d3dd1aab7fbd66c703d50
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333256"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447427"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Isolamento de rede para Aplicativos da Windows Store
 As classes nos namespaces <xref:System.Net>, <xref:System.Net.Http> e <xref:System.Net.Http.Headers> podem ser usadas para desenvolver Aplicativos da Windows Store ou aplic. da área de trabalho. Quando usadas em um aplicativo da Windows Store, as classes nesses namespaces são afetadas pelo isolamento de rede, parte do modelo de segurança do aplicativo usado pelo [!INCLUDE[win8](../../../includes/win8-md.md)]. Para que o sistema permita o acesso à rede, os recursos de rede apropriados deverão ser habilitados no manifesto do aplicativo para um aplicativo da Windows Store.  
@@ -23,13 +23,13 @@ As classes nos namespaces <xref:System.Net>, <xref:System.Net.Http> e <xref:Syst
   
 4. Implante e execute seu aplicativo para testá-lo usando as ferramentas de isolamento de rede fornecidas para solução de problemas.  
   
- Para obter informações mais detalhadas sobre como configurar funcionalidades de rede e as ferramentas de isolamento usadas para solucionar problemas de isolamento de rede, consulte [Como configurar funcionalidades de isolamento de rede](https://go.microsoft.com/fwlink/?LinkID=228265) na documentação do desenvolvedor de [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in the Windows 8.x Store developer documentation.
   
 ## <a name="see-also"></a>Consulte também
 
-- [Conectando-se a um serviço Web](https://go.microsoft.com/fwlink/?LinkID=245696)
-- [Diretrizes e lista de verificação para isolamento de rede](https://go.microsoft.com/fwlink/?LinkID=228265)
-- [Início Rápido: Conectando-se usando HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697)
-- [Como usar manipuladores HttpClient](https://go.microsoft.com/fwlink/?LinkId=245699)
-- [Como proteger conexões HttpClient](https://go.microsoft.com/fwlink/?LinkId=245698)
-- [Amostra de HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)
+- [Conectando-se a um serviço Web](https://docs.microsoft.com/previous-versions/windows/apps/hh761504(v=win.10))
+- [Diretrizes e lista de verificação para isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10))
+- [Início Rápido: Conectando-se usando HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781239(v=win.10))
+- [Como usar manipuladores HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781241(v=win.10))
+- [Como proteger conexões HttpClient](https://docs.microsoft.com/previous-versions/windows/apps/hh781240(v=win.10))
+- [Amostra de HttpClient](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664)

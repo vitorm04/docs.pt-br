@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: 84b67532825372e7f69d86e1ef6060f4263587eb
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 10530cfadf2e182f912c699e50294af4b57f47b5
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699350"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088872"
 ---
-# <a name="listeners-element-for-trace"></a>\<listeners > elemento para \<trace >
+# <a name="listeners-element-for-trace"></a>Elemento > de ouvintes do \<para rastreamento de \<
 Especifica um ouvinte que coleta, armazena e roteia mensagens. Os ouvintes direcionam a saída de rastreamento para um destino apropriado.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<trace >** ](trace-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<listeners >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. diagnostics >** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Trace**](trace-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**ouvintes >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -44,7 +44,7 @@ Especifica um ouvinte que coleta, armazena e roteia mensagens. Os ouvintes direc
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-trace.md)|Adiciona um ouvinte na coleção `Listeners`.|  
 |[\<clear>](clear-element-for-listeners-for-trace.md)|Limpa a coleção `Listeners` do rastreamento.|  
-|[\<remove>](remove-element-for-listeners-for-trace.md)|Remove um ouvinte da coleção `Listeners`.|  
+|[\<remove>](remove-element-for-listeners-for-trace.md)|Remove um ouvinte da coleção de `Listeners`.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   

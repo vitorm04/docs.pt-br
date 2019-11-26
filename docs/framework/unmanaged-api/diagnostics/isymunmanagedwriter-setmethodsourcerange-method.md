@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c698b86e-ace7-4b21-9549-f52d6a034959
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6e06695f5ba348315523c7414822ce87d594bdbc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 85e65f6a3ec13c2acc31b8f87dbe4b4476ffc2a5
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776597"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74427869"
 ---
 # <a name="isymunmanagedwritersetmethodsourcerange-method"></a>Método ISymUnmanagedWriter::SetMethodSourceRange
-Especifica os verdadeiros início e término de um método de dentro de um arquivo de origem. Use esse método para especificar a extensão de um método independentemente dos pontos de sequência que existem dentro do método.  
+Especifica os verdadeiros início e término de um método de dentro de um arquivo de origem. Use this method to specify the extent of a method independently of the sequence points that exist within the method.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,28 +39,28 @@ HRESULT SetMethodSourceRange(
   
 ## <a name="parameters"></a>Parâmetros  
  `startDoc`  
- [in] Um ponteiro para o documento que contém a posição inicial.  
+ [in] A pointer to the document containing the starting position.  
   
  `startLine`  
- [in] O número de linha inicial.  
+ [in] The starting line number.  
   
  `startColumn`  
- [in] A coluna inicial.  
+ [in] The starting column.  
   
  `endDoc`  
- [in] Um ponteiro para o documento que contém a posição final.  
+ [in] A pointer to the document containing the ending position.  
   
  `endLine`  
- [in] O número de linha final.  
+ [in] The ending line number.  
   
  `endColumn`  
- [in] O número de coluna final.  
+ [in] The ending column number.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

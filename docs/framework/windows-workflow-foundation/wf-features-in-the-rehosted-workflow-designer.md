@@ -2,12 +2,12 @@
 title: Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 20623c8d2f6bf66d2668fd07b0acae67865a3235
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 2b893fede30606789c82a64a19fa368e3fd74c4d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69987233"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142073"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recursos novos, incluindo vários aprimoramentos na experiência do designer de fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.
@@ -33,14 +33,14 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
 > Não há suporte para [localização rápida](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind) e [localização em arquivos](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles) no designer rehospedado.
 
 ### <a name="delete-context-menu-item-in-variable-and-argument-designer"></a>Excluir item de menu de contexto no designer de argumento e variável
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as variáveis e os argumentos somente podem ser excluídos no designer usando o teclado. A partir do .NET Framework 4,5, variáveis e argumentos podem ser excluídos usando o menu de contexto. Esse recurso tem suporte no designer hospedado novamente.
+ No .NET Framework 4, variáveis e argumentos só podem ser excluídos no designer usando o teclado. A partir do .NET Framework 4,5, variáveis e argumentos podem ser excluídos usando o menu de contexto. Esse recurso tem suporte no designer hospedado novamente.
 
  A captura de tela a seguir mostra o menu de contexto do designer de variável e argumento.
 
  ![Menu de contexto do designer de argumento e variável](./media/wf-features-in-the-rehosted-workflow-designer/designer-context-menu.png)
 
 ### <a name="auto-surround-with-sequence"></a>Envolvimento automático com sequência
- Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. A partir do .NET Framework 4,5, ao adicionar uma segunda atividade à superfície do designer, `Sequence` uma atividade será criada automaticamente para encapsular as duas atividades. Esse recurso tem suporte no designer hospedado novamente.
+ Como um fluxo de trabalho ou algumas atividades do contêiner (como <xref:System.Activities.Statements.NoPersistScope>) só podem conter uma única atividade do corpo, adicionar uma segunda atividade exigia que o desenvolvedor excluísse a primeira atividade, adicionasse uma atividade <xref:System.Activities.Statements.Sequence> e, em seguida, adicionasse as duas atividades para a atividade de sequência. A partir do .NET Framework 4,5, ao adicionar uma segunda atividade à superfície do designer, uma atividade de `Sequence` será criada automaticamente para encapsular as duas atividades. Esse recurso tem suporte no designer hospedado novamente.
 
  A captura de tela a seguir mostra uma atividade de `WriteLine` no `Body` de um `NoPersistScope`.
 
@@ -72,10 +72,10 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
  ![Captura de tela da exibição de estrutura de tópicos com um fluxo de trabalho Sequencial no Visual Studio](./media/wf-features-in-the-rehosted-workflow-designer/outline-view-in-workflow-designer.jpg)
 
 ### <a name="more-control-of-visibility-of-shell-bar-and-header-items"></a>Mais controle da visibilidade da barra de shell e dos itens de cabeçalho
- Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], essa personalização é suportada apenas pela barra de shell na parte inferior do designer. No .NET Framework 4,5, a visibilidade dos itens de cabeçalho do Shell na parte superior do designer pode ser ajustada <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> Configurando <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> com o valor apropriado.
+ Em um designer hospedado novamente, alguns dos controles padrão de interface do usuário não podem ter o significado de um fluxo de trabalho específico, e podem ser desativados. No .NET Framework 4, essa personalização só é suportada pela barra de Shell na parte inferior do designer. No .NET Framework 4,5, a visibilidade dos itens de cabeçalho do Shell na parte superior do designer pode ser ajustada definindo <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> com o valor de <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> apropriado.
 
 ### <a name="auto-connect-and-auto-insert-in-flowchart-and-state-machine-workflows"></a>Conexão automática e inserção automática em fluxograma e fluxos de trabalho de máquina de estado
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as conexões entre nós em um fluxo de trabalho de fluxograma precisavam ser adicionadas manualmente. No .NET Framework 4,5, os nós de máquina de estado e fluxograma têm pontos de conexão automática que se tornam visíveis quando uma atividade é arrastada da caixa de ferramentas para a superfície do designer. Soltar uma atividade em um destes pontos adiciona automaticamente a atividade junto com a conexão necessária.
+ No .NET Framework 4, as conexões entre os nós em um fluxo de trabalho de fluxograma tinham que ser adicionadas manualmente. No .NET Framework 4,5, os nós de máquina de estado e fluxograma têm pontos de conexão automática que se tornam visíveis quando uma atividade é arrastada da caixa de ferramentas para a superfície do designer. Soltar uma atividade em um destes pontos adiciona automaticamente a atividade junto com a conexão necessária.
 
  A captura de tela a seguir mostra os pontos de anexação que ficam visíveis quando uma atividade é arrastada da caixa de ferramentas.
 
@@ -95,23 +95,23 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
  As anotações do designer não têm suporte no designer hospedado novamente.
 
 ### <a name="define-and-consume-activitydelegate-objects-in-the-designer"></a>Definir e consumir objetos ActivityDelegate no designer
- As atividades no [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] usavam objetos <xref:System.Activities.ActivityDelegate> para expor pontos de execução onde outras partes do fluxo de trabalho podiam interagir com a execução de um fluxo de trabalho, mas usar esses pontos de execução necessários geralmente exigia uma grande quantidade de código. Nesta versão, os desenvolvedores podem definir e consumir representantes de atividade usando o designer de fluxo de trabalho. Para obter mais informações, confira [Como: Defina e consuma delegados de atividade no Designer de Fluxo de Trabalho](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+ As atividades no .NET Framework 4 usaram <xref:System.Activities.ActivityDelegate> objetos para expor pontos de execução em que outras partes do fluxo de trabalho poderiam interagir com a execução de um fluxo de trabalho, mas usar esses pontos de execução geralmente exigia uma quantidade razoável de código. Nesta versão, os desenvolvedores podem definir e consumir representantes de atividade usando o designer de fluxo de trabalho. Para obter mais informações, consulte [como: definir e consumir delegados de atividade no designer de fluxo de trabalho](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
 
  Os delegados de atividade não têm suporte no designer hospedado novamente.
 
 ### <a name="build-time-validation"></a>Validação de tempo de compilação
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os erros de validação do fluxo de trabalho não eram contados como erros de compilação durante a compilação de um projeto de fluxo de trabalho. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. No .NET Framework 4,5, os erros de validação do fluxo de trabalho fazem com que a compilação falhe.
+ No .NET Framework 4, os erros de validação de fluxo de trabalho não foram contados como erros de compilação durante a compilação de um projeto de fluxo de trabalho. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. No .NET Framework 4,5, os erros de validação do fluxo de trabalho fazem com que a compilação falhe.
 
 > [!WARNING]
 > A validação de tempo de compilação não tem suporte no designer hospedado novamente.  
   
 ### <a name="design-time-background-validation"></a>Validação em segundo plano do tempo de design  
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], os fluxos de trabalho foram validados como um processo em primeiro plano, o que poderia bloquear a interface do usuário durante processos de validação complexos ou demorados. A validação do fluxo de trabalho agora ocorre em um thread em segundo plano, de modo que a interface do usuário não seja bloqueada.  
+ No .NET Framework 4, os fluxos de trabalho foram validados como um processo em primeiro plano, o que poderia bloquear a interface do usuário durante processos de validação complexos ou demorados. A validação do fluxo de trabalho agora ocorre em um thread em segundo plano, de modo que a interface do usuário não seja bloqueada.  
   
  A validação em segundo plano do tempo de design não tem suporte no designer hospedado novamente.  
   
 ### <a name="view-state-located-in-a-separate-location-in-xaml-files"></a>Estado de exibição localizado em um local separado em arquivos XAML  
- No [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], as informações de estado de exibição para um fluxo de trabalho são armazenadas no arquivo XAML em muitos lugares diferentes. Isso é inconveniente para os desenvolvedores que desejam ler XAML diretamente, ou gravar código para remover informações de estado de exibição. No .NET Framework 4,5, as informações de estado de exibição no arquivo XAML são serializadas como um elemento separado no arquivo XAML.  Os desenvolvedores podem facilmente localizar e editar as informações de estado de exibição de uma atividade ou remover completamente o estado de exibição.  
+ No .NET Framework 4, as informações de estado de exibição de um fluxo de trabalho são armazenadas em todo o arquivo XAML em vários locais diferentes. Isso é inconveniente para os desenvolvedores que desejam ler XAML diretamente, ou gravar código para remover informações de estado de exibição. No .NET Framework 4,5, as informações de estado de exibição no arquivo XAML são serializadas como um elemento separado no arquivo XAML.  Os desenvolvedores podem facilmente localizar e editar as informações de estado de exibição de uma atividade ou remover completamente o estado de exibição.  
   
  Esse recurso tem suporte no designer de fluxo de trabalho hospedado novamente.  
   
@@ -132,14 +132,14 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
   
 4. Atividades usadas para criar fluxos de trabalho da máquina de estado, incluindo: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> e <xref:System.Activities.Statements.Transition>.  
   
- A captura de tela a seguir mostra o fluxo de trabalho de máquina de estado concluído na etapa [ do [tutorial de introdução](getting-started-tutorial.md) como: Criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md).  
+ A captura de tela a seguir mostra o fluxo de trabalho de máquina de estado concluído da etapa [introdução tutorial](getting-started-tutorial.md) [como criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md).  
   
  ![Ilustração que mostra o fluxo de trabalho da máquina de estado concluído.](./media/wf-features-in-the-rehosted-workflow-designer/complete-state-machine-workflow.jpg)  
   
  Para saber mais sobre como criar fluxos de trabalho de máquina de estado, confira [fluxos de trabalho de máquina de estado](state-machine-workflows.md). Os fluxos de trabalho da máquina de estado têm suporte no designer hospedado novamente.  
   
 ### <a name="contract-first-workflow-development"></a>Desenvolvimento de fluxo de trabalho de primeiro contrato  
- A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que o desenvolvedor projete um contrato no código primeiro e, com alguns cliques no Visual Studio, gere automaticamente um modelo de atividade na caixa de ferramentas que representa cada operação. Essas atividades são então usadas para criar um fluxo de trabalho que implementa as operações definidas pelo contrato. O designer de fluxo de trabalho validará o serviço de fluxo de trabalho para assegurar que essas operações sejam implementadas e a assinatura do fluxo de trabalho corresponda à assinatura do contrato. O desenvolvedor também pode associar um serviço de fluxo de trabalho a uma coleção de contratos implementados. Para obter mais informações sobre o desenvolvimento do serviço de fluxo de [trabalho do primeiro contrato, consulte Como: Crie um serviço de fluxo de trabalho que consuma um contrato](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)de serviço existente.  
+ A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que o desenvolvedor projete um contrato no código primeiro e, com alguns cliques no Visual Studio, gere automaticamente um modelo de atividade na caixa de ferramentas que representa cada operação. Essas atividades são então usadas para criar um fluxo de trabalho que implementa as operações definidas pelo contrato. O designer de fluxo de trabalho validará o serviço de fluxo de trabalho para assegurar que essas operações sejam implementadas e a assinatura do fluxo de trabalho corresponda à assinatura do contrato. O desenvolvedor também pode associar um serviço de fluxo de trabalho a uma coleção de contratos implementados. Para obter mais informações sobre o desenvolvimento do serviço de fluxo de trabalho do primeiro contrato, consulte [como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 > [!WARNING]
 > O desenvolvimento de fluxo de trabalho de primeiro contrato não tem suporte no designer de fluxo de trabalho.

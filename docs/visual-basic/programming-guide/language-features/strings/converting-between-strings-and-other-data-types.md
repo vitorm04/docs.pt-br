@@ -1,5 +1,5 @@
 ---
-title: Conversão entre cadeias de caracteres e outros tipos de dados no Visual Basic
+title: Converting between strings and other data types
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, strings
@@ -7,33 +7,33 @@ helpviewer_keywords:
 - conversions [Visual Basic], Visual Basic
 - string conversion [Visual Basic], Visual Basic
 ms.assetid: 06085ed5-191d-4930-8fbc-da63930da400
-ms.openlocfilehash: 5b30bfe180bed62ea330b78ec50d8fbfa1bcd9c1
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: da9f4fb707b2df2812afd0f8b0a5317a75e69935
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72580991"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352485"
 ---
-# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Conversão entre cadeias de caracteres e outros tipos de dados no Visual Basic
+# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Converting between strings and other data types in Visual Basic
 
-Esta seção descreve como converter cadeias de caracteres em outros tipos de dados.
+This section describes how to convert strings into other data types.
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Como converter uma matriz de bytes em uma cadeia de caracteres no Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
-Como converter os bytes de uma matriz de bytes em uma cadeia de caracteres.
+[How to: Convert an Array of Bytes into a String in Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
+How to convert the bytes from a byte array into a string.
 
-[Como converter cadeias de caracteres em uma matriz de bytes em Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
-Como converter uma cadeia de caracteres em uma matriz de bytes.
+[How to: Convert Strings into an Array of Bytes in Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
+How to convert a string into an array of bytes.
 
 [Como criar uma cadeia de caracteres de uma matriz de valores de caracteres](how-to-create-a-string-from-an-array-of-char-values.md)  
-Como criar a cadeia "abcd" de caracteres individuais.
+How to create the string "abcd" from individual characters.
 
 [Como converter cadeias de caracteres hexadecimais em números](how-to-convert-hexadecimal-strings-to-numbers.md)  
-Como converter uma cadeia de caracteres hexadecimal em um número inteiro.
+How to convert a hexadecimal string into an integer.
 
-[Como converter uma sequência de caracteres em uma matriz de caracteres em Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
-Como converter uma cadeia em uma matriz de caracteres.
+[How to: Convert a String to an Array of Characters in Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
+How to convert a string into an array of characters.
 
-[Como acessar caracteres em cadeias no Visual Basic](how-to-access-characters-in-strings.md)  
-Como acessar um caractere em uma cadeia de caracteres por seu índice.
+[How to: Access Characters in Strings in Visual Basic](how-to-access-characters-in-strings.md)  
+How to access a character in a string by its index.

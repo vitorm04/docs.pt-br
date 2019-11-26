@@ -4,12 +4,12 @@ description: Explore os componentes de engenharia de recursos com suporte no ML.
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: 25da3cceb3c9090661b34254ed240207aaf3b9d7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cb191b1688dce8f703bdabcd220eb39efe68fd48
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929249"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977240"
 ---
 # <a name="data-transformations"></a>Transformações de dados
 
@@ -21,7 +21,7 @@ As transformações de dados são usadas para:
 
 As transformações neste guia retornam classes que implementam a interface [IEstimator](xref:Microsoft.ML.IEstimator%601). Transformações de dados podem ser encadeadas. Cada transformação espera e produz dados de tipos e formatos específicos, especificados na documentação de referência vinculada.
 
-Algumas transformações de dados requerem dados de treinamento para calcular seus parâmetros. Por exemplo: o transformador <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcula a média e a variância dos dados de treinamento durante a operação `Fit()` e usa esses parâmetros na operação `Transform()`. 
+Algumas transformações de dados requerem dados de treinamento para calcular seus parâmetros. Por exemplo: o transformador <xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> calcula a média e a variância dos dados de treinamento durante a operação `Fit()` e usa esses parâmetros na operação `Transform()`.
 
 Outras transformações de dados não requerem dados de treinamento. Por exemplo: a transformação <xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale*> pode executar a operação `Transform()` sem ter visto nenhum dado de treinamento durante a operação `Fit()`.
 
@@ -62,7 +62,7 @@ Outras transformações de dados não requerem dados de treinamento. Por exemplo
 
 | Transformar | Definição |
 | --- | --- |
-| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Transformar uma coluna de texto em uma matriz flutuante de contagens de diagramas e de caracteres | 
+| <xref:Microsoft.ML.TextCatalog.FeaturizeText*> | Transformar uma coluna de texto em uma matriz flutuante de contagens de diagramas e de caracteres |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoWords*> | Dividir uma ou mais colunas de texto em palavras individuais |
 | <xref:Microsoft.ML.TextCatalog.TokenizeIntoCharactersAsKeys*> | Dividir uma ou mais colunas de texto em caracteres individuais flutua sobre um conjunto de tópicos |
 | <xref:Microsoft.ML.TextCatalog.NormalizeText*> | Alterar maiúsculas e minúsculas, remover marcas diacríticas, sinais de pontuação e números |

@@ -25,7 +25,7 @@
         - name: Tela
           href: canvas.md
           items:
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: canvas-how-to-topics.md
               items:
                 - name: Encapsular uma borda em torno do conteúdo de uma tela
@@ -67,7 +67,7 @@
         - name: DockPanel
           href: dockpanel.md
           items:
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: dockpanel-how-to-topics.md
               items:
                 - name: Obter ou definir um valor de encaixe
@@ -83,7 +83,7 @@
           items:
             - name: Visão geral do expansor
               href: expander-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: expander-how-to-topics.md
               items:
                 - name: Criar um expansor com um ScrollViewer
@@ -99,7 +99,7 @@
         - name: Grade
           href: grid.md
           items:
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: grid-how-to-topics.md
               items:
                 - name: Criar uma caixa de diálogo de interface do usuário padrão usando grade
@@ -119,7 +119,7 @@
         - name: GridSplitter
           href: gridsplitter.md
           items:
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: gridsplitter-how-to-topics.md
               items:
                 - name: Redimensionar linhas com um GridSplitter
@@ -136,7 +136,7 @@
         - name: Image
           href: image.md
           items:
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: image-how-to-topics.md
               items:
                 - name: Usar o elemento de imagem
@@ -155,7 +155,7 @@
         - name: ListBox
           href: listbox.md
           items:
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: listbox-how-to-topics.md
               items:
                 - name: Associar um ListBox a dados
@@ -176,7 +176,7 @@
                   href: gridview-overview.md
                 - name: Visão geral dos estilos e dos modelos de cabeçalho da coluna GridView
                   href: gridview-column-header-styles-and-templates-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: listview-how-to-topics.md
               items:
                 - name: Classificar uma coluna GridView quando um cabeçalho é clicado
@@ -213,7 +213,7 @@
           items:
             - name: Visão geral de painéis
               href: panels-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: panel-how-to-topics.md
               items:
                 - name: Criar um elemento de painel personalizado
@@ -233,7 +233,7 @@
               href: popup-overview.md
             - name: Comportamento de posicionamento do pop-up
               href: popup-placement-behavior.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: popup-how-to-topics.md
               items:
                 - name: Animar um pop-up
@@ -253,7 +253,7 @@
           items:
             - name: Visão geral de RichTextBox
               href: richtextbox-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: richtextbox-how-to-topics.md
               items:
                 - name: Extrair o conteúdo de texto de um RichTextBox
@@ -274,7 +274,7 @@
           items:
             - name: Visão geral de ScrollViewer
               href: scrollviewer-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: scrollviewer-how-to-topics.md
               items:
                 - name: Tratar o evento ScrollChanged
@@ -293,7 +293,7 @@
         - name: StackPanel
           href: stackpanel.md
           items:
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: stackpanel-how-to-topics.md
               items:
                 - name: Escolher entre StackPanel e DockPanel
@@ -316,7 +316,7 @@
           items:
             - name: Visão geral de TextBox
               href: textbox-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: textbox-how-to-topics.md
               items:
                 - name: Criar um controle TextBox multilinha
@@ -357,7 +357,7 @@
           items:
             - name: Visão geral de ToolTip
               href: tooltip-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: tooltip-how-to-topics.md
               items:
                 - name: Posicionar um ToolTip
@@ -369,7 +369,7 @@
           items:
             - name: Visão geral de TreeView
               href: treeview-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: treeview-how-to-topics.md
               items:
                 - name: Criar TreeViews simples ou complexos
@@ -389,13 +389,13 @@
           items:
             - name: Aplicar propriedades Stretch ao conteúdo de uma caixa de exibição
               href: how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md
-    - name: 'Estilos e modelos '
+    - name: Estilos e modelos
       href: styles-and-templates.md
       items:
         - name: Estilo e modelagem
           href: styling-and-templating.md
-        - name: Personalizando a aparência de um controle existente criando um ControlTemplate
-          href: customizing-the-appearance-of-an-existing-control.md
+        - name: Personalizar um controle existente com um ControlTemplate
+          href: ../../../desktop-wpf/themes/how-to-create-apply-template.md
         - name: 'Como: localizar elementos gerados por ControlTemplate'
           href: how-to-find-controltemplate-generated-elements.md
     - name: Personalização do controle
@@ -412,7 +412,7 @@
           items:
             - name: Visão geral de adornos
               href: adorners-overview.md
-            - name: 'Tópicos explicativos '
+            - name: Tópicos explicativos
               href: adorners-how-to-topics.md
               items:
                 - name: Implementar um adorno

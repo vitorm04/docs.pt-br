@@ -1,22 +1,22 @@
 ---
-title: Validação de complexidade de senhas (Visual Basic)
+title: Validating Passwords Complexity
 ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: ff0ac933be917b5604966240ff1fbd331a34ba77
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e8697379a6fbb5cc15b60291e5b822897c2c013
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663621"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348324"
 ---
-# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Passo a passo: Validando senhas complexas (Visual Basic)
-Esse método verifica se há algumas características de senha forte e atualiza um parâmetro de cadeia de caracteres com informações sobre em quais verificações de senha falha.  
+# <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Instruções passo a passo: validando senhas complexas (Visual Basic)
+This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.  
   
- Senhas podem ser usadas em um sistema seguro para autorizar um usuário. No entanto, as senhas devem ser difícil para usuários não autorizados estimem. Os invasores podem usar um *ataque de dicionário* programa, que itera por meio de todas as palavras em um dicionário (ou vários dicionários em linguagens diferentes) e teste se qualquer uma das palavras funciona como uma senha de usuário. Senhas fracas, como "Yankees" ou "Mustang" podem ser adivinhadas facilmente. Senhas mais fortes, como "? Você 'L1N3vaFiNdMeyeP@sSWerd! ", são muito menos provável de ser adivinhada. Um sistema protegido por senha deve garantir que os usuários escolham senhas fortes.  
+ Passwords can be used in a secure system to authorize a user. However, the passwords must be difficult for unauthorized users to guess. Attackers can use a *dictionary attack* program, which iterates through all of the words in a dictionary (or multiple dictionaries in different languages) and tests whether any of the words work as a user's password. Weak passwords such as "Yankees" or "Mustang" can be guessed quickly. Stronger passwords, such as "?You'L1N3vaFiNdMeyeP@sSWerd!", are much less likely to be guessed. A password-protected system should ensure that users choose strong passwords.  
   
- Uma senha forte é complexa (que contém uma mistura de caracteres maiusculos, minúsculos, numérico e especial) e não é uma palavra. Este exemplo demonstra como verificar a complexidade.  
+ A strong password is complex (containing a mixture of uppercase, lowercase, numeric, and special characters) and is not a word. This example demonstrates how to verify complexity.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -24,24 +24,24 @@ Esse método verifica se há algumas características de senha forte e atualiza 
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- Chame esse método, passando a cadeia de caracteres que contém a senha.  
+ Call this method by passing the string that contains that password.  
   
  Este exemplo requer:  
   
 - Acesso aos membros do namespace <xref:System.Text.RegularExpressions>. Adicione uma instrução `Imports` se você não está qualificando totalmente os nomes de membros em seu código. Para obter mais informações, consulte [Instrução Imports (tipo e namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 ## <a name="security"></a>Segurança  
- Se você estiver movendo a senha em uma rede, você precisa usar um método seguro para a transferência de dados. Para obter mais informações, consulte [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
+ If you're moving the password across a network, you need to use a secure method for transferring data. For more information, see [ASP.NET Web Application Security](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100)).
   
- Você pode melhorar a precisão do `ValidatePassword` função adicionando verificações de complexidade adicional:  
+ You can improve the accuracy of the `ValidatePassword` function by adding additional complexity checks:  
   
-- Compare a senha e suas substrings com o nome do usuário, o identificador de usuário e um dicionário definido pelo aplicativo. Além disso, trate caracteres visualmente similares como equivalentes ao realizar as comparações. Por exemplo, trate as letras "l" e "e" como equivalentes aos numerais "1" e "3".  
+- Compare the password and its substrings against the user's name, user identifier, and an application-defined dictionary. In addition, treat visually similar characters as equivalent when performing the comparisons. For example, treat the letters "l" and "e" as equivalent to the numerals "1" and "3".  
   
-- Se houver apenas um caractere maiusculo, certifique-se de não é o primeiro caractere do password.  
+- If there is only one uppercase character, make sure it is not the password's first character.  
   
-- Certifique-se de que os dois últimos caracteres da senha são caracteres de letras.  
+- Make sure that the last two characters of the password are letter characters.  
   
-- Não permita senhas em que todos os símbolos são inseridos na linha de parte superior do teclado.  
+- Do not allow passwords in which all the symbols are entered from the keyboard's top row.  
   
 ## <a name="see-also"></a>Consulte também
 

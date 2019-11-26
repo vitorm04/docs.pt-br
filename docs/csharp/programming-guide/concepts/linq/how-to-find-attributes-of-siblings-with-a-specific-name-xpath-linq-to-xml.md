@@ -1,15 +1,15 @@
 ---
-title: 'Como: Localizar atributos de irmãos com um nome específico (XPath-LINQ to XML) (C#)'
+title: Como localizar atributos de irmãos com um nome específico (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: c3133d64-523f-422d-8838-73d36b945ca0
-ms.openlocfilehash: 0d7842f190f7ce7869668929b69c2336d33c6183
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 788945232874ed5c1ba9a8a43c10eaf012320cbb
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253733"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141135"
 ---
-# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Como: Localizar atributos de irmãos com um nome específico (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml-c"></a>Como localizar atributos de irmãos com um nome específico (XPath-LINQ to XML) (C#)
 Este tópico mostra como localizar todos os atributos de seus irmãos o nó de contexto. Somente os atributos com um nome específico são retornados na coleção.  
   
  A expressão XPath é:  
@@ -19,7 +19,7 @@ Este tópico mostra como localizar todos os atributos de seus irmãos o nó de c
 ## <a name="example"></a>Exemplo  
  Este exemplo localiza primeiro um elemento de `Book` , e localiza em todos os elementos irmãos nomeados `Book`, e localiza em todos os atributos nomeados `id`. O resultado é uma coleção de atributos.  
   
- Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: Livros (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
+ Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: livros (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
 ```csharp  
 XDocument books = XDocument.Load("Books.xml");  

@@ -1,14 +1,13 @@
 ---
 title: Kubernetes-gRPC para desenvolvedores do WCF
 description: Executando ASP.NET Core serviços gRPC em um cluster kubernetes.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 819c761a7a55485612b7fb0c8b392971751d8724
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 503b582ae9fdcf8c72c87558de3a8ddd898489aa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846635"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967566"
 ---
 # <a name="kubernetes"></a>Kubernetes
 
@@ -39,7 +38,7 @@ metadata:
   # Object properties
 ```
 
-A propriedade `apiVersion` é usada para especificar qual versão (e qual API) o arquivo se destina. A propriedade `kind` especifica o tipo de objeto que o YAML representa. A propriedade `metadata` contém propriedades de objeto, como `name`, `namespace` ou `labels`.
+A propriedade `apiVersion` é usada para especificar qual versão (e qual API) o arquivo se destina. A propriedade `kind` especifica o tipo de objeto que o YAML representa. A propriedade `metadata` contém propriedades de objeto, como `name`, `namespace`ou `labels`.
 
 A maioria dos arquivos kubernetes YAML também terá uma seção `spec` que descreve os recursos e a configuração necessários para criar o objeto.
 
@@ -59,7 +58,7 @@ As implantações são os objetos de *estado descritos* para pods. Se você cria
 
 Os pods, serviços e implantações são apenas três dos tipos de objetos mais básicos. Há dezenas de outros tipos de objeto que são gerenciados por um cluster kubernetes. Para obter mais informações, consulte a documentação de [conceitos do kubernetes](https://kubernetes.io/docs/concepts/) .
 
-### <a name="namespaces"></a>Namespaces
+### <a name="namespaces"></a>{1&gt;Namespaces&lt;1}
 
 Os clusters kubernetes são projetados para serem dimensionados para centenas ou milhares de nós e executam números semelhantes de serviços. Para evitar conflitos entre nomes de objeto, os namespaces são usados para agrupar objetos juntos como parte de aplicativos maiores. Kubernetes próprios serviços executados em um namespace `default`. Todos os objetos de usuário devem ser criados em seus próprios namespaces para evitar possíveis conflitos com objetos padrão ou outros locatários no cluster.
 

@@ -1,23 +1,23 @@
 ---
-title: Funcionalidades da linguagem do Visual Basic
+title: Funcionalidades de linguagem
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053776"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345063"
 ---
 # <a name="visual-basic-language-features"></a>Funcionalidades da linguagem do Visual Basic
-Os tópicos a seguir apresentam e discutem os componentes essenciais do Visual Basic, uma linguagem de programação orientada a objeto. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. Assim como acontece com qualquer linguagem de programação moderna, o Visual Basic oferece suporte a uma série de construções de programação comuns e elementos de linguagem.  
+The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
   
- Se você já programou em outras linguagens, grande parte do material abordado nesta seção poderá parecer familiar. Embora a maioria das construções são semelhantes aos descritos em outros idiomas, a natureza orientada a eventos do Visual Basic apresenta algumas diferenças sutis.  
+ Se você já programou em outras linguagens, grande parte do material abordado nesta seção poderá parecer familiar. While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
   
- Se você for novo em programação, o material desta seção servirá como uma introdução aos blocos de compilação básicos para escrever código. Depois de compreender os conceitos básicos, você pode criar aplicativos poderosos usando o Visual Basic.  
+ Se você for novo em programação, o material desta seção servirá como uma introdução aos blocos de compilação básicos para escrever código. Once you understand the basics, you can create powerful applications using Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -83,4 +83,4 @@ Os tópicos a seguir apresentam e discutem os componentes essenciais do Visual B
  Descreve alguns dos tipos de coleções fornecidas pelo .NET Framework. Demonstra como usar coleções simples e coleções de pares chave/valor.  
   
  [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)  
- Fornece informações de referência sobre vários aspectos da programação em Visual Basic.
+ Provides reference information on various aspects of Visual Basic programming.

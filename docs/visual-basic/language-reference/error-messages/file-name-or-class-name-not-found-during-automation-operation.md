@@ -1,22 +1,22 @@
 ---
-title: O nome do arquivo ou da classe não foi localizado durante a operação de automação (Visual Basic)
+title: Nome de arquivo ou de classe não encontrado durante operação de automação
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID432
 ms.assetid: 6883c208-de5e-44da-a525-b50122e5a170
-ms.openlocfilehash: 135dd8839ec406a8a9700c7ce7006c368d26b7c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: de93b3a1641d7df80219dabc327672eaaacba08f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592062"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353717"
 ---
 # <a name="file-name-or-class-name-not-found-during-automation-operation-visual-basic"></a>O nome do arquivo ou da classe não foi localizado durante a operação de automação (Visual Basic)
-O nome especificado para o nome de arquivo ou de classe em uma chamada para o `GetObject` não foi possível encontrar a função.  
+The name specified for file name or class in a call to the `GetObject` function could not be found.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-- Verifique os nomes e tente novamente. Verifique se o nome usado para o `class` corresponde ao parâmetro registrados com o sistema.  
+- Check the names and try again. Make sure the name used for the `class` parameter matches that registered with the system.  
   
 ## <a name="see-also"></a>Consulte também
 

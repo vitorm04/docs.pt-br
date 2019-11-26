@@ -1,14 +1,13 @@
 ---
 title: Associações e transportes do WCF – gRPC para desenvolvedores do WCF
 description: Saiba como as diferentes associações e transportes do WCF se comparam ao gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 34321395ddd7059ac7e3c268e313a03251662911
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 233e3d030bc1f4450bd5cd6a7d7770486ca9e95a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846049"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966897"
 ---
 # <a name="wcf-bindings-and-transports"></a>Associações e transportes do WCF
 

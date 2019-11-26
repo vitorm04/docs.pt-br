@@ -111,7 +111,7 @@ Ao usar a DI no .NET Core, talvez seja interessante verificar um assembly e regi
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Matthew King. Registrando serviços com o Scrutor**  \
+- **Matthew King. Registrando serviços com o Scrutor** \
   <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang. Scrutor.** Repositório do GitHub. \
@@ -398,7 +398,7 @@ Aqui estão etapas adicionais que um manipulador de comandos deve realizar:
 
 #### <a name="additional-resources"></a>Recursos adicionais
 
-- **Marque Seemann. Nos limites, os aplicativos não são orientados a objeto**  \
+- **Marque Seemann. Nos limites, os aplicativos não são orientados a objeto** \
   <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **Comandos e eventos** \
@@ -407,10 +407,10 @@ Aqui estão etapas adicionais que um manipulador de comandos deve realizar:
 - **O que faz um manipulador de comandos?** \
   <https://cqrs.nu/Faq/command-handlers>
 
-- **Jimmy Bogard. Padrões de comando de domínio – manipuladores**  \
+- **Jimmy Bogard. Padrões de comando de domínio – manipuladores** \
   <https://jimmybogard.com/domain-command-patterns-handlers/>
 
-- **Jimmy Bogard. Padrões de comando de domínio – validação**  \
+- **Jimmy Bogard. Padrões de comando de domínio – validação** \
   <https://jimmybogard.com/domain-command-patterns-validation/>
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>O pipeline de processo Comando: como disparar um manipulador de comandos
@@ -439,7 +439,7 @@ Um mediador é um objeto que encapsula o "como" desse processo: ele coordena a e
 
 Os decoradores e comportamentos são semelhantes à [AOP (Programação orientada a aspectos)](https://en.wikipedia.org/wiki/Aspect-oriented_programming), aplicada somente a um pipeline de processo específico gerenciado pelo componente mediador. Os aspectos na AOP, que implementam interesses transversais, são aplicados com base em *construtores de aspecto* injetados em tempo de compilação ou com base na interceptação da chamada de objeto. Às vezes, essas duas abordagens de AOP típicas parecem funcionar "como mágica", porque não é fácil entender como a AOP faz seu trabalho. Ao lidar com problemas sérios ou bugs, pode ser difícil depurar a AOP. Por outro lado, esses decoradores/comportamentos são explícitos e aplicados apenas no contexto do mediador, assim, a depuração fica muito mais fácil e previsível.
 
-Por exemplo, no microsserviço de pedidos eShopOnContainers, implementamos dois comportamentos de exemplo, uma classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e uma classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). A implementação dos comportamentos será explicada na próxima seção, mostrando como a eShopOnContainers usa [comportamentos](https://github.com/jbogard/MediatR/wiki/Behaviors) [MediatR 3](https://www.nuget.org/packages/MediatR/3.0.0).
+Por exemplo, no microsserviço de pedidos eShopOnContainers, implementamos dois comportamentos de exemplo, uma classe [LogBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/LoggingBehavior.cs) e uma classe [ValidatorBehavior](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/Behaviors/ValidatorBehavior.cs). A implementação dos comportamentos será explicada na próxima seção, mostrando como a eShopOnContainers usa [comportamentos](https://www.nuget.org/packages/MediatR/3.0.0) [MediatR 3](https://github.com/jbogard/MediatR/wiki/Behaviors).
 
 ### <a name="use-message-queues-out-of-proc-in-the-commands-pipeline"></a>Usar filas de mensagens (fora do processo) no pipeline do comando
 
@@ -508,7 +508,7 @@ public async Task<IActionResult> ExecuteBusinessOperation([FromBody]RunOpCommand
 
 ### <a name="implement-idempotent-commands"></a>Implementar comandos idempotentes
 
-Em **eShopOnContainers**, um exemplo mais avançado que o que foi visto está enviando um objeto CreateOrderCommand do microsserviço de pedidos. Mas como o processo comercial de ordenação é um pouco mais complexo e, em nosso caso, ele realmente começa no Microservice da cesta, essa ação de enviar o objeto CreateOrderCommand é executada a partir de um manipulador de eventos de integração chamado [ UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) em vez de um controlador WebAPI simples chamado do aplicativo cliente como no exemplo mais simples anterior.
+Em **eShopOnContainers**, um exemplo mais avançado que o que foi visto está enviando um objeto CreateOrderCommand do microsserviço de pedidos. Mas como o processo comercial de ordenação é um pouco mais complexo e, em nosso caso, ele realmente começa no microserviço basket, essa ação de enviar o objeto CreateOrderCommand é executada de um manipulador de eventos de integração chamado [UserCheckoutAcceptedIntegrationEventHandler](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs) em vez de um controlador WebAPI simples chamado do aplicativo cliente como no exemplo mais simples anterior.
 
 Mesmo assim, a ação de enviar o Comando para o MediatR é bem semelhante, conforme mostrado no código a seguir.
 
@@ -668,7 +668,7 @@ public class MediatorModule : Autofac.Module
 
 É aqui que a "mágica acontece" com o MediatR.
 
-Como cada manipulador de comando implementa a interface `IAsyncRequestHandler<T>` genérica, durante o registro de assemblies, o código registra todos os tipos marcados como `IAsyncRequestHandler` com `RegisteredAssemblyTypes`, relacionando, ao mesmo tempo, os `CommandHandlers` com seus respectivos `Commands`, graças a relação declarada na classe `CommandHandler`, como no exemplo a seguir:
+Como cada manipulador de comando implementa a interface `IAsyncRequestHandler<T>` genérica, durante o registro de assemblies, o código registra todos os tipos marcados como `RegisteredAssemblyTypes` com `IAsyncRequestHandler`, relacionando, ao mesmo tempo, os `CommandHandlers` com seus respectivos `Commands`, graças a relação declarada na classe `CommandHandler`, como no exemplo a seguir:
 
 ```csharp
 public class CreateOrderCommandHandler

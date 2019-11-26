@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: ec2c8388411e24940041dc9dcb7f6a6755e89805
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 0e2b369eccfbc658a790ef61a961315a88361669
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697580"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089084"
 ---
-# <a name="socket-element-network-settings"></a>\<socket > elemento (configurações de rede)
+# <a name="socket-element-network-settings"></a>Elemento de > de soquete \<(configurações de rede)
 Especifica se as operações de soquete usam portas de conclusão.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<settings >** ](settings-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 **\<socket >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**configurações**](settings-element-network-settings.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**soquete** >
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -38,7 +38,7 @@ Especifica se as operações de soquete usam portas de conclusão.
   
 ### <a name="attributes"></a>Atributos  
   
-|**Atributo**|**Descrição**|  
+|**Attribute**|**Descrição**|  
 |-------------------|---------------------|  
 |`alwaysUseCompletionPortsForAccept`|Indica se o soquete sempre deve usar as portas de conclusão para aceitar chamadas de método. O valor padrão é `false`.|  
 |`alwaysUseCompletionPortsForConnect`|Indica se o soquete sempre deve usar portas de conclusão para chamadas de método Connect. O valor padrão é `false`.|  
@@ -51,10 +51,10 @@ Especifica se as operações de soquete usam portas de conclusão.
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
-|[settings](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[Configurações](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
- Os atributos `alwaysUseCompletionPortsForAccept` e `alwaysUseCompletionPortsForConnect` são usados para especificar o comportamento padrão em relação ao uso de portas de conclusão pelas classes no @no__t -2. namespace. As portas de conclusão são recomendadas para aplicativos de servidor de alto desempenho.  
+ Os atributos `alwaysUseCompletionPortsForAccept` e `alwaysUseCompletionPortsForConnect` são usados para especificar o comportamento padrão em relação ao uso de portas de conclusão pelas classes no <xref:System.Net.Sockets?displayProperty=nameWithType>. namespace. As portas de conclusão são recomendadas para aplicativos de servidor de alto desempenho.  
   
  O valor padrão para os atributos `alwaysUseCompletionPortsForAccept` e `alwaysUseCompletionPortsForConnect` é **false**.  
   
@@ -62,7 +62,7 @@ Especifica se as operações de soquete usam portas de conclusão.
   
  O atributo `ipProtectionLevel` especifica o <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> padrão a ser usado para um soquete. A propriedade <xref:System.Net.Configuration.SocketElement.IPProtectionLevel%2A> permite a configuração de uma restrição para um soquete IPv6 para um escopo especificado, como endereços com o mesmo link local ou local do site. Essa opção permite que os aplicativos coloquem restrições de acesso em soquetes IPv6. Essas restrições permitem que um aplicativo em execução em uma LAN privada proteja-se de modo simples e robusto contra ataques externos. Essa opção amplia ou limita o escopo de um soquete de escuta, habilitando o acesso irrestrito de usuários públicos e privados quando apropriado ou restringindo o acesso somente ao mesmo site, conforme necessário.  
   
- Essa configuração de atributo `ipProtectionLevel` afeta apenas o tráfego de entrada inicial:  
+ Essa `ipProtectionLevel` configuração de atributo afeta apenas o tráfego de entrada inicial:  
   
 - Um servidor TCP escutando conexões de entrada em um soquete.  
   
@@ -70,7 +70,7 @@ Especifica se as operações de soquete usam portas de conclusão.
   
  Essa definição de configuração não afeta as conexões TCP já estabelecidas (o tráfego é irrestrito em ambas as direções) e não afeta um aplicativo que envia pacotes UDP.  
   
- Os valores possíveis para a configuração de atributo `ipProtectionLevel` correspondem aos níveis de proteção definidos especificados na enumeração de <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> da seguinte maneira:  
+ Os valores possíveis para a configuração de atributo `ipProtectionLevel` correspondem aos níveis de proteção definidos especificados na enumeração <xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType> da seguinte maneira:  
   
 |**Valor do atributo**|**Descrição**|  
 |-|-|  

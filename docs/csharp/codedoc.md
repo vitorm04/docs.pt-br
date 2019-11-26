@@ -4,12 +4,12 @@ description: Saiba como documentar seu código com comentários de documentaçã
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: a9142b36586de4d08dec6c4b72bfd1725b4830ac
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c858a92309710a0ac6b68e9194f2d7ef4c9577a0
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037661"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74140672"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>Documentando seu código com comentários em XML
 
@@ -21,16 +21,16 @@ Comentários de documentação XML, como todos os outros comentários, são igno
 
 É possível gerar o arquivo XML em tempo de compilação seguindo um destes procedimentos:
 
-- Se estiver desenvolvendo um aplicativo com .NET Core da linha de comando, você poderá adicionar um [elemento DocumentationFile](/visualstudio/msbuild/common-msbuild-project-properties) à seção `<PropertyGroup>` do arquivo de projeto .csproj. O seguinte exemplo gera um arquivo XML no diretório do projeto com o mesmo nome de arquivo raiz do assembly:
+- Se você estiver desenvolvendo um aplicativo com o .NET Core na linha de comando, poderá adicionar um elemento `GenerateDocumentationFile` à seção `<PropertyGroup>` do arquivo de projeto. csproj. Você também pode especificar o caminho para o arquivo de documentação diretamente usando [`DocumentationFile` elemento](/visualstudio/msbuild/common-msbuild-project-properties). O seguinte exemplo gera um arquivo XML no diretório do projeto com o mesmo nome de arquivo raiz do assembly:
 
+   ```xml
+   <GenerateDocumentationFile>true</GenerateDocumentationFile>
+   ```
+   
+   Isso é equivalente ao seguinte:
+   
    ```xml
    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
-   ```
-
-   Você também pode especificar o caminho relativo ou absoluto exato e o nome do arquivo XML. O exemplo a seguir gera o arquivo XML no mesmo diretório que a versão de depuração de um aplicativo:
-
-   ```xml
-   <DocumentationFile>bin\Debug\netcoreapp2.1\App.xml</DocumentationFile>
    ```
 
 - Se estiver desenvolvendo um aplicativo usando o Visual Studio, clique com botão direito do mouse no projeto e selecione **Propriedades**. Na caixa de diálogo Propriedades, selecione a guia **Build** e marque **Arquivo de documentação XML**. Também é possível alterar o local em que o compilador grava o arquivo.

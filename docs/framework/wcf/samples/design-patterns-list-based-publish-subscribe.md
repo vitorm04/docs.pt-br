@@ -2,12 +2,12 @@
 title: 'Padrões de design: publicação-assinatura baseada em lista'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 3c05e66affad8e517b0b1b5001f726abeae7b100
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: cd7cc6f68362c7a69256f0488e2fa00caffdabc7
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928833"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978208"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Padrões de design: publicação-assinatura baseada em lista
 Este exemplo ilustra o padrão de publicação-assinatura baseado em lista implementado como um programa Windows Communication Foundation (WCF).  
@@ -21,7 +21,7 @@ Este exemplo ilustra o padrão de publicação-assinatura baseado em lista imple
   
  Neste exemplo, o cliente e a fonte de dados são programas de console (arquivos. exe) e o serviço é uma biblioteca (. dll) hospedada no Serviços de Informações da Internet (IIS). A atividade cliente e fonte de dados fica visível na área de trabalho.  
   
- O serviço usa a comunicação duplex. O `ISampleContract` contrato de serviço é emparelhado com um `ISampleClientCallback` contrato de retorno de chamada. O serviço implementa as operações de inscrição e cancelamento de assinatura do serviço, que os clientes usam para ingressar ou sair da lista de assinantes. O serviço também implementa a `PublishPriceChange` operação de serviço, que o programa de fonte de dados chama para fornecer o serviço com novas informações. O programa cliente implementa a `PriceChange` operação de serviço, que o serviço chama para notificar todos os assinantes de uma alteração de preço.  
+ O serviço usa a comunicação duplex. O contrato de serviço `ISampleContract` é emparelhado com um contrato de retorno de chamada `ISampleClientCallback`. O serviço implementa as operações de inscrição e cancelamento de assinatura do serviço, que os clientes usam para ingressar ou sair da lista de assinantes. O serviço também implementa a operação de serviço `PublishPriceChange`, que o programa de fonte de dados chama para fornecer o serviço com novas informações. O programa cliente implementa a operação de serviço `PriceChange`, que o serviço chama para notificar todos os assinantes de uma alteração de preço.  
   
 ```csharp  
 // Create a service contract and define the service operations.  
@@ -48,7 +48,7 @@ public interface ISampleClientContract
   
  O serviço usa um evento de .NET Framework como o mecanismo para informar todos os assinantes sobre novas informações. Quando um cliente ingressa no serviço chamando Subscribe, ele fornece um manipulador de eventos. Quando um cliente sai, ele cancela a assinatura de seu manipulador de eventos do evento. Quando uma fonte de dados chama o serviço para relatar uma alteração de preço, o serviço gera o evento. Isso chama cada instância do serviço, uma para cada cliente que assinou e faz com que seus manipuladores de eventos sejam executados. Cada manipulador de eventos passa as informações para seu cliente por meio de sua função de retorno de chamada.  
   
-```csharp  
+```csharp
 public class PriceChangeEventArgs : EventArgs  
     {  
         public string Item;  
@@ -120,7 +120,7 @@ public class PriceChangeEventArgs : EventArgs
   
 1. Teste se você pode acessar o serviço usando um navegador digitando o seguinte endereço: `http://localhost/servicemodelsamples/service.svc`. Uma página de confirmação deve ser exibida em resposta.  
   
-2. Execute Client. exe de \client\bin\\, de dentro da pasta específica do idioma. A atividade do cliente é exibida na janela do console do cliente. Inicie vários clientes.  
+2. Execute o Client. exe do \client\bin\\, a partir da pasta específica do idioma. A atividade do cliente é exibida na janela do console do cliente. Inicie vários clientes.  
   
 3. Execute DataSource. exe de \datasource\bin\\, de dentro da pasta específica do idioma. A atividade de fonte de dados é exibida na janela do console. Depois que a fonte de dados envia informações para o serviço, elas devem ser passadas para cada cliente.  
   
@@ -157,6 +157,6 @@ public class PriceChangeEventArgs : EventArgs
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  

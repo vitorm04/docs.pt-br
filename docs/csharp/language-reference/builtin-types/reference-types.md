@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: a5a32fa0a98cda37d7f599b20ef2b507cadd730c
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69604205"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973009"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipos de referência internos (Referência de C#)
 
@@ -178,7 +178,7 @@ O exemplo a seguir usa `dynamic` em várias declarações. O método `Main` tamb
 - [Operações básicas de cadeias de caracteres](../../../standard/base-types/basic-string-operations.md)
 - [Criando novas cadeias de caracteres](../../../standard/base-types/creating-new.md)
 - [Operadores cast e teste de tipo](../operators/type-testing-and-cast.md)
-- [Como converter com segurança usando a correspondência de padrões e os operadores is e as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Como converter com segurança usando correspondência de padrões e os operadores as e is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Passo a passo: Criando e usando objetos dinâmicos](../../programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
 - <xref:System.Object?displayProperty=nameWithType>
 - <xref:System.String?displayProperty=nameWithType>

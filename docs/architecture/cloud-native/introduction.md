@@ -40,8 +40,8 @@ Nem todos são ruins. Os monolíticos oferecem algumas vantagens distintas. Por 
 
 - build
 - testar
-- Instalação
-- Solucionar problemas
+- instalação
+- solucionar problemas
 - dimensionar
 
 Muitos aplicativos bem-sucedidos que existem hoje foram criados como monolíticos. O aplicativo é um problema e continua a evoluir, iterar após a iteração, adicionar cada vez mais funcionalidade.

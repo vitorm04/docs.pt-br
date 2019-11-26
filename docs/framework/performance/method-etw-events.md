@@ -7,32 +7,20 @@ helpviewer_keywords:
 ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48e1c2271d6d011296d347e7d74fb363cc4d8527
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd29d07b6253cb8c177cc1e8854435ce0079b520
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834547"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974910"
 ---
 # <a name="method-etw-events"></a>Eventos ETW de método
 
-<a name="top"></a> Esses eventos coletam informações que são específicas para métodos. A carga desses eventos é necessária para resolução de símbolos. Além disso, esses eventos fornecem informações úteis, como o número de vezes que um método foi chamado.
+Esses eventos coletam informações específicas para métodos. A carga desses eventos é necessária para resolução de símbolos. Além disso, esses eventos fornecem informações úteis, como o número de vezes que um método foi chamado.
 
 Todos os eventos de método têm um nível de "Informativo (4)". Todos os eventos detalhados do método têm um nível de "Detalhado (5)".
 
-Todos os eventos de método são gerados pela palavra-chave `JITKeyword` (0x10) ou a palavra-chave `NGenKeyword` (0x20) no provedor de tempo de execução ou então `JitRundownKeyword` (0x10) ou `NGENRundownKeyword` (0x20) com o provedor de encerramento.
-
-Eventos de método do CLR são mais subdivididos no seguinte:
-
-- [Eventos de método do CLR](#clr_method_events)
-
-- [Eventos de marcador de método do CLR](#clr_method_marker_events)
-
-- [Eventos detalhados de método do CLR](#clr_method_verbose_events)
-
-- [Evento MethodJittingStarted](#methodjittingstarted_event)
-
-<a name="clr_method_events"></a>
+Todos os eventos de método são gerados pela palavra-chave `JITKeyword` (0x10) ou a palavra-chave `NGenKeyword` (0x20) no provedor de runtime ou então `JitRundownKeyword` (0x10) ou `NGENRundownKeyword` (0x20) com o provedor de encerramento.
 
 ## <a name="clr-method-events"></a>Eventos de método do CLR
 
@@ -40,8 +28,8 @@ A tabela a seguir mostra a palavra-chave e o nível. Para obter mais informaçõ
 
 |Palavra-chave para acionar o evento|Nível|
 |-----------------------------------|-----------|
-|Provedor de tempo de execução `JITKeyword` (0x10)|Informativo (4)|
-|Provedor de tempo de execução `NGenKeyword` (0x20)|Informativo (4)|
+|Provedor de runtime `JITKeyword` (0x10)|Informativo (4)|
+|Provedor de runtime `NGenKeyword` (0x20)|Informativo (4)|
 |Provedor de encerramento `JitRundownKeyword` (0x10)|Informativo (4)|
 |Provedor de encerramento `NGENRundownKeyword` (0x20)|Informativo (4)|
 
@@ -63,12 +51,8 @@ A seguinte tabela mostra os dados do evento:
 |MethodStartAddress|win:UInt64|Endereço inicial do método.|
 |MethodSize|win:UInt32|Tamanho do método.|
 |MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|
-|MethodFlags|win:UInt32|0x1 Método dinâmico.<br /><br /> 0x2 Método genérico.<br /><br /> 0x4 Método de código compilado por JIT (caso contrário, código de imagem nativa do NGEN).<br /><br /> 0x8 Método auxiliar.|
+|MethodFlags|win:UInt32|0x1: método dinâmico.<br /><br /> 0x2: método genérico.<br /><br /> 0x4: método de código com compilação JIT (de outro modo, código de imagem nativa NGEN).<br /><br /> 0x8: método auxiliar.|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
-
-[Voltar ao início](#top)
-
-<a name="clr_method_marker_events"></a>
 
 ## <a name="clr-method-marker-events"></a>Eventos de marcador de método do CLR
 
@@ -97,18 +81,14 @@ A seguinte tabela mostra os dados do evento:
 |----------------|---------------|-----------------|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
 
-[Voltar ao início](#top)
-
-<a name="clr_method_verbose_events"></a>
-
 ## <a name="clr-method-verbose-events"></a>Eventos detalhados de método do CLR
 
 A seguinte tabela mostra a palavra-chave e o nível:
 
 |Palavra-chave para acionar o evento|Nível|
 |-----------------------------------|-----------|
-|Provedor de tempo de execução `JITKeyword` (0x10)|Detalhado (5)|
-|Provedor de tempo de execução `NGenKeyword` (0x20)|Detalhado (5)|
+|Provedor de runtime `JITKeyword` (0x10)|Detalhado (5)|
+|Provedor de runtime `NGenKeyword` (0x20)|Detalhado (5)|
 |Provedor de encerramento `JitRundownKeyword` (0x10)|Detalhado (5)|
 |Provedor de encerramento `NGENRundownKeyword` (0x20)|Detalhado (5)|
 
@@ -130,15 +110,11 @@ A seguinte tabela mostra os dados do evento:
 |MethodStartAddress|win:UInt64|O endereço inicial.|
 |MethodSize|win:UInt32|O comprimento do método.|
 |MethodToken|win:UInt32|0 para métodos dinâmicos e auxiliares JIT.|
-|MethodFlags|win:UInt32|0x1 Método dinâmico.<br /><br /> 0x2 Método genérico.<br /><br /> 0x4 Método compilado por JIT (caso contrário, gerado pelo NGen. exe)<br /><br /> 0x8 Método auxiliar.|
+|MethodFlags|win:UInt32|0x1: método dinâmico.<br /><br /> 0x2: método genérico.<br /><br /> 0x4: método com compilação JIT (de outro modo, gerado pelo NGen.exe)<br /><br /> 0x8: método auxiliar.|
 |MethodNameSpace|win:UnicodeString|O nome completo do namespace associado ao método.|
 |MethodName|win:UnicodeString|O nome de classe completo associado ao método.|
 |MethodSignature|win:UnicodeString|Assinatura do método (lista separada por vírgulas de nomes de tipo).|
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|
-
-[Voltar ao início](#top)
-
-<a name="methodjittingstarted_event"></a>
 
 ## <a name="methodjittingstarted-event"></a>Evento MethodJittingStarted
 
@@ -146,8 +122,8 @@ A seguinte tabela mostra a palavra-chave e o nível:
 
 |Palavra-chave para acionar o evento|Nível|
 |-----------------------------------|-----------|
-|Provedor de tempo de execução `JITKeyword` (0x10)|Detalhado (5)|
-|Provedor de tempo de execução `NGenKeyword` (0x20)|Detalhado (5)|
+|Provedor de runtime `JITKeyword` (0x10)|Detalhado (5)|
+|Provedor de runtime `NGenKeyword` (0x20)|Detalhado (5)|
 |Provedor de encerramento `JitRundownKeyword` (0x10)|Detalhado (5)|
 |Provedor de encerramento `NGENRundownKeyword` (0x20)|Detalhado (5)|
 

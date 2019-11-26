@@ -1,5 +1,5 @@
 ---
-title: Cláusula Skip (Visual Basic)
+title: Cláusula Skip
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QuerySkip
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: e52de186e1475bfabd02821a0cd2384d8350eed3
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: c582b014bad4fa8fa3165d2b756f4bc955840cfc
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004771"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349650"
 ---
 # <a name="skip-clause-visual-basic"></a>Cláusula Skip (Visual Basic)
-Ignora um número especificado de elementos em uma coleção e, em seguida, retorna os elementos restantes.  
+Bypasses a specified number of elements in a collection and then returns the remaining elements.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,19 +26,19 @@ Skip count
   
 ## <a name="parts"></a>Partes  
  `count`  
- Necessário. Um valor ou uma expressão que é avaliada como o número de elementos da sequência a serem ignorados.  
+ Necessário. A value or an expression that evaluates to the number of elements of the sequence to skip.  
   
 ## <a name="remarks"></a>Comentários  
- A cláusula `Skip` faz com que uma consulta ignore os elementos no início de uma lista de resultados e retorne os elementos restantes. O número de elementos a serem ignorados é identificado pelo parâmetro `count`.  
+ The `Skip` clause causes a query to bypass elements at the beginning of a results list and return the remaining elements. The number of elements to skip is identified by the `count` parameter.  
   
- Você pode usar a cláusula `Skip` com a cláusula `Take` para retornar um intervalo de dados de qualquer segmento de uma consulta. Para fazer isso, passe o índice do primeiro elemento do intervalo para a cláusula `Skip` e o tamanho do intervalo para a cláusula `Take`.  
+ You can use the `Skip` clause with the `Take` clause to return a range of data from any segment of a query. To do this, pass the index of the first element of the range to the `Skip` clause and the size of the range to the `Take` clause.  
   
- Quando você usa a cláusula `Skip` em uma consulta, também pode ser necessário garantir que os resultados sejam retornados em uma ordem que permitirá que a cláusula `Skip` ignore os resultados pretendidos. Para obter mais informações sobre como ordenar os resultados da consulta, consulte [cláusula order by](../../../visual-basic/language-reference/queries/order-by-clause.md).  
+ When you use the `Skip` clause in a query, you may also need to ensure that the results are returned in an order that will enable the `Skip` clause to bypass the intended results. For more information about ordering query results, see [Order By Clause](../../../visual-basic/language-reference/queries/order-by-clause.md).  
   
- Você pode usar a cláusula `SkipWhile` para especificar que apenas determinados elementos sejam ignorados, dependendo de uma condição fornecida.  
+ You can use the `SkipWhile` clause to specify that only certain elements are ignored, depending on a supplied condition.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir usa a cláusula `Skip` junto com a cláusula `Take` para retornar dados de uma consulta em páginas. A função `GetCustomers` usa a cláusula `Skip` para ignorar os clientes na lista até o valor de índice inicial fornecido e usa a cláusula `Take` para retornar uma página de clientes que inicia com esse valor de índice.  
+ The following code example uses the `Skip` clause together with the `Take` clause to return data from a query in pages. The `GetCustomers` function uses the `Skip` clause to bypass the customers in the list until the supplied starting index value, and uses the `Take` clause to return a page of customers starting from that index value.  
   
  [!code-vb[VbSimpleQuerySamples#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#1)]  
   

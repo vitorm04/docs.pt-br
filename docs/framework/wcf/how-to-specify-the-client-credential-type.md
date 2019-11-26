@@ -8,19 +8,19 @@ helpviewer_keywords:
 - security credentials, adding to SOAP messages
 - WCF, security
 ms.assetid: 10f51bee-5f92-4c1a-9126-fa5418535d8f
-ms.openlocfilehash: d62011728b6b03023ef4039480cea8dfa0ec8f02
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: df18f89ee18bfa33ecc0aced617d168c805e3515
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321293"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138568"
 ---
 # <a name="how-to-specify-the-client-credential-type"></a>Como especificar o tipo de credencial de cliente
 Depois de definir um modo de segurança (transporte ou mensagem), você tem a opção de definir o tipo de credencial do cliente. Essa propriedade especifica o tipo de credencial que o cliente deve fornecer ao serviço para autenticação. Para obter mais informações sobre como definir o modo de segurança (uma etapa necessária antes de definir o tipo de credencial do cliente), consulte [como: definir o modo de segurança](how-to-set-the-security-mode.md).  
   
 ### <a name="to-set-the-client-credential-type-in-code"></a>Para definir o tipo de credencial do cliente no código  
   
-1. Crie uma instância da associação que será usada pelo serviço. Este exemplo usa a associação <xref:System.ServiceModel.WSHttpBinding>.  
+1. Crie uma instância da associação que será usada pelo serviço. Este exemplo usa a associação de <xref:System.ServiceModel.WSHttpBinding>.  
   
 2. Defina a propriedade <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> com um valor apropriado. Este exemplo usa o modo de mensagem.  
   
@@ -31,15 +31,15 @@ Depois de definir um modo de segurança (transporte ou mensagem), você tem a op
   
 ### <a name="to-set-the-client-credential-type-in-configuration"></a>Para definir o tipo de credencial do cliente na configuração  
   
-1. Adicione um elemento de [> @no__t. ServiceModel](../configure-apps/file-schema/wcf/system-servicemodel.md) ao arquivo de configuração.  
+1. Adicione um elemento [\<System. serviceModel >](../configure-apps/file-schema/wcf/system-servicemodel.md) ao arquivo de configuração.  
   
-2. Como um elemento filho, adicione um elemento de [> \<bindings](../configure-apps/file-schema/wcf/bindings.md) .  
+2. Como um elemento filho, adicione um elemento de [associações de\<](../configure-apps/file-schema/wcf/bindings.md) .  
   
 3. Adicione uma associação apropriada. Este exemplo usa o elemento [\<wsHttpBinding >](../configure-apps/file-schema/wcf/wshttpbinding.md) .  
   
-4. Adicione um elemento de [> \<binding](../misc/binding.md) e defina o atributo `name` com um valor apropriado. Este exemplo usa o nome "Securebinding".  
+4. Adicione um elemento de [> de associação de\<](../configure-apps/file-schema/wcf/bindings.md) e defina o atributo `name` como um valor apropriado. Este exemplo usa o nome "Securebinding".  
   
-5. Adicione uma associação `<security>`. Defina o atributo `mode` como um valor apropriado. Este exemplo o define como `"Message"`.  
+5. Adicione uma associação de `<security>`. Defina o atributo `mode` como um valor apropriado. Este exemplo o define como `"Message"`.  
   
 6. Adicione um elemento `<message>` ou `<transport>`, conforme determinado pelo modo de segurança. Defina o atributo `clientCredentialType` como um valor apropriado. Este exemplo usa `"Windows"`.  
   

@@ -1,13 +1,13 @@
 ---
 title: Métodos
 description: Saiba como um F# método é uma função associada a um tipo que é usado para expor e implementar a funcionalidade e o comportamento de objetos e tipos.
-ms.date: 05/16/2016
-ms.openlocfilehash: 13503690a59ace13dacba93b6fce9ea3240c5cc2
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 11/04/2019
+ms.openlocfilehash: 6f5ae76ea450b07763eb58d0c95b18b30f634551
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68627446"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976642"
 ---
 # <a name="methods"></a>Métodos
 
@@ -53,13 +53,13 @@ Na sintaxe anterior, você pode ver as várias formas de declarações e defini�
 
 Atributos podem ser aplicados a qualquer declaração de método. Elas precedem a sintaxe para uma definição de método e geralmente são listadas em uma linha separada. Para obter mais informações, consulte [Atributos](../attributes.md).
 
-Os métodos podem ser `inline`marcados. Para saber mais sobre `inline`, veja [Funções embutidas](../functions/inline-functions.md).
+Os métodos podem ser marcados `inline`. Para saber mais sobre `inline`, veja [Funções embutidas](../functions/inline-functions.md).
 
-Métodos não embutidos podem ser usados recursivamente dentro do tipo; Não é necessário usar a `rec` palavra-chave explicitamente.
+Métodos não embutidos podem ser usados recursivamente dentro do tipo; Não é necessário usar explicitamente a palavra-chave `rec`.
 
 ## <a name="instance-methods"></a>Métodos de instância
 
-Os métodos de instância são declarados com a `member` palavra-chave e um autoidentificador, seguidos por um ponto (.) e o nome do método e os parâmetros. Como é o caso de `let` associações, a *lista de parâmetros* pode ser um padrão. Normalmente, você coloca parâmetros de método entre parênteses em um formulário de tupla, que é a maneira como F# os métodos aparecem quando são criados em outros idiomas de .NET Framework. No entanto, o formulário na forma curried (parâmetros separados por espaços) também é comum e também há suporte para outros padrões.
+Os métodos de instância são declarados com a palavra-chave `member` e um *autoidentifier*, seguidos por um ponto (.) e o nome do método e os parâmetros. Como é o caso de associações de `let`, a *lista de parâmetros* pode ser um padrão. Normalmente, você coloca parâmetros de método entre parênteses em um formulário de tupla, que é a maneira como F# os métodos aparecem quando são criados em outros idiomas de .NET Framework. No entanto, o formulário na forma curried (parâmetros separados por espaços) também é comum e também há suporte para outros padrões.
 
 O exemplo a seguir ilustra a definição e o uso de um método de instância não abstrata.
 
@@ -69,25 +69,25 @@ Em métodos de instância, não use o autoidentifier para acessar os campos defi
 
 ## <a name="static-methods"></a>Métodos estáticos
 
-A palavra `static` -chave é usada para especificar que um método pode ser chamado sem uma instância e não está associado a uma instância de objeto. Caso contrário, os métodos são métodos de instância.
+A palavra-chave `static` é usada para especificar que um método pode ser chamado sem uma instância e não está associado a uma instância de objeto. Caso contrário, os métodos são métodos de instância.
 
-O exemplo na próxima seção mostra os campos declarados `let` com a palavra-chave, os `member` membros da propriedade declarados com a palavra `static` -chave e um método estático declarado com a palavra-chave.
+O exemplo na próxima seção mostra os campos declarados com a palavra-chave `let`, membros de propriedade declarados com a palavra-chave `member` e um método estático declarado com a palavra-chave `static`.
 
-O exemplo a seguir ilustra a definição e o uso de métodos estáticos. Suponha que essas definições de método estejam na `SomeType` classe da seção anterior.
+O exemplo a seguir ilustra a definição e o uso de métodos estáticos. Suponha que essas definições de método estejam na classe `SomeType` na seção anterior.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3402.fs)]
 
 ## <a name="abstract-and-virtual-methods"></a>Métodos abstratos e virtuais
 
-A palavra `abstract` -chave indica que um método tem um slot de expedição virtual e pode não ter uma definição na classe. Um *slot de expedição virtual* é uma entrada em uma tabela mantida internamente de funções que é usada em tempo de execução para pesquisar chamadas de função virtual em um tipo orientado a objeto. O mecanismo de expedição virtual é o mecanismo que implementa o *polimorfismo*, um recurso importante da programação orientada a objeto. Uma classe que tem pelo menos um método abstrato sem uma definição é uma *classe abstrata*, o que significa que nenhuma instância pode ser criada dessa classe. Para obter mais informações sobre classes abstratas, consulte [classes abstratas](../abstract-classes.md).
+A palavra-chave `abstract` indica que um método tem um slot de expedição virtual e pode não ter uma definição na classe. Um *slot de expedição virtual* é uma entrada em uma tabela mantida internamente de funções que é usada em tempo de execução para pesquisar chamadas de função virtual em um tipo orientado a objeto. O mecanismo de expedição virtual é o mecanismo que implementa o *polimorfismo*, um recurso importante da programação orientada a objeto. Uma classe que tem pelo menos um método abstrato sem uma definição é uma *classe abstrata*, o que significa que nenhuma instância pode ser criada dessa classe. Para obter mais informações sobre classes abstratas, consulte [classes abstratas](../abstract-classes.md).
 
-Declarações de método abstract não incluem um corpo de método. Em vez disso, o nome do método é seguido por dois-pontos (:) e uma assinatura de tipo para o método. A assinatura de tipo de um método é igual à mostrada pelo IntelliSense quando você pausa o ponteiro do mouse sobre um nome de método no editor de Visual Studio Code, exceto sem nomes de parâmetros. As assinaturas de tipo também são exibidas pelo intérprete, FSI. exe, quando você está trabalhando interativamente. A assinatura de tipo de um método é formada pela listagem dos tipos dos parâmetros, seguidos pelo tipo de retorno, com os símbolos de separadores apropriados. Os parâmetros na forma curried são separados `->` por e os parâmetros de tupla `*`são separados por. O valor de retorno é sempre separado dos argumentos por um `->` símbolo. Os parênteses podem ser usados para agrupar parâmetros complexos, como quando um tipo de função é um parâmetro ou para indicar quando uma tupla é tratada como um único parâmetro, e não como dois parâmetros.
+Declarações de método abstract não incluem um corpo de método. Em vez disso, o nome do método é seguido por dois-pontos (:) e uma assinatura de tipo para o método. A assinatura de tipo de um método é igual à mostrada pelo IntelliSense quando você pausa o ponteiro do mouse sobre um nome de método no editor de Visual Studio Code, exceto sem nomes de parâmetros. As assinaturas de tipo também são exibidas pelo intérprete, FSI. exe, quando você está trabalhando interativamente. A assinatura de tipo de um método é formada pela listagem dos tipos dos parâmetros, seguidos pelo tipo de retorno, com os símbolos de separadores apropriados. Os parâmetros na forma curried são separados por `->` e os parâmetros de tupla são separados por `*`. O valor de retorno é sempre separado dos argumentos por um símbolo de `->`. Os parênteses podem ser usados para agrupar parâmetros complexos, como quando um tipo de função é um parâmetro ou para indicar quando uma tupla é tratada como um único parâmetro, e não como dois parâmetros.
 
-Você também pode fornecer definições padrão de métodos abstratos adicionando a definição à classe e usando a `default` palavra-chave, conforme mostrado no bloco de sintaxe neste tópico. Um método abstrato que tem uma definição na mesma classe é equivalente a um método virtual em outras linguagens de .NET Framework. Se houver ou não uma definição, a `abstract` palavra-chave criará um novo slot de expedição na tabela de funções virtuais para a classe.
+Você também pode fornecer definições padrão de métodos abstratos adicionando a definição à classe e usando a palavra-chave `default`, conforme mostrado no bloco de sintaxe neste tópico. Um método abstrato que tem uma definição na mesma classe é equivalente a um método virtual em outras linguagens de .NET Framework. Se houver ou não uma definição, a palavra-chave `abstract` criará um novo slot de expedição na tabela de funções virtuais para a classe.
 
-Independentemente de uma classe base implementar seus métodos abstratos, as classes derivadas podem fornecer implementações de métodos abstratos. Para implementar um método abstract em uma classe derivada, defina um método que tenha o mesmo nome e assinatura na classe derivada, exceto use a `override` palavra-chave ou `default` e forneça o corpo do método. As palavras-chave `override` e `default` significam exatamente a mesma coisa. Use `override` se o novo método substituir uma implementação de classe base; `default` Use quando você criar uma implementação na mesma classe que a declaração abstrata original. Não use a `abstract` palavra-chave no método que implementa o método que foi declarado abstrato na classe base.
+Independentemente de uma classe base implementar seus métodos abstratos, as classes derivadas podem fornecer implementações de métodos abstratos. Para implementar um método abstract em uma classe derivada, defina um método que tenha o mesmo nome e assinatura na classe derivada, exceto use a palavra-chave `override` ou `default` e forneça o corpo do método. As palavras-chave `override` e `default` significam exatamente a mesma coisa. Use `override` se o novo método substituir uma implementação de classe base; Use `default` quando você cria uma implementação na mesma classe que a declaração abstrata original. Não use a palavra-chave `abstract` no método que implementa o método que foi declarado abstrato na classe base.
 
-O exemplo a seguir ilustra um método `Rotate` abstrato que tem uma implementação padrão, o equivalente a um método virtual .NET Framework.
+O exemplo a seguir ilustra um método abstrato `Rotate` que tem uma implementação padrão, o equivalente a um método virtual .NET Framework.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet3403.fs)]
 
@@ -106,12 +106,12 @@ A partir F# do 4,1, você também pode ter argumentos opcionais com um valor de 
 ```fsharp
 // A class with a method M, which takes in an optional integer argument.
 type C() =
-    __.M([<Optional; DefaultParameterValue(12)>] i) = i + 1
+    _.M([<Optional; DefaultParameterValue(12)>] i) = i + 1
 ```
 
 Observe que o valor passado para `DefaultParameterValue` deve corresponder ao tipo de entrada.  No exemplo acima, é um `int`.  A tentativa de passar um valor não inteiro em `DefaultParameterValue` resultaria em um erro de compilação.
 
-## <a name="example-properties-and-methods"></a>Exemplo: Propriedades e métodos
+## <a name="example-properties-and-methods"></a>Exemplo: propriedades e métodos
 
 O exemplo a seguir contém um tipo que tem exemplos de campos, funções particulares, propriedades e um método estático.
 

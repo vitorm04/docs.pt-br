@@ -1,5 +1,5 @@
 ---
-title: Como controlar a disponibilidade de uma variável (Visual Basic)
+title: Como controlar a disponibilidade de uma variável
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access levels, declared elements
@@ -11,69 +11,69 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: 84aaeecdbd3cc8ab12589c0342b982bf3f1c8529
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 886b57909cf6ba25dbaceea5c5f06eb4e3ba6f1f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582612"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345387"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>Como controlar a disponibilidade de uma variável (Visual Basic)
-Você controla a disponibilidade de uma variável especificando seu *nível de acesso*. O nível de acesso determina qual código tem permissão para ler ou gravar na variável.  
+You control the availability of a variable by specifying its *access level*. The access level determines what code has permission to read or write to the variable.  
   
-- As *variáveis de membro* (definidas em nível de módulo e fora de qualquer procedimento) assumem o padrão de acesso público, o que significa que qualquer código que possa vê-las pode acessá-las. Você pode alterar isso especificando um modificador de acesso.  
+- *Member variables* (defined at module level and outside any procedure) default to public access, which means any code that can see them can access them. You can change this by specifying an access modifier.  
   
-- As *variáveis locais* (definidas dentro de um procedimento) nominalmente têm acesso público, embora apenas o código dentro de seu procedimento possa acessá-las. Você não pode alterar o nível de acesso de uma variável local, mas pode alterar o nível de acesso do procedimento que a contém.  
+- *Local variables* (defined inside a procedure) nominally have public access, although only code within their procedure can access them. You cannot change the access level of a local variable, but you can change the access level of the procedure that contains it.  
   
- Para obter mais informações, consulte [níveis de acesso em Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
-## <a name="private-and-public-access"></a>Acesso público e privado  
+## <a name="private-and-public-access"></a>Private and Public Access  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>Para tornar uma variável acessível somente de dentro de seu módulo, classe ou estrutura  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>To make a variable accessible only from within its module, class, or structure  
   
-1. Coloque a [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md) para a variável dentro do módulo, da classe ou da estrutura, mas fora de qualquer procedimento.  
+1. Place the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md) for the variable inside the module, class, or structure, but outside any procedure.  
   
-2. Inclua a palavra-chave [Private](../../../../visual-basic/language-reference/modifiers/private.md) na instrução `Dim`.  
+2. Include the [Private](../../../../visual-basic/language-reference/modifiers/private.md) keyword in the `Dim` statement.  
   
-     Você pode ler ou gravar na variável de qualquer lugar dentro do módulo, da classe ou da estrutura, mas não de fora dela.  
+     You can read or write to the variable from anywhere within the module, class, or structure, but not from outside it.  
   
-#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>Para tornar uma variável acessível de qualquer código que possa vê-la  
+#### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>To make a variable accessible from any code that can see it  
   
-1. Para uma variável de membro, coloque a instrução `Dim` para a variável dentro de um módulo, classe ou estrutura, mas fora de qualquer procedimento.  
+1. For a member variable, place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
   
-2. Inclua a palavra-chave [Public](../../../../visual-basic/language-reference/modifiers/public.md) na instrução `Dim`.  
+2. Include the [Public](../../../../visual-basic/language-reference/modifiers/public.md) keyword in the `Dim` statement.  
   
-     Você pode ler ou gravar na variável de qualquer código que interopere com seu assembly.  
+     You can read or write to the variable from any code that interoperates with your assembly.  
   
  \- ou -  
   
-1. Para uma variável local, coloque a instrução `Dim` para a variável dentro de um procedimento.  
+1. For a local variable, place the `Dim` statement for the variable inside a procedure.  
   
-2. Não inclua a palavra-chave `Public` na instrução `Dim`.  
+2. Do not include the `Public` keyword in the `Dim` statement.  
   
-     Você pode ler ou gravar na variável de qualquer lugar dentro do procedimento, mas não de fora dela.  
+     You can read or write to the variable from anywhere within the procedure, but not from outside it.  
   
-## <a name="protected-and-friend-access"></a>Acesso protegido e amigo  
- Você pode limitar o nível de acesso de uma variável à sua classe e a todas as classes derivadas ou a seu assembly. Você também pode especificar a União dessas limitações, que permite o acesso a partir do código em qualquer classe derivada ou em qualquer outro lugar no mesmo assembly. Você especifica essa União combinando as palavras-chave `Protected` e `Friend` na mesma declaração.  
+## <a name="protected-and-friend-access"></a>Protected and Friend Access  
+ You can limit the access level of a variable to its class and any derived classes, or to its assembly. You can also specify the union of these limitations, which allows access from code in any derived class or in any other place in the same assembly. You specify this union by combining the `Protected` and `Friend` keywords in the same declaration.  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>Para tornar uma variável acessível somente de dentro de sua classe e de quaisquer classes derivadas  
+#### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>To make a variable accessible only from within its class and any derived classes  
   
-1. Coloque a instrução `Dim` para a variável dentro de uma classe, mas fora de qualquer procedimento.  
+1. Place the `Dim` statement for the variable inside a class, but outside any procedure.  
   
-2. Inclua a palavra-chave [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) na instrução `Dim`.  
+2. Include the [Protected](../../../../visual-basic/language-reference/modifiers/protected.md) keyword in the `Dim` statement.  
   
-     Você pode ler ou gravar na variável de qualquer lugar dentro da classe, bem como de dentro de qualquer classe derivada dela, mas não de fora de nenhuma classe na cadeia de derivação.  
+     You can read or write to the variable from anywhere within the class, as well as from within any class derived from it, but not from outside any class in the derivation chain.  
   
-#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>Para tornar uma variável acessível somente de dentro do mesmo assembly  
+#### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>To make a variable accessible only from within the same assembly  
   
-1. Coloque a instrução `Dim` para a variável dentro de um módulo, classe ou estrutura, mas fora de qualquer procedimento.  
+1. Place the `Dim` statement for the variable inside a module, class, or structure, but outside any procedure.  
   
-2. Inclua a palavra-chave [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) na instrução `Dim`.  
+2. Include the [Friend](../../../../visual-basic/language-reference/modifiers/friend.md) keyword in the `Dim` statement.  
   
-     Você pode ler ou gravar na variável de qualquer lugar dentro do módulo, da classe ou da estrutura, bem como de qualquer código no mesmo assembly, mas não de fora do assembly.  
+     You can read or write to the variable from anywhere within the module, class, or structure, as well as from any code in the same assembly, but not from outside the assembly.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra declarações de variáveis com os níveis de acesso `Public`, `Protected`, `Friend`, `Protected Friend` e `Private`. Observe que, quando a instrução de `Dim` especifica um nível de acesso, não é necessário incluir a palavra-chave `Dim`.  
+ The following example shows declarations of variables with `Public`, `Protected`, `Friend`, `Protected Friend`, and `Private` access levels. Note that when the `Dim` statement specifies an access level, you do not need to include the `Dim` keyword.  
   
 ```vb  
 Public Class classForEverybody  
@@ -84,11 +84,11 @@ Private numberForMeOnly As Integer
 ```  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
- Quanto mais restritiva for o nível de acesso de uma variável, menor será a probabilidade de que o código mal-intencionado possa usar o uso impróprio.  
+ The more restrictive the access level of a variable, the smaller the chances that malicious code can make improper use of it.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Níveis de acesso no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Público](../../../../visual-basic/language-reference/modifiers/public.md)
 - [Protegido](../../../../visual-basic/language-reference/modifiers/protected.md)

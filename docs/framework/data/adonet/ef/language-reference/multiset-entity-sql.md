@@ -25,7 +25,7 @@ MULTISET ( expression [{, expression }] )
  Uma lista de valores válido.  
   
 ## <a name="return-value"></a>Valor retornado  
- Uma coleção do tipo MULTIset @ no__t-0T >.  
+ Uma coleção do tipo multiconjunto\<T >.  
   
 ## <a name="remarks"></a>Comentários  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] fornece três tipos de construtores: construtores de linha, construtores de objeto e construtores de vários conjuntos (ou de coleção). Para obter mais informações, consulte [construindo tipos](constructing-types-entity-sql.md).  
@@ -41,7 +41,7 @@ MULTISET ( expression [{, expression }] )
 > [!NOTE]
 > Literais multiconjuntos aninhados só têm suporte quando um encapsulamento multiconjunto tem um único elemento multiconjunto; por exemplo, `{{1, 2, 3}}`. Quando o encapsulamento multiconjunto tem vários elementos multiconjunto (por exemplo, `{{1, 2}, {3, 4}}`), literais multiconjunto aninhados não têm suporte.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  A seguinte consulta SQL Entity usa o operador de MULTISET para criar uma instância de um multiset de uma lista de valores. A consulta é baseada no modelo de vendas AdventureWorks. Para compilar e executar essa consulta, siga estas etapas:  
   
 1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  

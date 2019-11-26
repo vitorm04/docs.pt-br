@@ -1,5 +1,5 @@
 ---
-title: 'Como: Instruções Break e combine no código (Visual Basic)'
+title: Como quebrar e combinar instruções no código
 ms.date: 07/20/2015
 f1_keywords:
 - vb._
@@ -21,41 +21,41 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-ms.openlocfilehash: a0a77b161d81271a4cb7eecf2982a287debee6a5
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: f1a24c001cd20acc7663fb4cbe60e7e35a9c8fc3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991721"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347436"
 ---
-# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Como: Instruções Break e combine no código (Visual Basic)
+# <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Como quebrar e combinar instruções no código (Visual Basic)
 
-Ao escrever seu código, você pode ocasionalmente criar instruções demoradas que exigem a rolagem horizontal no editor de códigos. Embora isso não afete a maneira como seu código é executado, ele dificulta a leitura do código conforme ele aparece no monitor. Nesses casos, você deve considerar dividir a única instrução longa em várias linhas.
+When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor. Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor. In such cases, you should consider breaking the single long statement into several lines.
 
-## <a name="to-break-a-single-statement-into-multiple-lines"></a>Para dividir uma única instrução em várias linhas
+## <a name="to-break-a-single-statement-into-multiple-lines"></a>To break a single statement into multiple lines
 
-Use o caractere de continuação de linha, que é um sublinhado (`_`), no ponto em que você deseja que a linha seja quebrada. O sublinhado deve ser imediatamente precedido por um espaço e imediatamente seguido por um terminador de linha (retorno de carro) ou (começando com a versão 16,0) um comentário seguido por um retorno de carro.
+Use the line-continuation character, which is an underscore (`_`), at the point at which you want the line to break. The underscore must be immediately preceded by a space and immediately followed by a line terminator (carriage return) or (starting with version 16.0) a comment followed by a carriage return.
 
   > [!NOTE]
-  > Em alguns casos, se você omitir o caractere de continuação de linha, o compilador de Visual Basic irá continuar implicitamente a instrução na próxima linha de código. Para obter uma lista de elementos de sintaxe para os quais você pode omitir o caractere de continuação de linha, consulte "continuação de linha implícita" em [instruções](../../../visual-basic/programming-guide/language-features/statements.md).
+  > In some cases, if you omit the line-continuation character, the Visual Basic compiler will implicitly continue the statement on the next line of code. For a list of syntax elements for which you can omit the line-continuation character, see "Implicit Line Continuation" in [Statements](../../../visual-basic/programming-guide/language-features/statements.md).
 
-  No exemplo a seguir, a instrução é dividida em quatro linhas com caracteres de continuação de linha encerrando tudo menos a última linha.
+  In the following example, the statement is broken into four lines with line-continuation characters terminating all but the last line.
 
   [!code-vb[VbVbcnConventions#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#20)]
 
-  Usar essa sequência torna seu código mais fácil de ler, tanto online quanto quando impresso.
+  Using this sequence makes your code easier to read, both online and when printed.
 
-  O caractere de continuação de linha deve ser o último caractere em uma linha. Você não pode acompanhá-lo com nada mais na mesma linha.
+  The line-continuation character must be the last character on a line. You can't follow it with anything else on the same line.
 
-  Existem algumas limitações para onde você pode usar o caractere de continuação de linha; por exemplo, você não pode usá-lo no meio de um nome de argumento. Você pode quebrar uma lista de argumentos com o caractere de continuação de linha, mas os nomes individuais dos argumentos devem permanecer intactos.
+  Some limitations exist as to where you can use the line-continuation character; for example, you can't use it in the middle of an argument name. You can break an argument list with the line-continuation character, but the individual names of the arguments must remain intact.
 
-  Você não pode continuar um comentário usando um caractere de continuação de linha. O compilador não examina os caracteres em um comentário para obter um significado especial. Para um comentário de várias linhas, repita o símbolo de comentário`'`() em cada linha.
+  You can't continue a comment by using a line-continuation character. The compiler doesn't examine the characters in a comment for special meaning. For a multiple-line comment, repeat the comment symbol (`'`) on each line.
 
- Embora colocar cada instrução em uma linha separada seja o método recomendado, Visual Basic também permite colocar várias instruções na mesma linha.
+ Although placing each statement on a separate line is the recommended method, Visual Basic also allows you to place multiple statements on the same line.
 
-## <a name="to-place-multiple-statements-on-the-same-line"></a>Para posicionar várias instruções na mesma linha
+## <a name="to-place-multiple-statements-on-the-same-line"></a>To place multiple statements on the same line
 
-Separe as instruções com dois-pontos`:`(), como no exemplo a seguir:
+Separate the statements with a colon (`:`), as in the following example:
 
   [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]
 

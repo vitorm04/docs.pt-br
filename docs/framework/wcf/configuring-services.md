@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 4fcf01c9f65f2b1bd11462a6f7d61b3551f37b86
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 332a88530010197187ca3ea787e152b0c95a5514
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320657"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141591"
 ---
 # <a name="configuring-wcf-services"></a>Configurando serviços WCF
 
@@ -19,7 +19,7 @@ Depois de criar e implementar seu contrato de serviço, você estará pronto par
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Configuração simplificada](simplified-configuration.md)  
- A partir do [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], o WCF vem com um novo modelo de configuração padrão que simplifica os requisitos de configuração do WCF. Se você não fornecer nenhuma configuração do WCF para um serviço específico, o tempo de execução configurará automaticamente seu serviço com pontos de extremidade padrão, associações e comportamentos.  
+ A partir do .NET Framework 4, o WCF vem com um novo modelo de configuração padrão que simplifica os requisitos de configuração do WCF. Se você não fornecer nenhuma configuração do WCF para um serviço específico, o tempo de execução configurará automaticamente seu serviço com pontos de extremidade padrão, associações e comportamentos.  
   
  [Configurando serviços usando arquivos de configuração](configuring-services-using-configuration-files.md)  
  Um serviço do Windows Communication Foundation (WCF) é configurável usando a tecnologia de configuração do .NET Framework. Normalmente, os elementos XML são adicionados ao arquivo Web. config para um site Serviços de Informações da Internet (IIS) que hospeda um serviço WCF. Os elementos permitem que você altere os detalhes, como os endereços de ponto de extremidade (os endereços reais usados para se comunicar com o serviço) em uma base de máquina por máquina.  

@@ -140,7 +140,7 @@ Há um amplo espectro de opções disponíveis para arquitetura, incluindo uma a
 |---------|---------|---------|---------|----------|
 |**Ajustar Escala**|VM       |Instância |Aplicação      |Função  |
 |**Abstrai**|Hardware|Plataforma|Host do sistema operacional|Runtime   |
-|**Unidade** |VM       |Projeto  |Image    |Código      |
+|**Unidade** |VM       |{1&gt;Projeto&lt;1}  |Imagem    |Código      |
 |**Tempo de Vida**|Meses|Dias para meses|Minutos a dias|Milissegundos a minutos|
 |**Responsabilidade**|Aplicativos, dependências, tempo de execução e sistema operacional|Aplicativos e dependências|Aplicativos, dependências e tempo de execução|Função
 
@@ -156,7 +156,7 @@ O próximo capítulo se concentrará em arquitetura sem servidor, casos de uso e
 
 - [Guia de arquitetura do aplicativo do Azure](https://docs.microsoft.com/azure/architecture/guide/)
 - [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db)
-- [SQL do Azure](https://docs.microsoft.com/azure/sql-database)
+- [Azure SQL](https://docs.microsoft.com/azure/sql-database)
 - [Padrão de arquitetura de N camadas](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/n-tier)
 - [Kubernetes no Azure](https://docs.microsoft.com/azure/aks/intro-kubernetes)
 - [Microsserviços](https://docs.microsoft.com/azure/architecture/guide/architecture-styles/microservices)

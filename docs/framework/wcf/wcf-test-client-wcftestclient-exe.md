@@ -12,7 +12,7 @@ ms.locfileid: "72321185"
 # <a name="wcf-test-client-wcftestclientexe"></a>Cliente de Teste do WCF (WcfTestClient.exe)
 O cliente de teste do Windows Communication Foundation (WCF) (WcfTestClient. exe) é uma ferramenta de GUI que permite que os usuários insiram parâmetros de teste, enviem essa entrada para o serviço e exibam a resposta que o serviço envia de volta. Ele fornece uma experiência de teste de serviço sem interrupção quando combinado com o host de serviço do WCF.
 
-Normalmente, você pode encontrar o cliente de teste do WCF (WcfTestClient. exe) no seguinte local: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`-Community pode ser um de "Enterprise", "Professional" ou "Community", dependendo de qual nível do Visual Studio está instalado.
+Normalmente, você pode encontrar o cliente de teste do WCF (WcfTestClient. exe) no seguinte local: `C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE`-Community pode ser uma das "Enterprise", "Professional" ou "Community", dependendo de qual nível do Visual Studio está instalado.
 
 ## <a name="scenarios-for-using-test-client"></a>Cenários para uso do Cliente de Teste
 
@@ -32,7 +32,7 @@ Você também pode usar o cliente de teste do WCF para ajudar a depurar um proje
 
 Você também pode invocar o cliente de teste do WCF (WcfTestClient. exe) fora do Visual Studio para testar um serviço arbitrário na Internet. Para localizar a ferramenta, vá para o seguinte local:
 
-`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (em que a Comunidade pode ser uma de "Enterprise", "Professional" ou "Community", dependendo de qual nível do Visual Studio está instalado no computador)
+`C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE` (em que a Comunidade pode ser uma "empresa", "profissional" ou "Comunidade", dependendo de qual nível do Visual Studio está instalado no computador)
 
 Para usar a ferramenta, clique duas vezes no nome do arquivo para abri-lo neste local ou inicie-a em uma linha de comando.
 
@@ -73,7 +73,7 @@ Se você tiver definido uma operação específica como unidirecional quando cri
 
 A caixa de seleção **Iniciar um novo proxy** na guia de uma operação de serviço permite alternar o suporte de sessão. Por padrão, essa caixa está desmarcada.
 
-Quando você insere parâmetros de teste para uma operação específica (ou outra operação no mesmo ponto de extremidade de serviço) e clica em **invocar** várias vezes com a caixa de seleção desmarcada, essas operações compartilham um proxy e o status do serviço é persistido entre vários das.
+Quando você insere parâmetros de teste para uma operação específica (ou outra operação no mesmo ponto de extremidade de serviço) e clica em **invocar** várias vezes com a caixa de seleção desmarcada, essas operações compartilham um proxy e o status do serviço é persistido em várias operações.
 
 Se a caixa de seleção **Iniciar um novo proxy** estiver marcada, um novo proxy será iniciado para cada **invocação**, o cenário de sessão anterior será encerrado e o status do serviço será redefinido.
 
@@ -103,7 +103,7 @@ Durante a geração de proxy, a compilação binária ou a invocação de servi�
 
 #### <a name="persist-client-configuration"></a>Persistir a configuração do cliente
 
-A guia de**configuração de cliente** das **ferramentas**@no__t **-1 @no__t**-3 contém uma opção **sempre regenerar configuração ao iniciar serviços** , que é habilitada por padrão. Essa opção especifica que sempre que o cliente de teste do WCF carregar um serviço, ele regenerará um arquivo de configuração com base nos arquivos de contrato de serviço e de aplicativo de serviço mais recentes.
+A guia **ferramentas**->**Opções**->**configuração do cliente** contém uma opção **sempre regenerar configuração ao iniciar serviços** , que é habilitado por padrão. Essa opção especifica que sempre que o cliente de teste do WCF carregar um serviço, ele regenerará um arquivo de configuração com base nos arquivos de contrato de serviço e de aplicativo de serviço mais recentes.
 
 Se você editou a configuração do cliente para seu serviço WCF e deseja sempre usar esse arquivo atualizado para depurar seu serviço, você pode desmarcar a opção **regenerar** . Ao fazer isso, mesmo quando você atualiza o serviço e reabre o cliente de teste do WCF, o arquivo client. dll. config é aquele que você atualizou anteriormente em vez de um gerado novamente com base no serviço atualizado.
 
@@ -112,7 +112,7 @@ No entanto, talvez você precise editar o arquivo de configuração para torná-
 > [!CAUTION]
 > Se você tiver modificado o arquivo de configuração do cliente e o selecionar para reutilização no futuro, poderá localizar o arquivo no seguinte local:
 >
-> \Documents and Settings @ no__t-0 [User Account] \Meus Documents\Test Client Projects.
+> \Documents and Settings\\[User Account] \Meus Documents\Test Client Projects.
 >
 > Todas as informações de credenciais atualizadas armazenadas no arquivo de configuração do cliente são protegidas pela ACL (lista de controle de acesso) dessa pasta.
 
@@ -142,7 +142,7 @@ Durante a geração do proxy, da compilação binária ou da chamada do serviço
 
 ## <a name="location-of-files-generated-by-the-test-client"></a>Local dos arquivos gerados pelo Cliente de Teste
 
-Por padrão, o cliente de teste do WCF armazena os arquivos de configuração e o código do cliente gerados na pasta "projetos de cliente do%appdata%\Local\temp\Test". Essa pasta é excluída após a saída do cliente de teste do WCF. Se um arquivo de configuração for modificado no cliente de teste do WCF e a opção **sempre regenerar configuração ao iniciar serviços** estiver desabilitada, o arquivo modificado será copiado para a pasta "CachedConfig" em "meus projetos de cliente do Documents\Test" com um mapeamento ( Metadata-endereço-para-arquivo-arquivo XML como um índice.
+Por padrão, o cliente de teste do WCF armazena os arquivos de configuração e o código do cliente gerados na pasta "projetos de cliente do%appdata%\Local\temp\Test". Essa pasta é excluída após a saída do cliente de teste do WCF. Se um arquivo de configuração for modificado no cliente de teste do WCF e a opção **sempre regenerar configuração ao iniciar serviços** estiver desabilitada, o arquivo modificado será copiado para a pasta "CachedConfig" em "meus projetos de cliente Documents\Test" com um arquivo XML de mapeamento (metadados-endereço-para-nome-do-arquivo) como um índice.
 
 Você também pode iniciar o cliente de teste do WCF em uma linha de comando, usar a opção `/ProjectPath` para especificar um novo caminho desejado para armazenar arquivos gerados ou usar a opção `/RestoreProjectPath` para restaurar o local padrão. A sintaxe é a seguinte:
 

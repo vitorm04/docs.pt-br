@@ -23,17 +23,17 @@ ms.locfileid: "73118924"
 O esquema de seções de configuração contém elementos que definem configurações personalizadas em arquivos de configuração. Para obter informações gerais sobre esquemas e arquivos de configuração, consulte [esquema do arquivo de configuração para o .NET Framework](index.md).
 
 [ **\<configuration>** ](configuration-element.md)   
-[ **\<configsections >** ](configsections-element-for-configuration.md)   
-[ **\<limpar >** ](clear-element-for-configsections.md)   
-[ **\<remover >** ](remove-element-for-configsections.md)   
+[ **\<configSections>** ](configsections-element-for-configuration.md)   
+[ **\<clear>** ](clear-element-for-configsections.md)   
+[ **\<remove>** ](remove-element-for-configsections.md)   
 [ **> da seção\<** ](section-element.md)   
-[ **\<> de seção**](sectiongroup-element-for-configsections.md)
+[ **\<sectionGroup>** ](sectiongroup-element-for-configsections.md)
 
 |     | Descrição |
 | --- | ----------- |
 | [ **\<limpar >** para **\<configSections >** ](clear-element-for-configsections.md) | Limpa todas as seções e grupos de seções definidos anteriormente. |
 | [ **\<clear>** ](clear-element-for-configsections.md) | Limpa todas as seções e grupos de seções definidos anteriormente. |
-| [ **\<configSections >** ](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
+| [ **\<configSections>** ](configsections-element-for-configuration.md) | Contém as declarações de namespace e seção de configuração. |
 | [ **\<remover >** para **\<configSections >** ](remove-element-for-configsections.md) | Remove uma seção ou um grupo de seções predefinido. |
 | [ **\<seção >** para **\<configSections >** e **\<** >](section-element.md) | Contém uma declaração de seção de configuração. |
-| [ **> de\<** do\<de seções para os **configSections >** ](sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |
+| [ **\<sectionGroup>** for **\<configSections>** ](sectiongroup-element-for-configsections.md) | Define um namespace para seções de configuração. |

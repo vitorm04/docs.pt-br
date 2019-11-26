@@ -2,12 +2,12 @@
 title: Considerações de segurança (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: d9adf4ed9e340ff589117f160e370c7d1595a207
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 9a560db5dbcb7a87a1c933febfb8bf676cc8816b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039860"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968412"
 ---
 # <a name="security-considerations-entity-framework"></a>Considerações de segurança (Entity Framework)
 Este tópico descreve as considerações de segurança específicas para o desenvolvimento, implantação e execução de aplicativos Entity Framework. Você também deve seguir as recomendações para criar aplicativos de .NET Framework seguros. Para obter mais informações, consulte [visão geral de segurança](../security-overview.md).  
@@ -46,7 +46,7 @@ Este tópico descreve as considerações de segurança específicas para o desen
   
 - Usar construtores de cadeias de conexão para criar conexões dinamicamente.  
   
-     Se você precisar criar cadeias de conexão em tempo de execução, use a classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Essa classe de construtor de cadeias de caracteres ajuda a evitar ataques de injeção de cadeias de conexão validando e escapando informações de entrada inválidas. Para obter mais informações, consulte [como: criar uma cadeia de conexão de EntityConnection](how-to-build-an-entityconnection-connection-string.md). Além disso, use a classe do construtor de cadeia de caracteres apropriada para construir a cadeia de conexão da fonte de dados que faz parte da cadeia de conexão Entity Framework. Para obter informações sobre construtores de cadeia de conexão para provedores de ADO.NET, consulte [construtores de cadeia de conexão](../connection-string-builders.md).  
+     Se você precisar criar cadeias de conexão em runtime, use a classe <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Essa classe de construtor de cadeias de caracteres ajuda a evitar ataques de injeção de cadeias de conexão validando e escapando informações de entrada inválidas. Para obter mais informações, consulte [como: criar uma cadeia de conexão de EntityConnection](how-to-build-an-entityconnection-connection-string.md). Além disso, use a classe do construtor de cadeia de caracteres apropriada para construir a cadeia de conexão da fonte de dados que faz parte da cadeia de conexão Entity Framework. Para obter informações sobre construtores de cadeia de conexão para provedores de ADO.NET, consulte [construtores de cadeia de conexão](../connection-string-builders.md).  
   
  Para obter mais informações, consulte [Protegendo informações de conexão](../protecting-connection-information.md).  
   
@@ -119,11 +119,11 @@ Este tópico descreve as considerações de segurança específicas para o desen
  Evite retornar tipos <xref:System.Linq.IQueryable%601> de métodos expostos a chamadores potencialmente não confiáveis pelos seguintes motivos:  
   
 - Um consumidor de uma consulta que expõe um tipo <xref:System.Linq.IQueryable%601> pode chamar métodos no resultado que expõem dados seguros ou aumentam o tamanho do conjunto de resultados. Por exemplo, considere a seguinte assinatura de método:  
-  
-    ```csharp  
-    public IQueryable<Customer> GetCustomer(int customerId)  
-    ```  
-  
+
+    ```csharp
+    public IQueryable<Customer> GetCustomer(int customerId)
+    ```
+
     Um consumidor dessa consulta pode chamar `.Include("Orders")` em `IQueryable<Customer>` retornado para recuperar os dados que a consulta não pretende expor. Para evitar isso, é possível alterar o tipo de retorno do método para <xref:System.Collections.Generic.IEnumerable%601> e chamar um método (como `.ToList()`) que materialize os resultados.  
   
 - Como as consultas <xref:System.Linq.IQueryable%601> são executadas quando os resultados são iterados, um consumidor de uma consulta que expõe um tipo <xref:System.Linq.IQueryable%601> pode capturar exceções geradas. As exceções podem conter informações não dirigidas ao consumidor.  

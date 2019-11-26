@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6057bd48ff4fe3f852f82de2bab972d95fef138c
-ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
+ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68868561"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443620"
 ---
 # <a name="corelementtype-enumeration"></a>Enumeração CorElementType
 
-Especifica um Common Language Runtime <xref:System.Type>, um modificador de tipo ou informações sobre um tipo em uma assinatura de tipo de metadados.
+Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -82,69 +80,69 @@ typedef enum CorElementType {
 |Membro|Descrição|
 |------------|-----------------|
 |`ELEMENT_TYPE_END`|Usado internamente.|
-|`ELEMENT_TYPE_VOID`|Um tipo void.|
-|`ELEMENT_TYPE_BOOLEAN`|Um tipo booliano|
+|`ELEMENT_TYPE_VOID`|A void type.|
+|`ELEMENT_TYPE_BOOLEAN`|A Boolean type|
 |`ELEMENT_TYPE_CHAR`|Um tipo de caractere.|
-|`ELEMENT_TYPE_I1`|Um inteiro de 1 byte assinado.|
+|`ELEMENT_TYPE_I1`|A signed 1-byte integer.|
 |`ELEMENT_TYPE_U1`|Um inteiro de 1 byte sem sinal.|
-|`ELEMENT_TYPE_I2`|Um inteiro de 2 bytes assinado.|
-|`ELEMENT_TYPE_U2`|Um inteiro sem sinal de 2 bytes.|
-|`ELEMENT_TYPE_I4`|Um inteiro de 4 bytes assinado.|
-|`ELEMENT_TYPE_U4`|Um inteiro de 4 bytes sem sinal.|
-|`ELEMENT_TYPE_I8`|Um inteiro de 8 bytes assinado.|
-|`ELEMENT_TYPE_U8`|Um inteiro de 8 bytes sem sinal.|
-|`ELEMENT_TYPE_R4`|Um ponto flutuante de 4 bytes.|
-|`ELEMENT_TYPE_R8`|Um ponto flutuante de 8 bytes.|
-|`ELEMENT_TYPE_STRING`|Um tipo System. String.|
-|`ELEMENT_TYPE_PTR`|Um modificador de tipo de ponteiro.|
-|`ELEMENT_TYPE_BYREF`|Um modificador de tipo de referência.|
-|`ELEMENT_TYPE_VALUETYPE`|Um modificador de tipo de valor.|
-|`ELEMENT_TYPE_CLASS`|Um modificador de tipo de classe.|
-|`ELEMENT_TYPE_VAR`|Um modificador de tipo de variável de classe.|
-|`ELEMENT_TYPE_ARRAY`|Um modificador de tipo de matriz multidimensional.|
-|`ELEMENT_TYPE_GENERICINST`|Um modificador de tipo para tipos genéricos.|
+|`ELEMENT_TYPE_I2`|A signed 2-byte integer.|
+|`ELEMENT_TYPE_U2`|An unsigned 2-byte integer.|
+|`ELEMENT_TYPE_I4`|A signed 4-byte integer.|
+|`ELEMENT_TYPE_U4`|An unsigned 4-byte integer.|
+|`ELEMENT_TYPE_I8`|A signed 8-byte integer.|
+|`ELEMENT_TYPE_U8`|An unsigned 8-byte integer.|
+|`ELEMENT_TYPE_R4`|A 4-byte floating point.|
+|`ELEMENT_TYPE_R8`|An 8-byte floating point.|
+|`ELEMENT_TYPE_STRING`|A System.String type.|
+|`ELEMENT_TYPE_PTR`|A pointer type modifier.|
+|`ELEMENT_TYPE_BYREF`|A reference type modifier.|
+|`ELEMENT_TYPE_VALUETYPE`|A value type modifier.|
+|`ELEMENT_TYPE_CLASS`|A class type modifier.|
+|`ELEMENT_TYPE_VAR`|A class variable type modifier.|
+|`ELEMENT_TYPE_ARRAY`|A multi-dimensional array type modifier.|
+|`ELEMENT_TYPE_GENERICINST`|A type modifier for generic types.|
 |`ELEMENT_TYPE_TYPEDBYREF`|Uma referência com tipo.|
-|`ELEMENT_TYPE_I`|Tamanho de um inteiro nativo.|
-|`ELEMENT_TYPE_U`|Tamanho de um inteiro nativo não assinado.|
-|`ELEMENT_TYPE_FNPTR`|Um ponteiro para uma função.|
-|`ELEMENT_TYPE_OBJECT`|Um tipo System. Object.|
-|`ELEMENT_TYPE_SZARRAY`|Um modificador de tipo de matriz de limite inferior de zero unidimensional.|
-|`ELEMENT_TYPE_MVAR`|Um modificador de tipo de variável de método.|
-|`ELEMENT_TYPE_CMOD_REQD`|Um modificador necessário de linguagem C.|
-|`ELEMENT_TYPE_CMOD_OPT`|Um modificador opcional de linguagem C.|
+|`ELEMENT_TYPE_I`|Size of a native integer.|
+|`ELEMENT_TYPE_U`|Size of an unsigned native integer.|
+|`ELEMENT_TYPE_FNPTR`|A pointer to a function.|
+|`ELEMENT_TYPE_OBJECT`|A System.Object type.|
+|`ELEMENT_TYPE_SZARRAY`|A single-dimensional, zero lower-bound array type modifier.|
+|`ELEMENT_TYPE_MVAR`|A method variable type modifier.|
+|`ELEMENT_TYPE_CMOD_REQD`|A C language required modifier.|
+|`ELEMENT_TYPE_CMOD_OPT`|A C language optional modifier.|
 |`ELEMENT_TYPE_INTERNAL`|Usado internamente.|
 |`ELEMENT_TYPE_MAX`|Um tipo inválido.|
 |`ELEMENT_TYPE_MODIFIER`|Usado internamente.|
-|`ELEMENT_TYPE_SENTINEL`|Um modificador de tipo que é um sentinela para uma lista de um número variável de parâmetros.|
+|`ELEMENT_TYPE_SENTINEL`|A type modifier that is a sentinel for a list of a variable number of parameters.|
 |`ELEMENT_TYPE_PINNED`|Usado internamente.|
 
 ## <a name="remarks"></a>Comentários
 
-Os modificadores de tipo formam a base para representar tipos mais complexos. Um `CorElementType` valor de modificador de tipo é aplicado ao valor que imediatamente o segue na assinatura de tipo. O valor que segue o `CorElementType` valor do modificador de tipo `CorElementType` pode ser um valor de tipo simples, um token de metadados ou outro valor, conforme especificado na tabela a seguir.
+The type modifiers form the basis for representing more complex types. A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature. The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.
 
 > [!NOTE]
-> Todos os números (*número*, *contagem de argumentos*, token de *metadados*, *classificação*, *contagem*e *associado*) são armazenados como inteiros compactados. Consulte [Standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) no site da ECMA para obter detalhes.
+> All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers. See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.
 
-|Modificador de tipo|Formatar|
+|Type modifier|Formatar|
 |-------------------|------------|
-|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \< um`CorElementType` valor >|
-|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \< um`CorElementType` valor >|
-|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<um `mdTypeDef` token de metadados >|
-|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<um `mdTypeDef` token de metadados >|
-|`ELEMENT_TYPE_VAR`|Número \<de ELEMENT_TYPE_VAR >|
-|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<um `CorElementType` valor > \<Rank > \<count1 >\<bound1 >... \<contagem >\<> associadas|
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<um `mdTypeDef` token de metadados \<> contagem de \<argumentos > arg1 >... \<> argN|
-|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<a assinatura completa para a função, incluindo a Convenção de chamada >|
-|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \< um`CorElementType` valor >|
-|`ELEMENT_TYPE_MVAR`|Número \<de ELEMENT_TYPE_MVAR >|
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<um `mdTypeRef` token `mdTypeDef` de metadados ou >|
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<um `mdTypeRef` token `mdTypeDef` de metadados ou >|
+|`ELEMENT_TYPE_PTR`|ELEMENT_TYPE_PTR \<a `CorElementType` value>|
+|`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<a `CorElementType` value>|
+|`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<an `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<number>|
+|`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN>|
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN>|
+|`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention>|
+|`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<a `CorElementType` value>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<number>|
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<a `mdTypeRef` or `mdTypeDef` metadata token>|
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<a `mdTypeRef` or `mdTypeDef` metadata token>|
 
 ## <a name="requirements"></a>Requisitos
 
-**Compatíveis** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Cabeçalho:** CorHdr.h
+**Header:** CorHdr.h
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

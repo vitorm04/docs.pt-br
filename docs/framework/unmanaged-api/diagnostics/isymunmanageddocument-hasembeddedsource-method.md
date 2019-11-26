@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 385fc4d3-365c-4645-b7b0-6c4c5344b79f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 459a24e2ed9b97a67dc0266231fdfc32a9c853a6
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 533d8a5481fe9ba7e7e65775229156a9cc3cf4d7
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776655"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449114"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>Método ISymUnmanagedDocument::HasEmbeddedSource
-Retorna `true` se o documento tem o código-fonte inserido em símbolos de depuração; caso contrário, retornará `false`.  
+Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,10 +34,10 @@ HRESULT HasEmbeddedSource(
   
 ## <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] Um ponteiro para uma variável que indica se o documento tem incorporado os símbolos de depuração de código-fonte.  
+ [out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds.  
   
 ## <a name="see-also"></a>Consulte também
 

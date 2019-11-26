@@ -22,7 +22,7 @@ ms.locfileid: "71698160"
 # <a name="network-settings-schema"></a>Esquema de configurações de rede
 As configurações de rede especificam como o .NET Framework se conecta à Internet.
 
-As configurações do @no__t -0system. net > especificam como o .NET Framework se conecta à rede. A tabela a seguir descreve a função de cada elemento de configuração filho no [\<system.Net> Element (Network Settings)](system-net-element-network-settings.md) [Elemento system.Net> (configurações de rede)].  
+As configurações do \<System. net > especificam como o .NET Framework se conecta à rede. A tabela a seguir descreve a função de cada elemento de configuração filho no [\<system.Net> Element (Network Settings)](system-net-element-network-settings.md) [Elemento system.Net> (configurações de rede)].  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -30,10 +30,10 @@ As configurações do @no__t -0system. net > especificam como o .NET Framework s
 |[\<connectionManagement> Element (Network Settings)](connectionmanagement-element-network-settings.md) [Elemento connectionManagement> (configurações de rede)]|Especifica o número máximo de conexões com host da Internet.|  
 |[\<defaultProxy> Element (Network Settings)](defaultproxy-element-network-settings.md) [Elemento defaultProxy> (configurações de rede)]|Especifica o servidor proxy usado para solicitações HTTP para a Internet.|  
 |[\<mailSettings> Element (Network Settings)](mailsettings-element-network-settings.md) [Elemento mailSettings> (configurações de rede)]|Contém configurações para opções de envio de email.|  
-|[\<requestCaching> Element (Network Settings)](requestcaching-element-network-settings.md) [Elemento requestCaching> (configurações de rede)]|Controla o mecanismo de cache para solicitações de rede.|  
+|[\<Elemento requestCaching> (configurações de rede)](requestcaching-element-network-settings.md)|Controla o mecanismo de cache para solicitações de rede.|  
 |[\<webRequestModules> Element (Network Settings)](webrequestmodules-element-network-settings.md) [Elemento webRequestModules> (configurações de rede)]|Especifica os módulos usados para solicitar informações de hosts da Internet.|  
   
-As configurações de > \<uri especificam como o .NET Framework trata os endereços da Web expressos usando URIs (identificadores de recursos uniformes). A tabela a seguir descreve a função de cada elemento de configuração filho no [elemento \<uri > (configurações de URI)](uri-element-uri-settings.md).  
+As configurações de > URI de \<especificam como o .NET Framework trata os endereços da Web expressos usando URIs (identificadores de recursos uniformes). A tabela a seguir descreve a função de cada elemento de configuração filho no [elemento\<uri > (configurações de URI)](uri-element-uri-settings.md).  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  

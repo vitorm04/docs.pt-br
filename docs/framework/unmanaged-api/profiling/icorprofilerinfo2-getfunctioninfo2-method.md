@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aa60f24-8bbd-4c83-83c5-86ad191b1d82
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d6c45e44f68621708d05ca43857cf1e100113166
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 11f9a186f5ec5e3b9e718a3ccd43b35b66d28078
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67771078"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433185"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>Método ICorProfilerInfo2::GetFunctionInfo2
-Obtém a classe pai, o token de metadados e o `ClassID` de cada argumento de tipo, se presente, de uma função.  
+Gets the parent class, the metadata token, and the `ClassID` of each type argument, if present, of a function.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,48 +41,48 @@ HRESULT GetFunctionInfo2(
   
 ## <a name="parameters"></a>Parâmetros  
  `funcId`  
- [in] A ID da função para o qual obter o pai de classe e outras informações.  
+ [in] The ID of the function for which to get the parent class and other information.  
   
  `frameInfo`  
- [in] Um `COR_PRF_FRAME_INFO` valor aponta para obter informações sobre um quadro de pilha.  
+ [in] A `COR_PRF_FRAME_INFO` value that points to information about a stack frame.  
   
  `pClassId`  
- [out] Um ponteiro para a classe pai da função.  
+ [out] A pointer to the parent class of the function.  
   
  `pModuleId`  
- [out] Um ponteiro para o módulo no qual a classe pai da função é definido.  
+ [out] A pointer to the module in which the function's parent class is defined.  
   
  `pToken`  
- [out] Um ponteiro para o token de metadados para a função.  
+ [out] A pointer to the metadata token for the function.  
   
  `cTypeArgs`  
- [in] O tamanho do `typeArgs` matriz.  
+ [in] The size of the `typeArgs` array.  
   
  `pcTypeArgs`  
- [out] Um ponteiro para o número total de `ClassID` valores.  
+ [out] A pointer to the total number of `ClassID` values.  
   
  `typeArgs`  
- [out] Uma matriz de `ClassID` valores, cada uma delas é a ID de um argumento de tipo da função. Quando o método retorna, `typeArgs` irá conter algumas ou todas as `ClassID` valores.  
+ [out] An array of `ClassID` values, each of which is the ID of a type argument of the function. When the method returns, `typeArgs` will contain some or all of the `ClassID` values.  
   
 ## <a name="remarks"></a>Comentários  
- O código do criador de perfil pode chamar [ICorProfilerInfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) para obter uma [metadados](../../../../docs/framework/unmanaged-api/metadata/index.md) interface para um determinado módulo. O token de metadados que é retornado para o local referenciado pelo `pToken` , em seguida, pode ser usado para acessar os metadados para a função.  
+ The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module. The metadata token that is returned to the location referenced by `pToken` can then be used to access the metadata for the function.  
   
- Os argumentos de ID e o tipo de classe que são retornados por meio de `pClassId` e `typeArgs` parâmetros dependem do valor que é passado a `frameInfo` parâmetro, conforme mostrado na tabela a seguir.  
+ The class ID and type arguments that are returned through the `pClassId` and `typeArgs` parameters depend on the value that is passed in the `frameInfo` parameter, as shown in the following table.  
   
-|Valor da `frameInfo` parâmetro|Resultado|  
+|Value of the `frameInfo` parameter|Resultado|  
 |----------------------------------------|------------|  
-|Um `COR_PRF_FRAME_INFO` valor que foi obtido um `FunctionEnter2` retorno de chamada|O `ClassID`, retornada no local referenciado pela `pClassId`, e todos os tipo de argumentos, retornados no `typeArgs` de matriz, será exata.|  
-|Um `COR_PRF_FRAME_INFO` que foi obtido de uma fonte diferente de um `FunctionEnter2` retorno de chamada|Exato `ClassID` e argumentos de tipo não podem ser determinados. Ou seja, o `ClassID` podem ser nulos e alguns argumentos de tipo podem vir como <xref:System.Object>.|  
-|Zero|Exato `ClassID` e argumentos de tipo não podem ser determinados. Ou seja, o `ClassID` podem ser nulos e alguns argumentos de tipo podem vir como <xref:System.Object>.|  
+|A `COR_PRF_FRAME_INFO` value that was obtained from a `FunctionEnter2` callback|The `ClassID`, returned in the location referenced by `pClassId`, and all type arguments, returned in the `typeArgs` array, will be exact.|  
+|A `COR_PRF_FRAME_INFO` that was obtained from a source other than a `FunctionEnter2` callback|The exact `ClassID` and type arguments cannot be determined. That is, the `ClassID` might be null and some type arguments might come back as <xref:System.Object>.|  
+|Zero|The exact `ClassID` and type arguments cannot be determined. That is, the `ClassID` might be null and some type arguments might come back as <xref:System.Object>.|  
   
- Após `GetFunctionInfo2` é retornado, você deve verificar se o `typeArgs` buffer era grande o suficiente para conter todos os `ClassID` valores. Para fazer isso, o valor de comparação que `pcTypeArgs` aponta para com o valor da `cTypeArgs` parâmetro. Se `pcTypeArgs` aponta para um valor maior que `cTypeArgs` dividida pelo tamanho de uma `ClassID` o valor, alocar uma maior `pcTypeArgs` do buffer, atualize `cTypeArgs` com o novo e maior tamanho e a chamada `GetFunctionInfo2` novamente.  
+ After `GetFunctionInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values. To do this, compare the value that `pcTypeArgs` points to with the value of the `cTypeArgs` parameter. If `pcTypeArgs` points to a value that is larger than `cTypeArgs` divided by the size of a `ClassID` value, allocate a larger `pcTypeArgs` buffer, update `cTypeArgs` with the new, larger size, and call `GetFunctionInfo2` again.  
   
- Como alternativa, você pode primeiro chamar `GetFunctionInfo2` com um comprimento de zero `pcTypeArgs` buffer para obter o tamanho do buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado na `pcTypeArgs` dividida pelo tamanho de um `ClassID` valor e chame `GetFunctionInfo2` novamente.  
+ Alternatively, you can first call `GetFunctionInfo2` with a zero-length `pcTypeArgs` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcTypeArgs` divided by the size of a `ClassID` value, and call `GetFunctionInfo2` again.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

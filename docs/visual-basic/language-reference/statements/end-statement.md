@@ -1,5 +1,5 @@
 ---
-title: Instrução End (Visual Basic)
+title: Instrução End
 ms.date: 07/20/2015
 f1_keywords:
 - vb.End
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 66dba1df125a08b8ae05519a0c66edb6da15ceaa
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: cb2fb4abb21b7b9c6575cec4aca1374f63687607
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72583422"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343730"
 ---
 # <a name="end-statement"></a>Instrução End
-Finaliza a execução imediatamente.  
+Terminates execution immediately.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,32 +31,32 @@ End
 ```  
   
 ## <a name="remarks"></a>Comentários  
- Você pode posicionar a instrução de `End` em qualquer lugar em um procedimento para forçar o aplicativo inteiro a parar de ser executado. `End` fecha todos os arquivos abertos com uma instrução `Open` e limpa todas as variáveis do aplicativo. O aplicativo é fechado assim que não há nenhum outro programa contendo referências a seus objetos e nenhum de seus códigos está em execução.  
+ You can place the `End` statement anywhere in a procedure to force the entire application to stop running. `End` closes any files opened with an `Open` statement and clears all the application's variables. The application closes as soon as there are no other programs holding references to its objects and none of its code is running.  
   
 > [!NOTE]
-> A instrução `End` interrompe a execução do código abruptamente e não invoca o `Dispose` ou o método `Finalize` ou qualquer outro código de Visual Basic. As referências de objeto mantidas por outros programas são invalidadas. Se uma instrução `End` for encontrada em um bloco `Try` ou `Catch`, o controle não passará para o bloco de `Finally` correspondente.  
+> The `End` statement stops code execution abruptly, and does not invoke the `Dispose` or `Finalize` method, or any other Visual Basic code. Object references held by other programs are invalidated. If an `End` statement is encountered within a `Try` or `Catch` block, control does not pass to the corresponding `Finally` block.  
   
- A instrução `Stop` suspende a execução, mas ao contrário de `End`, ela não fecha nenhum arquivo ou limpa nenhuma variável, a menos que seja encontrada em um arquivo executável compilado (. exe).  
+ The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
   
- Como `End` encerra seu aplicativo sem participar de recursos que possam estar abertos, você deve tentar fechar corretamente antes de usá-lo. Por exemplo, se seu aplicativo tiver qualquer formulário aberto, você deverá fechá-lo antes que o controle atinja a instrução de `End`.  
+ Because `End` terminates your application without attending to any resources that might be open, you should try to close down cleanly before using it. For example, if your application has any forms open, you should close them before control reaches the `End` statement.  
   
- Você deve usar `End` com moderação e somente quando precisar parar imediatamente. As maneiras normais de encerrar um procedimento (instrução[Return](../../../visual-basic/language-reference/statements/return-statement.md) e [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)) não apenas fecham o procedimento de forma limpa, mas também dão ao código de chamada a oportunidade de fechar corretamente. Um aplicativo de console, por exemplo, pode simplesmente `Return` do procedimento `Main`.  
+ You should use `End` sparingly, and only when you need to stop immediately. The normal ways to terminate a procedure ([Return Statement](../../../visual-basic/language-reference/statements/return-statement.md) and [Exit Statement](../../../visual-basic/language-reference/statements/exit-statement.md)) not only close down the procedure cleanly but also give the calling code the opportunity to close down cleanly. A console application, for example, can simply `Return` from the `Main` procedure.  
   
 > [!IMPORTANT]
-> A instrução `End` chama o método <xref:System.Environment.Exit%2A> da classe <xref:System.Environment> no namespace <xref:System>. <xref:System.Environment.Exit%2A> requer que você tenha a permissão `UnmanagedCode`. Se você não fizer isso, ocorrerá um erro <xref:System.Security.SecurityException>.  
+> The `End` statement calls the <xref:System.Environment.Exit%2A> method of the <xref:System.Environment> class in the <xref:System> namespace. <xref:System.Environment.Exit%2A> requires that you have `UnmanagedCode` permission. If you do not, a <xref:System.Security.SecurityException> error occurs.  
   
- Quando seguido por uma palavra-chave adicional, a [instrução End \<keyword >](../../../visual-basic/language-reference/statements/end-keyword-statement.md) delineia o final da definição do procedimento ou bloco apropriado. Por exemplo, `End Function` encerra a definição de um procedimento de `Function`.  
+ When followed by an additional keyword, [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md) delineates the end of the definition of the appropriate procedure or block. For example, `End Function` terminates the definition of a `Function` procedure.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir usa a instrução `End` para encerrar a execução de código se o usuário solicitá-la.  
+ The following example uses the `End` statement to terminate code execution if the user requests it.  
   
  [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
-## <a name="smart-device-developer-notes"></a>Notas para desenvolvedores de dispositivos inteligentes  
- Não há suporte para essa instrução.  
+## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
+ This statement is not supported.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Security.Permissions.SecurityPermissionFlag>
 - [Instrução Stop](../../../visual-basic/language-reference/statements/stop-statement.md)
-- [Instrução End \<keyword >](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+- [End \<keyword> Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

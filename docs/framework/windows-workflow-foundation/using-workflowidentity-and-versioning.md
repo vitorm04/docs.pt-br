@@ -2,12 +2,12 @@
 title: Usando WorkflowIdentity e controle de versão
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 6b769224edcd9dfc51879c2c99e061a0e3f77e8d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 66ef4fed682554d9fab2a7b0f85bb9cfaf8e8a29
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69958384"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142038"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Usando WorkflowIdentity e controle de versão
 
@@ -28,7 +28,7 @@ O <xref:System.Activities.WorkflowIdentity> fornece uma maneira para que os dese
 Para usar <xref:System.Activities.WorkflowIdentity>, crie uma instância, configure-a e associe-a a uma instância <xref:System.Activities.WorkflowApplication>. Uma instância <xref:System.Activities.WorkflowIdentity> contém três informações de identificação. <xref:System.Activities.WorkflowIdentity.Name%2A> e <xref:System.Activities.WorkflowIdentity.Version%2A> contêm um nome e um <xref:System.Version> e são necessários, e <xref:System.Activities.WorkflowIdentity.Package%2A> é opcional e pode ser usado para especificar uma cadeia de caracteres adicional que contém informações como o nome do assembly ou outras informações desejadas. Um <xref:System.Activities.WorkflowIdentity> é exclusivo se qualquer uma de suas três propriedades for diferente da outra <xref:System.Activities.WorkflowIdentity>.
 
 > [!IMPORTANT]
-> Um <xref:System.Activities.WorkflowIdentity> não deve conter informações pessoalmente identificáveis (PII). As informações sobre o <xref:System.Activities.WorkflowIdentity> usadas para criar uma instância são emitidas para todos os serviços de rastreamento configurados em vários pontos diferentes do ciclo de vida da atividade em tempo de execução. O Rastreamento WF não tem nenhum mecanismo para ocultar o PII (dados de usuário confidenciais). Portanto, uma instância <xref:System.Activities.WorkflowIdentity> não deve conter nenhum dado de PII porque será emitido pelo tempo de execução em registros de rastreamento e pode estar visível para qualquer um com acesso para exibir os registros de rastreamento.
+> Um <xref:System.Activities.WorkflowIdentity> não deve conter informações pessoalmente identificáveis (PII). As informações sobre o <xref:System.Activities.WorkflowIdentity> usadas para criar uma instância são emitidas para todos os serviços de rastreamento configurados em vários pontos diferentes do ciclo de vida da atividade em runtime. O Rastreamento WF não tem nenhum mecanismo para ocultar o PII (dados de usuário confidenciais). Portanto, uma instância <xref:System.Activities.WorkflowIdentity> não deve conter nenhum dado de PII porque será emitido pelo runtime em registros de rastreamento e pode estar visível para qualquer um com acesso para exibir os registros de rastreamento.
 
 No exemplo a seguir, <xref:System.Activities.WorkflowIdentity> é criado e associado a uma instância de um trabalho criada usando uma definição de trabalho `MortgageWorkflow`.
 
@@ -89,9 +89,9 @@ O <xref:System.Activities.WorkflowIdentity> pode ser usado para facilitar a exec
 Para recuperar o <xref:System.Activities.WorkflowIdentity> de uma instância do fluxo de trabalho persistida, o método <xref:System.Activities.WorkflowApplication.GetInstance%2A> é usado. O método <xref:System.Activities.WorkflowApplication.GetInstance%2A> usa a <xref:System.Activities.WorkflowApplication.Id%2A> da instância do fluxo de trabalho persistida e o <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> que contém a instância persistida e retorna um <xref:System.Activities.WorkflowApplicationInstance>. Um <xref:System.Activities.WorkflowApplicationInstance> contém informações sobre uma instância do fluxo de trabalho persistida, incluindo o <xref:System.Activities.WorkflowIdentity> associado. Esse <xref:System.Activities.WorkflowIdentity> associado pode ser usado pelo host para fornecer a definição correta de fluxo de trabalho ao carregar e retomar a instância de fluxo de trabalho.
 
 > [!NOTE]
-> Um <xref:System.Activities.WorkflowIdentity> nulo é válido e pode ser usado pelo host para mapear as instâncias que foram persistidas sem <xref:System.Activities.WorkflowIdentity> associado para a definição adequada de fluxo de trabalho. Este cenário poderá ocorrer quando um aplicativo de fluxo de trabalho não tiver sido inicialmente escrito com controle de versão de fluxo de trabalho ou quando um aplicativo for atualizado do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Para obter mais informações, consulte Upgrading [.NET Framework 4 bancos de dados de persistência para dar suporte ao controle de versão de fluxo de trabalho](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+> Um <xref:System.Activities.WorkflowIdentity> nulo é válido e pode ser usado pelo host para mapear as instâncias que foram persistidas sem <xref:System.Activities.WorkflowIdentity> associado para a definição adequada de fluxo de trabalho. Esse cenário pode ocorrer quando um aplicativo de fluxo de trabalho não foi gravado inicialmente com controle de versão de fluxo de trabalho ou quando um aplicativo é atualizado do .NET Framework 4. Para obter mais informações, consulte [Upgrading .NET Framework 4 bancos de dados de persistência para dar suporte ao controle de versão de fluxo de trabalho](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
-No exemplo a seguir, `Dictionary<WorkflowIdentity, Activity>` um é usado para <xref:System.Activities.WorkflowIdentity> associar instâncias com suas definições de fluxo de trabalho correspondentes e um fluxo de `MortgageWorkflow` trabalho é iniciado usando a definição de `identityV1` fluxo de trabalho, que está associada ao <xref:System.Activities.WorkflowIdentity>.
+No exemplo a seguir, um `Dictionary<WorkflowIdentity, Activity>` é usado para associar <xref:System.Activities.WorkflowIdentity> instâncias com suas definições de fluxo de trabalho correspondentes, e um fluxo de trabalho é iniciado usando a definição de fluxo de trabalho `MortgageWorkflow`, que está associada ao `identityV1` <xref:System.Activities.WorkflowIdentity>.
 
 ```csharp
 WorkflowIdentity identityV1 = new WorkflowIdentity
@@ -146,9 +146,9 @@ wfApp.Load(instance);
 
 ## <a name="UpdatingWF4PersistenceDatabases"></a>Atualizando .NET Framework 4 bancos de dados de persistência para dar suporte ao controle de versão do fluxo de trabalho
 
-Um script de banco de dados SqlWorkflowInstanceStoreSchemaUpgrade.sql é fornecido para atualizar bancos de dados de persistência criados usando os scripts de banco de dados do [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Esse script atualiza os bancos de dados para dar suporte aos novos recursos de controle de versão introduzidos no .NET Framework 4,5. As instâncias de fluxo de trabalho persistidas nos bancos de dados recebem valores padrão do controle de versão e podem participar da execução lado a lado e da atualização dinâmica.
+Um script de banco de dados SqlWorkflowInstanceStoreSchemaUpgrade. SQL é fornecido para atualizar bancos de dados de persistência criados usando os .NET Framework 4 scripts de banco de dados. Esse script atualiza os bancos de dados para dar suporte aos novos recursos de controle de versão introduzidos no .NET Framework 4,5. As instâncias de fluxo de trabalho persistidas nos bancos de dados recebem valores padrão do controle de versão e podem participar da execução lado a lado e da atualização dinâmica.
 
-Se um aplicativo de fluxo de trabalho .NET Framework 4,5 tentar qualquer operação de persistência que use os novos recursos de controle de versão em um banco de dados de persistência que não <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> tenha sido atualizado usando o script fornecido, um será lançado com uma mensagem semelhante à mensagem a seguir.
+Se um aplicativo de fluxo de trabalho .NET Framework 4,5 tentar qualquer operação de persistência que use os novos recursos de controle de versão em um banco de dados de persistência que não tenha sido atualizado usando o script fornecido, uma <xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> será lançada com uma mensagem semelhante à mensagem a seguir.
 
 ```
 The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' cannot be run against this database version.  Please upgrade the database to '4.5.0.0'.
@@ -158,7 +158,7 @@ The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersis
 
 1. Abra SQL Server Management Studio e conecte-se ao servidor de banco de dados de persistência, por exemplo **.\sqlexpress**.
 
-2. Escolha **abrir**, **arquivo** no menu **arquivo** . Navegue até a seguinte pasta:`C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
+2. Escolha **abrir**, **arquivo** no menu **arquivo** . Navegue até a seguinte pasta: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`
 
 3. Selecione **SqlWorkflowInstanceStoreSchemaUpgrade. SQL** e clique em **abrir**.
 
@@ -166,4 +166,4 @@ The SqlWorkflowInstanceStore has a database version of '4.0.0.0'. InstancePersis
 
 5. Escolha **executar** no menu **consulta** .
 
-Quando a consulta tiver sido concluída, o esquema de banco de dados é atualizado e, se desejar, você poderá exibir a identidade padrão de fluxo de trabalho que foi atribuída a instâncias de fluxo de trabalho persistidas. Expanda seu banco de dados de persistência no nó databases do pesquisador de **objetos**e expanda o nó **exibições** . Clique com o botão direito do mouse em **System. Activities. DurableInstancing. Instances** e escolha **selecionar as primeiras 1000 linhas**. Role até o fim das colunas e observe que há seis colunas adicionais adicionadas à exibição: **IdentityName**, **IdentityPackage**, **compilação**, **principal**, **secundária**e **revisão**. Todos os fluxos de trabalho persistentes terão um valor de **NULL** para esses campos, representando uma identidade de fluxo de trabalho nula.
+Quando a consulta tiver sido concluída, o esquema de banco de dados é atualizado e, se desejar, você poderá exibir a identidade padrão de fluxo de trabalho que foi atribuída a instâncias de fluxo de trabalho persistidas. Expanda seu banco de dados de persistência no nó **databases** do pesquisador de **objetos**e expanda o nó **exibições** . Clique com o botão direito do mouse em **System. Activities. DurableInstancing. Instances** e escolha **selecionar as primeiras 1000 linhas**. Role até o fim das colunas e observe que há seis colunas adicionais adicionadas à exibição: **IdentityName**, **IdentityPackage**, **compilação**, **principal**, **secundária**e **revisão**. Todos os fluxos de trabalho persistentes terão um valor de **NULL** para esses campos, representando uma identidade de fluxo de trabalho nula.

@@ -61,7 +61,7 @@ Como os contêineres são inerentemente imutáveis por design, você nunca preci
 
 Embora aplicativos monolíticos possam se beneficiar do Docker, estamos mencionando apenas as dicas de benefícios. Outros benefícios de gerenciar contêineres são decorrentes da implantação com orquestradores de contêiner, que gerenciam as diversas instâncias e o ciclo de vida de cada instância de contêiner. Dividir o aplicativo monolítico em subsistemas que podem ser dimensionados, desenvolvidos e implantados individualmente é o ponto de entrada no universo dos microsserviços.
 
-Para saber mais sobre como "migrar e deslocar" aplicativos monolíticos com contêineres e como você pode modernizar seus aplicativos, leia este guia adicional da Microsoft, [modernizando os aplicativos .net existentes com contêineres de nuvem e Windows do Azure](../../modernize-with-azure-containers/index.md), que você também pode baixar como PDF em <https://aka.ms/LiftAndShiftWithContainersEbook>.
+Para saber mais sobre como "aumentar e deslocar" aplicativos monolíticos com contêineres e como você pode modernizar seus aplicativos, leia este guia adicional da Microsoft, [modernizando aplicativos .net existentes com contêineres de nuvem e do Windows do Azure](../../modernize-with-azure-containers/index.md), que também pode ser baixado como PDF em <https://aka.ms/LiftAndShiftWithContainersEbook>.
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>Publicar um aplicativo de contêiner único do Docker no Serviço de Aplicativo do Azure
 

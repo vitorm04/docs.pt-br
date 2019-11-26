@@ -2,20 +2,20 @@
 title: Integração de System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 3d5c3d7586189e0939fd52bc2b5feac51ae00613
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85137689a31573dc10e8f7384007830ab40d31df
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933881"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976029"
 ---
 # <a name="systemwebrouting-integration"></a>Integração de System.Web.Routing
-Ao hospedar um serviço do Windows Communication Foundation (WCF) no serviço de informações da Internet (IIS), você colocar um arquivo. svc no diretório virtual. Esse arquivo. svc Especifica a fábrica do host de serviço para usar, bem como a classe que implementa o serviço. Ao fazer solicitações para o serviço de você especificar o arquivo. svc no URI, por exemplo: `http://contoso.com/EmployeeServce.svc`. Esse tipo de URI não é ideal para programadores que criam serviços REST. URIs para serviços REST especifique um recurso específico e normalmente não têm nenhuma extensão. O <xref:System.Web.Routing> recurso de integração permite que você hospede um serviço REST do WCF que responde às URIs sem uma extensão. Para obter mais informações sobre roteamento, consulte [roteamento ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660).  
+Ao hospedar um serviço de Windows Communication Foundation (WCF) no serviço de informações da Internet (IIS), você coloca um arquivo. svc no diretório virtual. Esse arquivo. svc especifica a fábrica de hosts de serviço a ser usada, bem como a classe que implementa o serviço. Ao fazer solicitações para o serviço, você especifica o arquivo. svc no URI, por exemplo: `http://contoso.com/EmployeeServce.svc`. Para programadores que escrevem serviços REST, esse tipo de URI não é o ideal. Os URIs para serviços REST especificam um recurso específico e normalmente não têm nenhuma extensão. O recurso de integração do <xref:System.Web.Routing> permite que você hospede um serviço REST do WCF que responde a URIs sem uma extensão. Para obter mais informações sobre roteamento, consulte [ASP.net Routing](https://go.microsoft.com/fwlink/?LinkId=184660).  
   
-## <a name="using-systemwebrouting-integration"></a>Usando a integração de Routing  
- Usar o <xref:System.Web.Routing> recurso de integração, use o <xref:System.ServiceModel.Activation.ServiceRoute> classe para criar uma ou mais rotas e adicioná-los para o <xref:System.Web.Routing.RouteTable> em um arquivo global. asax. Essas rotas especificam o URIs que o serviço responde ao relativo. O exemplo a seguir mostra como fazer isso.  
+## <a name="using-systemwebrouting-integration"></a>Usando a integração de System. Web. Routing  
+ Para usar o recurso de integração de <xref:System.Web.Routing>, use a classe <xref:System.ServiceModel.Activation.ServiceRoute> para criar uma ou mais rotas e adicioná-las ao <xref:System.Web.Routing.RouteTable> em um arquivo global. asax. Essas rotas especificam os URIs relativos aos quais o serviço responde. O exemplo a seguir mostra como fazer isso.  
   
-```  
+```aspx-csharp  
 <%@ Application Language="C#" %>  
 <%@ Import Namespace="System.Web.Routing" %>  
 <%@ Import Namespace="System.ServiceModel.Activation" %>  
@@ -34,9 +34,9 @@ Ao hospedar um serviço do Windows Communication Foundation (WCF) no serviço de
 </script>  
 ```  
   
- Isso roteia todas as solicitações com um URI relativo que começa com os clientes para o `Service` service.  
+ Isso roteia todas as solicitações com um URI relativo que começa com os clientes para o serviço de `Service`.  
   
- Em seu arquivo Web. config, você deve adicionar o `System.Web.Routing.UrlRoutingModule` módulo, defina a `runAllManagedModulesForAllRequests` atributo para `true`e adicione o `UrlRoutingHandler` manipulador para o `<system.webServer>` elemento, conforme mostrado no exemplo a seguir.  
+ No arquivo Web. config, você deve adicionar o módulo `System.Web.Routing.UrlRoutingModule`, definir o atributo `runAllManagedModulesForAllRequests` como `true`e adicionar o manipulador de `UrlRoutingHandler` ao elemento `<system.webServer>`, conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <system.webServer>  
@@ -49,7 +49,7 @@ Ao hospedar um serviço do Windows Communication Foundation (WCF) no serviço de
     </system.webServer>  
 ```  
   
- Isso carrega um módulo e o manipulador necessários para roteamento. Para obter mais informações, consulte [Roteamento](../../../../docs/framework/wcf/feature-details/routing.md). Você também deve definir a `aspNetCompatibilityEnabled` de atributo para `true` no `<serviceHostingEnvironment>` elemento, conforme mostrado no exemplo a seguir.  
+ Isso carrega um módulo e um manipulador necessários para o roteamento. Para obter mais informações, consulte [Roteamento](../../../../docs/framework/wcf/feature-details/routing.md). Você também deve definir o atributo `aspNetCompatibilityEnabled` como `true` no elemento `<serviceHostingEnvironment>`, conforme mostrado no exemplo a seguir.  
   
 ```xml  
 <system.serviceModel>  
@@ -58,9 +58,9 @@ Ao hospedar um serviço do Windows Communication Foundation (WCF) no serviço de
     </system.serviceModel>  
 ```  
   
- A classe que implementa o serviço deve habilitar requisitos de compatibilidade do ASP.NET, conforme mostrado no exemplo a seguir.  
+ A classe que implementa o serviço deve habilitar os requisitos de compatibilidade do ASP.NET, conforme mostrado no exemplo a seguir.  
   
-```  
+```csharp 
 [ServiceContract]  
 [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]  
     public class Service  
@@ -72,4 +72,4 @@ Ao hospedar um serviço do Windows Communication Foundation (WCF) no serviço de
 ## <a name="see-also"></a>Consulte também
 
 - [Modelo de programação HTTP Web do WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [Roteamento do ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660)
+- [Roteamento de ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660)

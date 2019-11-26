@@ -9,12 +9,12 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 581fcbfdfd7806b8f0f70347ac96f1bf09fa9098
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460939"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74138922"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Walkthrough: estilo de conteúdo do WPF
 
@@ -61,7 +61,7 @@ Você pode aplicar um estilo diferente a um controle WPF para alterar sua aparê
 
    o `UserControl1` é aberto no designer do WPF.
 
-1. Na exibição XAML, insira o seguinte XAML após a marca de abertura `<UserControl>`. Esse XAML cria um gradiente com uma borda gradiente de contraste. Ao clicar no controle, os gradientes são alterados para gerar uma aparência de botão pressionado. Para obter mais informações, consulte [Estilo e modelagem](../../wpf/controls/styling-and-templating.md).
+1. Na exibição XAML, insira o seguinte XAML após a marca de abertura `<UserControl>`. Esse XAML cria um gradiente com uma borda gradiente de contraste. Ao clicar no controle, os gradientes são alterados para gerar uma aparência de botão pressionado. Para obter mais informações, consulte [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md).
 
    ```xaml
    <UserControl.Resources>
@@ -142,4 +142,4 @@ Você pode aplicar um estilo diferente a um controle WPF para alterar sua aparê
 - [Usando Controles do WPF](using-wpf-controls.md)
 - [Criar o XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
 - [Visão geral de XAML (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
-- [Estilo e modelagem](../../wpf/controls/styling-and-templating.md)
+- [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

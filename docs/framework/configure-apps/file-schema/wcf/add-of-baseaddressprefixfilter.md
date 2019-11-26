@@ -2,21 +2,21 @@
 title: <add> de <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: dee2cd482efc841b7320ed2114a05000255466f3
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 809e6d5504b56f86eb09a5d57931f922e1c18348
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70850524"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973819"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<Adicionar > de \<baseAddressPrefixFilter >
 Representa um elemento de configuração que especifica um filtro de passagem, que fornece um mecanismo para escolher as associações de Serviços de Informações da Internet (IIS) apropriadas ao hospedar um aplicativo de Windows Communication Foundation (WCF) no IIS.  
   
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<> de System. serviceModel**](system-servicemodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> de ServiceHostingEnvironment**](servicehostingenvironment.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> baseAddressPrefixFilters**](baseaddressprefixfilters.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Adicionar >**  
+&nbsp; &nbsp;[ **\<system. serviceModel >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<servicehostingenvironment >** ](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<baseAddressPrefixFilters >** ](baseaddressprefixfilters.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<adicionar >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ Representa um elemento de configuração que especifica um filtro de passagem, q
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
-|prefix|Um URI que é usado para corresponder a uma parte de um endereço base.|  
+|prefixo|Um URI que é usado para corresponder a uma parte de um endereço base.|  
   
 ### <a name="child-elements"></a>Elementos filho  
  nenhuma.  
@@ -44,7 +44,7 @@ Representa um elemento de configuração que especifica um filtro de passagem, q
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<baseAddressPrefixFilters>](baseaddressprefixfilters.md)|Uma coleção de elementos de configuração que especificam filtros de passagem, que fornecem um mecanismo para escolher as associações do IIS apropriadas ao hospedar um aplicativo de Windows Communication Foundation (WCF) no IIS.|  
+|[\<baseAddressPrefixFilters >](baseaddressprefixfilters.md)|Uma coleção de elementos de configuração que especificam filtros de passagem, que fornecem um mecanismo para escolher as associações do IIS apropriadas ao hospedar um aplicativo de Windows Communication Foundation (WCF) no IIS.|  
   
 ## <a name="remarks"></a>Comentários  
  Um filtro de prefixo fornece uma maneira de provedores de hospedagem compartilhados especificar quais URIs devem ser usados pelo serviço. Ele permite que hosts compartilhados hospedem vários aplicativos com endereços base diferentes para o mesmo esquema no mesmo site.  
@@ -53,9 +53,9 @@ Representa um elemento de configuração que especifica um filtro de passagem, q
   
  O IIS dá suporte à especificação de várias associações IIS para cada site, o que resulta em vários endereços base para cada esquema. Como um serviço WCF hospedado em um site permite a associação a apenas um endereço base para cada esquema, você pode usar o recurso de filtro de prefixo para escolher o endereço base necessário do serviço hospedado. Os endereços base de entrada, fornecidos pelo IIS, são filtrados com base no filtro de lista de prefixo opcional.  
   
- Por exemplo, seu site pode conter os seguintes endereços base.  
+ Por exemplo, seu site pode conter os seguintes endereços base:
   
-```  
+``` 
 http://testl.fabrikam.com/Service.svc  
 http://test2.fabrikam.com/Service.svc  
 ```  
@@ -78,7 +78,7 @@ http://test2.fabrikam.com/Service.svc
  Por padrão, quando o prefixo não é especificado, todos os endereços são passados. A especificação do prefixo só permite que o endereço de base correspondente para esse esquema seja passado.  
   
 > [!NOTE]
-> O filtro não oferece suporte a caracteres curinga. Além disso, os baseaddresss fornecidos pelo IIS podem ter endereços associados a outros esquemas que não estão presentes `baseAddressPrefixFilters` na lista. Esses endereços não são filtrados.  
+> O filtro não oferece suporte a caracteres curinga. Além disso, os baseAddresss fornecidos pelo IIS podem ter endereços associados a outros esquemas que não estão presentes na lista de `baseAddressPrefixFilters`. Esses endereços não são filtrados.  
   
 ## <a name="see-also"></a>Consulte também
 

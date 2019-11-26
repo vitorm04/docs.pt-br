@@ -137,7 +137,7 @@ O roteamento no mais incrivelmente é tratado pelo componente `Router`. O compon
 </Router>
 ```
 
-O componente `Router` descobre os componentes roteáveis no `AppAssembly` especificado e, opcionalmente, o `AdditionalAssemblies` especificado. Quando o navegador navega, o `Router` intercepta a navegação e renderiza o conteúdo de seu parâmetro `Found` com o `RouteData` extraído se uma rota corresponde ao endereço, caso contrário, o `Router` processa seu parâmetro `NotFound`.
+O componente `Router` descobre os componentes roteáveis no `AppAssembly` especificado e, opcionalmente, o `AdditionalAssemblies`especificado. Quando o navegador navega, o `Router` intercepta a navegação e renderiza o conteúdo de seu parâmetro `Found` com o `RouteData` extraído se uma rota corresponde ao endereço, caso contrário, o `Router` processa seu parâmetro `NotFound`.
 
 O componente `RouteView` manipula a renderização do componente correspondente especificado pelo `RouteData` com seu layout, se tiver um. Se o componente correspondente não tiver um layout, o `DefaultLayout` opcionalmente especificado será usado.
 
@@ -276,7 +276,7 @@ A saída renderizada para a página seria:
 </div>
 ```
 
-Os layouts que normalmente não definem os elementos HTML raiz de uma página (`<html>`, `<body>`, `<head>` e assim por diante). Os elementos HTML raiz são definidos na página host de um aplicativo mais novo, que é usada para renderizar o conteúdo HTML inicial para o aplicativo (consulte o mais novo e de [Bootstrap](project-structure.md#bootstrap-blazor)). A página host pode renderizar vários componentes raiz para o aplicativo com marcação ao redor.
+Os layouts que normalmente não definem os elementos HTML raiz de uma página (`<html>`, `<body>`, `<head>`e assim por diante). Os elementos HTML raiz são definidos na página host de um aplicativo mais novo, que é usada para renderizar o conteúdo HTML inicial para o aplicativo (consulte o mais novo e de [Bootstrap](project-structure.md#bootstrap-blazor)). A página host pode renderizar vários componentes raiz para o aplicativo com marcação ao redor.
 
 Os componentes do mais incrivelmente, incluindo páginas, não podem renderizar `<script>` marcas. Essa restrição de renderização existe porque as marcas de `<script>` são carregadas uma vez e não podem ser alteradas. Pode ocorrer um comportamento inesperado se você tentar renderizar as marcas dinamicamente usando sintaxe Razor. Em vez disso, todas as marcas de `<script>` devem ser adicionadas à página host do aplicativo.
 

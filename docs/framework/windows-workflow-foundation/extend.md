@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], extending
 - extending [WF]
 ms.assetid: d6861f28-9c8c-4225-872d-9a80e2e59034
-ms.openlocfilehash: 8449c1f229ffb993036dbb909d6f4c98c47498af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1394e86738ce38683bb3f5b0e847b952cf6138eb
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945685"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141892"
 ---
 # <a name="extending-windows-workflow-foundation"></a>Estendendo Windows Workflow Foundation
-A seção a seguir descreve como estender o Windows Workflow Foundation (WF) com as atividades personalizados e designers em ambientes rehosted fora do Visual Studio 2010.
+A seção a seguir descreve como estender Windows Workflow Foundation (WF) com atividades e designers personalizados em ambientes rehospedados fora do Visual Studio 2010.
 
 ## <a name="in-this-section"></a>Nesta seção
- [Personalizando a experiência de Design de fluxo de trabalho](customizing-the-workflow-design-experience.md) indica como os cenários para criar atividades personalizados e para rehosting o [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] simplificados foram bastante em [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Desenvolvimento e implantação agora são mais fáceis e mais flexível porque o novo modelo de programação de atividade designer baseia-se ao Windows Presentation Foundation (WPF).
+ [Personalizando a experiência de design do fluxo de trabalho](customizing-the-workflow-design-experience.md) Indica como os cenários para criar atividades personalizadas e rehospedar os [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] foram bastante simplificados no .NET Framework 4. O desenvolvimento e a implantação são agora mais fáceis e flexíveis porque o novo modelo de programação do designer de atividades se baseia no Windows Presentation Foundation (WPF).
 
 ## <a name="see-also"></a>Consulte também
 

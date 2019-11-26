@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8f9624414a2b423bd43e8790d11b70ae1ca6286d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216229"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973306"
 ---
 # <a name="exposing-net-core-components-to-com"></a>Expondo componentes do .NET Core ao COM
 
@@ -23,7 +23,7 @@ No .NET Core, o processo de expor seus objetos .NET ao COM foi significativament
 - Gerar um servidor COM como parte de criar sua biblioteca do .NET Core.
 - Gerar automaticamente um manifesto de servidor lado a lado para COM Sem Registro.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>Prerequisites
 
 - Instale o [SDK do .NET Core 3,0](https://dotnet.microsoft.com/download) ou uma versão mais recente.
 
@@ -76,6 +76,6 @@ Há um [exemplo de servidor COM](https://github.com/dotnet/samples/tree/master/c
 
 ## <a name="additional-notes"></a>Observações adicionais
 
-Ao contrário do .NET Framework, não há suporte no .NET Core para gerar um TLB (Biblioteca de Tipos) COM com base em um assembly .NET Core. Você terá que escrever manualmente um arquivo IDL ou um cabeçalho C++ para as declarações nativas de suas interfaces.
+Ao contrário do .NET Framework, não há suporte no .NET Core para gerar um TLB (Biblioteca de Tipos) COM com base em um assembly .NET Core. A orientação é gravar manualmente um arquivo IDL ou um C/C++ Header para as declarações nativas das interfaces com.
 
-Além disso, não há suporte para o carregamento do .NET Framework e do .NET Core no mesmo processo; em decorrência disso, não há suporte para o carregamento um servidor COM do .NET Core para um processo de cliente COM do .NET Framework ou vice-versa.
+Além disso, o carregamento de .NET Framework e do .NET Core no mesmo processo tem limitações de diagnóstico. A principal limitação é a depuração de componentes gerenciados, pois não é possível depurar .NET Framework e o .NET Core ao mesmo tempo. Além disso, as duas instâncias de tempo de execução não compartilham assemblies gerenciados. Isso significa que não é possível compartilhar os tipos reais do .NET entre os dois tempos de execução e, em vez disso, todas as interações devem ser restritas aos contratos de interface COM expostos.

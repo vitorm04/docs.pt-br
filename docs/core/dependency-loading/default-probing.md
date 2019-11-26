@@ -13,11 +13,11 @@ ms.locfileid: "72031832"
 ---
 # <a name="default-probing"></a>Investigação padrão
 
-A instância <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> é responsável por localizar as dependências de um assembly. Este artigo descreve a lógica de investigação da instância do @no__t 0.
+A instância de <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> é responsável por localizar as dependências de um assembly. Este artigo descreve a lógica de investigação da instância do <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>.
 
 ## <a name="host-configured-probing-properties"></a>Propriedades de investigação configuradas pelo host
 
-Quando o tempo de execução é iniciado, o host de tempo de execução fornece um conjunto de propriedades de investigação nomeadas que configuram caminhos de investigação <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType>.
+Quando o tempo de execução é iniciado, o host de tempo de execução fornece um conjunto de propriedades de investigação nomeadas que configuram <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> caminhos de investigação.
 
 Cada propriedade de investigação é opcional. Se houver, cada propriedade será um valor de cadeia de caracteres que contém uma lista delimitada de caminhos absolutos. O delimitador é '; ' no Windows e ': ' em todas as outras plataformas.
 
@@ -33,7 +33,7 @@ Cada propriedade de investigação é opcional. Se houver, cada propriedade ser�
 
 Há dois cenários principais para popular as propriedades dependendo se o arquivo *\<myapp >. deps. JSON* existe.
 
-- Quando o arquivo de *\*. deps. JSON* estiver presente, ele será analisado para preencher as propriedades de investigação.
+- Quando o arquivo *\*. deps. JSON* estiver presente, ele será analisado para preencher as propriedades de investigação.
 - Quando o arquivo *\*. deps. JSON* não está presente, supõe-se que o diretório do aplicativo contenha todas as dependências. O conteúdo do diretório é usado para preencher as propriedades de investigação.
 
 Além disso, os arquivos *\*. deps. JSON* para todas as estruturas referenciadas são analisados de forma semelhante.
@@ -51,14 +51,14 @@ O host de tempo de execução do .NET Core produzirá mensagens de rastreamento 
 |Variável de ambiente        |Descrição  |
 |----------------------------|---------|
 |`COREHOST_TRACE=1`          |Habilita o rastreamento.|
-|`COREHOST_TRACEFILE=<path>` |Rastreia para um caminho de arquivo em vez do padrão `stderr`.|
+|`COREHOST_TRACEFILE=<path>` |Rastreia um caminho de arquivo em vez do `stderr`padrão.|
 |`COREHOST_TRACE_VERBOSITY`  |Define o detalhamento de 1 (menor) para 4 (mais alto).|
 
 ## <a name="managed-assembly-default-probing"></a>Investigação padrão do assembly gerenciado
 
 Ao investigar para localizar um assembly gerenciado, o <xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> procura na ordem em:
 
-- Arquivos que correspondem ao <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> em `TRUSTED_PLATFORM_ASSEMBLIES` (após a remoção das extensões de arquivo).
+- Arquivos que correspondem à <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> no `TRUSTED_PLATFORM_ASSEMBLIES` (após a remoção de extensões de arquivo).
 - Arquivos de assembly de imagem nativa no `APP_NI_PATHS` com extensões de arquivo comuns.
 - Arquivos de assembly em `APP_PATHS` com extensões de arquivo comuns.
 
@@ -66,10 +66,10 @@ Ao investigar para localizar um assembly gerenciado, o <xref:System.Runtime.Load
 
 Para localizar um assembly satélite para uma cultura específica, construa um conjunto de caminhos de arquivo.
 
-Para cada caminho em `PLATFORM_RESOURCE_ROOTS` e, em seguida, `APP_PATHS`, acrescente a cadeia de caracteres <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>, um separador de diretório, a cadeia de caracteres <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> e a extensão '. dll '.
+Para cada caminho em `PLATFORM_RESOURCE_ROOTS` e, em seguida, `APP_PATHS`, acrescente a cadeia de caracteres <xref:System.Globalization.CultureInfo.Name?displayProperty=nameWithType>, um separador de diretório, a cadeia de caracteres de <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> e a extensão '. dll '.
 
 Se existir algum arquivo correspondente, tente carregá-lo e retorná-lo.
 
 ## <a name="unmanaged-native-library-probing"></a>Investigação de biblioteca não gerenciada (nativa)
 
-Ao investigar para localizar uma biblioteca não gerenciada, o `NATIVE_DLL_SEARCH_DIRECTORIES` será pesquisado procurando por uma biblioteca correspondente.
+Ao investigar para localizar uma biblioteca não gerenciada, as `NATIVE_DLL_SEARCH_DIRECTORIES` são pesquisadas procurando por uma biblioteca correspondente.

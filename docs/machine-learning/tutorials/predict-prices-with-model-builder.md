@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/08/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f5010f944dba007e24d3c0e22d4e339f9ed0522a
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459190"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977349"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: prever os preços usando a regressão com o construtor de modelos
 
@@ -68,7 +68,7 @@ Cada linha no conjunto de dados `taxi-fare-train.csv` contém os detalhes de cor
     - **payment_type:** o método de pagamento (dinheiro ou cartão de crédito) é um recurso.
     - **fare_amount:** a tarifa total de táxi paga é o rótulo.
 
-O `label` é a coluna que você deseja prever. Ao executar uma tarefa de regressão, o objetivo é prever um valor numérico. Nesse cenário de previsão de preço, o custo de uma corrida de táxi está sendo previsto. Portanto, o **fare_amount** é o rótulo. Os `features` identificados são as entradas que você atribui ao modelo para prever o `label`. Nesse caso, o restante das colunas com a exceção de **trip_time_in_secs** são usadas como recursos ou entradas para prever o valor da tarifa.
+O `label` é a coluna que você deseja prever. Ao executar uma tarefa de regressão, o objetivo é prever um valor numérico. Nesse cenário de previsão de preço, o custo de uma corrida de táxi está sendo previsto. Portanto, o **fare_amount** é o rótulo. Os `features` identificados são as entradas que você atribui ao modelo para prever o `label`. Nesse caso, o restante das colunas com exceção de **trip_time_in_secs** são usadas como recursos ou entradas para prever o valor da tarifa.
 
 ## <a name="choose-a-scenario"></a>Escolha um cenário
 
@@ -83,7 +83,7 @@ O Construtor de Modelo aceita dados de duas fontes: um banco de dados do SQL Ser
 
 1. Na etapa de dados da ferramenta do Construtor de Modelo, selecione *Arquivo* na lista suspensa da fonte de dados.
 1. Selecione o botão ao lado da caixa de texto *Selecionar um arquivo* e use o Explorador de Arquivos para procurar e selecionar o *taxi-fare-test.csv* no diretório de *Dados*
-1. Escolha *fare_amount* na *coluna para prever (rótulo)* DropDown.
+1. Escolha *fare_amount* na *coluna para prever (rótulo)* suspenso.
 1. Expanda a lista suspensa *colunas de entrada (recursos)* e desmarque a coluna *trip_time_in_secs* para excluí-la como um recurso durante o treinamento.  Navegue até a etapa treinar da ferramenta Construtor de modelos.
 
 ## <a name="train-the-model"></a>Treinar o modelo
@@ -106,7 +106,7 @@ Após a conclusão do treinamento, navegue até a etapa de avaliação.
 
 ## <a name="evaluate-the-model"></a>Avaliar o modelo
 
-O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta do Construtor de Modelo, a seção de saída terá o algoritmo usado pelo modelo com melhor desempenho na entrada *Melhor Modelo*, juntamente com as métricas na *Qualidade do Melhor Modelo (RSquared)* . Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas.
+O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta do Construtor de Modelo, a seção de saída terá o algoritmo usado pelo modelo com melhor desempenho na entrada *Melhor Modelo*, juntamente com as métricas na *Qualidade do Melhor Modelo (RSquared)*. Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas.
 
 Se você não estiver satisfeito com suas métricas de precisão, algumas maneiras fáceis de experimentar e aprimorar a precisão do modelo serão aumentar a quantidade de tempo para treinar o modelo ou usar mais dados. Ou navegue até a etapa do código.
 
@@ -126,7 +126,7 @@ Dois projetos serão criados como resultado do processo de treinamento.
     using TaxiFarePredictionML.Model;
     ```
 
-1. Para fazer uma previsão sobre novos dados usando o modelo, crie uma nova instância da classe `ModelInput` dentro do método `Main` do seu aplicativo. Observe que o valor da tarifa não faz parte da entrada. Isso acontece porque o modelo gerará a previsão para ela. 
+1. Para fazer uma previsão sobre novos dados usando o modelo, crie uma nova instância da classe `ModelInput` dentro do método `Main` do seu aplicativo. Observe que o valor da tarifa não faz parte da entrada. Isso acontece porque o modelo gerará a previsão para ela.
 
     ```csharp
     // Create sample data
@@ -140,7 +140,7 @@ Dois projetos serão criados como resultado do processo de treinamento.
     };
     ```
 
-1. Use o método `Predict` da classe `ConsumeModel`. O método `Predict` carrega o modelo treinado, cria um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para o modelo e o usa para fazer previsões sobre novos dados. 
+1. Use o método `Predict` da classe `ConsumeModel`. O método `Predict` carrega o modelo treinado, cria um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para o modelo e o usa para fazer previsões sobre novos dados.
 
     ```csharp
     // Make prediction

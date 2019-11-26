@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 34cd7e96442a570a3951e6303d2ac90ce5da6239
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: fbd5006611a0a8e0d90b589df7b2cb6a34101457
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920405"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977024"
 ---
 # <a name="wpf-walkthroughs"></a>Explicações passo a passo WPF
 Instruções passo a passo oferecem orientações em etapas para cenários comuns. Isso torna esse bom local para começar a conhecer o produto ou uma área de recurso específica.
@@ -21,11 +21,11 @@ Instruções passo a passo oferecem orientações em etapas para cenários comun
 
 |Título|Descrição|
 |-----------|-----------------|
-|[Instruções passo a passo: compilando um aplicativo WPF simples com o WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Demonstra como compilar um aplicativo WPF simples com o [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|
+|[Instruções passo a passo: compilando um aplicativo WPF simples com o WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|Demonstra como criar um aplicativo simples do WPF com o designer do WPF.|
 |[Passo a passo: construindo um layout dinâmico](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|Demonstra como criar um layout dinâmico usando um controle do painel de <xref:System.Windows.Controls.Grid>.|
 |[Instrução passo a passo: criando um aplicativo redimensionável usando o WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546954(v=vs.100))|Demonstra como criar layouts de janela que são redimensionáveis pelo usuário no tempo de execução.|
-|[Instrução passo a passo: criando uma associação de dados usando o WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Demonstra como usar o [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] para criar associações de dados que conectam os dados a um controle.|
-|[Instruções passo a passo: usando um DesignInstance para associar dados no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Demonstra como usar o [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] para criar associações de dados no tempo de design para um contexto de dados que é atribuído no tempo de execução.|
+|[Instrução passo a passo: criando uma associação de dados usando o WPF Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd434207(v=vs.100))|Demonstra como usar o designer do WPF para criar associações de dados que conectam dados a um controle.|
+|[Instruções passo a passo: usando um DesignInstance para associar dados no Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dd490796(v=vs.100))|Demonstra como usar o designer do WPF para criar associações de dados em tempo de design para um contexto de dados que é atribuído em tempo de execução.|
 
 ## <a name="wpf-walkthroughs"></a>Explicações passo a passo WPF
 

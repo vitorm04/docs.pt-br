@@ -10,7 +10,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/16/2019
 ms.locfileid: "72395670"
 ---
-# <a name="expressions"></a>Expressões
+# <a name="expressions"></a>{1&gt;Expressões&lt;1}
 
 *Expressões* são construídas a partir de *operandos* e *operadores*. Os operadores de uma expressão indicam quais operações devem ser aplicadas aos operandos. Exemplos de operadores incluem `+`, `-`, `*`, `/` e `new`. Exemplos de operandos incluem literais, campos, variáveis locais e expressões.
 
@@ -19,7 +19,7 @@ Quando uma expressão contiver vários operadores, a *precedência* dos operador
 Quando ocorre um operando entre dois operadores com a mesma precedência, a *associatividade* dos operadores controla a ordem na qual as operações são executadas:
 
 * Exceto para os operadores de atribuição e de União nulo, todos os operadores binários são *associativos à esquerda*, o que significa que as operações são executadas da esquerda para a direita. Por exemplo, `x + y + z` é avaliado como `(x + y) + z`.
-* Os operadores de atribuição, os operadores de União nula `??` e `??=` e o operador condicional `?:` são *associativos à direita*, o que significa que as operações são executadas da direita para a esquerda. Por exemplo, `x = y = z` é avaliado como `x = (y = z)`.
+* Os operadores de atribuição, a `??` de União nula e os operadores de `??=` e o operador condicional `?:` são *associativos à direita*, o que significa que as operações são executadas da direita para a esquerda. Por exemplo, `x = y = z` é avaliado como `x = (y = z)`.
 
 Precedência e associatividade podem ser controladas usando parênteses. Por exemplo, `x + y * z` primeiro multiplica `y` por `z` e, em seguida, adiciona o resultado a `x`, mas `(x + y) * z` primeiro adiciona `x` e `y` e, em seguida, multiplica o resultado por `z`.
 

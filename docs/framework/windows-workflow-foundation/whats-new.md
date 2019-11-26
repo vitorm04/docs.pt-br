@@ -5,18 +5,19 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-ms.openlocfilehash: 5c08ec3f5618abc601c17cf0d32d583bf21db683
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8f79c6d2a564571f8b753f322a79e91a01b1cf2f
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656103"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74142011"
 ---
 # <a name="whats-new-in-windows-workflow-foundation"></a>Novidades no Windows Foundation Workflow
-Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] altera vários paradigma de desenvolvimento de versões anteriores. Fluxos de trabalho agora são mais fáceis de criar, executar e manter, e implementam um host da nova funcionalidade. Para obter mais informações sobre como migrar aplicativos de fluxo de trabalho de .NET 3.0 e 3.5 do .NET para usar a versão mais recente, consulte [diretrizes de migração](migration-guidance.md).  
+
+Windows Workflow Foundation (WF) no .NET Framework 4 altera vários paradigmas de desenvolvimento de versões anteriores. Fluxos de trabalho agora são mais fáceis de criar, executar e manter, e implementam um host da nova funcionalidade. Para obter mais informações sobre como migrar aplicativos .NET 3,0 e .NET 3,5 Workflow para usar a versão mais recente, consulte [diretrizes de migração](migration-guidance.md).  
   
 ## <a name="workflow-activity-model"></a>Modelo de atividade de fluxo de trabalho  
- A atividade agora é a unidade base da criação de um fluxo de trabalho, em vez de usar as classes <xref:System.Workflow.Activities.SequentialWorkflowActivity> ou <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. A classe <xref:System.Activities.Activity> fornece a abstração básica do comportamento de fluxo de trabalho. Os autores de atividade podem implementar o <xref:System.Activities.CodeActivity> para a funcionalidade básica de atividade personalizada ou <xref:System.Activities.NativeActivity> para a funcionalidade de atividade personalizada que usa a largura do tempo de execução. <xref:System.Activities.Activity> é uma classe usada por autores de atividade para expressar novos comportamentos de forma declarativa em termos de outros <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, ou <xref:System.Activities.DynamicActivity> objetos, independentemente de estarem personalizado ou esteja incluída no [interno de atividade Biblioteca](net-framework-4-5-built-in-activity-library.md).  
+ A atividade agora é a unidade base da criação de um fluxo de trabalho, em vez de usar as classes <xref:System.Workflow.Activities.SequentialWorkflowActivity> ou <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. A classe <xref:System.Activities.Activity> fornece a abstração básica do comportamento de fluxo de trabalho. Os autores de atividade podem implementar o <xref:System.Activities.CodeActivity> para a funcionalidade básica de atividade personalizada ou <xref:System.Activities.NativeActivity> para a funcionalidade de atividade personalizada que usa a largura do runtime. <xref:System.Activities.Activity> é uma classe usada por autores de atividade para expressar novos comportamentos de forma declarativa em termos de outros objetos <xref:System.Activities.NativeActivity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>ou <xref:System.Activities.DynamicActivity>, se eles são desenvolvidos de forma personalizada ou incluídos na [biblioteca de atividades interna](net-framework-4-5-built-in-activity-library.md).  
   
 ## <a name="rich-composite-activity-options"></a>Opções de atividades compostas avançadas  
  <xref:System.Activities.Statements.Flowchart> é uma nova atividade avançada de fluxo de controle que permite que os autores modelem loops arbitrários e ramificação condicional. <xref:System.Activities.Statements.Flowchart> fornece um modelo de programação orientada para evento que anteriormente somente podia ser implementada com <xref:System.Workflow.Activities.StateMachineWorkflowActivity>. Fluxos de trabalho de procedimentos aproveitam as novas atividades de controle de fluxo que modelam estruturas tradicionais de controle de fluxo, como <xref:System.Activities.Statements.TryCatch> e <xref:System.Activities.Statements.Switch%601>.  
@@ -33,10 +34,10 @@ Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/ne
 - Novas atividades de mensagem, como, <xref:System.ServiceModel.Activities.SendContent> e <xref:System.ServiceModel.Activities.ReceiveReply>.  
   
 ## <a name="explicit-activity-data-model"></a>Modelo de dados explícito de atividade  
- O [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] inclui novas opções para armazenar ou mover dados. Os dados podem ser armazenados em uma atividade usando <xref:System.Activities.Variable>. Ao mover dados dentro e fora de uma atividade, os tipos de argumento especializados são usados para determinar quais dados de direção estão movendo. Esses tipos são <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> e <xref:System.Activities.OutArgument>. Para obter mais informações, consulte [modelo de dados do Windows Workflow Foundation](data-model.md).  
+ .NET Framework 4 inclui novas opções para armazenar ou mover dados. Os dados podem ser armazenados em uma atividade usando <xref:System.Activities.Variable>. Ao mover dados dentro e fora de uma atividade, os tipos de argumento especializados são usados para determinar quais dados de direção estão movendo. Esses tipos são <xref:System.Activities.InArgument>, <xref:System.Activities.InOutArgument> e <xref:System.Activities.OutArgument>. Para obter mais informações, consulte [modelo de dados do Windows Workflow Foundation](data-model.md).  
   
 ## <a name="enhanced-hosting-persistence-and-tracking-options"></a>Hospedagem aprimorada, persistência e opções de rastreamento  
- O [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] contém os aprimoramentos de persistência como o seguinte:  
+ O .NET Framework 4 contém aprimoramentos de persistência, como o seguinte:  
   
 - Há mais opções para executar fluxos de trabalho, inclusive <xref:System.ServiceModel.Activities.WorkflowServiceHost>, <xref:System.Activities.WorkflowApplication> e <xref:System.Activities.WorkflowInvoker>.  
   
@@ -55,4 +56,4 @@ Windows Workflow Foundation (WF) no [!INCLUDE[netfx40_long](../../../includes/ne
 - Retomar um fluxo de trabalho pendente é agora gerenciado usando um objeto <xref:System.Activities.Bookmark>.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Maior capacidade de estender a experiência do WF Designer  
- O novo Designer de WF baseia-se no Windows Presentation Foundation (WPF) e fornece um modelo mais simples a ser usado ao rehosting o Designer do WF fora do Visual Studio e também oferece mecanismos mais fáceis para criar designers personalizados de atividade. Para obter mais informações, consulte [Personalizando a experiência de Design de fluxo de trabalho](customizing-the-workflow-design-experience.md).
+ O novo designer do WF se baseia no Windows Presentation Foundation (WPF) e fornece um modelo mais fácil de usar ao rehospedar o designer do WF fora do Visual Studio e também fornece mecanismos mais fáceis para a criação de designers de atividade personalizados. Para obter mais informações, consulte [Personalizando a experiência de design do fluxo de trabalho](customizing-the-workflow-design-experience.md).

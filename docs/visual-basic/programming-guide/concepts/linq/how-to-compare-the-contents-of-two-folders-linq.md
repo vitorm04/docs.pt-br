@@ -1,15 +1,15 @@
 ---
-title: Como comparar o conteúdo de duas pastas (LINQ) (Visual Basic)
+title: Como comparar o conteúdo de duas pastas (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 36128af71bb494a48e52564befe84fa7c7ffc3c0
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d11299e3e36f4b6a8b837af59b1c27bb1c7aaf41
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582863"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348405"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>Como comparar o conteúdo de duas pastas (LINQ) (Visual Basic)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>How to: Compare the Contents of Two Folders (LINQ) (Visual Basic)
 
 Este exemplo demonstra três modos de se comparar duas listagens de arquivo:
 
@@ -116,7 +116,7 @@ End Module
 
 ## <a name="compiling-the-code"></a>Compilando o código
 
-Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
+Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
 
 ## <a name="see-also"></a>Consulte também
 

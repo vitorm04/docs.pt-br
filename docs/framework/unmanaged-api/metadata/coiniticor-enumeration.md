@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 67fefd89-28d6-4588-84ea-dc7a5870e014
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 89d2f9c9cfa7d4c2498710b36796f3e2605bcbf0
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: bb9fcc4c6e1fd495e95caa1d2200d9fd516a7748
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67763653"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444272"
 ---
 # <a name="coiniticor-enumeration"></a>Enumeração COINITICOR
-Especifica as constantes usadas pelo [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) quando ele inicializa o common language runtime.  
+Especifica constantes usadas pelo [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) quando inicializa o Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,12 +39,12 @@ typedef enum tagCOINITCOR
 |------------|-----------------|  
 |`COINITCOR`|Indica o modo de inicialização padrão.|  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,20 +1,20 @@
 ---
 title: Sequências
 description: Saiba como usar F# sequências, quando você tem uma coleção de dados grande e ordenada, mas não espera necessariamente usar todos os elementos.
-ms.date: 02/19/2019
-ms.openlocfilehash: 76aeeb8b89ed8146ee1b7f909af6bf0764fcc55d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 11/04/2019
+ms.openlocfilehash: 34e03f1cead0a9f678f637afcb6c8397ef7572bc
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424977"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971444"
 ---
 # <a name="sequences"></a>Sequências
 
 > [!NOTE]
 > Os links de referência da API neste artigo levarão você até o MSDN.  A referência da API docs.microsoft.com não está completa.
 
-Uma *sequência* é uma série lógica de elementos de um tipo. As sequências são particularmente úteis quando você tem uma coleção de dados grande e ordenada, mas não espera necessariamente usar todos os elementos. Os elementos de sequência individuais são calculados somente conforme necessário, portanto, uma sequência pode fornecer um melhor desempenho do que uma lista em situações nas quais nem todos os elementos são usados. As sequências são representadas pelo tipo de `seq<'T>`, que é um alias para `System.Collections.Generic.IEnumerable`. Portanto, qualquer tipo de .NET Framework que implemente `System.IEnumerable` pode ser usado como uma sequência. O [módulo Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) fornece suporte para manipulações que envolvem sequências.
+Uma *sequência* é uma série lógica de elementos de um tipo. As sequências são particularmente úteis quando você tem uma coleção de dados grande e ordenada, mas não espera necessariamente usar todos os elementos. Os elementos de sequência individuais são calculados somente conforme necessário, portanto, uma sequência pode fornecer um melhor desempenho do que uma lista em situações nas quais nem todos os elementos são usados. As sequências são representadas pelo tipo de `seq<'T>`, que é um alias para <xref:System.Collections.Generic.IEnumerable%601>. Portanto, qualquer tipo .NET que implemente <xref:System.Collections.Generic.IEnumerable%601> interface pode ser usado como uma sequência. O [módulo Seq](https://msdn.microsoft.com/library/54e8f059-ca52-4632-9ae9-49685ee9b684) fornece suporte para manipulações que envolvem sequências.
 
 ## <a name="sequence-expressions"></a>Expressões de sequência
 
@@ -22,17 +22,17 @@ Uma *expressão de sequência* é uma expressão que é avaliada como uma sequê
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1502.fs)]
 
-Expressões de sequência são constituídas F# de expressões que produzem valores da sequência. Eles podem usar a palavra-chave `yield` para produzir valores que se tornam parte da sequência.
-
-Veja a seguir um exemplo.
+Expressões de sequência são constituídas F# de expressões que produzem valores da sequência. Você também pode gerar valores programaticamente:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1503.fs)]
 
-Você pode usar o operador de `->` em vez de `yield`; nesse caso, você pode omitir a palavra-chave `do`, conforme mostrado no exemplo a seguir.
+O exemplo anterior usa o operador `->`, que permite que você especifique uma expressão cujo valor se tornará uma parte da sequência. Você só poderá usar `->` se cada parte do código que o segue retornar um valor.
+
+Como alternativa, você pode especificar a palavra-chave `do`, com um `yield` opcional a seguir:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1504.fs)]
 
-O código a seguir gera uma lista de pares de coordenadas junto com um índice em uma matriz que representa a grade.
+O código a seguir gera uma lista de pares de coordenadas junto com um índice em uma matriz que representa a grade. Observe que a primeira expressão `for` requer que uma `do` seja especificada.
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1505.fs)]
 
@@ -40,9 +40,34 @@ Uma expressão de `if` usada em uma sequência é um filtro. Por exemplo, para g
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1506.fs)]
 
-Quando você usa `yield` ou `->` em uma iteração, espera-se que cada iteração gere um único elemento da sequência. Se cada iteração produzir uma sequência de elementos, use `yield!`. Nesse caso, os elementos gerados em cada iteração são concatenados para produzir a sequência final.
+Conforme mencionado anteriormente, `do` é necessário aqui porque não há `else` ramificação que acompanha o `if`. Se você tentar usar `->`, receberá um erro dizendo que nem todas as ramificações retornarão um valor.
 
-Você pode combinar várias expressões juntas em uma expressão de sequência. Os elementos gerados por cada expressão são concatenados juntos. Para obter um exemplo, consulte a seção "exemplos" deste tópico.
+## <a name="the-yield-keyword"></a>A palavra-chave `yield!`
+
+Às vezes, você pode desejar incluir uma sequência de elementos em outra sequência. Para incluir uma sequência em outra sequência, você precisará usar a palavra-chave `yield!`:
+
+```fsharp
+// Repeats '1 2 3 4 5' ten times
+seq {
+    for _ in 1..10 do
+        yield! seq { 1; 2; 3; 4; 5}
+}
+```
+
+Outra maneira de pensar em `yield!` é que ele nivela uma sequência interna e, em seguida, inclui isso na sequência que a contém.
+
+Quando `yield!` é usado em uma expressão, todos os outros valores únicos devem usar a palavra-chave `yield`:
+
+```fsharp
+// Combine repeated values with their values
+seq {
+    for x in 1..10 do
+        yield x
+        yield! seq { for i in 1..x -> i}
+}
+```
+
+Especificar somente `x` no exemplo anterior resultará na sequência que não gera valores.
 
 ## <a name="examples"></a>Exemplos
 
@@ -50,7 +75,7 @@ O primeiro exemplo usa uma expressão de sequência que contém uma iteração, 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1507.fs)]
 
-O código a seguir usa `yield` para criar uma tabela de multiplicação que consiste em tuplas de três elementos, cada um consistindo de dois fatores e do produto.
+O exemplo a seguir cria uma tabela de multiplicação que consiste em tuplas de três elementos, cada um consistindo de dois fatores e do produto:
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1508.fs)]
 
@@ -62,7 +87,7 @@ O exemplo a seguir demonstra o uso de `yield!` para combinar Sequências individ
 
 As sequências dão suporte a muitas das mesmas funções que as [listas](lists.md). As sequências também dão suporte a operações como agrupamento e contagem usando funções de geração de chaves. As sequências também dão suporte a funções mais diversificadas para extração de subsequências.
 
-Muitos tipos de dados, como listas, matrizes, conjuntos e mapas são implicitamente sequências porque são coleções enumeráveis. Uma função que usa uma sequência como um argumento funciona com qualquer um dos tipos F# de dados comuns, além de qualquer .NET Framework tipo de dados que implementa `System.Collections.Generic.IEnumerable<'T>`. Compare isso com uma função que usa uma lista como um argumento, que só pode receber listas. O tipo `seq<'T>` é uma abreviação de tipo para `IEnumerable<'T>`. Isso significa que qualquer tipo que implementa o `System.Collections.Generic.IEnumerable<'T>`genérico, que inclui matrizes, listas, conjuntos e mapas no F#, e também a maioria .NET Framework tipos de coleção, é compatível com o tipo de `seq` e pode ser usado sempre que uma sequência é esperada.
+Muitos tipos de dados, como listas, matrizes, conjuntos e mapas são implicitamente sequências porque são coleções enumeráveis. Uma função que usa uma sequência como um argumento funciona com qualquer um dos tipos F# de dados comuns, além de qualquer tipo de dados .NET que implemente `System.Collections.Generic.IEnumerable<'T>`. Compare isso com uma função que usa uma lista como um argumento, que só pode receber listas. O tipo `seq<'T>` é uma abreviação de tipo para `IEnumerable<'T>`. Isso significa que qualquer tipo que implementa o `System.Collections.Generic.IEnumerable<'T>`genérico, que inclui matrizes, listas, conjuntos e mapas no F#, e também a maioria dos tipos de coleção .net, é compatível com o tipo de `seq` e pode ser usado sempre que uma sequência é esperada.
 
 ## <a name="module-functions"></a>Funções do módulo
 

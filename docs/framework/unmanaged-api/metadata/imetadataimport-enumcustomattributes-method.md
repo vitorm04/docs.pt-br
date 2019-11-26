@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 798513a0-68b1-4d04-bc5b-782a4445ea68
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c38b7f060c34f7408195484dec2c49305db422fe
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: a43c1883038e41cac1b58c78bc26f20d436ebbd1
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781314"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440243"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Método IMetaDataImport::EnumCustomAttributes
-Enumera os tokens de definição de atributo personalizado associados com o tipo especificado ou um membro.  
+Enumerates custom attribute-definition tokens associated with the specified type or member.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,36 +40,36 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [no, out] Um ponteiro para o enumerador retornado.  
+ [in, out] A pointer to the returned enumerator.  
   
  `tk`  
- [in] Um token para o escopo da enumeração, ou zero para todos os atributos personalizados.  
+ [in] A token for the scope of the enumeration, or zero for all custom attributes.  
   
  `tkType`  
- [in] Um token para o construtor do tipo dos atributos a serem enumerados, ou `null` para todos os tipos.  
+ [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
   
  `rCustomAttributes`  
- [out] Uma matriz de tokens de atributo personalizado.  
+ [out] An array of custom attribute tokens.  
   
  `cMax`  
- [in] O tamanho máximo da `rCustomAttributes` matriz.  
+ [in] The maximum size of the `rCustomAttributes` array.  
   
  `pcCustomAttributes`  
- [out, opcional] O número real de valores do token retornado na `rCustomAttributes`.  
+ [out, optional] The actual number of token values returned in `rCustomAttributes`.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` retornado com êxito.|  
-|`S_FALSE`|Não há nenhum atributo personalizado para enumerar. Nesse caso, `pcCustomAttributes` é zero.|  
+|`S_OK`|`EnumCustomAttributes` returned successfully.|  
+|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

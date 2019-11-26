@@ -39,7 +39,7 @@ A explicação técnica completa está disponível no wiki do repositório GitHu
 
 [passo a passos do eShopModernizing wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki)
 
-### <a name="overview"></a>Visão Geral
+### <a name="overview"></a>Visão geral
 
 Neste tutorial, você pode explorar a implementação inicial de três aplicativos herdados de exemplo. Os dois primeiros aplicativos Web de exemplo têm uma arquitetura monolítica e foram criados usando ASP.NET clássicas. Um aplicativo é baseado em ASP.NET 4. x MVC; o segundo aplicativo é baseado em Web Forms ASP.NET 4. x.
 O terceiro aplicativo é um aplicativo de três camadas composto por um aplicativo WinForms cliente e um serviço de Windows Communication Foundation do lado do servidor [(WCF)](../../framework/wcf/whats-wcf.md) .
@@ -74,7 +74,7 @@ A figura a seguir mostra o cenário simples do aplicativo herdado de três camad
 
 Os benefícios deste passo a passos são simples: Familiarize-se apenas com o código e os aplicativos iniciais.
 
-### <a name="next-steps"></a>Próximas etapas
+### <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Explore este conteúdo mais detalhadamente no wiki do GitHub:
 
@@ -83,7 +83,7 @@ Explore este conteúdo mais detalhadamente no wiki do GitHub:
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Walkthrough 2: colocar seus aplicativos .NET em contêineres existentes com contêineres do Windows
 
-### <a name="overview"></a>Visão Geral
+### <a name="overview"></a>Visão geral
 
 Use contêineres do Windows para aprimorar a implantação de aplicativos .NET existentes, como aqueles baseados em MVC, Web Forms ou WCF, para ambientes de produção, desenvolvimento e teste.
 
@@ -121,7 +121,7 @@ Os aplicativos em contêineres também têm uma curva de expansão Flatter. Os a
 
 A criação de contêineres, nas situações ideais, não requer nenhuma alteração no código do aplicativo (C\#). Na maioria dos cenários, você só precisa dos arquivos de metadados de implantação do Docker (arquivos Dockerfiles e Docker Compose).
 
-### <a name="next-steps"></a>Próximas etapas
+### <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Explore este conteúdo mais detalhadamente no wiki do GitHub:
 
@@ -134,7 +134,7 @@ Explore este conteúdo mais detalhadamente no wiki do GitHub:
 
 A explicação técnica completa está disponível no wiki do repositório GitHub do eShopModernizing: <https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
-### <a name="overview"></a>Visão Geral
+### <a name="overview"></a>Visão geral
 
 A implantação em um host do Docker em uma VM (máquina virtual) do Windows Server 2016 no Azure permite que você configure rapidamente ambientes de desenvolvimento/teste/preparo. Ele também oferece um lugar comum para os testadores ou usuários empresariais validarem o aplicativo. As VMs também podem ser ambientes de produção de IaaS (infraestrutura como serviço) válidos.
 
@@ -174,7 +174,7 @@ Atualmente, o Azure fornece uma VM chamada **Windows Server 2016 com contêinere
 
 Embora os contêineres do Windows possam ser implantados em VMs do Windows Server 2016 locais, quando você implanta no Azure, você obtém uma maneira mais fácil de começar, com VMs de contêiner do Windows Server prontas para uso. Você também obtém um local online comum que é acessível aos testadores e escalabilidade automática por meio de conjuntos de dimensionamento de máquinas virtuais do Azure.
 
-### <a name="next-steps"></a>Próximas etapas
+### <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Explore este conteúdo mais detalhadamente no wiki do GitHub:
 
@@ -188,7 +188,7 @@ A explicação técnica completa está disponível no wiki do repositório GitHu
 
 [Implantando os aplicativos no ACI (instâncias de contêiner do Azure)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
-### <a name="overview"></a>Visão Geral
+### <a name="overview"></a>Visão geral
 
 [ACI (instâncias de contêiner do Azure)](https://docs.microsoft.com/azure/container-instances/) é a maneira mais rápida de ter um ambiente de desenvolvimento/teste/preparo de contêineres no qual você pode implantar instâncias únicas de contêineres.
 
@@ -212,7 +212,7 @@ A implantação de contêineres do Windows com total .NET Framework/ASP.NET ou S
 
 Como conclusão principal, o uso de instâncias de contêiner do Azure é uma opção muito atraente para cenários de desenvolvimento/teste e para pipelines de CI/CD.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Explore este conteúdo mais detalhadamente no wiki do GitHub:
 
@@ -226,7 +226,7 @@ A explicação técnica completa está disponível no wiki do repositório GitHu
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
-### <a name="overview"></a>Visão Geral
+### <a name="overview"></a>Visão geral
 
 Um aplicativo baseado em contêineres do Windows precisará usar rapidamente as plataformas, movendo-se ainda mais longe das VMs IaaS. Isso é necessário para obter alta escalabilidade e melhor escalabilidade automatizada, e para uma melhoria significativa em implantações e versões automatizadas. Você pode atingir essas metas usando o Orchestrator [kubernetes](https://kubernetes.io/), disponível nos [serviços de contêiner do Azure](https://azure.microsoft.com/services/container-service/).
 
@@ -274,7 +274,7 @@ Com o kubernetes, os desenvolvedores podem progredir de pensar em máquinas virt
 
 - Verificações de integridade do aplicativo
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Explore este conteúdo mais detalhadamente no wiki do GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
@@ -286,7 +286,7 @@ A explicação técnica completa está disponível no wiki do repositório GitHu
 
 <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
-### <a name="overview"></a>Visão Geral
+### <a name="overview"></a>Visão geral
 
 Um aplicativo em contêineres simples usando contêineres do Windows pode ser facilmente implantado para Azure App serviço para contêineres. Essa é a abordagem recomendada para a maioria dos aplicativos baseados em contêiner do Windows.
 
@@ -302,7 +302,7 @@ O objetivo deste passo a passo é aprender como implantar um aplicativo baseado 
 
 A implantação no serviço de Azure App para contêineres oferece os benefícios dos contêineres emparelhados com os benefícios de PaaS do serviço Azure App. O serviço de aplicativo pode ser facilmente dimensionado vertical e horizontalmente e pode ser configurado para dimensionamento automático para atender às demandas em constante mudança. As atualizações podem ser executadas com zero tempo de inatividade e a configuração da implantação contínua de um registro também é facilmente configurada.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Explore este conteúdo mais detalhadamente no wiki do GitHub: <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 

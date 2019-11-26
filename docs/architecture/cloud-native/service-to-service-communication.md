@@ -3,12 +3,12 @@ title: Comunicação entre serviços
 description: Saiba como os microserviços nativos de nuvem de back-end se comunicam com outros microserviços de back-end.
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: 6a7e72491cb56d925e684b94109b1aaa98e24df3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094627"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087602"
 ---
 # <a name="service-to-service-communication"></a>Comunicação entre serviços
 
@@ -50,7 +50,7 @@ A execução de uma solicitação infrequente que faz uma única chamada HTTP di
 
 **Figura 4-9**. Encadeando consultas HTTP
 
-Certamente, você pode imaginar o risco no design mostrado na imagem anterior. O que acontecerá se a etapa \#3 falhar? Ou a etapa \#8 falha? Como você se recupera? E se a etapa \#6 estiver lenta porque o serviço subjacente está ocupado? Como você continua? Mesmo que tudo funcione corretamente, considere a latência que essa chamada incorreria, que é a soma da latência de cada etapa.
+Certamente, você pode imaginar o risco no design mostrado na imagem anterior. O que acontece se a etapa \#3 falhar? Ou a etapa \#8 falha? Como você se recupera? E se a etapa \#6 estiver lenta porque o serviço subjacente está ocupado? Como você continua? Mesmo que tudo funcione corretamente, considere a latência que essa chamada incorreria, que é a soma da latência de cada etapa.
 
 O grande grau de acoplamento na imagem anterior sugere que os serviços não foram modelados de forma ideal. Seria cabe a equipe a revisitar seu design.
 
@@ -78,7 +78,7 @@ Outra abordagem para desacoplar mensagens HTTP síncronas é um [padrão de soli
 
 Aqui, o produtor da mensagem cria uma mensagem baseada em consulta que contém uma ID de correlação exclusiva e a coloca em uma fila de solicitação. O serviço de consumo removerá as mensagens da fila, processará e colocará a resposta na fila de respostas com a mesma ID de correlação. O serviço produtor removerá a mensagem da fila, a corresponderá com a ID de correlação e continuará o processamento. Abordaremos as filas detalhadamente na próxima seção.
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 
 Outro tipo de interação de comunicação é um *comando*. Um microserviço pode precisar de outro microserviço para executar uma ação. O microserviço de pedidos pode precisar do microserviço de envio para criar uma remessa para uma ordem aprovada. Na Figura 4-12, um microserviço, chamado produtor, envia uma mensagem para outro microserviço, o consumidor, o comando para fazer algo.
 
@@ -208,7 +208,7 @@ A grade de eventos é um serviço de nuvem sem servidor totalmente gerenciado. E
 
 ### <a name="streaming-messages-in-the-azure-cloud"></a>Transmissão de mensagens na nuvem do Azure
 
-O barramento de serviço do Azure e a grade de eventos fornecem excelente suporte para aplicativos que expõem eventos únicos e discretos como um novo documento inserido em um Cosmos DB. Mas e se o seu sistema nativo de nuvem precisar processar um *fluxo de eventos relacionados*? Os [fluxos de eventos](https://msdn.microsoft.com/magazine/dn904671) são mais complexos. Normalmente, eles são ordenados por tempo, inter-relacionados e devem ser processados como um grupo.
+O barramento de serviço do Azure e a grade de eventos fornecem excelente suporte para aplicativos que expõem eventos únicos e discretos como um novo documento inserido em um Cosmos DB. Mas e se o seu sistema nativo de nuvem precisar processar um *fluxo de eventos relacionados*? Os [fluxos de eventos](https://docs.microsoft.com/archive/msdn-magazine/2015/february/microsoft-azure-the-rise-of-event-stream-oriented-systems) são mais complexos. Normalmente, eles são ordenados por tempo, inter-relacionados e devem ser processados como um grupo.
 
 O [Hub de eventos do Azure](https://azure.microsoft.com/services/event-hubs/) é uma plataforma de streaming de dados e um serviço de ingestão de eventos que coleta, transforma e armazena eventos. Ele é ajustado para capturar dados de streaming, como notificações de eventos contínuos emitidas de um contexto de telemetria. O serviço é altamente escalonável e pode armazenar e [processar milhões de eventos por segundo](https://docs.microsoft.com/azure/event-hubs/event-hubs-about). Mostrado na Figura 4-18, geralmente é uma porta frontal para um pipeline de eventos, desacoplando o fluxo de ingestão do consumo de eventos.
 
@@ -220,7 +220,7 @@ O Hub de eventos dá suporte à baixa latência e à retenção de tempo configu
 
 O Hub de eventos dá suporte a protocolos comuns de publicação de eventos, incluindo HTTPS e AMQP. Ele também dá suporte a Kafka 1,0. Os [aplicativos Kafka existentes podem se comunicar com o Hub de eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-for-kafka-ecosystem-overview) usando o protocolo Kafka, fornecendo uma alternativa ao gerenciamento de clusters grandes do Kafka. Muitos sistemas de código aberto em nuvem nativas adotam o Kafka.
 
-Os hubs de eventos implementam o streaming de mensagens por meio de um [modelo de consumidor particionado](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) no qual cada consumidor lê apenas um subconjunto específico, ou partição, do fluxo de mensagens. Esse padrão permite uma enorme escala horizontal para processamento de eventos e fornece outros recursos voltados para o fluxo que não estão disponíveis em filas e tópicos. Uma partição é uma sequência ordenada de eventos que é mantida em um hub de eventos. À medida que os eventos mais recentes chegam, eles são adicionados ao final dessa sequência. A Figura 4-19 mostra o particionamento em um hub de eventos.
+Os hubs de eventos implementam o streaming de mensagens por meio de um [modelo de consumidor particionado](https://docs.microsoft.com/azure/event-hubs/event-hubs-features) no qual cada consumidor lê apenas um subconjunto específico, ou partição, do fluxo de mensagens. Esse padrão permite a enorme escala horizontal para processamento de eventos e fornece outros recursos centrados no fluxo que não estão disponíveis em filas e tópicos. Uma partição é uma sequência ordenada de eventos que é mantida em um hub de eventos. À medida que os eventos mais recentes chegam, eles são adicionados ao final dessa sequência. A Figura 4-19 mostra o particionamento em um hub de eventos.
 
 ![Particionamento do hub de eventos](./media/event-hub-partitioning.png)
 

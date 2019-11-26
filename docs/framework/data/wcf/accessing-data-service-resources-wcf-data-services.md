@@ -8,18 +8,18 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: d18ec4fd57f2437ca936074e8dcf70f17f09b877
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991113"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975442"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Acessando recursos do serviço de dados (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]dá suporte ao para expor seus dados como um feed com recursos que podem ser endereçáveis por URIs. [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Esses recursos são representados de acordo com as convenções de relacionamento de entidade do [modelo de dados de entidade](../adonet/entity-data-model.md). Nesse modelo, as entidades representam unidades operacionais de dados que são tipos de dados em um domínio de aplicativo, como clientes, pedidos, itens e classes. Os dados de entidades são acessados e alterados usando-se a semântica REST (transferência de estado representativo), especificamente os verbos HTTP padrão GET, PUT, POST e DELETE.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dá suporte ao Protocolo Open Data (OData) para expor seus dados como um feed com recursos que podem ser endereçáveis por URIs. Esses recursos são representados de acordo com as convenções de relacionamento de entidade do [modelo de dados de entidade](../adonet/entity-data-model.md). Nesse modelo, as entidades representam unidades operacionais de dados que são tipos de dados em um domínio de aplicativo, como clientes, pedidos, itens e classes. Os dados de entidades são acessados e alterados usando-se a semântica REST (transferência de estado representativo), especificamente os verbos HTTP padrão GET, PUT, POST e DELETE.  
   
 ## <a name="addressing-resources"></a>Direcionando recursos  
- No [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], você direciona quaisquer dados expostos pelo modelo de dados usando um URI. Por exemplo, o URI a seguir retorna um feed que é o conjunto de entidades Customers, que contém entradas para todas as instâncias do tipo de entidade Customer:  
+ No OData, você aborda todos os dados expostos pelo modelo de dados usando um URI. Por exemplo, o URI a seguir retorna um feed que é o conjunto de entidades Customers, que contém entradas para todas as instâncias do tipo de entidade Customer:  
   
 <https://services.odata.org/Northwind/Northwind.svc/Customers>
   
@@ -43,20 +43,20 @@ ms.locfileid: "70991113"
   
 <https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/Customer>
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]também permite que você resolva recursos com base nos resultados de expressões de consulta. Isso possibilita filtrar conjuntos de recursos com base em uma expressão avaliada. Por exemplo, o seguinte URI filtra os recursos para retornar somente os pedidos para o cliente especificado que foram remetidos desde 22 de setembro de 1997:  
+ O OData também permite que você resolva recursos com base nos resultados de expressões de consulta. Isso possibilita filtrar conjuntos de recursos com base em uma expressão avaliada. Por exemplo, o seguinte URI filtra os recursos para retornar somente os pedidos para o cliente especificado que foram remetidos desde 22 de setembro de 1997:  
   
 <https://services.odata.org/Northwind/Northwind.svc/Customers( ' ALFKI ')/Orders? $filter = DataDeEnvio gt DateTime ' 1997-09-22T00:00:00 ' >
   
- Para obter mais informações, [consulte OData: Convenções](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)de URI.
+ Para obter mais informações, consulte [OData: convenções de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="system-query-options"></a>Opções de consulta de sistema  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]define um conjunto de opções de consulta do sistema que você pode usar para executar operações de consulta tradicionais em recursos, como filtragem, classificação e paginação. Por exemplo, o URI a seguir retorna o conjunto de todas `Order` as entidades, juntamente com `Order_Detail` as entidades relacionadas, os CEPs que não terminam em `100`:  
+ O OData define um conjunto de opções de consulta do sistema que você pode usar para executar operações de consulta tradicionais em recursos, como filtragem, classificação e paginação. Por exemplo, o URI a seguir retorna o conjunto de todas as entidades de `Order`, juntamente com as entidades de `Order_Detail` relacionadas, os CEPs que não terminam em `100`:  
   
-<https://services.odata.org/Northwind/Northwind.svc/Orders? $filter = não EndsWith (ShipPostalCode, ' 100 ') & $expand = Detalhes_pedido & $orderby = CidadeDeDestino >
+<https://services.odata.org/Northwind/Northwind.svc/Orders? $filter = not EndsWith (ShipPostalCode, ' 100 ') & $expand = Order_Details & $orderby = CidadeDeDestino >
   
  As entradas no feed retornado também são ordenadas pelo valor da propriedade ShipCity dos pedidos.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]o oferece suporte [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] às seguintes opções de consulta do sistema:  
+ o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dá suporte às seguintes opções de consulta do sistema OData:  
   
 |Opção de consulta|Descrição|  
 |------------------|-----------------|  
@@ -69,14 +69,14 @@ ms.locfileid: "70991113"
 |`$inlinecount`|Solicitações de que uma contagem do número de entidades retornadas no feed seja incluída no feed.|  
   
 ## <a name="addressing-relationships"></a>Direcionando relações  
- Além de tratar conjuntos de entidades e instâncias de entidade [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] , o também permite que você resolva as associações que representam as relações entre entidades. Essa funcionalidade é necessária para que seja possível criar ou alterar uma relação entre duas instâncias de entidade, como o remetente que está relacionado a um determinado pedido no banco de dados de exemplo Northwind. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]dá suporte `$link` a um operador para atender especificamente às associações entre entidades. Por exemplo, o URI a seguir é especificado em uma mensagem de solicitação PUT HTTP para alterar o remetente do pedido especificado para um novo remetente.  
+ Além de tratar conjuntos de entidades e instâncias de entidade, o OData também permite que você resolva as associações que representam as relações entre entidades. Essa funcionalidade é necessária para que seja possível criar ou alterar uma relação entre duas instâncias de entidade, como o remetente que está relacionado a um determinado pedido no banco de dados de exemplo Northwind. O OData dá suporte a um operador de `$link` para atender especificamente às associações entre entidades. Por exemplo, o URI a seguir é especificado em uma mensagem de solicitação PUT HTTP para alterar o remetente do pedido especificado para um novo remetente.  
   
 <https://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper>
   
- Para obter mais informações, consulte `3.2. Addressing Links between Entries` a [seção em OData: Convenções](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)de URI.
+ Para obter mais informações, consulte a seção `3.2. Addressing Links between Entries` em [OData: convenções de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
   
 ## <a name="consuming-the-returned-feed"></a>Consumindo o feed retornado  
- O URI de um [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] recurso permite que você resolva os dados de entidade expostos pelo serviço. Quando você insere um URI no campo endereço de um navegador da Web, uma [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] representação de feed do recurso solicitado é retornada. Para obter mais informações, consulte o guia de [início rápido do WCF Data Services](quickstart-wcf-data-services.md). Embora um navegador da Web possa ser útil para testar se um recurso de serviço de dados retorna os dados esperados, os serviços de dados de produção que também podem criar, atualizar e excluir dados são geralmente acessados pelo código do aplicativo ou por linguagens de script em uma página da Web. Para obter mais informações, consulte [usando um serviço de dados em um aplicativo cliente](using-a-data-service-in-a-client-application-wcf-data-services.md).  
+ O URI de um recurso OData permite que você resolva os dados de entidade expostos pelo serviço. Quando você insere um URI no campo endereço de um navegador da Web, uma representação de feed OData do recurso solicitado é retornada. Para obter mais informações, consulte o guia de [início rápido do WCF Data Services](quickstart-wcf-data-services.md). Embora um navegador da Web possa ser útil para testar se um recurso de serviço de dados retorna os dados esperados, os serviços de dados de produção que também podem criar, atualizar e excluir dados são geralmente acessados pelo código do aplicativo ou por linguagens de script em uma página da Web. Para obter mais informações, consulte [usando um serviço de dados em um aplicativo cliente](using-a-data-service-in-a-client-application-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Consulte também
 

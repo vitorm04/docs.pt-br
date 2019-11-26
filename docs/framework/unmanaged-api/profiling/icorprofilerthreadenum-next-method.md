@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: f3535279-3c63-41a2-ab0e-a129dc5a01e8
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c307c09c4593a3e5eefcda2c834132ac57a12d5
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e78285c915938c553a9b4012ba57257ac43492ad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67779948"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447602"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>Método ICorProfilerThreadEnum::Next
-Obtém o número especificado de threads contíguos de uma coleção sequencial de threads, começando na posição atual do enumerador na sequência.  
+Gets the specified number of contiguous threads from a sequential collection of threads, starting at the enumerator's current position in the sequence.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,26 +37,26 @@ HRESULT Next (    [in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] O número de threads para recuperar.  
+ [in] The number of threads to retrieve.  
   
  `ids`  
- [out] Uma matriz de `ThreadID` valores, cada um deles representa um thread recuperado.  
+ [out] An array of `ThreadID` values, each of which represents a retrieved thread.  
   
  `pceltFetched`  
- [out] Um ponteiro para o número de threads, na verdade, é retornado no `ids` matriz.  
+ [out] A pointer to the number of threads actually returned in the `ids` array.  
   
-## <a name="return-value"></a>Valor de retorno  
- Esse método retorna os HRESULTs específicos a seguir, bem como o HRESULT erros que indicam falha do método.  
+## <a name="return-value"></a>Valor retornado  
+ This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt` elementos foram retornados.|  
-|S_FALSE|Menos de `celt` elementos foram retornados, que indica que a enumeração foi concluída.|  
+|S_OK|`celt` elements were returned.|  
+|S_FALSE|Fewer than `celt` elements were returned, which indicates that the enumeration is complete.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

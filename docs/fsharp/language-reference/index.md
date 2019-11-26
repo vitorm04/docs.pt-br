@@ -30,14 +30,14 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |Título|Descrição|
 |-----|-----------|
 |[Funções](./functions/index.md)|As funções são a unidade fundamental de execução do programa em qualquer linguagem de programação. Como em outras linguagens, uma função do F# tem um nome, pode ter parâmetros e receber argumentos, e tem um corpo. O F# também oferece suporte a construções de programação funcional como tratamento de funções como valores, uso de funções sem nome em expressões, composição de funções para formar novas funções, funções via currying e a definição implícita de funções por meio da aplicação parcial dos argumentos da função.|
-|[Tipos F#](fsharp-types.md)|Descreve os tipos que são usados no F# e como os tipos F# são nomeados e descritos.|
+|[Tipos do F#](fsharp-types.md)|Descreve os tipos que são usados no F# e como os tipos F# são nomeados e descritos.|
 |[Inferência de Tipos](type-inference.md)|Descreve como o compilador do F# infere os tipos de valores, variáveis, parâmetros e valores de retorno.|
-|[Generalização Automática](./generics/automatic-generalization.md)|Descreve as construções genéricas no F#.|
+|[Generalização automática](./generics/automatic-generalization.md)|Descreve as construções genéricas no F#.|
 |[Herança](inheritance.md)|Descreve a herança, que é usada para modelar a relação "é um" ou subtipagem na programação orientada a objetos.|
 |[Membros](./members/index.md)|Descreve os membros de tipos de objeto do F#.|
 |[Parâmetros e Argumentos](Parameters-and-Arguments.md)|Descreve o suporte de linguagem para definir parâmetros e passar argumentos para funções, métodos e propriedades. Inclui informações sobre como passar referência.|
 |[Sobrecarga de Operador](operator-overloading.md)|Descreve como sobrecarregar operadores aritméticos em uma classe ou tipo de registro e no nível global.|
-|[Conversões Cast e conversões](casting-and-conversions.md)|Descreve o suporte para conversões de tipos no F#.|
+|[Conversões](casting-and-conversions.md)|Descreve o suporte para conversões de tipos no F#.|
 |[Controle de Acesso](access-control.md)|Descreve o controle de acesso no F#. Controle de acesso significa declarar que os clientes são capazes de usar determinados elementos de programação, como tipos, métodos, funções e assim por diante.|
 |[Correspondência Padrão](pattern-matching.md)|Descreve os padrões, que são regras para transformar os dados de entrada que são usados em toda a linguagem F# para extrair dados de comparação com um padrão, decompor os dados em partes constituintes ou extrair informações de dados de várias maneiras.|
 |[Padrões Ativos](active-patterns.md)|Descreve padrões ativos. Padrões ativos permitem definir partições nomeadas que subdividem os dados de entrada. Você pode usar padrões ativos para decompor os dados de uma maneira personalizada para cada partição.|
@@ -63,7 +63,7 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |[Tipo Unit](unit-type.md)|Descreve o tipo `unit`, que é um tipo que indica a ausência de um valor específico; o tipo `unit` tem apenas um único valor, que atua como espaço reservado quando nenhum outro valor existe ou é necessário.|
 |[Cadeias de Caracteres](strings.md)|Descreve cadeias de caracteres no F#. O tipo `string` representa texto imutável, como uma sequência de caracteres Unicode. `string` é um alias para `System.String` no .NET Framework.|
 |[Tuplas](tuples.md)|Descreve as tuplas, que são agrupamentos de valores sem nome, mas valores ordenados de tipos possivelmente diferentes.|
-|[Tipos de Coleção de F#](fsharp-collection-types.md)|Visão geral dos tipos de coleção funcional do F#, incluindo tipos de matrizes, listas, sequências (seq), mapas e conjuntos.|
+|[Tipos de Coleção do F#](fsharp-collection-types.md)|Visão geral dos tipos de coleção funcional do F#, incluindo tipos de matrizes, listas, sequências (seq), mapas e conjuntos.|
 |[Listas](lists.md)|Descreve as listas. Uma lista no F# é uma série imutável, ordenada, de elementos do mesmo tipo.|
 |[Opções](options.md)|Descreve o tipo de opção. Uma opção no F# é usada quando um valor pode ou não existir. Uma opção tem um tipo subjacente e pode conter um valor desse tipo ou pode não ter um valor.|
 |[Sequências](sequences.md)|Descreve as sequências. Uma sequência é uma série lógica de elementos todos de um tipo. Os elementos individuais de sequência são computados somente se for necessário, para que a representação possa ser menor do que indicado por uma contagem do elemento literal.|

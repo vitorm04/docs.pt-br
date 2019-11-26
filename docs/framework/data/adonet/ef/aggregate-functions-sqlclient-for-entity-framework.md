@@ -16,11 +16,11 @@ O provedor de dados. NET Framework para SQL Server (SqlClient) fornece funções
 
 ## <a name="avgexpression"></a>AVG (expressão)
 
-Retorna a média dos valores em uma coleção. Valores nulos são ignorados.
+Retorna a média dos valores em uma coleção. Os valores nulos são ignorados.
 
 **Argumentos**
 
-Um `Int32`, `Int64`, `Double` e `Decimal`.
+Um `Int32`, `Int64`, `Double`e `Decimal`.
 
 **Valor retornado**
 
@@ -32,7 +32,7 @@ O tipo de `expression`.
 
 ## <a name="checksum_aggcollection"></a>CHECKSUM_AGG (coleção)
  
- Retorna a soma de verificação dos valores em uma coleção. Valores nulos são ignorados.
+ Retorna a soma de verificação dos valores em uma coleção. Os valores nulos são ignorados.
  
  **Argumentos**
  
@@ -52,7 +52,7 @@ Retorna o número de itens em uma coleção como `Int32`.
 
 **Argumentos**
 
-Uma coleção @ no__t-0T >, em que T é um dos seguintes tipos:
+Uma coleção\<T >, em que T é um dos seguintes tipos:
 
 |   |   |   |   |
 |---|---|---|---|
@@ -168,7 +168,7 @@ Retorna a soma de todos os valores na coleção.
 
 **Argumentos**
 
-Uma coleção (T), em que T é um dos seguintes tipos: `Int32`, `Int64`, `Double`, `Decimal`.
+Uma coleção (T), em que T é um dos seguintes tipos: `Int32`, `Int64`, `Double``Decimal`.
 
 **Valor retornado**
 

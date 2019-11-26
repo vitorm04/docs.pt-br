@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8027df7c-cfad-4724-bda0-7538d9519070
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6be71878ba354ebe53b4b8b9b40db3222ec828f3
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 1362efbf518310240ce665badc93810d1c0b9b89
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781733"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450193"
 ---
 # <a name="cornativelinkflags-enumeration"></a>Enumeração CorNativeLinkFlags
-Fornece valores de sinalizador usados pelo vinculador ao vincular o código nativo.  
+Provides flag values used by the linker when linking native code.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,17 +40,17 @@ typedef enum
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`nlfNone`|Não indica que nenhum sinalizador.|  
-|`nlfLastError`|Indica um `setLastError` palavra-chave.|  
-|`nlfNoMangle`|Indica um `nomangle` palavra-chave.|  
+|`nlfNone`|Indicates no flags.|  
+|`nlfLastError`|Indicates a `setLastError` keyword.|  
+|`nlfNoMangle`|Indicates a `nomangle` keyword.|  
 |`nlfMaxValue`|Não usado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

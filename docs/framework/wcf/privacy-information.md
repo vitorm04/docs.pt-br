@@ -19,7 +19,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 ## <a name="wcf-in-brief"></a>WCF em resumo  
  O WCF é uma estrutura de mensagens distribuídas usando o Microsoft .NET Framework que permite aos desenvolvedores criar aplicativos distribuídos. As mensagens comunicadas entre dois aplicativos contêm informações de cabeçalho e corpo.  
   
- Os cabeçalhos podem conter roteamento de mensagens, informações de segurança, transações e muito mais, dependendo dos serviços usados pelo aplicativo. Normalmente, as mensagens são criptografadas por padrão. A única exceção é ao usar o `BasicHttpBinding`, que foi projetado para ser usado com serviços Web herdados e não protegidos. Como o designer de aplicativos, você é responsável pelo design final. As mensagens no corpo SOAP contêm dados específicos do aplicativo; no entanto, esses dados, como informações pessoais definidas pelo aplicativo, podem ser protegidos usando recursos de confidencialidade ou criptografia do WCF. As seções a seguir descrevem os recursos que potencialmente afetam a privacidade.  
+ Os cabeçalhos podem conter roteamento de mensagens, informações de segurança, transações e muito mais, dependendo dos serviços usados pelo aplicativo. Normalmente, as mensagens são criptografadas por padrão. A única exceção é ao usar o `BasicHttpBinding`, que foi projetado para uso com serviços Web herdados e não protegidos. Como o designer de aplicativos, você é responsável pelo design final. As mensagens no corpo SOAP contêm dados específicos do aplicativo; no entanto, esses dados, como informações pessoais definidas pelo aplicativo, podem ser protegidos usando recursos de confidencialidade ou criptografia do WCF. As seções a seguir descrevem os recursos que potencialmente afetam a privacidade.  
   
 ## <a name="messaging"></a>Mensagens  
  Cada mensagem do WCF tem um cabeçalho de endereço que especifica o destino da mensagem e onde a resposta deve ir.  
@@ -54,7 +54,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 ## <a name="auditing"></a>Auditoria  
  A auditoria registra o êxito e a falha de eventos de autenticação e autorização. Os registros de auditoria contêm os seguintes dados: URI de serviço, URI de ação e identificação do chamador.  
   
- A auditoria também registra quando o administrador modifica a configuração do log de mensagens (ativando ou desligando), pois o log de mensagens pode registrar dados específicos do aplicativo em cabeçalhos e corpos. Para [!INCLUDE[wxp](../../../includes/wxp-md.md)], um registro é registrado no log de eventos do aplicativo. Para [!INCLUDE[wv](../../../includes/wv-md.md)] e [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], um registro é registrado no log de eventos de segurança.  
+ A auditoria também registra quando o administrador modifica a configuração do log de mensagens (ativando ou desligando), pois o log de mensagens pode registrar dados específicos do aplicativo em cabeçalhos e corpos. Por [!INCLUDE[wxp](../../../includes/wxp-md.md)], um registro é registrado no log de eventos do aplicativo. Para [!INCLUDE[wv](../../../includes/wv-md.md)] e [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], um registro é registrado no log de eventos de segurança.  
   
 ## <a name="transactions"></a>Transações  
  O recurso de transações fornece serviços transacionais para um aplicativo WCF.  
@@ -98,7 +98,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
  Há dois tipos de rastreamento: log de mensagens e rastreamento de diagnóstico do modelo de serviço, descritos na seção a seguir. Cada tipo é configurado por meio de sua própria origem de rastreamento: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Ambas as fontes de rastreamento de log capturam dados que são locais para o aplicativo.  
   
 ### <a name="message-logging"></a>Registro em log de mensagens  
- A origem do rastreamento de log de mensagens (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) permite que um administrador Registre as mensagens que fluem pelo sistema. Por meio da configuração, o usuário pode decidir registrar somente mensagens inteiras ou cabeçalhos de mensagem, se deseja registrar nas camadas de modelo de transporte e/ou serviço e se deseja incluir mensagens malformadas. Além disso, o usuário pode configurar a filtragem para restringir quais mensagens são registradas.  
+ A fonte de rastreamento de log de mensagens (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) permite que um administrador Registre as mensagens que fluem pelo sistema. Por meio da configuração, o usuário pode decidir registrar somente mensagens inteiras ou cabeçalhos de mensagem, se deseja registrar nas camadas de modelo de transporte e/ou serviço e se deseja incluir mensagens malformadas. Além disso, o usuário pode configurar a filtragem para restringir quais mensagens são registradas.  
   
  Por padrão, o log de mensagens está desabilitado. O administrador do computador local pode impedir que o administrador de nível de aplicativo ative o log de mensagens.  
   
@@ -129,9 +129,9 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \- para xmlns: WST = "http://schemas.xmlsoap.org/ws/2004/04/trust" e xmlns: WST = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
- WST: BinarySecret  
+ wst:BinarySecret  
   
- WST: entropia  
+ wst:Entropy  
   
  \- para xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" e xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
@@ -145,59 +145,59 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  wsse: nome de usuário  
   
- wsse: BinarySecurityToken  
+ wsse:BinarySecurityToken  
   
  \- para xmlns: SAML = "urn: Oasis: names: TC: SAML: 1.0: Assertion" os itens em negrito (abaixo) são removidos:  
   
- \<Assertion  
+ Asserção de \<  
   
- MajorVersion = "1"  
+ MajorVersion="1"  
   
- MinorVersion = "1"  
+ MinorVersion="1"  
   
- AssertionId = "[ID]"  
+ AssertionId="[ID]"  
   
- Emissor = "[cadeia de caracteres]"  
+ Issuer="[string]"  
   
- IssueInstant = "[dateTime]"  
+ IssueInstant="[dateTime]"  
   
  >  
   
- \<Conditions não before = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<Audience > [URI] \</público > +  
+ \<público > [URI]\</Audience > +  
   
- \</AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<DoNotCacheCondition/> *  
   
- < @ no__t-1--tipo base abstrato  
+ <\!--tipo base abstrato  
   
- \<Condition/> *  
+ Condição de \</> *  
   
  -->  
   
- \</condições >?  
+ \</Conditions >?  
   
- \<Advice >  
+ \<conselhos >  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > *  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>*  
   
- \<Assertion > [asserção] \</asserção > *  
+ \<asserção > [asserção]\</Assertion > *  
   
  [qualquer] *  
   
- \</> de conselhos?  
+ \</Advice >?  
   
- < @ no__t-1--tipos base abstratos  
+ <\!--tipos base abstratos  
   
- \<Statement/> *  
+ Instrução \</> *  
   
  \<SubjectStatement >  
   
- \<Subject >  
+ \<assunto >  
   
  `<NameIdentifier`  
   
@@ -211,17 +211,17 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
- \<ConfirmationMethod > [anyURI] \</ConfirmationMethod > +  
+ \<ConfirmationMethod > [anyURI]\</ConfirmationMethod > +  
   
- \<SubjectConfirmationData > [any] \</SubjectConfirmationData >?  
+ \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<DS: KeyInfo >... \</DS: KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</SubjectConfirmation >?  
+ \</SubjectConfirmation>?  
   
- \</assunto >  
+ \</Subject>  
   
  \</SubjectStatement > *  
   
@@ -231,7 +231,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  AuthenticationMethod = "[URI]"  
   
- AuthenticationInstant = "[dateTime]"  
+ AuthenticationInstant="[dateTime]"  
   
  >  
   
@@ -247,57 +247,57 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  < Authoritybinding  
   
- AuthorityKind = "[QName]"  
+ AuthorityKind="[QName]"  
   
- Location = "[URI]"  
+ Location="[uri]"  
   
- Binding = "[URI]"  
+ Binding="[uri]"  
   
  />*  
   
- \</AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
  \<AttributeStatement >  
   
  Subjetiva  
   
- \<Attribute  
+ \<atributo  
   
- AttributeName = "[cadeia de caracteres]"  
+ AttributeName="[string]"  
   
- AttributeNamespace = "[URI]"  
+ AttributeNamespace="[uri]"  
   
  >  
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</atributo > +  
+ \</attribute > +  
   
- \</AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
- Recurso = "[URI]"  
+ Resource="[uri]"  
   
- Decisão = "[permitir&#124;negar&#124;indeterminado]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  Subjetiva  
   
- \<Action namespace = "[URI]" > [cadeia de caracteres] \</ação > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
- \<Evidence >  
+ Evidência de \<>  
   
- \<AssertionIDReference > [ID] \</AssertionIDReference > +  
+ \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
- \<Assertion > [asserção] \</asserção > +  
+ \<asserção > [asserção]\</Assertion > +  
   
- \</> de evidência?  
+ \</Evidence >?  
   
- \</AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</asserção >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informações removidas de corpos de mensagens ao registrar em log mensagens descriptografadas/sem criptografia  
  Conforme descrito anteriormente, o WCF remove as chaves e as informações potencialmente pessoais conhecidas dos cabeçalhos de mensagem para mensagens descriptografadas/descriptografadas registradas. Além disso, o WCF remove as chaves e as informações potencialmente pessoais conhecidas dos corpos de mensagens para os elementos e ações do corpo na lista a seguir, que descrevem as mensagens de segurança envolvidas na troca de chaves.  
@@ -308,11 +308,11 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  As informações são removidas para esses elementos do corpo, que envolvem a troca de chaves:  
   
- WST: RequestSecurityToken  
+ wst:RequestSecurityToken  
   
- WST: RequestSecurityTokenResponse  
+ wst:RequestSecurityTokenResponse  
   
- WST: RequestSecurityTokenResponseCollection  
+ wst:RequestSecurityTokenResponseCollection  
   
  As informações também são removidas para cada uma das seguintes ações:  
   
@@ -362,7 +362,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
  Quando o log de mensagens está ativado, informações pessoais em cabeçalhos específicos do aplicativo e informações de corpo podem estar visíveis nos logs. Novamente, o implantador de aplicativos é responsável por definir as ACLs nos arquivos de configuração e de log. Ele também pode desativar o registro em log se ele não quiser que essas informações fiquem visíveis ou se ele puder filtrar essas informações dos arquivos de log depois que ele for registrado.  
   
 ### <a name="service-model-tracing"></a>Rastreamento do modelo de serviço  
- A fonte de rastreamento do modelo de serviço (<xref:System.ServiceModel>) permite o rastreamento de atividades e eventos relacionados ao processamento de mensagens. Esse recurso usa a funcionalidade de diagnóstico .NET Framework de <xref:System.Diagnostics>. Assim como com a propriedade <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>, o local e sua ACL são configuráveis pelo usuário usando .NET Framework arquivos de configuração de aplicativo. Assim como ocorre com o log de mensagens, o local do arquivo é sempre configurado quando o administrador habilita o rastreamento; Portanto, o administrador controla a ACL.  
+ A fonte de rastreamento do modelo de serviço (<xref:System.ServiceModel>) permite o rastreamento de atividades e eventos relacionados ao processamento de mensagens. Esse recurso usa a funcionalidade de diagnóstico .NET Framework da <xref:System.Diagnostics>. Assim como com a propriedade <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>, o local e sua ACL são configuráveis pelo usuário usando .NET Framework arquivos de configuração de aplicativo. Assim como ocorre com o log de mensagens, o local do arquivo é sempre configurado quando o administrador habilita o rastreamento; Portanto, o administrador controla a ACL.  
   
  Os rastreamentos contêm cabeçalhos de mensagem quando uma mensagem está no escopo. As mesmas regras para ocultar informações potencialmente pessoais em cabeçalhos de mensagens na seção anterior se aplicam: as informações pessoais identificadas anteriormente são removidas por padrão dos cabeçalhos em rastreamentos. Tanto o administrador do computador quanto o implantador de aplicativos devem modificar a configuração para registrar informações potencialmente pessoais. No entanto, as informações pessoais contidas em cabeçalhos específicos do aplicativo são registradas em rastreamentos. O implantador de aplicativos é responsável por definir as ACLs nos arquivos de configuração e de rastreamento. Ele também poderá desativar o rastreamento se ele não quiser que essas informações fiquem visíveis ou se ele puder filtrar essas informações dos arquivos de rastreamento depois que ele for registrado.  
   
@@ -381,10 +381,10 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 ### <a name="it-pro-tools"></a>Ferramentas de profissionais de ti  
  O WCF também fornece as seguintes ferramentas profissionais de ti, que são fornecidas na SDK do Windows.  
   
-#### <a name="svctraceviewerexe"></a>SvcTraceViewer. exe  
+#### <a name="svctraceviewerexe"></a>SvcTraceViewer.exe  
  O visualizador exibe os arquivos de rastreamento do WCF. O visualizador mostra qualquer informação contida nos rastreamentos.  
   
-#### <a name="svcconfigeditorexe"></a>SvcConfigEditor. exe  
+#### <a name="svcconfigeditorexe"></a>SvcConfigEditor.exe  
  O editor permite que o usuário crie e edite arquivos de configuração do WCF. O editor mostra qualquer informação contida nos arquivos de configuração. A mesma tarefa pode ser realizada com um editor de texto.  
   
 #### <a name="servicemodel_reg"></a>ServiceModel_Reg  

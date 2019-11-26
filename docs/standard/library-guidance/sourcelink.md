@@ -4,12 +4,12 @@ description: Recomendações de melhores práticas de uso do Source Link para me
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 7530c984ce4bbe9e40362bd550bec57ac585a550
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 89f9e3b1fd70003c528465f29a143b157468d539
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928986"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089293"
 ---
 # <a name="source-link"></a>Source Link
 
@@ -23,9 +23,9 @@ O Source Link é uma tecnologia que permite a depuração de código-fonte dos a
 
 Encontre instruções sobre como usar o Source Link no repositório GitHub [dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md).
 
-Use o [Explorador de Pacotes NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) para confirmar que os metadados do Source Link foram inseridos com êxito no pacote. Verifique se os metadados `Repository` estão presentes com um identificador de comentário e se os arquivos .pdb estão localizados com o .dll de cada destino.
+Use o [Explorador de Pacotes NuGet](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer) para confirmar que os metadados do Source Link foram inseridos com êxito no pacote. Verifique se os metadados do `Repository` estão presentes com um identificador de confirmação e se os arquivos. pdb estão localizados com o. dll de cada destino.
 
-![Source Link no Explorador de Pacotes NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Source Link in NuGet Package Explorer")
+![Link de origem no Gerenciador de pacotes NuGet](./media/sourcelink/nuget-package-explorer-sourcelink.png "Link de origem no Gerenciador de pacotes NuGet")
 
 **✔️ CONSIDERE** o uso do Source Link para adicionar metadados de controle do código-fonte aos assemblies e pacotes NuGet.
 

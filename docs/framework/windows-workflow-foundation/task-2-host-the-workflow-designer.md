@@ -1,5 +1,5 @@
 ---
-title: 'Tarefa 2: Hospedar o Designer de Fluxo de Trabalho'
+title: 'Tarefa 2: Hospedar Designer de Fluxo de Trabalho'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 15657ad79632812d3802e4da22b9ef297d08f932
@@ -9,15 +9,15 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/09/2019
 ms.locfileid: "72180258"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>Tarefa 2: Hospedar o Designer de Fluxo de Trabalho
+# <a name="task-2-host-the-workflow-designer"></a>Tarefa 2: Hospedar Designer de Fluxo de Trabalho
 
-Este tópico descreve o procedimento para hospedar uma instância do [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] em um aplicativo Windows Presentation Foundation (WPF).
+Este tópico descreve o procedimento para hospedar uma instância do [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] em um aplicativo do Windows Presentation Foundation (WPF).
 
-O procedimento configura o controle de **grade** que contém o designer, cria programaticamente uma instância do <xref:System.Activities.Presentation.WorkflowDesigner> que contém uma atividade de <xref:System.Activities.Statements.Sequence> padrão, registra os metadados do designer para fornecer suporte de designer para todos os atividades e hospeda o [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] no aplicativo do WPF.
+O procedimento configura o controle de **grade** que contém o designer, cria programaticamente uma instância do <xref:System.Activities.Presentation.WorkflowDesigner> que contém uma atividade de <xref:System.Activities.Statements.Sequence> padrão, registra os metadados do designer para fornecer suporte ao designer para todas as atividades internas e hospeda o [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] no aplicativo WPF.
 
 ## <a name="to-host-the-workflow-designer"></a>Para hospedar o designer de fluxo de trabalho
 
-1. Abra o projeto HostingApplication que você criou no [Task 1: Crie um novo aplicativo Windows Presentation Foundation @ no__t-0.
+1. Abra o projeto HostingApplication que você criou na [tarefa 1: criar um novo aplicativo Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).
 
 2. Ajuste o tamanho da janela para facilitar usar [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para fazer isso, selecione **MainWindow** no designer, pressione F4 para exibir a janela **Propriedades** e, na seção **layout** , defina a **largura** como um valor de 600 e a **altura** como um valor de 350.
 
@@ -25,7 +25,7 @@ O procedimento configura o controle de **grade** que contém o designer, cria pr
 
 4. Na janela **Propriedades** , clique nas reticências ( **...** ) ao lado da propriedade `ColumnDefinitions` para abrir a caixa de diálogo **Editor de coleção** .
 
-5. Na caixa de diálogo **Editor de coleção** , clique no botão **Adicionar** três vezes para inserir três colunas no layout. A primeira coluna conterá a **caixa de ferramentas**, a segunda coluna hospedará o [!INCLUDE[wfd2](../../../includes/wfd2-md.md)], e a terceira coluna será usada para o Inspetor de propriedades.
+5. Na caixa de diálogo **Editor de coleção** , clique no botão **Adicionar** três vezes para inserir três colunas no layout. A primeira coluna conterá a **caixa de ferramentas**, a segunda coluna hospedará o [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]e a terceira coluna será usada para o Inspetor de propriedades.
 
 6. Defina a propriedade `Width` da coluna do meio como o valor "4 *".
 
@@ -98,7 +98,7 @@ O procedimento configura o controle de **grade** que contém o designer, cria pr
         }
         ```
 
-        Para obter mais informações sobre como registrar os designers de atividade, consulte [How para: Crie um designer de atividade personalizado @ no__t-0.
+        Para obter mais informações sobre como registrar os designers de atividade, consulte [como criar um designer de atividade personalizado](how-to-create-a-custom-activity-designer.md).
 
     5. No construtor da classe de `MainWindow` , adicione chamadas para métodos previamente declaradas para registrar os metadados para o suporte de designer e criar <xref:System.Activities.Presentation.WorkflowDesigner>.
 
@@ -120,10 +120,10 @@ O procedimento configura o controle de **grade** que contém o designer, cria pr
 
 9. Pressione <kbd>F5</kbd> para compilar e executar a solução.
 
-10. Consulte [Task 3: Crie os painéis caixa de ferramentas e PropertyGrid @ no__t-0 para saber como adicionar suporte a **caixa de ferramentas** e **PropertyGrid** ao designer de fluxo de trabalho rehospedado.
+10. Consulte [tarefa 3: criar os painéis caixa de ferramentas e PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md) para saber como adicionar suporte a **caixa de ferramentas** e **PropertyGrid** ao designer de fluxo de trabalho rehospedado.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Hospedando novamente o Designer de Fluxo de Trabalho](rehosting-the-workflow-designer.md)
-- [Task 1: Criar um novo aplicativo Windows Presentation Foundation @ no__t-0
-- [Task 3: Criar a caixa de ferramentas e os painéis de PropertyGrid @ no__t-0
+- [Tarefa 1: Criar um novo aplicativo do Windows Presentation Foundation](task-1-create-a-new-wpf-app.md)
+- [Tarefa 3: Criar a caixa de ferramentas e os painéis de PropertyGrid](task-3-create-the-toolbox-and-propertygrid-panes.md)

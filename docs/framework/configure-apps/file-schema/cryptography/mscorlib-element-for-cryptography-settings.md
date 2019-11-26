@@ -16,10 +16,10 @@ ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699742"
 ---
 # <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > elemento para configurações de criptografia
-Contém o [elemento \<cryptographySettings >](cryptographysettings-element.md).  
+Contém o [elemento\<cryptographySettings >](cryptographysettings-element.md).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<mscorlib >**  
+&nbsp;&nbsp; **\<mscorlib >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,10 +29,10 @@ Contém o [elemento \<cryptographySettings >](cryptographysettings-element.md).
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ None.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -40,13 +40,13 @@ Contém o [elemento \<cryptographySettings >](cryptographysettings-element.md).
 |-------------|-----------------|  
 |`cryptographySettings`|Contém configurações de criptografia.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir mostra como usar o elemento **\<mscorlib >** para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usar o método <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> para retornar um objeto `MyCryptoRSAClass`.  
   
 ```xml  

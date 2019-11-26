@@ -25,7 +25,7 @@ Uma biblioteca .NET tem várias maneiras de especificar uma versão. Essas vers�
 
 ### <a name="nuget-package-version"></a>Versão do pacote NuGet
 
-A [Versão do pacote NuGet](/nuget/reference/package-versioning) é exibida em NuGet.org, o gerenciador de pacotes do NuGet do Visual Studio e adicionada ao código-fonte quando o pacote é usado. A versão do pacote NuGet é o número de versão que os usuários normalmente verão e ao qual eles farão referência ao falarem sobre a versão de uma biblioteca que está sendo usada. A versão do pacote NuGet é usada pelo NuGet e não tem nenhum efeito sobre o comportamento de tempo de execução.
+A [Versão do pacote NuGet](/nuget/reference/package-versioning) é exibida em NuGet.org, o gerenciador de pacotes do NuGet do Visual Studio e adicionada ao código-fonte quando o pacote é usado. A versão do pacote NuGet é o número de versão que os usuários normalmente verão e ao qual eles farão referência ao falarem sobre a versão de uma biblioteca que está sendo usada. A versão do pacote NuGet é usada pelo NuGet e não tem nenhum efeito sobre o comportamento de runtime.
 
 ```xml
 <PackageVersion>1.0.0-alpha1</PackageVersion>
@@ -45,15 +45,15 @@ Como a versão do pacote NuGet é a versão mais visível para os desenvolvedore
 
 ### <a name="assembly-version"></a>Versão do assembly
 
-A versão do assembly é o que o CLR usa no tempo de execução para selecionar qual versão de um assembly carregar. Selecionar um assembly usando o controle de versão só se aplica aos assemblies com um nome forte.
+A versão do assembly é o que o CLR usa no runtime para selecionar qual versão de um assembly carregar. Selecionar um assembly usando o controle de versão só se aplica aos assemblies com um nome forte.
 
 ```xml
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
 ```
 
-O Windows .NET Framework CLR exige uma correspondência exata para carregar um assembly de nome forte. Por exemplo, `Libary1, Version=1.0.0.0` foi compilado com uma referência ao `Newtonsoft.Json, Version=11.0.0.0`. O .NET Framework só carregará a versão exata `11.0.0.0`. Para carregar uma versão diferente no tempo de execução, um redirecionamento de associação deve ser adicionado ao arquivo de configuração do aplicativo .NET.
+O Windows .NET Framework CLR exige uma correspondência exata para carregar um assembly de nome forte. Por exemplo, `Libary1, Version=1.0.0.0` foi compilado com uma referência ao `Newtonsoft.Json, Version=11.0.0.0`. O .NET Framework só carregará a versão exata `11.0.0.0`. Para carregar uma versão diferente no runtime, um redirecionamento de associação deve ser adicionado ao arquivo de configuração do aplicativo .NET.
 
-Nomenclatura forte combinada com a versão do assembly habilita [carregamento de versão do assembly estrita](../assembly/versioning.md). Embora dar um nome forte a uma biblioteca tenha uma série de benefícios, isso tenderá a resultar em exceções de tempo de execução de que um assembly não pode ser encontrado e [exigirá que redirecionamentos de associação](../../framework/configure-apps/redirect-assembly-versions.md) em `app.config`/`web.config` sejam corrigidos. O carregamento do assembly do .NET Core foi relaxado e o .NET Core CLR carregará automaticamente os assemblies no tempo de execução com uma versão posterior.
+Nomenclatura forte combinada com a versão do assembly habilita [carregamento de versão do assembly estrita](../assembly/versioning.md). Embora dar um nome forte a uma biblioteca tenha uma série de benefícios, isso tenderá a resultar em exceções de runtime de que um assembly não pode ser encontrado e [exigirá que redirecionamentos de associação](../../framework/configure-apps/redirect-assembly-versions.md) em `app.config`/`web.config` sejam corrigidos. O carregamento do assembly do .NET Core foi relaxado e o .NET Core CLR carregará automaticamente os assemblies no runtime com uma versão posterior.
 
 **✔️ CONSIDERE** incluir apenas uma versão principal em AssemblyVersion.
 
@@ -69,7 +69,7 @@ Nomenclatura forte combinada com a versão do assembly habilita [carregamento de
 
 ### <a name="assembly-file-version"></a>Versão do arquivo do assembly
 
-A versão de arquivo do assembly é usada para exibir uma versão de arquivo no Windows e não tem nenhum efeito sobre o comportamento de tempo de execução. Configurar esta versão é opcional. Ele ficará visível na caixa de diálogo Propriedades do Arquivo no Windows Explorer:
+A versão de arquivo do assembly é usada para exibir uma versão de arquivo no Windows e não tem nenhum efeito sobre o comportamento de runtime. Configurar esta versão é opcional. Ele ficará visível na caixa de diálogo Propriedades do Arquivo no Windows Explorer:
 
 ```xml
 <FileVersion>11.0.2.21924</FileVersion>
@@ -87,7 +87,7 @@ A versão de arquivo do assembly é usada para exibir uma versão de arquivo no 
 
 ### <a name="assembly-informational-version"></a>Versão informativa do assembly
 
-A versão informativa do assembly é usada para registrar informações adicionais de versão e não tem nenhum efeito sobre o comportamento de tempo de execução. Configurar esta versão é opcional. Se você estiver usando o Source Link, essa versão será definida no build com a versão do pacote NuGet, além de uma versão de controle do código-fonte. Por exemplo, `1.0.0-beta1+204ff0a` inclui o hash de confirmação do código-fonte do qual o assembly foi criado. Para obter mais informações, confira [Source Link](./sourcelink.md).
+A versão informativa do assembly é usada para registrar informações adicionais de versão e não tem nenhum efeito sobre o comportamento de runtime. Configurar esta versão é opcional. Se você estiver usando o Source Link, essa versão será definida no build com a versão do pacote NuGet, além de uma versão de controle do código-fonte. Por exemplo, `1.0.0-beta1+204ff0a` inclui o hash de confirmação do código-fonte do qual o assembly foi criado. Para obter mais informações, confira [Source Link](./sourcelink.md).
 
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>

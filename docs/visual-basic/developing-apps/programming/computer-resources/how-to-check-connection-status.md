@@ -1,5 +1,5 @@
 ---
-title: 'Como: Verificar o status da conexão no Visual Basic'
+title: Como verificar o status da conexão
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web connections [Visual Basic]
@@ -7,14 +7,15 @@ helpviewer_keywords:
 - connections [Visual Basic], checking status
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
-ms.openlocfilehash: 1a03b181c2e363c3380c4f9858b629713641f2c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 89ef431759dac25bd213fd954db0712ad95434b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620681"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345890"
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a>Como: Verificar o status da conexão no Visual Basic
+# <a name="how-to-check-connection-status-in-visual-basic"></a>Como verificar o status da conexão no Visual Basic
+
 A propriedade <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> pode ser usada para determinar se o computador tem uma rede ou conexão de Internet em funcionamento.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  

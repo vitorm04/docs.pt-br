@@ -15,11 +15,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699191"
 ---
-# <a name="systemdiagnostics-element"></a>Elemento \<system. Diagnostics >
+# <a name="systemdiagnostics-element"></a>\<elemento > System. Diagnostics
 Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **\<system. diagnostics >**  
+&nbsp;&nbsp; **\<System. diagnostics >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,10 +29,10 @@ Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagen
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ None.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -45,14 +45,14 @@ Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagen
 |[\<switches>](switches-element.md)|Contém opções de rastreamento e os níveis em que as opções de rastreamento são definidas.|  
 |[\<trace>](trace-element.md)|Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como inserir uma opção de rastreamento e um ouvinte de rastreamento dentro do elemento **\<System. diagnostics >** . A opção de rastreamento `General` é definida como o nível <xref:System.Diagnostics.TraceLevel>. O ouvinte de rastreamento `myListener` cria um arquivo chamado `MyListener.log` e grava a saída no arquivo.  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
+ O exemplo a seguir mostra como inserir uma opção de rastreamento e um ouvinte de rastreamento dentro do elemento **\<System. diagnostics >** . A opção de rastreamento de `General` é definida como o nível de <xref:System.Diagnostics.TraceLevel>. O ouvinte de rastreamento `myListener` cria um arquivo chamado `MyListener.log` e grava a saída no arquivo.  
   
 > [!NOTE]
 > No .NET Framework versão 2.0, você pode usar o texto para especificar o valor de uma opção. Por exemplo, você pode especificar `true` para um <xref:System.Diagnostics.BooleanSwitch> ou usar o texto que representa um valor de enumeração, como `Error` para um <xref:System.Diagnostics.TraceSwitch>. A linha `<add name="myTraceSwitch" value="Error" />` é equivalente a `<add name="myTraceSwitch" value="1" />`.  

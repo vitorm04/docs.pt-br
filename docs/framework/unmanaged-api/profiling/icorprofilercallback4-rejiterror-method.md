@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7888aa9-dfaa-420f-9f99-e06ab35ca482
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6b01f38fbcf1cb0439b82a933b37971515b06ac4
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6ea9dee6e83870d1f2e0fdccffa53f16e6f18dba
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67758152"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74430110"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Método ICorProfilerCallback4::ReJITError
-Notifica o criador de perfil que o compilador just-in-time (JIT) encontrou um erro no processo de recompilação.  
+Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,35 +37,35 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleID`  
- [in] O `ModuleID` no qual foi feita a tentativa de recompilação com falha.  
+ [in] The `ModuleID` in which the failed recompilation attempt was made.  
   
  `methodId`  
- [in] O `MethodDef` do método no qual foi feita a tentativa de recompilação com falha.  
+ [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
   
  `functionId`  
- [in] A instância de função que está sendo recompilada ou marcada para recompilação. Esse valor pode ser `NULL` se a falha ocorreu em uma base por método em vez de uma segundo a instanciação (por exemplo, se o criador de perfil especificado um token de metadados inválidos para o método a ser recompilado).  
+ [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
   
  `hrStatus`  
- [in] Um HRESULT que indica a natureza da falha. Consulte a seção de Status HRESULTS para obter uma lista de valores.  
+ [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Os valores retornados desse retorno de chamada são ignorados.  
   
-## <a name="status-hresults"></a>HRESULTS de status  
+## <a name="status-hresults"></a>Status HRESULTS  
   
-|Matriz de status de HRESULT|Descrição|  
+|Status array HRESULT|Descrição|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|O `moduleID` ou `methodDef` token é `NULL`.|  
-|CORPROF_E_DATAINCOMPLETE|O módulo ainda não está totalmente carregado, ou ele está sendo descarregado.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|O módulo especificado foi gerado dinamicamente (por exemplo, ao `Reflection.Emit`) e, portanto, não é suportado por este método.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|O método é instanciado em um assembly de coleção e, portanto, não é capaz de ser recompilado. Observe que tipos e funções definidas em um contexto de não-reflexão (por exemplo, `List<MyCollectibleStruct>`) pode ser instanciado em um assembly de coleção.|  
-|E_OUTOFMEMORY|O CLR ficou sem memória ao tentar marcar o método especificado para recompilação JIT.|  
-|Outros|O sistema operacional retornou uma falha fora do controle do CLR. Por exemplo, se uma chamada do sistema para alterar a proteção de acesso de uma página de memória falhar, o erro de sistema operacional é exibido.|  
+|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
+|CORPROF_E_DATAINCOMPLETE|The module is not fully loaded yet, or it is in the process of being unloaded.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
+|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
+|Outros|The operating system returned a failure outside the control of the CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

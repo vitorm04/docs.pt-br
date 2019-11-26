@@ -5,12 +5,12 @@ ms.date: 08/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0625
-ms.openlocfilehash: fc735f28bad91b9714d7e6bf2a9c7c620acacc4d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 0e0f43225b9bf243c31b3095817bdcbdb3123012
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929340"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976768"
 ---
 # <a name="train-and-evaluate-a-model"></a>Treinar e avaliar um modelo
 
@@ -98,9 +98,9 @@ Algoritmos do ML.NET têm restrições nos tipos de coluna de entrada. Além dis
 
 ### <a name="working-with-expected-column-types"></a>Trabalhando com tipos de coluna esperados
 
-Os algoritmos de aprendizado de máquina no ML.NET esperam um vetor flutuante de tamanho conhecido como entrada. Aplicar o atributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) ao modelo de dados quando todos os dados já estão em um formato numérico e destinam-se a serem processados em conjunto (ou seja, pixels da imagem). 
+Os algoritmos de aprendizado de máquina no ML.NET esperam um vetor flutuante de tamanho conhecido como entrada. Aplicar o atributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) ao modelo de dados quando todos os dados já estão em um formato numérico e destinam-se a serem processados em conjunto (ou seja, pixels da imagem).
 
-Se os dados não forem todos numéricos e você desejar aplicar transformações de dados diferentes a cada uma das colunas individualmente, use o método [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) depois de todas as colunas terem sido processadas para combinar todas as colunas individuais em um vetor de recurso único que é enviado como saída para uma nova coluna. 
+Se os dados não forem todos numéricos e você desejar aplicar transformações de dados diferentes a cada uma das colunas individualmente, use o método [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) depois de todas as colunas terem sido processadas para combinar todas as colunas individuais em um vetor de recurso único que é enviado como saída para uma nova coluna.
 
 O snippet a seguir combina as colunas `Size` e `HistoricalPrices` em um vetor de recurso único que é a saída para uma nova coluna chamada `Features`. Porque há uma diferença em escalas, [`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) é aplicado à coluna `Features` para normalizar os dados.
 
@@ -121,9 +121,9 @@ IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 
 ### <a name="working-with-default-column-names"></a>Trabalhando com nomes de coluna padrão
 
-Algoritmos do ML.NET usam nomes de coluna padrão quando nenhum é especificado. Todos os treinadores têm um parâmetro chamado `featureColumnName` para as entradas do algoritmo e, quando aplicável, também têm um parâmetro para o valor esperado chamado `labelColumnName`. Por padrão, esses valores são `Features` e `Label`, respectivamente. 
+Algoritmos do ML.NET usam nomes de coluna padrão quando nenhum é especificado. Todos os treinadores têm um parâmetro chamado `featureColumnName` para as entradas do algoritmo e, quando aplicável, também têm um parâmetro para o valor esperado chamado `labelColumnName`. Por padrão, esses valores são `Features` e `Label`, respectivamente.
 
-Ao usar o método [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) durante o pré-processamento para criar uma nova coluna chamada `Features`, não é necessário especificar o nome da coluna de recurso nos parâmetros do algoritmo, já que ela já existe na `IDataView` pré-processada. A coluna de rótulo é `CurrentPrice`, porém, como o atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) é usado no modelo de dados, o ML.NET renomeia a coluna `CurrentPrice` como `Label`, o que elimina a necessidade de fornecer o parâmetro `labelColumnName` para o estimador de algoritmo de aprendizado de máquina. 
+Ao usar o método [`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) durante o pré-processamento para criar uma nova coluna chamada `Features`, não é necessário especificar o nome da coluna de recurso nos parâmetros do algoritmo, já que ela já existe na `IDataView` pré-processada. A coluna de rótulo é `CurrentPrice`, porém, como o atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) é usado no modelo de dados, o ML.NET renomeia a coluna `CurrentPrice` como `Label`, o que elimina a necessidade de fornecer o parâmetro `labelColumnName` para o estimador de algoritmo de aprendizado de máquina.
 
 Se você não quiser usar os nomes de coluna padrão, passe os nomes das colunas de rótulo e de recurso como parâmetros ao definir o estimador do algoritmo de aprendizado de máquina como demonstrado pelo snippet subsequente:
 
@@ -145,21 +145,21 @@ var trainedModel = sdcaEstimator.Fit(transformedTrainingData);
 
 ## <a name="extract-model-parameters"></a>Extrair parâmetros do modelo
 
-Depois que o modelo tiver sido treinado, extraia o [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) aprendido para inspeção ou novo treinamento. O [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) fornece os desvios e os coeficientes aprendidos ou os pesos do modelo treinado. 
+Depois que o modelo tiver sido treinado, extraia o [`ModelParameters`](xref:Microsoft.ML.Trainers.ModelParametersBase%601) aprendido para inspeção ou novo treinamento. O [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) fornece os desvios e os coeficientes aprendidos ou os pesos do modelo treinado.
 
 ```csharp
 var trainedModelParameters = trainedModel.Model as LinearRegressionModelParameters;
 ```
 
 > [!NOTE]
-> Outros modelos têm parâmetros específicos para suas tarefas. Por exemplo, o [algoritmo K-Means](xref:Microsoft.ML.Trainers.KMeansTrainer) coloca dados em cluster baseado em centroides e o [`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) contém uma propriedade que armazena esses centroides aprendidos. Para saber mais, acesse a [Documentação da API `Microsoft.ML.Trainers`](xref:Microsoft.ML.Trainers) e procure classes que contenham `ModelParameters` em seu nome. 
+> Outros modelos têm parâmetros específicos para suas tarefas. Por exemplo, o [algoritmo K-Means](xref:Microsoft.ML.Trainers.KMeansTrainer) coloca dados em cluster baseado em centroides e o [`KMeansModelParameters`](xref:Microsoft.ML.Trainers.KMeansModelParameters) contém uma propriedade que armazena esses centroides aprendidos. Para saber mais, acesse a [Documentação da API `Microsoft.ML.Trainers`](xref:Microsoft.ML.Trainers) e procure classes que contenham `ModelParameters` em seu nome.
 
 ## <a name="evaluate-model-quality"></a>Avaliar a qualidade do modelo
 
 Para ajudar a escolher o modelo com melhor desempenho, é essencial avaliar seu desempenho nos dados de teste. Use o método [`Evaluate`](xref:Microsoft.ML.RegressionCatalog.Evaluate*) para medir várias métricas para o modelo treinado.
 
 > [!NOTE]
-> O método `Evaluate` produz métricas diferentes dependendo de qual tarefa de aprendizado de máquina foi executada. Para obter mais detalhes, acesse a [Documentação da API `Microsoft.ML.Data`](xref:Microsoft.ML.Data) e procure classes que contenham `Metrics` em seu nome. 
+> O método `Evaluate` produz métricas diferentes dependendo de qual tarefa de aprendizado de máquina foi executada. Para obter mais detalhes, acesse a [Documentação da API `Microsoft.ML.Data`](xref:Microsoft.ML.Data) e procure classes que contenham `Metrics` em seu nome.
 
 ```csharp
 // Measure trained model performance
@@ -174,9 +174,9 @@ RegressionMetrics trainedModelMetrics = mlContext.Regression.Evaluate(testDataPr
 double rSquared = trainedModelMetrics.RSquared;
 ```
 
-No exemplo de código anterior:  
+No exemplo de código anterior:
 
-1. O conjunto de dados de teste é pré-processado usando as transformações de preparação de dados definidas anteriormente. 
+1. O conjunto de dados de teste é pré-processado usando as transformações de preparação de dados definidas anteriormente.
 2. O modelo de machine learning treinado é usado para fazer previsões sobre os dados de teste.
 3. No método `Evaluate`, os valores na coluna `CurrentPrice` do conjunto de dados de teste são comparados com a coluna `Score` das previsões de geradas recentemente para calcular as métricas para a regressão de modelo, uma das quais, R ao quadrado, é armazenada na variável `rSquared`.
 

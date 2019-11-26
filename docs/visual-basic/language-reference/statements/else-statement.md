@@ -1,29 +1,29 @@
 ---
-title: Instrução Else (Visual Basic)
+title: Instrução Else
 ms.date: 07/20/2015
 f1_keywords:
 - vb.else
 helpviewer_keywords:
 - Else keyword [Visual Basic]
 ms.assetid: 154dd3d3-137b-4de6-a5aa-699b18dfb639
-ms.openlocfilehash: f249ac0816ae9375b081709900299a7ef8961880
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c3b10420bd45c4a35c0a5de66b751149c4e41464
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638162"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343749"
 ---
 # <a name="else-statement-visual-basic"></a>Instrução Else (Visual Basic)
-Apresenta um grupo de instruções para ser executado ou compilado se nenhum outro grupo de instruções condicional foi executado ou compilado.  
+Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.  
   
 ## <a name="remarks"></a>Comentários  
- O `Else` palavra-chave pode ser usada nesses contextos:  
+ The `Else` keyword can be used in these contexts:  
   
  [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
  [Instrução Select...Case](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [#If... Then... #Else diretiva](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -12,7 +12,7 @@ ms.locfileid: "71833871"
 # <a name="entity-sql-quick-reference"></a>Referência rápida de Entity SQL
 Este tópico fornece uma referência rápida às consultas de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. As consultas neste tópico se baseiam no modelo de vendas AdventureWorks.  
   
-## <a name="literals"></a>Literais  
+## <a name="literals"></a>{1&gt;Literais&lt;1}  
   
 ### <a name="string"></a>Cadeia de Caracteres  
  Há literais de cadeia de caracteres Unicode e não Unicode. As cadeias de caracteres Unicode são precedidas por N. Por exemplo, `N'hello'`.  
@@ -48,7 +48,7 @@ DATETIME '2006-12-25 01:01'
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>Integer  
+### <a name="integer"></a>Inteiro  
  Literais inteiros podem ser do tipo Int32 (123), UInt32 (123U), Int64 (123L) e UInt64 (123UL).  
   
  Exemplo:  
@@ -83,7 +83,7 @@ SELECT VALUE row (product.ProductID AS ProductID, product.Name
   
  Saída:  
   
-|ProductID|Nome|  
+|ProductID|{1&gt;Nome&lt;1}|  
 |---------------|----------|  
 |1|Adjustable Race|  
 |879|All-Purpose Bike Stand|  
@@ -103,7 +103,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
  Saída:  
   
-|ProductID|Nome|ProductNumber|…|  
+|ProductID|{1&gt;Nome&lt;1}|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
@@ -201,10 +201,10 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
 |771|  
 |...|  
   
-## <a name="functions"></a>Funções  
+## <a name="functions"></a>{1&gt;Funções&lt;1}  
   
-### <a name="canonical"></a>Canônico  
- O namespace para [funções canônicas](canonical-functions.md) é EDM, como no `Edm.Length("string")`. Você não precisa especificar o namespace, a menos que outro namespace seja importado e contenha uma função com o mesmo nome de uma função canônica. Se dois namespaces têm a mesma função, o usuário deve especificar o nome completo.  
+### <a name="canonical"></a>Canônica  
+ O namespace para [funções canônicas](canonical-functions.md) é EDM, como em `Edm.Length("string")`. Você não precisa especificar o namespace, a menos que outro namespace seja importado e contenha uma função com o mesmo nome de uma função canônica. Se dois namespaces têm a mesma função, o usuário deve especificar o nome completo.  
   
  Exemplo:  
   
@@ -241,7 +241,7 @@ SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
 |27|  
 |26|  
   
-## <a name="namespaces"></a>Namespaces  
+## <a name="namespaces"></a>{1&gt;Namespaces&lt;1}  
  O [uso](using-entity-sql.md) de especifica namespaces usados em uma expressão de consulta.  
   
  Exemplo:  
@@ -268,7 +268,7 @@ SELECT c.ContactID as ID, c.LastName AS Name FROM
   
  Saída:  
   
-|id|Nome|  
+|ID|{1&gt;Nome&lt;1}|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -294,7 +294,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
 |...|  
   
 ## <a name="navigation"></a>Navegação  
- O operador de navegação de relação permite que você navegue na relação de uma entidade (from end) para outra (to end). A [navegação](navigate-entity-sql.md) usa o tipo de relação qualificado como \<namespace >. @no__t nome do tipo de 2relationship >. Navigate retorna REF @ no__t-0T > se a cardinalidade da extremidade to for 1. Se a cardinalidade do to end for n, a coleção < ref @ no__t-0T > > será retornada.  
+ O operador de navegação de relação permite que você navegue na relação de uma entidade (from end) para outra (to end). A [navegação](navigate-entity-sql.md) usa o tipo de relação qualificado como \<namespace >.\<nome do tipo de relação >. Navigate retorna REF\<T > se a cardinalidade da extremidade to for 1. Se a cardinalidade do to end for n, a coleção < ref\<T > > será retornada.  
   
  Exemplo:  
   
@@ -326,7 +326,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
   
  Saída:  
   
-|Nome|  
+|{1&gt;Nome&lt;1}|  
 |----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -334,13 +334,13 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] também fornece o construtor de linha para construir linhas arbitrárias. SELECT utiliza um ou mais elementos na projeção e resulta em um registro de dados com campos; por exemplo: `SELECT a, b, c`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] também fornece o Construtor Row para construir linhas arbitrárias. SELECT utiliza um ou mais elementos na projeção e resulta em um registro de dados com campos; por exemplo: `SELECT a, b, c`.  
   
  Exemplo:  
   
  SELECT p.Name, p.ProductID FROM AdventureWorksEntities.Product as p Output:  
   
-|Nome|ProductID|  
+|{1&gt;Nome&lt;1}|ProductID|  
 |----------|---------------|  
 |Adjustable Race|1|  
 |All-Purpose Bike Stand|879|  

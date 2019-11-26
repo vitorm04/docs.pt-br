@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a75fed4c46ea7e31177ac0446c8fae7805535323
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67759430"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448869"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>Método ISymUnmanagedMethod::GetSourceStartEnd
-Obtém as posições inicial e final no documento para a fonte deste método. A primeira posição de matriz é o início e a segunda posição de matriz é o fim.  
+Gets the start and end document positions for the source of this method. The first array position is the start, and the second array position is the end.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,22 +37,22 @@ HRESULT GetSourceStartEnd(
   
 ## <a name="parameters"></a>Parâmetros  
  `docs`  
- [in] O inicial e final documentos de origem.  
+ [in] The starting and ending source documents.  
   
  `lines`  
- [in] Documentos de origem inicial e final de linhas nas correspondentes.  
+ [in] The starting and ending lines in the corresponding source documents.  
   
  `columns`  
- [in] Documentos de origem inicial e final colunas nas correspondentes.  
+ [in] The starting and ending columns in the corresponding source documents.  
   
  `pRetVal`  
- [out] `true` se as posições foram definidas, caso contrário, `false`.  
+ [out] `true` if positions were defined; otherwise, `false`.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -1,14 +1,13 @@
 ---
 title: Malhas de serviço-gRPC para desenvolvedores do WCF
 description: Usar uma malha de serviço para rotear e balancear solicitações para serviços gRPC em um cluster kubernetes.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6bdfa57ba47ba0105092d1c140705599b7023c78
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090179"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966962"
 ---
 # <a name="service-meshes"></a>Malhas de serviço
 

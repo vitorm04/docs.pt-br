@@ -1,28 +1,28 @@
 ---
-title: Objeto obrigatório (Visual Basic)
+title: Objeto obrigatório
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-ms.openlocfilehash: 8fdb702a03d4cfe17954d48215c4a16a3bdbcc82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a083ef1bf6f95f46f31786ba54476f54ce882cf2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925665"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349671"
 ---
 # <a name="object-required-visual-basic"></a>Objeto obrigatório (Visual Basic)
-Referências a propriedades e métodos geralmente exigem um qualificador de objeto explícito. Isso é o caso.  
+References to properties and methods often require an explicit object qualifier. This is such a case.  
   
 ## <a name="to-correct-this-error"></a>Para corrigir este erro  
   
-1. Verifique se as referências a um método ou propriedade do objeto tem o qualificador de objeto válido. Especifica um qualificador de objeto, se você não fornecer um.  
+1. Check that references to an object property or method have valid object qualifier. Specify an object qualifier if you didn't provide one.  
   
-2. Verifique a ortografia do qualificador do objeto e verifique se que o objeto está visível na parte do programa no qual você está fazendo referência a ele.  
+2. Check the spelling of the object qualifier and make sure the object is visible in the part of the program in which you are referencing it.  
   
-3. Se um caminho é fornecido para um aplicativo de host **abrir arquivo** de comando, verifique se os argumentos nele estão corretos.  
+3. If a path is supplied to a host application's **File Open** command, check that the arguments in it are correct.  
   
-4. Verifique a documentação do objeto e assegure-se de que a ação é válida.  
+4. Check the object's documentation and make sure the action is valid.  
   
 ## <a name="see-also"></a>Consulte também
 

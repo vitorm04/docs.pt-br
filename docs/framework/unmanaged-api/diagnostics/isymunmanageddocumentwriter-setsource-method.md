@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: ea5b9d9f-ff06-4bd3-8de5-6435343aba59
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 555926e0e6a669f70bdeff484cff0eb62ae11f7b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: ff18f95bd6b4cfde5aaa4d3f6f68b58fd37c04b3
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67776935"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449074"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>Método ISymUnmanagedDocumentWriter::SetSource
-Conjuntos de inserido o código-fonte para um documento que está sendo gravado.  
+Sets embedded source for a document that is being written.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,16 +35,16 @@ HRESULT SetSource(
   
 ## <a name="parameters"></a>Parâmetros  
  `sourceSize`  
- [in] Um `ULONG32` que contém o tamanho do `source` buffer.  
+ [in] A `ULONG32` that contains the size of the `source` buffer.  
   
  `source`  
- [in] O buffer que armazena a origem inserida.  
+ [in] The buffer that stores the embedded source.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: a04d91dc-690f-4de8-8c97-55c69a8503b4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 34922a56dbe43d12207fcf55e9e73847dfad29dc
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 5e31964271c13788e29c7ef0581afcd809c5a9fc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67757492"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440132"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>Método IMetaDataFilter::UnmarkAll
-Remove as marcas de processamento de todos os tokens no escopo atual de metadados.  
+Remove as marcas de processamento de todos os tokens no escopo de metadados atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,14 +32,14 @@ HRESULT UnmarkAll ();
 ```  
   
 ## <a name="parameters"></a>Parâmetros  
- `UnmarkAll` não usa nenhum parâmetro.  
+ `UnmarkAll` não usa parâmetros.  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

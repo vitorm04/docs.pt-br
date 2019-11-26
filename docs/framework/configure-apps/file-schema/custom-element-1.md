@@ -20,7 +20,7 @@ ms.locfileid: "73118844"
 Define as configurações em uma seção de configuração personalizada que é definida por um \<seção > elemento e usa a classe <xref:System.Configuration.SingleTagSectionHandler>.
 
 [ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; *\<sectionname >*
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -38,15 +38,15 @@ Atributos e valores de atributo são definidos pelo usuário.
 | --- | ----------- |
 | [ **\<configuration>** ](configuration-element.md) | O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework. |
 
-## <a name="child-elements"></a>Elementos filho
+## <a name="child-elements"></a>Child elements
 
 Nenhum
 
 ## <a name="remarks"></a>Comentários
 
-O elemento **\<sectionname >** é um elemento personalizado definido por uma [**seção\<** ](section-element.md) marca no elemento [ **\<configSections >** ](configsections-element-for-configuration.md) . O sistema de configuração retorna um objeto <xref:System.Collections.IDictionary> quando você chama <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
+O elemento **\<sectionname >** é um elemento personalizado definido por uma [**seção\<>** ](section-element.md) marca no elemento [ **\<configSections >** ](configsections-element-for-configuration.md) . O sistema de configuração retorna um objeto <xref:System.Collections.IDictionary> quando você chama <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>.
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir declara um elemento personalizado chamado **\<sampleSection >** que contém as configurações lidas pela classe <xref:System.Configuration.SingleTagSectionHandler>:
 

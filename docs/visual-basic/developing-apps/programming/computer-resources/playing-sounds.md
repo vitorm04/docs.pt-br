@@ -1,5 +1,5 @@
 ---
-title: Executando sons (Visual Basic)
+title: Executando sons
 ms.date: 07/20/2015
 helpviewer_keywords:
 - system sounds, playing
@@ -11,17 +11,19 @@ helpviewer_keywords:
 - sounds, background
 - playing sounds
 ms.assetid: f0d9e4ab-57c7-47b6-86d3-99ff07078040
-ms.openlocfilehash: ac890a4cc6024ae43af4146d1d8f43af70ae3ff0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: HT
+ms.openlocfilehash: 416fedd011ff35d2b32d1b64932e3908a73ed14e
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840319"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345515"
 ---
 # <a name="playing-sounds-visual-basic"></a>Executando sons (Visual Basic)
+
 O objeto `My.Computer.Audio` fornece métodos para reproduzir sons.  
   
 ## <a name="playing-sounds"></a>Executando sons  
+
  A reprodução em segundo plano permite que o aplicativo execute outro código enquanto o som é reproduzido. O método `My.Computer.Audio.Play` permite que o aplicativo para reproduza apenas um som de tela de fundo de cada vez. Quando o aplicativo reproduz um novo som de tela de fundo, ele para de reproduzir o som de tela de fundo anterior. Você também pode reproduzir um som e aguardar sua conclusão.  
   
  No exemplo a seguir, o método `My.Computer.Audio.Play` toca um som. Quando `AudioPlayMode.WaitToComplete` for especificado, `My.Computer.Audio.Play` aguardará até que o som seja concluído antes de o código de chamada continuar. Ao usar este exemplo, você deve garantir que o nome do arquivo se refere a um arquivo de som .wav no seu computador  
@@ -33,6 +35,7 @@ O objeto `My.Computer.Audio` fornece métodos para reproduzir sons.
  [!code-vb[VbVbalrMyComputer#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#16)]  
   
 ## <a name="playing-looping-sounds"></a>Reproduzindo sons em loop  
+
  No exemplo a seguir, o método `My.Computer.Audio.Play` toca o som especificado na tela de fundo quando `PlayMode.BackgroundLoop` é especificado. Ao usar este exemplo, você deve garantir que o nome do arquivo se refere a um arquivo de som .wav no seu computador.  
   
  [!code-vb[VbVbalrMyComputer#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#11)]  
@@ -46,6 +49,7 @@ O objeto `My.Computer.Audio` fornece métodos para reproduzir sons.
  Em geral, quando um aplicativo reproduz um som em loop, ele deve interromper o som eventualmente.  
   
 ## <a name="stopping-the-playing-of-sounds-in-the-background"></a>Parando a reprodução de sons na tela de fundo  
+
  Use o método `My.Computer.Audio.Stop` para parar o som do aplicativo em loop ou na tela de fundo sendo reproduzido no momento.  
   
  Em geral, quando um aplicativo reproduz um som em loop, ele deve interromper o som em algum momento.  
@@ -57,6 +61,7 @@ O objeto `My.Computer.Audio` fornece métodos para reproduzir sons.
  O exemplo de código anterior também está disponível como um snippet de código do IntelliSense. No seletor de snippet de código, ele está localizado em **Aplicativos do Windows Forms &gt; Sons**. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).  
   
 ## <a name="playing-system-sounds"></a>Reproduzindo sons do sistema  
+
  Use o método `My.Computer.Audio.PlaySystemSound` para reproduzir o som do sistema especificado.  
   
  O método `My.Computer.Audio.PlaySystemSound` utiliza como parâmetro um dos membros compartilhados da classe <xref:System.Media.SystemSound>. O som do sistema <xref:System.Media.SystemSounds.Asterisk%2A> geralmente indica erros.  

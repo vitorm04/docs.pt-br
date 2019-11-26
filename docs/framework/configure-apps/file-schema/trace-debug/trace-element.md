@@ -17,12 +17,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699176"
 ---
-# <a name="trace-element"></a>\<trace > elemento
+# <a name="trace-element"></a>Elemento de > de rastreamento de \<
 Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<trace >**  
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<trace >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,7 +33,7 @@ Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -63,15 +63,15 @@ Contém os ouvintes que coletam, armazenam e roteiam mensagens de rastreamento.
 |-------------|-----------------|  
 |[\<listeners>](listeners-element-for-trace.md)|Especifica um ouvinte que coleta, armazena e roteia mensagens.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
 |`system.diagnostics`|Especifica os ouvintes de rastreamento que coletam, armazenam e roteiam mensagens e o nível em que uma opção de rastreamento é definida.|  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o elemento `<trace>` para adicionar o ouvinte `MyListener` à coleção `Listeners`. `MyListener` cria um arquivo chamado `MyListener.log` e grava a saída no arquivo. O atributo `useGlobalLock` é definido como `false`, o que faz com que o bloqueio global não seja usado se o ouvinte de rastreamento for thread-safe. O atributo `autoflush` é definido como `true`, o que faz com que o ouvinte de rastreamento grave no arquivo, independentemente de o método <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> ser chamado. O atributo `indentsize` é definido como 0 (zero), o que faz com que o ouvinte recue zero espaços quando o método <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> é chamado.  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
+ O exemplo a seguir mostra como usar o elemento `<trace>` para adicionar o ouvinte `MyListener` à coleção de `Listeners`. `MyListener` cria um arquivo chamado `MyListener.log` e grava a saída no arquivo. O atributo `useGlobalLock` é definido como `false`, o que faz com que o bloqueio global não seja usado se o ouvinte de rastreamento for thread-safe. O atributo `autoflush` é definido como `true`, o que faz com que o ouvinte de rastreamento grave no arquivo, independentemente de o método <xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> ser chamado. O atributo `indentsize` é definido como 0 (zero), o que faz com que o ouvinte recue zero espaços quando o método <xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> é chamado.  
   
 ```xml  
 <configuration>  

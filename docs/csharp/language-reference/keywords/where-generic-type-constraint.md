@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 4e51c5dd226533e7d1ce79a136dba19cbb252f92
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 24ae6e285b8b4270188462b05f39c6142c6901ae
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253908"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972722"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (restrição de tipo genérico) (Referência de C#)
 
@@ -33,10 +33,10 @@ A cláusula `where` pode especificar que o tipo é um `class` ou um `struct`. A 
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-A `where` cláusula pode incluir a `notnull` restrição. A `notnull` restrição limita o parâmetro de tipo para tipos não anuláveis. Esse tipo pode ser um tipo de [valor](struct.md) ou um tipo de referência não anulável. A `notnull` restrição está disponível a partir C# de 8,0 para o código compilado em um [ `nullable enable` contexto](../../nullable-references.md#nullable-contexts). Ao contrário de outras restrições, se um argumento de tipo `notnull` violar a restrição, o compilador gerará um aviso em vez de um erro. Os avisos são gerados apenas em `nullable enable` um contexto. 
+A cláusula `where` pode incluir a restrição `notnull`. A restrição `notnull` limita o parâmetro de tipo a tipos não anuláveis. Esse tipo pode ser um tipo de [valor](struct.md) ou um tipo de referência não anulável. A restrição `notnull` está disponível a partir C# de 8,0 para o código compilado em um [contexto de`nullable enable`](../../nullable-references.md#nullable-contexts). Ao contrário de outras restrições, se um argumento de tipo violar a restrição de `notnull`, o compilador gerará um aviso em vez de um erro. Os avisos são gerados apenas em um contexto de `nullable enable`. 
 
 > [!IMPORTANT]
-> Declarações genéricas que incluem a `notnull` restrição podem ser usadas em um contexto alheios anulável, mas o compilador não impõe a restrição.
+> Declarações genéricas que incluem a restrição `notnull` podem ser usadas em um contexto alheios anulável, mas o compilador não impõe a restrição.
 
 [!code-csharp[using the nonnull constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#NotNull)]
 
@@ -44,7 +44,7 @@ A cláusula `where` também pode incluir uma restrição `unmanaged`. A restriç
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#4)]
 
-A cláusula `where` também pode incluir uma restrição de construtor, `new()`. Essa restrição torna possível criar uma instância de um parâmetro de tipo usando o operador `new`. A [restrição new()](new-constraint.md) informa o compilador que qualquer argumento de tipo fornecido deve ter um construtor – ou padrão – sem parâmetros acessível. Por exemplo:
+A cláusula `where` também pode incluir uma restrição de construtor, `new()`. Essa restrição torna possível criar uma instância de um parâmetro de tipo usando o operador `new`. A [restrição New ()](new-constraint.md) permite que o compilador saiba que qualquer argumento de tipo fornecido deve ter um construtor sem parâmetros acessível. Por exemplo:
 
 [!code-csharp[using the new constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#5)]
 

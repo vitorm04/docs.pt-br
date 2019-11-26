@@ -1,12 +1,12 @@
 ---
 title: Atributos (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70374376"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141559"
 ---
 # <a name="attributes-c"></a>Atributos (C#)
 
@@ -25,7 +25,7 @@ Os atributos podem ser colocados em quase qualquer declaração, embora um atrib
 
 Neste exemplo, o atributo <xref:System.SerializableAttribute> é usado para aplicar uma característica específica a uma classe:
 
-[!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
+[!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
 Um método com o atributo <xref:System.Runtime.InteropServices.DllImportAttribute> é declarado como este exemplo:
 
@@ -33,12 +33,12 @@ Um método com o atributo <xref:System.Runtime.InteropServices.DllImportAttribut
 
 Mais de um atributo pode ser colocado em uma declaração como o seguinte exemplo mostra:
 
-[!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
-[!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
+[!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
+[!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
 Alguns atributos podem ser especificados mais de uma vez para uma determinada entidade. Um exemplo de um atributo multiuso é <xref:System.Diagnostics.ConditionalAttribute>:
 
-[!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
+[!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
 > Por convenção, todos os nomes de atributo terminam com a palavra "Atributo" para distingui-los de outros itens nas bibliotecas do .NET. No entanto, você não precisa especificar o sufixo de atributo ao usar atributos no código. Por exemplo, `[DllImport]` é equivalente a `[DllImportAttribute]`, mas `DllImportAttribute` é o nome real do atributo na Biblioteca de Classes .NET Framework.
@@ -75,7 +75,7 @@ A lista de possíveis valores `target` é mostrada na tabela a seguir.
 |`event`|evento|
 |`method`|Método ou acessadores de propriedade `get` e `set`|
 |`param`|Parâmetros de método ou parâmetros de acessador de propriedade `set`|
-|`property`|Propriedade|
+|`property`|propriedade|
 |`return`|Valor retornado de um método, indexador de propriedade ou acessador de propriedade `get`|
 |`type`|Struct, classe, interface, enum ou delegado|
 
@@ -119,7 +119,7 @@ Para obter mais informações, consulte:
 
 - [Criando atributos personalizados (C#)](creating-custom-attributes.md)  
 - [Acessando atributos usando reflexão (C#)](accessing-attributes-by-using-reflection.md)  
-- [Como: Criar uma união do C/C++ usando atributos (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [Como criar uma C/C++ Union usando atributos ()C#](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [Atributos comuns (C#)](common-attributes.md)  
 - [Informações do chamador (C#)](../caller-information.md)  
 

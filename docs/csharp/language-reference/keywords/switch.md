@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 76c778d1e2d45990793b5d9c7d4a8ee5a99fed46
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422291"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428495"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
@@ -43,10 +43,10 @@ A expressão de correspondência fornece o valor para corresponder aos padrões 
 
 No C# 6 e versões anteriores, a expressão de correspondência deve ser uma expressão que retorna um valor dos seguintes tipos:
 
-- um [char](char.md).
+- um [char](../builtin-types/char.md).
 - um [string](../builtin-types/reference-types.md).
 - um [bool](bool.md).
-- um valor de inteiro, como um [int](../builtin-types/integral-numeric-types.md) ou um [long](../builtin-types/integral-numeric-types.md).
+- an [integral](../builtin-types/integral-numeric-types.md) value, such as an `int` or a `long`.
 - um valor [enum](enum.md).
 
 Começando com o C# 7.0, a expressão de correspondência pode ser qualquer expressão não nula.
@@ -59,7 +59,7 @@ Uma instrução `switch` pode incluir qualquer número de seções switch e cada
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "o controle não pode passar de um rótulo case (\<rótulo case >) para outro".
+Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Because of this, the following code generates a compiler error, CS0163: "Control cannot fall through from one case label (\<case label>) to another."
 
 ```csharp
 switch (caseSwitch)
@@ -121,10 +121,10 @@ O padrão de constante testa se a expressão de correspondência é igual a uma 
 em que *constant* é o valor para testar. *constant* pode ser qualquer uma das expressões de constante a seguir:
 
 - Um literal [bool](bool.md), `true` ou `false`.
-- Qualquer constante integral, como um [int](../builtin-types/integral-numeric-types.md), um [long](../builtin-types/integral-numeric-types.md) ou um [byte](../builtin-types/integral-numeric-types.md).
+- Any [integral](../builtin-types/integral-numeric-types.md) constant, such as an `int`, a `long`, or a `byte`.
 - O nome de uma variável `const` declarada.
 - Uma constante de enumeração.
-- Um literal [char](char.md).
+- Um literal [char](../builtin-types/char.md).
 - Um literal [string](../builtin-types/reference-types.md).
 
 A expressão de constante é avaliada da seguinte forma:
@@ -157,7 +157,7 @@ A expressão `case` será `true` se qualquer uma das condições seguintes for v
 
 - *expr* for uma instância de um tipo derivado de *type*. Em outras palavras, o resultado de *expr* pode sofrer upcast para uma instância de *type*.
 
-- *expr* tem um tipo de tempo de compilação que é uma classe base de *type* e *expr* tem um tipo de tempo de execução que é *type* ou é derivado de *type*. O *tipo do tempo de compilação* de uma variável é o tipo da variável conforme definido em sua declaração de tipo. O *tipo de tempo de execução* de uma variável é o tipo da instância atribuída a essa variável.
+- *expr* tem um tipo de tempo de compilação que é uma classe base de *type*, e *expr* tem um tipo de runtime que é *type* ou é derivado de *type*. O *tipo do tempo de compilação* de uma variável é o tipo da variável conforme definido em sua declaração de tipo. O *tipo de runtime* de uma variável é o tipo da instância atribuída a essa variável.
 
 - *expr* é uma instância de um tipo que implementa a interface de *type*.
 

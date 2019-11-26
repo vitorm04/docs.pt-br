@@ -8,22 +8,22 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: 8d90364e34aa15bbd38e82ec70ec44616d7360f8
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: a6718173e84ecffc4ba0641f6e865e777aa6b1a4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167661"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088669"
 ---
-# <a name="provideroption-element"></a>\<Elemento de > providerOption
+# <a name="provideroption-element"></a>\<elemento de > providerOption
 Especifica os atributos de versão do compilador para um provedor de idioma.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<> System. CodeDom**](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<compiladores >** ](compilers-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> do compilador**](compiler-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> providerOption**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. codedom >** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<compiladores**](compilers-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**compilador**](compiler-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<providerOption >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -51,18 +51,18 @@ Especifica os atributos de versão do compilador para um provedor de idioma.
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[Elemento \<configuration>](../configuration-element.md)|O elemento raiz em todos os arquivos de configuração que é usado pelo common language runtime e aplicativos do .NET Framework.|  
-|[\<Elemento de > System. CodeDom](system-codedom-element.md)|Especifica as definições de configuração do compilador para provedores de linguagem disponíveis.|  
-|[\<compilador > elemento](compilers-element.md)|Contêiner para elementos de configuração do compilador; contém zero ou mais `<compiler>` elementos.|  
+|[\<elemento > System. CodeDom](system-codedom-element.md)|Especifica as definições de configuração do compilador para provedores de linguagem disponíveis.|  
+|[\<compiladores > elemento](compilers-element.md)|Contêiner para elementos de configuração do compilador; contém zero ou mais elementos de `<compiler>`.|  
 |[\<compiler> Element](compiler-element.md)|Especifica os atributos de configuração do compilador para um provedor de linguagem.|  
   
 ## <a name="remarks"></a>Comentários  
- Nos provedores de código do .NET Framework versão 3,5, modelo de objeto do documento de código (CodeDom) podem dar suporte a opções específicas do provedor `<providerOption>` usando o elemento.  
+ Nos provedores de código do .NET Framework versão 3,5, Modelo de Objeto do Documento de Código (CodeDOM) podem dar suporte a opções específicas do provedor usando o elemento `<providerOption>`.  
   
- O .NET Framework 3,5 inclui assemblies .NET Framework 2,0 atualizados e fornece novos assemblies da versão 3,5 que contêm novos tipos. Os provedores C# de código Microsoft e Visual Basic estão contidos em assemblies do .NET Framework 2,0, mas foram atualizados para dar suporte a compiladores da versão 3,5. Por padrão, os provedores de código atualizados geram código para compiladores da versão 2,0. Você pode usar o `<providerOption>` elemento para alterar a versão do compilador de destino para 3,5. Para fazer isso, especifique "compilerversion" para o `name` atributo e "v 3.5" para o `value` atributo. Você deve preceder o número de versão com um "v" minúsculo.  
+ O .NET Framework 3,5 inclui assemblies .NET Framework 2,0 atualizados e fornece novos assemblies da versão 3,5 que contêm novos tipos. Os provedores C# de código Microsoft e Visual Basic estão contidos em assemblies do .NET Framework 2,0, mas foram atualizados para dar suporte a compiladores da versão 3,5. Por padrão, os provedores de código atualizados geram código para compiladores da versão 2,0. Você pode usar o elemento `<providerOption>` para alterar a versão do compilador de destino para 3,5. Para fazer isso, especifique "CompilerVersion" para o atributo `name` e "v 3.5" para o atributo `value`. Você deve preceder o número de versão com um "v" minúsculo.  
   
- Você pode tornar a especificação de versão global adicionando o `<providerOption>` elemento ao .NET Framework 2,0 Machine. config ou ao arquivo Web. config raiz. Se você atualizar a versão do compilador padrão para 3,5 no arquivo Machine. config, poderá alterá-lo de volta para 2,0 em uma base por aplicativo usando o `<providerOption>` elemento no arquivo de configuração do aplicativo.  
+ Você pode tornar a especificação de versão global adicionando o elemento `<providerOption>` ao arquivo .NET Framework 2,0 Machine. config ou root. config da raiz. Se você atualizar a versão do compilador padrão para 3,5 no arquivo Machine. config, poderá alterá-lo de volta para 2,0 em uma base por aplicativo usando o elemento `<providerOption>` no arquivo de configuração do aplicativo.  
   
- Os implementadores do provedor de código do CodeDom podem processar opções personalizadas fornecendo um construtor `providerOptions` que usa um <xref:System.Collections.Generic.IDictionary%602>parâmetro do tipo.  
+ Os implementadores do provedor de código do CodeDOM podem processar opções personalizadas fornecendo um construtor que usa um parâmetro `providerOptions` do tipo <xref:System.Collections.Generic.IDictionary%602>.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra como especificar que a versão 3,5 do C# provedor de código deve ser usada.  
@@ -94,6 +94,6 @@ Especifica os atributos de versão do compilador para um provedor de idioma.
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [Esquema de arquivos de configuração](../index.md)
-- [\<compilador > elemento](compilers-element.md)
+- [\<compiladores > elemento](compilers-element.md)
 - [Especificando nomes de tipo totalmente qualificados](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
 - [Elemento do compilador para compiladores para compilação (esquema de configurações do ASP.NET)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

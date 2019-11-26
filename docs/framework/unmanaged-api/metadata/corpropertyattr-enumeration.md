@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5fb70d530af24798636972de0a4d6280dbcb8f1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781634"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450135"
 ---
 # <a name="corpropertyattr-enumeration"></a>Enumeração CorPropertyAttr
-Contém valores que descrevem os metadados de uma propriedade.  
+Contains values that describe the metadata of a property.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,16 +42,16 @@ typedef enum CorPropertyAttr {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`prSpecialName`|Especifica que a propriedade é especial, e que seu nome descreve como.|  
-|`prReservedMask`|Reservado para uso interno pelo common language runtime.|  
-|`prRTSpecialName`|Especifica que os metadados do common language runtime APIs internas deve verificar a codificação do nome da propriedade.|  
+|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
+|`prReservedMask`|Reserved for internal use by the common language runtime.|  
+|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
 |`prHasDefault`|Especifica que a propriedade tem um valor padrão.|  
 |`prUnused`|Não utilizado.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

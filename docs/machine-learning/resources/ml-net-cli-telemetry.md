@@ -4,12 +4,12 @@ description: Conheça os recursos de telemetria da CLI do ML.NET que coletam inf
 ms.topic: conceptual
 ms.date: 09/03/2019
 ms.custom: ''
-ms.openlocfilehash: 77a24416a8008d36006c293cb174b5a8c2f516b7
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929274"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977261"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>Coleta de telemetria pela CLI do ML.NET
 
@@ -17,7 +17,7 @@ A [CLI do ML.NET](https://aka.ms/mlnet-cli) inclui um recurso de telemetria que 
 
 ## <a name="how-microsoft-uses-the-data"></a>Como a Microsoft usa os dados
 
-A equipe de produto usa dados de telemetria do ML.NET CLI para ajudar a entender como melhorar as ferramentas. Por exemplo, se os clientes usarem com pouca frequência uma determinada tarefa de aprendizado de máquina, a equipe de produto investigará por que e usará as descobertas para priorizar o desenvolvimento de recursos. A telemetria da CLI do ML.NET também ajuda com a depuração de problemas, como falhas e anomalias de código. 
+A equipe de produto usa dados de telemetria do ML.NET CLI para ajudar a entender como melhorar as ferramentas. Por exemplo, se os clientes usarem com pouca frequência uma determinada tarefa de aprendizado de máquina, a equipe de produto investigará por que e usará as descobertas para priorizar o desenvolvimento de recursos. A telemetria da CLI do ML.NET também ajuda com a depuração de problemas, como falhas e anomalias de código.
 
 Embora a equipe de produto aprecia essas informações, ela também sabe que nem todo mundo deseja enviá-las. [Saiba como desabilitar a telemetria.](#opt-out-of-data-collection)
 
@@ -51,12 +51,13 @@ O recurso coleta os seguintes dados:
 - Nome do arquivo de conjunto de dados com hash
 - Bucket do tamanho do arquivo de conjunto de dados
 - Sistema operacional e versão
-- Valor do parâmetro --task: Valores categóricos, como `regression`, `binary-classification` e `multiclass-classification`
+- Valor do parâmetro--Task: valores categóricos, como `regression`, `binary-classification`e `multiclass-classification`
 - Versão da CLI do ML.NET (ou seja, 0.3.27703.4)
 
 Os dados são enviados com segurança para os servidores Microsoft usando a tecnologia [Azure Application Insights](https://azure.microsoft.com/services/application-insights/), mantidos em acesso restrito e usados sob controles de segurança rigorosos dos sistemas do [Armazenamento do Microsoft Azure](https://azure.microsoft.com/services/storage/) seguros.
 
 ### <a name="data-points-not-collected"></a>Pontos de dados não coletados
+
 O recurso de telemetria *não* coleta:
 
 - dados pessoais, como nomes de usuário
@@ -67,7 +68,7 @@ Se você suspeita que a telemetria da CLI do ML.NET está coletando dados confid
 
 ## <a name="license"></a>Licença
 
-A distribuição da Microsoft da CLI do ML.NET é licenciada com os [Termos de licença de software da Microsoft: Biblioteca do Microsoft .NET](https://aka.ms/dotnet-core-eula). Para obter detalhes sobre a coleta e o processamento de dados, veja a seção intitulada "Dados".
+A distribuição da Microsoft da CLI do ML.NET é licenciada com os [termos de licença para software Microsoft: Microsoft .NET Library](https://aka.ms/dotnet-core-eula). Para obter detalhes sobre a coleta e o processamento de dados, veja a seção intitulada "Dados".
 
 ## <a name="disclosure"></a>Divulgação
 
@@ -76,6 +77,6 @@ Quando você executar pela primeira vez um [comando da CLI do ML.NET](../referen
 ## <a name="see-also"></a>Consulte também
 
 - [Referência da CLI do ML.NET](../reference/ml-net-cli-reference.md)
-- [Termos de licença de software da Microsoft: Microsoft do Microsoft .NET](https://aka.ms/dotnet-core-eula)
+- [Termos de licença para software Microsoft: biblioteca de Microsoft .NET](https://aka.ms/dotnet-core-eula)
 - [Privacidade na Microsoft](https://www.microsoft.com/trustcenter/privacy/)
 - [Política de privacidade da Microsoft](https://privacy.microsoft.com/privacystatement)

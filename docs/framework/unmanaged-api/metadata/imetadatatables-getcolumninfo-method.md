@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd67d9faafedf4fb92c69618d4464ebb2ce47dcc
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774254"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436099"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>Método IMetaDataTables::GetColumnInfo
-Obtém dados sobre a coluna especificada na tabela especificada.  
+Gets data about the specified column in the specified table.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,55 +42,55 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- no O índice da tabela desejada.  
+ [in] The index of the desired table.  
   
  `ixCol`  
- no O índice da coluna desejada.  
+ [in] The index of the desired column.  
   
  `poCol`  
- fora Um ponteiro para o deslocamento da coluna na linha.  
+ [out] A pointer to the offset of the column in the row.  
   
  `pcbCol`  
- fora Um ponteiro para o tamanho, em bytes, da coluna.  
+ [out] A pointer to the size, in bytes, of the column.  
   
  `pType`  
- fora Um ponteiro para o tipo dos valores na coluna.  
+ [out] A pointer to the type of the values in the column.  
   
  `ppName`  
- fora Um ponteiro para um ponteiro para o nome da coluna.  
+ [out] A pointer to a pointer to the column name.  
  
 ## <a name="remarks"></a>Comentários
 
-O tipo de coluna retornado cai dentro de um intervalo de valores:
+The returned column type falls within a range of values:
 
-| pType                    | Descrição   | Função auxiliar                   |
+| pType                    | Descrição   | Helper function                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`.. `iRidMax`<br>(0.. 63)   | Eliminá           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`.. `iCodedTokenMax`<br>(64.. 95) | Token codificado | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT` (96)            | Int16         | **Isfixatype**                   |
-| `iUSHORT` (97)           | UInt16        | **Isfixatype**                   |
-| `iLONG` (98)             | Int32         | **Isfixatype**                   |
-| `iULONG` (99)            | UInt32        | **Isfixatype**                   |
-| `iBYTE` (100)            | Byte          | **Isfixatype**                   |
-| `iSTRING` (101)          | Cadeia de Caracteres        | **Isheaptype**                    |
-| `iGUID` (102)            | GUID          | **Isheaptype**                    |
-| `iBLOB` (103)            | Blob          | **Isheaptype**                    |
+| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
+| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
+| `iLONG` (98)             | Int32         | **IsFixedType**                   |
+| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
+| `iBYTE` (100)            | Byte          | **IsFixedType**                   |
+| `iSTRING` (101)          | Cadeia de Caracteres        | **IsHeapType**                    |
+| `iGUID` (102)            | GUID          | **IsHeapType**                    |
+| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
 
-Os valores que são armazenados no *heap* (ou seja, `IsHeapType == true`) podem ser lidos usando:
+Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
 
-- `iSTRING`: **IMetadataTables. GetString**
-- `iGUID`: **IMetadataTables. GETguid**
-- `iBLOB`: **IMetadataTables. getBlob**
+- `iSTRING`: **IMetadataTables.GetString**
+- `iGUID`: **IMetadataTables.GetGUID**
+- `iBLOB`: **IMetadataTables.GetBlob**
 
 > [!IMPORTANT]
-> Para usar as constantes definidas na tabela acima, inclua a diretiva `#define _DEFINE_META_DATA_META_CONSTANTS` fornecida pelo arquivo de cabeçalho *cor. h* .
+> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
 
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor. h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em MsCorEE. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

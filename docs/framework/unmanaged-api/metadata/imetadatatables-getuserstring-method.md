@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 35b8f0d6-9aba-4714-adb2-62020a38fb7e
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a4eaf426bc9c933de1d4b774928f2b0a54dfb472
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5936ca837c9ab452e992fcb09aacb476ab37316a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636953"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431429"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a>Método IMetaDataTables::GetUserString
 
-Obtém a cadeia de caracteres embutidos no índice especificado na coluna de cadeia de caracteres no escopo atual.
+Gets the hard-coded string at the specified index in the string column in the current scope.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -41,21 +39,21 @@ HRESULT GetUserString (
 ## <a name="parameters"></a>Parâmetros
 
 `ixUserString`\
-[in] O valor de índice do qual a cadeia de caracteres embutidos será recuperada.
+[in] The index value from which the hard-coded string will be retrieved.
 
 `pcbData`\
-[out] Um ponteiro para o tamanho de `ppData`.
+[out] A pointer to the size of `ppData`.
 
 `ppData`\
-[out] Um ponteiro para um ponteiro para a cadeia de caracteres retornada.
+[out] A pointer to a pointer to the returned string.
 
 ## <a name="requirements"></a>Requisitos
 
-**Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).
+**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Cabeçalho:** Cor.h
+**Header:** Cor.h
 
-**Biblioteca:** Usado como um recurso em mscoree. dll
+**Library:** Used as a resource in MsCorEE.dll
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
 

@@ -52,7 +52,7 @@ Depois que um componente manipula um evento, o mais incrivelmente processa o com
 
 ![Interação do DOM do mais incrivelmente](./media/architecture-comparison/blazor-dom-interaction.png)
 
-Os componentes também podem indicar manualmente que devem ser renderizados se seu estado for alterado fora de um evento de interface do usuário normal. O mais alto uso de um `SynchronizationContext` para impor um único thread lógico de execução. Os métodos de ciclo de vida de um componente e quaisquer retornos de chamada de evento que são gerados pelo mais alto são executados nesse `SynchronizationContext`.
+Os componentes também podem indicar manualmente que devem ser renderizados se seu estado for alterado fora de um evento de interface do usuário normal. O mais claro usa um `SynchronizationContext` para impor um único thread lógico de execução. Os métodos de ciclo de vida de um componente e quaisquer retornos de chamada de evento que são gerados pelo mais alto são executados neste `SynchronizationContext`.
 
 >[!div class="step-by-step"]
 >[Anterior](introduction.md)

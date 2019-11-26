@@ -2,12 +2,12 @@
 title: Fornecedor de token SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 87aef572c2179034d295361c62942cea2ad6ed7a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d599992949b87f0ac3f178d8f79f244781eda6fa
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424234"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976704"
 ---
 # <a name="saml-token-provider"></a>Fornecedor de token SAML
 Este exemplo demonstra como implementar um provedor de token SAML de cliente personalizado. Um provedor de token no Windows Communication Foundation (WCF) é usado para fornecer credenciais para a infraestrutura de segurança. O provedor de token em geral examina o destino e emite as credenciais apropriadas para que a infraestrutura de segurança possa proteger a mensagem. O WCF é fornecido com o provedor de token padrão do Credential Manager. O WCF também é fornecido com um provedor de token do CardSpace. Os provedores de token personalizados são úteis nos seguintes casos:
@@ -161,8 +161,7 @@ Este exemplo demonstra como implementar um provedor de token SAML de cliente per
      A classe <xref:System.IdentityModel.Selectors.SecurityTokenManager> é usada para criar <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> específicas que são transmitidas a ela no método `CreateSecurityTokenProvider`. Um Gerenciador de token de segurança também é usado para criar autenticadores de token e serializador de token, mas eles não são cobertos por esse exemplo. Neste exemplo, o Gerenciador de token de segurança personalizado herda da classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e substitui o método `CreateSecurityTokenProvider` para retornar o provedor de token SAML personalizado quando os requisitos de token passados indicam que o token SAML é solicitado. Se a classe de credenciais do cliente (consulte a etapa 3) não tiver especificado uma asserção, o Gerenciador de token de segurança criará uma instância apropriada.
 
     ```csharp
-    public class SamlSecurityTokenManager :
-     ClientCredentialsSecurityTokenManager
+    public class SamlSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
      SamlClientCredentials samlClientCredentials;
 

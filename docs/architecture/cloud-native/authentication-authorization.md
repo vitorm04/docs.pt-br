@@ -9,11 +9,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183724"
 ---
-# <a name="authentication-and-authorization-in-cloud-native-apps"></a>Autenticação e autorização em aplicativos nativos de nuvem
+# <a name="authentication-and-authorization-in-cloud-native-apps"></a>Autenticação e autorização nos aplicativos nativos de nuvem
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-A *autenticação* é o processo de determinar a identidade de uma entidade de segurança. A *autorização* é o ato de conceder uma permissão de entidade autenticada para executar uma ação ou acessar um recurso. Às vezes, a autenticação é `AuthN` reduzida para e a autorização é `AuthZ`reduzida para. Os aplicativos nativos de nuvem precisam contar com protocolos abertos baseados em HTTP para autenticar entidades de segurança, já que os clientes e aplicativos podem estar em execução em qualquer lugar do mundo em qualquer plataforma ou dispositivo. O único fator comum é HTTP.
+A *autenticação* é o processo de determinar a identidade de uma entidade de segurança. A *autorização* é o ato de conceder uma permissão de entidade autenticada para executar uma ação ou acessar um recurso. Às vezes, a autenticação é reduzida para `AuthN` e a autorização é reduzida para `AuthZ`. Os aplicativos nativos de nuvem precisam contar com protocolos abertos baseados em HTTP para autenticar entidades de segurança, já que os clientes e aplicativos podem estar em execução em qualquer lugar do mundo em qualquer plataforma ou dispositivo. O único fator comum é HTTP.
 
 Muitas organizações ainda dependem de serviços de autenticação local como o Serviços de Federação do Active Directory (AD FS) (ADFS). Embora essa abordagem tradicionalmente tenha atendido às organizações para as necessidades de autenticação local, os aplicativos nativos de nuvem se beneficiam de sistemas projetados especificamente para a nuvem. Uma recente consultoria de 2019 do Reino Unido National Cyber Security Centre (NCSC) informa que "as organizações que usam o Azure AD como sua fonte de autenticação primária reduzirão seu risco em comparação com o ADFS". Alguns motivos descritos nesta [análise](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/) incluem:
 

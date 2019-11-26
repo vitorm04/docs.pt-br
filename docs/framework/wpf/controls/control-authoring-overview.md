@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: fe7704b9366bf46f0c9965f78ce441000ead6334
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1ac8964f915206205d5c9e6ab782fcaa59bf2a99
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460786"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975727"
 ---
 # <a name="control-authoring-overview"></a>Visão geral da criação de controle
 
@@ -36,7 +36,7 @@ Historicamente, se você quisesse obter uma experiência personalizada de um con
   > [!NOTE]
   > Embora um <xref:System.Windows.Controls.RadioButton> possa usar um <xref:System.Windows.DataTemplate>, um <xref:System.Windows.DataTemplate> não é suficiente neste exemplo.  O <xref:System.Windows.DataTemplate> define a aparência do conteúdo de um controle. No caso de um <xref:System.Windows.Controls.RadioButton>, o conteúdo é aquele que aparece à direita do círculo que indica se a <xref:System.Windows.Controls.RadioButton> está selecionada.  No exemplo do alerta, o botão de opção precisa ser apenas um círculo que pode se "acender." Como o requisito de aparência para o alerta é tão diferente da aparência padrão do <xref:System.Windows.Controls.RadioButton>, é necessário redefinir o <xref:System.Windows.Controls.ControlTemplate>.  Em geral, um <xref:System.Windows.DataTemplate> é usado para definir o conteúdo (ou dados) de um controle e um <xref:System.Windows.Controls.ControlTemplate> é usado para definir como um controle é estruturado.
 
-- **Gatilhos.** Uma <xref:System.Windows.Trigger> permite que você altere dinamicamente a aparência e o comportamento de um controle sem criar um novo controle. Por exemplo, suponha que você tenha vários controles de <xref:System.Windows.Controls.ListBox> em seu aplicativo e queira que os itens em cada <xref:System.Windows.Controls.ListBox> sejam negrito e vermelho quando forem selecionados. Seu primeiro instinto pode ser criar uma classe que herda de <xref:System.Windows.Controls.ListBox> e substituir o método <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> para alterar a aparência do item selecionado, mas uma abordagem melhor é adicionar um gatilho a um estilo de um <xref:System.Windows.Controls.ListBoxItem> que altera a aparência do item selecionado . Um gatilho permite que você altere os valores da propriedade ou execute ações com base no valor de uma propriedade. Um <xref:System.Windows.EventTrigger> permite que você execute ações quando um evento ocorre.
+- **Gatilhos.** Uma <xref:System.Windows.Trigger> permite que você altere dinamicamente a aparência e o comportamento de um controle sem criar um novo controle. Por exemplo, suponha que você tenha vários controles de <xref:System.Windows.Controls.ListBox> em seu aplicativo e queira que os itens em cada <xref:System.Windows.Controls.ListBox> sejam negrito e vermelho quando forem selecionados. Seu primeiro instinto pode ser criar uma classe que herda de <xref:System.Windows.Controls.ListBox> e substituir o método <xref:System.Windows.Controls.Primitives.Selector.OnSelectionChanged%2A> para alterar a aparência do item selecionado, mas uma abordagem melhor é adicionar um gatilho a um estilo de um <xref:System.Windows.Controls.ListBoxItem> que altera a aparência do item selecionado. Um gatilho permite que você altere os valores da propriedade ou execute ações com base no valor de uma propriedade. Um <xref:System.Windows.EventTrigger> permite que você execute ações quando um evento ocorre.
 
 Para obter mais informações sobre estilos, modelos e gatilhos, consulte [Estilo e modelagem](styling-and-templating.md).
 
@@ -187,7 +187,7 @@ Para obter mais informações sobre vinculação de dados, veja [Noções básic
 
 ### <a name="design-for-designers"></a>Design para designers
 
-Para receber suporte a controles WPF personalizados no [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] (por exemplo, edição de propriedades com a janela Propriedades), siga estas diretrizes.  Para obter mais informações sobre como desenvolver para o [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)], consulte [criar XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
+Para receber suporte para controles WPF personalizados no designer do WPF para Visual Studio (por exemplo, edição de propriedade com o janela Propriedades), siga estas diretrizes.  Para obter mais informações sobre como desenvolver para o designer do WPF, consulte [criar XAML no Visual Studio](/visualstudio/xaml-tools/designing-xaml-in-visual-studio).
 
 #### <a name="dependency-properties"></a>Propriedades de Dependência
 

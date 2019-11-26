@@ -47,7 +47,7 @@ Se você tiver uma versão anterior do .NET Core, poderá baixar e instalar a ve
 
 Você pode adicionar suporte ao Docker ao criar o projeto ou posteriormente, portanto, você pode converter seu projeto para Docker a qualquer momento. Para adicionar suporte ao Docker após a criação do projeto, clique com o botão direito do mouse no nó do projeto no Gerenciador de Soluções e selecione **Adicionar** > **Suporte ao Docker** no menu de contexto.
 
-![Opção do menu de contexto para adicionar suporte ao Docker a um projeto existente: Clique com o botão direito do mouse (no projeto) > Adicionar > Suporte do Docker.](media/add-docker-support-to-project.png)
+![Opção de menu de contexto para adicionar suporte do Docker a um projeto existente: clique com o botão direito do mouse (no projeto) > Adicionar > suporte do Docker.](media/add-docker-support-to-project.png)
 
 **Figura 4-38**. Como adicionar suporte ao Docker ao projeto existente
 
@@ -69,7 +69,7 @@ Depois de executar o projeto, você pode listar as imagens usando o comando `doc
 docker images
 ```
 
-![A saída de console do comando de imagens do Docker mostra uma lista com: Repositório, Marca, ID da imagem, Criado (data) e Tamanho.](media/docker-images-command.png)
+![A saída do console do comando imagens do Docker mostra uma lista com: repositório, marca, ID da imagem, criado (Data) e tamanho.](media/docker-images-command.png)
 
 **Figura 4-40**. Exibição de imagens do Docker
 
@@ -89,7 +89,7 @@ Se executar o comando `docker image`, você verá as duas imagens criadas, uma p
 
 ### <a name="create-a-new-tag-for-the-image"></a>Criar uma marca para a imagem
 
-Cada imagem de contêiner precisa ser marcada com o `loginServer` nome do registro. Essa marca é usada para roteamento ao enviar imagens de contêiner para um registro de imagem.
+Cada imagem de contêiner precisa ser marcada com o nome `loginServer` do registro. Essa marca é usada para roteamento ao enviar imagens de contêiner para um registro de imagem.
 
 Você pode exibir o nome `loginServer` do portal do Azure com as informações do Registro de Contêiner do Azure
 
@@ -190,7 +190,7 @@ Agora você está quase pronto para implantar usando **Kubectl**, mas primeiro v
 az aks get-credentials --resource-group MSSampleResourceGroupAKS --name mssampleclusterk801
 ```
 
-![Saída de console do comando acima: "MSSampleK8Cluster mesclado como o contexto atual em /root/.kube/config](media/getting-aks-credentials.png)
+![Saída do console do comando acima: mesclado "MSSampleK8Cluster como contexto atual em/root/.Kube/config](media/getting-aks-credentials.png)
 
 **Figura 4-47**. Como obter credenciais
 

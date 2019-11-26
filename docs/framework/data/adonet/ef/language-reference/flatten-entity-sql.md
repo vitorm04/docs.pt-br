@@ -18,17 +18,17 @@ Converte uma coleção de coleções em uma coleção combinada. A nova coleçã
 FLATTEN ( collection )  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  `collection`  
  Qualquer expressão válida que retorna uma coleção de coleções valor de ajuste em uma única coleção.  
   
 ## <a name="remarks"></a>Comentários  
- `FLATTEN` é um dos operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] . Todos os operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] são avaliados da esquerda para a direita. Consulte [exceto](except-entity-sql.md) para obter informações de precedência para os operadores de conjunto [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
+ `FLATTEN` é um dos operadores de conjunto de [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. Todos os operadores definidos [!INCLUDE[esql](../../../../../../includes/esql-md.md)] são avaliados da esquerda para a direita. Consulte [exceto](except-entity-sql.md) para obter informações de precedência para os operadores de conjunto de [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  A seguinte consulta SQL Entity usa o operador de `FLATTEN` para converter uma coleção das coleções em uma coleção aplainada. Para compilar e executar essa consulta, siga estas etapas:  
   
-1. Siga o procedimento em [How para: Executa uma consulta que retorna os resultados de Estruturaistype @ no__t-0.  
+1. Siga o procedimento em [como executar uma consulta que retorna resultados de estruturaistype](../how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2. Passe a consulta a seguir como um argumento para o método `ExecuteStructuralTypeQuery`:  
   

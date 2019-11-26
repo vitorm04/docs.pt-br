@@ -19,7 +19,7 @@ ms.locfileid: "72004038"
 # <a name="annotations-overview"></a>Visão geral de anotações
 Escrever anotações ou comentários em documentos em papel é uma atividade tão comum que quase não valorizamos. Essas anotações ou comentários são "anotações" que adicionamos a um documento para sinalizar informações ou realçar itens de interesse para referência posterior. Embora gravar anotações em documentos impressos seja fácil e um lugar comum, a capacidade de adicionar comentários pessoais aos documentos eletrônicos normalmente é muito limitada, quando sequer está disponível.  
   
- Este tópico examina vários tipos comuns de anotações, anotações e destaques mais específicos e ilustra como a estrutura de anotações da Microsoft facilita esses tipos de anotações em aplicativos por meio do Windows Presentation Foundation (WPF ) controles de exibição de documento.  os controles de exibição de documento [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que dão suporte a anotações incluem <xref:System.Windows.Controls.FlowDocumentReader> e <xref:System.Windows.Controls.FlowDocumentScrollViewer>, bem como controles derivados de <xref:System.Windows.Controls.Primitives.DocumentViewerBase>, como <xref:System.Windows.Controls.DocumentViewer> e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ Este tópico examina vários tipos comuns de anotações, anotações e destaques mais específicos e ilustra como a estrutura de anotações da Microsoft facilita esses tipos de anotações em aplicativos por meio do Windows Presentation Foundation (WPF ) controles de exibição de documento.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] controles de exibição de documento que dão suporte a anotações incluem <xref:System.Windows.Controls.FlowDocumentReader> e <xref:System.Windows.Controls.FlowDocumentScrollViewer>, bem como controles derivados de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> como <xref:System.Windows.Controls.DocumentViewer> e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Notas autoadesivas  
@@ -73,6 +73,6 @@ Escrever anotações ou comentários em documentos em papel é uma atividade tã
 - <xref:System.Windows.Annotations.IAnchorInfo>
 - [Esquema de anotações](annotations-schema.md)
 - [Visão geral de ContextMenu](../controls/contextmenu-overview.md)
-- [Visão geral de comandos](commanding-overview.md)
+- [Visão geral dos comandos](commanding-overview.md)
 - [Visão geral do documento de fluxo](flow-document-overview.md)
-- [Como: Adicionar um comando a um MenuItem @ no__t-0
+- [Como adicionar um comando a um MenuItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms741839(v=vs.90))

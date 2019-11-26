@@ -2,12 +2,12 @@
 title: Provedor de tokens emitidos duráveis
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f1bb95ba676b47d29d5b527b5b93eddcf48f4bde
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 52c4e99f8b2a834d7200c2d2c2383fbdb21bdd1a
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989950"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978332"
 ---
 # <a name="durable-issued-token-provider"></a>Provedor de tokens emitidos duráveis
 Este exemplo demonstra como implementar um provedor de token emitido pelo cliente personalizado.  
@@ -31,12 +31,12 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
   
 - Como o servidor é autenticado pelo cliente usando o certificado X. 509 do servidor.  
   
- Este exemplo consiste em um programa de console do cliente (Client. exe), um programa de console do serviço de token de segurança (SecurityTokenService. exe) e um programa de console do serviço (Service. exe). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela `ICalculator` interface, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). O cliente obtém um token de segurança do STS (serviço de token de segurança) e faz solicitações síncronas para o serviço para uma determinada operação matemática e o serviço responde com o resultado. A atividade do cliente fica visível na janela do console.  
+ Este exemplo consiste em um programa de console do cliente (Client. exe), um programa de console do serviço de token de segurança (SecurityTokenService. exe) e um programa de console do serviço (Service. exe). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela interface `ICalculator`, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). O cliente obtém um token de segurança do STS (serviço de token de segurança) e faz solicitações síncronas para o serviço para uma determinada operação matemática e o serviço responde com o resultado. A atividade do cliente fica visível na janela do console.  
   
 > [!NOTE]
 > Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
   
- Este exemplo expõe o contrato ICalculator usando o [ \<> de WSHttpBinding](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). A configuração dessa associação no cliente é mostrada no código a seguir.  
+ Este exemplo expõe o contrato ICalculator usando o [> de wsHttpBinding\<](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). A configuração dessa associação no cliente é mostrada no código a seguir.  
   
 ```xml  
 <bindings>
@@ -54,7 +54,7 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
 </bindings>  
 ```  
   
- No elemento de `wsFederationHttpBinding`, o valor `mode` configura qual modo de segurança deve ser usado. `security` Neste exemplo, a segurança das mensagens está sendo usada, motivo pelo qual `message` o elemento `wsFederationHttpBinding` de é especificado dentro `security` do elemento `wsFederationHttpBinding`de. O `issuer` elemento de `wsFederationHttpBinding` dentro do `message` elemento de `wsFederationHttpBinding` especifica o endereço e a associação para o serviço de token de segurança que emite um token de segurança para o cliente para que o cliente possa se autenticar na calculadora serviço.  
+ No elemento `security` de `wsFederationHttpBinding`, o valor `mode` configura qual modo de segurança deve ser usado. Neste exemplo, a segurança de mensagens está sendo usada, motivo pelo qual o elemento `message` de `wsFederationHttpBinding` é especificado dentro do elemento `security` de `wsFederationHttpBinding`. O elemento `issuer` de `wsFederationHttpBinding` dentro do elemento `message` de `wsFederationHttpBinding` especifica o endereço e a associação para o serviço de token de segurança que emite um token de segurança para o cliente para que o cliente possa se autenticar no serviço de calculadora.  
   
  A configuração dessa associação no serviço é mostrada no código a seguir.  
   
@@ -80,7 +80,7 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
 </bindings>  
 ```  
   
- No elemento de `wsFederationHttpBinding`, o valor `mode` configura qual modo de segurança deve ser usado. `security` Neste exemplo, a segurança das mensagens está sendo usada, motivo pelo qual `message` o elemento `wsFederationHttpBinding` de é especificado dentro `security` do elemento `wsFederationHttpBinding`de. O `issuerMetadata` elemento de `wsFederationHttpBinding` dentro do `message` elemento de `wsFederationHttpBinding` especifica o endereço e a identidade de um ponto de extremidade que pode ser usado para recuperar metadados para o serviço de token de segurança.  
+ No elemento `security` de `wsFederationHttpBinding`, o valor `mode` configura qual modo de segurança deve ser usado. Neste exemplo, a segurança de mensagens está sendo usada, motivo pelo qual o elemento `message` de `wsFederationHttpBinding` é especificado dentro do elemento `security` de `wsFederationHttpBinding`. O elemento `issuerMetadata` de `wsFederationHttpBinding` dentro do elemento `message` de `wsFederationHttpBinding` especifica o endereço e a identidade de um ponto de extremidade que pode ser usado para recuperar metadados para o serviço de token de segurança.  
   
  O comportamento do serviço é mostrado no código a seguir.  
   
@@ -105,7 +105,7 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
 </behavior>  
 ```  
   
- O `issuedTokenAuthentication` elemento dentro do `serviceCredentials` elemento permite que o serviço especifique restrições nos tokens que permite que os clientes apresentem durante a autenticação. Essa configuração especifica que os tokens assinados por um certificado cujo nome da entidade é CN = STS são aceitos pelo serviço.  
+ O elemento `issuedTokenAuthentication` dentro do elemento `serviceCredentials` permite que o serviço especifique restrições nos tokens que permite que os clientes apresentem durante a autenticação. Essa configuração especifica que os tokens assinados por um certificado cujo nome da entidade é CN = STS são aceitos pelo serviço.  
   
  O serviço de token de segurança expõe um único ponto de extremidade usando o wsHttpBinding padrão. O serviço de token de segurança responde à solicitação de clientes para tokens e, desde que o cliente seja autenticado usando uma conta do Windows, emite um token que contém o nome de usuário do cliente como uma declaração no token emitido. Como parte da criação do token, o serviço de token de segurança assina o token usando a chave privada associada ao certificado CN = STS. Além disso, ele cria uma chave simétrica e a criptografa usando a chave pública associada ao certificado CN = localhost. Ao retornar o token para o cliente, o serviço de token de segurança também retorna a chave simétrica. O cliente apresenta o token emitido para o serviço de calculadora e comprova que ele conhece a chave simétrica assinando a mensagem com essa chave.  
   
@@ -118,7 +118,7 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
   
      O exemplo implementa um provedor de token personalizado que retorna um token de segurança recuperado de um cache.  
   
-     Para executar essa tarefa, o provedor de token personalizado deriva a <xref:System.IdentityModel.Selectors.SecurityTokenProvider> classe e substitui o <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> método. Esse método tenta obter um token do cache ou, se um token não puder ser encontrado no cache, recuperará um token do provedor subjacente e, em seguida, armazenará esse token em cache. Em ambos os casos, o método `SecurityToken`retorna um.  
+     Para executar essa tarefa, o provedor de token personalizado deriva a classe <xref:System.IdentityModel.Selectors.SecurityTokenProvider> e substitui o método <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A>. Esse método tenta obter um token do cache ou, se um token não puder ser encontrado no cache, recuperará um token do provedor subjacente e, em seguida, armazenará esse token em cache. Em ambos os casos, o método retorna um `SecurityToken`.  
   
     ```csharp  
     protected override SecurityToken GetTokenCore(TimeSpan timeout)  
@@ -135,9 +135,9 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
   
 2. Gravar Gerenciador de token de segurança personalizado.  
   
-     O <xref:System.IdentityModel.Selectors.SecurityTokenManager> é usado para criar um <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para um específico <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> que é passado para ele no `CreateSecurityTokenProvider` método. O Gerenciador de token de segurança também é usado para criar autenticadores de token e serializadores de token, mas eles não são cobertos por esse exemplo. Neste exemplo, o Gerenciador de token de segurança personalizado herda da <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> classe e substitui o `CreateSecurityTokenProvider` método para retornar o provedor de token personalizado quando os requisitos de token passados indicam que um token emitido é solicitado.  
+     O <xref:System.IdentityModel.Selectors.SecurityTokenManager> é usado para criar um <xref:System.IdentityModel.Selectors.SecurityTokenProvider> para um <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> específico que é passado para ele no método `CreateSecurityTokenProvider`. O Gerenciador de token de segurança também é usado para criar autenticadores de token e serializadores de token, mas eles não são cobertos por esse exemplo. Neste exemplo, o Gerenciador de token de segurança personalizado herda da classe <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> e substitui o método `CreateSecurityTokenProvider` para retornar o provedor de token personalizado quando os requisitos de token passados indicam que um token emitido é solicitado.  
   
-    ```csharp  
+    ```csharp
     class DurableIssuedTokenClientCredentialsTokenManager :  
      ClientCredentialsSecurityTokenManager  
     {  
@@ -154,7 +154,7 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
         {  
           return new DurableIssuedSecurityTokenProvider ((IssuedSecurityTokenProvider)base.CreateSecurityTokenProvider( tokenRequirement), this.cache);  
         }  
-        else  
+        else
         {  
           return base.CreateSecurityTokenProvider(tokenRequirement);  
         }  
@@ -166,7 +166,7 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
   
      Uma classe de credenciais de cliente é usada para representar as credenciais que são configuradas para o proxy do cliente e cria o Gerenciador de token de segurança que é usado para obter autenticadores de token, provedores de token e serializadores de token.  
   
-    ```csharp  
+    ```csharp
     public class DurableIssuedTokenClientCredentials : ClientCredentials  
     {  
       IssuedTokenCache cache;  
@@ -206,7 +206,7 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
   
 4. Implemente o cache de token. A implementação de exemplo usa uma classe base abstrata por meio da qual os consumidores de um determinado cache de token interagem com o cache.  
   
-    ```csharp  
+    ```csharp
     public abstract class IssuedTokenCache  
     {  
       public abstract void AddToken ( GenericXmlSecurityToken token, EndpointAddress target, EndpointAddress issuer);  
@@ -217,7 +217,7 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
   
      Para que o cliente use a credencial de cliente personalizada, o exemplo exclui a classe de credencial do cliente padrão e fornece a nova classe de credencial do cliente.  
   
-    ```csharp  
+    ```csharp
     clientFactory.Endpoint.Behaviors.Remove<ClientCredentials>();  
     DurableIssuedTokenClientCredentials durableCreds = new DurableIssuedTokenClientCredentials();  
     durableCreds.IssuedTokenCache = cache;  
@@ -250,6 +250,6 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

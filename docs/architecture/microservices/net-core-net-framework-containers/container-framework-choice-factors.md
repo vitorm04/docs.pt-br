@@ -19,15 +19,15 @@ A tabela de decisão a seguir resume se deve-se usar o .NET Framework ou o .NET 
 | Arquitetura/tipo de aplicativo | Contêineres do Linux | Contêineres do Windows |
 |-------------------------|------------------|--------------------|
 | Microsserviços em contêineres | .NET Core | .NET Core |
-| Aplicativo monolítico | .NET Core | .NET Framework <br/> .NET Core |
+| Aplicativo monolítico | .NET Core | {1&gt;.NET Framework&lt;1} <br/> .NET Core |
 | Melhores desempenho e escalabilidade da categoria | .NET Core | .NET Core |
-| Migração do aplicativo herdado do Windows Server ("campo-marrom") para contêineres | -- | .NET Framework |
+| Migração do aplicativo herdado do Windows Server ("campo-marrom") para contêineres | -- | {1&gt;.NET Framework&lt;1} |
 | Novo desenvolvimento baseado em contêiner ("campo-verde") | .NET Core | .NET Core |
-| ASP.NET Core | .NET Core | .NET Core (recomendado) <br/> .NET Framework |
-| ASP.NET 4 (MVC 5, API Web 2 e Web Forms) | -- | .NET Framework |
-| Serviços SignalR | .NET Core 2.1 ou versão posterior | .NET Framework <br/> .NET Core 2.1 ou versão posterior |
-| WCF, WF e outras estruturas herdadas | WCF no .NET Core (somente biblioteca de cliente) | .NET Framework <br/> WCF no .NET Core (somente biblioteca de cliente) |
-| Consumo de serviços do Azure | .NET Core <br/> (eventualmente todos os serviços do Azure fornecerão SDKs do cliente para o .NET Core) | .NET Framework <br/> .NET Core <br/> (eventualmente todos os serviços do Azure fornecerão SDKs do cliente para o .NET Core) |
+| ASP.NET Core | .NET Core | .NET Core (recomendado) <br/> {1&gt;.NET Framework&lt;1} |
+| ASP.NET 4 (MVC 5, API Web 2 e Web Forms) | -- | {1&gt;.NET Framework&lt;1} |
+| Serviços SignalR | .NET Core 2.1 ou versão posterior | {1&gt;.NET Framework&lt;1} <br/> .NET Core 2.1 ou versão posterior |
+| WCF, WF e outras estruturas herdadas | WCF no .NET Core (somente biblioteca de cliente) | {1&gt;.NET Framework&lt;1} <br/> WCF no .NET Core (somente biblioteca de cliente) |
+| Consumo de serviços do Azure | .NET Core <br/> (eventualmente todos os serviços do Azure fornecerão SDKs do cliente para o .NET Core) | {1&gt;.NET Framework&lt;1} <br/> .NET Core <br/> (eventualmente todos os serviços do Azure fornecerão SDKs do cliente para o .NET Core) |
 
 >[!div class="step-by-step"]
 >[Anterior](net-framework-container-scenarios.md)

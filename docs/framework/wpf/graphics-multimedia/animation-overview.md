@@ -213,7 +213,7 @@ Já que as animações geram valores de propriedade, existem diferentes tipos de
 
   Os exemplos nesta visão geral usam essas animações porque elas são mais simples de usar. As animações de/para/por são descritas em detalhes na visão geral das animações de/para/por.
 
-- *tipo*de \<> AnimationUsingKeyFrames
+- \<*Type*>AnimationUsingKeyFrames
 
   Animações de quadro chave são mais avançadas que animações de/para/por porque você pode especificar qualquer número de valores de destino e até mesmo controlar seu método de interpolação. Alguns tipos só podem ser animados com animações de quadro chave. As animações de quadro-chave são descritas em detalhes na [visão geral das animações de quadro chave](key-frame-animations-overview.md).
 
@@ -367,7 +367,7 @@ As amostras a seguir podem ajudá-lo a começar a adicionar animações a seus a
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|{1&gt;Título&lt;1}|Descrição|
 |-----------|-----------------|
 |[Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)|Descreve como o sistema de tempo usa as classes <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock>, que permitem criar animações.|
 |[Dicas e truques de animação](animation-tips-and-tricks.md)|Lista dicas úteis para solucionar problemas com animações, por exemplo, desempenho.|
@@ -380,7 +380,7 @@ As amostras a seguir podem ajudá-lo a começar a adicionar animações a seus a
 |[Visão geral de storyboards](storyboards-overview.md)|Descreve como usar storyboards com várias linhas do tempo para criar animações complexas.|
 |[Visão geral dos comportamentos de tempo](timing-behaviors-overview.md)|Descreve os tipos de <xref:System.Windows.Media.Animation.Timeline> e as propriedades usadas em animações.|
 |[Visão geral de eventos de tempo](timing-events-overview.md)|Descreve os eventos disponíveis nos objetos <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> para executar o código em pontos na linha do tempo, como iniciar, pausar, retomar, ignorar ou parar.|
-|[Tópicos explicativos](animation-and-timing-how-to-topics.md)|Contém exemplos de código para usar animações e linhas do tempo em seu aplicativo.|
+|[Tópicos de instruções](animation-and-timing-how-to-topics.md)|Contém exemplos de código para usar animações e linhas do tempo em seu aplicativo.|
 |[Tópicos explicativos de relógios](clocks-how-to-topics.md)|Contém exemplos de código para usar o objeto <xref:System.Windows.Media.Animation.Clock> em seu aplicativo.|
 |[Tópicos explicativos sobre quadros-chave](key-frame-animation-how-to-topics.md)|Contém exemplos de código para usar animações de quadro chave em seu aplicativo.|
 |[Tópicos explicativos de animação do caminho](path-animation-how-to-topics.md)|Contém exemplos de código para usar animações de caminho em seu aplicativo.|

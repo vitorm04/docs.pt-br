@@ -15,12 +15,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698204"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<Elemento de > de defaultProxy (configurações de rede)
+# <a name="defaultproxy-element-network-settings"></a>Elemento \<defaultProxy > (configurações de rede)
 Configura o servidor proxy HTTP (Hypertext Transfer Protocol).  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **@no__t -4System. net >** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<defaultProxy >**  
+&nbsp;&nbsp;[ **\<System. net >** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,7 +35,7 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -52,7 +52,7 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 |[module](module-element-network-settings.md)|Adiciona um novo módulo de proxy ao aplicativo.|  
 |[acionista](proxy-element-network-settings.md)|Define um servidor proxy.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
@@ -61,12 +61,12 @@ Configura o servidor proxy HTTP (Hypertext Transfer Protocol).
 ## <a name="remarks"></a>Comentários  
  Se o elemento defaultProxy estiver vazio, as configurações de proxy do Internet Explorer serão usadas. Esse comportamento é diferente da versão 1,1 do .NET Framework.  
   
- Uma exceção é gerada se o elemento [Module](module-element-network-settings.md) especifica um tipo não público, o tipo não é derivado da <xref:System.Net.IWebProxy> classe, uma exceção do construtor sem parâmetros desse objeto ocorreu ou ocorreu uma exceção ao recuperar o proxy padrão especificado pelo sistema. A <xref:System.Exception.InnerException%2A> Propriedade na exceção deve ter mais informações sobre a causa raiz do erro.  
+ Uma exceção é gerada se o elemento [Module](module-element-network-settings.md) especifica um tipo não público, o tipo não é derivado da classe <xref:System.Net.IWebProxy>, uma exceção do construtor sem parâmetros desse objeto ocorreu ou ocorreu uma exceção ao recuperar o proxy padrão especificado pelo sistema. A propriedade <xref:System.Exception.InnerException%2A> na exceção deve ter mais informações sobre a causa raiz do erro.  
   
 ## <a name="configuration-files"></a>Arquivos de Configuração  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir usa os padrões do proxy do Internet Explorer, especifica o endereço de proxy e ignora o proxy para acesso local e contoso.com.  
   
 ```xml  

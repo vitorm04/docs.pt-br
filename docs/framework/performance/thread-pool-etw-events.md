@@ -7,25 +7,24 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046182"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974859"
 ---
 # <a name="thread-pool-etw-events"></a>Eventos ETW de pool de threads
-<a name="top"></a> Esses eventos coletam informações sobre a função de trabalho e os threads de E/S.  
+Esses eventos coletam informações sobre threads de e/s de trabalho.  
   
  Há dois grupos de eventos de pool de threads:  
   
-- [Eventos de pool de threads de trabalho](#worker), que fornecem informações sobre como um aplicativo usa o pool de threads e o efeito das cargas de trabalho no controle de simultaneidade.  
+- [Eventos de pool de threads de trabalho](#worker-thread-pool-events), que fornecem informações sobre como um aplicativo usa o pool de threads e o efeito das cargas de trabalho no controle de simultaneidade.  
   
-- [Eventos de pool de threads de E/S](#io), que fornecem informações sobre os threads de E/S que são criados, desativados, ativados novamente ou terminados no pool de threads.  
-  
-<a name="worker"></a>   
-## <a name="worker-thread-pool-events"></a>Eventos de pool de threads de trabalho  
- Esses eventos se relacionam ao pool de threads de trabalho do tempo de execução e fornecem notificações de eventos de thread (por exemplo, quando um thread é criado ou interrompido). O pool de threads de trabalho usa um algoritmo adaptável para o controle de simultaneidade, em que o número de threads é calculado com base na taxa de transferência medida. Os eventos de pool de threads de trabalho podem ser usados para entender como um aplicativo está usando o pool de threads, bem como o efeito que determinadas cargas de trabalho podem ter no controle de simultaneidade.  
+- [Eventos de pool de threads de E/S](#io-thread-events), que fornecem informações sobre os threads de E/S que são criados, desativados, ativados novamente ou terminados no pool de threads.  
+
+## <a name="worker-thread-pool-events"></a>Eventos de pool de threads de trabalho
+ Esses eventos se relacionam ao pool de threads de trabalho do runtime e fornecem notificações de eventos de thread (por exemplo, quando um thread é criado ou interrompido). O pool de threads de trabalho usa um algoritmo adaptável para o controle de simultaneidade, em que o número de threads é calculado com base na taxa de transferência medida. Os eventos de pool de threads de trabalho podem ser usados para entender como um aplicativo está usando o pool de threads, bem como o efeito que determinadas cargas de trabalho podem ter no controle de simultaneidade.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart e ThreadPoolWorkerThreadStop  
  A tabela a seguir mostra a palavra-chave e o nível desses eventos. (Para obter mais informações, consulte [Palavras-chaves e níveis CLR ETW](clr-etw-keywords-and-levels.md).)  
@@ -124,10 +123,7 @@ ms.locfileid: "71046182"
 |NewcontrolSetting|win:Double|O número de threads de trabalho ativos que servirão como a linha de base para variações futuras na contagem de threads ativos.|  
 |NewThreadWaveMagnitude|Win:UInt16|A magnitude das variações futuras na contagem de threads ativos.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
-  
- [Voltar ao início](#top)  
-  
-<a name="io"></a>   
+
 ## <a name="io-thread-events"></a>Eventos de threads de E/S  
  Esses eventos de pool de threads ocorrem em threads do pool de threads de E/S (portas de conclusão), que é assíncrono.  
   

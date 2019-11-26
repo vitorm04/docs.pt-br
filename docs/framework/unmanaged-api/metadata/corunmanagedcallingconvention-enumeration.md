@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9206fbde13f457d4b2e2941ee744d645c6df9774
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 58d30e71929d314ee36adb9f83270858ff8a161b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781996"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442442"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>Enumeração CorUnmanagedCallingConvention
-Especifica as convenções de chamada para código não gerenciado.  
+Specifies the calling conventions for unmanaged code.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,22 +46,22 @@ typedef enum CorUnmanagedCallingConvention {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|A convenção de chamada do idioma do C.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|A convenção de chamada padrão.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|A "this" convenção de chamada.|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|A convenção de chamada "rápida".|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|The C language calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|The standard calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|The "this" calling convention.|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|The "fast" calling convention.|  
 |`IMAGE_CEE_CS_CALLCONV_C`|Não usado.|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|Não usado.|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|Não usado.|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|Não usado.|  
   
 ## <a name="remarks"></a>Comentários  
- O CLR não oferece suporte a convenção de chamada "rápida" no .NET Framework versão 1.0.  
+ The CLR does not support the "fast" calling convention in the .NET Framework version 1.0.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

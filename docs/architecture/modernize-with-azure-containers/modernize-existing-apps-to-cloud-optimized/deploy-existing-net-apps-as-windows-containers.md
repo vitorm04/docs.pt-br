@@ -93,15 +93,15 @@ Ao adicionar o nome da imagem ao arquivo Dockerfile, você pode selecionar o sis
 
 > | **Tags** | **Sistema e versão** |
 > |---|---|
-> | **Microsoft/DOTNET-Framework: 4. x-windowsservercore** | .NET Framework 4. x no Windows Server Core |
-> | **Microsoft/ASPNET: 4. x-windowsservercore** | .NET Framework 4. x com personalização ASP.NET adicional, no Windows Server Core |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET Framework 4. x no Windows Server Core |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET Framework 4. x com personalização ASP.NET adicional, no Windows Server Core |
 
 Para o .NET Core (multiplataforma para Linux e Windows), as marcas se pareceriam com o seguinte:
 
 > | **Tags** | **Sistema e versão**
 > |---|---|
-> | **Microsoft/dotnet: 2.0.0-tempo de execução** | Somente tempo de execução do .NET Core 2,0 no Linux |
-> | **Microsoft/dotnet: 2.0.0-Runtime-beserver** | .NET Core 2,0 de tempo de execução somente no Windows nano Server |
+> | **microsoft/dotnet:2.0.0-runtime** | Somente tempo de execução do .NET Core 2,0 no Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET Core 2,0 de tempo de execução somente no Windows nano Server |
 
 ### <a name="multi-arch-images"></a>Imagens de vários arcos
 

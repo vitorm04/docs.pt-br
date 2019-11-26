@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e774eefe-858c-4362-8d2d-28ebf2ba1a24
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8fa385805d3e2dca8fef3e1490b2c67dd0583373
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 73f536b4ab98aa596c2395810cb8b616ffd309e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755060"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438300"
 ---
 # <a name="isymunmanagedwriter2definelocalvariable2-method"></a>Método ISymUnmanagedWriter2::DefineLocalVariable2
-Define uma única variável no escopo léxico atual. Esse método pode ser chamado várias vezes para uma variável de mesmo nome que tem vários residências ao longo de um escopo. Nesse caso, no entanto, os valores de `startOffset` e `endOffset` parâmetros não devem se sobrepor.  
+Define uma única variável no escopo léxico atual. This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope. In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,37 +42,37 @@ HRESULT DefineLocalVariable2(
   
 ## <a name="parameters"></a>Parâmetros  
  `name`  
- [in] O nome da variável local.  
+ [in] The local variable name.  
   
  `attributes`  
- [in] Atributos da variável local.  
+ [in] The local variable attributes.  
   
  `sigToken`  
- [in] O token de metadados da assinatura.  
+ [in] The metadata token of the signature.  
   
  `addrKind`  
- [in] O tipo de endereço.  
+ [in] The address type.  
   
  `addr1`  
- [in] O primeiro endereço para a especificação de parâmetro.  
+ [in] The first address for the parameter specification.  
   
  `addr2`  
- [in] O segundo endereço para a especificação de parâmetro.  
+ [in] The second address for the parameter specification.  
   
  `addr3`  
- [in] O terceiro endereço para a especificação de parâmetro.  
+ [in] The third address for the parameter specification.  
   
  `startOffset`  
- [in] O deslocamento inicial da variável. Esse parâmetro é opcional. Se for 0, esse parâmetro será ignorado e a variável será definida ao longo de todo o escopo. Se for um valor diferente de zero, a variável estará dentro dos deslocamentos do escopo atual.  
+ [in] The start offset for the variable. Esse parâmetro é opcional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
  `endOffset`  
- [in] O deslocamento final da variável. Esse parâmetro é opcional. Se for 0, esse parâmetro será ignorado e a variável será definida ao longo de todo o escopo. Se for um valor diferente de zero, a variável estará dentro dos deslocamentos do escopo atual.  
+ [in] The end offset for the variable. Esse parâmetro é opcional. If it is 0, this parameter is ignored and the variable is defined throughout the entire scope. If it is a nonzero value, the variable falls within the offsets of the current scope.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl  
+ **Header:** CorSym.idl  
   
 ## <a name="see-also"></a>Consulte também
 

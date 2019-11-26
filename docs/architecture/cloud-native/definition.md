@@ -197,7 +197,7 @@ Observe como cada contêiner mantém seu próprio conjunto de dependências e te
 
 Observe como o modelo de contêiner adota o princípio de "dependências" do [aplicativo de doze fatores](https://12factor.net/).
 
-> *O fator \#2 especifica que "cada microserviço isola e empacota suas próprias dependências, adotando as alterações sem afetar o sistema inteiro".*
+> *O fator \#2 especifica que "cada microserviço isola e empacota suas próprias dependências, adotando alterações sem afetar o sistema inteiro".*
 
 Contêineres dão suporte a cargas de trabalho do Linux e do Windows. A nuvem do Azure adota as duas opções. Curiosamente, é Linux, não Windows Server, que se tornou o sistema operacional mais popular no Azure.
 
@@ -228,10 +228,10 @@ A tabela a seguir descreve as tarefas de orquestração comuns.
 | Scheduling | Provisione automaticamente instâncias de contêiner.|
 | Afinidade/antiafinidade | Provisione contêineres próximos ou distantes uns dos outros, ajudando a disponibilidade e o desempenho. |
 | Monitoramento de integridade | Detectar e corrigir automaticamente as falhas.|
-| Pós-falha | Reprovisionar automaticamente a instância com falha para computadores íntegros.|
+| Failover | Reprovisionar automaticamente a instância com falha para computadores íntegros.|
 | Dimensionamento | Adicione ou remova automaticamente a instância de contêiner para atender à demanda.|
 | Rede | Gerenciar uma sobreposição de rede para comunicação de contêiner.|
-| Descoberta de serviço | Habilite os contêineres para localizar um ao outro.|
+| Descoberta de serviços | Habilite os contêineres para localizar um ao outro.|
 | Atualizações sem interrupção | Coordene atualizações incrementais com uma implantação sem tempo de inatividade. Reverter alterações problemáticas automaticamente.|
 
 Observe como os orquestradores adotam os princípios de Disposability e simultaneidade do [aplicativo de doze fatores](https://12factor.net/), discutido anteriormente no capítulo.

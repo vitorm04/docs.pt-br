@@ -14,14 +14,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71697297"
 ---
-# <a name="listeners-element-for-source"></a>\<listeners > elemento para \<source >
-Adiciona ou remove ouvintes na coleção <xref:System.Diagnostics.TraceSource.Listeners%2A> para um <xref:System.Diagnostics.TraceSource>. Um ouvinte direciona a saída de rastreamento para um destino apropriado, como um log, uma janela ou um arquivo de texto.  
+# <a name="listeners-element-for-source"></a>Elemento \<Listeners > para \<origem >
+Adiciona ou remove ouvintes na coleção de <xref:System.Diagnostics.TraceSource.Listeners%2A> para um <xref:System.Diagnostics.TraceSource>. Um ouvinte direciona a saída de rastreamento para um destino apropriado, como um log, uma janela ou um arquivo de texto.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<sources >** ](sources-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<listeners >**  
+&nbsp;&nbsp;[ **\<System. Diagnostics >** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<de fontes >** ](sources-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[ **fonte** >](source-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**ouvintes >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,20 +34,20 @@ Adiciona ou remove ouvintes na coleção <xref:System.Diagnostics.TraceSource.Li
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ None.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[\<add>](add-element-for-listeners-for-source.md)|Adiciona um ouvinte na coleção `Listeners`.|  
-|[\<remove>](remove-element-for-listeners-for-source.md)|Remove um ouvinte da coleção `Listeners`.|  
+|[\<remove>](remove-element-for-listeners-for-source.md)|Remove um ouvinte da coleção de `Listeners`.|  
 |[\<clear>](clear-element-for-listeners-for-source.md)|Limpa a coleção `Listeners` de uma origem de rastreamento.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -61,8 +61,8 @@ Adiciona ou remove ouvintes na coleção <xref:System.Diagnostics.TraceSource.Li
 ## <a name="configuration-file"></a>Arquivo de Configuração  
  Esse elemento pode ser usado no arquivo de configuração da máquina (Machine. config) e no arquivo de configuração do aplicativo.  
   
-## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o elemento `<listeners>` para adicionar um ouvinte de rastreamento de console à fonte `mySource` e remover o ouvinte de rastreamento padrão.  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
+ O exemplo a seguir mostra como usar o elemento `<listeners>` para adicionar um ouvinte de rastreamento de console à fonte de `mySource` e remover o ouvinte de rastreamento padrão.  
   
 ```xml  
 <configuration>  

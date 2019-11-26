@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Duplex Service Contract
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
-ms.openlocfilehash: b00f5dd31ba572a2c8fb5301cc7ae9ddda77f0e5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 9b5d839bb4a678f105e128671fbda729e2c730b7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045044"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141794"
 ---
 # <a name="duplex"></a>Duplex
 
-O exemplo de duplex demonstra como definir e implementar um contrato duplex. A comunicação duplex ocorre quando um cliente estabelece uma sessão com um serviço e fornece ao serviço um canal no qual o serviço pode enviar mensagens de volta ao cliente. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Um contrato duplex é definido como um par de interfaces — uma interface primária do cliente para o serviço e uma interface de retorno de chamada do serviço para o cliente. Neste exemplo, a `ICalculatorDuplex` interface permite que o cliente execute operações matemáticas, calculando o resultado em uma sessão. O serviço retorna resultados na `ICalculatorDuplexCallback` interface. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens que estão sendo enviadas entre o cliente e o serviço.
+O exemplo de duplex demonstra como definir e implementar um contrato duplex. A comunicação duplex ocorre quando um cliente estabelece uma sessão com um serviço e fornece ao serviço um canal no qual o serviço pode enviar mensagens de volta ao cliente. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Um contrato duplex é definido como um par de interfaces — uma interface primária do cliente para o serviço e uma interface de retorno de chamada do serviço para o cliente. Neste exemplo, a interface `ICalculatorDuplex` permite que o cliente execute operações matemáticas, calculando o resultado em uma sessão. O serviço retorna resultados na interface `ICalculatorDuplexCallback`. Um contrato duplex requer uma sessão, porque um contexto deve ser estabelecido para correlacionar o conjunto de mensagens que estão sendo enviadas entre o cliente e o serviço.
 
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
@@ -46,7 +46,7 @@ public interface ICalculatorDuplexCallback
 }
 ```
 
-A `CalculatorService` classe implementa a interface `ICalculatorDuplex` primária. O serviço usa o <xref:System.ServiceModel.InstanceContextMode.PerSession> modo de instância para manter o resultado de cada sessão. Uma propriedade privada chamada `Callback` é usada para acessar o canal de retorno de chamada para o cliente. O serviço usa o retorno de chamada para enviar mensagens de volta para o cliente por meio da interface de retorno de chamada.
+A classe `CalculatorService` implementa a interface de `ICalculatorDuplex` primária. O serviço usa o modo de <xref:System.ServiceModel.InstanceContextMode.PerSession> instância para manter o resultado de cada sessão. Uma propriedade privada chamada `Callback` é usada para acessar o canal de retorno de chamada para o cliente. O serviço usa o retorno de chamada para enviar mensagens de volta para o cliente por meio da interface de retorno de chamada.
 
 ```csharp
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]
@@ -85,7 +85,7 @@ public class CalculatorService : ICalculatorDuplex
 }
 ```
 
-O cliente deve fornecer uma classe que implemente a interface de retorno de chamada do contrato duplex, para receber mensagens do serviço. No exemplo, uma `CallbackHandler` classe é definida para implementar a `ICalculatorDuplexCallback` interface.
+O cliente deve fornecer uma classe que implemente a interface de retorno de chamada do contrato duplex, para receber mensagens do serviço. No exemplo, uma classe `CallbackHandler` é definida para implementar a interface `ICalculatorDuplexCallback`.
 
 ```csharp
 public class CallbackHandler : ICalculatorDuplexCallback
@@ -102,7 +102,7 @@ public class CallbackHandler : ICalculatorDuplexCallback
 }
 ```
 
-O proxy que é gerado para um contrato duplex requer que <xref:System.ServiceModel.InstanceContext> um seja fornecido na construção. Isso <xref:System.ServiceModel.InstanceContext> é usado como o site de um objeto que implementa a interface de retorno de chamada e manipula as mensagens que são enviadas de volta do serviço. Um <xref:System.ServiceModel.InstanceContext> é construído com uma instância `CallbackHandler` da classe. Esse objeto manipula as mensagens enviadas do serviço para o cliente na interface de retorno de chamada.
+O proxy que é gerado para um contrato duplex requer que um <xref:System.ServiceModel.InstanceContext> seja fornecido na construção. Esse <xref:System.ServiceModel.InstanceContext> é usado como o site de um objeto que implementa a interface de retorno de chamada e manipula as mensagens que são enviadas de volta do serviço. Um <xref:System.ServiceModel.InstanceContext> é construído com uma instância da classe `CallbackHandler`. Esse objeto manipula as mensagens enviadas do serviço para o cliente na interface de retorno de chamada.
 
 ```csharp
 // Construct InstanceContext to handle messages on callback interface.
@@ -139,7 +139,7 @@ Console.ReadLine();
 client.Close();
 ```
 
-A configuração foi modificada para fornecer uma associação que dá suporte à comunicação de sessão e duplex. O `wsDualHttpBinding` dá suporte à comunicação de sessão e permite a comunicação duplex fornecendo conexões http duplas, uma para cada direção. No serviço, a única diferença na configuração é a associação usada. No cliente, você deve configurar um endereço que o servidor pode usar para se conectar ao cliente, conforme mostrado na seguinte configuração de exemplo.
+A configuração foi modificada para fornecer uma associação que dá suporte à comunicação de sessão e duplex. O `wsDualHttpBinding` dá suporte à comunicação de sessão e permite a comunicação duplex fornecendo conexões HTTP duplas, uma para cada direção. No serviço, a única diferença na configuração é a associação usada. No cliente, você deve configurar um endereço que o servidor pode usar para se conectar ao cliente, conforme mostrado na seguinte configuração de exemplo.
 
 ```xml
 <client>
@@ -171,7 +171,7 @@ Ao executar o exemplo, você vê as mensagens que são retornadas para o cliente
 3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
     > [!IMPORTANT]
-    > Ao executar o cliente em uma configuração entre computadores, certifique-se de substituir "localhost" no `address` atributo `clientBaseAddress` [ \<do ponto de extremidade > do elemento de > do \<cliente](../../configure-apps/file-schema/wcf/endpoint-of-client.md) e o atributo do [ Associação\<de >](../../../../docs/framework/misc/binding.md) elemento [ \<do elemento WSDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) com o nome do computador apropriado, conforme mostrado a seguir:
+    > Ao executar o cliente em uma configuração entre computadores, certifique-se de substituir "localhost" no atributo `address` do [> de ponto de extremidade\<do elemento \<cliente >](../../configure-apps/file-schema/wcf/endpoint-of-client.md) e o atributo `clientBaseAddress` do elemento\<de [Associação](../../configure-apps/file-schema/wcf/bindings.md) > do elemento\<[WSDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md) pelo nome do computador apropriado, conforme mostrado a seguir:
 
     ```xml
     <client>
@@ -191,6 +191,6 @@ Ao executar o exemplo, você vê as mensagens que são retornadas para o cliente
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Duplex`

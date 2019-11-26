@@ -31,11 +31,11 @@ A Figura 4-13 mostra uma visão geral da verdadeira plataforma de nuvem híbrida
 
 O Azure Stack é oferecido em duas opções de implantação para atender às suas necessidades:
 
-- Sistemas integrados Azure Stack
+- Sistemas integrados do Azure Stack
 
 - Kit de Desenvolvimento do Azure Stack
 
-### <a name="azure-stack-integrated-systems"></a>Sistemas integrados Azure Stack
+### <a name="azure-stack-integrated-systems"></a>Sistemas integrados do Azure Stack
 
 Azure Stack sistemas integrados são oferecidos por meio de uma parceria de parceiros de hardware e da Microsoft. A parceria cria uma solução que oferece inovação no ritmo da nuvem que é equilibrada com simplicidade no gerenciamento. Como o Azure Stack é oferecido como um sistema integrado de hardware e software, você obtém a quantidade certa de flexibilidade e controle, ao mesmo tempo que ainda está adotando a inovação da nuvem. Azure Stack intervalo de sistemas integrados de tamanho de 4 a 12 nós e tem suporte em conjunto pelo parceiro de hardware e pela Microsoft. Use Azure Stack sistemas integrados para implementar novos cenários para suas cargas de trabalho de produção.
 

@@ -62,7 +62,7 @@ Ou você pode gerar uma lista de itens usando um loop C# de `foreach` normal com
 
 As diretivas do Razor, como diretivas no ASP.NET Web Forms, controlam muitos aspectos de como um componente Razor é compilado. Os exemplos incluem o componente:
 
-- espaço de nome
+- {1&gt;Namespace&lt;1}
 - Classe base
 - Interfaces implementadas
 - Parâmetros genéricos
@@ -77,7 +77,7 @@ As diretivas do Razor começam com o `@` caractere e são normalmente usadas no 
 
 A tabela a seguir resume as várias diretivas Razor usadas no mais e suas ASP.NET Web Forms equivalentes, se existirem.
 
-|Diretiva    |Descrição|Exemplo|Web Forms equivalente|
+|Directive    |Descrição|{1&gt;Exemplo&lt;1}|Web Forms equivalente|
 |-------------|-----------|-------|--------------------|
 |`@attribute` |Adiciona um atributo de nível de classe ao componente|`@attribute [Authorize]`|Nenhum|
 |`@code`      |Adiciona membros de classe ao componente|`@code { ... }`|`<script runat="server">...</script>`|
@@ -98,7 +98,7 @@ Os componentes do Razor também fazem uso extensivo de *atributos de diretiva* e
 
 A tabela a seguir resume os vários atributos para as diretivas do Razor usadas no mais incrivelmente.
 
-|Atributo    |Descrição|Exemplo|
+|Atributo    |Descrição|{1&gt;Exemplo&lt;1}|
 |-------------|-----------|-------|
 |`@attributes`|Renderiza um dicionário de atributos|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |Cria uma associação de dados bidirecional    |`<input @bind="username" @bind:event="oninput" />`|
@@ -106,7 +106,7 @@ A tabela a seguir resume os vários atributos para as diretivas do Razor usadas 
 |`@key`       |Especifica uma chave a ser usada pelo algoritmo diff para preservar elementos em uma coleção|`<DetailsEditor @key="person" Details="person.Details" />`|
 |`@ref`       |Captura uma referência para o componente ou elemento HTML|`<MyDialog @ref="myDialog" />`|
 
-Os vários atributos de diretiva usados pelo mais recente (`@onclick`, `@bind`, `@ref` e assim por diante) são abordados nas seções abaixo e nos capítulos posteriores.
+Os vários atributos de diretiva usados pelo mais recente (`@onclick`, `@bind`, `@ref`e assim por diante) são abordados nas seções abaixo e nos capítulos posteriores.
 
 Muitas das sintaxes usadas em arquivos *. aspx* e *. ascx* têm sintaxes paralelas no Razor. Veja abaixo uma comparação simples das sintaxes para ASP.NET Web Forms e Razor.
 
@@ -114,8 +114,8 @@ Muitas das sintaxes usadas em arquivos *. aspx* e *. ascx* têm sintaxes paralel
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Diretivas                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
 |Blocos de código                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
-|Expressões<br>(Codificado em HTML)|`<%: %>`            |`<%:DateTime.Now %>` |Implícito: `@`<br>Explícito: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
-|Comentários                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
+|{1&gt;Expressões&lt;1}<br>(Codificado em HTML)|`<%: %>`            |`<%:DateTime.Now %>` |Implícito: `@`<br>Explícito: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
+|Comments                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |Associação de dados                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
 
 Para adicionar membros à classe de componente Razor, use a diretiva `@code`. Essa técnica é semelhante ao uso de um bloco de `<script runat="server">...</script>` em uma página ou controle de usuário do ASP.NET Web Forms.
@@ -418,7 +418,7 @@ public class AppState
 
 ## <a name="component-lifecycle"></a>Ciclo de vida do componente
 
-O ASP.NET Web Forms Framework tem métodos de ciclo de vida bem definidos para módulos, páginas e controles. Por exemplo, o controle a seguir implementa manipuladores de eventos para os eventos de ciclo de vida `Init`, `Load` e `UnLoad`:
+O ASP.NET Web Forms Framework tem métodos de ciclo de vida bem definidos para módulos, páginas e controles. Por exemplo, o controle a seguir implementa manipuladores de eventos para os eventos de ciclo de vida `Init`, `Load`e `UnLoad`:
 
 *Counter.ascx.cs*
 

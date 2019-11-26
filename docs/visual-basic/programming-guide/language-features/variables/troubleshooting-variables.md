@@ -1,51 +1,51 @@
 ---
-title: Solucionando problemas de variáveis no Visual Basic
+title: Solucionando problemas de variáveis
 ms.date: 07/20/2015
 helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: 31aca95bb292ecd0bb04fda6ded83d4af8be0e2f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 929540788e8134760446e02c3377e78d00ca17d9
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598610"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351768"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Solucionando problemas de variáveis no Visual Basic
-Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com variáveis no Visual Basic.  
+This page lists some common problems that can occur when working with variables in Visual Basic.  
   
-## <a name="unable-to-access-members-of-an-object"></a>Não é possível acessar membros de um objeto  
- Se seu código tenta acessar uma propriedade ou método em um objeto, há dois resultados de erro possíveis:  
+## <a name="unable-to-access-members-of-an-object"></a>Unable to Access Members of an Object  
+ If your code attempts to access a property or method on an object, there are two possible error outcomes:  
   
-- O compilador pode gerar uma mensagem de erro se você declarar a variável de objeto para ser de um tipo específico e, em seguida, fazer referência a um membro não definido por esse tipo.  
+- The compiler can generate an error message if you declare the object variable to be of a specific type and then refer to a member not defined by that type.  
   
-- Um tempo de execução <xref:System.MemberAccessException> ocorre quando o objeto atribuído a uma variável de objeto não expõe o membro que seu código está tentando acessar. No caso de uma variável de [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md), você também pode obter essa exceção se o membro não for `Public`. Isso ocorre porque a associação tardia permite acesso somente a `Public` membros.  
+- A run-time <xref:System.MemberAccessException> occurs when the object assigned to an object variable does not expose the member your code is trying to access. In the case of a variable of [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md), you can also get this exception if the member is not `Public`. This is because late binding allows access only to `Public` members.  
   
- Quando o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) conjuntos de verificação de tipo `On`, uma variável de objeto pode acessar somente os métodos e propriedades da classe com a qual você declará-la. O exemplo a seguir ilustra essa situação.  
+ When the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) sets type checking `On`, an object variable can access only the methods and properties of the class with which you declare it. O exemplo a seguir ilustra essa situação.  
 
  [!code-vb[VbVbalrVariables#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrVariables/VB/Class1.vb#2)]  
   
- Neste exemplo, `p` pode usar somente os membros do <xref:System.Object> classe em si, que não incluem o `Left` propriedade. Por outro lado, `q` tiver sido declarado para ser do tipo <xref:System.Windows.Forms.Label>, portanto, ele pode usar todos os métodos e propriedades da <xref:System.Windows.Forms.Label> classe o <xref:System.Windows.Forms> namespace.  
+ In this example, `p` can use only the members of the <xref:System.Object> class itself, which do not include the `Left` property. On the other hand, `q` was declared to be of type <xref:System.Windows.Forms.Label>, so it can use all the methods and properties of the <xref:System.Windows.Forms.Label> class in the <xref:System.Windows.Forms> namespace.  
   
-### <a name="correct-approach"></a>Abordagem correta  
- Para poder acessar todos os membros de um objeto de uma determinada classe, declare a variável de objeto para ser do tipo de classe quando possível. Se você não pode fazer isso, por exemplo, se você não souber o objeto de tipo em tempo de compilação, você deve definir `Option Strict` para `Off` e declarar a variável como o [tipo de dados do objeto](../../../../visual-basic/language-reference/data-types/object-data-type.md). Isso permite que os objetos de qualquer tipo a ser atribuído à variável, e você deve tomar medidas para garantir que o objeto atribuído no momento é de um tipo aceitável. Você pode usar o [operador TypeOf](../../../../visual-basic/language-reference/operators/typeof-operator.md) para tomar essa decisão.  
+### <a name="correct-approach"></a>Correct Approach  
+ To be able to access all the members of an object of a particular class, declare the object variable to be of the type of that class when possible. If you cannot do this, for example if you do not know the object type at compile time, you must set `Option Strict` to `Off` and declare the variable to be of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md). This allows objects of any type to be assigned to the variable, and you should take steps to ensure that the currently assigned object is of an acceptable type. You can use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to make this determination.  
   
-## <a name="other-components-cannot-access-your-variable"></a>Outros componentes não é possível acessar sua variável  
- Nomes de Visual Basic são *diferencia maiusculas de minúsculas*. Se dois nomes diferem somente no caso alfabético, o compilador interpreta como o mesmo nome. Por exemplo, ele considera `ABC` e `abc` para se referir ao mesmo elemento declarado.  
+## <a name="other-components-cannot-access-your-variable"></a>Other Components Cannot Access Your Variable  
+ Visual Basic names are *case-insensitive*. If two names differ in alphabetic case only, the compiler interprets them as the same name. For example, it considers `ABC` and `abc` to refer to the same declared element.  
   
- No entanto, o common language runtime (CLR) usa *diferencia maiusculas de minúsculas* associação. Portanto, quando você produzir um assembly ou uma DLL e disponibilizá-lo para outros assemblies, seus nomes não diferenciam maiusculas de minúsculas. Por exemplo, se você definir uma classe com um elemento chamado `ABC`, e outros assemblies fazer uso de sua classe por meio do common language runtime, eles devem se referir ao elemento como `ABC`. Se você posteriormente recompilar sua classe e alterar o nome do elemento para `abc`, os outros assemblies usando sua classe não podem acessar esse elemento. Portanto, quando você liberar uma versão atualizada de um assembly, você não deve alterar maiusculas e minúsculas em qualquer elemento público.  
+ However, the common language runtime (CLR) uses *case-sensitive* binding. Therefore, when you produce an assembly or a DLL and make it available to other assemblies, your names are no longer case-insensitive. For example, if you define a class with an element called `ABC`, and other assemblies make use of your class through the common language runtime, they must refer to the element as `ABC`. If you subsequently recompile your class and change the element's name to `abc`, the other assemblies using your class can no longer access that element. Therefore, when you release an updated version of an assembly, you should not change the alphabetic case of any public elements.  
   
- Para obter mais informações, consulte [Common Language Runtime](../../../../standard/clr.md).  
+ For more information, see [Common Language Runtime](../../../../standard/clr.md).  
   
-### <a name="correct-approach"></a>Abordagem correta  
- Para permitir que outros componentes acessar suas variáveis, trate seus nomes como se diferenciassem maiusculas de minúsculas. Quando você estiver testando sua classe ou módulo, certifique-se de que outros assemblies são de associação para as variáveis que você espera que eles. Depois que você publicou um componente, não faça quaisquer modificações em nomes de variáveis existentes, incluindo seus casos de alteração.  
+### <a name="correct-approach"></a>Correct Approach  
+ To allow other components to access your variables, treat their names as if they were case-sensitive. When you are testing your class or module, make sure other assemblies are binding to the variables you expect them to. Once you have published a component, do not make any modifications to existing variable names, including changing their cases.  
   
-## <a name="wrong-variable-being-used"></a>Variável incorreta que está sendo usado  
- Quando você tiver mais de uma variável com o mesmo nome, o compilador do Visual Basic tenta resolver cada referência a esse nome. Se as variáveis têm escopo diferente, o compilador resolve uma referência para a declaração com o escopo mais restrito. Se eles tiverem o mesmo escopo, a resolução falhará e o compilador sinaliza um erro. Para obter mais informações, consulte [referências a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+## <a name="wrong-variable-being-used"></a>Wrong Variable Being Used  
+ When you have more than one variable with the same name, the Visual Basic compiler attempts to resolve each reference to that name. If the variables have different scope, the compiler resolves a reference to the declaration with the narrowest scope. If they have the same scope, the resolution fails and the compiler signals an error. For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
-### <a name="correct-approach"></a>Abordagem correta  
- Evite usar variáveis com o mesmo nome mas com escopo diferente. Se você estiver usando outros assemblies ou projetos, evite usar qualquer nomes definidos nesses componentes externos tanto quanto possível. Se você tiver mais de uma variável com o mesmo nome, certifique-se de que você qualifica cada referência a ele. Para obter mais informações, consulte [referências a elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+### <a name="correct-approach"></a>Correct Approach  
+ Avoid using variables with the same name but different scope. If you are using other assemblies or projects, avoid using any names defined in those external components as much as possible. If you have more than one variable with the same name, be sure you qualify every reference to it. For more information, see [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -53,8 +53,8 @@ Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com va
 - [Declaração de Variável](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Declaração de Variável do Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Como: Acessar membros de um objeto](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Como acessar membros de um objeto](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [Valores de Variável de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Como: Determinar que tipo uma variável de objeto se refere a](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
+- [Como determinar a que tipo uma variável de objeto se refere](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-what-type-an-object-variable-refers-to.md)
 - [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Nomes de Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

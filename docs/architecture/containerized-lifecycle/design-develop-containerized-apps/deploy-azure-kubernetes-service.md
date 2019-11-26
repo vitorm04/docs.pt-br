@@ -64,7 +64,7 @@ Em primeiro lugar, obtendo as credenciais:
 az aks get-credentials --resource-group MSSampleK8ClusterRG --name MSSampleK8Cluster
 ```
 
-![Saída de console do comando acima: "MsSampleK8Cluster mesclado como o contexto atual em /root/.kube/config.](media/get-credentials-command-result.png)
+![Saída do console do comando acima: mesclado "MsSampleK8Cluster como contexto atual em/root/.Kube/config.](media/get-credentials-command-result.png)
 
 **Figura 4-19**. Resultado do comando `aks get-credentials`.
 
@@ -74,7 +74,7 @@ E, em seguida, obtendo nós do Kubectl:
 kubectl get nodes
 ```
 
-![Saída de console do comando acima: Lista de nós com status, idade (tempo decorrido) e versão](media/kubectl-get-nodes-command-result.png)
+![Saída do console a partir do comando acima: lista de nós com status, idade (tempo em execução) e versão](media/kubectl-get-nodes-command-result.png)
 
 **Figura 4-20**. Resultado do comando `kubectl get nodes`.
 

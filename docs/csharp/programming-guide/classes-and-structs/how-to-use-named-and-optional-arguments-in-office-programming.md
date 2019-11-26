@@ -1,5 +1,5 @@
 ---
-title: 'Como: usar argumentos nomeados e opcionais na programação do Office – Guia de Programação em C#'
+title: Como usar argumentos nomeados e opcionais no guia de C# programação de programação do Office
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 90b60a6410ffbe7f9802b01bf3303b6e842a1424
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: d7efd13f26912f8cd944bcbc5568e9bbca92c3a0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002796"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73970501"
 ---
-# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Como: usar argumentos nomeados e opcionais na programação do Office (Guia de Programação em C#)
+# <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Como usar argumentos nomeados e opcionais na programação doC# Office (guia de programação)
 
 Os argumentos nomeados e opcionais, introduzidos em C# 4, aprimoram a conveniência, a flexibilidade e a legibilidade na programação em C#. Além disso, esses recursos facilitam bastante o acesso a interfaces COM, como as APIs de Automação do Microsoft Office.
 
@@ -54,7 +54,7 @@ Você deve ter o Microsoft Office Word instalado em seu computador para concluir
 
 1. No **Gerenciador de Soluções**, clique com o botão direito do mouse no arquivo *Program.cs* e, em seguida, clique em **Exibir Código**.
 
-2. Adicione as seguintes diretivas `using` à parte superior do arquivo de código:
+2. Adicione as seguintes diretivas de `using` à parte superior do arquivo de código:
 
      [!code-csharp[csProgGuideNamedAndOptional#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#4)]
 
@@ -94,7 +94,7 @@ Você deve ter o Microsoft Office Word instalado em seu computador para concluir
 
 ## <a name="to-experiment-with-other-parameters"></a>Para fazer experiências com outros parâmetros
 
-1. Para alterar a tabela de forma que ela tenha uma coluna e três linhas, substitua a última linha em `DisplayInWord` pela instrução a seguir e digite <kbd>CTRL</kbd>+<kbd>F5</kbd>.  
+1. Para alterar a tabela de forma que ela tenha uma coluna e três linhas, substitua a última linha de `DisplayInWord` pela instrução a seguir e digite <kbd>CTRL</kbd>+<kbd>F5</kbd>.  
 
      [!code-csharp[csProgGuideNamedAndOptional#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#10)]
 

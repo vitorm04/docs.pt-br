@@ -254,7 +254,7 @@
       href: language-reference/configure-language-version.md
     - name: Convenções tipográficas e de código
       href: language-reference/typographic-and-code-conventions.md
-    - name: Membros da biblioteca em tempo de execução do Visual Basic
+    - name: Membros da Biblioteca de Runtime do Visual Basic
       href: language-reference/runtime-library-members.md
     - name: Palavras-chave
       href: language-reference/keywords/index.md
@@ -970,15 +970,15 @@
         - name: Não é possível criar o componente ActiveX
           href: language-reference/error-messages/cannot-create-activex-component.md
         - name: Não é possível fazer referência a '<name>' porque ele é um membro do campo de tipo de valor '<name>' da classe '<classname>' que tem 'System.MarshalByRefObject' como uma classe base
-          href: language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+          href: language-reference/error-messages/bc30310.md
         - name: Não é possível fazer referência a um membro da instância de uma classe de dentro de um método compartilhado ou inicializador de membro compartilhado sem uma instância explícita da classe
-          href: language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+          href: language-reference/error-messages/bc30369.md
         - name: Não é possível criar arquivo temporário necessário
           href: language-reference/error-messages/can-t-create-necessary-temporary-file.md
         - name: Não é possível abrir '<filename>' para gravação
-          href: language-reference/error-messages/can-t-open-filename-for-writing.md
+          href: language-reference/error-messages/bc2012.md
         - name: Não foi possível localizar a classe '<classname>'
-          href: language-reference/error-messages/class-classname-cannot-be-found.md
+          href: language-reference/error-messages/bc31098.md
         - name: A classe não dá suporte à automação ou à interface esperada
           href: language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
         - name: Instrução 'Class' deve finalizar com 'End Class' correspondente
@@ -1095,7 +1095,7 @@
           href: language-reference/error-messages/lambda-expression-will-not-be-removed-from-this-event-handler.md
         - name: As expressões lambda não são válidas na primeira expressão de uma instrução 'Select Case'
           href: language-reference/error-messages/lambda-expressions-are-not-valid-in-the-first-expression-of-select-case.md
-        - name: Resolução de associação tardia; poderiam ocorrer erros de tempo de execução
+        - name: Resolução de associação tardia; poderiam ocorrer erros de runtime
           href: language-reference/error-messages/late-bound-resolution;-runtime-errors-could-occur.md
         - name: Não é possível aplicar a resolução de sobrecarga com associação tardia a '<procedurename>' porque a instância de acesso é um tipo de interface
           href: language-reference/error-messages/latebound-overload-resolution-cannot-be-applied.md

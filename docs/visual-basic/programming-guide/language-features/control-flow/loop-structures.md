@@ -1,5 +1,5 @@
 ---
-title: Estruturas de loop (Visual Basic)
+title: Estruturas de loop
 ms.date: 07/20/2015
 helpviewer_keywords:
 - control flow [Visual Basic], loops
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a75205a7d52c332094d624d082e5db3e89447f5
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906849"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353923"
 ---
 # <a name="loop-structures-visual-basic"></a>Estruturas de loop (Visual Basic)
-Estruturas de loop do Visual Basic permitem que você execute uma ou mais linhas de código repetidamente. Você pode repetir as instruções em uma estrutura de loop até que uma condição for `True`, até que uma condição é `False`, um especificado o número de vezes ou uma vez para cada elemento em uma coleção.  
+Visual Basic loop structures allow you to run one or more lines of code repetitively. You can repeat the statements in a loop structure until a condition is `True`, until a condition is `False`, a specified number of times, or once for each element in a collection.  
   
- A ilustração a seguir mostra uma estrutura de loop que executa um conjunto de instruções até que uma condição for verdadeira:  
+ The following illustration shows a loop structure that runs a set of statements until a condition becomes true:  
   
- ![Fluxograma que mostra um faça... Até que o loop.](./media/loop-structures/do-until-loop-true-condition.gif)  
+ ![Flow chart that shows a Do...Until loop.](./media/loop-structures/do-until-loop-true-condition.gif)  
   
-## <a name="while-loops"></a>Embora os Loops  
- O `While`... `End While` construção executa um conjunto de instruções desde que a condição especificada em de `While` instrução é `True`. Para obter mais informações, consulte [enquanto... Finalizar instrução While](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
+## <a name="while-loops"></a>While Loops  
+ The `While`...`End While` construction runs a set of statements as long as the condition specified in the `While` statement is `True`. For more information, see [While...End While Statement](../../../../visual-basic/language-reference/statements/while-end-while-statement.md).  
   
-## <a name="do-loops"></a>Fazer Loops  
- O `Do`... `Loop` construção permite testar uma condição no início ou final de uma estrutura de loop. Você também pode especificar se deseja repetir o loop, enquanto a condição permaneça `True` ou até que ele se torne `True`. Para obter mais informações, consulte [fazer... Instrução de loop](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
+## <a name="do-loops"></a>Do Loops  
+ The `Do`...`Loop` construction allows you to test a condition at either the beginning or the end of a loop structure. You can also specify whether to repeat the loop while the condition remains `True` or until it becomes `True`. For more information, see [Do...Loop Statement](../../../../visual-basic/language-reference/statements/do-loop-statement.md).  
   
-## <a name="for-loops"></a>Loops for  
- O `For`... `Next` construção executa o loop de um determinado número de vezes. Ele usa uma variável de controle de loop, também chamada de um *contador*, para acompanhar as repetições. Especifique os valores inicial e final para este contador e, opcionalmente, você pode especificar a quantidade pela qual ele aumenta de uma repetição para a próxima. Para obter mais informações, consulte [para... Próxima instrução](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
+## <a name="for-loops"></a>For Loops  
+ The `For`...`Next` construction performs the loop a set number of times. It uses a loop control variable, also called a *counter*, to keep track of the repetitions. You specify the starting and ending values for this counter, and you can optionally specify the amount by which it increases from one repetition to the next. For more information, see [For...Next Statement](../../../../visual-basic/language-reference/statements/for-next-statement.md).  
   
-## <a name="for-each-loops"></a>Loops For Each  
- O `For Each`... `Next` construção executa um conjunto de instruções uma vez para cada elemento em uma coleção. Especifique a variável de controle de loop, mas não é preciso determinar inicial ou final de valores para ele. Para obter mais informações, consulte [para cada um... Próxima instrução](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
+## <a name="for-each-loops"></a>For Each Loops  
+ The `For Each`...`Next` construction runs a set of statements once for each element in a collection. You specify the loop control variable, but you do not have to determine starting or ending values for it. For more information, see [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
 ## <a name="see-also"></a>Consulte também
 

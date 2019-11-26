@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 351d4b4c-c939-486d-9471-51914a55f471
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f19dd114925ed1fd12bcc0056411c3e3d4181215
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 76d2b163f959111923bffb1348890f6fbb29828e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777087"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445684"
 ---
 # <a name="importtypes-method"></a>Método ImportTypes
-Inicia a importação de tipos de cada escopo importado por meio do [Método ImportFile](importfile-method.md).  
+Initiates the importing of types from each scope imported via [ImportFile Method](importfile-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,28 +39,28 @@ HRESULT ImportTypes(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID do assembly para o qual importar.  
+ ID of the assembly to import to.  
   
  `FileToken`  
- ID do arquivo do qual importar.  
+ ID of the file to import from.  
   
  `dwScope`  
- Escopo de base zero para importar.  
+ Zero-based scope to import.  
   
  `phEnum`  
- Recebe o identificador do enumerador para os tipos neste escopo.  
+ Receives enumerator handle for the types in this scope.  
   
  `ppImportScope`  
- Opcionalmente, recebe a interface de [interface IMetaDataImport](../metadata/imetadataimport-interface.md) .  
+ Optionally receives [IMetaDataImport Interface](../metadata/imetadataimport-interface.md) interface.  
   
  `pdwCountOfTypes`  
- Opcionalmente, recebe a contagem de tipos no escopo indicado.  
+ Optionally receives count of types in the indicated scope.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retornará S_OK se o método tiver sucesso.  
+## <a name="return-value"></a>Valor retornado  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer ALink. h  
+ Requires alink.h  
   
 ## <a name="see-also"></a>Consulte também
 

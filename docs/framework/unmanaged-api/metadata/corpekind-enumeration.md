@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: 22dc6dea-b1b9-4982-a730-a022d586b117
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0bfe30567bcd8e22a82d401e00b0a6ee50407def
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 74670a1477546066145bd4bbf2f123a252e10b55
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781670"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436477"
 ---
 # <a name="corpekind-enumeration"></a>Enumeração CorPEKind
-Contém valores que descrevem um arquivo executável portátil (PE), conforme retornado de uma chamada para [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
+Contains values that describe a portable executable (PE) file, as returned from a call to [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,20 +43,20 @@ typedef enum CorPEKind {
   
 |Membro|Descrição|  
 |------------|-----------------|  
-|`peNot`|Indica que não é um arquivo PE.|  
-|`peILOnly`|Indica que esse arquivo PE contém somente código gerenciado.|  
-|`pe32BitRequired`|Indica que esse arquivo PE faz chamadas ao Win32.|  
-|`pe32Plus`|Indica que esse arquivo PE é executado em uma plataforma de 64 bits.|  
-|`pe32Unmanaged`|Indica que esse arquivo PE é código nativo.|  
-|pe32BitPreferred|Indica que esse arquivo PE é neutro de plataforma e prefere a ser carregado em um ambiente de 32 bits.|  
+|`peNot`|Indicates that this is not a PE file.|  
+|`peILOnly`|Indicates that this PE file contains only managed code.|  
+|`pe32BitRequired`|Indicates that this PE file makes Win32 calls.|  
+|`pe32Plus`|Indicates that this PE file runs on a 64-bit platform.|  
+|`pe32Unmanaged`|Indicates that this PE file is native code.|  
+|pe32BitPreferred|Indicates that this PE file is platform-neutral and prefers to be loaded in a 32-bit environment.|  
   
 ## <a name="remarks"></a>Comentários  
- Esses valores podem ser usados em combinações de bit a bit.  
+ These values can be used in bitwise combinations.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorHdr.h  
+ **Header:** CorHdr.h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

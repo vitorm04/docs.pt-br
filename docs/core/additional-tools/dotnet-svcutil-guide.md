@@ -22,7 +22,7 @@ A ferramenta **dotnet-SvcUtil** é uma opção alternativa para o provedor de se
 > [!IMPORTANT]
 > Você só deve fazer referência a serviços de uma fonte confiável. A adição de referências de uma fonte não confiável pode comprometer a segurança.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 <!-- markdownlint-disable MD025 -->
 
@@ -179,6 +179,6 @@ Se tiver perguntas ou comentários, [abra um problema no GitHub](https://github.
 
 - Consulte as [Notas de versão](https://github.com/dotnet/wcf/blob/master/release-notes/dotnet-svcutil-notes.md) para obter informações de versão atualizadas, incluindo problemas conhecidos.
 
-## <a name="information"></a>Informações
+## <a name="information"></a>{1&gt;Informações&lt;1}
 
 - [Pacote do NuGet dotnet-svcutil](https://nuget.org/packages/dotnet-svcutil)

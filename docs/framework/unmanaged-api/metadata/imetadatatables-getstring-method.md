@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 895c35cf-b95d-4e3b-93b5-cfc1cf9044fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3f817fa3f24bebf3303c656bd02c4d93d1d1431b
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 055499230f500cb7249746e1acbf46b4548d25bc
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781393"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426805"
 ---
 # <a name="imetadatatablesgetstring-method"></a>Método IMetaDataTables::GetString
-Obtém a cadeia de caracteres no índice especificado da coluna de tabela no escopo atual de referência.  
+Gets the string at the specified index from the table column in the current reference scope.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,17 +36,17 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parâmetros  
  `ixString`  
- [in] O índice no qual começar a procurar o próximo valor.  
+ [in] The index at which to start to search for the next value.  
   
  `ppString`  
- [out] Um ponteiro para um ponteiro para o valor de cadeia de caracteres retornada.  
+ [out] A pointer to a pointer to the returned string value.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

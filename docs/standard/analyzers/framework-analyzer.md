@@ -1,16 +1,16 @@
 ---
-title: Os Analisadores de Segurança do .NET – .NET
-description: Saiba como usar os Analisadores de Segurança do .NET no pacote de Analisadores do .NET Framework para localizar e corrigir riscos à segurança
+title: .NET Framework Analyzers - .NET
+description: Learn how to use the .NET Framework Analyzers in the .NET Framework Analyzers package to find and address security risks
 author: billwagner
 ms.author: wiwagn
 ms.date: 01/25/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 03268375739b34a43f38c60fbfd2c993da9f3840
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 7e64b00eb6fd2c2dbb12c54a2c725590b4d22e15
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197956"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345946"
 ---
 # <a name="the-net-framework-analyzer"></a>O Analisador do .NET Framework
 
@@ -20,7 +20,7 @@ O analisador é executado interativamente no Visual Studio enquanto você escrev
 
 ## <a name="installing-and-configuring-the-net-framework-analyzer"></a>Instalar e configurar o Analisador do .NET Framework
 
-Os Analisadores de Segurança do .NET devem ser instalados como um pacote do NuGet em cada projeto em que você deseja executá-los. Somente um desenvolvedor precisa adicioná-los ao projeto. O pacote de analisador é uma dependência de projeto e será executado no computador de cada um dos desenvolvedores assim que ele tiver a solução atualizada.
+The .NET Framework Analyzers must be installed as a NuGet package on every project where you want them to run. Somente um desenvolvedor precisa adicioná-los ao projeto. O pacote de analisador é uma dependência de projeto e será executado no computador de cada um dos desenvolvedores assim que ele tiver a solução atualizada.
 
 O Analisador do .NET Framework é fornecido no pacote do NuGet [Microsoft.NetFramework.Analyzers](https://www.nuget.org/packages/Microsoft.NetFramework.Analyzers/). Esse pacote fornece apenas os analisadores específicos para o .NET Framework, que inclui os analisadores de segurança. Na maioria dos casos, você desejará o pacote do NuGet [Microsoft.CodeAnalysis.FxCopAnalyzers](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers). O pacote de agregação FxCopAnalyzers contém todos os analisadores de estrutura incluídos no pacote Framework.Analyzers, bem como os analisadores a seguir:
 

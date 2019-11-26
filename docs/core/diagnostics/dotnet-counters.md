@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/15/2019
 ms.locfileid: "72321585"
 ---
-# <a name="dotnet-counters"></a>dotnet-contadores
+# <a name="dotnet-counters"></a>dotnet-counters
 
 **Este artigo aplica-se a: ✓ o** SDK do .net Core 3,0 e versões posteriores
 
@@ -31,7 +31,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Descrição
 
-o `dotnet-counters` é uma ferramenta de monitoramento de desempenho para monitoramento de integridade ad hoc e investigação de desempenho de primeiro nível. Ele pode observar os valores do contador de desempenho que são publicados por meio da API <xref:System.Diagnostics.Tracing.EventCounter>. Por exemplo, você pode monitorar rapidamente coisas como o uso da CPU ou a taxa de exceções sendo geradas em seu aplicativo .NET Core para ver se há algo suspeito antes de mergulhar em uma investigação de desempenho mais séria usando `PerfView` ou `dotnet-trace`.
+`dotnet-counters` é uma ferramenta de monitoramento de desempenho para monitoramento de integridade ad hoc e investigação de desempenho de primeiro nível. Ele pode observar os valores do contador de desempenho que são publicados por meio da API <xref:System.Diagnostics.Tracing.EventCounter>. Por exemplo, você pode monitorar rapidamente coisas como o uso da CPU ou a taxa de exceções sendo geradas em seu aplicativo .NET Core para ver se há algo suspeito antes de mergulhar em uma investigação de desempenho mais séria usando `PerfView` ou `dotnet-trace`.
 
 ## <a name="options"></a>Opções
 
@@ -43,9 +43,9 @@ o `dotnet-counters` é uma ferramenta de monitoramento de desempenho para monito
 
   Mostra a ajuda da linha de comando.
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Commands
 
-| Comando                                             |
+| {1&gt;Comando&lt;1}                                             |
 | --------------------------------------------------- |
 | [dotnet – lista de contadores](#dotnet-counters-list)       |
 | [dotnet – monitor de contadores](#dotnet-counters-monitor) |
@@ -60,7 +60,7 @@ Exibe uma lista de nomes e descrições de contadores, agrupados por provedor.
 dotnet-counters list [-h|--help]
 ```
 
-### <a name="example"></a>Exemplo
+### <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 ```console
 > dotnet-counters list
@@ -98,11 +98,11 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
 
 - **`counter_list <COUNTERS>`**
 
-  Uma lista de contadores separados por espaços. Os contadores podem ser especificados `provider_name[:counter_name]`. Se o `provider_name` for usado sem um @no__t de qualificação-1, todos os contadores serão mostrados. Para descobrir os nomes de provedor e contador, use o comando [dotnet-Counters List](#dotnet-counters-list) .
+  Uma lista de contadores separados por espaços. Os contadores podem ser especificados `provider_name[:counter_name]`. Se o `provider_name` for usado sem uma `counter_name`de qualificação, todos os contadores serão mostrados. Para descobrir os nomes de provedor e contador, use o comando [dotnet-Counters List](#dotnet-counters-list) .
 
 ### <a name="examples"></a>Exemplos
 
-- Monitore todos os contadores de `System.Runtime` em um intervalo de atualização de 3 segundos:
+- Monitorar todos os contadores de `System.Runtime` em um intervalo de atualização de 3 segundos:
 
   ```console
   > dotnet-counters monitor --process-id 1902  --refresh-interval 3 System.Runtime
@@ -129,7 +129,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- Monitore valores `EventCounter` do @no__t definido pelo usuário-1. Para obter mais informações, consulte [tutorial: como medir o desempenho de eventos muito frequentes usando o EventCounters](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+- Monitorar `EventCounter` valores de `EventSource`definidos pelo usuário. Para obter mais informações, consulte [tutorial: como medir o desempenho de eventos muito frequentes usando o EventCounters](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

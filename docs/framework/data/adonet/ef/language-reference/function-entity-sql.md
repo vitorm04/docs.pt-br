@@ -28,7 +28,7 @@ FUNCTION function-name
         }   
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
  `function-name`  
  Nome da função.  
   
@@ -41,7 +41,7 @@ FUNCTION function-name
  `data_type`  
  Nome de um tipo suportado.  
   
- COLEÇÃO (< type_definition @ no__t-0)  
+ COLEÇÃO (< type_definition`>`)  
  Uma expressão que retorna uma coleção de tipos suportados, de linhas, ou de referências.  
   
  REF **(** `data_type` **)**  
@@ -61,16 +61,16 @@ FUNCTION function-name
   
  `A()`  
   
- Para obter mais informações, confira [Como: Chame uma função definida pelo usuário @ no__t-0.  
+ Para obter mais informações, consulte [como: chamar uma função definida pelo usuário](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100)).  
   
  As funções podem também ser declaradas no próprio modelo. As funções declaradas no modelo são executadas da mesma forma como as funções está embutido no comando. Para obter mais informações, consulte [funções definidas pelo usuário](user-defined-functions-entity-sql.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O seguinte comando de Entity SQL define uma função `Products` que recebe um valor inteiro para filtrar os produtos retornados.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION1](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function1)]  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O seguinte comando de Entity SQL define uma função `StringReturnsCollection` que utiliza uma coleção de cadeias de caracteres para filtrar os contatos retornados.  
   
  [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  

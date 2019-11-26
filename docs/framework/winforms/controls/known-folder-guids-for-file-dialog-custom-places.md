@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: ae4b89eb45a82299b6f35827eb576968f6cc5bae
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962580"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974364"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>GUIDs de pasta conhecidas para locais personalizados da caixa de diálogo
-Use um <xref:System.Guid> para especificar uma [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] pasta conhecida ao adicionar pastas a uma <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> coleção. Os GUIDs de pasta conhecidos não diferenciam maiúsculas de minúsculas e são definidos no arquivo KnownFolders. h na SDK do Windows.  
+Você usa um <xref:System.Guid> para especificar uma pasta conhecida do Windows Vista ao adicionar pastas a uma coleção de <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>. Os GUIDs de pasta conhecidos não diferenciam maiúsculas de minúsculas e são definidos no arquivo KnownFolders. h na SDK do Windows.  
   
 > [!NOTE]
 > Em alguns casos, uma pasta conhecida adicionada ao <xref:System.Windows.Forms.FileDialogCustomPlacesCollection> não será mostrada na área **links favoritos** . Por exemplo, se a pasta conhecida especificada não estiver presente no computador que está executando o aplicativo, a pasta conhecia não será mostrada.  
   
 ## <a name="list-of-guids"></a>Lista de GUIDs  
- A tabela a seguir [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] lista as pastas conhecidas e <xref:System.Guid>suas associadas.  
+ A tabela a seguir lista as pastas conhecidas do Windows Vista e seus <xref:System.Guid>associados.  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -289,4 +289,4 @@ Use um <xref:System.Guid> para especificar uma [!INCLUDE[wiprlhext](../../../../
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [Como: Adicionar um local personalizado a uma caixa de diálogo de arquivo](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [Como adicionar um local personalizado para uma caixa de diálogo Arquivo](how-to-add-a-custom-place-to-a-file-dialog-box.md)

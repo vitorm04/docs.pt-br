@@ -19,7 +19,7 @@ ms.locfileid: "71697505"
 Contém configurações que especificam como o .NET Framework se conecta à rede.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1 **@no__t -3system. net >**  
+&nbsp;&nbsp; **\<System. net >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,10 +29,10 @@ Contém configurações que especificam como o .NET Framework se conecta à rede
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
- nenhuma.  
+ None.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -46,16 +46,16 @@ Contém configurações que especificam como o .NET Framework se conecta à rede
 |[settings](settings-element-network-settings.md)|Configura as opções básicas de rede para classes no <xref:System.Net> e namespaces filho relacionados.|  
 |[webRequestModules](webrequestmodules-element-network-settings.md)|Especifica os módulos a serem usados para solicitar informações de hosts da Internet.|  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |**Elemento**|**Descrição**|  
 |-----------------|---------------------|  
 |[configuração](../configuration-element.md)|Contém configurações para todos os namespaces.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento [@no__t -1System. net >](system-net-element-network-settings.md) contém configurações para classes no <xref:System.Net> e namespaces filho relacionados. As configurações definem módulos de autenticação, gerenciamento de conexão, configurações de email, o servidor proxy e os módulos de solicitação da Internet para receber informações de hosts da Internet.  
+ O elemento [\<System. net >](system-net-element-network-settings.md) contém configurações para classes no <xref:System.Net> e namespaces filho relacionados. As configurações definem módulos de autenticação, gerenciamento de conexão, configurações de email, o servidor proxy e os módulos de solicitação da Internet para receber informações de hosts da Internet.  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir mostra uma configuração típica usada pelas classes <xref:System.Net>.  
   
 ```xml  

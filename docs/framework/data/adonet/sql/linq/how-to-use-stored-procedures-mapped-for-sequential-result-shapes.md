@@ -1,5 +1,5 @@
 ---
-title: 'Como: usar procedimentos armazenados mapeados para formas sequenciais de resultado'
+title: 'Como: Use os procedimentos armazenados mapeados para formas sequenciais de resultado'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,10 +12,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72003225"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Como: usar procedimentos armazenados mapeados para formas sequenciais de resultado
-Esse tipo de procedimento armazenado pode gerar mais de uma forma de resultado, mas você souber ordem em que os resultados são retornados. Compare este cenário com o cenário onde você não souber a sequência de retorna. Para obter mais informações, confira [Como: Use procedimentos armazenados mapeados para várias formas de resultado @ no__t-0.  
+# <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>Como: Use os procedimentos armazenados mapeados para formas sequenciais de resultado
+Esse tipo de procedimento armazenado pode gerar mais de uma forma de resultado, mas você souber ordem em que os resultados são retornados. Compare este cenário com o cenário onde você não souber a sequência de retorna. Para obter mais informações, consulte [como: usar procedimentos armazenados mapeados para várias formas de resultado](how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md).  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  Aqui está T-SQL de um procedimento armazenado que retorna várias formas de resultado em seqüência:  
   
 ```sql
@@ -28,7 +28,7 @@ select * from customers
  [!code-csharp[DLinqSprox#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/northwind-sprox.cs#6)]
  [!code-vb[DLinqSprox#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/northwind-sprox.vb#6)]  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  Você usaria código semelhante ao seguinte para executar este procedimento armazenado.  
   
  [!code-csharp[DLinqSprox#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSprox/cs/Program.cs#7)]

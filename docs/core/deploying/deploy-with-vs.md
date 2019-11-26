@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fd6861a71bdaac2d3500be52ae29c9fdb383a574
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f80b483fedc600a1e1a48d36ce9b7b95c6de9f27
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092708"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428901"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implantar aplicativos .NET Core com o Visual Studio
 
@@ -24,7 +24,7 @@ As seções a seguir mostram como usar o Microsoft Visual Studio para criar os s
 - Implantação autocontida
 - Implantação autocontida com dependências de terceiros
 
-Para obter informações sobre como usar o Visual Studio para desenvolver aplicativos .NET Core, consulte [Pré-requisitos para .NET Core no Windows](../windows-prerequisites.md#prerequisites-to-develop-net-core-apps-with-visual-studio).
+For information on using Visual Studio to develop .NET Core applications, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Implantação dependente de estrutura
 
@@ -71,11 +71,11 @@ Implantar uma implantação dependente de estrutura com uma ou mais dependência
 
 1. Use o **Gerenciador de Pacotes NuGet** para adicionar uma referência a um pacote NuGet ao projeto e se o pacote ainda não estiver disponível no sistema, instale-o. Para abrir o gerenciador de pacotes, selecione **Ferramentas** > **Gerenciador de Pacotes NuGet** > **Gerenciar Pacotes NuGet para a Solução**.
 
-1. Confirme se `Newtonsoft.Json` está instalado em seu sistema e, se não estiver, instale-o. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
+1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
 
 1. Se `Newtonsoft.Json` já estiver instalado no sistema, adicione-o ao projeto selecionando o projeto no painel direito da guia **Gerenciar Pacotes para a Solução**.
 
-Observe que uma implantação dependente de estrutura com dependências de terceiros tem a mesma portabilidade que suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Tempo de Execução)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
+Observe que uma implantação dependente de estrutura com dependências de terceiros tem a mesma portabilidade que suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Runtime)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
 
 ## <a name="simpleSelf"></a> Implantação autocontida sem dependências de terceiros
 
@@ -87,7 +87,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
 1. Adicione o código-fonte do aplicativo.
 
-   Abra o arquivo *Program.cs* ou *Program. vb* em seu editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
+   Open the *Program.cs* or *Program.vb* file in your editor, and replace the auto-generated code with the following code. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -98,7 +98,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
    Para habilitar o modo invariável, clique com o botão direito do mouse no seu projeto (não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj** ou **Editar SCD.vbproj**. Em seguida, adicione as seguintes linhas realçadas ao arquivo:
 
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+   [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
 
 1. Crie um build de depuração do seu aplicativo.
 
@@ -120,7 +120,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
    1. Clique com o botão direito do mouse no projeto (e não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj**.
 
-   1. Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de tempo de execução) de cada plataforma que você selecionar. Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Tempo de Execução](../rid-catalog.md) para obter uma lista de identificadores de tempo de execução.
+   1. Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de runtime) de cada plataforma que você selecionar. Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Runtime](../rid-catalog.md) para obter uma lista de identificadores de runtime.
 
    Por exemplo, o exemplo a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
@@ -144,7 +144,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
       1. Na guia **Publicar**, selecione **Publicar**. O Visual Studio grava os arquivos que compõem seu aplicativo no sistema de arquivos local.
 
-      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As definições de configuração do perfil são mostradas na seção **Resumo** da guia. o **tempo de execução de destino** identifica qual tempo de execução foi publicado e o local de **destino** identifica onde os arquivos da implantação autônoma foram pré-gravados.
+      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. The profile's configuration settings are shown in the **Summary** section of the tab. **Target Runtime** identifies which runtime has been published, and **Target Location** identifies where the files for the self-contained deployment were written.
 
       1. Por padrão, o Visual Studio grava todos os arquivos publicados em um único diretório. Para sua conveniência, é melhor criar perfis separados para cada runtime de destino e colocar os arquivos publicados em um diretório específico da plataforma. Isso envolve a criação de um perfil de publicação separado para cada plataforma de destino. Agora recompile o aplicativo para cada plataforma fazendo o seguinte:
 
@@ -152,11 +152,11 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
          1. Na caixa de diálogo **Escolher um destino de publicação**, altere o local de **Escolher uma pasta** para *bin\Release\PublishOutput\win10-x64*. Selecione **OK**.
 
-         1. Selecione o novo perfil (**FolderProfile1**) na lista de perfis e certifique-se de que o **Tempo de Execução de Destino** é `win10-x64`. Se não for, selecione **Configurações**. Na caixa de diálogo **Configurações de Perfil**, altere o **Tempo de Execução de Destino** para `win10-x64` e selecione **Salvar**. Caso contrário, selecione **Cancelar**.
+         1. Selecione o novo perfil (**FolderProfile1**) na lista de perfis e certifique-se de que o **Runtime de Destino** é `win10-x64`. Se não for, selecione **Configurações**. Na caixa de diálogo **Configurações de Perfil**, altere o **Runtime de Destino** para `win10-x64` e selecione **Salvar**. Caso contrário, selecione **Cancelar**.
 
          1. Selecione **Publicar** para publicar seu aplicativo para plataformas Windows 10 de 64 bits.
 
-         1. Siga as etapas anteriores novamente para criar um perfil para a plataforma `osx.10.11-x64`. O **Local de Destino** é *bin\Release\PublishOutput\osx.10.11-x64* e o **Tempo de Execução de Destino** é `osx.10.11-x64`. O nome que o Visual Studio atribui a este perfil é **FolderProfile2**.
+         1. Siga as etapas anteriores novamente para criar um perfil para a plataforma `osx.10.11-x64`. O **Local de Destino** é *bin\Release\PublishOutput\osx.10.11-x64* e o **Runtime de Destino** é `osx.10.11-x64`. O nome que o Visual Studio atribui a este perfil é **FolderProfile2**.
 
       Observe que cada local de destino contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
@@ -192,7 +192,7 @@ Para cada plataforma que seu aplicativo direciona, faça o seguinte:
   
 1. Selecione o local em que o Visual Studio publica seu aplicativo.
 
-   Se você estiver apenas publicando em uma única plataforma, poderá aceitar o valor padrão na caixa de texto **escolher uma pasta** ; Isso publica a implantação dependente da estrutura do seu aplicativo no diretório *\<project > \bin\Release\netcoreapp2.1\publish* .
+   If you're only publishing to a single platform, you can accept the default value in the **Choose a folder** text box; this publishes the framework dependent deployment of your application to the *\<project-directory>\bin\Release\netcoreapp2.1\publish* directory.
 
    Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você acrescentar a cadeia de caracteres "linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura do seu aplicativo no diretório *\<diretório-do-projeto>\bin\Release\netcoreapp2.1\publish\linux*.
 
@@ -204,7 +204,7 @@ Para cada plataforma que seu aplicativo direciona, faça o seguinte:
 
    1. Selecione **Independente** na caixa de listagem **Modo de implantação**.
 
-   1. Na caixa de listagem **Tempo de execução de destino**, selecione uma das plataformas que seu aplicativo direciona.
+   1. Na caixa de listagem **Runtime de destino**, selecione uma das plataformas que seu aplicativo direciona.
 
    1. Selecione **Salvar** para aceitar suas alterações e fechar a caixa de diálogo.
 
@@ -268,7 +268,7 @@ Implantar uma implantação autocontida com uma ou mais dependências de terceir
 
 1. Use o **Gerenciador de Pacotes NuGet** para adicionar uma referência a um pacote NuGet ao projeto e se o pacote ainda não estiver disponível no sistema, instale-o. Para abrir o gerenciador de pacotes, selecione **Ferramentas** > **Gerenciador de Pacotes NuGet** > **Gerenciar Pacotes NuGet para a Solução**.
 
-1. Confirme se `Newtonsoft.Json` está instalado em seu sistema e, se não estiver, instale-o. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
+1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
 
 1. Se `Newtonsoft.Json` já estiver instalado no sistema, adicione-o ao projeto selecionando o projeto no painel direito da guia **Gerenciar Pacotes para a Solução**.
 
@@ -312,4 +312,4 @@ Observe que você só pode implantar uma implantação autocontida com uma bibli
 ## <a name="see-also"></a>Consulte também
 
 - [Implantação de um aplicativo .NET Core](index.md)
-- [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+- [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

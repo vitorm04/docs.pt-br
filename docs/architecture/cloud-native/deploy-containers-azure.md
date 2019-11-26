@@ -1,5 +1,5 @@
 ---
-title: Implantando contêineres no Azure
+title: Como implantar contêineres no Azure
 description: Implantando contêineres no Azure com o registro de contêiner do Azure, serviço kubernetes do Azure e Azure Dev Spaces.
 ms.date: 06/30/2019
 ms.openlocfilehash: 6d95db26b6a45dd6825c88693308ffe90d1ed071
@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71183262"
 ---
-# <a name="deploying-containers-in-azure"></a>Implantando contêineres no Azure
+# <a name="deploying-containers-in-azure"></a>Como implantar contêineres no Azure
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -21,8 +21,8 @@ O ACR (registro de contêiner do Azure) permite que você crie, armazene e geren
 
 Você [cria um registro de contêiner usando o portal do Azure](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-portal) ou [usando as ferramentas CLI do Azure](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-azure-cli) ou [PowerShell](https://docs.microsoft.com/azure/container-registry/container-registry-get-started-powershell). A criação de um novo registro de contêiner requer apenas uma assinatura do Azure, um grupo de recursos e um nome exclusivo. A Figura 3-11 mostra as opções básicas para criar um registro, que será hospedado em *registryname*. azurecr.IO.
 
-![Crie o registro](./media/create-container-registry.png)
-de contêiner**Figura 3-11**. Criar registro de contêiner
+![criar registro de contêiner](./media/create-container-registry.png)
+**figura 3-11**. Criar registro de contêiner
 
 Depois de criar um registro, você precisará autenticar com ele antes de poder usá-lo. Normalmente, você fará logon no registro usando o comando CLI do Azure:
 
@@ -36,7 +36,7 @@ Depois de criar um registro no registro de contêiner do Azure, você pode usar 
 docker tag mycontainer myregistry.azurecr.io/mycontainer:v1
 ```
 
-Depois de ter marcado a imagem, use o `docker push` comando para enviar a imagem por push para a instância do ACR.
+Depois de ter marcado a imagem, use o comando `docker push` para enviar a imagem por push para a instância do ACR.
 
 ```console
 docker push myregistry.azurecr.io/mycontainer:v1
@@ -92,16 +92,16 @@ O processo para trabalhar com Azure Dev Spaces envolve as seguintes etapas:
 3. Configure um espaço de desenvolvimento filho (para sua própria versão do sistema).
 4. Conecte-se ao espaço de desenvolvimento.
 
-Todas essas etapas podem ser executadas usando o CLI do Azure e as novas `azds` ferramentas de linha de comando. Por exemplo, para criar um novo espaço de desenvolvimento do Azure para um determinado cluster kubernetes, você usaria um comando como este:
+Todas essas etapas podem ser executadas usando as ferramentas de linha de comando CLI do Azure e New `azds`. Por exemplo, para criar um novo espaço de desenvolvimento do Azure para um determinado cluster kubernetes, você usaria um comando como este:
 
 ```azurecli
 az aks use-dev-spaces -g my-aks-resource-group -n MyAKSCluster
 ```
 
-Em seguida, você pode usar `azds prep` o comando para gerar os ativos necessários do Docker e do gráfico Helm para executar o aplicativo. Em seguida, você executa seu código no `azds up`AKs usando. Na primeira vez que você executar esse comando, o gráfico Helm será instalado e os contêineres serão compilados e implantados de acordo com suas instruções. Isso pode levar alguns minutos na primeira vez em que for executado. No entanto, depois de fazer alterações, você pode se conectar ao seu próprio espaço `azds space select` de desenvolvimento filho usando e, em seguida, implantar e depurar suas atualizações em seu espaço de desenvolvimento filho isolado. Depois que seu espaço de desenvolvimento estiver em funcionamento, você poderá enviar atualizações para ele emitindo novamente o comando ou `azds up` pode usar as ferramentas internas no Visual Studio ou Visual Studio Code. Com VS Code, você usa a paleta de comandos para se conectar ao seu espaço de desenvolvimento. A Figura 3-12 mostra como iniciar seu aplicativo Web usando o Azure Dev Spaces no Visual Studio.
+Em seguida, você pode usar o comando `azds prep` para gerar os ativos necessários do Docker e do gráfico Helm para executar o aplicativo. Em seguida, você executa o código em AKS usando `azds up`. Na primeira vez que você executar esse comando, o gráfico Helm será instalado e os contêineres serão compilados e implantados de acordo com suas instruções. Isso pode levar alguns minutos na primeira vez em que for executado. No entanto, depois de fazer alterações, você pode se conectar ao seu próprio espaço de desenvolvimento filho usando `azds space select` e, em seguida, implantar e depurar suas atualizações em seu espaço de desenvolvimento filho isolado. Depois que seu espaço de desenvolvimento estiver em funcionamento, você poderá enviar atualizações para ele emitindo novamente o comando `azds up` ou pode usar as ferramentas internas no Visual Studio ou Visual Studio Code. Com VS Code, você usa a paleta de comandos para se conectar ao seu espaço de desenvolvimento. A Figura 3-12 mostra como iniciar seu aplicativo Web usando o Azure Dev Spaces no Visual Studio.
 
-![Conecte-se a Azure dev Spaces no](./media/azure-dev-spaces-visual-studio-launchsettings.png)
-Visual Studio**Figura 3-12**. Conectar-se a Azure Dev Spaces no Visual Studio
+![conectar-se a Azure Dev Spaces no Visual Studio](./media/azure-dev-spaces-visual-studio-launchsettings.png)
+**figura 3-12**. Conectar-se a Azure Dev Spaces no Visual Studio
 
 ## <a name="references"></a>Referências
 

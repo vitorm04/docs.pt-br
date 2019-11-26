@@ -1,15 +1,15 @@
 ---
-title: Forma de documentos de WordprocessingML (Visual Basic)
+title: Formato de documentos de WordprocessingML
 ms.date: 07/20/2015
 ms.assetid: 2dfb446b-5a07-4c00-9ab3-a74ba734ff3a
-ms.openlocfilehash: 265da66329128e610c491c3ff50cec1bca434f6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 64e9ca280c000ba488bfc72248bd83e37474f043
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786419"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350599"
 ---
-# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Forma de documentos de WordprocessingML (Visual Basic)
+# <a name="shape-of-wordprocessingml-documents-visual-basic"></a>Shape of WordprocessingML Documents (Visual Basic)
 Este tópico apresenta a forma XML de um documento WordprocessingML.  
   
 ## <a name="microsoft-office-formats"></a>Formatos do Microsoft Office  
@@ -92,8 +92,8 @@ End Module
   
  [Visão geral de WordprocessingML](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812(v=office.11))  
   
- [Office 2003: página de download de esquemas de referência de XML](https://go.microsoft.com/fwlink/?LinkId=98095)  
+ [Office 2003: página de download de esquemas de referência XML](https://go.microsoft.com/fwlink/?LinkId=98095)  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: Manipulando conteúdo em um documento de WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

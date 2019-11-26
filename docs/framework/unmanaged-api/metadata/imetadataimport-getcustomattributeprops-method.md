@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6eefb243-a281-41c1-bcdc-7e17513bc446
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c714915651d8660a739d8ee6518fc3814af4c08d
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 9a80336db4a5a8d7cfdebb7eb8d25bcb8f96e87c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67782408"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437642"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>Método IMetaDataImport::GetCustomAttributeProps
-Obtém o valor do atributo personalizado, dado seu token de metadados.  
+Gets the value of the custom attribute, given its metadata token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,29 +39,29 @@ HRESULT GetCustomAttributeProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `cv`  
- [in] Um token de metadados que representa o atributo personalizado a ser recuperado.  
+ [in] A metadata token that represents the custom attribute to be retrieved.  
   
  `ptkObj`  
- [out, opcional] Um token de metadados que representa o objeto que modifica o atributo personalizado. Esse valor pode ser qualquer tipo de token de metadados, exceto `mdCustomAttribute`.  
+ [out, optional] A metadata token representing the object that the custom attribute modifies. This value can be any type of metadata token except `mdCustomAttribute`.  
   
  `ptkType`  
- [out, opcional] Uma `mdMethodDef` ou `mdMemberRef` metadados token representando o <xref:System.Type> do atributo personalizado retornado.  
+ [out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.  
   
  `ppBlob`  
- [out, opcional] Um ponteiro para uma matriz de dados que é o valor do atributo personalizado.  
+ [out, optional] A pointer to an array of data that is the value of the custom attribute.  
   
  `pcbSize`  
- [out, opcional] O tamanho em bytes dos dados retornados em *`ppBlob`.  
+ [out, optional] The size in bytes of the data returned in *`ppBlob`.  
   
 ## <a name="remarks"></a>Comentários  
- Um atributo personalizado é armazenado como uma matriz de dados, o formato que é compreendido pelo mecanismo de metadados.  
+ A custom attribute is stored as an array of data, the format which is understood by the metadata engine.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: f7f8c25844f41dd8915c0f4404d6714b4c81233c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 039ae0cb314eba2f1bb3e5b39f2127a5e694f334
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458470"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974151"
 ---
 # <a name="collection-type-dependency-properties"></a>Propriedades de dependência do tipo de coleção
 Este tópico fornece diretrizes e padrões sugeridos para como implementar uma propriedade de dependência em que o tipo da propriedade é um tipo de coleção.  
@@ -28,8 +28,11 @@ Este tópico fornece diretrizes e padrões sugeridos para como implementar uma p
 ## <a name="initializing-the-collection-beyond-the-default-value"></a>Inicializando a coleção além do valor padrão  
  Quando você cria uma propriedade de dependência, você não especificar o valor padrão da propriedade como o valor do campo inicial. Em vez disso, você pode especificar o valor padrão por meio de metadados de propriedade de dependência. Se a propriedade for um tipo de referência, o valor padrão especificado nos metadados de propriedade de dependência não será um valor padrão por instância; em vez disso, será um valor padrão que se aplica a todas as instâncias do tipo. Portanto, você deve ter cuidado para não usar a coleção estática singular definida pelos metadados de propriedade de coleção como o valor padrão de trabalho para instâncias recém-criadas do seu tipo. Em vez disso, você deve verificar se definiu deliberadamente o valor da coleção para uma coleção exclusiva (instância) como parte da lógica do construtor de classe. Caso contrário, você terá criado uma classe singleton não intencional.  
   
- Considere o exemplo a seguir. A seção do exemplo a seguir mostra a definição da classe `Aquarium`. A classe define a propriedade de dependência de tipo de coleção `AquariumObjects`, que usa o tipo genérico <xref:System.Collections.Generic.List%601> com uma restrição de tipo <xref:System.Windows.FrameworkElement>. Na chamada de <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> para a propriedade de dependência, os metadados estabelecem o valor padrão como um novo <xref:System.Collections.Generic.List%601>genérico.  
-  
+ Considere o exemplo a seguir. A seção a seguir do exemplo mostra a definição de uma classe `Aquarium`, que contém uma falha com o valor padrão. A classe define a propriedade de dependência de tipo de coleção `AquariumObjects`, que usa o tipo genérico <xref:System.Collections.Generic.List%601> com uma restrição de tipo <xref:System.Windows.FrameworkElement>. Na chamada de <xref:System.Windows.DependencyProperty.Register%28System.String%2CSystem.Type%2CSystem.Type%2CSystem.Windows.PropertyMetadata%29> para a propriedade de dependência, os metadados estabelecem o valor padrão como um novo <xref:System.Collections.Generic.List%601>genérico.
+
+> [!WARNING]
+> O código a seguir não se comporta corretamente.
+
  [!code-csharp[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport2/CSharp/page.xaml.cs#collectionproblemdefinition)]
  [!code-vb[PropertiesOvwSupport2#CollectionProblemDefinition](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport2/visualbasic/page.xaml.vb#collectionproblemdefinition)]  
   

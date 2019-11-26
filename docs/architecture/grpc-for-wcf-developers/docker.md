@@ -1,14 +1,13 @@
 ---
 title: Docker-gRPC para desenvolvedores do WCF
 description: Criando imagens do Docker para aplicativos ASP.NET Core gRPC
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: cc369da9494ade532187dfc8d19a94a3a037ebab
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a5aceb4b5270cb828965e990a62db4147012adff
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846679"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967834"
 ---
 # <a name="docker"></a>Docker
 
@@ -18,14 +17,14 @@ Esta seção abordará a criação de imagens do Docker para aplicativos ASP.NET
 
 A Microsoft fornece uma variedade de imagens básicas para a criação e a execução de aplicativos .NET Core. Para criar uma imagem ASP.NET Core 3,0, são usadas duas imagens base: uma imagem do SDK para criar e publicar o aplicativo e uma imagem de tempo de execução para implantação.
 
-| Image | Descrição |
+| Imagem | Descrição |
 | ----- | ----------- |
 | [mcr.microsoft.com/dotnet/core/sdk](https://hub.docker.com/_/microsoft-dotnet-core-sdk/) | Para criar aplicativos com `docker build`. Não deve ser usado na produção. |
 | [mcr.microsoft.com/dotnet/core/aspnet](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) | Contém as dependências de tempo de execução e ASP.NET Core. Para produção. |
 
 Para cada imagem, há quatro variantes com base em diferentes distribuições do Linux, diferenciadas por marcas.
 
-| Marca (s) de imagem | Linux | Anotações |
+| Marca (s) de imagem | Linux | {1&gt;Observações&lt;1} |
 | --------- | ----- | ----- |
 | 3,0-Buster, 3,0 | Debian 10 | A imagem padrão se nenhuma variante do sistema operacional for especificada. |
 | 3,0 – Alpine Ski | Alpine 3,9 | As imagens da Alpine base são muito menores do que Debian ou Ubuntu. |
@@ -117,7 +116,7 @@ docker build --tag stockdata .
 
 O sinalizador de `--tag` com um nome confuso (que pode ser reduzido para `-t`) especifica o nome completo da imagem, *incluindo* a marca real, se especificado. O `.` no final especifica o *contexto* no qual a compilação será executada; o diretório de trabalho atual para os comandos de `COPY` no Dockerfile.
 
-Se você tiver vários aplicativos em uma única solução, poderá manter o Dockerfile de cada aplicativo em sua própria pasta, ao lado do arquivo de `.csproj`, mas você ainda deverá executar o comando `docker build` do diretório base para garantir que a solução e todos os os projetos são copiados para a imagem. Você pode especificar um Dockerfile abaixo do diretório atual usando o sinalizador `--file` (ou `-f`).
+Se você tiver vários aplicativos em uma única solução, poderá manter o Dockerfile de cada aplicativo em sua própria pasta, ao lado do arquivo de `.csproj`, mas você ainda deverá executar o comando `docker build` do diretório base para garantir que a solução e todos os projetos sejam copiados para a imagem. Você pode especificar um Dockerfile abaixo do diretório atual usando o sinalizador `--file` (ou `-f`).
 
 ```console
 docker build --tag stockdata --file src/StockData/Dockerfile .

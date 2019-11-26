@@ -32,7 +32,7 @@ Também é possível criar sua própria imagem do Docker em casos em que você d
 
 Ao adicionar o nome de imagem ao seu arquivo Dockerfile, é possível selecionar o sistema operacional e a versão dependendo da marcação usada, como nos seguintes exemplos:
 
-| Image | Comentários |
+| Imagem | Comments |
 |-------|----------|
 | mcr.microsoft.com/dotnet/core/runtime:2.2 | .NET Core 2,2 multiarquiteturas: dá suporte ao Linux e ao Windows nano Server dependendo do host do Docker. |
 | mcr.microsoft.com/dotnet/core/aspnet:2.2 | ASP.NET Core várias arquiteturas 2,2: dá suporte ao Linux e ao Windows nano Server dependendo do host do Docker. <br/> A imagem aspnetcore tem algumas otimizações para ASP.NET Core. |

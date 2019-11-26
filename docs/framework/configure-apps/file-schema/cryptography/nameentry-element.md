@@ -15,14 +15,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71699773"
 ---
-# <a name="nameentry-element"></a>\<nameEntry > elemento
+# <a name="nameentry-element"></a>\<elemento de > nameEntry
 Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que uma classe tenha vários nomes amigáveis.  
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<nameEntry >**  
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<nameEntry >**  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,7 +31,7 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -41,9 +41,9 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 |**class**|Atributo obrigatório.<br /><br /> Especifica o valor do atributo **Name** no elemento [\<cryptoClass >](cryptoclass-element.md) .|  
   
 ### <a name="child-elements"></a>Elementos filho  
- nenhuma.  
+ None.  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
@@ -53,7 +53,7 @@ Mapeia um nome de classe para um nome de algoritmo amigável, o que permite que 
 ## <a name="remarks"></a>Comentários  
  O atributo **Name** pode ser o nome de uma das classes abstratas encontradas no namespace <xref:System.Security.Cryptography>. Quando você chama o método **Create** em uma classe de criptografia abstrata, o nome da classe abstrata é passado para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>. **CreateFromName** retorna uma instância do tipo indicado pelo atributo de **classe** . Se o atributo **Name** for um nome curto, como RSA, você poderá usar esse nome ao chamar o método **CreateFromName** .  
   
-## <a name="example"></a>Exemplo  
+## <a name="example"></a>{1&gt;Exemplo&lt;1}  
  O exemplo a seguir mostra como usar o elemento **\<nameEntry >** para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usar o método <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> para retornar um objeto `MyCryptoRSAClass`.  
   
 ```xml  

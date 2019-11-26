@@ -9,20 +9,20 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: 5232c5bd2d4fad8104d156bfa86141ceb7f0dd93
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: b09c2a1f67974a67a3f9d58af7cb8cf66a197026
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70167699"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088697"
 ---
-# <a name="compilers-element"></a>\<compilador > elemento
+# <a name="compilers-element"></a>\<compiladores > elemento
 Contêiner de elementos de configuração do compilador. Contém zero ou mais elementos [\<compiler>](compiler-element.md).  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<> System. CodeDom**](system-codedom-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<compiladores >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System. codedom >** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**compiladores\<**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -48,10 +48,10 @@ Contêiner de elementos de configuração do compilador. Contém zero ou mais el
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |[Elemento \<configuration>](../configuration-element.md)|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|[\<Elemento de > System. CodeDom](system-codedom-element.md)|Especifica as definições de configuração do compilador para provedores de linguagem disponíveis.|  
+|[\<elemento > System. CodeDom](system-codedom-element.md)|Especifica as definições de configuração do compilador para provedores de linguagem disponíveis.|  
   
 ## <a name="remarks"></a>Comentários  
- O elemento > de compiladores contém os parâmetros de configuração do compilador para provedores de idiomas em um computador. [ \<](compilers-element.md) Cada elemento > do compilador Especifica os atributos de configuração do compilador para um provedor de idioma específico. [ \<](compiler-element.md)  
+ O elemento [> de compiladores do\<](compilers-element.md) contém as definições de configuração do compilador para provedores de idiomas em um computador. Cada [\<do compilador >](compiler-element.md) especifica os atributos de configuração do compilador para um provedor de idioma específico.  
   
  O .NET Framework define as configurações iniciais do compilador e do provedor de idiomas no arquivo de configuração da máquina (Machine. config). Os desenvolvedores e fornecedores do compilador podem adicionar parâmetros de configuração em uma nova implementação do <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>. Use o método <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> para enumerar programaticamente as definições de configuração do compilador e do provedor de linguagem em um computador.  
   

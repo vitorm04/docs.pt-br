@@ -1,5 +1,5 @@
 ---
-title: 'Como: Declarar e chamar uma propriedade padrão no Visual Basic'
+title: 'How to: Declare and Call a Default Property'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -10,76 +10,76 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01188ed8a9ff4da95a6975dcac3509625fdffb2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665761"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349676"
 ---
-# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Como: Declarar e chamar uma propriedade padrão no Visual Basic
-Um *propriedade padrão* é uma propriedade de classe ou estrutura que seu código pode acessar sem especificá-lo. Ao chamar código nomes de uma classe ou estrutura, mas não uma propriedade e o contexto permite o acesso a uma propriedade, Visual Basic decide o acesso à propriedade dessa classe ou da estrutura padrão, se houver.  
+# <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Como declarar e chamar uma propriedade padrão no Visual Basic
+A *default property* is a class or structure property that your code can access without specifying it. When calling code names a class or structure but not a property, and the context allows access to a property, Visual Basic resolves the access to that class or structure's default property if one exists.  
   
- Uma classe ou estrutura pode ter no máximo uma propriedade padrão. No entanto, você pode sobrecarregar uma propriedade padrão e ter mais de uma versão dele.  
+ A class or structure can have at most one default property. However, you can overload a default property and have more than one version of it.  
   
- Para obter mais informações, consulte [padrão](../../../../visual-basic/language-reference/modifiers/default.md).  
+ For more information, see [Default](../../../../visual-basic/language-reference/modifiers/default.md).  
   
-### <a name="to-declare-a-default-property"></a>Para declarar uma propriedade padrão  
+### <a name="to-declare-a-default-property"></a>To declare a default property  
   
-1. Declare a propriedade da maneira normal. Não especifique a `Shared` ou `Private` palavra-chave.  
+1. Declare the property in the normal way. Do not specify the `Shared` or `Private` keyword.  
   
-2. Incluir o `Default` palavra-chave na declaração de propriedade.  
+2. Include the `Default` keyword in the property declaration.  
   
-3. Especifique pelo menos um parâmetro para a propriedade. Você não pode definir uma propriedade padrão que têm pelo menos um argumento.  
+3. Specify at least one parameter for the property. You cannot define a default property that does not take at least one argument.  
   
      [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
-### <a name="to-call-a-default-property"></a>Para chamar uma propriedade padrão  
+### <a name="to-call-a-default-property"></a>To call a default property  
   
-1. Declare uma variável do tipo recipiente de classe ou estrutura.  
+1. Declare a variable of the containing class or structure type.  
   
      [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
-2. Use o nome da variável sozinho em uma expressão em que você normalmente incluiria o nome da propriedade.  
+2. Use the variable name alone in an expression where you would normally include the property name.  
   
      [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
-3. Siga o nome da variável com uma lista de argumentos entre parênteses. Uma propriedade de padrão deve ter pelo menos um argumento.  
+3. Follow the variable name with an argument list in parentheses. A default property must take at least one argument.  
   
      [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
-4. Para recuperar o valor da propriedade padrão, use o nome da variável, com uma lista de argumentos, em uma expressão ou igual a seguir (`=`) entrar em uma instrução de atribuição.  
+4. To retrieve the default property value, use the variable name, with an argument list, in an expression or following the equal (`=`) sign in an assignment statement.  
   
      [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
-5. Para definir o valor da propriedade padrão, use o nome da variável, com uma lista de argumentos no lado esquerdo de uma instrução de atribuição.  
+5. To set the default property value, use the variable name, with an argument list, on the left side of an assignment statement.  
   
      [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
-6. Você sempre pode especificar o nome da propriedade padrão junto com o nome da variável, exatamente como você faria para acessar qualquer outra propriedade.  
+6. You can always specify the default property name together with the variable name, just as you would do to access any other property.  
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir declara uma propriedade padrão em uma classe.  
+ The following example declares a default property on a class.  
   
  [!code-vb[VbVbcnProcedures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#12)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como chamar a propriedade padrão `myProperty` na classe `class1`. As três declarações de atribuição armazenam valores em `myProperty`e o <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> chamada lê os valores.  
+ The following example demonstrates how to call the default property `myProperty` on class `class1`. The three assignment statements store values in `myProperty`, and the <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> call reads the values.  
   
  [!code-vb[VbVbcnProcedures#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#13)]  
   
- O uso mais comum de uma propriedade padrão é o <xref:Microsoft.VisualBasic.Collection.Item%2A> propriedade em várias classes de coleção.  
+ The most common use of a default property is the <xref:Microsoft.VisualBasic.Collection.Item%2A> property on various collection classes.  
   
 ## <a name="robust-programming"></a>Programação robusta  
- As propriedades padrão podem resultar em uma pequena redução nos caracteres de código fonte, mas eles podem tornar seu código mais difícil de ler. Se o código de chamada não estiver familiarizado com a sua classe ou estrutura, quando ele faz referência ao nome de classe ou estrutura não poderá determinar se essa referência acessa a classe ou estrutura em si ou uma propriedade padrão. Isso pode levar a erros de compilador ou erros de lógica de tempo de execução sutis.  
+ Default properties can result in a small reduction in source code-characters, but they can make your code more difficult to read. If the calling code is not familiar with your class or structure, when it makes a reference to the class or structure name it cannot be certain whether that reference accesses the class or structure itself, or a default property. This can lead to compiler errors or subtle run-time logic errors.  
   
- Você tanto pode reduzir a chance de erros de propriedade padrão sempre usando o [instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) para definir o tipo de compilador verificando para `On`.  
+ You can somewhat reduce the chance of default property errors by always using the [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) to set compiler type checking to `On`.  
   
- Se você estiver planejando usar uma classe ou estrutura predefinidas no seu código, você deve determinar se ele tem uma propriedade padrão e nesse caso, o que seu nome é.  
+ If you are planning to use a predefined class or structure in your code, you must determine whether it has a default property, and if so, what its name is.  
   
- Por causa dessas desvantagens, você deve considerar não definir as propriedades padrão. Para facilitar a leitura do código, você deve também considerar sempre referir-se a todas as propriedades explicitamente, mesmo propriedades padrão.  
+ Because of these disadvantages, you should consider not defining default properties. For code readability, you should also consider always referring to all properties explicitly, even default properties.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -87,9 +87,9 @@ Um *propriedade padrão* é uma propriedade de classe ou estrutura que seu códi
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)
 - [Padrão](../../../../visual-basic/language-reference/modifiers/default.md)
-- [Diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md)
-- [Como: Criar uma propriedade](./how-to-create-a-property.md)
-- [Como: Declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [Como: Chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
-- [Como: Inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
-- [Como: Obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)
+- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Como criar uma propriedade](./how-to-create-a-property.md)
+- [Como declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Como chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
+- [Como inserir um valor em uma propriedade](./how-to-put-a-value-in-a-property.md)
+- Como obter um valor de uma propriedade (Visual Basic)[Como obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)

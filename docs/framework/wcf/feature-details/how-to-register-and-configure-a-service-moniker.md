@@ -1,18 +1,18 @@
 ---
-title: 'Como: registrar e configurar um moniker de serviço'
+title: Como registrar e configurar um Moniker de serviço
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 547e507b4a1115de81532263c34964cd20f15d4e
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972139"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73976119"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>Como: registrar e configurar um moniker de serviço
+# <a name="how-to-register-and-configure-a-service-moniker"></a>Como registrar e configurar um Moniker de serviço
 Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um aplicativo com com um contrato tipado, você deve registrar os tipos atribuídos necessários com com e configurar o aplicativo COM e o moniker com a associação necessária configuração.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Para registrar os tipos atribuídos necessários com com  
@@ -27,7 +27,7 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
   
 3. Compile o cliente WCF gerenciado como um assembly de nome forte. Isso requer a assinatura com um par de chaves de criptografia. Para obter mais informações, consulte [assinando um assembly com um nome forte](https://go.microsoft.com/fwlink/?LinkId=94874) no guia do desenvolvedor do .net.  
   
-4. Use a ferramenta de registro de assembly (regasm. exe) `/tlb` com a opção de registrar os tipos no assembly com com.  
+4. Use a ferramenta de registro do assembly (regasm. exe) com a opção `/tlb` para registrar os tipos no assembly com com.  
   
 5. Use a ferramenta cache de assembly global (Gacutil. exe) para adicionar o assembly ao cache de assembly global.  
   
@@ -53,7 +53,7 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
     }  
     ```  
   
-     O aplicativo é exposto usando uma `wsHttpBinding` associação. Para o tipo e a configuração de aplicativo fornecidos, as seguintes cadeias de caracteres de moniker de exemplo são usadas.  
+     O aplicativo é exposto usando uma associação de `wsHttpBinding`. Para o tipo e a configuração de aplicativo fornecidos, as seguintes cadeias de caracteres de moniker de exemplo são usadas.  
   
     ``` 
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1  
@@ -65,9 +65,9 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
     service4:address=http://localhost/MathService, binding=wsHttpBinding, bindingConfiguration=Binding1, contract={36ADAD5A-A944-4d5c-9B7C-967E4F00A090}  
     ```  
   
-     Você pode usar qualquer uma dessas cadeias de caracteres de moniker de dentro de um aplicativo Visual Basic 6,0, depois de adicionar uma referência `IMathService` ao assembly que contém os tipos, conforme mostrado no código de exemplo a seguir.  
+     Você pode usar qualquer uma dessas cadeias de caracteres de moniker de dentro de um aplicativo Visual Basic 6,0, depois de adicionar uma referência ao assembly que contém os tipos de `IMathService`, conforme mostrado no código de exemplo a seguir.  
   
-    ```vb  
+    ```vb
     Dim MathProxy As IMathService  
     Dim result As Integer  
   
@@ -79,13 +79,13 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
     result = MathProxy.Add(3, 5)  
     ```  
   
-     Neste exemplo, a definição para a configuração `Binding1` de associação é armazenada em um arquivo de configuração nomeado adequadamente para o aplicativo cliente, como vb6appname. exe. config.  
+     Neste exemplo, a definição para o `Binding1` de configuração de associação é armazenada em um arquivo de configuração nomeado adequadamente para o aplicativo cliente, como vb6appname. exe. config.  
   
     > [!NOTE]
     > Você pode usar código semelhante em um C#, um C++ou qualquer outro aplicativo de linguagem .net.  
   
     > [!NOTE]
-    > : Se o moniker estiver malformado ou se o serviço estiver indisponível, a `GetObject` chamada para retornará um erro de "sintaxe inválida". Se você receber esse erro, verifique se o moniker que você está usando está correto e se o serviço está disponível.  
+    > : Se o moniker estiver malformado ou se o serviço estiver indisponível, a chamada para `GetObject` retornará um erro de "sintaxe inválida". Se você receber esse erro, verifique se o moniker que você está usando está correto e se o serviço está disponível.  
   
      Embora este tópico se concentre no uso do moniker de serviço do código VB 6,0, você pode usar um moniker de serviço de outros idiomas. Ao usar um moniker do C++ código, o assembly gerado svcutil. exe deve ser importado com "no_namespace named_guids raw_interfaces_only", conforme mostrado no código a seguir.  
   
@@ -93,7 +93,7 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
     #import "ComTestProxy.tlb" no_namespace named_guids  
     ```  
   
-     Isso modifica as definições de interface importadas para que todos os `HResult`métodos retornem um. Quaisquer outros valores de retorno são convertidos em parâmetros de saída. A execução geral dos métodos permanece a mesma. Isso permite que você determine a causa de uma exceção ao chamar um método no proxy. Essa funcionalidade só está disponível no C++ código.  
+     Isso modifica as definições de interface importadas para que todos os métodos retornem um `HResult`. Quaisquer outros valores de retorno são convertidos em parâmetros de saída. A execução geral dos métodos permanece a mesma. Isso permite que você determine a causa de uma exceção ao chamar um método no proxy. Essa funcionalidade só está disponível no C++ código.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -1,5 +1,5 @@
 ---
-title: 'Como: qualificar elementos XML e nomes de atributos XML'
+title: Como qualificar elementos XML e nomes de atributos XML
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f79caf6ff295d793c615b17d387cdd165e440e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755403"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353093"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Como: qualificar elementos XML e nomes de atributos XML
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Como qualificar elementos XML e nomes de atributos XML
 
-Namespaces XML contidos por instâncias do <xref:System.Xml.Serialization.XmlSerializerNamespaces> classe deve estar de acordo com a especificação do World Wide Web Consortium (W3C) chamado [Namespaces em XML](https://www.w3.org/TR/REC-xml-names/).
+XML namespaces contained by instances of the <xref:System.Xml.Serialization.XmlSerializerNamespaces> class must conform to the World Wide Web Consortium (W3C) specification called [Namespaces in XML](https://www.w3.org/TR/REC-xml-names/).
 
 Os namespaces em XML fornecem um método para qualificar os nomes de elementos XML e atributos XML em documentos XML. Um nome qualificado é composto por um prefixo e por um nome local separados por dois-pontos. O prefixo funciona somente como espaço reservado; é mapeado para um URI que especifica um namespace. A combinação do namespace de URI gerenciado universalmente e o nome local produz um nome que é garantido para ser exclusivo universalmente.
 
@@ -42,6 +42,7 @@ Ao criar uma instância do `XmlSerializerNamespaces` e adicionar os pares de nam
 
 O exemplo a seguir cria um `XmlSerializerNamespaces` e adiciona dois prefixos e pares de namespace ao objeto. O código cria um `XmlSerializer` que é usado para serializar uma instância da classe `Books`. O código chama o método `Serialize` com o `XmlSerializerNamespaces`, permitindo que o XML contenha namespaces com prefixo.
 
+<!-- TODO: THE FOLLOWING VB SNIPPET ISN'T CORRECT!! -->
 ```vb
 Option Explicit
 public class Price
@@ -174,8 +175,8 @@ public class Book
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [A ferramenta de definição de esquema XML e a serialização XML](the-xml-schema-definition-tool-and-xml-serialization.md)
 - [Apresentando a serialização XML](introducing-xml-serialization.md)
-- [Classe XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
+- [XmlSerializer Class](xref:System.Xml.Serialization.XmlSerializer)
 - [Atributos que controlam a serialização XML](attributes-that-control-xml-serialization.md)
-- [Como: Especifique um nome de elemento alternativo para um Stream XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [Como: Serializar um objeto](how-to-serialize-an-object.md)
-- [Como: Desserializar um objeto](how-to-deserialize-an-object.md)
+- [Como especificar um nome de elemento alternativo para um fluxo XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Como serializar um objeto](how-to-serialize-an-object.md)
+- [Como desserializar um objeto](how-to-deserialize-an-object.md)

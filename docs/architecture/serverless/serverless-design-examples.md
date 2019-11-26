@@ -81,7 +81,7 @@ Um gateway de API fornece um ponto único de entrada para clientes e, em seguida
 - [Hub IoT do Azure](https://docs.microsoft.com/azure/iot-hub)
 - [Desafios e soluções de gerenciamento de dados distribuídos](../microservices/architect-microservice-container-applications/distributed-data-management.md)
 - [Criando microserviços: identificando limites de microatendimento](https://docs.microsoft.com/azure/architecture/microservices/microservice-boundaries)
-- [Hubs de eventos](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
+- [Hubs de Evento](https://docs.microsoft.com/azure/event-hubs/event-hubs-what-is-event-hubs)
 - [Padrão de fornecimento do evento](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 - [Implementando o padrão de disjuntor](../microservices/implement-resilient-applications/implement-circuit-breaker-pattern.md)
 - [Hub IoT](https://docs.microsoft.com/azure/iot-hub)

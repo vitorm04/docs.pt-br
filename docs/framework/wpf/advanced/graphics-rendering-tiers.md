@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 9da519f8d258673498f45a425c13863437cac597
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69937526"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974011"
 ---
 # <a name="graphics-rendering-tiers"></a>Camadas de renderização de gráficos
 Um nível de renderização define um nível de funcionalidade de hardware de gráficos e de desempenho para um dispositivo que executa um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -40,7 +40,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
   
 - **Camada de Renderização 2** A maioria dos recursos gráficos usa aceleração de hardware gráfico. O nível de versão do DirectX é maior ou igual à versão 9,0.  
   
- A <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> propriedade permite que você recupere a camada de renderização no tempo de execução do aplicativo. Você pode usar o nível de renderização para determinar se o dispositivo dá suporte a certas características aceleradas por hardware. Seu aplicativo então pode adotar diferentes caminhos de código no tempo de execução, dependendo da camada de renderização que tem suporte no dispositivo.  
+ A propriedade <xref:System.Windows.Media.RenderCapability.Tier%2A?displayProperty=nameWithType> permite que você recupere a camada de renderização no tempo de execução do aplicativo. Você pode usar o nível de renderização para determinar se o dispositivo dá suporte a certas características aceleradas por hardware. Seu aplicativo então pode adotar diferentes caminhos de código no tempo de execução, dependendo da camada de renderização que tem suporte no dispositivo.  
   
 ### <a name="rendering-tier-0"></a>Camada de renderização 0  
  Um valor de nível de renderização 0 significa que não há nenhum gráficos aceleração de hardware disponível para o aplicativo no dispositivo. Nesse nível, você deve assumir que todos os gráficos serão renderizados por software sem aceleração de hardware. A funcionalidade dessa camada corresponde a uma versão do DirectX inferior a 9,0.  
@@ -64,32 +64,32 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
   
  Os seguintes recursos e capacidades são acelerados por hardware para camada de renderização 1 e 2:  
   
-|Recurso|Observações|  
+|Recurso|Anotações|  
 |-------------|-----------|  
 |Renderização 2D|A maioria das renderizações 2D tem suporte.|  
 |Rasterização 3D|A maioria das rasterizações 3D tem suporte.|  
 |Filtro anisotrópico 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tenta usar o filtro anisotrópico quando renderiza conteúdo 3D. O filtro anisotrópico se refere a melhorar a qualidade da imagem de texturas em superfícies distantes e profundamente angular em relação a câmera.|  
-|Mapeamento de MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tenta utilizar mapeamento MIP quando renderiza conteúdo 3D. O mapeamento MIP melhora a qualidade da renderização de textura quando uma textura ocupa um campo menor de exibição <xref:System.Windows.Controls.Viewport3D>em um.|  
-|Gradientes radiais|Embora tenha suporte, evite o uso <xref:System.Windows.Media.RadialGradientBrush> de em objetos grandes.|  
+|Mapeamento de MIP 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tenta utilizar mapeamento MIP quando renderiza conteúdo 3D. O mapeamento MIP melhora a qualidade da renderização de textura quando uma textura ocupa um campo menor de exibição em um <xref:System.Windows.Controls.Viewport3D>.|  
+|Gradientes radiais|Embora tenha suporte, evite o uso de <xref:System.Windows.Media.RadialGradientBrush> em objetos grandes.|  
 |Cálculos de iluminação 3D|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] realiza iluminação por vértice, o que significa que uma intensidade de luz precisa ser calculada a cada vértice para cada material aplicado a uma malha.|  
 |Renderização de texto|Renderização de texto sub-pixel utiliza sombreadores de pixel disponíveis no hardware gráfico.|  
   
  Os seguintes recursos e capacidades são acelerados por hardware apenas para a camada de renderização 2:  
   
-|Recurso|Observações|  
+|Recurso|Anotações|  
 |-------------|-----------|  
-|Suavização 3D|Suavização 3D tem suporte apenas em sistemas operacionais que oferecem suporte a WDDM Windows Display Driver Model (WDDM), como [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] e [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
+|Suavização 3D|Há suporte para a AntiAlias 3D apenas em sistemas operacionais que dão suporte ao Windows Display Driver Model (WDDM), como o Windows Vista e o [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
   
  Os seguintes recursos e capacidades **não** são acelerados por hardware:  
   
-|Recurso|Observações|  
+|Recurso|Anotações|  
 |-------------|-----------|  
 |Conteúdo impresso|Todo conteúdo impresso é renderizado utilizando o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pipeline de software.|  
-|Conteúdo rasterizado que usa<xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualquer conteúdo renderizado usando o <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> método de <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
-|Conteúdo ao lado do ladrilho que usa<xref:System.Windows.Media.TileBrush>|Qualquer conteúdo em ladrilho no qual <xref:System.Windows.Media.TileBrush.TileMode%2A> a propriedade <xref:System.Windows.Media.TileBrush> de está definida como <xref:System.Windows.Media.TileMode.Tile>.|  
+|Conteúdo rasterizado que usa <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualquer conteúdo renderizado usando o método <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> de <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
+|Conteúdo ao lado do ladrilho que usa <xref:System.Windows.Media.TileBrush>|Qualquer conteúdo em ladrilho no qual a propriedade <xref:System.Windows.Media.TileBrush.TileMode%2A> da <xref:System.Windows.Media.TileBrush> esteja definida como <xref:System.Windows.Media.TileMode.Tile>.|  
 |Superfícies que excedam o tamanho máximo de textura do hardware de gráficos|Para a maioria dos hardwares gráficos, superfícies grandes tem 2048x2048 ou 4096x4096 pixels de tamanho.|  
 |Qualquer operação cujo requisito de RAM de vídeo excede a memória do hardware de gráficos|Você pode monitorar o uso de memória RAM de vídeo do aplicativo usando a ferramenta Perforator incluída no [pacote de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) no SDK do Windows.|  
-|Janelas em camadas|Janelas em camadas permitem que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos renderizem o conteúdo na tela em uma janela não retangular. Em sistemas operacionais que oferecem suporte a WDDM Windows Display Driver Model (WDDM), como [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] e [!INCLUDE[win7](../../../../includes/win7-md.md)] em janelas em camadas são aceleradas por hardware. Em outros sistemas, como [!INCLUDE[winxp](../../../../includes/winxp-md.md)], janelas em camadas são renderizadas por software sem aceleração de hardware.<br /><br /> Você pode habilitar janelas em camadas no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definindo as seguintes <xref:System.Windows.Window> Propriedades:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Janelas em camadas|Janelas em camadas permitem que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos renderizem o conteúdo na tela em uma janela não retangular. Em sistemas operacionais que dão suporte ao Windows Display Driver Model (WDDM), como o Windows Vista e [!INCLUDE[win7](../../../../includes/win7-md.md)], as janelas em camadas são aceleradas por hardware. Em outros sistemas, como [!INCLUDE[winxp](../../../../includes/winxp-md.md)], janelas em camadas são renderizadas por software sem aceleração de hardware.<br /><br /> Você pode habilitar janelas em camadas em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definindo as seguintes propriedades de <xref:System.Windows.Window>:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Outros recursos  
@@ -108,7 +108,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
  Essas configurações podem ser acessadas por qualquer utilitário de configuração externo que sabe como referenciar as configurações do Registro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o editor do registro do Windows. Para obter mais informações, consulte as [configurações de Registro de renderização de gráficos](../graphics-multimedia/graphics-rendering-registry-settings.md).  
   
 ### <a name="wpf-performance-profiling-tools"></a>Ferramentas de criação de perfil de desempenho do WPF  
- O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um pacote de ferramentas de criação de perfil de desempenho que permitem analisar o comportamento de tempo de execução do aplicativo e determinar os tipos de otimização de desempenho que você pode aplicar. A tabela a seguir lista as ferramentas de criação de perfil de desempenho incluídas na ferramenta de SDK do Windows, o conjunto de desempenho do WPF:  
+ O [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um conjunto de ferramentas de criação de perfil de desempenho que permitem analisar o comportamento de tempo de execução do aplicativo e determinar os tipos de otimização de desempenho que você pode aplicar. A tabela a seguir lista as ferramentas de criação de perfil de desempenho incluídas na ferramenta de SDK do Windows, o conjunto de desempenho do WPF:  
   
 |Ferramenta|Descrição|  
 |----------|-----------------|  
@@ -124,7 +124,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
   
  Quando você executa a ferramenta de diagnóstico do DirectX, a janela principal contém um conjunto de guias que permitem exibir e diagnosticar informações relacionadas ao DirectX. Por exemplo, a guia **sistema** fornece informações do sistema sobre seu computador e especifica a versão do DirectX instalada no seu computador.  
   
- ![Screenhot: Ferramenta]de diagnóstico do DirectX(./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
+ ![Captura de tela: Ferramenta de diagnóstico do DirectX](./media/directxdiagnostictool-01.png "DirectXDiagnosticTool_01")  
 Janela principal da Ferramenta de diagnóstico do DirectX  
   
 ## <a name="see-also"></a>Consulte também

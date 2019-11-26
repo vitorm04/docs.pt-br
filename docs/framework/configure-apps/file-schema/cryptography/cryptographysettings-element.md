@@ -8,20 +8,20 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: ca0a9a4b37f28eb03f58de4fd9b120cb7e654e0c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699816"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088648"
 ---
-# <a name="cryptographysettings-element"></a>\<cryptographySettings > elemento
+# <a name="cryptographysettings-element"></a>\<elemento de > cryptographySettings
 Contém configurações de criptografia.  
-  
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<cryptographySettings >**  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<cryptographySettings >**
+
 ## <a name="syntax"></a>Sintaxe  
   
 ```xml  
@@ -39,18 +39,18 @@ Contém configurações de criptografia.
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping>](cryptonamemapping-element.md)|Contém mapeamentos de classes para nomes amigáveis.|  
-|[\<oidMap>](oidmap-element.md)|Contém mapeamentos de OID (identificador de objeto) ASN para classes.|  
+|[\<cryptoNameMapping >](cryptonamemapping-element.md)|Contém mapeamentos de classes para nomes amigáveis.|  
+|[\<oidMap >](oidmap-element.md)|Contém mapeamentos de OID (identificador de objeto) ASN para classes.|  
   
 ### <a name="parent-elements"></a>Elementos pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
 |`configuration`|O elemento raiz em cada arquivo de configuração usado pelos aplicativos do Common Language Runtime e .NET Framework.|  
-|`mscorlib`|Contém o `cryptographySettings` elemento.|  
+|`mscorlib`|Contém o elemento `cryptographySettings`.|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como usar o elemento **\<cryptographySettings >** para conter mapeamentos de nome de criptografia e mapeamentos de OID. Este exemplo configura o tempo de execução para que <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> retorne um objeto `MyHashClass` e a classe `MyCryptoClass` seja mapeada para o identificador de objeto 1.3.36.2.1.  
+ O exemplo a seguir mostra como usar o elemento **\<cryptographySettings >** para conter mapeamentos de nome de criptografia e mapeamentos de OID. Este exemplo configura o tempo de execução para que <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> retorne um objeto `MyHashClass` e a classe `MyCryptoClass` mapeia para o identificador de objeto 1.3.36.2.1.  
   
 ```xml  
 <configuration>  

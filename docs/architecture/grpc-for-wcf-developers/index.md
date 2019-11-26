@@ -1,14 +1,13 @@
 ---
 title: ASP.NET Core gRPC para desenvolvedores do WCF – gRPC para desenvolvedores do WCF
 description: Introdução à criação de serviços gRPCs no ASP.NET Core 3,0 para desenvolvedores do WCF
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: b89f5974dd18e7005c6479c5b9eead039364e654
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3ef513d2397b6f282591dfe6c9b25cd178372a28
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738075"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967745"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>ASP.NET Core gRPC para desenvolvedores do WCF
 

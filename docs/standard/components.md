@@ -1,16 +1,16 @@
 ---
 title: Componentes de arquitetura do .NET
-description: Descreve os componentes de arquitetura do .NET, como o .NET Standard, as implementações do .NET, os tempos de execução do .NET e as ferramentas.
+description: Descreve os componentes de arquitetura do .NET, como o .NET Standard, as implementações do .NET, os runtimes do .NET e as ferramentas.
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: f43cd61fbcb3c1c872961476449822c574f76cff
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71835275"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283913"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -28,9 +28,9 @@ Para saber mais sobre o NET Standard e como destinar a ele, consulte o tópico [
 
 Cada implementação do .NET inclui os seguintes componentes:
 
-- Um ou mais tempos de execução. Exemplos: CLR para .NET Framework, CoreCLR e CoreRT para .NET Core.
+- Um ou mais runtimes. Exemplos: o CLR para o .NET Framework, o CoreCLR e o CoreRT para o .NET Core.
 - Uma biblioteca de classes que implemente o .NET Standard e possa implementar APIs adicionais. Exemplos: biblioteca de classes base do NET Framework, biblioteca de classes base do .NET Core.
-- Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: [ASP.NET](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md) e [WPF (Windows Presentation Foundation)](../framework/wpf/index.md) estão incluídos no .NET Framework e no .NET Core.
+- Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: [ASP.net](https://www.asp.net/), [Windows Forms](../framework/winforms/windows-forms-overview.md)e [Windows Presentation Foundation (WPF)](../framework/wpf/index.md) estão incluídos no .NET Framework e no .NET Core.
 - Opcionalmente, ferramentas de desenvolvimento. Algumas ferramentas de desenvolvimento são compartilhadas entre várias implementações.
 
 Há quatro implementações principais de .NET que a Microsoft desenvolve e mantém ativamente: .NET Core, .NET Framework, Mono e UWP.
@@ -49,7 +49,7 @@ Para saber mais sobre o .NET Framework, consulte o [Guia do .NET Framework](../f
 
 ### <a name="mono"></a>Mono
 
-O Mono é uma implementação do .NET que é usada principalmente quando um pequeno tempo de execução é necessário. É o tempo de execução que impulsiona aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e concentra-se principalmente em um impacto pequeno. O Mono também é plataforma para jogos criados com o mecanismo Unity.
+O Mono é uma implementação do .NET que é usada principalmente quando um pequeno runtime é necessário. É o runtime que impulsiona aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e concentra-se principalmente em um impacto pequeno. O Mono também é plataforma para jogos criados com o mecanismo Unity.
 
 Ele dá suporte a todas as versões do .NET Standard publicadas atualmente.
 
@@ -65,14 +65,14 @@ A UWP é uma implementação do .NET que é usada para criar aplicativos do Wind
 
 Para saber mais sobre a UWP, consulte [Introdução à Plataforma Universal do Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
-## <a name="net-runtimes"></a>Tempos de execução do .NET
+## <a name="net-runtimes"></a>Runtimes do .NET
 
-Um tempo de execução é o ambiente de execução de um programa gerenciado. O SO faz parte do ambiente do tempo de execução, mas não faz parte do tempo de execução do .NET. Aqui estão alguns exemplos de tempos de execução do .NET:
+Um runtime é o ambiente de execução de um programa gerenciado. O SO faz parte do ambiente do runtime, mas não faz parte do runtime do .NET. Aqui estão alguns exemplos de runtimes do .NET:
 
 - CLR (Common Language Runtime) para o .NET Framework
 - Core Common Language Runtime (CoreCLR) para o .NET Core
 - .NET Native para a Plataforma Universal do Windows 
-- O tempo de execução Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac e a estrutura de área de trabalho do Mono
+- O runtime Mono para Xamarin.iOS, Xamarin.Android, Xamarin.Mac e a estrutura de área de trabalho do Mono
 
 ## <a name="net-tooling-and-common-infrastructure"></a>Ferramentas do .NET e infraestrutura comum
 
@@ -95,13 +95,13 @@ As revisões subsequentes para os padrões foram desenvolvidas pelos grupos de t
 Os documentos ECMA oficiais a seguir estão disponíveis [C#](http://www.ecma-international.org/publications/standards/Ecma-334.htm) para o e a [CLI](http://www.ecma-international.org/publications/standards/Ecma-335.htm) ([TR-84](http://www.ecma-international.org/publications/techreports/E-TR-084.htm)):
 
 - **O C# idioma padrão (versão 5,0)** : [ECMA-334. pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
-- **O Common Language Infrastructure**: Isso está disponível em formato [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) e formato [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) .
-- **Informações derivadas do arquivo XML da partição IV**: Isso está disponível em formatos [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) e [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) .
+- **O Common Language Infrastructure**: isso está disponível em formato [PDF](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) e formato [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) .
+- **Informações derivadas do arquivo XML da partição IV**: isso está disponível em formatos [PDF](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) e [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) .
  
 Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO/IEC [publicamente disponível](https://standards.iso.org/ittf/PubliclyAvailableStandards/) . Esses links são diretos dessa página:
 
 - **Tecnologia da informação-linguagens C#de programação-** : [ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
-- **Tecnologia da informação — Common Language Infrastructure (CLI) partições I para vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
+- **Tecnologia da informação — partições de Common Language Infrastructure (CLI) I para vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **Tecnologia da informação — Common Language Infrastructure (CLI) — relatório técnico sobre informações derivadas do arquivo XML da partição IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
 ## <a name="see-also"></a>Consulte também
@@ -110,6 +110,6 @@ Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO
 - [.NET Standard](net-standard.md)
 - [Guia do .NET Core](../core/index.md)
 - [Guia do .NET Framework](../framework/index.md)
-- [Guia do C#](../csharp/index.md)
+- [Guia do C#](../csharp/index.yml)
 - [Guia do F#](../fsharp/index.md)
 - [Guia do VB.NET](../visual-basic/index.md)

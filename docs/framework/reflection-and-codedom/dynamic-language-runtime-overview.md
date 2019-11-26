@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DLR
 - IronRuby
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
-ms.openlocfilehash: f0bd28823c5b8efc0b773ad588f2f232f8a41502
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a38ed15769d1186ef78733d68d9d8b51b3eb262d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130276"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446896"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Visão geral do Dynamic Language Runtime
 
@@ -51,13 +51,13 @@ Exemplos de linguagens desenvolvidos usando o DLR incluem:
 
 - IronPython. Disponível como um software livre no site [GitHub](https://github.com/IronLanguages/ironpython2).
 
-- IronRuby. Disponível como um software livre no site da Web do [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044).
+- IronRuby. Available as open-source software from the [IronRuby](http://ironruby.net/) website.
 
 ## <a name="primary-dlr-advantages"></a>Principais vantagens do DLR
  O DLR fornece as vantagens a seguir.
 
 ### <a name="simplifies-porting-dynamic-languages-to-the-net-framework"></a>Simplifica a portabilidade de linguagens dinâmicas para o .NET Framework
- O DLR permite que os implementadores de linguagem evitem criar analisadores tradicionais, lexicais ou semânticos, geradores de código e outras ferramentas que eles tradicionalmente precisavam criar eles mesmos. Para usar o DLR, uma linguagem precisa produzir *árvores de expressão*, que representam o código no nível de linguagem em uma estrutura em forma de árvore, rotinas auxiliares de tempo de execução e objetos dinâmicos opcionais que implementam a interface <xref:System.Dynamic.IDynamicMetaObjectProvider>. O DLR e o .NET Framework automatizam muitas tarefas de geração de código e de análise de código. Isso permite que os implementadores de linguagem se concentrem em recursos de linguagem exclusivos.
+ O DLR permite que os implementadores de linguagem evitem criar analisadores tradicionais, lexicais ou semânticos, geradores de código e outras ferramentas que eles tradicionalmente precisavam criar eles mesmos. Para usar o DLR, uma linguagem precisa produzir *árvores de expressão*, que representam o código no nível de linguagem em uma estrutura em forma de árvore, rotinas auxiliares de runtime e objetos dinâmicos opcionais que implementam a interface <xref:System.Dynamic.IDynamicMetaObjectProvider>. O DLR e o .NET Framework automatizam muitas tarefas de geração de código e de análise de código. Isso permite que os implementadores de linguagem se concentrem em recursos de linguagem exclusivos.
 
 ### <a name="enables-dynamic-features-in-statically-typed-languages"></a>Habilitar recursos dinâmicos em linguagens de tipo estático
  Linguagens do .NET Framework existentes como C# e Visual Basic podem criar objetos dinâmicos e usá-los junto com objetos de tipo estático. Por exemplo, C# e Visual Basic podem usar objetos dinâmicos para reflexão de HTML, DOM (Modelo de Objeto do Documento) e .NET.
@@ -74,7 +74,7 @@ Exemplos de linguagens desenvolvidos usando o DLR incluem:
 ## <a name="dlr-architecture"></a>Arquitetura do DLR
  A ilustração a seguir mostra a arquitetura do dynamic language runtime.
 
- ![Visão geral da arquitetura de tempo de execução de linguagem dinâmica](./media/dlr-archoverview.png "DLR_ArchOverview") Arquitetura do DLR
+ ![Dynamic Language Runtime Architecture Overview](./media/dlr-archoverview.png "DLR_ArchOverview") DLR architecture
 
  O DLR agrega um conjunto de serviços ao CLR para melhorar o suporte a linguagens dinâmicas. Tais serviços incluem os seguintes:
 

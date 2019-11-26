@@ -1,14 +1,13 @@
 ---
 title: Visão geral do gRPC-gRPC para desenvolvedores do WCF
 description: Saiba mais sobre o conjunto de princípios que orienta o desenvolvimento do gRPC.
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 6980b473a6f9852a4e4f396355e98e2d3300cabe
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: a92fe7ca2f8e17126025362fcc3c190024ebf7d3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846651"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967758"
 ---
 # <a name="grpc-overview"></a>Visão geral do gRPC
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d63dd911a5f674a3ce0b02ec78de443c7aebf84
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67747164"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446937"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>Método ICorProfilerCallback::Shutdown
-Notifica o criador de perfil que o aplicativo está sendo desligado.  
+Notifies the profiler that the application is shutting down.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,16 +32,16 @@ HRESULT Shutdown();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- O código do criador de perfil com segurança não é possível chamar métodos do [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface após o `Shutdown` método é chamado. Todas as chamadas para `ICorProfilerInfo` métodos resultam em comportamento indefinido após a `Shutdown` retorno do método. Determinados eventos imutáveis ainda poderão ocorrer após o desligamento; o criador de perfil deve cuidar para retornar imediatamente quando isso ocorre.  
+ The profiler code cannot safely call methods of the [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) interface after the `Shutdown` method is called. Any calls to `ICorProfilerInfo` methods result in undefined behavior after the `Shutdown` method returns. Certain immutable events may still occur after shutdown; the profiler should take care to return immediately when this occurs.  
   
- O `Shutdown` método será chamado apenas se o aplicativo gerenciado que está sendo analisado começou como código gerenciado (ou seja, o quadro inicial na pilha de processo é gerenciado). Se o aplicativo de início do código não gerenciado, mas posteriormente entrou no código gerenciado, criando uma instância do common language runtime (CLR), em seguida, `Shutdown` não será chamado. Nesses casos, o criador de perfil deve incluir em sua biblioteca de um `DllMain` rotina que usa o DLL_PROCESS_DETACH valor para liberar todos os recursos e executar o processamento de limpar seus dados, como liberar os rastreamentos no disco e assim por diante.  
+ The `Shutdown` method will be called only if the managed application that is being profiled started as managed code (that is, the initial frame on the process stack is managed). If the application started as unmanaged code but later jumped into managed code, thereby creating an instance of the common language runtime (CLR), then `Shutdown` will not be called. For these cases, the profiler should include in its library a `DllMain` routine that uses the DLL_PROCESS_DETACH value to free any resources and perform clean-up processing of its data, such as flushing traces to disk and so on.  
   
- Em geral, o criador de perfil deve lidar com desligamentos inesperados. Por exemplo, um processo pode ser interrompido por do Win32 `TerminateProcess` método (declarado em Winbase). Em outros casos, o CLR interromperá a determinados threads gerenciados (threads de segundo plano) sem a entrega de mensagens de destruição ordenada para eles.  
+ In general, the profiler must cope with unexpected shutdowns. For example, a process might be halted by Win32's `TerminateProcess` method (declared in Winbase.h). In other cases, the CLR will halt certain managed threads (background threads) without delivering orderly destruction messages for them.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl, CorProf.h  
+ **Header:** CorProf.idl, CorProf.h  
   
  **Biblioteca:** CorGuids.lib  
   

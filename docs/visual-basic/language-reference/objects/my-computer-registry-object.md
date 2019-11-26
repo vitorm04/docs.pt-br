@@ -1,34 +1,34 @@
 ---
-title: Objeto My. Computer. Registry (Visual Basic)
+title: Objeto My.Computer.Registry
 ms.date: 07/20/2015
 helpviewer_keywords:
 - DeleteSetting function [Visual Basic], increasing performance
 - My.Computer.Registry object
 ms.assetid: afd9edf9-ef9b-438b-a390-d71a02dc8203
-ms.openlocfilehash: 1015edf1ff7633f873480db9f27a4ec0cf690574
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 91bd1c10c071e7a463a25e823f0917a98bca7a85
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69966002"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350691"
 ---
 # <a name="mycomputerregistry-object"></a>Objeto My.Computer.Registry
 Fornece propriedades e métodos para manipular o Registro.  
   
 ## <a name="remarks"></a>Comentários  
- Para obter informações sobre os métodos e as propriedades `My.Computer.Registry` do objeto, <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>consulte.  
+ For information about the methods and properties of the `My.Computer.Registry` object, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
- Para obter mais informações, consulte [lendo e gravando no registro](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
+ For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
   
 > [!NOTE]
-> Você também pode manipular o registro usando métodos da <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> classe.  
+> You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Classe:** (fornece acesso a <xref:Microsoft.Win32.Registry>) <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
+ **Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)  
   
- **)** Visual Basic Runtime Library (em Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>Consulte também
 

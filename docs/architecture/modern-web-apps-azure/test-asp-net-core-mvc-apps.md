@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | Te
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 9bc97efdda44ca4dfa4a583c32e9e55c9502d975
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6096bd3aa35a27c97862089d09d537bdc5b1fff0
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089690"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73971536"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Testar aplicativos ASP.NET Core MVC
 
@@ -285,12 +285,16 @@ Esse teste funcional emprega a pilha completa do aplicativo ASP.NET Core MVC/Raz
 
 > ### <a name="references--test-aspnet-core-mvc-apps"></a>Referências – Testar aplicativos ASP.NET Core MVC
 >
-> - **Teste no ASP.NET Core**  
+> - **Testando no ASP.NET Core** \
 >   <https://docs.microsoft.com/aspnet/core/testing/>
-> - **Convenção de nomenclatura de teste de unidade**  
+> - **Convenção de nomenclatura de teste de unidade** \
 >   <https://ardalis.com/unit-test-naming-convention>
-> - **Testar EF Core**  
+> - **Testando EF Core** \
 >   <https://docs.microsoft.com/ef/core/miscellaneous/testing/>
+> - **Testes de integração no ASP.NET Core** \
+>   <https://docs.microsoft.com/aspnet/core/test/integration-tests>
+> - **ASP.net Community encontros – 15 de maio de 2018-testes do MVC com Javier C. Nelson** – vídeo do YouTube \
+>   <https://www.youtube.com/watch?v=wtOE-xmFJkw&list=PL1rZQsJPBU2StolNg0aqvQswETPcYnNKL&index=5>
 
 >[!div class="step-by-step"]
 >[Anterior](work-with-data-in-asp-net-core-apps.md)

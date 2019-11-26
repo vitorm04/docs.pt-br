@@ -1,5 +1,5 @@
 ---
-title: Tipos genéricos no Visual Basic (Visual Basic)
+title: Tipos genéricos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generic interfaces
@@ -36,122 +36,122 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 813ee167fdc09c7c7ea12f5f09602230e711d362
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3dcd7756b10fab8f66f4d5c10acedd8f600eb2e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593390"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350119"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Tipos genéricos no Visual Basic (Visual Basic)
-Um *tipo genérico* é um único elemento de programação que se adapta ao executar a mesma funcionalidade para uma variedade de tipos de dados. Quando você define uma classe genérica ou um procedimento, você não precisa definir uma versão separada para cada tipo de dados para os quais você talvez queira executar essa funcionalidade.  
+A *generic type* is a single programming element that adapts to perform the same functionality for a variety of data types. When you define a generic class or procedure, you do not have to define a separate version for each data type for which you might want to perform that functionality.  
   
- Uma analogia é uma chave de fenda com cabeçotes removíveis. Você inspeciona o parafuso você precisa desativar e selecione o cabeçalho correto para aquele parafuso (encaixado, ultrapassado, estrelado). Depois de inserir a cabeça correta no identificador de chave de fenda, você executar a mesma função exata com a chave de fenda, saber apertar o parafuso.  
+ An analogy is a screwdriver set with removable heads. You inspect the screw you need to turn and select the correct head for that screw (slotted, crossed, starred). Once you insert the correct head in the screwdriver handle, you perform the exact same function with the screwdriver, namely turning the screw.  
   
- ![Diagrama de uma chave de fenda definido com cabeçotes diferentes.](./media/generic-types/generic-screwdriver-set.gif)  
+ ![Diagram of a screwdriver set with different heads.](./media/generic-types/generic-screwdriver-set.gif)  
   
- Quando você define um tipo genérico, parametrize-o com um ou mais tipos de dados. Isso permite que o uso de código para personalizar os tipos de dados para seus requisitos. Seu código pode declarar vários elementos de programação diferentes a partir do elemento genérico, cada um agindo em um conjunto diferente de tipos de dados. Mas todos os elementos declarados realizam a lógica idêntica, não importa quais tipos de dados que estão usando.  
+ When you define a generic type, you parameterize it with one or more data types. This allows the using code to tailor the data types to its requirements. Your code can declare several different programming elements from the generic element, each one acting on a different set of data types. But the declared elements all perform the identical logic, no matter what data types they are using.  
   
- Por exemplo, você talvez queira criar e usar uma classe de fila que opera em um tipo de dados específico, como `String`. Você pode declarar essa classe de <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, como mostra o exemplo a seguir.  
+ For example, you might want to create and use a queue class that operates on a specific data type such as `String`. You can declare such a class from <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, as the following example shows.  
   
  [!code-vb[VbVbalrDataTypes#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#1)]  
   
- Agora você pode usar `stringQ` para trabalhar exclusivamente com `String` valores. Porque `stringQ` é específico para `String` em vez de ser generalizado para `Object` valores, você não tenha tardia associação ou conversão de tipos. Isso economiza tempo de execução e reduz os erros de tempo de execução.  
+ You can now use `stringQ` to work exclusively with `String` values. Because `stringQ` is specific for `String` instead of being generalized for `Object` values, you do not have late binding or type conversion. This saves execution time and reduces run-time errors.  
   
- Para obter mais informações sobre como usar um tipo genérico, consulte [como: Usar uma classe genérica](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
+ For more information on using a generic type, see [How to: Use a Generic Class](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md).  
   
-## <a name="example-of-a-generic-class"></a>Exemplo de uma classe genérica  
- O exemplo a seguir mostra uma definição de uma classe genérica.  
+## <a name="example-of-a-generic-class"></a>Example of a Generic Class  
+ The following example shows a skeleton definition of a generic class.  
   
  [!code-vb[VbVbalrDataTypes#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#2)]  
   
- No esqueleto anterior, `t` é um *parâmetro de tipo*, ou seja, um espaço reservado para um tipo de dados que você fornece ao declarar a classe. Em outro lugar no seu código, você pode declarar as várias versões do `classHolder` , fornecendo vários tipos de dados para `t`. O exemplo a seguir mostra duas declarações desse tipo.  
+ In the preceding skeleton, `t` is a *type parameter*, that is, a placeholder for a data type that you supply when you declare the class. Elsewhere in your code, you can declare various versions of `classHolder` by supplying various data types for `t`. The following example shows two such declarations.  
   
  [!code-vb[VbVbalrDataTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#3)]  
   
- As declarações anteriores declaram *classes construídas*, no qual um tipo específico substitui o parâmetro de tipo. Essa substituição é propagada por todo o código dentro da classe construída. O exemplo a seguir mostra o que o `processNewItem` procedimento parece em `integerClass`.  
+ The preceding statements declare *constructed classes*, in which a specific type replaces the type parameter. This replacement is propagated throughout the code within the constructed class. The following example shows what the `processNewItem` procedure looks like in `integerClass`.  
   
  [!code-vb[VbVbalrDataTypes#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#4)]  
   
- Para obter um exemplo mais completo, confira [Como: Definir uma classe que pode fornecer uma funcionalidade idêntica em tipos de dados diferentes](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ For a more complete example, see [How to: Define a Class That Can Provide Identical Functionality on Different Data Types](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
-## <a name="eligible-programming-elements"></a>Elementos de programação qualificados  
- Você pode definir e usar delegados, estruturas, interfaces, procedimentos e as classes genéricas. Observe que o .NET Framework define várias classes genéricas, estruturas e interfaces que representam os elementos genéricos comumente usados. O <xref:System.Collections.Generic?displayProperty=nameWithType> namespace fornece dicionários, listas, filas e pilhas. Antes de definir seu próprio elemento genérico, confira se ele já está disponível em <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+## <a name="eligible-programming-elements"></a>Eligible Programming Elements  
+ You can define and use generic classes, structures, interfaces, procedures, and delegates. Note that the .NET Framework defines several generic classes, structures, and interfaces that represent commonly used generic elements. The <xref:System.Collections.Generic?displayProperty=nameWithType> namespace provides dictionaries, lists, queues, and stacks. Before defining your own generic element, see if it is already available in <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
- Procedimentos não são de tipos, mas você pode definir e usar procedimentos genéricos. Ver [procedimentos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
+ Procedures are not types, but you can define and use generic procedures. See [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
-## <a name="advantages-of-generic-types"></a>Vantagens de tipos genéricos  
- Um tipo genérico serve como base para declarar vários elementos de programação diferentes, cada uma delas opera em um tipo de dados específico. As alternativas para um tipo genérico são:  
+## <a name="advantages-of-generic-types"></a>Advantages of Generic Types  
+ A generic type serves as a basis for declaring several different programming elements, each of which operates on a specific data type. The alternatives to a generic type are:  
   
-1. Um único tipo de operando com o `Object` tipo de dados.  
+1. A single type operating on the `Object` data type.  
   
-2. Um conjunto de *específicos do tipo* as versões do tipo, cada versão individualmente codificada e operando em um tipo de dados específico, como `String`, `Integer`, ou um tipo definido pelo usuário, como `customer`.  
+2. A set of *type-specific* versions of the type, each version individually coded and operating on one specific data type such as `String`, `Integer`, or a user-defined type such as `customer`.  
   
- Um tipo genérico tem as seguintes vantagens sobre essas alternativas:  
+ A generic type has the following advantages over these alternatives:  
   
-- **Segurança de tipo.** Tipos genéricos impõem a verificação de tipo em tempo de compilação. Tipos baseados em `Object` aceitar qualquer tipo de dados, e você deve escrever código para verificar se um tipo de dados de entrada é aceitável. Com tipos genéricos, o compilador pode detectar incompatibilidades de tipo antes do tempo de execução.  
+- **Type Safety.** Generic types enforce compile-time type checking. Types based on `Object` accept any data type, and you must write code to check whether an input data type is acceptable. With generic types, the compiler can catch type mismatches before run time.  
   
-- **Desempenho.** Tipos genéricos não é necessário *caixa de* e *conversão unboxing* dados, porque cada um deles é especializado para um tipo de dados. Operações com base em `Object` deve caixa tipos de dados de entrada para convertê-las para `Object` e conversão unboxing dados destinados à saída. Conversões boxing e unboxing reduzem o desempenho.  
+- **Desempenho.** Generic types do not have to *box* and *unbox* data, because each one is specialized for one data type. Operations based on `Object` must box input data types to convert them to `Object` and unbox data destined for output. Boxing and unboxing reduce performance.  
   
-     Tipos baseados em `Object` são também de associação tardia, o que significa que acessar seus membros requer código extra em tempo de execução. Isso também reduz o desempenho.  
+     Types based on `Object` are also late-bound, which means that accessing their members requires extra code at run time. This also reduces performance.  
   
-- **Código de consolidação.** O código em um tipo genérico deve ser definido apenas uma vez. Um conjunto de versões de tipo específico de um tipo deve replicar o mesmo código em cada versão, com a única diferença é o tipo de dados específico para essa versão. Com tipos genéricos, as versões específicas do tipo são todas geradas a partir do tipo genérico original.  
+- **Code Consolidation.** The code in a generic type has to be defined only once. A set of type-specific versions of a type must replicate the same code in each version, with the only difference being the specific data type for that version. With generic types, the type-specific versions are all generated from the original generic type.  
   
-- **Reutilização de código.** Código que não depende de um determinado tipo de dados pode ser reutilizado com vários tipos de dados se ele for genérico. Geralmente, você pode reutilizá-lo mesmo com um tipo de dados que você não originalmente prevê.  
+- **Code Reuse.** Code that does not depend on a particular data type can be reused with various data types if it is generic. You can often reuse it even with a data type that you did not originally predict.  
   
-- **Suporte do IDE.** Quando você usa um tipo construído declarado de um tipo genérico, o ambiente de desenvolvimento integrado (IDE) pode lhe dar mais suporte enquanto você estiver desenvolvendo seu código. Por exemplo, o IntelliSense pode mostrar as opções de tipo específico para um argumento para um construtor ou método.  
+- **IDE Support.** When you use a constructed type declared from a generic type, the integrated development environment (IDE) can give you more support while you are developing your code. For example, IntelliSense can show you the type-specific options for an argument to a constructor or method.  
   
-- **Algoritmos genéricos.** Abstratos algoritmos que são independentes de tipo são bons candidatos para tipos genéricos. Por exemplo, um procedimento genérico que classifica os itens que usam o <xref:System.IComparable> interface pode ser usado com qualquer tipo de dados que implemente <xref:System.IComparable>.  
+- **Generic Algorithms.** Abstract algorithms that are type-independent are good candidates for generic types. For example, a generic procedure that sorts items using the <xref:System.IComparable> interface can be used with any data type that implements <xref:System.IComparable>.  
   
 ## <a name="constraints"></a>Restrições  
- Embora o código em uma definição de tipo genérico deve ser tão independente de tipo quanto possível, você precisa exigir uma determinada capacidade de qualquer tipo de dados fornecido para o tipo genérico. Por exemplo, se você quiser comparar dois itens com a finalidade de classificação ou agrupamento, o tipo de dados deve implementar o <xref:System.IComparable> interface. Você pode aplicar esse requisito, adicionando um *restrição* para o parâmetro de tipo.  
+ Although the code in a generic type definition should be as type-independent as possible, you might need to require a certain capability of any data type supplied to your generic type. For example, if you want to compare two items for the purpose of sorting or collating, their data type must implement the <xref:System.IComparable> interface. You can enforce this requirement by adding a *constraint* to the type parameter.  
   
-### <a name="example-of-a-constraint"></a>Exemplo de uma restrição  
- O exemplo a seguir mostra uma definição de uma classe com uma restrição que requer o argumento de tipo para implementar <xref:System.IComparable>.  
+### <a name="example-of-a-constraint"></a>Example of a Constraint  
+ The following example shows a skeleton definition of a class with a constraint that requires the type argument to implement <xref:System.IComparable>.  
   
  [!code-vb[VbVbalrDataTypes#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#5)]  
   
- Se o código subsequente tenta construir uma classe de `itemManager` fornecendo um tipo que não implementa <xref:System.IComparable>, o compilador sinaliza um erro.  
+ If subsequent code attempts to construct a class from `itemManager` supplying a type that does not implement <xref:System.IComparable>, the compiler signals an error.  
   
-### <a name="types-of-constraints"></a>Tipos de restrições  
- A restrição pode especificar os requisitos a seguir em qualquer combinação:  
+### <a name="types-of-constraints"></a>Types of Constraints  
+ Your constraint can specify the following requirements in any combination:  
   
-- O argumento de tipo deve implementar uma ou mais interfaces  
+- The type argument must implement one or more interfaces  
   
-- O argumento de tipo deve ser do tipo de, ou herdar de, no máximo uma classe  
+- The type argument must be of the type of, or inherit from, at most one class  
   
-- O argumento de tipo deve expor um construtor sem parâmetros acessível para o código que cria objetos a partir dele  
+- The type argument must expose a parameterless constructor accessible to the code that creates objects from it  
   
-- O argumento de tipo deve ser um *tipo de referência*, ou deve ser um *tipo de valor*  
+- The type argument must be a *reference type*, or it must be a *value type*  
   
- Se você precisar de mais de um requisito de impor, use uma separada por vírgulas *lista de restrições* entre chaves (`{ }`). Para exigir um construtor acessível, você inclui o [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md) palavra-chave na lista. Para exigir um tipo de referência, você deve incluir a `Class` palavra-chave; para exigir um tipo de valor, você incluir o `Structure` palavra-chave.  
+ If you need to impose more than one requirement, you use a comma-separated *constraint list* inside braces (`{ }`). To require an accessible constructor, you include the [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) keyword in the list. To require a reference type, you include the `Class` keyword; to require a value type, you include the `Structure` keyword.  
   
- Para obter mais informações sobre restrições, consulte [lista de tipos](../../../../visual-basic/language-reference/statements/type-list.md).  
+ For more information on constraints, see [Type List](../../../../visual-basic/language-reference/statements/type-list.md).  
   
-### <a name="example-of-multiple-constraints"></a>Exemplo de várias restrições  
- O exemplo a seguir mostra uma definição de uma classe genérica com uma lista de restrições no parâmetro de tipo. No código que cria uma instância dessa classe, o argumento de tipo deve implementar ambas as <xref:System.IComparable> e <xref:System.IDisposable> interfaces, ser um tipo de referência e expor um construtor sem parâmetros acessível.  
+### <a name="example-of-multiple-constraints"></a>Example of Multiple Constraints  
+ The following example shows a skeleton definition of a generic class with a constraint list on the type parameter. In the code that creates an instance of this class, the type argument must implement both the <xref:System.IComparable> and <xref:System.IDisposable> interfaces, be a reference type, and expose an accessible parameterless constructor.  
   
  [!code-vb[VbVbalrDataTypes#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#6)]  
   
-## <a name="important-terms"></a>Termos importantes  
- Tipos genéricos apresentam e usam os seguintes termos:  
+## <a name="important-terms"></a>Important Terms  
+ Generic types introduce and use the following terms:  
   
-- *Tipo genérico*. Uma definição de classe, estrutura, interface, procedimento ou delegado para o qual você fornecer pelo menos um tipo de dados quando você declará-la.  
+- *Generic Type*. A definition of a class, structure, interface, procedure, or delegate for which you supply at least one data type when you declare it.  
   
-- *Parâmetro de tipo*. Em uma definição de tipo genérico, um espaço reservado para um tipo de dados você fornece ao declarar o tipo.  
+- *Type Parameter*. In a generic type definition, a placeholder for a data type you supply when you declare the type.  
   
-- *O argumento de tipo*. Um tipo de dados específico que substitui um parâmetro de tipo quando você declara um tipo construído de um tipo genérico.  
+- *Type Argument*. A specific data type that replaces a type parameter when you declare a constructed type from a generic type.  
   
-- *Restrição*. Uma condição em um parâmetro de tipo que restringe o argumento de tipo que você pode fornecer para ele. Uma restrição pode exigir que o argumento de tipo deve implementar uma interface específica, ser ou herdar de uma determinada classe, ter um construtor sem parâmetros acessível ou ser um tipo de referência ou um tipo de valor. Você pode combinar essas restrições, mas você pode especificar no máximo uma classe.  
+- *Constraint*. A condition on a type parameter that restricts the type argument you can supply for it. A constraint can require that the type argument must implement a particular interface, be or inherit from a particular class, have an accessible parameterless constructor, or be a reference type or a value type. You can combine these constraints, but you can specify at most one class.  
   
-- *Tipo construído*. Uma classe, estrutura, interface, procedimento ou delegado declarado de um tipo genérico, fornecendo argumentos de tipo para seus parâmetros de tipo.  
+- *Constructed Type*. A class, structure, interface, procedure, or delegate declared from a generic type by supplying type arguments for its type parameters.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [Caracteres de Tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [Tipos de Dados](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)

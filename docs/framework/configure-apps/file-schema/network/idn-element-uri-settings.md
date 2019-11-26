@@ -9,13 +9,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71698167"
 ---
-# <a name="idn-element-uri-settings"></a>\<idn > elemento (configurações de URI)
+# <a name="idn-element-uri-settings"></a>\<elemento > IDN (configurações de URI)
 
 Especifica se a análise de IDN (nome de domínio internacionalizado) é aplicada a um nome de domínio.
   
 [ **\<configuration>** ](../configuration-element.md)  
-&nbsp; @ no__t-1[ **\<uri >** ](uri-element-uri-settings.md)  
-&nbsp; @ no__t-1 @ no__t-2 @ no__t-3 **\<idn >**  
+URI de\<de &nbsp;de &nbsp;[ **>** ](uri-element-uri-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<IDN** >  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,7 +26,7 @@ Especifica se a análise de IDN (nome de domínio internacionalizado) é aplicad
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
 
@@ -34,7 +34,7 @@ Especifica se a análise de IDN (nome de domínio internacionalizado) é aplicad
 |-----------------|---------------------|  
 |`enabled`|Especifica se a análise de IDN (nome de domínio internacionalizado) é aplicada a um nome de domínio, o valor padrão é nenhum.|  
 
-### <a name="child-elements"></a>Elementos filho
+### <a name="child-elements"></a>Child elements
 
 Nenhum
   
@@ -46,7 +46,7 @@ Nenhum
 
 ## <a name="remarks"></a>Comentários
 
-A classe <xref:System.Uri> existente foi estendida em .NET Framework 3,5. 3,0 SP1 e 2,0 SP1 com suporte para IRI (identificadores de recursos internacionais) e IDNs (nomes de domínio internacionalizados). Os usuários atuais não verão nenhuma alteração do comportamento .NET Framework 2,0, a menos que eles especificamente habilitem o suporte a IRI e IDN. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.
+A classe de <xref:System.Uri> existente foi estendida em .NET Framework 3,5. 3,0 SP1 e 2,0 SP1 com suporte para IRI (identificadores de recursos internacionais) e IDNs (nomes de domínio internacionalizados). Os usuários atuais não verão nenhuma alteração do comportamento .NET Framework 2,0, a menos que eles especificamente habilitem o suporte a IRI e IDN. Isso garante a compatibilidade do aplicativo com versões anteriores do .NET Framework.
 
 Para habilitar o suporte para IRI, as duas alterações a seguir são necessárias:
 
@@ -78,7 +78,7 @@ Para habilitar o suporte para IRI, as duas alterações a seguir são necessári
 
 Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).
 
-## <a name="example"></a>Exemplo
+## <a name="example"></a>{1&gt;Exemplo&lt;1}
 
 O exemplo a seguir mostra uma configuração usada pela classe <xref:System.Uri> para dar suporte a análise IRI e nomes IDN:
 

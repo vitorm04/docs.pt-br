@@ -1,5 +1,5 @@
 ---
-title: Propriedades e métodos (Visual Basic)
+title: Overloaded properties and methods
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic], overloading
@@ -12,77 +12,77 @@ helpviewer_keywords:
 - method overloading
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
-ms.openlocfilehash: 8d7341370d9770d2e57f786ac7c68277e66a9bbd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5017d371f8a01436020443b2e3466c78fc35d21
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864865"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346097"
 ---
-# <a name="overloaded-properties-and-methods-visual-basic"></a>Propriedades e métodos (Visual Basic)
+# <a name="overloaded-properties-and-methods-visual-basic"></a>Overloaded properties and methods (Visual Basic)
 
-Sobrecarga é a criação de mais de um procedimento, o construtor de instância ou a propriedade em uma classe com o mesmo nome mas com tipos diferentes de argumentos.
+Overloading is the creation of more than one procedure, instance constructor, or property in a class with the same name but different argument types.
 
-## <a name="overloading-usage"></a>Sobrecarga de uso
+## <a name="overloading-usage"></a>Overloading usage
 
-Sobrecarga é especialmente útil quando seu modelo de objeto dita utilizar nomes idênticos para os procedimentos que operam em tipos de dados diferentes. Por exemplo, uma classe que pode exibir vários tipos diferentes de dados poderia ter `Display` procedimentos ter esta aparência:
+Overloading is especially useful when your object model dictates that you employ identical names for procedures that operate on different data types. For example, a class that can display several different data types could have `Display` procedures that look like this:
 
 [!code-vb[VbVbalrOOP#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#64)]
 
-Sem a sobrecarga, você precisaria criar nomes distintos para cada procedimento, mesmo que eles fazem a mesma coisa, como mostrado a seguir:
+Without overloading, you would need to create distinct names for each procedure, even though they do the same thing, as shown next:
 
 [!code-vb[VbVbalrOOP#65](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#65)]
 
-Sobrecarregando torna mais fácil de usar propriedades ou métodos porque ele fornece uma variedade de tipos de dados que pode ser usado. Por exemplo, sobrecarregado `Display` método discutido anteriormente pode ser chamado com qualquer uma das seguintes linhas de código:
+Overloading makes it easier to use properties or methods because it provides a choice of data types that can be used. For example, the overloaded `Display` method discussed previously can be called with any of the following lines of code:
 
 [!code-vb[VbVbalrOOP#66](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#66)]
 
-Em tempo de execução, o Visual Basic chama o procedimento correto com base nos tipos de dados dos parâmetros que você especificar.
+At run time, Visual Basic calls the correct procedure based on the data types of the parameters you specify.
 
-## <a name="overloading-rules"></a>Sobrecarga de regras
+## <a name="overloading-rules"></a>Overloading rules
 
- Você pode criar um membro sobrecarregado para uma classe com a adição de dois ou mais propriedades ou métodos com o mesmo nome. Exceto para membros derivados sobrecarregados, cada membro sobrecarregado deve ter listas de parâmetros diferentes e os itens a seguir não podem ser usados como um recurso diferenciador ao sobrecarregar uma propriedade ou procedimento:
+ You create an overloaded member for a class by adding two or more properties or methods with the same name. Except for overloaded derived members, each overloaded member must have different parameter lists, and the following items cannot be used as a differentiating feature when overloading a property or procedure:
 
-- Modificadores, tais como `ByVal` ou `ByRef`, que se aplicam a um membro ou parâmetros do membro.
+- Modifiers, such as `ByVal` or `ByRef`, that apply to a member, or parameters of the member.
 
-- Nomes de parâmetros
+- Names of parameters
 
-- Tipos de retorno de procedimentos
+- Return types of procedures
 
-O `Overloads` palavra-chave é opcional quando a sobrecarga, mas se houver sobrecarregado membro usa o `Overloads` palavra-chave e, em seguida, todos os outros membros sobrecarregados com o mesmo nome também devem especificar essa palavra-chave.
+The `Overloads` keyword is optional when overloading, but if any overloaded member uses the `Overloads` keyword, then all other overloaded members with the same name must also specify this keyword.
 
-As classes derivadas podem sobrecarregar membros herdados com membros que têm parâmetros idênticos e tipos de parâmetro, um processo conhecido como *sombreamento por nome e assinatura*. Se o `Overloads` palavra-chave é usada quando o sombreamento por nome e assinatura, a implementação da classe derivada do membro será usada em vez da implementação na classe base e todas as outras sobrecargas para esse membro estarão disponíveis para instâncias das classe derivada.
+Derived classes can overload inherited members with members that have identical parameters and parameter types, a process known as *shadowing by name and signature*. If the `Overloads` keyword is used when shadowing by name and signature, the derived class's implementation of the member will be used instead of the implementation in the base class, and all other overloads for that member will be available to instances of the derived class.
 
-Se o `Overloads` palavra-chave for omitida, ao sobrecarregar um membro herdado com um membro que tem parâmetros idênticos e tipos de parâmetro e, em seguida, a sobrecarga é chamado *sombreamento por nome*. Sombreamento por nome substitui a implementação herdada de um membro e, em seguida, faz todas as outras sobrecargas indisponível para instâncias da classe derivada e seus decedents.
+If the `Overloads` keyword is omitted when overloading an inherited member with a member that has identical parameters and parameter types, then the overloading is called *shadowing by name*. Shadowing by name replaces the inherited implementation of a member, and it makes all other overloads unavailable to instances of the derived class and its decedents.
 
-O `Overloads` e `Shadows` modificadores não podem ambos ser usados com a mesma propriedade ou método.
+The `Overloads` and `Shadows` modifiers cannot both be used with the same property or method.
 
 ### <a name="example"></a>Exemplo
 
-O exemplo a seguir cria métodos sobrecarregados que aceitam a um `String` ou `Decimal` representação de um valor monetário e o retorno de uma cadeia de caracteres que contém o imposto sobre vendas.
+The following example creates overloaded methods that accept either a `String` or `Decimal` representation of a dollar amount and return a string containing the sales tax.
 
-#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>Para usar este exemplo para criar um método sobrecarregado
+#### <a name="to-use-this-example-to-create-an-overloaded-method"></a>To use this example to create an overloaded method
 
-1. Abra um novo projeto e adicione uma classe chamada `TaxClass`.
+1. Open a new project and add a class named `TaxClass`.
 
 2. Adicione o código a seguir à classe `TaxClass`.
 
     [!code-vb[VbVbalrOOP#67](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#67)]
 
-3. Adicione o procedimento a seguir ao seu formulário.
+3. Add the following procedure to your form.
 
     [!code-vb[VbVbalrOOP#68](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#68)]
 
-4. Adicionar um botão ao formulário e chame o `ShowTax` procedimento do `Button1_Click` evento do botão.
+4. Add a button to your form and call the `ShowTax` procedure from the `Button1_Click` event of the button.
 
-5. Execute o projeto e clique no botão no formulário para testar sobrecarregado `ShowTax` procedimento.
+5. Run the project and click the button on the form to test the overloaded `ShowTax` procedure.
 
-Em tempo de execução, o compilador escolhe a função sobrecarregada apropriada que corresponde aos parâmetros que está sendo usados. Quando você clica no botão, o método sobrecarregado é chamado pela primeira vez com um `Price` parâmetro que é uma cadeia de caracteres e a mensagem "o preço é uma cadeia de caracteres. Imposto é $5,12" é exibida. `TaxAmount` é chamado com um `Decimal` valor na segunda vez e a mensagem, "preço é um Decimal. Imposto é $5,12" é exibida.
+At run time, the compiler chooses the appropriate overloaded function that matches the parameters being used. When you click the button, the overloaded method is called first with a `Price` parameter that is a string and the message, "Price is a String. Tax is $5.12" is displayed. `TaxAmount` is called with a `Decimal` value the second time and the message, "Price is a Decimal. Tax is $5.12" is displayed.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Objetos e Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [Sombreamento no Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Instrução Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Noções Básicas de Herança](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
 - [Sombras](../../../../visual-basic/language-reference/modifiers/shadows.md)

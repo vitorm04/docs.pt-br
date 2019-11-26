@@ -11,7 +11,7 @@ ms.locfileid: "71834454"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Desafios e soluções do gerenciamento de dados distribuídos
 
-## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Desafio \#1: como definir os limites de cada microsserviço
+## <a name="challenge-1-how-to-define-the-boundaries-of-each-microservice"></a>Desafio \#1: Como definir os limites de cada microsserviço
 
 Definir os limites dos microsserviços provavelmente é o primeiro desafio que qualquer pessoa encontra. Cada microsserviço deve ser uma parte do aplicativo e cada microsserviço deve ser autônomo com todos os benefícios e desafios que ele abrange. Mas como identificar esses limites?
 
@@ -19,7 +19,7 @@ Primeiro, você precisa se concentrar nos modelos de domínio lógicos do aplica
 
 Sua forma de identificar os limites entre vários contextos de aplicativo com um domínio diferente para cada contexto é exatamente a forma que você pode usar para identificar os limites de cada microsserviço de negócios, além de seu modelo de domínio e seus dados relacionados. Você sempre deve tentar minimizar o acoplamento entre esses microsserviços. Mais adiante, este guia apresentará mais detalhes sobre essa identificação e esse design de modelo de domínio na seção [Identificando limites de modelo de domínio para cada microsserviço](identify-microservice-domain-model-boundaries.md).
 
-## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Desafio \#2: como criar consultas que recuperam dados de vários microsserviços
+## <a name="challenge-2-how-to-create-queries-that-retrieve-data-from-several-microservices"></a>Desafio \#2: Como criar consultas que recuperam dados de vários microsserviços
 
 Um segundo desafio é como implementar consultas que recuperam dados de vários microsserviços, evitando a comunicação intensa dos aplicativos clientes remotos com os microsserviços. Um exemplo pode ser uma única tela de um aplicativo móvel que precisa mostrar microsserviços de informações do usuário que pertencem ao carrinho de compras, de catálogo e de identidade do usuário. Outro exemplo seria um relatório complexo envolvendo diversas tabelas localizadas em vários microsserviços. A solução certa depende da complexidade das consultas. Mas em qualquer caso, será necessária uma maneira de agregar informações se você desejar melhorar a eficiência nas comunicações do sistema. As soluções mais comuns são as seguintes.
 
@@ -35,9 +35,9 @@ Além de resolver o problema original (como fazer a consulta e a junção entre 
 
 Tenha em mente que esse banco de dados centralizado deve ser usado somente para consultas e relatórios que não precisam de dados em tempo real. As atualizações e transações originais, ou seja, a fonte confiável, precisam estar nos dados dos microsserviços. A maneira de sincronizar os dados seria usar a comunicação controlada por evento (abordada nas próximas seções) ou usar outras ferramentas de importação/exportação da infraestrutura do banco de dados. Se você usar a comunicação controlada por evento, esse processo de integração será semelhante à maneira de propagar dados já descrita para tabelas de consulta de CQRS.
 
-No entanto, se o design do aplicativo envolver a agregação constante de informações de vários microsserviços para consultas complexas, esse poderá ser um sintoma de design ruim, pois um microsserviço deve estar o mais isolado possível dos outros microsserviços. (Isso exclui relatórios/análises que sempre devem usar bancos de dados centrais de dados frios). A ocorrência frequente desse problema pode ser um motivo para mesclar os microsserviços. Você precisa equilibrar a autonomia de evolução e a implantação de cada microsserviço com dependências fortes, coesão e agregação de dados.
+No entanto, se o design do aplicativo envolver a agregação constante de informações de vários microsserviços para consultas complexas, esse poderá ser um sintoma de design ruim, pois um microsserviço deve estar o mais isolado possível dos outros microsserviços. (Isso exclui relatórios/análises que sempre devem usar bancos de dados do Cold Data Central.) Ter esse problema muitas vezes pode ser um motivo para mesclar os microserviços. Você precisa equilibrar a autonomia de evolução e a implantação de cada microsserviço com dependências fortes, coesão e agregação de dados.
 
-## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Desafio \#3: como obter consistência entre vários microsserviços
+## <a name="challenge-3-how-to-achieve-consistency-across-multiple-microservices"></a>Desafio \#3: Como obter consistência entre vários microsserviços
 
 Como mencionado anteriormente, os dados pertencentes a cada microsserviço são privados desse microsserviço e só podem ser acessados usando a API desse microsserviço. Portanto, um desafio apresentado é como implementar processos de negócios de ponta a ponta, mantendo a consistência entre vários microsserviços.
 
@@ -59,7 +59,7 @@ Além de o estilo ACID ou as transações de confirmação de duas fases serem c
 
 Uma boa solução para esse problema é usar a consistência eventual entre os microsserviços, articulada pela comunicação controlada por evento e por um sistema de publicação e assinatura. Esses tópicos serão abordados na seção [Comunicação controlada por evento assíncrono](asynchronous-message-based-communication.md#asynchronous-event-driven-communication) mais adiante neste guia.
 
-## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Desafio \#4: como projetar a comunicação entre os limites dos microsserviços
+## <a name="challenge-4-how-to-design-communication-across-microservice-boundaries"></a>Desafio \#4: Como projetar a comunicação entre os limites dos microsserviços
 
 A comunicação entre os limites dos microsserviços é realmente um grande desafio. Nesse contexto, a comunicação não se refere a qual protocolo você deve usar (HTTP e REST, AMQP, mensagens e assim por diante). Nesse caso, ela aborda qual estilo de comunicação você deve usar e, principalmente, que nível de acoplamento os microsserviços devem ter. Dependendo do nível de acoplamento, quando ocorrer uma falha, o impacto dessa falha no sistema poderá variar significativamente.
 
@@ -98,13 +98,13 @@ O uso da comunicação assíncrona será explicado em detalhes mais adiante nest
 - **Exibição materializada** \
   <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
-- **Charles Roe. ACID vs. BASE: ACID versus BASE: a mudança de pH no processamento de transações de banco de dados** \
+- **Carlos linha. ACID versus BASE: a pH de mudança do processamento de transações de banco de dados** \
   <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **Transação de compensação** \
   <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
-- **Udi Dahan. Composição orientada a serviços** \
+- **Udi Dahan. \ de composição orientada a serviço**
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]

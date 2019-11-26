@@ -1,5 +1,5 @@
 ---
-title: Subprocedimentos (Visual Basic)
+title: Subprocedimentos
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Sub procedures [Visual Basic], about Sub procedures
@@ -11,24 +11,24 @@ helpviewer_keywords:
 - procedures [Visual Basic], Sub
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
-ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7848dc07d6462622685cdbea92202585f4d5d2c4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791814"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352531"
 ---
 # <a name="sub-procedures-visual-basic"></a>Subprocedimentos (Visual Basic)
-Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub` e `End Sub` instruções. O `Sub` procedimento executa uma tarefa e, em seguida, retorna o controle para o código de chamada, mas não retorna um valor para o código de chamada.  
+A `Sub` procedure is a series of Visual Basic statements enclosed by the `Sub` and `End Sub` statements. The `Sub` procedure performs a task and then returns control to the calling code, but it does not return a value to the calling code.  
   
- Cada vez que é chamada de procedimento, suas declarações são executadas, começando com a primeira instrução executável após o `Sub` instrução e terminando com a primeira `End Sub`, `Exit Sub`, ou `Return` instrução encontrado.  
+ Each time the procedure is called, its statements are executed, starting with the first executable statement after the `Sub` statement and ending with the first `End Sub`, `Exit Sub`, or `Return` statement encountered.  
   
- Você pode definir um `Sub` procedimento em módulos, classes e estruturas. Por padrão, ele é `Public`, que significa que você pode chamá-lo de qualquer lugar em seu aplicativo que tem acesso para o módulo, classe ou estrutura na qual você a definiu. O termo *método*, descreve uma `Sub` ou `Function` procedimento que é acessado de fora de sua definição de módulo, classe ou estrutura. Para obter mais informações, consulte [Procedimentos](./index.md).  
+ You can define a `Sub` procedure in modules, classes, and structures. By default, it is `Public`, which means you can call it from anywhere in your application that has access to the module, class, or structure in which you defined it. The term, *method*, describes a `Sub` or `Function` procedure that is accessed from outside its defining module, class, or structure. Para obter mais informações, consulte [Procedimentos](./index.md).  
   
- Um `Sub` procedimento pode receber argumentos, como constantes, variáveis ou expressões que são passadas a ele pelo código de chamada.  
+ A `Sub` procedure can take arguments, such as constants, variables, or expressions, which are passed to it by the calling code.  
   
 ## <a name="declaration-syntax"></a>Sintaxe da Declaração  
- A sintaxe para declarar um `Sub` procedimento é o seguinte:  
+ The syntax for declaring a `Sub` procedure is as follows:  
   
  `[` *modifiers* `] Sub`  *subname* `[(` *parameterlist* `)]`  
   
@@ -36,39 +36,39 @@ Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub
   
  `End Sub`  
   
- O `modifiers` pode especificar o nível de acesso e informações sobre sobrecarregamento, substituição, compartilhamento e sombreamento. Para obter mais informações, consulte [instrução Sub](../../../../visual-basic/language-reference/statements/sub-statement.md).  
+ The `modifiers` can specify access level and information about overloading, overriding, sharing, and shadowing. For more information, see [Sub Statement](../../../../visual-basic/language-reference/statements/sub-statement.md).  
   
-## <a name="parameter-declaration"></a>Declaração de parâmetro  
- Você declarar cada parâmetro de procedimento da mesma forma como você declara uma variável, especificando o tipo de dados e o nome do parâmetro. Você também pode especificar o mecanismo de passagem e se o parâmetro é opcional ou uma matriz de parâmetros.  
+## <a name="parameter-declaration"></a>Parameter Declaration  
+ You declare each procedure parameter similarly to how you declare a variable, specifying the parameter name and data type. You can also specify the passing mechanism, and whether the parameter is optional or a parameter array.  
   
- A sintaxe para cada parâmetro na lista de parâmetros é da seguinte maneira:  
+ The syntax for each parameter in the parameter list is as follows:  
   
  `[Optional] [ByVal | ByRef] [ParamArray]`  *parametername*  `As`  *datatype*  
   
- Se o parâmetro é opcional, você também deve fornecer um valor padrão como parte de sua declaração. A sintaxe para especificar um valor padrão é da seguinte maneira:  
+ If the parameter is optional, you must also supply a default value as part of its declaration. The syntax for specifying a default value is as follows:  
   
  `Optional [ByVal | ByRef]`  *parametername*  `As`  *datatype*  `=`  *defaultvalue*  
   
-### <a name="parameters-as-local-variables"></a>Parâmetros como variáveis locais  
- Quando o controle passa para o procedimento, cada parâmetro é tratado como uma variável local. Isso significa que seu tempo de vida é o mesmo que o procedimento e seu escopo é todo o procedimento.  
+### <a name="parameters-as-local-variables"></a>Parameters as Local Variables  
+ When control passes to the procedure, each parameter is treated as a local variable. This means that its lifetime is the same as that of the procedure, and its scope is the whole procedure.  
   
-## <a name="calling-syntax"></a>Sintaxe de chamada  
- Você invoca um `Sub` procedimento explicitamente com uma instrução de chamada autônoma. Você não pode chamá-lo usando seu nome em uma expressão. Você deve fornecer valores para todos os argumentos que não são opcionais e você deve colocar a lista de argumentos entre parênteses. Se nenhum argumento for fornecido, você pode, opcionalmente, omitir os parênteses. O uso do `Call` palavra-chave é opcional, mas não é recomendado.  
+## <a name="calling-syntax"></a>Calling Syntax  
+ You invoke a `Sub` procedure explicitly with a stand-alone calling statement. You cannot call it by using its name in an expression. You must provide values for all arguments that are not optional, and you must enclose the argument list in parentheses. If no arguments are supplied, you can optionally omit the parentheses. The use of the `Call` keyword is optional but not recommended.  
   
- A sintaxe para chamar um `Sub` procedimento é o seguinte:  
+ The syntax for a call to a `Sub` procedure is as follows:  
   
  `[Call]`  *subname* `[(` *argumentlist* `)]`  
   
- Você pode chamar um `Sub` método de fora da classe que o define. Primeiro, você precisa usar o `New` palavra-chave para criar uma instância da classe, ou chamar um método que retorna uma instância da classe. Para obter mais informações, consulte [novo operador](../../../../visual-basic/language-reference/operators/new-operator.md). Em seguida, você pode usar a seguinte sintaxe para chamar o `Sub` método no objeto de exemplo:  
+ You can call a `Sub` method from outside the class that defines it. First, you have to use the `New` keyword to create an instance of the class, or call a method that returns an instance of the class. For more information, see [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md). Then, you can use the following syntax to call the `Sub` method on the instance object:  
   
- *Objeto*. *MethodName*`[(`*argumentlist*`)]`  
+ *Object*.*methodname*`[(`*argumentlist*`)]`  
   
-### <a name="illustration-of-declaration-and-call"></a>Ilustração da declaração e chamada  
- O seguinte `Sub` procedimento informa o operador do computador qual tarefa o aplicativo está prestes a executar e também exibe um carimbo de data / hora. Em vez de duplicar esse código no início de cada tarefa, o aplicativo apenas chama `tellOperator` de vários locais. Cada chamada passa uma cadeia de caracteres a `task` argumento que identifica a tarefa que está sendo iniciada.  
+### <a name="illustration-of-declaration-and-call"></a>Illustration of Declaration and Call  
+ The following `Sub` procedure tells the computer operator which task the application is about to perform, and also displays a time stamp. Instead of duplicating this code at the start of every task, the application just calls `tellOperator` from various locations. Each call passes a string in the `task` argument that identifies the task being started.  
   
  [!code-vb[VbVbcnProcedures#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#2)]  
   
- O exemplo a seguir mostra uma chamada típica para `tellOperator`.  
+ The following example shows a typical call to `tellOperator`.  
   
  [!code-vb[VbVbcnProcedures#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#3)]  
   
@@ -80,5 +80,5 @@ Um `Sub` procedimento é uma série de instruções do Visual Basic entre o `Sub
 - [Procedimentos de Operador](./operator-procedures.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Sub](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Como: Chamar um procedimento que não retorna um valor](./how-to-call-a-procedure-that-does-not-return-a-value.md)
-- [Como: Chamar um manipulador de eventos no Visual Basic](./how-to-call-an-event-handler.md)
+- [Como chamar um procedimento que não retorne um valor](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [How to: Call an Event Handler in Visual Basic](./how-to-call-an-event-handler.md)

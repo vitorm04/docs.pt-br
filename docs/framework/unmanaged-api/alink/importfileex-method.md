@@ -14,17 +14,15 @@ helpviewer_keywords:
 ms.assetid: ad276f3f-b303-46ac-97e0-66a377adaa4f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bd138d0418bb9667a86419d719bf0b95a4bb1b12
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bee7db61beb9ed8c00cf584924be690a67d92eac
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70777120"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446958"
 ---
 # <a name="importfileex-method"></a>Método ImportFileEx
-Importações indicadas módulo de assembly ou não associado.  
+Imports indicated assembly or unbound module.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parâmetros  
  `pszFilename`  
- Nome totalmente qualificado do arquivo do qual importar.  
+ Fully qualified name of file from which to import.  
   
  `pszTargetName`  
- Nome opcional do arquivo de destino.  
+ Optional name of target file.  
   
  `fSmartImport`  
- Se for TRUE, os irporttypes serão usados; caso contrário, a importação deverá ser executada manualmente.  
+ If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
   
  `dwOpenFlags`  
- Sinalizadores a serem passados para o [método OpenScope](../metadata/imetadatadispenser-openscope-method.md).  
+ Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Recebe a ID do arquivo que está sendo importado.  
+ Receives ID of the file being imported.  
   
  `ppAssemblyScope`  
- Recebe interface de [interface IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) de escopo de importação de assembly. Será definido como NULL se o arquivo não for um assembly.  
+ Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
   
  `pdwCountOfScopes`  
- Recebe a contagem de escopos e/ou arquivos importados.  
+ Receives count of imported files and/or scopes.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retornará S_OK se o método tiver sucesso.  
+## <a name="return-value"></a>Valor retornado  
+ Returns S_OK if the method succeeds.  
   
 ## <a name="requirements"></a>Requisitos  
- Requer ALink. h.  
+ Requires alink.h.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -18,25 +18,25 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: d2fd43644949c842ff883731d3c7f00228cabfd7
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: c3550a593eafb9b50fa7e419e2f747c3e7a0e2ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038861"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972641"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>Operadores cast e teste de tipo (Referência de C#)
 
 Você pode usar os seguintes operadores para executar a verificação de tipo ou conversão de tipo:
 
-- [operador is](#is-operator): para verificar se o tipo de tempo de execução de uma expressão é compatível com um determinado tipo
-- [operador as](#as-operator): para converter explicitamente uma expressão em um determinado tipo, se o tipo de tempo de execução for compatível com esse tipo
+- [operador is](#is-operator): para verificar se o tipo de runtime de uma expressão é compatível com um determinado tipo
+- [operador as](#as-operator): para converter explicitamente uma expressão em um determinado tipo, se o tipo de runtime for compatível com esse tipo
 - [operador cast ()](#cast-operator-): para executar uma conversão explícita
 - [operador typeof](#typeof-operator): para obter a instância <xref:System.Type?displayProperty=nameWithType> para um tipo
 
 ## <a name="is-operator"></a>Operador is
 
-O operador `is` verifica se o tipo de tempo de execução de um resultado de expressão é compatível com um determinado tipo. A partir C# do 7,0, o operador de`is`também testa um resultado de expressão em relação a um padrão.
+O operador `is` verifica se o tipo de runtime de um resultado de expressão é compatível com um determinado tipo. A partir C# do 7,0, o operador de`is`também testa um resultado de expressão em relação a um padrão.
 
 A expressão com o operador `is` de teste de tipo tem o seguinte formato
 
@@ -48,7 +48,7 @@ em que `E` é uma expressão que retorna um valor e `T` é o nome de um tipo ou 
 
 A expressão `E is T` retorna `true` se o resultado de `E` não for nulo e puder ser convertido para o tipo `T` por uma conversão de referência, uma conversão boxing ou uma conversão unboxing; caso contrário, retorna `false`. O operador `is` não considera conversões definidas pelo usuário.
 
-O exemplo a seguir demonstra que o operador `is` retorna `true` se o tipo de tempo de execução de um resultado da expressão é derivado de um determinado tipo, ou seja, existe uma conversão de referência entre tipos:
+O exemplo a seguir demonstra que o operador `is` retorna `true` se o tipo de runtime de um resultado da expressão é derivado de um determinado tipo, ou seja, existe uma conversão de referência entre tipos:
 
 [!code-csharp[is with reference conversion](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#IsWithReferenceConversion)]
 
@@ -131,7 +131,7 @@ Uma expressão não pode ser um argumento do operador `typeof`. Para obter a ins
 
 ### <a name="type-testing-with-the-typeof-operator"></a>Teste de tipo com o operador `typeof`
 
-Use o operador `typeof` para verificar se o tipo de tempo de execução do resultado da expressão corresponde exatamente a um determinado tipo. O exemplo a seguir demonstra a diferença entre a verificação de tipo executada com o operador `typeof` e o [operador is](#is-operator):
+Use o operador `typeof` para verificar se o tipo de runtime do resultado da expressão corresponde exatamente a um determinado tipo. O exemplo a seguir demonstra a diferença entre a verificação de tipo executada com o operador `typeof` e o [operador is](#is-operator):
 
 [!code-csharp[typeof vs is](~/samples/csharp/language-reference/operators/TypeTestingAndConversionOperators.cs#TypeCheckWithTypeOf)]
 
@@ -154,5 +154,5 @@ Para obter mais informações, confira as seguintes seções da [especificação
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)
-- [Como converter com segurança usando a correspondência de padrões e os operadores is e as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
+- [Como converter com segurança usando correspondência de padrões e os operadores is e as](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md)
 - [Genéricos no .NET](../../../standard/generics/index.md)

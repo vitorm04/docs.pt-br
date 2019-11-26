@@ -21,7 +21,7 @@ Um aplicativo ASP.NET Core é criado com base em uma série de middleware. Middl
 
 O pipeline de solicitação do ASP.NET Core consiste em uma sequência de delegados de solicitação, chamados um após o outro. O diagrama a seguir demonstra o conceito. O thread de execução segue as setas pretas.
 
-![Tubula](media/middleware/request-delegate-pipeline.png)
+![pipeline](media/middleware/request-delegate-pipeline.png)
 
 O diagrama anterior não tem um conceito de eventos de ciclo de vida. Esse conceito é fundamental para como as solicitações de Web Forms ASP.NET são tratadas. Esse sistema torna mais fácil motivo de qual processo está ocorrendo e permite que o middleware seja inserido em qualquer ponto. O middleware é executado na ordem em que é adicionado ao pipeline de solicitação. Eles também são adicionados no código em vez de arquivos de configuração, geralmente em *Startup.cs*.
 
@@ -39,7 +39,7 @@ A tabela a seguir lista os componentes e middleware de substituição no ASP.NET
 |-----------------------|-----------------------------|-------------------|
 |Erros de HTTP            |`CustomErrorModule`          |[Middleware de páginas de código de status](/aspnet/core/fundamentals/error-handling#usestatuscodepages)|
 |Documento padrão       |`DefaultDocumentModule`      |[Middleware de arquivos padrão](/aspnet/core/fundamentals/static-files#serve-a-default-document)|
-|pesquisa no diretório     |`DirectoryListingModule`     |[Middleware de navegação no diretório](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
+|Pesquisa no diretório     |`DirectoryListingModule`     |[Middleware de navegação no diretório](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
 |Compactação dinâmica    |`DynamicCompressionModule`   |[Middleware de compactação de resposta](/aspnet/core/performance/response-compression)|
 |Rastreamento de solicitações com falha|`FailedRequestsTracingModule`|[Registro em log do ASP.NET Core](/aspnet/core/fundamentals/logging/index#tracesource-provider)|
 |Cache de arquivos           |`FileCacheModule`            |[Middleware de Cache de Resposta](/aspnet/core/performance/caching/middleware)|

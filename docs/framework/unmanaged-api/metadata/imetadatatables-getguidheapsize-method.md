@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: e875cbee-1ad9-4f1a-bf03-38cdb8ff371a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0ddbd1c034708326d75c59f8ed4764156f617b81
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: cf455b3fb34d8eed78ffaadffad621062c2b9b22
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67781491"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443499"
 ---
 # <a name="imetadatatablesgetguidheapsize-method"></a>Método IMetaDataTables::GetGuidHeapSize
-Obtém o tamanho, em bytes, do heap de GUID.  
+Gets the size, in bytes, of the GUID heap.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,14 +35,14 @@ HRESULT GetGuidHeapSize (
   
 ## <a name="parameters"></a>Parâmetros  
  `pcbGuids`  
- [out] Um ponteiro para o tamanho, em bytes, do heap de GUID.  
+ [out] A pointer to the size, in bytes, of the GUID heap.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Usado como um recurso em mscoree. dll  
+ **Library:** Used as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

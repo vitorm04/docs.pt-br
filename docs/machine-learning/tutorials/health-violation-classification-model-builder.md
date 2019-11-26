@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 10/30/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 53f446d4aad8517d758e936d2d2881071f319423
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73142175"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73977215"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Tutorial: classificar a gravidade das violações de integridade do restaurante com o construtor de modelos
 
@@ -31,11 +31,11 @@ Neste tutorial, você aprenderá como:
 > [!NOTE]
 > O Construtor de Modelo está atualmente na Versão Prévia.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Para obter uma lista de pré-requisitos e instruções de instalação, visite o [Guia de instalação do Model Builder](../how-to-guides/install-model-builder.md).
 
-## <a name="model-builder-multiclass-classification-overview"></a>Visão geral da classificação multiclasse do construtor de modelos 
+## <a name="model-builder-multiclass-classification-overview"></a>Visão geral da classificação multiclasse do construtor de modelos
 
 Este exemplo cria um C# aplicativo de console .NET Core que categoriza o risco de violações de integridade usando um modelo de aprendizado de máquina criado com o construtor de modelos. Você pode encontrar o código-fonte deste tutorial no repositório do GitHub [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/modelbuilder/MulticlassClassification_RestaurantViolations) .
 
@@ -58,7 +58,7 @@ Cada linha no conjunto de dados contém informações sobre violações observad
 | Rotina-não agendada | Limpando os panons não limpos ou corretamente armazenados ou inadequados | Baixo risco |
 
 - **Inspeçãotype**: o tipo de inspeção. Isso pode ser uma inspeção pela primeira vez para um novo estabelecimento, uma inspeção de rotina, uma inspeção de reclamação e muitos outros tipos.
-- **ViolationDescription**: uma descrição da violação encontrada durante a inspeção. 
+- **ViolationDescription**: uma descrição da violação encontrada durante a inspeção.
 - **RiskCategory**: a severidade de risco uma violação representa a integridade pública e a segurança.
 
 O `label` é a coluna que você deseja prever. Ao executar uma tarefa de classificação, o objetivo é atribuir uma categoria (texto ou numérico). Nesse cenário de classificação, a severidade da violação é atribuída ao valor baixo, moderado ou alto risco. Portanto, o **RiskCategory** é o rótulo. As `features` são as entradas que você fornece ao modelo para prever o `label`. Nesse caso, o **inspeções de inspeção** e **ViolationDescription** são usados como recursos ou entradas para prever o **RiskCategory**.
@@ -78,7 +78,7 @@ O construtor de modelos aceita dados de um banco de SQL Server ou de um arquivo 
 
 1. Na etapa dados da ferramenta Construtor de modelos, selecione **SQL Server** na lista suspensa fonte de dados.
 1. Selecione o botão ao lado da caixa de texto **conectar ao SQL Server banco de dados** .
-    1. Na caixa de diálogo **escolher dados** , selecione **Microsoft SQL Server arquivo de banco**. 
+    1. Na caixa de diálogo **escolher dados** , selecione **Microsoft SQL Server arquivo de banco**.
     1. Desmarque a caixa de seleção **sempre usar esta seleção** e selecione **continuar**.
     1. Na caixa de diálogo **Propriedades da conexão** , selecione **procurar** e selecione o arquivo *RestaurantScores. MDF* baixado.
     1. Selecione **OK**.
@@ -124,11 +124,11 @@ Dois projetos são criados como resultado do processo de treinamento.
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L2)]
 
-1. Para fazer uma previsão sobre novos dados usando o modelo, crie uma nova instância da classe `ModelInput` dentro do método `Main` do seu aplicativo. Observe que a categoria de risco não faz parte da entrada. Isso ocorre porque o modelo gera a previsão para ela. 
+1. Para fazer uma previsão sobre novos dados usando o modelo, crie uma nova instância da classe `ModelInput` dentro do método `Main` do seu aplicativo. Observe que a categoria de risco não faz parte da entrada. Isso ocorre porque o modelo gera a previsão para ela.
 
     [!code-csharp [TestData](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L11-L15)]
 
-1. Use o método `Predict` da classe `ConsumeModel`. O método `Predict` carrega o modelo treinado, cria um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para o modelo e o usa para fazer previsões sobre novos dados. 
+1. Use o método `Predict` da classe `ConsumeModel`. O método `Predict` carrega o modelo treinado, cria um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para o modelo e o usa para fazer previsões sobre novos dados.
 
     [!code-csharp [Prediction](~/machinelearning-samples/samples/modelbuilder/MulticlassClassification_RestaurantViolations/RestaurantViolations/Program.cs#L17-L24)]
 

@@ -1,14 +1,13 @@
 ---
 title: Tratamento de erro-gRPC para desenvolvedores do WCF
 description: A SER ESCRITO
-author: markrendle
 ms.date: 09/02/2019
-ms.openlocfilehash: 91f5789d8ed0f01f3ce2f3f9a6c6ccf14f245290
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2c44bd9264c877a7c7a86c115b6da9f759006016
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094228"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967789"
 ---
 # <a name="error-handling"></a>Tratamento de erros
 
@@ -47,7 +46,7 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 
 ## <a name="catching-errors-in-grpc-clients"></a>Capturando erros em clientes gRPC
 
-Assim como os clientes WCF podem capturar erros de <xref:System.ServiceModel.FaultException%601>, um cliente gRPC pode capturar uma `RpcException` para lidar com erros. Como `RpcException` não é um tipo genérico, você não pode capturar tipos de erro diferentes em blocos diferentes, mas C#você pode usar o recurso de *filtros de exceção* para declarar blocos de`catch`separados para códigos de status diferentes, conforme mostrado no exemplo a seguir:
+Assim como os clientes WCF podem capturar erros de <xref:System.ServiceModel.FaultException%601>, um cliente gRPC pode capturar uma `RpcException` para lidar com erros. Como `RpcException` não é um tipo genérico, você não pode capturar tipos de erro diferentes em blocos diferentes, mas C#você pode usar o recurso de *filtros de exceção* para declarar blocos de `catch` separados para códigos de status diferentes, conforme mostrado no exemplo a seguir:
 
 ```csharp
 try

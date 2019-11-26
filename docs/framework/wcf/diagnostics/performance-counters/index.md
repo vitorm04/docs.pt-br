@@ -69,7 +69,7 @@ config.Save();
   
 - HKLM\System\CurrentControlSet\Services\ServiceModelService 4.0.0.0 \ desempenho  
   
- Quando um grande número de objetos (por exemplo, ServiceHost) é Descartado, mas aguardando para ser coletado pelo lixo, o contador de desempenho `PrivateBytes` registrará um número excepcionalmente alto. Para resolver esse problema, você pode adicionar seus próprios contadores específicos do aplicativo ou usar o atributo `performanceCounters` para habilitar somente contadores de nível de serviço.  
+ Quando um grande número de objetos (por exemplo, ServiceHost) é Descartado, mas aguardando para ser coletado pelo lixo, o contador de desempenho `PrivateBytes` registrará um número muito alto. Para resolver esse problema, você pode adicionar seus próprios contadores específicos do aplicativo ou usar o atributo `performanceCounters` para habilitar somente contadores de nível de serviço.  
   
 ## <a name="types-of-performance-counters"></a>Tipos de contadores de desempenho  
  Os contadores de desempenho têm como escopo três níveis diferentes: serviço, ponto de extremidade e operação.  
@@ -85,7 +85,7 @@ config.Save();
  Para obter mais informações sobre o WMI, consulte [usando instrumentação de gerenciamento do Windows para diagnóstico](../wmi/index.md).  
   
 ### <a name="service-performance-counters"></a>Contadores de desempenho de serviço  
- Os contadores de desempenho de serviço medem o comportamento do serviço como um todo e podem ser usados para diagnosticar o desempenho do serviço inteiro. Eles podem ser encontrados no objeto de desempenho `ServiceModelService 4.0.0.0` ao exibir com o monitor de desempenho. As instâncias são nomeadas usando o seguinte padrão:  
+ Os contadores de desempenho de serviço medem o comportamento do serviço como um todo e podem ser usados para diagnosticar o desempenho do serviço inteiro. Eles podem ser encontrados no objeto de desempenho `ServiceModelService 4.0.0.0` ao serem exibidos com o monitor de desempenho. As instâncias são nomeadas usando o seguinte padrão:  
   
 `ServiceName@ServiceBaseAddress`
   
@@ -106,13 +106,13 @@ config.Save();
 > Se dois pontos de extremidade tiverem nomes de contrato e endereços idênticos, eles serão mapeados para a mesma instância do contador.  
   
 ### <a name="operation-performance-counters"></a>Contadores de desempenho de operação  
- Os contadores de desempenho de operação são encontrados no objeto de desempenho `ServiceModelOperation 4.0.0.0` ao exibir com o monitor de desempenho. Cada operação tem uma instância individual. Ou seja, se um determinado contrato tiver 10 operações, 10 instâncias do contador de operações serão associadas a esse contrato. As instâncias de objeto são nomeadas usando o seguinte padrão:  
+ Os contadores de desempenho de operação são encontrados no objeto de desempenho `ServiceModelOperation 4.0.0.0` ao serem exibidos com o monitor de desempenho. Cada operação tem uma instância individual. Ou seja, se um determinado contrato tiver 10 operações, 10 instâncias do contador de operações serão associadas a esse contrato. As instâncias de objeto são nomeadas usando o seguinte padrão:  
   
 `(ServiceName).(ContractName).(OperationName)@(first endpoint listener address)`
   
  Esse contador permite que você meça como a chamada está sendo usada e o quão bem a operação está sendo executada.  
   
- Quando os contadores são visíveis em vários escopos, os dados coletados de um escopo superior são agregados com dados de escopos inferiores. Por exemplo, `Calls` em um ponto de extremidade representa a soma de todas as chamadas de operação dentro do ponto de extremidade; `Calls` em um serviço representa a soma de todas as chamadas para todos os pontos de extremidade dentro do serviço.  
+ Quando os contadores são visíveis em vários escopos, os dados coletados de um escopo superior são agregados com dados de escopos inferiores. Por exemplo, `Calls` em um ponto de extremidade representa a soma de todas as chamadas de operação dentro do ponto de extremidade; `Calls` em um serviço representa a soma de todas as chamadas para todos os pontos de extremidade no serviço.  
   
 > [!NOTE]
 > Se você tiver nomes de operação duplicados em um contrato, você só obterá uma instância de contador para ambas as operações.  
@@ -121,11 +121,11 @@ config.Save();
 
 Vários arquivos são instalados na pasta de instalação do SDK para que você possa acessar os contadores de desempenho do WCF programaticamente. Esses arquivos são listados da seguinte maneira:
   
-- *@no__t -1ServiceModelEndpointPerfCounters. VRG*
-- *@no__t -1ServiceModelOperationPerfCounters. VRG*
-- *@no__t -1ServiceModelServicePerfCounters. VRG*  
-- *@no__t -1SMSvcHostPerfCounters. VRG*
-- *@no__t -1TransactionBridgePerfCounters. VRG*
+- *\_ServiceModelEndpointPerfCounters. VRG*
+- *\_ServiceModelOperationPerfCounters. VRG*
+- *\_ServiceModelServicePerfCounters. VRG*  
+- *\_SMSvcHostPerfCounters. VRG*
+- *\_TransactionBridgePerfCounters. VRG*
   
 Para obter mais informações sobre como acessar os contadores programaticamente, consulte [arquitetura de programação de contador de desempenho](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/5f9bkxzf(v=vs.90)).
   

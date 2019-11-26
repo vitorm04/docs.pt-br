@@ -1,5 +1,5 @@
 ---
-title: Propriedade de eixo descendente XML (Visual Basic)
+title: Propriedade de eixo descendente XML
 ms.date: 07/20/2015
 f1_keywords:
 - vb.XmlPropertyDescendantsAxis
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - XML axis [Visual Basic], descendant
 - XML [Visual Basic], accessing
 ms.assetid: a178f85b-5d54-438f-8479-40b62af6fe76
-ms.openlocfilehash: e2c3e01808d3eeb18f6753a5fc79b8627e7f323b
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: b2bf524214fa8ecca215d50c198b23d127e3b400
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72582224"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349442"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Propriedade de eixo descendente XML (Visual Basic)
 
-Fornece acesso aos descendentes dos seguintes: um objeto <xref:System.Xml.Linq.XElement>, um objeto <xref:System.Xml.Linq.XDocument>, uma coleção de objetos <xref:System.Xml.Linq.XElement> ou uma coleção de objetos <xref:System.Xml.Linq.XDocument>.
+Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,18 +29,18 @@ object...<descendant>
 
 ## <a name="parts"></a>Partes
 
-`object` Necessário. Um objeto <xref:System.Xml.Linq.XElement>, um objeto <xref:System.Xml.Linq.XDocument>, uma coleção de objetos <xref:System.Xml.Linq.XElement> ou uma coleção de objetos <xref:System.Xml.Linq.XDocument>.
+`object` Necessário. An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
 
-`...<` Necessário. Denota o início de uma propriedade de eixo descendente.
+`...<` Necessário. Denotes the start of a descendant axis property.
 
-`descendant` Necessário. Nome dos nós descendentes a serem acessados, no formato [`prefix:]name`.
+`descendant` Necessário. Name of the descendant nodes to access, of the form [`prefix:]name`.
 
 |Parte|Descrição|
 |----------|-----------------|
-|`prefix`|Opcional. Prefixo do namespace XML para o nó descendente. Deve ser um namespace XML global que é definido usando uma instrução `Imports`.|
-|`name`|Necessário. Nome local do nó descendente. Consulte [nomes de elementos e atributos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|Opcional. XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
+|`name`|Necessário. Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` Necessário. Denota o final de uma propriedade de eixo descendente.
+`>` Necessário. Denotes the end of a descendant axis property.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -48,21 +48,21 @@ Uma coleção de objetos <xref:System.Xml.Linq.XElement> .
 
 ## <a name="remarks"></a>Comentários
 
-Você pode usar uma propriedade de eixo descendente XML para acessar nós descendentes por nome de um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> objeto ou de uma coleção de objetos <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>. Use a propriedade XML `Value` para acessar o valor do primeiro nó descendente na coleção retornada. Para obter mais informações, consulte [propriedade de valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-O compilador Visual Basic converte Propriedades do eixo descendente em chamadas para o método <xref:System.Xml.Linq.XContainer.Descendants%2A>.
+The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
 
-## <a name="xml-namespaces"></a>Namespaces XML
+## <a name="xml-namespaces"></a>XML Namespaces
 
-O nome em uma propriedade de eixo descendente pode usar somente namespaces XML declarados globalmente com a instrução `Imports`. Ele não pode usar namespaces XML declarados localmente em literais de elemento XML. Para obter mais informações, consulte [instrução Imports (namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como acessar o valor do primeiro nó descendente chamado `name` e os valores de todos os nós descendentes chamados `phone` do objeto `contacts`.
+The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
-Esse código exibe o seguinte texto:
+This code displays the following text:
 
 `Name: Patrick Hines`
 
@@ -70,11 +70,11 @@ Esse código exibe o seguinte texto:
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir declara `ns` como um prefixo de namespace XML. Em seguida, ele usa o prefixo do namespace para criar um literal XML e acessar o valor do primeiro nó filho com o nome qualificado `ns:name`.
+The following example declares `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 
-Esse código exibe o seguinte texto:
+This code displays the following text:
 
 `Name: Patrick Hines`
 

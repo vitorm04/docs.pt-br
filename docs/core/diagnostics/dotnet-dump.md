@@ -4,12 +4,12 @@ description: Instalando e usando a ferramenta de linha de comando dotnet-dump.
 author: sdmaclea
 ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: 7eba0cba28f0575be4b374b26e9aca26a70df603
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321592"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973448"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilitário de coleta e análise de despejo (`dotnet-dump`)
 
@@ -75,7 +75,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
 - **`--type <Heap|Mini>`**
 
-  Especifica o tipo de incerteza, que determina os tipos de informações que são coletadas do processo. Há dois tipos:
+  Especifica o tipo de despejo, que determina os tipos de informações que são coletadas do processo. Há dois tipos:
 
   - `Heap`-um despejo grande e relativamente abrangente contendo listas de módulos, listas de threads, todas as pilhas, informações de exceção, informações de identificador e toda a memória, exceto para imagens mapeadas.
   - `Mini`-um despejo pequeno contendo listas de módulos, listas de threads, informações de exceção e todas as pilhas.
@@ -88,7 +88,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   Se não for especificado:
 
-  - O padrão é *.\dump_YYYYMMDD_HHMMSS.dmp* no Windows.
+  - O padrão é *. \ dump_YYYYMMDD_HHMMSS. dmp* no Windows.
   - O padrão é *./core_YYYYMMDD_HHMMSS* no Linux.
 
   AAAAMMDD é ano/mês/dia e HHMMSS é hora/minuto/segundo.
@@ -218,7 +218,7 @@ HResult: 80131604
 
 ## <a name="special-instructions-for-docker"></a>Instruções especiais para o Docker
 
-Se você estiver executando sob o Docker, a coleta de despejo exigirá recursos `SYS_PTRACE` (`--cap-add=SYS_PTRACE` ou `--privileged`).
+Se você estiver executando sob o Docker, a coleta de despejo exigirá `SYS_PTRACE` recursos (`--cap-add=SYS_PTRACE` ou `--privileged`).
 
 Em Microsoft .NET principais imagens do Docker do SDK do Linux, alguns comandos `dotnet-dump` podem gerar a seguinte exceção:
 

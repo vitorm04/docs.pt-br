@@ -1,28 +1,28 @@
 ---
-title: Objetos e classes no Visual Basic
+title: Objetos e classes
 ms.date: 07/20/2015
 helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: dd2968f7ab528fa07ef0c5af85f2a7f07147a76e
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67755160"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346700"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos e classes no Visual Basic
 
 Um *objeto* é uma combinação de código e dados que podem ser tratados como uma unidade. Um objeto pode ser uma parte de um aplicativo, como um controle ou um formulário. Todo o aplicativo também pode ser um objeto.
 
-Quando você cria um aplicativo no Visual Basic, você constantemente trabalha com objetos. Você pode usar os objetos fornecidos pelo Visual Basic, como controles, formulários e dados de objetos de acesso. Você também pode usar objetos de outros aplicativos dentro de seu aplicativo Visual Basic. Você pode até mesmo criar seus próprios objetos e definir propriedades e métodos adicionais para eles. Os objetos atuam como blocos de construção pré-fabricados para programas. Eles permitem que você escreva um trecho de código uma vez e reutilize repetidamente.
+When you create an application in Visual Basic, you constantly work with objects. You can use objects provided by Visual Basic, such as controls, forms, and data access objects. You can also use objects from other applications within your Visual Basic application. Você pode até mesmo criar seus próprios objetos e definir propriedades e métodos adicionais para eles. Os objetos atuam como blocos de construção pré-fabricados para programas. Eles permitem que você escreva um trecho de código uma vez e reutilize repetidamente.
 
 Este tópico discute os objetos em detalhes.
 
 ## <a name="objects-and-classes"></a>Objetos e classes
 
-Cada objeto no Visual Basic é definido por uma *classe*. Uma classe descreve as variáveis, as propriedades, os procedimentos e os eventos de um objeto. Os objetos são instâncias de classes. Você pode criar a quantidade de objetos que precisar após ter definido uma classe.
+Each object in Visual Basic is defined by a *class*. Uma classe descreve as variáveis, as propriedades, os procedimentos e os eventos de um objeto. Os objetos são instâncias de classes. Você pode criar a quantidade de objetos que precisar após ter definido uma classe.
 
 Para entender a relação entre um objeto e sua classe, pense em cookies e cortadores de cookie. O cortador de cookie é a classe. Ele define as características de cada cookie, por exemplo, tamanho e forma. A classe é usada para criar objetos. Os objetos são os cookies.
 
@@ -125,7 +125,7 @@ Para obter mais informações, consulte [Procedimentos](../../../../visual-basic
 
 Um evento é uma ação reconhecida por um objeto, como clicar com o mouse ou pressionar uma tecla e para o qual você pode escrever código para responder. Os eventos podem ocorrer como resultado de uma ação do usuário ou código do programa, ou eles podem ser causados pelo sistema. O código que sinaliza um evento *aciona* o evento e o código que responde a ele *lida* com ele.
 
-Você também pode desenvolver seus próprios eventos personalizados para serem acionados por seus objetos e manipulados por outros objetos. Para obter mais informações, consulte [Eventos](../../../../visual-basic/programming-guide/language-features/events/index.md).
+Você também pode desenvolver seus próprios eventos personalizados para serem acionados por seus objetos e manipulados por outros objetos. Para obter mais informações, consulte [Events](../../../../visual-basic/programming-guide/language-features/events/index.md).
 
 ### <a name="instance-members-and-shared-members"></a>Membros de instância e membros compartilhados
 
@@ -176,7 +176,7 @@ Por outro lado, os membros declarados dentro de um módulo são acessíveis publ
 
 Os objetos permitem que você declare variáveis e procedimentos uma vez e reutilize-os quando necessário. Por exemplo, se desejar adicionar um verificador ortográfico a um aplicativo, defina todas as variáveis e funções de suporte para fornecer a funcionalidade de verificação ortográfica. Se criar o verificador de ortografia como uma classe, você poderá reutilizá-lo em outros aplicativos adicionando uma referência ao assembly compilado. Melhor ainda, você poderá diminuir seu trabalho usando uma classe de verificador ortográfico que alguém já desenvolveu.
 
-O .NET Framework fornece vários exemplos de componentes que estão disponíveis para uso. O exemplo a seguir usa a classe <xref:System.TimeZone> no namespace <xref:System>. <xref:System.TimeZone> fornece membros que permitem que você recupere informações sobre o fuso horário do sistema atual do computador.
+The .NET Framework provides many examples of components that are available for use. O exemplo a seguir usa a classe <xref:System.TimeZone> no namespace <xref:System>. <xref:System.TimeZone> fornece membros que permitem que você recupere informações sobre o fuso horário do sistema atual do computador.
 
 ```vb
 Public Sub examineTimeZone()
@@ -249,27 +249,27 @@ Outro modo de relação dos objetos é a *relação de confinamento*. Os objetos
 
 #### <a name="collections"></a>Coleções
 
-Um tipo específico de confinamento de objeto é representado pelas *coleções*. As coleções são grupos de objetos semelhantes que podem ser enumerados. Visual Basic oferece suporte a uma sintaxe específica no [para cada um... Próxima instrução](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) que permite iterar pelos itens de uma coleção. Além disso, as coleções permitem, com frequência, que você use um <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos pelo índice ou associando-os com uma cadeia de caracteres exclusiva. As coleções podem ser mais fáceis de usar que matrizes porque elas permitem que você adicione ou remova itens sem usar índices. Devido à facilidade de uso, as coleções geralmente são usadas para armazenar formulários e controles.
+Um tipo específico de confinamento de objeto é representado pelas *coleções*. As coleções são grupos de objetos semelhantes que podem ser enumerados. Visual Basic supports a specific syntax in the [For Each...Next Statement](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) that allows you to iterate through the items of a collection. Além disso, as coleções permitem, com frequência, que você use um <xref:Microsoft.VisualBasic.Collection.Item%2A> para recuperar elementos pelo índice ou associando-os com uma cadeia de caracteres exclusiva. As coleções podem ser mais fáceis de usar que matrizes porque elas permitem que você adicione ou remova itens sem usar índices. Devido à facilidade de uso, as coleções geralmente são usadas para armazenar formulários e controles.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-[Passo a passo: Definindo Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
+[Walkthrough: Defining Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)\
 Fornece uma descrição passo a passo de como criar uma classe.
 
-[Propriedades e métodos sobrecarregados](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
+[Overloaded Properties and Methods](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)\
 Propriedades e métodos sobrecarregados
 
 [Noções básicas sobre herança](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)\
 Aborda modificadores de herança, substituindo métodos e propriedades, MyClass e MyBase.
 
-[Tempo de vida do objeto: Como os objetos são criados e destruídos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
+[Tempo de vida do objeto: como os objetos são criados e destruídos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)\
 Aborda a criação e descarte de instâncias de classe.
 
 [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)\
 Descreve como criar e usar tipos anônimos, que permitem que você crie objetos sem escrever uma definição de classe para o tipo de dados.
 
-[Inicializadores de objeto: Tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
+[Inicializadores de objeto: tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)\
 Discute inicializadores de objeto, que são usados para criar instâncias de tipos nomeados e anônimos usando uma única expressão.
 
-[Como: Inferir nomes de propriedade e tipos em declarações de tipo anônimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
+[How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)\
 Explica como inferir nomes e tipos de propriedade em declarações de tipo anônimo. Fornece exemplos de inferência de tipos com e sem êxito.

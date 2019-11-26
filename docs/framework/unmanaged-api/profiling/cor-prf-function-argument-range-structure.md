@@ -14,16 +14,14 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c0c0679dac84089577a2698ed8b0b5497a1a81e8
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 223ad57f0b317bf75778d4e5355ec129185f5a29
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67753908"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449491"
 ---
-# <a name="corprffunctionargumentrange-structure"></a>Estrutura COR_PRF_FUNCTION_ARGUMENT_RANGE
+# <a name="cor_prf_function_argument_range-structure"></a>Estrutura COR_PRF_FUNCTION_ARGUMENT_RANGE
 Representa um bloco de argumentos de função armazenados de forma contígua em ordem da esquerda para a direita na memória.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -39,13 +37,13 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
   
 |Membros|Descrição|  
 |-------------|-----------------|  
-|`startAddress`|O endereço inicial do bloco.|  
-|`length`|O tamanho do bloco contíguo.|  
+|`startAddress`|The starting address of the block.|  
+|`length`|The length of the contiguous block.|  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** CorProf.idl  
+ **Header:** CorProf.idl  
   
  **Biblioteca:** CorGuids.lib  
   

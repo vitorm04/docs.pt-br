@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 37794d40b4b379c5d3a05935cf1f2b7b3da11baa
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67777368"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428040"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Método ISymUnmanagedWriter::DefineField
-Define uma única variável que não está dentro de um método. Esse método é usado para determinados campos em classes, campos de bits e assim por diante.  
+Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,37 +42,37 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>Parâmetros  
  `parent`  
- [in] O método ou tipo de metadados de token.  
+ [in] The metadata type or method token.  
   
  `name`  
- [in] O nome do campo.  
+ [in] The field name.  
   
  `attributes`  
- [in] Os atributos de campo.  
+ [in] The field attributes.  
   
  `cSig`  
- [in] Um `ULONG32` que é o tamanho, em caracteres, do buffer necessário para conter a assinatura de campo.  
+ [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
   
  `signature`  
- [in] A matriz de assinaturas de campo.  
+ [in] The array of field signatures.  
   
  `addrKind`  
- [in] O tipo de endereço.  
+ [in] The address type.  
   
  `addr1`  
- [in] O primeiro endereço para a especificação de campo.  
+ [in] The first address for the field specification.  
   
  `addr2`  
- [in] O segundo endereço para a especificação de campo.  
+ [in] The second address for the field specification.  
   
  `addr3`  
- [in] O terceiro endereço para a especificação de campo.  
+ [in] The third address for the field specification.  
   
-## <a name="return-value"></a>Valor de retorno  
- S_OK se o método for bem-sucedido; Caso contrário, E_FAIL ou algum outro código de erro.  
+## <a name="return-value"></a>Valor retornado  
+ S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
   
 ## <a name="requirements"></a>Requisitos  
- **Cabeçalho:** CorSym.idl, CorSym.h  
+ **Header:** CorSym.idl, CorSym.h  
   
 ## <a name="see-also"></a>Consulte também
 

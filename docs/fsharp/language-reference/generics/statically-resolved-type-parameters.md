@@ -34,7 +34,7 @@ A tabela a seguir resume as semelhanças e diferenças entre os dois tipos de pa
 |Restrições de membro|Não pode ser usado com restrições de membro.|Pode ser usado com restrições de membro.|
 |Geração de código|Um tipo (ou método) com parâmetros de tipo genérico padrão resulta na geração de um único tipo ou método genérico.|Várias instanciações de tipos e métodos são geradas, uma para cada tipo necessário.|
 |Usar com tipos|Pode ser usado em tipos.|Não pode ser usado em tipos.|
-|Usar com funções embutidas|Nº Uma função embutida não pode ser parametrizada com um parâmetro de tipo genérico padrão.|Sim. Parâmetros de tipo estaticamente resolvidos não podem ser usados em funções ou métodos que não são embutidos.|
+|Usar com funções embutidas|Não. Uma função embutida não pode ser parametrizada com um parâmetro de tipo genérico padrão.|Sim. Parâmetros de tipo estaticamente resolvidos não podem ser usados em funções ou métodos que não são embutidos.|
 
 Muitas F# funções de biblioteca principal, especialmente operadores, têm parâmetros de tipo estaticamente resolvidos. Essas funções e operadores são embutidos e resultam em uma geração de código eficiente para cálculos numéricos.
 
@@ -89,6 +89,6 @@ let inline replace (a: ^a) (f: ^b): ^a0 when (CFunctor or  ^b): (static member r
 
 - [Genéricos](index.md)
 - [Inferência de Tipos](../type-inference.md)
-- [Generalização Automática](automatic-generalization.md)
+- [Generalização automática](automatic-generalization.md)
 - [Restrições](constraints.md)
 - [Funções Embutidas](../functions/inline-functions.md)

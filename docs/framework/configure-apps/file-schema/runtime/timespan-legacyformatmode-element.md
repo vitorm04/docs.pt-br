@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <TimeSpan_LegacyFormatMode> element
 - TimeSpan_LegacyFormatMode element
 ms.assetid: 865e7207-d050-4442-b574-57ea29d5e2d6
-ms.openlocfilehash: c835e1bcef7bbfdc990c8db177eafed4ec6bb30c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9d9eedf52f5d711412e4549e39e6ea23abb68ff3
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73115208"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73968900"
 ---
-# <a name="timespan_legacyformatmode-element"></a>\<elemento de > TimeSpan_LegacyFormatMode
+# <a name="timespan_legacyformatmode-element"></a>\<TimeSpan_LegacyFormatMode elemento >
 
 Determina se o tempo de execução preserva o comportamento herdado nas operações de formatação com <xref:System.TimeSpan?displayProperty=nameWithType> valores.
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp; &nbsp;[ **\<runtime >** ](runtime-element.md) \
-&nbsp;&nbsp;&nbsp;&nbsp; **\<TimeSpan_LegacyFormatMode >**  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<** TimeSpan_LegacyFormatMode >  
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -75,13 +75,13 @@ O exemplo a seguir instancia um objeto <xref:System.TimeSpan> e tenta formatá-l
 
 Quando você executa o exemplo no .NET Framework 3,5 ou em uma versão anterior, ele exibe a seguinte saída:
 
-```
+```console
 12:30:45
 ```
 
 Isso difere de acordo com a saída se você executar o exemplo na versão .NET Framework 4 ou posterior:
 
-```
+```console
 Invalid Format
 ```
 
@@ -98,5 +98,5 @@ No entanto, se você adicionar o seguinte arquivo de configuração ao diretóri
 
 ## <a name="see-also"></a>Consulte também
 
-- [Esquema de configurações do tempo de execução](index.md)
+- [Esquema de configurações do runtime](index.md)
 - [Esquema de arquivos de configuração](../index.md)

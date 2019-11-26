@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c6c5337fedd13cb18b8e5eeadec48a2e4695a543
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 323b3fedb570ff97012b148aaeda2311b01960b5
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969347"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74205015"
 ---
 # <a name="types-of-isolation"></a>Tipos de isolamento
 O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Para implementar esse tipo de isolamento, o common language runtime usa a mesma noção de identidade de usuário que o sistema operacional reconhece, que é a identidade associada ao processo no qual o código está em execução quando o armazenamento é aberto. Essa é uma identidade de usuário autenticado, mas a representação pode fazer com que a identidade do usuário atual seja alterada dinamicamente.  
   
- O acesso ao armazenamento isolado também é restrito de acordo com a identidade associada ao domínio do aplicativo e ao assembly ou apenas ao assembly. O tempo de execução obtém essas identidades das seguintes maneiras:  
+ O acesso ao armazenamento isolado também é restrito de acordo com a identidade associada ao domínio do aplicativo e ao assembly ou apenas ao assembly. O runtime obtém essas identidades das seguintes maneiras:  
   
 - A identidade de domínio representa a evidência do aplicativo, que, no caso de um aplicativo Web, pode ser a URL completa. Para código hospedado pelo shell, a identidade de domínio pode ser baseada no caminho de diretório de aplicativo. Por exemplo, se o executável é executado do caminho C:\Office\MyApp.exe, a identidade de domínio é C:\Office\MyApp.exe.  
   
@@ -53,7 +53,7 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
  Observe que, exceto pelos armazenamentos móveis, o armazenamento isolado é sempre implicitamente isolado por computador, pois usa os recursos de armazenamento locais para determinado computador.  
   
 > [!IMPORTANT]
-> O armazenamento isolado não está disponível para aplicativos [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
+> Isolated storage is not available for Windows 8.x Store apps. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento por usuário e assembly  

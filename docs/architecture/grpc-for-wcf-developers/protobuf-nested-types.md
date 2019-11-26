@@ -1,14 +1,13 @@
 ---
 title: Protobuf tipos aninhados-gRPC para desenvolvedores do WCF
 description: Saiba mais sobre tipos de mensagens aninhadas em Protobuf e gRPC e como elas C#são geradas no.
-author: markrendle
 ms.date: 09/09/2019
-ms.openlocfilehash: ec9fc522619230c1201bfef1e8128f7356936212
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: bbc7ed41516d29f867bbc9da5b258f6a3c9ff261
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846311"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73967395"
 ---
 # <a name="protobuf-nested-types"></a>Tipos aninhados de Protobuf
 
@@ -23,7 +22,7 @@ message Outer {
 }
 ```
 
-No código gerado C# , o tipo de`Inner`será declarado em uma classe de`Types`estática aninhada dentro da classe`HelloRequest`:
+No código gerado C# , o tipo de `Inner` será declarado em uma classe de `Types` estática aninhada dentro da classe `HelloRequest`:
 
 ```csharp
 var inner = new Outer.Types.Inner { Text = "Hello" };

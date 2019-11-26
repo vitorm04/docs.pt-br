@@ -92,23 +92,23 @@ Uma grande vantagem de usar a grade de eventos são as mensagens automáticas pr
 
 | Recurso do Azure | Tipo de evento | Descrição |
 | -------------- | ---------- | ----------- |
-| Assinatura do Azure | Microsoft. Resources. ResourceWriteSuccess | Gerado quando uma operação de criação ou atualização de recurso é realizada com sucesso. |
-| | Microsoft. Resources. ResourceWriteFailure | Gerado quando uma operação de criação ou atualização de recurso falha. |
-| | Microsoft. Resources. ResourceWriteCancel | Gerado quando uma operação de criação ou atualização de recurso é cancelada. |
-|  | Microsoft. Resources. ResourceDeleteSuccess | Gerado quando uma operação de exclusão de recurso é realizada com sucesso. |
-|  | Microsoft. Resources. ResourceDeleteFailure | Gerado quando uma operação de exclusão de recurso falha. |
-| | Microsoft. Resources. ResourceDeleteCancel | Gerado quando uma operação de exclusão de recurso é cancelada. Esse evento ocorre quando uma implantação de modelo é cancelada. |
-| Armazenamento de Blobs | Microsoft. Storage. BlobCreated | Gerado quando um blob é criado. |
-| | Microsoft. Storage. BlobDeleted | Gerado quando um blob é excluído. |
-| Hubs de eventos | Microsoft. EventHub. CaptureFileCreated | Gerado quando um arquivo de captura é criado.
-| Hub IoT | Microsoft. Devices. DeviceCreated | Publicado quando um dispositivo é registrado em um hub IoT. |
-| | Microsoft. Devices. DeviceDeleted | Publicado quando um dispositivo é excluído de um hub IoT. |
-| Grupos de recursos | Microsoft. Resources. ResourceWriteSuccess | Gerado quando uma operação de criação ou atualização de recurso é realizada com sucesso. |
-| | Microsoft. Resources. ResourceWriteFailure | Gerado quando uma operação de criação ou atualização de recurso falha. |
-| | Microsoft. Resources. ResourceWriteCancel | Gerado quando uma operação de criação ou atualização de recurso é cancelada. |
-| | Microsoft. Resources. ResourceDeleteSuccess | Gerado quando uma operação de exclusão de recurso é realizada com sucesso. |
-| | Microsoft. Resources. ResourceDeleteFailure | Gerado quando uma operação de exclusão de recurso falha. |
-| | Microsoft. Resources. ResourceDeleteCancel | Gerado quando uma operação de exclusão de recurso é cancelada. Esse evento ocorre quando uma implantação de modelo é cancelada. |
+| Assinatura do Azure | Microsoft.Resources.ResourceWriteSuccess | Gerado quando uma operação de criação ou atualização de recurso é realizada com sucesso. |
+| | Microsoft.Resources.ResourceWriteFailure | Gerado quando uma operação de criação ou atualização de recurso falha. |
+| | Microsoft.Resources.ResourceWriteCancel | Gerado quando uma operação de criação ou atualização de recurso é cancelada. |
+|  | Microsoft.Resources.ResourceDeleteSuccess | Gerado quando uma operação de exclusão de recurso é realizada com sucesso. |
+|  | Microsoft.Resources.ResourceDeleteFailure | Gerado quando uma operação de exclusão de recurso falha. |
+| | Microsoft.Resources.ResourceDeleteCancel | Gerado quando uma operação de exclusão de recurso é cancelada. Esse evento ocorre quando uma implantação de modelo é cancelada. |
+| Armazenamento de Blobs | Microsoft.Storage.BlobCreated | Gerado quando um blob é criado. |
+| | Microsoft.Storage.BlobDeleted | Gerado quando um blob é excluído. |
+| Hubs de eventos | Microsoft.EventHub.CaptureFileCreated | Gerado quando um arquivo de captura é criado.
+| Hub IoT | Microsoft.Devices.DeviceCreated | Publicado quando um dispositivo é registrado em um hub IoT. |
+| | Microsoft.Devices.DeviceDeleted | Publicado quando um dispositivo é excluído de um hub IoT. |
+| Grupos de recursos | Microsoft.Resources.ResourceWriteSuccess | Gerado quando uma operação de criação ou atualização de recurso é realizada com sucesso. |
+| | Microsoft.Resources.ResourceWriteFailure | Gerado quando uma operação de criação ou atualização de recurso falha. |
+| | Microsoft.Resources.ResourceWriteCancel | Gerado quando uma operação de criação ou atualização de recurso é cancelada. |
+| | Microsoft.Resources.ResourceDeleteSuccess | Gerado quando uma operação de exclusão de recurso é realizada com sucesso. |
+| | Microsoft.Resources.ResourceDeleteFailure | Gerado quando uma operação de exclusão de recurso falha. |
+| | Microsoft.Resources.ResourceDeleteCancel | Gerado quando uma operação de exclusão de recurso é cancelada. Esse evento ocorre quando uma implantação de modelo é cancelada. |
 
 Para obter mais informações, consulte [esquema de eventos da grade de eventos do Azure](https://docs.microsoft.com/azure/event-grid/event-schema).
 

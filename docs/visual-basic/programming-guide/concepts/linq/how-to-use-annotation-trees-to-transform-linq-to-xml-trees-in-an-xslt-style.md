@@ -1,15 +1,15 @@
 ---
-title: 'Como: usar anotações para transformar LINQ to XML árvores em um estilo XSLT (Visual Basic)'
+title: 'Como: Use anotações para transformar árvores LINQ to XML em um estilo XSLT'
 ms.date: 07/20/2015
 ms.assetid: 08e91fa2-dac2-4463-9ef1-87b1ac3fa890
-ms.openlocfilehash: b8f15c4dc6016e48619d26e7cc8717a2a3c5acd5
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: d9cb32462535f099107343bd9069b4da3508c5b0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581984"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348350"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>Como: usar anotações para transformar LINQ to XML árvores em um estilo XSLT (Visual Basic)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-visual-basic"></a>How to: Use Annotations to Transform LINQ to XML Trees in an XSLT Style (Visual Basic)
 
 As anotações podem ser usadas para facilitar tornam-se de uma árvore XML.
 
@@ -19,7 +19,7 @@ Alguns documentos XML são “centralizado no documento misturado com conteúdo.
 <text>A phrase with <b>bold</b> and <i>italic</i> text.</text>
 ```
 
-Para qualquer nó de texto, pode haver qualquer número de `<b>` filho e elementos de `<i>` . Essa abordagem se estende a várias outras situações: por exemplo, páginas que podem conter uma variedade de elementos filho, como parágrafos comuns, parágrafos com marcadores e bitmaps. As células em uma tabela podem conter texto, soltar para baixo, listas ou bitmaps. Uma das principais características de documento XML é centralizado em que você não sabe qual elemento filho qualquer elemento específico terá.
+Para qualquer nó de texto, pode haver qualquer número de `<b>` filho e elementos de `<i>` . This approach extends to a number of other situations: such as, pages that can contain a variety of child elements, such as regular paragraphs, bulleted paragraphs, and bitmaps. As células em uma tabela podem conter texto, soltar para baixo, listas ou bitmaps. Uma das principais características de documento XML é centralizado em que você não sabe qual elemento filho qualquer elemento específico terá.
 
 Se você deseja transformar elementos em uma árvore onde você não sabe necessariamente muito sobre os filhos dos elementos que você deseja transformar, então essa abordagem que usa anotações é uma abordagem eficiente.
 
@@ -43,7 +43,7 @@ Em detalhes, a abordagem consiste de:
 
 ## <a name="transforming-a-tree"></a>Transformando uma árvore
 
-Este primeiro exemplo renomeia todos os nós `Paragraph` para `para`:
+This first example renames all `Paragraph` nodes to `para`:
 
 ```vb
 Imports <xmlns:xf="http://www.microsoft.com/LinqToXmlTransform/2007">
@@ -83,7 +83,7 @@ End Module
 </Root>
 ```
 
-## <a name="a-more-complicated-transform"></a>Uma transformação mais complicada
+## <a name="a-more-complicated-transform"></a>A more complicated transform
 
 O exemplo a seguir consulta a árvore e calcula a média e a soma dos elementos de `Data` , e adicioná-los como os novos elementos na árvore.
 
@@ -158,29 +158,29 @@ After Transform
 </Root>
 ```
 
-## <a name="effecting-the-transform"></a>Afetando a transformação
+## <a name="effecting-the-transform"></a>Effecting the transform
 
 Uma função pequena, `XForm`, cria uma nova árvore transformada de original, a árvore anotada.
 
 O código pseudo- para a função é bastante simples:
 
-> A função usa um XElement como um argumento e retorna um XElement.
+> The function takes an XElement as an argument and returns an XElement.
 >
-> Se um elemento tiver uma anotação XElement, retorne um novo XElement:
+> If an element has an XElement annotation, then return a new XElement:
 >
-> - O nome do novo XElement é o nome do elemento de anotação.
-> - Todos os atributos são copiados da anotação para o novo nó.
-> - Todos os nós filho são copiados da anotação, com a exceção de que o nó especial XF: ApplyTransforms é reconhecido e os nós filho do elemento de origem são iterados. Se o nó filho de origem não for um XElement, ele será copiado para a nova árvore. Se o filho de origem for um XElement, ele será transformado chamando essa função recursivamente.
+> - The name of the new XElement is the annotation element's name.
+> - All attributes are copied from the annotation to the new node.
+> - All child nodes are copied from the annotation, with the exception that the special node xf:ApplyTransforms is recognized, and the source element's child nodes are iterated. If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 >
-> Se um elemento não estiver anotado:
+> If an element is not annotated:
 >
-> - Retornar um novo XElement
->   - O nome do novo XElement é o nome do elemento de origem.
->   - Todos os atributos são copiados do elemento de origem para o elemento de destino.
->   - Todos os nós filho são copiados do elemento de origem.
->   - Se o nó filho de origem não for um XElement, ele será copiado para a nova árvore. Se o filho de origem for um XElement, ele será transformado chamando essa função recursivamente.
+> - Return a new XElement
+>   - The name of the new XElement is the source element's name.
+>   - All attributes are copied from the source element to the destination's element.
+>   - All child nodes are copied from the source element.
+>   - If the source child node is not an XElement, it is copied to the new tree. If the source child is an XElement, then it is transformed by calling this function recursively.
 
-O código a seguir é a implementação dessa função:
+The following code is the implementation of this function:
 
 ```vb
 ' Build a transformed XML tree per the annotations.
@@ -227,7 +227,6 @@ End Function
 O código a seguir é um exemplo completo que inclui a função de `XForm` . Inclui alguns usos típicos desse tipo de transformações:
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Text
@@ -377,4 +376,4 @@ After Transform
 
 ## <a name="see-also"></a>Consulte também
 
-- [Programação de LINQ to XML avançada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [Advanced LINQ to XML Programming (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

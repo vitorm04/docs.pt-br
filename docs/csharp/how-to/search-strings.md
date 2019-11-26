@@ -1,19 +1,19 @@
 ---
-title: Como pesquisar cadeias de caracteres (Guia de C#)
+title: Como Pesquisar cadeias deC# caracteres (guia)
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 12fb0e7c9fe02c3438fa989059dbea6238d24104
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4a1eb818dfd8fb48b003ca184dd533f73d342662
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420316"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73973102"
 ---
-# <a name="how-to-search-strings"></a>Como pesquisar cadeias de caracteres
+# <a name="how-to-search-strings"></a>Como Pesquisar cadeias de caracteres
 
 Você pode usar duas estratégias principais para pesquisar texto em cadeias de caracteres. Os métodos da classe <xref:System.String> pesquisam por um texto específico. Expressões regulares pesquisam por padrões no texto.
 

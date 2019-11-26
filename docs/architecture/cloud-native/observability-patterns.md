@@ -1,5 +1,5 @@
 ---
-title: Padrões de observação
+title: Padrões de observabilidade
 description: Padrões de observação para aplicativos nativos de nuvem
 ms.date: 09/23/2019
 ms.openlocfilehash: 23320144c03278d631b8a1fcc1d1c0954e907296
@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 09/23/2019
 ms.locfileid: "71184872"
 ---
-# <a name="observability-patterns"></a>Padrões de observação
+# <a name="observability-patterns"></a>Padrões de observabilidade
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -23,18 +23,18 @@ Não importa o cuidado que estamos, os aplicativos quase sempre se comportam de 
 
 Cada linguagem de programação tem ferramentas que permitem a gravação de logs e, normalmente, a sobrecarga para a gravação desses logs é baixa. Muitas das bibliotecas de log fornecem o registro em log de diferentes tipos de criticalidades, que podem ser ajustadas em tempo de execução. Por exemplo, a biblioteca Serilog é uma biblioteca de logs estruturada popular para .NET que fornece os seguintes níveis de log
 
-* Detalhado
+* Verboso
 * Depurar
-* Informações
+* {1&gt;Informações&lt;1}
 * Aviso
-* Erro
+* Error
 * Fatais
 
 Esses diferentes níveis de log fornecem granularidade no registro em log. Quando o aplicativo está funcionando corretamente na produção, ele pode ser configurado para registrar apenas mensagens importantes. Quando o aplicativo está com comportamento inadequado, o nível de log pode ser aumentado para que logs mais detalhados sejam coletados. Isso equilibra o desempenho contra a facilidade de depuração.
 
 O alto desempenho das ferramentas de log e o tunability de detalhes deve incentivar os desenvolvedores a registrarem com frequência. Muitos favorecem um padrão de registrar a entrada e sair de cada método. Essa abordagem pode parecer um exagero, mas não é freqüente que os desenvolvedores desejarão ter menos registro em log. Na verdade, não é incomum executar implantações para a única finalidade de adicionar o registro em log em um método problemático. Erro no lado de um excesso de logs e não há muito pouco. Observe que algumas ferramentas podem ser usadas para fornecer automaticamente esse tipo de registro em log.
 
-Em aplicativos tradicionais, os arquivos de log normalmente eram armazenados no computador local. Na verdade, em sistemas operacionais semelhantes ao Unix, há uma estrutura de pastas definida para manter todos os logs, normalmente `/var/log`sob. A utilidade de fazer logon em um arquivo simples em um único computador é amplamente reduzida em um ambiente de nuvem. Os aplicativos que produzem logs podem não ter acesso ao disco local ou o disco local pode ser altamente transitório, pois os contêineres são embaralhados em relação a computadores físicos.
+Em aplicativos tradicionais, os arquivos de log normalmente eram armazenados no computador local. Na verdade, em sistemas operacionais semelhantes ao Unix, há uma estrutura de pastas definida para manter todos os logs, normalmente em `/var/log`. A utilidade de fazer logon em um arquivo simples em um único computador é amplamente reduzida em um ambiente de nuvem. Os aplicativos que produzem logs podem não ter acesso ao disco local ou o disco local pode ser altamente transitório, pois os contêineres são embaralhados em relação a computadores físicos.
 
 Aplicativos nativos de nuvem desenvolvidos usando uma arquitetura de microservices também apresentam alguns desafios para agentes baseados em arquivo. As solicitações de usuário agora podem abranger vários serviços que são executados em computadores diferentes e podem incluir funções sem acesso a um sistema de arquivos local. Seria muito desafiador correlacionar os logs de um usuário ou uma sessão entre esses vários serviços e máquinas.
 
@@ -44,8 +44,8 @@ Felizmente, há algumas alternativas fantásticas para o uso do registro em log 
 
 Também é útil seguir algumas práticas padrão ao criar logs que abrangem muitos serviços. Por exemplo, a geração de uma [ID de correlação](https://blog.rapid7.com/2016/12/23/the-value-of-correlation-ids/) no início de uma interação demorada e, em seguida, o registro em cada mensagem relacionada a essa interação, facilita a pesquisa de todas as mensagens relacionadas. Só é necessário localizar uma única mensagem e extrair a ID de correlação para localizar todas as mensagens relacionadas. Outro exemplo é garantir que o formato de log seja o mesmo para todos os serviços, seja qual for o idioma ou a biblioteca de log que ele usa. Essa padronização torna muito mais fácil a leitura de logs. A Figura 7-1 demonstra como uma arquitetura de microserviços pode aproveitar o registro em log centralizado como parte de seu fluxo de trabalho.
 
-![Os logs de várias fontes são incluídos em um repositório de logs centralizado. **Figura 7-1**. ](./media/centralized-logging.png)
- Os logs de várias fontes são incluídos em um repositório de logs centralizado.
+Os logs de ![de várias fontes são incluídos em um repositório de log centralizado.](./media/centralized-logging.png)
+**figura 7-1**. Os logs de várias fontes são incluídos em um repositório de logs centralizado.
 
 ## <a name="when-to-use-monitoring"></a>Quando usar o monitoramento
 

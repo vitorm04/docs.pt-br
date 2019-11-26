@@ -3,12 +3,12 @@ title: Introdução ao Docker
 description: Este artigo fornece uma visão geral e introdução ao Docker no contexto de um aplicativo .NET Core.
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 7f19b12d84543e8ae69c2f8728872bf94ef0536f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 22c8fa4cda5cfd6564695d3b86072c64f22fa335
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416633"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087395"
 ---
 # <a name="introduction-to-net-and-docker"></a>Introdução ao .NET e ao Docker
 
@@ -22,7 +22,7 @@ Há alguns conceitos que você deve conhecer. O cliente do Docker tem um program
 
 ### <a name="images"></a>Imagens
 
-Uma imagem é uma coleção ordenada de alterações no sistema de arquivos que formam a base de um contêiner. A imagem não tem um estado e é somente leitura. Na maior parte das vezes, uma imagem é baseada em outra imagem, mas com alguma personalização. Por exemplo, quando você cria uma nova imagem para o aplicativo, você a baseará em uma imagem existente que já contenha o tempo de execução do .NET Core.
+Uma imagem é uma coleção ordenada de alterações no sistema de arquivos que formam a base de um contêiner. A imagem não tem um estado e é somente leitura. Na maior parte das vezes, uma imagem é baseada em outra imagem, mas com alguma personalização. Por exemplo, quando você cria uma nova imagem para o aplicativo, você a baseará em uma imagem existente que já contenha o runtime do .NET Core.
 
 Como os contêineres são criados de imagens, as imagens têm um conjunto de parâmetros de execução (como um executável inicial) que são executados quando o contêiner é iniciado.
 
@@ -61,7 +61,7 @@ Implante aplicativos Web ou APIs usando contêineres do Linux em um ambiente Paa
 - [Instâncias de Contêiner do Azure](https://azure.microsoft.com/services/container-instances/)\
 Hospede seu contêiner na nuvem sem qualquer serviço de gerenciamento de nível superior.
 
- [Lote do Azure](https://azure.microsoft.com/services/batch/)\
+- [Lote do Azure](https://azure.microsoft.com/services/batch/)\
 Execute trabalhos de computação repetitivos usando contêineres.
 
 - [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\

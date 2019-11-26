@@ -15,17 +15,15 @@ helpviewer_keywords:
 ms.assetid: 50e04026-4d4a-47d9-96c1-f4677d6d938b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 44b5dfb31cfe0364a745b729018be536f6be9aac
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 06ff6a1885a5e9bb819c2897aaf85e5c2b9b1147
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67778961"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437246"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>Método IMetaDataImport::GetNativeCallConvFromSig
-Obtém o nativo convenção de chamada para o método que é representado pelo ponteiro de assinatura especificada.  
+Gets the native calling convention for the method that is represented by the specified signature pointer.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,20 +37,20 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>Parâmetros  
  `pvSig`  
- [in] Um ponteiro para a assinatura de metadados do método para retornar para a convenção de chamada.  
+ [in] A pointer to the metadata signature of the method to return the calling convention for.  
   
  `cbSig`  
- [in] O tamanho em bytes do `pvSig`.  
+ [in] The size in bytes of `pvSig`.  
   
  `pCallConv`  
- [out] Um ponteiro para a convenção de chamada nativa.  
+ [out] A pointer to the native calling convention.  
   
 ## <a name="requirements"></a>Requisitos  
- **Plataformas:** Confira [Requisitos de sistema](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Cabeçalho:** Cor.h  
+ **Header:** Cor.h  
   
- **Biblioteca:** Incluído como um recurso em mscoree. dll  
+ **Library:** Included as a resource in MsCorEE.dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
