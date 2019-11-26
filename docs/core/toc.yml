@@ -2,6 +2,46 @@
   href: index.md
 - name: Sobre o .NET Core
   href: about.md
+- name: Instalar o
+  items:
+    - name: Visão geral
+      href: install/index.md
+    - name: Instalar o SDK
+      href: install/sdk.md
+    - name: Instalar o runtime
+      href: install/runtime.md
+    - name: Sistemas operacionais compatíveis e dependências
+      href: install/dependencies.md
+    - name: Como verificar as versões do .NET Core
+      href: install/how-to-detect-installed-versions.md
+    - name: Gerenciadores de pacotes do Linux
+      items:
+        - name: RHEL 7
+          href: install/linux-package-manager-rhel7.md
+        - name: RHEL 8.1
+          href: install/linux-package-manager-rhel81.md
+        - name: Ubuntu 16.04
+          href: install/linux-package-manager-ubuntu-1604.md
+        - name: Ubuntu 18.04
+          href: install/linux-package-manager-ubuntu-1804.md
+        - name: Ubuntu 19.04
+          href: install/linux-package-manager-ubuntu-1904.md
+        - name: Debian 9
+          href: install/linux-package-manager-debian9.md
+        - name: Debian 10
+          href: install/linux-package-manager-debian10.md
+        - name: Fedora 29
+          href: install/linux-package-manager-fedora29.md
+        - name: Fedora 30
+          href: install/linux-package-manager-fedora30.md
+        - name: CentOS 7
+          href: install/linux-package-manager-centos7.md
+        - name: openSUSE 15
+          href: install/linux-package-manager-opensuse15.md
+        - name: SLES 12
+          href: install/linux-package-manager-sles12.md
+        - name: SLES 15
+          href: install/linux-package-manager-sles15.md
 - name: Introdução
   href: get-started.md
   items:
@@ -23,12 +63,6 @@
       href: tutorials/testing-library-with-visual-studio.md
     - name: Consumir uma biblioteca .NET Standard no Visual Studio 2017
       href: tutorials/consuming-library-with-visual-studio.md
-- name: Pré-requisitos do Windows
-  href: windows-prerequisites.md
-- name: Pré-requisitos do macOS
-  href: macos-prerequisites.md
-- name: Pré-requisitos do Linux
-  href: linux-prerequisites.md
 - name: Novidades do .NET Core
   items:
     - name: Novidades do .NET Core 3.0
@@ -54,27 +88,33 @@
           href: tutorials/cli-templates-create-template-pack.md
     - name: Introdução ao .NET Core no macOS
       href: tutorials/using-on-macos.md
-    - name: 'Introdução ao .NET Core no macOS, usando o Visual Studio para Mac'
+    - name: Introdução ao .NET Core usando o Visual Studio para Mac
       href: tutorials/using-on-mac-vs.md
-    - name: Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac
+    - name: Compilar uma solução completa do .NET Core no macOS
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: Introdução ao .NET Core usando as ferramentas da CLI
       href: tutorials/using-with-xplat-cli.md
-    - name: Organizando e testando projetos com a linha de comando do .NET Core
+    - name: Organizar e testar projetos com a CLI do .NET Core
       href: tutorials/testing-with-cli.md
-    - name: Desenvolvendo bibliotecas com as Ferramentas de Plataforma Cruzada
+    - name: Desenvolver bibliotecas com ferramentas multiplataforma
       href: tutorials/libraries.md
-    - name: Criar um aplicativo do .NET Core com plug-ins
+    - name: Criar um aplicativo .NET Core com plugins
       href: tutorials/creating-app-with-plugin-support.md
-    - name: Desenvolvendo aplicativos ASP.NET Core
+    - name: Desenvolver aplicativos ASP.NET Core
       href: tutorials/aspnet-core.md
-    - name: Como hospedar o .NET Core com base no código nativo
+    - name: Como hospedar o .NET Core por meio de código nativo
       href: tutorials/netcore-hosting.md
+- name: Configuração do runtime
+  items:
+    - name: Configurações
+      href: run-time-config/index.md
+    - name: Configurações do coletor de lixo
+      href: run-time-config/garbage-collector.md
 - name: Interoperabilidade nativa
   items:
     - name: Expor componentes do .NET Core ao COM
       href: native-interop/expose-components-to-com.md
-- name: 'Pacotes, Metapacotes e Estruturas'
+- name: 'Pacotes, metapacotes e estruturas'
   href: packages.md
 - name: Visão geral das alterações na CLI
   href: tools/cli-msbuild-architecture.md
@@ -102,9 +142,9 @@
       href: deploying/deploy-with-vs.md
     - name: Criando um pacote NuGet com várias Ferramentas de Plataforma Cruzada
       href: deploying/creating-nuget-packages.md
-    - name: Roll forward de tempo de execução de implantação autossuficiente
+    - name: Roll forward de runtime de implantação autossuficiente
       href: deploying/runtime-patch-selection.md
-    - name: Repositório de pacotes de tempo de execução
+    - name: Repositório de pacotes de runtime
       href: deploying/runtime-store.md
 - name: Docker
   items:
@@ -166,9 +206,9 @@
   items:
     - name: Seleção de versão do .NET Core
       href: versions/selection.md
-    - name: Como remover SDKs e tempos de execução desatualizados
+    - name: Como remover SDKs e runtimes desatualizados
       href: versions/remove-runtime-sdk-versions.md
-- name: Catálogo de RID (Identificador de Tempo de Execução)
+- name: Catálogo de RID (Identificador de Runtime)
   href: rid-catalog.md
 - name: Visão geral do SDK do .NET Core
   href: sdk.md

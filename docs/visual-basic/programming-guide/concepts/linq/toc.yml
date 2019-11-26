@@ -65,7 +65,7 @@
           href: how-to-query-for-sentences-that-contain-a-specified-set-of-words.md
         - name: 'Como: consultar caracteres em uma cadeia de caracteres (LINQ)'
           href: how-to-query-for-characters-in-a-string-linq.md
-        - name: 'Como: combinar consultas LINQ com expressões regulares'
+        - name: Como combinar consultas LINQ com expressões regulares
           href: how-to-combine-linq-queries-with-regular-expressions.md
         - name: 'Como: localizar a diferença de conjunto entre duas listas (LINQ)'
           href: how-to-find-the-set-difference-between-two-lists-linq.md
@@ -103,7 +103,7 @@
           href: how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md
         - name: 'Como: consultar arquivos duplicados em uma árvore de diretório (LINQ)'
           href: how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-        - name: 'Como: consultar o conteúdo de arquivos em uma pasta (LINQ)'
+        - name: Como consultar o conteúdo de arquivos em uma pasta (LINQ)
           href: how-to-query-the-contents-of-files-in-a-folder-linq.md
         - name: 'Como: consultar um ArrayList com LINQ'
           href: how-to-query-an-arraylist-with-linq.md
