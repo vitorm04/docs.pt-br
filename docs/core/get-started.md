@@ -21,7 +21,7 @@ Se você não souber exatamente o que é o .NET Core ou como ele se relaciona co
 
 Primeiro, baixe e instale o [SDK do .NET Core](https://dotnet.microsoft.com/download) em seu computador.
 
-Em seguida, abra um terminal, como o **PowerShell**, um **prompt de comando** ou o **Bash**. Type the following `dotnet` commands to create and run a C# application:
+Em seguida, abra um terminal, como o **PowerShell**, um **prompt de comando** ou o **Bash**. Digite os seguintes comandos de `dotnet` para criar e executar um aplicativo C#:
 
 ```dotnetcli
 dotnet new console --output sample1
