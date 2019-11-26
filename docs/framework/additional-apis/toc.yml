@@ -9,7 +9,7 @@
               href: microsoft.sqlserver.server.smiorderproperty.item.md
     - name: Sistema
       items:
-        - name: Classe Exception
+        - name: Classe de exceção
           items:
             - name: Método Exception.PrepForRemoting
               href: system.exception.prepforremoting.md
@@ -31,7 +31,7 @@
               href: system.data.sqltypes.sqlstreamchars.length.md
             - name: Método Close
               href: system.data.sqltypes.sqlstreamchars.close.md
-            - name: Método Dispose
+            - name: método Dispose
               href: system.data.sqltypes.sqlstreamchars.dispose.md
             - name: Método Flush
               href: system.data.sqltypes.sqlstreamchars.flush.md
@@ -43,6 +43,12 @@
               href: system.data.sqltypes.sqlstreamchars.setlength.md
             - name: Método Write
               href: system.data.sqltypes.sqlstreamchars.write.md
+    - name: System.IO
+      items:
+        - name: Classe MemoryStream
+          items:
+            - name: Método InternalGetOriginAndLength
+              href: system.io.memorystream.internalgetoriginandlength.md
     - name: System.Net
       items:
         - name: Classe Connection
@@ -57,7 +63,7 @@
               href: m_connectionlist.md
         - name: Classe ConnectStream
           items:
-            - name: Propriedade de conexão
+            - name: Propriedade Connection
               href: system.net.connectstream.connection.md
         - name: Classe CoreResponseData
           href: coreresponsedata.md
@@ -78,6 +84,8 @@
           items:
             - name: Propriedade NetworkStream
               href: system.net.pooledstream.networkstream.md
+        - name: Classe RtcState
+          href: system.net.rtcstate.md
         - name: Classe ServicePoint
           items:
             - name: Campo m_ConnectionGroupList
@@ -94,6 +102,14 @@
           items:
             - name: Propriedade SslProtocol
               href: system.net.security.sslstate.sslprotocol.md
+    - name: System.ServiceModel.Channels
+      items:
+        - name: Classe de mensagens
+          items:
+            - name: Método BodyToString
+              href: system.servicemodel.channels.message.bodytostring.md
+            - name: Método WriteStartHeaders
+              href: system.servicemodel.channels.message.writestartheaders.md
     - name: System.Windows.Diagnostics
       items:
         - name: Classe VisualDiagnostics
@@ -110,11 +126,11 @@
       items:
         - name: XpsDocumentWriter
           items:
-            - name: raise__WritingCancelled Method
+            - name: Método raise__WritingCancelled
               href: xpsdocumentwriter-raise-writingcancelled-method-system-windows-xps.md
-            - name: raise__WritingCompleted Method
+            - name: Método raise__WritingCompleted
               href: xpsdocumentwriter-raise-writingcompleted-method-system-windows-xps.md
-            - name: raise__WritingPrintTicketRequired Method
+            - name: Método raise__WritingPrintTicketRequired
               href: xpsdocumentwriter-raise-writingprintticketrequired-method-system-windows-xps.md
             - name: raise__WritingProgressChanged
               href: xpsdocumentwriter-raise-writingprogresschanged-method-system-windows-xps.md
