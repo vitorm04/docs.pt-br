@@ -19,39 +19,39 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74340239"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>Como chamar um procedimento de operador (Visual Basic)
-You call an operator procedure by using the operator symbol in an expression. In the case of a conversion operator, you call the [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) to convert a value from one data type to another.  
+Você chama um procedimento de operador usando o símbolo de operador em uma expressão. No caso de um operador de conversão, você chama a [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) para converter um valor de um tipo de dados para outro.  
   
- You do not call operator procedures explicitly. You just use the operator, or the `CType` function, in an assignment statement or an expression, the same way you ordinarily use an operator. Visual Basic makes the call to the operator procedure.  
+ Você não chama os procedimentos de operador explicitamente. Basta usar o operador ou a função `CType`, em uma instrução de atribuição ou uma expressão, da mesma maneira que você usa um operador normalmente. Visual Basic faz a chamada para o procedimento de operador.  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ A definição de um operador em uma classe ou estrutura também é chamada de *sobrecarga* do operador.  
   
-### <a name="to-call-an-operator-procedure"></a>To call an operator procedure  
+### <a name="to-call-an-operator-procedure"></a>Para chamar um procedimento de operador  
   
-1. Use the operator symbol in an expression in the ordinary way.  
+1. Use o símbolo do operador em uma expressão da maneira comum.  
   
-2. Be sure the data types of the operands are appropriate for the operator, and in the correct order.  
+2. Verifique se os tipos de dados dos operandos são apropriados para o operador e na ordem correta.  
   
-3. The operator contributes to the value of the expression as expected.  
+3. O operador contribui para o valor da expressão conforme esperado.  
   
-### <a name="to-call-a-conversion-operator-procedure"></a>To call a conversion operator procedure  
+### <a name="to-call-a-conversion-operator-procedure"></a>Para chamar um procedimento de operador de conversão  
   
-1. Use `CType` inside an expression.  
+1. Use `CType` dentro de uma expressão.  
   
-2. Be sure the data types of the operands are appropriate for the conversion, and in the correct order.  
+2. Verifique se os tipos de dados dos operandos são apropriados para a conversão e na ordem correta.  
   
-3. `CType` calls the conversion operator procedure and returns the converted value.  
+3. `CType` chama o procedimento de operador de conversão e retorna o valor convertido.  
   
 ## <a name="example"></a>Exemplo  
- The following example creates two <xref:System.TimeSpan> structures, adds them together, and stores the result in a third <xref:System.TimeSpan> structure. The <xref:System.TimeSpan> structure defines operator procedures to overload several standard operators.  
+ O exemplo a seguir cria duas estruturas <xref:System.TimeSpan>, adiciona-as juntas e armazena o resultado em uma terceira estrutura de <xref:System.TimeSpan>. A estrutura de <xref:System.TimeSpan> define procedimentos de operador para sobrecarregar vários operadores padrão.  
   
  [!code-vb[VbVbcnProcedures#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#29)]  
   
- Because <xref:System.TimeSpan> overloads the standard `+` operator, the previous example calls an operator procedure when it calculates the value of `combinedSpan`.  
+ Como <xref:System.TimeSpan> sobrecarrega o operador de `+` padrão, o exemplo anterior chama um procedimento de operador quando calcula o valor de `combinedSpan`.  
   
- For an example of calling a conversation operator procedure, see [How to: Use a Class that Defines Operators](./how-to-use-a-class-that-defines-operators.md).  
+ Para obter um exemplo de como chamar um procedimento de operador de conversa, consulte [como: usar uma classe que define operadores](./how-to-use-a-class-that-defines-operators.md).  
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Be sure the class or structure you are using defines the operator you want to use.  
+## <a name="compiling-the-code"></a>Compilando o Código  
+ Certifique-se de que a classe ou estrutura que você está usando define o operador que você deseja usar.  
   
 ## <a name="see-also"></a>Consulte também
 

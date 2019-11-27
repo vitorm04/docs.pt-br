@@ -1,5 +1,5 @@
 ---
-title: 'How to: Read Application Settings'
+title: 'Como: ler configurações do aplicativo'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading application settings

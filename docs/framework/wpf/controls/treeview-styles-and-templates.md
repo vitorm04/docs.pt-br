@@ -36,7 +36,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="treeviewitem-parts"></a>Partes TreeViewItem  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.TreeViewItem>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |----------|----------|-----------------|  
 |PART_Header|<xref:System.Windows.FrameworkElement>|Um elemento visual que contém o conteúdo do cabeçalho do controle de <xref:System.Windows.Controls.TreeView>.|  
   
@@ -47,7 +47,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|O estado padrão.|  
 |MouseOver|CommonStates|O ponteiro do mouse está posicionado sobre o <xref:System.Windows.Controls.TreeViewItem>.|  
-|Disabled|CommonStates|O <xref:System.Windows.Controls.TreeViewItem> está desabilitado.|  
+|Desabilitado|CommonStates|O <xref:System.Windows.Controls.TreeViewItem> está desabilitado.|  
 |Focalizado|FocusStates|O <xref:System.Windows.Controls.TreeViewItem> tem foco.|  
 |Sem foco|FocusStates|O <xref:System.Windows.Controls.TreeViewItem> não tem foco.|  
 |Expandido|ExpansionStates|O controle <xref:System.Windows.Controls.TreeViewItem> é expandido.|  

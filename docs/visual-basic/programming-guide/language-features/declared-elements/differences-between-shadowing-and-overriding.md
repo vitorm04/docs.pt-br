@@ -13,48 +13,48 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345411"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>Diferenças entre sombreamento e sobreposição (Visual Basic)
-When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class. Shadowing and overriding are both available for this purpose.  
+Quando você define uma classe que herda de uma classe base, às vezes você deseja redefinir um ou mais dos elementos da classe base na classe derivada. Sombreamento e substituição estão disponíveis para essa finalidade.  
   
 ## <a name="comparison"></a>Comparação  
- Shadowing and overriding are both used when a derived class inherits from a base class, and both redefine one declared element with another. But there are significant differences between the two.  
+ Sombreamento e substituição são usados quando uma classe derivada herda de uma classe base e ambas redefinem um elemento declarado com outro. Mas há diferenças significativas entre os dois.  
   
- The following table compares shadowing with overriding.  
+ A tabela a seguir compara a sombra com a substituição.  
   
 ||||  
 |---|---|---|  
-|Point of comparison|Sombreamento|Overriding|  
-|Finalidade|Protects against a subsequent base-class modification that introduces a member you have already defined in your derived class|Achieves polymorphism by defining a different implementation of a procedure or property with the same calling sequence<sup>1</sup>|  
-|Redefined element|Any declared element type|Only a procedure (`Function`, `Sub`, or `Operator`) or property|  
-|Redefining element|Any declared element type|Only a procedure or property with the identical calling sequence<sup>1</sup>|  
-|Access level of redefining element|Any access level|Cannot change access level of overridden element|  
-|Readability and writability of redefining element|Any combination|Cannot change readability or writability of overridden property|  
-|Control over redefining|Base class element cannot enforce or prohibit shadowing|Base class element can specify `MustOverride`, `NotOverridable`, or `Overridable`|  
-|Keyword usage|`Shadows` recommended in derived class; `Shadows` assumed if neither `Shadows` nor `Overrides` specified<sup>2</sup>|`Overridable` or `MustOverride` required in base class; `Overrides` required in derived class|  
-|Inheritance of redefining element by classes deriving from your derived class|Shadowing element inherited by further derived classes; shadowed element still hidden<sup>3</sup>|Overriding element inherited by further derived classes; overridden element still overridden|  
+|Ponto de comparação|Sombreamento|Substituindo|  
+|Finalidade|Protege contra uma modificação subsequente de classe base que apresenta um membro que você já definiu em sua classe derivada|Obtém polimorfismo definindo uma implementação diferente de um procedimento ou propriedade com a mesma sequência de chamada<sup>1</sup>|  
+|Elemento redefinido|Qualquer tipo de elemento declarado|Somente um procedimento (`Function`, `Sub`ou `Operator`) ou propriedade|  
+|Redefinindo elemento|Qualquer tipo de elemento declarado|Somente um procedimento ou propriedade com a sequência de chamada idêntica<sup>1</sup>|  
+|Nível de acesso do elemento redefinido|Qualquer nível de acesso|Não é possível alterar o nível de acesso do elemento substituído|  
+|Legibilidade e gravação do elemento redefinindo|Qualquer combinação|Não é possível alterar a legibilidade ou gravação da propriedade substituída|  
+|Controle sobre a redefinição|O elemento da classe base não pode impor ou proibir sombreamento|O elemento da classe base pode especificar `MustOverride`, `NotOverridable`ou `Overridable`|  
+|Uso de palavra-chave|`Shadows` recomendado na classe derivada; `Shadows` presumido se nenhum `Shadows` nem `Overrides` especificado<sup>2</sup>|`Overridable` ou `MustOverride` necessário na classe base; `Overrides` necessário na classe derivada|  
+|Herança da redefinição de elemento por classes derivadas de sua classe derivada|Elemento de sombreamento herdado por mais classes derivadas; elemento sombreado ainda oculto<sup>3</sup>|Elemento de substituição herdado por classes derivadas posteriores; elemento substituído ainda substituído|  
   
- <sup>1</sup> The *calling sequence* consists of the element type (`Function`, `Sub`, `Operator`, or `Property`), name, parameter list, and return type. You cannot override a procedure with a property, or the other way around. You cannot override one kind of procedure (`Function`, `Sub`, or `Operator`) with another kind.  
+ <sup>1</sup> a *sequência de chamada* consiste no tipo de elemento (`Function`, `Sub`, `Operator`ou `Property`), nome, lista de parâmetros e tipo de retorno. Você não pode substituir um procedimento por uma propriedade, ou o contrário. Não é possível substituir um tipo de procedimento (`Function`, `Sub`ou `Operator`) por outro tipo.  
   
- <sup>2</sup> If you do not specify either `Shadows` or `Overrides`, the compiler issues a warning message to help you be sure which kind of redefinition you want to use. If you ignore the warning, the shadowing mechanism is used.  
+ <sup>2</sup> se você não especificar `Shadows` ou `Overrides`, o compilador emitirá uma mensagem de aviso para ajudá-lo a ter certeza de qual tipo de redefinição você deseja usar. Se você ignorar o aviso, o mecanismo de sombreamento será usado.  
   
- <sup>3</sup> If the shadowing element is inaccessible in a further derived class, shadowing is not inherited. For example, if you declare the shadowing element as `Private`, a class deriving from your derived class inherits the original element instead of the shadowing element.  
+ <sup>3</sup> se o elemento de sombreamento estiver inacessível em uma classe derivada adicional, o sombreamento não será herdado. Por exemplo, se você declarar o elemento de sombreamento como `Private`, uma classe que deriva de sua classe derivada herdará o elemento original em vez do elemento de sombreamento.  
   
 ## <a name="guidelines"></a>Diretrizes  
- You normally use overriding in the following cases:  
+ Normalmente, você usa a substituição nos seguintes casos:  
   
-- You are defining polymorphic derived classes.  
+- Você está definindo classes derivadas polimórficas.  
   
-- You want the safety of having the compiler enforce the identical element type and calling sequence.  
+- Você quer que a segurança de fazer com que o compilador Force o tipo de elemento e a sequência de chamada idênticos.  
   
- You normally use shadowing in the following cases:  
+ Normalmente, você usa sombreamento nos seguintes casos:  
   
-- You anticipate that your base class might be modified and define an element using the same name as yours.  
+- Você prevê que sua classe base pode ser modificada e definir um elemento usando o mesmo nome que a sua.  
   
-- You want the freedom of changing the element type or calling sequence.  
+- Você quer a liberdade de alterar o tipo de elemento ou a sequência de chamada.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Sombreamento em Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Como ocultar uma variável com o mesmo nome que a variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Como ocultar uma variável herdada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
 - [Como acessar uma variável oculta por uma classe derivada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)

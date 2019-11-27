@@ -29,25 +29,25 @@ ms.locfileid: "74343925"
 ---
 # <a name="single-data-type-visual-basic"></a>Tipo de dados único (Visual Basic)
 
-Holds signed IEEE 32-bit (4-byte) single-precision floating-point numbers ranging in value from -3.4028235E+38 through -1.401298E-45 for negative values and from 1.401298E-45 through 3.4028235E+38 for positive values. Single-precision numbers store an approximation of a real number.  
+Contém números de ponto flutuante de precisão simples IEEE 32 bits (4 bytes) que variam em valor de-3.4028235 E + 38 a-1.401298 E-45 para valores negativos e de 1.401298 E-45 a 3.4028235 E + 38 para valores positivos. Números de precisão única armazenam uma aproximação de um número real.  
   
 ## <a name="remarks"></a>Comentários  
 
- Use the `Single` data type to contain floating-point values that do not require the full data width of `Double`. In some cases the common language runtime might be able to pack your `Single` variables closely together and save memory consumption.  
+ Use o tipo de dados `Single` para conter valores de ponto flutuante que não exigem a largura total dos dados de `Double`. Em alguns casos, a Common Language Runtime pode ser capaz de empacotar suas variáveis de `Single` em conjunto e economizar o consumo de memória.  
   
  O valor padrão de `Single` é 0.  
   
 ## <a name="programming-tips"></a>Dicas de programação  
   
-- **Precision.** When you work with floating-point numbers, keep in mind that they do not always have a precise representation in memory. This could lead to unexpected results from certain operations, such as value comparison and the `Mod` operator. For more information, see [Troubleshooting Data Types](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
+- **Preciso.** Quando você trabalha com números de ponto flutuante, tenha em mente que eles nem sempre têm uma representação precisa na memória. Isso pode levar a resultados inesperados de determinadas operações, como comparação de valor e o operador de `Mod`. Para obter mais informações, consulte [Solucionando problemas de tipos de dados](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
-- **Widening.** The `Single` data type widens to `Double`. This means you can convert `Single` to `Double` without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.  
+- **Ampliação.** O tipo de dados `Single` amplia a `Double`. Isso significa que você pode converter `Single` em `Double` sem encontrar um erro <xref:System.OverflowException?displayProperty=nameWithType>.  
   
-- **Trailing Zeros.** The floating-point data types do not have any internal representation of trailing 0 characters. For example, they do not distinguish between 4.2000 and 4.2. Consequently, trailing 0 characters do not appear when you display or print floating-point values.  
+- **Zeros à direita.** Os tipos de dados de ponto flutuante não têm nenhuma representação interna de zero caracteres à direita. Por exemplo, eles não fazem distinção entre 4,2000 e 4,2. Consequentemente, 0 caracteres à direita não aparecem quando você exibe ou imprime valores de ponto flutuante.  
   
-- **Type Characters.** Acrescentar o caractere de tipo literal `F` a um literal o força ao tipo de dados `Single`. Acrescentar o caractere de tipo identificador `!` a qualquer identificador o força ao tipo `Single`.  
+- **Digite os caracteres.** Acrescentar o caractere de tipo literal `F` a um literal o força ao tipo de dados `Single`. Acrescentar o caractere de tipo identificador `!` a qualquer identificador o força ao tipo `Single`.  
   
-- **Framework Type.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Single?displayProperty=nameWithType>.  
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Single?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -17,18 +17,18 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344894"
 ---
 # <a name="how-to-define-a-conversion-operator-visual-basic"></a>Como definir um operador de conversão (Visual Basic)
-If you have defined a class or structure, you can define a type conversion operator between the type of your class or structure and another data type (such as `Integer`, `Double`, or `String`).  
+Se você tiver definido uma classe ou estrutura, poderá definir um operador de conversão de tipo entre o tipo de sua classe ou estrutura e outro tipo de dados (como `Integer`, `Double`ou `String`).  
   
- Define the type conversion as a [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md) procedure within the class or structure. All conversion procedures must be `Public Shared`, and each one must specify either [Widening](../../../../visual-basic/language-reference/modifiers/widening.md) or [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
+ Defina a conversão de tipo como um procedimento de [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md) dentro da classe ou estrutura. Todos os procedimentos de conversão devem ser `Public Shared`e cada um deve especificar o [alargamento](../../../../visual-basic/language-reference/modifiers/widening.md) ou a [restrição](../../../../visual-basic/language-reference/modifiers/narrowing.md).  
   
- Defining an operator on a class or structure is also called *overloading* the operator.  
+ A definição de um operador em uma classe ou estrutura também é chamada de *sobrecarga* do operador.  
   
 ## <a name="example"></a>Exemplo  
- The following example defines conversion operators between a structure called `digit` and a `Byte`.  
+ O exemplo a seguir define os operadores de conversão entre uma estrutura chamada `digit` e uma `Byte`.  
   
  [!code-vb[VbVbcnProcedures#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#27)]  
   
- You can test the structure `digit` with the following code.  
+ Você pode testar a estrutura `digit` com o código a seguir.  
   
  [!code-vb[VbVbcnProcedures#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#28)]  
   

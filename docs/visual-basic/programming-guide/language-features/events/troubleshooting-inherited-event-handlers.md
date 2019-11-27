@@ -16,17 +16,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345100"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Solucionando problemas de manipuladores de eventos herdados no Visual Basic
-This topic lists common issues that arise with event handlers in inherited components.  
+Este tópico lista os problemas comuns que surgem com manipuladores de eventos em componentes herdados.  
   
 ## <a name="procedures"></a>Procedimentos  
   
-#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>Code in Event Handler Executes Twice for Every Call  
+#### <a name="code-in-event-handler-executes-twice-for-every-call"></a>O código no manipulador de eventos é executado duas vezes para cada chamada  
   
-- An inherited event handler must not include a [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) clause. The method in the base class is already associated with the event and will fire accordingly. Remove the `Handles` clause from the inherited method.  
+- Um manipulador de eventos herdado não deve incluir uma cláusula [Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) . O método na classe base já está associado ao evento e será acionado de acordo. Remova a cláusula `Handles` do método herdado.  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
-- If the inherited method does not have a `Handles` keyword, verify that your code does not contain an extra [AddHandler Statement](../../../../visual-basic/language-reference/statements/addhandler-statement.md) or any additional methods that handle the same event.  
+- Se o método herdado não tiver uma palavra-chave `Handles`, verifique se o seu código não contém uma [instrução AddHandler](../../../../visual-basic/language-reference/statements/addhandler-statement.md) extra ou quaisquer métodos adicionais que manipulem o mesmo evento.  
   
 ## <a name="see-also"></a>Consulte também
 

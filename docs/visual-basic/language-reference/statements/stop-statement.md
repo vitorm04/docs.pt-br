@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346473"
 ---
 # <a name="stop-statement-visual-basic"></a>Instrução Stop (Visual Basic)
-Suspends execution.  
+Suspende a execução.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,15 +29,15 @@ Stop
 ```  
   
 ## <a name="remarks"></a>Comentários  
- You can place `Stop` statements anywhere in procedures to suspend execution. Using the `Stop` statement is similar to setting a breakpoint in the code.  
+ Você pode colocar `Stop` instruções em qualquer lugar em procedimentos para suspender a execução. O uso da instrução `Stop` é semelhante à definição de um ponto de interrupção no código.  
   
- The `Stop` statement suspends execution, but unlike `End`, it does not close any files or clear any variables, unless it is encountered in a compiled executable (.exe) file.  
+ A instrução `Stop` suspende a execução, mas ao contrário de `End`, ela não fecha nenhum arquivo ou limpa nenhuma variável, a menos que seja encontrada em um arquivo executável compilado (. exe).  
   
 > [!NOTE]
-> If the `Stop` statement is encountered in code that is running outside of the integrated development environment (IDE), the debugger is invoked. This is true regardless of whether the code was compiled in debug or retail mode.  
+> Se a instrução `Stop` for encontrada no código que está sendo executado fora do IDE (ambiente de desenvolvimento integrado), o depurador será invocado. Isso é verdadeiro independentemente de o código ter sido compilado no modo de depuração ou de varejo.  
   
 ## <a name="example"></a>Exemplo  
- This example uses the `Stop` statement to suspend execution for each iteration through the `For...Next` loop.  
+ Este exemplo usa a instrução `Stop` para suspender a execução para cada iteração por meio do loop `For...Next`.  
   
  [!code-vb[VbVbalrStatements#56](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#56)]  
   

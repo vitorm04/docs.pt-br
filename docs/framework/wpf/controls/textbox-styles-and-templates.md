@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="textbox-parts"></a>Partes da caixa de texto  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.TextBox>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Um elemento visual que pode conter um <xref:System.Windows.FrameworkElement>. O texto do <xref:System.Windows.Controls.TextBox> é exibido neste elemento.|  
   
@@ -33,7 +33,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|O estado padrão.|  
 |MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o controle.|  
-|Disabled|CommonStates|O controle está desabilitado.|  
+|Desabilitado|CommonStates|O controle está desabilitado.|  
 |ReadOnly|CommonStates|O usuário não pode alterar o texto na <xref:System.Windows.Controls.TextBox>.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  

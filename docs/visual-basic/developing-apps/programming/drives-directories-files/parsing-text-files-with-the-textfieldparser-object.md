@@ -1,5 +1,5 @@
 ---
-title: Parsing text files with the TextFieldParser object
+title: Analisando arquivos de texto com o objeto TextFieldParser
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, using

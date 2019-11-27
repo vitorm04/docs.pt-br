@@ -18,16 +18,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351471"
 ---
 # <a name="narrowing-visual-basic"></a>Narrowing (Visual Basic)
-Indicates that a conversion operator (`CType`) converts a class or structure to a type that might not be able to hold some of the possible values of the original class or structure.  
+Indica que um operador de conversão (`CType`) converte uma classe ou estrutura em um tipo que pode não ser capaz de conter alguns dos valores possíveis da classe ou estrutura original.  
   
-## <a name="converting-with-the-narrowing-keyword"></a>Converting with the Narrowing Keyword  
- The conversion procedure must specify `Public Shared` in addition to `Narrowing`.  
+## <a name="converting-with-the-narrowing-keyword"></a>Convertendo com a palavra-chave Narrowing  
+ O procedimento de conversão deve especificar `Public Shared` além de `Narrowing`.  
   
- Narrowing conversions do not always succeed at run time, and can fail or incur data loss. Examples are `Long` to `Integer`, `String` to `Date`, and a base type to a derived type. This last conversion is narrowing because the base type might not contain all the members of the derived type and thus is not an instance of the derived type.  
+ As conversões redutoras nem sempre são bem sucedidas em tempo de execução e podem falhar ou incorrer em perda de dados. Os exemplos são `Long` para `Integer`, `String` para `Date`e um tipo base para um tipo derivado. Essa última conversão é restrita porque o tipo base pode não conter todos os membros do tipo derivado e, portanto, não é uma instância do tipo derivado.  
   
- If `Option Strict` is `On`, the consuming code must use `CType` for all narrowing conversions.  
+ Se `Option Strict` for `On`, o código de consumo deverá usar `CType` para todas as conversões redutoras.  
   
- The `Narrowing` keyword can be used in this context:  
+ A palavra-chave `Narrowing` pode ser usada neste contexto:  
   
  [Instrução Operator](../../../visual-basic/language-reference/statements/operator-statement.md)  
   

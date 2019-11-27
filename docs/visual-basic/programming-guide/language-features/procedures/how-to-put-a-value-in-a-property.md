@@ -16,23 +16,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346048"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>Como inserir um valor em uma propriedade (Visual Basic)
-You store a value in a property by putting the property name on the left side of an assignment statement.  
+Você armazena um valor em uma propriedade colocando o nome da propriedade no lado esquerdo de uma instrução de atribuição.  
   
- The property's `Set` procedure stores a value, but you do not explicitly call it by name. You use the property just as you would use a variable. Visual Basic makes the calls to the property's procedures.  
+ O procedimento de `Set` da propriedade armazena um valor, mas você não o chama explicitamente por nome. Você usa a propriedade da mesma forma como usaria uma variável. Visual Basic faz as chamadas para os procedimentos da propriedade.  
   
-### <a name="to-store-a-value-in-a-property"></a>To store a value in a property  
+### <a name="to-store-a-value-in-a-property"></a>Para armazenar um valor em uma propriedade  
   
-1. Use the property name on the left side of an assignment statement.  
+1. Use o nome da propriedade no lado esquerdo de uma instrução de atribuição.  
   
-     The following example sets the value of the Visual Basic `TimeOfDay` property to noon, implicitly calling its `Set` procedure.  
+     O exemplo a seguir define o valor da Propriedade Visual Basic `TimeOfDay` como meio-dia, chamando implicitamente seu procedimento de `Set`.  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2. If the property takes arguments, follow the property name with parentheses to enclose the argument list. If there are no arguments, you can optionally omit the parentheses.  
+2. Se a propriedade usar argumentos, siga o nome da propriedade com parênteses para colocar a lista de argumentos. Se não houver argumentos, você pode opcionalmente omitir os parênteses.  
   
-3. Place the arguments in the argument list within the parentheses, separated by commas. Be sure you supply the arguments in the same order that the property defines the corresponding parameters.  
+3. Coloque os argumentos na lista de argumentos dentro dos parênteses, separados por vírgulas. Certifique-se de fornecer os argumentos na mesma ordem em que a propriedade define os parâmetros correspondentes.  
   
-4. The value generated on the right side of the assignment statement is stored in the property.  
+4. O valor gerado no lado direito da instrução de atribuição é armazenado na propriedade.  
   
 ## <a name="see-also"></a>Consulte também
 
@@ -40,9 +40,9 @@ You store a value in a property by putting the property name on the left side of
 - [Procedimentos de Propriedade](./property-procedures.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)
 - [Instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Differences Between Properties and Variables in Visual Basic](./differences-between-properties-and-variables.md)
+- [Diferenças entre propriedades e variáveis no Visual Basic](./differences-between-properties-and-variables.md)
 - [Como criar uma propriedade](./how-to-create-a-property.md)
 - [Como declarar uma propriedade com níveis de acesso mistos](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [Como chamar um procedimento de propriedade](./how-to-call-a-property-procedure.md)
-- [How to: Declare and Call a Default Property in Visual Basic](./how-to-declare-and-call-a-default-property.md)
+- [Como: declarar e chamar uma propriedade padrão no Visual Basic](./how-to-declare-and-call-a-default-property.md)
 - Como obter um valor de uma propriedade (Visual Basic)[Como obter um valor de uma propriedade](./how-to-get-a-value-from-a-property.md)

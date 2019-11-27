@@ -30,7 +30,7 @@ Os métodos <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%28System.String%29> e
   
      [!code-vb[VbResourceTasks#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#19)]  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
 
  O método `DeleteSubKey` retornará uma cadeia de caracteres vazia se o par chave-valor não existir.  
   

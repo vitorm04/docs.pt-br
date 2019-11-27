@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343654"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a>Scope of Default Namespaces in Visual Basic
+# <a name="scope-of-default-namespaces-in-visual-basic"></a>Escopo de namespaces padrão no Visual Basic
 Namespaces padrões como representadas na árvore XML não estiver no escopo para consultas. Se você tiver XML que é em um namespace padrão, você ainda deve declarar uma variável de <xref:System.Xml.Linq.XNamespace> , e combina-o com o nome local para fazer um nome qualificado para ser usado na consulta.  
   
  Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.  
@@ -47,7 +47,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Comentários  
+### <a name="comments"></a>Comments  
  Este exemplo gerencia o resultado seguinte:  
   
 ```console  
@@ -58,7 +58,7 @@ End of result set
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como criar XML em um namespace, e uma consulta que é codificado corretamente.  
   
- In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace. Isso coloca todas as propriedades XML no namespace padrão. Outras alterações necessárias ao exemplo para fazê-lo funcionar corretamente.  
+ Ao contrário do exemplo codificado incorretamente acima, a abordagem correta ao usar Visual Basic é declarar e inicializar um namespace padrão global. Isso coloca todas as propriedades XML no namespace padrão. Outras alterações necessárias ao exemplo para fazê-lo funcionar corretamente.  
   
 ### <a name="code"></a>Código  
   
@@ -88,7 +88,7 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>Comentários  
+### <a name="comments"></a>Comments  
  Este exemplo gerencia o resultado seguinte:  
   
 ```console  
@@ -101,4 +101,4 @@ End of result set
   
 ## <a name="see-also"></a>Consulte também
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

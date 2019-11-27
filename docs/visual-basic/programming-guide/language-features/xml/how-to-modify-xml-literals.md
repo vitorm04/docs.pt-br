@@ -15,19 +15,19 @@ ms.locfileid: "74330852"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>Como modificar literais XML (Visual Basic)
 
-Visual Basic provides convenient ways to modify XML literals. You can add or delete elements and attributes, and you can also replace an existing element with a new XML element. This topic provides several examples of how to modify an existing XML literal.
+Visual Basic fornece maneiras convenientes de modificar literais XML. Você pode adicionar ou excluir elementos e atributos, e também pode substituir um elemento existente por um novo elemento XML. Este tópico fornece vários exemplos de como modificar um literal XML existente.
 
-### <a name="to-modify-the-value-of-an-xml-literal"></a>To modify the value of an XML literal
+### <a name="to-modify-the-value-of-an-xml-literal"></a>Para modificar o valor de um literal XML
 
-1. To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.
+1. Para modificar o valor de um literal XML, obtenha uma referência para o literal XML e defina a propriedade `Value` como o valor desejado.
 
-    The following code example updates the value of all the \<Price> elements in an XML document.
+    O exemplo de código a seguir atualiza o valor de todos os \<os elementos de > de preço em um documento XML.
 
     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]
 
-    The following shows sample source XML and modified XML from this code example.
+    O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.
 
-    Source XML:
+    XML de origem:
 
     ```xml
     <?xml version="1.0"?>
@@ -45,7 +45,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    XML modificado:
 
     ```xml
     <?xml version="1.0"?>
@@ -64,17 +64,17 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     ```
 
     > [!NOTE]
-    > The `Value` property refers to the first XML element in a collection. If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.
+    > A propriedade `Value` refere-se ao primeiro elemento XML em uma coleção. Se houver mais de um elemento que tenha o mesmo nome em uma coleção, definir a propriedade `Value` afetará apenas o primeiro elemento na coleção.
 
-### <a name="to-add-an-attribute-to-an-xml-literal"></a>To add an attribute to an XML literal
+### <a name="to-add-an-attribute-to-an-xml-literal"></a>Para adicionar um atributo a um literal XML
 
-1. To add an attribute to an XML literal, first obtain a reference to the XML literal. You can then add an attribute by adding a new XML attribute axis property. You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method. The following example shows both options.
+1. Para adicionar um atributo a um literal XML, primeiro obtenha uma referência para o literal XML. Em seguida, você pode adicionar um atributo adicionando uma nova propriedade de eixo de atributo XML. Você também pode adicionar um novo objeto <xref:System.Xml.Linq.XAttribute> ao literal XML usando o método <xref:System.Xml.Linq.XContainer.Add%2A>. O exemplo a seguir mostra as duas opções.
 
     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]
 
-    The following shows sample source XML and modified XML from this code example.
+    O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.
 
-    Source XML:
+    XML de origem:
 
     ```xml
     <?xml version="1.0"?>
@@ -92,7 +92,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    XML modificado:
 
     ```xml
     <?xml version="1.0"?>
@@ -110,21 +110,21 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).
+    Para obter mais informações sobre propriedades do eixo de atributo XML, consulte [Propriedade do eixo de atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).
 
-### <a name="to-add-an-element-to-an-xml-literal"></a>To add an element to an XML literal
+### <a name="to-add-an-element-to-an-xml-literal"></a>Para adicionar um elemento a um literal XML
 
-1. To add an element to an XML literal, first obtain a reference to the XML literal. You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method. You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.
+1. Para adicionar um elemento a um literal XML, primeiro obtenha uma referência para o literal XML. Em seguida, você pode adicionar um novo objeto <xref:System.Xml.Linq.XElement> como o último subelemento do elemento usando o método <xref:System.Xml.Linq.XContainer.Add%2A>. Você pode adicionar um novo objeto <xref:System.Xml.Linq.XElement> como o primeiro subelemento usando o método <xref:System.Xml.Linq.XContainer.AddFirst%2A>.
 
-    To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element. You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method. You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.
+    Para adicionar um novo elemento em um local específico em relação a outros subelementos, primeiro obtenha uma referência a um sub-elemento adjacente. Em seguida, você pode adicionar o novo objeto <xref:System.Xml.Linq.XElement> antes do subelemento adjacente usando o método <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>. Você também pode adicionar o novo objeto <xref:System.Xml.Linq.XElement> após o subelemento adjacente usando o método <xref:System.Xml.Linq.XNode.AddAfterSelf%2A>.
 
-    The following example shows examples of each of these techniques.
+    O exemplo a seguir mostra exemplos de cada uma dessas técnicas.
 
     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]
 
-    The following shows sample source XML and modified XML from this code example.
+    O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.
 
-    Source XML:
+    XML de origem:
 
     ```xml
     <?xml version="1.0"?>
@@ -142,7 +142,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    XML modificado:
 
     ```xml
     <?xml version="1.0"?>
@@ -164,15 +164,15 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a>To remove an element or attribute from an XML literal
+### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a>Para remover um elemento ou atributo de um literal XML
 
-1. To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.
+1. Para remover um elemento ou um atributo de um literal XML, obtenha uma referência para o elemento ou atributo e chame o método `Remove`, conforme mostrado no exemplo a seguir.
 
     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]
 
-    The following shows sample source XML and modified XML from this code example.
+    O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.
 
-    Source XML:
+    XML de origem:
 
     ```xml
     <?xml version="1.0"?>
@@ -192,7 +192,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    XML modificado:
 
     ```xml
     <?xml version="1.0"?>
@@ -210,21 +210,21 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
       </Book></Catalog>
     ```
 
-    To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.
+    Para remover todos os elementos ou atributos de um literal XML, obtenha uma referência para o literal XML e chame o método <xref:System.Xml.Linq.XElement.RemoveAll%2A>.
 
-### <a name="to-modify-an-xml-literal"></a>To modify an XML literal
+### <a name="to-modify-an-xml-literal"></a>Para modificar um literal XML
 
-1. To change the name of an XML element, first obtain a reference to the element. You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.
+1. Para alterar o nome de um elemento XML, primeiro obtenha uma referência para o elemento. Em seguida, você pode criar um novo objeto de <xref:System.Xml.Linq.XElement> que tem um novo nome e passar o novo objeto de <xref:System.Xml.Linq.XElement> para o método <xref:System.Xml.Linq.XNode.ReplaceWith%2A> do objeto <xref:System.Xml.Linq.XElement> existente.
 
-    If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element. This will set the value of the new element to the inner XML of the existing element. Otherwise, you can set the value of the new element to the `Value` property of the existing element.
+    Se o elemento que você está substituindo tiver subelementos que devam ser preservados, defina o valor do novo objeto <xref:System.Xml.Linq.XElement> como a propriedade <xref:System.Xml.Linq.XContainer.Nodes%2A> do elemento existente. Isso definirá o valor do novo elemento como o XML interno do elemento existente. Caso contrário, você pode definir o valor do novo elemento como a propriedade `Value` do elemento existente.
 
-    The following code example replaces all \<Description> elements with an \<Abstract> element. The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.
+    O exemplo de código a seguir substitui todos os elementos de > de descrição de \<por um elemento de > abstrato \<. O conteúdo da descrição de \<> elemento é preservado no novo \<abstrato > elemento usando a propriedade <xref:System.Xml.Linq.XContainer.Nodes%2A> do objeto \<Descrição >.<xref:System.Xml.Linq.XElement>
 
     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]
 
-    The following shows sample source XML and modified XML from this code example.
+    O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.
 
-    Source XML:
+    XML de origem:
 
     ```xml
     <?xml version="1.0"?>
@@ -256,7 +256,7 @@ Visual Basic provides convenient ways to modify XML literals. You can add or del
     </Catalog>
     ```
 
-    Modified XML:
+    XML modificado:
 
     ```xml
     <?xml version="1.0"?>

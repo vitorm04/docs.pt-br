@@ -17,22 +17,22 @@ ms.locfileid: "74347166"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Como converter cadeias de caracteres hexadecimais em números (Visual Basic)
 
-This example converts a hexadecimal string to an integer using the <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> method.
+Este exemplo converte uma cadeia de caracteres hexadecimal em um inteiro usando o método <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>.
 
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>To convert a hexadecimal string to a number
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Para converter uma cadeia de caracteres hexadecimal em um número
 
-- Use the <xref:System.Convert.ToInt32(System.String,System.Int32)> method to convert the number expressed in base-16 to an integer.
+- Use o método <xref:System.Convert.ToInt32(System.String,System.Int32)> para converter o número expresso em base 16 em um inteiro.
 
-  The first argument of the <xref:System.Convert.ToInt32(System.String,System.Int32)> method is the string to convert. The second argument describes what base the number is expressed in; hexadecimal is base 16.
+  O primeiro argumento do método <xref:System.Convert.ToInt32(System.String,System.Int32)> é a cadeia de caracteres a ser convertida. O segundo argumento descreve em qual base o número é expresso; o hexadecimal é a base 16.
 
   [!code-vb[VbVbalrStrings#62](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#62)]
 
-- Note that the hexadecimal string has the following restrictions:
+- Observe que a cadeia de caracteres hexadecimal tem as seguintes restrições:
 
-  - It cannot include the `&h` prefix.
-  - It cannot include the `_` digit separator.
+  - Ele não pode incluir o prefixo `&h`.
+  - Ele não pode incluir o separador de dígito `_`.
 
-  If the prefix or a digit separator is present, the call to the <xref:System.Convert.ToInt32(System.String,System.Int32)> method throws a <xref:System.FormatException>.
+  Se o prefixo ou um separador de dígitos estiver presente, a chamada para o método <xref:System.Convert.ToInt32(System.String,System.Int32)> lançará uma <xref:System.FormatException>.
 
 ## <a name="see-also"></a>Consulte também
 

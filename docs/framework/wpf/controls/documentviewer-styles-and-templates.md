@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="documentviewer-parts"></a>Partes do DocumentViewer  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.DocumentViewer>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_ContentHost|<xref:System.Windows.Controls.ScrollViewer>|O conteúdo e a área de rolagem.|  
 |PART_FindToolBarHost|<xref:System.Windows.Controls.ContentControl>|A caixa de pesquisa, na parte inferior, por padrão.|  

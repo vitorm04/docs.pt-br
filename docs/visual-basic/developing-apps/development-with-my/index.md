@@ -24,7 +24,7 @@ O Visual Basic apresenta novos recursos para o método RAD que aumentam a produt
   
  Esta tabela mostra objetos `My` de nível superior e suas relações uns com os outros.  
   
- ![Diagram shows the object model for My.](./media/index/my-object-model-relationships.gif)  
+ ![O diagrama mostra o modelo de objeto para My.](./media/index/my-object-model-relationships.gif)  
   
 ## <a name="in-this-section"></a>Nesta seção  
 
@@ -38,7 +38,7 @@ O Visual Basic apresenta novos recursos para o método RAD que aumentam a produt
  Descreve os objetos `My.Resources` e `My.Settings`, que fornecem acesso a recursos e configurações de um aplicativo.  
   
  [Visão geral do modelo de aplicativo do Visual Basic](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)  
- Describes the Visual Basic Application Startup/Shutdown model.  
+ Descreve o modelo de inicialização/desligamento do aplicativo Visual Basic.  
   
  [Como My depende do tipo de projeto](../../../visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md)  
  Fornece detalhes sobre quais os recursos `My` que estão disponíveis em diferentes tipos de projeto.  

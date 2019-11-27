@@ -17,12 +17,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349075"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>Solucionando problemas de matrizes (Visual Basic)
-This page lists some common problems that can occur when working with arrays.  
+Esta página lista alguns problemas comuns que podem ocorrer ao trabalhar com matrizes.  
   
-## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Compilation Errors Declaring and Initializing an Array  
- Compilation errors can arise from misunderstanding of the rules for declaring, creating, and initializing arrays. The most common causes of errors are the following:  
+## <a name="compilation-errors-declaring-and-initializing-an-array"></a>Erros de compilação declarando e inicializando uma matriz  
+ Os erros de compilação podem surgir de mal-entendido das regras para declarar, criar e inicializar matrizes. As causas mais comuns de erros são as seguintes:  
   
-- Supplying a [New Operator](../../../../visual-basic/language-reference/operators/new-operator.md) clause after specifying dimension lengths in the array variable declaration. The following code lines show invalid declarations of this type.  
+- Fornecendo uma [nova cláusula Operator](../../../../visual-basic/language-reference/operators/new-operator.md) depois de especificar comprimentos de dimensão na declaração de variável de matriz. As linhas de código a seguir mostram declarações inválidas desse tipo.  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
-- Specifying dimension lengths for more than the top-level array of a jagged array. The following code line shows an invalid declaration of this type.  
+- Especificando comprimentos de dimensão para mais do que a matriz de nível superior de uma matriz denteada. A linha de código a seguir mostra uma declaração inválida desse tipo.  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
-- Omitting the `New` keyword when specifying the element values. The following code line shows an invalid declaration of this type.  
+- Omitir a palavra-chave `New` ao especificar os valores do elemento. A linha de código a seguir mostra uma declaração inválida desse tipo.  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
-- Supplying a `New` clause without braces (`{}`). The following code lines show invalid declarations of this type.  
+- Fornecendo uma cláusula `New` sem chaves (`{}`). As linhas de código a seguir mostram declarações inválidas desse tipo.  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   
@@ -48,14 +48,14 @@ This page lists some common problems that can occur when working with arrays.
   
      `Dim INVALIDtwoDimShortArray(,) As Short = New Short(1, 1)`  
   
-## <a name="accessing-an-array-out-of-bounds"></a>Accessing an Array Out of Bounds  
- The process of initializing an array assigns an upper bound and a lower bound to each dimension. Every access to an element of the array must specify a valid index, or subscript, for every dimension. If any index is below its lower bound or above its upper bound, an <xref:System.IndexOutOfRangeException> exception results. The compiler cannot detect such an error, so an error occurs at run time.  
+## <a name="accessing-an-array-out-of-bounds"></a>Acessando uma matriz fora dos limites  
+ O processo de inicializar uma matriz atribui um limite superior e um limite inferior a cada dimensão. Cada acesso a um elemento da matriz deve especificar um índice válido, ou subscrito, para cada dimensão. Se qualquer índice estiver abaixo de seu limite inferior ou acima de seu limite superior, um <xref:System.IndexOutOfRangeException> resultados de exceção. O compilador não pode detectar esse erro, portanto, um erro ocorre em tempo de execução.  
   
-### <a name="determining-bounds"></a>Determining Bounds  
- If another component passes an array to your code, for example as a procedure argument, you do not know the size of that array or the lengths of its dimensions. You should always determine the upper bound for every dimension of an array before you attempt to access any elements. If the array has been created by some means other than a Visual Basic `New` clause, the lower bound might be something other than 0, and it is safest to determine that lower bound as well.  
+### <a name="determining-bounds"></a>Determinando limites  
+ Se outro componente passar uma matriz para seu código, por exemplo, como um argumento de procedimento, você não saberá o tamanho dessa matriz ou os comprimentos de suas dimensões. Você sempre deve determinar o limite superior para cada dimensão de uma matriz antes de tentar acessar quaisquer elementos. Se a matriz tiver sido criada por alguns meios diferentes de uma cláusula Visual Basic `New`, o limite inferior poderá ser algo diferente de 0, e será mais seguro determinar o limite inferior também.  
   
-### <a name="specifying-the-dimension"></a>Specifying the Dimension  
- When determining the bounds of a multidimensional array, take care how you specify the dimension. The `dimension` parameters of the <xref:System.Array.GetLowerBound%2A> and <xref:System.Array.GetUpperBound%2A> methods are 0-based, while the `Rank` parameters of the Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> and <xref:Microsoft.VisualBasic.Information.UBound%2A> functions are 1-based.  
+### <a name="specifying-the-dimension"></a>Especificando a dimensão  
+ Ao determinar os limites de uma matriz multidimensional, tome cuidado com o modo de especificar a dimensão. Os parâmetros de `dimension` dos métodos <xref:System.Array.GetLowerBound%2A> e <xref:System.Array.GetUpperBound%2A> são baseados em 0, enquanto os parâmetros `Rank` da Visual Basic <xref:Microsoft.VisualBasic.Information.LBound%2A> e as funções <xref:Microsoft.VisualBasic.Information.UBound%2A> são baseados em 1.  
   
 ## <a name="see-also"></a>Consulte também
 

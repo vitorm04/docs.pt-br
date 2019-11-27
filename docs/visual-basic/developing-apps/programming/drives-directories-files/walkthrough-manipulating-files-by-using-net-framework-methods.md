@@ -83,7 +83,7 @@ Para adicionar a capacidade de gravar em um arquivo por meio do aplicativo, use 
 
      [!code-vb[VbVbcnMyFileSystem#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#39)]
 
-4. Por fim, anexe o código para limpar a <xref:System.Windows.Forms.TextBox>. Adicione o seguinte código ao evento <xref:System.Windows.Forms.Control.Click> do botão `Clear`.
+4. Por fim, anexe o código para limpar a <xref:System.Windows.Forms.TextBox>. Adicione o seguinte código ao evento `Clear` do botão <xref:System.Windows.Forms.Control.Click>.
 
      [!code-vb[VbVbcnMyFileSystem#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#40)]
 
@@ -93,7 +93,7 @@ Nesta seção, você adiciona um recurso que exibe a última entrada em `Display
 
 Para esta seção do passo a passo, adicione os controles na tabela a seguir ao formulário e defina os valores correspondentes para as respectivas propriedades.
 
-|Controle|Propriedades|Valores|
+|Controle|{1&gt;Propriedades&lt;1}|Valores|
 |-------------|----------------|------------|
 |<xref:System.Windows.Forms.TextBox>|**Nome**<br /><br /> **Visível**<br /><br /> **Size**<br /><br /> **Multilinha**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**|`Display`<br /><br /> **Vídeo**|
@@ -122,7 +122,7 @@ Por fim, você pode incluir uma funcionalidade adicional que permite que os usu�
 
 Adicione os controles na tabela a seguir ao formulário e defina os valores correspondentes para as respectivas propriedades.
 
-|Controle|Propriedades|Valores|
+|Controle|{1&gt;Propriedades&lt;1}|Valores|
 |-------------|----------------|------------|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`DeleteEntry`<br /><br /> **Excluir entrada**<br /><br /> `False`|
 |<xref:System.Windows.Forms.Button>|**Nome**<br /><br /> **Texto**<br /><br /> **Habilitado**|`EditEntry`<br /><br /> **Editar entrada**<br /><br /> `False`|
@@ -130,7 +130,7 @@ Adicione os controles na tabela a seguir ao formulário e defina os valores corr
 
 ### <a name="to-enable-deletion-and-modification-of-entries"></a>Para habilitar a exclusão e modificação de entradas
 
-1. Adicione o seguinte código ao evento <xref:System.Windows.Forms.Control.Click> do botão `Display` , depois de `DisplayEntry.Text = ReadString`.
+1. Adicione o seguinte código ao evento `Display` do botão <xref:System.Windows.Forms.Control.Click> , depois de `DisplayEntry.Text = ReadString`.
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 

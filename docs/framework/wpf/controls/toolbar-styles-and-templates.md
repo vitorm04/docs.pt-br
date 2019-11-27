@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="toolbar-parts"></a>Partes da barra de ferramentas  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.ToolBar>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_ToolBarPanel|<xref:System.Windows.Controls.Primitives.ToolBarPanel>|O objeto que contém os controles na <xref:System.Windows.Controls.ToolBar>.|  
 |PART_ToolBarOverflowPanel|<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|O objeto que contém os controles que estão na área de estouro do <xref:System.Windows.Controls.ToolBar>.|  

@@ -1,5 +1,5 @@
 ---
-title: Tipos de Dados
+title: Tipos de dados
 ms.date: 07/20/2015
 helpviewer_keywords:
 - data types [Visual Basic], declaring
@@ -27,7 +27,7 @@ O *tipo de dados* de um elemento de programação se refere a que tipo de dados 
 |Literal|Com um caractere de tipo literal. Consulte "Caracteres de tipo Literal" em [Caracteres de tipo](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)<br /><br /> `Dim searchChar As Char = "."`  `C`|  
 |Constante|Em uma [instrução Const](../../../../visual-basic/language-reference/statements/const-statement.md)<br /><br /> `Const`   `modulus As Single = 4.17825F`|  
 |Enumeração|Em uma [instrução Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)<br /><br /> `Public`   `Enum`   `colors`|  
-|propriedade|Em uma [instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
+|Propriedade|Em uma [instrução Property](../../../../visual-basic/language-reference/statements/property-statement.md)<br /><br /> `Property`   `region() As String`|  
 |Parâmetro de procedimento|Em uma [instrução Sub](../../../../visual-basic/language-reference/statements/sub-statement.md), [instrução Function](../../../../visual-basic/language-reference/statements/function-statement.md) ou [instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Sub addSale(ByVal`   `amount`   `As Double)`|  
 |Argumento de procedimento|No código de chamada. Cada argumento é um elemento de programação que já foi declarado ou uma expressão que contém elementos declarados<br /><br /> `subString = Left(`  `inputString`  `,`   `5`  `)`|  
 |Valor retornado do procedimento|Em uma [instrução Function](../../../../visual-basic/language-reference/statements/function-statement.md) ou [instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md)<br /><br /> `Function convert(ByVal b As Byte)`   `As String`|  
@@ -41,7 +41,7 @@ O *tipo de dados* de um elemento de programação se refere a que tipo de dados 
 - [Tipos de Dados Compostos](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Tipos genéricos no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Tipos de Valor e Tipos de Referência](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Estruturas](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Tuplas](tuples.md)
 - [Solução de problemas de Tipos de Dados](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

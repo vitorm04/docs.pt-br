@@ -1,5 +1,5 @@
 ---
-title: Orientação de migração
+title: Diretrizes de migração
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: 8abc241331b3d322763ffd67b41ff676ebc680fb
@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/21/2019
 ms.locfileid: "74283206"
 ---
-# <a name="migration-guidance"></a>Orientação de migração
+# <a name="migration-guidance"></a>Diretrizes de migração
 
 No .NET Framework 4, a Microsoft está lançando a segunda versão principal do Windows Workflow Foundation (WF). o [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi lançado no WinFX (isso incluiu os tipos nos namespaces System. Workflow.\*; agora conhecido como WF3) e aprimorado no .NET Framework 3,5. O WF3 também faz parte do .NET Framework 4, mas ele existe junto com a nova tecnologia de fluxo de trabalho (os tipos nos namespaces System. Activities.\*; referido como WF4). Ao considerar quando adotar o WF4, é importante primeiro reconhecer que você controla o tempo.  
   

@@ -49,7 +49,7 @@ Você pode substituir o comportamento padrão adicionando ou alterando os arquiv
 
 ## <a name="configuring-log-settings"></a>Definindo configurações de log
 
-The `Log` object has a default implementation that works without an application configuration file, app.config. To change the defaults, you must add a configuration file with the new settings. Para obter mais informações, consulte [Instruções passo a passo: filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
+O objeto `Log` tem uma implementação padrão que funciona sem um arquivo de configuração de aplicativo, app. config. Para alterar os padrões, você deve adicionar um arquivo de configuração com as novas configurações. Para obter mais informações, consulte [Instruções passo a passo: filtrando a saída de My.Application.Log](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md).
 
 As seções de configuração de log ficam localizadas no nó `<system.diagnostics>` no nó `<configuration>` principal do arquivo app.config. As informações de log são definidas em vários nós:
 
@@ -94,7 +94,7 @@ Quando seu aplicativo executa o código que cria uma instância de uma classe pe
 
 Em um aplicativo implantado, você habilita o código de rastreamento reconfigurando objetos de opção antes de iniciar seu aplicativo. Normalmente, isso envolve ativar e desativar os objetos de opção ou alterar os níveis de rastreamento e, então, reiniciar o aplicativo.
 
-## <a name="security-considerations"></a>Considerações sobre segurança
+## <a name="security-considerations"></a>considerações sobre segurança
 
 Considere o seguinte ao gravar dados no log:
 

@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="scrollbar-parts"></a>Partes da barra de rolagem  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.Primitives.ScrollBar>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|O contêiner para o elemento que indica a posição do <xref:System.Windows.Controls.Primitives.ScrollBar>.|  
   
@@ -33,7 +33,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|O estado padrão.|  
 |MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o controle.|  
-|Disabled|CommonStates|O controle está desabilitado.|  
+|Desabilitado|CommonStates|O controle está desabilitado.|  
 |Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  
 |InvalidFocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` e o controle tem foco.|  
 |InvalidUnfocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` e o controle não tem foco.|  

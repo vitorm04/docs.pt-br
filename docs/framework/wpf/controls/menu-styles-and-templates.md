@@ -36,7 +36,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="menuitem-parts"></a>Partes de MenuItem  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.Menu>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|A área para o submenu.|  
   

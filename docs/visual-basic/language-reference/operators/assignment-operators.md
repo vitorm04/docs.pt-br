@@ -15,7 +15,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74336547"
 ---
 # <a name="assignment-operators-visual-basic"></a>Operadores de atribuição (Visual Basic)
-The following are the assignment operators defined in Visual Basic.  
+A seguir estão os operadores de atribuição definidos em Visual Basic.  
   
  [Operador =](../../../visual-basic/language-reference/operators/assignment-operator.md)  
   
@@ -25,13 +25,13 @@ The following are the assignment operators defined in Visual Basic.
   
  [Operador /=](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
+ [Operador \\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)  
   
  [Operador +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
  [Operador -=](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)  
   
- [<\<= Operator](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
+ [Operador <\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)  
   
  [Operador >>=](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)  
   

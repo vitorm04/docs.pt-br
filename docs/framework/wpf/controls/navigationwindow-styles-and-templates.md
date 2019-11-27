@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="navigationwindow-parts"></a>Partes NavigationWindow  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Navigation.NavigationWindow>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_NavWinCP|<xref:System.Windows.Controls.ContentPresenter>|A área do conteúdo.|  
   

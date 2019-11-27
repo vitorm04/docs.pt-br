@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="combobox-parts"></a>Partes de ComboBox  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.ComboBox>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Contém o texto da <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|A lista suspensa que contém os itens na caixa de combinação.|  
@@ -35,7 +35,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
-|Disabled|CommonStates|O controle está desabilitado.|  
+|Desabilitado|CommonStates|O controle está desabilitado.|  
 |MouseOver|CommonStates|O ponteiro do mouse está sobre o controle de <xref:System.Windows.Controls.ComboBox>.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  
@@ -43,7 +43,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  
 |InvalidFocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle em foco.|  
 |InvalidUnfocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle não tem foco.|  
-|Editável|EditStates|A propriedade <xref:System.Windows.Controls.ComboBox.IsEditable%2A> é `true`.|  
+|Editable|EditStates|A propriedade <xref:System.Windows.Controls.ComboBox.IsEditable%2A> é `true`.|  
 |Não editável|EditStates|A propriedade <xref:System.Windows.Controls.ComboBox.IsEditable%2A> é `false`.|  
   
 ## <a name="comboboxitem-parts"></a>Partes de ComboBoxItem  
@@ -55,7 +55,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
-|Disabled|CommonStates|O controle está desabilitado.|  
+|Desabilitado|CommonStates|O controle está desabilitado.|  
 |MouseOver|CommonStates|O ponteiro do mouse está sobre o controle de <xref:System.Windows.Controls.ComboBox>.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  

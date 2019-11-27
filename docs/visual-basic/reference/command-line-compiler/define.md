@@ -16,7 +16,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344772"
 ---
-# <a name="-define-visual-basic"></a>-define (Visual Basic)
+# <a name="-define-visual-basic"></a>-definir (Visual Basic)
 Define as constantes de compilador condicional.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -31,15 +31,15 @@ ou
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
-|`symbol`|Necessário. O símbolo a ser definido.|  
-|`value`|Opcional. O valor para atribuir `symbol`. If `value` is a string, it must be surrounded by backslash/quotation-mark sequences (\\") instead of quotation marks. Se nenhum valor for especificado, será considerado como True.|  
+|`symbol`|Necessária. O símbolo a ser definido.|  
+|`value`|Opcional. O valor para atribuir `symbol`. Se `value` for uma cadeia de caracteres, ela deverá ser cercada por sequências de barra invertida/aspas (\\") em vez de aspas. Se nenhum valor for especificado, será considerado como True.|  
   
 ## <a name="remarks"></a>Comentários  
- The `-define` option has an effect similar to using a `#Const` preprocessor directive in your source file, except that constants defined with `-define` are public and apply to all files in the project.  
+ A opção `-define` tem um efeito semelhante a usar uma diretiva de pré-processador de `#Const` em seu arquivo de origem, exceto que as constantes definidas com `-define` são públicas e se aplicam a todos os arquivos no projeto.  
   
  Você pode usar símbolos criados por essa opção com a diretiva `#If`...`Then`...`#Else` para compilar os arquivos de origem condicionalmente.  
   
@@ -49,7 +49,7 @@ ou
   
 |Para configurar /define no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Click the **Compile** tab.<br />3.  Click **Advanced**.<br />4.  Modify the value in the **Custom Constants** box.|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2. Clique na guia **Compilar** .<br />3. clique em **avançado**.<br />4. modifique o valor na caixa **constantes personalizadas** .|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir define e usa duas constantes de compilador condicional.  

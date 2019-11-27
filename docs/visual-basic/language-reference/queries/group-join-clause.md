@@ -19,7 +19,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346850"
 ---
 # <a name="group-join-clause-visual-basic"></a>Cláusula Join Group (Visual Basic)
-Combines two collections into a single hierarchical collection. The join operation is based on matching keys.  
+Combina duas coleções em uma única coleção hierárquica. A operação de junção é baseada em chaves correspondentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,25 +33,25 @@ Group Join element [As type] In collection _
   
 |Termo|Definição|  
 |---|---|  
-|`element`|Necessário. The control variable for the collection being joined.|  
-|`type`|Opcional. O tipo de `element`. If no `type` is specified, the type of `element` is inferred from `collection`.|  
-|`collection`|Necessário. The collection to combine with the collection that is on the left side of the `Group Join` operator. A `Group Join` clause can be nested in a `Join` clause or in another `Group Join` clause.|  
-|`key1` `Equals` `key2`|Necessário. Identifies keys for the collections being joined. You must use the `Equals` operator to compare keys from the collections being joined. You can combine join conditions by using the `And` operator to identify multiple keys. The `key1` parameter must be from the collection on the left side of the `Join` operator. The `key2` parameter must be from the collection on the right side of the `Join` operator.<br /><br /> The keys used in the join condition can be expressions that include more than one item from the collection. However, each key expression can contain only items from its respective collection.|  
-|`expressionList`|Necessário. One or more expressions that identify how the groups of elements from the collection are aggregated. To identify a member name for the grouped results, use the `Group` keyword (`<alias> = Group`). You can also include aggregate functions to apply to the group.|  
+|`element`|Necessária. A variável de controle para a coleção que está sendo unida.|  
+|`type`|Opcional. O tipo de `element`. Se nenhum `type` for especificado, o tipo de `element` será inferido de `collection`.|  
+|`collection`|Necessária. A coleção a ser combinada com a coleção que está no lado esquerdo do operador de `Group Join`. Uma cláusula `Group Join` pode ser aninhada em uma cláusula `Join` ou em outra cláusula `Group Join`.|  
+|`key1` `Equals` `key2`|Necessária. Identifica as chaves para as coleções que estão sendo Unidas. Você deve usar o operador de `Equals` para comparar as chaves das coleções que estão sendo Unidas. Você pode combinar condições de junção usando o operador de `And` para identificar várias chaves. O parâmetro `key1` deve ser da coleção no lado esquerdo do operador `Join`. O parâmetro `key2` deve ser da coleção no lado direito do operador `Join`.<br /><br /> As chaves usadas na condição de junção podem ser expressões que incluem mais de um item da coleção. No entanto, cada expressão de chave pode conter apenas itens de sua respectiva coleção.|  
+|`expressionList`|Necessária. Uma ou mais expressões que identificam como os grupos de elementos da coleção são agregados. Para identificar um nome de membro para os resultados agrupados, use a palavra-chave `Group` (`<alias> = Group`). Você também pode incluir funções de agregação para aplicar ao grupo.|  
   
 ## <a name="remarks"></a>Comentários  
- The `Group Join` clause combines two collections based on matching key values from the collections being joined. The resulting collection can contain a member that references a collection of elements from the second collection that match the key value from the first collection. You can also specify aggregate functions to apply to the grouped elements from the second collection. For information about aggregate functions, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ A cláusula `Group Join` combina duas coleções com base nos valores de chave correspondentes das coleções que estão sendo Unidas. A coleção resultante pode conter um membro que faz referência a uma coleção de elementos da segunda coleção que corresponde ao valor de chave da primeira coleção. Você também pode especificar funções de agregação para aplicar aos elementos agrupados da segunda coleção. Para obter informações sobre funções de agregação, consulte [cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- Consider, for example, a collection of managers and a collection of employees. Elements from both collections have a ManagerID property that identifies the employees that report to a particular manager. The results from a join operation would contain a result for each manager and employee with a matching ManagerID value. The results from a `Group Join` operation would contain the complete list of managers. Each manager result would have a member that referenced the list of employees that were a match for the specific manager.  
+ Considere, por exemplo, uma coleção de gerentes e uma coleção de funcionários. Os elementos de ambas as coleções têm uma propriedade ManagerID que identifica os funcionários que se reportam a um gerente específico. Os resultados de uma operação de junção contêm um resultado para cada gerente e funcionário com um valor de ManagerID correspondente. Os resultados de uma operação de `Group Join` conteriam a lista completa de gerentes. Cada resultado do gerente teria um membro que referenciou a lista de funcionários que eram uma correspondência para o gerente específico.  
   
- The collection resulting from a `Group Join` operation can contain any combination of values from the collection identified in the `From` clause and the expressions identified in the `Into` clause of the `Group Join` clause. For more information about valid expressions for the `Into` clause, see [Aggregate Clause](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
+ A coleção resultante de uma `Group Join` operação pode conter qualquer combinação de valores da coleção identificada na cláusula `From` e das expressões identificadas na cláusula `Into` da cláusula `Group Join`. Para obter mais informações sobre expressões válidas para a cláusula `Into`, consulte [cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md).  
   
- A `Group Join` operation will return all results from the collection identified on the left side of the `Group Join` operator. This is true even if there are no matches in the collection being joined. This is like a `LEFT OUTER JOIN` in SQL.  
+ Uma operação `Group Join` retornará todos os resultados da coleção identificada no lado esquerdo do operador de `Group Join`. Isso é verdadeiro mesmo se não houver nenhuma correspondência na coleção que está sendo unida. Isso é como uma `LEFT OUTER JOIN` no SQL.  
   
- You can use the `Join` clause to combine collections into a single collection. This is equivalent to an `INNER JOIN` in SQL.  
+ Você pode usar a cláusula `Join` para combinar coleções em uma única coleção. Isso é equivalente a um `INNER JOIN` no SQL.  
   
 ## <a name="example"></a>Exemplo  
- The following code example joins two collections by using the `Group Join` clause.  
+ O exemplo de código a seguir une duas coleções usando a cláusula `Group Join`.  
   
  [!code-vb[VbSimpleQuerySamples#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#14)]  
   

@@ -25,34 +25,34 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351761"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Declaração de variável no Visual Basic
-You declare a variable to specify its name and characteristics. The declaration statement for variables is the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md). Its location and contents determine the variable's characteristics.  
+Você declara uma variável para especificar seu nome e suas características. A instrução de declaração para variáveis é a [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Sua localização e seu conteúdo determinam as características da variável.  
   
- For variable naming rules and considerations, see [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Para regras e considerações de nomenclatura de variáveis, consulte [nomes de elementos declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
-## <a name="declaration-levels"></a>Declaration Levels  
+## <a name="declaration-levels"></a>Níveis de declaração  
   
-### <a name="local-and-member-variables"></a>Local and Member Variables  
- A *local variable* is one that is declared within a procedure. A *member variable* is a member of a Visual Basic type; it is declared at module level, inside a class, structure, or module, but not within any procedure internal to that class, structure, or module.  
+### <a name="local-and-member-variables"></a>Variáveis locais e de membro  
+ Uma *variável local* é uma que é declarada dentro de um procedimento. Uma *variável de membro* é um membro de um tipo de Visual Basic; Ele é declarado em nível de módulo, dentro de uma classe, estrutura ou módulo, mas não dentro de nenhum procedimento interno a essa classe, estrutura ou módulo.  
   
-### <a name="shared-and-instance-variables"></a>Shared and Instance Variables  
- In a class or structure, the category of a member variable depends on whether or not it is shared. If it is declared with the [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) keyword, it is a *shared variable*, and it exists in a single copy shared among all instances of the class or structure.  
+### <a name="shared-and-instance-variables"></a>Variáveis de instância e compartilhadas  
+ Em uma classe ou estrutura, a categoria de uma variável de membro depende se ela é compartilhada ou não. Se ela for declarada com a palavra-chave [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) , ela será uma *variável compartilhada*e ela existirá em uma única cópia compartilhada entre todas as instâncias da classe ou estrutura.  
   
- Otherwise it is an *instance variable*, and a separate copy of it is created for each instance of the class or structure. A given copy of an instance variable is available only to the instance of the class or structure in which it was created. It is independent of a copy of the instance variable in any other instance of the class or structure.  
+ Caso contrário, é uma *variável de instância*e uma cópia separada dela é criada para cada instância da classe ou estrutura. Uma determinada cópia de uma variável de instância está disponível somente para a instância da classe ou estrutura na qual ela foi criada. Ele é independente de uma cópia da variável de instância em qualquer outra instância da classe ou estrutura.  
   
-## <a name="declaring-data-type"></a>Declaring Data Type  
- The [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause in the declaration statement allows you to define the data type or object type of the variable you are declaring. You can specify any of the following types for a variable:  
+## <a name="declaring-data-type"></a>Tipo de dados declarativo  
+ A [cláusula as na instrução de declaração](../../../../visual-basic/language-reference/statements/as-clause.md) permite que você defina o tipo de dados ou o tipo de objeto da variável que está declarando. Você pode especificar qualquer um dos seguintes tipos para uma variável:  
   
-- An elementary data type, such as `Boolean`, `Long`, or `Decimal`  
+- Um tipo de dados elementar, como `Boolean`, `Long`ou `Decimal`  
   
-- A composite data type, such as an array or structure  
+- Um tipo de dados composto, como uma matriz ou estrutura  
   
-- An object type, or class, defined either in your application or in another application  
+- Um tipo de objeto, ou classe, definido em seu aplicativo ou em outro aplicativo  
   
-- A .NET Framework class, such as <xref:System.Windows.Forms.Label> or <xref:System.Windows.Forms.TextBox>  
+- Uma classe .NET Framework, como <xref:System.Windows.Forms.Label> ou <xref:System.Windows.Forms.TextBox>  
   
-- An interface type, such as <xref:System.IComparable> or <xref:System.IDisposable>  
+- Um tipo de interface, como <xref:System.IComparable> ou <xref:System.IDisposable>  
   
- You can declare several variables in one statement without having to repeat the data type. In the following statements, the variables `i`, `j`, and `k` are declared as type `Integer`, `l` and `m` as `Long`, and `x` and `y` as `Single`:  
+ Você pode declarar várias variáveis em uma instrução sem precisar repetir o tipo de dados. Nas instruções a seguir, as variáveis `i`, `j`e `k` são declaradas como tipo `Integer`, `l` e `m` como `Long`e `x` e `y` como `Single`:  
   
 ```vb  
 Dim i, j, k As Integer  
@@ -61,21 +61,21 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- For more information on data types, see [Data Types](../../../../visual-basic/programming-guide/language-features/data-types/index.md). For more information on objects, see [Objects and Classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) and [Programming with Components](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
+ Para obter mais informações sobre tipos de dados, consulte [tipos de dados](../../../../visual-basic/programming-guide/language-features/data-types/index.md). Para obter mais informações sobre objetos, consulte [objetos e classes](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md) e [programação com componentes](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120)).  
   
 ## <a name="local-type-inference"></a>Inferência de tipo local  
- *Type inference* is used to determine the data types of local variables declared without an `As` clause. The compiler infers the type of the variable from the type of the initialization expression. This enables you to declare variables without explicitly stating a type. In the following example, both `num1` and `num2` are strongly typed as integers.  
+ A *inferência de tipos* é usada para determinar os tipos de dados de variáveis locais declarados sem uma cláusula `As`. O compilador infere o tipo da variável do tipo da expressão de inicialização. Isso permite que você declare variáveis sem explicitamente indicar um tipo. No exemplo a seguir, `num1` e `num2` são fortemente tipados como inteiros.  
   
  [!code-vb[VbVbalrTypeInference#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrTypeInference/VB/Class1.vb#1)]  
   
- If you want to use local type inference, `Option Infer` must be set to `On`. Para obter mais informações, consulte [Inferência de tipo de variável local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) e [Instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
+ Se você quiser usar a inferência de tipo local, `Option Infer` deverá ser definido como `On`. Para obter mais informações, consulte [Inferência de tipo de variável local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md) e [Instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).  
   
-## <a name="characteristics-of-declared-variables"></a>Characteristics of Declared Variables  
- The *lifetime* of a variable is the period of time during which it is available for use. In general, a variable exists as long as the element that declares it (such as a procedure or class) continues to exist. If the variable does not need to continue existing beyond the lifetime of its containing element, you do not need to do anything special in the declaration. If the variable needs to continue to exist longer than its containing element, you can include the `Static` or `Shared` keyword in its `Dim` statement. For more information, see [Lifetime in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
+## <a name="characteristics-of-declared-variables"></a>Características das variáveis declaradas  
+ O tempo de *vida* de uma variável é o período durante o qual ela está disponível para uso. Em geral, existe uma variável, desde que o elemento que a declara (como um procedimento ou classe) continue existindo. Se a variável não precisar continuar existente além do tempo de vida do elemento que a contém, você não precisará fazer nada de especial na declaração. Se a variável precisar continuar existindo mais do que o elemento que a contém, você poderá incluir a palavra-chave `Static` ou `Shared` em sua instrução `Dim`. Para obter mais informações, consulte [tempo de vida em Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md).  
   
- The *scope* of a variable is the set of all code that can refer to it without qualifying its name. A variable's scope is determined by where it is declared. Code located in a given region can use the variables defined in that region without having to qualify their names. For more information, see [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
+ O *escopo* de uma variável é o conjunto de todos os códigos que podem se referir a ele sem qualificar seu nome. O escopo de uma variável é determinado pelo local em que ela é declarada. O código localizado em uma determinada região pode usar as variáveis definidas nessa região sem precisar qualificar seus nomes. Para obter mais informações, consulte [escopo em Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
- A variable's *access level* is the extent of code that has permission to access it. This is determined by the access modifier (such as [Public](../../../../visual-basic/language-reference/modifiers/public.md) or [Private](../../../../visual-basic/language-reference/modifiers/private.md)) that you use in the `Dim` statement. For more information, see [Access levels in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ O nível de *acesso* de uma variável é a extensão do código que tem permissão para acessá-lo. Isso é determinado pelo modificador de acesso (como [público](../../../../visual-basic/language-reference/modifiers/public.md) ou [privado](../../../../visual-basic/language-reference/modifiers/private.md)) que você usa na instrução `Dim`. Para obter mais informações, consulte [níveis de acesso em Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Consulte também
 

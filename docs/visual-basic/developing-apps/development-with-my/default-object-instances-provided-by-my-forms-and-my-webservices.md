@@ -16,17 +16,17 @@ ms.locfileid: "74330213"
 ---
 # <a name="default-object-instances-provided-by-myforms-and-mywebservices-visual-basic"></a>Instâncias de objeto padrão fornecidas por My.Forms e My.WebServices (Visual Basic)
 
-The [My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) and [My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) objects provide access to forms, data sources, and XML Web services used by your application. They do this by providing collections of *default instances* of each of these objects.  
+Os objetos [My. Forms](../../../visual-basic/language-reference/objects/my-forms-object.md) e [My. WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md) fornecem acesso a formulários, fontes de dados e Web Services XML usados pelo seu aplicativo. Eles fazem isso fornecendo coleções de *instâncias padrão* de cada um desses objetos.  
   
-## <a name="default-instances"></a>Default Instances  
+## <a name="default-instances"></a>Instâncias padrão  
 
- A default instance is an instance of the class that is provided by the runtime and does not need to be declared and instantiated using the `Dim` and `New` statements. The following example demonstrates how you might have declared and instantiated an instance of a <xref:System.Windows.Forms.Form> class called `Form1`, and how you are now able to get a default instance of this <xref:System.Windows.Forms.Form> class through `My.Forms`.  
+ Uma instância padrão é uma instância da classe fornecida pelo tempo de execução e não precisa ser declarada e instanciada usando as instruções `Dim` e `New`. O exemplo a seguir demonstra como você pode ter declarado e instanciado uma instância de uma classe <xref:System.Windows.Forms.Form> chamada `Form1`e como agora é possível obter uma instância padrão dessa classe <xref:System.Windows.Forms.Form> por meio de `My.Forms`.  
   
  [!code-vb[VbVbcnMy#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#5)]  
   
  [!code-vb[VbVbcnMy#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMy/VB/Class1.vb#6)]  
   
- The `My.Forms` object returns a collection of default instances for every `Form` class that exists in your project. Similarly, `My.WebServices` provides a default instance of the proxy class for every Web service that you have created a reference to in your application.  
+ O objeto `My.Forms` retorna uma coleção de instâncias padrão para cada classe `Form` que existe em seu projeto. Da mesma forma, `My.WebServices` fornece uma instância padrão da classe proxy para cada serviço Web ao qual você criou uma referência em seu aplicativo.  
   
 ## <a name="see-also"></a>Consulte também
 

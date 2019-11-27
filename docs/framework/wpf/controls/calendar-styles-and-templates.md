@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="calendar-parts"></a>Partes de Calendário  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.Calendar>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_CalendarItem|<xref:System.Windows.Controls.Primitives.CalendarItem>|O mês ou ano exibido no momento no <xref:System.Windows.Controls.Calendar>.|  
 |PART_Root|<xref:System.Windows.Controls.Panel>|O painel que contém o <xref:System.Windows.Controls.Primitives.CalendarItem>.|  
@@ -39,7 +39,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="calendaritem-parts"></a>Partes de CalendarItem  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.Primitives.CalendarItem>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.FrameworkElement>|A raiz do controle.|  
 |PART_PreviousButton|<xref:System.Windows.Controls.Button>|O botão que exibe a página anterior do calendário ao ser clicado.|  
@@ -73,7 +73,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
-|Disabled|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarDayButton> está desabilitado.|  
+|Desabilitado|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarDayButton> está desabilitado.|  
 |MouseOver|CommonStates|O ponteiro do mouse está posicionado sobre o <xref:System.Windows.Controls.Primitives.CalendarDayButton>.|  
 |Pressionado|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarDayButton> é pressionado.|  
 |Selecionado|SelectionStates|O botão está selecionado.|  
@@ -83,7 +83,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Focalizado|FocusStates|O botão tem o foco.|  
 |Sem foco|FocusStates|O botão não tem o foco.|  
 |Ativo|ActiveStates|O botão está ativo.|  
-|Inativo|ActiveStates|O botão está inativo.|  
+|Inactive|ActiveStates|O botão está inativo.|  
 |RegularDay|DayStates|O botão não representa <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |Hoje|DayStates|O botão representa <xref:System.DateTime.Today%2A?displayProperty=nameWithType>.|  
 |NormalDay|BlackoutDayStates|O botão representa um dia que pode ser selecionado.|  
@@ -101,7 +101,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
-|Disabled|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarButton> está desabilitado.|  
+|Desabilitado|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarButton> está desabilitado.|  
 |MouseOver|CommonStates|O ponteiro do mouse está posicionado sobre o <xref:System.Windows.Controls.Primitives.CalendarButton>.|  
 |Pressionado|CommonStates|O <xref:System.Windows.Controls.Primitives.CalendarButton> é pressionado.|  
 |Selecionado|SelectionStates|O botão está selecionado.|  
@@ -111,7 +111,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Focalizado|FocusStates|O botão tem o foco.|  
 |Sem foco|FocusStates|O botão não tem o foco.|  
 |Ativo|ActiveStates|O botão está ativo.|  
-|Inativo|ActiveStates|O botão está inativo.|  
+|Inactive|ActiveStates|O botão está inativo.|  
 |Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  
 |InvalidFocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle em foco.|  
 |InvalidUnfocused|ValidationStates|A propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `true` tem o controle não tem foco.|  

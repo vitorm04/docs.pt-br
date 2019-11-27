@@ -9,9 +9,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346144"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>Como: fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic)
 
-Em um método assíncrono, as tarefas são iniciadas quando elas são criadas. The [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator is applied to the task at the point in the method where processing can’t continue until the task finishes. Geralmente, uma tarefa é aguardada assim que ela é criada, como mostrado no exemplo a seguir.
+Em um método assíncrono, as tarefas são iniciadas quando elas são criadas. O operador [Await](../../../../visual-basic/language-reference/operators/await-operator.md) é aplicado à tarefa no ponto do método em que o processamento não pode continuar até que a tarefa seja concluída. Geralmente, uma tarefa é aguardada assim que ela é criada, como mostrado no exemplo a seguir.
 
 ```vb
 Dim result = Await someWebAccessMethodAsync(url)
@@ -39,25 +39,25 @@ O programa a seguir inicia três downloads assíncronos na Web e, em seguida, os
 > [!NOTE]
 > Para concluir esse projeto, você precisa ter o Visual Studio 2012 ou posterior e o .NET Framework 4.5 ou posterior instalados no seu computador.
 
-For another example that starts multiple tasks at the same time, see [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
+Para outro exemplo que inicia várias tarefas ao mesmo tempo, consulte [como: estender o passo a assíncrona usando Task. WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 
 Você pode baixar o código deste exemplo de [Exemplos de código para desenvolvedores](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).
 
 ### <a name="to-set-up-the-project"></a>Para configurar o projeto
 
-1. Para configurar um aplicativo WPF, complete as etapas a seguir. You can find detailed instructions for these steps in [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
+1. Para configurar um aplicativo WPF, complete as etapas a seguir. Você pode encontrar instruções detalhadas para essas etapas no [passo a passos: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).
 
     - Crie um aplicativo WPF que contenha uma caixa de texto e um botão. Dê o nome `startButton` para o botão e `resultsTextBox`, para a caixa de texto.
 
     - Adicione uma referência para <xref:System.Net.Http>.
 
-    - In the MainWindow.xaml.vb file, add an `Imports` statement for `System.Net.Http`.
+    - No arquivo MainWindow. XAML. vb, adicione uma instrução `Imports` para `System.Net.Http`.
 
 ### <a name="to-add-the-code"></a>Para adicionar o código
 
-1. In the design window, MainWindow.xaml, double-click the button to create the `startButton_Click` event handler in MainWindow.xaml.vb.
+1. Na janela de design, MainWindow. XAML, clique duas vezes no botão para criar o manipulador de eventos `startButton_Click` em MainWindow. XAML. vb.
 
-2. Copy the following code, and paste it into the body of `startButton_Click` in MainWindow.xaml.vb.
+2. Copie o código a seguir e cole-o no corpo de `startButton_Click` em MainWindow. XAML. vb.
 
     ```vb
     resultsTextBox.Clear()
@@ -73,7 +73,7 @@ Você pode baixar o código deste exemplo de [Exemplos de código para desenvolv
 
     - O `DisplayResults` exibe o número de bytes na matriz de bytes para cada URL. Essa exibição mostra quando cada tarefa termina o download.
 
-     Copy the following methods, and paste them after the `startButton_Click` event handler in MainWindow.xaml.vb.
+     Copie os seguintes métodos e cole-os após o manipulador de eventos `startButton_Click` em MainWindow. XAML. vb.
 
     ```vb
     Private Async Function ProcessURLAsync(url As String, client As HttpClient) As Task(Of Integer)

@@ -18,7 +18,7 @@ O LINQ to XML fornece uma interface de programação XML na memória que aprovei
  [Introdução (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)  
  Fornece informações introdutórias sobre o LINQ to XML, incluindo uma visão geral conceitual e uma visão geral das classes <xref:System.Xml.Linq?displayProperty=nameWithType>.  
   
- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
+ [Guia de programação (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)  
  Fornece informações conceituais e instruções sobre como programar como LINQ to XML.  
   
  [Referência (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/reference-linq-to-xml.md)  

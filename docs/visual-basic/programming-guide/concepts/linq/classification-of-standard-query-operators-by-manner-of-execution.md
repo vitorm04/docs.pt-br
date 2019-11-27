@@ -9,12 +9,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345709"
 ---
-# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classification of Standard Query Operators by Manner of Execution (Visual Basic)
+# <a name="classification-of-standard-query-operators-by-manner-of-execution-visual-basic"></a>Classificação de operadores de consulta padrão por meio de execução (Visual Basic)
 As implementações de LINQ to Objects dos métodos de operador de consulta padrão em uma das duas maneiras principais: imediata ou adiada. Os operadores de consulta que usam a execução adiada podem ser divididos em mais duas categorias: streaming e não streaming. Se você souber como os operadores de consulta diferentes são executados, isso poderá ajudá-lo a entender os resultados que serão obtidos de uma determinada consulta. Isso é especialmente verdadeiro se a fonte de dados está sendo alterada ou se você estiver criando uma consulta sobre outra consulta. Este tópico classifica os operadores de consulta padrão de acordo com o modo de execução.  
   
 ## <a name="manners-of-execution"></a>Modos de execução  
   
-### <a name="immediate"></a>Imediato  
+### <a name="immediate"></a>Imediata  
  A execução imediata significa que a fonte de dados é lida e a operação é realizada no ponto do código em que a consulta é declarada. Todos os operadores de consulta padrão que retornam um resultado único e não enumerável são executados imediatamente.  
   
 ### <a name="deferred"></a>Adiado  
@@ -91,5 +91,5 @@ As implementações de LINQ to Objects dos métodos de operador de consulta padr
 
 - <xref:System.Linq.Enumerable>
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Query Expression Syntax for Standard Query Operators (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

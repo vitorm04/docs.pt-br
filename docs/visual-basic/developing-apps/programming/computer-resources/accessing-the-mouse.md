@@ -20,7 +20,7 @@ O objeto `My.Computer.Mouse` oferece uma maneira de localizar informações sobr
 
  Esta tabela lista tarefas associadas ao objeto `My.Computer.Mouse` e aponta para tópicos que demonstram como executar cada uma.  
   
-|Para|Consulte|  
+|{1&gt;Para&lt;1}|Consulte|  
 |--------|---------|  
 |Determinar se o mouse tem uma roda de rolagem.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
 |Determinar se os botões esquerdo e direito do mouse foram trocados|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  

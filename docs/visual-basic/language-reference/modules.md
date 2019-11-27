@@ -13,22 +13,22 @@ ms.locfileid: "74344177"
 ---
 # <a name="modules-visual-basic"></a>Módulos (Visual Basic)
 
-Visual Basic provides several modules that enable you to simplify common tasks in your code, including manipulating strings, performing mathematical calculations, getting system information, performing file and directory operations, and so on. The following table lists the modules provided by Visual Basic.  
+O Visual Basic fornece vários módulos que permitem simplificar tarefas comuns em seu código, incluindo a manipulação de cadeias de caracteres, a execução de cálculos matemáticos, obtenção de informações do sistema, execução de operações de arquivos e diretórios e assim por diante. A tabela a seguir lista os módulos fornecidos pelo Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.Constants>|Contains miscellaneous constants. Essas constantes podem ser usadas em qualquer lugar no seu código.|  
-|<xref:Microsoft.VisualBasic.ControlChars>|Contains constant control characters for printing and displaying text.|  
-|<xref:Microsoft.VisualBasic.Conversion>|Contains members that convert decimal numbers to other bases, numbers to strings, strings to numbers, and one data type to another.|  
-|<xref:Microsoft.VisualBasic.DateAndTime>|Contains members that get the current date or time, perform date calculations, return a date or time, set the date or time, or time the duration of a process.|  
-|<xref:Microsoft.VisualBasic.ErrObject>|Contains information about run-time errors and methods to raise or clear an error.|  
-|<xref:Microsoft.VisualBasic.FileSystem>|Contains members that perform file, directory or folder, and system operations.|  
-|<xref:Microsoft.VisualBasic.Financial>|Contains procedures that are used to perform financial calculations.|  
-|<xref:Microsoft.VisualBasic.Globals>|Contains information about the current scripting engine version.|  
-|<xref:Microsoft.VisualBasic.Information>|Contains the members that return, test for, or verify information such as array size, type names, and so on.|  
-|<xref:Microsoft.VisualBasic.Interaction>|Contains members interact with objects, applications, and systems.|  
-|<xref:Microsoft.VisualBasic.Strings>|Contains members that perform string operations such as reformatting strings, searching a string, getting the length of a string, and so on.|  
-|<xref:Microsoft.VisualBasic.VBMath>|Contains members perform mathematical operations.|  
+|<xref:Microsoft.VisualBasic.Constants>|Contém constantes diversas. Essas constantes podem ser usadas em qualquer lugar no seu código.|  
+|<xref:Microsoft.VisualBasic.ControlChars>|Contém caracteres de controle constante para imprimir e exibir texto.|  
+|<xref:Microsoft.VisualBasic.Conversion>|Contém membros que convertem números decimais em outras bases, números em cadeias de caracteres, cadeias de caracteres em números e um tipo de dados para outro.|  
+|<xref:Microsoft.VisualBasic.DateAndTime>|Contém membros que obtêm a data ou hora atual, executam cálculos de data, retornam uma data ou hora, definem a data ou a hora ou a hora da duração de um processo.|  
+|<xref:Microsoft.VisualBasic.ErrObject>|Contém informações sobre erros e métodos de tempo de execução para aumentar ou limpar um erro.|  
+|<xref:Microsoft.VisualBasic.FileSystem>|Contém membros que executam operações de arquivo, diretório ou pasta e sistema.|  
+|<xref:Microsoft.VisualBasic.Financial>|Contém procedimentos que são usados para executar cálculos financeiros.|  
+|<xref:Microsoft.VisualBasic.Globals>|Contém informações sobre a versão atual do mecanismo de script.|  
+|<xref:Microsoft.VisualBasic.Information>|Contém os membros que retornam, testam ou verificam informações como tamanho da matriz, nomes de tipo e assim por diante.|  
+|<xref:Microsoft.VisualBasic.Interaction>|Contém membros que interagem com objetos, aplicativos e sistemas.|  
+|<xref:Microsoft.VisualBasic.Strings>|Contém membros que executam operações de cadeia de caracteres, como reformatação de cadeias de caracteres, pesquisa de uma cadeia, obtenção do comprimento de uma cadeia de caracteres e assim por diante.|  
+|<xref:Microsoft.VisualBasic.VBMath>|Contém membros que executam operações matemáticas.|  
   
 ## <a name="see-also"></a>Consulte também
 

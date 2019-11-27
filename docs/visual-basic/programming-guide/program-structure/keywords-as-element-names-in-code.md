@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347386"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>Palavras-chave como nomes de elemento em código (Visual Basic)
-Any program element — such as a variable, class, or member — can have the same name as a restricted keyword. For example, you can create a variable named `Loop`. However, to refer to your version of it — which has the same name as the restricted `Loop` keyword — you must either precede it with a full qualification string or enclose it in square brackets (`[ ]`), as the following example shows.  
+Qualquer elemento Program, como uma variável, uma classe ou um membro, pode ter o mesmo nome que uma palavra-chave restrita. Por exemplo, você pode criar uma variável chamada `Loop`. No entanto, para se referir à sua versão dele — que tem o mesmo nome que a palavra-chave Restricted `Loop` — você deve precedê-la com uma cadeia de caracteres de qualificação completa ou colocá-la entre colchetes (`[ ]`), como mostra o exemplo a seguir.  
   
  [!code-vb[VbVbcnConventions#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#8)]  
   
- If you do not do either of these, then Visual Basic assumes use of the intrinsic `Loop` keyword and produces an error, as in the following example:  
+ Se você não fizer isso, o Visual Basic assumirá o uso da palavra-chave intrínseca `Loop` e produzirá um erro, como no exemplo a seguir:  
   
  `' The following statement causes a compiler error.`  
   
  `Loop.Visible = True`  
   
- You can use square brackets when referring to forms and controls, and when declaring a variable or defining a procedure with the same name as a restricted keyword. It can be easy to forget to qualify names or include square brackets, and thus introduce errors into your code and make it harder to read. For this reason, we recommend that you not use restricted keywords as the names of program elements. However, if a future version of Visual Basic defines a new keyword that conflicts with an existing form or control name, then you can use this technique when updating your code to work with the new version.  
+ Você pode usar colchetes ao fazer referência a formulários e controles e ao declarar uma variável ou definir um procedimento com o mesmo nome de uma palavra-chave restrita. Pode ser fácil esquecer de qualificar nomes ou incluir colchetes e, portanto, introduzir erros em seu código e torná-lo mais difícil de ler. Por esse motivo, recomendamos que você não use palavras-chave restritas como os nomes dos elementos do programa. No entanto, se uma versão futura do Visual Basic definir uma nova palavra-chave que esteja em conflito com um formulário ou nome de controle existente, você poderá usar essa técnica ao atualizar seu código para trabalhar com a nova versão.  
   
 > [!NOTE]
-> Your program also might include element names provided by other referenced assemblies. If these names conflict with restricted keywords, then placing square brackets around them causes Visual Basic to interpret them as your defined elements.  
+> Seu programa também pode incluir nomes de elementos fornecidos por outros assemblies referenciados. Se esses nomes entrarem em conflito com palavras-chave restritas, colocar colchetes em relação a eles fará com que Visual Basic interpretá-los como seus elementos definidos.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Visual Basic Naming Conventions](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
+- [Visual Basic convenções de nomenclatura](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Estrutura do Programa e Convenções de Código](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)

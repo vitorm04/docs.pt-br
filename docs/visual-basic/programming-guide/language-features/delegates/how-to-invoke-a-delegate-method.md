@@ -11,17 +11,17 @@ ms.locfileid: "74345259"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Como invocar um método delegado (Visual Basic)
 
-This example shows how to associate a method with a delegate and then invoke that method through the delegate.
+Este exemplo mostra como associar um método a um delegado e, em seguida, chamar esse método por meio do delegado.
 
-### <a name="create-the-delegate-and-matching-procedures"></a>Create the delegate and matching procedures
+### <a name="create-the-delegate-and-matching-procedures"></a>Criar o delegado e os procedimentos correspondentes
 
-1. Create a delegate named `MySubDelegate`.
+1. Crie um delegado chamado `MySubDelegate`.
 
     ```vb
     Delegate Sub MySubDelegate(ByVal x As Integer)
     ```
 
-2. Declare a class that contains a method with the same signature as the delegate.
+2. Declare uma classe que contém um método com a mesma assinatura do delegado.
 
     ```vb
     Class class1
@@ -31,7 +31,7 @@ This example shows how to associate a method with a delegate and then invoke tha
     End Class
     ```
 
-3. Define a method that creates an instance of the delegate and invokes the method associated with the delegate by calling the built-in `Invoke` method.
+3. Defina um método que cria uma instância do delegado e invoca o método associado ao delegado chamando o método interno de `Invoke`.
 
     ```vb
     Protected Sub DelegateTest()

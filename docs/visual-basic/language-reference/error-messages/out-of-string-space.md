@@ -12,13 +12,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349170"
 ---
 # <a name="out-of-string-space-visual-basic"></a>Fora do espaço da cadeia de caracteres (Visual Basic)
-With Visual Basic, you can use very large strings. However, the requirements of other programs and the way you work with your strings can still cause this error.  
+Com Visual Basic, você pode usar cadeias de caracteres muito grandes. No entanto, os requisitos de outros programas e a maneira como você trabalha com suas cadeias de caracteres ainda podem causar esse erro.  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a>Para corrigir esse erro  
   
-1. Make sure that an expression requiring temporary string creation during evaluation is not causing the error.  
+1. Certifique-se de que uma expressão que requer criação de cadeia de caracteres temporária durante a avaliação não está causando o erro.  
   
-2. Remove any unnecessary applications from memory to create more space.  
+2. Remova os aplicativos desnecessários da memória para criar mais espaço.  
   
 ## <a name="see-also"></a>Consulte também
 

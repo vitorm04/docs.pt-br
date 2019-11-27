@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335374"
 ---
 # <a name="distinct-clause-visual-basic"></a>Cláusula Distinct (Visual Basic)
-Restricts the values of the current range variable to eliminate duplicate values in subsequent query clauses.  
+Restringe os valores da variável de intervalo atual para eliminar valores duplicados em cláusulas de consulta subsequentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -25,10 +25,10 @@ Distinct
 ```  
   
 ## <a name="remarks"></a>Comentários  
- You can use the `Distinct` clause to return a list of unique items. The `Distinct` clause causes the query to ignore duplicate query results. The `Distinct` clause applies to duplicate values for all return fields specified by the `Select` clause. If no `Select` clause is specified, the `Distinct` clause is applied to the range variable for the query identified in the `From` clause. If the range variable is not an immutable type, the query will only ignore a query result if all members of the type match an existing query result.  
+ Você pode usar a cláusula `Distinct` para retornar uma lista de itens exclusivos. A cláusula `Distinct` faz com que a consulta ignore resultados de consulta duplicados. A cláusula `Distinct` se aplica a valores duplicados para todos os campos de retorno especificados pela cláusula `Select`. Se nenhuma cláusula de `Select` for especificada, a cláusula `Distinct` será aplicada à variável de intervalo para a consulta identificada na cláusula `From`. Se a variável de intervalo não for um tipo imutável, a consulta irá ignorar apenas um resultado de consulta se todos os membros do tipo corresponderem a um resultado de consulta existente.  
   
 ## <a name="example"></a>Exemplo  
- The following query expression joins a list of customers and a list of customer orders. The `Distinct` clause is included to return a list of unique customer names and order dates.  
+ A expressão de consulta a seguir une uma lista de clientes e uma lista de pedidos de clientes. A cláusula `Distinct` está incluída para retornar uma lista de nomes de clientes e datas de pedido exclusivos.  
   
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   

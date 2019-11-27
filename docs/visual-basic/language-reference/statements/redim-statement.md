@@ -34,7 +34,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346746"
 ---
 # <a name="redim-statement-visual-basic"></a>Instrução ReDim (Visual Basic)
-Reallocates storage space for an array variable.  
+Realoca espaço de armazenamento para uma variável de matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,59 +46,59 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 |Termo|Definição|  
 |----------|----------------|  
-|`Preserve`|Opcional. Modifier used to preserve the data in the existing array when you change the size of only the last dimension.|  
-|`name`|Necessário. Name of the array variable. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-|`boundlist`|Necessário. List of bounds of each dimension of the redefined array.|  
+|`Preserve`|Opcional. Modificador usado para preservar os dados na matriz existente quando você altera o tamanho da última dimensão.|  
+|`name`|Necessária. Nome da variável de matriz. Consulte [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`boundlist`|Necessária. Lista de limites de cada dimensão da matriz redefinida.|  
   
 ## <a name="remarks"></a>Comentários  
- You can use the `ReDim` statement to change the size of one or more dimensions of an array that has already been declared. If you have a large array and you no longer need some of its elements, `ReDim` can free up memory by reducing the array size. On the other hand, if your array needs more elements, `ReDim` can add them.  
+ Você pode usar a instrução `ReDim` para alterar o tamanho de uma ou mais dimensões de uma matriz que já foi declarada. Se você tiver uma matriz grande e não precisar mais de alguns de seus elementos, `ReDim` poderá liberar memória reduzindo o tamanho da matriz. Por outro lado, se sua matriz precisar de mais elementos, `ReDim` poderá adicioná-los.  
   
- The `ReDim` statement is intended only for arrays. It's not valid on scalars (variables that contain only a single value), collections, or structures. Note that if you declare a variable to be of type `Array`, the `ReDim` statement doesn't have sufficient type information to create the new array.  
+ A instrução `ReDim` é destinada apenas a matrizes. Não é válido em escalares (variáveis que contêm apenas um único valor), coleções ou estruturas. Observe que, se você declarar uma variável para ser do tipo `Array`, a instrução `ReDim` não terá informações de tipo suficientes para criar a nova matriz.  
   
- You can use `ReDim` only at procedure level. Therefore, the declaration context for the variable must be a procedure; it can't be a source file, a namespace, an interface, a class, a structure, a module, or a block. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Você pode usar `ReDim` somente no nível do procedimento. Portanto, o contexto da declaração para a variável deve ser um procedimento; Ele não pode ser um arquivo de origem, um namespace, uma interface, uma classe, uma estrutura, um módulo ou um bloco. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
   
 ## <a name="rules"></a>Regras  
   
-- **Multiple Variables.** You can resize several array variables in the same declaration statement and specify the `name` and `boundlist` parts for each variable. Multiple variables are separated by commas.  
+- **Várias variáveis.** Você pode redimensionar várias variáveis de matriz na mesma instrução de declaração e especificar o `name` e `boundlist` partes para cada variável. Várias variáveis são separadas por vírgulas.  
   
-- **Array Bounds.** Each entry in `boundlist` can specify the lower and upper bounds of that dimension. The lower bound is always 0 (zero). The upper bound is the highest possible index value for that dimension, not the length of the dimension (which is the upper bound plus one). The index for each dimension can vary from 0 through its upper bound value.  
+- **Limites de matriz.** Cada entrada no `boundlist` pode especificar os limites inferior e superior dessa dimensão. O limite inferior é sempre 0 (zero). O limite superior é o valor de índice mais alto possível para essa dimensão, não o comprimento da dimensão (que é o limite superior mais um). O índice de cada dimensão pode variar de 0 ao seu valor de limite superior.  
   
-     The number of dimensions in `boundlist` must match the original number of dimensions (rank) of the array.  
+     O número de dimensões em `boundlist` deve corresponder ao número original de dimensões (classificação) da matriz.  
   
-- **Data Types.** The `ReDim` statement cannot change the data type of an array variable or its elements.  
+- **Tipos de dados.** A instrução `ReDim` não pode alterar o tipo de dados de uma variável de matriz ou seus elementos.  
   
-- **Initialization.** The `ReDim` statement cannot provide new initialization values for the array elements.  
+- **Initialization.** A instrução `ReDim` não pode fornecer novos valores de inicialização para os elementos da matriz.  
   
-- **Rank.** The `ReDim` statement cannot change the rank (the number of dimensions) of the array.  
+- **Fique.** A instrução `ReDim` não pode alterar a classificação (o número de dimensões) da matriz.  
   
-- **Resizing with Preserve.** If you use `Preserve`, you can resize only the last dimension of the array. For every other dimension, you must specify the bound of the existing array.  
+- **Redimensionando com Preserve.** Se você usar `Preserve`, poderá redimensionar apenas a última dimensão da matriz. Para todas as outras dimensões, você deve especificar o limite da matriz existente.  
   
-     For example, if your array has only one dimension, you can resize that dimension and still preserve all the contents of the array, because you are changing the last and only dimension. However, if your array has two or more dimensions, you can change the size of only the last dimension if you use `Preserve`.  
+     Por exemplo, se a matriz tiver apenas uma dimensão, você poderá redimensionar essa dimensão e ainda preservar todo o conteúdo da matriz, pois você está alterando a última e a única dimensão. No entanto, se sua matriz tiver duas ou mais dimensões, você poderá alterar o tamanho da última dimensão se usar `Preserve`.  
   
-- **Properties.** You can use `ReDim` on a property that holds an array of values.  
+- **Properties.** Você pode usar `ReDim` em uma propriedade que contém uma matriz de valores.  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Array Replacement.** `ReDim` releases the existing array and creates a new array with the same rank. The new array replaces the released array in the array variable.  
+- **Substituição de matriz.** `ReDim` libera a matriz existente e cria uma nova matriz com a mesma classificação. A nova matriz substitui a matriz liberada na variável de matriz.  
   
-- **Initialization without Preserve.** If you do not specify `Preserve`, `ReDim` initializes the elements of the new array by using the default value for their data type.  
+- **Inicialização sem preservar.** Se você não especificar `Preserve`, `ReDim` inicializará os elementos da nova matriz usando o valor padrão para seu tipo de dados.  
   
-- **Initialization with Preserve.** If you specify `Preserve`, Visual Basic copies the elements from the existing array to the new array.  
+- **Inicialização com Preserve.** Se você especificar `Preserve`, Visual Basic copiará os elementos da matriz existente para a nova matriz.  
   
 ## <a name="example"></a>Exemplo  
- The following example increases the size of the last dimension of a dynamic array without losing any existing data in the array, and then decreases the size with partial data loss. Finally, it decreases the size back to its original value and reinitializes all the array elements.  
+ O exemplo a seguir aumenta o tamanho da última dimensão de uma matriz dinâmica sem perder os dados existentes na matriz e, em seguida, diminui o tamanho com perda de dados parcial. Por fim, ele diminui o tamanho de volta para seu valor original e reinicializa todos os elementos da matriz.  
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
   
- The `Dim` statement creates a new array with three dimensions. Each dimension is declared with a bound of 10, so the array index for each dimension can range from 0 through 10. In the following discussion, the three dimensions are referred to as layer, row, and column.  
+ A instrução `Dim` cria uma nova matriz com três dimensões. Cada dimensão é declarada com um limite de 10, portanto, o índice de matriz para cada dimensão pode variar de 0 a 10. Na discussão a seguir, as três dimensões são referidas como camada, linha e coluna.  
   
- The first `ReDim` creates a new array which replaces the existing array in variable `intArray`. `ReDim` copies all the elements from the existing array into the new array. It also adds 10 more columns to the end of every row in every layer and initializes the elements in these new columns to 0 (the default value of `Integer`, which is the element type of the array).  
+ O primeiro `ReDim` cria uma nova matriz que substitui a matriz existente na variável `intArray`. `ReDim` copia todos os elementos da matriz existente para a nova matriz. Ele também adiciona mais 10 colunas ao final de cada linha em cada camada e inicializa os elementos nessas novas colunas como 0 (o valor padrão de `Integer`, que é o tipo de elemento da matriz).  
   
- The second `ReDim` creates another new array and copies all the elements that fit. However, five columns are lost from the end of every row in every layer. This is not a problem if you have finished using these columns. Reducing the size of a large array can free up memory that you no longer need.  
+ O segundo `ReDim` cria outra nova matriz e copia todos os elementos que se ajustam. No entanto, cinco colunas são perdidas do final de cada linha em cada camada. Isso não será um problema se você tiver terminado de usar essas colunas. Reduzir o tamanho de uma matriz grande pode liberar memória que você não precisa mais.  
   
- The third `ReDim` creates another new array and removes another five columns from the end of every row in every layer. This time it does not copy any existing elements. This statement reverts the array to its original size. Because the statement doesn't include the `Preserve` modifier, it sets all array elements to their original default values.  
+ O terceiro `ReDim` cria outra nova matriz e remove outras cinco colunas do final de cada linha em cada camada. Desta vez, ele não copia nenhum elemento existente. Essa instrução reverte a matriz para seu tamanho original. Como a instrução não inclui o modificador de `Preserve`, ela define todos os elementos de matriz para seus valores padrão originais.  
   
- For additional examples, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Para obter exemplos adicionais, consulte [matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="see-also"></a>Consulte também
 

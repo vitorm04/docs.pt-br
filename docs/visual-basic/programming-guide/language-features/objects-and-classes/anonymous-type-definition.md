@@ -13,15 +13,15 @@ ms.locfileid: "74344926"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>Definição do tipo anônimo (Visual Basic)
 
-In response to the declaration of an instance of an anonymous type, the compiler creates a new class definition that contains the specified properties for the type.
+Em resposta à declaração de uma instância de um tipo anônimo, o compilador cria uma nova definição de classe que contém as propriedades especificadas para o tipo.
 
-## <a name="compiler-generated-code"></a>Compiler-Generated Code
+## <a name="compiler-generated-code"></a>Código gerado pelo compilador
 
-For the following definition of `product`, the compiler creates a new class definition that contains properties `Name`, `Price`, and `OnHand`.
+Para a seguinte definição de `product`, o compilador cria uma nova definição de classe que contém propriedades `Name`, `Price`e `OnHand`.
 
 [!code-vb[VbVbalrAnonymousTypes#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#25)]
 
-The class definition contains property definitions similar to the following. Notice that there is no `Set` method for the key properties. The values of key properties are read-only.
+A definição de classe contém definições de propriedade semelhantes às seguintes. Observe que não há nenhum método de `Set` para as propriedades de chave. Os valores das propriedades de chave são somente leitura.
 
 ```vb
 Public Class $Anonymous1
@@ -52,36 +52,36 @@ Public Class $Anonymous1
 End Class
 ```
 
-In addition, anonymous type definitions contain a parameterless constructor. Constructors that require parameters are not permitted.
+Além disso, as definições de tipo anônimo contêm um construtor sem parâmetros. Os construtores que exigem parâmetros não são permitidos.
 
-If an anonymous type declaration contains at least one key property, the type definition overrides three members inherited from <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>, and <xref:System.Object.ToString%2A>. If no key properties are declared, only <xref:System.Object.ToString%2A> is overridden. The overrides provide the following functionality:
+Se uma declaração de tipo anônimo contiver pelo menos uma propriedade de chave, a definição de tipo substituirá três membros herdados de <xref:System.Object>: <xref:System.Object.Equals%2A>, <xref:System.Object.GetHashCode%2A>e <xref:System.Object.ToString%2A>. Se nenhuma propriedade de chave for declarada, somente <xref:System.Object.ToString%2A> será substituído. As substituições fornecem a seguinte funcionalidade:
 
-- `Equals` returns `True` if two anonymous type instances are the same instance, or if they meet the following conditions:
+- `Equals` retornará `True` se duas instâncias de tipo anônimo forem a mesma instância ou se atenderem às seguintes condições:
 
-  - They have the same number of properties.
+  - Eles têm o mesmo número de propriedades.
 
-  - The properties are declared in the same order, with the same names and the same inferred types. Name comparisons are not case-sensitive.
+  - As propriedades são declaradas na mesma ordem, com os mesmos nomes e os mesmos tipos inferidos. Comparações de nome não diferenciam maiúsculas de minúsculas.
 
-  - At least one of the properties is a key property, and the `Key` keyword is applied to the same properties.
+  - Pelo menos uma das propriedades é uma propriedade de chave e a palavra-chave `Key` é aplicada às mesmas propriedades.
 
-  - Comparison of each corresponding pair of key properties returns `True`.
+  - A comparação de cada par correspondente de propriedades de chave retorna `True`.
 
-    For example, in the following examples, `Equals` returns `True` only for `employee01` and `employee08`. The comment before each line specifies the reason why the new instance does not match `employee01`.
+    Por exemplo, nos exemplos a seguir, `Equals` retorna `True` somente para `employee01` e `employee08`. O comentário antes de cada linha especifica o motivo pelo qual a nova instância não corresponde `employee01`.
 
     [!code-vb[VbVbalrAnonymousTypes#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#24)]
 
-- `GetHashcode` provides an appropriately unique GetHashCode algorithm. The algorithm uses only the key properties to compute the hash code.
+- `GetHashcode` fornece um algoritmo GetHashCode adequadamente exclusivo. O algoritmo usa apenas as propriedades de chave para calcular o código hash.
 
-- `ToString` returns a string of concatenated property values, as shown in the following example. Both key and non-key properties are included.
+- `ToString` retorna uma cadeia de caracteres de valores de propriedade concatenados, conforme mostrado no exemplo a seguir. As propriedades Key e non-key são incluídas.
 
   [!code-vb[VbVbalrAnonymousTypes#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#29)]
 
-Explicitly named properties of an anonymous type cannot conflict with these generated methods. That is, you cannot use `.Equals`, `.GetHashCode`, or `.ToString` to name a property.
+As propriedades nomeadas explicitamente de um tipo anônimo não podem entrar em conflito com esses métodos gerados. Ou seja, você não pode usar `.Equals`, `.GetHashCode`ou `.ToString` para nomear uma propriedade.
 
-Anonymous type definitions that include at least one key property also implement the <xref:System.IEquatable%601?displayProperty=nameWithType> interface, where `T` is the type of the anonymous type.
+Definições de tipo anônimo que incluem pelo menos uma propriedade de chave também implementam a interface <xref:System.IEquatable%601?displayProperty=nameWithType>, em que `T` é o tipo do tipo anônimo.
 
 > [!NOTE]
-> Anonymous type declarations create the same anonymous type only if they occur in the same assembly, their properties have the same names and the same inferred types, the properties are declared in the same order, and the same properties are marked as key properties.
+> Declarações de tipo anônimo criam o mesmo tipo anônimo somente se eles ocorrerem no mesmo assembly, suas propriedades têm os mesmos nomes e os mesmos tipos inferidos, as propriedades são declaradas na mesma ordem e as mesmas propriedades são marcadas como propriedades de chave.
 
 ## <a name="see-also"></a>Consulte também
 

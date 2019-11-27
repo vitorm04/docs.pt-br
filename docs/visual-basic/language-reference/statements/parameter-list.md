@@ -19,7 +19,7 @@ ms.locfileid: "74346478"
 ---
 # <a name="parameter-list-visual-basic"></a>Lista de parâmetros (Visual Basic)
 
-Specifies the parameters a procedure expects when it is called. Multiple parameters are separated by commas. The following is the syntax for one parameter.
+Especifica os parâmetros que um procedimento espera quando é chamado. Vários parâmetros são separados por vírgulas. Veja a seguir a sintaxe de um parâmetro.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -31,62 +31,62 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## <a name="parts"></a>Partes
 
 `attributelist`  
-Opcional. List of attributes that apply to this parameter. You must enclose the [Attribute List](../../../visual-basic/language-reference/statements/attribute-list.md) in angle brackets ("`<`" and "`>`").
+Opcional. Lista de atributos que se aplicam a esse parâmetro. Você deve colocar a [lista de atributos](../../../visual-basic/language-reference/statements/attribute-list.md) entre colchetes angulares ("`<`" e "`>`").
 
 `Optional`  
-Opcional. Specifies that this parameter is not required when the procedure is called.
+Opcional. Especifica que esse parâmetro não é necessário quando o procedimento é chamado.
 
 `ByVal`  
-Opcional. Specifies that the procedure cannot replace or reassign the variable element underlying the corresponding argument in the calling code.
+Opcional. Especifica que o procedimento não pode substituir ou reatribuir o elemento Variable subjacente ao argumento correspondente no código de chamada.
 
 `ByRef`  
-Opcional. Specifies that the procedure can modify the underlying variable element in the calling code the same way the calling code itself can.
+Opcional. Especifica que o procedimento pode modificar o elemento variável subjacente no código de chamada da mesma maneira que o próprio código de chamada pode.
 
 `ParamArray`  
-Opcional. Specifies that the last parameter in the parameter list is an optional array of elements of the specified data type. This lets the calling code pass an arbitrary number of arguments to the procedure.
+Opcional. Especifica que o último parâmetro na lista de parâmetros é uma matriz opcional de elementos do tipo de dados especificado. Isso permite que o código de chamada passe um número arbitrário de argumentos para o procedimento.
 
 `parametername`  
-Necessário. Name of the local variable representing the parameter.
+Necessária. Nome da variável local que representa o parâmetro.
 
 `parametertype`  
-Required if `Option Strict` is `On`. Data type of the local variable representing the parameter.
+Necessário se `Option Strict` for `On`. Tipo de dados da variável local que representa o parâmetro.
 
 `defaultvalue`  
-Required for `Optional` parameters. Any constant or constant expression that evaluates to the data type of the parameter. If the type is `Object`, or a class, interface, array, or structure, the default value can only be `Nothing`.
+Necessário para parâmetros de `Optional`. Qualquer expressão constante ou constante que seja avaliada como o tipo de dados do parâmetro. Se o tipo for `Object`ou uma classe, interface, matriz ou estrutura, o valor padrão só poderá ser `Nothing`.
 
 ## <a name="remarks"></a>Comentários
 
-Parameters are surrounded by parentheses and separated by commas. A parameter can be declared with any data type. If you do not specify `parametertype`, it defaults to `Object`.
+Os parâmetros são circundados por parênteses e separados por vírgulas. Um parâmetro pode ser declarado com qualquer tipo de dados. Se você não especificar `parametertype`, o padrão será `Object`.
 
-When the calling code calls the procedure, it passes an *argument* to each required parameter. For more information, see [Differences Between Parameters and Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
+Quando o código de chamada chama o procedimento, ele passa um *argumento* para cada parâmetro necessário. Para obter mais informações, consulte [diferenças entre parâmetros e argumentos](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md).
 
-The argument the calling code passes to each parameter is a pointer to an underlying element in the calling code. If this element is *nonvariable* (a constant, literal, enumeration, or expression), it is impossible for any code to change it. If it is a *variable* element (a declared variable, field, property, array element, or structure element), the calling code can change it. For more information, see [Differences Between Modifiable and Nonmodifiable Arguments](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
+O argumento que o código de chamada passa para cada parâmetro é um ponteiro para um elemento subjacente no código de chamada. Se esse elemento não for *variável* (uma constante, literal, enumeração ou expressão), será impossível para qualquer código alterá-lo. Se for um elemento *variável* (uma variável declarada, um campo, uma propriedade, um elemento de matriz ou um elemento de estrutura), o código de chamada poderá alterá-lo. Para obter mais informações, consulte [diferenças entre argumentos modificáveis e não modificáveis](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md).
 
-If a variable element is passed `ByRef`, the procedure can change it as well. For more information, see [Differences Between Passing an Argument By Value and By Reference](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).
+Se um elemento variable for passado `ByRef`, o procedimento também poderá alterá-lo. Para obter mais informações, consulte [diferenças entre passar um argumento por valor e por referência](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md).
 
 ## <a name="rules"></a>Regras
 
-- **Parentheses.** If you specify a parameter list, you must enclose it in parentheses. If there are no parameters, you can still use parentheses enclosing an empty list. This improves the readability of your code by clarifying that the element is a procedure.
+- **Parênteses.** Se você especificar uma lista de parâmetros, deverá colocá-la entre parênteses. Se não houver parâmetros, você ainda poderá usar parênteses delimitando uma lista vazia. Isso melhora a legibilidade do seu código, esclarecendo que o elemento é um procedimento.
 
-- **Optional Parameters.** If you use the `Optional` modifier on a parameter, all subsequent parameters in the list must also be optional and be declared by using the `Optional` modifier.
+- **Parâmetros opcionais.** Se você usar o modificador `Optional` em um parâmetro, todos os parâmetros subsequentes na lista também deverão ser opcionais e declarados usando o modificador `Optional`.
 
-     Every optional parameter declaration must supply the `defaultvalue` clause.
+     Cada declaração de parâmetro opcional deve fornecer a cláusula `defaultvalue`.
 
-     For more information, see [Optional Parameters](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
+     Para obter mais informações, consulte [parâmetros opcionais](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md).
 
-- **Parameter Arrays.** You must specify `ByVal` for a `ParamArray` parameter.
+- **Matrizes de parâmetros.** Você deve especificar `ByVal` para um parâmetro `ParamArray`.
 
-     You cannot use both `Optional` and `ParamArray` in the same parameter list.
+     Você não pode usar `Optional` e `ParamArray` na mesma lista de parâmetros.
 
-     For more information, see [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
+     Para obter mais informações, consulte [matrizes de parâmetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).
 
-- **Passing Mechanism.** The default mechanism for every argument is `ByVal`, which means the procedure cannot change the underlying variable element. However, if the element is a reference type, the procedure can modify the contents or members of the underlying object, even though it cannot replace or reassign the object itself.
+- **Mecanismo de passagem.** O mecanismo padrão para cada argumento é `ByVal`, o que significa que o procedimento não pode alterar o elemento de variável subjacente. No entanto, se o elemento for um tipo de referência, o procedimento poderá modificar o conteúdo ou os membros do objeto subjacente, mesmo que ele não possa substituir ou reatribuir o próprio objeto.
 
-- **Parameter Names.** If the parameter's data type is an array, follow `parametername` immediately by parentheses. For more information on parameter names, see [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+- **Nomes de parâmetro.** Se o tipo de dados do parâmetro for uma matriz, siga `parametername` imediatamente por parênteses. Para obter mais informações sobre nomes de parâmetro, consulte [nomes de elemento declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 ## <a name="example"></a>Exemplo
 
-The following example shows a `Function` procedure that defines two parameters.
+O exemplo a seguir mostra um procedimento `Function` que define dois parâmetros.
 
 [!code-vb[VbVbalrStatements#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#2)]
 

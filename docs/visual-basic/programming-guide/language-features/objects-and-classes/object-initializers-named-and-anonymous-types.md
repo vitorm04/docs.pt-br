@@ -18,74 +18,74 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346128"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicializadores de objeto: tipos nomeados e anônimos (Visual Basic)
-Object initializers enable you to specify properties for a complex object by using a single expression. They can be used to create instances of named types and of anonymous types.  
+Os inicializadores de objeto permitem especificar propriedades para um objeto complexo usando uma única expressão. Eles podem ser usados para criar instâncias de tipos nomeados e de tipos anônimos.  
   
-## <a name="declarations"></a>Declarations  
- Declarations of instances of named and anonymous types can look almost identical, but their effects are not the same. Each category has abilities and restrictions of its own. The following example shows a convenient way to declare and initialize an instance of a named class, `Customer`, by using an object initializer list. Notice that the name of the class is specified after the keyword `New`.  
+## <a name="declarations"></a>{1&gt;{2&gt;Declarações&lt;2}&lt;1}  
+ Declarações de instâncias de tipos nomeados e anônimos podem parecer quase idênticas, mas seus efeitos não são os mesmos. Cada categoria tem habilidades e restrições próprias. O exemplo a seguir mostra uma maneira conveniente de declarar e inicializar uma instância de uma classe nomeada, `Customer`, usando uma lista de inicializadores de objeto. Observe que o nome da classe é especificado após a palavra-chave `New`.  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
   
- An anonymous type has no usable name. Therefore an instantiation of an anonymous type cannot include a class name.  
+ Um tipo anônimo não tem nome utilizável. Portanto, uma instanciação de um tipo anônimo não pode incluir um nome de classe.  
   
  [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
- The requirements and results of the two declarations are not the same. For `namedCust`, a `Customer` class that has a `Name` property must already exist, and the declaration creates an instance of that class. For `anonymousCust`, the compiler defines a new class that has one property, a string called `Name`, and creates a new instance of that class.  
+ Os requisitos e os resultados das duas declarações não são os mesmos. Por `namedCust`, uma classe `Customer` que tem uma propriedade `Name` já deve existir e a declaração cria uma instância dessa classe. Por `anonymousCust`, o compilador define uma nova classe que tem uma propriedade, uma cadeia de caracteres chamada `Name`e cria uma nova instância dessa classe.  
   
-## <a name="named-types"></a>Named Types  
- Object initializers provide a simple way to call the constructor of a type and then set the values of some or all properties in a single statement. The compiler invokes the appropriate constructor for the statement: the parameterless constructor if no arguments are presented, or a parameterized constructor if one or more arguments are sent. After that, the specified properties are initialized in the order in which they are presented in the initializer list.  
+## <a name="named-types"></a>Tipos nomeados  
+ Os inicializadores de objeto fornecem uma maneira simples de chamar o construtor de um tipo e, em seguida, definir os valores de algumas ou todas as propriedades em uma única instrução. O compilador invoca o construtor apropriado para a instrução: o construtor sem parâmetros se nenhum argumento for apresentado ou um construtor com parâmetros se um ou mais argumentos forem enviados. Depois disso, as propriedades especificadas são inicializadas na ordem em que são apresentadas na lista de inicializadores.  
   
- Each initialization in the initializer list consists of the assignment of an initial value to a member of the class. The names and data types of the members are determined when the class is defined. In the following examples, the `Customer` class must exist, and must have members named `Name` and `City` that can accept string values.  
+ Cada inicialização na lista de inicializadores consiste na atribuição de um valor inicial a um membro da classe. Os nomes e tipos de dados dos membros são determinados quando a classe é definida. Nos exemplos a seguir, a classe `Customer` deve existir e deve ter membros chamados `Name` e `City` que podem aceitar valores de cadeia de caracteres.  
   
  [!code-vb[VbVbalrObjectInit#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#3)]  
   
- Alternatively, you can obtain the same result by using the following code:  
+ Como alternativa, você pode obter o mesmo resultado usando o seguinte código:  
   
  [!code-vb[VbVbalrObjectInit#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#4)]  
   
- Each of these declarations is equivalent to the following example, which creates a `Customer` object by using the parameterless constructor, and then specifies initial values for the `Name` and `City` properties by using a `With` statement.  
+ Cada uma dessas declarações é equivalente ao exemplo a seguir, que cria um objeto `Customer` usando o construtor sem parâmetros e, em seguida, especifica os valores iniciais para as propriedades `Name` e `City` usando uma instrução `With`.  
   
  [!code-vb[VbVbalrObjectInit#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#5)]  
   
- If the `Customer` class contains a parameterized constructor that enables you to send in a value for `Name`, for example, you can also declare and initialize a `Customer` object in the following ways:  
+ Se a classe `Customer` contiver um construtor com parâmetros que permita que você envie um valor para `Name`, por exemplo, você também poderá declarar e inicializar um objeto `Customer` das seguintes maneiras:  
   
  [!code-vb[VbVbalrObjectInit#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#6)]  
   
- You do not have to initialize all properties, as the following code shows.  
+ Você não precisa inicializar todas as propriedades, como mostra o código a seguir.  
   
  [!code-vb[VbVbalrObjectInit#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#7)]  
   
- However, the initialization list cannot be empty. Uninitialized properties retain their default values.  
+ No entanto, a lista de inicialização não pode ficar vazia. As propriedades não inicializadas retêm seus valores padrão.  
   
-### <a name="type-inference-with-named-types"></a>Type Inference with Named Types  
- You can shorten the code for the declaration of `cust1` by combining object initializers and local type inference. This enables you to omit the `As` clause in the variable declaration. The data type of the variable is inferred from the type of the object that is created by the assignment. In the following example, the type of `cust6` is `Customer`.  
+### <a name="type-inference-with-named-types"></a>Inferência de tipos com tipos nomeados  
+ Você pode encurtar o código para a declaração de `cust1` combinando inicializadores de objeto e inferência de tipo local. Isso permite omitir a cláusula `As` na declaração de variável. O tipo de dados da variável é inferido a partir do tipo do objeto criado pela atribuição. No exemplo a seguir, o tipo de `cust6` é `Customer`.  
   
  [!code-vb[VbVbalrObjectInit#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#8)]  
   
-### <a name="remarks-about-named-types"></a>Remarks About Named Types  
+### <a name="remarks-about-named-types"></a>Comentários sobre tipos nomeados  
   
-- A class member cannot be initialized more than one time in the object initializer list. The declaration of `cust7` causes an error.  
+- Um membro de classe não pode ser inicializado mais de uma vez na lista de inicializadores de objeto. A declaração de `cust7` causa um erro.  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
-- A member can be used to initialize itself or another field. If a member is accessed before it has been initialized, as in the following declaration for `cust8`, the default value will be used. Remember that when a declaration that uses an object initializer is processed, the first thing that happens is that the appropriate constructor is invoked. After that, the individual fields in the initializer list are initialized. In the following examples, the default value for `Name` is assigned for `cust8`, and an initialized value is assigned in `cust9`.  
+- Um membro pode ser usado para inicializar a si mesmo ou outro campo. Se um membro for acessado antes de ser inicializado, como na declaração a seguir para `cust8`, o valor padrão será usado. Lembre-se de que quando uma declaração que usa um inicializador de objeto é processada, a primeira coisa que acontece é que o construtor apropriado é invocado. Depois disso, os campos individuais na lista de inicializadores são inicializados. Nos exemplos a seguir, o valor padrão para `Name` é atribuído para `cust8`e um valor inicializado é atribuído em `cust9`.  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
-     The following example uses the parameterized constructor from `cust3` and `cust4` to declare and initialize `cust10` and `cust11`.  
+     O exemplo a seguir usa o construtor com parâmetros de `cust3` e `cust4` para declarar e inicializar `cust10` e `cust11`.  
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
-- Object initializers can be nested. In the following example, `AddressClass` is a class that has two properties, `City` and `State`, and the `Customer` class has an `Address` property that is an instance of `AddressClass`.  
+- Os inicializadores de objeto podem ser aninhados. No exemplo a seguir, `AddressClass` é uma classe que tem duas propriedades, `City` e `State`, e a classe `Customer` tem uma propriedade `Address` que é uma instância de `AddressClass`.  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
-- The initialization list cannot be empty.  
+- A lista de inicialização não pode ficar vazia.  
   
-- The instance being initialized cannot be of type Object.  
+- A instância que está sendo inicializada não pode ser do tipo Object.  
   
-- Class members being initialized cannot be shared members, read-only members, constants, or method calls.  
+- Membros de classe que estão sendo inicializados não podem ser membros compartilhados, membros somente leitura, constantes ou chamadas de método.  
   
-- Class members being initialized cannot be indexed or qualified. The following examples raise compiler errors:  
+- Membros de classe que estão sendo inicializados não podem ser indexados ou qualificados. Os exemplos a seguir geram erros do compilador:  
   
      `'' Not valid.`  
   
@@ -94,38 +94,38 @@ Object initializers enable you to specify properties for a complex object by usi
      `' Dim c2 = New Customer with {.Address.City = "Springfield"}`  
   
 ## <a name="anonymous-types"></a>Tipos anônimos  
- Anonymous types use object initializers to create instances of new types that you do not explicitly define and name. Instead, the compiler generates a type according to the properties you designate in the object initializer list. Because the name of the type is not specified, it is referred to as an *anonymous type*. For example, compare the following declaration to the earlier one for `cust6`.  
+ Os tipos anônimos usam inicializadores de objeto para criar instâncias de novos tipos que você não define explicitamente e nomear. Em vez disso, o compilador gera um tipo de acordo com as propriedades que você designa na lista de inicializadores de objeto. Como o nome do tipo não é especificado, ele é conhecido como um *tipo anônimo*. Por exemplo, compare a seguinte declaração com a anterior para `cust6`.  
   
  [!code-vb[VbVbalrObjectInit#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#13)]  
   
- The only difference syntactically is that no name is specified after `New` for the data type. However, what happens is quite different. The compiler defines a new anonymous type that has two properties, `Name` and `City`, and creates an instance of it with the specified values. Type inference determines the types of `Name` and `City` in the example to be strings.  
+ A única diferença sintaticamente é que nenhum nome é especificado após `New` para o tipo de dados. No entanto, o que acontece é bastante diferente. O compilador define um novo tipo anônimo que tem duas propriedades, `Name` e `City`e cria uma instância dela com os valores especificados. A inferência de tipos determina os tipos de `Name` e `City` no exemplo como cadeias de caracteres.  
   
 > [!CAUTION]
-> The name of the anonymous type is generated by the compiler, and may vary from compilation to compilation. Your code should not use or rely on the name of an anonymous type.  
+> O nome do tipo anônimo é gerado pelo compilador e pode variar de compilação para compilação. Seu código não deve usar ou depender do nome de um tipo anônimo.  
   
- Because the name of the type is not available, you cannot use an `As` clause to declare `cust13`. Its type must be inferred. Without using late binding, this limits the use of anonymous types to local variables.  
+ Como o nome do tipo não está disponível, você não pode usar uma cláusula `As` para declarar `cust13`. Seu tipo deve ser inferido. Sem usar a ligação tardia, isso limita o uso de tipos anônimos a variáveis locais.  
   
- Anonymous types provide critical support for [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries. For more information about the use of anonymous types in queries, see [Anonymous Types](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) and [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Tipos anônimos fornecem suporte crítico para consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações sobre o uso de tipos anônimos em consultas, consulte [tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
-### <a name="remarks-about-anonymous-types"></a>Remarks About Anonymous Types  
+### <a name="remarks-about-anonymous-types"></a>Comentários sobre tipos anônimos  
   
-- Typically, all or most of the properties in an anonymous type declaration will be key properties, which are indicated by typing the keyword `Key` in front of the property name.  
+- Normalmente, todas ou a maioria das propriedades em uma declaração de tipo anônimo serão Propriedades de chave, que são indicadas digitando-se a palavra-chave `Key` na frente do nome da propriedade.  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
-     For more information about key properties, see [Key](../../../../visual-basic/language-reference/modifiers/key.md).  
+     Para obter mais informações sobre as propriedades de chave, consulte [chave](../../../../visual-basic/language-reference/modifiers/key.md).  
   
-- Like named types, initializer lists for anonymous type definitions must declare at least one property.  
+- Como tipos nomeados, listas de inicializadores para definições de tipo anônimo devem declarar pelo menos uma propriedade.  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
-- When an instance of an anonymous type is declared, the compiler generates a matching anonymous type definition. The names and data types of the properties are taken from the instance declaration, and are included by the compiler in the definition. The properties are not named and defined in advance, as they would be for a named type. Their types are inferred. You cannot specify the data types of the properties by using an `As` clause.  
+- Quando uma instância de um tipo anônimo é declarada, o compilador gera uma definição de tipo anônimo correspondente. Os nomes e tipos de dados das propriedades são obtidos da declaração de instância e são incluídos pelo compilador na definição. As propriedades não são nomeadas e definidas com antecedência, como seriam para um tipo nomeado. Seus tipos são inferidos. Você não pode especificar os tipos de dados das propriedades usando uma cláusula `As`.  
   
-- Anonymous types can also establish the names and values of their properties in several other ways. For example, an anonymous type property can take both the name and the value of a variable, or the name and value of a property of another object.  
+- Os tipos anônimos também podem estabelecer os nomes e valores de suas propriedades de várias maneiras. Por exemplo, uma propriedade de tipo anônimo pode pegar o nome e o valor de uma variável, ou o nome e o valor de uma propriedade de outro objeto.  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   
-     For more information about the options for defining properties in anonymous types, see [How to: Infer Property Names and Types in Anonymous Type Declarations](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
+     Para obter mais informações sobre as opções para definir propriedades em tipos anônimos, consulte [como: inferir nomes e tipos de propriedade em declarações de tipo anônimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
 ## <a name="see-also"></a>Consulte também
 

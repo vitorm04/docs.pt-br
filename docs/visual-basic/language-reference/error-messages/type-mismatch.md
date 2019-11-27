@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346665"
 ---
 # <a name="type-mismatch-visual-basic"></a>Tipos incompatíveis (Visual Basic)
-You attempted to convert a value to another type in a way that is not valid.  
+Você tentou converter um valor em outro tipo de uma forma que não é válida.  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a>Para corrigir esse erro  
   
-1. Check the assignment to make sure it is valid.  
+1. Verifique a atribuição para certificar-se de que ela é válida.  
   
-2. Make sure you did not pass an object to a procedure that expects a single property or value.  
+2. Certifique-se de que você não passou um objeto para um procedimento que espera uma única propriedade ou valor.  
   
-3. Make sure you did not use a module or project name where an expression was expected.  
+3. Certifique-se de que você não usou um nome de módulo ou de projeto onde era esperada uma expressão.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -30,7 +30,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Normal|CommonStates|O estado padrão.|  
 |MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o controle.|  
 |Pressionado|CommonStates|O controle é pressionado.|  
-|Disabled|CommonStates|O controle está desabilitado.|  
+|Desabilitado|CommonStates|O controle está desabilitado.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  
 |Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  

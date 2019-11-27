@@ -13,47 +13,47 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346259"
 ---
 # <a name="using-regular-expressions-with-the-maskedtextbox-control-in-visual-basic"></a>Usando expressões regulares com o controle MaskedTextBox no Visual Basic
-This example demonstrates how to convert simple regular expressions to work with the <xref:System.Windows.Forms.MaskedTextBox> control.  
+Este exemplo demonstra como converter expressões regulares simples para trabalhar com o controle <xref:System.Windows.Forms.MaskedTextBox>.  
   
-## <a name="description-of-the-masking-language"></a>Description of the Masking Language  
- The standard <xref:System.Windows.Forms.MaskedTextBox> masking language is based on the one used by the `Masked Edit` control in Visual Basic 6.0 and should be familiar to users migrating from that platform.  
+## <a name="description-of-the-masking-language"></a>Descrição da linguagem de mascaramento  
+ A linguagem de mascaramento de <xref:System.Windows.Forms.MaskedTextBox> padrão é baseada na usada pelo controle de `Masked Edit` no Visual Basic 6,0 e deve ser familiar aos usuários que estão migrando dessa plataforma.  
   
- The <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property of the <xref:System.Windows.Forms.MaskedTextBox> control specifies what input mask to use. The mask must be a string composed of one or more of the masking elements from the following table.  
+ A propriedade <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> do controle de <xref:System.Windows.Forms.MaskedTextBox> especifica qual máscara de entrada usar. A máscara deve ser uma cadeia de caracteres composta de um ou mais elementos de mascaramento da tabela a seguir.  
   
-|Masking element|Descrição|Regular expression element|  
+|Elemento de mascaramento|Descrição|Elemento de expressão regular|  
 |---------------------|-----------------|--------------------------------|  
-|0|Any single digit between 0 and 9. Entry required.|\d|  
-|9|Digit or space. Entry optional.|[ \d]?|  
-|#|Digit or space. Entry optional. If this position is left blank in the mask, it will be rendered as a space. Plus (+) and minus (-) signs are allowed.|[ \d+-]?|  
-|L|ASCII letter. Entry required.|[a-zA-Z]|  
-|?|ASCII letter. Entry optional.|[a-zA-Z]?|  
-|&|Caractere. Entry required.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
-|C|Caractere. Entry optional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
-|Um|Alphanumeric. Entry optional.|\W|  
-|.|Culture-appropriate decimal placeholder.|Não disponível.|  
-|,|Culture-appropriate thousands placeholder.|Não disponível.|  
-|:|Culture-appropriate time separator.|Não disponível.|  
-|/|Culture-appropriate date separator.|Não disponível.|  
-|$|Culture-appropriate currency symbol.|Não disponível.|  
-|\<|Converts all characters that follow to lowercase.|Não disponível.|  
-|>|Converts all characters that follow to uppercase.|Não disponível.|  
-|&#124;|Undoes a previous shift up or shift down.|Não disponível.|  
-|&#92;|Escapes a mask character, turning it into a literal. "\\\\" is the escape sequence for a backslash.|&#92;|  
-|All other characters.|Literals. All non-mask elements will appear as themselves within <xref:System.Windows.Forms.MaskedTextBox>.|All other characters.|  
+|0|Qualquer dígito único entre 0 e 9. Entrada necessária.|\d|  
+|9|Dígito ou espaço. Entrada opcional.|[ \d]?|  
+|#|Dígito ou espaço. Entrada opcional. Se essa posição for deixada em branco na máscara, ela será renderizada como um espaço. São permitidos sinais de mais (+) e de menos (-).|[ \d+-]?|  
+|L|Letra ASCII. Entrada necessária.|[a-zA-Z]|  
+|?|Letra ASCII. Entrada opcional.|[a-zA-Z]?|  
+|&|Caractere. Entrada necessária.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]|  
+|C|Caractere. Entrada opcional.|[\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}]?|  
+|A|Alfanumérico. Entrada opcional.|\W|  
+|.|Espaço reservado decimal adequado à cultura.|Não disponível.|  
+|,|Espaço reservado para milhares apropriados de cultura.|Não disponível.|  
+|:|Separador de tempo adequado à cultura.|Não disponível.|  
+|/|Separador de data adequado à cultura.|Não disponível.|  
+|$|Símbolo de moeda apropriado para a cultura.|Não disponível.|  
+|\<|Converte todos os caracteres que seguem para minúsculas.|Não disponível.|  
+|>|Converte todos os caracteres que seguem para letras maiúsculas.|Não disponível.|  
+|&#124;|Desfaz um deslocamento anterior ou deslocado para baixo.|Não disponível.|  
+|&#92;|Escapa um caractere de máscara, transformando-o em um literal. "\\\\" é a sequência de escape para uma barra invertida.|&#92;|  
+|Todos os outros caracteres.|Literais. Todos os elementos sem máscara aparecerão como eles mesmos dentro <xref:System.Windows.Forms.MaskedTextBox>.|Todos os outros caracteres.|  
   
- The decimal (.), thousandths (,), time (:), date (/), and currency ($) symbols default to displaying those symbols as defined by the application's culture. You can force them to display symbols for another culture by using the <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A> property.  
+ Os símbolos decimal (.), milésimos (,), tempo (:), data (/) e moeda ($) são padrão para exibir esses símbolos, conforme definido pela cultura do aplicativo. Você pode forçá-los a Exibir símbolos para outra cultura usando a propriedade <xref:System.Windows.Forms.MaskedTextBox.FormatProvider%2A>.  
   
-## <a name="regular-expressions-and-masks"></a>Regular Expressions and Masks  
- Although you can use regular expressions and masks to validate user input, they are not completely equivalent. Regular expressions can express more complex patterns than masks, but masks can express the same information more succinctly and in a culturally relevant format.  
+## <a name="regular-expressions-and-masks"></a>Expressões regulares e máscaras  
+ Embora você possa usar expressões regulares e máscaras para validar a entrada do usuário, elas não são completamente equivalentes. As expressões regulares podem expressar padrões mais complexos do que as máscaras, mas as máscaras podem expressar as mesmas informações de forma mais sucinta e em um formato culturalmente relevante.  
   
- The following table compares four regular expressions and the equivalent mask for each.  
+ A tabela a seguir compara quatro expressões regulares e a máscara equivalente para cada uma.  
   
-|Expressão regular|Máscara|Anotações|  
+|Expressão Regular|Máscara|{1&gt;Observações&lt;1}|  
 |------------------------|----------|-----------|  
-|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|The `/` character in the mask is a logical date separator, and it will appear to the user as the date separator appropriate to the application's current culture.|  
-|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|A date (day, month abbreviation, and year) in United States format in which the three-letter month abbreviation is displayed with an initial uppercase letter followed by two lowercase letters.|  
-|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|United States phone number, area code optional. If the user does not wish to enter the optional characters, she can either enter spaces or place the mouse pointer directly at the position in the mask represented by the first 0.|  
-|`$\d{6}.00`|`$999,999.00`|A currency value in the range of 0 to 999999. The currency, thousandth, and decimal characters will be replaced at run-time with their culture-specific equivalents.|  
+|`\d{2}/\d{2}/\d{4}`|`00/00/0000`|O `/` caractere na máscara é um separador de data lógico e aparecerá para o usuário como o separador de data apropriado para a cultura atual do aplicativo.|  
+|`\d{2}-[A-Z][a-z]{2}-\d{4}`|`00->L<LL-0000`|Uma data (dia, mês abreviação e ano) no formato Estados Unidos no qual a abreviação de mês de três letras é exibida com uma letra maiúscula inicial seguida por duas letras minúsculas.|  
+|`(\(\d{3}\)-)?\d{3}-d{4}`|`(999)-000-0000`|Número de telefone Estados Unidos, código de área opcional. Se o usuário não quiser inserir os caracteres opcionais, ele poderá inserir espaços ou colocar o ponteiro do mouse diretamente na posição na máscara representada pelo primeiro 0.|  
+|`$\d{6}.00`|`$999,999.00`|Um valor de moeda no intervalo de 0 a 999999. A moeda, os milésimos e os caracteres decimais serão substituídos em tempo de execução com seus equivalentes específicos à cultura.|  
   
 ## <a name="see-also"></a>Consulte também
 

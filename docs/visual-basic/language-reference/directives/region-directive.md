@@ -19,7 +19,7 @@ ms.locfileid: "74343787"
 ---
 # <a name="region-directive"></a>Diretiva #Region
 
-Collapses and hides sections of code in Visual Basic files.  
+Recolhe e oculta seções de código em Visual Basic arquivos.  
   
 ## <a name="syntax"></a>Sintaxe  
 
@@ -32,16 +32,16 @@ Collapses and hides sections of code in Visual Basic files.
   
 |Termo|Definição|  
 |---|---|  
-|`identifier_string`|Necessário. String that acts as the title of a region when it is collapsed. Regions are collapsed by default.|  
-|`#End Region`|Terminates the `#Region` block.|  
+|`identifier_string`|Necessária. Cadeia de caracteres que atua como o título de uma região quando ela é recolhida. As regiões são recolhidas por padrão.|  
+|`#End Region`|Encerra o bloco de `#Region`.|  
   
 ## <a name="remarks"></a>Comentários  
 
- Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor. You can place, or *nest*, regions within other regions to group similar regions together.  
+ Use a diretiva `#Region` para especificar um bloco de código para expandir ou recolher ao usar o recurso de estrutura de tópicos do editor de Visual Studio Code. Você pode posicionar ou *aninhar*regiões em outras regiões para agrupar regiões semelhantes.  
   
 ## <a name="example"></a>Exemplo  
 
- This example uses the `#Region` directive.  
+ Este exemplo usa a diretiva `#Region`.  
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   

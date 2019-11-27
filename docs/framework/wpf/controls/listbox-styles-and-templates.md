@@ -43,7 +43,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
 |MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o controle.|  
-|Disabled|CommonStates|O item está desabilitado.|  
+|Desabilitado|CommonStates|O item está desabilitado.|  
 |Focalizado|FocusStates|O item tem o foco.|  
 |Sem foco|FocusStates|O item não tem foco.|  
 |Não selecionado|SelectionStates|O item não está selecionado.|  

@@ -14,37 +14,37 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348607"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Como determinar se dois objetos são idênticos (Visual Basic)
-In Visual Basic, two variable references are considered identical if their pointers are the same, that is, if both variables point to the same class instance in memory. For example, in a Windows Forms application, you might want to make a comparison to determine whether the current instance (`Me`) is the same as a particular instance, such as `Form2`.  
+Em Visual Basic, duas referências de variáveis são consideradas idênticas se seus ponteiros forem iguais, ou seja, se ambas as variáveis apontarem para a mesma instância de classe na memória. Por exemplo, em um aplicativo Windows Forms, talvez você queira fazer uma comparação para determinar se a instância atual (`Me`) é igual a uma instância específica, como `Form2`.  
   
- Visual Basic provides two operators to compare pointers. The [Is Operator](../../../../visual-basic/language-reference/operators/is-operator.md) returns `True` if the objects are identical, and the [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) returns `True` if they are not.  
+ Visual Basic fornece dois operadores para comparar ponteiros. O [operador is](../../../../visual-basic/language-reference/operators/is-operator.md) retornará `True` se os objetos forem idênticos e o [operador IsNot](../../../../visual-basic/language-reference/operators/isnot-operator.md) retornar `True` se não forem.  
   
-## <a name="determining-if-two-objects-are-identical"></a>Determining if Two Objects Are Identical  
+## <a name="determining-if-two-objects-are-identical"></a>Determinando se dois objetos são idênticos  
   
-#### <a name="to-determine-if-two-objects-are-identical"></a>To determine if two objects are identical  
+#### <a name="to-determine-if-two-objects-are-identical"></a>Para determinar se dois objetos são idênticos  
   
-1. Set up a `Boolean` expression to test the two objects.  
+1. Configure uma expressão de `Boolean` para testar os dois objetos.  
   
-2. In your testing expression, use the `Is` operator with the two objects as operands.  
+2. Em sua expressão de teste, use o operador `Is` com os dois objetos como operandos.  
   
-     `Is` returns `True` if the objects point to the same class instance.  
+     `Is` retornará `True` se os objetos apontarem para a mesma instância de classe.  
   
-## <a name="determining-if-two-objects-are-not-identical"></a>Determining if Two Objects Are Not Identical  
- Sometimes you want to perform an action if the two objects are not identical, and it can be awkward to combine `Not` and `Is`, for example `If Not obj1 Is obj2`. In such a case you can use the `IsNot` operator.  
+## <a name="determining-if-two-objects-are-not-identical"></a>Determinando se dois objetos não são idênticos  
+ Às vezes, você deseja executar uma ação se os dois objetos não forem idênticos, e pode ser estranho combinar `Not` e `Is`, por exemplo `If Not obj1 Is obj2`. Nesse caso, você pode usar o operador de `IsNot`.  
   
-#### <a name="to-determine-if-two-objects-are-not-identical"></a>To determine if two objects are not identical  
+#### <a name="to-determine-if-two-objects-are-not-identical"></a>Para determinar se dois objetos não são idênticos  
   
-1. Set up a `Boolean` expression to test the two objects.  
+1. Configure uma expressão de `Boolean` para testar os dois objetos.  
   
-2. In your testing expression, use the `IsNot` operator with the two objects as operands.  
+2. Em sua expressão de teste, use o operador `IsNot` com os dois objetos como operandos.  
   
-     `IsNot` returns `True` if the objects do not point to the same class instance.  
+     `IsNot` retornará `True` se os objetos não apontarem para a mesma instância de classe.  
   
 ## <a name="example"></a>Exemplo  
- The following example tests pairs of `Object` variables to see if they point to the same class instance.  
+ O exemplo a seguir testa pares de `Object` variáveis para ver se eles apontam para a mesma instância de classe.  
   
  [!code-vb[VbVbalrKeywords#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class7.vb#14)]  
   
- The preceding example displays the following output.  
+ O exemplo anterior exibe a saída a seguir.  
   
  `objA different from objB? True`  
   
