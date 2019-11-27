@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432551"
 ---
 # <a name="imetadataemitdefinefield-method"></a>Método IMetaDataEmit::DefineField
-Creates a definition for a field with the specified metadata signature, and gets a token to that field definition.  
+Cria uma definição para um campo com a assinatura de metadados especificada e Obtém um token para essa definição de campo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,38 +43,38 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>Parâmetros  
  `td`  
- [in] The `mdTypeDef` token for the enclosing class or interface.  
+ no O token de `mdTypeDef` para a classe ou a interface de circunscrição.  
   
  `szName`  
- [in] The field name in Unicode.  
+ no O nome do campo em Unicode.  
   
  `dwFieldFlags`  
- [in] The field attributes. This is a bitmask of `CorFieldAttr` values.  
+ no Os atributos do campo. Este é um bitmask de valores de `CorFieldAttr`.  
   
  `pvSigBlob`  
- [in] The field signature as a BLOB.  
+ no A assinatura de campo como um BLOB.  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ no A contagem de bytes em `pvSigBlob`.  
   
  `dwCPlusTypeFlag`  
- [in] The `ELEMENT_TYPE_` *\** for the constant value. This is a `CorElementType` value. If not defining a constant value for the field, use `ELEMENT_TYPE_END`.  
+ no O `ELEMENT_TYPE_` *\** para o valor constante. Esse é um valor `CorElementType`. Se não estiver definindo um valor constante para o campo, use `ELEMENT_TYPE_END`.  
   
  `pValue`  
- [in] The constant value for the field.  
+ no O valor constante para o campo.  
   
  `cchValue`  
- [in] The size in (Unicode) characters of `pValue`.  
+ no O tamanho em caracteres (Unicode) de `pValue`.  
   
  `pmd`  
- [out] The `mdFieldDef` token assigned.  
+ fora O token de `mdFieldDef` atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

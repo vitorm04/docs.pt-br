@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426831"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Método ICorProfilerInfo2::DoStackSnapshot
-Walks the managed frames on the stack for the specified thread, and sends information to the profiler through a callback.  
+Percorre os quadros gerenciados na pilha para o thread especificado e envia informações para o criador de perfil por meio de um retorno de chamada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,68 +39,68 @@ HRESULT DoStackSnapshot(
   
 ## <a name="parameters"></a>Parâmetros  
  `thread`  
- [in] The ID of the target thread.  
+ no A ID do thread de destino.  
   
- Passing null in `thread` yields a snapshot of the current thread. If a `ThreadID` of a different thread is passed, the common language runtime (CLR) suspends that thread, performs the snapshot, and resumes.  
+ Passar NULL em `thread` gera um instantâneo do thread atual. Se um `ThreadID` de um thread diferente for passado, o Common Language Runtime (CLR) suspenderá esse thread, executará o instantâneo e será retomado.  
   
  `callback`  
- [in] A pointer to the implementation of the [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) method, which is called by the CLR to provide the profiler with information on each managed frame and each run of unmanaged frames.  
+ no Um ponteiro para a implementação do método [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) , que é chamado pelo CLR para fornecer ao criador de perfil informações sobre cada quadro gerenciado e cada execução de quadros não gerenciados.  
   
- The `StackSnapshotCallback` method is implemented by the profiler writer.  
+ O método `StackSnapshotCallback` é implementado pelo gravador do criador de perfil.  
   
  `infoFlags`  
- [in] A value of the [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) enumeration, which specifies the amount of data to be passed back for each frame by `StackSnapshotCallback`.  
+ no Um valor da enumeração [COR_PRF_SNAPSHOT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-snapshot-info-enumeration.md) , que especifica a quantidade de dados a serem passados de volta para cada quadro por `StackSnapshotCallback`.  
   
  `clientData`  
- [in] A pointer to the client data, which is passed straight through to the `StackSnapshotCallback` callback function.  
+ no Um ponteiro para os dados do cliente, que é passado diretamente para a função de retorno de chamada `StackSnapshotCallback`.  
   
  `context`  
- [in] A pointer to a Win32 `CONTEXT` structure, which is used to seed the stack walk. The Win32 `CONTEXT` structure contains values of the CPU registers and represents the state of the CPU at a particular moment in time.  
+ no Um ponteiro para uma estrutura de `CONTEXT` do Win32, que é usado para propagar a movimentação da pilha. A estrutura de `CONTEXT` do Win32 contém valores dos registros de CPU e representa o estado da CPU em um determinado momento no tempo.  
   
- The seed helps the CLR determine where to begin the stack walk, if the top of the stack is unmanaged helper code; otherwise, the seed is ignored. A seed must be supplied for an asynchronous walk. If you are doing a synchronous walk, no seed is necessary.  
+ A semente ajuda o CLR a determinar onde começar a movimentação da pilha, se a parte superior da pilha for um código auxiliar não gerenciado; caso contrário, a semente será ignorada. Uma semente deve ser fornecida para uma movimentação assíncrona. Se você estiver fazendo uma movimentação síncrona, nenhuma semente será necessária.  
   
- The `context` parameter is valid only if the COR_PRF_SNAPSHOT_CONTEXT flag was passed in the `infoFlags` parameter.  
+ O parâmetro `context` é válido somente se o sinalizador COR_PRF_SNAPSHOT_CONTEXT foi passado no parâmetro `infoFlags`.  
   
  `contextSize`  
- [in] The size of the `CONTEXT` structure, which is referenced by the `context` parameter.  
+ no O tamanho da estrutura de `CONTEXT`, que é referenciada pelo parâmetro `context`.  
   
 ## <a name="remarks"></a>Comentários  
- Passing null for `thread` yields a snapshot of the current thread. Snapshots can be taken of other threads only if the target thread is suspended at the time.  
+ Passar NULL por `thread` produz um instantâneo do thread atual. Os instantâneos podem ser tirados de outros threads somente se o thread de destino for suspenso no momento.  
   
- When the profiler wants to walk the stack, it calls `DoStackSnapshot`. Before the CLR returns from that call, it calls your `StackSnapshotCallback` several times, once for each managed frame (or run of unmanaged frames) on the stack. When unmanaged frames are encountered, you must walk them yourself.  
+ Quando o criador de perfil deseja percorrer a pilha, ele chama `DoStackSnapshot`. Antes que o CLR retorne dessa chamada, ele chama o `StackSnapshotCallback` várias vezes, uma vez para cada quadro gerenciado (ou execução de quadros não gerenciados) na pilha. Quando são encontrados quadros não gerenciados, você mesmo deve acompanhá-los.  
   
- The order in which the stack is walked is the reverse of how the frames were pushed onto the stack: leaf (last-pushed) frame first, main (first-pushed) frame last.  
+ A ordem na qual a pilha é movimentada é o inverso de como os quadros foram enviados para a pilha: quadro (último a ser enviado) primeiro, principal (primeiro a ser enviado).  
   
- For more information about how to program the profiler to walk managed stacks, see [Profiler Stack Walking in the .NET Framework 2.0: Basics and Beyond](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Para obter mais informações sobre como programar o criador de perfil para movimentar pilhas gerenciadas, consulte [movimentação de pilha do profiler no .NET Framework 2,0: Noções básicas e além disso](https://go.microsoft.com/fwlink/?LinkId=73638).  
   
- A stack walk can be synchronous or asynchronous, as explained in the following sections.  
+ Uma movimentação de pilha pode ser síncrona ou assíncrona, conforme explicado nas seções a seguir.  
   
-## <a name="synchronous-stack-walk"></a>Synchronous Stack Walk  
- A synchronous stack walk involves walking the stack of the current thread in response to a callback. It does not require seeding or suspending.  
+## <a name="synchronous-stack-walk"></a>Movimentação de pilha síncrona  
+ Uma movimentação de pilha síncrona envolve percorrer a pilha do thread atual em resposta a um retorno de chamada. Ele não requer propagação ou suspensão.  
   
- You make a synchronous call when, in response to the CLR calling one of your profiler's [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (or [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) methods, you call `DoStackSnapshot` to walk the stack of the current thread. This is useful when you want to see what the stack looks like at a notification such as [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). You just call `DoStackSnapshot` from within your `ICorProfilerCallback` method, passing null in the `context` and `thread` parameters.  
+ Você faz uma chamada síncrona quando, em resposta ao CLR chamando um dos métodos [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) (ou [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)) de seu criador de perfil, você chama `DoStackSnapshot` para percorrer a pilha do thread atual. Isso é útil quando você deseja ver qual é a aparência da pilha em uma notificação como [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md). Basta chamar `DoStackSnapshot` de dentro de seu método `ICorProfilerCallback`, passando NULL nos parâmetros `context` e `thread`.  
   
-## <a name="asynchronous-stack-walk"></a>Asynchronous Stack Walk  
- An asynchronous stack walk entails walking the stack of a different thread, or walking the stack of the current thread, not in response to a callback, but by hijacking the current thread's instruction pointer. An asynchronous walk requires a seed if the top of the stack is unmanaged code that is not part of a platform invoke (PInvoke) or COM call, but helper code in the CLR itself. For example, code that does just-in-time (JIT) compiling or garbage collection is helper code.  
+## <a name="asynchronous-stack-walk"></a>Movimentação de pilha assíncrona  
+ Uma movimentação de pilha assíncrona envolve a movimentação da pilha de um thread diferente ou a movimentação da pilha do thread atual, não em resposta a um retorno de chamada, mas ao seqüestrar o ponteiro de instrução do thread atual. Uma movimentação assíncrona exigirá uma semente se a parte superior da pilha for um código não gerenciado que não faz parte de uma chamada de plataforma (PInvoke) ou de chamadas COM, mas o código auxiliar no próprio CLR. Por exemplo, o código que faz compilação JIT (just-in-time) ou coleta de lixo é o código auxiliar.  
   
- You obtain a seed by directly suspending the target thread and walking its stack yourself, until you find the topmost managed frame. After the target thread is suspended, get the target thread's current register context. Next, determine whether the register context points to unmanaged code by calling [ICorProfilerInfo::GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) — if it returns a `FunctionID` equal to zero, the frame is unmanaged code. Now, walk the stack until you reach the first managed frame, and then calculate the seed context based on the register context for that frame.  
+ Você Obtém uma semente suspendendo diretamente o thread-alvo e movimentando sua pilha por conta própria até encontrar o quadro gerenciado superior. Depois que o thread de destino for suspenso, obtenha o contexto de registro atual do thread de destino. Em seguida, determine se o contexto de registro aponta para código não gerenciado chamando [ICorProfilerInfo:: GetFunctionFromIP](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getfunctionfromip-method.md) — se ele retornar um `FunctionID` igual a zero, o quadro será um código não gerenciado. Agora, percorra a pilha até atingir o primeiro quadro gerenciado e, em seguida, calcule o contexto de semente com base no contexto de registro desse quadro.  
   
- Call `DoStackSnapshot` with your seed context to begin the asynchronous stack walk. If you do not supply a seed, `DoStackSnapshot` might skip managed frames at the top of the stack and, consequently, will give you an incomplete stack walk. If you do supply a seed, it must point to JIT-compiled or Native Image Generator (Ngen.exe)-generated code; otherwise, `DoStackSnapshot` returns the failure code, CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
+ Chame `DoStackSnapshot` com o contexto de semente para iniciar a movimentação de pilha assíncrona. Se você não fornecer uma semente, `DoStackSnapshot` poderá ignorar os quadros gerenciados na parte superior da pilha e, consequentemente, fornecerá uma movimentação de pilha incompleta. Se você fornecer uma semente, ele deverá apontar para código gerado por JIT ou gerador de imagem nativa (NGen. exe); caso contrário, `DoStackSnapshot` retornará o código de falha, CORPROF_E_STACKSNAPSHOT_UNMANAGED_CTX.  
   
- Asynchronous stack walks can easily cause deadlocks or access violations, unless you follow these guidelines:  
+ As movimentações assíncronas podem causar facilmente deadlocks ou violações de acesso, a menos que você siga estas diretrizes:  
   
-- When you directly suspend threads, remember that only a thread that has never run managed code can suspend another thread.  
+- Quando você suspende threads diretamente, lembre-se de que apenas um thread que nunca executou código gerenciado pode suspender outro thread.  
   
-- Always block in your [ICorProfilerCallback::ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) callback until that thread's stack walk is complete.  
+- Bloquear sempre em seu retorno de chamada [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) até que a movimentação da pilha desse thread seja concluída.  
   
-- Do not hold a lock while your profiler calls into a CLR function that can trigger a garbage collection. That is, do not hold a lock if the owning thread might make a call that triggers a garbage collection.  
+- Não mantenha um bloqueio enquanto o criador de perfil chamar uma função CLR que possa disparar uma coleta de lixo. Ou seja, não mantenha um bloqueio se o thread de propriedade puder fazer uma chamada que dispara uma coleta de lixo.  
   
- There is also a risk of deadlock if you call `DoStackSnapshot` from a thread that your profiler has created so that you can walk the stack of a separate target thread. The first time the thread you created enters certain `ICorProfilerInfo*` methods (including `DoStackSnapshot`), the CLR will perform per-thread, CLR-specific initialization on that thread. If your profiler has suspended the target thread whose stack you are trying to walk, and if that target thread happened to own a lock necessary for performing this per-thread initialization, a deadlock will occur. To avoid this deadlock, make an initial call into `DoStackSnapshot` from your profiler-created thread to walk a separate target thread, but do not suspend the target thread first. This initial call ensures that the per-thread initialization can complete without deadlock. If `DoStackSnapshot` succeeds and reports at least one frame, after that point, it will be safe for that profiler-created thread to suspend any target thread and call `DoStackSnapshot` to walk the stack of that target thread.  
+ Também há um risco de deadlock se você chamar `DoStackSnapshot` de um thread que seu criador de perfil criou para que você possa percorrer a pilha de um thread-alvo separado. Na primeira vez que o thread que você criou insere determinados métodos de `ICorProfilerInfo*` (incluindo `DoStackSnapshot`), o CLR executará a inicialização específica do CLR por thread nesse thread. Se o seu criador de perfil tiver suspenso o thread de destino cuja pilha você está tentando percorrer e se esse thread de destino tiver causado um bloqueio necessário para executar essa inicialização por thread, ocorrerá um deadlock. Para evitar esse deadlock, faça uma chamada inicial em `DoStackSnapshot` de seu thread criado pelo criador de perfil para percorrer um thread de destino separado, mas não suspenda o thread-alvo primeiro. Essa chamada inicial garante que a inicialização por thread possa ser concluída sem deadlock. Se `DoStackSnapshot` tiver sucesso e reportar pelo menos um quadro, depois desse ponto, será seguro que esse thread criado pelo criador de perfil suspenda qualquer thread de destino e chame `DoStackSnapshot` para percorrer a pilha do thread-alvo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

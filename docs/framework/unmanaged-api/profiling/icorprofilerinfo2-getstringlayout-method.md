@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431408"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>Método ICorProfilerInfo2::GetStringLayout
-Gets information about the layout of a string object. This method is deprecated in the .NET Framework 4, and is superseded by the [ICorProfilerInfo3::GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) method.  
+Obtém informações sobre o layout de um objeto de cadeia de caracteres. Esse método é preterido no .NET Framework 4 e é substituído pelo método [ICorProfilerInfo3:: GetStringLayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,32 +36,32 @@ HRESULT GetStringLayout(
   
 ## <a name="parameters"></a>Parâmetros  
  `pBufferLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string. The length is stored as a `DWORD`.  
+ fora Um ponteiro para o deslocamento do local, relativo ao ponteiro de `ObjectID`, que armazena o comprimento da cadeia de caracteres. O comprimento é armazenado como um `DWORD`.  
   
 > [!NOTE]
-> This parameter returns the length of the string itself, not the length of the buffer. The length of the buffer is no longer available.  
+> Esse parâmetro retorna o comprimento da cadeia de caracteres em si, não o comprimento do buffer. O comprimento do buffer não está mais disponível.  
   
  `PStringLengthOffset`  
- [out] A pointer to the offset of the location, relative to the `ObjectID` pointer, that stores the length of the string itself. The length is stored as a `DWORD`.  
+ fora Um ponteiro para o deslocamento do local, relativo ao ponteiro de `ObjectID`, que armazena o comprimento da própria cadeia de caracteres. O comprimento é armazenado como um `DWORD`.  
   
  `pBufferOffset`  
- [out] A pointer to the offset of the buffer, relative to the `ObjectID` pointer, that stores the string of wide characters.  
+ fora Um ponteiro para o deslocamento do buffer, relativo ao ponteiro de `ObjectID`, que armazena a cadeia de caracteres de largura inteira.  
   
 ## <a name="remarks"></a>Comentários  
- The `GetStringLayout` method gets the offsets, relative to the `ObjectID` pointer, of the locations in which the following are stored:  
+ O método `GetStringLayout` Obtém os deslocamentos, em relação ao ponteiro de `ObjectID`, dos locais nos quais os seguintes itens são armazenados:  
   
-- The length of the string's buffer.  
+- O comprimento do buffer da cadeia de caracteres.  
   
-- The length of the string itself.  
+- O comprimento da própria cadeia de caracteres.  
   
-- The buffer that contains the actual string of wide characters.  
+- O buffer que contém a cadeia real de caracteres largos.  
   
- Strings may be null-terminated.  
+ Cadeias de caracteres podem ser terminadas em nulo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

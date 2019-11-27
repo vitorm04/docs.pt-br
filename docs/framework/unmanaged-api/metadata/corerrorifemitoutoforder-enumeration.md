@@ -43,7 +43,7 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`MDErrorOutOfOrderDefault`|Indica o comportamento padrão, que não gera mensagens de erro.|  
 |`MDErrorOutOfOrderNone`|Indica que o compilador não deve gerar mensagens de erro.|  
@@ -54,7 +54,7 @@ typedef enum CorErrorIfEmitOutOfOrder {
 |`MDPropertyOutOfOrder`|Indica que o compilador deve gerar uma mensagem de erro quando uma propriedade é emitida fora de ordem.|  
 |`MDEventOutOfOrder`|Indica que o compilador deve gerar uma mensagem de erro quando um evento é emitido fora de ordem.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

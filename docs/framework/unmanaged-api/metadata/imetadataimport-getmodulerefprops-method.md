@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437325"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>Método IMetaDataImport::GetModuleRefProps
-Gets the name of the module referenced by the specified metadata token.  
+Obtém o nome do módulo referenciado pelo token de metadados especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,23 +38,23 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `mur`  
- [in] The ModuleRef metadata token that references the module to get metadata information for.  
+ no O token de metadados ModuleRef que faz referência ao módulo para obter informações de metadados.  
   
  `szName`  
- [out] A buffer to hold the module name.  
+ fora Um buffer para armazenar o nome do módulo.  
   
  `cchName`  
- [in] The requested size of `szName` in wide characters.  
+ no O tamanho solicitado de `szName` em caracteres largos.  
   
  `pchName`  
- [out] The returned size of `szName` in wide characters.  
+ fora O tamanho retornado de `szName` em caracteres largos.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

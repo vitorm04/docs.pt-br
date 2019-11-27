@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353187"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>Operador GetXmlNamespace (Visual Basic)
-Gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the specified XML namespace prefix.  
+Obtém o objeto de <xref:System.Xml.Linq.XNamespace> que corresponde ao prefixo de namespace XML especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,22 +26,22 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>Partes  
  `xmlNamespacePrefix`  
- Opcional. The string that identifies the XML namespace prefix. If supplied, this string must be a valid XML identifier. For more information, see [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). If no prefix is specified, the default namespace is returned. If no default namespace is specified, the empty namespace is returned.  
+ Opcional. A cadeia de caracteres que identifica o prefixo do namespace XML. Se fornecido, essa cadeia de caracteres deve ser um identificador XML válido. Para obter mais informações, consulte [nomes de elementos XML declarados e atributos](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md). Se nenhum prefixo for especificado, o namespace padrão será retornado. Se nenhum namespace padrão for especificado, o namespace vazio será retornado.  
   
 ## <a name="return-value"></a>Valor retornado  
- The <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix.  
+ O objeto <xref:System.Xml.Linq.XNamespace> que corresponde ao prefixo de namespace XML.  
   
 ## <a name="remarks"></a>Comentários  
- The `GetXmlNamespace` operator gets the <xref:System.Xml.Linq.XNamespace> object that corresponds to the XML namespace prefix `xmlNamespacePrefix`.  
+ O operador `GetXmlNamespace` Obtém o objeto <xref:System.Xml.Linq.XNamespace> que corresponde ao prefixo do namespace XML `xmlNamespacePrefix`.  
   
- You can use XML namespace prefixes directly in XML literals and XML axis properties. However, you must use the `GetXmlNamespace` operator to convert a namespace prefix to an <xref:System.Xml.Linq.XNamespace> object before you can use it in your code. You can append an unqualified element name to an <xref:System.Xml.Linq.XNamespace> object to get a fully qualified <xref:System.Xml.Linq.XName> object, which many [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] methods require.  
+ Você pode usar prefixos de namespace XML diretamente em literais XML e propriedades de eixo XML. No entanto, você deve usar o operador `GetXmlNamespace` para converter um prefixo de namespace em um objeto <xref:System.Xml.Linq.XNamespace> antes de poder usá-lo em seu código. Você pode acrescentar um nome de elemento não qualificado a um objeto <xref:System.Xml.Linq.XNamespace> para obter um objeto <xref:System.Xml.Linq.XName> totalmente qualificado, que muitos métodos [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] exigem.  
   
 ## <a name="example"></a>Exemplo  
- The following example imports `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the first child node that has the qualified name `ns:phone`. It then passes that child node to the `ShowName` subroutine, which constructs a qualified name by using the `GetXmlNamespace` operator. The `ShowName` subroutine then passes the qualified name to the <xref:System.Xml.Linq.XNode.Ancestors%2A> method to get the parent `ns:contact` node.  
+ O exemplo a seguir importa `ns` como um prefixo de namespace XML. Em seguida, ele usa o prefixo do namespace para criar um literal XML e acessar o primeiro nó filho que tem o nome qualificado `ns:phone`. Em seguida, ele passa esse nó filho para a sub-rotina `ShowName`, que constrói um nome qualificado usando o operador `GetXmlNamespace`. Em seguida, a sub-rotina `ShowName` passa o nome qualificado para o método <xref:System.Xml.Linq.XNode.Ancestors%2A> para obter o nó pai `ns:contact`.  
   
  [!code-vb[VbXMLSamples#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/GetXmlNamespace.vb#38)]  
   
- When you call `TestGetXmlNamespace.RunSample()`, it displays a message box that contains the following text:  
+ Quando você chama `TestGetXmlNamespace.RunSample()`, ele exibe uma caixa de mensagem que contém o seguinte texto:  
   
  `Name: Patrick Hines`  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433429"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a>Método ICorProfilerInfo2::GetClassIDInfo2
-Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.  
+Obtém o módulo pai e o token de metadados para a definição genérica aberta da classe especificada, a `ClassID` de sua classe pai e a `ClassID` para cada argumento de tipo, se presente, da classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,39 +40,39 @@ HRESULT GetClassIDInfo2(
   
 ## <a name="parameters"></a>Parâmetros  
  `classId`  
- [in] The ID of the class for which information will be retrieved.  
+ no A ID da classe para a qual as informações serão recuperadas.  
   
  `pModuleId`  
- [out] Pointer to the ID of the parent module for the open generic definition of the specified class.  
+ fora Aponta para a ID do módulo pai para a definição genérica aberta da classe especificada.  
   
  `pTypeDefToken`  
- [out] Pointer to the metadata token for the open generic definition of the specified class.  
+ fora Ponteiro para o token de metadados para a definição genérica aberta da classe especificada.  
   
  `pParentClassId`  
- [out] Pointer to the ID of the parent class.  
+ fora Ponteiro para a ID da classe pai.  
   
  `cNumTypeArgs`  
- [in] The size of the `typeArgs` array.  
+ no O tamanho da matriz de `typeArgs`.  
   
  `pcNumTypeArgs`  
- [out] Pointer to the total number of available elements.  
+ fora Aponta para o número total de elementos disponíveis.  
   
  `typeArgs`  
- [out] An array of `ClassID` values, each of which represents the ID of a type argument of the class. When the method returns, `typeArgs` will contain some or all the available `ClassID` values.  
+ fora Uma matriz de valores de `ClassID`, cada um representando a ID de um argumento de tipo da classe. Quando o método retornar, `typeArgs` conterá alguns ou todos os valores de `ClassID` disponíveis.  
   
 ## <a name="remarks"></a>Comentários  
- The `GetClassIDInfo2` method is similar to the [ICorProfilerInfo::GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) method, but `GetClassIDInfo2` obtains additional information about a generic type.  
+ O método `GetClassIDInfo2` é semelhante ao método [ICorProfilerInfo:: GetClassIDInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getclassidinfo-method.md) , mas `GetClassIDInfo2` Obtém informações adicionais sobre um tipo genérico.  
   
- The profiler code can call [ICorProfilerInfo::GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) to obtain a [metadata](../../../../docs/framework/unmanaged-api/metadata/index.md) interface for a given module. The metadata token that is returned to the location referenced by `pTypeDefToken` can then be used to access the metadata for the class.  
+ O código do criador de perfil pode chamar [ICorProfilerInfo:: GetModuleMetaData](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md) para obter uma interface de [metadados](../../../../docs/framework/unmanaged-api/metadata/index.md) para um determinado módulo. O token de metadados que é retornado para o local referenciado por `pTypeDefToken` pode ser usado para acessar os metadados da classe.  
   
- After `GetClassIDInfo2` returns, you must verify that the `typeArgs` buffer was large enough to contain all the `ClassID` values. To do this, compare the value that `pcNumTypeArgs` points to with the value of the `cNumTypeArgs` parameter. If `pcNumTypeArgs` points to a value that is larger than `cNumTypeArgs`, allocate a larger `typeArgs` buffer, update `cNumTypeArgs` with the new, larger size, and call `GetClassIDInfo2` again.  
+ Depois que `GetClassIDInfo2` retorna, você deve verificar se o buffer de `typeArgs` era grande o suficiente para conter todos os valores de `ClassID`. Para fazer isso, compare o valor que `pcNumTypeArgs` aponta com o valor do parâmetro `cNumTypeArgs`. Se `pcNumTypeArgs` apontar para um valor maior que `cNumTypeArgs`, aloque um buffer de `typeArgs` maior, atualize `cNumTypeArgs` com o tamanho novo, maior e chame `GetClassIDInfo2` novamente.  
   
- Alternatively, you can first call `GetClassIDInfo2` with a zero-length `typeArgs` buffer to obtain the correct buffer size. You can then set the `typeArgs` buffer size to the value returned in `pcNumTypeArgs` and call `GetClassIDInfo2` again.  
+ Como alternativa, você pode primeiro chamar `GetClassIDInfo2` com um buffer de `typeArgs` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer de `typeArgs` para o valor retornado em `pcNumTypeArgs` e chamar `GetClassIDInfo2` novamente.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

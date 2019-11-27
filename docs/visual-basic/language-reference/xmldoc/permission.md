@@ -12,8 +12,8 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352272"
 ---
-# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
-Specifies a required permission for the member.  
+# <a name="permission-visual-basic"></a>> de permissão de \<(Visual Basic)
+Especifica uma permissão necessária para o membro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -23,18 +23,18 @@ Specifies a required permission for the member.
   
 ## <a name="parameters"></a>Parâmetros  
  `member`  
- Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e converte `member` no nome de elemento canônico no XML de saída. Enclose `member` in quotation marks (" ").  
+ Uma referência a um membro ou campo disponível para ser chamado do ambiente de compilação atual. O compilador verifica se o elemento de código fornecido existe e converte `member` no nome de elemento canônico no XML de saída. Coloque `member` entre aspas ("").  
   
  `description`  
  Uma descrição do acesso ao membro.  
   
 ## <a name="remarks"></a>Comentários  
- Use the `<permission>` tag to document the access of a member. Use the <xref:System.Security.PermissionSet> class to specify access to a member.  
+ Use a marca `<permission>` para documentar o acesso de um membro. Use a classe <xref:System.Security.PermissionSet> para especificar o acesso a um membro.  
   
  Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- This example uses the `<permission>` tag to describe that the <xref:System.Security.Permissions.FileIOPermission> is required by the `ReadFile` method.  
+ Este exemplo usa a marca `<permission>` para descrever que o <xref:System.Security.Permissions.FileIOPermission> é exigido pelo método `ReadFile`.  
   
  [!code-vb[VbVbcnXmlDocComments#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#7)]  
   

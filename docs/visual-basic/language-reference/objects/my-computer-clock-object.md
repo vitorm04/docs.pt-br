@@ -15,14 +15,14 @@ ms.locfileid: "74344090"
 Fornece propriedades para acessar a hora local atual e o Tempo Universal Coordenado (equivalente ao Horário do Meridiano de Greenwich) no relógio do sistema.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Computer.Clock` object, see <xref:Microsoft.VisualBasic.Devices.Clock>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Computer.Clock`, consulte <xref:Microsoft.VisualBasic.Devices.Clock>.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Clock>  
+ **Classe:** <xref:Microsoft.VisualBasic.Devices.Clock>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

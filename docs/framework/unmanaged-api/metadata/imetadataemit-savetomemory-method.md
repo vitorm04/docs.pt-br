@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435803"
 ---
 # <a name="imetadataemitsavetomemory-method"></a>Método IMetaDataEmit::SaveToMemory
-Saves all metadata in the current scope to the specified area of memory.  
+Salva todos os metadados no escopo atual para a área especificada da memória.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +36,17 @@ HRESULT SaveToMemory (
   
 ## <a name="parameters"></a>Parâmetros  
  `pbData`  
- [out] The address at which to begin writing metadata.  
+ fora O endereço no qual começar a gravar metadados.  
   
  `cbData`  
- [in] The size, in bytes, of the allocated memory.  
+ no O tamanho, em bytes, da memória alocada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

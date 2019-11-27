@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443148"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>Método ICorProfilerInfo4::GetFunctionFromIP2
-Maps a managed code instruction pointer to the JIT-recompiled version of a function.  
+Mapeia um ponteiro de instrução de código gerenciado para a versão recompilada do JIT de uma função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,24 +36,24 @@ HRESULT GetFunctionFromIP2(
   
 ## <a name="parameters"></a>Parâmetros  
  `ip`  
- [in] The instruction pointer in managed code.  
+ no O ponteiro de instrução no código gerenciado.  
   
  `pFunctionId`  
- [out] The function ID.  
+ fora A ID da função.  
   
  `pReJitId`  
- [out] The identity of the JIT-recompiled version of the function.  
+ fora A identidade da versão recompilada do JIT da função.  
   
 ## <a name="remarks"></a>Comentários  
- `GetFunctionFromIP2` is similar to `GetFunctionFromIP`, except that it gets the JIT-recompiled ID instead of the function ID of the function that contains the specified IP address.  
+ `GetFunctionFromIP2` é semelhante a `GetFunctionFromIP`, exceto pelo fato de que ele obtém a ID recompilada por JIT em vez da ID de função da função que contém o endereço IP especificado.  
   
 > [!NOTE]
-> `GetFunctionFromIP2` can trigger a garbage collection, whereas `GetFunctionFromIP` will not.  For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
+> `GetFunctionFromIP2` pode disparar uma coleta de lixo, enquanto `GetFunctionFromIP` não vai.  Para obter mais informações, consulte [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

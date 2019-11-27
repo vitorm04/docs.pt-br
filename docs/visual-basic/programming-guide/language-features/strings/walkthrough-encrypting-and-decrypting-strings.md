@@ -15,64 +15,64 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343581"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Instruções passo a passo: criptografando e descriptografando cadeias de caracteres no Visual Basic
-This walkthrough shows you how to use the <xref:System.Security.Cryptography.DESCryptoServiceProvider> class to encrypt and decrypt strings using the cryptographic service provider (CSP) version of the Triple Data Encryption Standard (<xref:System.Security.Cryptography.TripleDES>) algorithm. The first step is to create a simple wrapper class that encapsulates the 3DES algorithm and stores the encrypted data as a base-64 encoded string. Then, that wrapper is used to securely store private user data in a publicly accessible text file.  
+Este tutorial mostra como usar a classe <xref:System.Security.Cryptography.DESCryptoServiceProvider> para criptografar e descriptografar cadeias de caracteres usando a versão do CSP (provedor de serviços de criptografia) do algoritmo do padrão de criptografia de dados triplo (<xref:System.Security.Cryptography.TripleDES>). A primeira etapa é criar uma classe wrapper simples que encapsula o algoritmo 3DES e armazena os dados criptografados como uma cadeia de caracteres codificada em base 64. Em seguida, esse wrapper é usado para armazenar com segurança dados de usuário privados em um arquivo de texto publicamente acessível.  
   
- You can use encryption to protect user secrets (for example, passwords) and to make credentials unreadable by unauthorized users. This can protect an authorized user's identity from being stolen, which protects the user's assets and provides non-repudiation. Encryption can also protect a user's data from being accessed by unauthorized users.  
+ Você pode usar a criptografia para proteger os segredos do usuário (por exemplo, senhas) e tornar as credenciais ilegíveis para usuários não autorizados. Isso pode proteger a identidade de um usuário autorizado de ser roubado, o que protege os ativos do usuário e fornece não-repúdio. A criptografia também pode proteger os dados de um usuário de serem acessados por usuários não autorizados.  
   
  Para obter mais informações, consulte [Serviços Criptográficos](../../../../standard/security/cryptographic-services.md).  
   
 > [!IMPORTANT]
-> The Rijndael (now referred to as Advanced Encryption Standard [AES]) and Triple Data Encryption Standard (3DES) algorithms provide greater security than DES because they are more computationally intensive. Para obter mais informações, consulte <xref:System.Security.Cryptography.DES> e <xref:System.Security.Cryptography.Rijndael>.  
+> Os algoritmos Rijndael (agora chamados de criptografia AES [AES]) e 3DES (Triple Data Encryption Standard) fornecem maior segurança do que o DES, pois são mais intensivas em computação. Para obter mais informações, consulte <xref:System.Security.Cryptography.DES> e <xref:System.Security.Cryptography.Rijndael>.  
   
-### <a name="to-create-the-encryption-wrapper"></a>To create the encryption wrapper  
+### <a name="to-create-the-encryption-wrapper"></a>Para criar o wrapper de criptografia  
   
-1. Create the `Simple3Des` class to encapsulate the encryption and decryption methods.  
+1. Crie a classe `Simple3Des` para encapsular os métodos de criptografia e descriptografia.  
   
      [!code-vb[VbVbalrStrings#38](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#38)]  
   
-2. Add an import of the cryptography namespace to the start of the file that contains the `Simple3Des` class.  
+2. Adicione uma importação do namespace de criptografia ao início do arquivo que contém a classe `Simple3Des`.  
   
      [!code-vb[VbVbalrStrings#77](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#77)]  
   
-3. In the `Simple3Des` class, add a private field to store the 3DES cryptographic service provider.  
+3. Na classe `Simple3Des`, adicione um campo particular para armazenar o provedor de serviços criptográficos 3DES.  
   
      [!code-vb[VbVbalrStrings#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#39)]  
   
-4. Add a private method that creates a byte array of a specified length from the hash of the specified key.  
+4. Adicione um método particular que cria uma matriz de bytes de um comprimento especificado a partir do hash da chave especificada.  
   
      [!code-vb[VbVbalrStrings#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#41)]  
   
-5. Add a constructor to initialize the 3DES cryptographic service provider.  
+5. Adicione um construtor para inicializar o provedor de serviços criptográficos 3DES.  
   
-     The `key` parameter controls the `EncryptData` and `DecryptData` methods.  
+     O parâmetro `key` controla os métodos `EncryptData` e `DecryptData`.  
   
      [!code-vb[VbVbalrStrings#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#40)]  
   
-6. Add a public method that encrypts a string.  
+6. Adicione um método público que criptografa uma cadeia de caracteres.  
   
      [!code-vb[VbVbalrStrings#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#42)]  
   
-7. Add a public method that decrypts a string.  
+7. Adicione um método público que descriptografa uma cadeia de caracteres.  
   
      [!code-vb[VbVbalrStrings#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#43)]  
   
-     The wrapper class can now be used to protect user assets. In this example, it is used to securely store private user data in a publicly accessible text file.  
+     A classe wrapper agora pode ser usada para proteger ativos do usuário. Neste exemplo, ele é usado para armazenar com segurança dados de usuário privados em um arquivo de texto publicamente acessível.  
   
-### <a name="to-test-the-encryption-wrapper"></a>To test the encryption wrapper  
+### <a name="to-test-the-encryption-wrapper"></a>Para testar o wrapper de criptografia  
   
-1. In a separate class, add a method that uses the wrapper's `EncryptData` method to encrypt a string and write it to the user's My Documents folder.  
+1. Em uma classe separada, adicione um método que usa o método de `EncryptData` do wrapper para criptografar uma cadeia de caracteres e gravá-la na pasta meus documentos do usuário.  
   
      [!code-vb[VbVbalrStrings#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#78)]  
   
-2. Add a method that reads the encrypted string from the user's My Documents folder and decrypts the string with the wrapper's `DecryptData` method.  
+2. Adicione um método que leia a cadeia de caracteres criptografada da pasta meus documentos do usuário e descriptografe a cadeia de caracteres com o método de `DecryptData` do wrapper.  
   
      [!code-vb[VbVbalrStrings#79](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class3.vb#79)]  
   
-3. Add user interface code to call the `TestEncoding` and `TestDecoding` methods.  
+3. Adicione o código de interface do usuário para chamar os métodos `TestEncoding` e `TestDecoding`.  
   
 4. Execute o aplicativo.  
   
-     When you test the application, notice that it will not decrypt the data if you provide the wrong password.  
+     Ao testar o aplicativo, observe que ele não descriptografará os dados se você fornecer a senha incorreta.  
   
 ## <a name="see-also"></a>Consulte também
 

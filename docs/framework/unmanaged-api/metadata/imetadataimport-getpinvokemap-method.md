@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437103"
 ---
 # <a name="imetadataimportgetpinvokemap-method"></a>Método IMetaDataImport::GetPinvokeMap
-Gets a ModuleRef token to represent the target assembly of a PInvoke call.  
+Obtém um token ModuleRef para representar o assembly de destino de uma chamada PInvoke.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,29 +40,29 @@ HRESULT GetPinvokeMap (
   
 ## <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] A FieldDef or MethodDef token to get the PInvoke mapping metadata for.  
+ no Um token FieldDef ou MethodDef para obter os metadados de mapeamento do PInvoke.  
   
  `pdwMappingFlags`  
- [out] A pointer to flags used for mapping. This value is a bitmask from the [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) enumeration.  
+ fora Um ponteiro para sinalizadores usados para mapeamento. Esse valor é um bitmask da enumeração [CorPinvokeMap](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md) .  
   
  `szImportName`  
- [out] The name of the unmanaged target DLL.  
+ fora O nome da DLL de destino não gerenciada.  
   
  `cchImportName`  
- [in] The size in wide characters of `szImportName`.  
+ no O tamanho em caracteres largos de `szImportName`.  
   
  `pchImportName`  
- [out] The number of wide characters returned in `szImportName`.  
+ fora O número de caracteres largos retornados em `szImportName`.  
   
  `pmrImportDLL`  
- [out] A pointer to a ModuleRef token that represents the unmanaged target object library.  
+ fora Um ponteiro para um token de ModuleRef que representa a biblioteca de objetos de destino não gerenciado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350428"
 ---
 # <a name="let-clause-visual-basic"></a>Cláusula Let (Visual Basic)
-Computes a value and assigns it to a new variable within the query.  
+Computa um valor e o atribui a uma nova variável dentro da consulta.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -28,16 +28,16 @@ Let variable = expression [, ...]
   
 |Termo|Definição|  
 |---|---|  
-|`variable`|Necessário. An alias that can be used to reference the results of the supplied expression.|  
-|`expression`|Necessário. An expression that will be evaluated and assigned to the specified variable.|  
+|`variable`|Necessário. Um alias que pode ser usado para referenciar os resultados da expressão fornecida.|  
+|`expression`|Necessário. Uma expressão que será avaliada e atribuída à variável especificada.|  
   
 ## <a name="remarks"></a>Comentários  
- The `Let` clause enables you to compute values for each query result and reference them by using an alias. The alias can be used in other clauses, such as the `Where` clause. The `Let` clause enables you to create a query statement that is easier to read because you can specify an alias for an expression clause included in the query and substitute the alias each time the expression clause is used.  
+ A cláusula `Let` permite que você calcule valores para cada resultado da consulta e faça referência a eles usando um alias. O alias pode ser usado em outras cláusulas, como a cláusula `Where`. A cláusula `Let` permite que você crie uma instrução de consulta que seja mais fácil de ler, pois você pode especificar um alias para uma cláusula de expressão incluído na consulta e substituir o alias sempre que a cláusula de expressão for usada.  
   
- You can include any number of `variable` and `expression` assignments in the `Let` clause. Separate each assignment with a comma (,).  
+ Você pode incluir qualquer número de atribuições de `variable` e `expression` na cláusula `Let`. Separe cada atribuição com uma vírgula (,).  
   
 ## <a name="example"></a>Exemplo  
- The following code example uses the `Let` clause to compute a 10 percent discount on products.  
+ O exemplo de código a seguir usa a cláusula `Let` para calcular um desconto de 10% nos produtos.  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432745"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a>Método IMetaDataEmit2::DefineMethodSpec
-Creates a generic instance of a method, and gets a token to the definition.  
+Cria uma instância genérica de um método e Obtém um token para a definição.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,23 +38,23 @@ HRESULT DefineMethodSpec (
   
 ## <a name="parameters"></a>Parâmetros  
  `tkParent`  
- [in] A token for the method of which to create the generic instance. The token must be of type `mdMethodDef` or `mdMemberRef`.  
+ no Um token para o método do qual criar a instância genérica. O token deve ser do tipo `mdMethodDef` ou `mdMemberRef`.  
   
  `pvSigBlob`  
- [in] A pointer to the binary COM+ signature of the method.  
+ no Um ponteiro para a assinatura COM+ binária do método.  
   
  `cbSibBlob`  
- [in] The size, in bytes, of `pvSigBlob`.  
+ no O tamanho, em bytes, de `pvSigBlob`.  
   
  `pmi`  
- [out] A token to the metadata signature definition of the method.  
+ fora Um token para a definição de assinatura de metadados do método.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

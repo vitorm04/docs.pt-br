@@ -25,7 +25,7 @@ Este tópico descreve como solucionar problemas de configuração do Windows Com
   
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\MSDTC Bridge 3.0.0.0  
   
- As chaves não serão recriadas se você executar o reparo usando o instalador do .NET Framework 3.0 iniciado do miniaplicativo **Adicionar/Remover Programas** no **Painel de Controle**. Para recriar corretamente essas chaves, o usuário deverá desinstalar e reinstalar o .NET Framework 3.0.  
+ As chaves não serão recriadas se você executar reparar usando o instalador .NET Framework 3,0 iniciado no miniaplicativo **Adicionar/remover programas** no painel de **controle**. Para recriar corretamente essas chaves, o usuário deverá desinstalar e reinstalar o .NET Framework 3.0.  
   
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>O WMI Service Corruption bloqueia a instalação do provedor WMI do Windows Communication Foundation durante a instalação do pacote do .NET Framework 3.0  
  O WMI Service Corruption pode bloquear a instalação do provedor WMI do Windows Communication Foundation. Durante a instalação, o instalador do Windows Communication Foundation não é capaz de registrar o arquivo .mof do WCF usando o componente mofcomp.exe. Veja a seguir uma lista de sintomas:  
@@ -54,7 +54,7 @@ Este tópico descreve como solucionar problemas de configuração do Windows Com
   
 1. Execute [o utilitário de diagnóstico WMI, versão 2,0,](https://go.microsoft.com/fwlink/?LinkId=94685) para reparar o serviço WMI. Para obter mais informações sobre como usar essa ferramenta, consulte o tópico [Utilitário de diagnóstico WMI](https://go.microsoft.com/fwlink/?LinkId=94686) .  
   
- Repare a instalação do .NET Framework 3.0 usando o miniaplicativo **Adicionar/Remover Programas** localizado no **Painel de Controle** ou desinstale/reinstale o .NET Framework 3.0.  
+ Repare a instalação do .NET Framework 3,0 usando o miniaplicativo **Adicionar/remover programas** localizado no **painel de controle**ou desinstale/reinstale o .NET Framework 3,0.  
   
 ## <a name="repairing-net-framework-30-after-net-framework-35-installation-removes-configuration-elements-introduced-by-net-framework-35-in-machineconfig"></a>Reparar o .NET Framework 3.0 após a instalação do .NET Framework 3.5 remove os elementos de configuração introduzidos pelo .NET Framework 3.5 em machine.config  
  Se você fizer um reparo do .NET Framework 3,0 depois de instalar o .NET Framework 3,5, os elementos de configuração introduzidos pelo .NET Framework 3,5 em Machine. config serão removidos. No entanto, o web.config permanecerá intacto. A solução alternativa é reparar .NET Framework 3,5 após isso via ARP ou usar a [ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg. exe)](workflow-service-registration-tool-wfservicesreg-exe.md) com a opção `/c`.  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436180"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>Método IMetaDataInfo::GetFileMapping
-Gets the memory region of the mapped file, and the type of mapping.  
+Obtém a região de memória do arquivo mapeado e o tipo de mapeamento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,37 +37,37 @@ HRESULT GetFileMapping (
   
 ## <a name="parameters"></a>Parâmetros  
  `ppvData`  
- [out] A pointer to the start of the mapped file.  
+ fora Um ponteiro para o início do arquivo mapeado.  
   
  `pcbData`  
- [out] The size of the mapped region. If `pdwMappingType` is `fmFlat`, this is the size of the file.  
+ fora O tamanho da região mapeada. Se `pdwMappingType` for `fmFlat`, esse será o tamanho do arquivo.  
   
  `pdwMappingType`  
- [out] A [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) value that indicates the type of mapping. The current implementation of the common language runtime (CLR) always returns `fmFlat`. Other values are reserved for future use. However, you should always verify the returned value, because other values may be enabled in future versions or service releases.  
+ fora Um valor [CorFileMapping](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md) que indica o tipo de mapeamento. A implementação atual do Common Language Runtime (CLR) sempre retorna `fmFlat`. Outros valores são reservados para uso futuro. No entanto, você sempre deve verificar o valor retornado, pois outros valores podem ser habilitados em versões futuras ou versões de serviço.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|All outputs are filled.|  
-|`E_INVALIDARG`|NULL was passed as an argument value.|  
-|`COR_E_NOTSUPPORTED`|The CLR implementation cannot provide information about the memory region. This can happen for the following reasons:<br /><br /> -   The metadata scope was opened with the `ofWrite` or `ofCopyMemory` flag.<br />-   The metadata scope was opened without the `ofReadOnly` flag.<br />-   The [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method was used to open only the metadata portion of the file.<br />-   The file is not a portable executable (PE) file. **Note:**  These conditions depend on the CLR implementation, and are likely to be weakened in future versions of the CLR.|  
+|`S_OK`|Todas as saídas são preenchidas.|  
+|`E_INVALIDARG`|NULL foi passado como um valor de argumento.|  
+|`COR_E_NOTSUPPORTED`|A implementação do CLR não pode fornecer informações sobre a região da memória. Isso pode ocorrer pelos seguintes motivos:<br /><br /> -O escopo de metadados foi aberto com o sinalizador `ofWrite` ou `ofCopyMemory`.<br />-O escopo de metadados foi aberto sem o sinalizador `ofReadOnly`.<br />-O método [IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) foi usado para abrir apenas a parte de metadados do arquivo.<br />-O arquivo não é um arquivo executável portátil (PE). **Observação:**  Essas condições dependem da implementação do CLR e provavelmente serão diminuídas em versões futuras do CLR.|  
   
 ## <a name="remarks"></a>Comentários  
- The memory that `ppvData` points to is valid only as long as the underlying metadata scope is open.  
+ A memória que o `ppvData` aponta é válida somente contanto que o escopo de metadados subjacente esteja aberto.  
   
- In order for this method to work, when you map the metadata of an on-disk file into memory by calling the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method, you must specify the `ofReadOnly` flag and you must not specify the `ofWrite` or `ofCopyMemory` flag.  
+ Para que esse método funcione, ao mapear os metadados de um arquivo em disco para a memória chamando o método [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) , você deve especificar o sinalizador `ofReadOnly` e não deve especificar o sinalizador `ofWrite` ou `ofCopyMemory`.  
   
- The choice of file mapping type for each scope is specific to a given implementation of the CLR. It cannot be set by the user. The current implementation of the CLR always returns `fmFlat` in `pdwMappingType`, but this can change in future versions of the CLR or in future service releases of a given version. You should always check the returned value in `pdwMappingType`, because different types will have different layouts and offsets.  
+ A escolha do tipo de mapeamento de arquivo para cada escopo é específica para uma determinada implementação do CLR. Ele não pode ser definido pelo usuário. A implementação atual do CLR sempre retorna `fmFlat` em `pdwMappingType`, mas isso pode ser alterado em versões futuras do CLR ou em futuras versões de serviço de determinada versão. Você sempre deve verificar o valor retornado em `pdwMappingType`, porque tipos diferentes terão layouts e deslocamentos diferentes.  
   
- Passing NULL for any of the three parameters is not supported. The method returns `E_INVALIDARG`, and none of the outputs are filled. Ignoring the mapping type or the size of the region can result in abnormal program termination.  
+ Não há suporte para a passagem de NULL para qualquer um dos três parâmetros. O método retorna `E_INVALIDARG`e nenhuma das saídas é preenchida. Ignorar o tipo de mapeamento ou o tamanho da região pode resultar em um encerramento anormal do programa.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: Accessing application settings
+title: Acessando configurações do aplicativo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], application settings
@@ -26,7 +26,7 @@ Esta seção contém tópicos que descrevem o objeto `My.Settings` e as tarefas 
 
  A tabela a seguir lista exemplos que mostram como acessar os formulários de um aplicativo.  
   
-|Para|Consulte|  
+|{1&gt;Para&lt;1}|Consulte|  
 |--------|---------|  
 |Atualizar o valor de uma configuração de usuário|[Como alterar configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
 |Exibir configurações de aplicativo e de usuário em uma grade de propriedades|[Como criar grades de propriedades para configurações do usuário no Visual Basic](../../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  

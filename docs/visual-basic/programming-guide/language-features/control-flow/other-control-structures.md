@@ -13,13 +13,13 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348129"
 ---
 # <a name="other-control-structures-visual-basic"></a>Outras estruturas de controle (Visual Basic)
-Visual Basic provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.  
+Visual Basic fornece estruturas de controle que ajudam você a descartar um recurso ou reduzir o número de vezes que você precisa repetir uma referência de objeto.  
   
-## <a name="usingend-using-construction"></a>Using...End Using Construction  
- The `Using...End Using` construction establishes a statement block within which you make use of a resource such as a SQL connection. You can optionally acquire the resource with the `Using` statement. When you exit the `Using` block, Visual Basic automatically disposes of the resource so that it is available for other code to use. The resource must be local and disposable. Para obter mais informações, consulte [Instrução using](../../../../visual-basic/language-reference/statements/using-statement.md).  
+## <a name="usingend-using-construction"></a>Usando... Terminar usando construção  
+ A construção `Using...End Using` estabelece um bloco de instruções no qual você usa um recurso, como uma conexão SQL. Opcionalmente, você pode adquirir o recurso com a instrução `Using`. Quando você sai do bloco de `Using`, Visual Basic descarta automaticamente o recurso para que ele esteja disponível para uso por outro código. O recurso deve ser local e descartável. Para obter mais informações, consulte [Instrução using](../../../../visual-basic/language-reference/statements/using-statement.md).  
   
-## <a name="withend-with-construction"></a>With...End With Construction  
- The `With...End With` construction lets you specify an object reference once and then run a series of statements that access its members. This can simplify your code and improve performance because Visual Basic does not have to re-establish the reference for each statement that accesses it. For more information, see [With...End With Statement](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
+## <a name="withend-with-construction"></a>Com... Terminar com construção  
+ A construção `With...End With` permite especificar uma referência de objeto uma vez e, em seguida, executar uma série de instruções que acessam seus membros. Isso pode simplificar seu código e melhorar o desempenho porque Visual Basic não precisa restabelecer a referência para cada instrução que a acessa. Para obter mais informações, consulte [com... Instrução End With](../../../../visual-basic/language-reference/statements/with-end-with-statement.md).  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449961"
 ---
 # <a name="imetadataimportenumunresolvedmethods-method"></a>Método IMetaDataImport::EnumUnresolvedMethods
-Enumerates MemberDef tokens representing the unresolved methods in the current metadata scope.  
+Enumera os tokens MemberDef que representam os métodos não resolvidos no escopo de metadados atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,35 +38,35 @@ HRESULT EnumUnresolvedMethods (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `rMethods`  
- [out] The array used to store the MemberDef tokens.  
+ fora A matriz usada para armazenar os tokens MemberDef.  
   
  `cMax`  
- [in] The maximum size of the `rMethods` array.  
+ no O tamanho máximo da matriz de `rMethods`.  
   
  `pcTokens`  
- [out] The number of MemberDef tokens returned in `rMethods`.  
+ fora O número de tokens MemberDef retornados em `rMethods`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumUnresolvedMethods` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumUnresolvedMethods` retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- An unresolved method is one that has been declared but not implemented. A method is included in the enumeration if the method is marked `miForwardRef` and either `mdPinvokeImpl` or `miRuntime` is set to zero. In other words, an unresolved method is a class method that is marked `miForwardRef` but which is not implemented in unmanaged code (reached via PInvoke) nor implemented internally by the runtime itself  
+ Um método não resolvido é aquele que foi declarado mas não implementado. Um método é incluído na enumeração se o método é marcado `miForwardRef` e `mdPinvokeImpl` ou `miRuntime` é definido como zero. Em outras palavras, um método não resolvido é um método de classe marcado `miForwardRef` mas que não é implementado em código não gerenciado (alcançado via PInvoke) nem implementado internamente pelo próprio tempo de execução  
   
- The enumeration excludes all methods that are defined either at module scope (globals) or in interfaces or abstract classes.  
+ A enumeração exclui todos os métodos que são definidos no escopo do módulo (Globals) ou em interfaces ou classes abstratas.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

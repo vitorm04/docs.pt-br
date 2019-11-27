@@ -16,7 +16,7 @@ ms.locfileid: "74348572"
 ---
 # <a name="-refonly-visual-basic"></a>-refonly (Visual Basic)
 
-The **-refonly** option indicates that the primary output of the compilation should be a reference assembly instead of an implementation assembly. O parâmetro `-refonly` silenciosamente desabilita a geração de PDBs, uma vez que assemblies de referência não podem ser executados.
+A opção **-refonly** indica que a saída primária da compilação deve ser um assembly de referência em vez de um assembly de implementação. O parâmetro `-refonly` silenciosamente desabilita a geração de PDBs, uma vez que assemblies de referência não podem ser executados.
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
 
@@ -28,9 +28,9 @@ The **-refonly** option indicates that the primary output of the compilation sho
 
 ## <a name="remarks"></a>Comentários
 
-Visual Basic supports the `-refonly` switch starting with version 15.3.
+Visual Basic dá suporte à opção de `-refonly` a partir da versão 15,3.
 
-Reference assemblies are a special type of assembly that contain only the minimum amount of metadata required to represent the library's public API surface. They include declarations for all members that are significant when referencing an assembly in build tools, but exclude all member implementations and declarations of private members that have no observable impact on their API contract. For more information, see [Reference assemblies](../../../standard/assembly/reference-assemblies.md) in .NET Guide.
+Os assemblies de referência são um tipo especial de assembly que contém apenas a quantidade mínima de metadados necessários para representar a superfície da API pública da biblioteca. Eles incluem declarações para todos os membros que são significativos ao referenciar um assembly em ferramentas de compilação, mas excluem todas as implementações de membro e declarações de membros privados que não têm impacto observável em seu contrato de API. Para obter mais informações, consulte [Reference Assemblies](../../../standard/assembly/reference-assemblies.md) in .net Guide.
 
 As opções `-refonly` e [`-refout`](refout-compiler-option.md) são mutualmente exclusivas.
 

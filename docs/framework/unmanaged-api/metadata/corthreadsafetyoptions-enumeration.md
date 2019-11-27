@@ -23,7 +23,7 @@ ms.locfileid: "74442474"
 ---
 # <a name="corthreadsafetyoptions-enumeration"></a>Enumeração CorThreadSafetyOptions
 
-Specifies flags to select options for thread safety.
+Especifica sinalizadores para selecionar opções para a segurança do thread.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,17 +37,17 @@ typedef enum CorThreadSafetyOptions {
 
 ## <a name="members"></a>Membros
 
-|Membro|Descrição|
+|{1&gt;Membro&lt;1}|Descrição|
 |------------|-----------------|
 |`MDThreadSafetyDefault`|Valor padrão. Mesmo que `MDThreadSafetyOff`.|
-|`MDThreadSafetyOff`|Indicates that a reader/writer lock cannot be set.|
-|`MDThreadSafetyOn`|Indicates that a reader/writer lock can be set.|
+|`MDThreadSafetyOff`|Indica que um bloqueio de leitor/gravador não pode ser definido.|
+|`MDThreadSafetyOn`|Indica que um bloqueio de leitor/gravador pode ser definido.|
 
 ## <a name="requirements"></a>Requisitos
 
 **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** CorHdr.h
+**Cabeçalho:** CorHdr. h
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 

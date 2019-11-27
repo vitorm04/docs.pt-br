@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439748"
 ---
 # <a name="icorprofilercallback2handledestroyed-method"></a>Método ICorProfilerCallback2::HandleDestroyed
-Notifies the code profiler that a garbage collection handle has been destroyed.  
+Notifica o criador de perfil de código de que um identificador de coleta de lixo foi destruído.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,12 +34,12 @@ HRESULT HandleDestroyed(
   
 ## <a name="parameters"></a>Parâmetros  
  `handleId`  
- [in] The ID of the handle for the garbage collection.  
+ no A ID do identificador para a coleta de lixo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

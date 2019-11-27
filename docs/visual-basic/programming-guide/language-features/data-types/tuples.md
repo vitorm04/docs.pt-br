@@ -11,46 +11,46 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350494"
 ---
-# <a name="tuples-visual-basic"></a>Tuples (Visual Basic)
+# <a name="tuples-visual-basic"></a>Tuplas (Visual Basic)
 
-Starting with Visual Basic 2017, the Visual Basic language offers built-in support for tuples that makes creating tuples and accessing the elements of tuples easier. A tuple is a lightweight data structure that has a specific number and sequence of values. When you instantiate the tuple, you define the number and the data type of each value (or element). For example, a 2-tuple (or pair) has two elements. The first might be a `Boolean` value, while the second is a `String`. Because tuples make it easy to store multiple values in a single object, they are often used as a lightweight way to return multiple values from a method.
+A partir do Visual Basic 2017, a linguagem de Visual Basic oferece suporte interno para tuplas que facilita a criação de tuplas e o acesso aos elementos de tuplas. Uma tupla é uma estrutura de dados leve que tem um número específico e uma sequência de valores. Ao instanciar a tupla, você define o número e o tipo de dados de cada valor (ou elemento). Por exemplo, um 2 tupla (ou par) tem dois elementos. O primeiro pode ser um valor `Boolean`, enquanto o segundo é um `String`. Como as tuplas facilitam o armazenamento de vários valores em um único objeto, elas são geralmente usadas como uma maneira leve de retornar vários valores de um método.
 
 > [!IMPORTANT]
-> Tuple support requires the <xref:System.ValueTuple> type. If the .NET Framework 4.7 is not installed, you must add the NuGet package `System.ValueTuple`, which is available on the NuGet Gallery. Without this package, you may get a compilation error similar to, "Predefined type 'ValueTuple(Of,,,)' is not defined or imported."
+> O suporte à tupla requer o tipo de <xref:System.ValueTuple>. Se o .NET Framework 4,7 não estiver instalado, você deverá adicionar o pacote NuGet `System.ValueTuple`, que está disponível na galeria do NuGet. Sem esse pacote, você pode obter um erro de compilação semelhante a, "o tipo predefinido ' ValueTuple (Of,,,) ' não está definido ou importado."
 
-## <a name="instantiating-and-using-a-tuple"></a>Instantiating and using a tuple
+## <a name="instantiating-and-using-a-tuple"></a>Criando uma instância e usando uma tupla
 
-You instantiate a tuple by enclosing its comma-delimited values im parentheses. Each of those values then becomes a field of the tuple. For example, the following code defines a triple (or 3-tuple) with a `Date` as its first value, a `String` as its second, and a `Boolean` as its third.
+Você cria uma instância de uma tupla ao colocar seus parênteses de mensagem de valores delimitados por vírgulas. Cada um desses valores se torna um campo da tupla. Por exemplo, o código a seguir define um triplo (ou três tuplas) com um `Date` como seu primeiro valor, um `String` como o segundo e um `Boolean` como terceiro.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#1)]
 
-By default, the name of each field in a tuple consists of the string `Item` along with the field's one-based position in the tuple. For this 3-tuple, the `Date` field is `Item1`, the `String` field is `Item2`, and the `Boolean` field is `Item3`. The following example displays the values of fields of the tuple instantiated in the previous line of code
+Por padrão, o nome de cada campo em uma tupla consiste na cadeia de caracteres `Item` junto com a posição baseada em um campo na tupla. Para essa 3 tupla, o campo `Date` é `Item1`, o campo `String` é `Item2`e o campo `Boolean` é `Item3`. O exemplo a seguir exibe os valores dos campos da tupla instanciados na linha de código anterior
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#2)]
 
-The fields of a Visual Basic tuple are read-write; after you've instantiated a tuple, you can modify its values. The following example modifies two of the three fields of the tuple created in the previous example and displays the result.
+Os campos de uma tupla de Visual Basic são de leitura/gravação; Depois de criar uma instância de uma tupla, você pode modificar seus valores. O exemplo a seguir modifica dois dos três campos da tupla criada no exemplo anterior e exibe o resultado.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#3)]
 
-## <a name="instantiating-and-using-a-named-tuple"></a>Instantiating and using a named tuple
+## <a name="instantiating-and-using-a-named-tuple"></a>Criando uma instância e usando uma tupla nomeada
 
-Rather than using default names for a tuple's fields, you can instantiate a *named tuple* by assigning your own names to the tuple's elements. The tuple's fields can then be accessed by their assigned names *or* by their default names. The following example instantiates the same 3-tuple as previously, except that it explicitly names the first field `EventDate`, the second `Name`, and the third `IsHoliday`. It then displays the field values, modifies them, and displays the field values again.
+Em vez de usar nomes padrão para os campos de uma tupla, você pode criar uma instância de uma *tupla nomeada* atribuindo seus próprios nomes aos elementos da tupla. Os campos da tupla podem ser acessados por seus nomes atribuídos *ou* por seus nomes padrão. O exemplo a seguir instancia a mesma 3 tupla como anteriormente, exceto que ela nomeia explicitamente o primeiro campo `EventDate`, a segunda `Name`e a terceira `IsHoliday`. Em seguida, ele exibe os valores de campo, modifica-os e exibe os valores de campo novamente.
 
 [!code-vb[Instantiate](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple1.vb#4)]
 
 ## <a name="inferred-tuple-element-names"></a>Nomes de elementos de tupla inferidos
 
-Starting with Visual Basic 15.3, Visual Basic can infer the names of tuple elements; you do not have to assign them explicitly. Inferred tuple names are useful when you initialize a tuple from a set of variables, and you want the tuple element name to be the same as the variable name.
+A partir do Visual Basic 15,3, Visual Basic pode inferir os nomes dos elementos de tupla; Você não precisa atribuí-los explicitamente. Nomes de tupla deduzidos são úteis quando você Inicializa uma tupla de um conjunto de variáveis e você deseja que o nome do elemento de tupla seja igual ao nome da variável.
 
-The following example creates a `stateInfo` tuple that contains three explicitly named elements, `state`, `stateName`, and `capital`. Note that, in naming the elements, the tuple initialization statement simply assigns the named elements the values of the identically named variables.
+O exemplo a seguir cria uma tupla `stateInfo` que contém três elementos explicitamente nomeados, `state`, `stateName`e `capital`. Observe que, ao nomear os elementos, a instrução de inicialização de tupla simplesmente atribui os elementos nomeados aos valores das variáveis nomeadas de forma idêntica.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#1)]
 
-Because elements and variables have the same name, the Visual Basic compiler can infer the names of the fields, as the following example shows.
+Como elementos e variáveis têm o mesmo nome, o compilador de Visual Basic pode inferir os nomes dos campos, como mostra o exemplo a seguir.
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-To enable inferred tuple element names, you must define the version of the Visual Basic compiler to use in your Visual Basic project (\*.vbproj) file:
+Para habilitar nomes de elementos de tupla deduzidos, você deve definir a versão do compilador de Visual Basic a ser usada no arquivo de projeto Visual Basic (\*. vbproj):
 
 ```xml
 <PropertyGroup>
@@ -58,50 +58,50 @@ To enable inferred tuple element names, you must define the version of the Visua
 </PropertyGroup>
 ```
 
-The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+O número de versão pode ser qualquer versão do compilador de Visual Basic começando com 15,3. Em vez de embutir em código uma versão específica do compilador, você também pode especificar "mais recente" como o valor de `LangVersion` para compilar com a versão mais recente do compilador Visual Basic instalado no seu sistema.
 
-For more information, see [setting the Visual Basic language version](../../../language-reference/configure-language-version.md).
+Para obter mais informações, consulte [definindo a versão do idioma do Visual Basic](../../../language-reference/configure-language-version.md).
 
-In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+Em alguns casos, o compilador Visual Basic não pode inferir o nome do elemento de tupla do nome candidato, e o campo de tupla só pode ser referenciado usando seu nome padrão, como `Item1`, `Item2`, etc. Eles incluem:
 
-- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+- O nome do candidato é o mesmo que o nome de um membro de tupla, como `Item3`, `Rest`ou `ToString`.
 
-- The candidate name is duplicated in the tuple.
+- O nome do candidato está duplicado na tupla.
 
-When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`.
+Quando a inferência de nome de campo falha, Visual Basic não gera um erro de compilador, nem é uma exceção lançada em tempo de execução. Em vez disso, os campos de tupla devem ser referenciados por seus nomes predefinidos, como `Item1` e `Item2`.
 
-## <a name="tuples-versus-structures"></a>Tuples versus structures
+## <a name="tuples-versus-structures"></a>Tuplas versus estruturas
 
-A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. Elas incluem:
+Uma tupla de Visual Basic é um tipo de valor que é uma instância de um dos tipos genéricos **System. ValueTuple** . Por exemplo, a tupla de `holiday` definida no exemplo anterior é uma instância da estrutura de <xref:System.ValueTuple%603>. Ele foi projetado para ser um contêiner leve de dados. Como a tupla visa facilitar a criação de um objeto com vários itens de dados, ele não tem alguns dos recursos que uma estrutura personalizada pode ter. Elas incluem:
 
-- Custom members. You cannot define your own properties, methods, or events for a tuple.
+- Membros personalizados. Você não pode definir suas próprias propriedades, métodos ou eventos para uma tupla.
 
-- Validation. You cannot validate the data assigned to fields.
+- Confirmação. Você não pode validar os dados atribuídos a campos.
 
-- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+- Imutabilidade. Visual Basic tuplas são mutáveis. Por outro lado, uma estrutura personalizada permite que você controle se uma instância é mutável ou imutável.
 
-If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+Se membros personalizados, a validação de propriedade e de campo ou a imutabilidade forem importantes, você deverá usar a instrução Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) para definir um tipo de valor personalizado.
 
-A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+Uma tupla Visual Basic herda os membros de seu tipo **ValueTuple** . Além de seus campos, eles incluem os seguintes métodos:
 
-| Membro | Descrição |
+| {1&gt;Membro&lt;1} | Descrição |
 | ---|---|
-| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
-| Igual a | Determines whether the current tuple is equal to another tuple or object. |
-| GetHashCode | Calculates the hash code for the current instance. |
-| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
+| CompareTo | Compara a tupla atual com outra tupla com o mesmo número de elementos. |
+| Igual a | Determina se a tupla atual é igual a outra tupla ou objeto. |
+| GetHashCode | Calcula o código hash para a instância atual. |
+| ToString | Retorna a representação da cadeia de caracteres dessa tupla, que usa o formulário `(Item1, Item2...)`, onde `Item1` e `Item2` representam os valores dos campos da tupla. |
 
-In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
+Além disso, os tipos **ValueTuple** implementam <xref:System.Collections.IStructuralComparable> e <xref:System.Collections.IStructuralEquatable> interfaces, que permitem que você defina os comparadores de clientes.
 
 ## <a name="assignment-and-tuples"></a>Atribuição e tuplas
 
-Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
+Visual Basic dá suporte à atribuição entre os tipos de tupla que têm o mesmo número de campos. Os tipos de campo podem ser convertidos se uma das seguintes opções for verdadeira:
 
-- The source and target field are of the same type.
+- O campo de origem e destino são do mesmo tipo.
 
-- A widening (or implicit) conversion of the source type to the target type is defined.
+- Uma conversão de alargamento (ou implícita) do tipo de origem para o tipo de destino é definida.
 
-- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
+- `Option Strict` é `On`e uma conversão de restrição (ou explícita) do tipo de origem para o tipo de destino é definida. Essa conversão pode gerar uma exceção se o valor de origem estiver fora do intervalo do tipo de destino.
 
 Outras conversões não são consideradas para atribuições. Vamos examinar os tipos de atribuições que são permitidos entre tipos de tupla.
 
@@ -109,19 +109,19 @@ Considere estas variáveis usadas nos exemplos a seguir:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Observe que essas duas tuplas têm nomes diferentes para os campos.
+As duas primeiras variáveis, `unnamed` e `anonymous`, não têm nomes semânticos fornecidos para os campos. Os nomes de campo são os `Item1` e `Item2`padrão. As duas últimas variáveis, `named` e `differentName` têm nomes de campo semânticos. Observe que essas duas tuplas têm nomes diferentes para os campos.
 
-All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Portanto, todas essas atribuições funcionam:
+Todas as quatro tuplas têm o mesmo número de campos (chamados de ' aridade '), e os tipos desses campos são idênticos. Portanto, todas essas atribuições funcionam:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
 Observe que os nomes das tuplas não são atribuídos. Os valores dos campos são atribuídos na ordem dos campos na tupla.
 
-Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
+Por fim, observe que podemos atribuir a tupla de `named` à tupla de `conversion`, embora o primeiro campo de `named` seja um `Integer`e o primeiro campo de `conversion` seja um `Long`. Essa atribuição é realizada com sucesso porque a conversão de um `Integer` para um `Long` é uma conversão de ampliação.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tuples with different numbers of fields are not assignable:
+Tuplas com números diferentes de campos não podem ser atribuídas:
 
 ```vb
 ' Does not compile.
@@ -133,41 +133,41 @@ named = differentShape
 
 ## <a name="tuples-as-method-return-values"></a>Tuplas como valores retornados do método
 
-A method can return only a single value. Frequently, though, you'd like a method call to return multiple values. There are several ways to work around this limitation:
+Um método pode retornar apenas um único valor. Com frequência, no entanto, você gostaria que uma chamada de método retornasse vários valores. Há várias maneiras de contornar essa limitação:
 
-- You can create a custom class or structure whose properties or fields represent values returned by the method. Thus is a heavyweight solution; it requires that you define a custom type whose only purpose is to retrieve values from a method call.
+- Você pode criar uma classe personalizada ou estrutura cujas propriedades ou campos representam valores retornados pelo método. Portanto, é uma solução pesada; Ele requer que você defina um tipo personalizado cujo único objetivo é recuperar valores de uma chamada de método.
 
-- You can return a single value from the method, and return the remaining values by passing them by reference to the method. This involves the overhead of instantiating a variable and risks inadvertently overwriting the value of the variable that you pass by reference.
+- Você pode retornar um único valor do método e retornar os valores restantes passando-os por referência ao método. Isso envolve a sobrecarga de instanciar uma variável e riscos, inadvertidamente, substituir o valor da variável que você passa por referência.
 
-- You can use a tuple, which provides a lightweight solution to retrieving multiple return values.
+- Você pode usar uma tupla, que fornece uma solução leve para recuperar vários valores de retorno.
 
-For example, the **TryParse** methods in .NET return a `Boolean` value that indicates whether the parsing operation succeeded. The result of the parsing operation is returned in a variable passed by reference to the method. Normally, a call to the a parsing method such as <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> looks like the following:
+Por exemplo, os métodos **TryParse** no .net retornam um valor `Boolean` que indica se a operação de análise foi bem-sucedida. O resultado da operação de análise é retornado em uma variável passada por referência ao método. Normalmente, uma chamada para o método de análise, como <xref:System.Int32.TryParse%2A?displayProperty=nameWithType>, é semelhante ao seguinte:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#1)]
 
-We can return a tuple from the parsing operation if we wrap the call to the <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> method in our own method. In the following example, `NumericLibrary.ParseInteger` calls the <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> method and returns a named tuple with two elements.
+Podemos retornar uma tupla da operação de análise se encapsularmos a chamada para o método <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> em nosso próprio método. No exemplo a seguir, `NumericLibrary.ParseInteger` chama o método <xref:System.Int32.TryParse%2A?displayProperty=nameWithType> e retorna uma tupla nomeada com dois elementos.
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#2)]
 
-You can then call the method with code like the following:
+Em seguida, você pode chamar o método com um código como o seguinte:
 
 [!code-vb[Return](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple-returns.vb#3)]
 
-## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Visual Basic tuples and tuples in the .NET Framework
+## <a name="visual-basic-tuples-and-tuples-in-the-net-framework"></a>Visual Basic tuplas e tuplas no .NET Framework
 
-A Visual Basic tuple is an instance of one of the **System.ValueTuple** generic types, which were introduced in the .NET Framework 4.7. The .NET Framework also includes a set of generic **System.Tuple** classes. These classes, however, differ from Visual Basic tuples and the **System.ValueTuple** generic types in a number of ways:
+Uma tupla Visual Basic é uma instância de um dos tipos genéricos **System. ValueTuple** , que foram introduzidos no .NET Framework 4,7. O .NET Framework também inclui um conjunto de classes genéricas **System. tupla** . No entanto, essas classes diferem das tuplas Visual Basic e dos tipos genéricos **System. ValueTuple** de várias maneiras:
 
-- The elements of the **Tuple** classes are properties named `Item1`, `Item2`, and so on. In Visual Basic tuples and the **ValueTuple** types, tuple elements are fields.
+- Os elementos das classes de **tupla** são propriedades nomeadas `Item1`, `Item2`e assim por diante. Em Visual Basic tuplas e os tipos **ValueTuple** , os elementos de tupla são campos.
 
-- You cannot assign meaningful names to the elements of a **Tuple** instance or of a **ValueTuple** instance. Visual Basic allows you to assign names that communicate the meaning of the fields.
+- Você não pode atribuir nomes significativos aos elementos de uma instância de **tupla** ou de uma instância de **ValueTuple** . Visual Basic permite atribuir nomes que comunicam o significado dos campos.
 
-- The properties of a **Tuple** instance are read-only; the tuples are immutable. In Visual Basic tuples and the **ValueTuple** types, tuple fields are read-write; the tuples are mutable.
+- As propriedades de uma instância de **tupla** são somente leitura; as tuplas são imutáveis. Em Visual Basic tuplas e os tipos **ValueTuple** , os campos de tupla são de leitura/gravação; as tuplas são mutáveis.
 
-- The generic **Tuple** types are reference types. Using these **Tuple** types means allocating objects. Em caminhos de acesso, isso pode ter um impacto mensurável no desempenho do aplicativo. Visual Basic tuples and the **ValueTuple** types are value types.
+- Os tipos de **tupla** genérica são tipos de referência. Usar esses tipos de **tupla** significa alocar objetos. Em caminhos de acesso, isso pode ter um impacto mensurável no desempenho do aplicativo. Visual Basic tuplas e os tipos de **ValueTuple** são tipos de valor.
 
-Extension methods in the <xref:System.TupleExtensions> class make it easy to convert between Visual Basic tuples and .NET **Tuple** objects. The **ToTuple** method converts a Visual Basic tuple to a .NET **Tuple** object, and the **ToValueTuple** method converts a .NET **Tuple** object to a Visual Basic tuple.
+Os métodos de extensão na classe <xref:System.TupleExtensions> facilitam a conversão entre tuplas de Visual Basic e objetos de **tupla** .net. O método **totupla** converte uma tupla de Visual Basic em um objeto de **tupla** do .net e o método **ToValueTuple** converte um objeto de **tupla** do .net em uma tupla de Visual Basic.
 
-The following example creates a tuple, converts it to a .NET **Tuple** object, and converts it back to a Visual Basic tuple. The example then compares this tuple with the original one to ensure that they are equal.
+O exemplo a seguir cria uma tupla, converte-a em um objeto de **tupla** do .net e a converte de volta para uma tupla de Visual Basic. Em seguida, o exemplo compara essa tupla com a original para garantir que elas sejam iguais.
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 

@@ -6,15 +6,15 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429219"
 ---
-### <a name="removed-controls"></a>Removed controls
+### <a name="removed-controls"></a>Controles removidos
 
-Starting in .NET Core 3.1, some Windows Forms controls are no longer available.
+A partir do .NET Core 3,1, alguns Windows Forms controles não estão mais disponíveis.
 
-#### <a name="change-description"></a>Change description
+#### <a name="change-description"></a>Alterar descrição
 
-Starting with .NET Core 3.1, various Windows Forms controls are no longer available. Replacement controls that have better design and support were introduced in .NET Framework 2.0. The deprecated controls were previously removed from designer toolboxes but were still available to be used.
+A partir do .NET Core 3,1, vários controles de Windows Forms não estão mais disponíveis. Os controles de substituição com design e suporte melhores foram introduzidos no .NET Framework 2,0. Os controles preteridos foram removidos anteriormente das caixas de ferramentas do designer, mas ainda estavam disponíveis para serem usados.
 
-The following types are no longer available:
+Os seguintes tipos não estão mais disponíveis:
 
 - <xref:System.Windows.Forms.Menu>
 - <xref:System.Windows.Forms.Menu.MenuItemCollection>
@@ -45,17 +45,17 @@ The following types are no longer available:
 - <xref:System.Windows.Forms.DataGrid.HitTestType>
 - <xref:System.Windows.Forms.Design.IMenuEditorService>
 
-#### <a name="version-introduced"></a>Version introduced
+#### <a name="version-introduced"></a>Versão introduzida
 
-3.1
+3,1
 
-#### <a name="recommended-action"></a>Recommended action
+#### <a name="recommended-action"></a>Ação recomendada
 
-Each removed control has a recommended replacement control. Refer to the following table:
+Cada controle removido tem um controle de substituição recomendado. Consulte a tabela a seguir:
 
-| Removed control (API) | Substituição recomendada | Associated APIs that are removed |
+| Controle removido (API) | Substituição recomendada | APIs associadas que foram removidas |
 |-|-|-|
-| DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, DataGridLineStyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTestType |
+| DataGrid | DataGridView | DataGridCell, DataGridRow, DataGridTableCollection, DataGridColumnCollection, DataGridTableStyle, DataGridColumnStyle, datagridlinesstyle, DataGridParentRowsLabel, DataGridParentRowsLabelStyle, DataGridBoolColumn, DataGridTextBox, GridColumnStylesCollection, GridTableStylesCollection, HitTesttype |
 | ToolBar | ToolStrip | ToolBarAppearance |
 | ToolBarButton | ToolStripButton | ToolBarButtonClickEventArgs, ToolBarButtonClickEventHandler, ToolBarButtonStyle, ToolBarTextAlign|
 | ContextMenu | ContextMenuStrip | |

@@ -1,5 +1,5 @@
 ---
-title: Converting between strings and other data types
+title: Convertendo entre cadeias de caracteres e outros tipos de dados
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, strings
@@ -14,26 +14,26 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352485"
 ---
-# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Converting between strings and other data types in Visual Basic
+# <a name="converting-between-strings-and-other-data-types-in-visual-basic"></a>Conversão entre cadeias de caracteres e outros tipos de dados no Visual Basic
 
-This section describes how to convert strings into other data types.
+Esta seção descreve como converter cadeias de caracteres em outros tipos de dados.
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[How to: Convert an Array of Bytes into a String in Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
-How to convert the bytes from a byte array into a string.
+[Como converter uma matriz de bytes em uma cadeia de caracteres no Visual Basic](how-to-convert-an-array-of-bytes-into-a-string.md)  
+Como converter os bytes de uma matriz de bytes em uma cadeia de caracteres.
 
-[How to: Convert Strings into an Array of Bytes in Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
-How to convert a string into an array of bytes.
+[Como converter cadeias de caracteres em uma matriz de bytes em Visual Basic](how-to-convert-strings-into-an-array-of-bytes.md)  
+Como converter uma cadeia de caracteres em uma matriz de bytes.
 
 [Como criar uma cadeia de caracteres de uma matriz de valores de caracteres](how-to-create-a-string-from-an-array-of-char-values.md)  
-How to create the string "abcd" from individual characters.
+Como criar a cadeia "abcd" de caracteres individuais.
 
 [Como converter cadeias de caracteres hexadecimais em números](how-to-convert-hexadecimal-strings-to-numbers.md)  
-How to convert a hexadecimal string into an integer.
+Como converter uma cadeia de caracteres hexadecimal em um número inteiro.
 
-[How to: Convert a String to an Array of Characters in Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
-How to convert a string into an array of characters.
+[Como converter uma sequência de caracteres em uma matriz de caracteres em Visual Basic](how-to-convert-a-string-to-an-array-of-characters.md)  
+Como converter uma cadeia em uma matriz de caracteres.
 
-[How to: Access Characters in Strings in Visual Basic](how-to-access-characters-in-strings.md)  
-How to access a character in a string by its index.
+[Como acessar caracteres em cadeias no Visual Basic](how-to-access-characters-in-strings.md)  
+Como acessar um caractere em uma cadeia de caracteres por seu índice.

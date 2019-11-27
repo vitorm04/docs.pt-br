@@ -12,17 +12,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344308"
 ---
 # <a name="introduction-to-strings-in-visual-basic"></a>Introdução a cadeias de caracteres no Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+Esta seção descreve os conceitos básicos por trás do uso de cadeias de caracteres no Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Noções Básicas de Cadeias de Caracteres](../../../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Introduces the basic concepts behind using strings and string variables.  
+ Apresenta os conceitos básicos por trás do uso de cadeias de caracteres e variáveis de cadeia.  
   
- [Types of String Manipulation Methods in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
- Introduces several different ways to analyze and manipulate strings.  
+ [Tipos de métodos de manipulação de cadeia de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/types-of-string-manipulation-methods.md)  
+ Apresenta várias maneiras diferentes de analisar e manipular cadeias de caracteres.  
   
- [How Culture Affects Strings in Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
- Discusses how Visual Basic uses culture information to perform string conversions and comparisons.  
+ [Como a cultura afeta as cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-culture-affects-strings.md)  
+ Discute como Visual Basic usa informações de cultura para executar conversões e comparações de cadeias de caracteres.  
   
 ## <a name="see-also"></a>Consulte também
 

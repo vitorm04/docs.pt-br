@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442162"
 ---
 # <a name="imetadataemitsethandler-method"></a>Método IMetaDataEmit::SetHandler
-Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.  
+Define o método referenciado pelo ponteiro de `IUnknown` especificado como um retorno de chamada de notificação para remapeamentos de token.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,19 +35,19 @@ HRESULT SetHandler (
   
 ## <a name="parameters"></a>Parâmetros  
  `pUnk`  
- [in] The handler to register.  
+ no O manipulador a ser registrado.  
   
 ## <a name="remarks"></a>Comentários  
- The metadata engine sends notification by using the method that is provided by `SetHandler`, to compilers that do not generate records in an optimized way and that would like to optimize saved records.  
+ O mecanismo de metadados envia a notificação usando o método fornecido pelo `SetHandler`, para compiladores que não geram registros de maneira otimizada e que gostaria de otimizar os registros salvos.  
   
- If the callback method is not provided through `SetHandler`, no optimization will be performed on save except where several import scopes have been merged using `IMapToken` on merge for each scope.  
+ Se o método de retorno de chamada não for fornecido por meio de `SetHandler`, nenhuma otimização será executada no salvamento, exceto onde vários escopos de importação tiverem sido mesclados usando `IMapToken` na mesclagem para cada escopo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

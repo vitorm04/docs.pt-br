@@ -11,13 +11,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351342"
 ---
-# <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
+# <a name="private-protected-visual-basic"></a>Privado protegido (Visual Basic)
 
-A combinação de palavras-chave `Private Protected` é um modificador de acesso de membro. A `Private Protected` member is accessible by all members in its containing class, as well as by types derived from the containing class, but only if they are found in its containing assembly.
+A combinação de palavras-chave `Private Protected` é um modificador de acesso de membro. Um membro `Private Protected` é acessível por todos os membros em sua classe que o contém, bem como por tipos derivados da classe que a contém, mas somente se eles forem encontrados em seu assembly de contenção.
 
-You can specify `Private Protected` only on members of classes; you cannot apply `Private Protected` to members of a structure because structures cannot be inherited.
+Você pode especificar `Private Protected` somente em membros de classes; Você não pode aplicar `Private Protected` aos membros de uma estrutura porque as estruturas não podem ser herdadas.
 
-The `Private Protected` access modifier is supported by Visual Basic 15.5 and later. To use it, you can add the following element to your Visual Basic project (\*.vbproj) file. As long as Visual Basic 15.5 or later is installed on your system, it lets you take advantage of all the language features supported by the latest version of the Visual Basic compiler:
+O `Private Protected` modificador de acesso é suportado pelo Visual Basic 15,5 e posterior. Para usá-lo, você pode adicionar o seguinte elemento ao seu arquivo de Visual Basic projeto (\*. vbproj). Desde que Visual Basic 15,5 ou posterior esteja instalado no seu sistema, ele permite que você aproveite todos os recursos de linguagem suportados pela versão mais recente do compilador de Visual Basic:
 
 ```xml
 <PropertyGroup>
@@ -25,44 +25,44 @@ The `Private Protected` access modifier is supported by Visual Basic 15.5 and la
 </PropertyGroup>
 ```
 
-For more information see [setting the Visual Basic language version](../../language-reference/configure-language-version.md).
+Para obter mais informações, consulte [definindo a versão do idioma do Visual Basic](../../language-reference/configure-language-version.md).
 
 > [!NOTE]
-> In Visual Studio, selecting F1 help on `private protected` provides help for either [private](private.md) or [protected](protected.md). The IDE picks the single token under the cursor rather than the compound word.
+> No Visual Studio, a seleção de ajuda F1 no `private protected` fornece ajuda para [privado](private.md) ou [protegido](protected.md). O IDE escolhe o único token sob o cursor em vez da palavra composta.
 
 ## <a name="rules"></a>Regras
 
-- **Declaration Context.** You can use `Private Protected` only at the class level. This means the declaration context for a `Protected` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **Contexto de declaração.** Você pode usar `Private Protected` apenas no nível de classe. Isso significa que o contexto de declaração para um elemento de `Protected` deve ser uma classe e não pode ser um arquivo de origem, namespace, interface, módulo, estrutura ou procedimento.
 
 ## <a name="behavior"></a>Comportamento
 
-- **Access Level.** All code in a class can access its elements. Code in any class that derives from a base class and is contained in the same assembly can access all the `Private Protected` elements of the base class. However, code in any class that derives from a base class and is contained in a different assembly can't access the base class `Private Protected` elements.
+- **Nível de acesso.** Todo o código em uma classe pode acessar seus elementos. O código em qualquer classe que deriva de uma classe base e está contido no mesmo assembly pode acessar todos os elementos de `Private Protected` da classe base. No entanto, o código em qualquer classe derivada de uma classe base e está contido em um assembly diferente não pode acessar os elementos de `Private Protected` da classe base.
 
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+- **Modificadores de acesso.** As palavras-chave que especificam o nível de acesso são chamadas de *modificadores de acesso*. Para obter uma comparação dos modificadores de acesso, consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-The `Private Protected` modifier can be used in these contexts:
+O modificador de `Private Protected` pode ser usado nesses contextos:
 
-- [Class Statement](../../../visual-basic/language-reference/statements/class-statement.md) of a nested class
+- [Declaração de classe](../../../visual-basic/language-reference/statements/class-statement.md) de uma classe aninhada
 
 - [Instrução Const](../../../visual-basic/language-reference/statements/const-statement.md)
 
 - [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)
 
-- [Delegate Statement](../../../visual-basic/language-reference/statements/delegate-statement.md) of a delegate nested in a class
+- [Instrução delegate](../../../visual-basic/language-reference/statements/delegate-statement.md) de um delegado aninhado em uma classe
 
 - [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 
-- [Enum Statement](../../../visual-basic/language-reference/statements/enum-statement.md) of an enumeration nested in a class
+- [Instrução enum](../../../visual-basic/language-reference/statements/enum-statement.md) de uma enumeração aninhada em uma classe
 
 - [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)
 
 - [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)
 
-- [Interface Statement](../../../visual-basic/language-reference/statements/interface-statement.md) of an interface nested in a class
+- [Declaração de interface](../../../visual-basic/language-reference/statements/interface-statement.md) de uma interface aninhada em uma classe
 
 - [Instrução Property](../../../visual-basic/language-reference/statements/property-statement.md)
 
-- [Structure Statement](../../../visual-basic/language-reference/statements/structure-statement.md) of a structure nested in a class
+- [Instrução de estrutura](../../../visual-basic/language-reference/statements/structure-statement.md) de uma estrutura aninhada em uma classe
 
 - [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)
 
@@ -73,7 +73,7 @@ The `Private Protected` modifier can be used in these contexts:
 - [Friend](friend.md)
 - [Privado](../../../visual-basic/language-reference/modifiers/private.md)
 - [Amigo Protegido](./protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

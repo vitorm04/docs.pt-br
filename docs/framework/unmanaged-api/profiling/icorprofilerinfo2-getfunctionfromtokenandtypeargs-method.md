@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433214"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>Método ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs
-Gets the `FunctionID` of a function by using the specified metadata token, containing class, and `ClassID` values of any type arguments.  
+Obtém a `FunctionID` de uma função usando o token de metadados especificado, contendo a classe e valores de `ClassID` de qualquer argumento de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,34 +39,34 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleID`  
- [in] The ID of the module in which the function resides.  
+ no A ID do módulo no qual a função reside.  
   
  `funcDef`  
- [in] An `mdMethodDef` metadata token that references the function.  
+ no Um `mdMethodDef` token de metadados que faz referência à função.  
   
  `classId`  
- [in] The ID of the function's containing class.  
+ no A ID da classe que contém a função.  
   
  `cTypeArgs`  
- [in] The number of type parameters for the given function. This value must be zero for non-generic functions.  
+ no O número de parâmetros de tipo para a função fornecida. Esse valor deve ser zero para funções não genéricas.  
   
  `typeArgs`  
- [in] An array of `ClassID` values, each of which is an argument of the function. The value of `typeArgs` can be NULL if `cTypeArgs` is set to zero.  
+ no Uma matriz de valores de `ClassID`, cada um dos quais é um argumento da função. O valor de `typeArgs` pode ser nulo se `cTypeArgs` for definido como zero.  
   
  `pFunctionID`  
- [out] A pointer to the `FunctionID` of the specified function.  
+ fora Um ponteiro para a `FunctionID` da função especificada.  
   
 ## <a name="remarks"></a>Comentários  
- Calling the `GetFunctionFromTokenAndTypeArgs` method with an `mdMethodRef` metadata instead of an `mdMethodDef` metadata token can have unpredictable results. Callers should resolve the `mdMethodRef` to an `mdMethodDef` when passing it.  
+ Chamar o método `GetFunctionFromTokenAndTypeArgs` com um `mdMethodRef` metadados em vez de um token de metadados `mdMethodDef` pode ter resultados imprevisíveis. Os chamadores devem resolver o `mdMethodRef` a um `mdMethodDef` ao passá-lo.  
   
- If the function is not already loaded, calling `GetFunctionFromTokenAndTypeArgs` will cause loading to occur, which is a dangerous operation in many contexts. For example, calling this method during loading of modules or types could lead to an infinite loop as the runtime attempts to circularly load things.  
+ Se a função ainda não estiver carregada, chamar `GetFunctionFromTokenAndTypeArgs` fará com que o carregamento ocorra, que é uma operação perigosa em muitos contextos. Por exemplo, chamar esse método durante o carregamento de módulos ou tipos pode levar a um loop infinito, pois o tempo de execução tenta carregar as coisas de forma circular.  
   
- In general, use of `GetFunctionFromTokenAndTypeArgs` is discouraged. If profilers are interested in events for a particular function, they should store the `ModuleID` and `mdMethodDef` of that function, and use [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) to check whether a given `FunctionID` is that of the desired function.  
+ Em geral, o uso de `GetFunctionFromTokenAndTypeArgs` não é recomendado. Se os profileres estiverem interessados em eventos para uma função específica, eles deverão armazenar o `ModuleID` e `mdMethodDef` dessa função e usar [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) para verificar se um determinado `FunctionID` é o da função desejada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

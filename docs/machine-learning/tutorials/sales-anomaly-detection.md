@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Detect anomalies in product sales'
+title: 'Tutorial: detectar anomalias em vendas de produtos'
 description: Saiba como criar um aplicativo de detecção de anomalias para dados de vendas do produto. Este tutorial cria um aplicativo de console .NET Core usando C# no Visual Studio 2019.
 ms.date: 11/15/2019
 ms.topic: tutorial
@@ -11,7 +11,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204934"
 ---
-# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: Detect anomalies in product sales with ML.NET
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>Tutorial: detectar anomalias em vendas de produtos com o ML.NET
 
 Saiba como criar um aplicativo de detecção de anomalias para dados de vendas do produto. Este tutorial cria um aplicativo de console .NET Core usando C# no Visual Studio.
 
@@ -26,9 +26,9 @@ Neste tutorial, você aprenderá como:
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/ProductSalesAnomalyDetection).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
-* [Visual Studio 2017 version 15.6 or later](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) with the ".NET Core cross-platform development" workload installed.
+* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
 
 * [O conjunto de dados product-sales.csv](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)
 
@@ -44,7 +44,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 3. Instalar o **Pacote NuGet Microsoft.ML**:
 
-    No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Choose "nuget.org" as the Package source, select the Browse tab, search for **Microsoft.ML** and select the **Install** button. Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados. Repeat these steps for **Microsoft.ML.TimeSeries**.
+    No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**. Escolha "nuget.org" como a origem do pacote, selecione a guia procurar, procure **Microsoft.ml** e selecione o botão **instalar** . Selecione o botão **OK** na caixa de diálogo **Visualizar Alterações** e selecione o botão **Aceito** na caixa de diálogo **Aceitação da Licença**, se concordar com o termos de licença para os pacotes listados. Repita essas etapas para **Microsoft. ml. timeseries**.
 
 4. Adicione as seguintes instruções `using` à parte superior do arquivo *Program.cs*:
 
@@ -127,14 +127,14 @@ Os dados do ML.NET são representados como uma [classe IDataView](xref:Microsoft
 
 Detecção de anomalias sinaliza comportamentos ou eventos incomuns ou inesperados. Ela dá dicas de em que local procurar problemas e ajuda a responder à pergunta "Isso é estranho?".
 
-![Example of the "Is this weird" anomaly detection.](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
+![Exemplo da detecção de anomalias "é estranha".](./media/sales-anomaly-detection/time-series-anomaly-detection.png)
 
 A detecção de anomalias é o processo de detectar exceções de dados de série temporal; pontos em uma série temporal de entrada em que o comportamento não é o esperado ou "estranho".
 
 A detecção de anomalias pode ser útil de várias maneiras. Por exemplo:
 
-If you have a car, you might want to know: Is this oil gauge reading normal, or do I have a leak?
-If you're monitoring power consumption, you’d want to know: Is there an outage?
+Se você tiver um carro, talvez queira saber: Este medidor de óleo está lendo normal ou ter um vazamento?
+Se você estiver monitorando o consumo de energia, você desejaria saber: há uma interrupção?
 
 Há dois tipos de anomalias de série temporal que podem ser detectados:
 
@@ -152,7 +152,7 @@ Você vai analisar os mesmos dados de vendas do produto para detectar picos e po
 
 A meta da detecção de pico é identificar picos repentinos, mas temporários, que diferem significativamente da maioria dos valores de dados de série temporal. É importante detectar esses itens raros, eventos ou observações suspeitos de maneira oportuna para que sejam minimizados. A abordagem a seguir pode ser usada para detectar uma variedade de anomalias, como: interrupções, ataques cibernéticos ou conteúdo da Web viral. A imagem a seguir é um exemplo de picos em um conjunto de dados de série temporal:
 
-![Screenshot that shows two spike detections.](./media/sales-anomaly-detection/two-spike-detections.png)
+![Captura de tela que mostra duas detecções de pico.](./media/sales-anomaly-detection/two-spike-detections.png)
 
 ### <a name="add-the-createemptydataview-method"></a>Adicionar o método CreateEmptyDataView()
 
@@ -266,7 +266,7 @@ Alert   Score   P-Value
 
 `Change points` são alterações persistentes em uma distribuição de valores de fluxo de evento de série temporal, como alterações de nível e tendências. Essas alterações persistentes duram muito mais que `spikes` e podem indicar eventos catastróficos. `Change points` normalmente não estão visíveis a olho nu, mas podem ser detectados em seus dados usando abordagens como o método a seguir.  A imagem a seguir é um exemplo de uma detecção de ponto de alteração:
 
-![Screenshot that shows a change point detection.](./media/sales-anomaly-detection/change-point-detection.png)
+![Captura de tela que mostra uma detecção de ponto de alteração.](./media/sales-anomaly-detection/change-point-detection.png)
 
 ### <a name="create-the-detectchangepoint-method"></a>Crie o método DetectChangepoint()
 

@@ -22,37 +22,37 @@ ms.locfileid: "74351380"
 ---
 # <a name="overrides-visual-basic"></a>Substituições (Visual Basic)
 
-Specifies that a property or procedure overrides an identically named property or procedure inherited from a base class.
+Especifica que uma propriedade ou procedimento substitui uma propriedade nomeada de forma idêntica ou procedimento herdado de uma classe base.
 
 ## <a name="rules"></a>Regras
 
-- **Declaration Context.** You can use `Overrides` only in a property or procedure declaration statement.
+- **Contexto de declaração.** Você pode usar `Overrides` apenas em uma instrução de declaração de propriedade ou de procedimento.
 
-- **Combined Modifiers.** You cannot specify `Overrides` together with `Shadows` or `Shared` in the same declaration. Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.
+- **Modificadores combinados.** Você não pode especificar `Overrides` junto com `Shadows` ou `Shared` na mesma declaração. Como um elemento de substituição é implicitamente substituível, não é possível combinar `Overridable` com `Overrides`.
 
-- **Matching Signatures.** The signature of this declaration must exactly match the *signature* of the property or procedure that it overrides. This means the parameter lists must have the same number of parameters, in the same order, with the same data types.
+- **Assinaturas correspondentes.** A assinatura dessa declaração deve corresponder exatamente à *assinatura* da propriedade ou do procedimento que ela substitui. Isso significa que as listas de parâmetros devem ter o mesmo número de parâmetros, na mesma ordem, com os mesmos tipos de dados.
 
-  In addition to the signature, the overriding declaration must also exactly match the following:
+  Além da assinatura, a declaração de substituição também deve corresponder exatamente ao seguinte:
 
-  - The access level
+  - O nível de acesso
 
-  - The return type, if any
+  - O tipo de retorno, se houver
 
-- **Generic Signatures.** For a generic procedure, the signature includes the number of type parameters. Therefore, the overriding declaration must match the base class version in that respect as well.
+- **Assinaturas genéricas.** Para um procedimento genérico, a assinatura inclui o número de parâmetros de tipo. Portanto, a declaração de substituição também deve corresponder à versão da classe base nesse aspecto.
 
-- **Additional Matching.** In addition to matching the signature of the base class version, this declaration must also match it in the following respects:
+- **Correspondência adicional.** Além de corresponder à assinatura da versão da classe base, essa declaração também deve corresponder aos seguintes aspectos:
 
-  - Access-level modifier (such as [Public](../../../visual-basic/language-reference/modifiers/public.md))
+  - Modificador de nível de acesso (como [público](../../../visual-basic/language-reference/modifiers/public.md))
 
-  - Passing mechanism of each parameter ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
+  - Mecanismo de passagem de cada parâmetro ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))
 
-  - Constraint lists on each type parameter of a generic procedure
+  - Listas de restrição em cada parâmetro de tipo de um procedimento genérico
 
-- **Shadowing and Overriding.** Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+- **Sombreamento e substituição.** Sombreamento e substituição redefinem um elemento herdado, mas há diferenças significativas entre as duas abordagens. Para obter mais informações, consulte [sombreamento em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
 
-If you use `Overrides`, the compiler implicitly adds `Overloads` so that your library APIs work with C# more easily.
+Se você usar `Overrides`, o compilador adicionará implicitamente `Overloads` para que suas APIs de biblioteca C# funcionem com mais facilidade.
 
-The `Overrides` modifier can be used in these contexts:
+O modificador de `Overrides` pode ser usado nesses contextos:
 
 - [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)
 
@@ -66,6 +66,6 @@ The `Overrides` modifier can be used in these contexts:
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Sombreamento em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Tipos genéricos no Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)

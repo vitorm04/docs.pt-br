@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447782"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>Método ICorProfilerFunctionEnum::Next
-Gets the specified number of contiguous functions from a sequential collection of functions, starting at the enumerator's current position in the sequence.  
+Obtém o número especificado de funções contíguas de uma coleção sequencial de funções, começando na posição atual do enumerador na sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,26 +36,26 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] The number of functions to retrieve.  
+ no O número de funções a serem recuperadas.  
   
  `ids`  
- [out] An array of `COR_PRF_FUNCTION` values, each of which represents a retrieved function.  
+ fora Uma matriz de valores de `COR_PRF_FUNCTION`, cada um representando uma função recuperada.  
   
  `pceltFetched`  
- [out] A pointer to the number of functions actually returned in the `ids` array.  
+ fora Um ponteiro para o número de funções realmente retornadas na matriz de `ids`.  
   
 ## <a name="return-value"></a>Valor retornado  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were returned.|  
-|S_FALSE|Fewer than `celt` elements were returned, which indicates that the enumeration is complete.|  
+|S_OK|`celt` elementos foram retornados.|  
+|S_FALSE|Foram retornados menos de `celt` elementos, o que indica que a enumeração foi concluída.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

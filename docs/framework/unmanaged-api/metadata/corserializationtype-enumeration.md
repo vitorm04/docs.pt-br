@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432876"
 ---
 # <a name="corserializationtype-enumeration"></a>Enumeração CorSerializationType
-Specifies how an object is serialized by the common language runtime.  
+Especifica como um objeto é serializado pelo Common Language Runtime.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -55,33 +55,33 @@ typedef enum CorSerializationType {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`SERIALIZATION_TYPE_UNDEFINED`|Serialization of the object is undefined.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Object is serialized as a Boolean type|  
-|`SERIALIZATION_TYPE_CHAR`|Object is serialized as a character type.|  
-|`SERIALIZATION_TYPE_I1`|Object is serialized as a signed 1-byte integer.|  
-|`SERIALIZATION_TYPE_U1`|Object is serialized as an unsigned 1-byte integer.|  
-|`SERIALIZATION_TYPE_I2`|Object is serialized as a signed 2-byte integer.|  
-|`SERIALIZATION_TYPE_U2`|Object is serialized as an unsigned 2-byte integer.|  
-|`SERIALIZATION_TYPE_I4`|Object is serialized as a signed 4-byte integer.|  
-|`SERIALIZATION_TYPE_U4`|Object is serialized as an unsigned 4-byte integer.|  
-|`SERIALIZATION_TYPE_I8`|Object is serialized as a signed 8-byte integer.|  
-|`SERIALIZATION_TYPE_U8`|Object is serialized as an unsigned 8-byte integer.|  
-|`SERIALIZATION_TYPE_R4`|Object is serialized as a 4-byte floating point.|  
-|`SERIALIZATION_TYPE_R8`|Object is serialized as an 8-byte floating point.|  
-|`SERIALIZATION_TYPE_STRING`|Object is serialized as a System.String type.|  
-|`SERIALIZATION_TYPE_SZARRAY`|Object is serialized as a single-dimensional, zero lower-bound array.|  
-|`SERIALIZATION_TYPE_TYPE`|Object is serialized as a generic type.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|Object is serialized as a tagged object.|  
-|`SERIALIZATION_TYPE_FIELD`|Object is serialized as a field.|  
-|`SERIALIZATION_TYPE_PROPERTY`|Object is serialized as a property.|  
-|`SERIALIZATION_TYPE_ENUM`|Object is serialized as an enumeration.|  
+|`SERIALIZATION_TYPE_UNDEFINED`|A serialização do objeto está indefinida.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|O objeto é serializado como um tipo booliano|  
+|`SERIALIZATION_TYPE_CHAR`|O objeto é serializado como um tipo de caractere.|  
+|`SERIALIZATION_TYPE_I1`|O objeto é serializado como um inteiro de 1 byte assinado.|  
+|`SERIALIZATION_TYPE_U1`|O objeto é serializado como um inteiro de 1 byte não assinado.|  
+|`SERIALIZATION_TYPE_I2`|O objeto é serializado como um inteiro de 2 bytes assinado.|  
+|`SERIALIZATION_TYPE_U2`|O objeto é serializado como um inteiro de 2 bytes não assinado.|  
+|`SERIALIZATION_TYPE_I4`|O objeto é serializado como um inteiro de 4 bytes assinado.|  
+|`SERIALIZATION_TYPE_U4`|O objeto é serializado como um inteiro de 4 bytes não assinado.|  
+|`SERIALIZATION_TYPE_I8`|O objeto é serializado como um inteiro de 8 bytes assinado.|  
+|`SERIALIZATION_TYPE_U8`|O objeto é serializado como um inteiro de 8 bytes não assinado.|  
+|`SERIALIZATION_TYPE_R4`|O objeto é serializado como um ponto flutuante de 4 bytes.|  
+|`SERIALIZATION_TYPE_R8`|O objeto é serializado como um ponto flutuante de 8 bytes.|  
+|`SERIALIZATION_TYPE_STRING`|O objeto é serializado como um tipo System. String.|  
+|`SERIALIZATION_TYPE_SZARRAY`|O objeto é serializado como uma matriz unidimensional de limite inferior de zero.|  
+|`SERIALIZATION_TYPE_TYPE`|O objeto é serializado como um tipo genérico.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|O objeto é serializado como um objeto marcado.|  
+|`SERIALIZATION_TYPE_FIELD`|O objeto é serializado como um campo.|  
+|`SERIALIZATION_TYPE_PROPERTY`|O objeto é serializado como uma propriedade.|  
+|`SERIALIZATION_TYPE_ENUM`|O objeto é serializado como uma enumeração.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

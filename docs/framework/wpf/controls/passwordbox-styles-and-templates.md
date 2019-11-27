@@ -24,7 +24,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 
 A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.PasswordBox>.
 
-|Parte|Digite|Descrição|
+|Parte|Tipo|Descrição|
 |-|-|-|
 |PART_ContentHost|<xref:System.Windows.FrameworkElement>|Um elemento visual que pode conter um <xref:System.Windows.FrameworkElement>. O texto do <xref:System.Windows.Controls.PasswordBox> é exibido neste elemento.|
 

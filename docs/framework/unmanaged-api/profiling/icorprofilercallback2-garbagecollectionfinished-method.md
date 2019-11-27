@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439848"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>Método ICorProfilerCallback2::GarbageCollectionFinished
-Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.  
+Notifica o criador de perfil de que a coleta de lixo foi concluída e que todos os retornos de chamada de coleta de lixo foram emitidos para ela.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,12 +32,12 @@ HRESULT GarbageCollectionFinished();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- It is safe for the profiler to inspect objects in their final locations when the `GarbageCollectionFinished` method is called.  
+ É seguro que o criador de perfil Inspecione objetos em seus locais finais quando o método de `GarbageCollectionFinished` é chamado.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

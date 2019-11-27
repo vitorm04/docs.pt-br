@@ -16,19 +16,19 @@ ms.locfileid: "74344100"
 Fornece métodos para manipular a Área de Transferência.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Computer.Clipboard` object, see <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Computer.Clipboard`, consulte <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
   
- For more information, see [Storing Data to and Reading from the Clipboard](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ Para obter mais informações, consulte [armazenando dados e lendo na área de transferência](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
   
 > [!NOTE]
-> You can also use methods of the <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> class to manipulate the Clipboard.  
+> Você também pode usar métodos da classe <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> para manipular a área de transferência.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (provides access to <xref:System.Windows.Forms.Clipboard>)  
+ **Classe:** <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy> (fornece acesso ao <xref:System.Windows.Forms.Clipboard>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

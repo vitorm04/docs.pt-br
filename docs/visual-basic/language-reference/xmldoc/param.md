@@ -12,8 +12,8 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352293"
 ---
-# <a name="param-visual-basic"></a>\<param> (Visual Basic)
-Defines a parameter name and description.  
+# <a name="param-visual-basic"></a>> de \<param (Visual Basic)
+Define um nome de parâmetro e uma descrição.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,18 +29,18 @@ Defines a parameter name and description.
  Uma descrição do parâmetro.  
   
 ## <a name="remarks"></a>Comentários  
- The `<param>` tag should be used in the comment for a method declaration to describe one of the parameters for the method.  
+ A marca de `<param>` deve ser usada no comentário para uma declaração de método para descrever um dos parâmetros para o método.  
   
- The text for the `<param>` tag will appear in the following locations:  
+ O texto da marca de `<param>` aparecerá nos seguintes locais:  
   
-- Parameter Info of IntelliSense. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense).  
+- Informações de parâmetro do IntelliSense. Para obter mais informações, veja [Usando o IntelliSense](/visualstudio/ide/using-intellisense).  
   
-- Object Browser. Para obter mais informações, consulte [Exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).  
+- Pesquisador de objetos. Para obter mais informações, consulte [Exibindo a estrutura do código](/visualstudio/ide/viewing-the-structure-of-code).  
   
  Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- This example uses the `<param>` tag to describe the `id` parameter.  
+ Este exemplo usa a marca `<param>` para descrever o parâmetro `id`.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

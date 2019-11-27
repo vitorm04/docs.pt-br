@@ -19,7 +19,7 @@ ms.locfileid: "74353927"
 
 Se deixado sem regulagem, um programa passa por suas instruções do início ao fim. Alguns programas muito simples podem ser escritos com apenas esse fluxo unidirecional. No entanto, muito da eficiência e da utilidade de qualquer linguagem de programação é derivada da capacidade de alterar a ordem de execução com instruções de controle e loops.
 
- As estruturas de controle permitem regular o fluxo de execução do programa. Using control structures, you can write Visual Basic code that makes decisions or that repeats actions. Outras estruturas de controle permitem assegurar disponibilidade de um recurso ou executar uma série de instruções na mesma referência de objeto.
+ As estruturas de controle permitem regular o fluxo de execução do programa. Usando estruturas de controle, você pode escrever Visual Basic código que toma decisões ou que repete ações. Outras estruturas de controle permitem assegurar disponibilidade de um recurso ou executar uma série de instruções na mesma referência de objeto.
   
 ## <a name="in-this-section"></a>Nesta seção
 

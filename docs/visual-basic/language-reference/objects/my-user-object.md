@@ -16,12 +16,12 @@ ms.locfileid: "74350644"
 Fornece acesso às informações sobre o usuário atual.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.User` object, see <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.User`, consulte <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>.  
   
- For more information, see [Accessing User Data](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
+ Para obter mais informações, consulte [acessando dados do usuário](../../../visual-basic/developing-apps/programming/accessing-user-data.md).  
   
 ## <a name="requirements"></a>Requisitos  
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

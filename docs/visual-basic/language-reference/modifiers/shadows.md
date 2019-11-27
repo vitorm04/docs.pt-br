@@ -20,31 +20,31 @@ ms.locfileid: "74351269"
 ---
 # <a name="shadows-visual-basic"></a>Sombras (Visual Basic)
 
-Specifies that a declared programming element redeclares and hides an identically named element, or set of overloaded elements, in a base class.
+Especifica que um elemento de programação declarado redeclara e oculta um elemento de nome idêntico ou conjunto de elementos sobrecarregados, em uma classe base.
 
 ## <a name="remarks"></a>Comentários
 
-The main purpose of shadowing (which is also known as *hiding by name*) is to preserve the definition of your class members. The base class might undergo a change that creates an element with the same name as one you have already defined. If this happens, the `Shadows` modifier forces references through your class to be resolved to the member you defined, instead of to the new base class element.
+A principal finalidade do sombreamento (que também é conhecido como *ocultar por nome*) é preservar a definição de seus membros de classe. A classe base pode passar por uma alteração que cria um elemento com o mesmo nome de um que você já definiu. Se isso acontecer, o modificador `Shadows` força referências por meio de sua classe a ser resolvida para o membro que você definiu, em vez de para o novo elemento de classe base.
 
-Both shadowing and overriding redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
+Sombreamento e substituição redefinem um elemento herdado, mas há diferenças significativas entre as duas abordagens. Para obter mais informações, consulte [sombreamento em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).
 
 ## <a name="rules"></a>Regras
 
-- **Declaration Context.** You can use `Shadows` only at class level. This means the declaration context for a `Shadows` element must be a class, and cannot be a source file, namespace, interface, module, structure, or procedure.
+- **Contexto de declaração.** Você pode usar `Shadows` somente no nível de classe. Isso significa que o contexto de declaração para um elemento de `Shadows` deve ser uma classe e não pode ser um arquivo de origem, namespace, interface, módulo, estrutura ou procedimento.
 
-  You can declare only one shadowing element in a single declaration statement.
+  Você pode declarar apenas um elemento de sombreamento em uma única instrução de declaração.
 
-- **Combined Modifiers.** You cannot specify `Shadows` together with `Overloads`, `Overrides`, or `Static` in the same declaration.
+- **Modificadores combinados.** Não é possível especificar `Shadows` junto com `Overloads`, `Overrides`ou `Static` na mesma declaração.
 
-- **Element Types.** You can shadow any kind of declared element with any other kind. If you shadow a property or procedure with another property or procedure, the parameters and the return type do not have to match those in the base class property or procedure.
+- **Tipos de elemento.** Você pode sombrear qualquer tipo de elemento declarado com qualquer outro tipo. Se você sombrear uma propriedade ou um procedimento com outra propriedade ou procedimento, os parâmetros e o tipo de retorno não precisarão corresponder àqueles na propriedade ou procedimento da classe base.
 
-- **Accessing.** The shadowed element in the base class is normally unavailable from within the derived class that shadows it. However, the following considerations apply.
+- **Acess.** O elemento sombreado na classe base normalmente não está disponível de dentro da classe derivada que a sombreia. No entanto, as considerações a seguir se aplicam.
 
-  - If the shadowing element is not accessible from the code referring to it, the reference is resolved to the shadowed element. For example, if a `Private` element shadows a base class element, code that does not have permission to access the `Private` element accesses the base class element instead.
+  - Se o elemento de sombreamento não estiver acessível a partir do código que se refere a ele, a referência será resolvida para o elemento sombreado. Por exemplo, se um elemento `Private` sombreia um elemento de classe base, o código que não tem permissão para acessar o elemento `Private` acessa o elemento da classe base em vez disso.
 
-  - If you shadow an element, you can still access the shadowed element through an object declared with the type of the base class. You can also access it through `MyBase`.
+  - Se você sombrear um elemento, ainda poderá acessar o elemento sombreado por meio de um objeto declarado com o tipo da classe base. Você também pode acessá-lo por meio de `MyBase`.
 
-The `Shadows` modifier can be used in these contexts:
+O modificador de `Shadows` pode ser usado nesses contextos:
 
 - [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)
 
@@ -82,4 +82,4 @@ The `Shadows` modifier can be used in these contexts:
 - [Sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Substituições](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Sombreamento em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

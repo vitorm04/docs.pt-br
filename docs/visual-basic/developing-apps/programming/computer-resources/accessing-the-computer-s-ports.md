@@ -1,5 +1,5 @@
 ---
-title: Acessando as portas do computador
+title: Acessar as portas do computador
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports

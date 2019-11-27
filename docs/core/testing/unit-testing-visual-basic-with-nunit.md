@@ -17,7 +17,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [SDK do .NET Core 2.1](https://dotnet.microsoft.com/download) ou versões posteriores.
 - Um editor de texto ou de código de sua escolha.

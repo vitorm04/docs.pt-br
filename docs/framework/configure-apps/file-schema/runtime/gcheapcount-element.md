@@ -42,7 +42,7 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 |-----------|-----------------|
 |`nn`|O número de heaps a ser usado para o GC do servidor.|
 
-### <a name="child-elements"></a>Elementos filho
+### <a name="child-elements"></a>Child elements
 
 Nenhum.
 

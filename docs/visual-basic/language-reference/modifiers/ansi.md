@@ -16,21 +16,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344734"
 ---
 # <a name="ansi-visual-basic"></a>Ansi (Visual Basic)
-Specifies that Visual Basic should marshal all strings to American National Standards Institute (ANSI) values regardless of the name of the external procedure being declared.  
+Especifica que Visual Basic deve realizar marshaling de todas as cadeias de caracteres para valores de American National Standards Institute (ANSI), independentemente do nome do procedimento externo que está sendo declarado.  
   
- When you call a procedure defined outside your project, the Visual Basic compiler does not have access to the information it needs to call the procedure correctly. This information includes where the procedure is located, how it is identified, its calling sequence and return type, and the string character set it uses. The [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) creates a reference to an external procedure and supplies this necessary information.  
+ Quando você chama um procedimento definido fora do seu projeto, o compilador Visual Basic não tem acesso às informações necessárias para chamar o procedimento corretamente. Essas informações incluem onde o procedimento está localizado, como ele é identificado, sua sequência de chamada e tipo de retorno e o conjunto de caracteres da cadeia de caracteres que ele usa. A [instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md) cria uma referência a um procedimento externo e fornece essas informações necessárias.  
   
- The `charsetmodifier` part in the `Declare` statement supplies the character set information for marshaling strings during a call to the external procedure. It also affects how Visual Basic searches the external file for the external procedure name. The `Ansi` modifier specifies that Visual Basic should marshal all strings to ANSI values and should look up the procedure without modifying its name during the search.  
+ A parte `charsetmodifier` na instrução `Declare` fornece as informações de um conjunto de caracteres para o marshaling de cadeias durante uma chamada para o procedimento externo. Ele também afeta como Visual Basic pesquisa o nome do procedimento externo no arquivo externo. O modificador de `Ansi` especifica que Visual Basic deve realizar marshaling de todas as cadeias de caracteres para valores ANSI e deve procurar o procedimento sem modificar seu nome durante a pesquisa.  
   
- If no character set modifier is specified, `Ansi` is the default.  
+ Se nenhum modificador de conjunto de caracteres for especificado, `Ansi` será o padrão.  
   
 ## <a name="remarks"></a>Comentários  
- The `Ansi` modifier can be used in this context:  
+ O modificador de `Ansi` pode ser usado neste contexto:  
   
  [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
-## <a name="smart-device-developer-notes"></a>Smart Device Developer Notes  
- This keyword is not supported.  
+## <a name="smart-device-developer-notes"></a>Notas para desenvolvedores de dispositivos inteligentes  
+ Não há suporte para essa palavra-chave.  
   
 ## <a name="see-also"></a>Consulte também
 

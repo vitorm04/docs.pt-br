@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447879"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>Método IMetaDataEmit2::SaveDeltaToStream
-Saves changes from the current edit-and-continue session to the specified stream.  
+Salva as alterações da sessão de edição e continuação atual para o fluxo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ HRESULT SaveDeltaToStream (
   
 ## <a name="parameters"></a>Parâmetros  
  `pIStream`  
- [in] An interface pointer to the writable stream to which to save changes.  
+ no Um ponteiro de interface para o fluxo gravável no qual salvar as alterações.  
   
  `dwSaveFlags`  
  [in] Reservado. Esse valor precisa ser zero.  
@@ -44,9 +44,9 @@ HRESULT SaveDeltaToStream (
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

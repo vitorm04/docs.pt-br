@@ -16,26 +16,26 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351288"
 ---
 # <a name="public-visual-basic"></a>Público (Visual Basic)
-Specifies that one or more declared programming elements have no access restrictions.  
+Especifica que um ou mais elementos de programação declarados não têm restrições de acesso.  
   
 ## <a name="remarks"></a>Comentários  
- If you are publishing a component or set of components, such as a class library, you usually want the programming elements to be accessible by any code that interoperates with your assembly. To confer such unlimited access on an element, you can declare it with `Public`.  
+ Se você estiver publicando um componente ou conjunto de componentes, como uma biblioteca de classes, geralmente você desejará que os elementos de programação sejam acessíveis por qualquer código que interopere com seu assembly. Para confere tal acesso ilimitado em um elemento, você pode declará-lo com `Public`.  
   
- Public access is the normal level for a programming element when you do not need to limit access to it. Note that the access level of an element declared within an interface, module, class, or structure defaults to `Public` if you do not declare it otherwise.  
+ Acesso público é o nível normal de um elemento de programação quando você não precisa limitar o acesso a ele. Observe que o nível de acesso de um elemento declarado em uma interface, módulo, classe ou estrutura usa como padrão a `Public` se você não declará-lo caso contrário.  
   
 ## <a name="rules"></a>Regras  
   
-- **Declaration Context.** You can use `Public` only at module, interface, or namespace level. This means the declaration context for a `Public` element must be a source file, namespace, interface, module, class, or structure, and cannot be a procedure.  
+- **Contexto de declaração.** Você pode usar `Public` somente no nível do módulo, da interface ou do namespace. Isso significa que o contexto de declaração para um elemento de `Public` deve ser um arquivo de origem, namespace, interface, módulo, classe ou estrutura, e não pode ser um procedimento.  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Access Level.** All code that can access a module, class, or structure can access its `Public` elements.  
+- **Nível de acesso.** Todo o código que pode acessar um módulo, uma classe ou uma estrutura pode acessar seus elementos de `Public`.  
   
-- **Default Access.** Local variables inside a procedure default to public access, and you cannot use any access modifiers on them.  
+- **Acesso padrão.** Variáveis locais dentro de um procedimento assumem o acesso público como padrão, e você não pode usar nenhum modificador de acesso neles.  
   
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Modificadores de acesso.** As palavras-chave que especificam o nível de acesso são chamadas de *modificadores de acesso*. Para obter uma comparação dos modificadores de acesso, consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- The `Public` modifier can be used in these contexts:  
+ O modificador de `Public` pode ser usado nesses contextos:  
   
  [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -72,7 +72,7 @@ Specifies that one or more declared programming elements have no access restrict
 - [Privado](../../../visual-basic/language-reference/modifiers/private.md)
 - [Particular Protegido](private-protected.md)
 - [Amigo Protegido](protected-friend.md)
-- [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

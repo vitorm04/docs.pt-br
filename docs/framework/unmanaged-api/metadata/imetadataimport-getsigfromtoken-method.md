@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436855"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>Método IMetaDataImport::GetSigFromToken
-Gets the binary metadata signature associated with the specified token.  
+Obtém a assinatura de metadados binários associada ao token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,20 +37,20 @@ HRESULT GetSigFromToken (
   
 ## <a name="parameters"></a>Parâmetros  
  `mdSig`  
- [in] The token to return the binary metadata signature for.  
+ no O token para o qual retornar a assinatura de metadados binários.  
   
  `ppvSig`  
- [out] A pointer to the returned metadata signature.  
+ fora Um ponteiro para a assinatura de metadados retornada.  
   
  `pcbSig`  
- [out] The size in bytes of the binary metadata signature.  
+ fora O tamanho em bytes da assinatura de metadados binários.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

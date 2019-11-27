@@ -22,11 +22,11 @@ ms.locfileid: "74353824"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Como criar objetos GenericPrincipal e GenericIdentity
 
-You can use the <xref:System.Security.Principal.GenericIdentity> class in conjunction with the <xref:System.Security.Principal.GenericPrincipal> class to create an authorization scheme that exists independent of a Windows domain.
+Você pode usar a classe <xref:System.Security.Principal.GenericIdentity> em conjunto com a classe <xref:System.Security.Principal.GenericPrincipal> para criar um esquema de autorização que existe independentemente de um domínio do Windows.
 
-### <a name="to-create-a-genericprincipal-object"></a>To create a GenericPrincipal object
+### <a name="to-create-a-genericprincipal-object"></a>Para criar um objeto GenericPrincipal
 
-1. Create a new instance of the identity class and initialize it with the name you want it to hold. The following code creates a new **GenericIdentity** object and initializes it with the name `MyUser`.
+1. Crie uma nova instância da classe Identity e inicialize-a com o nome que você deseja que ela mantenha. O código a seguir cria um novo objeto **GenericIdentity** e o inicializa com o nome `MyUser`.
 
     ```vb
     Dim myIdentity As New GenericIdentity("MyUser")
@@ -36,7 +36,7 @@ You can use the <xref:System.Security.Principal.GenericIdentity> class in conjun
     GenericIdentity myIdentity = new GenericIdentity("MyUser");
     ```
 
-2. Create a new instance of the **GenericPrincipal** class and initialize it with the previously created **GenericIdentity** object and an array of strings that represent the roles that you want associated with this principal. The following code example specifies an array of strings that represent an administrator role and a user role. The **GenericPrincipal** is then initialized with the previous **GenericIdentity** and the string array.
+2. Crie uma nova instância da classe **GenericPrincipal** e inicialize-a com o objeto **GenericIdentity** criado anteriormente e uma matriz de cadeias de caracteres que representem as funções que você deseja associar a essa entidade de segurança. O exemplo de código a seguir especifica uma matriz de cadeias de caracteres que representam uma função de administrador e uma função de usuário. Em seguida, o **GenericPrincipal** é inicializado com o **GenericIdentity** anterior e a matriz de cadeia de caracteres.
 
     ```vb
     Dim myStringArray As String() = {"Manager", "Teller"}
@@ -48,7 +48,7 @@ You can use the <xref:System.Security.Principal.GenericIdentity> class in conjun
     GenericPrincipal myPrincipal = new GenericPrincipal(myIdentity, myStringArray);
     ```
 
-3. Use the following code to attach the principal to the current thread. This is valuable in situations where the principal must be validated several times, it must be validated by other code running in your application, or it must be validated by a <xref:System.Security.Permissions.PrincipalPermission> object. You can still perform role-based validation on the principal object without attaching it to the thread. For more information, see [Replacing a Principal Object](../../../docs/standard/security/replacing-a-principal-object.md).
+3. Use o código a seguir para anexar a entidade de segurança ao thread atual. Isso é valioso em situações em que a entidade de segurança deve ser validada várias vezes, deve ser validada por outro código em execução em seu aplicativo ou deve ser validada por um objeto <xref:System.Security.Permissions.PrincipalPermission>. Você ainda pode executar a validação baseada em função no objeto principal sem anexá-lo ao thread. Para obter mais informações, consulte [substituindo um objeto principal](../../../docs/standard/security/replacing-a-principal-object.md).
 
     ```vb
     Thread.CurrentPrincipal = myPrincipal
@@ -60,7 +60,7 @@ You can use the <xref:System.Security.Principal.GenericIdentity> class in conjun
 
 ## <a name="example"></a>Exemplo
 
-The following code example demonstrates how to create an instance of a **GenericPrincipal** and a **GenericIdentity**. This code displays the values of these objects to the console.
+O exemplo de código a seguir demonstra como criar uma instância de um **GenericPrincipal** e um **GenericIdentity**. Esse código exibe os valores desses objetos para o console.
 
 ```vb
 Imports System.Security.Principal
@@ -133,7 +133,7 @@ public class Class1
 }
 ```
 
-When executed, the application displays output similar to the following.
+Quando executado, o aplicativo exibe uma saída semelhante à seguinte.
 
 ```console
 The Name is: MyIdentity

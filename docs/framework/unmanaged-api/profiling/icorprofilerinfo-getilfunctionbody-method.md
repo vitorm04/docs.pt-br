@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450362"
 ---
 # <a name="icorprofilerinfogetilfunctionbody-method"></a>Método ICorProfilerInfo::GetILFunctionBody
-Gets a pointer to the body of a method in Microsoft intermediate language (MSIL) code, starting at its header.  
+Obtém um ponteiro para o corpo de um método no código da MSIL (Microsoft Intermediate Language), começando em seu cabeçalho.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,26 +37,26 @@ HRESULT GetILFunctionBody(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ no A ID do módulo no qual a função reside.  
   
  `methodId`  
- [in] The metadata token for the method.  
+ no O token de metadados para o método.  
   
  `ppMethodHeader`  
- [out] A pointer to the method's header.  
+ fora Um ponteiro para o cabeçalho do método.  
   
  `pcbMethodSize`  
- [out] An integer that specifies the size of the method.  
+ fora Um inteiro que especifica o tamanho do método.  
   
 ## <a name="remarks"></a>Comentários  
- A method is scoped by the module in which it lives. Because the `GetILFunctionBody` method is designed to give a tool access to the MSIL code before it has been loaded by the common language runtime (CLR), it uses the metadata token of the method to find the desired instance.  
+ Um método tem o escopo definido pelo módulo no qual reside. Como o método `GetILFunctionBody` foi projetado para fornecer uma ferramenta de acesso ao código MSIL antes de ser carregado pelo Common Language Runtime (CLR), ele usa o token de metadados do método para localizar a instância desejada.  
   
- `GetILFunctionBody` can return a CORPROF_E_FUNCTION_NOT_IL HRESULT if the `methodId` points to a method without any MSIL code (such as an abstract method, or a platform invoke (PInvoke) method).  
+ `GetILFunctionBody` pode retornar um CORPROF_E_FUNCTION_NOT_IL HRESULT se o `methodId` aponta para um método sem qualquer código MSIL (como um método abstrato ou um método de invocação de plataforma (PInvoke)).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

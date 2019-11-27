@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="tabcontrol-parts"></a>Partes de TabControl  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.TabControl>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_SelectedContentHost|<xref:System.Windows.Controls.ContentPresenter>|O objeto que mostra o conteúdo do <xref:System.Windows.Controls.TabItem>selecionado no momento.|  
   

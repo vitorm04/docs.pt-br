@@ -12,7 +12,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354134"
 ---
 # <a name="clauses-visual-basic"></a>Cláusulas (Visual Basic)
-The topics in this section document Visual Basic run-time clauses.  
+Os tópicos nesta seção documentam Visual Basic cláusulas de tempo de execução.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)  

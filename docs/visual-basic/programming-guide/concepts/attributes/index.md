@@ -1,5 +1,5 @@
 ---
-title: Attributes overview
+title: Visão geral dos atributos
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 ms.openlocfilehash: 97a2a13102718b6ee8829fca678b2b49df21e5d1

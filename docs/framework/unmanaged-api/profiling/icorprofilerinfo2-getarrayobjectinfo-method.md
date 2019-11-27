@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436038"
 ---
 # <a name="icorprofilerinfo2getarrayobjectinfo-method"></a>Método ICorProfilerInfo2::GetArrayObjectInfo
-Gets detailed information about an array object.  
+Obtém informações detalhadas sobre um objeto de matriz.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,27 +38,27 @@ HRESULT GetArrayObjectInfo(
   
 ## <a name="parameters"></a>Parâmetros  
  `objectId`  
- [in] The ID of a valid array object.  
+ no A ID de um objeto de matriz válido.  
   
  `cDimensions`  
- [in] The rank (number of dimensions) of the array.  
+ no A classificação (número de dimensões) da matriz.  
   
  `pDimensionSizes`  
- [out] An array that contains integers, each representing the size of a dimension of the array.  
+ fora Uma matriz que contém inteiros, cada um representando o tamanho de uma dimensão da matriz.  
   
  `pDimensionLowerBounds`  
- [out] An array that contains integers, each representing the lower bound of a dimension of the array.  
+ fora Uma matriz que contém inteiros, cada um representando o limite inferior de uma dimensão da matriz.  
   
  `ppData`  
- [out] A pointer to the address of the raw buffer for the array, which is laid out according to the C++ convention.  
+ fora Um ponteiro para o endereço do buffer bruto para a matriz, que é disposta de acordo com a C++ Convenção.  
   
 ## <a name="remarks"></a>Comentários  
- The `pDimensionSizes` and `pDimensionLowerBounds` are parallel arrays, so the elements located at the same index in each array are characteristics of the same entity.  
+ Os `pDimensionSizes` e `pDimensionLowerBounds` são matrizes paralelas, portanto, os elementos localizados no mesmo índice em cada matriz são características da mesma entidade.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

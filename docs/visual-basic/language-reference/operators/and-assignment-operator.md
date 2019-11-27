@@ -1,5 +1,5 @@
 ---
-title: '&amp;= Operator'
+title: Operador &amp;=
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -17,8 +17,8 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350259"
 ---
-# <a name="amp-operator-visual-basic"></a>&amp;= Operator (Visual Basic)
-Concatenates a `String` expression to a `String` variable or property and assigns the result to the variable or property.  
+# <a name="amp-operator-visual-basic"></a>Operador &amp;= (Visual Basic)
+Concatena uma expressão `String` a uma variável ou propriedade de `String` e atribui o resultado à variável ou à propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -28,19 +28,19 @@ variableorproperty &= expression
   
 ## <a name="parts"></a>Partes  
  `variableorproperty`  
- Necessário. Any `String` variable or property.  
+ Necessário. Qualquer `String` variável ou propriedade.  
   
  `expression`  
  Necessário. Qualquer expressão de `String` .  
   
 ## <a name="remarks"></a>Comentários  
- The element on the left side of the `&=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `&=` operator concatenates the `String` expression on its right to the `String` variable or property on its left, and assigns the result to the variable or property on its left.  
+ O elemento no lado esquerdo do operador de `&=` pode ser uma variável escalar simples, uma propriedade ou um elemento de uma matriz. A variável ou a propriedade não pode ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). O operador `&=` concatena a expressão de `String` à direita para a variável ou a propriedade `String` à esquerda e atribui o resultado à variável ou à propriedade à esquerda.  
   
 ## <a name="overloading"></a>Sobrecarga  
- The [& Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md) can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `&` operator affects the behavior of the `&=` operator. If your code uses `&=` on a class or structure that overloads `&`, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ O [operador &](../../../visual-basic/language-reference/operators/concatenation-operator.md) pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Sobrecarregar o operador de `&` afeta o comportamento do operador `&=`. Se o seu código usar `&=` em uma classe ou estrutura que sobrecarrega `&`, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
- The following example uses the `&=` operator to concatenate two `String` variables and assign the result to the first variable.  
+ O exemplo a seguir usa o operador `&=` para concatenar duas variáveis `String` e atribuir o resultado à primeira variável.  
   
  [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   

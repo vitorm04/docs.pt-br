@@ -50,7 +50,7 @@ typedef enum CorCallingConvention
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`IMAGE_CEE_CS_CALLCONV_DEFAULT`|Indica uma Convenção de chamada padrão.|  
 |`IMAGE_CEE_CS_CALLCONV_VARARG`|Indica que o método usa um número variável de parâmetros.|  
@@ -66,7 +66,7 @@ typedef enum CorCallingConvention
 |`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|Indica que um parâmetro de `this` é descrito explicitamente na assinatura.|  
 |`IMAGE_CEE_CS_CALLCONV_GENERIC`|Indica uma assinatura de método genérico com um número explícito de argumentos de tipo. Isso precede uma contagem de parâmetros comum.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorHdr. h  

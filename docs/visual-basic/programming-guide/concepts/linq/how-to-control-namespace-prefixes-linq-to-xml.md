@@ -1,5 +1,5 @@
 ---
-title: 'How to: Control Namespace Prefixes (LINQ to XML)'
+title: 'Como: controlar prefixos de namespace (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 2fcf28a5-31b6-409d-84ea-27c22f71fc9f
 ms.openlocfilehash: 5ba415452a8671466c3a4c71a88731e5bd3cda60
@@ -15,7 +15,7 @@ Este tópico descreve como você pode controlar prefixos de namespace.
 ## <a name="example"></a>Exemplo  
   
 ### <a name="description"></a>Descrição  
- Esse exemplo declara dois namespaces. It specifies that the `http://www.adventure-works.com` namespace has the prefix `aw`, and that the `www.fourthcoffee.com` namespace has the prefix of `fc`.  
+ Esse exemplo declara dois namespaces. Ele especifica que o namespace de `http://www.adventure-works.com` tem o prefixo `aw`e que o namespace `www.fourthcoffee.com` tem o prefixo de `fc`.  
   
 ### <a name="code"></a>Código  
   
@@ -55,4 +55,4 @@ End Module
   
 ## <a name="see-also"></a>Consulte também
 
-- [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)
+- [Visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

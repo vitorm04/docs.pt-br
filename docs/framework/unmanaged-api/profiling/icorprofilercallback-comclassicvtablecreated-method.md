@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445051"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>Método ICorProfilerCallback::COMClassicVTableCreated
-Notifies the profiler that a COM interop vtable for the specified IID and class has been created.  
+Notifica o criador de perfil de que uma interoperabilidade COM vtable para o IID e a classe especificados foram criados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,26 +37,26 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="parameters"></a>Parâmetros  
  `wrappedClasId`  
- [in] The ID of the class for which the vtable has been created.  
+ no A ID da classe para a qual a vtable foi criada.  
   
  `implementedIID`  
- [in] The ID of the interface implemented by the class. This value may be NULL if the interface is internal only.  
+ no A ID da interface implementada pela classe. Esse valor pode ser nulo se a interface for somente interno.  
   
  `pVTable`  
- [in] A pointer to the start of the vtable.  
+ no Um ponteiro para o início de vtable.  
   
  `cSlots`  
- [in] The number of slots that are in the vtable.  
+ no O número de slots que estão no vtable.  
   
 ## <a name="remarks"></a>Comentários  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ O criador de perfil não deve bloquear em sua implementação desse método porque a pilha pode não estar em um estado que permita a coleta de lixo e, portanto, a coleta de lixo preemptiva não pode ser habilitada. Se o criador de perfil for bloqueado aqui e a coleta de lixo for tentada, o tempo de execução será bloqueado até que esse retorno de chamada seja retornado.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ A implementação do criador de perfil desse método não deve chamar o código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

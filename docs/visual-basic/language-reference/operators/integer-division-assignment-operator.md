@@ -18,8 +18,8 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330950"
 ---
-# <a name="-operator"></a>\\= Operator
-Divides the value of a variable or property by the value of an expression and assigns the integer result to the variable or property.  
+# <a name="-operator"></a>Operador \\=
+Divide o valor de uma variável ou propriedade pelo valor de uma expressão e atribui o resultado inteiro à variável ou à propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,30 +29,30 @@ variableorproperty \= expression
   
 ## <a name="parts"></a>Partes  
  `variableorproperty`  
- Necessário. Any numeric variable or property.  
+ Necessário. Qualquer variável numérica ou propriedade.  
   
  `expression`  
  Necessário. Qualquer expressão numérica.  
   
 ## <a name="remarks"></a>Comentários  
- The element on the left side of the `\=` operator can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
+ O elemento no lado esquerdo do operador de `\=` pode ser uma variável escalar simples, uma propriedade ou um elemento de uma matriz. A variável ou a propriedade não pode ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
- The `\=` operator divides the value of a variable or property on its left by the value on its right, and assigns the integer result to the variable or property on its left  
+ O operador de `\=` divide o valor de uma variável ou propriedade à esquerda pelo valor à direita e atribui o resultado inteiro à variável ou à propriedade à esquerda  
   
- For further information on integer division, see [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
+ Para obter mais informações sobre divisão de inteiros, consulte [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md).  
   
 ## <a name="overloading"></a>Sobrecarga  
- The `\` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure. Overloading the `\` operator affects the behavior of the `\=` operator. If your code uses `\=` on a class or structure that overloads `\`, be sure you understand its redefined behavior. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ O operador `\` pode ser *sobrecarregado*, o que significa que uma classe ou estrutura pode redefinir seu comportamento quando um operando tem o tipo dessa classe ou estrutura. Sobrecarregar o operador de `\` afeta o comportamento do operador `\=`. Se o seu código usar `\=` em uma classe ou estrutura que sobrecarrega `\`, certifique-se de entender seu comportamento redefinido. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
- The following example uses the `\=` operator to divide one `Integer` variable by a second and assign the integer result to the first variable.  
+ O exemplo a seguir usa o operador `\=` para dividir uma variável `Integer` por um segundo e atribuir o resultado inteiro à primeira variável.  
   
  [!code-vb[VbVbalrOperators#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#19)]  
   
 ## <a name="see-also"></a>Consulte também
 
-- [\ Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [Operador \ (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [Operador/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [Operadores de Atribuição](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [Operadores Aritméticos](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)

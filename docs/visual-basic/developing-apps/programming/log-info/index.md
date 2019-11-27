@@ -1,5 +1,5 @@
 ---
-title: Registrando informações em log a partir do aplicativo
+title: Registrar informações em log no aplicativo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Log object
@@ -20,13 +20,13 @@ ms.locfileid: "74353250"
 
 Esta seção contém tópicos que abordam como registrar informações em log do aplicativo usando os objetos `My.Application.Log` ou `My.Log` e como estender os recursos de registro em log do aplicativo.  
   
- O objeto `Log` fornece métodos para gravar informações nos ouvintes de log do aplicativo e a propriedade avançada `TraceSource` do objeto `Log` fornece informações detalhadas de configuração. O objeto `Log` será configurado pelo arquivo de configuração de aplicativo.  
+ O objeto `Log` fornece métodos para gravar informações nos ouvintes de log do aplicativo e a propriedade avançada `Log` do objeto `TraceSource` fornece informações detalhadas de configuração. O objeto `Log` será configurado pelo arquivo de configuração de aplicativo.  
   
  O objeto `My.Log` está disponível somente para aplicativos do ASP.NET. Para aplicativos cliente, use `My.Application.Log`. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Logging.Log>.  
   
 ## <a name="tasks"></a>Tarefas  
   
-|Para|Consulte|  
+|{1&gt;Para&lt;1}|Consulte|  
 |--------|---------|  
 |Gravar informações de evento em logs do aplicativo.|[Como gravar mensagens de log](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)|  
 |Gravar informações de exceção em logs do aplicativo.|[Como registrar em log as exceções](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)|  

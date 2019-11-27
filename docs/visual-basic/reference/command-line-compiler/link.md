@@ -57,9 +57,9 @@ ou
   
 - Um campo, propriedade, evento ou método que tem um tipo de retorno ou de parâmetro do Assembly B é invocado.  
   
- Use [-libpath](libpath.md) to specify the directory in which one or more of your assembly references is located.  
+ Use [-LIBPATH](libpath.md) para especificar o diretório no qual uma ou mais das suas referências de assembly estão localizadas.  
   
- Like the [-reference](reference.md) compiler option, the `-link` compiler option uses the Vbc.rsp response file, which references frequently used .NET Framework assemblies. Use the [-noconfig](noconfig.md) compiler option if you do not want the compiler to use the Vbc.rsp file.  
+ Assim como a opção [-Reference](reference.md) Compiler, a opção de compilador `-link` usa o arquivo de resposta Vbc. rsp, que faz referência a assemblies de .NET Framework usados com frequência. Use a opção [-noconfig](noconfig.md) do compilador se você não quiser que o compilador use o arquivo Vbc. rsp.  
   
  A forma abreviada de `-link` é `-l`.  
   
@@ -83,7 +83,7 @@ ou
  [!code-vb[VbLinkCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vblinkcompiler/vb/module1.vb#5)]  
   
 ## <a name="example"></a>Exemplo  
- The following command line compiles source file `OfficeApp.vb` and reference assemblies from `COMData1.dll` and `COMData2.dll` to produce `OfficeApp.exe`.  
+ A linha de comando a seguir compila o arquivo de origem `OfficeApp.vb` e os assemblies de referência de `COMData1.dll` e `COMData2.dll` para produzir `OfficeApp.exe`.  
   
 ```console  
 vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb  
@@ -93,7 +93,7 @@ vbc -link:COMData1.dll,COMData2.dll /out:OfficeApp.exe OfficeApp.vb
 
 - [Compilador de linha de comando do Visual Basic](index.md)
 - [Instruções passo a passo: inserindo tipos de assemblies gerenciados](../../../standard/assembly/embed-types-visual-studio.md)
-- [-reference (Visual Basic)](reference.md)
+- [-referência (Visual Basic)](reference.md)
 - [-noconfig](noconfig.md)
 - [-libpath](libpath.md)
 - [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)

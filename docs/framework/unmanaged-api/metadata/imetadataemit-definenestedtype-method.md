@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431711"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>Método IMetaDataEmit::DefineNestedType
-Creates the metadata signature of a type definition, returns an `mdTypeDef` token for that type, and specifies that the defined type is a member of the type referenced by the `tdEncloser` parameter.  
+Cria a assinatura de metadados de uma definição de tipo, retorna um token `mdTypeDef` para esse tipo e especifica que o tipo definido é um membro do tipo referenciado pelo parâmetro `tdEncloser`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,29 +40,29 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>Parâmetros  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ no O nome do tipo em Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CorTypeAttr` values.  
+ [in] `TypeDef` atributos. Este é um bitmask de valores de `CorTypeAttr`.  
   
  `tkExtends`  
- [in] The token of the base class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ no O token da classe base. Este é um `mdTypeDef` ou um token de `mdTypeRef`.  
   
  `rtkImplements`[]  
- [in] An array of tokens that specify the interfaces that this class or interface implements.  
+ no Uma matriz de tokens que especificam as interfaces que essa classe ou interface implementa.  
   
  `tdEncloser`  
- [in] The token of the enclosing type. The last element of the array must be `mdTokenNil`.  
+ no O token do tipo delimitador. O último elemento da matriz deve ser `mdTokenNil`.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ fora O token de `mdTypeDef` atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Declare an Object Variable and Assign an Object to It'
+title: 'Como: declarar uma variável de objeto e atribuir um objeto a ela'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - object variables [Visual Basic], declaring
@@ -14,18 +14,18 @@ ms.locfileid: "74352901"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>Como declarar uma variável de objeto e atribuir um objeto a ela no Visual Basic
 
-You declare a variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) by specifying `As Object` in a [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md). You assign an object to such a variable by placing the object after the equal sign (`=`) in an assignment statement or initialization clause.
+Você declara uma variável do [tipo de dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) especificando `As Object` em uma [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Você atribui um objeto a tal variável colocando o objeto após o sinal de igual (`=`) em uma instrução de atribuição ou cláusula de inicialização.
 
 ## <a name="example"></a>Exemplo
 
-The following example declares an `Object` variable and assigns the current instance to it.
+O exemplo a seguir declara uma variável `Object` e atribui a instância atual a ela.
 
 ```vb
 Dim thisObject As Object
 thisObject = "This is an Object"
 ```
 
-You can combine the declaration and assignment by initializing the variable as part of its declaration. The following example is equivalent to the preceding example.
+Você pode combinar a declaração e a atribuição inicializando a variável como parte de sua declaração. O exemplo a seguir é equivalente ao exemplo anterior.
 
 ```vb
 Dim thisObject As Object= "This is an Object"
@@ -35,11 +35,11 @@ Dim thisObject As Object= "This is an Object"
 
 Este exemplo requer:
 
-- A reference to the <xref:System> namespace.
+- Uma referência ao namespace <xref:System>.
 
-- A class, structure, or module in which to put the `Dim` statement.
+- Uma classe, estrutura ou módulo no qual colocar a instrução `Dim`.
 
-- A procedure in which to put the assignment statement.
+- Um procedimento no qual colocar a instrução de atribuição.
 
 ## <a name="see-also"></a>Consulte também
 

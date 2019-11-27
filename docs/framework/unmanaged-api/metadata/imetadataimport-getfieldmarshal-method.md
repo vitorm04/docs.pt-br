@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437569"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>Método IMetaDataImport::GetFieldMarshal
-Gets a pointer to the native, unmanaged type of the field represented by the specified field metadata token.  
+Obtém um ponteiro para o tipo nativo não gerenciado do campo representado pelo token de metadados do campo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,20 +37,20 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] The metadata token that represents the field to get interop marshaling information for.  
+ no O token de metadados que representa o campo para obter informações de marshaling de interoperabilidade para.  
   
  `ppvNativeType`  
- [out] A pointer to the metadata signature of the field's native type.  
+ fora Um ponteiro para a assinatura de metadados do tipo nativo do campo.  
   
  `pcbNativeType`  
- [out] The size in bytes of `ppvNativeType`.  
+ fora O tamanho em bytes de `ppvNativeType`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

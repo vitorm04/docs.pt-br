@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="datepicker-parts"></a>Partes de DatePicker  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.DatePicker>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_Root|<xref:System.Windows.Controls.Grid>|A raiz do controle.|  
 |PART_Button|<xref:System.Windows.Controls.Button>|O botão que abre e fecha o <xref:System.Windows.Controls.Calendar>.|  
@@ -43,7 +43,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="datepickertextbox-parts"></a>Partes de DatePickerTextBox  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.Primitives.DatePickerTextBox>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_Watermark|<xref:System.Windows.Controls.ContentControl>|O elemento que contém o texto inicial no <xref:System.Windows.Controls.DatePicker>.|  
 |PART_ContentElement|<xref:System.Windows.FrameworkElement>|Um elemento visual que pode conter um <xref:System.Windows.FrameworkElement>. O texto do <xref:System.Windows.Controls.TextBox> é exibido neste elemento.|  

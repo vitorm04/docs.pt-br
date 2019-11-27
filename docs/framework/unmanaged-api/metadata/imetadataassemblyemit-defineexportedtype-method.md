@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432073"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>Método IMetaDataAssemblyEmit::DefineExportedType
-Creates an `ExportedType` structure containing metadata for the specified exported type, and returns the associated metadata token.  
+Cria uma estrutura de `ExportedType` que contém metadados para o tipo exportado especificado e retorna o token de metadados associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,37 +39,37 @@ HRESULT DefineExportedType (
   
 ## <a name="parameters"></a>Parâmetros  
  `szName`  
- [in] The name of type to be exported. For version 1.1 of the common language runtime, the name of the exported type must exactly match the name given in the `TypeDef` for the type.  
+ no O nome do tipo a ser exportado. Para a versão 1,1 do Common Language Runtime, o nome do tipo exportado deve corresponder exatamente ao nome fornecido no `TypeDef` para o tipo.  
   
  `tkImplementation`  
- [in] A token specifying where the exported type is implemented. The valid values and their associated meanings are:  
+ no Um token que especifica onde o tipo exportado é implementado. Os valores válidos e seus significados associados são:  
   
-- `mdFile` The type is implemented in a different file within this assembly.  
+- `mdFile` o tipo é implementado em um arquivo diferente dentro desse assembly.  
   
-- `mdAssemblyRef` The type is implemented in a different assembly.  
+- `mdAssemblyRef` o tipo é implementado em um assembly diferente.  
   
-- `mdExportedTYpe` The type is nested within some other type.  
+- `mdExportedTYpe` o tipo é aninhado em algum outro tipo.  
   
-- `mdFileNil` The type is in the same file as the manifest and is not a nested type.  
+- `mdFileNil` o tipo está no mesmo arquivo que o manifesto e não é um tipo aninhado.  
   
  `tkTypeDef`  
- [in] A token to the metadata that specifies the type to be exported. This value is entered in the `TypeDef` table in the file that implements the type and is relevant only if that file is in this assembly.  
+ no Um token para os metadados que especifica o tipo a ser exportado. Esse valor é inserido na tabela `TypeDef` no arquivo que implementa o tipo e é relevante apenas se esse arquivo estiver nesse assembly.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration values that define the property settings for the exported type.  
+ no Uma combinação de bits de [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) de valores de enumeração que define as configurações de propriedade para o tipo exportado.  
   
  `pmdct`  
- [out] A pointer to the returned metadata token that indicates the exported type.  
+ fora Um ponteiro para o token de metadados retornado que indica o tipo exportado.  
   
 ## <a name="remarks"></a>Comentários  
- An `ExportedType` metadata structure must be defined for each type that is exposed by this assembly and that is implemented in a module other than the one containing the manifest.  
+ Uma estrutura de metadados `ExportedType` deve ser definida para cada tipo exposto por esse assembly e implementada em um módulo que não seja aquele que contém o manifesto.  
   
 ## <a name="requirements"></a>Requisitos  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

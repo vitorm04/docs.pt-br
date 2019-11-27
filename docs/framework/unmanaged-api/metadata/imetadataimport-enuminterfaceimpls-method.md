@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449530"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>Método IMetaDataImport::EnumInterfaceImpls
-Enumerates all interfaces implemented by the specified `TypeDef`. 
+Enumera todas as interfaces implementadas pelo `TypeDef`especificado. 
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,37 +39,37 @@ HRESULT EnumInterfaceImpls (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `td`  
- [in] The token of the TypeDef whose MethodDef tokens representing interface implementations are to be enumerated.  
+ no O token do TypeDef cujos tokens MethodDef que representam implementações de interface devem ser enumerados.  
   
  `rImpls`  
- [out] The array used to store the MethodDef tokens.  
+ fora A matriz usada para armazenar os tokens MethodDef.  
   
  `cMax`  
- [in] The maximum size of the `rImpls` array.  
+ no O tamanho máximo da matriz de `rImpls`.  
   
  `pcImpls`  
- [out] The actual number of tokens returned in `rImpls`.  
+ fora O número real de tokens retornados em `rImpls`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumInterfaceImpls` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcImpls` is set to zero.|  
+|`S_OK`|`EnumInterfaceImpls` retornado com êxito.|  
+|`S_FALSE`|Não há tokens MethodDef para enumerar. Nesse caso, `pcImpls` é definido como zero.|  
 
 ## <a name="remarks"></a>Comentários
 
-The enumeration returns a collection of `mdInterfaceImpl` tokens for each interface implemented by the specified `TypeDef`. Interface tokens are returned in the order the interfaces were specified (through `DefineTypeDef` or `SetTypeDefProps`). Properties of the returned `mdInterfaceImpl` tokens can be queried using [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
+A enumeração retorna uma coleção de tokens de `mdInterfaceImpl` para cada interface implementada pelo `TypeDef`especificado. Os tokens de interface são retornados na ordem em que as interfaces foram especificadas (por meio de `DefineTypeDef` ou `SetTypeDefProps`). As propriedades dos tokens de `mdInterfaceImpl` retornados podem ser consultadas usando [GetInterfaceImplProps](imetadataimport-getinterfaceimplprops-method.md).
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438002"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>Método IMetaDataImport::GetFieldProps
-Gets metadata associated with the field referenced by the specified FieldDef token.  
+Obtém os metadados associados ao campo referenciado pelo token FieldDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `mb`  
- [in] A FieldDef token that represents the field to get associated metadata for.  
+ no Um token FieldDef que representa o campo para o qual obter metadados associados.  
   
  `pClass`  
- [out] A pointer to a TypeDef token that represents the type of the class that the field belongs to.  
+ fora Um ponteiro para um token de TypeDef que representa o tipo da classe à qual o campo pertence.  
   
  `szField`  
- [out] The name of the field.  
+ fora O nome do campo.  
   
  `cchField`  
- [in] The size in wide characters of the buffer for *szField*.  
+ no O tamanho em caracteres largos do buffer para *szField*.  
   
  `pchField`  
- [out] The actual size of the returned buffer.  
+ fora O tamanho real do buffer retornado.  
   
  `pdwAttr`  
- [out] Flags associated with the field's metadata.  
+ fora Sinalizadores associados aos metadados do campo.  
   
  `ppvSigBlob`  
- [in] A pointer to the binary metadata value that describes the field.  
+ no Um ponteiro para o valor de metadados binários que descreve o campo.  
   
  `pcbSigBlob`  
- [out] The size in bytes of `ppvSigBlob`.  
+ fora O tamanho em bytes de `ppvSigBlob`.  
   
  `pdwCPlusTypeFlag`  
- [out] A flag that specifies the value type of the field.  
+ fora Um sinalizador que especifica o tipo de valor do campo.  
   
  `ppValue`  
- [out] A constant value for the field.  
+ fora Um valor constante para o campo.  
   
  `pcchValue`  
- [out] The size in chars of `ppValue`, or zero if no string exists.  
+ fora O tamanho em caracteres de `ppValue`ou zero se não existir cadeia de caracteres.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

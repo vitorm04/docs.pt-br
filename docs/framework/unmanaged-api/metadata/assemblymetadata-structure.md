@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444257"
 ---
 # <a name="assemblymetadata-structure"></a>Estrutura ASSEMBLYMETADATA
-Contains information about the referenced assembly, including its version and its level of support for locales, processors, and operating systems.  
+Contém informações sobre o assembly referenciado, incluindo sua versão e seu nível de suporte para localidades, processadores e sistemas operacionais.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,25 +43,25 @@ typedef struct {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`usMajorVersion`|The major version number of the referenced assembly. This value cannot be zero. If all the bits of `usMajorVersion` are set, the major version is not specified.|  
-|`usMinorVersion`|The minor version number of the referenced assembly. This value cannot be zero. If all the bits of `usMinorVersion` are set, the minor version is not specified.|  
-|`usBuildNumber`|The build number of the referenced assembly. This value cannot be zero. If all the bits of `usBuildNumber` are set, the build number is not specified.|  
-|`usRevisionNumber`|The revision number of the referenced assembly. This value cannot be zero. If all the bits of `usRevisionNumber` are set, the revision number is not specified.|  
-|`szLocale`|A list of locale names conforming to the RFC1766 specification, separated by semicolons, specifying the locales supported by the referenced assembly. A null value indicates locale independence. **Note:**  In the .NET Framework version 1.0 you cannot specify more than one locale.|  
-|`cbLocale`|The size in wide characters of `szLocale`.|  
-|`rdwProcessor`|An array of identifiers, as defined in Winnt.h, for the processor types that are supported by the referenced assembly. A NULL value indicates processor independence.|  
+|`usMajorVersion`|O número de versão principal do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usMajorVersion` forem definidos, a versão principal não será especificada.|  
+|`usMinorVersion`|O número de versão secundária do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usMinorVersion` estiverem definidos, a versão secundária não será especificada.|  
+|`usBuildNumber`|O número de Build do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usBuildNumber` estiverem definidos, o número de Build não será especificado.|  
+|`usRevisionNumber`|O número de revisão do assembly referenciado. Esse valor não pode ser zero. Se todos os bits de `usRevisionNumber` forem definidos, o número de revisão não será especificado.|  
+|`szLocale`|Uma lista de nomes de localidade que estão em conformidade com a especificação RFC1766, separados por ponto e vírgula, especificando as localidades com suporte no assembly referenciado. Um valor nulo indica independência de localidade. **Observação:**  No .NET Framework versão 1,0, você não pode especificar mais de uma localidade.|  
+|`cbLocale`|O tamanho em caracteres largos de `szLocale`.|  
+|`rdwProcessor`|Uma matriz de identificadores, conforme definido em Winnt. h, para os tipos de processador que são suportados pelo assembly referenciado. Um valor nulo indica independência do processador.|  
 |`ulProcessor`|O comprimento da matriz `rdwProcessor`.|  
-|`rOS`|An array of [OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) instances specifying the operating systems that are supported by the referenced assembly. A NULL value indicates operating-system independence.|  
+|`rOS`|Uma matriz de instâncias de [OSInfo](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md) que especificam os sistemas operacionais com suporte no assembly referenciado. Um valor nulo indica a independência do sistema operacional.|  
 |`ulOS`|O comprimento da matriz `rOS`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

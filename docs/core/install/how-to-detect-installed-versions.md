@@ -1,6 +1,6 @@
 ---
-title: Check installed .NET Core versions on Windows, Linux, and macOS - .NET Core
-description: Learn how to list which versions of .NET Core are installed on your computer. This includes the .NET Core runtime and SDK.
+title: Verificar as versões do .NET Core instaladas no Windows, Linux e macOS – .NET Core
+description: Saiba como listar quais versões do .NET Core estão instaladas em seu computador. Isso inclui o SDK e o tempo de execução do .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 11/01/2019
@@ -13,17 +13,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451090"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a>How to check that .NET Core is already installed
+# <a name="how-to-check-that-net-core-is-already-installed"></a>Como verificar se o .NET Core já está instalado
 
-This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer. .NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.
+Este artigo ensina como verificar quais versões do .NET Core Runtime e SDK estão instalados em seu computador. O .NET Core pode já ter sido instalado se você tiver um ambiente de desenvolvimento integrado, como o Visual Studio ou o Visual Studio para Mac.
 
-Installing an SDK installs the corresponding runtime.
+A instalação de um SDK instala o tempo de execução correspondente.
 
-If any command in this article fails, you don't have the runtime or SDK installed. For more information, see [Download and install .NET Core](index.md).
+Se qualquer comando deste artigo falhar, você não tem o tempo de execução ou o SDK instalado. Para obter mais informações, consulte [baixar e instalar o .NET Core](index.md).
 
-## <a name="check-sdk-versions"></a>Check SDK versions
+## <a name="check-sdk-versions"></a>Verificar versões do SDK
 
-You can see which versions of the .NET Core SDK are currently installed with a terminal. Open a terminal and run the `dotnet --list-sdks` command.
+Você pode ver quais versões do SDK do .NET Core estão instaladas atualmente com um terminal. Abra um terminal e execute o comando `dotnet --list-sdks`.
 
 ::: zone pivot="os-windows"
 
@@ -73,9 +73,9 @@ dotnet --list-sdks
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a>Check runtime versions
+## <a name="check-runtime-versions"></a>Verificar versões de tempo de execução
 
-You can see which versions of the .NET Core runtime are currently installed with the `dotnet --list-runtimes` command.
+Você pode ver quais versões do tempo de execução do .NET Core estão instaladas no momento com o comando `dotnet --list-runtimes`.
 
 ::: zone pivot="os-windows"
 
@@ -158,9 +158,9 @@ Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="more-information"></a>Mais informações
 
-You can see both the SDK versions and runtime versions with the command `dotnet --info`. You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).
+Você pode ver as versões do SDK e as versões de tempo de execução com o comando `dotnet --info`. Você também obterá outras informações relacionadas ao ambiente, como a versão do sistema operacional e o RID (identificador de tempo de execução).
 
 ## <a name="next-steps"></a>Próximas etapas
 
-- [Install the .NET Core Runtime](runtime.md).
-- [Install the .NET Core SDK](sdk.md).
+- [Instale o tempo de execução do .NET Core](runtime.md).
+- [Instale o SDK do .NET Core](sdk.md).

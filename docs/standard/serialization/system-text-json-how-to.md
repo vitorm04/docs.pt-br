@@ -575,7 +575,7 @@ Quando você desserializar o JSON mostrado anteriormente neste tipo de exemplo, 
 |---------|---------|---------|
 | Date    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | Incompatibilidade de maiúsculas e minúsculas (`temperatureCelsius` no JSON), portanto, a propriedade não está definida. |
-| Resumo | Pontos ||
+| Resumo | Quente ||
 | ExtensionData | temperatureCelsius: 25 |Como o caso não corresponde, essa propriedade JSON é um extra e se torna um par chave-valor no dicionário.|
 || DatesAvailable:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |A propriedade extra do JSON torna-se um par chave-valor, com uma matriz como o objeto de valor.|
 | |SummaryWords:<br>Legais<br>Vento<br>Humid |A propriedade extra do JSON torna-se um par chave-valor, com uma matriz como o objeto de valor.|

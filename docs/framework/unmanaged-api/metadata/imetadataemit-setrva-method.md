@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426812"
 ---
 # <a name="imetadataemitsetrva-method"></a>Método IMetaDataEmit::SetRVA
-Sets the relative virtual address of the specified method.  
+Define o endereço virtual relativo do método especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +36,17 @@ HRESULT SetRVA (
   
 ## <a name="parameters"></a>Parâmetros  
  `md`  
- [in] The token for the target method or method implementation.  
+ no O token para o método de destino ou a implementação do método.  
   
  `ulRVA`  
- [in] The address of the code or data area.  
+ no O endereço do código ou da área de dados.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

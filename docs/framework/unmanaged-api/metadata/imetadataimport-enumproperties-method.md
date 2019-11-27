@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450017"
 ---
 # <a name="imetadataimportenumproperties-method"></a>Método IMetaDataImport::EnumProperties
-Enumerates PropertyDef tokens representing the properties of the type referenced by the specified TypeDef token.  
+Enumera os tokens PropertyDef que representam as propriedades do tipo referenciado pelo token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,33 +39,33 @@ HRESULT EnumProperties (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `td`  
- [in] A TypeDef token representing the type with properties to enumerate.  
+ no Um token de TypeDef que representa o tipo com propriedades a serem enumeradas.  
   
  `rProperties`  
- [out] The array used to store the PropertyDef tokens.  
+ fora A matriz usada para armazenar os tokens PropertyDef.  
   
  `cMax`  
- [in] The maximum size of the `rProperties` array.  
+ no O tamanho máximo da matriz de `rProperties`.  
   
  `pcProperties`  
- [out] The number of PropertyDef tokens returned in `rProperties`.  
+ fora O número de tokens PropertyDef retornados em `rProperties`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumProperties` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcProperties` is zero.|  
+|`S_OK`|`EnumProperties` retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcProperties` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

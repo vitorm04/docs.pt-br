@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="frame-parts"></a>Partes do quadro  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.Frame>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_FrameCP|<xref:System.Windows.Controls.ContentPresenter>|A área de conteúdo.|  
   

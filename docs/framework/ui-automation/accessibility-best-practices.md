@@ -16,122 +16,122 @@ ms.locfileid: "74447292"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- Implementing the following best practices in controls or applications will improve their accessibility for people who use assistive technology devices. Many of these best practices focus on good [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] design. Each best practice includes implementation information for [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controls or applications. In many cases, the work to meet these best practices is already included in [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] controls.  
+ A implementação das seguintes práticas recomendadas em controles ou aplicativos melhorará sua acessibilidade para as pessoas que usam dispositivos de tecnologia assistencial. Muitas dessas práticas recomendadas se concentram em um bom design de [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Cada prática recomendada inclui informações de implementação para controles de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] ou aplicativos. Em muitos casos, o trabalho para atender a essas práticas recomendadas já está incluído nos controles de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
 <a name="Programmatic_Access"></a>   
-## <a name="programmatic-access"></a>Programmatic Access  
- Programmatic access involves ensuring that all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elements are labeled, property values are exposed, and appropriate events are raised. For standard [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] controls, most of this work is already done through <xref:System.Windows.Automation.Peers.AutomationPeer>. Custom controls require additional work to ensure that programmatic access is correctly implemented.  
+## <a name="programmatic-access"></a>Acesso programático  
+ O acesso programático envolve garantir que todos os elementos de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] sejam rotulados, os valores de propriedade são expostos e os eventos apropriados são gerados. Para controles de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] padrão, a maior parte desse trabalho já foi feita por meio de <xref:System.Windows.Automation.Peers.AutomationPeer>. Os controles personalizados exigem trabalho adicional para garantir que o acesso programático seja implementado corretamente.  
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
-### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Enable Programmatic Access to all UI Elements and Text  
- User interface (UI) elements should enable programmatic access. If the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] is a standard [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] control, support for programmatic access is included in the control. If the control is a custom control – a control that has been subclassed from a common control or a control that has been subclassed from Control – then you must check the <xref:System.Windows.Automation.Peers.AutomationPeer> implementation for areas that may need modification.  
+### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>Habilitar o acesso programático a todos os elementos e texto da interface do usuário  
+ Elementos da interface do usuário devem habilitar o acesso programático. Se o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] for um controle de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] padrão, o suporte para acesso programático será incluído no controle. Se o controle for um controle personalizado – um controle que tenha sido subclasse de um controle comum ou um controle que tenha sido subclasse do controle – em seguida, você deve verificar a implementação de <xref:System.Windows.Automation.Peers.AutomationPeer> para áreas que podem precisar de modificação.  
   
- Following this best practice allows assistive technology vendors to identify and manipulate elements of your product's [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Seguir essa prática recomendada permite que fornecedores de tecnologia assistencial identifiquem e manipulem elementos de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]do seu produto.  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>   
-### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Place Names, Titles, and Descriptions on UI Objects, Frames, and Pages  
- Assistive technologies, especially screen readers, use the title to understand the location of the frame, object, or page in the navigation scheme. Therefore, the title must be very descriptive. For example, a Web page title of "Microsoft Web Page" is useless if the user has navigated deeply into some particular area. A descriptive title is critical for users who are blind and depend on screen readers. Similarly, for [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controls, <xref:System.Windows.Automation.AutomationProperties.NameProperty> and <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> are important for assistive technology devices.  
+### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>Coloque nomes, títulos e descrições em objetos, quadros e páginas da interface do usuário  
+ Tecnologias assistenciais, especialmente leitores de tela, usam o título para entender o local do quadro, objeto ou página no esquema de navegação. Portanto, o título deve ser muito descritivo. Por exemplo, um título de página da Web de "página da Web da Microsoft" é inútil se o usuário navegou profundamente em alguma área específica. Um título descritivo é essencial para os usuários que são cegos e dependem de leitores de tela. Da mesma forma, para controles de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], <xref:System.Windows.Automation.AutomationProperties.NameProperty> e <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> são importantes para dispositivos de tecnologia assistencial.  
   
- Following this best practice allows assistive technologys to identify and manipulate [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] in sample controls and applications.  
+ Seguir essa prática recomendada permite que tecnologias assistenciais identifiquem e manipulem [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] em aplicativos e controles de exemplo.  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>   
-### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>Ensure Programmatic Events Are Triggered by All UI Activities  
- Following this best practice allows assistive technologys to listen for changes in the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] and notify the user about these changes.  
+### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>Garantir que eventos programáticos sejam disparados por todas as atividades de IU  
+ Seguir essa prática recomendada permite que as tecnologias assistenciais escutem as alterações na [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] e notifique o usuário sobre essas alterações.  
   
 <a name="User_Settings"></a>   
-## <a name="user-settings"></a>User Settings  
- The best practice in this section ensures that controls or applications do not override user settings.  
+## <a name="user-settings"></a>Configurações de usuário  
+ A prática recomendada nesta seção garante que os controles ou aplicativos não substituam as configurações do usuário.  
   
 <a name="Respect_all_System_Wide_Settings_and_do_not_Interfere"></a>   
-### <a name="respect-all-system-wide-settings-and-do-not-interfere-with-accessibility-functions"></a>Respect All System-Wide Settings and Do Not Interfere with Accessibility Functions  
- Users can use the Control Panel to set some system-wide flags; other flags can be set programmatically. These settings should not be changed by controls or applications. Also, applications must support the accessibility settings of their host operating system.  
+### <a name="respect-all-system-wide-settings-and-do-not-interfere-with-accessibility-functions"></a>Respeitar todas as configurações de todo o sistema e não interferem nas funções de acessibilidade  
+ Os usuários podem usar o painel de controle para definir alguns sinalizadores em todo o sistema; outros sinalizadores podem ser definidos programaticamente. Essas configurações não devem ser alteradas por controles ou aplicativos. Além disso, os aplicativos devem dar suporte às configurações de acessibilidade do sistema operacional do host.  
   
- Following this best practice allows users to set accessibility settings and know that those settings will not be changed by applications.  
+ Seguir essa prática recomendada permite que os usuários definam as configurações de acessibilidade e saibam que essas configurações não serão alteradas pelos aplicativos.  
   
 <a name="Visual_UI_Design"></a>   
-## <a name="visual-ui-design"></a>Visual UI Design  
- Best Practices in this section ensure that controls or applications use color and images effectively and are able to be used by Assistive technologies.  
+## <a name="visual-ui-design"></a>Design de interface do usuário Visual  
+ As práticas recomendadas nesta seção garantem que os controles ou aplicativos usem cores e imagens com eficiência e possam ser usados por tecnologias assistenciais.  
   
 <a name="Don_t_Hard_Code_Colors"></a>   
 ### <a name="dont-hard-code-colors"></a>Não Embutir Cores  
- People who are color blind, have low vision, or are using a black and white screen might not be able to use applications with hard-coded colors.  
+ As pessoas que têm cores cegas, têm pouca visão ou estão usando uma tela preta e branca podem não ser capazes de usar aplicativos com cores embutidas em código.  
   
- Following this best practice allows users to adjust color combinations based on individual needs.  
+ Seguir essa prática recomendada permite que os usuários ajustem combinações de cores com base em necessidades individuais.  
   
 <a name="Support_High_Contrast_and_all_System_Display_Attributes"></a>   
-### <a name="support-high-contrast-and-all-system-display-attributes"></a>Support High Contrast and all System Display Attributes  
- Applications should not disrupt or disable user-selected, system-wide contrast settings, color selections, or other system-wide display settings and attributes. System-wide settings adopted by a user enhance the accessibility of applications, so they should not be disabled or disregarded by applications. Color should be used in their correct foreground-on-background combination to provide proper contrast. Unrelated colors should not be mixed, and colors should not be reversed.  
+### <a name="support-high-contrast-and-all-system-display-attributes"></a>Suporte a Alto Contraste e todos os atributos de exibição do sistema  
+ Os aplicativos não devem interromper ou desabilitar as configurações de contraste de todo o sistema, selecionadas pelo usuário, seleções de cores ou outras configurações de vídeo e atributos de todo o sistema. As configurações de todo o sistema adotadas por um usuário aprimoram a acessibilidade dos aplicativos, portanto, eles não devem ser desabilitados ou desconsiderados por aplicativos. A cor deve ser usada em sua combinação correta de primeiro plano em segundo plano para fornecer um contraste adequado. As cores não relacionadas não devem ser misturadas e as cores não devem ser revertidas.  
   
- Many users require specific high-contrast combinations, such as white text on a black background. Drawing these reversed, as black text on a white background causes the background to bleed over the foreground and can make reading difficult for some users.  
+ Muitos usuários exigem combinações específicas de alto contraste, como texto em branco em um plano de fundo preto. Desenhar esses invertidos, como texto preto em um plano de fundo branco, faz com que o plano de fundo seja sangrado em primeiro plano e pode dificultar a leitura para alguns usuários.  
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
-### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Ensure All UI Correctly Scales by Any DPI Setting  
- Ensure that all [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] can correctly scale by any dots per inch (dpi) setting. Also, ensure that [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elements fit in a screen of 1024 x 768 with 120 dots per inch (dpi).  
+### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>Garantir que toda a interface do usuário seja dimensionada corretamente por qualquer configuração de DPI  
+ Verifique se todos os [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] podem ser dimensionados corretamente por qualquer configuração de pontos por polegada (DPI). Além disso, certifique-se de que [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elementos caibam em uma tela de 1024 x 768 com 120 pontos por polegada (DPI).  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Navegação  
- Best Practices in this section ensure that navigation has been addressed for controls and applications.  
+ As práticas recomendadas nesta seção garantem que a navegação tenha sido resolvida para controles e aplicativos.  
   
 <a name="Provide_Keyboard_Interface_for_all_UI_Elements"></a>   
-### <a name="provide-keyboard-interface-for-all-ui-elements"></a>Provide Keyboard Interface for All UI Elements  
- Tab stops, especially when carefully planned, give users another way to navigate the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+### <a name="provide-keyboard-interface-for-all-ui-elements"></a>Fornecer interface de teclado para todos os elementos da interface do usuário  
+ As paradas de tabulação, especialmente quando planejadas cuidadosamente, dão aos usuários outra maneira de navegar na [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
- Applications should provide the following keyboard interfaces:  
+ Os aplicativos devem fornecer as seguintes interfaces de teclado:  
   
-- tab stops for all controls that the user can interact with, such as buttons, links, or list boxes  
+- tabulações para todos os controles com os quais o usuário pode interagir, como botões, links ou caixas de listagem  
   
-- logical tab order  
+- ordem de tabulação lógica  
   
 <a name="Show_the_Keyboard_Focus"></a>   
-### <a name="show-the-keyboard-focus"></a>Show the Keyboard Focus  
- Users need to know which object has the keyboard focus so that they can anticipate the effect of their keystrokes. To highlight the keyboard focus, use colors, fonts, or graphics such as rectangles or magnification. To audibly highlight the keyboard focus, change the volume, pitch or tonal quality.  
+### <a name="show-the-keyboard-focus"></a>Mostrar o foco do teclado  
+ Os usuários precisam saber qual objeto tem o foco do teclado para que eles possam prever o efeito de seus pressionamentos de teclas. Para destacar o foco do teclado, use cores, fontes ou elementos gráficos, como retângulos ou ampliação. Para forma audível realçar o foco do teclado, altere a qualidade do volume, da densidade ou do Tom.  
   
- To avoid confusion, applications should hide all visual focus indicators and dim selections that are located in inactive windows (or panes).  
+ Para evitar confusão, os aplicativos devem ocultar todos os indicadores de foco visual e as seleções Dim que estão localizadas em janelas inativas (ou painéis).  
   
- Applications should do the following with keyboard focus:  
+ Os aplicativos devem fazer o seguinte com o foco do teclado:  
   
-- one item should always have keyboard focus  
+- um item sempre deve ter o foco do teclado  
   
-- keyboard focus should be visible and obvious  
+- o foco do teclado deve ser visível e óbvio  
   
-- selections and/or focused items should be visually highlighted  
+- as seleções e/ou os itens focados devem ser visualmente realçados  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
-### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Support Navigation Standards and Powerful Navigation Schemes  
- Different aspects of keyboard navigation provide different ways for users to navigate the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>Suporte a padrões de navegação e esquemas de navegação avançados  
+ Diferentes aspectos da navegação por teclado fornecem diferentes maneiras para os usuários navegarem na [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
- Applications should provide the following keyboard interfaces:  
+ Os aplicativos devem fornecer as seguintes interfaces de teclado:  
   
-- shortcut keys and underlined access keys for all commands, menus and controls  
+- teclas de atalho e chaves de acesso sublinhadas para todos os comandos, menus e controles  
   
-- keyboard shortcuts to important links  
+- atalhos de teclado para links importantes  
   
-- all menu items have an access key; all buttons have accelerator keys, all commands have an accelerator key.  
+- todos os itens de menu têm uma chave de acesso; todos os botões têm teclas de aceleração, todos os comandos têm uma tecla aceleradora.  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
-### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Do Not Let Mouse Location Interfere with Keyboard Navigation  
- Mouse location should not interfere with keyboard navigation. For example, if the mouse is positioned someplace and the user is navigating with the keyboard, a mouse click should not happen unless initiated by the user.  
+### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>Não permitir que o local do mouse interfira na navegação do teclado  
+ O local do mouse não deve interferir na navegação do teclado. Por exemplo, se o mouse estiver posicionado em algum lugar e o usuário estiver navegando com o teclado, um clique do mouse não deverá ocorrer a menos que seja iniciado pelo usuário.  
   
 <a name="Multimodal_Interface"></a>   
-## <a name="multimodal-interface"></a>Multimodal Interface  
- Best Practices in this section ensure that application [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] includes alternatives for visual elements.  
+## <a name="multimodal-interface"></a>Interface multimodal  
+ As práticas recomendadas nesta seção garantem que o aplicativo [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] inclui alternativas para elementos visuais.  
   
 <a name="Provide_User_Selectable_Equivalents_for_Non_Text"></a>   
-### <a name="provide-user-selectable-equivalents-for-non-text-elements"></a>Provide User-Selectable Equivalents for Non-Text Elements  
- For each non-text element, provide a user-selectable equivalent for text, transcripts, or audio descriptions, such as alt text, captions, or visual feedback.  
+### <a name="provide-user-selectable-equivalents-for-non-text-elements"></a>Fornecer equivalentes selecionáveis pelo usuário para elementos que não são de texto  
+ Para cada elemento que não seja texto, forneça um equivalente selecionável pelo usuário para texto, transcrições ou descrições de áudio, como texto alternativo, legendas ou comentários visuais.  
   
- Non-text elements cover a wide range of [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] elements including: images, image map regions, animations, applets, frames, scripts, graphical buttons, sounds, stand-alone audio files and video. Non-text elements are important when they contain visual information, speech, or general audio information that the user needs access to in order to understand the content of the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+ Os elementos que não são texto abrangem uma ampla variedade de elementos [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)], incluindo: imagens, regiões de mapa de imagem, animações, applets, quadros, scripts, botões gráficos, sons, arquivos de áudio autônomos e vídeo. Elementos que não são de texto são importantes quando contêm informações visuais, fala ou informações gerais de áudio que o usuário precisa acessar para entender o conteúdo do [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 <a name="Use_Color_but_also_Provide_Alternatives_to_Color"></a>   
-### <a name="use-color-but-also-provide-alternatives-to-color"></a>Use Color but Also Provide Alternatives to Color  
- Use color to enhance, emphasize, or reiterate information shown by other means, but do not communicate information by using color alone. Users who are color blind or have a monochrome display need alternatives to color.  
+### <a name="use-color-but-also-provide-alternatives-to-color"></a>Usar cor, mas também fornecer alternativas para cor  
+ Use cores para aprimorar, enfatizar ou reiterar as informações mostradas por outros meios, mas não comunicar informações usando apenas a cor. Os usuários que têm cores cegas ou têm um monitor monocromático precisam de alternativas para cores.  
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>   
-### <a name="use-standard-input-apis-with-device-independent-calls"></a>Use Standard Input APIs with Device-Independent Calls  
- Device-independent calls ensure keyboard and mouse feature equality, while providing assistive technology with needed information about the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
+### <a name="use-standard-input-apis-with-device-independent-calls"></a>Usar APIs de entrada padrão com chamadas independentes de dispositivo  
+ As chamadas independentes de dispositivo garantem a igualdade de recursos de teclado e mouse, oferecendo, ao mesmo tempo, tecnologia assistencial com as informações necessárias sobre o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)].  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Windows.Automation.Peers>
-- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
-- [Guidelines for Keyboard User Interface Design](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)
+- [Exemplo de suporte ao controle personalizado NumericUpDown com tema e automação da interface do usuário](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
+- [Diretrizes para design de interface de usuário de teclado](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

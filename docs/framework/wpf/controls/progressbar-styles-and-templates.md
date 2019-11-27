@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="progressbar-parts"></a>Partes de ProgressBar  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.ProgressBar>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_Indicator|<xref:System.Windows.FrameworkElement>|O objeto que indica o progresso.|  
 |PART_Track|<xref:System.Windows.FrameworkElement>|O objeto que define o caminho do indicador de progresso.|  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440014"
 ---
 # <a name="imetadataimportenumevents-method"></a>Método IMetaDataImport::EnumEvents
-Enumerates event definition tokens for the specified TypeDef token.  
+Enumera os tokens de definição de evento para o token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,33 +39,33 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `td`  
- [in] The TypeDef token whose event definitions are to be enumerated.  
+ no O token de TypeDef cujas definições de evento devem ser enumeradas.  
   
  `rEvents`  
- [out] The array of returned events.  
+ fora A matriz de eventos retornados.  
   
  `cMax`  
- [in] The maximum size of the `rEvents` array.  
+ no O tamanho máximo da matriz de `rEvents`.  
   
  `pcEvents`  
- [out] The actual number of events returned in `rEvents`.  
+ fora O número real de eventos retornados em `rEvents`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` returned successfully.|  
-|`S_FALSE`|There are no events to enumerate. In that case, `pcEvents` is zero.|  
+|`S_OK`|`EnumEvents` retornado com êxito.|  
+|`S_FALSE`|Não há eventos a serem enumerados. Nesse caso, `pcEvents` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

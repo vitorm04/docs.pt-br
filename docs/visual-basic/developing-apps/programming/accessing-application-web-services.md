@@ -1,5 +1,5 @@
 ---
-title: Acessando serviços Web do aplicativo
+title: Como acessar serviços Web de aplicativo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Web services [Visual Basic], My.WebServices object
@@ -21,7 +21,7 @@ O objeto `My.WebServices` fornece uma instância de cada serviço Web referencia
 
 A tabela a seguir lista as possíveis maneiras de acessar serviços Web referenciados por um aplicativo.
 
-|Para|Consulte|
+|{1&gt;Para&lt;1}|Consulte|
 |---|---|
 |Chamar um serviço Web|[Objeto My.WebServices](../../../visual-basic/language-reference/objects/my-webservices-object.md)|
 |Chamar um serviço Web de forma assíncrona e manipular um evento quando ele for concluído|[Como chamar um serviço Web de forma assíncrona](../../../visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)|

@@ -15,19 +15,19 @@ ms.locfileid: "74343798"
 ---
 # <a name="directives-visual-basic"></a>Diretivas (Visual Basic)
 
-The topics in this section document the Visual Basic source code compiler directives.  
+Os tópicos nesta seção documentam as diretivas Visual Basic do compilador do código-fonte.  
   
 ## <a name="in-this-section"></a>Nesta seção  
 
- [#Const Directive](../../../visual-basic/language-reference/directives/const-directive.md) -- Define a compiler constant  
+ [Diretiva #Const](../../../visual-basic/language-reference/directives/const-directive.md) – definir uma constante do compilador  
   
- [#ExternalSource Directive](../../../visual-basic/language-reference/directives/externalsource-directive.md) -- Indicate a mapping between source lines and text external to the source  
+ [Diretiva #ExternalSource](../../../visual-basic/language-reference/directives/externalsource-directive.md) --indica um mapeamento entre linhas de origem e texto externo à origem  
   
- [#If...Then...#Else Directives](../../../visual-basic/language-reference/directives/if-then-else-directives.md) -- Compile selected blocks of code  
+ [#If... Then... #Else diretivas](../../../visual-basic/language-reference/directives/if-then-else-directives.md) – compilar blocos de código selecionados  
   
- [#Region Directive](../../../visual-basic/language-reference/directives/region-directive.md) -- Collapse and hide sections of code in the Visual Studio editor  
+ [Diretiva #Region](../../../visual-basic/language-reference/directives/region-directive.md) – recolher e ocultar seções de código no editor do Visual Studio  
   
- **#Disable, #Enable** -- Disable and enable specific warnings for regions of code.  
+ **#Disable, #Enable** --desabilitar e habilitar avisos específicos para regiões de código.  
   
 ```vb  
 #Disable Warning BC42356 ' suppress warning about no awaits in this method  
@@ -37,7 +37,7 @@ The topics in this section document the Visual Basic source code compiler direct
 #Enable Warning BC42356  
 ```  
   
- You can disable and enable a comma-separated list of warning codes too.  
+ Você também pode desabilitar e habilitar uma lista separada por vírgulas de códigos de aviso.  
   
 ## <a name="related-sections"></a>Seções relacionadas  
 

@@ -40,31 +40,31 @@ HRESULT DefineGlobalVariable2(
   
 ## <a name="parameters"></a>Parâmetros  
  `name`  
- [in] The global variable name.  
+ no O nome da variável global.  
   
  `attributes`  
- [in] The global variable attributes.  
+ no Os atributos da variável global.  
   
  `sigToken`  
- [in] The metadata token of the signature.  
+ no O token de metadados da assinatura.  
   
  `addrKind`  
- [in] The address type.  
+ no O tipo de endereço.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ no O primeiro endereço para a especificação de parâmetro.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ no O segundo endereço para a especificação de parâmetro.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ no O terceiro endereço para a especificação de parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl  
+ **Cabeçalho:** CorSym. idl  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>URLs e parâmetros de cadeia de consulta do UriTemplate  
  Os serviços de estilo da Web podem ser chamados de um navegador da Web, digitando uma URL associada a uma operação de serviço. Essas operações de serviço podem pegar parâmetros de cadeia de caracteres de consulta que devem ser especificados em um formulário de cadeia de caracteres dentro da URL. A tabela a seguir mostra os tipos que podem ser passados dentro de uma URL e o formato usado.  
   
-|Digite|Formatar|  
+|Tipo|Formatar|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -117,7 +117,7 @@ interface ICustomer
 |<xref:System.Decimal>|Qualquer decimal na notação padrão (sem expoente)|  
 |<xref:System.Boolean>|True ou false (não diferencia maiúsculas de minúsculas)|  
 |<xref:System.String>|Qualquer cadeia de caracteres (cadeia de caracteres nula não tem suporte e nenhuma saída é feita)|  
-|<xref:System.DateTime>|MM/DD/AAAA<br /><br /> MM/DD/AAAA HH: MM: SS [AM&#124;PM]<br /><br /> Mês dia ano<br /><br /> Mês dia ano HH: MM: SS [AM&#124;PM]|  
+|<xref:System.DateTime>|DD/MM/AAAA<br /><br /> MM/DD/AAAA HH: MM: SS [AM&#124;PM]<br /><br /> Mês dia ano<br /><br /> Mês dia ano HH: MM: SS [AM&#124;PM]|  
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> Onde DD = dias, HH = horas, MM = minutos, SS = segundos|  
 |<xref:System.Guid>|Um GUID, por exemplo:<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/DD/AAAA HH: MM: SS MM: SS<br /><br /> Onde DD = dias, HH = horas, MM = minutos, SS = segundos|  

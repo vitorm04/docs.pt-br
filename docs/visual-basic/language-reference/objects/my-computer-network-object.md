@@ -15,16 +15,16 @@ ms.locfileid: "74332282"
 Fornece uma propriedade, um evento e métodos para interagir com a rede à qual o computador está conectado.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Computer.Network` object, see <xref:Microsoft.VisualBasic.Devices.Network>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Computer.Network`, consulte <xref:Microsoft.VisualBasic.Devices.Network>.  
   
- For more information, see [Performing Network Operations](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
+ Para obter mais informações, consulte [executando operações de rede](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Network>  
+ **Classe:** <xref:Microsoft.VisualBasic.Devices.Network>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

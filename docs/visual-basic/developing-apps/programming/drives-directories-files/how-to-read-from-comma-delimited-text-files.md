@@ -1,5 +1,5 @@
 ---
-title: 'How to: read from comma-delimited text files'
+title: 'Como: ler de arquivos de texto delimitados por vírgula'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], parsing

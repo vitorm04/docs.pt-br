@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442694"
 ---
 # <a name="icorprofilermoduleenumnext-method"></a>Método ICorProfilerModuleEnum::Next
-Gets the specified number of contiguous modules from a sequential collection of modules, starting at the enumerator's current position in the sequence.  
+Obtém o número especificado de módulos contíguos de uma coleção sequencial de módulos, começando na posição atual do enumerador na sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,26 +36,26 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] The number of modules to retrieve.  
+ no O número de módulos a serem recuperados.  
   
  `ids`  
- [out] An array of `ModuleID` values, each of which represents a retrieved module.  
+ fora Uma matriz de valores de `ModuleID`, cada um representando um módulo recuperado.  
   
  `pceltFetched`  
- [out] A pointer to the number of elements actually returned in the `ids` array.  
+ fora Um ponteiro para o número de elementos realmente retornados na matriz de `ids`.  
   
 ## <a name="return-value"></a>Valor retornado  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were returned.|  
-|S_FALSE|Fewer than `celt` elements were returned, which indicates that the enumeration is complete.|  
+|S_OK|`celt` elementos foram retornados.|  
+|S_FALSE|Foram retornados menos de `celt` elementos, o que indica que a enumeração foi concluída.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

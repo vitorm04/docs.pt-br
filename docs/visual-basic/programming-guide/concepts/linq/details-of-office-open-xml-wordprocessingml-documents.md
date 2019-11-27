@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354216"
 ---
-# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>Details of Office Open XML WordprocessingML Documents (Visual Basic)
+# <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>Detalhes dos documentos do Office Open XML WordprocessingML (Visual Basic)
 Esta seção fornece informações sobre os detalhes de documentos do Office Open XML WordprocessingML. Mostra exemplos de partes do documento e estilo de um documento Open XML.  
   
 ## <a name="in-this-section"></a>Nesta seção  
@@ -18,8 +18,8 @@ Esta seção fornece informações sobre os detalhes de documentos do Office Ope
 |-----------|-----------------|  
 |[Documento de WordprocessingML com estilos](../../../../visual-basic/programming-guide/concepts/linq/wordprocessingml-document-with-styles.md)|Mostra parte do documento de um documento do Office Open XML WordprocessingML.|  
 |[Parte de estilo de um documento de WordprocessingML](../../../../visual-basic/programming-guide/concepts/linq/style-part-of-a-wordprocessingml-document.md)|Mostra parte de estilo de um documento do Office Open XML WordprocessingML.|  
-|[Example that Outputs Office Open XML Document Parts (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)|Fornece um exemplo que abre um documento do Office Open XML WordprocessingML, e saída partes no console.|  
+|[Exemplo que gera as partes do documento XML aberto do Office (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)|Fornece um exemplo que abre um documento do Office Open XML WordprocessingML, e saída partes no console.|  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: manipulando conteúdo em um documento do WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

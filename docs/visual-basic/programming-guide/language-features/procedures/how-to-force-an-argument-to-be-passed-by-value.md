@@ -22,35 +22,35 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344524"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>Como forçar um argumento a ser passado por valor (Visual Basic)
-The procedure declaration determines the passing mechanism. If a parameter is declared [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic expects to pass the corresponding argument by reference. This allows the procedure to change the value of the programming element underlying the argument in the calling code. If you wish to protect the underlying element against such change, you can override the `ByRef` passing mechanism in the procedure call by enclosing the argument name in parentheses. These parentheses are in addition to the parentheses enclosing the argument list in the call.  
+A declaração de procedimento determina o mecanismo de passagem. Se um parâmetro for declarado como [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), Visual Basic esperará passar o argumento correspondente por referência. Isso permite que o procedimento altere o valor do elemento de programação subjacente ao argumento no código de chamada. Se você deseja proteger o elemento subjacente contra essa alteração, você pode substituir o `ByRef` mecanismo de passagem na chamada de procedimento ao colocar o nome do argumento entre parênteses. Esses parênteses são além dos parênteses que envolvem a lista de argumentos na chamada.  
   
- The calling code cannot override a [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) mechanism.  
+ O código de chamada não pode substituir um mecanismo [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) .  
   
-### <a name="to-force-an-argument-to-be-passed-by-value"></a>To force an argument to be passed by value  
+### <a name="to-force-an-argument-to-be-passed-by-value"></a>Para forçar um argumento a ser passado por valor  
   
-- If the corresponding parameter is declared `ByVal` in the procedure, you do not need to take any additional steps. Visual Basic already expects to pass the argument by value.  
+- Se o parâmetro correspondente for declarado `ByVal` no procedimento, você não precisará executar etapas adicionais. Visual Basic já espera passar o argumento por valor.  
   
-- If the corresponding parameter is declared `ByRef` in the procedure, enclose the argument in parentheses in the procedure call.  
+- Se o parâmetro correspondente for declarado `ByRef` no procedimento, coloque o argumento entre parênteses na chamada de procedimento.  
   
 ## <a name="example"></a>Exemplo  
- The following example overrides a `ByRef` parameter declaration. In the call that forces `ByVal`, note the two levels of parentheses.  
+ O exemplo a seguir substitui uma declaração de parâmetro `ByRef`. Na chamada que força `ByVal`, observe os dois níveis de parênteses.  
   
  [!code-vb[VbVbcnProcedures#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#39)]  
   
  [!code-vb[VbVbcnProcedures#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#40)]  
   
- When `str` is enclosed in extra parentheses within the argument list, the `setNewString` procedure cannot change its value in the calling code, and `MsgBox` displays "Cannot be replaced if passed ByVal". When `str` is not enclosed in extra parentheses, the procedure can change it, and `MsgBox` displays "This is a new value for the inString argument."  
+ Quando `str` é colocado entre parênteses extras na lista de argumentos, o procedimento de `setNewString` não pode alterar seu valor no código de chamada e `MsgBox` exibe "não pode ser substituído se passado por ByVal". Quando `str` não está entre parênteses extras, o procedimento pode alterá-lo e `MsgBox` exibe "Este é um novo valor para o argumento inString".  
   
 ## <a name="compiling-the-code"></a>Compilando o código  
- When you pass a variable by reference, you must use the `ByRef` keyword to specify this mechanism.  
+ Ao passar uma variável por referência, você deve usar a palavra-chave `ByRef` para especificar esse mecanismo.  
   
- The default in Visual Basic is to pass arguments by value. However, it is good programming practice to include either the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) or [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword with every declared parameter. This makes your code easier to read.  
+ O padrão no Visual Basic é passar argumentos por valor. No entanto, é uma boa prática de programação incluir a palavra-chave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) ou [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) com cada parâmetro declarado. Isso torna seu código mais fácil de ler.  
   
 ## <a name="robust-programming"></a>Programação robusta  
- If a procedure declares a parameter [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), the correct execution of the code might depend on being able to change the underlying element in the calling code. If the calling code overrides this calling mechanism by enclosing the argument in parentheses, or if it passes a nonmodifiable argument, the procedure cannot change the underlying element. This might produce unexpected results in the calling code.  
+ Se um procedimento declarar um parâmetro [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md), a execução correta do código poderá depender da possibilidade de alterar o elemento subjacente no código de chamada. Se o código de chamada substituir esse mecanismo de chamada ao colocar o argumento entre parênteses ou se ele passar um argumento não modificável, o procedimento não poderá alterar o elemento subjacente. Isso pode produzir resultados inesperados no código de chamada.  
   
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
- There is always a potential risk in allowing a procedure to change the value underlying an argument in the calling code. Make sure you expect this value to be changed, and be prepared to check it for validity before using it.  
+ Sempre há um risco potencial em permitir que um procedimento altere o valor subjacente a um argumento no código de chamada. Certifique-se de que você espera que esse valor seja alterado e esteja preparado para verificá-lo quanto à validade antes de usá-lo.  
   
 ## <a name="see-also"></a>Consulte também
 

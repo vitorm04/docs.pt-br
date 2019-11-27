@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439934"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>Método ICorProfilerCallback::ThreadDestroyed
-Notifies the profiler that a thread has been destroyed.  
+Notifica o criador de perfil de que um thread foi destruído.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,15 +34,15 @@ HRESULT ThreadDestroyed(
   
 ## <a name="parameters"></a>Parâmetros  
  `threadId`  
- [in] The ID of the thread that has been destroyed.  
+ no A ID do thread que foi destruído.  
   
 ## <a name="remarks"></a>Comentários  
- The `threadId` value is no longer valid at the time of this call.  
+ O valor de `threadId` não é mais válido no momento desta chamada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

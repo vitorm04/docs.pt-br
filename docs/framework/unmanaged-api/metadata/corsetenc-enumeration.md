@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432765"
 ---
 # <a name="corsetenc-enumeration"></a>Enumeração CorSetENC
-Contains values used to influence behavior during the generation of metadata.  
+Contém valores usados para influenciar o comportamento durante a geração de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,21 +44,21 @@ typedef enum CorSetENC {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`MDSetENCOn`|Obsoleto.|  
 |`MDSetENCOff`|Obsoleto.|  
-|`MDUpdateENC`|Indicates that whereas metadata can be updated, tokens cannot be moved.|  
-|`MDUpdateFull`|Indicates that tokens can be moved during updates.|  
-|`MDUpdateExtension`|Indicates that updates can consist only of additions. Tokens cannot be moved.|  
-|`MDUpdateIncremental`|Indicates that compilation is incremental.|  
-|`MDUpdateDelta`|Indicates that only changed metadata should be saved.|  
-|`MDUpdateMask`|Includes `MDUpdateENC`, `MDUpdateFull` and `MDUpdateIncremental`.|  
+|`MDUpdateENC`|Indica que, enquanto os metadados podem ser atualizados, os tokens não podem ser movidos.|  
+|`MDUpdateFull`|Indica que os tokens podem ser movidos durante as atualizações.|  
+|`MDUpdateExtension`|Indica que as atualizações podem consistir apenas em adições. Tokens não podem ser movidos.|  
+|`MDUpdateIncremental`|Indica que a compilação é incremental.|  
+|`MDUpdateDelta`|Indica que somente os metadados alterados devem ser salvos.|  
+|`MDUpdateMask`|Inclui `MDUpdateENC`, `MDUpdateFull` e `MDUpdateIncremental`.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

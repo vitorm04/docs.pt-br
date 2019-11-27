@@ -18,17 +18,17 @@ ms.locfileid: "74345400"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>Como acessar uma variável oculta por uma classe derivada (Visual Basic)
 
-When code in a derived class accesses a variable, the compiler normally resolves the reference to the closest accessible version, that is, the accessible version the fewest derivational steps backward from the accessing class. If the variable is defined in the derived class, the code normally accesses that definition.
+Quando o código em uma classe derivada acessa uma variável, o compilador normalmente resolve a referência à versão acessível mais próxima, ou seja, a versão acessível o menor número de etapas de derivação para trás da classe de acesso. Se a variável for definida na classe derivada, o código normalmente acessará essa definição.
 
-If the derived class variable shadows a variable in the base class, it hides the base class version. However, you can access the base class variable by qualifying it with the `MyBase` keyword.
+Se a variável de classe derivada sombreia uma variável na classe base, ela ocultará a versão da classe base. No entanto, você pode acessar a variável de classe base qualificando-a com a palavra-chave `MyBase`.
 
-### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>To access a base class variable hidden by a derived class
+### <a name="to-access-a-base-class-variable-hidden-by-a-derived-class"></a>Para acessar uma variável de classe base ocultada por uma classe derivada
 
-- In an expression or assignment statement, precede the variable name with the `MyBase` keyword and a period (`.`).
+- Em uma expressão ou instrução de atribuição, preceda o nome da variável com a palavra-chave `MyBase` e um ponto (`.`).
 
-    The compiler resolves the reference to the base class version of the variable.
+    O compilador resolve a referência à versão da classe base da variável.
 
-    The following example illustrates shadowing through inheritance. It makes two references, one that accesses the shadowing variable and one that bypasses the shadowing.
+    O exemplo a seguir ilustra o sombreamento por meio de herança. Ele faz duas referências, uma que acessa a variável de sombreamento e outra que ignora o sombreamento.
 
     ```vb
     Public Class shadowBaseClass
@@ -45,16 +45,16 @@ If the derived class variable shadows a variable in the base class, it hides the
     End Class
     ```
 
-    The preceding example declares the variable `shadowString` in the base class and shadows it in the derived class. The procedure `showStrings` in the derived class displays the shadowing version of the string when the name `shadowString` is not qualified. It then displays the shadowed version when `shadowString` is qualified with the `MyBase`  keyword.
+    O exemplo anterior declara a variável `shadowString` na classe base e a sombreia na classe derivada. O procedimento `showStrings` na classe derivada exibe a versão de sombreamento da cadeia de caracteres quando o nome `shadowString` não é qualificado. Em seguida, ele exibe a versão sombreada quando `shadowString` é qualificado com a palavra-chave `MyBase`.
 
 ## <a name="robust-programming"></a>Programação robusta
 
-To lower the risk of referring to an unintended version of a shadowed variable, you can fully qualify all references to a shadowed variable. Shadowing introduces more than one version of a variable with the same name. When a code statement refers to the variable name, the version to which the compiler resolves the reference depends on factors such as the location of the code statement and the presence of a qualifying string. This can increase the risk of referring to the wrong version of the variable.
+Para reduzir o risco de se referir a uma versão não intencional de uma variável sombreada, você pode qualificar totalmente todas as referências a uma variável sombreada. O sombreamento apresenta mais de uma versão de uma variável com o mesmo nome. Quando uma instrução de código se refere ao nome da variável, a versão para a qual o compilador resolve a referência depende de fatores como o local da instrução do código e a presença de uma cadeia de caracteres de qualificação. Isso pode aumentar o risco de se referir à versão errada da variável.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Shadowing in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Sombreamento em Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [Diferenças entre sombreamento e sobreposição](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
 - [Como ocultar uma variável com o mesmo nome que a variável](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
 - [Como ocultar uma variável herdada](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)

@@ -31,7 +31,7 @@ ms.locfileid: "74204787"
 <a name="top"></a> Para aplicativos desktop, o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.
 
 > [!IMPORTANT]
-> Isolated storage is not available for Windows 8.x Store apps. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.
+> O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.
 
 Esse tópico contém as seguintes seções:
 
@@ -126,11 +126,11 @@ O uso permitido especificado por <xref:System.Security.Permissions.IsolatedStora
 
 O .NET Framework fornece três classes no namespace <xref:System.IO.IsolatedStorage> para ajudar a executar as tarefas que envolvem o armazenamento isolado:
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, que é derivado de <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> e fornece gerenciamento básico de assemblies armazenados e arquivos de aplicativos. Uma instância da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> representa um único repositório localizado no sistema de arquivos.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, deriva de <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> e fornece gerenciamento básico de arquivos de aplicativo e assembly armazenados. Uma instância da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> representa um único repositório localizado no sistema de arquivos.
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> deriva de <xref:System.IO.FileStream?displayProperty=nameWithType> e fornece acesso aos arquivos em um repositório.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope> é uma enumeração que permite que você crie e selecione um repositório com o tipo de isolamento apropriado.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope> é uma enumeração que permite criar e selecionar um repositório com o tipo de isolamento apropriado.
 
 As classes de armazenamento isolado permitem que você crie, enumere e exclua o armazenamento isolado. Os métodos para a execução dessas tarefas estão disponíveis através do objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Algumas operações exigem que você tenha a permissão <xref:System.Security.Permissions.IsolatedStorageFilePermission> que representa o direito para administrar o armazenamento isolado; você também pode precisar ter direitos do sistema operacional para acessar o arquivo ou diretório.
 

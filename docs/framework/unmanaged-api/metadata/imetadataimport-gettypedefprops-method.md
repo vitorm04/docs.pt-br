@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436753"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>Método IMetaDataImport::GetTypeDefProps
-Returns metadata information for the <xref:System.Type> represented by the specified TypeDef token.  
+Retorna informações de metadados para o <xref:System.Type> representado pelo token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,29 +40,29 @@ HRESULT GetTypeDefProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `td`  
- [in] The TypeDef token that represents the type to return metadata for.  
+ no O token de TypeDef que representa o tipo para o qual retornar metadados.  
   
  `szTypeDef`  
- [out] A buffer containing the type name.  
+ fora Um buffer que contém o nome do tipo.  
   
  `cchTypeDef`  
- [in] The size in wide characters of `szTypeDef`.  
+ no O tamanho em caracteres largos de `szTypeDef`.  
   
  `pchTypeDef`  
- [out] The number of wide characters returned in `szTypeDef`.  
+ fora O número de caracteres largos retornados em `szTypeDef`.  
   
  `pdwTypeDefFlags`  
- [out] A pointer to any flags that modify the type definition. This value is a bitmask from the [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) enumeration.  
+ fora Um ponteiro para quaisquer sinalizadores que modificam a definição de tipo. Esse valor é um bitmask da enumeração [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) .  
   
  `ptkExtends`  
- [out] A TypeDef or TypeRef metadata token that represents the base type of the requested type.  
+ fora Um token de metadados TypeDef ou TypeRef que representa o tipo base do tipo solicitado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

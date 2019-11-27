@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446669"
 ---
 # <a name="addfile2-method"></a>Método AddFile2
-Adds files to the assembly. Can also be used to create unbound modules.  
+Adiciona arquivos ao assembly. Também pode ser usado para criar módulos desvinculados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,25 +39,25 @@ HRESULT AddFile2(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID for the assembly to which the file is added.  
+ ID do assembly ao qual o arquivo é adicionado.  
   
  `pszFilename`  
- Name of the file to be added.  
+ Nome do arquivo a ser adicionado.  
   
  `dwFlags`  
- COM+ `FileDef` flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ Sinalizadores de `FileDef` COM+, como `ffContainsNoMetaData` e `ffWriteable`. `dwFlags` é passado para o [método definofile](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- Interface to [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface.  
+ Interface para interface de [interface IMetaDataEmit2](../metadata/imetadataemit2-interface.md) .  
   
  `pFileToken`  
- Receives ID for the file being added.  
+ Recebe a ID do arquivo que está sendo adicionado.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>Requisitos  
- Requires alink.h.  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ Requer ALink. h.  
   
 ## <a name="see-also"></a>Consulte também
 

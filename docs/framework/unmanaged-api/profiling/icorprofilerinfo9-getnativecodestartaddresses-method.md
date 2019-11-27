@@ -18,9 +18,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444720"
 ---
-# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9::GetNativeCodeStartAddresses Method
+# <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>Método ICorProfilerInfo9:: GetNativeCodeStartAddresses
 
-Given a functionId and rejitId, enumerates the native code start address of all jitted versions of this code that currently exist.
+Dada uma FunctionID e rejitId, enumera o endereço inicial do código de início de todas as versões com compilação JIT desse código que existem atualmente.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -35,34 +35,34 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 #### <a name="parameters"></a>Parâmetros
 
 `functionId` \
-[in] The ID of the function whose native code start addresses should be returned.
+no A ID da função cujos endereços de início de código nativo devem ser retornados.
 
 `reJitId` \
-[in] The identity of the JIT-recompiled function.
+no A identidade da função de compilação JIT recompilada.
 
 `cCodeStartAddresses` \
-[in] The maximum size of the `codeStartAddresses` array.
+no O tamanho máximo da matriz de `codeStartAddresses`.
 
 `pcCodeStartAddresses` \
-[out] The number of available addresses.
+fora O número de endereços disponíveis.
 
 `codeStartAddresses` \
-[out] An array of `UINT_PTR`, each one of which is the start address for a native body for the specified function.
+fora Uma matriz de `UINT_PTR`, cada uma delas é o endereço inicial de um corpo nativo para a função especificada.
 
 ## <a name="remarks"></a>Comentários
 
-When tiered compilation is enabled, a function may have more than one native code body.
+Quando a compilação em camadas está habilitada, uma função pode ter mais de um corpo de código nativo.
 
 ## <a name="requirements"></a>Requisitos
 
-**Platforms:** See [.NET Core supported operating systems](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
+**Plataformas:** Consulte [sistemas operacionais com suporte do .NET Core](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
-**Header:** CorProf.idl, CorProf.h
+**Cabeçalho:** CorProf. idl, CorProf. h
 
 **Biblioteca:** CorGuids.lib
 
-**.NET Versions:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
+**Versões do .net:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
 ## <a name="see-also"></a>Consulte também
 
-- [ICorProfilerInfo9 Interface](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [Interface ICorProfilerInfo9](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)

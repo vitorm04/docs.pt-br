@@ -23,19 +23,19 @@ ms.locfileid: "74347234"
 Fornece propriedades e métodos para trabalhar com unidades, arquivos e diretórios.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Computer.FileSystem` object, see <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Computer.FileSystem`, consulte <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
- For more information, see [File Access with Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
+ Para obter mais informações, consulte [acesso a arquivos com Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
 > [!NOTE]
-> You can also use classes in the <xref:System.IO?displayProperty=nameWithType> namespace to work with drives, files, and directories.  
+> Você também pode usar classes no namespace <xref:System.IO?displayProperty=nameWithType> para trabalhar com unidades, arquivos e diretórios.  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (provides access to <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
+ **Classe:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (fornece acesso ao <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

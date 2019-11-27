@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434338"
 ---
 # <a name="imetadataemitdeletetoken-method"></a>Método IMetaDataEmit::DeleteToken
-Deletes the specified token from the current metadata scope.  
+Exclui o token especificado do escopo de metadados atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,14 +35,14 @@ HRESULT DeleteToken (
   
 ## <a name="parameters"></a>Parâmetros  
  `tkObj`  
- [in] The token to be deleted.  
+ no O token a ser excluído.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

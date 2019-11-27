@@ -29,12 +29,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347346"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Me, My, MyBase e MyClass no Visual Basic
-`Me`, `My`, `MyBase`, and `MyClass` in Visual Basic have similar names, but different purposes. This topic describes each of these entities in order to distinguish them.  
+`Me`, `My`, `MyBase`e `MyClass` em Visual Basic têm nomes semelhantes, mas finalidades diferentes. Este tópico descreve cada uma dessas entidades para diferenciá-las.  
   
 ## <a name="me"></a>Me  
- The `Me` keyword provides a way to refer to the specific instance of a class or structure in which the code is currently executing. `Me` behaves like either an object variable or a structure variable referring to the current instance. Using `Me` is particularly useful for passing information about the currently executing instance of a class or structure to a procedure in another class, structure, or module.  
+ A palavra-chave `Me` fornece uma maneira de se referir à instância específica de uma classe ou estrutura na qual o código está sendo executado no momento. `Me` se comporta como uma variável de objeto ou uma variável de estrutura referindo-se à instância atual. Usar `Me` é particularmente útil para passar informações sobre a instância em execução no momento de uma classe ou estrutura para um procedimento em outra classe, estrutura ou módulo.  
   
- For example, suppose you have the following procedure in a module.  
+ Por exemplo, suponha que você tenha o procedimento a seguir em um módulo.  
   
 ```vb  
 Sub ChangeFormColor(FormName As Form)  
@@ -43,20 +43,20 @@ Sub ChangeFormColor(FormName As Form)
 End Sub  
 ```  
   
- You can call this procedure and pass the current instance of the <xref:System.Windows.Forms.Form> class as an argument by using the following statement.  
+ Você pode chamar esse procedimento e passar a instância atual da classe <xref:System.Windows.Forms.Form> como um argumento usando a instrução a seguir.  
   
 ```vb  
 ChangeFormColor(Me)  
 ```  
   
 ## <a name="my"></a>Meu  
- The `My` feature provides easy and intuitive access to a number of .NET Framework classes, enabling the Visual Basic user to interact with the computer, application, settings, resources, and so on.  
+ O recurso `My` fornece acesso fácil e intuitivo a várias classes de .NET Framework, permitindo que o usuário Visual Basic interaja com o computador, o aplicativo, as configurações, os recursos e assim por diante.  
   
 ## <a name="mybase"></a>MyBase  
- The `MyBase` keyword behaves like an object variable referring to the base class of the current instance of a class. `MyBase` is commonly used to access base class members that are overridden or shadowed in a derived class. `MyBase.New` is used to explicitly call a base class constructor from a derived class constructor.  
+ A palavra-chave `MyBase` se comporta como uma variável de objeto referindo-se à classe base da instância atual de uma classe. `MyBase` normalmente é usado para acessar membros da classe base que são substituídos ou sombreados em uma classe derivada. `MyBase.New` é usado para chamar explicitamente um construtor de classe base de um construtor de classe derivada.  
   
 ## <a name="myclass"></a>MyClass  
- The `MyClass` keyword behaves like an object variable referring to the current instance of a class as originally implemented. `MyClass` is similar to `Me`, but all method calls on it are treated as if the method were `NotOverridable`.  
+ A palavra-chave `MyClass` se comporta como uma variável de objeto referindo-se à instância atual de uma classe como implementada originalmente. `MyClass` é semelhante a `Me`, mas todas as chamadas de método nela são tratadas como se o método estivesse `NotOverridable`.  
   
 ## <a name="see-also"></a>Consulte também
 

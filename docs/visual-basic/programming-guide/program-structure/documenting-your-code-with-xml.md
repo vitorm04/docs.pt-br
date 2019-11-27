@@ -1,5 +1,5 @@
 ---
-title: Documentando o código com XML
+title: Documentar o código com XML
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [Visual Basic], documenting code
@@ -15,29 +15,29 @@ ms.locfileid: "74347449"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>Documentando o código com XML (Visual Basic)
 
-In Visual Basic, you can document your code using XML
+No Visual Basic, você pode documentar seu código usando XML
 
 ## <a name="xml-documentation-comments"></a>Comentários da documentação XML
 
-Visual Basic provides an easy way to automatically create XML documentation for projects. You can automatically generate an XML skeleton for your types and members, and then provide summaries, descriptive documentation for each parameter, and other remarks. With the appropriate setup, the XML documentation is automatically emitted into an XML file with the same name as your project and the .xml extension. Para obter mais informações, confira [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
+Visual Basic fornece uma maneira fácil de criar automaticamente a documentação XML para projetos. Você pode gerar automaticamente um esqueleto XML para seus tipos e membros e, em seguida, fornecer resumos, documentação descritiva para cada parâmetro e outros comentários. Com a configuração apropriada, a documentação XML é emitida automaticamente em um arquivo XML com o mesmo nome que o seu projeto e a extensão. xml. Para obter mais informações, confira [-doc](../../../visual-basic/reference/command-line-compiler/doc.md).
 
-The XML file can be consumed or otherwise manipulated as XML. This file is located in the same directory as the output .exe or .dll file of your project.
+O arquivo XML pode ser consumido ou manipulado de outra forma como XML. Esse arquivo está localizado no mesmo diretório que o arquivo. exe ou. dll de saída do seu projeto.
 
-XML documentation starts with `'''`. O processamento desses comentários tem algumas restrições:
+A documentação XML começa com `'''`. O processamento desses comentários tem algumas restrições:
 
-- A documentação deve ser em XML bem formado. If the XML is not well formed, a warning is generated and the documentation file contains a comment saying that an error was encountered.
+- A documentação deve ser em XML bem formado. Se o XML não estiver bem formado, um aviso será gerado e o arquivo de documentação conterá um comentário dizendo que foi encontrado um erro.
 
-- Os desenvolvedores são livres para criar seu próprio conjunto de marcas. There is a recommended set of tags (see "Related Sections" in this topic). Algumas das marcas recomendadas têm significado especial:
+- Os desenvolvedores são livres para criar seu próprio conjunto de marcas. Há um conjunto recomendado de marcas (consulte "seções relacionadas" neste tópico). Algumas das marcas recomendadas têm significado especial:
 
-  - A marca \<param> é usada para descrever parâmetros. Se ela for usada, o compilador verificará se o parâmetro existe e se todos os parâmetros são descritos na documentação. If the verification fails, the compiler issues a warning.
+  - A marca \<param> é usada para descrever parâmetros. Se ela for usada, o compilador verificará se o parâmetro existe e se todos os parâmetros são descritos na documentação. Se a verificação falhar, o compilador emitirá um aviso.
 
-  - O atributo `cref` pode ser anexado a qualquer marca para fornecer uma referência a um elemento de código. O compilador verifica se esse elemento de código existe. If the verification fails, the compiler issues a warning. The compiler also respects any `Imports` statements when looking for a type described in the `cref` attribute.
+  - O atributo `cref` pode ser anexado a qualquer marca para fornecer uma referência a um elemento de código. O compilador verifica se esse elemento de código existe. Se a verificação falhar, o compilador emitirá um aviso. O compilador também respeita quaisquer instruções `Imports` ao procurar um tipo descrito no atributo `cref`.
 
-  - The \<summary> tag is used by IntelliSense in Visual Studio to display additional information about a type or member.
+  - A marca de > de Resumo de \<é usada pelo IntelliSense no Visual Studio para exibir informações adicionais sobre um tipo ou membro.
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-For details on creating an XML file with documentation comments, see the following topics:
+Para obter detalhes sobre como criar um arquivo XML com comentários de documentação, consulte os seguintes tópicos:
 
 - [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 

@@ -32,7 +32,7 @@ Todos os tipos de valor são derivados implicitamente da <xref:System.ValueType?
 
 Ao contrário do que acontece com tipos de referência, você não pode derivar um novo tipo de um tipo de valor. No entanto, assim como com tipos de referência, os structs podem implementar interfaces.
 
-Variáveis de tipo de valor não podem ser `null` por padrão. However, variables of the corresponding [nullable value types](../builtin-types/nullable-value-types.md) can be `null`.
+Variáveis de tipo de valor não podem ser `null` por padrão. No entanto, as variáveis dos [tipos de valores anuláveis](../builtin-types/nullable-value-types.md) correspondentes podem ser `null`.
 
 Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o valor padrão desse tipo. Para saber mais sobre valores padrão de tipos de valor, consulte [Tabela de valores padrão](default-values-table.md).
 

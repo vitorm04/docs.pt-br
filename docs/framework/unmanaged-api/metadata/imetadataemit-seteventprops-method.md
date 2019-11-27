@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450325"
 ---
 # <a name="imetadataemitseteventprops-method"></a>Método IMetaDataEmit::SetEventProps
-Sets or updates the specified feature of an event defined by a prior call to [IMetaDataEmit::DefineEvent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
+Define ou atualiza o recurso especificado de um evento definido por uma chamada anterior para [IMetaDataEmit::D efineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,32 +41,32 @@ HRESULT SetEventProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `ev`  
- [in] The event token.  
+ no O token do evento.  
   
  `dwEventFlags`  
- [in] Event flags. This is a bitmask of `CorEventAttr` values.  
+ no Sinalizadores de eventos. Este é um bitmask de valores de `CorEventAttr`.  
   
  `tkEventType`  
- [in] The token for the event class. This is either a `mdTypeDef` or a `mdTypeRef` token.  
+ no O token para a classe de evento. Este é um `mdTypeDef` ou um token de `mdTypeRef`.  
   
  `mdAddOn`  
- [in] The method used to subscribe to the event, or null.  
+ no O método usado para assinar o evento ou nulo.  
   
  `mdRemoveOn`  
- [in] The method used to unsubscribe to the event, or null.  
+ no O método usado para cancelar a assinatura do evento, ou NULL.  
   
  `mdFire`  
- [in] The method used (by a derived class) to raise the event.  
+ no O método usado (por uma classe derivada) para gerar o evento.  
   
  `rmdOtherMethods[]`  
- [in] An array of tokens for other methods associated with the event. The last element of the array must be `mdMethodDefNil`.  
+ no Uma matriz de tokens para outros métodos associados ao evento. O último elemento da matriz deve ser `mdMethodDefNil`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430694"
 ---
 # <a name="getwin32resblob-method"></a>Método GetWin32ResBlob
-Retrieves Win32 resource blob. Call this method after setting assembly options.  
+Recupera o blob de recursos do Win32. Chame esse método depois de definir as opções de assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,28 +39,28 @@ HRESULT GetWin32ResBlob(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID of the assembly.  
+ ID do assembly.  
   
  `FileToken`  
- File token used to retrieve the filename to be used when constructing the Win32 Version resource  
+ O token de arquivo usado para recuperar o nome de o FileName a ser usado ao construir o recurso de versão do Win32  
   
  `fDll`  
- TRUE if file is a DLL, false for an EXE.  
+ TRUE se o arquivo for uma DLL, false para um EXE.  
   
  `pszIconFile`  
- Optional icon to insert into the resource blob.  
+ Ícone opcional para inserir no blob de recursos.  
   
  `ppResBlob`  
- Receives the resource blob.  
+ Recebe o blob de recursos.  
   
  `pcbResBlob`  
- Receives the size of the blob.  
+ Recebe o tamanho do blob.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+ Requer ALink. h  
   
 ## <a name="see-also"></a>Consulte também
 

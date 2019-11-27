@@ -15,19 +15,19 @@ ms.locfileid: "74344131"
 Fornece uma propriedade e métodos para gravar informações de evento e de exceção para os ouvintes de log do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Application.Log` object, see <xref:Microsoft.VisualBasic.Logging.Log>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Application.Log`, consulte <xref:Microsoft.VisualBasic.Logging.Log>.  
   
- For more information, see [Logging Information from the Application](../../../visual-basic/developing-apps/programming/log-info/index.md).  
+ Para obter mais informações, consulte [registrando informações do aplicativo](../../../visual-basic/developing-apps/programming/log-info/index.md).  
   
 > [!NOTE]
-> You can also use classes in the .NET Framework to log information from your application. For more information, see [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
+> Você também pode usar classes no .NET Framework para registrar informações de seu aplicativo. Para obter mais informações, consulte [rastreamento e instrumentação de aplicativos](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  
   
 ## <a name="requirements"></a>Requisitos  
  **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
   
- **Class:** <xref:Microsoft.VisualBasic.Logging.Log>  
+ **Classe:** <xref:Microsoft.VisualBasic.Logging.Log>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

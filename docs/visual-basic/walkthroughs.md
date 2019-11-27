@@ -1,6 +1,6 @@
 ---
-title: Language Walkthroughs
-description: Step-by-step instructions for common scenarios in Visual Basic development
+title: Orientações do idioma
+description: Instruções detalhadas para cenários comuns no desenvolvimento Visual Basic
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, walkthroughs
@@ -53,7 +53,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Descreve as configurações `My.Application.Log` padrão e como determinar as configurações para seu aplicativo.
 
 - [Alterando onde My.Application.Log grava informações](developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- Mostra como substituir as configurações `My.Log` e `Log` padrão para registrar em log as informações de evento e fazer com que o objeto `My.Application.Log` grave em outros ouvintes de log.
+ Mostra como substituir as configurações `My.Application.Log` e `My.Log` padrão para registrar em log as informações de evento e fazer com que o objeto `Log` grave em outros ouvintes de log.
 
 - [Filtrando a saída de My.Application.Log](developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
  Demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log`.

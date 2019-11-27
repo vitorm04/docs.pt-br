@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442322"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>Método IMetaDataDispenser::OpenScope
-Opens an existing, on-disk file and maps its metadata into memory.  
+Abre um arquivo existente em disco e mapeia seus metadados na memória.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,34 +38,34 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>Parâmetros  
  `szScope`  
- [in] The name of the file to be opened. The file must contain common language runtime (CLR) metadata.  
+ no O nome do arquivo a ser aberto. O arquivo deve conter metadados de Common Language Runtime (CLR).  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration to specify the mode (read, write, and so on) for opening.  
+ no Um valor da enumeração [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) para especificar o modo (leitura, gravação e assim por diante) para abertura.  
   
  `riid`  
- [in] The IID of the desired metadata interface to be returned; the caller will use the interface to import (read) or emit (write) metadata.  
+ no A IID da interface de metadados desejada a ser retornada; o chamador usará a interface para importar (ler) ou emitir (gravar) metadados.  
   
- The value of `riid` must specify one of the "import" or "emit" interfaces. Valid values are IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2, or IID_IMetaDataImport2.  
+ O valor de `riid` deve especificar uma das interfaces "Import" ou "Emit". Os valores válidos são IID_IMetaDataEmit, IID_IMetaDataImport, IID_IMetaDataAssemblyEmit, IID_IMetaDataAssemblyImport, IID_IMetaDataEmit2 ou IID_IMetaDataImport2.  
   
  `ppIUnk`  
- [out] The pointer to the returned interface.  
+ fora O ponteiro para a interface retornada.  
   
 ## <a name="remarks"></a>Comentários  
- The in-memory copy of the metadata can be queried using methods from one of the "import" interfaces, or added to using methods from the one of the "emit" interfaces.  
+ A cópia na memória dos metadados pode ser consultada usando métodos de uma das interfaces "Import" ou adicionadas ao uso de métodos de uma das interfaces "Emit".  
   
- If the target file does not contain CLR metadata, the `OpenScope` method will fail.  
+ Se o arquivo de destino não contiver metadados CLR, o método `OpenScope` falhará.  
   
- In the .NET Framework version 1.0 and version 1.1, if a scope is opened with `dwOpenFlags` set to ofRead, it is eligible for sharing. That is, if subsequent calls to `OpenScope` pass in the name of a file that was previously opened, the existing scope is reused and a new set of data structures is not created. However, problems can arise due to this sharing.  
+ No .NET Framework versão 1,0 e 1,1, se um escopo for aberto com `dwOpenFlags` definido como ofRead, ele será elegível para compartilhamento. Ou seja, se as chamadas subsequentes para `OpenScope` passarem o nome de um arquivo que foi aberto anteriormente, o escopo existente será reutilizado e um novo conjunto de estruturas de dados não será criado. No entanto, podem surgir problemas devido a esse compartilhamento.  
   
- In the .NET Framework version 2.0, scopes opened with `dwOpenFlags` set to ofRead are no longer shared. Use the ofReadOnly value to allow the scope to be shared. When a scope is shared, queries that use "read/write" metadata interfaces will fail.  
+ No .NET Framework versão 2,0, os escopos abertos com `dwOpenFlags` definidos como ofRead não são mais compartilhados. Use o valor ofReadOnly para permitir que o escopo seja compartilhado. Quando um escopo é compartilhado, as consultas que usam interfaces de metadados de "leitura/gravação" falharão.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

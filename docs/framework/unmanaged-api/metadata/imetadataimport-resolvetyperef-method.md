@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431476"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>Método IMetaDataImport::ResolveTypeRef
-Resolves a <xref:System.Type> reference represented by the specified TypeRef token.  
+Resolve uma referência de <xref:System.Type> representada pelo token TypeRef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,32 +38,32 @@ HRESULT ResolveTypeRef (
   
 ## <a name="parameters"></a>Parâmetros  
  `tr`  
- [in] The TypeRef metadata token to return the referenced type information for.  
+ no O token de metadados TypeRef para retornar as informações de tipo referenciadas.  
   
  `riid`  
- [in] The IID of the interface to return in `ppIScope`. Typically, this would be IID_IMetaDataImport.  
+ no O IID da interface a ser retornada em `ppIScope`. Normalmente, isso seria IID_IMetaDataImport.  
   
  `ppIScope`  
- [out] An interface to the module scope in which the referenced type is defined.  
+ fora Uma interface para o escopo do módulo no qual o tipo referenciado é definido.  
   
  `ptd`  
- [out] A pointer to a TypeDef token that represents the referenced type.  
+ fora Um ponteiro para um token de TypeDef que representa o tipo referenciado.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
-> Do not use this method if multiple application domains are loaded. The method does not respect application domain boundaries. If multiple versions of an assembly are loaded, and they contain the same type with the same namespace, the method returns the module scope of the first type it finds.  
+> Não use esse método se vários domínios de aplicativo forem carregados. O método não respeita os limites do domínio do aplicativo. Se várias versões de um assembly forem carregadas e contiverem o mesmo tipo com o mesmo namespace, o método retornará o escopo do módulo do primeiro tipo que encontrar.  
   
- The `ResolveTypeRef` method searches for the type definition in other modules. If the type definition is found, `ResolveTypeRef` returns an interface to that module scope as well as the TypeDef token for the type.  
+ O método `ResolveTypeRef` procura a definição de tipo em outros módulos. Se a definição de tipo for encontrada, `ResolveTypeRef` retornará uma interface para esse escopo de módulo, bem como o token de TypeDef para o tipo.  
   
- If the type reference to be resolved has a resolution scope of AssemblyRef, the `ResolveTypeRef` method searches for a match only in the metadata scopes that have already been opened with calls to either the [IMetaDataDispenser::OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) method or the [IMetaDataDispenser::OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) method. This is because `ResolveTypeRef` cannot determine from only the AssemblyRef scope where on disk or in the global assembly cache the assembly is stored.  
+ Se a referência de tipo a ser resolvida tiver um escopo de resolução de AssemblyRef, o método `ResolveTypeRef` procurará uma correspondência somente nos escopos de metadados que já foram abertos com chamadas para o método [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md) ou o método [IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md) . Isso ocorre porque `ResolveTypeRef` não pode determinar apenas o escopo de AssemblyRef em que no disco ou no cache de assembly global o assembly está armazenado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

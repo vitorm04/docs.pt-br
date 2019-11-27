@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74332943"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>Como declarar e usar prefixos de namespace XML (Visual Basic)
-This example shows how to import the XML namespace prefix `ns` and use it in an XML literal and XML axis properties.  
+Este exemplo mostra como importar o prefixo de namespace XML `ns` e usá-lo em um literal XML e em Propriedades de eixo XML.  
   
 ## <a name="example"></a>Exemplo  
  [!code-vb[VbXMLSamples#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples3.vb#8)]  
@@ -21,7 +21,7 @@ This example shows how to import the XML namespace prefix `ns` and use it in an 
 ## <a name="compiling-the-code"></a>Compilando o código  
  Este exemplo requer:  
   
-- A reference to the <xref:System.Xml.Linq> namespace.  
+- Uma referência ao namespace <xref:System.Xml.Linq>.  
   
 ## <a name="see-also"></a>Consulte também
 

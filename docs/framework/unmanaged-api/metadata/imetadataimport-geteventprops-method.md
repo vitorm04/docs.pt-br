@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437580"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>Método IMetaDataImport::GetEventProps
-Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.  
+Obtém informações de metadados para o evento representado pelo token de evento especificado, incluindo o tipo declarativo, os métodos Add e remove para delegados e quaisquer sinalizadores e outros dados associados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -47,47 +47,47 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `ev`  
- [in] The event metadata token representing the event to get metadata for.  
+ no O token de metadados do evento que representa o evento para o qual obter metadados.  
   
  `pClass`  
- [out] A pointer to the TypeDef token representing the class that declares the event.  
+ fora Um ponteiro para o token de TypeDef que representa a classe que declara o evento.  
   
  `szEvent`  
- [out] The name of the event referenced by `ev`.  
+ fora O nome do evento referenciado por `ev`.  
   
  `pchEvent`  
- [in] The requested length in wide characters of `szEvent`.  
+ no O comprimento solicitado em caracteres largos de `szEvent`.  
   
  `pdwEventFlags`  
- [out] The returned length in wide characters of `szEvent`.  
+ fora O comprimento retornado em caracteres largos de `szEvent`.  
   
  `ptkEventType`  
- [out] A pointer to a TypeRef or TypeDef metadata token representing the <xref:System.Delegate> type of the event.  
+ fora Um ponteiro para um token de metadados TypeRef ou TypeDef que representa o tipo de <xref:System.Delegate> do evento.  
   
  `pmdAddOn`  
- [out] A pointer to the metadata token representing the method that adds handlers for the event.  
+ fora Um ponteiro para o token de metadados que representa o método que Adiciona manipuladores para o evento.  
   
  `pmdRemoveOn`  
- [out] A pointer to the metadata token representing the method that removes handlers for the event.  
+ fora Um ponteiro para o token de metadados que representa o método que remove manipuladores para o evento.  
   
  `pmdFire`  
- [out] A pointer to the metadata token representing the method that raises the event.  
+ fora Um ponteiro para o token de metadados que representa o método que gera o evento.  
   
  `rmdOtherMethod`  
- [out] An array of token pointers to other methods associated with the event.  
+ fora Uma matriz de ponteiros de token para outros métodos associados ao evento.  
   
  `cMax`  
- [in] The maximum size of the `rmdOtherMethod` array.  
+ no O tamanho máximo da matriz de `rmdOtherMethod`.  
   
  `pcOtherMethod`  
- [out] The number of tokens returned in `rmdOtherMethod`.  
+ fora O número de tokens retornados em `rmdOtherMethod`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

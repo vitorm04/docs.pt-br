@@ -13,9 +13,9 @@ ms.locfileid: "74335418"
 ---
 # <a name="properties-visual-basic"></a>Propriedades (Visual Basic)
 
-This page lists the properties that are members of Visual Basic modules. Other properties that are members of specific Visual Basic objects are listed in [Objects](../../visual-basic/language-reference/objects/index.md).  
+Esta página lista as propriedades que são membros de Visual Basic módulos. Outras propriedades que são membros de objetos Visual Basic específicos são listadas em [objetos](../../visual-basic/language-reference/objects/index.md).  
   
-## <a name="visual-basic-properties"></a>Visual Basic Properties  
+## <a name="visual-basic-properties"></a>Propriedades de Visual Basic  
   
 |||  
 |---|---|  

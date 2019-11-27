@@ -65,7 +65,7 @@ O Protocolo Open Data (OData) permite que você crie serviços de dados para que
 |Versão do protocolo OData|Suporte introduzido em...|
 |-----------------------------------------------------------------------------------|----------------------------|
 |Versão 1|-.NET Framework 3,5 Service Pack 1 (SP1)<br />-Silverlight versão 3|
-|Versão 2|-.NET Framework 4<br />-Uma atualização para o .NET Framework 3,5 SP1. Você pode baixar e instalar a atualização do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-Silverlight versão 4|
+|Versão 2|-.NET Framework 4<br />-Uma atualização para o .NET Framework 3,5 SP1. Você pode baixar e instalar a atualização a partir do [Centro de Download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=158125).<br />-Silverlight versão 4|
 |Versão 3|-Você pode baixar e instalar uma versão de pré-lançamento que dá suporte à versão 3 do OData no [centro de download da Microsoft](https://go.microsoft.com/fwlink/?LinkId=203885).|
 
 ### <a name="metadata-versions"></a>Versões de metadados

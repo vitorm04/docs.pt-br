@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434720"
 ---
 # <a name="imetadataimportisglobal-method"></a>Método IMetaDataImport::IsGlobal
-Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.  
+Obtém um valor que indica se o campo, o método ou o tipo representado pelo token de metadados especificado tem escopo global.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +36,17 @@ HRESULT IsGlobal (
   
 ## <a name="parameters"></a>Parâmetros  
  `pd`  
- [in] A metadata token that represents a type, field, or method.  
+ no Um token de metadados que representa um tipo, campo ou método.  
   
  `pbGlobal`  
- [out] 1 if the object has global scope; otherwise, 0 (zero).  
+ [fora] 1 se o objeto tiver escopo global; caso contrário, 0 (zero).  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

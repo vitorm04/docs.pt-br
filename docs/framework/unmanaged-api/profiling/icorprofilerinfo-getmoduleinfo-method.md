@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438896"
 ---
 # <a name="icorprofilerinfogetmoduleinfo-method"></a>Método ICorProfilerInfo::GetModuleInfo
-Given a module ID, returns the file name of the module and the ID of the module's parent assembly.  
+Dada uma ID de módulo, retorna o nome do arquivo do módulo e a ID do assembly pai do módulo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,36 +40,36 @@ HRESULT GetModuleInfo(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleId`  
- [in] The ID of the module for which information will be retrieved.  
+ no A ID do módulo para o qual as informações serão recuperadas.  
   
  `ppBaseLoadAddress`  
- [out] The base address at which the module is loaded.  
+ fora O endereço base no qual o módulo é carregado.  
   
  `cchName`  
- [in] The length, in characters, of the `szName` return buffer.  
+ no O comprimento, em caracteres, do `szName` buffer de retorno.  
   
  `pcchName`  
- [out] A pointer to the total character length of the module's file name that is returned.  
+ fora Um ponteiro para o comprimento total do caractere do nome de arquivo do módulo que é retornado.  
   
  `szName`  
- [out] A caller-provided wide character buffer. When the method returns, this buffer contains the file name of the module.  
+ fora Um buffer de caracteres largo fornecido pelo chamador. Quando o método retorna, esse buffer contém o nome do arquivo do módulo.  
   
  `pAssemblyId`  
- [out] A pointer to the ID of the module's parent assembly.  
+ fora Um ponteiro para a ID do assembly pai do módulo.  
   
 ## <a name="remarks"></a>Comentários  
- For dynamic modules, the `szName` parameter is an empty string, and the base address is 0 (zero).  
+ Para módulos dinâmicos, o parâmetro `szName` é uma cadeia de caracteres vazia e o endereço base é 0 (zero).  
   
- Although the `GetModuleInfo` method may be called as soon as the module's ID exists, the ID of the parent assembly will not be available until the profiler receives the [ICorProfilerCallback::ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) callback.  
+ Embora o método `GetModuleInfo` possa ser chamado assim que a ID do módulo existir, a ID do assembly pai não estará disponível até que o criador de perfil receba o retorno de chamada [ICorProfilerCallback:: ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md) .  
   
- When `GetModuleInfo` returns, you must verify that the `szName` buffer was large enough to contain the full file name of the module. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetModuleInfo` again.  
+ Quando `GetModuleInfo` retorna, você deve verificar se o buffer de `szName` era grande o suficiente para conter o nome de arquivo completo do módulo. Para fazer isso, compare o valor que `pcchName` aponta com o valor do parâmetro `cchName`. Se `pcchName` apontar para um valor maior que `cchName`, aloque um buffer de `szName` maior, atualize `cchName` com o tamanho novo, maior e chame `GetModuleInfo` novamente.  
   
- Alternatively, you can first call `GetModuleInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcchName` and call `GetModuleInfo` again.  
+ Como alternativa, você pode primeiro chamar `GetModuleInfo` com um buffer de `szName` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcchName` e chamar `GetModuleInfo` novamente.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428287"
 ---
 # <a name="icorprofilermoduleenumreset-method"></a>Método ICorProfilerModuleEnum::Reset
-Moves this enumerator's cursor to the starting position of the sequence.  
+Move o cursor deste enumerador para a posição inicial da sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,7 +36,7 @@ HRESULT Reset();
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
