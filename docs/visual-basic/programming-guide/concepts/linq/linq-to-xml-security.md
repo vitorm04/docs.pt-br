@@ -9,8 +9,8 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331735"
 ---
-# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML Security (Visual Basic)
-Este tópico descreve problemas de segurança associadas LINQ to XML. Além disso, fornece alguma orientação para a exposição de segurança de abrandamento.  
+# <a name="linq-to-xml-security-visual-basic"></a>Segurança de LINQ to XML (Visual Basic)
+Este tópico descreve problemas de segurança associadas LINQ to XML. Além disso, ele fornece algumas orientações para atenuar a exposição de segurança.  
   
 ## <a name="linq-to-xml-security-overview"></a>Visão geral de segurança LINQ to XML  
  LINQ to XML é criado mais para sua conveniência de programação do que para aplicativos do lado com requisitos de segurança estritos. A maioria das situações XML consistem processar documentos XML de confiança, em vez de processar os documentos XML não confiáveis que são carregados em um servidor. LINQ to XML é otimizado para esses cenários.  
@@ -47,7 +47,7 @@ Este tópico descreve problemas de segurança associadas LINQ to XML. Além diss
 - Validar cuidadosamente antes de construir expressões XPath dinâmicos.  
   
 ## <a name="linq-to-xml-security-issues"></a>Problemas de segurança LINQ to XML  
- Questões de segurança neste tópico não são apresentadas em qualquer ordem específica. Todos os problemas são importantes e devem ser endereçados conforme apropriado.  
+ Os problemas de segurança neste tópico não são apresentados em nenhuma ordem específica. Todos os problemas são importantes e devem ser endereçados conforme apropriado.  
   
  Um ataue de elevação de privilégio fornece a um conjunto mal-intencionado mais controle sobre seu ambiente. Um ataue de elevação de privilégio pode levar a divulgação de dados, negação de serviço, e mais.  
   
@@ -56,7 +56,7 @@ Este tópico descreve problemas de segurança associadas LINQ to XML. Além diss
  Ataques de negação de serviço faz com que o analisador XML ou LINQ to XML consome quantidades de memória excessivas ou processador central - tempo. Ataques de negação de serviço são considerados menos severos da ataques de elevação de privilégio ou de divulgação de ataques de dados. No entanto, são importantes em um cenário onde um servidor precisa processar documentos XML de fontes não confiáveis.  
   
 ### <a name="exceptions-and-error-messages-might-reveal-data"></a>Exceções e mensagens de erro podem revelar dados  
- A descrição de um erro pode revelar dados, como os dados que estão sendo convertidos, nomes de arquivo, ou detalhes de implementação. Mensagens de erro não devem ser expostos aos chamadores que não são expostos. Devido você capturar erros e erros de relatório com suas próprias mensagens de erro personalizadas.  
+ A descrição de um erro pode revelar dados, como os dados que estão sendo convertidos, nomes de arquivo, ou detalhes de implementação. Mensagens de erro não devem ser expostas a chamadores que não sejam confiáveis. Capture todos os erros e crie relatórios de erros com suas próprias mensagens de erro personalizadas.  
   
 ### <a name="do-not-call-codeaccesspermissionsassert-in-an-event-handler"></a>Não chamar CodeAccessPermissions.Assert em um manipulador de eventos  
  Um assembly pode ter o invés ou mais permissões. Um assembly que tem mais permissões tem maior controle sobre o computador e seus ambientes.  
@@ -80,8 +80,8 @@ Este tópico descreve problemas de segurança associadas LINQ to XML. Além diss
 ### <a name="avoid-excess-entity-expansion"></a>Evite a expansão adicional de entidade  
  Um de ataques de negação de serviço conhecidas quando usar um DTD for um documento que causa a expansão excessiva de entidade. Para evitar isso, você pode definir a propriedade de <xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType> , e cria um leitor que é delimitado no número de caracteres resultantes de expansão de entidade. Você usa o leitor para criar a árvore XML.  
   
-### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Limitar o tamanho da hierarquia XML  
- Um ataque de negação de serviço é possível quando um documento é enviado que possui a profundidade excessiva a hierarquia. Para evitar isso, você pode envolver <xref:System.Xml.XmlReader> em sua própria classe que a conta profundidade de elementos. Se o tamanho excede um nível razoável pré-determinado, você pode finalizar o processamento de documento mal-intencionado.  
+### <a name="limit-the-depth-of-the-xml-hierarchy"></a>Limitar a profundidade da hierarquia XML  
+ Um possível ataque de negação de serviço ocorre quando um documento enviado possui uma profundidade excessiva de hierarquia. Para evitar isso, você pode envolver <xref:System.Xml.XmlReader> em sua própria classe que a conta profundidade de elementos. Se o tamanho excede um nível razoável pré-determinado, você pode finalizar o processamento de documento mal-intencionado.  
   
 ### <a name="protect-against-untrusted-xmlreader-or-xmlwriter-implementations"></a>Proteger contra implementações não confiáveis de XmlReader ou de XmlWriter  
  Os administradores devem verificar que alguns externamente fornecer <xref:System.Xml.XmlReader> ou implementações de <xref:System.Xml.XmlWriter> tem nomes fortes e ter sido registrados na configuração do computador. Isso evita código mal-intencionado de masquerading como um leitor ou gravador de ser carregado.  
@@ -101,4 +101,4 @@ Este tópico descreve problemas de segurança associadas LINQ to XML. Além diss
   
 ## <a name="see-also"></a>Consulte também
 
-- [Programming Guide (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [Guia de programação (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

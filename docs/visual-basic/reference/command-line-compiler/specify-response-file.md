@@ -13,7 +13,7 @@ ms.locfileid: "74348546"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (especificar arquivo de resposta) (Visual Basic)
 
-Specifies a file that contains compiler options and source-code files to compile.
+Especifica um arquivo que contém opções de compilador e arquivos de código-fonte a serem compilados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -21,33 +21,33 @@ Specifies a file that contains compiler options and source-code files to compile
 @response_file
 ```
 
-## <a name="arguments"></a>Arguments
+## <a name="arguments"></a>Argumentos
 
 `response_file`  
-Necessário. A file that lists compiler options or source-code files to compile. Enclose the file name in quotation marks (" ") if it contains a space.
+Necessária. Um arquivo que lista opções de compilador ou arquivos de código-fonte para compilar. Coloque o nome de arquivo entre aspas ("") se ele contiver um espaço.
 
 ## <a name="remarks"></a>Comentários
 
-The compiler processes the compiler options and source-code files specified in a response file as if they had been specified on the command line.
+O compilador processa as opções do compilador e os arquivos de código-fonte especificados em um arquivo de resposta como se eles tivessem sido especificados na linha de comando.
 
-To specify more than one response file in a compilation, specify multiple response-file options, such as the following.
+Para especificar mais de um arquivo de resposta em uma compilação, especifique várias opções de arquivo de resposta, como a seguir.
 
 ```console
 @file1.rsp @file2.rsp
 ```
 
-In a response file, multiple compiler options and source-code files can appear on one line. A single compiler-option specification must appear on one line (cannot span multiple lines). Response files can have comments that begin with the `#` symbol.
+Em um arquivo de resposta, várias opções de compilador e arquivos de código-fonte podem aparecer em uma linha. Uma especificação de opção de compilador único deve aparecer em uma linha (não pode abranger várias linhas). Os arquivos de resposta podem ter comentários que começam com o símbolo de `#`.
 
-You can combine options specified on the command line with options specified in one or more response files. The compiler processes the command options as it encounters them. Therefore, command-line arguments can override previously listed options in response files. Conversely, options in a response file override options listed previously on the command line or in other response files.
+Você pode combinar as opções especificadas na linha de comando com opções especificadas em um ou mais arquivos de resposta. O compilador processa as opções de comando à medida que as encontra. Portanto, argumentos de linha de comando podem substituir as opções listadas anteriormente em arquivos de resposta. Por outro lado, as opções em um arquivo de resposta substituem as opções listadas anteriormente na linha de comando ou em outros arquivos de resposta.
 
-Visual Basic provides the Vbc.rsp file, which is located in the same directory as the Vbc.exe file. The Vbc.rsp file is included by default unless the `-noconfig` option is used. For more information, see [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
+Visual Basic fornece o arquivo Vbc. rsp, localizado no mesmo diretório que o arquivo Vbc. exe. O arquivo Vbc. rsp é incluído por padrão, a menos que a opção `-noconfig` seja usada. Para obter mais informações, consulte [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md).
 
 > [!NOTE]
-> The `@` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.
+> A opção `@` não está disponível no ambiente de desenvolvimento do Visual Studio; Ele está disponível somente durante a compilação na linha de comando.
 
 ## <a name="example"></a>Exemplo
 
-The following lines are from a sample response file.
+As linhas a seguir são de um exemplo de arquivo de resposta.
 
 ```console
 # build the first output file
@@ -59,7 +59,7 @@ source2.vb
 
 ## <a name="example"></a>Exemplo
 
-The following example demonstrates how to use the `@` option with the response file named `File1.rsp`.
+O exemplo a seguir demonstra como usar a opção `@` com o arquivo de resposta chamado `File1.rsp`.
 
 ```console
 vbc @file1.rsp

@@ -16,28 +16,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74341228"
 ---
 # <a name="differences-between-passing-an-argument-by-value-and-by-reference-visual-basic"></a>Diferenças entre passar um argumento por valor e por referência (Visual Basic)
-When you pass one or more arguments to a procedure, each argument corresponds to an underlying programming element in the calling code. You can pass either the value of this underlying element, or a reference to it. This is known as the *passing mechanism*.  
+Quando você passa um ou mais argumentos para um procedimento, cada argumento corresponde a um elemento de programação subjacente no código de chamada. Você pode passar o valor desse elemento subjacente ou uma referência a ele. Isso é conhecido como o *mecanismo de passagem*.  
   
 ## <a name="passing-by-value"></a>passagem por valor  
- You pass an argument *by value* by specifying the [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic copies the value of the underlying programming element into a local variable in the procedure. The procedure code does not have any access to the underlying element in the calling code.  
+ Você passa um argumento *por valor* especificando a palavra-chave [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md) para o parâmetro correspondente na definição do procedimento. Quando você usa esse mecanismo de passagem, o Visual Basic copia o valor do elemento de programação subjacente em uma variável local no procedimento. O código do procedimento não tem nenhum acesso ao elemento subjacente no código de chamada.  
   
-## <a name="passing-by-reference"></a>Passing by Reference  
- You pass an argument *by reference* by specifying the [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) keyword for the corresponding parameter in the procedure definition. When you use this passing mechanism, Visual Basic gives the procedure a direct reference to the underlying programming element in the calling code.  
+## <a name="passing-by-reference"></a>Passando por referência  
+ Você passa um argumento *por referência* especificando a palavra-chave [ByRef](../../../../visual-basic/language-reference/modifiers/byref.md) para o parâmetro correspondente na definição do procedimento. Quando você usa esse mecanismo de passagem, Visual Basic dá ao procedimento uma referência direta para o elemento de programação subjacente no código de chamada.  
   
-## <a name="passing-mechanism-and-element-type"></a>Passing Mechanism and Element Type  
- The choice of passing mechanism is not the same as the classification of the underlying element type. Passing by value or by reference refers to what Visual Basic supplies to the procedure code. A value type or reference type refers to how a programming element is stored in memory.  
+## <a name="passing-mechanism-and-element-type"></a>Tipo de mecanismo e elemento de passagem  
+ A escolha do mecanismo de passagem não é a mesma que a classificação do tipo de elemento subjacente. A passagem por valor ou por referência refere-se ao que Visual Basic fornece ao código do procedimento. Um tipo de valor ou tipo de referência refere-se a como um elemento de programação é armazenado na memória.  
   
- However, the passing mechanism and element type are interrelated. The value of a reference type is a pointer to the data elsewhere in memory. This means that when you pass a reference type by value, the procedure code has a pointer to the underlying element's data, even though it cannot access the underlying element itself. For example, if the element is an array variable, the procedure code does not have access to the variable itself, but it can access the array members.  
+ No entanto, o mecanismo de passagem e o tipo de elemento são inter-relacionados. O valor de um tipo de referência é um ponteiro para os dados em outro lugar na memória. Isso significa que quando você passa um tipo de referência por valor, o código do procedimento tem um ponteiro para os dados do elemento subjacente, mesmo que ele não possa acessar o próprio elemento subjacente. Por exemplo, se o elemento for uma variável de matriz, o código do procedimento não terá acesso à variável em si, mas poderá acessar os membros da matriz.  
   
-## <a name="ability-to-modify"></a>Ability to Modify  
- When you pass a nonmodifiable element as an argument, the procedure can never modify it in the calling code, whether it is passed `ByVal` or `ByRef`.  
+## <a name="ability-to-modify"></a>Capacidade de modificar  
+ Quando você passa um elemento não modificável como um argumento, o procedimento nunca pode modificá-lo no código de chamada, quer seja passado `ByVal` ou `ByRef`.  
   
- For a modifiable element, the following table summarizes the interaction between the element type and the passing mechanism.  
+ Para um elemento modificável, a tabela a seguir resume a interação entre o tipo de elemento e o mecanismo de passagem.  
   
-|Tipo de elemento|Passed `ByVal`|Passed `ByRef`|  
+|Tipo de elemento|Passou `ByVal`|Passou `ByRef`|  
 |------------------|--------------------|--------------------|  
-|Value type (contains only a value)|The procedure cannot change the variable or any of its members.|The procedure can change the variable and its members.|  
-|Reference type (contains a pointer to a class or structure instance)|The procedure cannot change the variable but can change members of the instance to which it points.|The procedure can change the variable and members of the instance to which it points.|  
+|Tipo de valor (contém apenas um valor)|O procedimento não pode alterar a variável ou nenhum de seus membros.|O procedimento pode alterar a variável e seus membros.|  
+|Tipo de referência (contém um ponteiro para uma classe ou instância de estrutura)|O procedimento não pode alterar a variável, mas pode alterar os membros da instância para a qual ela aponta.|O procedimento pode alterar a variável e os membros da instância para a qual ele aponta.|  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -14,32 +14,32 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344072"
 ---
-# <a name="byte-data-type-visual-basic"></a>Byte data type (Visual Basic)
+# <a name="byte-data-type-visual-basic"></a>Tipo de dados byte (Visual Basic)
 
-Holds unsigned 8-bit (1-byte) integers that range in value from 0 through 255.
+Mantém inteiros de 8 bits (1 byte) não assinados que variam em valor de 0 a 255.
 
 ## <a name="remarks"></a>Comentários
 
-Use the `Byte` data type to contain binary data.  
+Use o tipo de dados `Byte` para conter dados binários.  
   
 O valor padrão de `Byte` é 0.
 
-## <a name="literal-assignments"></a>Literal assignments
+## <a name="literal-assignments"></a>Atribuições de literal
 
-You can declare and initialize a `Byte` variable by assigning it a decimal literal, a hexadecimal literal, an octal literal, or (starting with Visual Basic 2017) a binary literal. If the integral literal is outside the range of a `Byte` (that is, if it is less than <xref:System.Byte.MinValue?displayProperty=nameWithType> or greater than <xref:System.Byte.MaxValue?displayProperty=nameWithType>), a compilation error occurs.
+Você pode declarar e inicializar uma variável `Byte` atribuindo-lhe um literal decimal, um literal hexadecimal, um literal octal ou (começando com Visual Basic 2017) um literal binário. Se o literal integral estiver fora do intervalo de um `Byte` (ou seja, se for menor que <xref:System.Byte.MinValue?displayProperty=nameWithType> ou maior que <xref:System.Byte.MaxValue?displayProperty=nameWithType>), ocorrerá um erro de compilação.
 
-In the following example, integers equal to 201 that are represented as decimal, hexadecimal, and binary literals are implicitly converted from [Integer](integer-data-type.md) to `byte` values.
+No exemplo a seguir, números inteiros iguais a 201 que são representados como decimais, hexadecimais e literais binários são convertidos implicitamente de [inteiro](integer-data-type.md) para `byte` valores.
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Byte)]
 
 > [!NOTE]
-> You use the prefix `&h` or `&H` to denote a hexadecimal literal, the prefix `&b` or `&B` to denote a binary literal, and the prefix `&o` or `&O` to denote an octal literal. Literais decimais não têm nenhum prefixo.
+> Você usa o prefixo `&h` ou `&H` para indicar um literal hexadecimal, o prefixo `&b` ou `&B` para denotar um literal binário e o prefixo `&o` ou `&O` para indicar um literal octal. Literais decimais não têm nenhum prefixo.
 
-Starting with Visual Basic 2017, you can also use the underscore character, `_`, as a digit separator to enhance readability, as the following example shows.
+A partir do Visual Basic 2017, você também pode usar o caractere de sublinhado, `_`, como um separador de dígitos para melhorar a legibilidade, como mostra o exemplo a seguir.
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
 
-Starting with Visual Basic 15.5, you can also use the underscore character (`_`) as a leading separator between the prefix and the hexadecimal, binary, or octal digits. Por exemplo:
+A partir do Visual Basic 15,5, você também pode usar o caractere de sublinhado (`_`) como um separador à esquerda entre o prefixo e os dígitos hexadecimal, binário ou octal. Por exemplo:
 
 ```vb
 Dim number As Byte = &H_6A
@@ -49,19 +49,19 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>Dicas de programação
 
-- **Negative Numbers.** Because `Byte` is an unsigned type, it cannot represent a negative number. If you use the unary minus (`-`) operator on an expression that evaluates to type `Byte`, Visual Basic converts the expression to `Short` first.
+- **Números negativos.** Como `Byte` é um tipo não assinado, ele não pode representar um número negativo. Se você usar o operador menos unário (`-`) em uma expressão avaliada como tipo `Byte`, Visual Basic converterá a expressão para `Short` primeiro.
   
-- **Format Conversions.** When Visual Basic reads or writes files, or when it calls DLLs, methods, and properties, it can automatically convert between data formats. Binary data stored in `Byte` variables and arrays is preserved during such format conversions. You should not use a `String` variable for binary data, because its contents can be corrupted during conversion between ANSI and Unicode formats.
+- **Conversões de formato.** Quando Visual Basic lê ou grava arquivos, ou quando chama DLLs, métodos e propriedades, ele pode converter automaticamente entre os formatos de dados. Os dados binários armazenados em `Byte` variáveis e matrizes são preservados durante as conversões de formato. Você não deve usar uma variável `String` para dados binários, porque seu conteúdo pode ser corrompido durante a conversão entre os formatos ANSI e Unicode.
 
-- **Widening.** The `Byte` data type widens to `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`, or `Double`. This means you can convert `Byte` to any of these types without encountering a <xref:System.OverflowException?displayProperty=nameWithType> error.
+- **Ampliação.** O tipo de dados `Byte` amplia a `Short`, `UShort`, `Integer`, `UInteger`, `Long`, `ULong`, `Decimal`, `Single`ou `Double`. Isso significa que você pode converter `Byte` em qualquer um desses tipos sem encontrar um erro de <xref:System.OverflowException?displayProperty=nameWithType>.
   
-- **Type Characters.** `Byte` has no literal type character or identifier type character.
+- **Digite os caracteres.** `Byte` não tem nenhum caractere de tipo literal ou caractere de tipo de identificador.
 
-- **Framework Type.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Byte?displayProperty=nameWithType>.
+- **Tipo de estrutura.** O tipo correspondente no .NET Framework é a estrutura <xref:System.Byte?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Exemplo
 
- In the following example, `b` is a `Byte` variable. The statements demonstrate the range of the variable and the application of bit-shift operators to it.
+ No exemplo a seguir, `b` é uma variável `Byte`. As instruções demonstram o intervalo da variável e o aplicativo de operadores de deslocamento de bits a ela.
 
  [!code-vb[VbVbalrDataTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#16)]  
 
