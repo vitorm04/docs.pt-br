@@ -11,17 +11,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346665"
 ---
-# <a name="type-mismatch-visual-basic"></a><span data-ttu-id="512ab-102">Tipos incompatíveis (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="512ab-102">Type mismatch (Visual Basic)</span></span>
-<span data-ttu-id="512ab-103">You attempted to convert a value to another type in a way that is not valid.</span><span class="sxs-lookup"><span data-stu-id="512ab-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  
+# <a name="type-mismatch-visual-basic"></a><span data-ttu-id="24826-102">Tipos incompatíveis (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24826-102">Type mismatch (Visual Basic)</span></span>
+<span data-ttu-id="24826-103">Você tentou converter um valor em outro tipo de uma forma que não é válida.</span><span class="sxs-lookup"><span data-stu-id="24826-103">You attempted to convert a value to another type in a way that is not valid.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="512ab-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="512ab-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="24826-104">Para corrigir esse erro</span><span class="sxs-lookup"><span data-stu-id="24826-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="512ab-105">Check the assignment to make sure it is valid.</span><span class="sxs-lookup"><span data-stu-id="512ab-105">Check the assignment to make sure it is valid.</span></span>  
+1. <span data-ttu-id="24826-105">Verifique a atribuição para certificar-se de que ela é válida.</span><span class="sxs-lookup"><span data-stu-id="24826-105">Check the assignment to make sure it is valid.</span></span>  
   
-2. <span data-ttu-id="512ab-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span><span class="sxs-lookup"><span data-stu-id="512ab-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span></span>  
+2. <span data-ttu-id="24826-106">Certifique-se de que você não passou um objeto para um procedimento que espera uma única propriedade ou valor.</span><span class="sxs-lookup"><span data-stu-id="24826-106">Make sure you did not pass an object to a procedure that expects a single property or value.</span></span>  
   
-3. <span data-ttu-id="512ab-107">Make sure you did not use a module or project name where an expression was expected.</span><span class="sxs-lookup"><span data-stu-id="512ab-107">Make sure you did not use a module or project name where an expression was expected.</span></span>  
+3. <span data-ttu-id="24826-107">Certifique-se de que você não usou um nome de módulo ou de projeto onde era esperada uma expressão.</span><span class="sxs-lookup"><span data-stu-id="24826-107">Make sure you did not use a module or project name where an expression was expected.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="512ab-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="512ab-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="24826-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="24826-108">See also</span></span>
 
-- [<span data-ttu-id="512ab-109">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="512ab-109">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="24826-109">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="24826-109">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)

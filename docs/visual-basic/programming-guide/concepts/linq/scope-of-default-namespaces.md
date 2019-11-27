@@ -9,19 +9,19 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343654"
 ---
-# <a name="scope-of-default-namespaces-in-visual-basic"></a><span data-ttu-id="cc479-102">Scope of Default Namespaces in Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cc479-102">Scope of Default Namespaces in Visual Basic</span></span>
-<span data-ttu-id="cc479-103">Namespaces padrões como representadas na árvore XML não estiver no escopo para consultas.</span><span class="sxs-lookup"><span data-stu-id="cc479-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="cc479-104">Se você tiver XML que é em um namespace padrão, você ainda deve declarar uma variável de <xref:System.Xml.Linq.XNamespace> , e combina-o com o nome local para fazer um nome qualificado para ser usado na consulta.</span><span class="sxs-lookup"><span data-stu-id="cc479-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
+# <a name="scope-of-default-namespaces-in-visual-basic"></a><span data-ttu-id="568db-102">Escopo de namespaces padrão no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="568db-102">Scope of Default Namespaces in Visual Basic</span></span>
+<span data-ttu-id="568db-103">Namespaces padrões como representadas na árvore XML não estiver no escopo para consultas.</span><span class="sxs-lookup"><span data-stu-id="568db-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="568db-104">Se você tiver XML que é em um namespace padrão, você ainda deve declarar uma variável de <xref:System.Xml.Linq.XNamespace> , e combina-o com o nome local para fazer um nome qualificado para ser usado na consulta.</span><span class="sxs-lookup"><span data-stu-id="568db-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  
   
- <span data-ttu-id="cc479-105">Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.</span><span class="sxs-lookup"><span data-stu-id="cc479-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
+ <span data-ttu-id="568db-105">Um dos problemas mais comuns para o consulte árvores XML é que se a árvore tem um namespace XML padrão, o desenvolvedor escreve às vezes a consulta como se o XML não estar em um namespace.</span><span class="sxs-lookup"><span data-stu-id="568db-105">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  
   
- <span data-ttu-id="cc479-106">Definir primeiro exemplos neste tópico mostra uma maneira comum que XML em um namespace padrão é carregado, mas é visto de modo inadequado.</span><span class="sxs-lookup"><span data-stu-id="cc479-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
+ <span data-ttu-id="568db-106">Definir primeiro exemplos neste tópico mostra uma maneira comum que XML em um namespace padrão é carregado, mas é visto de modo inadequado.</span><span class="sxs-lookup"><span data-stu-id="568db-106">The first set of examples in this topic shows a typical way that XML in a default namespace is loaded, but is queried improperly.</span></span>  
   
- <span data-ttu-id="cc479-107">O segundo conjunto de exemplos a seguir mostra as correções necessárias para que você possa ver XML em um namespace.</span><span class="sxs-lookup"><span data-stu-id="cc479-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
+ <span data-ttu-id="568db-107">O segundo conjunto de exemplos a seguir mostra as correções necessárias para que você possa ver XML em um namespace.</span><span class="sxs-lookup"><span data-stu-id="568db-107">The second set of examples show the necessary corrections so that you can query XML in a namespace.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="cc479-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="cc479-108">Example</span></span>  
- <span data-ttu-id="cc479-109">Este exemplo mostra como criar XML em um namespace, e uma consulta que retorna um conjunto de resultados vazia.</span><span class="sxs-lookup"><span data-stu-id="cc479-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
+## <a name="example"></a><span data-ttu-id="568db-108">Exemplo</span><span class="sxs-lookup"><span data-stu-id="568db-108">Example</span></span>  
+ <span data-ttu-id="568db-109">Este exemplo mostra como criar XML em um namespace, e uma consulta que retorna um conjunto de resultados vazia.</span><span class="sxs-lookup"><span data-stu-id="568db-109">This example shows the creation of XML in a namespace, and a query that returns an empty result set.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="cc479-110">Código</span><span class="sxs-lookup"><span data-stu-id="cc479-110">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="568db-110">Código</span><span class="sxs-lookup"><span data-stu-id="568db-110">Code</span></span>  
   
 ```vb  
 Module Module1  
@@ -47,20 +47,20 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="cc479-111">Comentários</span><span class="sxs-lookup"><span data-stu-id="cc479-111">Comments</span></span>  
- <span data-ttu-id="cc479-112">Este exemplo gerencia o resultado seguinte:</span><span class="sxs-lookup"><span data-stu-id="cc479-112">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="568db-111">Comments</span><span class="sxs-lookup"><span data-stu-id="568db-111">Comments</span></span>  
+ <span data-ttu-id="568db-112">Este exemplo gerencia o resultado seguinte:</span><span class="sxs-lookup"><span data-stu-id="568db-112">This example produces the following result:</span></span>  
   
 ```console  
 Result set follows:  
 End of result set  
 ```  
   
-## <a name="example"></a><span data-ttu-id="cc479-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="cc479-113">Example</span></span>  
- <span data-ttu-id="cc479-114">Este exemplo mostra como criar XML em um namespace, e uma consulta que é codificado corretamente.</span><span class="sxs-lookup"><span data-stu-id="cc479-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
+## <a name="example"></a><span data-ttu-id="568db-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="568db-113">Example</span></span>  
+ <span data-ttu-id="568db-114">Este exemplo mostra como criar XML em um namespace, e uma consulta que é codificado corretamente.</span><span class="sxs-lookup"><span data-stu-id="568db-114">This example shows the creation of XML in a namespace, and a query that is coded properly.</span></span>  
   
- <span data-ttu-id="cc479-115">In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace.</span><span class="sxs-lookup"><span data-stu-id="cc479-115">In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="cc479-116">Isso coloca todas as propriedades XML no namespace padrão.</span><span class="sxs-lookup"><span data-stu-id="cc479-116">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="cc479-117">Outras alterações necessárias ao exemplo para fazê-lo funcionar corretamente.</span><span class="sxs-lookup"><span data-stu-id="cc479-117">No other modifications are required to the example to make it work properly.</span></span>  
+ <span data-ttu-id="568db-115">Ao contrário do exemplo codificado incorretamente acima, a abordagem correta ao usar Visual Basic é declarar e inicializar um namespace padrão global.</span><span class="sxs-lookup"><span data-stu-id="568db-115">In contrast to the incorrectly coded example above, the correct approach when using Visual Basic is to declare and initialize a global default namespace.</span></span> <span data-ttu-id="568db-116">Isso coloca todas as propriedades XML no namespace padrão.</span><span class="sxs-lookup"><span data-stu-id="568db-116">This places all XML properties in the default namespace.</span></span> <span data-ttu-id="568db-117">Outras alterações necessárias ao exemplo para fazê-lo funcionar corretamente.</span><span class="sxs-lookup"><span data-stu-id="568db-117">No other modifications are required to the example to make it work properly.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="cc479-118">Código</span><span class="sxs-lookup"><span data-stu-id="cc479-118">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="568db-118">Código</span><span class="sxs-lookup"><span data-stu-id="568db-118">Code</span></span>  
   
 ```vb  
 Imports <xmlns="http://www.adventure-works.com">  
@@ -88,8 +88,8 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a><span data-ttu-id="cc479-119">Comentários</span><span class="sxs-lookup"><span data-stu-id="cc479-119">Comments</span></span>  
- <span data-ttu-id="cc479-120">Este exemplo gerencia o resultado seguinte:</span><span class="sxs-lookup"><span data-stu-id="cc479-120">This example produces the following result:</span></span>  
+### <a name="comments"></a><span data-ttu-id="568db-119">Comments</span><span class="sxs-lookup"><span data-stu-id="568db-119">Comments</span></span>  
+ <span data-ttu-id="568db-120">Este exemplo gerencia o resultado seguinte:</span><span class="sxs-lookup"><span data-stu-id="568db-120">This example produces the following result:</span></span>  
   
 ```console  
 Result set follows:  
@@ -99,6 +99,6 @@ Result set follows:
 End of result set  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="cc479-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cc479-121">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="568db-121">Consulte também</span><span class="sxs-lookup"><span data-stu-id="568db-121">See also</span></span>
 
-- [<span data-ttu-id="cc479-122">Namespaces Overview (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc479-122">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)
+- [<span data-ttu-id="568db-122">Visão geral de namespaces (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="568db-122">Namespaces Overview (LINQ to XML) (Visual Basic)</span></span>](namespaces-overview-linq-to-xml.md)

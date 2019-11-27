@@ -9,13 +9,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344572"
 ---
-# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="618a4-102">How to: Generate Text Files from XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="618a4-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
-<span data-ttu-id="618a4-103">Este exemplo mostra como gerar um arquivo separado por vírgulas de (CSV) dos valores de um arquivo XML.</span><span class="sxs-lookup"><span data-stu-id="618a4-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
+# <a name="how-to-generate-text-files-from-xml-visual-basic"></a><span data-ttu-id="1e283-102">Como gerar arquivos de texto do XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e283-102">How to: Generate Text Files from XML (Visual Basic)</span></span>
+<span data-ttu-id="1e283-103">Este exemplo mostra como gerar um arquivo separado por vírgulas de (CSV) dos valores de um arquivo XML.</span><span class="sxs-lookup"><span data-stu-id="1e283-103">This example shows how to generate a comma-separated values (CSV) file from an XML file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="618a4-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="618a4-104">Example</span></span>  
- <span data-ttu-id="618a4-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span><span class="sxs-lookup"><span data-stu-id="618a4-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
+## <a name="example"></a><span data-ttu-id="1e283-104">Exemplo</span><span class="sxs-lookup"><span data-stu-id="1e283-104">Example</span></span>  
+ <span data-ttu-id="1e283-105">A versão Visual Basic usa o código de procedimento para agregar a coleção de cadeias de caracteres em uma única cadeia.</span><span class="sxs-lookup"><span data-stu-id="1e283-105">The Visual Basic version uses procedural code to aggregate the collection of strings into a single string.</span></span>  
   
- <span data-ttu-id="618a4-106">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="618a4-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="1e283-106">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: clientes e pedidos (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1e283-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim custOrd As XElement = XElement.Load("CustomersOrders.xml")  
@@ -42,7 +42,7 @@ Next
 Console.WriteLine(sb.ToString())  
 ```  
   
- <span data-ttu-id="618a4-107">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="618a4-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="1e283-107">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="1e283-107">This code produces the following output:</span></span>  
   
 ```console  
 GREAL,Great Lakes Food Market,Howard Snyder,Marketing Manager,(503) 555-7555,2732 Baker Blvd.,Eugene,OR,97403,USA  
@@ -51,6 +51,6 @@ LAZYK,Lazy K Kountry Store,John Steel,Marketing Manager,(509) 555-7969,12 Orches
 LETSS,Let's Stop N Shop,Jaime Yorres,Owner,(415) 555-5938,87 Polk St. Suite 5,San Francisco,CA,94117,USA  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="618a4-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="618a4-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1e283-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1e283-108">See also</span></span>
 
-- [<span data-ttu-id="618a4-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="618a4-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [<span data-ttu-id="1e283-109">Projeções e transformações (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1e283-109">Projections and Transformations (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

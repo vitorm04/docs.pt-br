@@ -17,36 +17,36 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343787"
 ---
-# <a name="region-directive"></a><span data-ttu-id="bf08f-102">Diretiva #Region</span><span class="sxs-lookup"><span data-stu-id="bf08f-102">#Region Directive</span></span>
+# <a name="region-directive"></a><span data-ttu-id="b9536-102">Diretiva #Region</span><span class="sxs-lookup"><span data-stu-id="b9536-102">#Region Directive</span></span>
 
-<span data-ttu-id="bf08f-103">Collapses and hides sections of code in Visual Basic files.</span><span class="sxs-lookup"><span data-stu-id="bf08f-103">Collapses and hides sections of code in Visual Basic files.</span></span>  
+<span data-ttu-id="b9536-103">Recolhe e oculta seções de código em Visual Basic arquivos.</span><span class="sxs-lookup"><span data-stu-id="b9536-103">Collapses and hides sections of code in Visual Basic files.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bf08f-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="bf08f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b9536-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="b9536-104">Syntax</span></span>  
 
 ```vb
 #Region "identifier_string"  
 #End Region  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="bf08f-105">Partes</span><span class="sxs-lookup"><span data-stu-id="bf08f-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="b9536-105">Partes</span><span class="sxs-lookup"><span data-stu-id="b9536-105">Parts</span></span>  
   
-|<span data-ttu-id="bf08f-106">Termo</span><span class="sxs-lookup"><span data-stu-id="bf08f-106">Term</span></span>|<span data-ttu-id="bf08f-107">Definição</span><span class="sxs-lookup"><span data-stu-id="bf08f-107">Definition</span></span>|  
+|<span data-ttu-id="b9536-106">Termo</span><span class="sxs-lookup"><span data-stu-id="b9536-106">Term</span></span>|<span data-ttu-id="b9536-107">Definição</span><span class="sxs-lookup"><span data-stu-id="b9536-107">Definition</span></span>|  
 |---|---|  
-|`identifier_string`|<span data-ttu-id="bf08f-108">Necessário.</span><span class="sxs-lookup"><span data-stu-id="bf08f-108">Required.</span></span> <span data-ttu-id="bf08f-109">String that acts as the title of a region when it is collapsed.</span><span class="sxs-lookup"><span data-stu-id="bf08f-109">String that acts as the title of a region when it is collapsed.</span></span> <span data-ttu-id="bf08f-110">Regions are collapsed by default.</span><span class="sxs-lookup"><span data-stu-id="bf08f-110">Regions are collapsed by default.</span></span>|  
-|`#End Region`|<span data-ttu-id="bf08f-111">Terminates the `#Region` block.</span><span class="sxs-lookup"><span data-stu-id="bf08f-111">Terminates the `#Region` block.</span></span>|  
+|`identifier_string`|<span data-ttu-id="b9536-108">Necessária.</span><span class="sxs-lookup"><span data-stu-id="b9536-108">Required.</span></span> <span data-ttu-id="b9536-109">Cadeia de caracteres que atua como o título de uma região quando ela é recolhida.</span><span class="sxs-lookup"><span data-stu-id="b9536-109">String that acts as the title of a region when it is collapsed.</span></span> <span data-ttu-id="b9536-110">As regiões são recolhidas por padrão.</span><span class="sxs-lookup"><span data-stu-id="b9536-110">Regions are collapsed by default.</span></span>|  
+|`#End Region`|<span data-ttu-id="b9536-111">Encerra o bloco de `#Region`.</span><span class="sxs-lookup"><span data-stu-id="b9536-111">Terminates the `#Region` block.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="bf08f-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="bf08f-112">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b9536-112">Comentários</span><span class="sxs-lookup"><span data-stu-id="b9536-112">Remarks</span></span>  
 
- <span data-ttu-id="bf08f-113">Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor.</span><span class="sxs-lookup"><span data-stu-id="bf08f-113">Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor.</span></span> <span data-ttu-id="bf08f-114">You can place, or *nest*, regions within other regions to group similar regions together.</span><span class="sxs-lookup"><span data-stu-id="bf08f-114">You can place, or *nest*, regions within other regions to group similar regions together.</span></span>  
+ <span data-ttu-id="b9536-113">Use a diretiva `#Region` para especificar um bloco de código para expandir ou recolher ao usar o recurso de estrutura de tópicos do editor de Visual Studio Code.</span><span class="sxs-lookup"><span data-stu-id="b9536-113">Use the `#Region` directive to specify a block of code to expand or collapse when using the outlining feature of the Visual Studio Code Editor.</span></span> <span data-ttu-id="b9536-114">Você pode posicionar ou *aninhar*regiões em outras regiões para agrupar regiões semelhantes.</span><span class="sxs-lookup"><span data-stu-id="b9536-114">You can place, or *nest*, regions within other regions to group similar regions together.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="bf08f-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="bf08f-115">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="b9536-115">Exemplo</span><span class="sxs-lookup"><span data-stu-id="b9536-115">Example</span></span>  
 
- <span data-ttu-id="bf08f-116">This example uses the `#Region` directive.</span><span class="sxs-lookup"><span data-stu-id="bf08f-116">This example uses the `#Region` directive.</span></span>  
+ <span data-ttu-id="b9536-116">Este exemplo usa a diretiva `#Region`.</span><span class="sxs-lookup"><span data-stu-id="b9536-116">This example uses the `#Region` directive.</span></span>  
   
  [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a><span data-ttu-id="bf08f-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="bf08f-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9536-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b9536-117">See also</span></span>
 
-- [<span data-ttu-id="bf08f-118">Diretivas #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="bf08f-118">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [<span data-ttu-id="bf08f-119">Estrutura de tópicos</span><span class="sxs-lookup"><span data-stu-id="bf08f-119">Outlining</span></span>](/visualstudio/ide/outlining)
-- [<span data-ttu-id="bf08f-120">Como recolher e ocultar seções do código</span><span class="sxs-lookup"><span data-stu-id="bf08f-120">How to: Collapse and Hide Sections of Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+- [<span data-ttu-id="b9536-118">Diretivas #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="b9536-118">#If...Then...#Else Directives</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [<span data-ttu-id="b9536-119">Estrutura de tópicos</span><span class="sxs-lookup"><span data-stu-id="b9536-119">Outlining</span></span>](/visualstudio/ide/outlining)
+- [<span data-ttu-id="b9536-120">Como recolher e ocultar seções do código</span><span class="sxs-lookup"><span data-stu-id="b9536-120">How to: Collapse and Hide Sections of Code</span></span>](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)

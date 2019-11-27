@@ -13,21 +13,21 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74330852"
 ---
-# <a name="how-to-modify-xml-literals-visual-basic"></a><span data-ttu-id="79413-102">Como modificar literais XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="79413-102">How to: Modify XML Literals (Visual Basic)</span></span>
+# <a name="how-to-modify-xml-literals-visual-basic"></a><span data-ttu-id="22c57-102">Como modificar literais XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="22c57-102">How to: Modify XML Literals (Visual Basic)</span></span>
 
-<span data-ttu-id="79413-103">Visual Basic provides convenient ways to modify XML literals.</span><span class="sxs-lookup"><span data-stu-id="79413-103">Visual Basic provides convenient ways to modify XML literals.</span></span> <span data-ttu-id="79413-104">You can add or delete elements and attributes, and you can also replace an existing element with a new XML element.</span><span class="sxs-lookup"><span data-stu-id="79413-104">You can add or delete elements and attributes, and you can also replace an existing element with a new XML element.</span></span> <span data-ttu-id="79413-105">This topic provides several examples of how to modify an existing XML literal.</span><span class="sxs-lookup"><span data-stu-id="79413-105">This topic provides several examples of how to modify an existing XML literal.</span></span>
+<span data-ttu-id="22c57-103">Visual Basic fornece maneiras convenientes de modificar literais XML.</span><span class="sxs-lookup"><span data-stu-id="22c57-103">Visual Basic provides convenient ways to modify XML literals.</span></span> <span data-ttu-id="22c57-104">Você pode adicionar ou excluir elementos e atributos, e também pode substituir um elemento existente por um novo elemento XML.</span><span class="sxs-lookup"><span data-stu-id="22c57-104">You can add or delete elements and attributes, and you can also replace an existing element with a new XML element.</span></span> <span data-ttu-id="22c57-105">Este tópico fornece vários exemplos de como modificar um literal XML existente.</span><span class="sxs-lookup"><span data-stu-id="22c57-105">This topic provides several examples of how to modify an existing XML literal.</span></span>
 
-### <a name="to-modify-the-value-of-an-xml-literal"></a><span data-ttu-id="79413-106">To modify the value of an XML literal</span><span class="sxs-lookup"><span data-stu-id="79413-106">To modify the value of an XML literal</span></span>
+### <a name="to-modify-the-value-of-an-xml-literal"></a><span data-ttu-id="22c57-106">Para modificar o valor de um literal XML</span><span class="sxs-lookup"><span data-stu-id="22c57-106">To modify the value of an XML literal</span></span>
 
-1. <span data-ttu-id="79413-107">To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.</span><span class="sxs-lookup"><span data-stu-id="79413-107">To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.</span></span>
+1. <span data-ttu-id="22c57-107">Para modificar o valor de um literal XML, obtenha uma referência para o literal XML e defina a propriedade `Value` como o valor desejado.</span><span class="sxs-lookup"><span data-stu-id="22c57-107">To modify the value of an XML literal, obtain a reference to the XML literal and set the `Value` property to the desired value.</span></span>
 
-    <span data-ttu-id="79413-108">The following code example updates the value of all the \<Price> elements in an XML document.</span><span class="sxs-lookup"><span data-stu-id="79413-108">The following code example updates the value of all the \<Price> elements in an XML document.</span></span>
+    <span data-ttu-id="22c57-108">O exemplo de código a seguir atualiza o valor de todos os \<os elementos de > de preço em um documento XML.</span><span class="sxs-lookup"><span data-stu-id="22c57-108">The following code example updates the value of all the \<Price> elements in an XML document.</span></span>
 
     [!code-vb[VbXmlSamples2#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#4)]
 
-    <span data-ttu-id="79413-109">The following shows sample source XML and modified XML from this code example.</span><span class="sxs-lookup"><span data-stu-id="79413-109">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="22c57-109">O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.</span><span class="sxs-lookup"><span data-stu-id="22c57-109">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="79413-110">Source XML:</span><span class="sxs-lookup"><span data-stu-id="79413-110">Source XML:</span></span>
+    <span data-ttu-id="22c57-110">XML de origem:</span><span class="sxs-lookup"><span data-stu-id="22c57-110">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -45,7 +45,7 @@ ms.locfileid: "74330852"
     </Catalog>
     ```
 
-    <span data-ttu-id="79413-111">Modified XML:</span><span class="sxs-lookup"><span data-stu-id="79413-111">Modified XML:</span></span>
+    <span data-ttu-id="22c57-111">XML modificado:</span><span class="sxs-lookup"><span data-stu-id="22c57-111">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -64,17 +64,17 @@ ms.locfileid: "74330852"
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="79413-112">The `Value` property refers to the first XML element in a collection.</span><span class="sxs-lookup"><span data-stu-id="79413-112">The `Value` property refers to the first XML element in a collection.</span></span> <span data-ttu-id="79413-113">If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.</span><span class="sxs-lookup"><span data-stu-id="79413-113">If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.</span></span>
+    > <span data-ttu-id="22c57-112">A propriedade `Value` refere-se ao primeiro elemento XML em uma coleção.</span><span class="sxs-lookup"><span data-stu-id="22c57-112">The `Value` property refers to the first XML element in a collection.</span></span> <span data-ttu-id="22c57-113">Se houver mais de um elemento que tenha o mesmo nome em uma coleção, definir a propriedade `Value` afetará apenas o primeiro elemento na coleção.</span><span class="sxs-lookup"><span data-stu-id="22c57-113">If there is more than one element that has the same name in a collection, setting the `Value` property affects only the first element in the collection.</span></span>
 
-### <a name="to-add-an-attribute-to-an-xml-literal"></a><span data-ttu-id="79413-114">To add an attribute to an XML literal</span><span class="sxs-lookup"><span data-stu-id="79413-114">To add an attribute to an XML literal</span></span>
+### <a name="to-add-an-attribute-to-an-xml-literal"></a><span data-ttu-id="22c57-114">Para adicionar um atributo a um literal XML</span><span class="sxs-lookup"><span data-stu-id="22c57-114">To add an attribute to an XML literal</span></span>
 
-1. <span data-ttu-id="79413-115">To add an attribute to an XML literal, first obtain a reference to the XML literal.</span><span class="sxs-lookup"><span data-stu-id="79413-115">To add an attribute to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="79413-116">You can then add an attribute by adding a new XML attribute axis property.</span><span class="sxs-lookup"><span data-stu-id="79413-116">You can then add an attribute by adding a new XML attribute axis property.</span></span> <span data-ttu-id="79413-117">You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span><span class="sxs-lookup"><span data-stu-id="79413-117">You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="79413-118">The following example shows both options.</span><span class="sxs-lookup"><span data-stu-id="79413-118">The following example shows both options.</span></span>
+1. <span data-ttu-id="22c57-115">Para adicionar um atributo a um literal XML, primeiro obtenha uma referência para o literal XML.</span><span class="sxs-lookup"><span data-stu-id="22c57-115">To add an attribute to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="22c57-116">Em seguida, você pode adicionar um atributo adicionando uma nova propriedade de eixo de atributo XML.</span><span class="sxs-lookup"><span data-stu-id="22c57-116">You can then add an attribute by adding a new XML attribute axis property.</span></span> <span data-ttu-id="22c57-117">Você também pode adicionar um novo objeto <xref:System.Xml.Linq.XAttribute> ao literal XML usando o método <xref:System.Xml.Linq.XContainer.Add%2A>.</span><span class="sxs-lookup"><span data-stu-id="22c57-117">You can also add a new <xref:System.Xml.Linq.XAttribute> object to the XML literal by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="22c57-118">O exemplo a seguir mostra as duas opções.</span><span class="sxs-lookup"><span data-stu-id="22c57-118">The following example shows both options.</span></span>
 
     [!code-vb[VbXmlSamples2#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#5)]
 
-    <span data-ttu-id="79413-119">The following shows sample source XML and modified XML from this code example.</span><span class="sxs-lookup"><span data-stu-id="79413-119">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="22c57-119">O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.</span><span class="sxs-lookup"><span data-stu-id="22c57-119">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="79413-120">Source XML:</span><span class="sxs-lookup"><span data-stu-id="79413-120">Source XML:</span></span>
+    <span data-ttu-id="22c57-120">XML de origem:</span><span class="sxs-lookup"><span data-stu-id="22c57-120">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -92,7 +92,7 @@ ms.locfileid: "74330852"
     </Catalog>
     ```
 
-    <span data-ttu-id="79413-121">Modified XML:</span><span class="sxs-lookup"><span data-stu-id="79413-121">Modified XML:</span></span>
+    <span data-ttu-id="22c57-121">XML modificado:</span><span class="sxs-lookup"><span data-stu-id="22c57-121">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -110,21 +110,21 @@ ms.locfileid: "74330852"
     </Catalog>
     ```
 
-    <span data-ttu-id="79413-122">For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).</span><span class="sxs-lookup"><span data-stu-id="79413-122">For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).</span></span>
+    <span data-ttu-id="22c57-122">Para obter mais informações sobre propriedades do eixo de atributo XML, consulte [Propriedade do eixo de atributo XML](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).</span><span class="sxs-lookup"><span data-stu-id="22c57-122">For more information about XML attribute axis properties, see [XML Attribute Axis Property](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md).</span></span>
 
-### <a name="to-add-an-element-to-an-xml-literal"></a><span data-ttu-id="79413-123">To add an element to an XML literal</span><span class="sxs-lookup"><span data-stu-id="79413-123">To add an element to an XML literal</span></span>
+### <a name="to-add-an-element-to-an-xml-literal"></a><span data-ttu-id="22c57-123">Para adicionar um elemento a um literal XML</span><span class="sxs-lookup"><span data-stu-id="22c57-123">To add an element to an XML literal</span></span>
 
-1. <span data-ttu-id="79413-124">To add an element to an XML literal, first obtain a reference to the XML literal.</span><span class="sxs-lookup"><span data-stu-id="79413-124">To add an element to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="79413-125">You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span><span class="sxs-lookup"><span data-stu-id="79413-125">You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="79413-126">You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.</span><span class="sxs-lookup"><span data-stu-id="79413-126">You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.</span></span>
+1. <span data-ttu-id="22c57-124">Para adicionar um elemento a um literal XML, primeiro obtenha uma referência para o literal XML.</span><span class="sxs-lookup"><span data-stu-id="22c57-124">To add an element to an XML literal, first obtain a reference to the XML literal.</span></span> <span data-ttu-id="22c57-125">Em seguida, você pode adicionar um novo objeto <xref:System.Xml.Linq.XElement> como o último subelemento do elemento usando o método <xref:System.Xml.Linq.XContainer.Add%2A>.</span><span class="sxs-lookup"><span data-stu-id="22c57-125">You can then add a new <xref:System.Xml.Linq.XElement> object as the last sub-element of the element by using the <xref:System.Xml.Linq.XContainer.Add%2A> method.</span></span> <span data-ttu-id="22c57-126">Você pode adicionar um novo objeto <xref:System.Xml.Linq.XElement> como o primeiro subelemento usando o método <xref:System.Xml.Linq.XContainer.AddFirst%2A>.</span><span class="sxs-lookup"><span data-stu-id="22c57-126">You can add a new <xref:System.Xml.Linq.XElement> object as the first sub-element by using the <xref:System.Xml.Linq.XContainer.AddFirst%2A> method.</span></span>
 
-    <span data-ttu-id="79413-127">To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element.</span><span class="sxs-lookup"><span data-stu-id="79413-127">To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element.</span></span> <span data-ttu-id="79413-128">You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method.</span><span class="sxs-lookup"><span data-stu-id="79413-128">You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method.</span></span> <span data-ttu-id="79413-129">You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.</span><span class="sxs-lookup"><span data-stu-id="79413-129">You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.</span></span>
+    <span data-ttu-id="22c57-127">Para adicionar um novo elemento em um local específico em relação a outros subelementos, primeiro obtenha uma referência a um sub-elemento adjacente.</span><span class="sxs-lookup"><span data-stu-id="22c57-127">To add a new element in a specific location relative to other sub-elements, first obtain a reference to an adjacent sub-element.</span></span> <span data-ttu-id="22c57-128">Em seguida, você pode adicionar o novo objeto <xref:System.Xml.Linq.XElement> antes do subelemento adjacente usando o método <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>.</span><span class="sxs-lookup"><span data-stu-id="22c57-128">You can then add the new <xref:System.Xml.Linq.XElement> object before the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddBeforeSelf%2A> method.</span></span> <span data-ttu-id="22c57-129">Você também pode adicionar o novo objeto <xref:System.Xml.Linq.XElement> após o subelemento adjacente usando o método <xref:System.Xml.Linq.XNode.AddAfterSelf%2A>.</span><span class="sxs-lookup"><span data-stu-id="22c57-129">You can also add the new <xref:System.Xml.Linq.XElement> object after the adjacent sub-element by using the <xref:System.Xml.Linq.XNode.AddAfterSelf%2A> method.</span></span>
 
-    <span data-ttu-id="79413-130">The following example shows examples of each of these techniques.</span><span class="sxs-lookup"><span data-stu-id="79413-130">The following example shows examples of each of these techniques.</span></span>
+    <span data-ttu-id="22c57-130">O exemplo a seguir mostra exemplos de cada uma dessas técnicas.</span><span class="sxs-lookup"><span data-stu-id="22c57-130">The following example shows examples of each of these techniques.</span></span>
 
     [!code-vb[VbXmlSamples2#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#6)]
 
-    <span data-ttu-id="79413-131">The following shows sample source XML and modified XML from this code example.</span><span class="sxs-lookup"><span data-stu-id="79413-131">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="22c57-131">O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.</span><span class="sxs-lookup"><span data-stu-id="22c57-131">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="79413-132">Source XML:</span><span class="sxs-lookup"><span data-stu-id="79413-132">Source XML:</span></span>
+    <span data-ttu-id="22c57-132">XML de origem:</span><span class="sxs-lookup"><span data-stu-id="22c57-132">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -142,7 +142,7 @@ ms.locfileid: "74330852"
     </Catalog>
     ```
 
-    <span data-ttu-id="79413-133">Modified XML:</span><span class="sxs-lookup"><span data-stu-id="79413-133">Modified XML:</span></span>
+    <span data-ttu-id="22c57-133">XML modificado:</span><span class="sxs-lookup"><span data-stu-id="22c57-133">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -164,15 +164,15 @@ ms.locfileid: "74330852"
     </Catalog>
     ```
 
-### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a><span data-ttu-id="79413-134">To remove an element or attribute from an XML literal</span><span class="sxs-lookup"><span data-stu-id="79413-134">To remove an element or attribute from an XML literal</span></span>
+### <a name="to-remove-an-element-or-attribute-from-an-xml-literal"></a><span data-ttu-id="22c57-134">Para remover um elemento ou atributo de um literal XML</span><span class="sxs-lookup"><span data-stu-id="22c57-134">To remove an element or attribute from an XML literal</span></span>
 
-1. <span data-ttu-id="79413-135">To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.</span><span class="sxs-lookup"><span data-stu-id="79413-135">To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.</span></span>
+1. <span data-ttu-id="22c57-135">Para remover um elemento ou um atributo de um literal XML, obtenha uma referência para o elemento ou atributo e chame o método `Remove`, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="22c57-135">To remove an element or an attribute from an XML literal, obtain a reference to the element or attribute and call the `Remove` method, as shown in the following example.</span></span>
 
     [!code-vb[VbXmlSamples2#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#7)]
 
-    <span data-ttu-id="79413-136">The following shows sample source XML and modified XML from this code example.</span><span class="sxs-lookup"><span data-stu-id="79413-136">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="22c57-136">O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.</span><span class="sxs-lookup"><span data-stu-id="22c57-136">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="79413-137">Source XML:</span><span class="sxs-lookup"><span data-stu-id="79413-137">Source XML:</span></span>
+    <span data-ttu-id="22c57-137">XML de origem:</span><span class="sxs-lookup"><span data-stu-id="22c57-137">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -192,7 +192,7 @@ ms.locfileid: "74330852"
     </Catalog>
     ```
 
-    <span data-ttu-id="79413-138">Modified XML:</span><span class="sxs-lookup"><span data-stu-id="79413-138">Modified XML:</span></span>
+    <span data-ttu-id="22c57-138">XML modificado:</span><span class="sxs-lookup"><span data-stu-id="22c57-138">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -210,21 +210,21 @@ ms.locfileid: "74330852"
       </Book></Catalog>
     ```
 
-    <span data-ttu-id="79413-139">To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.</span><span class="sxs-lookup"><span data-stu-id="79413-139">To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.</span></span>
+    <span data-ttu-id="22c57-139">Para remover todos os elementos ou atributos de um literal XML, obtenha uma referência para o literal XML e chame o método <xref:System.Xml.Linq.XElement.RemoveAll%2A>.</span><span class="sxs-lookup"><span data-stu-id="22c57-139">To remove all elements or attributes from an XML literal, obtain a reference to the XML literal and call the <xref:System.Xml.Linq.XElement.RemoveAll%2A> method.</span></span>
 
-### <a name="to-modify-an-xml-literal"></a><span data-ttu-id="79413-140">To modify an XML literal</span><span class="sxs-lookup"><span data-stu-id="79413-140">To modify an XML literal</span></span>
+### <a name="to-modify-an-xml-literal"></a><span data-ttu-id="22c57-140">Para modificar um literal XML</span><span class="sxs-lookup"><span data-stu-id="22c57-140">To modify an XML literal</span></span>
 
-1. <span data-ttu-id="79413-141">To change the name of an XML element, first obtain a reference to the element.</span><span class="sxs-lookup"><span data-stu-id="79413-141">To change the name of an XML element, first obtain a reference to the element.</span></span> <span data-ttu-id="79413-142">You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.</span><span class="sxs-lookup"><span data-stu-id="79413-142">You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.</span></span>
+1. <span data-ttu-id="22c57-141">Para alterar o nome de um elemento XML, primeiro obtenha uma referência para o elemento.</span><span class="sxs-lookup"><span data-stu-id="22c57-141">To change the name of an XML element, first obtain a reference to the element.</span></span> <span data-ttu-id="22c57-142">Em seguida, você pode criar um novo objeto de <xref:System.Xml.Linq.XElement> que tem um novo nome e passar o novo objeto de <xref:System.Xml.Linq.XElement> para o método <xref:System.Xml.Linq.XNode.ReplaceWith%2A> do objeto <xref:System.Xml.Linq.XElement> existente.</span><span class="sxs-lookup"><span data-stu-id="22c57-142">You can then create a new <xref:System.Xml.Linq.XElement> object that has a new name and pass the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XNode.ReplaceWith%2A> method of the existing <xref:System.Xml.Linq.XElement> object.</span></span>
 
-    <span data-ttu-id="79413-143">If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element.</span><span class="sxs-lookup"><span data-stu-id="79413-143">If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element.</span></span> <span data-ttu-id="79413-144">This will set the value of the new element to the inner XML of the existing element.</span><span class="sxs-lookup"><span data-stu-id="79413-144">This will set the value of the new element to the inner XML of the existing element.</span></span> <span data-ttu-id="79413-145">Otherwise, you can set the value of the new element to the `Value` property of the existing element.</span><span class="sxs-lookup"><span data-stu-id="79413-145">Otherwise, you can set the value of the new element to the `Value` property of the existing element.</span></span>
+    <span data-ttu-id="22c57-143">Se o elemento que você está substituindo tiver subelementos que devam ser preservados, defina o valor do novo objeto <xref:System.Xml.Linq.XElement> como a propriedade <xref:System.Xml.Linq.XContainer.Nodes%2A> do elemento existente.</span><span class="sxs-lookup"><span data-stu-id="22c57-143">If the element that you are replacing has sub-elements that must be preserved, set the value of the new <xref:System.Xml.Linq.XElement> object to the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the existing element.</span></span> <span data-ttu-id="22c57-144">Isso definirá o valor do novo elemento como o XML interno do elemento existente.</span><span class="sxs-lookup"><span data-stu-id="22c57-144">This will set the value of the new element to the inner XML of the existing element.</span></span> <span data-ttu-id="22c57-145">Caso contrário, você pode definir o valor do novo elemento como a propriedade `Value` do elemento existente.</span><span class="sxs-lookup"><span data-stu-id="22c57-145">Otherwise, you can set the value of the new element to the `Value` property of the existing element.</span></span>
 
-    <span data-ttu-id="79413-146">The following code example replaces all \<Description> elements with an \<Abstract> element.</span><span class="sxs-lookup"><span data-stu-id="79413-146">The following code example replaces all \<Description> elements with an \<Abstract> element.</span></span> <span data-ttu-id="79413-147">The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.</span><span class="sxs-lookup"><span data-stu-id="79413-147">The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.</span></span>
+    <span data-ttu-id="22c57-146">O exemplo de código a seguir substitui todos os elementos de > de descrição de \<por um elemento de > abstrato \<.</span><span class="sxs-lookup"><span data-stu-id="22c57-146">The following code example replaces all \<Description> elements with an \<Abstract> element.</span></span> <span data-ttu-id="22c57-147">O conteúdo da descrição de \<> elemento é preservado no novo \<abstrato > elemento usando a propriedade <xref:System.Xml.Linq.XContainer.Nodes%2A> do objeto \<Descrição >.<xref:System.Xml.Linq.XElement></span><span class="sxs-lookup"><span data-stu-id="22c57-147">The content of the \<Description> element is preserved in the new \<Abstract> element by using the <xref:System.Xml.Linq.XContainer.Nodes%2A> property of the \<Description> <xref:System.Xml.Linq.XElement> object.</span></span>
 
     [!code-vb[VbXmlSamples2#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXmlSamples2/VB/Module2.vb#8)]
 
-    <span data-ttu-id="79413-148">The following shows sample source XML and modified XML from this code example.</span><span class="sxs-lookup"><span data-stu-id="79413-148">The following shows sample source XML and modified XML from this code example.</span></span>
+    <span data-ttu-id="22c57-148">O exemplo a seguir mostra o XML de origem de exemplo e o XML modificado deste código.</span><span class="sxs-lookup"><span data-stu-id="22c57-148">The following shows sample source XML and modified XML from this code example.</span></span>
 
-    <span data-ttu-id="79413-149">Source XML:</span><span class="sxs-lookup"><span data-stu-id="79413-149">Source XML:</span></span>
+    <span data-ttu-id="22c57-149">XML de origem:</span><span class="sxs-lookup"><span data-stu-id="22c57-149">Source XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -256,7 +256,7 @@ ms.locfileid: "74330852"
     </Catalog>
     ```
 
-    <span data-ttu-id="79413-150">Modified XML:</span><span class="sxs-lookup"><span data-stu-id="79413-150">Modified XML:</span></span>
+    <span data-ttu-id="22c57-150">XML modificado:</span><span class="sxs-lookup"><span data-stu-id="22c57-150">Modified XML:</span></span>
 
     ```xml
     <?xml version="1.0"?>
@@ -286,10 +286,10 @@ ms.locfileid: "74330852"
     </Catalog>
     ```
 
-## <a name="see-also"></a><span data-ttu-id="79413-151">Consulte também</span><span class="sxs-lookup"><span data-stu-id="79413-151">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="22c57-151">Consulte também</span><span class="sxs-lookup"><span data-stu-id="22c57-151">See also</span></span>
 
-- [<span data-ttu-id="79413-152">Manipulando XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="79413-152">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
-- [<span data-ttu-id="79413-153">XML</span><span class="sxs-lookup"><span data-stu-id="79413-153">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="79413-154">Como carregar XML de um arquivo, cadeia de caracteres ou fluxo</span><span class="sxs-lookup"><span data-stu-id="79413-154">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
-- [<span data-ttu-id="79413-155">LINQ</span><span class="sxs-lookup"><span data-stu-id="79413-155">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [<span data-ttu-id="79413-156">Introdução ao LINQ no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="79413-156">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [<span data-ttu-id="22c57-152">Manipulando XML no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="22c57-152">Manipulating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
+- [<span data-ttu-id="22c57-153">XML</span><span class="sxs-lookup"><span data-stu-id="22c57-153">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="22c57-154">Como carregar XML de um arquivo, cadeia de caracteres ou fluxo</span><span class="sxs-lookup"><span data-stu-id="22c57-154">How to: Load XML from a File, String, or Stream</span></span>](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [<span data-ttu-id="22c57-155">LINQ</span><span class="sxs-lookup"><span data-stu-id="22c57-155">LINQ</span></span>](../../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [<span data-ttu-id="22c57-156">Introdução ao LINQ no Visual Basic</span><span class="sxs-lookup"><span data-stu-id="22c57-156">Introduction to LINQ in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
