@@ -22,10 +22,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446675"
 ---
-# <a name="addfile-method"></a><span data-ttu-id="9f426-102">Método AddFile</span><span class="sxs-lookup"><span data-stu-id="9f426-102">AddFile Method</span></span>
-<span data-ttu-id="9f426-103">Adds files to the assembly.</span><span class="sxs-lookup"><span data-stu-id="9f426-103">Adds files to the assembly.</span></span> <span data-ttu-id="9f426-104">Can also be used to create unbound modules.</span><span class="sxs-lookup"><span data-stu-id="9f426-104">Can also be used to create unbound modules.</span></span>  
+# <a name="addfile-method"></a><span data-ttu-id="4cf00-102">Método AddFile</span><span class="sxs-lookup"><span data-stu-id="4cf00-102">AddFile Method</span></span>
+<span data-ttu-id="4cf00-103">Adiciona arquivos ao assembly.</span><span class="sxs-lookup"><span data-stu-id="4cf00-103">Adds files to the assembly.</span></span> <span data-ttu-id="4cf00-104">Também pode ser usado para criar módulos desvinculados.</span><span class="sxs-lookup"><span data-stu-id="4cf00-104">Can also be used to create unbound modules.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f426-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="9f426-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4cf00-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4cf00-105">Syntax</span></span>  
   
 ```cpp  
 HRESULT AddFile(  
@@ -37,30 +37,30 @@ HRESULT AddFile(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9f426-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="9f426-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4cf00-106">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4cf00-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="9f426-107">Unique ID of the assembly to be augmented.</span><span class="sxs-lookup"><span data-stu-id="9f426-107">Unique ID of the assembly to be augmented.</span></span>  
+ <span data-ttu-id="4cf00-107">ID exclusiva do assembly a ser aumentada.</span><span class="sxs-lookup"><span data-stu-id="4cf00-107">Unique ID of the assembly to be augmented.</span></span>  
   
  `pszFilename`  
- <span data-ttu-id="9f426-108">Fully qualified name of file to be added.</span><span class="sxs-lookup"><span data-stu-id="9f426-108">Fully qualified name of file to be added.</span></span>  
+ <span data-ttu-id="4cf00-108">Nome totalmente qualificado do arquivo a ser adicionado.</span><span class="sxs-lookup"><span data-stu-id="4cf00-108">Fully qualified name of file to be added.</span></span>  
   
  `dwFlags`  
- <span data-ttu-id="9f426-109">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="9f426-109">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="9f426-110">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="9f426-110">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
+ <span data-ttu-id="4cf00-109">Sinalizadores de FileDef COM+, como `ffContainsNoMetaData` e `ffWriteable`.</span><span class="sxs-lookup"><span data-stu-id="4cf00-109">COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`.</span></span> <span data-ttu-id="4cf00-110">`dwFlags` é passado para o [método definofile](../metadata/imetadataassemblyemit-definefile-method.md).</span><span class="sxs-lookup"><span data-stu-id="4cf00-110">`dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).</span></span>  
   
  `pEmitter`  
- <span data-ttu-id="9f426-111">[IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.</span><span class="sxs-lookup"><span data-stu-id="9f426-111">[IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.</span></span>  
+ <span data-ttu-id="4cf00-111">Interface de [interface IMetaDataEmit](../metadata/imetadataemit-interface.md) a ser usada para emitir metadados, se necessário.</span><span class="sxs-lookup"><span data-stu-id="4cf00-111">[IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.</span></span>  
   
  `pFileToken`  
- <span data-ttu-id="9f426-112">Pointer to where the unique ID of the added file will be stored.</span><span class="sxs-lookup"><span data-stu-id="9f426-112">Pointer to where the unique ID of the added file will be stored.</span></span>  
+ <span data-ttu-id="4cf00-112">Ponteiro para onde a ID exclusiva do arquivo adicionado será armazenada.</span><span class="sxs-lookup"><span data-stu-id="4cf00-112">Pointer to where the unique ID of the added file will be stored.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9f426-113">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="9f426-113">Return Value</span></span>  
- <span data-ttu-id="9f426-114">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="9f426-114">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4cf00-113">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="4cf00-113">Return Value</span></span>  
+ <span data-ttu-id="4cf00-114">Retorna S_OK se o método tiver sucesso.</span><span class="sxs-lookup"><span data-stu-id="4cf00-114">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9f426-115">Requisitos</span><span class="sxs-lookup"><span data-stu-id="9f426-115">Requirements</span></span>  
- <span data-ttu-id="9f426-116">Requires alink.h.</span><span class="sxs-lookup"><span data-stu-id="9f426-116">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4cf00-115">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="4cf00-115">Requirements</span></span>  
+ <span data-ttu-id="4cf00-116">Requer ALink. h.</span><span class="sxs-lookup"><span data-stu-id="4cf00-116">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f426-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="9f426-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4cf00-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4cf00-117">See also</span></span>
 
-- [<span data-ttu-id="9f426-118">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="9f426-118">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="9f426-119">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="9f426-119">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="9f426-120">API do ALink</span><span class="sxs-lookup"><span data-stu-id="9f426-120">ALink API</span></span>](index.md)
+- [<span data-ttu-id="4cf00-118">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="4cf00-118">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="4cf00-119">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="4cf00-119">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="4cf00-120">API do ALink</span><span class="sxs-lookup"><span data-stu-id="4cf00-120">ALink API</span></span>](index.md)

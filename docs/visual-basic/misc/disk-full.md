@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: Disco cheio
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -11,13 +11,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351106"
 ---
-# <a name="disk-full-visual-basic"></a><span data-ttu-id="f0eb4-102">Disk full (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0eb4-102">Disk full (Visual Basic)</span></span>
-<span data-ttu-id="f0eb4-103">There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.</span><span class="sxs-lookup"><span data-stu-id="f0eb4-103">There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.</span></span>  
+# <a name="disk-full-visual-basic"></a><span data-ttu-id="0d871-102">Disco cheio (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0d871-102">Disk full (Visual Basic)</span></span>
+<span data-ttu-id="0d871-103">Não há espaço suficiente no disco para concluir uma operação `Print`, `Write`ou `FileClose` ou para criar os arquivos necessários.</span><span class="sxs-lookup"><span data-stu-id="0d871-103">There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="f0eb4-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="f0eb4-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="0d871-104">Para corrigir esse erro</span><span class="sxs-lookup"><span data-stu-id="0d871-104">To correct this error</span></span>  
   
-- <span data-ttu-id="f0eb4-105">Create more room on the disk by either moving some files to another disk or deleting some files.</span><span class="sxs-lookup"><span data-stu-id="f0eb4-105">Create more room on the disk by either moving some files to another disk or deleting some files.</span></span>  
+- <span data-ttu-id="0d871-105">Crie mais espaço no disco movendo alguns arquivos para outro disco ou excluindo alguns arquivos.</span><span class="sxs-lookup"><span data-stu-id="0d871-105">Create more room on the disk by either moving some files to another disk or deleting some files.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f0eb4-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f0eb4-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0d871-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0d871-106">See also</span></span>
 
-- [<span data-ttu-id="f0eb4-107">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="f0eb4-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="0d871-107">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="0d871-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

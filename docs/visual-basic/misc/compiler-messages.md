@@ -1,5 +1,5 @@
 ---
-title: Compiler Messages
+title: Mensagens do compilador
 ms.date: 07/20/2015
 helpviewer_keywords:
 - compiler errors
@@ -12,5 +12,5 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353305"
 ---
-# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="9477a-102">Visual Basic Compiler Messages</span><span class="sxs-lookup"><span data-stu-id="9477a-102">Visual Basic Compiler Messages</span></span>
-<span data-ttu-id="9477a-103">This section contains the Visual Basic error messages that occur at compile time.</span><span class="sxs-lookup"><span data-stu-id="9477a-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>
+# <a name="visual-basic-compiler-messages"></a><span data-ttu-id="b1fb6-102">Visual Basic mensagens do compilador</span><span class="sxs-lookup"><span data-stu-id="b1fb6-102">Visual Basic Compiler Messages</span></span>
+<span data-ttu-id="b1fb6-103">Esta seção contém as Visual Basic mensagens de erro que ocorrem no momento da compilação.</span><span class="sxs-lookup"><span data-stu-id="b1fb6-103">This section contains the Visual Basic error messages that occur at compile time.</span></span>

@@ -13,18 +13,18 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74343749"
 ---
-# <a name="else-statement-visual-basic"></a><span data-ttu-id="85886-102">Instrução Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="85886-102">Else Statement (Visual Basic)</span></span>
-<span data-ttu-id="85886-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span><span class="sxs-lookup"><span data-stu-id="85886-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
+# <a name="else-statement-visual-basic"></a><span data-ttu-id="b5d26-102">Instrução Else (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b5d26-102">Else Statement (Visual Basic)</span></span>
+<span data-ttu-id="b5d26-103">Apresenta um grupo de instruções a serem executadas ou compiladas se nenhum outro grupo de instruções condicional tiver sido executado ou compilado.</span><span class="sxs-lookup"><span data-stu-id="b5d26-103">Introduces a group of statements to be run or compiled if no other conditional group of statements has been run or compiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="85886-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="85886-104">Remarks</span></span>  
- <span data-ttu-id="85886-105">The `Else` keyword can be used in these contexts:</span><span class="sxs-lookup"><span data-stu-id="85886-105">The `Else` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b5d26-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="b5d26-104">Remarks</span></span>  
+ <span data-ttu-id="b5d26-105">A palavra-chave `Else` pode ser usada nesses contextos:</span><span class="sxs-lookup"><span data-stu-id="b5d26-105">The `Else` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="85886-106">Instrução If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="85886-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+ [<span data-ttu-id="b5d26-106">Instrução If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="b5d26-106">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   
- [<span data-ttu-id="85886-107">Instrução Select...Case</span><span class="sxs-lookup"><span data-stu-id="85886-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
+ [<span data-ttu-id="b5d26-107">Instrução Select...Case</span><span class="sxs-lookup"><span data-stu-id="b5d26-107">Select...Case Statement</span></span>](../../../visual-basic/language-reference/statements/select-case-statement.md)  
   
- [<span data-ttu-id="85886-108">#If...Then...#Else Directive</span><span class="sxs-lookup"><span data-stu-id="85886-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [<span data-ttu-id="b5d26-108">#If... Diretiva then... #Else</span><span class="sxs-lookup"><span data-stu-id="b5d26-108">#If...Then...#Else Directive</span></span>](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
-## <a name="see-also"></a><span data-ttu-id="85886-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="85886-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5d26-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b5d26-109">See also</span></span>
 
-- [<span data-ttu-id="85886-110">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="85886-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="b5d26-110">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="b5d26-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

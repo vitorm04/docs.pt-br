@@ -9,15 +9,15 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346807"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="a73ae-102">How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a73ae-102">How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="a73ae-103">Este tópico mostra como obter os elementos descendentes com um nome específico.</span><span class="sxs-lookup"><span data-stu-id="a73ae-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="65eeb-102">Como localizar elementos descendentes (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65eeb-102">How to: Find Descendant Elements (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="65eeb-103">Este tópico mostra como obter os elementos descendentes com um nome específico.</span><span class="sxs-lookup"><span data-stu-id="65eeb-103">This topic shows how to get the descendant elements with a particular name.</span></span>  
   
- <span data-ttu-id="a73ae-104">A expressão XPath é `//Name`.</span><span class="sxs-lookup"><span data-stu-id="a73ae-104">The XPath expression is `//Name`.</span></span>  
+ <span data-ttu-id="65eeb-104">A expressão XPath é `//Name`.</span><span class="sxs-lookup"><span data-stu-id="65eeb-104">The XPath expression is `//Name`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a73ae-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a73ae-105">Example</span></span>  
- <span data-ttu-id="a73ae-106">Este exemplo localiza os descendentes chamados `Name`.</span><span class="sxs-lookup"><span data-stu-id="a73ae-106">This example finds all descendants named `Name`.</span></span>  
+## <a name="example"></a><span data-ttu-id="65eeb-105">Exemplo</span><span class="sxs-lookup"><span data-stu-id="65eeb-105">Example</span></span>  
+ <span data-ttu-id="65eeb-106">Este exemplo localiza os descendentes chamados `Name`.</span><span class="sxs-lookup"><span data-stu-id="65eeb-106">This example finds all descendants named `Name`.</span></span>  
   
- <span data-ttu-id="a73ae-107">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="a73ae-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="65eeb-107">Este exemplo usa o seguinte documento XML: [Arquivo XML de exemplo: vários pedidos de compra (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="65eeb-107">This example uses the following XML document: [Sample XML File: Multiple Purchase Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -39,7 +39,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="a73ae-108">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="a73ae-108">This example produces the following output:</span></span>  
+ <span data-ttu-id="65eeb-108">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="65eeb-108">This example produces the following output:</span></span>  
   
 ```console
 Results are identical  
@@ -51,6 +51,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a73ae-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a73ae-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="65eeb-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="65eeb-109">See also</span></span>
 
-- [<span data-ttu-id="a73ae-110">LINQ to XML for XPath Users (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a73ae-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="65eeb-110">LINQ to XML para usuários do XPath (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65eeb-110">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

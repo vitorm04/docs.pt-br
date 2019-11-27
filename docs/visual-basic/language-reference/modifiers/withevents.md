@@ -14,33 +14,33 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350749"
 ---
-# <a name="withevents-visual-basic"></a><span data-ttu-id="7f76d-102">WithEvents (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7f76d-102">WithEvents (Visual Basic)</span></span>
-<span data-ttu-id="7f76d-103">Specifies that one or more declared member variables refer to an instance of a class that can raise events.</span><span class="sxs-lookup"><span data-stu-id="7f76d-103">Specifies that one or more declared member variables refer to an instance of a class that can raise events.</span></span>
+# <a name="withevents-visual-basic"></a><span data-ttu-id="739be-102">WithEvents (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="739be-102">WithEvents (Visual Basic)</span></span>
+<span data-ttu-id="739be-103">Especifica que uma ou mais variáveis de membro declaradas se referem a uma instância de uma classe que pode gerar eventos.</span><span class="sxs-lookup"><span data-stu-id="739be-103">Specifies that one or more declared member variables refer to an instance of a class that can raise events.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="7f76d-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="7f76d-104">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="739be-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="739be-104">Remarks</span></span>
 
-<span data-ttu-id="7f76d-105">When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.</span><span class="sxs-lookup"><span data-stu-id="7f76d-105">When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.</span></span>
+<span data-ttu-id="739be-105">Quando uma variável é definida usando `WithEvents`, você pode especificar declarativamente que um método manipule os eventos da variável usando a palavra-chave `Handles`.</span><span class="sxs-lookup"><span data-stu-id="739be-105">When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.</span></span>
 
-<span data-ttu-id="7f76d-106">You can use `WithEvents` only at class or module level.</span><span class="sxs-lookup"><span data-stu-id="7f76d-106">You can use `WithEvents` only at class or module level.</span></span> <span data-ttu-id="7f76d-107">This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.</span><span class="sxs-lookup"><span data-stu-id="7f76d-107">This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.</span></span>
+<span data-ttu-id="739be-106">Você pode usar `WithEvents` somente no nível de classe ou módulo.</span><span class="sxs-lookup"><span data-stu-id="739be-106">You can use `WithEvents` only at class or module level.</span></span> <span data-ttu-id="739be-107">Isso significa que o contexto de declaração para uma variável de `WithEvents` deve ser uma classe ou um módulo e não pode ser um arquivo de origem, namespace, estrutura ou procedimento.</span><span class="sxs-lookup"><span data-stu-id="739be-107">This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.</span></span>
 
-<span data-ttu-id="7f76d-108">You cannot use `WithEvents` on a structure member.</span><span class="sxs-lookup"><span data-stu-id="7f76d-108">You cannot use `WithEvents` on a structure member.</span></span>
+<span data-ttu-id="739be-108">Você não pode usar `WithEvents` em um membro de estrutura.</span><span class="sxs-lookup"><span data-stu-id="739be-108">You cannot use `WithEvents` on a structure member.</span></span>
 
-<span data-ttu-id="7f76d-109">You can declare only individual variables—not arrays—with `WithEvents`.</span><span class="sxs-lookup"><span data-stu-id="7f76d-109">You can declare only individual variables—not arrays—with `WithEvents`.</span></span>
+<span data-ttu-id="739be-109">Você pode declarar apenas variáveis individuais, e não matrizes, com `WithEvents`.</span><span class="sxs-lookup"><span data-stu-id="739be-109">You can declare only individual variables—not arrays—with `WithEvents`.</span></span>
 
-## <a name="rules"></a><span data-ttu-id="7f76d-110">Regras</span><span class="sxs-lookup"><span data-stu-id="7f76d-110">Rules</span></span>
+## <a name="rules"></a><span data-ttu-id="739be-110">Regras</span><span class="sxs-lookup"><span data-stu-id="739be-110">Rules</span></span>
 
-<span data-ttu-id="7f76d-111">**Element Types.**</span><span class="sxs-lookup"><span data-stu-id="7f76d-111">**Element Types.**</span></span> <span data-ttu-id="7f76d-112">You must declare `WithEvents` variables to be object variables so that they can accept class instances.</span><span class="sxs-lookup"><span data-stu-id="7f76d-112">You must declare `WithEvents` variables to be object variables so that they can accept class instances.</span></span> <span data-ttu-id="7f76d-113">However, you cannot declare them as `Object`.</span><span class="sxs-lookup"><span data-stu-id="7f76d-113">However, you cannot declare them as `Object`.</span></span> <span data-ttu-id="7f76d-114">You must declare them as the specific class that can raise the events.</span><span class="sxs-lookup"><span data-stu-id="7f76d-114">You must declare them as the specific class that can raise the events.</span></span>
+<span data-ttu-id="739be-111">**Tipos de elemento.**</span><span class="sxs-lookup"><span data-stu-id="739be-111">**Element Types.**</span></span> <span data-ttu-id="739be-112">Você deve declarar `WithEvents` variáveis para serem variáveis de objeto para que elas possam aceitar instâncias de classe.</span><span class="sxs-lookup"><span data-stu-id="739be-112">You must declare `WithEvents` variables to be object variables so that they can accept class instances.</span></span> <span data-ttu-id="739be-113">No entanto, você não pode declará-las como `Object`.</span><span class="sxs-lookup"><span data-stu-id="739be-113">However, you cannot declare them as `Object`.</span></span> <span data-ttu-id="739be-114">Você deve declará-los como a classe específica que pode gerar os eventos.</span><span class="sxs-lookup"><span data-stu-id="739be-114">You must declare them as the specific class that can raise the events.</span></span>
 
-<span data-ttu-id="7f76d-115">The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)</span><span class="sxs-lookup"><span data-stu-id="7f76d-115">The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)</span></span>
+<span data-ttu-id="739be-115">O modificador de `WithEvents` pode ser usado neste contexto: [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)</span><span class="sxs-lookup"><span data-stu-id="739be-115">The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)</span></span>
 
-## <a name="example"></a><span data-ttu-id="7f76d-116">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7f76d-116">Example</span></span>
+## <a name="example"></a><span data-ttu-id="739be-116">Exemplo</span><span class="sxs-lookup"><span data-stu-id="739be-116">Example</span></span>
 
 ```vb
 Dim WithEvents app As Application
 ```
 
-## <a name="see-also"></a><span data-ttu-id="7f76d-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7f76d-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="739be-117">Consulte também</span><span class="sxs-lookup"><span data-stu-id="739be-117">See also</span></span>
 
-- [<span data-ttu-id="7f76d-118">Handles</span><span class="sxs-lookup"><span data-stu-id="7f76d-118">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [<span data-ttu-id="7f76d-119">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="7f76d-119">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
-- [<span data-ttu-id="7f76d-120">Eventos</span><span class="sxs-lookup"><span data-stu-id="7f76d-120">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [<span data-ttu-id="739be-118">Handles</span><span class="sxs-lookup"><span data-stu-id="739be-118">Handles</span></span>](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [<span data-ttu-id="739be-119">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="739be-119">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="739be-120">Eventos</span><span class="sxs-lookup"><span data-stu-id="739be-120">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

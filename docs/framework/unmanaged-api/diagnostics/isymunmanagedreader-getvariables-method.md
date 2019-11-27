@@ -22,10 +22,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429750"
 ---
-# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="73696-102">Método ISymUnmanagedReader::GetVariables</span><span class="sxs-lookup"><span data-stu-id="73696-102">ISymUnmanagedReader::GetVariables Method</span></span>
-<span data-ttu-id="73696-103">Returns a non-local variable, given its parent and name.</span><span class="sxs-lookup"><span data-stu-id="73696-103">Returns a non-local variable, given its parent and name.</span></span>  
+# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="e3922-102">Método ISymUnmanagedReader::GetVariables</span><span class="sxs-lookup"><span data-stu-id="e3922-102">ISymUnmanagedReader::GetVariables Method</span></span>
+<span data-ttu-id="e3922-103">Retorna uma variável não local, dado seu pai e nome.</span><span class="sxs-lookup"><span data-stu-id="e3922-103">Returns a non-local variable, given its parent and name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="73696-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="73696-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3922-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e3922-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetVariables (  
@@ -36,25 +36,25 @@ HRESULT GetVariables (
         length_is (*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="73696-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="73696-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e3922-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e3922-105">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="73696-106">[in] The parent of the variable.</span><span class="sxs-lookup"><span data-stu-id="73696-106">[in] The parent of the variable.</span></span>  
+ <span data-ttu-id="e3922-106">no O pai da variável.</span><span class="sxs-lookup"><span data-stu-id="e3922-106">[in] The parent of the variable.</span></span>  
   
  `cVars`  
- <span data-ttu-id="73696-107">[in] The size of the `pVars` array.</span><span class="sxs-lookup"><span data-stu-id="73696-107">[in] The size of the `pVars` array.</span></span>  
+ <span data-ttu-id="e3922-107">no O tamanho da matriz de `pVars`.</span><span class="sxs-lookup"><span data-stu-id="e3922-107">[in] The size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="73696-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span><span class="sxs-lookup"><span data-stu-id="73696-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
+ <span data-ttu-id="e3922-108">fora Um ponteiro para a variável que recebe o número de variáveis retornadas em `pVars`.</span><span class="sxs-lookup"><span data-stu-id="e3922-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
   
  `pVars`  
- <span data-ttu-id="73696-109">[out] A pointer to the variable that receives the variables.</span><span class="sxs-lookup"><span data-stu-id="73696-109">[out] A pointer to the variable that receives the variables.</span></span>  
+ <span data-ttu-id="e3922-109">fora Um ponteiro para a variável que recebe as variáveis.</span><span class="sxs-lookup"><span data-stu-id="e3922-109">[out] A pointer to the variable that receives the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="73696-110">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="73696-110">Return Value</span></span>  
- <span data-ttu-id="73696-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="73696-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="e3922-110">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="e3922-110">Return Value</span></span>  
+ <span data-ttu-id="e3922-111">S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="e3922-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="73696-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="73696-112">Requirements</span></span>  
- <span data-ttu-id="73696-113">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="73696-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3922-112">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="e3922-112">Requirements</span></span>  
+ <span data-ttu-id="e3922-113">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="e3922-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="73696-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="73696-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e3922-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e3922-114">See also</span></span>
 
-- [<span data-ttu-id="73696-115">Interface ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="73696-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="e3922-115">Interface ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="e3922-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

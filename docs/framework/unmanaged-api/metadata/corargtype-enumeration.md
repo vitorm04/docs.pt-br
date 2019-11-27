@@ -21,10 +21,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444367"
 ---
-# <a name="corargtype-enumeration"></a><span data-ttu-id="1145a-102">Enumeração CorArgType</span><span class="sxs-lookup"><span data-stu-id="1145a-102">CorArgType Enumeration</span></span>
-<span data-ttu-id="1145a-103">Contains values that describe the native type of a runtime handle.</span><span class="sxs-lookup"><span data-stu-id="1145a-103">Contains values that describe the native type of a runtime handle.</span></span>  
+# <a name="corargtype-enumeration"></a><span data-ttu-id="2ef41-102">Enumeração CorArgType</span><span class="sxs-lookup"><span data-stu-id="2ef41-102">CorArgType Enumeration</span></span>
+<span data-ttu-id="2ef41-103">Contém valores que descrevem o tipo nativo de um identificador de tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="2ef41-103">Contains values that describe the native type of a runtime handle.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1145a-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1145a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2ef41-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2ef41-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorArgType {  
@@ -44,13 +44,13 @@ typedef enum CorArgType {
 } CorArgType;  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="1145a-105">Requisitos</span><span class="sxs-lookup"><span data-stu-id="1145a-105">Requirements</span></span>  
- <span data-ttu-id="1145a-106">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1145a-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2ef41-105">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="2ef41-105">Requirements</span></span>  
+ <span data-ttu-id="2ef41-106">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2ef41-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1145a-107">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="1145a-107">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="2ef41-107">**Cabeçalho:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="2ef41-107">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="1145a-108">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1145a-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="2ef41-108">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2ef41-108">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1145a-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1145a-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2ef41-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2ef41-109">See also</span></span>
 
-- [<span data-ttu-id="1145a-110">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="1145a-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="2ef41-110">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="2ef41-110">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

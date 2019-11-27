@@ -1,5 +1,5 @@
 ---
-title: Off
+title: '{1&gt;Desativado&lt;1}'
 ms.date: 07/20/2015
 f1_keywords:
 - Off
@@ -14,18 +14,18 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331929"
 ---
-# <a name="off-visual-basic"></a><span data-ttu-id="07d7c-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="07d7c-102">Off (Visual Basic)</span></span>
-<span data-ttu-id="07d7c-103">Turns a compiler option off.</span><span class="sxs-lookup"><span data-stu-id="07d7c-103">Turns a compiler option off.</span></span>  
+# <a name="off-visual-basic"></a><span data-ttu-id="178e6-102">Off (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="178e6-102">Off (Visual Basic)</span></span>
+<span data-ttu-id="178e6-103">Desativa uma opção do compilador.</span><span class="sxs-lookup"><span data-stu-id="178e6-103">Turns a compiler option off.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="07d7c-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="07d7c-104">Remarks</span></span>  
- <span data-ttu-id="07d7c-105">The `Off` keyword can be used in these contexts:</span><span class="sxs-lookup"><span data-stu-id="07d7c-105">The `Off` keyword can be used in these contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="178e6-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="178e6-104">Remarks</span></span>  
+ <span data-ttu-id="178e6-105">A palavra-chave `Off` pode ser usada nesses contextos:</span><span class="sxs-lookup"><span data-stu-id="178e6-105">The `Off` keyword can be used in these contexts:</span></span>  
   
- [<span data-ttu-id="07d7c-106">Instrução Option Explicit</span><span class="sxs-lookup"><span data-stu-id="07d7c-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [<span data-ttu-id="178e6-106">Instrução Option Explicit</span><span class="sxs-lookup"><span data-stu-id="178e6-106">Option Explicit Statement</span></span>](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   
- [<span data-ttu-id="07d7c-107">Instrução Option Strict</span><span class="sxs-lookup"><span data-stu-id="07d7c-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [<span data-ttu-id="178e6-107">Instrução Option Strict</span><span class="sxs-lookup"><span data-stu-id="178e6-107">Option Strict Statement</span></span>](../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
- [<span data-ttu-id="07d7c-108">Instrução Option Infer</span><span class="sxs-lookup"><span data-stu-id="07d7c-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [<span data-ttu-id="178e6-108">Instrução Option Infer</span><span class="sxs-lookup"><span data-stu-id="178e6-108">Option Infer Statement</span></span>](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a><span data-ttu-id="07d7c-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="07d7c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="178e6-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="178e6-109">See also</span></span>
 
-- [<span data-ttu-id="07d7c-110">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="07d7c-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="178e6-110">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="178e6-110">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)

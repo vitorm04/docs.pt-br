@@ -21,10 +21,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450103"
 ---
-# <a name="corsavesize-enumeration"></a><span data-ttu-id="fd9d1-102">Enumeração CorSaveSize</span><span class="sxs-lookup"><span data-stu-id="fd9d1-102">CorSaveSize Enumeration</span></span>
-<span data-ttu-id="fd9d1-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span><span class="sxs-lookup"><span data-stu-id="fd9d1-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
+# <a name="corsavesize-enumeration"></a><span data-ttu-id="f7f1e-102">Enumeração CorSaveSize</span><span class="sxs-lookup"><span data-stu-id="f7f1e-102">CorSaveSize Enumeration</span></span>
+<span data-ttu-id="f7f1e-103">Contém valores que indicam o nível de precisão necessário ao consultar o tamanho de uma operação de salvamento.</span><span class="sxs-lookup"><span data-stu-id="f7f1e-103">Contains values indicating the level of precision required when querying for the size of a save operation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fd9d1-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fd9d1-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7f1e-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="f7f1e-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSaveSize {  
@@ -34,23 +34,23 @@ typedef enum CorSaveSize {
 } CorSaveSize;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="fd9d1-105">Membros</span><span class="sxs-lookup"><span data-stu-id="fd9d1-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="f7f1e-105">Membros</span><span class="sxs-lookup"><span data-stu-id="f7f1e-105">Members</span></span>  
   
-|<span data-ttu-id="fd9d1-106">Membro</span><span class="sxs-lookup"><span data-stu-id="fd9d1-106">Member</span></span>|<span data-ttu-id="fd9d1-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="fd9d1-107">Description</span></span>|  
+|<span data-ttu-id="f7f1e-106">{1&gt;Membro&lt;1}</span><span class="sxs-lookup"><span data-stu-id="f7f1e-106">Member</span></span>|<span data-ttu-id="f7f1e-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="f7f1e-107">Description</span></span>|  
 |------------|-----------------|  
-|`cssAccurate`|<span data-ttu-id="fd9d1-108">Specifies that the return value should be exact.</span><span class="sxs-lookup"><span data-stu-id="fd9d1-108">Specifies that the return value should be exact.</span></span>|  
-|`cssQuick`|<span data-ttu-id="fd9d1-109">Specifies that the return value should be estimated.</span><span class="sxs-lookup"><span data-stu-id="fd9d1-109">Specifies that the return value should be estimated.</span></span>|  
-|`cssDiscardTransientCAs`|<span data-ttu-id="fd9d1-110">Specifies that discardable types should be removed.</span><span class="sxs-lookup"><span data-stu-id="fd9d1-110">Specifies that discardable types should be removed.</span></span>|  
+|`cssAccurate`|<span data-ttu-id="f7f1e-108">Especifica que o valor de retorno deve ser exato.</span><span class="sxs-lookup"><span data-stu-id="f7f1e-108">Specifies that the return value should be exact.</span></span>|  
+|`cssQuick`|<span data-ttu-id="f7f1e-109">Especifica que o valor de retorno deve ser estimado.</span><span class="sxs-lookup"><span data-stu-id="f7f1e-109">Specifies that the return value should be estimated.</span></span>|  
+|`cssDiscardTransientCAs`|<span data-ttu-id="f7f1e-110">Especifica que os tipos descartados devem ser removidos.</span><span class="sxs-lookup"><span data-stu-id="f7f1e-110">Specifies that discardable types should be removed.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="fd9d1-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fd9d1-111">Requirements</span></span>  
- <span data-ttu-id="fd9d1-112">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fd9d1-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f7f1e-111">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="f7f1e-111">Requirements</span></span>  
+ <span data-ttu-id="f7f1e-112">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7f1e-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fd9d1-113">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="fd9d1-113">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="f7f1e-113">**Cabeçalho:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="f7f1e-113">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="fd9d1-114">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="fd9d1-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="f7f1e-114">**Biblioteca:** Usado como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="f7f1e-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="fd9d1-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fd9d1-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f7f1e-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f7f1e-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fd9d1-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="fd9d1-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f7f1e-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f7f1e-116">See also</span></span>
 
-- [<span data-ttu-id="fd9d1-117">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="fd9d1-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="f7f1e-117">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="f7f1e-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

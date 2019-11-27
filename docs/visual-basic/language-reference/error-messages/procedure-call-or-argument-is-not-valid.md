@@ -11,13 +11,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346990"
 ---
-# <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a><span data-ttu-id="ae1dd-102">A chamada de procedimento ou o argumento não é válido (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ae1dd-102">Procedure call or argument is not valid (Visual Basic)</span></span>
-<span data-ttu-id="ae1dd-103">Some part of the call cannot be completed.</span><span class="sxs-lookup"><span data-stu-id="ae1dd-103">Some part of the call cannot be completed.</span></span>  
+# <a name="procedure-call-or-argument-is-not-valid-visual-basic"></a><span data-ttu-id="43d93-102">A chamada de procedimento ou o argumento não é válido (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43d93-102">Procedure call or argument is not valid (Visual Basic)</span></span>
+<span data-ttu-id="43d93-103">Parte da chamada não pode ser concluída.</span><span class="sxs-lookup"><span data-stu-id="43d93-103">Some part of the call cannot be completed.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ae1dd-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="ae1dd-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="43d93-104">Para corrigir esse erro</span><span class="sxs-lookup"><span data-stu-id="43d93-104">To correct this error</span></span>  
   
-- <span data-ttu-id="ae1dd-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span><span class="sxs-lookup"><span data-stu-id="ae1dd-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span></span>  
+- <span data-ttu-id="43d93-105">Verifique os intervalos permitidos para argumentos para garantir que nenhuma organização exceda os valores permitidos.</span><span class="sxs-lookup"><span data-stu-id="43d93-105">Check the permitted ranges for arguments to make sure no arrangement exceeds the permitted values.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ae1dd-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ae1dd-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43d93-106">Consulte também</span><span class="sxs-lookup"><span data-stu-id="43d93-106">See also</span></span>
 
-- [<span data-ttu-id="ae1dd-107">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="ae1dd-107">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="43d93-107">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="43d93-107">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
