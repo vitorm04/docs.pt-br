@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427497"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>Método IMetaDataImport::EnumMethodImpls
-Enumerates MethodBody and MethodDeclaration tokens representing methods of the specified type.  
+Enumera os tokens MethodBody e MethodDeclaration que representam métodos do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,36 +40,36 @@ HRESULT EnumMethodImpls (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `td`  
- [in] A TypeDef token for the type whose method implementations to enumerate.  
+ no Um token de TypeDef para o tipo cujas implementações de método enumeram.  
   
  `rMethodBody`  
- [out] The array to store the MethodBody tokens.  
+ fora A matriz para armazenar os tokens MethodBody.  
   
  `rMethodDecl`  
- [out] The array to store the MethodDeclaration tokens.  
+ fora A matriz para armazenar os tokens MethodDeclaration.  
   
  `cMax`  
- [in] The maximum size of the `rMethodBody` and `rMethodDecl` arrays.  
+ no O tamanho máximo das matrizes `rMethodBody` e `rMethodDecl`.  
   
  `pcTokens`  
- [in] The actual number of methods returned in `rMethodBody` and `rMethodDecl`.  
+ no O número real de métodos retornados em `rMethodBody` e `rMethodDecl`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` returned successfully.|  
-|`S_FALSE`|There are no method tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethodImpls` retornado com êxito.|  
+|`S_FALSE`|Não há tokens de método para enumerar. Nesse caso, `pcTokens` é zero.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

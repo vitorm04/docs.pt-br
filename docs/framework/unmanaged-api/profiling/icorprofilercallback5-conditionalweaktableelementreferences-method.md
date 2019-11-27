@@ -46,7 +46,7 @@ HRESULT ConditionalWeakTableElementReferences(
 [in] Uma matriz de IDs de objeto, cada uma contendo o `ObjectID` para o elemento principal do par do identificador dependente.
 
 `valueRefIds`\
-[in] Uma matriz de IDs de objeto, cada uma contendo o `ObjectID` para o elemento secundário do par do identificador dependente. (`keyRefIds[i]` keeps `valueRefIds[i]` alive.)
+[in] Uma matriz de IDs de objeto, cada uma contendo o `ObjectID` para o elemento secundário do par do identificador dependente. (`keyRefIds[i]` mantém `valueRefIds[i]` ativas.)
 
 `rootIds`\
 [in] Uma matriz de valores `GCHandleID` que apontam para um número inteiro que contém informações adicionais sobre a raiz de coleta de lixo.
@@ -55,7 +55,7 @@ Nenhum dos valores `ObjectID` retornados pelo método `ConditionalWeakTableEleme
 
 ## <a name="example"></a>Exemplo
 
-The following code example demonstrates how to implement [ICorProfilerCallback5](icorprofilercallback5-interface.md) and use this method.
+O exemplo de código a seguir demonstra como implementar [ICorProfilerCallback5](icorprofilercallback5-interface.md) e usar esse método.
 
 ```cpp
 HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
@@ -80,13 +80,13 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>Comentários
 
-A profiler for the .NET Framework 4.5 or later versions implements the [ICorProfilerCallback5](icorprofilercallback5-interface.md) interface and records the dependencies specified by the `ConditionalWeakTableElementReferences` method. `ICorProfilerCallback5` provides the complete set of dependencies among live objects represented by `ConditionalWeakTable` entries. These dependencies and the member field references specified by the [ICorProfilerCallback::ObjectReferences](icorprofilercallback-objectreferences-method.md) method enable a managed profiler to generate the full object graph of live objects.
+Um criador de perfil para o .NET Framework 4,5 ou versões posteriores implementa a interface [ICorProfilerCallback5](icorprofilercallback5-interface.md) e registra as dependências especificadas pelo método `ConditionalWeakTableElementReferences`. `ICorProfilerCallback5` fornece o conjunto completo de dependências entre objetos dinâmicos representados por `ConditionalWeakTable` entradas. Essas dependências e as referências de campo de membro especificadas pelo método [ICorProfilerCallback:: Objectreferenciations](icorprofilercallback-objectreferences-method.md) habilitam um criador de perfil gerenciado para gerar o grafo de objeto completo de objetos dinâmicos.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
-**Header:** CorProf.idl, CorProf.h
+**Cabeçalho:** CorProf. idl, CorProf. h
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]
 

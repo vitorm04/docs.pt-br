@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450050"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>Método IMetaDataImport::EnumPermissionSets
-Enumerates permissions for the objects in a specified metadata scope.  
+Enumera permissões para os objetos em um escopo de metadados especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,36 +40,36 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `tk`  
- [in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.  
+ no Um token de metadados que limita o escopo da pesquisa ou nulo para pesquisar o escopo mais amplo possível.  
   
  `dwActions`  
- [in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.  
+ no Sinalizadores que representam os valores de <xref:System.Security.Permissions.SecurityAction> a serem incluídos no `rPermission`ou zero para retornar todas as ações.  
   
  `rPermission`  
- [out] The array used to store the Permission tokens.  
+ fora A matriz usada para armazenar os tokens de permissão.  
   
  `cMax`  
- [in] The maximum size of the `rPermission` array.  
+ no O tamanho máximo da matriz de `rPermission`.  
   
  `pcTokens`  
- [out] The number of Permission tokens returned in `rPermission`.  
+ fora O número de tokens de permissão retornados em `rPermission`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumPermissionSets` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumPermissionSets` retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTokens` é zero.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

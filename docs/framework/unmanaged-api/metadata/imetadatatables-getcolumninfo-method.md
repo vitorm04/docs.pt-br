@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436099"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>Método IMetaDataTables::GetColumnInfo
-Gets data about the specified column in the specified table.  
+Obtém dados sobre a coluna especificada na tabela especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,55 +42,55 @@ HRESULT GetColumnInfo (
 =======
 
  `ixTbl`  
- [in] The index of the desired table.  
+ no O índice da tabela desejada.  
   
  `ixCol`  
- [in] The index of the desired column.  
+ no O índice da coluna desejada.  
   
  `poCol`  
- [out] A pointer to the offset of the column in the row.  
+ fora Um ponteiro para o deslocamento da coluna na linha.  
   
  `pcbCol`  
- [out] A pointer to the size, in bytes, of the column.  
+ fora Um ponteiro para o tamanho, em bytes, da coluna.  
   
  `pType`  
- [out] A pointer to the type of the values in the column.  
+ fora Um ponteiro para o tipo dos valores na coluna.  
   
  `ppName`  
- [out] A pointer to a pointer to the column name.  
+ fora Um ponteiro para um ponteiro para o nome da coluna.  
  
 ## <a name="remarks"></a>Comentários
 
-The returned column type falls within a range of values:
+O tipo de coluna retornado cai dentro de um intervalo de valores:
 
-| pType                    | Descrição   | Helper function                   |
+| pType                    | Descrição   | Função auxiliar                   |
 |--------------------------|---------------|-----------------------------------|
-| `0`..`iRidMax`<br>(0..63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
-| `iCodedToken`..`iCodedTokenMax`<br>(64..95) | Coded token | **IsCodedTokenType** <br>**IsRidOrToken** |
-| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
-| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
-| `iLONG` (98)             | Int32         | **IsFixedType**                   |
-| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
-| `iBYTE` (100)            | Byte          | **IsFixedType**                   |
-| `iSTRING` (101)          | Cadeia de Caracteres        | **IsHeapType**                    |
-| `iGUID` (102)            | GUID          | **IsHeapType**                    |
-| `iBLOB` (103)            | Blob          | **IsHeapType**                    |
+| `0`..`iRidMax`<br>(0.. 63)   | Eliminá           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | Token codificado | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` (96)            | Int16         | **Isfixatype**                   |
+| `iUSHORT` (97)           | UInt16        | **Isfixatype**                   |
+| `iLONG` (98)             | Int32         | **Isfixatype**                   |
+| `iULONG` (99)            | UInt32        | **Isfixatype**                   |
+| `iBYTE` (100)            | Byte          | **Isfixatype**                   |
+| `iSTRING` (101)          | Cadeia de Caracteres        | **Isheaptype**                    |
+| `iGUID` (102)            | {1&gt;Guid&lt;1}          | **Isheaptype**                    |
+| `iBLOB` (103)            | Blob          | **Isheaptype**                    |
 
-Values that are stored in the *heap* (that is, `IsHeapType == true`) can be read using:
+Os valores que são armazenados no *heap* (ou seja, `IsHeapType == true`) podem ser lidos usando:
 
-- `iSTRING`: **IMetadataTables.GetString**
-- `iGUID`: **IMetadataTables.GetGUID**
-- `iBLOB`: **IMetadataTables.GetBlob**
+- `iSTRING`: **IMetadataTables. GetString**
+- `iGUID`: **IMetadataTables. GETguid**
+- `iBLOB`: **IMetadataTables. getBlob**
 
 > [!IMPORTANT]
-> To use the constants defined in the table above, include the directive `#define _DEFINE_META_DATA_META_CONSTANTS` provided by the *cor.h* header file.
+> Para usar as constantes definidas na tabela acima, inclua a diretiva `#define _DEFINE_META_DATA_META_CONSTANTS` fornecida pelo arquivo de cabeçalho *cor. h* .
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

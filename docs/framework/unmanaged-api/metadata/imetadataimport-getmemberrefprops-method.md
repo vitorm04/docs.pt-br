@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437494"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>Método IMetaDataImport::GetMemberRefProps
-Gets metadata associated with the member referenced by the specified token.  
+Obtém os metadados associados ao membro referenciado pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,32 +41,32 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `mr`  
- [in] The MemberRef token to return associated metadata for.  
+ no O token de MemberRef para o qual retornar metadados associados.  
   
  `ptk`  
- [out] A TypeDef or TypeRef, or TypeSpec token that represents the class that declares the member, or a ModuleRef token that represents the module class that declares the member, or a MethodDef that represents the member.  
+ fora Um TypeDef ou TypeRef ou um token TypeSpec que representa a classe que declara o membro ou um token ModuleRef que representa a classe do módulo que declara o membro ou um MethodDef que representa o membro.  
   
  `szMember`  
- [out] A string buffer for the member's name.  
+ fora Um buffer de cadeia de caracteres para o nome do membro.  
   
  `cchMember`  
- [in] The requested size in wide characters of `szMember`.  
+ no O tamanho solicitado em caracteres largos de `szMember`.  
   
  `pchMember`  
- [out] The returned size in wide characters of `szMember`.  
+ fora O tamanho retornado em caracteres largos de `szMember`.  
   
  `ppvSibBlob`  
- [out] A pointer to the binary metadata signature for the member.  
+ fora Um ponteiro para a assinatura de metadados binários do membro.  
   
  `pbSig`  
- [out] The size in bytes of `ppvSigBlob`.  
+ fora O tamanho em bytes de `ppvSigBlob`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

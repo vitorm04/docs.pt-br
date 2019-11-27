@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448445"
 ---
 # <a name="cor_prf_static_type-enumeration"></a>Enumeração COR_PRF_STATIC_TYPE
-Indica se um campo é estático e, em caso positivo, a qualidade estática aplicada ao campo. These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.  
+Indica se um campo é estático e, em caso positivo, a qualidade estática aplicada ao campo. Esses valores podem ser combinados usando-se a operação OR de bits para indicar que o campo tem várias qualidades estáticas diferentes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +38,18 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|The field is not static.|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|The field is application domain-static.|  
-|`COR_PRF_FIELD_THREAD_STATIC`|The field is thread-static.|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|The field is context-static.|  
-|`COR_PRF_FIELD_RVA_STATIC`|The field is relative virtual address (RVA)-static.|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|O campo não é estático.|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|O campo é um domínio de aplicativo estático.|  
+|`COR_PRF_FIELD_THREAD_STATIC`|O campo é thread-estático.|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|O campo é de contexto estático.|  
+|`COR_PRF_FIELD_RVA_STATIC`|O campo é um endereço virtual relativo (RVA)-estático.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

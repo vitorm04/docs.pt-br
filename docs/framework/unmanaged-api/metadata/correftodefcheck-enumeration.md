@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450127"
 ---
 # <a name="correftodefcheck-enumeration"></a>Enumeração CorRefToDefCheck
-Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.  
+Especifica sinalizadores para controlar quais itens referenciados são convertidos em suas definições a fim de otimizar o código.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +38,18 @@ typedef enum CorRefToDefCheck {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|Specifies that type references and member references should be converted to definitions. This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
-|`MDRefToDefAll`|Specifies that all referenced items should be converted to definitions.|  
-|`MDRefToDefNone`|Specifies that no referenced items should be converted to definitions.|  
-|`MDTypeRefToDef`|Specifies that only type references should be converted to type definitions.|  
-|`MDMemberRefToDef`|Specifies that only member references should be converted to definitions. That is, member references should be converted to either method definitions or field definitions.|  
+|`MDRefToDefDefault`|Especifica que referências de tipo e referências de membro devem ser convertidas em definições. Esse é o valor padrão (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).|  
+|`MDRefToDefAll`|Especifica que todos os itens referenciados devem ser convertidos em definições.|  
+|`MDRefToDefNone`|Especifica que nenhum item referenciado deve ser convertido em definições.|  
+|`MDTypeRefToDef`|Especifica que apenas referências de tipo devem ser convertidas em definições de tipo.|  
+|`MDMemberRefToDef`|Especifica que somente referências de membro devem ser convertidas em definições. Ou seja, as referências de membro devem ser convertidas em definições de método ou definições de campo.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

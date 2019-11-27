@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437642"
 ---
 # <a name="imetadataimportgetcustomattributeprops-method"></a>Método IMetaDataImport::GetCustomAttributeProps
-Gets the value of the custom attribute, given its metadata token.  
+Obtém o valor do atributo personalizado, dado seu token de metadados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,29 +39,29 @@ HRESULT GetCustomAttributeProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `cv`  
- [in] A metadata token that represents the custom attribute to be retrieved.  
+ no Um token de metadados que representa o atributo personalizado a ser recuperado.  
   
  `ptkObj`  
- [out, optional] A metadata token representing the object that the custom attribute modifies. This value can be any type of metadata token except `mdCustomAttribute`.  
+ [saída, opcional] Um token de metadados que representa o objeto que o atributo personalizado modifica. Esse valor pode ser qualquer tipo de token de metadados, exceto `mdCustomAttribute`.  
   
  `ptkType`  
- [out, optional] An `mdMethodDef` or `mdMemberRef` metadata token representing the <xref:System.Type> of the returned custom attribute.  
+ [saída, opcional] Um `mdMethodDef` ou `mdMemberRef` token de metadados que representa a <xref:System.Type> do atributo personalizado retornado.  
   
  `ppBlob`  
- [out, optional] A pointer to an array of data that is the value of the custom attribute.  
+ [saída, opcional] Um ponteiro para uma matriz de dados que é o valor do atributo personalizado.  
   
  `pcbSize`  
- [out, optional] The size in bytes of the data returned in *`ppBlob`.  
+ [saída, opcional] O tamanho em bytes dos dados retornados em *`ppBlob`.  
   
 ## <a name="remarks"></a>Comentários  
- A custom attribute is stored as an array of data, the format which is understood by the metadata engine.  
+ Um atributo personalizado é armazenado como uma matriz de dados, o formato que é compreendido pelo mecanismo de metadados.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

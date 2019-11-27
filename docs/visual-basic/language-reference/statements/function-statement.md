@@ -37,7 +37,7 @@ ms.locfileid: "74345927"
 ---
 # <a name="function-statement-visual-basic"></a>Instrução Function (Visual Basic)
 
-Declares the name, parameters, and code that define a `Function` procedure.
+Declara o nome, os parâmetros e o código que definem um procedimento de `Function`.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -54,11 +54,11 @@ End Function
 
 - `attributelist`
 
-  Opcional. See [Attribute List](attribute-list.md).
+  Opcional. Consulte a [lista de atributos](attribute-list.md).
 
 - `accessmodifier`
 
-  Opcional. Can be one of the following:
+  Opcional. Pode ser um dos seguintes:
 
   - [Público](../../../visual-basic/language-reference/modifiers/public.md)
 
@@ -72,11 +72,11 @@ End Function
 
   - [Particular Protegido](../../language-reference/modifiers/private-protected.md)
 
-  See [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+  Consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
 - `proceduremodifiers`
 
-  Opcional. Can be one of the following:
+  Opcional. Pode ser um dos seguintes:
 
   - [Sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md)
 
@@ -94,173 +94,173 @@ End Function
 
 - `Shared`
 
-  Opcional. See [Shared](../../../visual-basic/language-reference/modifiers/shared.md).
+  Opcional. Consulte [compartilhado](../../../visual-basic/language-reference/modifiers/shared.md).
 
 - `Shadows`
 
-  Opcional. See [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
+  Opcional. Consulte [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).
 
 - `Async`
 
-  Opcional. See [Async](../../../visual-basic/language-reference/modifiers/async.md).
+  Opcional. Consulte [Async](../../../visual-basic/language-reference/modifiers/async.md).
 
 - `Iterator`
 
-  Opcional. See [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).
+  Opcional. Consulte [iterador](../../../visual-basic/language-reference/modifiers/iterator.md).
 
 - `name`
 
-  Necessário. Name of the procedure. See [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+  Necessária. Nome do procedimento. Consulte [nomes de elementos declarados](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
 
 - `typeparamlist`
 
-  Opcional. List of type parameters for a generic procedure. See [Type List](type-list.md).
+  Opcional. Lista de parâmetros de tipo para um procedimento genérico. Consulte [lista de tipos](type-list.md).
 
 - `parameterlist`
 
-  Opcional. List of local variable names representing the parameters of this procedure. See [Parameter List](parameter-list.md).
+  Opcional. Lista de nomes de variáveis locais que representam os parâmetros deste procedimento. Consulte a [lista de parâmetros](parameter-list.md).
 
 - `returntype`
 
-  Required if `Option Strict` is `On`. Data type of the value returned by this procedure.
+  Necessário se `Option Strict` for `On`. Tipo de dados do valor retornado por este procedimento.
 
 - `Implements`
 
-  Opcional. Indicates that this procedure implements one or more `Function` procedures, each one defined in an interface implemented by this procedure's containing class or structure. See [Implements Statement](implements-statement.md).
+  Opcional. Indica que este procedimento implementa um ou mais procedimentos de `Function`, cada um definido em uma interface implementada por este procedimento que contém a classe ou a estrutura. Consulte a [instrução Implements](implements-statement.md).
 
 - `implementslist`
 
-  Required if `Implements` is supplied. List of `Function` procedures being implemented.
+  Necessário se `Implements` for fornecido. Lista de procedimentos de `Function` que estão sendo implementados.
 
   `implementedprocedure [ , implementedprocedure ... ]`
 
-  Each `implementedprocedure` has the following syntax and parts:
+  Cada `implementedprocedure` tem a seguinte sintaxe e partes:
 
   `interface.definedname`
 
   |Parte|Descrição|
   |---|---|
-  |`interface`|Necessário. Name of an interface implemented by this procedure's containing class or structure.|
-  |`definedname`|Necessário. Name by which the procedure is defined in `interface`.|
+  |`interface`|Necessária. Nome de uma interface implementada por este procedimento que contém a classe ou a estrutura.|
+  |`definedname`|Necessária. Nome pelo qual o procedimento é definido em `interface`.|
 
 - `Handles`
 
-  Opcional. Indicates that this procedure can handle one or more specific events. See [Handles](handles-clause.md).
+  Opcional. Indica que esse procedimento pode manipular um ou mais eventos específicos. Consulte [identificadores](handles-clause.md).
 
 - `eventlist`
 
-  Required if `Handles` is supplied. List of events this procedure handles.
+  Necessário se `Handles` for fornecido. Lista de eventos que este procedimento manipula.
 
   `eventspecifier [ , eventspecifier ... ]`
 
-  Each `eventspecifier` has the following syntax and parts:
+  Cada `eventspecifier` tem a seguinte sintaxe e partes:
 
   `eventvariable.event`
 
   |Parte|Descrição|
   |---|---|
-  |`eventvariable`|Necessário. Object variable declared with the data type of the class or structure that raises the event.|
-  |`event`|Necessário. Name of the event this procedure handles.|
+  |`eventvariable`|Necessária. Variável de objeto declarada com o tipo de dados da classe ou estrutura que gera o evento.|
+  |`event`|Necessária. Nome do evento que este procedimento manipula.|
 
 - `statements`
 
-  Opcional. Block of statements to be executed within this procedure.
+  Opcional. Bloco de instruções a serem executadas neste procedimento.
 
 - `End Function`
 
-  Terminates the definition of this procedure.
+  Encerra a definição deste procedimento.
 
 ## <a name="remarks"></a>Comentários
 
-All executable code must be inside a procedure. Each procedure, in turn, is declared within a class, a structure, or a module that is referred to as the containing class, structure, or module.
+Todo o código executável deve estar dentro de um procedimento. Cada procedimento, por sua vez, é declarado dentro de uma classe, uma estrutura ou um módulo que é chamado de classe, estrutura ou módulo que o contém.
 
-To return a value to the calling code, use a `Function` procedure; otherwise, use a `Sub` procedure.
+Para retornar um valor para o código de chamada, use um procedimento de `Function`; caso contrário, use um procedimento `Sub`.
 
-## <a name="defining-a-function"></a>Defining a Function
+## <a name="defining-a-function"></a>Definindo uma função
 
-You can define a `Function` procedure only at the module level. Therefore, the declaration context for a function must be a class, a structure, a module, or an interface and can't be a source file, a namespace, a procedure, or a block. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](declaration-contexts-and-default-access-levels.md).
+Você pode definir um procedimento `Function` apenas no nível do módulo. Portanto, o contexto de declaração para uma função deve ser uma classe, uma estrutura, um módulo ou uma interface e não pode ser um arquivo de origem, um namespace, um procedimento ou um bloco. Para obter mais informações, consulte [Contextos de declaração e níveis de acesso padrão](declaration-contexts-and-default-access-levels.md).
 
-`Function` procedures default to public access. You can adjust their access levels with the access modifiers.
+`Function` procedimentos padrão para acesso público. Você pode ajustar seus níveis de acesso com os modificadores de acesso.
 
-A `Function` procedure can declare the data type of the value that the procedure returns. You can specify any data type or the name of an enumeration, a structure, a class, or an interface. If you don't specify the `returntype` parameter, the procedure returns `Object`.
+Um procedimento `Function` pode declarar o tipo de dados do valor que o procedimento retorna. Você pode especificar qualquer tipo de dados ou o nome de uma enumeração, uma estrutura, uma classe ou uma interface. Se você não especificar o parâmetro `returntype`, o procedimento retornará `Object`.
 
-If this procedure uses the `Implements` keyword, the containing class or structure must also have an `Implements` statement that immediately follows its `Class` or `Structure` statement. The `Implements` statement must include each interface that's specified in `implementslist`. However, the name by which an interface defines the `Function` (in `definedname`) doesn't need to match the name of this procedure (in `name`).
+Se esse procedimento usar a palavra-chave `Implements`, a classe ou estrutura que a contém também deverá ter uma instrução `Implements` que siga imediatamente sua instrução `Class` ou `Structure`. A instrução `Implements` deve incluir cada interface especificada em `implementslist`. No entanto, o nome pelo qual uma interface define a `Function` (em `definedname`) não precisa corresponder ao nome desse procedimento (em `name`).
 
 > [!NOTE]
-> You can use lambda expressions to define function expressions inline. For more information, see [Function Expression](../../../visual-basic/language-reference/operators/function-expression.md) and [Lambda Expressions](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
+> Você pode usar expressões lambda para definir expressões de função embutidas. Para obter mais informações, consulte [expressão de função](../../../visual-basic/language-reference/operators/function-expression.md) e [expressões lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).
 
-## <a name="returning-from-a-function"></a>Returning from a Function
+## <a name="returning-from-a-function"></a>Retornando de uma função
 
-When the `Function` procedure returns to the calling code, execution continues with the statement that follows the statement that called the procedure.
+Quando o procedimento de `Function` retorna ao código de chamada, a execução continua com a instrução que segue a instrução que chamou o procedimento.
 
-To return a value from a function, you can either assign the value to the function name or include it in a `Return` statement.
+Para retornar um valor de uma função, você pode atribuir o valor ao nome da função ou incluí-lo em uma instrução `Return`.
 
-The `Return` statement simultaneously assigns the return value and exits the function, as the following example shows.
+A instrução `Return` atribui simultaneamente o valor de retorno e sai da função, como mostra o exemplo a seguir.
 
 [!code-vb[VbVbalrStatements#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#24)]
 
-The following example assigns the return value to the function name `myFunction` and then uses the `Exit Function` statement to return.
+O exemplo a seguir atribui o valor de retorno ao nome da função `myFunction` e, em seguida, usa a instrução `Exit Function` para retornar.
 
 [!code-vb[VbVbalrStatements#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#23)]
 
-The `Exit Function` and `Return` statements cause an immediate exit from a `Function` procedure. Any number of `Exit Function` and `Return` statements can appear anywhere in the procedure, and you can mix `Exit Function` and `Return` statements.
+As instruções `Exit Function` e `Return` causam uma saída imediata de um procedimento `Function`. Qualquer número de instruções `Exit Function` e `Return` pode aparecer em qualquer lugar no procedimento, e você pode misturar `Exit Function` e instruções `Return`.
 
-If you use `Exit Function` without assigning a value to `name`, the procedure returns the default value for the data type that's specified in `returntype`. If `returntype` isn't specified, the procedure returns `Nothing`, which is the default value for `Object`.
+Se você usar `Exit Function` sem atribuir um valor a `name`, o procedimento retornará o valor padrão para o tipo de dados especificado em `returntype`. Se `returntype` não for especificado, o procedimento retornará `Nothing`, que é o valor padrão para `Object`.
 
 ## <a name="calling-a-function"></a>Chamando uma Função
 
-You call a `Function` procedure by using the procedure name, followed by the argument list in parentheses, in an expression. You can omit the parentheses only if you aren't supplying any arguments. However, your code is more readable if you always include the parentheses.
+Você chama um procedimento de `Function` usando o nome do procedimento, seguido pela lista de argumentos entre parênteses, em uma expressão. Você pode omitir os parênteses somente se não estiver fornecendo nenhum argumento. No entanto, seu código será mais legível se você sempre incluir os parênteses.
 
-You call a `Function` procedure the same way that you call any library function such as `Sqrt`, `Cos`, or `ChrW`.
+Você chama um procedimento `Function` da mesma maneira que chama qualquer função de biblioteca, como `Sqrt`, `Cos`ou `ChrW`.
 
-You can also call a function by using the `Call` keyword. In that case, the return value is ignored. Use of the `Call` keyword isn't recommended in most cases. For more information, see [Call Statement](call-statement.md).
+Você também pode chamar uma função usando a palavra-chave `Call`. Nesse caso, o valor de retorno é ignorado. O uso da palavra-chave `Call` não é recomendado na maioria dos casos. Para obter mais informações, consulte [Call Statement](call-statement.md).
 
-Visual Basic sometimes rearranges arithmetic expressions to increase internal efficiency. For that reason, you shouldn't use a `Function` procedure in an arithmetic expression when the function changes the value of variables in the same expression.
+Às vezes, Visual Basic reorganiza as expressões aritméticas para aumentar a eficiência interna. Por esse motivo, você não deve usar um procedimento `Function` em uma expressão aritmética quando a função altera o valor de variáveis na mesma expressão.
 
-## <a name="async-functions"></a>Async Functions
+## <a name="async-functions"></a>Funções assíncronas
 
-The *Async* feature allows you to invoke asynchronous functions without using explicit callbacks or manually splitting your code across multiple functions or lambda expressions.
+O recurso *Async* permite invocar funções assíncronas sem usar retornos de chamada explícitos ou dividir manualmente seu código em várias funções ou expressões lambda.
 
-If you mark a function with the [Async](../../../visual-basic/language-reference/modifiers/async.md) modifier, you can use the [Await](../../../visual-basic/language-reference/operators/await-operator.md) operator in the function. When control reaches an `Await` expression in the `Async` function, control returns to the caller, and progress in the function is suspended until the awaited task completes. When the task is complete, execution can resume in the function.
+Se você marcar uma função com o modificador [Async](../../../visual-basic/language-reference/modifiers/async.md) , poderá usar o operador [Await](../../../visual-basic/language-reference/operators/await-operator.md) na função. Quando o controle alcança uma expressão de `Await` na função `Async`, o controle retorna ao chamador e o progresso na função é suspenso até que a tarefa esperada seja concluída. Quando a tarefa for concluída, a execução poderá ser retomada na função.
 
 > [!NOTE]
-> An `Async` procedure returns to the caller when either it encounters the first awaited object that’s not yet complete, or it gets to the end of the `Async` procedure, whichever occurs first.
+> Um procedimento `Async` retorna ao chamador quando encontra o primeiro objeto esperado que ainda não está completo, ou chega ao final do procedimento de `Async`, o que ocorrer primeiro.
 
-An `Async` function can have a return type of <xref:System.Threading.Tasks.Task%601> or <xref:System.Threading.Tasks.Task>. An example of an `Async` function that has a return type of <xref:System.Threading.Tasks.Task%601> is provided below.
+Uma função `Async` pode ter um tipo de retorno de <xref:System.Threading.Tasks.Task%601> ou <xref:System.Threading.Tasks.Task>. Um exemplo de uma função `Async` que tem um tipo de retorno de <xref:System.Threading.Tasks.Task%601> é fornecido abaixo.
 
-An `Async` function cannot declare any [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parameters.
+Uma função `Async` não pode declarar parâmetros [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .
 
-A [Sub Statement](sub-statement.md) can also be marked with the `Async` modifier. This is primarily used for event handlers, where a value cannot be returned. An `Async` `Sub` procedure can't be awaited, and the caller of an `Async` `Sub` procedure can't catch exceptions that are thrown by the `Sub` procedure.
+Uma [instrução sub](sub-statement.md) também pode ser marcada com o modificador de `Async`. Isso é usado principalmente para manipuladores de eventos, em que um valor não pode ser retornado. Um procedimento de `Sub` `Async` não pode ser aguardado e o chamador de um procedimento de `Sub` `Async` não pode capturar exceções que são geradas pelo procedimento `Sub`.
 
-For more information about `Async` functions, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md), [Control Flow in Async Programs](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md), and [Async Return Types](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
+Para obter mais informações sobre `Async` funções, consulte [programação assíncrona com Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md), [fluxo de controle em programas assíncronos](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)e [tipos de retorno assíncronos](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
-## <a name="iterator-functions"></a>Iterator Functions
+## <a name="iterator-functions"></a>Funções de iterador
 
-An *iterator* function performs a custom iteration over a collection, such as a list or array. An iterator function uses the [Yield](yield-statement.md) statement to return each element one at a time. When a [Yield](yield-statement.md) statement is reached, the current location in code is remembered. A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.
+Uma função de *iterador* executa uma iteração personalizada em uma coleção, como uma lista ou matriz. Uma função de iterador usa a instrução [yield](yield-statement.md) para retornar cada elemento um de cada vez. Quando uma instrução [yield](yield-statement.md) é atingida, o local atual no código é lembrado. A execução será reiniciada desse local na próxima vez que a função iteradora for chamada.
 
-You call an iterator from client code by using a [For Each…Next](for-each-next-statement.md) statement.
+Você chama um iterador do código do cliente usando um [para cada... Próxima](for-each-next-statement.md) instrução.
 
-The return type of an iterator function can be <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, or <xref:System.Collections.Generic.IEnumerator%601>.
+O tipo de retorno de uma função de iterador pode ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>ou <xref:System.Collections.Generic.IEnumerator%601>.
 
 Para obter mais informações, consulte [Iteradores](../../programming-guide/concepts/iterators.md).
 
 ## <a name="example"></a>Exemplo
 
-The following example uses the `Function` statement to declare the name, parameters, and code that form the body of a `Function` procedure. The `ParamArray` modifier enables the function to accept a variable number of arguments.
+O exemplo a seguir usa a instrução `Function` para declarar o nome, os parâmetros e o código que formam o corpo de um procedimento de `Function`. O modificador `ParamArray` permite que a função aceite um número variável de argumentos.
 
 [!code-vb[VbVbalrStatements#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#25)]
 
 ## <a name="example"></a>Exemplo
 
-The following example invokes the function declared in the preceding example.
+O exemplo a seguir invoca a função declarada no exemplo anterior.
 
 [!code-vb[VbVbalrStatements#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#26)]
 
 ## <a name="example"></a>Exemplo
 
-In the following example, `DelayAsync` is an `Async` `Function` that has a return type of <xref:System.Threading.Tasks.Task%601>. `DelayAsync` tem uma instrução `Return` que retorna um número inteiro. Therefore the function declaration of `DelayAsync` needs to have a return type of `Task(Of Integer)`. Because the return type is `Task(Of Integer)`, the evaluation of the `Await` expression in `DoSomethingAsync` produces an integer. This is demonstrated in this statement: `Dim result As Integer = Await delayTask`.
+No exemplo a seguir, `DelayAsync` é uma `Function` de `Async` que tem um tipo de retorno de <xref:System.Threading.Tasks.Task%601>. `DelayAsync` tem uma instrução `Return` que retorna um número inteiro. Portanto, a declaração de função de `DelayAsync` precisa ter um tipo de retorno de `Task(Of Integer)`. Como o tipo de retorno é `Task(Of Integer)`, a avaliação da expressão `Await` no `DoSomethingAsync` produz um inteiro. Isso é demonstrado nesta instrução: `Dim result As Integer = Await delayTask`.
 
-The `startButton_Click` procedure is an example of an `Async Sub` procedure. Because `DoSomethingAsync` is an `Async` function, the task for the call to `DoSomethingAsync` must be awaited, as the following statement demonstrates: `Await DoSomethingAsync()`. The `startButton_Click` `Sub` procedure must be defined with the `Async` modifier because it has an `Await` expression.
+O procedimento de `startButton_Click` é um exemplo de um procedimento de `Async Sub`. Como `DoSomethingAsync` é uma função `Async`, a tarefa para a chamada para `DoSomethingAsync` deve ser aguardada, como a instrução a seguir demonstra: `Await DoSomethingAsync()`. O procedimento de `Sub` de `startButton_Click` deve ser definido com o modificador de `Async` porque ele tem uma expressão de `Await`.
 
 [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]
 

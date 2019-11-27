@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437467"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>Método IMetaDataImport::GetMethodProps
-Gets the metadata associated with the method referenced by the specified MethodDef token.  
+Obtém os metadados associados ao método referenciado pelo token MethodDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,41 +44,41 @@ HRESULT GetMethodProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `mb`  
- [in] The MethodDef token that represents the method to return metadata for.  
+ no O token MethodDef que representa o método para o qual retornar metadados.  
   
  `pClass`  
- [out] A Pointer to a TypeDef token that represents the type that implements the method.  
+ fora Um ponteiro para um token de TypeDef que representa o tipo que implementa o método.  
   
  `szMethod`  
- [out] A Pointer to a buffer that has the method's name.  
+ fora Um ponteiro para um buffer que tem o nome do método.  
   
  `cchMethod`  
- [in] The requested size of `szMethod`.  
+ no O tamanho solicitado de `szMethod`.  
   
  `pchMethod`  
- [out] A Pointer to the size in wide characters of `szMethod`, or in the case of truncation, the actual number of wide characters in the method name.  
+ fora Um ponteiro para o tamanho em caracteres largos de `szMethod`ou, no caso de truncamento, o número real de caracteres largos no nome do método.  
   
  `pdwAttr`  
- [out] A pointer to any flags associated with the method.  
+ fora Um ponteiro para todos os sinalizadores associados ao método.  
   
  `ppvSigBlob`  
- [out] A pointer to the binary metadata signature of the method.  
+ fora Um ponteiro para a assinatura de metadados binários do método.  
   
  `pcbSigBlob`  
- [out] A Pointer to the size in bytes of `ppvSigBlob`.  
+ fora Um ponteiro para o tamanho em bytes de `ppvSigBlob`.  
   
  `pulCodeRVA`  
- [out] A pointer to the relative virtual address of the method.  
+ fora Um ponteiro para o endereço virtual relativo do método.  
   
  `pdwImplFlags`  
- [out] A pointer to any implementation flags for the method.  
+ fora Um ponteiro para qualquer sinalizador de implementação para o método.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443874"
 ---
 # <a name="corattributetargets-enumeration"></a>Enumeração CorAttributeTargets
-Especifica os elementos do aplicativo no qual ele é válido para aplicar um atributo.  
+{1&gt;Especifica os elementos do aplicativo no qual ele é válido para aplicar um atributo.&lt;1}  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,10 +60,10 @@ typedef enum CorAttributeTargets
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`catAssembly`|O atributo pode ser aplicado a um assembly.|  
-|`catModule`|Attribute can be applied to a portable executable (.dll or .exe) module.|  
+|`catModule`|O atributo pode ser aplicado a um módulo executável portátil (. dll ou. exe).|  
 |`catClass`|O atributo pode ser aplicado a uma classe.|  
 |`catStruct`|Atributo pode ser aplicado a uma estrutura; ou seja, um tipo de valor.|  
 |`catEnum`|O atributo pode ser aplicado a uma enumeração.|  
@@ -77,17 +77,17 @@ typedef enum CorAttributeTargets
 |`catDelegate`|O atributo pode ser aplicado a um delegado.|  
 |`catGenericParameter`|O atributo pode ser aplicado a um parâmetro genérico.|  
 |`catAll`|O atributo pode ser aplicado a qualquer elemento de aplicativo.|  
-|`catClassMembers`|Attribute can be applied to a member of a class.|  
+|`catClassMembers`|O atributo pode ser aplicado a um membro de uma classe.|  
   
 ## <a name="remarks"></a>Comentários  
- The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.  
+ Os valores de enumeração de `CorAttributeTargets` podem ser combinados com uma operação OR bit a bit para obter a combinação preferida.  
   
- The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.  
+ O `CorAttributeTargets` paraleliza a enumeração de <xref:System.AttributeTargets?displayProperty=nameWithType> gerenciada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

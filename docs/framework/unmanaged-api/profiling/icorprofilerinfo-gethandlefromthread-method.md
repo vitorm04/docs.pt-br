@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439057"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>Método ICorProfilerInfo::GetHandleFromThread
-Maps the ID of a thread to a Win32 thread handle.  
+Mapeia a ID de um thread para um identificador de thread do Win32.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT GetHandleFromThread(
   
 ## <a name="parameters"></a>Parâmetros  
  `threadId`  
- [in] The thread ID to be mapped.  
+ no A ID do thread a ser mapeada.  
   
  `phThread`  
- [out] A pointer to a Win32 thread handle.  
+ fora Um ponteiro para um identificador de Thread Win32.  
   
 ## <a name="remarks"></a>Comentários  
- The profiler must call the Win32 `DuplicateHandle` function on the handle before using it.  
+ O criador de perfil deve chamar a função de `DuplicateHandle` do Win32 na alça antes de usá-la.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

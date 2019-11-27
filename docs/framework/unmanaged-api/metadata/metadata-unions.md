@@ -14,13 +14,13 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430682"
 ---
 # <a name="metadata-unions"></a>Uniões de metadados
-This section describes the unmanaged unions that the metadata API uses.  
+Esta seção descreve as uniões não gerenciadas que a API de metadados usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [União CeeSectionRelocExtra](../../../../docs/framework/unmanaged-api/metadata/ceesectionrelocextra-union.md)  
- Represents an address offset that is used by the [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) interface to relocate a section  
+ Representa um deslocamento de endereço que é usado pela interface [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) para realocar uma seção  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
  [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449139"
 ---
 # <a name="isymunmanageddocumentgetsourcerange-method"></a>Método ISymUnmanagedDocument::GetSourceRange
-Returns the specified range of the embedded source into the given buffer. The buffer must be large enough to hold the source.  
+Retorna o intervalo especificado da fonte inserida para o buffer fornecido. O buffer deve ser grande o suficiente para manter a origem.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,28 +41,28 @@ HRESULT GetSourceRange(
   
 ## <a name="parameters"></a>Parâmetros  
  `startLine`  
- [in] The starting line in the current document.  
+ no A linha inicial no documento atual.  
   
  `startColumn`  
- [in] The starting column in the current document.  
+ no A coluna inicial no documento atual.  
   
  `endLine`  
- [in] The final line in the current document.  
+ no A linha final do documento atual.  
   
  `endColumn`  
- [in] The final column in the current document.  
+ no A coluna final no documento atual.  
   
  `cSourceBytes`  
- [in] The size of the source, in bytes.  
+ no O tamanho da origem, em bytes.  
   
  `pcSourceBytes`  
- [out] A pointer to a variable that receives the source size.  
+ fora Um ponteiro para uma variável que recebe o tamanho da origem.  
   
  `source`  
- [out] The size and length of the specified range of the source document, in bytes.  
+ fora O tamanho e o comprimento do intervalo especificado do documento de origem, em bytes.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds.  
+ S_OK se o método tiver sucesso.  
   
 ## <a name="see-also"></a>Consulte também
 

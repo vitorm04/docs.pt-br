@@ -17,7 +17,7 @@ ms.locfileid: "74350157"
 ---
 # <a name="call-statement-visual-basic"></a>Instrução Call (Visual Basic)
 
-Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedure.  
+Transfere o controle para um procedimento de `Function`, `Sub`ou DLL (biblioteca de vínculo dinâmico).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,21 +29,21 @@ Transfers control to a `Function`, `Sub`, or dynamic-link library (DLL) procedur
 
 |||
 |---|---|
-|`procedureName`|Necessário. Name of the procedure to call.|
-|`argumentList`|Opcional. List of variables or expressions representing arguments that are passed to the procedure when it is called. Multiple arguments are separated by commas. If you include `argumentList`, you must enclose it in parentheses.|
+|`procedureName`|Necessária. Nome do procedimento a ser chamado.|
+|`argumentList`|Opcional. Lista de variáveis ou expressões que representam argumentos que são passados para o procedimento quando ele é chamado. Vários argumentos são separados por vírgulas. Se você incluir `argumentList`, deverá colocá-lo entre parênteses.|
 |||
   
 ## <a name="remarks"></a>Comentários
 
- You can use the `Call` keyword when you call a procedure. For most procedure calls, you aren’t required to use this  keyword.
+ Você pode usar a palavra-chave `Call` ao chamar um procedimento. Para a maioria das chamadas de procedimento, você não precisa usar essa palavra-chave.
 
- You typically use the `Call` keyword when the called expression doesn’t start with an identifier. Use of the `Call` keyword for other uses isn't recommended.
+ Normalmente, você usa a palavra-chave `Call` quando a expressão chamada não começa com um identificador. O uso da palavra-chave `Call` para outros usos não é recomendado.
 
- If the procedure returns a value, the `Call` statement discards it.
+ Se o procedimento retornar um valor, a instrução `Call` o descartará.
 
 ## <a name="example"></a>Exemplo
 
- The following code shows two examples where the `Call` keyword is necessary to call a procedure. In both examples, the called expression doesn't start with an identifier.
+ O código a seguir mostra dois exemplos em que a palavra-chave `Call` é necessária para chamar um procedimento. Em ambos os exemplos, a expressão chamada não começa com um identificador.
 
  [!code-vb[VbVbalrStatements#97](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#97)]  
   

@@ -33,15 +33,15 @@ Para convenções de nomenclatura de caminhos e os modos de expressar um caminho
 
 Aqui estão algumas classes de arquivos e diretórios comumente usadas:
 
-- <xref:System.IO.File> – Fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.
+- <xref:System.IO.File>-fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos e ajuda a criar um objeto de <xref:System.IO.FileStream>.
 
-- <xref:System.IO.FileInfo> – Fornece métodos de instâncias para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.
+- <xref:System.IO.FileInfo>-fornece métodos de instância para criar, copiar, excluir, mover e abrir arquivos e ajuda a criar um objeto de <xref:System.IO.FileStream>.
 
-- <xref:System.IO.Directory> – Fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.
+- <xref:System.IO.Directory>-fornece métodos estáticos para criar, mover e enumerar por meio de diretórios e subdiretórios.
 
-- <xref:System.IO.DirectoryInfo> – Fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.
+- <xref:System.IO.DirectoryInfo>-fornece métodos de instância para criar, mover e enumerar por meio de diretórios e subdiretórios.
 
-- <xref:System.IO.Path> – Fornece métodos e propriedades para processar cadeias de caracteres de diretório de uma maneira compatível com várias plataformas.
+- <xref:System.IO.Path>-fornece métodos e propriedades para processar cadeias de caracteres de diretório em uma maneira de plataforma cruzada.
 
 Você sempre deve fornecer tratamento de exceção robusto ao chamar métodos de sistema de arquivos. Para obter mais informações, veja [Tratamento de erros de E/S](handling-io-errors.md).
 
@@ -65,19 +65,19 @@ Dependendo do repositório ou da fonte de dados subjacente, os fluxos podem ofer
 
 Algumas classes de fluxo comumente usadas são:
 
-- <xref:System.IO.FileStream> – Para leitura e gravação em um arquivo.
+- <xref:System.IO.FileStream> – para leitura e gravação em um arquivo.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Para leitura e gravação em um arquivo no armazenamento isolado.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – para leitura e gravação em um arquivo no armazenamento isolado.
 
-- <xref:System.IO.MemoryStream> – Para leitura e gravação na memória como o repositório de backup.
+- <xref:System.IO.MemoryStream> – para leitura e gravação na memória como o armazenamento de backup.
 
-- <xref:System.IO.BufferedStream> – Para melhorar o desempenho das operações de leitura e gravação.
+- <xref:System.IO.BufferedStream> – para melhorar o desempenho de operações de leitura e gravação.
 
-- <xref:System.Net.Sockets.NetworkStream> – Para leitura e gravação via soquetes de rede.
+- <xref:System.Net.Sockets.NetworkStream> – para leitura e gravação em soquetes de rede.
 
-- <xref:System.IO.Pipes.PipeStream> – Para leitura e gravação sobre pipes anônimos e nomeados.
+- <xref:System.IO.Pipes.PipeStream> – para leitura e gravação em Pipes anônimos e nomeados.
 
-- <xref:System.Security.Cryptography.CryptoStream> – Para vincular fluxos de dados a transformações criptográficas.
+- <xref:System.Security.Cryptography.CryptoStream> – para vincular fluxos de dados a transformações de criptografia.
 
 Para um exemplo de como trabalhar com fluxos de forma assíncrona, confira [E/S de arquivo assíncrona](asynchronous-file-i-o.md).
 
@@ -87,19 +87,19 @@ O namespace <xref:System.IO?displayProperty=nameWithType> também fornece tipos 
 
 Algumas classes de leitores e gravadores comumente usadas são:
 
-- <xref:System.IO.BinaryReader> e <xref:System.IO.BinaryWriter> – Para leitura e gravação de tipos de dados primitivos como valores binários.
+- <xref:System.IO.BinaryReader> e <xref:System.IO.BinaryWriter> – para leitura e gravação de tipos de dados primitivos como valores binários.
 
-- <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter> – Para leitura e gravação de caracteres usando um valor de codificação para converter os caracteres para/de bytes.
+- <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter> – para leitura e gravação de caracteres usando um valor de codificação para converter os caracteres de e para bytes.
 
-- <xref:System.IO.StringReader> e <xref:System.IO.StringWriter> – Para leitura e gravação de caracteres e cadeias de caracteres.
+- <xref:System.IO.StringReader> e <xref:System.IO.StringWriter> – para leitura e gravação de caracteres de e para cadeias.
 
-- <xref:System.IO.TextReader> e <xref:System.IO.TextWriter> – Funcionam como as classes base abstratas para outros leitores e gravadores que leem e gravam caracteres e cadeias de caracteres, mas não dados binários.
+- <xref:System.IO.TextReader> e <xref:System.IO.TextWriter> – serve como as classes base abstratas para outros leitores e gravadores que lêem e gravam caracteres e cadeias, mas não dados binários.
 
 Confira [Como ler texto de um arquivo](how-to-read-text-from-a-file.md), [Como gravar texto em um arquivo](how-to-write-text-to-a-file.md), [Como ler caracteres em uma cadeia de caracteres](how-to-read-characters-from-a-string.md) e [Como gravar caracteres em uma cadeia de caracteres](how-to-write-characters-to-a-string.md).
 
 ## <a name="asynchronous-io-operations"></a>Operações de E/S assíncronas
 
-A leitura ou gravação de uma grande quantidade de dados pode consumir muitos recursos. Você deve executar essas tarefas de forma assíncrona se seu aplicativo precisar continuar respondendo ao usuário. Com as operações de E/S síncronas, o thread de interface do usuário é bloqueado até que a operação de uso intensivo seja concluída.  Use asynchronous I/O operations when developing Windows 8.x Store apps to prevent creating the impression that your app has stopped working.
+A leitura ou gravação de uma grande quantidade de dados pode consumir muitos recursos. Você deve executar essas tarefas de forma assíncrona se seu aplicativo precisar continuar respondendo ao usuário. Com as operações de E/S síncronas, o thread de interface do usuário é bloqueado até que a operação de uso intensivo seja concluída.  Use operações de e/s assíncronas ao desenvolver aplicativos da loja do Windows 8. x para evitar a criação da impressão de que seu aplicativo parou de funcionar.
 
 Os membros assíncronas contêm `Async` em seus nomes, como os métodos <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.FlushAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> e <xref:System.IO.Stream.WriteAsync%2A>. Você usa esses métodos com as palavras-chave `async` e `await`.
 
@@ -111,17 +111,17 @@ A compactação refere-se ao processo de reduzir o tamanho de um arquivo para fi
 
 As classes a seguir são frequentemente usadas para compactar e descompactar arquivos e fluxos:
 
-- <xref:System.IO.Compression.ZipArchive> – Para criar e recuperar entradas em arquivos ZIP.
+- <xref:System.IO.Compression.ZipArchive> – para criar e recuperar entradas no arquivo zip.
 
-- <xref:System.IO.Compression.ZipArchiveEntry> – Para representar um arquivo compactado.
+- <xref:System.IO.Compression.ZipArchiveEntry> – para representar um arquivo compactado.
 
-- <xref:System.IO.Compression.ZipFile> – Para criar, extrair e abrir um pacote compactado.
+- <xref:System.IO.Compression.ZipFile> – para criar, extrair e abrir um pacote compactado.
 
-- <xref:System.IO.Compression.ZipFileExtensions> – Para criar e extrair entradas em um pacote compactado.
+- <xref:System.IO.Compression.ZipFileExtensions> – para criar e extrair entradas em um pacote compactado.
 
-- <xref:System.IO.Compression.DeflateStream> – Para compactar e descompactar fluxos usando o algoritmo de Deflate.
+- <xref:System.IO.Compression.DeflateStream> – para compactar e descompactar fluxos usando o algoritmo Deflate.
 
-- <xref:System.IO.Compression.GZipStream> – Para compactar e descompactar fluxos no formato de dados GZIP.
+- <xref:System.IO.Compression.GZipStream> – para compactar e descompactar fluxos no formato de dados gzip.
 
 Confira [How to: Compress and Extract Files](how-to-compress-and-extract-files.md) (Como compactar e extrair arquivos).
 
@@ -129,15 +129,15 @@ Confira [How to: Compress and Extract Files](how-to-compress-and-extract-files.m
 
 Um armazenamento isolado é um mecanismo de armazenamento de dados que fornece isolamento e segurança ao definir maneiras padronizadas de associar códigos a dados salvos. O armazenamento fornece um sistema de arquivos virtual que é isolado por usuário, assembly e (opcionalmente) domínio. O armazenamento isolado é particularmente útil quando o aplicativo não tem permissão para acessar arquivos de usuários. Você pode salvar configurações ou arquivos para seu aplicativo de modo que ele seja controlado pela política de segurança do computador.
 
-Isolated storage is not available for Windows 8.x Store apps; instead, use application data classes in the <xref:Windows.Storage?displayProperty=nameWithType> namespace. Para saber mais, veja [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
+O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x; em vez disso, use classes de dados de aplicativo no namespace <xref:Windows.Storage?displayProperty=nameWithType>. Para saber mais, veja [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917%28v=win.10%29).
 
 As classes a seguir são usadas com frequência na implementação do armazenamento isolado:
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorage> – Fornece a classe base para implementações de armazenamento isolado.
+- <xref:System.IO.IsolatedStorage.IsolatedStorage> – fornece a classe base para implementações de armazenamento isolado.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – Fornece uma área de armazenamento isolado que contém arquivos e diretórios.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – fornece uma área de armazenamento isolado que contém arquivos e diretórios.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Expõe um arquivo no armazenamento isolado.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-expõe um arquivo no armazenamento isolado.
 
 Confira [Armazenamentos isolado](isolated-storage.md).
 
@@ -145,7 +145,7 @@ Confira [Armazenamentos isolado](isolated-storage.md).
 
 O [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] contém muitos dos tipos para leitura e gravação em fluxos. No entanto, esse conjunto não inclui todos os tipos de E/S do .NET Framework.
 
-Some important differences to note when using I/O operations in Windows 8.x Store apps:
+Algumas diferenças importantes a serem observadas ao usar operações de e/s em aplicativos da loja do Windows 8. x:
 
 - Tipos especificamente relacionados às operações de arquivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, não estão incluídos no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Em vez disso, use os tipos no namespace <xref:Windows.Storage?displayProperty=nameWithType> do Windows Runtime, como <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
@@ -155,15 +155,15 @@ Some important differences to note when using I/O operations in Windows 8.x Stor
 
 - Os tipos de compactação com base em caminhos <xref:System.IO.Compression.ZipFile> e <xref:System.IO.Compression.ZipFileExtensions> não estão disponíveis. Em vez disso, use os tipos no namespace <xref:Windows.Storage.Compression?displayProperty=nameWithType>.
 
-É possível converter entre fluxos do .NET Framework e fluxos do Windows Runtime, se necessário. For more information, see [How to: Convert Between .NET Framework Streams and Windows Runtime Streams](how-to-convert-between-dotnet-streams-and-winrt-streams.md) or <xref:System.IO.WindowsRuntimeStreamExtensions>.
+É possível converter entre fluxos do .NET Framework e fluxos do Windows Runtime, se necessário. Para obter mais informações, consulte [como converter entre fluxos de .NET Framework e fluxos de Windows Runtime](how-to-convert-between-dotnet-streams-and-winrt-streams.md) ou <xref:System.IO.WindowsRuntimeStreamExtensions>.
 
-For more information about I/O operations in a Windows 8.x Store app, see [Quickstart: Reading and writing files](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
+Para obter mais informações sobre operações de e/s em um aplicativo da loja do Windows 8. x, consulte [início rápido: lendo e gravando arquivos](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).
 
 ## <a name="io-and-security"></a>E/S e segurança
 
 Ao usar as classes no namespace <xref:System.IO?displayProperty=nameWithType>, você deve atender aos requisitos de segurança do sistema operacional, como ACLs (listas de controle de acesso) para controlar o acesso a arquivos e diretórios. Esse é um requisito adicional aos requisitos de <xref:System.Security.Permissions.FileIOPermission>. As ACLs podem ser gerenciadas por meio de programação. Para saber mais, confira [Como adicionar ou remover entradas da lista de controle de acesso](how-to-add-or-remove-access-control-list-entries.md).
 
-As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Instead, use [isolated storage](isolated-storage.md) for traditional .NET Framework applications, or use [application data](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) for Windows 8.x Store apps.
+As políticas de segurança padrão impedem que aplicativos da Internet ou intranet acessem arquivos no computador do usuário. Consequentemente, não use classes de E/S que exijam um caminho para um arquivo físico ao escrever código que será baixado via Internet ou intranet. Em vez disso, use o [armazenamento isolado](isolated-storage.md) para aplicativos .NET Framework tradicionais ou use [dados de aplicativos](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) para aplicativos da loja do Windows 8. x.
 
 Uma verificação de segurança é executada somente quando o fluxo é construído. Consequentemente, não abra um fluxo para depois passá-lo para código ou domínios de aplicativos menos confiáveis.
 

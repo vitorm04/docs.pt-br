@@ -32,7 +32,7 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
   
 - `Not Buffered`  
   
-     A opção <xref:System.Linq.ParallelMergeOptions.NotBuffered> faz com que cada elemento processado seja retornado de cada thread assim que ele for produzido. Esse comportamento é semelhante a fazer "streaming" da saída. Se o operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> estiver presente na consulta, `NotBuffered` preservará a ordem dos elementos de origem. Although `NotBuffered` starts yielding results as soon as they're available, the total time to produce all the results might still be longer than using one of the other merge options.  
+     A opção <xref:System.Linq.ParallelMergeOptions.NotBuffered> faz com que cada elemento processado seja retornado de cada thread assim que ele for produzido. Esse comportamento é semelhante a fazer "streaming" da saída. Se o operador <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> estiver presente na consulta, `NotBuffered` preservará a ordem dos elementos de origem. Embora `NotBuffered` comece a produzir os resultados assim que estiverem disponíveis, o tempo total para produzir todos os resultados ainda pode ser maior do que usar uma das outras opções de mesclagem.  
   
 - `Auto Buffered`  
   
@@ -45,7 +45,7 @@ Quando uma consulta está sendo executada como paralela, o PLINQ faz a partiçã
 ## <a name="query-operators-that-support-merge-options"></a>Operadores de consulta que dão suporte a opções de mesclagem  
  A tabela a seguir lista os operadores que dão suporte a todos os modos de opções de mesclagem sujeitos às restrições especificadas.  
   
-|Operador|Restrições|  
+|Operador|{1&gt;Restrições&lt;1}|  
 |--------------|------------------|  
 |<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|Nenhum|  
 |<xref:System.Linq.ParallelEnumerable.Cast%2A>|Nenhum|  

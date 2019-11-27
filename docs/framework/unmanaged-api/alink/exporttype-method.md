@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438574"
 ---
 # <a name="exporttype-method"></a>Método ExportType
-Specifies that a type is exportable.  
+Especifica que um tipo é exportável.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,28 +39,28 @@ HRESULT ExportType(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID of the assembly to export from.  
+ ID do assembly do qual exportar.  
   
  `FileToken`  
- File token or assembly ID of file that defines the exportable type.  
+ Token do arquivo ou ID do assembly do arquivo que define o tipo exportável.  
   
  `TypeToken`  
- Token of type to be made exportable.  
+ Token do tipo a ser tornado exportável.  
   
  `pszTypename`  
- Fully qualified type name to be made exportable.  
+ Nome de tipo totalmente qualificado a ser tornado exportável.  
   
  `dwFlags`  
- `ComType` flags such as `tdPublic` or `tdNested`. This parameter may be passed to [DefineExportedType Method](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
+ `ComType` sinalizadores como `tdPublic` ou `tdNested`. Esse parâmetro pode ser passado para o [método DefineExportedType](../metadata/imetadataassemblyemit-defineexportedtype-method.md).  
   
  `pType`  
- Receives token for exported type.  
+ Recebe o token para o tipo exportado.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ Requer ALink. h  
   
 ## <a name="see-also"></a>Consulte também
 

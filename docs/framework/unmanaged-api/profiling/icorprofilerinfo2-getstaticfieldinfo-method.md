@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74432979"
 ---
 # <a name="icorprofilerinfo2getstaticfieldinfo-method"></a>Método ICorProfilerInfo2::GetStaticFieldInfo
-Gets a value that indicates the kind of static that applies to the specified field.  
+Obtém um valor que indica o tipo de estático que se aplica ao campo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,23 +36,23 @@ HRESULT GetStaticFieldInfo (
   
 ## <a name="parameters"></a>Parâmetros  
  `classId`  
- [in] The ID of the class in which the static field is defined.  
+ no A ID da classe na qual o campo estático é definido.  
   
  `fieldToken`  
- [in] The metadata token for the static field.  
+ no O token de metadados para o campo estático.  
   
  `pFieldInfo`  
- [out] A pointer to a value of the [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) enumeration that indicates whether the specified field is static, and if so, the kind of static that applies to the field.  
+ fora Um ponteiro para um valor da enumeração [COR_PRF_STATIC_TYPE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-static-type-enumeration.md) que indica se o campo especificado é estático e, nesse caso, o tipo de estático que se aplica ao campo.  
   
 ## <a name="remarks"></a>Comentários  
- This information can be used to determine which function to call to get the address of the static field.  
+ Essas informações podem ser usadas para determinar qual função chamar para obter o endereço do campo estático.  
   
- The profiler code should still check the metadata for a static field to ensure that it actually has an address. Static literals (that is, constants) exist only in the metadata and do not have an address.  
+ O código do criador de perfil ainda deve verificar os metadados de um campo estático para garantir que ele realmente tenha um endereço. Literais estáticos (ou seja, constantes) existem somente nos metadados e não têm um endereço.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

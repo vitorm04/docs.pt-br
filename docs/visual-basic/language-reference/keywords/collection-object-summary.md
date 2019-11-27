@@ -12,15 +12,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349924"
 ---
 # <a name="collection-object-summary-visual-basic"></a>Resumo do objeto de coleção (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+As palavras-chave do idioma Visual Basic e os membros da biblioteca de tempo de execução são organizados por finalidade e uso.  
   
-|Ação|Elemento de linguagem|  
+|Action|Elemento Language|  
 |------------|----------------------|  
 |Crie um objeto `Collection`.|<xref:Microsoft.VisualBasic.Collection>|  
-|Add an item to a collection.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|Remove an object from a collection.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
-|Reference an item in a collection.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
-|Return a reference to an <xref:System.Collections.IEnumerator> interface.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|Adicionar um item a uma coleção.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|Remover um objeto de uma coleção.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|Referenciar um item em uma coleção.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
+|Retornar uma referência a uma interface <xref:System.Collections.IEnumerator>.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
 ## <a name="see-also"></a>Consulte também
 

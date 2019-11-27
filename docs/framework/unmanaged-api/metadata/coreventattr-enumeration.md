@@ -39,7 +39,7 @@ typedef enum CorEventAttr {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`evSpecialName`|Especifica que o evento é especial e que seu nome descreve como.|  
 |`evReservedMask`|Reservado para uso interno pelo Common Language Runtime.|  

@@ -18,56 +18,56 @@ ms.locfileid: "74435166"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).
 
-This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IInvokeProvider>, including information about events and properties. Links to additional references are listed at the end of the topic.
+Este tópico apresenta as diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>, incluindo informações sobre eventos e propriedades. Links para referências adicionais são listados no final do tópico.
 
-The <xref:System.Windows.Automation.InvokePattern> control pattern is used to support controls that do not maintain state when activated but rather initiate or perform a single, unambiguous action. Controls that do maintain state, such as check boxes and radio buttons, must instead implement <xref:System.Windows.Automation.Provider.IToggleProvider> and <xref:System.Windows.Automation.Provider.ISelectionItemProvider> respectively. For examples of controls that implement the Invoke control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).
+O padrão de controle de <xref:System.Windows.Automation.InvokePattern> é usado para dar suporte a controles que não mantêm o estado quando ativado, mas, em vez disso, inicia ou executa uma ação única e não ambígua. Os controles que mantêm o estado, como caixas de seleção e botões de opção, devem implementar <xref:System.Windows.Automation.Provider.IToggleProvider> e <xref:System.Windows.Automation.Provider.ISelectionItemProvider> respectivamente. Para obter exemplos de controles que implementam o padrão de controle Invoke, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).
 
 <a name="Implementation_Guidelines_and_Conventions"></a>
 
-## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions
+## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação
 
-When implementing the Invoke control pattern, note the following guidelines and conventions:
+Ao implementar o padrão de controle Invoke, observe as seguintes diretrizes e convenções:
 
-- Controls implement <xref:System.Windows.Automation.Provider.IInvokeProvider> if the same behavior is not exposed through another control pattern provider. For example, if the <xref:System.Windows.Automation.InvokePattern.Invoke%2A> method on a control performs the same action as the <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> or <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A> method, the control should not implement <xref:System.Windows.Automation.Provider.IInvokeProvider>.
+- Os controles implementam <xref:System.Windows.Automation.Provider.IInvokeProvider> se o mesmo comportamento não é exposto por meio de outro provedor de padrão de controle. Por exemplo, se o método <xref:System.Windows.Automation.InvokePattern.Invoke%2A> em um controle executar a mesma ação que o <xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A> ou o método <xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>, o controle não deverá implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>.
 
-- Invoking a control is generally performed by clicking or double-clicking or pressing ENTER, a predefined keyboard shortcut, or some alternate combination of keystrokes.
+- Invocar um controle geralmente é executado clicando ou clicando duas vezes ou pressionando ENTER, um atalho de teclado predefinido ou alguma combinação alternativa de pressionamentos de teclas.
 
-- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> is raised on a control that has been activated (as a response to a control carrying out its associated action). If possible, the event should be raised after the control has completed the action and returned without blocking. The Invoked event should be raised before servicing the Invoke request in the following scenarios:
+- <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> é gerado em um controle que foi ativado (como uma resposta a um controle que realiza sua ação associada). Se possível, o evento deve ser gerado depois que o controle tiver concluído a ação e retornado sem bloqueio. O evento chamado deve ser gerado antes de atender à solicitação Invoke nos seguintes cenários:
 
-  - It is not possible or practical to wait until the action is complete.
+  - Não é possível ou prático aguardar até que a ação seja concluída.
 
-  - The action requires user interaction.
+  - A ação requer interação do usuário.
 
-  - The action is time-consuming and will cause the calling client to block for a significant amount of time.
+  - A ação é demorada e fará com que o cliente de chamada seja bloqueado por um período significativo.
 
-- If invoking the control has significant side-effects, those side-effects should be exposed through the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A> property. For example, even though <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> is not associated with selection, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> may cause another control to become selected.
+- Se invocar o controle tiver efeitos colaterais significativos, esses efeitos colaterais devem ser expostos por meio da propriedade <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.HelpText%2A>. Por exemplo, embora <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> não esteja associado à seleção, <xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> pode fazer com que outro controle se torne selecionado.
 
-- Hover (or mouse-over) effects generally do not constitute an Invoked event. However, controls that perform an action (as opposed to cause a visual effect) based on the hover state should support the <xref:System.Windows.Automation.InvokePattern> control pattern.
+- Os efeitos de focalizar (ou passar pelo mouse) geralmente não constituem um evento chamado. No entanto, os controles que executam uma ação (em oposição a causar um efeito visual) com base no estado de foco devem dar suporte ao padrão de controle de <xref:System.Windows.Automation.InvokePattern>.
 
 > [!NOTE]
-> This implementation is considered an accessibility issue if the control can be invoked only as a result of a mouse-related side effect.
+> Essa implementação é considerada um problema de acessibilidade se o controle puder ser invocado somente como resultado de um efeito colateral relacionado ao mouse.
 
-- Invoking a control is different from selecting an item. However, depending on the control, invoking it may cause the item to become selected as a side-effect. For example, invoking a Microsoft Word document list item in the My Documents folder both selects the item and opens the document.
+- Invocar um controle é diferente de selecionar um item. No entanto, dependendo do controle, a invocação pode fazer com que o item se torne selecionado como um efeito colateral. Por exemplo, invocar um item de lista de documentos do Microsoft Word na pasta meus documentos seleciona o item e abre o documento.
 
-- An element can disappear from the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree immediately upon being invoked. Requesting information from the element provided by the event callback may fail as a result. Pre-fetching cached information is the recommended workaround.
+- Um elemento pode desaparecer da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] imediatamente após ser invocado. A solicitação de informações do elemento fornecido pelo retorno de chamada do evento pode falhar como resultado. A solução prévia de informações em cache é a alternativa recomendada.
 
-- Controls can implement multiple control patterns. For example, the Fill Color control on the Microsoft Excel toolbar implements both the <xref:System.Windows.Automation.InvokePattern> and the <xref:System.Windows.Automation.ExpandCollapsePattern> control patterns. <xref:System.Windows.Automation.ExpandCollapsePattern> exposes the menu and the <xref:System.Windows.Automation.InvokePattern> fills the active selection with the chosen color.
+- Os controles podem implementar vários padrões de controle. Por exemplo, o controle cor de preenchimento na barra de ferramentas do Microsoft Excel implementa o <xref:System.Windows.Automation.InvokePattern> e os padrões de controle de <xref:System.Windows.Automation.ExpandCollapsePattern>. <xref:System.Windows.Automation.ExpandCollapsePattern> expõe o menu e o <xref:System.Windows.Automation.InvokePattern> preenche a seleção ativa com a cor escolhida.
 
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>
 
-## <a name="required-members-for-iinvokeprovider"></a>Required Members for IInvokeProvider
+## <a name="required-members-for-iinvokeprovider"></a>Membros necessários para IInvokeProvider
 
-The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IInvokeProvider>.
+As propriedades e os métodos a seguir são necessários para implementar <xref:System.Windows.Automation.Provider.IInvokeProvider>.
 
-|Required members|Member type|Anotações|
+|Membros necessários|Tipo de membro|{1&gt;Observações&lt;1}|
 |----------------------|-----------------|-----------|
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|method|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> is an asynchronous call and must return immediately without blocking.<br /><br /> This behavior is particularly critical for controls that, directly or indirectly, launch a modal dialog when invoked. Any UI Automation client that instigated the event will remain blocked until the modal dialog is closed.|
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|{1&gt;método&lt;1}|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> é uma chamada assíncrona e deve retornar imediatamente sem bloqueio.<br /><br /> Esse comportamento é particularmente crítico para controles que, direta ou indiretamente, iniciam uma caixa de diálogo modal quando invocada. Qualquer cliente de automação de interface do usuário que atraia o evento permanecerá bloqueado até que a caixa de diálogo modal seja fechada.|
 
 <a name="Exceptions"></a>
 
 ## <a name="exceptions"></a>Exceções
 
-Providers must throw the following exceptions.
+Os provedores devem lançar as seguintes exceções.
 
 |Tipo de exceção|Condição|
 |--------------------|---------------|

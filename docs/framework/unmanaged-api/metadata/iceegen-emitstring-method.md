@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436390"
 ---
 # <a name="iceegenemitstring-method"></a>Método ICeeGen::EmitString
-Emits the specified string into the code base.  
+Emite a cadeia de caracteres especificada na base de código.  
   
- This method is obsolete and should not be used.  
+ Este método é obsoleto e não deve ser usado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,17 +38,17 @@ HRESULT EmitString (
   
 ## <a name="parameters"></a>Parâmetros  
  `lpString`  
- [in] The string to emit.  
+ no A cadeia de caracteres a ser emitida.  
   
  `RVA`  
- [out] The relative virtual address of the emitted string.  
+ fora O endereço virtual relativo da cadeia de caracteres emitida.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

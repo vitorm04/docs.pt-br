@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437132"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>Método IMetaDataImport::GetParamProps
-Gets metadata values for the parameter referenced by the specified ParamDef token.  
+Obtém valores de metadados para o parâmetro referenciado pelo token ParamDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,45 +44,45 @@ HRESULT GetParamProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] A ParamDef token that represents the parameter to return metadata for.  
+ no Um token ParamDef que representa o parâmetro para o qual retornar metadados.  
   
  `pmd`  
- [out] A pointer to a MethodDef token representing the method that takes the parameter.  
+ fora Um ponteiro para um token MethodDef que representa o método que usa o parâmetro.  
   
  `pulSequence`  
- [out] The ordinal position of the parameter in the method argument list.  
+ fora A posição ordinal do parâmetro na lista de argumentos do método.  
   
  `szName`  
- [out] A buffer to hold the name of the parameter.  
+ fora Um buffer para armazenar o nome do parâmetro.  
   
  `cchName`  
- [in] The requested size in wide characters of `szName`.  
+ no O tamanho solicitado em caracteres largos de `szName`.  
   
  `pchName`  
- [out] The returned size in wide characters of `szName`.  
+ fora O tamanho retornado em caracteres largos de `szName`.  
   
  `pdwAttr`  
- [out] A pointer to any attribute flags associated with the parameter. This is a bitmask of `CorParamAttr` values.  
+ fora Um ponteiro para qualquer sinalizador de atributo associado ao parâmetro. Este é um bitmask de valores de `CorParamAttr`.  
   
  `pdwCPlusTypeFlag`  
- [out] A pointer to a flag specifying that the parameter is a <xref:System.ValueType>.  
+ fora Um ponteiro para um sinalizador que especifica que o parâmetro é um <xref:System.ValueType>.  
   
  `ppValue`  
- [out] A pointer to a constant string returned by the parameter.  
+ fora Um ponteiro para uma cadeia de caracteres constante retornada pelo parâmetro.  
   
  `pcchValue`  
- [out] The size of `ppValue` in wide characters, or zero if `ppValue` does not hold a string.  
+ fora O tamanho de `ppValue` em caracteres largos ou zero se `ppValue` não mantiver uma cadeia de caracteres.  
   
 ## <a name="remarks"></a>Comentários
 
-The sequence values in `pulSequence` begin with 1 for parameters. A return value has a sequence number of 0.
+Os valores de sequência em `pulSequence` começam com 1 para parâmetros. Um valor de retorno tem um número de sequência de 0.
 
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

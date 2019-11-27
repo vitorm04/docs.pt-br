@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450135"
 ---
 # <a name="corpropertyattr-enumeration"></a>Enumeração CorPropertyAttr
-Contains values that describe the metadata of a property.  
+Contém valores que descrevem os metadados de uma propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,18 +40,18 @@ typedef enum CorPropertyAttr {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`prSpecialName`|Specifies that the property is special, and that its name describes how.|  
-|`prReservedMask`|Reserved for internal use by the common language runtime.|  
-|`prRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the property name.|  
+|`prSpecialName`|Especifica que a propriedade é especial e que seu nome descreve como.|  
+|`prReservedMask`|Reservado para uso interno pelo Common Language Runtime.|  
+|`prRTSpecialName`|Especifica que os Common Language Runtime APIs internas de metadados devem verificar a codificação do nome da propriedade.|  
 |`prHasDefault`|Especifica que a propriedade tem um valor padrão.|  
 |`prUnused`|Não utilizado.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

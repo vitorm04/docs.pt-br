@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434387"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>Método IMetaDataEmit::DefineTypeRefByName
-Gets a metadata token for a type that is defined in the specified scope, which is outside the current scope.  
+Obtém um token de metadados para um tipo que é definido no escopo especificado, que está fora do escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,30 +37,30 @@ HRESULT DefineTypeRefByName (
   
 ## <a name="parameters"></a>Parâmetros  
  `tkResolutionScope`  
- [in] The token specifying the resolution scope. The following token types are valid:  
+ no O token que especifica o escopo de resolução. Os seguintes tipos de token são válidos:  
   
-- `mdModuleRef`, if the type is defined in the same assembly in which the caller is defined.  
+- `mdModuleRef`, se o tipo for definido no mesmo assembly no qual o chamador está definido.  
   
-- `mdAssemblyRef`, if the type is defined in an assembly other than the one in which the caller is defined.  
+- `mdAssemblyRef`, se o tipo for definido em um assembly diferente daquele em que o chamador é definido.  
   
-- `mdTypeRef`, if the type is a nested type.  
+- `mdTypeRef`, se o tipo for um tipo aninhado.  
   
-- `mdModule`, if the type is defined in the same module in which the caller is defined.  
+- `mdModule`, se o tipo for definido no mesmo módulo no qual o chamador é definido.  
   
-- Null, if the type is defined globally.  
+- NULL, se o tipo for definido globalmente.  
   
  `szName`  
- [in] The name of the target type in Unicode.  
+ no O nome do tipo de destino em Unicode.  
   
  `ptr`  
- [out] A pointer to the `mdTypeRef` token that is assigned to the type.  
+ fora Um ponteiro para o `mdTypeRef` token que é atribuído ao tipo.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

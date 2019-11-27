@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448202"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>Método ICorProfilerFunctionEnum::Skip
-Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.  
+Avança o cursor do enumerador de sua posição atual para que o número especificado de elementos seja ignorado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,23 +33,23 @@ HRESULT Skip([in] ULONG celt);
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] The number of elements to be skipped.  
+ no O número de elementos a serem ignorados.  
   
 ## <a name="return-value"></a>Valor retornado  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|`celt` elements were skipped.|  
-|S_FALSE|Fewer than `celt` elements were skipped, which indicates that there are no more elements.|  
+|S_OK|`celt` elementos foram ignorados.|  
+|S_FALSE|Menos de `celt` elementos foram ignorados, o que indica que não há mais elementos.|  
   
 ## <a name="remarks"></a>Comentários  
- The new position of this enumerator's cursor is (current position) + `celt`.  
+ A nova posição do cursor deste enumerador é (posição atual) + `celt`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -17,39 +17,39 @@ ms.locfileid: "74435258"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IGridItemProvider>, including information about properties. Links to additional references are listed at the end of the overview.  
+ Este tópico apresenta as diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.IGridItemProvider>, incluindo informações sobre propriedades. Links para referências adicionais são listados no final da visão geral.  
   
- The <xref:System.Windows.Automation.GridItemPattern> control pattern is used to support individual child controls of containers that implement <xref:System.Windows.Automation.Provider.IGridProvider>. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
+ O padrão de controle <xref:System.Windows.Automation.GridItemPattern> é usado para dar suporte a controles filho individuais de contêineres que implementam <xref:System.Windows.Automation.Provider.IGridProvider>. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
- When implementing <xref:System.Windows.Automation.Provider.IGridProvider>, note the following guidelines and conventions:  
+## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
+ Ao implementar <xref:System.Windows.Automation.Provider.IGridProvider>, observe as seguintes diretrizes e convenções:  
   
-- Grid coordinates are zero-based with the upper left cell having coordinates (0, 0).  
+- As coordenadas de grade são baseadas em zero com a célula superior esquerda com coordenadas (0, 0).  
   
-- Merged cells will report their <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> and <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> properties based on their underlying anchor cell as defined by the UI Automation provider. Typically, it will be the topmost and leftmost row or column.  
+- As células mescladas relatarão suas <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> e <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> Propriedades com base em sua célula de âncora subjacente, conforme definido pelo provedor de automação de interface do usuário. Normalmente, será a linha ou coluna mais alta e mais à esquerda.  
   
-- <xref:System.Windows.Automation.Provider.IGridItemProvider> does not provide for active manipulation of the grid such as merging or splitting cells.  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> não fornece manipulação ativa da grade, como mesclagem ou divisão de células.  
   
-- Controls that implement <xref:System.Windows.Automation.Provider.IGridItemProvider> can typically be traversed (that is, a UI Automation client can move to adjacent controls) by using the keyboard.  
+- Controles que implementam <xref:System.Windows.Automation.Provider.IGridItemProvider> normalmente podem ser percorridos (ou seja, um cliente de automação da interface do usuário pode mover para controles adjacentes) usando o teclado.  
   
 <a name="Required_Members_for_IGridItemProvider"></a>   
-## <a name="required-members-for-igriditemprovider"></a>Required Members for IGridItemProvider  
- The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
+## <a name="required-members-for-igriditemprovider"></a>Membros necessários para IGridItemProvider  
+ As propriedades e os métodos a seguir são necessários para implementar <xref:System.Windows.Automation.Provider.IGridItemProvider>.  
   
-|Required members|Member type|Anotações|  
+|Membros necessários|Tipo de membro|{1&gt;Observações&lt;1}|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|propriedade|Nenhum|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|Propriedade|Nenhum|  
   
- This control pattern has no associated methods or events.  
+ Este padrão de controle não tem nenhum método ou evento associado.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  
- This control pattern has no associated exceptions.  
+ Este padrão de controle não tem nenhuma exceção associada.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440214"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>Método IMetaDataAssemblyEmit::DefineFile
-Creates a `File` metadata structure containing metadata for assembly referenced by this assembly, and returns the associated metadata token.  
+Cria uma estrutura de metadados `File` que contém metadados para o assembly referenciado por esse assembly e retorna o token de metadados associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,29 +39,29 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>Parâmetros  
  `szName`  
- [in] The name of the file to be consumed.  
+ no O nome do arquivo a ser consumido.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the assembly.  
+ no Um ponteiro para os dados de hash associados ao assembly.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ no O tamanho em bytes de `pbHashValue`.  
   
  `dwFileFlags`  
- [in] A bitwise combination of `FileFlags` values that specify property settings.  
+ no Uma combinação de bits de `FileFlags` de valores que especifica configurações de propriedade.  
   
  `pmdf`  
- [out] A pointer to the returned `File` token.  
+ fora Um ponteiro para o token de `File` retornado.  
   
 ## <a name="remarks"></a>Comentários  
- One `File` metadata structure must be defined for each file that was part of this assembly at the time that this assembly was built, excluding the file that contains the metadata.  
+ Uma estrutura de metadados `File` deve ser definida para cada arquivo que faz parte desse assembly no momento em que esse assembly foi criado, excluindo o arquivo que contém os metadados.  
   
-## <a name="requirements"></a>Requisitos  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataforma:** Consulte [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442858"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>Método ICorProfilerInfo4::GetReJITIDs
-Returns an array of IDs that identify all JIT-recompiled versions of the specified function that are still allocated. This includes JIT-recompiled versions of functions that have been subsequently reverted but not yet freed (for example, when the application domain that contains the reverted function is still in use).  
+Retorna uma matriz de IDs que identifica todas as versões recompiladas por JIT da função especificada que ainda estão alocadas. Isso inclui versões recompiladas do JIT de funções que foram revertidas posteriormente, mas ainda não foram liberadas (por exemplo, quando o domínio do aplicativo que contém a função revertida ainda estiver em uso).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,24 +37,24 @@ HRESULT GetReJITIDs (
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] The `FunctionID` of the function instance for which to enumerate versions.  
+ no O `FunctionID` da instância de função para a qual enumerar versões.  
   
  `cReJitIds`  
- [in] The number of JIT-recompiled IDs allocated in the `reJitIds` array.  
+ no O número de IDs recompiladas por JIT alocadas na matriz de `reJitIds`.  
   
  `pcReJitIds`  
- [out] The actual number of JIT-recompiled IDs.  
+ fora O número real de IDs recompiladas por JIT.  
   
  `reJitIds`  
- [out] A caller-allocated array that will contain the JIT-recompiled IDs for the specified function.  
+ fora Uma matriz alocada pelo chamador que conterá as IDs de compilação JIT recompiladas para a função especificada.  
   
 ## <a name="remarks"></a>Comentários  
- `GetReJITIDs` enumerates the active JIT-recompiled IDs for a given function instance. It follows the same usage pattern as other `ICorProfilerInfo` functions that accept caller-allocated buffers.  
+ `GetReJITIDs` enumera as IDs de recompilação de JIT ativas para uma determinada instância de função. Ele segue o mesmo padrão de uso que outras funções `ICorProfilerInfo` que aceitam buffers alocados pelo chamador.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

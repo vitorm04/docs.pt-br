@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450070"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>Método IMetaDataImport::EnumMethodSemantics
-Enumerates the properties and the property-change events to which the specified method is related.  
+Enumera as propriedades e os eventos de alteração de propriedade aos quais o método especificado está relacionado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,36 +39,36 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `mb`  
- [in] A MethodDef token that limits the scope of the enumeration.  
+ no Um token MethodDef que limita o escopo da enumeração.  
   
  `rEventProp`  
- [out] The array used to store the events or properties.  
+ fora A matriz usada para armazenar os eventos ou as propriedades.  
   
  `cMax`  
- [in] The maximum size of the `rEventProp` array.  
+ no O tamanho máximo da matriz de `rEventProp`.  
   
  `pcEventProp`  
- [out] The number of events or properties returned in `rEventProp`.  
+ fora O número de eventos ou Propriedades retornados em `rEventProp`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` returned successfully.|  
-|`S_FALSE`|There are no events or properties to enumerate. In that case, `pcEventProp` is zero.|  
+|`S_OK`|`EnumMethodSemantics` retornado com êxito.|  
+|`S_FALSE`|Não há eventos ou propriedades para enumerar. Nesse caso, `pcEventProp` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- Many common language runtime types define *Property*`Changed` events and `On`*Property*`Changed` methods related to their properties. For example, the <xref:System.Windows.Forms.Control?displayProperty=nameWithType> type defines a <xref:System.Windows.Forms.Control.Font%2A> property, a <xref:System.Windows.Forms.Control.FontChanged> event, and an <xref:System.Windows.Forms.Control.OnFontChanged%2A> method. The set accessor method of the <xref:System.Windows.Forms.Control.Font%2A> property calls <xref:System.Windows.Forms.Control.OnFontChanged%2A> method, which in turn raises the <xref:System.Windows.Forms.Control.FontChanged> event. You would call `EnumMethodSemantics` using the MethodDef for <xref:System.Windows.Forms.Control.OnFontChanged%2A> to get references to the <xref:System.Windows.Forms.Control.Font%2A> property and the <xref:System.Windows.Forms.Control.FontChanged> event.  
+ Muitos tipos de Common Language Runtime definem eventos de`Changed` de *Propriedade* e `On`métodos de`Changed` de *Propriedade* relacionados a suas propriedades. Por exemplo, o tipo de <xref:System.Windows.Forms.Control?displayProperty=nameWithType> define uma propriedade <xref:System.Windows.Forms.Control.Font%2A>, um evento <xref:System.Windows.Forms.Control.FontChanged> e um método <xref:System.Windows.Forms.Control.OnFontChanged%2A>. O método do acessador set da propriedade <xref:System.Windows.Forms.Control.Font%2A> chama <xref:System.Windows.Forms.Control.OnFontChanged%2A> método, que, por sua vez, gera o evento <xref:System.Windows.Forms.Control.FontChanged>. Você chamaria `EnumMethodSemantics` usando o MethodDef para <xref:System.Windows.Forms.Control.OnFontChanged%2A> para obter referências à propriedade <xref:System.Windows.Forms.Control.Font%2A> e ao evento <xref:System.Windows.Forms.Control.FontChanged>.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
