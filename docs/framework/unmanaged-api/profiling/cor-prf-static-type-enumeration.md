@@ -21,10 +21,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448445"
 ---
-# <a name="cor_prf_static_type-enumeration"></a><span data-ttu-id="0b8d7-102">Enumeração COR_PRF_STATIC_TYPE</span><span class="sxs-lookup"><span data-stu-id="0b8d7-102">COR_PRF_STATIC_TYPE Enumeration</span></span>
-<span data-ttu-id="0b8d7-103">Indica se um campo é estático e, em caso positivo, a qualidade estática aplicada ao campo.</span><span class="sxs-lookup"><span data-stu-id="0b8d7-103">Indicates whether a field is static and, if so, the static quality that applies to the field.</span></span> <span data-ttu-id="0b8d7-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span><span class="sxs-lookup"><span data-stu-id="0b8d7-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span></span>  
+# <a name="cor_prf_static_type-enumeration"></a><span data-ttu-id="7bd52-102">Enumeração COR_PRF_STATIC_TYPE</span><span class="sxs-lookup"><span data-stu-id="7bd52-102">COR_PRF_STATIC_TYPE Enumeration</span></span>
+<span data-ttu-id="7bd52-103">Indica se um campo é estático e, em caso positivo, a qualidade estática aplicada ao campo.</span><span class="sxs-lookup"><span data-stu-id="7bd52-103">Indicates whether a field is static and, if so, the static quality that applies to the field.</span></span> <span data-ttu-id="7bd52-104">Esses valores podem ser combinados usando-se a operação OR de bits para indicar que o campo tem várias qualidades estáticas diferentes.</span><span class="sxs-lookup"><span data-stu-id="7bd52-104">These values can be combined using the bitwise OR operation to indicate that the field has multiple, different static qualities.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0b8d7-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0b8d7-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7bd52-105">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7bd52-105">Syntax</span></span>  
   
 ```cpp  
 typedef enum {  
@@ -36,25 +36,25 @@ typedef enum {
 } COR_PRF_STATIC_TYPE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0b8d7-106">Membros</span><span class="sxs-lookup"><span data-stu-id="0b8d7-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7bd52-106">Membros</span><span class="sxs-lookup"><span data-stu-id="7bd52-106">Members</span></span>  
   
-|<span data-ttu-id="0b8d7-107">Membro</span><span class="sxs-lookup"><span data-stu-id="0b8d7-107">Member</span></span>|<span data-ttu-id="0b8d7-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="0b8d7-108">Description</span></span>|  
+|<span data-ttu-id="7bd52-107">{1&gt;Membro&lt;1}</span><span class="sxs-lookup"><span data-stu-id="7bd52-107">Member</span></span>|<span data-ttu-id="7bd52-108">Descrição</span><span class="sxs-lookup"><span data-stu-id="7bd52-108">Description</span></span>|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|<span data-ttu-id="0b8d7-109">The field is not static.</span><span class="sxs-lookup"><span data-stu-id="0b8d7-109">The field is not static.</span></span>|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|<span data-ttu-id="0b8d7-110">The field is application domain-static.</span><span class="sxs-lookup"><span data-stu-id="0b8d7-110">The field is application domain-static.</span></span>|  
-|`COR_PRF_FIELD_THREAD_STATIC`|<span data-ttu-id="0b8d7-111">The field is thread-static.</span><span class="sxs-lookup"><span data-stu-id="0b8d7-111">The field is thread-static.</span></span>|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|<span data-ttu-id="0b8d7-112">The field is context-static.</span><span class="sxs-lookup"><span data-stu-id="0b8d7-112">The field is context-static.</span></span>|  
-|`COR_PRF_FIELD_RVA_STATIC`|<span data-ttu-id="0b8d7-113">The field is relative virtual address (RVA)-static.</span><span class="sxs-lookup"><span data-stu-id="0b8d7-113">The field is relative virtual address (RVA)-static.</span></span>|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|<span data-ttu-id="7bd52-109">O campo não é estático.</span><span class="sxs-lookup"><span data-stu-id="7bd52-109">The field is not static.</span></span>|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|<span data-ttu-id="7bd52-110">O campo é um domínio de aplicativo estático.</span><span class="sxs-lookup"><span data-stu-id="7bd52-110">The field is application domain-static.</span></span>|  
+|`COR_PRF_FIELD_THREAD_STATIC`|<span data-ttu-id="7bd52-111">O campo é thread-estático.</span><span class="sxs-lookup"><span data-stu-id="7bd52-111">The field is thread-static.</span></span>|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|<span data-ttu-id="7bd52-112">O campo é de contexto estático.</span><span class="sxs-lookup"><span data-stu-id="7bd52-112">The field is context-static.</span></span>|  
+|`COR_PRF_FIELD_RVA_STATIC`|<span data-ttu-id="7bd52-113">O campo é um endereço virtual relativo (RVA)-estático.</span><span class="sxs-lookup"><span data-stu-id="7bd52-113">The field is relative virtual address (RVA)-static.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0b8d7-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0b8d7-114">Requirements</span></span>  
- <span data-ttu-id="0b8d7-115">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0b8d7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7bd52-114">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="7bd52-114">Requirements</span></span>  
+ <span data-ttu-id="7bd52-115">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7bd52-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0b8d7-116">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0b8d7-116">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="7bd52-116">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="7bd52-116">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="0b8d7-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0b8d7-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7bd52-117">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7bd52-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0b8d7-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b8d7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="7bd52-118">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7bd52-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0b8d7-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0b8d7-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7bd52-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7bd52-119">See also</span></span>
 
-- [<span data-ttu-id="0b8d7-120">Criando perfil de enumerações</span><span class="sxs-lookup"><span data-stu-id="0b8d7-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [<span data-ttu-id="7bd52-120">Criando perfil de enumerações</span><span class="sxs-lookup"><span data-stu-id="7bd52-120">Profiling Enumerations</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)

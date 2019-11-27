@@ -22,10 +22,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448488"
 ---
-# <a name="ibindingdisplayinitializeforprocess-method"></a><span data-ttu-id="d7e2c-102">Método IBindingDisplay::InitializeForProcess</span><span class="sxs-lookup"><span data-stu-id="d7e2c-102">IBindingDisplay::InitializeForProcess Method</span></span>
-<span data-ttu-id="d7e2c-103">Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.</span><span class="sxs-lookup"><span data-stu-id="d7e2c-103">Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.</span></span>  
+# <a name="ibindingdisplayinitializeforprocess-method"></a><span data-ttu-id="a1f8d-102">Método IBindingDisplay::InitializeForProcess</span><span class="sxs-lookup"><span data-stu-id="a1f8d-102">IBindingDisplay::InitializeForProcess Method</span></span>
+<span data-ttu-id="a1f8d-103">Inicializa o objeto [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) .</span><span class="sxs-lookup"><span data-stu-id="a1f8d-103">Initializes the [IBindingDisplay](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md) object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d7e2c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d7e2c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a1f8d-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a1f8d-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT InitializeForProcess (  
@@ -33,22 +33,22 @@ HRESULT InitializeForProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d7e2c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="d7e2c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a1f8d-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a1f8d-105">Parameters</span></span>  
  `pid`  
- <span data-ttu-id="d7e2c-106">[in] The process identifier.</span><span class="sxs-lookup"><span data-stu-id="d7e2c-106">[in] The process identifier.</span></span>  
+ <span data-ttu-id="a1f8d-106">no O identificador do processo.</span><span class="sxs-lookup"><span data-stu-id="a1f8d-106">[in] The process identifier.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d7e2c-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="d7e2c-107">Remarks</span></span>  
- <span data-ttu-id="d7e2c-108">The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display.</span><span class="sxs-lookup"><span data-stu-id="d7e2c-108">The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display.</span></span> <span data-ttu-id="d7e2c-109">`InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.</span><span class="sxs-lookup"><span data-stu-id="d7e2c-109">`InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a1f8d-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="a1f8d-107">Remarks</span></span>  
+ <span data-ttu-id="a1f8d-108">O depurador chama o método `InitializeForProcess` no momento da criação para inicializar a exibição de associação.</span><span class="sxs-lookup"><span data-stu-id="a1f8d-108">The debugger calls the `InitializeForProcess` method at creation time to initialize the binding display.</span></span> <span data-ttu-id="a1f8d-109">`InitializeForProcess` deve ser chamado no momento da criação antes que qualquer outro método em `IBindingDisplay` seja chamado.</span><span class="sxs-lookup"><span data-stu-id="a1f8d-109">`InitializeForProcess` must be called at creation time before any other method on `IBindingDisplay` is called.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d7e2c-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d7e2c-110">Requirements</span></span>  
- <span data-ttu-id="d7e2c-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7e2c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a1f8d-110">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="a1f8d-110">Requirements</span></span>  
+ <span data-ttu-id="a1f8d-111">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="a1f8d-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d7e2c-112">**Header:** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="d7e2c-112">**Header:** BindingDisplay.h</span></span>  
+ <span data-ttu-id="a1f8d-112">**Cabeçalho:** BindingDisplay. h</span><span class="sxs-lookup"><span data-stu-id="a1f8d-112">**Header:** BindingDisplay.h</span></span>  
   
- <span data-ttu-id="d7e2c-113">**Library:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="d7e2c-113">**Library:** BindingDisplay.idl</span></span>  
+ <span data-ttu-id="a1f8d-113">**Biblioteca:** BindingDisplay. idl</span><span class="sxs-lookup"><span data-stu-id="a1f8d-113">**Library:** BindingDisplay.idl</span></span>  
   
- <span data-ttu-id="d7e2c-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7e2c-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a1f8d-114">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a1f8d-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7e2c-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="d7e2c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a1f8d-115">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a1f8d-115">See also</span></span>
 
-- [<span data-ttu-id="d7e2c-116">Interface IBindingDisplay</span><span class="sxs-lookup"><span data-stu-id="d7e2c-116">IBindingDisplay Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)
+- [<span data-ttu-id="a1f8d-116">Interface IBindingDisplay</span><span class="sxs-lookup"><span data-stu-id="a1f8d-116">IBindingDisplay Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)

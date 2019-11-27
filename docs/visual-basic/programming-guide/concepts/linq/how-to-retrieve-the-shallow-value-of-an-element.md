@@ -9,17 +9,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346906"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a><span data-ttu-id="4f29d-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f29d-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-visual-basic"></a><span data-ttu-id="e6799-102">Como recuperar o valor superficial de um elemento (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6799-102">How to: Retrieve the Shallow Value of an Element (Visual Basic)</span></span>
 
-<span data-ttu-id="4f29d-103">Este tópico mostra como obter o valor raso de um elemento.</span><span class="sxs-lookup"><span data-stu-id="4f29d-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="4f29d-104">O valor raso é o valor do elemento específico somente, diferentemente de valor maior, que inclui os valores de todos os elementos descendentes concatenados em uma única cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="4f29d-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>
+<span data-ttu-id="e6799-103">Este tópico mostra como obter o valor raso de um elemento.</span><span class="sxs-lookup"><span data-stu-id="e6799-103">This topic shows how to get the shallow value of an element.</span></span> <span data-ttu-id="e6799-104">O valor raso é o valor do elemento específico somente, diferentemente de valor maior, que inclui os valores de todos os elementos descendentes concatenados em uma única cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="e6799-104">The shallow value is the value of the specific element only, as opposed to the deep value, which includes the values of all descendent elements concatenated into a single string.</span></span>
 
-<span data-ttu-id="4f29d-105">Quando você recupera um valor de elemento usando conversão ou propriedade de <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> , você recupera o valor maior.</span><span class="sxs-lookup"><span data-stu-id="4f29d-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="4f29d-106">Para recuperar o valor raso, você pode usar o método de extensão de `ShallowValue`, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="4f29d-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the following example.</span></span> <span data-ttu-id="4f29d-107">Recuperar o valor raso é útil quando você deseja selecionar elementos com base no conteúdo.</span><span class="sxs-lookup"><span data-stu-id="4f29d-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>
+<span data-ttu-id="e6799-105">Quando você recupera um valor de elemento usando conversão ou propriedade de <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> , você recupera o valor maior.</span><span class="sxs-lookup"><span data-stu-id="e6799-105">When you retrieve an element value by using either casting or the <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> property, you retrieve the deep value.</span></span> <span data-ttu-id="e6799-106">Para recuperar o valor raso, você pode usar o método de extensão de `ShallowValue`, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="e6799-106">To retrieve the shallow value, you can use the `ShallowValue` extension method, as shown in the following example.</span></span> <span data-ttu-id="e6799-107">Recuperar o valor raso é útil quando você deseja selecionar elementos com base no conteúdo.</span><span class="sxs-lookup"><span data-stu-id="e6799-107">Retrieving the shallow value is useful when you want to select elements based on their content.</span></span>
 
-<span data-ttu-id="4f29d-108">O exemplo a seguir declara um método de extensão que recupera o valor raso de um elemento.</span><span class="sxs-lookup"><span data-stu-id="4f29d-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="4f29d-109">Use o método de extensão em uma consulta para listar todos os elementos que contém um valor calculado.</span><span class="sxs-lookup"><span data-stu-id="4f29d-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>
+<span data-ttu-id="e6799-108">O exemplo a seguir declara um método de extensão que recupera o valor raso de um elemento.</span><span class="sxs-lookup"><span data-stu-id="e6799-108">The following example declares an extension method that retrieves the shallow value of an element.</span></span> <span data-ttu-id="e6799-109">Use o método de extensão em uma consulta para listar todos os elementos que contém um valor calculado.</span><span class="sxs-lookup"><span data-stu-id="e6799-109">It then uses the extension method in a query to list all elements that contain a calculated value.</span></span>
 
-## <a name="example"></a><span data-ttu-id="4f29d-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="4f29d-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e6799-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e6799-110">Example</span></span>
 
-<span data-ttu-id="4f29d-111">O seguinte arquivo de texto, Report.xml, é a fonte para esse exemplo.</span><span class="sxs-lookup"><span data-stu-id="4f29d-111">The following text file, Report.xml, is the source for this example.</span></span>
+<span data-ttu-id="e6799-111">O seguinte arquivo de texto, Report.xml, é a fonte para esse exemplo.</span><span class="sxs-lookup"><span data-stu-id="e6799-111">The following text file, Report.xml, is the source for this example.</span></span>
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -67,7 +67,7 @@ Module Module1
 End Module
 ```
 
-<span data-ttu-id="4f29d-112">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="4f29d-112">This example produces the following output:</span></span>
+<span data-ttu-id="e6799-112">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="e6799-112">This example produces the following output:</span></span>
 
 ```console
 Column  Name="CustomerId"   =Customer.CustomerId.Heading
@@ -76,6 +76,6 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name
 ```
 
-## <a name="see-also"></a><span data-ttu-id="4f29d-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4f29d-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6799-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e6799-113">See also</span></span>
 
-- [<span data-ttu-id="4f29d-114">Eixos LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4f29d-114">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [<span data-ttu-id="e6799-114">Eixos LINQ to XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6799-114">LINQ to XML Axes (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

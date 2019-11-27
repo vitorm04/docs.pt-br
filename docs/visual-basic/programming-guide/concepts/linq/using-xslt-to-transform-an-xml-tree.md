@@ -9,11 +9,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350523"
 ---
-# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a><span data-ttu-id="c3952-102">Using XSLT to Transform an XML Tree (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3952-102">Using XSLT to Transform an XML Tree (Visual Basic)</span></span>
+# <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a><span data-ttu-id="ebbc0-102">Usando o XSLT para transformar uma árvore XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ebbc0-102">Using XSLT to Transform an XML Tree (Visual Basic)</span></span>
 
-<span data-ttu-id="c3952-103">Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> na árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que gravarão no novo documento.</span><span class="sxs-lookup"><span data-stu-id="c3952-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="c3952-104">Em seguida, você pode chamar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> para a transformação.</span><span class="sxs-lookup"><span data-stu-id="c3952-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="c3952-105">Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.</span><span class="sxs-lookup"><span data-stu-id="c3952-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>
+<span data-ttu-id="ebbc0-103">Você pode criar uma árvore XML, criar um <xref:System.Xml.XmlReader> na árvore XML, criar um novo documento e criar um <xref:System.Xml.XmlWriter> que gravarão no novo documento.</span><span class="sxs-lookup"><span data-stu-id="ebbc0-103">You can create an XML tree, create an <xref:System.Xml.XmlReader> from the XML tree, create a new document, and create an <xref:System.Xml.XmlWriter> that will write into the new document.</span></span> <span data-ttu-id="ebbc0-104">Em seguida, você pode chamar a transformação XSLT, passando <xref:System.Xml.XmlReader> e <xref:System.Xml.XmlWriter> para a transformação.</span><span class="sxs-lookup"><span data-stu-id="ebbc0-104">Then, you can invoke the XSLT transformation, passing the <xref:System.Xml.XmlReader> and <xref:System.Xml.XmlWriter> to the transformation.</span></span> <span data-ttu-id="ebbc0-105">Depois que a transformação for concluída com êxito, a nova árvore XML será populada com os resultados da transformação.</span><span class="sxs-lookup"><span data-stu-id="ebbc0-105">After the transformation successfully completes, the new XML tree is populated with the results of the transform.</span></span>
 
-## <a name="example"></a><span data-ttu-id="c3952-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c3952-106">Example</span></span>
+## <a name="example"></a><span data-ttu-id="ebbc0-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="ebbc0-106">Example</span></span>
 
 ```vb
 Dim xslMarkup As XDocument = _
@@ -52,7 +52,7 @@ End Using
 Console.WriteLine(newTree)
 ```
 
-<span data-ttu-id="c3952-107">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="c3952-107">This example produces the following output:</span></span>
+<span data-ttu-id="ebbc0-107">Este exemplo gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="ebbc0-107">This example produces the following output:</span></span>
 
 ```xml
 <Root>
@@ -61,8 +61,8 @@ Console.WriteLine(newTree)
 </Root>
 ```
 
-## <a name="see-also"></a><span data-ttu-id="c3952-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c3952-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ebbc0-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ebbc0-108">See also</span></span>
 
 - <xref:System.Xml.Linq.XContainer.CreateWriter%2A?displayProperty=nameWithType>
 - <xref:System.Xml.Linq.XNode.CreateReader%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="c3952-109">Advanced LINQ to XML Programming (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c3952-109">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [<span data-ttu-id="ebbc0-109">Programação de LINQ to XML avançada (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="ebbc0-109">Advanced LINQ to XML Programming (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

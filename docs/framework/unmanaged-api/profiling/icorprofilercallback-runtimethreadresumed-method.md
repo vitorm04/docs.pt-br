@@ -22,30 +22,30 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430275"
 ---
-# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="38d00-102">Método ICorProfilerCallback::RuntimeThreadResumed</span><span class="sxs-lookup"><span data-stu-id="38d00-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
-<span data-ttu-id="38d00-103">Notifies the profiler that the specified thread has resumed after being suspended.</span><span class="sxs-lookup"><span data-stu-id="38d00-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
+# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="61ab4-102">Método ICorProfilerCallback::RuntimeThreadResumed</span><span class="sxs-lookup"><span data-stu-id="61ab4-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
+<span data-ttu-id="61ab4-103">Notifica o criador de perfil de que o thread especificado foi retomado após ser suspenso.</span><span class="sxs-lookup"><span data-stu-id="61ab4-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38d00-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="38d00-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="61ab4-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="61ab4-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT RuntimeThreadResumed(  
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="38d00-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="38d00-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="61ab4-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="61ab4-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="38d00-106">[in] The ID of the thread that has been resumed.</span><span class="sxs-lookup"><span data-stu-id="38d00-106">[in] The ID of the thread that has been resumed.</span></span>  
+ <span data-ttu-id="61ab4-106">no A ID do thread que foi retomado.</span><span class="sxs-lookup"><span data-stu-id="61ab4-106">[in] The ID of the thread that has been resumed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="38d00-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="38d00-107">Requirements</span></span>  
- <span data-ttu-id="38d00-108">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="38d00-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="61ab4-107">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="61ab4-107">Requirements</span></span>  
+ <span data-ttu-id="61ab4-108">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="61ab4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38d00-109">**Header:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="38d00-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="61ab4-109">**Cabeçalho:** CorProf. idl, CorProf. h</span><span class="sxs-lookup"><span data-stu-id="61ab4-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="38d00-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="38d00-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="61ab4-110">**Biblioteca:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="61ab4-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="38d00-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38d00-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="61ab4-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="61ab4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38d00-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="38d00-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="61ab4-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="61ab4-112">See also</span></span>
 
-- [<span data-ttu-id="38d00-113">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="38d00-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="38d00-114">Método RuntimeThreadSuspended</span><span class="sxs-lookup"><span data-stu-id="38d00-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)
+- [<span data-ttu-id="61ab4-113">Interface ICorProfilerCallback</span><span class="sxs-lookup"><span data-stu-id="61ab4-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="61ab4-114">Método RuntimeThreadSuspended</span><span class="sxs-lookup"><span data-stu-id="61ab4-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)

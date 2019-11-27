@@ -22,27 +22,27 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427909"
 ---
-# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="15245-102">Método ISymUnmanagedWriter::OpenNamespace</span><span class="sxs-lookup"><span data-stu-id="15245-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
-<span data-ttu-id="15245-103">Abre um novo namespace.</span><span class="sxs-lookup"><span data-stu-id="15245-103">Opens a new namespace.</span></span> <span data-ttu-id="15245-104">Call this method before defining methods or variables that occupy a namespace.</span><span class="sxs-lookup"><span data-stu-id="15245-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="15245-105">Namespaces can be nested.</span><span class="sxs-lookup"><span data-stu-id="15245-105">Namespaces can be nested.</span></span>  
+# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="cfc9f-102">Método ISymUnmanagedWriter::OpenNamespace</span><span class="sxs-lookup"><span data-stu-id="cfc9f-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
+<span data-ttu-id="cfc9f-103">Abre um novo namespace.</span><span class="sxs-lookup"><span data-stu-id="cfc9f-103">Opens a new namespace.</span></span> <span data-ttu-id="cfc9f-104">Chame esse método antes de definir métodos ou variáveis que ocupem um namespace.</span><span class="sxs-lookup"><span data-stu-id="cfc9f-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="cfc9f-105">Os namespaces podem ser aninhados.</span><span class="sxs-lookup"><span data-stu-id="cfc9f-105">Namespaces can be nested.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15245-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="15245-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cfc9f-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="cfc9f-106">Syntax</span></span>  
   
 ```cpp  
 HRESULT OpenNamespace(  
     [in] const WCHAR *name);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="15245-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="15245-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cfc9f-107">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="cfc9f-107">Parameters</span></span>  
  `name`  
- <span data-ttu-id="15245-108">[in] A pointer to the name of the new namespace.</span><span class="sxs-lookup"><span data-stu-id="15245-108">[in] A pointer to the name of the new namespace.</span></span>  
+ <span data-ttu-id="cfc9f-108">no Um ponteiro para o nome do novo namespace.</span><span class="sxs-lookup"><span data-stu-id="cfc9f-108">[in] A pointer to the name of the new namespace.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="15245-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="15245-109">Return Value</span></span>  
- <span data-ttu-id="15245-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="15245-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="cfc9f-109">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="cfc9f-109">Return Value</span></span>  
+ <span data-ttu-id="cfc9f-110">S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="cfc9f-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15245-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="15245-111">Requirements</span></span>  
- <span data-ttu-id="15245-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="15245-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfc9f-111">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="cfc9f-111">Requirements</span></span>  
+ <span data-ttu-id="cfc9f-112">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="cfc9f-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15245-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="15245-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cfc9f-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cfc9f-113">See also</span></span>
 
-- [<span data-ttu-id="15245-114">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="15245-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="15245-115">Método CloseNamespace</span><span class="sxs-lookup"><span data-stu-id="15245-115">CloseNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)
+- [<span data-ttu-id="cfc9f-114">Interface ISymUnmanagedWriter</span><span class="sxs-lookup"><span data-stu-id="cfc9f-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="cfc9f-115">Método CloseNamespace</span><span class="sxs-lookup"><span data-stu-id="cfc9f-115">CloseNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)

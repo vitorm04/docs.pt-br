@@ -22,10 +22,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434320"
 ---
-# <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="da839-102">Método IMetaDataEmit::GetTokenFromSig</span><span class="sxs-lookup"><span data-stu-id="da839-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
-<span data-ttu-id="da839-103">Gets a token for the specified metadata signature.</span><span class="sxs-lookup"><span data-stu-id="da839-103">Gets a token for the specified metadata signature.</span></span>  
+# <a name="imetadataemitgettokenfromsig-method"></a><span data-ttu-id="e3837-102">Método IMetaDataEmit::GetTokenFromSig</span><span class="sxs-lookup"><span data-stu-id="e3837-102">IMetaDataEmit::GetTokenFromSig Method</span></span>
+<span data-ttu-id="e3837-103">Obtém um token para a assinatura de metadados especificada.</span><span class="sxs-lookup"><span data-stu-id="e3837-103">Gets a token for the specified metadata signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="da839-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="da839-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e3837-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e3837-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetTokenFromSig (   
@@ -35,26 +35,26 @@ HRESULT GetTokenFromSig (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="da839-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="da839-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e3837-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e3837-105">Parameters</span></span>  
  `pvSig`  
- <span data-ttu-id="da839-106">[in] The signature to be persisted and stored.</span><span class="sxs-lookup"><span data-stu-id="da839-106">[in] The signature to be persisted and stored.</span></span>  
+ <span data-ttu-id="e3837-106">no A assinatura a ser persistida e armazenada.</span><span class="sxs-lookup"><span data-stu-id="e3837-106">[in] The signature to be persisted and stored.</span></span>  
   
  `cbSig`  
- <span data-ttu-id="da839-107">[in] The count of bytes in `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="da839-107">[in] The count of bytes in `pvSig`.</span></span>  
+ <span data-ttu-id="e3837-107">no A contagem de bytes em `pvSig`.</span><span class="sxs-lookup"><span data-stu-id="e3837-107">[in] The count of bytes in `pvSig`.</span></span>  
   
  `pmsig`  
- <span data-ttu-id="da839-108">[out] The `mdSignature` token assigned.</span><span class="sxs-lookup"><span data-stu-id="da839-108">[out] The `mdSignature` token assigned.</span></span>  
+ <span data-ttu-id="e3837-108">fora O token de `mdSignature` atribuído.</span><span class="sxs-lookup"><span data-stu-id="e3837-108">[out] The `mdSignature` token assigned.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="da839-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="da839-109">Requirements</span></span>  
- <span data-ttu-id="da839-110">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="da839-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e3837-109">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="e3837-109">Requirements</span></span>  
+ <span data-ttu-id="e3837-110">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e3837-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="da839-111">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="da839-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="e3837-111">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="e3837-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="da839-112">**Library:** Used as a resource in MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="da839-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="e3837-112">**Biblioteca:** Usado como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="e3837-112">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="da839-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da839-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e3837-113">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e3837-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="da839-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="da839-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e3837-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e3837-114">See also</span></span>
 
-- [<span data-ttu-id="da839-115">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="da839-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="da839-116">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="da839-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="e3837-115">Interface IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="e3837-115">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="e3837-116">Interface IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="e3837-116">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
