@@ -1,5 +1,5 @@
 ---
-title: RtcState Class (System.Net)
+title: Classe RtcState (System.Net)
 ms.date: 11/01/2019
 ms.technology: dotnet-networking
 topic_type:
@@ -20,25 +20,25 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451181"
 ---
-# <a name="rtcstate-class"></a><span data-ttu-id="d8c01-102">RtcState Class</span><span class="sxs-lookup"><span data-stu-id="d8c01-102">RtcState Class</span></span>
+# <a name="rtcstate-class"></a><span data-ttu-id="613e5-102">Classe RtcState</span><span class="sxs-lookup"><span data-stu-id="613e5-102">RtcState Class</span></span>
 
-<span data-ttu-id="d8c01-103">The `RtcState` class represents state data for a real-time communication (RTC) request.</span><span class="sxs-lookup"><span data-stu-id="d8c01-103">The `RtcState` class represents state data for a real-time communication (RTC) request.</span></span>
+<span data-ttu-id="613e5-103">A classe `RtcState` representa dados de estado para uma solicitação de comunicação em tempo real (RTC).</span><span class="sxs-lookup"><span data-stu-id="613e5-103">The `RtcState` class represents state data for a real-time communication (RTC) request.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d8c01-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="d8c01-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="613e5-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="613e5-104">Syntax</span></span>
   
 ```csharp  
 internal class RtcState
 ```
 
 > [!WARNING]
-> <span data-ttu-id="d8c01-105">The `RtcState` class is internal and is not meant to be used directly in your code.</span><span class="sxs-lookup"><span data-stu-id="d8c01-105">The `RtcState` class is internal and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="613e5-105">A classe `RtcState` é interna e não deve ser usada diretamente no seu código.</span><span class="sxs-lookup"><span data-stu-id="613e5-105">The `RtcState` class is internal and is not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="d8c01-106">Microsoft does not support the use of this class in a production application under any circumstance.</span><span class="sxs-lookup"><span data-stu-id="d8c01-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="613e5-106">A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.</span><span class="sxs-lookup"><span data-stu-id="613e5-106">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="d8c01-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="d8c01-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="613e5-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="613e5-107">Requirements</span></span>
 
-<span data-ttu-id="d8c01-108">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="d8c01-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="613e5-108">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="613e5-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="d8c01-109">**Assembly:** System (in System.dll)</span><span class="sxs-lookup"><span data-stu-id="d8c01-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="613e5-109">**Assembly:** Sistema (em System. dll)</span><span class="sxs-lookup"><span data-stu-id="613e5-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="d8c01-110">**.NET Framework versions:** Available since 4.5.</span><span class="sxs-lookup"><span data-stu-id="d8c01-110">**.NET Framework versions:** Available since 4.5.</span></span>
+<span data-ttu-id="613e5-110">**.NET Framework versões:** Disponível desde 4,5.</span><span class="sxs-lookup"><span data-stu-id="613e5-110">**.NET Framework versions:** Available since 4.5.</span></span>

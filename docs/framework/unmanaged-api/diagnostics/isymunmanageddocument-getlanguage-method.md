@@ -22,23 +22,23 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449171"
 ---
-# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="34253-102">Método ISymUnmanagedDocument::GetLanguage</span><span class="sxs-lookup"><span data-stu-id="34253-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
-<span data-ttu-id="34253-103">Gets the language identifier of this document</span><span class="sxs-lookup"><span data-stu-id="34253-103">Gets the language identifier of this document</span></span>  
+# <a name="isymunmanageddocumentgetlanguage-method"></a><span data-ttu-id="1ff70-102">Método ISymUnmanagedDocument::GetLanguage</span><span class="sxs-lookup"><span data-stu-id="1ff70-102">ISymUnmanagedDocument::GetLanguage Method</span></span>
+<span data-ttu-id="1ff70-103">Obtém o identificador de idioma deste documento</span><span class="sxs-lookup"><span data-stu-id="1ff70-103">Gets the language identifier of this document</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="34253-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="34253-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ff70-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="1ff70-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetLanguage(  
     [out, retval]  GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="34253-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="34253-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1ff70-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="1ff70-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="34253-106">[out] A pointer to a variable that receives the language identifier.</span><span class="sxs-lookup"><span data-stu-id="34253-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
+ <span data-ttu-id="1ff70-106">fora Um ponteiro para uma variável que recebe o identificador de idioma.</span><span class="sxs-lookup"><span data-stu-id="1ff70-106">[out] A pointer to a variable that receives the language identifier.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="34253-107">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="34253-107">Return Value</span></span>  
- <span data-ttu-id="34253-108">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="34253-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="1ff70-107">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="1ff70-107">Return Value</span></span>  
+ <span data-ttu-id="1ff70-108">S_OK se o método tiver sucesso.</span><span class="sxs-lookup"><span data-stu-id="1ff70-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="34253-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="34253-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ff70-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1ff70-109">See also</span></span>
 
-- [<span data-ttu-id="34253-110">Interface ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="34253-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+- [<span data-ttu-id="1ff70-110">Interface ISymUnmanagedDocument</span><span class="sxs-lookup"><span data-stu-id="1ff70-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
