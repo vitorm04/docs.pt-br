@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448633"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>Enumeração COR_PRF_GC_GENERATION
-Identifies a garbage-collection generation.  
+Identifica uma geração de coleta de lixo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,24 +37,24 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_GC_GEN_0`|The object is stored as generation 0.|  
-|`COR_PRF_GC_GEN_1`|The object is stored as generation 1.|  
-|`COR_PRF_GC_GEN_2`|The object is stored as generation 2.|  
-|`COR_PRF_GC_LARGE_OBJECT_HEAP`|The object is stored in the large-object heap.|  
+|`COR_PRF_GC_GEN_0`|O objeto é armazenado como geração 0.|  
+|`COR_PRF_GC_GEN_1`|O objeto é armazenado como geração 1.|  
+|`COR_PRF_GC_GEN_2`|O objeto é armazenado como geração 2.|  
+|`COR_PRF_GC_LARGE_OBJECT_HEAP`|O objeto é armazenado no heap de objeto grande.|  
   
 ## <a name="remarks"></a>Comentários  
- The garbage collector improves memory management performance by dividing objects into generations based on age. The garbage collector currently uses three generations, numbered 0, 1, and 2, plus a special heap segment that is used for large objects. Objects whose size is larger than a particular value are stored in the large-object heap. Other allocated objects start out belonging to generation 0. All objects that exist after garbage collection occurs in generation 0 are promoted to generation 1. Objects that exist after garbage collection occurs in generation 1 move into generation 2.  
+ O coletor de lixo melhora o desempenho de gerenciamento de memória dividindo objetos em gerações com base na idade. O coletor de lixo atualmente usa três gerações, numeradas de 0, 1 e 2, além de um segmento de heap especial que é usado para objetos grandes. Objetos cujo tamanho é maior do que um valor específico são armazenados no heap de objeto grande. Outros objetos alocados começam a pertencer à geração 0. Todos os objetos que existem após a coleta de lixo ocorre na geração 0 são promovidos para a geração 1. Os objetos que existem após a coleta de lixo ocorrem na passagem de geração 1 para a geração 2.  
   
- The use of generations means that the garbage collector has to work with only a subset of the allocated objects at any one time.  
+ O uso de gerações significa que o coletor de lixo tem que trabalhar apenas com um subconjunto dos objetos alocados a qualquer momento.  
   
- The `COR_PRF_GC_GENERATION` enumeration is used by the [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) structure.  
+ A enumeração de `COR_PRF_GC_GENERATION` é usada pela estrutura de [COR_PRF_GC_GENERATION_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md) .  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

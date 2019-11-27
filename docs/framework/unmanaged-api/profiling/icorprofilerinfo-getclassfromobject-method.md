@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448153"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>Método ICorProfilerInfo::GetClassFromObject
-Gets the `ClassID` of an object, given its `ObjectID`.  
+Obtém a `ClassID` de um objeto, dado seu `ObjectID`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT GetClassFromObject(
   
 ## <a name="parameters"></a>Parâmetros  
  `objectId`  
- [in] The ID of the object for which to get the `ClassID`.  
+ no A ID do objeto para o qual obter o `ClassID`.  
   
  `pClassId`  
- [out] A pointer to the returned `ClassID`.  
+ fora Um ponteiro para o `ClassID`retornado.  
   
 ## <a name="remarks"></a>Comentários  
- A null `pClassId` indicates that `objectId` has a type that is unloading.  
+ Um `pClassId` nulo indica que `objectId` tem um tipo que está descarregando.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449739"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>Método ICorProfilerInfo3::GetAppDomainsContainingModule
-Gets the identifiers of the application domains in which the given module has been loaded.  
+Obtém os identificadores dos domínios de aplicativo nos quais o módulo fornecido foi carregado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,24 +38,24 @@ HRESULT GetAppDomainsContainingModule(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleId`  
- [in] The ID of the loaded module.  
+ no A ID do módulo carregado.  
   
  `cAppDomainIds`  
- [in] The size of the `appDomainIds` array.  
+ no O tamanho da matriz de `appDomainIds`.  
   
  `pcAppDomainIds`  
- [out] A pointer to the total number of returned elements.  
+ fora Um ponteiro para o número total de elementos retornados.  
   
  `appDomainIds`  
- [out] An array of application domain ID values.  
+ fora Uma matriz de valores de ID de domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- The method uses caller allocated buffers.  
+ O método usa buffers alocados do chamador.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

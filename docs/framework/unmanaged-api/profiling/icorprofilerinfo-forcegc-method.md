@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448194"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>Método ICorProfilerInfo::ForceGC
-Forces garbage collection to occur within the common language runtime (CLR).  
+Força a coleta de lixo a ocorrer dentro do Common Language Runtime (CLR).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,12 +32,12 @@ HRESULT ForceGC();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack. The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.  
+ O método `ForceGC` deve ser chamado somente de um thread que nunca tenha executado código gerenciado e não tenha nenhum retorno de chamada do criador de perfil em sua pilha. A implementação mais conveniente é criar um thread separado dentro do criador de perfil que chama `ForceGC` quando sinalizado.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

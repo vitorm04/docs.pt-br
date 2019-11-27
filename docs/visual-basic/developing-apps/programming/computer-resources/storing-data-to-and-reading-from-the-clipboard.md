@@ -1,5 +1,5 @@
 ---
-title: Storing data to and reading from the Clipboard
+title: Armazenando dados na área de transferência e lendo-os
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard, storing data to (My.Computer.Clipboard)

@@ -29,7 +29,7 @@ Os tópicos nesta seção contêm tabelas das funções de membro de tempo de ex
   
  [Função CType](../../../visual-basic/language-reference/functions/ctype-function.md)  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

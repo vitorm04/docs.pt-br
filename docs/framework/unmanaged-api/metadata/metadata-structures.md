@@ -14,25 +14,25 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444613"
 ---
 # <a name="metadata-structures"></a>Estruturas de metadados
-This section describes the unmanaged structures that the metadata API uses.  
+Esta seção descreve as estruturas não gerenciadas que a API de metadados usa.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  ASSEMBLYMETADATA  
- Stores assembly metadata for later use.  
+ Armazena metadados do assembly para uso posterior.  
   
  [Estrutura COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)  
- Stores the offset, within a class, of the specified field.  
+ Armazena o deslocamento, dentro de uma classe, do campo especificado.  
   
  [Estrutura COR_NATIVE_LINK](../../../../docs/framework/unmanaged-api/metadata/cor-native-link-structure.md)  
- Contains information that is used to link native code.  
+ Contém informações que são usadas para vincular código nativo.  
   
  [Estrutura CVStruct](../../../../docs/framework/unmanaged-api/metadata/cvstruct-structure.md)  
- Contains information that is used when installing a module or a composite image.  
+ Contém informações que são usadas ao instalar um módulo ou uma imagem composta.  
   
  [Estrutura OSINFO](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)  
- Contains information about the operating system.  
+ Contém informações sobre o sistema operacional.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
   
  [Funções estáticas globais de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)  

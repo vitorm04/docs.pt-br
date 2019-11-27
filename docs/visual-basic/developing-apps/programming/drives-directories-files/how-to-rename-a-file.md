@@ -24,7 +24,7 @@ Use o método `RenameFile` do objeto `My.Computer.FileSystem` para renomear um a
   
  Este exemplo de código também está disponível como um snippet de código do IntelliSense. No selecionador de snippet de código, o snippet está localizado em **Sistema de Arquivos – Processando Unidades, Pastas e Arquivos**. Para obter mais informações, consulte [Snippets de Código](/visualstudio/ide/code-snippets).  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
 
  As seguintes condições podem causar uma exceção:  
   

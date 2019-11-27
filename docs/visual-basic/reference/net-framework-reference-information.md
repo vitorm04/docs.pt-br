@@ -14,20 +14,20 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352846"
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>Informações de referência do .NET Framework (Visual Basic)
-This topic provides links to information about how to work with the .NET Framework class library.  
+Este tópico fornece links para informações sobre como trabalhar com a biblioteca de classes de .NET Framework.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Introdução](../../framework/get-started/index.md)  
  Fornece uma visão geral abrangente do .NET Framework e links para recursos adicionais.  
   
  [Visão geral da biblioteca de classes](../../standard/class-library-overview.md)  
- Introduces the classes, interfaces, and value types that help expedite and optimize the development process and provide access to system functionality.  
+ Apresenta as classes, as interfaces e os tipos de valor que ajudam a agilizar e otimizar o processo de desenvolvimento e fornecer acesso à funcionalidade do sistema.  
   
  [Guia de desenvolvimento](../../framework/development-guide.md)  
- Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application. This topic also provides information about dynamic programming, interoperability, extensibility, memory management, and threading.  
+ Fornece um guia para todas as áreas de tecnologia-chave e tarefas para o desenvolvimento de aplicativos, incluindo a criação, configuração, depuração, proteção e implantação de seu aplicativo. Este tópico também fornece informações sobre programação dinâmica, interoperabilidade, extensibilidade, gerenciamento de memória e Threading.  
   
  [Ferramentas](../../framework/tools/index.md)  
- Describes the tools that you can use to develop, configure, and deploy applications by using .NET Framework technologies.  
+ Descreve as ferramentas que você pode usar para desenvolver, configurar e implantar aplicativos usando as tecnologias do .NET Framework.  
   
  [Navegador de API do .NET](../../../api/index.md)  
- Provides syntax, code examples, and related information for each class in the .NET Framework namespaces.
+ Fornece sintaxe, exemplos de código e informações relacionadas para cada classe nos namespaces de .NET Framework.

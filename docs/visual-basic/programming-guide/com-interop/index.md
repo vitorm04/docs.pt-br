@@ -13,7 +13,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348003"
 ---
 # <a name="com-interop-visual-basic"></a>Interoperabilidade COM (Visual Basic)
-O COM (Component Object Model) permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Atualmente, a maioria dos softwares incluem objetos COM. Embora os assemblies .NET sejam a melhor opção para novos aplicativos, algumas vezes será preciso empregar objetos COM. This section covers some of the issues associated with creating and using COM objects with Visual Basic.  
+O COM (Component Object Model) permite que um objeto exponha sua funcionalidade a outros componentes e aplicativos host. Atualmente, a maioria dos softwares incluem objetos COM. Embora os assemblies .NET sejam a melhor opção para novos aplicativos, algumas vezes será preciso empregar objetos COM. Esta seção aborda alguns dos problemas associados à criação e ao uso de objetos com com Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução à Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -23,7 +23,7 @@ O COM (Component Object Model) permite que um objeto exponha sua funcionalidade 
  Aborda como adicionar referências a objetos COM que têm bibliotecas de tipos.  
   
  [Como trabalhar com controles ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Demonstrates how to use existing ActiveX controls to add features to the Visual Studio Toolbox.  
+ Demonstra como usar controles ActiveX existentes para adicionar recursos à caixa de ferramentas do Visual Studio.  
   
  [Instruções passo a passo: chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Orienta o processo de chamada às APIs que fazem parte do sistema operacional Windows.  
@@ -46,7 +46,7 @@ O COM (Component Object Model) permite que um objeto exponha sua funcionalidade 
  [Instruções passo a passo: implementando a herança com objetos COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  Descreve como usar objetos COM existentes como base para novos objetos.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Interoperação com código não gerenciado](../../../framework/interop/index.md)  
  Descreve os serviços de interoperabilidade fornecidos pelo Common Language Runtime.  
   

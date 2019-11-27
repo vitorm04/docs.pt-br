@@ -44,7 +44,7 @@ typedef enum CorSymAddrKind
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`ADDR_IL_OFFSET`|Indica uma variável local ou um índice de parâmetro da MSIL (Microsoft Intermediate Language).|  
 |`ADDR_NATIVE_RVA`|Indica um endereço virtual relativo em um módulo.|  

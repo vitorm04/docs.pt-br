@@ -55,11 +55,11 @@ Há muitos tipos de fluxos, porém, com a finalidade de trabalhar com entrada/sa
 
 - <xref:System.IO.MemoryStream>
 
-- <xref:System.Net.Sockets.NetworkStream>
+- <xref:System.Net.Sockets.NetworkStream>.
 
 A tabela a seguir lista as tarefas comumente realizadas com um fluxo:
 
-|Para|Consulte|
+|{1&gt;Para&lt;1}|Consulte|
 |---|---|
 |Ler e gravar em um arquivo de dados|[Como ler e gravar em um arquivo de dados recém-criado](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
 |Ler texto de um arquivo|[Como ler texto de um arquivo](../../../../standard/io/how-to-read-text-from-a-file.md)|
@@ -77,7 +77,7 @@ A enumeração <xref:System.IO.FileAttributes> habilita a coleta de informaçõe
 
 A tabela a seguir lista as tarefas que envolvem o acesso a arquivos e atributos de arquivo:
 
-|Para|Consulte|
+|{1&gt;Para&lt;1}|Consulte|
 |---|---|
 |Abrir e acrescentar texto a um arquivo de log|[Como abrir e acrescentar a um arquivo de log](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |Determinar os atributos de um arquivo|<xref:System.IO.FileAttributes>|
@@ -92,7 +92,7 @@ O armazenamento isolado é uma tentativa de resolver problemas criados ao trabal
 
 A tabela a seguir lista as tarefas comumente associadas ao armazenamento isolado de arquivo.
 
-|Para|Consulte|
+|{1&gt;Para&lt;1}|Consulte|
 |---|---|
 |Criar um repositório isolado|[Como obter repositórios para o armazenamento isolado](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |Enumerar repositórios isolados|[Como enumerar repositórios para o armazenamento isolado](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|

@@ -26,7 +26,7 @@ Esta seção contém tópicos que lidam com o objeto `My.User` e com as tarefas 
   
 ## <a name="tasks"></a>Tarefas  
   
-|Para|Consulte|  
+|{1&gt;Para&lt;1}|Consulte|  
 |--------|---------|  
 |Obter nome de logon do usuário|<xref:Microsoft.VisualBasic.ApplicationServices.User.Name%2A>|  
 |Obter nome de domínio do usuário, se o aplicativo usa a autenticação do Windows|<xref:Microsoft.VisualBasic.ApplicationServices.User.CurrentPrincipal>|  

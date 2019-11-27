@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449906"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>Método ICorProfilerCallback::JITInlining
-Notifies the profiler that the just-in-time (JIT) compiler is about to insert a function in line with another function.  
+Notifica o criador de perfil de que o compilador JIT (just-in-time) está prestes a inserir uma função em linha com outra função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,23 +36,23 @@ HRESULT JITInlining(
   
 ## <a name="parameters"></a>Parâmetros  
  `callerId`  
- [in] The ID of the function into which the `calleeId` function will be inserted.  
+ no A ID da função na qual a função de `calleeId` será inserida.  
   
  `calleeId`  
- [in] The ID of the function to be inserted.  
+ no A ID da função a ser inserida.  
   
  `pfShouldInline`  
- [out] `true` to allow the insertion to occur; otherwise, `false`.  
+ [fora] `true` para permitir que a inserção ocorra; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
- The profiler can set `pfShouldInline` to `false` to prevent the `calleeId` function from being inserted into the `callerId` function. Also, the profiler can globally disable inline insertion by using the COR_PRF_DISABLE_INLINING value of the [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) enumeration.  
+ O criador de perfil pode definir `pfShouldInline` como `false` para impedir que a função `calleeId` seja inserida na função `callerId`. Além disso, o criador de perfil pode desabilitar a inserção embutida globalmente usando o valor COR_PRF_DISABLE_INLINING da enumeração [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md) .  
   
- Functions inserted inline do not raise events for entering or leaving. Therefore, the profiler must set `pfShouldInline` to `false` in order to produce an accurate callgraph. Setting `pfShouldInline` to `false` will affect performance, because inline insertion typically increases speed and reduces the number of separate JIT compilation events for the inserted method.  
+ Funções inseridas embutidas não geram eventos para entrar ou sair. Portanto, o criador de perfil deve definir `pfShouldInline` para `false` a fim de produzir um chamadas preciso. A definição de `pfShouldInline` como `false` afetará o desempenho, pois a inserção embutida normalmente aumenta a velocidade e reduz o número de eventos de compilação JIT separados para o método inserido.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

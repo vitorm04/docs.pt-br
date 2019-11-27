@@ -35,7 +35,7 @@ typedef enum tagCOINITCOR
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`COINITCOR`|Indica o modo de inicialização padrão.|  
   

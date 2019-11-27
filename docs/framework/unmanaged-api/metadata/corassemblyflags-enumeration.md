@@ -55,7 +55,7 @@ typedef enum CorAssemblyFlags {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`afPublicKey`|Indica que a referência de assembly contém a chave pública completa sem hash.|  
 |`afPA_None`|Indica que a arquitetura do processador não está especificada.|  

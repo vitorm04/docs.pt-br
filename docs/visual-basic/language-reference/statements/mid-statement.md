@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348034"
 ---
 # <a name="mid-statement"></a>Instrução Mid
-Replaces a specified number of characters in a `String` variable with characters from another string.  
+Substitui um número especificado de caracteres em uma variável de `String` com caracteres de outra cadeia de caracteres.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,16 +32,16 @@ Mid( _
   
 ## <a name="parts"></a>Partes  
  `Target`  
- Necessário. Name of the `String` variable to modify.  
+ Necessária. Nome da variável de `String` a ser modificada.  
   
  `Start`  
- Necessário. Expressão `Integer`. Character position in `Target` where the replacement of text begins. `Start` uses a one-based index.  
+ Necessária. Expressão `Integer`. Posição do caractere no `Target` onde começa a substituição do texto. `Start` usa um índice baseado em um.  
   
  `Length`  
- Opcional. Expressão `Integer`. Number of characters to replace. If omitted, all of `String` is used.  
+ Opcional. Expressão `Integer`. Número de caracteres a serem substituídos. Se for omitido, todos os `String` serão usados.  
   
  `StringExpression`  
- Necessário. `String` expression that replaces part of `Target`.  
+ Necessária. `String` expressão que substitui parte de `Target`.  
   
 ## <a name="exceptions"></a>Exceções  
   
@@ -50,24 +50,24 @@ Mid( _
 |<xref:System.ArgumentException>|`Start` <= 0 ou `Length` < 0.|  
   
 ## <a name="remarks"></a>Comentários  
- The number of characters replaced is always less than or equal to the number of characters in `Target`.  
+ O número de caracteres substituídos é sempre menor ou igual ao número de caracteres em `Target`.  
   
- Visual Basic has a <xref:Microsoft.VisualBasic.Strings.Mid%2A> function and a `Mid` statement. These elements both operate on a specified number of characters in a string, but the `Mid` function returns the characters while the `Mid` statement replaces the characters. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
+ Visual Basic tem uma função <xref:Microsoft.VisualBasic.Strings.Mid%2A> e uma instrução `Mid`. Esses elementos operam em um número especificado de caracteres em uma cadeia de caracteres, mas a função `Mid` retorna os caracteres enquanto a instrução `Mid` substitui os caracteres. Para obter mais informações, consulte <xref:Microsoft.VisualBasic.Strings.Mid%2A>.  
   
 > [!NOTE]
-> The `MidB` statement of earlier versions of Visual Basic replaces a substring in bytes, rather than characters. It is used primarily for converting strings in double-byte character set (DBCS) applications. All Visual Basic strings are in Unicode, and `MidB` is no longer supported.  
+> A instrução `MidB` de versões anteriores do Visual Basic substitui uma Subcadeia em bytes, em vez de caracteres. Ele é usado principalmente para converter cadeias de caracteres em aplicativos DBCS. Todas as cadeias de caracteres Visual Basic estão em Unicode e não há mais suporte para `MidB`.  
   
 ## <a name="example"></a>Exemplo  
- This example uses the `Mid` statement to replace a specified number of characters in a string variable with characters from another string.  
+ Este exemplo usa a instrução `Mid` para substituir um número especificado de caracteres em uma variável String por caracteres de outra cadeia de caracteres.  
   
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
-## <a name="requirements"></a>Requisitos  
- **Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Namespace:** [Microsoft. VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **Module:** `Strings`  
+ **Módulo:** `Strings`  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

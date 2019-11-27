@@ -1,5 +1,5 @@
 ---
-title: AssemblyAttributesGoHereSM Class (System.Runtime.CompilerServices)
+title: Classe AssemblyAttributesGoHereSM (System. Runtime. Compiladorservices)
 ms.date: 03/30/2017
 api_name:
 - System.Runtime.CompilerServices.AssemblyAttributesGoHereSM
@@ -22,9 +22,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446604"
 ---
-# <a name="assemblyattributesgoheresm-class"></a>AssemblyAttributesGoHereSM Class
+# <a name="assemblyattributesgoheresm-class"></a>Classe AssemblyAttributesGoHereSM
 
-Used by ALink as a placeholder to store information about custom attributes.
+Usado pelo ALink como um espaço reservado para armazenar informações sobre atributos personalizados.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,13 +34,13 @@ internal sealed class AssemblyAttributesGoHereSM
 
 ## <a name="remarks"></a>Comentários
 
-References to this type might be embedded inside netmodules whose sources contain assembly custom attributes. When building an assembly manifest from one or more netmodules that contain references to these types, ALink uses information attached to these references to emit real custom attributes. As such, this type is never instantiated, and references to it are used only as part of the build process and serve no purpose in the final assembly.
+As referências a esse tipo podem ser inseridas dentro de netmodules cujas fontes contêm atributos personalizados de assembly. Ao criar um manifesto do assembly a partir de um ou mais netmodules que contêm referências a esses tipos, o ALink usa informações anexadas a essas referências para emitir atributos personalizados reais. Dessa forma, esse tipo nunca é instanciado e as referências a ele são usadas somente como parte do processo de compilação e não atendem a nenhuma finalidade no assembly final.
 
-References to this type indicate custom attributes that are security related and multiple-use.
+Referências a esse tipo indicam atributos personalizados que são relacionados à segurança e ao uso múltiplo.
 
-These types are marked "internal" within the .NET Framework and are located in the <xref:System.Runtime.CompilerServices> namespace.
+Esses tipos são marcados como "internos" dentro do .NET Framework e estão localizados no namespace <xref:System.Runtime.CompilerServices>.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
 
 mscorlib.dll
 

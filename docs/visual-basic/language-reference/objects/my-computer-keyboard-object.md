@@ -15,16 +15,16 @@ ms.locfileid: "74347193"
 Fornece propriedades para acessar o estado atual do teclado, como quais teclas estão pressionadas no momento e fornece um método para enviar pressionamentos de teclas para a janela ativa.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Computer.Keyword` object, see <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Computer.Keyword`, consulte <xref:Microsoft.VisualBasic.Devices.Keyboard>.  
   
  Para obter mais informações, consulte [Acessando o teclado](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
+ **Classe:** <xref:Microsoft.VisualBasic.Devices.Keyboard>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

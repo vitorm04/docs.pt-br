@@ -22,16 +22,16 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445514"
 ---
 # <a name="idebugautoattach-interface"></a>Interface IDebugAutoAttach
-Defines the interface for server-invoked debugger auto attach.  
+Define a interface para anexação automática do depurador invocado pelo servidor.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método AutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Performs server-invoked debugger auto attach.|  
+|[Método AutoAttach](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|Executa a anexação automática do depurador invocado pelo servidor.|  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** DbgAutoAttach.idl  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** DbgAutoAttach. idl  
   
 ## <a name="see-also"></a>Consulte também
 

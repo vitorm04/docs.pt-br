@@ -17,31 +17,31 @@ ms.locfileid: "74448775"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).
 
-This overview describes the security model for [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] in Windows Vista.
+Esta visão geral descreve o modelo de segurança para [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] no Windows Vista.
 
 <a name="User_Account_Control"></a>
 
-## <a name="user-account-control"></a>Controle de Conta de Usuário
+## <a name="user-account-control"></a>Controle da conta de usuário
 
-Security is a major focus of Windows Vista and among the innovations is the ability for users to run as standard (non-administrator) users without necessarily being blocked from running applications and services that require higher privileges.
+A segurança é um dos principais focos do Windows Vista e entre as inovações é a capacidade para os usuários executarem como usuários padrão (não administradores) sem necessariamente ser impedidos de executar aplicativos e serviços que exigem privilégios mais altos.
 
-In Windows Vista, most applications are supplied with either a standard or an administrative token. If an application cannot be identified as an administrative application, it is launched as a standard application by default. Before an application identified as administrative can be launched, Windows Vista prompts the user for consent to run the application as elevated. The consent prompt is displayed by default, even if the user is a member of the local Administrators group, because administrators run as standard users until an application or system component that requires administrative credentials requests permission to run.
+No Windows Vista, a maioria dos aplicativos é fornecida com um token padrão ou um de administrador. Se um aplicativo não puder ser identificado como um aplicativo administrativo, ele será iniciado como um aplicativo padrão por padrão. Antes que um aplicativo identificado como administrativo possa ser iniciado, o Windows Vista solicita ao usuário o consentimento para executar o aplicativo como elevado. A solicitação de consentimento é exibida por padrão, mesmo que o usuário seja membro do grupo Administradores local, pois os administradores são executados como usuários padrão até que um aplicativo ou componente do sistema que exige permissão de solicitações de credenciais administrativas seja executado.
 
 <a name="Tasks_Requiring_Higher_Privileges"></a>
 
-## <a name="tasks-requiring-higher-privileges"></a>Tasks Requiring Higher Privileges
+## <a name="tasks-requiring-higher-privileges"></a>Tarefas que exigem privilégios mais altos
 
-When a user attempts to perform a task that requires administrative privileges, Windows Vista presents a dialog box asking the user for consent to continue. This dialog box is protected from cross-process communication, so that malicious software cannot simulate user input. Similarly, the desktop logon screen cannot normally be accessed by other processes.
+Quando um usuário tenta executar uma tarefa que exige privilégios administrativos, o Windows Vista apresenta uma caixa de diálogo solicitando que o usuário tenha consentimento para continuar. Essa caixa de diálogo é protegida da comunicação entre processos, para que o software mal-intencionado não possa simular a entrada do usuário. Da mesma forma, a tela de logon da área de trabalho normalmente não pode ser acessada por outros processos.
 
-UI Automation clients must communicate with other processes, some of them perhaps running at a higher privilege level. Clients also might need access to the system dialog boxes that are not normally visible to other processes. Therefore, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] clients must be trusted by the system, and must run with special privileges.
+Os clientes de automação da interface do usuário devem se comunicar com outros processos, alguns deles talvez sendo executados em um nível de privilégio mais alto. Os clientes também podem precisar acessar as caixas de diálogo do sistema que normalmente não são visíveis para outros processos. Portanto, os clientes do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] devem ser confiáveis pelo sistema e devem ser executados com privilégios especiais.
 
-To be trusted to communicate with applications running at a higher privilege level, applications must be signed.
+Para ser confiável para se comunicar com aplicativos executados em um nível de privilégio mais alto, os aplicativos devem ser assinados.
 
 <a name="Manifest_Files"></a>
 
-## <a name="manifest-files"></a>Manifest Files
+## <a name="manifest-files"></a>Arquivos de manifesto
 
-To gain access to the protected system UI, applications must be built with a manifest file that includes the `uiAccess` attribute in the `requestedExecutionLevel` tag, as follows:
+Para obter acesso à interface do usuário do sistema protegido, os aplicativos devem ser criados com um arquivo de manifesto que inclui o atributo `uiAccess` na marca `requestedExecutionLevel`, da seguinte maneira:
 
 ```xml
 <trustInfo xmlns="urn:schemas-microsoft-com:asm.v3">
@@ -55,6 +55,6 @@ To gain access to the protected system UI, applications must be built with a man
 </trustInfo>
 ```
 
-The value of the `level` attribute in this code is an example only.
+O valor do atributo `level` neste código é apenas um exemplo.
 
-`uiAccess` is "false" by default; that is, if the attribute is omitted, or if there is no manifest for the assembly, the application will not be able to gain access to protected UI.
+o `uiAccess` é "false" por padrão; ou seja, se o atributo for omitido ou se não houver nenhum manifesto para o assembly, o aplicativo não será capaz de obter acesso à interface do usuário protegida.

@@ -24,28 +24,28 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351397"
 ---
 # <a name="overridable-visual-basic"></a>Substituível (Visual Basic)
-Specifies that a property or procedure can be overridden by an identically named property or procedure in a derived class.  
+Especifica que uma propriedade ou procedimento pode ser substituído por uma propriedade nomeada de forma idêntica ou um procedimento em uma classe derivada.  
   
 ## <a name="remarks"></a>Comentários  
- The `Overridable` modifier allows a property or method in a class to be overridden in a derived class. The [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) modifier prevents a property or method from being overridden in a derived class.  Para obter mais informações, consulte [Noções básicas de herança](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ O modificador `Overridable` permite que uma propriedade ou método em uma classe seja substituído em uma classe derivada. O modificador [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md) impede que uma propriedade ou um método seja substituído em uma classe derivada.  Para obter mais informações, consulte [Noções básicas de herança](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ Se o modificador `Overridable` ou `NotOverridable` não for especificado, a configuração padrão dependerá se a propriedade ou o método substituirá uma propriedade ou método de classe base. Se a propriedade ou o método substituir uma propriedade ou método de classe base, a configuração padrão será `Overridable`; caso contrário, será `NotOverridable`.  
   
- You can shadow or override to redefine an inherited element, but there are significant differences between the two approaches. For more information, see [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
+ Você pode sombrear ou substituir para redefinir um elemento herdado, mas há diferenças significativas entre as duas abordagens. Para obter mais informações, consulte [sombreamento em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md).  
   
- An element that can be overridden is sometimes referred to as a *virtual* element. If it can be overridden, but does not have to be, it is sometimes also called a *concrete* element.  
+ Um elemento que pode ser substituído às vezes é chamado de elemento *virtual* . Se ele puder ser substituído, mas não precisar ser, às vezes ele também é chamado de elemento *concreto* .  
   
- You can use `Overridable` only in a property or procedure declaration statement.  
+ Você pode usar `Overridable` apenas em uma instrução de declaração de propriedade ou de procedimento.  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>Modificadores combinados  
+ Você não pode especificar `Overridable` ou `NotOverridable` para um método de `Private`.  
   
- You cannot specify `Overridable` together with `MustOverride`, `NotOverridable`, or `Shared` in the same declaration.  
+ Não é possível especificar `Overridable` junto com `MustOverride`, `NotOverridable`ou `Shared` na mesma declaração.  
   
- Because an overriding element is implicitly overridable, you cannot combine `Overridable` with `Overrides`.  
+ Como um elemento de substituição é implicitamente substituível, não é possível combinar `Overridable` com `Overrides`.  
   
 ## <a name="usage"></a>Uso  
- The `Overridable` modifier can be used in these contexts:  
+ O modificador de `Overridable` pode ser usado nesses contextos:  
   
  [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -61,4 +61,4 @@ Specifies that a property or procedure can be overridden by an identically named
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Substituições](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Sombreamento em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

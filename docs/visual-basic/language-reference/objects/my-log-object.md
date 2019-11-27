@@ -15,13 +15,13 @@ ms.locfileid: "74350664"
 Fornece uma propriedade e métodos para gravar informações de evento e de exceção para os ouvintes de log do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Log` object, see <xref:Microsoft.VisualBasic.Logging.AspLog>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Log`, consulte <xref:Microsoft.VisualBasic.Logging.AspLog>.  
   
- The `My.Log` object is available for ASP.NET applications only. For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
+ O objeto `My.Log` está disponível somente para aplicativos ASP.NET. Para aplicativos cliente, use [meu objeto. Application. log](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Namespace:** <xref:Microsoft.VisualBasic.Logging>  
   
- **Class:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
+ **Classe:** <xref:Microsoft.VisualBasic.Logging.AspLog>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)

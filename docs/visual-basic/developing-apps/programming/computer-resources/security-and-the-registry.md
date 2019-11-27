@@ -29,10 +29,10 @@ Esta página discute as implicações de segurança de armazenar dados no Regist
 |Valor|Acesso às variáveis de Registro|  
 |-----------|----------------------------------|  
 |`AllAccess`|Criar, ler e gravar|  
-|`Create`|Create|  
+|`Create`|Criar|  
 |`NoAccess`|Sem acesso|  
 |`Read`|Ler|  
-|`Write`|Write|  
+|`Write`|Gravação|  
   
 ## <a name="checking-values-in-registry-keys"></a>Verificando valores nas chaves do Registro  
 

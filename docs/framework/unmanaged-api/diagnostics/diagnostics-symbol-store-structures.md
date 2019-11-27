@@ -27,7 +27,7 @@ Este tópico descreve as estruturas não gerenciadas que a API de armazenamento 
  [Estrutura USER_THREAD](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
  Fornece informações para um depurador sobre um thread.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Interfaces do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
  [Enumerações do repositório de símbolos de diagnóstico](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
