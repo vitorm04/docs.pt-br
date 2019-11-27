@@ -21,10 +21,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449394"
 ---
-# <a name="freewin32resblob-method"></a><span data-ttu-id="961d6-102">Método FreeWin32ResBlob</span><span class="sxs-lookup"><span data-stu-id="961d6-102">FreeWin32ResBlob Method</span></span>
-<span data-ttu-id="961d6-103">Releases the Win32 resource blob and associated resources.</span><span class="sxs-lookup"><span data-stu-id="961d6-103">Releases the Win32 resource blob and associated resources.</span></span>  
+# <a name="freewin32resblob-method"></a><span data-ttu-id="0a5a3-102">Método FreeWin32ResBlob</span><span class="sxs-lookup"><span data-stu-id="0a5a3-102">FreeWin32ResBlob Method</span></span>
+<span data-ttu-id="0a5a3-103">Libera o blob de recursos do Win32 e os recursos associados.</span><span class="sxs-lookup"><span data-stu-id="0a5a3-103">Releases the Win32 resource blob and associated resources.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="961d6-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="961d6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a5a3-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="0a5a3-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT FreeWin32ResBlob(  
@@ -32,18 +32,18 @@ HRESULT FreeWin32ResBlob(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="961d6-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="961d6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0a5a3-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="0a5a3-105">Parameters</span></span>  
  `ppResBlob`  
- <span data-ttu-id="961d6-106">The resource blob to be released.</span><span class="sxs-lookup"><span data-stu-id="961d6-106">The resource blob to be released.</span></span> <span data-ttu-id="961d6-107">This method assigns the blob pointer to NULL.</span><span class="sxs-lookup"><span data-stu-id="961d6-107">This method assigns the blob pointer to NULL.</span></span>  
+ <span data-ttu-id="0a5a3-106">O blob de recursos a ser liberado.</span><span class="sxs-lookup"><span data-stu-id="0a5a3-106">The resource blob to be released.</span></span> <span data-ttu-id="0a5a3-107">Esse método atribui o ponteiro de blob a NULL.</span><span class="sxs-lookup"><span data-stu-id="0a5a3-107">This method assigns the blob pointer to NULL.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="961d6-108">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="961d6-108">Return Value</span></span>  
- <span data-ttu-id="961d6-109">Returns S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="961d6-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0a5a3-108">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="0a5a3-108">Return Value</span></span>  
+ <span data-ttu-id="0a5a3-109">Retorna S_OK se o método tiver sucesso.</span><span class="sxs-lookup"><span data-stu-id="0a5a3-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="961d6-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="961d6-110">Requirements</span></span>  
- <span data-ttu-id="961d6-111">Requires alink.h</span><span class="sxs-lookup"><span data-stu-id="961d6-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a5a3-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="0a5a3-110">Requirements</span></span>  
+ <span data-ttu-id="0a5a3-111">Requer ALink. h</span><span class="sxs-lookup"><span data-stu-id="0a5a3-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="961d6-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="961d6-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a5a3-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="0a5a3-112">See also</span></span>
 
-- [<span data-ttu-id="961d6-113">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="961d6-113">IALink Interface</span></span>](ialink-interface.md)
-- [<span data-ttu-id="961d6-114">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="961d6-114">IALink2 Interface</span></span>](ialink2-interface.md)
-- [<span data-ttu-id="961d6-115">API do ALink</span><span class="sxs-lookup"><span data-stu-id="961d6-115">ALink API</span></span>](index.md)
+- [<span data-ttu-id="0a5a3-113">Interface IALink</span><span class="sxs-lookup"><span data-stu-id="0a5a3-113">IALink Interface</span></span>](ialink-interface.md)
+- [<span data-ttu-id="0a5a3-114">Interface IALink2</span><span class="sxs-lookup"><span data-stu-id="0a5a3-114">IALink2 Interface</span></span>](ialink2-interface.md)
+- [<span data-ttu-id="0a5a3-115">API do ALink</span><span class="sxs-lookup"><span data-stu-id="0a5a3-115">ALink API</span></span>](index.md)

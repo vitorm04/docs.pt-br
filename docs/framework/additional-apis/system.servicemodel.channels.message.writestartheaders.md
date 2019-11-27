@@ -1,5 +1,5 @@
 ---
-title: Message.WriteStartHeaders Method (System.ServiceModel.Channels)
+title: Método Message. WriteStartHeaders (System. ServiceModel. Channels)
 author: mairaw
 ms.author: mairaw
 ms.date: 11/01/2019
@@ -18,30 +18,30 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451174"
 ---
-# <a name="messagewritestartheaders-method"></a><span data-ttu-id="fc70e-102">Message.WriteStartHeaders Method</span><span class="sxs-lookup"><span data-stu-id="fc70e-102">Message.WriteStartHeaders Method</span></span>
+# <a name="messagewritestartheaders-method"></a><span data-ttu-id="f8324-102">Método Message. WriteStartHeaders</span><span class="sxs-lookup"><span data-stu-id="f8324-102">Message.WriteStartHeaders Method</span></span>
 
-<span data-ttu-id="fc70e-103">Writes the start header into an XML file by calling the <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType> method.</span><span class="sxs-lookup"><span data-stu-id="fc70e-103">Writes the start header into an XML file by calling the <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType> method.</span></span>
+<span data-ttu-id="f8324-103">Grava o cabeçalho inicial em um arquivo XML chamando o método <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f8324-103">Writes the start header into an XML file by calling the <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A?displayProperty=nameWithType> method.</span></span>
 
 ```csharp
 internal void WriteStartHeaders(XmlDictionaryWriter writer)
 ```
 
-## <a name="parameters"></a><span data-ttu-id="fc70e-104">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="fc70e-104">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="f8324-104">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="f8324-104">Parameters</span></span>
 
-- <span data-ttu-id="fc70e-105">`writer` <xref:System.Xml.XmlDictionaryWriter></span><span class="sxs-lookup"><span data-stu-id="fc70e-105">`writer` <xref:System.Xml.XmlDictionaryWriter></span></span>\
-  <span data-ttu-id="fc70e-106">The writer that is used to write the start header into an XML file.</span><span class="sxs-lookup"><span data-stu-id="fc70e-106">The writer that is used to write the start header into an XML file.</span></span>
+- <span data-ttu-id="f8324-105">`writer` <xref:System.Xml.XmlDictionaryWriter></span><span class="sxs-lookup"><span data-stu-id="f8324-105">`writer` <xref:System.Xml.XmlDictionaryWriter></span></span>\
+  <span data-ttu-id="f8324-106">O gravador usado para gravar o cabeçalho inicial em um arquivo XML.</span><span class="sxs-lookup"><span data-stu-id="f8324-106">The writer that is used to write the start header into an XML file.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="fc70e-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="fc70e-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f8324-107">Comentários</span><span class="sxs-lookup"><span data-stu-id="f8324-107">Remarks</span></span>
 
 > [!WARNING]
-> <span data-ttu-id="fc70e-108">The `Message.WriteStartHeaders` method is internal and is not meant to be used directly in your code.</span><span class="sxs-lookup"><span data-stu-id="fc70e-108">The `Message.WriteStartHeaders` method is internal and is not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="f8324-108">O método `Message.WriteStartHeaders` é interno e não deve ser usado diretamente no seu código.</span><span class="sxs-lookup"><span data-stu-id="f8324-108">The `Message.WriteStartHeaders` method is internal and is not meant to be used directly in your code.</span></span>
 >
-> <span data-ttu-id="fc70e-109">Microsoft does not support the use of this method in a production application under any circumstance.</span><span class="sxs-lookup"><span data-stu-id="fc70e-109">Microsoft does not support the use of this method in a production application under any circumstance.</span></span>
+> <span data-ttu-id="f8324-109">A Microsoft não oferece suporte ao uso desse método em um aplicativo de produção em qualquer circunstância.</span><span class="sxs-lookup"><span data-stu-id="f8324-109">Microsoft does not support the use of this method in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="fc70e-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="fc70e-110">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="f8324-110">Requisitos</span><span class="sxs-lookup"><span data-stu-id="f8324-110">Requirements</span></span>
 
-<span data-ttu-id="fc70e-111">**Namespace:** <xref:System.ServiceModel.Channels></span><span class="sxs-lookup"><span data-stu-id="fc70e-111">**Namespace:** <xref:System.ServiceModel.Channels></span></span>
+<span data-ttu-id="f8324-111">**Namespace:** <xref:System.ServiceModel.Channels></span><span class="sxs-lookup"><span data-stu-id="f8324-111">**Namespace:** <xref:System.ServiceModel.Channels></span></span>
 
-<span data-ttu-id="fc70e-112">**Assembly:** System.ServiceModel.dll</span><span class="sxs-lookup"><span data-stu-id="fc70e-112">**Assembly:** System.ServiceModel.dll</span></span>
+<span data-ttu-id="f8324-112">**Assembly:** System. ServiceModel. dll</span><span class="sxs-lookup"><span data-stu-id="f8324-112">**Assembly:** System.ServiceModel.dll</span></span>
 
-<span data-ttu-id="fc70e-113">**.NET Framework versions:** Available since 3.0.</span><span class="sxs-lookup"><span data-stu-id="fc70e-113">**.NET Framework versions:** Available since 3.0.</span></span>
+<span data-ttu-id="f8324-113">**.NET Framework versões:** Disponível desde 3,0.</span><span class="sxs-lookup"><span data-stu-id="f8324-113">**.NET Framework versions:** Available since 3.0.</span></span>

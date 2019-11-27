@@ -21,13 +21,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448571"
 ---
-# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="99751-102">Enumeração CorSymSearchPolicyAttributes</span><span class="sxs-lookup"><span data-stu-id="99751-102">CorSymSearchPolicyAttributes Enumeration</span></span>
-<span data-ttu-id="99751-103">Specifies the policy to be used when doing a search for a symbol reader.</span><span class="sxs-lookup"><span data-stu-id="99751-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="99751-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span><span class="sxs-lookup"><span data-stu-id="99751-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
+# <a name="corsymsearchpolicyattributes-enumeration"></a><span data-ttu-id="5b338-102">Enumeração CorSymSearchPolicyAttributes</span><span class="sxs-lookup"><span data-stu-id="5b338-102">CorSymSearchPolicyAttributes Enumeration</span></span>
+<span data-ttu-id="5b338-103">Especifica a política a ser usada ao fazer uma pesquisa por um leitor de símbolo.</span><span class="sxs-lookup"><span data-stu-id="5b338-103">Specifies the policy to be used when doing a search for a symbol reader.</span></span> <span data-ttu-id="5b338-104">Essas constantes são usadas pelos métodos [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) e [ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) .</span><span class="sxs-lookup"><span data-stu-id="5b338-104">These constants are used by the [ISymUnmanagedBinder2::GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md) and [ISymUnmanagedBinder3::GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md) methods.</span></span>  
   
 > [!IMPORTANT]
-> <span data-ttu-id="99751-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span><span class="sxs-lookup"><span data-stu-id="99751-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+> <span data-ttu-id="5b338-105">É um risco de segurança abrir um arquivo de banco de dados do programa (PDB) de uma fonte não confiável.</span><span class="sxs-lookup"><span data-stu-id="5b338-105">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="99751-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="99751-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5b338-106">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5b338-106">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorSymSearchPolicyAttributes  
@@ -39,18 +39,18 @@ typedef enum CorSymSearchPolicyAttributes
 } CorSymSearchPolicyAttributes;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="99751-107">Membros</span><span class="sxs-lookup"><span data-stu-id="99751-107">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5b338-107">Membros</span><span class="sxs-lookup"><span data-stu-id="5b338-107">Members</span></span>  
   
-|<span data-ttu-id="99751-108">Membro</span><span class="sxs-lookup"><span data-stu-id="99751-108">Member</span></span>|<span data-ttu-id="99751-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="99751-109">Description</span></span>|  
+|<span data-ttu-id="5b338-108">{1&gt;Membro&lt;1}</span><span class="sxs-lookup"><span data-stu-id="5b338-108">Member</span></span>|<span data-ttu-id="5b338-109">Descrição</span><span class="sxs-lookup"><span data-stu-id="5b338-109">Description</span></span>|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|<span data-ttu-id="99751-110">Queries the registry for symbol search paths.</span><span class="sxs-lookup"><span data-stu-id="99751-110">Queries the registry for symbol search paths.</span></span>|  
-|`AllowSymbolServerAccess`|<span data-ttu-id="99751-111">Accesses a symbol server.</span><span class="sxs-lookup"><span data-stu-id="99751-111">Accesses a symbol server.</span></span>|  
-|`AllowOriginalPathAccess`|<span data-ttu-id="99751-112">Searches the path specified in the Debug directory.</span><span class="sxs-lookup"><span data-stu-id="99751-112">Searches the path specified in the Debug directory.</span></span>|  
-|`AllowReferencePathAccess`|<span data-ttu-id="99751-113">Searches for the PDB in the place where the .exe file is.</span><span class="sxs-lookup"><span data-stu-id="99751-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
+|`AllowRegistryAccess`|<span data-ttu-id="5b338-110">Consulta o registro em busca de caminhos de pesquisa de símbolo.</span><span class="sxs-lookup"><span data-stu-id="5b338-110">Queries the registry for symbol search paths.</span></span>|  
+|`AllowSymbolServerAccess`|<span data-ttu-id="5b338-111">Acessa um servidor de símbolos.</span><span class="sxs-lookup"><span data-stu-id="5b338-111">Accesses a symbol server.</span></span>|  
+|`AllowOriginalPathAccess`|<span data-ttu-id="5b338-112">Pesquisa o caminho especificado no diretório de depuração.</span><span class="sxs-lookup"><span data-stu-id="5b338-112">Searches the path specified in the Debug directory.</span></span>|  
+|`AllowReferencePathAccess`|<span data-ttu-id="5b338-113">Procura o PDB no local onde está o arquivo. exe.</span><span class="sxs-lookup"><span data-stu-id="5b338-113">Searches for the PDB in the place where the .exe file is.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="99751-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="99751-114">Requirements</span></span>  
- <span data-ttu-id="99751-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="99751-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5b338-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5b338-114">Requirements</span></span>  
+ <span data-ttu-id="5b338-115">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="5b338-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="99751-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="99751-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5b338-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5b338-116">See also</span></span>
 
-- [<span data-ttu-id="99751-117">Enumerações do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="99751-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [<span data-ttu-id="5b338-117">Enumerações do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="5b338-117">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -22,10 +22,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441711"
 ---
-# <a name="imetadataimportenummemberrefs-method"></a><span data-ttu-id="011ca-102">Método IMetaDataImport::EnumMemberRefs</span><span class="sxs-lookup"><span data-stu-id="011ca-102">IMetaDataImport::EnumMemberRefs Method</span></span>
-<span data-ttu-id="011ca-103">Enumerates MemberRef tokens representing members of the specified type.</span><span class="sxs-lookup"><span data-stu-id="011ca-103">Enumerates MemberRef tokens representing members of the specified type.</span></span>  
+# <a name="imetadataimportenummemberrefs-method"></a><span data-ttu-id="3ac23-102">Método IMetaDataImport::EnumMemberRefs</span><span class="sxs-lookup"><span data-stu-id="3ac23-102">IMetaDataImport::EnumMemberRefs Method</span></span>
+<span data-ttu-id="3ac23-103">Enumera os tokens de MemberRef que representam os membros do tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="3ac23-103">Enumerates MemberRef tokens representing members of the specified type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="011ca-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="011ca-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3ac23-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3ac23-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT EnumMemberRefs (  
@@ -37,39 +37,39 @@ HRESULT EnumMemberRefs (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="011ca-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="011ca-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="3ac23-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="3ac23-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="011ca-106">[in, out] A pointer to the enumerator.</span><span class="sxs-lookup"><span data-stu-id="011ca-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="3ac23-106">[entrada, saída] Um ponteiro para o enumerador.</span><span class="sxs-lookup"><span data-stu-id="3ac23-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `tkParent`  
- <span data-ttu-id="011ca-107">[in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.</span><span class="sxs-lookup"><span data-stu-id="011ca-107">[in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.</span></span>  
+ <span data-ttu-id="3ac23-107">no Um token de TypeDef, TypeRef, MethodDef ou ModuleRef para o tipo cujos membros devem ser enumerados.</span><span class="sxs-lookup"><span data-stu-id="3ac23-107">[in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.</span></span>  
   
  `rMemberRefs`  
- <span data-ttu-id="011ca-108">[out] The array used to store MemberRef tokens.</span><span class="sxs-lookup"><span data-stu-id="011ca-108">[out] The array used to store MemberRef tokens.</span></span>  
+ <span data-ttu-id="3ac23-108">fora A matriz usada para armazenar tokens de MemberRef.</span><span class="sxs-lookup"><span data-stu-id="3ac23-108">[out] The array used to store MemberRef tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="011ca-109">[in] The maximum size of the `rMemberRefs` array.</span><span class="sxs-lookup"><span data-stu-id="011ca-109">[in] The maximum size of the `rMemberRefs` array.</span></span>  
+ <span data-ttu-id="3ac23-109">no O tamanho máximo da matriz de `rMemberRefs`.</span><span class="sxs-lookup"><span data-stu-id="3ac23-109">[in] The maximum size of the `rMemberRefs` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="011ca-110">[out] The actual number of MemberRef tokens returned in `rMemberRefs`.</span><span class="sxs-lookup"><span data-stu-id="011ca-110">[out] The actual number of MemberRef tokens returned in `rMemberRefs`.</span></span>  
+ <span data-ttu-id="3ac23-110">fora O número real de tokens de MemberRef retornado em `rMemberRefs`.</span><span class="sxs-lookup"><span data-stu-id="3ac23-110">[out] The actual number of MemberRef tokens returned in `rMemberRefs`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="011ca-111">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="011ca-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3ac23-111">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="3ac23-111">Return Value</span></span>  
   
-|<span data-ttu-id="011ca-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="011ca-112">HRESULT</span></span>|<span data-ttu-id="011ca-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="011ca-113">Description</span></span>|  
+|<span data-ttu-id="3ac23-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="3ac23-112">HRESULT</span></span>|<span data-ttu-id="3ac23-113">Descrição</span><span class="sxs-lookup"><span data-stu-id="3ac23-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="011ca-114">`EnumMemberRefs` returned successfully.</span><span class="sxs-lookup"><span data-stu-id="011ca-114">`EnumMemberRefs` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="011ca-115">There are no MemberRef tokens to enumerate.</span><span class="sxs-lookup"><span data-stu-id="011ca-115">There are no MemberRef tokens to enumerate.</span></span> <span data-ttu-id="011ca-116">In that case, `pcTokens` is to zero.</span><span class="sxs-lookup"><span data-stu-id="011ca-116">In that case, `pcTokens` is to zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="3ac23-114">`EnumMemberRefs` retornado com êxito.</span><span class="sxs-lookup"><span data-stu-id="3ac23-114">`EnumMemberRefs` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="3ac23-115">Não há tokens de MemberRef para enumerar.</span><span class="sxs-lookup"><span data-stu-id="3ac23-115">There are no MemberRef tokens to enumerate.</span></span> <span data-ttu-id="3ac23-116">Nesse caso, `pcTokens` é zero.</span><span class="sxs-lookup"><span data-stu-id="3ac23-116">In that case, `pcTokens` is to zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="011ca-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="011ca-117">Requirements</span></span>  
- <span data-ttu-id="011ca-118">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="011ca-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3ac23-117">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3ac23-117">Requirements</span></span>  
+ <span data-ttu-id="3ac23-118">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3ac23-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="011ca-119">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="011ca-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="3ac23-119">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="3ac23-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="011ca-120">**Library:** Included as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="011ca-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="3ac23-120">**Biblioteca:** Incluído como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="3ac23-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="011ca-121">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="011ca-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="3ac23-121">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3ac23-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="011ca-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="011ca-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3ac23-122">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3ac23-122">See also</span></span>
 
-- [<span data-ttu-id="011ca-123">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="011ca-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="011ca-124">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="011ca-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="3ac23-123">Interface IMetaDataImport</span><span class="sxs-lookup"><span data-stu-id="3ac23-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="3ac23-124">Interface IMetaDataImport2</span><span class="sxs-lookup"><span data-stu-id="3ac23-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
