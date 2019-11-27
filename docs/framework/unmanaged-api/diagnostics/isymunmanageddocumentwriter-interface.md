@@ -21,19 +21,19 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449088"
 ---
-# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="54b98-102">Interface ISymUnmanagedDocumentWriter</span><span class="sxs-lookup"><span data-stu-id="54b98-102">ISymUnmanagedDocumentWriter Interface</span></span>
-<span data-ttu-id="54b98-103">Fornece métodos para gravar em um documento referenciado por um repositório de símbolos.</span><span class="sxs-lookup"><span data-stu-id="54b98-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
+# <a name="isymunmanageddocumentwriter-interface"></a><span data-ttu-id="86a95-102">Interface ISymUnmanagedDocumentWriter</span><span class="sxs-lookup"><span data-stu-id="86a95-102">ISymUnmanagedDocumentWriter Interface</span></span>
+<span data-ttu-id="86a95-103">Fornece métodos para gravar em um documento referenciado por um repositório de símbolos.</span><span class="sxs-lookup"><span data-stu-id="86a95-103">Provides methods for writing to a document referenced by a symbol store.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="54b98-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="54b98-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="86a95-104">{1&gt;Métodos&lt;1}</span><span class="sxs-lookup"><span data-stu-id="86a95-104">Methods</span></span>  
   
-|<span data-ttu-id="54b98-105">Método</span><span class="sxs-lookup"><span data-stu-id="54b98-105">Method</span></span>|<span data-ttu-id="54b98-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="54b98-106">Description</span></span>|  
+|<span data-ttu-id="86a95-105">Método</span><span class="sxs-lookup"><span data-stu-id="86a95-105">Method</span></span>|<span data-ttu-id="86a95-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="86a95-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="54b98-107">Método SetCheckSum</span><span class="sxs-lookup"><span data-stu-id="54b98-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="54b98-108">Define informações de soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="54b98-108">Sets checksum information.</span></span>|  
-|[<span data-ttu-id="54b98-109">Método SetSource</span><span class="sxs-lookup"><span data-stu-id="54b98-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="54b98-110">Sets embedded source for a document that is being written.</span><span class="sxs-lookup"><span data-stu-id="54b98-110">Sets embedded source for a document that is being written.</span></span>|  
+|[<span data-ttu-id="86a95-107">Método SetCheckSum</span><span class="sxs-lookup"><span data-stu-id="86a95-107">SetCheckSum Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|<span data-ttu-id="86a95-108">Define informações de soma de verificação.</span><span class="sxs-lookup"><span data-stu-id="86a95-108">Sets checksum information.</span></span>|  
+|[<span data-ttu-id="86a95-109">Método SetSource</span><span class="sxs-lookup"><span data-stu-id="86a95-109">SetSource Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|<span data-ttu-id="86a95-110">Define a fonte incorporada para um documento que está sendo gravado.</span><span class="sxs-lookup"><span data-stu-id="86a95-110">Sets embedded source for a document that is being written.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="54b98-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="54b98-111">Requirements</span></span>  
- <span data-ttu-id="54b98-112">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="54b98-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86a95-111">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="86a95-111">Requirements</span></span>  
+ <span data-ttu-id="86a95-112">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="86a95-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="54b98-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="54b98-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86a95-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="86a95-113">See also</span></span>
 
-- [<span data-ttu-id="54b98-114">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="54b98-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="86a95-114">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="86a95-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

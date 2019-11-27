@@ -14,22 +14,22 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448510"
 ---
-# <a name="diagnostics-symbol-store-structures"></a><span data-ttu-id="e52aa-102">Estruturas de armazenamento de símbolo de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="e52aa-102">Diagnostics Symbol Store Structures</span></span>
-<span data-ttu-id="e52aa-103">Este tópico descreve as estruturas não gerenciadas que a API de armazenamento de símbolos de diagnóstico usa.</span><span class="sxs-lookup"><span data-stu-id="e52aa-103">This topic describes the unmanaged structures that the diagnostics symbol store API uses.</span></span>  
+# <a name="diagnostics-symbol-store-structures"></a><span data-ttu-id="eee3a-102">Estruturas de armazenamento de símbolo de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="eee3a-102">Diagnostics Symbol Store Structures</span></span>
+<span data-ttu-id="eee3a-103">Este tópico descreve as estruturas não gerenciadas que a API de armazenamento de símbolos de diagnóstico usa.</span><span class="sxs-lookup"><span data-stu-id="eee3a-103">This topic describes the unmanaged structures that the diagnostics symbol store API uses.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e52aa-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="e52aa-104">In This Section</span></span>  
- [<span data-ttu-id="e52aa-105">Estrutura CALL_ID</span><span class="sxs-lookup"><span data-stu-id="e52aa-105">CALL_ID Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- <span data-ttu-id="e52aa-106">Fornece informações para um depurador sobre uma função que está sendo chamada.</span><span class="sxs-lookup"><span data-stu-id="e52aa-106">Provides information to a debugger about a function that is being called.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="eee3a-104">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="eee3a-104">In This Section</span></span>  
+ [<span data-ttu-id="eee3a-105">Estrutura CALL_ID</span><span class="sxs-lookup"><span data-stu-id="eee3a-105">CALL_ID Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
+ <span data-ttu-id="eee3a-106">Fornece informações para um depurador sobre uma função que está sendo chamada.</span><span class="sxs-lookup"><span data-stu-id="eee3a-106">Provides information to a debugger about a function that is being called.</span></span>  
   
- [<span data-ttu-id="e52aa-107">Estrutura SYMLINEDELTA</span><span class="sxs-lookup"><span data-stu-id="e52aa-107">SYMLINEDELTA Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- <span data-ttu-id="e52aa-108">Fornece informações para o manipulador de símbolos sobre métodos que foram movidos como resultado de edições.</span><span class="sxs-lookup"><span data-stu-id="e52aa-108">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
+ [<span data-ttu-id="eee3a-107">Estrutura SYMLINEDELTA</span><span class="sxs-lookup"><span data-stu-id="eee3a-107">SYMLINEDELTA Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
+ <span data-ttu-id="eee3a-108">Fornece informações para o manipulador de símbolos sobre métodos que foram movidos como resultado de edições.</span><span class="sxs-lookup"><span data-stu-id="eee3a-108">Provides information to the symbol handler about methods that were moved as a result of edits.</span></span>  
   
- [<span data-ttu-id="e52aa-109">Estrutura USER_THREAD</span><span class="sxs-lookup"><span data-stu-id="e52aa-109">USER_THREAD Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
- <span data-ttu-id="e52aa-110">Fornece informações para um depurador sobre um thread.</span><span class="sxs-lookup"><span data-stu-id="e52aa-110">Provides information to a debugger about a thread.</span></span>  
+ [<span data-ttu-id="eee3a-109">Estrutura USER_THREAD</span><span class="sxs-lookup"><span data-stu-id="eee3a-109">USER_THREAD Structure</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
+ <span data-ttu-id="eee3a-110">Fornece informações para um depurador sobre um thread.</span><span class="sxs-lookup"><span data-stu-id="eee3a-110">Provides information to a debugger about a thread.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="e52aa-111">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="e52aa-111">Related Sections</span></span>  
- [<span data-ttu-id="e52aa-112">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="e52aa-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+## <a name="related-sections"></a><span data-ttu-id="eee3a-111">Seções Relacionadas</span><span class="sxs-lookup"><span data-stu-id="eee3a-111">Related Sections</span></span>  
+ [<span data-ttu-id="eee3a-112">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="eee3a-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
   
- [<span data-ttu-id="e52aa-113">Enumerações do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="e52aa-113">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
+ [<span data-ttu-id="eee3a-113">Enumerações do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="eee3a-113">Diagnostics Symbol Store Enumerations</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)  
   
- [<span data-ttu-id="e52aa-114">Depuração</span><span class="sxs-lookup"><span data-stu-id="e52aa-114">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+ [<span data-ttu-id="eee3a-114">Depuração</span><span class="sxs-lookup"><span data-stu-id="eee3a-114">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

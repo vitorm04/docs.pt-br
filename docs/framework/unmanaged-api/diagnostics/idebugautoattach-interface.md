@@ -21,18 +21,18 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445514"
 ---
-# <a name="idebugautoattach-interface"></a><span data-ttu-id="5a8d2-102">Interface IDebugAutoAttach</span><span class="sxs-lookup"><span data-stu-id="5a8d2-102">IDebugAutoAttach Interface</span></span>
-<span data-ttu-id="5a8d2-103">Defines the interface for server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="5a8d2-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
+# <a name="idebugautoattach-interface"></a><span data-ttu-id="ffdb1-102">Interface IDebugAutoAttach</span><span class="sxs-lookup"><span data-stu-id="ffdb1-102">IDebugAutoAttach Interface</span></span>
+<span data-ttu-id="ffdb1-103">Define a interface para anexação automática do depurador invocado pelo servidor.</span><span class="sxs-lookup"><span data-stu-id="ffdb1-103">Defines the interface for server-invoked debugger auto attach.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="5a8d2-104">Métodos</span><span class="sxs-lookup"><span data-stu-id="5a8d2-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="ffdb1-104">{1&gt;Métodos&lt;1}</span><span class="sxs-lookup"><span data-stu-id="ffdb1-104">Methods</span></span>  
   
-|<span data-ttu-id="5a8d2-105">Método</span><span class="sxs-lookup"><span data-stu-id="5a8d2-105">Method</span></span>|<span data-ttu-id="5a8d2-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="5a8d2-106">Description</span></span>|  
+|<span data-ttu-id="ffdb1-105">Método</span><span class="sxs-lookup"><span data-stu-id="ffdb1-105">Method</span></span>|<span data-ttu-id="ffdb1-106">Descrição</span><span class="sxs-lookup"><span data-stu-id="ffdb1-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="5a8d2-107">Método AutoAttach</span><span class="sxs-lookup"><span data-stu-id="5a8d2-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="5a8d2-108">Performs server-invoked debugger auto attach.</span><span class="sxs-lookup"><span data-stu-id="5a8d2-108">Performs server-invoked debugger auto attach.</span></span>|  
+|[<span data-ttu-id="ffdb1-107">Método AutoAttach</span><span class="sxs-lookup"><span data-stu-id="ffdb1-107">AutoAttach Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/idebugautoattach-autoattach-method.md)|<span data-ttu-id="ffdb1-108">Executa a anexação automática do depurador invocado pelo servidor.</span><span class="sxs-lookup"><span data-stu-id="ffdb1-108">Performs server-invoked debugger auto attach.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="5a8d2-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="5a8d2-109">Requirements</span></span>  
- <span data-ttu-id="5a8d2-110">**Header:** DbgAutoAttach.idl</span><span class="sxs-lookup"><span data-stu-id="5a8d2-110">**Header:** DbgAutoAttach.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ffdb1-109">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="ffdb1-109">Requirements</span></span>  
+ <span data-ttu-id="ffdb1-110">**Cabeçalho:** DbgAutoAttach. idl</span><span class="sxs-lookup"><span data-stu-id="ffdb1-110">**Header:** DbgAutoAttach.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5a8d2-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5a8d2-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ffdb1-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ffdb1-111">See also</span></span>
 
-- [<span data-ttu-id="5a8d2-112">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="5a8d2-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="ffdb1-112">Interfaces do repositório de símbolos de diagnóstico</span><span class="sxs-lookup"><span data-stu-id="ffdb1-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
