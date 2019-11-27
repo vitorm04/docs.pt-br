@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="datagrid-parts"></a>Partes de DataGrid  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.DataGrid>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_ColumnHeadersPresenter|<xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>|A linha que contém os cabeçalhos de coluna.|  
   
@@ -36,7 +36,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
-|Disabled|CommonStates|O controle está desabilitado.|  
+|Desabilitado|CommonStates|O controle está desabilitado.|  
 |InvalidFocused|ValidationStates|O controle não é válido e tem o foco.|  
 |InvalidUnfocused|ValidationStates|O controle não é válido e não tem o foco.|  
 |Válido|ValidationStates|O controle é válido.|  
@@ -53,9 +53,9 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |MouseOver|CommonStates|O ponteiro do mouse está posicionado sobre a célula.|  
 |Focalizado|FocusStates|A célula tem o foco.|  
 |Sem foco|FocusStates|A célula não tem o foco|  
-|Atual|CurrentStates|A célula é a célula atual.|  
+|Current|CurrentStates|A célula é a célula atual.|  
 |Normal|CurrentStates|A célula não é a célula atual.|  
-|Monitor|InteractionStates|A célula está no modo de exibição.|  
+|{1&gt;Vídeo&lt;1}|InteractionStates|A célula está no modo de exibição.|  
 |Edição|InteractionStates|A célula está no modo de edição.|  
 |Selecionado|SelectionStates|A célula está selecionada.|  
 |Não selecionado|SelectionStates|A célula não está selecionada.|  
@@ -89,7 +89,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="datagridrowheader-parts"></a>Partes de DataGridRowHeader  
  A tabela a seguir lista as partes nomeadas para o elemento <xref:System.Windows.Controls.Primitives.DataGridRowHeader>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_TopHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|O elemento usado para redimensionar o cabeçalho de linha partindo da parte superior.|  
 |PART_BottomHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|O elemento usado para redimensionar o cabeçalho de linha partindo da parte inferior.|  
@@ -122,7 +122,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="datagridcolumnheaderspresenter-parts"></a>Partes de DataGridColumnHeadersPresenter  
  A tabela a seguir lista as partes nomeadas para o elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeadersPresenter>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_FillerColumnHeader|<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>|O espaço reservado para cabeçalhos de coluna.|  
   
@@ -138,7 +138,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="datagridcolumnheader-parts"></a>Partes de DataGridColumnHeader  
  A tabela a seguir lista as partes nomeadas para o elemento <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_LeftHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|O elemento usado para redimensionar o cabeçalho de coluna partindo da esquerda.|  
 |PART_RightHeaderGripper|<xref:System.Windows.Controls.Primitives.Thumb>|O elemento usado para redimensionar o cabeçalho de coluna partindo da direita.|  

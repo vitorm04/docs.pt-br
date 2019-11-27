@@ -15,10 +15,10 @@ Este exemplo demonstra como a atividade ExternalizedPolicy4 permite a execução
 
 ## <a name="projects-in-this-sample"></a>Projetos nisso exemplo
 
-|Nome do projeto|Descrição|Arquivos de chave|
+|Nome do Projeto|Descrição|Arquivos de chave|
 |-|-|-|
 |ExternalizedPolicy4|Contém a atividade ExternalizedPolicy4 e o designer de WF 4,5.|**ExternalizedPolicy4.cs**: definição da atividade.<br /><br /> **ExternalizedPolicy4Designer. XAML**: designer personalizado para atividade ExternalizedPolicy4. Usar o editor das regras (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>) do mecanismo de regras WF 3,5.|
-|ImperativeCodeClientSample|Aplicativo cliente de exemplo que configura e executa um fluxo de trabalho usando um aplicativo ExternalizedPolicy4 usando o código em c obrigatório (nenhum designer usado).|**ApplyDiscount. Rules**: File com [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definições de regra.<br /><br /> **Order.cs**: tipo que representa uma ordem de cliente. As regras são aplicadas a objetos desse tipo.<br /><br /> {1&gt;Module.vb&lt;1}: Configura e executa um fluxo de trabalho que tenha uma atividade Policy4 para aplicar as regras definidas em ApplyDiscount.rules as instâncias de objetos pedido.<br /><br /> App.config: O arquivo de configuração com o caminho do arquivo de regras.|
+|ImperativeCodeClientSample|Aplicativo cliente de exemplo que configura e executa um fluxo de trabalho usando um aplicativo ExternalizedPolicy4 usando o código em c obrigatório (nenhum designer usado).|**ApplyDiscount. Rules**: File com [!INCLUDE[wf1](../../../../includes/wf1-md.md)] definições de regra.<br /><br /> **Order.cs**: tipo que representa uma ordem de cliente. As regras são aplicadas a objetos desse tipo.<br /><br /> **Program.cs**: configura e executa um fluxo de trabalho que tem uma atividade Policy4 para aplicar regras definidas em ApplyDiscount. Rules a instâncias de objetos Order.<br /><br /> App.config: O arquivo de configuração com o caminho do arquivo de regras.|
 |DesignerClientSample|Aplicativo cliente de exemplo que configura e executa um fluxo de trabalho usando um aplicativo ExternalPolicy4 no designer de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] .|**Sequence1. XAML**: fluxo de trabalho Sequencial que usa uma atividade Policy4 para executar avaliações de regra.<br /><br /> **Program.cs**: executa uma instância do fluxo de trabalho definido em Sequence1. XAML.|
 
 ## <a name="the-externalizedpolicy4-activity"></a>A atividade ExternalizedPolicy4
@@ -52,7 +52,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 
 ## <a name="externalizedpolicy4-activity-designer"></a>Designer de atividade ExternalizedPolicy4
 
-O designer ExternalizedPolicy4 permite que você configure uma atividade para usar um RuleSet existente sem escrever código. Apenas definir o caminho onde o arquivo de .rules é encontrado e especifica o nome de <xref:System.Workflow.Activities.Rules.RuleSet> que você deseja uso. Também permite que você altere <xref:System.Workflow.Activities.Rules.RuleSet>. Após compilar a solução, pode ser encontrado na caixa de ferramentas na seção Microsoft.Samples.Activities.Rules. O designer permite que você selecione um arquivo de .rules e um <xref:System.Workflow.Activities.Rules.RuleSet>. Quando o botão de **Edição RuleSet** é clicado, o WF 3,5 <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> é exibido. Esta caixa de diálogo é o editor hospedado novamente de regras WF 3,5 e é usada para exibir e editar as regras que a atividade ExternalizedPolicy4 executa.
+O designer ExternalizedPolicy4 permite que você configure uma atividade para usar um RuleSet existente sem escrever código. Apenas definir o caminho onde o arquivo de .rules é encontrado e especifica o nome de <xref:System.Workflow.Activities.Rules.RuleSet> que você deseja uso. Também permite que você altere <xref:System.Workflow.Activities.Rules.RuleSet>. Após compilar a solução, pode ser encontrado na caixa de ferramentas na seção Microsoft.Samples.Activities.Rules. O designer permite que você selecione um arquivo de .rules e um <xref:System.Workflow.Activities.Rules.RuleSet>. Quando o botão **Editar RuleSet** é clicado, o <xref:System.Workflow.Activities.Rules.Design.RuleSetDialog> do WF 3,5 é exibido. Esta caixa de diálogo é o editor hospedado novamente de regras WF 3,5 e é usada para exibir e editar as regras que a atividade ExternalizedPolicy4 executa.
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 e ExternalPolicy4
 
@@ -68,7 +68,7 @@ Este exemplo contém dois aplicativos cliente: ImperativeCodeClientSample e Desi
 
 1. Usando o Visual Studio, abra o arquivo de solução *Policy4sample. sln* .
 
-2. Em **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto de **ImperativeCodeClientSample** e selecione **Definir como projeto de inicialização**.
+2. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **ImperativeCodeClientSample** e selecione **definir como projeto de inicialização**.
 
 3. Para executar o projeto, pressione **Ctrl**+**F5**.
 
@@ -76,7 +76,7 @@ Este exemplo contém dois aplicativos cliente: ImperativeCodeClientSample e Desi
 
 1. Usando o Visual Studio, abra o arquivo de solução *Policy4sample. sln* .
 
-2. Em **Gerenciador de Soluções**, clique com o botão direito do mouse no projeto de **DesignerClientSample** e selecione **Definir como projeto de inicialização**.
+2. Em **Gerenciador de soluções**, clique com o botão direito do mouse no projeto **DesignerClientSample** e selecione **definir como projeto de inicialização**.
 
 3. Pressione **Ctrl**+**Shift**+**B** para compilar o projeto.
 
