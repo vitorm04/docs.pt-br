@@ -23,7 +23,7 @@ Para obter uma visão geral desses modos de publicação, confira [Implantação
 
 Procurando uma ajuda rápida de como usar a CLI? A tabela a seguir mostra alguns exemplos de como publicar o aplicativo. Especifique a estrutura de destino com o parâmetro `-f <TFM>` ou editando o arquivo de projeto. Para obter mais informações, confira [Noções básicas de publicação](#publishing-basics).
 
-| Modo de publicação | Versão do SDK | Comando |
+| Modo de publicação | Versão do SDK | Command |
 | ------------ | ----------- | ------- |
 | Implantação dependente de estrutura | 2.x | `dotnet publish -c Release` |
 | Executável dependente de estrutura | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
@@ -59,7 +59,7 @@ Mais informações sobre binários específicos da plataforma são abordadas nas
 
 ## <a name="sample-app"></a>Aplicativo de exemplo
 
-You can use the following app to explore the publishing commands. O aplicativo é criado pela execução dos seguintes comandos no terminal:
+Você pode usar o aplicativo a seguir para explorar os comandos de publicação. O aplicativo é criado pela execução dos seguintes comandos no terminal:
 
 ```dotnetcli
 mkdir apptest1
@@ -116,7 +116,7 @@ A publicação de uma FDD cria um aplicativo que efetua roll forward automaticam
 
 ## <a name="framework-dependent-executable"></a>Executável dependente de estrutura
 
-For the .NET Core SDK 3.x CLI, framework-dependent executable (FDE) is the default mode for the basic `dotnet publish` command. Você não precisa especificar outros parâmetros, desde que queira definir o sistema operacional atual como destino.
+Para a CLI SDK do .NET Core 3. x, o executável dependente da estrutura (FDE) é o modo padrão para o comando `dotnet publish` básico. Você não precisa especificar outros parâmetros, desde que queira definir o sistema operacional atual como destino.
 
 Nesse modo, um host do executável específico da plataforma é criado para hospedar o aplicativo multiplataforma. Esse modo é semelhante ao FDD, pois o FDD exige um host na forma do comando `dotnet`. O nome de arquivo executável do host varia de acordo com a plataforma e recebe um nome semelhante a `<PROJECT-FILE>.exe`. Execute esse executável diretamente em vez de chamar `dotnet <PROJECT-FILE>.dll`, o que ainda é uma forma aceitável de executar o aplicativo.
 
@@ -135,11 +135,11 @@ Sempre que você usa a opção `-r`, o caminho da pasta de saída é alterado pa
 Se você usar o [aplicativo de exemplo](#sample-app), execute `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`. Esse comando cria o seguinte executável: `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe`
 
 > [!NOTE]
-> Reduza o tamanho total da implantação habilitando o **modo invariável de globalização**. Esse modo é útil para aplicativos que não têm reconhecimento global e que podem usar as convenções de formatação, as convenções de uso de maiúsculas, a comparação de cadeia de caracteres e a ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture). For more information about **globalization invariant mode** and how to enable it, see [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> Reduza o tamanho total da implantação habilitando o **modo invariável de globalização**. Esse modo é útil para aplicativos que não têm reconhecimento global e que podem usar as convenções de formatação, as convenções de uso de maiúsculas, a comparação de cadeia de caracteres e a ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture). Para obter mais informações sobre o **modo invariável de globalização** e como habilitá-lo, consulte [modo invariável de globalização do .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 
 ## <a name="self-contained-deployment"></a>Implantação autocontida
 
-Quando você publica uma SCD (implantação autossuficiente), o SDK do .NET Core cria um executável específico da plataforma. Publishing an SCD includes all required .NET Core files to run your app but it doesn't include the [native dependencies of .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Essas dependências precisam estar presentes no sistema antes da execução do aplicativo.
+Quando você publica uma SCD (implantação autossuficiente), o SDK do .NET Core cria um executável específico da plataforma. A publicação de uma SCD inclui todos os arquivos do .NET Core necessários para executar seu aplicativo, mas não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md). Essas dependências precisam estar presentes no sistema antes da execução do aplicativo.
 
 A publicação de uma SCD cria um aplicativo que não efetua roll forward para o último patch de segurança disponível do .NET Core. Para obter mais informações sobre a associação de versão no tempo de compilação, confira [Selecionar a versão do .NET Core a ser usada](../versions/selection.md#self-contained-deployments-include-the-selected-runtime).
 
@@ -150,7 +150,7 @@ A publicação de uma SCD cria um aplicativo que não efetua roll forward para o
 - `--self-contained true` Essa opção instrui o SDK do .NET Core a criar um executável como uma SCD.
 
 > [!NOTE]
-> Reduza o tamanho total da implantação habilitando o **modo invariável de globalização**. Esse modo é útil para aplicativos que não têm reconhecimento global e que podem usar as convenções de formatação, as convenções de uso de maiúsculas, a comparação de cadeia de caracteres e a ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture). For more information about **globalization invariant mode** and how to enable it, see [.NET Core Globalization Invariant Mode](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+> Reduza o tamanho total da implantação habilitando o **modo invariável de globalização**. Esse modo é útil para aplicativos que não têm reconhecimento global e que podem usar as convenções de formatação, as convenções de uso de maiúsculas, a comparação de cadeia de caracteres e a ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture). Para obter mais informações sobre o **modo invariável de globalização** e como habilitá-lo, consulte [modo invariável de globalização do .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
 
 ## <a name="see-also"></a>Consulte também
 

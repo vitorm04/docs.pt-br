@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445986"
 ---
 # <a name="isymunmanagedwriterabort-method"></a>Método ISymUnmanagedWriter::Abort
-Closes the symbol writer without committing the symbols to the symbol store. After this call, the symbol writer becomes invalid for further updates. To commit the symbols and close the symbol writer, use the [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) method instead.  
+Fecha o gravador de símbolo sem confirmar os símbolos para o repositório de símbolos. Após essa chamada, o gravador de símbolo se torna inválido para atualizações adicionais. Para confirmar os símbolos e fechar o gravador de símbolo, use o método [ISymUnmanagedWriter:: Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) em vez disso.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,10 +32,10 @@ HRESULT Abort();
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

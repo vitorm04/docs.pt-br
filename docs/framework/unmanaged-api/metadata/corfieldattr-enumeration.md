@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450308"
 ---
 # <a name="corfieldattr-enumeration"></a>Enumeração CorFieldAttr
-Contains values that describe metadata about a field.  
+Contém valores que descrevem metadados sobre um campo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -58,32 +58,32 @@ typedef enum CorFieldAttr {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|Specifies accessibility information.|  
+|`fdFieldAccessMask`|Especifica informações de acessibilidade.|  
 |`fdPrivateScope`|Especifica que o campo não pode ser referenciado.|  
-|`fdPrivate`|Specifies that the field is accessible only by its parent type.|  
-|`fdFamANDAssem`|Specifies that the field is accessible by derived classes in its assembly.|  
-|`fdAssembly`|Specifies that the field is accessible by all types in its assembly.|  
-|`fdFamily`|Specifies that the field is accessible only by its type and derived classes.|  
-|`fdFamORAssem`|Specifies that the field is accessible by derived classes and by all types in its assembly.|  
-|`fdPublic`|Specifies that the field is accessible by all types with visibility of this scope.|  
-|`fdStatic`|Specifies that the field is a member of its type rather than an instance member.|  
-|`fdInitOnly`|Specifies that the field cannot be changed after it is initialized.|  
-|`fdLiteral`|Specifies that the field value is a compile-time constant.|  
-|`fdNotSerialized`|Specifies that the field is not serialized when its type is remoted.|  
-|`fdSpecialName`|Specifies that the field is special, and that its name describes how.|  
-|`fdPinvokeImpl`|Specifies that the field implementation is forwarded through PInvoke.|  
-|`fdReservedMask`|Reserved for internal use by the common language runtime.|  
-|`fdRTSpecialName`|Specifies that the common language runtime metadata internal APIs should check the encoding of the name.|  
-|`fdHasFieldMarshal`|Specifies that the field contains marshaling information.|  
+|`fdPrivate`|Especifica que o campo é acessível somente por seu tipo pai.|  
+|`fdFamANDAssem`|Especifica que o campo pode ser acessado por classes derivadas em seu assembly.|  
+|`fdAssembly`|Especifica que o campo pode ser acessado por todos os tipos em seu assembly.|  
+|`fdFamily`|Especifica que o campo é acessível somente por seu tipo e classes derivadas.|  
+|`fdFamORAssem`|Especifica que o campo pode ser acessado por classes derivadas e por todos os tipos em seu assembly.|  
+|`fdPublic`|Especifica que o campo pode ser acessado por todos os tipos com visibilidade desse escopo.|  
+|`fdStatic`|Especifica que o campo é um membro de seu tipo em vez de um membro de instância.|  
+|`fdInitOnly`|Especifica que o campo não pode ser alterado após ser inicializado.|  
+|`fdLiteral`|Especifica que o valor do campo é uma constante de tempo de compilação.|  
+|`fdNotSerialized`|Especifica que o campo não é serializado quando seu tipo é remoto.|  
+|`fdSpecialName`|Especifica que o campo é especial e que seu nome descreve como.|  
+|`fdPinvokeImpl`|Especifica que a implementação do campo é encaminhada por meio de PInvoke.|  
+|`fdReservedMask`|Reservado para uso interno pelo Common Language Runtime.|  
+|`fdRTSpecialName`|Especifica que os Common Language Runtime APIs internas de metadados devem verificar a codificação do nome.|  
+|`fdHasFieldMarshal`|Especifica que o campo contém informações de marshaling.|  
 |`fdHasDefault`|Especifica que o campo tem um valor padrão.|  
-|`fdHasFieldRVA`|Specifies that the field has a relative virtual address.|  
+|`fdHasFieldRVA`|Especifica que o campo tem um endereço virtual relativo.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

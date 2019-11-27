@@ -1,5 +1,5 @@
 ---
-title: GCLOHThreshold element
+title: Elemento GCLOHThreshold
 ms.date: 11/20/2019
 helpviewer_keywords:
 - GCLOHThreshold element
@@ -11,13 +11,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451216"
 ---
-# <a name="gclohthreshold-element"></a>GCLOHThreshold element
+# <a name="gclohthreshold-element"></a>Elemento GCLOHThreshold
 
-Specifies the threshold size, in bytes, that causes the garbage collector to put objects on the large object heap (LOH).
+Especifica o tamanho do limite, em bytes, que faz com que o coletor de lixo coloque objetos na LOH (Large Object heap).
 
 [\<configuration>](../configuration-element.md)\
-&nbsp;&nbsp;[\<runtime>](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold>
+> &nbsp;de [\<de tempo de execução](runtime-element.md) do &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp;\<GCLOHThreshold >
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -30,17 +30,17 @@ Specifies the threshold size, in bytes, that causes the garbage collector to put
 
 |Atributo|Descrição|
 |---------------|-----------------|
-|`enabled`|Atributo obrigatório.<br /><br />Specifies the threshold size that causes objects to go on the large object heap.|
+|`enabled`|Atributo obrigatório.<br /><br />Especifica o tamanho do limite que faz com que os objetos vá para a heap de objeto grande.|
 
-### <a name="enabled-attribute"></a>enabled attribute
+### <a name="enabled-attribute"></a>atributo habilitado
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`nnnn`|The threshold size, in bytes, that causes objects to go on the large object heap.|
+|`nnnn`|O tamanho do limite, em bytes, que faz com que os objetos vá para a heap de objeto grande.|
 
-## <a name="child-elements"></a>Elementos filho
+## <a name="child-elements"></a>Child elements
 
-nenhuma.
+Nenhum.
 
 ## <a name="parent-elements"></a>Elementos pai
 
@@ -51,11 +51,11 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-This setting was introduced in .NET Framework 4.8.
+Essa configuração foi introduzida no .NET Framework 4,8.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Run-time settings schema](index.md)
+- [Esquema de configurações de tempo de execução](index.md)
 - [Esquema de arquivos de configuração](../index.md)
 - [Noções básicas da coleta de lixo](../../../../standard/garbage-collection/fundamentals.md)
-- [NET Core run-time config options for GC](../../../../core/run-time-config/garbage-collector.md)
+- [Opções de configuração de tempo de execução do NET Core para GC](../../../../core/run-time-config/garbage-collector.md)

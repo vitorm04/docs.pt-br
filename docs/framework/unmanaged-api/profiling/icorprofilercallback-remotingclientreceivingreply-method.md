@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445812"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>Método ICorProfilerCallback::RemotingClientReceivingReply
-Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.  
+Notifica o criador de perfil de que a parte do lado do servidor de uma chamada de comunicação remota foi concluída e que o cliente agora está recebendo e prestes a processar a resposta.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,23 +35,23 @@ HRESULT RemotingClientReceivingReply(
   
 ## <a name="parameters"></a>Parâmetros  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:  
+ no Um valor que corresponderá com o valor fornecido em [ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) sob estas condições:  
   
-- Remoting GUID cookies are active.  
+- Os cookies de GUID de comunicação remota estão ativos.  
   
-- The channel succeeds in transmitting the message.  
+- O canal tem sucesso ao transmitir a mensagem.  
   
-- GUID cookies are active on the server-side process.  
+- Os cookies de GUID estão ativos no processo do lado do servidor.  
   
- This allows easy pairing of remoting calls.  
+ Isso permite um emparelhamento fácil de chamadas remotas.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ no Um valor que será `true` se a chamada for assíncrona; caso contrário, `false`.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

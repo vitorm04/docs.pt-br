@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436298"
 ---
 # <a name="imetadataconvertergetmetadatafromtypeinfo-method"></a>Método IMetaDataConverter::GetMetaDataFromTypeInfo
-Gets a pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library referenced by the specified `ITypeInfo` instance.  
+Obtém um ponteiro para uma instância de [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) que representa a assinatura de metadados da biblioteca de tipos referenciada pela instância de `ITypeInfo` especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +36,17 @@ HRESULT GetMetaDataFromTypeInfo (
   
 ## <a name="parameters"></a>Parâmetros  
  `pITI`  
- [in] A pointer to an `ITypeInfo` object that refers to the type library.  
+ no Um ponteiro para um objeto `ITypeInfo` que se refere à biblioteca de tipos.  
   
  `ppMDI`  
- [out] A pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.  
+ fora Um ponteiro para um local que recebe o endereço da instância de `IMetaDataImport` que representa a assinatura de metadados.  
   
 ## <a name="requirements"></a>Requisitos  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+ **Plataforma:** Consulte [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

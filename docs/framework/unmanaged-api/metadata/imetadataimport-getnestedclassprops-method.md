@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437142"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>Método IMetaDataImport::GetNestedClassProps
-Gets the TypeDef token for the parent <xref:System.Type> of the specified nested type.  
+Obtém o token de TypeDef para o <xref:System.Type> pai do tipo aninhado especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +36,17 @@ HRESULT GetNestedClassProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `tdNestedClass`  
- [in] A TypeDef token representing the <xref:System.Type> to return the parent class token for.  
+ no Um token de TypeDef que representa o <xref:System.Type> para retornar o token de classe pai para.  
   
  `ptdEnclosingClass`  
- [out] A pointer to the TypeDef token for the <xref:System.Type> that `tdNestedClass` is nested in.  
+ fora Um ponteiro para o token de TypeDef para o <xref:System.Type> em que `tdNestedClass` está aninhado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

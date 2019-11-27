@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430110"
 ---
 # <a name="icorprofilercallback4rejiterror-method"></a>Método ICorProfilerCallback4::ReJITError
-Notifies the profiler that the just-in-time (JIT) compiler encountered an error in the recompilation process.  
+Notifica o criador de perfil de que o compilador JIT (just-in-time) encontrou um erro no processo de recompilação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,35 +37,35 @@ HRESULT ReJITError(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleID`  
- [in] The `ModuleID` in which the failed recompilation attempt was made.  
+ no O `ModuleID` em que a tentativa de recompilação com falha foi feita.  
   
  `methodId`  
- [in] The `MethodDef` of the method on which the failed recompilation attempt was made.  
+ no A `MethodDef` do método no qual a tentativa de recompilação com falha foi feita.  
   
  `functionId`  
- [in] The function instance that is being recompiled or marked for recompilation. This value may be `NULL` if the failure occurred on a per-method basis instead of a per-instantiation basis (for example, if the profiler specified an invalid metadata token for the method to be recompiled).  
+ no A instância de função que está sendo recompilada ou marcada para recompilação. Esse valor pode ser `NULL` se a falha ocorreu em uma base por método, em vez de uma base por instanciação (por exemplo, se o criador de perfil especificou um token de metadados inválido para o método a ser recompilado).  
   
  `hrStatus`  
- [in] An HRESULT that indicates the nature of the failure. See the Status HRESULTS section for a list of values.  
+ no Um HRESULT que indica a natureza da falha. Consulte a seção status HRESULTs para obter uma lista de valores.  
   
 ## <a name="return-value"></a>Valor retornado  
  Os valores retornados desse retorno de chamada são ignorados.  
   
-## <a name="status-hresults"></a>Status HRESULTS  
+## <a name="status-hresults"></a>Status HRESULTs  
   
-|Status array HRESULT|Descrição|  
+|Matriz de status HRESULT|Descrição|  
 |--------------------------|-----------------|  
-|E_INVALIDARG|The `moduleID` or `methodDef` token is `NULL`.|  
-|CORPROF_E_DATAINCOMPLETE|The module is not fully loaded yet, or it is in the process of being unloaded.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example, by `Reflection.Emit`), and is thus not supported by this method.|  
-|CORPROF_E_FUNCTION_IS_COLLECTIBLE|The method is instantiated into a collectible assembly, and is therefore not able to be recompiled. Note that types and functions defined in a non-reflection context (for example, `List<MyCollectibleStruct>`) can be instantiated into a collectible assembly.|  
-|E_OUTOFMEMORY|The CLR ran out of memory while trying to mark the specified method for JIT recompilation.|  
-|Outros|The operating system returned a failure outside the control of the CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error is displayed.|  
+|{1&gt;E_INVALIDARG&lt;1}|O token de `moduleID` ou `methodDef` é `NULL`.|  
+|CORPROF_E_DATAINCOMPLETE|O módulo ainda não está totalmente carregado ou está em processo de descarregamento.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|O módulo especificado foi gerado dinamicamente (por exemplo, por `Reflection.Emit`) e, portanto, não é suportado por esse método.|  
+|CORPROF_E_FUNCTION_IS_COLLECTIBLE|O método é instanciado em um assembly de coleção e, portanto, não pode ser recompilado. Observe que os tipos e funções definidos em um contexto não-reflexão (por exemplo, `List<MyCollectibleStruct>`) podem ser instanciados em um assembly de coleção.|  
+|E_OUTOFMEMORY|O CLR ficou sem memória ao tentar marcar o método especificado para recompilação JIT.|  
+|Outros|O sistema operacional retornou uma falha fora do controle do CLR. Por exemplo, se uma chamada do sistema para alterar a proteção de acesso de uma página de memória falhar, o erro do sistema operacional será exibido.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435999"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>Método IMetaDataDispenserEx::GetOption
-Gets the value of the specified option for the current metadata scope. The option controls how calls to the current metadata scope are handled.  
+Obtém o valor da opção especificada para o escopo de metadados atual. A opção controla como as chamadas para o escopo de metadados atual são tratadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,13 +36,13 @@ HRESULT GetOption (
   
 ## <a name="parameters"></a>Parâmetros  
  `optionId`  
- [in] A pointer to a GUID that specifies the option to be retrieved. See the Remarks section for a list of supported GUIDs.  
+ no Um ponteiro para um GUID que especifica a opção a ser recuperada. Consulte a seção comentários para obter uma lista de GUIDs com suporte.  
   
  `pValue`  
- [out] The value of the returned option. The type of this value will be a variant of the specified option's type.  
+ fora O valor da opção retornada. O tipo desse valor será uma variante do tipo da opção especificada.  
   
 ## <a name="remarks"></a>Comentários  
- The following list shows the GUIDs that are supported for this method. For descriptions, see the [IMetaDataDispenserEx::SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) method. If `optionId` is not in this list, this method returns HRESULT `E_INVALIDARG`, indicating an incorrect parameter.  
+ A lista a seguir mostra os GUIDs que têm suporte para esse método. Para obter descrições, consulte o método [IMetaDataDispenserEx:: SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md) . Se `optionId` não estiver nessa lista, esse método retornará o HRESULT `E_INVALIDARG`, indicando um parâmetro incorreto.  
   
 - MetaDataCheckDuplicatesFor  
   
@@ -58,12 +58,12 @@ HRESULT GetOption (
   
 - MetaDataLinkerOptions  
   
-## <a name="requirements"></a>Requisitos  
- **Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Plataforma:** Consulte [requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

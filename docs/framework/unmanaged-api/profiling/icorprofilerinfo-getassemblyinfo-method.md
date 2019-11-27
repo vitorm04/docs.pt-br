@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448169"
 ---
 # <a name="icorprofilerinfogetassemblyinfo-method"></a>Método ICorProfilerInfo::GetAssemblyInfo
-Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.  
+Aceita uma ID de assembly e retorna o nome do assembly e a ID do seu módulo de manifesto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,32 +40,32 @@ HRESULT GetAssemblyInfo(
   
 ## <a name="parameters"></a>Parâmetros  
  `assemblyId`  
- [in] The identifier of the assembly.  
+ no O identificador do assembly.  
   
  `cchName`  
- [in] The length, in characters, of `szName`.  
+ no O comprimento, em caracteres, de `szName`.  
   
  `pcchName`  
- [out] A pointer to the total character length of the assembly's name.  
+ fora Um ponteiro para o comprimento total do caractere do nome do assembly.  
   
  `szName`  
- [out] A caller-provided wide character buffer. When the function returns, it will contain the assembly's name.  
+ fora Um buffer de caracteres largo fornecido pelo chamador. Quando a função retornar, ela conterá o nome do assembly.  
   
  `pAppDomainId`  
- [out] A pointer to the ID of the application domain that contains the assembly.  
+ fora Um ponteiro para a ID do domínio do aplicativo que contém o assembly.  
   
  `pModuleId`  
- [out] A pointer to the ID of the assembly's manifest module.  
+ fora Um ponteiro para a ID do módulo de manifesto do assembly.  
   
 ## <a name="remarks"></a>Comentários  
- After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.  
+ Após esse método retornar, você deve verificar se o buffer de `szName` era grande o suficiente para conter o nome completo do assembly. Para fazer isso, compare o valor que `pcchName` aponta com o valor do parâmetro `cchName`. Se `pcchName` apontar para um valor maior que `cchName`, aloque um buffer de `szName` maior, atualize `cchName` com o tamanho novo, maior e chame `GetAssemblyInfo` novamente.  
   
- Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.  
+ Como alternativa, você pode primeiro chamar `GetAssemblyInfo` com um buffer de `szName` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode ajustar o tamanho do buffer com base no valor retornado em `pcchName` e chamar `GetAssemblyInfo` novamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

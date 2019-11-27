@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449114"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>Método ISymUnmanagedDocument::HasEmbeddedSource
-Returns `true` if the document has source embedded in the debugging symbols; otherwise, returns `false`.  
+Retorna `true` se o documento tem origem inserida nos símbolos de depuração; caso contrário, retorna `false`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,10 +34,10 @@ HRESULT HasEmbeddedSource(
   
 ## <a name="parameters"></a>Parâmetros  
  `pRetVal`  
- [out] A pointer to a variable that indicates whether the document has source embedded in the debugging symbols.  
+ fora Um ponteiro para uma variável que indica se o documento tem origem inserida nos símbolos de depuração.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds.  
+ S_OK se o método tiver sucesso.  
   
 ## <a name="see-also"></a>Consulte também
 

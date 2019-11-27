@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445528"
 ---
 # <a name="idebugautoattachautoattach-method"></a>Método IDebugAutoAttach::AutoAttach
-Performs server-invoked debugger auto attach.  
+Executa a anexação automática do depurador invocado pelo servidor.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,25 +40,25 @@ HRESULT AutoAttach
   
 ## <a name="parameters"></a>Parâmetros  
  `guidPort`  
- [in] Always set to `GUID_NULL`.  
+ no Sempre definido como `GUID_NULL`.  
   
  `dwPid`  
- [in] Process ID, normally retrieved with the `GetCurrentProcessId` function.  
+ no ID do processo, normalmente recuperada com a função `GetCurrentProcessId`.  
   
  `dwProgramType`  
- [in] Program type: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`, or `AUTOATTACH_PROGRAM_UNKNOWN`.  
+ no Tipo de programa: `AUTOATTACH_PROGRAM_WIN32`, `AUTOATTACH_PROGRAM_COMPLUS`ou `AUTOATTACH_PROGRAM_UNKNOWN`.  
   
  `dwProgramId`  
- [in] Program ID.  
+ no ID do programa.  
   
  `pszSessionId`  
- [in] String passed by the debug verb.  
+ no Cadeia de caracteres passada pelo verbo Debug.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds.  
+ S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** DbgAutoAttach.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** DbgAutoAttach. h  
   
 ## <a name="see-also"></a>Consulte também
 

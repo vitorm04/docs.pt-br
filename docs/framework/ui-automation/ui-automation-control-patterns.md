@@ -18,7 +18,7 @@ ms.locfileid: "74441449"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- This section provides detailed information about how to use [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] control patterns.  
+ Esta seção fornece informações detalhadas sobre como usar os padrões de controle de [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Implementando o padrão de controle Dock da automação de interface do usuário](implementing-the-ui-automation-dock-control-pattern.md)  
@@ -38,4 +38,4 @@ ms.locfileid: "74441449"
  [Implementando o padrão de controle Transform de automação de interface do usuário](implementing-the-ui-automation-transform-control-pattern.md)  
  [Implementando o padrão controle Value de automação de interface do usuário](implementing-the-ui-automation-value-control-pattern.md)  
  [Implementando o padrão de controle Window de automação de interface do usuário](implementing-the-ui-automation-window-control-pattern.md)  
- [Tópicos explicativos](ui-automation-control-patterns-how-to-topics.md)
+ [Tópicos de instruções](ui-automation-control-patterns-how-to-topics.md)

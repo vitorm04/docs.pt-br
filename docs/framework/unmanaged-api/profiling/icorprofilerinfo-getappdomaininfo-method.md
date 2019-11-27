@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448176"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>Método ICorProfilerInfo::GetAppDomainInfo
-Accepts an application domain ID. Returns an application domain name and the ID of the process that contains it.  
+Aceita uma ID de domínio do aplicativo. Retorna um nome de domínio de aplicativo e a ID do processo que o contém.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,29 +39,29 @@ HRESULT GetAppDomainInfo(
   
 ## <a name="parameters"></a>Parâmetros  
  `appDomainId`  
- [in] The ID of the application domain.  
+ no A ID do domínio do aplicativo.  
   
  `cchName`  
- [in] The length, in characters, of the `szName` return buffer.  
+ no O comprimento, em caracteres, do `szName` buffer de retorno.  
   
  `pcchName`  
- [out] A pointer to the total character length of the application domain name.  
+ fora Um ponteiro para o tamanho total do caractere do nome de domínio do aplicativo.  
   
  `szName`  
- [out] A caller-provided wide character buffer. When the method returns, `szName` will contain the full or partial application domain name.  
+ fora Um buffer de caracteres largo fornecido pelo chamador. Quando o método retornar, `szName` conterá o nome de domínio do aplicativo completo ou parcial.  
   
  `pProcessId`  
- [out] A pointer to the ID of the process that contains the application domain.  
+ fora Um ponteiro para a ID do processo que contém o domínio do aplicativo.  
   
 ## <a name="remarks"></a>Comentários  
- After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the application domain. To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter. If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAppDomainInfo` again.  
+ Depois que esse método retornar, você deverá verificar se o buffer de `szName` era grande o suficiente para conter o nome completo do domínio do aplicativo. Para fazer isso, compare o valor que `pcchName` aponta com o valor do parâmetro `cchName`. Se `pcchName` apontar para um valor maior que `cchName`, aloque um buffer de `szName` maior, atualize `cchName` com o tamanho novo, maior e chame `GetAppDomainInfo` novamente.  
   
- Alternatively, you can first call `GetAppDomainInfo` with a zero-length `szName` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcchName` and call `GetAppDomainInfo` again.  
+ Como alternativa, você pode primeiro chamar `GetAppDomainInfo` com um buffer de `szName` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcchName` e chamar `GetAppDomainInfo` novamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

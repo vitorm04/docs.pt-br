@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445280"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>Método ICorProfilerCallback::AppDomainCreationFinished
-Notifies the profiler that an application domain has been created.  
+Notifica o criador de perfil de que um domínio de aplicativo foi criado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,20 +35,20 @@ HRESULT AppDomainCreationFinished(
   
 ## <a name="parameters"></a>Parâmetros  
  `appDomainId`  
- [in] Identifies the domain which has been created.  
+ no Identifica o domínio que foi criado.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether creation of the application domain completed successfully.  
+ no Um HRESULT que indica se a criação do domínio do aplicativo foi concluída com êxito.  
   
 ## <a name="remarks"></a>Comentários  
- The application ID is not valid for any information request until the `AppDomainCreationFinished` method is called.  
+ A ID do aplicativo não é válida para nenhuma solicitação de informações até que o método `AppDomainCreationFinished` seja chamado.  
   
- Some parts of loading the application domain might continue after the `AppDomainCreationFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of creating the application domain has succeeded.  
+ Algumas partes do carregamento do domínio do aplicativo podem continuar após o retorno de chamada `AppDomainCreationFinished`. Uma falha HRESULT no `hrStatus` indica uma falha. No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte da criação do domínio do aplicativo foi bem-sucedida.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

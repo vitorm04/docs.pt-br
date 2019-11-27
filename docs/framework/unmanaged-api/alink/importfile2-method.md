@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446976"
 ---
 # <a name="importfile2-method"></a>Método ImportFile2
-Imports assemblies and unbound modules. This method is like [ImportFile Method](importfile-method.md), but works even if the file being imported does not exist on disk.  
+Importa assemblies e módulos desvinculados. Esse método é como o [Método ImportFile](importfile-method.md), mas funciona mesmo que o arquivo que está sendo importado não exista no disco.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,31 +40,31 @@ HRESULT ImportFile2(
   
 ## <a name="parameters"></a>Parâmetros  
  `pszFilename`  
- Name of file to be imported.  
+ Nome do arquivo a ser importado.  
   
  `pszTargetName`  
- Optional output file name that can be used to rename the file as it is linked into the assembly.  
+ Nome de arquivo de saída opcional que pode ser usado para renomear o arquivo, pois ele está vinculado ao assembly.  
   
  `pAssemblyScopeIn`  
- Optional scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface.  
+ Interface de [interface IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) de escopo opcional.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Se for TRUE, os irporttypes serão usados; caso contrário, a importação deverá ser executada manualmente.  
   
  `pImportToken`  
- Receives the ID for the file or assembly.  
+ Recebe a ID do arquivo ou assembly.  
   
  `ppAssemblyScope`  
- Receives the [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. NULL if the file is not an assembly.  
+ Recebe a interface de [interface IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) . NULL se o arquivo não for um assembly.  
   
  `pdwCountOfScopes`  
- Receives the found of files and/or scopes imported.  
+ Recebe a encontrada a partir de arquivos e/ou escopos importados.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
 ## <a name="requirements"></a>Requisitos  
- Requires alink.h.  
+ Requer ALink. h.  
   
 ## <a name="see-also"></a>Consulte também
 

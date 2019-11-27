@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428159"
 ---
 # <a name="icorprofilerobjectenumnext-method"></a>Método ICorProfilerObjectEnum::Next
-Gets the specified number of contiguous objects from a sequential collection of objects, starting at the enumerator's current position in the sequence.  
+Obtém o número especificado de objetos contíguos de uma coleção sequencial de objetos, começando na posição atual do enumerador na sequência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] The number of objects to be retrieved.  
+ no O número de objetos a serem recuperados.  
   
  `objects`  
- [out] An array of `ObjectID` values, each of which represents a retrieved object.  
+ fora Uma matriz de valores de `ObjectID`, cada um representando um objeto recuperado.  
   
  `pceltFetched`  
- [out] A pointer to the number of elements actually returned in the `objects` array.  
+ fora Um ponteiro para o número de elementos realmente retornados na matriz de `objects`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

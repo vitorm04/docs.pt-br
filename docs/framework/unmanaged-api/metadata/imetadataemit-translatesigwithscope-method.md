@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440482"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>Método IMetaDataEmit::TranslateSigWithScope
-Imports an assembly into the current scope and gets a new metadata signature for the merged scope.  
+Importa um assembly para o escopo atual e obtém uma nova assinatura de metadados para o escopo mesclado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,44 +45,44 @@ HRESULT TranslateSigWithScope (
   
 ## <a name="parameters"></a>Parâmetros  
  `pAssemImport`  
- [in] The interface for import assembly (where the signature is defined).  
+ no A interface para importar assembly (onde a assinatura é definida).  
   
  `pbHashValue`  
- [in] The hash blob for the assembly.  
+ no O blob de hash para o assembly.  
   
  `cbHashValue`  
- [in] The count of bytes in `pbHashValue`.  
+ no A contagem de bytes em `pbHashValue`.  
   
  `import`  
- [in] The interface for import metadata scope.  
+ no A interface para o escopo de metadados de importação.  
   
  `pbSigBlob`  
- [in] The signature to be imported.  
+ no A assinatura a ser importada.  
   
  `cbSigBlob`  
- [in] The size, in bytes, of `pbSigBlob`.  
+ no O tamanho, em bytes, de `pbSigBlob`.  
   
  `pAssemEmit`  
- [in] The interface for export assembly.  
+ no A interface para o assembly de exportação.  
   
  `emit`  
- [in] The interface for export metadata scope.  
+ no A interface para o escopo de metadados de exportação.  
   
  `pvTranslatedSig`  
- [out] The buffer to hold the translated signature blob.  
+ fora O buffer para armazenar o blob de assinatura traduzido.  
   
  `cbTranslatedSigMax`  
- [in] The capacity, in bytes, of `pvTranslatedSig`.  
+ no A capacidade, em bytes, de `pvTranslatedSig`.  
   
  `pcbTranslatedSig`  
- [out] The number of actual bytes in the translated signature.  
+ fora O número de bytes reais na assinatura traduzida.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

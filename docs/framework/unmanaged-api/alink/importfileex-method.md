@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446958"
 ---
 # <a name="importfileex-method"></a>Método ImportFileEx
-Imports indicated assembly or unbound module.  
+Importações indicadas módulo de assembly ou não associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,31 +40,31 @@ HRESULT ImportFileEx(
   
 ## <a name="parameters"></a>Parâmetros  
  `pszFilename`  
- Fully qualified name of file from which to import.  
+ Nome totalmente qualificado do arquivo do qual importar.  
   
  `pszTargetName`  
- Optional name of target file.  
+ Nome opcional do arquivo de destino.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Se for TRUE, os irporttypes serão usados; caso contrário, a importação deverá ser executada manualmente.  
   
  `dwOpenFlags`  
- Flags to be passed along to [OpenScope Method](../metadata/imetadatadispenser-openscope-method.md).  
+ Sinalizadores a serem passados para o [método OpenScope](../metadata/imetadatadispenser-openscope-method.md).  
   
  `pImportToken`  
- Receives ID of the file being imported.  
+ Recebe a ID do arquivo que está sendo importado.  
   
  `ppAssemblyScope`  
- Receives assembly import scope [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md) interface. Is set to NULL if file is not an assembly.  
+ Recebe interface de [interface IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md) de escopo de importação de assembly. Será definido como NULL se o arquivo não for um assembly.  
   
  `pdwCountOfScopes`  
- Receives count of imported files and/or scopes.  
+ Recebe a contagem de escopos e/ou arquivos importados.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>Requisitos  
- Requires alink.h.  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ Requer ALink. h.  
   
 ## <a name="see-also"></a>Consulte também
 

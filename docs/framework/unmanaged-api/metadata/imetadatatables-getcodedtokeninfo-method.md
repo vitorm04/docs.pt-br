@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434059"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>Método IMetaDataTables::GetCodedTokenInfo
-Gets a pointer to an array of tokens associated with the specified row index.  
+Obtém um ponteiro para uma matriz de tokens associados ao índice de linha especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,23 +38,23 @@ HRESULT GetCodedTokenInfo (
   
 ## <a name="parameters"></a>Parâmetros  
  `ixCdTkn`  
- [in] The kind of coded token to return.  
+ no O tipo de token codificado a ser retornado.  
   
  `pcTokens`  
- [out] A pointer to the length of `ppTokens`.  
+ fora Um ponteiro para o comprimento de `ppTokens`.  
   
  `ppTokens`  
- [out] A pointer to a pointer to an array that contains the list of returned tokens.  
+ fora Um ponteiro para um ponteiro para uma matriz que contém a lista de tokens retornados.  
   
  `ppName`  
- [out] A pointer to a pointer to the name of the token at `ixCdTkn`.  
+ fora Um ponteiro para um ponteiro para o nome do token em `ixCdTkn`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

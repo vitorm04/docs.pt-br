@@ -39,7 +39,7 @@ ms.locfileid: "74447037"
 ## <a name="required-members-for-iwindowprovider"></a>Membros necessários para IWindowProvider  
  As propriedades, os métodos e os eventos a seguir são necessários para a interface IWindowProvider.  
   
-|Membro necessário|Tipo de membro|{1&gt;Observações&lt;1}|  
+|Membro necessário|Tipo de membro|Observações|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.InteractionState%2A>|Propriedade|Nenhum|  
 |<xref:System.Windows.Automation.Provider.IWindowProvider.IsModal%2A>|Propriedade|Nenhum|  

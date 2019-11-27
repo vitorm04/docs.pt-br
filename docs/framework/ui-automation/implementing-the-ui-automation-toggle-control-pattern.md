@@ -17,36 +17,36 @@ ms.locfileid: "74447065"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IToggleProvider>, including information about methods and properties. Links to additional references are listed at the end of the topic.  
+ Este tópico apresenta as diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.IToggleProvider>, incluindo informações sobre métodos e propriedades. Links para referências adicionais são listados no final do tópico.  
   
- The <xref:System.Windows.Automation.TogglePattern> control pattern is used to support controls that can cycle through a set of states and maintain a state once set. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
+ O padrão de controle de <xref:System.Windows.Automation.TogglePattern> é usado para dar suporte a controles que podem percorrer um conjunto de Estados e manter um estado depois de definido. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
- When implementing the Toggle control pattern, note the following guidelines and conventions:  
+## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
+ Ao implementar o padrão de controle de alternância, observe as seguintes diretrizes e convenções:  
   
-- Controls that do not maintain state when activated, such as buttons, toolbar buttons, and hyperlinks, must implement <xref:System.Windows.Automation.Provider.IInvokeProvider> instead.  
+- Os controles que não mantêm o estado quando ativados, como botões, botões da barra de ferramentas e hiperlinks, devem implementar <xref:System.Windows.Automation.Provider.IInvokeProvider> em vez disso.  
   
-- A control must cycle through its <xref:System.Windows.Automation.ToggleState> in the following order: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> and, if supported, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
+- Um controle deve percorrer seu <xref:System.Windows.Automation.ToggleState> na seguinte ordem: <xref:System.Windows.Automation.ToggleState.On>, <xref:System.Windows.Automation.ToggleState.Off> e, se houver suporte, <xref:System.Windows.Automation.ToggleState.Indeterminate>.  
   
-- <xref:System.Windows.Automation.TogglePattern> does not provide a SetState(newState) method due to issues surrounding the direct setting of a tri-state CheckBox without cycling through its appropriate <xref:System.Windows.Automation.ToggleState> sequence.  
+- <xref:System.Windows.Automation.TogglePattern> não fornece um método SetState (newState) devido a problemas em torno da configuração direta de uma caixa de seleção de três Estados sem percorrer sua sequência de <xref:System.Windows.Automation.ToggleState> apropriada.  
   
-- The RadioButton control does not implement <xref:System.Windows.Automation.Provider.IToggleProvider>, as it is not capable of cycling through its valid states.  
+- O controle RadioButton não implementa <xref:System.Windows.Automation.Provider.IToggleProvider>, pois não é capaz de percorrer seus Estados válidos.  
   
 <a name="Required_Members_for_IToggleProvider"></a>   
-## <a name="required-members-for-itoggleprovider"></a>Required Members for IToggleProvider  
- The following properties and methods are required for implementing <xref:System.Windows.Automation.Provider.IToggleProvider>.  
+## <a name="required-members-for-itoggleprovider"></a>Membros necessários para IToggleProvider  
+ As propriedades e os métodos a seguir são necessários para implementar <xref:System.Windows.Automation.Provider.IToggleProvider>.  
   
-|Required member|Member type|Anotações|  
+|Membro necessário|Tipo de membro|{1&gt;Observações&lt;1}|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.TogglePattern.Toggle%2A>|Método|Nenhum|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|propriedade|Nenhum|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty>|Propriedade|Nenhum|  
   
- This control pattern has no associated events.  
+ Este padrão de controle não tem eventos associados.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  
- This control pattern has no associated exceptions.  
+ Este padrão de controle não tem nenhuma exceção associada.  
   
 ## <a name="see-also"></a>Consulte também
 

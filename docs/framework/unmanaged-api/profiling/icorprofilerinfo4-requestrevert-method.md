@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444829"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>Método ICorProfilerInfo4::RequestRevert
-Reverts all instances of the specified functions to their original versions.  
+Reverte todas as instâncias das funções especificadas para suas versões originais.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,46 +37,46 @@ HRESULT RequestRevert (
   
 ## <a name="parameters"></a>Parâmetros  
  `cFunctions`  
- [in] The number of functions to revert.  
+ no O número de funções a serem revertidas.  
   
  `moduleIds`  
- [in] Specifies the `moduleId` portion of the (`module`, `methodDef`) pairs that identify the functions to be reverted.  
+ no Especifica a parte `moduleId` dos pares (`module`, `methodDef`) que identificam as funções a serem revertidas.  
   
  `methodIds`  
- [in] Specifies the `methodId` portion of the (`module`, `methodDef`) pairs that identify the functions to be reverted.  
+ no Especifica a parte `methodId` dos pares (`module`, `methodDef`) que identificam as funções a serem revertidas.  
   
  `status`  
- [out] An array of HRESULTs listed in the "Status HRESULTs" section later in this topic. Each HRESULT indicates the success or failure of trying to revert each function specified in the parallel arrays `moduleIds` and `methodIds`.  
+ fora Uma matriz de HRESULTs listada na seção "status HRESULTs" mais adiante neste tópico. Cada HRESULT indica o êxito ou a falha ao tentar reverter cada função especificada nas matrizes paralelas `moduleIds` e `methodIds`.  
   
 ## <a name="return-value"></a>Valor retornado  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|An attempt was made to revert all requests; however, the returned status array must be checked to determine which functions were successfully reverted.|  
-|CORPROF_E_CALLBACK4_REQUIRED|The profiler must implement the [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) interface for this call to be supported.|  
-|CORPROF_E_REJIT_NOT_ENABLED|JIT recompilation has not been enabled. You must enable JIT recompilation during initialization by using the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the `COR_PRF_ENABLE_REJIT` flag.|  
-|E_INVALIDARG|`cFunctions` is 0, or `moduleIds` or `methodIds` is `NULL`.|  
-|E_OUTOFMEMORY|The CLR was unable to complete the request because it ran out of memory.|  
+|S_OK|Foi feita uma tentativa de reverter todas as solicitações; no entanto, a matriz de status retornada deve ser verificada para determinar quais funções foram revertidas com êxito.|  
+|CORPROF_E_CALLBACK4_REQUIRED|O criador de perfil deve implementar a interface [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) para que essa chamada seja suportada.|  
+|CORPROF_E_REJIT_NOT_ENABLED|A recompilação JIT não foi habilitada. Você deve habilitar a recompilação JIT durante a inicialização usando o método [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para definir o sinalizador de `COR_PRF_ENABLE_REJIT`.|  
+|{1&gt;E_INVALIDARG&lt;1}|`cFunctions` é 0, ou `moduleIds` ou `methodIds` é `NULL`.|  
+|E_OUTOFMEMORY|O CLR não pôde concluir a solicitação porque ficou sem memória.|  
   
-## <a name="status-hresults"></a>Status HRESULTS  
+## <a name="status-hresults"></a>Status HRESULTs  
   
-|Status array HRESULT|Descrição|  
+|Matriz de status HRESULT|Descrição|  
 |--------------------------|-----------------|  
-|S_OK|The corresponding function was successfully reverted.|  
-|E_INVALIDARG|O parâmetro `moduleID` ou `methodDef` é `NULL`.|  
-|CORPROF_E_DATAINCOMPLETE|The module is not fully loaded yet, or it is in the process of being unloaded.|  
-|CORPROF_E_MODULE_IS_DYNAMIC|The specified module was dynamically generated (for example by `Reflection.Emit`). Therefore, it is not supported by this method.|  
-|CORPROF_E_ACTIVE_REJIT_REQUEST_NOT_FOUND|The CLR could not revert the specified function, because a corresponding active recompilation request was not found. Either the recompilation was never requested or the function was already reverted.|  
-|Outros|The operating system returned a failure outside the control of the CLR. For example, if a system call to change the access protection of a page of memory fails, the operating system error will be displayed.|  
+|S_OK|A função correspondente foi revertida com êxito.|  
+|{1&gt;E_INVALIDARG&lt;1}|O parâmetro `moduleID` ou `methodDef` é `NULL`.|  
+|CORPROF_E_DATAINCOMPLETE|O módulo ainda não está totalmente carregado ou está em processo de descarregamento.|  
+|CORPROF_E_MODULE_IS_DYNAMIC|O módulo especificado foi gerado dinamicamente (por exemplo, por `Reflection.Emit`). Portanto, esse método não dá suporte a ele.|  
+|CORPROF_E_ACTIVE_REJIT_REQUEST_NOT_FOUND|O CLR não pôde reverter a função especificada porque uma solicitação de recompilação ativa correspondente não foi encontrada. Ou a recompilação nunca foi solicitada ou a função já foi revertida.|  
+|Outros|O sistema operacional retornou uma falha fora do controle do CLR. Por exemplo, se uma chamada do sistema para alterar a proteção de acesso de uma página de memória falhar, o erro do sistema operacional será exibido.|  
   
 ## <a name="remarks"></a>Comentários  
- The next time any of the revereted function instances are called, the original versions of the functions will be run. If a function is already running, it will finish executing the version that is running.  
+ Na próxima vez que qualquer uma das instâncias de função revereted forem chamadas, as versões originais das funções serão executadas. Se uma função já estiver em execução, ela concluirá a execução da versão que está em execução.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

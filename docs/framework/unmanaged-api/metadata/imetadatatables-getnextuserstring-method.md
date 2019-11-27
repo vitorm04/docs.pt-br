@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447397"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>Método IMetaDataTables::GetNextUserString
-Gets the index of the row that contains the next hard-coded string in the current table column.  
+Obtém o índice da linha que contém a próxima cadeia de caracteres embutida em código na coluna da tabela atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,20 +36,20 @@ HRESULT GetNextUserString (
   
 ## <a name="parameters"></a>Parâmetros  
  `ixUserString`  
- [in] An index value from the current string column.  
+ no Um valor de índice da coluna de cadeia de caracteres atual.  
   
  `pNext`  
- [out] A pointer to the row index of the next string in the column.  
+ fora Um ponteiro para o índice de linha da próxima cadeia de caracteres na coluna.  
   
 ## <a name="remarks"></a>Comentários  
- We do not recommend the use of this method, because it does not return consistent results. For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
+ Não recomendamos o uso desse método, pois ele não retorna resultados consistentes. Para obter informações sobre a tabela de GUID, consulte a documentação de Common Language Infrastructure (CLI), especialmente "partição II: definição de metadados e semântica". A documentação está disponível online; confira [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212), no MSDN, e [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552), no site internacional da Ecma.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436619"
 ---
 # <a name="cornativelinktype-enumeration"></a>Enumeração CorNativeLinkType
-Provides values that indicate the type linked in native code.  
+Fornece valores que indicam o tipo vinculado em código nativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,21 +40,21 @@ typedef enum
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`nltNone`|Indicates that none of the keywords are specified.|  
-|`nltAnsi`|Indicates that an ANSI keyword is specified.|  
-|`nltUnicode`|Indicates that a Unicode keyword is specified|  
-|`nltAuto`|Indicates that an auto keyword is specified.|  
-|`nltOle`|Indicates that an OLE keyword is specified.|  
+|`nltNone`|Indica que nenhuma das palavras-chave está especificada.|  
+|`nltAnsi`|Indica que uma palavra-chave ANSI está especificada.|  
+|`nltUnicode`|Indica que uma palavra-chave Unicode está especificada|  
+|`nltAuto`|Indica que uma palavra-chave auto está especificada.|  
+|`nltOle`|Indica que uma palavra-chave OLE está especificada.|  
 |`nltMaxValue`|Não usado.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

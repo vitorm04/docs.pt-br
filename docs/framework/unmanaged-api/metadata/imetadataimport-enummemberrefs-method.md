@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441711"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>Método IMetaDataImport::EnumMemberRefs
-Enumerates MemberRef tokens representing members of the specified type.  
+Enumera os tokens de MemberRef que representam os membros do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,33 +39,33 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `tkParent`  
- [in] A TypeDef, TypeRef, MethodDef, or ModuleRef token for the type whose members are to be enumerated.  
+ no Um token de TypeDef, TypeRef, MethodDef ou ModuleRef para o tipo cujos membros devem ser enumerados.  
   
  `rMemberRefs`  
- [out] The array used to store MemberRef tokens.  
+ fora A matriz usada para armazenar tokens de MemberRef.  
   
  `cMax`  
- [in] The maximum size of the `rMemberRefs` array.  
+ no O tamanho máximo da matriz de `rMemberRefs`.  
   
  `pcTokens`  
- [out] The actual number of MemberRef tokens returned in `rMemberRefs`.  
+ fora O número real de tokens de MemberRef retornado em `rMemberRefs`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMemberRefs` returned successfully.|  
-|`S_FALSE`|There are no MemberRef tokens to enumerate. In that case, `pcTokens` is to zero.|  
+|`S_OK`|`EnumMemberRefs` retornado com êxito.|  
+|`S_FALSE`|Não há tokens de MemberRef para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

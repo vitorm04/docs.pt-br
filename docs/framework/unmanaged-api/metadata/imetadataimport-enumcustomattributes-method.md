@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440243"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>Método IMetaDataImport::EnumCustomAttributes
-Enumerates custom attribute-definition tokens associated with the specified type or member.  
+Enumera os tokens de definição de atributo personalizados associados ao tipo ou membro especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,36 +40,36 @@ HRESULT EnumCustomAttributes (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the returned enumerator.  
+ [entrada, saída] Um ponteiro para o enumerador retornado.  
   
  `tk`  
- [in] A token for the scope of the enumeration, or zero for all custom attributes.  
+ no Um token para o escopo da enumeração ou zero para todos os atributos personalizados.  
   
  `tkType`  
- [in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.  
+ no Um token para o construtor do tipo dos atributos a serem enumerados ou `null` para todos os tipos.  
   
  `rCustomAttributes`  
- [out] An array of custom attribute tokens.  
+ fora Uma matriz de tokens de atributo personalizados.  
   
  `cMax`  
- [in] The maximum size of the `rCustomAttributes` array.  
+ no O tamanho máximo da matriz de `rCustomAttributes`.  
   
  `pcCustomAttributes`  
- [out, optional] The actual number of token values returned in `rCustomAttributes`.  
+ [saída, opcional] O número real de valores de token retornados em `rCustomAttributes`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumCustomAttributes` returned successfully.|  
-|`S_FALSE`|There are no custom attributes to enumerate. In that case, `pcCustomAttributes` is zero.|  
+|`S_OK`|`EnumCustomAttributes` retornado com êxito.|  
+|`S_FALSE`|Não há atributos personalizados para enumerar. Nesse caso, `pcCustomAttributes` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

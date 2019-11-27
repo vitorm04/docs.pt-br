@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448421"
 ---
 # <a name="icorprofilercallbackjitfunctionpitched-method"></a>Método ICorProfilerCallback::JITFunctionPitched
-Notifies the profiler that a function that has been just-in-time (JIT)-compiled has been removed from memory.  
+Notifica o criador de perfil de que uma função que foi compilada JIT (just-in-time) foi removida da memória.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,17 +34,17 @@ HRESULT JITFunctionPitched(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] The ID of the function that was removed.  
+ no A ID da função que foi removida.  
   
 ## <a name="remarks"></a>Comentários  
- If the removed function is called, the profiler will receive new JIT-compilation events when the function is recompiled. Currently, the common language runtime (CLR) JIT compiler does not remove functions from memory, so this callback is currently not used and will not be received by the profiler.  
+ Se a função removida for chamada, o criador de perfil receberá novos eventos de compilação JIT quando a função for recompilada. Atualmente, o compilador JIT do Common Language Runtime (CLR) não remove funções da memória, portanto, esse retorno de chamada não é usado no momento e não será recebido pelo criador de perfil.  
   
- The value of `functionId` is not valid until the function is recompiled. When the function is recompiled, the same `functionId` value will be used.  
+ O valor de `functionId` não é válido até que a função seja recompilada. Quando a função for recompilada, o mesmo valor de `functionId` será usado.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

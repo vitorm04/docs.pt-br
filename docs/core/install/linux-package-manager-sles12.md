@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core on SLES 12 - package manager - .NET Core
-description: Use a package manager to install .NET Core SDK and runtime on SLES 12.
+title: Instalar o .NET Core no SLES 12-Gerenciador de pacotes-.NET Core
+description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e tempo de execução no SLES 12.
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -11,52 +11,52 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450957"
 ---
-# <a name="sles-12-package-manager---install-net-core"></a>SLES 12 Package Manager - Install .NET Core
+# <a name="sles-12-package-manager---install-net-core"></a>Gerenciador de pacotes SLES 12 – instalar o .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-This article describes how to use a package manager to install .NET Core on SLES 12. If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.
+Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Core no SLES 12. Se você estiver instalando o tempo de execução, sugerimos que instale o [ASP.NET Core Runtime](#install-the-aspnet-core-runtime), pois ele inclui o .NET Core e ASP.NET Core Runtimes.
 
-## <a name="register-microsoft-key-and-feed"></a>Register Microsoft key and feed
+## <a name="register-microsoft-key-and-feed"></a>Registrar chave e feed da Microsoft
 
-Before installing .NET, you'll need to:
+Antes de instalar o .NET, você precisará:
 
-- Register the Microsoft key
-- register the product repository
-- Install required dependencies
+- Registrar a chave da Microsoft
+- registrar o repositório do produto
+- Instalar dependências necessárias
 
-This only needs to be done once per machine.
+Isso só precisa ser feito uma vez por computador.
 
-Open a terminal and run the following command.
+Abra um terminal e execute o comando a seguir.
 
 ```bash
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
 ```
 
-## <a name="install-the-net-core-sdk"></a>Install the .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
 
-Update the products available for installation, then install the .NET Core SDK. In your terminal, run the following command.
+Atualize os produtos disponíveis para instalação e, em seguida, instale o SDK do .NET Core. No seu terminal, execute o comando a seguir.
 
 ```bash
 sudo zypper install dotnet-sdk-3.0
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>Install the ASP.NET Core runtime
+## <a name="install-the-aspnet-core-runtime"></a>Instalar o ASP.NET Core Runtime
 
-Update the products available for installation, then install the ASP.NET runtime. In your terminal, run the following command.
+Atualize os produtos disponíveis para instalação e, em seguida, instale o tempo de execução do ASP.NET. No seu terminal, execute o comando a seguir.
 
 ```bash
 sudo zypper install aspnetcore-runtime-3.0
 ```
 
-## <a name="install-the-net-core-runtime"></a>Install the .NET Core runtime
+## <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
 
-Update the products available for installation, then install the .NET Core runtime. In your terminal, run the following command.
+Atualize os produtos disponíveis para instalação e, em seguida, instale o tempo de execução do .NET Core. No seu terminal, execute o comando a seguir.
 
 ```bash
 sudo zypper install dotnet-runtime-3.0
 ```
 
-## <a name="how-to-install-other-versions"></a>How to install other versions
+## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442773"
 ---
 # <a name="icorprofilermoduleenumgetcount-method"></a>Método ICorProfilerModuleEnum::GetCount
-Gets the number of managed modules that were loaded into the application.  
+Obtém o número de módulos gerenciados que foram carregados no aplicativo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,12 +33,12 @@ HRESULT GetCount([out] ULONG * pcelt);
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [out] The number of runtime modules in the collection.  
+ fora O número de módulos de tempo de execução na coleção.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -17,9 +17,9 @@ ms.locfileid: "74447023"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] is the new accessibility framework for Microsoft Windows. Ela atende às necessidades de produtos de tecnologia assistencial e de estruturas de teste automatizado, fornecendo acesso programático a informações sobre a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Além disso, a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite que os desenvolvedores de controle e de aplicativo disponibilizem seus produtos.  
+ [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] é a nova estrutura de acessibilidade para o Microsoft Windows. Ela atende às necessidades de produtos de tecnologia assistencial e de estruturas de teste automatizado, fornecendo acesso programático a informações sobre a [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]. Além disso, a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] permite que os desenvolvedores de controle e de aplicativo disponibilizem seus produtos.  
   
- This documentation describes the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] API for managed code. Para obter informações sobre programação para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] em C++, consulte [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal) (Automação da Interface do Usuário para aplicativos Win32).  
+ Esta documentação descreve a API [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para código gerenciado. Para obter informações sobre programação para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] em C++, consulte [UI Automation for Win32 Applications](/windows/desktop/winauto/windows-automation-api-portal) (Automação da Interface do Usuário para aplicativos Win32).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Accessibility Best Practices](accessibility-best-practices.md) (Práticas recomendadas de acessibilidade)  
@@ -31,6 +31,6 @@ ms.locfileid: "74447023"
  [UI Automation Control Types](ui-automation-control-types.md) (Tipos de controle da Automação da Interface do Usuário)  
  [UI Automation Specification and Community Promise](ui-automation-specification-and-community-promise.md) (Especificação e promessa da comunidade da Automação da Interface do Usuário)  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
 
 - [Exemplos de acessibilidade](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 

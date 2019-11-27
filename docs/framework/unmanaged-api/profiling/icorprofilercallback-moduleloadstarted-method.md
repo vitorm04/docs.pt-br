@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445929"
 ---
 # <a name="icorprofilercallbackmoduleloadstarted-method"></a>Método ICorProfilerCallback::ModuleLoadStarted
-Notifies the profiler that a module is being loaded.  
+Notifica o criador de perfil de que um módulo está sendo carregado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,15 +34,15 @@ HRESULT ModuleLoadStarted(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleId`  
- [in] The ID of the module that is being loaded.  
+ no A ID do módulo que está sendo carregado.  
   
 ## <a name="remarks"></a>Comentários  
- The value of `moduleId` is not valid for an information request until the [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) method is called.  
+ O valor de `moduleId` não é válido para uma solicitação de informações até que o método [ICorProfilerCallback:: ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) seja chamado.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

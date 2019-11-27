@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450199"
 ---
 # <a name="cormethodimpl-enumeration"></a>Enumeração CorMethodImpl
-Contains values that describe method implementation features.  
+Contém valores que descrevem os recursos de implementação do método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,29 +54,29 @@ typedef enum CorMethodImpl {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`miCodeTypeMask`|Flags that describe code type.|  
-|`miIL`|Specifies that the method implementation is Microsoft intermediate language (MSIL).|  
+|`miCodeTypeMask`|Sinalizadores que descrevem o tipo de código.|  
+|`miIL`|Especifica que a implementação do método é MSIL (Microsoft Intermediate Language).|  
 |`miNative`|Especifica que a implementação do método é nativa.|  
-|`miOPTIL`|Specifies that the method implementation is OPTIL.|  
-|`miRuntime`|Specifies that the method implementation is provided by the common language runtime.|  
-|`miManagedMask`|Flags that indicate whether the code is managed or unmanaged.|  
-|`miUnmanaged`|Specifies that the method implementation is unmanaged.|  
-|`miManaged`|Specifies that the method implementation is managed.|  
-|`miForwardRef`|Specifies that the method is defined. This flag is used primarily in merge scenarios.|  
-|`miPreserveSig`|Specifies that the method signature cannot be mangled for an HRESULT conversion.|  
-|`miInternalCall`|Reserved for internal use by the common language runtime.|  
-|`miSynchronized`|Specifies that the method is single-threaded through its body.|  
+|`miOPTIL`|Especifica que a implementação do método é OPTIl.|  
+|`miRuntime`|Especifica que a implementação do método é fornecida pelo Common Language Runtime.|  
+|`miManagedMask`|Sinalizadores que indicam se o código é gerenciado ou não gerenciado.|  
+|`miUnmanaged`|Especifica que a implementação do método não é gerenciada.|  
+|`miManaged`|Especifica que a implementação do método é gerenciada.|  
+|`miForwardRef`|Especifica que o método está definido. Esse sinalizador é usado principalmente em cenários de mesclagem.|  
+|`miPreserveSig`|Especifica que a assinatura do método não pode ser desconfigurado para uma conversão HRESULT.|  
+|`miInternalCall`|Reservado para uso interno pelo Common Language Runtime.|  
+|`miSynchronized`|Especifica que o método é de thread único por meio de seu corpo.|  
 |`miNoInlining`|Especifica que o método não pode estar em linha.|  
-|`miAggressiveInlining`|Specifies that the method should be inlined if possible.|  
-|`miNoOptimization`|Specifies that the method should not be optimized.|  
-|`miMaxMethodImplVal`|The maximum valid value for a `CorMethodImpl`.|  
+|`miAggressiveInlining`|Especifica que o método deve ser embutido, se possível.|  
+|`miNoOptimization`|Especifica que o método não deve ser otimizado.|  
+|`miMaxMethodImplVal`|O valor máximo válido para um `CorMethodImpl`.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

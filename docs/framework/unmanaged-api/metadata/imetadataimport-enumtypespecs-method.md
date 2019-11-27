@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449976"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>Método IMetaDataImport::EnumTypeSpecs
-Enumerates TypeSpec tokens defined in the current metadata scope.  
+Enumera os tokens de TypeSpec definidos no escopo de metadados atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,33 +38,33 @@ HRESULT EnumTypeSpecs (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This value must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Esse valor deve ser nulo para a primeira chamada deste método.  
   
  `rTypeSpecs`  
- [out] The array used to store the TypeSpec tokens.  
+ fora A matriz usada para armazenar os tokens de TypeSpec.  
   
  `cMax`  
- [in] The maximum size of the `rTypeSpecs` array.  
+ no O tamanho máximo da matriz de `rTypeSpecs`.  
   
  `pcTypeSpecs`  
- [out] The number of TypeSpec tokens returned in `rTypeSpecs`.  
+ fora O número de tokens de TypeSpec retornado em `rTypeSpecs`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeSpecs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeSpecs` is zero.|  
+|`S_OK`|`EnumTypeSpecs` retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTypeSpecs` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- The TypeSpec tokens are created by the [IMetaDataEmit::GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) method.  
+ Os tokens TypeSpec são criados pelo método [IMetaDataEmit:: GetTokenFromTypeSpec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

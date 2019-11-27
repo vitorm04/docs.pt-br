@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436882"
 ---
 # <a name="imetadataimportgetscopeprops-method"></a>Método IMetaDataImport::GetScopeProps
-Gets the name and optionally the version identifier of the assembly or module in the current metadata scope.  
+Obtém o nome e, opcionalmente, o identificador de versão do assembly ou módulo no escopo de metadados atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,26 +38,26 @@ HRESULT GetScopeProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `szName`  
- [out] A buffer for the assembly or module name.  
+ fora Um buffer para o assembly ou o nome do módulo.  
   
  `cchName`  
- [in] The size in wide characters of `szName`.  
+ no O tamanho em caracteres largos de `szName`.  
   
  `pchName`  
- [out] The number of wide characters returned in `szName`.  
+ fora O número de caracteres largos retornados em `szName`.  
   
  `pmvid`  
- [out, optional] A pointer to a GUID that uniquely identifies the version of the assembly or module.  
+ [saída, opcional] Um ponteiro para um GUID que identifica exclusivamente a versão do assembly ou módulo.  
   
 ## <a name="remarks"></a>Comentários  
- The [IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) method is used to set these properties.  
+ O método [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md) é usado para definir essas propriedades.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

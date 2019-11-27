@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449616"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Método ICorProfilerInfo3::RequestProfilerDetach
-Instructs the runtime to detach the profiler.  
+Instrui o tempo de execução para desanexar o criador de perfil.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,31 +34,31 @@ HRESULT RequestProfilerDetach(
   
 ## <a name="parameters"></a>Parâmetros  
  `dwExpectedCompletionMilliseconds`  
- [in] The length of time, in milliseconds, the common language runtime (CLR) should wait before checking to see whether it is safe to unload the profiler.  
+ no O período de tempo, em milissegundos, que o Common Language Runtime (CLR) deve aguardar antes de verificar se é seguro descarregar o criador de perfil.  
   
 ## <a name="return-value"></a>Valor retornado  
- This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.  
+ Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|S_OK|The detach request is valid, and the detach procedure is now continuing on another thread. When the detach is fully complete, a `ProfilerDetachSucceeded` event is issued.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|The profiler failed an [IUnknown::QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) attempt for the [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) interface, which it must implement to support the detach operation. Detach was not attempted.|  
-|CORPROF_E_IMMUTABLE_FLAGS_SET|Detachment is impossible because the profiler set immutable flags at startup. Detachment was not attempted; the profiler is still fully attached.|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|Detachment is impossible because the profiler used instrumented Microsoft intermediate language (MSIL) code, or inserted `enter`/`leave` hooks. Detachment was not attempted; the profiler is still fully attached.<br /><br /> **Note** Instrumented MSIL is code is code that is provided by the profiler using the [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method.|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|The runtime has not been initialized yet in the managed application. (That is, the runtime has not been fully loaded.) This error code may be returned when detachment is requested inside the profiler callback's [ICorProfilerCallback::Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) method.|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` was called at an unsupported time. This occurs if the method is called on a managed thread but not from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method or from within an [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) method that cannot tolerate a garbage collection. For more information, see [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
+|S_OK|A solicitação de desanexação é válida e o procedimento de desanexação agora está continuando em outro thread. Quando a desanexação estiver totalmente concluída, um evento `ProfilerDetachSucceeded` será emitido.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|O criador de perfil falhou em uma tentativa de [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) para a interface [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) , que deve ser implementada para oferecer suporte à operação de desanexação. A desanexação não foi tentada.|  
+|CORPROF_E_IMMUTABLE_FLAGS_SET|A desanexação é impossível porque o criador de perfil define sinalizadores imutáveis na inicialização. A desanexação não foi tentada; o criador de perfil ainda está totalmente anexado.|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|A desanexação é impossível porque o criador de perfil usou o código MSIL (Microsoft Intermediate Language) instrumentado ou inseriu `enter`/`leave` ganchos. A desanexação não foi tentada; o criador de perfil ainda está totalmente anexado.<br /><br /> **Observação** O código MSIL instrumentado é o código que é fornecido pelo criador de perfil usando o método [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) .|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|O tempo de execução ainda não foi inicializado no aplicativo gerenciado. (Ou seja, o tempo de execução não foi totalmente carregado.) Esse código de erro pode ser retornado quando a desanexação é solicitada dentro do método [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) do retorno de perfil.|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE|`RequestProfilerDetach` foi chamado em um tempo sem suporte. Isso ocorrerá se o método for chamado em um thread gerenciado, mas não dentro de um método [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) ou de dentro de um método [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) que não possa tolerar uma coleta de lixo. Para obter mais informações, consulte [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md).|  
   
 ## <a name="remarks"></a>Comentários  
- During the detach procedure, the detach thread (the thread created specifically for detaching the profiler) occasionally checks whether all threads have exited the profiler’s code. The profiler should provide an estimate of how long this should take through the `dwExpectedCompletionMilliseconds` parameter. A good value to use is the typical amount of time the profiler spends inside any given `ICorProfilerCallback*` method; this value should not be less than half of the maximum amount of time the profiler expects to spend.  
+ Durante o procedimento de desanexação, o thread de desanexação (o thread criado especificamente para desanexar o criador de perfil) verifica ocasionalmente se todos os threads saíram do código do criador de perfil. O criador de perfil deve fornecer uma estimativa de quanto tempo isso deve levar por meio do parâmetro `dwExpectedCompletionMilliseconds`. Um bom valor a ser usado é a quantidade comum de tempo que o criador de perfil gasta dentro de qualquer determinado método de `ICorProfilerCallback*`; Esse valor não deve ser menor que metade da quantidade máxima de tempo que o criador de perfil espera gastar.  
   
- The detach thread uses `dwExpectedCompletionMilliseconds` to decide how long to sleep before checking whether profiler callback code has been popped off all stacks. Although the details of the following algorithm may change in future releases of the CLR, it illustrates one way `dwExpectedCompletionMilliseconds` can be used when determining when it is safe to unload the profiler. The detach thread first sleeps for `dwExpectedCompletionMilliseconds` milliseconds. If, after awakening from the sleep, the CLR finds that profiler callback code is still present, the detach thread sleeps again, this time for two times `dwExpectedCompletionMilliseconds` milliseconds. If, after awakening from this second sleep, the detach thread finds that profiler callback code is still present, it sleeps for 10 minutes before checking again. The detach thread continues to recheck every 10 minutes.  
+ O thread de desanexação usa `dwExpectedCompletionMilliseconds` para decidir por quanto tempo suspender antes de verificar se o código de retorno de chamada do profiler foi desativado em todas as pilhas. Embora os detalhes do algoritmo a seguir possam ser alterados em versões futuras do CLR, ele ilustra uma maneira `dwExpectedCompletionMilliseconds` pode ser usado ao determinar quando é seguro descarregar o criador de perfil. Primeiro, o thread de desanexação é suspenso por `dwExpectedCompletionMilliseconds` milissegundos. Se, depois de despertar da suspensão, o CLR descobrir que o código de retorno de chamada do criador de perfil ainda está presente, o thread de desanexação será suspenso novamente, desta vez por duas vezes `dwExpectedCompletionMilliseconds` milissegundos. Se, depois de despertar dessa segunda suspensão, o thread de desanexação descobrir que o código de retorno de chamada do criador de perfil ainda está presente, ele será suspenso por 10 minutos antes de verificar novamente. O thread de desanexação continua a verificar novamente a cada 10 minutos.  
   
- If the profiler specifies `dwExpectedCompletionMilliseconds` as 0 (zero), the CLR uses a default value of 5000, which means that it will perform a check after 5 seconds, again after 10 seconds, and then every 10 minutes thereafter.  
+ Se o criador de perfil especificar `dwExpectedCompletionMilliseconds` como 0 (zero), o CLR usará um valor padrão de 5000, o que significa que ele executará uma verificação após 5 segundos, novamente após 10 segundos e, em seguida, a cada 10 minutos depois.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

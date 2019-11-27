@@ -16,9 +16,9 @@ ms.locfileid: "74428551"
 ---
 # <a name="built-in-types-table-c-reference"></a>Tabela de tipos internos (Referência de C#)
 
-The following table shows the keywords for built-in C# types, which are aliases of predefined types in the <xref:System> namespace:
+A tabela a seguir mostra as palavras-chave para C# tipos internos, que são aliases de tipos predefinidos no namespace <xref:System>:
 
-|Tipo de C#|Tipo .NET|  
+|Tipo C#|Tipo .NET|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
 |[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  

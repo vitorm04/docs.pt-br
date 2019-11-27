@@ -16,93 +16,93 @@ ms.locfileid: "74433947"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- This topic introduces caching of [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties and control patterns.  
+ Este tópico apresenta cache de propriedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e padrões de controle.  
   
- In [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], caching means pre-fetching of data. The data can then be accessed without further cross-process communication. Caching is typically used by UI Automation client applications to retrieve properties and control patterns in bulk. Information is then retrieved from the cache as needed. The application updates the cache periodically, usually in response to events signifying that something in the [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] has changed.  
+ Em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], Caching significa Pre-busca de dados. Os dados podem então ser acessados sem mais comunicação entre processos. O cache é normalmente usado por aplicativos cliente de automação da interface do usuário para recuperar propriedades e padrões de controle em massa. As informações são recuperadas do cache conforme necessário. O aplicativo atualiza o cache periodicamente, geralmente em resposta a eventos, indicando que algo no [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] foi alterado.  
   
- The benefits of caching are most noticeable with Windows Presentation Foundation (WPF) controls and custom controls that have server-side UI Automation providers. There is less benefit when accessing client-side providers such as the default providers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls.  
+ Os benefícios do cache são mais perceptíveis com controles de Windows Presentation Foundation (WPF) e controles personalizados que têm provedores de automação de interface do usuário do lado do servidor. Há menos benefícios ao acessar provedores do lado do cliente, como os provedores padrão para controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
   
- Caching occurs when the application activates a <xref:System.Windows.Automation.CacheRequest> and then uses any method or property that returns an <xref:System.Windows.Automation.AutomationElement>; for example, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. The methods of the <xref:System.Windows.Automation.TreeWalker> class are an exception; caching is only done if a <xref:System.Windows.Automation.CacheRequest> is specified as a parameter (for example, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
+ O cache ocorre quando o aplicativo ativa uma <xref:System.Windows.Automation.CacheRequest> e, em seguida, usa qualquer método ou propriedade que retorna um <xref:System.Windows.Automation.AutomationElement>; por exemplo, <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>, <xref:System.Windows.Automation.AutomationElement.FindAll%2A>. Os métodos da classe <xref:System.Windows.Automation.TreeWalker> são uma exceção; o cache só será feito se um <xref:System.Windows.Automation.CacheRequest> for especificado como um parâmetro (por exemplo, <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>.  
   
- Caching also occurs when you subscribe to an event while a <xref:System.Windows.Automation.CacheRequest> is active. The <xref:System.Windows.Automation.AutomationElement> passed to your event handler as the source of an event contains the cached properties and patterns specified by the original <xref:System.Windows.Automation.CacheRequest>. Any changes made to the <xref:System.Windows.Automation.CacheRequest> after you subscribe to the event have no effect.  
+ O Caching também ocorre quando você assina um evento enquanto um <xref:System.Windows.Automation.CacheRequest> está ativo. O <xref:System.Windows.Automation.AutomationElement> passado para o manipulador de eventos como a origem de um evento contém as propriedades e os padrões armazenados em cache especificados pelo <xref:System.Windows.Automation.CacheRequest>original. As alterações feitas no <xref:System.Windows.Automation.CacheRequest> depois que você assina o evento não têm nenhum efeito.  
   
- The [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] properties and control patterns of an element can be cached.  
+ As propriedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e os padrões de controle de um elemento podem ser armazenados em cache.  
   
 <a name="Options_for_Caching"></a>   
-## <a name="options-for-caching"></a>Options for Caching  
- The <xref:System.Windows.Automation.CacheRequest> specifies the following options for caching.  
+## <a name="options-for-caching"></a>Opções de cache  
+ O <xref:System.Windows.Automation.CacheRequest> especifica as opções a seguir para o cache.  
   
 <a name="Properties_to_Cache"></a>   
-### <a name="properties-to-cache"></a>Properties to Cache  
- You can specify properties to cache by calling <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationProperty%29> for each property before activating the request.  
+### <a name="properties-to-cache"></a>Propriedades para armazenar em cache  
+ Você pode especificar propriedades para cache chamando <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationProperty%29> para cada propriedade antes de ativar a solicitação.  
   
 <a name="Control_Patterns_to_Cache"></a>   
-### <a name="control-patterns-to-cache"></a>Control Patterns to Cache  
- You can specify control patterns to cache by calling <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> for each pattern before activating the request. When a pattern is cached, its properties are not automatically cached; you must specify the properties you want cached by using <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>.  
+### <a name="control-patterns-to-cache"></a>Padrões de controle para cache  
+ Você pode especificar padrões de controle para cache chamando <xref:System.Windows.Automation.CacheRequest.Add%28System.Windows.Automation.AutomationPattern%29> para cada padrão antes de ativar a solicitação. Quando um padrão é armazenado em cache, suas propriedades não são armazenadas em cache automaticamente; Você deve especificar as propriedades que deseja armazenar em cache usando <xref:System.Windows.Automation.CacheRequest.Add%2A?displayProperty=nameWithType>.  
   
 <a name="Scope_of_the_Caching"></a>   
-### <a name="scope-and-filtering-of-caching"></a>Scope and Filtering of Caching  
- You can specify the elements whose properties and patterns you want to cache by setting the <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> property before activating the request. The scope is relative to the elements that are retrieved while the request is active. For example, if you set only <xref:System.Windows.Automation.TreeScope.Children>, and then retrieve an <xref:System.Windows.Automation.AutomationElement>, the properties and patterns of children of that element are cached, but not those of the element itself. To ensure that caching is done for the retrieved element itself, you must include <xref:System.Windows.Automation.TreeScope.Element> in the <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> property. It is not possible to set the scope to <xref:System.Windows.Automation.TreeScope.Parent> or <xref:System.Windows.Automation.TreeScope.Ancestors>. However, a parent element can be cached when a child element is cached; see Retrieving Cached Children and Parents in this topic.  
+### <a name="scope-and-filtering-of-caching"></a>Escopo e filtragem de cache  
+ Você pode especificar os elementos cujas propriedades e padrões você deseja armazenar em cache definindo a propriedade <xref:System.Windows.Automation.CacheRequest.TreeScope%2A?displayProperty=nameWithType> antes de ativar a solicitação. O escopo é relativo aos elementos que são recuperados enquanto a solicitação está ativa. Por exemplo, se você definir apenas <xref:System.Windows.Automation.TreeScope.Children>e, em seguida, recuperar um <xref:System.Windows.Automation.AutomationElement>, as propriedades e os padrões de filhos desse elemento serão armazenados em cache, mas não os do próprio elemento. Para garantir que o cache seja feito para o próprio elemento recuperado, você deve incluir <xref:System.Windows.Automation.TreeScope.Element> na propriedade <xref:System.Windows.Automation.CacheRequest.TreeScope%2A>. Não é possível definir o escopo para <xref:System.Windows.Automation.TreeScope.Parent> ou <xref:System.Windows.Automation.TreeScope.Ancestors>. No entanto, um elemento pai pode ser armazenado em cache quando um elemento filho é armazenado em cache; consulte Recuperando filhos e pais em cache neste tópico.  
   
- The extent of caching is also affected by the <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType> property. By default, caching is performed only for elements that appear in the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree. However, you can change this property to apply caching to all elements, or only to elements that appear in the content view.  
+ A extensão do cache também é afetada pela propriedade <xref:System.Windows.Automation.CacheRequest.TreeFilter%2A?displayProperty=nameWithType>. Por padrão, o cache é executado somente para elementos que aparecem na exibição de controle da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. No entanto, você pode alterar essa propriedade para aplicar o cache a todos os elementos ou somente a elementos que aparecem na exibição de conteúdo.  
   
 <a name="Strength_of_the_Element_References"></a>   
-### <a name="strength-of-the-element-references"></a>Strength of the Element References  
- When you retrieve an <xref:System.Windows.Automation.AutomationElement>, by default you have access to all properties and patterns of that element, including those that were not cached. However, for greater efficiency you can specify that the reference to the element refers to cached data only, by setting the <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> property of the <xref:System.Windows.Automation.CacheRequest> to <xref:System.Windows.Automation.AutomationElementMode.None>. In this case, you do not have access to any non-cached properties and patterns of retrieved elements. This means that you cannot access any properties through <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> or the `Current` property of <xref:System.Windows.Automation.AutomationElement> or any control pattern; nor can you retrieve a pattern by using <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> or <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>. On cached patterns, you can call methods that retrieve array properties, such as <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>, but not any that perform actions on the control, such as <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>.  
+### <a name="strength-of-the-element-references"></a>Força das referências de elemento  
+ Quando você recupera um <xref:System.Windows.Automation.AutomationElement>, por padrão, você tem acesso a todas as propriedades e padrões desse elemento, incluindo aqueles que não foram armazenados em cache. No entanto, para maior eficiência, você pode especificar que a referência ao elemento se refere somente a dados armazenados em cache, definindo a propriedade <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> da <xref:System.Windows.Automation.CacheRequest> como <xref:System.Windows.Automation.AutomationElementMode.None>. Nesse caso, você não tem acesso a nenhuma propriedade não armazenada em cache e padrões de elementos recuperados. Isso significa que você não pode acessar as propriedades por meio de <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> ou a propriedade `Current` de <xref:System.Windows.Automation.AutomationElement> ou qualquer padrão de controle; Nem é possível recuperar um padrão usando <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> ou <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A>. Em padrões armazenados em cache, você pode chamar métodos que recuperam Propriedades de matriz, como <xref:System.Windows.Automation.SelectionPattern.SelectionPatternInformation.GetSelection%2A?displayProperty=nameWithType>, mas não qualquer que execute ações no controle, como <xref:System.Windows.Automation.InvokePattern.Invoke%2A?displayProperty=nameWithType>.  
   
- An example of an application that might not need full references to objects is a screen reader, which would prefetch the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> and <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> properties of elements in a window but would not need the <xref:System.Windows.Automation.AutomationElement> objects themselves.  
+ Um exemplo de um aplicativo que pode não precisar de referências totais a objetos é um leitor de tela, que buscaria a <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> e <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.ControlType%2A> Propriedades de elementos em uma janela, mas não precisaria dos próprios objetos <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="Activating_the_CacheRequest"></a>   
-## <a name="activating-the-cacherequest"></a>Activating the CacheRequest  
- Caching is performed only when <xref:System.Windows.Automation.AutomationElement> objects are retrieved while a <xref:System.Windows.Automation.CacheRequest> is active for the current thread. There are two ways to activate a <xref:System.Windows.Automation.CacheRequest>.  
+## <a name="activating-the-cacherequest"></a>Ativando o CacheRequest  
+ O cache é executado somente quando <xref:System.Windows.Automation.AutomationElement> objetos são recuperados enquanto um <xref:System.Windows.Automation.CacheRequest> está ativo para o thread atual. Há duas maneiras de ativar um <xref:System.Windows.Automation.CacheRequest>.  
   
- The usual way is to call <xref:System.Windows.Automation.CacheRequest.Activate%2A>. This method returns an object that implements <xref:System.IDisposable>. The request remains active as long as the <xref:System.IDisposable> object exists. The easiest way to control the lifetime of the object is to enclose the call within a `using` (C#) or `Using` (Visual Basic) block. This ensures that the request will be popped from the stack even if an exception is raised.  
+ A maneira usual é chamar <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Esse método retorna um objeto que implementa <xref:System.IDisposable>. A solicitação permanece ativa contanto que o objeto de <xref:System.IDisposable> exista. A maneira mais fácil de controlar o tempo de vida do objeto é colocar a chamada dentro de um blocoC#`using` () ou `Using` (Visual Basic). Isso garante que a solicitação será exibida da pilha, mesmo que uma exceção seja gerada.  
   
- Another way, which is useful when you wish to nest cache requests, is to call <xref:System.Windows.Automation.CacheRequest.Push%2A>. This puts the request on a stack and activates it. The request remains active until it is removed from the stack by <xref:System.Windows.Automation.CacheRequest.Pop%2A>. The request becomes temporarily inactive if another request is pushed onto the stack; only the top request on the stack is active.  
+ Outra maneira, que é útil quando você deseja aninhar solicitações de cache, é chamar <xref:System.Windows.Automation.CacheRequest.Push%2A>. Isso coloca a solicitação em uma pilha e a ativa. A solicitação permanece ativa até ser removida da pilha por <xref:System.Windows.Automation.CacheRequest.Pop%2A>. A solicitação se tornará temporariamente inativa se outra solicitação for enviada para a pilha; somente a solicitação superior na pilha está ativa.  
   
 <a name="Retrieving_Cached_Properties"></a>   
-## <a name="retrieving-cached-properties"></a>Retrieving Cached Properties  
- You can retrieve the cached properties of an element through the following methods and properties.  
+## <a name="retrieving-cached-properties"></a>Recuperando propriedades armazenadas em cache  
+ Você pode recuperar as propriedades armazenadas em cache de um elemento por meio dos métodos e propriedades a seguir.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
 - <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
- An exception is raised if the requested property is not in the cache.  
+ Uma exceção será gerada se a propriedade solicitada não estiver no cache.  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>, like <xref:System.Windows.Automation.AutomationElement.Current%2A>, exposes individual properties as members of a structure. However, you do not need to retrieve this structure; you can access the individual properties directly. For example, the <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> property can be obtained from `element.Cached.Name`, where `element` is an <xref:System.Windows.Automation.AutomationElement>.  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>, como <xref:System.Windows.Automation.AutomationElement.Current%2A>, expõe propriedades individuais como membros de uma estrutura. No entanto, você não precisa recuperar essa estrutura; Você pode acessar as propriedades individuais diretamente. Por exemplo, a propriedade <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> pode ser Obtida de `element.Cached.Name`, em que `element` é um <xref:System.Windows.Automation.AutomationElement>.  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
-## <a name="retrieving-cached-control-patterns"></a>Retrieving Cached Control Patterns  
- You can retrieve the cached control patterns of an element through the following methods.  
+## <a name="retrieving-cached-control-patterns"></a>Recuperando padrões de controle armazenados em cache  
+ Você pode recuperar os padrões de controle em cache de um elemento por meio dos métodos a seguir.  
   
 - <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
 - <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
- If the pattern is not in the cache, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> raises an exception, and <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> returns `false`.  
+ Se o padrão não estiver no cache, <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> gerar uma exceção e <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> retornará `false`.  
   
- You can retrieve the cached properties of a control pattern by using the `Cached` property of the pattern object. You can also retrieve the current values through the `Current` property, but only if <xref:System.Windows.Automation.AutomationElementMode.None> was not specified when the <xref:System.Windows.Automation.AutomationElement> was retrieved. (<xref:System.Windows.Automation.AutomationElementMode.Full> is the default value, and this permits access to the current values.)  
+ Você pode recuperar as propriedades armazenadas em cache de um padrão de controle usando a propriedade `Cached` do objeto de padrão. Você também pode recuperar os valores atuais por meio da propriedade `Current`, mas somente se <xref:System.Windows.Automation.AutomationElementMode.None> não tiver sido especificado quando o <xref:System.Windows.Automation.AutomationElement> for recuperado. (<xref:System.Windows.Automation.AutomationElementMode.Full> é o valor padrão, e isso permite o acesso aos valores atuais.)  
   
 <a name="Retrieving_Cached_Children_and_Parents"></a>   
-## <a name="retrieving-cached-children-and-parents"></a>Retrieving Cached Children and Parents  
- When you retrieve an <xref:System.Windows.Automation.AutomationElement> and request caching for children of that element through the <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> property of the request, it is subsequently possible to get the child elements from the <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> property of the element you retrieved.  
+## <a name="retrieving-cached-children-and-parents"></a>Recuperando filhos e pais armazenados em cache  
+ Quando você recupera um <xref:System.Windows.Automation.AutomationElement> e solicita o cache para os filhos desse elemento por meio da propriedade <xref:System.Windows.Automation.CacheRequest.TreeScope%2A> da solicitação, é possível, posteriormente, obter os elementos filho da propriedade <xref:System.Windows.Automation.AutomationElement.CachedChildren%2A> do elemento que você recuperou.  
   
- If <xref:System.Windows.Automation.TreeScope.Element> was included in the scope of the cache request, the root element of the request is subsequently available from the <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> property of any of the child elements.  
+ Se <xref:System.Windows.Automation.TreeScope.Element> foi incluído no escopo da solicitação de cache, o elemento raiz da solicitação estará posteriormente disponível na propriedade <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> de qualquer um dos elementos filho.  
   
 > [!NOTE]
-> You cannot cache parents or ancestors of the root element of the request.  
+> Você não pode armazenar em cache pais ou ancestrais do elemento raiz da solicitação.  
   
 <a name="Updating_the_Cache"></a>   
-## <a name="updating-the-cache"></a>Updating the Cache  
- The cache is valid only as long as nothing changes in the [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Your application is responsible for updating the cache, typically in response to events.  
+## <a name="updating-the-cache"></a>Atualizando o cache  
+ O cache é válido somente quando nada é alterado no [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Seu aplicativo é responsável por atualizar o cache, normalmente em resposta a eventos.  
   
- If you subscribe to an event while a <xref:System.Windows.Automation.CacheRequest> is active, you obtain an <xref:System.Windows.Automation.AutomationElement> with an updated cache as the source of the event whenever your event-handler delegate is called. You can also update cached information for an element by calling <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>. You can pass in the original <xref:System.Windows.Automation.CacheRequest> to update all information that was previously cached.  
+ Se você assinar um evento enquanto um <xref:System.Windows.Automation.CacheRequest> estiver ativo, obterá um <xref:System.Windows.Automation.AutomationElement> com um cache atualizado como a origem do evento sempre que seu delegado de manipulador de eventos for chamado. Você também pode atualizar informações armazenadas em cache para um elemento chamando <xref:System.Windows.Automation.AutomationElement.GetUpdatedCache%2A>. Você pode passar o <xref:System.Windows.Automation.CacheRequest> original para atualizar todas as informações que foram anteriormente armazenadas em cache.  
   
- Updating the cache does not alter the properties of any existing <xref:System.Windows.Automation.AutomationElement> references.  
+ A atualização do cache não altera as propriedades de nenhuma referência de <xref:System.Windows.Automation.AutomationElement> existente.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Eventos de automação de interface do usuário para clientes](ui-automation-events-for-clients.md)
 - [Usar o cache em automação de interface do usuário](use-caching-in-ui-automation.md)
-- [FetchTimer Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))
+- [Exemplo de FetchTimer](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

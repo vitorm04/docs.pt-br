@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440574"
 ---
 # <a name="imetadataemitsetpinvokemap-method"></a>Método IMetaDataEmit::SetPinvokeMap
-Sets or changes features of a method's PInvoke signature, as defined by a prior call to [IMetaDataEmit::DefinePinvokeMap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
+Define ou altera recursos da assinatura do PInvoke de um método, conforme definido por uma chamada anterior para [IMetaDataEmit::D efinepinvokemap](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepinvokemap-method.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,23 +38,23 @@ HRESULT SetPinvokeMap (
   
 ## <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] The `mdToken` to which mapping information applies.  
+ no O `mdToken` ao qual as informações de mapeamento se aplicam.  
   
  `dwMappingFlags`  
- [in] Flags used by PInvoke to do the mapping. This is a bitmask of `CorPinvokeMap` values.  
+ no Sinalizadores usados pelo PInvoke para fazer o mapeamento. Este é um bitmask de valores de `CorPinvokeMap`.  
   
  `szImportName`  
- [in] The name of the target export in the native DLL.  
+ no O nome da exportação de destino na DLL nativa.  
   
  `mrImportDLL`  
- [in] The `mdModuleRef` token for the target unmanaged DLL.  
+ no O token de `mdModuleRef` para a DLL não gerenciada de destino.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

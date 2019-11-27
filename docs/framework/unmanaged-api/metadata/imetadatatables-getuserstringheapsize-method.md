@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426643"
 ---
 # <a name="imetadatatablesgetuserstringheapsize-method"></a>Método IMetaDataTables::GetUserStringHeapSize
-Gets the size, in bytes, of the user string heap.  
+Obtém o tamanho, em bytes, do heap de cadeia de caracteres do usuário.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,14 +35,14 @@ HRESULT GetUserStringHeapSize (
   
 ## <a name="parameters"></a>Parâmetros  
  `pcbBlobs`  
- [out] A pointer to the size, in bytes, of the user string heap.  
+ fora Um ponteiro para o tamanho, em bytes, do heap de cadeia de caracteres do usuário.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

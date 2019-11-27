@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446573"
 ---
 # <a name="closeassembly-method"></a>Método CloseAssembly
-Finalizes assembly operations. Call this method before beginning a new assembly or unbound module.  
+Finaliza operações de assembly. Chame esse método antes de iniciar um novo assembly ou módulo não associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,13 +35,13 @@ HRESULT CloseAssembly(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID of the assembly.  
+ ID do assembly.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>Requisitos  
- Requires alink.h.  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ Requer ALink. h.  
   
 ## <a name="see-also"></a>Consulte também
 

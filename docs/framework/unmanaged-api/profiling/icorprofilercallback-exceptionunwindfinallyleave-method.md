@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445306"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyleave-method"></a>Método ICorProfilerCallback::ExceptionUnwindFinallyLeave
-Notifies the profiler that the unwind phase of exception handling has left a `finally` clause.  
+Notifica o criador de perfil de que a fase de desenrolamento da manipulação de exceção saiu de uma cláusula de `finally`.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,14 +32,14 @@ HRESULT ExceptionUnwindFinallyLeave();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- The profiler should not block during this call because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and a garbage collection is attempted, the runtime will block until this callback returns.  
+ O criador de perfil não deve bloquear durante essa chamada porque a pilha pode não estar em um estado que permita a coleta de lixo e, portanto, a coleta de lixo preemptiva não pode ser habilitada. Se o criador de perfil for bloqueado aqui e uma tentativa de coleta de lixo, o tempo de execução será bloqueado até que esse retorno de chamada seja retornado.  
   
- Also, during this call, the profiler must not call into managed code or in any way cause a managed-memory allocation.  
+ Além disso, durante essa chamada, o criador de perfil não deve chamar o código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

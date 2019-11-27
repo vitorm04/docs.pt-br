@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445588"
 ---
 # <a name="setassemblyfile2-method"></a>Método SetAssemblyFile2
-Sets the name of and options for a new assembly. Do not call this method when you produce unbound modules.  
+Define o nome e as opções para um novo assembly. Não chame esse método quando você produzir módulos não associados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,22 +37,22 @@ HRESULT SetAssemblyFile2(
   
 ## <a name="parameters"></a>Parâmetros  
  `pszFilename`  
- Name of manifest file.  
+ Nome do arquivo de manifesto.  
   
  `pEmitter`  
- [IMetaDataEmit2 Interface](../metadata/imetadataemit2-interface.md) interface for this file.  
+ Interface de [interface IMetaDataEmit2](../metadata/imetadataemit2-interface.md) para este arquivo.  
   
  `afFlags`  
- Options represented by [AssemblyFlags Enumeration](../metadata/assemblyflags-enumeration.md).  
+ Opções representadas pela [Enumeração AssemblyFlags](../metadata/assemblyflags-enumeration.md).  
   
  `pAssemblyID`  
- Receives unique ID for the assembly being constructed.  
+ Recebe uma ID exclusiva para o assembly que está sendo construído.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>Requisitos  
- Requires alink.h.  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ Requer ALink. h.  
   
 ## <a name="see-also"></a>Consulte também
 

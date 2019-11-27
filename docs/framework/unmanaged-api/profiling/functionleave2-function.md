@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446021"
 ---
 # <a name="functionleave2-function"></a>Função FunctionLeave2
-Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.  
+Notifica o criador de perfil de que uma função está prestes a retornar ao chamador e fornece informações sobre o quadro de pilha e o valor de retorno da função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,40 +37,40 @@ void __stdcall FunctionLeave2 (
   
 ## <a name="parameters"></a>Parâmetros  
  `funcId`  
- [in] The identifier of the function that is returning.  
+ no O identificador da função que está retornando.  
   
  `clientData`  
- [in] The remapped function identifier, which the profiler previously specified via the [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) function.  
+ no O identificador da função remapeada, que o criador de perfil especificou anteriormente por meio da função [FunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md) .  
   
  `func`  
- [in] A `COR_PRF_FRAME_INFO` value that points to information about the stack frame.  
+ no Um valor `COR_PRF_FRAME_INFO` que aponta para informações sobre o registro de ativação.  
   
- The profiler should treat this as an opaque handle that can be passed back to the execution engine in the [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) method.  
+ O criador de perfil deve tratar isso como um identificador opaco que pode ser passado de volta para o mecanismo de execução no método [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) .  
   
  `retvalRange`  
- [in] A pointer to a [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) structure that specifies the memory location of the function's return value.  
+ no Um ponteiro para uma estrutura de [COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md) que especifica o local da memória do valor de retorno da função.  
   
- In order to access return value information, the `COR_PRF_ENABLE_FUNCTION_RETVAL` flag must be set. The profiler can use the [ICorProfilerInfo::SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) method to set the event flags.  
+ Para acessar informações de valor de retorno, o sinalizador de `COR_PRF_ENABLE_FUNCTION_RETVAL` deve ser definido. O criador de perfil pode usar o método [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) para definir os sinalizadores de evento.  
   
 ## <a name="remarks"></a>Comentários  
- The values of the `func` and `retvalRange` parameters are not valid after the `FunctionLeave2` function returns because the values may change or be destroyed.  
+ Os valores dos parâmetros `func` e `retvalRange` não são válidos depois que a função `FunctionLeave2` retorna, pois os valores podem ser alterados ou destruídos.  
   
- The `FunctionLeave2` function is a callback; you must implement it. The implementation must use the `__declspec`(`naked`) storage-class attribute.  
+ A função `FunctionLeave2` é um retorno de chamada; Você deve implementá-lo. A implementação deve usar o atributo de classe de armazenamento `__declspec`(`naked`).  
   
- The execution engine does not save any registers before calling this function.  
+ O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Na entrada, você deve salvar todos os registros que usar, incluindo aqueles na FPU (unidade de ponto flutuante).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
- The implementation of `FunctionLeave2` should not block because it will delay garbage collection. The implementation should not attempt a garbage collection because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionLeave2` returns.  
+ A implementação de `FunctionLeave2` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo porque a pilha pode não estar em um estado amigável de coleta de lixo. Se uma coleta de lixo for tentada, o tempo de execução será bloqueado até que `FunctionLeave2` retorne.  
   
- Also, the `FunctionLeave2` function must not call into managed code or in any way cause a managed memory allocation.  
+ Além disso, a função `FunctionLeave2` não deve chamar um código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Cabeçalho:** CorProf. idl  
   
  **Biblioteca:** CorGuids.lib  
   

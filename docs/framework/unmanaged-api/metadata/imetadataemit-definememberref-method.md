@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431824"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>Método IMetaDataEmit::DefineMemberRef
-Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.  
+Define uma referência a um membro de um módulo fora do escopo atual e Obtém um token para essa definição de referência.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,26 +39,26 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>Parâmetros  
  `tkImport`  
- [in] Token for the target member's class or interface, if the member is not global; if the member is global, the `mdModuleRef` token for that other file.  
+ no Token para a classe ou a interface do membro de destino, se o membro não for global; Se o membro for global, o token `mdModuleRef` para esse outro arquivo.  
   
  `szName`  
- [in] The name of the target member.  
+ no O nome do membro de destino.  
   
  `pvSigBlob`  
- [in] The signature of the target member.  
+ no A assinatura do membro de destino.  
   
  `cbSigBlob`  
- [in] The count of bytes in `pvSigBlob`.  
+ no A contagem de bytes em `pvSigBlob`.  
   
  `pmr`  
- [out] The `mdMemberRef` token assigned.  
+ fora O token de `mdMemberRef` atribuído.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

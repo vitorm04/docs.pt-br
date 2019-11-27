@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444511"
 ---
 # <a name="isymunmanagedreadergetuserentrypoint-method"></a>Método ISymUnmanagedReader::GetUserEntryPoint
-Returns the method that was specified as the user entry point for the module, if any. For example, this method could be the user's main method rather than compiler-generated stubs before the main method.  
+Retorna o método que foi especificado como o ponto de entrada do usuário para o módulo, se houver. Por exemplo, esse método pode ser o método Main do usuário em vez de stubs gerados pelo compilador antes do método Main.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,13 +34,13 @@ HRESULT GetUserEntryPoint (
   
 ## <a name="parameters"></a>Parâmetros  
  `pToken`  
- [out] A pointer to a variable that receives the entry point.  
+ fora Um ponteiro para uma variável que recebe o ponto de entrada.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

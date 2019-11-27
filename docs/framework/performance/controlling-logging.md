@@ -29,7 +29,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.
 ```
 
-Se o provedor CLR não estiver listado, você poderá instalá-lo no Windows Vista e em sistemas operacionais posteriores usando a ferramenta de linha de comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) do Windows. Abra a janela do Prompt de Comando como administrador. Change the prompt directory to the .NET Framework 4 folder (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\ ). Esta pasta contém o arquivo CLR-ETW.man. No prompt de comando, digite o seguinte comando para instalar o provedor de CLR:
+Se o provedor CLR não estiver listado, você poderá instalá-lo no Windows Vista e em sistemas operacionais posteriores usando a ferramenta de linha de comando [Wevtutil](/windows-server/administration/windows-commands/wevtutil) do Windows. Abra a janela do Prompt de Comando como administrador. Altere o diretório de prompts para a pasta .NET Framework 4 (%WINDIR%\Microsoft.NET\Framework [64] \v4.\<.NET versão > \). Esta pasta contém o arquivo CLR-ETW.man. No prompt de comando, digite o seguinte comando para instalar o provedor de CLR:
 
 `wevtutil im CLR-ETW.man`
 
@@ -57,7 +57,7 @@ Para ativar o log, um usuário deve especificar três coisas:
 
     - `0x1CCBD` especifica as categorias de eventos que serão geradas.
 
-    - `0x5` define o nível do log (nesse caso, detalhado (5)).
+    - `0x5` define o nível de registro em log (neste caso, Detalhado (5)).
 
     - O parâmetro `-ets` instrui o Logman a enviar comandos para a seções de rastreamento de eventos.
 
@@ -113,5 +113,5 @@ Use os comandos listados abaixo para exibir os eventos ETW de CLR. Para obter um
 
 ## <a name="see-also"></a>Consulte também
 
-- [Windows Performance Toolkit](/windows-hardware/test/wpt/)
+- [Kit de ferramentas de desempenho do Windows](/windows-hardware/test/wpt/)
 - [Eventos ETW no Common Language Runtime](etw-events-in-the-common-language-runtime.md)

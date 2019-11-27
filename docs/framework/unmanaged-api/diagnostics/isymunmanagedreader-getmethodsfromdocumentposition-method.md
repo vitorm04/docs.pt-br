@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441801"
 ---
 # <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a>Método ISymUnmanagedReader::GetMethodsFromDocumentPosition
-Returns an array of methods, each of which contains the breakpoint at the given position in a document.  
+Retorna uma matriz de métodos, cada um contendo o ponto de interrupção na posição especificada em um documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,28 +40,28 @@ HRESULT GetMethodsFromDocumentPosition (
   
 ## <a name="parameters"></a>Parâmetros  
  `document`  
- [in] The specified document.  
+ no O documento especificado.  
   
  `line`  
- [in] The line of the specified document.  
+ no A linha do documento especificado.  
   
  `column`  
- [in] The column of the specified document.  
+ no A coluna do documento especificado.  
   
  `cMethod`  
- [in] The size of the `pRetVal` array.  
+ no O tamanho da matriz de `pRetVal`.  
   
  `pcMethod`  
- [out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.  
+ fora Um ponteiro para uma variável que recebe o número de elementos retornados na matriz de `pRetVal`.  
   
  `pRetVal`  
- [out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.  
+ fora Uma matriz de ponteiros, cada um dos quais aponta para um objeto [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) que representa um método que contém o ponto de interrupção.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

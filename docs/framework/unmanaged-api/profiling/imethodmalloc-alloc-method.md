@@ -24,7 +24,7 @@ ms.locfileid: "74447559"
 ---
 # <a name="imethodmallocalloc-method"></a>Método IMethodMalloc::Alloc
 
-Attempts to allocate a specified amount of memory for a new Microsoft intermediate language (MSIL) function body.
+Tenta alocar uma quantidade especificada de memória para um novo corpo de função da MSIL (Microsoft Intermediate Language).
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -37,18 +37,18 @@ PVOID Alloc (
 ## <a name="parameters"></a>Parâmetros
 
 `cb`\
-[in] The number of bytes to allocate for the method body.
+no O número de bytes a serem alocados para o corpo do método.
 
 ## <a name="remarks"></a>Comentários
 
- The allocated memory will begin at an address greater than the base address of the module that is associated with this allocator. In other words, each allocator is created for a particular module, and will attempt to allocate memory at a positive offset from its base address. If `Alloc` fails to allocate the requested number of bytes at an address greater than the base address of the module, it returns E_OUTOFMEMORY, regardless of the actual amount of memory space available.
+ A memória alocada começará com um endereço maior que o endereço base do módulo associado a esse alocador. Em outras palavras, cada alocador é criado para um módulo específico e tentará alocar memória em um deslocamento positivo de seu endereço base. Se `Alloc` falhar em alocar o número solicitado de bytes em um endereço maior do que o endereço base do módulo, ele retornará E_OUTOFMEMORY, independentemente da quantidade real de espaço de memória disponível.
 
- The `Alloc` method should be used in conjunction with the [ICorProfilerInfo::SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) method.
+ O método `Alloc` deve ser usado em conjunto com o método [ICorProfilerInfo:: SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md) .
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
- **Header:** CorProf.idl, CorProf.h
+ **Cabeçalho:** CorProf. idl, CorProf. h
 
  **Biblioteca:** CorGuids.lib
 

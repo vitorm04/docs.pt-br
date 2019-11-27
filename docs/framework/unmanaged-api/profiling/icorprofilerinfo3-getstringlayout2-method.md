@@ -43,7 +43,7 @@ HRESULT GetStringLayout2(
 ## <a name="remarks"></a>Comentários  
  Cadeias de caracteres podem ou não ser terminadas em nulo.  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  

@@ -7,22 +7,22 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450880"
 ---
 
-The packages added to the package manager feeds are named in a hackable format: `{product}-{type}-{version}`.
+Os pacotes adicionados aos feeds do Gerenciador de pacotes são nomeados em um formato hackable: `{product}-{type}-{version}`.
 
-- **product**\
-The type of .NET product to install. Valid options are:
+- \ do **produto**
+O tipo de produto .NET a ser instalado. As opções válidas são:
 
   - dotnet
   - aspnetcore
 
-- **type**\
-Chooses the SDK or the runtime. Valid options are:
+- **tipo**\
+Escolhe o SDK ou o tempo de execução. As opções válidas são:
 
   - sdk
   - runtime
 
-- **version**\
-The version of the SDK or runtime to install. This article will always give the instructions for the latest supported version. Valid options are any released version, such as:
+- **versão**\
+A versão do SDK ou do tempo de execução a ser instalado. Este artigo sempre fornecerá as instruções para a versão mais recente com suporte. As opções válidas são qualquer versão lançada, como:
 
   - 3.0
   - 2.2
@@ -30,10 +30,10 @@ The version of the SDK or runtime to install. This article will always give the 
 
 ### <a name="examples"></a>Exemplos
 
-- Install the .NET Core 2.2 SDK: `dotnet-sdk-2.2`
-- Install the ASP.NET Core 3.0 runtime: `aspnetcore-runtime-3.0`
-- Install the .NET Core 2.1 runtime: `dotnet-runtime-2.1`
+- Instale o SDK do .NET Core 2,2: `dotnet-sdk-2.2`
+- Instale o tempo de execução do ASP.NET Core 3,0: `aspnetcore-runtime-3.0`
+- Instale o tempo de execução do .NET Core 2,1: `dotnet-runtime-2.1`
 
 ### <a name="troubleshoot"></a>Solução de problemas
 
-If the package combination doesn't work, it's not available. For example, there isn't an ASP.NET Core SDK, the SDK components are included with the .NET Core SDK. The value `aspnetcore-sdk-2.2` is incorrect and should be `dotnet-sdk-2.2`
+Se a combinação de pacote não funcionar, ela não estará disponível. Por exemplo, não há um SDK ASP.NET Core, os componentes do SDK estão incluídos no SDK do .NET Core. O valor `aspnetcore-sdk-2.2` está incorreto e deve ser `dotnet-sdk-2.2`

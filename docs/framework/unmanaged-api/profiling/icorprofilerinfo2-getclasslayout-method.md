@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433397"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>Método ICorProfilerInfo2::GetClassLayout
-Gets information about the layout, in memory, of the fields defined by the specified class. That is, this method gets the offsets of the class's fields.  
+Obtém informações sobre o layout, na memória, dos campos definidos pela classe especificada. Ou seja, esse método obtém os deslocamentos dos campos da classe.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,33 +38,33 @@ HRESULT GetClassLayout(
   
 ## <a name="parameters"></a>Parâmetros  
  `classID`  
- [in] The ID of the class for which the layout will be retrieved.  
+ no A ID da classe para a qual o layout será recuperado.  
   
  `rFieldOffset`  
- [in, out] An array of [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) structures, each of which contains the tokens and offsets of the class's fields.  
+ [entrada, saída] Uma matriz de estruturas [COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md) , cada uma delas contém os tokens e os deslocamentos dos campos da classe.  
   
  `cFieldOffset`  
- [in] The size of the `rFieldOffset` array.  
+ no O tamanho da matriz de `rFieldOffset`.  
   
  `pcFieldOffset`  
- [out] A pointer to the total number of available elements. If `cFieldOffset` is 0, this value indicates the number of elements needed.  
+ fora Um ponteiro para o número total de elementos disponíveis. Se `cFieldOffset` for 0, esse valor indicará o número de elementos necessários.  
   
  `pulClassSize`  
- [out] A pointer to a location that contains the size, in bytes, of the class.  
+ fora Um ponteiro para um local que contém o tamanho, em bytes, da classe.  
   
 ## <a name="remarks"></a>Comentários  
- The `GetClassLayout` method returns only the fields defined by the class itself. If the class's parent class has defined fields as well, the profiler must call `GetClassLayout` on the parent class to obtain those fields.  
+ O método `GetClassLayout` retorna apenas os campos definidos pela própria classe. Se a classe pai da classe também tiver campos definidos, o criador de perfil deverá chamar `GetClassLayout` na classe pai para obter esses campos.  
   
- If you use `GetClassLayout` with string classes, the method will fail with error code E_INVALIDARG. Use [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) to get information about the layout of a string. `GetClassLayout` will also fail when called with an array class.  
+ Se você usar `GetClassLayout` com classes de cadeia de caracteres, o método falhará com o código de erro E_INVALIDARG. Use [ICorProfilerInfo2:: GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) para obter informações sobre o layout de uma cadeia de caracteres. `GetClassLayout` também falhará quando chamado com uma classe de matriz.  
   
- After `GetClassLayout` returns, you must verify that the `rFieldOffset` buffer was large enough to contain all the available `COR_FIELD_OFFSET` structures. To do this, compare the value that `pcFieldOffset` points to with the size of `rFieldOffset` divided by the size of a `COR_FIELD_OFFSET` structure. If `rFieldOffset` is not large enough, allocate a larger `rFieldOffset` buffer, update `cFieldOffset` with the new, larger size, and call `GetClassLayout` again.  
+ Depois que `GetClassLayout` retorna, você deve verificar se o buffer de `rFieldOffset` era grande o suficiente para conter todas as estruturas de `COR_FIELD_OFFSET` disponíveis. Para fazer isso, compare o valor que `pcFieldOffset` aponta com o tamanho de `rFieldOffset` dividido pelo tamanho de uma estrutura de `COR_FIELD_OFFSET`. Se `rFieldOffset` não for grande o suficiente, aloque um buffer de `rFieldOffset` maior, atualize `cFieldOffset` com o tamanho novo, maior e chame `GetClassLayout` novamente.  
   
- Alternatively, you can first call `GetClassLayout` with a zero-length `rFieldOffset` buffer to obtain the correct buffer size. You can then set the buffer size to the value returned in `pcFieldOffset` and call `GetClassLayout` again.  
+ Como alternativa, você pode primeiro chamar `GetClassLayout` com um buffer de `rFieldOffset` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer para o valor retornado em `pcFieldOffset` e chamar `GetClassLayout` novamente.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

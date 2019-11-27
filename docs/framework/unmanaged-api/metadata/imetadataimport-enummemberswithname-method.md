@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441669"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>Método IMetaDataImport::EnumMembersWithName
-Enumerates MemberDef tokens representing members of the specified type with the specified name.  
+Enumera os tokens MemberDef que representam os membros do tipo especificado com o nome especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,39 +40,39 @@ HRESULT EnumMembersWithName (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `cl`  
- [in] A TypeDef token representing the type with members to enumerate.  
+ no Um token de TypeDef que representa o tipo com membros a serem enumerados.  
   
  `szName`  
- [in] The member name that limits the scope of the enumerator.  
+ no O nome do membro que limita o escopo do enumerador.  
   
  `rMembers`  
- [out] The array used to store the MemberDef tokens.  
+ fora A matriz usada para armazenar os tokens MemberDef.  
   
  `cMax`  
- [in] The maximum size of the `rMembers` array.  
+ no O tamanho máximo da matriz de `rMembers`.  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ fora O número real de tokens MemberDef retornados em `rMembers`.  
   
 ## <a name="remarks"></a>Comentários  
- This method enumerates fields and methods, but not properties or events. Unlike [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` discards all field and member tokens that do not have the specified name.  
+ Esse método enumera campos e métodos, mas não propriedades ou eventos. Ao contrário de [IMetaDataImport:: EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md), `EnumMembersWithName` descarta todos os tokens de campo e membro que não têm o nome especificado.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumTypeDefs` retornado com êxito.|  
+|`S_FALSE`|Não há tokens MemberDef para enumerar. Nesse caso, `pcTokens` é zero.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

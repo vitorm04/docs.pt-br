@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445771"
 ---
 # <a name="icorprofilercallbackremotingserverinvocationstarted-method"></a>Método ICorProfilerCallback::RemotingServerInvocationStarted
-Notifies the profiler that the process is invoking a method in response to a remote method invocation request.  
+Notifica o criador de perfil de que o processo está invocando um método em resposta a uma solicitação de invocação de método remoto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -31,10 +31,10 @@ Notifies the profiler that the process is invoking a method in response to a rem
 HRESULT RemotingServerInvocationStarted();  
 ```  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

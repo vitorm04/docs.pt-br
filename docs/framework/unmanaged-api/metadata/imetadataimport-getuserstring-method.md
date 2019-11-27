@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436679"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>Método IMetaDataImport::GetUserString
-Gets the literal string represented by the specified metadata token.  
+Obtém a cadeia de caracteres literal representada pelo token de metadados especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,23 +38,23 @@ HRESULT GetUserString (
   
 ## <a name="parameters"></a>Parâmetros  
  `stk`  
- [in] The String token to return the associated string for.  
+ no O token da cadeia de caracteres para o qual retornar a cadeia de caracteres associada.  
   
  `szString`  
- [out] A copy of the requested string.  
+ fora Uma cópia da cadeia de caracteres solicitada.  
   
  `cchString`  
- [in] The maximum size in wide characters of the requested `szString`.  
+ no O tamanho máximo em caracteres largos do `szString`solicitado.  
   
  `pchString`  
- [out] The size in wide characters of the returned `szString`.  
+ fora O tamanho em caracteres largos do `szString`retornado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

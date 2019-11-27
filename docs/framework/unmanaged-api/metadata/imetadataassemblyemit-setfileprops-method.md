@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431877"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>Método IMetaDataAssemblyEmit::SetFileProps
-Modifies the specified `File` metadata structure.  
+Modifica a estrutura de metadados de `File` especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,26 +38,26 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `file`  
- [in] The metadata token that specifies the `File` metadata structure to be modified.  
+ no O token de metadados que especifica a estrutura de metadados `File` a ser modificada.  
   
  `pbHashValue`  
- [in] A pointer to the hash data associated with the file.  
+ no Um ponteiro para os dados de hash associados ao arquivo.  
   
  `cbHashValue`  
- [in] The size in bytes of `pbHashValue`.  
+ no O tamanho em bytes de `pbHashValue`.  
   
  `dwFileFlags`  
- [in] A bitwise combination of [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) values that specify various attributes of the file.  
+ no Uma combinação de bits de valores [CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md) que especifica vários atributos do arquivo.  
   
 ## <a name="remarks"></a>Comentários  
- To create a `File` metadata structure, use the [IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) method.  
+ Para criar uma estrutura de metadados `File`, use o método [IMetaDataAssemblyEmit::D efinefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

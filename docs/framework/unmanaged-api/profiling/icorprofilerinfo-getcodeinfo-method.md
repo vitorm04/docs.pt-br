@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439231"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>Método ICorProfilerInfo::GetCodeInfo
-Gets the extent of native code associated with the specified function ID.  
+Obtém a extensão do código nativo associado à ID da função especificada.  
   
- Esse método é obsoleto. Use the [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) method instead.  
+ Esse método é obsoleto. Em vez disso, use o método [ICorProfilerInfo2:: GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,27 +38,27 @@ HRESULT GetCodeInfo(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] The ID of the function with which the native code is associated.  
+ no A ID da função à qual o código nativo está associado.  
   
  `pStart`  
- [out] A pointer to an array of bytes that compose the native code of the function.  
+ fora Um ponteiro para uma matriz de bytes que compõe o código nativo da função.  
   
  `pcSize`  
- [out] A pointer to an integer that specifies the size, in bytes, of the native code.  
+ fora Um ponteiro para um inteiro que especifica o tamanho, em bytes, do código nativo.  
   
 ## <a name="remarks"></a>Comentários  
- To optimize performance, the runtime in the .NET Framework version 2.0 splits the precompiled, native code of a function into multiple regions. Consequently, the `GetCodeInfo` method is obsolete in the .NET Framework 2.0 because it is unable to handle the extent of a function's native code. Profilers should switch to using the more general `ICorProfilerInfo2::GetCodeInfo2` method instead.  
+ Para otimizar o desempenho, o tempo de execução na versão 2,0 do .NET Framework divide o código pré-compilado precompilado de uma função em várias regiões. Consequentemente, o método `GetCodeInfo` é obsoleto no .NET Framework 2,0 porque não é possível manipular a extensão do código nativo de uma função. Os profileres devem mudar para o uso do método mais geral `ICorProfilerInfo2::GetCodeInfo2` em vez disso.  
   
- This function uses caller-allocated buffers.  
+ Essa função usa buffers alocados pelo chamador.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   
- **.NET Framework Versions:** 1.0  
+ **Versões do .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Consulte também
 

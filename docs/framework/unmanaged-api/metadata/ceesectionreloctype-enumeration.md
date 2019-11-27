@@ -50,7 +50,7 @@ typedef enum  {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`srRelocAbsolute`|Gera apenas um `reloc`relativo à seção, enviando nada para uma seção. realocação.|  
 |`srRelocHighLow`|Gera um `reloc` para um local de tamanho de ponteiro. Isso é transformado em BASED_HIGHLOW ou BASED_DIR64 dependendo da plataforma.|  
@@ -68,7 +68,7 @@ typedef enum  {
 |`srNoBaseReloc`|Especifica não emitir um `reloc`base.|  
 |`srRelocPtr`|Um valor que indica que o conteúdo de ajuste prévio da memória é um ponteiro em vez de um deslocamento de seção.|  
   
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** Cor. h  

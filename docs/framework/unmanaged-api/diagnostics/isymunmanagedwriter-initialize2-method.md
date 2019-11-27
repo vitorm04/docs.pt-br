@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427947"
 ---
 # <a name="isymunmanagedwriterinitialize2-method"></a>Método ISymUnmanagedWriter::Initialize2
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written. This method also lets you set the final location of the program database (PDB) file.  
+Define a interface do emissor de metadados com a qual esse gravador será associado e define o nome do arquivo de saída para o qual os símbolos de depuração serão gravados. Esse método também permite que você defina o local final do arquivo de banco de dados do programa (PDB).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,25 +38,25 @@ HRESULT Initialize2(
   
 ## <a name="parameters"></a>Parâmetros  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ no Um ponteiro para a interface do emissor de metadados.  
   
  `tempfilename`  
- [in] A pointer to a `WCHAR` that contains the file name to which the debugging symbols are written. Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro será ignorado.  
+ no Um ponteiro para um `WCHAR` que contém o nome do arquivo para o qual os símbolos de depuração são gravados. Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro será ignorado.  
   
  `pIStream`  
- [in] If specified, the symbol writer emits the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. O parâmetro `pIStream` é opcional.  
+ no Se especificado, o gravador de símbolo emitirá os símbolos para o determinado <xref:System.Runtime.InteropServices.ComTypes.IStream> em vez de para o arquivo especificado no parâmetro `filename`. O parâmetro `pIStream` é opcional.  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] `true` se esta for uma recompilação completa; `false` se esta for uma compilação incremental.  
   
  `finalfilename`  
- [in] A pointer to a `WCHAR` that is the path string to the final location of the PDB file.  
+ no Um ponteiro para um `WCHAR` que é a cadeia de caracteres de caminho para o local final do arquivo PDB.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

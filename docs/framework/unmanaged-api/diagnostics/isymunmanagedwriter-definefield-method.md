@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428040"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>Método ISymUnmanagedWriter::DefineField
-Defines a single variable that is not within a method. This method is used for certain fields in classes, bit fields, and so on.  
+Define uma única variável que não está dentro de um método. Esse método é usado para determinados campos em classes, campos de bits e assim por diante.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,37 +42,37 @@ HRESULT DefineField(
   
 ## <a name="parameters"></a>Parâmetros  
  `parent`  
- [in] The metadata type or method token.  
+ no O tipo de metadados ou o token do método.  
   
  `name`  
- [in] The field name.  
+ no O nome do campo.  
   
  `attributes`  
- [in] The field attributes.  
+ no Os atributos do campo.  
   
  `cSig`  
- [in] A `ULONG32` that is the size, in characters, of the buffer required to contain the field signature.  
+ no Um `ULONG32` que é o tamanho, em caracteres, do buffer necessário para conter a assinatura de campo.  
   
  `signature`  
- [in] The array of field signatures.  
+ no A matriz de assinaturas de campo.  
   
  `addrKind`  
- [in] The address type.  
+ no O tipo de endereço.  
   
  `addr1`  
- [in] The first address for the field specification.  
+ no O primeiro endereço para a especificação de campo.  
   
  `addr2`  
- [in] The second address for the field specification.  
+ no O segundo endereço para a especificação de campo.  
   
  `addr3`  
- [in] The third address for the field specification.  
+ no O terceiro endereço para a especificação de campo.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 
