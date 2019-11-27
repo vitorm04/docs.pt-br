@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450352"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>Método IMetaDataAssemblyImport::EnumAssemblyRefs
-Enumerates the `mdAssemblyRef` instances that are defined in the assembly manifest.  
+Enumera as instâncias de `mdAssemblyRef` que são definidas no manifesto do assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,30 +38,30 @@ HRESULT EnumAssemblyRefs (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be a null value when the `EnumAssemblyRefs` method is called for the first time.  
+ [entrada, saída] Um ponteiro para o enumerador. Esse deve ser um valor nulo quando o método `EnumAssemblyRefs` é chamado pela primeira vez.  
   
  `rAssemblyRefs`  
- [out] The enumeration of `mdAssemblyRef` metadata tokens.  
+ fora A enumeração de tokens de metadados de `mdAssemblyRef`.  
   
  `cMax`  
- [in] The maximum number of tokens that can be placed in the `rAssemblyRefs` array.  
+ no O número máximo de tokens que podem ser colocados na matriz de `rAssemblyRefs`.  
   
  `pcTokens`  
- [out] The number of tokens actually placed in `rAssemblyRefs`.  
+ fora O número de tokens realmente colocados em `rAssemblyRefs`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumAssemblyRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In this case, `pcTokens` is set to zero.|  
+|`S_OK`|`EnumAssemblyRefs` retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTokens` é definido como zero.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

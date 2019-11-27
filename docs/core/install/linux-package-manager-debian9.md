@@ -1,6 +1,6 @@
 ---
-title: Install .NET Core on Debian 9 - package manager - .NET Core
-description: Use a package manager to install .NET Core SDK and runtime on Debian 9.
+title: Instalar o .NET Core no Debian 9 – Gerenciador de pacotes-.NET Core
+description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e tempo de execução no Debian 9.
 author: thraka
 ms.author: adegeo
 ms.date: 11/06/2019
@@ -11,23 +11,23 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451034"
 ---
-# <a name="debian-9-package-manager---install-net-core"></a>Debian 9 Package Manager - Install .NET Core
+# <a name="debian-9-package-manager---install-net-core"></a>Gerenciador de pacotes do Debian 9 – instalar o .NET Core
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-This article describes how to use a package manager to install .NET Core on Debian 9. If you're installing the runtime, we suggest you install the [ASP.NET Core runtime](#install-the-aspnet-core-runtime), as it includes both .NET Core and ASP.NET Core runtimes.
+Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Core no Debian 9. Se você estiver instalando o tempo de execução, sugerimos que instale o [ASP.NET Core Runtime](#install-the-aspnet-core-runtime), pois ele inclui o .NET Core e ASP.NET Core Runtimes.
 
-## <a name="register-microsoft-key-and-feed"></a>Register Microsoft key and feed
+## <a name="register-microsoft-key-and-feed"></a>Registrar chave e feed da Microsoft
 
-Before installing .NET, you'll need to:
+Antes de instalar o .NET, você precisará:
 
-- Register the Microsoft key
-- register the product repository
-- Install required dependencies
+- Registrar a chave da Microsoft
+- registrar o repositório do produto
+- Instalar dependências necessárias
 
-This only needs to be done once per machine.
+Isso só precisa ser feito uma vez por computador.
 
-Open a terminal and run the following commands.
+Abra um terminal e execute os comandos a seguir.
 
 ```bash
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.asc.gpg
@@ -38,9 +38,9 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 ```
 
-## <a name="install-the-net-core-sdk"></a>Install the .NET Core SDK
+## <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
 
-Update the products available for installation, then install the .NET Core SDK. In your terminal, run the following commands.
+Atualize os produtos disponíveis para instalação e, em seguida, instale o SDK do .NET Core. Em seu terminal, execute os comandos a seguir.
 
 ```bash
 sudo apt-get update
@@ -49,9 +49,9 @@ sudo apt-get update
 sudo apt-get install dotnet-sdk-3.0
 ```
 
-## <a name="install-the-aspnet-core-runtime"></a>Install the ASP.NET Core runtime
+## <a name="install-the-aspnet-core-runtime"></a>Instalar o ASP.NET Core Runtime
 
-Update the products available for installation, then install the ASP.NET runtime. In your terminal, run the following commands.
+Atualize os produtos disponíveis para instalação e, em seguida, instale o tempo de execução do ASP.NET. Em seu terminal, execute os comandos a seguir.
 
 ```bash
 sudo apt-get update
@@ -60,9 +60,9 @@ sudo apt-get update
 sudo apt-get install aspnetcore-runtime-3.0
 ```
 
-## <a name="install-the-net-core-runtime"></a>Install the .NET Core runtime
+## <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
 
-Update the products available for installation, then install the .NET Core runtime. In your terminal, run the following commands.
+Atualize os produtos disponíveis para instalação e, em seguida, instale o tempo de execução do .NET Core. Em seu terminal, execute os comandos a seguir.
 
 ```bash
 sudo apt-get update
@@ -71,6 +71,6 @@ sudo apt-get update
 sudo apt-get install dotnet-runtime-3.0
 ```
 
-## <a name="how-to-install-other-versions"></a>How to install other versions
+## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]

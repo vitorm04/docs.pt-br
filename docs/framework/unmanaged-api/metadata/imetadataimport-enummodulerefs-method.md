@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450037"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>Método IMetaDataImport::EnumModuleRefs
-Enumerates ModuleRef tokens that represent imported modules.  
+Enumera tokens ModuleRef que representam módulos importados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,30 +38,30 @@ HRESULT EnumModuleRefs (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `rModuleRefs`  
- [out] The array used to store the ModuleRef tokens.  
+ fora A matriz usada para armazenar os tokens de ModuleRef.  
   
  `cMax`  
- [in] The maximum size of the `rModuleRefs` array.  
+ no O tamanho máximo da matriz de `rModuleRefs`.  
   
  `pcModuleRefs`  
- [out] The number of ModuleRef tokens returned in `rModuleRefs`.  
+ fora O número de tokens de ModuleRef retornados em `rModuleRefs`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcModuleRefs` is zero.|  
+|`S_OK`|`EnumModuleRefs` retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcModuleRefs` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

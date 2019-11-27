@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449998"
 ---
 # <a name="imetadataimportenumtypedefs-method"></a>Método IMetaDataImport::EnumTypeDefs
-Enumerates TypeDef tokens representing all types within the current scope.  
+Enumera os tokens de TypeDef que representam todos os tipos no escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,33 +38,33 @@ HRESULT EnumTypeDefs (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [out] A pointer to the new enumerator. This must be NULL for the first call of this method.  
+ fora Um ponteiro para o novo enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `rTypeDefs`  
- [in] The array used to store the TypeDef tokens.  
+ no A matriz usada para armazenar os tokens de TypeDef.  
   
  `cMax`  
- [in] The maximum size of the `rTypeDefs` array.  
+ no O tamanho máximo da matriz de `rTypeDefs`.  
   
  `pcTypeDefs`  
- [out] The number of TypeDef tokens returned in `rTypeDefs`.  
+ fora O número de tokens de TypeDef retornados em `rTypeDefs`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeDefs` is zero.|  
+|`S_OK`|`EnumTypeDefs` retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTypeDefs` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- The TypeDef token represents a type such as a class or an interface, as well as any type added via an extensibility mechanism.  
+ O token TypeDef representa um tipo como uma classe ou uma interface, bem como qualquer tipo adicionado por meio de um mecanismo de extensibilidade.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

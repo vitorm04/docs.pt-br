@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450222"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>Método IMetaDataEmit::DefineTypeDef
-Creates a type definition for a common language runtime type, and gets a metadata token for that type definition.  
+Cria uma definição de tipo para um tipo de Common Language Runtime e Obtém um token de metadados para essa definição de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,33 +39,33 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>Parâmetros  
  `szTypeDef`  
- [in] The name of the type in Unicode.  
+ no O nome do tipo em Unicode.  
   
  `dwTypeDefFlags`  
- [in] `TypeDef` attributes. This is a bitmask of `CoreTypeAttr` values.  
+ [in] `TypeDef` atributos. Este é um bitmask de valores de `CoreTypeAttr`.  
   
  `tkExtends`  
- [in] The token of the base class. It must be either an `mdTypeDef` or an `mdTypeRef` token.  
+ no O token da classe base. Ele deve ser um `mdTypeDef` ou um token de `mdTypeRef`.  
   
  `rtkImplements`  
- [in] An array of tokens specifying the interfaces that this class or interface implements.  
+ no Uma matriz de tokens que especifica as interfaces que essa classe ou interface implementa.  
   
  `ptd`  
- [out] The `mdTypeDef` token assigned.  
+ fora O token de `mdTypeDef` atribuído.  
   
 ## <a name="remarks"></a>Comentários  
- A flag in `dwTypeDefFlags` specifies whether the type being created is a common type system reference type (class or interface) or a common type system value type.  
+ Um sinalizador em `dwTypeDefFlags` especifica se o tipo que está sendo criado é um tipo de referência de Common Type System (classe ou interface) ou um tipo de valor de Common Type System.  
   
- Depending on the parameters supplied, this method, as a side effect, may also create an `mdInterfaceImpl` record for each interface that is inherited or implemented by this type. However, this method does not return any of these `mdInterfaceImpl` tokens. If a client wants to later add or modify an `mdInterfaceImpl` token, it must use the `IMetaDataImport` interface to enumerate them. If you want to use COM semantics of the `[default]` interface, you should supply the default interface as the first element in `rtkImplements`; a custom attribute set on the class will indicate that the class has a default interface (which is always assumed to be the first `mdInterfaceImpl` token declared for the class).  
+ Dependendo dos parâmetros fornecidos, esse método, como um efeito colateral, também pode criar um registro de `mdInterfaceImpl` para cada interface herdada ou implementada por esse tipo. No entanto, esse método não retorna nenhum desses tokens `mdInterfaceImpl`. Se um cliente quiser adicionar ou modificar um token de `mdInterfaceImpl` posteriormente, ele deverá usar a interface `IMetaDataImport` para enumerá-los. Se você quiser usar semântica COM da interface `[default]`, deverá fornecer a interface padrão como o primeiro elemento em `rtkImplements`; um atributo personalizado definido na classe indicará que a classe tem uma interface padrão (que é sempre considerada a primeira `mdInterfaceImpl` token declarada para a classe).  
   
- Each element of the `rtkImplements` array holds an `mdTypeDef` or `mdTypeRef` token. The last element in the array must be `mdTokenNil`.  
+ Cada elemento da matriz de `rtkImplements` contém um `mdTypeDef` ou `mdTypeRef` token. O último elemento na matriz deve ser `mdTokenNil`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450012"
 ---
 # <a name="imetadataimportenumsignatures-method"></a>Método IMetaDataImport::EnumSignatures
-Enumerates Signature tokens representing stand-alone signatures in the current scope.  
+Enumera os tokens de assinatura que representam assinaturas autônomas no escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,33 +38,33 @@ HRESULT EnumSignatures (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `rSignatures`  
- [out] The array used to store the Signature tokens.  
+ fora A matriz usada para armazenar os tokens de assinatura.  
   
  `cMax`  
- [in] The maximum size of the `rSignatures` array.  
+ no O tamanho máximo da matriz de `rSignatures`.  
   
  `pcSignatures`  
- [out] The number of Signature tokens returned in `rSignatures`.  
+ fora O número de tokens de assinatura retornados em `rSignatures`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumSignatures` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcSignatures` is zero.|  
+|`S_OK`|`EnumSignatures` retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcSignatures` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.  
+ Os tokens de assinatura são criados pelo método [IMetaDataEmit:: GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) .  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

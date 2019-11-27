@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74450089"
 ---
 # <a name="imetadataimportenummethods-method"></a>Método IMetaDataImport::EnumMethods
-Enumerates MethodDef tokens representing methods of the specified type.  
+Enumera tokens MethodDef que representam métodos do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,33 +39,33 @@ HRESULT EnumMethods (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `cl`  
- [in] A TypeDef token representing the type with the methods to enumerate.  
+ no Um token de TypeDef que representa o tipo com os métodos a serem enumerados.  
   
  `rMethods`  
- [out] The array to store the MethodDef tokens.  
+ fora A matriz para armazenar os tokens MethodDef.  
   
  `cMax`  
- [in] The maximum size of the MethodDef `rMethods` array.  
+ no O tamanho máximo da matriz de `rMethods` MethodDef.  
   
  `pcTokens`  
- [out] The number of MethodDef tokens returned in `rMethods`.  
+ fora O número de tokens MethodDef retornados em `rMethods`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethods` returned successfully.|  
-|`S_FALSE`|There are no MethodDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMethods` retornado com êxito.|  
+|`S_FALSE`|Não há tokens MethodDef para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

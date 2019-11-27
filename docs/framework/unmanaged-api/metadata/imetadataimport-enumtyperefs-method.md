@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449987"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>Método IMetaDataImport::EnumTypeRefs
-Enumerates TypeRef tokens defined in the current metadata scope.  
+Enumera tokens TypeRef definidos no escopo de metadados atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,33 +38,33 @@ HRESULT EnumTypeRefs (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator. This must be NULL for the first call of this method.  
+ [entrada, saída] Um ponteiro para o enumerador. Isso deve ser nulo para a primeira chamada deste método.  
   
  `rTypeRefs`  
- [out] The array used to store the TypeRef tokens.  
+ fora A matriz usada para armazenar os tokens TypeRef.  
   
  `cMax`  
- [in] The maximum size of the `rTypeRefs` array.  
+ no O tamanho máximo da matriz de `rTypeRefs`.  
   
  `pcTypeRefs`  
- [out] A pointer to the number of TypeRef tokens returned in `rTypeRefs`.  
+ fora Um ponteiro para o número de tokens TypeRef retornado em `rTypeRefs`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` returned successfully.|  
-|`S_FALSE`|There are no tokens to enumerate. In that case, `pcTypeRefs` is zero.|  
+|`S_OK`|`EnumTypeRefs` retornado com êxito.|  
+|`S_FALSE`|Não há tokens para enumerar. Nesse caso, `pcTypeRefs` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- A TypeRef token represents a reference to a type.  
+ Um token TypeRef representa uma referência a um tipo.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

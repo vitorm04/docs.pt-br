@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449516"
 ---
 # <a name="imetadataimportenumfieldswithname-method"></a>Método IMetaDataImport::EnumFieldsWithName
-Enumerates FieldDef tokens of the specified type with the specified name.  
+Enumera os tokens FieldDef do tipo especificado com o nome especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,39 +40,39 @@ HRESULT EnumFieldsWithName (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `cl`  
- [in] The token of the type whose fields are to be enumerated.  
+ no O token do tipo cujos campos devem ser enumerados.  
   
  `szName`  
- [in] The field name that limits the scope of the enumeration.  
+ no O nome do campo que limita o escopo da enumeração.  
   
  `rFields`  
- [out] Array used to store the FieldDef tokens.  
+ fora Matriz usada para armazenar os tokens FieldDef.  
   
  `cMax`  
- [in] The maximum size of the `rFields` array.  
+ no O tamanho máximo da matriz de `rFields`.  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ fora O número real de tokens FieldDef retornados em `rFields`.  
   
 ## <a name="remarks"></a>Comentários  
- Unlike [IMetaDataImport::EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` discards all field tokens that do not have the specified name.  
+ Ao contrário de [IMetaDataImport:: EnumFields](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumfields-method.md), `EnumFieldsWithName` descarta todos os tokens de campo que não têm o nome especificado.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFieldsWithName` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumFieldsWithName` retornado com êxito.|  
+|`S_FALSE`|Não há campos para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

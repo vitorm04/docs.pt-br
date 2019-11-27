@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449245"
 ---
 # <a name="isymunmanagedconstantgetvalue-method"></a>Método ISymUnmanagedConstant::GetValue
-Gets the value of the constant.  
+Obtém o valor da constante.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,13 +35,13 @@ HRESULT GetValue(
   
 ## <a name="parameters"></a>Parâmetros  
  `pValue`  
- [out] A pointer to a variable that receives the value.  
+ fora Um ponteiro para uma variável que recebe o valor.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 
