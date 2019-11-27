@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="slider-parts"></a>Partes do controle deslizante  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.Slider>.  
   
-|Parte|Digite|Descrição|  
+|Parte|Tipo|Descrição|  
 |-|-|-|  
 |PART_Track|<xref:System.Windows.Controls.Primitives.Track>|O contêiner para o elemento que indica a posição do <xref:System.Windows.Controls.Slider>.|  
 |PART_SelectionRange|<xref:System.Windows.FrameworkElement>|O elemento que exibe um intervalo de seleção ao longo do <xref:System.Windows.Controls.Slider>.  O intervalo de seleção só será visível se a propriedade <xref:System.Windows.Controls.Slider.IsSelectionRangeEnabled%2A> for `true`.|  
@@ -34,7 +34,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |----------------------|---------------------------|-----------------|  
 |Normal|CommonStates|O estado padrão.|  
 |MouseOver|CommonStates|O ponteiro do mouse é posicionado sobre o controle.|  
-|Disabled|CommonStates|O controle está desabilitado.|  
+|Desabilitado|CommonStates|O controle está desabilitado.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  
 |Válido|ValidationStates|O controle usa a classe <xref:System.Windows.Controls.Validation> e a propriedade anexada <xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType> é `false`.|  

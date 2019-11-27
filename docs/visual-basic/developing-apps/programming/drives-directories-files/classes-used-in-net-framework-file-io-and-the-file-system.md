@@ -21,7 +21,7 @@ Para obter uma listagem mais abrangente, consulte [Visão Geral da Biblioteca de
 
  A tabela a seguir lista e descreve as principais classes usadas para E/S de arquivos.  
   
-|Class|Descrição|  
+|Classe|Descrição|  
 |-----------|-----------------|  
 |<xref:System.IO.Directory?displayProperty=nameWithType>|Fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
 |<xref:System.IO.DirectoryInfo?displayProperty=nameWithType>|Fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.|  
@@ -39,7 +39,7 @@ Para obter uma listagem mais abrangente, consulte [Visão Geral da Biblioteca de
 
  A tabela a seguir lista e descreve as principais classes usadas para criar fluxos.  
   
-|Class|Descrição|  
+|Classe|Descrição|  
 |-----------|-----------------|  
 |<xref:System.IO.BufferedStream?displayProperty=nameWithType>|Adiciona uma camada de armazenamento em buffer para ler e gravar operações em outro fluxo.|  
 |<xref:System.IO.FileStream?displayProperty=nameWithType>|Dá suporte ao acesso aleatório a arquivos por meio de seu método <xref:System.IO.FileStream.Seek%2A>. <xref:System.IO.FileStream> abre arquivos de forma síncrona por padrão, mas também dá suporte à operação assíncrona.|  

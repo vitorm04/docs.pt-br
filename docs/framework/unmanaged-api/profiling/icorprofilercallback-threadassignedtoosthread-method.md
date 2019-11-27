@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74440029"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>Método ICorProfilerCallback::ThreadAssignedToOSThread
-Notifies the profiler that a managed thread is being implemented using a particular operating system thread.  
+Notifica o criador de perfil de que um thread gerenciado está sendo implementado usando um determinado thread do sistema operacional.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,18 +35,18 @@ HRESULT ThreadAssignedToOSThread(
   
 ## <a name="parameters"></a>Parâmetros  
  `managedThreadId`  
- [in] The identifier of the managed thread.  
+ no O identificador do thread gerenciado.  
   
  `osThreadId`  
- [in] The identifier of the operating system thread.  
+ no O identificador do thread do sistema operacional.  
   
 ## <a name="remarks"></a>Comentários  
- The `ThreadAssignedToOSThread` callback exists so that the profiler can maintain an accurate mapping across fibers of operating system threads to managed threads.  
+ O retorno de chamada `ThreadAssignedToOSThread` existe para que o criador de perfil possa manter um mapeamento preciso entre fibras de threads do sistema operacional para threads gerenciados.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

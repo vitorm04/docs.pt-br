@@ -17,7 +17,7 @@ ms.locfileid: "74353599"
 
 Este passo a passo demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log` para controlar quais informações são passadas do objeto `Log` para os ouvintes e quais informações são gravadas pelos ouvintes. Você pode alterar o comportamento de registro em log mesmo após ter compilado o aplicativo, porque as informações de configuração são armazenadas no arquivo de configuração do aplicativo.
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="getting-started"></a>Introdução
 
 Cada mensagem que `My.Application.Log` grava tem um nível de gravidade associado, que os mecanismos de filtragem usam para controlar a saída de log. Este aplicativo de exemplo usa métodos `My.Application.Log` para gravar diversas mensagens de log com diferentes níveis de gravidade.
 
@@ -76,7 +76,7 @@ Esta tabela explica a saída de log mostrada no exemplo anterior: com a configur
 
 1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e selecione **Abrir**.
 
-     \- ou -
+     - ou -
 
      Se não houver nenhum arquivo app.config:
 

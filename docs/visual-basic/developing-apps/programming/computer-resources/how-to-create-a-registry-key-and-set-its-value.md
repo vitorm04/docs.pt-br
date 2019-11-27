@@ -46,7 +46,7 @@ Este exemplo cria a chave do Registro `MyTestKey` em HKEY_CURRENT_USER e, em seg
 
 [!code-vb[VbResourceTasks#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#15)]
 
-## <a name="robust-programming"></a>Programação robusta
+## <a name="robust-programming"></a>Programação Robusta
 
 Analise a estrutura do Registro para encontrar um local adequado para a chave. Por exemplo, caso você queira abrir a chave HKEY_CURRENT_USER\Software do usuário atual e criar uma chave com o nome da empresa. Em seguida, adicione os valores do Registro à chave da empresa.
 

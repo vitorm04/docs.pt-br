@@ -87,7 +87,7 @@ Os tópicos nesta seção documentam modificadores de tempo de execução do Vis
   
  [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

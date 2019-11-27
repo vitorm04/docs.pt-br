@@ -18,7 +18,7 @@ ms.locfileid: "74204568"
 A criação de cópias de sombra permite que os assemblies usados em um domínio de aplicativo sejam atualizados sem descarregar o domínio de aplicativo. Isso é particularmente útil para aplicativos que devem estar disponíveis continuamente, como sites do ASP.NET.
 
 > [!IMPORTANT]
-> Shadow copying is not supported in Windows 8.x Store apps.
+> Não há suporte para cópia de sombra em aplicativos da loja do Windows 8. x.
 
 O common language runtime bloqueia um arquivo do assembly quando o assembly é carregado para que o arquivo não possa ser atualizado até que o assembly seja descarregado. A única maneira de descarregar um assembly de um domínio de aplicativo é descarregar o domínio de aplicativo. Portanto, em circunstâncias normais, um assembly não pode ser atualizado no disco até que todos os domínios de aplicativo que o estão usando sejam descarregados.
 

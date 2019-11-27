@@ -13,12 +13,12 @@ ms.locfileid: "74347866"
 ---
 # <a name="attributes-visual-basic"></a>Atributos (Visual Basic)
 
-Visual Basic provides several attributes that allow objects to interoperate with unmanaged code and one attribute that enables module members to be accessed without the module name. The following table lists the attributes used by Visual Basic.  
+Visual Basic fornece vários atributos que permitem que os objetos interoperem com código não gerenciado e um atributo que permite que os membros do módulo sejam acessados sem o nome do módulo. A tabela a seguir lista os atributos usados pelo Visual Basic.  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|Instructs the compiler to add metadata that allows a class to be exposed as a COM object.|
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Allows the module members to be accessed using only the qualification needed for the module.|
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|Instrui o compilador a adicionar metadados que permitem que uma classe seja exposta como um objeto COM.|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|Permite que os membros do módulo sejam acessados usando apenas a qualificação necessária para o módulo.|
 |<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|Indica que uma matriz em uma estrutura ou variável não local deve ser tratada como uma matriz de tamanho fixo.|
 |<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|Indica que uma cadeia de caracteres deve ser tratada como se fosse de comprimento fixo.|
   

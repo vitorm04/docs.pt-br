@@ -39,7 +39,7 @@ O método `GetValue` do objeto `My.Computer.Registry` pode ser usado para ler va
   
      [!code-vb[VbResourceTasks#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#12)]  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
 
  O Registro contém chaves de nível superior ou raiz, que são usadas para armazenar dados. Por exemplo, a chave raiz HKEY_LOCAL_MACHINE é usada para armazenar configurações de nível do computador usadas por todos os usuários, enquanto HKEY_CURRENT_USER é usada para armazenar dados específicos a um usuário individual.  
   

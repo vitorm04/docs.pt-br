@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74431934"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>Método IMetaDataAssemblyEmit::SetExportedTypeProps
-Modifies the specified `ExportedType` metadata structure.  
+Modifica a estrutura de metadados de `ExportedType` especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,26 +38,26 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `ct`  
- [in] The metadata token that specifies the `ExportedType` metadata structure to be modified.  
+ no O token de metadados que especifica a estrutura de metadados `ExportedType` a ser modificada.  
   
  `tkImplementation`  
- [in] The token, of type `File`, `AssemblyRef`, or `ExportedType`, that specifies how this type is implemented.  
+ no O token, do tipo `File`, `AssemblyRef`ou `ExportedType`, que especifica como esse tipo é implementado.  
   
  `tkTypeDef`  
- [in] The `TypeDef` token referenced in the code file.  
+ no O token de `TypeDef` referenciado no arquivo de código.  
   
  `dwExportedTypeFlags`  
- [in] A bitwise combination of values that specify attributes of the type.  
+ no Uma combinação de bits de valores que especifica atributos do tipo.  
   
 ## <a name="remarks"></a>Comentários  
- To create an `ExportedType` metadata structure, use the [IMetaDataAssemblyEmit::DefineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) method.  
+ Para criar uma estrutura de metadados `ExportedType`, use o método [IMetaDataAssemblyEmit::D efineexportedtype](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md) .  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -44,7 +44,7 @@ Este passo a passo fornece uma introdução para os fundamentos de E/S de arquiv
   
 4. Adicione os controles da tabela a seguir no formulário e defina os valores correspondentes para as respectivas propriedades.  
   
-    |Controle|propriedade|Valor|  
+    |Controle|Propriedade|Valor|  
     |-------------|--------------|-----------|  
     |**ListBox**|**Nome**|`filesListBox`|  
     |**Button**|**Nome**<br /><br /> **Texto**|`browseButton`<br /><br /> **Procurar**|  

@@ -1,5 +1,5 @@
 ---
-title: 'How to: Change User Settings'
+title: 'Como: alterar as configurações do usuário'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic

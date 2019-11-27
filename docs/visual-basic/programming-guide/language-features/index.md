@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345063"
 ---
 # <a name="visual-basic-language-features"></a>Funcionalidades da linguagem do Visual Basic
-The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.  
+Os tópicos a seguir apresentam e discutem os componentes essenciais do Visual Basic, uma linguagem de programação orientada a objeto. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. Assim como acontece com qualquer linguagem de programação moderna, o Visual Basic dá suporte a várias construções de programação e elementos de linguagem comuns.  
   
- Se você já programou em outras linguagens, grande parte do material abordado nesta seção poderá parecer familiar. While most of the constructs are similar to those in other languages, the event-driven nature of Visual Basic introduces some subtle differences.  
+ Se você já programou em outras linguagens, grande parte do material abordado nesta seção poderá parecer familiar. Embora a maioria das construções seja semelhante àquelas em outras linguagens, a natureza controlada por evento do Visual Basic apresenta algumas diferenças sutis.  
   
- Se você for novo em programação, o material desta seção servirá como uma introdução aos blocos de compilação básicos para escrever código. Once you understand the basics, you can create powerful applications using Visual Basic.  
+ Se você for novo em programação, o material desta seção servirá como uma introdução aos blocos de compilação básicos para escrever código. Depois de entender as noções básicas, você pode criar aplicativos poderosos usando o Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Matrizes](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -77,10 +77,10 @@ The following topics introduce and discuss the essential components of Visual Ba
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Também fornece links para tópicos que descrevem como usar XML no Visual Basic.  
   
-## <a name="related-sections"></a>Seções relacionadas
+## <a name="related-sections"></a>Seções Relacionadas
 
  [Coleções](../../../visual-basic/programming-guide/concepts/collections.md)  
  Descreve alguns dos tipos de coleções fornecidas pelo .NET Framework. Demonstra como usar coleções simples e coleções de pares chave/valor.  
   
  [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)  
- Provides reference information on various aspects of Visual Basic programming.
+ Fornece informações de referência sobre vários aspectos da programação de Visual Basic.

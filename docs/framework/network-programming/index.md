@@ -80,14 +80,14 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  Descreve os aprimoramentos adicionados ao <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType> e namespaces <xref:System.Net.Sockets?displayProperty=nameWithType> para oferecer suporte à NAT transversal usando o IPv6 e o Teredo.  
   
  [Isolamento de rede para Aplicativos da Windows Store](network-isolation-for-windows-store-apps.md)  
- Describes the impact of network isolation when classes in the <xref:System.Net>, <xref:System.Net.Http>, and <xref:System.Net.Http.Headers> namespaces are used in Windows 8.x Store apps.  
+ Descreve o impacto do isolamento de rede quando as classes nos namespaces <xref:System.Net>, <xref:System.Net.Http>e <xref:System.Net.Http.Headers> são usadas em aplicativos da loja do Windows 8. x.  
   
  [Amostras de programação de rede](network-programming-samples.md)  
  Vincula-se a amostras para download de programação de rede que usam classes nos namespaces <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets>.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Net?displayProperty=nameWithType>  
- Fornece uma interface de programação simples para muitos dos protocolos usados nas redes de hoje. As classes <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.WebResponse?displayProperty=nameWithType> nesse namespace são a base para protocolos conectáveis.  
+ {1&gt;Fornece uma interface de programação simples para muitos dos protocolos usados nas redes de hoje.&lt;1} As classes <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.WebResponse?displayProperty=nameWithType> nesse namespace são a base para protocolos conectáveis.  
   
  <xref:System.Net.Cache?displayProperty=nameWithType>  
  Define tipos e enumerações usados para definir políticas de cache para os recursos obtidos usando as classes <xref:System.Net.WebRequest?displayProperty=nameWithType> e <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>.  
@@ -126,7 +126,7 @@ O Microsoft .NET Framework fornece uma implementação dos serviços de Internet
  Fornece uma implementação gerenciada da interface de WebSocket para desenvolvedores.  
   
  <xref:System.Uri?displayProperty=nameWithType>  
- Fornece uma representação de objeto de um URI (Uniform Resource Identifier) e fácil acesso às partes do URI.  
+ Fornece uma representação de objeto de um URI (Uniform Resource Identifier) e acesso fácil às partes do URI.  
   
  <xref:System.Security.Authentication.ExtendedProtection?displayProperty=nameWithType>  
  Fornece suporte à autenticação usando proteção estendida para aplicativos.  

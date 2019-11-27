@@ -23,7 +23,7 @@ O objeto `My.Forms` fornece uma maneira fácil de acessar uma instância de cada
 
  A tabela a seguir lista exemplos que mostram como acessar os formulários de um aplicativo.  
   
-|Para|Consulte|  
+|{1&gt;Para&lt;1}|Consulte|  
 |---|---|  
 |Acessar um formulário de outro formulário em um aplicativo.|[Objeto My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
 |Exibir os títulos de todos os formulários abertos do aplicativo.|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  

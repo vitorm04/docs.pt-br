@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435936"
 ---
 # <a name="imetadataemitsavetostream-method"></a>Método IMetaDataEmit::SaveToStream
-Saves all metadata in the current scope to the specified `IStream`.  
+Salva todos os metadados no escopo atual para o `IStream`especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +36,17 @@ HRESULT SaveToStream (
   
 ## <a name="parameters"></a>Parâmetros  
  `pIStream`  
- [in] The writable stream to save to.  
+ no O fluxo gravável no qual salvar.  
   
  `dwSaveFlags`  
  [in] Reservado. Deve ser zero.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MSCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MSCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -30,13 +30,13 @@ Os padrões de codificação de caracteres anteriores consistiam em conjuntos de
 
 A classe <xref:System.Text.Encoding> representa uma codificação de caracteres. Esta tabela lista os tipos de codificações disponíveis e descreve cada uma.
 
-|Name|Descrição|
+|{1&gt;Nome&lt;1}|Descrição|
 |---|---|
 |<xref:System.Text.ASCIIEncoding>|Representa uma codificação de caracteres ASCII de caracteres Unicode.|
 |<xref:System.Text.UnicodeEncoding>|Representa uma codificação de caracteres Unicode UTF-16.|
 |<xref:System.Text.UTF32Encoding>|Representa uma codificação de caracteres Unicode UTF-32.|
 |<xref:System.Text.UTF7Encoding>|Representa uma codificação de caracteres Unicode UTF-7.|
-|<xref:System.Text.UTF8Encoding>|Representa uma codificação de caracteres Unicode UTF-8.|
+|<xref:System.Text.UTF8Encoding>|{1&gt;Representa uma codificação de caracteres Unicode UTF-8. &lt;1}|
 
 ## <a name="see-also"></a>Consulte também
 

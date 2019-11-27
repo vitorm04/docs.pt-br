@@ -21,7 +21,7 @@ ms.locfileid: "74283228"
 
  O Windows Communication Foundation (WCF) é o modelo de programação unificado da Microsoft para a criação de aplicativos orientados a serviços. Ele foi introduzido pela primeira vez como parte do .NET 3,0 junto com o WF3 e agora é um dos principais componentes do .NET Framework.
 
- Windows Server AppFabric é um conjunto de tecnologias integrados que tornam mais fácil criar, redimensionar e gerenciar Web e aplicativos compostos que executam no IIS. Fornece ferramentas para monitorar e gerenciar serviços e fluxos de trabalho. Para obter mais informações, consulte [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
+ O Windows Server AppFabric é um conjunto de tecnologias integradas que facilita criar, dimensionar e gerenciar aplicativos Web e compostos executados no IIS. Fornece ferramentas para monitorar e gerenciar serviços e fluxos de trabalho. Para obter mais informações, consulte [Windows Server AppFabric 1,0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).
 
 ## <a name="goals"></a>Objetivos
  O objetivo deste tópico é mostrar as características de desempenho de WF4 com os dados medidas para diferentes cenários. Também fornece comparações detalhadas entre WF4 e WF3, e mostra o grandes aprimoramentos que foram feitas nessa nova revisão. Os cenários e os dados apresentados neste artigo determinam o custo subjacentes de diferentes aspectos de WF4 e de WF3. Esses dados são úteis para entender as características de desempenho de WF4 e podem ser úteis em migrações de planejamento de WF3 a WF4 ou WF4 de uso durante o desenvolvimento de aplicativos. No entanto, cuidado deve ser recolhido as conclusões desenhadas de dados apresentados neste artigo. O desempenho de um aplicativo de fluxo de trabalho composto é altamente dependente em como o fluxo de trabalho é implementado e como os diferentes componentes são integrados. Se deve abranger cada aplicativo para determinar as características de desempenho do aplicativo.
@@ -59,7 +59,7 @@ ms.locfileid: "74283228"
 
  Em WF4, XAML fornece uma experiência realmente declarativamente e permite-à definição inteira de fluxo de trabalho ser definida na marcação XML, referenciando atividades e digitar .NET de usar compilado. Isso foi difícil de fazer em WF3 com formato de XOML sem quebrar o personalizado code-behind de lógica. O novo XAML-Stack no .NET 4 tem um desempenho muito melhor na serialização/desserialização de artefatos de fluxo de trabalho e torna a programação declarativa mais atraente e sólida.
 
-### <a name="workflow-designer"></a>Designer de Fluxo de Trabalho
+### <a name="workflow-designer"></a>Designer de fluxo de trabalho
  Suporte de programação completamente declarativo para WF4 aplicar explicitamente um mais altos requisitos para desempenho de tempo de design para grandes fluxos de trabalho. O designer de fluxo de trabalho em WF4 tem a escalabilidade muito melhor para grandes fluxos de trabalho do que aquela para WF3. Com suporte a virtualização de interface do usuário, o designer pode facilmente carregar um grande fluxo de trabalho 1000 atividades em alguns segundos, quando é quase impossível carregar um fluxo de trabalho algumas cem atividades com o designer WF3.
 
 ## <a name="component-level-performance-comparisons"></a>Comparações de desempenho de nível por componente
@@ -166,7 +166,7 @@ O diagrama a seguir mostra o fluxo de trabalho de compensação básico. O traba
 
 ![Fluxos de trabalho de compensação básica do WF3 e WF4](./media/performance/basic-compensation-workflows-wf3-wf4.gif)
 
-### <a name="performance-test-results"></a>Resultados de testes de desempenho
+### <a name="performance-test-results"></a>Resultados de teste de desempenho
 
  ![Tabela mostrando dados de resultados de teste de desempenho](./media/performance/performance-test-data.gif)
 
@@ -201,7 +201,7 @@ O diagrama a seguir mostra o fluxo de trabalho de compensação básico. O traba
  Em um aplicativo de serviço de fluxo de trabalho do WCF, a latência para iniciar um novo fluxo de trabalho ou carregar um fluxo de trabalho existente é importante, pois ele pode ser bloqueado.  Essa situação de teste mede um host de WF3 XOML contra um host de WF4 XAMLX em um cenário típico.
 
 ##### <a name="environment-setup"></a>Configuração de ambiente
- ![Configuração do ambiente para latência e testes de rendimento](./media/performance/latency-throughput-environment-setup.gif)
+ ![Instalação de ambiente para testes de latência e taxa de transferência](./media/performance/latency-throughput-environment-setup.gif)
 
 ##### <a name="test-setup"></a>Configuração de teste
  No cenário, um computador cliente entra em contato com um serviço de fluxo de trabalho WCF usando a correlação baseada em contexto.  Correlação de contexto requer uma associação especial de contexto e usa um cabeçalho de contexto ou o cookie para relacionar mensagens ao fluxo de trabalho correto instância.  Tem um benefício de desempenho que a identificação de correlação está localizada no cabeçalho de mensagem para que o corpo da mensagem não precisa ser analisado.
@@ -218,9 +218,9 @@ O diagrama a seguir mostra o fluxo de trabalho de compensação básico. O traba
 
  ![Gráfico de colunas mostrando latência fria e passiva para os serviços de fluxo de trabalho do WCF usando WF3 e WF4](./media/performance/latency-results-graph.gif)
 
- No gráfico anterior, frio se refere ao caso em que não há um <xref:System.ServiceModel.WorkflowServiceHost> existente para o fluxo de trabalho específico.  Ou seja a latência fria é quando o fluxo de trabalho está sendo usado pela primeira vez e o XOML ou o XAML precisam ser compilados.  A latência morna é o tempo de criação de uma nova instância de fluxo de trabalho quando o tipo de fluxo de trabalho já foi criado.  A complexidade de fluxo de trabalho faz a diferença muito pequena em casos WF4 mas tem uma progressão linear em casos WF3.
+ No gráfico anterior, frio se refere ao caso em que não há um <xref:System.ServiceModel.WorkflowServiceHost> existente para o fluxo de trabalho específico.  Em outras palavras, latência fria é quando o fluxo de trabalho está sendo usado pela primeira vez e o XOML ou XAML precisa ser compilado.  Latência morna é o momento de criar uma nova instância de fluxo de trabalho quando o tipo de fluxo de trabalho já foi compilado.  A complexidade de fluxo de trabalho faz a diferença muito pequena em casos WF4 mas tem uma progressão linear em casos WF3.
 
-#### <a name="correlation-throughput"></a>Rendimento de correlação
+#### <a name="correlation-throughput"></a>Taxa de transferência de correlação
  WF4 apresenta um novo recurso base de conteudo correlação.  WF3 de contexto fornecido com apenas correlação.  A correlação baseada em contexto só pode ser feita em associações de canal WCF específicas.  A identificação do fluxo de trabalho é inserida no cabeçalho de mensagem para usar essas associações.  O tempo de execução WF3 poderia identificar apenas um fluxo de trabalho por sua ID.  Com a correlação baseada em conteúdo, o autor do fluxo de trabalho pode criar uma chave de correlação fora de uma parte relevante dos dados, como um número de conta ou uma ID de cliente.
 
  Correlação de contexto base tem uma vantagem de desempenho que a chave de correlação está localizada no cabeçalho de mensagem.  A chave pode ser lido de mensagem sem de- serialização/mensagem- copiar.  Em correlação conteudo base, a chave de correlação é armazenada no corpo da mensagem.  Uma expressão XPath é usada para localizar a chave.  O custo desse processamento adicional depende do tamanho de mensagem, profundidade de chave no corpo, e o número de chaves.  Este teste compara contexto e correlação conteudo base e também mostra degradação de desempenho ao usar várias chaves.
@@ -255,7 +255,7 @@ O diagrama a seguir mostra o fluxo de trabalho de compensação básico. O traba
 
  O número de atividades em um teste dado é determinado por profundidade e o número de atividades pela sequência.  A equação seguir calcula o número de atividades no teste WF4:
 
- ![Equação para calcular o número de atividades](./media/performance/number-activities-equation.gif)
+ ![Equação para computar número de atividades](./media/performance/number-activities-equation.gif)
 
  A contagem de atividade de teste WF3 pode ser computado com uma equação ligeiramente diferente devido a uma sequência extra:
 
@@ -311,7 +311,7 @@ O diagrama a seguir mostra o fluxo de trabalho de compensação básico. O traba
 
 A imagem a seguir mostra um fluxo de trabalho do WF3 com ReceiveActivity e um fluxo de trabalho do WF4 com o padrão de solicitação/resposta:
 
- ![Serviços de fluxo de trabalho em WF3 e WF4](./media/performance/workflow-receive-activity.gif)
+ ![Serviços de fluxo de trabalho no WF3 e WF4](./media/performance/workflow-receive-activity.gif)
 
  A tabela a seguir mostra o Delta no conjunto de trabalho entre uma única definição de fluxo de trabalhos e as definições de 1001:
 
@@ -433,7 +433,7 @@ public class Workflow1 : Activity
 
  Monitoramento da integridade tem um impacto de aproximadamente 3% em produção.  Os custos de perfil básico são aproximadamente 8%.
 
-## <a name="interop"></a>Interoperabilidade
+## <a name="interop"></a>Interop
  WF4 é quase uma reescrita completo de [!INCLUDE[wf1](../../../includes/wf1-md.md)] e portanto fluxos de trabalho WF3 e as atividades não são diretamente compatíveis com WF4.  Muitos clientes que adotaram Windows Workflow Foundation antecipadamente terão definições de fluxo de trabalho internas ou de terceiros e atividades personalizadas para WF3.  Uma maneira de fazer a transição para WF4 é usar a atividade de Interoperabilidade, que pode executar as atividades WF3 de dentro de um fluxo de trabalho WF4.  É recomendável que a atividade de <xref:System.Activities.Statements.Interop> seja usada somente quando necessário. Para obter mais informações sobre como migrar para o WF4, Confira as [diretrizes de migração do WF4](https://go.microsoft.com/fwlink/?LinkID=153313).
 
 ### <a name="environment-setup"></a>Configuração de ambiente
@@ -443,7 +443,7 @@ public class Workflow1 : Activity
  
 A tabela a seguir mostra os resultados da execução de um fluxo de trabalho que contém cinco atividades em uma sequência em várias configurações.
 
-|Teste|Produção (fluxos de trabalho/s)|
+|{1&gt;Testar&lt;1}|Produção (fluxos de trabalho/s)|
 |----------|-----------------------------------|
 |Sequência WF3 em runtime WF3|1,576|
 |Sequência WF3 em runtime WF4 usando Interoperabilidade|2,745|

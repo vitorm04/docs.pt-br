@@ -30,7 +30,7 @@ Constantes são uma maneira de usar nomes significativos no lugar de um valor qu
 |[Visão Geral de Constantes](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)|Os tópicos nesta seção descrevem as constantes e seus usos.|  
 |[Visão geral de Enumerações](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)|Os tópicos nesta seção descrevem as enumerações e seus usos.|  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
   
 |Termo|Definição|  
 |---|---|  

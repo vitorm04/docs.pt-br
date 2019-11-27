@@ -22,7 +22,7 @@ Esta seção da documentação ajuda você a começar o desenvolvimento de aplic
 
 [Compilação de uma biblioteca de classes com Visual Basic e com o .NET Core no Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md)
 
-## <a name="additional-information"></a>Informações adicionais
+## <a name="additional-information"></a>{1&gt;{2&gt;Informações adicionais&lt;2}&lt;1}
 
 - [Novidades do Visual Basic](whats-new.md)\
 Lista os novos recursos em cada uma das versões do Visual Basic .NET.
@@ -47,7 +47,7 @@ Fornece links para código de exemplo no Visual Basic.
 - [Instruções passo a passos](../../visual-basic/walkthroughs.md)\
 Fornece uma lista de páginas de Ajuda que demonstram aspectos da linguagem do Visual Basic.
 
-- [Feedback options for Visual Studio](/visualstudio/ide/feedback-options)\
+- [Opções de comentários para o Visual Studio](/visualstudio/ide/feedback-options)\
 Aborda como receber suporte e fornecer comentários.
 
 - [Visual Studio](/visualstudio/)\

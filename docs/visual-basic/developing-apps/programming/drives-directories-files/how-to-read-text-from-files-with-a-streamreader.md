@@ -24,7 +24,7 @@ O objeto `My.Computer.FileSystem` fornece métodos para abrir um <xref:System.IO
   
      [!code-vb[VbFileIORead#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#1)]  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
 
  O arquivo lido deve ser um arquivo de texto.  
   

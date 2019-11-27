@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446997"
 ---
 # <a name="importfile-method"></a>Método ImportFile
-Imports assemblies and unbound modules.  
+Importa assemblies e módulos desvinculados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,28 +39,28 @@ HRESULT ImportFile(
   
 ## <a name="parameters"></a>Parâmetros  
  `pszFilename`  
- Fully qualified name of file to be imported.  
+ Nome totalmente qualificado do arquivo a ser importado.  
   
  `pszTargetName`  
- Optional output file name that can be used to rename the file as it is linked into the assembly.  
+ Nome de arquivo de saída opcional que pode ser usado para renomear o arquivo, pois ele está vinculado ao assembly.  
   
  `fSmartImport`  
- If TRUE, ImportTypes is used, otherwise importing must be performed manually.  
+ Se for TRUE, os irporttypes serão usados; caso contrário, a importação deverá ser executada manualmente.  
   
  `pImportToken`  
- Pointer to token where a unique file ID will be stored. The file can be an assembly or a file.  
+ Ponteiro para o token em que uma ID de arquivo exclusiva será armazenada. O arquivo pode ser um assembly ou um arquivo.  
   
  `ppAssemblyScope`  
- Receives pointer to [IMetaDataAssemblyImport Interface](../metadata/imetadataassemblyimport-interface.md). Can be NULL if the file is not an assembly.  
+ Recebe o ponteiro para a [interface IMetaDataAssemblyImport](../metadata/imetadataassemblyimport-interface.md). Poderá ser NULL se o arquivo não for um assembly.  
   
  `pdwCountOfScopes`  
- Pointer to the count of files and/or scopes that have been imported.  
+ Ponteiro para a contagem de arquivos e/ou escopos que foram importados.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ Requer ALink. h  
   
 ## <a name="see-also"></a>Consulte também
 

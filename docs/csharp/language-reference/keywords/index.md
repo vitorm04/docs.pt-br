@@ -59,7 +59,7 @@ As palavras-chave são identificadores reservados predefinidos com significados 
 |[let](let-clause.md)|[nameof](../operators/nameof.md)|[on](on.md)|
 |[orderby](orderby-clause.md)|[parcial (tipo)](partial-type.md)|[partial (método)](partial-method.md)|
 |[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
-|[unmanaged (generic type constraint)](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
+|[não gerenciado (restrição de tipo genérico)](where-generic-type-constraint.md)|[value](value.md)|[var](var.md)|
 |[when (condição de filtro)](when.md)|[where (restrição de tipo genérico)](where-generic-type-constraint.md)|[where (cláusula de consulta)](where-clause.md)|
 |[yield](yield.md)| | |
   

@@ -12,13 +12,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74430488"
 ---
-# <a name="gccpugroup-element"></a>\<GCCpuGroup> Element
+# <a name="gccpugroup-element"></a>\<elemento de > GCCpuGroup
 
 Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
 
 [ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup>**
+> &nbsp;de [ **\<de tempo de execução**](runtime-element.md) do &nbsp;\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<GCCpuGroup >**
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,7 +29,7 @@ Especifica se a coleta de lixo oferece suporte a vários grupos de CPU.
 
 ## <a name="attributes-and-elements"></a>Atributos e elementos
 
-As seções a seguir descrevem atributos, elementos filho e elementos pai.
+As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.
 
 ### <a name="attributes"></a>Atributos
 
@@ -41,14 +41,14 @@ As seções a seguir descrevem atributos, elementos filho e elementos pai.
 
 |Valor|Descrição|
 |-----------|-----------------|
-|`false`|Garbage collection does not support multiple CPU groups. Esse é o padrão.|
-|`true`|Garbage collection supports multiple CPU groups, if server garbage collection is enabled.|
+|`false`|A coleta de lixo não dá suporte a vários grupos de CPU. Esse é o padrão.|
+|`true`|A coleta de lixo oferece suporte a vários grupos de CPU, se a coleta de lixo do servidor estiver habilitada.|
 
 ### <a name="child-elements"></a>Elementos filho
 
-nenhuma.
+None.
 
-### <a name="parent-elements"></a>Elementos pai
+### <a name="parent-elements"></a>Elementos Pai
 
 |Elemento|Descrição|
 |-------------|-----------------|
@@ -57,14 +57,14 @@ nenhuma.
 
 ## <a name="remarks"></a>Comentários
 
-When a computer has multiple CPU groups and server garbage collection is enabled (see the [\<gcServer>](gcserver-element.md) element), enabling this element extends garbage collection across all CPU groups and takes all cores into account when creating and balancing heaps.
+Quando um computador tem vários grupos de CPU e a coleta de lixo do servidor está habilitada (consulte o elemento [\<gcServer >](gcserver-element.md) ), a habilitação desse elemento estende a coleta de lixo em todos os grupos de CPU e leva todos os núcleos em conta ao criar e balancear heaps.
 
 > [!NOTE]
-> This element applies only to garbage collection threads. To enable the runtime to distribute user threads across all CPU groups, you must also enable the [\<Thread_UseAllCpuGroups>](thread-useallcpugroups-element.md) element.
+> Este elemento aplica-se somente a threads de coleta de lixo. Para habilitar o tempo de execução para distribuir threads de usuário em todos os grupos de CPU, você também deve habilitar o elemento [\<Thread_UseAllCpuGroups >](thread-useallcpugroups-element.md) .
 
 ## <a name="example"></a>Exemplo
 
-The following example shows how to enable garbage collection for multiple CPU groups.
+O exemplo a seguir mostra como habilitar a coleta de lixo para vários grupos de CPU.
 
 ```xml
 <configuration>
@@ -79,5 +79,5 @@ The following example shows how to enable garbage collection for multiple CPU gr
 
 - [Esquema de configurações do runtime](index.md)
 - [Esquema de arquivos de configuração](../index.md)
-- [To disable concurrent garbage collection](gcconcurrent-element.md#to-disable-background-garbage-collection)
+- [Para desabilitar a coleta de lixo simultânea](gcconcurrent-element.md#to-disable-background-garbage-collection)
 - [Coleta de lixo de estação de trabalho ou de servidor](../../../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)

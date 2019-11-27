@@ -16,7 +16,7 @@ ms.locfileid: "74353621"
 
 Estas instruções passo a passo demonstram como criar um ouvinte de log personalizado e configurá-lo para ouvir a saída do objeto `My.Application.Log`.
 
-## <a name="getting-started"></a>Guia de Introdução
+## <a name="getting-started"></a>Introdução
 
 Ouvintes de log devem herdar da classe <xref:System.Diagnostics.TraceListener>.
 
@@ -79,7 +79,7 @@ Com o nome forte, você pode adicionar o ouvinte à coleção de ouvintes de log
 
 1. Clique com o botão direito do mouse em app.config no **Gerenciador de Soluções** e escolha **Abrir**.
 
-     \- ou -
+     - ou -
 
      Se houver um arquivo app.config:
 

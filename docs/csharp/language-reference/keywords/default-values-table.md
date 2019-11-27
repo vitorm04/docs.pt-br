@@ -17,7 +17,7 @@ ms.locfileid: "74428526"
 
 A seguinte tabela mostra os valores padrão de tipos C#:
 
-|Digite|Valor padrão|
+|Tipo|Valor padrão|
 |---------|------------------|
 |Qualquer tipo de referência|`null`|
 |Qualquer [tipo numérico integral interno](../builtin-types/integral-numeric-types.md)|0 (zero)|
@@ -26,7 +26,7 @@ A seguinte tabela mostra os valores padrão de tipos C#:
 |[char](../builtin-types/char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|O valor é produzido pela expressão `(E)0`, em que `E` é o identificador de enumeração.|
 |[struct](struct.md)|O valor produzido pela configuração de todos os campos tipo-valor para seus valores padrão e todos os campos tipo-referência para `null`.|
-|Qualquer [tipo de valor que permite valor nulo](../builtin-types/nullable-value-types.md)|Uma instância para a qual a propriedade <xref:System.Nullable%601.HasValue%2A> é `false` e a propriedade <xref:System.Nullable%601.Value%2A> não está definida. That default value is also known as the *null* value of a nullable value type.|
+|Qualquer [tipo de valor que permite valor nulo](../builtin-types/nullable-value-types.md)|Uma instância para a qual a propriedade <xref:System.Nullable%601.HasValue%2A> é `false` e a propriedade <xref:System.Nullable%601.Value%2A> não está definida. Esse valor padrão também é conhecido como o valor *nulo* de um tipo de valor anulável.|
 
 Use o [operador padrão](../operators/default.md) para produzir o valor padrão de um tipo, como mostra o exemplo a seguir:
 
@@ -47,7 +47,7 @@ var n = new System.Numerics.Complex();
 Console.WriteLine(n);  // output: (0, 0)
 ```
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 

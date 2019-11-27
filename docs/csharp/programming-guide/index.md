@@ -48,7 +48,7 @@ Esta seção fornece informações detalhadas sobre os principais recursos da li
   
  [Cadeias de Caracteres](./strings/index.md)  
   
- {1&gt;Propriedades&lt;1}  
+ [Propriedades](./classes-and-structs/properties.md)  
   
  [Indexadores](./indexers/index.md)  
   

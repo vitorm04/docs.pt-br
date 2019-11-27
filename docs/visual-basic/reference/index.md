@@ -13,27 +13,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352873"
 ---
 # <a name="reference-visual-basic"></a>Referência (Visual Basic)
-This section provides links to reference information about various aspects of Visual Basic programming.  
+Esta seção fornece links para informações de referência sobre vários aspectos da programação de Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Referência da linguagem Visual Basic](../../visual-basic/language-reference/index.md)  
- Provides reference information for various aspects of the Visual Basic language.  
+ Fornece informações de referência para vários aspectos do idioma do Visual Basic.  
   
  [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
  Fornece links para informações sobre o compilador de linha de comando, que fornece uma alternativa para compilar programas de IDE do Visual Studio.  
   
  [Informações de Referência do .NET Framework](../../visual-basic/reference/net-framework-reference-information.md)  
- Provides links to information on working with the .NET Framework class library.  
+ Fornece links para informações sobre como trabalhar com a biblioteca de classes de .NET Framework.  
   
  [Especificação da linguagem do Visual Basic](../../visual-basic/reference/language-specification/index.md)  
- Provides links to the complete Visual Basic language specification, which contains detailed information on all aspects of the language.  
+ Fornece links para a especificação de idioma completo do Visual Basic, que contém informações detalhadas sobre todos os aspectos do idioma.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Elementos gerais de interface do usuário (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Contains topics for dialog boxes and windows used in Visual Studio.  
+ Contém tópicos para caixas de diálogo e janelas usadas no Visual Studio.  
   
  [Ferramentas XML no Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Provides links to topics on various XML tools available in Visual Studio.  
+ Fornece links para tópicos sobre várias ferramentas XML disponíveis no Visual Studio.  
   
  [Referência de automação e extensibilidade](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
- Provides links to topics covering automation and extensibility in Visual Studio, for both shared and language-specific components.
+ Fornece links para tópicos que abrangem automação e extensibilidade no Visual Studio, para componentes compartilhados e específicos de idioma.

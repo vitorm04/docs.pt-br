@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442815"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>Enumeração CorMethodSemanticsAttr
-Contains values that describe the relationship between a method and an associated property or event.  
+Contém valores que descrevem a relação entre um método e uma propriedade ou evento associado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,19 +41,19 @@ typedef enum CorMethodSemanticsAttr {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`msSetter`|Specifies that the method is a `set` accessor for a property.|  
-|`msGetter`|Specifies that the method is a `get` accessor for a property.|  
-|`msOther`|Specifies that the method has a relationship to a property or an event other than those defined here.|  
-|`msAddOn`|Specifies that the method adds handler methods for an event.|  
-|`msRemoveOn`|Specifies that the method removes handler methods for an event.|  
-|`msFire`|Specifies that the method raises an event.|  
+|`msSetter`|Especifica que o método é um acessador `set` para uma propriedade.|  
+|`msGetter`|Especifica que o método é um acessador `get` para uma propriedade.|  
+|`msOther`|Especifica que o método tem uma relação com uma propriedade ou um evento diferente daqueles definidos aqui.|  
+|`msAddOn`|Especifica que o método adiciona métodos de manipulador para um evento.|  
+|`msRemoveOn`|Especifica que o método Remove métodos de manipulador para um evento.|  
+|`msFire`|Especifica que o método gera um evento.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

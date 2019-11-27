@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446545"
 ---
 # <a name="createalink-function"></a>Função CreateALink
-Creates an instance of the Assembly Linker and sets a pointer to the specified interface.  
+Cria uma instância do vinculador de assembly e define um ponteiro para a interface especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,11 +38,11 @@ HRESULT CreateALink (
   
 |Parâmetro|Descrição|  
 |---------------|-----------------|  
-|`riid`|The physical name of one of the Assembly Linker interfaces.|  
-|`ppInterface`|The location that on successful completion contains a pointer to the `riid` interface.|  
+|`riid`|O nome físico de uma das interfaces do vinculador de assembly.|  
+|`ppInterface`|O local em que a conclusão bem-sucedida contém um ponteiro para a interface `riid`.|  
   
-## <a name="requirements"></a>Requisitos  
- **Library**: alink.dll  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Biblioteca**: Alink. dll  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -37,7 +37,7 @@ O método <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> pode ser us
   
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
 
  As seguintes condições podem lançar uma exceção:  
   

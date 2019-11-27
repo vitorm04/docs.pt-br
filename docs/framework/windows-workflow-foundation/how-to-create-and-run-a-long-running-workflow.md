@@ -1,5 +1,5 @@
 ---
-title: How to create and run a long-running workflow
+title: Como criar e executar um fluxo de trabalho de execução longa
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,99 +12,99 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204888"
 ---
-# <a name="how-to-create-and-run-a-long-running-workflow"></a>How to create and run a long-running workflow
+# <a name="how-to-create-and-run-a-long-running-workflow"></a>Como criar e executar um fluxo de trabalho de execução longa
 
-One of the central features of Windows Workflow Foundation (WF) is the runtime’s ability to persist and unload idle workflows to a database. The steps in [How to: Run a Workflow](how-to-run-a-workflow.md) demonstrated the basics of workflow hosting using a console application. Foram mostrados exemplos de iniciação de fluxos de trabalho, manipuladores do ciclo de vida de fluxo de trabalho e retomada de indicadores. Para demonstrar efetivamente a persistência do fluxo de trabalho, um host de fluxo de trabalho mais complexo é necessário que dá suporte a início e retomada de várias instâncias de fluxo de trabalho. Esta etapa no tutorial demonstra como criar um aplicativo de host do Windows Form que dê suporte ao início e à retomada de várias instâncias de fluxo de trabalho, persistência de fluxo de trabalho e fornece uma base para os recursos avançados como o rastreamento e o controle de versão que são demonstrados em etapas tutoriais subsequentes.
-
-> [!NOTE]
-> This tutorial step and the subsequent steps use all three workflow types from [How to: Create a Workflow](how-to-create-a-workflow.md). If you did not complete all three types you can download a completed version of the steps from [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+Um dos recursos centrais do Windows Workflow Foundation (WF) é a capacidade do tempo de execução de persistir e descarregar fluxos de trabalho ociosos em um banco de dados. As etapas em [como executar um fluxo de trabalho](how-to-run-a-workflow.md) demonstraram os conceitos básicos da hospedagem do fluxo de trabalho usando um aplicativo de console. Foram mostrados exemplos de iniciação de fluxos de trabalho, manipuladores do ciclo de vida de fluxo de trabalho e retomada de indicadores. Para demonstrar efetivamente a persistência do fluxo de trabalho, um host de fluxo de trabalho mais complexo é necessário que dá suporte a início e retomada de várias instâncias de fluxo de trabalho. Esta etapa no tutorial demonstra como criar um aplicativo de host do Windows Form que dê suporte ao início e à retomada de várias instâncias de fluxo de trabalho, persistência de fluxo de trabalho e fornece uma base para os recursos avançados como o rastreamento e o controle de versão que são demonstrados em etapas tutoriais subsequentes.
 
 > [!NOTE]
-> To download a completed version or view a video walkthrough of the tutorial, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+> Esta etapa do tutorial e as etapas subsequentes usam todos os três tipos de fluxo de trabalho de [como: criar um fluxo de trabalho](how-to-create-a-workflow.md). Se você não tiver concluído todos os três tipos, poderá baixar uma versão completa das etapas de [Windows Workflow Foundation (WF45) – introdução tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
+
+> [!NOTE]
+> Para fazer o download de uma versão completa ou exibir um vídeo com o tutorial, consulte [Windows Workflow Foundation (WF45) – introdução tutorial](https://go.microsoft.com/fwlink/?LinkID=248976).
 
 ## <a name="to-create-the-persistence-database"></a>Para criar o banco de dados de persistência
 
-1. Open SQL Server Management Studio and connect to the local server, for example **.\SQLEXPRESS**. Right-click the **Databases** node on the local server, and select **New Database**. Name the new database **WF45GettingStartedTutorial**, accept all other values, and select **OK**.
+1. Abra SQL Server Management Studio e conecte-se ao servidor local, por exemplo, **.\sqlexpress**. Clique com o botão direito do mouse no nó **bancos** de dados no servidor local e selecione **novo Database**. Nomeie o novo banco de dados **WF45GettingStartedTutorial**, aceite todos os outros valores e selecione **OK**.
 
     > [!NOTE]
-    > Ensure that you have **Create Database** permission on the local server before creating the database.
+    > Verifique se você tem a permissão **CREATE DATABASE** no servidor local antes de criar o banco de dados.
 
-2. Choose **Open**, **File** from the **File** menu. Browse to the following folder: *C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en*
+2. Escolha **abrir**, **arquivo** no menu **arquivo** . Navegue até a seguinte pasta: *C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en*
 
-    Select the following two files and click **Open**.
+    Selecione os dois arquivos a seguir e clique em **abrir**.
 
-    - *SqlWorkflowInstanceStoreLogic.sql*
+    - *SqlWorkflowInstanceStoreLogic. SQL*
 
-    - *SqlWorkflowInstanceStoreSchema.sql*
+    - *SqlWorkflowInstanceStoreSchema. SQL*
 
-3. Choose **SqlWorkflowInstanceStoreSchema.sql** from the **Window** menu. Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.
+3. Escolha **SqlWorkflowInstanceStoreSchema. SQL** no menu **janela** . Verifique se **WF45GettingStartedTutorial** está selecionado na lista suspensa **bancos de dados disponíveis** e escolha **executar** no menu **consulta** .
 
-4. Choose **SqlWorkflowInstanceStoreLogic.sql** from the **Window** menu. Ensure that **WF45GettingStartedTutorial** is selected in the **Available Databases** drop-down and choose **Execute** from the **Query** menu.
+4. Escolha **SqlWorkflowInstanceStoreLogic. SQL** no menu **janela** . Verifique se **WF45GettingStartedTutorial** está selecionado na lista suspensa **bancos de dados disponíveis** e escolha **executar** no menu **consulta** .
 
     > [!WARNING]
     > É importante executar as duas etapas anteriores na ordem correta. Se as consultas forem executadas fora de ordem, ocorrerão erros e o banco de dados de persistência não estará configurado corretamente.
 
 ## <a name="to-add-the-reference-to-the-durableinstancing-assemblies"></a>Para adicionar a referência aos assemblies do DurableInstancing
 
-1. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and select **Add Reference**.
+1. Clique com o botão direito do mouse em **NumberGuessWorkflowHost** em **Gerenciador de soluções** e selecione **Adicionar referência**.
 
-2. Select **Assemblies** from the **Add Reference** list, and type `DurableInstancing` into the **Search Assemblies** box. Isso filtra os assemblies e facilita a seleção das referências desejadas.
+2. Selecione **assemblies** na lista **Adicionar referência** e digite `DurableInstancing` na caixa **Pesquisar assemblies** . Isso filtra os assemblies e facilita a seleção das referências desejadas.
 
-3. Check the checkbox beside **System.Activities.DurableInstancing** and **System.Runtime.DurableInstancing** from the **Search Results** list, and click **OK**.
+3. Marque a caixa de seleção ao lado de **System. Activities. DurableInstancing** e **System. Runtime. DurableInstancing** na lista de **resultados da pesquisa** e clique em **OK**.
 
 ## <a name="to-create-the-workflow-host-form"></a>Para criar o formulário de host de fluxo de trabalho
 
 > [!NOTE]
-> As etapas neste procedimento descrevem como adicionar e configurar manualmente o formulário. Se for desejar, você poderá baixar os arquivos da solução para o tutorial e adicionar o formulário concluído ao projeto. To download the tutorial files, see [Windows Workflow Foundation (WF45) - Getting Started Tutorial](https://go.microsoft.com/fwlink/?LinkID=248976). Once the files are downloaded, right-click **NumberGuessWorkflowHost** and choose **Add Reference**. Add a reference to **System.Windows.Forms** and **System.Drawing**. These references are added automatically if you add a new form from the **Add**, **New Item** menu, but must be added manually when importing a form. Once the references are added, right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Existing Item**. Browse to the `Form` folder in the project files, select **WorkflowHostForm.cs** (or **WorkflowHostForm.vb**), and click **Add**. If you choose to import the form, then you can skip down to the next section, [To add the properties and helper methods of the form](#to-add-the-properties-and-helper-methods-of-the-form).
+> As etapas neste procedimento descrevem como adicionar e configurar manualmente o formulário. Se for desejar, você poderá baixar os arquivos da solução para o tutorial e adicionar o formulário concluído ao projeto. Para baixar os arquivos do tutorial, consulte [Windows Workflow Foundation (WF45) – introdução tutorial](https://go.microsoft.com/fwlink/?LinkID=248976). Depois que os arquivos forem baixados, clique com o botão direito do mouse em **NumberGuessWorkflowHost** e escolha **Adicionar referência**. Adicione uma referência a **System. Windows. Forms** e **System. Drawing**. Essas referências são adicionadas automaticamente se você adicionar um novo formulário a partir do menu **Adicionar**, **novo item** , mas precisar ser adicionado manualmente ao importar um formulário. Depois que as referências forem adicionadas, clique com o botão direito do mouse em **NumberGuessWorkflowHost** em **Gerenciador de soluções** e escolha **Adicionar**, **Item existente**. Navegue até a pasta `Form` nos arquivos de projeto, selecione **WorkflowHostForm.cs** (ou **WorkflowHostForm. vb**) e clique em **Adicionar**. Se você optar por importar o formulário, poderá pular para a próxima seção, [para adicionar as propriedades e os métodos auxiliares do formulário](#to-add-the-properties-and-helper-methods-of-the-form).
 
-1. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **New Item**.
+1. Clique com o botão direito do mouse em **NumberGuessWorkflowHost** em **Gerenciador de soluções** e escolha **Adicionar**, **novo item**.
 
-2. In the **Installed** templates list, choose **Windows Form**, type `WorkflowHostForm` in the **Name** box, and click **Add**.
+2. Na lista modelos **instalados** , escolha **Windows Form**, digite `WorkflowHostForm` na caixa **nome** e clique em **Adicionar**.
 
 3. Configure as propriedades a seguir no formulário.
 
-    |propriedade|Valor|
+    |Propriedade|Valor|
     |--------------|-----------|
     |FormBorderStyle|FixedSingle|
     |MaximizeBox|False|
-    |Tamanho|400, 420|
+    |Size|400, 420|
 
 4. Adicione os seguintes controles ao formulário na ordem especificada e configure as propriedades como direcionadas.
 
-    |Controle|Property: Value|
+    |Controle|Propriedade: valor|
     |-------------|---------------------|
-    |**Button**|Name: NewGame<br /><br /> Location: 13, 13<br /><br /> Size: 75, 23<br /><br /> Text: New Game|
-    |**Rótulo**|Location: 94, 18<br /><br /> Text: Guess a number from 1 to|
-    |**ComboBox**|Name: NumberRange<br /><br /> DropDownStyle: DropDownList<br /><br /> Items: 10, 100, 1000<br /><br /> Location: 228, 12<br /><br /> Size: 143, 21|
-    |**Rótulo**|Location: 13, 43<br /><br /> Text: Workflow type|
-    |**ComboBox**|Name: WorkflowType<br /><br /> DropDownStyle: DropDownList<br /><br /> Items: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Location: 94, 40<br /><br /> Size: 277, 21|
-    |**Rótulo**|Name: WorkflowVersion<br /><br /> Location: 13, 362<br /><br /> Text: Workflow version|
-    |**GroupBox**|Location: 13, 67<br /><br /> Size: 358, 287<br /><br /> Text: Game|
+    |**Button**|Nome: NewGame<br /><br /> Local: 13, 13<br /><br /> Tamanho: 75, 23<br /><br /> Texto: novo jogo|
+    |**Rótulo**|Local: 94, 18<br /><br /> Texto: Adivinhe um número de 1 a|
+    |**ComboBox**|Nome: NumberRange<br /><br /> DropDownstyle: DropDownList<br /><br /> Itens: 10, 100, 1000<br /><br /> Local: 228, 12<br /><br /> Tamanho: 143, 21|
+    |**Rótulo**|Local: 13, 43<br /><br /> Texto: tipo de fluxo de trabalho|
+    |**ComboBox**|Nome: fluxo de trabalho<br /><br /> DropDownstyle: DropDownList<br /><br /> Itens: StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow, SequentialNumberGuessWorkflow<br /><br /> Local: 94, 40<br /><br /> Tamanho: 277, 21|
+    |**Rótulo**|Nome: WorkflowVersion<br /><br /> Local: 13, 362<br /><br /> Texto: versão do fluxo de trabalho|
+    |**GroupBox**|Local: 13, 67<br /><br /> Tamanho: 358, 287<br /><br /> Texto: jogo|
 
     > [!NOTE]
-    > When adding the following controls, put them into the GroupBox.
+    > Ao adicionar os seguintes controles, coloque-os na GroupBox.
 
-    |Controle|Property: Value|
+    |Controle|Propriedade: valor|
     |-------------|---------------------|
-    |**Rótulo**|Location: 7, 20<br /><br /> Text: Workflow Instance Id|
-    |**ComboBox**|Name: InstanceId<br /><br /> DropDownStyle: DropDownList<br /><br /> Location: 121, 17<br /><br /> Size: 227, 21|
-    |**Rótulo**|Location: 7, 47<br /><br /> Text: Guess|
-    |**TextBox**|Name: Guess<br /><br /> Location: 50, 44<br /><br /> Size: 65, 20|
-    |**Button**|Name: EnterGuess<br /><br /> Location: 121, 42<br /><br /> Size: 75, 23<br /><br /> Text: Enter Guess|
-    |**Button**|Name: QuitGame<br /><br /> Location: 274, 42<br /><br /> Size: 75, 23<br /><br /> Text: Quit|
-    |**TextBox**|Name: WorkflowStatus<br /><br /> Location: 10, 73<br /><br /> Multiline: True<br /><br /> ReadOnly: True<br /><br /> ScrollBars: Vertical<br /><br /> Size: 338, 208|
+    |**Rótulo**|Local: 7, 20<br /><br /> Texto: ID da instância do fluxo de trabalho|
+    |**ComboBox**|Nome: InstanceId<br /><br /> DropDownstyle: DropDownList<br /><br /> Local: 121, 17<br /><br /> Tamanho: 227, 21|
+    |**Rótulo**|Local: 7, 47<br /><br /> Texto: estimativa|
+    |**TextBox**|Nome: palpite<br /><br /> Local: 50, 44<br /><br /> Tamanho: 65, 20|
+    |**Button**|Nome: EnterGuess<br /><br /> Local: 121, 42<br /><br /> Tamanho: 75, 23<br /><br /> Texto: Insira uma estimativa|
+    |**Button**|Nome: QuitGame<br /><br /> Local: 274, 42<br /><br /> Tamanho: 75, 23<br /><br /> Texto: sair|
+    |**TextBox**|Nome: WorkflowStatus<br /><br /> Local: 10, 73<br /><br /> Multiline: true<br /><br /> ReadOnly: verdadeiro<br /><br /> Barras de rolagem: vertical<br /><br /> Tamanho: 338, 208|
 
-5. Set the **AcceptButton** property of the form to **EnterGuess**.
+5. Defina a propriedade **AcceptButton** do formulário como **EnterGuess**.
 
  O exemplo a seguir ilustra o formato concluído.
 
- ![Screenshot of a Windows Workflow Foundation Workflow Host Form.](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)
+ ![Captura de tela de um formulário de host Windows Workflow Foundation fluxo de trabalho.](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)
 
 ## <a name="to-add-the-properties-and-helper-methods-of-the-form"></a>Para adicionar as propriedades e os métodos auxiliares do formulário
 
 As etapas nesta seção adicionam propriedades e métodos auxiliares para a classe de formulário que configura a interface de usuário do formulário para dar suporte à execução e à retomada de fluxos de trabalho de palpite de número.
 
-1. Right-click **WorkflowHostForm** in **Solution Explorer** and choose **View Code**.
+1. Clique com o botão direito do mouse em **WorkflowHostForm** em **Gerenciador de soluções** e escolha **Exibir código**.
 
 2. Adicione as seguintes instruções `using` (ou `Imports`) na parte superior do arquivo com as outras instruções `using` (ou `Imports`).
 
@@ -124,7 +124,7 @@ As etapas nesta seção adicionam propriedades e métodos auxiliares para a clas
     using System.Windows.Forms;
     ```
 
-3. Add the following member declarations to the **WorkflowHostForm** class.
+3. Adicione as seguintes declarações de membro à classe **WorkflowHostForm** .
 
     ```vb
     Const connectionString = "Server=.\SQLEXPRESS;Initial Catalog=WF45GettingStartedTutorial;Integrated Security=SSPI"
@@ -165,9 +165,9 @@ As etapas nesta seção adicionam propriedades e métodos auxiliares para a clas
     }
     ```
 
-    The `InstanceId` combo box displays a list of persisted workflow instance ids, and the `WorkflowInstanceId` property returns the currently selected workflow.
+    A caixa de combinação `InstanceId` exibe uma lista de IDs de instância de fluxo de trabalho persistente e a propriedade `WorkflowInstanceId` retorna o fluxo de trabalho selecionado no momento.
 
-5. Adicione um manipulador para o evento `Load` do formulário. To add the handler, switch to **Design View** for the form, click the **Events** icon at the top of the **Properties** window, and double-click **Load**.
+5. Adicione um manipulador para o evento `Load` do formulário. Para adicionar o manipulador, alterne para o **modo de exibição de design** do formulário, clique no ícone **eventos** na parte superior da janela **Propriedades** e clique duas vezes em **carregar**.
 
     ```vb
     Private Sub WorkflowHostForm_Load(sender As Object, e As EventArgs) Handles Me.Load
@@ -212,7 +212,7 @@ As etapas nesta seção adicionam propriedades e métodos auxiliares para a clas
 
     Quando o formulário carrega, o `SqlWorkflowInstanceStore` é configurado, as caixas de combinação de intervalo e tipo de fluxo de trabalho são definidas com valores padrão, as instâncias de fluxo de trabalho persistidas são adicionadas à caixa de combinação `InstanceId`.
 
-7. Adicione um manipulador `SelectedIndexChanged` para `InstanceId`. To add the handler, switch to **Design View** for the form, select the `InstanceId` combo box, click the **Events** icon at the top of the **Properties** window, and double-click **SelectedIndexChanged**.
+7. Adicione um manipulador `SelectedIndexChanged` para `InstanceId`. Para adicionar o manipulador, alterne para o **modo de exibição de design** do formulário, marque a caixa de combinação `InstanceId`, clique no ícone **eventos** na parte superior da janela **Propriedades** e clique duas vezes em **SelectedIndexChanged**.
 
     ```vb
     Private Sub InstanceId_SelectedIndexChanged(sender As Object, e As EventArgs) Handles InstanceId.SelectedIndexChanged
@@ -321,7 +321,7 @@ As etapas nesta seção adicionam propriedades e métodos auxiliares para a clas
     }
     ```
 
-    `ListPersistedWorkflows` consulta o repositório de instâncias em busca de instâncias de fluxo de trabalho persistidas, e adiciona as ids de instância à caixa de combinação `cboInstanceId`.
+    `ListPersistedWorkflows` consulta o repositório de instância para instâncias de fluxo de trabalho persistentes e adiciona as IDs de instância à caixa de combinação `cboInstanceId`.
 
 10. Adicione o seguinte método `UpdateStatus` e o delegado correspondente à classe de formulário. Este método atualiza a janela de status no formulário com o status do fluxo de trabalho em execução no momento.
 
@@ -370,7 +370,7 @@ As etapas nesta seção adicionam propriedades e métodos auxiliares para a clas
     }
     ```
 
-11. Adicione o seguinte método `GameOver` e o delegado correspondente à classe de formulário. When a workflow completes, this method updates the form UI by removing the instance id of the completed workflow from the **InstanceId** combo box.
+11. Adicione o seguinte método `GameOver` e o delegado correspondente à classe de formulário. Quando um fluxo de trabalho é concluído, esse método atualiza a interface do usuário do formulário removendo a ID da instância do fluxo de trabalho concluído da caixa de combinação **InstanceId** .
 
     ```vb
     Private Delegate Sub GameOverDelegate()
@@ -432,7 +432,7 @@ As etapas nesta seção adicionam propriedades e métodos auxiliares para a clas
     wfApp.InstanceStore = store;
     ```
 
-3. Em seguida, crie uma instância `StringWriter` e adicione-a à coleção de `Extensions` do `WorkflowApplication`. When a `StringWriter` is added to the extensions it captures all `WriteLine` activity output. Quando o fluxo de trabalho fica ocioso, a saída de `WriteLine` pode ser extraída de `StringWriter` e exibida no formulário.
+3. Em seguida, crie uma instância `StringWriter` e adicione-a à coleção de `Extensions` do `WorkflowApplication`. Quando um `StringWriter` é adicionado às extensões, ele captura todas as `WriteLine` saída da atividade. Quando o fluxo de trabalho fica ocioso, a saída de `WriteLine` pode ser extraída de `StringWriter` e exibida no formulário.
 
     ```vb
     ' Add a StringWriter to the extensions. This captures the output
@@ -542,7 +542,7 @@ As etapas nesta seção adicionam propriedades e métodos auxiliares para a clas
     };
     ```
 
-    A enumeração <xref:System.Activities.PersistableIdleAction> tem três valores: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> e <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> faz com o fluxo de trabalho persistir, mas não faz o fluxo de trabalho descarregar. <xref:System.Activities.PersistableIdleAction.Unload> faz o fluxo de trabalho persistir e ser descarregado.
+    A enumeração <xref:System.Activities.PersistableIdleAction> tem três valores: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist> e <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> faz com que o fluxo de trabalho persista, mas não faz com que o fluxo de trabalho seja descarregado. <xref:System.Activities.PersistableIdleAction.Unload> faz com que o fluxo de trabalho persista e seja descarregado.
 
     O exemplo a seguir é o método `ConfigureWorkflowApplication` concluído.
 
@@ -649,9 +649,9 @@ As etapas nesta seção adicionam propriedades e métodos auxiliares para a clas
 
 ## <a name="to-enable-starting-and-resuming-multiple-workflow-types"></a>Para habilitar o início e a retomada de vários tipos de fluxo de trabalho
 
-Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a definição de fluxo de trabalho. Neste tutorial, há três tipos de fluxo de trabalho e as etapas tutoriais subsequentes trazem várias versões desses tipos. `WorkflowIdentity` fornece uma maneira de um aplicativo de host associar informações de identificação a uma instância do fluxo de trabalho persistida. As etapas nesta seção demonstram como criar uma classe de utilitário para ajudar com o mapeamento da identidade de fluxo de trabalho de uma instância do fluxo de trabalho persistida para a definição do fluxo de trabalho correspondente. For more information about `WorkflowIdentity` and versioning, see [Using WorkflowIdentity and Versioning](using-workflowidentity-and-versioning.md).
+Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a definição de fluxo de trabalho. Neste tutorial, há três tipos de fluxo de trabalho e as etapas tutoriais subsequentes trazem várias versões desses tipos. `WorkflowIdentity` fornece uma maneira para um aplicativo host associar informações de identificação a uma instância de fluxo de trabalho persistente. As etapas nesta seção demonstram como criar uma classe de utilitário para ajudar com o mapeamento da identidade de fluxo de trabalho de uma instância do fluxo de trabalho persistida para a definição do fluxo de trabalho correspondente. Para obter mais informações sobre `WorkflowIdentity` e controle de versão, consulte [usando a WorkflowIdentity e o controle de versão](using-workflowidentity-and-versioning.md).
 
-1. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Add**, **Class**. Type `WorkflowVersionMap` into the **Name** box and click **Add**.
+1. Clique com o botão direito do mouse em **NumberGuessWorkflowHost** em **Gerenciador de soluções** e escolha **Adicionar**, **classe**. Digite `WorkflowVersionMap` na caixa **nome** e clique em **Adicionar**.
 
 2. Adicione as seguintes instruções `using` ou `Imports` na parte superior do arquivo com as outras instruções `using` ou `Imports`.
 
@@ -763,11 +763,11 @@ Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a defi
     }
     ```
 
-    O `WorkflowVersionMap` contém três identidades de fluxo de trabalho que mapeiam para as três definições de fluxo de trabalho deste tutorial e é usado nas seções a seguir quando os fluxos de trabalho são iniciados e retomados.
+    `WorkflowVersionMap` contém três identidades de fluxo de trabalho que mapeiam para as três definições de fluxo de trabalho deste tutorial e são usadas nas seções a seguir quando os fluxos de trabalho são iniciados e retomados.
 
 ## <a name="to-start-a-new-workflow"></a>Para iniciar um novo fluxo de trabalho
 
-1. Adicione um manipulador `Click` para `NewGame`. To add the handler, switch to **Design View** for the form, and double-click `NewGame`. Um manipulador `NewGame_Click` é adicionado e a exibição alterna para a exibição do código para o formulário. Sempre que o usuário clicar nesse botão, um novo fluxo de trabalho será iniciado.
+1. Adicione um manipulador `Click` para `NewGame`. Para adicionar o manipulador, alterne para o **modo de exibição de design** do formulário e clique duas vezes em `NewGame`. Um manipulador `NewGame_Click` é adicionado e a exibição alterna para a exibição do código para o formulário. Sempre que o usuário clicar nesse botão, um novo fluxo de trabalho será iniciado.
 
     ```vb
     Private Sub NewGame_Click(sender As Object, e As EventArgs) Handles NewGame.Click
@@ -962,7 +962,7 @@ Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a defi
 
 ## <a name="to-resume-a-workflow"></a>Para retomar um fluxo de trabalho
 
-1. Adicione um manipulador `Click` para `EnterGuess`. To add the handler, switch to **Design View** for the form, and double-click `EnterGuess`. Sempre que o usuário clicar nesse botão, um fluxo de trabalho é retomado.
+1. Adicione um manipulador `Click` para `EnterGuess`. Para adicionar o manipulador, alterne para o **modo de exibição de design** do formulário e clique duas vezes em `EnterGuess`. Sempre que o usuário clicar nesse botão, um fluxo de trabalho é retomado.
 
     ```vb
     Private Sub EnterGuess_Click(sender As Object, e As EventArgs) Handles EnterGuess.Click
@@ -1174,7 +1174,7 @@ Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a defi
 
 ## <a name="to-terminate-a-workflow"></a>Para encerrar um fluxo de trabalho
 
-1. Adicione um manipulador `Click` para `QuitGame`. To add the handler, switch to **Design View** for the form, and double-click `QuitGame`. Sempre que o usuário clicar nesse botão, o fluxo de trabalho selecionado atual será encerrado.
+1. Adicione um manipulador `Click` para `QuitGame`. Para adicionar o manipulador, alterne para o **modo de exibição de design** do formulário e clique duas vezes em `QuitGame`. Sempre que o usuário clicar nesse botão, o fluxo de trabalho selecionado atual será encerrado.
 
     ```vb
     Private Sub QuitGame_Click(sender As Object, e As EventArgs) Handles QuitGame.Click
@@ -1246,7 +1246,7 @@ Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a defi
 
 ## <a name="to-build-and-run-the-application"></a>Para compilar e executar o aplicativo
 
-1. Double-click **Program.cs** (or **Module1.vb**) in **Solution Explorer** to display the code.
+1. Clique duas vezes em **Program.cs** (ou **Module1. vb**) em **Gerenciador de soluções** para exibir o código.
 
 2. Adicione a seguinte instrução `using` (ou `Imports`) na parte superior do arquivo com as outras instruções `using` (ou `Imports`).
 
@@ -1258,7 +1258,7 @@ Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a defi
     using System.Windows.Forms;
     ```
 
-3. Remove or comment out the existing workflow hosting code from [How to: Run a Workflow](how-to-run-a-workflow.md), and replace it with the following code.
+3. Remova ou comente o código de hospedagem do fluxo de trabalho existente de [como executar um fluxo de trabalho](how-to-run-a-workflow.md)e substitua-o pelo código a seguir.
 
     ```vb
     Sub Main()
@@ -1275,14 +1275,14 @@ Para retomar uma instância de fluxo de trabalho, o host precisa fornecer a defi
     }
     ```
 
-4. Right-click **NumberGuessWorkflowHost** in **Solution Explorer** and choose **Properties**. In the **Application** tab, specify **Windows Application** for the **Output type**. Essa etapa é opcional, mas se não for seguida, a janela do console será exibida além do formulário.
+4. Clique com o botão direito do mouse em **NumberGuessWorkflowHost** em **Gerenciador de soluções** e escolha **Propriedades**. Na guia **aplicativo** , especifique **aplicativo do Windows** para o **tipo de saída**. Essa etapa é opcional, mas se não for seguida, a janela do console será exibida além do formulário.
 
 5. Pressione Ctrl+Shift+B para criar o aplicativo.
 
-6. Ensure that **NumberGuessWorkflowHost** is set as the startup application, and press Ctrl+F5 to start the application.
+6. Verifique se **NumberGuessWorkflowHost** está definido como o aplicativo de inicialização e pressione CTRL + F5 para iniciar o aplicativo.
 
-7. Select a range for the guessing game and the type of workflow to start, and click **New Game**. Enter a guess in the **Guess** box and click **Go** to submit your guess. Observe que a saída das atividades de `WriteLine` são exibidas no formulário.
+7. Selecione um intervalo para o jogo de adivinhação e o tipo de fluxo de trabalho a ser iniciado e clique em **novo jogo**. Insira uma estimativa na caixa de **estimativa** e clique em **ir** para enviar sua estimativa. Observe que a saída das atividades de `WriteLine` são exibidas no formulário.
 
-8. Start several workflows using different workflow types and number ranges, enter some guesses, and switch between the workflows by selecting from the **Workflow Instance Id** list.
+8. Inicie vários fluxos de trabalho usando diferentes tipos de fluxo de trabalho e intervalos de números, insira alguns palpites e alterne entre os fluxos de trabalho selecionando na lista **ID da instância do fluxo de trabalho** .
 
-    Observe que, quando você alterna para um novo fluxo de trabalho, os palpites anteriores e o progresso do fluxo de trabalho não são exibidos na janela de status. A razão pela qual o status não está disponível é porque ele não é capturado e salvo em nenhum lugar. In the next step of the tutorial, [How to: Create a Custom Tracking Participant](how-to-create-a-custom-tracking-participant.md), you create a custom tracking participant that saves this information.
+    Observe que, quando você alterna para um novo fluxo de trabalho, os palpites anteriores e o progresso do fluxo de trabalho não são exibidos na janela de status. A razão pela qual o status não está disponível é porque ele não é capturado e salvo em nenhum lugar. Na próxima etapa do tutorial, [como criar um participante de acompanhamento personalizado](how-to-create-a-custom-tracking-participant.md), você cria um participante de acompanhamento personalizado que salva essas informações.

@@ -111,7 +111,7 @@ Programação assíncrona é um conceito de primeira classe no .NET, com suporte
 
 Para saber mais sobre programação assíncrona no .NET, comece com o tópico [Visão geral da assincronia](async.md).
 
-## <a name="language-integrated-query-linq"></a>LINQ (Consulta Integrada à Linguagem)
+## <a name="language-integrated-query-linq"></a>Consulta Integrada à Linguagem (LINQ)
 
 O LINQ é um poderoso conjunto de recursos para C# e VB que permite que você escreva código simples e declarativo para operar em dados. Os dados podem ser de várias formas (como objetos na memória, um banco de dados SQL ou um documento XML), mas o código LINQ que você escreve não difere para cada fonte de dados.
 
@@ -135,7 +135,7 @@ O exemplo a seguir é uma versão modificada do `ToString()` método da classe `
 
 [!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Se você estiver interessado em um tour pelos recursos do C#, confira [Tour do C#](../csharp/tour-of-csharp/index.md).
 

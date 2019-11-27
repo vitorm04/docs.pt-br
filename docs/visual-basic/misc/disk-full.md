@@ -1,5 +1,5 @@
 ---
-title: Disk full
+title: Disco cheio
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID61
@@ -11,12 +11,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351106"
 ---
-# <a name="disk-full-visual-basic"></a>Disk full (Visual Basic)
-There is not enough room on the disk to either complete a `Print`, `Write`, or `FileClose` operation, or to create required files.  
+# <a name="disk-full-visual-basic"></a>Disco cheio (Visual Basic)
+Não há espaço suficiente no disco para concluir uma operação `Print`, `Write`ou `FileClose` ou para criar os arquivos necessários.  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a>Para corrigir esse erro  
   
-- Create more room on the disk by either moving some files to another disk or deleting some files.  
+- Crie mais espaço no disco movendo alguns arquivos para outro disco ou excluindo alguns arquivos.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -23,7 +23,7 @@ Para sua conveniência, o tópico usa as seguintes funções:
 
  Este documento usa os prefixos e namespaces na tabela a seguir.
 
-|Prefixo|Namespace|
+|Prefixo|{1&gt;Namespace&lt;1}|
 |-|-|
 |WSRM|http://docs.oasis-open.org/ws-rx/wsrm/200702|
 |netrm|http://schemas.microsoft.com/ws/2006/05/rm|

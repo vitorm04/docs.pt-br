@@ -1,5 +1,5 @@
 ---
-title: Off
+title: '{1&gt;Desativado&lt;1}'
 ms.date: 07/20/2015
 f1_keywords:
 - Off
@@ -15,10 +15,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74331929"
 ---
 # <a name="off-visual-basic"></a>Off (Visual Basic)
-Turns a compiler option off.  
+Desativa uma opção do compilador.  
   
 ## <a name="remarks"></a>Comentários  
- The `Off` keyword can be used in these contexts:  
+ A palavra-chave `Off` pode ser usada nesses contextos:  
   
  [Instrução Option Explicit](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   

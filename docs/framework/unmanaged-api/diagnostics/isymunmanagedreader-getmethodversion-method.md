@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436002"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>Método ISymUnmanagedReader::GetMethodVersion
-Gets the method version. The method version starts at 1 and is incremented each time the method is recompiled. Recompilation can happen without changes to the method.  
+Obtém a versão do método. A versão do método começa em 1 e é incrementada toda vez que o método é recompilado. A recompilação pode ocorrer sem alterações no método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,16 +35,16 @@ HRESULT GetMethodVersion (
   
 ## <a name="parameters"></a>Parâmetros  
  `pMethod`  
- [in] The method for which to get the version.  
+ no O método para o qual obter a versão.  
   
  `version`  
- [out] A pointer to a variable that receives the method version.  
+ fora Um ponteiro para uma variável que recebe a versão do método.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

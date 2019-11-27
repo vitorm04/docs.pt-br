@@ -20,9 +20,9 @@ ms.locfileid: "74330426"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Noções básicas da coleta de lixo
 
-In the common language runtime (CLR), the garbage collector (GC) serves as an automatic memory manager. Ele oferece os seguintes benefícios:
+No Common Language Runtime (CLR), o coletor de lixo (GC) serve como um Gerenciador de memória automático. Ele oferece os seguintes benefícios:
 
-- Enables you to develop your application without having to manually free memory.
+- Permite que você desenvolva seu aplicativo sem precisar liberar memória manualmente.
 
 - Aloca objetos no heap gerenciado com eficiência.
 
@@ -30,19 +30,19 @@ In the common language runtime (CLR), the garbage collector (GC) serves as an au
 
 - Fornece segurança de memória, assegurando que um objeto não possa usar o conteúdo de outro objeto.
 
-This article describes the core concepts of garbage collection.
+Este artigo descreve os principais conceitos da coleta de lixo.
 
 ## <a name="fundamentals-of-memory"></a>Conceitos básicos de memória
 
 A lista a seguir resume conceitos importantes de memória do CLR.
 
-- Cada processo tem seu próprio espaço de endereço virtual separado. All processes on the same computer share the same physical memory and the page file, if there is one.
+- Cada processo tem seu próprio espaço de endereço virtual separado. Todos os processos no mesmo computador compartilham a mesma memória física e o arquivo de paginação, se houver um.
 
 - Por padrão, em computadores de 32 bits, cada processo tem um espaço de endereço virtual no modo de usuário de 2 GB.
 
 - Como desenvolvedor de aplicativos, você trabalha apenas com o espaço de endereço virtual e nunca manipula a memória física diretamente. O coletor de lixo aloca e libera memória virtual para você no heap gerenciado.
 
-  If you are writing native code, you use Windows functions to work with the virtual address space. Essas funções alocam e liberam memória virtual para você em heaps nativos.
+  Se você estiver escrevendo código nativo, use as funções do Windows para trabalhar com o espaço de endereço virtual. Essas funções alocam e liberam memória virtual para você em heaps nativos.
 
 - A memória virtual pode estar em três estados:
 
@@ -54,15 +54,15 @@ A lista a seguir resume conceitos importantes de memória do CLR.
 
 - O espaço de endereço virtual pode ficar fragmentado. Isso significa que há blocos livres, também conhecido como furos, no espaço de endereço. Quando uma alocação de memória virtual é solicitada, o gerenciador de memória virtual precisa localizar um único bloco livre suficientemente grande para atender a essa solicitação de alocação. Mesmo que você tenha 2 GB de espaço livre, a alocação que exige 2 GB não será bem-sucedida a menos que todo esse espaço livre esteja em um único bloco de endereço.
 
-- You can run out of memory if there isn't enough virtual address space to reserve or physical space to commit.
+- Você pode ficar sem memória se não houver espaço de endereço virtual suficiente para reservar ou espaço físico para confirmar.
 
-  The page file is used even if physical memory pressure (that is, demand for physical memory) is low. The first time physical memory pressure is high, the operating system must make room in physical memory to store data, and it backs up some of the data that is in physical memory to the page file. That data is not paged until it's needed, so it's possible to encounter paging in situations where the physical memory pressure is low.
+  O arquivo de paginação é usado mesmo se a pressão de memória física (ou seja, a demanda de memória física) estiver baixa. Na primeira vez que a pressão de memória física é alta, o sistema operacional deve liberar espaço na memória física para armazenar dados e faz backup de alguns dos dados que estão na memória física para o arquivo de paginação. Esses dados não são paginados até que seja necessário, portanto, é possível encontrar paginação em situações em que a pressão da memória física está baixa.
 
 ## <a name="conditions-for-a-garbage-collection"></a>Condições para uma coleta de lixo
 
 A coleta de lixo ocorre quando uma das seguintes condições é verdadeira:
 
-- O sistema tem pouca memória física. This is detected by either the low memory notification from the OS or low memory as indicated by the host.
+- O sistema tem pouca memória física. Isso é detectado pela notificação de memória insuficiente do sistema operacional ou memória insuficiente, conforme indicado pelo host.
 
 - A memória usada por objetos alocados no heap gerenciado ultrapassa o limite aceitável. Esse limite é ajustado continuamente enquanto o processo é executado.
 
@@ -74,7 +74,7 @@ Depois que o coletor de lixo é inicializado pelo CLR, ele aloca um segmento da 
 
 Há um heap gerenciado para cada processo gerenciado. Todos os threads no processo alocam memória para objetos no mesmo heap.
 
-To reserve memory, the garbage collector calls the Windows [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) function and reserves one segment of memory at a time for managed applications. The garbage collector also reserves segments, as needed, and releases segments back to the operating system (after clearing them of any objects) by calling the Windows [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) function.
+Para reservar memória, o coletor de lixo chama a função do Windows [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) e reserva um segmento de memória por vez para aplicativos gerenciados. O coletor de lixo também reserva segmentos, conforme necessário, e libera segmentos de volta para o sistema operacional (depois de limpá-los de qualquer objeto) chamando a função [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree) do Windows.
 
 > [!IMPORTANT]
 > O tamanho de segmentos alocados pelo coletor de lixo é específico da implementação e está sujeito a alterações a qualquer momento, incluindo em atualizações periódicas. Seu aplicativo nunca deve fazer suposições sobre o tamanho de um segmento em particular nem depender dele, tampouco deve tentar configurar a quantidade de memória disponível para alocações de segmento.
@@ -90,7 +90,7 @@ O heap pode ser considerado como o acúmulo de dois heaps: o [heap de objetos gr
 O [heap de objetos grandes](large-object-heap.md) contém objetos muito grandes, com 85.000 bytes ou mais. Os objetos no heap de objetos grandes normalmente são matrizes. É raro que um objeto de instância seja muito grande.
 
 > [!TIP]
-> You can [configure the threshold size](../../core/run-time-config/garbage-collector.md#large-object-heap-threshold) for objects to go on the large object heap.
+> Você pode [Configurar o tamanho do limite](../../core/run-time-config/garbage-collector.md#large-object-heap-threshold) para objetos a serem acessados no heap de objeto grande.
 
 ## <a name="generations"></a>Gerações
 
@@ -98,21 +98,21 @@ O heap está organizado em gerações de modo que possa manipular objetos de vid
 
 - **Geração 0**. Essa é a geração mais jovem e contém objetos de vida útil curta. Um exemplo de um objeto de vida útil curta é uma variável temporária. A coleta de lixo ocorre com mais frequência nessa geração.
 
-  Newly allocated objects form a new generation of objects and are implicitly generation 0 collections. However, if they are large objects, they go on the large object heap in a generation 2 collection.
+  Os objetos alocados recentemente formam uma nova geração de objetos e são coleções de 0 geração implicitamente. No entanto, se forem objetos grandes, eles irão para o heap de objeto grande em uma coleção de geração 2.
 
   A maioria dos objetos são recuperados para coleta de lixo na geração 0 e não sobrevivem para a próxima geração.
 
 - **Geração 1**. Essa geração contém objetos de vida útil curta e serve como um buffer entre objetos de vida útil curta e longa.
 
-- **Geração 2**. Essa geração contém objetos de vida útil longa. An example of a long-lived object is an object in a server application that contains static data that's live for the duration of the process.
+- **Geração 2**. Essa geração contém objetos de vida útil longa. Um exemplo de um objeto de vida longa é um objeto em um aplicativo de servidor que contém dados estáticos que residem durante o processo.
 
 Coletas de lixo ocorrem em gerações específicas conforme as condições permitirem. Coletar uma geração significa coletar objetos nessa geração e todas as suas gerações mais jovens. Uma coleta de lixo da geração 2 também é conhecida como uma coleta de lixo completa, pois ela recupera todos os objetos em todas as gerações (ou seja, todos os objetos no heap gerenciado).
 
 ### <a name="survival-and-promotions"></a>Sobrevivência e promoções
 
-Objects that are not reclaimed in a garbage collection are known as survivors and are promoted to the next generation. Objetos que sobrevivem a uma coleta de lixo da geração 0 são promovidos à geração 1; objetos que sobrevivem a uma coleta de lixo da geração 1 são promovidos à geração 2 e objetos que sobrevivem a uma coleta de lixo da geração 2 permanecem na geração 2.
+Os objetos que não são recuperados em uma coleta de lixo são conhecidos como os sobreviventes e são promovidos para a próxima geração. Objetos que sobrevivem a uma coleta de lixo da geração 0 são promovidos à geração 1; objetos que sobrevivem a uma coleta de lixo da geração 1 são promovidos à geração 2 e objetos que sobrevivem a uma coleta de lixo da geração 2 permanecem na geração 2.
 
-When the garbage collector detects that the survival rate is high in a generation, it increases the threshold of allocations for that generation. The next collection gets a substantial size of reclaimed memory. The CLR continually balances two priorities: not letting an application's working set get too large by delaying garbage collection and not letting the garbage collection run too frequently.
+Quando o coletor de lixo detecta que a taxa de sobrevivência é alta em uma geração, ela aumenta o limite de alocações para essa geração. A próxima coleção Obtém um tamanho substancial de memória recuperada. O CLR balanceia continuamente duas prioridades: não permitir que o conjunto de trabalho de um aplicativo fique muito grande atrasando a coleta de lixo e não permitindo que a coleta de lixo seja executada com muita frequência.
 
 ### <a name="ephemeral-generations-and-segments"></a>Gerações e segmentos efêmeros
 
@@ -120,7 +120,7 @@ Devido ao fato de os objetos em gerações 0 e 1 serem de vida útil curta, essa
 
 As gerações efêmeras devem ser alocadas no segmento de memória que é conhecido como o segmento efêmero. Cada novo segmento adquirido pelo coletor de lixo torna-se o novo segmento efêmero e contém os objetos que sobreviveram a uma coleta de lixo da geração 0. O segmento efêmero antigo torna-se o novo segmento da geração 2.
 
-The size of the ephemeral segment varies depending on whether a system is 32-bit or 64-bit, and on the type of garbage collector it is running. Os valores padrão são mostrados na tabela a seguir.
+O tamanho do segmento efêmero varia dependendo se um sistema for de 32 bits ou de 64 bits e sobre o tipo de coletor de lixo em execução. Os valores padrão são mostrados na tabela a seguir.
 
 ||32 bits|64 bits|
 |-|-------------|-------------|
@@ -145,14 +145,14 @@ Uma coleta de lixo tem as seguintes fases:
 
   Em virtude das coletas da geração 2 poderem ocupar vários segmentos, objetos que são promovidos para a geração 2 podem ser movidos para um segmento mais antigo. Tanto os sobreviventes da geração 1 quanto da geração 2 podem ser movidos para um segmento diferente, porque eles são promovidos para a geração 2.
 
-  Ordinarily, the large object heap (LOH) is not compacted, because copying large objects imposes a performance penalty. However, in .NET Core and in .NET Framework 4.5.1 and later, you can use the <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> property to compact the large object heap on demand. In addition, the LOH is automatically compacted when a hard limit is set by specifying either:
+  Normalmente, o LOH (heap de objeto grande) não é compactado, pois copiar objetos grandes impõe uma penalidade de desempenho. No entanto, no .NET Core e no .NET Framework 4.5.1 e posterior, você pode usar a propriedade <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> para compactar o heap de objeto grande sob demanda. Além disso, o LOH é compactado automaticamente quando um limite rígido é definido especificando:
 
-  - a memory limit on a container, or
-  - the [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) or [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) run-time configuration options
+  - um limite de memória em um contêiner ou
+  - as opções de configuração de tempo de execução do [GCHeapHardLimit](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitcomplus_gcheaphardlimit) ou [GCHeapHardLimitPercent](../../core/run-time-config/garbage-collector.md#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent)
 
 O coletor de lixo usa as informações a seguir para determinar se os objetos estão vivos:
 
-- **Raízes de pilha**. Variáveis de pilha fornecidas pelo compilador JIT (just-in-time) e movimentador de pilhas. JIT optimizations can lengthen or shorten regions of code within which stack variables are reported to the garbage collector.
+- **Raízes de pilha**. Variáveis de pilha fornecidas pelo compilador JIT (just-in-time) e movimentador de pilhas. As otimizações JIT podem aumentar ou diminuir as regiões do código dentro das quais as variáveis de pilha são relatadas ao coletor de lixo.
 
 - **Identificadores de coleta de lixo**. Identificadores que apontam para objetos gerenciados e que podem ser alocados pelo código do usuário ou pelo Common Language Runtime.
 
@@ -162,43 +162,43 @@ Antes de iniciar uma coleta de lixo, todos os threads gerenciados são suspensos
 
 A ilustração a seguir mostra um thread que dispara uma coleta de lixo e faz com que outros threads sejam suspensos.
 
-![When a thread triggers a Garbage Collection](./media/gc-triggered.png)
+![Quando um thread dispara uma coleta de lixo](./media/gc-triggered.png)
 
-## <a name="manipulate-unmanaged-resources"></a>Manipulate unmanaged resources
+## <a name="manipulate-unmanaged-resources"></a>Manipular recursos não gerenciados
 
-If managed objects reference unmanaged objects by using their native file handles, you have to explicitly free the unmanaged objects, because the garbage collector only tracks memory on the managed heap.
+Se os objetos gerenciados fizerem referência a objetos não gerenciados usando seus identificadores de arquivo nativos, você terá que liberar explicitamente os objetos não gerenciados, pois o coletor de lixo rastreia apenas a memória no heap gerenciado.
 
-Users of the managed object may not dispose the native resources used by the object. To perform the cleanup, you can make the managed object finalizable. Finalization consists of cleanup actions that execute when the object is no longer in use. When the managed object dies, it performs cleanup actions that are specified in its finalizer method.
+Os usuários do objeto gerenciado podem não descartar os recursos nativos usados pelo objeto. Para executar a limpeza, você pode tornar o objeto gerenciado finalizável. A finalização consiste em ações de limpeza que são executadas quando o objeto não está mais em uso. Quando o objeto gerenciado é desativado, ele executa ações de limpeza que são especificadas em seu método de finalizador.
 
 Quando é descoberto que um objeto finalizável está inativo, seu finalizador é colocado em uma fila para que suas ações de limpeza sejam executadas, mas o próprio objeto é promovido para a próxima geração. Portanto, você precisa esperar até a próxima coleta de lixo ocorrer nessa geração (que não é necessariamente a próxima coleta de lixo) para determinar se o objeto foi recuperado.
 
-For more information about finalization, see <xref:System.Object.Finalize?displayProperty=nameWithType>.
+Para obter mais informações sobre finalização, consulte <xref:System.Object.Finalize?displayProperty=nameWithType>.
 
 ## <a name="workstation-and-server-garbage-collection"></a>Coleta de lixo de estação de trabalho ou de servidor
 
-O coletor de lixo tem autoajuste e pode trabalhar em uma ampla variedade de cenários. You can use a [configuration file setting](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) to set the type of garbage collection based on the characteristics of the workload. O CLR fornece os seguintes tipos de coleta de lixo:
+O coletor de lixo tem autoajuste e pode trabalhar em uma ampla variedade de cenários. Você pode usar uma [configuração de arquivo de configuração](../../core/run-time-config/garbage-collector.md#flavors-of-garbage-collection) para definir o tipo de coleta de lixo com base nas características da carga de trabalho. O CLR fornece os seguintes tipos de coleta de lixo:
 
-- Workstation garbage collection (GC) is designed for client apps. It is the default GC flavor for standalone apps. For hosted apps, for example, those hosted by ASP.NET, the host determines the default GC flavor.
+- A coleta de lixo de estação de trabalho (GC) foi projetada para aplicativos cliente. É o tipo de GC padrão para aplicativos autônomos. Para aplicativos hospedados, por exemplo, aqueles hospedados por ASP.NET, o host determina o tipo GC padrão.
 
-  A coleta de lixo da estação de trabalho pode ser simultânea ou não simultânea. A coleta de lixo simultânea permite que os threads gerenciados continuem as operações durante uma coleta de lixo. [Background garbage collection](#background-workstation-garbage-collection) replaces [concurrent garbage collection](#concurrent-garbage-collection) in .NET Framework 4 and later versions.
+  A coleta de lixo da estação de trabalho pode ser simultânea ou não simultânea. A coleta de lixo simultânea permite que os threads gerenciados continuem as operações durante uma coleta de lixo. A [coleta de lixo em segundo plano](#background-workstation-garbage-collection) substitui a [coleta de lixo simultânea](#concurrent-garbage-collection) no .NET Framework 4 e versões posteriores.
 
 - A coleta de lixo de servidor, que serve para aplicativos de servidor que precisam de escalabilidade e taxa de transferência altas.
 
-  - In .NET Core, server garbage collection can be non-concurrent or background.
+  - No .NET Core, a coleta de lixo do servidor pode ser não simultânea ou em segundo plano.
 
-  - In .NET Framework 4.5 and later versions, server garbage collection can be non-concurrent or background (background garbage collection replaces concurrent garbage collection). In .NET Framework 4 and previous versions, server garbage collection is non-concurrent.
+  - No .NET Framework 4,5 e versões posteriores, a coleta de lixo do servidor pode ser não simultânea ou em segundo plano (a coleta de lixo em segundo plano substitui a coleta de lixo simultânea). No .NET Framework 4 e versões anteriores, a coleta de lixo do servidor é não simultânea.
 
-The following illustration shows the dedicated threads that perform the garbage collection on a server:
+A ilustração a seguir mostra os threads dedicados que executam a coleta de lixo em um servidor:
 
-![Server Garbage Collection Threads](./media/gc-server.png)
+![Threads de coleta de lixo do servidor](./media/gc-server.png)
 
-### <a name="compare-workstation-and-server-garbage-collection"></a>Compare workstation and server garbage collection
+### <a name="compare-workstation-and-server-garbage-collection"></a>Comparar a coleta de lixo da estação de trabalho e do servidor
 
 Veja a seguir considerações de desempenho e de threading para a coleta de lixo da estação de trabalho:
 
-- A coleção ocorre no thread do usuário que disparou a coleta de lixo e permanece com a mesma prioridade. Como os threads de usuário normalmente são executados com prioridade normal, o coletor de lixo (que é executado em um thread de prioridade normal) deve disputam competir outros threads por tempo da CPU. (Threads that run native code are not suspended on either server or workstation garbage collection.)
+- A coleção ocorre no thread do usuário que disparou a coleta de lixo e permanece com a mesma prioridade. Como os threads de usuário normalmente são executados com prioridade normal, o coletor de lixo (que é executado em um thread de prioridade normal) deve disputam competir outros threads por tempo da CPU. (Os threads que executam código nativo não são suspensos na coleta de lixo do servidor ou da estação de trabalho.)
 
-- Workstation garbage collection is always used on a computer that has only one processor, regardless of the [configuration setting](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
+- A coleta de lixo de estação de trabalho é sempre usada em um computador que tem apenas um processador, independentemente da [definição de configuração](../../core/run-time-config/garbage-collector.md#systemgcservercomplus_gcserver).
 
 Veja a seguir considerações de desempenho e de threading para a coleta de lixo de servidor:
 
@@ -208,26 +208,26 @@ Veja a seguir considerações de desempenho e de threading para a coleta de lixo
 
 - Como vários threads de coleta de lixo funcionam em conjunto, a coleta de lixo de servidor é mais rápida do que a coleta de lixo de estação de trabalho no heap de mesmo tamanho.
 
-- Geralmente, a coleta de lixo de servidor tem segmentos maiores. However, this is only a generalization: segment size is implementation-specific and is subject to change. Don't make assumptions about the size of segments allocated by the garbage collector when tuning your app.
+- Geralmente, a coleta de lixo de servidor tem segmentos maiores. No entanto, essa é apenas uma generalização: o tamanho do segmento é específico da implementação e está sujeito a alterações. Não faça suposições sobre o tamanho dos segmentos alocados pelo coletor de lixo ao ajustar seu aplicativo.
 
-- A coleta de lixo de servidor pode usar bastante recursos. For example, imagine that there are 12 processes that use server GC running on a computer that has 4 processors. If all the processes happen to collect garbage at the same time, they would interfere with each other, as there would be 12 threads scheduled on the same processor. If the processes are active, it's not a good idea to have them all use server GC.
+- A coleta de lixo de servidor pode usar bastante recursos. Por exemplo, imagine que haja 12 processos que usam GC de servidor em execução em um computador com 4 processadores. Se todos os processos ocorrerem para coletar lixo ao mesmo tempo, eles interferirão uns com os outros, pois haveria 12 threads agendados no mesmo processador. Se os processos estiverem ativos, não é uma boa ideia fazer com que todos usem o GC do servidor.
 
-If you're running hundreds of instances of an application, consider using workstation garbage collection with concurrent garbage collection disabled. Isso resultará na redução da comutação de contexto, o que pode melhorar o desempenho.
+Se você estiver executando centenas de instâncias de um aplicativo, considere usar a coleta de lixo da estação de trabalho com a coleta de lixo simultânea desabilitada. Isso resultará na redução da comutação de contexto, o que pode melhorar o desempenho.
 
 ## <a name="background-workstation-garbage-collection"></a>Coleta de lixo de estação de trabalho em segundo plano
 
-In background workstation garbage collection, ephemeral generations (0 and 1) are collected as needed while the collection of generation 2 is in progress. Background workstation garbage collection is performed on a dedicated thread and applies only to generation 2 collections.
+Na coleta de lixo da estação de trabalho em segundo plano, as gerações efêmeras (0 e 1) são coletadas conforme necessário enquanto a coleta da geração 2 está em andamento. A coleta de lixo da estação de trabalho em segundo plano é executada em um thread dedicado e aplica-se somente às coleções da geração 2.
 
-Background garbage collection is enabled by default and can be enabled or disabled with the [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) configuration setting in .NET Framework apps or the [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) setting in .NET Core apps.
+A coleta de lixo em segundo plano é habilitada por padrão e pode ser habilitada ou desabilitada com a definição de configuração [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) em aplicativos .NET Framework ou a configuração [System. GC. simultânea](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) em aplicativos .NET Core.
 
 > [!NOTE]
-> Background garbage collection replaces [concurrent garbage collection](#concurrent-garbage-collection) and is available in .NET Framework 4 and later versions. In .NET Framework 4, it's supported only for workstation garbage collection. Starting with .NET Framework 4.5, background garbage collection is available for both workstation and server garbage collection.
+> A coleta de lixo em segundo plano substitui a [coleta de lixo simultânea](#concurrent-garbage-collection) e está disponível no .NET Framework 4 e em versões posteriores. No .NET Framework 4, há suporte apenas para coleta de lixo de estação de trabalho. A partir do .NET Framework 4,5, a coleta de lixo em segundo plano está disponível para a coleta de lixo da estação de trabalho e do servidor.
 
 Uma coleta em gerações efêmeras durante a coleta de lixo em segundo plano é conhecida como coleta de lixo em primeiro plano. Quando as coletas de lixo em primeiro plano ocorrem, todos os threads gerenciados são suspensos.
 
-When background garbage collection is in progress and you've allocated enough objects in generation 0, the CLR performs a generation 0 or generation 1 foreground garbage collection. O thread dedicado de coleta de lixo em segundo plano verifica em pontos frequentes de segurança se há uma solicitação de coleta de lixo em primeiro plano. Se houver, a coleta de plano de fundo suspende a si mesma para que a coleta de lixo em primeiro plano possa ocorrer. Após a coleta de lixo em primeiro plano, o thread dedicado de coleta de lixo em segundo plano e os threads de usuário continuam.
+Quando a coleta de lixo em segundo plano estiver em andamento e você tiver alocado objetos suficientes na geração 0, o CLR executará uma coleta de lixo de primeiro plano de geração 0 ou geração 1. O thread dedicado de coleta de lixo em segundo plano verifica em pontos frequentes de segurança se há uma solicitação de coleta de lixo em primeiro plano. Se houver, a coleta de plano de fundo suspende a si mesma para que a coleta de lixo em primeiro plano possa ocorrer. Após a coleta de lixo em primeiro plano, o thread dedicado de coleta de lixo em segundo plano e os threads de usuário continuam.
 
-A coleta de lixo em segundo plano remove as restrições de alocação impostas pela coleta de lixo simultânea, pois as coletas de lixo efêmeras podem ocorrer durante a coleta de lixo em segundo plano. Background garbage collection can remove dead objects in ephemeral generations. It can also expand the heap if needed during a generation 1 garbage collection.
+A coleta de lixo em segundo plano remove as restrições de alocação impostas pela coleta de lixo simultânea, pois as coletas de lixo efêmeras podem ocorrer durante a coleta de lixo em segundo plano. A coleta de lixo em segundo plano pode remover objetos inativos em gerações efêmeras. Ele também pode expandir o heap, se necessário, durante uma coleta de lixo de geração 1.
 
 A ilustração a seguir mostra a coleta de lixo em segundo plano executada em um thread dedicado separado em uma estação de trabalho:
 
@@ -235,11 +235,11 @@ A ilustração a seguir mostra a coleta de lixo em segundo plano executada em um
 
 ### <a name="background-server-garbage-collection"></a>Coleta de lixo de servidor em segundo plano
 
-Starting with .NET Framework 4.5, background server garbage collection is the default mode for server garbage collection.
+A partir do .NET Framework 4,5, a coleta de lixo do servidor em segundo plano é o modo padrão para a coleta de lixo do servidor.
 
-Background server garbage collection functions similarly to background workstation garbage collection, described in the previous section, but there are a few differences:
+A coleta de lixo do servidor em segundo plano funciona de forma semelhante à coleta de lixo da estação de trabalho em segundo plano, descrita na seção anterior, mas há algumas diferenças:
 
-- Background workstation garbage collection uses one dedicated background garbage collection thread, whereas background server garbage collection uses multiple threads. Typically, there's a dedicated thread for each logical processor.
+- A coleta de lixo da estação de trabalho em segundo plano usa um thread de coleta de lixo de segundo plano dedicado, enquanto a coleta de lixo do servidor de segundo Normalmente, há um thread dedicado para cada processador lógico.
 
 - Ao contrário do thread de coleta de lixo de estação de trabalho em segundo plano, esses threads não têm tempo limite.
 
@@ -250,14 +250,14 @@ A ilustração a seguir mostra a coleta de lixo em segundo plano executada em um
 ## <a name="concurrent-garbage-collection"></a>Coleta de lixo simultânea
 
 > [!TIP]
-> This section applies to:
+> Esta seção aplica-se a:
 >
-> - .NET Framework 3.5 and earlier for workstation garbage collection
-> - .NET Framework 4 and earlier for server garbage collection
+> - .NET Framework 3,5 e anteriores para coleta de lixo de estação de trabalho
+> - .NET Framework 4 e anterior para coleta de lixo do servidor
 >
-> Concurrent garbage is replaced by [background garbage collection](#background-workstation-garbage-collection) in later versions.
+> O lixo simultâneo é substituído pela [coleta de lixo em segundo plano](#background-workstation-garbage-collection) em versões posteriores.
 
-In workstation or server garbage collection, you can [enable concurrent garbage collection](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), which enables threads to run concurrently with a dedicated thread that performs the garbage collection for most of the duration of the collection. Essa opção afeta apenas as coletas de lixo na geração 2. As gerações 0 e 1 são sempre não simultâneas, pois terminarem muito rápido.
+Na coleta de lixo da estação de trabalho ou do servidor, você pode [habilitar a coleta de lixo simultânea](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md), o que permite que os threads sejam executados simultaneamente com um thread dedicado que executa a coleta de lixo para a maior parte da duração da coleção. Essa opção afeta apenas as coletas de lixo na geração 2. As gerações 0 e 1 são sempre não simultâneas, pois terminarem muito rápido.
 
 A coleta de lixo simultânea permite que aplicativos interativos sejam mais responsivos minimizando a pausa para uma coleta. Na maioria das vezes, a execução dos threads gerenciados pode continuar enquanto o thread de coleta de lixo simultânea estiver em execução. Isso resulta em pausas menores enquanto uma coleta de lixo estiver em execução.
 
@@ -265,9 +265,9 @@ A coleta de lixo simultânea é executada em um thread dedicado. Por padrão, o 
 
 A ilustração a seguir mostra a coleta de lixo simultânea executada em um thread dedicado separado.
 
-![Concurrent Garbage Collection Threads](./media/gc-concurrent.png)
+![Threads de coleta de lixo simultâneos](./media/gc-concurrent.png)
 
 ## <a name="see-also"></a>Consulte também
 
-- [Configuration options for GC](../../core/run-time-config/garbage-collector.md)
+- [Opções de configuração para GC](../../core/run-time-config/garbage-collector.md)
 - [Coleta de lixo](index.md)

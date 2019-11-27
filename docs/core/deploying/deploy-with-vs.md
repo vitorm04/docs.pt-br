@@ -24,7 +24,7 @@ As seções a seguir mostram como usar o Microsoft Visual Studio para criar os s
 - Implantação autocontida
 - Implantação autocontida com dependências de terceiros
 
-For information on using Visual Studio to develop .NET Core applications, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
+Para obter informações sobre como usar o Visual Studio para desenvolver aplicativos .NET Core, consulte [dependências e requisitos do .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-windows).
 
 ## <a name="framework-dependent-deployment"></a>Implantação dependente de estrutura
 
@@ -71,7 +71,7 @@ Implantar uma implantação dependente de estrutura com uma ou mais dependência
 
 1. Use o **Gerenciador de Pacotes NuGet** para adicionar uma referência a um pacote NuGet ao projeto e se o pacote ainda não estiver disponível no sistema, instale-o. Para abrir o gerenciador de pacotes, selecione **Ferramentas** > **Gerenciador de Pacotes NuGet** > **Gerenciar Pacotes NuGet para a Solução**.
 
-1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
+1. Confirme se as dependências de terceiros (por exemplo, `Newtonsoft.Json`) estão instaladas no seu sistema e, se não estiverem, instale-as. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
 
 1. Se `Newtonsoft.Json` já estiver instalado no sistema, adicione-o ao projeto selecionando o projeto no painel direito da guia **Gerenciar Pacotes para a Solução**.
 
@@ -87,7 +87,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
 1. Adicione o código-fonte do aplicativo.
 
-   Open the *Program.cs* or *Program.vb* file in your editor, and replace the auto-generated code with the following code. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
+   Abra o arquivo *Program.cs* ou *Program. vb* em seu editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -144,7 +144,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
       1. Na guia **Publicar**, selecione **Publicar**. O Visual Studio grava os arquivos que compõem seu aplicativo no sistema de arquivos local.
 
-      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. The profile's configuration settings are shown in the **Summary** section of the tab. **Target Runtime** identifies which runtime has been published, and **Target Location** identifies where the files for the self-contained deployment were written.
+      1. A guia **Publicar** agora mostra um único perfil **FolderProfile**. As definições de configuração do perfil são mostradas na seção **Resumo** da guia. o **tempo de execução de destino** identifica qual tempo de execução foi publicado e o local de **destino** identifica onde os arquivos da implantação autônoma foram gravados.
 
       1. Por padrão, o Visual Studio grava todos os arquivos publicados em um único diretório. Para sua conveniência, é melhor criar perfis separados para cada runtime de destino e colocar os arquivos publicados em um diretório específico da plataforma. Isso envolve a criação de um perfil de publicação separado para cada plataforma de destino. Agora recompile o aplicativo para cada plataforma fazendo o seguinte:
 
@@ -192,7 +192,7 @@ Para cada plataforma que seu aplicativo direciona, faça o seguinte:
   
 1. Selecione o local em que o Visual Studio publica seu aplicativo.
 
-   If you're only publishing to a single platform, you can accept the default value in the **Choose a folder** text box; this publishes the framework dependent deployment of your application to the *\<project-directory>\bin\Release\netcoreapp2.1\publish* directory.
+   Se você estiver apenas publicando em uma única plataforma, poderá aceitar o valor padrão na caixa de texto **escolher uma pasta** ; Isso publica a implantação dependente da estrutura do seu aplicativo para o *\<diretório de projeto > \bin\Release\netcoreapp2.1\publish* .
 
    Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você acrescentar a cadeia de caracteres "linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura do seu aplicativo no diretório *\<diretório-do-projeto>\bin\Release\netcoreapp2.1\publish\linux*.
 
@@ -268,7 +268,7 @@ Implantar uma implantação autocontida com uma ou mais dependências de terceir
 
 1. Use o **Gerenciador de Pacotes NuGet** para adicionar uma referência a um pacote NuGet ao projeto e se o pacote ainda não estiver disponível no sistema, instale-o. Para abrir o gerenciador de pacotes, selecione **Ferramentas** > **Gerenciador de Pacotes NuGet** > **Gerenciar Pacotes NuGet para a Solução**.
 
-1. Confirm that your third-party dependencies (for example, `Newtonsoft.Json`) are installed on your system and, if they aren't, install them. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
+1. Confirme se as dependências de terceiros (por exemplo, `Newtonsoft.Json`) estão instaladas no seu sistema e, se não estiverem, instale-as. A guia **Instalados** lista os pacotes NuGet instalados no sistema. Se `Newtonsoft.Json` não estiver listado, selecione a guia **Procurar** e insira "Newtonsoft.Json" na caixa de pesquisa. Selecione `Newtonsoft.Json` e, no painel direito, selecione seu projeto antes de selecionar **Instalar**.
 
 1. Se `Newtonsoft.Json` já estiver instalado no sistema, adicione-o ao projeto selecionando o projeto no painel direito da guia **Gerenciar Pacotes para a Solução**.
 

@@ -15,14 +15,14 @@ ms.locfileid: "74332123"
 Fornece propriedades para manipular componentes do computador, como o áudio, o relógio, o teclado, o sistema de arquivos e assim por diante.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Computer` object, see <xref:Microsoft.VisualBasic.Devices.Computer>. The base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Computer`, consulte <xref:Microsoft.VisualBasic.Devices.Computer>. A classe base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornece os membros que estão disponíveis em todos os projetos.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Computer> (the base class <xref:Microsoft.VisualBasic.Devices.ServerComputer> provides the members that are available in all projects).  
+ **Classe:** <xref:Microsoft.VisualBasic.Devices.Computer> (a classe base <xref:Microsoft.VisualBasic.Devices.ServerComputer> fornece os membros que estão disponíveis em todos os projetos).  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

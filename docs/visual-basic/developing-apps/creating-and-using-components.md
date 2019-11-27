@@ -13,9 +13,9 @@ ms.locfileid: "74330293"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Criando e usando componentes no Visual Basic
 
-Um *componente* é uma classe que implementa a interface <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> ou que deriva direta ou indiretamente de uma classe que implementa <xref:System.ComponentModel.IComponent>. A .NET Framework component is an object that is reusable, can interact with other objects, and provides control over external resources and design-time support.  
+Um *componente* é uma classe que implementa a interface <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> ou que deriva direta ou indiretamente de uma classe que implementa <xref:System.ComponentModel.IComponent>. Um componente .NET Framework é um objeto que é reutilizável, pode interagir com outros objetos e fornece controle sobre os recursos externos e o suporte a tempo de design.  
   
- Um recurso importante dos componentes é que eles são projetáveis, o que significa que uma classe que é um componente pode ser usada no ambiente de desenvolvimento integrado do Visual Studio. Um componente pode ser adicionado à Caixa de Ferramentas, arrastado e solto em um formulário e manipulado em uma superfície de design. Notice that base design-time support for components is built into the .NET Framework; a component developer does not have to do any additional work to take advantage of the base design-time functionality.  
+ Um recurso importante dos componentes é que eles são projetáveis, o que significa que uma classe que é um componente pode ser usada no ambiente de desenvolvimento integrado do Visual Studio. Um componente pode ser adicionado à Caixa de Ferramentas, arrastado e solto em um formulário e manipulado em uma superfície de design. Observe que o suporte a tempo de design base para componentes é incorporado ao .NET Framework; um desenvolvedor de componentes não precisa fazer nenhum trabalho adicional para aproveitar a funcionalidade de tempo de design base.  
   
  Um *controle* é semelhante a um componente, pois ambos são projetáveis. No entanto, um controle fornece uma interface do usuário, enquanto que um componente não. Um controle deve derivar de uma das classes de controle base: <xref:System.Windows.Forms.Control> ou <xref:System.Web.UI.Control>.  
   
@@ -37,31 +37,31 @@ Um *componente* é uma classe que implementa a interface <xref:System.ComponentM
   
  As classes de componente principais são:  
   
-- <xref:System.ComponentModel.Component> Uma implementação base para a interface <xref:System.ComponentModel.IComponent>. Essa classe habilita o compartilhamento de objeto entre aplicativos.  
+- <xref:System.ComponentModel.Component>. Uma implementação base para a interface <xref:System.ComponentModel.IComponent>. Essa classe habilita o compartilhamento de objeto entre aplicativos.  
   
-- <xref:System.ComponentModel.MarshalByValueComponent> Uma implementação base para a interface <xref:System.ComponentModel.IComponent>.  
+- <xref:System.ComponentModel.MarshalByValueComponent>. Uma implementação base para a interface <xref:System.ComponentModel.IComponent>.  
   
-- <xref:System.ComponentModel.Container> A implementação base para a interface <xref:System.ComponentModel.IContainer>. Essa classe encapsula zero ou mais componentes.  
+- <xref:System.ComponentModel.Container>. A implementação base para a interface <xref:System.ComponentModel.IContainer>. Essa classe encapsula zero ou mais componentes.  
   
  Algumas das classes usadas para licenciamento de componentes são:  
   
-- <xref:System.ComponentModel.License> A classe base abstrata para todas as licenças. Uma licença é concedida a uma instância específica de um componente.  
+- <xref:System.ComponentModel.License>. A classe base abstrata para todas as licenças. Uma licença é concedida a uma instância específica de um componente.  
   
-- <xref:System.ComponentModel.LicenseManager> Fornece propriedades e métodos para adicionar uma licença a um componente e gerenciar um <xref:System.ComponentModel.LicenseProvider>.  
+- <xref:System.ComponentModel.LicenseManager>. Fornece propriedades e métodos para adicionar uma licença a um componente e gerenciar um <xref:System.ComponentModel.LicenseProvider>.  
   
-- <xref:System.ComponentModel.LicenseProvider> A classe base abstrata para implementar um provedor de licença.  
+- <xref:System.ComponentModel.LicenseProvider>. A classe base abstrata para implementar um provedor de licença.  
   
-- <xref:System.ComponentModel.LicenseProviderAttribute> Especifica a classe <xref:System.ComponentModel.LicenseProvider> a ser usada com uma classe.  
+- <xref:System.ComponentModel.LicenseProviderAttribute>. Especifica a classe <xref:System.ComponentModel.LicenseProvider> a ser usada com uma classe.  
   
  Classes normalmente usadas para descrever e persistir componentes.  
   
-- <xref:System.ComponentModel.TypeDescriptor> Fornece informações sobre as características de um componente, como atributos, propriedades e eventos.  
+- <xref:System.ComponentModel.TypeDescriptor>. Fornece informações sobre as características de um componente, como atributos, propriedades e eventos.  
   
-- <xref:System.ComponentModel.EventDescriptor> Fornece informações sobre um evento.  
+- <xref:System.ComponentModel.EventDescriptor>. Fornece informações sobre um evento.  
   
-- <xref:System.ComponentModel.PropertyDescriptor> Fornece informações sobre uma propriedade.  
+- <xref:System.ComponentModel.PropertyDescriptor>. Fornece informações sobre uma propriedade.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
 
  [Solução de problemas de criação de controle e de componente](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  Explica como corrigir problemas comuns.  

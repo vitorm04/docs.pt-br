@@ -308,7 +308,7 @@ End Function
 
 **Compatibilidade com chaves efêmeras**
 
-Opcionalmente, a importação PFX pode carregar chave privada direto da memória, ignorando o disco rígido. Quando o novo sinalizador de <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> é especificado em um construtor de <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> ou uma das sobrecargas do método <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, as chaves privadas serão carregadas como chaves efêmeras. Isso impede as chaves de ficarem visíveis no disco. No entanto:
+Opcionalmente, a importação PFX pode carregar chave privada direto da memória, ignorando o disco rígido. Quando o novo sinalizador de <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> é especificado em um construtor de <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> ou uma das sobrecargas do método <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType>, as chaves privadas serão carregadas como chaves efêmeras. Isso impede as chaves de ficarem visíveis no disco. Porém:
 
 - Como as chaves não são persistidas no disco, os certificados carregados com esse sinalizador não são bons candidatos para serem adicionados a um X509Store.
 
@@ -841,7 +841,7 @@ End Class
 
 Você pode criar um arquivo de recurso, DataAnnotation.Localization.fr.resx, cuja chave é a cadeia de caracteres da mensagem de erro e cujo valor é a mensagem de erro localizada. O arquivo deve ser encontrado na pasta `App.LocalResources`. Por exemplo, veja a seguir a chave e seu valor em uma mensagem de erro localizada no idioma francês (fr):
 
-| Nome                                 | Valor                                     |
+| {1&gt;Nome&lt;1}                                 | Valor                                     |
 | ------------------------------------ | ----------------------------------------- |
 | A classificação deve estar entre 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -1190,7 +1190,7 @@ Para aplicativos em execução no .NET Framework 4.6.2, você pode desabilitar a
 
 <a name="WF462" />
 
-### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
+### <a name="windows-workflow-foundation-wf"></a>{1&gt;Windows Workflow Foundation (WF)&lt;1}
 
 No .NET Framework 4.6.2, o Windows Workflow Foundation foi aprimorado na seguinte área:
 
@@ -1719,7 +1719,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
     - O valor de enumeração <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType>.
 
-    - A propriedade de <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> .
+    - A propriedade <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType>.
 
     Por padrão, a propriedade <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> é `false`, a menos que o valor `HWRPortReuseOnSocketBind` da chave do Registro `HKLM\SOFTWARE\Microsoft\.NETFramework\v4.0.30319` seja definido como 0x1. Para habilitar a reutilização de porta local em conexões HTTP, defina a propriedade <xref:System.Net.ServicePointManager.ReusePort%2A?displayProperty=nameWithType> como `true`. Isso faz com que todas as conexões de soquete TCP externa do <xref:System.Net.Http.HttpClient> e <xref:System.Net.HttpWebRequest> usem uma nova opção de soquete do Windows 10 [SO_REUSE_UNICASTPORT](/windows/desktop/WinSock/sol-socket-socket-options), que permite a reutilização de porta local.
 
@@ -2062,7 +2062,7 @@ Para saber mais, confira [Novidades no Windows Communication Foundation](https:/
 
 <a name="windows_workflow_foundation" />
 
-### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
+### <a name="windows-workflow-foundation-wf"></a>{1&gt;Windows Workflow Foundation (WF)&lt;1}
 
 No .NET Framework 4.5, vários recursos novos foram adicionados ao Windows Workflow Foundation (WF), incluindo:
 

@@ -31,7 +31,7 @@ O [.NET Framework 4.0.3](https://www.microsoft.com/download/details.aspx?id=2905
 
 Você pode instalar o [.NET Framework 4](https://dotnet.microsoft.com/download/dotnet-framework/net40) no Windows XP. Ele não tem mais suporte da Microsoft.
 
-## <a name="net-framework-35"></a>.NET Framework 3,5
+## <a name="net-framework-35"></a>.NET Framework 3.5
 
 Você pode instalar o [.NET Framework 3.5](https://dotnet.microsoft.com/download/dotnet-framework/net35-sp1) no Windows XP.
 

@@ -34,7 +34,7 @@ O script do instalador é automatizado para execução no início do build para 
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> Quando você usa o script do instalador, as dependências nativas não são instaladas automaticamente. Instale as dependências nativas, caso elas estejam ausentes no sistema operacional. For more information, see [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
+> Quando você usa o script do instalador, as dependências nativas não são instaladas automaticamente. Instale as dependências nativas, caso elas estejam ausentes no sistema operacional. Para obter mais informações, consulte [dependências e requisitos do .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-linux).
 
 ## <a name="ci-setup-examples"></a>Exemplos de instalação de CI
 

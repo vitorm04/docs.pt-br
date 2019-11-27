@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449873"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>Método ICorProfilerInfo::SetILFunctionBody
-Replaces the body of the specified function in the specified module.  
+Substitui o corpo da função especificada no módulo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,25 +36,25 @@ HRESULT SetILFunctionBody(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleId`  
- [in] The ID of the module in which the function resides.  
+ no A ID do módulo no qual a função reside.  
   
  `methodid`  
- [in] The token of the function for which to replace the body.  
+ no O token da função para a qual substituir o corpo.  
   
  `pbNewILMethodHeader`  
- [in] The new header for the function.  
+ no O novo cabeçalho da função.  
   
 ## <a name="remarks"></a>Comentários  
- The `SetILFunctionBody` method replaces the relative virtual address of the function in the metadata so that it points to the new function body, and adjusts any internal data structures as required.  
+ O método `SetILFunctionBody` substitui o endereço virtual relativo da função nos metadados para que ele aponte para o novo corpo da função e ajusta todas as estruturas de dados internas conforme necessário.  
   
- The `SetILFunctionBody` method can be called on only those functions that have never been compiled by a just-in-time (JIT) compiler.  
+ O método `SetILFunctionBody` pode ser chamado somente nas funções que nunca foram compiladas por um compilador JIT (just-in-time).  
   
- Use the [ICorProfilerInfo::GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) method to allocate space for the new method to ensure that the buffer is compatible.  
+ Use o método [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md) para alocar espaço para o novo método a fim de garantir que o buffer seja compatível.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

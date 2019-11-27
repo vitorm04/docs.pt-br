@@ -15,23 +15,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350749"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-Specifies that one or more declared member variables refer to an instance of a class that can raise events.
+Especifica que uma ou mais variáveis de membro declaradas se referem a uma instância de uma classe que pode gerar eventos.
 
 ## <a name="remarks"></a>Comentários
 
-When a variable is defined using `WithEvents`, you can declaratively specify that a method handles the variable's events using the `Handles` keyword.
+Quando uma variável é definida usando `WithEvents`, você pode especificar declarativamente que um método manipule os eventos da variável usando a palavra-chave `Handles`.
 
-You can use `WithEvents` only at class or module level. This means the declaration context for a `WithEvents` variable must be a class or module and cannot be a source file, namespace, structure, or procedure.
+Você pode usar `WithEvents` somente no nível de classe ou módulo. Isso significa que o contexto de declaração para uma variável de `WithEvents` deve ser uma classe ou um módulo e não pode ser um arquivo de origem, namespace, estrutura ou procedimento.
 
-You cannot use `WithEvents` on a structure member.
+Você não pode usar `WithEvents` em um membro de estrutura.
 
-You can declare only individual variables—not arrays—with `WithEvents`.
+Você pode declarar apenas variáveis individuais, e não matrizes, com `WithEvents`.
 
 ## <a name="rules"></a>Regras
 
-**Element Types.** You must declare `WithEvents` variables to be object variables so that they can accept class instances. However, you cannot declare them as `Object`. You must declare them as the specific class that can raise the events.
+**Tipos de elemento.** Você deve declarar `WithEvents` variáveis para serem variáveis de objeto para que elas possam aceitar instâncias de classe. No entanto, você não pode declará-las como `Object`. Você deve declará-los como a classe específica que pode gerar os eventos.
 
-The `WithEvents` modifier can be used in this context: [Dim Statement](../../../visual-basic/language-reference/statements/dim-statement.md)
+O modificador de `WithEvents` pode ser usado neste contexto: [instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>Exemplo
 

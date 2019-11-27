@@ -21,7 +21,7 @@ Se você não souber exatamente o que é o .NET Core ou como ele se relaciona co
 
 Primeiro, baixe e instale o [SDK do .NET Core](https://dotnet.microsoft.com/download) em seu computador.
 
-Em seguida, abra um terminal, como o **PowerShell**, um **prompt de comando** ou o **Bash**. Digite os seguintes comandos de `dotnet` para criar e executar um aplicativo C#:
+Em seguida, abra um terminal, como o **PowerShell**, um **prompt de comando** ou o **Bash**. Digite os seguintes comandos de `dotnet` para criar e executar C# um aplicativo:
 
 ```dotnetcli
 dotnet new console --output sample1
@@ -52,20 +52,20 @@ Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais
 - Assista a um vídeo sobre [como instalar e usar o Visual Studio 2017 e o .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).
 - [Introdução ao .NET Core usando a linha de comando.](tutorials/using-with-xplat-cli.md)
 
-See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) article for a list of the supported Windows versions.
+Consulte o artigo [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows) para obter uma lista das versões do Windows com suporte.
 
 # <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
-You can get started developing .NET Core application by following these step-by-step tutorials:
+Você pode começar a desenvolver o aplicativo .NET Core seguindo estes tutoriais passo a passo:
 
 - [Introdução ao .NET Core usando a linha de comando.](tutorials/using-with-xplat-cli.md)
 - Assista a um vídeo sobre uma [introdução ao Visual Studio Code usando C# e o .NET Core no Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
-See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) article for a list of the supported Linux distros and versions.
+Consulte o artigo [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux) para obter uma lista das versões e distribuições do Linux com suporte.
 
 # <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-You can get started developing .NET Core application by following these step-by-step tutorials:
+Você pode começar a desenvolver o aplicativo .NET Core seguindo estes tutoriais passo a passo:
 
 - Assista a um vídeo sobre uma [introdução ao Visual Studio Code usando C# e o .NET Core no macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac).
 - [Introdução ao .NET Core no macOS usando o Visual Studio Code.](tutorials/using-on-macos.md)
@@ -73,6 +73,6 @@ You can get started developing .NET Core application by following these step-by-
 - [Introdução ao .NET Core no macOS usando o Visual Studio para Mac.](tutorials/using-on-mac-vs.md)
 - [Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac.](tutorials/using-on-mac-vs-full-solution.md)
 
-See the [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) article for a list of the supported OS X / macOS versions.
+Consulte o artigo [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos) para obter uma lista das versões do os X/MacOS com suporte.
 
 ---

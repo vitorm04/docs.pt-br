@@ -16,19 +16,19 @@ ms.locfileid: "74441215"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- This topic contains information about [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] support for standard controls in applications developed for the [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], and [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] frameworks.  
+ Este tópico contém informações sobre o suporte a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para controles padrão em aplicativos desenvolvidos para as estruturas [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]e [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Windows_Presentation_Foundation_Controls"></a>   
-## <a name="windows-presentation-foundation-controls"></a>Windows Presentation Foundation Controls  
- All [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] control elements that provide information or support for user interaction have full native support for [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Other elements, such as panels, are not visible to [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+## <a name="windows-presentation-foundation-controls"></a>Controles de Windows Presentation Foundation  
+ Todos os elementos de controle de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] que fornecem informações ou suporte para interação do usuário têm suporte nativo completo para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Outros elementos, como painéis, não são visíveis para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 <a name="Win32_Controls"></a>   
-## <a name="win32-controls"></a>Win32 Controls  
- Most [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. This assembly is automatically registered for use with UI Automation client applications.  
+## <a name="win32-controls"></a>Controles do Win32  
+ A maioria dos controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] são expostos a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] por meio de provedores do lado do cliente em UIAutomationClientsideProviders. dll. Esse assembly é registrado automaticamente para uso com aplicativos cliente de automação da interface do usuário.  
   
- Full support is provided only for controls from version 6 of ComCtrl32.dll (available with [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] and later).  
+ O suporte completo é fornecido somente para controles da versão 6 do ComCtrl32. dll (disponível com [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] e posterior).  
   
- The following controls are supported.  
+ Há suporte para os controles a seguir.  
   
 |Nome da classe|Tipo de controle|  
 |----------------|------------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "74441215"
 |Editar|Editar|  
 |SysLink|Hiperlink|  
 |Estático|Texto|  
-|Estático|Image|  
+|Estático|Imagem|  
 |SysIPAddress32|Personalizado|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -55,15 +55,15 @@ ms.locfileid: "74441215"
 |#32768|Menu|  
 |#32768|MenuItem|  
 |msctls_progress32|ProgressBar|  
-|RichEdit|Document. See note.|  
+|RichEdit|Documento. Consulte a observação.|  
 |RichEdit20A|Documento|  
 |RichEdit20W|Documento|  
 |RichEdit50W|Documento|  
-|ScrollBar|Controle deslizante|  
-|msctls_trackbar32|Controle deslizante|  
+|ScrollBar|Controle Deslizante|  
+|msctls_trackbar32|Controle Deslizante|  
 |msctls_updown32|Controle giratório|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Tabulação|  
+|SysTabControl32|Guia|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -73,32 +73,32 @@ ms.locfileid: "74441215"
 |ToolbarWindow32|Separador|  
 |tooltips_class32|ToolTip|  
 |#32774|ToolTip|  
-|ReBarWindow32|Barra de ferramentas|  
+|ReBarWindow32|Barra de Ferramentas|  
 |SysTreeView32|Árvore|  
 |SysTreeView32|TreeItem|  
   
- **Note** The RichEdit control is supported only for versions shipped with Windows Vista (in RichEd20.dll version 3.1 and later, and MsftEdit.dll version 4.1 and later).  
+ **Observação** O controle RichEdit tem suporte apenas para versões fornecidas com o Windows Vista (em RichEd20. dll versão 3,1 e posterior e MsftEdit. dll versão 4,1 e posterior).  
   
- The following controls are not supported.  
+ Não há suporte para os seguintes controles.  
   
 |Nome da classe|Tipo de controle|  
 |----------------|------------------|  
-|SysAnimate32|Image|  
+|SysAnimate32|Imagem|  
 |SysPager|Controle giratório|  
 |SysDateTimePick32|Personalizado|  
 |SysMonthCal32|Calendário|  
-|MS_WINNOTE|Tooltip|  
-|VBBubble|Tooltip|  
-|ScrollBar (when used as a standalone control)|Controle deslizante|  
-|SuperGrid|Personalizado|  
+|MS_WINNOTE|dessa|  
+|VBBubble|dessa|  
+|ScrollBar (quando usado como um controle autônomo)|Controle Deslizante|  
+|Subgrade|Personalizado|  
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Controles de Windows Forms  
- Windows Forms controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] through client-side providers in UIAutomationClientsideProviders.dll. This assembly is automatically registered for use with UI Automation client applications.  
+ Os controles de Windows Forms são expostos a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] por meio de provedores do lado do cliente em UIAutomationClientsideProviders. dll. Esse assembly é registrado automaticamente para uso com aplicativos cliente de automação da interface do usuário.  
   
- Typically, Windows Forms controls that are managed wrappers for [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] common controls are supported by [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. The following controls are supported.  
+ Normalmente, Windows Forms controles que são wrappers gerenciados para [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles comuns têm suporte do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Há suporte para os controles a seguir.  
   
-|Nome da classe|  
+|Nome da Classe|  
 |----------------|  
 |Botão|  
 |CheckBox|  
@@ -128,17 +128,17 @@ ms.locfileid: "74441215"
 |StatusBar|  
 |TabControl/TabPage|  
 |TextBox|  
-|Temporizador|  
-|Barra de ferramentas|  
+|{1&gt;Timer&lt;1}|  
+|Barra de Ferramentas|  
 |ToolTip|  
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
-|WebBrowser|  
+|Controlo|  
   
- The following controls are exposed to [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] only through their support for Microsoft Active Accessibility. Some functionality may not be available.  
+ Os controles a seguir são expostos a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] somente por meio de seu suporte para o Microsoft Acessibilidade Ativa. Algumas funcionalidades podem não estar disponíveis.  
   
-|Control Name|  
+|Nome do controle|  
 |------------------|  
 |BindingSource|  
 |DataGrid|  

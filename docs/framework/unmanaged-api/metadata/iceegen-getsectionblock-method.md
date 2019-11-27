@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434872"
 ---
 # <a name="iceegengetsectionblock-method"></a>Método ICeeGen::GetSectionBlock
-Gets a section block of the code base.  
+Obtém um bloco de seção da base de código.  
   
- This method is obsolete and should not be used.  
+ Este método é obsoleto e não deve ser usado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,26 +40,26 @@ HRESULT GetSectionBlock (
   
 ## <a name="parameters"></a>Parâmetros  
  `section`  
- [in] The section from which to retrieve a block of the code base.  
+ no A seção da qual recuperar um bloco da base de código.  
   
  `len`  
- [in] The length of the block to be retrieved.  
+ no O comprimento do bloco a ser recuperado.  
   
  `align`  
- [in] The byte, relative to the beginning of the section, with which to align the first byte of the block. This is the position of the block within the section.  
+ no O byte, em relação ao início da seção, com o qual alinhar o primeiro byte do bloco. Essa é a posição do bloco dentro da seção.  
   
  `ppBytes`  
- [out] A pointer to a location that receives the address of the retrieved block.  
+ fora Um ponteiro para um local que recebe o endereço do bloco recuperado.  
   
 ## <a name="remarks"></a>Comentários  
- Call `GetSectionBlock` only if you have special section requirements that are not handled by other methods.  
+ Chame `GetSectionBlock` somente se você tiver requisitos de seção especiais que não são tratados por outros métodos.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -10,21 +10,21 @@ ms.lasthandoff: 11/20/2019
 ms.locfileid: "74204575"
 ---
 # <a name="service-security-validation-and-authentication-failures"></a>Serviço: falhas de autenticação e validação de segurança
-Counter name: Security Validation and Authentication Failures  
+Nome do contador: falhas de validação e autenticação de segurança  
   
 ## <a name="description"></a>Descrição  
- This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter. Such problems include:  
+ Esse contador é incrementado sempre que uma mensagem é rejeitada devido a um problema de segurança não coberto pelo contador "chamadas de segurança não autorizadas". Esses problemas incluem:  
   
-- Client token cannot be read from the message.  
+- O token do cliente não pode ser lido a partir da mensagem.  
   
-- Client token has failed authentication (for example, bad password).  
+- Falha na autenticação do token do cliente (por exemplo, senha inadequada).  
   
-- Signature verification has failed (for example, the message has been tampered).  
+- Falha na verificação da assinatura (por exemplo, a mensagem foi violada).  
   
-- The message is a duplicate from a previous one, which can happen during a replay attack.  
+- A mensagem é uma duplicata de uma anterior, o que pode ocorrer durante um ataque de repetição.  
   
-- A decryption failure has occurred.  
+- Ocorreu uma falha de descriptografia.  
   
-- Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.  
+- Alguns elementos necessários (por exemplo, carimbo de data/hora ausente ou bloco de dados criptografados) estão ausentes da mensagem.  
   
-- Errors have occurred during TLSNEGO/SPNEGO handshake.
+- Ocorreram erros durante o handshake TLSNEGO/SPNEGO.

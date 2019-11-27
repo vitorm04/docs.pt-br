@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428000"
 ---
 # <a name="isymunmanagedwriterdefineparameter-method"></a>Método ISymUnmanagedWriter::DefineParameter
-Define um único parâmetro no método atual. The parameter type is taken from the parameter's position (sequence) within the method's signature.  
+Define um único parâmetro no método atual. O tipo de parâmetro é obtido da posição do parâmetro (sequência) na assinatura do método.  
   
- If parameters are defined in the metadata for a given method, you do not have to define them again by using this method. The symbol readers must check the normal metadata for the parameters before checking the symbol store.  
+ Se os parâmetros forem definidos nos metadados de um determinado método, você não precisará defini-los novamente usando esse método. Os leitores de símbolo devem verificar os metadados normais dos parâmetros antes de verificar o repositório de símbolos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,31 +42,31 @@ HRESULT DefineParameter(
   
 ## <a name="parameters"></a>Parâmetros  
  `name`  
- [in] The parameter name.  
+ no O nome do parâmetro.  
   
  `attributes`  
- [in] The parameter attributes.  
+ no Os atributos de parâmetro.  
   
  `sequence`  
- [in] The parameter signature.  
+ no A assinatura do parâmetro.  
   
  `addrKind`  
- [in] The address type.  
+ no O tipo de endereço.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ no O primeiro endereço para a especificação de parâmetro.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ no O segundo endereço para a especificação de parâmetro.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ no O terceiro endereço para a especificação de parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

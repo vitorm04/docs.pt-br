@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428132"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>Método ICorProfilerObjectEnum::Skip
-Advances the cursor of this enumerator from its current position so that the specified number of elements are skipped.  
+Avança o cursor deste enumerador de sua posição atual para que o número especificado de elementos seja ignorado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,15 +35,15 @@ HRESULT Skip (
   
 ## <a name="parameters"></a>Parâmetros  
  `celt`  
- [in] The number of elements to be skipped.  
+ no O número de elementos a serem ignorados.  
   
 ## <a name="remarks"></a>Comentários  
- The new position of this enumerator's cursor is: (current position) + `celt` .  
+ A nova posição do cursor deste enumerador é: (posição atual) + `celt`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

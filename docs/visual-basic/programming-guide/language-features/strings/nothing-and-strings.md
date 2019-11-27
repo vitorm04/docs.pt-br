@@ -12,14 +12,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344302"
 ---
 # <a name="nothing-and-strings-in-visual-basic"></a>Nada e cadeias de caracteres no Visual Basic
-The Visual Basic runtime and the .NET Framework evaluate `Nothing` differently when it comes to strings.  
+O tempo de execução de Visual Basic e o .NET Framework avaliam `Nothing` de maneira diferente quando se trata de cadeias de caracteres.  
   
-## <a name="visual-basic-runtime-and-the-net-framework"></a>Visual Basic Runtime and the .NET Framework  
+## <a name="visual-basic-runtime-and-the-net-framework"></a>Tempo de execução de Visual Basic e o .NET Framework  
  Considere o exemplo a seguir:  
   
  [!code-vb[VbVbalrStrings#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#47)]  
   
- The Visual Basic runtime usually evaluates `Nothing` as an empty string (""). The .NET Framework does not, however, and throws an exception whenever an attempt is made to perform a string operation on `Nothing`.  
+ O tempo de execução de Visual Basic geralmente avalia `Nothing` como uma cadeia de caracteres vazia (""). O .NET Framework não, no entanto, e gera uma exceção sempre que é feita uma tentativa de executar uma operação de cadeia de caracteres em `Nothing`.  
   
 ## <a name="see-also"></a>Consulte também
 

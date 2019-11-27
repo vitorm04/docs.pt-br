@@ -35,7 +35,7 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 Nesta enumeração, a sequência de elementos é forçada a iniciar a partir de `1` em vez de `0`. No entanto, incluir uma constante que tenha o valor de 0 é recomendado. Para obter mais informações, consulte [Tipos de enumeração](../../programming-guide/enumeration-types.md).
 
-Cada tipo de enumeração tem um tipo subjacente, que pode ser qualquer [tipo numérico integral](../builtin-types/integral-numeric-types.md). O tipo [char](../builtin-types/char.md) não pode ser um tipo subjacente de um enum. The default underlying type of enumeration elements is [int](../builtin-types/integral-numeric-types.md). To declare an enum of another integral type, such as [byte](../builtin-types/integral-numeric-types.md), use a colon after the identifier followed by the type, as shown in the following example.
+Cada tipo de enumeração tem um tipo subjacente, que pode ser qualquer [tipo numérico integral](../builtin-types/integral-numeric-types.md). O tipo [char](../builtin-types/char.md) não pode ser um tipo subjacente de um enum. O tipo subjacente padrão de elementos de enumeração é [int](../builtin-types/integral-numeric-types.md). Para declarar uma enumeração de outro tipo integral, como [byte](../builtin-types/integral-numeric-types.md), use dois-pontos após o identificador seguido pelo tipo, conforme mostrado no exemplo a seguir.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
@@ -82,7 +82,7 @@ O exemplo de código a seguir ilustra o uso e o efeito do atributo <xref:System.
 
 [!code-csharp[csrefKeywordsTypes#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#12)]
 
-## <a name="comments"></a>Comentários
+## <a name="comments"></a>Comments
 
 Se você remover `Flags`, o exemplo exibirá os seguintes valores:
 
@@ -90,7 +90,7 @@ Se você remover `Flags`, o exemplo exibirá os seguintes valores:
 
 `5`
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

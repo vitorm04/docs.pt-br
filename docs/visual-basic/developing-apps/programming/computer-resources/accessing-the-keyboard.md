@@ -22,7 +22,7 @@ O objeto `My.Computer.Keyboard` fornece propriedades para acessar o estado atual
 
  Esta tabela lista tarefas associadas ao objeto `My.Computer.Keyboard` e aponta para tópicos que demonstram como executar cada tarefa.  
   
-|Para|Consulte|  
+|{1&gt;Para&lt;1}|Consulte|  
 |--------|---------|  
 |Determinar se CAPS LOCK está ativado|<xref:Microsoft.VisualBasic.Devices.Keyboard.CapsLock%2A>|  
 |Determinar se a tecla SHIFT está pressionada|<xref:Microsoft.VisualBasic.Devices.Keyboard.ShiftKeyDown%2A>|  

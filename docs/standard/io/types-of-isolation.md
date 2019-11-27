@@ -53,7 +53,7 @@ O acesso ao armazenamento isolado é sempre restrito ao usuário que o criou. Pa
  Observe que, exceto pelos armazenamentos móveis, o armazenamento isolado é sempre implicitamente isolado por computador, pois usa os recursos de armazenamento locais para determinado computador.  
   
 > [!IMPORTANT]
-> Isolated storage is not available for Windows 8.x Store apps. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
+> O armazenamento isolado não está disponível para aplicativos da loja do Windows 8. x. Em vez disso, use as classes de dados de aplicativos nos namespaces `Windows.Storage` incluídos na API do Windows Runtime para armazenar dados e arquivos locais. Para saber mais, confira [Dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) no Centro de Desenvolvimento do Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Isolamento por usuário e assembly  

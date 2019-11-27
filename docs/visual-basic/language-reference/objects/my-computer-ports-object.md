@@ -16,19 +16,19 @@ ms.locfileid: "74332017"
 Fornece uma propriedade e um método para acessar portas seriais do computador.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Computer.Ports` object, see <xref:Microsoft.VisualBasic.Devices.Ports>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Computer.Ports`, consulte <xref:Microsoft.VisualBasic.Devices.Ports>.  
   
- For more information, see [Accessing the Computer's Ports](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
+ Para obter mais informações, consulte [acessando as portas do computador](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md).  
   
 > [!NOTE]
-> You can also use properties and methods of the <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> class to access the computer's serial ports.  
+> Você também pode usar propriedades e métodos da classe <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> para acessar as portas seriais do computador.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Namespace:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Class:** <xref:Microsoft.VisualBasic.Devices.Ports>  
+ **Classe:** <xref:Microsoft.VisualBasic.Devices.Ports>  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -16,7 +16,7 @@ ms.locfileid: "74336729"
 
 É possível usar os objetos `My.Application.Log` e `My.Log` para registrar em log as informações sobre eventos que ocorrem em seu aplicativo. Este passo a passo mostra como substituir as configurações padrão e fazer com que o objeto `Log` grave em outros ouvintes de log.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;Pré-requisitos&lt;1}
 
 O objeto `Log` pode gravar informações em vários ouvintes de log. Você precisa determinar a configuração atual dos ouvintes de log antes de alterar as configurações. Para obter mais informações, consulte [Instruções passo a passo: Determinando onde My.Application.Log grava informações](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md).
 

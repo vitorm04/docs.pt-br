@@ -23,10 +23,10 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445333"
 ---
 # <a name="icorprofilercallbackexceptionthrown-method"></a>Método ICorProfilerCallback::ExceptionThrown
-Notifies the profiler that an exception has been thrown.  
+Notifica o criador de perfil de que uma exceção foi lançada.  
   
 > [!NOTE]
-> This function is called only if the exception reaches managed code.  
+> Essa função será chamada somente se a exceção atingir código gerenciado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +37,17 @@ HRESULT ExceptionThrown(
   
 ## <a name="parameters"></a>Parâmetros  
  `thrownObjectId`  
- [in] The ID of the object that caused the exception to be thrown.  
+ no A ID do objeto que causou a exceção a ser gerada.  
   
 ## <a name="remarks"></a>Comentários  
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ O criador de perfil não deve bloquear em sua implementação desse método porque a pilha pode não estar em um estado que permita a coleta de lixo e, portanto, a coleta de lixo preemptiva não pode ser habilitada. Se o criador de perfil for bloqueado aqui e a coleta de lixo for tentada, o tempo de execução será bloqueado até que esse retorno de chamada seja retornado.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ A implementação do criador de perfil desse método não deve chamar o código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

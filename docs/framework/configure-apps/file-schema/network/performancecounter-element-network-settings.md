@@ -32,7 +32,7 @@ Habilita ou desabilita os contadores de desempenho de rede.
 ```  
   
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
- As seções a seguir descrevem atributos, elementos filho e elementos pai.  
+ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
 ### <a name="attributes"></a>Atributos  
   
@@ -41,13 +41,13 @@ Habilita ou desabilita os contadores de desempenho de rede.
 |`enabled`|Especifica se os contadores de desempenho de rede estão habilitados. O valor padrão é `false`.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- Nenhum.  
+ None.  
   
-### <a name="parent-elements"></a>Elementos pai  
+### <a name="parent-elements"></a>Elementos Pai  
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|[settings](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
+|[Configurações](settings-element-network-settings.md)|Configura as opções de rede básicaspara o namespace <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Comentários  
  Esse elemento pode ser usado no arquivo de configuração do aplicativo ou no arquivo de configuração do computador (Machine. config).  

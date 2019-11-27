@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346411"
 ---
-# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Creating the Source Office Open XML Document (Visual Basic)
+# <a name="creating-the-source-office-open-xml-document-visual-basic"></a>Criando o documento Office Open XML de origem (Visual Basic)
 Este tópico mostra como criar o documento do Office Open XML WordprocessingML que os outros exemplos neste tutorial uso. Se você segue essas declarações, a saída corresponderão a saída fornecida em cada exemplo.  
   
  No entanto, os exemplos neste tutorial funcionarão com qualquer documento válido de WordprocessingML.  
@@ -44,7 +44,7 @@ Este tópico mostra como criar o documento do Office Open XML WordprocessingML q
   
 3. Formatar a primeira linha com o estilo que dirige “1 ".  
   
-4. Select the lines that contain the Visual Basic code. A primeira linha começa com a palavra-chave `Imports` . The last line is "End Class". Formatar as linhas com a fonte de correio. Formatar-los com um novo estilo, e nomeie o novo estilo “código”.  
+4. Selecione as linhas que contêm o código de Visual Basic. A primeira linha começa com a palavra-chave `Imports` . A última linha é "End Class". Formatar as linhas com a fonte de correio. Formatar-los com um novo estilo, e nomeie o novo estilo “código”.  
   
 5. Finalmente, selecione a linha inteira que contém a saída, e formatar-la com o estilo de `Code` .  
   
@@ -55,4 +55,4 @@ Este tópico mostra como criar o documento do Office Open XML WordprocessingML q
   
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: Manipulating Content in a WordprocessingML Document (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [Tutorial: manipulando conteúdo em um documento do WordprocessingML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

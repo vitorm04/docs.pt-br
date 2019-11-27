@@ -118,7 +118,7 @@ Esta seção lista as tarefas associadas a criar, excluir, mover e renomear arqu
  <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>  
  Descreve o objeto `SpecialDirectories`.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
 
  [Leitura de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Lista as tarefas associadas à leitura de arquivos.  

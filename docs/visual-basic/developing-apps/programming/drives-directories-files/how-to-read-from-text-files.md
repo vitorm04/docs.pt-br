@@ -1,5 +1,5 @@
 ---
-title: 'How to: Read From Text Files'
+title: 'Como: ler de arquivos de texto'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -36,7 +36,7 @@ Use o método `ReadAllText` do objeto `My.Computer.FileSystem` para ler o conte�
 
 [!code-vb[VbFileIORead#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#3)]
 
-## <a name="robust-programming"></a>Programação robusta
+## <a name="robust-programming"></a>Programação Robusta
 
 As seguintes condições podem causar uma exceção:
 

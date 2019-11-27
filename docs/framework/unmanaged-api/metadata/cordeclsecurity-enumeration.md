@@ -56,7 +56,7 @@ typedef enum CorDeclSecurity {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`dclActionMask`|Reservado.|  
 |`dclActionNil`|Reservado.|  

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74441564"
 ---
 # <a name="corpinvokemap-enumeration"></a>Enumeração CorPinvokeMap
-Specifies options for a PInvoke call.  
+Especifica as opções para uma chamada PInvoke.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -63,35 +63,35 @@ typedef enum  CorPinvokeMap {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`pmNoMangle`|Use each member name as specified.|  
+|`pmNoMangle`|Use cada nome de membro conforme especificado.|  
 |`pmCharSetMask`|Reservado.|  
 |`pmCharSetNotSpec`|Reservado.|  
 |`pmCharSetAnsi`|Realizar marshaling de cadeias de caracteres como cadeias de caracteres de vários bytes.|  
 |`pmCharSetUnicode`|Realizar marshaling de cadeias de caracteres como cadeias de caracteres Unicode de 2 bytes.|  
-|`pmCharSetAuto`|Realizar marshaling automático de cadeias de caracteres apropriado para o sistema operacional de destino. The default is Unicode on Windows NT, Windows 2000, Windows XP, and the Windows Server 2003 family; the default is ANSI on Windows 98 and Windows Me.|  
+|`pmCharSetAuto`|Realizar marshaling automático de cadeias de caracteres apropriado para o sistema operacional de destino. O padrão é Unicode no Windows NT, Windows 2000, Windows XP e na família Windows Server 2003; o padrão é ANSI no Windows 98 e Windows me.|  
 |`pmBestFitUseAssem`|Reservado.|  
-|`pmBestFitEnabled`|Perform best-fit mapping of Unicode characters that lack an exact match in the ANSI character set.|  
-|`pmBestFitDisabled`|Do not perform best-fit mapping of Unicode characters. In this case, all unmappable characters will be replaced by a ‘?’.|  
+|`pmBestFitEnabled`|Execute o mapeamento de melhor ajuste de caracteres Unicode que não têm uma correspondência exata no conjunto de caracteres ANSI.|  
+|`pmBestFitDisabled`|Não execute o mapeamento de melhor ajuste de caracteres Unicode. Nesse caso, todos os caracteres mapeável serão substituídos por um '? '.|  
 |`pmBestFitMask`|Reservado.|  
 |`pmThrowOnUnmappableCharUseAssem`|Reservado.|  
-|`pmThrowOnUnmappableCharEnabled`|Throw an exception when the interop marshaler encounters an unmappable character.|  
-|`pmThrowOnUnmappableCharDisabled`|Do not throw an exception when the interop marshaler encounters an unmappable character.|  
+|`pmThrowOnUnmappableCharEnabled`|Gerar uma exceção quando o marshaling interop encontrar um caractere mapeável.|  
+|`pmThrowOnUnmappableCharDisabled`|Não lance uma exceção quando o marshaling interop encontra um caractere mapeável.|  
 |`pmThrowOnUnmappableCharMask`|Reservado|  
-|`pmSupportsLastError`|Allow the callee to call the Win32 `SetLastError` function before returning from the attributed method.|  
+|`pmSupportsLastError`|Permitir que o receptor chame a função de `SetLastError` do Win32 antes de retornar do método atribuído.|  
 |`pmCallConvMask`|Reservado|  
-|`pmCallConvWinapi`|Use the default platform calling convention. For example, on Windows the default is `StdCall` and on Windows CE .NET it is `Cdecl`.|  
-|`pmCallConvCdecl`|Use the `Cdecl` calling convention. In this case, the caller cleans the stack. This enables calling functions with `varargs` (that is, functions that accept a variable number of parameters).|  
-|`pmCallConvStdcall`|Use the `StdCall` calling convention. In this case, the callee cleans the stack. Essa é a convenção padrão para chamar funções não gerenciadas com a invocação da plataforma.|  
-|`pmCallConvThiscall`|Use the `ThisCall` calling convention. In this case, the first parameter is the `this` pointer and is stored in register ECX. Outros parâmetros são enviados por push na pilha. The `ThisCall` calling convention is used to call methods on classes exported from an unmanaged DLL.|  
+|`pmCallConvWinapi`|Use a Convenção de chamada de plataforma padrão. Por exemplo, no Windows, o padrão é `StdCall` e Windows CE .NET é `Cdecl`.|  
+|`pmCallConvCdecl`|Use a Convenção de chamada `Cdecl`. Nesse caso, o chamador limpa a pilha. Isso permite chamar funções com `varargs` (ou seja, funções que aceitam um número variável de parâmetros).|  
+|`pmCallConvStdcall`|Use a Convenção de chamada `StdCall`. Nesse caso, o receptor limpa a pilha. Essa é a convenção padrão para chamar funções não gerenciadas com a invocação da plataforma.|  
+|`pmCallConvThiscall`|Use a Convenção de chamada `ThisCall`. Nesse caso, o primeiro parâmetro é o ponteiro `this` e é armazenado no Registro ECX. Outros parâmetros são enviados por push na pilha. A Convenção de chamada `ThisCall` é usada para chamar métodos em classes exportadas de uma DLL não gerenciada.|  
 |`pmCallConvFastcall`|Reservado.|  
 |`pmMaxValue`|Reservado.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

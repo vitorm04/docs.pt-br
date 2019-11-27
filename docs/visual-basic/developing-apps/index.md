@@ -36,7 +36,7 @@ Esta seção aborda documentação conceitual para a linguagem do Visual Basic.
  [Personalizando projetos e estendendo My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
  Descreve como você pode personalizar modelos de projeto para fornecer mais objetos `My`.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
 
  [Guia de programação do Visual Basic](../../visual-basic/programming-guide/index.md)  
  Percorre os elementos essenciais de programação com o Visual Basic.  

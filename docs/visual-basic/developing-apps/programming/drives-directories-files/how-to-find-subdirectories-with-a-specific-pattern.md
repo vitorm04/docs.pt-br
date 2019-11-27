@@ -24,7 +24,7 @@ Use o método `GetDirectories`, fornecendo o nome e o caminho do diretório a se
 
 [!code-vb[VbVbcnFileAccess#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnFileAccess/VB/Class1.vb#1)]
 
-## <a name="robust-programming"></a>Programação robusta
+## <a name="robust-programming"></a>Programação Robusta
 
 As seguintes condições podem causar uma exceção:
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434437"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>Método IMetaDataAssemblyEmit::SetManifestResourceProps
-Modifies the specified `ManifestResource` metadata structure.  
+Modifica a estrutura de metadados de `ManifestResource` especificada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,26 +38,26 @@ HRESULT SetManifestResourceProps (
   
 ## <a name="parameters"></a>Parâmetros  
  `mr`  
- [in] The token that specifies the `ManifestResource` metadata structure to be modified.  
+ no O token que especifica a estrutura de metadados `ManifestResource` a ser modificada.  
   
  `tkImplementation`  
- [in] The token, of type `File` or `AssemblyRef`, that maps to the resource provider.  
+ no O token, do tipo `File` ou `AssemblyRef`, que é mapeado para o provedor de recursos.  
   
  `dwOffset`  
- [in] The offset to the beginning of the resource within the file.  
+ no O deslocamento para o início do recurso dentro do arquivo.  
   
  `dwResourceFlags`  
- [in] A bitwise combination of flag values that specify the attributes of the resource.  
+ no Uma combinação de bits de valor de sinalizador que especifica os atributos do recurso.  
   
 ## <a name="remarks"></a>Comentários  
- To create a `ManifestResource` metadata structure, use the [IMetaDataAssemblyEmit::DefineManifestResource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) method.  
+ Para criar uma estrutura de metadados `ManifestResource`, use o método [IMetaDataAssemblyEmit::D efinemanifestresource](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md) .  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -21,7 +21,7 @@ Este exemplo abre um objeto <xref:System.IO.StreamWriter> com o método `My.Comp
 
  [!code-vb[VbFileIOWrite#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#5)]  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
 
  As seguintes condições podem causar uma exceção:  
   

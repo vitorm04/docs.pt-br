@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445755"
 ---
 # <a name="icorprofilercallbackremotingserverreceivingmessage-method"></a>Método ICorProfilerCallback::RemotingServerReceivingMessage
-Notifies the profiler that the process has received a remote method invocation or activation request.  
+Notifica o criador de perfil de que o processo recebeu uma invocação de método remoto ou uma solicitação de ativação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,26 +35,26 @@ HRESULT RemotingClientSendingMessage(
   
 ## <a name="parameters"></a>Parâmetros  
  `pCookie`  
- [in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) under these conditions:  
+ no Um valor que corresponderá com o valor fornecido em [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md) sob estas condições:  
   
-- Remoting GUID cookies are active.  
+- Os cookies de GUID de comunicação remota estão ativos.  
   
-- The channel succeeds in transmitting the message.  
+- O canal tem sucesso ao transmitir a mensagem.  
   
-- GUID cookies are active on the client-side process.  
+- Os cookies de GUID estão ativos no processo do lado do cliente.  
   
- This allows easy pairing of remoting calls and the creation of a logical call stack.  
+ Isso permite um emparelhamento fácil de chamadas remotas e a criação de uma pilha de chamadas lógica.  
   
  `fIsAsync`  
- [in] A value that is `true` if the call is asynchronous; otherwise, `false`.  
+ no Um valor que será `true` se a chamada for assíncrona; caso contrário, `false`.  
   
 ## <a name="remarks"></a>Comentários  
- If the message request is asynchronous, the request can be serviced by any arbitrary thread.  
+ Se a solicitação de mensagem for assíncrona, a solicitação poderá ser atendida por qualquer thread arbitrário.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

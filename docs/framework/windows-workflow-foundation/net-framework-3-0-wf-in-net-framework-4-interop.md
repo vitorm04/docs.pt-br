@@ -13,7 +13,7 @@ ms.locfileid: "74283189"
 A atividade de <xref:System.Activities.Statements.Interop> é uma atividade de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4,5) que encapsula uma atividade .NET Framework 3,5 (WF 3,5) em um fluxo de trabalho [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. A atividade de WF 3 pode ser uma única atividade de folha ou uma árvore inteira de atividades. A execução (incluindo o cancelamento e a manipulação de exceção) e a persistência da atividade .NET Framework 3,5 ocorrem no contexto da instância de fluxo de trabalho de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] que está em execução.  
   
 > [!NOTE]
-> A atividade de <xref:System.Activities.Statements.Interop> não aparece na caixa de ferramentas do designer de fluxo de trabalho a menos que o projeto de fluxo de trabalho tem sua configuração de **Estrutura de Destino** definido como **o .NET Framework 4.5**.  
+> A atividade de <xref:System.Activities.Statements.Interop> não aparece na caixa de ferramentas do designer de fluxo de trabalho, a menos que o projeto do fluxo de trabalho tenha sua configuração de **estrutura de destino** definida como **.NET Framework 4,5**.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Critérios para usar uma atividade de WF 3 com uma atividade de Interoperabilidade  
  Para uma atividade de WF 3 execute com êxito em uma atividade de <xref:System.Activities.Statements.Interop> , os seguintes critérios devem ser encontrados:  

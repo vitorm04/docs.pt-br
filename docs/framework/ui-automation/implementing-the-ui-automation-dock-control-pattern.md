@@ -17,43 +17,43 @@ ms.locfileid: "74435441"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IDockProvider>, including information about properties. Links to additional references are listed at the end of the topic.  
+ Este tópico apresenta as diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.IDockProvider>, incluindo informações sobre propriedades. Links para referências adicionais são listados no final do tópico.  
   
- The <xref:System.Windows.Automation.DockPattern> control pattern is used to expose the dock properties of a control within a docking container. A docking container is a control that allows you to arrange child elements horizontally and vertically, relative to each other. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
+ O padrão de controle de <xref:System.Windows.Automation.DockPattern> é usado para expor as propriedades de encaixe de um controle dentro de um contêiner de encaixe. Um contêiner de encaixe é um controle que permite que você organize elementos filho horizontal e verticalmente, em relação um ao outro. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
   
- ![Docking container with two docked children.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
-Docking Example from Visual Studio Where "Class View" Window Is DockPosition.Right and "Error List" Window Is DockPosition.Bottom  
+ ![Contêiner de encaixe com dois filhos encaixados.](./media/uia-dockpattern-dockingexample.PNG "UIA_DockPattern_DockingExample")  
+Exemplo de encaixe do Visual Studio onde a janela "Modo de Exibição de Classe" é DockPosition. direita e a janela "Lista de Erros" é DockPosition. Bottom  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
- When implementing the Dock control pattern, note the following guidelines and conventions:  
+## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
+ Ao implementar o padrão de controle Dock, observe as seguintes diretrizes e convenções:  
   
-- <xref:System.Windows.Automation.Provider.IDockProvider> does not expose any properties of the docking container or any properties of controls that are docked adjacent to the current control within the docking container.  
+- <xref:System.Windows.Automation.Provider.IDockProvider> não expõe nenhuma Propriedade do contêiner de encaixe ou quaisquer propriedades de controles encaixadas adjacentes ao controle atual dentro do contêiner de encaixe.  
   
-- Controls are docked relative to each other based on their current z-order; the higher their z-order placement, the farther they are placed from the specified edge of the docking container.  
+- Os controles são encaixados em relação uns aos outros com base em sua ordem z atual; Quanto mais alto o posicionamento de ordem z, mais distante eles serão colocados da borda especificada do contêiner de encaixe.  
   
-- If the docking container is resized, any docked controls within the container will be repositioned flush to the same edge to which they were originally docked. The docked controls will also resize to fill any space within the container according to the docking behavior of their <xref:System.Windows.Automation.DockPosition>. For example, if <xref:System.Windows.Automation.DockPosition.Top> is specified, the left and right sides of the control will expand to fill any available space. If <xref:System.Windows.Automation.DockPosition.Fill> is specified, all four sides of the control will expand to fill any available space.  
+- Se o contêiner de encaixe for redimensionado, todos os controles encaixados dentro do contêiner serão liberados para a mesma borda para a qual eles foram originalmente encaixados. Os controles encaixados também serão redimensionados para preencher qualquer espaço dentro do contêiner de acordo com o comportamento de encaixe de seus <xref:System.Windows.Automation.DockPosition>. Por exemplo, se <xref:System.Windows.Automation.DockPosition.Top> for especificado, os lados esquerdo e direito do controle serão expandidos para preencher qualquer espaço disponível. Se <xref:System.Windows.Automation.DockPosition.Fill> for especificado, todos os quatro lados do controle serão expandidos para preencher qualquer espaço disponível.  
   
-- On a multi-monitor system, controls should dock to the left or right side of the current monitor. If that is not possible, they should dock to the left side of the leftmost monitor or the right side of the rightmost monitor.  
+- Em um sistema de vários monitores, os controles devem ser encaixados no lado esquerdo ou direito do monitor atual. Se isso não for possível, eles deverão encaixar no lado esquerdo do monitor mais à esquerda ou no lado direito do monitor mais à direita.  
   
 <a name="Required_Members_for_IDockProvider"></a>   
-## <a name="required-members-for-idockprovider"></a>Required Members for IDockProvider  
- The following properties and methods are required for implementing the IDockProvider interface.  
+## <a name="required-members-for-idockprovider"></a>Membros necessários para IDockProvider  
+ As propriedades e os métodos a seguir são necessários para implementar a interface IDockProvider.  
   
-|Required members|Member type|Anotações|  
+|Membros necessários|Tipo de membro|{1&gt;Observações&lt;1}|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|propriedade|Nenhum|  
+|<xref:System.Windows.Automation.Provider.IDockProvider.DockPosition%2A>|Propriedade|Nenhum|  
 |<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A>|Método|Nenhum|  
   
- This control pattern has no associated events.  
+ Este padrão de controle não tem eventos associados.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  
- Providers must throw the following exceptions.  
+ Os provedores devem lançar as seguintes exceções.  
   
 |Tipo de exceção|Condição|  
 |--------------------|---------------|  
-|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -   When a control is not able to execute the requested dock style.|  
+|<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.IDockProvider.SetDockPosition%2A><br /><br /> -Quando um controle não é capaz de executar o estilo de encaixe solicitado.|  
   
 ## <a name="see-also"></a>Consulte também
 

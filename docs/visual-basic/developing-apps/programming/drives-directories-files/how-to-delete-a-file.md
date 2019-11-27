@@ -36,7 +36,7 @@ O método `DeleteFile` do objeto `My.Computer.FileSystem` permite a exclusão de
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
 
  As seguintes condições podem causar uma exceção:  
   

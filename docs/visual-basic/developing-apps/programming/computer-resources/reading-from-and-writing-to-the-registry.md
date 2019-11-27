@@ -36,7 +36,7 @@ Este tópico descreve as tarefas e tópicos conceituais associados ao Registro.
  [Segurança e Registro](../../../../visual-basic/developing-apps/programming/computer-resources/security-and-the-registry.md)  
  Aborda questões de segurança que envolvem o Registro.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
 
  <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
  Lista e explica membros do objeto `My.Computer.Registry`.  

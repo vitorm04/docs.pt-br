@@ -59,5 +59,5 @@ A adição dos tipos de retorno `async`, `Task` e `Task<int>` simplifica o códi
 
 - [Build pela linha de comando com csc.exe](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Guia de Programação em C#](../index.md)
-- {1&gt;Métodos&lt;1}
+- [Métodos](../classes-and-structs/methods.md)
 - [Por dentro de um programa em C#](../inside-a-program/index.md)

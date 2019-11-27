@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437267"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a>Método IMetaDataImport::GetNameFromToken
-Gets the UTF-8 name of the object referenced by the specified metadata token. Esse método é obsoleto.  
+Obtém o nome UTF-8 do objeto referenciado pelo token de metadados especificado. Esse método é obsoleto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,22 +36,22 @@ HRESULT GetNameFromToken (
   
 ## <a name="parameters"></a>Parâmetros  
  `tk`  
- [in] The token representing the object to return the name for.  
+ no O token que representa o objeto para o qual retornar o nome.  
   
  `pszUtf8NamePtr`  
- [out] A pointer to the UTF-8 object name in the heap.  
+ fora Um ponteiro para o nome do objeto UTF-8 no heap.  
   
 ## <a name="remarks"></a>Comentários  
- `GetNameFromToken` é obsoleto. As an alternative, call a method to get the properties of the particular type of token required, such as `GetFieldProps` for a field or `GetMethodProps` for a method.  
+ `GetNameFromToken` é obsoleto. Como alternativa, chame um método para obter as propriedades do tipo específico de token necessário, como `GetFieldProps` para um campo ou `GetMethodProps` para um método.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
- **.NET Framework Versions:** 1.0  
+ **Versões do .NET Framework:** 1,0  
   
 ## <a name="see-also"></a>Consulte também
 

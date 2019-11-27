@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439832"
 ---
 # <a name="icorprofilerinfogetmodulemetadata-method"></a>Método ICorProfilerInfo::GetModuleMetaData
-Gets a metadata interface instance that maps to the specified module.  
+Obtém uma instância de interface de metadados que mapeia para o módulo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,26 +37,26 @@ HRESULT GetModuleMetaData(
   
 ## <a name="parameters"></a>Parâmetros  
  `moduleId`  
- [in] The ID of the module to which the interface instance will be mapped.  
+ no A ID do módulo para o qual a instância de interface será mapeada.  
   
  `dwOpenFlags`  
- [in] A value of the [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) enumeration that specifies the mode for opening manifest files. Only the `ofRead`, `ofWrite` and `ofNoTransform` bits are valid.  
+ no Um valor da enumeração [CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) que especifica o modo para abrir arquivos de manifesto. Somente os bits `ofRead`, `ofWrite` e `ofNoTransform` são válidos.  
   
  `riid`  
- [in] The reference ID (GUID) of the metadata interface whose instance will be retrieved. See [Metadata Interfaces](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) for a list of the interfaces.  
+ no A ID de referência (GUID) da interface de metadados cuja instância será recuperada. Consulte [interfaces de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) para obter uma lista das interfaces.  
   
  `ppOut`  
- [out] A pointer to the address of the metadata interface instance.  
+ fora Um ponteiro para o endereço da instância da interface de metadados.  
   
 ## <a name="remarks"></a>Comentários  
- You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.  
+ Você pode solicitar que os metadados sejam abertos no modo de leitura/gravação, mas isso resultará em uma execução de metadados mais lenta do programa, pois as alterações feitas nos metadados não podem ser otimizadas como eram do compilador.  
   
- Some modules (such as resource modules) have no metadata. In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.  
+ Alguns módulos (como módulos de recurso) não têm metadados. Nesses casos, `GetModuleMetaData` retornará um valor HRESULT de S_FALSE e um nulo em *`ppOut`.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

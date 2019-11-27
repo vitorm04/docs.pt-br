@@ -50,7 +50,7 @@ Esta seção explica como realizar tarefas que envolvem gravação em arquivos.
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
  Descreve o método `WriteAllText`.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
 
  [Leitura de arquivos](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  Explica como realizar tarefas que envolvem a leitura de arquivos.  

@@ -71,9 +71,9 @@ Para desenvolver aplicativos ou componentes do .NET Framework, faça o seguinte:
 
 Para obter mais informações sobre o desenvolvimento de aplicativos direcionados ao .NET Framework, consulte o [Guia de desenvolvimento](../development-guide.md).
 
-## <a name="related-articles"></a>Artigos relacionados
+## <a name="related-articles"></a>{1&gt;{2&gt;Artigos relacionados&lt;2}&lt;1}
 
-| Título | Descrição |
+| Title | Descrição |
 | ----- |------------ |
 | [Visão geral](overview.md) | Fornece informações detalhadas para desenvolvedores que criam aplicativos direcionados ao .NET Framework. |
 | [Guia de instalação](../install/index.md) | Fornece informações sobre como instalar o .NET Framework. |  

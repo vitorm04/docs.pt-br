@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436493"
 ---
 # <a name="corparamattr-enumeration"></a>Enumeração CorParamAttr
-Contains values that describe the metadata of a method parameter.  
+Contém valores que descrevem os metadados de um parâmetro de método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,20 +44,20 @@ typedef enum CorParamAttr {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`pdIn`|Specifies that the parameter is passed into the method call.|  
-|`pdOut`|Specifies that the parameter is passed from the method return.|  
+|`pdIn`|Especifica que o parâmetro é passado para a chamada de método.|  
+|`pdOut`|Especifica que o parâmetro é passado do retorno do método.|  
 |`pdOptional`|Especifica que o parâmetro é opcional.|  
-|`pdReservedMask`|Reserved for internal use by the common language runtime.|  
+|`pdReservedMask`|Reservado para uso interno pelo Common Language Runtime.|  
 |`pdHasDefault`|Especifica que o parâmetro tem um valor padrão.|  
-|`pdHasFieldMarshal`|Specifies that the parameter has marshaling information.|  
+|`pdHasFieldMarshal`|Especifica que o parâmetro tem informações de marshaling.|  
 |`pdUnused`|Não utilizado.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

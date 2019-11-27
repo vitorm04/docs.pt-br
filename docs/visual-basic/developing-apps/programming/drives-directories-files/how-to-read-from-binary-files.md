@@ -28,7 +28,7 @@ O objeto `My.Computer.FileSystem` fornece o método `ReadAllBytes` para ler arqu
   
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
 
  As seguintes condições podem causar o lançamento de uma exceção:  
   

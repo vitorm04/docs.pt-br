@@ -16,19 +16,19 @@ ms.locfileid: "74350691"
 Fornece propriedades e métodos para manipular o Registro.  
   
 ## <a name="remarks"></a>Comentários  
- For information about the methods and properties of the `My.Computer.Registry` object, see <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
+ Para obter informações sobre os métodos e as propriedades do objeto `My.Computer.Registry`, consulte <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>.  
   
- For more information, see [Reading from and Writing to the Registry](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
+ Para obter mais informações, consulte [lendo e gravando no registro](../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md).  
   
 > [!NOTE]
-> You can also manipulate the registry by using methods of the <xref:Microsoft.Win32.Registry?displayProperty=nameWithType> class.  
+> Você também pode manipular o registro usando métodos da classe <xref:Microsoft.Win32.Registry?displayProperty=nameWithType>.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **Class:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (provides access to <xref:Microsoft.Win32.Registry>)  
+ **Classe:** <xref:Microsoft.VisualBasic.MyServices.RegistryProxy> (fornece acesso ao <xref:Microsoft.Win32.Registry>)  
   
- **Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)  
+ **Assembly:** Visual Basic a biblioteca de tempo de execução (em Microsoft. VisualBasic. dll)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -24,7 +24,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Mostra como criar uma solução assíncrona usando [async](./language-reference/keywords/async.md) e [await](./language-reference/operators/await.md).  
   
  [Criando um componente do Windows Runtime em C# ou no Visual Basic e chamando-o do JavaScript](/windows/uwp/winrt-components/walkthrough-creating-a-simple-windows-runtime-component-and-calling-it-from-javascript)  
- Shows how to create a Windows Runtime type, package it in a Windows Runtime component, and then call the component from a Windows 8.x Store app that's built for Windows by using JavaScript.  
+ Mostra como criar um tipo de Windows Runtime, empacotá-lo em um componente Windows Runtime e, em seguida, chamar o componente de um aplicativo da loja do Windows 8. x criado para o Windows usando JavaScript.  
   
  [Programação do Office (C# e Visual Basic)](./programming-guide/interop/walkthrough-office-programming.md)  
  Mostra como criar uma planilha do Excel e um documento do Word usando C# e Visual Basic.  
@@ -65,7 +65,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Escrevendo um visualizador em C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
  Mostra como escrever um visualizador simples usando C#.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Exemplos e instruções passo a passo para implantações](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  Fornece exemplos passo a passo de cenários comuns de implantação.  
   

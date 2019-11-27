@@ -1,5 +1,5 @@
 ---
-title: 'How to: read from fixed-width text Files'
+title: 'Como: ler de arquivos de texto de largura fixa'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - fixed-width text file

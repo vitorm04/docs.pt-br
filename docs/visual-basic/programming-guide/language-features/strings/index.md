@@ -13,11 +13,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344332"
 ---
 # <a name="strings-in-visual-basic"></a>Cadeias de caracteres no Visual Basic
-This section describes the basic concepts behind using strings in Visual Basic.  
+Esta seção descreve os conceitos básicos por trás do uso de cadeias de caracteres no Visual Basic.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução às cadeias de caracteres no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)  
- Lists topics that describe the basic concepts behind using strings in Visual Basic.  
+ Lista os tópicos que descrevem os conceitos básicos por trás usando cadeias de caracteres em Visual Basic.  
   
  [Como criar cadeias de caracteres usando StringBuilder no Visual Basic](../../../../visual-basic/programming-guide/language-features/strings/how-to-create-strings-using-a-stringbuilder.md)  
  Demonstra como criar de maneira eficiente uma cadeia de caracteres longa com base em várias cadeias menores.  

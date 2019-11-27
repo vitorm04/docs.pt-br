@@ -66,7 +66,7 @@ typedef enum CorCheckDuplicatesFor {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
 |`MDDupAll`|Verifique se há duplicatas em todos os tokens de metadados.|  
 |`MDDupENC`|Não usado.|  

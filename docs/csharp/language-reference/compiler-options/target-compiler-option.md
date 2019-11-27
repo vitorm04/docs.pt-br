@@ -20,7 +20,7 @@ ms.locfileid: "74204510"
 A opção do compilador **-target** pode ser especificada em uma das quatro formas:  
   
  [/target:appcontainerexe](./target-appcontainerexe-compiler-option.md)  
- To create an .exe file for Windows 8.x Store apps.  
+ Para criar um arquivo. exe para aplicativos da loja do Windows 8. x.  
   
  [/target:exe](./target-exe-compiler-option.md)  
  Para criar um arquivo .exe.  
@@ -37,7 +37,7 @@ A opção do compilador **-target** pode ser especificada em uma das quatro form
  [/target:winmdobj](./target-winmdobj-compiler-option.md)  
  Para criar um arquivo .winmdobj intermediário.  
   
- A menos que você especifique **-target:module**, o **-target** faz com que um manifesto do assembly do .NET Framework seja colocado em um arquivo de saída. For more information, see [Assemblies in .NET](../../../standard/assembly/index.md) and [Common Attributes](../../programming-guide/concepts/attributes/common-attributes.md).  
+ A menos que você especifique **-target:module**, o **-target** faz com que um manifesto do assembly do .NET Framework seja colocado em um arquivo de saída. Para obter mais informações, consulte [assemblies no .net](../../../standard/assembly/index.md) e [atributos comuns](../../programming-guide/concepts/attributes/common-attributes.md).  
   
  O manifesto do assembly é colocado no primeiro arquivo de saída .exe na compilação ou na primeira DLL, se não houver nenhum arquivo de saída .exe. Por exemplo, na linha de comando a seguir, o manifesto será colocado em `1.exe`:  
   

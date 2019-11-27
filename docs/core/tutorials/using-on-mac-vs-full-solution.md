@@ -23,13 +23,13 @@ Este tutorial mostra como criar um aplicativo que aceita uma palavra de pesquisa
 > - No Visual Studio para Mac, escolha **Ajuda** > **Relatar um Problema** no menu, ou **Relatar um Problema** na tela de boas-vindas. Isso abrirá uma janela para registrar um relatório de bug. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://developercommunity.visualstudio.com/spaces/41/index.html).
 > - Para fazer uma sugestão, escolha **Ajuda** > **Forneça uma Sugestão** no menu ou **Forneça uma Sugestão** na tela de boas-vindas. Isso leva você até a página da Web da [Comunidade de Desenvolvedores do Visual Studio para Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;Pré-requisitos&lt;1}
 
-- OpenSSL (if running .NET Core 1.1): See the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos) topic.
+- OpenSSL (se estiver executando o .NET Core 1,1): consulte o tópico [dependências e requisitos do .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos) .
 - [SDK 1.1 ou posterior do .NET Core](https://dotnet.microsoft.com/download)
 - [Visual Studio 2017 para Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 
-For more information on prerequisites, see the [.NET Core dependencies and requirements](../install/dependencies.md?tabs=netcore30&pivots=os-macos). Para conferir os requisitos de sistema completos do Visual Studio 2017 para Mac, veja [Requisitos de sistema da família de produtos do Visual Studio 2017 para Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
+Para obter mais informações sobre os pré-requisitos, consulte as [dependências e os requisitos do .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos). Para conferir os requisitos de sistema completos do Visual Studio 2017 para Mac, veja [Requisitos de sistema da família de produtos do Visual Studio 2017 para Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Compilar uma biblioteca
 
@@ -75,7 +75,7 @@ As unidade de teste fornecem testes de software automatizados durante o desenvol
 
 1. Para que a biblioteca de teste funcione com a classe `WordCount`, adicione uma referência ao projeto `TextUtils`. Na barra lateral **Solução**, clique com o botão direito do mouse em **Dependências** em **TestLibrary**. Selecione **Editar Referências** no menu de contexto.
 
-1. In the **Edit References** dialog, select the **TextUtils** project on the **Projects** tab. Select **OK**.
+1. Na caixa de diálogo **Editar referências** , selecione o projeto **textutils** na guia **projetos** . Selecione **OK**.
 
    ![Caixa de diálogo Editar Referências do Visual Studio para Mac](./media/using-on-mac-vs-full-solution/visual-studio-mac-edit-references.png)
 

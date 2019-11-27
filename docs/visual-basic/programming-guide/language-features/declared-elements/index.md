@@ -52,7 +52,7 @@ Um *elemento declarado* é um elemento de programação que está definido em um
  [Referências a Elementos Declarados](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  Descreve como o compilador combina uma referência a uma declaração e como qualificar um nome.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Estrutura do Programa e Convenções de Código](../../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  Apresenta diretrizes para tornar mais fácil de ler, compreender e manter o seu código.  
   

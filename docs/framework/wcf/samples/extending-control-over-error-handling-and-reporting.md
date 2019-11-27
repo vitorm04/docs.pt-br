@@ -17,7 +17,7 @@ Este exemplo demonstra como estender o controle sobre o tratamento de erros e o 
   
  Os serviços podem interceptar erros, executar o processamento e afetar como os erros são relatados usando a interface <xref:System.ServiceModel.Dispatcher.IErrorHandler>. A interface tem dois métodos que podem ser implementados: <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> e <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A>. O método <xref:System.ServiceModel.Dispatcher.IErrorHandler.ProvideFault%28System.Exception%2CSystem.ServiceModel.Channels.MessageVersion%2CSystem.ServiceModel.Channels.Message%40%29> permite adicionar, modificar ou suprimir uma mensagem de falha gerada em resposta a uma exceção. O método <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> permite que o processamento de erro ocorra em caso de erro e controle se o tratamento de erros adicional pode ser executado.  
   
- Neste exemplo, o tipo de `CalculatorErrorHandler` implementa a interface <xref:System.ServiceModel.Dispatcher.IErrorHandler>. No  
+ Neste exemplo, o tipo de `CalculatorErrorHandler` implementa a interface <xref:System.ServiceModel.Dispatcher.IErrorHandler>. Na caixa  
   
  <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> método, o `CalculatorErrorHandler` grava um log do erro em um arquivo de texto Error. txt em c:\Logs. Observe que o exemplo registra em log a falha e não a suprimi, permitindo que ela seja relatada de volta ao cliente.  
   

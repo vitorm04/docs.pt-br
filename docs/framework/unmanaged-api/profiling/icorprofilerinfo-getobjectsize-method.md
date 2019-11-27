@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74438831"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>Método ICorProfilerInfo::GetObjectSize
-Gets the size of a specified object.  
+Obtém o tamanho de um objeto especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,28 +35,28 @@ HRESULT GetObjectSize(
   
 ## <a name="parameters"></a>Parâmetros  
  `objectId`  
- [in] The ID of the object.  
+ no A ID do objeto.  
   
  `pcSize`  
- [out] A pointer to the object's size, in bytes.  
+ fora Um ponteiro para o tamanho do objeto, em bytes.  
   
 ## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]
-> Esse método é obsoleto. It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms. Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.  
+> Esse método é obsoleto. Ele retorna COR_E_OVERFLOW para objetos com mais de 4 GB em plataformas de 64 bits. Em vez disso, use o método [ICorProfilerInfo4:: GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) .  
   
- Different objects of the same types often have the same size. However, some types, such as arrays or strings, may have a different size for each object.  
+ Objetos diferentes dos mesmos tipos geralmente têm o mesmo tamanho. No entanto, alguns tipos, como matrizes ou cadeias de caracteres, podem ter um tamanho diferente para cada objeto.  
   
- The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap. If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.  
+ O tamanho retornado pelo método `GetObjectSize` não inclui nenhum preenchimento de alinhamento que possa aparecer depois que o objeto estiver no heap de coleta de lixo. Se você usar o método `GetObjectSize` para avançar do objeto para o objeto no heap de coleta de lixo, adicione manualmente o preenchimento de alinhamento, conforme necessário.  
   
-- On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.  
+- No Windows de 32 bits, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1 e COR_PRF_GC_GEN_2 usam o alinhamento de 4 bytes e COR_PRF_GC_LARGE_OBJECT_HEAP usa o alinhamento de 8 bytes.  
   
-- On 64-bit Windows, the alignment is always 8 bytes.  
+- No Windows de 64 bits, o alinhamento é sempre de 8 bytes.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

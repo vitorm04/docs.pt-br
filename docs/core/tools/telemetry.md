@@ -57,13 +57,13 @@ O recurso de telemetria coleta os seguintes dados:
 
 | Versões do SDK | Dados |
 |--------------|------|
-| Todas          | Carimbo de data/hora da invocação. |
-| Todas          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
-| Todas          | Três endereços IP de octeto usados para determinar a localização geográfica. |
-| Todas          | Sistema operacional e versão. |
-| Todas          | RID (ID de runtime) em que o SDK está em execução. |
-| Todas          | Versão do SDK do .NET Core. |
-| Todas          | Perfil de telemetria: um valor opcional usado somente com o consentimento explícito do usuário e usado internamente na Microsoft. |
+| Tudo          | Carimbo de data/hora da invocação. |
+| Tudo          | Comando invocado (por exemplo, "build"), com hash no 2.1 em diante. |
+| Tudo          | Três endereços IP de octeto usados para determinar a localização geográfica. |
+| Tudo          | Sistema operacional e versão. |
+| Tudo          | RID (ID de runtime) em que o SDK está em execução. |
+| Tudo          | Versão do SDK do .NET Core. |
+| Tudo          | Perfil de telemetria: um valor opcional usado somente com o consentimento explícito do usuário e usado internamente na Microsoft. |
 | >=2.0        | Opções e argumentos de comando: várias opções e vários argumentos são coletados (não cadeias de caracteres arbitrárias). Confira [Opções coletadas](#collected-options). Com hash após 2.1.300. |
 | >=2.0         | Se o SDK está em execução em um contêiner. |
 | >=2.0         | Estruturas de destino (do evento `TargetFramework`), com hash começando em 2.1. |
@@ -79,7 +79,7 @@ O recurso de telemetria coleta os seguintes dados:
 
 Alguns comandos enviam dados adicionais. Um subconjunto de comandos envia o primeiro argumento:
 
-| Comando               | Dados do primeiro argumento enviados                |
+| Command               | Dados do primeiro argumento enviados                |
 |-----------------------|-----------------------------------------|
 | `dotnet help <arg>`   | A ajuda do comando está sendo consultada.  |
 | `dotnet new <arg>`    | O nome do modelo (com hash).             |
@@ -91,7 +91,7 @@ Alguns comandos enviam dados adicionais. Um subconjunto de comandos envia o prim
 
 Um subconjunto de comandos envia as opções selecionadas se elas são usadas, juntamente com seus valores:
 
-| Opção                  | Comandos                                                                                       |
+| Opção                  | Commands                                                                                       |
 |-------------------------|------------------------------------------------------------------------------------------------|
 | `--verbosity`           | Todos os comandos                                                                                   |
 | `--language`            | `dotnet new`                                                                                   |

@@ -25,7 +25,7 @@ Use o método `WriteAllBytes`, fornecendo o nome e o caminho do arquivo e os byt
 
 [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]
 
-## <a name="robust-programming"></a>Programação robusta
+## <a name="robust-programming"></a>Programação Robusta
 
 As seguintes condições podem criar uma exceção:
 

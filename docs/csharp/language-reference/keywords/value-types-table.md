@@ -1,5 +1,5 @@
 ---
-title: Value types table - C# reference
+title: Referência de tabela de C# tipos de valor
 ms.custom: seodec18
 ms.date: 11/06/2019
 helpviewer_keywords:
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428469"
 ---
-# <a name="value-types-table-c-reference"></a>Value types table (C# reference)
+# <a name="value-types-table-c-reference"></a>Tabela de tipos deC# valor (referência)
 
 A tabela a seguir mostra os tipos de valor de C#:
 

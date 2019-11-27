@@ -19,7 +19,7 @@ ms.locfileid: "74338785"
 ---
 # <a name="keywords-visual-basic"></a>Palavras-chave (Visual Basic)
 
-The following tables list all Visual Basic language keywords.
+As tabelas a seguir listam todas as palavras-chave do idioma Visual Basic.
 
 ## <a name="reserved-keywords"></a>Palavras-chave reservadas
 
@@ -43,7 +43,7 @@ As seguintes palavras-chave são *reservadas*, o que significa que elas não pod
 |[Dim](../statements/dim-statement.md)|[DirectCast](../operators/directcast-operator.md)|[Do](../statements/do-loop-statement.md)|[Duplo](../data-types/double-data-type.md)|  
 |[Each](../statements/for-each-next-statement.md)|[Else](../statements/else-statement.md)|[ElseIf](../statements/if-then-else-statement.md)|[Instrução End](../statements/end-statement.md)|  
 |[End \<palavra-chave>](../statements/end-keyword-statement.md)|`EndIf`|[Enum](../statements/enum-statement.md)|[Erase](../statements/erase-statement.md)|  
-|[Erro](../statements/on-error-statement.md)|[Event](../statements/event-statement.md)|[Exit](../statements/exit-statement.md)|[False](../data-types/boolean-data-type.md)|  
+|[Erro](../statements/on-error-statement.md)|[Event](../statements/event-statement.md)|[Sair](../statements/exit-statement.md)|[False](../data-types/boolean-data-type.md)|  
 |[Finally](../statements/try-catch-finally-statement.md)|[For (em For…Next)](../statements/for-next-statement.md)|[For Each… Next](../statements/for-each-next-statement.md)|[Friend](../modifiers/friend.md)|  
 |[Função](../statements/function-statement.md)|[Get](../statements/get-statement.md)|[GetType](../operators/gettype-operator.md)|[GetXMLNamespace](../operators/getxmlnamespace-operator.md)|  
 |[Global](../../../visual-basic/programming-guide/program-structure/namespaces.md)|`GoSub`|[GoTo](../statements/goto-statement.md)|[Handles](../statements/handles-clause.md)|  
@@ -80,7 +80,7 @@ As seguintes palavras-chave são *reservadas*, o que significa que elas não pod
 |[<\<=](../operators/left-shift-assignment-operator.md)|
 
 > [!NOTE]
-> `EndIf`, `GoSub`, `Variant`, and `Wend` are retained as reserved keywords, although they are no longer used in Visual Basic. O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../queries/let-clause.md).
+> `EndIf`, `GoSub`, `Variant`e `Wend` são retidos como palavras-chave reservadas, embora não sejam mais usadas em Visual Basic. O significado da palavra-chave `Let` foi alterada. `Let` agora é usado em consultas LINQ. Para obter mais informações, consulte [Cláusula Let](../queries/let-clause.md).
 
 ## <a name="unreserved-keywords"></a>Palavras-chave não reservadas
 
@@ -101,7 +101,7 @@ As seguintes palavras-chave não são reservadas, o que significa que elas podem
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Title|Descrição|  
 |-----------|-----------------|  
 |[Resumo de Matrizes](arrays-summary.md)|Lista os elementos de linguagem que são usados para criar, definir e usar matrizes.|  
 |[Resumo do Objeto de Coleção](collection-object-summary.md)|Lista os elementos de linguagem que são usados para coleções.|  

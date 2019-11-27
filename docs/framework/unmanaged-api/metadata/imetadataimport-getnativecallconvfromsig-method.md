@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74437246"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>Método IMetaDataImport::GetNativeCallConvFromSig
-Gets the native calling convention for the method that is represented by the specified signature pointer.  
+Obtém a Convenção de chamada nativa para o método representado pelo ponteiro de assinatura especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,20 +37,20 @@ HRESULT GetNativeCallConvFromSig (
   
 ## <a name="parameters"></a>Parâmetros  
  `pvSig`  
- [in] A pointer to the metadata signature of the method to return the calling convention for.  
+ no Um ponteiro para a assinatura de metadados do método para o qual retornar a Convenção de chamada.  
   
  `cbSig`  
- [in] The size in bytes of `pvSig`.  
+ no O tamanho em bytes de `pvSig`.  
   
  `pCallConv`  
- [out] A pointer to the native calling convention.  
+ fora Um ponteiro para a Convenção de chamada nativa.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

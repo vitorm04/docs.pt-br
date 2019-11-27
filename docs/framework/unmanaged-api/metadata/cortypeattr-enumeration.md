@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74436451"
 ---
 # <a name="cortypeattr-enumeration"></a>Enumeração CorTypeAttr
-Contains values that indicate type metadata.  
+Contém valores que indicam metadados de tipo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -75,46 +75,46 @@ typedef enum CorTypeAttr {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`tdVisibilityMask`|Used for type visibility information.|  
-|`tdNotPublic`|Specifies that the type is not in public scope.|  
-|`tdPublic`|Specifies that the type is in public scope.|  
-|`tdNestedPublic`|Specifies that the type is nested with public visibility.|  
-|`tdNestedPrivate`|Specifies that the type is nested with private visibility.|  
-|`tdNestedFamily`|Specifies that the type is nested with family visibility.|  
-|`tdNestedAssembly`|Specifies that the type is nested with assembly visibility.|  
-|`tdNestedFamANDAssem`|Specifies that the type is nested with family and assembly visibility.|  
-|`tdNestedFamORAssem`|Specifies that the type is nested with family or assembly visibility.|  
-|`tdLayoutMask`|Gets layout information for the type.|  
-|`tdAutoLayout`|Specifies that the fields of this type are laid out automatically.|  
-|`tdSequentialLayout`|Specifies that the fields of this type are laid out sequentially.|  
-|`tdExplicitLayout`|Specifies that field layout is supplied explicitly.|  
-|`tdClassSemanticsMask`|Gets semantic information about the type.|  
+|`tdVisibilityMask`|Usado para informações de visibilidade de tipo.|  
+|`tdNotPublic`|Especifica que o tipo não está no escopo público.|  
+|`tdPublic`|Especifica que o tipo está no escopo público.|  
+|`tdNestedPublic`|Especifica que o tipo é aninhado com visibilidade pública.|  
+|`tdNestedPrivate`|Especifica que o tipo é aninhado com visibilidade privada.|  
+|`tdNestedFamily`|Especifica que o tipo é aninhado com visibilidade de família.|  
+|`tdNestedAssembly`|Especifica que o tipo é aninhado com visibilidade de assembly.|  
+|`tdNestedFamANDAssem`|Especifica que o tipo é aninhado com visibilidade de família e assembly.|  
+|`tdNestedFamORAssem`|Especifica que o tipo é aninhado com visibilidade de família ou assembly.|  
+|`tdLayoutMask`|Obtém informações de layout para o tipo.|  
+|`tdAutoLayout`|Especifica que os campos desse tipo são dispostos automaticamente.|  
+|`tdSequentialLayout`|Especifica que os campos desse tipo são dispostos em sequência.|  
+|`tdExplicitLayout`|Especifica que o layout do campo é fornecido explicitamente.|  
+|`tdClassSemanticsMask`|Obtém informações semânticas sobre o tipo.|  
 |`tdClass`|Especifica que o tipo é uma classe.|  
 |`tdInterface`|Especifica que o tipo é uma interface.|  
 |`tdAbstract`|Especifica que o tipo é abstrato.|  
-|`tdSealed`|Specifies that the type cannot be extended.|  
-|`tdSpecialName`|Specifies that the class name is special. Its name describes how.|  
-|`tdImport`|Specifies that the type is imported.|  
-|`tdSerializable`|Specifies that the type is serializable.|  
-|`tdWindowsRuntime`|Specifies that this type is a Windows Runtime type.|  
-|`tdStringFormatMask`|Gets information about how strings are encoded and formatted.|  
-|`tdAnsiClass`|Specifies that this type interprets an LPTSTR as ANSI.|  
-|`tdUnicodeClass`|Specifies that this type interprets an LPTSTR as Unicode.|  
-|`tdAutoClass`|Specifies that this type interprets an LPTSTR automatically.|  
-|`tdCustomFormatClass`|Specifies that the type has a non-standard encoding, as specified by `CustomFormatMask`.|  
-|`tdCustomFormatMask`|Use this mask to get non-standard encoding information for native interop. The meaning of the values of these two bits is unspecified.|  
-|`tdBeforeFieldInit`|Specifies that the type must be initialized before the first attempt to access a static field.|  
-|`tdForwarder`|Specifies that the type is exported, and a type forwarder.|  
-|`tdReservedMask`|This flag and the flags below are used internally by the common language runtime.|  
-|`tdRTSpecialName`|Specifies that the common language runtime should check the name encoding.|  
-|`tdHasSecurity`|Specifies that the type has security associated with it.|  
+|`tdSealed`|Especifica que o tipo não pode ser estendido.|  
+|`tdSpecialName`|Especifica que o nome da classe é especial. Seu nome descreve como.|  
+|`tdImport`|Especifica que o tipo é importado.|  
+|`tdSerializable`|Especifica que o tipo é serializável.|  
+|`tdWindowsRuntime`|Especifica que esse tipo é um tipo de Windows Runtime.|  
+|`tdStringFormatMask`|Obtém informações sobre como as cadeias de caracteres são codificadas e formatadas.|  
+|`tdAnsiClass`|Especifica que esse tipo interpreta um LPTSTR como ANSI.|  
+|`tdUnicodeClass`|Especifica que esse tipo interpreta um LPTSTR como Unicode.|  
+|`tdAutoClass`|Especifica que esse tipo interpreta automaticamente um LPTSTR.|  
+|`tdCustomFormatClass`|Especifica que o tipo tem uma codificação não padrão, conforme especificado por `CustomFormatMask`.|  
+|`tdCustomFormatMask`|Use essa máscara para obter informações de codificação não padrão para a interoperabilidade nativa. O significado dos valores desses dois bits não é especificado.|  
+|`tdBeforeFieldInit`|Especifica que o tipo deve ser inicializado antes da primeira tentativa de acessar um campo estático.|  
+|`tdForwarder`|Especifica que o tipo é exportado e um encaminhador de tipo.|  
+|`tdReservedMask`|Esse sinalizador e os sinalizadores abaixo são usados internamente pelo Common Language Runtime.|  
+|`tdRTSpecialName`|Especifica que a Common Language Runtime deve verificar a codificação do nome.|  
+|`tdHasSecurity`|Especifica que o tipo tem segurança associada a ele.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74433292"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>Método ICorProfilerInfo2::GetCodeInfo2
-Gets the extents of native code associated with the specified `FunctionID`.  
+Obtém as extensões do código nativo associado ao `FunctionID`especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,28 +38,28 @@ HRESULT GetCodeInfo2(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionID`  
- [in] The ID of the function with which the native code is associated.  
+ no A ID da função à qual o código nativo está associado.  
   
  `cCodeInfos`  
- [in] The size of the `codeInfos` array.  
+ no O tamanho da matriz de `codeInfos`.  
   
  `pcCodeInfos`  
- [out] A pointer to the total number of [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) structures available.  
+ fora Um ponteiro para o número total de estruturas de [COR_PRF_CODE_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-code-info-structure.md) disponíveis.  
   
  `codeInfos`  
- [out] A caller-provided buffer. After the method returns, it contains an array of `COR_PRF_CODE_INFO` structures, each of which describes a block of native code.  
+ fora Um buffer fornecido pelo chamador. Depois que o método retorna, ele contém uma matriz de estruturas `COR_PRF_CODE_INFO`, cada uma delas descreve um bloco de código nativo.  
   
 ## <a name="remarks"></a>Comentários  
- The extents are sorted in order of increasing Microsoft intermediate language (MSIL) offset.  
+ As extensões são classificadas em ordem de aumento do deslocamento da MSIL (Microsoft Intermediate Language).  
   
- After `GetCodeInfo2` returns, you must verify that the `codeInfos` buffer was large enough to contain all the `COR_PRF_CODE_INFO` structures. To do this, compare the value of `cCodeInfos` with the value of the `cchName` parameter. If `cCodeInfos` divided by the size of a `COR_PRF_CODE_INFO` structure is smaller than `pcCodeInfos`, allocate a larger `codeInfos` buffer, update `cCodeInfos` with the new, larger size, and call `GetCodeInfo2` again.  
+ Depois que `GetCodeInfo2` retorna, você deve verificar se o buffer de `codeInfos` era grande o suficiente para conter todas as estruturas de `COR_PRF_CODE_INFO`. Para fazer isso, compare o valor de `cCodeInfos` com o valor do parâmetro `cchName`. Se `cCodeInfos` dividido pelo tamanho de uma estrutura de `COR_PRF_CODE_INFO` for menor do que `pcCodeInfos`, aloque um buffer de `codeInfos` maior, atualize `cCodeInfos` com o tamanho novo, maior e chame `GetCodeInfo2` novamente.  
   
- Alternatively, you can first call `GetCodeInfo2` with a zero-length `codeInfos` buffer to obtain the correct buffer size. You can then set the `codeInfos` buffer size to the value returned in `pcCodeInfos`, multiplied by the size of a `COR_PRF_CODE_INFO` structure, and call `GetCodeInfo2` again.  
+ Como alternativa, você pode primeiro chamar `GetCodeInfo2` com um buffer de `codeInfos` de comprimento zero para obter o tamanho de buffer correto. Em seguida, você pode definir o tamanho do buffer de `codeInfos` para o valor retornado em `pcCodeInfos`, multiplicado pelo tamanho de uma estrutura de `COR_PRF_CODE_INFO` e chamar `GetCodeInfo2` novamente.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

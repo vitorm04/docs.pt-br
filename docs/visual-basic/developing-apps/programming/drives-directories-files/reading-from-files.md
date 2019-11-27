@@ -56,7 +56,7 @@ Esta seção explica como executar tarefas que estão associadas à leitura de a
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A>  
  Descreve o método `OpenTextFileReader`.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
 
  [Armazenando Dados e Lendo da Área de Transferência](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)  
  Explica como realizar tarefas associadas ao `My.Computer.Clipboard`, como leitura e gravação de dados na área de transferência.  

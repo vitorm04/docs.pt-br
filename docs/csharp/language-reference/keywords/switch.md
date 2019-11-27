@@ -46,7 +46,7 @@ No C# 6 e versões anteriores, a expressão de correspondência deve ser uma exp
 - um [char](../builtin-types/char.md).
 - um [string](../builtin-types/reference-types.md).
 - um [bool](bool.md).
-- an [integral](../builtin-types/integral-numeric-types.md) value, such as an `int` or a `long`.
+- um valor [integral](../builtin-types/integral-numeric-types.md) , como um `int` ou um `long`.
 - um valor [enum](enum.md).
 
 Começando com o C# 7.0, a expressão de correspondência pode ser qualquer expressão não nula.
@@ -59,7 +59,7 @@ Uma instrução `switch` pode incluir qualquer número de seções switch e cada
 
 [!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Because of this, the following code generates a compiler error, CS0163: "Control cannot fall through from one case label (\<case label>) to another."
+Apenas uma seção switch em uma instrução switch é executada. O C# não permite que a execução continue de uma seção switch para a próxima. Por isso, o código a seguir gera um erro do compilador, CS0163: "o controle não pode passar de um rótulo case (\<rótulo case >) para outro".
 
 ```csharp
 switch (caseSwitch)
@@ -121,7 +121,7 @@ O padrão de constante testa se a expressão de correspondência é igual a uma 
 em que *constant* é o valor para testar. *constant* pode ser qualquer uma das expressões de constante a seguir:
 
 - Um literal [bool](bool.md), `true` ou `false`.
-- Any [integral](../builtin-types/integral-numeric-types.md) constant, such as an `int`, a `long`, or a `byte`.
+- Qualquer constante [integral](../builtin-types/integral-numeric-types.md) , como uma `int`, uma `long`ou uma `byte`.
 - O nome de uma variável `const` declarada.
 - Uma constante de enumeração.
 - Um literal [char](../builtin-types/char.md).
@@ -193,7 +193,7 @@ O exemplo a seguir define uma classe `Shape` base, uma classe `Rectangle` que de
 
 Observe que a cláusula `when` no exemplo que tenta testar se um objeto `Shape` é `null` não é executada. O padrão de tipo correto para testar um `null` é `case null:`.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, consulte [A instrução switch](~/_csharplang/spec/statements.md#the-switch-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 

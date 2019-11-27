@@ -12,12 +12,12 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352794"
 ---
 # <a name="then-statement"></a>Instrução Then
-Introduces a statement block to be compiled or executed if a tested condition is true.  
+Apresenta um bloco de instruções a ser compilado ou executado se uma condição testada for verdadeira.  
   
 ## <a name="remarks"></a>Comentários  
- The `Then` keyword can be used in these contexts:  
+ A palavra-chave `Then` pode ser usada nesses contextos:  
   
- [#If...Then...#Else Directive](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#If... Diretiva then... #Else](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
   
  [Instrução If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
   

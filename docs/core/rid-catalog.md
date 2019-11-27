@@ -108,7 +108,7 @@ Apenas os valores comuns são listados. Para obter a versão completa e mais rec
   - `win10-arm`
   - `win10-arm64`
 
-See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-windows) for more information.
+Consulte [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows) para obter mais informações.
 
 ## <a name="linux-rids"></a>RIDs do Linux
 
@@ -126,7 +126,7 @@ Apenas os valores comuns são listados. Para obter a versão completa e mais rec
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-linux) for more information.
+Consulte [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux) para obter mais informações.
 
 ## <a name="macos-rids"></a>RIDs do macOS
 
@@ -145,7 +145,7 @@ Os RIDs do macOS usam a identidade visual “OSX” mais antiga. Apenas os valor
 - macOS 10.14 Mojave (.NET Core 1.1 ou versões posteriores)
   - `osx.10.14-x64`
 
-See [.NET Core dependencies and requirements](install/dependencies.md?tabs=netcore30&pivots=os-macos) for more information.
+Consulte [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-macos) para obter mais informações.
 
 ## <a name="see-also"></a>Consulte também
 

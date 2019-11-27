@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446675"
 ---
 # <a name="addfile-method"></a>Método AddFile
-Adds files to the assembly. Can also be used to create unbound modules.  
+Adiciona arquivos ao assembly. Também pode ser usado para criar módulos desvinculados.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,25 +39,25 @@ HRESULT AddFile(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- Unique ID of the assembly to be augmented.  
+ ID exclusiva do assembly a ser aumentada.  
   
  `pszFilename`  
- Fully qualified name of file to be added.  
+ Nome totalmente qualificado do arquivo a ser adicionado.  
   
  `dwFlags`  
- COM+ FileDef flags such as `ffContainsNoMetaData` and `ffWriteable`. `dwFlags` is passed to [DefineFile Method](../metadata/imetadataassemblyemit-definefile-method.md).  
+ Sinalizadores de FileDef COM+, como `ffContainsNoMetaData` e `ffWriteable`. `dwFlags` é passado para o [método definofile](../metadata/imetadataassemblyemit-definefile-method.md).  
   
  `pEmitter`  
- [IMetaDataEmit Interface](../metadata/imetadataemit-interface.md) interface to be used to emit metadata, if necessary.  
+ Interface de [interface IMetaDataEmit](../metadata/imetadataemit-interface.md) a ser usada para emitir metadados, se necessário.  
   
  `pFileToken`  
- Pointer to where the unique ID of the added file will be stored.  
+ Ponteiro para onde a ID exclusiva do arquivo adicionado será armazenada.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>Requisitos  
- Requires alink.h.  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ Requer ALink. h.  
   
 ## <a name="see-also"></a>Consulte também
 

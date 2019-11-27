@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74434414"
 ---
 # <a name="endmerge-method"></a>Método EndMerge
-Indicates that all custom attributes have been merged into the emit scope.  
+Indica que todos os atributos personalizados foram mesclados no escopo de emissão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,13 +35,13 @@ HRESULT EndMerge(
   
 ## <a name="parameters"></a>Parâmetros  
  `AssemblyID`  
- ID of the assembly.  
+ ID do assembly.  
   
 ## <a name="return-value"></a>Valor retornado  
- Returns S_OK if the method succeeds.  
+ Retorna S_OK se o método tiver sucesso.  
   
-## <a name="requirements"></a>Requisitos  
- Requires alink.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ Requer ALink. h  
   
 ## <a name="see-also"></a>Consulte também
 

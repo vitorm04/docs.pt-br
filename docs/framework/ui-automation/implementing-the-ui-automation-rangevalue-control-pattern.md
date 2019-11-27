@@ -17,43 +17,43 @@ ms.locfileid: "74435110"
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).  
   
- This topic introduces guidelines and conventions for implementing <xref:System.Windows.Automation.Provider.IRangeValueProvider>, including information about events and properties. Links to additional references are listed at the end of the topic.  
+ Este tópico apresenta as diretrizes e convenções para implementar <xref:System.Windows.Automation.Provider.IRangeValueProvider>, incluindo informações sobre eventos e propriedades. Links para referências adicionais são listados no final do tópico.  
   
- The <xref:System.Windows.Automation.RangeValuePattern> control pattern is used to support controls that can be set to a value within a range. For examples of controls that implement this control pattern, see [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md).  
+ O padrão de controle <xref:System.Windows.Automation.RangeValuePattern> é usado para dar suporte a controles que podem ser definidos para um valor dentro de um intervalo. Para obter exemplos de controles que implementam esse padrão de controle, consulte [mapeamento de padrão de controle para clientes de automação da interface do usuário](control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
-## <a name="implementation-guidelines-and-conventions"></a>Implementation Guidelines and Conventions  
- When implementing the Range Value control pattern, note the following guidelines and conventions:  
+## <a name="implementation-guidelines-and-conventions"></a>Diretrizes e convenções de implementação  
+ Ao implementar o padrão de controle de valor de intervalo, observe as seguintes diretrizes e convenções:  
   
-- Controls allow recalibration of their supported properties based upon locale or user preference. An example of this is a thermometer control that can be set to display the temperature in Fahrenheit or Celsius.  
+- Os controles permitem a recalibração de suas propriedades com suporte com base na localidade ou na preferência do usuário. Um exemplo disso é um controle de termômetro que pode ser definido para exibir a temperatura em Fahrenheit ou Celsius.  
   
-- Controls that have ambiguous range values, such as progress bars or sliders, should have those values normalized.  
+- Controles que têm valores de intervalo ambíguos, como barras de progresso ou controles deslizantes, devem ter esses valores normalizados.  
   
- ![Progress bar.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
-Example of a Progress Bar Where Value Is of Type Integer and Minimum and Maximum Property Values Are Normalized to 0 and 100, Respectively  
+ ![Barra de progresso.](./media/uia-rangevaluepattern-progress-bar.PNG "UIA_RangeValuePattern_Progress_Bar")  
+Exemplo de uma barra de progresso em que o valor é do tipo inteiro e os valores de propriedade mínimo e máximo são normalizados para 0 e 100, respectivamente  
   
 <a name="Required_Members_for_the_IRangeValueProvider"></a>   
-## <a name="required-members-for-irangevalueprovider"></a>Required Members for IRangeValueProvider  
+## <a name="required-members-for-irangevalueprovider"></a>Membros necessários para IRangeValueProvider  
   
-|Required member|Member type|Anotações|  
+|Membro necessário|Tipo de membro|{1&gt;Observações&lt;1}|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|propriedade|Nenhum|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|Métodos|Nenhum|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|Propriedade|Nenhum|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|{1&gt;Métodos&lt;1}|Nenhum|  
   
- This control pattern has no associated events.  
+ Este padrão de controle não tem eventos associados.  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>Exceções  
- Providers must throw the following exceptions.  
+ Os provedores devem lançar as seguintes exceções.  
   
 |Tipo de exceção|Condição|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> is called with a value that is either greater than <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> or less than <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> é chamado com um valor maior que <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> ou menor que <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>.|  
   
 ## <a name="see-also"></a>Consulte também
 

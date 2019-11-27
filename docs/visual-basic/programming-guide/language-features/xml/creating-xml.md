@@ -14,19 +14,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351730"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Criando XML no Visual Basic
-Visual Basic enables you to use *XML literals* directly in your code. The XML literal syntax represents [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects, and it is similar to the XML 1.0 syntax. This makes it easier to create XML elements, documents, and fragments programmatically because your code has the same structure as the final XML.  
+Visual Basic permite que você use *literais XML* diretamente em seu código. A sintaxe XML literal representa [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objetos e é semelhante à sintaxe XML 1,0. Isso facilita a criação de elementos XML, documentos e fragmentos programaticamente porque seu código tem a mesma estrutura que o XML final.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 |Termo|Definição|  
 |---|---|  
-|[Visão Geral dos Literais XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introduction to XML literals and how they relate to [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Expressões Inseridas no XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Describes how to use embedded expressions in XML literals.|  
-|[Como criar literais XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Describes how to create an XML element in code by using an XML literal.|  
-|[Espaço em Branco em Literais XML](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Describes how Visual Basic treats white space in XML literals.|  
-|[Especificação dos Literais XML e do XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Describes how the XML literal syntax in Visual Basic relates to the XML 1.0 specification.|  
-|[Como inserir expressões em literais XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Describes how to use embedded expressions in XML literals to create content at run time.|  
-|[Nomes de Elementos e Atributos XML Declarados](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Describes guidelines for naming XML elements and attributes.|  
+|[Visão Geral dos Literais XML](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-overview.md)|Introdução a literais XML e como eles se relacionam a [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
+|[Expressões Inseridas no XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)|Descreve como usar expressões inseridas em literais XML.|  
+|[Como criar literais XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-create-xml-literals.md)|Descreve como criar um elemento XML no código usando um literal XML.|  
+|[Espaço em Branco em Literais XML](../../../../visual-basic/programming-guide/language-features/xml/white-space-in-xml-literals.md)|Descreve como Visual Basic trata o espaço em branco em literais XML.|  
+|[Especificação dos Literais XML e do XML 1.0](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)|Descreve como a sintaxe XML literal no Visual Basic está relacionada à especificação XML 1,0.|  
+|[Como inserir expressões em literais XML](../../../../visual-basic/programming-guide/language-features/xml/how-to-embed-expressions-in-xml-literals.md)|Descreve como usar expressões inseridas em literais XML para criar conteúdo em tempo de execução.|  
+|[Nomes de Elementos e Atributos XML Declarados](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|Descreve as diretrizes para nomear elementos XML e atributos.|  
   
 ## <a name="see-also"></a>Consulte também
 

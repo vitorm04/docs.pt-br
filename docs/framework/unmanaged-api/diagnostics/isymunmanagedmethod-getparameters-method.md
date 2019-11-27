@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448962"
 ---
 # <a name="isymunmanagedmethodgetparameters-method"></a>Método ISymUnmanagedMethod::GetParameters
-Gets the parameters for this method. The parameters are returned in the order in which they are defined within the method's signature.  
+Obtém os parâmetros para este método. Os parâmetros são retornados na ordem em que são definidos dentro da assinatura do método.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,19 +37,19 @@ HRESULT GetParameters(
   
 ## <a name="parameters"></a>Parâmetros  
  `cParams`  
- [in] The size of the `params` array.  
+ no O tamanho da matriz de `params`.  
   
  `pcParams`  
- [in] A pointer to a `ULONG32` that receives the size of the buffer that is required to contain the parameters.  
+ no Um ponteiro para um `ULONG32` que recebe o tamanho do buffer necessário para conter os parâmetros.  
   
  `params`  
- [out] A pointer to the buffer that receives the parameters.  
+ fora Um ponteiro para o buffer que recebe os parâmetros.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 
