@@ -23,9 +23,9 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427967"
 ---
 # <a name="isymunmanagedwriterinitialize-method"></a>Método ISymUnmanagedWriter::Initialize
-Sets the metadata emitter interface with which this writer will be associated, and sets the output file name to which the debugging symbols will be written.  
+Define a interface do emissor de metadados com a qual esse gravador será associado e define o nome do arquivo de saída para o qual os símbolos de depuração serão gravados.  
   
- This method can be called only once, and it must be called before any other writer methods. Some writers may require a file name. However, you can always pass a file name to this method without any negative effect on writers that do not use the file name.  
+ Esse método pode ser chamado apenas uma vez e deve ser chamado antes de qualquer outro método de gravador. Alguns gravadores podem exigir um nome de arquivo. No entanto, você sempre pode passar um nome de arquivo para esse método sem nenhum efeito negativo nos gravadores que não usam o nome do arquivo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,22 +39,22 @@ HRESULT Initialize(
   
 ## <a name="parameters"></a>Parâmetros  
  `emitter`  
- [in] A pointer to the metadata emitter interface.  
+ no Um ponteiro para a interface do emissor de metadados.  
   
  `filename`  
- [in] The file name to which the debugging symbols are written. Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro será ignorado.  
+ no O nome do arquivo para o qual os símbolos de depuração são gravados. Se um nome de arquivo for especificado para um gravador que não use nomes de arquivo, esse parâmetro será ignorado.  
   
  `pIStream`  
- [in] If specified, the symbol writer will emit the symbols into the given <xref:System.Runtime.InteropServices.ComTypes.IStream> rather than to the file specified in the `filename` parameter. O parâmetro `pIStream` é opcional.  
+ no Se especificado, o gravador de símbolo emitirá os símbolos para o determinado <xref:System.Runtime.InteropServices.ComTypes.IStream> em vez de para o arquivo especificado no parâmetro `filename`. O parâmetro `pIStream` é opcional.  
   
  `fFullBuild`  
- [in] `true` if this is a full rebuild; `false` if this is an incremental compilation.  
+ [in] `true` se esta for uma recompilação completa; `false` se esta for uma compilação incremental.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427990"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>Método ISymUnmanagedWriter::DefineSequencePoints
-Define um grupo de pontos de sequência dentro do método atual. Each starting line and starting column define the start of a statement within a method. Each ending line and ending column define the end of a statement within a method. The arrays should be sorted in increasing order of offsets. The offset is always measured from the start of the method, in bytes.  
+Define um grupo de pontos de sequência dentro do método atual. Cada linha inicial e coluna inicial definem o início de uma instrução dentro de um método. Cada linha final e coluna final definem o final de uma instrução dentro de um método. As matrizes devem ser classificadas em ordem crescente de deslocamentos. O deslocamento é sempre medido a partir do início do método, em bytes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,31 +40,31 @@ HRESULT DefineSequencePoints(
   
 ## <a name="parameters"></a>Parâmetros  
  `document`  
- [in] The document object for which the sequence points are being defined.  
+ no O objeto de documento para o qual os pontos de sequência estão sendo definidos.  
   
  `spCount`  
- [in] A `ULONG32` that indicates the size of each of the `offsets`, `lines`, `columns`, `endLines`, and `endColumns` buffers.  
+ no Um `ULONG32` que indica o tamanho de cada um dos buffers `offsets`, `lines`, `columns`, `endLines`e `endColumns`.  
   
  `offsets`  
- [in] The offset of the sequence points measured from the beginning of the method.  
+ no O deslocamento dos pontos de sequência medidos a partir do início do método.  
   
  `lines`  
- [in] The starting line numbers of the sequence points.  
+ no Os números de linha inicial dos pontos de sequência.  
   
  `columns`  
- [in] The starting column numbers of the sequence points.  
+ no Os números de coluna inicial dos pontos de sequência.  
   
  `endLines`  
- [in] The ending line numbers of the sequence points. Esse parâmetro é opcional.  
+ no Os números de linha final dos pontos de sequência. Esse parâmetro é opcional.  
   
  `endColumns`  
- [in] The ending column numbers of the sequence points. Esse parâmetro é opcional.  
+ no Os números de coluna final dos pontos de sequência. Esse parâmetro é opcional.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
 ## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

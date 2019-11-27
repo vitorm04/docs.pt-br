@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426805"
 ---
 # <a name="imetadatatablesgetstring-method"></a>Método IMetaDataTables::GetString
-Gets the string at the specified index from the table column in the current reference scope.  
+Obtém a cadeia de caracteres no índice especificado da coluna de tabela no escopo de referência atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,17 +36,17 @@ HRESULT GetString (
   
 ## <a name="parameters"></a>Parâmetros  
  `ixString`  
- [in] The index at which to start to search for the next value.  
+ no O índice no qual começar a procurar o próximo valor.  
   
  `ppString`  
- [out] A pointer to a pointer to the returned string value.  
+ fora Um ponteiro para um ponteiro para o valor de cadeia de caracteres retornado.  
   
 ## <a name="requirements"></a>Requisitos  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
