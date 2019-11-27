@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: O objeto não dá suporte a esta ação
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445
@@ -11,15 +11,15 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353874"
 ---
-# <a name="object-doesnt-support-this-action-visual-basic"></a><span data-ttu-id="8a849-102">Object doesn't support this action (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8a849-102">Object doesn't support this action (Visual Basic)</span></span>
-<span data-ttu-id="8a849-103">You referenced a method or property that is not supported by this object.</span><span class="sxs-lookup"><span data-stu-id="8a849-103">You referenced a method or property that is not supported by this object.</span></span>  
+# <a name="object-doesnt-support-this-action-visual-basic"></a><span data-ttu-id="1b4a8-102">O objeto não dá suporte a esta ação (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1b4a8-102">Object doesn't support this action (Visual Basic)</span></span>
+<span data-ttu-id="1b4a8-103">Você referenciou um método ou propriedade que não tem suporte deste objeto.</span><span class="sxs-lookup"><span data-stu-id="1b4a8-103">You referenced a method or property that is not supported by this object.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8a849-104">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="8a849-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="1b4a8-104">Para corrigir esse erro</span><span class="sxs-lookup"><span data-stu-id="1b4a8-104">To correct this error</span></span>  
   
-1. <span data-ttu-id="8a849-105">Read the object's documentation for more information on the object.</span><span class="sxs-lookup"><span data-stu-id="8a849-105">Read the object's documentation for more information on the object.</span></span>  
+1. <span data-ttu-id="1b4a8-105">Leia a documentação do objeto para obter mais informações sobre o objeto.</span><span class="sxs-lookup"><span data-stu-id="1b4a8-105">Read the object's documentation for more information on the object.</span></span>  
   
-2. <span data-ttu-id="8a849-106">Ensure that the names of properties and methods are spelled correctly.</span><span class="sxs-lookup"><span data-stu-id="8a849-106">Ensure that the names of properties and methods are spelled correctly.</span></span>  
+2. <span data-ttu-id="1b4a8-106">Verifique se os nomes de propriedades e métodos estão escritos corretamente.</span><span class="sxs-lookup"><span data-stu-id="1b4a8-106">Ensure that the names of properties and methods are spelled correctly.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8a849-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="8a849-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1b4a8-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="1b4a8-107">See also</span></span>
 
-- [<span data-ttu-id="8a849-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="8a849-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="1b4a8-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="1b4a8-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

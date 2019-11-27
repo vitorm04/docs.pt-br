@@ -22,10 +22,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426675"
 ---
-# <a name="imetadatatablesgetstringheapsize-method"></a><span data-ttu-id="627e9-102">Método IMetaDataTables::GetStringHeapSize</span><span class="sxs-lookup"><span data-stu-id="627e9-102">IMetaDataTables::GetStringHeapSize Method</span></span>
-<span data-ttu-id="627e9-103">Gets the size, in bytes, of the string heap.</span><span class="sxs-lookup"><span data-stu-id="627e9-103">Gets the size, in bytes, of the string heap.</span></span>  
+# <a name="imetadatatablesgetstringheapsize-method"></a><span data-ttu-id="72e3c-102">Método IMetaDataTables::GetStringHeapSize</span><span class="sxs-lookup"><span data-stu-id="72e3c-102">IMetaDataTables::GetStringHeapSize Method</span></span>
+<span data-ttu-id="72e3c-103">Obtém o tamanho, em bytes, do heap de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="72e3c-103">Gets the size, in bytes, of the string heap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="627e9-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="627e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72e3c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="72e3c-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT GetStringHeapSize (  
@@ -33,20 +33,20 @@ HRESULT GetStringHeapSize (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="627e9-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="627e9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="72e3c-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="72e3c-105">Parameters</span></span>  
  `pcbStrings`  
- <span data-ttu-id="627e9-106">[out] A pointer to the size, in bytes, of the string heap.</span><span class="sxs-lookup"><span data-stu-id="627e9-106">[out] A pointer to the size, in bytes, of the string heap.</span></span>  
+ <span data-ttu-id="72e3c-106">fora Um ponteiro para o tamanho, em bytes, do heap de cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="72e3c-106">[out] A pointer to the size, in bytes, of the string heap.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="627e9-107">Requisitos</span><span class="sxs-lookup"><span data-stu-id="627e9-107">Requirements</span></span>  
- <span data-ttu-id="627e9-108">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="627e9-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="72e3c-107">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="72e3c-107">Requirements</span></span>  
+ <span data-ttu-id="72e3c-108">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="72e3c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="627e9-109">**Header:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="627e9-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="72e3c-109">**Cabeçalho:** Cor. h</span><span class="sxs-lookup"><span data-stu-id="72e3c-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="627e9-110">**Library:** Used as a resource in MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="627e9-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="72e3c-110">**Biblioteca:** Usado como um recurso em MsCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="72e3c-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="627e9-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="627e9-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="72e3c-111">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72e3c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="627e9-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="627e9-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="72e3c-112">Consulte também</span><span class="sxs-lookup"><span data-stu-id="72e3c-112">See also</span></span>
 
-- [<span data-ttu-id="627e9-113">Interface IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="627e9-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="627e9-114">Interface IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="627e9-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [<span data-ttu-id="72e3c-113">Interface IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="72e3c-113">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="72e3c-114">Interface IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="72e3c-114">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

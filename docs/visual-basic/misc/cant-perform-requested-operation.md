@@ -1,5 +1,5 @@
 ---
-title: Can't perform requested operation
+title: Não é possível executar a operação solicitada
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
@@ -11,13 +11,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353319"
 ---
-# <a name="cant-perform-requested-operation-visual-basic"></a><span data-ttu-id="43770-102">Can't perform requested operation (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43770-102">Can't perform requested operation (Visual Basic)</span></span>
-<span data-ttu-id="43770-103">An operation cannot be carried out because it would invalidate the current state of the project.</span><span class="sxs-lookup"><span data-stu-id="43770-103">An operation cannot be carried out because it would invalidate the current state of the project.</span></span> <span data-ttu-id="43770-104">For example, you may have tried to programmatically modify code that is running.</span><span class="sxs-lookup"><span data-stu-id="43770-104">For example, you may have tried to programmatically modify code that is running.</span></span>  
+# <a name="cant-perform-requested-operation-visual-basic"></a><span data-ttu-id="cbe7c-102">Não é possível executar a operação solicitada (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cbe7c-102">Can't perform requested operation (Visual Basic)</span></span>
+<span data-ttu-id="cbe7c-103">Uma operação não pode ser executada porque invalidaria o estado atual do projeto.</span><span class="sxs-lookup"><span data-stu-id="cbe7c-103">An operation cannot be carried out because it would invalidate the current state of the project.</span></span> <span data-ttu-id="cbe7c-104">Por exemplo, você pode ter tentado modificar programaticamente o código que está em execução.</span><span class="sxs-lookup"><span data-stu-id="cbe7c-104">For example, you may have tried to programmatically modify code that is running.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="43770-105">Para corrigir este erro</span><span class="sxs-lookup"><span data-stu-id="43770-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="cbe7c-105">Para corrigir esse erro</span><span class="sxs-lookup"><span data-stu-id="cbe7c-105">To correct this error</span></span>  
   
-- <span data-ttu-id="43770-106">Stop the code execution, make modifications if necessary, and then retry the operation.</span><span class="sxs-lookup"><span data-stu-id="43770-106">Stop the code execution, make modifications if necessary, and then retry the operation.</span></span>  
+- <span data-ttu-id="cbe7c-106">Pare a execução do código, faça modificações, se necessário, e repita a operação.</span><span class="sxs-lookup"><span data-stu-id="cbe7c-106">Stop the code execution, make modifications if necessary, and then retry the operation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43770-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="43770-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cbe7c-107">Consulte também</span><span class="sxs-lookup"><span data-stu-id="cbe7c-107">See also</span></span>
 
-- [<span data-ttu-id="43770-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="43770-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="cbe7c-108">Tipos de Erro</span><span class="sxs-lookup"><span data-stu-id="cbe7c-108">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)

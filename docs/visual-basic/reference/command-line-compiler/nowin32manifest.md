@@ -13,21 +13,21 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347887"
 ---
-# <a name="-nowin32manifest-visual-basic"></a><span data-ttu-id="e6f2c-102">-nowin32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6f2c-102">-nowin32manifest (Visual Basic)</span></span>
-<span data-ttu-id="e6f2c-103">Instrui o compilador a não inserir nenhum manifesto de aplicativo no arquivo executável.</span><span class="sxs-lookup"><span data-stu-id="e6f2c-103">Instructs the compiler not to embed any application manifest into the executable file.</span></span>  
+# <a name="-nowin32manifest-visual-basic"></a><span data-ttu-id="079db-102">-nowin32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="079db-102">-nowin32manifest (Visual Basic)</span></span>
+<span data-ttu-id="079db-103">Instrui o compilador a não inserir nenhum manifesto de aplicativo no arquivo executável.</span><span class="sxs-lookup"><span data-stu-id="079db-103">Instructs the compiler not to embed any application manifest into the executable file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e6f2c-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e6f2c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="079db-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="079db-104">Syntax</span></span>  
   
 ```console  
 -nowin32manifest  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="e6f2c-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="e6f2c-105">Remarks</span></span>  
- <span data-ttu-id="e6f2c-106">Quando essa opção for usada, o aplicativo estará sujeito à virtualização no Windows Vista, a menos que você forneça um manifesto do aplicativo em um arquivo de recurso Win32 ou durante uma etapa de build posterior.</span><span class="sxs-lookup"><span data-stu-id="e6f2c-106">When this option is used, the application will be subject to virtualization on Windows Vista unless you provide an application manifest in a Win32 Resource file or during a later build step.</span></span> <span data-ttu-id="e6f2c-107">Para saber mais sobre virtualização, confira [Implantação do ClickOnce no Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span><span class="sxs-lookup"><span data-stu-id="e6f2c-107">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="079db-105">Comentários</span><span class="sxs-lookup"><span data-stu-id="079db-105">Remarks</span></span>  
+ <span data-ttu-id="079db-106">Quando essa opção for usada, o aplicativo estará sujeito à virtualização no Windows Vista, a menos que você forneça um manifesto do aplicativo em um arquivo de recurso Win32 ou durante uma etapa de build posterior.</span><span class="sxs-lookup"><span data-stu-id="079db-106">When this option is used, the application will be subject to virtualization on Windows Vista unless you provide an application manifest in a Win32 Resource file or during a later build step.</span></span> <span data-ttu-id="079db-107">Para saber mais sobre virtualização, confira [Implantação do ClickOnce no Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span><span class="sxs-lookup"><span data-stu-id="079db-107">For more information about virtualization, see [ClickOnce Deployment on Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).</span></span>  
   
- <span data-ttu-id="e6f2c-108">Para saber mais sobre a criação do manifesto, confira [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).</span><span class="sxs-lookup"><span data-stu-id="e6f2c-108">For more information about manifest creation, see [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).</span></span>  
+ <span data-ttu-id="079db-108">Para saber mais sobre a criação do manifesto, confira [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).</span><span class="sxs-lookup"><span data-stu-id="079db-108">For more information about manifest creation, see [-win32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/win32manifest.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6f2c-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e6f2c-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="079db-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="079db-109">See also</span></span>
 
-- [<span data-ttu-id="e6f2c-110">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e6f2c-110">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="e6f2c-111">Página de Aplicativo, Designer de Projeto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e6f2c-111">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
+- [<span data-ttu-id="079db-110">Compilador de linha de comando do Visual Basic</span><span class="sxs-lookup"><span data-stu-id="079db-110">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="079db-111">Página de Aplicativo, Designer de Projeto (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="079db-111">Application Page, Project Designer (Visual Basic)</span></span>](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
