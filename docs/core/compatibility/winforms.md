@@ -1,6 +1,6 @@
 ---
-title: Windows Forms breaking changes - .NET Core
-description: Lists the breaking changes in Windows Forms for .NET Core.
+title: Windows Forms alterações significativas-.NET Core
+description: Lista as alterações significativas no Windows Forms para .NET Core.
 ms.date: 11/21/2019
 ms.openlocfilehash: 7b086ff41b41aa210b53a46700fc92ea4adb4077
 ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
@@ -9,11 +9,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74429231"
 ---
-# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="c66d9-103">Breaking changes in Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c66d9-103">Breaking changes in Windows Forms</span></span>
+# <a name="breaking-changes-in-windows-forms"></a><span data-ttu-id="c2935-103">Alterações recentes no Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c2935-103">Breaking changes in Windows Forms</span></span>
 
-<span data-ttu-id="c66d9-104">The following is a list of breaking changes in Windows Forms by .NET Core version.</span><span class="sxs-lookup"><span data-stu-id="c66d9-104">The following is a list of breaking changes in Windows Forms by .NET Core version.</span></span>
+<span data-ttu-id="c2935-104">Veja a seguir uma lista de alterações significativas no Windows Forms pela versão do .NET Core.</span><span class="sxs-lookup"><span data-stu-id="c2935-104">The following is a list of breaking changes in Windows Forms by .NET Core version.</span></span>
 
-## <a name="net-core-30-preview-9"></a><span data-ttu-id="c66d9-105">.NET Core 3.0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="c66d9-105">.NET Core 3.0 Preview 9</span></span>
+## <a name="net-core-30-preview-9"></a><span data-ttu-id="c2935-105">.NET Core 3,0 Preview 9</span><span class="sxs-lookup"><span data-stu-id="c2935-105">.NET Core 3.0 Preview 9</span></span>
 
 [!INCLUDE[Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls compatibility switch not supported](~/includes/core-changes/windowsforms/deprecate-allowupdatechildcontrolindexfortabcontrols.md)]
 
@@ -49,7 +49,7 @@ ms.locfileid: "74429231"
 
 [!INCLUDE[SerializableAttribute removed from some Windows Forms types](~/includes/core-changes/windowsforms/remove-serializationattribute.md)]
 
-## <a name="net-core-30-rc1"></a><span data-ttu-id="c66d9-106">.NET Core 3.0 RC1</span><span class="sxs-lookup"><span data-stu-id="c66d9-106">.NET Core 3.0 RC1</span></span>
+## <a name="net-core-30-rc1"></a><span data-ttu-id="c2935-106">.NET Core 3,0 RC1</span><span class="sxs-lookup"><span data-stu-id="c2935-106">.NET Core 3.0 RC1</span></span>
 
 [!INCLUDE[Change of access for AccessibleObject.RuntimeIDFirstItem](~/includes/core-changes/windowsforms/changed-access-for-runtimeidfirstitem.md)]
 
@@ -57,7 +57,7 @@ ms.locfileid: "74429231"
 
 [!INCLUDE[Duplicated APIs removed from Windows Forms](~/includes/core-changes/windowsforms/remove-duplicated-apis.md)]
 
-## <a name="net-core-30"></a><span data-ttu-id="c66d9-107">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="c66d9-107">.NET Core 3.0</span></span>
+## <a name="net-core-30"></a><span data-ttu-id="c2935-107">.NET Core 3.0</span><span class="sxs-lookup"><span data-stu-id="c2935-107">.NET Core 3.0</span></span>
 
 [!INCLUDE[Control.DefaultFont changed to Segoe UI 9pt](~/includes/core-changes/windowsforms/control-defaultfont-changed.md)]
 
@@ -65,6 +65,6 @@ ms.locfileid: "74429231"
 
 [!INCLUDE[Modernization of the FolderBrowserDialog](~/includes/core-changes/windowsforms/modernized-folderbrowserdialog.md)]
 
-## <a name="net-core-31"></a><span data-ttu-id="c66d9-108">.NET Core 3.1</span><span class="sxs-lookup"><span data-stu-id="c66d9-108">.NET Core 3.1</span></span>
+## <a name="net-core-31"></a><span data-ttu-id="c2935-108">.NET Core 3,1</span><span class="sxs-lookup"><span data-stu-id="c2935-108">.NET Core 3.1</span></span>
 
 [!INCLUDE[Removed controls](~/includes/core-changes/windowsforms/remove-controls-3.1.md)]
