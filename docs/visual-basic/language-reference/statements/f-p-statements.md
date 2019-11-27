@@ -10,15 +10,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351218"
 ---
 # <a name="f-p-statements"></a>Instruções F-P
-The following table contains a listing of Visual Basic language statements.  
+A tabela a seguir contém uma lista de instruções de Visual Basic Language.  
   
 |||||  
 |---|---|---|---|  
-|[For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Função](../../../visual-basic/language-reference/statements/function-statement.md)|[Get](../../../visual-basic/language-reference/statements/get-statement.md)|  
-|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[If...Then...Else](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[Implements](../../../visual-basic/language-reference/statements/implements-statement.md)|[Imports (Namespace e Tipo do .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)|  
+|[Para cada... Última](../../../visual-basic/language-reference/statements/for-each-next-statement.md)|[Para... Última](../../../visual-basic/language-reference/statements/for-next-statement.md)|[Função](../../../visual-basic/language-reference/statements/function-statement.md)|[Get](../../../visual-basic/language-reference/statements/get-statement.md)|  
+|[GoTo](../../../visual-basic/language-reference/statements/goto-statement.md)|[Se... Então... Restante](../../../visual-basic/language-reference/statements/if-then-else-statement.md)|[Implements](../../../visual-basic/language-reference/statements/implements-statement.md)|[Imports (Namespace e Tipo do .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)|  
 |[Imports (Namespace de XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)|[Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)|[Interface](../../../visual-basic/language-reference/statements/interface-statement.md)|[Mid](../../../visual-basic/language-reference/statements/mid-statement.md)|  
-|[Módulo](../../../visual-basic/language-reference/statements/module-statement.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[On Error](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Operador](../../../visual-basic/language-reference/statements/operator-statement.md)|  
-|[Option \<keyword>](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Opção Comparar](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Opção Explícita](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|[Opção Inferir](../../../visual-basic/language-reference/statements/option-infer-statement.md)|  
+|[Módulo](../../../visual-basic/language-reference/statements/module-statement.md)|[Namespace](../../../visual-basic/language-reference/statements/namespace-statement.md)|[Se houver erro](../../../visual-basic/language-reference/statements/on-error-statement.md)|[Operador](../../../visual-basic/language-reference/statements/operator-statement.md)|  
+|[Opção \<palavra-chave >](../../../visual-basic/language-reference/statements/option-keyword-statement.md)|[Opção Comparar](../../../visual-basic/language-reference/statements/option-compare-statement.md)|[Opção Explícita](../../../visual-basic/language-reference/statements/option-explicit-statement.md)|[Opção Inferir](../../../visual-basic/language-reference/statements/option-infer-statement.md)|  
 |[Opção Estrita](../../../visual-basic/language-reference/statements/option-strict-statement.md)|[Property](../../../visual-basic/language-reference/statements/property-statement.md)|||  
   
 ## <a name="see-also"></a>Consulte também

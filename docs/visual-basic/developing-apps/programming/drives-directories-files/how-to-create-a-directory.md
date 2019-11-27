@@ -24,7 +24,7 @@ Use o método `CreateDirectory` do objeto `My.Computer.FileSystem` para criar di
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
 
  As seguintes condições podem causar uma exceção:  
   

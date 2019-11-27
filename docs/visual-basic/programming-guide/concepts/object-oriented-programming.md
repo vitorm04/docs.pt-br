@@ -1,5 +1,5 @@
 ---
-title: Object-oriented programming
+title: Programação orientada a objeto
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
@@ -9,9 +9,9 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348156"
 ---
-# <a name="object-oriented-programming-visual-basic"></a>Object-oriented programming (Visual Basic)
+# <a name="object-oriented-programming-visual-basic"></a>Programação orientada a objeto (Visual Basic)
 
-Visual Basic provides full support for object-oriented programming including encapsulation, inheritance, and polymorphism.
+Visual Basic fornece suporte completo para a programação orientada a objeto, incluindo encapsulamento, herança e polimorfismo.
 
  *Encapsulamento* significa que um grupo de propriedades, métodos e outros membros relacionados é tratado como uma única unidade ou objeto.
 
@@ -23,18 +23,18 @@ Visual Basic provides full support for object-oriented programming including enc
 
 - [Classes e objetos](#classes-and-objects)
   - [Membros de classe](#class-members)
-    - [Properties and fields](#properties-and-fields)
+    - [Propriedades e campos](#properties-and-fields)
     - [Métodos](#methods)
     - [Construtores](#constructors)
     - [Destruidores](#destructors)
     - [Eventos](#events)
-    - [Nested classes](#nested-classes)
-  - [Access modifiers and access levels](#access-modifiers-and-access-levels)
-    - [Instantiating classes](#instantiating-classes)
-    - [Shared classes and members](#shared-classes-and-members)
+    - [Classes aninhadas](#nested-classes)
+  - [Modificadores de acesso e níveis de acesso](#access-modifiers-and-access-levels)
+    - [Instanciando classes](#instantiating-classes)
+    - [Classes e membros compartilhados](#shared-classes-and-members)
     - [Tipos anônimos](#anonymous-types)
 - [Herança](#inheritance)
-  - [Overriding members](#overriding-members)
+  - [Substituindo membros](#overriding-members)
 - [Interfaces](#interfaces)
 - [Genéricos](#generics)
 - [Delegados](#delegates)
@@ -50,7 +50,7 @@ Class SampleClass
 End Class
 ```
 
-Visual Basic also provides a light version of classes called *structures* that are useful when you need to create large array of objects and do not want to consume too much memory for that.
+O Visual Basic também fornece uma versão leve das classes chamadas *estruturas* que são úteis quando você precisa criar uma grande matriz de objetos e não deseja consumir muita memória para isso.
 
 Para definir uma estrutura:
 
@@ -68,7 +68,7 @@ Para obter mais informações, consulte:
 
 Cada classe tem diferentes *membros de classe* que incluem propriedades que descrevem dados da classe, métodos que definem o comportamento da classe e eventos que fornecem comunicação entre diferentes classes e objetos.
 
-#### <a name="properties-and-fields"></a>Properties and fields
+#### <a name="properties-and-fields"></a>Propriedades e campos
 
 Os campos e as propriedades representam as informações que um objeto contém. Os campos são como variáveis, porque podem ser lidos ou definidos de forma direta.
 
@@ -82,7 +82,7 @@ End Class
 
 As propriedades têm procedimentos de obter e definir, que oferecem mais controle sobre como os valores são definidos ou retornados.
 
-Visual Basic allows you either to create a private field for storing the property value or use so-called auto-implemented properties that create this field automatically behind the scenes and provide the basic logic for the property procedures.
+Visual Basic permite que você crie um campo particular para armazenar o valor da propriedade ou use as chamadas de propriedades implementadas automaticamente que criam esse campo automaticamente nos bastidores e fornecem a lógica básica para os procedimentos de propriedade.
 
 Para definir uma propriedade autoimplementada:
 
@@ -110,7 +110,7 @@ Class SampleClass
 End Class
 ```
 
-A maioria das propriedades têm métodos ou procedimentos para definir e obter o valor da propriedade. No entanto, você pode criar propriedades somente leitura ou somente gravação para impedir que elas sejam modificadas ou lidas. In Visual Basic you can use `ReadOnly` and `WriteOnly` keywords. No entanto, propriedades autoimplementadas não podem ser somente leitura ou somente gravação.
+A maioria das propriedades têm métodos ou procedimentos para definir e obter o valor da propriedade. No entanto, você pode criar propriedades somente leitura ou somente gravação para impedir que elas sejam modificadas ou lidas. No Visual Basic você pode usar `ReadOnly` e `WriteOnly` palavras-chave. No entanto, propriedades autoimplementadas não podem ser somente leitura ou somente gravação.
 
 Para obter mais informações, consulte:
 
@@ -120,12 +120,12 @@ Para obter mais informações, consulte:
 - [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
 - [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)
 
-#### <a name="methods"></a>Métodos
+#### <a name="methods"></a>{1&gt;Métodos&lt;1}
 
  Um *método* é uma ação que um objeto pode executar.
 
 > [!NOTE]
-> In Visual Basic, there are two ways to create a method: the `Sub` statement is used if the method does not return a value; the `Function` statement is used if a method returns a value.
+> Em Visual Basic, há duas maneiras de criar um método: a instrução `Sub` será usada se o método não retornar um valor; a instrução `Function` será usada se um método retornar um valor.
 
 Para definir um método de uma classe:
 
@@ -150,7 +150,7 @@ Overloads Sub Display(ByVal theInteger As Integer)
 End Sub
 ```
 
-Na maioria dos casos, você declara um método dentro de uma definição de classe. However, Visual Basic also supports *extension methods* that allow you to add methods to an existing class outside the actual definition of the class.
+Na maioria dos casos, você declara um método dentro de uma definição de classe. No entanto, Visual Basic também dá suporte a *métodos de extensão* que permitem adicionar métodos a uma classe existente fora da definição real da classe.
 
 Para obter mais informações, consulte:
 
@@ -159,7 +159,7 @@ Para obter mais informações, consulte:
 - [Sobrecargas](../../../visual-basic/language-reference/modifiers/overloads.md)
 - [Métodos de Extensão](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
 
-#### <a name="constructors"></a>Construtores
+#### <a name="constructors"></a>{1&gt;Construtores&lt;1}
 
 Construtores são métodos de classe que são executados automaticamente quando um objeto de um determinado tipo é criado. Os construtores normalmente inicializam os membros de dados do novo objeto. Um construtor pode ser executado apenas uma vez quando uma classe é criada. Além disso, o código no construtor sempre é executado antes de qualquer outro código em uma classe. No entanto, é possível criar várias sobrecargas de construtor da mesma forma que é feita para qualquer outro método.
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-For more information, see: [Object Lifetime: How Objects Are Created and Destroyed](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+Para obter mais informações, consulte: [tempo de vida do objeto: como os objetos são criados e destruídos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>Destruidores
 
@@ -185,15 +185,15 @@ Para obter mais informações sobre os destruidores e a coleta de lixo no .NET F
 
 Eventos permitem que uma classe ou objeto notifique outras classes ou objetos quando algo interessante ocorrer. A classe que envia (ou aciona) o evento é chamada de *editor* e as classes que recebem (ou manipulam) os eventos são chamadas *assinantes*. Para obter mais informações sobre os eventos e como eles são gerados e manipulados, consulte [Eventos](../../../standard/events/index.md).
 
-- To declare events, use the [Event Statement](../../../visual-basic/language-reference/statements/event-statement.md).
+- Para declarar eventos, use a [instrução de evento](../../../visual-basic/language-reference/statements/event-statement.md).
 
-- To raise events, use the [RaiseEvent Statement](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
+- Para gerar eventos, use a [instrução RaiseEvent](../../../visual-basic/language-reference/statements/raiseevent-statement.md).
 
-- To specify event handlers using a declarative way, use the [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) statement and the [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) clause.
+- Para especificar os manipuladores de eventos usando uma forma declarativa, use a instrução [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) e a cláusula [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) .
 
-- To be able to dynamically add, remove, and change the event handler associated with an event, use the [AddHandler Statement](../../../visual-basic/language-reference/statements/addhandler-statement.md) and [RemoveHandler Statement](../../../visual-basic/language-reference/statements/removehandler-statement.md) together with the [AddressOf Operator](../../../visual-basic/language-reference/operators/addressof-operator.md).
+- Para poder adicionar, remover e alterar dinamicamente o manipulador de eventos associado a um evento, use a [instrução AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md) e a [instrução RemoveHandler](../../../visual-basic/language-reference/statements/removehandler-statement.md) junto com o [operador AddressOf](../../../visual-basic/language-reference/operators/addressof-operator.md).
 
-#### <a name="nested-classes"></a>Nested classes
+#### <a name="nested-classes"></a>Classes aninhadas
 
 Uma classe definida dentro de outra classe é chamada de *aninhada*. Por padrão, a classe aninhada é particular.
 
@@ -211,13 +211,13 @@ Para criar uma instância da classe aninhada, use o nome da classe de contêiner
 Dim nestedInstance As Container.Nested = New Container.Nested()
 ```
 
-### <a name="access-modifiers-and-access-levels"></a>Access modifiers and access levels
+### <a name="access-modifiers-and-access-levels"></a>Modificadores de acesso e níveis de acesso
 
 Todas as classes e membros de classe podem especificar o nível de acesso que fornecem a outras classes usando *modificadores de acesso*.
 
 Os modificadores de acesso a seguir estão disponíveis:
 
-|Visual Basic Modifier|Definição|
+|Modificador de Visual Basic|Definição|
 |---------------------------|----------------|
 |[Público](../../../visual-basic/language-reference/modifiers/public.md)|O tipo ou membro pode ser acessado por qualquer outro código no mesmo assembly ou em outro assembly que faz referência a ele.|
 |[Privado](../../../visual-basic/language-reference/modifiers/private.md)|O tipo ou membro pode ser acessado somente pelo código na mesma classe.|
@@ -225,9 +225,9 @@ Os modificadores de acesso a seguir estão disponíveis:
 |[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly, mas não de outro assembly.|
 |`Protected Friend`|O tipo ou membro pode ser acessado por qualquer código no mesmo assembly ou por qualquer classe derivada em outro assembly.|
 
-For more information, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
+Para obter mais informações, consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).
 
-### <a name="instantiating-classes"></a>Instantiating classes
+### <a name="instantiating-classes"></a>Instanciando classes
 
 Para criar um objeto, você precisa instanciar uma classe ou criar uma instância da classe.
 
@@ -256,11 +256,11 @@ Para obter mais informações, consulte:
 - [Operador New](../../../visual-basic/language-reference/operators/new-operator.md)
 - [Inicializadores de objeto: tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-### <a name="shared-classes-and-members"></a>Shared classes and members
+### <a name="shared-classes-and-members"></a>Classes e membros compartilhados
 
- A shared member of the class is a property, procedure, or field that is shared by all instances of a class.
+ Um membro compartilhado da classe é uma propriedade, um procedimento ou um campo que é compartilhado por todas as instâncias de uma classe.
 
- To define a shared member:
+ Para definir um membro compartilhado:
 
 ```vb
 Class SampleClass
@@ -268,13 +268,13 @@ Class SampleClass
 End Class
 ```
 
- To access the shared member, use the name of the class without creating an object of this class:
+ Para acessar o membro compartilhado, use o nome da classe sem criar um objeto desta classe:
 
 ```vb
 MsgBox(SampleClass.SampleString)
 ```
 
- Shared modules in Visual Basic have shared members only and cannot be instantiated. Shared members also cannot access non-shared properties, fields or methods
+ Os módulos compartilhados no Visual Basic têm somente membros compartilhados e não podem ser instanciados. Membros compartilhados também não podem acessar propriedades, campos ou métodos não compartilhados
 
  Para obter mais informações, consulte:
 
@@ -295,12 +295,12 @@ Dim sampleObject =
 
 Para obter mais informações, consulte [Tipos Anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
-## <a name="inheritance"></a>Herança
+## <a name="inheritance"></a>{1&gt;Herança&lt;1}
 
-A herança permite que você crie uma nova classe que reutiliza, estende e modifica o comportamento definido em outras classes. A classe cujos membros são herdados é chamada *classe base* e a classe que herda esses membros é chamada *classe derivada*. However, all classes in Visual Basic implicitly inherit from the <xref:System.Object> class that supports .NET class hierarchy and provides low-level services to all classes.
+A herança permite que você crie uma nova classe que reutiliza, estende e modifica o comportamento definido em outras classes. A classe cujos membros são herdados é chamada *classe base* e a classe que herda esses membros é chamada *classe derivada*. No entanto, todas as classes em Visual Basic herdam implicitamente da classe <xref:System.Object> que oferece suporte à hierarquia de classes .NET e fornece serviços de nível baixo a todas as classes.
 
 > [!NOTE]
-> Visual Basic doesn't support multiple inheritance. Ou seja, você pode especificar apenas uma classe base para uma classe derivada.
+> Visual Basic não dá suporte a várias heranças. Ou seja, você pode especificar apenas uma classe base para uma classe derivada.
 
 Para herdar de uma classe base:
 
@@ -332,17 +332,17 @@ Para obter mais informações, consulte:
 - [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
 - [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
 
-### <a name="overriding-members"></a>Overriding members
+### <a name="overriding-members"></a>Substituindo membros
 
 Por padrão, uma classe derivada herda todos os membros de sua classe base. Se quiser alterar o comportamento do membro herdado, você precisa substituí-la. Ou seja, você pode definir uma nova implementação de método, propriedade ou evento na classe derivada.
 
 Os seguintes modificadores são usados para controlar como as propriedades e métodos são substituídos:
 
-|Visual Basic Modifier|Definição|
+|Modificador de Visual Basic|Definição|
 |---------------------------|----------------|
 |[Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)|Permite que um membro de classe seja substituído em uma classe derivada.|
 |[Substituições](../../../visual-basic/language-reference/modifiers/overrides.md)|Substitui um membro virtual (substituível) definido na classe base.|
-|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Prevents a member from being overridden in an inheriting class.|
+|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|Impede que um membro seja substituído em uma classe de herança.|
 |[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|Requer que um membro de classe seja substituído na classe derivada.|
 |[Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)|Oculta um membro herdado de uma classe base|
 
@@ -377,7 +377,7 @@ Para obter mais informações, consulte:
 
 ## <a name="generics"></a>Genéricos
 
-Classes, structures, interfaces and methods in .NET can include *type parameters* that define types of objects that they can store or use. O exemplo mais comum dos genéricos é uma coleção, em que você pode especificar o tipo dos objeto a serem armazenados em uma coleção.
+Classes, estruturas, interfaces e métodos no .NET podem incluir *parâmetros de tipo* que definem tipos de objetos que eles podem armazenar ou usar. O exemplo mais comum dos genéricos é uma coleção, em que você pode especificar o tipo dos objeto a serem armazenados em uma coleção.
 
 Para definir uma classe genérica:
 

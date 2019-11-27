@@ -8,7 +8,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349593"
 ---
-# <a name="-visual-basic-reference"></a>$ (Visual Basic Reference)
+# <a name="-visual-basic-reference"></a>$ (Referência de Visual Basic)
 
 Identifica um literal de cadeia de caracteres como uma [cadeia de caracteres interpolada](../../programming-guide/language-features/strings/interpolated-strings.md). Uma cadeia de caracteres interpolada é uma cadeia de caracteres semelhante ao modelo que contém texto literal juntamente com *expressões interpoladas*. Quando a cadeia de caracteres interpolada é resolvida, por exemplo em uma instrução de atribuição ou uma chamada de método, suas expressões interpoladas são substituídas por suas representações de cadeia de caracteres na cadeia de caracteres resultante. As cadeias de caracteres interpoladas são substituições para as [cadeias de caracteres de formato de composição](../../../standard/base-types/composite-formatting.md) com suporte pelo .NET Framework.
 
@@ -21,4 +21,4 @@ Para obter mais informações sobre cadeias de caracteres interpoladas, consulte
 ## <a name="see-also"></a>Consulte também
 
 - [Referência do Visual Basic](../index.md)
-- [Visual Basic Special Characters](index.md)
+- [Visual Basic caracteres especiais](index.md)

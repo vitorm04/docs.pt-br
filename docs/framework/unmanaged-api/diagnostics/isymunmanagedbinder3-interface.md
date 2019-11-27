@@ -22,19 +22,19 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449289"
 ---
 # <a name="isymunmanagedbinder3-interface"></a>Interface ISymUnmanagedBinder3
-Extends the symbol binder interface. Obtain this interface by calling `QueryInterface` on an object that implements the `ISymUnmanagedBinder` interface.  
+Estende a interface do fichário de símbolos. Obtenha essa interface chamando `QueryInterface` em um objeto que implementa a interface `ISymUnmanagedBinder`.  
   
 > [!IMPORTANT]
-> It is a security risk to open a program database (PDB) file from an untrusted source.  
+> É um risco de segurança abrir um arquivo de banco de dados do programa (PDB) de uma fonte não confiável.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Allows the user to implement or supply via callback either an `IID_IDiaReadExeAtRVACallback` or `IID_IDiaReadExeAtOffsetCallback` to obtain the Debug directory information from memory|  
+|[Método GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)|Permite que o usuário implemente ou forneça por meio do retorno de chamada um `IID_IDiaReadExeAtRVACallback` ou `IID_IDiaReadExeAtOffsetCallback` para obter as informações do diretório de depuração da memória|  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

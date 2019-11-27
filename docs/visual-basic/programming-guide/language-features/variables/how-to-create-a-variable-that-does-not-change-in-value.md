@@ -14,35 +14,35 @@ ms.locfileid: "74348641"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>Como criar uma variável que não se altera no valor (Visual Basic)
 
-The notion of a variable that does not change its value might appear to be contradictory. But there are situations when a constant is not feasible and it is useful to have a variable with a fixed value. In such a case you can define a member variable with the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.
+A noção de uma variável que não altera seu valor pode parecer ser contraditória. Mas há situações em que uma constante não é viável e é útil ter uma variável com um valor fixo. Nesse caso, você pode definir uma variável de membro com a palavra-chave [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) .
 
-You cannot use the [Const Statement](../../../../visual-basic/language-reference/statements/const-statement.md) to declare and assign a constant value in the following circumstances:
+Você não pode usar a [instrução const](../../../../visual-basic/language-reference/statements/const-statement.md) para declarar e atribuir um valor constante nas seguintes circunstâncias:
 
-- The `Const` statement does not accept the data type you want to use
+- A instrução `Const` não aceita o tipo de dados que você deseja usar
 
-- You do not know the value at compile time
+- Você não conhece o valor no tempo de compilação
 
-- You are unable to compute the constant value at compile time
+- Não é possível calcular o valor constante no tempo de compilação
 
-### <a name="to-create-a-variable-that-does-not-change-in-value"></a>To create a variable that does not change in value
+### <a name="to-create-a-variable-that-does-not-change-in-value"></a>Para criar uma variável que não é alterada no valor
 
-1. At module level, declare a member variable with the [Dim Statement](../../../../visual-basic/language-reference/statements/dim-statement.md), and include the [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) keyword.
+1. Em nível de módulo, declare uma variável de membro com a [instrução Dim](../../../../visual-basic/language-reference/statements/dim-statement.md)e inclua a palavra-chave [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md) .
 
     ```vb
     Dim ReadOnly timeStarted
     ```
 
-    You can specify `ReadOnly` only on a member variable. This means you must define the variable at module level, outside of any procedure.
+    Você pode especificar `ReadOnly` apenas em uma variável de membro. Isso significa que você deve definir a variável no nível de módulo, fora de qualquer procedimento.
 
-2. If you can compute the value in a single statement at compile time, use an initialization clause in the `Dim` statement. Follow the [As](../../../../visual-basic/language-reference/statements/as-clause.md) clause with an equal sign (`=`), followed by an expression. Be sure the compiler can evaluate this expression to a constant value.
+2. Se você puder calcular o valor em uma única instrução em tempo de compilação, use uma cláusula de inicialização na instrução `Dim`. Siga a [cláusula as com](../../../../visual-basic/language-reference/statements/as-clause.md) um sinal de igual (`=`), seguido por uma expressão. Verifique se o compilador pode avaliar essa expressão como um valor constante.
 
     ```vb
     Dim ReadOnly timeStarted As Date = Now
     ```
 
-    You can assign a value to a `ReadOnly` variable only once. Once you do so, no code can ever change its value.
+    Você pode atribuir um valor a uma variável `ReadOnly` apenas uma vez. Depois de fazer isso, nenhum código pode alterar seu valor.
 
-    If you do not know the value at compile time, or cannot compute it at compile time in a single statement, you can still assign it at run time in a constructor. To do this, you must declare the `ReadOnly` variable at class or structure level. In the constructor for that class or structure, compute the variable's fixed value, and assign it to the variable before returning from the constructor.
+    Se você não souber o valor em tempo de compilação, ou não puder computar em tempo de compilação em uma única instrução, ainda poderá atribuí-lo em tempo de execução em um construtor. Para fazer isso, você deve declarar a variável `ReadOnly` no nível de classe ou estrutura. No construtor para essa classe ou estrutura, calcule o valor fixo da variável e atribua-o à variável antes de retornar do construtor.
 
 ## <a name="see-also"></a>Consulte também
 

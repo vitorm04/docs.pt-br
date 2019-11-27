@@ -22,53 +22,53 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350805"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Expressões boolianas (Visual Basic)
-A *Boolean expression* is an expression that evaluates to a value of the [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` or `False`. `Boolean` expressions can take several forms. The simplest is the direct comparison of the value of a `Boolean` variable to a `Boolean` literal, as shown in the following example.  
+Uma *expressão booliana* é uma expressão que é avaliada como um valor do [tipo de dados booliano](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` ou `False`. `Boolean` expressões podem ter várias formas. A maneira mais simples é a comparação direta do valor de uma variável `Boolean` para um literal `Boolean`, conforme mostrado no exemplo a seguir.  
   
  [!code-vb[VbVbalrOperators#87](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#87)]  
   
-## <a name="two-meanings-of-the--operator"></a>Two Meanings of the = Operator  
- Notice that the assignment statement `newCustomer = True` looks the same as the expression in the preceding example, but it performs a different function and is used differently. In the preceding example, the expression `newCustomer = True` represents a Boolean value, and the `=` sign is interpreted as a comparison operator. In a stand-alone statement, the `=` sign is interpreted as an assignment operator and assigns the value on the right to the variable on the left. O exemplo a seguir ilustra essa situação.  
+## <a name="two-meanings-of-the--operator"></a>Dois significados do operador =  
+ Observe que a instrução de atribuição `newCustomer = True` tem a mesma aparência da expressão no exemplo anterior, mas executa uma função diferente e é usada de forma diferente. No exemplo anterior, a expressão `newCustomer = True` representa um valor booliano e o sinal de `=` é interpretado como um operador de comparação. Em uma instrução autônoma, o sinal de `=` é interpretado como um operador de atribuição e atribui o valor à direita para a variável à esquerda. O exemplo a seguir mostra isso.  
   
  [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
- For further information, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) and [Statements](../../../../visual-basic/language-reference/statements/index.md).  
+ Para obter mais informações, consulte [comparações de valor](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md) e [instruções](../../../../visual-basic/language-reference/statements/index.md).  
   
 ## <a name="comparison-operators"></a>Operadores de comparação  
- Comparison operators such as `=`, `<`, `>`, `<>`, `<=`, and `>=` produce Boolean expressions by comparing the expression on the left side of the operator to the expression on the right side of the operator and evaluating the result as `True` or `False`. O exemplo a seguir ilustra essa situação.  
+ Operadores de comparação como `=`, `<`, `>`, `<>`, `<=`e `>=` produzem expressões booleanas comparando a expressão no lado esquerdo do operador com a expressão no lado direito do operador e avaliando o resultado como `True` ou `False`. O exemplo a seguir mostra isso.  
   
  `42 < 81`  
   
- Because 42 is less than 81, the Boolean expression in the preceding example evaluates to `True`. For more information on this kind of expression, see [Value Comparisons](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).  
+ Como 42 é menor que 81, a expressão booliana no exemplo anterior é avaliada como `True`. Para obter mais informações sobre esse tipo de expressão, consulte [comparações de valor](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md).  
   
-### <a name="comparison-operators-combined-with-logical-operators"></a>Comparison Operators Combined with Logical Operators  
- Comparison expressions can be combined using logical operators to produce more complex Boolean expressions. The following example demonstrates the use of comparison operators in conjunction with a logical operator.  
+### <a name="comparison-operators-combined-with-logical-operators"></a>Operadores de comparação combinados com operadores lógicos  
+ Expressões de comparação podem ser combinadas usando operadores lógicos para produzir expressões booleanas mais complexas. O exemplo a seguir demonstra o uso de operadores de comparação em conjunto com um operador lógico.  
   
  `x > y And x < 1000`  
   
- In the preceding example, the value of the overall expression depends on the values of the expressions on each side of the `And` operator. If both expressions are `True`, then the overall expression evaluates to `True`. If either expression is `False`, then the entire expression evaluates to `False`.  
+ No exemplo anterior, o valor da expressão geral depende dos valores das expressões em cada lado do operador de `And`. Se ambas as expressões forem `True`, a expressão geral será avaliada como `True`. Se uma das expressões for `False`, a expressão inteira será avaliada como `False`.  
   
-## <a name="short-circuiting-operators"></a>Short-Circuiting Operators  
- The logical operators `AndAlso` and `OrElse` exhibit behavior known as *short-circuiting*. A short-circuiting operator evaluates the left operand first. If the left operand determines the value of the entire expression, then program execution proceeds without evaluating the right expression. O exemplo a seguir ilustra essa situação.  
+## <a name="short-circuiting-operators"></a>Operadores de curto-circuito  
+ Os operadores lógicos `AndAlso` e `OrElse` apresentam o comportamento conhecido como *curto-circuito*. Um operador de curto-circuito avalia o operando à esquerda primeiro. Se o operando esquerdo determinar o valor da expressão inteira, a execução do programa continuará sem avaliar a expressão correta. O exemplo a seguir mostra isso.  
   
  [!code-vb[VbVbalrOperators#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#89)]  
   
- In the preceding example, the operator evaluates the left expression, `45 < 12`. Because the left expression evaluates to `False`, the entire logical expression must evaluate to `False`. Program execution thus skips execution of the code within the `If` block without evaluating the right expression, `testFunction(3)`. This example does not call `testFunction()` because the left expression falsifies the entire expression.  
+ No exemplo anterior, o operador avalia a expressão à esquerda, `45 < 12`. Como a expressão à esquerda é avaliada como `False`, a expressão lógica inteira deve ser avaliada como `False`. A execução do programa, portanto, ignora a execução do código dentro do bloco de `If` sem avaliar a expressão Right, `testFunction(3)`. Este exemplo não chama `testFunction()` porque a expressão Left falsifica a expressão inteira.  
   
- Similarly, if the left expression in a logical expression using `OrElse` evaluates to `True`, execution proceeds to the next line of code without evaluating the right expression, because the left expression has already validated the entire expression.  
+ Da mesma forma, se a expressão esquerda em uma expressão lógica usando `OrElse` for avaliada como `True`, a execução prosseguirá para a próxima linha de código sem avaliar a expressão direita, porque a expressão à esquerda já validou a expressão inteira.  
   
-### <a name="comparison-with-non-short-circuiting-operators"></a>Comparison with Non-Short-Circuiting Operators  
- By contrast, both sides of the logical operator are evaluated when the logical operators `And` and `Or` are used. O exemplo a seguir ilustra essa situação.  
+### <a name="comparison-with-non-short-circuiting-operators"></a>Comparação com operadores de circuito não curto  
+ Por outro lado, ambos os lados do operador lógico são avaliados quando os operadores lógicos `And` e `Or` são usados. O exemplo a seguir mostra isso.  
   
  [!code-vb[VbVbalrOperators#90](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#90)]  
   
- The preceding example calls `testFunction()` even though the left expression evaluates to `False`.  
+ O exemplo anterior chama `testFunction()` embora a expressão à esquerda seja avaliada como `False`.  
   
-## <a name="parenthetical-expressions"></a>Parenthetical Expressions  
- You can use parentheses to control the order of evaluation of Boolean expressions. Expressions enclosed by parentheses evaluate first. For multiple levels of nesting, precedence is granted to the most deeply nested expressions. Within parentheses, evaluation proceeds according to the rules of operator precedence. For more information, see [Operator Precedence in Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
+## <a name="parenthetical-expressions"></a>Expressões entre parênteses  
+ Você pode usar parênteses para controlar a ordem de avaliação de expressões booleanas. As expressões delimitadas por parênteses são avaliadas primeiro. Para vários níveis de aninhamento, a precedência é concedida às expressões aninhadas mais profundamente. Entre parênteses, a avaliação prossegue de acordo com as regras de precedência de operador. Para obter mais informações, consulte [precedência de operador em Visual Basic](../../../../visual-basic/language-reference/operators/operator-precedence.md).  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Logical and Bitwise Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Operadores lógicos e de bits bit a Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [Comparações de Valor](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [Instruções](../../../../visual-basic/programming-guide/language-features/statements.md)
 - [Operadores de Comparação](../../../../visual-basic/language-reference/operators/comparison-operators.md)

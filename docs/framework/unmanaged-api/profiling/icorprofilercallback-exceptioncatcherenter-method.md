@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445021"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>Método ICorProfilerCallback::ExceptionCatcherEnter
-Notifies the profiler that control is being passed to the appropriate `catch` block.  
+Notifica o criador de perfil que o controle está sendo passado para o bloco de `catch` apropriado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,22 +35,22 @@ HRESULT ExceptionCatcherEnter(
   
 ## <a name="parameters"></a>Parâmetros  
  `functionId`  
- [in] The identifier of the function containing the `catch` block.  
+ no O identificador da função que contém o bloco de `catch`.  
   
  `objectId`  
- [in] The identifier of the exception being handled.  
+ no O identificador da exceção que está sendo manipulada.  
   
 ## <a name="remarks"></a>Comentários  
- The `ExceptionCatcherEnter` method is called only if the catch point is in code compiled with the just-in-time (JIT) compiler. An exception that is caught in unmanaged code or in the internal code of the runtime will not call this notification. The `objectId` value is passed again since a garbage collection could have moved the object since the `ExceptionThrown` notification.  
+ O método `ExceptionCatcherEnter` será chamado somente se o ponto de captura estiver no código compilado com o compilador JIT (just-in-time). Uma exceção que é capturada no código não gerenciado ou no código interno do tempo de execução não chamará essa notificação. O valor de `objectId` é passado novamente, pois uma coleta de lixo pode ter movido o objeto desde a notificação de `ExceptionThrown`.  
   
- The profiler should not block in its implementation of this method because the stack may not be in a state that allows garbage collection, and therefore preemptive garbage collection cannot be enabled. If the profiler blocks here and garbage collection is attempted, the runtime will block until this callback returns.  
+ O criador de perfil não deve bloquear em sua implementação desse método porque a pilha pode não estar em um estado que permita a coleta de lixo e, portanto, a coleta de lixo preemptiva não pode ser habilitada. Se o criador de perfil for bloqueado aqui e a coleta de lixo for tentada, o tempo de execução será bloqueado até que esse retorno de chamada seja retornado.  
   
- The profiler's implementation of this method should not call into managed code or in any way cause a managed-memory allocation.  
+ A implementação do criador de perfil desse método não deve chamar o código gerenciado ou, de qualquer forma, causar uma alocação de memória gerenciada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

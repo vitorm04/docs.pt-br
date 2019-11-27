@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349277"
 ---
-# <a name="reflection-visual-basic"></a>Reflection (Visual Basic)
+# <a name="reflection-visual-basic"></a>Reflexão (Visual Basic)
 A reflexão fornece objetos (do tipo <xref:System.Type>) que descrevem assemblies, módulos e tipos. É possível usar a reflexão para criar dinamicamente uma instância de um tipo, associar o tipo a um objeto existente ou obter o tipo de um objeto existente e invocar seus métodos ou acessar suas propriedades e campos. Se você estiver usando atributos em seu código, a reflexão permite acessá-los. Para obter mais informações, consulte [Atributos](../../../standard/attributes/index.md).  
   
  Veja um exemplo simples de reflexão usando o método estático `GetType` – herdado por todos os tipos da classe base `Object` – para obter o tipo de uma variável:  
@@ -48,7 +48,7 @@ System.Console.WriteLine(info)
   
 - Para executar a associação tardia, acessar métodos em tipos criados em tempo de execução. Consulte o tópico [Carregando e usando tipos dinamicamente](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md).  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  Para saber mais:  
   
 - [Reflexão](../../../framework/reflection-and-codedom/reflection.md)  

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445820"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationstarted-method"></a>Método ICorProfilerCallback::RemotingClientInvocationStarted
-Notifies the profiler that a remoting call has started.  
+Notifica o criador de perfil de que uma chamada de comunicação remota foi iniciada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,26 +32,26 @@ HRESULT RemotingClientInvocationStarted();
 ```  
   
 ## <a name="remarks"></a>Comentários  
- This event is the same for synchronous and asynchronous calls.  
+ Esse evento é o mesmo para chamadas síncronas e assíncronas.  
   
- Each of the following pairs of callbacks will occur on the same thread:  
+ Cada um dos seguintes pares de retornos de chamada ocorrerá no mesmo thread:  
   
-- `RemotingClientInvocationStarted` and [ICorProfilerCallback::RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)  
+- `RemotingClientInvocationStarted` e [ICorProfilerCallback:: RemotingClientSendingMessage](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientsendingmessage-method.md)  
   
-- [ICorProfilerCallback::RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) and [ICorProfilerCallback::RemotingClientInvocationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)  
+- [ICorProfilerCallback:: RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md) e [ICorProfilerCallback:: RemotingClientInvocationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
-- [ICorProfilerCallback::RemotingServerInvocationReturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) and [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)  
+- [ICorProfilerCallback:: RemotingServerInvocationReturned](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserverinvocationreturned-method.md) e [ICorProfilerCallback:: RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)  
   
- You should be aware of the following issues with the remoting callbacks:  
+ Você deve estar ciente dos seguintes problemas com os retornos de chamada remotos:  
   
-- Execution of a remoting function is not reflected by the profiler API, so notifications for functions that are called from the client and executed on the server are not properly received. The actual invocation happens via a proxy object; to the profiler, it appears that certain functions are JIT-compiled but never used.  
+- A execução de uma função de comunicação remota não é refletida pela API do criador de perfil, portanto, as notificações para funções que são chamadas do cliente e executadas no servidor não são recebidas corretamente. A invocação real ocorre por meio de um objeto proxy; para o criador de perfil, parece que determinadas funções são compiladas por JIT, mas nunca são usadas.  
   
-- The profiler does not receive accurate notifications for asynchronous remoting events.  
+- O criador de perfil não recebe notificações precisas para eventos de comunicação remota assíncrona.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

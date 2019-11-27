@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352339"
 ---
-# <a name="-platform-visual-basic"></a>-platform (Visual Basic)
+# <a name="-platform-visual-basic"></a>-plataforma (Visual Basic)
 Especifica qual versão de plataforma do common language runtime (CLR) pode executar o arquivo de saída.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -22,7 +22,7 @@ Especifica qual versão de plataforma do common language runtime (CLR) pode exec
 -platform:{ x86 | x64 | Itanium | arm | anycpu | anycpu32bitpreferred }  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
@@ -31,7 +31,7 @@ Especifica qual versão de plataforma do common language runtime (CLR) pode exec
 |`Itanium`|Compila o assembly para ser executado pelo CLR de 64 bits em um computador com um processador Itanium.|  
 |`arm`|Compila o assembly para ser executado em um computador com um processador ARM (Advanced RISC Machine).|  
 |`anycpu`|Compila o assembly para ser executado em qualquer plataforma. O aplicativo será executado como um aplicativo de 32 bits em versões de 32 bits do Windows e como um aplicativo de 64 bits em versões de 64 bits do Windows. Este sinalizador é o valor padrão.|  
-|`anycpu32bitpreferred`|Compila o assembly para ser executado em qualquer plataforma. O aplicativo será executado como um aplicativo de 32 bits em versões de 32 bits e 64 bits do Windows. This flag is valid only for executables (.EXE) and requires .NET Framework 4.5.|  
+|`anycpu32bitpreferred`|Compila o assembly para ser executado em qualquer plataforma. O aplicativo será executado como um aplicativo de 32 bits em versões de 32 bits e 64 bits do Windows. Esse sinalizador é válido somente para executáveis (. EXE) e requer .NET Framework 4,5.|  
   
 ## <a name="remarks"></a>Comentários  
  Use a opção `-platform` para especificar o tipo de processador direcionada pelo arquivo de saída.  
@@ -48,7 +48,7 @@ Especifica qual versão de plataforma do common language runtime (CLR) pode exec
   
 - Usando a invocação de plataforma ou a interoperabilidade COM com os componentes que não existem em todas as plataformas.  
   
- The **-platform** option will mitigate some issues if you know you have made assumptions about the architecture your code will run on. Especificamente:  
+ A opção **-Platform** atenuará alguns problemas se você souber que fez suposições sobre a arquitetura em que seu código será executado. Especificamente:  
   
 - Se decidir atingir uma plataforma de 64 bits e o aplicativo for executado em uma máquina de 32 bits, a mensagem de erro vem muito mais cedo e mais direcionada ao problema do que o erro que ocorre sem usar essa comutador.  
   
@@ -64,15 +64,15 @@ Especifica qual versão de plataforma do common language runtime (CLR) pode exec
   
 - Executáveis compilados com `-platform:anycpu32bitpreferred` serão executados no CLR de 32 bits.  
   
- For more information about how to develop an application to run on a 64-bit version of Windows, see [64-bit Applications](../../../framework/64-bit-apps.md).  
+ Para obter mais informações sobre como desenvolver um aplicativo para ser executado em uma versão de 64 bits do Windows, consulte [aplicativos de 64 bits](../../../framework/64-bit-apps.md).  
   
-### <a name="to-set--platform-in-the-visual-studio-ide"></a>To set -platform in the Visual Studio IDE  
+### <a name="to-set--platform-in-the-visual-studio-ide"></a>Para definir a plataforma no IDE do Visual Studio  
   
-1. In **Solution Explorer**, choose the project, open the **Project** menu, and then click **Properties**.  
+1. Em **Gerenciador de soluções**, escolha o projeto, abra o menu **projeto** e clique em **Propriedades**.  
   
-2. On the **Compile** tab, select or clear the **Prefer 32-bit** check box, or, in the **Target CPU** list, choose a value.  
+2. Na guia **Compilar** , marque ou desmarque a caixa de seleção **preferir 32 bits** ou, na lista **CPU de destino** , escolha um valor.  
   
-     For more information, see [Compile Page, Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
+     Para obter mais informações, consulte [Compilar página, designer de projeto (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar a opção do compilador `-platform`.  
@@ -83,6 +83,6 @@ vbc -platform:x86 myFile.vb
   
 ## <a name="see-also"></a>Consulte também
 
-- [-target (Visual Basic)](target.md)
+- [-Target (Visual Basic)](target.md)
 - [Compilador de linha de comando do Visual Basic](index.md)
 - [Linhas de Comando de Compilação de Exemplo](sample-compilation-command-lines.md)

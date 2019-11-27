@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353382"
 ---
-# <a name="grouping-data-visual-basic"></a>Grouping Data (Visual Basic)
+# <a name="grouping-data-visual-basic"></a>Agrupando dados (Visual Basic)
 O agrupamento refere-se à operação de colocação de dados em grupos, de modo que os elementos em cada grupo compartilhem um atributo comum.  
   
  A ilustração a seguir mostra os resultados do agrupamento de uma sequência de caracteres. A chave para cada grupo é o caractere.  
@@ -18,12 +18,12 @@ O agrupamento refere-se à operação de colocação de dados em grupos, de modo
   
  Os métodos do operador de consulta padrão que agrupam elementos de dados estão listados na seção a seguir.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
-|Nome do método|Descrição|Visual Basic Query Expression Syntax|Mais informações|  
+|Nome do método|Descrição|Visual Basic sintaxe de expressão de consulta|Mais informações|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|Agrupa elementos que compartilham um atributo comum. Cada grupo é representado por um objeto <xref:System.Linq.IGrouping%602>.|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|Insere os elementos em um <xref:System.Linq.Lookup%602> (um dicionário one-to-many) com base em uma função de seletor de chave.|Não aplicável.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|ToLookup|Insere os elementos em um <xref:System.Linq.Lookup%602> (um dicionário one-to-many) com base em uma função de seletor de chave.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>Exemplo de sintaxe de expressão de consulta  
  O seguinte exemplo de código usa a cláusula `Group By` para agrupar inteiros em uma lista de acordo com se eles são pares ou ímpares.  
@@ -68,5 +68,5 @@ MsgBox(sb.ToString())
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cláusula Group By](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [How to: Group Files by Extension (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [How to: Split a File Into Many Files by Using Groups (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [Como: agrupar arquivos por extensão (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [Como dividir um arquivo em vários arquivos usando grupos (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

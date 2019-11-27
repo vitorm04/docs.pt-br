@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442847"
 ---
 # <a name="corimportoptions-enumeration"></a>Enumeração CorImportOptions
-Contains flag values that control the behavior during importation of an assembly outside the current scope.  
+Contém valores de sinalizador que controlam o comportamento durante a importação de um assembly fora do escopo atual.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,22 +44,22 @@ typedef enum CorImportOptions {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`MDImportOptionDefault`|Indicates the default behavior, which is to skip deleted records.|  
-|`MDImportOptionAll`|Indicates that all metadata should be enumerated.|  
-|`MDImportOptionAllTypeDefs`|Indicates that all TypeDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllMethodDefs`|Indicates that all MethodDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllFieldDefs`|Indicates that all FieldDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllProperties`|Indicates that all PropertyDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllEvents`|Indicates that all EventDefs, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllCustomAttributes`|Indicates that all custom attributes, including deleted ones, should be enumerated.|  
-|`MDImportOptionAllExportedTypes`|Indicates that all exported types, including deleted ones, should be enumerated.|  
+|`MDImportOptionDefault`|Indica o comportamento padrão, que é para ignorar os registros excluídos.|  
+|`MDImportOptionAll`|Indica que todos os metadados devem ser enumerados.|  
+|`MDImportOptionAllTypeDefs`|Indica que todos os TypeDefs, incluindo aqueles excluídos, devem ser enumerados.|  
+|`MDImportOptionAllMethodDefs`|Indica que todos os MethodDefs, incluindo aqueles excluídos, devem ser enumerados.|  
+|`MDImportOptionAllFieldDefs`|Indica que todos os FieldDefs, incluindo aqueles excluídos, devem ser enumerados.|  
+|`MDImportOptionAllProperties`|Indica que todos os PropertyDefs, incluindo aqueles excluídos, devem ser enumerados.|  
+|`MDImportOptionAllEvents`|Indica que todos os EventDefs, incluindo aqueles excluídos, devem ser enumerados.|  
+|`MDImportOptionAllCustomAttributes`|Indica que todos os atributos personalizados, incluindo aqueles excluídos, devem ser enumerados.|  
+|`MDImportOptionAllExportedTypes`|Indica que todos os tipos exportados, incluindo aqueles excluídos, devem ser enumerados.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorHdr.h  
+ **Cabeçalho:** CorHdr. h  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

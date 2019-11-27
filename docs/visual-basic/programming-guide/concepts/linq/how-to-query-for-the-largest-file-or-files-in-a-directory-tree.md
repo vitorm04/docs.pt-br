@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347660"
 ---
-# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>How to: Query for the Largest File or Files in a Directory Tree (LINQ) (Visual Basic)
+# <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>Como consultar o maior arquivo ou arquivos em uma árvore de diretório (LINQ) (Visual Basic)
 Este exemplo mostra cinco consultas relacionadas ao tamanho do arquivo em bytes:  
   
 - Como recuperar o tamanho em bytes do maior arquivo.  
@@ -117,8 +117,8 @@ End Module
   
  A consulta chama um método separado para obter o tamanho do arquivo em bytes para consumir a exceção possível que ocorrerá caso um arquivo tenha sido excluído em outro thread no período desde que o objeto <xref:System.IO.FileInfo> foi criado na chamada para `GetFiles`. Embora o objeto <xref:System.IO.FileInfo> já tenha sido criado, a exceção poderá ocorrer porque um objeto <xref:System.IO.FileInfo> tentará atualizar sua propriedade <xref:System.IO.FileInfo.Length%2A> usando o tamanho mais atual em bytes na primeira vez que a propriedade foi acessada. Ao colocar essa operação em um bloco try-catch fora da consulta, nós seguimos a regra de evitar operações em consultas que podem causar efeitos colaterais. Em geral, deve-se ter muito cuidado ao consumir exceções para garantir que um aplicativo não seja deixado em um estado desconhecido.  
   
-## <a name="compiling-the-code"></a>Compilando o código  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+## <a name="compiling-the-code"></a>Compilando o Código  
+Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
   
 ## <a name="see-also"></a>Consulte também
 

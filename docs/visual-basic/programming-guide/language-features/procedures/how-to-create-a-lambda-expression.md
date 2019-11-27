@@ -13,94 +13,94 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349749"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Como criar uma expressão lambda (Visual Basic)
-A *lambda expression* is a function or subroutine that does not have a name. A lambda expression can be used wherever a delegate type is valid.  
+Uma *expressão lambda* é uma função ou sub-rotina que não tem um nome. Uma expressão lambda pode ser usada sempre que um tipo delegado é válido.  
   
-### <a name="to-create-a-single-line-lambda-expression-function"></a>To create a single-line lambda expression function  
+### <a name="to-create-a-single-line-lambda-expression-function"></a>Para criar uma função de expressão lambda de linha única  
   
-1. In any situation where a delegate type could be used, type the keyword `Function`, as in the following example:  
+1. Em qualquer situação em que um tipo delegado possa ser usado, digite a palavra-chave `Function`, como no exemplo a seguir:  
   
      `Dim add1 =`   `Function`  
   
-2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
+2. Entre parênteses, diretamente após `Function`, digite os parâmetros da função. Observe que você não especifica um nome após `Function`.  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3. Following the parameter list, type a single expression as the body of the function. The value that the expression evaluates to is the value returned by the function. You do not use an `As` clause to specify the return type.  
+3. Após a lista de parâmetros, digite uma única expressão como o corpo da função. O valor que a expressão avalia é o valor retornado pela função. Você não usa uma cláusula `As` para especificar o tipo de retorno.  
   
      [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
-     You call the lambda expression by passing in an integer argument.  
+     Você chama a expressão lambda passando um argumento inteiro.  
   
      [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-4. Alternatively, the same result is accomplished by the following example:  
+4. Como alternativa, o mesmo resultado é realizado pelo exemplo a seguir:  
   
      [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
-### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>To create a single-line lambda expression subroutine  
+### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Para criar uma sub-rotina de expressão lambda de linha única  
   
-1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example.  
+1. Em qualquer situação em que um tipo delegado possa ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir.  
   
      `Dim add1 =`   `Sub`  
   
-2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
+2. Entre parênteses, diretamente após `Sub`, digite os parâmetros da sub-rotina. Observe que você não especifica um nome após `Sub`.  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3. Following the parameter list, type a single statement as the body of the subroutine.  
+3. Após a lista de parâmetros, digite uma única instrução como o corpo da sub-rotina.  
   
      [!code-vb[VbVbalrLambdas#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#17)]  
   
-     You call the lambda expression by passing in a string argument.  
+     Você chama a expressão lambda passando um argumento de cadeia de caracteres.  
   
      [!code-vb[VbVbalrLambdas#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#18)]  
   
-### <a name="to-create-a-multiline-lambda-expression-function"></a>To create a multiline lambda expression function  
+### <a name="to-create-a-multiline-lambda-expression-function"></a>Para criar uma função de expressão lambda de várias linhas  
   
-1. In any situation where a delegate type could be used, type the keyword `Function`, as shown in the following example.  
+1. Em qualquer situação em que um tipo delegado possa ser usado, digite a palavra-chave `Function`, conforme mostrado no exemplo a seguir.  
   
      `Dim add1 =`   `Function`  
   
-2. In parentheses, directly after `Function`, type the parameters of the function. Notice that you do not specify a name after `Function`.  
+2. Entre parênteses, diretamente após `Function`, digite os parâmetros da função. Observe que você não especifica um nome após `Function`.  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
-3. Pressione ENTER. The `End Function` statement is automatically added.  
+3. Pressione ENTER. A instrução `End Function` é adicionada automaticamente.  
   
-4. Within the body of the function, add the following code to create an expression and return the value. You do not use an `As` clause to specify the return type.  
+4. No corpo da função, adicione o código a seguir para criar uma expressão e retornar o valor. Você não usa uma cláusula `As` para especificar o tipo de retorno.  
   
      [!code-vb[VbVbalrLambdas#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#19)]  
   
-     You call the lambda expression by passing in an integer argument.  
+     Você chama a expressão lambda passando um argumento inteiro.  
   
      [!code-vb[VbVbalrLambdas#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#20)]  
   
-### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>To create a multiline lambda expression subroutine  
+### <a name="to-create-a-multiline-lambda-expression-subroutine"></a>Para criar uma sub-rotina de expressão lambda de várias linhas  
   
-1. In any situation where a delegate type could be used, type the keyword `Sub`, as shown in the following example:  
+1. Em qualquer situação em que um tipo delegado possa ser usado, digite a palavra-chave `Sub`, conforme mostrado no exemplo a seguir:  
   
      `Dim add1 =`   `Sub`  
   
-2. In parentheses, directly after `Sub`, type the parameters of the subroutine. Notice that you do not specify a name after `Sub`.  
+2. Entre parênteses, diretamente após `Sub`, digite os parâmetros da sub-rotina. Observe que você não especifica um nome após `Sub`.  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
-3. Pressione ENTER. The `End Sub` statement is automatically added.  
+3. Pressione ENTER. A instrução `End Sub` é adicionada automaticamente.  
   
-4. Within the body of the function, add the following code to execute when the subroutine is invoked.  
+4. No corpo da função, adicione o seguinte código a ser executado quando a sub-rotina for invocada.  
   
      [!code-vb[VbVbalrLambdas#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#21)]  
   
-     You call the lambda expression by passing in a string argument.  
+     Você chama a expressão lambda passando um argumento de cadeia de caracteres.  
   
      [!code-vb[VbVbalrLambdas#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#22)]  
   
 ## <a name="example"></a>Exemplo  
- A common use of lambda expressions is to define a function that can be passed in as the argument for a parameter whose type is `Delegate`. In the following example, the <xref:System.Diagnostics.Process.GetProcesses%2A> method returns an array of the processes running on the local computer. The <xref:System.Linq.Enumerable.Where%2A> method from the <xref:System.Linq.Enumerable> class requires a `Boolean` delegate as its argument. The lambda expression in the example is used for that purpose. It returns `True` for each process that has only one thread, and those are selected in `filteredList`.  
+ Um uso comum de expressões lambda é definir uma função que pode ser passada como o argumento para um parâmetro cujo tipo é `Delegate`. No exemplo a seguir, o método <xref:System.Diagnostics.Process.GetProcesses%2A> retorna uma matriz dos processos em execução no computador local. O método <xref:System.Linq.Enumerable.Where%2A> da classe <xref:System.Linq.Enumerable> requer um delegado `Boolean` como seu argumento. A expressão lambda no exemplo é usada para essa finalidade. Ele retorna `True` para cada processo que tem apenas um thread, e eles são selecionados em `filteredList`.  
   
  [!code-vb[VbVbalrLambdas#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class4.vb#10)]  
   
- The previous example is equivalent to the following code, which is written in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] syntax:  
+ O exemplo anterior é equivalente ao código a seguir, que é escrito na sintaxe [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]:  
   
  [!code-vb[VbVbalrLambdas#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class5.vb#11)]  
   

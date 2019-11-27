@@ -16,15 +16,15 @@ ms.locfileid: "74351860"
 ---
 # <a name="arrays-in-visual-basic"></a>Matrizes no Visual Basic
 
-An array is a set of values, which are termed *elements*, that are logically related to each other. For example, an array may consist of the number of students in each grade in a grammar school; each element of the array is the number of students in a single grade. Similarly, an array may consist of a student's grades for a class; each element of the array is a single grade.
+Uma matriz é um conjunto de valores, que são *elementos*com termo, que estão logicamente relacionados entre si. Por exemplo, uma matriz pode consistir no número de alunos em cada nível em uma escola gramatical; cada elemento da matriz é o número de alunos em uma única classificação. Da mesma forma, uma matriz pode consistir em notas de um aluno para uma classe; cada elemento da matriz é uma única classificação.
 
-It is possible individual variables to store each of our data items. For example, if our application analyzes student grades, we can use a separate variable for each student's grade, such as `englishGrade1`, `englishGrade2`, etc. This approach has three major limitations:
+É possível que as variáveis individuais armazenem cada um de nossos itens de dados. Por exemplo, se nosso aplicativo analisar as notas dos alunos, podemos usar uma variável separada para a classificação de cada aluno, como `englishGrade1`, `englishGrade2`, etc. Essa abordagem tem três limitações principais:
 
-- We have to know at design time exactly how many grades we have to handle.
-- Handling large numbers of grades quickly becomes unwieldy. This in turn makes an application much more likely to have serious bugs.
-- It is difficult to maintain. Each new grade that we add requires that the application be modified, recompiled, and redeployed.
+- Precisamos saber em tempo de design exatamente quantas notas temos para lidar.
+- Manipular grandes números de notas rapidamente torna-se difícil. Isso, por sua vez, torna um aplicativo muito mais provável de ter bugs sérios.
+- É difícil de manter. Cada nova classificação que adicionamos exige que o aplicativo seja modificado, recompilado e reimplantado.
 
-By using an array, you can refer to these related values by the same name, and use a number that’s called an *index* or *subscript* to identify an individual element based on its position in the array. The indexes of an array range from 0 to one less than the total number of elements in the array. When you use Visual Basic syntax to define the size of an array, you specify its highest index, not the total number of elements in the array. You can work with the array as a unit, and the ability to iterate its elements frees you from needing to know exactly how many elements it contains at design time.
+Usando uma matriz, você pode consultar esses valores relacionados com o mesmo nome e usar um número chamado de *índice* ou *subscrito* para identificar um elemento individual com base em sua posição na matriz. Os índices de um intervalo de matriz de 0 para um menor que o número total de elementos na matriz. Quando você usa a sintaxe Visual Basic para definir o tamanho de uma matriz, você especifica seu índice mais alto, não o número total de elementos na matriz. Você pode trabalhar com a matriz como uma unidade e a capacidade de iterar seus elementos libera a necessidade de saber exatamente quantos elementos ele contém em tempo de design.
 
 Alguns exemplos rápidos antes da explicação:
 
@@ -51,111 +51,111 @@ Dim matrix = New Integer(3, 2) {{1, 2, 3}, {2, 3, 4}, {3, 4, 5}, {4, 5, 6}}
 Dim sales()() As Double = New Double(11)() {}
 ```
 
-## <a name="array-elements-in-a-simple-array"></a>Array elements in a simple array
+## <a name="array-elements-in-a-simple-array"></a>Elementos de matriz em uma matriz simples
 
-Let's create an array named `students` to store the number of students in each grade in a grammar school. Os índices dos elementos variam de 0 a 6. Using this array is simpler than declaring seven variables.
+Vamos criar uma matriz chamada `students` para armazenar o número de alunos em cada nível em uma escola gramatical. Os índices dos elementos variam de 0 a 6. Usar essa matriz é mais simples do que declarar sete variáveis.
 
-The following illustration shows the `students` array. Para cada elemento da matriz:
+A ilustração a seguir mostra a matriz de `students`. Para cada elemento da matriz:
 
 - O índice do elemento representa a classificação (o índice 0 representa o jardim de infância).
 
 - O valor contido no elemento representa o número de alunos nessa série.
 
-![Diagram showing an array of the numbers of students](./media/index/students-array-elements.gif)
+![Diagrama mostrando uma matriz dos números de alunos](./media/index/students-array-elements.gif)
 
-The following example contains the Visual Basic code that creates and uses the array:
+O exemplo a seguir contém o código de Visual Basic que cria e usa a matriz:
 
 [!code-vb[simple-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/simple-array.vb)]
 
-The example does three things:
+O exemplo faz três coisas:
 
-- It declares a `students` array with seven elements. The number `6` in the array declaration indicates the last index in the array; it is one less than the number of elements in the array.
-- It assigns values to each element in the array. Array elements are accessed by using the array name and including the index of the individual element in parentheses.
-- It lists each value of the array. The example uses a [`For`](../../../language-reference/statements/for-next-statement.md) statement to access each element of the array by its index number.
+- Ele declara uma matriz de `students` com sete elementos. O número `6` na declaração de matriz indica o último índice na matriz; é um menor do que o número de elementos na matriz.
+- Ele atribui valores a cada elemento na matriz. Os elementos de matriz são acessados usando o nome da matriz e incluindo o índice do elemento individual entre parênteses.
+- Ele lista cada valor da matriz. O exemplo usa uma instrução [`For`](../../../language-reference/statements/for-next-statement.md) para acessar cada elemento da matriz por seu número de índice.
 
-The `students` array in the preceding example is a one-dimensional array because it uses one index. An array that uses more than one index or subscript is called *multidimensional*. For more information, see the rest of this article and [Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md).
+A matriz de `students` no exemplo anterior é uma matriz unidimensional porque usa um índice. Uma matriz que usa mais de um índice ou subscrito é chamada *multidimensional*. Para obter mais informações, consulte o restante deste artigo e [dimensões de matriz em Visual Basic](../../language-features/arrays/array-dimensions.md).
 
-## <a name="creating-an-array"></a>Creating an array
+## <a name="creating-an-array"></a>Criando uma matriz
 
-You can define the size of an array in several ways:
+Você pode definir o tamanho de uma matriz de várias maneiras:
 
-- You can specify the size when the array is declared:
+- Você pode especificar o tamanho quando a matriz é declarada:
 
   [!code-vb[creating1](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#1)]
 
-- You can use a `New` clause to supply the size of an array when it’s created:
+- Você pode usar uma cláusula `New` para fornecer o tamanho de uma matriz quando ela é criada:
 
   [!code-vb[creating2](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#2)]
 
-If you have an existing array, you can redefine its size by using the [`ReDim`](../../../language-reference/statements/redim-statement.md) statement. You can specify that the `ReDim` statement keep the values that are in the array, or you can specify that it create an empty array. O exemplo a seguir mostra os diferentes usos da instrução `ReDim` para modificar o tamanho de uma matriz existente.
+Se você tiver uma matriz existente, poderá redefinir seu tamanho usando a instrução [`ReDim`](../../../language-reference/statements/redim-statement.md) . Você pode especificar que a instrução `ReDim` Mantenha os valores que estão na matriz ou pode especificar que ele crie uma matriz vazia. O exemplo a seguir mostra os diferentes usos da instrução `ReDim` para modificar o tamanho de uma matriz existente.
 
 [!code-vb[redimensioning](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#3)]
 
-For more information, see the [ReDim Statement](../../../language-reference/statements/redim-statement.md).
+Para obter mais informações, consulte a [instrução ReDim](../../../language-reference/statements/redim-statement.md).
 
-## <a name="storing-values-in-an-array"></a>Storing values in an array
+## <a name="storing-values-in-an-array"></a>Armazenando valores em uma matriz
 
-Você pode acessar cada local em uma matriz usando um índice do tipo `Integer`. Você pode armazenar e recuperar valores em uma matriz, fazendo referência a cada local de matriz usando seu índice entre parênteses. Indexes for multidimensional arrays are separated by commas (,). Você precisa de um índice para cada dimensão de matriz.
+Você pode acessar cada local em uma matriz usando um índice do tipo `Integer`. Você pode armazenar e recuperar valores em uma matriz, fazendo referência a cada local de matriz usando seu índice entre parênteses. Os índices para matrizes multidimensionais são separados por vírgulas (,). Você precisa de um índice para cada dimensão de matriz.
 
-The following example shows some statements that store and retrieve values in arrays.
+O exemplo a seguir mostra algumas instruções que armazenam e recuperam valores em matrizes.
 
 [!code-vb[store-and-retrieve](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/store-and-retrieve.vb)]
 
-## <a name="populating-an-array-with-array-literals"></a>Populating an array with array literals
+## <a name="populating-an-array-with-array-literals"></a>Populando uma matriz com literais de matriz
 
-By using an array literal, you can populate an array with an initial set of values at the same time that you create it. Um literal de matriz consiste em uma lista de valores separados por vírgulas que são colocados entre chaves (`{}`).
+Usando um literal de matriz, você pode preencher uma matriz com um conjunto inicial de valores ao mesmo tempo em que você a cria. Um literal de matriz consiste em uma lista de valores separados por vírgulas que são colocados entre chaves (`{}`).
 
-Ao criar uma matriz usando um literal de matriz, você pode fornecer o tipo de matriz ou usar inferência de tipos para determinar o tipo de matriz. The following example shows both options.
+Ao criar uma matriz usando um literal de matriz, você pode fornecer o tipo de matriz ou usar inferência de tipos para determinar o tipo de matriz. O exemplo a seguir mostra as duas opções.
 
 [!code-vb[create-with-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#4)]
 
-When you use type inference, the type of the array is determined by the *dominant type* in the list of literal values. The dominant type is the type to which all other types in the array can widen. Se esse tipo exclusivo não puder ser determinado, o tipo dominante será o tipo exclusivo ao qual todos os outros tipos na matriz poderão restringir. Se nenhum desses tipos exclusivos puder ser determinado, o tipo dominante será `Object`. Por exemplo, se a lista de valores que é fornecida para o literal de matriz contiver os valores do tipo `Integer`, `Long` e `Double`, a matriz resultante será do tipo `Double`. Because `Integer` and `Long` widen only to `Double`, `Double` is the dominant type. Para obter mais informações, consulte [Ampliando e restringindo conversões](../../language-features/data-types/widening-and-narrowing-conversions.md).
+Quando você usa a inferência de tipos, o tipo da matriz é determinado pelo *tipo dominante* na lista de valores literais. O tipo dominante é o tipo para o qual todos os outros tipos na matriz podem ser ampliados. Se esse tipo exclusivo não puder ser determinado, o tipo dominante será o tipo exclusivo ao qual todos os outros tipos na matriz poderão restringir. Se nenhum desses tipos exclusivos puder ser determinado, o tipo dominante será `Object`. Por exemplo, se a lista de valores que é fornecida para o literal de matriz contiver os valores do tipo `Integer`, `Long` e `Double`, a matriz resultante será do tipo `Double`. Como `Integer` e `Long` ampliam apenas para `Double`, `Double` é o tipo dominante. Para obter mais informações, consulte [Ampliando e restringindo conversões](../../language-features/data-types/widening-and-narrowing-conversions.md).
 
 > [!NOTE]
-> You can use type inference only for arrays that are defined as local variables in a type member. If an explicit type definition is absent, arrays defined with array literals at the class level are of type `Object[]`. For more information, see [Local type inference](../variables/local-type-inference.md).
+> Você pode usar a inferência de tipos somente para matrizes que são definidas como variáveis locais em um membro de tipo. Se uma definição de tipo explícita estiver ausente, as matrizes definidas com literais de matriz no nível de classe serão do tipo `Object[]`. Para obter mais informações, consulte [inferência de tipo local](../variables/local-type-inference.md).
 
-Note that the previous example defines `values` as an array of type `Double` even though all the array literals are of type `Integer`. You can create this array because the values in the array literal can widen to `Double` values.
+Observe que o exemplo anterior define `values` como uma matriz do tipo `Double` embora todos os literais de matriz sejam do tipo `Integer`. Você pode criar essa matriz porque os valores no literal de matriz podem ser ampliados para `Double` valores.
 
-You can also create and populate a multidimensional array by using *nested array literals*. Nested array literals must have a number of dimensions that’s consistent with the resulting array. The following example creates a two-dimensional array of integers by using nested array literals.
+Você também pode criar e popular uma matriz multidimensional usando *literais de matriz aninhada*. Literais de matriz aninhada devem ter um número de dimensões que seja consistente com a matriz resultante. O exemplo a seguir cria uma matriz bidimensional de inteiros usando literais de matriz aninhada.
 
 [!code-vb[nested-array-literals](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#5)]
 
-When using nested array literals to create and populate an array, an error occurs if the number of elements in the nested array literals don't match. An error also occurs if you explicitly declare the array variable to have a different number of dimensions than the array literals.
+Ao usar literais de matriz aninhada para criar e preencher uma matriz, ocorrerá um erro se o número de elementos nos literais de matriz aninhada não corresponder. Também ocorrerá um erro se você declarar explicitamente a variável de matriz para ter um número diferente de dimensões do que os literais de matriz.
 
-Just as you can for one-dimensional arrays, you can rely on type inference when creating a multidimensional array with nested array literals. The inferred type is the dominant type for all the values in all the array literals for all nesting level. The following example creates a two-dimensional array of type `Double[,]` from values that are of type `Integer` and `Double`.
+Assim como você pode para matrizes unidimensionais, você pode confiar na inferência de tipos ao criar uma matriz multidimensional com literais de matriz aninhada. O tipo inferido é o tipo dominante para todos os valores em todos os literais de matriz para todo o nível de aninhamento. O exemplo a seguir cria uma matriz bidimensional do tipo `Double[,]` de valores que são do tipo `Integer` e `Double`.
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
 Para obter exemplos adicionais, consulte [Como inicializar uma variável de matriz no Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
-## <a name="iterating-through-an-array"></a>Iterating through an array
+## <a name="iterating-through-an-array"></a>Iterando por meio de uma matriz
 
-When you iterate through an array, you access each element in the array from the lowest index to the highest or from the highest to the lowest. Typically, use either the [For...Next Statement](../../../language-reference/statements/for-next-statement.md) or the [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md) to iterate through the elements of an array. When you don't know the upper bounds of the array, you can call the <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> method to get the highest value of the index. Although lowest index value is almost always 0, you can call the <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> method to get the lowest value of the index.
+Ao iterar por meio de uma matriz, você acessa cada elemento na matriz do índice mais baixo para o mais alto ou do mais alto para o mais baixo. Normalmente, use a opção [for... Próxima instrução](../../../language-reference/statements/for-next-statement.md) ou o [para cada... Próxima instrução](../../../language-reference/statements/for-each-next-statement.md) para iterar pelos elementos de uma matriz. Quando você não conhece os limites superiores da matriz, você pode chamar o método <xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType> para obter o valor mais alto do índice. Embora o menor valor de índice seja quase sempre 0, você pode chamar o método <xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType> para obter o valor mais baixo do índice.
 
-The following example iterates through a one-dimensional array by using the [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement.
+O exemplo a seguir itera por meio de uma matriz unidimensional usando a instrução [`For...Next`](../../../language-reference/statements/for-next-statement.md) .
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-The following example iterates through a multidimensional array by using a [`For...Next`](../../../language-reference/statements/for-next-statement.md) statement. O método <xref:System.Array.GetUpperBound%2A> tem um parâmetro que especifica a dimensão. `GetUpperBound(0)` returns the highest index of the first dimension, and `GetUpperBound(1)` returns the highest index of the second dimension.
+O exemplo a seguir itera por meio de uma matriz multidimensional usando uma instrução [`For...Next`](../../../language-reference/statements/for-next-statement.md) . O método <xref:System.Array.GetUpperBound%2A> tem um parâmetro que especifica a dimensão. `GetUpperBound(0)` retorna o índice mais alto da primeira dimensão e `GetUpperBound(1)` retorna o índice mais alto da segunda dimensão.
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
-The following example uses a [For Each...Next Statement](../../../language-reference/statements/for-each-next-statement.md)to iterate through a one-dimensional array and a two-dimensional array.
+O exemplo a seguir usa um [para cada... Próxima instrução](../../../language-reference/statements/for-each-next-statement.md)para iterar por meio de uma matriz unidimensional e uma matriz bidimensional.
 
 [!code-vb[iterate-for-each-next](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]
 
-## <a name="array-size"></a>Array size
+## <a name="array-size"></a>Tamanho da matriz
 
-O tamanho de uma matriz é o produto dos comprimentos de todas as suas dimensões. Ele representa o número total de elementos contidos no momento na matriz.  For example, the following example declares a 2-dimensional array with four elements in each dimension. As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).
+O tamanho de uma matriz é o produto dos comprimentos de todas as suas dimensões. Ele representa o número total de elementos contidos no momento na matriz.  Por exemplo, o exemplo a seguir declara uma matriz bidimensional com quatro elementos em cada dimensão. Como a saída do exemplo mostra, o tamanho da matriz é 16 (ou (3 + 1) * (3 + 1).
 
 [!code-vb[array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]
 
 > [!NOTE]
-> This discussion of array size does not apply to jagged arrays. For information on jagged arrays and determining the size of a jagged array, see the [Jagged arrays](#jagged-arrays) section.
+> Essa discussão sobre o tamanho da matriz não se aplica a matrizes denteadas. Para obter informações sobre matrizes denteadas e como determinar o tamanho de uma matriz denteada, consulte a seção [matrizes](#jagged-arrays) denteadas.
 
-Você pode encontrar o tamanho de uma matriz usando a propriedade <xref:System.Array.Length%2A?displayProperty=nameWithType>. You can find the length of each dimension of a multidimensional array by using the <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
+Você pode encontrar o tamanho de uma matriz usando a propriedade <xref:System.Array.Length%2A?displayProperty=nameWithType>. Você pode encontrar o comprimento de cada dimensão de uma matriz multidimensional usando o método <xref:System.Array.GetLength%2A?displayProperty=nameWithType>.
 
-You can resize an array variable by assigning a new array object to it or by using the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md) statement. The following example uses the `ReDim` statement to change a 100-element array to a 51-element array.
+Você pode redimensionar uma variável de matriz atribuindo um novo objeto de matriz a ela ou usando a instrução de [instrução`ReDim`](../../../language-reference/statements/redim-statement.md) . O exemplo a seguir usa a instrução `ReDim` para alterar uma matriz de elemento 100 para uma matriz de elemento 51.
 
 [!code-vb[resize-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size2.vb)]
 
@@ -163,69 +163,69 @@ Há várias coisas para ter em mente ao lidar com o tamanho de uma matriz.
 
 |||
 |---|---|
-|Tamanho da dimensão|The index of each dimension is 0-based, which means it ranges from 0 to its upper bound. Therefore, the length of a given dimension is one greater than the declared upper bound of that dimension.|
-|Limites de comprimento|The length of every dimension of an array is limited to the maximum value of the `Integer` data type, which is <xref:System.Int32.MaxValue?displayProperty=nameWithType> or (2 ^ 31) - 1. No entanto, o tamanho total de uma matriz também é limitado pela memória disponível no sistema. If you attempt to initialize an array that exceeds the amount of available memory, the runtime throws an <xref:System.OutOfMemoryException>.|
-|Tamanho e tamanho do elemento|Um tamanho de matriz é independente do tipo de dados de seus elementos. The size always represents the total number of elements, not the number of bytes that they consume in memory.|
+|Tamanho da dimensão|O índice de cada dimensão é baseado em 0, o que significa que ele varia de 0 até seu limite superior. Portanto, o comprimento de uma determinada dimensão é um maior que o limite superior declarado dessa dimensão.|
+|Limites de comprimento|O comprimento de cada dimensão de uma matriz é limitado ao valor máximo do tipo de dados `Integer`, que é <xref:System.Int32.MaxValue?displayProperty=nameWithType> ou (2 ^ 31)-1. No entanto, o tamanho total de uma matriz também é limitado pela memória disponível no sistema. Se você tentar inicializar uma matriz que exceda a quantidade de memória disponível, o tempo de execução lançará um <xref:System.OutOfMemoryException>.|
+|Tamanho e tamanho do elemento|Um tamanho de matriz é independente do tipo de dados de seus elementos. O tamanho sempre representa o número total de elementos, não o número de bytes que eles consomem na memória.|
 |Consumo de memória|Não é seguro fazer suposições sobre como uma matriz é armazenada na memória. O armazenamento varia em plataformas de larguras de dados diferentes, então a mesma matriz pode consumir mais memória em um sistema de 64 bits que em um sistema de 32 bits. Dependendo da configuração do sistema ao inicializar uma matriz, o CLR (Common Language Runtime) pode atribuir armazenamento para elementos do pacote o mais próximo possível, ou alinhá-los em limites naturais de hardware. Além disso, uma matriz de armazenamento requer sobrecarga de armazenamento para suas informações de controle, e essa sobrecarga aumenta com cada nova dimensão.|
 
-## <a name="the-array-type"></a>The array type
+## <a name="the-array-type"></a>O tipo de matriz
 
-Every array has a data type, which differs from the data type of its elements. Não há nenhum tipo de dados único para todas as matrizes. Em vez disso, o tipo de dados de uma matriz é determinado pelo número de dimensões, ou *classificação*, da matriz e o tipo de dados dos elementos na matriz. Two array variables are of the same data type only when they have the same rank and their elements have the same data type. The lengths of the dimensions of an array do not influence the array data type.
+Cada matriz tem um tipo de dados, que difere do tipo de dados de seus elementos. Não há nenhum tipo de dados único para todas as matrizes. Em vez disso, o tipo de dados de uma matriz é determinado pelo número de dimensões, ou *classificação*, da matriz e o tipo de dados dos elementos na matriz. Duas variáveis de matriz são do mesmo tipo de dados somente quando têm a mesma classificação e seus elementos têm o mesmo tipo de dados. Os comprimentos das dimensões de uma matriz não influenciam o tipo de dados de matriz.
 
-Cada matriz herda da classe <xref:System.Array?displayProperty=nameWithType> e você pode declarar uma variável para ser do tipo `Array`, mas não pode criar uma matriz do tipo `Array`. For example, although the following code declares the `arr` variable to be of type `Array` and calls the <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> method to instantiate the array, the array's type proves to be Object[].
+Cada matriz herda da classe <xref:System.Array?displayProperty=nameWithType> e você pode declarar uma variável para ser do tipo `Array`, mas não pode criar uma matriz do tipo `Array`. Por exemplo, embora o código a seguir declare que a variável `arr` seja do tipo `Array` e chame o método <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> para instanciar a matriz, o tipo da matriz comprova ser Object [].
 
 [!code-vb[array-class](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-class.vb)]
 
-Além disso, a [instrução ReDim](../../../language-reference/statements/redim-statement.md) não pode operar em uma variável declarada como tipo `Array`. For these reasons, and for type safety, it is advisable to declare every array as a specific type.
+Além disso, a [instrução ReDim](../../../language-reference/statements/redim-statement.md) não pode operar em uma variável declarada como tipo `Array`. Por esses motivos, e para a segurança de tipo, é aconselhável declarar cada matriz como um tipo específico.
 
 Você pode descobrir o tipo de dados de uma matriz ou seus elementos de várias maneiras.
 
-- You can call the <xref:System.Object.GetType%2A> method on the variable to get a <xref:System.Type> object that represents the run-time type of the variable. O objeto <xref:System.Type> mantém informações abrangentes em suas propriedades e métodos.
-- You can pass the variable to the <xref:Microsoft.VisualBasic.Information.TypeName%2A> function to get a `String` with the name of run-time type.
+- Você pode chamar o método <xref:System.Object.GetType%2A> na variável para obter um objeto <xref:System.Type> que representa o tipo de tempo de execução da variável. O objeto <xref:System.Type> mantém informações abrangentes em suas propriedades e métodos.
+- Você pode passar a variável para a função <xref:Microsoft.VisualBasic.Information.TypeName%2A> para obter um `String` com o nome do tipo de tempo de execução.
 
-The following example calls the both the `GetType` method and the `TypeName` function to determine the type of an array. The array type is `Byte(,)`. Note that the <xref:System.Type.BaseType%2A?displayProperty=nameWithType> property also indicates that the base type of the byte array is the <xref:System.Array> class.
+O exemplo a seguir chama o método `GetType` e a função `TypeName` para determinar o tipo de uma matriz. O tipo de matriz é `Byte(,)`. Observe que a propriedade <xref:System.Type.BaseType%2A?displayProperty=nameWithType> também indica que o tipo base da matriz de bytes é a classe <xref:System.Array>.
 
 [!code-vb[array-type](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/array-type.vb)]
 
-## <a name="arrays-as-return-values-and-parameters"></a>Arrays as return values and parameters
+## <a name="arrays-as-return-values-and-parameters"></a>Matrizes como valores de retorno e parâmetros
 
 Para retornar uma matriz de um procedimento `Function`, especifique o tipo de dados de matriz e o número de dimensões como o tipo de retorno de [instrução de função](../../../language-reference/statements/function-statement.md). Dentro da função, declare uma variável da matriz local com o mesmo tipo de dados e número de dimensões. Na [instrução Return](../../../language-reference/statements/return-statement.md), inclua a variável da matriz local sem parênteses.
 
-Para especificar uma matriz como um parâmetro para um procedimento `Sub` ou `Function`, defina o parâmetro como uma matriz com um tipo de dados especificado e o número de dimensões. In the call to the procedure, pass an array variable with the same data type and number of dimensions.
+Para especificar uma matriz como um parâmetro para um procedimento `Sub` ou `Function`, defina o parâmetro como uma matriz com um tipo de dados especificado e o número de dimensões. Na chamada para o procedimento, passe uma variável de matriz com o mesmo tipo de dados e número de dimensões.
 
-In the following example, the `GetNumbers` function returns an `Integer()`, a one-dimensional array of type `Integer`. O procedimento `ShowNumbers` aceita um argumento `Integer()`.
+No exemplo a seguir, a função `GetNumbers` retorna um `Integer()`, uma matriz unidimensional do tipo `Integer`. O procedimento `ShowNumbers` aceita um argumento `Integer()`.
 
 [!code-vb[return-value-and-params](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params.vb)]
 
-In the following example, the `GetNumbersMultiDim` function returns an `Integer(,)`, a two-dimensional array of type `Integer`.  O procedimento `ShowNumbersMultiDim` aceita um argumento `Integer(,)`.
+No exemplo a seguir, a função `GetNumbersMultiDim` retorna um `Integer(,)`, uma matriz bidimensional do tipo `Integer`.  O procedimento `ShowNumbersMultiDim` aceita um argumento `Integer(,)`.
 
 [!code-vb[multidimensional-return-value](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/return-values-and-params-2d.vb)]
 
 ## <a name="jagged-arrays"></a>Matrizes denteadas
 
-Às vezes, a estrutura de dados em seu aplicativo é bidimensional, mas não retangular. For example, you might use an array to store data about the high temperature of each day of the month. The first dimension of the array represents the month, but the second dimension represents the number of days, and the number of days in a month is not uniform. A *jagged array*, which is also called an *array of arrays*, is designed for such scenarios. A jagged array is an array whose elements are also arrays. Uma matriz denteada e cada elemento em uma matriz denteada podem ter uma ou mais dimensões.
+Às vezes, a estrutura de dados em seu aplicativo é bidimensional, mas não retangular. Por exemplo, você pode usar uma matriz para armazenar dados sobre a alta temperatura de cada dia do mês. A primeira dimensão da matriz representa o mês, mas a segunda dimensão representa o número de dias e o número de dias em um mês não é uniforme. Uma *matriz denteada*, que também é chamada *de matriz de matrizes*, é projetada para esses cenários. Uma matriz denteada é uma matriz cujos elementos também são matrizes. Uma matriz denteada e cada elemento em uma matriz denteada podem ter uma ou mais dimensões.
 
-The following example uses an array of months, each element of which is an array of days. The example uses a jagged array because different months have different numbers of days.  The example shows how to create a jagged array, assign values to it, and retrieve and display its values.
+O exemplo a seguir usa uma matriz de meses, cada elemento do qual é uma matriz de dias. O exemplo usa uma matriz denteada porque meses diferentes têm números de dias diferentes.  O exemplo mostra como criar uma matriz denteada, atribuir valores a ela e recuperar e exibir seus valores.
 
 [!code-vb[jagged-arrays](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged.vb)]
 
-The previous example assigns values to the jagged array on an element-by-element basis by using a `For...Next` loop. You can also assign values to the elements of a jagged array by using nested array literals. However, the attempt to use nested array literals (for example, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) generates compiler error [BC30568](../../../,,/../misc/bc30568.md). To correct the error, enclose the inner array literals in parentheses. The parentheses force the array literal expression to be evaluated, and the resulting values are used with the outer array literal, as the following example shows.
+O exemplo anterior atribui valores à matriz denteada de elemento por elemento usando um loop de `For...Next`. Você também pode atribuir valores aos elementos de uma matriz denteada usando literais de matriz aninhada. No entanto, a tentativa de usar literais de matriz aninhadas (por exemplo, `Dim valuesjagged = {{1, 2}, {2, 3, 4}}`) gera o erro de compilador [BC30568](../../../,,/../misc/bc30568.md). Para corrigir o erro, coloque os literais da matriz interna entre parênteses. Os parênteses forçam a expressão literal de matriz a ser avaliada e os valores resultantes são usados com o literal de matriz externa, como mostra o exemplo a seguir.
 
 [!code-vb[jagged-array-initialization](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-assign.vb)]
 
-A jagged array is a one-dimensional array whose elements contain arrays. Therefore, the <xref:System.Array.Length%2A?displayProperty=nameWithType> property and the `Array.GetLength(0)` method return the number of elements in the one-dimensional array, and `Array.GetLength(1)` throws an <xref:System.IndexOutOfRangeException> because a jagged array is not multidimensional. You determine the number of elements in each subarray by retrieving the value of each subarray's <xref:System.Array.Length%2A?displayProperty=nameWithType> property. The following example illustrates how to determine the number of elements in a jagged array.
+Uma matriz denteada é uma matriz unidimensional cujos elementos contêm matrizes. Portanto, a propriedade <xref:System.Array.Length%2A?displayProperty=nameWithType> e o método `Array.GetLength(0)` retornam o número de elementos na matriz unidimensional e `Array.GetLength(1)` gera um <xref:System.IndexOutOfRangeException> porque uma matriz denteada não é multidimensional. Você determina o número de elementos em cada submatriz recuperando o valor da propriedade de <xref:System.Array.Length%2A?displayProperty=nameWithType> de cada submatriz. O exemplo a seguir ilustra como determinar o número de elementos em uma matriz denteada.
 
 [!code-vb[jagged-array-size](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/jagged-length.vb)]
 
-## <a name="zero-length-arrays"></a>Zero-length arrays
+## <a name="zero-length-arrays"></a>Matrizes de comprimento zero
 
-Visual Basic differentiates between a uninitialized array (an array whose value is `Nothing`) and a *zero-length array* or empty array (an array that has no elements.) An uninitialized array is one that has not been dimensioned or had any values assigned to it. Por exemplo:
+Visual Basic diferencia entre uma matriz não inicializada (uma matriz cujo valor é `Nothing`) e uma matriz de *comprimento zero* ou uma matriz vazia (uma matriz que não tem elementos.) Uma matriz não inicializada é aquela que não foi dimensionável ou tinha valores atribuídos a ela. Por exemplo:
 
 ```vb
 Dim arr() As String
 ```
 
-A zero-length array is declared with a dimension of -1. Por exemplo:
+Uma matriz de comprimento zero é declarada com uma dimensão de-1. Por exemplo:
 
 ```vb
 Dim arrZ(-1) As String
@@ -233,62 +233,62 @@ Dim arrZ(-1) As String
 
 Talvez seja necessário criar uma matriz de tamanho igual a zero nas seguintes circunstâncias:
 
-- Without risking a <xref:System.NullReferenceException> exception, your code must access members of the <xref:System.Array> class, such as <xref:System.Array.Length%2A> or <xref:System.Array.Rank%2A>, or call a Visual Basic function such as <xref:Microsoft.VisualBasic.Information.UBound%2A>.
+- Sem arriscar uma exceção <xref:System.NullReferenceException>, seu código deve acessar membros da classe <xref:System.Array>, como <xref:System.Array.Length%2A> ou <xref:System.Array.Rank%2A>, ou chamar uma função Visual Basic, como <xref:Microsoft.VisualBasic.Information.UBound%2A>.
 
-- You want to keep your code simple by not having to check for `Nothing` as a special case.
+- Você deseja manter seu código simples por não ter que verificar `Nothing` como um caso especial.
 
 - Seu código interage com uma API (interface de programação do aplicativo) que exige que você passe uma matriz de tamanho igual a zero para um ou mais procedimentos ou retorna uma matriz de tamanho igual a zero de um ou mais procedimentos.
 
-## <a name="splitting-an-array"></a>Splitting an array
+## <a name="splitting-an-array"></a>Dividindo uma matriz
 
-In some cases, you may need to split a single array into multiple arrays. This involves identifying the point or points at which the array is to be split, and then spitting the array into two or more separate arrays.
+Em alguns casos, talvez seja necessário dividir uma única matriz em várias matrizes. Isso envolve identificar o ponto ou pontos em que a matriz deve ser dividida e, em seguida, Spitting a matriz em duas ou mais matrizes separadas.
 
 > [!NOTE]
-> This section does not discuss splitting a single string into a string array based on some delimiter. For information on splitting a string, see the <xref:System.String.Split%2A?displayProperty=nameWithType> method.
+> Esta seção não discute como dividir uma única cadeia de caracteres em uma matriz de cadeia de caracteres com base em algum delimitador. Para obter informações sobre como dividir uma cadeia de caracteres, consulte o método <xref:System.String.Split%2A?displayProperty=nameWithType>.
 
-The most common criteria for splitting an array are:
+Os critérios mais comuns para dividir uma matriz são:
 
-- O número de elementos na matriz. For example, you might want to split an array of more than a specified number of elements into a number of approximately equal parts. For this purpose, you can use the value returned by either the <xref:System.Array.Length%2A?displayProperty=nameWithType> or <xref:System.Array.GetLength%2A?displayProperty=nameWithType> method.
+- O número de elementos na matriz. Por exemplo, você pode desejar dividir uma matriz de mais de um número especificado de elementos em um número de partes aproximadamente iguais. Para essa finalidade, você pode usar o valor retornado pelo método <xref:System.Array.Length%2A?displayProperty=nameWithType> ou <xref:System.Array.GetLength%2A?displayProperty=nameWithType>.
 
-- The value of an element, which serves as a delimiter that indicates where the array should be split. You can search for a specific value by calling the <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> and <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType> methods.
+- O valor de um elemento, que serve como um delimitador que indica onde a matriz deve ser dividida. Você pode procurar um valor específico chamando os métodos <xref:System.Array.FindIndex%2A?displayProperty=nameWithType> e <xref:System.Array.FindLastIndex%2A?displayProperty=nameWithType>.
 
-Once you've determined the index or indexes at which the array should be split, you can then create the individual arrays by calling the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
+Depois de determinar o índice ou os índices nos quais a matriz deve ser dividida, você pode criar as matrizes individuais chamando o método <xref:System.Array.Copy%2A?displayProperty=nameWithType>.
 
-The following example splits an array into two arrays of approximately equal size. (If the total number of array elements is odd, the first array has one more element than the second.)
+O exemplo a seguir divide uma matriz em duas matrizes de tamanho aproximadamente igual. (Se o número total de elementos de matriz for ímpar, a primeira matriz terá mais um elemento do que o segundo.)
 
 [!code-vb[splitting-an-array-by-length](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split1.vb)]
 
-The following example splits a string array into two arrays based on the presence of an element whose value is "zzz", which serves as the array delimiter. The new arrays do not include the element that contains the delimiter.
+O exemplo a seguir divide uma matriz de cadeia de caracteres em duas matrizes com base na presença de um elemento cujo valor é "ZZZ", que serve como o delimitador de matriz. As novas matrizes não incluem o elemento que contém o delimitador.
 
 [!code-vb[splitting-an-array-by-delimiter](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/split2.vb)]
 
-## <a name="joining-arrays"></a>Joining arrays
+## <a name="joining-arrays"></a>Unindo matrizes
 
-You can also combine a number of arrays into a single larger array. To do this, you also use the <xref:System.Array.Copy%2A?displayProperty=nameWithType> method.
+Você também pode combinar um número de matrizes em uma única matriz maior. Para fazer isso, você também usa o método <xref:System.Array.Copy%2A?displayProperty=nameWithType>.
 
 > [!NOTE]
-> This section does not discuss joining a string array into a single string. For information on joining a string array, see the <xref:System.String.Join%2A?displayProperty=nameWithType> method.
+> Esta seção não aborda a junção de uma matriz de cadeia de caracteres em uma única cadeia. Para obter informações sobre como ingressar em uma matriz de cadeia de caracteres, consulte o método <xref:System.String.Join%2A?displayProperty=nameWithType>.
 
-Before copying the elements of each array into the new array, you must first ensure that you have initialized the array so that it is large enough to accommodate the new array. Você pode fazer isso de duas maneiras:
+Antes de copiar os elementos de cada matriz para a nova matriz, primeiro você deve garantir que tenha inicializado a matriz para que seja grande o suficiente para acomodar a nova matriz. Você pode fazer isso de duas maneiras:
 
-- Use the [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) statement to dynamically expand the array before adding new elements to it. This is the easiest technique, but it can result in performance degradation and excessive memory consumption when you are copying large arrays.
-- Calculate the total number of elements needed for the new large array, then add the elements of each source array to it.
+- Use a instrução [`ReDim Preserve`](../../../language-reference/statements/redim-statement.md) para expandir dinamicamente a matriz antes de adicionar novos elementos a ela. Essa é a técnica mais fácil, mas pode resultar em degradação de desempenho e consumo excessivo de memória quando você estiver copiando matrizes grandes.
+- Calcule o número total de elementos necessários para a nova matriz grande e, em seguida, adicione os elementos de cada matriz de origem a ele.
 
-The following example uses the second approach to add four arrays with ten elements each to a single array.
+O exemplo a seguir usa a segunda abordagem para adicionar quatro matrizes com dez elementos cada para uma única matriz.
 
 [!code-vb[joining-an-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join.vb)]
 
-Since in this case the source arrays are all small, we can also dynamically expand the array as we add the elements of each new array to it. O exemplo a seguir faz isso.
+Como nesse caso, as matrizes de origem são todas pequenas, também podemos expandir dinamicamente a matriz à medida que adicionamos os elementos de cada nova matriz a ela. O exemplo a seguir faz isso.
 
 [!code-vb[joining-an-array-dynamically](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/join2.vb)]
 
-## <a name="collections-as-an-alternative-to-arrays"></a>Collections as an alternative to arrays
+## <a name="collections-as-an-alternative-to-arrays"></a>Coleções como uma alternativa às matrizes
 
-As matrizes são mais úteis para criar e trabalhar com um número fixo de objetos fortemente tipados. As coleções fornecem uma maneira mais flexível de trabalhar com grupos de objetos. Unlike arrays, which require that you explicitly change the size of an array with the [`ReDim` Statement](../../../language-reference/statements/redim-statement.md), collections grow and shrink dynamically as the needs of an application change.
+As matrizes são mais úteis para criar e trabalhar com um número fixo de objetos fortemente tipados. As coleções fornecem uma maneira mais flexível de trabalhar com grupos de objetos. Ao contrário de matrizes, que exigem que você altere explicitamente o tamanho de uma matriz com a [instrução`ReDim`](../../../language-reference/statements/redim-statement.md), as coleções crescem e diminuem dinamicamente conforme as necessidades de um aplicativo são alteradas.
 
-When you use `ReDim` to redimension an array, Visual Basic creates a new array and releases the previous one. Isso leva o tempo da execução. Therefore, if the number of items you are working with changes frequently, or you cannot predict the maximum number of items you need, you'll usually obtain better performance by using a collection.
+Quando você usa `ReDim` para redimensionar uma matriz, Visual Basic cria uma nova matriz e libera a anterior. Isso leva o tempo da execução. Portanto, se o número de itens com os quais você está trabalhando for alterado com frequência ou se você não puder prever o número máximo de itens de que precisa, geralmente obterá um melhor desempenho usando uma coleção.
 
-Para algumas coleções, você pode atribuir uma chave para qualquer objeto que colocar na coleção para que você possa recuperar rapidamente o objeto, usando a chave.
+Para algumas coleções, você pode atribuir uma chave para qualquer objeto que coloque na coleção para que você possa recuperar rapidamente o objeto usando a chave.
 
 Se a coleção contiver elementos de apenas um tipo de dados, você poderá usar uma das classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. Uma coleção genérica impõe segurança de tipos para que nenhum outro tipo de dados possa ser adicionado a ela.
 

@@ -16,7 +16,7 @@ ms.locfileid: "74351416"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modificador genérico) (Visual Basic)
 
-For generic type parameters, the `Out` keyword specifies that the type is covariant.
+Para parâmetros de tipo genérico, a palavra-chave `Out` especifica que o tipo é covariant.
 
 ## <a name="remarks"></a>Comentários
 
@@ -37,11 +37,11 @@ Em uma interface genérica, um parâmetro de tipo pode ser declarado covariante 
 
 - O parâmetro de tipo não é usado como uma restrição genérica para os métodos de interface.
 
-In a generic delegate, a type parameter can be declared covariant if it is used only as a method return type and not used for method arguments.
+Em um delegado genérico, um parâmetro de tipo pode ser declarado como covariant se for usado apenas como um tipo de retorno de método e não usado para argumentos de método.
 
 A covariância e a contravariância têm suporte para tipos de referência, mas não para tipos de valor.
 
-In Visual Basic, you cannot declare events in covariant interfaces without specifying the delegate type. Also, covariant interfaces cannot have nested classes, enums, or structures, but they can have nested interfaces.
+No Visual Basic, você não pode declarar eventos em interfaces covariantes sem especificar o tipo delegado. Além disso, as interfaces covariantes não podem ter classes aninhadas, enums ou estruturas, mas podem ter interfaces aninhadas.
 
 ## <a name="behavior"></a>Comportamento
 
@@ -57,7 +57,7 @@ O exemplo a seguir mostra como declarar, estender e implementar uma interface ge
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra como declarar, instanciar e invocar um delegado genérico covariante. It also shows how you can use implicit conversion for delegate types.
+O exemplo a seguir mostra como declarar, instanciar e invocar um delegado genérico covariante. Ele também mostra como você pode usar a conversão implícita para tipos delegados.
 
 [!code-vb[vbVarianceKeywords#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvariancekeywords/vb/module1.vb#4)]
 

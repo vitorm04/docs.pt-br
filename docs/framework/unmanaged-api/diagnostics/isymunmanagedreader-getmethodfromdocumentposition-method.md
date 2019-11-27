@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426739"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>Método ISymUnmanagedReader::GetMethodFromDocumentPosition
-Returns the method that contains the breakpoint at the given position in a document.  
+Retorna o método que contém o ponto de interrupção na posição especificada em um documento.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,22 +37,22 @@ HRESULT GetMethodFromDocumentPosition (
   
 ## <a name="parameters"></a>Parâmetros  
  `document`  
- [in] The specified document.  
+ no O documento especificado.  
   
  `line`  
- [in] The line of the specified document.  
+ no A linha do documento especificado.  
   
  `column`  
- [in] The column of the specified document.  
+ no A coluna do documento especificado.  
   
  `pRetVal`  
- [out] A pointer to the address of a [ISymUnmanagedMethod Interface](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents the method containing the breakpoint.  
+ fora Um ponteiro para o endereço de um objeto de [interface ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) que representa o método que contém o ponto de interrupção.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

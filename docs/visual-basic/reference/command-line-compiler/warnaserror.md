@@ -22,7 +22,7 @@ Faz com que o compilador trate a primeira ocorrência de um aviso como um erro.
 -warnaserror[+ | -][:numberList]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
@@ -41,11 +41,11 @@ Faz com que o compilador trate a primeira ocorrência de um aviso como um erro.
   
 |Para definir -warnaserror para tratar todos os avisos como erros no IDE do Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Check the **Treat all warnings as errors** check box.|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2. Clique na guia **Compilar** .<br />3. Certifique-se de que a caixa de seleção **desabilitar todos os avisos** esteja desmarcada.<br />4. Marque a caixa de seleção **tratar todos os avisos como erros** .|  
   
 |Para definir -warnaserror para tratar avisos específicos como erros no IDE do Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. No menu **Projeto**, clique em **Propriedades**.<br />2.  Click the **Compile** tab.<br />3.  Make sure the **Disable all warnings** check box is unchecked.<br />4.  Make sure the **Treat all warnings as errors** check box is unchecked.<br />5.  Select **Error** from the **Notification** column adjacent to the warning that should be treated as an error.|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto**, clique em **Propriedades**.<br />2. Clique na guia **Compilar** .<br />3. Certifique-se de que a caixa de seleção **desabilitar todos os avisos** esteja desmarcada.<br />4. Verifique se a caixa de seleção **tratar todos os avisos como erros** está desmarcada.<br />5. Selecione o **erro** da coluna de **notificação** adjacente ao aviso que deve ser tratado como um erro.|  
   
 ## <a name="example"></a>Exemplo  
  O código a seguir compila `In.vb` e direciona o compilador para exibir um erro para a primeira ocorrência de cada aviso que ele encontre.  

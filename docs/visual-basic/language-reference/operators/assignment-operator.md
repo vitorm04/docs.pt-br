@@ -16,7 +16,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350196"
 ---
 # <a name="-operator-visual-basic"></a>Operador = (Visual Basic)
-Assigns a value to a variable or property.  
+Atribui um valor a uma variável ou propriedade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,22 +26,22 @@ variableorproperty = value
   
 ## <a name="parts"></a>Partes  
  `variableorproperty`  
- Any writable variable or any property.  
+ Qualquer variável gravável ou qualquer propriedade.  
   
  `value`  
- Any literal, constant, or expression.  
+ Qualquer literal, constante ou expressão.  
   
 ## <a name="remarks"></a>Comentários  
- The element on the left side of the equal sign (`=`) can be a simple scalar variable, a property, or an element of an array. The variable or property cannot be [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). The `=` operator assigns the value on its right to the variable or property on its left.  
+ O elemento no lado esquerdo do sinal de igual (`=`) pode ser uma variável escalar simples, uma propriedade ou um elemento de uma matriz. A variável ou a propriedade não pode ser [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md). O operador `=` atribui o valor à sua direita à variável ou à propriedade à esquerda.  
   
 > [!NOTE]
-> The `=` operator is also used as a comparison operator. For details, see [Comparison Operators](../../../visual-basic/language-reference/operators/comparison-operators.md).  
+> O operador de `=` também é usado como um operador de comparação. Para obter detalhes, consulte [operadores de comparação](../../../visual-basic/language-reference/operators/comparison-operators.md).  
   
 ## <a name="overloading"></a>Sobrecarga  
- The `=` operator can be overloaded only as a relational comparison operator, not as an assignment operator. For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ O operador `=` só pode ser sobrecarregado como um operador de comparação relacional, não como um operador de atribuição. Para obter mais informações, consulte [procedimentos de operador](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Exemplo  
- The following example demonstrates the assignment operator. The value on the right is assigned to the variable on the left.  
+ O exemplo a seguir demonstra o operador de atribuição. O valor à direita é atribuído à variável à esquerda.  
   
  [!code-vb[VbVbalrOperators#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#9)]  
   
@@ -50,9 +50,9 @@ variableorproperty = value
 - [Operador &=](../../../visual-basic/language-reference/operators/and-assignment-operator.md)
 - [Operador *=](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [Operador +=](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
-- [-= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [/= Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
-- [\\= Operator](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
+- [-= Operador (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [Operador/= (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
+- [Operador \\=](../../../visual-basic/language-reference/operators/integer-division-assignment-operator.md)
 - [Operador ^=](../../../visual-basic/language-reference/operators/exponentiation-assignment-operator.md)
 - [Instruções](../../../visual-basic/programming-guide/language-features/statements.md)
 - [Operadores de Comparação](../../../visual-basic/language-reference/operators/comparison-operators.md)

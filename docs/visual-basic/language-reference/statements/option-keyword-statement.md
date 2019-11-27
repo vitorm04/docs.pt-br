@@ -13,13 +13,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353770"
 ---
-# <a name="option-keyword-statement"></a>Option \<keyword> Statement
-Introduces a statement that specifies a compiler option that applies to the entire source file.  
+# <a name="option-keyword-statement"></a>Instrução Option \<palavra-chave >
+Apresenta uma instrução que especifica uma opção de compilador que se aplica a todo o arquivo de origem.  
   
 ## <a name="remarks"></a>Comentários  
- The compiler options can control whether all variables must be explicitly declared, whether narrowing type conversions must be explicit, or whether strings should be compared as text or as binary quantities.  
+ As opções do compilador podem controlar se todas as variáveis devem ser declaradas explicitamente, se as conversões de tipo de restrição devem ser explícitas ou se as cadeias de caracteres devem ser comparadas como texto ou como quantidades binárias.  
   
- The `Option` keyword can be used in these contexts:  
+ A palavra-chave `Option` pode ser usada nesses contextos:  
   
  [Instrução Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   

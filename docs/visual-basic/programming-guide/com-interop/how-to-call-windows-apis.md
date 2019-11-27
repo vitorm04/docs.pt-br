@@ -15,22 +15,22 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348710"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Como chamar APIs do Windows (Visual Basic)
-This example defines and calls the `MessageBox` function in user32.dll and then passes a string to it.  
+Este exemplo define e chama a função `MessageBox` no user32. dll e, em seguida, passa uma cadeia de caracteres para ela.  
   
 ## <a name="example"></a>Exemplo  
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- A reference to the <xref:System> namespace.  
+- Uma referência ao namespace <xref:System>.  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
  As seguintes condições podem causar uma exceção:  
   
-- The method is not static, is abstract, or has been previously defined. The parent type is an interface, or the length of *name* or *dllName* is zero. (<xref:System.ArgumentException>)  
+- O método não é estático, é abstrato ou foi definido anteriormente. O tipo de pai é uma interface ou o comprimento de *Name* ou *DllName* é zero. (<xref:System.ArgumentException>)  
   
-- The *name* or *dllName* is `Nothing`. (<xref:System.ArgumentNullException>)  
+- O *nome* ou *DllName* é `Nothing`. (<xref:System.ArgumentNullException>)  
   
 - O tipo recipiente foi criado anteriormente usando `CreateType`. (<xref:System.InvalidOperationException>)  
   
@@ -39,6 +39,6 @@ This example defines and calls the `MessageBox` function in user32.dll and then 
 - [Um olhar detalhado sobre invocação de plataforma](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Exemplos de invocação de plataforma](../../../framework/interop/platform-invoke-examples.md)
 - [Consumindo funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md)
-- [Defining a Method with Reflection Emit](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
+- [Definindo um método com emissão de reflexão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w63y4d4f(v=vs.100))
 - [Instruções passo a passo: chamando APIs do Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)

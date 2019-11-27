@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74448645"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>Método ISymENCUnmanagedMethod::GetLineFromOffset
-Gets the line information associated with an offset. If the offset parameter (`dwOffset`) is not a sequence point, this method gets the line information associated with the previous offset.  
+Obtém as informações de linha associadas a um deslocamento. Se o parâmetro offset (`dwOffset`) não for um ponto de sequência, esse método obterá as informações de linha associadas ao deslocamento anterior.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,28 +39,28 @@ HRESULT GetLineFromOffset(
   
 ## <a name="parameters"></a>Parâmetros  
  `dwOffset`  
- [in] A `ULONG32` that contains the offset.  
+ no Um `ULONG32` que contém o deslocamento.  
   
  `pline`  
- [out] A pointer to a `ULONG32` that receives the line.  
+ fora Um ponteiro para um `ULONG32` que recebe a linha.  
   
  `pcolumn`  
- [out] A pointer to a `ULONG32` that receives the column.  
+ fora Um ponteiro para um `ULONG32` que recebe a coluna.  
   
  `pendLine`  
- [out] A pointer to a `ULONG32` that receives the end line.  
+ fora Um ponteiro para um `ULONG32` que recebe a linha final.  
   
  `pendColumn`  
- [out] A pointer to a `ULONG32` that receives the end column.  
+ fora Um ponteiro para um `ULONG32` que recebe a coluna final.  
   
  `pdwStartOffset`  
- [out] A pointer to a `ULONG32` that receives the associated sequence point.  
+ fora Um ponteiro para um `ULONG32` que recebe o ponto de sequência associado.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

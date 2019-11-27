@@ -15,34 +15,34 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350755"
 ---
 # <a name="static-visual-basic"></a>Estático (Visual Basic)
-Specifies that one or more declared local variables are to continue to exist and retain their latest values after termination of the procedure in which they are declared.  
+Especifica que uma ou mais variáveis locais declaradas devem continuar a existir e manter seus valores mais recentes após o término do procedimento no qual elas são declaradas.  
   
 ## <a name="remarks"></a>Comentários  
- Normally, a local variable in a procedure ceases to exist as soon as the procedure stops. A static variable continues to exist and retains its most recent value. The next time your code calls the procedure, the variable is not reinitialized, and it still holds the latest value that you assigned to it. A static variable continues to exist for the lifetime of the class or module that it is defined in.  
+ Normalmente, uma variável local em um procedimento deixa de existir assim que o procedimento para. Uma variável estática continua existindo e retém seu valor mais recente. Na próxima vez em que o código chamar o procedimento, a variável não será reinicializada e ainda manterá o valor mais recente que você atribuiu a ela. Uma variável estática continua existindo durante o tempo de vida da classe ou do módulo em que ela está definida.  
   
 ## <a name="rules"></a>Regras  
   
-- **Declaration Context.** You can use `Static` only on local variables. This means the declaration context for a `Static` variable must be a procedure or a block in a procedure, and it cannot be a source file, namespace, class, structure, or module.  
+- **Contexto de declaração.** Você pode usar `Static` apenas em variáveis locais. Isso significa que o contexto de declaração para uma variável `Static` deve ser um procedimento ou um bloco em um procedimento, e não pode ser um arquivo de origem, namespace, classe, estrutura ou módulo.  
   
-     You cannot use `Static` inside a structure procedure.  
+     Você não pode usar `Static` dentro de um procedimento de estrutura.  
   
-- The data types of `Static` local variables cannot be inferred. For more information, see [Local Type Inference](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
+- Os tipos de dados de `Static` variáveis locais não podem ser inferidos. Para obter mais informações, consulte [inferência de tipo local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
   
-- **Combined Modifiers.** You cannot specify `Static` together with `ReadOnly`, `Shadows`, or `Shared` in the same declaration.  
+- **Modificadores combinados.** Não é possível especificar `Static` junto com `ReadOnly`, `Shadows`ou `Shared` na mesma declaração.  
   
 ## <a name="behavior"></a>Comportamento  
- When you declare a static variable in a `Shared` procedure, only one copy of the static variable is available for the whole application. You call a `Shared` procedure by using the class name, not a variable that points to an instance of the class.  
+ Quando você declara uma variável estática em um procedimento `Shared`, apenas uma cópia da variável estática está disponível para o aplicativo inteiro. Você chama um procedimento de `Shared` usando o nome da classe, não uma variável que aponta para uma instância da classe.  
   
- When you declare a static variable in a procedure that isn't `Shared`, only one copy of the variable is available for each instance of the class. You call a non-shared procedure by using a variable that points to a specific instance of the class.  
+ Quando você declara uma variável estática em um procedimento que não é `Shared`, apenas uma cópia da variável está disponível para cada instância da classe. Você chama um procedimento não compartilhado usando uma variável que aponta para uma instância específica da classe.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir demonstra o uso de `Static`.  
   
  [!code-vb[VbVbalrKeywords#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/Class1.vb#5)]  
   
- The `Static` variable `totalSales` is initialized to 0 only one time. Each time that you enter `updateSales`, `totalSales` still has the most recent value that you calculated for it.  
+ A variável de `Static` `totalSales` é inicializada como 0 somente uma vez. Cada vez que você inserir `updateSales`, `totalSales` ainda terá o valor mais recente que você calculou para ele.  
   
- The `Static` modifier can be used in this context:  
+ O modificador de `Static` pode ser usado neste contexto:  
   
  [Instrução Dim](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -50,7 +50,7 @@ Specifies that one or more declared local variables are to continue to exist and
 
 - [Sombras](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [Compartilhado](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Lifetime in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Tempo de vida em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [Declaração de Variável](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Inferência de Tipo de Variável Local](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

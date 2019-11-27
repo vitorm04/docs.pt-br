@@ -79,7 +79,7 @@ Shared Sub Test()
 End Sub
 ```
 
-In .NET Framework 4 or later, Visual Basic supports covariance and contravariance in generic interfaces and delegates and allows for implicit conversion of generic type parameters. Para obter mais informações, consulte [Variação em interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) e [Variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
+No .NET Framework 4 ou posterior, Visual Basic dá suporte a covariância e contravariância em interfaces e delegados genéricos e permite a conversão implícita de parâmetros de tipo genérico. Para obter mais informações, consulte [Variação em interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md) e [Variação em delegados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md).
 
 O exemplo de código a seguir mostra a conversão de referência implícita para interfaces genéricas.
 
@@ -92,7 +92,7 @@ Uma interface ou delegado genérico será chamado *variante* se seus parâmetros
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Title|Descrição|
 |-----------|-----------------|
 |[Variação em interfaces genéricas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)|Discute a covariância e a contravariância em interfaces genéricas e fornece uma lista de interfaces genéricas variáveis no .NET Framework.|
 |[Criando interfaces genéricas variantes (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)|Mostra como criar interfaces variantes personalizadas.|

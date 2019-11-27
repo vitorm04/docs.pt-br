@@ -30,7 +30,7 @@ Você pode baixar o projeto completo do WPF (Windows Presentation Foundation) em
 
 4. No **Gerenciador de Soluções**, abra o menu de atalho do projeto **CancelAfterTime** e, em seguida, escolha **Definir como Projeto de Inicialização**.
 
-5. Escolha a tecla F5 para executar o projeto.
+5. Pressione a tecla F5 para executar o projeto.
 
      Escolha as teclas CTRL+F5 para executar o projeto sem depurá-lo.
 
@@ -74,7 +74,7 @@ Private Async Sub startButton_Click(sender As Object, e As RoutedEventArgs)
 End Sub
 ```
 
-Execute o programa várias vezes para verificar que a saída pode mostrar a saída para todos os sites, nenhum site ou alguns sites. The following output is a sample:
+Execute o programa várias vezes para verificar que a saída pode mostrar a saída para todos os sites, nenhum site ou alguns sites. A saída a seguir é um exemplo:
 
 ```console
 Length of the downloaded string: 35990.
@@ -199,4 +199,4 @@ End Class
 - [Instruções passo a passo: acessando a Web usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Cancelar uma tarefa assíncrona ou uma lista de tarefas (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks.md)
 - [Ajustando seu aplicativo assíncrono (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
-- [Exemplo de assincronia: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Exemplo assíncrono: ajuste fino de seu aplicativo](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

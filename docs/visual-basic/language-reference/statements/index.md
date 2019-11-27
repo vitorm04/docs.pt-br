@@ -31,7 +31,7 @@ Os tópicos nesta seção contêm tabelas da declaração do Visual Basic e inst
   
  [Lista de Tipos](../../../visual-basic/language-reference/statements/type-list.md)  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Referência da linguagem Visual Basic](../../../visual-basic/language-reference/index.md)  
   
  [Visual Basic](../../../visual-basic/index.md)

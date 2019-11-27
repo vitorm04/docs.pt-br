@@ -29,19 +29,19 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350053"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Como usar uma classe genérica (Visual Basic)
-A class that takes *type parameters* is called a *generic class*. If you are using a generic class, you can generate a *constructed class* from it by supplying a *type argument* for each of these parameters. You can then declare a variable of the constructed class type, and you can create an instance of the constructed class and assign it to that variable.  
+Uma classe que usa *parâmetros de tipo* é chamada de *classe genérica*. Se você estiver usando uma classe genérica, poderá gerar uma *classe construída* a partir dela fornecendo um argumento de *tipo* para cada um desses parâmetros. Você pode então declarar uma variável do tipo de classe construída e pode criar uma instância da classe construída e atribuí-la a essa variável.  
   
- In addition to classes, you can also define and use generic structures, interfaces, procedures, and delegates.  
+ Além das classes, você também pode definir e usar estruturas genéricas, interfaces, procedimentos e delegados.  
   
- The following procedure takes a generic class defined in the .NET Framework and creates an instance from it.  
+ O procedimento a seguir usa uma classe genérica definida no .NET Framework e cria uma instância a partir dela.  
   
-### <a name="to-use-a-class-that-takes-a-type-parameter"></a>To use a class that takes a type parameter  
+### <a name="to-use-a-class-that-takes-a-type-parameter"></a>Para usar uma classe que usa um parâmetro de tipo  
   
-1. At the beginning of your source file, include an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) to import the <xref:System.Collections.Generic?displayProperty=nameWithType> namespace. This allows you to refer to the <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> class without having to fully qualify it to differentiate it from other queue classes such as <xref:System.Collections.Queue?displayProperty=nameWithType>.  
+1. No início do arquivo de origem, inclua uma [instrução Imports (namespace e tipo do .net)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) para importar o namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. Isso permite que você consulte a classe <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> sem precisar qualificá-la totalmente para diferenciá-la de outras classes de fila, como <xref:System.Collections.Queue?displayProperty=nameWithType>.  
   
-2. Create the object in the normal way, but add `(Of type)` immediately after the class name.  
+2. Crie o objeto da maneira normal, mas adicione `(Of type)` imediatamente após o nome da classe.  
   
-     The following example uses the same class (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) to create two queue objects that hold items of different data types. It adds items to the end of each queue and then removes and displays items from the front of each queue.  
+     O exemplo a seguir usa a mesma classe (<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>) para criar dois objetos de fila que contêm itens de tipos de dados diferentes. Ele adiciona itens ao final de cada fila e, em seguida, remove e exibe itens da frente de cada fila.  
   
      [!code-vb[VbVbalrDataTypes#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#9)]  
   

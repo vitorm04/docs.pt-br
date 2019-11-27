@@ -24,24 +24,24 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351451"
 ---
 # <a name="notoverridable-visual-basic"></a>NotOverridable (Visual Basic)
-Specifies that a property or procedure cannot be overridden in a derived class.  
+Especifica que uma propriedade ou procedimento não pode ser substituído em uma classe derivada.  
   
 ## <a name="remarks"></a>Comentários  
- The `NotOverridable` modifier prevents a property or method from being overridden in a derived class.  The [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) modifier allows a property or method in a class to be overridden in a derived class. Para obter mais informações, consulte [Noções básicas de herança](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+ O modificador `NotOverridable` impede que uma propriedade ou um método seja substituído em uma classe derivada.  O modificador [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md) permite que uma propriedade ou método em uma classe seja substituído em uma classe derivada. Para obter mais informações, consulte [Noções básicas de herança](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- If the `Overridable` or `NotOverridable` modifier is not specified, the default setting depends on whether the property or method overrides a base class property or method. If the property or method overrides a base class property or method, the default setting is `Overridable`; otherwise, it is `NotOverridable`.  
+ Se o modificador `Overridable` ou `NotOverridable` não for especificado, a configuração padrão dependerá se a propriedade ou o método substituirá uma propriedade ou método de classe base. Se a propriedade ou o método substituir uma propriedade ou método de classe base, a configuração padrão será `Overridable`; caso contrário, será `NotOverridable`.  
   
- An element that cannot be overridden is sometimes called a *sealed* element.  
+ Um elemento que não pode ser substituído às vezes é chamado de elemento *lacrado* .  
   
- You can use `NotOverridable` only in a property or procedure declaration statement. You can specify `NotOverridable` only on a property or procedure that overrides another property or procedure, that is, only in combination with `Overrides`.  
+ Você pode usar `NotOverridable` apenas em uma instrução de declaração de propriedade ou de procedimento. Você pode especificar `NotOverridable` apenas em uma propriedade ou procedimento que substitua outra propriedade ou procedimento, ou seja, somente em combinação com `Overrides`.  
   
-## <a name="combined-modifiers"></a>Combined Modifiers  
- You cannot specify `Overridable` or `NotOverridable` for a `Private` method.  
+## <a name="combined-modifiers"></a>Modificadores combinados  
+ Você não pode especificar `Overridable` ou `NotOverridable` para um método de `Private`.  
   
- You cannot specify `NotOverridable` together with `MustOverride`, `Overridable`, or `Shared` in the same declaration.  
+ Não é possível especificar `NotOverridable` junto com `MustOverride`, `Overridable`ou `Shared` na mesma declaração.  
   
 ## <a name="usage"></a>Uso  
- The `NotOverridable` modifier can be used in these contexts:  
+ O modificador de `NotOverridable` pode ser usado nesses contextos:  
   
  [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -57,4 +57,4 @@ Specifies that a property or procedure cannot be overridden in a derived class.
 - [Substituível](../../../visual-basic/language-reference/modifiers/overridable.md)
 - [Substituições](../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Palavras-chave](../../../visual-basic/language-reference/keywords/index.md)
-- [Shadowing in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Sombreamento em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)

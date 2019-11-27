@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351097"
 ---
-# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>How to: Control the Type of a Projection (Visual Basic)
+# <a name="how-to-control-the-type-of-a-projection-visual-basic"></a>Como controlar o tipo de uma projeção (Visual Basic)
 A projeção é o processo de receber um dataset, de filtre-o, para alterar sua forma, e mesmo de alterar seu tipo. A maioria das expressões de consulta executam projeções. A maioria das expressões de consulta mostradas nesta seção valor para <xref:System.Collections.Generic.IEnumerable%601> de <xref:System.Xml.Linq.XElement>, mas você pode controlar o tipo de projeção para criar coleções de outros tipos. Este tópico mostra como fazer isso.  
   
 ## <a name="example"></a>Exemplo  
@@ -89,4 +89,4 @@ LETSS:Let's Stop N Shop:Jaime Yorres
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq.Enumerable.Select%2A>
-- [Projections and Transformations (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- [Projeções e transformações (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

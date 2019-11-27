@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349306"
 ---
-# <a name="standard-query-operators-overview-visual-basic"></a>Standard Query Operators Overview (Visual Basic)
+# <a name="standard-query-operators-overview-visual-basic"></a>Visão geral dos operadores de consulta padrão (Visual Basic)
 
 Os *operadores de consulta padrão* são os métodos que formam o padrão LINQ. A maioria desses métodos opera em sequências; neste contexto, uma sequência é um objeto cujo tipo implementa a interface <xref:System.Collections.Generic.IEnumerable%601> ou a interface <xref:System.Linq.IQueryable%601>. Os operadores de consulta padrão fornecem recursos de consulta incluindo filtragem, projeção, agregação, classificação e muito mais.
 
@@ -66,49 +66,49 @@ MsgBox(output.ToString())
 
 ## <a name="query-expression-syntax"></a>Sintaxe de expressão de consulta
 
-Alguns dos operadores de consulta padrão mais usados têm uma sintaxe de palavra-chave de linguagem C# e Visual Basic dedicada que possibilita que eles sejam chamados como parte de uma *expressão* *de consulta*. For more information about standard query operators that have dedicated keywords and their corresponding syntaxes, see [Query Expression Syntax for Standard Query Operators (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).
+Alguns dos operadores de consulta padrão mais usados têm uma sintaxe de palavra-chave de linguagem C# e Visual Basic dedicada que possibilita que eles sejam chamados como parte de uma *expressão* *de consulta*. Para obter mais informações sobre operadores de consulta padrão que têm palavras-chave dedicadas e suas sintaxes correspondentes, consulte [sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md).
 
 ## <a name="extending-the-standard-query-operators"></a>Estendendo os operadores de consulta padrão
 
-Você pode aumentar o conjunto de operadores de consulta padrão criando métodos específicos de domínio apropriados para o domínio ou tecnologia de destino. Você também pode substituir os operadores de consulta padrão por suas próprias implementações que fornecem serviços adicionais, como avaliação remota, conversão de consulta e otimização. Para ver um exemplo, consulte <xref:System.Linq.Enumerable.AsEnumerable%2A>.
+Você pode aumentar o conjunto de operadores de consulta padrão criando métodos específicos de domínio apropriados para o domínio ou tecnologia de destino. Você também pode substituir os operadores de consulta padrão por suas próprias implementações que fornecem serviços adicionais, como avaliação remota, conversão de consulta e otimização. Consulte <xref:System.Linq.Enumerable.AsEnumerable%2A> para obter um exemplo.
 
-## <a name="related-sections"></a>Seções relacionadas
+## <a name="related-sections"></a>Seções Relacionadas
 
 Os links a seguir levam você a tópicos que fornecem informações adicionais sobre os vários operadores de consulta padrão com base na funcionalidade.
 
 - [Classificando Dados](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
 
-- [Set Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
+- [Operações Set (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
 
-- [Filtering Data (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
+- [Filtrando dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
 
-- [Quantifier Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [Operações do quantificador (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
 
-- [Projection Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [Operações de projeção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
 
-- [Partitioning Data (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
+- [Dados de particionamento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
 
-- [Join Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
+- [Operações de junção (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
 
-- [Grouping Data (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
+- [Agrupando dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
 
-- [Generation Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
+- [Operações de geração (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
 
-- [Equality Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
+- [Operações de igualdade (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
 
-- [Element Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
+- [Operações de elemento (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
 
-- [Converting Data Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [Convertendo tipos de dados (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
 
-- [Concatenation Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
+- [Operações de concatenação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
 
-- [Aggregation Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [Operações de agregação (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
 
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
 - [Introdução ao LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [Query Expression Syntax for Standard Query Operators (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [Classification of Standard Query Operators by Manner of Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [Sintaxe de expressão de consulta para operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [Classificação de operadores de consulta padrão por meio de execução (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
 - [Métodos de Extensão](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

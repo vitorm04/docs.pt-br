@@ -15,43 +15,43 @@ ms.locfileid: "74347876"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Constantes e enumerações (Visual Basic)
 
-Visual Basic supplies a number of predefined constants and enumerations for developers. Constants store values that remain constant throughout the execution of an application. Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores de constante a nomes.  
+O Visual Basic fornece várias constantes predefinidas e enumerações para desenvolvedores. As constantes armazenam valores que permanecem constantes durante a execução de um aplicativo. Enumerações fornecem uma maneira conveniente para trabalhar com conjuntos de constantes relacionadas e para associar valores de constante a nomes.  
   
-## <a name="constants"></a>Constantes  
+## <a name="constants"></a>{1&gt;Constantes&lt;1}  
   
-### <a name="conditional-compilation-constants"></a>Conditional Compilation Constants  
+### <a name="conditional-compilation-constants"></a>Constantes de compilação condicional  
 
- The following table lists the predefined constants available for conditional compilation.  
+ A tabela a seguir lista as constantes predefinidas disponíveis para compilação condicional.  
   
 |**Constante**|**Descrição**|  
 |---|---|  
-|`CONFIG`|A string that corresponds to the current setting of the **Active Solution Configuration** box in the **Configuration Manager**.|  
-|`DEBUG`|A `Boolean` value that can be set in the **Project Properties** dialog box. By default, the Debug configuration for a project defines `DEBUG`. When `DEBUG` is defined, <xref:System.Diagnostics.Debug> class methods generate output to the **Output** window. When it is not defined, <xref:System.Diagnostics.Debug> class methods are not compiled and no Debug output is generated.|  
-|`TARGET`|A string representing the output type for the project or the setting of the command-line **/target** option. The possible values of `TARGET` are:<br /><br /> -   "winexe" for a Windows application.<br />-   "exe" for a console application.<br />-   "library" for a class library.<br />-   "module" for a module.<br />-   The **/target** option may be set in the Visual Studio integrated development environment. For more information, see [-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
-|`TRACE`|A `Boolean` value that can be set in the **Project Properties** dialog box. By default, all configurations for a project define `TRACE`. When `TRACE` is defined, <xref:System.Diagnostics.Trace> class methods generate output to the **Output** window. When it is not defined, <xref:System.Diagnostics.Trace> class methods are not compiled and no `Trace` output is generated.|  
-|`VBC_VER`|A number representing the Visual Basic version, in *major*.*minor* format.|  
+|`CONFIG`|Uma cadeia de caracteres que corresponde à configuração atual da caixa de **configuração de solução ativa** no **Configuration Manager**.|  
+|`DEBUG`|Um valor `Boolean` que pode ser definido na caixa de diálogo **Propriedades do projeto** . Por padrão, a configuração de depuração para um projeto define `DEBUG`. Quando `DEBUG` é definido, <xref:System.Diagnostics.Debug> métodos de classe geram saída para a janela de **saída** . Quando não é definido, <xref:System.Diagnostics.Debug> métodos de classe não são compilados e nenhuma saída de depuração é gerada.|  
+|`TARGET`|Uma cadeia de caracteres que representa o tipo de saída para o projeto ou a configuração da opção de linha de comando **/target** . Os valores possíveis de `TARGET` são:<br /><br /> -"winexe" para um aplicativo do Windows.<br />-"exe" para um aplicativo de console.<br />-"biblioteca" para uma biblioteca de classes.<br />-"módulo" para um módulo.<br />-A opção **/target** pode ser definida no ambiente de desenvolvimento integrado do Visual Studio. Para obter mais informações, consulte [-Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TRACE`|Um valor `Boolean` que pode ser definido na caixa de diálogo **Propriedades do projeto** . Por padrão, todas as configurações para um projeto definem `TRACE`. Quando `TRACE` é definido, <xref:System.Diagnostics.Trace> métodos de classe geram saída para a janela de **saída** . Quando não é definido, <xref:System.Diagnostics.Trace> métodos de classe não são compilados e nenhuma saída de `Trace` é gerada.|  
+|`VBC_VER`|Um número que representa a versão de Visual Basic, em *Major*. formato *secundário* .|  
   
-### <a name="print-and-display-constants"></a>Print and Display Constants  
+### <a name="print-and-display-constants"></a>Imprimir e exibir constantes  
 
- When you call print and display functions, you can use the following constants in your code in place of the actual values.  
+ Ao chamar as funções de impressão e exibição, você pode usar as constantes a seguir em seu código no lugar dos valores reais.  
   
 |**Constante**|**Descrição**|  
 |---|---|  
-|`vbCrLf`|Carriage return/linefeed character combination.|  
-|`vbCr`|Carriage return character.|  
-|`vbLf`|Linefeed character.|  
-|`vbNewLine`|Newline character.|  
-|`vbNullChar`|Null character.|  
-|`vbNullString`|Not the same as a zero-length string (""); used for calling external procedures.|  
+|`vbCrLf`|Combinação de caracteres de retorno de carro/alimentação de linha.|  
+|`vbCr`|Caractere de retorno de carro.|  
+|`vbLf`|Caractere de avanço de linha.|  
+|`vbNewLine`|Caractere de nova linha.|  
+|`vbNullChar`|Caractere nulo.|  
+|`vbNullString`|Não é o mesmo que uma cadeia de caracteres de comprimento zero (""); usado para chamar procedimentos externos.|  
 |`vbObjectError`|Número do erro. Os números de erro definidos pelo usuário devem ser maiores que esse valor. Por exemplo:<br /><br /> `Err.Raise(Number) = vbObjectError + 1000`|  
-|`vbTab`|Tab character.|  
-|`vbBack`|Backspace character.|  
-|`vbFormFeed`|Not used in Microsoft Windows.|  
-|`vbVerticalTab`|Not useful in Microsoft Windows.|  
+|`vbTab`|Caractere de tabulação.|  
+|`vbBack`|Caractere de Backspace.|  
+|`vbFormFeed`|Não usado no Microsoft Windows.|  
+|`vbVerticalTab`|Não é útil no Microsoft Windows.|  
   
 ## <a name="enumerations"></a>Enumerações  
 
- The following table lists and describes the enumerations provided by Visual Basic.  
+ A tabela a seguir lista e descreve as enumerações fornecidas pelo Visual Basic.  
   
 |Enumeração|Descrição|  
 |---|---|  
@@ -64,7 +64,7 @@ Visual Basic supplies a number of predefined constants and enumerations for deve
 |<xref:Microsoft.VisualBasic.DateInterval>|Indica como determinar e formatar intervalos de datas ao chamar funções relacionadas a datas.|  
 |<xref:Microsoft.VisualBasic.FileIO.DeleteDirectoryOption>|Especifica o que deve ser feito quando um diretório que deve ser excluído contém arquivos ou diretórios.|  
 |<xref:Microsoft.VisualBasic.DueDate>|Indica quando os pagamentos vencem ao chamar métodos financeiros.|  
-|<xref:Microsoft.VisualBasic.FileIO.FieldType>|Indicates whether text fields are delimited or fixed-width.|  
+|<xref:Microsoft.VisualBasic.FileIO.FieldType>|Indica se os campos de texto são delimitados ou de largura fixa.|  
 |<xref:Microsoft.VisualBasic.FileAttribute>|Indica os atributos de arquivo a usar ao chamar funções de acesso a arquivos.|  
 |<xref:Microsoft.VisualBasic.FirstDayOfWeek>|Indica o primeiro dia da semana a ser usado ao chamar funções relacionadas a datas.|  
 |<xref:Microsoft.VisualBasic.FirstWeekOfYear>|Indica a primeira semana do ano a ser usada ao chamar funções relacionadas a datas.|  
@@ -73,11 +73,11 @@ Visual Basic supplies a number of predefined constants and enumerations for deve
 |<xref:Microsoft.VisualBasic.OpenAccess>|Indica como abrir um arquivo ao chamar funções de acesso a arquivos.|  
 |<xref:Microsoft.VisualBasic.OpenMode>|Indica como abrir um arquivo ao chamar funções de acesso a arquivos.|  
 |<xref:Microsoft.VisualBasic.OpenShare>|Indica como abrir um arquivo ao chamar funções de acesso a arquivos.|  
-|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Specifies whether a file should be deleted permanently or placed in the Recycle Bin.|  
+|<xref:Microsoft.VisualBasic.FileIO.RecycleOption>|Especifica se um arquivo deve ser excluído permanentemente ou colocado na lixeira.|  
 |<xref:Microsoft.VisualBasic.FileIO.SearchOption>|Especifica se deve pesquisar todos ou somente diretórios de alto nível.|  
-|<xref:Microsoft.VisualBasic.TriState>|Indicates a `Boolean` value or whether the default should be used when calling number-formatting functions.|  
-|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Specifies what should be done if the user clicks **Cancel** during an operation.|  
-|<xref:Microsoft.VisualBasic.FileIO.UIOption>|Specifies whether or not to show a progress dialog when copying, deleting, or moving files or directories.|  
+|<xref:Microsoft.VisualBasic.TriState>|Indica um valor `Boolean` ou se o padrão deve ser usado ao chamar funções de formatação de números.|  
+|<xref:Microsoft.VisualBasic.FileIO.UICancelOption>|Especifica o que deve ser feito se o usuário clicar em **Cancelar** durante uma operação.|  
+|<xref:Microsoft.VisualBasic.FileIO.UIOption>|Especifica se uma caixa de diálogo de progresso deve ou não ser exibida ao copiar, excluir ou mover arquivos ou diretórios.|  
 |<xref:Microsoft.VisualBasic.VariantType>|Indica o tipo de um objeto variante, retornado pela função <xref:Microsoft.VisualBasic.Information.VarType%2A>.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|Indica qual tipo de conversão executar ao chamar a função <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.|  
   

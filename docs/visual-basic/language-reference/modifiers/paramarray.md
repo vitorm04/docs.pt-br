@@ -16,17 +16,17 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351367"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-Specifies that a procedure parameter takes an optional array of elements of the specified type. `ParamArray` can be used only on the last parameter of a parameter list.  
+Especifica que um parâmetro de procedimento usa uma matriz opcional de elementos do tipo especificado. `ParamArray` pode ser usado somente no último parâmetro de uma lista de parâmetros.  
   
 ## <a name="remarks"></a>Comentários  
- `ParamArray` allows you to pass an arbitrary number of arguments to the procedure. A `ParamArray` parameter is always declared using [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
+ `ParamArray` permite que você passe um número arbitrário de argumentos para o procedimento. Um parâmetro `ParamArray` é sempre declarado usando [ByVal](../../../visual-basic/language-reference/modifiers/byval.md).  
   
- You can supply one or more arguments to a `ParamArray` parameter by passing an array of the appropriate data type, a comma-separated list of values, or nothing at all. For details, see "Calling a ParamArray" in [Parameter Arrays](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
+ Você pode fornecer um ou mais argumentos a um parâmetro `ParamArray` passando uma matriz do tipo de dados apropriado, uma lista separada por vírgulas de valores ou nada. Para obter detalhes, consulte "chamando um ParamArray" em [matrizes de parâmetros](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md).  
   
 > [!IMPORTANT]
-> Whenever you deal with an array which can be indefinitely large, there is a risk of overrunning some internal capacity of your application. If you accept a parameter array from the calling code, you should test its length and take appropriate steps if it is too large for your application.  
+> Sempre que você lida com uma matriz que pode ser indefinidamente grande, há um risco de sobreexecutar alguma capacidade interna de seu aplicativo. Se você aceitar uma matriz de parâmetros do código de chamada, deverá testar seu comprimento e tomar as medidas apropriadas se for muito grande para seu aplicativo.  
   
- The `ParamArray` modifier can be used in these contexts:  
+ O modificador de `ParamArray` pode ser usado nesses contextos:  
   
  [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   

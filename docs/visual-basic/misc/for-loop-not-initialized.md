@@ -1,5 +1,5 @@
 ---
-title: For loop not initialized
+title: Loop for não inicializado
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID92
@@ -11,12 +11,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348449"
 ---
-# <a name="for-loop-not-initialized-visual-basic"></a>For loop not initialized (Visual Basic)
-You jumped into the middle of a `For...Next` loop.  
+# <a name="for-loop-not-initialized-visual-basic"></a>Loop for não inicializado (Visual Basic)
+Você entrou no meio de um loop de `For...Next`.  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a>Para corrigir esse erro  
   
-1. Remove the jump into the loop.  
+1. Remova o salto para o loop.  
   
 ## <a name="see-also"></a>Consulte também
 

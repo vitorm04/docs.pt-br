@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348392"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>How to: Compute Column Values in a CSV Text File (LINQ) (Visual Basic)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>Como: calcular valores de coluna em um arquivo de texto CSV (LINQ) (Visual Basic)
 
 Este exemplo mostra como executar cálculos de agregação, como soma, média, mín. e máx. nas colunas de um arquivo .csv. Os princípios de exemplo mostrados aqui podem ser aplicados a outros tipos de texto estruturado.
 
@@ -143,11 +143,11 @@ End Class
 
 A consulta funciona usando o método <xref:System.String.Split%2A> para converter cada linha de texto em uma matriz. Cada elemento da matriz representa uma coluna. Por fim, o texto em cada coluna é convertido em sua representação numérica. Se o arquivo for um arquivo separado por tabulações, é só atualizar o argumento no método `Split` para `\t`.
 
-## <a name="compiling-the-code"></a>Compilando o código
+## <a name="compiling-the-code"></a>Compilando o Código
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
 
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

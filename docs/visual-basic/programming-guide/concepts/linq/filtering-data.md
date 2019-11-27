@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353487"
 ---
-# <a name="filtering-data-visual-basic"></a>Filtering Data (Visual Basic)
+# <a name="filtering-data-visual-basic"></a>Filtrando dados (Visual Basic)
 
 A filtragem é a operação de restringir o conjunto de resultados de forma que ele contenha apenas os elementos correspondentes a uma condição especificada. Ela também é conhecida como seleção.
 
@@ -19,16 +19,16 @@ A ilustração a seguir mostra os resultados da filtragem de uma sequência de c
 
 Os métodos de operador de consulta padrão que realizam a seleção estão listados na seção a seguir.
 
-## <a name="methods"></a>Métodos
+## <a name="methods"></a>{1&gt;Métodos&lt;1}
 
-|Nome do método|Descrição|Visual Basic Query Expression Syntax|Mais informações|
+|Nome do método|Descrição|Visual Basic sintaxe de expressão de consulta|Mais informações|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|OfType|Seleciona valores, dependendo da capacidade de serem convertidos em um tipo especificado.|Não aplicável.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
-|Where|Seleciona valores com base em uma função de predicado.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
+|OfType|Seleciona valores, dependendo da capacidade de serem convertidos em um tipo especificado.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
+|Onde|Seleciona valores com base em uma função de predicado.|`Where`|<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-example"></a>Exemplo de sintaxe de expressão de consulta
 
-The following example uses the `Where` to filter from an array those strings that have a specific length.
+O exemplo a seguir usa o `Where` para filtrar de uma matriz de cadeias de caracteres que têm um comprimento específico.
 
 ```vb
 Dim words() As String = {"the", "quick", "brown", "fox", "jumps"}
@@ -57,6 +57,6 @@ MsgBox(sb.ToString())
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cláusula Where](../../../../visual-basic/language-reference/queries/where-clause.md)
 - [Como filtrar resultados de consulta](../../../../visual-basic/programming-guide/language-features/linq/how-to-filter-query-results-by-using-linq.md)
-- [How to: Query An Assembly's Metadata with Reflection (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
-- [How to: Query for Files with a Specified Attribute or Name (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
-- [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Como consultar metadados de um assembly com reflexão (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md)
+- [Como consultar arquivos com um atributo ou nome especificado (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-files-with-a-specified-attribute-or-name.md)
+- [Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

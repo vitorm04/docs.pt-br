@@ -20,46 +20,46 @@ ms.locfileid: "74350561"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacionamentos de tipo em operações de consulta (Visual Basic)
 
-Variables used in [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] query operations are strongly typed and must be compatible with each other. Strong typing is used in the data source, in the query itself, and in the query execution. The following illustration identifies terms used to describe a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query. For more information about the parts of a query, see [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+As variáveis usadas em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] operações de consulta são fortemente tipadas e devem ser compatíveis entre si. A tipagem forte é usada na fonte de dados, na própria consulta e na execução da consulta. A ilustração a seguir identifica os termos usados para descrever uma consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações sobre as partes de uma consulta, consulte [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
-![Screenshot showing a pseudocode query with elements highlighted.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
+![Captura de tela mostrando uma consulta de pseudocódigo com elementos realçados.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
-The type of the range variable in the query must be compatible with the type of the elements in the data source. The type of the query variable must be compatible with the sequence element defined in the `Select` clause. Finally, the type of the sequence elements also must be compatible with the type of the loop control variable that is used in the `For Each` statement that executes the query. This strong typing facilitates identification of type errors at compile time.
+O tipo da variável de intervalo na consulta deve ser compatível com o tipo dos elementos na fonte de dados. O tipo da variável de consulta deve ser compatível com o elemento Sequence definido na cláusula `Select`. Por fim, o tipo dos elementos Sequence também deve ser compatível com o tipo da variável de controle loop que é usada na instrução `For Each` que executa a consulta. Essa tipagem forte facilita a identificação de erros de tipo no momento da compilação.
 
-Visual Basic makes strong typing convenient by implementing local type inference, also known as *implicit typing*. That feature is used in the previous example, and you will see it used throughout the [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] samples and documentation. In Visual Basic, local type inference is accomplished simply by using a `Dim` statement without an `As` clause. In the following example, `city` is strongly typed as a string.
+Visual Basic facilita a digitação de rigidez, implementando a inferência de tipo local, também conhecida como *digitação implícita*. Esse recurso é usado no exemplo anterior, e você verá que ele é usado em todos os exemplos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e documentação. Em Visual Basic, a inferência de tipo local é realizada simplesmente usando uma instrução `Dim` sem uma cláusula `As`. No exemplo a seguir, `city` é fortemente tipada como uma cadeia de caracteres.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
-> Local type inference works only when `Option Infer` is set to `On`. For more information, see [Option Infer Statement](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
+> A inferência de tipo local funciona somente quando `Option Infer` é definido como `On`. Para obter mais informações, consulte [instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-However, even if you use local type inference in a query, the same type relationships are present among the variables in the data source, the query variable, and the query execution loop. It is useful to have a basic understanding of these type relationships when you are writing [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] queries, or working with the samples and code examples in the documentation.
+No entanto, mesmo se você usar a inferência de tipo local em uma consulta, as mesmas relações de tipo estarão presentes entre as variáveis na fonte de dados, a variável de consulta e o loop de execução da consulta. É útil ter um entendimento básico dessas relações de tipo quando você estiver escrevendo [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consultas ou trabalhando com exemplos de exemplo e código na documentação.
 
-You may need to specify an explicit type for a range variable that does not match the type returned from the data source. You can specify the type of the range variable by using an `As` clause. However, this results in an error if the conversion is a [narrowing conversion](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) and `Option Strict` is set to `On`. Therefore, we recommend that you perform the conversion on the values retrieved from the data source. You can convert the values from the data source to the explicit range variable type by using the <xref:System.Linq.Enumerable.Cast%2A> method. You can also cast the values selected in the `Select` clause to an explicit type that is different from the type of the range variable. These points are illustrated in the following code.
+Talvez seja necessário especificar um tipo explícito para uma variável de intervalo que não corresponda ao tipo retornado da fonte de dados. Você pode especificar o tipo da variável de intervalo usando uma cláusula `As`. No entanto, isso resultará em um erro se a conversão for uma [conversão de restrição](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) e `Option Strict` estiver definida como `On`. Portanto, recomendamos que você execute a conversão nos valores recuperados da fonte de dados. Você pode converter os valores da fonte de dados para o tipo de variável de intervalo explícito usando o método <xref:System.Linq.Enumerable.Cast%2A>. Você também pode converter os valores selecionados na cláusula `Select` para um tipo explícito que seja diferente do tipo da variável de intervalo. Esses pontos são ilustrados no código a seguir.
 
 [!code-vb[VbLINQTypeRels#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#4)]
 
-## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Queries That Return Entire Elements of the Source Data
+## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Consultas que retornam elementos inteiros dos dados de origem
 
-The following example shows a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] query operation that returns a sequence of elements selected from the source data. The source, `names`, contains an array of strings, and the query output is a sequence containing strings that start with the letter M.
+O exemplo a seguir mostra uma operação de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que retorna uma sequência de elementos selecionados a partir dos dados de origem. A origem, `names`, contém uma matriz de cadeias de caracteres e a saída da consulta é uma sequência que contém cadeias de caracteres que começam com a letra M.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 
-This is equivalent to the following code, but is much shorter and easier to write. Reliance on local type inference in queries is the preferred style in Visual Basic.
+Isso é equivalente ao código a seguir, mas é muito mais curto e mais fácil de escrever. A dependência da inferência de tipo local em consultas é o estilo preferencial em Visual Basic.
 
 [!code-vb[VbLINQTypeRels#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#3)]
 
-The following relationships exist in both of the previous code examples, whether the types are determined implicitly or explicitly.
+As relações a seguir existem nos dois exemplos de código anteriores, independentemente de os tipos serem determinados implicitamente ou explicitamente.
 
-1. The type of the elements in the data source, `names`, is the type of the range variable, `name`, in the query.
+1. O tipo dos elementos na fonte de dados, `names`, é o tipo da variável de intervalo, `name`, na consulta.
 
-2. The type of the object that is selected, `name`, determines the type of the query variable, `mNames`. Here `name` is a string, so the query variable is IEnumerable(Of String) in Visual Basic.
+2. O tipo do objeto selecionado, `name`, determina o tipo da variável de consulta, `mNames`. Aqui `name` é uma cadeia de caracteres, portanto, a variável de consulta é IEnumerable (Of String) em Visual Basic.
 
-3. The query defined in `mNames` is executed in the `For Each` loop. The loop iterates over the result of executing the query. Because `mNames`, when it is executed, will return a sequence of strings, the loop iteration variable, `nm`, also is a string.
+3. A consulta definida no `mNames` é executada no loop de `For Each`. O loop itera sobre o resultado da execução da consulta. Como `mNames`, quando é executado, retornará uma sequência de cadeias de caracteres, a variável de iteração de loop, `nm`, também é uma cadeia de caracteres.
 
-## <a name="queries-that-return-one-field-from-selected-elements"></a>Queries That Return One Field from Selected Elements
+## <a name="queries-that-return-one-field-from-selected-elements"></a>Consultas que retornam um campo dos elementos selecionados
 
-The following example shows a [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] query operation that returns a sequence containing only one part of each element selected from the data source. The query takes a collection of `Customer` objects as its data source and projects only the `Name` property in the result. Because the customer name is a string, the query produces a sequence of strings as output.
+O exemplo a seguir mostra uma operação de consulta [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] que retorna uma sequência contendo apenas uma parte de cada elemento selecionado da fonte de dados. A consulta usa uma coleção de objetos `Customer` como sua fonte de dados e projeta apenas a propriedade `Name` no resultado. Como o nome do cliente é uma cadeia de caracteres, a consulta produz uma sequência de cadeias de caracteres como saída.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -73,15 +73,15 @@ For Each custName In custNames
 Next
 ```
 
-The relationships between variables are like those in the simpler example.
+As relações entre as variáveis são como as do exemplo mais simples.
 
-1. The type of the elements in the data source, `customers`, is the type of the range variable, `cust`, in the query. In this example, that type is `Customer`.
+1. O tipo dos elementos na fonte de dados, `customers`, é o tipo da variável de intervalo, `cust`, na consulta. Neste exemplo, esse tipo é `Customer`.
 
-2. The `Select` statement returns the `Name` property of each `Customer` object instead of the whole object. Because `Name` is a string, the query variable, `custNames`, will again be IEnumerable(Of String), not of `Customer`.
+2. A instrução `Select` retorna a propriedade `Name` de cada objeto `Customer` em vez de todo o objeto. Como `Name` é uma cadeia de caracteres, a variável de consulta, `custNames`, será novamente IEnumerable (Of String), não de `Customer`.
 
-3. Because `custNames` represents a sequence of strings, the `For Each` loop's iteration variable, `custName`, must be a string.
+3. Como `custNames` representa uma sequência de cadeias de caracteres, a variável de iteração do loop de `For Each`, `custName`, deve ser uma cadeia de caracteres.
 
-Without local type inference, the previous example would be more cumbersome to write and to understand, as the following example shows.
+Sem a inferência de tipo local, o exemplo anterior seria mais complicado de escrever e entender, como mostra o exemplo a seguir.
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -96,9 +96,9 @@ Without local type inference, the previous example would be more cumbersome to w
  Next
 ```
 
-## <a name="queries-that-require-anonymous-types"></a>Queries That Require Anonymous Types
+## <a name="queries-that-require-anonymous-types"></a>Consultas que exigem tipos anônimos
 
-The following example shows a more complex situation. In the previous example, it was inconvenient to specify types for all the variables explicitly. In this example, it is impossible. Instead of selecting entire `Customer` elements from the data source, or a single field from each element, the `Select` clause in this query returns two properties of the original `Customer` object: `Name` and `City`. In response to the `Select` clause, the compiler defines an anonymous type that contains those two properties. The result of executing `nameCityQuery` in the `For Each` loop is a collection of instances of the new anonymous type. Because the anonymous type has no usable name, you cannot specify the type of `nameCityQuery` or `custInfo` explicitly. That is, with an anonymous type, you have no type name to use in place of `String` in `IEnumerable(Of String)`. Para obter mais informações, consulte [Tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+O exemplo a seguir mostra uma situação mais complexa. No exemplo anterior, era inconveniente especificar tipos para todas as variáveis explicitamente. Neste exemplo, é impossível. Em vez de selecionar elementos `Customer` inteiros da fonte de dados, ou um único campo de cada elemento, a cláusula `Select` nessa consulta retorna duas propriedades do objeto `Customer` original: `Name` e `City`. Em resposta à cláusula `Select`, o compilador define um tipo anônimo que contém essas duas propriedades. O resultado da execução de `nameCityQuery` no loop de `For Each` é uma coleção de instâncias do novo tipo anônimo. Como o tipo anônimo não tem nenhum nome utilizável, você não pode especificar o tipo de `nameCityQuery` ou `custInfo` explicitamente. Ou seja, com um tipo anônimo, você não tem nenhum nome de tipo a ser usado no lugar de `String` no `IEnumerable(Of String)`. Para obter mais informações, consulte [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ```vb
 ' Method GetTable returns a table of Customer objects.
@@ -112,13 +112,13 @@ For Each custInfo In nameCityQuery
 Next
 ```
 
-Although it is not possible to specify types for all the variables in the previous example, the relationships remain the same.
+Embora não seja possível especificar tipos para todas as variáveis no exemplo anterior, as relações permanecem as mesmas.
 
-1. The type of the elements in the data source is again the type of the range variable in the query. In this example, `cust` is an instance of `Customer`.
+1. O tipo dos elementos na fonte de dados é novamente o tipo da variável de intervalo na consulta. Neste exemplo, `cust` é uma instância de `Customer`.
 
-2. Because the `Select` statement produces an anonymous type, the query variable, `nameCityQuery`, must be implicitly typed as an anonymous type. An anonymous type has no usable name, and therefore cannot be specified explicitly.
+2. Como a instrução `Select` produz um tipo anônimo, a variável de consulta, `nameCityQuery`, deve ser digitada implicitamente como um tipo anônimo. Um tipo anônimo não tem nome utilizável e, portanto, não pode ser especificado explicitamente.
 
-3. The type of the iteration variable in the `For Each` loop is the anonymous type created in step 2. Because the type has no usable name, the type of the loop iteration variable must be determined implicitly.
+3. O tipo da variável de iteração no loop de `For Each` é o tipo anônimo criado na etapa 2. Como o tipo não tem nenhum nome utilizável, o tipo da variável de iteração de loop deve ser determinado implicitamente.
 
 ## <a name="see-also"></a>Consulte também
 

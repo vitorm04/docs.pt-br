@@ -15,27 +15,27 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351797"
 ---
 # <a name="object-variable-values-visual-basic"></a>Valores de variável de objeto (Visual Basic)
-A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type. The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.  
+Uma variável do [tipo de dados Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) pode se referir a dados de qualquer tipo. O valor que você armazena em uma variável `Object` é mantido em outro lugar na memória, enquanto a própria variável contém um ponteiro para os dados.  
   
-## <a name="object-classifier-functions"></a>Object Classifier Functions  
- Visual Basic supplies functions that return information about what an `Object` variable refers to, as shown in the following table.  
+## <a name="object-classifier-functions"></a>Funções de classificação de objeto  
+ Visual Basic fornece funções que retornam informações sobre a qual uma variável `Object` se refere, conforme mostrado na tabela a seguir.  
   
-|Função|Returns True if the Object variable refers to|  
+|Função|Retornará true se a variável de objeto se referir a|  
 |--------------|---------------------------------------------------|  
-|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|An array of values, rather than a single value|  
-|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|A [Date Data Type](../../../../visual-basic/language-reference/data-types/date-data-type.md) value, or a string that can be interpreted as a date and time value|  
-|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|An object of type <xref:System.DBNull>, which represents missing or nonexistent data|  
-|<xref:Microsoft.VisualBasic.Information.IsError%2A>|An exception object, which derives from <xref:System.Exception>|  
-|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nothing](../../../../visual-basic/language-reference/nothing.md), that is, no object is currently assigned to the variable|  
-|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|A number, or a string that can be interpreted as a number|  
-|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|A reference type (such as a string, array, delegate, or class type)|  
+|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|Uma matriz de valores, em vez de um único valor|  
+|<xref:Microsoft.VisualBasic.Information.IsDate%2A>|Um valor de [tipo de dados Date](../../../../visual-basic/language-reference/data-types/date-data-type.md) ou uma cadeia de caracteres que pode ser interpretada como um valor de data e hora|  
+|<xref:Microsoft.VisualBasic.Information.IsDBNull%2A>|Um objeto do tipo <xref:System.DBNull>, que representa dados ausentes ou inexistentes|  
+|<xref:Microsoft.VisualBasic.Information.IsError%2A>|Um objeto de exceção, que deriva de <xref:System.Exception>|  
+|<xref:Microsoft.VisualBasic.Information.IsNothing%2A>|[Nada](../../../../visual-basic/language-reference/nothing.md), ou seja, nenhum objeto está atribuído atualmente à variável|  
+|<xref:Microsoft.VisualBasic.Information.IsNumeric%2A>|Um número ou uma cadeia de caracteres que pode ser interpretada como um número|  
+|<xref:Microsoft.VisualBasic.Information.IsReference%2A>|Um tipo de referência (como uma cadeia de caracteres, matriz, delegado ou tipo de classe)|  
   
- You can use these functions to avoid submitting an invalid value to an operation or a procedure.  
+ Você pode usar essas funções para evitar o envio de um valor inválido para uma operação ou um procedimento.  
   
 ## <a name="typeof-operator"></a>Operador TypeOf  
- You can also use the [TypeOf Operator](../../../../visual-basic/language-reference/operators/typeof-operator.md) to determine whether an object variable currently refers to a specific data type. The `TypeOf`...`Is` expression evaluates to `True` if the run-time type of the operand is derived from or implements the specified type.  
+ Você também pode usar o [operador typeof](../../../../visual-basic/language-reference/operators/typeof-operator.md) para determinar se uma variável de objeto atualmente se refere a um tipo de dados específico. A expressão `TypeOf`...`Is` é avaliada como `True` se o tipo de tempo de execução do operando é derivado de ou implementa o tipo especificado.  
   
- The following example uses `TypeOf` on object variables referring to value and reference types.  
+ O exemplo a seguir usa `TypeOf` em variáveis de objeto referindo-se a tipos de referência e valor.  
   
 ```vb  
 ' The following statement puts a value type (Integer) in an Object variable.  
@@ -51,7 +51,7 @@ If TypeOf frm Is Label Then Debug.WriteLine("frm is Label")
 If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")  
 ```  
   
- The preceding example writes the following lines to the **Debug** window:  
+ O exemplo anterior grava as seguintes linhas na janela de **depuração** :  
   
  `num is Integer`  
   
@@ -61,10 +61,10 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
   
  `frm is Object`  
   
- The object variable `num` refers to data of type `Integer`, and `frm` refers to an object of class <xref:System.Windows.Forms.Form>.  
+ A variável de objeto `num` refere-se a dados do tipo `Integer`e `frm` se refere a um objeto da classe <xref:System.Windows.Forms.Form>.  
   
-## <a name="object-arrays"></a>Object Arrays  
- You can declare and use an array of `Object` variables. This is useful when you need to handle a variety of data types and object classes. All the elements in an array must have the same declared data type. Declaring this data type as `Object` allows you to store objects and class instances alongside other data types in the array.  
+## <a name="object-arrays"></a>Matrizes de objetos  
+ Você pode declarar e usar uma matriz de variáveis de `Object`. Isso é útil quando você precisa lidar com uma variedade de tipos de dados e classes de objeto. Todos os elementos em uma matriz devem ter o mesmo tipo de dados declarado. Declarar esse tipo de dados como `Object` permite que você armazene objetos e instâncias de classe junto com outros tipos de dados na matriz.  
   
 ## <a name="see-also"></a>Consulte também
 

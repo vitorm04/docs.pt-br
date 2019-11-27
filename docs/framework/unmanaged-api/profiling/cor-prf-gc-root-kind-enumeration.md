@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447358"
 ---
 # <a name="cor_prf_gc_root_kind-enumeration"></a>Enumeração COR_PRF_GC_ROOT_KIND
-Indicates the kind of garbage collection root that is exposed by the [ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) callback.  
+Indica o tipo de raiz de coleta de lixo que é exposta pelo retorno de chamada [ICorProfilerCallback2:: RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md) .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -37,17 +37,17 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_STACK`|The root is a variable on the stack.|  
-|`COR_PRF_GC_ROOT_FINALIZER`|The root is an entry in the finalizer queue.|  
-|`COR_PRF_GC_ROOT_HANDLE`|The root is a garbage collection handle.|  
-|`COR_PRF_GC_ROOT_OTHER`|The kind of root is unspecified.|  
+|`COR_PRF_GC_ROOT_STACK`|A raiz é uma variável na pilha.|  
+|`COR_PRF_GC_ROOT_FINALIZER`|A raiz é uma entrada na fila do finalizador.|  
+|`COR_PRF_GC_ROOT_HANDLE`|A raiz é um identificador de coleta de lixo.|  
+|`COR_PRF_GC_ROOT_OTHER`|O tipo de raiz não está especificado.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -15,20 +15,20 @@ ms.locfileid: "74348624"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Como determinar se dois objetos estão relacionados (Visual Basic)
 
-You can compare two objects to determine the relationship, if any, between the classes from which they are created. The <xref:System.Type.IsInstanceOfType%2A> method of the <xref:System.Type?displayProperty=nameWithType> class returns `True` if the specified class inherits from the current class, or if the current type is an interface supported by the specified class.
+Você pode comparar dois objetos para determinar a relação, se houver, entre as classes das quais elas são criadas. O método <xref:System.Type.IsInstanceOfType%2A> da classe <xref:System.Type?displayProperty=nameWithType> retorna `True` se a classe especificada herda da classe atual ou se o tipo atual é uma interface com suporte da classe especificada.
 
-### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>To determine if one object inherits from another object's class or interface
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Para determinar se um objeto herda da classe ou interface de outro objeto
 
-1. On the object you think might be of the base type, invoke the <xref:System.Object.GetType%2A> method.
+1. No objeto que você acredita que pode ser do tipo base, invoque o método <xref:System.Object.GetType%2A>.
 
-2. On the <xref:System.Type?displayProperty=nameWithType> object returned by <xref:System.Object.GetType%2A>, invoke the <xref:System.Type.IsInstanceOfType%2A> method.
+2. No objeto <xref:System.Type?displayProperty=nameWithType> retornado por <xref:System.Object.GetType%2A>, invoque o método <xref:System.Type.IsInstanceOfType%2A>.
 
-3. In the argument list for <xref:System.Type.IsInstanceOfType%2A>, specify the object you think might be of the derived type.
+3. Na lista de argumentos para <xref:System.Type.IsInstanceOfType%2A>, especifique o objeto que você acredita que pode ser do tipo derivado.
 
-    <xref:System.Type.IsInstanceOfType%2A> returns `True` if its argument type inherits from the <xref:System.Type?displayProperty=nameWithType> object type.
+    <xref:System.Type.IsInstanceOfType%2A> retornará `True` se o tipo de argumento herdar do tipo de objeto <xref:System.Type?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Exemplo
- The following example determines whether one object represents a class derived from another object's class.
+ O exemplo a seguir determina se um objeto representa uma classe derivada da classe de outro objeto.
 
 ```vb
 Public Class baseClass
@@ -46,7 +46,7 @@ Public Class testTheseClasses
 End Class
 ```
 
-Note the unexpected placement of the two object variables in the call to <xref:System.Type.IsInstanceOfType%2A>. The supposed base type is used to generate the <xref:System.Type?displayProperty=nameWithType> class, and the supposed derived type is passed as an argument to the <xref:System.Type.IsInstanceOfType%2A> method.
+Observe o posicionamento inesperado das duas variáveis de objeto na chamada para <xref:System.Type.IsInstanceOfType%2A>. O tipo base esperado é usado para gerar a classe <xref:System.Type?displayProperty=nameWithType> e o tipo derivado esperado é passado como um argumento para o método <xref:System.Type.IsInstanceOfType%2A>.
 
 ## <a name="see-also"></a>Consulte também
 

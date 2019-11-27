@@ -16,10 +16,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350168"
 ---
 # <a name="as-clause-visual-basic"></a>Cláusula As (Visual Basic)
-Introduces an `As` clause, which identifies a data type in a declaration statement or a constraint list on a generic type parameter.  
+Apresenta uma cláusula `As`, que identifica um tipo de dados em uma instrução de declaração ou uma lista de restrições em um parâmetro de tipo genérico.  
   
 ## <a name="remarks"></a>Comentários  
- The `As` keyword can be used in these contexts:  
+ A palavra-chave `As` pode ser usada nesses contextos:  
   
  [Cláusula Aggregate](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -37,9 +37,9 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Instrução Event](../../../visual-basic/language-reference/statements/event-statement.md)  
   
- [For...Next Statements](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Para... Próximas instruções](../../../visual-basic/language-reference/statements/for-next-statement.md)  
   
- [For Each...Next Statements](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
+ [Para cada... Próximas instruções](../../../visual-basic/language-reference/statements/for-each-next-statement.md)  
   
  [Cláusula From](../../../visual-basic/language-reference/queries/from-clause.md)  
   
@@ -57,7 +57,7 @@ Introduces an `As` clause, which identifies a data type in a declaration stateme
   
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
- [Try...Catch...Finally Statements](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
+ [Tentar... Capturar... Instruções finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -19,7 +19,7 @@ O objeto `My.Computer.Info` fornece propriedades para obter informações sobre 
 
 Esta tabela lista tarefas normalmente executadas por meio do objeto `My.Computer.Info` e aponta para tópicos que demonstram como executar cada uma.
 
-|Para|Consulte|
+|{1&gt;Para&lt;1}|Consulte|
 |---|---|
 |Determinar quanto espaço de endereço virtual está disponível para o computador no qual o aplicativo está instalado|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.TotalVirtualMemory%2A>|
 |Determinar o tipo de plataforma do computador no qual o aplicativo está sendo executado|<xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSPlatform%2A>|

@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350595"
 ---
-# <a name="sorting-data-visual-basic"></a>Sorting Data (Visual Basic)
+# <a name="sorting-data-visual-basic"></a>Classificando dados (Visual Basic)
 
 Uma operação de classificação ordena os elementos de uma sequência com base em um ou mais atributos. O primeiro critério de classificação executa uma classificação primária dos elementos. Especificando um segundo critério de classificação, você pode classificar os elementos dentro de cada grupo de classificação primário.
 
@@ -19,15 +19,15 @@ A ilustração a seguir mostra os resultados de uma operação de classificaçã
 
 Os métodos de operador de consulta padrão que classificam dados estão listados na seção a seguir.
 
-## <a name="methods"></a>Métodos
+## <a name="methods"></a>{1&gt;Métodos&lt;1}
 
-|Nome do método|Descrição|Visual Basic Query Expression Syntax|Mais informações|
+|Nome do método|Descrição|Visual Basic sintaxe de expressão de consulta|Mais informações|
 |-----------------|-----------------|------------------------------------------|----------------------|
 |OrderBy|Classifica valores em ordem crescente.|`Order By`|<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderBy%2A?displayProperty=nameWithType>|
 |OrderByDescending|Classifica valores em ordem decrescente.|`Order By … Descending`|<xref:System.Linq.Enumerable.OrderByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OrderByDescending%2A?displayProperty=nameWithType>|
 |ThenBy|Executa uma classificação secundária em ordem crescente.|`Order By …, …`|<xref:System.Linq.Enumerable.ThenBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenBy%2A?displayProperty=nameWithType>|
 |ThenByDescending|Executa uma classificação secundária em ordem decrescente.|`Order By …, … Descending`|<xref:System.Linq.Enumerable.ThenByDescending%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.ThenByDescending%2A?displayProperty=nameWithType>|
-|Inverso|Inverte a ordem dos elementos em uma coleção.|Não aplicável.|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
+|Inverter|Inverte a ordem dos elementos em uma coleção.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Reverse%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Reverse%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-examples"></a>Exemplos de sintaxe de expressão de consulta
 
@@ -153,4 +153,4 @@ MsgBox(sb.ToString())
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cláusula Order By](../../../../visual-basic/language-reference/queries/order-by-clause.md)
 - [Como classificar resultados de consulta](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
-- [How to: Sort or Filter Text Data by Any Word or Field (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [Como classificar ou filtrar dados de texto por qualquer palavra ou campo (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

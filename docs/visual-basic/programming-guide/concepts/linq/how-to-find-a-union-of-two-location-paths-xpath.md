@@ -1,5 +1,5 @@
 ---
-title: 'Como: Localizar uma união de dois demarcadores de local (XPath- LINQ para XML)'
+title: 'Como: Localizar uma união de dois caminhos de local (XPath- LINQ para XML)'
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
 ms.openlocfilehash: db9ba3f66bfa8643738203ec05a106bab4193fda
@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352981"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>How to: Find a Union of Two Location Paths (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>Como localizar uma União de dois caminhos de local (XPath-LINQ to XML) (Visual Basic)
 O XPath permite que você localize a união de resultados de dois caminhos de local XPath.  
   
  A expressão XPath é:  
@@ -67,4 +67,4 @@ Results are identical
   
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ to XML for XPath Users (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [LINQ to XML para usuários do XPath (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

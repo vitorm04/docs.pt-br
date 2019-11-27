@@ -12,8 +12,8 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352312"
 ---
-# <a name="para-visual-basic"></a>\<para> (Visual Basic)
-Specifies that the content is formatted as a paragraph.  
+# <a name="para-visual-basic"></a>\<para > (Visual Basic)
+Especifica que o conteúdo é formatado como um parágrafo.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,12 +26,12 @@ Specifies that the content is formatted as a paragraph.
  O texto do parágrafo.  
   
 ## <a name="remarks"></a>Comentários  
- The `<para>` tag is for use inside a tag, such as [\<summary>](../../../visual-basic/language-reference/xmldoc/summary.md), [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md), or [\<returns>](../../../visual-basic/language-reference/xmldoc/returns.md), and lets you add structure to the text.  
+ A marca de `<para>` é para uso dentro de uma marca, como [\<> de resumo](../../../visual-basic/language-reference/xmldoc/summary.md), [\<comentários >](../../../visual-basic/language-reference/xmldoc/remarks.md)ou [\<retorna >](../../../visual-basic/language-reference/xmldoc/returns.md)e permite que você adicione estrutura ao texto.  
   
  Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.  
   
 ## <a name="example"></a>Exemplo  
- This example uses the `<para>` tag to split the remarks section for the `UpdateRecord` method into two paragraphs.  
+ Este exemplo usa a marca `<para>` para dividir a seção de comentários do método `UpdateRecord` em dois parágrafos.  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   

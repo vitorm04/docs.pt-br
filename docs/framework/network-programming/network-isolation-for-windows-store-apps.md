@@ -23,7 +23,7 @@ As classes nos namespaces <xref:System.Net>, <xref:System.Net.Http> e <xref:Syst
   
 4. Implante e execute seu aplicativo para testá-lo usando as ferramentas de isolamento de rede fornecidas para solução de problemas.  
   
- For more detailed information on how to configure network capabilities and isolation tools used for troubleshooting network isolation, see [How to configure network isolation capabilities](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) in the Windows 8.x Store developer documentation.
+ Para obter informações mais detalhadas sobre como configurar os recursos de rede e as ferramentas de isolamento usadas para solucionar problemas de isolamento de rede, consulte [como configurar recursos de isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) na documentação do desenvolvedor da loja do Windows 8. x.
   
 ## <a name="see-also"></a>Consulte também
 

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74444305"
 ---
 # <a name="assemblyflags-enumeration"></a>Enumeração AssemblyFlags
-Contains values that describe run-time features of an assembly.  
+Contém valores que descrevem os recursos de tempo de execução de um assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,23 +38,23 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|Specifies that exported type definitions are implicit within the files that comprise the assembly. In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.|  
-|`afImplicitResources`|Specifies that resource definitions are implicit within the files that comprise the assembly. In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.|  
-|`afNonSideBySideAppDomain`|Specifies that the assembly cannot execute with other versions if they are running in the same application domain.|  
-|`afNonSideBySideProcess`|Specifies that the assembly cannot execute with other versions if they are running in the same process.|  
-|`afNonSideBySideMachine`|Specifies that the assembly cannot execute with other versions if they are running on the same computer.|  
+|`afImplicitExportedTypes`|Especifica que as definições de tipo exportadas são implícitas dentro dos arquivos que compõem o assembly. No .NET Framework versões 1,0 e 1,1, esse valor é sempre considerado definido.|  
+|`afImplicitResources`|Especifica que as definições de recursos são implícitas dentro dos arquivos que compõem o assembly. No .NET Framework 1,0 e 1,1, esse valor é sempre considerado definido.|  
+|`afNonSideBySideAppDomain`|Especifica que o assembly não pode ser executado com outras versões se estiverem em execução no mesmo domínio de aplicativo.|  
+|`afNonSideBySideProcess`|Especifica que o assembly não pode ser executado com outras versões se estiverem em execução no mesmo processo.|  
+|`afNonSideBySideMachine`|Especifica que o assembly não pode ser executado com outras versões se estiverem em execução no mesmo computador.|  
   
 ## <a name="remarks"></a>Comentários  
- The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly. If none of these values are set, the assembly is assumed to be side-by-side compatible.  
+ Os valores entre 0x0010 e 0x0070, inclusive, são usados para descrever os recursos de compatibilidade lado a lado do assembly referenciado. Se nenhum desses valores for definido, o assembly será considerado compatível lado a lado.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** MsCorEE.h  
+ **Cabeçalho:** MsCorEE. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

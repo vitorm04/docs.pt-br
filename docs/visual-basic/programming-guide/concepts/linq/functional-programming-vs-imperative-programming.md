@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353436"
 ---
-# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Functional Programming vs. Imperative Programming (Visual Basic)
+# <a name="functional-programming-vs-imperative-programming-visual-basic"></a>Programação funcional versus programação imperativa (Visual Basic)
 Este tópico compara e contrasta programação funcional com programação (procedural) imperativa mais tradicional.  
   
 ## <a name="functional-programming-vs-imperative-programming"></a>Programação funcional contra a programação imperativa  
@@ -25,12 +25,12 @@ Este tópico compara e contrasta programação funcional com programação (proc
 |Controle de fluxo primária|Loop, condições, e chamadas de função (método).|Chamadas de função, incluindo a recursão.|  
 |Unidade principal de manipulação|Instâncias das classes ou estruturas.|Funções como objetos de primeira classe e coleções de dados.|  
   
- Embora a maioria das linguagens sejam criados para oferecer suporte a um paradigma específico de programação, vários idiomas gerais é flexível o suficiente para suportar várias paradigma. Por exemplo, a maioria das linguagens que contêm ponteiros de função podem ser usados para oferecer suporte digna de crédito programação funcional. Furthermore, Visual Basic includes explicit language extensions to support functional programming, including lambda expressions and type inference. A tecnologia LINQ é um formulário de programação declarativa, funcional.  
+ Embora a maioria das linguagens sejam criados para oferecer suporte a um paradigma específico de programação, vários idiomas gerais é flexível o suficiente para suportar várias paradigma. Por exemplo, a maioria das linguagens que contêm ponteiros de função podem ser usados para oferecer suporte digna de crédito programação funcional. Além disso, Visual Basic inclui extensões de linguagem explícitas para dar suporte à programação funcional, incluindo expressões lambda e inferência de tipos. A tecnologia LINQ é um formulário de programação declarativa, funcional.  
   
 ## <a name="functional-programming-using-xslt"></a>Programação funcional usando XSLT  
  Muitos desenvolvedores XSLT estão familiarizados com a abordagem funcional pura. A maioria de modo eficiente desenvolver uma folha de estilos XSLT é manipular cada modelo como uma transformação isolado, passível de composição. A ordem de execução de- é completamente sublinhado. XSLT não permite efeitos colaterais (exceto mecanismos de escape para executar o código procedural pode gerar os efeitos colaterais que resultam na impureza funcional). No entanto, embora XSLT é uma ferramenta eficaz, algumas de suas características não são ótimas. Por exemplo, expressar construções de programação em XML torna o código relativamente detalhado, e portanto difícil manter. Além disso, confiança pesada na recursão para o controle de fluxo pode resultar em código que é difícil de ler. Para obter mais informações sobre XSLT, consulte [Transformações XSLT](../../../../standard/data/xml/xslt-transformations.md).  
   
- No entanto, XSLT provou o valor de usar uma abordagem funcional pura para transformar XML de uma forma para outra. Programação funcional pura com LINQ to XML é semelhante de várias maneiras a fonte. However, the programming constructs introduced by LINQ to XML and Visual Basic allow you to write pure functional transformations that are more readable and maintainable than XSLT.  
+ No entanto, XSLT provou o valor de usar uma abordagem funcional pura para transformar XML de uma forma para outra. Programação funcional pura com LINQ to XML é semelhante de várias maneiras a fonte. No entanto, as construções de programação introduzidas por LINQ to XML e Visual Basic permitem que você escreva transformações funcionais puras que são mais legíveis e que podem ser mantidas do que o XSLT.  
   
 ## <a name="advantages-of-pure-functions"></a>Vantagens de funções puras  
  O principal motivo para implementar transformações e como funções puras é que as funções puras são passível de composição: isto é, independentemente e sem estado. Essas características trazem um número de benefícios, incluindo o seguinte:  
@@ -48,10 +48,10 @@ Este tópico compara e contrasta programação funcional com programação (proc
   
  Por outro lado, a programação funcional aproxima problemas computacionais como um exercício a avaliação de transformações e puras de coleções de dados. Programação funcional evita o estado e dados mutáveis, e sublinha ao aplicativo de funções.  
   
- Fortunately, Visual Basic doesn't require the full leap to functional programming, because it supports both imperative and functional programming approaches. Um desenvolvedor pode escolher qual abordagem é a mais adequado para um cenário específico. De fato, os programas combinam geralmente as duas abordagens.  
+ Felizmente, o Visual Basic não exige o salto completo para a programação funcional, pois dá suporte a abordagens de programação imperativas e funcionais. Um desenvolvedor pode escolher qual abordagem é a mais adequado para um cenário específico. De fato, os programas combinam geralmente as duas abordagens.  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Introduction to Pure Functional Transformations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [Introdução às transformações funcionais puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [Transformações XSLT](../../../../standard/data/xml/xslt-transformations.md)
-- [Refactoring Into Pure Functions (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [Refatoração em funções puras (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

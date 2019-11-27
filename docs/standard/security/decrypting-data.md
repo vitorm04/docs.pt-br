@@ -22,13 +22,13 @@ ms.locfileid: "74353859"
 ---
 # <a name="decrypting-data"></a>Descriptografando dados
 
-Decryption is the reverse operation of encryption. For secret-key encryption, you must know both the key and IV that were used to encrypt the data. For public-key encryption, you must know either the public key (if the data was encrypted using the private key) or the private key (if the data was encrypted using the public key).
+A descriptografia é a operação inversa da criptografia. Para criptografia de chave secreta, você deve saber a chave e o IV que foram usados para criptografar os dados. Para criptografia de chave pública, você deve saber a chave pública (se os dados foram criptografados usando a chave privada) ou a chave privada (se os dados foram criptografados usando a chave pública).
 
-## <a name="symmetric-decryption"></a>Symmetric Decryption
+## <a name="symmetric-decryption"></a>Descriptografia simétrica
 
-The decryption of data encrypted with symmetric algorithms is similar to the process used to encrypt data with symmetric algorithms. The <xref:System.Security.Cryptography.CryptoStream> class is used with symmetric cryptography classes provided by the .NET Framework to decrypt data read from any managed stream object.
+A descriptografia de dados criptografados com algoritmos simétricos é semelhante ao processo usado para criptografar dados com algoritmos simétricos. A classe <xref:System.Security.Cryptography.CryptoStream> é usada com classes de criptografia simétrica fornecidas pelo .NET Framework para descriptografar dados lidos de qualquer objeto de fluxo gerenciado.
 
-The following example illustrates how to create a new instance of the <xref:System.Security.Cryptography.RijndaelManaged> class and use it to perform decryption on a <xref:System.Security.Cryptography.CryptoStream> object. This example first creates a new instance of the **RijndaelManaged** class. Next it creates a **CryptoStream** object and initializes it to the value of a managed stream called `myStream`. Next, the **CreateDecryptor** method from the **RijndaelManaged** class is passed the same key and IV that was used for encryption and is then passed to the **CryptoStream** constructor. Finally, the **CryptoStreamMode.Read** enumeration is passed to the **CryptoStream** constructor to specify read access to the stream.
+O exemplo a seguir ilustra como criar uma nova instância da classe <xref:System.Security.Cryptography.RijndaelManaged> e usá-la para executar a descriptografia em um objeto <xref:System.Security.Cryptography.CryptoStream>. Este exemplo primeiro cria uma nova instância da classe **RijndaelManaged** . Em seguida, ele cria um objeto **CryptoStream** e o inicializa para o valor de um fluxo gerenciado chamado `myStream`. Em seguida, o método **Createdecryptr** da classe **RijndaelManaged** é passado para a mesma chave e IV que foi usado para criptografia e, em seguida, é passado para o construtor **CryptoStream** . Por fim, a enumeração **CryptoStreamMode. Read** é passada para o construtor **CryptoStream** para especificar o acesso de leitura ao fluxo.
 
 ```vb
 Dim rmCrypto As New RijndaelManaged()
@@ -40,7 +40,7 @@ RijndaelManaged rmCrypto = new RijndaelManaged();
 CryptoStream cryptStream = new CryptoStream(myStream, rmCrypto.CreateDecryptor(Key, IV), CryptoStreamMode.Read);
 ```
 
-The following example shows the entire process of creating a stream, decrypting the stream, reading from the stream, and closing the streams. A <xref:System.Net.Sockets.TcpListener> object is created that initializes a network stream when a connection to the listening object is made. The network stream is then decrypted using the **CryptoStream** class and the **RijndaelManaged** class. This example assumes that the key and IV values have been either successfully transferred or previously agreed upon. It does not show the code needed to encrypt and transfer these values.
+O exemplo a seguir mostra todo o processo de criação de um fluxo, descriptografia do fluxo, leitura a partir do fluxo e fechamento dos fluxos. É criado um objeto <xref:System.Net.Sockets.TcpListener> que inicializa um fluxo de rede quando uma conexão com o objeto de escuta é feita. O fluxo de rede é então descriptografado usando a classe **CryptoStream** e a classe **RijndaelManaged** . Este exemplo pressupõe que os valores de chave e IV foram transferidos com êxito ou acordado anteriormente. Ele não mostra o código necessário para criptografar e transferir esses valores.
 
 ```vb
 Imports System.IO
@@ -170,15 +170,15 @@ class Class1
 }
 ```
 
-For the previous sample to work, an encrypted connection must be made to the listener. The connection must use the same key, IV, and algorithm used in the listener. If such a connection is made, the message is decrypted and displayed to the console.
+Para que o exemplo anterior funcione, uma conexão criptografada deve ser feita ao ouvinte. A conexão deve usar a mesma chave, o IV e o algoritmo usados no ouvinte. Se essa conexão for estabelecida, a mensagem será descriptografada e exibida para o console.
 
-## <a name="asymmetric-decryption"></a>Asymmetric Decryption
+## <a name="asymmetric-decryption"></a>Descriptografia assimétrica
 
-Typically, a party (party A) generates both a public and private key and stores the key either in memory or in a cryptographic key container. Party A then sends the public key to another party (party B). Using the public key, party B encrypts data and sends the data back to party A. After receiving the data, party A decrypts it using the private key that corresponds. Decryption will be successful only if party A uses the private key that corresponds to the public key Party B used to encrypt the data.
+Normalmente, uma entidade (parte A) gera uma chave pública e privada e armazena a chave na memória ou em um contêiner de chave de criptografia. Em seguida, a parte a envia a chave pública para outra parte (parte B). Usando a chave pública, a parte B criptografa dados e envia os dados de volta para a parte A. Depois de receber os dados, A parte A descriptografa usando a chave privada que corresponde. A descriptografia será bem-sucedida somente se a parte A usar a chave privada que corresponde à parte da chave pública B usada para criptografar os dados.
 
-For information on how to store an asymmetric key in secure cryptographic key container and how to later retrieve the asymmetric key, see [How to: Store Asymmetric Keys in a Key Container](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
+Para obter informações sobre como armazenar uma chave assimétrica no contêiner de chave criptográfica segura e como recuperar posteriormente a chave assimétrica, consulte [como armazenar chaves assimétricas em um contêiner de chave](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md).
 
-The following example illustrates the decryption of two arrays of bytes that represent a symmetric key and IV. For information on how to extract the asymmetric public key from the <xref:System.Security.Cryptography.RSACryptoServiceProvider> object in a format that you can easily send to a third party, see [Encrypting Data](../../../docs/standard/security/encrypting-data.md).
+O exemplo a seguir ilustra a descriptografia de duas matrizes de bytes que representam uma chave simétrica e um IV. Para obter informações sobre como extrair a chave pública assimétrica do objeto <xref:System.Security.Cryptography.RSACryptoServiceProvider> em um formato que você pode enviar facilmente a terceiros, consulte [Criptografando dados](../../../docs/standard/security/encrypting-data.md).
 
 ```vb
 'Create a new instance of the RSACryptoServiceProvider class.

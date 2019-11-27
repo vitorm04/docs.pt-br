@@ -9,11 +9,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354250"
 ---
-# <a name="converting-data-types-visual-basic"></a>Converting Data Types (Visual Basic)
+# <a name="converting-data-types-visual-basic"></a>Convertendo tipos de dados (Visual Basic)
 
 Os métodos de conversão alteram o tipo dos objetos de entrada.
 
- As operações de conversão em consultas LINQ são úteis em diversas aplicações. The following are some examples:
+ As operações de conversão em consultas LINQ são úteis em diversas aplicações. Veja a seguir alguns exemplos:
 
 - O método <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> pode ser usado para ocultar a implementação personalizada de um tipo de um operador de consulta padrão.
 
@@ -21,26 +21,26 @@ Os métodos de conversão alteram o tipo dos objetos de entrada.
 
 - Os métodos <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> e <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> podem ser usados para forçar a execução de consulta imediata em vez de adiá-la até que a consulta seja enumerada.
 
-## <a name="methods"></a>Métodos
+## <a name="methods"></a>{1&gt;Métodos&lt;1}
 
 A tabela a seguir lista os métodos de operador de consulta padrão que realizam conversões de tipo de dados.
 
 Os métodos de conversão nesta tabela cujos nomes começam com "As" alteram o tipo estático da coleção de origem, mas não a enumeram. Os métodos cujos nomes começam com "To" enumeram a coleção de origem e colocam os itens na coleção de tipo correspondente.
 
-|Nome do método|Descrição|Visual Basic Query Expression Syntax|Mais informações|
+|Nome do método|Descrição|Visual Basic sintaxe de expressão de consulta|Mais informações|
 |-----------------|-----------------|------------------------------------------|----------------------|
-|AsEnumerable|Retorna a entrada digitada como <xref:System.Collections.Generic.IEnumerable%601>.|Não aplicável.|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
-|AsQueryable|Converte um <xref:System.Collections.IEnumerable> (genérico) em um <xref:System.Linq.IQueryable> (genérico).|Não aplicável.|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
+|AsEnumerable|Retorna a entrada digitada como <xref:System.Collections.Generic.IEnumerable%601>.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
+|AsQueryable|Converte um <xref:System.Collections.IEnumerable> (genérico) em um <xref:System.Linq.IQueryable> (genérico).|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
 |Conversão|Converte os elementos de uma coleção em um tipo especificado.|`From … As …`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|
-|OfType|Filtra valores, dependendo da capacidade de serem convertidos em um tipo especificado.|Não aplicável.|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
-|ToArray|Converte uma coleção em uma matriz. Esse método força a execução de consulta.|Não aplicável.|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
-|ToDictionary|Coloca os elementos em um <xref:System.Collections.Generic.Dictionary%602> com base em uma função de seletor de chave. Esse método força a execução de consulta.|Não aplicável.|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
-|ToList|Converte uma coleção em um <xref:System.Collections.Generic.List%601>. Esse método força a execução de consulta.|Não aplicável.|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
-|ToLookup|Coloca os elementos em um <xref:System.Linq.Lookup%602> (um dicionário one-to-many) com base em uma função de seletor de chave. Esse método força a execução de consulta.|Não aplicável.|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
+|OfType|Filtra valores, dependendo da capacidade de serem convertidos em um tipo especificado.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
+|ToArray|Converte uma coleção em uma matriz. Esse método força a execução de consulta.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
+|ToDictionary|Coloca os elementos em um <xref:System.Collections.Generic.Dictionary%602> com base em uma função de seletor de chave. Esse método força a execução de consulta.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
+|ToList|Converte uma coleção em um <xref:System.Collections.Generic.List%601>. Esse método força a execução de consulta.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
+|ToLookup|Coloca os elementos em um <xref:System.Linq.Lookup%602> (um dicionário one-to-many) com base em uma função de seletor de chave. Esse método força a execução de consulta.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
 
 ## <a name="query-expression-syntax-example"></a>Exemplo de sintaxe de expressão de consulta
 
-The following code example uses the `From As` clause to cast a type to a subtype before accessing a member that is available only on the subtype.
+O exemplo de código a seguir usa a cláusula `From As` para converter um tipo em um subtipo antes de acessar um membro que está disponível somente no subtipo.
 
 ```vb
 Class Plant
@@ -85,4 +85,4 @@ End Sub
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Cláusula From](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [How to: Query an ArrayList with LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [Como consultar um ArrayList com LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354236"
 ---
-# <a name="deferred-execution-example-visual-basic"></a>Deferred Execution Example (Visual Basic)
+# <a name="deferred-execution-example-visual-basic"></a>Exemplo de execução adiada (Visual Basic)
 
 Este tópico mostra como execução adiada e a avaliação lazy afetam a execução das consultas LINQ to XML.
 
@@ -63,4 +63,4 @@ Você pode ver que a matriz inteira de cadeias de caracteres não é convertida 
 
 ## <a name="see-also"></a>Consulte também
 
-- [Tutorial: Deferred Execution (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)
+- [Tutorial: execução adiada (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/tutorial-deferred-execution.md)

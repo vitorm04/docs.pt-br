@@ -20,7 +20,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350885"
 ---
 # <a name="typeof-operator-visual-basic"></a>Operador TypeOf (Visual Basic)
-Checks whether the runtime type of an expression's result is type-compatible with the specified type.
+Verifica se o tipo de tempo de execução do resultado de uma expressão é compatível com tipo com o tipo especificado.
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,39 +34,39 @@ result = TypeOf objectexpression IsNot typename
   
 ## <a name="parts"></a>Partes  
  `result`  
- Returned. Um valor `Boolean`.  
+ Exibido. Um valor `Boolean`.  
   
  `objectexpression`  
- Necessário. Any expression that evaluates to a reference type.  
+ Necessária. Qualquer expressão que seja avaliada como um tipo de referência.  
   
  `typename`  
- Necessário. Any data type name.  
+ Necessária. Qualquer nome de tipo de dados.  
   
 ## <a name="remarks"></a>Comentários  
- The `TypeOf` operator determines whether the run-time type of `objectexpression` is compatible with `typename`. The compatibility depends on the type category of `typename`. The following table shows how compatibility is determined.  
+ O operador `TypeOf` determina se o tipo de tempo de execução de `objectexpression` é compatível com `typename`. A compatibilidade depende da categoria de tipo de `typename`. A tabela a seguir mostra como a compatibilidade é determinada.  
   
-|Type category of `typename`|Compatibility criterion|  
+|Categoria de tipo de `typename`|Critério de compatibilidade|  
 |---------------------------------|-----------------------------|  
-|Class|`objectexpression` is of type `typename` or inherits from `typename`|  
-|Estrutura|`objectexpression` is of type `typename`|  
-|Interface|`objectexpression` implements `typename` or inherits from a class that implements `typename`|  
+|Classe|`objectexpression` é do tipo `typename` ou herda de `typename`|  
+|Estrutura|`objectexpression` é do tipo `typename`|  
+|Interface|`objectexpression` implementa `typename` ou herda de uma classe que implementa `typename`|  
   
- If the run-time type of `objectexpression` satisfies the compatibility criterion, `result` is `True`. Caso contrário, `result` é `False`.  If `objectexpression` is null, then `TypeOf`...`Is` returns `False`, and ...`IsNot` returns `True`.  
+ Se o tipo de tempo de execução de `objectexpression` satisfizer o critério de compatibilidade, `result` será `True`. Caso contrário, `result` é `False`.  Se `objectexpression` for NULL, `TypeOf`...`Is` retorna `False`e...`IsNot` retorna `True`.  
   
- `TypeOf` is always used with the `Is` keyword to construct a `TypeOf`...`Is` expression, or with the `IsNot` keyword to construct a `TypeOf`...`IsNot` expression.  
+ `TypeOf` é sempre usado com a palavra-chave `Is` para construir uma expressão `TypeOf`...`Is` ou com a palavra-chave `IsNot` para construir uma expressão `TypeOf`...`IsNot`.  
   
 ## <a name="example"></a>Exemplo  
- The following example uses `TypeOf`...`Is` expressions to test the type compatibility of two object reference variables with various data types.  
+ O exemplo a seguir usa `TypeOf`...`Is` expressões para testar a compatibilidade de tipos de duas variáveis de referência de objeto com vários tipos de dados.  
   
  [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
- The variable `refInteger` has a run-time type of `Integer`. It is compatible with `Integer` but not with `Double`. The variable `refForm` has a run-time type of <xref:System.Windows.Forms.Form>. It is compatible with <xref:System.Windows.Forms.Form> because that is its type, with <xref:System.Windows.Forms.Control> because <xref:System.Windows.Forms.Form> inherits from <xref:System.Windows.Forms.Control>, and with <xref:System.ComponentModel.IComponent> because <xref:System.Windows.Forms.Form> inherits from <xref:System.ComponentModel.Component>, which implements <xref:System.ComponentModel.IComponent>. However, `refForm` is not compatible with <xref:System.Windows.Forms.Label>.  
+ A variável `refInteger` tem um tipo de tempo de execução de `Integer`. Ele é compatível com `Integer`, mas não com `Double`. A variável `refForm` tem um tipo de tempo de execução de <xref:System.Windows.Forms.Form>. Ele é compatível com <xref:System.Windows.Forms.Form> porque esse é o tipo, com <xref:System.Windows.Forms.Control> porque <xref:System.Windows.Forms.Form> herda de <xref:System.Windows.Forms.Control>e com <xref:System.ComponentModel.IComponent> porque <xref:System.Windows.Forms.Form> herda de <xref:System.ComponentModel.Component>, que implementa <xref:System.ComponentModel.IComponent>. No entanto, `refForm` não é compatível com <xref:System.Windows.Forms.Label>.  
   
 ## <a name="see-also"></a>Consulte também
 
 - [Operador Is](../../../visual-basic/language-reference/operators/is-operator.md)
 - [Operador IsNot](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Operadores de comparação no Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Precedência do operador no Visual Basic](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [Operadores Listados por Funcionalidade](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [Operadores e Expressões](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447661"
 ---
 # <a name="imetadataimportenummembers-method"></a>Método IMetaDataImport::EnumMembers
-Enumerates MemberDef tokens representing members of the specified type.  
+Enumera os tokens MemberDef que representam os membros do tipo especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,38 +39,38 @@ HRESULT EnumMembers (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `cl`  
- [in] A TypeDef token representing the type whose members are to be enumerated.  
+ no Um token de TypeDef que representa o tipo cujos membros devem ser enumerados.  
   
  `rMembers`  
- [out] The array used to hold the MemberDef tokens.  
+ fora A matriz usada para manter os tokens MemberDef.  
   
  `cMax`  
- [in] The maximum size of the `rMembers` array.  
+ no O tamanho máximo da matriz de `rMembers`.  
   
  `pcTokens`  
- [out] The actual number of MemberDef tokens returned in `rMembers`.  
+ fora O número real de tokens MemberDef retornados em `rMembers`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMembers` returned successfully.|  
-|`S_FALSE`|There are no MemberDef tokens to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumMembers` retornado com êxito.|  
+|`S_FALSE`|Não há tokens MemberDef para enumerar. Nesse caso, `pcTokens` é zero.|  
   
 ## <a name="remarks"></a>Comentários  
- When enumerating collections of members for a class, `EnumMembers` returns only members (fields and methods, but **not** properties or events) defined directly on the class. It does not return any members that the class inherits, even if the class provides an implementation for those inherited members. To enumerate inherited members, the caller must explicitly walk the inheritance chain. Note that the rules for the inheritance chain may vary depending on the language or compiler that emitted the original metadata.
+ Ao enumerar coleções de membros para uma classe, `EnumMembers` retorna somente Membros (campos e métodos, mas **não** Propriedades ou eventos) definidos diretamente na classe. Ele não retorna nenhum membro herdado pela classe, mesmo que a classe forneça uma implementação para esses membros herdados. Para enumerar membros herdados, o chamador deve percorrer a cadeia de herança explicitamente. Observe que as regras para a cadeia de herança podem variar dependendo do idioma ou do compilador que emitiu os metadados originais.
  
- Properties and events are not enumerated by `EnumMembers`. To enumerate those, use [EnumProperties](imetadataimport-enumproperties-method.md) or [EnumEvents](imetadataimport-enumevents-method.md).
+ As propriedades e os eventos não são enumerados por `EnumMembers`. Para enumerar, use [EnumProperties](imetadataimport-enumproperties-method.md) ou [EnumEvents](imetadataimport-enumevents-method.md).
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

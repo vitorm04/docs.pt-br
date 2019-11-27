@@ -16,14 +16,14 @@ ms.locfileid: "74351636"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 
-The `Async` modifier indicates that the method or [lambda expression](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) that it modifies is asynchronous. Such methods are referred to as *async methods*.
+O modificador `Async` indica que o método ou a [expressão lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md) que ele modifica é assíncrono. Esses métodos são chamados de *métodos assíncronos*.
 
-An async method provides a convenient way to do potentially long-running work without blocking the caller's thread. The caller of an async method can resume its work without waiting for the async method to finish.
+Um método assíncrono fornece uma maneira conveniente de executar trabalhos potencialmente demorados sem bloquear o thread do chamador. O chamador de um método assíncrono pode retomar seu trabalho sem esperar que o método Async seja concluído.
 
 > [!NOTE]
-> As palavras-chave `Async` e `Await` foram introduzidas no Visual Studio 2012. For an introduction to async programming, see [Asynchronous Programming with Async and Await](../../../visual-basic/programming-guide/concepts/async/index.md).
+> As palavras-chave `Async` e `Await` foram introduzidas no Visual Studio 2012. Para obter uma introdução à programação assíncrona, consulte [programação assíncrona com Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md).
 
-The following example shows the structure of an async method. By convention, async method names end in "Async."
+O exemplo a seguir mostra a estrutura de um método assíncrono. Por convenção, os nomes de método assíncronos terminam em "Async".
 
 ```vb
 Public Async Function ExampleMethodAsync() As Task(Of Integer)
@@ -43,23 +43,23 @@ Public Async Function ExampleMethodAsync() As Task(Of Integer)
 End Function
 ```
 
-Typically, a method modified by the `Async` keyword contains at least one [Await](../../../visual-basic/language-reference/modifiers/async.md) expression or statement. The method runs synchronously until it reaches the first `Await`, at which point it suspends until the awaited task completes. In the meantime, control is returned to the caller of the method. If the method doesn't contain an `Await` expression or statement, the method isn't suspended and executes as a synchronous method does. A compiler warning alerts you to any async methods that don't contain `Await` because that situation might indicate an error. For more information, see the [compiler error](../error-messages/bc42358.md).
+Normalmente, um método modificado pela palavra-chave `Async` contém pelo menos uma expressão ou instrução [Await](../../../visual-basic/language-reference/modifiers/async.md) . O método é executado de forma síncrona até atingir o primeiro `Await`, no ponto em que ele é suspenso até que a tarefa esperada seja concluída. Enquanto isso, o controle é retornado para o chamador do método. Se o método não contiver uma expressão `Await` ou instrução, o método não será suspenso e será executado como um método síncrono. Um aviso do compilador alerta você para quaisquer métodos assíncronos que não contenham `Await` porque essa situação pode indicar um erro. Para obter mais informações, consulte o [erro do compilador](../error-messages/bc42358.md).
 
-The `Async` keyword is an unreserved keyword. It is a keyword when it modifies a method or a lambda expression. In all other contexts, it is interpreted as an identifier.
+A palavra-chave `Async` é uma palavra-chave não reservada. É uma palavra-chave quando modifica um método ou uma expressão lambda. Em todos os outros contextos, ele é interpretado como um identificador.
 
 ## <a name="return-types"></a>Tipos de Retorno
 
-An async method is either a [Sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) procedure, or a [Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) procedure that has a return type of <xref:System.Threading.Tasks.Task> or <xref:System.Threading.Tasks.Task%601>. The method cannot declare any [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) parameters.
+Um método assíncrono é um procedimento [sub](../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) ou um procedimento [Function](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md) que tem um tipo de retorno de <xref:System.Threading.Tasks.Task> ou <xref:System.Threading.Tasks.Task%601>. O método não pode declarar nenhum parâmetro [ByRef](../../../visual-basic/language-reference/modifiers/byref.md) .
 
-You specify `Task(Of TResult)` for the return type of an async method if the [Return](../../../visual-basic/language-reference/statements/return-statement.md) statement of the method has an operand of type TResult. Você usará `Task` se nenhum valor significativo for retornado quando o método for concluído. That is, a call to the method returns a `Task`, but when the `Task` is completed, any `Await` statement that's awaiting the `Task` doesn’t produce a result value.
+Você especifica `Task(Of TResult)` para o tipo de retorno de um método assíncrono se a instrução [Return](../../../visual-basic/language-reference/statements/return-statement.md) do método tiver um operando do tipo TResult. Você usará `Task` se nenhum valor significativo for retornado quando o método for concluído. Ou seja, uma chamada para o método retorna um `Task`, mas quando a `Task` é concluída, qualquer instrução `Await` que esteja aguardando o `Task` não produz um valor de resultado.
 
-Async subroutines are used primarily to define event handlers where a `Sub` procedure is required. The caller of an async subroutine can't await it and can't catch exceptions that the method throws.
+As sub-rotinas assíncronas são usadas principalmente para definir manipuladores de eventos onde um procedimento de `Sub` é necessário. O chamador de uma sub-rotina assíncrona não pode aguardar e não pode capturar exceções que o método gera.
 
 Para obter mais informações e exemplos, consulte [Tipos de retorno assíncronos](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
 ## <a name="example"></a>Exemplo
 
-The following examples show an async event handler, an async lambda expression, and an async method. For a full example that uses these elements, see [Walkthrough: Accessing the Web by Using Async and Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). É possível baixar o código do passo a passo em [Exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
+Os exemplos a seguir mostram um manipulador de eventos assíncrono, uma expressão lambda Async e um método Async. Para obter um exemplo completo que usa esses elementos, consulte [Walkthrough: acessando a Web usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). É possível baixar o código do passo a passo em [Exemplos de código do desenvolvedor](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).
 
 ```vb
 ' An event handler must be a Sub procedure.

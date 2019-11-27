@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support this action
+title: O objeto não dá suporte a esta ação
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID445
@@ -11,14 +11,14 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353874"
 ---
-# <a name="object-doesnt-support-this-action-visual-basic"></a>Object doesn't support this action (Visual Basic)
-You referenced a method or property that is not supported by this object.  
+# <a name="object-doesnt-support-this-action-visual-basic"></a>O objeto não dá suporte a esta ação (Visual Basic)
+Você referenciou um método ou propriedade que não tem suporte deste objeto.  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a>Para corrigir esse erro  
   
-1. Read the object's documentation for more information on the object.  
+1. Leia a documentação do objeto para obter mais informações sobre o objeto.  
   
-2. Ensure that the names of properties and methods are spelled correctly.  
+2. Verifique se os nomes de propriedades e métodos estão escritos corretamente.  
   
 ## <a name="see-also"></a>Consulte também
 

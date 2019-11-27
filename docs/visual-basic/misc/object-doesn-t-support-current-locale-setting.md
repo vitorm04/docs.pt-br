@@ -1,5 +1,5 @@
 ---
-title: Object doesn't support current locale setting
+title: O objeto não dá suporte à configuração de localidade atual
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID447
@@ -11,12 +11,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353890"
 ---
-# <a name="object-doesnt-support-current-locale-setting-visual-basic"></a>Object doesn't support current locale setting (Visual Basic)
-You tried to access an object that does not support the locale setting for the current project.  
+# <a name="object-doesnt-support-current-locale-setting-visual-basic"></a>O objeto não dá suporte à configuração de localidade atual (Visual Basic)
+Você tentou acessar um objeto que não oferece suporte à configuração de localidade para o projeto atual.  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a>Para corrigir esse erro  
   
-- Check which locale settings the object supports.  
+- Verifique quais configurações de localidade o objeto dá suporte.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426730"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>Método IMetaDataImport2::EnumGenericParamConstraints
-Gets an enumerator for an array of generic parameter constraints associated with the generic parameter represented by the specified token.  
+Obtém um enumerador para uma matriz de restrições de parâmetro genérico associadas ao parâmetro genérico representado pelo token especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,33 +39,33 @@ HRESULT EnumGenericParamConstraints (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `tk`  
- [in]   A token that represents the generic parameter whose constraints are to be enumerated.  
+ no   Um token que representa o parâmetro genérico cujas restrições devem ser enumeradas.  
   
  `rGenericParamConstraints`  
- [out] The array of generic parameter constraints to enumerate.  
+ fora A matriz de restrições de parâmetro genérico para enumerar.  
   
  `cMax`  
- [in]   The requested maximum number of tokens to place in `rGenericParamConstraints`.  
+ no   O número máximo solicitado de tokens a serem colocados no `rGenericParamConstraints`.  
   
  `pcGenericParamConstraints`  
- [out] A pointer to the number of tokens placed in `rGenericParamConstraints`.  
+ fora Um ponteiro para o número de tokens colocados em `rGenericParamConstraints`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParameterConstraints` returned successfully.|  
-|`S_FALSE`|`phEnum` has no member elements. In this case, `pcGenericParameterConstraints` is set to 0 (zero).|  
+|`S_OK`|`EnumGenericParameterConstraints` retornado com êxito.|  
+|`S_FALSE`|`phEnum` não tem elementos de membro. Nesse caso, `pcGenericParameterConstraints` é definido como 0 (zero).|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

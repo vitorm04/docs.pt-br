@@ -25,7 +25,7 @@ Esse evento captura informações sobre as exceções geradas.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Evento|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`ExceptionThrown_V1`|80|Uma exceção gerenciada é gerada.|  
   
@@ -37,7 +37,7 @@ Esse evento captura informações sobre as exceções geradas.
 |Mensagem de exceção|win:UnicodeString|A mensagem de exceção real.|  
 |EIPCodeThrow|win:Pointer|Ponteiro de instrução em que ocorreu a exceção.|  
 |ExceptionHR|win:UInt32|Exceção [HRESULT](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/0642cb2f-2075-4469-918c-4441e69c548a).|  
-|ExceptionFlags|win:UInt16|0x01: HasInnerException (consulte [Eventos CLR ETW](clr-etw-events.md) na documentação do Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indicates that the process state is corrupt; see [Handling Corrupted State Exceptions](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10: IsCLSCompliant (uma exceção que é derivada de <xref:System.Exception> está em conformidade com CLS; caso contrário, ela não está em conformidade com CLS).|  
+|ExceptionFlags|win:UInt16|0x01: HasInnerException (consulte [Eventos CLR ETW](clr-etw-events.md) na documentação do Visual Basic).<br /><br /> 0x02: IsNestedException.<br /><br /> 0x04: IsRethrownException.<br /><br /> 0x08: IsCorruptedStateException (indica que o estado do processo está corrompido; consulte [tratamento de exceções de estado corrompido](https://docs.microsoft.com/archive/msdn-magazine/2009/february/clr-inside-out-handling-corrupted-state-exceptions)).<br /><br /> 0x10: IsCLSCompliant (uma exceção que é derivada de <xref:System.Exception> está em conformidade com CLS; caso contrário, ela não está em conformidade com CLS).|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
 ## <a name="see-also"></a>Consulte também

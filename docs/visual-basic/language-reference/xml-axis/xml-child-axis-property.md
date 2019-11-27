@@ -30,46 +30,46 @@ object.<child>
   
 |Termo|Definição|  
 |---|---|  
-|`object`|Necessário. An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.|  
-|.<|Necessário. Denotes the start of a child axis property.|  
-|`child`|Necessário. Name of the child nodes to access, of the form [`prefix:]name`.<br /><br /> -   `Prefix` - Optional. XML namespace prefix for the child node. Must be a global XML namespace defined with an `Imports` statement.<br />-   `Name` - Required. Local child node name. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|Necessário. Denotes the end of a child axis property.|  
+|`object`|Necessária. Um objeto <xref:System.Xml.Linq.XElement>, um objeto <xref:System.Xml.Linq.XDocument>, uma coleção de objetos <xref:System.Xml.Linq.XElement> ou uma coleção de objetos <xref:System.Xml.Linq.XDocument>.|  
+|.<|Necessária. Denota o início de uma propriedade de eixo filho.|  
+|`child`|Necessária. Nome dos nós filho a serem acessados, no formato [`prefix:]name`.<br /><br /> -   `Prefix`-opcional. Prefixo do namespace XML para o nó filho. Deve ser um namespace XML global definido com uma instrução `Imports`.<br />-   `Name`-obrigatório. Nome do nó filho local. Consulte [nomes de elementos e atributos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|>|Necessária. Denota o final de uma propriedade do eixo filho.|  
   
 ## <a name="return-value"></a>Valor retornado  
  Uma coleção de objetos <xref:System.Xml.Linq.XElement> .  
   
 ## <a name="remarks"></a>Comentários  
- You can use an XML child axis property to access child nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first child node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
+ Você pode usar uma propriedade de eixo filho XML para acessar nós filho pelo nome de um objeto <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> ou de uma coleção de objetos <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>. Use a propriedade XML `Value` para acessar o valor do primeiro nó filho na coleção retornada. Para obter mais informações, consulte [propriedade de valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- The Visual Basic compiler converts child axis properties to calls to the <xref:System.Xml.Linq.XContainer.Elements%2A> method.  
+ O compilador Visual Basic converte Propriedades de eixo filho em chamadas para o método <xref:System.Xml.Linq.XContainer.Elements%2A>.  
   
-## <a name="xml-namespaces"></a>XML Namespaces  
- The name in a child axis property can use only XML namespace prefixes declared globally with the `Imports` statement. It cannot use XML namespace prefixes declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
+## <a name="xml-namespaces"></a>Namespaces XML  
+ O nome em uma propriedade de eixo filho pode usar somente os prefixos de namespace XML declarados globalmente com a instrução `Imports`. Ele não pode usar prefixos de namespace XML declarados localmente em literais de elemento XML. Para obter mais informações, consulte [instrução Imports (namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
   
 ## <a name="example"></a>Exemplo  
- The following example shows how to access the child nodes named `phone` from the `contact` object.  
+ O exemplo a seguir mostra como acessar os nós filho chamados `phone` do objeto `contact`.  
   
  [!code-vb[VbXMLSamples#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#17)]  
   
- This code displays the following text:  
+ Esse código exibe o seguinte texto:  
   
  `Home Phone = 206-555-0144`  
   
 ## <a name="example"></a>Exemplo  
- The following example shows how to access the child nodes named `phone` from the collection returned by the `contact` child axis property of the `contacts` object.  
+ O exemplo a seguir mostra como acessar os nós filho chamados `phone` da coleção retornada pela propriedade eixo filho `contact` do objeto `contacts`.  
   
  [!code-vb[VbXMLSamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples7.vb#18)]  
   
- This code displays the following text:  
+ Esse código exibe o seguinte texto:  
   
  `Home Phone = 206-555-0144`  
   
 ## <a name="example"></a>Exemplo  
- The following example declares `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the first child node with the qualified name `ns:name`.  
+ O exemplo a seguir declara `ns` como um prefixo de namespace XML. Em seguida, ele usa o prefixo do namespace para criar um literal XML e acessar o primeiro nó filho com o nome qualificado `ns:name`.  
   
  [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
- This code displays the following text:  
+ Esse código exibe o seguinte texto:  
   
  `Patrick Hines`  
   

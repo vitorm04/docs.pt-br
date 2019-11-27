@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353693"
 ---
-# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>How to: Count Occurrences of a Word in a String (LINQ) (Visual Basic)
+# <a name="how-to-count-occurrences-of-a-word-in-a-string-linq-visual-basic"></a>Como: contar ocorrências de uma palavra em uma cadeia de caracteres (LINQ) (Visual Basic)
 
 Este exemplo mostra como usar uma consulta LINQ para contar as ocorrências de uma palavra especificada em uma cadeia de caracteres. Observe que para executar a contagem, primeiro o método <xref:System.String.Split%2A> é chamado para criar uma matriz de palavras. Há um custo de desempenho para o método <xref:System.String.Split%2A>. Se for a única operação na cadeia de caracteres for contar as palavras, você deverá considerar o uso dos métodos <xref:System.Text.RegularExpressions.Regex.Matches%2A> ou <xref:System.String.IndexOf%2A> em vez dele. No entanto, se o desempenho não for um problema crítico ou se você já tiver dividido a sentença para executar outros tipos de consulta nela, faz sentido usar LINQ para contar as palavras ou frases também.
 
@@ -58,10 +58,10 @@ End Class
 ' 3 occurrence(s) of the search term "data" were found.
 ```
 
-## <a name="compiling-the-code"></a>Compilando o código
+## <a name="compiling-the-code"></a>Compilando o Código
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
 
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

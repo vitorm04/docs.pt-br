@@ -41,34 +41,34 @@ HRESULT DefineGlobalVariable(
   
 ## <a name="parameters"></a>Parâmetros  
  `name`  
- [in] A pointer to a `WCHAR` that defines the global variable name.  
+ no Um ponteiro para um `WCHAR` que define o nome da variável global.  
   
  `attributes`  
- [in] The global variable attributes.  
+ no Os atributos da variável global.  
   
  `cSig`  
- [in] A `ULONG32` that indicates the size, in characters, of the `signature` buffer.  
+ no Um `ULONG32` que indica o tamanho, em caracteres, do buffer de `signature`.  
   
  `signature`  
- [in] The global variable signature.  
+ no A assinatura de variável global.  
   
  `addrKind`  
- [in] The address type.  
+ no O tipo de endereço.  
   
  `addr1`  
- [in] The first address for the parameter specification.  
+ no O primeiro endereço para a especificação de parâmetro.  
   
  `addr2`  
- [in] The second address for the parameter specification.  
+ no O segundo endereço para a especificação de parâmetro.  
   
  `addr3`  
- [in] The third address for the parameter specification.  
+ no O terceiro endereço para a especificação de parâmetro.  
   
 ## <a name="return-value"></a>Valor retornado  
- S_OK if the method succeeds; otherwise, E_FAIL or some other error code.  
+ S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.  
   
-## <a name="requirements"></a>Requisitos  
- **Header:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
+ **Cabeçalho:** CorSym. idl, CorSym. h  
   
 ## <a name="see-also"></a>Consulte também
 

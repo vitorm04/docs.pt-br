@@ -13,15 +13,15 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74354039"
 ---
 # <a name="how-to-group-related-constant-values-together-visual-basic"></a>Como agrupar valores constantes relacionados (Visual Basic)
-An enumeration is the best way to group related constants together. You create an enumeration with the `Enum` statement in the declarations section of a class or a module. For more information, see [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  
+Uma enumeração é a melhor maneira de agrupar constantes relacionadas juntas. Você cria uma enumeração com a instrução `Enum` na seção declarações de uma classe ou um módulo. Para obter mais informações, consulte [como: declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md).  
   
-### <a name="to-group-related-constant-values"></a>To group related constant values  
+### <a name="to-group-related-constant-values"></a>Para agrupar valores constantes relacionados  
   
-1. Write a declaration that includes a code access level, the `Enum` keyword, and a valid name. This example creates the `Private` enumeration, `temperatureValues`.  
+1. Escreva uma declaração que inclua um nível de acesso de código, a palavra-chave `Enum` e um nome válido. Este exemplo cria a enumeração de `Private`, `temperatureValues`.  
   
      [!code-vb[VbEnumsTask#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#21)]  
   
-2. Define the constants in the enumeration. This example creates the `Public` enumeration `temperatureValues` and assigns its values.  
+2. Defina as constantes na enumeração. Este exemplo cria a enumeração de `Public` `temperatureValues` e atribui seus valores.  
   
      [!code-vb[VbEnumsTask#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#1)]  
   

@@ -22,7 +22,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74427366"
 ---
 # <a name="functiontailcall3-function"></a>Função FunctionTailcall3
-Notifies the profiler that the currently executing function is about to perform a tail call to another function.  
+Notifica o criador de perfil de que a função atualmente em execução está prestes a executar uma chamada tail para outra função.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -32,27 +32,27 @@ void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);
   
 ## <a name="parameters"></a>Parâmetros  
  `functionOrRemappedID`  
- [in] The identifier of the currently executing function that is about to make a tail call.  
+ no O identificador da função atualmente em execução que está prestes a fazer uma chamada final.  
   
 ## <a name="remarks"></a>Comentários  
- The `FunctionTailcall3` callback function notifies the profiler as functions are being called. Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.  
+ A função de retorno de chamada `FunctionTailcall3` notifica o criador de perfil conforme as funções estão sendo chamadas. Use o [método ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) para registrar sua implementação dessa função.  
   
- The `FunctionTailcall3` function is a callback; you must implement it. The implementation must use the `__declspec(naked)` storage-class attribute.  
+ A função `FunctionTailcall3` é um retorno de chamada; Você deve implementá-lo. A implementação deve usar o `__declspec(naked)` atributo de classe de armazenamento.  
   
- The execution engine does not save any registers before calling this function.  
+ O mecanismo de execução não salva nenhum registro antes de chamar essa função.  
   
-- On entry, you must save all registers that you use, including those in the floating-point unit (FPU).  
+- Na entrada, você deve salvar todos os registros que usar, incluindo aqueles na FPU (unidade de ponto flutuante).  
   
-- On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.  
+- Ao sair, você deve restaurar a pilha removendo todos os parâmetros que foram enviados por Push por seu chamador.  
   
- The implementation of `FunctionTailcall3` should not block, because it will delay garbage collection. The implementation should not attempt a garbage collection, because the stack may not be in a garbage collection-friendly state. If a garbage collection is attempted, the runtime will block until `FunctionTailcall3` returns.  
+ A implementação de `FunctionTailcall3` não deve bloquear, pois atrasará a coleta de lixo. A implementação não deve tentar uma coleta de lixo, pois a pilha pode não estar em um estado amigável de coleta de lixo. Se uma coleta de lixo for tentada, o tempo de execução será bloqueado até que `FunctionTailcall3` retorne.  
   
- The `FunctionTailcall3` function must not call into managed code or cause a managed memory allocation in any way.  
+ A função `FunctionTailcall3` não deve chamar um código gerenciado ou causar uma alocação de memória gerenciada de qualquer forma.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl  
+ **Cabeçalho:** CorProf. idl  
   
  **Biblioteca:** CorGuids.lib  
   

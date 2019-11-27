@@ -22,36 +22,36 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74426156"
 ---
 # <a name="iceegen-interface"></a>Interface ICeeGen
-Provides methods for dynamic code compilation.  
+Fornece métodos para a compilação dinâmica de código.  
   
- This interface is obsolete and should not be used.  
+ Esta interface está obsoleta e não deve ser usada.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Obsoleto. Adds a .reloc instruction to the code base.|  
-|[Método AllocateMethodBuffer](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Obsoleto. Creates a buffer of the specified size for a method, and gets the relative virtual address of the method.|  
-|[Método ComputePointer](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Obsoleto. Determines the buffer for the specified code section.|  
-|[Método EmitString](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Obsoleto. Emits the specified string into the code base.|  
-|[Método GenerateCeeFile](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Obsoleto. Generates a code-base file that contains the code base currently loaded into this `ICeeGen`.|  
-|[Método GenerateCeeMemoryImage](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Obsoleto. Generates an image in memory for the code base.|  
-|[Método GetIlSection](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Obsoleto. Gets the section of the intermediate language code base referenced by the specified handle.|  
-|[Método GetIMapTokenIface](../../../../docs/framework/unmanaged-api/metadata/iceegen-getimaptokeniface-method.md)|Obsoleto. Gets the interface referenced by the specified token.|  
-|[Método GetMethodBuffer](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Obsoleto. Gets a buffer of the appropriate size for the method at the specified relative virtual address.|  
-|[Método GetSectionBlock](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Obsoleto. Gets a section block of the code base.|  
-|[Método GetSectionCreate](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Obsoleto. Generates and gets a code section using the specified name and flag values.|  
-|[Método GetSectionDataLen](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Obsoleto. Gets the length of the specified section.|  
-|[Método GetString](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|Obsoleto. Gets the string stored at the specified relative virtual address.|  
-|[Método GetStringSection](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Obsoleto. Gets a string representation of the code section referenced by the specified handle.|  
-|[Método TruncateSection](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Obsoleto. Truncates the specified code section by the specified length.|  
+|[Método AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)|Obsoleto. Adiciona uma instrução. realocação à base de código.|  
+|[Método AllocateMethodBuffer](../../../../docs/framework/unmanaged-api/metadata/iceegen-allocatemethodbuffer-method.md)|Obsoleto. Cria um buffer do tamanho especificado para um método e Obtém o endereço virtual relativo do método.|  
+|[Método ComputePointer](../../../../docs/framework/unmanaged-api/metadata/iceegen-computepointer-method.md)|Obsoleto. Determina o buffer para a seção de código especificada.|  
+|[Método EmitString](../../../../docs/framework/unmanaged-api/metadata/iceegen-emitstring-method.md)|Obsoleto. Emite a cadeia de caracteres especificada na base de código.|  
+|[Método GenerateCeeFile](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceefile-method.md)|Obsoleto. Gera um arquivo de base de código que contém a base de código atualmente carregada nesse `ICeeGen`.|  
+|[Método GenerateCeeMemoryImage](../../../../docs/framework/unmanaged-api/metadata/iceegen-generateceememoryimage-method.md)|Obsoleto. Gera uma imagem na memória para a base de código.|  
+|[Método GetIlSection](../../../../docs/framework/unmanaged-api/metadata/iceegen-getilsection-method.md)|Obsoleto. Obtém a seção da base de código de linguagem intermediária referenciada pelo identificador especificado.|  
+|[Método GetIMapTokenIface](../../../../docs/framework/unmanaged-api/metadata/iceegen-getimaptokeniface-method.md)|Obsoleto. Obtém a interface referenciada pelo token especificado.|  
+|[Método GetMethodBuffer](../../../../docs/framework/unmanaged-api/metadata/iceegen-getmethodbuffer-method.md)|Obsoleto. Obtém um buffer do tamanho apropriado para o método no endereço virtual relativo especificado.|  
+|[Método GetSectionBlock](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectionblock-method.md)|Obsoleto. Obtém um bloco de seção da base de código.|  
+|[Método GetSectionCreate](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectioncreate-method.md)|Obsoleto. Gera e obtém uma seção de código usando os valores de nome e sinalizador especificados.|  
+|[Método GetSectionDataLen](../../../../docs/framework/unmanaged-api/metadata/iceegen-getsectiondatalen-method.md)|Obsoleto. Obtém o comprimento da seção especificada.|  
+|[Método GetString](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstring-method.md)|Obsoleto. Obtém a cadeia de caracteres armazenada no endereço virtual relativo especificado.|  
+|[Método GetStringSection](../../../../docs/framework/unmanaged-api/metadata/iceegen-getstringsection-method.md)|Obsoleto. Obtém uma representação de cadeia de caracteres da seção de código referenciada pelo identificador especificado.|  
+|[Método TruncateSection](../../../../docs/framework/unmanaged-api/metadata/iceegen-truncatesection-method.md)|Obsoleto. Trunca a seção de código especificada pelo comprimento especificado.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Used as a resource in MsCorEE.dll  
+ **Biblioteca:** Usado como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

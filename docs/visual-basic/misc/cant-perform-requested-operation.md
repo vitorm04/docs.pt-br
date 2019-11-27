@@ -1,5 +1,5 @@
 ---
-title: Can't perform requested operation
+title: Não é possível executar a operação solicitada
 ms.date: 07/20/2015
 f1_keywords:
 - vbrID17
@@ -11,12 +11,12 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353319"
 ---
-# <a name="cant-perform-requested-operation-visual-basic"></a>Can't perform requested operation (Visual Basic)
-An operation cannot be carried out because it would invalidate the current state of the project. For example, you may have tried to programmatically modify code that is running.  
+# <a name="cant-perform-requested-operation-visual-basic"></a>Não é possível executar a operação solicitada (Visual Basic)
+Uma operação não pode ser executada porque invalidaria o estado atual do projeto. Por exemplo, você pode ter tentado modificar programaticamente o código que está em execução.  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a>Para corrigir esse erro  
   
-- Stop the code execution, make modifications if necessary, and then retry the operation.  
+- Pare a execução do código, faça modificações, se necessário, e repita a operação.  
   
 ## <a name="see-also"></a>Consulte também
 

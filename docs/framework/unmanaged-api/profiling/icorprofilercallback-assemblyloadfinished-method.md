@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74445176"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>Método ICorProfilerCallback::AssemblyLoadFinished
-Notifies the profiler that an assembly has finished loading.  
+Notifica o criador de perfil que concluiu o carregamento de um assembly.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -35,20 +35,20 @@ HRESULT AssemblyLoadFinished(
   
 ## <a name="parameters"></a>Parâmetros  
  `assemblyId`  
- [in] Identifies the assembly that was loaded.  
+ no Identifica o assembly que foi carregado.  
   
  `hrStatus`  
- [in] An HRESULT that indicates whether the assembly finished loading successfully.  
+ no Um HRESULT que indica se o assembly terminou de ser carregado com êxito.  
   
 ## <a name="remarks"></a>Comentários  
- The value of `assemblyId` is not valid for an information request until the `AssemblyLoadFinished` method is called.  
+ O valor de `assemblyId` não é válido para uma solicitação de informações até que o método `AssemblyLoadFinished` seja chamado.  
   
- Some parts of loading the assembly might continue after the `AssemblyLoadFinished` callback. A failure HRESULT in `hrStatus` indicates a failure. However, a success HRESULT in `hrStatus` indicates only that the first part of loading the assembly has succeeded.  
+ Algumas partes do carregamento do assembly podem continuar depois do `AssemblyLoadFinished` retorno de chamada. Uma falha HRESULT no `hrStatus` indica uma falha. No entanto, um HRESULT de êxito em `hrStatus` indica apenas que a primeira parte do carregamento do assembly foi bem-sucedida.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348434"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>How to: Combine and Compare String Collections (LINQ) (Visual Basic)
+# <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Como: combinar e comparar coleções de cadeias de caracteres (LINQ) (Visual Basic)
 
 Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados. Especificamente, mostra como executar uma concatenação, uma união e uma interseção simples nos dois conjuntos de linhas de texto.
 
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a>Compilando o código
+## <a name="compiling-the-code"></a>Compilando o Código
 
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
 
 ## <a name="see-also"></a>Consulte também
 
-- [LINQ and Strings (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

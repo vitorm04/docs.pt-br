@@ -9,19 +9,19 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353402"
 ---
-# <a name="generation-operations-visual-basic"></a>Generation Operations (Visual Basic)
+# <a name="generation-operations-visual-basic"></a>Operações de geração (Visual Basic)
 Geração refere-se à criação de uma nova sequência de valores.  
   
  Os métodos de operador de consulta padrão que realizam a geração estão listados na seção a seguir.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
-|Nome do método|Descrição|Visual Basic Query Expression Syntax|Mais informações|  
+|Nome do método|Descrição|Visual Basic sintaxe de expressão de consulta|Mais informações|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
-|DefaultIfEmpty|Substitui uma coleção vazia por uma coleção de singletons com valor padrão.|Não aplicável.|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
-|Vazio|Retorna uma coleção vazia.|Não aplicável.|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
-|Intervalo|Gera uma coleção que contém uma sequência de números.|Não aplicável.|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
-|Repetir|Gera uma coleção que contém um valor repetido.|Não aplicável.|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
+|DefaultIfEmpty|Substitui uma coleção vazia por uma coleção de singletons com valor padrão.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.DefaultIfEmpty%2A?displayProperty=nameWithType>|  
+|Vazio|Retorna uma coleção vazia.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Empty%2A?displayProperty=nameWithType>|  
+|Intervalo|Gera uma coleção que contém uma sequência de números.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Range%2A?displayProperty=nameWithType>|  
+|Repetir|Gera uma coleção que contém um valor repetido.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Repeat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74449543"
 ---
 # <a name="imetadataimportenumfields-method"></a>Método IMetaDataImport::EnumFields
-Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.  
+Enumera os tokens FieldDef para o tipo referenciado pelo token de TypeDef especificado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,33 +39,33 @@ HRESULT EnumFields (
   
 ## <a name="parameters"></a>Parâmetros  
  `phEnum`  
- [in, out] A pointer to the enumerator.  
+ [entrada, saída] Um ponteiro para o enumerador.  
   
  `cl`  
- [in] The TypeDef token of the class whose fields are to be enumerated.  
+ no O token de TypeDef da classe cujos campos devem ser enumerados.  
   
  `rFields`  
- [out] The list of FieldDef tokens.  
+ fora A lista de tokens FieldDef.  
   
  `cMax`  
- [in] The maximum size of the `rFields` array.  
+ no O tamanho máximo da matriz de `rFields`.  
   
  `pcTokens`  
- [out] The actual number of FieldDef tokens returned in `rFields`.  
+ fora O número real de tokens FieldDef retornados em `rFields`.  
   
 ## <a name="return-value"></a>Valor retornado  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
-|`S_OK`|`EnumFields` returned successfully.|  
-|`S_FALSE`|There are no fields to enumerate. In that case, `pcTokens` is zero.|  
+|`S_OK`|`EnumFields` retornado com êxito.|  
+|`S_FALSE`|Não há campos para enumerar. Nesse caso, `pcTokens` é zero.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** Cor.h  
+ **Cabeçalho:** Cor. h  
   
- **Library:** Included as a resource in MsCorEE.dll  
+ **Biblioteca:** Incluído como um recurso em MsCorEE. dll  
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

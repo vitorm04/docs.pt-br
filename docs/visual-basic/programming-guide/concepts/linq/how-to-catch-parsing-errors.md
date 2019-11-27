@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353352"
 ---
-# <a name="how-to-catch-parsing-errors-visual-basic"></a>How to: Catch Parsing Errors (Visual Basic)
+# <a name="how-to-catch-parsing-errors-visual-basic"></a>Como: capturar erros de análise (Visual Basic)
 Este tópico mostra como detectar XML mal formado ou inválido.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] é implementado usando <xref:System.Xml.XmlReader>. Se malformado ou XML válido é passado para [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], a classe subjacente de <xref:System.Xml.XmlReader> irá acionar uma exceção. Os vários métodos que analisam XML, tais como <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>, não capturam a exceção; a exceção pode ser capturada por seu aplicativo.  
@@ -43,4 +43,4 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
   
 ## <a name="see-also"></a>Consulte também
 
-- [Parsing XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [Analisando XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

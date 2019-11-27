@@ -22,7 +22,7 @@ ms.locfileid: "74351824"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>Atribuição de variável do objeto (Visual Basic)
 
-You use a normal assignment statement to assign an object to an object variable. You can assign an object expression or the [Nothing](../../../../visual-basic/language-reference/nothing.md) keyword, as the following example illustrates.
+Você usa uma instrução de atribuição normal para atribuir um objeto a uma variável de objeto. Você pode atribuir uma expressão de objeto ou a palavra-chave [Nothing](../../../../visual-basic/language-reference/nothing.md) , como ilustra o exemplo a seguir.
 
 ```vb
 Dim thisObject As Object
@@ -32,22 +32,22 @@ thisObject = Form1
 thisObject = Nothing
 ```
 
-`Nothing` means there is no object currently assigned to the variable.
+`Nothing` significa que não há nenhum objeto atribuído atualmente à variável.
 
 ## <a name="initialization"></a>Inicialização
 
-When your code begins running, your object variables are initialized to `Nothing`. Those whose declarations include initialization are reinitialized to the values you specify when the declaration statements are executed.
+Quando o código começar a ser executado, suas variáveis de objeto serão inicializadas para `Nothing`. Aquelas cujas declarações incluem inicialização são reinicializadas para os valores que você especifica quando as instruções de declaração são executadas.
 
-You can include initialization in your declaration by using the [New](../../../../visual-basic/language-reference/operators/new-operator.md) keyword. The following declaration statements declare object variables `testUri` and `ver` and assign specific objects to them. Each uses one of the overloaded constructors of the appropriate class to initialize the object.
+Você pode incluir a inicialização em sua declaração usando a [nova](../../../../visual-basic/language-reference/operators/new-operator.md) palavra-chave. As instruções de declaração a seguir declaram variáveis de objeto `testUri` e `ver` e atribuir objetos específicos a elas. Cada um deles usa um dos construtores sobrecarregados da classe apropriada para inicializar o objeto.
 
 ```vb
 Dim testUri As New System.Uri("https://www.microsoft.com")
 Dim ver As New System.Version(6, 1, 0)
 ```
 
-## <a name="disassociation"></a>Disassociation
+## <a name="disassociation"></a>Dissociação
 
-Setting an object variable to `Nothing` discontinues the association of the variable with any specific object. This prevents you from accidentally changing the object by changing the variable. It also allows you to test whether the object variable points to a valid object, as the following example shows.
+Definir uma variável de objeto como `Nothing` descontinua a associação da variável com qualquer objeto específico. Isso impede que você altere acidentalmente o objeto alterando a variável. Ele também permite que você teste se a variável de objeto aponta para um objeto válido, como mostra o exemplo a seguir.
 
 ```vb
 If otherObject IsNot Nothing Then
@@ -55,17 +55,17 @@ If otherObject IsNot Nothing Then
 End If
 ```
 
-If the object your variable refers to is in another application, this test cannot determine whether that application has terminated or just invalidated the object.
+Se o objeto ao qual sua variável se refere estiver em outro aplicativo, esse teste não poderá determinar se o aplicativo foi encerrado ou simplesmente invalidará o objeto.
 
-An object variable with a value of `Nothing` is also called a *null reference*.
+Uma variável de objeto com um valor de `Nothing` também é chamada de *referência nula*.
 
-## <a name="current-instance"></a>Current Instance
+## <a name="current-instance"></a>Instância atual
 
-The *current instance* of an object is the one in which the code is currently executing. Since all code executes inside a procedure, the current instance is the one in which the procedure was invoked.
+A *instância atual* de um objeto é aquela em que o código está sendo executado no momento. Como todo o código é executado dentro de um procedimento, a instância atual é aquela em que o procedimento foi invocado.
 
-The `Me` keyword acts as an object variable referring to the current instance. If a procedure is not [Shared](../../../../visual-basic/language-reference/modifiers/shared.md), it can use the `Me` keyword to obtain a pointer to the current instance. Shared procedures cannot be associated with a specific instance of a class.
+A palavra-chave `Me` atua como uma variável de objeto referindo-se à instância atual. Se um procedimento não for [compartilhado](../../../../visual-basic/language-reference/modifiers/shared.md), ele poderá usar a palavra-chave `Me` para obter um ponteiro para a instância atual. Procedimentos compartilhados não podem ser associados a uma instância específica de uma classe.
 
-Using `Me` is particularly useful for passing the current instance to a procedure in another module. For example, suppose you have a number of XML documents and wish to add some standard text to all of them. The following example defines a procedure to do this.
+O uso de `Me` é particularmente útil para passar a instância atual para um procedimento em outro módulo. Por exemplo, suponha que você tenha um número de documentos XML e queira adicionar texto padrão a todos eles. O exemplo a seguir define um procedimento para fazer isso.
 
 ```vb
 Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
@@ -73,7 +73,7 @@ Sub addStandardText(XmlDoc As System.Xml.XmlDocument)
 End Sub
 ```
 
-Every XML document object could then call the procedure and pass its current instance as an argument. O exemplo a seguir demonstra isso.
+Cada objeto de documento XML poderia então chamar o procedimento e passar sua instância atual como um argumento. O exemplo a seguir demonstra isso.
 
 ```vb
 addStandardText(Me)
@@ -84,6 +84,6 @@ addStandardText(Me)
 - [Variáveis de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [Declaração de Variável do Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [Valores de Variável de Objeto](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [How to: Declare an Object Variable and Assign an Object to It in Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [Como: declarar uma variável de objeto e atribuir um objeto a ela no Visual Basic](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
 - [Como fazer uma variável de objeto não se referir a nenhuma instância](../../../../visual-basic/programming-guide/language-features/variables/how-to-make-an-object-variable-not-refer-to-any-instance.md)
 - [Me, My, MyBase e MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

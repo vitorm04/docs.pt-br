@@ -12,16 +12,16 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349819"
 ---
 # <a name="errors-summary-visual-basic"></a>Resumo de erros (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+As palavras-chave do idioma Visual Basic e os membros da biblioteca de tempo de execução são organizados por finalidade e uso.  
   
-|Ação|Elemento de linguagem|  
+|Action|Elemento Language|  
 |------------|----------------------|  
-|Generate run-time errors.|<xref:Microsoft.VisualBasic.Collection.Clear%2A>, [Error](../../../visual-basic/language-reference/statements/error-statement.md), <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
-|Get exceptions.|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
-|Provide error information.|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
-|Trap errors during run time.|[On Error](../../../visual-basic/language-reference/statements/on-error-statement.md), [Resume](../../../visual-basic/language-reference/statements/resume-statement.md), [Try...Catch...Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
-|Provide line number of error.|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
-|Provide system error code.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
+|Gerar erros de tempo de execução.|<xref:Microsoft.VisualBasic.Collection.Clear%2A>, [erro](../../../visual-basic/language-reference/statements/error-statement.md)<xref:Microsoft.VisualBasic.ErrObject.Raise%2A>|  
+|Obter exceções.|<xref:Microsoft.VisualBasic.ErrObject.GetException%2A>|  
+|Forneça informações de erro.|<xref:Microsoft.VisualBasic.Information.Err%2A>|  
+|Interceptar erros durante o tempo de execução.|Se houver [erro](../../../visual-basic/language-reference/statements/on-error-statement.md), [retomar](../../../visual-basic/language-reference/statements/resume-statement.md), [tentar... Capturar... Por fim](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)|  
+|Forneça o número de linha de erro.|<xref:Microsoft.VisualBasic.ErrObject.Erl%2A>|  
+|Forneça o código de erro do sistema.|<xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>|  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -12,23 +12,23 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349573"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub ou função não definida (Visual Basic)
-A `Sub` or `Function` must be defined in order to be called. Possíveis causas do erro incluem:  
+Um `Sub` ou `Function` deve ser definido para ser chamado. Possíveis causas do erro incluem:  
   
-- Misspelling the procedure name.  
+- Digitação incorreta do nome do procedimento.  
   
-- Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.  
+- Tentativa de chamar um procedimento de outro projeto sem adicionar explicitamente uma referência a esse projeto na caixa de diálogo **referências** .  
   
-- Specifying a procedure that is not visible to the calling procedure.  
+- Especificar um procedimento que não seja visível para o procedimento de chamada.  
   
-- Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.  
+- Declarando uma rotina DLL (biblioteca de vínculo dinâmico) do Windows ou uma rotina de recurso de código do Macintosh que não está na biblioteca ou no recurso de código especificado.  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a>Para corrigir esse erro  
   
-1. Make sure that the procedure name is spelled correctly.  
+1. Verifique se o nome do procedimento está escrito corretamente.  
   
-2. Find the name of the project containing the procedure you want to call in the **References** dialog box. If it does not appear, click the **Browse** button to search for it. Select the check box to the left of the project name, and then click **OK**.  
+2. Localize o nome do projeto que contém o procedimento que você deseja chamar na caixa de diálogo **referências** . Se não aparecer, clique no botão **procurar** para procurá-lo. Marque a caixa de seleção à esquerda do nome do projeto e clique em **OK**.  
   
-3. Check the name of the routine.  
+3. Verifique o nome da rotina.  
   
 ## <a name="see-also"></a>Consulte também
 

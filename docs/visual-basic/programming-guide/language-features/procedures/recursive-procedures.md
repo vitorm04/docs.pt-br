@@ -19,25 +19,25 @@ ms.locfileid: "74352549"
 ---
 # <a name="recursive-procedures-visual-basic"></a>Procedimentos recursivos (Visual Basic)
 
-A *recursive* procedure is one that calls itself. In general, this is not the most effective way to write Visual Basic code.  
+Um procedimento *recursivo* é aquele que chama a si mesmo. Em geral, essa não é a maneira mais eficiente de escrever Visual Basic código.  
   
- The following procedure uses recursion to calculate the factorial of its original argument.  
+ O procedimento a seguir usa a recursão para calcular o fatorial de seu argumento original.  
   
  [!code-vb[VbVbcnProcedures#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#51)]  
   
-## <a name="considerations-with-recursive-procedures"></a>Considerations with Recursive Procedures
+## <a name="considerations-with-recursive-procedures"></a>Considerações com procedimentos recursivos
 
- **Limiting Conditions**. You must design a recursive procedure to test for at least one condition that can terminate the recursion, and you must also handle the case where no such condition is satisfied within a reasonable number of recursive calls. Without at least one condition that can be met without fail, your procedure runs a high risk of executing in an infinite loop.
+ **Limitando condições**. Você deve criar um procedimento Recursivo para testar pelo menos uma condição que pode encerrar a recursão e também deve lidar com o caso em que nenhuma condição é satisfeita dentro de um número razoável de chamadas recursivas. Sem pelo menos uma condição que possa ser atendida sem falha, o procedimento executa um alto risco de execução em um loop infinito.
 
- **Uso de Memória**. Your application has a limited amount of space for local variables. Each time a procedure calls itself, it uses more of that space for additional copies of its local variables. If this process continues indefinitely, it eventually causes a <xref:System.StackOverflowException> error.
+ **Uso de Memória**. Seu aplicativo tem uma quantidade limitada de espaço para variáveis locais. Cada vez que um procedimento chama a si mesmo, ele usa mais desse espaço para cópias adicionais de suas variáveis locais. Se esse processo continuar indefinidamente, eventualmente causará um erro de <xref:System.StackOverflowException>.
 
- **Efficiency**. You can almost always substitute a loop for recursion. A loop does not have the overhead of passing arguments, initializing additional storage, and returning values. Your performance can be much better without recursive calls.
+ **Eficiência**. Quase sempre é possível substituir um loop pela recursão. Um loop não tem a sobrecarga de passar argumentos, inicializar armazenamento adicional e retornar valores. Seu desempenho pode ser muito melhor sem chamadas recursivas.
 
- **Mutual Recursion**. You might observe very poor performance, or even an infinite loop, if two procedures call each other. Such a design presents the same problems as a single recursive procedure, but can be harder to detect and debug.
+ **Recursão mútua**. Você pode observar um desempenho muito ruim, ou até mesmo um loop infinito, se dois procedimentos chamarem uns aos outros. Esse tipo de design apresenta os mesmos problemas que um único procedimento Recursivo, mas pode ser mais difícil de detectar e depurar.
 
- **Calling with Parentheses**. When a `Function` procedure calls itself recursively, you must follow the procedure name with parentheses, even if there is no argument list. Otherwise, the function name is taken as representing the return value of the function.
+ **Chamada com parênteses**. Quando um procedimento de `Function` chama-se recursivamente, você deve seguir o nome do procedimento com parênteses, mesmo que não haja nenhuma lista de argumentos. Caso contrário, o nome da função será obtido como representando o valor de retorno da função.
 
- **Testing**. If you write a recursive procedure, you should test it very carefully to make sure it always meets some limiting condition. You should also ensure that you cannot run out of memory due to having too many recursive calls.
+ **Testando**. Se você escrever um procedimento Recursivo, deverá testá-lo com muito cuidado para garantir que ele sempre atenda a alguma condição de limitação. Você também deve garantir que não seja possível ficar sem memória devido a ter muitas chamadas recursivas.
 
 ## <a name="see-also"></a>Consulte também
 

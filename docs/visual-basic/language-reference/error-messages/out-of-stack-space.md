@@ -12,21 +12,21 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349190"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>Sem espaço na pilha (Visual Basic)
-The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program. Its limits have been exceeded.  
+A pilha é uma área de trabalho de memória que aumenta e diminui dinamicamente com as demandas de seu programa em execução. Seus limites foram excedidos.  
   
-## <a name="to-correct-this-error"></a>Para corrigir este erro  
+## <a name="to-correct-this-error"></a>Para corrigir esse erro  
   
-1. Check that procedures are not nested too deeply.  
+1. Verifique se os procedimentos não estão aninhados muito profundamente.  
   
-2. Make sure recursive procedures terminate properly.  
+2. Certifique-se de que os procedimentos recursivos sejam encerrados corretamente.  
   
-3. If local variables require more local variable space than is available, try declaring some variables at the module level. You can also declare all variables in the procedure static by preceding the `Property`, `Sub`, or `Function` keyword with `Static`. Or you can use the `Static` statement to declare individual static variables within procedures.  
+3. Se variáveis locais exigirem mais espaço de variável local do que o disponível, tente declarar algumas variáveis no nível do módulo. Você também pode declarar todas as variáveis no procedimento estático, precedendo a palavra-chave `Property`, `Sub`ou `Function` com `Static`. Ou você pode usar a instrução `Static` para declarar variáveis estáticas individuais dentro de procedimentos.  
   
-4. Redefine some of your fixed-length strings as variable-length strings, as fixed-length strings use more stack space than variable-length strings. You can also define the string at module level where it requires no stack space.  
+4. Redefina algumas das cadeias de caracteres de comprimento fixo como cadeias de caracteres de comprimento variável, pois as cadeias de caracteres de comprimento fixo usam mais espaço de pilha que as cadeias de caracteres de comprimento variável. Você também pode definir a cadeia de caracteres no nível do módulo, em que ele não requer espaço de pilha.  
   
-5. Check the number of nested `DoEvents` function calls, by using the `Calls` dialog box to view which procedures are active on the stack.  
+5. Verifique o número de chamadas de função `DoEvents` aninhadas, usando a caixa de diálogo `Calls` para exibir quais procedimentos estão ativos na pilha.  
   
-6. Make sure you did not cause an "event cascade" by triggering an event that calls an event procedure already on the stack. An event cascade is similar to an unterminated recursive procedure call, but it is less obvious, since the call is made by Visual Basic rather than an explicit call in the code. Use the `Calls` dialog box to view which procedures are active on the stack.  
+6. Verifique se você não causou uma "cascata de eventos" disparando um evento que chama um procedimento de evento já na pilha. Uma cascata de eventos é semelhante a uma chamada de procedimento Recursivo não finalizada, mas é menos óbvia, já que a chamada é feita por Visual Basic em vez de uma chamada explícita no código. Use a caixa de diálogo `Calls` para exibir quais procedimentos estão ativos na pilha.  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -12,14 +12,14 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349941"
 ---
 # <a name="arrays-summary-visual-basic"></a>Resumo de matrizes (Visual Basic)
-Visual Basic language keywords and run-time library members are organized by purpose and use.  
+As palavras-chave do idioma Visual Basic e os membros da biblioteca de tempo de execução são organizados por finalidade e uso.  
   
-|Ação|Elemento de linguagem|  
+|Action|Elemento Language|  
 |------------|----------------------|  
-|Verify an array.|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
-|Declare and initialize an array.|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [Private](../../../visual-basic/language-reference/modifiers/private.md), [Public](../../../visual-basic/language-reference/modifiers/public.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
-|Find the limits of an array.|<xref:Microsoft.VisualBasic.Information.LBound%2A>, <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
-|Reinitialize an array|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|Verifique uma matriz.|<xref:Microsoft.VisualBasic.Information.IsArray%2A>|  
+|Declare e inicialize uma matriz.|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md), [privado](../../../visual-basic/language-reference/modifiers/private.md), [público](../../../visual-basic/language-reference/modifiers/public.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
+|Localize os limites de uma matriz.|<xref:Microsoft.VisualBasic.Information.LBound%2A>, <xref:Microsoft.VisualBasic.Information.UBound%2A>|  
+|Reinicializar uma matriz|[Erase](../../../visual-basic/language-reference/statements/erase-statement.md), [ReDim](../../../visual-basic/language-reference/statements/redim-statement.md)|  
   
 ## <a name="see-also"></a>Consulte também
 

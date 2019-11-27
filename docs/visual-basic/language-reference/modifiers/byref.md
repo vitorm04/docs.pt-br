@@ -16,10 +16,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351600"
 ---
 # <a name="byref-visual-basic"></a>ByRef (Visual Basic)
-Specifies that an argument is passed in such a way that the called procedure can change the value of a variable underlying the argument in the calling code.  
+Especifica que um argumento é passado de tal forma que o procedimento chamado pode alterar o valor de uma variável subjacente ao argumento no código de chamada.  
   
 ## <a name="remarks"></a>Comentários  
- The `ByRef` modifier can be used in these contexts:  
+ O modificador de `ByRef` pode ser usado nesses contextos:  
   
  [Instrução Declare](../../../visual-basic/language-reference/statements/declare-statement.md)  
   

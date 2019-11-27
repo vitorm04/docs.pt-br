@@ -23,10 +23,10 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 > [!NOTE]
 > MageUI.exe não dá suporte ao elemento [compatibleFrameworks](/visualstudio/deployment/compatibleframeworks-element-clickonce-deployment) ao salvar um manifesto do aplicativo já assinado com um certificado usando MageUI.exe. Em vez disso, você deve usar [Mage.exe](mage-exe-manifest-generation-and-editing-tool.md).  
   
-## <a name="uielement-list"></a>Lista UIElement  
+## <a name="uielement-list"></a>Lista de UIElement  
  A tabela a seguir lista os itens de menu e da barra de ferramentas disponíveis.  
   
-|Comando|Menu|Atalho|Descrição|  
+|Command|Menu|Atalho|Descrição|  
 |-------------|----------|--------------|-----------------|  
 |**Manifesto do Aplicativo**|**Arquivo, Novo**||Cria um novo manifesto de aplicativo.|  
 |**Manifesto de Implantação**|**Arquivo, Novo**||Cria um novo manifesto de implantação.|  
@@ -36,7 +36,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |**Salvar Como**|**Arquivo**||Salva um arquivo em disco, permitindo para fornecer um novo nome de arquivo e/ou um local.|  
 |**Salvar Tudo**|**Arquivo**||Salva as alterações feitas em todos os arquivos abertos atualmente dentro de MageUI.exe.|  
 |**Preferências**|**Arquivo**||Abre a caixa de diálogo **Preferências**. Consulte a seguinte seção para obter mais informações.|  
-|**Exit**|**Arquivo**|ALT+F4|Fecha MageUI.exe.|  
+|**Sair**|**Arquivo**|ALT+F4|Fecha MageUI.exe.|  
 |**Recortar**|**Editarar**|CTRL+X|Remove o texto selecionado no momento do aplicativo e o move para a Área de Transferência do sistema.|  
 |**Copiar**|**Editarar**|CTRL+C|Copia o texto selecionado no momento para a Área de Transferência do sistema.|  
 |**Colar**|**Editarar**|CTRL+V|Cola o texto da Área de Transferência do sistema para o elemento de texto ativo no momento.|  
@@ -47,7 +47,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ## <a name="preferences-dialog-box"></a>Caixa de Diálogo Preferências  
  A caixa de diálogo **Preferências** contém os elementos a seguir.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Assinar ao salvar**|Solicita a assinatura de um arquivo sempre que você salva as modificações.|  
 |**Usar certificado de assinatura padrão**|Usa a chave inserida na caixa de texto **Arquivo de certificado** para assinar todos os arquivos. Isso elimina o prompt de assinatura que normalmente é exibido quando você salva um arquivo e **Assinar ao Salvar** é selecionado. Use o botão de reticências ( **…** ) próximo à caixa de texto **Arquivo de certificado** para selecionar um arquivo de chave.|  
@@ -56,9 +56,9 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ## <a name="signing-options-dialog-box"></a>Caixa de Diálogo Opções de Assinatura  
  A caixa de diálogo **Opções de Assinatura** é exibida quando você salva um manifesto ou uma licença de confiança pela primeira vez ou quando você altera um manifesto ou uma licença de confiança. Ela só será exibida se a opção **Assinar ao Salvar** na caixa de diálogo **Preferências** for selecionada. Você deve estar conectado à Internet ao assinar um manifesto que especifique um valor na caixa de texto **URI de Carimbo de Data/Hora**.  
   
- Essa caixa de diálogo contém os elementos a seguir.  
+ Esta caixa de diálogo contém os seguintes elementos.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Assinar com arquivo de certificado**|Assina o manifesto com um certificado digital armazenado no sistema de arquivos.|  
 |**Arquivo**|Fornece uma área para digitar o caminho para o arquivo .pfx que representa o certificado.|  
@@ -77,7 +77,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
  A guia **Manifesto do Aplicativo** contém as seguintes guias.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Nome**|Especifica informações de identificação sobre essa implantação.|  
 |**Descrição**|Especifica o publicador, o produto e as informações de suporte.|  
@@ -88,10 +88,10 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="name-tab"></a>Guia Nome  
  A guia **Nome** é exibida quando você primeiro cria ou abre um manifesto do aplicativo. Ela identifica exclusivamente a implantação e, opcionalmente, especifica uma plataforma de destino válida.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
-|**Nome**|Necessário. O nome do manifesto do aplicativo. Normalmente o mesmo que o nome do arquivo.|  
-|**Versão**|Necessário. O número de versão da implantação no formato *N.N.N.N*. Somente o primeiro número de build principal é necessário. Por exemplo, para a versão 1.0 de um aplicativo, os valores válidos incluiriam `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
+|**Nome**|Necessária. O nome do manifesto do aplicativo. Normalmente o mesmo que o nome do arquivo.|  
+|**Versão**|Necessária. O número de versão da implantação no formato *N.N.N.N*. Somente o primeiro número de build principal é necessário. Por exemplo, para a versão 1.0 de um aplicativo, os valores válidos incluiriam `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
 |**Processador**|Opcional. A arquitetura do computador no qual essa implantação pode ser executada. O padrão é `msil` ou Microsoft Intermediate Language, que é o formato padrão de todos os assemblies gerenciados. Altere este campo se você tiver pré-compilado os assemblies em seu aplicativo para uma arquitetura específica. Para obter mais informações sobre a pré-compilação, consulte [Ngen.exe (Gerador de Imagens Nativas)](ngen-exe-native-image-generator.md).|  
 |**Cultura**|Opcional. O código ISO de país e região composto por duas partes em que o aplicativo é executado. O padrão é `neutral`.|  
 |**Token de chave pública**|Opcional. A chave pública com a qual o manifesto do aplicativo foi assinado. Se esse for um manifesto novo ou não assinado, esse campo aparecerá como `Unsigned`.|  
@@ -99,7 +99,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="description-tab"></a>Guia Descrição  
  Essas informações geralmente são fornecidas no manifesto de implantação. Esses campos poderão ser modificados apenas se a caixa de seleção **Use Application Manifest Trust Information (Usar Informações de Confiança do Manifesto do Aplicativo)** estiver marcada na guia **Opções do Aplicativo**.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Publicador**|O nome da pessoa ou organização responsável pelo aplicativo. Esse valor é usado como o nome da pasta do menu Iniciar.|  
 |**Produto**|O nome completo do produto. Se você selecionou **Instalar Localmente** para o elemento **Tipo de Aplicativo** na guia **Opções de Implantação** do manifesto de implementação, esse nome será o que aparece no link do menu **Iniciar** e em **Adicionar ou Remover Programas** para esse aplicativo.|  
@@ -107,14 +107,14 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
   
 ### <a name="application-options-tab"></a>Guia Opções do Aplicativo  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Aplicativo de Navegador do Windows Presentation Foundation**|Especifica se este é um aplicativo WPF que é executado no navegador como um XBAP (aplicativo de navegador XAML).|  
 |**Use Application Manifest Trust Information (Usar Informações de Confiança do Manifesto do Aplicativo)**|Especifica se esse manifesto contém informações de confiança.|  
   
 ### <a name="files-tab"></a>Guia Arquivos  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Diretório de aplicativo**|O diretório no qual residem os arquivos do aplicativo. Use o botão de reticências ( **...** ) para selecionar o diretório.|  
 |**Popular**|Adiciona todos os arquivos no diretório e subdiretórios do aplicativo ao manifesto do aplicativo. Se MageUI.exe localizar um único arquivo executável no diretório, ele o marcará automaticamente como o Ponto de Entrada, que é o arquivo executado primeiro quando o aplicativo ClickOnce é inicializado no cliente.|  
@@ -126,7 +126,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="permissions-required-tab"></a>Guia Permissões Necessárias  
  Use a guia **Permissões Necessárias** se precisar conceder ao aplicativo mais acesso ao computador local do que é concedido por padrão. Para obter mais informações, consulte [Securing ClickOnce Applications](/visualstudio/deployment/securing-clickonce-applications) (Protegendo aplicativos ClickOnce).  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Permission set type (Tipo do conjunto de permissões)**|O conjunto de permissões mínimas exigido por esse aplicativo para ser executado no cliente. Para obter uma descrição desses conjuntos de permissões e quais permissões eles exigem ou não, confira [Conjuntos de permissões nomeadas](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100)).|  
 |**Detalhes**|O XML criado para o manifesto do aplicativo para representar o conjunto de permissões. A menos que tenha um bom entendimento do formato XML do manifesto do aplicativo, você não deve editar esse XML manualmente. Para obter mais informações, consulte [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest) (Manifesto do aplicativo ClickOnce).|  
@@ -134,7 +134,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="deployment-manifest-tab"></a>Guia Manifesto de Implantação  
  A guia **Manifesto de Implantação** contém as seguintes guias.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Nome**|Especifica informações de identificação sobre essa implantação.|  
 |**Descrição**|Especifica o publicador, o produto e as informações de suporte.|  
@@ -145,37 +145,37 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="name-tab"></a>Guia Nome  
  A guia **Nome** é exibida quando você primeiro cria ou abre um manifesto de implantação. Ela identifica exclusivamente a implantação e, opcionalmente, especifica uma plataforma de destino válida.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
-|**Nome**|Necessário. O nome do manifesto de implantação. Normalmente o mesmo que o nome do arquivo.|  
-|**Versão**|Necessário. O número de versão da implantação no formato *N.N.N.N*. Somente o primeiro número de build principal é necessário. Por exemplo, para a versão 1.0 de um aplicativo, os valores válidos incluiriam `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
+|**Nome**|Necessária. O nome do manifesto de implantação. Normalmente o mesmo que o nome do arquivo.|  
+|**Versão**|Necessária. O número de versão da implantação no formato *N.N.N.N*. Somente o primeiro número de build principal é necessário. Por exemplo, para a versão 1.0 de um aplicativo, os valores válidos incluiriam `1`, `1.0`, `1.0.0` e `1.0.0.0`.|  
 |**Processador**|Opcional. A arquitetura do computador no qual essa implantação pode ser executada. O padrão é `msil` ou Microsoft Intermediate Language, o formato padrão de todos os assemblies gerenciados. Altere este campo se você tiver compilado os assemblies em seu aplicativo para uma arquitetura específica.|  
 |**Cultura**|Opcional. O código ISO de país/região composto por duas partes em que o aplicativo é executado. O padrão é `neutral`.|  
 |**Token de chave pública**|Opcional. A chave pública com a qual o manifesto de implantação foi assinado. Se esse for um manifesto novo ou não assinado, esse campo aparecerá como `Unsigned`.|  
   
 ### <a name="description-tab"></a>Guia Descrição  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
-|**Publicador**|Necessário. O nome da pessoa ou organização responsável pelo aplicativo. Esse valor é usado como o nome da pasta do menu Iniciar.|  
-|**Produto**|Necessário. O nome completo do produto. Se você selecionou **Instalar Localmente** para o elemento **Tipo de Aplicativo** na guia **Opções de Implantação**, esse nome será o que aparece no link do menu **Iniciar** e em **Adicionar ou Remover Programas** para esse aplicativo.|  
+|**Publicador**|Necessária. O nome da pessoa ou organização responsável pelo aplicativo. Esse valor é usado como o nome da pasta do menu Iniciar.|  
+|**Produto**|Necessária. O nome completo do produto. Se você selecionou **Instalar Localmente** para o elemento **Tipo de Aplicativo** na guia **Opções de Implantação**, esse nome será o que aparece no link do menu **Iniciar** e em **Adicionar ou Remover Programas** para esse aplicativo.|  
 |**Local de Suporte**|Opcional. A URL na qual os clientes podem obter ajuda e suporte para o aplicativo.|  
   
 ### <a name="deployment-options-tab"></a>Guia Opções de Implantação  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Tipo de Aplicativo**|Opcional. Especifica se este aplicativo se instala no computador cliente (**Instalar Localmente**), é executado online (**Somente Online**) ou é um aplicativo do WPF que é executado no navegador (**Aplicativo de Navegador WPF**). O padrão é **Instalar Localmente**.|  
 |**Local Inicial**|Opcional. A URL da qual o aplicativo realmente deve ser iniciado. Útil ao implantar um aplicativo de um CD que deve se atualizar da Web.|  
 |**Include Start Location (ProviderURL) in the manifest (Incluir o Local Inicial (ProviderURL) no manifesto)**|Opcional. Especifica a URL que o ClickOnce examinará em busca de atualizações de aplicativo.|  
-|**Automatically run application after installing (Executar o aplicativo automaticamente após a instalação)**|Necessário. Especifica que o aplicativo ClickOnce deve ser executado imediatamente após a instalação inicial de uma URL. O padrão é a caixa de seleção estar marcada.|  
-|**Permitir que parâmetros de URL sejam passados para o aplicativo**|Necessário. Permite a transferência de dados do parâmetro para o aplicativo ClickOnce por meio de uma cadeia de caracteres de consulta acrescentada à URL do manifesto de implantação. O padrão é a caixa de seleção estar desmarcada.|  
-|**Usar a extensão de arquivo .deploy**|Necessário. Quando selecionada, todos os arquivos no manifesto do aplicativo devem ter a extensão .deploy. O padrão é a caixa de seleção estar desmarcada.|  
+|**Automatically run application after installing (Executar o aplicativo automaticamente após a instalação)**|Necessária. Especifica que o aplicativo ClickOnce deve ser executado imediatamente após a instalação inicial de uma URL. O padrão é a caixa de seleção estar marcada.|  
+|**Permitir que parâmetros de URL sejam passados para o aplicativo**|Necessária. Permite a transferência de dados do parâmetro para o aplicativo ClickOnce por meio de uma cadeia de caracteres de consulta acrescentada à URL do manifesto de implantação. O padrão é a caixa de seleção estar desmarcada.|  
+|**Usar a extensão de arquivo .deploy**|Necessária. Quando selecionada, todos os arquivos no manifesto do aplicativo devem ter a extensão .deploy. O padrão é a caixa de seleção estar desmarcada.|  
   
 ### <a name="update-options-tab"></a>Guia Opções de Atualização  
  A guia **Opções de Atualização** contém as opções mencionadas aqui apenas quando a caixa de seleção **Tipo de Aplicativo** na guia **Nome** está definida como **Instalar Localmente**.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**This application should check for updates (Este aplicativo deve procurar atualizações)**|Especifica se o ClickOnce deve verificar se há atualizações de aplicativo. Se essa caixa de seleção não estiver selecionada, o aplicativo não verificará se há atualizações, a menos que você o atualize programaticamente usando as APIs no namespace <xref:System.Deployment.Application>.|  
 |**Escolha quando o aplicativo deve verificar se há atualizações**|Fornece duas opções para verificações de atualização:<br /><br /> -   **Antes do aplicativo ser inicializado**. A verificação de atualização é executada antes da execução do aplicativo.<br />-   **Depois de o aplicativo ser inicializado**. A verificação de atualização começa quando o formulário principal do aplicativo é inicializado e será executada na próxima vez que o aplicativo for iniciado.|  
@@ -186,7 +186,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ### <a name="application-reference-tab"></a>Guia Referência do Aplicativo  
  A guia **Referência do Aplicativo** contém os mesmos campos que a guia **Nome** descrita anteriormente neste tópico. A única exceção é o campo a seguir.  
   
-|Elemento da Interface do Usuário|Descrição|  
+|Elemento da interface|Descrição|  
 |----------------|-----------------|  
 |**Select Manifest (Selecionar Manifesto)**|Permite que você escolha o manifesto do aplicativo. Todos os outros campos nesta página serão populados quando você escolher um manifesto do aplicativo.|  
   

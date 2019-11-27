@@ -17,7 +17,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351148"
 ---
 # <a name="implements-statement"></a>Instrução Implements
-Specifies one or more interfaces, or interface members, that must be implemented in the class or structure definition in which it appears.  
+Especifica uma ou mais interfaces, ou membros de interface, que devem ser implementados na definição de classe ou estrutura na qual ele aparece.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -29,29 +29,29 @@ Implements interfacename.interfacemember [, ...]
   
 ## <a name="parts"></a>Partes  
  `interfacename`  
- Necessário. An interface whose properties, procedures, and events are to be implemented by corresponding members in the class or structure.  
+ Necessária. Uma interface cujas propriedades, procedimentos e eventos devem ser implementados por membros correspondentes na classe ou estrutura.  
   
  `interfacemember`  
- Necessário. The member of an interface that is being implemented.  
+ Necessária. O membro de uma interface que está sendo implementada.  
   
 ## <a name="remarks"></a>Comentários  
- An interface is a collection of prototypes representing the members (properties, procedures, and events) the interface encapsulates. Interfaces contain only the declarations for members; classes and structures implement these members. Para obter mais informações, consulte [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Uma interface é uma coleção de protótipos que representa os membros (Propriedades, procedimentos e eventos) que a interface encapsula. As interfaces contêm apenas as declarações para membros; classes e estruturas implementam esses membros. Para obter mais informações, consulte [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- The `Implements` statement must immediately follow the `Class` or `Structure` statement.  
+ A instrução `Implements` deve seguir imediatamente a instrução `Class` ou `Structure`.  
   
- When you implement an interface, you must implement all the members declared in the interface. Omitting any member is considered to be a syntax error. To implement an individual member, you specify the [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) keyword (which is separate from the `Implements` statement) when you declare the member in the class or structure. Para obter mais informações, consulte [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
+ Ao implementar uma interface, você deve implementar todos os membros declarados na interface. A omissão de qualquer membro é considerada um erro de sintaxe. Para implementar um membro individual, você especifica a palavra-chave [Implements](../../../visual-basic/language-reference/statements/implements-clause.md) (que é separada da instrução `Implements`) quando você declara o membro na classe ou estrutura. Para obter mais informações, consulte [Interfaces](../../../visual-basic/programming-guide/language-features/interfaces/index.md).  
   
- Classes can use [Private](../../../visual-basic/language-reference/modifiers/private.md) implementations of properties and procedures, but these members are accessible only by casting an instance of the implementing class into a variable declared to be of the type of the interface.  
+ As classes podem usar implementações [privadas](../../../visual-basic/language-reference/modifiers/private.md) de propriedades e procedimentos, mas esses membros são acessíveis somente por meio da conversão de uma instância da classe de implementação em uma variável declarada para ser do tipo da interface.  
   
 ## <a name="example"></a>Exemplo  
- The following example shows how to use the `Implements` statement to implement members of an interface. It defines an interface named `ICustomerInfo` with an event, a property, and a procedure. The class `customerInfo` implements all the members defined in the interface.  
+ O exemplo a seguir mostra como usar a instrução `Implements` para implementar membros de uma interface. Ele define uma interface chamada `ICustomerInfo` com um evento, uma propriedade e um procedimento. A classe `customerInfo` implementa todos os membros definidos na interface.  
   
  [!code-vb[VbVbalrStatements#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#33)]  
   
- Note that the class `customerInfo` uses the `Implements` statement on a separate source code line to indicate that the class implements all the members of the `ICustomerInfo` interface. Then each member in the class uses the `Implements` keyword as part of its member declaration to indicate that it implements that interface member.  
+ Observe que a classe `customerInfo` usa a instrução `Implements` em uma linha de código-fonte separada para indicar que a classe implementa todos os membros da interface `ICustomerInfo`. Em seguida, cada membro na classe usa a palavra-chave `Implements` como parte de sua declaração de membro para indicar que ela implementa esse membro de interface.  
   
 ## <a name="example"></a>Exemplo  
- The following two procedures show how you could use the interface implemented in the preceding example. To test the implementation, add these procedures to your project and call the `testImplements` procedure.  
+ Os dois procedimentos a seguir mostram como você pode usar a interface implementada no exemplo anterior. Para testar a implementação, adicione esses procedimentos ao seu projeto e chame o procedimento de `testImplements`.  
   
  [!code-vb[VbVbalrStatements#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#34)]  
   

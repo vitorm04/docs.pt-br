@@ -22,24 +22,24 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74447555"
 ---
 # <a name="imethodmalloc-interface"></a>Interface IMethodMalloc
-Provides a method to allocate memory for a new Microsoft intermediate language (MSIL) function body.  
+Fornece um método para alocar memória para um novo corpo de função da MSIL (Microsoft Intermediate Language).  
   
 > [!NOTE]
-> The `IMethodMalloc` interface is a simple memory allocator. It allows you to allocate memory, but not to free it.  
+> A interface `IMethodMalloc` é um alocador de memória simples. Ele permite que você aloque memória, mas não a libere.  
   
-## <a name="methods"></a>Métodos  
+## <a name="methods"></a>{1&gt;Métodos&lt;1}  
   
 |Método|Descrição|  
 |------------|-----------------|  
-|[Método Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Attempts to allocate a specified amount of memory for a new MSIL function body.|  
+|[Método Alloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md)|Tenta alocar uma quantidade especificada de memória para um novo corpo de função MSIL.|  
   
 ## <a name="remarks"></a>Comentários  
- Each allocator is module-specific and ensures that the function body will be at a positive offset from the base of the module. Memory above the base of a module can be precious, so the allocator should be used to allocate memory only for a function body.  
+ Cada alocador é específico do módulo e garante que o corpo da função estará em um deslocamento positivo da base do módulo. A memória acima da base de um módulo pode ser preciosa, portanto, o alocador deve ser usado para alocar memória apenas para um corpo de função.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

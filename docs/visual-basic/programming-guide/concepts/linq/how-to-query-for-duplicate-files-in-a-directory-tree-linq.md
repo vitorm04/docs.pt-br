@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347699"
 ---
-# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>How to: Query for Duplicate Files in a Directory Tree (LINQ) (Visual Basic)
+# <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>Como consultar arquivos duplicados em uma árvore de diretório (LINQ) (Visual Basic)
 Às vezes, arquivos que têm o mesmo nome podem ser localizados em mais de uma pasta. Por exemplo, sob a pasta de instalação do Visual Studio, várias pastas têm um arquivo readme.htm. Este exemplo mostra como consultar esses nomes de arquivos duplicados sob uma pasta raiz especificada. O segundo exemplo mostra como consultar arquivos cujo tamanho e tempos de criação também correspondem.  
   
 ## <a name="example"></a>Exemplo  
@@ -100,8 +100,8 @@ End Module
   
  A primeira consulta usa uma chave simples para determinar uma correspondência. Ela localiza arquivos que têm o mesmo nome, mas cujo conteúdo pode ser diferente. A segunda consulta usa uma chave composta para comparar em relação a três propriedades do objeto <xref:System.IO.FileInfo>. É muito mais provável que essa consulta localize arquivos que têm o mesmo nome e conteúdo semelhante ou idêntico.  
   
-## <a name="compiling-the-code"></a>Compilando o código  
-Create a VB.NET console application project, with an `Imports` statement for the System.Linq namespace.
+## <a name="compiling-the-code"></a>Compilando o Código  
+Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
   
 ## <a name="see-also"></a>Consulte também
 

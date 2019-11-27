@@ -18,7 +18,7 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350426"
 ---
 # <a name="order-by-clause-visual-basic"></a>Cláusula Order By (Visual Basic)
-Specifies the sort order for a query result.  
+Especifica a ordem de classificação para um resultado de consulta.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -28,25 +28,25 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="parts"></a>Partes  
  `orderExp1`  
- Necessário. One or more fields from the current query result that identify how to order the returned values. The field names must be separated by commas (,). You can identify each field as sorted in ascending or descending order by using the `Ascending` or `Descending` keywords. If no `Ascending` or `Descending` keyword is specified, the default sort order is ascending. The sort order fields are given precedence from left to right.  
+ Necessária. Um ou mais campos do resultado da consulta atual que identificam como ordenar os valores retornados. Os nomes de campo devem ser separados por vírgulas (,). Você pode identificar cada campo como classificado em ordem crescente ou decrescente usando as palavras-chave `Ascending` ou `Descending`. Se nenhuma palavra-chave `Ascending` ou `Descending` for especificada, a ordem de classificação padrão será ascendente. Os campos de ordem de classificação recebem precedência da esquerda para a direita.  
   
 ## <a name="remarks"></a>Comentários  
- You can use the `Order By` clause to sort the results of a query. The `Order By` clause can only sort a result based on the range variable for the current scope. For example, the `Select` clause introduces a new scope in a query expression with new iteration variables for that scope. Range variables defined before a `Select` clause in a query are not available after the `Select` clause. Therefore, if you want to order your results by a field that is not available in the `Select` clause, you must put the `Order By` clause before the `Select` clause. One example of when you would have to do this is when you want to sort your query by fields that are not returned as part of the result.  
+ Você pode usar a cláusula `Order By` para classificar os resultados de uma consulta. A cláusula `Order By` só pode classificar um resultado com base na variável de intervalo para o escopo atual. Por exemplo, a cláusula `Select` introduz um novo escopo em uma expressão de consulta com novas variáveis de iteração para esse escopo. Variáveis de intervalo definidas antes de uma cláusula `Select` em uma consulta não estão disponíveis após a cláusula `Select`. Portanto, se você quiser ordenar os resultados por um campo que não está disponível na cláusula `Select`, deverá colocar a cláusula `Order By` antes da cláusula `Select`. Um exemplo de quando você precisa fazer isso é quando deseja classificar sua consulta por campos que não são retornados como parte do resultado.  
   
- Ascending and descending order for a field is determined by the implementation of the <xref:System.IComparable> interface for the data type of the field. If the data type does not implement the <xref:System.IComparable> interface, the sort order is ignored.  
+ A ordem crescente e decrescente de um campo é determinada pela implementação da interface <xref:System.IComparable> para o tipo de dados do campo. Se o tipo de dados não implementar a interface <xref:System.IComparable>, a ordem de classificação será ignorada.  
   
 ## <a name="example"></a>Exemplo  
- The following query expression uses a `From` clause to declare a range variable `book` for the `books` collection. The `Order By` clause sorts the query result by price in ascending order (the default). Books with the same price are sorted by title in ascending order. The `Select` clause selects the `Title` and `Price` properties as the values returned by the query.  
+ A expressão de consulta a seguir usa uma cláusula `From` para declarar uma variável de intervalo `book` para a coleção de `books`. A cláusula `Order By` classifica o resultado da consulta por preço em ordem crescente (o padrão). Os livros com o mesmo preço são classificados por título em ordem crescente. A cláusula `Select` seleciona as propriedades `Title` e `Price` como os valores retornados pela consulta.  
   
  [!code-vb[VbSimpleQuerySamples#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#24)]  
   
 ## <a name="example"></a>Exemplo  
- The following query expression uses the `Order By` clause to sort the query result by price in descending order. Books with the same price are sorted by title in ascending order.  
+ A expressão de consulta a seguir usa a cláusula `Order By` para classificar o resultado da consulta por preço em ordem decrescente. Os livros com o mesmo preço são classificados por título em ordem crescente.  
   
  [!code-vb[VbSimpleQuerySamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#25)]  
   
 ## <a name="example"></a>Exemplo  
- The following query expression uses a `Select` clause to select the book title, price, publish date, and author. It then populates the `Title`, `Price`, `PublishDate`, and `Author` fields of the range variable for the new scope. The `Order By` clause orders the new range variable by author name, book title, and then price. Each column is sorted in the default order (ascending).  
+ A expressão de consulta a seguir usa uma cláusula `Select` para selecionar o título do livro, o preço, a data de publicação e o autor. Em seguida, ele preenche os campos `Title`, `Price`, `PublishDate`e `Author` da variável de intervalo para o novo escopo. A cláusula `Order By` ordena a nova variável de intervalo pelo nome do autor, pelo título do livro e pelo preço. Cada coluna é classificada na ordem padrão (em ordem crescente).  
   
  [!code-vb[VbSimpleQuerySamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#26)]  
   

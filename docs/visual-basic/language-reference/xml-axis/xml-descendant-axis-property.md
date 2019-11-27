@@ -19,7 +19,7 @@ ms.locfileid: "74349442"
 ---
 # <a name="xml-descendant-axis-property-visual-basic"></a>Propriedade de eixo descendente XML (Visual Basic)
 
-Provides access to the descendants of the following: an <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
+Fornece acesso aos descendentes dos seguintes: um objeto <xref:System.Xml.Linq.XElement>, um objeto <xref:System.Xml.Linq.XDocument>, uma coleção de objetos <xref:System.Xml.Linq.XElement> ou uma coleção de objetos <xref:System.Xml.Linq.XDocument>.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -29,18 +29,18 @@ object...<descendant>
 
 ## <a name="parts"></a>Partes
 
-`object` Necessário. An <xref:System.Xml.Linq.XElement> object, an <xref:System.Xml.Linq.XDocument> object, a collection of <xref:System.Xml.Linq.XElement> objects, or a collection of <xref:System.Xml.Linq.XDocument> objects.
+`object` Necessário. Um objeto <xref:System.Xml.Linq.XElement>, um objeto <xref:System.Xml.Linq.XDocument>, uma coleção de objetos <xref:System.Xml.Linq.XElement> ou uma coleção de objetos <xref:System.Xml.Linq.XDocument>.
 
-`...<` Necessário. Denotes the start of a descendant axis property.
+`...<` Necessário. Denota o início de uma propriedade de eixo descendente.
 
-`descendant` Necessário. Name of the descendant nodes to access, of the form [`prefix:]name`.
+`descendant` Necessário. Nome dos nós descendentes a serem acessados, no formato [`prefix:]name`.
 
 |Parte|Descrição|
 |----------|-----------------|
-|`prefix`|Opcional. XML namespace prefix for the descendant node. Must be a global XML namespace that is defined by using an `Imports` statement.|
-|`name`|Necessário. Local name of the descendant node. See [Names of Declared XML Elements and Attributes](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
+|`prefix`|Opcional. Prefixo do namespace XML para o nó descendente. Deve ser um namespace XML global que é definido usando uma instrução `Imports`.|
+|`name`|Necessária. Nome local do nó descendente. Consulte [nomes de elementos e atributos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|
 
-`>` Necessário. Denotes the end of a descendant axis property.
+`>` Necessário. Denota o final de uma propriedade de eixo descendente.
 
 ## <a name="return-value"></a>Valor retornado
 
@@ -48,21 +48,21 @@ Uma coleção de objetos <xref:System.Xml.Linq.XElement> .
 
 ## <a name="remarks"></a>Comentários
 
-You can use an XML descendant axis property to access descendant nodes by name from an <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> object, or from a collection of <xref:System.Xml.Linq.XElement> or <xref:System.Xml.Linq.XDocument> objects. Use the XML `Value` property to access the value of the first descendant node in the returned collection. For more information, see [XML Value Property](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
+Você pode usar uma propriedade de eixo descendente XML para acessar nós descendentes por nome de um <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument> objeto ou de uma coleção de objetos <xref:System.Xml.Linq.XElement> ou <xref:System.Xml.Linq.XDocument>. Use a propriedade XML `Value` para acessar o valor do primeiro nó descendente na coleção retornada. Para obter mais informações, consulte [propriedade de valor XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).
 
-The Visual Basic compiler converts descendant axis properties into calls to the <xref:System.Xml.Linq.XContainer.Descendants%2A> method.
+O compilador Visual Basic converte Propriedades do eixo descendente em chamadas para o método <xref:System.Xml.Linq.XContainer.Descendants%2A>.
 
-## <a name="xml-namespaces"></a>XML Namespaces
+## <a name="xml-namespaces"></a>Namespaces XML
 
-The name in a descendant axis property can use only XML namespaces declared globally with the `Imports` statement. It cannot use XML namespaces declared locally within XML element literals. For more information, see [Imports Statement (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
+O nome em uma propriedade de eixo descendente pode usar somente namespaces XML declarados globalmente com a instrução `Imports`. Ele não pode usar namespaces XML declarados localmente em literais de elemento XML. Para obter mais informações, consulte [instrução Imports (namespace XML)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).
 
 ## <a name="example"></a>Exemplo
 
-The following example shows how to access the value of the first descendant node named `name` and the values of all descendant nodes named `phone` from the `contacts` object.
+O exemplo a seguir mostra como acessar o valor do primeiro nó descendente chamado `name` e os valores de todos os nós descendentes chamados `phone` do objeto `contacts`.
 
 [!code-vb[VbXMLSamples#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples11.vb#25)]
 
-This code displays the following text:
+Esse código exibe o seguinte texto:
 
 `Name: Patrick Hines`
 
@@ -70,11 +70,11 @@ This code displays the following text:
 
 ## <a name="example"></a>Exemplo
 
-The following example declares `ns` as an XML namespace prefix. It then uses the prefix of the namespace to create an XML literal and access the value of the first child node with the qualified name `ns:name`.
+O exemplo a seguir declara `ns` como um prefixo de namespace XML. Em seguida, ele usa o prefixo do namespace para criar um literal XML e acessar o valor do primeiro nó filho com o nome qualificado `ns:name`.
 
 [!code-vb[VbXMLSamples#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples12.vb#26)]
 
-This code displays the following text:
+Esse código exibe o seguinte texto:
 
 `Name: Patrick Hines`
 

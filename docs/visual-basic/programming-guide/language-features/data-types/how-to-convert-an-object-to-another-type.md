@@ -1,5 +1,5 @@
 ---
-title: 'How to: Convert an Object to Another Type'
+title: Como converter um objeto em outro tipo
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
@@ -12,10 +12,10 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350066"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>Como converter um objeto em outro tipo no Visual Basic
-You convert an `Object` variable to another data type by using a conversion keyword such as [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md).  
+Você converte uma variável `Object` para outro tipo de dados usando uma palavra-chave de conversão, como a [função CType](../../../../visual-basic/language-reference/functions/ctype-function.md).  
   
 ## <a name="example"></a>Exemplo  
- The following example converts an `Object` variable to an `Integer` and a `String`.  
+ O exemplo a seguir converte uma variável `Object` em um `Integer` e um `String`.  
   
 ```vb  
 Public Sub objectConversion(ByVal anObject As Object)  
@@ -26,17 +26,17 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- If you know that the contents of an `Object` variable are of a particular data type, it is better to convert the variable to that data type. If you continue to use the `Object` variable, you incur either *boxing* and *unboxing* (for a value type) or *late binding* (for a reference type). These operations all take extra execution time and make your performance slower.  
+ Se você souber que o conteúdo de uma variável de `Object` é de um tipo de dados específico, é melhor converter a variável para esse tipo de dados. Se você continuar usando a variável `Object`, você incorrerá em *Boxing* e *unboxing* (para um tipo de valor) ou *associação tardia* (para um tipo de referência). Todas essas operações têm tempo de execução extra e tornam o desempenho mais lento.  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- A reference to the <xref:System?displayProperty=nameWithType> namespace.  
+- Uma referência ao namespace <xref:System?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>Consulte também
 
 - <xref:System.Object>
-- [Type Conversions in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Conversões de tipo no Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Conversões de Widening e Narrowing](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [Conversões Implícitas e Explícitas](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [Conversões entre Cadeias de Caracteres e Outros Tipos](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)

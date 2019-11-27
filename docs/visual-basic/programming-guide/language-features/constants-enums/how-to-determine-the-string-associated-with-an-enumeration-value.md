@@ -14,11 +14,11 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351141"
 ---
 # <a name="how-to-determine-the-string-associated-with-an-enumeration-value-visual-basic"></a>Como determinar a cadeia de caracteres associada a um valor de enumeração (Visual Basic)
-The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods allow you to determine the strings and values associated with enumeration members.  
+Os métodos <xref:System.Enum.GetValues%2A> e <xref:System.Enum.GetNames%2A> permitem que você determine as cadeias de caracteres e os valores associados aos membros da enumeração.  
   
-### <a name="to-determine-the-string-associated-with-an-enumeration"></a>To determine the string associated with an enumeration  
+### <a name="to-determine-the-string-associated-with-an-enumeration"></a>Para determinar a cadeia de caracteres associada a uma enumeração  
   
-- Use the <xref:System.Enum.GetNames%2A> method to retrieve the strings associated with the enumeration members. This example declares an enumeration, `flavorEnum`, then uses the <xref:System.Enum.GetNames%2A> method to display the strings associated with each member.  
+- Use o método <xref:System.Enum.GetNames%2A> para recuperar as cadeias de caracteres associadas aos membros da enumeração. Este exemplo declara uma enumeração, `flavorEnum`, em seguida, usa o método <xref:System.Enum.GetNames%2A> para exibir as cadeias de caracteres associadas a cada membro.  
   
      [!code-vb[VbEnumsTask#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#2)]  
   
@@ -27,9 +27,9 @@ The <xref:System.Enum.GetValues%2A> and <xref:System.Enum.GetNames%2A> methods a
 - <xref:System.Enum.GetValues%2A>
 - <xref:System.Enum.GetNames%2A>
 - <xref:System.Enum>
-- [How to: Declare an Enumeration](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
+- [Como declarar uma enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [Como fazer referência a um membro de enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [Enumerações e Qualificação de Nome](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [How to: Iterate Through An Enumeration in Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
+- [Como: iterar por meio de uma enumeração no Visual Basic](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
 - [Quando Usar uma Enumeração](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [Instrução Enum](../../../../visual-basic/language-reference/statements/enum-statement.md)

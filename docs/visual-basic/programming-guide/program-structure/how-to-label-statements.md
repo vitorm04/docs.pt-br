@@ -16,22 +16,22 @@ ms.locfileid: "74347377"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>Como rotular instruções (Visual Basic)
 
-Statement blocks are made up of lines of code delimited by colons. Lines of code preceded by an identifying string or integer are said to be *labeled*. Statement labels are used to mark a line of code to identify it for use with statements such as `On Error Goto`.
+Os blocos de instrução são compostos por linhas de código delimitadas por dois-pontos. As linhas de código precedidas por uma cadeia de caracteres de identificação ou um número inteiro são consideradas *rotuladas*. Os rótulos de instrução são usados para marcar uma linha de código para identificá-lo para uso com instruções como `On Error Goto`.
 
-Labels may be either valid Visual Basic identifiers—such as those that identify programming elements—or integer literals. A label must appear at the beginning of a line of source code and must be followed by a colon, regardless of whether it is followed by a statement on the same line.
+Os rótulos podem ser identificadores de Visual Basic válidos — como aqueles que identificam elementos de programação — ou literais inteiros. Um rótulo deve aparecer no início de uma linha de código-fonte e deve ser seguido por dois-pontos, independentemente de ser seguido por uma instrução na mesma linha.
 
-The compiler identifies labels by checking whether the beginning of the line matches any already-defined identifier. If it does not, the compiler assumes it is a label.
+O compilador identifica os rótulos verificando se o início da linha corresponde a qualquer identificador já definido. Caso contrário, o compilador pressupõe que ele é um rótulo.
 
-Labels have their own declaration space and do not interfere with other identifiers. A label's scope is the body of the method. Label declaration takes precedence in any ambiguous situation.
+Os rótulos têm seu próprio espaço de declaração e não interferem em outros identificadores. O escopo de um rótulo é o corpo do método. A declaração de rótulo tem precedência em qualquer situação ambígua.
 
 > [!NOTE]
-> Labels can be used only on executable statements inside methods.
+> Os rótulos só podem ser usados em instruções Executáveis dentro de métodos.
 
-## <a name="to-label-a-line-of-code"></a>To label a line of code
+## <a name="to-label-a-line-of-code"></a>Para rotular uma linha de código
 
-Place an identifier, followed by a colon, at the beginning of the line of source code.
+Coloque um identificador, seguido por dois-pontos, no início da linha de código-fonte.
 
-For example, the following lines of code are labeled with `Jump` and `120`, respectively:
+Por exemplo, as linhas de código a seguir são rotuladas com `Jump` e `120`, respectivamente:
 
 [!code-vb[VbVbalrStatements#708](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#708)]
 

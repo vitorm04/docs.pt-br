@@ -9,7 +9,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350151"
 ---
-# <a name="creating-custom-attributes-visual-basic"></a>Creating Custom Attributes (Visual Basic)
+# <a name="creating-custom-attributes-visual-basic"></a>Criando atributos personalizados (Visual Basic)
 
 Você pode criar seus próprios atributos personalizados definindo uma classe de atributos, uma classe que deriva direta ou indiretamente de <xref:System.Attribute>, o que faz com que a identificação das definições de atributo nos metadados seja rápida e fácil. Suponha que você queira marcar tipos com o nome do programador que escreveu o tipo. Você pode definir uma classe de atributos `Author` personalizada:
 

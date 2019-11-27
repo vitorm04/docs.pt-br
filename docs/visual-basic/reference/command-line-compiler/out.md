@@ -22,23 +22,23 @@ Especifica o nome do arquivo de saída.
 -out:filename  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumentos  
   
 |Termo|Definição|  
 |---|---|  
-|`filename`|Necessário. The name of the output file the compiler creates. If the file name contains a space, enclose the name in quotation marks (" ").|  
+|`filename`|Necessária. O nome do arquivo de saída criado pelo compilador. Se o nome do arquivo contiver um espaço, coloque o nome entre aspas ("").|  
   
 ## <a name="remarks"></a>Comentários  
- Specify the full name and extension of the file to create. If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.  
+ Especifique o nome completo e a extensão do arquivo a ser criado. Se você não fizer isso, o arquivo. exe usará o nome do arquivo de código-fonte que contém o procedimento `Sub Main`, e o arquivo. dll usará o nome do primeiro arquivo de código-fonte.  
   
- If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.  
+ Se você especificar um nome de arquivo sem uma extensão. exe ou. dll, o compilador adicionará automaticamente a extensão para você, dependendo do valor especificado para a opção de compilador `-target`.  
   
-|To set -out in the Visual Studio integrated development environment|  
+|Para definir no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Have a project selected in **Solution Explorer**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Click the **Application** tab.<br />3.  Modify the value in the **Assembly Name** box.|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2. Clique na guia **aplicativo** .<br />3. modifique o valor na caixa **nome do assembly** .|  
   
 ## <a name="example"></a>Exemplo  
- The following code compiles `T2.vb` and creates output file `T2.exe`.  
+ O código a seguir compila `T2.vb` e cria `T2.exe`de arquivo de saída.  
   
 ```console
 vbc t2.vb -out:t3.exe  
@@ -47,5 +47,5 @@ vbc t2.vb -out:t3.exe
 ## <a name="see-also"></a>Consulte também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [-Target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [Linhas de Comando de Compilação de Exemplo](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

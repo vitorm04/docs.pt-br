@@ -23,7 +23,7 @@ ms.lasthandoff: 11/23/2019
 ms.locfileid: "74439520"
 ---
 # <a name="icorprofilercallback3initializeforattach-method"></a>Método ICorProfilerCallback3::InitializeForAttach
-Called by the common language runtime (CLR) to give the profiler an opportunity to initialize its state after an attach operation.  
+Chamado pelo Common Language Runtime (CLR) para dar ao criador de perfil uma oportunidade de inicializar seu estado após uma operação de anexação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,21 +36,21 @@ HRESULT InitializeForAttach(
   
 ## <a name="parameters"></a>Parâmetros  
  `pCorProfilerInfoUnk`  
- [in] An interface pointer for the `ICorProfilerInfo*` interface.  
+ no Um ponteiro de interface para a interface `ICorProfilerInfo*`.  
   
  `pvClientData`  
- [in] A pointer to the data passed to the [IClrProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) method in its `pvClientData` parameter. If this parameter is null, `cbClientData` will be 0 (zero). The CLR frees this memory when it returns from `InitializeForAttach`.  
+ no Um ponteiro para os dados passados para o método [ICLRProfiling:: AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) em seu parâmetro `pvClientData`. Se esse parâmetro for nulo, `cbClientData` será 0 (zero). O CLR libera essa memória quando ela retorna da `InitializeForAttach`.  
   
  `cbClientData`  
- [in] The size, in bytes, of the data that `pvClientData` points to.  
+ no O tamanho, em bytes, dos dados aos quais `pvClientData` aponta.  
   
 ## <a name="remarks"></a>Comentários  
- The CLR calls `InitializeForAttach` to give the profiler an opportunity to request callbacks.  
+ O CLR chama `InitializeForAttach` para dar ao criador de perfil uma oportunidade de solicitar retornos de chamada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

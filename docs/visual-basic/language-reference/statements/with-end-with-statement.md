@@ -38,9 +38,9 @@ End With
 
 |Termo|Definição|
 |---|---|
-|`objectExpression`|Necessário. Uma expressão que avalia como um objeto. A expressão pode ser arbitrariamente complexa e é avaliada apenas uma vez. A expressão pode ser avaliada como qualquer tipo de dados, inclusive tipos elementares.|
+|`objectExpression`|Necessária. Uma expressão que avalia como um objeto. A expressão pode ser arbitrariamente complexa e é avaliada apenas uma vez. A expressão pode ser avaliada como qualquer tipo de dados, inclusive tipos elementares.|
 |`statements`|Opcional. Uma ou mais instruções entre `With` e `End With` que podem fazer referência a membros de um objeto que é gerado pela avaliação de `objectExpression`.|
-|`End With`|Necessário. Finaliza a definição do bloco `With`.|
+|`End With`|Necessária. Finaliza a definição do bloco `With`.|
 
 ## <a name="remarks"></a>Comentários
 
@@ -64,10 +64,10 @@ Você pode colocar uma instrução `With...End With` dentro de outra. As instru�
 
 Você não pode ramificar em uma instrução `With` de fora do bloco.
 
-A menos que o bloco contenha um loop, as instruções são executadas somente uma vez. Você pode aninhar diferentes tipos de estruturas de controle. For more information, see [Nested Control Structures](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
+A menos que o bloco contenha um loop, as instruções são executadas somente uma vez. Você pode aninhar diferentes tipos de estruturas de controle. Para obter mais informações, consulte [estruturas de controle aninhado](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md).
 
 > [!NOTE]
-> Você também pode usar a palavra-chave `With` em inicializadores de objetos. For more information and examples, see [Object Initializers: Named and Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) and [Anonymous Types](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+> Você também pode usar a palavra-chave `With` em inicializadores de objetos. Para obter mais informações e exemplos, consulte [inicializadores de objeto: tipos nomeados e anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md) e [tipos anônimos](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 >
 > Se você estiver usando um bloco `With` somente para inicializar as propriedades ou os campos de um objeto que acabou de instanciar, considere usar um inicializador do objeto como alternativa.
 

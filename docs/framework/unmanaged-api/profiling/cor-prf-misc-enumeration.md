@@ -36,16 +36,16 @@ typedef enum {
   
 ## <a name="members"></a>Membros  
   
-|Membro|Descrição|  
+|{1&gt;Membro&lt;1}|Descrição|  
 |------------|-----------------|  
-|`PROFILER_PARENT_UNKNOWN`|The default identifier used by [ICorProfilerInfo::GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) for a module that has not yet been attached to an assembly.|  
-|`PROFILER_GLOBAL_CLASS`|The default class identifier for global constants that do not belong to a class.|  
-|`PROFILER_GLOBAL_MODULE`|The default module identifier for global objects that do not belong to a module.|  
+|`PROFILER_PARENT_UNKNOWN`|O identificador padrão usado por [ICorProfilerInfo:: GetModuleInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmoduleinfo-method.md) para um módulo que ainda não foi anexado a um assembly.|  
+|`PROFILER_GLOBAL_CLASS`|O identificador de classe padrão para constantes globais que não pertencem a uma classe.|  
+|`PROFILER_GLOBAL_MODULE`|O identificador de módulo padrão para objetos globais que não pertencem a um módulo.|  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
- **Header:** CorProf.idl, CorProf.h  
+ **Cabeçalho:** CorProf. idl, CorProf. h  
   
  **Biblioteca:** CorGuids.lib  
   

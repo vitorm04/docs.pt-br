@@ -23,7 +23,7 @@ ms.locfileid: "74352790"
 ---
 # <a name="throw-statement-visual-basic"></a>Instrução Throw (Visual Basic)
 
-Throws an exception within a procedure.
+Gera uma exceção em um procedimento.
 
 ## <a name="syntax"></a>Sintaxe
 
@@ -34,19 +34,19 @@ Throw [ expression ]
 ## <a name="part"></a>Parte
 
 `expression`\
-Provides information about the exception to be thrown. Optional when residing in a `Catch` statement, otherwise required.
+Fornece informações sobre a exceção a ser gerada. Opcional ao residir em uma instrução `Catch`, caso contrário, é necessário.
 
 ## <a name="remarks"></a>Comentários
 
-The `Throw` statement throws an exception that you can handle with structured exception-handling code (`Try`...`Catch`...`Finally`) or unstructured exception-handling code (`On Error GoTo`). You can use the `Throw` statement to trap errors within your code because Visual Basic moves up the call stack until it finds the appropriate exception-handling code.
+A instrução `Throw` gera uma exceção que você pode manipular com código de manipulação de exceção estruturado (`Try`...`Catch`...`Finally`) ou código de tratamento de exceção não estruturado (`On Error GoTo`). Você pode usar a instrução `Throw` para interceptar erros em seu código porque Visual Basic move para cima a pilha de chamadas até encontrar o código de tratamento de exceção apropriado.
 
-A `Throw` statement with no expression can only be used in a `Catch` statement, in which case the statement rethrows the exception currently being handled by the `Catch` statement.
+Uma instrução `Throw` sem expressão só pode ser usada em uma instrução `Catch`; nesse caso, a instrução gera novamente a exceção que está sendo manipulada pela instrução `Catch`.
 
-The `Throw` statement resets the call stack for the `expression` exception. If `expression` is not provided, the call stack is left unchanged. You can access the call stack for the exception through the <xref:System.Exception.StackTrace%2A> property.
+A instrução `Throw` redefine a pilha de chamadas para a exceção `expression`. Se `expression` não for fornecido, a pilha de chamadas permanecerá inalterada. Você pode acessar a pilha de chamadas para a exceção por meio da propriedade <xref:System.Exception.StackTrace%2A>.
 
 ## <a name="example"></a>Exemplo
 
-The following code uses the `Throw` statement to throw an exception:
+O código a seguir usa a instrução `Throw` para gerar uma exceção:
 
 [!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
 
