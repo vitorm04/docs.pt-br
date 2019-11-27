@@ -21,11 +21,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74442474"
 ---
-# <a name="corthreadsafetyoptions-enumeration"></a><span data-ttu-id="c95ce-102">Enumeração CorThreadSafetyOptions</span><span class="sxs-lookup"><span data-stu-id="c95ce-102">CorThreadSafetyOptions Enumeration</span></span>
+# <a name="corthreadsafetyoptions-enumeration"></a><span data-ttu-id="3d2f2-102">Enumeração CorThreadSafetyOptions</span><span class="sxs-lookup"><span data-stu-id="3d2f2-102">CorThreadSafetyOptions Enumeration</span></span>
 
-<span data-ttu-id="c95ce-103">Specifies flags to select options for thread safety.</span><span class="sxs-lookup"><span data-stu-id="c95ce-103">Specifies flags to select options for thread safety.</span></span>
+<span data-ttu-id="3d2f2-103">Especifica sinalizadores para selecionar opções para a segurança do thread.</span><span class="sxs-lookup"><span data-stu-id="3d2f2-103">Specifies flags to select options for thread safety.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="c95ce-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="c95ce-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3d2f2-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3d2f2-104">Syntax</span></span>
 
 ```cpp
 typedef enum CorThreadSafetyOptions {
@@ -35,22 +35,22 @@ typedef enum CorThreadSafetyOptions {
 } CorThreadSafetyOptions;
 ```
 
-## <a name="members"></a><span data-ttu-id="c95ce-105">Membros</span><span class="sxs-lookup"><span data-stu-id="c95ce-105">Members</span></span>
+## <a name="members"></a><span data-ttu-id="3d2f2-105">Membros</span><span class="sxs-lookup"><span data-stu-id="3d2f2-105">Members</span></span>
 
-|<span data-ttu-id="c95ce-106">Membro</span><span class="sxs-lookup"><span data-stu-id="c95ce-106">Member</span></span>|<span data-ttu-id="c95ce-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="c95ce-107">Description</span></span>|
+|<span data-ttu-id="3d2f2-106">{1&gt;Membro&lt;1}</span><span class="sxs-lookup"><span data-stu-id="3d2f2-106">Member</span></span>|<span data-ttu-id="3d2f2-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="3d2f2-107">Description</span></span>|
 |------------|-----------------|
-|`MDThreadSafetyDefault`|<span data-ttu-id="c95ce-108">Valor padrão.</span><span class="sxs-lookup"><span data-stu-id="c95ce-108">Default value.</span></span> <span data-ttu-id="c95ce-109">Mesmo que `MDThreadSafetyOff`.</span><span class="sxs-lookup"><span data-stu-id="c95ce-109">Same as `MDThreadSafetyOff`.</span></span>|
-|`MDThreadSafetyOff`|<span data-ttu-id="c95ce-110">Indicates that a reader/writer lock cannot be set.</span><span class="sxs-lookup"><span data-stu-id="c95ce-110">Indicates that a reader/writer lock cannot be set.</span></span>|
-|`MDThreadSafetyOn`|<span data-ttu-id="c95ce-111">Indicates that a reader/writer lock can be set.</span><span class="sxs-lookup"><span data-stu-id="c95ce-111">Indicates that a reader/writer lock can be set.</span></span>|
+|`MDThreadSafetyDefault`|<span data-ttu-id="3d2f2-108">Valor padrão.</span><span class="sxs-lookup"><span data-stu-id="3d2f2-108">Default value.</span></span> <span data-ttu-id="3d2f2-109">Mesmo que `MDThreadSafetyOff`.</span><span class="sxs-lookup"><span data-stu-id="3d2f2-109">Same as `MDThreadSafetyOff`.</span></span>|
+|`MDThreadSafetyOff`|<span data-ttu-id="3d2f2-110">Indica que um bloqueio de leitor/gravador não pode ser definido.</span><span class="sxs-lookup"><span data-stu-id="3d2f2-110">Indicates that a reader/writer lock cannot be set.</span></span>|
+|`MDThreadSafetyOn`|<span data-ttu-id="3d2f2-111">Indica que um bloqueio de leitor/gravador pode ser definido.</span><span class="sxs-lookup"><span data-stu-id="3d2f2-111">Indicates that a reader/writer lock can be set.</span></span>|
 
-## <a name="requirements"></a><span data-ttu-id="c95ce-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="c95ce-112">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="3d2f2-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3d2f2-112">Requirements</span></span>
 
-<span data-ttu-id="c95ce-113">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c95ce-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
+<span data-ttu-id="3d2f2-113">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="3d2f2-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>
 
-<span data-ttu-id="c95ce-114">**Header:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="c95ce-114">**Header:** CorHdr.h</span></span>
+<span data-ttu-id="3d2f2-114">**Cabeçalho:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="3d2f2-114">**Header:** CorHdr.h</span></span>
 
-<span data-ttu-id="c95ce-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c95ce-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+<span data-ttu-id="3d2f2-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3d2f2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="c95ce-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="c95ce-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d2f2-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="3d2f2-116">See also</span></span>
 
-- [<span data-ttu-id="c95ce-117">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="c95ce-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="3d2f2-117">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="3d2f2-117">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

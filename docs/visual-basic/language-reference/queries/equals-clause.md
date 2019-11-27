@@ -13,16 +13,16 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74335388"
 ---
-# <a name="equals-clause-visual-basic"></a><span data-ttu-id="43872-102">Cláusula Equals (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43872-102">Equals Clause (Visual Basic)</span></span>
-<span data-ttu-id="43872-103">Compares keys from collections being joined.</span><span class="sxs-lookup"><span data-stu-id="43872-103">Compares keys from collections being joined.</span></span>  
+# <a name="equals-clause-visual-basic"></a><span data-ttu-id="19bf9-102">Cláusula Equals (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="19bf9-102">Equals Clause (Visual Basic)</span></span>
+<span data-ttu-id="19bf9-103">Compara as chaves das coleções que estão sendo Unidas.</span><span class="sxs-lookup"><span data-stu-id="19bf9-103">Compares keys from collections being joined.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="43872-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="43872-104">Remarks</span></span>  
- <span data-ttu-id="43872-105">The `Equals` keyword is used in the following contexts:</span><span class="sxs-lookup"><span data-stu-id="43872-105">The `Equals` keyword is used in the following contexts:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="19bf9-104">Comentários</span><span class="sxs-lookup"><span data-stu-id="19bf9-104">Remarks</span></span>  
+ <span data-ttu-id="19bf9-105">A palavra-chave `Equals` é usada nos seguintes contextos:</span><span class="sxs-lookup"><span data-stu-id="19bf9-105">The `Equals` keyword is used in the following contexts:</span></span>  
   
- [<span data-ttu-id="43872-106">Cláusula Group Join</span><span class="sxs-lookup"><span data-stu-id="43872-106">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
+ [<span data-ttu-id="19bf9-106">Cláusula Group Join</span><span class="sxs-lookup"><span data-stu-id="19bf9-106">Group Join Clause</span></span>](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
- [<span data-ttu-id="43872-107">Cláusula Join</span><span class="sxs-lookup"><span data-stu-id="43872-107">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
+ [<span data-ttu-id="19bf9-107">Cláusula Join</span><span class="sxs-lookup"><span data-stu-id="19bf9-107">Join Clause</span></span>](../../../visual-basic/language-reference/queries/join-clause.md)  
   
-## <a name="see-also"></a><span data-ttu-id="43872-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="43872-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="19bf9-108">Consulte também</span><span class="sxs-lookup"><span data-stu-id="19bf9-108">See also</span></span>
 
-- [<span data-ttu-id="43872-109">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="43872-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+- [<span data-ttu-id="19bf9-109">Palavras-chave</span><span class="sxs-lookup"><span data-stu-id="19bf9-109">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

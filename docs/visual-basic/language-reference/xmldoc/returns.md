@@ -12,29 +12,29 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352239"
 ---
-# <a name="returns-visual-basic"></a><span data-ttu-id="e107c-101">\<returns> (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e107c-101">\<returns> (Visual Basic)</span></span>
-<span data-ttu-id="e107c-102">Specifies the return value of the property or function.</span><span class="sxs-lookup"><span data-stu-id="e107c-102">Specifies the return value of the property or function.</span></span>  
+# <a name="returns-visual-basic"></a><span data-ttu-id="5d462-101">\<retorna > (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5d462-101">\<returns> (Visual Basic)</span></span>
+<span data-ttu-id="5d462-102">Especifica o valor de retorno da propriedade ou função.</span><span class="sxs-lookup"><span data-stu-id="5d462-102">Specifies the return value of the property or function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e107c-103">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e107c-103">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d462-103">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="5d462-103">Syntax</span></span>  
   
 ```xml  
 <returns>description</returns>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e107c-104">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e107c-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5d462-104">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="5d462-104">Parameters</span></span>  
  `description`  
- <span data-ttu-id="e107c-105">Uma descrição do valor retornado.</span><span class="sxs-lookup"><span data-stu-id="e107c-105">A description of the return value.</span></span>  
+ <span data-ttu-id="5d462-105">Uma descrição do valor retornado.</span><span class="sxs-lookup"><span data-stu-id="5d462-105">A description of the return value.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e107c-106">Comentários</span><span class="sxs-lookup"><span data-stu-id="e107c-106">Remarks</span></span>  
- <span data-ttu-id="e107c-107">Use the `<returns>` tag in the comment for a method declaration to describe the return value.</span><span class="sxs-lookup"><span data-stu-id="e107c-107">Use the `<returns>` tag in the comment for a method declaration to describe the return value.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5d462-106">Comentários</span><span class="sxs-lookup"><span data-stu-id="5d462-106">Remarks</span></span>  
+ <span data-ttu-id="5d462-107">Use a marca `<returns>` no comentário para uma declaração de método para descrever o valor de retorno.</span><span class="sxs-lookup"><span data-stu-id="5d462-107">Use the `<returns>` tag in the comment for a method declaration to describe the return value.</span></span>  
   
- <span data-ttu-id="e107c-108">Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="e107c-108">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="5d462-108">Compile com [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) para processar comentários de documentação em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="5d462-108">Compile with [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e107c-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e107c-109">Example</span></span>  
- <span data-ttu-id="e107c-110">This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.</span><span class="sxs-lookup"><span data-stu-id="e107c-110">This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.</span></span>  
+## <a name="example"></a><span data-ttu-id="5d462-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="5d462-109">Example</span></span>  
+ <span data-ttu-id="5d462-110">Este exemplo usa a marca `<returns>` para explicar o que a função `DoesRecordExist` retorna.</span><span class="sxs-lookup"><span data-stu-id="5d462-110">This example uses the `<returns>` tag to explain what the `DoesRecordExist` function returns.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a><span data-ttu-id="e107c-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="e107c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5d462-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="5d462-111">See also</span></span>
 
-- [<span data-ttu-id="e107c-112">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="e107c-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+- [<span data-ttu-id="5d462-112">Marcações de Comentário XML</span><span class="sxs-lookup"><span data-stu-id="5d462-112">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)

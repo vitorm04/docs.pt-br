@@ -1,6 +1,6 @@
 ---
-title: Check installed .NET Core versions on Windows, Linux, and macOS - .NET Core
-description: Learn how to list which versions of .NET Core are installed on your computer. This includes the .NET Core runtime and SDK.
+title: Verificar as versões do .NET Core instaladas no Windows, Linux e macOS – .NET Core
+description: Saiba como listar quais versões do .NET Core estão instaladas em seu computador. Isso inclui o SDK e o tempo de execução do .NET Core.
 author: thraka
 ms.author: adegeo
 ms.date: 11/01/2019
@@ -13,17 +13,17 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74451090"
 ---
-# <a name="how-to-check-that-net-core-is-already-installed"></a><span data-ttu-id="67fb3-104">How to check that .NET Core is already installed</span><span class="sxs-lookup"><span data-stu-id="67fb3-104">How to check that .NET Core is already installed</span></span>
+# <a name="how-to-check-that-net-core-is-already-installed"></a><span data-ttu-id="e712d-104">Como verificar se o .NET Core já está instalado</span><span class="sxs-lookup"><span data-stu-id="e712d-104">How to check that .NET Core is already installed</span></span>
 
-<span data-ttu-id="67fb3-105">This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer.</span><span class="sxs-lookup"><span data-stu-id="67fb3-105">This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer.</span></span> <span data-ttu-id="67fb3-106">.NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.</span><span class="sxs-lookup"><span data-stu-id="67fb3-106">.NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.</span></span>
+<span data-ttu-id="e712d-105">Este artigo ensina como verificar quais versões do .NET Core Runtime e SDK estão instalados em seu computador.</span><span class="sxs-lookup"><span data-stu-id="e712d-105">This article teaches you how to check which versions of the .NET Core runtime and SDK are installed on your computer.</span></span> <span data-ttu-id="e712d-106">O .NET Core pode já ter sido instalado se você tiver um ambiente de desenvolvimento integrado, como o Visual Studio ou o Visual Studio para Mac.</span><span class="sxs-lookup"><span data-stu-id="e712d-106">.NET core may have already been installed if you have an integrated development environment, such as Visual Studio or Visual Studio for Mac.</span></span>
 
-<span data-ttu-id="67fb3-107">Installing an SDK installs the corresponding runtime.</span><span class="sxs-lookup"><span data-stu-id="67fb3-107">Installing an SDK installs the corresponding runtime.</span></span>
+<span data-ttu-id="e712d-107">A instalação de um SDK instala o tempo de execução correspondente.</span><span class="sxs-lookup"><span data-stu-id="e712d-107">Installing an SDK installs the corresponding runtime.</span></span>
 
-<span data-ttu-id="67fb3-108">If any command in this article fails, you don't have the runtime or SDK installed.</span><span class="sxs-lookup"><span data-stu-id="67fb3-108">If any command in this article fails, you don't have the runtime or SDK installed.</span></span> <span data-ttu-id="67fb3-109">For more information, see [Download and install .NET Core](index.md).</span><span class="sxs-lookup"><span data-stu-id="67fb3-109">For more information, see [Download and install .NET Core](index.md).</span></span>
+<span data-ttu-id="e712d-108">Se qualquer comando deste artigo falhar, você não tem o tempo de execução ou o SDK instalado.</span><span class="sxs-lookup"><span data-stu-id="e712d-108">If any command in this article fails, you don't have the runtime or SDK installed.</span></span> <span data-ttu-id="e712d-109">Para obter mais informações, consulte [baixar e instalar o .NET Core](index.md).</span><span class="sxs-lookup"><span data-stu-id="e712d-109">For more information, see [Download and install .NET Core](index.md).</span></span>
 
-## <a name="check-sdk-versions"></a><span data-ttu-id="67fb3-110">Check SDK versions</span><span class="sxs-lookup"><span data-stu-id="67fb3-110">Check SDK versions</span></span>
+## <a name="check-sdk-versions"></a><span data-ttu-id="e712d-110">Verificar versões do SDK</span><span class="sxs-lookup"><span data-stu-id="e712d-110">Check SDK versions</span></span>
 
-<span data-ttu-id="67fb3-111">You can see which versions of the .NET Core SDK are currently installed with a terminal.</span><span class="sxs-lookup"><span data-stu-id="67fb3-111">You can see which versions of the .NET Core SDK are currently installed with a terminal.</span></span> <span data-ttu-id="67fb3-112">Open a terminal and run the `dotnet --list-sdks` command.</span><span class="sxs-lookup"><span data-stu-id="67fb3-112">Open a terminal and run the `dotnet --list-sdks` command.</span></span>
+<span data-ttu-id="e712d-111">Você pode ver quais versões do SDK do .NET Core estão instaladas atualmente com um terminal.</span><span class="sxs-lookup"><span data-stu-id="e712d-111">You can see which versions of the .NET Core SDK are currently installed with a terminal.</span></span> <span data-ttu-id="e712d-112">Abra um terminal e execute o comando `dotnet --list-sdks`.</span><span class="sxs-lookup"><span data-stu-id="e712d-112">Open a terminal and run the `dotnet --list-sdks` command.</span></span>
 
 ::: zone pivot="os-windows"
 
@@ -73,9 +73,9 @@ dotnet --list-sdks
 
 ::: zone-end
 
-## <a name="check-runtime-versions"></a><span data-ttu-id="67fb3-113">Check runtime versions</span><span class="sxs-lookup"><span data-stu-id="67fb3-113">Check runtime versions</span></span>
+## <a name="check-runtime-versions"></a><span data-ttu-id="e712d-113">Verificar versões de tempo de execução</span><span class="sxs-lookup"><span data-stu-id="e712d-113">Check runtime versions</span></span>
 
-<span data-ttu-id="67fb3-114">You can see which versions of the .NET Core runtime are currently installed with the `dotnet --list-runtimes` command.</span><span class="sxs-lookup"><span data-stu-id="67fb3-114">You can see which versions of the .NET Core runtime are currently installed with the `dotnet --list-runtimes` command.</span></span>
+<span data-ttu-id="e712d-114">Você pode ver quais versões do tempo de execução do .NET Core estão instaladas no momento com o comando `dotnet --list-runtimes`.</span><span class="sxs-lookup"><span data-stu-id="e712d-114">You can see which versions of the .NET Core runtime are currently installed with the `dotnet --list-runtimes` command.</span></span>
 
 ::: zone pivot="os-windows"
 
@@ -156,11 +156,11 @@ Microsoft.NETCore.App 3.0.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ::: zone-end
 
-## <a name="more-information"></a><span data-ttu-id="67fb3-115">Mais informações</span><span class="sxs-lookup"><span data-stu-id="67fb3-115">More information</span></span>
+## <a name="more-information"></a><span data-ttu-id="e712d-115">Mais informações</span><span class="sxs-lookup"><span data-stu-id="e712d-115">More information</span></span>
 
-<span data-ttu-id="67fb3-116">You can see both the SDK versions and runtime versions with the command `dotnet --info`.</span><span class="sxs-lookup"><span data-stu-id="67fb3-116">You can see both the SDK versions and runtime versions with the command `dotnet --info`.</span></span> <span data-ttu-id="67fb3-117">You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).</span><span class="sxs-lookup"><span data-stu-id="67fb3-117">You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).</span></span>
+<span data-ttu-id="e712d-116">Você pode ver as versões do SDK e as versões de tempo de execução com o comando `dotnet --info`.</span><span class="sxs-lookup"><span data-stu-id="e712d-116">You can see both the SDK versions and runtime versions with the command `dotnet --info`.</span></span> <span data-ttu-id="e712d-117">Você também obterá outras informações relacionadas ao ambiente, como a versão do sistema operacional e o RID (identificador de tempo de execução).</span><span class="sxs-lookup"><span data-stu-id="e712d-117">You'll also get other environmental related information, such as the operating system version and runtime identifier (RID).</span></span>
 
-## <a name="next-steps"></a><span data-ttu-id="67fb3-118">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="67fb3-118">Next steps</span></span>
+## <a name="next-steps"></a><span data-ttu-id="e712d-118">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="e712d-118">Next steps</span></span>
 
-- <span data-ttu-id="67fb3-119">[Install the .NET Core Runtime](runtime.md).</span><span class="sxs-lookup"><span data-stu-id="67fb3-119">[Install the .NET Core Runtime](runtime.md).</span></span>
-- <span data-ttu-id="67fb3-120">[Install the .NET Core SDK](sdk.md).</span><span class="sxs-lookup"><span data-stu-id="67fb3-120">[Install the .NET Core SDK](sdk.md).</span></span>
+- <span data-ttu-id="e712d-119">[Instale o tempo de execução do .NET Core](runtime.md).</span><span class="sxs-lookup"><span data-stu-id="e712d-119">[Install the .NET Core Runtime](runtime.md).</span></span>
+- <span data-ttu-id="e712d-120">[Instale o SDK do .NET Core](sdk.md).</span><span class="sxs-lookup"><span data-stu-id="e712d-120">[Install the .NET Core SDK](sdk.md).</span></span>

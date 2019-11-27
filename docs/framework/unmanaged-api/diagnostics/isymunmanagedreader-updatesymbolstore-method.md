@@ -22,13 +22,13 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74446463"
 ---
-# <a name="isymunmanagedreaderupdatesymbolstore-method"></a><span data-ttu-id="2952a-102">Método ISymUnmanagedReader::UpdateSymbolStore</span><span class="sxs-lookup"><span data-stu-id="2952a-102">ISymUnmanagedReader::UpdateSymbolStore Method</span></span>
-<span data-ttu-id="2952a-103">Atualiza o repositório de símbolos existente com um repositório de símbolos delta.</span><span class="sxs-lookup"><span data-stu-id="2952a-103">Updates the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="2952a-104">This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.</span><span class="sxs-lookup"><span data-stu-id="2952a-104">This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.</span></span>  
+# <a name="isymunmanagedreaderupdatesymbolstore-method"></a><span data-ttu-id="98ffb-102">Método ISymUnmanagedReader::UpdateSymbolStore</span><span class="sxs-lookup"><span data-stu-id="98ffb-102">ISymUnmanagedReader::UpdateSymbolStore Method</span></span>
+<span data-ttu-id="98ffb-103">Atualiza o repositório de símbolos existente com um repositório de símbolos delta.</span><span class="sxs-lookup"><span data-stu-id="98ffb-103">Updates the existing symbol store with a delta symbol store.</span></span> <span data-ttu-id="98ffb-104">Esse método é usado em cenários de edição e continuação para atualizar o armazenamento de símbolo para corresponder deltas ao arquivo PE (executável portátil) original.</span><span class="sxs-lookup"><span data-stu-id="98ffb-104">This method is used in edit-and-continue scenarios to update the symbol store to match deltas to the original portable executable (PE) file.</span></span>  
   
 > [!NOTE]
-> <span data-ttu-id="2952a-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span><span class="sxs-lookup"><span data-stu-id="2952a-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="2952a-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span><span class="sxs-lookup"><span data-stu-id="2952a-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="2952a-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span><span class="sxs-lookup"><span data-stu-id="2952a-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
+> <span data-ttu-id="98ffb-105">Você precisa especificar apenas um dos parâmetros `filename` ou `pIStream`, não ambos.</span><span class="sxs-lookup"><span data-stu-id="98ffb-105">You need specify only one of the `filename` or `pIStream` parameters, not both.</span></span> <span data-ttu-id="98ffb-106">Se `filename` for especificado, o armazenamento de símbolo será atualizado com os símbolos nesse arquivo.</span><span class="sxs-lookup"><span data-stu-id="98ffb-106">If `filename` is specified, the symbol store will be updated with the symbols in that file.</span></span> <span data-ttu-id="98ffb-107">Se `pIStream` for especificado, o repositório será atualizado com os dados do <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span><span class="sxs-lookup"><span data-stu-id="98ffb-107">If `pIStream` is specified, the store will be updated with the data from the <xref:System.Runtime.InteropServices.ComTypes.IStream>.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2952a-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="2952a-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="98ffb-108">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="98ffb-108">Syntax</span></span>  
   
 ```cpp  
 HRESULT UpdateSymbolStore (  
@@ -36,19 +36,19 @@ HRESULT UpdateSymbolStore (
     [in] IStream *pIStream);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2952a-109">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="2952a-109">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="98ffb-109">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="98ffb-109">Parameters</span></span>  
  `filename`  
- <span data-ttu-id="2952a-110">[in] The name of the file that contains the symbol store.</span><span class="sxs-lookup"><span data-stu-id="2952a-110">[in] The name of the file that contains the symbol store.</span></span>  
+ <span data-ttu-id="98ffb-110">no O nome do arquivo que contém o armazenamento de símbolo.</span><span class="sxs-lookup"><span data-stu-id="98ffb-110">[in] The name of the file that contains the symbol store.</span></span>  
   
  `pIStream`  
- <span data-ttu-id="2952a-111">[in] The file stream, used as an alternative to the `filename` parameter.</span><span class="sxs-lookup"><span data-stu-id="2952a-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
+ <span data-ttu-id="98ffb-111">no O fluxo de arquivos, usado como uma alternativa ao parâmetro `filename`.</span><span class="sxs-lookup"><span data-stu-id="98ffb-111">[in] The file stream, used as an alternative to the `filename` parameter.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2952a-112">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="2952a-112">Return Value</span></span>  
- <span data-ttu-id="2952a-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span><span class="sxs-lookup"><span data-stu-id="2952a-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="98ffb-112">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="98ffb-112">Return Value</span></span>  
+ <span data-ttu-id="98ffb-113">S_OK se o método tiver sucesso; caso contrário, E_FAIL ou algum outro código de erro.</span><span class="sxs-lookup"><span data-stu-id="98ffb-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2952a-114">Requisitos</span><span class="sxs-lookup"><span data-stu-id="2952a-114">Requirements</span></span>  
- <span data-ttu-id="2952a-115">**Header:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2952a-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="98ffb-114">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="98ffb-114">Requirements</span></span>  
+ <span data-ttu-id="98ffb-115">**Cabeçalho:** CorSym. idl, CorSym. h</span><span class="sxs-lookup"><span data-stu-id="98ffb-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2952a-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2952a-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="98ffb-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="98ffb-116">See also</span></span>
 
-- [<span data-ttu-id="2952a-117">Interface ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="2952a-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+- [<span data-ttu-id="98ffb-117">Interface ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="98ffb-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

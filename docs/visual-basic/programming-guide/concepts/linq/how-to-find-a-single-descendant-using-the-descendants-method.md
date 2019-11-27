@@ -9,11 +9,11 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352991"
 ---
-# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a><span data-ttu-id="7417b-102">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7417b-102">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span></span>
-<span data-ttu-id="7417b-103">Você pode usar o método de eixo <xref:System.Xml.Linq.XContainer.Descendants%2A> para rapidamente escrever código para localizar um único elemento nomeado exclusivamente.</span><span class="sxs-lookup"><span data-stu-id="7417b-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="7417b-104">Essa técnica é especialmente útil quando você quer localizar um descendente específico com um nome específico.</span><span class="sxs-lookup"><span data-stu-id="7417b-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="7417b-105">Você pode escrever o código para navegar para o elemento desejado, mas geralmente é mais rápido e fácil escrever código usando o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="7417b-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
+# <a name="how-to-find-a-single-descendant-using-the-descendants-method-visual-basic"></a><span data-ttu-id="7522c-102">Como localizar um único descendente usando o método descendentes (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7522c-102">How to: Find a Single Descendant Using the Descendants Method (Visual Basic)</span></span>
+<span data-ttu-id="7522c-103">Você pode usar o método de eixo <xref:System.Xml.Linq.XContainer.Descendants%2A> para rapidamente escrever código para localizar um único elemento nomeado exclusivamente.</span><span class="sxs-lookup"><span data-stu-id="7522c-103">You can use the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis method to quickly write code to find a single uniquely named element.</span></span> <span data-ttu-id="7522c-104">Essa técnica é especialmente útil quando você quer localizar um descendente específico com um nome específico.</span><span class="sxs-lookup"><span data-stu-id="7522c-104">This technique is especially useful when you want to find a particular descendant with a specific name.</span></span> <span data-ttu-id="7522c-105">Você pode escrever o código para navegar para o elemento desejado, mas geralmente é mais rápido e fácil escrever código usando o eixo <xref:System.Xml.Linq.XContainer.Descendants%2A>.</span><span class="sxs-lookup"><span data-stu-id="7522c-105">You could write the code to navigate to the desired element, but it is often faster and easier to write the code using the <xref:System.Xml.Linq.XContainer.Descendants%2A> axis.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="7417b-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7417b-106">Example</span></span>  
- <span data-ttu-id="7417b-107">Este exemplo usa o operador padrão de consulta <xref:System.Linq.Enumerable.First%2A>.</span><span class="sxs-lookup"><span data-stu-id="7417b-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
+## <a name="example"></a><span data-ttu-id="7522c-106">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7522c-106">Example</span></span>  
+ <span data-ttu-id="7522c-107">Este exemplo usa o operador padrão de consulta <xref:System.Linq.Enumerable.First%2A>.</span><span class="sxs-lookup"><span data-stu-id="7522c-107">This example uses the <xref:System.Linq.Enumerable.First%2A> standard query operator.</span></span>  
   
 ```vb  
 Dim root As XElement = _  
@@ -37,14 +37,14 @@ Dim grandChild3 As String = _
 Console.WriteLine(grandChild3)  
 ```  
   
- <span data-ttu-id="7417b-108">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="7417b-108">This code produces the following output:</span></span>  
+ <span data-ttu-id="7522c-108">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="7522c-108">This code produces the following output:</span></span>  
   
 ```console  
 GC3 Value  
 ```  
   
-## <a name="example"></a><span data-ttu-id="7417b-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7417b-109">Example</span></span>  
- <span data-ttu-id="7417b-110">O exemplo a seguir mostra a mesma consulta para XML que está em um namespace.</span><span class="sxs-lookup"><span data-stu-id="7417b-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="7417b-111">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7417b-111">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="7522c-109">Exemplo</span><span class="sxs-lookup"><span data-stu-id="7522c-109">Example</span></span>  
+ <span data-ttu-id="7522c-110">O exemplo a seguir mostra a mesma consulta para XML que está em um namespace.</span><span class="sxs-lookup"><span data-stu-id="7522c-110">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="7522c-111">Para obter mais informações, consulte [visão geral de namespaces (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="7522c-111">For more information, see [Namespaces Overview (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md).</span></span>  
   
 ```vb  
 Imports <xmlns:aw='http://www.adventure-works.com'>  
@@ -74,12 +74,12 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="7417b-112">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="7417b-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="7522c-112">Esse código gera a seguinte saída:</span><span class="sxs-lookup"><span data-stu-id="7522c-112">This code produces the following output:</span></span>  
   
 ```console  
 GC3 Value  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="7417b-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7417b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7522c-113">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7522c-113">See also</span></span>
 
-- [<span data-ttu-id="7417b-114">Basic Queries (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7417b-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- [<span data-ttu-id="7522c-114">Consultas básicas (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7522c-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

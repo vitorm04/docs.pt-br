@@ -21,10 +21,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74443838"
 ---
-# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="528d9-102">Enumeração CorCallingConvention</span><span class="sxs-lookup"><span data-stu-id="528d9-102">CorCallingConvention Enumeration</span></span>
-<span data-ttu-id="528d9-103">Contém valores que descrevem os tipos de convenções de chamada que são feitas em código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="528d9-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
+# <a name="corcallingconvention-enumeration"></a><span data-ttu-id="7b128-102">Enumeração CorCallingConvention</span><span class="sxs-lookup"><span data-stu-id="7b128-102">CorCallingConvention Enumeration</span></span>
+<span data-ttu-id="7b128-103">Contém valores que descrevem os tipos de convenções de chamada que são feitas em código gerenciado.</span><span class="sxs-lookup"><span data-stu-id="7b128-103">Contains values that describe the types of calling conventions that are made in managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="528d9-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="528d9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7b128-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7b128-104">Syntax</span></span>  
   
 ```cpp  
 typedef enum CorCallingConvention  
@@ -48,31 +48,31 @@ typedef enum CorCallingConvention
 } CorCallingConvention;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="528d9-105">Membros</span><span class="sxs-lookup"><span data-stu-id="528d9-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7b128-105">Membros</span><span class="sxs-lookup"><span data-stu-id="7b128-105">Members</span></span>  
   
-|<span data-ttu-id="528d9-106">Membro</span><span class="sxs-lookup"><span data-stu-id="528d9-106">Member</span></span>|<span data-ttu-id="528d9-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="528d9-107">Description</span></span>|  
+|<span data-ttu-id="7b128-106">{1&gt;Membro&lt;1}</span><span class="sxs-lookup"><span data-stu-id="7b128-106">Member</span></span>|<span data-ttu-id="7b128-107">Descrição</span><span class="sxs-lookup"><span data-stu-id="7b128-107">Description</span></span>|  
 |------------|-----------------|  
-|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="528d9-108">Indica uma Convenção de chamada padrão.</span><span class="sxs-lookup"><span data-stu-id="528d9-108">Indicates a default calling convention.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="528d9-109">Indica que o método usa um número variável de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="528d9-109">Indicates that the method takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="528d9-110">Indica que a chamada é para um campo.</span><span class="sxs-lookup"><span data-stu-id="528d9-110">Indicates that the call is to a field.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="528d9-111">Indica que a chamada é para um método local.</span><span class="sxs-lookup"><span data-stu-id="528d9-111">Indicates that the call is to a local method.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="528d9-112">Indica que a chamada é para uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="528d9-112">Indicates that the call is to a property.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="528d9-113">Indica que a chamada não é gerenciada.</span><span class="sxs-lookup"><span data-stu-id="528d9-113">Indicates that the call is unmanaged.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="528d9-114">Indica uma instanciação de método genérico.</span><span class="sxs-lookup"><span data-stu-id="528d9-114">Indicates a generic method instantiation.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="528d9-115">Indica uma chamada de PInvoke de 64 bits para um método que usa um número variável de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="528d9-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="528d9-116">Descreve um valor inválido de 4 bits.</span><span class="sxs-lookup"><span data-stu-id="528d9-116">Describes an invalid 4-bit value.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="528d9-117">Indica que a Convenção de chamada é descrita pelos quatro bits inferiores.</span><span class="sxs-lookup"><span data-stu-id="528d9-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="528d9-118">Indica que o bit superior descreve um parâmetro `this`.</span><span class="sxs-lookup"><span data-stu-id="528d9-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="528d9-119">Indica que um parâmetro de `this` é descrito explicitamente na assinatura.</span><span class="sxs-lookup"><span data-stu-id="528d9-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
-|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="528d9-120">Indica uma assinatura de método genérico com um número explícito de argumentos de tipo.</span><span class="sxs-lookup"><span data-stu-id="528d9-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="528d9-121">Isso precede uma contagem de parâmetros comum.</span><span class="sxs-lookup"><span data-stu-id="528d9-121">This precedes an ordinary parameter count.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_DEFAULT`|<span data-ttu-id="7b128-108">Indica uma Convenção de chamada padrão.</span><span class="sxs-lookup"><span data-stu-id="7b128-108">Indicates a default calling convention.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_VARARG`|<span data-ttu-id="7b128-109">Indica que o método usa um número variável de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="7b128-109">Indicates that the method takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_FIELD`|<span data-ttu-id="7b128-110">Indica que a chamada é para um campo.</span><span class="sxs-lookup"><span data-stu-id="7b128-110">Indicates that the call is to a field.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_LOCAL_SIG`|<span data-ttu-id="7b128-111">Indica que a chamada é para um método local.</span><span class="sxs-lookup"><span data-stu-id="7b128-111">Indicates that the call is to a local method.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_PROPERTY`|<span data-ttu-id="7b128-112">Indica que a chamada é para uma propriedade.</span><span class="sxs-lookup"><span data-stu-id="7b128-112">Indicates that the call is to a property.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_UNMGD`|<span data-ttu-id="7b128-113">Indica que a chamada não é gerenciada.</span><span class="sxs-lookup"><span data-stu-id="7b128-113">Indicates that the call is unmanaged.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERICINST`|<span data-ttu-id="7b128-114">Indica uma instanciação de método genérico.</span><span class="sxs-lookup"><span data-stu-id="7b128-114">Indicates a generic method instantiation.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_NATIVEVARARG`|<span data-ttu-id="7b128-115">Indica uma chamada de PInvoke de 64 bits para um método que usa um número variável de parâmetros.</span><span class="sxs-lookup"><span data-stu-id="7b128-115">Indicates a 64-bit PInvoke call to a method that takes a variable number of parameters.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MAX`|<span data-ttu-id="7b128-116">Descreve um valor inválido de 4 bits.</span><span class="sxs-lookup"><span data-stu-id="7b128-116">Describes an invalid 4-bit value.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_MASK`|<span data-ttu-id="7b128-117">Indica que a Convenção de chamada é descrita pelos quatro bits inferiores.</span><span class="sxs-lookup"><span data-stu-id="7b128-117">Indicates that the calling convention is described by the bottom four bits.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_HASTHIS`|<span data-ttu-id="7b128-118">Indica que o bit superior descreve um parâmetro `this`.</span><span class="sxs-lookup"><span data-stu-id="7b128-118">Indicates that the top bit describes a `this` parameter.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_EXPLICITTHIS`|<span data-ttu-id="7b128-119">Indica que um parâmetro de `this` é descrito explicitamente na assinatura.</span><span class="sxs-lookup"><span data-stu-id="7b128-119">Indicates that a `this` parameter is explicitly described in the signature.</span></span>|  
+|`IMAGE_CEE_CS_CALLCONV_GENERIC`|<span data-ttu-id="7b128-120">Indica uma assinatura de método genérico com um número explícito de argumentos de tipo.</span><span class="sxs-lookup"><span data-stu-id="7b128-120">Indicates a generic method signature with an explicit number of type arguments.</span></span> <span data-ttu-id="7b128-121">Isso precede uma contagem de parâmetros comum.</span><span class="sxs-lookup"><span data-stu-id="7b128-121">This precedes an ordinary parameter count.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="528d9-122">{1&gt;{2&gt;Requisitos&lt;2}&lt;1}</span><span class="sxs-lookup"><span data-stu-id="528d9-122">Requirements</span></span>  
- <span data-ttu-id="528d9-123">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="528d9-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7b128-122">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7b128-122">Requirements</span></span>  
+ <span data-ttu-id="7b128-123">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7b128-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="528d9-124">**Cabeçalho:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="528d9-124">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="7b128-124">**Cabeçalho:** CorHdr. h</span><span class="sxs-lookup"><span data-stu-id="7b128-124">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="528d9-125">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="528d9-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7b128-125">**Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7b128-125">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="528d9-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="528d9-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7b128-126">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7b128-126">See also</span></span>
 
-- [<span data-ttu-id="528d9-127">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="528d9-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="7b128-127">Enumerações de metadados</span><span class="sxs-lookup"><span data-stu-id="7b128-127">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

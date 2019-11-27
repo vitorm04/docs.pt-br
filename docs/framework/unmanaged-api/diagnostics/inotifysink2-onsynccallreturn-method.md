@@ -22,10 +22,10 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74435973"
 ---
-# <a name="inotifysink2onsynccallreturn-method"></a><span data-ttu-id="ec706-102">Método INotifySink2::OnSyncCallReturn</span><span class="sxs-lookup"><span data-stu-id="ec706-102">INotifySink2::OnSyncCallReturn Method</span></span>
-<span data-ttu-id="ec706-103">Gets invoked when a call returns.</span><span class="sxs-lookup"><span data-stu-id="ec706-103">Gets invoked when a call returns.</span></span>  
+# <a name="inotifysink2onsynccallreturn-method"></a><span data-ttu-id="4a860-102">Método INotifySink2::OnSyncCallReturn</span><span class="sxs-lookup"><span data-stu-id="4a860-102">INotifySink2::OnSyncCallReturn Method</span></span>
+<span data-ttu-id="4a860-103">É invocado quando uma chamada retorna.</span><span class="sxs-lookup"><span data-stu-id="4a860-103">Gets invoked when a call returns.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ec706-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="ec706-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4a860-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="4a860-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT OnSyncCallReturn  
@@ -36,24 +36,24 @@ HRESULT OnSyncCallReturn
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ec706-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="ec706-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4a860-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="4a860-105">Parameters</span></span>  
  `in_CallID`  
- <span data-ttu-id="ec706-106">[in] ID of the call being returned from.</span><span class="sxs-lookup"><span data-stu-id="ec706-106">[in] ID of the call being returned from.</span></span> <span data-ttu-id="ec706-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="ec706-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
+ <span data-ttu-id="4a860-106">no ID da chamada de que está sendo retornada.</span><span class="sxs-lookup"><span data-stu-id="4a860-106">[in] ID of the call being returned from.</span></span> <span data-ttu-id="4a860-107">Consulte [estrutura de CALL_ID](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span><span class="sxs-lookup"><span data-stu-id="4a860-107">See [CALL_ID Structure](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md).</span></span>  
   
  `in_pBuffer`  
- <span data-ttu-id="ec706-108">[in] Call buffer.</span><span class="sxs-lookup"><span data-stu-id="ec706-108">[in] Call buffer.</span></span>  
+ <span data-ttu-id="4a860-108">no Buffer de chamadas.</span><span class="sxs-lookup"><span data-stu-id="4a860-108">[in] Call buffer.</span></span>  
   
  `in_BufferSize`  
- <span data-ttu-id="ec706-109">[in] Size of the call buffer, in bytes.</span><span class="sxs-lookup"><span data-stu-id="ec706-109">[in] Size of the call buffer, in bytes.</span></span>  
+ <span data-ttu-id="4a860-109">no Tamanho do buffer de chamada, em bytes.</span><span class="sxs-lookup"><span data-stu-id="4a860-109">[in] Size of the call buffer, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ec706-110">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="ec706-110">Return Value</span></span>  
- <span data-ttu-id="ec706-111">S_OK if the method succeeds.</span><span class="sxs-lookup"><span data-stu-id="ec706-111">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4a860-110">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="4a860-110">Return Value</span></span>  
+ <span data-ttu-id="4a860-111">S_OK se o método tiver sucesso.</span><span class="sxs-lookup"><span data-stu-id="4a860-111">S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ec706-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="ec706-112">Requirements</span></span>  
- <span data-ttu-id="ec706-113">**Header:** ProtocolNotify2.idl</span><span class="sxs-lookup"><span data-stu-id="ec706-113">**Header:** ProtocolNotify2.idl</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4a860-112">Requisitos</span><span class="sxs-lookup"><span data-stu-id="4a860-112">Requirements</span></span>  
+ <span data-ttu-id="4a860-113">**Cabeçalho:** ProtocolNotify2. idl</span><span class="sxs-lookup"><span data-stu-id="4a860-113">**Header:** ProtocolNotify2.idl</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec706-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="ec706-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4a860-114">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4a860-114">See also</span></span>
 
-- [<span data-ttu-id="ec706-115">Interface INotifySink2</span><span class="sxs-lookup"><span data-stu-id="ec706-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
-- [<span data-ttu-id="ec706-116">Interface INotifySource2</span><span class="sxs-lookup"><span data-stu-id="ec706-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
-- [<span data-ttu-id="ec706-117">Interface INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="ec706-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+- [<span data-ttu-id="4a860-115">Interface INotifySink2</span><span class="sxs-lookup"><span data-stu-id="4a860-115">INotifySink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [<span data-ttu-id="4a860-116">Interface INotifySource2</span><span class="sxs-lookup"><span data-stu-id="4a860-116">INotifySource2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [<span data-ttu-id="4a860-117">Interface INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="4a860-117">INotifyConnection2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
