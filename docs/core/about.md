@@ -2,12 +2,12 @@
 title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: a1127a39d67b6c24994a2957298c62d87703950d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4fe16475e18eb88e88fb33d30508f9ef5c9f2cd5
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416743"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552236"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -29,14 +29,14 @@ As linguagens C#, Visual Basic e F# podem ser usadas para escrever aplicativos e
 - [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 - Texto sublime
 - Vim
- 
+
 Essa integração é fornecida, em parte, pelos colaboradores dos projetos [OmniSharp](https://www.omnisharp.net/) e [Ionide](http://ionide.io) .
 
 ## <a name="apis"></a>APIs
 
 O .NET Core expõe APIs para vários cenários, incluindo:
 
-- Tipos primitivos, como [bool](../csharp/language-reference/keywords/bool.md) e [int](../csharp/language-reference/builtin-types/integral-numeric-types.md).
+- Tipos primitivos, como <xref:System.Boolean?displayProperty=nameWithType> e <xref:System.Int32?displayProperty=nameWithType>.
 - Coleções, como <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> e <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Tipos de utilitário, como <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> e <xref:System.IO.FileStream?displayProperty=nameWithType>.
 - Tipos de dados, como <xref:System.Data.DataSet?displayProperty=nameWithType>, e [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
@@ -44,7 +44,7 @@ O .NET Core expõe APIs para vários cenários, incluindo:
 
 O .NET Core oferece compatibilidade com as APIs do .NET Framework e do Mono por meio da implementação da especificação [.NET Standard](../standard/net-standard.md).
 
-## <a name="frameworks"></a>Estruturas
+## <a name="frameworks"></a>Frameworks
 
 Várias estruturas já foram criadas com base no .NET Core:
 
@@ -63,9 +63,9 @@ O .NET Core é composto pelas seguintes partes:
 
 Esses componentes são distribuídos das seguintes maneiras:
 
-- [Tempo de execução do .NET Core](https://dotnet.microsoft.com/download) – inclui as bibliotecas de tempo de execução e de estruturas do .NET Core.
-- [Tempo de execução do ASP.NET Core](https://dotnet.microsoft.com/download) – inclui bibliotecas de tempo de execução e de estruturas do ASP.NET Core e do .NET Core.
-- [SDK do .NET Core](https://dotnet.microsoft.com/download) – inclui as ferramentas da CLI do .NET, o tempo de execução do ASP.NET Core e o tempo de execução e a estrutura do .NET Core.
+- [runtime do .NET Core](https://dotnet.microsoft.com/download) – inclui as bibliotecas de runtime e de estruturas do .NET Core.
+- [runtime do ASP.NET Core](https://dotnet.microsoft.com/download) – inclui bibliotecas de runtime e de estruturas do ASP.NET Core e do .NET Core.
+- [SDK do .NET Core](https://dotnet.microsoft.com/download) – inclui as ferramentas da CLI do .NET, o runtime do ASP.NET Core e o runtime e a estrutura do .NET Core.
 
 ### <a name="open-source"></a>Código Aberto
 
@@ -75,7 +75,7 @@ O [.NET Core](https://github.com/dotnet/core) é um software livre ([licença MI
 
 O .NET Core foi criado como um produto muito semelhante, mas exclusivo, comparado a outros produtos .NET. Ele foi projetado para permitir maior adaptabilidade a novas plataformas e cargas de trabalho e tem várias portas de sistema operacional e CPU disponíveis (e pode ser portada para muitos outros).
 
-O produto é dividido em várias partes que podem se adaptar a novas plataformas em momentos diferentes. O tempo de execução e as bibliotecas fundamentais específicas de plataformas devem ser transportados como uma unidade. Bibliotecas independentes de plataforma devem funcionar no estado em que se encontra em todas as plataformas como-está em todas as plataformas desde a construção. Há uma tendência de projeto em relação à redução de implementações específicas da plataforma para aumentar a eficiência do desenvolvedor C# , o código de plataforma neutra de preferência sempre que um algoritmo ou API pode ser implementado de forma completa ou parcial.
+O produto é dividido em várias partes que podem se adaptar a novas plataformas em momentos diferentes. O runtime e as bibliotecas fundamentais específicas de plataformas devem ser transportados como uma unidade. Bibliotecas independentes de plataforma devem funcionar no estado em que se encontra em todas as plataformas como-está em todas as plataformas desde a construção. Há uma tendência de projeto em relação à redução de implementações específicas da plataforma para aumentar a eficiência do desenvolvedor C# , o código de plataforma neutra de preferência sempre que um algoritmo ou API pode ser implementado de forma completa ou parcial.
 
 As pessoas geralmente perguntam como o .NET Core é implementado para dar suporte a vários sistemas operacionais. Eles normalmente perguntam se há implementações separadas ou se a [compilação condicional](https://en.wikipedia.org/wiki/Conditional_compilation) é usada. A resposta é ambas, com uma forte tendência para a compilação condicional.
 
@@ -109,7 +109,7 @@ Principais diferenças entre o .NET Core e o .NET Framework:
 
 Embora o .NET Core seja exclusivo e tenha diferenças significativas no .NET Framework e em outras implementações do .NET, é simples compartilhar o código entre essas implementações, usando técnicas de compartilhamento de origem ou binária.
 
-Como o .NET Core é compatível com a instalação lado a lado, e seu tempo de execução é completamente independente do .NET Framework, ele pode ser instalado em computadores com o .NET Framework instalado sem problemas.
+Como o .NET Core é compatível com a instalação lado a lado, e seu runtime é completamente independente do .NET Framework, ele pode ser instalado em computadores com o .NET Framework instalado sem problemas.
 
 ### <a name="comparison-with-mono"></a>Comparação com Mono
 

@@ -1,17 +1,17 @@
 ---
 title: 'Tutorial: analisar sentimentos – classificação binária'
 description: Este tutorial mostra como criar um aplicativo Razor Pages que classifica as opiniões dos comentários do site e executa a ação apropriada. O classificador de sentimentos binários usa o construtor de modelos no Visual Studio.
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 5e5b60a53db70b33ed798bcf33497b74911ba727
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e919341130c6778207f324dd9eb3b3f54c8a9c68
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974803"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551841"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>Tutorial: analisar o sentimentos dos comentários do site em um aplicativo Web usando o ML.NET Model Builder
 
@@ -48,7 +48,7 @@ Para obter uma lista de pré-requisitos e instruções de instalação, visite o
     1. Na caixa de diálogo Novo projeto, selecione o nó **Visual C#** seguido pelo nó **Web**.
     1. Em seguida, selecione o modelo de projeto **Aplicativo ASP.NET Core Web**.
     1. Na caixa de texto **nome** , digite "SentimentRazor".
-    1. A caixa de seleção **criar um diretório para solução** deve ser marcada por padrão. Se esse não for o caso, verifique-o.
+    1. Verifique se a opção **Colocar solução e projeto no mesmo diretório** está **desmarcada** (vs 2019) ou **criar diretório para solução** está **marcado** (vs 2017).
     1. Selecione o botão **OK**.
     1. Escolha **aplicativo Web** na janela que exibe os diferentes tipos de projetos de ASP.NET Core e, em seguida, selecione o botão **OK** .
 
@@ -124,7 +124,7 @@ Dois projetos serão criados como resultado do processo de treinamento.
 
 ### <a name="configure-the-predictionengine-pool"></a>Configurar o pool PredictionEngine
 
-Para fazer uma única previsão, você precisa criar um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. Além disso, você precisa criar uma instância dela em qualquer lugar em que seja necessário dentro de seu aplicativo. À medida que seu aplicativo cresce, esse processo pode se tornar não gerenciável. Para melhorar o desempenho e a segurança do thread, use uma combinação de injeção de dependência e o serviço `PredictionEnginePool`, que cria um [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo.
+Para fazer uma única previsão, você precisa criar um [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602). [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. Além disso, você precisa criar uma instância dela em qualquer lugar em que seja necessário dentro de seu aplicativo. À medida que seu aplicativo cresce, esse processo pode se tornar não gerenciável. Para melhorar o desempenho e a segurança do thread, use uma combinação de injeção de dependência e o serviço de `PredictionEnginePool`, que cria uma [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo.
 
 1. Instale o pacote NuGet do *Microsoft.Extensions.ml* :
 
@@ -285,7 +285,7 @@ Quando o aplicativo for iniciado, insira o *Construtor de modelos é legal!* na 
 
 Se você precisar fazer referência aos projetos gerados pelo construtor de modelos em um momento posterior dentro de outra solução, você poderá encontrá-los dentro do diretório `C:\Users\%USERNAME%\AppData\Local\Temp\MLVSTools`.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]

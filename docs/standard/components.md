@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: b55b2f9266477a0bb12c39840c9f2108a5c0f0c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4e787377bf954de3be499ae0fc74ef274a61e129
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283913"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552881"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -41,7 +41,7 @@ O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar
 
 Para saber mais sobre o .NET Core, consulte a [Guia .NET Core](../core/index.md) e [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).
 
-### <a name="net-framework"></a>{1&gt;.NET Framework&lt;1}
+### <a name="net-framework"></a>.NET Framework
 
 O.NET Framework é a implementação original do .NET que existe desde 2002. É o mesmo .NET Framework que os desenvolvedores do .NET sempre usaram. As versões 4.5 e posteriores implementam o .NET Standard, assim, o código que se destina ao .NET Standard pode ser executado nessas versões do .NET Framework. Ele contém APIs adicionais específicas do Windows, como APIs para desenvolvimento de área de trabalho do Windows com o Windows Forms e o WPF. O .NET Framework é otimizado para a compilação de aplicativos da área de trabalho do Windows.
 
@@ -111,5 +111,5 @@ Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO
 - [Guia do .NET Core](../core/index.md)
 - [Guia do .NET Framework](../framework/index.md)
 - [Guia do C#](../csharp/index.yml)
-- [Guia do F#](../fsharp/index.md)
+- [Guia do F#](../fsharp/index.yml)
 - [Guia do VB.NET](../visual-basic/index.md)

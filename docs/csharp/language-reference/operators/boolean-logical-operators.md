@@ -32,16 +32,16 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 327a2a8a95809923446107e6ba1c4b331eee82b7
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e4efb283c835a703ec64b6ec5995b821c995dc60
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737899"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552485"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>Operadores lógicos boolianos (referência do C#)
 
-Os operadores a seguir executam operações lógicas com operandos [bool](../keywords/bool.md) :
+Os operadores a seguir executam operações lógicas com operandos [bool](../builtin-types/bool.md) :
 
 - Operador unário [`!` (negação lógica)](#logical-negation-operator-).
 - Operadores binários [`&` (AND lógico)](#logical-and-operator-), [`|` (OR lógico)](#logical-or-operator-) e [`^` (OR exclusivo lógico)](#logical-exclusive-or-operator-). Esses operadores sempre avaliam os dois operandos.
@@ -117,17 +117,17 @@ O [operador OR lógico](#logical-or-operator-) `|` também computa o OR lógico 
 
 Para operandos `bool?`, os operadores de `&` e `|` dão suporte à lógica de três valores. A semântica desses operadores é definida pela tabela a seguir:  
   
-|x|s|x&y|x&#124;y|  
+|x|{1&gt;y&lt;1}|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
 |true|false|false|true|  
-|true|nulo|nulo|true|  
+|true|{1&gt;nulo&lt;1}|{1&gt;nulo&lt;1}|true|  
 |false|true|false|true|  
 |false|false|false|false|  
-|false|nulo|false|nulo|  
-|nulo|true|nulo|true|  
-|nulo|false|false|nulo|  
-|nulo|nulo|nulo|nulo|  
+|false|{1&gt;nulo&lt;1}|false|{1&gt;nulo&lt;1}|  
+|{1&gt;nulo&lt;1}|true|{1&gt;nulo&lt;1}|true|  
+|{1&gt;nulo&lt;1}|false|false|{1&gt;nulo&lt;1}|  
+|{1&gt;nulo&lt;1}|{1&gt;nulo&lt;1}|{1&gt;nulo&lt;1}|{1&gt;nulo&lt;1}|  
 
 O comportamento desses operadores difere do comportamento típico do operador com tipos de valores anuláveis. Normalmente, um operador que é definido para operandos de um tipo de valor também pode ser usado com operandos do tipo de valor anulável correspondente. Esse operador produz `null` se qualquer um de seus operandos for avaliado como `null`. No entanto, os operadores `&` e `|` podem produzir não nulo mesmo que um dos operandos seja avaliado como `null`. Para obter mais informações sobre o comportamento do operador com tipos de valores anuláveis, consulte a seção [operadores levantados](../builtin-types/nullable-value-types.md#lifted-operators) do artigo [tipos de valores anuláveis](../builtin-types/nullable-value-types.md) .
 

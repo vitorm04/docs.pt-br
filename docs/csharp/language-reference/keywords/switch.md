@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 012fa5b4d5f39b4dfa4d1c77bc3d6fbe181e78a6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428495"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552348"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
@@ -45,7 +45,7 @@ No C# 6 e versões anteriores, a expressão de correspondência deve ser uma exp
 
 - um [char](../builtin-types/char.md).
 - um [string](../builtin-types/reference-types.md).
-- um [bool](bool.md).
+- um [bool](../builtin-types/bool.md).
 - um valor [integral](../builtin-types/integral-numeric-types.md) , como um `int` ou um `long`.
 - um valor [enum](enum.md).
 
@@ -120,7 +120,7 @@ O padrão de constante testa se a expressão de correspondência é igual a uma 
 
 em que *constant* é o valor para testar. *constant* pode ser qualquer uma das expressões de constante a seguir:
 
-- Um literal [bool](bool.md), `true` ou `false`.
+- Um literal [bool](../builtin-types/bool.md) : seja `true` ou `false`.
 - Qualquer constante [integral](../builtin-types/integral-numeric-types.md) , como uma `int`, uma `long`ou uma `byte`.
 - O nome de uma variável `const` declarada.
 - Uma constante de enumeração.
@@ -193,7 +193,7 @@ O exemplo a seguir define uma classe `Shape` base, uma classe `Rectangle` que de
 
 Observe que a cláusula `when` no exemplo que tenta testar se um objeto `Shape` é `null` não é executada. O padrão de tipo correto para testar um `null` é `case null:`.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, consulte [A instrução switch](~/_csharplang/spec/statements.md#the-switch-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 

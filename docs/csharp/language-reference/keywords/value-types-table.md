@@ -6,12 +6,12 @@ helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: c470bbdff6cb08732f063afb9b325e44d9ca4d6b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2f2d81d90f6d68f1bada40c81f0f28febd51bd1f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428469"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552355"
 ---
 # <a name="value-types-table-c-reference"></a>Tabela de tipos deC# valor (referência)
 
@@ -19,7 +19,7 @@ A tabela a seguir mostra os tipos de valor de C#:
 
 |Tipo de valor|Categoria|
 |----------------|--------------|
-|[bool](bool.md)|Booleano|
+|[bool](../builtin-types/bool.md)|Booliano|
 |`byte`|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|
 |[char](../builtin-types/char.md)|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|
 |`decimal`|Numérico, [ponto flutuante](../builtin-types/floating-point-numeric-types.md)|

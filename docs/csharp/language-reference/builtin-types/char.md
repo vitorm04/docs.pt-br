@@ -7,20 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 3b2eec4f0e17aa329fe3865fb3ef453ee030c6a7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ab49b8cbddac2569d6063a5f312105bef3033e84
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451160"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552307"
 ---
 # <a name="char-c-reference"></a>Char (C# referência)
 
 A palavra-chave Type de `char` é um alias para o tipo de estrutura .NET <xref:System.Char?displayProperty=nameWithType> que representa um caractere Unicode UTF-16.
 
-|Tipo|Intervalo|Tamanho|Tipo .NET|
+|{1&gt;Tipo&lt;1}|Intervalo|Tamanho|Tipo .NET|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 a U+FFFF|16 bits|<xref:System.Char?displayProperty=nameWithType>|
+
+O valor padrão do tipo de `char` é `\0`, ou seja, U + 0000.
 
 O tipo de [cadeia de caracteres](reference-types.md#the-string-type) representa o texto como uma sequência de valores de `char`.
 
@@ -47,7 +49,7 @@ O tipo de `char` é implicitamente conversível para os seguintes tipos [integra
 
 Não há conversões implícitas de outros tipos para o tipo de `char`. No entanto, qualquer tipo [integral](integral-numeric-types.md) ou numérico [de ponto flutuante](floating-point-numeric-types.md) é explicitamente conversível para `char`.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, consulte a seção [tipos integrais](~/_csharplang/spec/types.md#integral-types) da [ C# especificação da linguagem](~/_csharplang/spec/introduction.md).
 

@@ -3,15 +3,15 @@ title: 'Tutorial: prever os preços usando a regressão com o construtor de mode
 description: Este tutorial mostra como criar um modelo de regressão usando o Construtor de Modelo do ML.NET para prever os preços, especificamente, as tarifas de táxi de Nova York.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/08/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: bd6acd83df4d2d5f19d30da847212d60b1576199
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ed2afe307492b6d38e7e2f9d8ae02dafbb5ae1f4
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977349"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552924"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>Tutorial: prever os preços usando a regressão com o construtor de modelos
 
@@ -38,7 +38,7 @@ Para obter uma lista de pré-requisitos e instruções de instalação, visite o
 
 ## <a name="create-a-console-application"></a>Criar um aplicativo de console
 
-1. Crie um **Aplicativo de Console do .NET Core** chamado "TaxiFarePrediction".
+1. Crie um  **C# aplicativo de console do .NET Core** chamado "TaxiFarePrediction". Verifique se a opção **Colocar solução e projeto no mesmo diretório** está **desmarcada** (vs 2019) ou **criar diretório para solução** está **marcado** (vs 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 
@@ -106,7 +106,7 @@ Após a conclusão do treinamento, navegue até a etapa de avaliação.
 
 ## <a name="evaluate-the-model"></a>Avaliar o modelo
 
-O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta do Construtor de Modelo, a seção de saída terá o algoritmo usado pelo modelo com melhor desempenho na entrada *Melhor Modelo*, juntamente com as métricas na *Qualidade do Melhor Modelo (RSquared)*. Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas.
+O resultado da etapa de treinamento será um modelo que tinha o melhor desempenho. Na etapa de avaliação da ferramenta do Construtor de Modelo, a seção de saída terá o algoritmo usado pelo modelo com melhor desempenho na entrada *Melhor Modelo*, juntamente com as métricas na *Qualidade do Melhor Modelo (RSquared)* . Além disso, uma tabela de resumo contém os cinco modelos principais e suas métricas.
 
 Se você não estiver satisfeito com suas métricas de precisão, algumas maneiras fáceis de experimentar e aprimorar a precisão do modelo serão aumentar a quantidade de tempo para treinar o modelo ou usar mais dados. Ou navegue até a etapa do código.
 

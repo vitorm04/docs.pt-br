@@ -3,15 +3,15 @@ title: 'Tutorial: classificar violações de integridade com o construtor de mod
 description: Este tutorial ilustra como criar um modelo de classificação multiclasse usando o ML.NET Model Builder para classificar a severidade de violação de integridade de restaurante em São Francisco.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 10/30/2019
+ms.date: 11/21/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: cbe20183d317ac6fe39a937e1cfa8a5e3df81b74
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 07729e1667f8aa3aba74576943d79eaa3bcd14d8
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977215"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552893"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>Tutorial: classificar a gravidade das violações de integridade do restaurante com o construtor de modelos
 
@@ -41,7 +41,7 @@ Este exemplo cria um C# aplicativo de console .NET Core que categoriza o risco d
 
 ## <a name="create-a-console-application"></a>Criar um aplicativo de console
 
-1. Crie um  **C# aplicativo de console do .NET Core** chamado "RestaurantViolations".
+1. Crie um  **C# aplicativo de console do .NET Core** chamado "RestaurantViolations". Verifique se a opção **Colocar solução e projeto no mesmo diretório** está **desmarcada** (vs 2019) ou **criar diretório para solução** está **marcado** (vs 2017).
 
 ## <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 

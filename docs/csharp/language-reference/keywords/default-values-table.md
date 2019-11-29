@@ -6,23 +6,23 @@ ms.date: 07/29/2019
 helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
-ms.openlocfilehash: 2f1ad5cc029b93261153e46d854cd8bf3e31ce92
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 48aa294fa9e37e2e138444e493faa5474011097e
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428526"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74551817"
 ---
 # <a name="default-values-table-c-reference"></a>Tabela de valores padrão (referência de C#)
 
 A seguinte tabela mostra os valores padrão de tipos C#:
 
-|Tipo|Valor padrão|
+|{1&gt;Tipo&lt;1}|Valor padrão|
 |---------|------------------|
 |Qualquer tipo de referência|`null`|
 |Qualquer [tipo numérico integral interno](../builtin-types/integral-numeric-types.md)|0 (zero)|
 |Qualquer [tipo numérico de ponto flutuante interno](../builtin-types/floating-point-numeric-types.md)|0 (zero)|
-|[bool](bool.md)|`false`|
+|[bool](../builtin-types/bool.md)|`false`|
 |[char](../builtin-types/char.md)|`'\0'` (U+0000)|
 |[enum](enum.md)|O valor é produzido pela expressão `(E)0`, em que `E` é o identificador de enumeração.|
 |[struct](struct.md)|O valor produzido pela configuração de todos os campos tipo-valor para seus valores padrão e todos os campos tipo-referência para `null`.|
@@ -47,7 +47,7 @@ var n = new System.Numerics.Complex();
 Console.WriteLine(n);  // output: (0, 0)
 ```
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 

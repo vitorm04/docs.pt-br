@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 78233b9a18f4369ebb086f2016af3f945b6a654a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039008"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552471"
 ---
 # <a name="c-operators-c-reference"></a>Operadores C# (Referência de C#)
 
-O C# oferece vários operadores predefinidos, compatíveis com os tipos internos. Por exemplo, os [operadores aritméticos](arithmetic-operators.md) executam operações aritméticas com operandos numéricos, já os [operadores lógicos boolianos](boolean-logical-operators.md) executam operações lógicas com operandos [bool](../keywords/bool.md). Determinados operadores podem ser [sobrecarregados](operator-overloading.md). Com a sobrecarga de operador, você pode especificar o comportamento do operador para os operandos de um tipo definido pelo usuário.
+O C# oferece vários operadores predefinidos, compatíveis com os tipos internos. Por exemplo, os [operadores aritméticos](arithmetic-operators.md) executam operações aritméticas com operandos numéricos, já os [operadores lógicos boolianos](boolean-logical-operators.md) executam operações lógicas com operandos [bool](../builtin-types/bool.md). Determinados operadores podem ser [sobrecarregados](operator-overloading.md). Com a sobrecarga de operador, você pode especificar o comportamento do operador para os operandos de um tipo definido pelo usuário.
 
 Em uma [expressão](../../programming-guide/statements-expressions-operators/expressions.md), a precedência e a associação dos operadores determinam a ordem na qual as operações são executadas. Você pode usar parênteses para alterar a ordem de avaliação imposta pela prioridade e pela associação dos operadores.
 
@@ -42,7 +42,7 @@ A tabela a seguir lista os operadores C#, começando com a precedência mais alt
 
 | Operadores | Categoria ou nome |
 | --------- | ---------------- |
-| [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primária |
+| [x.y](member-access-operators.md#member-access-operator-), [x?.y](member-access-operators.md#null-conditional-operators--and-), [x?[y]](member-access-operators.md#null-conditional-operators--and-), [f(x)](member-access-operators.md#invocation-operator-), [a&#91;i&#93;](member-access-operators.md#indexer-operator-), [x++](arithmetic-operators.md#increment-operator-), [x--](arithmetic-operators.md#decrement-operator---), [new](new-operator.md), [typeof](type-testing-and-cast.md#typeof-operator), [checked](../keywords/checked.md), [unchecked](../keywords/unchecked.md), [default](default.md), [nameof](nameof.md), [delegate](delegate-operator.md), [sizeof](sizeof.md), [stackalloc](stackalloc.md), [x->y](pointer-related-operators.md#pointer-member-access-operator--) | Primary |
 | [+ x](arithmetic-operators.md#unary-plus-and-minus-operators), [-x](arithmetic-operators.md#unary-plus-and-minus-operators), [\!x](boolean-logical-operators.md#logical-negation-operator-), [~ x](bitwise-and-shift-operators.md#bitwise-complement-operator-), [+ + x](arithmetic-operators.md#increment-operator-), [--x](arithmetic-operators.md#decrement-operator---), [^ x](member-access-operators.md#index-from-end-operator-), [(t) x](type-testing-and-cast.md#cast-operator-), [Await](await.md), [& x](pointer-related-operators.md#address-of-operator-), [* x](pointer-related-operators.md#pointer-indirection-operator-), [true e false](true-false-operators.md) | Unário |
 | [x.. Iar](member-access-operators.md#range-operator-) | Intervalo |
 | [x * y](arithmetic-operators.md#multiplication-operator-), [x / y](arithmetic-operators.md#division-operator-), [x % y](arithmetic-operators.md#remainder-operator-) | Multiplicativo|
@@ -85,7 +85,7 @@ Sem considerar a relação com a precedência e a associação de operadores, os
 |`a / b + c * d`|a, b, /, c, d, *, +|
 |`a / (b + c) * d`|a, b, c, +, /, d, *|
 
-Normalmente, todos os operandos do operador são avaliados. No entanto, alguns operadores avaliam os operandos condicionalmente. Ou seja, o valor do operando mais à esquerda de tal operador define if (ou quais) outros operandos devem ser avaliados. Esses operadores são os operadores lógicos condicionais [and (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) e [or (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) , os [operadores de União nula `??` e `??=`](null-coalescing-operator.md), os [operadores condicionais nulos `?.` e `?[]`](member-access-operators.md#null-conditional-operators--and-)e o [ operador condicional `?:`](conditional-operator.md). Para obter mais informações, consulte a descrição de cada operador.
+Normalmente, todos os operandos do operador são avaliados. No entanto, alguns operadores avaliam os operandos condicionalmente. Ou seja, o valor do operando mais à esquerda de tal operador define if (ou quais) outros operandos devem ser avaliados. Esses operadores são os operadores lógicos condicionais [and (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) e [or (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) , os [operadores de União nula `??` e `??=`](null-coalescing-operator.md), os [operadores condicionais nulos `?.` e `?[]`](member-access-operators.md#null-conditional-operators--and-)e o [operador condicional `?:`](conditional-operator.md). Para obter mais informações, consulte a descrição de cada operador.
 
 ## <a name="c-language-specification"></a>Especificação da linguagem C#
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 4d71f7eea3f574e483dc4250f5c87e1ffd551f2f
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771900"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552273"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>Tipos numéricos de ponto flutuante (Referência de C#)
 
@@ -33,7 +33,7 @@ Os **tipos de ponto flutuante** são um subconjunto dos **tipos simples** e pode
 
 O C# é compatível com os seguintes tipos de pontos flutuantes predefinidos:
   
-|palavra-chave/tipo C#|Intervalo aproximado|Precisão|Tamanho|Tipo .NET|
+|palavra-chave/tipo C#|Intervalo aproximado|Precision|Tamanho|Tipo .NET|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|±1,5 x 10<sup>−45</sup> para ±3,4 x 10<sup>38</sup>|~6 a 9 dígitos|4 bytes|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|±5.0 × 10<sup>−324</sup> to ±1.7 × 10<sup>308</sup>|~15 a 17 dígitos|8 bytes|<xref:System.Double?displayProperty=nameWithType>|
@@ -52,8 +52,8 @@ Como o tipo `decimal` tem mais precisão e um intervalo menor que `float` e `dou
 
 É possível misturar tipos [integrais](integral-numeric-types.md) e de ponto flutuante em uma expressão. Nesse caso, os tipos integrais são convertidos em tipos de ponto flutuante. A avaliação da expressão é executada de acordo com as regras a seguir:
 
-- Se um dos tipos de ponto flutuante for `double`, a expressão será avaliada como `double` ou [bool](../keywords/bool.md) em comparações relacionais e de igualdade.
-- Se não houver nenhum tipo de `double` na expressão, a expressão será avaliada como `float` ou [bool](../keywords/bool.md) em comparações relacionais e de igualdade.
+- Se um dos tipos de ponto flutuante for `double`, a expressão será avaliada como `double`ou [bool](bool.md) em comparações relacionais e de igualdade.
+- Se não houver nenhum tipo de `double` na expressão, a expressão será avaliada como `float`ou [bool](bool.md) em comparações relacionais e de igualdade.
 
 Uma expressão de ponto flutuante pode conter os seguintes conjuntos de valores:
 

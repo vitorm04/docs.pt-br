@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: e0e35562e2351f9b985c74b60d8769577c3e3f56
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283889"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552859"
 ---
 # <a name="tour-of-net"></a>Tour do .NET
 
@@ -31,7 +31,7 @@ A Microsoft desenvolve ativamente e dá suporte a três linguagens de .NET: C#, 
 
 * A C# é simples, poderosa, fortemente tipada e orientada a objeto, mantendo a expressividade e elegância das linguagens de estilo C. Qualquer pessoa familiarizada com C e linguagens semelhantes encontra poucos problemas para adaptar-se à C#. Confira o [Guia de C#](../csharp/index.yml) para saber mais sobre o C#.
 
-* F# é uma linguagem de programação de plataforma cruzada com prioridade para a parte funcional e que também dá suporte à programação imperativa e orientada a objeto tradicional. Confira o [Guia de F#](../fsharp/index.md) para saber mais sobre o F#.
+* F# é uma linguagem de programação de plataforma cruzada com prioridade para a parte funcional e que também dá suporte à programação imperativa e orientada a objeto tradicional. Confira o [Guia de F#](../fsharp/index.yml) para saber mais sobre o F#.
 
 * A Visual Basic é uma linguagem fácil de aprender, que você usa para criar uma variedade de aplicativos executados no .NET. Entre as linguagens de .NET, a sintaxe da VB é a mais próxima da linguagem humana comum, geralmente sendo mais fácil para pessoas novas no desenvolvimento de software.
 
@@ -59,7 +59,7 @@ No .NET, objetos que fazem referência a recursos não gerenciados implementam a
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
-Uma vez que o bloco `using` é concluído, o runtime do .NET automaticamente chama o método `stream` do objeto <xref:System.IDisposable.Dispose>, que libera o identificador de arquivo. O runtime também faz isso se uma exceção faz com que o controle deixe o bloco.
+Uma vez que o bloco `using` é concluído, o runtime do .NET automaticamente chama o método <xref:System.IDisposable.Dispose> do objeto `stream`, que libera o identificador de arquivo. O runtime também faz isso se uma exceção faz com que o controle deixe o bloco.
 
 Para obter mais detalhes, consulte os seguintes tópicos:
 

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 2f65e9dc39a4cd1076af1a70dfedfa671f20b42d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 6e9af6c84c81b1244e10fa7d5955ab67d34b1f0a
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450873"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552203"
 ---
 # <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
 
@@ -26,12 +26,16 @@ Você pode baixar e instalar o .NET Core diretamente com um dos seguintes links:
 
 Você também pode instalar o .NET Core como parte de um ambiente de desenvolvimento integrado (IDE), detalhado nas seções a seguir.
 
+::: zone pivot="os-windows,os-macos"
+
 ## <a name="install-with-an-installer"></a>Instalar com um instalador
 
 O Windows e o macOS têm instaladores autônomos que podem ser usados para instalar o SDK do .NET Core 3,0.
 
 - [CPUs Windows x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer) | [CPUs x32](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x86-installer)
 - [CPUs x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-macos-x64-installer) do MacOS
+
+::: zone-end
 
 ::: zone pivot="os-linux"
 
@@ -55,7 +59,7 @@ Se você estiver usando o Visual Studio para desenvolver aplicativos .NET Core, 
 
 Se você já tiver o Visual Studio instalado, poderá verificar sua versão com as etapas a seguir.
 
-01. Abra o Visual Studio.
+01. {1&gt;Abra o Visual Studio.&lt;1}
 01. Selecione **ajuda** > **sobre Microsoft Visual Studio**.
 01. Leia o número de versão na caixa de diálogo **sobre** .
 
@@ -134,7 +138,7 @@ A Microsoft fornece imagens personalizadas para cenários específicos. Por exem
 
 Para obter mais informações sobre como usar o .NET Core em um contêiner do Docker, consulte [introdução ao .net e ao Docker](../docker/introduction.md) e [amostras](https://github.com/dotnet/dotnet-docker/blob/master/samples/README.md).
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 ::: zone pivot="os-windows"
 

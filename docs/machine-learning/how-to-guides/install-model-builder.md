@@ -3,14 +3,14 @@ title: Como instalar o Construtor de Modelo
 description: Saiba como instalar a ferramenta Construtor de Modelo do ML.NET
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 06/21/2019
+ms.date: 11/21/2019
 ms.custom: mvc, how-to
-ms.openlocfilehash: a1034d294012b8df5ec778fc40602fe52223961d
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b87f712ad7a8b2229c1d42db4bad1fe511475ac7
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774563"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552936"
 ---
 # <a name="how-to-install-mlnet-model-builder"></a>Como instalar o Construtor de Modelo do ML.NET
 
@@ -19,10 +19,13 @@ Saiba como instalar o Construtor de Modelo do ML.NET para adicionar o aprendizad
 > [!NOTE]
 > O Construtor de Modelo está atualmente na Versão Prévia.
 
-## <a name="pre-requisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - Visual Studio 2017 versão 15.9.12 ou posterior/Visual Studio 2019
-- SDK do .NET core 2.1 ou posterior
+- SDK do .NET Core 2,1 ou posterior.
+
+> [!NOTE]
+> O SDK do .NET Core 3,0 não tem suporte no momento.
 
 ## <a name="limitations"></a>Limitações
 
