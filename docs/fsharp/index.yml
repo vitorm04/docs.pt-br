@@ -1,0 +1,69 @@
+### YamlMime:Landing
+title: F#sobre
+summary: Saiba como escrever qualquer aplicativo usando a linguagem F# de programação no .net.
+metadata:
+  title: F#Docs-introdução, tutoriais, referência.
+  description: Aprenda F# sobre programação – para desenvolvedores novos F#e experientes F# para desenvolvedores de .net
+  ms.topic: landing-page
+  author: cartermp
+  ms.author: phcart
+  ms.date: 11/25/2019
+  ms.openlocfilehash: 7aef8012a5ef58c1c0a142dce8baf7ccb73f50fa
+  ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+  ms.translationtype: HT
+  ms.contentlocale: pt-BR
+  ms.lasthandoff: 11/27/2019
+  ms.locfileid: "74553047"
+landingContent:
+- title: Aprenda a programar emF#
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: O que F#é?
+      url: what-is-fsharp.md
+    - text: Instalar o F#
+      url: get-started/install-fsharp.md
+    - text: Introdução ao F# no Visual Studio
+      url: get-started/get-started-visual-studio.md
+    - text: Introdução ao F# no Visual Studio Code
+      url: get-started/get-started-vscode.md
+  - linkListType: download
+    links:
+    - text: Baixar o SDK do .NET Core
+      url: https://dotnet.microsoft.com/download
+- title: F#conceitos básicos
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Tour do F#
+      url: tour.md
+    - text: Introdução à programação funcional em F#
+      url: introduction-to-functional-programming/index.md
+    - text: Funções de primeira classe
+      url: introduction-to-functional-programming/first-class-functions.md
+  - linkListType: concept
+    links:
+    - text: Guia de estilo do F#
+      url: style-guide/index.md
+    - text: Diretrizes de formatação de código do F#
+      url: style-guide/formatting.md
+    - text: Convenções de codificação do F#
+      url: style-guide/conventions.md
+  - linkListType: tutorial
+    links:
+    - text: Programação assíncrona emF#
+      url: tutorials/asynchronous-and-concurrent-programming/async.md
+- title: F#referência de linguagem
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: Referência de linguagem
+      url: language-reference/index.md
+    - text: Referência de palavra-chave
+      url: language-reference/keyword-reference.md
+    - text: Referência de símbolo e operador
+      url: language-reference/symbol-and-operator-reference/index.md
+    - text: '{1&gt;Funções&lt;1}'
+      url: language-reference/functions/index.md
+    - text: F#digita
+      url: language-reference/fsharp-types.md
