@@ -8,16 +8,16 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 4f36081ef1a3eec84f3cc2ced3c629109acd6a38
-ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.openlocfilehash: c254a7362c7bc28f4b38fc0189ae0ea763bc90cc
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70894276"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568843"
 ---
 # <a name="service-operations-wcf-data-services"></a>Operações de serviço (WCF Data Services)
 
-O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você defina operações de serviço em um serviço de dados para expor métodos no servidor. Como outros recursos do serviço de dados, as operações de serviço são endereçadas por URIs. As operações de serviço permitem que você exponha a lógica de negócio em um serviço de dados, como implementar a lógica de validação, aplicar a segurança baseada em função, ou expor recursos de consulta especializada. As operações de serviço são métodos adicionados à classe de serviço de dados derivada <xref:System.Data.Services.DataService%601>de. Assim como todos os outros recursos de serviço de dados, você pode fornecer parâmetros para o método de operação de serviço. Por exemplo, o seguinte URI de operação de serviço (com base no serviço de dados de [início rápido](quickstart-wcf-data-services.md) ) `city` passa o valor `London` para o parâmetro:
+WCF Data Services permite que você defina as operações de serviço em um serviço de dados para expor métodos no servidor. Como outros recursos do serviço de dados, as operações de serviço são endereçadas por URIs. As operações de serviço permitem que você exponha a lógica de negócio em um serviço de dados, como implementar a lógica de validação, aplicar a segurança baseada em função, ou expor recursos de consulta especializada. As operações de serviço são métodos adicionados à classe de serviço de dados que deriva de <xref:System.Data.Services.DataService%601>. Assim como todos os outros recursos de serviço de dados, você pode fornecer parâmetros para o método de operação de serviço. Por exemplo, o seguinte URI de operação de serviço (com base no serviço de dados de [início rápido](quickstart-wcf-data-services.md) ) passa o valor `London` para o parâmetro `city`:
 
 ```http
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
@@ -28,7 +28,7 @@ A definição para esta operação de serviço é a seguinte:
 [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#serviceoperationdef)]
 [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#serviceoperationdef)]
 
-Você pode usar o <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> do <xref:System.Data.Services.DataService%601> para acessar diretamente a fonte de dados que o serviço de dados está usando. Para obter mais informações, confira [Como: Defina uma operação](how-to-define-a-service-operation-wcf-data-services.md)de serviço.
+Você pode usar o <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> do <xref:System.Data.Services.DataService%601> para acessar diretamente a fonte de dados que o serviço de dados está usando. Para obter mais informações, consulte [como: definir uma operação de serviço](how-to-define-a-service-operation-wcf-data-services.md).
 
 Para obter informações sobre como chamar uma operação de serviço de um aplicativo cliente .NET Framework, consulte [chamando operações de serviço](calling-service-operations-wcf-data-services.md).
 
@@ -80,7 +80,7 @@ Os seguintes tipos de retorno são válidos para uma operação de serviço:
 
 |Tipos de retorno válidos|Regras de URI|
 |------------------------|---------------|
-|`void` (`Nothing` no Visual Basic)<br /><br /> - ou -<br /><br /> Tipos de entidade<br /><br /> - ou -<br /><br /> Tipos primitivos|O URI deve ser um único segmento de caminho que é o nome da operação de serviço. As opções de consulta não são permitidas.|
+|`void` (`Nothing` no Visual Basic)<br /><br /> \- ou -<br /><br /> Tipos de entidade<br /><br /> \- ou -<br /><br /> Tipos primitivos|O URI deve ser um único segmento de caminho que é o nome da operação de serviço. As opções de consulta não são permitidas.|
 |<xref:System.Collections.Generic.IEnumerable%601>|O URI deve ser um único segmento de caminho que é o nome da operação de serviço. Como o tipo do resultado não é um tipo <xref:System.Linq.IQueryable%601>, as opções de consulta não são permitidas.|
 |<xref:System.Linq.IQueryable%601>|Os segmentos do caminho de consulta além do caminho que é o nome da operação de serviço são permitidos. As opções de consulta também são permitidas.|
 
@@ -100,11 +100,11 @@ A visibilidade do serviço de operações de serviço é controlada pelo método
 > [!NOTE]
 > Se uma operação de serviço tiver um tipo de retorno que foi oculto pelo acesso de restrição nos conjuntos de entidades subjacentes, a operação de serviço não estará disponível para aplicativos cliente.
 
-Para obter mais informações, confira [Como: Defina uma operação](how-to-define-a-service-operation-wcf-data-services.md)de serviço.
+Para obter mais informações, consulte [como: definir uma operação de serviço](how-to-define-a-service-operation-wcf-data-services.md).
 
 ## <a name="raising-exceptions"></a>Gerando exceções
 
-Recomendamos que você use a classe <xref:System.Data.Services.DataServiceException> sempre que gerar uma exceção na execução do serviço de dados. Isso ocorre porque o tempo de execução do serviço de dados sabe como mapear corretamente as propriedades desse objeto de exceção para a mensagem de resposta HTTP. Quando você gera um <xref:System.Data.Services.DataServiceException> em uma operação de serviço, a exceção retornada é empacotada em um <xref:System.Reflection.TargetInvocationException>. Para retornar o <xref:System.Data.Services.DataServiceException> base sem o <xref:System.Reflection.TargetInvocationException> incluído, você deverá substituir o método <xref:System.Data.Services.DataService%601.HandleException%2A> no <xref:System.Data.Services.DataService%601>, extrair o <xref:System.Data.Services.DataServiceException> de <xref:System.Reflection.TargetInvocationException> e retorná-lo como o erro de nível superior, como no exemplo a seguir:
+Recomendamos que você use a classe <xref:System.Data.Services.DataServiceException> sempre que gerar uma exceção na execução do serviço de dados. Isso ocorre porque o runtime do serviço de dados sabe como mapear corretamente as propriedades desse objeto de exceção para a mensagem de resposta HTTP. Quando você gera um <xref:System.Data.Services.DataServiceException> em uma operação de serviço, a exceção retornada é empacotada em um <xref:System.Reflection.TargetInvocationException>. Para retornar o <xref:System.Data.Services.DataServiceException> base sem o <xref:System.Reflection.TargetInvocationException> incluído, você deverá substituir o método <xref:System.Data.Services.DataService%601.HandleException%2A> no <xref:System.Data.Services.DataService%601>, extrair o <xref:System.Data.Services.DataServiceException> de <xref:System.Reflection.TargetInvocationException> e retorná-lo como o erro de nível superior, como no exemplo a seguir:
 
 [!code-csharp[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_service/cs/northwind2.svc.cs#handleexceptions)]
 [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_service/vb/northwind2.svc.vb#handleexceptions)]

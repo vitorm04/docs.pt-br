@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: 346671d4febd5f3999f1f4fbf2fe4b7e475ae5fa
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 313af6046fda8dd8905e8bda4e8c4aec187ef8bf
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040188"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568397"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Como criar uma política de editor
 
@@ -74,7 +74,7 @@ Neste comando:
   > [!NOTE]
   > A capacidade de direcionar uma arquitetura de processador específica está disponível a partir do .NET Framework 2,0.
 
-A capacidade de direcionar uma arquitetura de processador específica está disponível a partir do .NET Framework 2,0. O comando a seguir cria um assembly de política do publicador chamado `policy.1.0.myAssembly` de um arquivo de política do publicador chamado `pub.config`, atribui um nome forte ao assembly usando o par de chaves no arquivo `sgKey.snk` e especifica que o assembly tem como alvo o processador x86 arquitectura.
+A capacidade de direcionar uma arquitetura de processador específica está disponível a partir do .NET Framework 2,0. O comando a seguir cria um assembly de política do publicador chamado `policy.1.0.myAssembly` de um arquivo de política do publicador chamado `pub.config`, atribui um nome forte ao assembly usando o par de chaves no arquivo `sgKey.snk` e especifica que o assembly tem como alvo a arquitetura do processador x86.
 
 ```console
 al /link:pub.config /out:policy.1.0.myAssembly.dll /keyfile:sgKey.snk /platform:x86
@@ -105,13 +105,13 @@ gacutil /i policy.1.0.myAssembly.dll
 ```
 
 > [!IMPORTANT]
-> O assembly de política do Publicador não pode ser adicionado ao cache de assembly global, a menos que o arquivo de política original do Publicador esteja localizado no mesmo diretório que o assembly.
+> O assembly de política do Publicador não pode ser adicionado ao cache de assembly global, a menos que o arquivo de política original do Publicador especificado no argumento `/link` esteja localizado no mesmo diretório que o assembly.
 
 ## <a name="see-also"></a>Consulte também
 
 - [Programação com assemblies](../../standard/assembly/program.md)
-- [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
+- [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
 - [Configurando aplicativos usando arquivos de configuração](index.md)
-- [Esquema de configurações do tempo de execução](./file-schema/runtime/index.md)
+- [Esquema de configurações do runtime](./file-schema/runtime/index.md)
 - [Esquema de arquivos de configuração](./file-schema/index.md)
 - [Redirecionando versões de assembly](redirect-assembly-versions.md)

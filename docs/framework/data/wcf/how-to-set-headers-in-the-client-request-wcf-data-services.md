@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
-ms.openlocfilehash: 420b13df0cc9d3f89087e18b58a2b416ce0bab7f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c8b20fc16b75b0d5267079db19ed55ae08604ff0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975258"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568991"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>Como: definir cabeçalhos na solicitação do cliente (WCF Data Services)
-Quando você usa a biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para acessar um serviço de dados que dá suporte ao Protocolo Open Data (OData), a biblioteca de cliente define automaticamente os cabeçalhos HTTP necessários em mensagens de solicitação enviadas para o serviço de dados. No entanto, a biblioteca de cliente não sabe definir cabeçalhos de mensagens que são necessários em determinados casos, como quando o serviço de dados requer autenticação baseada em declarações ou cookies. Para obter mais informações, consulte [securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication). Nesses casos, você deve definir manualmente os cabeçalhos de mensagem na mensagem de solicitação antes que eles sejam enviados. O exemplo neste tópico mostra como manipular o evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> para adicionar um novo cabeçalho à mensagem de solicitação antes que ele seja enviado para o serviço de dados.  
+Quando você usa a biblioteca de cliente WCF Data Services para acessar um serviço de dados que dá suporte ao Protocolo Open Data (OData), a biblioteca de cliente define automaticamente os cabeçalhos HTTP necessários em mensagens de solicitação enviadas para o serviço de dados. No entanto, a biblioteca de cliente não sabe definir cabeçalhos de mensagens que são necessários em determinados casos, como quando o serviço de dados requer autenticação baseada em declarações ou cookies. Para obter mais informações, consulte [securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication). Nesses casos, você deve definir manualmente os cabeçalhos de mensagem na mensagem de solicitação antes que eles sejam enviados. O exemplo neste tópico mostra como manipular o evento <xref:System.Data.Services.Client.DataServiceContext.SendingRequest> para adicionar um novo cabeçalho à mensagem de solicitação antes que ele seja enviado para o serviço de dados.  
   
  O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente. Esse serviço e as classes de dados do cliente são criados quando você conclui o guia de [início rápido do WCF Data Services](quickstart-wcf-data-services.md). Você também pode usar o [serviço de dados de exemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) que é publicado no site do OData; Este serviço de dados de exemplo é somente leitura e a tentativa de salvar alterações retorna um erro. Os serviços de dados de exemplo no site OData permitem autenticação anônima.  
   

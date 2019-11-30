@@ -2,18 +2,18 @@
 title: Expressões de computação
 description: Saiba como criar uma sintaxe conveniente para escrever cálculos no F# que pode ser sequenciada e combinada usando construções e associações de fluxo de controle.
 ms.date: 11/04/2019
-ms.openlocfilehash: c9ac0454221782a7ccb3d41850ca6aba4e20a72a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ff7def0ed3a46acd1b0b83b111f26f5d556071f
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976783"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569454"
 ---
 # <a name="computation-expressions"></a>Expressões de computação
 
 As expressões de F# computação no fornecem uma sintaxe conveniente para escrever computações que podem ser sequenciadas e combinadas usando construções e associações de fluxo de controle. Dependendo do tipo de expressão de computação, eles podem ser considerados como uma maneira de expressar monads, monoids, transformadores do Monad e Applicative transmissão functors. No entanto, ao contrário de outras linguagens (como o *-Notation* no Haskell), elas não estão vinculadas a uma única abstração e não dependem de macros ou de outras formas de metaprogramação para realizar uma sintaxe conveniente e sensível ao contexto.
 
-## <a name="overview"></a>Visão Geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 As computações podem ter muitas formas. A forma mais comum de computação é a execução de thread único, que é fácil de entender e modificar. No entanto, nem todas as formas de computação são tão simples quanto a execução de thread único. Eis alguns exemplos:
 
@@ -209,7 +209,7 @@ let result = Async.RunSynchronously req
 
 ### `match!`
 
-A partir F# do 4,5, a palavra-chave`match!`permite embutir uma chamada para outra expressão de computação e correspondência de padrão em seu resultado:
+A palavra-chave `match!` permite embutir uma chamada para outra expressão de computação e correspondência de padrão em seu resultado:
 
 ```fsharp
 let doThingsAsync url =
@@ -250,7 +250,7 @@ A tabela a seguir descreve os métodos que podem ser usados em uma classe do con
 |`Zero`|`unit -> M<'T>`|Chamado para ramificações `else` vazias de `if...then` expressões em expressões de computação.|
 |`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|Indica que a expressão de computação é passada para o membro `Run` como uma cotação. Ele traduz todas as instâncias de uma computação em uma cotação.|
 
-Muitos dos métodos em uma classe de Construtor usam e retornam uma construção `M<'T>`, que normalmente é um tipo definido separadamente que caracteriza o tipo de cálculo que está sendo combinado, por exemplo, `Async<'T>` para fluxos de trabalho assíncronos e `Seq<'T>` para sequência fluxos. As assinaturas desses métodos permitem que eles sejam combinados e aninhados entre si, para que o objeto de fluxo de trabalho retornado de uma construção possa ser passado para o próximo. O compilador, quando analisa uma expressão de cálculo, converte a expressão em uma série de chamadas de função aninhadas usando os métodos na tabela anterior e o código na expressão de computação.
+Muitos dos métodos em uma classe de Construtor usam e retornam uma construção `M<'T>`, que normalmente é um tipo definido separadamente que caracteriza o tipo de cálculo que está sendo combinado, por exemplo, `Async<'T>` para fluxos de trabalho assíncronos e `Seq<'T>` para fluxos de trabalho de sequência. As assinaturas desses métodos permitem que eles sejam combinados e aninhados entre si, para que o objeto de fluxo de trabalho retornado de uma construção possa ser passado para o próximo. O compilador, quando analisa uma expressão de cálculo, converte a expressão em uma série de chamadas de função aninhadas usando os métodos na tabela anterior e o código na expressão de computação.
 
 A expressão aninhada é do seguinte formato:
 
@@ -258,9 +258,9 @@ A expressão aninhada é do seguinte formato:
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-No código acima, as chamadas para `Run` e `Delay` serão omitidas se não estiverem definidas na classe do construtor de expressões de computação. O corpo da expressão de computação, aqui indicado como `{| cexpr |}`, é convertido em chamadas que envolvem os métodos da classe Builder pelas traduções descritas na tabela a seguir. A expressão de computação `{| cexpr |}` é definida recursivamente de acordo com essas traduções em F# que `expr` é uma expressão e`cexpr`é uma expressão de cálculo.
+No código acima, as chamadas para `Run` e `Delay` serão omitidas se não estiverem definidas na classe do construtor de expressões de computação. O corpo da expressão de computação, aqui indicado como `{| cexpr |}`, é convertido em chamadas que envolvem os métodos da classe Builder pelas traduções descritas na tabela a seguir. A expressão de computação `{| cexpr |}` é definida recursivamente de acordo com essas traduções em F# que `expr` é uma expressão e `cexpr` é uma expressão de cálculo.
 
-|Expressão|Conversão|
+|Expressão|{1&gt;Tradução&lt;1}|
 |----------|-----------|
 |<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
 |<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|

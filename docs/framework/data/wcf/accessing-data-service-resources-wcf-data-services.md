@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: cf6877dd67ad9e17a43be5eafb84a2ecf21d7190
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7eea23ba3dc5e9cc327d9cdfba10c72af7525c30
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975442"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569398"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Acessando recursos do serviço de dados (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dá suporte ao Protocolo Open Data (OData) para expor seus dados como um feed com recursos que podem ser endereçáveis por URIs. Esses recursos são representados de acordo com as convenções de relacionamento de entidade do [modelo de dados de entidade](../adonet/entity-data-model.md). Nesse modelo, as entidades representam unidades operacionais de dados que são tipos de dados em um domínio de aplicativo, como clientes, pedidos, itens e classes. Os dados de entidades são acessados e alterados usando-se a semântica REST (transferência de estado representativo), especificamente os verbos HTTP padrão GET, PUT, POST e DELETE.  
+WCF Data Services dá suporte ao Protocolo Open Data (OData) para expor seus dados como um feed com recursos que podem ser endereçáveis por URIs. Esses recursos são representados de acordo com as convenções de relacionamento de entidade do [modelo de dados de entidade](../adonet/entity-data-model.md). Nesse modelo, as entidades representam unidades operacionais de dados que são tipos de dados em um domínio de aplicativo, como clientes, pedidos, itens e classes. Os dados de entidades são acessados e alterados usando-se a semântica REST (transferência de estado representativo), especificamente os verbos HTTP padrão GET, PUT, POST e DELETE.  
   
 ## <a name="addressing-resources"></a>Direcionando recursos  
  No OData, você aborda todos os dados expostos pelo modelo de dados usando um URI. Por exemplo, o URI a seguir retorna um feed que é o conjunto de entidades Customers, que contém entradas para todas as instâncias do tipo de entidade Customer:  
@@ -56,7 +56,7 @@ ms.locfileid: "73975442"
   
  As entradas no feed retornado também são ordenadas pelo valor da propriedade ShipCity dos pedidos.  
   
- o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] dá suporte às seguintes opções de consulta do sistema OData:  
+ O WCF Data Services dá suporte às seguintes opções de consulta do sistema OData:  
   
 |Opção de consulta|Descrição|  
 |------------------|-----------------|  

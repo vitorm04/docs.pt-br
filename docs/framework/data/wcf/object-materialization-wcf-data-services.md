@@ -5,18 +5,18 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
-ms.openlocfilehash: 68b04ac59d1b73d6e66a5a7836ce1bfe30d9c681
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7a2b201e5690c4304e663e9429c54f377e05f556
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975185"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568916"
 ---
 # <a name="object-materialization-wcf-data-services"></a>Materialização de objeto (WCF Data Services)
 
 Quando você usa a caixa de diálogo **Adicionar referência de serviço** para consumir um feed de protocolo Open Data (OData) em um aplicativo cliente baseado em .NET Framework, classes de dados equivalentes são geradas para cada tipo de entidade no modelo de dados exposto pelo feed. Para obter mais informações, consulte [gerando a biblioteca de cliente do serviço de dados](generating-the-data-service-client-library-wcf-data-services.md). Os dados de entidade que são retornados por uma consulta são materializados em uma instância de uma dessas classes de serviço de dados do cliente geradas. Para obter informações sobre opções de mesclagem e resolução de identidade para objetos rastreados, consulte [Gerenciando o contexto do serviço de dados](managing-the-data-service-context-wcf-data-services.md).
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] também permite que você defina suas próprias classes de serviço de dados de cliente em vez de usar as classes de dados geradas por ferramentas. Isso permite que você use suas próprias classes de dados, também conhecidas como classes de dados "POCO (objeto CLR) simples. Ao usar esses tipos de classes de dados personalizadas, você deve atribuir a classe de dados com <xref:System.Data.Services.Common.DataServiceKeyAttribute> ou <xref:System.Data.Services.Common.DataServiceEntityAttribute> e garantir que os nomes de tipo no cliente correspondam aos nomes de tipo no modelo de dados do serviço de dados.
+WCF Data Services também permite que você defina suas próprias classes de serviço de dados de cliente em vez de usar as classes de dados geradas por ferramentas. Isso permite que você use suas próprias classes de dados, também conhecidas como classes de dados "POCO (objeto CLR) simples. Ao usar esses tipos de classes de dados personalizadas, você deve atribuir a classe de dados com <xref:System.Data.Services.Common.DataServiceKeyAttribute> ou <xref:System.Data.Services.Common.DataServiceEntityAttribute> e garantir que os nomes de tipo no cliente correspondam aos nomes de tipo no modelo de dados do serviço de dados.
 
 Depois que a biblioteca recebe a mensagem de resposta de consulta, ela materializa os dados retornados do feed OData em instâncias de classes de serviço de dados do cliente que são do tipo da consulta. O processo geral para materialização desses objetos é o seguinte:
 

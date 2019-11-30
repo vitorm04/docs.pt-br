@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WCF Data Services, changing data
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
-ms.openlocfilehash: 02bcb8f12cd7f230d60c3b3c58174a54405ff955
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 060cdab4f486782e6ad60511fadad95a41255dec
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975105"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568816"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Atualizando o serviço de dados (WCF Data Services)
-Quando você usa a biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para consumir um feed de Protocolo Open Data (OData), a biblioteca converte as entradas no feed em instâncias de classes de serviço de dados do cliente. Essas classes de serviço de dados são controladas usando o <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence. O cliente controla as alterações nas entidades que você relata usando métodos em <xref:System.Data.Services.Client.DataServiceContext>. Esses métodos permitem que o cliente rastreie entidades adicionadas e excluídas e também alterações feitas em valores de propriedade ou em relações entre instâncias de entidade. Essas alterações controladas são enviadas de volta ao serviço de dados como operações baseadas em REST quando você chama o método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
+Quando você usa a biblioteca de cliente WCF Data Services para consumir um feed de Protocolo Open Data (OData), a biblioteca converte as entradas no feed em instâncias de classes de serviço de dados do cliente. Essas classes de serviço de dados são controladas usando o <xref:System.Data.Services.Client.DataServiceContext> ao qual o <xref:System.Data.Services.Client.DataServiceQuery%601> pertence. O cliente controla as alterações nas entidades que você relata usando métodos em <xref:System.Data.Services.Client.DataServiceContext>. Esses métodos permitem que o cliente rastreie entidades adicionadas e excluídas e também alterações feitas em valores de propriedade ou em relações entre instâncias de entidade. Essas alterações controladas são enviadas de volta ao serviço de dados como operações baseadas em REST quando você chama o método <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>.  
   
 > [!NOTE]
 > Quando você usa uma instância do <xref:System.Data.Services.Client.DataServiceCollection%601> para associar dados a controles, as alterações feitas nos dados no controle associado são automaticamente relatadas para o <xref:System.Data.Services.Client.DataServiceContext>. Para obter mais informações, consulte [associando dados a controles](binding-data-to-controls-wcf-data-services.md).  
@@ -67,7 +67,7 @@ Quando você usa a biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includ
 ## <a name="creating-and-modifying-relationship-links"></a>Criando e modificando links de relações  
  Quando você adiciona uma nova entidade usando o método <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> ou o método *AddTo* apropriado da classe <xref:System.Data.Services.Client.DataServiceContext> que a caixa de diálogo **Adicionar referência de serviço** gera, quaisquer relações entre a nova entidade e as entidades relacionadas não são definidas automaticamente.  
   
- Você pode criar e alterar relações entre instâncias de entidade e fazer com que a biblioteca de cliente reflita essas alterações no serviço de dados. As relações entre as entidades são definidas como associações no modelo, e o <xref:System.Data.Services.Client.DataServiceContext> controla cada relação como um objeto de link no contexto. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] fornece os seguintes métodos na classe <xref:System.Data.Services.Client.DataServiceContext> para criar, modificar e excluir esses links:  
+ Você pode criar e alterar relações entre instâncias de entidade e fazer com que a biblioteca de cliente reflita essas alterações no serviço de dados. As relações entre as entidades são definidas como associações no modelo, e o <xref:System.Data.Services.Client.DataServiceContext> controla cada relação como um objeto de link no contexto. WCF Data Services fornece os seguintes métodos na classe <xref:System.Data.Services.Client.DataServiceContext> para criar, modificar e excluir esses links:  
   
 |Método|Descrição|  
 |------------|-----------------|  

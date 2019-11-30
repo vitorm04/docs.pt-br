@@ -4,16 +4,20 @@ description: Lista as alterações significativas em ASP.NET Core.
 ms.date: 11/25/2019
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: ba8d17d4a3d44f9ebac1592afa1d987cfb23c5e7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: HT
+ms.openlocfilehash: 130a89f45c3f80975c56ea3a4845ee560921286e
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552143"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568374"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core alterações significativas
 
 A seguir está uma lista de ASP.NET Core alterações significativas por versão ASP.NET Core. ASP.NET Core fornece os recursos de desenvolvimento de aplicativo Web usados pelo .NET Core.
+
+## <a name="aspnet-core-31"></a>ASP.NET Core 3,1
+
+[!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
 ## <a name="aspnet-core-30"></a>ASP.NET Core 3,0
 
@@ -202,7 +206,3 @@ A seguir está uma lista de ASP.NET Core alterações significativas por versão
 ***
 
 [!INCLUDE[Target framework: .NET Framework not supported](~/includes/core-changes/aspnetcore/3.0/targetfx-netfx-tfm-support.md)]
-
-## <a name="aspnet-core-31"></a>ASP.NET Core 3,1
-
-[!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]

@@ -2,16 +2,24 @@
 title: Categorias de alteração da falha – .NET Core
 description: Saiba mais sobre as maneiras como as alterações da falha são categorizadas no .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 68bc51b6662de070ef901b73fb75ff3aced95726
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739356"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567922"
 ---
 # <a name="breaking-change-categories"></a>Categorias de alteração significativa
 
-A *compatibilidade* refere-se à capacidade de compilar ou executar código em uma versão de uma implementação do .NET que não seja aquela com a qual o código foi originalmente desenvolvido. Uma alteração específica pode afetar a compatibilidade de seis maneiras diferentes. Os [tipos individuais de alterações consideradas ao avaliar a compatibilidade](index.md) se enquadram nas cinco primeiras categorias.
+A *compatibilidade* refere-se à capacidade de compilar ou executar código em uma versão de uma implementação do .NET que não seja aquela com a qual o código foi originalmente desenvolvido. Uma alteração específica pode afetar a compatibilidade de seis maneiras diferentes. Os [tipos individuais de alterações](index.md) que são consideradas ao avaliar a compatibilidade se enquadram nas seguintes categorias:
+
+- [alteração comportamental](#behavioral-change)
+- [compatibilidade binária](#binary-compatibility)
+- [compatibilidade de origem](#source-compatibility)
+- [compatibilidade de tempo de design](#design-time-compatibility)
+- [compatibilidade com versões anteriores](#backwards-compatibility)
+
+A compatibilidade com o [encaminhamento](#forward-compatibility) não é uma meta do .NET Core.
 
 ## <a name="behavioral-change"></a>Alteração de comportamento
 

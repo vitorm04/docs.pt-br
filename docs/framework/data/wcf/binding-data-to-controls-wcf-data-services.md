@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
-ms.openlocfilehash: 605ff7a9acaaa217f0e482579968757dd451aed9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ab75380738064a001b12e79d1481d053622077ef
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974844"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569330"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>Associando dados a controles (WCF Data Services)
-Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode associar controles como os controles `ComboBox` e `ListView` a uma instância da classe <xref:System.Data.Services.Client.DataServiceCollection%601>. Essa coleção, que herda da classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, contém os dados de um feed Protocolo Open Data (OData). Essa classe representa uma coleção de dados dinâmicos que fornece notificações quando itens são adicionados ou removidos. Quando você usa uma instância de <xref:System.Data.Services.Client.DataServiceCollection%601> para associação de dados, as bibliotecas de cliente do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] lidam com esses eventos para garantir que os objetos rastreados pelo <xref:System.Data.Services.Client.DataServiceContext> permaneçam sincronizados com os dados no elemento de interface do usuário associado.  
+Com WCF Data Services, você pode associar controles como os controles `ComboBox` e `ListView` a uma instância da classe <xref:System.Data.Services.Client.DataServiceCollection%601>. Essa coleção, que herda da classe <xref:System.Collections.ObjectModel.ObservableCollection%601>, contém os dados de um feed Protocolo Open Data (OData). Essa classe representa uma coleção de dados dinâmicos que fornece notificações quando itens são adicionados ou removidos. Quando você usa uma instância de <xref:System.Data.Services.Client.DataServiceCollection%601> para associação de dados, as bibliotecas de cliente do WCF Data Services lidam com esses eventos para garantir que os objetos rastreados pelo <xref:System.Data.Services.Client.DataServiceContext> permaneçam sincronizados com os dados no elemento de interface do usuário associado.  
   
  A classe <xref:System.Data.Services.Client.DataServiceCollection%601> (indiretamente) implementa a interface do <xref:System.Collections.Specialized.INotifyCollectionChanged> para alertar o contexto quando os objetos forem adicionados ou removidos da coleção. Os objetos do tipo de serviço de dados usados com <xref:System.Data.Services.Client.DataServiceCollection%601> também devem implementar a interface de <xref:System.ComponentModel.INotifyPropertyChanged> para alertar <xref:System.Data.Services.Client.DataServiceCollection%601> quando as propriedades dos objetos na coleção de associação forem alterados.  
   
@@ -86,7 +86,7 @@ Com [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você pode asso
 - `entityCollectionChanged` - um método que é chamado quando um objeto é adicionado ou removido da coleção de associação. Esse delegado de <xref:System.Func%602> aceita um objeto <xref:System.Data.Services.Client.EntityCollectionChangedParams> e retorna um valor booliano que indica se o comportamento padrão, chamar <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> para uma ação <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> ou <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> para uma ação <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> no <xref:System.Data.Services.Client.DataServiceContext>, ainda deve ocorrer.  
   
 > [!NOTE]
-> O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] não executa nenhuma validação dos comportamentos personalizados que você implementa nesses delegados.  
+> WCF Data Services não executa nenhuma validação dos comportamentos personalizados que você implementa nesses delegados.  
   
  No exemplo a seguir, a ação <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> é personalizada para chamar o <xref:System.Data.Services.Client.DataServiceContext.DeleteLink%2A> e o método <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> para remover as entidades `Orders_Details` que pertencem a uma entidade `Orders` excluída. Esta ação personalizada é executada porque as entidades dependentes não são excluídas automaticamente quando o objeto pai é excluído.  
   

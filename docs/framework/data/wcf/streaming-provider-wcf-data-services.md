@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: da575c65902ec8751c12482d0c8d0abd523623e4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975128"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568802"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 
@@ -25,7 +25,7 @@ Um serviço de dados pode expor dados de objeto binário grande. Esses dados bin
 
 - Entrada de link de mídia - uma entidade que tem uma referência a um fluxo de recurso de mídia relacionado.
 
-Com o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], você define um fluxo de recurso binário implementando um provedor de dados de streaming. A implementação do provedor de streaming fornece o serviço de dados com o fluxo de recursos de mídia associado a uma entidade específica como um objeto <xref:System.IO.Stream>. Essa implementação permite que o serviço de dados aceite e retorne recursos de mídia sobre HTTP como fluxos de dados binários de um tipo MIME especificado.
+Com WCF Data Services, você define um fluxo de recursos binários implementando um provedor de dados de streaming. A implementação do provedor de streaming fornece o serviço de dados com o fluxo de recursos de mídia associado a uma entidade específica como um objeto <xref:System.IO.Stream>. Essa implementação permite que o serviço de dados aceite e retorne recursos de mídia sobre HTTP como fluxos de dados binários de um tipo MIME especificado.
 
 A configuração de um serviço de dados para oferecer suporte ao streaming de dados binários requer as seguintes etapas:
 
@@ -79,7 +79,7 @@ Para criar um serviço de dados que oferece suporte a fluxos de dados binários,
 
 ## <a name="creating-the-streaming-data-service"></a>Criando o serviço de dados de streaming
 
-Para fornecer o runtime do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] com acesso à implementação do <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, o serviço de dados que você cria também deve implementar a interface <xref:System.IServiceProvider>. O exemplo a seguir mostra como implementar o método <xref:System.IServiceProvider.GetService%2A> para retornar uma instância da classe `PhotoServiceStreamProvider` que implementa o <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
+Para fornecer ao WCF Data Services tempo de execução com acesso à implementação de <xref:System.Data.Services.Providers.IDataServiceStreamProvider>, o serviço de dados que você cria também deve implementar a interface <xref:System.IServiceProvider>. O exemplo a seguir mostra como implementar o método <xref:System.IServiceProvider.GetService%2A> para retornar uma instância da classe `PhotoServiceStreamProvider` que implementa o <xref:System.Data.Services.Providers.IDataServiceStreamProvider>.
 
 [!code-csharp[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_photo_streaming_service/cs/photodata.svc.cs#photoservicestreamingprovider)]
 [!code-vb[Astoria Photo Streaming Service#PhotoServiceStreamingProvider](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_photo_streaming_service/vb/photodata.svc.vb#photoservicestreamingprovider)]
@@ -99,7 +99,7 @@ Por padrão, os Serviços de Informações da Internet (IIS) também limita o ta
 
 ## <a name="using-data-streams-in-a-client-application"></a>Usando fluxos de dados em um aplicativo cliente
 
-A biblioteca de cliente do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite a recuperação e a atualização desses recursos expostos como fluxos binários no cliente. Para obter mais informações, consulte [trabalhando com dados binários](working-with-binary-data-wcf-data-services.md).
+A biblioteca de cliente WCF Data Services permite que você recupere e atualize esses recursos expostos como fluxos binários no cliente. Para obter mais informações, consulte [trabalhando com dados binários](working-with-binary-data-wcf-data-services.md).
 
 ## <a name="considerations-for-working-with-a-streaming-provider"></a>Considerações para trabalhar com um provedor de streaming
 

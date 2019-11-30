@@ -2,17 +2,17 @@
 title: Opções e diretrizes da tecnologia ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: d0f363d5eb102edf965c9c6068873fce0721d288
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 6c7ff59be7c163117ba990331e7cae75d10e8f59
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785779"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569429"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opções e diretrizes da tecnologia ADO.NET
 A Plataforma de Dados do ADO.NET é uma estratégia de várias versões para diminuir a quantidade de codificação e de manutenção necessária para habilitar os desenvolvedores para programarem com modelos de dados de entidade conceituais. Essa plataforma inclui o ADO.NET Entity Framework e as tecnologias relacionadas.  
   
-## <a name="entity-framework"></a>Entity Framework  
+## <a name="entity-framework"></a>{1&gt;{2&gt;Entity Framework&lt;2}&lt;1}  
  O ADO.NET Entity Framework foi criado para permitir que os desenvolvedores criem aplicativos de acesso a dados programando em um modelo de aplicativo conceitual, em vez de programar diretamente em um esquema de armazenamento relacional. O objetivo é diminuir a quantidade de código e de manutenção necessários a aplicativos orientados a dados. Para obter mais informações, consulte [ADO.NET Entity Framework](./ef/index.md).  
   
 ### <a name="entity-data-model-edm"></a>Modelo de Dados de Entidade (EDM)  
@@ -36,8 +36,8 @@ A Plataforma de Dados do ADO.NET é uma estratégia de várias versões para dim
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  O LINQ to SQL é uma implementação do OR/M (mapeamento relacional de objeto) que permite que você modele um banco de dados SQL Server usando classes do .NET Framework. O LINQ to SQL permite que você consulte seu banco de dados usando LINQ, bem como atualize, insira e exclua dados dele. O LINQ to SQL dá suporte a transações, exibições e procedimentos armazenados, fornecendo uma maneira fácil de integrar regras de validação de dados e de lógica de negócios no modelo de dados. Você pode usar o O/R Designer (Designer Relacional de Objeto) para modelar as classes e as associações de entidades que são baseadas em objetos em um banco de dados. Para obter mais informações, consulte [Ferramentas LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
-## <a name="wcf-data-services"></a>WCF Data Services  
- O [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implanta serviços de dados na Web ou em uma intranet. Os dados são estruturados como entidades e relações de acordo com as especificações do Modelo de Dados de Entidade. Os dados implantados nesse modelo são endereçáveis pelo protocolo HTTP padrão. Para obter mais informações, consulte [WCF Data Services 4,5](../wcf/index.md).  
+## <a name="wcf-data-services"></a>{1&gt;{2&gt;WCF Data Services&lt;2}&lt;1}  
+ WCF Data Services implanta serviços de dados na Web ou em uma intranet. Os dados são estruturados como entidades e relações de acordo com as especificações do Modelo de Dados de Entidade. Os dados implantados nesse modelo são endereçáveis pelo protocolo HTTP padrão. Para obter mais informações, consulte [WCF Data Services 4,5](../wcf/index.md).  
   
 ## <a name="see-also"></a>Consulte também
 

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
-ms.openlocfilehash: fd76f456665da76138b927d85a53924e8169c30a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c5f6bd001a5198f14bf05c0730f3988d54142eae
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975368"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569242"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Provedores de serviço de dados personalizados (WCF Data Services)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui um conjunto de provedores que permite que você defina um modelo de dados com base em tipos de dados de associação tardia.  
+WCF Data Services inclui um conjunto de provedores que permite que você defina um modelo de dados com base em tipos de dados de associação tardia.  
   
 |Provider|Descrição|  
 |--------------|-----------------|  

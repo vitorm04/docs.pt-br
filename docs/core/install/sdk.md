@@ -6,25 +6,16 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 6e9af6c84c81b1244e10fa7d5955ab67d34b1f0a
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: HT
+ms.openlocfilehash: 54819b409422e8bda9efe25478aa3424683a380b
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552203"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567468"
 ---
 # <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
 
 Neste artigo, você aprenderá a instalar o SDK do .NET Core. O SDK do .NET Core é usado para criar aplicativos e bibliotecas do .NET Core. O tempo de execução do .NET Core é sempre instalado com o SDK.
-
-Você pode baixar e instalar o .NET Core diretamente com um dos seguintes links:
-
-- [Downloads do .NET Core 3,1 Preview 3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [Downloads do .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [Downloads do .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [Downloads do .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
-
-Você também pode instalar o .NET Core como parte de um ambiente de desenvolvimento integrado (IDE), detalhado nas seções a seguir.
 
 ::: zone pivot="os-windows,os-macos"
 
@@ -32,8 +23,8 @@ Você também pode instalar o .NET Core como parte de um ambiente de desenvolvim
 
 O Windows e o macOS têm instaladores autônomos que podem ser usados para instalar o SDK do .NET Core 3,0.
 
-- [CPUs Windows x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x64-installer) | [CPUs x32](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-windows-x86-installer)
-- [CPUs x64](https://dotnet.microsoft.com/download/thank-you/dotnet-sdk-3.0.100-macos-x64-installer) do MacOS
+- [CPUs Windows x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [cpus x86 (32 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [CPUs do MacOS x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ::: zone-end
 
@@ -41,7 +32,30 @@ O Windows e o macOS têm instaladores autônomos que podem ser usados para insta
 
 ## <a name="install-with-a-package-manager"></a>Instalar com um Gerenciador de pacotes
 
-Você pode instalar o SDK do .NET Core com muitos dos gerenciadores de pacotes do Linux comuns. Para obter mais informações, consulte [Gerenciador de pacotes do Linux – instalar o .NET Core](linux-package-manager-rhel7.md).
+Você pode instalar o SDK do .NET Core com muitos dos gerenciadores de pacotes do Linux comuns. Para obter mais informações, consulte [Gerenciador de pacotes do Linux – instalar o .NET Core](linux-package-managers.md).
+
+## <a name="download-and-manually-install"></a>Baixar e instalar manualmente
+
+Para extrair o SDK e tornar os comandos disponíveis no terminal, primeiro [Baixe](#all-net-core-downloads) uma versão binária do .NET Core. Em seguida, abra um terminal e execute os comandos a seguir.
+
+```bash
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.0.101-linux-musl-x64.tar.gz -C $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+> [!TIP]
+> Os comandos acima só disponibilizarão os comandos do SDK do .NET para a sessão de terminal na qual ele foi executado.
+>
+> Você pode editar seu perfil de Shell para adicionar os comandos permanentemente. Há vários shells diferentes disponíveis para o Linux e cada um deles tem um perfil diferente. Por exemplo:
+>
+> - **Shell bash**: *~/. bash_profile*, *~/.bashrc*
+> - **Shell Korn**: *~/.Kshrc* ou *. Profile*
+> - **Shell Z**: *~/.zshrc* ou *. zprofile*
+> 
+> Edite o arquivo de origem apropriado para o Shell e adicione `:$HOME/dotnet` ao final da instrução `PATH` existente. Se nenhuma instrução de `PATH` for incluída, adicione uma nova linha com `export PATH=$PATH:$HOME/dotnet`.
+>
+> Além disso, adicione `export DOTNET_ROOT=$HOME/dotnet` ao final do arquivo.
 
 ::: zone-end
 
@@ -53,6 +67,7 @@ Se você estiver usando o Visual Studio para desenvolver aplicativos .NET Core, 
 
 | Versão do SDK do .NET Core | Versão do Visual Studio                      |
 | --------------------- | ------------------------------------------ |
+| visualização de 3,1           | Visual Studio 2019 versão 16,4 Preview ou superior. |
 | 3.0                   | Visual Studio 2019 versão 16,3 ou superior. |
 | 2.2                   | Visual Studio 2017 versão 15,9 ou superior. |
 | 2.1                   | Visual Studio 2017 versão 15,7 ou superior. |
@@ -90,14 +105,14 @@ Visual Studio para Mac instala o SDK do .NET Core quando a carga de trabalho do 
 
 ::: zone-end
 
-## <a name="install-from-visual-studio-code"></a>Instalar do Visual Studio Code
+## <a name="install-alongside-visual-studio-code"></a>Instalar junto com Visual Studio Code
 
 Visual Studio Code é um editor de código-fonte leve e avançado que é executado em sua área de trabalho. Visual Studio Code está disponível para Windows, macOS e Linux.
 
-Embora Visual Studio Code não venha com o suporte do .NET Core, a adição do suporte ao .NET Core é simples.
+Embora Visual Studio Code não venha com um instalador .NET Core automatizado como o Visual Studio, adicionar o suporte ao .NET Core é simples.
 
 01. [Baixe e instale o Visual Studio Code](https://code.visualstudio.com/Download).
-01. [Baixe e instale o SDK do .NET Core](https://dotnet.microsoft.com/download/dotnet-core/3.0).
+01. [Baixe e instale o SDK do .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 01. [Instale a C# extensão do Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).
 
 ::: zone pivot="os-windows"
@@ -127,6 +142,15 @@ O script assume como padrão a instalação da versão mais recente do [LTS (sup
 ```
 
 ::: zone-end
+
+## <a name="all-net-core-downloads"></a>Todos os downloads do .NET Core
+
+Você pode baixar e instalar o .NET Core diretamente com um dos seguintes links:
+
+- [Downloads da versão prévia do .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Downloads do .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [Downloads do .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [Downloads do .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ## <a name="docker"></a>Docker
 

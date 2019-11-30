@@ -6,23 +6,16 @@ ms.author: adegeo
 ms.date: 11/06/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d39e5912cf2ae73631c2f1192adb516e84dfed32
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: HT
+ms.openlocfilehash: fbe9b9e12dc53d9ab6570299e03f2b0a8868fb53
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552195"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567268"
 ---
 # <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
 
 Neste artigo, você aprenderá a baixar e instalar o tempo de execução do .NET Core. O tempo de execução do .NET Core é usado para executar aplicativos criados com o .NET Core.
-
-Você pode baixar e instalar o .NET Core diretamente com um dos seguintes links:
-
-- [Downloads do .NET Core 3,1 Preview 3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-- [Downloads do .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-- [Downloads do .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
-- [Downloads do .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ::: zone pivot="os-windows,os-macos"
 
@@ -30,8 +23,8 @@ Você pode baixar e instalar o .NET Core diretamente com um dos seguintes links:
 
 O Windows e o macOS têm instaladores autônomos que podem ser usados para instalar o tempo de execução do .NET Core 3,0.
 
-- [CPUs Windows x64](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-windows-x64-installer) | [CPUs x32](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-windows-x86-installer)
-- [CPUs x64](https://dotnet.microsoft.com/download/thank-you/dotnet-runtime-3.0.0-macos-x64-installer) do MacOS
+- [CPUs Windows x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.0) | [cpus x86 (32 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [CPUs do MacOS x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 
 ::: zone-end
 
@@ -70,6 +63,15 @@ O script assume como padrão a instalação da versão mais recente do [LTS (sup
 ```
 
 ::: zone-end
+
+## <a name="all-net-core-downloads"></a>Todos os downloads do .NET Core
+
+Você pode baixar e instalar o .NET Core diretamente com um dos seguintes links:
+
+- [Downloads da versão prévia do .NET Core 3,1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [Downloads do .NET Core 3,0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [Downloads do .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+- [Downloads do .NET Core 2,1](https://dotnet.microsoft.com/download/dotnet-core/2.1)
 
 ## <a name="docker"></a>Docker
 

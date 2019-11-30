@@ -6,19 +6,19 @@ helpviewer_keywords:
 - DataServiceQuery class, about DataServiceQuery class
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
-ms.openlocfilehash: e078ba07072f71332aa2f19681b142df946ec391
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 74b3e50c36f0b3238b8fb74ca1ea1b336e0983c0
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975067"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74568778"
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteca de cliente do WCF Data Services
-Qualquer aplicativo pode interagir com um serviço de dados baseado em Protocolo Open Data (OData) se ele puder enviar uma solicitação HTTP e processar o feed OData que um serviço de dados retorna. Essa interoperabilidade permite acessar serviços baseados em OData de uma ampla variedade de aplicativos habilitados para a Web. a [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] inclui bibliotecas de cliente que fornecem uma experiência de programação mais rica quando você consome feeds OData de aplicativos baseados em .NET Framework ou Silverlight.  
+Qualquer aplicativo pode interagir com um serviço de dados baseado em Protocolo Open Data (OData) se ele puder enviar uma solicitação HTTP e processar o feed OData que um serviço de dados retorna. Essa interoperabilidade permite acessar serviços baseados em OData de uma ampla variedade de aplicativos habilitados para a Web. A WCF Data Services inclui bibliotecas de cliente que fornecem uma experiência de programação mais rica quando você consome feeds OData de aplicativos baseados em .NET Framework ou Silverlight.  
   
  As duas principais classes de biblioteca de cliente são as classes <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601>. A classe <xref:System.Data.Services.Client.DataServiceContext> encapsula as operações que têm suporte em um serviço de dados especificado. Embora os serviços OData sejam sem estado, o contexto não é. Portanto, você pode usar a classe <xref:System.Data.Services.Client.DataServiceContext> para manter o estado no cliente entre as interações com o serviço de dados a fim de dar suporte a recursos como o gerenciamento de alterações. Essa classe também gerencia identidades e rastreia alterações. A classe <xref:System.Data.Services.Client.DataServiceQuery%601> representa uma consulta em um conjunto de entidades específico.  
   
- Esta seção descreve como usar bibliotecas de cliente para acessar e modificar dados de um aplicativo cliente do .NET Framework. Para obter mais informações sobre como usar a biblioteca de cliente do [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] com um aplicativo baseado no Silverlight, consulte [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Outras bibliotecas de cliente estão disponíveis para permitir que você consuma um feed OData em outros tipos de aplicativos. Para obter mais informações, consulte o [SDK do OData](https://go.microsoft.com/fwlink/?LinkID=185796).  
+ Esta seção descreve como usar bibliotecas de cliente para acessar e modificar dados de um aplicativo cliente do .NET Framework. Para obter mais informações sobre como usar a biblioteca de cliente do WCF Data Services com um aplicativo baseado no Silverlight, consulte [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=186016). Outras bibliotecas de cliente estão disponíveis para permitir que você consuma um feed OData em outros tipos de aplicativos. Para obter mais informações, consulte o [SDK do OData](https://go.microsoft.com/fwlink/?LinkID=185796).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Generating the Data Service Client Library](generating-the-data-service-client-library-wcf-data-services.md) (Gerando a biblioteca de clientes do serviço de dados)  

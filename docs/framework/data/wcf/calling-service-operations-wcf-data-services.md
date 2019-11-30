@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: a64a09195101cd4b1ec3c6f990dd09d54466aea0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: bc2338191bbf6922f56c833ebf115c5b21d92b00
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975407"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569307"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Chamando operações de serviço (WCF Data Services)
-O Protocolo Open Data (OData) define as operações de serviço para um serviço de dados. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] permite que você defina operações como métodos no serviço de dados. Assim como outros recursos de serviço de dados, essas operações de serviço são endereçadas usando URIs. Uma operação de serviço pode retornar coleções de tipos de entidade, instâncias de tipo de entidade única e tipos primitivos, como inteiro e cadeia de caracteres. Uma operação de serviço também pode retornar `null` (`Nothing` em Visual Basic). A biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] pode ser usada para acessar as operações de serviço que dão suporte a solicitações HTTP GET. Esses tipos de operações de serviço são definidos como métodos que têm o <xref:System.ServiceModel.Web.WebGetAttribute> aplicado. Para obter mais informações, consulte [operações de serviço](service-operations-wcf-data-services.md).  
+O Protocolo Open Data (OData) define as operações de serviço para um serviço de dados. WCF Data Services permite que você defina operações como métodos no serviço de dados. Assim como outros recursos de serviço de dados, essas operações de serviço são endereçadas usando URIs. Uma operação de serviço pode retornar coleções de tipos de entidade, instâncias de tipo de entidade única e tipos primitivos, como inteiro e cadeia de caracteres. Uma operação de serviço também pode retornar `null` (`Nothing` em Visual Basic). A biblioteca de cliente WCF Data Services pode ser usada para acessar as operações de serviço que dão suporte a solicitações HTTP GET. Esses tipos de operações de serviço são definidos como métodos que têm o <xref:System.ServiceModel.Web.WebGetAttribute> aplicado. Para obter mais informações, consulte [operações de serviço](service-operations-wcf-data-services.md).  
   
- As operações de serviço são expostas nos metadados retornados por um serviço de dados que implementa o OData. Nos metadados, as operações de serviço são representadas como elementos de `FunctionImport`. Ao gerar o <xref:System.Data.Services.Client.DataServiceContext>fortemente tipado, as ferramentas Adicionar Referência de Serviço e DataSvcUtil. exe ignoram esse elemento. Por isso, você não encontrará um método no contexto que possa ser usado para chamar uma operação de serviço diretamente. No entanto, você ainda pode usar o cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para chamar operações de serviço de uma destas duas maneiras:  
+ As operações de serviço são expostas nos metadados retornados por um serviço de dados que implementa o OData. Nos metadados, as operações de serviço são representadas como elementos de `FunctionImport`. Ao gerar o <xref:System.Data.Services.Client.DataServiceContext>fortemente tipado, as ferramentas Adicionar Referência de Serviço e DataSvcUtil. exe ignoram esse elemento. Por isso, você não encontrará um método no contexto que possa ser usado para chamar uma operação de serviço diretamente. No entanto, você ainda pode usar o cliente WCF Data Services para chamar operações de serviço de uma destas duas maneiras:  
   
 - Chamando o método <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> no <xref:System.Data.Services.Client.DataServiceContext>, fornecendo o URI da operação de serviço, juntamente com quaisquer parâmetros. Esse método é usado para chamar qualquer operação de obtenção de serviço.  
   
 - Usando o método <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> no <xref:System.Data.Services.Client.DataServiceContext> para criar um objeto <xref:System.Data.Services.Client.DataServiceQuery%601>. Ao chamar <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A>, o nome da operação de serviço é fornecido para o parâmetro `entitySetName`. Esse método retorna um objeto <xref:System.Data.Services.Client.DataServiceQuery%601> que chama a operação de serviço quando enumerado ou quando o método <xref:System.Data.Services.Client.DataServiceQuery%601.Execute%2A> é chamado. Esse método é usado para chamar operações GET Service que retornam uma coleção. Um único parâmetro pode ser fornecido usando o método <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>. O objeto de <xref:System.Data.Services.Client.DataServiceQuery%601> retornado por esse método pode ser mais composto como qualquer objeto de consulta. Para obter mais informações, consulte [consultando o serviço de dados](querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="considerations-for-calling-service-operations"></a>Considerações para chamar operações de serviço  
- As considerações a seguir se aplicam ao usar o cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para chamar operações de serviço.  
+ As considerações a seguir se aplicam ao usar o cliente WCF Data Services para chamar operações de serviço.  
   
 - Ao acessar o serviço de dados de forma assíncrona, você deve usar os métodos equivalentes <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A>assíncronos /<xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> nos métodos <xref:System.Data.Services.Client.DataServiceContext> ou <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A>/<xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> no <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
-- A biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] não pode materializar os resultados de uma operação de serviço que retorna uma coleção de tipos primitivos.  
+- A biblioteca de cliente WCF Data Services não pode materializar os resultados de uma operação de serviço que retorna uma coleção de tipos primitivos.  
   
-- A biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] não dá suporte à chamada de operações de serviço POST. As operações de serviço que são chamadas por um HTTP POST são definidas usando o <xref:System.ServiceModel.Web.WebInvokeAttribute> com o parâmetro `Method="POST"`. Para chamar uma operação de serviço usando uma solicitação HTTP POST, você deve usar um <xref:System.Net.HttpWebRequest>.  
+- A biblioteca de cliente WCF Data Services não dá suporte à chamada de operações de serviço POST. As operações de serviço que são chamadas por um HTTP POST são definidas usando o <xref:System.ServiceModel.Web.WebInvokeAttribute> com o parâmetro `Method="POST"`. Para chamar uma operação de serviço usando uma solicitação HTTP POST, você deve usar um <xref:System.Net.HttpWebRequest>.  
   
 - Você não pode usar <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> para chamar uma operação GET Service que retorna um único resultado, de uma entidade ou tipo primitivo, ou que requer mais de um parâmetro de entrada. Em vez disso, você deve chamar o método <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>.  
   
@@ -37,7 +37,7 @@ O Protocolo Open Data (OData) define as operações de serviço para um serviço
 - Quando você usa <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> para chamar uma operação de serviço, a biblioteca de cliente automaticamente escapa os caracteres fornecidos para o <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> executando a codificação por porcentagem de caracteres reservados, como e comercial (&) e saída de aspas simples em cadeias de caractere. No entanto, ao chamar um dos métodos *Execute* para chamar uma operação de serviço, você deve se lembrar de executar essa saída de qualquer valor de cadeia de caracteres fornecido pelo usuário. As aspas simples em URIs têm escape como pares de aspas simples.  
   
 ## <a name="examples-of-calling-service-operations"></a>Exemplos de chamada de operações de serviço  
- Esta seção contém os seguintes exemplos de como chamar operações de serviço usando a biblioteca de cliente [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]:  
+ Esta seção contém os seguintes exemplos de como chamar operações de serviço usando a biblioteca de cliente WCF Data Services:  
   
 - [Chamando Execute&lt;T&gt; para retornar uma coleção de entidades](calling-service-operations-wcf-data-services.md#ExecuteIQueryable)  
   

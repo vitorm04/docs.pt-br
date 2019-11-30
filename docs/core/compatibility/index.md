@@ -1,15 +1,15 @@
 ---
-title: Avaliar alterações da falha – .NET Core
-description: Saiba mais sobre as maneiras como o .NET Core tenta manter a compatibilidade para desenvolvedores em versões do .NET.
+title: Tipos de alterações significativas – .NET Core
+description: Saiba como o .NET Core tenta manter a compatibilidade para desenvolvedores em versões do .NET e que tipo de alteração é considerada uma alteração significativa.
 ms.date: 06/10/2019
-ms.openlocfilehash: 3ad3cbe36ee09d371e26dc7da36a31207a6c1b25
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973644"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74567711"
 ---
-# <a name="evaluate-breaking-changes-in-net-core"></a>Avaliar alterações da falha no .NET Core
+# <a name="changes-that-affect-compatibility"></a>Alterações que afetam a compatibilidade
 
 Ao longo de sua história, o .NET tentou manter um alto nível de compatibilidade de versão para versão e em todos os tipos de .NET. Isso também ocorre no .NET Core. Embora o .NET Core possa ser considerado uma nova tecnologia independente do .NET Framework, dois fatores principais limitam a capacidade do .NET Core de divergir do .NET Framework:
 
@@ -19,19 +19,19 @@ Ao longo de sua história, o .NET tentou manter um alto nível de compatibilidad
 
 Além da compatibilidade entre as implementações do .NET, os desenvolvedores esperam um alto nível de compatibilidade nas versões do .NET Core. Em particular, o código escrito para uma versão anterior do .NET Core precisam ser executado sem problemas em uma versão posterior do .NET Core. Na verdade, muitos desenvolvedores esperam que as novas APIs encontradas em versões recém-lançadas do .NET Core também sejam compatíveis com as versões de pré-lançamento em que essas APIs foram apresentadas.
 
-Este artigo descreve as categorias de alterações de compatibilidade (ou alterações significativas) e a maneira como a equipe do .NET avalia alterações em cada uma dessas categorias. Compreender como a equipe do .NET aborda as possíveis alterações de falha é particularmente útil para os desenvolvedores que abrem solicitações de pull no repositório [dotnet/corefx](https://github.com/dotnet/corefx) do GitHub que modificam o comportamento das APIs existentes.
+Este artigo descreve as categorias de alterações de compatibilidade (ou alterações significativas) e a maneira como a equipe do .NET avalia alterações em cada uma dessas categorias. Entender como a equipe .NET se aproxima das possíveis alterações significativas é particularmente útil para os desenvolvedores que abrem solicitações pull no repositório do GitHub [dotnet/corefx](https://github.com/dotnet/corefx) que modificam o comportamento das APIs existentes.
 
 > [!NOTE]
 > Para obter uma definição das categorias de compatibilidade, como compatibilidade binária e compatibilidade com versões anteriores, confira [Categorias de alterações significativas](categories.md).
 
-As seções a seguir descrevem as categorias de alterações feitas nas APIs do .NET Core e o impacto delas na compatibilidade do aplicativo. O ícone de ✔️ indica que um determinado tipo de alteração é permitido, ❌ indica que ele não é permitido e ❓ indica uma alteração que pode ou não ser permitida. Alterações nessa última categoria exigem uma avaliação do quanto o comportamento anterior era previsível, óbvio e consistente.
+As seções a seguir descrevem as categorias de alterações feitas nas APIs do .NET Core e o impacto delas na compatibilidade do aplicativo. O ícone de ✔️ indica que um determinado tipo de alteração é permitido, ❌ indica que ele não é permitido e ❓ indica uma alteração que pode ou não ser permitida. As alterações nessa última categoria exigem Judgement e uma avaliação do quão previsível, óbvio e consistente o comportamento anterior era.
 
 > [!NOTE]
 > Além de servir como um guia de como as alterações nas bibliotecas .NET Core são avaliadas, os desenvolvedores de bibliotecas também podem usar esses critérios para avaliar as alterações em suas bibliotecas voltadas a várias implementações e versões do .NET.
 
 ## <a name="modifications-to-the-public-contract"></a>Modificações no contrato público
 
-Alterações nesta categoria *modificam* a área de superfície pública de um tipo. A maioria das alterações nesta categoria não é permitida porque viola a *compatibilidade com versões anteriores* (a capacidade de um aplicativo desenvolvido com a versão anterior de uma API ser executado sem recompilação em uma versão posterior).
+As alterações nessa categoria modificam a área de superfície pública de um tipo. A maioria das alterações nesta categoria não é permitida porque viola a *compatibilidade com versões anteriores* (a capacidade de um aplicativo desenvolvido com a versão anterior de uma API ser executado sem recompilação em uma versão posterior).
 
 ### <a name="types"></a>Tipos
 
@@ -260,7 +260,7 @@ Alterações nesta categoria *modificam* a área de superfície pública de um t
 
 - **❌ remover uma exceção em qualquer outro caso não listado acima**
 
-### <a name="attributes"></a>Atributos
+### <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}
 
 - **✔️ Alterar o valor de um atributo que é *não* observável**
 

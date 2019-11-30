@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 24b7a11d031502b9a6b825f49d97214f68f92176
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 130265070e82245de4bdd49599df9fa9f435f5ed
+ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783816"
+ms.lasthandoff: 11/28/2019
+ms.locfileid: "74569417"
 ---
 # <a name="adonet"></a>ADO.NET
 O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para desenvolvedores do .NET Framework. O ADO.NET fornece um conjunto rico de componentes para criar aplicativos distribuídos e de compartilhamento de dados. Faz parte do .NET Framework, fornecendo acesso a dados de aplicativo relacionais e XML. O ADO.NET oferece suporte a uma variedade de necessidades de desenvolvimento, incluindo a criação de clientes front-end de banco de dados e objetos comerciais de camada intermediária usados por aplicativos, ferramentas, linguagens ou navegadores da Internet.  
@@ -43,7 +43,7 @@ O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para
  [Oracle and ADO.NET](oracle-and-adonet.md) (Oracle e ADO.NET)  
  Descreve os recursos e os comportamentos que são específicos ao Provedor de Dados .NET Framework para Oracle.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [LINQ (consulta integrada à linguagem) – C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  Fornece links para tópicos e exemplos do LINQ C#usando o.  
   
@@ -51,7 +51,7 @@ O ADO.NET é um conjunto de classes que expõem serviços de acesso a dados para
  Fornece links para tópicos e exemplos do LINQ usando o Visual Basic.  
   
  [WCF Data Services 4.5](../wcf/index.md)  
- Descreve como usar o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] para implantar serviços de dados na Web ou em uma intranet que implementa o Open Data Protocol (OData).  
+ Descreve como usar WCF Data Services para implantar serviços de dados na Web ou em uma intranet que implementam o Protocolo Open Data (OData).  
   
  [Guia de desenvolvimento do .NET Framework](../../development-guide.md)  
  Fornece links para informações sobre tarefas padrão de desenvolvimento no .NET Framework.  
