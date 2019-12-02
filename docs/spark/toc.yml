@@ -21,6 +21,8 @@
   items:
     - name: Depurar seu aplicativo
       href: how-to-guides/debug.md
+    - name: Enviar trabalhos para o HDInsight
+      href: how-to-guides/hdinsight-deploy-methods.md
 - name: Referência
   items:
     - name: Referência API
