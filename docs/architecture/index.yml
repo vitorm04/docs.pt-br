@@ -28,5 +28,5 @@ sections:
     items:
       - html: <ul><li><p><a href="cloud-native/index">Arquitetando aplicativos .NET nativos da nuvem para o Azure</a></p>
       - html: '<p>Este guia define o que é nativo na nuvem, apresenta um aplicativo de exemplo criado usando princípios nativos de nuvem e aborda os tópicos comuns à maioria dos aplicativos nativos de nuvem.</p></li></ul>'
-      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">Mais incrivelmente para desenvolvedores de Web Forms ASP.NET</a></p>
-      - html: <p>Uma introdução ao mais incrivelmente para desenvolvedores de ASP.NET Web Forms. Saiba como criar aplicativos Web de pilha completa com o .NET usando o mais alto nível e o .NET Core de uma maneira simples e familiar.</p></li></ul>
+      - html: <ul><li><p><a href="blazor-for-web-forms-developers/index">Blazor para desenvolvedores de Web Forms ASP.NET</a></p>
+      - html: <p>Uma introdução ao Blazor para desenvolvedores de ASP.NET Web Forms. Saiba como criar aplicativos Web full-stack .NET usando Blazor e o .NET Core de uma maneira simples e familiar.</p></li></ul>
