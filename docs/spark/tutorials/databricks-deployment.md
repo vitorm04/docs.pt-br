@@ -4,12 +4,12 @@ description: Descubra como implantar um aplicativo do .NET para Apache Spark no 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c1c1a57fb2b79826218f8ed94d568b37d4689560
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: e79b4c5bf38416cf45776488559bd0b2d5582361
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454270"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716473"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: implantar um aplicativo .NET para Apache Spark no databricks
 
@@ -24,7 +24,7 @@ Neste tutorial, você aprenderá como:
 > - Crie um trabalho do Spark e um cluster Spark.
 > - Execute seu aplicativo no cluster do Spark.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Antes de começar, execute as seguintes tarefas:
 
@@ -50,7 +50,7 @@ Nesta seção, você cria um espaço de trabalho Azure Databricks usando o porta
     |---------|---------|
     |**Nome do espaço de trabalho**     | Forneça um nome para seu espaço de trabalho do databricks.        |
     |**Assinatura**     | Na lista suspensa, selecione sua assinatura do Azure.        |
-    |**Grupo de recursos**     | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém recursos relacionados para uma solução do Azure. Para obter mais informações, consulte [visão geral do grupo de recursos do Azure](/azure/azure-databricks/azure-resource-manager/resource-group-overview). |
+    |**Grupo de recursos**     | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém recursos relacionados para uma solução do Azure. Para obter mais informações, consulte [visão geral do grupo de recursos do Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Local**     | Selecione sua região preferida. Para obter informações sobre regiões disponíveis, consulte [Serviços do Azure disponíveis por região](https://azure.microsoft.com/regions/services/).        |
     |**Tipo de preço**     |  Escolha entre **Standard**, **Premium**ou **avaliação**. Para obter mais informações sobre essas camadas, consulte a [página de preços do databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
     |**Rede virtual**     |   Não       |
@@ -221,7 +221,7 @@ Seu aplicativo é executado em Azure Databricks por meio de um trabalho que exec
 
 Se você não precisar mais do espaço de trabalho do databricks, poderá excluir seu recurso de Azure Databricks no portal do Azure. Você também pode selecionar o nome do grupo de recursos para abrir a página do grupo de recursos e, em seguida, selecionar **excluir grupo de recursos**.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Neste tutorial, você implantou seu aplicativo .NET para Apache Spark para o Databricks. Para saber mais sobre o Databricks, leia a documentação do Azure Databricks.
 
