@@ -2,12 +2,12 @@
 title: Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entender eventos de integração para implementar comunicação baseada em evento entre microsserviços.
 ms.date: 10/02/2018
-ms.openlocfilehash: 70566745dc084ba9016a850ad749fefb958e89ec
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737134"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711222"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 
@@ -126,6 +126,19 @@ public interface IEventBus
 O método `Publish` é simples. O barramento de evento difundirá o evento de integração passado a ele para qualquer microsserviço ou até mesmo um aplicativo externo, que assine esse evento. Esse método é usado pelo microsserviço que está publicando o evento.
 
 Os métodos `Subscribe` (você pode ter várias implementações, dependendo dos argumentos) são usados pelos microsserviços que desejam receber eventos. Esse método tem dois argumentos. O primeiro é o evento de integração a assinar (`IntegrationEvent`). O segundo argumento é o manipulador de eventos de integração (ou método de retorno de chamada), denominado `IIntegrationEventHandler<T>`, a ser executado quando o microsserviço receptor obtiver essa mensagem de evento de integração.
+
+## <a name="additional-resources"></a>Recursos adicionais
+
+Algumas soluções de mensagens prontas para produção:
+
+-  \ **do barramento de serviço do Azure**
+  <https://docs.microsoft.com/azure/service-bus-messaging/>
+  
+-  \ **nServiceBus**
+  <https://particular.net/nservicebus>
+  
+-  \ **MassTransit**
+  <https://masstransit-project.com/>
 
 > [!div class="step-by-step"]
 > [Anterior](database-server-container.md)

@@ -2,12 +2,12 @@
 title: Crie serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
 description: Modernizar aplicativos .NET existentes com contêineres de nuvem e Windows do Azure | Crie serviços resilientes prontos para a nuvem. adote as falhas transitórias na nuvem
 ms.date: 04/30/2018
-ms.openlocfilehash: e6fae8140b55cb0308dca9f4b77e961501b41f8f
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e516dc675ceb8def25c6d676bced0ea7f253b2d5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73739401"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711266"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Crie serviços resilientes prontos para a nuvem: Adote falhas transitórias na nuvem
 
@@ -27,7 +27,7 @@ Um cenário semelhante pode ocorrer em um aplicativo que consome serviços HTTP.
 
 Um aplicativo resiliente como o mostrado na Figura 4-9 deve implementar técnicas como "repetições com retirada exponencial" para dar ao aplicativo uma oportunidade de lidar com falhas transitórias nos recursos. Você também deve usar "disjuntores de circuito" em seus aplicativos. Um disjuntor impede que um aplicativo tente acessar um recurso quando é realmente uma falha de longo prazo. Usando um disjuntor, o aplicativo evita provocativa uma negação de serviço a si mesmo.
 
-![Diagrama de falhas parciais tratadas por repetições com retirada exponencial.](./media/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud/retry-partial-failures.png)
+![Diagrama de falhas parciais tratadas por repetições com retirada exponencial.](./media/retry-partial-failures.png)
 
 **Figura 4-9.** Falhas parciais tratadas por repetições com retirada exponencial
 

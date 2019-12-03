@@ -2,12 +2,12 @@
 title: Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Use o RabbitMQ para implementar mensagens de barramento de eventos para eventos de integração para os ambientes de desenvolvimento ou de teste.
 ms.date: 10/02/2018
-ms.openlocfilehash: 211348caec3c101435fcdd99bd96fd8e17a6456b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739495"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711193"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementando um barramento de eventos com o RabbitMQ para o ambiente de desenvolvimento ou de teste
 
@@ -108,6 +108,20 @@ Cada tipo de evento tem um canal relacionado para obter eventos do RabbitMQ. Em 
 
 O método Subscribe aceita um objeto IIntegrationEventHandler, que é como um método de retorno de chamada no microsserviço atual, além de seu objeto IntegrationEvent relacionado. O código, então, adiciona o manipulador de eventos à lista de manipuladores de eventos que cada tipo de evento de integração pode ter por microsserviço do cliente. Se o código do cliente ainda não tiver assinado o evento, o código criará um canal para o tipo de evento para que ele possa receber eventos em um estilo de push do RabbitMQ quando esse evento for publicado de qualquer outro serviço.
 
+Conforme mencionado acima, o barramento de evento implementado em eShopOnContainers tem apenas e finalidade Education, já que trata apenas dos principais cenários, portanto, ele não está pronto para produção.
+
+Para cenários de produção, verifique os recursos adicionais abaixo, específicos para RabbitMQ e a seção [implementando a comunicação baseada em evento entre os microserviços](./integration-event-based-microservice-communications.md#additional-resources) .
+
+## <a name="additional-resources"></a>Recursos adicionais
+
+Uma solução pronta para produção com suporte para RabbitMQ.
+
+- **EasyNetQ** -cliente de API .net de código aberto para RabbitMQ \
+  <http://easynetq.com/>
+
+-  \ **MassTransit**
+  <https://masstransit-project.com/>
+  
 >[!div class="step-by-step"]
 >[Anterior](integration-event-based-microservice-communications.md)
 >[Próximo](subscribe-events.md)

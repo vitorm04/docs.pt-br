@@ -2,12 +2,12 @@
 title: Malhas de serviço-gRPC para desenvolvedores do WCF
 description: Usar uma malha de serviço para rotear e balancear solicitações para serviços gRPC em um cluster kubernetes.
 ms.date: 09/02/2019
-ms.openlocfilehash: d20275082973f30bddbb342da90454401d4f019b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: cc4855b1ed27e29076e4f13f5c5d3dffa63a6554
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966962"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711270"
 ---
 # <a name="service-meshes"></a>Malhas de serviço
 
@@ -21,7 +21,7 @@ Uma malha de serviço é um componente de infraestrutura que assume o controle d
 
 As malhas do serviço kubernetes funcionam adicionando um contêiner extra, chamado *proxy sidecar*, a cada pod incluído na malha. O proxy assume o tratamento de todas as solicitações de rede de entrada e saída, permitindo que a configuração e o gerenciamento de rede sejam mantidos separados dos contêineres de aplicativos e, em muitos casos, sem a necessidade de qualquer alteração no código do aplicativo.
 
-Pegue o [exemplo do capítulo anterior](kubernetes.md#testing-the-application), em que as solicitações gRPC do aplicativo Web foram todas roteadas para uma única instância do serviço gRPC. Isso acontece porque o nome de host do serviço é resolvido para um endereço IP e esse endereço IP é armazenado em cache durante o tempo de vida da instância de `HttpClientHandler`. Pode ser possível contornar isso tratando as pesquisas de DNS manualmente ou criando vários clientes, mas isso complicaria consideravelmente o código do aplicativo sem adicionar nenhum valor comercial ou de cliente.
+Pegue o [exemplo do capítulo anterior](kubernetes.md#test-the-application), em que as solicitações gRPC do aplicativo Web foram todas roteadas para uma única instância do serviço gRPC. Isso acontece porque o nome de host do serviço é resolvido para um endereço IP e esse endereço IP é armazenado em cache durante o tempo de vida da instância de `HttpClientHandler`. Pode ser possível contornar isso tratando as pesquisas de DNS manualmente ou criando vários clientes, mas isso complicaria consideravelmente o código do aplicativo sem adicionar nenhum valor comercial ou de cliente.
 
 Usando uma malha de serviço, as solicitações do contêiner de aplicativo são enviadas para o proxy sidecar, que pode distribuí-las de forma inteligente em todas as instâncias do outro serviço. A malha também pode:
 
