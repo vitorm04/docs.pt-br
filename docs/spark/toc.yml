@@ -17,6 +17,8 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Implantar no Databricks
       href: tutorials/databricks-deployment.md
+    - name: Fluxo estruturado
+      href: tutorials/streaming.md
 - name: Guias de instruções
   items:
     - name: Depurar seu aplicativo
