@@ -2,18 +2,18 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: 224ffcf277f9ceaf6b1f970ad6f92480f5857999
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 101c33ca197be9dff52a73c844dd0b006e62b2ac
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045075"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716588"
 ---
-# <a name="datacontractresolver"></a><span data-ttu-id="2ca82-102">DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="2ca82-102">DataContractResolver</span></span>
-<span data-ttu-id="2ca82-103">Este exemplo demonstra como os processos de serialização e desserialização podem ser personalizados usando a <xref:System.Runtime.Serialization.DataContractResolver> classe.</span><span class="sxs-lookup"><span data-stu-id="2ca82-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="2ca82-104">Este exemplo mostra como usar um DataContractResolver para mapear tipos CLR de e para uma representação xsi: Type durante a serialização e desserialização.</span><span class="sxs-lookup"><span data-stu-id="2ca82-104">This sample shows how to use a DataContractResolver to map CLR types to and from an xsi:type representation during serialization and deserialization.</span></span>
+# <a name="datacontractresolver"></a><span data-ttu-id="52a45-102">DataContractResolver</span><span class="sxs-lookup"><span data-stu-id="52a45-102">DataContractResolver</span></span>
+<span data-ttu-id="52a45-103">Este exemplo demonstra como os processos de serialização e desserialização podem ser personalizados usando a classe <xref:System.Runtime.Serialization.DataContractResolver>.</span><span class="sxs-lookup"><span data-stu-id="52a45-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="52a45-104">Este exemplo mostra como usar um DataContractResolver para mapear tipos CLR de e para uma representação xsi: Type durante a serialização e desserialização.</span><span class="sxs-lookup"><span data-stu-id="52a45-104">This sample shows how to use a DataContractResolver to map CLR types to and from an xsi:type representation during serialization and deserialization.</span></span>
 
-## <a name="sample-details"></a><span data-ttu-id="2ca82-105">Detalhes de exemplo</span><span class="sxs-lookup"><span data-stu-id="2ca82-105">Sample Details</span></span>
- <span data-ttu-id="2ca82-106">O exemplo define os tipos CLR a seguir.</span><span class="sxs-lookup"><span data-stu-id="2ca82-106">The sample defines the following CLR types.</span></span>
+## <a name="sample-details"></a><span data-ttu-id="52a45-105">Detalhes de exemplo</span><span class="sxs-lookup"><span data-stu-id="52a45-105">Sample Details</span></span>
+ <span data-ttu-id="52a45-106">O exemplo define os tipos CLR a seguir.</span><span class="sxs-lookup"><span data-stu-id="52a45-106">The sample defines the following CLR types.</span></span>
 
 ```csharp
 using System;
@@ -47,13 +47,13 @@ namespace Types
 }
 ```
 
- <span data-ttu-id="2ca82-107">O exemplo carrega o assembly, extrai cada um desses tipos e, em seguida, serializa e desserializa-os.</span><span class="sxs-lookup"><span data-stu-id="2ca82-107">The sample loads the assembly, extracts each of these types, and then serializes and deserializes them.</span></span> <span data-ttu-id="2ca82-108">O <xref:System.Runtime.Serialization.DataContractResolver> é conectado ao processo de serialização, passando uma instância <xref:System.Runtime.Serialization.DataContractResolver>da classe derivada para o <xref:System.Runtime.Serialization.DataContractSerializer> Construtor, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="2ca82-108">The <xref:System.Runtime.Serialization.DataContractResolver> is plugged into the serialization process by passing an instance of the <xref:System.Runtime.Serialization.DataContractResolver>-derived class to the <xref:System.Runtime.Serialization.DataContractSerializer> constructor, as shown in the following example.</span></span>
+ <span data-ttu-id="52a45-107">O exemplo carrega o assembly, extrai cada um desses tipos e, em seguida, serializa e desserializa-os.</span><span class="sxs-lookup"><span data-stu-id="52a45-107">The sample loads the assembly, extracts each of these types, and then serializes and deserializes them.</span></span> <span data-ttu-id="52a45-108">O <xref:System.Runtime.Serialization.DataContractResolver> é conectado ao processo de serialização, passando uma instância da classe derivada de <xref:System.Runtime.Serialization.DataContractResolver>para o Construtor <xref:System.Runtime.Serialization.DataContractSerializer>, conforme mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="52a45-108">The <xref:System.Runtime.Serialization.DataContractResolver> is plugged into the serialization process by passing an instance of the <xref:System.Runtime.Serialization.DataContractResolver>-derived class to the <xref:System.Runtime.Serialization.DataContractSerializer> constructor, as shown in the following example.</span></span>
 
 ```csharp
 this.serializer = new DataContractSerializer(typeof(Object), null, int.MaxValue, false, true, null, new MyDataContractResolver(assembly));
 ```
 
- <span data-ttu-id="2ca82-109">Em seguida, o exemplo serializa os tipos CLR, conforme mostrado no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="2ca82-109">The sample then serializes the CLR types as shown in the following code example.</span></span>
+ <span data-ttu-id="52a45-109">Em seguida, o exemplo serializa os tipos CLR, conforme mostrado no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="52a45-109">The sample then serializes the CLR types as shown in the following code example.</span></span>
 
 ```csharp
 Assembly assembly = Assembly.Load(new AssemblyName("Types"));
@@ -82,7 +82,7 @@ public void serialize(Type type)
 }
 ```
 
- <span data-ttu-id="2ca82-110">Em seguida, o exemplo desserializa os tipos xsi:, conforme mostrado no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="2ca82-110">The sample then deserializes the xsi:types as shown in the following code example.</span></span>
+ <span data-ttu-id="52a45-110">Em seguida, o exemplo desserializa os tipos xsi:, conforme mostrado no exemplo de código a seguir.</span><span class="sxs-lookup"><span data-stu-id="52a45-110">The sample then deserializes the xsi:types as shown in the following code example.</span></span>
 
 ```csharp
 public void deserialize(Type type)
@@ -97,9 +97,9 @@ public void deserialize(Type type)
 }
 ```
 
- <span data-ttu-id="2ca82-111">Como o personalizado <xref:System.Runtime.Serialization.DataContractResolver> é passado para o <xref:System.Runtime.Serialization.DataContractSerializer> Construtor, o <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> é chamado durante a serialização para mapear um tipo CLR para um `xsi:type`equivalente.</span><span class="sxs-lookup"><span data-stu-id="2ca82-111">Since the custom <xref:System.Runtime.Serialization.DataContractResolver> is passed in to the <xref:System.Runtime.Serialization.DataContractSerializer> constructor, the <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> is called during serialization to map a CLR type to an equivalent `xsi:type`.</span></span> <span data-ttu-id="2ca82-112">Da mesma <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> forma, o é chamado durante a desserialização para mapear o `xsi:type` para um tipo CLR equivalente.</span><span class="sxs-lookup"><span data-stu-id="2ca82-112">Similarly the <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> is called during deserialization to map the `xsi:type` to an equivalent CLR type.</span></span> <span data-ttu-id="2ca82-113">Neste exemplo, o <xref:System.Runtime.Serialization.DataContractResolver> é definido como mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="2ca82-113">In this sample, the <xref:System.Runtime.Serialization.DataContractResolver> is defined as shown in the following example.</span></span>
+ <span data-ttu-id="52a45-111">Como o <xref:System.Runtime.Serialization.DataContractResolver> personalizado é passado para o construtor de <xref:System.Runtime.Serialization.DataContractSerializer>, o <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> é chamado durante a serialização para mapear um tipo CLR para um `xsi:type`equivalente.</span><span class="sxs-lookup"><span data-stu-id="52a45-111">Since the custom <xref:System.Runtime.Serialization.DataContractResolver> is passed in to the <xref:System.Runtime.Serialization.DataContractSerializer> constructor, the <xref:System.Runtime.Serialization.DataContractResolver.TryResolveType%2A> is called during serialization to map a CLR type to an equivalent `xsi:type`.</span></span> <span data-ttu-id="52a45-112">Da mesma forma, o <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> é chamado durante a desserialização para mapear o `xsi:type` para um tipo CLR equivalente.</span><span class="sxs-lookup"><span data-stu-id="52a45-112">Similarly the <xref:System.Runtime.Serialization.DataContractResolver.ResolveName%2A> is called during deserialization to map the `xsi:type` to an equivalent CLR type.</span></span> <span data-ttu-id="52a45-113">Neste exemplo, o <xref:System.Runtime.Serialization.DataContractResolver> é definido como mostrado no exemplo a seguir.</span><span class="sxs-lookup"><span data-stu-id="52a45-113">In this sample, the <xref:System.Runtime.Serialization.DataContractResolver> is defined as shown in the following example.</span></span>
 
- <span data-ttu-id="2ca82-114">O exemplo de código a seguir é uma classe derivada <xref:System.Runtime.Serialization.DataContractResolver>de.</span><span class="sxs-lookup"><span data-stu-id="2ca82-114">The following code example is a class deriving from <xref:System.Runtime.Serialization.DataContractResolver>.</span></span>
+ <span data-ttu-id="52a45-114">O exemplo de código a seguir é uma classe derivada de <xref:System.Runtime.Serialization.DataContractResolver>.</span><span class="sxs-lookup"><span data-stu-id="52a45-114">The following code example is a class deriving from <xref:System.Runtime.Serialization.DataContractResolver>.</span></span>
 
 ```csharp
 class MyDataContractResolver : DataContractResolver
@@ -148,23 +148,23 @@ class MyDataContractResolver : DataContractResolver
 }
 ```
 
- <span data-ttu-id="2ca82-115">Como parte do exemplo, o projeto de tipos gera o assembly com todos os tipos que são usados neste exemplo.</span><span class="sxs-lookup"><span data-stu-id="2ca82-115">As part of the sample, the Types project generates the assembly with all the types that are used in this sample.</span></span> <span data-ttu-id="2ca82-116">Use este projeto para adicionar, remover ou modificar os tipos que serão serializados.</span><span class="sxs-lookup"><span data-stu-id="2ca82-116">Use this project to add, remove or modify the types that will be serialized.</span></span>
+ <span data-ttu-id="52a45-115">Como parte do exemplo, o projeto de tipos gera o assembly com todos os tipos que são usados neste exemplo.</span><span class="sxs-lookup"><span data-stu-id="52a45-115">As part of the sample, the Types project generates the assembly with all the types that are used in this sample.</span></span> <span data-ttu-id="52a45-116">Use este projeto para adicionar, remover ou modificar os tipos que serão serializados.</span><span class="sxs-lookup"><span data-stu-id="52a45-116">Use this project to add, remove or modify the types that will be serialized.</span></span>
 
-#### <a name="to-use-this-sample"></a><span data-ttu-id="2ca82-117">Para usar este exemplo</span><span class="sxs-lookup"><span data-stu-id="2ca82-117">To use this sample</span></span>
+#### <a name="to-use-this-sample"></a><span data-ttu-id="52a45-117">Para usar este exemplo</span><span class="sxs-lookup"><span data-stu-id="52a45-117">To use this sample</span></span>
 
-1. <span data-ttu-id="2ca82-118">Usando o Visual Studio 2012, abra o arquivo de solução DCRSample. sln.</span><span class="sxs-lookup"><span data-stu-id="2ca82-118">Using Visual Studio 2012, open the DCRSample.sln solution file.</span></span>
+1. <span data-ttu-id="52a45-118">Usando o Visual Studio 2012, abra o arquivo de solução DCRSample. sln.</span><span class="sxs-lookup"><span data-stu-id="52a45-118">Using Visual Studio 2012, open the DCRSample.sln solution file.</span></span>
 
-2. <span data-ttu-id="2ca82-119">Para executar a solução, pressione F5</span><span class="sxs-lookup"><span data-stu-id="2ca82-119">To run the solution, press F5</span></span>
+2. <span data-ttu-id="52a45-119">Para executar a solução, pressione F5</span><span class="sxs-lookup"><span data-stu-id="52a45-119">To run the solution, press F5</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="2ca82-120">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="2ca82-120">The samples may already be installed on your machine.</span></span> <span data-ttu-id="2ca82-121">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="2ca82-121">Check for the following (default) directory before continuing.</span></span>  
+> <span data-ttu-id="52a45-120">Os exemplos podem já estar instalados no seu computador.</span><span class="sxs-lookup"><span data-stu-id="52a45-120">The samples may already be installed on your machine.</span></span> <span data-ttu-id="52a45-121">Verifique o seguinte diretório (padrão) antes de continuar.</span><span class="sxs-lookup"><span data-stu-id="52a45-121">Check for the following (default) directory before continuing.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> <span data-ttu-id="2ca82-122">Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos.</span><span class="sxs-lookup"><span data-stu-id="2ca82-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="2ca82-123">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="2ca82-123">This sample is located in the following directory.</span></span>  
+> <span data-ttu-id="52a45-122">Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras.</span><span class="sxs-lookup"><span data-stu-id="52a45-122">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="52a45-123">Este exemplo está localizado no seguinte diretório.</span><span class="sxs-lookup"><span data-stu-id="52a45-123">This sample is located in the following directory.</span></span>  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
-## <a name="see-also"></a><span data-ttu-id="2ca82-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="2ca82-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="52a45-124">Consulte também</span><span class="sxs-lookup"><span data-stu-id="52a45-124">See also</span></span>
 
-- [<span data-ttu-id="2ca82-125">Usar um resolvedor de contrato de dados</span><span class="sxs-lookup"><span data-stu-id="2ca82-125">Using a Data Contract Resolver</span></span>](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)
+- [<span data-ttu-id="52a45-125">Usar um resolvedor de contrato de dados</span><span class="sxs-lookup"><span data-stu-id="52a45-125">Using a Data Contract Resolver</span></span>](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)
