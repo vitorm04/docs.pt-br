@@ -6,11 +6,11 @@
   href: core/
 - name: Guia do .NET Framework
   href: framework/
-- name: Guia de área de trabalho do .NET – WPF (Windows Presentation Foundation)
+- name: Guia de área de trabalho do .NET – WPF
   href: desktop-wpf/
-- name: 'Guia de C#'
+- name: 'Guia C#'
   href: csharp/index.yml
-- name: 'Guia de F#'
+- name: 'Guia do F#'
   href: fsharp/
 - name: Guia do Visual Basic
   href: visual-basic/
@@ -20,5 +20,5 @@
   href: spark/index.yml
 - name: Guia de arquitetura do aplicativo .NET
   href: architecture/index.yml
-- name: Exemplos e Tutoriais
+- name: Exemplos e tutoriais
   href: samples-and-tutorials/index.md

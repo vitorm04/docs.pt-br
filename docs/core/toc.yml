@@ -47,21 +47,21 @@
   items:
     - name: 'Introdução ao C# e ao Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Criar um aplicativo Olá, Mundo em C# com .NET Core no Visual Studio 2017'
+    - name: 'Criar um aplicativo Olá, Mundo do C# no Visual Studio'
       href: tutorials/with-visual-studio.md
-    - name: 'Criar um aplicativo Olá, Mundo no Visual Basic com o .NET Core no Visual Studio 2017'
+    - name: 'Criar um aplicativo Olá, Mundo do Visual Basic no Visual Studio'
       href: tutorials/vb-with-visual-studio.md
-    - name: 'Depure seu aplicativo Olá, Mundo do .NET Core em C# ou Visual Basic usando Visual Studio 2017'
+    - name: Depurar um aplicativo usando o Visual Studio
       href: tutorials/debugging-with-visual-studio.md
-    - name: 'Publicar um aplicativo Olá, Mundo com o Visual Studio 2017'
+    - name: Publicar um aplicativo no Visual Studio
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Compilar uma biblioteca do .NET Standard com C# e .NET Core no Visual Studio 2017'
+    - name: 'Criar uma biblioteca .NET Standard com o C# no Visual Studio'
       href: tutorials/library-with-visual-studio.md
-    - name: Compilar uma biblioteca do .NET Standard com Visual Basic e .NET Core no Visual Studio 2017
+    - name: Criar uma biblioteca .NET Standard com o Visual Basic no Visual Studio
       href: tutorials/vb-library-with-visual-studio.md
-    - name: Testar uma biblioteca .NET Standard com o .NET Core no Visual Studio 2017
+    - name: Testar uma biblioteca .NET Standard no Visual Studio
       href: tutorials/testing-library-with-visual-studio.md
-    - name: Consumir uma biblioteca .NET Standard no Visual Studio 2017
+    - name: Consumir uma biblioteca .NET Standard no Visual Studio
       href: tutorials/consuming-library-with-visual-studio.md
 - name: Novidades do .NET Core
   items:
@@ -128,11 +128,11 @@
   items:
     - name: .NET Core 2.0 para 2.1
       href: migration/20-21.md
-    - name: Migração do project.json
+    - name: Migrar do project.json
       href: migration/index.md
-    - name: Mapeamento entre project.json e csproj
+    - name: Mapear entre project.json e csproj
       href: tools/project-json-to-csproj.md
-    - name: Migração do DNX
+    - name: Migrar do DNX
       href: migration/from-dnx.md
 - name: Implantação de aplicativo
   href: deploying/index.md
@@ -141,7 +141,7 @@
       href: deploying/deploy-with-cli.md
     - name: Implantar aplicativos com o Visual Studio
       href: deploying/deploy-with-vs.md
-    - name: Criando um pacote NuGet com várias Ferramentas de Plataforma Cruzada
+    - name: Criar um pacote do NuGet com ferramentas de multiplataforma
       href: deploying/creating-nuget-packages.md
     - name: Roll forward de runtime de implantação autossuficiente
       href: deploying/runtime-patch-selection.md
@@ -198,7 +198,7 @@
       href: testing/selective-unit-tests.md
     - name: Saída publicada de teste de unidade
       href: testing/unit-testing-published-output.md
-    - name: Testando projetos do .NET Core em unidade ao vivo com o Visual Studio
+    - name: Teste de unidade ao vivo de projetos do .NET Core com o Visual Studio
       href: /visualstudio/test/live-unit-testing-start
 - name: Integração contínua
   href: tools/using-ci-with-cli.md
@@ -207,7 +207,7 @@
   items:
     - name: Seleção de versão do .NET Core
       href: versions/selection.md
-    - name: Como remover SDKs e runtimes desatualizados
+    - name: Remover SDKs e runtimes desatualizados
       href: versions/remove-runtime-sdk-versions.md
 - name: Catálogo de RID (Identificador de Runtime)
   href: rid-catalog.md
@@ -220,7 +220,7 @@
     - name: Ferramentas
       expanded: true
       items:
-        - name: Ferramentas Globais
+        - name: Ferramentas globais
           expanded: true
           items:
             - name: Visão geral
@@ -231,11 +231,11 @@
           href: tools/troubleshoot-usage-issues.md
     - name: Acesso elevado
       href: tools/elevated-access.md
-    - name: Modelo de Extensibilidade
+    - name: Modelo de extensibilidade
       href: tools/extensibility.md
     - name: Modelos personalizados
       href: tools/custom-templates.md
-    - name: Habilitar o preenchimento com TAB
+    - name: Habilitar o preenchimento com Tab
       href: tools/enable-tab-autocomplete.md
     - name: Telemetria
       href: tools/telemetry.md
@@ -349,17 +349,17 @@
   items:
     - name: Visão geral
       href: dependency-loading/overview.md
-    - name: Entendendo o AssemblyLoadContext
+    - name: Entender o AssemblyLoadContext
       href: dependency-loading/understanding-assemblyloadcontext.md
     - name: Carregando detalhes
       items:
         - name: Investigação de dependência padrão
           href: dependency-loading/default-probing.md
-        - name: Carregando assemblies gerenciados
+        - name: Carregar assemblies gerenciados
           href: dependency-loading/loading-managed.md
-        - name: Carregando assemblies satélite
+        - name: Carregar assemblies satélite
           href: dependency-loading/loading-resources.md
-        - name: Carregando bibliotecas não gerenciadas
+        - name: Carregar bibliotecas não gerenciadas
           href: dependency-loading/loading-unmanaged.md
     - name: Tutoriais
       items:
