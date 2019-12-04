@@ -1,15 +1,15 @@
 ---
-title: Extensibilidade da grade de propriedade - exemplo WF
+title: Extensibilidade da grade de propriedades – exemplo do WF
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
-ms.openlocfilehash: 1cc8b8b34d6236e263f95439da84994e35d627ed
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 130d8702795bccf0d5f28b5c0940bd7c25be3556
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170359"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715600"
 ---
-# <a name="property-grid-extensibility"></a>Extensibilidade da grade de propriedade
+# <a name="property-grid-extensibility"></a>Extensibilidade da grade de propriedades
 
 Um desenvolvedor pode personalizar a grade de propriedade que é exibida quando uma determinada atividade é selecionada no designer. Isso pode ser feito para criar uma experiência rica de edição. Este exemplo mostra como isso pode ser feito.
 
@@ -22,7 +22,7 @@ Extensibilidade da grade de propriedade do designer de fluxo de trabalho.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`
 
@@ -36,7 +36,7 @@ O exemplo editor embutido demonstra o seguinte:
 
 - Cria um tipo deriva de <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor>.
 
-- No construtor, o <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> valor é definido com um modelo de dados do Windows Presentation Foundation (WPF). Isso pode ser associado a um modelo XAML, mas nesse exemplo, o código é usado para inicializar a associação de dados.
+- No construtor, o valor de <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> é definido com um modelo de dados de Windows Presentation Foundation (WPF). Isso pode ser associado a um modelo XAML, mas nesse exemplo, o código é usado para inicializar a associação de dados.
 
 - O modelo de dados tem um contexto de dados de <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> de item processado na grade de propriedade. Observe o seguinte código (de CustomInlineEditor.cs) que este contexto associando a propriedade de `Value` .
 
@@ -69,7 +69,7 @@ O exemplo do editor de diálogo demonstra o seguinte:
 
 1. Cria um tipo deriva de <xref:System.Activities.Presentation.PropertyEditing.DialogPropertyValueEditor>.
 
-2. Conjuntos de <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> valor no construtor com um modelo de dados do WPF. Isso pode ser criado em XAML, mas nesse exemplo, este é criado em código.
+2. Define o valor de <xref:System.Activities.Presentation.PropertyEditing.PropertyValueEditor.InlineEditorTemplate%2A> no construtor com um modelo de dados do WPF. Isso pode ser criado em XAML, mas nesse exemplo, este é criado em código.
 
 3. O modelo de dados tem um contexto de dados de <xref:System.Activities.Presentation.PropertyEditing.PropertyValue> de item processado na grade de propriedade. No código a seguir, ou associação à propriedade de `Value` . É importante incluir também <xref:System.Activities.Presentation.PropertyEditing.EditModeSwitchButton> para fornecer o botão que aumenta a caixa de diálogo em FilePickerEditor.cs.
 
@@ -123,15 +123,15 @@ O exemplo do editor de diálogo demonstra o seguinte:
 
 1. Crie a solução, e abra Workflow1.xaml.
 
-2. Arraste uma **SimpleCodeActivity** Toolbox para a tela do designer.
+2. Arraste um **SimpleCodeActivity** da caixa de ferramentas para a tela do designer.
 
-3. Clique o **SimpleCodeActivity** e, em seguida, abra a grade propriedade onde há um controle deslizante e um arquivo de controle de separação.
+3. Clique em **SimpleCodeActivity** e, em seguida, abra a grade de propriedades onde há um controle deslizante e um controle de seleção de arquivo.
 
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\PropertyGridExtensibility`

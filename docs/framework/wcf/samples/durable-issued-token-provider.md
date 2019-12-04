@@ -2,12 +2,12 @@
 title: Provedor de tokens emitidos duráveis
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 52c4e99f8b2a834d7200c2d2c2383fbdb21bdd1a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 62e4cca50e9a2fbbf319d66fbe85cec6cdb73b23
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978332"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716467"
 ---
 # <a name="durable-issued-token-provider"></a>Provedor de tokens emitidos duráveis
 Este exemplo demonstra como implementar um provedor de token emitido pelo cliente personalizado.  
@@ -250,6 +250,6 @@ Este exemplo demonstra como implementar um provedor de token emitido pelo client
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

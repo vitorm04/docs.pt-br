@@ -2,12 +2,12 @@
 title: Perfil seguro confiável
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-ms.openlocfilehash: d7cfc028c5cf1ba5cfba009cd29c89f07c64fd9c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ee94dc5be2c50f9e383a42d435996b2fd35df4a4
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044825"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716498"
 ---
 # <a name="reliable-secure-profile"></a>Perfil seguro confiável
 Este exemplo demonstra como compor o WCF e um [perfil seguro confiável](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Este exemplo demonstra a implementação de um canal de [conexão de make](https://go.microsoft.com/fwlink/?LinkId=178141) que pode ser composto junto com mensagens confiáveis e, opcionalmente, um canal seguro para criar uma associação segura confiável com base na especificação rsp.  
@@ -17,7 +17,7 @@ Este exemplo demonstra como compor o WCF e um [perfil seguro confiável](https:/
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   

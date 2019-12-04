@@ -2,12 +2,12 @@
 title: Distribuidor de canal personalizado
 ms.date: 03/30/2017
 ms.assetid: 813acf03-9661-4d57-a3c7-eeab497321c6
-ms.openlocfilehash: 0bd83e068de7cfa9cc531ee6b46b9b51c44c1b1d
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 00caa5eda37e5da9462286e71bbdbc2ff50d5081
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291548"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716870"
 ---
 # <a name="custom-channel-dispatcher"></a>Distribuidor de canal personalizado
 Este exemplo demonstra como criar a pilha de canais de forma personalizada, implementando <xref:System.ServiceModel.ServiceHostBase> diretamente e como criar um Dispatcher de canal personalizado no ambiente de host da Web. O Dispatcher do canal interage com <xref:System.ServiceModel.Channels.IChannelListener> para aceitar canais e recupera mensagens da pilha de canais. Este exemplo também fornece um exemplo básico para mostrar como criar uma pilha de canais em um ambiente de host da Web usando <xref:System.ServiceModel.Activation.VirtualPathExtension>.  
@@ -23,7 +23,7 @@ Este exemplo demonstra como criar a pilha de canais de forma personalizada, impl
  O Dispatcher abre primeiro o ouvinte do canal e, em seguida, aceita o canal de resposta singleton. Com o canal, ele começa a enviar mensagens (solicitações) em um loop infinito. Para cada solicitação, ele cria uma mensagem de resposta e a envia de volta para o cliente.  
   
 ## <a name="creating-a-response-message"></a>Criando uma mensagem de resposta  
- O processamento da mensagem é implementado no tipo `MyServiceManager`. No método `HandleRequest`, o cabeçalho `Action` da mensagem é verificado primeiro para ver se há suporte para a solicitação. Uma ação SOAP predefinida"http://tempuri.org/HelloWorld/Hello" é definida para fornecer filtragem de mensagens. Isso é semelhante ao conceito de contrato de serviço na implementação do WCF de <xref:System.ServiceModel.ServiceHost>.  
+ O processamento da mensagem é implementado no tipo `MyServiceManager`. No método `HandleRequest`, o cabeçalho `Action` da mensagem é verificado primeiro para ver se há suporte para a solicitação. Uma ação SOAP predefinida "http://tempuri.org/HelloWorld/Hello" é definida para fornecer filtragem de mensagens. Isso é semelhante ao conceito de contrato de serviço na implementação do WCF de <xref:System.ServiceModel.ServiceHost>.  
   
  Para o caso de ação SOAP correto, o exemplo recupera os dados de mensagem solicitados e gera uma resposta correspondente para a solicitação semelhante ao que é visto no caso de <xref:System.ServiceModel.ServiceHost>.  
   
@@ -51,6 +51,6 @@ Server replied: You said: Howdy. Message id: 5
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\CustomChannelDispatcher`

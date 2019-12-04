@@ -2,21 +2,21 @@
 title: Formatador do feed (JSON)
 ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
-ms.openlocfilehash: 516a114ee577597611c14ce10ad838d85d6a0fb1
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: dfdcd0920980e7e5cc1fe1c8910ee7cfbe59b5a0
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989898"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715835"
 ---
 # <a name="feed-formatter-json"></a>Formatador do feed (JSON)
-Este exemplo mostra como serializar uma instância de uma <xref:System.ServiceModel.Syndication.SyndicationFeed> classe no formato JavaScript Object Notation (JSON) usando um personalizado <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> e o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
+Este exemplo mostra como serializar uma instância de uma <xref:System.ServiceModel.Syndication.SyndicationFeed> classe no formato JavaScript Object Notation (JSON) usando uma <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> personalizada e a <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  
   
 ## <a name="architecture-of-the-sample"></a>Arquitetura do exemplo  
- O exemplo implementa uma classe denominada `JsonFeedFormatter` herdada de. <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> A `JsonFeedFormatter` classe depende do <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> para ler e gravar os dados no formato JSON. Internamente, o formatador usa um conjunto personalizado de tipos de contrato `JsonSyndicationFeed` de `JsonSyndicationItem` dados denominados e para controlar o formato dos dados JSON produzidos pelo serializador. Esses detalhes de implementação ficam ocultos do usuário final, permitindo que as chamadas sejam feitas em <xref:System.ServiceModel.Syndication.SyndicationFeed> relação <xref:System.ServiceModel.Syndication.SyndicationItem> ao padrão e às classes.  
+ O exemplo implementa uma classe chamada `JsonFeedFormatter` que herda de <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter>. A classe `JsonFeedFormatter` depende da <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> para ler e gravar os dados no formato JSON. Internamente, o formatador usa um conjunto personalizado de tipos de contrato de dados denominado `JsonSyndicationFeed` e `JsonSyndicationItem` para controlar o formato dos dados JSON produzidos pelo serializador. Esses detalhes de implementação ficam ocultos do usuário final, permitindo que as chamadas sejam feitas em relação às classes padrão <xref:System.ServiceModel.Syndication.SyndicationFeed> e <xref:System.ServiceModel.Syndication.SyndicationItem>.  
   
 ## <a name="writing-json-feeds"></a>Gravando feeds JSON  
- A gravação de um feed JSON pode ser realizada usando `JsonFeedFormatter` o (implementado neste exemplo) com o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> , conforme mostrado no código de exemplo a seguir.  
+ A gravação de um feed JSON pode ser realizada usando o `JsonFeedFormatter` (implementado neste exemplo) com o <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp  
 //Basic feed with sample data  
@@ -34,7 +34,7 @@ writeSerializer.WriteObject(stream, new JsonFeedFormatter(feed));
 ```  
   
 ## <a name="reading-a-json-feed"></a>Lendo um feed JSON  
- Obter um <xref:System.ServiceModel.Syndication.SyndicationFeed> de um fluxo de dados formatados em JSON pode ser feito com `JsonFeedFormatter` o como mostrado no código a seguir.  
+ A obtenção de uma <xref:System.ServiceModel.Syndication.SyndicationFeed> de um fluxo de dados formatados em JSON pode ser realizada com o `JsonFeedFormatter` como mostrado no código a seguir.  
   
  `//Read in the feed using the DataContractJsonSerializer`  
   
@@ -57,6 +57,6 @@ writeSerializer.WriteObject(stream, new JsonFeedFormatter(feed));
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\JsonFeeds`  

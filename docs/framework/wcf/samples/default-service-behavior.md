@@ -5,22 +5,22 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 3728d9808eb0ad90d24a894b18857e414906f9f3
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7d2829e5c6d86d54f109fec6bf933049a093fd1c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045032"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716559"
 ---
 # <a name="default-service-behavior"></a>Comportamento padrão de serviço
-Este exemplo demonstra como as configurações de comportamento do serviço podem ser definidas. O exemplo se baseia na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o contrato `ICalculator` de serviço. Este exemplo define explicitamente comportamentos de serviço e comportamentos de operação <xref:System.ServiceModel.ServiceBehaviorAttribute> usando <xref:System.ServiceModel.OperationBehaviorAttribute> os atributos e. Você pode configurar comportamentos em arquivos de configuração ou imperativa no código (como demonstra este exemplo).  
+Este exemplo demonstra como as configurações de comportamento do serviço podem ser definidas. O exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o contrato de serviço `ICalculator`. Este exemplo define explicitamente comportamentos de serviço e comportamentos de operação usando os atributos <xref:System.ServiceModel.ServiceBehaviorAttribute> e <xref:System.ServiceModel.OperationBehaviorAttribute>. Você pode configurar comportamentos em arquivos de configuração ou imperativa no código (como demonstra este exemplo).  
   
  Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- A classe de serviço especifica comportamentos com <xref:System.ServiceModel.ServiceBehaviorAttribute> o e <xref:System.ServiceModel.OperationBehaviorAttribute> o, conforme mostrado no exemplo de código a seguir. Todos os valores especificados são os padrões.  
+ A classe de serviço especifica comportamentos com o <xref:System.ServiceModel.ServiceBehaviorAttribute> e o <xref:System.ServiceModel.OperationBehaviorAttribute>, conforme mostrado no exemplo de código a seguir. Todos os valores especificados são os padrões.  
   
 ```csharp
 [ServiceBehavior(  
@@ -45,7 +45,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- Os comportamentos de serviço são especificados <xref:System.ServiceModel.ServiceBehaviorAttribute> com o atributo. A tabela a seguir descreve alguns desses comportamentos.  
+ Os comportamentos de serviço são especificados com o atributo <xref:System.ServiceModel.ServiceBehaviorAttribute>. A tabela a seguir descreve alguns desses comportamentos.  
   
 |Comportamento do serviço|Descrição|  
 |----------------------|-----------------|  
@@ -53,11 +53,11 @@ public class CalculatorService : ICalculator
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>|Especifica o modo de simultaneidade para cada instância de serviço.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|Especifica o modo de contexto da instância.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|Determina se o contexto de sincronização fornecido deve ser usado, se um for definido. Use isso quando desejar controlar se deseja usar um `WindowsFormsSynchronizationContext` em aplicativos Windows Forms.|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|Determina se as exceções de execução sem tratamento geral devem ser convertidas `Fault<string>` em um e enviadas como uma mensagem de falha.|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|Determina se as exceções de execução sem tratamento geral devem ser convertidas em um `Fault<string>` e enviadas como uma mensagem de falha.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|Especifica o nível de isolamento para transações.|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|Determina se os cabeçalhos de mensagens inesperados causam uma condição de erro.|  
   
- Os comportamentos de operação são especificados usando <xref:System.ServiceModel.OperationBehaviorAttribute> o atributo. A tabela a seguir descreve alguns desses comportamentos.  
+ Os comportamentos de operação são especificados usando o atributo <xref:System.ServiceModel.OperationBehaviorAttribute>. A tabela a seguir descreve alguns desses comportamentos.  
   
 |Comportamento da operação|Descrição|  
 |------------------------|-----------------|  
@@ -66,7 +66,7 @@ public class CalculatorService : ICalculator
 |<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>|Determina se a operação de serviço representa a identidade do chamador.|  
 |<xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A>|Determina se as instâncias de serviço são recicladas no início ou no final da chamada de operação de serviço.|  
   
- Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. O atraso entre as chamadas é o resultado das chamadas `System.Threading.Thread.Sleep()` feitas nas operações de serviço. O restante dos exemplos de comportamento explica esses comportamentos mais detalhadamente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. O atraso entre as chamadas é o resultado das chamadas para `System.Threading.Thread.Sleep()` feitas nas operações de serviço. O restante dos exemplos de comportamento explica esses comportamentos mais detalhadamente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```console  
 Add(100,15.99) = 115.99  
@@ -90,6 +90,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  

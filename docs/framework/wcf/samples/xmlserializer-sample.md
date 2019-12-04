@@ -2,22 +2,22 @@
 title: Exemplo de XMLSerializer
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: ae8e4f7c9be427ec5107318443816c8ade6c5085
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 07211ff61091107d469a482cc60783b30621ee21
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044481"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714511"
 ---
 # <a name="xmlserializer-sample"></a>Exemplo de XMLSerializer
-Este exemplo demonstra como serializar e desserializar os tipos que são compatíveis com <xref:System.Xml.Serialization.XmlSerializer>o. O formatador de Windows Communication Foundation padrão (WCF) <xref:System.Runtime.Serialization.DataContractSerializer> é a classe. A <xref:System.Xml.Serialization.XmlSerializer> classe pode ser usada para serializar e desserializar os tipos <xref:System.Runtime.Serialization.DataContractSerializer> quando a classe não puder ser usada. Geralmente, esse é o caso em que o controle preciso sobre o XML é necessário, por exemplo, se uma parte dos dados deve ser um atributo XML e não um elemento XML. Além disso, <xref:System.Xml.Serialization.XmlSerializer> a frequência é selecionada automaticamente ao criar clientes para serviços não WCF.  
+Este exemplo demonstra como serializar e desserializar os tipos que são compatíveis com o <xref:System.Xml.Serialization.XmlSerializer>. O formatador de Windows Communication Foundation padrão (WCF) é a classe <xref:System.Runtime.Serialization.DataContractSerializer>. A classe <xref:System.Xml.Serialization.XmlSerializer> pode ser usada para serializar e desserializar os tipos quando a classe <xref:System.Runtime.Serialization.DataContractSerializer> não puder ser usada. Geralmente, esse é o caso em que o controle preciso sobre o XML é necessário, por exemplo, se uma parte dos dados deve ser um atributo XML e não um elemento XML. Além disso, a <xref:System.Xml.Serialization.XmlSerializer> geralmente é selecionada automaticamente ao criar clientes para serviços não WCF.  
   
  Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O <xref:System.ServiceModel.ServiceContractAttribute> e<xref:System.ServiceModel.XmlSerializerFormatAttribute> o devem ser aplicados à interface, conforme mostrado no código de exemplo a seguir.  
+ O <xref:System.ServiceModel.ServiceContractAttribute> e <xref:System.ServiceModel.XmlSerializerFormatAttribute> devem ser aplicados à interface, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]  
@@ -34,7 +34,7 @@ public interface IXmlSerializerCalculator
 }  
 ```  
   
- Os membros públicos da `ComplexNumber` classe são serializados <xref:System.Xml.Serialization.XmlSerializer> pelo como atributos XML. O <xref:System.Runtime.Serialization.DataContractSerializer> não pode ser usado para criar esse tipo de instância XML.  
+ Os membros públicos da classe `ComplexNumber` são serializados por <xref:System.Xml.Serialization.XmlSerializer> atributos XML. O <xref:System.Runtime.Serialization.DataContractSerializer> não pode ser usado para criar esse tipo de instância XML.  
   
 ```csharp  
 public class ComplexNumber  
@@ -70,7 +70,7 @@ public class ComplexNumber
 }  
 ```  
   
- A implementação do serviço calcula e retorna o resultado apropriado — aceitando e retornando valores `ComplexNumber` do tipo.  
+ A implementação do serviço calcula e retorna o resultado apropriado — aceitando e retornando valores do tipo `ComplexNumber`.  
   
 ```csharp  
 public class XmlSerializerCalculatorService : IXmlSerializerCalculator  
@@ -84,7 +84,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
 }  
 ```  
   
- A implementação do cliente também usa números complexos. O contrato de serviço e os tipos de dados são definidos no arquivo de origem generatedClient.cs, que foi gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) de metadados de serviço. Svcutil. exe pode detectar quando um contrato não é serializável pelo <xref:System.Runtime.Serialization.DataContractSerializer> e reverte para `XmlSerializable` emitir tipos nesse caso. Se você quiser forçar o uso do <xref:System.Xml.Serialization.XmlSerializer>, poderá passar a opção de comando/Serializer: XmlSerializer (use XmlSerializer) para a ferramenta svcutil. exe.  
+ A implementação do cliente também usa números complexos. O contrato de serviço e os tipos de dados são definidos no arquivo de origem generatedClient.cs, que foi gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) de metadados de serviço. Svcutil. exe pode detectar quando um contrato não é serializável pelo <xref:System.Runtime.Serialization.DataContractSerializer> e reverte para emitir tipos de `XmlSerializable` nesse caso. Se você quiser forçar o uso do <xref:System.Xml.Serialization.XmlSerializer>, poderá passar a opção de comando/Serializer: XmlSerializer (use XmlSerializer) para a ferramenta svcutil. exe.  
   
 ```csharp  
 // Create a client.  
@@ -130,6 +130,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  

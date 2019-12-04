@@ -1,25 +1,25 @@
 ---
-title: ParallelForEach não genéricos
+title: ParallelForEach não genérico
 ms.date: 03/30/2017
 ms.assetid: de17e7a2-257b-48b3-91a1-860e2e9bf6e6
-ms.openlocfilehash: 52b851686ea2fdc8c573a0622fe91ca5e205edeb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 33e0c8ef8c04b7d58815760ae1152f63891fdfd5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637751"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715637"
 ---
-# <a name="non-generic-parallelforeach"></a>ParallelForEach não genéricos
+# <a name="non-generic-parallelforeach"></a>ParallelForEach não genérico
 
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] envia na caixa de ferramentas um conjunto de atividades de fluxo de controle, incluindo <xref:System.Activities.Statements.ParallelForEach%601>, que permita iterar através das coleções de <xref:System.Collections.Generic.IEnumerable%601> .
 
-<xref:System.Activities.Statements.ParallelForEach%601> requer seu <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> propriedade para ser do tipo <xref:System.Collections.Generic.IEnumerable%601>. Isso evita que usuários de iterar sobre as estruturas de dados que implementam a interface de <xref:System.Collections.Generic.IEnumerable%601> (por exemplo, <xref:System.Collections.ArrayList>). A versão não genérico de <xref:System.Activities.Statements.ParallelForEach%601> supera esse requisito, custas de mais complexidade de tempo de execução para garantir a compatibilidade dos tipos de valores na coleção.
+<xref:System.Activities.Statements.ParallelForEach%601> requer que sua propriedade <xref:System.Activities.Statements.ParallelForEach%601.Values%2A> seja do tipo <xref:System.Collections.Generic.IEnumerable%601>. Isso evita que usuários de iterar sobre as estruturas de dados que implementam a interface de <xref:System.Collections.Generic.IEnumerable%601> (por exemplo, <xref:System.Collections.ArrayList>). A versão não genérico de <xref:System.Activities.Statements.ParallelForEach%601> supera esse requisito, custas de mais complexidade de tempo de execução para garantir a compatibilidade dos tipos de valores na coleção.
 
 Este exemplo mostra como implementar uma atividade não genérico de <xref:System.Activities.Statements.ParallelForEach%601> e seu designer. Esta atividade pode ser usada para percorrer <xref:System.Collections.ArrayList>.
 
-## <a name="parallelforeach-activity"></a>Atividade de ParallelForEach
+## <a name="parallelforeach-activity"></a>Atividade ParallelForEach
 
-A declaração de C#/VB `foreach` enumera os elementos de uma coleção, executando uma instrução inserido para cada elemento da coleção. As atividades equivalentes de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] são <xref:System.Activities.Statements.ForEach%601> e <xref:System.Activities.Statements.ParallelForEach%601>. A atividade de <xref:System.Activities.Statements.ForEach%601> contém uma lista de valores e um corpo. Em tempo de execução, a lista é iterada e o corpo é executado para cada valor na lista.
+A declaração de C#/VB `foreach` enumera os elementos de uma coleção, executando uma instrução inserido para cada elemento da coleção. As atividades equivalentes de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] são <xref:System.Activities.Statements.ForEach%601> e <xref:System.Activities.Statements.ParallelForEach%601>. A atividade de <xref:System.Activities.Statements.ForEach%601> contém uma lista de valores e um corpo. Em runtime, a lista é iterada e o corpo é executado para cada valor na lista.
 
 <xref:System.Activities.Statements.ParallelForEach%601> tem <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A>, de modo que a atividade de <xref:System.Activities.Statements.ParallelForEach%601> pode concluir no início se a avaliação de <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> retorna `true`. <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> é avaliado após cada iteração é concluída.
 
@@ -55,7 +55,7 @@ A coleção de elementos que são iterados sobre. Garantir que todos os elemento
 CompletionCondition (opcional) \
 A propriedade de <xref:System.Activities.Statements.ParallelForEach%601.CompletionCondition%2A> é avaliada após qualquer iteração completa. Se for avaliada como `true`, então o agendada durante iterações é cancelado. Se esta propriedade não for definida, todas as atividades na coleção de ramificações executam até a conclusão.
 
-## <a name="example-of-using-parallelforeach"></a>Exemplo de como usar ParallelForEach
+## <a name="example-of-using-parallelforeach"></a>Exemplo de uso de ParallelForEach
 
 O código a seguir demonstra como usar a atividade de ParallelForEach em um aplicativo.
 
@@ -81,7 +81,7 @@ Activity sampleUsage =
 
 ## <a name="parallelforeach-designer"></a>Designer de ParallelForEach
 
-O designer de atividade para o exemplo é semelhante a aparência ao designer fornecido para atividades interno de <xref:System.Activities.Statements.ParallelForEach%601> . O designer aparece na caixa de ferramentas do **amostras**, **atividades não genéricas** categoria. O designer é chamado **ParallelForEachWithBodyFactory** na caixa de ferramentas, porque a atividade expõe uma <xref:System.Activities.Presentation.IActivityTemplateFactory> na caixa de ferramentas que cria a atividade com configurada adequadamente <xref:System.Activities.ActivityAction>.
+O designer de atividade para o exemplo é semelhante a aparência ao designer fornecido para atividades interno de <xref:System.Activities.Statements.ParallelForEach%601> . O designer aparece na caixa de ferramentas na categoria **exemplos**, **atividades não genéricas** . O designer é denominado **ParallelForEachWithBodyFactory** na caixa de ferramentas, porque a atividade expõe uma <xref:System.Activities.Presentation.IActivityTemplateFactory> na caixa de ferramentas que cria a atividade com um <xref:System.Activities.ActivityAction>configurado corretamente.
 
 ```csharp
 public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
@@ -102,7 +102,7 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 }
 ```
 
-## <a name="to-run-the-sample"></a>Para executar a amostra
+## <a name="to-run-the-sample"></a>Para executar o exemplo
 
 1. Defina o projeto de sua escolha como o projeto de inicialização de solução.
 
@@ -117,6 +117,6 @@ public sealed class ParallelForEachWithBodyFactory : IActivityTemplateFactory
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericParallelForEach`

@@ -2,12 +2,12 @@
 title: Endereçando
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: a94e6dd50fb4a7326666c7843e20964b35f957c6
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 2a737552ef5ea2a8e4544f9ec2c2f84b4b994a75
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990200"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715872"
 ---
 # <a name="addressing"></a>Endereçando
 O exemplo de endereçamento demonstra vários aspectos e recursos de endereços de ponto de extremidade. O exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). Neste exemplo, o serviço é auto-hospedado. O serviço e o cliente são aplicativos de console. O serviço define vários pontos de extremidade usando uma combinação de endereços de ponto de extremidades relativos e absolutos.  
@@ -40,7 +40,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- Nesse caso, o endereço relativo está vazio (""), portanto, o endereço do ponto de extremidade é o mesmo que o endereço base. O endereço do ponto de `http://localhost:8000/servicemodelsamples/service`extremidade real é.
+ Nesse caso, o endereço relativo está vazio (""), portanto, o endereço do ponto de extremidade é o mesmo que o endereço base. O endereço do ponto de extremidade real é `http://localhost:8000/servicemodelsamples/service`.
   
  A segunda definição de ponto de extremidade também especifica um endereço relativo, conforme mostrado na seguinte configuração de exemplo.  
   
@@ -53,7 +53,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O endereço relativo, "Test", é anexado ao endereço base. O endereço do ponto de `http://localhost:8000/servicemodelsamples/service/test`extremidade real é.
+ O endereço relativo, "Test", é anexado ao endereço base. O endereço do ponto de extremidade real é `http://localhost:8000/servicemodelsamples/service/test`.
   
  A terceira definição de ponto de extremidade especifica um endereço absoluto, conforme mostrado na seguinte configuração de exemplo.  
   
@@ -63,9 +63,9 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O endereço base não desempenha nenhuma função no endereço. O endereço do ponto de `http://localhost:8001/hello/servicemodelsamples`extremidade real é.
+ O endereço base não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é `http://localhost:8001/hello/servicemodelsamples`.
   
- O quarto endereço do ponto de extremidade especifica um endereço absoluto e um transporte diferente — TCP. O endereço base não desempenha nenhuma função no endereço. O endereço do ponto de `net.tcp://localhost:9000/servicemodelsamples/service`extremidade real é.
+ O quarto endereço do ponto de extremidade especifica um endereço absoluto e um transporte diferente — TCP. O endereço base não desempenha nenhuma função no endereço. O endereço do ponto de extremidade real é `net.tcp://localhost:9000/servicemodelsamples/service`.
   
 ```xml  
 <!-- The absolute address specified, different transport: -->  
@@ -79,7 +79,7 @@ O exemplo de endereçamento demonstra vários aspectos e recursos de endereços 
 </service>  
 ```  
   
- O cliente acessa apenas um dos quatro pontos de extremidade de serviço, mas todos os quatro são definidos em seu arquivo de configuração. O cliente seleciona um ponto de extremidade quando cria `CalculatorProxy` o objeto. Ao alterar o nome da configuração `CalculatorEndpoint1` de `CalculatorEndpoint4`até o, você pode exercitar cada um dos pontos de extremidade.  
+ O cliente acessa apenas um dos quatro pontos de extremidade de serviço, mas todos os quatro são definidos em seu arquivo de configuração. O cliente seleciona um ponto de extremidade quando cria o objeto `CalculatorProxy`. Ao alterar o nome da configuração de `CalculatorEndpoint1` por meio de `CalculatorEndpoint4`, você pode exercitar cada um dos pontos de extremidade.  
   
  Quando você executa o exemplo, o serviço enumera o endereço, o nome da associação e o nome do contrato para cada um de seus pontos de extremidade. O ponto de extremidade de intercâmbio de metadados (MEX) é apenas outro ponto de extremidade da perspectiva do ServiceHost, então ele aparece na lista.  
   
@@ -132,6 +132,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  

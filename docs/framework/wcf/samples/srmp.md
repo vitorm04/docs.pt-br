@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 51b0e0513ba20bf7aeae461dee6ac864f1d55897
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417090"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716701"
 ---
 # <a name="srmp"></a>SRMP
 Este exemplo demonstra como executar a comunicação em fila transacionada usando o MSMQ (enfileiramento de mensagens) via HTTP.  
@@ -34,7 +34,7 @@ Este exemplo demonstra como executar a comunicação em fila transacionada usand
   
 8. Execute o cliente. Certifique-se de alterar o endereço do ponto de extremidade para apontar para o nome do computador ou endereço IP em vez de localhost. O cliente envia uma mensagem e sai.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  Para executar este exemplo, o IIS deve ser instalado no serviço e nos computadores cliente, além do MSMQ.  
   
 ## <a name="demonstrates"></a>Demonstra  
@@ -92,6 +92,6 @@ OrderDetails
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\SRMP`  

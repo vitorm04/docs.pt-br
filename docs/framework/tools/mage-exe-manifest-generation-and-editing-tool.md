@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: aa2ad9222460f8732397f8b1c72e36085bbe4a21
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3752ac7108a9fcd55b61b32b889a717ef7c0faff
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449425"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714468"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (Ferramenta de Geração e Edição de Manifesto)
 
@@ -32,7 +32,7 @@ Mage [commands] [commandOptions]
 
 A tabela a seguir mostra os comandos compatíveis com *Mage.exe*. Para obter mais informações sobre as opções compatíveis com esses comandos, confira [Opções de comando novas e atualizadas](#new-and-update-command-options) e [Opções do comando de entrada](#sign-command-options).
 
-|Command|Descrição|
+|{1&gt;Comando&lt;1}|Descrição|
 |-------------|-----------------|
 |**-cc, ClearApplicationCache**|Limpa o cache do aplicativo baixado somente de todos os aplicativos online.|
 |**-n, -New** *fileType [newOptions]*|Cria um novo arquivo do tipo indicado. Os tipos válidos são:<br /><br /> -   `Deployment`: cria um novo manifesto de implantação.<br />-   `Application`: cria um novo manifesto do aplicativo.<br /><br /> Se você não especificar parâmetros adicionais com esse comando, ele criará um arquivo do tipo apropriado, com as marcas padrão adequadas e os valores de atributo.<br /><br /> Use a opção **-ToFile** (consulte na tabela a seguir) para especificar o nome e o caminho do arquivo novo.<br /><br /> Use a opção **-FromDirectory** (consulte na tabela a seguir) para criar um manifesto do aplicativo com todos os assemblies de um aplicativo adicionado à seção \<dependency> do manifesto.|
@@ -45,7 +45,7 @@ A tabela a seguir mostra os comandos compatíveis com *Mage.exe*. Para obter mai
 
 A tabela a seguir mostra as opções compatíveis com os comandos `-New` e `-Update`:
 
-|Opções|Valor padrão|Aplica-se a|Descrição|
+|Opções|Valor Padrão|Aplica-se a|Descrição|
 |-------------|-------------------|----------------|-----------------|
 |**-a, -Algorithm**|sha1RSA|Manifestos de aplicativo.<br /><br /> Manifestos de implantação.|Especifica o algoritmo com o qual gerar resumos de dependência. O valor deve ser "sha256RSA" ou "sha1RSA.<br /><br /> Use com a opção "-Update". Essa opção é ignorada durante o uso da opção "-Sign"|
 |**-appc, -AppCodeBase** `manifestReference`||Manifestos de implantação.|Insere uma referência de URL ou de caminho do arquivo no arquivo de manifesto do aplicativo. Esse valor deve ser o caminho completo do manifesto de aplicativo.|
@@ -55,11 +55,11 @@ A tabela a seguir mostra as opções compatíveis com os comandos `-New` e `-Upd
 |**-csp, -CryptoProvider** `provider-name`||Todos os tipos de arquivo.|Especifica o nome de um provedor de serviços de criptografia (CSP) que contém o contêiner de chave privada. Essa opção exige a opção **-KeyContainer**.<br/><br/>Essa opção está disponível a partir do .NET Framework 4.7.|
 |**-fd, -FromDirectory** `directoryPath`||Manifestos de aplicativo.|Popula o manifesto do aplicativo com descrições de todos os assemblies e arquivos encontrados em `directoryPath`, inclusive todos os subdiretórios, em que `directoryPath` é o diretório que contém o aplicativo que você deseja implantar. Para cada arquivo no diretório, *Mage.exe* decide se o arquivo é um assembly ou um arquivo estático. Se for um assembly, ele adicionará uma marca `<dependency>` e um atributo `installFrom` ao aplicativo com o nome do assembly, a base de código e a versão. Se for um arquivo estático, ele adicionará uma marca `<file>`. *Mage.exe* também usará um conjunto simples de heurística para detectar o executável principal do aplicativo e o marcará como o ponto de entrada do aplicativo ClickOnce no manifesto.<br /><br /> *Mage.exe* jamais marcará automaticamente um arquivo como um arquivo de "dados". Você deve fazer isso manualmente. Para obter mais informações, consulte [Como incluir um arquivo de dados em um aplicativo ClickOnce](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application).<br /><br /> *Mage.exe* também gera um hash para cada arquivo com base em seu tamanho. ClickOnce usa esses hashes para garantir que ninguém adultere os arquivos de implantação desde a criação do manifesto. Se algum dos arquivos na sua implantação mudar, você poderá executar o *Mage.exe* com o comando **-Update** e com a opção **-FromDirectory**, e ele atualizará as versões do assembly e hashes de todos os arquivos referenciados.<br /><br /> **-FromDirectory** incluirá todos os arquivos em todos os subdiretórios encontrados em `directoryPath`.<br /><br /> Se você usar **-FromDirectory** com o comando **-Update**, o *Mage.exe* removerá todos os arquivos no manifesto do aplicativo que não existem mais no diretório.|
 |**-if, -IconFile**  `filePath`||Manifestos de aplicativo.|Especifica o caminho completo para um arquivo de ícone .ICO. Esse ícone é exibido ao lado do nome do aplicativo no menu Iniciar e na entrada Adicionar ou Remover Programas. Se nenhum ícone for fornecido, será usado um ícone padrão.|
-|**-ip, -IncludeProviderURL**  `url`|{1&gt;true&lt;1}|Manifestos de implantação.|Indica se o manifesto de implantação inclui o valor local de atualização definido por **-ProviderURL**.|
-|**-i, -Install** `willInstall`|{1&gt;true&lt;1}|Manifestos de implantação.|Indica se o aplicativo ClickOnce deve ou não ser instalado no computador local, ou se o deve ser executado na Web. A instalação de um aplicativo dá a esse aplicativo uma presença no menu **Iniciar** do Windows. Os valores válidos são "true" ou "t" e "false" ou "f".<br /><br /> Se você especificar a opção **-MinVersion** e um usuário tiver uma versão inferior a **-MinVersion** instalada, ela forçará a instalação do aplicativo, independentemente do valor passado para **-Install**.<br /><br /> Essa opção não pode ser usada com a opção **-BrowserHosted**. A tentativa de especificar ambos para o mesmo manifesto resultará em um erro.|
+|**-ip, -IncludeProviderURL**  `url`|true|Manifestos de implantação.|Indica se o manifesto de implantação inclui o valor local de atualização definido por **-ProviderURL**.|
+|**-i, -Install** `willInstall`|true|Manifestos de implantação.|Indica se o aplicativo ClickOnce deve ou não ser instalado no computador local, ou se o deve ser executado na Web. A instalação de um aplicativo dá a esse aplicativo uma presença no menu **Iniciar** do Windows. Os valores válidos são "true" ou "t" e "false" ou "f".<br /><br /> Se você especificar a opção **-MinVersion** e um usuário tiver uma versão inferior a **-MinVersion** instalada, ela forçará a instalação do aplicativo, independentemente do valor passado para **-Install**.<br /><br /> Essa opção não pode ser usada com a opção **-BrowserHosted**. A tentativa de especificar ambos para o mesmo manifesto resultará em um erro.|
 |**-kc, -KeyContainer** `name`||Todos os tipos de arquivo.|Especifica o contêiner de chave que contém o nome da chave privada. Essa opção exige a opção **CryptoProvider**.<br/><br/>Essa opção está disponível a partir do .NET Framework 4.7.|
 |**-mv, -MinVersion**  `[version]`|A versão listada no manifesto de implantação do ClickOnce conforme especificado pelo sinalizador **-Version**.|Manifestos de implantação.|A versão mínima desse aplicativo que um usuário pode executar. Esse sinalizador torna a versão nomeada do aplicativo uma atualização obrigatória. Se liberar uma versão do produto com uma atualização para uma alteração importante ou uma falha de segurança crítica, você poderá usar esse sinalizador para especificar se essa atualização deve ser instalada e se o usuário não pode continuar executando versões anteriores.<br /><br /> `version` tem a mesma semântica do argumento do sinalizador **-Version**.|
-|**-n, -Name** `nameString`|Implantar|Todos os tipos de arquivo.|O nome usado para identificar o aplicativo. O ClickOnce usará esse nome para identificar o aplicativo no menu **Iniciar** (se o aplicativo estiver configurado para se instalar) e nas caixas de diálogo Elevação de Permissão. **Observação:** se você estiver atualizando um manifesto existente e não especificar um nome do editor com essa opção, *Mage.exe* atualizará o manifesto com o nome da organização definido no computador. Para usar um nome diferente, não se esqueça de usar essa opção e especificar o nome do editor desejado.|
+|**-n, -Name** `nameString`|Implantar o|Todos os tipos de arquivo.|O nome usado para identificar o aplicativo. O ClickOnce usará esse nome para identificar o aplicativo no menu **Iniciar** (se o aplicativo estiver configurado para se instalar) e nas caixas de diálogo Elevação de Permissão. **Observação:** se você estiver atualizando um manifesto existente e não especificar um nome do editor com essa opção, *Mage.exe* atualizará o manifesto com o nome da organização definido no computador. Para usar um nome diferente, não se esqueça de usar essa opção e especificar o nome do editor desejado.|
 |**-pwd, -Password** `passwd`||Todos os tipos de arquivo.|A senha que é usada na assinatura de um manifesto com um certificado digital. Deve ser usado com a opção **-CertFile**.|
 |**-p, Processor** `processorValue`|Msil|Manifestos de aplicativo.<br /><br /> Manifestos de implantação.|A arquitetura do microprocessador em que essa distribuição será executada. Esse valor será obrigatório se você estiver preparando uma ou mais instalações cujos assemblies foram pré-compilados para um microprocessador específico. Os valores válidos incluem `msil`, `x86`, `ia64` e `amd64`. `msil` é a Microsoft Intermediate Language, o que significa que todos os assemblies independem da plataforma e o CLR (Common Language Runtime) os compilará just-in-time quando o aplicativo for executado pela primeira vez.|
 |**-pu,** **-ProviderURL** `url`||Manifestos de implantação.|Especifica a URL que o ClickOnce examinará em busca de atualizações de aplicativo.|
@@ -117,31 +117,31 @@ As tabelas a seguir mostram esses recursos e restrições:
 
 |Versão do manifesto|Operação|Mage v2.0|Mage v4.0|
 |----------------------|---------------|---------------|---------------|
-|Manifesto dos aplicativos com a versão 2.0 ou 3.x do .NET Framework como destino|Abrir|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Fechar|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Salvar|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Assinar Novamente|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Novo|{1&gt;OK&lt;1}|Sem suporte|
-||Atualizar (veja abaixo)|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-|Manifesto dos aplicativos com a versão 4 do .NET Framework como destino|Abrir|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Fechar|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Salvar|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Assinar Novamente|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Novo|Sem suporte|{1&gt;OK&lt;1}|
-||Atualizar (veja abaixo)|Sem suporte|{1&gt;OK&lt;1}|
+|Manifesto dos aplicativos com a versão 2.0 ou 3.x do .NET Framework como destino|Open|OK|OK|
+||Fechar|OK|OK|
+||Salvar|OK|OK|
+||Assinar Novamente|OK|OK|
+||Nova|OK|Sem suporte|
+||Atualizar (veja abaixo)|OK|OK|
+|Manifesto dos aplicativos com a versão 4 do .NET Framework como destino|Open|OK|OK|
+||Fechar|OK|OK|
+||Salvar|OK|OK|
+||Assinar Novamente|OK|OK|
+||Nova|Sem suporte|OK|
+||Atualizar (veja abaixo)|Sem suporte|OK|
 
 |Versão do manifesto|Detalhes da Operação de Atualização|Mage v2.0|Mage v4.0|
 |----------------------|------------------------------|---------------|---------------|
-|Manifesto dos aplicativos com a versão 2.0 ou 3.x do .NET Framework como destino|Modificar um assembly|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Adicionar um assembly|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-||Remover um assembly|{1&gt;OK&lt;1}|{1&gt;OK&lt;1}|
-|Manifesto dos aplicativos com a versão 4 do .NET Framework como destino|Modificar um assembly|Sem suporte|{1&gt;OK&lt;1}|
-||Adicionar um assembly|Sem suporte|{1&gt;OK&lt;1}|
-||Remover um assembly|Sem suporte|{1&gt;OK&lt;1}|
+|Manifesto dos aplicativos com a versão 2.0 ou 3.x do .NET Framework como destino|Modificar um assembly|OK|OK|
+||Adicionar um assembly|OK|OK|
+||Remover um assembly|OK|OK|
+|Manifesto dos aplicativos com a versão 4 do .NET Framework como destino|Modificar um assembly|Sem suporte|OK|
+||Adicionar um assembly|Sem suporte|OK|
+||Remover um assembly|Sem suporte|OK|
 
- Mage.exe cria novos manifestos com o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. Os aplicativos ClickOnce que definem o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino podem ser executados no [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] e na versão completa do .NET Framework 4. Se o destino do aplicativo for a versão completa do .NET Framework 4 e não puder ser executado no [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)], remova o elemento `<framework>` do cliente usando um editor de texto e assine novamente o manifesto.
+ O Mage. exe cria novos manifestos destinados ao perfil de cliente .NET Framework 4. Os aplicativos ClickOnce destinados ao perfil de cliente do .NET Framework 4 podem ser executados no perfil de cliente do .NET Framework 4 e na versão completa do .NET Framework 4. Se seu aplicativo for direcionado para a versão completa do .NET Framework 4 e não puder ser executado no perfil de cliente .NET Framework 4, remova o elemento `<framework>` cliente usando um editor de texto e assine novamente o manifesto.
 
-A seguir há um elemento `<framework>` de exemplo que define o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino:
+Este é um elemento de `<framework>` de exemplo que se destina ao perfil de cliente do .NET Framework 4:
 
 ```xml
 <framework targetVersion="4.0" profile="client" supportedRuntime="4.0.20506" />

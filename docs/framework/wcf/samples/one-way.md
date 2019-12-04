@@ -1,21 +1,21 @@
 ---
-title: Unidirecional
+title: Uma via
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: f392fad0461dab4dff6e5e4efe0070d7017a700b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 91bdc09e374b3a1c6d407d4bd95428fafaf3ecc1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039053"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714660"
 ---
-# <a name="one-way"></a>Unidirecional
-Este exemplo demonstra um contato de serviço com operações de serviço unidirecionais. O cliente não aguarda que as operações de serviço sejam concluídas como é o caso com operações de serviço bidirecionais. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e usa a `wsHttpBinding` associação. O serviço neste exemplo é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe e processa solicitações. O cliente também é um aplicativo de console.  
+# <a name="one-way"></a>Uma via
+Este exemplo demonstra um contato de serviço com operações de serviço unidirecionais. O cliente não aguarda que as operações de serviço sejam concluídas como é o caso com operações de serviço bidirecionais. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e usa a associação de `wsHttpBinding`. O serviço neste exemplo é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe e processa solicitações. O cliente também é um aplicativo de console.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Para criar um contrato de serviço unidirecional, defina seu contrato de serviço, <xref:System.ServiceModel.OperationContractAttribute> aplique a classe a cada operação e <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> `true` defina como, conforme mostrado no código de exemplo a seguir:  
+ Para criar um contrato de serviço unidirecional, defina seu contrato de serviço, aplique a classe <xref:System.ServiceModel.OperationContractAttribute> a cada operação e defina <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> como `true`, conforme mostrado no código de exemplo a seguir:  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -84,7 +84,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
-> O HTTP é, por definição, um protocolo de solicitação/resposta; Quando uma solicitação é feita, uma resposta é retornada. Isso é verdadeiro mesmo para uma operação de serviço unidirecional que é exposta por HTTP. Quando a operação é chamada, o serviço retorna um código de status HTTP de 202 antes da execução da operação de serviço. Esse código de status significa que a solicitação foi aceita para processamento, mas o processamento ainda não foi concluído. O cliente que chamou a operação é bloqueado até receber a resposta 202 do serviço. Isso pode causar algum comportamento inesperado quando várias mensagens unidirecionais são enviadas usando uma associação configurada para usar sessões. A `wsHttpBinding` associação usada neste exemplo é configurada para usar sessões por padrão para estabelecer um contexto de segurança. Por padrão, as mensagens em uma sessão têm garantia de chegar na ordem em que são enviadas. Por isso, quando a segunda mensagem em uma sessão é enviada, ela não é processada até que a primeira mensagem seja processada. O resultado disso é que o cliente não recebe a resposta 202 para uma mensagem até que o processamento da mensagem anterior tenha sido concluído. O cliente, portanto, parece bloquear em cada chamada de operação subsequente. Para evitar esse comportamento, esta amostra configura o tempo de execução para distribuir mensagens simultaneamente para instâncias distintas para processamento. O exemplo define <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> como `PerCall` para que cada mensagem possa ser processada por uma instância diferente. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>é definido como `Multiple` para permitir que mais de um thread envie mensagens por vez.  
+> O HTTP é, por definição, um protocolo de solicitação/resposta; Quando uma solicitação é feita, uma resposta é retornada. Isso é verdadeiro mesmo para uma operação de serviço unidirecional que é exposta por HTTP. Quando a operação é chamada, o serviço retorna um código de status HTTP de 202 antes da execução da operação de serviço. Esse código de status significa que a solicitação foi aceita para processamento, mas o processamento ainda não foi concluído. O cliente que chamou a operação é bloqueado até receber a resposta 202 do serviço. Isso pode causar algum comportamento inesperado quando várias mensagens unidirecionais são enviadas usando uma associação configurada para usar sessões. A associação de `wsHttpBinding` usada neste exemplo é configurada para usar sessões por padrão para estabelecer um contexto de segurança. Por padrão, as mensagens em uma sessão têm garantia de chegar na ordem em que são enviadas. Por isso, quando a segunda mensagem em uma sessão é enviada, ela não é processada até que a primeira mensagem seja processada. O resultado disso é que o cliente não recebe a resposta 202 para uma mensagem até que o processamento da mensagem anterior tenha sido concluído. O cliente, portanto, parece bloquear em cada chamada de operação subsequente. Para evitar esse comportamento, esta amostra configura o tempo de execução para distribuir mensagens simultaneamente para instâncias distintas para processamento. O exemplo define <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> como `PerCall` para que cada mensagem possa ser processada por uma instância diferente. <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> é definido como `Multiple` para permitir que mais de um thread envie mensagens por vez.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -102,6 +102,6 @@ Processing Divide(22,7) - result: 3.14285714285714
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  

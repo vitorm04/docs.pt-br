@@ -2,12 +2,12 @@
 title: Formatador de operação e seletor de operação
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
-ms.openlocfilehash: 8653bfd12df8eaf422797197cfcc58e9a46274bf
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 64f2d807946d5365c01cd1a46488c868ebc603ac
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424288"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714636"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>Formatador de operação e seletor de operação
 Este exemplo demonstra como os pontos de extensibilidade do Windows Communication Foundation (WCF) podem ser usados para permitir dados de mensagem em um formato diferente do esperado pelo WCF. Por padrão, os formatadores do WCF esperam que os parâmetros do método sejam incluídos no elemento `soap:body`. O exemplo mostra como implementar um formatador de operação personalizada que analisa dados de parâmetro de uma cadeia de caracteres de consulta HTTP GET e invoca métodos que usam esses dados.  
@@ -29,12 +29,12 @@ Este exemplo demonstra como os pontos de extensibilidade do Windows Communicatio
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
-## <a name="key-concepts"></a>Conceitos Principais  
+## <a name="key-concepts"></a>Conceitos principais  
  `QueryStringFormatter`-o formatador de operação é o componente no WCF que é responsável pela conversão de uma mensagem em uma matriz de objetos de parâmetro e uma matriz de objetos de parâmetro em uma mensagem. Isso é feito no cliente usando a interface <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> e no servidor com a interface <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>. Essas interfaces permitem que os usuários obtenham as mensagens de solicitação e resposta dos métodos `Serialize` e `Deserialize`.  
   
  Neste exemplo, `QueryStringFormatter` implementa ambas as interfaces e é implementada no cliente e no servidor.  
   
- Quest  
+ Solicitação:  
   
 - O exemplo usa a classe <xref:System.ComponentModel.TypeConverter> para converter dados de parâmetro na mensagem de solicitação de e para cadeias de caracteres. Se um <xref:System.ComponentModel.TypeConverter> não estiver disponível para um tipo específico, o formatador de exemplo lançará uma exceção.  
   
@@ -42,7 +42,7 @@ Este exemplo demonstra como os pontos de extensibilidade do Windows Communicatio
   
 - No método `IDispatchMessageFormatter.DeserializeRequest` no servidor, o formatador recupera o URI `Via` nas propriedades da mensagem de solicitação de entrada. Ele analisa os pares de nome-valor na cadeia de caracteres de consulta de URI em valores e nomes de parâmetros e usa os nomes e valores de parâmetro para preencher a matriz de parâmetros passada para o método. Observe que a expedição da operação já ocorreu, portanto, o sufixo do nome da operação é ignorado nesse método.  
   
- Responde  
+ Resposta:  
   
 - Neste exemplo, HTTP GET é usado somente para a solicitação. O formatador delega o envio da resposta ao formatador original que teria sido usado para gerar uma mensagem XML. Uma das metas deste exemplo é mostrar como esse formatador de delegação pode ser implementado.  
   
@@ -166,7 +166,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Formatters\QueryStringFormatter`  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: bd84cb45de68ee86cb042e85695f4893c0ca6988
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3382aeb59f3500f9371f39cc892bce5fac65791f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424138"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714815"
 ---
 # <a name="message-security-certificate"></a>Certificado de mensagem de segurança
 Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com a autenticação de certificado X. 509 v3 para o cliente e requer autenticação de servidor usando o certificado X. 509 v3 do servidor. Este exemplo usa configurações padrão, de modo que todas as mensagens de aplicativo entre o cliente e o servidor sejam assinadas e criptografadas. Este exemplo se baseia na [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) e consiste em um programa de console do cliente e uma biblioteca de serviços hospedada pelo serviços de informações da Internet (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta.  
@@ -240,7 +240,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
     ```  
   
-     A variável% SERVER_NAME% especifica o nome do servidor. O certificado é armazenado no armazenamento LocalMachine. Se o arquivo em lotes setup. bat for executado com um argumento de serviço (como o **serviço setup. bat**), o% server_name% conterá o nome de domínio totalmente qualificado do computador. Caso contrário, o padrão é localhost.  
+     A variável% SERVER_NAME% especifica o nome do servidor. O certificado é armazenado no armazenamento LocalMachine. Se o arquivo em lotes setup. bat for executado com um argumento de serviço (como, **serviço setup. bat**),% server_name% conterá o nome de domínio totalmente qualificado do computador. Caso contrário, o padrão é localhost.  
   
 - Instalar o certificado do servidor no repositório de certificados confiáveis do cliente.  
   
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está no seguinte diretório:  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está no seguinte diretório:  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MessageSecurity`  
   

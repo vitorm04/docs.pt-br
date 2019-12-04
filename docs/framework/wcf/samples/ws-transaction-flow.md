@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 9f215bb5f6d2ec480022af477d93d9411fe190cd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424489"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714594"
 ---
 # <a name="ws-transaction-flow"></a>Fluxo de transação WS
 Este exemplo demonstra o uso de uma transação coordenada pelo cliente e as opções de cliente e servidor para o fluxo de transações usando a transação WS-Atomic ou o protocolo OleTransactions. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora, mas as operações são atribuídas para demonstrar o uso do `TransactionFlowAttribute` com a enumeração **TransactionFlowOption** para determinar para qual grau o fluxo de transações está habilitado. Dentro do escopo da transação fluida, um log das operações solicitadas é gravado em um banco de dados e persiste até que a transação coordenada do cliente seja concluída – se a transação do cliente não for concluída, a transação do serviço Web garantirá que o as atualizações apropriadas para o banco de dados não são confirmadas.  
@@ -285,6 +285,6 @@ Press <ENTER> to terminate the service.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\TransactionFlow`

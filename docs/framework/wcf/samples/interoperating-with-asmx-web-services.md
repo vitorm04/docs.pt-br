@@ -2,12 +2,12 @@
 title: Interoperabilidade com serviços Web ASMX
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: 2ef4e34de76c046ba21dd7a3c50ea6ba782d459e
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 6d8be3fe6daa19a842dcaa92d05ec89ebef9fa5f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989807"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715742"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>Interoperabilidade com serviços Web ASMX
 Este exemplo demonstra como integrar um aplicativo cliente do Windows Communication Foundation (WCF) com um serviço Web ASMX existente.  
@@ -15,7 +15,7 @@ Este exemplo demonstra como integrar um aplicativo cliente do Windows Communicat
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Este exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados pelo Serviços de Informações da Internet (IIS). O serviço é um serviço Web ASMX que implementa um contrato que define um padrão de comunicação de solicitação-resposta. O serviço expõe operações matemáticas`Add`( `Subtract` `Multiply`,, e `Divide`). O cliente faz solicitações síncronas para uma operação matemática e o serviço responde com o resultado. A atividade do cliente fica visível na janela do console.  
+ Este exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados pelo Serviços de Informações da Internet (IIS). O serviço é um serviço Web ASMX que implementa um contrato que define um padrão de comunicação de solicitação-resposta. O serviço expõe operações matemáticas (`Add`, `Subtract`, `Multiply`e `Divide`). O cliente faz solicitações síncronas para uma operação matemática e o serviço responde com o resultado. A atividade do cliente fica visível na janela do console.  
   
  A implementação do serviço Web ASMX mostrada no código de exemplo a seguir calcula e retorna o resultado apropriado.  
   
@@ -46,7 +46,7 @@ public class CalculatorService : System.Web.Services.WebService
     }  
 ```  
   
- Conforme configurado, o serviço pode ser acessado `http://localhost/servicemodelsamples/service.asmx` por um cliente no mesmo computador. Para clientes em computadores remotos acessarem o serviço, um nome de domínio qualificado deve ser especificado em vez de localhost.  
+ Conforme configurado, o serviço pode ser acessado em `http://localhost/servicemodelsamples/service.asmx` por um cliente no mesmo computador. Para clientes em computadores remotos acessarem o serviço, um nome de domínio qualificado deve ser especificado em vez de localhost.  
   
  A comunicação é feita por meio de um cliente gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). O cliente está contido no arquivo generatedClient.cs. O serviço ASMX deve estar disponível para gerar o código de proxy, pois ele é usado para recuperar os metadados atualizados. Execute o comando a seguir em um prompt de comando no diretório do cliente para gerar o proxy de tipo.  
   
@@ -127,6 +127,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  

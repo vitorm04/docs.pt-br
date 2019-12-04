@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Data Contract
 ms.assetid: b124e9e0-cb73-4ae0-b9c3-e6cdf5eced98
-ms.openlocfilehash: a1599afa184fe4b4228305051018e6a8cb9efed9
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: fbcc93826ebe2857345823176ddc0054b7e62eea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045750"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716115"
 ---
 # <a name="basic-data-contract"></a>Contrato de dados básicos
 
@@ -38,7 +38,7 @@ public interface ICalculator
 }
 ```
 
- Os <xref:System.Runtime.Serialization.DataContractAttribute> atributos <xref:System.Runtime.Serialization.DataMemberAttribute> e foram aplicados `ComplexNumber` à definição da classe para indicar quais campos da classe podem ser passados pela conexão entre o cliente e o serviço, conforme mostrado no código de exemplo a seguir.
+ Os atributos <xref:System.Runtime.Serialization.DataContractAttribute> e <xref:System.Runtime.Serialization.DataMemberAttribute> foram aplicados à definição da classe `ComplexNumber` para indicar quais campos da classe podem ser passados pela conexão entre o cliente e o serviço, conforme mostrado no código de exemplo a seguir.
 
 ```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -57,7 +57,7 @@ public class ComplexNumber
 }
 ```
 
-A implementação do serviço calcula e retorna o resultado apropriado, aceitando e retornando números `ComplexNumber` do tipo.
+A implementação do serviço calcula e retorna o resultado apropriado, aceitando e retornando números do tipo de `ComplexNumber`.
 
 ```csharp
 // This is the service class that implements the service contract.
@@ -144,6 +144,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\Basic`

@@ -2,12 +2,12 @@
 title: Usando o escopo de edição
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
-ms.openlocfilehash: 386c94e5c6761bb704efc9e48723d0e91a4aaf6b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3e99610fda78e50f6d6eb72c38ecc82bdc96b5a2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037794"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715545"
 ---
 # <a name="using-editing-scope"></a>Usando o escopo de edição
 Este exemplo demonstra como em lotes um conjunto de alterações de modo que eles possam ser desfeitos em uma única unidade atômica. Por padrão, as ações executadas por um autor do designer de atividade automaticamente são integradas desfazer/refazem o sistema.  
@@ -39,6 +39,6 @@ Este exemplo demonstra como em lotes um conjunto de alterações de modo que ele
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\UsingEditingScope`

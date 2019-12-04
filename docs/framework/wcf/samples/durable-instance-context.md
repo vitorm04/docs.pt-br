@@ -2,12 +2,12 @@
 title: Contexto de instância durável
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 4c2e39aa257d4b4b9b3bd28e0cd469f09cae0766
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 3ff4cbcf7a6007339d98820384f5e2d4164d1b0b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71351625"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711934"
 ---
 # <a name="durable-instance-context"></a>Contexto de instância durável
 
@@ -32,7 +32,7 @@ Como o primeiro na lista afeta as mensagens na transmissão, ela deve ser implem
 
 ## <a name="durable-instancecontext-channel"></a>Canal de InstanceContext durável
 
-A primeira coisa a ser examinada é uma extensão de camada de canal. A primeira etapa na gravação de um canal personalizado é decidir a estrutura de comunicação do canal. Como um novo protocolo de conexão está sendo introduzido, o canal deve funcionar com quase qualquer outro canal na pilha de canais. Portanto, ele deve dar suporte a todos os padrões de troca de mensagens. No entanto, a funcionalidade principal do canal é a mesma, independentemente de sua estrutura de comunicação. Mais especificamente, do cliente, ele deve gravar a ID de contexto para as mensagens e do serviço ele deve ler essa ID de contexto das mensagens e passá-la para os níveis superiores. Por isso, é criada `DurableInstanceContextChannelBase` uma classe que atua como a classe base abstrata para todas as implementações de canal de contexto de instância durável. Essa classe contém as funções de gerenciamento de máquina de Estado comum e dois membros protegidos para aplicar e ler as informações de contexto de e para mensagens.
+A primeira coisa a ser examinada é uma extensão de camada de canal. A primeira etapa na gravação de um canal personalizado é decidir a estrutura de comunicação do canal. Como um novo protocolo de conexão está sendo introduzido, o canal deve funcionar com quase qualquer outro canal na pilha de canais. Portanto, ele deve dar suporte a todos os padrões de troca de mensagens. No entanto, a funcionalidade principal do canal é a mesma, independentemente de sua estrutura de comunicação. Mais especificamente, do cliente, ele deve gravar a ID de contexto para as mensagens e do serviço ele deve ler essa ID de contexto das mensagens e passá-la para os níveis superiores. Por isso, é criada uma classe `DurableInstanceContextChannelBase` que atua como a classe base abstrata para todas as implementações de canal de contexto de instância durável. Essa classe contém as funções de gerenciamento de máquina de Estado comum e dois membros protegidos para aplicar e ler as informações de contexto de e para mensagens.
 
 ```csharp
 class DurableInstanceContextChannelBase
@@ -49,13 +49,13 @@ class DurableInstanceContextChannelBase
 }
 ```
 
-Esses dois métodos fazem uso de `IContextManager` implementações para gravar e ler a ID de contexto de ou para a mensagem. (`IContextManager` é uma interface personalizada usada para definir o contrato para todos os gerenciadores de contexto.) O canal pode incluir a ID de contexto em um cabeçalho SOAP personalizado ou em um cabeçalho de cookie HTTP. Cada implementação do Gerenciador de contexto herda `ContextManagerBase` da classe que contém a funcionalidade comum para todos os gerenciadores de contexto. O `GetContextId` método nessa classe é usado para originar a ID de contexto do cliente. Quando uma ID de contexto é originada pela primeira vez, esse método a salva em um arquivo de texto cujo nome é construído pelo endereço do ponto de extremidade remoto (os caracteres de nome de arquivo inválidos nos URIs típicos são substituídos por @ caracteres).
+Esses dois métodos fazem uso de implementações de `IContextManager` para gravar e ler a ID de contexto de ou para a mensagem. (`IContextManager` é uma interface personalizada usada para definir o contrato para todos os gerenciadores de contexto.) O canal pode incluir a ID de contexto em um cabeçalho SOAP personalizado ou em um cabeçalho de cookie HTTP. Cada implementação do Gerenciador de contexto herda da classe `ContextManagerBase` que contém a funcionalidade comum para todos os gerenciadores de contexto. O método `GetContextId` nessa classe é usado para originar a ID de contexto do cliente. Quando uma ID de contexto é originada pela primeira vez, esse método a salva em um arquivo de texto cujo nome é construído pelo endereço do ponto de extremidade remoto (os caracteres de nome de arquivo inválidos nos URIs típicos são substituídos por @ caracteres).
 
 Posteriormente, quando a ID de contexto for necessária para o mesmo ponto de extremidade remoto, ela verificará se um arquivo apropriado existe. Se tiver, ele lerá a ID de contexto e retornará. Caso contrário, ele retorna uma ID de contexto gerada recentemente e salva-o em um arquivo. Com a configuração padrão, esses arquivos são colocados em um diretório chamado ContextStore, que reside no diretório Temp do usuário atual. No entanto, esse local é configurável usando o elemento Binding.
 
-O mecanismo usado para transportar a ID de contexto é configurável. Ele pode ser gravado no cabeçalho do cookie HTTP ou em um cabeçalho SOAP personalizado. A abordagem de cabeçalho SOAP personalizada possibilita o uso desse protocolo com protocolos não HTTP (por exemplo, TCP ou pipes nomeados). Há duas classes, `MessageHeaderContextManager` ou `HttpCookieContextManager`seja, que implementam essas duas opções.
+O mecanismo usado para transportar a ID de contexto é configurável. Ele pode ser gravado no cabeçalho do cookie HTTP ou em um cabeçalho SOAP personalizado. A abordagem de cabeçalho SOAP personalizada possibilita o uso desse protocolo com protocolos não HTTP (por exemplo, TCP ou pipes nomeados). Há duas classes, ou seja, `MessageHeaderContextManager` e `HttpCookieContextManager`, que implementam essas duas opções.
 
-Ambos gravam a ID de contexto na mensagem adequadamente. Por exemplo, a `MessageHeaderContextManager` classe a grava em um cabeçalho SOAP `WriteContext` no método.
+Ambos gravam a ID de contexto na mensagem adequadamente. Por exemplo, a classe `MessageHeaderContextManager` a grava em um cabeçalho SOAP no método `WriteContext`.
 
 ```csharp
 public override void WriteContext(Message message)
@@ -72,7 +72,7 @@ public override void WriteContext(Message message)
 }
 ```
 
-`ReadContextId` `IContextManager.ReadContext` Os métodos `ApplyContext` e na `IContextManager.WriteContext`classe invocam o e, respectivamente. `DurableInstanceContextChannelBase` No entanto, esses gerenciadores de `DurableInstanceContextChannelBase` contexto não são criados diretamente pela classe. Em vez disso, `ContextManagerFactory` ele usa a classe para fazer esse trabalho.
+Os métodos `ApplyContext` e `ReadContextId` na classe `DurableInstanceContextChannelBase` invocam a `IContextManager.ReadContext` e a `IContextManager.WriteContext`, respectivamente. No entanto, esses gerenciadores de contexto não são criados diretamente pela classe `DurableInstanceContextChannelBase`. Em vez disso, ele usa a classe `ContextManagerFactory` para fazer esse trabalho.
 
 ```csharp
 IContextManager contextManager =
@@ -81,15 +81,15 @@ IContextManager contextManager =
                 this.endpointAddress);
 ```
 
-O `ApplyContext` método é invocado pelos canais de envio. Ele injeta a ID de contexto para as mensagens de saída. O `ReadContextId` método é invocado pelos canais de recebimento. Esse método garante que a ID de contexto esteja disponível nas mensagens de entrada e a adicione à `Properties` coleção `Message` da classe. Ele também gera um `CommunicationException` no caso de uma falha ao ler a ID do contexto e, portanto, faz com que o canal seja anulado.
+O método `ApplyContext` é invocado pelos canais de envio. Ele injeta a ID de contexto para as mensagens de saída. O método `ReadContextId` é invocado pelos canais de recebimento. Esse método garante que a ID de contexto esteja disponível nas mensagens de entrada e a adicione à coleção de `Properties` da classe `Message`. Ele também gera uma `CommunicationException` no caso de uma falha ao ler a ID do contexto e, portanto, faz com que o canal seja anulado.
 
 ```csharp
 message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextId);
 ```
 
-Antes de continuar, é importante entender o uso da `Properties` coleção `Message` na classe. Normalmente, essa `Properties` coleção é usada ao passar dados de baixo para os níveis superiores da camada de canal. Dessa forma, os dados desejados podem ser fornecidos para os níveis superiores de forma consistente, independentemente dos detalhes do protocolo. Em outras palavras, a camada de canal pode enviar e receber a ID de contexto como um cabeçalho SOAP ou um cabeçalho de cookie HTTP. Mas não é necessário que os níveis superiores saibam sobre esses detalhes porque a camada de canal torna essas informações disponíveis na `Properties` coleção.
+Antes de continuar, é importante entender o uso da coleção de `Properties` na classe `Message`. Normalmente, essa coleção de `Properties` é usada ao passar dados de um nível inferior para os níveis superiores da camada de canal. Dessa forma, os dados desejados podem ser fornecidos para os níveis superiores de forma consistente, independentemente dos detalhes do protocolo. Em outras palavras, a camada de canal pode enviar e receber a ID de contexto como um cabeçalho SOAP ou um cabeçalho de cookie HTTP. Mas não é necessário que os níveis superiores saibam sobre esses detalhes porque a camada de canal disponibiliza essas informações na coleção de `Properties`.
 
-Agora, com `DurableInstanceContextChannelBase` a classe em vigor, todas as dez interfaces necessárias (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) deve ser implementado. Eles se assemelham a todos os padrões de troca de mensagens disponíveis (datagrama, simplex, duplex e suas variantes de sessão). Cada uma dessas implementações herda a classe base descrita anteriormente e `ApplyContext` chama `ReadContextId` e adequadamente. Por exemplo, `DurableInstanceContextOutputChannel` -que implementa a interface IOutputChannel – chama o `ApplyContext` método de cada método que envia as mensagens.
+Agora, com a classe `DurableInstanceContextChannelBase` em vigor, todas as dez interfaces necessárias (IOutputChannel, IInputChannel, IOutputSessionChannel, IInputSessionChannel, IRequestChannel, IReplyChannel, IRequestSessionChannel, IReplySessionChannel, IDuplexChannel, IDuplexSessionChannel) devem ser implementadas. Eles se assemelham a todos os padrões de troca de mensagens disponíveis (datagrama, simplex, duplex e suas variantes de sessão). Cada uma dessas implementações herda a classe base descrita anteriormente e chama `ApplyContext` e `ReadContextId` apropriadamente. Por exemplo, `DurableInstanceContextOutputChannel`-que implementa a interface IOutputChannel – chama o método `ApplyContext` de cada método que envia as mensagens.
 
 ```csharp
 public void Send(Message message, TimeSpan timeout)
@@ -100,7 +100,7 @@ public void Send(Message message, TimeSpan timeout)
 }
 ```
 
-Por outro lado, `DurableInstanceContextInputChannel` -que implementa a `IInputChannel` interface – chama o `ReadContextId` método em cada método que recebe as mensagens.
+Por outro lado, `DurableInstanceContextInputChannel`-que implementa a interface `IInputChannel` – chama o método `ReadContextId` em cada método que recebe as mensagens.
 
 ```csharp
 public Message Receive(TimeSpan timeout)
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-Essas implementações de `DurableInstanceContextBindingElement` canal são então adicionadas ao tempo de execução do canal `DurableInstanceContextBindingElementSection` do WCF pela classe e classe adequadamente. Consulte a documentação de exemplo do canal [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) para obter mais detalhes sobre elementos de associação e seções de elemento de associação.
+Essas implementações de canal são então adicionadas ao tempo de execução do canal do WCF pela classe `DurableInstanceContextBindingElement` e `DurableInstanceContextBindingElementSection` classe apropriadamente. Consulte a documentação de exemplo do canal [HttpCookieSession](../../../../docs/framework/wcf/samples/httpcookiesession.md) para obter mais detalhes sobre elementos de associação e seções de elemento de associação.
 
 ## <a name="service-model-layer-extensions"></a>Extensões de camada de modelo de serviço
 
@@ -136,7 +136,7 @@ public interface IStorageManager
 }
 ```
 
-A `SqlServerStorageManager` classe contém a implementação `IStorageManager` padrão. Em seu `SaveInstance` método, o objeto fornecido é serializado usando o XmlSerializer e é salvo no banco de dados SQL Server.
+A classe `SqlServerStorageManager` contém a implementação de `IStorageManager` padrão. Em seu método `SaveInstance`, o objeto fornecido é serializado usando o XmlSerializer e é salvo no banco de dados SQL Server.
 
 ```csharp
 XmlSerializer serializer = new XmlSerializer(state.GetType());
@@ -171,7 +171,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }
 ```
 
-`GetInstance` No método, os dados serializados são lidos para uma determinada ID de contexto e o objeto construído a partir dele é retornado ao chamador.
+No método `GetInstance`, os dados serializados são lidos para uma determinada ID de contexto e o objeto construído a partir dele é retornado ao chamador.
 
 ```csharp
 object data;
@@ -198,7 +198,7 @@ if (data != null)
 }
 ```
 
-Os usuários desses gerenciadores de armazenamento não devem instanciá-los diretamente. Eles usam a `StorageManagerFactory` classe, que é abstraida dos detalhes de criação do Gerenciador de armazenamento. Essa classe tem um membro estático, `GetStorageManager`, que cria uma instância de um determinado tipo de Gerenciador de armazenamento. Se o parâmetro de tipo `null`for, esse método criará uma instância da `SqlServerStorageManager` classe padrão e a retornará. Ele também valida o tipo fornecido para certificar-se de que ele implementa `IStorageManager` a interface.
+Os usuários desses gerenciadores de armazenamento não devem instanciá-los diretamente. Eles usam a classe `StorageManagerFactory`, que abstrai dos detalhes de criação do Gerenciador de armazenamento. Essa classe tem um membro estático, `GetStorageManager`, que cria uma instância de um determinado tipo de Gerenciador de armazenamento. Se o parâmetro de tipo for `null`, esse método criará uma instância da classe de `SqlServerStorageManager` padrão e a retornará. Ele também valida o tipo fornecido para certificar-se de que ele implementa a interface `IStorageManager`.
 
 ```csharp
 public static IStorageManager GetStorageManager(Type storageManagerType)
@@ -234,13 +234,13 @@ A infraestrutura necessária para ler e gravar instâncias do armazenamento pers
 
 Como a primeira etapa desse processo, precisamos salvar a ID de contexto, que veio pela camada de canal para o InstanceContext atual. InstanceContext é um componente de tempo de execução que atua como o link entre o Dispatcher do WCF e a instância do serviço. Ele pode ser usado para fornecer estado adicional e comportamento à instância do serviço. Isso é essencial porque, na comunicação de sessão, a ID de contexto é enviada somente com a primeira mensagem.
 
-O WCF permite estender seu componente de tempo de execução de InstanceContext adicionando um novo estado e comportamento usando seu padrão de objeto extensível. O padrão de objeto extensível é usado no WCF para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado a um objeto. Há três interfaces no padrão de objeto extensível-IExtensibleObject\<T >, IExtension\<t > e IExtensionCollection\<T >:
+O WCF permite estender seu componente de tempo de execução de InstanceContext adicionando um novo estado e comportamento usando seu padrão de objeto extensível. O padrão de objeto extensível é usado no WCF para estender as classes de tempo de execução existentes com a nova funcionalidade ou para adicionar novos recursos de estado a um objeto. Há três interfaces no padrão de objeto extensível-IExtensibleObject\<T >, IExtension\<T > e IExtensionCollection\<T >:
 
-- A interface\<IExtensibleObject T > é implementada por objetos que permitem extensões que personalizam sua funcionalidade.
+- A interface IExtensibleObject\<T > é implementada por objetos que permitem extensões que personalizam sua funcionalidade.
 
-- A interface\<IExtension T > é implementada por objetos que são extensões de classes do tipo T.
+- A interface IExtension\<T > é implementada por objetos que são extensões de classes do tipo T.
 
-- A interface\<IExtensionCollection T > é uma coleção de IExtensions que permite recuperar IExtensions por seu tipo.
+- A interface IExtensionCollection\<T > é uma coleção de IExtensions que permite recuperar IExtensions por seu tipo.
 
 Portanto, uma classe InstanceContextExtension deve ser criada para implementar a interface IExtension e definir o estado necessário para salvar a ID de contexto. Essa classe também fornece o estado para manter o Gerenciador de armazenamento em uso. Depois que o novo estado for salvo, não será possível modificá-lo. Portanto, o estado é fornecido e salvo na instância no momento em que está sendo construído e só pode ser acessado usando propriedades somente leitura.
 
@@ -280,9 +280,9 @@ public void Initialize(InstanceContext instanceContext, Message message)
 }
 ```
 
-Conforme descrito anteriormente, a ID de contexto é lida `Properties` da coleção `Message` da classe e passada para o construtor da classe de extensão. Isso demonstra como as informações podem ser trocadas entre as camadas de maneira consistente.
+Conforme descrito anteriormente, a ID de contexto é lida da coleção de `Properties` da classe `Message` e passada para o construtor da classe de extensão. Isso demonstra como as informações podem ser trocadas entre as camadas de maneira consistente.
 
-A próxima etapa importante é substituir o processo de criação da instância de serviço. O WCF permite implementar comportamentos de instanciação personalizados e conectá-los ao tempo de execução usando a interface IInstanceProvider. A nova `InstanceProvider` classe é implementada para fazer esse trabalho. No construtor, o tipo de serviço esperado do provedor de instância é aceito. Posteriormente, isso é usado para criar novas instâncias. `GetInstance` Na implementação, uma instância de um Gerenciador de armazenamento é criada procurando por uma instância persistente. Se ele retornar `null` , uma nova instância do tipo de serviço será instanciada e retornada ao chamador.
+A próxima etapa importante é substituir o processo de criação da instância de serviço. O WCF permite implementar comportamentos de instanciação personalizados e conectá-los ao tempo de execução usando a interface IInstanceProvider. A nova classe `InstanceProvider` é implementada para fazer esse trabalho. No construtor, o tipo de serviço esperado do provedor de instância é aceito. Posteriormente, isso é usado para criar novas instâncias. Na implementação de `GetInstance`, uma instância de um Gerenciador de armazenamento é criada procurando por uma instância persistente. Se ele retornar `null`, uma nova instância do tipo de serviço será instanciada e retornada ao chamador.
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,11 +302,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-A próxima etapa importante é instalar o `InstanceContextExtension` `InstanceContextInitializer` e `InstanceProvider` as classes no tempo de execução do modelo de serviço. Um atributo personalizado pode ser usado para marcar as classes de implementação de serviço para instalar o comportamento. O `DurableInstanceContextAttribute` contém a implementação para esse atributo e implementa a `IServiceBehavior` interface para estender o tempo de execução do serviço inteiro.
+A próxima etapa importante é instalar as classes `InstanceContextExtension`, `InstanceContextInitializer` e `InstanceProvider` no tempo de execução do modelo de serviço. Um atributo personalizado pode ser usado para marcar as classes de implementação de serviço para instalar o comportamento. O `DurableInstanceContextAttribute` contém a implementação para esse atributo e implementa a interface `IServiceBehavior` para estender o tempo de execução do serviço inteiro.
 
-Essa classe tem uma propriedade que aceita o tipo do Gerenciador de armazenamento a ser usado. Dessa forma, a implementação permite que os usuários especifiquem sua `IStorageManager` própria implementação como parâmetro deste atributo.
+Essa classe tem uma propriedade que aceita o tipo do Gerenciador de armazenamento a ser usado. Dessa forma, a implementação permite que os usuários especifiquem sua própria implementação de `IStorageManager` como parâmetro desse atributo.
 
-Na implementação, o `InstanceContextMode` do atributo atual `ServiceBehavior` está sendo verificado. `ApplyDispatchBehavior` Se essa propriedade for definida como singleton, a habilitação da instanciação durável não será `InvalidOperationException` possível e uma será gerada para notificar o host.
+Na implementação de `ApplyDispatchBehavior`, a `InstanceContextMode` do atributo de `ServiceBehavior` atual está sendo verificada. Se essa propriedade for definida como singleton, a habilitação da instanciação durável não será possível e uma `InvalidOperationException` será gerada para notificar o host.
 
 ```csharp
 ServiceBehaviorAttribute serviceBehavior =
@@ -320,7 +320,7 @@ if (serviceBehavior != null &&
 }
 ```
 
-Depois disso, as instâncias do Gerenciador de armazenamento, o inicializador de contexto de instância e o provedor de instância são `DispatchRuntime` criados e instalados no ponto de extremidade criado para cada.
+Depois disso, as instâncias do Gerenciador de armazenamento, o inicializador de contexto de instância e o provedor de instância são criados e instalados no `DispatchRuntime` criado para cada ponto de extremidade.
 
 ```csharp
 IStorageManager storageManager =
@@ -349,15 +349,15 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 No Resumo até agora, este exemplo produziu um canal que habilitou o protocolo de conexão personalizada para a troca de ID de contexto personalizado e também substitui o comportamento de instanciação padrão para carregar as instâncias do armazenamento persistente.
 
-O que resta é uma maneira de salvar a instância do serviço no armazenamento persistente. Conforme discutido anteriormente, já existe a funcionalidade necessária para salvar o estado em uma `IStorageManager` implementação. Agora, devemos integrar isso ao tempo de execução do WCF. É necessário outro atributo que seja aplicável aos métodos na classe de implementação de serviço. Esse atributo deve ser aplicado aos métodos que alteram o estado da instância do serviço.
+O que resta é uma maneira de salvar a instância do serviço no armazenamento persistente. Conforme discutido anteriormente, já existe a funcionalidade necessária para salvar o estado em uma implementação de `IStorageManager`. Agora, devemos integrar isso ao tempo de execução do WCF. É necessário outro atributo que seja aplicável aos métodos na classe de implementação de serviço. Esse atributo deve ser aplicado aos métodos que alteram o estado da instância do serviço.
 
-A `SaveStateAttribute` classe implementa essa funcionalidade. Ele também implementa `IOperationBehavior` a classe para modificar o tempo de execução do WCF para cada operação. Quando um método é marcado com esse atributo, o tempo de execução do WCF `ApplyBehavior` invoca o método enquanto `DispatchOperation` o apropriado está sendo construído. Nessa implementação de método há uma linha de código única:
+A classe `SaveStateAttribute` implementa essa funcionalidade. Ele também implementa `IOperationBehavior` classe para modificar o tempo de execução do WCF para cada operação. Quando um método é marcado com esse atributo, o tempo de execução do WCF invoca o método `ApplyBehavior` enquanto o `DispatchOperation` apropriado está sendo construído. Nessa implementação de método há uma linha de código única:
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-Essa instrução cria uma instância do `OperationInvoker` tipo e a atribui `Invoker` à propriedade de `DispatchOperation` que está sendo construída. A `OperationInvoker` classe é um wrapper para o chamador de operação padrão criado para o `DispatchOperation`. Essa classe implementa a `IOperationInvoker` interface. `Invoke` Na implementação do método, a invocação do método real é delegada para o chamador da operação interna. No entanto, antes de retornar os resultados, o `InstanceContext` Gerenciador de armazenamento no é usado para salvar a instância do serviço.
+Essa instrução cria uma instância do tipo `OperationInvoker` e a atribui à propriedade `Invoker` do `DispatchOperation` que está sendo construído. A classe `OperationInvoker` é um wrapper para o chamador de operação padrão criado para o `DispatchOperation`. Essa classe implementa a interface `IOperationInvoker`. Na implementação do método de `Invoke`, a invocação do método real é delegada para o chamador da operação interna. No entanto, antes de retornar os resultados, o Gerenciador de armazenamento no `InstanceContext` é usado para salvar a instância do serviço.
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -422,9 +422,9 @@ Agora, o elemento Binding pode ser usado com uma associação personalizada, ass
 
 Este exemplo mostrou como criar um canal de protocolo personalizado e como personalizar o comportamento do serviço para habilitá-lo.
 
-A extensão pode ser melhorada, permitindo que os usuários `IStorageManager` especifiquem a implementação usando uma seção de configuração. Isso torna possível modificar o armazenamento de backup sem recompilar o código do serviço.
+A extensão pode ser melhorada, permitindo que os usuários especifiquem a implementação de `IStorageManager` usando uma seção de configuração. Isso torna possível modificar o armazenamento de backup sem recompilar o código do serviço.
 
-Além disso, você pode tentar implementar uma classe (por exemplo `StateBag`,), que encapsula o estado da instância. Essa classe é responsável por persistir o estado sempre que ele for alterado. Dessa forma, você pode evitar o `SaveState` uso do atributo e executar o trabalho persistente com mais precisão (por exemplo, você pode persistir o estado quando o estado é realmente alterado, em vez de salvá-lo toda vez `SaveState` que um método com o atributo for chamado).
+Além disso, você pode tentar implementar uma classe (por exemplo, `StateBag`), que encapsula o estado da instância. Essa classe é responsável por persistir o estado sempre que ele for alterado. Dessa forma, você pode evitar o uso do atributo `SaveState` e executar o trabalho persistente com mais precisão (por exemplo, você pode persistir o estado quando o estado for realmente alterado, em vez de salvá-lo sempre que um método com o atributo `SaveState` for chamado).
 
 Quando você executa o exemplo, a saída a seguir é exibida. O cliente adiciona dois itens ao seu carrinho de compras e obtém a lista de itens em seu carrinho de compras do serviço. Pressione ENTER em cada janela do console para desligar o serviço e o cliente.
 
@@ -457,6 +457,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`

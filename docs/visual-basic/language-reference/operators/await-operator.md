@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: c2389ff0c94afc2156e594f5d93535d1ed0107a8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74336259"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712357"
 ---
 # <a name="await-operator-visual-basic"></a>Operador Await (Visual Basic)
 
@@ -23,7 +23,7 @@ O método no qual `Await` é usado deve ter um modificador [assíncrono](../../.
 > [!NOTE]
 > As palavras-chave `Async` e `Await` foram introduzidas no Visual Studio 2012. Para obter uma introdução à programação assíncrona, consulte [programação assíncrona com Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md).
 
-Normalmente, a tarefa à qual você aplica o operador de `Await` é o valor de retorno de uma chamada para um método que implementa o [padrão assíncrono baseado em tarefa](https://go.microsoft.com/fwlink/?LinkId=204847), ou seja, uma <xref:System.Threading.Tasks.Task> ou uma <xref:System.Threading.Tasks.Task%601>.
+Normalmente, a tarefa à qual você aplica o operador de `Await` é o valor de retorno de uma chamada para um método que implementa o [padrão assíncrono baseado em tarefa](https://www.microsoft.com/download/details.aspx?id=19957), ou seja, uma <xref:System.Threading.Tasks.Task> ou uma <xref:System.Threading.Tasks.Task%601>.
 
 No código a seguir, o método <xref:System.Net.Http.HttpClient> <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> retorna `getContentsTask`, um `Task(Of Byte())`. A tarefa é uma promessa de produzir a matriz de bytes real quando a operação é concluída. O operador `Await` é aplicado a `getContentsTask` para suspender a execução em `SumPageSizesAsync` até que `getContentsTask` seja concluída. Enquanto isso, o controle é retornado ao chamador de `SumPageSizesAsync`. Quando `getContentsTask` for concluído, a expressão `Await` resulta em uma matriz de bytes.
 

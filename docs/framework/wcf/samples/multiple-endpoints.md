@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 9a4f610b3f67aac91440a343e0c6baff9d35df5c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d0e39920703ef5c1f31bc2d630497f73c242323a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417032"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714717"
 ---
 # <a name="multiple-endpoints"></a>Vários pontos de extremidade
 O exemplo de vários pontos de extremidade demonstra como configurar vários pontos de extremidade em um serviço e como comunicar-se com cada um dos clientes. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md). A configuração de serviço foi modificada para definir dois pontos de extremidade que dão suporte ao contrato de `ICalculator`, mas cada um em um endereço diferente usando uma associação diferente. A configuração do cliente e o código foram modificados para se comunicar com os dois pontos de extremidade de serviço.  
@@ -115,6 +115,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  

@@ -2,12 +2,12 @@
 title: 'Transporte: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: fab15b1d4dab61de37f4b609a6e43c5f4a32fb75
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f7dea8a95490377226acd09a3463b102d42834d6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138696"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711921"
 ---
 # <a name="transport-udp"></a>Transporte: UDP
 O exemplo de transporte UDP demonstra como implementar UDP unicast e multicast como um transporte de Windows Communication Foundation (WCF) personalizado. O exemplo descreve o procedimento recomendado para criar um transporte personalizado no WCF, usando a estrutura de canal e as práticas recomendadas do WCF a seguir. As etapas para criar um transporte personalizado são as seguintes:  
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTransport\bin\UdpTranspor
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

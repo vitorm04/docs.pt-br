@@ -2,12 +2,12 @@
 title: 'Instruções passo a passo: acessando a Web e usando Async e Await'
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: c13e592eb155d14c2e7cb2388a96925a7f1fa413
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7f649f1f16da545c4587f0ed76b8f1a443ee8744
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349090"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715847"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Walkthrough: acessando a Web usando Async e Await (Visual Basic)
 
@@ -37,7 +37,7 @@ Neste passo a passo, você realizará as seguintes tarefas:
 
 Consulte a seção de [exemplo](#example) para obter o exemplo assíncrono completo.
 
-## <a name="prerequisites"></a>{1&gt;Pré-requisitos&lt;1}
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 O Visual Studio 2012 ou posterior deve estar instalado em seu computador. Para obter mais informações, consulte a página de [downloads](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) do Visual Studio.
 
@@ -661,10 +661,10 @@ End Class
 ## <a name="see-also"></a>Consulte também
 
 - [Exemplo de assincronia: acessando o passo a passo da Web (C# e Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
-- [Operador Await](../../../../visual-basic/language-reference/operators/await-operator.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Programação assíncrona com Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [Tipos de retorno assíncronos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [TAP (programação assíncrona baseada em tarefas)](https://go.microsoft.com/fwlink/?LinkId=204847)
-- [Como estender as instruções passo a passo assíncronas usando Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [Como fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [Operador Await](../../../language-reference/operators/await-operator.md)
+- [Async](../../../language-reference/modifiers/async.md)
+- [Programação assíncrona com Async e Await (Visual Basic)](index.md)
+- [Tipos de retorno assíncronos (Visual Basic)](async-return-types.md)
+- [TAP (programação assíncrona baseada em tarefas)](https://www.microsoft.com/download/details.aspx?id=19957)
+- [Como estender as instruções passo a passo assíncronas usando Task.WhenAll (Visual Basic)](how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [Como fazer várias solicitações da Web em paralelo usando Async e Await (Visual Basic)](how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

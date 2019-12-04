@@ -2,16 +2,16 @@
 title: 'Tarefa 3: Crie a caixa de ferramentas e os painéis de PropertyGrid'
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 402a25c1cb82c245afa94f58cefc180515622ea9
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 29e50b24135cd3d6a02052d846e1781b0d9fa325
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275866"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716227"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>Tarefa 3: Crie a caixa de ferramentas e os painéis de PropertyGrid
 
-Nesta tarefa, você criará os painéis **caixa de ferramentas** e **PropertyGrid** e os adicionará ao [!INCLUDE[wfd1](../../../includes/wfd1-md.md)]rehospedado.
+Nesta tarefa, você criará os painéis **caixa de ferramentas** e **PropertyGrid** e os adicionará à designer de fluxo de trabalho do Windows rehospedada.
 
 Para referência, o código que deve estar no arquivo MainWindow.xaml.cs depois de concluir as três tarefas na série de tópicos de [rehospedagem, a designer de fluxo de trabalho](rehosting-the-workflow-designer.md) é fornecida no final deste tópico.
 
@@ -106,7 +106,7 @@ Para referência, o código que deve estar no arquivo MainWindow.xaml.cs depois 
 
 4. Pressione <kbd>F5</kbd> para compilar e executar a solução. A **caixa de ferramentas**, a tela de design do fluxo de trabalho e os painéis de **PropertyGrid** devem ser exibidos e, quando você arrasta uma atividade de <xref:System.Activities.Statements.Assign> ou uma atividade de <xref:System.Activities.Statements.Sequence> para a tela de design, a grade de propriedades deve ser atualizada dependendo da atividade realçada.
 
-## <a name="example"></a>{1&gt;Exemplo&lt;1}
+## <a name="example"></a>Exemplo
 
 O arquivo *MainWindow.XAML.cs* agora deve conter o código a seguir:
 

@@ -2,12 +2,12 @@
 title: Correlação de consulta de mensagem LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: 202d65914d32245952f308d3115ec93231f95f15
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: a4b0ed058cfe8d3d487342c9feefdf1b1efe07c8
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989334"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715593"
 ---
 # <a name="linq-message-query-correlation"></a>Correlação de consulta de mensagem LINQ
 Este exemplo demonstra como fazer correlação conteudo base que usa uma implementação personalizada de <xref:System.ServiceModel.Dispatcher.MessageQuery> diferentemente de sistema forneceu <xref:System.ServiceModel.XPathMessageQuery>.  
@@ -28,7 +28,7 @@ Este exemplo demonstra como fazer correlação conteudo base que usa uma impleme
   
 2. Uma vez que o URL ACLs é adicionado, use as seguintes etapas.  
   
-    1. Compile a solução.  
+    1. {1&gt;Compile a solução.&lt;1}  
   
     2. Defina vários projetos de inicialização clicando com o botão direito do mouse na solução e selecionando **definir projetos de inicialização**. Adicionar **serviço** e **cliente** (nessa ordem) como vários projetos de inicialização.  
   
@@ -39,6 +39,6 @@ Este exemplo demonstra como fazer correlação conteudo base que usa uma impleme
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\LinqMessageQueryCorrelation`

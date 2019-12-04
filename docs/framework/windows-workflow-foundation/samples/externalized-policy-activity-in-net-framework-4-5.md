@@ -2,12 +2,12 @@
 title: Atividade exteriorizada de política no .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: efc8b8169a6b984e003444c4669122ce6fa7f9d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9184386751bb44e89dfdcedd34ab0ab84a27323e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283160"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710921"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>Atividade exteriorizada de política no .NET Framework 4.5
 
@@ -42,7 +42,7 @@ public class ExternalizedPolicy4Activity<TResult>: CodeActivity
 }
 ```
 
-|Propriedade|Descrição|
+|propriedade|Descrição|
 |-|-|
 |RuleSetFilePath|Caminho para o arquivo do .NET Framework 3.5 <xref:System.Workflow.Activities.Rules.RuleSet> a ser avaliado quando a atividade é executada.|
 |RuleSetName|Nome de <xref:System.Workflow.Activities.Rules.RuleSet> a ser usado dentro do arquivo de .rules.|
@@ -87,7 +87,7 @@ Este exemplo contém dois aplicativos cliente: ImperativeCodeClientSample e Desi
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras.
 >
 > Este exemplo está no seguinte diretório:
 >

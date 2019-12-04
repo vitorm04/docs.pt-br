@@ -2,12 +2,12 @@
 title: Exemplo de segurança de descoberta
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: dfc0dfcd3b4d814a158b328ef202d5438e583a8c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039809"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74712048"
 ---
 # <a name="discovery-security-sample"></a>Exemplo de segurança de descoberta
 A especificação de descoberta não exige que os pontos de extremidade que participam do processo de descoberta sejam seguros. Aprimorar as mensagens de descoberta com segurança atenua vários tipos de ataques (alteração de mensagem, negação de serviço, repetição, falsificação). Este exemplo implementa canais personalizados que computam e verificam assinaturas de mensagens usando o formato de assinatura Compact (descrito na seção 8,2 da especificação do WS-Discovery). O exemplo dá suporte à [especificação de descoberta 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e à [versão 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
@@ -37,23 +37,23 @@ A especificação de descoberta não exige que os pontos de extremidade que part
 > [!NOTE]
 > O `PrefixList` foi adicionado no protocolo de versão de descoberta 2008.  
   
- Para calcular a assinatura, o exemplo determina os itens de assinatura expandidos. Uma assinatura XML (`SignedInfo`) é criada, usando o `ds` prefixo de namespace, conforme exigido pela especificação WS-Discovery. O corpo e todos os cabeçalhos nos namespaces de descoberta e endereçamento são referenciados na assinatura, para que eles não possam ser adulterados. Cada elemento referenciado é transformado usando a canonicalização exclusiva (http://www.w3.org/2001/10/xml-exc-c14n# ) e, em seguida, um valor de Resumo de SHA-1 é computado (http://www.w3.org/2000/09/xmldsig#sha1 ). Com base em todos os elementos referenciados e seus valores de resumo, o valor da assinatura é calculado usando http://www.w3.org/2000/09/xmldsig#rsa-sha1 o algoritmo RSA ().  
+ Para calcular a assinatura, o exemplo determina os itens de assinatura expandidos. Uma assinatura XML (`SignedInfo`) é criada, usando o prefixo de namespace `ds`, conforme exigido pela especificação WS-Discovery. O corpo e todos os cabeçalhos nos namespaces de descoberta e endereçamento são referenciados na assinatura, para que eles não possam ser adulterados. Cada elemento referenciado é transformado usando a canonicalização exclusiva (http://www.w3.org/2001/10/xml-exc-c14n# ) e, em seguida, um valor de síntese de SHA-1 é computado (http://www.w3.org/2000/09/xmldsig#sha1 ). Com base em todos os elementos referenciados e seus valores de resumo, o valor da assinatura é calculado usando o algoritmo RSA (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ).  
   
  As mensagens são assinadas com um certificado especificado pelo cliente. O local do repositório, o nome e o nome da entidade do certificado devem ser especificados quando o elemento de associação é criado. O `KeyId` na assinatura compacta representa o identificador de chave do token de assinatura e é o identificador de chave da entidade (esqui) do token de assinatura ou (se a esqui não existir) um hash SHA-1 da chave pública do token de assinatura.  
   
 ## <a name="secure-channel-listener"></a>Ouvinte de canal seguro  
- O ouvinte de canal seguro cria canais de entrada ou duplex que verificam a assinatura compacta em mensagens recebidas. Para verificar a assinatura, o `KeyId` especificado na assinatura compacta anexada à mensagem é usado para selecionar um certificado do repositório especificado. Se a mensagem não tiver uma assinatura ou a verificação de assinatura falhar, as mensagens serão descartadas. Para usar a associação segura, o exemplo define uma fábrica que cria personalizado <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> e <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> com o elemento de associação seguro de descoberta adicionado. Esses pontos de extremidade seguros podem ser usados em ouvintes de anúncio de descoberta e serviços detectáveis.  
+ O ouvinte de canal seguro cria canais de entrada ou duplex que verificam a assinatura compacta em mensagens recebidas. Para verificar a assinatura, o `KeyId` especificado na assinatura compacta anexada à mensagem é usado para selecionar um certificado do repositório especificado. Se a mensagem não tiver uma assinatura ou a verificação de assinatura falhar, as mensagens serão descartadas. Para usar a associação segura, o exemplo define uma fábrica que cria <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> personalizadas e <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> com o elemento de associação Secure de descoberta adicionado. Esses pontos de extremidade seguros podem ser usados em ouvintes de anúncio de descoberta e serviços detectáveis.  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
  O exemplo inclui uma biblioteca e quatro aplicativos de console:  
   
-- **DiscoverySecurityChannels**: Uma biblioteca que expõe a associação segura. A biblioteca computa e verifica a assinatura compactada para mensagens de saída/entrada.  
+- **DiscoverySecurityChannels**: uma biblioteca que expõe a associação segura. A biblioteca computa e verifica a assinatura compactada para mensagens de saída/entrada.  
   
-- **Serviço**: Um serviço expondo o contrato ICalculatorService, hospedado internamente. O serviço é marcado como detectável. O usuário especifica os detalhes do certificado usado para assinar mensagens especificando o local e o nome do repositório e o nome da entidade ou outro identificador exclusivo para o certificado e a loja em que os certificados do cliente estão localizados (os certificados usados para Verificar assinatura para mensagens de entrada). Com base nesses detalhes, um UdpDiscoveryEndpoint com segurança adicional é criado e usado.  
+- **Serviço**: um serviço expondo o contrato do ICalculatorService, auto-hospedado. O serviço é marcado como detectável. O usuário especifica os detalhes do certificado usado para assinar mensagens especificando o local e o nome do repositório e o nome da entidade ou outro identificador exclusivo para o certificado e a loja em que os certificados do cliente estão localizados (os certificados usados para Verificar assinatura para mensagens de entrada). Com base nesses detalhes, um UdpDiscoveryEndpoint com segurança adicional é criado e usado.  
   
-- **Cliente**: Essa classe tenta descobrir um ICalculatorService e chamar métodos no serviço. Novamente, um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> com segurança adicional é criado e usado para assinar e verificar as mensagens.  
+- **Cliente**: essa classe tenta descobrir um ICalculatorService e chamar métodos no serviço. Novamente, um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> com segurança adicional é criado e usado para assinar e verificar as mensagens.  
   
-- **AnnouncementListener**: Um serviço auto-hospedado que escuta anúncios online e offline e usa o ponto de extremidade de anúncio seguro.  
+- **AnnouncementListener**: um serviço hospedado automaticamente que escuta anúncios online e offline e usa o ponto de extremidade de anúncio seguro.  
   
 > [!NOTE]
 > Se setup. bat for executado várias vezes, o Gerenciador de certificados solicitará que você escolha um certificado a ser adicionado, pois há certificados duplicados. Nesse caso, setup. bat deve ser anulado e Cleanup. bat deve ser chamado, pois as duplicatas já foram criadas. O Cleanup. bat também solicita que você escolha um certificado a ser excluído. Selecione um certificado na lista e continue executando Cleanup. bat até que nenhum certificado esteja restante.  
@@ -71,6 +71,6 @@ A especificação de descoberta não exige que os pontos de extremidade que part
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  

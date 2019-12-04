@@ -2,12 +2,12 @@
 title: Cliente ASMX com um serviço do WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: ed3cceb7806e0f0b71b9290da001ba0659e28f3c
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a560650dba250d1ee4f0b959ead70a2915c9997f
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045181"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716135"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Cliente ASMX com um serviço do WCF
 
@@ -16,9 +16,9 @@ Este exemplo demonstra como criar um serviço usando Windows Communication Found
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
-Este exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados pelo Serviços de Informações da Internet (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela `ICalculator` interface, que expõe operações matemáticas (`Add`, `Subtract`, `Multiply`e `Divide`). O cliente ASMX faz solicitações síncronas para uma operação matemática e o serviço responde com o resultado.
+Este exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedados pelo Serviços de Informações da Internet (IIS). O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela interface `ICalculator`, que expõe operações matemáticas (`Add`, `Subtract`, `Multiply`e `Divide`). O cliente ASMX faz solicitações síncronas para uma operação matemática e o serviço responde com o resultado.
 
-O serviço implementa um `ICalculator` contrato, conforme definido no código a seguir.
+O serviço implementa um contrato de `ICalculator` conforme definido no código a seguir.
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"), XmlSerializerFormat]
@@ -35,9 +35,9 @@ public interface ICalculator
 }
 ```
 
-O <xref:System.Runtime.Serialization.DataContractSerializer> e<xref:System.Xml.Serialization.XmlSerializer> mapeiam os tipos CLR para uma representação XML. O <xref:System.Runtime.Serialization.DataContractSerializer> interpreta algumas representações XML de forma diferente do XmlSerializer. Geradores de proxy não WCF, como WSDL. exe, geram uma interface mais utilizável quando o XmlSerializer está sendo usado. O <xref:System.ServiceModel.XmlSerializerFormatAttribute> é aplicado `ICalculator` à interface do, para garantir que o XmlSerializer seja usado para mapear tipos CLR para XML. A implementação do serviço calcula e retorna o resultado apropriado.
+O <xref:System.Runtime.Serialization.DataContractSerializer> e <xref:System.Xml.Serialization.XmlSerializer> mapeiam os tipos CLR para uma representação XML. O <xref:System.Runtime.Serialization.DataContractSerializer> interpreta algumas representações XML de forma diferente do XmlSerializer. Geradores de proxy não WCF, como WSDL. exe, geram uma interface mais utilizável quando o XmlSerializer está sendo usado. O <xref:System.ServiceModel.XmlSerializerFormatAttribute> é aplicado à interface `ICalculator`, para garantir que o XmlSerializer seja usado para mapear tipos CLR para XML. A implementação do serviço calcula e retorna o resultado apropriado.
 
-O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando um arquivo de configuração (Web. config). O ponto de extremidade consiste em um endereço, uma associação e um contrato. O serviço expõe o ponto de extremidade no endereço base fornecido pelo host do Serviços de Informações da Internet (IIS). O `binding` atributo é definido como BasicHttpBinding que fornece comunicações http usando SOAP 1,1, que é compatível com WS-I BasicProfile 1,1, conforme mostrado na configuração de exemplo a seguir.
+O serviço expõe um único ponto de extremidade para se comunicar com o serviço, definido usando um arquivo de configuração (Web. config). O ponto de extremidade consiste em um endereço, uma associação e um contrato. O serviço expõe o ponto de extremidade no endereço base fornecido pelo host do Serviços de Informações da Internet (IIS). O atributo `binding` é definido como basicHttpBinding que fornece comunicações HTTP usando SOAP 1,1, que é compatível com WS-I BasicProfile 1,1, conforme mostrado na seguinte configuração de exemplo.
 
 ```xml
 <services>
@@ -51,7 +51,7 @@ O serviço expõe um único ponto de extremidade para se comunicar com o serviç
 </services>
 ```
 
-O cliente ASMX se comunica com o serviço WCF usando um proxy tipado que é gerado pelo utilitário WSDL (Web Services Description Language) (WSDL. exe). O proxy tipado está contido no arquivo generatedClient.cs. O utilitário WSDL recupera metadados para o serviço especificado e gera um proxy de tipo para ser usado por um cliente para se comunicar. Por padrão, a estrutura não expõe nenhum metadado. Para expor os metadados necessários para gerar o proxy, você deve adicionar um [ \<> de metadados](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) e `True` definir seu `httpGetEnabled` atributo como, conforme mostrado na configuração a seguir.
+O cliente ASMX se comunica com o serviço WCF usando um proxy tipado que é gerado pelo utilitário WSDL (Web Services Description Language) (WSDL. exe). O proxy tipado está contido no arquivo generatedClient.cs. O utilitário WSDL recupera metadados para o serviço especificado e gera um proxy de tipo para ser usado por um cliente para se comunicar. Por padrão, a estrutura não expõe nenhum metadado. Para expor os metadados necessários para gerar o proxy, você deve adicionar um [> de\<de metadados](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) e definir seu atributo `httpGetEnabled` como `True`, conforme mostrado na configuração a seguir.
 
 ```xml
 <behaviors>
@@ -146,6 +146,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`

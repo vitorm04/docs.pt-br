@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
-ms.openlocfilehash: 675b6b8a177fe5851c2abd1f785ac617de2cf37d
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 59bbeb4091c101efeac4e0562f0e3cbd5a8b5f79
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045067"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716362"
 ---
 # <a name="datacontractserializer-sample"></a>Exemplo de DataContractSerializer
-O exemplo DataContractSerializer demonstra o <xref:System.Runtime.Serialization.DataContractSerializer>, que executa os serviços de serialização e desserialização gerais para as classes de contrato de dados. O exemplo cria um `Record` objeto, serializa-o para um fluxo de memória e desserializa o fluxo de memória de volta para `Record` outro objeto para <xref:System.Runtime.Serialization.DataContractSerializer>demonstrar o uso do. Em seguida, o exemplo serializa `Record` o objeto usando um gravador binário para demonstrar como o gravador afeta a serialização.  
+O exemplo DataContractSerializer demonstra o <xref:System.Runtime.Serialization.DataContractSerializer>, que executa os serviços de serialização e desserialização gerais para as classes de contrato de dados. O exemplo cria um objeto `Record`, serializa-o para um fluxo de memória e desserializa o fluxo de memória de volta para outro objeto `Record` para demonstrar o uso do <xref:System.Runtime.Serialization.DataContractSerializer>. Em seguida, o exemplo serializa o objeto `Record` usando um gravador binário para demonstrar como o gravador afeta a serialização.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O contrato de dados `Record` do é mostrado no código de exemplo a seguir.  
+ O contrato de dados para `Record` é mostrado no código de exemplo a seguir.  
   
 ```csharp  
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -71,14 +71,14 @@ internal class Record
 }  
 ```  
   
- O código de exemplo cria `Record` um objeto `record1` chamado e, em seguida, exibe o objeto.  
+ O código de exemplo cria um objeto `Record` chamado `record1`, em seguida, exibe o objeto.  
   
 ```csharp
 Record record1 = new Record(1, 2, "+", 3);  
 Console.WriteLine("Original record: {0}", record1.ToString());  
 ```  
   
- Em seguida, o exemplo <xref:System.Runtime.Serialization.DataContractSerializer> usa o `record1` para serializar em um fluxo de memória.  
+ Em seguida, o exemplo usa o <xref:System.Runtime.Serialization.DataContractSerializer> para serializar `record1` em um fluxo de memória.  
   
 ```csharp  
 MemoryStream stream1 = new MemoryStream();  
@@ -88,7 +88,7 @@ DataContractSerializer serializer = new DataContractSerializer(typeof(Record));
 serializer.WriteObject(stream1, record1);  
 ```  
   
- Em seguida, o exemplo usa <xref:System.Runtime.Serialization.DataContractSerializer> o para desserializar o fluxo de memória de volta `Record` para um novo objeto e exibi-lo.  
+ Em seguida, o exemplo usa o <xref:System.Runtime.Serialization.DataContractSerializer> para desserializar o fluxo de memória de volta para um novo objeto de `Record` e o exibe.  
   
 ```csharp  
 stream1.Position = 0;  
@@ -137,6 +137,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractSerializer`  

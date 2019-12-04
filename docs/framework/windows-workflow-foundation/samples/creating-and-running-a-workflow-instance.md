@@ -2,12 +2,12 @@
 title: Criando e executando uma instância de fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
-ms.openlocfilehash: fe00ebec8d81e77ff982a36419f1b0a988fcd4ab
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: d895cfa9e924ecf4d1571cf67f1c1e7069e25da5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016042"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715198"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Criando e executando uma instância de fluxo de trabalho
 
@@ -28,7 +28,7 @@ A segunda parte do exemplo usa a classe de <xref:System.Activities.WorkflowAppli
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreatingWorkflowInstances`
 

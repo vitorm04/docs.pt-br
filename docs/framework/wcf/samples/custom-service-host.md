@@ -2,12 +2,12 @@
 title: Host de serviço personalizado
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: fdb61d205b0c97e9ccaad8335b1b0eab555bedfb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 86dd8c5cebfb8ea6f9a2b95f7698362eb34c1a7c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976657"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716795"
 ---
 # <a name="custom-service-host"></a>Host de serviço personalizado
 Este exemplo demonstra como usar um derivativo personalizado da classe <xref:System.ServiceModel.ServiceHost> para alterar o comportamento do tempo de execução de um serviço. Essa abordagem fornece uma alternativa reutilizável para configurar um grande número de serviços de maneira comum. O exemplo também demonstra como usar a classe <xref:System.ServiceModel.Activation.ServiceHostFactory> para usar um ServiceHost personalizado no ambiente de hospedagem Serviços de Informações da Internet (IIS) ou serviço de ativação de processos do Windows (WAS).  
@@ -17,7 +17,7 @@ Este exemplo demonstra como usar um derivativo personalizado da classe <xref:Sys
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   

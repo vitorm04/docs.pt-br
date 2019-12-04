@@ -2,12 +2,12 @@
 title: Exemplo de Streaming Feeds
 ms.date: 03/30/2017
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-ms.openlocfilehash: ede1dbb4f5c682b8182dda4888a9cbd373b95dd8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 9d40a07b81474a283a8edbeb7aca1aa7ab3993b2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976368"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716646"
 ---
 # <a name="streaming-feeds-sample"></a>Exemplo de Streaming Feeds
 Este exemplo demonstra como gerenciar feeds de distribuição que contêm um grande número de itens. No servidor, o exemplo demonstra como atrasar a criação de objetos <xref:System.ServiceModel.Syndication.SyndicationItem> individuais no feed até imediatamente antes que o item seja gravado no fluxo de rede.  
@@ -18,7 +18,7 @@ Este exemplo demonstra como gerenciar feeds de distribuição que contêm um gra
   
  A demonstração usa os iteradores C# visuais (usando a construção de palavra-chave `yield return`). Para obter mais informações sobre iteradores, consulte o tópico "usando iteradores" no MSDN.  
   
-## <a name="service"></a>Serviço  
+## <a name="service"></a>Service  
  O serviço implementa um contrato de <xref:System.ServiceModel.Web.WebGetAttribute> básico que consiste em uma operação, conforme mostrado no código a seguir.  
   
 ```csharp  
@@ -114,7 +114,7 @@ private IEnumerable<SyndicationItem> DelayReadItems(XmlReader reader, Syndicatio
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StreamingFeeds`  
   

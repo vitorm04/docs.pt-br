@@ -2,21 +2,21 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 1fc85838d7491f94b8da1e0ab458d6d021cd2b32
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 82fa0bb09ebdf3ca2325872c2b884f4940de17ed
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989772"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715719"
 ---
 # <a name="jsonp"></a>JSONP
-Este exemplo demonstra como dar suporte a JSON com preenchimento (JSONP) nos serviços REST do WCF. JSONP é uma convenção usada para invocar scripts entre domínios, gerando marcas de script no documento atual. O resultado é retornado em uma função de retorno de chamada especificada. O JSONP é baseado na ideia de que marcas como `<script src="http://..." >` o podem avaliar scripts de qualquer domínio e o script recuperado por essas marcas é avaliado em um escopo no qual outras funções já podem estar definidas.
+Este exemplo demonstra como dar suporte a JSON com preenchimento (JSONP) nos serviços REST do WCF. JSONP é uma convenção usada para invocar scripts entre domínios, gerando marcas de script no documento atual. O resultado é retornado em uma função de retorno de chamada especificada. O JSONP é baseado na ideia de que marcas como `<script src="http://..." >` podem avaliar scripts de qualquer domínio e o script recuperado por essas marcas é avaliado dentro de um escopo no qual outras funções já podem estar definidas.
 
 ## <a name="demonstrates"></a>Demonstra
  Script entre domínios com o JSONP.
 
 ## <a name="discussion"></a>Discussão
- O exemplo inclui uma página da Web que adiciona dinamicamente um bloco de script depois que a página é processada no navegador. Esse bloco de script chama um serviço REST do WCF que tem uma única `GetCustomer`operação,. O serviço REST do WCF retorna o nome e o endereço do cliente encapsulados em um nome de função de retorno de chamada. Quando o serviço REST do WCF responde, a função de retorno de chamada na página da Web é invocada com os dados do cliente e a função de retorno de chamada exibe os dados na página da Web. A injeção da marca de script e a execução da função de retorno de chamada é manipulada automaticamente pelo controle ScriptManager do ASP.NET AJAX. O padrão de uso é o mesmo que todos os proxies AJAX do ASP.NET, com a adição de uma linha para habilitar o JSONP, conforme mostrado no código a seguir:
+ O exemplo inclui uma página da Web que adiciona dinamicamente um bloco de script depois que a página é processada no navegador. Esse bloco de script chama um serviço REST do WCF que tem uma única operação, `GetCustomer`. O serviço REST do WCF retorna o nome e o endereço do cliente encapsulados em um nome de função de retorno de chamada. Quando o serviço REST do WCF responde, a função de retorno de chamada na página da Web é invocada com os dados do cliente e a função de retorno de chamada exibe os dados na página da Web. A injeção da marca de script e a execução da função de retorno de chamada é manipulada automaticamente pelo controle ScriptManager do ASP.NET AJAX. O padrão de uso é o mesmo que todos os proxies AJAX do ASP.NET, com a adição de uma linha para habilitar o JSONP, conforme mostrado no código a seguir:
 
 ```csharp
 var proxy = new JsonpAjaxService.CustomerService();
@@ -24,7 +24,7 @@ proxy.set_enableJsonp(true);
 proxy.GetCustomer(onSuccess, onFail, null);
 ```
 
- A página da Web pode chamar o serviço REST do WCF porque o serviço está <xref:System.ServiceModel.Description.WebScriptEndpoint> usando `crossDomainScriptAccessEnabled` o com `true`definido como. Essas duas configurações são feitas no arquivo \<Web. config no elemento System. ServiceModel >.
+ A página da Web pode chamar o serviço REST do WCF porque o serviço está usando o <xref:System.ServiceModel.Description.WebScriptEndpoint> com `crossDomainScriptAccessEnabled` definido como `true`. Essas duas configurações são feitas no arquivo Web. config no elemento \<System. serviceModel >.
 
 ```xml
 <system.serviceModel>
@@ -37,13 +37,13 @@ proxy.GetCustomer(onSuccess, onFail, null);
 </system.serviceModel>
 ```
 
- O ScriptManager gerencia a interação com o serviço e oculta a complexidade de implementar manualmente o acesso JSONP. Quando `crossDomainScriptAccessEnabled` é definido como `true` e o formato de resposta para uma operação é JSON, a infraestrutura do WCF inspeciona o URI da solicitação de um parâmetro de cadeia de caracteres de consulta de retorno de chamada e encapsula a resposta JSON com o valor da cadeia de caracteres de consulta de retorno de chamada meter. No exemplo, a página da Web chama o serviço REST do WCF com o URI a seguir.
+ O ScriptManager gerencia a interação com o serviço e oculta a complexidade de implementar manualmente o acesso JSONP. Quando `crossDomainScriptAccessEnabled` é definido como `true` e o formato de resposta para uma operação é JSON, a infraestrutura do WCF inspeciona o URI da solicitação de um parâmetro de cadeia de caracteres de consulta de retorno de chamada e encapsula a resposta JSON com o valor do parâmetro de cadeia de caracteres de consulta de retorno de chamada. No exemplo, a página da Web chama o serviço REST do WCF com o URI a seguir.
 
 ```http
 http://localhost:33695/CustomerService/GetCustomer?callback=Sys._json0
 ```
 
- Como o parâmetro de cadeia de caracteres de consulta de `JsonPCallback`retorno de chamada tem um valor de, o serviço WCF retorna uma resposta JSONP mostrada no exemplo a seguir.
+ Como o parâmetro de cadeia de caracteres de consulta de retorno de chamada tem um valor de `JsonPCallback`, o serviço WCF retorna uma resposta JSONP mostrada no exemplo a seguir.
 
 ```json
 Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Way","Name":"Bob"});
@@ -58,11 +58,11 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\AJAX\JSONP`  
   
-#### <a name="to-run-the-sample"></a>Para executar a amostra  
+#### <a name="to-run-the-sample"></a>Para executar o exemplo  
   
 1. Abra a solução para o exemplo JSONP.  
   

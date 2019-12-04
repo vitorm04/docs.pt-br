@@ -2,12 +2,12 @@
 title: Usando o WCF Moniker com clientes COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 321d59285b0ef86e4631634d90229a0d8e79657b
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: faaf8e80402ddaef85dcf8d7bfe9b1da202227c9
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424717"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715294"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Usando o WCF Moniker com clientes COM
 Este exemplo demonstra como usar o moniker do serviço Windows Communication Foundation (WCF) para integrar serviços Web em ambientes de desenvolvimento baseados em COM, como Microsoft Office Visual Basic for Applications (Office VBA) ou Visual Basic 6,0. Este exemplo consiste em um cliente do Windows Script Host (. vbs), uma biblioteca de cliente de suporte (. dll) e uma biblioteca de serviço (. dll) hospedada pelo Serviços de Informações da Internet (IIS). O serviço é um serviço de calculadora e o cliente COM chama operações matemáticas — adicionar, subtrair, multiplicar e dividir — no serviço. A atividade do cliente fica visível nas janelas da caixa de mensagens.  
@@ -20,7 +20,7 @@ Este exemplo demonstra como usar o moniker do serviço Windows Communication Fou
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\COM`  
   

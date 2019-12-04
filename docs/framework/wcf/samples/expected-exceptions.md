@@ -2,12 +2,12 @@
 title: Exceções esperadas
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: a874b291202cb8c3c8752c13b357679c7fd5a556
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 24bb9b483a3f26241f895d68b763a1974b02151b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989972"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716447"
 ---
 # <a name="expected-exceptions"></a>Exceções esperadas
 Este exemplo demonstra como capturar exceções esperadas ao usar um cliente digitado. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
@@ -15,15 +15,15 @@ Este exemplo demonstra como capturar exceções esperadas ao usar um cliente dig
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Este exemplo demonstra como capturar e manipular os dois tipos de exceção esperados que os programas `TimeoutException` corretos devem tratar: e. `CommunicationException`  
+ Este exemplo demonstra como capturar e manipular os dois tipos de exceção esperados que os programas corretos devem tratar: `TimeoutException` e `CommunicationException`.  
   
- As exceções que são geradas de métodos de comunicação em um cliente Windows Communication Foundation (WCF) são esperadas ou inesperadas. Exceções inesperadas incluem falhas `OutOfMemoryException` catastróficas, como `ArgumentNullException` e `InvalidOperationException`erros de programação como ou. Normalmente, não há uma maneira útil de lidar com erros inesperados, portanto, normalmente você não deve capturá-los ao chamar um método de comunicação do cliente WCF.  
+ As exceções que são geradas de métodos de comunicação em um cliente Windows Communication Foundation (WCF) são esperadas ou inesperadas. Exceções inesperadas incluem falhas catastróficas, como `OutOfMemoryException` e erros de programação, como `ArgumentNullException` ou `InvalidOperationException`. Normalmente, não há uma maneira útil de lidar com erros inesperados, portanto, normalmente você não deve capturá-los ao chamar um método de comunicação do cliente WCF.  
   
- As exceções esperadas dos métodos de comunicação em um `TimeoutException`cliente `CommunicationException`WCF incluem, e qualquer classe `CommunicationException`derivada de. Eles indicam um problema durante a comunicação que pode ser manipulada com segurança anulando o cliente WCF e relatando uma falha de comunicação. Como fatores externos podem causar esses erros em qualquer aplicativo, os aplicativos corretos devem capturar essas exceções e recuperar quando ocorrerem.  
+ As exceções esperadas dos métodos de comunicação em um cliente WCF incluem `TimeoutException`, `CommunicationException`e qualquer classe derivada de `CommunicationException`. Eles indicam um problema durante a comunicação que pode ser manipulada com segurança anulando o cliente WCF e relatando uma falha de comunicação. Como fatores externos podem causar esses erros em qualquer aplicativo, os aplicativos corretos devem capturar essas exceções e recuperar quando ocorrerem.  
   
- Há várias classes derivadas de `CommunicationException` que um cliente pode lançar. Em alguns casos, os aplicativos também capturam alguns deles para fazer uma manipulação especial, mas permitem que os outros sejam `CommunicationException`tratados como um. Isso pode ser feito com a captura do tipo de exceção mais específico primeiro e `CommunicationException` , em seguida, a captura de uma cláusula catch posterior.  
+ Há várias classes derivadas de `CommunicationException` que um cliente pode lançar. Em alguns casos, os aplicativos também capturam alguns deles para fazer uma manipulação especial, mas permitem que os outros sejam tratados como um `CommunicationException`. Isso pode ser feito capturando o tipo de exceção mais específico primeiro e, em seguida, capturando `CommunicationException` em uma cláusula catch posterior.  
   
- O código que chama um método de comunicação do `TimeoutException` cliente deve capturar e. `CommunicationException` Uma maneira de lidar com esses erros é anular o cliente e relatar a falha de comunicação.  
+ O código que chama um método de comunicação do cliente deve capturar o `TimeoutException` e `CommunicationException`. Uma maneira de lidar com esses erros é anular o cliente e relatar a falha de comunicação.  
   
 ```csharp   
 try  
@@ -45,14 +45,14 @@ catch (CommunicationException exception)
 }  
 ```  
   
- Se ocorrer uma exceção esperada, o cliente poderá ou não poderá ser usado posteriormente. Para determinar se o cliente ainda pode ser usado, verifique se `State` a propriedade `CommunicationState`é. Feito. Se ele ainda estiver aberto, ele ainda será utilizável. Caso contrário, você deve anular o cliente e liberar todas as referências a ele.  
+ Se ocorrer uma exceção esperada, o cliente poderá ou não poderá ser usado posteriormente. Para determinar se o cliente ainda pode ser usado, verifique se a propriedade `State` está `CommunicationState`. Feito. Se ele ainda estiver aberto, ele ainda será utilizável. Caso contrário, você deve anular o cliente e liberar todas as referências a ele.  
   
 > [!CAUTION]
-> Você pode observar que os clientes que têm uma sessão geralmente não podem mais ser usados após uma exceção, e os clientes que não têm uma sessão geralmente ainda podem ser usados após uma exceção. No entanto, nenhuma delas é garantida, portanto, se você quiser tentar continuar usando o cliente após uma exceção, seu aplicativo deverá `State` verificar a propriedade para verificar se o cliente ainda está aberto.  
+> Você pode observar que os clientes que têm uma sessão geralmente não podem mais ser usados após uma exceção, e os clientes que não têm uma sessão geralmente ainda podem ser usados após uma exceção. No entanto, nenhuma delas é garantida, portanto, se você quiser tentar continuar usando o cliente após uma exceção, seu aplicativo deverá verificar a propriedade `State` para verificar se o cliente ainda está aberto.  
   
  Quando você executa o exemplo, as respostas e as exceções da operação são exibidas na janela do console do cliente.  
   
- O processo do cliente executa dois cenários, cada um dos quais tenta `Add` chamar seguido `Divide`por. O primeiro cenário simula um problema de rede anulando o cliente antes de fazer a chamada para `Divide`. O segundo cenário causa uma condição de tempo limite definindo o tempo limite muito curto para que o método seja concluído. A saída esperada do processo do cliente é:  
+ O processo de cliente executa dois cenários, cada um dos quais tenta chamar `Add` seguido por `Divide`. O primeiro cenário simula um problema de rede anulando o cliente antes de fazer a chamada para `Divide`. O segundo cenário causa uma condição de tempo limite definindo o tempo limite muito curto para que o método seja concluído. A saída esperada do processo do cliente é:  
   
 ```output
 Add(100,15.99) = 115.99  
@@ -76,6 +76,6 @@ Got System.TimeoutException
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  

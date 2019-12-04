@@ -1,23 +1,23 @@
 ---
-title: Removendo o estado de exibição o designer adiciona a um arquivo XAML - WF
+title: Removendo o estado de exibição que o designer adiciona a um arquivo XAML – WF
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: af57f838ea12d7199268988bf01baa0b61447650
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f431275140e821aa5ec4d2235322f06be87d5ee2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637853"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715618"
 ---
-# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Removendo o estado de exibição o designer adiciona a um arquivo XAML
+# <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Removendo o estado de exibição que o designer adiciona a um arquivo XAML
 
-Este exemplo demonstra como criar uma classe que deriva de <xref:System.Xaml.XamlWriter> e se remova o modo estado de um arquivo XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] grava informações no documento XAML, que é conhecido como o estado de exibição. O estado de exibição se refere à informação que é necessária em tempo de design, como o posicionamento de layout, que não é necessário em tempo de execução. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] insere essas informações no documento XAML que é editado. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] grava o estado de exibição no arquivo XAML com o atributo de `mc:Ignorable` , o que essa informação não é carregada quando o tempo de execução carrega o arquivo XAML. Este exemplo demonstra como criar uma classe que remove essas informações de estado de exibição ao processar nós XAML.
+Este exemplo demonstra como criar uma classe que deriva de <xref:System.Xaml.XamlWriter> e se remova o modo estado de um arquivo XAML. O Windows Designer de Fluxo de Trabalho grava informações no documento XAML, que é conhecido como estado de exibição. O estado de exibição se refere à informação que é necessária em tempo de design, como o posicionamento de layout, que não é necessário em runtime. Designer de Fluxo de Trabalho insere essas informações no documento XAML conforme ele é editado. Designer de Fluxo de Trabalho grava o estado de exibição no arquivo XAML com o atributo `mc:Ignorable`, portanto, essas informações não são carregadas quando o tempo de execução carrega o arquivo XAML. Este exemplo demonstra como criar uma classe que remove essas informações de estado de exibição ao processar nós XAML.
 
 ## <a name="discussion"></a>Discussão
 
 Este exemplo demonstra como criar um text writer personalizado.
 
-Para criar um text writer personalizado XAML, crie uma classe que herda de <xref:System.Xaml.XamlWriter>. Como gravadores XAML aninhados são geralmente, é comum para controlar um gravador XAML "interno". Esses "interna ' gravadores podem ser pensados como a referência à pilha restante de gravadores XAML, permitindo que você tenha vários pontos de entrada para trabalhar e, em seguida, delegue o processamento para o restante da pilha.
+Para criar um text writer personalizado XAML, crie uma classe que herda de <xref:System.Xaml.XamlWriter>. Como os gravadores XAML geralmente são aninhados, é comum manter o controle de um gravador XAML "interno". Esses gravadores "internos" podem ser considerados como referência à pilha restante de gravadores XAML, permitindo que você tenha vários pontos de entrada para realizar o trabalho e, em seguida, delegue o processamento para o restante da pilha.
 
 Nesse exemplo, há alguns itens de interesse. Um é a verifique se o item que está sendo gravada for um namespace de designer. Observe que isso também tira para fora o uso de outros tipos de namespace de designer em um fluxo de trabalho.
 
@@ -87,7 +87,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 
 ## <a name="to-use-this-sample"></a>Para usar este exemplo
 
-1. Usando o Visual Studio 2010, abra o arquivo de solução de Viewstatecleaningwriter.
+1. Usando o Visual Studio 2010, abra o arquivo de solução ViewStateCleaningWriter. sln.
 
 2. Abra um prompt de comando e navegue para o diretório onde o ViewStageCleaningWriter.exe é criado.
 
@@ -99,7 +99,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
 
-   Isso gera um arquivo XAML para \[outfile], que tem todas as suas informações de estado de exibição removidas.
+   Isso gera um arquivo XAML para \[outfile], que tem todas as informações de estado de exibição removidas.
 
 > [!NOTE]
 > Para um fluxo de trabalho <xref:System.Activities.Statements.Sequence> , um número de dicas de virtualização são removidos. Isso faz com que o designer recalcule o layout na próxima vez que é carregado. Quando você usa este exemplo para <xref:System.Activities.Statements.Flowchart>, qualquer posicionamento e linha informações de roteamento são removidos e a carga subsequente no designer, todas as atividades são empilhadas no lado esquerdo da tela.
@@ -121,6 +121,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

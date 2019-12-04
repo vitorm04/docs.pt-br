@@ -2,12 +2,12 @@
 title: Olá Mundo com o serviço de roteamento
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: 1ab3da97bc94f864bbd28ca072f4df8f7d854ea1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 7a41a1b552e220dcb6367ae59876da4570bab909
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044932"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716910"
 ---
 # <a name="hello-world-with-the-routing-service"></a>Olá Mundo com o serviço de roteamento
 Este exemplo demonstra o serviço de roteamento do Windows Communication Foundation (WCF). O serviço de roteamento é um componente WCF que torna mais fácil incluir um roteador baseado em conteúdo em seu aplicativo. Este exemplo adapta a amostra de calculadora padrão do WCF para se comunicar usando o serviço de roteamento. Neste exemplo, o cliente da calculadora está configurado para enviar mensagens para um ponto de extremidade exposto pelo roteador. O serviço de roteamento é configurado para aceitar todas as mensagens enviadas a ele e encaminhá-las a um ponto de extremidade que corresponde ao serviço de calculadora. Portanto, as mensagens enviadas do cliente são recebidas pelo roteador e roteadas novamente para o serviço de calculadora real. As mensagens do serviço de calculadora são enviadas de volta para o roteador, que, por sua vez, passa-as de volta para o cliente da calculadora.
@@ -53,7 +53,7 @@ Este exemplo demonstra o serviço de roteamento do Windows Communication Foundat
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   

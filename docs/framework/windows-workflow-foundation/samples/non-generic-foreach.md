@@ -2,12 +2,12 @@
 title: ForEach não genéricos
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: a4bbc594ec0bf2d387e700508c7d92685216accc
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989034"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715651"
 ---
 # <a name="non-generic-foreach"></a>ForEach não genéricos
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] envia na caixa de ferramentas um conjunto de atividades de fluxo de controle, incluindo <xref:System.Activities.Statements.ForEach%601>, que permita iterar através das coleções de <xref:System.Collections.Generic.IEnumerable%601> .  
@@ -17,7 +17,7 @@ ms.locfileid: "70989034"
  Este exemplo mostra como implementar uma atividade não genérico de <xref:System.Activities.Statements.ForEach%601> e seu designer. Esta atividade pode ser usada para percorrer <xref:System.Collections.ArrayList>.  
   
 ## <a name="foreach-activity"></a>Atividade ForEach  
- A declaração de C#/VB `foreach` enumera os elementos de uma coleção, executando uma instrução inserido para cada elemento da coleção. As atividades equivalentes de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] de `foreach` são <xref:System.Activities.Statements.ForEach%601> e <xref:System.Activities.Statements.ParallelForEach%601>. A atividade de <xref:System.Activities.Statements.ForEach%601> contém uma lista de valores e um corpo. Em tempo de execução, a lista é iterada e o corpo é executado para cada valor na lista.  
+ A declaração de C#/VB `foreach` enumera os elementos de uma coleção, executando uma instrução inserido para cada elemento da coleção. As atividades equivalentes de [!INCLUDE[wf1](../../../../includes/wf1-md.md)] de `foreach` são <xref:System.Activities.Statements.ForEach%601> e <xref:System.Activities.Statements.ParallelForEach%601>. A atividade de <xref:System.Activities.Statements.ForEach%601> contém uma lista de valores e um corpo. Em runtime, a lista é iterada e o corpo é executado para cada valor na lista.  
   
  Para a maioria dos casos, a versão genérica de atividade deve ser a solução preferencial, porque ele aborda a maioria das situações em que ele deve ser usado, e fornece verificação de tipo em tempo de compilação. A versão não genérico pode ser usada iterando por tipos que implementam a interface não genérica de <xref:System.Collections.IEnumerable> .  
   
@@ -69,10 +69,10 @@ Activity sampleUsage =
   
 |Condição|Mensagem|Severidade|Tipo de exceção|  
 |---------------|-------------|--------------|--------------------|  
-|Os valores são `null`|O valor para valores de um argumento necessário de atividade “não foi fornecido.|Erro|<xref:System.InvalidOperationException>|  
+|Os valores são `null`|O valor para valores de um argumento necessário de atividade “não foi fornecido.|Erro do|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>Designer ForEach  
- O designer de atividade para o exemplo é semelhante a aparência ao designer fornecido para atividades interno de <xref:System.Activities.Statements.ForEach%601> . O designer aparece na caixa de ferramentas na categoria **exemplos**, **atividades não genéricas** . O designer é denominado **ForEachWithBodyFactory** na caixa de ferramentas, porque a atividade expõe <xref:System.Activities.Presentation.IActivityTemplateFactory> um na caixa de ferramentas, que cria a atividade com um <xref:System.Activities.ActivityAction>configurado corretamente.  
+ O designer de atividade para o exemplo é semelhante a aparência ao designer fornecido para atividades interno de <xref:System.Activities.Statements.ForEach%601> . O designer aparece na caixa de ferramentas na categoria **exemplos**, **atividades não genéricas** . O designer é denominado **ForEachWithBodyFactory** na caixa de ferramentas, porque a atividade expõe uma <xref:System.Activities.Presentation.IActivityTemplateFactory> na caixa de ferramentas, que cria a atividade com um <xref:System.Activities.ActivityAction>configurado corretamente.  
   
 ```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
@@ -108,6 +108,6 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

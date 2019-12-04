@@ -2,12 +2,12 @@
 title: Windows Communication Foundation para enfileiramento de mensagens
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 34ac2dd8b6e01e2d7ae6f7978e1b09af174b71dd
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cbc1251a8e4eaaaf4b47357851dd681ae326f25
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038635"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715055"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation para enfileiramento de mensagens
 Este exemplo demonstra como um aplicativo Windows Communication Foundation (WCF) pode enviar uma mensagem para um aplicativo de enfileiramento de mensagens (MSMQ). O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas. O serviço e o cliente não precisam estar em execução ao mesmo tempo.
@@ -32,7 +32,7 @@ static void Main(string[] args)
 }
 ```
 
- Quando uma mensagem é recebida na fila, o manipulador `ProcessOrder` de mensagens é invocado.
+ Quando uma mensagem é recebida na fila, o manipulador de mensagens `ProcessOrder` é invocado.
 
 ```csharp
 public static void ProcessOrder(Object source,
@@ -98,7 +98,7 @@ client.Close();
 
  O cliente usa um cliente personalizado em ordem para enviar a mensagem MSMQ para a fila. Como o aplicativo que recebe e processa a mensagem é um aplicativo MSMQ e não um aplicativo WCF, não há nenhum contrato de serviço implícito entre os dois aplicativos. Portanto, não podemos criar um proxy usando a ferramenta svcutil. exe neste cenário.
 
- O cliente personalizado é essencialmente o mesmo para todos os aplicativos WCF que usam `MsmqIntegration` a associação para enviar mensagens. Ao contrário de outros clientes, ele não inclui uma variedade de operações de serviço. É apenas uma operação de envio de mensagem.
+ O cliente personalizado é essencialmente o mesmo para todos os aplicativos WCF que usam a associação de `MsmqIntegration` para enviar mensagens. Ao contrário de outros clientes, ele não inclui uma variedade de operações de serviço. É apenas uma operação de envio de mensagem.
 
 ```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -130,7 +130,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  Quando você executa o exemplo, as atividades de cliente e serviço são exibidas nas janelas do console do cliente e do serviço. Você pode ver o serviço receber mensagens do cliente. Pressione ENTER em cada janela do console para desligar o serviço e o cliente. Observe que, como o enfileiramento está em uso, o cliente e o serviço não precisam estar em funcionamento ao mesmo tempo. Por exemplo, você pode executar o cliente, desligá-lo e, em seguida, iniciar o serviço e ele ainda receberia suas mensagens.
 
 > [!NOTE]
-> Este exemplo requer a instalação do serviço de enfileiramento de mensagens. Consulte as instruções de instalação no enfileiramento de [mensagens](https://go.microsoft.com/fwlink/?LinkId=94968).  
+> Este exemplo requer a instalação do serviço de enfileiramento de mensagens. Consulte as instruções de instalação no [enfileiramento de mensagens](https://go.microsoft.com/fwlink/?LinkId=94968).  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>A configuração, compilação, e executar o exemplo  
   
@@ -144,7 +144,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
     3. Clique com o botão direito do mouse em **filas de mensagens particulares**e selecione **nova** **fila privada**.  
   
-    4. Marque a caixa transacional.  
+    4. Marque a caixa **transacional** .  
   
     5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.  
   
@@ -169,11 +169,11 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Trocar mensagens com pontos de extremidade WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [Como trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Enfileiramento de mensagens](https://go.microsoft.com/fwlink/?LinkId=94968)

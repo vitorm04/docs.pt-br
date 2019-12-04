@@ -2,22 +2,22 @@
 title: Rastreamento ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: fb1a1dc77ee6a7be25aade18f76f89464bef0387
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: c9f2b3019ee30ded59a7549a4d3be834c9ab9811
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989955"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716439"
 ---
 # <a name="etw-tracing"></a>Rastreamento ETW
-Este exemplo demonstra como implementar o rastreamento de ponta a ponta (e2e) usando o ETW (rastreamento de eventos para Windows) e `ETWTraceListener` o que é fornecido com este exemplo. O exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e inclui o rastreamento ETW.  
+Este exemplo demonstra como implementar o rastreamento de ponta a ponta (E2E) usando o ETW (rastreamento de eventos para Windows) e o `ETWTraceListener` que é fornecido com este exemplo. O exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e inclui o rastreamento ETW.  
   
 > [!NOTE]
 > Os procedimentos de instalação e as instruções de compilação para esse exemplo estão localizadas no final deste tópico.  
   
  Este exemplo pressupõe que você esteja familiarizado com o [rastreamento e o registro de mensagens](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
   
- Cada origem de rastreamento no <xref:System.Diagnostics> modelo de rastreamento pode ter vários ouvintes de rastreamento que determinam onde e como os dados são rastreados. O tipo de ouvinte define o formato no qual os dados de rastreamento são registrados. O exemplo de código a seguir mostra como adicionar o ouvinte à configuração.  
+ Cada origem de rastreamento no modelo de rastreamento de <xref:System.Diagnostics> pode ter vários ouvintes de rastreamento que determinam onde e como os dados são rastreados. O tipo de ouvinte define o formato no qual os dados de rastreamento são registrados. O exemplo de código a seguir mostra como adicionar o ouvinte à configuração.  
   
 ```xml  
 <system.diagnostics>  
@@ -50,17 +50,17 @@ Este exemplo demonstra como implementar o rastreamento de ponta a ponta (e2e) us
  Antes de usar esse ouvinte, uma sessão de rastreamento ETW deve ser iniciada. Essa sessão pode ser iniciada usando logman. exe ou tracelog. exe. Um arquivo SetupETW. bat está incluído neste exemplo para que você possa configurar a sessão de rastreamento ETW junto com um arquivo CleanupETW. bat para fechar a sessão e concluir o arquivo de log.  
   
 > [!NOTE]
-> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico. Para obter mais informações sobre essas ferramentas, consulte<https://go.microsoft.com/fwlink/?LinkId=56580>  
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico. Para obter mais informações sobre essas ferramentas, consulte <https://go.microsoft.com/fwlink/?LinkId=56580>  
   
  Ao usar o ETWTraceListener, os rastreamentos são registrados em arquivos. etl binários. Com o rastreamento de ServiceModel ativado, todos os rastreamentos gerados aparecem no mesmo arquivo. Use a [ferramenta Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md) para exibir arquivos de log. ETL e. svclog Connector. O visualizador cria uma exibição de ponta a ponta do sistema que torna possível rastrear uma mensagem de sua origem para seu destino e ponto de consumo.  
   
- O ouvinte de rastreamento ETW dá suporte ao log circular. Para habilitar esse recurso, vá para **Iniciar**, **executar** e digite `cmd` para iniciar um console de comando. No comando a seguir, substitua o `<logfilename>` parâmetro pelo nome do arquivo de log.  
+ O ouvinte de rastreamento ETW dá suporte ao log circular. Para habilitar esse recurso, vá para **Iniciar**, **executar** e digite `cmd` para iniciar um console de comando. No comando a seguir, substitua o parâmetro `<logfilename>` pelo nome do arquivo de log.  
   
 ```console  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
 ```  
   
- As `-f` opções `-max` e são opcionais. Eles especificam o formato circular binário e o tamanho máximo do log de 1000 MB, respectivamente. A `-p` opção é usada para especificar o provedor de rastreamento. Em nosso exemplo, `"{411a0819-c24b-428c-83e2-26b41091702e}"` é o GUID para "provedor de exemplo de ETW XML".  
+ As opções `-f` e `-max` são opcionais. Eles especificam o formato circular binário e o tamanho máximo do log de 1000 MB, respectivamente. A opção `-p` é usada para especificar o provedor de rastreamento. Em nosso exemplo, `"{411a0819-c24b-428c-83e2-26b41091702e}"` é o GUID para "provedor de exemplo de ETW XML".  
   
  Para iniciar a sessão, digite o comando a seguir.  
   
@@ -85,7 +85,7 @@ logman stop Wcf
 2. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
-    > Para usar os comandos RegisterProvider. bat, SetupETW. bat e CleanupETW. bat, você deve executar sob uma conta de administrador local. Se você estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)] o ou posterior, também deverá executar o prompt de comando com privilégios elevados. Para fazer isso, clique com o botão direito do mouse no ícone do prompt de comando e clique em **Executar como administrador**.  
+    > Para usar os comandos RegisterProvider. bat, SetupETW. bat e CleanupETW. bat, você deve executar sob uma conta de administrador local. Se você estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)] ou posterior, também deverá executar o prompt de comando com privilégios elevados. Para fazer isso, clique com o botão direito do mouse no ícone do prompt de comando e clique em **Executar como administrador**.  
   
 3. Antes de executar o exemplo, execute RegisterProvider. bat no cliente e no servidor. Isso configura o arquivo resultante ETWTracingSampleLog. ETL para gerar rastreamentos que podem ser lidos pelo Visualizador de rastreamento de serviço. Esse arquivo pode ser encontrado na pasta C:\Logs. Se essa pasta não existir, ela deverá ser criada ou nenhum rastreamento será gerado. Em seguida, execute SetupETW. bat nos computadores cliente e servidor para iniciar a sessão de rastreamento ETW. O arquivo SetupETW. bat pode ser encontrado na pasta CS\Client.  
   
@@ -102,7 +102,7 @@ logman stop Wcf
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   

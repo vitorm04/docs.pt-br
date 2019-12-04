@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 5f5418da63b2bc5fc9b20f5c262890b7a06ce5dd
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 3282daff166a8fe56841a41bfe8bd9dd69f9d4c8
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989917"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716937"
 ---
 # <a name="getting-started-sample"></a>Exemplo de introdução
 
@@ -26,7 +26,7 @@ O exemplo a Introdução demonstra como implementar um serviço típico e um cli
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\GettingStarted\GettingStarted`
 
@@ -34,7 +34,7 @@ O serviço descreve as operações que ele realiza em um contrato de serviço qu
 
 O cliente contém uma definição do contrato de serviço e uma classe de proxy para acessar o serviço. O código do proxy é gerado a partir dos metadados de serviço usando a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).
 
-No [!INCLUDE[wv](../../../../includes/wv-md.md)], o serviço está hospedado no serviço de ativação do Windows (was). No [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ele é hospedado por serviços de informações da Internet (IIS) e ASP.net. Hospedar um serviço no IIS ou WAS permite que o serviço seja ativado automaticamente quando é acessado pela primeira vez.
+No [!INCLUDE[wv](../../../../includes/wv-md.md)], o serviço é hospedado no serviço de ativação do Windows (WAS). Em [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], ele é hospedado por Serviços de Informações da Internet (IIS) e ASP.NET. Hospedar um serviço no IIS ou WAS permite que o serviço seja ativado automaticamente quando é acessado pela primeira vez.
 
 > [!NOTE]
 > Se você preferir começar com um exemplo que hospede o serviço em um aplicativo de console em vez de IIS, consulte o exemplo de hospedagem [interna](../../../../docs/framework/wcf/samples/self-host.md) .
@@ -43,7 +43,7 @@ O serviço e o cliente especificam detalhes de acesso nas configurações do arq
 
 O serviço configura um comportamento de tempo de execução para publicar seus metadados.
 
-O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela `ICalculator` interface, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). O cliente faz solicitações para uma determinada operação matemática e o serviço responde com o resultado. O serviço implementa um `ICalculator` contrato que é definido no código a seguir.
+O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela interface `ICalculator`, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir). O cliente faz solicitações para uma determinada operação matemática e o serviço responde com o resultado. O serviço implementa um contrato de `ICalculator` que é definido no código a seguir.
 
 ```vb
 ' Define a service contract.
@@ -140,11 +140,11 @@ O serviço expõe um ponto de extremidade para se comunicar com o serviço, defi
 </services>
 ```
 
-O serviço expõe o ponto de extremidade no endereço base fornecido pelo IIS ou pelo host. A associação é configurada com <xref:System.ServiceModel.WSHttpBinding>um padrão, que fornece comunicação http e protocolos de serviço Web padrão para endereçamento e segurança. O contrato é `ICalculator` implementado pelo serviço.
+O serviço expõe o ponto de extremidade no endereço base fornecido pelo IIS ou pelo host. A associação é configurada com um <xref:System.ServiceModel.WSHttpBinding>padrão, que fornece comunicação HTTP e protocolos de serviço Web padrão para endereçamento e segurança. O contrato é o `ICalculator` implementado pelo serviço.
 
-Conforme configurado, o serviço pode ser acessado pelo `http://localhost/servicemodelsamples/service.svc` cliente do no mesmo computador. Para clientes em computadores remotos acessarem o serviço, um nome de domínio totalmente qualificado deve ser especificado em vez de localhost.
+Conforme configurado, o serviço pode ser acessado em `http://localhost/servicemodelsamples/service.svc` por um cliente no mesmo computador. Para clientes em computadores remotos acessarem o serviço, um nome de domínio totalmente qualificado deve ser especificado em vez de localhost.
 
-A estrutura não expõe metadados por padrão. Como tal, o serviço ativa o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> e expõe um ponto de extremidade de intercâmbio de metadados (MEX) em. `http://localhost/servicemodelsamples/service.svc/mex` A configuração a seguir demonstra isso.
+A estrutura não expõe metadados por padrão. Assim, o serviço ativa o <xref:System.ServiceModel.Description.ServiceMetadataBehavior> e expõe um ponto de extremidade de intercâmbio de metadados (MEX) em `http://localhost/servicemodelsamples/service.svc/mex`. A configuração a seguir demonstra isso.
 
 ```xaml
 <system.serviceModel>
@@ -285,5 +285,5 @@ O exemplo a Introdução mostra a maneira padrão de criar um serviço e um clie
 
 ## <a name="see-also"></a>Consulte também
 
-- [Como: Hospedar um serviço WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
-- [Como: Hospedar um serviço WCF no IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [Como hospedar um serviço do WCF em um aplicativo gerenciado](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [Como hospedar um serviço WCF no IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

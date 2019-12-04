@@ -2,12 +2,12 @@
 title: 'Transporte: transações personalizadas através de exemplo de UDP'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: fcbc0ef6e747af953f545a06da965835595dd419
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 09ce715da4cf4d4fb4c959f63af3bb2c8c68b841
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423893"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711997"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>Transporte: transações personalizadas através de exemplo de UDP
 Este exemplo baseia-se no exemplo de [transporte: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) na[extensibilidade de transporte](../../../../docs/framework/wcf/samples/transport-extensibility.md)do Windows Communication Foundation (WCF). Ele estende o exemplo de transporte UDP para dar suporte ao fluxo de transações personalizadas e demonstra o uso da propriedade <xref:System.ServiceModel.Channels.TransactionMessageProperty>.  
@@ -258,7 +258,7 @@ if (transaction != null)
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   

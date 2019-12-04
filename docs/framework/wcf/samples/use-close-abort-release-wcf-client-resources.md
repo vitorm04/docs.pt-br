@@ -3,12 +3,12 @@ title: Usar Close e Abort para liberar recursos de cliente do WCF
 description: Dispose pode falhar e gerar exceções quando a rede falhar. Isso pode causar comportamento indesejado. Em vez disso, use fechar e anular para liberar recursos do cliente quando a rede tiver falhado.
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: afb52e89c5f159e7866ebc8f30fcfae7dd5be93a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 38861252a470f71a6fa88554e289344e2918d710
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424170"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715329"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>Fechar e anular a liberação de recursos com segurança quando as conexões de rede forem descartadas
 
@@ -116,6 +116,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`

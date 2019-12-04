@@ -2,12 +2,12 @@
 title: BasicBinding com segurança de transporte
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: 5f3afdf4648f9e3f9fbef7c2aad39da4dfc67a2c
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 6c7426de0a2d2b0001442960819dd385f7b9ea9e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990164"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716077"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding com segurança de transporte
 
@@ -18,7 +18,7 @@ Este exemplo demonstra o uso de segurança de transporte SSL com a associação 
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`
 
@@ -56,7 +56,7 @@ O código do programa no exemplo é idêntico ao do serviço de [introdução](.
 </system.serviceModel>
 ```
 
-Como o certificado usado neste exemplo é um certificado de teste criado com MakeCert. exe, um alerta de segurança é exibido quando você tenta acessar um endereço HTTPS: em seu navegador, https://localhost/servicemodelsamples/service.svc como. Para permitir que o cliente do Windows Communication Foundation (WCF) funcione com um certificado de teste, algum código adicional é adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanham não são necessários ao usar certificados reais.
+Como o certificado usado neste exemplo é um certificado de teste criado com MakeCert. exe, um alerta de segurança é exibido quando você tenta acessar um endereço HTTPS: em seu navegador, como https://localhost/servicemodelsamples/service.svc. Para permitir que o cliente do Windows Communication Foundation (WCF) funcione com um certificado de teste, algum código adicional é adicionado ao cliente para suprimir o alerta de segurança. Esse código e a classe que o acompanham não são necessários ao usar certificados reais.
 
 ```csharp
 // This code is required only for test certificates such as those

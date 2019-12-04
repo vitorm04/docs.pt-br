@@ -2,12 +2,12 @@
 title: Política de proteção estendida
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: c7c2e85872c158facb2de91a7413ac5a04491d7f
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1cb6d44e8f6ee8f54f776453e5a1783ab0cfa4f0
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044994"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716418"
 ---
 # <a name="extended-protection-policy"></a>Política de proteção estendida
 A proteção estendida é uma iniciativa de segurança para proteção contra ataques MITM (Man-in-the-Middle). Um ataque MITM é uma ameaça à segurança em que um MITM Obtém as credenciais de um cliente e as encaminha para um servidor.  
@@ -50,7 +50,7 @@ A proteção estendida é uma iniciativa de segurança para proteção contra at
   
 10. Você pode testar o serviço acessando a URL HTTPS de uma janela do navegador (forneça um nome de domínio totalmente qualificado). Se você quiser acessar essa URL de um computador remoto, certifique-se de que o firewall esteja aberto para todas as conexões HTTP e HTTPS de entrada.  
   
-11. Abra o arquivo de configuração do cliente e forneça um nome de domínio totalmente qualificado para o atributo de endereço do cliente `<<full_machine_name>>`ou do ponto de extremidade que substitui.  
+11. Abra o arquivo de configuração do cliente e forneça um nome de domínio totalmente qualificado para o atributo de endereço do cliente ou do ponto de extremidade que substitui `<<full_machine_name>>`.  
   
 12. Execute o cliente. O cliente se comunica com o serviço, que estabelece um canal seguro e usa a proteção estendida.  
   
@@ -59,6 +59,6 @@ A proteção estendida é uma iniciativa de segurança para proteção contra at
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Security\ExtendedProtection`

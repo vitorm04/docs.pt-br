@@ -2,18 +2,18 @@
 title: Árvore modelo de programação de item
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f2d89cb2a3b0f6167f043148ea793ec1c264a556
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: efda69ac568b0ad9c5fdcf4d42722c5b7dadd3f3
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038181"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715672"
 ---
 # <a name="programming-model-item-tree"></a>Árvore modelo de programação de item
-Este exemplo demonstra como navegar na <xref:System.Activities.Presentation.Model.ModelItem> árvore usando a associação de dados declarativa da exibição de árvore Windows Presentation Foundation (WPF).
+Este exemplo demonstra como navegar na árvore de <xref:System.Activities.Presentation.Model.ModelItem> usando a associação de dados declarativa da exibição de árvore do Windows Presentation Foundation (WPF).
 
 ## <a name="sample-details"></a>Detalhes de exemplo
- A árvore de <xref:System.Activities.Presentation.Model.ModelItem> é a abstração que é usada pela infraestrutura de [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] para expor os dados sobre a instância subjacente que está sendo editada. A ilustração a seguir é uma descrição das várias camadas de infraestrutura dentro de [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].
+ A árvore de <xref:System.Activities.Presentation.Model.ModelItem> é a abstração usada pela infraestrutura de Designer de Fluxo de Trabalho do Windows para expor os dados sobre a instância subjacente que está sendo editada. A ilustração a seguir é uma representação das várias camadas de infraestrutura dentro do Designer de Fluxo de Trabalho.
 
  ![Diagrama que mostra a arquitetura de Designer de Fluxo de Trabalho.](./media/programming-model-item-tree/workflow-designer-architecture.jpg)
 
@@ -35,7 +35,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 3. Pressione F5 para executar o aplicativo. Em seguida, o formulário do WPF é exibido.
 
-4. Clique no botão **carregar o WF** para carregar <xref:System.Activities.Presentation.Model.ModelItem> o e associá-lo ao modo de exibição de árvore.
+4. Clique no botão **carregar o WF** para carregar o <xref:System.Activities.Presentation.Model.ModelItem> e associá-lo ao modo de exibição de árvore.
 
 5. Clicar no botão **alterar árvore do item do modelo** executa o código anterior para adicionar um item à árvore e definir uma propriedade.
 
@@ -44,7 +44,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ProgrammingModelItemTree`  
   

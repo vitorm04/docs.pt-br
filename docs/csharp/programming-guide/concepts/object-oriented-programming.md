@@ -2,12 +2,12 @@
 title: Programação orientada a objeto (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 121d2e43f6896179756067e661be6d7960a1ee64
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1de150f6eb4be893ca1afce6bd16afde5752c986
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418044"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74711814"
 ---
 # <a name="object-oriented-programming-c"></a>Programação orientada a objeto (C#)
 
@@ -77,7 +77,7 @@ struct SampleStruct
 }
 ```
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [class](../../language-reference/keywords/class.md)
 
@@ -131,7 +131,7 @@ class SampleClass
 
 A maioria das propriedades têm métodos ou procedimentos para definir e obter o valor da propriedade. No entanto, você pode criar propriedades somente leitura ou somente gravação para impedir que elas sejam modificadas ou lidas. No C#, é possível omitir o método de propriedade `get` ou `set`. No entanto, propriedades autoimplementadas não podem ser somente leitura ou somente gravação.
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [get](../../language-reference/keywords/get.md)
 
@@ -158,13 +158,13 @@ Uma classe pode ter várias implementações ou *sobrecargas*, do mesmo método 
 Para sobrecarregar um método:
 
 ```csharp
-public int sampleMethod(string sampleParam) {};
+public int sampleMethod(string sampleParam) {}
 public int sampleMethod(int sampleParam) {}
 ```
 
 Na maioria dos casos, você declara um método dentro de uma definição de classe. No entanto, o C# também dá suporte a *métodos de extensão* que permitem adicionar métodos a uma classe existente fora da definição real da classe.
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [Métodos](../classes-and-structs/methods.md)
 
@@ -186,9 +186,7 @@ public class SampleClass
 }
 ```
 
-Para obter mais informações, consulte:
-
-[Construtores](../classes-and-structs/constructors.md).
+Para saber mais, veja [Construtores](../classes-and-structs/constructors.md).
 
 #### <a name="Finalizers"></a> Finalizadores
 
@@ -268,7 +266,7 @@ SampleClass sampleObject = new SampleClass
     { FirstProperty = "A", SecondProperty = "B" };
 ```
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [Operador new](../../language-reference/operators/new-operator.md)
 
@@ -338,7 +336,7 @@ Para especificar que uma classe pode ser usada apenas como classe base e não po
 public abstract class B { }
 ```
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [sealed](../../language-reference/keywords/sealed.md)
 
@@ -382,7 +380,7 @@ class SampleClass : ISampleInterface
 }
 ```
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 [Interfaces](../interfaces/index.md)
 
@@ -408,7 +406,7 @@ SampleGeneric<string> sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [Genéricos](../../../standard/generics/index.md)
 
@@ -446,7 +444,7 @@ class SampleClass
 }
 ```
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [Delegados](../delegates/index.md)
 

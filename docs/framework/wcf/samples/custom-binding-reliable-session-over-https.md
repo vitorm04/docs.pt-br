@@ -2,12 +2,12 @@
 title: Sessão confiável de associação personalizada através de HTTPS
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: d4845a1058f42dab35919eb7bb83b16b45e42ff3
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: b83f7af2cd4d0518454a5147904c21c9ffbbbf21
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70990023"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74710972"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Sessão confiável de associação personalizada através de HTTPS
 Este exemplo demonstra o uso de segurança de transporte SSL com sessões confiáveis. As sessões confiáveis implementam o protocolo de mensagens WS-Reliable. Você pode ter uma sessão confiável segura, compondo o WS-Security em sessões confiáveis. Mas, às vezes, você pode optar por usar a segurança de transporte HTTP com SSL.  
@@ -17,14 +17,14 @@ Este exemplo demonstra o uso de segurança de transporte SSL com sessões confi�
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>Detalhes de exemplo  
  O SSL garante que os próprios pacotes sejam protegidos. É importante observar que isso é diferente de proteger a sessão confiável usando a conversa WS-Secure.  
   
- Para usar uma sessão confiável via HTTPS, você deve criar uma associação personalizada. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Uma associação personalizada é criada usando o elemento de associação de sessão confiável e o [ \<> httpsTransport](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md). A configuração a seguir é da associação personalizada.  
+ Para usar uma sessão confiável via HTTPS, você deve criar uma associação personalizada. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Uma associação personalizada é criada usando o elemento de associação de sessão confiável e o [\<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md). A configuração a seguir é da associação personalizada.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  

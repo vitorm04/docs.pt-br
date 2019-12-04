@@ -1,5 +1,5 @@
 ---
-title: Armadilhas em potencial com PLINQ
+title: Possíveis armadilhas com PLINQ
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,33 +8,33 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: 85098a0d10b4c05de52cd33d30ec5c4f4bbc594d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3ddc0c013335e6a7b4708a5dd8be0b2247b2f60c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139995"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716249"
 ---
-# <a name="potential-pitfalls-with-plinq"></a>Armadilhas em potencial com PLINQ
+# <a name="potential-pitfalls-with-plinq"></a>Possíveis armadilhas com PLINQ
 
 Em muitos casos, o PLINQ pode fornecer melhorias de desempenho significativas em relação a consultas sequenciais do LINQ to Objects. No entanto, o trabalho de paralelizar a execução da consulta apresenta complexidade que pode levar a problemas que, em código sequencial, não são tão comuns ou não são encontrados. Este tópico lista algumas práticas a evitar ao escrever consultas PLINQ.
 
-## <a name="do-not-assume-that-parallel-is-always-faster"></a>Não suponha que paralelo é sempre mais rápido
+## <a name="dont-assume-that-parallel-is-always-faster"></a>Não presuma que Parallel é sempre mais rápido
 
-A paralelização, por vezes, faz com que uma consulta PLINQ seja executada de forma mais devagar do que seu LINQ to Object equivalente. A regra básica é que as consultas que têm poucos elementos fonte e delegados de usuários rápidos provavelmente não acelerarão muito. No entanto, como muitos fatores estão envolvidos no desempenho, recomendamos avaliar os resultados reais antes de decidir pelo uso do PLINQ. Para saber mais, veja [Noções básicas sobre agilização em PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md).
+A paralelização, por vezes, faz com que uma consulta PLINQ seja executada de forma mais devagar do que seu LINQ to Object equivalente. A regra básica é que as consultas que têm poucos elementos fonte e delegados de usuários rápidos provavelmente não acelerarão muito. No entanto, como muitos fatores estão envolvidos no desempenho, recomendamos avaliar os resultados reais antes de decidir pelo uso do PLINQ. Para saber mais, veja [Noções básicas sobre agilização em PLINQ](understanding-speedup-in-plinq.md).
 
 ## <a name="avoid-writing-to-shared-memory-locations"></a>Evite gravar em locais de memória compartilhada
 
 No código sequencial, não é incomum ler ou gravar em variáveis estáticas ou campos de classe. No entanto, sempre que vários threads estão acessando essas variáveis simultaneamente, existe um grande potencial para condições de corrida. Embora você possa usar bloqueios para sincronizar o acesso à variável, o custo da sincronização pode prejudicar o desempenho. Portanto, recomendamos que você evite, ou pelo menos limite, o acesso ao estado compartilhado em uma consulta PLINQ tanto quanto possível.
 
-## <a name="avoid-over-parallelization"></a>Evite o excesso de paralelização
+## <a name="avoid-over-parallelization"></a>Evitar a maior paralelização
 
-Ao usar o operador `AsParallel`, você incorre em custos indiretos de particionar a coleção de origem e sincronizar os threads de trabalho. Os benefícios da paralelização ainda estão limitados pelo número de processadores no computador. Não há nenhum aumento de velocidade a ser obtido executando vários threads vinculados à computação em apenas um processador. Portanto, você deve ter cuidado para não paralelizar excessivamente uma consulta.
+Usando o método `AsParallel`, você incorre em custos de sobrecarga do particionamento da coleção de origem e na sincronização dos threads de trabalho. Os benefícios da paralelização ainda estão limitados pelo número de processadores no computador. Não há nenhum aumento de velocidade a ser obtido executando vários threads vinculados à computação em apenas um processador. Portanto, você deve ter cuidado para não paralelizar excessivamente uma consulta.
 
 O cenário mais comum em que a paralelização excessiva pode ocorrer é em consultas aninhadas, como mostrado no seguinte snippet.
 
-[!code-csharp[PLINQ#20](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#20)]
-[!code-vb[PLINQ#20](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#20)]
+[!code-csharp[PLINQ#20](~/samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#20)]
+[!code-vb[PLINQ#20](~/samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#20)]
 
 Nesse caso, é melhor paralelizar apenas a fonte de dados externa (clientes), a menos que uma ou mais das seguintes condições se apliquem:
 
@@ -46,7 +46,7 @@ Nesse caso, é melhor paralelizar apenas a fonte de dados externa (clientes), a 
 
 Em todos os casos, a melhor maneira de determinar a forma ideal da consulta é testar e medir. Para saber mais, confira [Como avaliar o desempenho de consulta PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).
 
-## <a name="avoid-calls-to-non-thread-safe-methods"></a>Evite chamadas para métodos não thread-safe
+## <a name="avoid-calls-to-non-thread-safe-methods"></a>Evite chamadas para métodos sem thread-safe
 
 Gravar para métodos de instância não thread-safe a partir de uma consulta PLINQ pode levar à corrupção de dados que pode ou não ser detectada no seu programa. Isso também poderá levar a exceções. No exemplo a seguir, vários segmentos estão tentando chamar simultaneamente o método `FileStream.Write`, que não é compatível com a classe.
 
@@ -60,32 +60,30 @@ FileStream fs = File.OpenWrite(...);
 a.AsParallel().Where(...).OrderBy(...).Select(...).ForAll(x => fs.Write(x));
 ```
 
-## <a name="limit-calls-to-thread-safe-methods"></a>Limite chamadas para métodos thread-safe
+## <a name="limit-calls-to-thread-safe-methods"></a>Limitar chamadas para métodos de thread-safe
 
 A maioria dos métodos estáticos no .NET Framework é thread-safe e pode ser chamada de vários threads simultaneamente. No entanto, mesmo nesses casos, a sincronização envolvida pode levar a uma desaceleração significativa na consulta.
 
 > [!NOTE]
 > Você pode testar isso sozinho inserindo algumas chamadas para <xref:System.Console.WriteLine%2A> nas suas consultas. Embora esse método seja usado nos exemplos de documentação para fins de demonstração, não o use em consultas PLINQ.
 
-## <a name="avoid-unnecessary-ordering-operations"></a>Evite operações de classificação desnecessárias
+## <a name="avoid-unnecessary-ordering-operations"></a>Evite operações de ordenação desnecessárias
 
-Quando o PLINQ executa uma consulta em paralelo, divide a sequência de origem em partições que podem ser operadas simultaneamente em múltiplos segmentos. Por padrão, a ordem em que as partições são processadas e os resultados fornecidos não é previsível (exceto para operadores como `OrderBy`). Você pode instruir o PLINQ a preservar a classificação de qualquer sequência de origem, mas isso tem um impacto negativo no desempenho. A prática recomendada, sempre que possível, é estruturar consultas para que elas não dependam da preservação da classificação. Para saber mais, veja [Preservação da ordem em PLINQ](../../../docs/standard/parallel-programming/order-preservation-in-plinq.md).
+Quando o PLINQ executa uma consulta em paralelo, divide a sequência de origem em partições que podem ser operadas simultaneamente em múltiplos segmentos. Por padrão, a ordem em que as partições são processadas e os resultados fornecidos não é previsível (exceto para operadores como `OrderBy`). Você pode instruir o PLINQ a preservar a classificação de qualquer sequência de origem, mas isso tem um impacto negativo no desempenho. A prática recomendada, sempre que possível, é estruturar consultas para que elas não dependam da preservação da classificação. Para saber mais, veja [Preservação da ordem em PLINQ](order-preservation-in-plinq.md).
 
-## <a name="prefer-forall-to-foreach-when-it-is-possible"></a>Dê preferência a ForAll em vez de ForEach quando possível
+## <a name="prefer-forall-to-foreach-when-it-is-possible"></a>Prefira ForAll para ForEach quando possível
 
 Embora o PLINQ execute uma consulta em múltiplos threads, se você consumir os resultados em um loop `foreach` (`For Each` no Visual Basic), os resultados da consulta devem ser mesclados novamente em um thread e acessados em série pelo enumerador. Em alguns casos, isso é inevitável. No entanto, sempre que possível, use o método `ForAll` para habilitar cada thread a gerar seus próprios resultados, por exemplo, gravando para uma coleção thread-safe como <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType>.
 
-A mesma questão se aplica a <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Em outras palavras, `source.AsParallel().Where().ForAll(...)` devem ser fortemente preferidos no lugar de
+O mesmo problema se aplica a <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>. Em outras palavras, `source.AsParallel().Where().ForAll(...)` deve ser altamente preferencial para `Parallel.ForEach(source.AsParallel().Where(), ...)`.
 
-`Parallel.ForEach(source.AsParallel().Where(), ...)`
-
-## <a name="be-aware-of-thread-affinity-issues"></a>Esteja ciente de questões de afinidade de thread
+## <a name="be-aware-of-thread-affinity-issues"></a>Esteja ciente dos problemas de afinidade de thread
 
 Algumas tecnologias, por exemplo, interoperabilidade COM para componentes de um único segmento (STA), Windows Forms e Windows Presentation Foundation (WPF), impõem restrições de afinidade de thread que exigem que o código seja executado em um thread específico. Por exemplo, tanto no Windows Forms quanto no WPF, um controle só pode ser acessado no thread em que foi criado. Se você tenta acessar o estado compartilhado de um controle Windows Forms em uma consulta PLINQ, uma exceção é gerada se você estiver executando no depurador. (Essa configuração pode ser desativada.) No entanto, se a consulta for consumida no thread da interface do usuário, você poderá acessar o controle do loop de `foreach` que enumera os resultados da consulta porque esse código é executado em apenas um thread.
 
-## <a name="do-not-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Não suponha que iterações para ForEach, For e ForAll sempre sejam executadas em paralelo
+## <a name="dont-assume-that-iterations-of-foreach-for-and-forall-always-execute-in-parallel"></a>Não presuma que iterações de ForEach, for e ForAll sempre são executadas em paralelo
 
-É importante ter em mente que iterações individuais em um loop <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> ou <xref:System.Linq.ParallelEnumerable.ForAll%2A> podem, mas não necessariamente têm que, ser executadas em paralelo. Portanto, você deve evitar gravar qualquer código que dependa da correção na execução paralela de iterações ou na execução de iterações em qualquer classificação específica.
+É importante ter em mente que as iterações individuais em um loop <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>ou <xref:System.Linq.ParallelEnumerable.ForAll%2A> podem, mas não precisam ser executadas em paralelo. Portanto, você deve evitar gravar qualquer código que dependa da correção na execução paralela de iterações ou na execução de iterações em qualquer classificação específica.
 
 Por exemplo, esse código é provavelmente um deadlock:
 
@@ -125,4 +123,4 @@ Em particular, uma iteração de um loop paralelo nunca deve aguardar outra iter
 
 ## <a name="see-also"></a>Consulte também
 
-- [PLINQ (LINQ paralelo)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [PLINQ (LINQ paralelo)](parallel-linq-plinq.md)

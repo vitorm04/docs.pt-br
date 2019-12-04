@@ -2,15 +2,15 @@
 title: Mensagens sem quebra de texto
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 9609160885a46d76c5df54538fc088a3d025ca3b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 4d6525393bb65dd6361b8d195f3a71991102daa1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044614"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716728"
 ---
 # <a name="unwrapped-messages"></a>Mensagens sem quebra de texto
-Este exemplo demonstra mensagens não encapsuladas. Por padrão, o corpo da mensagem é formatado de modo que os parâmetros para uma operação de serviço sejam encapsulados. O exemplo a seguir mostra `Add` uma mensagem de solicitação `ICalculator` para o serviço no modo encapsulado.  
+Este exemplo demonstra mensagens não encapsuladas. Por padrão, o corpo da mensagem é formatado de modo que os parâmetros para uma operação de serviço sejam encapsulados. O exemplo a seguir mostra uma mensagem de solicitação de `Add` para o serviço de `ICalculator` no modo encapsulado.  
   
 ```xml  
 <s:Envelope   
@@ -28,7 +28,7 @@ Este exemplo demonstra mensagens não encapsuladas. Por padrão, o corpo da mens
 </s:Envelope>  
 ```  
   
- O `<Add>` elemento no corpo da mensagem encapsula os `n1` parâmetros e `n2` . Por outro lado, o exemplo a seguir mostra a mensagem equivalente no modo não encapsulado.  
+ O elemento `<Add>` no corpo da mensagem encapsula os parâmetros `n1` e `n2`. Por outro lado, o exemplo a seguir mostra a mensagem equivalente no modo não encapsulado.  
   
 ```xml  
 <s:Envelope   
@@ -45,12 +45,12 @@ Este exemplo demonstra mensagens não encapsuladas. Por padrão, o corpo da mens
 </MessageLogTraceRecord>  
 ```  
   
- A mensagem desencapsulada não encapsula os `n1` parâmetros `n2` e em um elemento contentor, eles são filhos diretos do elemento body do SOAP.  
+ A mensagem desencapsulada não encapsula o `n1` e `n2` parâmetros em um elemento contido, eles são filhos diretos do elemento de corpo SOAP.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Neste exemplo, uma mensagem desencapsulada é criada aplicando o <xref:System.ServiceModel.MessageContractAttribute> ao tipo de parâmetro de operação de serviço e o tipo de valor de retorno, conforme mostrado no código de exemplo a seguir.  
+ Neste exemplo, uma mensagem desencapsulada é criada aplicando o <xref:System.ServiceModel.MessageContractAttribute> ao tipo de parâmetro de operação de serviço e ao tipo de valor de retorno, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -89,7 +89,7 @@ public class ResponseMessage
 }  
 ```  
   
- Para permitir que você veja as mensagens que estão sendo enviadas e recebidas, este exemplo usa o rastreamento. Além disso, o <xref:System.ServiceModel.WSHttpBinding> foi configurado sem segurança, para reduzir o número de mensagens que ele registra.  
+ Para permitir que você veja as mensagens que estão sendo enviadas e recebidas, este exemplo usa o rastreamento. Além disso, a <xref:System.ServiceModel.WSHttpBinding> foi configurada sem segurança, para reduzir o número de mensagens que ele registra.  
   
  O log de rastreamento resultante (c:\logs\Message.log) pode ser exibido usando a [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Para exibir o conteúdo da mensagem, selecione **mensagens** nos painéis esquerdo e direito da ferramenta Visualizador de rastreamento de serviço. Os logs de rastreamento neste exemplo são configurados para serem gerados na pasta C:\LOGS. Crie essa pasta antes de executar o exemplo e conceda ao serviço de rede do usuário permissões de gravação para esse diretório.  
   
@@ -108,6 +108,6 @@ public class ResponseMessage
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  

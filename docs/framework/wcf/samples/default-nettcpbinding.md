@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: f2dee85f3d84d840b33d81277419ab22e88e8556
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: dc417300eb6f62b89a1c07a4f2291b7366e410b1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928586"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716555"
 ---
 # <a name="default-nettcpbinding"></a>NetTcpBinding padrão
-Este exemplo demonstra o uso da <xref:System.ServiceModel.NetTcpBinding> associação. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Neste exemplo, o serviço é auto-hospedado. O cliente e o serviço são aplicativos de console.  
+Este exemplo demonstra o uso da Associação de <xref:System.ServiceModel.NetTcpBinding>. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora. Neste exemplo, o serviço é auto-hospedado. O cliente e o serviço são aplicativos de console.  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
@@ -22,11 +22,11 @@ Este exemplo demonstra o uso da <xref:System.ServiceModel.NetTcpBinding> associa
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado no `binding` atributo [ \<do ponto de extremidade >](../../configure-apps/file-schema/wcf/endpoint-element.md) elemento, conforme mostrado na seguinte configuração de exemplo.  
+ A associação é especificada nos arquivos de configuração para o cliente e o serviço. O tipo de associação é especificado no atributo `binding` do elemento [ponto de extremidade\<](../../configure-apps/file-schema/wcf/endpoint-element.md) , conforme mostrado na seguinte configuração de exemplo.  
   
 ```xml  
 <endpoint address=""  
@@ -34,7 +34,7 @@ Este exemplo demonstra o uso da <xref:System.ServiceModel.NetTcpBinding> associa
           contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 ```  
   
- O exemplo anterior mostra como configurar um ponto de extremidade para usar `netTcpBinding` a associação com as configurações padrão. Se você quiser configurar a `netTcpBinding` associação e alterar algumas de suas configurações, será necessário definir uma configuração de associação. O ponto de extremidade deve referenciar a configuração de associação `bindingConfiguration` por nome com um atributo. Neste exemplo, a configuração de associação é nomeada `Binding1` e é definida conforme mostrado na seguinte configuração de exemplo.  
+ O exemplo anterior mostra como configurar um ponto de extremidade para usar a associação de `netTcpBinding` com as configurações padrão. Se você quiser configurar a associação de `netTcpBinding` e alterar algumas de suas configurações, será necessário definir uma configuração de associação. O ponto de extremidade deve referenciar a configuração de associação por nome com um atributo `bindingConfiguration`. Neste exemplo, a configuração de associação é denominada `Binding1` e é definida conforme mostrado na seguinte configuração de exemplo.  
   
 ```xml  
 <services>  

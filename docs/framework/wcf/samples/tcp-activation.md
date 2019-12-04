@@ -2,32 +2,32 @@
 title: Ativação TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: e3bfbe9d7e7a6efafc8bf1e281e1f7a99c9c5fbe
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: c1a2c0de5fbb666ec3b68ec3da31cc27f8234cbd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487526"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716604"
 ---
 # <a name="tcp-activation"></a>Ativação TCP
 
-Este exemplo demonstra como hospedar um serviço que usa Windows processo WAS (Activation Services) para ativar um serviço que se comunica através do protocolo NET. TCP. Este exemplo se baseia a [Introdução ao](../../../../docs/framework/wcf/samples/getting-started-sample.md).
+Este exemplo demonstra a hospedagem de um serviço que usa o WAS (serviços de ativação de processos do Windows) para ativar um serviço que se comunica através do protocolo net. TCP. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).
 
 > [!NOTE]
-> As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`
 
-O exemplo consiste em um programa de console de cliente (.exe) e uma biblioteca de serviço (. dll) hospedado em um processo de trabalho ativado pelo WAS. Atividade do cliente está visível na janela do console.
+O exemplo consiste em um programa de console do cliente (. exe) e uma biblioteca de serviços (. dll) hospedada em um processo de trabalho ativado pelo WAS. A atividade do cliente fica visível na janela do console.
 
-O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido o `ICalculator` interface, que expõe operações matemáticas (Adicionar, subtrair, multiplicar e dividir), conforme mostrado no código de exemplo a seguir:
+O serviço implementa um contrato que define um padrão de comunicação de solicitação-resposta. O contrato é definido pela interface `ICalculator`, que expõe operações matemáticas (adicionar, subtrair, multiplicar e dividir), conforme mostrado no código de exemplo a seguir:
 
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]
@@ -69,7 +69,7 @@ public class CalculatorService : ICalculator
 }
 ```
 
-O exemplo usa uma variante do NET. TCP associação com segurança desativada e o compartilhamento de porta do TCP está habilitado. Se você quiser usar uma associação segura de TCP, altere o modo de segurança do servidor para a configuração desejada e execute novamente o Svcutil.exe no cliente para gerar um arquivo de configuração de cliente de atualização.
+O exemplo usa uma variante da Associação net. TCP com compartilhamento de porta TCP habilitada e segurança desativada. Se você quiser usar uma associação TCP segura, altere o modo de segurança do servidor para a configuração desejada e execute novamente svcutil. exe no cliente para gerar um arquivo de configuração de cliente de atualização.
 
 O exemplo a seguir mostra a configuração para o serviço:
 
@@ -109,7 +109,7 @@ O exemplo a seguir mostra a configuração para o serviço:
   </system.serviceModel>
 ```
 
-Ponto de extremidade do cliente é configurado como mostrado no código de exemplo a seguir:
+O ponto de extremidade do cliente é configurado conforme mostrado no código de exemplo a seguir:
 
 ```xml
 <system.serviceModel>
@@ -128,7 +128,7 @@ Ponto de extremidade do cliente é configurado como mostrado no código de exemp
 </system.serviceModel>
 ```
 
-Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.
+Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
 ```console
 Add(100,15.99) = 115.99
@@ -141,9 +141,9 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1. Certifique-se de que o IIS 7.0 é instalado. O IIS 7.0 é necessária para a ativação do WAS.
+1. Verifique se o IIS 7,0 está instalado. O IIS 7,0 é necessário para a ativação do WAS.
 
-2. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+2. Certifique-se de ter executado o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
     Além disso, você deve instalar os componentes de ativação não HTTP do WCF:
 
@@ -151,24 +151,24 @@ Press <ENTER> to terminate client.
 
     2. Selecione **programas e recursos**.
 
-    3. Clique em **ativar ou desativar a componentes do Windows**.
+    3. Clique em **Ativar ou desativar componentes do Windows**.
 
-    4. Expanda o **Microsoft .NET Framework 3.0** nó e verifique se o **ativação não HTTP do Windows Communication Foundation** recurso.
+    4. Expanda o nó **Microsoft .NET Framework 3,0** e verifique o Windows Communication Foundation recurso de **ativação não http** .
 
-3. Configure o WAS para dar suporte à ativação de TCP.
+3. Configurar o WAS para dar suporte à ativação de TCP.
 
-    Como uma conveniência, as duas etapas a seguir são implementadas em um arquivo em lotes chamado AddNetTcpSiteBinding.cmd localizado no diretório de exemplo.
+    Como uma conveniência, as duas etapas a seguir são implementadas em um arquivo em lotes chamado AddNetTcpSiteBinding. cmd localizado no diretório de exemplo.
 
-    1. Para dar suporte à ativação de NET. TCP, o site padrão primeiro deve ser associado a uma porta NET. TCP. Isso pode ser feito usando Appcmd.exe, que é instalado com o conjunto de ferramentas de gerenciamento do Internet Information Services 7.0 (IIS). Em um prompt de comando com nível de administrador, execute o seguinte comando:
+    1. Para dar suporte à ativação net. TCP, o site padrão deve primeiro ser associado a uma porta Net. TCP. Isso pode ser feito usando o Appcmd. exe, que é instalado com o conjunto de ferramentas de gerenciamento do Serviços de Informações da Internet 7,0 (IIS). Em um prompt de comando de nível de administrador, execute o seguinte comando:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']
         ```
 
         > [!TIP]
-        > Esse comando é uma única linha de texto. Este comando adiciona uma associação de site do NET. TCP para o site padrão escuta na porta TCP 808 com qualquer nome de host.
+        > Esse comando é uma única linha de texto. Esse comando adiciona uma associação de site net. TCP ao site padrão escutando na porta TCP 808 com qualquer nome de host.
 
-    2. Embora todos os aplicativos dentro de um site compartilham uma associação comum de NET. TCP, cada aplicativo pode habilitar o suporte do NET. TCP individualmente. Para habilitar o NET. TCP para o aplicativo /servicemodelsamples, execute o seguinte comando em um prompt de comando com nível de administrador:
+    2. Embora todos os aplicativos em um site compartilhem uma associação net. TCP comum, cada aplicativo pode habilitar o suporte a net. TCP individualmente. Para habilitar net. TCP para o aplicativo/servicemodelsamples, execute o seguinte comando em um prompt de comando de nível de administrador:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set app
@@ -176,17 +176,17 @@ Press <ENTER> to terminate client.
         ```
 
         > [!NOTE]
-        > Esse comando é uma única linha de texto. Este comando habilita o aplicativo /servicemodelsamples sejam acessados usando ambos `http://localhost/servicemodelsamples` e `net.tcp://localhost/servicemodelsamples`.
+        > Esse comando é uma única linha de texto. Esse comando permite que o aplicativo/servicemodelsamples seja acessado usando `http://localhost/servicemodelsamples` e `net.tcp://localhost/servicemodelsamples`.
 
-4. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+4. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
 
-5. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+5. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-    Remova a associação de site do NET. TCP que é adicionado para este exemplo.
+    Remova a associação de site net. TCP que você adicionou para este exemplo.
 
-    Como uma conveniência, as duas etapas a seguir são implementadas em um arquivo em lotes chamado RemoveNetTcpSiteBinding.cmd localizado no diretório de exemplo.
+    Como uma conveniência, as duas etapas a seguir são implementadas em um arquivo em lotes chamado RemoveNetTcpSiteBinding. cmd localizado no diretório de exemplo.
 
-    1. Remova NET. TCP da lista de protocolos habilitados, executando o seguinte comando em um prompt de comando com nível de administrador:
+    1. Remova net. TCP da lista de protocolos habilitados executando o seguinte comando de um prompt de comando de nível de administrador:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set app
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         > Esse comando deve ser inserido como uma única linha de texto.
 
-    2. Remova a associação do site NET. TCP, executando o seguinte comando em um prompt de comando com nível de administrador:
+    2. Remova a associação de site net. TCP executando o seguinte comando de um prompt de comando de nível de administrador:
 
         ```console
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"
@@ -208,4 +208,4 @@ Press <ENTER> to terminate client.
 
 ## <a name="see-also"></a>Consulte também
 
-- [Hospedagem de AppFabric e persistência exemplos](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [Exemplos de persistência e de hospedagem do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

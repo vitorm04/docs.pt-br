@@ -5,15 +5,15 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: 3a78612f679218711a81278184c16b04d6d6f802
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1342e50a5dca56260f832f5e0d684f4f79d355e2
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045672"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715998"
 ---
 # <a name="concurrency"></a>Concorrência
-O exemplo de simultaneidade demonstra <xref:System.ServiceModel.ServiceBehaviorAttribute> o uso <xref:System.ServiceModel.ConcurrencyMode> do com a enumeração, que controla se uma instância de um serviço processa as mensagens sequencialmente ou simultaneamente. O exemplo se baseia na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o contrato `ICalculator` de serviço. Este exemplo define um novo contrato, `ICalculatorConcurrency`, que é herdado do `ICalculator`, fornecendo duas operações adicionais para inspecionar o estado da simultaneidade do serviço. Alterando a configuração de simultaneidade, você pode observar a alteração no comportamento executando o cliente.  
+O exemplo de simultaneidade demonstra como usar o <xref:System.ServiceModel.ServiceBehaviorAttribute> com a enumeração <xref:System.ServiceModel.ConcurrencyMode>, que controla se uma instância de um serviço processa as mensagens sequencialmente ou simultaneamente. O exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa o contrato de serviço `ICalculator`. Este exemplo define um novo contrato, `ICalculatorConcurrency`, que herda de `ICalculator`, fornecendo duas operações adicionais para inspecionar o estado da simultaneidade do serviço. Alterando a configuração de simultaneidade, você pode observar a alteração no comportamento executando o cliente.  
   
  Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
   
@@ -22,15 +22,15 @@ O exemplo de simultaneidade demonstra <xref:System.ServiceModel.ServiceBehaviorA
   
  Há três modos de simultaneidade disponíveis:  
   
-- `Single`: Cada instância de serviço processa uma mensagem por vez. Este é o modo de simultaneidade padrão.  
+- `Single`: cada instância de serviço processa uma mensagem por vez. Este é o modo de simultaneidade padrão.  
   
-- `Multiple`: Cada instância de serviço processa várias mensagens simultaneamente. A implementação do serviço deve ser thread-safe para usar esse modo de simultaneidade.  
+- `Multiple`: cada instância de serviço processa várias mensagens simultaneamente. A implementação do serviço deve ser thread-safe para usar esse modo de simultaneidade.  
   
-- `Reentrant`: Cada instância de serviço processa uma mensagem por vez, mas aceita chamadas reentrantes. O serviço só aceita essas chamadas quando está chamando. Reentrante é demonstrado na amostra [ConcurrencyMode. reentrante](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) .  
+- `Reentrant`: cada instância de serviço processa uma mensagem por vez, mas aceita chamadas reentrantes. O serviço só aceita essas chamadas quando está chamando. Reentrante é demonstrado na amostra [ConcurrencyMode. reentrante](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md) .  
   
- O uso da simultaneidade está relacionado ao modo de instanciação. Em <xref:System.ServiceModel.InstanceContextMode.PerCall> instanciação, a simultaneidade não é relevante, pois cada mensagem é processada por uma nova instância de serviço. Em <xref:System.ServiceModel.InstanceContextMode.Single> instanciação <xref:System.ServiceModel.ConcurrencyMode.Single> , ou <xref:System.ServiceModel.ConcurrencyMode.Multiple> a simultaneidade é relevante, dependendo se a única instância processa as mensagens sequencialmente ou simultaneamente. Na <xref:System.ServiceModel.InstanceContextMode.PerSession> instanciação, qualquer um dos modos de simultaneidade pode ser relevante.  
+ O uso da simultaneidade está relacionado ao modo de instanciação. Em <xref:System.ServiceModel.InstanceContextMode.PerCall> instanciação, a simultaneidade não é relevante, pois cada mensagem é processada por uma nova instância de serviço. Em <xref:System.ServiceModel.InstanceContextMode.Single> instanciação, <xref:System.ServiceModel.ConcurrencyMode.Single> ou <xref:System.ServiceModel.ConcurrencyMode.Multiple> simultaneidade é relevante, dependendo se a única instância processa mensagens sequencialmente ou simultaneamente. Em <xref:System.ServiceModel.InstanceContextMode.PerSession> instanciação, qualquer um dos modos de simultaneidade pode ser relevante.  
   
- A classe de serviço especifica o comportamento de `[ServiceBehavior(ConcurrencyMode=<setting>)]` simultaneidade com o atributo, conforme mostrado no exemplo de código a seguir. Alterando quais linhas são comentadas, você pode experimentar os modos `Single` de `Multiple` simultaneidade e. Lembre-se de recompilar o serviço depois de alterar o modo de simultaneidade.  
+ A classe de serviço especifica o comportamento de simultaneidade com o atributo `[ServiceBehavior(ConcurrencyMode=<setting>)]`, conforme mostrado no exemplo de código a seguir. Alterando quais linhas são comentadas, você pode experimentar os modos de simultaneidade de `Single` e `Multiple`. Lembre-se de recompilar o serviço depois de alterar o modo de simultaneidade.  
   
 ```csharp
 // Single allows a single message to be processed sequentially by each service instance.  
@@ -89,15 +89,15 @@ public class CalculatorService : ICalculatorConcurrency
 }  
 ```  
   
- O exemplo usa <xref:System.ServiceModel.ConcurrencyMode.Multiple> a simultaneidade com <xref:System.ServiceModel.InstanceContextMode.Single> instanciação por padrão. O código do cliente foi modificado para usar um proxy assíncrono. Isso permite que o cliente faça várias chamadas para o serviço sem esperar uma resposta entre cada chamada. Você pode observar a diferença no comportamento do modo de simultaneidade do serviço.  
+ O exemplo usa <xref:System.ServiceModel.ConcurrencyMode.Multiple> simultaneidade com <xref:System.ServiceModel.InstanceContextMode.Single> instanciação por padrão. O código do cliente foi modificado para usar um proxy assíncrono. Isso permite que o cliente faça várias chamadas para o serviço sem esperar uma resposta entre cada chamada. Você pode observar a diferença no comportamento do modo de simultaneidade do serviço.  
   
- Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. O modo de simultaneidade em que o serviço está sendo executado é exibido, cada operação é chamada e, em seguida, a contagem de operações é exibida. Observe que, quando o modo de `Multiple`simultaneidade é, os resultados são retornados em uma ordem diferente da forma como eles foram chamados, pois o serviço processa várias mensagens simultaneamente. Ao alterar o modo de simultaneidade para `Single`, os resultados são retornados na ordem em que foram chamados, porque o serviço processa cada mensagem sequencialmente. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. O modo de simultaneidade em que o serviço está sendo executado é exibido, cada operação é chamada e, em seguida, a contagem de operações é exibida. Observe que, quando o modo de simultaneidade é `Multiple`, os resultados são retornados em uma ordem diferente daquela em que foram chamados, pois o serviço processa várias mensagens simultaneamente. Ao alterar o modo de simultaneidade para `Single`, os resultados são retornados na ordem em que foram chamados, pois o serviço processa cada mensagem sequencialmente. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
 1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
   
-2. Se você usar svcutil. exe para gerar o cliente proxy, certifique-se de incluir `/async` a opção.  
+2. Se você usar svcutil. exe para gerar o cliente proxy, certifique-se de incluir a opção `/async`.  
   
 3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
@@ -108,6 +108,6 @@ public class CalculatorService : ICalculatorConcurrency
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  

@@ -2,12 +2,12 @@
 title: 'Codificador de mensagem personalizada: codificador de texto personalizado-WCF'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 3d421aa40488deac487418b5ecc83c5dd420fdf4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 17ad1f2ab557c470a39ab5fff6c1c52d5e41a2a5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716832"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Codificador personalizado de mensagem: codificador personalizado de texto
 
@@ -18,7 +18,7 @@ Este exemplo demonstra como implementar um codificador de mensagem de texto pers
 > 
 > `<InstallDrive>:\WF_WCF_Samples`
 > 
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`
 

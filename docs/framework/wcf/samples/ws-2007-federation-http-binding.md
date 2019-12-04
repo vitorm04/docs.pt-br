@@ -2,12 +2,12 @@
 title: Associação HTTP de federação do WS 2007
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: ad56665b5b6648fb93a9f31f18167a964b4cba92
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834649"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714980"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Associação HTTP de federação do WS 2007
 
@@ -37,7 +37,7 @@ O exemplo torna o contrato de `ICalculator` disponível usando o elemento `ws200
 </bindings>
 ```
 
-No [> de segurança\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md), o valor `security` especifica qual modo de segurança deve ser usado. Neste exemplo, `message` segurança é usada, motivo pelo qual a [\<de mensagem >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) é especificada dentro do [> de segurança\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). O elemento [\<emissor >](../../configure-apps/file-schema/wcf/issuer.md) dentro da [mensagem de\<>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) especifica o endereço e a associação para o STS que emite um token de segurança para o cliente para que o cliente possa se autenticar no serviço `ICalculator`.
+No [> de segurança\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md), o valor `security` especifica qual modo de segurança deve ser usado. Neste exemplo, `message` segurança é usada, motivo pelo qual a [\<de mensagem >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) é especificada dentro do [> de segurança\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). O elemento [\<emissor >](../../configure-apps/file-schema/wcf/issuer.md) dentro da [mensagem de\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) especifica o endereço e a associação para o STS que emite um token de segurança para o cliente para que o cliente possa se autenticar no serviço `ICalculator`.
   
 A configuração dessa associação no serviço é mostrada no código a seguir:
 
@@ -64,7 +64,7 @@ A configuração dessa associação no serviço é mostrada no código a seguir:
 </bindings>
 ```
 
-No [> de segurança\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md), o valor `security` especifica qual modo de segurança deve ser usado. Neste exemplo, `message` segurança é usada, motivo pelo qual a [\<de mensagem >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) é especificada dentro do [> de segurança\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). O elemento [\<issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) de `ws2007FederationHttpBinding` dentro da [mensagem\<>](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) especifica o endereço e a identidade de um ponto de extremidade que pode ser usado para recuperar metadados para o STS.
+No [> de segurança\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md), o valor `security` especifica qual modo de segurança deve ser usado. Neste exemplo, `message` segurança é usada, motivo pelo qual a [\<de mensagem >](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) é especificada dentro do [> de segurança\<](../../configure-apps/file-schema/wcf/security-element-of-ws2007federationhttpbinding.md). O elemento [\<issuerMetadata >](../../configure-apps/file-schema/wcf/issuermetadata.md) de `ws2007FederationHttpBinding` dentro da [mensagem\<](../../configure-apps/file-schema/wcf/message-element-of-ws2007federationhttpbinding.md) especifica o endereço e a identidade de um ponto de extremidade que pode ser usado para recuperar metadados para o STS.
 
 O comportamento do serviço é mostrado no código a seguir:
 
@@ -126,6 +126,6 @@ O arquivo *Setup. bat* incluído com este exemplo permite que você configure o 
 > 
 > `<InstallDrive>:\WF_WCF_Samples`
 > 
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está no seguinte diretório:
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está no seguinte diretório:
 > 
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\WS2007FederationHttp`

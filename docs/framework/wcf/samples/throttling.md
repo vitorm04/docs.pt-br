@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: b19e58222248e7ce5abddb118ec00ff3e17e9963
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 14d16a644aa89d5da9ec1adcbdef48367ddc1205
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044668"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715689"
 ---
 # <a name="throttling"></a>Limitação
 O exemplo de limitação demonstra o uso de controles de limitação. Os controles de limitação colocam limites no número de chamadas simultâneas, instâncias ou sessões para evitar a sobrecarga de consumo de recursos. O comportamento de limitação é especificado nas configurações do arquivo de configuração de serviço. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa um serviço de calculadora.  
@@ -20,7 +20,7 @@ O exemplo de limitação demonstra o uso de controles de limitação. Os control
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O arquivo de configuração de serviço especifica controles de limitação em um [ \<>](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)de serviços, conforme mostrado na seguinte configuração de exemplo.  
+ O arquivo de configuração de serviço especifica controles de limitação em um [> de\<](../../../../docs/framework/configure-apps/file-schema/wcf/servicethrottling.md)de serviços de manutenção, conforme mostrado na seguinte configuração de exemplo.  
   
 ```xml  
 <behaviors>  
@@ -78,6 +78,6 @@ Press any key to continue . . .
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Throttling`  

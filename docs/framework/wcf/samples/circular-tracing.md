@@ -2,12 +2,12 @@
 title: Rastreamento circular
 ms.date: 03/30/2017
 ms.assetid: 5ff139f9-8806-47bc-8f33-47fe6c436b92
-ms.openlocfilehash: ad3e4acca7e4bce24c839e71381bf321365a4b2e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0778a25c75ae48c2215625f40b08a1e3815ba81
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045686"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716000"
 ---
 # <a name="circular-tracing"></a>Rastreamento circular
 
@@ -22,11 +22,11 @@ Este exemplo pressupõe que você esteja familiarizado com o [rastreamento e](..
 
 O conceito por trás da implementação do ouvinte de rastreamento de buffer circular é ter dois arquivos que podem armazenar até metade do total de dados de log de rastreamento desejado. O ouvinte cria um arquivo e grava nesse arquivo até atingir o limite de metade do tamanho dos dados, em que ponto ele alterna para um segundo arquivo. Quando o ouvinte atinge o limite do segundo arquivo, ele substitui o primeiro arquivo por novos rastreamentos.
 
-Esse ouvinte deriva de `XmlWriteTraceListener` e permite que os logs sejam exibidos com a ferramenta do Visualizador de rastreamento de [serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ao tentar exibir os logs, os dois arquivos de log podem ser facilmente recombinados abrindo-se ambos os arquivos de log ao mesmo tempo na ferramenta do Visualizador de rastreamento de serviço. A ferramenta Visualizador de rastreamento de serviço cuida automaticamente da classificação dos rastreamentos para que eles apareçam na ordem correta.
+Esse ouvinte deriva da `XmlWriteTraceListener` e permite que os logs sejam exibidos com a [ferramenta do Visualizador de rastreamento de serviço (SvcTraceViewer. exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md). Ao tentar exibir os logs, os dois arquivos de log podem ser facilmente recombinados abrindo-se ambos os arquivos de log ao mesmo tempo na ferramenta do Visualizador de rastreamento de serviço. A ferramenta Visualizador de rastreamento de serviço cuida automaticamente da classificação dos rastreamentos para que eles apareçam na ordem correta.
 
-## <a name="configuration"></a>Configuração
+## <a name="configuration"></a>Configuração do
 
-Um serviço pode ser configurado para usar o ouvinte de rastreamento de buffer circular adicionando o código a seguir para um ouvinte e elementos de origem. O tamanho máximo do arquivo é especificado definindo o `maxFileSizeKB` atributo na configuração do ouvinte de rastreamento circular. Isso é demonstrado no código a seguir.
+Um serviço pode ser configurado para usar o ouvinte de rastreamento de buffer circular adicionando o código a seguir para um ouvinte e elementos de origem. O tamanho máximo do arquivo é especificado definindo o atributo `maxFileSizeKB` na configuração do ouvinte de rastreamento circular. Isso é demonstrado no código a seguir.
 
 ```xml
 <system.diagnostics>
@@ -58,7 +58,7 @@ Um serviço pode ser configurado para usar o ouvinte de rastreamento de buffer c
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`
 

@@ -2,12 +2,12 @@
 title: Exemplo de extensões fortemente tipadas
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 8dc6bca87989b1ee8e1ee440b0d64e2c196cc28f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ad0a8e10ecbcb5e3ddf9106dbbaa55356314020
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978232"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716616"
 ---
 # <a name="strongly-typed-extensions-sample"></a>Exemplo de extensões fortemente tipadas
 O exemplo usa a classe <xref:System.ServiceModel.Syndication.SyndicationFeed> para os fins do exemplo. No entanto, os padrões demonstrados neste exemplo podem ser usados com todas as classes de distribuição que dão suporte a dados de extensão.  
@@ -144,7 +144,7 @@ public void ReadXml(System.Xml.XmlReader reader)
 }  
 ```  
   
- Em `WriteXml`, o método `InReplyToElement` primeiro escreve os valores das propriedades `Ref`, `HRef`, `Source`e `MediaType` como atributos XML (`WriteXml` não é responsável por gravar o próprio elemento externo propriamente dito , como isso é feito pelo chamador de `WriteXml`). Ele também grava o conteúdo do <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> ao gravador, conforme mostrado no código a seguir.  
+ Em `WriteXml`, o método `InReplyToElement` primeiro escreve os valores das propriedades `Ref`, `HRef`, `Source`e `MediaType` como atributos XML (`WriteXml` não é responsável por escrever o próprio elemento externo real, como feito pelo chamador de `WriteXml`). Ele também grava o conteúdo do <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> e <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> ao gravador, conforme mostrado no código a seguir.  
   
 ```csharp
 public void WriteXml(System.Xml.XmlWriter writer)  
@@ -283,6 +283,6 @@ public class ThreadedItem : SyndicationItem
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

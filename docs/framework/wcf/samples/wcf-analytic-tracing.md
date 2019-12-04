@@ -2,40 +2,40 @@
 title: Rastreamento analítico do WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: ba4f1778059f7b960eebd42822048fa031e6961e
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 52a6787f6c7d309b1ae3a932780e4dbcb2ec0792
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044542"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715298"
 ---
 # <a name="wcf-analytic-tracing"></a>Rastreamento analítico do WCF
-Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que Windows Communication Foundation (WCF) grava no ETW [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]no. Os rastreamentos analíticos destinam-se a facilitar a visibilidade de seus serviços sem pagar uma penalidade de alto desempenho. Este exemplo mostra como usar as <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> APIs para gravar eventos que se integram aos serviços WCF.  
+Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no fluxo de rastreamentos analíticos que Windows Communication Foundation (WCF) grava no ETW no [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Os rastreamentos analíticos destinam-se a facilitar a visibilidade de seus serviços sem pagar uma penalidade de alto desempenho. Este exemplo mostra como usar as APIs de <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> para gravar eventos que se integram aos serviços WCF.  
   
- Para obter mais informações sobre <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> as APIs, <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>consulte.  
+ Para obter mais informações sobre as APIs de <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>, consulte <xref:System.Diagnostics.Eventing?displayProperty=nameWithType>.  
   
  Para saber mais sobre o rastreamento de eventos no Windows, consulte [melhorar a depuração e o ajuste de desempenho com o ETW](https://go.microsoft.com/fwlink/?LinkId=166488).  
   
 ## <a name="disposing-eventprovider"></a>Descartando EventProvider  
- Este exemplo usa a <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType> classe, que implementa <xref:System.IDisposable?displayProperty=nameWithType>. Ao implementar o rastreamento para um serviço WCF, é provável que você possa usar os <xref:System.Diagnostics.Eventing.EventProvider>recursos do tempo de vida do serviço. Por esse motivo, e para facilitar a leitura, esse exemplo nunca descarta o encapsulado <xref:System.Diagnostics.Eventing.EventProvider>. Se, por algum motivo, seu serviço tiver requisitos diferentes para rastreamento e você precisar descartar esse recurso, você deverá modificar esse exemplo de acordo com as práticas recomendadas para descartar recursos não gerenciados. Para obter mais informações sobre como descartar recursos não gerenciados, consulte [implementando um método Dispose](https://go.microsoft.com/fwlink/?LinkId=166436).  
+ Este exemplo usa a classe <xref:System.Diagnostics.Eventing.EventProvider?displayProperty=nameWithType>, que implementa <xref:System.IDisposable?displayProperty=nameWithType>. Ao implementar o rastreamento para um serviço WCF, é provável que você possa usar os recursos do <xref:System.Diagnostics.Eventing.EventProvider>durante o tempo de vida do serviço. Por esse motivo, e para facilitar a leitura, esse exemplo nunca descarta o <xref:System.Diagnostics.Eventing.EventProvider>encapsulado. Se, por algum motivo, seu serviço tiver requisitos diferentes para rastreamento e você precisar descartar esse recurso, você deverá modificar esse exemplo de acordo com as práticas recomendadas para descartar recursos não gerenciados. Para obter mais informações sobre como descartar recursos não gerenciados, consulte [implementando um método Dispose](https://go.microsoft.com/fwlink/?LinkId=166436).  
   
-## <a name="self-hosting-vs-web-hosting"></a>Hospedagem interna vs. Hospedagem na Web  
+## <a name="self-hosting-vs-web-hosting"></a>Hospedagem interna versus hospedagem na Web  
  Para serviços hospedados na Web, os rastreamentos analíticos do WCF fornecem um campo, chamado "HostReference", que é usado para identificar o serviço que está emitindo os rastreamentos. Os rastreamentos extensível de usuário podem participar desse modelo e este exemplo demonstra as práticas recomendadas para fazer isso. O formato de uma referência de host Web quando o caractere&#124;do pipe ' ' realmente aparece na cadeia de caracteres resultante pode ser qualquer um dos seguintes:  
   
 - Se o aplicativo não estiver na raiz.  
   
-     \<SiteName>\<ApplicationVirtualPath>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
+     \<SiteName >\<ApplicationVirtualPath >&#124;\<o > do&#124; Service VirtualPath\<  
   
 - Se o aplicativo estiver na raiz.  
   
-     \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
+     \<SiteName >&#124;\<o objectvirtualpath&#124; >\<ServiceName >  
   
- Para serviços hospedados internamente, os rastreamentos analíticos do WCF não preenchem o campo "HostReference". A `WCFUserEventProvider` classe neste exemplo se comporta de forma consistente quando usada por um serviço hospedado internamente.  
+ Para serviços hospedados internamente, os rastreamentos analíticos do WCF não preenchem o campo "HostReference". A classe `WCFUserEventProvider` neste exemplo se comporta de forma consistente quando usada por um serviço hospedado internamente.  
   
 ## <a name="custom-event-details"></a>Detalhes do evento personalizado  
  O manifesto do provedor de eventos do ETW do WCF define três eventos que são criados para serem emitidos por autores de serviço do WCF de dentro do código de serviço. A tabela a seguir mostra uma divisão dos três eventos.  
   
-|evento|Descrição|ID do evento|  
+|Event|Descrição|ID do evento|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Emita esse evento quando algo de observação acontecer em seu serviço que não é um problema. Por exemplo, você pode emitir um evento depois de fazer uma chamada com êxito para um banco de dados.|301|  
 |UserDefinedWarningOccurred|Emita esse evento quando ocorrer um problema que possa resultar em uma falha no futuro. Por exemplo, você pode emitir um evento de aviso quando uma chamada a um banco de dados falha, mas você conseguiu recuperar-se voltando a um armazenamento de dados redundante.|302|  
@@ -53,7 +53,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
 4. Execute o cliente de teste do WCF (WcfTestClient. exe).  
   
-     O cliente de teste do WCF (WcfTestClient. exe) está `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`localizado em. O dir de instalação padrão do Visual Studio `C:\Program Files\Microsoft Visual Studio 10.0`2012 é.  
+     O cliente de teste do WCF (WcfTestClient. exe) está localizado em `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. O diretório de instalação padrão do Visual Studio 2012 é `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
 5. No cliente de teste do WCF, adicione o serviço selecionando **arquivo**e, em seguida, **Adicionar serviço**.  
   
@@ -67,7 +67,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
      Antes de invocar o serviço, inicie Visualizador de Eventos e verifique se o log de eventos está escutando eventos emitidos do serviço WCF.  
   
-8. No menu **Iniciar** , selecione **Ferramentas administrativas**e, em seguida, **Visualizador de eventos**. Habilite os logs analíticos e de **depuração** .  
+8. No menu **Iniciar** , selecione **Ferramentas administrativas**e, em seguida, **Visualizador de eventos**. Habilite os logs **analíticos** e de **depuração** .  
   
 9. No modo de exibição de árvore no Visualizador de Eventos, navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**e, em seguida, **servidor de aplicativos-aplicativos**. Clique com o botão direito do mouse em **servidor de aplicativos**, selecione **Exibir**e, em seguida, **Mostrar logs analíticos e de depuração**.  
   
@@ -83,7 +83,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
     2. Digite 2 para o primeiro parâmetro e 3 para o segundo parâmetro.  
   
-    3. Clique em invocar para invocar o método.  
+    3. Clique em **invocar** para invocar o método.  
   
 11. Vá para a janela de **Visualizador de eventos** que você já abriu. Navegue até **Visualizador de eventos**, **logs de aplicativos e serviços**, **Microsoft**, **Windows**, **servidor de aplicativos-aplicativos**.  
   
@@ -93,7 +93,7 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
   
 13. Localize o evento com a ID 303 e clique duas vezes nele para abri-lo e inspecionar seu conteúdo.  
   
-     Esse evento foi emitido pelo `Add()` método do serviço ICalculator e tem uma carga igual a "2 + 3 = 5".  
+     Esse evento foi emitido pelo método `Add()` do serviço ICalculator e tem uma carga igual a "2 + 3 = 5".  
   
 #### <a name="to-clean-up-optional"></a>Para limpar (opcional)  
   
@@ -106,14 +106,14 @@ Este exemplo demonstra como adicionar seus próprios eventos de rastreamento no 
 4. Clique em **limpar** para limpar os eventos.  
   
 ## <a name="known-issue"></a>Problema conhecido  
- Há um problema conhecido no **Visualizador de eventos** em que pode falhar ao decodificar eventos ETW. Você pode ver uma mensagem de erro que diz: "A descrição para a ID \<de ID de evento > da origem Microsoft-Windows-Application Server – Applications não pode ser encontrada. Qualquer o componente que gerencie esse evento não é instalado em seu computador local ou na instalação for danificado. Você pode instalar ou reparar o componente no computador local. " Se você encontrar esse erro, selecione **Atualizar** no menu **ações** . O evento deve então ser decodificado corretamente.  
+ Há um problema conhecido no **Visualizador de eventos** em que pode falhar ao decodificar eventos ETW. Você pode ver uma mensagem de erro que diz: "a descrição para a ID do evento \<ID > da origem Microsoft-Windows-Application Server-aplicativos não podem ser encontrados. Qualquer o componente que gerencie esse evento não é instalado em seu computador local ou na instalação for danificado. Você pode instalar ou reparar o componente no computador local. " Se você encontrar esse erro, selecione **Atualizar** no menu **ações** . O evento deve então ser decodificado corretamente.  
   
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\ETWTrace`  
   

@@ -2,30 +2,30 @@
 title: 'Tarefa 2: Hospedar Designer de Fluxo de Trabalho'
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 15657ad79632812d3802e4da22b9ef297d08f932
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: 8e4c17ed182cec7748b9a1f11f76ff90aa60c39e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180258"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715786"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>Tarefa 2: Hospedar Designer de Fluxo de Trabalho
 
-Este tópico descreve o procedimento para hospedar uma instância do [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] em um aplicativo do Windows Presentation Foundation (WPF).
+Este tópico descreve o procedimento para hospedar uma instância do Designer de Fluxo de Trabalho do Windows em um aplicativo do Windows Presentation Foundation (WPF).
 
-O procedimento configura o controle de **grade** que contém o designer, cria programaticamente uma instância do <xref:System.Activities.Presentation.WorkflowDesigner> que contém uma atividade de <xref:System.Activities.Statements.Sequence> padrão, registra os metadados do designer para fornecer suporte ao designer para todas as atividades internas e hospeda o [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] no aplicativo WPF.
+O procedimento configura o controle de **grade** que contém o designer, cria programaticamente uma instância do <xref:System.Activities.Presentation.WorkflowDesigner> que contém uma atividade de <xref:System.Activities.Statements.Sequence> padrão, registra os metadados do designer para fornecer suporte ao designer para todas as atividades internas e hospeda o designer de fluxo de trabalho no aplicativo WPF.
 
 ## <a name="to-host-the-workflow-designer"></a>Para hospedar o designer de fluxo de trabalho
 
 1. Abra o projeto HostingApplication que você criou na [tarefa 1: criar um novo aplicativo Windows Presentation Foundation](task-1-create-a-new-wpf-app.md).
 
-2. Ajuste o tamanho da janela para facilitar usar [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para fazer isso, selecione **MainWindow** no designer, pressione F4 para exibir a janela **Propriedades** e, na seção **layout** , defina a **largura** como um valor de 600 e a **altura** como um valor de 350.
+2. Ajuste o tamanho da janela para facilitar o uso do Designer de Fluxo de Trabalho. Para fazer isso, selecione **MainWindow** no designer, pressione F4 para exibir a janela **Propriedades** e, na seção **layout** , defina a **largura** como um valor de 600 e a **altura** como um valor de 350.
 
 3. Defina o nome da grade selecionando o painel de **grade** no designer (clique na caixa dentro de **MainWindow**) e definindo a propriedade **Name** na parte superior da janela **Properties** como "grid1".
 
 4. Na janela **Propriedades** , clique nas reticências ( **...** ) ao lado da propriedade `ColumnDefinitions` para abrir a caixa de diálogo **Editor de coleção** .
 
-5. Na caixa de diálogo **Editor de coleção** , clique no botão **Adicionar** três vezes para inserir três colunas no layout. A primeira coluna conterá a **caixa de ferramentas**, a segunda coluna hospedará o [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]e a terceira coluna será usada para o Inspetor de propriedades.
+5. Na caixa de diálogo **Editor de coleção** , clique no botão **Adicionar** três vezes para inserir três colunas no layout. A primeira coluna conterá a **caixa de ferramentas**, a segunda coluna hospedará o designer de fluxo de trabalho e a terceira coluna será usada para o Inspetor de propriedades.
 
 6. Defina a propriedade `Width` da coluna do meio como o valor "4 *".
 
@@ -88,7 +88,7 @@ O procedimento configura o controle de **grade** que contém o designer, cria pr
         }
         ```
 
-    4. Registrar os metadados de designer para adicionar suporte do designer para todas as atividades internos. Isso permite que você soltar atividades da caixa de ferramentas para a atividade original de <xref:System.Activities.Statements.Sequence> em [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]. Para fazer isso, adicione o método `RegisterMetadata` à classe `MainWindow`:
+    4. Registrar os metadados de designer para adicionar suporte do designer para todas as atividades internos. Isso permite que você remova atividades da caixa de ferramentas para a atividade de <xref:System.Activities.Statements.Sequence> original no Designer de Fluxo de Trabalho. Para fazer isso, adicione o método `RegisterMetadata` à classe `MainWindow`:
 
         ```csharp
         private void RegisterMetadata()

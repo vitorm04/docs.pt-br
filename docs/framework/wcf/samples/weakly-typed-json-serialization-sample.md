@@ -2,12 +2,12 @@
 title: Weakly-typed JSON Serialization Sample
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 1450a0e46ade615769d7ffdc1006102772dbc977
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 8893c466b347b97a7845234a8182af7ca7feba83
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424535"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715040"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>Weakly-typed JSON Serialization Sample
 Ao serializar um tipo definido pelo usuário para um determinado formato de conexão ou desserializar um formato de conexão de volta para um tipo definido pelo usuário, o tipo definido pelo usuário fornecido deve estar disponível no serviço e no cliente. Normalmente, para fazer isso, o atributo <xref:System.Runtime.Serialization.DataContractAttribute> é aplicado a esses tipos definidos pelo usuário e o atributo <xref:System.Runtime.Serialization.DataMemberAttribute> é aplicado aos seus membros. Esse mecanismo também se aplica ao trabalhar com objetos JavaScript Object Notation (JSON), conforme descrito no tópico [como serializar e desserializar dados JSON](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md).  
@@ -136,6 +136,6 @@ My favorite bands are Band ABC and Band XYZ.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  

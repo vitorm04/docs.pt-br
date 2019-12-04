@@ -2,12 +2,12 @@
 title: Solicitação-resposta não tipada
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: 132ae05236b23ff5bb0cce67d66d26d308cce305
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: ba1caddd8f37a37df63e2710883f3096e0989fcd
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038678"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715860"
 ---
 # <a name="untyped-requestreply"></a>Solicitações/Respostas não digitadas
 Este exemplo demonstra como definir contratos de operação que usam a classe Message.  
@@ -43,7 +43,7 @@ public Message ComputeSum(Message request)
 }  
 ```  
   
- O cliente usa o código gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para criar um proxy para o serviço remoto. Para enviar uma mensagem de solicitação, o cliente deve ter a versão da mensagem, que depende do canal subjacente. Portanto, ele cria um novo <xref:System.ServiceModel.OperationContextScope> escopo para o canal de proxy que ele criou, que cria <xref:System.ServiceModel.OperationContext> um com a versão de mensagem correta populada em sua `OutgoingMessageHeaders.MessageVersion` propriedade. O cliente passa uma matriz de entrada como o corpo para a mensagem de solicitação e, em `ComputeSum` seguida, invoca o no proxy. Em seguida, o cliente recupera a soma das entradas passadas acessando o `GetBody<T>` método na mensagem de resposta. O código de exemplo a seguir demonstra isso.  
+ O cliente usa o código gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para criar um proxy para o serviço remoto. Para enviar uma mensagem de solicitação, o cliente deve ter a versão da mensagem, que depende do canal subjacente. Portanto, ele cria um novo <xref:System.ServiceModel.OperationContextScope> com escopo definido para o canal de proxy criado, que cria um <xref:System.ServiceModel.OperationContext> com a versão de mensagem correta populada em sua propriedade `OutgoingMessageHeaders.MessageVersion`. O cliente passa uma matriz de entrada como o corpo para a mensagem de solicitação e, em seguida, invoca o `ComputeSum` no proxy. Em seguida, o cliente recupera a soma das entradas passadas acessando o método `GetBody<T>` na mensagem de resposta. O código de exemplo a seguir demonstra isso.  
   
 ```csharp
 using (new OperationContextScope(client.InnerChannel))  
@@ -85,6 +85,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  

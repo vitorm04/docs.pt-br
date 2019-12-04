@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: afc6679b6ca9ba8991ff928b664552e02f494c6a
-ms.sourcegitcommit: 121ab70c1ebedba41d276e436dd2b1502748a49f
+ms.openlocfilehash: bb1cd02a60ec0ba62e1d0d9aa3560bbba0aaf668
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2019
-ms.locfileid: "70016059"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714533"
 ---
 # <a name="xmlreader-sample"></a>Exemplo de XmlReader
 
-O exemplo de XmlReader demonstra o processamento de um corpo de mensagem <xref:System.Xml.XmlReader>usando um. O exemplo se baseia na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa um serviço de calculadora. Uma operação de serviço adicional `Sum`,, foi adicionada que aceita uma mensagem que contém uma matriz de valores para adicionar juntos. O serviço lê a mensagem usando um <xref:System.Xml.XmlReader>.
+O exemplo XmlReader demonstra o processamento de um corpo de mensagem usando um <xref:System.Xml.XmlReader>. O exemplo se baseia na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), que implementa um serviço de calculadora. Uma operação de serviço adicional, `Sum`, foi adicionada que aceita uma mensagem que contém uma matriz de valores para adicionar juntos. O serviço lê a mensagem usando uma <xref:System.Xml.XmlReader>.
 
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
-A interface da calculadora inclui uma operação de `Sum` serviço chamada que <xref:System.ServiceModel.Channels.Message> aceita um parâmetro, conforme mostrado no código de exemplo a seguir.
+A interface da calculadora inclui uma operação de serviço chamada `Sum` que aceita um parâmetro <xref:System.ServiceModel.Channels.Message>, conforme mostrado no código de exemplo a seguir.
 
 ```csharp
 public interface ICalculator
@@ -36,7 +36,7 @@ public interface ICalculator
 }
 ```
 
-O cliente acessa `Sum` primeiramente criando uma matriz de valores inteiros, criando uma mensagem da matriz e, em seguida, chamando o `Sum` método usando a mensagem criada, conforme mostrado no código de exemplo a seguir.
+O cliente acessa `Sum` primeiro criando uma matriz de valores inteiros, criando uma mensagem da matriz e, em seguida, chamando o método `Sum` usando a mensagem criada, conforme mostrado no código de exemplo a seguir.
 
 ```csharp
 CalculatorClient client = new CalculatorClient();
@@ -54,7 +54,7 @@ using (new OperationContextScope(client.InnerChannel))
 }
 ```
 
-No serviço, a implementação da operação `Sum` de serviço acessa o corpo da mensagem usando um <xref:System.Xml.XmlReader> objeto para iterar pelos valores a serem somados. O <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> método é chamado para acessar o corpo da mensagem, conforme mostrado no código de exemplo a seguir.
+No serviço, a implementação da operação de serviço `Sum` acessa o corpo da mensagem usando um objeto <xref:System.Xml.XmlReader> para iterar pelos valores a serem somados. O método <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> é chamado para acessar o corpo da mensagem, conforme mostrado no código de exemplo a seguir.
 
 ```csharp
 public int Sum(Message message)
@@ -106,6 +106,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`

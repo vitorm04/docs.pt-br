@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 99f522181232d16b9913ba3c55f34274b75d8966
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7d09e1283be8ec75df89957e91f0d8411c125b3b
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449407"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714456"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Ferramenta de Geração e Edição de Manifesto, cliente gráfico)
 
-MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de comando Mage.exe, mas com uma interface do usuário (UI) com base no Windows. Com essa ferramenta é possível criar, editar e assinar manifestos de implantação e aplicativo. Novos manifestos criados com MageUI.exe têm o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. As versões anteriores de MageUI.exe devem ser usadas para segmentar versões do .NET Framework anteriores. Adicionando ou removendo assemblies de um manifesto ou assinando novamente manifestos existente, MageUI.exe não atualiza o manifesto com o [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)] como destino. Para obter mais informações, consulte [Mage.exe (Manifest Generation and Editing Tool)](mage-exe-manifest-generation-and-editing-tool.md).
+MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de comando Mage.exe, mas com uma interface do usuário (UI) com base no Windows. Com essa ferramenta é possível criar, editar e assinar manifestos de implantação e aplicativo. Novos manifestos criados com MageUI. exe têm como destino o perfil de cliente .NET Framework 4. As versões anteriores de MageUI.exe devem ser usadas para segmentar versões do .NET Framework anteriores. Ao adicionar ou remover assemblies de um manifesto ou assinar novamente manifestos existentes, o MageUI. exe não atualiza o manifesto para o destino .NET Framework 4 perfil de cliente. Para obter mais informações, consulte [Mage.exe (Manifest Generation and Editing Tool)](mage-exe-manifest-generation-and-editing-tool.md).
 
  Essa ferramenta é instalada automaticamente com o Visual Studio. Para executar a ferramenta, use o Prompt de Comando do Desenvolvedor para Visual Studio (ou o Prompt de Comando do Visual Studio no Windows 7). Para obter mais informações, consulte [Prompts de Comando](developer-command-prompt-for-vs.md).
 
@@ -26,7 +26,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 ## <a name="uielement-list"></a>Lista de UIElement  
  A tabela a seguir lista os itens de menu e da barra de ferramentas disponíveis.  
   
-|Command|Menu|Atalho|Descrição|  
+|{1&gt;Comando&lt;1}|Menu|Atalho|Descrição|  
 |-------------|----------|--------------|-----------------|  
 |**Manifesto do Aplicativo**|**Arquivo, Novo**||Cria um novo manifesto de aplicativo.|  
 |**Manifesto de Implantação**|**Arquivo, Novo**||Cria um novo manifesto de implantação.|  
@@ -36,7 +36,7 @@ MageUI.exe dá suporte à mesma funcionalidade que a ferramenta de linha de coma
 |**Salvar Como**|**Arquivo**||Salva um arquivo em disco, permitindo para fornecer um novo nome de arquivo e/ou um local.|  
 |**Salvar Tudo**|**Arquivo**||Salva as alterações feitas em todos os arquivos abertos atualmente dentro de MageUI.exe.|  
 |**Preferências**|**Arquivo**||Abre a caixa de diálogo **Preferências**. Consulte a seguinte seção para obter mais informações.|  
-|**Sair**|**Arquivo**|ALT+F4|Fecha MageUI.exe.|  
+|**Exit**|**Arquivo**|ALT+F4|Fecha MageUI.exe.|  
 |**Recortar**|**Editarar**|CTRL+X|Remove o texto selecionado no momento do aplicativo e o move para a Área de Transferência do sistema.|  
 |**Copiar**|**Editarar**|CTRL+C|Copia o texto selecionado no momento para a Área de Transferência do sistema.|  
 |**Colar**|**Editarar**|CTRL+V|Cola o texto da Área de Transferência do sistema para o elemento de texto ativo no momento.|  

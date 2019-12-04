@@ -2,12 +2,12 @@
 title: Segurança de mensagem através do enfileiramento de mensagem
 ms.date: 03/30/2017
 ms.assetid: 329aea9c-fa80-45c0-b2b9-e37fd7b85b38
-ms.openlocfilehash: d27ee01636e37ac8f09c4f7dc497f14bfac1b0f1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 03f4bd3f580163868920622a74ae4f34d7a1a97a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424118"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714797"
 ---
 # <a name="message-security-over-message-queuing"></a>Segurança de mensagem através do enfileiramento de mensagem
 Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com autenticação de certificado X. 509v3 para o cliente e requer autenticação de servidor usando o certificado X. 509v3 do servidor no MSMQ. Às vezes, a segurança de mensagem é mais desejável garantir que as mensagens no armazenamento MSMQ permaneçam criptografadas e o aplicativo possa executar sua própria autenticação da mensagem.
@@ -82,7 +82,7 @@ Este exemplo demonstra como implementar um aplicativo que usa o WS-Security com 
     > [!NOTE]
     > Esse script não remove certificados de serviço em um cliente ao executar esse exemplo em computadores. Se você tiver executado Windows Communication Foundation (WCF) exemplos que usam certificados entre computadores, certifique-se de limpar os certificados de serviço que foram instalados no repositório CurrentUser-TrustedPeople. Para fazer isso, use o seguinte comando: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` por exemplo: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
  Este exemplo requer que o MSMQ esteja instalado e em execução.
 
 ## <a name="demonstrates"></a>Demonstra
@@ -285,7 +285,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
         Order status: Pending
 ```
 
-## <a name="comments"></a>Comentários
+## <a name="comments"></a>Comments
 
 - Criando o certificado do cliente.
 
@@ -323,7 +323,7 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
-     A variável% SERVER_NAME% especifica o nome do servidor. O certificado é armazenado no armazenamento LocalMachine. Se o arquivo em lotes de instalação for executado com um argumento de serviço (por exemplo, `setup.bat service`), o% SERVER_NAME% conterá o nome de domínio totalmente qualificado do computador. Caso contrário, o padrão é localhost
+     A variável% SERVER_NAME% especifica o nome do servidor. O certificado é armazenado no armazenamento LocalMachine. Se o arquivo em lotes de instalação for executado com um argumento de serviço (por exemplo, `setup.bat service`),% SERVER_NAME% conterá o nome de domínio totalmente qualificado do computador. Caso contrário, o padrão é localhost
 
 - Instalando o certificado do servidor no repositório de certificados confiáveis do cliente.
 
@@ -341,6 +341,6 @@ Processing Purchase Order: 6536e097-da96-4773-9da3-77bab4345b5d
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\MessageSecurity`  

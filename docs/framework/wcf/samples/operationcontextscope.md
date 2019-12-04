@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 08f712167b502885486be3ce4398603339623415
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 581f75ece1a601b3baf590c1923a17a353de1ff1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70039016"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714617"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 O exemplo OperationContextScope demonstra como enviar informações extras em uma chamada de Windows Communication Foundation (WCF) usando cabeçalhos. Neste exemplo, o servidor e o cliente são aplicativos de console.  
@@ -15,10 +15,10 @@ O exemplo OperationContextScope demonstra como enviar informações extras em um
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O exemplo demonstra como um cliente pode enviar informações adicionais como um <xref:System.ServiceModel.Channels.MessageHeader> usando <xref:System.ServiceModel.OperationContextScope>. Um <xref:System.ServiceModel.OperationContextScope> objeto é criado com o escopo para um canal. Os cabeçalhos que devem ser convertidos no serviço remoto podem ser adicionados à <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> coleção. Os cabeçalhos adicionados a essa coleção podem ser recuperados no serviço acessando <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. Suas chamadas são feitas em vários canais e, em seguida, os cabeçalhos adicionados ao cliente se aplicam somente ao canal que foi usado <xref:System.ServiceModel.OperationContextScope>para criar o.  
+ O exemplo demonstra como um cliente pode enviar informações adicionais como um <xref:System.ServiceModel.Channels.MessageHeader> usando <xref:System.ServiceModel.OperationContextScope>. Um objeto <xref:System.ServiceModel.OperationContextScope> é criado com o escopo para um canal. Os cabeçalhos que devem ser convertidos no serviço remoto podem ser adicionados à coleção de <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A>. Os cabeçalhos adicionados a essa coleção podem ser recuperados no serviço acessando <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. Suas chamadas são feitas em vários canais e, em seguida, os cabeçalhos adicionados ao cliente se aplicam somente ao canal que foi usado para criar o <xref:System.ServiceModel.OperationContextScope>.  
   
 ## <a name="messageheaderreader"></a>MessageHeaderReader  
- Esse é o serviço de exemplo que recebe uma mensagem do cliente e tenta pesquisar o cabeçalho na <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A> coleção. O cliente passa o GUID que ele enviou no cabeçalho e o serviço recupera o cabeçalho personalizado e, se presente, compara-o com o GUID passado como o argumento pelo cliente.  
+ Esse é o serviço de exemplo que recebe uma mensagem do cliente e tenta pesquisar o cabeçalho na coleção de <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>. O cliente passa o GUID que ele enviou no cabeçalho e o serviço recupera o cabeçalho personalizado e, se presente, compara-o com o GUID passado como o argumento pelo cliente.  
   
 ```csharp
 public bool RetrieveHeader(string guid)  
@@ -55,7 +55,7 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- Essa é a implementação do cliente que usa o proxy gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para se comunicar com o serviço remoto. Primeiro, ele cria dois objetos proxy `MessageHeaderReaderClient`do.  
+ Essa é a implementação do cliente que usa o proxy gerado pela [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) para se comunicar com o serviço remoto. Primeiro, ele cria dois objetos proxy de `MessageHeaderReaderClient`.  
   
 ```csharp
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- Em seguida, o cliente cria um OperationContextScope e o `client1`escopo para. Ele adiciona um <xref:System.ServiceModel.Channels.MessageHeader> a <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> e invoca uma chamada em ambos os clientes. Ele garante que o cabeçalho seja enviado somente `client1` e não ativado `client2` , verificando `RetrieveHeader` o valor de retorno da chamada.  
+ Em seguida, o cliente cria um OperationContextScope e o escopo para `client1`. Ele adiciona um <xref:System.ServiceModel.Channels.MessageHeader> a <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> e invoca uma chamada em ambos os clientes. Ele garante que o cabeçalho seja enviado somente em `client1` e não em `client2` verificando o valor de retorno da chamada `RetrieveHeader`.  
   
 ```csharp
 using (new OperationContextScope(client1.InnerChannel))  
@@ -126,6 +126,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: f0082bd99b154f87ab90bee7a89afdb8405f6623
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: 922d91466731b331cc409cc362c4ada2c287916a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920315"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715883"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Instruções passo a passo: armazenando dados de aplicativo em cache em um aplicativo WPF
 O cache permite que você armazene dados na memória para acesso rápido. Quando os dados são acessados novamente, os aplicativos podem obter os dados do cache, em vez de recuperá-los da fonte original. Isso pode melhorar o desempenho e a escalabilidade. Além disso, o cache torna os dados disponíveis quando a fonte de dados está temporariamente indisponível.
@@ -40,7 +40,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
 - Monitoramento do caminho do arquivo armazenado em cache e notificação da instância de cache a respeito de alterações ao item monitorado.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
  Para concluir este passo a passo, você precisará de:
 
 - Visual Studio 2010.
@@ -78,7 +78,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
      O WPF Designer é aberto modo de exibição de **Design** e exibe o arquivo MainWindow.xaml. O Visual Studio cria a pasta **meu projeto** , o arquivo Application. XAML e o arquivo MainWindow. XAML.
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Direcionamento ao .NET Framework e adição de uma referência aos assemblies de cache
- Por padrão, os aplicativos do WPF se destinam ao [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Para usar o namespace <xref:System.Runtime.Caching> em um aplicativo WPF, o aplicativo deve ter como destino o .NET Framework 4 (não o [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) e deve incluir uma referência ao namespace.
+ Por padrão, os aplicativos do WPF visam o perfil de cliente .NET Framework 4. Para usar o namespace <xref:System.Runtime.Caching> em um aplicativo do WPF, o aplicativo deve ter como destino o .NET Framework 4 (não o perfil de cliente do .NET Framework 4) e deve incluir uma referência ao namespace.
 
  Portanto, a próxima etapa é alterar o destino de .NET Framework e adicionar uma referência ao namespace <xref:System.Runtime.Caching>.
 
@@ -97,7 +97,7 @@ O cache permite que você armazene dados na memória para acesso rápido. Quando
 
      A caixa de diálogo **Configurações Avançadas do Compilador** é exibida.
 
-4. Na lista **estrutura de destino (todas as configurações)** , selecione .NET Framework 4. (Não selecione [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]).
+4. Na lista **estrutura de destino (todas as configurações)** , selecione .NET Framework 4. (Não selecione .NET Framework perfil de cliente 4.)
 
 5. Clique em **OK**.
 

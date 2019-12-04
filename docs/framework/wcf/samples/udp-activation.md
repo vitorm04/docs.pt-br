@@ -2,12 +2,12 @@
 title: Ativação de UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 6e8d2f4428e85c71571021e2735f90e2e0a9d35a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 0f5d07e65abc0b29989834aff496f7c27ea557b5
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424182"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715816"
 ---
 # <a name="udp-activation"></a>Ativação de UDP
 Este exemplo é baseado na amostra [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) . Ele estende a amostra [Transport: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) para dar suporte à ativação do processo usando o WAS (serviço de ativação de processos do Windows).  
@@ -158,6 +158,6 @@ Este exemplo é baseado na amostra [Transport: UDP](../../../../docs/framework/w
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  

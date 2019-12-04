@@ -2,19 +2,19 @@
 title: Obrigatório
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
-ms.openlocfilehash: d7404dca1ff6442d0daac3bfef8d09a0a9b6c524
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 897b4a37c25ff8f7cf5739cc9fca8cb3f3e9a4d6
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637643"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715822"
 ---
 # <a name="imperative"></a>Obrigatório
 
-Este exemplo demonstra como definir um <xref:System.ServiceModel.WSHttpBinding> para um serviço usando código, em vez de definir o `wsHttpBinding` na configuração de associação. Este exemplo se baseia a [guia de Introdução](getting-started-sample.md) que implementa um serviço de calculadora.
+Este exemplo demonstra como definir um <xref:System.ServiceModel.WSHttpBinding> para um serviço usando código, em vez de definir a associação de `wsHttpBinding` na configuração. Este exemplo é baseado no [introdução](getting-started-sample.md) que implementa um serviço de calculadora.
 
 > [!NOTE]
-> As instruções de procedimento e compilação de configuração para este exemplo estão localizadas no final deste tópico.
+> O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
 O código a seguir demonstra como definir uma associação imperativa no código.
 
@@ -67,7 +67,7 @@ ChannelFactory<ICalculator> channelFactory = new ChannelFactory<ICalculator>(bin
 ICalculator channel = channelFactory.CreateChannel();
 ```
 
- Quando você executar o exemplo, as respostas e solicitações de operação são exibidas na janela do console de cliente. Pressione ENTER na janela do cliente para desligar o cliente.
+ Quando você executa o exemplo, as solicitações de operação e as respostas são exibidas na janela do console do cliente. Pressione ENTER na janela do cliente para desligar o cliente.
 
 ```console
 Add(100,15.99) = 115.99
@@ -80,17 +80,17 @@ Press <ENTER> to terminate client.
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
 
-1. Certifique-se de que você tenha executado o [procedimento de configuração de uso único para os exemplos do Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
+1. Certifique-se de ter executado o [procedimento de configuração única para os exemplos de Windows Communication Foundation](one-time-setup-procedure-for-the-wcf-samples.md).
 
-2. Para compilar a edição em C# ou Visual Basic .NET da solução, siga as instruções em [compilando os exemplos do Windows Communication Foundation](building-the-samples.md).
+2. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
-3. Para executar o exemplo em uma configuração ou entre computadores, siga as instruções em [executando os exemplos do Windows Communication Foundation](running-the-samples.md).
+3. Para executar o exemplo em uma configuração de computador único ou cruzado, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md).
 
 > [!IMPORTANT]
 > Os exemplos podem já estar instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> Se este diretório não existir, vá para [Windows Communication Foundation (WCF) e o Windows Workflow Foundation (WF) exemplos do .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] exemplos. Este exemplo está localizado no seguinte diretório.
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Imperative`

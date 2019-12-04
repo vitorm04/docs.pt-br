@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 889271ca41fb84b44757adfffc61ffbfbc0a03a8
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: d59ff7f66076fc56ebb27841105fad07a7c7fee1
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204792"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716262"
 ---
 # <a name="file-and-stream-io"></a>E/S de arquivo e de fluxo
 
@@ -33,15 +33,15 @@ Para convenções de nomenclatura de caminhos e os modos de expressar um caminho
 
 Aqui estão algumas classes de arquivos e diretórios comumente usadas:
 
-- <xref:System.IO.File>-fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos e ajuda a criar um objeto de <xref:System.IO.FileStream>.
+- <xref:System.IO.File> – Fornece métodos estáticos para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.
 
-- <xref:System.IO.FileInfo>-fornece métodos de instância para criar, copiar, excluir, mover e abrir arquivos e ajuda a criar um objeto de <xref:System.IO.FileStream>.
+- <xref:System.IO.FileInfo> – Fornece métodos de instâncias para criar, copiar, excluir, mover e abrir arquivos, além de ajudar na criação de um objeto <xref:System.IO.FileStream>.
 
-- <xref:System.IO.Directory>-fornece métodos estáticos para criar, mover e enumerar por meio de diretórios e subdiretórios.
+- <xref:System.IO.Directory> – Fornece métodos estáticos para criar, mover e enumerar ao longo de diretórios e subdiretórios.
 
-- <xref:System.IO.DirectoryInfo>-fornece métodos de instância para criar, mover e enumerar por meio de diretórios e subdiretórios.
+- <xref:System.IO.DirectoryInfo> – Fornece métodos de instância para criar, mover e enumerar ao longo de diretórios e subdiretórios.
 
-- <xref:System.IO.Path>-fornece métodos e propriedades para processar cadeias de caracteres de diretório em uma maneira de plataforma cruzada.
+- <xref:System.IO.Path> – Fornece métodos e propriedades para processar cadeias de caracteres de diretório de uma maneira compatível com várias plataformas.
 
 Você sempre deve fornecer tratamento de exceção robusto ao chamar métodos de sistema de arquivos. Para obter mais informações, veja [Tratamento de erros de E/S](handling-io-errors.md).
 
@@ -65,19 +65,19 @@ Dependendo do repositório ou da fonte de dados subjacente, os fluxos podem ofer
 
 Algumas classes de fluxo comumente usadas são:
 
-- <xref:System.IO.FileStream> – para leitura e gravação em um arquivo.
+- <xref:System.IO.FileStream> – Para leitura e gravação em um arquivo.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – para leitura e gravação em um arquivo no armazenamento isolado.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Para leitura e gravação em um arquivo no armazenamento isolado.
 
-- <xref:System.IO.MemoryStream> – para leitura e gravação na memória como o armazenamento de backup.
+- <xref:System.IO.MemoryStream> – Para leitura e gravação na memória como o repositório de backup.
 
-- <xref:System.IO.BufferedStream> – para melhorar o desempenho de operações de leitura e gravação.
+- <xref:System.IO.BufferedStream> – Para melhorar o desempenho das operações de leitura e gravação.
 
-- <xref:System.Net.Sockets.NetworkStream> – para leitura e gravação em soquetes de rede.
+- <xref:System.Net.Sockets.NetworkStream> – Para leitura e gravação via soquetes de rede.
 
-- <xref:System.IO.Pipes.PipeStream> – para leitura e gravação em Pipes anônimos e nomeados.
+- <xref:System.IO.Pipes.PipeStream> – Para leitura e gravação sobre pipes anônimos e nomeados.
 
-- <xref:System.Security.Cryptography.CryptoStream> – para vincular fluxos de dados a transformações de criptografia.
+- <xref:System.Security.Cryptography.CryptoStream> – Para vincular fluxos de dados a transformações criptográficas.
 
 Para um exemplo de como trabalhar com fluxos de forma assíncrona, confira [E/S de arquivo assíncrona](asynchronous-file-i-o.md).
 
@@ -87,13 +87,13 @@ O namespace <xref:System.IO?displayProperty=nameWithType> também fornece tipos 
 
 Algumas classes de leitores e gravadores comumente usadas são:
 
-- <xref:System.IO.BinaryReader> e <xref:System.IO.BinaryWriter> – para leitura e gravação de tipos de dados primitivos como valores binários.
+- <xref:System.IO.BinaryReader> e <xref:System.IO.BinaryWriter> – Para leitura e gravação de tipos de dados primitivos como valores binários.
 
-- <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter> – para leitura e gravação de caracteres usando um valor de codificação para converter os caracteres de e para bytes.
+- <xref:System.IO.StreamReader> e <xref:System.IO.StreamWriter> – Para leitura e gravação de caracteres usando um valor de codificação para converter os caracteres para/de bytes.
 
-- <xref:System.IO.StringReader> e <xref:System.IO.StringWriter> – para leitura e gravação de caracteres de e para cadeias.
+- <xref:System.IO.StringReader> e <xref:System.IO.StringWriter> – Para leitura e gravação de caracteres e cadeias de caracteres.
 
-- <xref:System.IO.TextReader> e <xref:System.IO.TextWriter> – serve como as classes base abstratas para outros leitores e gravadores que lêem e gravam caracteres e cadeias, mas não dados binários.
+- <xref:System.IO.TextReader> e <xref:System.IO.TextWriter> – Funcionam como as classes base abstratas para outros leitores e gravadores que leem e gravam caracteres e cadeias de caracteres, mas não dados binários.
 
 Confira [Como ler texto de um arquivo](how-to-read-text-from-a-file.md), [Como gravar texto em um arquivo](how-to-write-text-to-a-file.md), [Como ler caracteres em uma cadeia de caracteres](how-to-read-characters-from-a-string.md) e [Como gravar caracteres em uma cadeia de caracteres](how-to-write-characters-to-a-string.md).
 
@@ -111,17 +111,17 @@ A compactação refere-se ao processo de reduzir o tamanho de um arquivo para fi
 
 As classes a seguir são frequentemente usadas para compactar e descompactar arquivos e fluxos:
 
-- <xref:System.IO.Compression.ZipArchive> – para criar e recuperar entradas no arquivo zip.
+- <xref:System.IO.Compression.ZipArchive> – Para criar e recuperar entradas em arquivos ZIP.
 
-- <xref:System.IO.Compression.ZipArchiveEntry> – para representar um arquivo compactado.
+- <xref:System.IO.Compression.ZipArchiveEntry> – Para representar um arquivo compactado.
 
-- <xref:System.IO.Compression.ZipFile> – para criar, extrair e abrir um pacote compactado.
+- <xref:System.IO.Compression.ZipFile> – Para criar, extrair e abrir um pacote compactado.
 
-- <xref:System.IO.Compression.ZipFileExtensions> – para criar e extrair entradas em um pacote compactado.
+- <xref:System.IO.Compression.ZipFileExtensions> – Para criar e extrair entradas em um pacote compactado.
 
-- <xref:System.IO.Compression.DeflateStream> – para compactar e descompactar fluxos usando o algoritmo Deflate.
+- <xref:System.IO.Compression.DeflateStream> – Para compactar e descompactar fluxos usando o algoritmo de Deflate.
 
-- <xref:System.IO.Compression.GZipStream> – para compactar e descompactar fluxos no formato de dados gzip.
+- <xref:System.IO.Compression.GZipStream> – Para compactar e descompactar fluxos no formato de dados GZIP.
 
 Confira [How to: Compress and Extract Files](how-to-compress-and-extract-files.md) (Como compactar e extrair arquivos).
 
@@ -133,21 +133,21 @@ O armazenamento isolado não está disponível para aplicativos da loja do Windo
 
 As classes a seguir são usadas com frequência na implementação do armazenamento isolado:
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorage> – fornece a classe base para implementações de armazenamento isolado.
+- <xref:System.IO.IsolatedStorage.IsolatedStorage> – Fornece a classe base para implementações de armazenamento isolado.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – fornece uma área de armazenamento isolado que contém arquivos e diretórios.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile> – Fornece uma área de armazenamento isolado que contém arquivos e diretórios.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-expõe um arquivo no armazenamento isolado.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> – Expõe um arquivo no armazenamento isolado.
 
 Confira [Armazenamentos isolado](isolated-storage.md).
 
 ## <a name="io-operations-in-windows-store-apps"></a>Operações de E/S em aplicativos da Windows Store
 
-O [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] contém muitos dos tipos para leitura e gravação em fluxos. No entanto, esse conjunto não inclui todos os tipos de E/S do .NET Framework.
+O .NET para aplicativos da loja do Windows 8. x contém muitos dos tipos de leitura e gravação em fluxos; no entanto, esse conjunto não inclui todos os tipos de e/s de .NET Framework.
 
 Algumas diferenças importantes a serem observadas ao usar operações de e/s em aplicativos da loja do Windows 8. x:
 
-- Tipos especificamente relacionados às operações de arquivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, não estão incluídos no [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Em vez disso, use os tipos no namespace <xref:Windows.Storage?displayProperty=nameWithType> do Windows Runtime, como <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
+- Tipos especificamente relacionados a operações de arquivo, como <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> e <xref:System.IO.DirectoryInfo>, não estão incluídos no .NET para aplicativos da loja do Windows 8. x. Em vez disso, use os tipos no namespace <xref:Windows.Storage?displayProperty=nameWithType> do Windows Runtime, como <xref:Windows.Storage.StorageFile> e <xref:Windows.Storage.StorageFolder>.
 
 - O armazenamento isolado não está disponível. Use [dados de aplicativo](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).
 

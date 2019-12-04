@@ -2,12 +2,12 @@
 title: Utilizando contadores de desempenho
 ms.date: 03/30/2017
 ms.assetid: 00a787af-1876-473c-a48d-f52b51e28a3f
-ms.openlocfilehash: 724580c1725cf6513e1d85f03b0abfdefb4d040a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3e0a0199e93abe1218f7d9c052807cb94e911140
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044537"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716709"
 ---
 # <a name="using-performance-counters"></a>Utilizando contadores de desempenho
 Este exemplo demonstra como acessar os contadores de desempenho do Windows Communication Foundation (WCF) e como criar contadores de desempenho definidos pelo usuário. Este exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -15,7 +15,7 @@ Este exemplo demonstra como acessar os contadores de desempenho do Windows Commu
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Neste exemplo, o cliente chama os quatro métodos do `ICalculator` serviço. O cliente continua a fazer isso até que seja interrompido pelo usuário. O serviço permanece inalterado.  
+ Neste exemplo, o cliente chama os quatro métodos do serviço `ICalculator`. O cliente continua a fazer isso até que seja interrompido pelo usuário. O serviço permanece inalterado.  
   
  Os contadores de desempenho são habilitados na seção diagnóstico do arquivo Web. config para o serviço, conforme mostrado na seguinte configuração de exemplo.  
   
@@ -29,7 +29,7 @@ Este exemplo demonstra como acessar os contadores de desempenho do Windows Commu
   
  Essa tarefa também pode ser feita usando a [ferramenta Editor de configuração (SvcConfigEditor. exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Quando os contadores de desempenho estão habilitados, o conjunto inteiro de contadores de desempenho do WCF é habilitado para o serviço. O .NET Framework mantém automaticamente os dados de desempenho em três `ServiceModelService`níveis `ServiceModelEndpoint` : `ServiceModelOperation`e. Cada um desses níveis tem contadores de desempenho como "chamadas", "chamadas por segundo" e "chamadas de segurança não autorizadas".  
+ Quando os contadores de desempenho estão habilitados, o conjunto inteiro de contadores de desempenho do WCF é habilitado para o serviço. O .NET Framework mantém automaticamente os dados de desempenho em três níveis: `ServiceModelService`, `ServiceModelEndpoint` e `ServiceModelOperation`. Cada um desses níveis tem contadores de desempenho como "chamadas", "chamadas por segundo" e "chamadas de segurança não autorizadas".  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   
@@ -41,7 +41,7 @@ Este exemplo demonstra como acessar os contadores de desempenho do Windows Commu
   
 ### <a name="to-view-performance-data"></a>Para exibir dados de desempenho  
   
-1. Inicie a ferramenta Monitor de desempenho clicando em **Iniciar**, **executar...** , `perfmon` Insira e clique em **OK,** ou, no painel de controle, selecione **Ferramentas administrativas** e clique duas vezes em **desempenho**.  
+1. Inicie a ferramenta Monitor de desempenho clicando em **Iniciar**, **executar...** , insira `perfmon` e clique em OK ou **,** no painel de controle, selecione **Ferramentas administrativas** e clique duas vezes em **desempenho**.  
   
     > [!NOTE]
     > Você não pode adicionar contadores até que o código de exemplo esteja em execução.  
@@ -72,7 +72,7 @@ Este exemplo demonstra como acessar os contadores de desempenho do Windows Commu
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\PerfCounters`  
   

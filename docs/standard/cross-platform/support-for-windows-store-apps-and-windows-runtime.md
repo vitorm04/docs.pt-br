@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 15d6262fb5e7dfb99759f0f85c9a197157713300
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4629139a7c89c0808e97bbe64b7d02441aec1dea
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204949"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714485"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Suporte do .NET Framework para aplicativos da Windows Store e Windows Runtime
 
@@ -32,7 +32,7 @@ Este tópico descreve o suporte que o .NET Framework fornece para todas as três
 
 ## <a name="the-basics"></a>Noções básicas
 
-O .NET Framework dá suporte aos três cenários de desenvolvimento listados anteriormente, fornecendo [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]e oferecendo suporte ao Windows Runtime em si.
+O .NET Framework dá suporte aos três cenários de desenvolvimento listados anteriormente, fornecendo o .NET para aplicativos da loja do Windows 8. x e oferecendo suporte ao Windows Runtime em si.
 
 - Os [namespaces .NET Framework e Windows Runtime](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)#net-framework-and-windows-runtime-namespaces) fornecem uma visão simplificada das bibliotecas de classes de .NET Framework e incluem apenas os tipos e os membros que você pode usar para criar aplicativos de armazenamento do Windows 8. x e componentes de Windows Runtime.
 
@@ -42,7 +42,7 @@ O .NET Framework dá suporte aos três cenários de desenvolvimento listados ant
 
   - Os recursos que simplesmente encapsulam a API do sistema operacional também são removidos, porque a Windows Runtime é fácil de chamar a partir de código gerenciado.
 
-  Para ler mais sobre o [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], consulte a [visão geral do .net para aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Para ler sobre o processo de seleção de API, consulte a entrada [.net para aplicativos estilo Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) no blog do .net.
+  Para ler mais sobre o .NET para aplicativos da loja do Windows 8. x, consulte a [visão geral do .net para aplicativos da Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)). Para ler sobre o processo de seleção de API, consulte a entrada [.net para aplicativos estilo Metro](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) no blog do .net.
 
 - O [Windows Runtime](/uwp/api/) fornece os elementos da interface do usuário para a criação de aplicativos da loja do Windows 8. x e fornece acesso aos recursos do sistema operacional. Assim como o .NET Framework, o Windows Runtime tem metadados que permitem C# que os compiladores e Visual Basic usem o Windows Runtime como eles usam as bibliotecas de classes de .NET Framework. O .NET Framework torna mais fácil usar o Windows Runtime ocultando algumas diferenças:
 
@@ -88,7 +88,7 @@ Em cenários de programação mais avançados, como usar um componente de Window
 
 No Windows Runtime, `IMap<K, V>` e `IMapView<K, V>` são iterados usando `IKeyValuePair`. Quando você os transmite para código gerenciado, eles aparecem como `IDictionary<TKey, TValue>` e `IReadOnlyDictionary<TKey, TValue>`, então, naturalmente, você usa `System.Collections.Generic.KeyValuePair<TKey, TValue>` para enumerá-los.
 
-O modo como as interfaces aparecem no código gerenciado afeta o modo como aparecem os tipos que implementam essas interfaces. Por exemplo, a classe `PropertySet` implementa `IMap<K, V>`, que aparece no código gerenciado como `IDictionary<TKey, TValue>`. `PropertySet` aparece como se ele implementasse `IDictionary<TKey, TValue>` em vez de `IMap<K, V>`, portanto, no código gerenciado, parece ter um método `Add`, que se comporta como o método `Add` em dicionários .NET Framework. Ela não parece ter um método `Insert`.
+O modo como as interfaces aparecem no código gerenciado afeta o modo como aparecem os tipos que implementam essas interfaces. Por exemplo, a classe `PropertySet` implementa `IMap<K, V>`, que aparece no código gerenciado como `IDictionary<TKey, TValue>`. `PropertySet` aparece como se ele tivesse implementado `IDictionary<TKey, TValue>` em vez de `IMap<K, V>`, por isso, no código gerenciado, ele parece ter um método `Add`, que se comporta como o método `Add` em dicionários do .NET Framework. Ela não parece ter um método `Insert`.
 
 Para obter mais informações sobre como usar o .NET Framework para criar um componente do Windows Runtime e um passo a passos que mostra como usar esse componente com JavaScript, consulte [criando componentes C# do Windows Runtime no e Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
@@ -157,7 +157,7 @@ Você pode empacotar o código gerenciado de seus aplicativos de área de trabal
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Title|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
 |[Visão geral dos aplicativos .NET para Windows Store](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))|Descreve os tipos de .NET Framework e os membros que você pode usar para criar aplicativos de armazenamento do Windows 8. x e do Windows RuntimeComponents. (No centro de desenvolvimento do Windows.)|
 |[Roteiro para aplicativos da Windows Store C# usando ou Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Fornece os principais recursos para ajudá-lo a começar a desenvolver aplicativos da loja do Windows C# 8. x usando o ou Visual Basic, incluindo vários tópicos de início rápido, diretrizes e práticas recomendadas. (No centro de desenvolvimento do Windows.)|

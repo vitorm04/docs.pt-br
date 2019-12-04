@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: ffcb288995975433bdd915362fccca03f345b5f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c651f5c02bd49acc593c585395bc52e9ee64f870
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281663"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714504"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -59,7 +59,7 @@ Para direcionar para o .NET Framework 4.8 no Visual Studio 2012 ou posterior, in
 O .NET Framework 4.8 apresenta novos recursos nas seguintes áreas:
 
 - [Classes base](#core48)
-- [Windows Communication Foundation (WCF)](#wcf48)
+- [WCF (Windows Communication Foundation)](#wcf48)
 - [Windows Presentation Foundation (WPF)](#wpf48)
 - [Common Language Runtime](#clr48)
 
@@ -88,7 +88,7 @@ Começando no .NET Framework 4.5, o assembly clrcompression.dll usa [ZLib](https
 
 <a name="wcf48" />
 
-#### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
+#### <a name="windows-communication-foundation-wcf"></a>{1&gt;{2&gt;Windows Communication Foundation (WCF)&lt;2}&lt;1}
 
 **Introdução do ServiceHealthBehavior**
 
@@ -434,7 +434,7 @@ Também é possível configurar cookies SameSite no nível do aplicativo modific
 
 <a name="net472" />
 
-#### <a name="networking"></a>Rede
+#### <a name="networking"></a>Rede do
 
 **Implementação de propriedades HttpClientHandler**
 
@@ -630,7 +630,7 @@ Alterações na coleta de lixo (GC) no .NET Framework 4.7.1 melhoram o desempenh
 
 <a name="net471"/>
 
-#### <a name="networking"></a>Rede
+#### <a name="networking"></a>Rede do
 
 **Suporte a SHA-2 Message.HashAlgorithm**
 
@@ -673,7 +673,7 @@ O .NET Framework 4.7 inclui novos recursos nas seguintes áreas:
 - [Classes base](#Core47)
 - [Rede](#net47)
 - [ASP.NET](#ASP-NET47)
-- [Windows Communication Foundation (WCF)](#wcf47)
+- [WCF (Windows Communication Foundation)](#wcf47)
 - [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
@@ -699,7 +699,7 @@ No Framework .NET 4.7, o <xref:System.Runtime.Serialization.Json.DataContractJso
 
 <a name="net47" />
 
-#### <a name="networking"></a>Rede
+#### <a name="networking"></a>Rede do
 
 O .NET Framework 4.7 adiciona os seguintes recursos de rede:
 
@@ -725,7 +725,7 @@ A partir do .NET Framework 4.7, o ASP.NET adiciona um novo conjunto de APIs que 
 
 <a name="wcf47" />
 
-#### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
+#### <a name="windows-communication-foundation-wcf"></a>{1&gt;{2&gt;Windows Communication Foundation (WCF)&lt;2}&lt;1}
 
 O Windows Communication Foundation (WCF) adiciona os seguintes recursos e alterações:
 
@@ -841,7 +841,7 @@ End Class
 
 Você pode criar um arquivo de recurso, DataAnnotation.Localization.fr.resx, cuja chave é a cadeia de caracteres da mensagem de erro e cujo valor é a mensagem de erro localizada. O arquivo deve ser encontrado na pasta `App.LocalResources`. Por exemplo, veja a seguir a chave e seu valor em uma mensagem de erro localizada no idioma francês (fr):
 
-| {1&gt;Nome&lt;1}                                 | Valor                                     |
+| Name                                 | Value                                     |
 | ------------------------------------ | ----------------------------------------- |
 | A classificação deve estar entre 1 e 10. | La note doit être comprise entre 1 et 10. |
 
@@ -1065,7 +1065,7 @@ O SQLClient apresenta dois aprimoramentos para Always Encrypted:
 
 <a name="WCF" />
 
-### <a name="windows-communication-foundation"></a>Windows Communication Foundation
+### <a name="windows-communication-foundation"></a>{1&gt;{2&gt;Windows Communication Foundation&lt;2}&lt;1}
 
 No .NET Framework 4.6.2, o Windows Communication Foundation foi aprimorado nas seguintes áreas:
 
@@ -1264,7 +1264,7 @@ Para saber mais sobre o .NET Framework 4.6.1, consulte os seguintes tópicos:
 
 - [Lista de alterações do .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
 
-- [Compatibilidade de aplicativos no 4.6.1](../migration-guide/application-compatibility.md)
+- [Compatibilidade de aplicativos na versão 4.6.1](../migration-guide/application-compatibility.md)
 
 - [Comparação da API do .NET Framework](https://go.microsoft.com/fwlink/?LinkId=622989) (no GitHub)
 
@@ -1594,7 +1594,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
     Os três métodos de conveniência, <xref:System.Threading.Tasks.Task.CompletedTask%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.FromCanceled%2A?displayProperty=nameWithType> e <xref:System.Threading.Tasks.Task.FromException%2A?displayProperty=nameWithType>, foram adicionados ao TAP (padrão assíncrono baseado em tarefa) para retornar as tarefas concluídas em um estado específico.
 
-    Agora, a classe <xref:System.IO.Pipes.NamedPipeClientStream> dá suporte à comunicação assíncrona com seu novo <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>. ProcessOnStatus...
+    Agora, a classe <xref:System.IO.Pipes.NamedPipeClientStream> dá suporte à comunicação assíncrona com seu novo <xref:System.IO.Pipes.NamedPipeClientStream.ConnectAsync%2A>. método.
 
   - **O EventSource agora oferece suporte à gravação no Log de eventos**
 
@@ -1644,7 +1644,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
     O WPF no .NET Framework 4.6 oferece suporte a janelas filho transparente no Windows 8.1 e versões posteriores. Isso permite a criação de janelas filho não retangulares e janelas filho transparente em suas janelas de nível superior. Você pode habilitar esse recurso configurando a propriedade <xref:System.Windows.Interop.HwndSourceParameters.UsesPerPixelTransparency%2A?displayProperty=nameWithType> como `true`.
 
-- **Windows Communication Foundation (WCF)**
+- **WCF (Windows Communication Foundation)**
 
   - **Suporte a SSL**
 
@@ -1900,7 +1900,7 @@ Para novos recursos no ASP.NET 4.5.1, confira [Notas sobre a versão do ASP.NET 
 
 <a name="v45" />
 
-## <a name="whats-new-in-net-framework-45"></a>Novidades no .NET Framework 4.5
+## <a name="whats-new-in-net-framework-45"></a>{1&gt;{2&gt;Novidades no .NET Framework 4.5&lt;2}&lt;1}
 
 ### <a name="base-classes"></a>Classes base
 
@@ -2020,7 +2020,7 @@ No .NET Framework 4.5, o Windows Presentation Foundation (WPF) contém modifica�
 
 <a name="windows_communication_foundation" />
 
-### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
+### <a name="windows-communication-foundation-wcf"></a>{1&gt;{2&gt;Windows Communication Foundation (WCF)&lt;2}&lt;1}
 
 No .NET Framework 4.5, os seguintes recursos foram adicionados para simplificar a gravação e a manutenção de aplicativos do Windows Communication Foundation (WCF):
 
@@ -2116,13 +2116,13 @@ Para saber mais, confira [Novidades no Windows Workflow Foundation](https://go.m
 
 <a name="tailored" />
 
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+### <a name="net-for-windows-8x-store-apps"></a>{1&gt;.NET para aplicativos da Windows Store 8.x&lt;1}
 
-Os aplicativos Windows 8.x Store foram projetados para fatores forma específicos e aproveitam a capacidade do sistema operacional Windows. Um subconjunto do .NET Framework 4.5 ou 4.5.1 está disponível para compilar aplicativos Windows 8.x Store para o Windows usando o C# ou o Visual Basic. Esse subconjunto é chamado de [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] e abordado em uma [visão geral](https://go.microsoft.com/fwlink/?LinkId=228491) no Windows Dev Center.
+Os aplicativos Windows 8.x Store foram projetados para fatores forma específicos e aproveitam a capacidade do sistema operacional Windows. Um subconjunto do .NET Framework 4.5 ou 4.5.1 está disponível para compilar aplicativos Windows 8.x Store para o Windows usando o C# ou o Visual Basic. Esse subconjunto é chamado de Windows 8.x Store e abordado em uma [visão geral](https://go.microsoft.com/fwlink/?LinkId=228491) no Centro de Desenvolvimento do Windows.
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Bibliotecas de Classe Portáteis <a name="portable" />
 
-O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões posteriores) permite gravar e compilar assemblies gerenciados que funcionem em várias plataformas do .NET Framework. Ao usar um projeto Biblioteca de Classes Portátil, você escolhe as plataformas (como o Windows Phone e o [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]) para direcionar. Os tipos e membros disponíveis em seu projeto são restritos automaticamente aos tipos e membros comuns através dessas plataformas. Para saber mais, veja [Biblioteca de Classes Portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões posteriores) permite gravar e compilar assemblies gerenciados que funcionem em várias plataformas do .NET Framework. Usando um projeto de biblioteca de classes portátil, você escolhe as plataformas (como Windows Phone e .NET para aplicativos da loja do Windows 8. x) para o destino. Os tipos e membros disponíveis em seu projeto são restritos automaticamente aos tipos e membros comuns através dessas plataformas. Para saber mais, confira [Biblioteca de Classes Portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>Consulte também
 

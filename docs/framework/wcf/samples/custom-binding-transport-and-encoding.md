@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6c0b353d-79ee-4e61-b348-be49ad0e9a16
-ms.openlocfilehash: f5a5add36d0d93785a8f63793ff4bc296ffebc8b
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 1bb7b227c3b46133616ff7cb3f59e2005c0fa340
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040020"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715483"
 ---
 # <a name="custom-binding-transport-and-encoding"></a>Codificação e transporte de associação personalizado
 Uma associação personalizada é definida por uma lista ordenada de elementos de associação discretos. Este exemplo demonstra como configurar uma associação personalizada com vários elementos de codificação de mensagens e transporte.  
@@ -20,7 +20,7 @@ Uma associação personalizada é definida por uma lista ordenada de elementos d
   
  Este exemplo é baseado no [auto-host](../../../../docs/framework/wcf/samples/self-host.md)e foi modificado para configurar três pontos de extremidade para dar suporte a transportes http, TCP e NamedPipe com associações personalizadas. A configuração do cliente foi modificada da mesma forma e o código do cliente foi alterado para se comunicar com cada um dos três pontos de extremidade.  
   
- O exemplo demonstra como configurar uma ligação personalizada que dá suporte a um transporte e codificação de mensagem específicos. Isso é feito configurando um transporte e uma codificação de mensagem `binding` para o elemento. A ordenação de elementos de associação é importante na definição de uma associação personalizada, pois cada uma representa uma camada na pilha de canais (consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)). Esta amostra configura três associações personalizadas: um transporte HTTP com codificação de texto, um transporte TCP com codificação de texto e um transporte NamedPipe com uma codificação binária.  
+ O exemplo demonstra como configurar uma ligação personalizada que dá suporte a um transporte e codificação de mensagem específicos. Isso é feito configurando um transporte e uma codificação de mensagem para o elemento `binding`. A ordenação de elementos de associação é importante na definição de uma associação personalizada, pois cada uma representa uma camada na pilha de canais (consulte [associações personalizadas](../../../../docs/framework/wcf/extending/custom-bindings.md)). Esta amostra configura três associações personalizadas: um transporte HTTP com codificação de texto, um transporte TCP com codificação de texto e um transporte NamedPipe com uma codificação binária.  
   
  A configuração de serviço define as associações personalizadas da seguinte maneira:  
   
@@ -46,7 +46,7 @@ Uma associação personalizada é definida por uma lista ordenada de elementos d
   
  Quando você executa o exemplo, as solicitações e respostas da operação são exibidas na janela do console do cliente e do serviço. O cliente se comunica com cada um dos três pontos de extremidade, acessando primeiro HTTP, depois TCP e, por fim, NamedPipe. Pressione ENTER em cada janela do console para desligar o serviço e o cliente.  
   
- A `namedPipeTransport` associação não oferece suporte a operações de máquina a máquina. Ele é usado somente para comunicação no mesmo computador. Portanto, ao executar o exemplo em um cenário de máquina cruzada, comente as seguintes linhas no arquivo de código do cliente:  
+ A associação de `namedPipeTransport` não oferece suporte a operações de máquina a máquina. Ele é usado somente para comunicação no mesmo computador. Portanto, ao executar o exemplo em um cenário de máquina cruzada, comente as seguintes linhas no arquivo de código do cliente:  
   
 ```csharp  
 CalculatorClient client = new CalculatorClient("default");  
@@ -82,6 +82,6 @@ client.Close()
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\Transport`  

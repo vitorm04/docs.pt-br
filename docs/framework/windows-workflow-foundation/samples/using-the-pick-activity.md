@@ -2,12 +2,12 @@
 title: Usando a atividade de picareta
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: b0997254615ca962fd386dea70c67a8edb36c90a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70037874"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715521"
 ---
 # <a name="using-the-pick-activity"></a>Usando a atividade de picareta
 Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statements.Pick> .
@@ -24,17 +24,17 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
 
  Fluxo de trabalho do designer a versão do designer do exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
-- Program.cs: Inclui a `Main` função que executa o fluxo de trabalho de exemplo.
+- Module.vb: Inclui a função de `Main` que executa o fluxo de trabalho de exemplo.
 
-- ReadString.cs: Uma atividade personalizada que lê algumas entradas do console.
+- ReadString.cs: Uma atividade personalizado que lê algumas entradas de console.
 
-- Sequence1. XAML: Um fluxo de trabalho criado usando o designer que usa escolher.
+- Sequence1.xaml: Um fluxo de trabalho criado usando o designer que usa a picareta.
 
  Fluxo de trabalho codificado a versão codificada do exemplo demonstra como criar um fluxo de trabalho no designer. Os seguintes arquivos estão incluídos:
 
-- Program.cs: Inclui a `Main` função que executa o fluxo de trabalho de exemplo.
+- Module.vb: Inclui a função de `Main` que executa o fluxo de trabalho de exemplo.
 
-- ReadString.cs: Uma atividade personalizada que lê algumas entradas do console.
+- ReadString.cs: Uma atividade personalizado que lê algumas entradas de console.
 
 #### <a name="to-use-this-sample"></a>Para usar este exemplo
 
@@ -49,6 +49,6 @@ Este exemplo demonstra como usar a atividade de <xref:System.Activities.Statemen
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: 2115ac88c52efca09d32a870fc52905f80f6f746
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: dcdeeda0d6054c9cf6fefa31ea33d720c0c0f3f7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70045049"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716574"
 ---
 # <a name="default-message-contract"></a>Contrato padrão de mensagem
 O exemplo de contrato de mensagem padrão demonstra um serviço em que uma mensagem personalizada definida pelo usuário é passada para e de operações de serviço. Este exemplo é baseado no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) que implementa uma interface de calculadora como um serviço tipado. Em vez das operações de serviço individuais para adição, subtração, multiplicação e divisão usada no [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), este exemplo passa uma mensagem personalizada que contém os operandos e o operador e retorna o resultado do cálculo aritmético.  
@@ -31,7 +31,7 @@ public interface ICalculator
 }  
 ```  
   
- A mensagem `MyMessage` personalizada é definida em uma classe anotada <xref:System.ServiceModel.MessageHeaderAttribute> com <xref:System.ServiceModel.MessageContractAttribute>atributos e <xref:System.ServiceModel.MessageBodyMemberAttribute> . Somente o terceiro construtor é usado neste exemplo. O uso de contratos de mensagem permite que você exerça controle total sobre a mensagem SOAP. Neste exemplo, o <xref:System.ServiceModel.MessageHeaderAttribute> atributo é usado para colocar `Operation` em um cabeçalho SOAP. Os operandos `N1` `N2` e `Result` aparecem no corpo SOAP porque eles têm o <xref:System.ServiceModel.MessageBodyMemberAttribute> atributo aplicado.  
+ A `MyMessage` de mensagem personalizada é definida em uma classe anotada com os atributos <xref:System.ServiceModel.MessageContractAttribute>, <xref:System.ServiceModel.MessageHeaderAttribute> e <xref:System.ServiceModel.MessageBodyMemberAttribute>. Somente o terceiro construtor é usado neste exemplo. O uso de contratos de mensagem permite que você exerça controle total sobre a mensagem SOAP. Neste exemplo, o atributo <xref:System.ServiceModel.MessageHeaderAttribute> é usado para colocar `Operation` em um cabeçalho SOAP. Os operandos `N1`, `N2` e `Result` aparecem no corpo SOAP porque têm o atributo <xref:System.ServiceModel.MessageBodyMemberAttribute> aplicado.  
   
 ```csharp
 [MessageContract]  
@@ -97,7 +97,7 @@ public class MyMessage
 }  
 ```  
   
- A classe de implementação contém o código para `Calculate` a operação de serviço. A `CalculateService` classe obtém os operandos e o operador da mensagem de solicitação e cria uma mensagem de resposta que contém o resultado do cálculo solicitado, conforme mostrado no código de exemplo a seguir.  
+ A classe de implementação contém o código para a operação de serviço `Calculate`. A classe `CalculateService` Obtém os operandos e o operador da mensagem de solicitação e cria uma mensagem de resposta que contém o resultado do cálculo solicitado, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 // Service class which implements the service contract.  
@@ -131,13 +131,13 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- O código de cliente gerado para o cliente foi criado com a ferramenta de [Utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) . A ferramenta cria automaticamente tipos de contrato de mensagem no código de cliente gerado, se necessário. A `/messageContract` opção de comando pode ser especificada para forçar a geração de contratos de mensagem.  
+ O código de cliente gerado para o cliente foi criado com a ferramenta de [Utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) . A ferramenta cria automaticamente tipos de contrato de mensagem no código de cliente gerado, se necessário. A opção de comando `/messageContract` pode ser especificada para forçar a geração de contratos de mensagem.  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
 ```  
   
- O código de exemplo a seguir demonstra o cliente `MyMessage` usando a mensagem.  
+ O código de exemplo a seguir demonstra o cliente usando a mensagem de `MyMessage`.  
   
 ```csharp
 // Create a client with given client endpoint configuration  
@@ -181,6 +181,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

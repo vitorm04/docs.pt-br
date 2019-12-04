@@ -2,12 +2,12 @@
 title: Publicação personalizada de WSDL
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: 9d753ca30bdcf66f5225700245b9688c5226613e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 173deaf280c052b76e6937b2cec44ebdeafc57f9
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978288"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714910"
 ---
 # <a name="custom-wsdl-publication"></a>Publicação personalizada de WSDL
 Este exemplo demonstra como:  
@@ -23,7 +23,7 @@ Este exemplo demonstra como:
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
-## <a name="service"></a>Serviço  
+## <a name="service"></a>Service  
  O serviço neste exemplo é marcado com dois atributos personalizados. O primeiro, o `WsdlDocumentationAttribute`, aceita uma cadeia de caracteres no construtor e pode ser aplicado para fornecer uma interface ou operação de contrato com uma cadeia de caracteres que descreve seu uso. O segundo, `WsdlParamOrReturnDocumentationAttribute`, pode ser aplicado para valores de retorno ou parâmetros para descrever esses valores na operação. O exemplo a seguir mostra um contrato de serviço, `ICalculator`, descrito usando esses atributos.  
   
 ```csharp  
@@ -303,6 +303,6 @@ public interface ICalculator
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

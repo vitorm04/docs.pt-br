@@ -2,12 +2,12 @@
 title: Codificação de MTOM
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-ms.openlocfilehash: ab8abdf79304037f2b4039407115a3f64a0afa4e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4156ebed22dc775aa69cf473dc89a26d7e2070d7
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424067"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714762"
 ---
 # <a name="mtom-encoding"></a>Codificação de MTOM
 Este exemplo demonstra o uso da codificação de mensagens do mecanismo de otimização de transmissão de mensagens (MTOM) com uma WSHttpBinding. MTOM é um mecanismo para transmitir anexos binários grandes com mensagens SOAP como bytes brutos, permitindo mensagens menores.  
@@ -17,7 +17,7 @@ Este exemplo demonstra o uso da codificação de mensagens do mecanismo de otimi
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\WS\MTOM`  
   

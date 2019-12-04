@@ -2,22 +2,22 @@
 title: Descrição do serviço
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 430079cab91c61fe28db3f0a9d6c0797c7b0278a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a087b595a426e1485e9990a5fa38e49ae940ffcb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038848"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716286"
 ---
 # <a name="service-description"></a>Descrição do serviço
-O exemplo de descrição de serviço demonstra como um serviço pode recuperar suas informações de descrição de serviço em tempo de execução. O exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com uma operação de serviço adicional definida para retornar informações descritivas sobre o serviço. As informações retornadas listam os endereços base e os pontos de extremidade do serviço. O serviço fornece essas informações usando as <xref:System.ServiceModel.OperationContext>classes <xref:System.ServiceModel.ServiceHost>, e <xref:System.ServiceModel.Description.ServiceDescription> .  
+O exemplo de descrição de serviço demonstra como um serviço pode recuperar suas informações de descrição de serviço em tempo de execução. O exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md), com uma operação de serviço adicional definida para retornar informações descritivas sobre o serviço. As informações retornadas listam os endereços base e os pontos de extremidade do serviço. O serviço fornece essas informações usando as classes <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>e <xref:System.ServiceModel.Description.ServiceDescription>.  
   
  Neste exemplo, o cliente é um aplicativo de console (. exe) e o serviço é hospedado pelo Serviços de Informações da Internet (IIS).  
   
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- Este exemplo tem uma versão modificada do contrato de calculadora `IServiceDescriptionCalculator`chamado. O contrato define uma operação de serviço adicional `GetServiceDescriptionInfo` denominada que retorna uma cadeia de caracteres de várias linhas para o cliente que descreve o endereço base ou endereços e pontos de extremidade de serviço ou de acesso para o serviço.  
+ Este exemplo tem uma versão modificada do contrato da calculadora chamada `IServiceDescriptionCalculator`. O contrato define uma operação de serviço adicional chamada `GetServiceDescriptionInfo` que retorna uma cadeia de caracteres de várias linhas para o cliente que descreve o endereço base ou os endereços e o ponto de extremidade de serviço ou pontos de extremidades do serviço.  
   
 ```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
@@ -36,7 +36,7 @@ public interface IServiceDescriptionCalculator
 }  
 ```  
   
- O código de implementação `GetServiceDescriptionInfo` para o <xref:System.ServiceModel.Description.ServiceDescription> usa o para listar os pontos de extremidade de serviço. Como os pontos de extremidade de serviço podem ter endereços relativos, ele primeiro lista os endereços base para o serviço. Para obter todas essas informações, o código obtém seu contexto de operação usando <xref:System.ServiceModel.OperationContext.Current%2A>. O <xref:System.ServiceModel.ServiceHost> e seu <xref:System.ServiceModel.Description.ServiceDescription> objeto são recuperados do contexto de operação. Para listar os pontos de extremidade base para o serviço, o código é iterado por meio da <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> coleção do host de serviço. Para listar os pontos de extremidade de serviço para o serviço, o código é iterado pela coleção de pontos de extremidade da descrição de serviço.  
+ O código de implementação para `GetServiceDescriptionInfo` usa o <xref:System.ServiceModel.Description.ServiceDescription> para listar os pontos de extremidade de serviço. Como os pontos de extremidade de serviço podem ter endereços relativos, ele primeiro lista os endereços base para o serviço. Para obter todas essas informações, o código obtém seu contexto de operação usando <xref:System.ServiceModel.OperationContext.Current%2A>. O <xref:System.ServiceModel.ServiceHost> e seu objeto <xref:System.ServiceModel.Description.ServiceDescription> são recuperados do contexto de operação. Para listar os pontos de extremidade base para o serviço, o código é iterado por meio da coleção de <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> do host de serviço. Para listar os pontos de extremidade de serviço para o serviço, o código é iterado pela coleção de pontos de extremidade da descrição de serviço.  
   
 ```csharp
 public string GetServiceDescriptionInfo()  
@@ -63,7 +63,7 @@ public string GetServiceDescriptionInfo()
 }  
 ```  
   
- Ao executar o exemplo, você vê as operações de calculadora e as informações de serviço retornadas pela `GetServiceDescriptionInfo` operação. Pressione ENTER na janela do cliente para desligar o cliente.  
+ Ao executar o exemplo, você vê as operações de calculadora e as informações de serviço retornadas pela operação de `GetServiceDescriptionInfo`. Pressione ENTER na janela do cliente para desligar o cliente.  
   
 ```console  
 Add(15,3) = 18  
@@ -98,6 +98,6 @@ Press <ENTER> to terminate client.
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) para baixar todos os Windows Communication Foundation (WCF) [!INCLUDE[wf1](../../../../includes/wf1-md.md)] e exemplos. Este exemplo está localizado no seguinte diretório.  
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ServiceDescription`  
