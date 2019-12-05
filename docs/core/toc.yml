@@ -109,8 +109,18 @@
   items:
     - name: Configurações
       href: run-time-config/index.md
+    - name: Configurações de compilação
+      href: run-time-config/compilation.md
+    - name: Configurações de depuração e criação de perfil
+      href: run-time-config/debugging-profiling.md
     - name: Configurações do coletor de lixo
       href: run-time-config/garbage-collector.md
+    - name: Configurações de globalização
+      href: run-time-config/globalization.md
+    - name: Configurações de rede
+      href: run-time-config/networking.md
+    - name: Configurações de threading
+      href: run-time-config/threading.md
 - name: Interoperabilidade nativa
   items:
     - name: Expor componentes do .NET Core ao COM
