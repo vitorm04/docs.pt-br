@@ -293,9 +293,6 @@
             - name: Recursos em aplicativos de área de trabalho
               tocHref: /dotnet/framework/resources/
               topicHref: /dotnet/framework/resources/index
-            - name: Segurança no .NET Framework
-              tocHref: /dotnet/framework/security/
-              topicHref: /dotnet/framework/security/index
             - name: Ferramentas do .NET Framework
               tocHref: /dotnet/framework/tools/
               topicHref: /dotnet/framework/tools/index
