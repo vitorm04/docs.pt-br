@@ -2,12 +2,12 @@
 title: Desempenho do Windows Workflow Foundation 4
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 9a7e1dd2c5ab92ace955aa3b3095f2ed04ee3272
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6e6669cd41795c356e4b7b30f19d93bd8dfa917a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283228"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802642"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Desempenho do Windows Workflow Foundation 4
 
@@ -17,7 +17,7 @@ ms.locfileid: "74283228"
 
 ## <a name="terminology"></a>Terminologia
 
- A versão do [!INCLUDE[wf1](../../../includes/wf1-md.md)] introduzida no .NET Framework 4 será chamada de WF4 para o restante deste tópico. [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi introduzido no .NET Framework 3,0 e tinha algumas revisões secundárias por meio do .NET Framework 3,5 SP1. A versão .NET Framework 3,5 do Workflow Foundation será chamada de WF3 para o restante deste tópico. WF3 é fornecido no .NET Framework 4 lado a lado com WF4. Para obter mais informações sobre como migrar artefatos do WF3 para o WF4, consulte: [Guia de migração do Windows Workflow Foundation 4](https://go.microsoft.com/fwlink/?LinkID=153313).
+ A versão do [!INCLUDE[wf1](../../../includes/wf1-md.md)] introduzida no .NET Framework 4 será chamada de WF4 para o restante deste tópico. [!INCLUDE[wf1](../../../includes/wf1-md.md)] foi introduzido no .NET Framework 3,0 e tinha algumas revisões secundárias por meio do .NET Framework 3,5 SP1. A versão .NET Framework 3,5 do Workflow Foundation será chamada de WF3 para o restante deste tópico. WF3 é fornecido no .NET Framework 4 lado a lado com WF4. Para obter mais informações sobre como migrar artefatos do WF3 para o WF4, consulte: [Guia de migração do Windows Workflow Foundation 4](migration-guidance.md).
 
  O Windows Communication Foundation (WCF) é o modelo de programação unificado da Microsoft para a criação de aplicativos orientados a serviços. Ele foi introduzido pela primeira vez como parte do .NET 3,0 junto com o WF3 e agora é um dos principais componentes do .NET Framework.
 
@@ -105,7 +105,7 @@ ms.locfileid: "74283228"
  O fluxo de trabalho da sequência contém uma atividade de <xref:System.Activities.Statements.While> com uma atividade filho no loop que não executa qualquer trabalho.
 
 ### <a name="replicator-compared-to-parallelforeach"></a>Replicator comparou a ParallelForEach
- <xref:System.Workflow.Activities.ReplicatorActivity> no WF3 tem modos de execução sequenciais e paralelos.  No modo sequencial, o desempenho da atividade é semelhante a <xref:System.Workflow.Activities.WhileActivity>.  <xref:System.Workflow.Activities.ReplicatorActivity> é mais útil para execução paralela.  O WF4 analógico para essa é a atividade de <xref:System.Activities.Statements.ParallelForEach%601> .
+ <xref:System.Workflow.Activities.ReplicatorActivity> em WF3 tem modos de execução sequencial e paralela.  No modo sequencial, o desempenho da atividade é semelhante a <xref:System.Workflow.Activities.WhileActivity>.  <xref:System.Workflow.Activities.ReplicatorActivity> é mais útil para execução paralela.  O WF4 analógico para essa é a atividade de <xref:System.Activities.Statements.ParallelForEach%601> .
 
  O diagrama a seguir mostra os fluxos de trabalho usados para esse teste. O trabalho WF3 estão à esquerda e o trabalho WF4 estão à direita.
 
@@ -180,7 +180,7 @@ O diagrama a seguir mostra o fluxo de trabalho de compensação básico. O traba
 ### <a name="online-store-service"></a>Serviço de Store online
  Um dos pontos fortes da Windows Workflow Foundation é a capacidade de compor processos usando vários serviços.  Para esse exemplo, há um serviço online de armazenamento que orquestre duas chamadas técnicos para comprar um pedido.  A primeira etapa é validar o pedido usando um ordem que valida o serviço.  A segunda etapa é preencher a ordem usando um serviço de depósito.
 
- Os dois serviços backend, a validação do serviço e o depósito os serviços de aplicativos, permanecem os mesmos para ambos os testes.  A parte que muda é o serviço online de Store que executa a orquestração.  Em um caso, o serviço é codificado manualmente como um serviço WCF.  Para o outro caso, o serviço é escrito como um serviço de fluxo de trabalho do WCF no WF4. recursos específicos do [!INCLUDE[wf1](../../../includes/wf1-md.md)]como rastreamento e persistência são desativados para este teste.
+ Os dois serviços backend, a validação do serviço e o depósito os serviços de aplicativos, permanecem os mesmos para ambos os testes.  A parte que muda é o serviço online de Store que executa a orquestração.  Em um caso, o serviço é codificado manualmente como um serviço WCF.  Para o outro caso, o serviço é escrito como um serviço de fluxo de trabalho do WCF no WF4. os recursos específico de[!INCLUDE[wf1](../../../includes/wf1-md.md)]como o rastreamento e a persistência estão desativados para esse teste.
 
 ### <a name="environment"></a>Ambiente
 ![Configuração do ambiente para medição de desempenho](./media/performance/performance-test-environment.gif)
@@ -301,9 +301,9 @@ O diagrama a seguir mostra o fluxo de trabalho de compensação básico. O traba
  Uma das tendências claras observar no gráfico é que se aninhar relativamente tem impacto mínimo sobre o uso de memória em WF3 e em WF4.  O impacto o mais significativa de memória do número de atividades em um determinado fluxo de trabalho.  Dado os dados da sequência 1000, a sequência complexa 5 profundidade 5, e profundidade complexa 7 variações da sequência 1, é claro como o número de atividades inserir milhares, increase de uso de memória ficar mais visível.  Em casos extremos sequência 1 (profundidade 7) onde há atividades de ~29K, WF4 estiver usando quase 79% menos memória que WF3.
 
 ### <a name="multiple-workflow-definitions-test"></a>Vários teste das definições de fluxo de trabalho
- Medir a memória pela definição de fluxo de trabalho é dividido em dois diferentes teste devido às opções disponíveis para hospedar fluxos de trabalho em WF3 e em WF4.  Os testes são rodados de maneira diferente do teste de complexidade de fluxo de trabalho que um fluxo de trabalho já está citado como exemplo e executado somente uma vez por definição.  Isso ocorre porque a definição de fluxo de trabalho e seu host permanecem em memória para o tempo de vida de Appdomain.  A memória usado executando uma determinada instância de fluxo de trabalho deve ser removida durante a coleta de lixo.  A orientação de migração para WF4 contém informações mais detalhadas sobre as opções de hospedagem. Para obter mais informações, consulte [WF Migration Cookbook: Hospedagem de fluxo de trabalho](https://go.microsoft.com/fwlink/?LinkID=153313).
+ Medir a memória pela definição de fluxo de trabalho é dividido em dois diferentes teste devido às opções disponíveis para hospedar fluxos de trabalho em WF3 e em WF4.  Os testes são rodados de maneira diferente do teste de complexidade de fluxo de trabalho que um fluxo de trabalho já está citado como exemplo e executado somente uma vez por definição.  Isso ocorre porque a definição de fluxo de trabalho e seu host permanecem em memória para o tempo de vida de Appdomain.  A memória usado executando uma determinada instância de fluxo de trabalho deve ser removida durante a coleta de lixo.  A orientação de migração para WF4 contém informações mais detalhadas sobre as opções de hospedagem. Para obter mais informações, consulte [WF Migration Cookbook: Hospedagem de fluxo de trabalho](migration-guidance.md).
 
- Criar várias definições de fluxo de trabalho para um teste de definição de fluxo de trabalho pode ser feita em várias maneiras.  Por exemplo, um pode usar a geração de código para criar um conjunto de 1000 fluxos de trabalho que são idênticos exceto no nome e para salvar cada um desses fluxos de trabalho em arquivos separados.  Essa abordagem foi tirada para teste console- hospedado.  Em WF3, a classe de <xref:System.Workflow.Runtime.WorkflowRuntime> foi usada para executar as definições de fluxo de trabalho.  WF4 pode usar <xref:System.Activities.WorkflowApplication> para criar uma instância única de fluxo de trabalho ou usar diretamente <xref:System.Activities.WorkflowInvoker> para executar a atividade como se fosse um chamada de método.  <xref:System.Activities.WorkflowApplication> é um host de uma única instância de fluxo de trabalho e tem paridade de recurso mais próxima para <xref:System.Workflow.Runtime.WorkflowRuntime> para que tenha sido usada neste teste.
+ Criar várias definições de fluxo de trabalho para um teste de definição de fluxo de trabalho pode ser feita em várias maneiras.  Por exemplo, um pode usar a geração de código para criar um conjunto de 1000 fluxos de trabalho que são idênticos exceto no nome e para salvar cada um desses fluxos de trabalho em arquivos separados.  Essa abordagem foi tirada para teste console- hospedado.  Em WF3, a classe de <xref:System.Workflow.Runtime.WorkflowRuntime> foi usada para executar as definições de fluxo de trabalho.  WF4 pode usar <xref:System.Activities.WorkflowApplication> para criar uma instância única de fluxo de trabalho ou usar diretamente <xref:System.Activities.WorkflowInvoker> para executar a atividade como se fosse um chamada de método.  <xref:System.Activities.WorkflowApplication> é um host de uma única instância de fluxo de trabalho e tem mais próximo uma paridade recurso a <xref:System.Workflow.Runtime.WorkflowRuntime> de modo que é usado neste teste.
 
  Para hospedar fluxos de trabalho no IIS é possível usar <xref:System.Web.Hosting.VirtualPathProvider> para criar um novo <xref:System.ServiceModel.WorkflowServiceHost> em vez de gerar todos os arquivos de XAMLX ou de XOML.  O <xref:System.Web.Hosting.VirtualPathProvider> manipula a solicitação de entrada e responde com um "arquivo virtual" que pode ser carregado de um banco de dados ou, nesse caso, gerado de forma dinâmica.  Portanto é desnecessário criar arquivos 1000 físico.
 
@@ -434,7 +434,7 @@ public class Workflow1 : Activity
  Monitoramento da integridade tem um impacto de aproximadamente 3% em produção.  Os custos de perfil básico são aproximadamente 8%.
 
 ## <a name="interop"></a>Interop
- WF4 é quase uma reescrita completo de [!INCLUDE[wf1](../../../includes/wf1-md.md)] e portanto fluxos de trabalho WF3 e as atividades não são diretamente compatíveis com WF4.  Muitos clientes que adotaram Windows Workflow Foundation antecipadamente terão definições de fluxo de trabalho internas ou de terceiros e atividades personalizadas para WF3.  Uma maneira de fazer a transição para WF4 é usar a atividade de Interoperabilidade, que pode executar as atividades WF3 de dentro de um fluxo de trabalho WF4.  É recomendável que a atividade de <xref:System.Activities.Statements.Interop> seja usada somente quando necessário. Para obter mais informações sobre como migrar para o WF4, Confira as [diretrizes de migração do WF4](https://go.microsoft.com/fwlink/?LinkID=153313).
+ WF4 é quase uma reescrita completo de [!INCLUDE[wf1](../../../includes/wf1-md.md)] e portanto fluxos de trabalho WF3 e as atividades não são diretamente compatíveis com WF4.  Muitos clientes que adotaram Windows Workflow Foundation antecipadamente terão definições de fluxo de trabalho internas ou de terceiros e atividades personalizadas para WF3.  Uma maneira de fazer a transição para WF4 é usar a atividade de Interoperabilidade, que pode executar as atividades WF3 de dentro de um fluxo de trabalho WF4.  É recomendável que a atividade de <xref:System.Activities.Statements.Interop> seja usada somente quando necessário. Para obter mais informações sobre como migrar para o WF4, Confira as [diretrizes de migração do WF4](migration-guidance.md).
 
 ### <a name="environment-setup"></a>Configuração de ambiente
  ![Configuração de ambiente para teste de desempenho de fluxo de trabalho](./media/performance/performance-test-environment.gif)

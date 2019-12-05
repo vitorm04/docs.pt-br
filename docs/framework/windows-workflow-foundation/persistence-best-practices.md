@@ -2,12 +2,12 @@
 title: Práticas recomendadas de persistência
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: 399d2f5dbb5f3114a58cc7fdaede249b253089c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8ffbb3ebfa8f85e2b0052a9df9ada30766accd8e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592114"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802512"
 ---
 # <a name="persistence-best-practices"></a>Práticas recomendadas de persistência
 Este documento aborda as práticas recomendadas para o design e a configuração de fluxo de trabalho relacionados à persistência de fluxo de trabalho.  
@@ -21,7 +21,7 @@ Este documento aborda as práticas recomendadas para o design e a configuração
   
  Se seu fluxo de trabalho é muito ocupado por tempo, recomendamos que você persistir a instância de fluxo de trabalho regularmente ao longo do seu período ocupado. Você pode fazer isso adicionando atividades de <xref:System.Activities.Statements.Persist> durante a sequência de atividades que mantém a instância de fluxo de trabalho ocupado. Assim, reciclagem do domínio de aplicativo, falhas host, ou falhas do computador não causam o sistema a ser rolado de volta para o início do período ocupado. Esteja ciente que adicionar atividades de <xref:System.Activities.Statements.Persist> ao fluxo de trabalho pode levar a uma degradação de desempenho.  
   
- A tela de aplicativo Windows Server simplifica bastante a configuração e uso de persistência. Para obter mais informações, consulte [persistência da tela de aplicativo do Windows Server](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ A tela de aplicativo Windows Server simplifica bastante a configuração e uso de persistência. Para obter mais informações, consulte [persistência do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))  
   
 ## <a name="configuration-of-scalability-parameters"></a>Configuração de parâmetros de escalabilidade  
  Os requisitos de escalabilidade e desempenho determinam as configurações dos seguintes parâmetros:  
@@ -45,15 +45,15 @@ Este documento aborda as práticas recomendadas para o design e a configuração
   
  Use atividades de <xref:System.Activities.Statements.Persist> ou <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> definido como 0 para ativar a recuperação de sua instância de fluxo de trabalho depois que falhas de host ou do computador de serviço.  
   
-### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Cenário: Instâncias de fluxo de trabalho são ociosos por longos períodos de tempo  
+### <a name="scenario-workflow-instances-are-idle-for-long-periods-of-time"></a>Cenário: As instâncias de fluxo de trabalho são ociosos por longos períodos de tempo  
  Nesse cenário, defina <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> a 0 para liberar o mais rápido possível recursos.  
   
-### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Cenário: Instâncias de fluxo de trabalho vários recebem mensagens em um curto período de tempo  
+### <a name="scenario-workflow-instances-receive-multiple-messages-in-a-short-period-of-time"></a>Cenário: As instâncias de fluxo de trabalho vários recebem mensagens em um curto período de tempo  
  Nesse cenário, defina <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> como 60 segundos se essas mensagens são recebidas pelo mesmo computador. Isso evita uma sequência rápida de unload e carregar de uma instância de fluxo de trabalho. Isso também não mantém a instância na memória durante o suficiente tiempo.  
   
  Definir <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> a 0, e o conjunto <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A> a BasicRetry ou a AggressiveRetry se essas mensagens podem ser recebidas por diferentes computadores. Isso permite que a instância de fluxo de trabalho é carregada por outro computador.  
   
-### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Cenário: Fluxo de trabalho usa atividades de atraso com durações curtas  
+### <a name="scenario-workflow-uses-delay-activities-with-short-durations"></a>Cenário: Atividades de atraso dos usos de fluxo de trabalho com durações curtas  
  Nesse cenário, <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> sonda regularmente o base de dados de persistência para as instâncias que devem ser carregadas devido a uma atividade expirada de <xref:System.Activities.Statements.Delay> . Se <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> encontrar um timer que expirou no intervalo de pesquisa seguir, a instância Store de fluxo de trabalho do SQL diminuirá o intervalo de pesquisa. A votação seguir ocorrerá em right após o timer expirou. Essa maneira, a instância Store de fluxo de trabalho do SQL obtém uma alta precisão de temporizadores que executam mais tempo do intervalo de pesquisa, que é definido por <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore.RunnableInstancesDetectionPeriod%2A>. Para ativar o processamento hábil de um atrasos mais curtas, a instância de fluxo de trabalho deve permanecer na memória pelo menos um intervalo de pesquisa.  
   
  Definir <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> a 0 para escrever o tempo de expiração a base de dados de persistência.  

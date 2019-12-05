@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 94d435d8f50683c24e7ca28100fbf5abf0fdcc19
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 33583f430e5af2f3fa7027233febd9ec61f85a3f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204787"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802447"
 ---
 # <a name="isolated-storage"></a>Armazenamentos isolado
 <a name="top"></a> Para aplicativos desktop, o armazenamento isolado é um mecanismo de armazenamento de dados que proporciona isolamento e segurança ao definir formas padronizadas de associar código a dados salvos. A padronização também fornece outros benefícios. Os administradores podem usar as ferramentas desenvolvidas para manipular armazenamentos isolados para configurar espaço de armazenamento de arquivos, definir políticas de segurança e excluir dados não utilizados. Com armazenamentos isolados, seu código não precisa mais de caminhos exclusivos para especificar locais seguros na sistema de arquivos e os dados são protegidos de outros aplicativos que só têm acesso a armazenamentos isolados. Informações embutidas em código que indicam onde a área de armazenamento de um aplicativo se encontra são desnecessárias.
@@ -118,7 +118,7 @@ O uso permitido especificado por <xref:System.Security.Permissions.IsolatedStora
 |Windows 2000, Windows XP, Windows Server 2003 (atualização do Windows NT 4.0)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMROOT>\Perfis\\<usuário\>\Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMROOT>\Perfis\\<usuário\>\Configurações Locais\Application Data|
 |Windows 2000 – Instalação limpa (e atualizações do Windows 98 e Windows NT 3.51)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Configurações Locais\Application Data|
 |Windows XP, Windows Server 2003 – Instalação limpa (e atualizações do Windows 2000 e Windows 98)|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Application Data<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Documents and Settings\\<usuário\>\Configurações Locais\Application Data|
-|[!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7, Windows Server 2008, Windows Vista|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuário\>\AppData\Roaming<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuário\>\AppData\Local|
+|Windows 8, Windows 7, Windows Server 2008, Windows Vista|Repositórios com suporte a uso móvel =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuário\>\AppData\Roaming<br /><br /> Repositórios não móveis =<br /><br /> \<SYSTEMDRIVE>\Users\\<usuário\>\AppData\Local|
 
 <a name="isolated_storage_tasks"></a>
 
@@ -126,11 +126,11 @@ O uso permitido especificado por <xref:System.Security.Permissions.IsolatedStora
 
 O .NET Framework fornece três classes no namespace <xref:System.IO.IsolatedStorage> para ajudar a executar as tarefas que envolvem o armazenamento isolado:
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, deriva de <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> e fornece gerenciamento básico de arquivos de aplicativo e assembly armazenados. Uma instância da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> representa um único repositório localizado no sistema de arquivos.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>, que é derivado de <xref:System.IO.IsolatedStorage.IsolatedStorage?displayProperty=nameWithType> e fornece gerenciamento básico de assemblies armazenados e arquivos de aplicativos. Uma instância da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> representa um único repositório localizado no sistema de arquivos.
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> deriva de <xref:System.IO.FileStream?displayProperty=nameWithType> e fornece acesso aos arquivos em um repositório.
 
-- <xref:System.IO.IsolatedStorage.IsolatedStorageScope> é uma enumeração que permite criar e selecionar um repositório com o tipo de isolamento apropriado.
+- <xref:System.IO.IsolatedStorage.IsolatedStorageScope> é uma enumeração que permite que você crie e selecione um repositório com o tipo de isolamento apropriado.
 
 As classes de armazenamento isolado permitem que você crie, enumere e exclua o armazenamento isolado. Os métodos para a execução dessas tarefas estão disponíveis através do objeto <xref:System.IO.IsolatedStorage.IsolatedStorageFile>. Algumas operações exigem que você tenha a permissão <xref:System.Security.Permissions.IsolatedStorageFilePermission> que representa o direito para administrar o armazenamento isolado; você também pode precisar ter direitos do sistema operacional para acessar o arquivo ou diretório.
 
@@ -164,7 +164,7 @@ Muitos aplicativos usam bancos de dados para armazenar e isolar os dados. Nesse 
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
 |[Tipos de isolamento](../../../docs/standard/io/types-of-isolation.md)|Descreve os diferentes tipos de isolamento.|
 |[Como obter repositórios para o armazenamento isolado](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Fornece um exemplo de uso da classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> para obter um armazenamento isolado por usuário e assembly.|

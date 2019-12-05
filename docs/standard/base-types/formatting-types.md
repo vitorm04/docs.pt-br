@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: e362ad75fd9989cc87751286f83918d340a58820
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20aa7ecd354ef1a8982ae75eda87275c80cdaaf6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141489"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802460"
 ---
 # <a name="format-types-in-net"></a>Tipos de formato no .NET
 
@@ -85,7 +85,7 @@ Cada tipo é derivado de <xref:System.Object?displayProperty=nameWithType> herda
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> A partir do [!INCLUDE[win81](../../../includes/win81-md.md)], o Windows Runtime inclui uma interface <xref:Windows.Foundation.IStringable> com um único método, [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), que fornece suporte à formatação padrão. No entanto, recomendamos que tipos gerenciados não implementem a interface `IStringable`. Para obter mais informações, veja a seção "Windows Runtime e a Interface `IStringable`" na página de referência <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
+> A partir do Windows 8.1, o Windows Runtime inclui uma interface <xref:Windows.Foundation.IStringable> com um único método, [isastringable. ToString](xref:Windows.Foundation.IStringable.ToString%2A), que fornece suporte de formatação padrão. No entanto, recomendamos que tipos gerenciados não implementem a interface `IStringable`. Para obter mais informações, veja a seção "Windows Runtime e a Interface `IStringable`" na página de referência <xref:System.Object.ToString%2A?displayProperty=nameWithType>.
 
 Já que todos os tipos, com a exceção das interfaces, são derivados de <xref:System.Object>, essa funcionalidade é fornecida automaticamente para suas estruturas ou classes personalizadas. No entanto, a funcionalidade oferecida pelo método `ToString` padrão é limitada: embora ele identifique o tipo, não fornece nenhuma informação sobre uma instância do tipo. Para fornecer uma representação de cadeia de caracteres de um objeto que fornece informações sobre o objeto, você deve substituir o método `ToString`.
 
@@ -101,7 +101,7 @@ A exibição do nome de um tipo é geralmente de uso limitado e não permite que
 
 No .NET, o método `ToString` de cada tipo de valor primitivo foi substituído para exibir o valor do objeto, em vez de seu nome. A tabela a seguir mostra a substituição de cada tipo primitivo. Observe que a maioria dos métodos substituídos chama outra sobrecarga do método `ToString` e passa-a ao especificador de formato "G", que define o formato geral de seu tipo, além de um objeto <xref:System.IFormatProvider> que representa a cultura atual.
 
-|Digite|Substituição de ToString|
+|{1&gt;Tipo&lt;1}|Substituição de ToString|
 |----------|-----------------------|
 |<xref:System.Boolean>|Retorna <xref:System.Boolean.TrueString?displayProperty=nameWithType> ou <xref:System.Boolean.FalseString?displayProperty=nameWithType>.|
 |<xref:System.Byte>|Chama `Byte.ToString("G", NumberFormatInfo.CurrentInfo)` para formatar o valor <xref:System.Byte> para a cultura atual.|
@@ -211,7 +211,7 @@ Embora as cadeias de caracteres de formato padrão geralmente tratem da maioria 
 
 Todos os tipos numéricos (ou seja, os tipos <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64> e <xref:System.Numerics.BigInteger>), bem como o <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, e todos os tipos de enumeração, suportam a formatação com cadeias de caracteres de formato. Para obter informações sobre as cadeias de caracteres de formato específicas às quais cada tipo dá suporte, veja os seguintes tópicos:
 
-|Título|Definição|
+|Cargo|Definição|
 |-----------|----------------|
 |[Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas.|
 |[Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.|
@@ -251,7 +251,7 @@ O .NET fornece três classes que implementam <xref:System.IFormatProvider>:
 
 - <xref:System.Globalization.NumberFormatInfo>, uma classe que fornece informações de formatação numérica para uma cultura específica. Sua implementação de <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> retorna uma instância de si mesma.
 
-- <xref:System.Globalization.CultureInfo> Sua implementação de <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> pode retornar um objeto <xref:System.Globalization.DateTimeFormatInfo> para fornecer informações de formatação numérica ou um objeto <xref:System.Globalization.NumberFormatInfo> para fornecer informações de formatação para valores de data e hora.
+- <xref:System.Globalization.CultureInfo>. Sua implementação de <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> pode retornar um objeto <xref:System.Globalization.DateTimeFormatInfo> para fornecer informações de formatação numérica ou um objeto <xref:System.Globalization.NumberFormatInfo> para fornecer informações de formatação para valores de data e hora.
 
 Você também pode implementar seu próprio provedor de formato para substituir qualquer uma dessas classes. No entanto, se o seu método <xref:System.IFormatProvider.GetFormat%2A> de sua implementação precisar fornecer informações de formatação ao método `ToString`, ele deverá retornar um objeto do tipo listado na tabela anterior.
 
@@ -349,7 +349,7 @@ O exemplo a seguir usa a classe `ByteByByteFormatter` para formatar valores inte
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Definição|
+|Cargo|Definição|
 |-----------|----------------|
 |[Cadeias de Caracteres de Formato Numérico Padrão](../../../docs/standard/base-types/standard-numeric-format-strings.md)|Descreve cadeias de caracteres de formato padrão que criam representações de cadeia de caracteres de valores numéricos frequentemente usadas.|
 |[Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)|Descreve cadeias de caracteres de formato personalizado que criam formatos específicos de aplicativo para valores numéricos.|

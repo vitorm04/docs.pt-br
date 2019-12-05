@@ -8,12 +8,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
-ms.openlocfilehash: 8c4b328cdecb468af57fe699283584e901772175
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6098c2b855e692eef198e388ba9b29a4e8cc8de1
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091989"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802219"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Instalar o .NET Framework para desenvolvedores
 
@@ -43,8 +43,8 @@ Use a tabela a seguir para links rápidos, ou para ler mais detalhes. Para exibi
 |**4.6.1**|[Pacote do Desenvolvedor do .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=690706)|[Página de download do instalador da Web do 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Página de download do instalador offline do 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671744)|**Pode ser instalado no:**<br /><br/> Windows 10 <br /> Windows 8,1 e anteriores<br /> Windows Server 2012 R2 e anteriores<br /> (para obter uma lista completa, veja [requisitos do sistema](../get-started/system-requirements.md))|
 |**4.6**|Incluído no Visual Studio 2015.<br /><br /> [Pacote de Direcionamento do Microsoft .NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528261)|[Página de download do instalador da Web do 4.6](https://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Página de download do instalador offline do 4.6](https://go.microsoft.com/fwlink/?LinkId=528233)|**Incluído no:** <br/><br /> Windows 10 <br />[Visual Studio 2015](https://my.visualstudio.com/Downloads?q=visual%20studio%202015)<br /><br /> **Também pode ser instalado no:**<br /><br/> Windows 8,1 e anteriores<br /> Windows Server 2012 R2 e anteriores<br /> (para obter uma lista completa, veja [requisitos do sistema](../get-started/system-requirements.md))|
 |**4.5.2**|[Pacote do Desenvolvedor do Microsoft .NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Para utilizar com o Visual Studio 2013, Visual Studio 2012 ou outros IDEs|[Página de download do instalador da Web do 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Página de download do instalador offline do 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)|**Pode ser instalado no:**<br /><br/> Windows 8,1 e anteriores<br /> Windows Server 2012 R2 e anteriores<br /> (para obter uma lista completa, veja [requisitos do sistema](../get-started/system-requirements.md))|
-|**4.5.1**|[Pacote do Desenvolvedor do Microsoft .NET Framework 4.5.1](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Para ser usado com o Visual Studio 2013, o Visual Studio 2012 ou outros IDEs|[Página de download do instalador da Web do 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Página de download do instalador offline do 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Incluído no:**<br /> <br/>[!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Também pode ser instalado no:**<br /><br/> [!INCLUDE[win8](../../../includes/win8-md.md)] e anterior<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] e anterior<br />(para obter uma lista completa, veja [requisitos do sistema](../get-started/system-requirements.md))|
-|**4.5**|Incluído no Visual Studio 2012<br /><br /> Também disponível como parte do SDK do Windows 8|[Página de download do instalador da Web do 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Incluído no:** <br/><br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Também pode ser instalado no:**<br/><br /> Windows 7 e anteriores<br /> Windows Server 2008 SP2 e anteriores<br />(para obter uma lista completa, veja [requisitos do sistema](../get-started/system-requirements.md))|
+|**4.5.1**|[Pacote do Desenvolvedor do Microsoft .NET Framework 4.5.1](https://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Para ser usado com o Visual Studio 2013, o Visual Studio 2012 ou outros IDEs|[Página de download do instalador da Web do 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Página de download do instalador offline do 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)|**Incluído no:**<br /> <br/>Windows 8.1<br /> Windows Server 2012 R2<br /> [Visual Studio 2013](https://my.visualstudio.com/Downloads?q=visual%20studio%202013)<br /><br /> **Também pode ser instalado no:**<br /><br/> Windows 8 e anterior<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] e anterior<br />(para obter uma lista completa, veja [requisitos do sistema](../get-started/system-requirements.md))|
+|**4.5**|Incluído no Visual Studio 2012<br /><br /> Também disponível como parte do SDK do Windows 8|[Página de download do instalador da Web do 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|**Incluído no:** <br/><br /> Windows 8<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> [Visual Studio 2012](https://my.visualstudio.com/Downloads?q=visual%20studio%202012)<br /><br /> **Também pode ser instalado no:**<br/><br /> Windows 7 e anteriores<br /> Windows Server 2008 SP2 e anteriores<br />(para obter uma lista completa, veja [requisitos do sistema](../get-started/system-requirements.md))|
 
 Instale o **Pacote do Desenvolvedor** para uma versão específica do .NET Framework, se houver uma disponível, em todas as plataformas compatíveis.
 
@@ -194,7 +194,7 @@ Pacotes de idiomas são arquivos executáveis que contêm os recursos localizado
 
 A tabela a seguir lista os idiomas compatíveis.
 
-| Idioma              | Cultura |
+| {1&gt;Idioma&lt;1}              | Cultura |
 | --------------------- | :-----: |
 | Árabe                | ar      |
 | Tcheco                 | cs      |
@@ -203,7 +203,7 @@ A tabela a seguir lista os idiomas compatíveis.
 | Finlandês               | fi      |
 | Inglês (EUA)         | en-US   |
 | Francês                | fr      |
-| Alemão                | de      |
+| Alemão                | {1&gt;{2&gt;de&lt;2}&lt;1}      |
 | Grego                 | el      |
 | Hebraico                | he      |
 | Húngaro             | hu      |
@@ -221,7 +221,7 @@ A tabela a seguir lista os idiomas compatíveis.
 | Chinês tradicional   | zh-CHT  |
 | Turco               | tr      |
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 - Se você estiver começando no .NET Framework, veja a [visão geral](../get-started/overview.md) para obter uma introdução dos conceitos-chave e dos componentes.
 

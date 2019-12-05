@@ -2,12 +2,12 @@
 title: Específicos de recurso do Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 0c312eed1a5ba064771e7cc4c260b43d97b16315
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 869d6108edaa7f32101b6fe8d077e4eba7eef6b5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141876"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802590"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Específicos de recurso do Windows Workflow Foundation
 
@@ -95,15 +95,15 @@ O esquema de configuração do WCF é complexo e fornece aos usuários muitos re
 
 ### <a name="getting-started"></a>Guia de Introdução
 
-- [Guia do desenvolvedor para o WCF 4,0](https://go.microsoft.com/fwlink/?LinkId=204940)
+- [Guia do desenvolvedor para o WCF 4,0](https://docs.microsoft.com/previous-versions/dotnet/articles/ee354381(v=msdn.10))
 
-- [Fábrica de canais de configuração](https://go.microsoft.com/fwlink/?LinkId=204941)
+- [Fábrica de canais de configuração](xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601)
 
-- [Elemento de ponto de extremidade padrão](https://go.microsoft.com/fwlink/?LinkId=204942)
+- [Elemento de ponto de extremidade padrão](xref:System.ServiceModel.Configuration.StandardEndpointElement)
 
-- [Aprimoramentos de configuração de serviço no .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [Aprimoramentos de configuração de serviço no .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2009/06/30/service-configuration-improvements-in-net-4/)
 
-- [Erro comum de usuário no .NET 4: digitando incorretamente o nome da configuração do serviço WF/WCF](https://go.microsoft.com/fwlink/?LinkId=204944)
+- [Erro comum de usuário no .NET 4: digitando incorretamente o nome da configuração do serviço WF/WCF](https://blogs.msdn.microsoft.com/endpoint/2009/11/09/common-user-mistake-in-net-4-mistyping-the-wfwcf-service-configuration-name/)
 
 ### <a name="simplified-configuration-scenarios"></a>Cenários simplificados de configuração
 
@@ -125,9 +125,9 @@ O [DataContractResolver](../wcf/samples/datacontractresolver.md) resolve esses p
 
 ### <a name="getting-started"></a>Guia de Introdução
 
-- [Documentação da API do resolvedor de contrato de dados](https://go.microsoft.com/fwlink/?LinkId=204946)
+- [Documentação da API do resolvedor de contrato de dados](xref:System.Runtime.Serialization.DataContractResolver)
 
-- [Apresentando o resolvedor de contrato de dados](https://go.microsoft.com/fwlink/?LinkId=204947)
+- [Apresentando o resolvedor de contrato de dados](https://blogs.msdn.microsoft.com/youssefm/2009/06/05/configuring-known-types-dynamically-introducing-the-datacontractresolver/)
 
 - Exemplos:
 
@@ -287,7 +287,7 @@ O serviço de roteamento no .NET 4 foi projetado para facilitar a solução dess
 
 2. Exemplos: [Serviços &#91;de roteamento exemplos&#93; de WCF](../wcf/samples/routing-services.md)
 
-3. Blog: [regras de roteamento!](https://go.microsoft.com/fwlink/?LinkId=204956)
+3. Blog: [regras de roteamento!](https://blogs.msdn.microsoft.com/RoutingRules/)
 
 ### <a name="routing-scenarios"></a>Cenários de roteamento
 

@@ -2,12 +2,12 @@
 title: Novidades do .NET Core 2.0
 description: Conheça os novos recursos encontrados no .NET Core.
 ms.date: 08/13/2017
-ms.openlocfilehash: fcac4255e7370f31ea6c26771fdd7d341bafe38b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73100834"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801897"
 ---
 # <a name="whats-new-in-net-core-20"></a>Novidades do .NET Core 2.0
 
@@ -136,7 +136,7 @@ Para redirecionar seu projeto no Visual Studio, abra a guia **Aplicativo** da ca
 
 Sempre que você modifica o código, o Live Unit Testing executa os testes de unidade afetados automaticamente em segundo plano e exibe os resultados e a cobertura de código de forma dinâmica no ambiente do Visual Studio. O .NET Core 2.0 agora oferece suporte ao Live Unit Testing. Anteriormente, o Live Unit Testing estava disponível somente para aplicativos do .NET Framework.
 
-Para obter mais informações, confira [Live Unit Testing com o Visual Studio 2017](/visualstudio/test/live-unit-testing) e [Perguntas Frequentes sobre o Live Unit Testing](/visualstudio/test/live-unit-testing-faq).
+Para obter mais informações, consulte [Live Unit Testing com o Visual Studio](/visualstudio/test/live-unit-testing) e as [perguntas frequentes sobre Live Unit Testing](/visualstudio/test/live-unit-testing-faq).
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>Melhor suporte a várias estruturas de destino
 

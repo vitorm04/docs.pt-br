@@ -2,12 +2,12 @@
 title: Esquema de base de dados de persistência
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 65d8b2f7a6283d65823e1a186239d398ee4a530a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 025e04acb0d9cf75ea54814274c1875f8661eb88
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70038330"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802499"
 ---
 # <a name="persistence-database-schema"></a>Esquema de base de dados de persistência
 Este tópico descreve as visualizações públicas suportadas por instância Store de fluxo de trabalho SQL.  
@@ -15,7 +15,7 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 ## <a name="instances-view"></a>O modo de instâncias  
  A exibição **instâncias** contém informações gerais sobre todas as instâncias de fluxo de trabalho no banco de dados.  
   
-|Nome da coluna|Tipo de coluna|Descrição|  
+|Nome da Coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
 |InstanceId|UniqueIdentifier|A identificação de uma instância de fluxo de trabalho.|  
 |PendingTimer|DateTime|Indica que o fluxo de trabalho está bloqueado em uma atividade do atraso e continuado será depois que o timer expirar. Esse valor pode ser zero se o fluxo de trabalho não é espera com barreira na um timer expirar.|  
@@ -27,29 +27,29 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 |ActiveBookmarks|Nvarchar (máximo)|Se a instância de fluxo de trabalho estiver ocioso, essa propriedade indica que indicadores a instância é bloqueada sobre. Se a instância não estiver ocioso, então essa coluna é NULA.|  
 |CurrentMachine|Nvarchar(128)|Indica que o nome do computador atualmente tem a instância de fluxo de trabalho carregado na memória.|  
 |LastMachine|Nvarchar(450)|Indica o computador o último que carregou a instância de fluxo de trabalho.|  
-|ExecutionStatus|Nvarchar(450)|Indica o estado atual de execução de fluxo de trabalho. Os Estados possíveisincluem execuções, **ociosas**, **fechadas**.|  
+|ExecutionStatus|Nvarchar(450)|Indica o estado atual de execução de fluxo de trabalho. Os Estados possíveis incluem **execuções**, **ociosas**, **fechadas**.|  
 |IsInitialized|Bit|Indica se a instância de fluxo de trabalho foi inicializada. Uma instância inicializada de fluxo de trabalho é uma instância de fluxo de trabalho que é mantido pelo menos uma vez.|  
 |IsSuspended|Bit|Indica se a instância de fluxo de trabalho foi suspendida.|  
 |IsCompleted|Bit|Indica se a instância de fluxo de trabalho terminou de executar. **Observação:**  IIf a propriedade **InstanceCompletionAction** é definida como **DeleteAll**, as instâncias são removidas da exibição após a conclusão.|  
 |EncodingOption|TinyInt|Descreve a codificação usada para serializar as propriedades de dados.<br /><br /> -0 – sem codificação<br />-1 – GzipStream|  
-|ReadWritePrimitiveDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que serão fornecidos de volta para o tempo de execução de fluxo de trabalho que a instância é carregada.<br /><br /> Cada propriedade primitiva é um tipo nativo de CLR, o que significa que qualquer conjunto especial é necessário para desserializar a operação.|  
-|WriteOnlyPrimitiveDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que não são fornecidas de volta para o tempo de execução de fluxo de trabalho que a instância é carregada.<br /><br /> Cada propriedade primitiva é um tipo nativo de CLR, o que significa que qualquer conjunto especial é necessário para desserializar a operação.|  
-|ReadWriteComplexDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que serão fornecidos de volta para o tempo de execução de fluxo de trabalho que a instância é carregada.<br /><br /> Desserialização um exigiria conhecimento de todos os tipos de objeto armazenados nesta operação.|  
-|WriteOnlyComplexDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que não são fornecidas de volta para o tempo de execução de fluxo de trabalho que a instância é carregada.<br /><br /> Desserialização um exigiria conhecimento de todos os tipos de objeto armazenados nesta operação.|  
+|ReadWritePrimitiveDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que serão fornecidos de volta para o runtime de fluxo de trabalho que a instância é carregada.<br /><br /> Cada propriedade primitiva é um tipo nativo de CLR, o que significa que qualquer conjunto especial é necessário para desserializar a operação.|  
+|WriteOnlyPrimitiveDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que não são fornecidas de volta para o runtime de fluxo de trabalho que a instância é carregada.<br /><br /> Cada propriedade primitiva é um tipo nativo de CLR, o que significa que qualquer conjunto especial é necessário para desserializar a operação.|  
+|ReadWriteComplexDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que serão fornecidos de volta para o runtime de fluxo de trabalho que a instância é carregada.<br /><br /> Desserialização um exigiria conhecimento de todos os tipos de objeto armazenados nesta operação.|  
+|WriteOnlyComplexDataProperties|Varbinary (máximo)|Contém serializou as propriedades de dados de instância que não são fornecidas de volta para o runtime de fluxo de trabalho que a instância é carregada.<br /><br /> Desserialização um exigiria conhecimento de todos os tipos de objeto armazenados nesta operação.|  
 |IdentityName|Nvarchar (máximo)|O nome da definição de fluxo de trabalho.|  
 |IdentityPackage|Nvarchar (máximo)|Informações de pacote fornecida quando o fluxo de trabalho foi criado (como o nome assembly).|  
-|Build|BigInt|O número de compilação de versão de fluxo de trabalho.|  
+|{1&gt;Compilação&lt;1}|BigInt|O número de compilação de versão de fluxo de trabalho.|  
 |Principal|BigInt|O número de versão principal de fluxo de trabalho.|  
 |Secundário|BigInt|O menor número de versão de fluxo de trabalho.|  
-|Revisão|BigInt|O número de revisão de versão de fluxo de trabalho.|  
+|Revision|BigInt|O número de revisão de versão de fluxo de trabalho.|  
   
 > [!CAUTION]
-> A exibição **instâncias** também contém um gatilho DELETE. Os usuários com as permissões apropriadas podem executar instruções de exclusão nesta exibição que removerá vigorosa as instâncias de fluxo de trabalho de base de dados. Recomendamos excluir diretamente de exibição somente como um recurso o último como excluir uma instância sob o tempo de execução de fluxo de trabalho pode levar a consequências não intencionais. Em vez disso, use o ponto final de gerenciamento de instância de fluxo de trabalho para que o tempo de execução de fluxo de trabalho finalizar a instância. Se você deseja excluir um grande número de instâncias de exibição, certifique-se de que não há nenhum tempo de execução ativa que pode operar nessas instâncias.  
+> A exibição **instâncias** também contém um gatilho DELETE. Os usuários com as permissões apropriadas podem executar instruções de exclusão nesta exibição que removerá vigorosa as instâncias de fluxo de trabalho de base de dados. Recomendamos excluir diretamente de exibição somente como um recurso o último como excluir uma instância sob o runtime de fluxo de trabalho pode levar a consequências não intencionais. Em vez disso, use o ponto final de gerenciamento de instância de fluxo de trabalho para que o runtime de fluxo de trabalho finalizar a instância. Se você deseja excluir um grande número de instâncias de exibição, certifique-se de que não há nenhum runtime ativa que pode operar nessas instâncias.  
   
 ## <a name="servicedeployments-view"></a>O modo de ServiceDeployments  
- A exibição de implantações contém informações de implantação para todos os serviços de fluxo de trabalho hospedados na Web (IIS/WAS). Cada instância de fluxo de trabalho hospedada na Web conterá um serviceInstance que se refere a uma linha nessa exibição.  
+ A exibição de **implantações** contém informações de implantação para todos os serviços de fluxo de trabalho hospedados na Web (IIS/WAS). Cada instância de fluxo de trabalho hospedada na Web conterá um **serviceInstance que se** refere a uma linha nessa exibição.  
   
-|Nome da coluna|Tipo de coluna|Descrição|  
+|Nome da Coluna|Tipo de coluna|Descrição|  
 |-----------------|-----------------|-----------------|  
 |ServiceDeploymentId|BigInt|A chave primária para esta exibição.|  
 |SiteName|Nvarchar (máximo)|Representa o nome do site que contém o serviço de fluxo de trabalho (por exemplo, **site padrão**).|  
@@ -58,7 +58,7 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
 |ServiceName|Nvarchar (máximo)|Representa o nome do serviço de fluxo de trabalho. (por exemplo, **PurchaseOrderService**).|  
 |ServiceNamespace|Nvarchar (máximo)|Representa o namespace do serviço de fluxo de trabalho. (por exemplo, **MyCompany**).|  
   
- O modo de ServiceDeployments também contém um disparador de exclusão. Os usuários com as permissões apropriadas podem executar instruções de exclusão nesta exibição para remover entradas de ServiceDeployment de base de dados. Observe que:  
+ O modo de ServiceDeployments também contém um disparador de exclusão. Os usuários com as permissões apropriadas podem executar instruções de exclusão nesta exibição para remover entradas de ServiceDeployment de base de dados. {1&gt;Observe que:&lt;1}  
   
 1. Excluir entradas desta exibição é grande desde que o base de dados inteiro deve ser bloqueado antes de executar esta operação. Isso é necessário para evitar o cenário onde uma instância de fluxo de trabalho pode referir-se a uma entrada inexistente de ServiceDeployment. Excluir desta exibição somente durante o tempo de inatividade/janelas de aplicativos.  
   
@@ -78,4 +78,4 @@ Este tópico descreve as visualizações públicas suportadas por instância Sto
  O modo de InstancePromotedProperties é limite do esquema, o que significa que os usuários podem adicionar índices em uma ou mais colunas para otimizar consultas nesta exibição.  
   
 > [!NOTE]
-> Uma exibição indexada requer mais armazenamento e adicione a sobrecarga adicional de processamento. Veja melhorando o [desempenho com exibições indexadas do SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=179529) para obter mais informações.
+> Uma exibição indexada requer mais armazenamento e adicione a sobrecarga adicional de processamento. Veja [melhorando o desempenho com exibições indexadas do SQL Server 2008](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/dd171921(v=sql.100)) para obter mais informações.

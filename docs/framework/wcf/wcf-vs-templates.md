@@ -2,12 +2,12 @@
 title: Modelos do Visual Studio do WCF
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-ms.openlocfilehash: 1b4a600e4ed19b967bcaeb6d880ea181b7c2d61f
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: ec73036921632bc855e79239f1fc578587de7ca3
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197198"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802353"
 ---
 # <a name="wcf-visual-studio-templates"></a>Modelos do Visual Studio do WCF
 Os modelos do Windows Communication Foundation (WCF) do Visual Studio são modelos de projeto e item predefinidos que você pode usar no Visual Studio para criar rapidamente serviços WCF e aplicativos adjacentes.  
@@ -72,7 +72,7 @@ Os modelos do Windows Communication Foundation (WCF) do Visual Studio são model
  Se você alterar o endereço do feed, também deverá alterar o endereço na guia **depurar** . Se você não fizer isso, o Internet Explorer tentará abrir o feed no endereço padrão e falhará.  
   
 ### <a name="ajax-enabled-wcf-service-item-template"></a>Modelo de item de serviço WCF habilitado para AJAX  
- Esse modelo expõe um controle AJAX como um serviço WCF. Para obter mais informações sobre controles AJAX, consulte a [documentação do controle Ajax](https://go.microsoft.com/fwlink/?LinkId=96717).  
+ Esse modelo expõe um controle AJAX como um serviço WCF. Para obter mais informações sobre controles AJAX, consulte a [documentação do controle Ajax](https://docs.microsoft.com/aspnet/ajax/).  
   
 ### <a name="silverlight-enabled-wcf-service-item-template"></a>Modelo de item de serviço WCF habilitado para Silverlight  
  Este modelo cria um serviço Web que fornece dados para um cliente Silverlight ou front-end. O modelo pode ser adicionado a um site da Web ou a um projeto de aplicativo Web para criar um serviço WCF, que inclui o código de serviço e a configuração que dão suporte à comunicação com um cliente do Silverlight. Você pode usar **Adicionar referência de serviço** para adicionar um proxy de cliente do serviço ao cliente e trocar dados entre o cliente Silverlight e o serviço WCF habilitado para Silverlight.  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 ms.assetid: 4d1111c0-9447-4231-a997-96a2b74b3453
-ms.openlocfilehash: 5ce98a7908470a402779436db43333d46f5101fc
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: b43c3f6fd8ca56aaa99fffd40317920ee7600a2c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72180149"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802707"
 ---
 # <a name="json-serialization-in-net---overview"></a>Serialização JSON no .NET-visão geral
 
@@ -35,10 +35,10 @@ A biblioteca também fornece classes para trabalhar com um modelo de objeto de d
 ## <a name="additional-resources"></a>Recursos adicionais
 
 * [Como usar a biblioteca](system-text-json-how-to.md)
-* [Código-fonte](https://github.com/dotnet/corefx/tree/master/src/System.Text.Json)
+* [Código-fonte](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Text.Json)
 * [Referência de API](xref:System.Text.Json)
-* [Roadmap](https://github.com/dotnet/corefx/blob/master/src/System.Text.Json/roadmap/README.md)
+* [Roadmap](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Text.Json/roadmap/README.md)
 * Problemas do GitHub no repositório dotnet/corefx
-  * [Discussão sobre o desenvolvimento de System. Text. JSON](https://github.com/dotnet/corefx/issues/33115)
-  * [Todos os problemas de System. Text. JSON](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
-  * [Problemas de System. Text. JSON rotulados como JSON-funcionalidade-doc](https://github.com/dotnet/corefx/labels/json-functionality-doc)
+  * [Discussão sobre o desenvolvimento de System. Text. JSON](https://github.com/dotnet/corefx/issues/33115) <!-- TODO: Issues are still not moved to the new repo-->
+  * [Todos os problemas de System. Text. JSON](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)
+  * [Problemas de System. Text. JSON rotulados como JSON-funcionalidade-doc](https://github.com/dotnet/runtime/labels/json-functionality-doc)

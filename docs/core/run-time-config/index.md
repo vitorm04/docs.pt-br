@@ -2,12 +2,12 @@
 title: Configuração de tempo de execução
 description: Saiba como configurar aplicativos .NET Core usando as definições de configuração de tempo de execução.
 ms.date: 11/13/2019
-ms.openlocfilehash: e3922f6df81198b5e122f16d5cfc4b6d15cbb4ae
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 2665026347e94d26026821beb2bfcf8441f755f6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567385"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801921"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>Definições de configuração de tempo de execução do .NET Core
 
@@ -26,11 +26,11 @@ O .NET Core fornece os seguintes mecanismos para configurar aplicativos em tempo
 
 - [Variáveis de ambiente](#environment-variables)
 
-Os artigos nesta seção da documentação incluem são organizados por categoria, por exemplo, depuração e coleta de lixo. As opções de configuração disponíveis são mostradas para *runtimeconfig. JSON* (somente no .NET Core), *app. config* (somente .NET Framework) e variáveis de ambiente.
+Os artigos nesta seção da documentação incluem são organizados por categoria, por exemplo, depuração e coleta de lixo. Quando aplicável, as opções de configuração são mostradas para *runtimeconfig. JSON* (somente no .NET Core), *app. config* (somente .NET Framework) e variáveis de ambiente.
 
 ## <a name="runtimeconfigjson"></a>runtimeconfig. JSON
 
-Especifique as opções de configuração de tempo de execução na seção **configproperties** do arquivo *runtimeconfig. JSON* . Esta seção tem o formato:
+Especifique as opções de configuração de tempo de execução na seção **configproperties** do arquivo *runtimeconfig. JSON* do aplicativo. Esta seção tem o formato:
 
 ```json
 {

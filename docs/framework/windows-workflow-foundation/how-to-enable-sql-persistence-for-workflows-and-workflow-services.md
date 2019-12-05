@@ -2,18 +2,18 @@
 title: 'Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 4dc5648d748372828c5b9a36441bfb02eef045e1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460881"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802577"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho
 
 Este tópico descreve como configurar o recurso de Store de instância de fluxo de trabalho SQL para ativar persistência para os fluxos de trabalho e fluxo de trabalho serviços de aplicativos por meio e usando um arquivo de configuração.
 
-A tela de aplicativo Windows Server simplifica o processo de configurar a persistência. Para obter mais informações, consulte [configuração de persistência do App Fabric](https://go.microsoft.com/fwlink/?LinkId=201204).
+A tela de aplicativo Windows Server simplifica o processo de configurar a persistência. Para obter mais informações, consulte [configuração de persistência do App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee790848(v=azure.10)).
 
 Antes de usar o recurso de Store de instância de fluxo de trabalho SQL, crie um base de dados que o recurso usa para manter instâncias de fluxo de trabalho. Arquivos de script SQL das cópias do programa de instalação de [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] associados com o recurso de Store de instância de fluxo de trabalho SQL ao %WINDIR% \ Microsoft.NET \ Framework \ v4.xxx pasta \ \ EN SQL. Executar esses arquivos de script em um base de dados SQL Server 2005 ou SQL Server 2008 que você deseja a instância Store de fluxo de trabalho SQL para usar para persistir instâncias de fluxo de trabalho. Execute o arquivo de SqlWorkflowInstanceStoreSchema.sql primeiro e execute o arquivo de SqlWorkflowInstanceStoreLogic.sql.
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> É recomendável que você não armazene informações sigilosas como nomes de usuário e senhas no arquivo web.config. Se você armazenar informações confidenciais no arquivo web.config, você deve proteger o acesso ao arquivo web.config usando listas de controle de acesso (ACLs) do sistema de arquivos. Além disso, você também pode proteger os valores de configuração em um arquivo de configuração, conforme mencionado na [criptografia de informações de configuração usando a configuração protegida](https://go.microsoft.com/fwlink/?LinkId=178419).
+> É recomendável que você não armazene informações sigilosas como nomes de usuário e senhas no arquivo web.config. Se você armazenar informações confidenciais no arquivo web.config, você deve proteger o acesso ao arquivo web.config usando listas de controle de acesso (ACLs) do sistema de arquivos. Além disso, você também pode proteger os valores de configuração em um arquivo de configuração, conforme mencionado na [criptografia de informações de configuração usando a configuração protegida](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100)).
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Elementos Machine.config relacionados ao recurso de Store de instância de fluxo de trabalho do SQL
 

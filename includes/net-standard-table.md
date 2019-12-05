@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9b8d28f7f5508b4ba7c46306b5e78aa3d53d95e0
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: 9e95db8a1530fabd30b5344c87728b9210c0ad69
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71263339"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802841"
 ---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               | [2.1] |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|---------------------
@@ -12,16 +12,16 @@ ms.locfileid: "71263339"
 | .NET Framework <sup>1</sup>| 4.5    | 4.5    | 4.5.1 | 4.6   | 4.6.1 | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup> | 4.6.1 <sup>2</sup>  | N/A<sup>3</sup> |
 | Mono                       | 4.6    | 4.6    | 4.6   | 4.6   | 4.6   | 4.6                | 4.6                | 5.4                 | 6.4 |
 | Xamarin.iOS                | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0               | 10.0               | 10.14               | 12.16 |
-| Xamarin.Mac                | 3.0    | 3.0    | 3.0   | 3.0   | 3.0   | 3.0                | 3.0                | 3.8                 | 5,16 |
+| Xamarin.Mac                | 3.0    | 3.0    | 3.0   | 3.0   | 3.0   | 3.0                | 3.0                | 3.8                 | 5.16 |
 | Xamarin.Android            | 7.0    | 7.0    | 7.0   | 7.0   | 7.0   | 7.0                | 7.0                | 8.0                 | 10.0 |
 | Plataforma Universal do Windows | 10.0   | 10.0   | 10.0  | 10.0  | 10.0  | 10.0.16299         | 10.0.16299         | 10.0.16299          | TBD |
 | Unity                      | 2018.1 | 2018.1 | 2018.1| 2018.1| 2018.1| 2018.1             |  2018.1            | 2018.1              | TBD |
 
-<sup>1 As versões listadas para o .NET Framework se aplicam ao SDK do .NET Core 2.0 e versões posteriores das ferramentas. Versões antigas usavam um mapeamento diferente para o .NET Standard 1.5 e superiores. Você pode [fazer o download das ferramentas do .NET Core para Visual Studio 2015](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) se não puder atualizar para o Visual Studio 2017.</sup>
+<sup>1 as versões listadas para .NET Framework se aplicam ao SDK do .NET Core 2,0 e às versões posteriores das ferramentas. As versões mais antigas usaram um mapeamento diferente para .NET Standard 1,5 e superior. Você pode [baixar ferramentas para o .NET Core Tools para visual studio 2015](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md) se não for possível atualizar para o visual Studio 2017 ou uma versão posterior.</sup>
 
-<sup>2 As versões listadas aqui representam as regras que o NuGet usa para determinar se uma alguma biblioteca do .NET Standard é aplicável. Embora o NuGet considere o .NET Framework 4.6.1 como compatível com o .NET Standard 1.5 a 2.0, há vários problemas com o consumo de bibliotecas do .NET Standard que foram criadas para essas versões de projetos do .NET Framework 4.6.1. Para projetos do .NET Framework que precisam usar essas bibliotecas, recomendamos que você atualize o projeto para o .NET Framework 4.7.2 ou superior.</sup>
+<sup>2 as versões listadas aqui representam as regras que o NuGet usa para determinar se uma determinada biblioteca de .NET Standard é aplicável. Embora o NuGet considere .NET Framework 4.6.1 como suporte a .NET Standard 1,5 até 2,0, há vários problemas com o consumo de .NET Standard bibliotecas que foram criadas para essas versões de projetos .NET Framework 4.6.1. Para projetos .NET Framework que precisam usar essas bibliotecas, recomendamos que você atualize o projeto para o destino .NET Framework 4.7.2 ou superior.</sup>
 
-<sup>3 O .NET Framework não dá suporte ao .NET Standard 2.1 nem a versões posteriores. Para obter mais detalhes, confira o [comunicado do .NET Standard 2.1](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/).</sup>
+<sup>3 .NET Framework não oferecerá suporte a .NET Standard 2,1 ou versões posteriores. Para obter mais detalhes, consulte o [anúncio do .NET Standard 2,1](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-1/).</sup>
 
 - As colunas representam versões do .NET Standard. Cada célula de cabeçalho é um link para um documento que mostra quais APIs foram adicionadas a essa versão do .NET Standard.
 - As linhas representam as diferentes implementações do .NET.

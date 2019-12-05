@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 3e87ba8c9442c4bba24e4e569cd20bdbdc76f6ec
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 62777356dae6e2dce9753b832f08ab2fa2cb5881
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73457987"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801879"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Guia de implantação do .NET Framework para desenvolvedores
 Este tópico fornece informações para desenvolvedores que querem instalar qualquer versão do .NET Framework a partir do .NET Framework 4.5 até o [!INCLUDE[net_current](../../../includes/net-current-version.md)] com seus aplicativos.
@@ -51,7 +51,7 @@ Para obter os links de download, consulte a seção [Pacotes redistribuíveis](#
 
 - Você deve ter privilégios de administrador para instalar o .NET Framework 4.5 e suas versões de ponto.
 
-- O .NET Framework 4.5 está incluído no [!INCLUDE[win8](../../../includes/win8-md.md)] e [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], por isso, não é preciso implantá-lo com seu aplicativo nesses sistemas operacionais. De maneira semelhante, o .NET Framework 4.5.1 está incluído no [!INCLUDE[win81](../../../includes/win81-md.md)] e no Windows Server 2012 R2. O .NET Framework 4.5.2 não está incluído em nenhum sistema operacional. O .NET Framework 4.6 está incluído no Windows 10, o .NET Framework 4.6.1 está incluído na Atualização de novembro para Windows 10 e o .NET Framework 4.6.2 está incluído na Atualização de Aniversário do Windows 10.  O .NET Framework 4.7 está incluído na Atualização do Windows 10 para Criadores, o .NET Framework 4.7.1 está incluído na Windows 10 Fall Creators Update e o .NET Framework 4.7.2 está incluído na Atualização de outubro de 2018 para Windows 10 e na Atualização de abril de 2018 para Windows 10. O .NET Framework 4.8 está incluído na Atualização de maio de 2019 para Windows 10. Para obter uma lista completa de requisitos de hardware e software, consulte [Requisitos do sistema](../get-started/system-requirements.md).
+- .NET Framework 4,5 está incluído no Windows 8 e no [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], portanto, você não precisa implantá-lo com seu aplicativo nesses sistemas operacionais. Da mesma forma, o .NET Framework 4.5.1 está incluído no Windows 8.1 e no Windows Server 2012 R2. O .NET Framework 4.5.2 não está incluído em nenhum sistema operacional. O .NET Framework 4.6 está incluído no Windows 10, o .NET Framework 4.6.1 está incluído na Atualização de novembro para Windows 10 e o .NET Framework 4.6.2 está incluído na Atualização de Aniversário do Windows 10.  O .NET Framework 4.7 está incluído na Atualização do Windows 10 para Criadores, o .NET Framework 4.7.1 está incluído na Windows 10 Fall Creators Update e o .NET Framework 4.7.2 está incluído na Atualização de outubro de 2018 para Windows 10 e na Atualização de abril de 2018 para Windows 10. O .NET Framework 4.8 está incluído na Atualização de maio de 2019 para Windows 10. Para obter uma lista completa de requisitos de hardware e software, consulte [Requisitos do sistema](../get-started/system-requirements.md).
 
 - A partir do .NET Framework 4.5, seus usuários podem exibir uma lista dos aplicativos .NET Framework em execução durante a instalação e encerrá-los com facilidade. Isso pode ajudar a evitar reinicializações do sistema causadas por instalações do .NET Framework. Consulte [Reduzindo reinicializações do sistema](reducing-system-restarts.md).
 
@@ -82,7 +82,7 @@ O .NET Framework está disponível em dois pacotes redistribuíveis: o instalado
 |Tamanho do download|Menor (inclui somente o instalador para a plataforma de destino)*|Maior*|
 |Pacotes de idiomas|Inclusos**|Devem ser [instalados separadamente](#chain_langpack), a menos que você use o pacote destinado a todos os sistemas operacionais|
 |Método de implantação|Oferece suporte a todos os métodos:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX (Windows Installer XML)](#wix)<br />- [Instalação manual](#installing_manually)<br />- [Instalação personalizada (encadeamento)](#chaining)|Oferece suporte a todos os métodos:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX (Windows Installer XML)](#wix)<br />- [Instalação manual](#installing_manually)<br />- [Instalação personalizada (encadeamento)](#chaining)|
-|Local do download para implantação do ClickOnce|Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155) <br/> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|Seu próprio servidor ou o Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)<br /> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|Local do download para implantação do ClickOnce|{1&gt;Centro de Download da Microsoft&lt;1}:<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155) <br/> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|Seu próprio servidor ou o Centro de Download da Microsoft:<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)<br /> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
 \* O instalador offline é maior porque ele contém os componentes para todas as plataformas de destino. Ao terminar de executar a instalação, o sistema operacional Windows armazena em cache somente o instalador que foi utilizado. Se o instalador offline for excluído após a instalação, o espaço em disco usado será o mesmo que aquele usado pelo instalador da Web. Se a ferramenta usada (por exemplo, [InstallAware](#installaware-deployment) ou [InstallShield](#installshield-deployment)) para criar o programa de instalação do seu aplicativo oferecer uma pasta de arquivo de instalação que é removida após a instalação, o instalador offline poderá ser excluído automaticamente colocando-o na pasta de instalação.
 
@@ -259,7 +259,7 @@ O instalador do .NET Framework grava chaves do Registro quando a instalação é
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
-|Version|Valor da liberação de DWORD|
+|Versão do|Valor da liberação de DWORD|
 |-------------|--------------------------------|
 |.NET Framework 4.8 instalado na Atualização de maio de 2019 para Windows 10|528040|
 |.NET Framework 4.8 instalado em todas as versões do sistema operacional diferentes da Atualização de maio de 2019 para Windows 10|528049|
@@ -276,9 +276,9 @@ O instalador do .NET Framework grava chaves do Registro quando a instalação é
 |.NET Framework 4.6 instalado no Windows 10|393295|
 |.NET Framework 4.6 instalado em todas as versões do sistema operacional diferentes do Windows 10|393297|
 |.NET Framework 4.5.2|379893|
-|.NET Framework 4.5.1 instalado com [!INCLUDE[win81](../../../includes/win81-md.md)] ou Windows Server 2012 R2|378675|
-|.NET Framework 4.5.1 instalado no [!INCLUDE[win8](../../../includes/win8-md.md)], Windows 7|378758|
-|.NET Framework 4,5|378389|
+|.NET Framework 4.5.1 instalado com Windows 8.1 ou Windows Server 2012 R2|378675|
+|.NET Framework 4.5.1 instalado no Windows 8, Windows 7|378758|
+|{1&gt;{2&gt;.NET Framework 4.5&lt;2}&lt;1}|378389|
 
 ### <a name="detecting-the-language-packs"></a>Detectando os pacotes de idiomas
 
@@ -288,9 +288,9 @@ Por exemplo, para detectar se o pacote de idioma japonês completo (LCID = 1041)
 
 | | |
 |-|-|
-| Chave | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| Chave | HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
 | Name | Versão |
-| Digite | DWORD |
+| {1&gt;Tipo&lt;1} | DWORD |
 
 Para determinar se a versão de lançamento final de um pacote de idiomas está instalada para uma versão específica do .NET Framework do 4.5 ao 4.7.2, verifique o valor DWORD da chave RELEASE descrito na seção anterior, [Detectando o .NET Framework](#detect_net).
 
@@ -368,7 +368,7 @@ Veja o conteúdo a seguir:
 
 ## <a name="uninstalling-the-net-framework"></a>Desinstalando o .NET Framework
 
-A partir do [!INCLUDE[win8](../../../includes/win8-md.md)], é possível desinstalar o .NET Framework 4.5 ou uma de suas versões de ponto usando **Ativar e desativar recursos do Windows** no Painel de Controle. Em versões mais antigas do Windows, é possível desinstalar o .NET Framework 4.5 ou uma de suas versões de ponto usando **Adicionar ou Remover Programas** no Painel de Controle.
+A partir do Windows 8, você pode desinstalar o .NET Framework 4,5 ou uma de suas versões de ponto usando **ativar e desativar recursos do Windows** no painel de controle. Em versões mais antigas do Windows, é possível desinstalar o .NET Framework 4.5 ou uma de suas versões de ponto usando **Adicionar ou Remover Programas** no Painel de Controle.
 
 > [!IMPORTANT]
 > Para sistemas operacionais Windows 7 e versões anteriores, desinstalar o .NET Framework 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1, 4.7.2 ou 4.8 não restaura arquivos do .NET Framework 4.5, e desinstalar o .NET Framework 4.5 não restaura arquivos do .NET Framework 4. Se quiser retornar à versão mais antiga, você deverá reinstalá-lo e todas as suas atualizações.
@@ -407,7 +407,7 @@ A tabela a seguir lista os pacotes de idiomas do .NET Framework disponíveis par
 |1028|Chinês – Tradicional|zh-Hant|
 |1029|Tcheco|cs|
 |1030|Dinamarquês|da|
-|1031|Alemão – Alemanha|de|
+|1031|Alemão – Alemanha|{1&gt;{2&gt;de&lt;2}&lt;1}|
 |1032|Grego|el|
 |1035|Finlandês|fi|
 |1036|Francês – França|fr|

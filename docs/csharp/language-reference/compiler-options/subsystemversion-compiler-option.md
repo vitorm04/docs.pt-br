@@ -2,12 +2,12 @@
 title: -subsystemversion (opções do compilador C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: f70389f87bf49ffccded4aef775c27ed0d034e1f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: d76c9424340b4b6f3c211c849b466be55eb79d1e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922458"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802039"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (opções do compilador C#)
 
@@ -42,7 +42,7 @@ A seguinte tabela lista as versões de subsistema comuns do Windows.
 |Windows Vista|6.00|
 |Windows 7|6.01|
 |Windows Server 2008|6.01|
-|[!INCLUDE[win8](~/includes/win8-md.md)]|6.02|
+|Windows 8|6.02|
 
 ## <a name="default-values"></a>Valores padrão
 

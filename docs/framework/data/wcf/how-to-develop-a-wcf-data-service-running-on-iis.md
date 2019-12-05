@@ -1,5 +1,5 @@
 ---
-title: 'Como: desenvolver um serviço de dados do WCF em execução no IIS'
+title: 'Como: Desenvolver um WCF Data Service em execução no IIS'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 89be7aa8339a4edf6d6ab9c0c243e4320d2fdfa8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052970"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800519"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Como: Desenvolver um serviço de dados WCF em execução no IIS
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Como: desenvolver um serviço de dados WCF em execução no IIS
 
 Este tópico mostra como usar WCF Data Services para criar um serviço de dados que é baseado no exemplo Northwind que é hospedado por um aplicativo Web ASP.NET em execução no Serviços de Informações da Internet (IIS). Para obter um exemplo de como criar o mesmo serviço de dados Northwind como um aplicativo Web ASP.NET que é executado no ASP.NET Development Server, consulte o guia de [início rápido WCF Data Services](quickstart-wcf-data-services.md).
 
@@ -25,15 +25,15 @@ Este tópico mostra como usar WCF Data Services para criar um serviço de dados 
 
 Este tópico mostra como criar um serviço de dados usando o provedor de Entity Framework. Outros provedores de serviços de dados estão disponíveis. Para obter mais informações, consulte [provedores de serviços de dados](data-services-providers-wcf-data-services.md).
 
-Após criar o serviço, você deve fornecer explicitamente acesso aos recursos de serviço de dados. Para obter mais informações, confira [Como: Habilite o acesso ao serviço](how-to-enable-access-to-the-data-service-wcf-data-services.md)de dados.
+Após criar o serviço, você deve fornecer explicitamente acesso aos recursos de serviço de dados. Para obter mais informações, consulte [como habilitar o acesso ao serviço de dados](how-to-enable-access-to-the-data-service-wcf-data-services.md).
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>Criar o aplicativo Web ASP.NET que é executado no IIS
 
-1. No Visual Studio, no menu **arquivo** , selecione **novo** > **projeto**.
+1. No Visual Studio, no menu **Arquivo**, selecione **Novo** > **Projeto**.
 
 2. Na caixa de diálogo **novo projeto** , selecione a categoria **da Web** > **instalada** [ **C# Visual** ou **Visual Basic**] >.
 
-3. Selecione o modelo de **aplicativo Web ASP.net** .
+3. Selecione o modelo **Aplicativo Web ASP .NET** .
 
 4. Insira `NorthwindService` como o nome do projeto.
 
@@ -81,9 +81,9 @@ Após criar o serviço, você deve fornecer explicitamente acesso aos recursos d
 
     1. Abra o Gerenciador do IIS e navegue até o aplicativo de serviço em **site da Web padrão**.
 
-    2. Na **exibição recursos**, clique duas vezes em **autenticação**.
+    2. Em **Exibição de Recursos**, clique duas vezes em **Autenticação**.
 
-    3. Na página **autenticação** , selecione **autenticação anônima**.
+    3. Na página **Autenticação**, selecione **Autenticação anônima**.
 
     4. No painel **ações** , clique em **Editar** para definir a entidade de segurança sob a qual os usuários anônimos se conectarão ao site.
 
@@ -132,7 +132,7 @@ Após criar o serviço, você deve fornecer explicitamente acesso aos recursos d
 
 5. Conecte o modelo de dados ao banco de dado executando uma das etapas a seguir e clique em **Avançar**:
 
-    - Se você não tiver uma conexão de banco de dados já configurada, clique em **nova conexão** e crie uma nova conexão. Para obter mais informações, confira [Como: Crie conexões com bancos de dados](https://go.microsoft.com/fwlink/?LinkId=123631)SQL Server. Esta instância de SQL Server deve ter o banco de dados de exemplo Northwind anexado.
+    - Se você não tiver uma conexão de banco de dados já configurada, clique em **nova conexão** e crie uma nova conexão. Para obter mais informações, consulte [como: criar conexões para bancos de dados SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). Esta instância de SQL Server deve ter o banco de dados de exemplo Northwind anexado.
 
          \- ou -
 
@@ -151,11 +151,11 @@ Após criar o serviço, você deve fornecer explicitamente acesso aos recursos d
    ![Modelo de item do WCF Data Service no Visual Studio 2015](./media/wcf-data-service-item-template.png)
 
    > [!NOTE]
-   > O modelo do **WCF Data Service** está disponível no visual Studio 2015, mas não no visual Studio 2017.
+   > O modelo do **WCF Data Service** está disponível no visual Studio 2015, mas não no visual Studio 2017 ou posterior.
 
 3. Para o nome do serviço, digite `Northwind`.
 
-     O Visual Studio cria a marcação XML e os arquivos de código do novo serviço. Por padrão, a janela do editor de códigos é aberta. No **Gerenciador de soluções**, o serviço tem o nome, Northwind e a extensão. svc.cs ou. svc. vb.
+     O Visual Studio cria a marcação XML e arquivos de código para o novo serviço. Por padrão, a janela do editor de códigos é aberta. No **Gerenciador de soluções**, o serviço tem o nome, Northwind e a extensão. svc.cs ou. svc. vb.
 
 4. No código do serviço de dados, substitua o comentário `/* TODO: put your data source class name here */` na definição da classe que define o serviço de dados pelo tipo que é o contêiner de entidade do modelo de dados, que, neste caso, é `NorthwindEntities`. A definição da classe deve ter a seguinte aparência:
 

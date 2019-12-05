@@ -8,12 +8,12 @@ helpviewer_keywords:
 - requestCaching element
 - <requestCaching> element
 ms.assetid: 9962a2fe-cbda-41a6-9377-571811eaea84
-ms.openlocfilehash: f0979d2e0caeb0b22b90572aef0ad53235020f1d
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: afee69eb894518b1c88483e34a1d64d452019244
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697835"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802132"
 ---
 # <a name="requestcaching-element-network-settings"></a>\<Elemento requestCaching> (configurações de rede)
 Controla o mecanismo de cache para solicitações de rede.  
@@ -29,7 +29,7 @@ Controla o mecanismo de cache para solicitações de rede.
   isPrivateCache ="true|false"  
   disableAllCaching="true|false"  
   defaultPolicyLevel="BypassCache|Default|CacheOnly|CacheIfAvailable|Revalidate|Reload|NoCacheNoStore|Revalidate"  
-  unspecifiedMaximumAge= "d.hh.mm.ss">  
+  unspecifiedMaximumAge= "d.hh:mm:ss">  
     <defaultHttpCachePolicy>...</defaultHttpCachePolicy>  
     <defaultFtpCachePolicy>...</defaultFtpCachePolicy>  
 </requestCaching>
@@ -38,7 +38,7 @@ Controla o mecanismo de cache para solicitações de rede.
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
  As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
-### <a name="attributes"></a>Atributos  
+### <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
@@ -49,7 +49,7 @@ Controla o mecanismo de cache para solicitações de rede.
   
 ## <a name="policylevel-attribute"></a>Atributo policyLevel  
   
-|Valor|Descrição|  
+|Value|Descrição|  
 |-----------|-----------------|  
 |`Default`|Retorna o recurso armazenado em cache se o recurso for atualizado, se o tamanho do conteúdo for preciso e os atributos de expiração, modificação e comprimento do conteúdo estiverem presentes.|  
 |`BypassCache`|Retorna o recurso do servidor.|  
@@ -73,7 +73,7 @@ Controla o mecanismo de cache para solicitações de rede.
 |-------------|-----------------|  
 |[system.net](system-net-element-network-settings.md)|Contém configurações que especificam como o .NET Framework se conecta à rede.|  
   
-## <a name="example"></a>{1&gt;Exemplo&lt;1}  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como desabilitar todo o cache.  
   
 ```xml  

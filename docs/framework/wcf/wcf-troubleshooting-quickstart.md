@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 86aab2b39aaa9c7d7d92f7d5738482723cf6852f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: dfbf5a9b437d0acea16a75236fd3d2861c0f2e06
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320188"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802360"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Início rápido de solução de problemas do WCF
 Este tópico lista vários problemas conhecidos que os clientes têm ao desenvolver serviços e clientes WCF. Se o problema no qual você está executando não estiver nesta lista, recomendamos que você configure o rastreamento para seu serviço. Isso irá gerar um arquivo de rastreamento que você pode exibir com o Visualizador do arquivo de rastreamento e obter informações detalhadas sobre as exceções que podem estar ocorrendo dentro do serviço. Para obter mais informações sobre como configurar o rastreamento, consulte: [Configurando o rastreamento](./diagnostics/tracing/configuring-tracing.md). Para obter mais informações sobre o Visualizador de arquivos de rastreamento, consulte: [Service Trace Viewer Tool (SvcTraceViewer. exe)](service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -136,9 +136,9 @@ public class MyServiceHost : ServiceHost
   
 - [Depuração de erros de autenticação do Windows](./feature-details/debugging-windows-authentication-errors.md)  
   
-- [Registrando nomes de entidade de serviço Kerberos usando http. sys](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Registrando nomes de entidade de serviço Kerberos usando http. sys](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms178119(v=sql.105))  
   
-- [Explicações Kerberos](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Explicações Kerberos](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-2000-server/bb742516(v%3dtechnet.10))  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Quando lanço uma exceção de\<FaultException > em que o tipo é uma exceção, sempre recebi um tipo FaultException geral no cliente e não no tipo genérico. O que está acontecendo?  

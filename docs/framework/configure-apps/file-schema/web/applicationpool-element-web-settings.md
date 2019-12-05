@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: c88f4e5407e550047eaf0f5c8d0d2924da611e93
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 9783844ff0fe719b0581c1c9e1fb96eb31933b89
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699217"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801864"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<elemento de > applicationPool (configurações da Web)
 Especifica as definições de configuração que são usadas pelo ASP.NET para gerenciar o comportamento de todo o processo quando um aplicativo ASP.NET está sendo executado no modo integrado no IIS 7,0 ou em uma versão posterior.  
@@ -35,7 +35,7 @@ Especifica as definições de configuração que são usadas pelo ASP.NET para g
 
 As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
-### <a name="attributes"></a>Atributos  
+### <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
@@ -44,7 +44,7 @@ As seções a seguir descrevem os atributos, bem como os elementos filhos e pais
 |`requestQueueLimit`|Especifica o número máximo de solicitações que podem ser enfileiradas para ASP.NET em um único processo. Quando dois ou mais aplicativos ASP.NET são executados em um único pool de aplicativos, o conjunto cumulativo de solicitações que estão sendo feitas a qualquer aplicativo no pool de aplicativos está sujeito a essa configuração.|  
   
 ### <a name="child-elements"></a>Elementos filho  
- None.  
+ Nenhuma.  
   
 ### <a name="parent-elements"></a>Elementos Pai  
   
@@ -59,13 +59,13 @@ Quando você executa o IIS 7,0 ou uma versão posterior no modo integrado, essa 
 As configurações de `applicationPool` se aplicam a todos os pools de aplicativos executados em uma versão específica do .NET Framework. As configurações estão contidas em um arquivo Aspnet. config. Há uma versão desse arquivo para as versões 2,0 e 4,0 do .NET Framework. (As versões 3,0 e 3,5 do .NET Framework compartilham o arquivo Aspnet. config com a versão 2,0.)  
   
 > [!IMPORTANT]
-> Se você executar o IIS 7,0 em [!INCLUDE[win7](../../../../../includes/win7-md.md)], poderá configurar um arquivo Aspnet. config separado para cada pool de aplicativos. Isso permite que você personalize o desempenho dos threads para cada pool de aplicativos.  
+> Se você executar o IIS 7,0 no Windows 7, poderá configurar um arquivo Aspnet. config separado para cada pool de aplicativos. Isso permite que você personalize o desempenho dos threads para cada pool de aplicativos.  
   
 Para a configuração de `maxConcurrentRequestsPerCPU`, a configuração padrão de "5000" no .NET Framework 4 desativa efetivamente a limitação de solicitação controlada pelo ASP.NET, a menos que você realmente tenha 5000 ou mais solicitações por CPU. A configuração padrão depende, em vez disso, do pool de threads CLR para gerenciar automaticamente a simultaneidade por CPU. Os aplicativos que fazem uso extensivo do processamento assíncrono de solicitações ou que têm muitas solicitações de execução longa bloqueadas na e/s de rede, se beneficiarão do maior limite padrão no .NET Framework 4. Definir `maxConcurrentRequestsPerCPU` como zero desativa o uso de threads gerenciados para processar solicitações ASP.NET. Quando um aplicativo é executado em um pool de aplicativos do IIS, as solicitações permanecem no thread de e/s do IIS e, portanto, a simultaneidade é limitada pelas configurações de thread do IIS.  
   
 A configuração `requestQueueLimit` funciona da mesma maneira que o atributo `requestQueueLimit` do elemento [processModel](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7w2sway1(v=vs.100)) , que é definido nos arquivos Web. config para aplicativos ASP.net. No entanto, a configuração de `requestQueueLimit` em um arquivo Aspnet. config substitui a configuração de `requestQueueLimit` em um arquivo Web. config. Em outras palavras, se ambos os atributos forem definidos (por padrão, isso é verdadeiro), a configuração de `requestQueueLimit` no arquivo Aspnet. config terá precedência.  
   
-## <a name="example"></a>{1&gt;Exemplo&lt;1}  
+## <a name="example"></a>Exemplo  
 
 O exemplo a seguir mostra como configurar o comportamento do ASP.NET em todo o processo no arquivo Aspnet. config nas seguintes circunstâncias:  
   
@@ -88,11 +88,11 @@ Os valores no exemplo são os valores padrão.
 </configuration>  
 ```  
   
-## <a name="element-information"></a>Informações do elemento  
+## <a name="element-information"></a>Informações sobre elementos  
   
 |||  
 |-|-|  
-|{1&gt;Namespace&lt;1}||  
+|Namespace||  
 |Schema Name||  
 |Arquivo de validação||  
 |Pode estar vazio||  

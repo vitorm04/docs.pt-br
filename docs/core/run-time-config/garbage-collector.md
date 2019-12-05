@@ -1,14 +1,14 @@
 ---
 title: Definições de configuração do coletor de lixo
-description: Saiba mais sobre as configurações de tempo de execução para configurar como o coletor de lixo gerencia a memória.
+description: Saiba mais sobre as configurações de tempo de execução para configurar como o coletor de lixo gerencia a memória para aplicativos .NET Core.
 ms.date: 11/13/2019
 ms.topic: reference
-ms.openlocfilehash: 220b94e92f61fd44d2ab13291e41b8007a287cc7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428706"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800628"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opções de configuração de tempo de execução para coleta de lixo
 
@@ -38,7 +38,7 @@ Use as seguintes configurações para selecionar tipos de coleta de lixo:
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Server` | `false`-estação de trabalho<br/>servidor de `true` | .NET Core 1.0 |
-| **Variável de ambiente** | `COMPlus_gcServer` | 0-estação de trabalho<br/>1-servidor | .NET Core 1.0 |
+| **Variável de ambiente** | `COMPlus_gcServer` | `0`-estação de trabalho<br/>servidor de `1` | .NET Core 1.0 |
 | **App. config para .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-estação de trabalho<br/>servidor de `true` |  |
 
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. simultaneamente/COMPlus_gcConcurrent
@@ -110,13 +110,13 @@ Para obter mais informações sobre algumas dessas configurações, consulte o m
   Quando um computador com Windows de 64 bits tem vários grupos de CPU, ou seja, há mais de 64 processadores, a habilitação desse elemento estende a coleta de lixo em todos os grupos de CPU. O coletor de lixo usa todos os núcleos para criar e balancear heaps.
 
 - Aplica-se à coleta de lixo do servidor (GC) somente em sistemas de operação do Windows de 64 bits.
-- Padrão: desabilitado (0).
+- Padrão: desabilitado (`0`).
 - Para obter mais informações, consulte [tornando a configuração de CPU melhor para GC em computadores com > 64 CPUs](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/) no blog do Maoni Stephens '.
 
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
 | **runtimeconfig. JSON** | {1&gt;N/A&lt;1} | {1&gt;N/A&lt;1} | {1&gt;N/A&lt;1} |
-| **Variável de ambiente** | `COMPlus_GCCpuGroup` | 0-desabilitado<br/>1-habilitado | .NET Core 1.0 |
+| **Variável de ambiente** | `COMPlus_GCCpuGroup` | `0`-desabilitado<br/>habilitado para `1` | .NET Core 1.0 |
 | **App. config para .NET Framework** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false`-desabilitado<br/>habilitado para `true` |  |
 
 > [!NOTE]
@@ -131,7 +131,7 @@ Para obter mais informações sobre algumas dessas configurações, consulte o m
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.NoAffinitize` | `false`-relacionar<br/>`true`-não relacionar | .NET Core 3.0 |
-| **Variável de ambiente** | `COMPlus_GCNoAffinitize` | 0-relacionar<br/>1-não relacionar | .NET Core 3.0 |
+| **Variável de ambiente** | `COMPlus_GCNoAffinitize` | `0`-relacionar<br/>`1`-não relacionar | .NET Core 3.0 |
 | **App. config para .NET Framework** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false`-relacionar<br/>`true`-não relacionar | 4.6.2 |
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System. GC. HeapHardLimit/COMPlus_GCHeapHardLimit
@@ -166,34 +166,34 @@ Para obter mais informações sobre algumas dessas configurações, consulte o m
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-versão para o sistema operacional<br/>`true`-Put em espera| .NET Core 1.0 |
-| **Variável de ambiente** | `COMPlus_GCRetainVM` | 0-liberar para o sistema operacional<br/>1-colocar em espera | .NET Core 1.0 |
+| **Variável de ambiente** | `COMPlus_GCRetainVM` | `0`-versão para o sistema operacional<br/>`1`-Put em espera | .NET Core 1.0 |
 
 ## <a name="large-pages"></a>Páginas grandes
 
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
 - Especifica se páginas grandes devem ser usadas quando um limite rígido de heap for definido.
-- Padrão: desabilitado (0).
+- Padrão: desabilitado (`0`).
 - Essa é uma configuração experimental.
 
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
 | **runtimeconfig. JSON** | {1&gt;N/A&lt;1} | {1&gt;N/A&lt;1} | {1&gt;N/A&lt;1} |
-| **Variável de ambiente** | `COMPlus_GCLargePages` | 0-desabilitado<br/>1-habilitado | .NET Core 3.0 |
+| **Variável de ambiente** | `COMPlus_GCLargePages` | `0`-desabilitado<br/>habilitado para `1` | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>Objetos grandes
 
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
 - Configura o suporte ao coletor de lixo em plataformas de 64 bits para matrizes com mais de 2 gigabytes (GB) no tamanho total.
-- Padrão: habilitado (1).
+- Padrão: habilitado (`1`).
 - Essa opção pode se tornar obsoleta em uma versão futura do .NET.
 
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
 | **runtimeconfig. JSON** | {1&gt;N/A&lt;1} | {1&gt;N/A&lt;1} | {1&gt;N/A&lt;1} |
-| **Variável de ambiente** | `COMPlus_gcAllowVeryLargeObjects` | 1-habilitado<br/> 0-desabilitado | .NET Core 1.0 |
-| **App. config para .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | 1-habilitado<br/> 0-desabilitado | .NET Framework 4.5 |
+| **Variável de ambiente** | `COMPlus_gcAllowVeryLargeObjects` | habilitado para `1`<br/> `0`-desabilitado | .NET Core 1.0 |
+| **App. config para .NET Framework** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | habilitado para `1`<br/> `0`-desabilitado | {1&gt;{2&gt;.NET Framework 4.5&lt;2}&lt;1} |
 
 ## <a name="large-object-heap-threshold"></a>Limite de heap de objeto grande
 

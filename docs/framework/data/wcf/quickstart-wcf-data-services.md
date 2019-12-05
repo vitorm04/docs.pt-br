@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: d0002182c5ae519c36348acdd2587bca499fe72e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: df3151dfd3628231d84d2d128c61d1c0b6b0d48e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975137"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800357"
 ---
 # <a name="quickstart-wcf-data-services"></a>Guia de Início Rápido (WCF Data Services)
 
@@ -20,13 +20,13 @@ Este guia de início rápido ajuda você a se familiarizar com WCF Data Services
 
 A primeira tarefa neste guia de início rápido mostra como criar um serviço de dados para expor um feed OData do banco de dados de exemplo Northwind. Nos tópicos posteriores, você acessará o feed OData usando um navegador da Web e também criará um aplicativo cliente Windows Presentation Foundation (WPF) que consome o feed OData usando bibliotecas de cliente.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Para concluir este guia de início rápido, instale os seguintes componentes:
 
-- Visual Studio
+- {1&gt;Visual Studio&lt;1}
 
-- Uma instância de SQL Server. Isso inclui SQL Server Express, que está incluído em uma instalação padrão do Visual Studio 2015 ou como parte da carga de trabalho de **armazenamento e processamento de dados** no Visual Studio 2017.
+- Uma instância de SQL Server. Isso inclui SQL Server Express, que está incluído em uma instalação padrão do Visual Studio 2015 ou como parte da carga de trabalho de **armazenamento e processamento de dados** no visual Studio 2017 ou posterior.
 
 - O banco de dados de exemplo Northwind. Para baixar esse banco de dados de exemplo, consulte a página de download, [bancos de dados de exemplo para SQL Server](https://go.microsoft.com/fwlink/?linkid=24758).
 
@@ -47,7 +47,7 @@ Para concluir este guia de início rápido, instale os seguintes componentes:
 > [!NOTE]
 > Os arquivos de projeto de uma versão concluída do guia de início rápido podem ser baixados na página de [exemplos da documentação WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=179994) .
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 > [!div class="nextstepaction"]
 > [Iniciar o início rápido](creating-the-data-service.md)

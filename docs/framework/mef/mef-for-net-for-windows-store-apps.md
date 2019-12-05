@@ -2,15 +2,15 @@
 title: MEF para .NET para aplicativos da Windows Store
 ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
-ms.openlocfilehash: 6c1d4be7e2596446d4d3195d3c80207cfb3db400
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3a4c2a2f7f6096794f9ea723eec56aa74f5c44c5
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74713934"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802183"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>MEF para .NET para aplicativos da Windows Store
-<xref:System.Composition?displayProperty=nameWithType> e seus namespaces filho contêm tipos para desenvolver aplicativos extensível do Windows 8. x Store com Managed Extensibility Framework (MEF). Esses namespaces fazem parte do .NET para o subconjunto de aplicativos da loja do Windows 8. x para o sistema operacional [!INCLUDE[win8](../../../includes/win8-md.md)].  
+<xref:System.Composition?displayProperty=nameWithType> e seus namespaces filho contêm tipos para desenvolver aplicativos extensível do Windows 8. x Store com Managed Extensibility Framework (MEF). Esses namespaces fazem parte do .NET para o subconjunto de aplicativos da loja do Windows 8. x para o sistema operacional Windows 8.  
   
  Esses namespaces não fazem parte da biblioteca de classes principal distribuída com o .NET Framework. Para instalar esses namespaces, abra seu projeto no Visual Studio, escolha **Gerenciar Pacotes NuGet** no menu **Projeto** e pesquise online o pacote Microsoft.Composition.  
   

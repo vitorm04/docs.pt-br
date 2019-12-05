@@ -6,17 +6,17 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: 2f417aaba5361bea3bf2493001bca938d9dd08cb
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975489"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800206"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Visão geral de TextPattern de automação da interface do usuário
 
 > [!NOTE]
-> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746) (API de Automação do Windows: Automação da Interface do Usuário).
+> Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).
 
 Esta visão geral descreve como usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para expor o conteúdo textual, incluindo atributos de formato e estilo, de controles de texto em plataformas com suporte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Esses controles incluem, entre outros, o Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox>, bem como seus equivalentes de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].
 
@@ -50,7 +50,7 @@ Um controle de texto autônomo pode ser usado como um rótulo ou texto estático
 > [!NOTE]
 > Os controles de texto podem não aparecer na exibição de conteúdo da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] (consulte [visão geral da árvore de automação da interface do usuário](ui-automation-tree-overview.md)). Isso ocorre porque os controles de texto geralmente são exibidos por meio da propriedade Name de outro controle. Por exemplo, o texto usado para rotular um controle de edição é exposto por meio da propriedade Name do controle de edição. Como o controle de edição está na exibição de conteúdo da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], não é necessário que o elemento de texto em si esteja nessa exibição da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. O único texto que aparece na exibição de conteúdo é texto que não é informações redundantes. Isso permite que qualquer tecnologia assistencial filtre rapidamente apenas as informações de que seus usuários precisam.
 
-### <a name="edit"></a>Editar
+### <a name="edit"></a>Edit
 
 Os controles de edição permitem que um usuário exiba e edite uma única linha de texto.
 
@@ -137,7 +137,7 @@ O <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> absoluto 
 ![TextPatternRangeEndpoints &#40;iniciar e encerrar&#41;.](./media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")
 O seguinte ilustra um conjunto de pontos inicial e final.
 
-\ **TextRange**
+**TextRange**\
 Uma representação de um intervalo de texto, com pontos inicial e final, em um contêiner de texto, incluindo todos os atributos e funcionalidades associados.
 
 <xref:System.Windows.Automation.Text.TextUnit>\

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: c6856002288a46e78d1e1373201cf149407a814f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4c9acc3ef806eabea05d1b64080275293c83e895
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974011"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802144"
 ---
 # <a name="graphics-rendering-tiers"></a>Camadas de renderização de gráficos
 Um nível de renderização define um nível de funcionalidade de hardware de gráficos e de desempenho para um dispositivo que executa um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -54,7 +54,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
   
  A tabela a seguir mostra as diferenças nos requisitos de hardware de gráficos para o processamento da camada 1 e renderização camada 2:  
   
-|Recurso|Camada 1|Camada 2|  
+|Recurso|Camada 1|Nível 2|  
 |-------------|------------|------------|  
 |Versão do DirectX|Deve ser maior ou igual a 9,0.|Deve ser maior ou igual a 9,0.|  
 |RAM de vídeo|Deve ser maior ou igual a 60 MB.|Deve ser maior ou igual a 120 MB.|  
@@ -64,7 +64,7 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
   
  Os seguintes recursos e capacidades são acelerados por hardware para camada de renderização 1 e 2:  
   
-|Recurso|Anotações|  
+|Recurso|{1&gt;Observações&lt;1}|  
 |-------------|-----------|  
 |Renderização 2D|A maioria das renderizações 2D tem suporte.|  
 |Rasterização 3D|A maioria das rasterizações 3D tem suporte.|  
@@ -76,20 +76,20 @@ Um nível de renderização define um nível de funcionalidade de hardware de gr
   
  Os seguintes recursos e capacidades são acelerados por hardware apenas para a camada de renderização 2:  
   
-|Recurso|Anotações|  
+|Recurso|{1&gt;Observações&lt;1}|  
 |-------------|-----------|  
-|Suavização 3D|Há suporte para a AntiAlias 3D apenas em sistemas operacionais que dão suporte ao Windows Display Driver Model (WDDM), como o Windows Vista e o [!INCLUDE[win7](../../../../includes/win7-md.md)].|  
+|Suavização 3D|Há suporte para a AntiAlias 3D apenas em sistemas operacionais que dão suporte ao Windows Display Driver Model (WDDM), como o Windows Vista e o Windows 7.|  
   
  Os seguintes recursos e capacidades **não** são acelerados por hardware:  
   
-|Recurso|Anotações|  
+|Recurso|{1&gt;Observações&lt;1}|  
 |-------------|-----------|  
 |Conteúdo impresso|Todo conteúdo impresso é renderizado utilizando o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] pipeline de software.|  
 |Conteúdo rasterizado que usa <xref:System.Windows.Media.Imaging.RenderTargetBitmap>|Qualquer conteúdo renderizado usando o método <xref:System.Windows.Media.Imaging.RenderTargetBitmap.Render%2A> de <xref:System.Windows.Media.Imaging.RenderTargetBitmap>.|  
 |Conteúdo ao lado do ladrilho que usa <xref:System.Windows.Media.TileBrush>|Qualquer conteúdo em ladrilho no qual a propriedade <xref:System.Windows.Media.TileBrush.TileMode%2A> da <xref:System.Windows.Media.TileBrush> esteja definida como <xref:System.Windows.Media.TileMode.Tile>.|  
 |Superfícies que excedam o tamanho máximo de textura do hardware de gráficos|Para a maioria dos hardwares gráficos, superfícies grandes tem 2048x2048 ou 4096x4096 pixels de tamanho.|  
 |Qualquer operação cujo requisito de RAM de vídeo excede a memória do hardware de gráficos|Você pode monitorar o uso de memória RAM de vídeo do aplicativo usando a ferramenta Perforator incluída no [pacote de desempenho WPF](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100)) no SDK do Windows.|  
-|Janelas em camadas|Janelas em camadas permitem que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos renderizem o conteúdo na tela em uma janela não retangular. Em sistemas operacionais que dão suporte ao Windows Display Driver Model (WDDM), como o Windows Vista e [!INCLUDE[win7](../../../../includes/win7-md.md)], as janelas em camadas são aceleradas por hardware. Em outros sistemas, como [!INCLUDE[winxp](../../../../includes/winxp-md.md)], janelas em camadas são renderizadas por software sem aceleração de hardware.<br /><br /> Você pode habilitar janelas em camadas em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definindo as seguintes propriedades de <xref:System.Windows.Window>:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
+|Janelas em camadas|Janelas em camadas permitem que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos renderizem o conteúdo na tela em uma janela não retangular. Em sistemas operacionais que dão suporte ao Windows Display Driver Model (WDDM), como o Windows Vista e o Windows 7, as janelas em camadas são aceleradas por hardware. Em outros sistemas, como [!INCLUDE[winxp](../../../../includes/winxp-md.md)], janelas em camadas são renderizadas por software sem aceleração de hardware.<br /><br /> Você pode habilitar janelas em camadas em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definindo as seguintes propriedades de <xref:System.Windows.Window>:<br /><br /> -   <xref:System.Windows.Window.WindowStyle%2A> = <xref:System.Windows.WindowStyle.None><br />-   <xref:System.Windows.Window.AllowsTransparency%2A> = `true`<br />-   <xref:System.Windows.Controls.Control.Background%2A> = <xref:System.Windows.Media.Brushes.Transparent%2A>|  
   
 <a name="other_resources"></a>   
 ## <a name="other-resources"></a>Outros recursos  

@@ -2,12 +2,12 @@
 title: Configurando o rastreamento para um fluxo de trabalho
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: 25edef2edc23a3823a892c64809df21f333478db
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 97b25873e9f20d5d390b7a59531b3a5af32296df
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458907"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802668"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>Configurando o rastreamento para um fluxo de trabalho
 
@@ -134,7 +134,7 @@ if (null != workflowServiceHost)
 ```
 
 > [!NOTE]
-> Para obter mais informações sobre perfis de rastreamento, consulte [perfis de rastreamento](https://go.microsoft.com/fwlink/?LinkId=201310).
+> Para obter mais informações sobre perfis de rastreamento, consulte [perfis de rastreamento](tracking-profiles.md).
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>Configurando o rastreamento usando WorkflowInvoker
 
@@ -222,7 +222,7 @@ Se os eventos precisam ser gravados em um log do aplicativo específico, siga es
 
 6. Gerencia o DLL de recurso seguindo estas etapas.
 
-    1. Instalar o Windows SDK. A SDK do Windows inclui o compilador de mensagem ([MC. exe](https://go.microsoft.com/fwlink/?LinkId=184606)) e o compilador de recurso ([RC. exe](https://go.microsoft.com/fwlink/?LinkId=184605)).
+    1. Instalar o Windows SDK. A SDK do Windows inclui o compilador de mensagem ([MC. exe](/windows/win32/wes/message-compiler--mc-exe-)) e o compilador de recurso ([RC. exe](/windows/win32/menurc/using-rc-the-rc-command-line-)).
 
     2. Em um prompt de comando do Windows SDK, execução mc.exe no novo arquivo de manifesto.
 
@@ -250,7 +250,7 @@ Se os eventos precisam ser gravados em um log do aplicativo específico, siga es
         <provider name="Microsoft-Windows-Application Server-Applications_Provider1" guid="{2720e974-9fe9-477a-bb60-81fe3bf91eec}" symbol="Microsoft_Windows_ApplicationServer_ApplicationEvents" resourceFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll" messageFileName="<dll directory>\Microsoft.Windows.ApplicationServer.Applications_Provider1.dll">
         ```
 
-    7. Use [wevtutil](https://go.microsoft.com/fwlink/?LinkId=184608) para registrar o manifesto.
+    7. Use [wevtutil](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732848(v=ws.10)) para registrar o manifesto.
 
         ```console
         wevtutil im Microsoft.Windows.ApplicationServer.Applications_Provider1.man
@@ -258,5 +258,5 @@ Se os eventos precisam ser gravados em um log do aplicativo específico, siga es
 
 ## <a name="see-also"></a>Consulte também
 
-- [Monitoramento do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitorando aplicativos com o app Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitoramento do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Monitorando aplicativos com o app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

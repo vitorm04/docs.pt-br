@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 0d569d12b5bc555a07e94fa89c5a19f52f4a6b6c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 9ddb3fe637cd0402f0ce850bc523ae8cb0c5dc37
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318392"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801967"
 ---
 # <a name="designing-and-implementing-services"></a>Serviços de implantação e projeção
-Esta seção mostra como definir e implementar contratos do WCF. Um contrato de serviço especifica o que um ponto de extremidade se comunica com o mundo exterior. Em um nível mais concreto, trata-se de uma declaração sobre um conjunto de mensagens específicas organizadas em padrões de troca de mensagens básicos (MEPs), como solicitação/resposta, unidirecional e duplex. Se um contrato de serviço for um conjunto de trocas de mensagens logicamente relacionado, uma operação de serviço será uma única troca de mensagens. Por exemplo, uma operação `Hello` deve, obviamente, aceitar uma mensagem (para que o chamador possa anunciar a saudação) e pode ou não retornar uma mensagem (dependendo da cortesia da operação).  
+Esta seção mostra como definir e implementar contratos do WCF. Um contrato de serviço especifica o que um ponto de extremidade se comunica com o mundo exterior. Em um nível mais concreto, trata-se de uma declaração sobre um conjunto de mensagens específicas organizadas em padrões de troca de mensagens básicos (MEPs), como solicitação/resposta, unidirecional e duplex. Se um contrato de serviço for um conjunto de trocas de mensagens logicamente relacionado, uma operação de serviço será uma única troca de mensagens. Por exemplo, uma operação de `Hello` deve, obviamente, aceitar uma mensagem (para que o chamador possa anunciar a saudação) e pode ou não retornar uma mensagem (dependendo da cortesia da operação).  
   
  Para obter mais informações sobre contratos e outros conceitos de Windows Communication Foundation de núcleo (WCF), consulte [conceitos fundamentais de Windows Communication Foundation](fundamental-concepts.md). Este tópico se concentra na compreensão dos contratos de serviço. Para obter mais informações sobre como criar clientes que usam contratos de serviço para se conectar a serviços, consulte [visão geral do cliente WCF](wcf-client-overview.md).  
   
-## <a name="overview"></a>Visão Geral  
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}  
  Este tópico fornece uma orientação conceitual de alto nível para projetar e implementar serviços WCF. Os subtópicos fornecem informações mais detalhadas sobre as especificidades de design e implementação. Antes de projetar e implementar seu aplicativo WCF, é recomendável que você:  
   
 - Entenda o que é um contrato de serviço, como ele funciona e como criar um.  
@@ -38,7 +38,7 @@ Esta seção mostra como definir e implementar contratos do WCF. Um contrato de 
   
  Por exemplo, um contrato de ordem de compra pode ter uma operação `CreateOrder` que aceita uma entrada de tipos de informações de pedidos e retorna informações de êxito ou falha, incluindo um identificador de pedido. Ele também pode ter uma operação `GetOrderStatus` que aceita um identificador de pedido e retorna informações de status do pedido. Um contrato de serviço dessa classificação especificaria:  
   
-1. O contrato de ordem de compra consistiu em operações `CreateOrder` e `GetOrderStatus`.  
+1. O contrato de ordem de compra consistiu em operações de `CreateOrder` e `GetOrderStatus`.  
   
 2. Se as operações especificaram mensagens de entrada e mensagens de saída.  
   
@@ -46,7 +46,7 @@ Esta seção mostra como definir e implementar contratos do WCF. Um contrato de 
   
 4. Instruções categóricas sobre a infraestrutura de comunicação necessária para processar as mensagens com êxito. Por exemplo, esses detalhes incluem se e quais formas de segurança são necessárias para estabelecer uma comunicação bem-sucedida.  
   
- Para transmitir esse tipo de informação a outros aplicativos em várias plataformas (incluindo plataformas não Microsoft), os contratos de serviço XML são expressos publicamente em formatos XML padrão, como WSDL ( [Web Services Description Language](https://go.microsoft.com/fwlink/?LinkId=94952) ) e [esquema XML ](https://go.microsoft.com/fwlink/?LinkId=94953)(XSD), entre outros. Os desenvolvedores de várias plataformas podem usar essas informações de contrato público para criar aplicativos que podem se comunicar com o serviço, ambos porque entendem o idioma da especificação e porque esses idiomas foram projetados para permitir interoperação descrevendo os formulários públicos, os formatos e os protocolos aos quais o serviço dá suporte. Para obter mais informações sobre como o WCF lida com esse tipo de informação, consulte [metadados](./feature-details/metadata.md).  
+ Para transmitir esse tipo de informação a outros aplicativos em várias plataformas (incluindo plataformas não Microsoft), os contratos de serviço XML são publicamente expressos em formatos XML padrão, como WSDL ( [Web Services Description Language](https://www.w3.org/TR/2001/NOTE-wsdl-20010315) ) e XSD ( [XML Schema](https://www.w3.org/XML/Schema) ), entre outros. Os desenvolvedores de várias plataformas podem usar essas informações de contrato público para criar aplicativos que podem se comunicar com o serviço, ambos porque entendem o idioma da especificação e porque esses idiomas foram projetados para permitir interoperação descrevendo os formulários públicos, os formatos e os protocolos aos quais o serviço dá suporte. Para obter mais informações sobre como o WCF lida com esse tipo de informação, consulte [metadados](./feature-details/metadata.md).  
   
  Os contratos podem ser expressos de várias maneiras e, embora WSDL e XSD sejam excelentes linguagens para descrever os serviços de forma acessível, eles são as linguagens difíceis de usar diretamente e são apenas descrições de um serviço, não das implementações de contrato de serviço. Portanto, os aplicativos WCF usam atributos, interfaces e classes gerenciados para definir a estrutura de um serviço e para implementá-lo.  
   
@@ -57,7 +57,7 @@ Esta seção mostra como definir e implementar contratos do WCF. Um contrato de 
 ### <a name="messages-up-front-and-center"></a>Mensagens de frente e de centro  
  O uso de interfaces, classes e métodos gerenciados para modelar as operações de serviço é simples quando você é usado para assinaturas de método de estilo RPC (chamada de procedimento remoto), em que a passagem de parâmetros para um método e o recebimento de valores de retorno é a forma normal de solicitando funcionalidade de um objeto ou outro tipo de código. Por exemplo, os programadores que usam linguagens gerenciadas C++ , como Visual Basic e com, podem aplicar seu conhecimento da abordagem no estilo RPC (seja usando objetos ou interfaces) para a criação de contratos de serviço do WCF sem enfrentar os problemas inerentes em sistemas de objetos distribuídos no estilo RPC. A orientação do serviço fornece os benefícios da programação menos rígida e orientada a mensagens, mantendo a facilidade e a familiaridade da experiência de programação de RPC.  
   
- Muitos programadores são mais confortáveis com interfaces de programação de aplicativo orientadas a mensagens, como filas de mensagens como o Microsoft MSMQ, os namespaces <xref:System.Messaging> no .NET Framework ou o envio de XML não estruturado em solicitações HTTP, para citar alguns. Para obter mais informações sobre programação no nível da mensagem, consulte [usando contratos de mensagem](./feature-details/using-message-contracts.md), [programação de nível de canal de serviço](./extending/service-channel-level-programming.md)e [interoperabilidade com aplicativos Pox](./feature-details/interoperability-with-pox-applications.md).  
+ Muitos programadores são mais confortáveis com interfaces de programação de aplicativo orientadas a mensagens, como filas de mensagens como o Microsoft MSMQ, os namespaces de <xref:System.Messaging> no .NET Framework ou o envio de XML não estruturado em solicitações HTTP, para citar alguns. Para obter mais informações sobre programação no nível da mensagem, consulte [usando contratos de mensagem](./feature-details/using-message-contracts.md), [programação de nível de canal de serviço](./extending/service-channel-level-programming.md)e [interoperabilidade com aplicativos Pox](./feature-details/interoperability-with-pox-applications.md).  
   
 ### <a name="understanding-the-hierarchy-of-requirements"></a>Noções básicas sobre a hierarquia de requisitos  
  Um contrato de serviço agrupa as operações; Especifica o padrão de troca de mensagens, os tipos de mensagem e os tipos de dados que essas mensagens executam; e indica categorias de comportamento de tempo de execução que uma implementação deve ter para dar suporte ao contrato (por exemplo, pode exigir que as mensagens sejam criptografadas e assinadas). O próprio contrato de serviço não especifica precisamente como esses requisitos são atendidos, apenas que eles devem ser. O tipo de criptografia ou a maneira pela qual uma mensagem é assinada é a implementação e a configuração de um serviço em conformidade.  

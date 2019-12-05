@@ -2,12 +2,12 @@
 title: Host de serviço do WCF (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: a4efa0d5a46eb0d8e6eef08fd17c38f7db3e7e9e
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c855fe7cc804fac14348990b7a6f5f84a0956b0c
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423832"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802395"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host de serviço do WCF (WcfSvcHost.exe)
 
@@ -33,7 +33,7 @@ No entanto, você deve observar que a ferramenta não ajudará a configurar um h
 
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>Cenários para usar o host de serviço WCF dentro do Visual Studio
 
-A tabela a seguir lista todos os parâmetros na caixa de diálogo **argumentos de linha de comando** , que podem ser encontrados clicando com o botão direito do mouse em seu projeto no Gerenciador de **soluções** no Visual Studio, selecionando **Propriedades**e, em seguida, selecionando a **depuração** e clicando em **Iniciar projeto**. Esses parâmetros são úteis na configuração do host de serviço WCF.
+A tabela a seguir lista todos os parâmetros na caixa de diálogo **argumentos de linha de comando** , que podem ser encontrados clicando com o botão direito do mouse em seu projeto no Gerenciador de **soluções** no Visual Studio, selecionando **Propriedades**, selecionando a guia **depurar** e clicando em **Iniciar projeto**. Esses parâmetros são úteis na configuração do host de serviço WCF.
 
 |Parâmetro|Significado|
 |---------------|-------------|
@@ -45,13 +45,13 @@ A tabela a seguir lista todos os parâmetros na caixa de diálogo **argumentos d
 
 Depois de criar um novo projeto de serviço do WCF e pressionar F5 para iniciar o depurador, o host de serviço do WCF inicia a hospedagem de todos os serviços encontrados em seu projeto. O cliente de teste do WCF abre automaticamente e exibe uma lista de pontos de extremidade de serviço definidos no arquivo de configuração. Na janela principal, você pode testar os parâmetros e invocar o serviço.
 
-Para verificar se o cliente de teste do WCF é usado, clique com o botão direito do mouse em seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **Propriedades**e, em seguida, selecione a guia **depurar** . clique em **Iniciar projeto** e verifique se o seguinte aparece noCaixa de diálogo argumentos de linha de comando.
+Para verificar se o cliente de teste do WCF é usado, clique com o botão direito do mouse em seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **Propriedades**e, em seguida, selecione a guia **depurar** . clique em **Iniciar projeto** e verifique se o seguinte aparece na caixa de diálogo **argumentos de linha de comando** .
 
 `/client:WcfTestClient.exe`
 
 #### <a name="using-a-custom-client"></a>Usando um cliente personalizado
 
-Para usar um cliente personalizado, clique com o botão direito do mouse em seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **Propriedades**e, em seguida, selecione a guia **depurar** . clique em **iniciar projeto** e edite o parâmetro `/client` nos **argumentos de linha de comando** para apontar para o cliente personalizado, conforme indicado no exemplo a seguir.
+Para usar um cliente personalizado, clique com o botão direito do mouse em seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **Propriedades**e, em seguida, selecione a guia **depurar** . clique em **iniciar projeto** e edite o parâmetro `/client` na caixa de diálogo **argumentos de linha de comando** para apontar para o cliente personalizado, conforme indicado no exemplo a seguir.
 
 `/client:"path/CustomClient.exe"`
 
@@ -67,7 +67,7 @@ Por exemplo, se você estiver usando o modelo de biblioteca de serviço de distr
 
 #### <a name="specifying-no-client"></a>Especificando nenhum cliente
 
-Para especificar que nenhum cliente será usado após a hospedagem do serviço WCF, clique com o botão direito do mouse em seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **Propriedades**e, em seguida, selecione a guia **depurar** . clique em **Iniciar projeto** e deixe o **comando** caixa de diálogo argumentos de linha em branco.
+Para especificar que nenhum cliente será usado após a hospedagem do serviço WCF, clique com o botão direito do mouse em seu projeto no **Gerenciador de soluções** no Visual Studio, selecione **Propriedades**e, em seguida, selecione a guia **depurar** . clique em **Iniciar projeto** e deixe a caixa de diálogo **argumentos de linha de comando** em branco.
 
 #### <a name="using-a-custom-host"></a>Usando um host personalizado
 
@@ -119,7 +119,7 @@ Você pode modificar o acesso usando a ferramenta Netsh. exe no [!INCLUDE[wv](..
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
 ```
 
-Para obter mais informações sobre o netsh. exe, consulte "[como usar a ferramenta Netsh. exe e as opções de linha de comando](https://go.microsoft.com/fwlink/?LinkId=97877)".
+Para obter mais informações sobre o netsh. exe, consulte "[como usar a ferramenta Netsh. exe e as opções de linha de comando](https://docs.microsoft.com/previous-versions/tn-archive/bb490939(v=technet.10))".
 
 ## <a name="see-also"></a>Consulte também
 

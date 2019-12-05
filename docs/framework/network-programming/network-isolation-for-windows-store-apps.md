@@ -2,18 +2,20 @@
 title: Isolamento de rede para Aplicativos da Windows Store
 ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
-ms.openlocfilehash: 34b8865781079f45a68d3dd1aab7fbd66c703d50
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 390a0281f03b08322cc1bee469b601fd5a1547c4
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447427"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802169"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Isolamento de rede para Aplicativos da Windows Store
-As classes nos namespaces <xref:System.Net>, <xref:System.Net.Http> e <xref:System.Net.Http.Headers> podem ser usadas para desenvolver Aplicativos da Windows Store ou aplic. da área de trabalho. Quando usadas em um aplicativo da Windows Store, as classes nesses namespaces são afetadas pelo isolamento de rede, parte do modelo de segurança do aplicativo usado pelo [!INCLUDE[win8](../../../includes/win8-md.md)]. Para que o sistema permita o acesso à rede, os recursos de rede apropriados deverão ser habilitados no manifesto do aplicativo para um aplicativo da Windows Store.  
+
+As classes nos namespaces <xref:System.Net>, <xref:System.Net.Http>e <xref:System.Net.Http.Headers> podem ser usadas para desenvolver aplicativos da Windows Store ou aplicativos da área de trabalho. Quando usado em um aplicativo da Windows Store, as classes nesses namespaces são afetadas pelo isolamento de rede, parte do modelo de segurança de aplicativo usado pelo Windows 8. Para que o sistema permita o acesso à rede, os recursos de rede apropriados deverão ser habilitados no manifesto do aplicativo para um aplicativo da Windows Store.  
   
 ## <a name="checklist-for-network-isolation"></a>Lista de verificação para isolamento de rede  
- Use esta lista de verificação para verificar se o isolamento de rede está configurado para o aplicativo da Windows Store.  
+
+Use esta lista de verificação para verificar se o isolamento de rede está configurado para o aplicativo da Windows Store.  
   
 1. Determine a direção das solicitações de acesso de rede necessárias para o aplicativo. Isso pode ser solicitações de saída iniciadas pelo cliente ou solicitações de entrada não solicitadas ou pode ser ainda uma combinação de ambos esses tipos de solicitação de rede.  
   
@@ -23,7 +25,7 @@ As classes nos namespaces <xref:System.Net>, <xref:System.Net.Http> e <xref:Syst
   
 4. Implante e execute seu aplicativo para testá-lo usando as ferramentas de isolamento de rede fornecidas para solução de problemas.  
   
- Para obter informações mais detalhadas sobre como configurar os recursos de rede e as ferramentas de isolamento usadas para solucionar problemas de isolamento de rede, consulte [como configurar recursos de isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) na documentação do desenvolvedor da loja do Windows 8. x.
+Para obter informações mais detalhadas sobre como configurar os recursos de rede e as ferramentas de isolamento usadas para solucionar problemas de isolamento de rede, consulte [como configurar recursos de isolamento de rede](https://docs.microsoft.com/previous-versions/windows/apps/hh770532(v=win.10)) na documentação do desenvolvedor da loja do Windows 8. x.
   
 ## <a name="see-also"></a>Consulte também
 

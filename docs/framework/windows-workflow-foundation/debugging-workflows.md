@@ -2,16 +2,16 @@
 title: Depurar fluxos de trabalho
 ms.date: 03/30/2017
 ms.assetid: b23b4814-ebb1-4c51-b7a9-469f4da7a96d
-ms.openlocfilehash: 3947e61161b0e2108fa48fbc7e33fb7601645a1b
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 2bfc50215697636f1771d6bb35510fbf9e0b435d
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291496"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802629"
 ---
 # <a name="debugging-workflows"></a>Depurar fluxos de trabalho
 
-o [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] oferece várias opções para depurar fluxos de trabalho em execução do ambiente de desenvolvimento. Fluxos de trabalho podem ser depurado no designer, em XAML, e no código.
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] oferece várias opções para depurar fluxos de trabalho em execução do ambiente de desenvolvimento. Fluxos de trabalho podem ser depurado no designer, em XAML, e no código.
 
 ## <a name="debugging-in-the-workflow-designer"></a>Depuração no Designer de Fluxo de Trabalho
 
@@ -31,7 +31,7 @@ Fluxo de trabalho que depurar também suporta usando a infraestrutura do Visual 
 
 ## <a name="remote-debugging"></a>Depuração remota
 
-A depuração remota do Windows Workflow Foundation (WF) funciona da mesma forma que a depuração remota para outros componentes do Visual Studio. Para obter informações sobre como usar a depuração remota, consulte [como habilitar a depuração remota](https://go.microsoft.com/fwlink/?LinkId=196257).
+A depuração remota do Windows Workflow Foundation (WF) funciona da mesma forma que a depuração remota para outros componentes do Visual Studio. Para obter informações sobre como usar a depuração remota, consulte [como habilitar a depuração remota](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/febz73k0(v=vs.100)).
 
 > [!NOTE]
 > Se o aplicativo de fluxo de trabalho for direcionado para a arquitetura x86 e estiver hospedado em um computador que esteja executando um sistema operacional de 64 bits, a depuração remota não funcionará a menos que o Visual Studio esteja instalado no computador remoto ou o destino do aplicativo de fluxo de trabalho seja alterado para **qualquer CPU**.

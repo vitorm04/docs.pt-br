@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Sign tool
 - SignTool.exe
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
-ms.openlocfilehash: cb0aca3b527c16a7abf984952795a673948775dd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 636aa76a17a887aefe51b7e7858099c541dbb21f
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73104640"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801845"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (Ferramenta de Assinatura)
 A Ferramenta de Assinatura é uma ferramenta de linha de comando que assina digitalmente arquivos, verifica assinaturas em arquivos e em arquivos de carimbo de data/hora.  
@@ -27,7 +27,7 @@ signtool [command] [options] [file_name | ...]
   
 ## <a name="parameters"></a>Parâmetros  
   
-|Argumento|Descrição|  
+|Argument|Descrição|  
 |--------------|-----------------|  
 |`command`|Um dos quatro comandos (`catdb`, `sign`, `Timestamp` ou `Verify`) que especifica uma operação a ser realizada em um arquivo. Para obter uma descrição de cada comando, consulte a próxima tabela.|  
 |`options`|Uma opção que modifica um comando. Além das opções globais `/q` e `/v`, cada comando dá suporte a um conjunto exclusivo de opções.|  
@@ -35,7 +35,7 @@ signtool [command] [options] [file_name | ...]
   
  Os seguintes comandos são compatíveis com a Ferramenta de Assinatura. Cada comando é usado com conjuntos distintos de opções, listadas em suas respectivas seções.  
   
-|Comando|Descrição|  
+|{1&gt;Comando&lt;1}|Descrição|  
 |-------------|-----------------|  
 |`catdb`|Adiciona ou remove um arquivo de catálogo de um banco de dados do catálogo. Os bancos de dados do catálogo são usados na pesquisa automática de arquivos de catálogo e são identificados por uma GUID. Para obter uma lista de opções com suporte pelo comando `catdb`, consulte [Opções do Comando catdb](signtool-exe.md#catdb).|  
 |`sign`|Assina arquivos digitalmente. As assinaturas digitais protegem os arquivos contra violação e permitem aos usuários verificar o signatário com base em um certificado de assinatura. Para obter uma lista de opções com suporte pelo comando `sign`, consulte [Opções do Comando sign](signtool-exe.md#sign).|  
@@ -87,11 +87,11 @@ signtool [command] [options] [file_name | ...]
 |`/ph`|Se compatível, gera hashes de página para arquivos executáveis.|  
 |`/r`  *RootSubjectName*|Especifica o nome do assunto do certificado raiz em que o certificado de assinatura deve ser encadeado. Esse valor pode ser uma subcadeia de caracteres do nome de entidade inteiro do certificado raiz.|  
 |`/s`  *StoreName*|Especifica o armazenamento a ser aberto durante a pesquisa pelo certificado. Se essa opção não for especificada, o armazenamento `My` será aberto.|  
-|`/sha1`  *Hash*|Especifica o hash SHA1 do certificado de assinatura. O hash SHA1 costuma ser especificado quando vários certificados atendem aos critérios especificados pelas opções restantes.|  
+|`/sha1`  *Hash*|Especifica o hash SHA1 do certificado de autenticação. O hash SHA1 costuma ser especificado quando vários certificados atendem aos critérios especificados pelas opções restantes.|  
 |`/sm`|Especifica se um armazenamento do computador, em vez de um armazenamento de usuário, é usado.|  
-|`/t`  *URL*|Especifica a URL do servidor de carimbo de data/hora. Se essa opção (ou `/tr`) não estiver presente, o arquivo assinado não receberá carimbo de data/hora. Um aviso será gerado se o carimbo de data/hora falhar. Essa opção não pode ser usada com a opção `/tr`.|  
+|`/t`  *URL*|Especifica a URL do servidor de carimbo de data/hora. Se essa opção (ou `/tr`) não estiver presente, o arquivo assinado não receberá carimbo de data/hora. Um aviso será gerado se o carimbo de data/hora falhar. Esta opção não pode ser usada com a opção `/tr`.|  
 |`/td`  *alg*|Usado com a opção `/tr` para solicitar um algoritmo de resumo usado pelo servidor do carimbo de data/hora RFC 3161.|  
-|`/tr`  *URL*|Especifica a URL do servidor do carimbo de data/hora RFC 3161. Se essa opção (ou `/t`) não estiver presente, o arquivo assinado não receberá carimbo de data/hora. Um aviso será gerado se o carimbo de data/hora falhar. Essa opção não pode ser usada com a opção `/t`.|  
+|`/tr`  *URL*|Especifica a URL do servidor do carimbo de data/hora RFC 3161. Se essa opção (ou `/t`) não estiver presente, o arquivo assinado não receberá carimbo de data/hora. Um aviso será gerado se o carimbo de data/hora falhar. Esta opção não pode ser usada com a opção `/t`.|  
 |`/u`  *Usage*|Especifica o EKU (uso avançado de chave) que deve estar presente no certificado de assinatura. O valor de uso pode ser especificado por OID ou por cadeia de caracteres. O uso padrão é "Assinatura de Código" (1.3.6.1.5.5.7.3.3).|  
 |`/uw`|Especifica o uso da "Verificação do Componente do Sistema Windows" (1.3.6.1.4.1.311.10.3.6).|  
   
@@ -126,7 +126,7 @@ signtool [command] [options] [file_name | ...]
 |`/ds`  *Index*|Verifica a assinatura em uma posição especificada.|  
 |`/hash` (`SHA1`&#124;`SHA256`)|Especifica um algoritmo de hash opcional a ser usado durante a procura de um arquivo em um catálogo.|  
 |`/kp`|Especifica se a verificação deve ser realizada com a política de assinatura do driver do modo kernel.|  
-|`/ms`|Usa várias semânticas de verificação. Esse é o comportamento padrão de uma chamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) no [!INCLUDE[win8](../../../includes/win8-md.md)] e superior.|  
+|`/ms`|Usa várias semânticas de verificação. Esse é o comportamento padrão de uma chamada [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) no Windows 8 e versões posteriores.|  
 |`/o` *Version*|Verifica o arquivo pela versão do sistema operacional. *Version* tem o seguinte formato: *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID* representa o valor subjacente de um membro de enumeração <xref:System.PlatformID>. **Importante:** o uso da opção `/o` é recomendado. Se `/o` não for especificado, SignTool.exe poderá retornar resultados inesperados. Por exemplo, se você não incluir a opção `/o`, os catálogos do sistema validados corretamente em um sistema operacional anterior poderá não ser validado corretamente em um sistema operacional mais novo.|  
 |`/p7`|Verifica arquivos PKCS #7. Nenhuma política existente é usada na validação de PKCS #7. A assinatura é verificada e uma cadeia é compilada para o certificado de assinatura.|  
 |`/pa`|Especifica se a Política de Verificação de Authenticode Padrão deve ser usada. Se a opção `/pa` não for especificada, a Ferramenta de Assinatura usará a Política de Verificação de Driver do Windows. Essa opção não pode ser usada com as opções `catdb`.|  

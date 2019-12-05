@@ -2,12 +2,12 @@
 title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: b3cdc8d4aeaf85765b51543069a5f279e84f8623
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711213"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801955"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -56,7 +56,7 @@ Várias estruturas já foram criadas com base no .NET Core:
 
 O .NET Core é composto pelas seguintes partes:
 
-- O [tempo de execução do .NET Core](https://github.com/dotnet/coreclr), que fornece um sistema de tipos, carregamento de assembly, coletor de lixo, interoperabilidade nativa e outros serviços básicos. As [bibliotecas do .NET Core Framework](https://github.com/dotnet/corefx) fornecem tipos de dados primitivos, tipos de composição de aplicativo e utilitários fundamentais.
+- O [tempo de execução do .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr), que fornece um sistema de tipos, carregamento de assembly, coletor de lixo, interoperabilidade nativa e outros serviços básicos. As [bibliotecas do .NET Core Framework](https://github.com/dotnet/runtime/tree/master/src/libraries) fornecem tipos de dados primitivos, tipos de composição de aplicativo e utilitários fundamentais.
 - O [tempo de execução do ASP.net](https://github.com/aspnet/home), que fornece uma estrutura para a criação de aplicativos conectados à Internet modernos baseados em nuvem, como aplicativos Web, aplicativos de IOT e back-ends móveis.
 - As [ferramentas da CLI do .NET Core](https://github.com/dotnet/cli) e os compiladores de linguagem ([Roslyn](https://github.com/dotnet/roslyn) e [F#](https://github.com/microsoft/visualfsharp)) que permitem a experiência de desenvolvedor do .NET Core.
 - A [ferramenta dotnet](https://github.com/dotnet/core-setup), que é usada para iniciar aplicativos do .NET Core e ferramentas da CLI. Ele seleciona o tempo de execução e hospeda o tempo de execução, fornece uma política de carregamento de assembly e inicia aplicativos e ferramentas.
@@ -79,17 +79,17 @@ O produto é dividido em várias partes que podem se adaptar a novas plataformas
 
 As pessoas geralmente perguntam como o .NET Core é implementado para dar suporte a vários sistemas operacionais. Eles normalmente perguntam se há implementações separadas ou se a [compilação condicional](https://en.wikipedia.org/wiki/Conditional_compilation) é usada. A resposta é ambas, com uma forte tendência para a compilação condicional.
 
-Veja no gráfico a seguir que a maior parte do [CoreFX](https://github.com/dotnet/corefx) é um código neutro compartilhado entre todas as plataformas. O código neutro de plataforma pode ser implementado como um único assembly portátil usado em todas as plataformas.
+Você pode ver no gráfico a seguir que a grande maioria das [bibliotecas do .NET Core](https://github.com/dotnet/runtime/tree/master/src/libraries) é um código de plataforma neutra que é compartilhado entre todas as plataformas. O código neutro de plataforma pode ser implementado como um único assembly portátil usado em todas as plataformas.
 
 ![CoreFX: Linhas de código por plataforma](../images/corefx-platforms-loc.png)
 
-Implementações de Windows e Unix são semelhantes em tamanho. O Windows tem uma implementação maior, já que o CoreFX implementa alguns recursos somente do Windows, como [Microsoft. Win32. Registry](https://github.com/dotnet/corefx/tree/master/src/Microsoft.Win32.Registry) , mas ainda não implementa muitos conceitos somente para UNIX. Você também verá que a maioria das implementações do Linux e do macOS é compartilhada em uma implementação do UNIX, enquanto as implementações específicas do Linux e do macOS são aproximadamente semelhantes em termos de tamanho.
+Implementações de Windows e Unix são semelhantes em tamanho. O Windows tem uma implementação maior, pois as bibliotecas do .NET Core implementam alguns recursos somente do Windows, como [Microsoft. Win32. Registry](https://github.com/dotnet/runtime/tree/master/src/libraries/Microsoft.Win32.Registry) , mas ainda não implementam muitos conceitos somente para UNIX. Você também verá que a maioria das implementações do Linux e do macOS é compartilhada em uma implementação do UNIX, enquanto as implementações específicas do Linux e do macOS são aproximadamente semelhantes em termos de tamanho.
 
 Há uma combinação de bibliotecas específicas de plataforma e de plataforma neutra no .NET Core. Você pode observar esse padrão em alguns exemplos:
 
-- O [CoreCLR](https://github.com/dotnet/coreclr) é específico de plataforma. Ele é baseado nos subsistemas do sistema operacional, como o gerenciador de memória e o agendador de thread.
-- O [System.IO](https://github.com/dotnet/corefx/tree/master/src/System.IO) e o [System.Security.Cryptography.Algorithms](https://github.com/dotnet/corefx/tree/master/src/System.Security.Cryptography.Algorithms) são específicos da plataforma, pois as APIs de armazenamento e de criptografia são diferentes em cada sistema operacional.
-- O [System.Collections](https://github.com/dotnet/corefx/tree/master/src/System.Collections) e [System.LINQ](https://github.com/dotnet/corefx/tree/master/src/System.Linq) são neutros de plataforma, considerando que eles podem criar e operar em estruturas de dados.
+- O [CoreCLR](https://github.com/dotnet/runtime/tree/master/src/coreclr) é específico de plataforma. Ele é baseado nos subsistemas do sistema operacional, como o gerenciador de memória e o agendador de thread.
+- O [System.IO](https://github.com/dotnet/runtime/tree/master/src/libraries/System.IO) e o [System.Security.Cryptography.Algorithms](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Security.Cryptography.Algorithms) são específicos da plataforma, pois as APIs de armazenamento e de criptografia são diferentes em cada sistema operacional.
+- O [System.Collections](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Collections) e [System.LINQ](https://github.com/dotnet/runtime/tree/master/src/libraries/System.Linq) são neutros de plataforma, considerando que eles podem criar e operar em estruturas de dados.
 
 ## <a name="comparisons-to-other-net-implementations"></a>Comparações com outras implementações do .NET
 

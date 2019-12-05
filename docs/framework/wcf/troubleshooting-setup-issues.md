@@ -2,12 +2,12 @@
 title: Solucionando problemas de instalação
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 586defea0f761f8b6dea691b778d221cff62c7cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: becf2576528dc0011a77597b3665d77f6907a3cc
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281603"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802421"
 ---
 # <a name="troubleshooting-setup-issues"></a>Solucionando problemas de instalação
 Este tópico descreve como solucionar problemas de configuração do Windows Communication Foundation (WCF).  
@@ -46,13 +46,13 @@ Este tópico descreve como solucionar problemas de configuração do Windows Com
   
      ou:  
   
-     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Could not load file or assembly 'C:\WINDOWS\system32\wbem\mofcomp.exe' or one of its dependencies. O sistema não pode encontrar o arquivo especificado.  
+     ServiceModelReg [07:19:32:750]: System.IO.FileNotFoundException: Could not load file or assembly 'C:\WINDOWS\system32\wbem\mofcomp.exe' or one of its dependencies. O sistema não pode localizar o arquivo especificado.  
   
      Nome de arquivo: 'C:\WINDOWS\system32\wbem\mofcomp.exe  
   
  As etapas a seguir devem ser seguidas para resolver o problema descrito anteriormente.  
   
-1. Execute [o utilitário de diagnóstico WMI, versão 2,0,](https://go.microsoft.com/fwlink/?LinkId=94685) para reparar o serviço WMI. Para obter mais informações sobre como usar essa ferramenta, consulte o tópico [Utilitário de diagnóstico WMI](https://go.microsoft.com/fwlink/?LinkId=94686) .  
+1. Execute [o utilitário de diagnóstico WMI, versão 2,0,](https://go.microsoft.com/fwlink/?LinkId=94685) para reparar o serviço WMI. Para obter mais informações sobre como usar essa ferramenta, consulte o artigo [Utilitário de diagnóstico WMI](https://docs.microsoft.com/previous-versions/tn-archive/ff404265(v%3dmsdn.10)) .  
   
  Repare a instalação do .NET Framework 3,0 usando o miniaplicativo **Adicionar/remover programas** localizado no **painel de controle**ou desinstale/reinstale o .NET Framework 3,0.  
   
