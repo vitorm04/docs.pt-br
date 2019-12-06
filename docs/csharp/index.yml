@@ -5,15 +5,13 @@ metadata:
   title: C#Docs-introdução, tutoriais, referência.
   description: Aprenda C# sobre programação – para desenvolvedores iniciantes, desenvolvedores novos C#e experientes C# /desenvolvedores .net
   ms.topic: landing-page
-  author: billwagner
-  ms.author: wiwagn
   ms.date: 11/19/2019
-  ms.openlocfilehash: 5af88b8a75ecd3cfca7c93b08cb262f161498903
-  ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
+  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 11/21/2019
-  ms.locfileid: "74284013"
+  ms.lasthandoff: 12/05/2019
+  ms.locfileid: "74835467"
 landingContent:
 - title: Aprenda a programar emC#
   linkLists:
@@ -51,7 +49,7 @@ landingContent:
     links:
     - text: O C# e o sistema de tipos .net
       url: programming-guide/types/index.md
-    - text: LINQ (Consulta Integrada à Linguagem)
+    - text: Consulta Integrada à Linguagem (LINQ)
       url: linq/index.md
     - text: Async e Await
       url: programming-guide/concepts/async/index.md
@@ -63,7 +61,7 @@ landingContent:
       url: tutorials/working-with-linq.md
     - text: Formatar texto usando interpolação de cadeia de caracteres
       url: tutorials/string-interpolation.md
-    - text: Procurar todos os tutoriais
+    - text: Procurar em todos os tutoriais
       url: tutorials/index.md
 - title: Novos recursos no C# 8,0
   linkLists:
@@ -109,5 +107,5 @@ landingContent:
       url: language-reference/operators/index.md
     - text: Configurar versão da linguagem
       url: language-reference/configure-language-version.md
-    - text: especificação da linguagem C#
+    - text: Especificação da linguagem C#
       url: ../../_csharplang/spec/introduction.md
