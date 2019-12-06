@@ -96,7 +96,7 @@
     - name: Compilar uma solução completa do .NET Core no macOS
       href: tutorials/using-on-mac-vs-full-solution.md
     - name: Introdução ao .NET Core usando as ferramentas da CLI
-      href: tutorials/using-with-xplat-cli.md
+      href: tutorials/cli-create-console-app.md
     - name: Organizar e testar projetos com a CLI do .NET Core
       href: tutorials/testing-with-cli.md
     - name: Desenvolver bibliotecas com ferramentas multiplataforma
