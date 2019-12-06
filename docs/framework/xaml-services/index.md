@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: a99b9f3cb8c008f72eaac7ee1b8790d63c547a8d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8e1e8dc9a1410d05c19e4dd1bccb30c65d7c5e66
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453961"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837279"
 ---
 # <a name="xaml-services"></a>Serviços XAML
 Este tópico descreve os recursos de um conjunto de tecnologias conhecido como .NET Framework serviços XAML. A maioria dos serviços e APIs descritos está localizada no assembly System. XAML, que é um assembly introduzido com o conjunto de .NET Framework 4 de assemblies do .NET Core. Os serviços incluem leitores e gravadores, classes de esquema e suporte a esquemas, fábricas, atribuição de classes, suporte intrínseco à linguagem XAML e outros recursos de linguagem XAML.  
@@ -33,10 +33,10 @@ Este tópico descreve os recursos de um conjunto de tecnologias conhecido como .
   
 - Usar as técnicas de `Lookup` ou `Invoker` para influenciar o sistema de tipos XAML e como os backups de tipo são avaliados.  
   
- Se você estiver procurando material introdutório em XAML como uma linguagem, você pode experimentar o [XAML Overview (WPF)](../../desktop-wpf/fundamentals/xaml.md). Esse tópico discute o XAML para um público que é novo para [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e também para usar a marcação XAML e os recursos de linguagem XAML. Outro documento útil é o material introdutório na [especificação da linguagem XAML](https://go.microsoft.com/fwlink/?LinkId=114525).  
+ Se você estiver procurando material introdutório em XAML como uma linguagem, você pode experimentar o [XAML Overview (WPF)](../../desktop-wpf/fundamentals/xaml.md). Esse tópico discute o XAML para um público que é novo para [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] e também para usar a marcação XAML e os recursos de linguagem XAML. Outro documento útil é o material introdutório na [especificação da linguagem XAML](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10)).  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET Framework os serviços XAML e System. XAML na arquitetura do .NET  
- Nas versões anteriores do Microsoft .NET Framework, o suporte para recursos de linguagem XAML foi implementado por estruturas que se baseiam no Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation e Windows Communication Foundation (WCF)) e, portanto, variados em seu comportamento e a API usada dependendo de qual estrutura específica você estava usando. Isso incluiu o analisador XAML e seu mecanismo de criação do grafo de objetos, os intrínsecos da linguagem XAML, o suporte de serialização e assim por diante.  
+ Nas versões anteriores do Microsoft .NET Framework, o suporte para recursos de linguagem XAML foi implementado por estruturas que se baseiam no Microsoft .NET Framework ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Windows Workflow Foundation e Windows Communication Foundation (WCF)) e, portanto, variados em seu comportamento e na API usada dependendo da estrutura específica que você estava usando. Isso incluiu o analisador XAML e seu mecanismo de criação do grafo de objetos, os intrínsecos da linguagem XAML, o suporte de serialização e assim por diante.  
   
  No .NET Framework 4, .NET Framework serviços XAML e o assembly System. XAML definem grande parte do que é necessário para dar suporte aos recursos da linguagem XAML. Isso inclui classes base para leitores XAML e gravadores XAML. O recurso mais importante adicionado a .NET Framework serviços XAML que não estavam presentes em nenhuma das implementações XAML específicas da estrutura é uma representação do sistema de tipos para XAML. A representação do sistema de tipos apresenta o XAML de forma orientada a objeto, que centraliza os recursos de XAML sem assumir dependências de recursos específicos das estruturas.  
   

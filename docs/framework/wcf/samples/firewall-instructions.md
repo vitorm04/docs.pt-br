@@ -2,21 +2,21 @@
 title: Instruções do firewall
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 2c07d17ebb6bbefa78d12bb128e354112311891a
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70044946"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837838"
 ---
 # <a name="firewall-instructions"></a>Instruções do firewall
 Você deve habilitar várias portas ou programas no firewall para que os exemplos de Windows Communication Foundation (WCF) possam funcionar. Muitos dos exemplos se comunicam usando portas no intervalo de 8000-8003 e a porta 9000. O firewall é ativado por padrão e impede o acesso a essas portas. Para habilitar o firewall para os exemplos, conclua um dos seguintes procedimentos, dependendo de seus requisitos e ambiente de segurança:  
   
-- Opção 1: Habilite de modo interativo os exemplos durante a execução. Não faça nenhuma alteração antecipada na configuração do firewall e continue para começar a criar e executar os exemplos. Quando um exemplo é executado, uma caixa de diálogo **alerta de segurança do Windows** é exibida. O programa de exemplo em questão pode ser adicionado interativamente a uma lista desbloqueada. Com esse procedimento, talvez seja necessário reiniciar o exemplo.  
+- Opção 1: habilitar os exemplos interativamente durante a execução. Não faça nenhuma alteração antecipada na configuração do firewall e continue para começar a criar e executar os exemplos. Quando um exemplo é executado, uma caixa de diálogo **alerta de segurança do Windows** é exibida. O programa de exemplo em questão pode ser adicionado interativamente a uma lista desbloqueada. Com esse procedimento, talvez seja necessário reiniciar o exemplo.  
   
-- Opção 2: Habilite os programas de exemplo com antecedência. Inicie o miniaplicativo do **painel de controle do firewall do Windows** e habilite os programas de exemplo que você planeja executar. Você deve criar os programas primeiro para que os arquivos executáveis existam. Você pode encontrar instruções mais detalhadas no procedimento a seguir.  
+- Opção 2: habilite os programas de exemplo com antecedência. Inicie o miniaplicativo do **painel de controle do firewall do Windows** e habilite os programas de exemplo que você planeja executar. Você deve criar os programas primeiro para que os arquivos executáveis existam. Você pode encontrar instruções mais detalhadas no procedimento a seguir.  
   
-- Opção 3: Habilite um intervalo de portas com antecedência. Inicie o miniaplicativo do **painel de controle** do **Firewall do Windows** e habilite as portas 80, 443, 8000-8003 e 9000, que são usadas pelos exemplos. Você pode encontrar instruções mais detalhadas no procedimento a seguir. Essa opção é menos segura do que as outras porque permite que qualquer programa use essas portas, não apenas os exemplos.  
+- Opção 3: habilitar um intervalo de portas com antecedência. Inicie o miniaplicativo do **painel de controle** do **Firewall do Windows** e habilite as portas 80, 443, 8000-8003 e 9000, que são usadas pelos exemplos. Você pode encontrar instruções mais detalhadas no procedimento a seguir. Essa opção é menos segura do que as outras porque permite que qualquer programa use essas portas, não apenas os exemplos.  
   
  Se você não tiver certeza de qual procedimento usar, escolha a primeira opção. Se você estiver executando um firewall de outro fornecedor, talvez seja necessário fazer alterações semelhantes.  
   
@@ -36,7 +36,7 @@ Você deve habilitar várias portas ou programas no firewall para que os exemplo
   
     - No Windows 7 ou no Windows Server 2008 R2, clique em **permitir um programa ou recurso pelo firewall do Windows**. Clique em **alterar configurações**, permitir **outro programa...** .  
   
-    - Em [!INCLUDE[wv](../../../../includes/wv-md.md)] ou[!INCLUDE[lserver](../../../../includes/lserver-md.md)], clique em **permitir um programa pelo firewall do Windows**.  
+    - No Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], clique em **permitir um programa pelo firewall do Windows**.  
   
 4. Na guia **exceções** , clique em **Adicionar programa**.  
   
@@ -60,7 +60,7 @@ Você deve habilitar várias portas ou programas no firewall para que os exemplo
   
     4. Selecione **porta** e clique em **Avançar**.  
   
-    5. Selecione **TCP** e insira `8000, 8001, 8002, 8003, 9000, 80, 443` no campo **portas locais específicas** .  
+    5. Selecione **TCP** e digite `8000, 8001, 8002, 8003, 9000, 80, 443` no campo **portas locais específicas** .  
   
     6. Clique em **Avançar**.  
   
@@ -72,9 +72,9 @@ Você deve habilitar várias portas ou programas no firewall para que os exemplo
   
     10. Clique em **regras de saída** e repita as etapas de c a h.  
   
-3. No [!INCLUDE[wv](../../../../includes/wv-md.md)] ou[!INCLUDE[lserver](../../../../includes/lserver-md.md)], siga estas etapas.  
+3. No Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], siga estas etapas.  
   
-    1. Clique em **permitir um programa pelo firewall do Windows**.  
+    1. Clique em **Permitir um programa pelo Firewall do Windows**.  
   
     2. Na guia **exceções** , clique em **Adicionar porta**.  
   

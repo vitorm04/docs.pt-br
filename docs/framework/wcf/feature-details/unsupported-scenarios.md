@@ -2,15 +2,15 @@
 title: Cenários sem suporte
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: cc40ccbf83e92404dca07344fae0a6f56f92cefa
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69955317"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837968"
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
-Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte a alguns cenários de segurança específicos. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] a Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos e, portanto, o WCF não dá suporte à execução de um serviço com a autenticação do Windows nessa plataforma. Há suporte para outros mecanismos de autenticação, como nome de usuário/senha e autenticação integrada de HTTP/HTTPS ao executar o WCF no Windows XP Home Edition.  
+Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte a alguns cenários de segurança específicos. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos e, portanto, o WCF não dá suporte à execução de um serviço com a autenticação do Windows nessa plataforma. Há suporte para outros mecanismos de autenticação, como nome de usuário/senha e autenticação integrada de HTTP/HTTPS ao executar o WCF no Windows XP Home Edition.  
   
 ## <a name="impersonation-scenarios"></a>Cenários de representação  
   
@@ -18,9 +18,9 @@ Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte
  Quando um cliente WCF faz chamadas assíncronas para um serviço WCF usando a autenticação do Windows em representação, a autenticação pode ocorrer com a identidade do processo do cliente em vez da identidade representada.  
   
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP e cookie de token de contexto seguro habilitado  
- O WCF não oferece suporte à representação <xref:System.InvalidOperationException> e um é gerado quando existem as seguintes condições:  
+ O WCF não oferece suporte à representação e um <xref:System.InvalidOperationException> é gerado quando existem as seguintes condições:  
   
-- O sistema operacional é [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- O sistema operacional está [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 - O modo de autenticação resulta em uma identidade do Windows.  
   
@@ -28,24 +28,24 @@ Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte
   
 - Um identificador de contexto de segurança (SCT) baseado em estado é criado (por padrão, a criação é desabilitada).  
   
- O SCT baseado em estado só pode ser criado usando uma associação personalizada. Para obter mais informações, confira [Como: Crie um token de contexto de segurança para uma](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)sessão segura.) No código, o token é habilitado pela criação de um elemento de associação de <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> segurança <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>(ou <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> ) <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> usando o método ou e definindo `requireCancellation` o parâmetro `false`como. O parâmetro refere-se ao cache do SCT. Definir o valor como `false` habilita o recurso SCT baseado em estado.  
+ O SCT baseado em estado só pode ser criado usando uma associação personalizada. Para obter mais informações, consulte [como: criar um token de contexto de segurança para uma sessão segura](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md).) No código, o token é habilitado pela criação de um elemento de associação de segurança (<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> ou <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>) usando o método <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> ou <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType> e definindo o parâmetro `requireCancellation` como `false`. O parâmetro refere-se ao cache do SCT. Definir o valor como `false` habilita o recurso SCT baseado em estado.  
   
- Como alternativa, em configuração, o token é habilitado criando`customBinding`um < >, depois adicionando um <`security`elemento > e definindo o `authenticationMode` atributo como SecureConversation e o `requireSecurityContextCancellation` atributo como `true`.  
+ Como alternativa, em configuração, o token é habilitado pela criação de um <`customBinding`>, depois pela adição de um elemento de`security`de > < e pela definição do atributo `authenticationMode` como SecureConversation e o atributo `requireSecurityContextCancellation` como `true`.  
   
 > [!NOTE]
-> Os requisitos anteriores são específicos. Por exemplo, o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> cria um elemento de associação que resulta em uma identidade do Windows, mas não estabelece um SCT. Portanto, você pode usá-lo com `Required` a opção [!INCLUDE[wxp](../../../../includes/wxp-md.md)]em.  
+> Os requisitos anteriores são específicos. Por exemplo, o <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> cria um elemento de associação que resulta em uma identidade do Windows, mas não estabelece um SCT. Portanto, você pode usá-lo com a opção `Required` em [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 ### <a name="possible-aspnet-conflict"></a>Possível conflito de ASP.NET  
- O WCF e o ASP.NET podem habilitar ou desabilitar a representação. Quando o ASP.NET hospeda um aplicativo WCF, pode haver um conflito entre as definições de configuração do WCF e do ASP.NET. Em caso de conflito, a configuração do WCF tem precedência, <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> a menos que a <xref:System.ServiceModel.ImpersonationOption.NotAllowed>Propriedade seja definida como; nesse caso, a configuração de representação ASP.net tem precedência.  
+ O WCF e o ASP.NET podem habilitar ou desabilitar a representação. Quando o ASP.NET hospeda um aplicativo WCF, pode haver um conflito entre as definições de configuração do WCF e do ASP.NET. Em caso de conflito, a configuração do WCF tem precedência, a menos que a propriedade <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> seja definida como <xref:System.ServiceModel.ImpersonationOption.NotAllowed>; nesse caso, a configuração de representação ASP.NET tem precedência.  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>Cargas de assembly podem falhar em representação  
  Se o contexto representado não tiver direitos de acesso para carregar um assembly e se for a primeira vez que o Common Language Runtime (CLR) está tentando carregar o assembly para esse AppDomain, o <xref:System.AppDomain> armazenará em cache a falha. As tentativas subsequentes de carregar esse assembly (ou assemblies) falham, mesmo após a reversão da representação, e mesmo se o contexto revertido tiver direitos de acesso para carregar o assembly. Isso ocorre porque o CLR não tenta novamente a carga depois que o contexto do usuário é alterado. Você deve reiniciar o domínio do aplicativo para se recuperar da falha.  
   
 > [!NOTE]
-> O valor padrão para a <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> propriedade <xref:System.ServiceModel.Security.WindowsClientCredential> da classe é <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. Na maioria dos casos, um contexto de representação no nível de identificação não tem direitos para carregar nenhum assembly adicional. Esse é o valor padrão, portanto, essa é uma condição muito comum a ser observada. A representação de nível de identificação também ocorre quando o processo de representação não `SeImpersonate` tem o privilégio. Para obter mais informações, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
+> O valor padrão para a propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> da classe <xref:System.ServiceModel.Security.WindowsClientCredential> é <xref:System.Security.Principal.TokenImpersonationLevel.Identification>. Na maioria dos casos, um contexto de representação no nível de identificação não tem direitos para carregar nenhum assembly adicional. Esse é o valor padrão, portanto, essa é uma condição muito comum a ser observada. A representação de nível de identificação também ocorre quando o processo de representação não tem o privilégio de `SeImpersonate`. Para obter mais informações, consulte [delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  
   
 ### <a name="delegation-requires-credential-negotiation"></a>A delegação requer negociação de credencial  
- Para usar o protocolo de autenticação Kerberos com a delegação, você deve implementar o protocolo Kerberos com a negociação de credencial (às vezes chamada de Kerberos de várias etapas ou vários lados). Se você implementar a autenticação Kerberos sem negociação de credencial (às vezes chamada de Kerberos de uma foto ou de um único segmento), uma exceção será lançada. Para obter mais informações sobre como implementar a negociação de credenciais, consulte Depurando [erros de autenticação do Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
+ Para usar o protocolo de autenticação Kerberos com a delegação, você deve implementar o protocolo Kerberos com a negociação de credencial (às vezes chamada de Kerberos de várias etapas ou vários lados). Se você implementar a autenticação Kerberos sem negociação de credencial (às vezes chamada de Kerberos de uma foto ou de um único segmento), uma exceção será lançada. Para obter mais informações sobre como implementar a negociação de credenciais, consulte [Depurando erros de autenticação do Windows](../../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md).  
   
 ## <a name="cryptography"></a>Criptografia  
   
@@ -62,22 +62,22 @@ Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte
  A criptografia AES compatível com FIPS não funciona em retornos de chamada duplex na representação do nível de identificação.  
   
 ### <a name="cngksp-certificates"></a>Certificados CNG/KSP  
- *API de criptografia: A próxima geração (CNG* ) é a substituição de longo prazo para o CryptoAPI. Essa API está disponível em código não gerenciado no [!INCLUDE[wv](../../../../includes/wv-md.md)] [!INCLUDE[lserver](../../../../includes/lserver-md.md)] e em versões posteriores do Windows.  
+ *CRYPTOGRAPHY API: CNG (próxima geração)* é a substituição de longo prazo para o CryptoAPI. Essa API está disponível em código não gerenciado no Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] e versões posteriores do Windows.  
   
  .NET Framework 4.6.1 e versões anteriores não dão suporte a esses certificados porque usam o CryptoAPI herdado para manipular certificados CNG/KSP. O uso desses certificados com .NET Framework 4.6.1 e versões anteriores causará uma exceção.  
   
  Há duas maneiras possíveis de saber se um certificado usa KSP:  
   
-- Faça um `p/invoke` de `CertGetCertificateContextProperty`e inspecione `dwProvType` no retornado `CertGetCertificateContextProperty`.  
+- Faça uma `p/invoke` de `CertGetCertificateContextProperty`e inspecione `dwProvType` no `CertGetCertificateContextProperty`retornado.  
   
-- Use o `certutil` comando da linha de comando para consultar certificados. Para obter mais informações, consulte [tarefas de certutil para solucionar problemas de certificados](https://go.microsoft.com/fwlink/?LinkId=120056).  
+- Use o comando `certutil` da linha de comando para consultar certificados. Para obter mais informações, consulte [tarefas de certutil para solucionar problemas de certificados](https://go.microsoft.com/fwlink/?LinkId=120056).  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>A segurança da mensagem falhará se estiver usando a representação de ASP.NET e a compatibilidade do ASP.NET for necessária  
  O WCF não oferece suporte à seguinte combinação de configurações porque pode impedir que a autenticação do cliente ocorra:  
   
-- A representação ASP.NET está habilitada. Isso é feito no arquivo Web. config definindo o `impersonate` atributo do elemento <`identity`> como `true`.  
+- A representação ASP.NET está habilitada. Isso é feito no arquivo Web. config definindo o atributo `impersonate` do elemento <`identity`> como `true`.  
   
-- O modo `aspNetCompatibilityEnabled` `true` [ decompatibilidadeASP.netéhabilitadodefinindooatributodo>doServiceHostingEnvironmentcomo.\<](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)  
+- O modo de compatibilidade ASP.NET é habilitado definindo o atributo `aspNetCompatibilityEnabled` do [\<servicehostingenvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) como `true`.  
   
 - A segurança do modo de mensagem é usada.  
   
@@ -93,18 +93,18 @@ Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte
   
  Um exemplo dessa situação é um serviço com os três seguintes endereços de ponto de extremidade:  
   
-- `http://localhost/CalculatorService/service`(o serviço)  
+- `http://localhost/CalculatorService/service` (o serviço)  
   
-- `http://localhost/CalculatorService/issue_ticket`(o STS)  
+- `http://localhost/CalculatorService/issue_ticket` (o STS)  
   
-- `http://localhost/CalculatorService/mex`(o ponto de extremidade de metadados)  
+- `http://localhost/CalculatorService/mex` (o ponto de extremidade de metadados)  
   
  Isso gera uma exceção.  
   
- Você pode fazer com que esse cenário funcione colocando `issue_ticket` o ponto de extremidade em outro lugar.  
+ Você pode fazer com que esse cenário funcione colocando o ponto de extremidade `issue_ticket` em outro lugar.  
   
 ## <a name="wsdl-import-attributes-can-be-lost"></a>Atributos de importação de WSDL podem ser perdidos  
- O WCF perde o controle dos atributos em `<wst:Claims>` um elemento `RST` em um modelo ao fazer uma importação de WSDL. Isso acontece durante uma importação de WSDL, se `<Claims>` você especificar `WSFederationHttpBinding.Security.Message.TokenRequestParameters` diretamente `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` em ou em vez de usar as coleções de tipo de declaração diretamente.  Como a importação perde os atributos, a associação não Arredonda a viagem corretamente por meio do WSDL e, portanto, está incorreta no lado do cliente.  
+ O WCF perde o controle dos atributos em um elemento `<wst:Claims>` em um modelo de `RST` ao fazer uma importação de WSDL. Isso acontece durante uma importação de WSDL, se você especificar `<Claims>` diretamente no `WSFederationHttpBinding.Security.Message.TokenRequestParameters` ou `IssuedSecurityTokenRequestParameters.AdditionalRequestParameters` em vez de usar as coleções de tipo de declaração diretamente.  Como a importação perde os atributos, a associação não Arredonda a viagem corretamente por meio do WSDL e, portanto, está incorreta no lado do cliente.  
   
  A correção é modificar a associação diretamente no cliente depois de fazer a importação.  
   

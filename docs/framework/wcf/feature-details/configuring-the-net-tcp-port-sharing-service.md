@@ -2,17 +2,17 @@
 title: Configurando o serviço de compartilhamento de porta Net.TCP
 ms.date: 03/30/2017
 ms.assetid: b6dd81fa-68b7-4e1b-868e-88e5901b7ea0
-ms.openlocfilehash: 70ebaeb8b41b0191e0352b5ef6a4b1913994100c
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 2ff622dc97e63bd0ee10f00c7515692be8df09a1
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988223"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837448"
 ---
 # <a name="configuring-the-nettcp-port-sharing-service"></a>Configurando o serviço de compartilhamento de porta Net.TCP
-Os serviços de hospedagem interna que usam o transporte net. TCP podem controlar várias configurações avançadas, `ListenBacklog` como e `MaxPendingAccepts`, que regem o comportamento do soquete TCP subjacente usado para comunicação de rede. No entanto, essas configurações para cada soquete se aplicam apenas no nível de associação se a associação de transporte tiver desabilitado o compartilhamento de porta, que está habilitado por padrão.  
+Os serviços de hospedagem interna que usam o transporte net. TCP podem controlar várias configurações avançadas, como `ListenBacklog` e `MaxPendingAccepts`, que regem o comportamento do soquete TCP subjacente usado para comunicação de rede. No entanto, essas configurações para cada soquete se aplicam apenas no nível de associação se a associação de transporte tiver desabilitado o compartilhamento de porta, que está habilitado por padrão.  
   
- Quando uma associação net. TCP habilita o compartilhamento de porta ( `portSharingEnabled =true` por configuração no elemento de associação de transporte), ele permite implicitamente um processo externo (ou seja, o SMSvcHost. exe, que hospeda o serviço de compartilhamento de porta Net. TCP) para gerenciar o soquete TCP em seu nome. Por exemplo, ao usar TCP, especifique:  
+ Quando uma associação net. TCP habilita o compartilhamento de porta (definindo `portSharingEnabled =true` no elemento de associação de transporte), ele permite implicitamente um processo externo (ou seja, o SMSvcHost. exe, que hospeda o serviço de compartilhamento de porta Net. TCP) para gerenciar o soquete TCP em seu nome. Por exemplo, ao usar TCP, especifique:  
   
 ```xml  
 <tcpTransport portSharingEnabled="true"  />  
@@ -49,17 +49,17 @@ Os serviços de hospedagem interna que usam o transporte net. TCP podem controla
 ```  
   
 ## <a name="when-to-modify-smsvchostexeconfig"></a>Quando modificar SMSvcHost. exe. config  
- Em geral, deve-se ter cuidado ao modificar o conteúdo do arquivo SMSvcHost. exe. config, pois as definições de configuração especificadas nesse arquivo afetam todos os serviços em um computador que usa o serviço de compartilhamento de porta Net. TCP. Isso inclui aplicativos [!INCLUDE[wv](../../../../includes/wv-md.md)] que usam os recursos de ativação de TCP do WAS (serviço de ativação de processos do Windows).  
+ Em geral, deve-se ter cuidado ao modificar o conteúdo do arquivo SMSvcHost. exe. config, pois as definições de configuração especificadas nesse arquivo afetam todos os serviços em um computador que usa o serviço de compartilhamento de porta Net. TCP. Isso inclui aplicativos no Windows Vista que usam os recursos de ativação TCP do WAS (serviço de ativação de processos do Windows).  
   
  No entanto, às vezes, talvez seja necessário alterar a configuração padrão para o serviço de compartilhamento de porta Net. TCP. Por exemplo, o valor padrão para `maxPendingAccepts` é 4 * número de processadores. Os servidores que hospedam um grande número de serviços que usam o compartilhamento de porta podem aumentar esse valor para obter a taxa de transferência máxima. O valor padrão para `maxPendingConnections` é 100. Você deve considerar aumentar esse valor também se houver vários clientes simultâneos chamando o serviço e o serviço estiver removendo conexões de cliente.  
   
- SMSvcHost. exe. config também contém informações sobre as identidades de processo que podem fazer uso do serviço de compartilhamento de porta. Quando um processo se conecta ao serviço de compartilhamento de porta para fazer uso de uma porta TCP compartilhada, a identidade do processo de conexão é verificada em uma lista de identidades que têm permissão para usar o serviço de compartilhamento de porta. Essas identidades são especificadas como identificadores de segurança (SIDs) \<na seção > de allowAccounts do arquivo SMSvcHost. exe. config. Por padrão, a permissão para usar o serviço de compartilhamento de porta é concedida a contas de sistema (LocalService, LocalSystem e NetworkService), bem como a membros do grupo Administradores. Os aplicativos que permitem que um processo em execução como outra identidade (por exemplo, uma identidade de usuário) se conectem ao serviço de compartilhamento de porta devem adicionar explicitamente o SID apropriado ao SMSvcHost. exe. config (essas alterações não são aplicadas até que o processo SMSvc. exe seja reiniciado).  
+ SMSvcHost. exe. config também contém informações sobre as identidades de processo que podem fazer uso do serviço de compartilhamento de porta. Quando um processo se conecta ao serviço de compartilhamento de porta para fazer uso de uma porta TCP compartilhada, a identidade do processo de conexão é verificada em uma lista de identidades que têm permissão para usar o serviço de compartilhamento de porta. Essas identidades são especificadas como identificadores de segurança (SIDs) na seção \<allowAccounts > do arquivo SMSvcHost. exe. config. Por padrão, a permissão para usar o serviço de compartilhamento de porta é concedida a contas de sistema (LocalService, LocalSystem e NetworkService), bem como a membros do grupo Administradores. Os aplicativos que permitem que um processo em execução como outra identidade (por exemplo, uma identidade de usuário) se conectem ao serviço de compartilhamento de porta devem adicionar explicitamente o SID apropriado ao SMSvcHost. exe. config (essas alterações não são aplicadas até que o processo SMSvc. exe seja reiniciado).  
   
 > [!NOTE]
-> Em [!INCLUDE[wv](../../../../includes/wv-md.md)] sistemas com UAC (controle de conta de usuário) habilitado, os usuários locais exigem permissões elevadas, mesmo que sua conta seja membro do grupo Administradores. Para permitir que esses usuários façam uso do serviço de compartilhamento de porta sem elevação, o SID do usuário (ou o Sid de um grupo no qual o usuário é membro) deve ser adicionado explicitamente à \<seção allowAccounts > de SMSvcHost. exe. config.  
+> Em sistemas Windows Vista com UAC (controle de conta de usuário) habilitado, os usuários locais exigem permissões elevadas, mesmo que sua conta seja membro do grupo Administradores. Para permitir que esses usuários façam uso do serviço de compartilhamento de porta sem elevação, o SID do usuário (ou o SID de um grupo no qual o usuário é membro) deve ser adicionado explicitamente à seção \<allowAccounts > de SMSvcHost. exe. config.  
   
 > [!WARNING]
-> O arquivo SMSvcHost. exe. config padrão especifica um personalizado `etwProviderId` para impedir que o rastreamento SMSvcHost. exe interfira nos rastreamentos de serviço.  
+> O arquivo SMSvcHost. exe. config padrão especifica um `etwProviderId` personalizado para impedir que o rastreamento SMSvcHost. exe interfira nos rastreamentos de serviço.  
   
 ## <a name="see-also"></a>Consulte também
 

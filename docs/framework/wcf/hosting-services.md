@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 634e34eceeb3d3b8828a6d5ed85b6194bcf8586c
-ms.sourcegitcommit: 9b2ef64c4fc10a4a10f28a223d60d17d7d249ee8
+ms.openlocfilehash: b914d5d9f578c5ce13dfc1c520f1b26f8af1fa76
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2019
-ms.locfileid: "72961145"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837916"
 ---
 # <a name="hosting-services"></a>Serviços de hospedagem
 
@@ -35,18 +35,18 @@ Essas opções de hospedagem vão desde a execução dentro de um aplicativo de 
  Observe que os serviços hospedados pelo IIS só podem usar o transporte HTTP. Sua implementação no IIS 5,1 introduziu algumas limitações no [!INCLUDE[wxp](../../../includes/wxp-md.md)]. A ativação baseada em mensagem fornecida para um serviço WCF pelo IIS 5,1 em [!INCLUDE[wxp](../../../includes/wxp-md.md)] bloqueia qualquer outro serviço WCF hospedado internamente no mesmo computador usando a porta 80 para se comunicar. Os serviços WCF podem ser executados no mesmo AppDomain/pool de aplicativos/processo de trabalho que outros aplicativos quando hospedados pelo IIS 6,0 em [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]. Mas como o WCF e o IIS 6,0 usam a pilha HTTP do modo kernel (HTTP. sys), o IIS 6,0 pode compartilhar a porta 80 com outros serviços WCF hospedados automaticamente em execução no mesmo computador, diferente do IIS 5,1.
 
 ### <a name="windows-process-activation-service-was"></a>Serviço de Ativação de Processos do Windows (WAS)
- O WAS (serviço de ativação de processos do Windows) é o novo mecanismo de ativação de processos para o [!INCLUDE[lserver](../../../includes/lserver-md.md)] que também está disponível em [!INCLUDE[wv](../../../includes/wv-md.md)]. Ele retém o conhecido modelo de processo do IIS 6,0 (pools de aplicativos e ativação de processo com base em mensagens) e recursos de hospedagem (como proteção rápida de falhas, monitoramento de integridade e reciclagem), mas remove a dependência de HTTP da ativação arquitectura. O IIS 7,0 usa o WAS para realizar a ativação baseada em mensagem via HTTP. Os componentes adicionais do WCF também se conectam ao WAS para fornecer ativação baseada em mensagem nos outros protocolos aos quais o WCF dá suporte, como TCP, MSMQ e pipes nomeados. Isso permite que os aplicativos que usam protocolos de comunicação usem os recursos do IIS, como reciclagem de processo, proteção rápida contra falhas e o sistema de configuração comum que só estavam disponíveis para aplicativos baseados em HTTP.
+ O WAS (serviço de ativação de processos do Windows) é o novo mecanismo de ativação de processos para o [!INCLUDE[lserver](../../../includes/lserver-md.md)] que também está disponível no Windows Vista. Ele retém o conhecido modelo de processo do IIS 6,0 (pools de aplicativos e ativação de processo com base em mensagens) e recursos de hospedagem (como proteção rápida de falhas, monitoramento de integridade e reciclagem), mas remove a dependência de HTTP da ativação arquitectura. O IIS 7,0 usa o WAS para realizar a ativação baseada em mensagem via HTTP. Os componentes adicionais do WCF também se conectam ao WAS para fornecer ativação baseada em mensagem nos outros protocolos aos quais o WCF dá suporte, como TCP, MSMQ e pipes nomeados. Isso permite que os aplicativos que usam protocolos de comunicação usem os recursos do IIS, como reciclagem de processo, proteção rápida contra falhas e o sistema de configuração comum que só estavam disponíveis para aplicativos baseados em HTTP.
 
  Essa opção de hospedagem requer que o tenha sido configurado corretamente, mas não exige que você grave nenhum código de hospedagem como parte do aplicativo. Para obter mais informações sobre como configurar a hospedagem do WAS, consulte [como hospedar um serviço WCF no was](./feature-details/how-to-host-a-wcf-service-in-was.md).
 
 ## <a name="choose-a-hosting-environment"></a>Escolher um ambiente de hospedagem
  A tabela a seguir resume alguns dos principais benefícios e cenários associados a cada uma das opções de hospedagem.
 
-|Ambiente de hospedagem|Cenários comuns|Principais benefícios e limitações|
+|Ambiente de hospedagem|Cenários Comuns|Principais benefícios e limitações|
 |-------------------------|----------------------|----------------------------------|
 |Aplicativo gerenciado ("auto-hospedado")|-Aplicativos de console usados durante o desenvolvimento.<br />-Aplicativos clientes WinForm e WPF ricos acessando serviços.|Flexível.<br />– Fácil de implantar.<br />-Não é uma solução empresarial para serviços.|
 |Serviços do Windows (anteriormente conhecidos como serviços NT)|-Um serviço WCF de execução longa hospedado fora do IIS.|-Tempo de vida do processo de serviço controlado pelo sistema operacional, não ativado por mensagem.<br />-Com suporte em todas as versões do Windows.<br />-Ambiente seguro.|
-|IIS 5,1, IIS 6,0|-Executando um serviço WCF lado a lado com conteúdo ASP.NET na Internet usando o protocolo HTTP.|-Reciclagem de processo.<br />-Desligamento ocioso.<br />-Monitoramento de integridade do processo.<br />-Ativação baseada em mensagem.<br />-Somente HTTP.|
+|IIS 5.1, IIS 6.0|-Executando um serviço WCF lado a lado com conteúdo ASP.NET na Internet usando o protocolo HTTP.|-Reciclagem de processo.<br />-Desligamento ocioso.<br />-Monitoramento de integridade do processo.<br />-Ativação baseada em mensagem.<br />-Somente HTTP.|
 |Serviço de Ativação de Processos do Windows (WAS)|-Executando um serviço WCF sem instalar o IIS na Internet usando vários protocolos de transporte.|-O IIS não é necessário.<br />-Reciclagem de processo.<br />-Desligamento ocioso.<br />-Monitoramento de integridade do processo.<br />-Ativação baseada em mensagem.<br />-Funciona com HTTP, TCP, pipes nomeados e MSMQ.|
 |IIS 7.0|-Executando um serviço WCF com conteúdo ASP.NET.<br />-Executando um serviço WCF na Internet usando vários protocolos de transporte.|-FORAM os benefícios.<br />-Integrado ao conteúdo do ASP.NET e do IIS.|
 
@@ -54,13 +54,13 @@ Essas opções de hospedagem vão desde a execução dentro de um aplicativo de 
 
 |Ambiente de hospedagem|Disponibilidade da plataforma|Transportes com suporte|Reciclagem de processo e AppDomain|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|Aplicativos gerenciados ("auto-hospedado")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> NET. TCP,<br /><br /> NET. pipe,<br /><br /> NET. MSMQ|Não|
-|Serviços do Windows (anteriormente conhecidos como serviços NT)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> NET. TCP,<br /><br /> NET. pipe,<br /><br /> NET. MSMQ|Não|
-|IIS 5,1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Sim|
+|Aplicativos gerenciados ("auto-hospedado")|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], Windows Vista,<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> net.tcp,<br /><br /> NET. pipe,<br /><br /> net.msmq|Não|
+|Serviços do Windows (anteriormente conhecidos como serviços NT)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], Windows Vista,<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> net.tcp,<br /><br /> NET. pipe,<br /><br /> net.msmq|Não|
+|IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|Sim|
 |IIS 6,0|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|Sim|
-|Serviço de Ativação de Processos do Windows (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> NET. TCP,<br /><br /> NET. pipe,<br /><br /> NET. MSMQ|Sim|
+|Serviço de Ativação de Processos do Windows (WAS)|Windows Vista, [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP<br /><br /> net.tcp,<br /><br /> NET. pipe,<br /><br /> net.msmq|Sim|
 
- É importante observar que a execução de um serviço ou de qualquer extensão de um host não confiável compromete a segurança. Além disso, observe que ao abrir um <xref:System.ServiceModel.ServiceHost> em representação, um aplicativo deve garantir que o usuário não esteja desconectado, por exemplo, armazenando em cache o <xref:System.Security.Principal.WindowsIdentity> do usuário.
+ É importante observar que a execução de um serviço ou de qualquer extensão de um host não confiável compromete a segurança. Além disso, observe que ao abrir um <xref:System.ServiceModel.ServiceHost> em representação, um aplicativo deve garantir que o usuário não esteja desconectado, por exemplo, armazenando em cache a <xref:System.Security.Principal.WindowsIdentity> do usuário.
 
 ## <a name="see-also"></a>Consulte também
 

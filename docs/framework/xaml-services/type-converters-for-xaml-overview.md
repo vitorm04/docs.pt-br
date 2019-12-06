@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: b54731cc1aba1a47ed6b11f2bff5c596a53fd4b5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 65210d8224b145ab23c7bc9ed76997c0892a5f59
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458513"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837253"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Visão geral de conversores de tipo para XAML
 Os conversores de tipo fornecem lógica para um gravador de objeto que converte de uma cadeia de caracteres na marcação XAML em objetos específicos em um grafo de objeto. Em .NET Framework serviços XAML, o conversor de tipo deve ser uma classe derivada de <xref:System.ComponentModel.TypeConverter>. Alguns conversores também dão suporte ao caminho de salvamento XAML e podem ser usados para serializar um objeto em um formulário de cadeia de caracteres na marcação de serialização. Este tópico descreve como e quando os conversores de tipo em XAML são invocados e fornece conselhos de implementação para as substituições de método de <xref:System.ComponentModel.TypeConverter>.  
@@ -60,7 +60,7 @@ Os conversores de tipo fornecem lógica para um gravador de objeto que converte 
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> e <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> são métodos de suporte que são usados quando um serviço consulta os recursos da implementação do <xref:System.ComponentModel.TypeConverter>. Esses métodos devem ser implementados para retornar o `true` para casos específicos de tipo aos quais os métodos de conversão equivalentes do seu conversor dão suporte. Para fins de XAML, isso geralmente significa o tipo de <xref:System.String>.  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>Informações de cultura e conversores de tipos para XAML  
- Cada implementação de <xref:System.ComponentModel.TypeConverter> pode interpretar exclusivamente o que é uma cadeia de caracteres válida para uma conversão e também pode usar ou ignorar a descrição de tipo que é passada como parâmetros. Uma consideração importante para a conversão de tipo de cultura e XAML é a seguinte: embora o uso de cadeias de caracteres localizáveis como valores de atributo seja suportado pelo XAML, você não pode usar essas cadeias de caracteres localizáveis como entrada do conversor de tipo com requisitos de cultura específicos Essa limitação é porque os conversores de tipo para valores de atributo XAML envolvem um comportamento de processamento XAML-linguagem necessariamente fixo que usa `en-US` cultura. Para obter mais informações sobre os motivos de design para essa restrição, consulte a especificação da linguagem XAML ([\[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) ou a [globalização do WPF e visão geral da localização](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ Cada implementação de <xref:System.ComponentModel.TypeConverter> pode interpretar exclusivamente o que é uma cadeia de caracteres válida para uma conversão e também pode usar ou ignorar a descrição de tipo que é passada como parâmetros. Uma consideração importante para a conversão de tipo de cultura e XAML é a seguinte: embora o uso de cadeias de caracteres localizáveis como valores de atributo seja suportado pelo XAML, você não pode usar essas cadeias de caracteres localizáveis como entrada do conversor de tipo com requisitos de cultura específicos Essa limitação é porque os conversores de tipo para valores de atributo XAML envolvem um comportamento de processamento XAML-linguagem necessariamente fixo que usa `en-US` cultura. Para obter mais informações sobre os motivos de design para essa restrição, consulte a especificação da linguagem XAML ([\[MS-XAML\]](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))) ou a [globalização do WPF e visão geral da localização](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  Como um exemplo em que a cultura pode ser um problema, algumas culturas usam uma vírgula em vez de um ponto como o delimitador de ponto decimal para números na forma de cadeia de caracteres. Esse uso colide com o comportamento que muitos conversores de tipo existentes têm, que é usar uma vírgula como um delimitador. Passar uma cultura por meio de `xml:lang` no XAML ao redor não resolve o problema.  
   

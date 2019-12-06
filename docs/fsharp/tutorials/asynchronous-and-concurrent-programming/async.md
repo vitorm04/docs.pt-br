@@ -2,12 +2,12 @@
 title: Programação assíncrona emF#
 description: Saiba como F# o fornece suporte claro para assincronia com base em um modelo de programação de nível de linguagem derivado dos principais conceitos de programação funcional.
 ms.date: 12/17/2018
-ms.openlocfilehash: 1ede4a5c1e26df271ac94f9b2c216ac84fb38f59
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395783"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837097"
 ---
 # <a name="async-programming-in-f"></a>Programação assíncrona em F\#
 
@@ -39,7 +39,7 @@ Em termos práticos, as Computações assíncronas no F# são agendadas para exe
 
 O principal argumento que você deve ter é que as Computações assíncronas são independentes do fluxo do programa principal. Embora haja algumas garantias sobre quando ou como uma computação assíncrona é executada, há algumas abordagens para orquestrar e agendá-las. O restante deste artigo explora os principais conceitos de F# assincronia e como usar os tipos, funções e expressões incorporados ao. F#
 
-## <a name="core-concepts"></a>Conceitos principais
+## <a name="core-concepts"></a>Conceitos básicos
 
 No F#, a programação assíncrona é centralizada em cerca de três conceitos principais:
 
@@ -127,6 +127,7 @@ let main argv =
     argv
     |> Array.map printTotalFileBytes
     |> Async.Sequential
+    |> Async.Ignore
     |> Async.RunSynchronously
     |> ignore
 ```
@@ -143,7 +144,7 @@ Como F# as Computações assíncronas são uma _especificação_ de trabalho em 
 
 Inicia uma computação filho em uma computação assíncrona. Isso permite que vários cálculos assíncronos sejam executados simultaneamente. A computação filho compartilha um token de cancelamento com a computação pai. Se o cálculo pai for cancelado, o cálculo filho também será cancelado.
 
-Signature
+Assinatura:
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
@@ -161,9 +162,9 @@ O que deve ser observado:
 
 ### <a name="asyncstartimmediate"></a>Async. StartImmediate
 
-Executa uma computação assíncrona, começando imediatamente no thread do sistema operacional atual. Isso será útil se você precisar atualizar algo no thread de chamada durante o cálculo. Por exemplo, se uma computação assíncrona precisar atualizar uma interface do usuário (como atualizar uma barra de progresso), `Async.StartImmediate` deverá ser usada.
+Executa uma computação assíncrona, iniciando imediatamente no thread atual do sistema operacional. Isso será útil se você precisar atualizar algo no thread de chamada durante o cálculo. Por exemplo, se uma computação assíncrona precisar atualizar uma interface do usuário (como atualizar uma barra de progresso), `Async.StartImmediate` deverá ser usada.
 
-Signature
+Assinatura:
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -179,9 +180,9 @@ O que deve ser observado:
 
 ### <a name="asyncstartastask"></a>Async. StartAsTask
 
-Executa uma computação no pool de threads. Retorna um <xref:System.Threading.Tasks.Task%601> que será concluído no estado correspondente depois que o cálculo for encerrado (produz o resultado, gera exceção ou é cancelado). Se nenhum token de cancelamento for fornecido, o token de cancelamento padrão será usado.
+Executa uma computação no pool de segmentos. Retorna um <xref:System.Threading.Tasks.Task%601> que será concluído no estado correspondente depois que o cálculo for encerrado (produz o resultado, gera exceção ou é cancelado). Se nenhum token de cancelamento for fornecido, o token de cancelamento padrão será usado.
 
-Signature
+Assinatura:
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
@@ -199,7 +200,7 @@ O que deve ser observado:
 
 Agenda uma sequência de Computações assíncronas a serem executadas em paralelo. O grau de paralelismo pode ser, opcionalmente, ajustado/limitado, especificando o parâmetro `maxDegreesOfParallelism`.
 
-Signature
+Assinatura:
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -219,7 +220,7 @@ O que deve ser observado:
 
 Agenda uma sequência de Computações assíncronas a serem executadas na ordem em que são passadas. O primeiro cálculo será executado e, em seguida, o próximo e assim por diante. Nenhum cálculo será executado em paralelo.
 
-Signature
+Assinatura:
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -238,7 +239,7 @@ O que deve ser observado:
 
 Retorna uma computação assíncrona que aguarda a conclusão da <xref:System.Threading.Tasks.Task%601> especificada e retorna seu resultado como um `Async<'T>`
 
-Signature
+Assinatura:
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
@@ -256,7 +257,7 @@ O que deve ser observado:
 
 Cria uma computação assíncrona que executa um determinado `Async<'T>`, retornando um `Async<Choice<'T, exn>>`. Se a `Async<'T>` especificada for concluída com êxito, uma `Choice1Of2` será retornada com o valor resultante. Se uma exceção for lançada antes de ser concluída, uma `Choice2of2` será retornada com a exceção gerada. Se ele for usado em uma computação assíncrona que, por sua vez, é composto por muitos cálculos, e um desses cálculos gera uma exceção, a computação que englobará o cálculo será totalmente interrompida.
 
-Signature
+Assinatura:
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
@@ -272,9 +273,9 @@ O que deve ser observado:
 
 ### <a name="asyncignore"></a>Async. ignore
 
-Cria uma computação assíncrona que executa a computação específica e ignora seu resultado.
+Cria uma computação assíncrona que executa a computação determinada e ignora o resultado.
 
-Signature
+Assinatura:
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
@@ -292,7 +293,7 @@ O que deve ser observado:
 
 Executa uma computação assíncrona e aguarda seu resultado no thread de chamada. Esta chamada está bloqueando.
 
-Signature
+Assinatura:
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -311,7 +312,7 @@ O que deve ser observado:
 
 Inicia uma computação assíncrona no pool de threads que retorna `unit`. Não aguarda seu resultado. Cálculos aninhados iniciados com `Async.Start` são iniciados completamente de forma independente do cálculo pai que os chamou. Seu tempo de vida não está vinculado a nenhum cálculo pai. Se o cálculo pai for cancelado, nenhum cálculo filho será cancelado.
 
-Signature
+Assinatura:
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit

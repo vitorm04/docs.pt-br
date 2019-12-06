@@ -2,12 +2,12 @@
 title: Participantes de rastreamento
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 45a92c3ab710fc9bc86fbf269a4672f1d34737cc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: a033b65125a562307c6247eeda93dcacb31f5382
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963684"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837643"
 ---
 # <a name="tracking-participants"></a>Participantes de rastreamento
 Os participantes de rastreamento são os pontos de extensibilidade que permitem que um desenvolvedor de fluxo de trabalho acessar objetos de <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> e processe os. O [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] inclui um participante padrão de rastreamento que grava registros de rastreamento como eventos de Rastreamento de Eventos para Windows (ETW). Se isso não atender aos requisitos, você também poderá escrever um participante de rastreamento personalizado.  
@@ -67,7 +67,7 @@ Os participantes de rastreamento são os pontos de extensibilidade que permitem 
   
  O tamanho de um evento de ETW é limitado pelo tamanho do buffer de ETW, ou pela carga útil máximo para um evento de ETW, qualquer valor é menor. Se o tamanho do evento excede qualquer um desses limites de ETW, o evento será truncado e seu conteúdo é removido de uma maneira arbitrária. Variáveis, os argumentos, anotações e os dados personalizado não são removidos seletivamente. No caso de truncamento, todos estes é truncada independentemente do valor que fez com que o tamanho do evento excede o limite de ETW.  Os dados são removidos substituídos por `<item>..<item>`.  
   
- Tipos complexos em variáveis, argumentos e itens de dados personalizados são serializados para o registro de evento do ETW usando a [classe NetDataContractSerializer](https://go.microsoft.com/fwlink/?LinkId=177537). Essa classe inclui informações de CLR- tipo no vapor serializado XML.  
+ Tipos complexos em variáveis, argumentos e itens de dados personalizados são serializados para o registro de evento do ETW usando a classe <xref:System.Runtime.Serialization.NetDataContractSerializer>. Essa classe inclui informações de CLR- tipo no vapor serializado XML.  
   
  Truncamento de dados de carregamento útil devido aos limites de ETW pode resultar em duplicado através dos registros que estão sendo enviados a uma sessão de ETW. Isso pode ocorrer se mais de uma sessão é escutando eventos e as sessões têm diferentes limites de carregamento útil para os eventos.  
   
@@ -85,14 +85,14 @@ Os participantes de rastreamento são os pontos de extensibilidade que permitem 
   
 2. Selecione **Visualizador de eventos, logs de aplicativos e serviços, Microsoft, Windows, servidor de aplicativos-aplicativos**.  
   
-3. Clique com o botão direito do mouse e verifique se **Exibir, Mostrar logs analíticos e de depuração** está selecionado. Se não, selecione-o para que a marca de seleção aparece próxima a ela. Isso exibe oslogs analíticos, de **desempenho**e de **depuração** .  
+3. Clique com o botão direito do mouse e verifique se **Exibir, Mostrar logs analíticos e de depuração** está selecionado. Se não, selecione-o para que a marca de seleção aparece próxima a ela. Isso exibe os logs **analíticos**, de **desempenho**e de **depuração** .  
   
 4. Clique com o botão direito do mouse no log **analítico** e selecione **habilitar log**. O log existirá no diretório %SystemRoot% \ arquivo de Winevt System32 \ \ \ application logs Server-Applications%4Analytic.etl.  
   
 ## <a name="custom-tracking-participant"></a>Participante de rastreamento personalizada  
- O participante de rastreamento API permite a extensão de rastreamento usuário fornecido com o participante de rastreamento que pode incluir a lógica personalizada para manipular os registros de rastreamento emissores em tempo de execução de fluxo de trabalho. Para gravar um participante personalizado de rastreamento, o desenvolvedor deve implementar o método `Track` na classe de <xref:System.Activities.Tracking.TrackingParticipant> . Este método é chamado quando um registro de rastreamento é emitida em tempo de execução de fluxo de trabalho.  
+ O participante de rastreamento API permite a extensão de rastreamento usuário fornecido com o participante de rastreamento que pode incluir a lógica personalizada para manipular os registros de rastreamento emissores em runtime de fluxo de trabalho. Para gravar um participante personalizado de rastreamento, o desenvolvedor deve implementar o método `Track` na classe de <xref:System.Activities.Tracking.TrackingParticipant> . Este método é chamado quando um registro de rastreamento é emitida em runtime de fluxo de trabalho.  
   
- Os participantes de rastreamento derivam da classe de <xref:System.Activities.Tracking.TrackingParticipant> . Sistema forneceu <xref:System.Activities.Tracking.EtwTrackingParticipant> emite-se um rastreamento de evento para o evento do Windows (ETW) para cada registro de rastreamento que é recebido. Para criar um participante personalizado de rastreamento, uma classe é criada que deriva de <xref:System.Activities.Tracking.TrackingParticipant>. Para fornecer a funcionalidade básica de rastreamento, substitua o <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. o<xref:System.Activities.Tracking.TrackingParticipant.Track%2A> é chamado quando um registro de rastreamento é enviado em tempo de execução e pode ser processado na forma desejada. No exemplo a seguir, uma classe personalizada de participante de rastreamento é definida que emite todos os registros de rastreamento para a janela do console. Você também pode implementar um objeto de <xref:System.Activities.Tracking.TrackingParticipant> que processa os registros de rastreamento que usam de forma assíncrona seus métodos de `BeginTrack` e de `EndTrack`  
+ Os participantes de rastreamento derivam da classe de <xref:System.Activities.Tracking.TrackingParticipant> . Sistema forneceu <xref:System.Activities.Tracking.EtwTrackingParticipant> emite-se um rastreamento de evento para o evento do Windows (ETW) para cada registro de rastreamento que é recebido. Para criar um participante personalizado de rastreamento, uma classe é criada que deriva de <xref:System.Activities.Tracking.TrackingParticipant>. Para fornecer a funcionalidade básica de rastreamento, substitua o <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. o<xref:System.Activities.Tracking.TrackingParticipant.Track%2A> é chamado quando um registro de rastreamento é enviado em runtime e pode ser processado na forma desejada. No exemplo a seguir, uma classe personalizada de participante de rastreamento é definida que emite todos os registros de rastreamento para a janela do console. Você também pode implementar um objeto de <xref:System.Activities.Tracking.TrackingParticipant> que processa os registros de rastreamento que usam de forma assíncrona seus métodos de `BeginTrack` e de `EndTrack`  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  
@@ -142,5 +142,5 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
   
 ## <a name="see-also"></a>Consulte também
 
-- [Monitoramento do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitorando aplicativos com o app Fabric](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitoramento do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Monitorando aplicativos com o app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

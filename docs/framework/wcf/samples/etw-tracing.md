@@ -2,12 +2,12 @@
 title: Rastreamento ETW
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: c9f2b3019ee30ded59a7549a4d3be834c9ab9811
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 25a4281cbf5a9ad81a63eee13d768715eebedfb6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716439"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837890"
 ---
 # <a name="etw-tracing"></a>Rastreamento ETW
 Este exemplo demonstra como implementar o rastreamento de ponta a ponta (E2E) usando o ETW (rastreamento de eventos para Windows) e o `ETWTraceListener` que é fornecido com este exemplo. O exemplo é baseado na [introdução](../../../../docs/framework/wcf/samples/getting-started-sample.md) e inclui o rastreamento ETW.  
@@ -85,7 +85,7 @@ logman stop Wcf
 2. Para compilar a solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
     > [!NOTE]
-    > Para usar os comandos RegisterProvider. bat, SetupETW. bat e CleanupETW. bat, você deve executar sob uma conta de administrador local. Se você estiver usando [!INCLUDE[wv](../../../../includes/wv-md.md)] ou posterior, também deverá executar o prompt de comando com privilégios elevados. Para fazer isso, clique com o botão direito do mouse no ícone do prompt de comando e clique em **Executar como administrador**.  
+    > Para usar os comandos RegisterProvider. bat, SetupETW. bat e CleanupETW. bat, você deve executar sob uma conta de administrador local. Se você estiver usando o Windows Vista ou posterior, também deverá executar o prompt de comando com privilégios elevados. Para fazer isso, clique com o botão direito do mouse no ícone do prompt de comando e clique em **Executar como administrador**.  
   
 3. Antes de executar o exemplo, execute RegisterProvider. bat no cliente e no servidor. Isso configura o arquivo resultante ETWTracingSampleLog. ETL para gerar rastreamentos que podem ser lidos pelo Visualizador de rastreamento de serviço. Esse arquivo pode ser encontrado na pasta C:\Logs. Se essa pasta não existir, ela deverá ser criada ou nenhum rastreamento será gerado. Em seguida, execute SetupETW. bat nos computadores cliente e servidor para iniciar a sessão de rastreamento ETW. O arquivo SetupETW. bat pode ser encontrado na pasta CS\Client.  
   

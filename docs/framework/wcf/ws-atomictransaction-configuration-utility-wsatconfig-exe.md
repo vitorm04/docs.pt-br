@@ -2,12 +2,12 @@
 title: Utilitário de configuração de transações WS-Atomic (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 224777fe5bf8e8d832ede582f460a8fa6ae6181d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 429e11cdafc154b6913ab9de76dabe9c5b81d924
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802339"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837708"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilitário de configuração de transações WS-Atomic (wsatConfig.exe)
 O utilitário de configuração WS-AtomicTransaction é usado para definir configurações básicas de suporte WS-AtomicTransaction.  
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- Se você estiver executando [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], deverá baixar uma atualização antes de executar o WsatConfig. exe. Para obter mais informações sobre essa atualização, consulte [Update for Windows Communication Foundation (KB912817)](https://www.microsoft.com/en-us/download/details.aspx?id=21520).  
+ Se você estiver executando [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], deverá baixar uma atualização antes de executar o WsatConfig. exe. Para obter mais informações sobre essa atualização, consulte [Update for Windows Communication Foundation (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520).  
   
  A tabela a seguir mostra as opções que podem ser usadas com o utilitário de configuração WS-AtomicTransaction (wsatConfig. exe).  
   

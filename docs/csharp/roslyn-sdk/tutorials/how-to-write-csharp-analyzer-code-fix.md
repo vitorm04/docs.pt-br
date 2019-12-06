@@ -1,27 +1,27 @@
 ---
-title: 'Tutorial: crie seu primeiro analisador e correção de código'
+title: 'Tutorial: escrever seu primeiro analisador e correção de código'
 description: Este tutorial fornece instruções passo a passo para criar um analisador e correção de código usando o SDK do .NET Compiler (APIs do Roslyn).
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 7bd0fda9fb717a48c09aafde47f9b7f4f360c357
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105752"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837045"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: crie seu primeiro analisador e correção de código
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>Tutorial: escrever seu primeiro analisador e correção de código
 
 O SDK da .NET Compiler Platform fornece as ferramentas necessárias para criar avisos personalizados destinados ao C# ou código do Visual Basic. Seu **analisador** contém código que reconhece as violações da sua regra. Sua **correção de código** contém o código que corrige a violação. As regras que você implementar podem ser qualquer coisa, incluindo estrutura do código, estilo de codificação, convenções de nomenclatura e muito mais. O .NET Compiler Platform fornece a estrutura para executar análise conforme os desenvolvedores escrevem o código, bem como todos os recursos de interface do usuário do Visual Studio para corrigir o código: mostrar rabiscos no editor, popular a Lista de Erros do Visual Studio, criar as sugestões da "lâmpada" e mostrar a visualização avançada das correções sugeridas.
 
 Neste tutorial, você explorará a criação de um **analisador** e uma **correção de código** que o acompanha, usando as APIs do Roslyn. Um analisador é uma maneira de executar a análise de código-fonte e relatar um problema para o usuário. Opcionalmente, um analisador também pode fornecer uma correção de código que representa uma modificação no código-fonte do usuário. Este tutorial cria um analisador que localiza as declarações de variável local que poderiam ser declaradas usando o modificador `const`, mas não o são. A correção de código anexa modifica essas declarações para adicionar o modificador `const`.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
 - [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-Será necessário instalar o **SDK do .NET Compiler Platform** por meio do Instalador do Visual Studio:
+Você precisará instalar o **SDK do .net Compiler Platform** por meio do instalador do Visual Studio:
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -60,7 +60,7 @@ O analisador com modelo de correção de código cria três projetos: um contém
 > [!TIP]
 > Quando você executa seu analisador, você pode iniciar uma segunda cópia do Visual Studio. Essa segunda cópia usa um hive do Registro diferente para armazenar configurações. Isso lhe permite diferenciar as configurações visuais em duas cópias do Visual Studio. Você pode escolher um tema diferente para a execução experimental do Visual Studio. Além disso, não use perfil móvel de suas configurações nem faça logon na conta do Visual Studio usando a execução experimental do Visual Studio. Isso mantém as diferenças entre as configurações.
 
-Na segunda instância do Visual Studio que você acabou de iniciar, crie um novo projeto de Aplicativo de Console em C# (uma das opções entre o projeto do .NET Core e o do .NET Framework funcionará – os analisadores trabalham no nível da origem.) Passe o mouse sobre o token com um sublinhado ondulado e o texto de aviso fornecido por um analisador será exibido.
+Na segunda instância do Visual Studio que você acabou de iniciar, crie um C# novo projeto de aplicativo de console (.NET Core ou .NET Framework projeto funcionará – os analisadores funcionam no nível de origem). Passe o mouse sobre o token com um sublinhado ondulado e o texto de aviso fornecido por um analisador é exibido.
 
 O modelo cria um analisador que relata um aviso em cada declaração de tipo em que o nome do tipo contém letras minúsculas, conforme mostrado na figura a seguir:
 
@@ -427,7 +427,7 @@ Você está quase terminando. Há mais algumas condições com as quais o seu an
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-Além disso, os tipos de referência não são tratados corretamente. O único valor de constante permitido para um tipo de referência é `null`, exceto no caso de <xref:System.String?displayProperty=nameWIthType>, que permite literais de cadeia de caracteres. Em outras palavras, `const string s = "abc"` é legal, mas `const object s = "abc"` não é. Este snippet de código verifica essa condição:
+Além disso, os tipos de referência não são tratados corretamente. O único valor de constante permitido para um tipo de referência é `null`, exceto no caso de <xref:System.String?displayProperty=nameWithType>, que permite literais de cadeia de caracteres. Em outras palavras, `const string s = "abc"` é legal, mas `const object s = "abc"` não é. Este snippet de código verifica essa condição:
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 

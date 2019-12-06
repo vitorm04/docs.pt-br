@@ -2,22 +2,22 @@
 title: Controlando perfis
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: a643cf37bbb3e72baefb434249aa54b386060627
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 9217f25ba4499e7ff75020642be387aa79ba27bf
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67660923"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837617"
 ---
 # <a name="tracking-profiles"></a>Controlando perfis
 
-Controlando os perfis contêm consultas de rastreamento que permitem um participante de rastreamento assinar eventos de fluxo de trabalho que são emitidas quando o estado de uma instância de fluxo de trabalho se altera em tempo de execução.
+Controlando os perfis contêm consultas de rastreamento que permitem um participante de rastreamento assinar eventos de fluxo de trabalho que são emitidas quando o estado de uma instância de fluxo de trabalho se altera em runtime.
 
 ## <a name="tracking-profiles"></a>Controlando perfis
 
 Controlando os perfis são usados para especificar que as informações de rastreamento é emitida para uma instância de fluxo de trabalho. Se nenhum perfil for especificado, então todos os eventos de rastreamento são emitidas. Se um perfil for especificado, então os eventos de rastreamento especificados no perfil serão emitidos. Dependendo dos requisitos de monitoramento, você pode escrever um perfil que é muito geral, que assina um pequeno conjunto de alterações de estado de alto nível em um fluxo de trabalho. Inversamente, você pode criar um perfil muito detalhado cujos eventos resultantes são muito ricos reconstruir posteriormente um fluxo detalhado de execução.
 
-Controlando os perfis manifestam-se como elementos XML em um arquivo de configuração do .NET Framework padrão ou especificado no código. O exemplo a seguir é de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] que controla o perfil em um arquivo de configuração que permite que um participante de rastreamento assine os eventos de fluxo de trabalho `Started` e de `Completed` .
+Os perfis de rastreamento se manifestam como elementos XML dentro de um arquivo de configuração .NET Framework padrão ou especificados no código. O exemplo a seguir é de [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] que controla o perfil em um arquivo de configuração que permite que um participante de rastreamento assine os eventos de fluxo de trabalho `Started` e de `Completed` .
 
 ```xml
 <system.serviceModel>
@@ -59,13 +59,13 @@ TrackingProfile profile = new TrackingProfile()
 };
 ```
 
-Controlando registros são filtrados com o modo de visibilidade em um perfil de rastreamento usando o atributo <xref:System.Activities.Tracking.ImplementationVisibility> . Uma atividade composto é uma atividade de nível superior que contém outras atividades que formam a sua implementação. O modo de visibilidade especifica os registros de rastreamento de atividades emissores compostas em uma atividade de fluxo de trabalho, para especificar se as atividades que formam a implementação estão sendo controladas. O modo de visibilidade se aplica a nível de perfil de rastreamento. A filtragem de registros de controle para atividades individuais em um fluxo de trabalho é controlada por consultas no perfil de rastreamento. Para obter mais informações, consulte o **tipos de consulta de perfil de acompanhamento** seção neste documento.
+Controlando registros são filtrados com o modo de visibilidade em um perfil de rastreamento usando o atributo <xref:System.Activities.Tracking.ImplementationVisibility> . Uma atividade composto é uma atividade de nível superior que contém outras atividades que formam a sua implementação. O modo de visibilidade especifica os registros de rastreamento de atividades emissores compostas em uma atividade de fluxo de trabalho, para especificar se as atividades que formam a implementação estão sendo controladas. O modo de visibilidade se aplica a nível de perfil de rastreamento. A filtragem de registros de controle para atividades individuais em um fluxo de trabalho é controlada por consultas no perfil de rastreamento. Para obter mais informações, consulte a seção **tipos de consulta de perfil de rastreamento** neste documento.
 
 Os dois modos de visibilidade especificado pelo atributo de `implementationVisibility` no perfil de rastreamento são `RootScope` e `All`. Usar o modo de `RootScope` suprime os registros de controle para as atividades que formam a implementação de uma atividade em casos onde uma atividade composta não é a raiz de um fluxo de trabalho. Isso significa que, quando uma atividade que é implementada usando outras atividades é adicionada a um fluxo de trabalho, e `implementationVisibility` definido como RootScope, somente a última atividade de nível superior dentro da atividade composto é rastreada. Se uma atividade é a raiz de fluxo de trabalho, então a implementação da atividade é o próprio fluxo de trabalho e os registros de rastreamento são emitidas para as atividades que formam a implementação. Usar qualquer modo permite que todos os registros de rastreamento ser emitida para atividades raiz e todas as suas atividades compostas.
 
-Por exemplo, suponha *MyActivity* é uma atividade composta cuja implementação contém duas atividades, *Activity1* e *Activity2*. Quando essa atividade é adicionada a um fluxo de trabalho e o rastreamento está ativado com um perfil de rastreamento com `implementationVisibility` definido como `RootScope`, registros de rastreamento são emitidos somente para *MyActivity*. No entanto, nenhum registro é emitida para atividades *Activity1* e *Activity2*.
+Por exemplo, suponha que *myactivity* é uma atividade composta cuja implementação contém duas atividades, *Atividade1* e *da atividade2*. Quando essa atividade é adicionada a um fluxo de trabalho e o rastreamento é habilitado com um perfil de controle com `implementationVisibility` definido como `RootScope`, os registros de rastreamento são emitidos somente para *myactivity*. No entanto, nenhum registro é emitido para as atividades *Atividade1* e *da atividade2*.
 
-No entanto, se o `implementationVisibility` de atributo para o perfil de rastreamento é definido como `All`, em seguida, registros de rastreamento são emitidos não apenas para *MyActivity*, mas também para atividades *Activity1* e  *Activity2*.
+No entanto, se o atributo `implementationVisibility` para o perfil de controle for definido como `All`, os registros de rastreamento serão emitidos não apenas para *myactivity*, mas também para as atividades *Atividade1* e *da atividade2*.
 
 O sinalizador de `implementationVisibility` se aplica aos seguintes tipos de registro de acompanhamento:
 
@@ -108,7 +108,7 @@ A funcionalidade de `implementationVisibility` é especificado como <xref:System
 
 ### <a name="tracking-profile-query-types"></a>Controlando tipos de consulta de perfil
 
-Controlando os perfis são estruturados como as assinaturas declarativas para controlar os registros que permitem que você possa ver o tempo de execução de fluxo de trabalho para o controle específico registro. Há vários tipos de consulta que permitem autenticação para classes diferentes de objetos de <xref:System.Activities.Tracking.TrackingRecord> . Controlar perfis pode ser especificado na configuração ou com o código. Aqui estão os tipos de consulta mais comuns:
+Controlando os perfis são estruturados como as assinaturas declarativas para controlar os registros que permitem que você possa ver o runtime de fluxo de trabalho para o controle específico registro. Há vários tipos de consulta que permitem autenticação para classes diferentes de objetos de <xref:System.Activities.Tracking.TrackingRecord> . Controlar perfis pode ser especificado na configuração ou com o código. Aqui estão os tipos de consulta mais comuns:
 
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery> - use isso para controlar as alterações do ciclo de vida de instância de fluxo de trabalho como `Started` precedente- demonstrado e `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> é usado para assinar seguintes a <xref:System.Activities.Tracking.TrackingRecord> os objetos:
 
@@ -150,7 +150,7 @@ Controlando os perfis são estruturados como as assinaturas declarativas para co
   };
   ```
 
-- <xref:System.Activities.Tracking.ActivityStateQuery> - use isso para controlar as alterações do ciclo de vida de atividades que compõem uma instância de fluxo de trabalho. Por exemplo, você talvez queira manter o controle de toda vez que a atividade de "Enviar email" termina dentro de uma instância de fluxo de trabalho. Esta consulta é necessária para que <xref:System.Activities.Tracking.TrackingParticipant> assine a <xref:System.Activities.Tracking.ActivityStateRecord> objetos. Os estados disponíveis para assinar a são especificados em <xref:System.Activities.Tracking.ActivityStates>.
+- <xref:System.Activities.Tracking.ActivityStateQuery> - use isso para controlar as alterações do ciclo de vida de atividades que compõem uma instância de fluxo de trabalho. Por exemplo, talvez você queira manter o controle sempre que a atividade "enviar email" for concluída em uma instância de fluxo de trabalho. Esta consulta é necessária para que <xref:System.Activities.Tracking.TrackingParticipant> assine a <xref:System.Activities.Tracking.ActivityStateRecord> objetos. Os estados disponíveis para assinar a são especificados em <xref:System.Activities.Tracking.ActivityStates>.
 
   A configuração e o código usados para assinar o estado da atividade que controla os registros que usam <xref:System.Activities.Tracking.ActivityStateQuery> para atividades de `SendEmailActivity` são mostrados no exemplo a seguir.
 
@@ -234,7 +234,7 @@ Controlando os perfis são estruturados como as assinaturas declarativas para co
 
 - <xref:System.Activities.Tracking.CancelRequestedQuery> - use isso para controlar solicitações cancelar uma atividade filho pela atividade pai. A consulta é necessária para que <xref:System.Activities.Tracking.TrackingParticipant> assine a <xref:System.Activities.Tracking.CancelRequestedRecord> objetos.
 
-  A configuração e o código usado para assinar os registros relacionados ao uso de cancelamento de atividade <xref:System.Activities.Tracking.CancelRequestedQuery> é mostrado no exemplo a seguir.
+  A configuração e o código usados para assinar registros relacionados ao cancelamento da atividade usando <xref:System.Activities.Tracking.CancelRequestedQuery> são mostrados no exemplo a seguir.
 
   ```xml
   <cancelRequestedQueries>
@@ -306,9 +306,9 @@ Controlando os perfis são estruturados como as assinaturas declarativas para co
   };
   ```
 
-### <a name="annotations"></a>Anotações
+### <a name="annotations"></a>Annotations
 
-As anotações permitem que você marca arbitrariamente registros de rastreamento com um valor que pode ser configurado após tempo de compilação. Por exemplo, você pode querer vários registros de rastreamento em vários fluxos de trabalho a ser marcado com "Servidor" = = "Email Server1". Isso facilita localizar todos os registros com essa marca ao consultar o rastreamento registra posteriormente.
+As anotações permitem que você marca arbitrariamente registros de rastreamento com um valor que pode ser configurado após tempo de compilação. Por exemplo, talvez você queira que vários registros de acompanhamento em vários fluxos de trabalho sejam marcados com "servidor de email" = = "Server1 de email". Isso facilita localizar todos os registros com essa marca ao consultar o rastreamento registra posteriormente.
 
 Para fazer isso, uma anotação é adicionada a uma consulta de rastreamento conforme mostrado no exemplo o seguir.
 
@@ -344,9 +344,9 @@ Controlando a consulta elementos são usados para criar um perfil de rastreament
 > [!WARNING]
 > Para um WF usando o host serviço de fluxo de trabalho, o perfil de rastreamento é normalmente criado usando um arquivo de configuração. Também é possível criar um perfil de rastreamento com o código usando o perfil de rastreamento e a consulta API de rastreamento.
 
-Um perfil configurado como um arquivo de configuração XML é aplicado a um participante de rastreamento que usa uma extensão de comportamento. Isso é adicionado a um WorkflowServiceHost como descrito na seção posterior [Configurando o rastreamento para um fluxo de trabalho](configuring-tracking-for-a-workflow.md).
+Um perfil configurado como um arquivo de configuração XML é aplicado a um participante de rastreamento que usa uma extensão de comportamento. Isso é adicionado a um WorkflowServiceHost, conforme descrito na seção mais adiante, [Configurando o acompanhamento de um fluxo de trabalho](configuring-tracking-for-a-workflow.md).
 
-A verbosidade de registros de rastreamento emissores pelo host é determinada pelas configurações dentro do perfil de rastreamento. Um participante de rastreamento assina controlar registros adicionando consultas a um perfil de rastreamento. Para assinar todos os registros de rastreamento, o perfil de acompanhamento precisa especificar todas as consultas de acompanhamento usando "\*" em campos de nome em cada uma das consultas.
+A verbosidade de registros de rastreamento emissores pelo host é determinada pelas configurações dentro do perfil de rastreamento. Um participante de rastreamento assina controlar registros adicionando consultas a um perfil de rastreamento. Para assinar todos os registros de acompanhamento, o perfil de controle precisa especificar todas as consultas de controle usando "\*" nos campos de nome em cada uma das consultas.
 
 Aqui estão alguns dos exemplos comuns de perfis de rastreamento.
 
@@ -388,5 +388,5 @@ Aqui estão alguns dos exemplos comuns de perfis de rastreamento.
 ## <a name="see-also"></a>Consulte também
 
 - [Acompanhamento de SQL](./samples/sql-tracking.md)
-- [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitoramento do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Monitorando aplicativos com o app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

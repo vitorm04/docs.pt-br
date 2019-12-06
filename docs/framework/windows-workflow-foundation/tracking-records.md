@@ -2,18 +2,18 @@
 title: Controlando registros
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: c9c0d7d8c29d89ab47957c271444740f5f2f9b7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d59db7e4c90b3cffe523c89de093f58f3e520bde
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650932"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837604"
 ---
 # <a name="tracking-records"></a>Controlando registros
-O tempo de execução de fluxo de trabalho é instrumentado para emitir registros de controle para siga a execução de uma instância de fluxo de trabalho.  
+O runtime de fluxo de trabalho é instrumentado para emitir registros de controle para siga a execução de uma instância de fluxo de trabalho.  
   
 ## <a name="tracking-records"></a>Controlando registros  
- A tabela a seguir detalha os registros de rastreamento que o tempo de execução de fluxo de trabalho se emite.  
+ A tabela a seguir detalha os registros de rastreamento que o runtime de fluxo de trabalho se emite.  
   
 |Controlando o registro|Descrição|  
 |---------------------|-----------------|  
@@ -22,31 +22,31 @@ O tempo de execução de fluxo de trabalho é instrumentado para emitir registro
 |Registros de ressunção do indexador|Emitido sempre que um marcador em uma instância de fluxo de trabalho que é.|  
 |Registros de rastreamento personalizadas|Um autor de fluxo de trabalho pode criar registros personalizados de rastreamento e emitir os dentro de uma atividade personalizado.|  
   
- Todos os registros relacionados acompanhamento- emissores de tempo de execução de WF derivam da classe base <xref:System.Activities.Tracking.TrackingRecord>, que contém a comum definida de dados. Controlando registros mostrar o ciclo de vida para um fluxo de trabalho simples. Cada registro de rastreamento contém detalhes sobre o evento associado de rastreamento, como <xref:System.Activities.Tracking.TrackingRecord.InstanceId%2A>, <xref:System.Activities.Tracking.TrackingRecord.RecordNumber%2A>, e o específico de informações adicionais para o tipo de registro de rastreamento.  
+ Todos os registros relacionados acompanhamento- emissores de runtime de WF derivam da classe base <xref:System.Activities.Tracking.TrackingRecord>, que contém a comum definida de dados. Controlando registros mostrar o ciclo de vida para um fluxo de trabalho simples. Cada registro de rastreamento contém detalhes sobre o evento associado de rastreamento, como <xref:System.Activities.Tracking.TrackingRecord.InstanceId%2A>, <xref:System.Activities.Tracking.TrackingRecord.RecordNumber%2A>, e o específico de informações adicionais para o tipo de registro de rastreamento.  
   
- Os seguintes tipos de objetos de <xref:System.Activities.Tracking.TrackingRecord> são emitidas em tempo de execução de fluxo de trabalho:  
+ Os seguintes tipos de objetos de <xref:System.Activities.Tracking.TrackingRecord> são emitidas em runtime de fluxo de trabalho:  
   
-- **WorkflowInstanceRecord** - este <xref:System.Activities.Tracking.TrackingRecord> descreve o ciclo de vida da instância do fluxo de trabalho. Por exemplo, um registro é emitida quando inicia o fluxo de trabalho ou terminar, e contém o estado da instância de fluxo de trabalho. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
+- **WorkflowInstanceRecord** -este <xref:System.Activities.Tracking.TrackingRecord> descreve o ciclo de vida da instância de fluxo de trabalho. Por exemplo, um registro é emitida quando inicia o fluxo de trabalho ou terminar, e contém o estado da instância de fluxo de trabalho. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
   
-- **WorkflowInstanceAbortedRecord** - este <xref:System.Activities.Tracking.TrackingRecord> é emitido quando uma instância de fluxo de trabalho será anulada. O registro contém a razão para a instância de fluxo de trabalho que está sendo aborted. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
+- **WorkflowInstanceAbortedRecord** -essa <xref:System.Activities.Tracking.TrackingRecord> é emitida quando uma instância de fluxo de trabalho é anulada. O registro contém a razão para a instância de fluxo de trabalho que está sendo aborted. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
   
-- **WorkflowInstanceUnhandledExceptionRecord** - este <xref:System.Activities.Tracking.TrackingRecord> é emitida se uma exceção ocorre na instância do fluxo de trabalho e não é tratada por nenhuma atividade. O registro contém os detalhes de exceção. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
+- **WorkflowInstanceUnhandledExceptionRecord** -essa <xref:System.Activities.Tracking.TrackingRecord> será emitida se ocorrer uma exceção na instância do fluxo de trabalho e não for manipulada por nenhuma atividade. O registro contém os detalhes de exceção. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
   
-- **WorkflowInstanceSuspendedRecord** - este <xref:System.Activities.Tracking.TrackingRecord> é emitido sempre que uma instância de fluxo de trabalho é suspensa. O registro contém a razão para a instância de fluxo de trabalho que está sendo suspendida. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
+- **WorkflowInstanceSuspendedRecord** -essa <xref:System.Activities.Tracking.TrackingRecord> é emitida sempre que uma instância de fluxo de trabalho é suspensa. O registro contém a razão para a instância de fluxo de trabalho que está sendo suspendida. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
   
-- **WorkflowInstanceTerminatedRecord** - este <xref:System.Activities.Tracking.TrackingRecord> é emitido sempre que uma instância de fluxo de trabalho é encerrada. O registro contém a razão para a instância de fluxo de trabalho que está sendo finalizada. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
+- **WorkflowInstanceTerminatedRecord** -essa <xref:System.Activities.Tracking.TrackingRecord> é emitida sempre que uma instância de fluxo de trabalho é encerrada. O registro contém a razão para a instância de fluxo de trabalho que está sendo finalizada. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
   
-- **ActivityStateRecord** - este <xref:System.Activities.Tracking.TrackingRecord> é emitido quando uma atividade dentro de um fluxo de trabalho é executado. Esses registros indicam o estado da atividade dentro de instância de fluxo de trabalho. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.ActivityStateRecord>.  
+- **ActivityStateRecord** -essa <xref:System.Activities.Tracking.TrackingRecord> é emitida quando uma atividade em um fluxo de trabalho é executada. Esses registros indicam o estado da atividade dentro de instância de fluxo de trabalho. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.ActivityStateRecord>.  
   
-- **ActivityScheduledRecord** - este <xref:System.Activities.Tracking.TrackingRecord> é emitida quando agendas de atividade uma atividade filho. Esse registro contém detalhes para atividades pai (atividade de programação) e a atividade filho agendada. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
+- **ActivityScheduledRecord** -essa <xref:System.Activities.Tracking.TrackingRecord> é emitida quando uma atividade agenda uma atividade filho. Esse registro contém detalhes para atividades pai (atividade de programação) e a atividade filho agendada. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
   
-- **{1&gt;faultpropagationrecord&lt;1** - este <xref:System.Activities.Tracking.TrackingRecord> é emitido para cada manipulador que parece no registro até que ele seja manipulado. É usado para denotar o caminho que recebe uma falha na instância de fluxo de trabalho. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.FaultPropagationRecord>.  
+- **FaultPropagationRecord** -essa <xref:System.Activities.Tracking.TrackingRecord> é emitida para cada manipulador que examina o registro até que seja manipulado. É usado para denotar o caminho que recebe uma falha na instância de fluxo de trabalho. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.FaultPropagationRecord>.  
   
-- **{1&gt;cancelrequestedrecord&lt;1** - este <xref:System.Activities.Tracking.TrackingRecord> é emitido sempre que uma atividade tenta cancelar uma atividade filho. Esse registro contém detalhes para atividades a atividade pai e filho que está sendo cancelada. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.CancelRequestedRecord>.  
+- **CancelRequestedRecord** -essa <xref:System.Activities.Tracking.TrackingRecord> é emitida sempre que uma atividade tenta cancelar uma atividade filho. Esse registro contém detalhes para atividades a atividade pai e filho que está sendo cancelada. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   
-- **BookmarkResumptionRecord** - este <xref:System.Activities.Tracking.TrackingRecord> rastreia qualquer marcador que é continuado com êxito. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
+- **BookmarkResumptionRecord** -este <xref:System.Activities.Tracking.TrackingRecord> rastreia qualquer indicador retomado com êxito. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
   
-- **CustomTrackingRecord** - este <xref:System.Activities.Tracking.TrackingRecord> é criado e emitido por um autor de fluxo de trabalho dentro de uma atividade de fluxo de trabalho personalizado. Os registros personalizados de rastreamento podem ser preenchidos com os dados a serem emitidos juntamente com os registros. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+- **CustomTrackingRecord** -essa <xref:System.Activities.Tracking.TrackingRecord> é criada e emitida por um autor de fluxo de trabalho dentro de uma atividade de fluxo de trabalho personalizada. Os registros personalizados de rastreamento podem ser preenchidos com os dados a serem emitidos juntamente com os registros. Os detalhes desse registro podem ser encontrados em <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
  Por exemplo, pode haver uma atividade simples de <xref:System.Activities.Statements.Sequence> que contém uma operação de <xref:System.Activities.Statements.WriteLine> com os registros de rastreamento emissores na seguinte ordem:  
   
@@ -62,5 +62,5 @@ O tempo de execução de fluxo de trabalho é instrumentado para emitir registro
   
 ## <a name="see-also"></a>Consulte também
 
-- [Monitoramento do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)
-- [Monitoramento de aplicativos com a malha de aplicativos](https://go.microsoft.com/fwlink/?LinkId=201275)
+- [Monitoramento do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677251(v=azure.10))
+- [Monitorando aplicativos com o app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677276(v=azure.10))

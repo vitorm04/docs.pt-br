@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 939c9c6b8a8a8822174f08d5c0b50ef051264ee1
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802083"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837292"
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
 <a name="introduction"></a>Ao desenvolver Windows Presentation Foundation (WPF) aplicativos autônomos e hospedados em navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos são executados com permissões irrestritas (conjunto de permissões do CAS**FullTrust** ), sejam implantados usando Windows Installer (. msi), xcopy ou ClickOnce. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo de host totalmente confiável pode criar um <xref:System.AppDomain> de confiança parcial usando o modelo de suplemento de .NET Framework. Para obter mais informações, consulte [visão geral dos suplementos do WPF](./app-development/wpf-add-ins-overview.md).  
@@ -87,7 +87,7 @@ ms.locfileid: "74802083"
   
 <a name="InternetExplorerSecuritySettings"></a>   
 ## <a name="web-browsing-software-security-settings"></a>Configurações de segurança de software de navegação na Web  
- As configurações de segurança no seu computador determinam o acesso concedido a qualquer software de navegação Web. O software de navegação na Web inclui qualquer aplicativo ou componente que usa as APIs [WinInet](https://go.microsoft.com/fwlink/?LinkId=179379) ou [Urlmon](https://go.microsoft.com/fwlink/?LinkId=179383) , incluindo o Internet Explorer e o PresentationHost. exe.  
+ As configurações de segurança no seu computador determinam o acesso concedido a qualquer software de navegação Web. O software de navegação na Web inclui qualquer aplicativo ou componente que usa as APIs [WinInet](/windows/win32/wininet/portal) ou [Urlmon](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa767916(v=vs.85)) , incluindo o Internet Explorer e o PresentationHost. exe.  
   
  O Internet Explorer fornece um mecanismo pelo qual você pode configurar a funcionalidade que tem permissão para ser executada pelo ou do Internet Explorer, incluindo o seguinte:  
   
@@ -148,14 +148,14 @@ ms.locfileid: "74802083"
   
 <a name="webbrowser_control_and_feature_controls"></a>   
 ## <a name="webbrowser-control-and-feature-controls"></a>Controle WebBrowser e controles de recurso  
- O controle de <xref:System.Windows.Controls.WebBrowser> do WPF pode ser usado para hospedar conteúdo da Web. O controle de <xref:System.Windows.Controls.WebBrowser> do WPF encapsula o controle ActiveX do WebBrowser subjacente. O WPF fornece algum suporte para proteger seu aplicativo quando você usa o controle de <xref:System.Windows.Controls.WebBrowser> do WPF para hospedar conteúdo da Web não confiável. No entanto, alguns recursos de segurança devem ser aplicados diretamente pelos aplicativos usando o controle de <xref:System.Windows.Controls.WebBrowser>. Para obter mais informações sobre o controle ActiveX do WebBrowser, consulte [visões gerais do controle WebBrowser e tutoriais](https://go.microsoft.com/fwlink/?LinkId=179388).  
+ O controle de <xref:System.Windows.Controls.WebBrowser> do WPF pode ser usado para hospedar conteúdo da Web. O controle de <xref:System.Windows.Controls.WebBrowser> do WPF encapsula o controle ActiveX do WebBrowser subjacente. O WPF fornece algum suporte para proteger seu aplicativo quando você usa o controle de <xref:System.Windows.Controls.WebBrowser> do WPF para hospedar conteúdo da Web não confiável. No entanto, alguns recursos de segurança devem ser aplicados diretamente pelos aplicativos usando o controle de <xref:System.Windows.Controls.WebBrowser>. Para obter mais informações sobre o controle ActiveX do WebBrowser, consulte [visões gerais do controle WebBrowser e tutoriais](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752041(v=vs.85)).  
   
 > [!NOTE]
 > Esta seção também se aplica ao controle de <xref:System.Windows.Controls.Frame>, já que ele usa o <xref:System.Windows.Controls.WebBrowser> para navegar até o conteúdo HTML.  
   
  Se o controle de <xref:System.Windows.Controls.WebBrowser> do WPF for usado para hospedar conteúdo da Web não confiável, seu aplicativo deverá usar um <xref:System.AppDomain> de confiança parcial para ajudar a isolar o código do aplicativo de código de script HTML potencialmente mal-intencionado. Isso é especialmente verdadeiro se seu aplicativo estiver interagindo com o script hospedado usando o método <xref:System.Windows.Controls.WebBrowser.InvokeScript%2A> e a propriedade <xref:System.Windows.Controls.WebBrowser.ObjectForScripting%2A>. Para obter mais informações, consulte [visão geral dos suplementos do WPF](./app-development/wpf-add-ins-overview.md).  
   
- Se seu aplicativo usa o controle de <xref:System.Windows.Controls.WebBrowser> do WPF, outra maneira de aumentar a segurança e mitigar os ataques é habilitar os controles de recursos do Internet Explorer. Os controles de recurso são adições ao Internet Explorer que permitem que administradores e desenvolvedores configurem recursos do Internet Explorer e aplicativos que hospedam o controle ActiveX do WebBrowser, que o controle de <xref:System.Windows.Controls.WebBrowser> do WPF encapsula. Os controles de recurso podem ser configurados usando a função [CoInternetSetFeatureEnabled](https://go.microsoft.com/fwlink/?LinkId=179394) ou alterando os valores no registro. Para obter mais informações sobre controles de recursos, consulte [introdução aos controles de recursos](https://go.microsoft.com/fwlink/?LinkId=179390) e [controles de recursos da Internet](https://go.microsoft.com/fwlink/?LinkId=179392).  
+ Se seu aplicativo usa o controle de <xref:System.Windows.Controls.WebBrowser> do WPF, outra maneira de aumentar a segurança e mitigar os ataques é habilitar os controles de recursos do Internet Explorer. Os controles de recurso são adições ao Internet Explorer que permitem que administradores e desenvolvedores configurem recursos do Internet Explorer e aplicativos que hospedam o controle ActiveX do WebBrowser, que o controle de <xref:System.Windows.Controls.WebBrowser> do WPF encapsula. Os controles de recurso podem ser configurados usando a função [CoInternetSetFeatureEnabled](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537168(v=vs.85)) ou alterando os valores no registro. Para obter mais informações sobre controles de recursos, consulte [introdução aos controles de recursos](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537184(v=vs.85)) e [controles de recursos da Internet](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/general-info/ee330720(v=vs.85)).  
   
  Se você estiver desenvolvendo um aplicativo WPF autônomo que usa o controle de <xref:System.Windows.Controls.WebBrowser> do WPF, o WPF habilita automaticamente os seguintes controles de recurso para seu aplicativo.  
   
@@ -184,7 +184,7 @@ ms.locfileid: "74802083"
  Os controles de recurso são aplicados pelo processo instanciando o objeto ActiveX do WebBrowser. Portanto, se estiver criando um aplicativo autônomo capaz de navegar até o conteúdo não confiável, considere seriamente a possibilidade de habilitar controles de recurso adicionais.  
   
 > [!NOTE]
-> Essa recomendação baseia-se em recomendações gerais para segurança do host MSHTML e SHDOCVW. Para obter mais informações, consulte [as perguntas frequentes sobre segurança de host MSHTML: parte I de II](https://go.microsoft.com/fwlink/?LinkId=179396) e [as perguntas frequentes sobre segurança de host MSHTML: parte II de II](https://go.microsoft.com/fwlink/?LinkId=179415).  
+> Essa recomendação baseia-se em recomendações gerais para segurança do host MSHTML e SHDOCVW. Para obter mais informações, consulte [as perguntas frequentes sobre segurança de host MSHTML: parte I de II](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) e [as perguntas frequentes sobre segurança de host MSHTML: parte II de II](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx).  
   
  Para o executável, considere a possibilidade de habilitar os controles de recurso a seguir ao definir o valor de Registro como 1.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "74802083"
   
  Se você executar um aplicativo de navegador XAML parcialmente confiável (XBAP) que inclui um controle de <xref:System.Windows.Controls.WebBrowser> WPF no Windows Internet Explorer, o WPF hospeda o controle ActiveX do WebBrowser no espaço de endereço do processo do Internet Explorer. Como o controle ActiveX do WebBrowser é hospedado no processo do Internet Explorer, todos os controles de recurso do Internet Explorer também estão habilitados para o controle ActiveX do WebBrowser.  
   
- Os XBAPs executados no Internet Explorer também têm um nível adicional de segurança em comparação com aplicativos autônomos normais. Essa segurança adicional ocorre porque o Internet Explorer e, portanto, o controle ActiveX do WebBrowser, é executado no modo protegido por padrão no Windows Vista e no Windows 7. Para obter mais informações sobre o modo protegido, consulte [compreendendo e trabalhando no modo protegido do Internet Explorer](https://go.microsoft.com/fwlink/?LinkId=179393).  
+ Os XBAPs executados no Internet Explorer também têm um nível adicional de segurança em comparação com aplicativos autônomos normais. Essa segurança adicional ocorre porque o Internet Explorer e, portanto, o controle ActiveX do WebBrowser, é executado no modo protegido por padrão no Windows Vista e no Windows 7. Para obter mais informações sobre o modo protegido, consulte [compreendendo e trabalhando no modo protegido do Internet Explorer](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/).  
   
 > [!NOTE]
 > Se você tentar executar um XBAP que inclui um controle de <xref:System.Windows.Controls.WebBrowser> WPF no Firefox, enquanto estiver na zona da Internet, uma <xref:System.Security.SecurityException> será lançada. Isso ocorre por causa da política de segurança do WPF.  
@@ -266,7 +266,7 @@ ms.locfileid: "74802083"
   
 |Área|Resource|  
 |----------|--------------|  
-|Código gerenciado|[Padrões e práticas de orientação de segurança para aplicativos](https://go.microsoft.com/fwlink/?LinkId=117426)|  
+|Código gerenciado|[Padrões e práticas de orientação de segurança para aplicativos](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[Segurança de acesso do código](../misc/code-access-security.md)|  
 |ClickOnce|[Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
 |[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)|  
@@ -276,7 +276,7 @@ ms.locfileid: "74802083"
 - [Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)
 - [Estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)
 - [Estratégia de segurança do WPF – Engenharia de segurança](wpf-security-strategy-security-engineering.md)
-- [Padrões e práticas de orientação de segurança para aplicativos](https://go.microsoft.com/fwlink/?LinkId=117426)
+- [Padrões e práticas de orientação de segurança para aplicativos](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))
 - [Segurança de acesso do código](../misc/code-access-security.md)
 - [Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)
 - [Visão geral de XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)

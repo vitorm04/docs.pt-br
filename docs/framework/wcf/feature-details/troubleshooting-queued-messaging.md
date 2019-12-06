@@ -2,12 +2,12 @@
 title: Mensagens em fila da solução de problemas
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: dcff128a7718245fa765c57d3af80665699f4891
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2999d1ab4129c72c231b6dc80480d8bfef5186fa
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976046"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837305"
 ---
 # <a name="troubleshooting-queued-messaging"></a>Mensagens em fila da solução de problemas
 
@@ -25,7 +25,7 @@ Esta seção contém perguntas comuns e ajuda de solução de problemas para usa
 
 **P:** É necessário atualizar o MSMQ para usar as associações de <xref:System.ServiceModel.NetMsmqBinding> e `MsmqIntegration`?
 
-**R:** não. Ambas as associações funcionam com o MSMQ 3,0 em [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Determinados recursos das associações ficam disponíveis quando você atualiza para o MSMQ 4,0 no [!INCLUDE[wv](../../../../includes/wv-md.md)].
+**R:** não. Ambas as associações funcionam com o MSMQ 3,0 em [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]. Determinados recursos das associações ficam disponíveis quando você atualiza para o MSMQ 4,0 no Windows Vista.
 
 **P:** Quais recursos das associações de <xref:System.ServiceModel.NetMsmqBinding> e <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> estão disponíveis no MSMQ 4,0, mas não no MSMQ 3,0?
 
@@ -134,9 +134,9 @@ A fila de mensagens mortas do sistema, bem como qualquer fila de mensagens morta
 
 **R:** Ao usar a associação de integração do MSMQ, você deve usar o esquema MSMQ. FormatName. Por exemplo, MSMQ. FormatName: DIRECT = OS: .\Private $ \OrdersQueue. Mas ao especificar a fila de mensagens mortas personalizada, você deve usar o esquema net. MSMQ.
 
-**P:** Quando uso um nome de formato público ou privado e abro o host de serviço no [!INCLUDE[wv](../../../../includes/wv-md.md)], recebo um erro. Por quê?
+**P:** Quando uso um nome de formato público ou privado e abro o host de serviço no Windows Vista, recebo um erro. Por quê?
 
-**R:** O canal de integração do WCF no [!INCLUDE[wv](../../../../includes/wv-md.md)] verifica se uma subfila pode ser aberta para a fila principal do aplicativo para lidar com mensagens suspeitas. O nome da subfila é derivado de um URI MSMQ. FormatName passado para o ouvinte. O nome da subfila no MSMQ só pode ser um nome de formato direto. Você verá o erro. Altere o URI da fila para um nome de formato direto.
+**R:** O canal de integração do WCF no Windows Vista verifica se uma subfila pode ser aberta para a fila de aplicativo principal para lidar com mensagens suspeitas. O nome da subfila é derivado de um URI MSMQ. FormatName passado para o ouvinte. O nome da subfila no MSMQ só pode ser um nome de formato direto. Você verá o erro. Altere o URI da fila para um nome de formato direto.
 
 **P:** Ao receber uma mensagem de um aplicativo MSMQ, a mensagem fica na fila e não é lida pelo aplicativo WCF receptor. Por quê?
 
@@ -154,11 +154,11 @@ Outra solução alternativa é obter a <xref:System.ServiceModel.MsmqTransportSe
 
 Outra alternativa é instalar o MSMQ com a integração do Active Directory.
 
-**P:** Quando envio uma mensagem com associação padrão (segurança de transporte ativada) em Active Directory a uma fila, recebo uma mensagem "certificado interno não encontrado". Como fazer corrigir isso?
+**P:** Quando envio uma mensagem com associação padrão (segurança de transporte ativada) em Active Directory a uma fila, recebo uma mensagem "certificado interno não encontrado". Como corrijo isso?
 
 **R:** Isso significa que o certificado em Active Directory para o remetente deve ser renovado. Para fazer isso, abra **painel de controle**, **Ferramentas administrativas**, **Gerenciamento do computador**, clique com o botão direito do mouse em **MSMQ**e selecione **Propriedades**. Selecione a guia **certificado de usuário** e clique no botão **renovar** .
 
-**P:** Quando envio uma mensagem usando <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> e especifico o certificado a ser usado, recebo uma mensagem de "certificado inválido". Como fazer corrigir isso?
+**P:** Quando envio uma mensagem usando <xref:System.ServiceModel.MsmqAuthenticationMode.Certificate> e especifico o certificado a ser usado, recebo uma mensagem de "certificado inválido". Como corrijo isso?
 
 **R:** Você não pode usar um repositório de certificados do computador local com o modo de certificado. Você precisa copiar o certificado do repositório de certificados do computador para o repositório de usuários atual usando o snap-in de certificado. Para obter o snap-in de certificado:
 
@@ -174,19 +174,19 @@ Outra alternativa é instalar o MSMQ com a integração do Active Directory.
 
 6. Em seguida, adicione um segundo snap-in de certificados usando as etapas anteriores, mas desta vez selecione **conta de computador** e clique em **Avançar**.
 
-7. Selecione **computador local** e clique em **concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados do computador para o repositório de usuários atual.
+7. Selecione **Computador Local** e clique em **Concluir**. Agora você pode arrastar e soltar certificados do repositório de certificados do computador para o repositório de usuários atual.
 
 **P:** Quando meu serviço lê de uma fila em outro computador no modo de grupo de trabalho, obtenho uma exceção de "acesso negado".
 
 **R:** No modo de grupo de trabalho, para que um aplicativo remoto tenha acesso à fila, o aplicativo deve ter permissão para acessar a fila. Adicione "logon anônimo" à ACL (lista de controle de acesso) da fila e conceda a ela permissão de leitura.
 
-**P:** Quando um cliente de serviço de rede (ou qualquer cliente que não tem uma conta de domínio) envia uma mensagem em fila, o envio falha com um certificado inválido. Como fazer corrigir isso?
+**P:** Quando um cliente de serviço de rede (ou qualquer cliente que não tem uma conta de domínio) envia uma mensagem em fila, o envio falha com um certificado inválido. Como corrijo isso?
 
 **R:** Verifique a configuração de associação. A associação padrão tem a segurança de transporte MSMQ ativada para assinar a mensagem. Desative-o.
 
 ### <a name="remote-transacted-receives"></a>Recebimentos transacionados remotamente
 
-**P:** Quando tenho uma fila no computador A e um serviço WCF que lê mensagens de uma fila no computador B (o cenário de recebimento remoto transacionado), as mensagens não são lidas da fila. Informações de rastreamento indicam que o recebimento falhou com a mensagem "a transação não pode ser importada". O que posso fazer para corrigir isso?
+**P:** Quando tenho uma fila no computador A e um serviço WCF que lê mensagens de uma fila no computador B (o cenário de recebimento remoto transacionado), as mensagens não são lidas da fila. Informações de rastreamento indicam que o recebimento falhou com a mensagem "a transação não pode ser importada". O que fazer para corrigir isso?
 
 **R:** Há três motivos possíveis para isso:
 
@@ -200,7 +200,7 @@ Outra alternativa é instalar o MSMQ com a integração do Active Directory.
 
 - Verifique se o MSDTC está na lista de exceções nas configurações de **Firewall de conexão com a Internet** .
 
-- Verifique se você está usando [!INCLUDE[wv](../../../../includes/wv-md.md)]. O MSMQ on [!INCLUDE[wv](../../../../includes/wv-md.md)] dá suporte à leitura transacionada remota. O MSMQ em versões anteriores do Windows não dá suporte à leitura transacionada remota.
+- Verifique se você está usando o Windows Vista. O MSMQ no Windows Vista dá suporte à leitura transacionada remota. O MSMQ em versões anteriores do Windows não dá suporte à leitura transacionada remota.
 
 **P:** Quando o serviço de leitura da fila é um serviço de rede, por exemplo, em um host da Web, por que obtenho uma exceção de acesso negado ao ler da fila?
 

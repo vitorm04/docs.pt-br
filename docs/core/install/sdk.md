@@ -3,15 +3,15 @@ title: Instalar o SDK do .NET Core no Windows, Linux e macOS – .NET Core
 description: Saiba como instalar o .NET Core no Windows, Linux e macOS. Descubra as dependências necessárias para desenvolver aplicativos .NET Core.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
+ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 290bdfb05b328bb311e6ff5ef493048b05985899
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5ac2d7897ee4c6707669e4f9104317aeb2e1f473
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801942"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835678"
 ---
 # <a name="install-the-net-core-sdk"></a>Instalar o SDK do .NET Core
 
@@ -21,10 +21,10 @@ Neste artigo, você aprenderá a instalar o SDK do .NET Core. O SDK do .NET Core
 
 ## <a name="install-with-an-installer"></a>Instalar com um instalador
 
-O Windows tem instaladores autônomos que podem ser usados para instalar o SDK do .NET Core 3,0:
+O Windows tem instaladores autônomos que podem ser usados para instalar o SDK do .NET Core 3,1:
 
-- [CPUs x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.0) 
-- [CPUs x86 (32 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [CPUs x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- [CPUs x86 (32 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -32,9 +32,9 @@ O Windows tem instaladores autônomos que podem ser usados para instalar o SDK d
 
 ## <a name="install-with-an-installer"></a>Instalar com um instalador
 
-o macOS tem instaladores autônomos que podem ser usados para instalar o SDK do .NET Core 3,0:
+o macOS tem instaladores autônomos que podem ser usados para instalar o SDK do .NET Core 3,1:
 
-- [CPUs x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+- [CPUs x64 (64 bits)](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ::: zone-end
 
@@ -49,7 +49,7 @@ Você pode instalar o SDK do .NET Core com muitos dos gerenciadores de pacotes d
 Para extrair o SDK e tornar os comandos disponíveis no terminal, primeiro [Baixe](#all-net-core-downloads) uma versão binária do .NET Core. Em seguida, abra um terminal e execute os comandos a seguir.
 
 ```bash
-mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.0.101-linux-musl-x64.tar.gz -C $HOME/dotnet
+mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.101-linux-musl-x64.tar.gz -C $HOME/dotnet
 export DOTNET_ROOT=$HOME/dotnet
 export PATH=$PATH:$HOME/dotnet
 ```
@@ -77,7 +77,7 @@ Se você estiver usando o Visual Studio para desenvolver aplicativos .NET Core, 
 
 | Versão do SDK do .NET Core | Versão do Visual Studio                      |
 | --------------------- | ------------------------------------------ |
-| visualização de 3,1           | Visual Studio 2019 versão 16,4 Preview ou superior. |
+| 3,1                   | Visual Studio 2019 versão 16,4 ou superior. |
 | 3.0                   | Visual Studio 2019 versão 16,3 ou superior. |
 | 2.2                   | Visual Studio 2017 versão 15,9 ou superior. |
 | 2.1                   | Visual Studio 2017 versão 15,7 ou superior. |
@@ -109,7 +109,7 @@ Ao instalar ou modificar o Visual Studio, selecione uma das cargas de trabalho a
 
 ## <a name="install-with-visual-studio-for-mac"></a>Instalar com o Visual Studio para Mac
 
-Visual Studio para Mac instala o SDK do .NET Core quando a carga de trabalho do **.NET Core** é selecionada. Para começar a usar o desenvolvimento do .NET Core no macOS, consulte [instalar o Visual Studio 2019 para Mac](/visualstudio/mac/installation).
+Visual Studio para Mac instala o SDK do .NET Core quando a carga de trabalho do **.NET Core** é selecionada. Para começar a usar o desenvolvimento do .NET Core no macOS, consulte [instalar o Visual Studio 2019 para Mac](/visualstudio/mac/installation). Para a versão mais recente, o .NET Core 3,1, você deve usar a visualização Visual Studio para Mac 8,4.
 
 [![macOS Visual Studio 2019 para Mac com o recurso de carga de trabalho do .NET Core](media/install-sdk/mac-install-selection.png)](media/install-sdk/mac-install-selection.png#lightbox)
 
@@ -178,7 +178,7 @@ Para obter mais informações sobre como usar o .NET Core em um contêiner do Do
 
 - [Tutorial: C# tutorial de Olá, mundo](../tutorials/with-visual-studio.md).
 - [Tutorial: Visual Basic Olá, mundo tutorial](../tutorials/vb-with-visual-studio.md).
-- [Tutorial: criar um novo aplicativo com Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet).
+- [Tutorial: criar um novo aplicativo com Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Tutorial: colocar em contêiner um aplicativo .NET Core](../docker/build-container.md).
 
 ::: zone-end
@@ -186,7 +186,14 @@ Para obter mais informações sobre como usar o .NET Core em um contêiner do Do
 ::: zone pivot="os-macos"
 
 - [Tutorial: introdução ao MacOS](../tutorials/using-on-mac-vs.md).
-- [Tutorial: criar um novo aplicativo com Visual Studio Code](https://code.visualstudio.com/docs/languages/dotnet).
+- [Tutorial: criar um novo aplicativo com Visual Studio Code](../tutorials/with-visual-studio-code.md).
+- [Tutorial: colocar em contêiner um aplicativo .NET Core](../docker/build-container.md).
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- [Tutorial: criar um novo aplicativo com Visual Studio Code](../tutorials/with-visual-studio-code.md).
 - [Tutorial: colocar em contêiner um aplicativo .NET Core](../docker/build-container.md).
 
 ::: zone-end

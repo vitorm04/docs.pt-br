@@ -1,15 +1,15 @@
 ---
-title: Propriedades
+title: '{1&gt;Propriedades&lt;1}'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: c995caf9-8d0e-4fb8-ae02-e9e6087d7651
-ms.openlocfilehash: d3801b0bf1e2350326613d4ef447d73501386ccc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bd6234c6a784ed0d222a38dfdf91cc0e5b96a173
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335418"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838176"
 ---
 # <a name="properties-visual-basic"></a>Propriedades (Visual Basic)
 
@@ -33,4 +33,3 @@ Esta página lista as propriedades que são membros de Visual Basic módulos. Ou
 ## <a name="see-also"></a>Consulte também
 
 - [Referência da linguagem Visual Basic](../../visual-basic/language-reference/index.md)
-- [Visual Basic](../../visual-basic/index.md)

@@ -2,12 +2,12 @@
 title: 'Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho'
 ms.date: 03/30/2017
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: bef95dbeaaa96678a66ba94494a0207c7314c326
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: bbbd2e6a5eb3babeb1a4d06976fdefd621581766
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802577"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837682"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Como: Ativar persistência SQL para fluxos de trabalho e serviços de fluxo de trabalho
 
@@ -152,7 +152,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 ```
 
 > [!IMPORTANT]
-> É recomendável que você não armazene informações sigilosas como nomes de usuário e senhas no arquivo web.config. Se você armazenar informações confidenciais no arquivo web.config, você deve proteger o acesso ao arquivo web.config usando listas de controle de acesso (ACLs) do sistema de arquivos. Além disso, você também pode proteger os valores de configuração em um arquivo de configuração, conforme mencionado na [criptografia de informações de configuração usando a configuração protegida](https://docs.microsoft.com/en-us/previous-versions/aspnet/53tyfkaw(v=vs.100)).
+> É recomendável que você não armazene informações sigilosas como nomes de usuário e senhas no arquivo web.config. Se você armazenar informações confidenciais no arquivo web.config, você deve proteger o acesso ao arquivo web.config usando listas de controle de acesso (ACLs) do sistema de arquivos. Além disso, você também pode proteger os valores de configuração em um arquivo de configuração, conforme mencionado na [criptografia de informações de configuração usando a configuração protegida](https://docs.microsoft.com/previous-versions/aspnet/53tyfkaw(v=vs.100)).
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>Elementos Machine.config relacionados ao recurso de Store de instância de fluxo de trabalho do SQL
 

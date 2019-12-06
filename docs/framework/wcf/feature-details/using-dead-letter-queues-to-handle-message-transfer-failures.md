@@ -5,72 +5,72 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: c83d48994c6038dfde67867a1766777c479c2169
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 268f14bc7294a4cbe6f7253dc7f3c71d89985133
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637727"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837955"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha
-Mensagens em fila podem falhar de entrega. Essas mensagens com falha são registradas em uma fila de inatividade. Falha na entrega pode ser causado por motivos como falhas de rede, uma fila excluída, uma fila cheia, falha de autenticação ou uma falha ao entregar no prazo.  
+As mensagens em fila podem ser entregues com falha. Essas mensagens com falha são registradas em uma fila de mensagens mortas. A entrega com falha pode ser causada por motivos como falhas de rede, uma fila excluída, uma falha de autenticação completa ou uma falha de entrega no prazo.  
   
- Mensagens em fila podem permanecer na fila por um longo tempo, se o aplicativo de recebimento não lê-los da fila no momento oportuno. Esse comportamento pode não ser apropriado para mensagens de detecção de hora. Mensagens de detecção de hora têm um tempo à propriedade de vida (TTL) definido na associação em fila, que indica quanto tempo as mensagens podem ser na fila antes de expirarem. As mensagens expiradas são enviadas para uma fila especial chamada a fila de inatividade. As mensagens também podem ser colocadas em uma fila de inatividade por outros motivos, como exceder uma cota de fila ou devido a falha de autenticação.  
+ As mensagens em fila podem permanecer na fila por um longo período se o aplicativo receptor não lê-las da fila em tempo hábil. Esse comportamento pode não ser apropriado para mensagens com detecção de hora. As mensagens que diferenciam o tempo têm uma propriedade TTL (vida útil) definida na associação em fila, que indica por quanto tempo as mensagens podem estar na fila antes de expirarem. As mensagens expiradas são enviadas para uma fila especial chamada fila de mensagens mortas. As mensagens também podem ser colocadas em uma fila de mensagens mortas por outros motivos, como exceder uma cota de fila ou devido a uma falha de autenticação.  
   
- Em geral, aplicativos gravar a lógica de compensação para ler as mensagens da fila de inatividade e razões da falha. A lógica de compensação depende a causa da falha. Por exemplo, no caso de falha de autenticação, você pode corrigir o certificado anexado com a mensagem e reenviar a mensagem. Se a entrega falhou porque a cota da fila de destino foi atingida, tente realizar novamente a entrega na esperança de que o problema de cota foi resolvido.  
+ Em geral, os aplicativos gravam a lógica de compensação para ler mensagens dos motivos de falha e de fila de mensagens mortas. A lógica de compensação depende da causa da falha. Por exemplo, no caso de falha de autenticação, você pode corrigir o certificado anexado à mensagem e reenviar a mensagem. Se a entrega falhou porque a cota de fila de destino foi atingida, você pode tentar novamente a entrega na esperança de que o problema de cota foi resolvido.  
   
- Sistemas de enfileiramento de mensagens mais tem uma fila de inatividade em todo o sistema em que todas as mensagens com falha do sistema são armazenadas. Serviço de enfileiramento de mensagens (MSMQ) fornece duas filas de inatividade de todo o sistema: uma fila transacional de inatividade de todo o sistema que armazena as mensagens que falharam na entrega para a fila transacional e uma fila não transacional de inatividade de todo o sistema que armazena mensagens que falharam na entrega para a fila não transacional. Se dois clientes estão enviando mensagens para dois serviços diferentes e, portanto, diferentes filas no WCF estão compartilhando o mesmo serviço MSMQ para enviar, em seguida, é possível ter uma mistura de mensagens na fila de inatividade do sistema. Isso nem sempre é ideal. Em muitos casos (por exemplo, segurança), não convém ler mensagens do outro cliente de uma fila de inatividade de um cliente. Uma fila de inatividade compartilhada também requer que os clientes procurar por meio de fila para localizar uma mensagem de que eles enviaram, que pode ser proibitivo com base no número de mensagens na fila de inatividade. Portanto, no WCF`NetMsmqBinding`, `MsmqIntegrationBinding,` e o MSMQ em [!INCLUDE[wv](../../../../includes/wv-md.md)] fornecem uma fila de inatividade personalizada (também conhecida como uma fila de inatividade específico do aplicativo).  
+ A maioria dos sistemas de enfileiramento tem uma fila de mensagens mortas em todo o sistema, em que todas as mensagens com falha desse sistema são armazenadas. O MSMQ (enfileiramento de mensagens) fornece duas filas de mensagens mortas de todo o sistema: uma fila de mensagens mortas em todo o sistema transacional que armazena mensagens que falharam na entrega à fila transacional e uma fila de mensagens mortas em todo o sistema não transacional que armazena mensagens que falharam na entrega para a fila não transacional. Se dois clientes estiverem enviando mensagens para dois serviços diferentes e, portanto, filas diferentes no WCF estiverem compartilhando o mesmo serviço MSMQ a ser enviado, será possível ter uma combinação de mensagens na fila mensagens mortas do sistema. Isso nem sempre é o ideal. Em vários casos (segurança, por exemplo), talvez você não queira que um cliente leia as mensagens de outro cliente de uma fila de mensagens mortas. Uma fila de mensagens mortas compartilhada também exige que os clientes naveguem pela fila para encontrar uma mensagem que eles enviaram, o que pode ser extremamente caro com base no número de mensagens na fila da mensagem de mensagens mortas. Portanto, no WCF`NetMsmqBinding`, o `MsmqIntegrationBinding,` e o MSMQ no Windows Vista fornecem uma fila de mensagens mortas personalizada (às vezes chamada de fila de mensagens mortas específica do aplicativo).  
   
- A fila de inatividade personalizada fornece isolamento entre os clientes que compartilham o mesmo serviço MSMQ para enviar mensagens.  
+ A fila de mensagens mortas personalizada fornece isolamento entre clientes que compartilham o mesmo serviço MSMQ para enviar mensagens.  
   
- Na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) fornece uma fila de inatividade em todo o sistema para todos os aplicativos cliente na fila. Em [!INCLUDE[wv](../../../../includes/wv-md.md)], o WCF fornece uma fila de inatividade para cada aplicativo cliente na fila.  
+ Em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) fornece uma fila de mensagens mortas em todo o sistema para todos os aplicativos cliente em fila. No Windows Vista, o WCF fornece uma fila de mensagens mortas para cada aplicativo cliente em fila.  
   
-## <a name="specifying-use-of-the-dead-letter-queue"></a>Especificando o uso da fila de inatividade  
- Uma fila de inatividade é no Gerenciador de fila do aplicativo de envio. Ele armazena as mensagens que expiraram ou tiveram uma falha de transferência ou entrega.  
+## <a name="specifying-use-of-the-dead-letter-queue"></a>Especificando o uso da fila de mensagens mortas  
+ Uma fila de mensagens mortas está no Gerenciador de filas do aplicativo de envio. Ele armazena mensagens que expiraram ou que falharam na transferência ou entrega.  
   
- A associação tem as seguintes propriedades de fila de inatividade:  
+ A associação tem as seguintes propriedades de fila de mensagens mortas:  
   
 - <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>  
   
 - <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>  
   
-## <a name="reading-messages-from-the-dead-letter-queue"></a>Leitura de mensagens da fila de inatividade  
- Um aplicativo que lê mensagens fora de uma fila de inatividade é semelhante a um serviço WCF que lê de uma fila de aplicativos, exceto para as pequenas diferenças a seguir:  
+## <a name="reading-messages-from-the-dead-letter-queue"></a>Lendo mensagens da fila de mensagem mortas  
+ Um aplicativo que lê mensagens de uma fila de mensagem mortas é semelhante a um serviço WCF que lê de uma fila de aplicativo, exceto pelas seguintes diferenças secundárias:  
   
-- Para ler mensagens de uma fila mortas transacional do sistema, o identificador de recurso uniforme (URI) deve estar no formato: $ net.msmq://localhost/system; DeadXact.  
+- Para ler mensagens de uma fila de mensagens mortas de sistema transacional, o Uniform Resource Identifier (URI) deve estar no formato: net. MSMQ://localhost/System $;D eadXact.  
   
-- Para ler mensagens de uma fila de inatividade não-transacional do sistema, o URI deve estar no formato: $ net.msmq://localhost/system; mensagens mortas.  
+- Para ler mensagens de uma fila de mensagens mortas não transacional do sistema, o URI deve estar no formato: net. MSMQ://localhost/System $;D eadLetter.  
   
-- Para ler mensagens de uma fila de inatividade personalizada, o URI deve ser de que o formulário: net.msmq://localhost/private/\<*dlq-personalizado-name*> onde *nome de personalizado dlq* é o nome de personalizado fila de inatividade.  
+- Para ler as mensagens de uma fila de mensagens mortas personalizada, o URI deve estar no formato: net. MSMQ://localhost/Private/\<*Custom-DLQ-name*> em que *Custom-DLQ-Name* é o nome da fila de mensagens mortas personalizada.  
   
- Para obter mais informações sobre como as filas de endereço, consulte [pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
+ Para obter mais informações sobre como endereçar filas, consulte [pontos de extremidade de serviço e endereçamento de fila](../../../../docs/framework/wcf/feature-details/service-endpoints-and-queue-addressing.md).  
   
- A pilha do WCF no receptor faz a correspondência de endereços que o serviço está escutando com o endereço na mensagem. Se os endereços corresponderem, a mensagem é enviada; Caso contrário, a mensagem não será enviada. Isso pode causar problemas durante a leitura da fila de inatividade, pois as mensagens na fila de inatividade são normalmente enviadas para o serviço e não o serviço de fila de inatividade. Portanto, o leitura da fila de inatividade do serviço deve instalar um filtro de endereço `ServiceBehavior` que instrui a pilha para corresponder a todas as mensagens na fila, independentemente do destinatário. Especificamente, você deve adicionar uma `ServiceBehavior` com o <xref:System.ServiceModel.AddressFilterMode.Any> parâmetro para o serviço de mensagens de leitura da fila de inatividade.  
+ A pilha do WCF no receptor corresponde aos endereços que o serviço está escutando com o endereço na mensagem. Se os endereços corresponderem, a mensagem será expedida; caso contrário, a mensagem não será despachada. Isso pode causar problemas durante a leitura da fila de mensagens mortas, pois, em geral, elas são endereçadas para o serviço e não para o serviço fila inativo. Portanto, o serviço de leitura da fila de mensagens mortas deve instalar um filtro de endereço `ServiceBehavior` que instrui a pilha a corresponder todas as mensagens na fila independentemente do destinatário. Especificamente, você deve adicionar um `ServiceBehavior` com o parâmetro <xref:System.ServiceModel.AddressFilterMode.Any> ao serviço de leitura de mensagens da fila mensagens mortas.  
   
-## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Tratamento da fila de inatividade de mensagens suspeitas  
- Manipulação de mensagens suspeitas está disponível em filas de inatividade, com algumas condições. Porque você não pode criar subfilas de filas do sistema durante a leitura da fila de inatividade do sistema, o `ReceiveErrorHandling` não pode ser definido como `Move`. Observe que, se você estiver lendo de uma fila de inatividade personalizada, você pode ter subfilas e, portanto, `Move` é um descarte válido para a mensagem suspeita.  
+## <a name="poison-message-handling-from-the-dead-letter-queue"></a>Manipulação de mensagens suspeitas da fila de mensagens mortas  
+ A manipulação de mensagens suspeitas está disponível em filas de mensagens mortas, com algumas condições. Como não é possível criar subfilas a partir de filas do sistema, ao ler da fila de mensagens mortas do sistema, o `ReceiveErrorHandling` não pode ser definido como `Move`. Observe que, se você estiver lendo de uma fila de mensagens mortas personalizada, poderá ter subfilas e, portanto, `Move` será uma disposição válida para a mensagem suspeita.  
   
- Quando `ReceiveErrorHandling` é definido como `Reject`, quando a leitura da fila de mensagens mortas personalizada, a mensagem suspeita é colocada na fila de inatividade do sistema. Se ler a fila de inatividade do sistema, a mensagem é descartada (limpo). Uma rejeição de uma fila de inatividade do sistema em MSMQ descartes (limpa) a mensagem.  
+ Quando `ReceiveErrorHandling` é definido como `Reject`, ao ler da fila de mensagens mortas personalizada, a mensagem suspeita é colocada na fila de mensagens mortas do sistema. Se estiver lendo na fila de mensagens mortas do sistema, a mensagem será descartada (limpa). Uma rejeição de uma fila de mensagens mortas do sistema no MSMQ descarta (limpa) a mensagem.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como criar uma fila de inatividade e como usá-lo para processar as mensagens expiradas. O exemplo é baseado no exemplo em [como: Troca de mensagens com pontos de extremidade do WCF em fila](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md). O exemplo a seguir mostra como escrever o código do cliente para o serviço que usa uma fila de inatividade para cada aplicativo de processamento de pedidos. O exemplo também mostra como processar as mensagens da fila de inatividade.  
+ O exemplo a seguir mostra como criar uma fila de mensagem mortas e como usá-la para processar mensagens expiradas. O exemplo se baseia no exemplo em [como trocar mensagens em fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md). O exemplo a seguir mostra como gravar o código do cliente no serviço de processamento de pedidos que usa uma fila de mensagens mortas para cada aplicativo. O exemplo também mostra como processar mensagens da fila de mensagens mortas.  
   
- A seguir está o código para um cliente que especifica uma fila de inatividade para cada aplicativo.  
+ Veja a seguir o código de um cliente que especifica uma fila de mensagens mortas para cada aplicativo.  
   
  [!code-csharp[S_DeadLetter#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/client.cs#1)]
  [!code-vb[S_DeadLetter#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/client.vb#1)]  
   
- A seguir está o código para o arquivo de configuração do cliente.  
+ Veja a seguir o código para o arquivo de configuração do cliente.  
 
- A seguir está o código para um serviço de processamento de mensagens de uma fila de inatividade.  
+ Veja a seguir o código de um serviço de processamento de mensagens de uma fila de mensagens mortas.  
   
  [!code-csharp[S_DeadLetter#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_deadletter/cs/dlservice.cs#3)]
  [!code-vb[S_DeadLetter#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_deadletter/vb/dlservice.vb#3)]  
   
- A seguir está o código para o arquivo de configuração do serviço de fila de inatividade.  
+ Veja a seguir o código para o arquivo de configuração do serviço fila de mensagens mortas.  
 
 ## <a name="see-also"></a>Consulte também
 
 - [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [Como: Troca de mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [Como trocar mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Manipulação de mensagens suspeitas](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

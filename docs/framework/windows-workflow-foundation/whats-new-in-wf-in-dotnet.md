@@ -2,48 +2,48 @@
 title: Novidades no Windows Foundation Workflow no .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 0244457a051740f37c11c48f41d98bdb2d741aec
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74142027"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837578"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novidades no Windows Foundation Workflow no .NET 4.5
 
-Windows Workflow Foundation (WF) in .NET Framework 4.5 introduces many new features, such as new activities, designer capabilities, and workflow development models. Many, but not all, of the new workflow features introduced in .NET Framework 4.5 are supported in the re-hosted workflow designer. For more information about the new features that are supported, see [Support for New Workflow Foundation 4.5 Features in the Rehosted Workflow Designer](wf-features-in-the-rehosted-workflow-designer.md). For more information about migrating .NET 3.0 and .NET 3.5 workflow applications to use the latest version, see [Migration Guidance](migration-guidance.md). This topic provides an overview of the new workflow features introduced in .NET Framework 4.5.
+O Windows Workflow Foundation (WF) no .NET Framework 4,5 apresenta muitos recursos novos, como novas atividades, recursos de designer e modelos de desenvolvimento de fluxo de trabalho. Muitos, mas nem todos, dos novos recursos de fluxo de trabalho introduzidos no .NET Framework 4,5 têm suporte no designer de fluxo de trabalho hospedado novamente. Para obter mais informações sobre os novos recursos com suporte, consulte [suporte para novos recursos do Workflow Foundation 4,5 no designer de fluxo de trabalho rehospedado](wf-features-in-the-rehosted-workflow-designer.md). Para obter mais informações sobre como migrar aplicativos .NET 3,0 e .NET 3,5 Workflow para usar a versão mais recente, consulte [diretrizes de migração](migration-guidance.md). Este tópico fornece uma visão geral dos novos recursos de fluxo de trabalho introduzidos no .NET Framework 4,5.
 
 > [!WARNING]
-> The new Windows Workflow Foundation features introduced in .NET Framework 4.5 are not available for projects that target previous versions of the framework. If a project that targets .NET Framework 4.5 is re-targeted to a previous version of the framework, several issues can occur.
+> Os novos recursos do Windows Workflow Foundation introduzidos no .NET Framework 4,5 não estão disponíveis para projetos destinados a versões anteriores do Framework. Se um projeto que tem como alvo .NET Framework 4,5 for Redirecionado para uma versão anterior do Framework, vários problemas poderão ocorrer.
 >
-> - C# expressions will be replaced in the designer with the message **Value was set in XAML**.
+> - C#as expressões serão substituídas no designer com o valor da mensagem **definido em XAML**.
 > - Muitos erros de compilação ocorrerão, incluindo o seguinte.
 >
-> **The file format is not compatible with current targeting framework. To convert the file format, please explicitly save the file. This error message will go away after you save the file and reopen the designer.**
+> **O formato de arquivo não é compatível com a estrutura de destino atual. Para converter o formato de arquivo, salve explicitamente o arquivo. Essa mensagem de erro desaparecerá depois que você salvar o arquivo e reabrir o designer.**
 
-## <a name="BKMK_Versioning"></a> Workflow Versioning
+## <a name="BKMK_Versioning"></a>Controle de versão do fluxo de trabalho
 
-.NET Framework 4.5 introduced several new versioning features based around the new <xref:System.Activities.WorkflowIdentity> class. O <xref:System.Activities.WorkflowIdentity> fornece a autores de aplicativo de fluxo de trabalho um mecanismo para mapear uma instância de fluxo de trabalho persistida com sua definição.
+.NET Framework 4,5 introduziu vários novos recursos de controle de versão com base em relação à nova classe <xref:System.Activities.WorkflowIdentity>. O <xref:System.Activities.WorkflowIdentity> fornece a autores de aplicativo de fluxo de trabalho um mecanismo para mapear uma instância de fluxo de trabalho persistida com sua definição.
 
-- Os desenvolvedores que usam a hospedagem do <xref:System.Activities.WorkflowApplication> podem usar o <xref:System.Activities.WorkflowIdentity> para habilitar hospedagem de várias versões de um fluxo de trabalho lado a lado. As instâncias de fluxo de trabalho persistidas podem ser carregadas usando a nova classe <xref:System.Activities.WorkflowApplicationInstance> e, em seguida, o <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> pode ser usado pelo host para fornecer a versão correta da definição de fluxo de trabalho ao criar uma instância do <xref:System.Activities.WorkflowApplication>. For more information, see [Using WorkflowIdentity and Versioning](using-workflowidentity-and-versioning.md) and [How to: Host Multiple Versions of a Workflow Side-by-Side](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+- Os desenvolvedores que usam a hospedagem do <xref:System.Activities.WorkflowApplication> podem usar o <xref:System.Activities.WorkflowIdentity> para habilitar hospedagem de várias versões de um fluxo de trabalho lado a lado. As instâncias de fluxo de trabalho persistidas podem ser carregadas usando a nova classe <xref:System.Activities.WorkflowApplicationInstance> e, em seguida, o <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> pode ser usado pelo host para fornecer a versão correta da definição de fluxo de trabalho ao criar uma instância do <xref:System.Activities.WorkflowApplication>. Para obter mais informações, consulte [usando a WorkflowIdentity e o controle de versão](using-workflowidentity-and-versioning.md) e [como hospedar várias versões de um fluxo de trabalho lado a lado](how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
 
-- O <xref:System.ServiceModel.WorkflowServiceHost> agora é um host de várias versões. Quando uma nova versão de um serviço de fluxo de trabalho é implantada, as novas instâncias são criadas usando o novo serviço, mas as instâncias existentes continuam usando a versão anterior. For more information, see [Side by Side Versioning in WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
+- O <xref:System.ServiceModel.WorkflowServiceHost> agora é um host de várias versões. Quando uma nova versão de um serviço de fluxo de trabalho é implantada, as novas instâncias são criadas usando o novo serviço, mas as instâncias existentes continuam usando a versão anterior. Para obter mais informações, consulte [controle de versão lado a lado no WorkflowServiceHost](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md).
 
-- A atualização dinâmica é introduzida, o que fornece um mecanismo para atualizar a definição de uma instância de fluxo de trabalho persistida. For more information, see [Dynamic Update](dynamic-update.md) and [How to: Update the Definition of a Running Workflow Instance](how-to-update-the-definition-of-a-running-workflow-instance.md).
+- A atualização dinâmica é introduzida, o que fornece um mecanismo para atualizar a definição de uma instância de fluxo de trabalho persistida. Para obter mais informações, consulte [atualização dinâmica](dynamic-update.md) e [como: atualizar a definição de uma instância de fluxo de trabalho em execução](how-to-update-the-definition-of-a-running-workflow-instance.md).
 
-- A SqlWorkflowInstanceStoreSchemaUpgrade.sql database script is provided to upgrade persistence databases created using the .NET Framework 4 database scripts. This script updates .NET Framework 4 persistence databases to support the new versioning capabilities introduced in .NET Framework 4.5. As instâncias de fluxo de trabalho persistidas no banco de dados recebem valores padrão do controle de versão e podem participar da execução lado a lado e da atualização dinâmica. For more information, see [Upgrading .NET Framework 4 Persistence Databases to Support Workflow Versioning](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
+- Um script de banco de dados SqlWorkflowInstanceStoreSchemaUpgrade. SQL é fornecido para atualizar bancos de dados de persistência criados usando os .NET Framework 4 scripts de banco de dados. Esse script atualiza .NET Framework 4 bancos de dados de persistência para dar suporte aos novos recursos de controle de versão introduzidos no .NET Framework 4,5. As instâncias de fluxo de trabalho persistidas no banco de dados recebem valores padrão do controle de versão e podem participar da execução lado a lado e da atualização dinâmica. Para obter mais informações, consulte [Upgrading .NET Framework 4 bancos de dados de persistência para dar suporte ao controle de versão de fluxo de trabalho](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases).
 
-## <a name="BKMK_NewActivities"></a> Activities
+## <a name="BKMK_NewActivities"></a>As
 
 A biblioteca de atividades embutida contém novas atividades e novos recursos para atividades existentes.
 
-### <a name="BKMK_NoPersistScope"></a> NoPersist Scope
+### <a name="BKMK_NoPersistScope"></a>Escopo de nopersist
 
 <xref:System.Activities.Statements.NoPersistScope> é uma nova atividade do contêiner que impede que um fluxo de trabalho seja persistido quando as atividades filhos do NoPersistScope estiverem em execução. Isso é útil em cenários onde não é apropriado para o fluxo de trabalho ser persistido, como quando o fluxo de trabalho estiver usando recursos específicos de computadores como os identificadores de arquivos ou durante as transações de banco de dados. Anteriormente, para impedir que a persistência ocorresse durante a execução de uma atividade, um <xref:System.Activities.NativeActivity> personalizado que usava <xref:System.Activities.NoPersistHandle> era necessário.
 
-### <a name="BKMK_NewFlowchartCapabilities"></a> New Flowchart Capabilities
+### <a name="BKMK_NewFlowchartCapabilities"></a>Novos recursos de fluxograma
 
-Flowcharts are updated for .NET Framework 4.5 and have the following new capabilities:
+Os fluxogramas são atualizados para o .NET Framework 4,5 e têm os seguintes novos recursos:
 
 - A propriedade `DisplayName` de uma atividade <xref:System.Activities.Statements.FlowSwitch%601> ou <xref:System.Activities.Statements.FlowDecision> é editável. Isso permitirá que o designer de atividade mostre mais informações sobre a finalidade da atividade.
 
@@ -104,7 +104,7 @@ As palavras-chave pesquisadas em fluxos de trabalho corresponderão aos seguinte
 
 - Arguments
 
-- Expressões
+- {1&gt;Expressões&lt;1}
 
 A Localização Rápida é executada na árvore do <xref:System.Activities.Presentation.Model.ModelItem> do designer. A Localização Rápida não localizará namespaces importados na definição de fluxo de trabalho.
 
@@ -192,35 +192,35 @@ No .NET Framework 4, os elementos que não são de atividade não podiam dar sup
 
 ### <a name="BKMK_ActivityDelegates"></a>Definir e consumir objetos ActivityDelegate no designer
 
-Activities in .NET Framework 4 used <xref:System.Activities.ActivityDelegate> objects to expose execution points where other parts of the workflow could interact with a workflow's execution, but using these execution points usually required a fair amount of code. Nesta versão, os desenvolvedores podem definir e consumir representantes de atividade usando o designer de fluxo de trabalho. For more information, see [How to: Define and consume activity delegates in the Workflow Designer](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
+As atividades no .NET Framework 4 usaram <xref:System.Activities.ActivityDelegate> objetos para expor pontos de execução em que outras partes do fluxo de trabalho poderiam interagir com a execução de um fluxo de trabalho, mas usar esses pontos de execução geralmente exigia uma quantidade razoável de código. Nesta versão, os desenvolvedores podem definir e consumir representantes de atividade usando o designer de fluxo de trabalho. Para obter mais informações, consulte [como: definir e consumir delegados de atividade no designer de fluxo de trabalho](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer).
 
-### <a name="BKMK_BuildTimeValidation"></a> Build-time validation
+### <a name="BKMK_BuildTimeValidation"></a>Validação de tempo de compilação
 
-In .NET Framework 4, workflow validation errors weren’t counted as build errors during the build of a workflow project. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. In .NET Framework 4.5, workflow validation errors cause the build to fail.
+No .NET Framework 4, os erros de validação de fluxo de trabalho não foram contados como erros de compilação durante a compilação de um projeto de fluxo de trabalho. Isso significava que criar um projeto de fluxo de trabalho poderia ter êxito mesmo se houvesse erros de validação do fluxo de trabalho. No .NET Framework 4,5, os erros de validação do fluxo de trabalho fazem com que a compilação falhe.
 
-### <a name="BKMK_DesignTimeValidation"></a> Design-time background validation
+### <a name="BKMK_DesignTimeValidation"></a>Validação de segundo plano em tempo de design
 
-In .NET Framework 4, workflows were validated as a foreground process, which could potentially block the UI during complex or time-consuming validation processes. A validação do fluxo de trabalho agora ocorre em um thread em segundo plano, de modo que a interface do usuário não seja bloqueada.
+No .NET Framework 4, os fluxos de trabalho foram validados como um processo em primeiro plano, o que poderia bloquear a interface do usuário durante processos de validação complexos ou demorados. A validação do fluxo de trabalho agora ocorre em um thread em segundo plano, de modo que a interface do usuário não seja bloqueada.
 
-### <a name="BKMK_ViewState"></a> View state located in a separate location in XAML files
+### <a name="BKMK_ViewState"></a>Estado de exibição localizado em um local separado em arquivos XAML
 
-In .NET Framework 4, the view state information for a workflow is stored across the XAML file in many different locations. Isso é inconveniente para os desenvolvedores que desejam ler XAML diretamente, ou gravar código para remover informações de estado de exibição. In .NET Framework 4.5, the view state information in the XAML file is serialized as a separate element in the XAML file. Developers can easily locate and edit the view state information of an activity, or remove the view state altogether.
+No .NET Framework 4, as informações de estado de exibição de um fluxo de trabalho são armazenadas em todo o arquivo XAML em vários locais diferentes. Isso é inconveniente para os desenvolvedores que desejam ler XAML diretamente, ou gravar código para remover informações de estado de exibição. No .NET Framework 4,5, as informações de estado de exibição no arquivo XAML são serializadas como um elemento separado no arquivo XAML. Os desenvolvedores podem facilmente localizar e editar as informações de estado de exibição de uma atividade ou remover completamente o estado de exibição.
 
-### <a name="BKMK_ExpressionExtensibility"></a> Expression extensibility
+### <a name="BKMK_ExpressionExtensibility"></a>Extensibilidade de expressão
 
-In .NET Framework 4.5, we provide a way for developers to create their own expression and expression authoring experience that can be plugged into the workflow designer.
+No .NET Framework 4,5, fornecemos uma maneira para os desenvolvedores criarem suas próprias expressões e a experiência de criação de expressão que pode ser conectada ao designer de fluxo de trabalho.
 
-### <a name="BKMK_BackwardCompatRehostedDesigner"></a> Opt-in for Workflow 4.5 features in rehosted designer
+### <a name="BKMK_BackwardCompatRehostedDesigner"></a>Aceitar recursos do Workflow 4,5 no designer rehospedado
 
-To preserve backward compatibility, some new features included in .NET Framework 4.5 are not enabled by default in the rehosted designer. Este é para garantir que aplicativos existentes que usam o designer hospedado novamente não sejam interrompidos ao atualizar para a versão mais recente. Para habilitar novos recursos no designer hospedado novamente, defina <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> como ".NET Framework 4.5" ou defina membros individuais do conjunto de <xref:System.Activities.Presentation.DesignerConfigurationService> para habilitar recursos individuais.
+Para preservar a compatibilidade com versões anteriores, alguns recursos novos incluídos no .NET Framework 4,5 não são habilitados por padrão no designer rehospedado. Este é para garantir que aplicativos existentes que usam o designer hospedado novamente não sejam interrompidos ao atualizar para a versão mais recente. Para habilitar novos recursos no designer hospedado novamente, defina <xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> como ".NET Framework 4.5" ou defina membros individuais do conjunto de <xref:System.Activities.Presentation.DesignerConfigurationService> para habilitar recursos individuais.
 
-## <a name="BKMK_NewWFModels"></a> New Workflow Development Models
+## <a name="BKMK_NewWFModels"></a>Novos modelos de desenvolvimento de fluxo de trabalho
 
 Além do fluxograma e de modelos sequenciais de desenvolvimento de fluxo de trabalho, esta versão inclui fluxos de trabalho da Máquina de Estado e serviços de fluxo de trabalho de primeiro contrato.
 
-### <a name="BKMK_StateMachine"></a> State machine workflows
+### <a name="BKMK_StateMachine"></a>Fluxos de trabalho de máquina de estado
 
-State machine workflows were introduced as part of the .NET Framework 4, version 4.0.1 in the [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. These classes and activities have been updated for .NET Framework 4.5. As atualizações incluem:
+Os fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4, versão 4.0.1 na [atualização 1 da plataforma Microsoft .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o .NET Framework 4,5. As atualizações incluem:
 
 1. A capacidade de definir pontos de interrupção em estados
 
@@ -230,12 +230,12 @@ State machine workflows were introduced as part of the .NET Framework 4, version
 
 4. Atividades usadas para criar fluxos de trabalho da máquina de estado, incluindo: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State> e <xref:System.Activities.Statements.Transition>.
 
-The following screenshot shows the completed state machine workflow from the [Getting Started Tutorial](getting-started-tutorial.md) step [How to: Create a State Machine Workflow](how-to-create-a-state-machine-workflow.md).
+A captura de tela a seguir mostra o fluxo de trabalho de máquina de estado concluído da etapa [introdução tutorial](getting-started-tutorial.md) [como criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md).
 
-![Illustration that shows the completed state machine workflow.](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
+![Ilustração que mostra o fluxo de trabalho da máquina de estado concluído.](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
-For more information on creating state machine workflows, see [State Machine Workflows](state-machine-workflows.md).
+Para saber mais sobre como criar fluxos de trabalho de máquina de estado, confira [fluxos de trabalho de máquina de estado](state-machine-workflows.md).
 
-### <a name="BKMK_ContractFirst"></a> Contract-first workflow development
+### <a name="BKMK_ContractFirst"></a>Contrato-primeiro desenvolvimento de fluxo de trabalho
 
-The contract-first workflow development tool allows the developer to design a contract in code first, then, with a few clicks in Visual Studio, automatically generate an activity template in the toolbox representing each operation. Essas atividades são então usadas para criar um fluxo de trabalho que implementa as operações definidas pelo contrato. O designer de fluxo de trabalho validará o serviço de fluxo de trabalho para assegurar que essas operações sejam implementadas e a assinatura do fluxo de trabalho corresponda à assinatura do contrato. O desenvolvedor também pode associar um serviço de fluxo de trabalho a uma coleção de contratos implementados. For more information on contract-first workflow service development, see [How to: Create a workflow service that consumes an existing service contract](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).
+A ferramenta de desenvolvimento de fluxo de trabalho de primeiro contrato permite que o desenvolvedor projete um contrato no código primeiro e, com alguns cliques no Visual Studio, gere automaticamente um modelo de atividade na caixa de ferramentas que representa cada operação. Essas atividades são então usadas para criar um fluxo de trabalho que implementa as operações definidas pelo contrato. O designer de fluxo de trabalho validará o serviço de fluxo de trabalho para assegurar que essas operações sejam implementadas e a assinatura do fluxo de trabalho corresponda à assinatura do contrato. O desenvolvedor também pode associar um serviço de fluxo de trabalho a uma coleção de contratos implementados. Para obter mais informações sobre o desenvolvimento do serviço de fluxo de trabalho do primeiro contrato, consulte [como: criar um serviço de fluxo de trabalho que consome um contrato de serviço existente](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).

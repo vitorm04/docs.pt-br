@@ -10,12 +10,12 @@ helpviewer_keywords:
 - language reference, Visual Basic
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
-ms.openlocfilehash: 7e1838fe6c9d563358757700d74cbf27228812a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ba611be8e63380f2bff958e37b72ffe8e0f90d9a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349951"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837084"
 ---
 # <a name="visual-basic-language-reference"></a>Referência de linguagem do Visual Basic
 
@@ -85,8 +85,5 @@ Esta seção fornece informações de referência para vários aspectos do idiom
   
 ## <a name="related-sections"></a>Seções Relacionadas  
 
- [Visual Basic](../../visual-basic/index.md)  
- Fornece ajuda abrangente sobre todas as áreas do Visual Basic idioma.  
-  
  [Compilador de linha de comando do Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
  Descreve como usar o compilador de linha de comando como uma alternativa à compilação de programas de dentro do IDE (ambiente de desenvolvimento integrado) do Visual Studio.

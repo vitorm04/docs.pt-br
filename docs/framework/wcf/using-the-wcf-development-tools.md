@@ -2,12 +2,12 @@
 title: Utilizando as ferramentas de desenvolvimento do WCF
 ms.date: 03/30/2017
 ms.assetid: 054adb87-c244-4d5a-83d1-0b2b44bd454b
-ms.openlocfilehash: 59913f4c00c32699d788e2a0244798fc652361be
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 8253a9136b2310deeb7c6d162a9f190c13ba02da
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802398"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837721"
 ---
 # <a name="using-the-wcf-development-tools"></a>Utilizando as ferramentas de desenvolvimento do WCF
 Esta seção descreve as ferramentas de desenvolvimento do Visual Studio que podem ajudá-lo a desenvolver seu WCFservice.  
@@ -37,7 +37,7 @@ Esta seção descreve as ferramentas de desenvolvimento do Visual Studio que pod
 ## <a name="using-the-tools-without-administrator-privilege"></a>Usando o privilégio ferramentas sem administrador  
  Para permitir que os usuários sem privilégios de administrador desenvolvam serviços WCF, uma ACL (lista de controle de acesso) é criada para o namespace "http://+:8731/Design_Time_Addresses" durante a instalação do Visual Studio. A ACL é definida como (UI), que inclui todos os usuários interativos conectados à máquina. Os administradores podem adicionar ou remover usuários dessa ACL ou abrir portas adicionais. Essa ACL permite que os modelos WCF ou WF enviem e recebam dados em sua configuração padrão. Ele também permite que os usuários usem o host automático do serviço WCF (wcfSvcHost. exe) sem conceder a eles privilégios de administrador.  
   
- Você pode modificar o acesso usando a ferramenta Netsh. exe no [!INCLUDE[wv](../../../includes/wv-md.md)] na conta de administrador elevada. Veja a seguir um exemplo de como usar o netsh. exe.  
+ Você pode modificar o acesso usando a ferramenta Netsh. exe no Windows Vista na conta de administrador elevado. Veja a seguir um exemplo de como usar o netsh. exe.  
   
 ```console  
 netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>  

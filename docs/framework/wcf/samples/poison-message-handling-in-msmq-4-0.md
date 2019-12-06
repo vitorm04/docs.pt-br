@@ -2,12 +2,12 @@
 title: Tratamento de mensagens suspeitas no MSMQ 4.0
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: eb0801a3df0f6f384dd646598e43fe1c20b6eda0
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: d1d23ffd600e7f770b942899ecc3b493b84c605a
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716531"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837812"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Tratamento de mensagens suspeitas no MSMQ 4.0
 Este exemplo demonstra como executar a manipulação de mensagens suspeitas em um serviço. Este exemplo é baseado no exemplo de [associação MSMQ transacionado](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Este exemplo usa `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
@@ -18,12 +18,12 @@ Este exemplo demonstra como executar a manipulação de mensagens suspeitas em u
 
  Com base na versão do MSMQ, o NetMsmqBinding dá suporte à detecção limitada para detecção completa de mensagens suspeitas. Depois que a mensagem for detectada como inviabilizada, ela poderá ser tratada de várias maneiras. Novamente, com base na versão do MSMQ, o NetMsmqBinding dá suporte ao tratamento limitado para o tratamento total de mensagens suspeitas.
 
- Este exemplo ilustra as instalações suspeitas limitadas fornecidas na plataforma [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e as instalações completas suspeitas fornecidas no [!INCLUDE[wv](../../../../includes/wv-md.md)]. Em ambos os exemplos, o objetivo é mover a mensagem suspeita para fora da fila para outra fila que pode ser atendida por um serviço de mensagens suspeitas.
+ Este exemplo ilustra as instalações suspeitas limitadas fornecidas na plataforma [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e as instalações completas suspeitas fornecidas no Windows Vista. Em ambos os exemplos, o objetivo é mover a mensagem suspeita para fora da fila para outra fila que pode ser atendida por um serviço de mensagens suspeitas.
 
 ## <a name="msmq-v40-poison-handling-sample"></a>Exemplo de tratamento inviabilizado do MSMQ v 4.0
- No [!INCLUDE[wv](../../../../includes/wv-md.md)], o MSMQ fornece um recurso de subfilas suspeitas que pode ser usado para armazenar mensagens suspeitas. Este exemplo demonstra a prática recomendada de lidar com mensagens suspeitas usando [!INCLUDE[wv](../../../../includes/wv-md.md)].
+ No Windows Vista, o MSMQ fornece um recurso de subfilas suspeitas que pode ser usado para armazenar mensagens suspeitas. Este exemplo demonstra a prática recomendada de lidar com mensagens suspeitas usando o Windows Vista.
 
- A detecção de mensagens suspeitas no [!INCLUDE[wv](../../../../includes/wv-md.md)] é bastante sofisticada. Há três propriedades que ajudam na detecção. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é o número de vezes que uma determinada mensagem é relida da fila e despachada para o aplicativo para processamento. Uma mensagem é relida da fila quando é colocada de volta na fila porque a mensagem não pode ser expedida para o aplicativo ou o aplicativo reverte a transação na operação de serviço. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> é o número de vezes que a mensagem é movida para a fila de repetição. Quando <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> for atingido, a mensagem será movida para a fila de repetição. A propriedade <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> é o intervalo de tempo após o qual a mensagem é movida da fila de repetição de volta para a fila principal. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é redefinido como 0. A mensagem é tentada novamente. Se todas as tentativas de ler a mensagem tiverem falhado, a mensagem será marcada como inviabilizada.
+ A detecção de mensagens suspeitas no Windows Vista é bastante sofisticada. Há três propriedades que ajudam na detecção. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é o número de vezes que uma determinada mensagem é relida da fila e despachada para o aplicativo para processamento. Uma mensagem é relida da fila quando é colocada de volta na fila porque a mensagem não pode ser expedida para o aplicativo ou o aplicativo reverte a transação na operação de serviço. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> é o número de vezes que a mensagem é movida para a fila de repetição. Quando <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> for atingido, a mensagem será movida para a fila de repetição. A propriedade <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> é o intervalo de tempo após o qual a mensagem é movida da fila de repetição de volta para a fila principal. O <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> é redefinido como 0. A mensagem é tentada novamente. Se todas as tentativas de ler a mensagem tiverem falhado, a mensagem será marcada como inviabilizada.
 
  Depois que a mensagem é marcada como inviabilizada, a mensagem é tratada de acordo com as configurações na enumeração <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A>. Para reiterar os valores possíveis:
 
@@ -31,9 +31,9 @@ Este exemplo demonstra como executar a manipulação de mensagens suspeitas em u
 
 - Drop: para descartar a mensagem.
 
-- Mover: para mover a mensagem para a subfila de mensagens suspeitas. Esse valor está disponível somente em [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Mover: para mover a mensagem para a subfila de mensagens suspeitas. Esse valor está disponível apenas no Windows Vista.
 
-- Rejeitar: para rejeitar a mensagem, enviar a mensagem de volta para a fila de mensagens mortas do remetente. Esse valor está disponível somente em [!INCLUDE[wv](../../../../includes/wv-md.md)].
+- Rejeitar: para rejeitar a mensagem, enviar a mensagem de volta para a fila de mensagens mortas do remetente. Esse valor está disponível apenas no Windows Vista.
 
  O exemplo demonstra o uso da disposição `Move` para a mensagem suspeita. `Move` faz com que a mensagem seja movida para a subfila de envenenamento.
 

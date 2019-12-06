@@ -3,13 +3,13 @@ title: Instalar o .NET Core no Ubuntu 19, 4 Package Manager-.NET Core
 description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e tempo de execução no Ubuntu 19, 4.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 76bdc40252dee711414268e306243fb34dcc578c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: 98ceb0ae7f3fbd99c4be412fd1e19928793c348f
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450887"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836888"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Gerenciador de pacotes do Ubuntu 19, 4 – instalar o .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "74450887"
 
 Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Core no Ubuntu 19, 4. Se você estiver instalando o tempo de execução, sugerimos que instale o [ASP.NET Core Runtime](#install-the-aspnet-core-runtime), pois ele inclui o .NET Core e ASP.NET Core Runtimes.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrar chave e feed da Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
 
 Antes de instalar o .NET, você precisará:
 
@@ -42,11 +42,11 @@ Atualize os produtos disponíveis para instalação e, em seguida, instale o SDK
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-sdk-3.0
+sudo apt-get install dotnet-sdk-3.1
 ```
 
 > [!IMPORTANT]
-> Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote dotnet-SDK-3,0**, consulte a seção [solucionar problemas do Gerenciador de pacotes](#troubleshoot-the-package-manager) .
+> Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote dotnet-SDK-3,1**, consulte a seção [solucionar problemas do Gerenciador de pacotes](#troubleshoot-the-package-manager) .
 
 ## <a name="install-the-aspnet-core-runtime"></a>Instalar o ASP.NET Core Runtime
 
@@ -56,11 +56,11 @@ Atualize os produtos disponíveis para instalação e instale o ASP.NET Core Run
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install aspnetcore-runtime-3.0
+sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote aspnetcore-Runtime-3,0**, consulte a seção [solucionar problemas do Gerenciador de pacotes](#troubleshoot-the-package-manager) .
+> Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote aspnetcore-Runtime-3,1**, consulte a seção [solucionar problemas do Gerenciador de pacotes](#troubleshoot-the-package-manager) .
 
 ## <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
 
@@ -70,11 +70,11 @@ Atualize os produtos disponíveis para instalação e, em seguida, instale o tem
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-runtime-3.0
+sudo apt-get install dotnet-runtime-3.1
 ```
 
 > [!IMPORTANT]
-> Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote dotnet-Runtime-3,0**, consulte a seção [solucionar problemas do Gerenciador de pacotes](#troubleshoot-the-package-manager) .
+> Se você receber uma mensagem de erro semelhante a **não é possível localizar o pacote dotnet-Runtime-3,1**, consulte a seção [solucionar problemas do Gerenciador de pacotes](#troubleshoot-the-package-manager) .
 
 ## <a name="how-to-install-other-versions"></a>Como instalar outras versões
 

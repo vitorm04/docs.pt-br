@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RFC 3066 standard [XAML Services]
 - standards [XAML Services], RFC 3066
 ms.assetid: 7aac0078-a1c5-41f8-b8b0-975510d9dca0
-ms.openlocfilehash: 98bfabba96e5805b96c63eb02233b15eae233cc0
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b3f236b2378d6af78f034856e3ba0f7a9e17993c
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740569"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837136"
 ---
 # <a name="xmllang-handling-in-xaml"></a>Tratamento de xml:lang em XAML
 O atributo `xml:lang` é um atributo definido por XML que declara as informações de idioma e cultura de um elemento em XML. Esse mesmo significado do atributo persiste em XAML; no entanto, algumas considerações adicionais se aplicam.  
@@ -27,7 +27,7 @@ O atributo `xml:lang` é um atributo definido por XML que declara as informaçõ
   
 |||  
 |-|-|  
-|*rfc3066lang*|Uma cadeia de caracteres que é derivada do padrão [RFC 3066](https://go.microsoft.com/fwlink/?LinkId=132454) e identifica um idioma ou uma região de idioma. Quando é o último, o idioma e a região são separados por um único hífen. Consulte <xref:System.Windows.Markup.XmlLanguage> para obter mais informações sobre os valores e o formato.|  
+|*rfc3066lang*|Uma cadeia de caracteres que é derivada do padrão [RFC 3066](https://www.ietf.org/rfc/rfc3066.txt) e identifica um idioma ou uma região de idioma. Quando é o último, o idioma e a região são separados por um único hífen. Consulte <xref:System.Windows.Markup.XmlLanguage> para obter mais informações sobre os valores e o formato.|  
   
 ## <a name="remarks"></a>Comentários  
  A definição do atributo `xml:lang` no [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] é derivada de `xml:lang` conforme definido como um "atributo especial" pelo World Wide Web Consortium (W3C) for XML. As informações de linguagem e cultura são potencialmente processadas de maneiras diferentes por elementos, dependendo de suas implementações; no entanto, não há nenhum [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] processamento padrão do atributo `xml:lang`.  

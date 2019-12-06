@@ -2,12 +2,12 @@
 title: Procedimento de configuração único para exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 7dbc4a1b5235c0cb6aa154379358c7761bc4ab1d
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141847"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837825"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimento de configuração único para exemplos do Windows Communication Foundation
 
@@ -16,7 +16,7 @@ A maioria dos exemplos de Windows Communication Foundation (WCF) são hospedados
 O diretório virtual **ServiceModelSamples** é usado para compilar e executar todos os exemplos que usam um serviço hospedado pelo IIS. Esse é o único diretório virtual que é necessário para executar os exemplos. A criação de um exemplo substituirá qualquer serviço implantado anteriormente neste diretório virtual; somente o exemplo criado mais recentemente será implantado e estará disponível neste diretório virtual.
 
 > [!NOTE]
-> Você deve executar todos os comandos em uma conta de administrador local. Se você estiver usando o Windows 7, o [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]ou o Windows Server 2008 R2, também deverá executar o prompt de comando com privilégios elevados. Para fazer isso, clique com o botão direito do mouse no ícone do prompt de comando e clique em **Executar como administrador**. Todos os comandos neste tópico devem ser executados em um prompt de comando que tenha as configurações de caminho apropriadas.  A maneira mais fácil de garantir isso é usando o prompt de comando do Visual Studio. Para abrir este prompt, clique em **Iniciar**, **Selecione todos os programas**, role para baixo até o **Visual Studio 2010**, selecione **Ferramentas do Visual Studio**, clique com o botão direito do mouse em prompt de **comando do Visual Studio (2010)** e clique em **Executar como administrador** . Se você tiver uma das edições do Visual Studio Express instaladas, esse prompt de comando não estará disponível e você terá que adicionar "C:\Windows\Microsoft.Net\Framework\v4.0" ao caminho do sistema.
+> Você deve executar todos os comandos em uma conta de administrador local. Se você estiver usando o Windows 7, o [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]ou o Windows Server 2008 R2, também deverá executar o prompt de comando com privilégios elevados. Para fazer isso, clique com o botão direito do mouse no ícone do prompt de comando e clique em **Executar como administrador**. Todos os comandos neste tópico devem ser executados em um prompt de comando que tenha as configurações de caminho apropriadas.  A maneira mais fácil de garantir isso é usando o prompt de comando do Visual Studio. Para abrir este prompt, clique em **Iniciar**, **Selecione todos os programas**, role para baixo até o **Visual Studio 2010**, selecione **Ferramentas do Visual Studio**, clique com o botão direito do mouse em prompt de **comando do Visual Studio (2010)** e clique em **Executar como administrador**. Se você tiver uma das edições do Visual Studio Express instaladas, esse prompt de comando não estará disponível e você terá que adicionar "C:\Windows\Microsoft.Net\Framework\v4.0" ao caminho do sistema.
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedimento de configuração única para exemplos do WCF
 
@@ -26,7 +26,7 @@ O diretório virtual **ServiceModelSamples** é usado para compilar e executar t
 
 3. Se o Visual Studio 2012 não estiver instalado e seu sistema operacional não for o Windows Server 2008 SP2 ou posterior, instale o [Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693).
 
-4. Execute os comandos a seguir. Para obter mais informações sobre por que esses comandos devem ser executados, consulte [falha do IIS Hosted Service](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
+4. Execute os seguintes comandos. Para obter mais informações sobre por que esses comandos devem ser executados, consulte [falha do IIS Hosted Service](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90)).
 
     > [!WARNING]
     > Se o IIS for reinstalado, os comandos a seguir precisarão ser executados novamente.
@@ -47,7 +47,7 @@ O diretório virtual **ServiceModelSamples** é usado para compilar e executar t
 
 8. Depois de instalar os exemplos, vá para: \<InstallDrive >: **\ WF_WCF_Samples \wcf\setup\\**
 
-9. Execute o arquivo em lotes **Setupvroot. bat** . As etapas a seguir são executadas:
+9. Execute o arquivo em lotes **Setupvroot. bat** . As seguintes etapas são executadas:
 
     - Um diretório virtual é criado no IIS chamado ServiceModelSamples.
 
@@ -63,7 +63,7 @@ O diretório virtual **ServiceModelSamples** é usado para compilar e executar t
     > [!NOTE]
     > Se essa etapa não for concluída, todos os exemplos hospedados pelo IIS falharão durante a compilação. Verifique se você definiu as permissões corretamente ou execute o prompt de comando do SDK e o prompt de comando do Visual Studio (2012) como administrador.
 
-11. Criar um diretório do C:\Logs no computador; alguns exemplos podem estar esperando. Certifique-se de que a conta apropriada tenha acesso de gravação concedido a esta pasta. Para o Windows 7, o [!INCLUDE[wv](../../../../includes/wv-md.md)]e o Windows Server 2008 R2, essa conta é **serviço de rede**. Por [!INCLUDE[lserver](../../../../includes/lserver-md.md)], a conta é NT Authority\Network Service. Para [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], a conta é ASPNET.
+11. Criar um diretório do C:\Logs no computador; alguns exemplos podem estar esperando. Certifique-se de que a conta apropriada tenha acesso de gravação concedido a esta pasta. Para o Windows 7, o Windows Vista e o Windows Server 2008 R2, essa conta é **serviço de rede**. Por [!INCLUDE[lserver](../../../../includes/lserver-md.md)], a conta é NT Authority\Network Service. Para [!INCLUDE[wxp](../../../../includes/wxp-md.md)] e [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], a conta é ASPNET.
 
 12. Execute o arquivo Setupcerttool. bat. Esse arquivo está localizado na pasta \<InstallPath > \ WF_WCF_Samples \WCF\Setup\.  Esse script executará as seguintes tarefas:
 

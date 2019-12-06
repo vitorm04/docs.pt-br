@@ -2,17 +2,17 @@
 title: Executando os exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: df984f2464084948cdaa51dab96554de9400911f
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 04bac7bad1a6ccfa23d37c391047cb8d58ee4f4d
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965492"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837799"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Executando os exemplos do Windows Communication Foundation
 Os exemplos de Windows Communication Foundation (WCF) podem ser executados em uma configuração de computador único ou entre computadores. Conforme fornecido, os exemplos estão prontos para execução em um único computador. Em uma configuração entre computadores, é necessário modificar as configurações do arquivo de configuração de um exemplo. Os procedimentos a seguir explicam como executar um exemplo em configurações de mesma máquina e entre computadores. Observe que há variações nas etapas para serviços hospedados no Serviços de Informações da Internet (IIS) e nos exemplos hospedados internamente. A maioria dos exemplos é hospedada no IIS; Consulte as informações do Leiame de exemplo para determinar como ele está hospedado.  
   
- No [!INCLUDE[wv](../../../../includes/wv-md.md)], os exemplos que não são hospedados no IIS exigem privilégios elevados para registrar um ouvinte com http. sys. Use Httpcfg. exe para registrar os endereços de escuta do serviço com a conta em que o serviço está sendo executado ou inicie o serviço a partir de um prompt de comando executando com privilégios de administrador.  
+ No Windows Vista, os exemplos que não são hospedados no IIS exigem privilégios elevados para registrar um ouvinte com http. sys. Use Httpcfg. exe para registrar os endereços de escuta do serviço com a conta em que o serviço está sendo executado ou inicie o serviço a partir de um prompt de comando executando com privilégios de administrador.  
   
 > [!NOTE]
 > Antes de criar ou executar qualquer um dos exemplos do WCF, certifique-se de ter executado o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
@@ -23,7 +23,7 @@ Os exemplos de Windows Communication Foundation (WCF) podem ser executados em um
   
 2. Se o serviço for auto-hospedado, execute Service. exe em \service\bin, na pasta específica do idioma. A atividade de serviço é exibida na janela do console de serviço.  
   
-3. Execute Client. exe de \client\bin\\, de dentro da pasta específica do idioma. A atividade do cliente é exibida na janela do console do cliente.  
+3. Execute o Client. exe do \client\bin\\, a partir da pasta específica do idioma. A atividade do cliente é exibida na janela do console do cliente.  
   
 4. Se o cliente e o serviço não puderem se comunicar, consulte [dicas de solução de problemas para exemplos do WCF](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90)).  
   
@@ -53,7 +53,7 @@ Os exemplos de Windows Communication Foundation (WCF) podem ser executados em um
   
     1. Se o serviço não estiver em execução em uma conta de domínio, abra o arquivo de configuração do cliente e altere o valor de endereço da definição do ponto de extremidade para corresponder ao novo endereço do serviço. Substitua todas as referências a "localhost" por um nome de domínio totalmente qualificado no endereço.  
   
-    2. Se o serviço estiver sendo executado em uma conta de domínio, gere novamente a configuração do cliente executando svcutil. exe em relação ao serviço. Para obter mais informações sobre como executar svcutil. exe, consulte [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md). Use o arquivo gerado em vez do arquivo de configuração no exemplo. O arquivo de configuração gerado tem informações de identidade adicionais e contém todas as configurações necessárias para se conectar ao ponto de extremidade do serviço, mesmo que sejam as configurações padrão. Para obter mais informações sobre informações de identidade, consulte [identidade e autenticação de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)e [ \<> de identidade](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
+    2. Se o serviço estiver sendo executado em uma conta de domínio, gere novamente a configuração do cliente executando svcutil. exe em relação ao serviço. Para obter mais informações sobre como executar svcutil. exe, consulte [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md). Use o arquivo gerado em vez do arquivo de configuração no exemplo. O arquivo de configuração gerado tem informações de identidade adicionais e contém todas as configurações necessárias para se conectar ao ponto de extremidade do serviço, mesmo que sejam as configurações padrão. Para obter mais informações sobre informações de identidade, consulte [identidade e autenticação de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)e [\<identidade >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md).  
   
 4. No computador cliente, inicie o Client. exe em um prompt de comando.  
   
@@ -63,7 +63,7 @@ Os exemplos de Windows Communication Foundation (WCF) podem ser executados em um
   
 2. Se o serviço estiver hospedado no IIS:  
   
-    1. Ative o serviço usando um navegador inserindo o endereço `http://localhost/servicemodelsamples/service.svc`.  
+    1. Ative o serviço usando um navegador digitando o endereço `http://localhost/servicemodelsamples/service.svc`.  
   
     2. Na solução, escolha o menu **depurar** e o item de menu **anexar ao processo** .  
   

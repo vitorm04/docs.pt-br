@@ -3,13 +3,13 @@ title: Instalar o .NET Core no Debian 10-Package Manager-.NET Core
 description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e tempo de execução no Debian 10.
 author: thraka
 ms.author: adegeo
-ms.date: 11/06/2019
-ms.openlocfilehash: 1280758e7ea9300d83fa01532f3b051c6e1c0c67
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/04/2019
+ms.openlocfilehash: 2c24a02423f5aa8f011cfb4705efb51d97cfaf1e
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74451069"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74836944"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Gerenciador de pacotes do Debian 10 – instalar o .NET Core
 
@@ -17,7 +17,7 @@ ms.locfileid: "74451069"
 
 Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Core no Debian 10. Se você estiver instalando o tempo de execução, sugerimos que instale o [ASP.NET Core Runtime](#install-the-aspnet-core-runtime), pois ele inclui o .NET Core e ASP.NET Core Runtimes.
 
-## <a name="register-microsoft-key-and-feed"></a>Registrar chave e feed da Microsoft
+## <a name="register-microsoft-key-and-feed"></a>Registrar a chave e o feed da Microsoft
 
 Antes de instalar o .NET, você precisará:
 
@@ -46,7 +46,7 @@ Atualize os produtos disponíveis para instalação e, em seguida, instale o SDK
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-sdk-3.0
+sudo apt-get install dotnet-sdk-3.1
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>Instalar o ASP.NET Core Runtime
@@ -57,7 +57,7 @@ Atualize os produtos disponíveis para instalação e, em seguida, instale o tem
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install aspnetcore-runtime-3.0
+sudo apt-get install aspnetcore-runtime-3.1
 ```
 
 ## <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
@@ -68,7 +68,7 @@ Atualize os produtos disponíveis para instalação e, em seguida, instale o tem
 sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get update
-sudo apt-get install dotnet-runtime-3.0
+sudo apt-get install dotnet-runtime-3.1
 ```
 
 ## <a name="how-to-install-other-versions"></a>Como instalar outras versões

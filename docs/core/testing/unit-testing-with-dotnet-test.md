@@ -3,14 +3,14 @@ title: Código C# de teste de unidade no .NET Core usando dotnet test e xUnit
 description: Aprenda os conceitos de teste de unidade no C# e .NET Core por meio de uma experiência interativa de criação passo a passo de uma solução de exemplo usando dotnet test e xUnit.
 author: ardalis
 ms.author: wiwagn
-ms.date: 11/29/2017
+ms.date: 12/04/2019
 ms.custom: seodec18
-ms.openlocfilehash: eee8ab675ecc66b842a1447e3f2de1b6b9765c4d
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 420ab4c7f23ef3fd6cd26d91c2b4f075f1a205f5
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801909"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74835441"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>C# de teste de unidade no .NET Core usando dotnet test e xUnit
 

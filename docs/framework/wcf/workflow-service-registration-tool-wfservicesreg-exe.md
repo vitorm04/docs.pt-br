@@ -2,12 +2,12 @@
 title: Ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)
 ms.date: 03/30/2017
 ms.assetid: 9e92c87b-99c5-4e8d-9d53-7944cc2b47d3
-ms.openlocfilehash: 6b1a0b990b1657e724f527b5beccce0e8a6391a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cf5ea345c900dec0e4859d81fcb272c1ba3d3df6
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74281664"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837747"
 ---
 # <a name="workflow-service-registration-tool-wfservicesregexe"></a>Ferramenta de registro de serviço de fluxo de trabalho (WFServicesReg.exe)
 A ferramenta de registro de serviços de fluxo de trabalho (WFServicesReg. exe) é uma ferramenta autônoma que pode ser usada para adicionar, remover ou reparar os elementos de configuração para os serviços Windows Workflow Foundation (WF).  
@@ -60,7 +60,7 @@ WFServicesReg.exe [-c | -r | -v | -m | -i]
   
  Em computadores de 64 bits, a ferramenta registra os ScriptMaps do modo WOW se a opção `Enable32BitAppOnWin64` estiver habilitada, ou mapas de bits 64 nativos se a opção `Enable32BitAppOnWin64` estiver desabilitada.  
   
- Nos computadores [!INCLUDE[wv](../../../includes/wv-md.md)] e Windows Server 2008 (IIS 7,0 e superior), dois conjuntos de manipuladores. xoml e. Rules são registrados: um para o modo integrado e outro para o modo clássico.  
+ No Windows Vista e no Windows Server 2008 (IIS 7,0 e superior) computadores, dois conjuntos de manipuladores. xoml e. Rules são registrados: um para o modo integrado e outro para o modo clássico.  
   
  Em computadores de 64 bits, três conjuntos de manipuladores são registrados (independentemente do estado do comutador de `Enable32BitAppOnWin64`): um para o modo integrado, um para o modo clássico de WOW e outro para o modo clássico de 64 bits nativo.  
   

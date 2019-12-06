@@ -2,12 +2,12 @@
 title: Usando representantes de atividades
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: 63f550549456404b237067c98afdb18a8758dd7a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: cbcc8f8e498be4f79f8fed5af7cd3557d7c55981
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989089"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837565"
 ---
 # <a name="using-activity-delegates"></a>Usando representantes de atividades
 Os representantes de atividade permitem autores de atividade para expor retornos de chamada com assinaturas específicas, para que os usuários de atividade podem fornecer manipuladores atividades base. Dois tipos de representantes de atividade estão disponíveis: <xref:System.Activities.ActivityAction%601> é usado para definir os representantes de atividade que não têm um valor de retorno, e <xref:System.Activities.ActivityFunc%601> é usado para definir os representantes de atividade que têm um valor de retorno.
@@ -30,9 +30,9 @@ Os exemplos deste tópico usam sintaxe de inicialização de objeto. A sintaxe d
 
 [!code-csharp[CFX_ActivityExample#7](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]
 
-Para obter mais informações sobre inicializadores de objeto [, consulte Como: Inicializar objetos sem chamar um Construtor (C# guia de programação](https://go.microsoft.com/fwlink/?LinkId=161015) ) [e como: Declare um objeto usando um inicializador](https://go.microsoft.com/fwlink/?LinkId=161016)de objeto.
+Para obter mais informações sobre inicializadores de objeto, consulte [como: inicializar objetos sem chamar um construtorC# (guia de programação)](../../csharp/programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md) e [como: declarar um objeto usando um inicializador de objeto (Visual Basic)](../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md).
 
-No exemplo a seguir, uma atividade de <xref:System.Activities.Statements.TryCatch> é usada em um fluxo de trabalho. <xref:System.ApplicationException> é gerada pelo fluxo de trabalho, e tratado por uma atividade de <xref:System.Activities.Statements.Catch%601> . O manipulador para a <xref:System.Activities.Statements.Catch%601> ação de atividade da atividade é <xref:System.Activities.Statements.WriteLine> uma atividade, e o detalhe da exceção é transmitido a ela usando `ex` o <xref:System.Activities.DelegateInArgument%601>.
+No exemplo a seguir, uma atividade de <xref:System.Activities.Statements.TryCatch> é usada em um fluxo de trabalho. <xref:System.ApplicationException> é gerada pelo fluxo de trabalho, e tratado por uma atividade de <xref:System.Activities.Statements.Catch%601> . O manipulador para a ação de atividade da atividade de <xref:System.Activities.Statements.Catch%601> é uma atividade de <xref:System.Activities.Statements.WriteLine>, e o detalhe da exceção é transmitido a ela usando o `ex` <xref:System.Activities.DelegateInArgument%601>.
 
 [!code-csharp[CFX_WorkflowApplicationExample#33](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#33)]
 

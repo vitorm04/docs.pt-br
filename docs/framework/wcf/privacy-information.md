@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 0b277728d2f2c224d5e45e3990ab2fd588bc81d3
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: c5500b8fd8b35081e83e2e9279dc4f236ef3c7b0
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318691"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837929"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informações de privacidade do Windows Communication Foundation
 A Microsoft está comprometida em proteger a privacidade dos usuários finais. Quando você cria um aplicativo usando Windows Communication Foundation (WCF), versão 3,0, seu aplicativo pode afetar a privacidade dos usuários finais. Por exemplo, seu aplicativo pode coletar explicitamente as informações de contato do usuário ou pode solicitar ou enviar informações pela Internet para seu site. Se você inserir a tecnologia da Microsoft em seu aplicativo, essa tecnologia poderá ter seu próprio comportamento que pode afetar a privacidade. O WCF não envia nenhuma informação à Microsoft do seu aplicativo, a menos que você ou o usuário final opte por enviá-lo para nós.  
@@ -51,10 +51,10 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 |Informações de identidade sobre o serviço usado para autenticar o serviço para clientes.|Endereço do ponto de extremidade do serviço.|  
 |Informações do chamador.|Logs de auditoria.|  
   
-## <a name="auditing"></a>Auditoria  
+## <a name="auditing"></a>Auditoria do  
  A auditoria registra o êxito e a falha de eventos de autenticação e autorização. Os registros de auditoria contêm os seguintes dados: URI de serviço, URI de ação e identificação do chamador.  
   
- A auditoria também registra quando o administrador modifica a configuração do log de mensagens (ativando ou desligando), pois o log de mensagens pode registrar dados específicos do aplicativo em cabeçalhos e corpos. Por [!INCLUDE[wxp](../../../includes/wxp-md.md)], um registro é registrado no log de eventos do aplicativo. Para [!INCLUDE[wv](../../../includes/wv-md.md)] e [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], um registro é registrado no log de eventos de segurança.  
+ A auditoria também registra quando o administrador modifica a configuração do log de mensagens (ativando ou desligando), pois o log de mensagens pode registrar dados específicos do aplicativo em cabeçalhos e corpos. Por [!INCLUDE[wxp](../../../includes/wxp-md.md)], um registro é registrado no log de eventos do aplicativo. Para o Windows Vista e o [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], um registro é registrado no log de eventos de segurança.  
   
 ## <a name="transactions"></a>Transações  
  O recurso de transações fornece serviços transacionais para um aplicativo WCF.  
@@ -93,7 +93,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
 ## <a name="it-professional-experience"></a>Experiência profissional de ti  
   
 ### <a name="tracing"></a>Rastreamento  
- O recurso de diagnóstico da infraestrutura do WCF registra as mensagens que passam pelas camadas de modelo de serviço e transporte, bem como as atividades e os eventos associados a essas mensagens. Esse recurso está desativado por padrão. Ele é habilitado usando o arquivo de configuração do aplicativo e o comportamento de rastreamento pode ser modificado usando o provedor WMI WCF em tempo de execução. Quando habilitada, a infraestrutura de rastreamento emite um rastreamento de diagnóstico que contém mensagens, atividades e eventos de processamento para os ouvintes configurados. O formato e o local da saída são determinados pelas opções de configuração de ouvinte do administrador, mas normalmente é um arquivo formatado XML. O administrador é responsável por definir a ACL (lista de controle de acesso) nos arquivos de rastreamento. Em particular, quando hospedado pelo WAS (sistema de ativação do Windows), o administrador deve verificar se os arquivos não são atendidos do diretório raiz virtual público, se isso não for desejado.  
+ O recurso de diagnóstico da infraestrutura do WCF registra as mensagens que passam pelas camadas de modelo de serviço e transporte, bem como as atividades e os eventos associados a essas mensagens. Este recurso permanece desativado por padrão. Ele é habilitado usando o arquivo de configuração do aplicativo e o comportamento de rastreamento pode ser modificado usando o provedor WMI WCF em tempo de execução. Quando habilitada, a infraestrutura de rastreamento emite um rastreamento de diagnóstico que contém mensagens, atividades e eventos de processamento para os ouvintes configurados. O formato e o local da saída são determinados pelas opções de configuração de ouvinte do administrador, mas normalmente é um arquivo formatado XML. O administrador é responsável por definir a ACL (lista de controle de acesso) nos arquivos de rastreamento. Em particular, quando hospedado pelo WAS (sistema de ativação do Windows), o administrador deve verificar se os arquivos não são atendidos do diretório raiz virtual público, se isso não for desejado.  
   
  Há dois tipos de rastreamento: log de mensagens e rastreamento de diagnóstico do modelo de serviço, descritos na seção a seguir. Cada tipo é configurado por meio de sua própria origem de rastreamento: <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> e <xref:System.ServiceModel>. Ambas as fontes de rastreamento de log capturam dados que são locais para o aplicativo.  
   
@@ -287,7 +287,7 @@ A Microsoft está comprometida em proteger a privacidade dos usuários finais. Q
   
  \<Action Namespace="[uri]">[string]\</Action>+  
   
- Evidência de \<>  
+ Evidência de \<  
   
  \<AssertionIDReference>[ID]\</AssertionIDReference>+  
   
