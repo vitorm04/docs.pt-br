@@ -16,12 +16,12 @@ helpviewer_keywords:
 - code, runtime functionality
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
-ms.openlocfilehash: c866e3d1a4de31361843f5c071510fd18247cb39
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132807"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884404"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Visão geral do CLR (Common Language Runtime)
 
@@ -62,30 +62,13 @@ Compiladores de linguagens e ferramentas expõem a funcionalidade do runtime da 
 
 ## <a name="clr-versions"></a>Versões do CLR
 
-O número de versão do .NET Framework não corresponde necessariamente ao número de versão do CLR que ele inclui. A tabela a seguir mostra como os dois números de versão se correlacionam:
-
-|Versão do .NET Framework|Inclui versão do CLR|
-|----------------------------|--------------------------|
-|1.0|1.0|
-|1.1|1.1|
-|2.0|2.0|
-|3.0|2.0|
-|3.5|2.0|
-|4|4|
-|4.5 (incluindo 4.5.1 e 4.5.2)|4|
-|4.6 (incluindo 4.6.1 e 4.6.2)|4|
-|4.7 (incluindo 4.7.1 e 4.7.2)|4|
-|4.8|4|
+O número de versão de .NET Framework não corresponde necessariamente ao número de versão do CLR que ele inclui. Para obter uma lista de versões de .NET Framework e suas versões correspondentes do CLR, consulte [.NET Framework versões e dependências](../framework/migration-guide/versions-and-dependencies.md). As versões do .NET Core têm uma única versão do produto, ou seja, não há nenhuma versão CLR separada. Para obter uma lista das versões do .NET Core, consulte [baixar o .NET Core](https://dotnet.microsoft.com/download/dotnet-core).
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
 |[Processo de execução gerenciada](managed-execution-process.md)|Descreve as etapas obrigatórias para usufruir o Common Language Runtime.|
 |[Gerenciamento Automático de Memória](automatic-memory-management.md)|Descreve como o coletor de lixo aloca e libera memória.|
 |[Visão geral do .NET Framework](../framework/get-started/overview.md)|Descreve os conceitos-chave do .NET Framework, como Common Type System, interoperabilidade entre linguagens, execução gerenciada, domínios de aplicativos e assemblies.|
 |[Common Type System](./base-types/common-type-system.md)|Descreve como os tipos são declarados, usados e gerenciados no runtime para dar suporte à integração entre linguagens.|
-
-## <a name="see-also"></a>Consulte também
-
-- [Versões e dependências](../framework/migration-guide/versions-and-dependencies.md)

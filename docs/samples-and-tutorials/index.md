@@ -4,12 +4,12 @@ description: Informações sobre exemplos e tutoriais para .NET Core, ASP.NET Co
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 7953d178e9a24fc42f11b6bc5c866805ec381137
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 5132415a6be03787111aaed8d027d436bb6820fe
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423566"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884430"
 ---
 # <a name="net-samples-and-tutorials"></a>Exemplos e tutoriais do .NET
 
@@ -17,7 +17,7 @@ A documentação do .NET contém um conjunto de exemplos e tutoriais que ensinam
 
 ## <a name="net-core"></a>.NET Core
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Exemplos do
 
 **[Testes de unidade no .NET Core usando o teste dotnet](../core/testing/unit-testing-with-dotnet-test.md)**
 
@@ -25,7 +25,7 @@ Este guia mostra como criar um aplicativo Web do ASP.NET Core e testes de unidad
 
 ### <a name="tutorials"></a>Tutoriais
 
-**[Gravando aplicativos de console do .NET Core usando as ferramentas de CLI: um guia passo a passo](../core/tutorials/using-with-xplat-cli.md)**
+**[Gravando aplicativos de console do .NET Core usando as ferramentas de CLI: um guia passo a passo](../core/tutorials/cli-create-console-app.md)**
 
 Este guia mostra como usar as ferramentas de CLI do .NET Core para criar aplicativos de console de plataforma cruzada. Ele começa com o aplicativo de console básico e, por fim, abrange vários projetos, incluindo testes. Você adiciona recursos passo a passo, ampliando seu conhecimento durante o processo. O [exemplo completo](https://github.com/dotnet/samples/tree/master/core/console-apps) está disponível no repositório de exemplos/dotnet no GitHub.
 
@@ -39,7 +39,7 @@ Confira os [tutoriais do ASP.NET Core](/aspnet/core/tutorials/). Muitos artigos 
 
 ## <a name="c-language"></a>Linguagem C#
 
-### <a name="samples"></a>Exemplos
+### <a name="samples"></a>Exemplos do
 
 **[Iteradores](../csharp/iterators.md)**
 

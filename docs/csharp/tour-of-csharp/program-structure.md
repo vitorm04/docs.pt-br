@@ -3,12 +3,12 @@ title: Estrutura de um programa em C# - um tour pela linguagem C#
 description: Saiba mais sobre os blocos de construção básicos de um programa em C#
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: 5102c72d68108f698a0456b9c14e6713778f4325
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 5e095e71549ed3eec6c73e6a134fdb5a64fb63c0
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834166"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884378"
 ---
 # <a name="program-structure"></a>Estrutura do programa
 
@@ -27,7 +27,7 @@ csc /t:library acme.cs
 compila o exemplo como uma biblioteca (o código sem um ponto de entrada `Main`) e produz um assembly denominado `acme.dll`.
 
 > [!IMPORTANT]
-> Os exemplos acima usam `csc` como o compilador C# da linha de comando. Esse compilador é um executável do Windows. Para usar C# em outras plataformas, você deve usar as ferramentas para o .NET Core. O ecossistema do .NET Core usa o CLI `dotnet` para gerenciar as compilações de linha de comando. Isso inclui gerenciamento de dependências e invocação do compilador C#. Consulte [este tutorial](../../core/tutorials/using-with-xplat-cli.md) para obter uma descrição completa dessas ferramentas nas plataformas com suporte do .NET Core.
+> Os exemplos acima usam `csc` como o compilador C# da linha de comando. Esse compilador é um executável do Windows. Para usar C# em outras plataformas, você deve usar as ferramentas para o .NET Core. O ecossistema do .NET Core usa o CLI `dotnet` para gerenciar as compilações de linha de comando. Isso inclui gerenciamento de dependências e invocação do compilador C#. Consulte [este tutorial](../../core/tutorials/cli-create-console-app.md) para obter uma descrição completa dessas ferramentas nas plataformas com suporte do .NET Core.
 
 Os assemblies contêm código executável na forma de instruções de IL (Linguagem Intermediária) e informações simbólicas na forma de metadados. Antes de ser executado, o código de IL em um assembly é automaticamente convertido em código específico do processador pelo compilador JIT (Just-In-Time) do .NET Common Language Runtime.
 
