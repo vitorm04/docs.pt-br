@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b376f8b38749f242f4e78a10808532989e0ac834
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73972139"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884235"
 ---
 # <a name="common-web-application-architectures"></a>Arquiteturas comuns de aplicativo Web
 
@@ -170,7 +170,7 @@ A camada de interface do usuário em um aplicativo ASP.NET Core MVC é o ponto d
 ### <a name="ui-layer-types"></a>Tipos de camada de interface do usuário
 
 - Controladores
-- Filtros
+- Filtros.
 - Exibições
 - ViewModels
 - Inicialização
@@ -260,7 +260,7 @@ networks:
       name: nat
 ```
 
-O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Web` do `Dockerfile`:
+O arquivo `docker-compose.yml` referencia o `Dockerfile` no projeto `Web`. O `Dockerfile` é usado para especificar qual contêiner base será usado e como o aplicativo será configurado nele. O `Dockerfile` do `Web`:
 
 ```Dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
@@ -302,6 +302,8 @@ Para adicionar o suporte ao Docker ao aplicativo usando o Visual Studio, verifiq
   <https://github.com/ardalis/cleanarchitecture>
 - **Livro eletrônico Architecting Microservices** (Arquitetando microsserviços)  
   <https://aka.ms/MicroservicesEbook>
+- **DDD (design controlado por domínio)**  
+  <https://docs.microsoft.com/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/>
 
 >[!div class="step-by-step"]
 >[Anterior](architectural-principles.md)
