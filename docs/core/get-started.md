@@ -6,7 +6,7 @@ ms.author: adegeo
 ms.date: 09/19/2019
 ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
 ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/23/2019
 ms.locfileid: "74428874"
@@ -21,7 +21,7 @@ Se você não souber exatamente o que é o .NET Core ou como ele se relaciona co
 
 Primeiro, baixe e instale o [SDK do .NET Core](https://dotnet.microsoft.com/download) em seu computador.
 
-Em seguida, abra um terminal, como o **PowerShell**, um **prompt de comando** ou o **Bash**. Digite os seguintes comandos de `dotnet` para criar e executar C# um aplicativo:
+Em seguida, abra um terminal, como o **PowerShell**, um **prompt de comando** ou o **Bash**. Digite os seguintes comandos de `dotnet` para criar e executar um aplicativo C#:
 
 ```dotnetcli
 dotnet new console --output sample1
