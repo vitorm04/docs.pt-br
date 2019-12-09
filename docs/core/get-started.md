@@ -4,12 +4,12 @@ description: Encontre recursos para aprender a criar aplicativos .NET Core no Wi
 author: thraka
 ms.author: adegeo
 ms.date: 09/19/2019
-ms.openlocfilehash: 78066f2904f6a874b71165e4fe1769b6b778ae41
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: HT
+ms.openlocfilehash: 89db6d79336c01315983133d9041904d88cba301
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428874"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884248"
 ---
 # <a name="get-started-with-net-core"></a>Introdução ao .NET Core
 
@@ -50,7 +50,7 @@ Você pode começar a desenvolver aplicativos .NET Core seguindo estes tutoriais
 - [Criar uma biblioteca de classes com Visual Basic e o .NET Core no Visual Studio 2017.](./tutorials/vb-library-with-visual-studio.md)  
 - Assista a um vídeo sobre [como instalar e usar o Visual Studio Code e o .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core/).
 - Assista a um vídeo sobre [como instalar e usar o Visual Studio 2017 e o .NET Core](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017/).
-- [Introdução ao .NET Core usando a linha de comando.](tutorials/using-with-xplat-cli.md)
+- [Introdução ao .NET Core usando a linha de comando.](tutorials/cli-create-console-app.md)
 
 Consulte o artigo [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-windows) para obter uma lista das versões do Windows com suporte.
 
@@ -58,7 +58,7 @@ Consulte o artigo [dependências e requisitos do .NET Core](install/dependencies
 
 Você pode começar a desenvolver o aplicativo .NET Core seguindo estes tutoriais passo a passo:
 
-- [Introdução ao .NET Core usando a linha de comando.](tutorials/using-with-xplat-cli.md)
+- [Introdução ao .NET Core usando a linha de comando.](tutorials/cli-create-console-app.md)
 - Assista a um vídeo sobre uma [introdução ao Visual Studio Code usando C# e o .NET Core no Ubuntu](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
 Consulte o artigo [dependências e requisitos do .NET Core](install/dependencies.md?tabs=netcore30&pivots=os-linux) para obter uma lista das versões e distribuições do Linux com suporte.
@@ -69,7 +69,7 @@ Você pode começar a desenvolver o aplicativo .NET Core seguindo estes tutoriai
 
 - Assista a um vídeo sobre uma [introdução ao Visual Studio Code usando C# e o .NET Core no macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-NET-Core-Mac).
 - [Introdução ao .NET Core no macOS usando o Visual Studio Code.](tutorials/using-on-macos.md)
-- [Introdução ao .NET Core usando a linha de comando.](tutorials/using-with-xplat-cli.md)
+- [Introdução ao .NET Core usando a linha de comando.](tutorials/cli-create-console-app.md)
 - [Introdução ao .NET Core no macOS usando o Visual Studio para Mac.](tutorials/using-on-mac-vs.md)
 - [Compilar uma solução completa do .NET Core no macOS usando o Visual Studio para Mac.](tutorials/using-on-mac-vs-full-solution.md)
 
