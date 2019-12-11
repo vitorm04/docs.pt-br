@@ -4,12 +4,12 @@ description: Descubra como implantar um aplicativo do .NET para Apache Spark no 
 ms.date: 05/17/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e79b4c5bf38416cf45776488559bd0b2d5582361
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: dfd33e83c04428b7a6a72e4992c40f00982b1958
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716473"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960468"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>Tutorial: implantar um aplicativo .NET para Apache Spark no databricks
 
@@ -19,7 +19,7 @@ Neste tutorial, você aprenderá como:
 
 > [!div class="checklist"]
 >
-> - Crie um espaço de trabalho Azure Databricks.
+> - Criar um workspace do Azure Databricks.
 > - Publique seu aplicativo .NET para Apache Spark.
 > - Crie um trabalho do Spark e um cluster Spark.
 > - Execute seu aplicativo no cluster do Spark.
@@ -32,30 +32,30 @@ Antes de começar, execute as seguintes tarefas:
 * Entre no [Portal do Azure](https://portal.azure.com/).
 * Conclua o [.net para Apache Spark-introdução no tutorial de 10 minutos](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro) .
 
-## <a name="create-an-azure-databricks-workspace"></a>Criar um espaço de trabalho Azure Databricks
+## <a name="create-an-azure-databricks-workspace"></a>Criar um workspace do Azure Databricks
 
 > [!Note]
-> Este tutorial não pode ser executado usando a **assinatura de avaliação gratuita do Azure**.
-> Se você tiver uma conta gratuita, vá para seu perfil e altere sua assinatura para pré- **pago**. Para obter mais informações, consulte [conta gratuita do Azure](https://azure.microsoft.com/free/). Em seguida, [remova o limite de gastos](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)e [solicite um aumento de cota](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) para vCPUs em sua região. Ao criar seu espaço de trabalho Azure Databricks, você pode selecionar o tipo de preço de **avaliação (Premium-14 dias gratuitos DBUs)** para dar ao espaço de trabalho o acesso Premium Azure Databricks DBUs por 14 dias.
+> Este tutorial não pode ser realizado usando a **Assinatura de avaliação gratuita do Azure**.
+> Se você tiver uma conta gratuita, acesse seu perfil e altere para uma assinatura **pré-paga**. Para saber mais, confira [Conta gratuita do Azure](https://azure.microsoft.com/free/). Em seguida, [remova o limite de gastos](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit) e [solicite um aumento de cota](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request) para as vCPUs da sua região. Quando você cria seu espaço de trabalho do Azure Databricks, pode selecionar o tipo de preço **Versão de avaliação (Premium - DBUs gratuitas por 14 dias)** para conceder ao espaço de trabalho acesso gratuito aos DBUs do Premium Azure Databricks por 14 dias.
 
-Nesta seção, você cria um espaço de trabalho Azure Databricks usando o portal do Azure.
+Nesta seção, você deve cria um workspace do Azure Databricks usando o Portal do Azure.
 
-1. Na portal do Azure, selecione **criar um recurso** > **Analytics** > **Azure Databricks**.
+1. No Portal do Azure, selecione **Criar um recurso** > **Análise** > **Azure Databricks**.
 
    ![Criar um recurso de Azure Databricks no portal do Azure](./media/databricks-deployment/create-databricks-resource.png)
 
-2. Em **Azure Databricks serviço**, forneça os valores para criar um espaço de trabalho do databricks.
+2. Em **Serviço do Azure Databricks**, forneça os valores para criar um workspace do Databricks.
 
     |propriedade  |Descrição  |
     |---------|---------|
-    |**Nome do espaço de trabalho**     | Forneça um nome para seu espaço de trabalho do databricks.        |
+    |**Nome do workspace**     | Forneça um nome para o seu workspace do Databricks.        |
     |**Assinatura**     | Na lista suspensa, selecione sua assinatura do Azure.        |
-    |**Grupo de recursos**     | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que mantém recursos relacionados para uma solução do Azure. Para obter mais informações, consulte [visão geral do grupo de recursos do Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
+    |**Grupo de recursos**     | Especifique se deseja criar um novo grupo de recursos ou usar um existente. Um grupo de recursos é um contêiner que armazena os recursos relacionados de uma solução do Azure. Para obter mais informações, consulte [Visão geral do Grupo de Recursos do Azure](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-overview). |
     |**Local**     | Selecione sua região preferida. Para obter informações sobre regiões disponíveis, consulte [Serviços do Azure disponíveis por região](https://azure.microsoft.com/regions/services/).        |
-    |**Tipo de preço**     |  Escolha entre **Standard**, **Premium**ou **avaliação**. Para obter mais informações sobre essas camadas, consulte a [página de preços do databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
-    |**Rede virtual**     |   Não       |
+    |**Tipo de Preço**     |  Escolha entre o cluster **Standard**, **Premium** ou **Avaliação**. Para saber mais sobre essas camadas, confira [Página de preços do Databricks](https://azure.microsoft.com/pricing/details/databricks/).       |
+    |**Rede Virtual**     |   Não       |
 
-3. Selecione **Criar**. A criação do espaço de trabalho leva alguns minutos. Durante a criação do espaço de trabalho, você pode exibir o status da implantação em **notificações**.
+3. Selecione **Criar**. A criação do workspace leva alguns minutos. Durante a criação do workspace, você pode exibir o status da implantação em **Notificações**.
 
 ## <a name="install-azure-databricks-tools"></a>Instalar ferramentas de Azure Databricks
 
@@ -130,7 +130,7 @@ Em seguida, você publica o *mySparkApp* criado no [.net para Apache Spark-intro
 
    ```console
    cd mySparkApp
-   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x6
+   dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```
 
    **No Linux:**
@@ -219,7 +219,7 @@ Seu aplicativo é executado em Azure Databricks por meio de um trabalho que exec
 
 ## <a name="clean-up-resources"></a>Limpar recursos
 
-Se você não precisar mais do espaço de trabalho do databricks, poderá excluir seu recurso de Azure Databricks no portal do Azure. Você também pode selecionar o nome do grupo de recursos para abrir a página do grupo de recursos e, em seguida, selecionar **excluir grupo de recursos**.
+Se você não precisar mais do espaço de trabalho do databricks, poderá excluir seu recurso de Azure Databricks no portal do Azure. Também é possível selecionar o nome do grupo de recursos para abrir a página do grupo de recursos, e depois selecionar **Excluir grupo de recursos**.
 
 ## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
