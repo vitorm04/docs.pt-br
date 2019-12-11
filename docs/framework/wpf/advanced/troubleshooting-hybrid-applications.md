@@ -9,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
-ms.openlocfilehash: f3cddcd6cd90e7e43ea6af67725e709673f7650f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 46d8f00f9328e9c0a4df596b709195ae42d651bf
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978347"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960124"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>Solucionando problemas de aplicativos híbridos
 <a name="introduction"></a> Este tópico lista alguns problemas comuns que podem ocorrer ao criar aplicativos híbridos que usam tecnologias [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "73978347"
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] têm modelos diferentes de dimensionamento. Alguns [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] transformações de colocação em escala são significativas para [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controles, mas não outras. Por exemplo, dimensionar um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle para 0 funcionará, mas se você tentar expandir o mesmo controle de volta para um valor diferente de zero, o tamanho do controle permanecerá como 0. Para obter mais informações, consulte [Considerações sobre Layout para o elemento WindowsFormsHost](layout-considerations-for-the-windowsformshost-element.md).  
   
 <a name="adapter"></a>   
-## <a name="adapter"></a>Adaptador  
+## <a name="adapter"></a>Personalizado  
  Pode haver confusão ao trabalhar com as classes <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost>, pois elas incluem um contêiner oculto. As classes <xref:System.Windows.Forms.Integration.WindowsFormsHost> e <xref:System.Windows.Forms.Integration.ElementHost> têm um contêiner oculto, chamado de *adaptador*, que eles usam para hospedar conteúdo. Para o elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost>, o adaptador deriva da classe <xref:System.Windows.Forms.ContainerControl?displayProperty=nameWithType>. Para o controle <xref:System.Windows.Forms.Integration.ElementHost>, o adaptador deriva do elemento <xref:System.Windows.Controls.DockPanel>. Quando você vê referências ao adaptador de outros tópicos de interoperação, esse contêiner é o que está sendo discutido.  
   
 <a name="nesting"></a>   
@@ -86,7 +86,7 @@ ms.locfileid: "73978347"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>Habilitar estilos visuais  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] estilos visuais em um [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] controle não pode ser habilitado. O método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> é chamado no modelo para um aplicativo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Embora esse método não seja chamado por padrão, se você usar o Visual Studio para criar um projeto, obterá [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] estilos visuais para controles, se a versão 6,0 de Comctl32. dll estiver disponível. Você deve chamar o método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> antes que os identificadores sejam criados no thread. Para obter mais informações, consulte [Como Habilitar Estilos Visuais em um Aplicativo Híbrido](how-to-enable-visual-styles-in-a-hybrid-application.md).  
+ Os estilos visuais do Microsoft Windows XP em um controle de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não podem ser habilitados. O método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> é chamado no modelo para um aplicativo [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]. Embora esse método não seja chamado por padrão, se você usar o Visual Studio para criar um projeto, obterá os estilos visuais do Microsoft Windows XP para controles, se a versão 6,0 do Comctl32. dll estiver disponível. Você deve chamar o método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> antes que os identificadores sejam criados no thread. Para obter mais informações, consulte [Como Habilitar Estilos Visuais em um Aplicativo Híbrido](how-to-enable-visual-styles-in-a-hybrid-application.md).  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>Controles licenciados  

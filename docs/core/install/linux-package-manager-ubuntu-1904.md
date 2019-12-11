@@ -4,12 +4,12 @@ description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e temp
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 98ceb0ae7f3fbd99c4be412fd1e19928793c348f
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 69bfc3395f5cd92ed54850e5ea8b76eba7f27d83
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836888"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959742"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Gerenciador de pacotes do Ubuntu 19, 4 – instalar o .NET Core
 
@@ -94,7 +94,7 @@ Se isso não funcionar, você poderá executar uma instalação manual com os co
 
 ```bash
 sudo apt-get install -y gpg
-wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor microsoft.asc.gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget -q https://packages.microsoft.com/config/ubuntu/19.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list

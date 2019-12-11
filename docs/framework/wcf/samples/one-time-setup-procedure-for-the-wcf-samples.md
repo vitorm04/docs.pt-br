@@ -2,12 +2,12 @@
 title: Procedimento de configuração único para exemplos do Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: cfe50cb2bb017292b69f578bfff2bf84bf6ba8f0
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 95bba89546e6667cc36fa06a0090aa8e9570fc7e
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837825"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960142"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedimento de configuração único para exemplos do Windows Communication Foundation
 
@@ -16,7 +16,7 @@ A maioria dos exemplos de Windows Communication Foundation (WCF) são hospedados
 O diretório virtual **ServiceModelSamples** é usado para compilar e executar todos os exemplos que usam um serviço hospedado pelo IIS. Esse é o único diretório virtual que é necessário para executar os exemplos. A criação de um exemplo substituirá qualquer serviço implantado anteriormente neste diretório virtual; somente o exemplo criado mais recentemente será implantado e estará disponível neste diretório virtual.
 
 > [!NOTE]
-> Você deve executar todos os comandos em uma conta de administrador local. Se você estiver usando o Windows 7, o [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)]ou o Windows Server 2008 R2, também deverá executar o prompt de comando com privilégios elevados. Para fazer isso, clique com o botão direito do mouse no ícone do prompt de comando e clique em **Executar como administrador**. Todos os comandos neste tópico devem ser executados em um prompt de comando que tenha as configurações de caminho apropriadas.  A maneira mais fácil de garantir isso é usando o prompt de comando do Visual Studio. Para abrir este prompt, clique em **Iniciar**, **Selecione todos os programas**, role para baixo até o **Visual Studio 2010**, selecione **Ferramentas do Visual Studio**, clique com o botão direito do mouse em prompt de **comando do Visual Studio (2010)** e clique em **Executar como administrador**. Se você tiver uma das edições do Visual Studio Express instaladas, esse prompt de comando não estará disponível e você terá que adicionar "C:\Windows\Microsoft.Net\Framework\v4.0" ao caminho do sistema.
+> Você deve executar todos os comandos em uma conta de administrador local. Se você estiver usando o Windows 7, o Windows Vista ou o Windows Server 2008 R2, também deverá executar o prompt de comando com privilégios elevados. Para fazer isso, clique com o botão direito do mouse no ícone do prompt de comando e clique em **Executar como administrador**. Todos os comandos neste tópico devem ser executados em um prompt de comando que tenha as configurações de caminho apropriadas.  A maneira mais fácil de garantir isso é usando o prompt de comando do Visual Studio. Para abrir este prompt, clique em **Iniciar**, **Selecione todos os programas**, role para baixo até o **Visual Studio 2010**, selecione **Ferramentas do Visual Studio**, clique com o botão direito do mouse em prompt de **comando do Visual Studio (2010)** e clique em **Executar como administrador**. Se você tiver uma das edições do Visual Studio Express instaladas, esse prompt de comando não estará disponível e você terá que adicionar "C:\Windows\Microsoft.Net\Framework\v4.0" ao caminho do sistema.
 
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>Procedimento de configuração única para exemplos do WCF
 

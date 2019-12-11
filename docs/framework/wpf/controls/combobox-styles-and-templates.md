@@ -9,12 +9,12 @@ helpviewer_keywords:
 - templates [WPF], ComboBox
 - parts [WPF], ComboBox
 ms.assetid: b0662fa1-16d7-4320-b26b-c1804e565a44
-ms.openlocfilehash: 92671001733f525188ba3c7bcf3ed3c55615e301
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 887698bdaebf7bc5ddac8997167589d9fbd3dd4d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283783"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960369"
 ---
 # <a name="combobox-styles-and-templates"></a>Estilos e modelos ComboBox
 Este tópico descreve os estilos e modelos para o controle de <xref:System.Windows.Controls.ComboBox>. Você pode modificar o <xref:System.Windows.Controls.ControlTemplate> padrão para dar ao controle uma aparência exclusiva. Para obter mais informações, consulte [criar um modelo para um controle](../../../desktop-wpf/themes/how-to-create-apply-template.md).  
@@ -22,7 +22,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 ## <a name="combobox-parts"></a>Partes de ComboBox  
  A tabela a seguir lista as partes nomeadas para o controle de <xref:System.Windows.Controls.ComboBox>.  
   
-|Parte|Tipo|Descrição|  
+|Parte|{1&gt;Tipo&lt;1}|Descrição|  
 |-|-|-|  
 |PART_EditableTextBox|<xref:System.Windows.Controls.TextBox>|Contém o texto da <xref:System.Windows.Controls.ComboBox>.|  
 |PART_Popup|<xref:System.Windows.Controls.Primitives.Popup>|A lista suspensa que contém os itens na caixa de combinação.|  
@@ -35,7 +35,7 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
-|Desabilitado|CommonStates|O controle está desabilitado.|  
+|Disabled|CommonStates|O controle está desabilitado.|  
 |MouseOver|CommonStates|O ponteiro do mouse está sobre o controle de <xref:System.Windows.Controls.ComboBox>.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  
@@ -55,8 +55,8 @@ Este tópico descreve os estilos e modelos para o controle de <xref:System.Windo
 |Nome do VisualState|Nome do VisualStateGroup|Descrição|  
 |-|-|-|  
 |Normal|CommonStates|O estado padrão.|  
-|Desabilitado|CommonStates|O controle está desabilitado.|  
-|MouseOver|CommonStates|O ponteiro do mouse está sobre o controle de <xref:System.Windows.Controls.ComboBox>.|  
+|Disabled|CommonStates|O controle está desabilitado.|  
+|MouseOver|CommonStates|O ponteiro do mouse está sobre o controle de <xref:System.Windows.Controls.ComboBoxItem>.|  
 |Focalizado|FocusStates|O controle tem foco.|  
 |Sem foco|FocusStates|O controle não tem foco.|  
 |Selecionado|SelectionStates|O item está selecionado atualmente.|  

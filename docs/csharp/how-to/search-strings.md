@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 4a1eb818dfd8fb48b003ca184dd533f73d342662
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973102"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959696"
 ---
 # <a name="how-to-search-strings"></a>Como Pesquisar cadeias de caracteres
 
@@ -43,7 +43,7 @@ O exemplo de código a seguir procura a palavra "the" ou "their" em uma oração
 
 O padrão de pesquisa descreve o texto pelo qual procurar. A tabela a seguir descreve cada elemento desse padrão de pesquisa. (A tabela abaixo usa a `\` única, que deve ser escapada como `\\` em uma cadeia de caracteres C#).
 
-| padrão  | Significado     |
+| {1&gt;padrão&lt;1}  | Significado     |
 | -------- |-------------|
 | the      | corresponder ao texto "the" |
 | (eir)?   | corresponder a 0 ou 1 ocorrência de "eir" |
@@ -52,13 +52,13 @@ O padrão de pesquisa descreve o texto pelo qual procurar. A tabela a seguir des
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> Os métodos `string` são geralmente melhores opções quando você está procurando por uma cadeia de caracteres exata. Expressões regulares são melhores quando você está procurando por algum padrão em uma cadeia de caracteres de origem.
+> Os métodos `string` são geralmente melhores opções quando você está procurando por uma cadeia de caracteres exata. As expressões regulares são melhores quando você está procurando por algum padrão em uma cadeia de caracteres de origem.
 
 ## <a name="does-a-string-follow-a-pattern"></a>Uma cadeia de caracteres segue um padrão?
 
 O código a seguir usa expressões regulares para validar o formato de cada cadeia de caracteres em uma matriz. A validação requer que cada cadeia de caracteres tenha a forma de um número de telefone no qual os três grupos de dígitos são separados por traços, os dois primeiros grupos contêm três dígitos e o terceiro grupo contém quatro dígitos. O padrão de pesquisa usa a expressão regular `^\\d{3}-\\d{3}-\\d{4}$`. Para obter mais informações, consulte [Linguagem de expressões regulares – referência rápida](../../standard/base-types/regular-expression-language-quick-reference.md).
 
-| padrão  | Significado                             |
+| {1&gt;padrão&lt;1}  | Significado                             |
 | -------- |-------------------------------------|
 | ^        | corresponde ao início da cadeia de caracteres |
 | \d{3}    | corresponde a exatamente 3 caracteres de dígitos  |

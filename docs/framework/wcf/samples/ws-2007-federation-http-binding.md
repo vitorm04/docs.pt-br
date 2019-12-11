@@ -2,12 +2,12 @@
 title: Associação HTTP de federação do WS 2007
 ms.date: 03/30/2017
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-ms.openlocfilehash: 2f924bdcbf9082d9d43e02d82c9d00c32ebcaacf
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 74f21494c08f33a61eb1e1b0a102638cff59a970
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714980"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960198"
 ---
 # <a name="ws-2007-federation-http-binding"></a>Associação HTTP de federação do WS 2007
 
@@ -119,7 +119,7 @@ O arquivo *Setup. bat* incluído com este exemplo permite que você configure o 
 
 1. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](building-the-samples.md).
 
-2. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md). Se você estiver usando [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)], deverá executar *Service. exe*, *Client. exe*e *SecurityTokenService. exe* com privilégios elevados (clique com o botão direito do mouse nos arquivos e clique em **Executar como administrador**).
+2. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](running-the-samples.md). Se você estiver usando o Windows Vista, deverá executar *Service. exe*, *Client. exe*e *SecurityTokenService. exe* com privilégios elevados (clique com o botão direito do mouse nos arquivos e clique em **Executar como administrador**).
 
 > [!IMPORTANT]
 > Os exemplos podem mais ser instalados no seu computador. Verificar o seguinte diretório (padrão) antes de continuar:

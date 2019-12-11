@@ -2,24 +2,24 @@
 title: Autenticação no SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 09f7825fd6b4f852b24142ea297c078bd8a1e221
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 0fb92f9e854e2a7a800335390d0195243a749b33
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040265"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959977"
 ---
 # <a name="authentication-in-sql-server"></a>Autenticação no SQL Server
-O SQL Server dá suporte a dois modos de autenticação, modo de autenticação do Windows e modo misto.  
+O SQL Server dá suporte a dois modos de autenticação, autenticação do Windows e modo misto.  
   
-- A autenticação do Windows é o padrão e, muitas vezes, é conhecida como segurança integrada porque esse modelo de segurança SQL Server é totalmente integrado ao Windows. As contas de usuário e grupos específicas do Windows são confiáveis para fazer logon no SQL Server. Os usuários do Windows que tiverem sido autenticados não precisam apresentar credenciais adicionais.  
+- A autenticação do Windows é o padrão, e é geralmente conhecida como segurança integrada porque esse modelo de segurança do SQL Server está integrado com o Windows. As contas de usuário e grupos específicas do Windows são confiáveis para fazer logon no SQL Server. Os usuários do Windows que tiverem sido autenticados não precisam apresentar credenciais adicionais.  
   
-- O modo misto dá suporte à autenticação pelo Windows e por SQL Server. Os pares de nome de usuário e senha são mantidos no SQL Server.  
+- O modo misto oferece suporte à autenticação pelo Windows e pelo SQL Server. Os pares de nome de usuário e senha são mantidos dentro do SQL Server.  
   
 > [!IMPORTANT]
 > Recomendamos usar a autenticação do Windows sempre que for possível. A autenticação do Windows usa uma série de mensagens criptografadas para autenticar usuários no SQL Server. Quando são usados SQL Server logons, SQL Server nomes de logon e senhas criptografadas são transmitidos pela rede, o que os torna menos seguros.  
   
- Com a autenticação do Windows, os usuários já estão conectados no Windows e não precisam fazer logon separadamente para SQL Server. O `SqlConnection.ConnectionString` a seguir especifica a autenticação do Windows sem exigir que os usuários forneçam um nome de usuário ou senha.  
+ Com a autenticação do Windows, os usuários já estão conectados no Windows e não precisam fazer logon separadamente no SQL Server. O `SqlConnection.ConnectionString` a seguir especifica a autenticação do Windows sem exigir que os usuários informem um nome de usuário ou senha.  
   
 ```csharp  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;"
@@ -46,37 +46,37 @@ O SQL Server dá suporte a dois modos de autenticação, modo de autenticação 
 - Aplicativos de Internet, como ASP.NET.  
   
 > [!NOTE]
-> A especificação da autenticação do Windows não desabilita os logons do SQL Server. Use a instrução ALTER LOGIN DISABLE Transact-SQL para desabilitar os logons de SQL Server altamente privilegiados.  
+> Especificar a autenticação do Windows não desabilita os logons do SQL Server. Use a instrução ALTER LOGIN DISABLE Transact-SQL para desabilitar os logons de SQL Server altamente privilegiados.  
   
 ## <a name="login-types"></a>Tipos de logon  
  O SQL Server dá suporte a três tipos de logons:  
   
-- Uma conta de usuário local do Windows ou uma conta de domínio confiável. SQL Server se baseia no Windows para autenticar as contas de usuário do Windows.  
+- Uma conta de usuário local do Windows ou uma conta de domínio confiável. O SQL Server depende do Windows para autenticar as contas de usuário do Windows.  
   
 - Grupo do Windows. Conceder acesso a um grupo do Windows concede acesso a todos os logons de usuário do Windows que são membros do grupo.  
   
-- SQL Server logon. SQL Server armazena o nome de usuário e um hash da senha no banco de dados mestre, usando métodos de autenticação interna para verificar as tentativas de logon.  
+- Logon do SQL Server. O SQL Server armazena o nome de usuário e um hash da senha no banco de dados mestre, usando métodos de autenticação interna para verificar tentativas de logon.  
   
 > [!NOTE]
-> SQL Server fornece logons criados a partir de certificados ou chaves assimétricas que são usadas somente para assinatura de código. Eles não podem ser usados para se conectar ao SQL Server.  
+> O SQL Server fornece os logons criados de certificados ou chaves assimétricas que são usados somente para assinatura de código. Eles não podem ser usados para a conexão com o SQL Server.  
   
 ## <a name="mixed-mode-authentication"></a>Autenticação de modo misto  
- Se você precisar usar a autenticação de modo misto, deverá criar SQL Server logons, que são armazenados em SQL Server. Em seguida, você precisa fornecer o nome de usuário e a senha do SQL Server em tempo de execução.  
+ Se você deve usar a autenticação de modo misto, deverá criar os logons do SQL Server, que são armazenados no SQL Server. Em seguida, você terá que fornecer o nome de usuário e a senha do SQL Server em tempo de execução.  
   
 > [!IMPORTANT]
-> O SQL Server é instalado com um logon do SQL Server chamado `sa` (uma abreviação de "administrador do sistema"). Atribua uma senha forte para o logon do `sa` e não use o logon do `sa` em seu aplicativo. O logon do `sa` mapeia para a função de servidor fixa `sysadmin`, que tem credenciais administrativas irrevogáveis no servidor inteiro. Não haverá limites para o dano potencial se um invasor obtiver acesso como administrador do sistema. Todos os membros do grupo de `BUILTIN\Administrators` do Windows (o grupo do administrador local) são membros da função `sysadmin` por padrão, mas podem ser removidos dessa função.  
+> O SQL Server é instalado com um logon do SQL Server chamado `sa` (uma abreviação de "administrador do sistema"). Atribua uma senha forte para o logon do `sa` e não use o logon do `sa` em seu aplicativo. O logon do `sa` mapeia para a função de servidor fixa `sysadmin`, que tem credenciais administrativas irrevogáveis no servidor inteiro. Não haverá limites para o dano potencial se um invasor obtiver acesso como administrador do sistema. Todos os membros do grupo `BUILTIN\Administrators` do Windows (grupo do administrador local) são membros da função `sysadmin` por padrão, mas podem ser removidos dessa função.  
   
- SQL Server fornece mecanismos de política de senha do Windows para SQL Server logons quando ele é executado no [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] ou em versões posteriores. As políticas de complexidade de senha foram criadas para intimidar ataques de força bruta aumentando o número de senhas possíveis. SQL Server pode aplicar a mesma complexidade e políticas de expiração usadas em [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] a senhas usadas dentro de SQL Server.  
+ SQL Server fornece mecanismos de política de senha do Windows para SQL Server logons. As políticas de complexidade de senha foram criadas para intimidar ataques de força bruta aumentando o número de senhas possíveis. SQL Server pode aplicar a mesma complexidade e políticas de expiração às senhas usadas no SQL Server.  
   
 > [!IMPORTANT]
 > Concatenar cadeias de conexão de entrada do usuário pode deixá-lo vulnerável a um ataque de injeção de cadeia de conexão. Use o <xref:System.Data.SqlClient.SqlConnectionStringBuilder> para criar cadeias de conexão válidas sintaticamente em tempo de execução. Para obter mais informações, confira [Construtores de cadeias de conexão](../connection-string-builders.md).  
   
-## <a name="external-resources"></a>Recursos externos  
+## <a name="external-resources"></a>Recursos Externos  
  Para obter mais informações, consulte os seguintes recursos.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
-|[Entidades](/sql/relational-databases/security/authentication-access/principals-database-engine)|Descreve os logons e outras entidades de segurança no SQL Server.|  
+|[Entidades](/sql/relational-databases/security/authentication-access/principals-database-engine)|Descreve logons e outras entidades de segurança no SQL Server.|  
   
 ## <a name="see-also"></a>Consulte também
 

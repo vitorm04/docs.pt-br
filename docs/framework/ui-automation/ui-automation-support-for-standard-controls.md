@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-ms.openlocfilehash: c59352f908c5f4a1fd2ca6dd631d26bb5d69f09a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 314526c1164f70e6b261df1a6f11ddce2b5fa240
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441215"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960070"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Suporte de automação de interface do usuário para Controles Padrão
 > [!NOTE]
@@ -26,7 +26,7 @@ ms.locfileid: "74441215"
 ## <a name="win32-controls"></a>Controles do Win32  
  A maioria dos controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] são expostos a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] por meio de provedores do lado do cliente em UIAutomationClientsideProviders. dll. Esse assembly é registrado automaticamente para uso com aplicativos cliente de automação da interface do usuário.  
   
- O suporte completo é fornecido somente para controles da versão 6 do ComCtrl32. dll (disponível com [!INCLUDE[TLA#tla_winxp](../../../includes/tlasharptla-winxp-md.md)] e posterior).  
+ O suporte completo é fornecido somente para controles da versão 6 do *ComCtrl32. dll*.  
   
  Há suporte para os controles a seguir.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "74441215"
 |Botão|CheckBox|  
 |ComboBoxEx32|ComboBox|  
 |ComboBox|ComboBox|  
-|Editar|Documento|  
-|Editar|Editar|  
+|Edit|Documento|  
+|Edit|Edit|  
 |SysLink|Hiperlink|  
 |Estático|Texto|  
-|Estático|Imagem|  
+|Estático|Image|  
 |SysIPAddress32|Personalizado|  
 |SysHeader32|Header/HeaderItem|  
 |SysListView32|DataGrid|  
@@ -63,7 +63,7 @@ ms.locfileid: "74441215"
 |msctls_trackbar32|Controle Deslizante|  
 |msctls_updown32|Controle giratório|  
 |msctls_statusbar32|StatusBar|  
-|SysTabControl32|Guia|  
+|SysTabControl32|Tabulação|  
 |SysTabControl32|TabItem|  
 |ToolbarWindow32|ToolBar|  
 |ToolbarWindow32|MenuItem|  
@@ -83,12 +83,12 @@ ms.locfileid: "74441215"
   
 |Nome da classe|Tipo de controle|  
 |----------------|------------------|  
-|SysAnimate32|Imagem|  
+|SysAnimate32|Image|  
 |SysPager|Controle giratório|  
 |SysDateTimePick32|Personalizado|  
 |SysMonthCal32|Calendário|  
-|MS_WINNOTE|dessa|  
-|VBBubble|dessa|  
+|MS_WINNOTE|Dica de Ferramenta|  
+|VBBubble|Dica de Ferramenta|  
 |ScrollBar (quando usado como um controle autônomo)|Controle Deslizante|  
 |Subgrade|Personalizado|  
   
@@ -98,7 +98,7 @@ ms.locfileid: "74441215"
   
  Normalmente, Windows Forms controles que são wrappers gerenciados para [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles comuns têm suporte do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Há suporte para os controles a seguir.  
   
-|Nome da Classe|  
+|Nome da classe|  
 |----------------|  
 |Botão|  
 |CheckBox|  
@@ -110,7 +110,7 @@ ms.locfileid: "74441215"
 |GroupBox|  
 |HscrollBar|  
 |ImageList|  
-|Rotular|  
+|Rótulo|  
 |ListBox|  
 |ListView|  
 |MainMenu/ContextMenu|  
@@ -134,7 +134,7 @@ ms.locfileid: "74441215"
 |TrackBar|  
 |TreeView|  
 |VscrollBar|  
-|Controlo|  
+|WebBrowser|  
   
  Os controles a seguir são expostos a [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] somente por meio de seu suporte para o Microsoft Acessibilidade Ativa. Algumas funcionalidades podem não estar disponíveis.  
   

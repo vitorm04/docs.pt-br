@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 5ead3d1ac37b3c7ee50f18a81530720205678de2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122001"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74960393"
 ---
 # <a name="managed-execution-process"></a>Processo de execução gerenciada
 <a name="introduction"></a> O processo de execução gerenciada inclui as seguintes etapas, que serão discutidas em detalhes mais adiante neste tópico:  
@@ -95,7 +95,7 @@ ms.locfileid: "73122001"
   
  Durante a execução, o código gerenciado recebe serviços como coleta de lixo, segurança, interoperabilidade com código não gerenciado, suporte à depuração entre linguagens e suporte avançado à implantação e ao controle de versão.  
   
- No Microsoft [!INCLUDE[winxp](../../includes/winxp-md.md)] e [!INCLUDE[windowsver](../../includes/windowsver-md.md)], o carregador do sistema operacional verifica módulos gerenciados examinando um bit no cabeçalho COFF. Se o bit estiver definido, o módulo será gerenciado. Se o carregador detecta módulos gerenciados, ele carrega mscoree.dll e `_CorValidateImage`, e `_CorImageUnloading` notifica o carregador quando as imagens do módulo gerenciado são carregadas e descarregadas. `_CorValidateImage` executa as seguintes ações:  
+ No Microsoft Windows Vista, o carregador do sistema operacional verifica módulos gerenciados examinando um pouco no cabeçalho COFF. Se o bit estiver definido, o módulo será gerenciado. Se o carregador detecta módulos gerenciados, ele carrega mscoree.dll e `_CorValidateImage`, e `_CorImageUnloading` notifica o carregador quando as imagens do módulo gerenciado são carregadas e descarregadas. `_CorValidateImage` executa as seguintes ações:  
   
 1. Garante que o código seja um código gerenciado válido.  
   
