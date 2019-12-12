@@ -21,7 +21,7 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
   
 - <xref:System.Activities.Statements.Transition>  
   
- Para criar um fluxo de trabalho do computador de estado, os estados são adicionados a uma atividade de <xref:System.Activities.Statements.StateMachine> , e as transições são controle usado o fluxo entre estados. A captura de tela a seguir, da etapa [introdução tutorial](getting-started-tutorial.md) [como criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md), mostra um fluxo de trabalho de máquina de estado com três Estados e três transições. **Inicializar destino** é o estado inicial e representa o primeiro estado no fluxo de trabalho. Isso é designado pela linha que a leva para o nó **inicial** . O estado final no fluxo de trabalho é chamado de **FinalState**e representa o ponto no qual o fluxo de trabalho é concluído.  
+ Para criar um fluxo de trabalho do computador de estado, os estados são adicionados a uma atividade de <xref:System.Activities.Statements.StateMachine> , e as transições são controle usado o fluxo entre estados. A captura de tela a seguir, da etapa [introdução Tutorial](getting-started-tutorial.md) [como: Criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md), mostra um fluxo de trabalho de máquina de estado com três Estados e três transições. **Inicializar destino** é o estado inicial e representa o primeiro estado no fluxo de trabalho. Isso é designado pela linha que a leva para o nó **inicial** . O estado final no fluxo de trabalho é chamado de **FinalState**e representa o ponto no qual o fluxo de trabalho é concluído.  
   
  ![Ilustração que mostra o fluxo de trabalho da máquina de estado concluído.](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
@@ -59,7 +59,7 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
 > [!NOTE]
 > Observe que se <xref:System.Activities.Statements.Transition.Condition%2A> de uma transição for avaliada como `False` (ou todas as condições de uma transição do gatilho compartilhada for avaliada como `False`), a transição não ocorrerá e todos os gatilhos para todas as transições de estado serão reprogramados.  
   
- Para obter mais informações sobre como criar fluxos de trabalho de máquina de estado, consulte [como criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md), [StateMachine designer de atividade](/visualstudio/workflow-designer/statemachine-activity-designer), designer de atividade de [estado](/visualstudio/workflow-designer/state-activity-designer), [Designer de atividade FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)e designer de atividade de [transição](/visualstudio/workflow-designer/transition-activity-designer).  
+ Para obter mais informações sobre como criar fluxos de trabalho de máquina de estado, consulte [como: Crie um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md), [StateMachine designer](/visualstudio/workflow-designer/statemachine-activity-designer)de atividade, designer de atividade de [estado](/visualstudio/workflow-designer/state-activity-designer), [Designer de atividade FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)e [Designer de atividade de transição](/visualstudio/workflow-designer/transition-activity-designer).  
   
 ## <a name="state-machine-terminology"></a>Terminologia do computador de estado  
  Esta seção define o vocabulário do computador de estado usado em todo este tópico.  
@@ -79,7 +79,7 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
  Transição compartilhada  
  Uma transição que compartilhar um estado de origem e o disparador com um ou mais faz a transição, mas tem uma condição e uma ação exclusivos.  
   
- Gatilho  
+ Disparador  
  Uma atividade disparando que faz com que uma transição ocorre.  
   
  Condição  
@@ -102,7 +102,7 @@ Um computador de estado é um paradigma conhecido para programas desenvolvimento
   
 ## <a name="see-also"></a>Consulte também
 
-- [Como criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md)
+- [Como: Criar um fluxo de trabalho de máquina de estado](how-to-create-a-state-machine-workflow.md)
 - [Designer de atividade StateMachine](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [Designer de atividade de estado](/visualstudio/workflow-designer/state-activity-designer)
 - [Designer de atividade FinalState](/visualstudio/workflow-designer/finalstate-activity-designer)
