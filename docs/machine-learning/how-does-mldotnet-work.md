@@ -32,7 +32,7 @@ Exemplos do tipo de previsões que você pode fazer com ML.NET:
 |Detecção de Anomalias|Detectar transações bancárias fraudulentas |
 |Recomendações|Sugerir produtos que compradores online talvez queiram comprar com base em suas compras anteriores|
 |Série temporal/dados sequenciais|Prever as vendas do clima/produto|
-|Classificação de imagem|Categorizar pathologies em imagens médicas|
+|Classificação de imagem|Categorizar patologias em imagens médicas|
 
 ## <a name="hello-mlnet-world"></a>Olá, Mundo do ML.NET
 

@@ -15,25 +15,25 @@ ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351325"
 ---
 # <a name="private-visual-basic"></a>Particular (Visual Basic)
-Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.  
+Especifica que um ou mais elementos de programação declarados são acessíveis somente de dentro de seu contexto de declaração, incluindo de dentro de qualquer tipo contido.  
   
 ## <a name="remarks"></a>Comentários  
- If a programming element represents proprietary functionality, or contains confidential data, you usually want to limit access to it as strictly as possible. You achieve the maximum limitation by allowing only the module, class, or structure that defines it to access it. To limit access to an element in this way, you can declare it with `Private`.  
+ Se um elemento de programação representar a funcionalidade proprietária ou contiver dados confidenciais, você geralmente desejará limitar o acesso a ele o mais estritamente possível. Você Obtém a limitação máxima permitindo apenas o módulo, a classe ou a estrutura que a define para acessá-lo. Para limitar o acesso a um elemento dessa forma, você pode declará-lo com `Private`.  
 
 > [!NOTE]
-> You can also use the [Private Protected](private-protected.md) access modifier, which makes a member accessible from within that class and from derived classes located in its containing assembly.
+> Você também pode usar o modificador de acesso [protegido privado](private-protected.md) , que torna um membro acessível de dentro dessa classe e de classes derivadas localizadas em seu assembly recipiente.
 
 ## <a name="rules"></a>Regras  
 
-- **Declaration Context.** You can use `Private` only at module level. This means the declaration context for a `Private` element must be a module, class, or structure, and cannot be a source file, namespace, interface, or procedure.  
+- **Contexto de declaração.** Você pode usar `Private` somente no nível do módulo. Isso significa que o contexto de declaração para um elemento de `Private` deve ser um módulo, uma classe ou uma estrutura e não pode ser um arquivo de origem, namespace, interface ou procedimento.  
   
 ## <a name="behavior"></a>Comportamento  
   
-- **Access Level.** All code within a declaration context can access its `Private` elements. This includes code within a contained type, such as a nested class or an assignment expression in an enumeration. No code outside of the declaration context can access its `Private` elements.  
+- **Nível de acesso.** Todo o código dentro de um contexto de declaração pode acessar seus elementos de `Private`. Isso inclui o código dentro de um tipo contido, como uma classe aninhada ou uma expressão de atribuição em uma enumeração. Nenhum código fora do contexto da declaração pode acessar seus elementos de `Private`.  
   
-- **Access Modifiers.** The keywords that specify access level are called *access modifiers*. For a comparison of the access modifiers, see [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+- **Modificadores de acesso.** As palavras-chave que especificam o nível de acesso são chamadas de *modificadores de acesso*. Para obter uma comparação dos modificadores de acesso, consulte [níveis de acesso em Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
- The `Private` modifier can be used in these contexts:  
+ O modificador de `Private` pode ser usado nesses contextos:  
   
  [Instrução Class](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -65,7 +65,7 @@ Specifies that one or more declared programming elements are accessible only fro
 - [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Particular Protegido](./private-protected.md)
-- [Protected Friend](./protected-friend.md)    [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Níveis de acesso [Friend protegidos](./protected-friend.md) no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

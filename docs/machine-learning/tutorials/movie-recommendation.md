@@ -12,7 +12,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/12/2019
 ms.locfileid: "73977376"
 ---
-# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Tutorial: criar um recomendador de filmes usando matriz factorizaton com ML.NET
+# <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Suggestion accepted
 
 Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. AS etapas usam C# e o Visual Studio 2019.
 
@@ -36,7 +36,7 @@ Você usará as seguintes etapas para realizar sua tarefa, bem como qualquer out
 3. [Avaliar o modelo](#evaluate-your-model)
 4. [Usar o modelo](#use-your-model)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Correction accepted
 
 * [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
 
