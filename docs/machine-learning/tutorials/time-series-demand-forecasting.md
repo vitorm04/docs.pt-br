@@ -27,13 +27,13 @@ Neste tutorial, você aprenderá como:
 > * Salvar um modelo de previsão
 > * Usar um modelo de previsão
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Pré-requisitos
 
 - [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.
 
 ## <a name="time-series-forecasting-sample-overview"></a>Visão geral de exemplo de previsão de série temporal
 
-Este exemplo é um  **C# aplicativo de console .NET Core** que prevê a demanda por locações de bicicletas usando um algoritmo de análise de série temporal monovariável conhecido como análise de espectro único. O código para este exemplo pode ser encontrado no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) no github.
+Este exemplo é um  **Aplicativo de console .NET Core em C#** que prevê a demanda por locações de bicicletas usando um algoritmo de análise de série temporal monovariável conhecido como análise de espectro único. O código para este exemplo pode ser encontrado no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) no github.
 
 ## <a name="understand-the-problem"></a>Compreender o problema
 
@@ -45,14 +45,14 @@ O algoritmo usado neste tutorial é [uma análise de espectro único (SSA)](http
 
 ## <a name="create-console-application"></a>Criar aplicativo de console
 
-1. Crie um novo  **C# aplicativo de console .NET Core** chamado "BikeDemandForecasting".
-1. Instalar o pacote NuGet do **Microsoft.ml** Version **1.4.0**
+1. Crie um novo  **Aplicativo de console .NET Core em C#** chamado "BikeDemandForecasting".
+1. Instalar o pacote NuGet do **ML.Net** Version **1.4.0**
     1. No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.
-    1. Escolha "nuget.org" como a origem do pacote, selecione a guia **procurar** , procure **Microsoft.ml**.
-    1. Marque a caixa de seleção **incluir pré-lançamento** .
+    1. Escolha "nuget.org" como a origem do pacote, selecione a guia **procurar** , procure **Microsoft.ML**.
+    1. Marque a caixa de seleção **incluir pré-lançamento**.
     1. Selecione o botão **Instalar**.
     1. Selecione o botão **OK** na caixa de diálogo **Visualizar alterações** e, depois, o botão **Aceito** na caixa de diálogo Aceitação da Licença, se concordar com o termos de licença para os pacotes listados.
-    1. Repita essas etapas para **System. Data. SqlClient** versão **4.7.0** e **Microsoft. ml. timeseries** versão **1.4.0**.
+    1. Repita essas etapas para **System. Data. SqlClient** versão **4.7.0** e **Microsoft.ML.TimeSeries** versão **1.4.0**.
 
 ### <a name="prepare-and-understand-the-data"></a>Preparar e compreender os dados
 
@@ -88,7 +88,7 @@ Veja a seguir um exemplo dos dados:
 
 ### <a name="create-input-and-output-classes"></a>Criar classes de entrada e saída
 
-1. Abra o arquivo *Program.cs* e substitua as instruções de `using` existentes pelo seguinte:
+1. Abra o arquivo *Program.cs* e substitua as diretivas de `using` existentes pelo seguinte:
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L1-L8)]
 
@@ -199,8 +199,8 @@ Avalie como o modelo é executado prevendo os dados do próximo ano e comparando
 
     Para avaliar o desempenho, as seguintes métricas são usadas:
 
-    - **Erro de média absoluta**: mede como as previsões fechadas são para o valor real. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
-    - **Erro de raiz quadrada média**: resume o erro no modelo. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
+    - **Erro de Média Absoluta(Mean Absolute Error)**: mede como as previsões fechadas são para o valor real. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
+    - **Erro de Raiz do Valor Quadrático Médio (Root Mean Squared Error)**: resume o erro no modelo. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
 
 1. Gere as métricas para o console.
 
