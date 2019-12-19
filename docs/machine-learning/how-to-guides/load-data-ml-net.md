@@ -60,7 +60,7 @@ Carregar colunas como:
 - Colunas individuais como `Size` e `CurrentPrices` na classe `HousingData`.
 - Como várias colunas por vez na forma de um vetor `HistoricalPrices` na classe `HousingData`.
 
-Se você tiver uma propriedade de vetor, aplique o atributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) à propriedade em seu modelo de dados. É importante observar que todos os elementos no vetor precisam ser do mesmo tipo. Manter as colunas separadas permite a facilidade e a flexibilidade da engenharia de recursos, mas, para um número muito grande de colunas, a operação nas colunas individuais causa um impacto na velocidade de treinamento.
+Se você tiver uma propriedade do tipo vetor, decore-a com o atributo [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) à propriedade em seu modelo de dados. É importante observar que todos os elementos no vetor precisam ser do mesmo tipo. Manter as colunas separadas permite a facilidade e a flexibilidade da engenharia de recursos, mas, para um número muito grande de colunas, a operação nas colunas individuais causa um impacto na velocidade de treinamento.
 
 O ML.NET opera por meio de nomes de coluna. Se você quiser alterar o nome de uma coluna para algo diferente do nome de propriedade, use o atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute). Ao criar objetos na memória, você ainda cria objetos usando o nome da propriedade. No entanto, para processar e criar modelos de machine learning, o ML.NET substitui e faz referência à propriedade com o valor fornecido no atributo [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute).
 
@@ -147,7 +147,7 @@ MLContext mlContext = new MLContext();
 DatabaseLoader loader = mlContext.Data.CreateDatabaseLoader<HouseData>();
 ```
 
-Defina a cadeia de conexão, bem como o comando SQL a ser executado no banco de dados e crie uma instância de `DatabaseSource`. Este exemplo usa um banco de dados SQL Server LocalDB com um caminho de arquivo. No entanto, o DatabaseLoader dá suporte a qualquer outra cadeia de conexão válida para bancos de dados locais e na nuvem.
+Defina a string de conexão, bem como o comando SQL a ser executado no banco de dados e crie uma instância de `DatabaseSource`. Este exemplo usa um banco de dados SQL Server LocalDB com um caminho de arquivo. No entanto, o DatabaseLoader dá suporte a qualquer outra cadeia de conexão válida para bancos de dados locais e na nuvem.
 
 ```csharp
 string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=<YOUR-DB-FILEPATH>;Database=<YOUR-DB-NAME>;Integrated Security=True;Connect Timeout=30";
