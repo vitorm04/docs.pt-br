@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial: criar um recomendador de filmes-fatoração de matriz'
-description: Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. AS etapas usam C# e o Visual Studio 2019.
+description: Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. As etapas usam C# e o Visual Studio 2019.
 author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
@@ -14,7 +14,7 @@ ms.locfileid: "73977376"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Suggestion accepted
 
-Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. AS etapas usam C# e o Visual Studio 2019.
+Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. As etapas usam C# e o Visual Studio 2019.
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
@@ -92,21 +92,21 @@ Nos arquivos \*.csv, há quatro colunas:
 * `rating`
 * `timestamp`
 
-No aprendizado de máquina, as colunas que são usadas para fazer uma previsão são chamadas [Recursos](../resources/glossary.md#feature) e a coluna com a previsão retornada é chamada o [Rótulo](../resources/glossary.md#label).
+No aprendizado de máquina, as colunas que são usadas para fazer uma previsão se chamam [Recursos (Features)](../resources/glossary.md#feature), e a coluna com a previsão retornada se chama [Rótulo (Label)](../resources/glossary.md#label).
 
 Você deseja prever as classificações de filmes, portanto, a coluna de classificação é o `Label`. As outras três colunas, `userId`, `movieId` e `timestamp`, são todos `Features` usados para prever o `Label`.
 
-| Recursos      | Rotular         |
+| Recursos (Features)      | Rótulo (Label)         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
 | `timestamp`     |               |
 
-Cabe a você decidir quais `Features` são usados para prever o `Label`. Você também pode usar métodos como a [importância do recurso de permutação](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) para ajudar a selecionar a melhor `Features`.
+Cabe a você decidir quais `Features` são usados para prever o `Label`. Você também pode usar métodos como [PermutationFeatureImportance)](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md) para ajudar a selecionar os melhores `Features`.
 
 Nesse caso, você deve eliminar a coluna `timestamp` como um `Feature` porque o carimbo de data/hora não afeta como um usuário classifica determinado filme e, portanto, não contribui para uma previsão mais precisa:
 
-| Recursos      | Rotular         |
+| Recursos (Features)      | Rótulo (Label)         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
@@ -159,7 +159,7 @@ Inicialize as variáveis do caminho de dados, carregue os dados dos arquivos \*.
 
 Os dados do ML.NET são representados como uma [classe IDataView](xref:Microsoft.ML.IDataView). `IDataView` é uma maneira flexível e eficiente de descrever dados tabulares (numéricos e texto). Os dados podem ser carregados de um arquivo de texto ou em tempo real (por exemplo, banco de dados SQL ou arquivos de log) para um objeto `IDataView`.
 
-O [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) define o esquema de dados e lê o arquivo. Ele usa as variáveis de caminho de dados e retorna uma `IDataView`. Nesse caso, você fornece o caminho para os arquivos `Test` e `Train` e indica o cabeçalho do arquivo de texto (para que ele possa usar os nomes de coluna corretamente) e o separador de dados de caractere de vírgula (o separador padrão é uma guia).
+O [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) define o esquema de dados e lê o arquivo. Ele usa as variáveis de caminho de dados e retorna uma `IDataView`. Nesse caso, você fornece o caminho para os arquivos `Test` e `Train` e indica o cabeçalho do arquivo de texto (para que ele possa usar os nomes de coluna corretamente) e o separador de dados de caractere de vírgula (o separador padrão é um tab).
 
 Adicione o seguinte código ao método `Main()` para chamar o método `LoadData()` e retornar os dados `Train` e `Test`:
 
@@ -167,7 +167,7 @@ Adicione o seguinte código ao método `Main()` para chamar o método `LoadData(
 
 ## <a name="build-and-train-your-model"></a>Criar e treinar o modelo
 
-Há três conceitos principais em ML.NET: [Data](../resources/glossary.md#data), [transformadores](../resources/glossary.md#transformer)e [estimadores](../resources/glossary.md#estimator).
+Há três conceitos principais em ML.NET: [Data](../resources/glossary.md#data), [Transformers](../resources/glossary.md#transformer) e [Estimators](../resources/glossary.md#estimator).
 
 Os algoritmos de treinamento de aprendizado de máquina exigem que os dados estejam em determinado formato. `Transformers` são usados para transformar dados de tabela em um formato compatível.
 
@@ -199,7 +199,7 @@ Defina as transformações de dados adicionando o seguinte código a `BuildAndTr
 
 Como `userId` e `movieId` representam usuários e títulos de filmes, não valores reais, use o método [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) para transformar cada `userId` e cada `movieId` em uma coluna `Feature` de tipo de chave numérica (um formato aceito pelos algoritmos de recomendação) e adicioná-los como novas colunas de conjunto de dados:
 
-| userId | movieId | Rotular | userIdEncoded | movieIdEncoded |
+| userId | movieId | Rótulo (Label) | userIdEncoded | movieIdEncoded |
 | ------------- |:-------------:| -----:|-----:|-----:|
 | 1 | 1 | 4 | userKey1 | movieKey1 |
 | 1 | 3 | 4 | userKey1 | movieKey2 |
@@ -220,7 +220,7 @@ Por exemplo, se o Usuário 1 e o Usuário 2 classificam filmes de forma semelhan
 | Usuário 1 | Assistiu e gostou do filme | Assistiu e gostou do filme | Assistiu e gostou do filme |
 | Usuário 2 | Assistiu e gostou do filme | Assistiu e gostou do filme | Não assistiu – RECOMENDAR o filme |
 
-O treinador `Matrix Factorization` tem várias [Opções](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options), sobre as quais você pode ler mais na seção [Hiperparâmetros de algoritmo](#algorithm-hyperparameters) abaixo.
+O algorítimo de treino `Matrix Factorization` tem várias [Opções](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options), sobre as quais você pode ler mais na seção [Hiperparâmetros de algoritmo](#algorithm-hyperparameters) abaixo.
 
 Ajuste o modelo aos dados `Train` e retorne o modelo treinado adicionando o seguinte como a próxima linha de código no método `BuildAndTrainModel()`:
 
@@ -422,7 +422,7 @@ A adição de mais dados de treinamento que tenham amostras suficientes para cad
 
 A [validação cruzada](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md) é uma técnica para avaliação de modelos que divide dados aleatoriamente em subconjuntos (em vez de extrair os dados de teste do conjunto de dados como você fez neste tutorial) e usa alguns dos grupos como dados de treinamento e alguns dos grupos como dados de teste. Esse método tem um melhor desempenho do que a divisão treinamento/teste em termos de qualidade do modelo.
 
-### <a name="features"></a>Recursos
+### <a name="features"></a>Recursos (Features)
 
 Neste tutorial, você só usará os três `Features` (`user id`, `movie id` e `rating`) fornecidos pelo conjunto de dados.
 
@@ -462,7 +462,7 @@ O algoritmo de fatoração de matriz com a filtragem colaborativa é apenas uma 
 
 Um problema comum na filtragem colaborativa é o problema de inicialização a frio, que é quando você tem um novo usuário sem nenhum dado anterior do qual fazer inferências. Esse problema costuma ser resolvido com a solicitação da criação de um perfil aos novos usuários e, por exemplo, da classificação de filmes que assistiram no passado. Embora esse método seja um fardo para o usuário, ele fornece alguns dados iniciais para novos usuários sem nenhum histórico de classificação.
 
-## <a name="resources"></a>Recursos
+## <a name="resources"></a>Recursos (Features)
 
 Os dados usados neste tutorial foram obtidos do [Conjunto de dados MovieLens](http://files.grouplens.org/datasets/movielens/).
 
