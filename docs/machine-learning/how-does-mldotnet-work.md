@@ -34,9 +34,9 @@ Exemplos do tipo de previsões que você pode fazer com ML.NET:
 |Série temporal/dados sequenciais|Prever as vendas do clima/produto|
 |Classificação de imagem|Categorizar patologias em imagens médicas|
 
-## <a name="hello-mlnet-world"></a>Olá, Mundo do ML.NET
+## <a name="hello-mlnet-world"></a>Olá Mundo ML.NET
 
-O código no snippet a seguir demonstra o aplicativo do ML.NET mais simples. Este exemplo cria um modelo de regressão linear para prever os preços de residências usando dados de tamanho e preço de residências. 
+O código no snippet a seguir demonstra um aplicativo ML.NET simples. Este exemplo cria um modelo de regressão linear para prever os preços de residências usando dados de tamanho e preço de residências. 
 
  ```csharp
     using System;
@@ -92,7 +92,7 @@ O código no snippet a seguir demonstra o aplicativo do ML.NET mais simples. Est
 O diagrama a seguir representa a estrutura de código do aplicativo, bem como o processo iterativo de desenvolvimento do modelo:
 
 - Coletar e carregar dados de treinamento em um objeto **IDataView**
-- It makes sense to keep as infinitive in replace of the imperative.
+- Especificar um pipeline de operações para extrair recursos e aplicar um algoritmo de aprendizado de máquina
 - Treinar um modelo chamando **Fit()** no pipeline
 - Avaliar o modelo e iterar para melhorar
 - Salvar o modelo em um formato binário para uso em um aplicativo
@@ -103,17 +103,17 @@ O diagrama a seguir representa a estrutura de código do aplicativo, bem como o 
 
 Vamos nos aprofundar um pouco mais nesses conceitos.
 
-## <a name="machine-learning-model"></a>Suggestion Accepted
+## <a name="machine-learning-model"></a>Modelo de Aprendizado de Máquina
 
 Um modelo do ML.NET é um objeto que contém transformações para executar em seus dados de entrada para chegar na saída prevista.
 
-### <a name="basic"></a>Suggestion Accepted
+### <a name="basic"></a>Básico
 
 O modelo mais básico é regressão linear bidimensional, em que uma quantidade contínua é proporcional a outro, como no exemplo de preço de residência acima.
 
 ![Modelo de regressão linear com os parâmetros de peso e desvio](./media/linear-regression-model.svg)
 
-O modelo é simplesmente: $Price = b + Size * w$. Os parâmetros $b$ e $w$ são estimados ajustando uma linha em um conjunto de pares (tamanho, preço). Os dados usados para localizar os parâmetros do modelo são chamados **dados de treinamento**. As entradas de um modelo de machine learning são chamadas de **recursos**. Neste exemplo, $Size$ é o único recurso. Os valores de zero verdadeiro usados para treinar um modelo de machine learning são chamados de **rótulos**. Aqui, os valores de $Price$ no conjunto de dados de treinamento são os rótulos.
+O modelo é simplesmente: $Price = b + Size * w$. Os parâmetros $b$ e $w$ são estimados ajustando uma linha em um conjunto de pares (tamanho, preço). Os dados usados para localizar os parâmetros do modelo são chamados **dados de treinamento**. As entradas de um modelo de aprendizado de máquina são chamadas de **recursos (Features)**. Neste exemplo, $Size$ é o único recurso. Os valores de zero verdadeiro usados para treinar um modelo de aprendizado de máquina são chamados de **rótulos (Labels)**. Aqui, os valores de $Price$ no conjunto de dados de treinamento são os rótulos.
 
 ### <a name="more-complex"></a>Mais complexo
 
@@ -131,7 +131,7 @@ Na maioria dos casos, os dados que você tem disponíveis não são adequados pa
 
 Os [tutoriais do ML.NET](./tutorials/index.md) ensinam a você sobre os diferentes pipelines de processamento de dados para texto, imagem, dados numéricos e de série temporal usados para tarefas de aprendizado de máquina específicas.
 
-Accepted the correction
+[Como preparar seus dados](./how-to-guides/prepare-data-ml-net.md) mostra como aplicar a preparação de dados de maneira mais geral.
 
 Você pode encontrar um apêndice de todas as [transformações disponíveis](./resources/transforms.md) na seção de recursos.
 
@@ -252,7 +252,7 @@ Todos os algoritmos do ML.NET procuram por uma coluna de entrada que é um vetor
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-Todos os algoritmos também criam novas colunas depois que executaram uma previsão. Os nomes fixos dessas novas colunas dependem do tipo de algoritmo de aprendizado de máquina. Para a tarefa de regressão, uma das novas colunas é chamada **Pontuação**. É por isso que atribuímos nossos dados de preço com esse nome.
+Todos os algoritmos também criam novas colunas depois que executaram uma previsão. Os nomes fixos dessas novas colunas dependem do tipo de algoritmo de aprendizado de máquina. Para a tarefa de regressão, uma das novas colunas é chamada **Pontuação (Score)**. É por isso que atribuímos nossos dados de preço com esse nome.
 
 ```csharp
     public class Prediction
@@ -270,7 +270,7 @@ Uma propriedade importante de objetos DataView é que eles são avaliados **lent
     var debug = testPriceDataView.Preview();
 ```
 
-Você pode assistir à variável `debug` no depurador e examinar seu conteúdo. Não use o método Preview em código de produção, pois ele reduz significativamente o desempenho.
+Você pode verificar variável `debug` no depurador e examinar seu conteúdo. Não use o método Preview em código de produção, pois ele reduz significativamente o desempenho.
 
 ### <a name="model-deployment"></a>Implantação de Modelo
 
@@ -286,4 +286,4 @@ Em aplicativos da vida real, seu código de avaliação e modelo de treinamento 
 
 * Saiba mais sobre tópicos específicos em mais detalhes nos [guias de instruções](./how-to-guides/index.md).
 
-* Se você estiver superando, poderá se aprofundar diretamente na [documentação de referência da API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).
+* Se você estiver muito interessado, poderá se aprofundar diretamente na [documentação de referência da API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).
