@@ -92,7 +92,7 @@ O código no snippet a seguir demonstra o aplicativo do ML.NET mais simples. Est
 O diagrama a seguir representa a estrutura de código do aplicativo, bem como o processo iterativo de desenvolvimento do modelo:
 
 - Coletar e carregar dados de treinamento em um objeto **IDataView**
-- It makes sense to keep as infinitive in replace of the imperative.
+- Especificar um pipeline de operações para extrair recursos e aplicar um algoritmo de aprendizado de máquina
 - Treinar um modelo chamando **Fit()** no pipeline
 - Avaliar o modelo e iterar para melhorar
 - Salvar o modelo em um formato binário para uso em um aplicativo
@@ -103,11 +103,11 @@ O diagrama a seguir representa a estrutura de código do aplicativo, bem como o 
 
 Vamos nos aprofundar um pouco mais nesses conceitos.
 
-## <a name="machine-learning-model"></a>Suggestion Accepted
+## <a name="machine-learning-model"></a>Modelo de Aprendizado de Máquina
 
 Um modelo do ML.NET é um objeto que contém transformações para executar em seus dados de entrada para chegar na saída prevista.
 
-### <a name="basic"></a>Suggestion Accepted
+### <a name="basic"></a>Modelo de Aprendizado de Máquina
 
 O modelo mais básico é regressão linear bidimensional, em que uma quantidade contínua é proporcional a outro, como no exemplo de preço de residência acima.
 
@@ -131,7 +131,7 @@ Na maioria dos casos, os dados que você tem disponíveis não são adequados pa
 
 Os [tutoriais do ML.NET](./tutorials/index.md) ensinam a você sobre os diferentes pipelines de processamento de dados para texto, imagem, dados numéricos e de série temporal usados para tarefas de aprendizado de máquina específicas.
 
-Accepted the correction
+[Como preparar seus dados](./how-to-guides/prepare-data-ml-net.md) mostra como aplicar a preparação de dados de maneira mais geral.
 
 Você pode encontrar um apêndice de todas as [transformações disponíveis](./resources/transforms.md) na seção de recursos.
 
