@@ -286,4 +286,4 @@ Em aplicativos da vida real, seu código de avaliação e modelo de treinamento 
 
 * Saiba mais sobre tópicos específicos em mais detalhes nos [guias de instruções](./how-to-guides/index.md).
 
-* Se você estiver superando, poderá se aprofundar diretamente na [documentação de referência da API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).
+* Se você estiver muito interessado, poderá se aprofundar diretamente na [documentação de referência da API](https://docs.microsoft.com/dotnet/api/?view=ml-dotnet).
