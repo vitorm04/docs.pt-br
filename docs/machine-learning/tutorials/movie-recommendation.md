@@ -1,6 +1,6 @@
 ---
-title: 'Tutorial: criar um recomendador de filmes-fatoração de matriz'
-description: Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. As etapas usam C# e o Visual Studio 2019.
+title: 'Tutorial: criar um recomendador de filmes usando Fatoração de Matriz com ML.NET'
+description: Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. As etapas usam C# e o Visual Studio 2019. As etapas usam C# e o Visual Studio 2019.
 author: briacht
 ms.date: 09/30/2019
 ms.custom: mvc, title-hack-0516
@@ -14,7 +14,7 @@ ms.locfileid: "73977376"
 ---
 # <a name="tutorial-build-a-movie-recommender-using-matrix-factorizaton-with-mlnet"></a>Suggestion accepted
 
-Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. As etapas usam C# e o Visual Studio 2019.
+Este tutorial mostra como criar uma recomendação de filme do ML.NET em um aplicativo de console do .NET Core. As etapas usam C# e o Visual Studio 2019. As etapas usam C# e o Visual Studio 2019.
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
@@ -38,7 +38,7 @@ Você usará as seguintes etapas para realizar sua tarefa, bem como qualquer out
 
 ## <a name="prerequisites"></a>Correction accepted
 
-* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
+* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento multi-plataforma do .NET Core" instalada.
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>Selecionar a tarefa de aprendizado de máquina apropriada
 
@@ -92,11 +92,11 @@ Nos arquivos \*.csv, há quatro colunas:
 * `rating`
 * `timestamp`
 
-No aprendizado de máquina, as colunas que são usadas para fazer uma previsão se chamam [Recursos (Features)](../resources/glossary.md#feature), e a coluna com a previsão retornada se chama [Rótulo (Label)](../resources/glossary.md#label).
+No aprendizado de máquina, as colunas que são usadas para fazer uma previsão se chamam [Features](../resources/glossary.md#feature), e a coluna com a previsão retornada se chama [Label](../resources/glossary.md#label).
 
 Você deseja prever as classificações de filmes, portanto, a coluna de classificação é o `Label`. As outras três colunas, `userId`, `movieId` e `timestamp`, são todos `Features` usados para prever o `Label`.
 
-| Recursos (Features)      | Rótulo (Label)         |
+| Features      | Label         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
@@ -106,7 +106,7 @@ Cabe a você decidir quais `Features` são usados para prever o `Label`. Você t
 
 Nesse caso, você deve eliminar a coluna `timestamp` como um `Feature` porque o carimbo de data/hora não afeta como um usuário classifica determinado filme e, portanto, não contribui para uma previsão mais precisa:
 
-| Recursos (Features)      | Rótulo (Label)         |
+| Features      | Label         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
 | `movieId`      |               |
@@ -199,7 +199,7 @@ Defina as transformações de dados adicionando o seguinte código a `BuildAndTr
 
 Como `userId` e `movieId` representam usuários e títulos de filmes, não valores reais, use o método [MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) para transformar cada `userId` e cada `movieId` em uma coluna `Feature` de tipo de chave numérica (um formato aceito pelos algoritmos de recomendação) e adicioná-los como novas colunas de conjunto de dados:
 
-| userId | movieId | Rótulo (Label) | userIdEncoded | movieIdEncoded |
+| userId | movieId | Label | userIdEncoded | movieIdEncoded |
 | ------------- |:-------------:| -----:|-----:|-----:|
 | 1 | 1 | 4 | userKey1 | movieKey1 |
 | 1 | 3 | 4 | userKey1 | movieKey2 |
@@ -422,7 +422,7 @@ A adição de mais dados de treinamento que tenham amostras suficientes para cad
 
 A [validação cruzada](../how-to-guides/train-machine-learning-model-cross-validation-ml-net.md) é uma técnica para avaliação de modelos que divide dados aleatoriamente em subconjuntos (em vez de extrair os dados de teste do conjunto de dados como você fez neste tutorial) e usa alguns dos grupos como dados de treinamento e alguns dos grupos como dados de teste. Esse método tem um melhor desempenho do que a divisão treinamento/teste em termos de qualidade do modelo.
 
-### <a name="features"></a>Recursos (Features)
+### <a name="features"></a>Features
 
 Neste tutorial, você só usará os três `Features` (`user id`, `movie id` e `rating`) fornecidos pelo conjunto de dados.
 
@@ -462,7 +462,7 @@ O algoritmo de fatoração de matriz com a filtragem colaborativa é apenas uma 
 
 Um problema comum na filtragem colaborativa é o problema de inicialização a frio, que é quando você tem um novo usuário sem nenhum dado anterior do qual fazer inferências. Esse problema costuma ser resolvido com a solicitação da criação de um perfil aos novos usuários e, por exemplo, da classificação de filmes que assistiram no passado. Embora esse método seja um fardo para o usuário, ele fornece alguns dados iniciais para novos usuários sem nenhum histórico de classificação.
 
-## <a name="resources"></a>Recursos (Features)
+## <a name="resources"></a>Features
 
 Os dados usados neste tutorial foram obtidos do [Conjunto de dados MovieLens](http://files.grouplens.org/datasets/movielens/).
 

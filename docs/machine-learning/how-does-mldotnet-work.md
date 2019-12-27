@@ -8,7 +8,7 @@ ms.author: nakersha
 author: natke
 ms.openlocfilehash: 5d8093c77799a55f4bc13e82c06c856dbb8d85cd
 ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 11/12/2019
 ms.locfileid: "73976732"
@@ -123,7 +123,7 @@ Cada descrição de transação é dividida em um conjunto de recursos removendo
 
 ![Modelo de Classificação de Texto](./media/text-classification-model.svg)
 
-Os modelos de preço de residência e o modelo de classificação de texto são modelos **lineares**. Dependendo da natureza de seus dados e do problema que você está resolvendo, você também pode usar modelos de **árvore de decisão**, modelos **aditivos generalizados** e outros. Você pode encontrar mais informações sobre os modelos em [Tarefas](./resources/tasks.md).
+Os modelos de preço de residência e o modelo de classificação de texto são modelos **lineares**. Dependendo da natureza de seus dados e do problema que você está resolvendo, você também pode usar modelos de **árvore de decisão**, modelos **aditivos generalizados** dentre outros. Você pode encontrar mais informações sobre os modelos em [Tarefas](./resources/tasks.md).
 
 ## <a name="data-preparation"></a>Preparação de dados
 
@@ -141,7 +141,7 @@ Depois de treinar seu modelo, como você sabe o quão bem ele fará previsões f
 
 Cada tipo de tarefa de aprendizado de máquina tem métricas usadas para avaliar a precisão e a exatidão do modelo em relação ao conjunto de dados de teste.
 
-Para nosso exemplo de preço de residência, usamos a tarefa **Regressão**. Para avaliar o modelo, adicione o seguinte código à amostra original.
+Para nosso exemplo de preço de residência, usamos a tarefa **Regressão**. Para avaliar o modelo, adicione o seguinte código ao exemplo original.
 
 ```csharp
         HouseData[] testHouseData =
@@ -264,7 +264,7 @@ Todos os algoritmos também criam novas colunas depois que executaram uma previs
 
 Você pode encontrar mais informações sobre colunas de saída das diferentes tarefas de aprendizado de máquina na guia [Tarefas de Aprendizado de Máquina](resources/tasks.md).
 
-Uma propriedade importante de objetos DataView é que eles são avaliados **lentamente**. Exibições de dados só são carregadas e operadas durante o treinamento e a avaliação do modelo e a previsão de dados. Enquanto você está escrevendo e testando seu aplicativo do ML.NET, pode usar o depurador do Visual Studio para dar uma espiada em qualquer objeto de exibição de dados chamando o método [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*).
+Uma propriedade importante de objetos DataView é que eles são carregados **lentamente**. Exibições de dados só são carregadas e operadas durante o treinamento e a avaliação do modelo e a previsão de dados. Enquanto você está escrevendo e testando seu aplicativo do ML.NET, pode usar o depurador do Visual Studio para dar uma espiada em qualquer objeto de exibição de dados chamando o método [Preview](xref:Microsoft.ML.DebuggerExtensions.Preview*).
 
 ```csharp
     var debug = testPriceDataView.Preview();

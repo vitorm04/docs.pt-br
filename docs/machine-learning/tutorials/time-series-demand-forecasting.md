@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Previsão de pressão de bicicletas – série temporal'
+title: 'Tutorial: Previsão de aluguel de bicicletas de solicitação-série temporal'
 description: Este tutorial mostra como prever a demanda por um serviço de aluguel de bicicletas usando análise de série temporal monovariável e ML.NET.
 ms.date: 11/07/2019
 ms.topic: tutorial
@@ -13,7 +13,7 @@ ms.contentlocale: pt-BR
 ms.lasthandoff: 11/12/2019
 ms.locfileid: "73978194"
 ---
-# <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: prever a demanda de serviço de aluguel de bicicletas com análise de série temporal e ML.NET
+# <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>Tutorial: Prever a demanda de serviço de aluguel de bicicletas com análise de série temporal e ML.NET
 
 Saiba como prever a demanda por um serviço de aluguel de bicicletas usando a análise de série temporal monovariável nos dados armazenados em um banco de dados SQL Server com ML.NET.
 
@@ -33,7 +33,7 @@ Neste tutorial, você aprenderá como:
 
 ## <a name="time-series-forecasting-sample-overview"></a>Visão geral de exemplo de previsão de série temporal
 
-Este exemplo é um  **Aplicativo de console .NET Core em C#** que prevê a demanda por locações de bicicletas usando um algoritmo de análise de série temporal monovariável conhecido como análise de espectro único. O código para este exemplo pode ser encontrado no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) no github.
+Este exemplo é um **Aplicativo de console .NET Core em C#** que prevê a demanda por locações de bicicletas usando um algoritmo de análise de série temporal monovariável conhecido como análise de espectro único. O código para este exemplo pode ser encontrado no repositório [dotnet/MachineLearning-Samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) no github.
 
 ## <a name="understand-the-problem"></a>Compreender o problema
 
@@ -45,11 +45,11 @@ O algoritmo usado neste tutorial é [uma análise de espectro único (SSA)](http
 
 ## <a name="create-console-application"></a>Criar aplicativo de console
 
-1. Crie um novo  **Aplicativo de console .NET Core em C#** chamado "BikeDemandForecasting".
+1. Crie um novo **Aplicativo de console .NET Core em C#** chamado "BikeDemandForecasting".
 1. Instalar o pacote NuGet do **ML.Net** Version **1.4.0**
     1. No Gerenciador de Soluções, clique com o botão direito do mouse no seu projeto e selecione **Gerenciar Pacotes NuGet**.
     1. Escolha "nuget.org" como a origem do pacote, selecione a guia **procurar** , procure **Microsoft.ML**.
-    1. Marque a caixa de seleção **incluir pré-lançamento**.
+    1. Marque a caixa de seleção **incluir pré-lançamento** .
     1. Selecione o botão **Instalar**.
     1. Selecione o botão **OK** na caixa de diálogo **Visualizar alterações** e, depois, o botão **Aceito** na caixa de diálogo Aceitação da Licença, se concordar com o termos de licença para os pacotes listados.
     1. Repita essas etapas para **System. Data. SqlClient** versão **4.7.0** e **Microsoft.ML.TimeSeries** versão **1.4.0**.
@@ -64,9 +64,9 @@ O algoritmo usado neste tutorial é [uma análise de espectro único (SSA)](http
 
 O conjunto de conteúdo original contém várias colunas correspondentes ao sazonalidade e ao clima. Para resumir e como o algoritmo usado neste tutorial requer apenas os valores de uma única coluna numérica, o conjunto de um original foi condensado para incluir apenas as seguintes colunas:
 
-- **dteday**: a data da observação.
-- **year**: o ano codificado da observação (0 = 2011, 1 = 2012).
-- **CNT**: o número total de locações de bicicletas para esse dia.
+- **dteday**: A data da observação.
+- **ano**: O ano codificado da observação (0 = 2011, 1 = 2012).
+- **CNT**: O número total de locações de bicicletas para esse dia.
 
 O DataSet original é mapeado para uma tabela de banco de dados com o esquema a seguir em um banco de dados SQL Server.
 
@@ -80,7 +80,7 @@ CREATE TABLE [Rentals] (
 
 Veja a seguir um exemplo dos dados:
 
-| RentalDate | Ano | TotalRentals |
+| RentalDate | Year | TotalRentals |
 | --- | --- | --- |
 |1/1/2011|0|985|
 |1/2/2011|0|801|
@@ -88,7 +88,7 @@ Veja a seguir um exemplo dos dados:
 
 ### <a name="create-input-and-output-classes"></a>Criar classes de entrada e saída
 
-1. Abra o arquivo *Program.cs* e substitua as diretivas de `using` existentes pelo seguinte:
+1. Abra o arquivo *Program.cs* e substitua as instruções de `using` existentes pelo seguinte:
 
     [!code-csharp [ProgramUsings](~/machinelearning-samples/samples/csharp/getting-started/Forecasting_BikeSharingDemand/BikeDemandForecasting/Program.cs#L1-L8)]
 
@@ -98,9 +98,9 @@ Veja a seguir um exemplo dos dados:
 
     A classe `ModelInput` contém as seguintes colunas:
 
-    - **RentalDate**: a data da observação.
-    - **Year**: o ano codificado da observação (0 = 2011, 1 = 2012).
-    - **TotalRentals**: o número total de locações de bicicletas para esse dia.
+    - **RentalDate**: A data da observação.
+    - **Ano**: O ano codificado da observação (0 = 2011, 1 = 2012).
+    - **TotalRentals**: O número total de locações de bicicletas para esse dia.
 
 1. Crie `ModelOutput` classe abaixo da classe de `ModelInput` recém-criada.
 
@@ -108,9 +108,9 @@ Veja a seguir um exemplo dos dados:
 
     A classe `ModelOutput` contém as seguintes colunas:
 
-    - **ForecastedRentals**: os valores previstos para o período previsto.
-    - **LowerBoundRentals**: os valores mínimos previstos para o período previsto.
-    - **UpperBoundRentals**: os valores máximos previstos para o período previsto.
+    - **ForecastedRentals**: Os valores previstos para o período previsto.
+    - **LowerBoundRentals**: Os valores mínimos previstos para o período previsto.
+    - **UpperBoundRentals**: Os valores máximos previstos para o período previsto.
 
 ### <a name="define-paths-and-initialize-variables"></a>Definir caminhos e inicializar variáveis
 
@@ -199,8 +199,8 @@ Avalie como o modelo é executado prevendo os dados do próximo ano e comparando
 
     Para avaliar o desempenho, as seguintes métricas são usadas:
 
-    - **Erro de Média Absoluta(Mean Absolute Error)**: mede como as previsões fechadas são para o valor real. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
-    - **Erro de Raiz do Valor Quadrático Médio (Root Mean Squared Error)**: resume o erro no modelo. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
+    - **Erro de Média Absoluta**: Mede como as previsões fechadas são para o valor real. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
+    - **Erro de Raiz do Valor Quadrático Médio**: resume o erro no modelo. Esse valor varia entre 0 e infinito. Quanto mais próximo de 0, melhor a qualidade do modelo.
 
 1. Gere as métricas para o console.
 
