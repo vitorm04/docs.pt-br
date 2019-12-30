@@ -36,7 +36,7 @@ Exemplos do tipo de previsões que você pode fazer com ML.NET:
 
 ## <a name="hello-mlnet-world"></a>Olá, Mundo do ML.NET
 
-O código no snippet a seguir demonstra o aplicativo do ML.NET mais simples. Este exemplo cria um modelo de regressão linear para prever os preços de residências usando dados de tamanho e preço de residências. 
+O código no snippet a seguir demonstra o aplicativo do ML.NET mais simples. Este exemplo cria um modelo de regressão linear para prever os preços de residências usando dados de tamanho e preço de residências.
 
  ```csharp
     using System;
@@ -107,7 +107,7 @@ Vamos nos aprofundar um pouco mais nesses conceitos.
 
 Um modelo do ML.NET é um objeto que contém transformações para executar em seus dados de entrada para chegar na saída prevista.
 
-### <a name="basic"></a>Modelo de Aprendizado de Máquina
+### <a name="basic"></a>Básico
 
 O modelo mais básico é regressão linear bidimensional, em que uma quantidade contínua é proporcional a outro, como no exemplo de preço de residência acima.
 
