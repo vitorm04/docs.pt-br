@@ -34,9 +34,9 @@ Exemplos do tipo de previsões que você pode fazer com ML.NET:
 |Série temporal/dados sequenciais|Prever as vendas do clima/produto|
 |Classificação de imagem|Categorizar patologias em imagens médicas|
 
-## <a name="hello-mlnet-world"></a>Olá Mundo ML.NET
+## <a name="hello-mlnet-world"></a>Olá, Mundo do ML.NET
 
-O código no snippet a seguir demonstra um aplicativo ML.NET simples. Este exemplo cria um modelo de regressão linear para prever os preços de residências usando dados de tamanho e preço de residências. 
+O código no snippet a seguir demonstra o aplicativo do ML.NET mais simples. Este exemplo cria um modelo de regressão linear para prever os preços de residências usando dados de tamanho e preço de residências.
 
  ```csharp
     using System;
@@ -113,7 +113,7 @@ O modelo mais básico é regressão linear bidimensional, em que uma quantidade 
 
 ![Modelo de regressão linear com os parâmetros de peso e desvio](./media/linear-regression-model.svg)
 
-O modelo é simplesmente: $Price = b + Size * w$. Os parâmetros $b$ e $w$ são estimados ajustando uma linha em um conjunto de pares (tamanho, preço). Os dados usados para localizar os parâmetros do modelo são chamados **dados de treinamento**. As entradas de um modelo de aprendizado de máquina são chamadas de **recursos (Features)**. Neste exemplo, $Size$ é o único recurso. Os valores de zero verdadeiro usados para treinar um modelo de aprendizado de máquina são chamados de **rótulos (Labels)**. Aqui, os valores de $Price$ no conjunto de dados de treinamento são os rótulos.
+O modelo é simplesmente: $Price = b + Size * w$. Os parâmetros $b$ e $w$ são estimados ajustando uma linha em um conjunto de pares (tamanho, preço). Os dados usados para localizar os parâmetros do modelo são chamados **dados de treinamento**. As entradas de um modelo de machine learning são chamadas de **recursos**. Neste exemplo, $Size$ é o único recurso. Os valores de zero verdadeiro usados para treinar um modelo de machine learning são chamados de **rótulos**. Aqui, os valores de $Price$ no conjunto de dados de treinamento são os rótulos.
 
 ### <a name="more-complex"></a>Mais complexo
 
@@ -252,7 +252,7 @@ Todos os algoritmos do ML.NET procuram por uma coluna de entrada que é um vetor
     var pipeline = mlContext.Transforms.Concatenate("Features", new[] { "Size" })
  ```
 
-Todos os algoritmos também criam novas colunas depois que executaram uma previsão. Os nomes fixos dessas novas colunas dependem do tipo de algoritmo de aprendizado de máquina. Para a tarefa de regressão, uma das novas colunas é chamada **Pontuação (Score)**. É por isso que atribuímos nossos dados de preço com esse nome.
+Todos os algoritmos também criam novas colunas depois que executaram uma previsão. Os nomes fixos dessas novas colunas dependem do tipo de algoritmo de aprendizado de máquina. Para a tarefa de regressão, uma das novas colunas é chamada **Pontuação**. É por isso que atribuímos nossos dados de preço com esse nome.
 
 ```csharp
     public class Prediction
@@ -270,7 +270,7 @@ Uma propriedade importante de objetos DataView é que eles são avaliados **lent
     var debug = testPriceDataView.Preview();
 ```
 
-Você pode verificar variável `debug` no depurador e examinar seu conteúdo. Não use o método Preview em código de produção, pois ele reduz significativamente o desempenho.
+Você pode assistir à variável `debug` no depurador e examinar seu conteúdo. Não use o método Preview em código de produção, pois ele reduz significativamente o desempenho.
 
 ### <a name="model-deployment"></a>Implantação de Modelo
 
