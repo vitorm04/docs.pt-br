@@ -2,7 +2,6 @@
 documentType: LandingData
 title: Diretrizes para Arquitetura de Aplicativos .NET
 metadata:
-  document_id: na
   title: Diretrizes para Arquitetura de Aplicativos .NET
   meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
   ms.topic: landing-page
