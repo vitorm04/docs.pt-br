@@ -2,12 +2,12 @@
 title: Resiliência da plataforma Azure
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Resiliência de infraestrutura de nuvem com o Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 02d661952c860da25442b0fa9fed0d5f93abe023
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 8b33c1cec1633c9fb25ae2b02e51f8be01c22941
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72520767"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337384"
 ---
 # <a name="azure-platform-resiliency"></a>Resiliência da plataforma Azure
 
@@ -26,11 +26,11 @@ Entender como essas características funcionam em conjunto e como elas afetam o 
 
 As falhas variam no escopo do impacto. Uma falha de hardware, como um disco com falha, pode afetar um único nó em um cluster. Um comutador de rede com falha pode afetar um rack de servidor inteiro. Falhas menos comuns, como perda de energia, podem interromper um datacenter inteiro. Raramente, uma região inteira fica indisponível.
 
-A [redundância](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) é uma maneira de fornecer resiliência do aplicativo. O nível exato de redundância necessário depende de seus requisitos de negócios e afetará o custo e a complexidade do seu sistema. Por exemplo, uma implantação de várias regiões é mais cara e mais complexa para ser gerenciada do que uma implantação de região única. Você precisará de procedimentos operacionais para gerenciar failover e failback. O custo adicional e a complexidade podem ser justificados para alguns cenários de negócios e não para outros.
+A [redundância](https://docs.microsoft.com/azure/architecture/guide/design-principles/redundancy) é uma maneira de fornecer resiliência do aplicativo. O nível exato de redundância necessário depende de seus requisitos de negócios e afetará o custo e a complexidade do seu sistema. Por exemplo, uma implantação de várias regiões é mais cara e mais complexa para ser gerenciada do que uma implantação de região única. Você precisará de procedimentos operacionais para gerenciar failover e failback. O custo adicional e a complexidade podem ser justificados para alguns cenários de negócios e para outros não.
 
 Para arquitetar a redundância, você precisa identificar os caminhos críticos em seu aplicativo e, em seguida, determinar se há redundância em cada ponto do caminho? Se um subsistema falhar, o aplicativo fará failover para outra coisa? Por fim, você precisa de uma compreensão clara desses recursos incorporados à plataforma de nuvem do Azure que você pode aproveitar para atender aos seus requisitos de redundância. Aqui estão as recomendações para a arquitetura da redundância:
 
-- *Implantar várias instâncias de serviços.* Se seu aplicativo depende de uma única instância de um serviço, ele cria um ponto único de falha. O provisionamento de várias instâncias melhora a resiliência e a escalabilidade. Ao hospedar no serviço kubernetes do Azure, você pode configurar declarativamente instâncias redundantes (conjuntos de réplicas) no arquivo de manifesto kubernetes. O valor da contagem de réplicas pode ser gerenciado programaticamente, no portal ou por meio de recursos de dimensionamento automático, que serão discutidos posteriormente.
+- *Implante várias instâncias de serviços.* Se seu aplicativo depender de uma única instância de um serviço, ele criará um único ponto de falha. O provisionamento de várias instâncias melhora a resiliência e a escalabilidade. Ao hospedar no serviço kubernetes do Azure, você pode configurar declarativamente instâncias redundantes (conjuntos de réplicas) no arquivo de manifesto kubernetes. O valor da contagem de réplicas pode ser gerenciado programaticamente, no portal ou por meio de recursos de dimensionamento automático, que serão discutidos posteriormente.
 
 - *Aproveitando um balanceador de carga.* O balanceamento de carga distribui as solicitações do aplicativo para instâncias de serviço íntegra e remove automaticamente instâncias não íntegras da rotação. Ao implantar no kubernetes, o balanceamento de carga pode ser especificado no arquivo de manifesto kubernetes na seção serviços.
 
@@ -78,9 +78,9 @@ Incentivamos a prática recomendada de implementar operações de repetição pr
 
 - *Cache Redis do Azure.* O cliente Redis StackExchange usa uma classe de Gerenciador de conexões que inclui novas tentativas em tentativas com falha. O número de repetições, a política de repetição específica e o tempo de espera são todos configuráveis.
 
-- *Barramento de serviço do Azure.* O cliente do barramento de serviço expõe uma [classe RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) que pode ser configurada com um intervalo de retirada, contagem de repetição e <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer>, que especifica o tempo máximo que uma operação pode tomar. A política padrão é de nove tentativas de repetição máximas com um período de retirada de 30 segundos entre as tentativas.
+- *Barramento de serviço do Azure.* O cliente do barramento de serviço expõe uma [classe RetryPolicy](xref:Microsoft.ServiceBus.RetryPolicy) que pode ser configurada com um intervalo de retirada, contagem de repetição e <xref:Microsoft.ServiceBus.RetryExponential.TerminationTimeBuffer%2A>, que especifica o tempo máximo que uma operação pode tomar. A política padrão é de nove tentativas de repetição máximas com um período de retirada de 30 segundos entre as tentativas.
 
-- *Banco de dados SQL do Azure.* O suporte de repetição é fornecido ao usar a biblioteca de [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) .
+- *Banco de Dados SQL do Azure.* O suporte de repetição é fornecido ao usar a biblioteca de [Entity Framework Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency) .
 
 - *Armazenamento do Azure.* A biblioteca de cliente de armazenamento dá suporte a operações de repetição. As estratégias variam em tabelas de armazenamento do Azure, BLOBs e filas. Assim, as repetições alternativas alternam entre locais de serviços de armazenamento primários e secundários quando o recurso de redundância geográfica está habilitado.
 

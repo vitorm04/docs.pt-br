@@ -2,12 +2,12 @@
 title: Padrões de dados nativos de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Padrões de dados nativos de nuvem
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d251f3046fcd3f3a2f5d856a123a35d3f7ecff2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9e90409b0b633796b452cfcfecb3896e79002d4d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087696"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337417"
 ---
 # <a name="cloud-native-data-patterns"></a>Padrões de dados nativos de nuvem
 
@@ -69,7 +69,7 @@ Como o suporte transacional é essencial para essa operação manter os dados co
 
 Um padrão popular para adicionar programaticamente suporte transacional é o [padrão saga](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/). Ele é implementado por meio do agrupamento de transações locais e invocada sequencialmente cada uma delas. Se uma transação local falhar, o saga anulará a operação e invocará um conjunto de [Transações de compensação](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction) para desfazer as alterações feitas pelas transações locais anteriores. A Figura 5-9 mostra uma transação com falha com o padrão saga.
 
-![Reversão no padrão saga](./media/saga-rollback-operation.png)
+![Reverter no padrão saga](./media/saga-rollback-operation.png)
 
 **Figura 5-9**. Reverter uma transação
 
@@ -139,7 +139,7 @@ Os bancos de dados NoSQL podem ser categorizados pelos quatro modelos a seguir:
 
 Os bancos de dados NoSQL podem ser otimizados para lidar com grandes escalas, especialmente quando os dados são relativamente simples. Considere um banco de dados NoSQL quando:
 
-- Sua carga de trabalho requer grande escala e alta simultaneidade.
+- Sua carga de trabalho requer uma grande escala e alta simultaneidade.
 - Você tem um grande número de usuários.
 - Seus dados podem ser expressos simplesmente sem relações.
 - Você precisa distribuir geograficamente seus dados.

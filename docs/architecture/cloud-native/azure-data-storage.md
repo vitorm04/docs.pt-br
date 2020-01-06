@@ -2,12 +2,12 @@
 title: Armazenamento de dados no Azure
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | Armazenamento de dados no Azure
 ms.date: 06/30/2019
-ms.openlocfilehash: 1a86cecf005c6dbdfda5cf4cacfafaad4711c076
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5ba05f53faf65334f6269af8ae2c54d81e6b0779
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087762"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337463"
 ---
 # <a name="data-storage-in-azure"></a>Armazenamento de dados no Azure
 
@@ -21,7 +21,7 @@ Em vez disso, um [DBaaS (banco de dados como serviço)](https://www.stratoscale.
 
 Em seguida, vamos examinar as opções de DBaaS disponíveis no Azure. Você verá como a Microsoft continua sendo o compromisso de manter o Azure uma "plataforma aberta", oferecendo suporte gerenciado para muitos bancos de dados relacionais e NoSQL de software livre e fazendo contribuições importantes para as várias bases de código-fonte aberto como um membro ativo.
 
-## <a name="azure-sql-database"></a>Banco de dados SQL do Azure
+## <a name="azure-sql-database"></a>Banco de Dados SQL do Azure
 
 O [banco de dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/) é um DBaaS (banco de dados como serviço) de uso geral, repleto de recursos, com base no mecanismo de banco de dados do Microsoft SQL Server. Ele é totalmente gerenciado pela Microsoft e é um banco de dados de nuvem seguro, confiável e de alto desempenho. O serviço compartilha muitos dos recursos encontrados na versão local do SQL Server.
 
@@ -51,7 +51,7 @@ Por fim, há o novo tipo de preço de [hiperescala do banco de dados SQL do Azur
 
 Além da pilha de Microsoft SQL Server tradicional, o Azure também apresenta versões gerenciadas de vários bancos de dados de software livre populares.
 
-## <a name="azure-database-for-mysql"></a>Banco de dados do Azure para MySQL
+## <a name="azure-database-for-mysql"></a>Banco de Dados do Azure para MySQL
 
 O [MySQL](https://en.wikipedia.org/wiki/MySQL) é um [banco de dados relacional](https://en.wikipedia.org/wiki/Relational_database_management_system) [de código aberto](https://en.wikipedia.org/wiki/Open-source_software). É um componente da pilha de [software da lâmpada](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) e é usado por muitas organizações de grande porte, incluindo o Facebook, o Twitter e o YouTube. A Community Edition está disponível gratuitamente e a Enterprise Edition requer uma compra de licença. Originalmente criado em 1995, o produto foi adquirido pela Sun Microsystems no 2008, que foi adquirido pela Oracle na 2010.
 
@@ -63,7 +63,7 @@ O [banco de dados do Azure para MySQL](https://azure.microsoft.com/services/mysq
 
 - [Dimensione](https://docs.microsoft.com/azure/mysql/concepts-high-availability) conforme necessário em segundos.
 
-- Protegido para proteger dados confidenciais em repouso e em movimento.
+- Seguro para proteger dados confidenciais em repouso e em movimento.
 
 - [Backups automáticos](https://docs.microsoft.com/azure/mysql/concepts-backup) e [restauração pontual](https://docs.microsoft.com/azure/mysql/concepts-backup) por até 35 dias.
 
@@ -75,7 +75,7 @@ Além disso, o [serviço de migração de dados do Azure](https://azure.microsof
 
 O [servidor MySQL do Azure](https://docs.microsoft.com/azure/mysql/concepts-servers) gerenciado é o ponto administrativo central para o serviço. É o mesmo mecanismo de servidor MySQL usado para implantações locais. Com ele, você pode criar um único banco de dados por servidor para consumir todos os recursos ou criar vários bancos por servidor para compartilhar recursos. Sua equipe pode continuar a desenvolver aplicativos com as ferramentas de software livre e a plataforma de sua escolha sem precisar aprender novas habilidades ou gerenciar máquinas virtuais e infraestrutura.
 
-## <a name="azure-database-for-mariadb"></a>Banco de dados do Azure para MariaDB
+## <a name="azure-database-for-mariadb"></a>Banco de Dados do Azure para MariaDB
 
 [MariaDB](https://mariadb.com/) O servidor é outro servidor de banco de dados de software livre popular. Ele foi criado como uma bifurcação do MySQL pelos desenvolvedores originais do MySQL no momento em que a Oracle comprou a Sun Microsystems que teve Propriedade do MySQL. A intenção era garantir que MariaDB permanecia Open-Source.
 
@@ -97,7 +97,7 @@ O [banco de dados do Azure para MariaDB](https://azure.microsoft.com/services/ma
 
 - Segurança e conformidade de nível empresarial.
 
-## <a name="azure-database-for-postgresql"></a>Banco de dados do Azure para PostgreSQL
+## <a name="azure-database-for-postgresql"></a>Banco de Dados do Azure para PostgreSQL
 
 [PostgreSQL](https://www.postgresql.org/) é outro banco de dados relacional popular de código aberto com mais de 30 anos de desenvolvimento ativo. É uma finalidade geral e um sistema de gerenciamento de banco de dados relacional de objeto. Seu licenciamento é considerado "liberal" e o produto está livre para usar, modificar e distribuir em qualquer forma. Muitas empresas de grande porte, incluindo Apple, Red Hat e Fujitsu, têm produtos criados usando PostgreSQL.
 
@@ -131,9 +131,9 @@ O recurso de protocolo de [vários mestres](https://docs.microsoft.com/azure/cos
 
 - Gravação e escalabilidade de leitura elástica ilimitada.
 
-- 99,999% de disponibilidade de leitura e gravação em todo o mundo.
+- 99,999% de leitura e gravação de disponibilidade em todo o mundo.
 
-- Leituras e gravações Garantidas servidas em menos de 10 milissegundos no 99 º percentil.
+- Garantia de leituras e gravações atendidas em menos de 10 milissegundos no percentil 99.
 
 Internamente, o Cosmos DB lida com a replicação de dados entre regiões com garantias de nível de consistência e contratos de nível de serviço com suporte financeiro.
 
@@ -141,7 +141,7 @@ Com o Cosmos DB [APIs de hospedagem múltipla](https://docs.microsoft.com/azure/
 
 ### <a name="multi-model-support"></a>Suporte a vários modelos
 
-O Cosmos DB é uma *plataforma de dados multimodelo* que permite que você interaja com seus dados usando vários modelos NoSQL com suporte, incluindo documentos, pares chave-valor, largura de coluna e representações de gráfico. Internamente, os dados são armazenados em um formato [struct](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) simples composto por tipos de dados primitivos, incluindo cadeias de caracteres, BOOLs e números. Para cada solicitação, o mecanismo de banco de dados converte os dados na representação de modelo que você selecionou. Você pode escolher entre uma API proprietária do Cosmos DB baseada em SQL ou qualquer uma das [APIs de compatibilidade](https://www.wikiwand.com/en/Cosmos_DB) mostradas na Figura 5-14.
+O Cosmos DB é uma *plataforma de dados multimodelo* que permite que você interaja com seus dados usando vários modelos NoSQL com suporte, incluindo documentos, pares chave-valor, largura de coluna e representações de gráfico. Internamente, os dados são armazenados em um formato [struct](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/using-structs) simples composto por tipos de dados primitivos, incluindo cadeias de caracteres, Boolianos e números. Para cada solicitação, o mecanismo de banco de dados converte os dados na representação de modelo que você selecionou. Você pode escolher entre uma API proprietária do Cosmos DB baseada em SQL ou qualquer uma das [APIs de compatibilidade](https://www.wikiwand.com/en/Cosmos_DB) mostradas na Figura 5-14.
 
 ![Provedores de Cosmos DB](./media/cosmos-db-providers.png)
 
@@ -157,7 +157,7 @@ Os aplicativos escritos para o armazenamento de tabelas do Azure podem migrar pa
 
 Nos cenários de aplicativos [Brownfield](https://en.wikipedia.org/wiki/Brownfield_(software_development)) , as equipes de desenvolvimento podem migrar os bancos de dados Mongo, Gremlin ou Cassandra existentes para Cosmos DB com alterações mínimas no código do aplicativo ou dos aplicativos existentes. Para cenários [Greenfield](https://en.wikipedia.org/wiki/Greenfield_project) , as equipes de desenvolvimento podem escolher o modelo de dados que melhor atenda aos seus requisitos e preferências, incluindo opções de software livre totalmente suportadas para as plataformas MongoDB, Cassandra e Gremlin.
 
-### <a name="consistency-models"></a>Modelos de consistência
+### <a name="consistency-models"></a>Modelos de coerência
 
 Anteriormente, na seção *relacional versus NoSQL* , discutimos o assunto da *consistência de dados*, que é um termo que se refere à integridade de seus dados. Os bancos de dados distribuídos que dependem da replicação para alta disponibilidade, baixa latência ou ambos, devem tomar uma compensação fundamental entre consistência de leitura, disponibilidade e latência.
 
@@ -169,7 +169,7 @@ O Azure Cosmos DB oferece um espectro de [cinco modelos de consistência bem def
 
 **Figura 5-16**: níveis de consistência de Cosmos DB
 
-### <a name="partitioning"></a>Particionamento
+### <a name="partitioning"></a>Divisão
 
 O Azure Cosmos DB usa o [particionamento](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview) automático para dimensionar o banco de dados para atender às necessidades de desempenho do seu aplicativo.
 

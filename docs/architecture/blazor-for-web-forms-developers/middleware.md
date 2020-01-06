@@ -4,20 +4,20 @@ description: Saiba mais sobre como lidar com solicitações HTTP com módulos, m
 author: danroth27
 ms.author: daroth
 ms.date: 10/11/2019
-ms.openlocfilehash: b0be6109b9226bddbb9cbe4cebf114fd2b2a6114
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: 3ecc109c54f88b5b06a1474f7c6e262d426a78a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291154"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337469"
 ---
 # <a name="modules-handlers-and-middleware"></a>Módulos, manipuladores e middleware
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-Um aplicativo ASP.NET Core é criado com base em uma série de middleware. Middleware são manipuladores, que são organizados em um pipeline para lidar com solicitações e respostas. Em um aplicativo Web Forms, manipuladores e módulos HTTP resolvem problemas semelhantes. Em ASP.NET Core, módulos, manipuladores, *global.asax.cs*e o ciclo de vida do aplicativo são substituídos por middleware. Neste capítulo, você aprenderá qual é o middleware no contexto de um aplicativo mais incrivelmente.
+Um aplicativo ASP.NET Core é criado com base em uma série de *middleware*. O middleware é manipuladores que são organizados em um pipeline para lidar com solicitações e respostas. Em um aplicativo Web Forms, manipuladores e módulos HTTP resolvem problemas semelhantes. Em ASP.NET Core, módulos, manipuladores, *global.asax.cs*e o ciclo de vida do aplicativo são substituídos por middleware. Neste capítulo, você aprenderá qual é o middleware no contexto de um aplicativo mais incrivelmente.
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 
 O pipeline de solicitação do ASP.NET Core consiste em uma sequência de delegados de solicitação, chamados um após o outro. O diagrama a seguir demonstra o conceito. O thread de execução segue as setas pretas.
 
@@ -42,10 +42,10 @@ A tabela a seguir lista os componentes e middleware de substituição no ASP.NET
 |Pesquisa no diretório     |`DirectoryListingModule`     |[Middleware de navegação no diretório](/aspnet/core/fundamentals/static-files#enable-directory-browsing)|
 |Compactação dinâmica    |`DynamicCompressionModule`   |[Middleware de compactação de resposta](/aspnet/core/performance/response-compression)|
 |Rastreamento de solicitações com falha|`FailedRequestsTracingModule`|[Registro em log do ASP.NET Core](/aspnet/core/fundamentals/logging/index#tracesource-provider)|
-|Cache de arquivos           |`FileCacheModule`            |[Middleware de Cache de Resposta](/aspnet/core/performance/caching/middleware)|
-|Cache HTTP           |`HttpCacheModule`            |[Middleware de Cache de Resposta](/aspnet/core/performance/caching/middleware)|
-|Log HTTP           |`HttpLoggingModule`          |[Registro em log do ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
-|Redirecionamento de HTTP       |`HttpRedirectionModule`      |[Middleware de regravação de URL](/aspnet/core/fundamentals/url-rewriting)|
+|Cache de arquivos           |`FileCacheModule`            |[Middleware de cache de resposta](/aspnet/core/performance/caching/middleware)|
+|Cache HTTP           |`HttpCacheModule`            |[Middleware de cache de resposta](/aspnet/core/performance/caching/middleware)|
+|Log de FTP           |`HttpLoggingModule`          |[Registro em log do ASP.NET Core](/aspnet/core/fundamentals/logging/index)|
+|Redirecionamento HTTP       |`HttpRedirectionModule`      |[Middleware de regravação de URL](/aspnet/core/fundamentals/url-rewriting)|
 |Filtros ISAPI          |`IsapiFilterModule`          |[Middleware](/aspnet/core/fundamentals/middleware/index)|
 |ISAPI                  |`IsapiModule`                |[Middleware](/aspnet/core/fundamentals/middleware/index)|
 |Filtragem de solicitações      |`RequestFilteringModule`     |[Irule usando de middleware de regravação de URL](/aspnet/core/fundamentals/url-rewriting#irule-based-rule)|

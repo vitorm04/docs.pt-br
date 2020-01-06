@@ -2,12 +2,12 @@
 title: DevOps nativo de nuvem
 description: Arquitetando aplicativos .NET nativos da nuvem para o Azure | DevOps nativo de nuvem
 ms.date: 06/30/2019
-ms.openlocfilehash: 2b3dd47eeeb69d63f5ae39705abb9d1d51295645
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d152989061964d78c8be97b69df413b975058319
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73087547"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337408"
 ---
 # <a name="cloud-native-devops"></a>DevOps nativo de nuvem
 
@@ -59,7 +59,7 @@ Cada um desses componentes fornece algumas vantagens para aplicativos nativos de
 
 Organizar o código para um aplicativo nativo de nuvem pode ser desafiador. Em vez de um único aplicativo gigante, os aplicativos nativos de nuvem tendem a ser compostos por uma Web de aplicativos menores que se comunicam entre si. Assim como acontece com tudo em computação, a melhor disposição do código continua sendo uma pergunta aberta. Há exemplos de aplicativos bem-sucedidos usando diferentes tipos de layouts, mas duas variantes parecem ter a maior popularidade.
 
-Antes de entrar no controle do código-fonte propriamente dito, provavelmente vale a pena decidir quantos projetos são apropriados. Em um único projeto, há suporte para vários repositórios e pipelines de compilação. As placas são um pouco mais complicadas, mas há muitas tarefas que podem ser facilmente atribuídas a várias equipes em um único projeto. Certamente é possível dar suporte a centenas, até milhares de desenvolvedores, de um único projeto DevOps do Azure. Isso é provavelmente a melhor abordagem, pois fornece um único local para que todo o desenvolvedor possa trabalhar e reduz a confusão de encontrar um aplicativo quando os desenvolvedores não têm certeza de qual projeto no qual ele reside.
+Antes de entrar no controle do código-fonte propriamente dito, provavelmente vale a pena decidir quantos projetos são apropriados. Em um único projeto, há suporte para vários repositórios e pipelines de compilação. As placas são um pouco mais complicadas, mas sim, as tarefas podem ser facilmente atribuídas a várias equipes dentro de um único projeto. Certamente é possível dar suporte a centenas, até milhares de desenvolvedores, de um único projeto DevOps do Azure. Isso é provavelmente a melhor abordagem, pois fornece um único local para que todo o desenvolvedor possa trabalhar e reduz a confusão de encontrar um aplicativo quando os desenvolvedores não têm certeza de qual projeto no qual ele reside.
 
 Dividir o código para os microserviços no projeto DevOps do Azure pode ser um pouco mais desafiador.
 
@@ -238,11 +238,11 @@ O resultado final de uma compilação é uma coleção de arquivos conhecidos co
 
 ### <a name="azure-devops-releases"></a>Versões do Azure DevOps
 
-As compilações cuidam da compilação do software em um pacote freqüentemente, mas os artefatos ainda precisam ser enviados para um ambiente de teste para concluir a entrega contínua. Para isso, o Azure DevOps usa uma ferramenta separada chamada releases. As versões usam a biblioteca das mesmas tarefas que estavam disponíveis para a compilação, mas apresentam um conceito de "estágios". Um estágio é um ambiente isolado no qual o pacote está instalado. Por exemplo, um produto pode fazer uso de um ambiente de desenvolvimento, QA e de produção. O código é entregue continuamente no ambiente de desenvolvimento em que os testes automatizados podem ser executados em relação a ele. Depois que esses testes passarem pela versão, o ambiente de QA será movido para teste manual. Por fim, o código é enviado para a produção, onde está visível para todos.
+As compilações cuidam da compilação do software em um pacote freqüentemente, mas os artefatos ainda precisam ser enviados para um ambiente de teste para concluir a entrega contínua. Para isso, o Azure DevOps usa uma ferramenta separada chamada releases. A ferramenta de versões usa a biblioteca das mesmas tarefas que estava disponível para a compilação, mas introduziu um conceito de "estágios". Um estágio é um ambiente isolado no qual o pacote está instalado. Por exemplo, um produto pode fazer uso de um ambiente de desenvolvimento, QA e de produção. O código é entregue continuamente no ambiente de desenvolvimento em que os testes automatizados podem ser executados em relação a ele. Depois que esses testes passarem pela versão, o ambiente de QA será movido para teste manual. Por fim, o código é enviado para a produção, onde está visível para todos.
 
 ![Figura 11-9 um pipeline de lançamento de exemplo com fases de desenvolvimento, QA e produção](./media/release-pipeline.png)
 
-Cada estágio na compilação pode ser disparado automaticamente pela conclusão da fase anterior. Em muitos casos, no entanto, isso não é desejável. Mover o código para produção pode exigir aprovação de alguém. As versões oferecem suporte a isso permitindo que os aprovadores em cada etapa do pipeline de lançamento. As regras podem ser configuradas de forma que uma pessoa ou grupo de pessoas específico deva se desconectar em uma versão antes de fazer a produção. Esses Gates permitem verificações manuais de qualidade e também para conformidade com quaisquer requisitos regulatórios relacionados ao controle do que entra em produção.
+Cada estágio na compilação pode ser disparado automaticamente pela conclusão da fase anterior. Em muitos casos, no entanto, isso não é desejável. Mover o código para produção pode exigir aprovação de alguém. A ferramenta releases dá suporte a isso permitindo que os aprovadores em cada etapa do pipeline de lançamento. As regras podem ser configuradas de forma que uma pessoa ou grupo de pessoas específico deva se desconectar em uma versão antes de fazer a produção. Esses Gates permitem verificações manuais de qualidade e também para conformidade com quaisquer requisitos regulatórios relacionados ao controle do que entra em produção.
 
 ### <a name="everybody-gets-a-build-pipeline"></a>Todo mundo Obtém um pipeline de compilação
 

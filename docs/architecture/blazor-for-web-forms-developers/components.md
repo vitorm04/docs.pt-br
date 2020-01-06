@@ -4,12 +4,12 @@ description: Saiba como criar componentes de interface do usuário reutilizávei
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 79919b183a4eb759f0b27c97500ee71c9378770b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088098"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337397"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Crie componentes de interface do usuário reutilizáveis com mais utilidade
 
@@ -62,7 +62,7 @@ Ou você pode gerar uma lista de itens usando um loop C# de `foreach` normal com
 
 As diretivas do Razor, como diretivas no ASP.NET Web Forms, controlam muitos aspectos de como um componente Razor é compilado. Os exemplos incluem o componente:
 
-- {1&gt;Namespace&lt;1}
+- Namespace
 - Classe base
 - Interfaces implementadas
 - Parâmetros genéricos
@@ -77,15 +77,15 @@ As diretivas do Razor começam com o `@` caractere e são normalmente usadas no 
 
 A tabela a seguir resume as várias diretivas Razor usadas no mais e suas ASP.NET Web Forms equivalentes, se existirem.
 
-|Directive    |Descrição|{1&gt;Exemplo&lt;1}|Web Forms equivalente|
+|Directive    |Descrição|Exemplo|Web Forms equivalente|
 |-------------|-----------|-------|--------------------|
-|`@attribute` |Adiciona um atributo de nível de classe ao componente|`@attribute [Authorize]`|Nenhum|
+|`@attribute` |Adiciona um atributo de nível de classe ao componente|`@attribute [Authorize]`|{1&gt;Nenhum&lt;1}|
 |`@code`      |Adiciona membros de classe ao componente|`@code { ... }`|`<script runat="server">...</script>`|
 |`@implements`|Implementa a interface especificada|`@implements IDisposable`|Usar code-behind|
 |`@inherits`  |Herda da classe base especificada|`@inherits MyComponentBase`|`<%@ Control Inherits="MyUserControlBase" %>`|
-|`@inject`    |Injeta um serviço no componente|`@inject IJSRuntime JS`|Nenhum|
+|`@inject`    |Injeta um serviço no componente|`@inject IJSRuntime JS`|{1&gt;Nenhum&lt;1}|
 |`@layout`    |Especifica um componente de layout para o componente|`@layout MainLayout`|`<%@ Page MasterPageFile="~/Site.Master" %>`|
-|`@namespace` |Define o namespace para o componente|`@namespace MyNamespace`|Nenhum|
+|`@namespace` |Define o namespace para o componente|`@namespace MyNamespace`|{1&gt;Nenhum&lt;1}|
 |`@page`      |Especifica a rota para o componente|`@page "/product/{id}"`|`<%@ Page %>`|
 |`@typeparam` |Especifica um parâmetro de tipo genérico para o componente|`@typeparam TItem`|Usar code-behind|
 |`@using`     |Especifica um namespace para trazer para o escopo|`@using MyComponentNamespace`|Adicionar namespace em *Web. config*|
@@ -98,7 +98,7 @@ Os componentes do Razor também fazem uso extensivo de *atributos de diretiva* e
 
 A tabela a seguir resume os vários atributos para as diretivas do Razor usadas no mais incrivelmente.
 
-|Atributo    |Descrição|{1&gt;Exemplo&lt;1}|
+|Atributo    |Descrição|Exemplo|
 |-------------|-----------|-------|
 |`@attributes`|Renderiza um dicionário de atributos|`<input @attributes="ExtraAttributes" />`|
 |`@bind`      |Cria uma associação de dados bidirecional    |`<input @bind="username" @bind:event="oninput" />`|
@@ -113,7 +113,7 @@ Muitas das sintaxes usadas em arquivos *. aspx* e *. ascx* têm sintaxes paralel
 |Recurso                      |Web Forms           |Sintaxe               |Razor         |Sintaxe |
 |-----------------------------|--------------------|---------------------|--------------|-------|
 |Diretivas                   |`<%@ [directive] %>`|`<%@ Page %>`        |`@[directive]`|`@page`|
-|Blocos de código                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
+|Blocos de códigos                  |`<% %>`             |`<% int x = 123; %>` |`@{ }`        |`@{ int x = 123; }`|
 |{1&gt;Expressões&lt;1}<br>(Codificado em HTML)|`<%: %>`            |`<%:DateTime.Now %>` |Implícito: `@`<br>Explícito: `@()`|`@DateTime.Now`<br>`@(DateTime.Now)`|
 |Comments                     |`<%-- --%>`         |`<%-- Commented --%>`|`@* *@`       |`@* Commented *@`|
 |Associação de dados                 |`<%# %>`            |`<%# Bind("Name") %>`|`@bind`       |`<input @bind="username" />`|
@@ -131,7 +131,7 @@ Para adicionar membros à classe de componente Razor, use a diretiva `@code`. Es
 }
 ```
 
-Como o Razor se baseia C#em, ele deve ser compilado de dentro C# de um projeto ( *. csproj*). Não é possível compilar arquivos *. Razor* de um projeto VB ( *. vbproj*). Você ainda pode fazer referência a projetos do VB por meio de seu projeto mais incrivelmente. O oposto também é verdadeiro.
+Como o Razor se baseia C#em, ele deve ser compilado de dentro C# de um projeto ( *. csproj*). Não é possível compilar arquivos *. Razor* de um projeto Visual Basic ( *. vbproj*). Você ainda pode fazer referência a projetos Visual Basic do seu projeto mais incrivelmente. O oposto também é verdadeiro.
 
 Para obter uma referência completa de sintaxe Razor, consulte [referência de sintaxe Razor para ASP.NET Core](/aspnet/core/mvc/views/razor).
 
@@ -554,7 +554,7 @@ Um componente pai pode fornecer conteúdo filho usando sintaxe Razor normal.
 </ChildContentComponent>
 ```
 
-### <a name="template-parameters"></a>Parâmetros de modelo
+### <a name="template-parameters"></a>Parâmetros do Modelo
 
 Um componente de mais de um modelo também pode definir vários parâmetros de componente do tipo `RenderFragment` ou `RenderFragment<T>`. O parâmetro para um `RenderFragment<T>` pode ser especificado quando é chamado. Para especificar um parâmetro de tipo genérico para um componente, use a diretiva `@typeparam` Razor.
 

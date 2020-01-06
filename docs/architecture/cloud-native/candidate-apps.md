@@ -3,12 +3,12 @@ title: Aplicativos candidatos para nuvem nativa
 description: Saiba quais tipos de aplicativos se beneficiam de uma abordagem nativa de nuvem
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: 328af4081d830cf1a7959a37c2155090ec4da3ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 2087ef0c327a82419be95552293d1b56742b73c7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968291"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337433"
 ---
 # <a name="candidate-apps-for-cloud-native"></a>Aplicativos candidatos para nuvem nativa
 
@@ -40,7 +40,7 @@ O Microsoft e-book gratuito [modernizar aplicativos .net existentes com a nuvem 
 
 **Figura 1-10**. Estratégias para migrar cargas de trabalho herdadas
 
-Aplicativos monolíticos que não são críticos amplamente se beneficiam de uma migração rápida de comparação de precisão e mudança ([pronta para a infraestrutura de nuvem](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/lift-and-shift-existing-apps-azure-iaas)). Aqui, a carga de trabalho local é rehospedada para uma VM baseada em nuvem, sem alterações. Essa abordagem usa o [modelo IaaS (infraestrutura como serviço)](https://azure.microsoft.com/overview/what-is-iaas/). O Azure inclui várias ferramentas como ([migrações para Azure](https://aka.ms/azuremigrate), [Azure site Recovery](https://azure.microsoft.com/services/site-recovery/)e serviço de migração de [banco de dados do Azure](https://azure.microsoft.com/campaigns/database-migration/)) para facilitar a movimentação. Embora essa estratégia possa gerar alguma economia de custos, esses aplicativos normalmente não eram arquitetados para desbloquear e aproveitar os benefícios da computação em nuvem.
+Aplicativos monolíticos que não são críticos amplamente se beneficiam de uma migração rápida de comparação de precisão e mudança ([pronta para a infraestrutura de nuvem](../modernize-with-azure-containers/lift-and-shift-existing-apps-azure-iaas.md)). Aqui, a carga de trabalho local é rehospedada para uma VM baseada em nuvem, sem alterações. Essa abordagem usa o [modelo IaaS (infraestrutura como serviço)](https://azure.microsoft.com/overview/what-is-iaas/). O Azure inclui várias ferramentas como ([migrações para Azure](https://aka.ms/azuremigrate), [Azure site Recovery](https://azure.microsoft.com/services/site-recovery/)e serviço de migração de [banco de dados do Azure](https://azure.microsoft.com/campaigns/database-migration/)) para facilitar a movimentação. Embora essa estratégia possa gerar alguma economia de custos, esses aplicativos normalmente não eram arquitetados para desbloquear e aproveitar os benefícios da computação em nuvem.
 
 Os aplicativos monolíticos que são essenciais para os negócios muitas vezes se beneficiam de uma migração avançada de comparação de precisão e deslocamento (*otimizada para nuvem*). Essa abordagem inclui otimizações de implantação que habilitam os principais serviços de nuvem, sem alterar a arquitetura principal do aplicativo. Por exemplo, você pode colocar o aplicativo em [contêiner](https://docs.microsoft.com/virtualization/windowscontainers/about/) e implantá-lo em um orquestrador de contêiner, como os [Serviços Kubernetess do Azure](https://azure.microsoft.com/services/kubernetes-service/), discutidos posteriormente neste livro. Uma vez na nuvem, o aplicativo poderia consumir outros serviços de nuvem, como bancos de dados, filas de mensagens, monitoramento e Caching distribuído.
 

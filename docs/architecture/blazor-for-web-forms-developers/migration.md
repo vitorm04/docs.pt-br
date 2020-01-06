@@ -4,12 +4,12 @@ description: Saiba como abordar a migração de um aplicativo ASP.NET Web Forms 
 author: twsouthwick
 ms.author: tasou
 ms.date: 09/19/2019
-ms.openlocfilehash: b6604e000eaf79bcd8da15d72a3d85713c620851
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 52f463c66c2980d59a93f3210b3cfd825bec33da
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191939"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337447"
 ---
 # <a name="migrate-from-aspnet-web-forms-to-blazor"></a>Migrar do ASP.NET Web Forms para o mais incrivelmente
 
@@ -38,13 +38,13 @@ Conforme descrito no capítulo [modelos de hospedagem](hosting-models.md) , um a
 
 No momento da elaboração do artigo, o modelo do lado do servidor se assemelha mais à Web Forms. A maior parte deste capítulo se concentra no modelo de hospedagem do lado do servidor, pois ele está pronto para produção.
 
-## <a name="create-a-new-project"></a>Criar um novo projeto
+## <a name="create-a-new-project"></a>Crie um novo projeto
 
 Essa etapa inicial de migração é criar um novo projeto. Esse tipo de projeto se baseia nos projetos de estilo do SDK do .NET Core e simplifica grande parte do timbre que foi usado em formatos de projeto anteriores. Para obter mais detalhes, consulte o capítulo sobre [estrutura do projeto](project-structure.md).
 
 Depois que o projeto tiver sido criado, instale as bibliotecas que foram usadas no projeto anterior. Em projetos de Web Forms mais antigos, você pode ter usado o arquivo *Packages. config* para listar os pacotes NuGet necessários. No novo projeto no estilo SDK, *Packages. config* foi substituído por `<PackageReference>` elementos no arquivo de projeto. Um benefício para essa abordagem é que todas as dependências são instaladas de maneira transitiva. Você só lista as dependências de nível superior que se preocupam.
 
-Muitas das dependências que você está usando estão disponíveis para o .NET Core, incluindo Entity Framework 6 e log4net. Se não houver nenhuma versão do .NET Core ou do .NET Standard disponível, a versão .NET Framework poderá ser usada com frequência. Sua quilometragem pode variar. Qualquer API usada que não esteja disponível no .NET Core causa um erro de tempo de execução. O Visual Studio o notifica sobre esses pacotes. Um ícone amarelo aparece no nó **referências** do projeto no **Gerenciador de soluções**.
+Muitas das dependências que você está usando estão disponíveis para o .NET Core, incluindo Entity Framework 6 e log4net. Se não houver nenhuma versão do .NET Core ou do .NET Standard disponível, a versão .NET Framework poderá ser usada com frequência. Sua milhagem pode variar. Qualquer API usada que não esteja disponível no .NET Core causa um erro de tempo de execução. O Visual Studio o notifica sobre esses pacotes. Um ícone amarelo aparece no nó **referências** do projeto no **Gerenciador de soluções**.
 
 No projeto eShop baseado em mais Altova, você pode ver os pacotes que estão instalados. Anteriormente, o arquivo *Packages. config* listou cada pacote usado no projeto, resultando em um arquivo com quase 50 linhas de comprimento. Um trecho de *Packages. config* é:
 
@@ -252,7 +252,7 @@ Para obter mais informações sobre a inicialização do aplicativo, consulte [i
 
 ## <a name="migrate-http-modules-and-handlers-to-middleware"></a>Migrar módulos e manipuladores HTTP para middleware
 
-Os módulos e manipuladores HTTP são padrões comuns em Web Forms para controlar o pipeline de solicitação HTTP. As classes que implementam `IHttpModule` ou `IHttpHandler` podem ser registradas e processar solicitações de entrada. Web Forms configura módulos e manipuladores no arquivo *Web. config* . O Web Forms também é muito baseado na manipulação de eventos do ciclo de vida do aplicativo. O ASP.NET Core usa o middleware em vez disso. Middleware são registrados no método `Configure` da classe `Startup`. A ordem de execução do middleware é determinada pela ordem de registro.
+Os módulos e manipuladores HTTP são padrões comuns em Web Forms para controlar o pipeline de solicitação HTTP. As classes que implementam `IHttpModule` ou `IHttpHandler` podem ser registradas e processar solicitações de entrada. Web Forms configura módulos e manipuladores no arquivo *Web. config* . O Web Forms também é muito baseado na manipulação de eventos do ciclo de vida do aplicativo. O ASP.NET Core usa o middleware em vez disso. O middleware é registrado no método `Configure` da classe `Startup`. A ordem de execução do middleware é determinada pela ordem de registro.
 
 Na seção [habilitar processo de inicialização](#enable-startup-process) , um evento de ciclo de vida foi gerado por Web Forms como o método `Application_BeginRequest`. Esse evento não está disponível no ASP.NET Core. Uma maneira de atingir esse comportamento é implementar o middleware como visto no exemplo de arquivo *Startup.cs* . Esse middleware faz a mesma lógica e, em seguida, transfere o controle para o próximo manipulador no pipeline de middleware.
 
@@ -277,7 +277,7 @@ O projeto eShop habilita o acesso básico a arquivos estáticos. Há muitas pers
 
 ## <a name="migrate-runtime-bundling-and-minification-setup"></a>Migrar a configuração de agrupamento e minificação de tempo de execução
 
-O agrupamento e o minificação são técnicas de otimização de desempenho para reduzir o número e o tamanho das solicitações de servidor para recuperar determinados tipos de arquivo. O JavaScript e o CSS geralmente passam por alguma forma de agrupamento ou minificação antes de serem enviados ao cliente. No ASP.NET Web Forms, essas otimizações são tratadas em tempo de execução. As convenções de otimização são definidas como um arquivo *App_Start/BundleConfig. cs* . No ASP.NET Core, uma abordagem mais declarativa é adotada. Um arquivo lista os arquivos a serem reduzidosdos, juntamente com configurações específicas de minificação.
+O agrupamento e o minificação são técnicas de otimização de desempenho para reduzir o número e o tamanho das solicitações de servidor para recuperar determinados tipos de arquivo. O JavaScript e o CSS geralmente passam por alguma forma de agrupamento ou minificação antes de serem enviados ao cliente. No ASP.NET Web Forms, essas otimizações são tratadas em tempo de execução. As convenções de otimização são definidas como um arquivo *App_Start/bundleconfig.cs* . No ASP.NET Core, uma abordagem mais declarativa é adotada. Um arquivo lista os arquivos a serem reduzidosdos, juntamente com configurações específicas de minificação.
 
 Para obter mais informações sobre agrupamento e minificação, consulte [ativos estáticos de pacote e reduzir em ASP.NET Core](/aspnet/core/client-side/bundling-and-minification).
 
@@ -642,7 +642,7 @@ Para obter mais informações sobre técnicas para identificar as alterações n
 
 ASP.NET Core é uma versão reimaginada do ASP.NET e tem algumas alterações que podem não parecer óbvias inicialmente. As principais alterações são:
 
-- Nenhum contexto de sincronização, o que significa que não há `HttpContext.Current`, `Thread.CurrentPrincipal` ou outros acessadores estáticos
+- Nenhum contexto de sincronização, o que significa que não há `HttpContext.Current`, `Thread.CurrentPrincipal`ou outros acessadores estáticos
 - Sem cópia de sombra
 - Nenhuma fila de solicitações
 
