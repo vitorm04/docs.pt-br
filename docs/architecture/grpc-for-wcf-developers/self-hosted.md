@@ -2,12 +2,12 @@
 title: Aplicativos gRPC de hospedagem interna – gRPC para desenvolvedores do WCF
 description: Implantando ASP.NET Core aplicativos gRPC como serviços hospedados internamente.
 ms.date: 09/02/2019
-ms.openlocfilehash: 59f6275dbf85442bca3a98a1521597ef40e9675b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 00b4ad50eae629b5b36a890d1eecf7119386c74c
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73967219"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545072"
 ---
 # <a name="self-hosted-grpc-applications"></a>Aplicativos gRPC auto-hospedados
 
@@ -34,7 +34,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 Agora, publique seu aplicativo, seja no Visual Studio, clicando com o botão direito do mouse no projeto e escolhendo *publicar* no menu de contexto ou na CLI do .NET Core.
 
-Ao publicar um aplicativo .NET Core, você pode optar por criar uma implantação *dependente da estrutura* ou uma implantação *independente* . As implantações dependentes da estrutura exigem que o tempo de execução compartilhado do .NET Core seja instalado no host onde eles são executados. As implantações independentes são publicadas com uma cópia completa do tempo de execução e da estrutura do .NET Core e podem ser executadas em qualquer host. Para obter mais informações, incluindo as vantagens e desvantagens de cada abordagem, consulte a documentação de [implantação do aplicativo .NET Core](https://docs.microsoft.com/dotnet/core/deploying/) .
+Ao publicar um aplicativo .NET Core, você pode optar por criar uma implantação *dependente da estrutura* ou uma implantação *independente* . As implantações dependentes da estrutura exigem que o tempo de execução compartilhado do .NET Core seja instalado no host onde eles são executados. As implantações independentes são publicadas com uma cópia completa do tempo de execução e da estrutura do .NET Core e podem ser executadas em qualquer host. Para obter mais informações, incluindo as vantagens e desvantagens de cada abordagem, consulte a documentação de [implantação do aplicativo .NET Core](../../core/deploying/index.md) .
 
 Para publicar uma compilação independente do aplicativo que não exige que o tempo de execução do .NET Core 3,0 seja instalado no host, especifique o tempo de execução a ser incluído no aplicativo usando o sinalizador `-r` (ou `--runtime`).
 
@@ -150,7 +150,7 @@ Para saber mais sobre como consultar o diário do sistema na linha de comando co
 
 Ao executar um aplicativo gRPC em produção, você deve usar um certificado TLS de uma AC (autoridade de certificação) confiável. Essa autoridade de certificação pode ser uma CA pública ou uma interna para sua organização.
 
-Em hosts do Windows, o certificado pode ser carregado de um [repositório de certificados](https://docs.microsoft.com/windows/win32/seccrypto/managing-certificates-with-certificate-stores) seguro usando a [classe X509Store](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509store?view=netcore-3.0). A classe `X509Store` também pode ser usada com o armazenamento de chaves OpenSSL em alguns hosts Linux.
+Em hosts do Windows, o certificado pode ser carregado de um [repositório de certificados](/windows/win32/seccrypto/managing-certificates-with-certificate-stores) seguro usando a classe <xref:System.Security.Cryptography.X509Certificates.X509Store>. A classe `X509Store` também pode ser usada com o armazenamento de chaves OpenSSL em alguns hosts Linux.
 
 Os certificados também podem ser criados usando um dos [construtores X509Certificate2](https://docs.microsoft.com/dotnet/api/system.security.cryptography.x509certificates.x509certificate.-ctor?view=netcore-3.0), seja de um arquivo (por exemplo, um arquivo `.pfx` protegido por uma senha forte) ou de dados binários recuperados de um serviço de armazenamento seguro, como [Azure Key Vault](https://azure.microsoft.com/services/key-vault/).
 
