@@ -7,12 +7,12 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: cea6809ebf9a4ae516d59bd99bf8126d2e874788
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: b43da2723fb618bc44a14e8102c8d59e6ecc0c11
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459570"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559840"
 ---
 # <a name="xaml-in-wpf"></a>XAML no WPF
 
@@ -28,14 +28,14 @@ ms.locfileid: "73459570"
 [Namespaces XAML e mapeamento de namespace para XAML WPF](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
 [Namescopes XAML WPF](wpf-xaml-namescopes.md)  
 [Modelos e estilos embutidos](inline-styles-and-templates.md)  
-[Processamento de espaço em branco em XAML](../../xaml-services/whitespace-processing-in-xaml.md)  
+[Processamento de espaço em branco em XAML](../../../desktop-wpf/xaml-services/white-space-processing.md)  
 [TypeConverters e XAML](typeconverters-and-xaml.md)  
-[Entidades e XAML de caractere XML](../../xaml-services/xml-character-entities-and-xaml.md)  
-[Recursos da linguagem (x:) do namespace de XAML](../../xaml-services/xaml-namespace-x-language-features.md)  
+[Entidades e XAML de caractere XML](../../../desktop-wpf/xaml-services/xml-character-entities.md)  
+[Recursos da linguagem (x:) do namespace de XAML](../../../desktop-wpf/xaml-services/namespace-language-features.md)  
 [Extensões XAML WPF](wpf-xaml-extensions.md)  
 [Recursos de linguagem da compatibilidade de marcação (mc:)](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
 
 [Arquitetura do WPF](wpf-architecture.md)  
 [Elementos base](base-elements.md)  

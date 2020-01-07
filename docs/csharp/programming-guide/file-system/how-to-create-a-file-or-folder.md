@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar um arquivo ou uma pasta – Guia de Programação em C#'
+title: Como criar um arquivo ou guia de programação C# de pasta
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: c29d0638e2429119020fee5317d40a95b00e40ef
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 97231a2e4818be3b99c796a407ae4b167e27f669
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590108"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635698"
 ---
-# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Como: criar um arquivo ou uma pasta (Guia de Programação em C#)
+# <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Como criar um arquivo ou uma pasta (C# guia de programação)
 Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arquivo na subpasta e gravar dados no arquivo programaticamente.  
   
 ## <a name="example"></a>Exemplo  
@@ -68,7 +68,7 @@ Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arqui
   
  Se você não tiver permissão para criar a pasta, o exemplo gerará uma instância da classe <xref:System.UnauthorizedAccessException>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [Guia de Programação em C#](../index.md)

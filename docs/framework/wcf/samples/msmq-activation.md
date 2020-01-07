@@ -2,12 +2,12 @@
 title: Ativação de MSMQ
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: be33e3d9377c30058c7a2ee06543c11f10251ebd
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2afcfbee69f8257e4ed0b1c352ef29e4af9ddb84
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714768"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544711"
 ---
 # <a name="msmq-activation"></a>Ativação de MSMQ
 
@@ -19,13 +19,13 @@ Este exemplo demonstra como hospedar aplicativos no WAS (serviço de ativação 
 > [!NOTE]
 > Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
 >
-> \<InstallDrive >: \ WF_WCF_Samples
+> \<InstallDrive>:\WF_WCF_Samples
 >
 > Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todos os exemplos do WCF e do [!INCLUDE[wf1](../../../../includes/wf1-md.md)]. Este exemplo está localizado no seguinte diretório.
 >
-> \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
+> \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.
 
-O WAS (serviço de ativação de processos do Windows), o novo mecanismo de ativação de processos para o [!INCLUDE[lserver](../../../../includes/lserver-md.md)], fornece recursos semelhantes ao IIS que estavam disponíveis anteriormente apenas para aplicativos baseados em HTTP para aplicativos que usam protocolos não HTTP. O Windows Communication Foundation (WCF) usa a interface do adaptador do ouvinte para comunicar solicitações de ativação recebidas em protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e MSMQ. A funcionalidade para receber solicitações em protocolos não HTTP é hospedada por serviços gerenciados do Windows em execução no SMSvcHost. exe.
+O WAS (serviço de ativação de processos do Windows), o novo mecanismo de ativação de processos do Windows Server 2008, fornece recursos semelhantes ao IIS que estavam disponíveis anteriormente apenas para aplicativos baseados em HTTP para aplicativos que usam protocolos não-HTTP. O Windows Communication Foundation (WCF) usa a interface do adaptador do ouvinte para comunicar solicitações de ativação recebidas em protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e MSMQ. A funcionalidade para receber solicitações em protocolos não HTTP é hospedada por serviços gerenciados do Windows em execução no SMSvcHost. exe.
 
 O serviço de adaptador de escuta net. MSMQ (NetMsmqActivator) ativa os aplicativos em fila com base nas mensagens na fila.
 
@@ -347,6 +347,6 @@ Por padrão, com o transporte de associação de `netMsmqBinding`, a segurança 
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Exemplos de persistência e de hospedagem do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193961)

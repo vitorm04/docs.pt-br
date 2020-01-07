@@ -1,34 +1,35 @@
 ---
 title: Automatizar o treinamento de modelos com a CLI do ML.NET
 description: Descubra como usar a ferramenta de CLI do ML.NET para treinar automaticamente o melhor modelo da linha de comando.
-author: CESARDELATORRE
-ms.date: 04/17/2019
+author: natke
+ms.author: nakersha
+ms.date: 12/17/2019
 ms.custom: how-to
-ms.openlocfilehash: c147464ff59563d336363eed73fc6337bdb12e85
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: c7ad80d627e69df329ffe6b53de60520188347d8
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275856"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636595"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>Automatizar o treinamento de modelos com a CLI do ML.NET
 
-A CLI do ML.NET "democratiza" o ML.NET, durante seu aprendizado, para desenvolvedores do .NET.
+A CLI do ML.NET automatiza a geração de modelos para desenvolvedores .NET.
 
 Para usar a API do ML.NET por si só (sem a CLI de AutoML do ML.NET), você precisa escolher um treinador (implementação de um algoritmo de aprendizado de máquina para uma tarefa específica) e o conjunto de transformações de dados (engenharia de recursos) para aplicar aos seus dados. O pipeline ideal variará para cada conjunto de dados e selecionar o algoritmo ideal entre todas as opções aumenta a complexidade. Além disso, cada algoritmo tem um conjunto de hiperparâmetros a serem ajustados. Portanto, você pode passar semanas e até meses em otimização de modelos de machine learning na tentativa de encontrar as combinações de engenharia de recursos, algoritmos de aprendizado e hiperparâmetros.
 
-Esse processo pode ser automatizado com a CLI do ML.NET, que implementa o mecanismo inteligente AutoML do ML.NET.
+A CLI do ML.NET simplifica esse processo usando o AutoML (Machine Learning automatizado). 
 
 > [!NOTE]
 > Este tópico refere-se à **CLI** do ML.NET e ao **AutoML** do ML.NET, que estão atualmente em Versão Prévia. O material pode estar sujeito a alterações.
 
 ## <a name="what-is-the-mlnet-command-line-interface-cli"></a>O que é a CLI (interface de linha de comando) do ML.NET?
 
-Você pode executar a CLI do ML.NET em qualquer prompt de comando (Windows, Mac ou Linux) para a geração de código-fonte e modelos do ML.NET de boa qualidade com base em seu conjunto de dados de treinamento.
+A CLI do ML.NET é uma ferramenta de dotnet global. Depois de instalado, dê a ele uma tarefa de aprendizado de máquina e um conjunto de dado de treinamento e ele gera um modelo C# ml.net, bem como o código a ser executado para usar o modelo em seu aplicativo.
 
 Conforme mostrado na figura abaixo, é simples gerar um modelo de alta qualidade do ML.NET (arquivo. zip de modelo serializado) mais o código C# de exemplo para executar/pontuar esse modelo. Além disso, o código C# para criar/treinar esse modelo também é gerado, de modo que você pode pesquisar e iterar pelo algoritmo e pelas configurações usados para esse "melhor modelo" gerado.
 
-![imagem](media/automate-training-with-cli/cli-high-level-process.png "Mecanismo AutoML funcionando dentro da CLI do ML.NET")
+![image](media/automate-training-with-cli/cli-high-level-process.png "O mecanismo AutoML está trabalhando dentro da CLI do ML.NET")
 
 Você pode gerar esses ativos de seus próprios conjuntos de dados sem codificação por conta própria, portanto, ele também melhorará a sua produtividade, mesmo se você já conhecer o ML.NET.
 
@@ -77,7 +78,7 @@ A seguir, é exibida a lista de métricas de tarefas de classificação binária
 
 A precisão é uma métrica popular para problemas de classificação, mas precisão nem sempre é a melhor métrica para selecionar o melhor modelo, conforme explicado nas referências abaixo. Há casos em que você precisa avaliar a qualidade do seu modelo com métricas adicionais.
 
-Para explorar e entender as métricas que são produzidas como saída pela CLI, consulte [Métricas para classificação binária](resources/metrics.md#metrics-for-binary-classification).
+Para explorar e entender as métricas que são geradas pela CLI, consulte [métricas de avaliação para classificação binária](resources/metrics.md#evaluation-metrics-for-binary-classification).
 
 ### <a name="metrics-for-multi-class-classification-models"></a>Métricas para modelos de classificação multiclasse
 
@@ -85,9 +86,9 @@ A seguir é exibida a lista de métricas de tarefas de ML de classificação mul
 
 ![imagem](media/automate-training-with-cli/cli-multiclass-classification-metrics.png)
 
-Para explorar e entender as métricas que são produzidas pela CLI, consulte [Métricas para classificação multiclasse](resources/metrics.md#metrics-for-multi-class-classification).
+Para explorar e entender as métricas que são geradas pela CLI, consulte [métricas de avaliação para classificação multiclasse](resources/metrics.md#evaluation-metrics-for-multi-class-classification).
 
-### <a name="metrics-for-regression-models"></a>Métricas para modelos de regressão
+### <a name="metrics-for-regression-and-recommendation-models"></a>Métricas para modelos de regressão e recomendação
 
 Um modelo de regressão se ajustará bem aos dados se as diferenças entre os valores observados e os previstos do modelo forem pequenas e sem desvio. A regressão pode ser avaliada com certas métricas.
 
@@ -95,11 +96,11 @@ Você verá uma lista semelhante de métricas para os cinco modelos com melhor q
 
 ![imagem](media/automate-training-with-cli/cli-regression-metrics.png)
 
-Para explorar e entender as métricas que são produzidas pela CLI, consulte [Métricas para regressão](resources/metrics.md#metrics-for-regression).
+Para explorar e entender as métricas que são geradas pela CLI, consulte [métricas de avaliação para regressão](resources/metrics.md#evaluation-metrics-for-regression-and-recommendation).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como instalar a ferramenta de CLI do ML.NET](how-to-guides/install-ml-net-cli.md)
-- [Tutorial: Geração automática de um classificador binário usando a CLI do ML.NET](tutorials/mlnet-cli.md)
+- [Tutorial: analisar o sentimentos usando a CLI do ML.NET](tutorials/sentiment-analysis-cli.md)
 - [Referência de comandos da CLI do ML.NET](reference/ml-net-cli-reference.md)
 - [Telemetria na CLI do ML.NET](resources/ml-net-cli-telemetry.md)

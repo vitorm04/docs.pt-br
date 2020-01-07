@@ -4,20 +4,20 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: af7bf487ff4ed250025b946f0948c269fcc5bf09
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418570"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635789"
 ---
 # <a name="c-features-that-support-linq"></a>funcionalidades do C# que dão suporte a LINQ
 
-A seção a seguir apresenta os novos constructos de linguagem introduzidos no C# 3.0. Embora esses novos recursos tenham algum grau de utilização com consultas [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], eles não estão limitados a [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e podem ser usados em qualquer contexto em que sejam úteis.
+A seção a seguir apresenta os novos constructos de linguagem introduzidos no C# 3.0. Embora esses novos recursos sejam usados para um grau com consultas LINQ, eles não estão limitados ao LINQ e podem ser usados em qualquer contexto onde você os ache úteis.
 
 ## <a name="query-expressions"></a>Expressões de consulta
 
-As expressões de consulta usam uma sintaxe declarativa semelhante ao SQL ou XQuery para consultar em coleções IEnumerable. Em tempo de compilação, a sintaxe de consulta é convertida em chamadas de método a uma implementação da [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] dos métodos de extensão do operador de consulta padrão do provedor. Os aplicativos controlam os operadores de consulta padrão que estão no escopo, especificando o namespace apropriado com uma diretiva `using`. A expressão de consulta a seguir pega uma matriz de cadeias de caracteres, agrupa-os de acordo com o primeiro caractere da cadeia de caracteres e ordena os grupos.
+As expressões de consulta usam uma sintaxe declarativa semelhante ao SQL ou XQuery para consultar em coleções IEnumerable. No tempo de compilação, a sintaxe de consulta é convertida em chamadas de método para a implementação de um provedor LINQ dos métodos de extensão do operador de consulta padrão. Os aplicativos controlam os operadores de consulta padrão que estão no escopo, especificando o namespace apropriado com uma diretiva `using`. A expressão de consulta a seguir pega uma matriz de cadeias de caracteres, agrupa-os de acordo com o primeiro caractere da cadeia de caracteres e ordena os grupos.
 
 ```csharp
 var query = from str in stringArray
@@ -66,7 +66,7 @@ A fonte de dados pode ter mais propriedades escondidas do que a classe `Customer
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
 ```
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [Inicializadores de objeto e coleção](../../classes-and-structs/object-and-collection-initializers.md)
 
@@ -80,19 +80,19 @@ Um tipo anônimo é construído pelo compilador e o nome do tipo só fica dispon
 select new {name = cust.Name, phone = cust.Phone};
 ```
 
-Para obter mais informações, consulte [Tipos anônimos](../../classes-and-structs/anonymous-types.md).
+Para obter mais informações, consulte [Tipos Anônimos](../../classes-and-structs/anonymous-types.md).
 
-## <a name="extension-methods"></a>Métodos de extensão
+## <a name="extension-methods"></a>Métodos de Extensão
 
-Um método de extensão é um método estático que pode ser associado a um tipo, para que ele possa ser chamado como se fosse um método de instância no tipo. Esse recurso permite que você, na verdade, "adicione" novos métodos a tipos existentes sem realmente modificá-los. Os operadores de consulta padrão são um conjunto de métodos de extensão que fornecem a funcionalidade de consulta da [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] para qualquer tipo que implementa a <xref:System.Collections.Generic.IEnumerable%601>.
+Um método de extensão é um método estático que pode ser associado a um tipo, para que ele possa ser chamado como se fosse um método de instância no tipo. Esse recurso permite que você, na verdade, "adicione" novos métodos a tipos existentes sem realmente modificá-los. Os operadores de consulta padrão são um conjunto de métodos de extensão que fornecem a funcionalidade de consulta LINQ para qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>.
 
 Para obter mais informações, consulte [Métodos de extensão](../../classes-and-structs/extension-methods.md).
 
 ## <a name="lambda-expressions"></a>Expressões lambda
 
-Uma expressão lambda é uma função embutida que usa o operador => para separar os parâmetros de entrada do corpo da função e podem ser convertidos em um delegado ou uma árvore de expressão, em tempo de compilação. Na programação [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você encontrará as expressões lambda ao fazer chamadas de método diretas aos operadores de consulta padrão.
+Uma expressão lambda é uma função embutida que usa o operador => para separar os parâmetros de entrada do corpo da função e podem ser convertidos em um delegado ou uma árvore de expressão, em tempo de compilação. Na programação LINQ, você encontrará expressões lambda ao fazer chamadas de método direto para os operadores de consulta padrão.
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [Funções Anônimas](../../statements-expressions-operators/anonymous-functions.md)
 
@@ -100,6 +100,6 @@ Para obter mais informações, consulte:
 
 - [Árvores de expressão (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ (consulta integrada à linguagem) (C#)](./index.md)

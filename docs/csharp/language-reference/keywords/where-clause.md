@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 15df6339cec9eabadf5aa4c184d7504c4e065032
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: f145811da2a90dd544b0590ad75af92b281884bc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421926"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635880"
 ---
 # <a name="where-clause-c-reference"></a>Cláusula where (Referência de C#)
 
@@ -41,11 +41,11 @@ Uma cláusula `where` pode conter um ou mais métodos que retornam valores booli
 
 A cláusula `where` é um mecanismo de filtragem. Ela pode ser posicionada em quase qualquer lugar em uma expressão de consulta, exceto que ela não pode ser a primeira ou a última cláusula. A cláusula `where` pode aparecer antes ou depois de uma cláusula [group](group-clause.md) dependendo se você tiver que filtrar os elementos de origem antes ou depois de eles serem agrupados.
 
-Se um predicado especificado não for válido para os elementos na fonte de dados, o resultado será um erro em tempo de compilação. Essa é uma vantagem da verificação de tipo forte fornecida pelo [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].
+Se um predicado especificado não for válido para os elementos na fonte de dados, o resultado será um erro em tempo de compilação. Esse é um dos benefícios da verificação de tipo forte fornecida pelo LINQ.
 
 Em tempo de compilação, a palavra-chave `where` é convertida em uma chamada para o método de operador de consulta padrão <xref:System.Linq.Enumerable.Where%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Palavras-chave de Consulta (LINQ)](query-keywords.md)
 - [Cláusula From](from-clause.md)

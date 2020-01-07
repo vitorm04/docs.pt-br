@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: f74f374f13aef5135b81d59f94bc2c6913766763
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 88f30376f9c7684e64dd593becfa0ff8711a08ec
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039311"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635256"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Argumentos de linha de comando (Guia de Programação em C#)
 
@@ -74,11 +74,11 @@ Para compilar e executar o aplicativo em um prompt de comando, siga estas etapas
 > [!NOTE]
 > Ao executar um aplicativo no Visual Studio, você pode especificar argumentos de linha de comando na [Página de depuração, Designer de Projeto](/visualstudio/ide/reference/debug-page-project-designer).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Environment?displayProperty=nameWithType>
 - [Guia de Programação em C#](../index.md)
 - [Main() e argumentos de linha de comando](index.md)
-- [Como exibir argumentos de linha de comando](how-to-display-command-line-arguments.md)
+- [Como Dsplay argumentos de linha de comando](how-to-display-command-line-arguments.md)
 - [Valores de retorno de Main()](main-return-values.md)
 - [Classes](../classes-and-structs/classes.md)

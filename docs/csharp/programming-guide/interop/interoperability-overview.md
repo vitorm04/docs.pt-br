@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 1342711ca17b0d2bf5122f4c749514e3b96c9ad7
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2e1b31817873324fd320a9dcbabaf5ef26fa7b74
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921814"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635178"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Visão geral sobre interoperabilidade (Guia de Programação em C#)
 O tópico descreve métodos para permitir a interoperabilidade entre código gerenciado e código não gerenciado do C#.  
@@ -22,7 +22,7 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
 ## <a name="platform-invoke"></a>Invocação de plataforma  
  A *invocação de plataforma* é um serviço que permite ao código gerenciado chamar funções não gerenciadas que são implementadas em DLLs (bibliotecas de vínculo dinâmico), como aquelas na API do Microsoft Windows. Ela localiza e invoca uma função exportada e realiza marshaling dos argumentos (inteiros, cadeias de caracteres, matrizes, estruturas e assim por diante) além do limite de interoperação, conforme necessário.  
   
- Para saber mais, veja [Consumo de funções de DLL não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md) e [Como usar a invocação de plataforma para reproduzir um arquivo wave](./how-to-use-platform-invoke-to-play-a-wave-file.md).  
+Para obter mais informações, consulte [consumindo funções de dll não gerenciadas](../../../framework/interop/consuming-unmanaged-dll-functions.md) e [como usar a invocação de plataforma para reproduzir um arquivo WAV](./how-to-use-platform-invoke-to-play-a-wave-file.md).
   
 > [!NOTE]
 > O [CLR](../../../standard/clr.md) (Common Language Runtime) gerencia o acesso aos recursos do sistema. Chamar código não gerenciado que esteja fora do CLR ignora esse mecanismo de segurança e, portanto, apresenta um risco de segurança. Por exemplo, o código não gerenciado pode chamar recursos diretamente em código não gerenciado, ignorando os mecanismos de segurança do CLR. Para obter mais informações, confira [Segurança no .NET](../../../standard/security/index.md).  
@@ -58,7 +58,7 @@ O tópico descreve métodos para permitir a interoperabilidade entre código ger
   
  Para obter mais informações, consulte [Expondo componentes do .NET Framework para o COM](../../../framework/interop/exposing-dotnet-components-to-com.md) e [Classe COM de exemplo](./example-com-class.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Melhorando o desempenho de interoperabilidade](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [Introdução à interoperabilidade entre COM e .NET](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)

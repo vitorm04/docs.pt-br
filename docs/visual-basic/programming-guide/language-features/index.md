@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: 8cb0b017410e991628bad59a6986ba37426c913f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c8496d4e452da92e0ae994f0b246cc16723c06e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345063"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636569"
 ---
 # <a name="visual-basic-language-features"></a>Funcionalidades da linguagem do Visual Basic
-Os tópicos a seguir apresentam e discutem os componentes essenciais do Visual Basic, uma linguagem de programação orientada a objeto. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. Assim como acontece com qualquer linguagem de programação moderna, o Visual Basic dá suporte a várias construções de programação e elementos de linguagem comuns.  
+Os tópicos a seguir apresentam e discutem os componentes essenciais do Visual Basic, uma linguagem de programação orientada a objeto. Depois de criar a interface do usuário para o seu aplicativo usando formulários e controles, você precisa escrever o código que define o comportamento do aplicativo. Assim como acontece com qualquer linguagem de programação moderna, o Visual Basic oferece suporte a algumas construções e elementos de linguagem de programação comuns.  
   
  Se você já programou em outras linguagens, grande parte do material abordado nesta seção poderá parecer familiar. Embora a maioria das construções seja semelhante àquelas em outras linguagens, a natureza controlada por evento do Visual Basic apresenta algumas diferenças sutis.  
   
@@ -54,7 +54,7 @@ Os tópicos a seguir apresentam e discutem os componentes essenciais do Visual B
  Descreve o que são as interfaces e como usá-las em seus aplicativos.  
   
  [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- Fornece links para tópicos que apresentam recursos [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] e programação.  
+ Fornece links para tópicos que introduzem recursos e programação de LINQ (consulta integrada à linguagem).  
   
  [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
  Fornece uma visão geral dos objetos e classes, como eles são usados, suas relações entre si e as propriedades, métodos e eventos que expõem.  

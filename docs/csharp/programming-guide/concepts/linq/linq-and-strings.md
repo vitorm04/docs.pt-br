@@ -2,18 +2,18 @@
 title: LINQ e cadeias de caracteres (C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: fb1714c54331ead80cd28435cf3ed1c4c54a704e
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: b805bc7318b8c5fe70ab1c060d1058a6bbc4f177
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140903"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635529"
 ---
 # <a name="linq-and-strings-c"></a>LINQ e cadeias de caracteres (C#)
 
 A LINQ pode ser usada para consultar e transformar as cadeias de caracteres e coleções de cadeias de caracteres. Ele pode ser especialmente útil com os dados semiestruturados em arquivos de texto. Consultas LINQ podem ser combinadas com expressões regulares e funções de cadeia de caracteres tradicionais. Por exemplo, você pode usar o método <xref:System.String.Split%2A?displayProperty=nameWithType> ou <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> para criar uma matriz de cadeias de caracteres que você pode consultar ou modificar usando o LINQ. Você pode usar o método <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> na cláusula `where` de uma consulta LINQ. E você pode usar o LINQ para consultar ou modificar os resultados de <xref:System.Text.RegularExpressions.MatchCollection> retornados por uma expressão regular.
 
-Você também pode usar as técnicas descritas nessa seção para transformar dados de texto semiestruturados em XML. Para obter mais informações, consulte [Como gerar um XML de arquivos CSV](how-to-generate-xml-from-csv-files.md).
+Você também pode usar as técnicas descritas nessa seção para transformar dados de texto semiestruturados em XML. Para obter mais informações, consulte [como gerar XML a partir de arquivos CSV](how-to-generate-xml-from-csv-files.md).
 
 Os exemplos nesta seção se enquadram em duas categorias:
 
@@ -24,11 +24,11 @@ Consultar, analisar e modificar os blocos de texto dividindo-os em uma matriz de
 - [Como contar ocorrências de uma palavra em uma cadeia de caracteres (LINQ)C#()](how-to-count-occurrences-of-a-word-in-a-string-linq.md)  
   Mostra como usar a LINQ para consultas simples em texto.
 
-- [Como consultar sentenças que contenham um conjunto especificado de palavras (LINQ) (C#)](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
+- [Como consultar frases que contenham um conjunto especificado de palavras (LINQ) (C#)](how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md)
 
   Mostra como dividir os arquivos de texto em limites arbitrários e como executar consultas em cada parte.
 
-- [Como consultar caracteres em uma cadeia de caracteres (LINQ) (C#)](how-to-query-for-characters-in-a-string-linq.md)
+- [Como consultar os caracteres em uma cadeia de caracteres (LINQ)C#()](how-to-query-for-characters-in-a-string-linq.md)
 
   Demonstra que uma cadeia de caracteres é de um tipo passível de consulta.
 
@@ -52,7 +52,7 @@ Muitos tipos diferentes de arquivos de texto consistem em uma série de linhas, 
 
   Mostra como reordenar campos em uma linha em um arquivo .csv.
 
-- [Como: combinar e comparar coleções de cadeias de caracteres (C#LINQ) ()](how-to-combine-and-compare-string-collections-linq.md)
+- [Como combinar e comparar coleções de cadeias de caracteres (C#LINQ) ()](how-to-combine-and-compare-string-collections-linq.md)
 
   Mostra como combinar listas de cadeias de caracteres de várias maneiras.
 
@@ -72,7 +72,7 @@ Muitos tipos diferentes de arquivos de texto consistem em uma série de linhas, 
   
   Mostra como executar cálculos matemáticos em dados de texto em arquivos .csv.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ (consulta integrada à linguagem) (C#)](index.md)
-- [Como gerar um XML de arquivos CSV](how-to-generate-xml-from-csv-files.md)
+- [Como gerar XML a partir de arquivos CSV](how-to-generate-xml-from-csv-files.md)

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - join clause [LINQ in C#]
 - group clause [LINQ in C#]
 ms.assetid: a7ea3421-1cf4-4df7-832a-aa22fe6379e9
-ms.openlocfilehash: 361101258caca763502f92d897866c75bc8d7da2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 91c038303c1ad7c2530964d3102aae49090c4c2a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418717"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635932"
 ---
 # <a name="basic-linq-query-operations-c"></a>Operações de consulta LINQ básica (C#)
-Este tópico fornece uma breve introdução às expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e a alguns dos tipos típicos de operações que podem ser executadas em uma consulta. Informações mais detalhadas estão nos tópicos a seguir:  
+Este tópico fornece uma breve introdução às expressões de consulta LINQ e alguns dos tipos típicos de operações que você executa em uma consulta. Informações mais detalhadas estão nos tópicos a seguir:  
   
  [Expressões de consulta LINQ](../../../linq/index.md)  
   
@@ -34,17 +34,17 @@ Este tópico fornece uma breve introdução às expressões de consulta [!INCLUD
  [Passo a passo: escrevendo consultas em C#](./walkthrough-writing-queries-linq.md)  
   
 > [!NOTE]
-> Se já estiver familiarizado com uma linguagem de consulta como SQL ou XQuery, você poderá ignorar a maior parte deste tópico. Leia sobre a "cláusula `from`" na próxima seção para saber mais sobre a ordem das cláusulas em expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+> Se já estiver familiarizado com uma linguagem de consulta como SQL ou XQuery, você poderá ignorar a maior parte deste tópico. Leia sobre a "cláusula de`from`" na próxima seção para saber mais sobre a ordem das cláusulas em expressões de consulta LINQ.  
   
 ## <a name="obtaining-a-data-source"></a>Obtendo uma Fonte de Dados  
- Em um consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a primeira etapa é especificar a fonte de dados. No C#, como na maioria das linguagens de programação, uma variável deve ser declarada antes que possa ser usada. Em um consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a cláusula `from` vem primeiro para introduzir a fonte de dados (`customers`) e a *variável de intervalo* (`cust`).  
+ Em uma consulta LINQ, a primeira etapa é especificar a fonte de dados. No C#, como na maioria das linguagens de programação, uma variável deve ser declarada antes que possa ser usada. Em uma consulta LINQ, a cláusula `from` é exibida primeiro para introduzir a fonte de dados (`customers`) e a *variável de intervalo* (`cust`).  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   
  A variável de intervalo é como a variável de iteração em um loop `foreach`, mas nenhuma iteração real ocorre em uma expressão de consulta. Quando a consulta é executada, a variável de intervalo servirá como uma referência para cada elemento sucessivo em `customers`. Uma vez que o compilador pode inferir o tipo de `cust`, você não precisa especificá-lo explicitamente. Variáveis de intervalo adicionais podem ser introduzidas por uma cláusula `let`. Para obter mais informações, consulte [Cláusula let](../../../language-reference/keywords/let-clause.md).  
   
 > [!NOTE]
-> Para fontes de dados não genéricas, como <xref:System.Collections.ArrayList>, a variável de intervalo deve ser tipada explicitamente. Para obter mais informações, consulte [Como consultar um ArrayList com LINQ (C#)](./how-to-query-an-arraylist-with-linq.md) e [Cláusula from](../../../language-reference/keywords/from-clause.md).  
+> Para fontes de dados não genéricas, como <xref:System.Collections.ArrayList>, a variável de intervalo deve ser tipada explicitamente. Para obter mais informações, consulte [como consultar uma ArrayList com a cláusulaC#LINQ ()](./how-to-query-an-arraylist-with-linq.md) e [from](../../../language-reference/keywords/from-clause.md).  
   
 ## <a name="filtering"></a>Filtragem  
  Provavelmente, a operação de consulta mais comum é aplicar um filtro no formulário de uma expressão booliana. O filtro faz com que a consulta retorne apenas os elementos para os quais a expressão é verdadeira. O resultado é produzido usando a cláusula `where`. O filtro em vigor especifica os elementos a serem excluídos da sequência de origem. No exemplo a seguir, somente os `customers` que têm um endereço em Londres são retornados.  
@@ -84,11 +84,11 @@ Este tópico fornece uma breve introdução às expressões de consulta [!INCLUD
  Para obter mais informações, consulte [Cláusula group](../../../language-reference/keywords/group-clause.md).  
   
 ## <a name="joining"></a>Ingressando  
- Operações de junção criam associações entre sequências que não são modeladas explicitamente nas fontes de dados. Por exemplo, você pode executar uma junção para localizar todos os clientes e distribuidores que têm o mesmo local. Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a cláusula `join` sempre funciona com coleções de objetos em vez de tabelas de banco de dados diretamente.  
+ Operações de junção criam associações entre sequências que não são modeladas explicitamente nas fontes de dados. Por exemplo, você pode executar uma junção para localizar todos os clientes e distribuidores que têm o mesmo local. No LINQ, a cláusula `join` sempre funciona em coleções de objetos em vez de tabelas de banco de dados diretamente.  
   
  [!code-csharp[csLINQGettingStarted#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#36)]  
   
- Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você não precisa usar `join` com a mesma frequência que o faz no SQL, porque as chaves estrangeiras em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] são representados no modelo do objeto como propriedades que mantêm uma coleção de itens. Por exemplo, um objeto `Customer` que contém uma coleção de objetos `Order`. Em vez de executar uma junção, você pode acessar os pedidos usando notação de ponto:  
+ No LINQ, você não precisa usar `join` com a frequência que faz no SQL, porque as chaves estrangeiras no LINQ são representadas no modelo de objeto como propriedades que mantêm uma coleção de itens. Por exemplo, um objeto `Customer` que contém uma coleção de objetos `Order`. Em vez de executar uma junção, você pode acessar os pedidos usando notação de ponto:  
   
 ```csharp
 from order in Customer.Orders...  
@@ -97,9 +97,9 @@ from order in Customer.Orders...
  Para obter mais informações, consulte [Cláusula join](../../../language-reference/keywords/join-clause.md).  
   
 ## <a name="selecting-projections"></a>Selecionando (Projeções)  
- A cláusula `select` produz os resultados da consulta e especifica a "forma" ou o tipo de cada elemento retornado. Por exemplo, você pode especificar se os resultados consistirão em objetos `Customer` completos, apenas um membro, um subconjunto de membros ou algum tipo de resultado completamente diferente com base em um cálculo ou na criação de um novo objeto. Quando a cláusula `select` produz algo diferente de uma cópia do elemento de origem, a operação é chamada de *projeção*. O uso de projeções para transformar dados é uma funcionalidade poderosa das expressões de consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações, consulte [Transformações de dados com LINQ (C#)](./data-transformations-with-linq.md) e [Cláusula select](../../../language-reference/keywords/select-clause.md).  
+ A cláusula `select` produz os resultados da consulta e especifica a "forma" ou o tipo de cada elemento retornado. Por exemplo, você pode especificar se os resultados consistirão em objetos `Customer` completos, apenas um membro, um subconjunto de membros ou algum tipo de resultado completamente diferente com base em um cálculo ou na criação de um novo objeto. Quando a cláusula `select` produz algo diferente de uma cópia do elemento de origem, a operação é chamada de *projeção*. O uso de projeções para transformar dados é um recurso poderoso de expressões de consulta LINQ. Para obter mais informações, consulte [Transformações de dados com LINQ (C#)](./data-transformations-with-linq.md) e [Cláusula select](../../../language-reference/keywords/select-clause.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Expressões de consulta LINQ](../../../linq/index.md)
 - [Passo a passo: escrevendo consultas em C#](./walkthrough-writing-queries-linq.md)

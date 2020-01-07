@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: cf9c0ad345ce8762e700bb46b431804dccb79409
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.openlocfilehash: a9dddb4a3e7af2ca76bb5d3f953cc36c6142623a
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283057"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635997"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução à linguagem C# e ao .NET Framework
 
@@ -22,7 +22,7 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
 ## <a name="c-language"></a>Linguagem C#
 
- A sintaxe de C# é altamente expressiva, mas também é simples e fácil de aprender. A sintaxe de chaves de C# será instantaneamente reconhecível para qualquer pessoa familiarizada com C, C++ ou Java. Normalmente, os desenvolvedores que conhecem qualquer uma dessas linguagens são capazes de começar a trabalhar de forma produtiva em C# dentro de um período muito curto. A sintaxe de C# simplifica muitas complexidades de C++ e fornece recursos poderosos como tipos de valor anulável, enumerações, delegados, expressões lambda e acesso direto à memória, que não existem em Java. C# oferece suporte a tipos e métodos genéricos, o que proporciona mais segurança e desempenho para os tipos, e iteradores, que permitem aos implementadores das classes de coleção definir os comportamentos personalizados da iteração simples de usar pelo código do cliente. As expressões [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] tornam a consulta fortemente tipada uma construção de linguagem de primeira classe.  
+ A sintaxe de C# é altamente expressiva, mas também é simples e fácil de aprender. A sintaxe de chaves de C# será instantaneamente reconhecível para qualquer pessoa familiarizada com C, C++ ou Java. Normalmente, os desenvolvedores que conhecem qualquer uma dessas linguagens são capazes de começar a trabalhar de forma produtiva em C# dentro de um período muito curto. A sintaxe de C# simplifica muitas complexidades de C++ e fornece recursos poderosos como tipos de valor anulável, enumerações, delegados, expressões lambda e acesso direto à memória, que não existem em Java. C# oferece suporte a tipos e métodos genéricos, o que proporciona mais segurança e desempenho para os tipos, e iteradores, que permitem aos implementadores das classes de coleção definir os comportamentos personalizados da iteração simples de usar pelo código do cliente. As expressões de consulta integrada à linguagem (LINQ) fazem com que a consulta fortemente tipada seja uma construção de linguagem de primeira classe.  
   
  Por ser uma linguagem orientada a objeto, o C# oferece suporte aos conceitos de encapsulamento, herança e polimorfismo. Todas as variáveis e métodos, incluindo o método `Main`, o ponto de entrada do aplicativo, são encapsulados em definições de classe. Uma classe pode herdar diretamente de uma classe pai, mas pode implementar qualquer quantidade de interfaces. Métodos que substituem métodos virtuais em uma classe pai exigem a palavra-chave `override` como uma forma de evitar uma redefinição acidental. Em C#, um struct é como uma classe simplificada; é um tipo alocado na pilha que pode implementar interfaces, mas não oferece suporte a herança.  
   
@@ -36,7 +36,7 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
 - Comentários embutidos da documentação XML.  
   
-- [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] que fornece recursos de consulta internos em várias fontes de dados.  
+- LINQ (consulta integrada à linguagem), que fornece recursos de consulta internos em uma variedade de fontes de dados.  
   
  Se você precisar interagir com outros softwares do Windows, como objetos COM ou DLLs Win32 nativas, faça isso em C# através de um processo denominado "Interoperabilidade". A interoperabilidade permite que programas em C# façam quase tudo que um aplicativo C++ nativo pode fazer. C# oferece suporte até mesmo para ponteiros, e o conceito de código "não seguro" para os casos nos quais o acesso direto à memória é absolutamente essencial.  
   
@@ -48,7 +48,7 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
 - Para obter informações detalhadas sobre aspectos específicos da linguagem C#, consulte a [Referência de C#](../language-reference/index.md).  
   
-- Para saber mais sobre [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], confira [LINQ (Consulta Integrada à Linguagem)](../programming-guide/concepts/linq/index.md).  
+- Para obter mais informações sobre LINQ, consulte [LINQ (consulta integrada à linguagem)](../programming-guide/concepts/linq/index.md).  
 
 ## <a name="net-framework-platform-architecture"></a>Arquitetura da plataforma do .NET Framework
 
@@ -66,6 +66,6 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
  Para saber mais sobre o .NET Framework, confira [Visão geral do Microsoft .NET Framework](../../framework/get-started/overview.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Introdução com VisualC#](/visualstudio/ide/quickstart-csharp-console)

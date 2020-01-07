@@ -3,12 +3,12 @@ title: Noções básicas sobre expressões de consulta (LINQ em C#)
 description: Apresenta os conceitos relacionados a expressões de consulta
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709111"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635854"
 ---
 # <a name="query-expression-basics"></a>Noções básicas sobre expressões de consulta
 
@@ -114,7 +114,7 @@ Use a cláusula `select` para produzir todos os outros tipos de sequências. Uma
 
 [!code-csharp[csrefQueryExpBasics#56](~/samples/snippets/csharp/concepts/linq/query-expression-basics_12.cs)]
 
-A cláusula `select` pode ser usada para transformar dados de origem em sequências de novos tipos. Essa transformação também é chamada de *projeção*. No exemplo a seguir, a cláusula `select` *projeta* uma sequência de tipos anônimos que contém apenas um subconjunto dos campos no elemento original. Observe que os novos objetos são inicializados usando um inicializador de objeto.
+A cláusula `select` pode ser usada para transformar dados de origem em sequências de novos tipos. Essa transformação também é chamada de *projeção*. No exemplo a seguir, a cláusula `select`*projeta* uma sequência de tipos anônimos que contém apenas um subconjunto dos campos no elemento original. Observe que os novos objetos são inicializados usando um inicializador de objeto.
 
 [!code-csharp[csrefQueryExpBasics#57](~/samples/snippets/csharp/concepts/linq/query-expression-basics_13.cs)]
 
@@ -150,7 +150,7 @@ A palavra-chave `ascending` é opcional. Será a ordem de classificação padrã
 
 #### <a name="join-clause"></a>Cláusula join
 
-Use a cláusula `join` para associar e/ou combinar elementos de uma fonte de dados com elementos de outra fonte de dados com base em uma comparação de igualdade entre as chaves especificadas em cada elemento. Na LINQ, as operações join são executadas em sequências de objetos cujos elementos são de tipos diferentes. Após ter unido duas sequências, você deve usar uma instrução `select` ou `group` para especificar qual elemento armazenar na sequência de saída. Você também pode usar um tipo anônimo para combinar propriedades de cada conjunto de elementos associados em um novo tipo para a sequência de saída. O exemplo a seguir associa objetos `prod` cuja propriedade `Category` corresponde a uma das categorias na matriz de cadeias de caracteres `categories`. Produtos cuja `Category` não corresponde a nenhuma cadeia de caracteres em `categories` são filtrados. A instrução `select` projeta um novo tipo cujas propriedades são tiradas de `cat` e `prod`.
+Use a cláusula `join` para associar e/ou combinar elementos de uma fonte de dados com elementos de outra fonte de dados com base em uma comparação de igualdade entre as chaves especificadas em cada elemento. Na LINQ, as operações join são executadas em sequências de objetos cujos elementos são de tipos diferentes. Após ter unido duas sequências, você deve usar uma instrução `select` ou `group` para especificar qual elemento armazenar na sequência de saída. Você também pode usar um tipo anônimo para combinar propriedades de cada conjunto de elementos associados em um novo tipo para a sequência de saída. O exemplo a seguir associa objetos `prod` cuja propriedade `Category` corresponde a uma das categorias na matriz de cadeias de caracteres `categories`. Os produtos cujo `Category` não corresponde a nenhuma cadeia de caracteres no `categories` são filtrados. A instrução `select` projeta um novo tipo cujas propriedades são obtidas de `cat` e `prod`.
 
 [!code-csharp[csrefQueryExpBasics#61](~/samples/snippets/csharp/concepts/linq/query-expression-basics_17.cs)]
 
@@ -170,9 +170,9 @@ Uma cláusula de consulta pode conter uma expressão de consulta, que às vezes 
 
 [!code-csharp[csrefQueryExpBasics#63](~/samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]
 
-Para obter mais informações, consulte [Como executar uma subconsulta em uma operação de agrupamento](perform-a-subquery-on-a-grouping-operation.md).
+Para obter mais informações, consulte [executar uma subconsulta em uma operação de agrupamento](perform-a-subquery-on-a-grouping-operation.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de programação em C#](../programming-guide/index.md)
 - [LINQ (Consulta Integrada à Linguagem)](index.md)

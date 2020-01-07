@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: b5c604cbb0fef158750b0fa487374ab293795fc7
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 568b979c8b2e859dcfa87a3c3446132c740ff14c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633716"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635906"
 ---
 # <a name="remove-c-reference"></a>remove (Referência de C#)
 
@@ -20,12 +20,12 @@ A palavra-chave contextual `remove` é usada para definir um acessador de evento
 
 ## <a name="example"></a>Exemplo
 
-O exemplo a seguir mostra um evento com os acessadores [add](add.md) e `remove` personalizados. Para ver o exemplo completo, confira [Como  implementar eventos de interface](../../programming-guide/events/how-to-implement-interface-events.md).
+O exemplo a seguir mostra um evento com os acessadores [add](add.md) e `remove` personalizados. Para obter o exemplo completo, consulte [como implementar eventos de interface](../../programming-guide/events/how-to-implement-interface-events.md).
 
  [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
 
 Normalmente, não é necessário fornecer seus próprios acessadores de eventos personalizados. Os acessadores que são gerados automaticamente pelo compilador quando você declara um evento são suficientes para a maioria dos cenários.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eventos](../../programming-guide/events/index.md)

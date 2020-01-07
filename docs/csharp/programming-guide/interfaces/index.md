@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 77326b37baebc3ade12336b1b3735ed1da497afc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120152"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635230"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
@@ -62,17 +62,17 @@ Uma interface tem as propriedades a seguir:
 [Implementação de interface explícita](explicit-interface-implementation.md)  
  Explica como criar um membro da classe que é específico para uma interface.  
   
- [Como implementar membros de interface explicitamente](how-to-explicitly-implement-interface-members.md)  
+ [Como implementar explicitamente membros de interface](how-to-explicitly-implement-interface-members.md)  
  Fornece um exemplo de como implementar explicitamente membros de interfaces.  
   
- [Como implementar membros de duas interfaces explicitamente](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Como implementar explicitamente membros de duas interfaces](how-to-explicitly-implement-members-of-two-interfaces.md)  
  Fornece um exemplo de como implementar explicitamente membros de interfaces com herança.  
   
 ## <a name="BKMK_RelatedSections"></a> Seções relacionadas
 
 - [Propriedades de interface](../classes-and-structs/interface-properties.md)  
 - [Indexadores em interfaces](../indexers/indexers-in-interfaces.md)  
-- [Como implementar eventos de interface](../events/how-to-implement-interface-events.md)  
+- [Como implementar eventos de interface](../events/how-to-implement-interface-events.md)
 - [Classes e Structs](../classes-and-structs/index.md)  
 - [Herança](../classes-and-structs/inheritance.md)  
 - [Métodos](../classes-and-structs/methods.md)  
@@ -86,7 +86,7 @@ Uma interface tem as propriedades a seguir:
 
 [Interfaces](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) em [Learning C# 3.0: Master the Fundamentals of C# 3.0 (Aprendendo C# 3.0: dominando os conceitos básicos do C# 3.0)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Herança](../classes-and-structs/inheritance.md)

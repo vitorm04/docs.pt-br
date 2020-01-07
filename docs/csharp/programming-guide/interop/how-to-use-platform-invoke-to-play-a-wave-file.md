@@ -1,5 +1,5 @@
 ---
-title: Como usar a invocação de plataforma para reproduzir um guia de C# programação de arquivos de onda
+title: Como usar a invocação de plataforma para reproduzir um guia C# de programação de arquivos WAV
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 6c2313f7b600bc1670c944f6a93868c1bc4c7c16
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 082bd4b51e06332b0fecc633cc0501cafa8e7ff8
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039320"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635282"
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Como usar invocação de plataforma para executar um arquivo wave (Guia de Programação em C#)
+# <a name="how-to-use-platform-invoke-to-play-a-wav-file-c-programming-guide"></a>Como usar a invocação de plataforma para reproduzir um arquivoC# WAV (guia de programação)
 
-O exemplo de código C# a seguir ilustra como usar os serviços de invocação de plataforma para reproduzir um arquivo de som wave no sistema operacional Windows.
+O exemplo C# de código a seguir ilustra como usar os serviços de invocação de plataforma para reproduzir um arquivo de som wav no sistema operacional Windows.
 
 ## <a name="example"></a>Exemplo
 
@@ -41,7 +41,7 @@ A caixa de diálogo **Abrir Arquivos** é filtrada por meio das configurações 
 
 4. Compile e execute o código.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Visão geral sobre interoperabilidade](interoperability-overview.md)

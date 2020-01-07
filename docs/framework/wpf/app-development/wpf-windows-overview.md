@@ -28,18 +28,18 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: 87d5ff67a9e95c5ec5385802d09d667ee8b6e0f9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3bc31391d30b0724a480152aa7f1d0dc93380b8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740684"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636400"
 ---
 # <a name="wpf-windows-overview"></a>Visão geral do WPF do Windows
-Os usuários interagem com aplicativos autônomos do Windows Presentation Foundation (WPF) por meio do Windows. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] autônomos fornecem suas próprias janelas usando a classe <xref:System.Windows.Window>. Este tópico apresenta <xref:System.Windows.Window> antes de abranger os conceitos básicos da criação e gerenciamento de janelas em aplicativos autônomos.  
+Os usuários interagem com aplicativos autônomos do Windows Presentation Foundation (WPF) por meio do Windows. O objetivo principal de uma janela é hospedar conteúdo que visualiza dados e permite aos usuários interagir com os dados. Os aplicativos autônomos do WPF fornecem suas próprias janelas usando a classe <xref:System.Windows.Window>. Este tópico apresenta <xref:System.Windows.Window> antes de abranger os conceitos básicos da criação e gerenciamento de janelas em aplicativos autônomos.  
   
 > [!NOTE]
-> Aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] hospedados no navegador, incluindo aplicativos de navegador XAML (XBAPs) e páginas de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] flexíveis, não fornecem suas próprias janelas. Em vez disso, eles são hospedados no Windows fornecido pelo Windows Internet Explorer. Consulte [visão geral de aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md).  
+> Aplicativos WPF hospedados em navegador, incluindo aplicativos de navegador XAML (XBAPs) e páginas de [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] flexíveis, não fornecem suas próprias janelas. Em vez disso, eles são hospedados no Windows fornecido pelo Windows Internet Explorer. Consulte [visão geral de aplicativos de navegador XAML WPF](wpf-xaml-browser-applications-overview.md).  
 
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>A classe Window  
@@ -49,7 +49,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
   
  Uma janela é dividida em duas áreas: a área de não cliente e a área de cliente.  
   
- A *área de não-cliente* de uma janela é implementada pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e inclui as partes de uma janela que são comuns à maioria das janelas, incluindo as seguintes:  
+ A *área de não-cliente* de uma janela é implementada pelo WPF e inclui as partes de uma janela que são comuns à maioria das janelas, incluindo as seguintes:  
   
 - Uma borda.  
   
@@ -65,7 +65,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
   
  A *área de cliente* de uma janela é a área dentro de uma área não-cliente da janela e é usada por desenvolvedores para adicionar conteúdo específico do aplicativo, como barras de menu, barras de ferramentas e controles.  
   
- No [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], uma janela é encapsulada pela classe <xref:System.Windows.Window> que você usa para fazer o seguinte:  
+ No WPF, uma janela é encapsulada pela classe <xref:System.Windows.Window> que você usa para fazer o seguinte:  
   
 - Exibir uma janela.  
   
@@ -77,7 +77,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>Implementar uma janela  
- A implementação de uma janela típica compreende a aparência e o comportamento, em que a *aparência* define como uma janela se parece com os usuários e o *comportamento* define a maneira como uma janela funciona quando os usuários interagem com ela. No [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], você pode implementar a aparência e o comportamento de uma janela usando o código ou a marcação de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].  
+ A implementação de uma janela típica compreende a aparência e o comportamento, em que a *aparência* define como uma janela se parece com os usuários e o *comportamento* define a maneira como uma janela funciona quando os usuários interagem com ela. No WPF, você pode implementar a aparência e o comportamento de uma janela usando o código ou [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação.  
   
  Em geral, no entanto, a aparência de uma janela é implementada usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] marcação, e seu comportamento é implementado usando code-behind, conforme mostrado no exemplo a seguir.  
   
@@ -124,7 +124,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
 </Project>  
 ```  
   
- Para obter informações sobre como criar [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplicativos, consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md).  
+ Para obter informações sobre a criação de aplicativos do WPF, consulte [criando um aplicativo WPF](building-a-wpf-application-wpf.md).  
   
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>Tempo de vida de janela  
@@ -325,13 +325,13 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
   
  Se você quiser que a largura e a altura da janela tenham um tamanho que se ajuste ao tamanho do conteúdo da janela, você poderá usar a propriedade <xref:System.Windows.Window.SizeToContent%2A>, que tem os seguintes valores:  
   
-- <xref:System.Windows.SizeToContent.Manual> Sem efeito (padrão).  
+- <xref:System.Windows.SizeToContent.Manual>. Sem efeito (padrão).  
   
-- <xref:System.Windows.SizeToContent.Width> Ajustar à largura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> à largura do conteúdo.  
+- <xref:System.Windows.SizeToContent.Width>. Ajustar à largura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> à largura do conteúdo.  
   
-- <xref:System.Windows.SizeToContent.Height> Ajustar à altura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> a altura do conteúdo.  
+- <xref:System.Windows.SizeToContent.Height>. Ajustar à altura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> a altura do conteúdo.  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight> Ajustar à largura e à altura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> à altura do conteúdo, e definir ambos <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> como a largura do conteúdo.  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. Ajustar à largura e à altura do conteúdo, que tem o mesmo efeito que definir <xref:System.Windows.FrameworkElement.MinHeight%2A> e <xref:System.Windows.FrameworkElement.MaxHeight%2A> à altura do conteúdo, e definir ambos <xref:System.Windows.FrameworkElement.MinWidth%2A> e <xref:System.Windows.FrameworkElement.MaxWidth%2A> como a largura do conteúdo.  
   
  O exemplo a seguir mostra uma janela que se dimensiona automaticamente para ajustar-se ao próprio conteúdo, verticalmente e horizontalmente, quando mostrada pela primeira vez.  
   
@@ -401,7 +401,7 @@ Os usuários interagem com aplicativos autônomos do Windows Presentation Founda
 
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>Modo de redimensionamento  
- Dependendo da propriedade <xref:System.Windows.Window.WindowStyle%2A>, você pode controlar como (e se) os usuários podem redimensionar a janela. A escolha do estilo de janela afeta se um usuário pode redimensionar a janela arrastando sua borda com o mouse, se os botões **minimizar**, **maximizar**e **redimensionar** aparecem na área não cliente e, se forem exibidos, se eles estão habilitado.  
+ Dependendo da propriedade <xref:System.Windows.Window.WindowStyle%2A>, você pode controlar como (e se) os usuários podem redimensionar a janela. A escolha do estilo de janela afeta se um usuário pode redimensionar a janela arrastando sua borda com o mouse, se os botões **minimizar**, **maximizar**e **redimensionar** aparecem na área não cliente e, se forem exibidos, se estiverem habilitados.  
   
  Você pode configurar como uma janela é redimensionada definindo sua propriedade <xref:System.Windows.Window.ResizeMode%2A>, que pode ser um dos seguintes valores de enumeração <xref:System.Windows.ResizeMode>:  
   
@@ -466,7 +466,7 @@ A aparência padrão de uma janela inclui um botão da barra de tarefas, como aq
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
-## <a name="security-considerations"></a>Considerações sobre segurança  
+## <a name="security-considerations"></a>considerações sobre segurança  
  <xref:System.Windows.Window> requer que `UnmanagedCode` permissão de segurança seja instanciada. Para aplicativos instalados e iniciados no computador local, isso se encaixa no conjunto de permissões concedidas ao aplicativo.  
   
  No entanto, isso fica fora do conjunto de permissões concedidos a aplicativos iniciados pela Internet ou pela zona da intranet local usando o ClickOnce. Consequentemente, os usuários receberão um aviso de segurança do ClickOnce e precisarão elevar o conjunto de permissões do aplicativo para confiança total.  
@@ -479,7 +479,7 @@ A aparência padrão de uma janela inclui um botão da barra de tarefas, como aq
   
  Caixas de diálogo são janelas que geralmente são usadas para coletar informações de um usuário para concluir uma função. Por exemplo, quando um usuário deseja abrir um arquivo, a caixa de diálogo **Abrir arquivo** geralmente é exibida por um aplicativo para obter o nome do arquivo do usuário. Para obter mais informações, consulte [Visão geral das caixas de diálogo](dialog-boxes-overview.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 20e46d7ecc206abb28240075d9ec5f764ab78d01
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e6ffc649d7eb841c2d009b0ec1237975f46e2d2d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346128"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636803"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>Inicializadores de objeto: tipos nomeados e anônimos (Visual Basic)
 Os inicializadores de objeto permitem especificar propriedades para um objeto complexo usando uma única expressão. Eles podem ser usados para criar instâncias de tipos nomeados e de tipos anônimos.  
   
-## <a name="declarations"></a>{1&gt;{2&gt;Declarações&lt;2}&lt;1}  
+## <a name="declarations"></a>{1&gt;Declarations&lt;1}  
  Declarações de instâncias de tipos nomeados e anônimos podem parecer quase idênticas, mas seus efeitos não são os mesmos. Cada categoria tem habilidades e restrições próprias. O exemplo a seguir mostra uma maneira conveniente de declarar e inicializar uma instância de uma classe nomeada, `Customer`, usando uma lista de inicializadores de objeto. Observe que o nome da classe é especificado após a palavra-chave `New`.  
   
  [!code-vb[VbVbalrObjectInit#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#1)]  
@@ -105,7 +105,7 @@ Os inicializadores de objeto permitem especificar propriedades para um objeto co
   
  Como o nome do tipo não está disponível, você não pode usar uma cláusula `As` para declarar `cust13`. Seu tipo deve ser inferido. Sem usar a ligação tardia, isso limita o uso de tipos anônimos a variáveis locais.  
   
- Tipos anônimos fornecem suporte crítico para consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações sobre o uso de tipos anônimos em consultas, consulte [tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
+ Tipos anônimos fornecem suporte crítico para consultas LINQ. Para obter mais informações sobre o uso de tipos anônimos em consultas, consulte [tipos anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md) e [introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md).  
   
 ### <a name="remarks-about-anonymous-types"></a>Comentários sobre tipos anônimos  
   
@@ -127,7 +127,7 @@ Os inicializadores de objeto permitem especificar propriedades para um objeto co
   
      Para obter mais informações sobre as opções para definir propriedades em tipos anônimos, consulte [como: inferir nomes e tipos de propriedade em declarações de tipo anônimo](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

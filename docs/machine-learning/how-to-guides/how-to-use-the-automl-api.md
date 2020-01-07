@@ -1,14 +1,14 @@
 ---
 title: Como usar a API de ML automatizado do ML.NET
 description: A API de ML automatizado do ML.NET automatiza o processo de criação de modelo e gera um modelo pronto para implantação. Saiba as opções que você pode usar para configurar tarefas de aprendizado de máquina automatizada.
-ms.date: 11/7/2019
+ms.date: 12/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c1c18decc48bc1499aa55210becff305cdec4a53
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b322c484282d025033d747d2093f7b5b4d216fde
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977125"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636556"
 ---
 # <a name="how-to-use-the-mlnet-automated-machine-learning-api"></a>Como usar a API de aprendizado de máquina automatizado do ML.NET
 
@@ -38,6 +38,7 @@ Antes de criar um experimento, determine o tipo de problema de aprendizado de m�
 * Classificação Binária
 * Classificação Multiclasse
 * Regressão
+* Recomendação
 
 ## <a name="create-experiment-settings"></a>Criar configurações de experimento
 
@@ -59,6 +60,12 @@ Criar configurações de experimento para o tipo de tarefa de ML determinado:
 
   ```csharp
   var experimentSettings = new RegressionExperimentSettings();
+  ```
+
+* Recomendação
+
+  ```csharp
+  var experimentSettings = new RecommendationExperimentSettings();
   ```
 
 ## <a name="configure-experiment-settings"></a>Definir as configurações de teste
@@ -110,12 +117,13 @@ A lista de treinadores com suporte por tarefa de ML pode ser encontrada no link 
 * [Algoritmos de Classificação Binária com Suporte](xref:Microsoft.ML.AutoML.BinaryClassificationTrainer)
 * [Algoritmos de Classificação Multiclasse com Suporte](xref:Microsoft.ML.AutoML.MulticlassClassificationTrainer)
 * [Algoritmos de Regressão com Suporte](xref:Microsoft.ML.AutoML.RegressionTrainer)
+* [Algoritmos de recomendação com suporte](xref:Microsoft.ML.AutoML.RecommendationTrainer)
 
 ## <a name="optimizing-metric"></a>Métrica de otimização
 
 A métrica da otimiza, conforme mostrado no exemplo acima, determina a métrica a ser otimizada durante o treinamento de modelo. A métrica de otimização que você pode selecionar é determinada pelo tipo de tarefa que você escolher. Abaixo está uma lista de métricas disponíveis.
 
-|[Classificação Binária](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificação Multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regressão](xref:Microsoft.ML.AutoML.RegressionMetric)
+|[Classificação Binária](xref:Microsoft.ML.AutoML.BinaryClassificationMetric) | [Classificação Multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric) |[Regressão & recomendação](xref:Microsoft.ML.AutoML.RegressionMetric)
 |-- |-- |--
 |Precisão| LogLoss | RSquared
 |AreaUnderPrecisionRecallCurve | LogLossReduction | MeanAbsoluteError
@@ -129,7 +137,7 @@ A métrica da otimiza, conforme mostrado no exemplo acima, determina a métrica 
 ## <a name="data-pre-processing-and-featurization"></a>Pré-processamento de dados e personalização
 
 > [!NOTE]
-> A coluna de recursos tem suporte apenas para tipos de <xref:System.Boolean>, <xref:System.Single> e <xref:System.String>.
+> A coluna de recursos tem suporte apenas para tipos de <xref:System.Boolean>, <xref:System.Single>e <xref:System.String>.
 
 O pré-processamento de dados ocorre por padrão e as etapas a seguir são executadas automaticamente para você:
 
@@ -219,8 +227,8 @@ Estas são todas as métricas disponíveis por tarefa de ML:
 
 * [Métricas de classificação binária](xref:Microsoft.ML.AutoML.BinaryClassificationMetric)
 * [Métricas de classificação multiclasse](xref:Microsoft.ML.AutoML.MulticlassClassificationMetric)
-* [Métricas de regressão](xref:Microsoft.ML.AutoML.RegressionMetric)
+* [Regressão & métricas de recomendação](xref:Microsoft.ML.AutoML.RegressionMetric)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 Para exemplos de código completos e muito mais, acesse o repositório do GitHub [dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master#automate-mlnet-models-generation-preview-state).

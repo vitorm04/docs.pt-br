@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 63ba7a6fb1c8776cc35c0e6f07a6b78f5b3d93d0
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 157565ceb9057049aef8b2bf274847d58c6b8dc8
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459515"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559957"
 ---
 # <a name="how-to-use-systemfonts"></a>Como usar SystemFonts
 Este exemplo mostra como usar os recursos estáticos da classe <xref:System.Windows.SystemFonts> para estilizar ou personalizar um botão.  
@@ -36,13 +36,13 @@ Este exemplo mostra como usar os recursos estáticos da classe <xref:System.Wind
  [!code-csharp[SystemRes_snip#FontResourcesCode](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/Pane1.xaml.cs#fontresourcescode)]
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.SystemFonts>
 - [Pintar uma área com um pincel de sistema](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [Usar SystemParameters](how-to-use-systemparameters.md)
 - [Usar chaves de fontes do sistema](how-to-use-system-fonts-keys.md)
-- [Tópicos explicativos](resources-how-to-topics.md)
-- [Extensão de marcação x:Static](../../xaml-services/x-static-markup-extension.md)
+- [Tópicos de instruções](resources-how-to-topics.md)
+- [Extensão de marcação x:Static](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md)
 - [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Extensão de marcação DynamicResource](dynamicresource-markup-extension.md)

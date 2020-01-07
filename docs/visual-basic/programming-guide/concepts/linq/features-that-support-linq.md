@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e81d0434aa60e0c7b316b72fb78ebfe2a3782cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57c0566f9a76715e48b20f2e6493aa1a506c64be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353511"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636855"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>Recursos do Visual Basic que suportam LINQ
-O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] se refere à tecnologia em Visual Basic que dá suporte à sintaxe de consulta e a outras construções de linguagem diretamente no idioma. Com o [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você não precisa aprender uma nova linguagem para consultar uma fonte de dados externa. Você pode consultar dados em bancos de dados relacionais, repositórios XML ou objetos usando Visual Basic. Essa integração dos recursos de consulta no idioma permite a verificação do tempo de compilação para erros de sintaxe e segurança de tipo. Essa integração também garante que você já saiba a maior parte do que precisa saber para escrever consultas ricas e diversificadas em Visual Basic.  
+A consulta integrada à linguagem de nome (LINQ) refere-se à tecnologia em Visual Basic que dá suporte à sintaxe de consulta e a outras construções de linguagem diretamente no idioma. Com o LINQ, você não precisa aprender uma nova linguagem para consultar uma fonte de dados externa. Você pode consultar dados em bancos de dados relacionais, repositórios XML ou objetos usando Visual Basic. Essa integração dos recursos de consulta no idioma permite a verificação do tempo de compilação para erros de sintaxe e segurança de tipo. Essa integração também garante que você já saiba a maior parte do que precisa saber para escrever consultas ricas e diversificadas em Visual Basic.  
   
  As seções a seguir descrevem as construções de linguagem que dão suporte ao LINQ em detalhes suficientes para permitir que você comece a ler a documentação introdutória, exemplos de código e aplicativos de exemplo. Você também pode clicar nos links para encontrar explicações mais detalhadas sobre como os recursos de linguagem se reúnem para habilitar a consulta integrada à linguagem. Um bom lugar para começar é [passo a passos: escrevendo consultas em Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md).  
   
@@ -56,7 +56,7 @@ O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] se refere à tecn
  Para obter mais informações, consulte [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).  
   
 ## <a name="extension-methods"></a>Métodos de Extensão  
- Os métodos de extensão permitem adicionar métodos a um tipo de dados ou interface de fora da definição. Esse recurso permite que você, em vigor, adicione novos métodos a um tipo existente sem realmente modificar o tipo. Os operadores de consulta padrão são, por si, um conjunto de métodos de extensão que fornecem [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] funcionalidade de consulta para qualquer tipo que implementa <xref:System.Collections.Generic.IEnumerable%601>. Outras extensões para <xref:System.Collections.Generic.IEnumerable%601> incluem <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>e <xref:System.Linq.Enumerable.Intersect%2A>.  
+ Os métodos de extensão permitem adicionar métodos a um tipo de dados ou interface de fora da definição. Esse recurso permite que você, em vigor, adicione novos métodos a um tipo existente sem realmente modificar o tipo. Os operadores de consulta padrão são, por si, um conjunto de métodos de extensão que fornecem a funcionalidade de consulta LINQ para qualquer tipo que implemente <xref:System.Collections.Generic.IEnumerable%601>. Outras extensões para <xref:System.Collections.Generic.IEnumerable%601> incluem <xref:System.Linq.Enumerable.Count%2A>, <xref:System.Linq.Enumerable.Union%2A>e <xref:System.Linq.Enumerable.Intersect%2A>.  
   
  O método de extensão a seguir adiciona um método Print à classe <xref:System.String>.  
   
@@ -77,7 +77,7 @@ O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] se refere à tecn
   
  [!code-vb[VbLINQVbFeatures#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQVbFeatures/VB/Class1.vb#12)]  
   
- Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], as expressões lambda são a cerca de muitos dos operadores de consulta padrão. O compilador cria expressões lambda para capturar os cálculos que são definidos em métodos de consulta fundamentais, como `Where`, `Select`, `Order By`, `Take While`e outros.  
+ No LINQ, as expressões lambda são a cerca de muitos dos operadores de consulta padrão. O compilador cria expressões lambda para capturar os cálculos que são definidos em métodos de consulta fundamentais, como `Where`, `Select`, `Order By`, `Take While`e outros.  
   
  Por exemplo, o código a seguir define uma consulta que retorna todos os alunos seniores de uma lista de alunos.  
   
@@ -93,10 +93,10 @@ O nome [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] se refere à tecn
   
  Para obter mais informações, consulte [Expressões Lambda](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Introdução à LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [Instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [Instrução Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

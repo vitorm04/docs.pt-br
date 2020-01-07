@@ -1,13 +1,13 @@
 ---
-title: Visão geral dos eixos do LINQ to XML
+title: Visão geral dos eixos de LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
-ms.openlocfilehash: 47e95fcca251212475c925a24d382ba2dceedd62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0cf3c20266d0ca9d861eec963afda8f2e71a55a3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352032"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636478"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>Visão geral dos eixos LINQ to XML (Visual Basic)
 Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, você poderá consultá-la para localizar elementos e atributos, e recuperar seus valores. Você recupera coleções por meio dos *métodos de eixo*, também denominados *eixos*. Alguns eixos são métodos nas classes <xref:System.Xml.Linq.XElement> e <xref:System.Xml.Linq.XDocument> que retornam coleções <xref:System.Collections.Generic.IEnumerable%601>. Alguns eixos são métodos de extensão na classe <xref:System.Xml.Linq.Extensions>. Os eixos implementados como métodos de extensão operam em coleções e retornam coleções.  
@@ -16,7 +16,7 @@ Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, voc
   
  Além dos métodos de eixo, que retornam coleções, há mais dois métodos que você geralmente usa nas consultas do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. O método <xref:System.Xml.Linq.XContainer.Element%2A> retorna um <xref:System.Xml.Linq.XElement> único. O método <xref:System.Xml.Linq.XElement.Attribute%2A> retorna um <xref:System.Xml.Linq.XAttribute> único.  
   
- Em várias circunstâncias, as consultas do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fornecem a maneira mais eficiente de examinar uma árvore, extrair dados dela e transformá-la. As consultas do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operam em objetos que implementam o <xref:System.Collections.Generic.IEnumerable%601>, e os eixos do [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] retornam o <xref:System.Collections.Generic.IEnumerable%601> das coleções <xref:System.Xml.Linq.XElement> e o <xref:System.Collections.Generic.IEnumerable%601> das coleções <xref:System.Xml.Linq.XAttribute>. Você precisa dessas coleções para executar suas consultas.  
+ Para muitas finalidades, as consultas LINQ fornecem a maneira mais poderosa de examinar uma árvore, extrair dados dela e transformá-la. As consultas do LINQ operam em objetos que implementam <xref:System.Collections.Generic.IEnumerable%601>, e os eixos de [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] retornam <xref:System.Collections.Generic.IEnumerable%601> de coleções de <xref:System.Xml.Linq.XElement> e <xref:System.Collections.Generic.IEnumerable%601> de coleções de <xref:System.Xml.Linq.XAttribute>. Você precisa dessas coleções para executar suas consultas.  
   
  Além dos métodos de eixo que recuperam coleções de elementos e atributos, há métodos de eixo que permitem a você iterar na árvore detalhadamente. Por exemplo, em vez de tratar elementos e atributos, você pode trabalhar com os nós da árvore. Os nós são um nível mais refinado de granularidade do que os elementos e os atributos. Ao trabalhar com os nós, você pode examinar comentários XML, nós de texto, instruções de processamento e muito mais. Essa funcionalidade é importante, por exemplo, para alguém que estiver escrevendo em um processador de texto e deseja salvar documentos como XML. No entanto, a maioria dos programadores XML se preocupam basicamente com os elementos, os atributos e seus valores.  
   
@@ -54,6 +54,6 @@ Após criar uma árvore XML ou carregar um documento XML em uma árvore XML, voc
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>|Retorna o <xref:System.Xml.Linq.XAttribute> que tem o <xref:System.Xml.Linq.XName> especificado.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eixos LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

@@ -1,18 +1,21 @@
 ---
 title: Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.NET
-description: Visão geral e instalação da ferramenta da CLI (Interface de Linha de Comando) do ML.NET.
-ms.date: 04/16/2019
-ms.custom: ''
-ms.openlocfilehash: feeb4832b5bbd39f28ac2c6f6caa40d60b4f3aa9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+description: Saiba como instalar, atualizar, fazer downgrade e desinstalar a ferramenta de interface de linha de comando (CLI) do ML.NET.
+ms.date: 12/18/2019
+ms.author: nakersha
+author: natke
+ms.openlocfilehash: 07b6e924ed9c6b0c278a86539ebe7d750f9ced37
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977076"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636582"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>Como instalar a ferramenta da CLI (Interface de Linha de Comando) do ML.NET
 
-A CLI (interface de linha de comando) do ML.NET é uma ferramenta que você pode executar em qualquer prompt de comando (Windows, Mac ou Linux) para a geração de modelos do ML.NET de boa qualidade e código-fonte baseado em conjuntos de dados de treinamento que você fornece.
+Saiba como instalar a CLI do ML.NET (interface de linha de comando) no Windows, Mac ou Linux.
+
+A CLI do ML.NET gera bons modelos de ML.NET de qualidade e código-fonte usando o AutoML (Machine Learning automatizado) e um conjunto de informações de treinamento.
 
 > [!NOTE]
 > Este tópico refere-se à CLI do ML.NET e ao AutoML do ML.NET, que estão atualmente em Versão Prévia. O material pode estar sujeito a alterações.
@@ -23,7 +26,7 @@ A CLI (interface de linha de comando) do ML.NET é uma ferramenta que você pode
 
 - (Opcional) [Visual Studio 2017 ou 2019](https://visualstudio.microsoft.com/vs/)
 
-Você pode executar os projetos de C# gerados com o Visual Studio F5 ou com o `dotnet run` (CLI do .NET Core).
+Você pode executar os projetos C# de código gerados com o Visual Studio pressionando a tecla `F5` ou com `dotnet run` (CLI do .NET Core).
 
 Observação: se, depois de instalar o [SDK do .NET Core 2,2](https://dotnet.microsoft.com/download/dotnet-core/2.2) , o comando `dotnet tool` não estiver funcionando, saia do Windows e entre novamente.
 
@@ -123,7 +126,7 @@ A CLI do ML.NET pode ser instalada no diretório padrão ou em um local específ
 | Sistema operacional          | Caminho                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
-| Windows     | `%USERPROFILE%\.dotnet\tools` |
+| Portal     | `%USERPROFILE%\.dotnet\tools` |
 
 Esses locais são adicionados ao caminho do usuário quando o SDK é executado pela primeira vez e, portanto, as Ferramentas Globais instaladas nesses locais podem ser chamadas diretamente.
 
@@ -132,9 +135,9 @@ Observação: as Ferramentas Globais são específicas ao usuário e não globai
 As Ferramentas Globais também podem ser instaladas em um diretório específico. Quando elas forem instaladas em um diretório específico, o usuário precisará garantir que o comando esteja disponível, incluindo o diretório no caminho, chamando o comando com o diretório especificado ou chamando a ferramenta no diretório especificado.
 Nesse caso, a CLI do .NET Core não adiciona esse local automaticamente à variável de ambiente PATH.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Tutorial de "Introdução à ferramenta da CLI do ML.NET"](../tutorials/mlnet-cli.md)
-- [Como treinar automaticamente modelos com a ferramenta da CLI do ML.NET](../automate-training-with-cli.md)
+- [Visão geral da CLI do ML.NET](../automate-training-with-cli.md)
+- [Tutorial: analisar o sentimentos com a CLI do ML.NET](../tutorials/sentiment-analysis-cli.md)
 - [Guia de referência de comando auto-train da CLI do ML.NET](../reference/ml-net-cli-reference.md)
 - [Telemetria na CLI do ML.NET](../resources/ml-net-cli-telemetry.md)

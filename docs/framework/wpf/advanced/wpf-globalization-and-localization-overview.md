@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: b8777e1402bef1708136a5f81a641beb8c761905
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740702"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559918"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>Visão geral de globalização e localização do WPF
 
@@ -42,7 +42,7 @@ Ao criar um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]b
 
 - Habilite <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> no <xref:System.Windows.Controls.TextBlock> para evitar o recorte.
 
-- Defina o atributo `xml:lang`. Esse atributo descreve a cultura de um elemento específico e seus elementos filho. O valor dessa propriedade altera o comportamento de vários recursos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, ele altera o comportamento de hifenização, verificação ortográfica, substituição de números, formatação de scripts complexos e fallback de fontes. Consulte [Globalization for WPF](globalization-for-wpf.md) para obter mais informações sobre como definir o [tratamento XML: lang em XAML](../../xaml-services/xml-lang-handling-in-xaml.md).
+- Defina o atributo `xml:lang`. Esse atributo descreve a cultura de um elemento específico e seus elementos filho. O valor dessa propriedade altera o comportamento de vários recursos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Por exemplo, ele altera o comportamento de hifenização, verificação ortográfica, substituição de números, formatação de scripts complexos e fallback de fontes. Consulte [Globalization for WPF](globalization-for-wpf.md) para obter mais informações sobre como definir o [tratamento XML: lang em XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md).
 
 - Crie uma fonte composta personalizada para obter um melhor controle das fontes usadas para diferentes idiomas. Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa a fonte GlobalUserInterface. Composite no diretório Windows\Fonts.
 
@@ -144,11 +144,11 @@ As duas primeiras colunas em que o rótulo **abrir:** e <xref:System.Windows.Con
 
 Observe que o exemplo usa o recurso de dimensionamento compartilhado do <xref:System.Windows.Controls.Grid>. As três últimas colunas aproveitam isso colocando-se na mesma <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>. Como normalmente se esperaria do nome da propriedade, isso permite que as colunas compartilhem o mesmo tamanho. Então, quando o botão "procurar..." é localizado para a cadeia de caracteres mais longa "Durchsuchen...", todos os botões crescem em largura, em vez de ter um botão pequeno "OK" e um "Durchsuchen..." desproporcional. Button.
 
-**XML: lang**
+**xml:lang**
 
 `xml:lang="en-US"`
 
-Observe o [tratamento XML: lang no XAML](../../xaml-services/xml-lang-handling-in-xaml.md) colocado no elemento raiz do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Essa propriedade descreve a cultura de determinado elemento e seus filhos. Esse valor é usado por vários recursos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e deve ser alterado adequadamente durante a localização. Esse valor altera qual dicionário de idioma deve ser usado para hifenizar e fazer a verificação ortográfica das palavras. Ele também afeta a exibição de dígitos e como o sistema de fallback de fontes seleciona qual fonte deve ser usada. Finalmente, a propriedade afeta a maneira como os números são exibidos e o modo como os textos escritos em scripts complexos são formatados. O valor padrão é “en-US”.
+Observe o [tratamento XML: lang no XAML](../../../desktop-wpf/xaml-services/xml-language-handling.md) colocado no elemento raiz do [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Essa propriedade descreve a cultura de determinado elemento e seus filhos. Esse valor é usado por vários recursos no [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e deve ser alterado adequadamente durante a localização. Esse valor altera qual dicionário de idioma deve ser usado para hifenizar e fazer a verificação ortográfica das palavras. Ele também afeta a exibição de dígitos e como o sistema de fallback de fontes seleciona qual fonte deve ser usada. Finalmente, a propriedade afeta a maneira como os números são exibidos e o modo como os textos escritos em scripts complexos são formatados. O valor padrão é “en-US”.
 
 **Compilando um assembly de recursos satélite**
 
@@ -178,27 +178,27 @@ Depois de criar o aplicativo, a primeira etapa da localização é analisar os r
 
 Use seu editor de CSV favorito que dá suporte a Unicode para editar esse arquivo. Filtre todas as entradas com a categoria de localização “Nenhum”. Você deverá ver as seguintes entradas:
 
-|Chave de Recurso|Categoria de Localização|Valor|
+|Chave de Recurso|Categoria de Localização|Value|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Botão|OK|
-|Button_2:System.Windows.Controls.Button.$Content|Botão|Cancelar|
+|Button_2:System.Windows.Controls.Button.$Content|Botão|Cancel|
 |Button_3:System.Windows.Controls.Button.$Content|Botão|Procurar...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Digite o nome de um programa, uma pasta, um documento ou recurso da Internet e o Windows o abrirá para você.|
 |TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Abrir:|
-|Window_1:System.Windows.Window.Title|Título|Executar|
+|Window_1:System.Windows.Window.Title|Cargo|Execute|
 
 A localização do aplicativo para o alemão exigirá as seguintes traduções:
 
-|Chave de Recurso|Categoria de Localização|Valor|
+|Chave de Recurso|Categoria de Localização|Value|
 |-|-|-|
 |Button_1:System.Windows.Controls.Button.$Content|Botão|OK|
 |Button_2:System.Windows.Controls.Button.$Content|Botão|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|Botão|Durchsuchen…|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|Geben Sie den Namen eines Programms, Ordners, Dokuments oder einer Internetresource an.|
-|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Öffnen:|
-|Window_1:System.Windows.Window.Title|Título|Executar|
+|TextBlock_2:System.Windows.Controls.TextBlock.$Content|Texto|Abrir:|
+|Window_1:System.Windows.Window.Title|Cargo|Execute|
 
 **Gerar**
 
@@ -267,7 +267,7 @@ Há muitos casos em que o conteúdo pode ser ambíguo e difícil de ser traduzid
 
 Esse comentário se torna associado ao conteúdo de TextBlock_1 e, no caso da ferramenta LocBaml, (consulte [localizar um aplicativo](how-to-localize-an-application.md)), ele pode ser visto na 6º coluna da linha de TextBlock_1 no arquivo de saída. csv:
 
-|Chave de Recurso|Categoria|Legível|Modificável|Comentário|Valor|
+|Chave de Recurso|Categoria|Legível|Modificável|Comentário|Value|
 |-|-|-|-|-|-|
 |TextBlock_1:System.Windows.Controls.TextBlock.$Content|Texto|TRUE|TRUE|Esse caractere é usado como uma regra decorativa.|&#124;|
 

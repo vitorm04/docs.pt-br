@@ -1,5 +1,5 @@
 ---
-title: Como definir a igualdade de valor para um tipo – Guia de programação em C#
+title: Como definir a igualdade de valor para um guia C# de programação de tipo
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 0e1c736c7a2826c1218cb078a6e9f874b3b72c3c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebcdda2661c8e4c7f3424f280247f0f771d9cb02
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755013"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635139"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Como definir a igualdade de valor para um tipo (Guia de programação em C#)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Como definir a igualdade de valor para um tipoC# (guia de programação)
 
 Quando você define uma classe ou struct, decide se faz sentido criar uma definição personalizada de igualdade de valor (ou equivalência) para o tipo. Normalmente, você implementa igualdade de valor quando objetos do tipo devem ser adicionados a uma coleção de algum tipo ou quando seu objetivo principal é armazenar um conjunto de campos ou propriedades. Você pode basear sua definição de igualdade de valor em uma comparação de todos os campos e propriedades no tipo ou pode basear a definição em um subconjunto. Mas, em ambos os casos e em classes e struct, sua implementação deve seguir as cinco garantias de equivalência:  
   
@@ -34,11 +34,11 @@ Quando você define uma classe ou struct, decide se faz sentido criar uma defini
   
  Os detalhes de implementação para a igualdade de valor são diferentes para classes e struct. No entanto, as classes e structs exigem as mesmas etapas básicas para implementar a igualdade:  
   
-1. Substitua o método [virtual](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>. Na maioria dos casos, sua implementação de `bool Equals( object obj )` deve apenas chamar o método `Equals` específico do tipo que é a implementação da interface <xref:System.IEquatable%601?displayProperty=nameWithType>. (Consulte a etapa 2.)  
+1. Substitua o método de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> [virtual](../../language-reference/keywords/virtual.md) . Na maioria dos casos, sua implementação de `bool Equals( object obj )` deve apenas chamar o método `Equals` específico do tipo que é a implementação da interface <xref:System.IEquatable%601?displayProperty=nameWithType>. (Consulte a etapa 2.)  
   
 2. Implemente a interface <xref:System.IEquatable%601?displayProperty=nameWithType> fornecendo um método `Equals` específico do tipo. Isso é o local em que a comparação de equivalência de fato é realizada. Por exemplo, você pode decidir definir a igualdade comparando apenas um ou dois campos em seu tipo. Não lance exceções de `Equals`. Para classes somente: esse método deve examinar somente os campos que são declarados na classe. Ele deve chamar `base.Equals` para examinar os campos que estão na classe base. (Não faça isso se o tipo herda diretamente de <xref:System.Object>, pois a implementação <xref:System.Object> de <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> executa uma verificação de igualdade de referência.)  
   
-3. Opcional, mas recomendável: Sobrecarregar os operadores [==](../../language-reference/operators/equality-operators.md#equality-operator-) e [! =](../../language-reference/operators/equality-operators.md#inequality-operator-).  
+3. Opcional, mas recomendado: sobrecarregue os operadores [==](../../language-reference/operators/equality-operators.md#equality-operator-) e [!=](../../language-reference/operators/equality-operators.md#inequality-operator-).  
   
 4. Substitua <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> para que os dois objetos que têm a igualdade de valor produzam o mesmo código hash.  
   
@@ -66,7 +66,7 @@ Quando você define uma classe ou struct, decide se faz sentido criar uma defini
   
  Os operadores [==](../../language-reference/operators/equality-operators.md#equality-operator-) e [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) não podem operar em um struct a menos que o struct explicitamente os sobrecarregue.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Comparações de igualdade](equality-comparisons.md)
 - [Guia de Programação em C#](../index.md)

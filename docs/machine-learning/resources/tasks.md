@@ -2,18 +2,22 @@
 title: Tarefas de aprendizado de máquina
 description: Explore as diferentes tarefas de aprendizado de máquina e as tarefas associadas compatíveis com o ML.NET.
 ms.custom: seodec18
-ms.date: 04/23/2019
+ms.date: 12/23/2019
 author: natke
-ms.openlocfilehash: d0634ce8a0559ab3cdb5bf27fc5406ab02af8df6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: cde4af720fe1ede80cb1bdc6b70f6586293920a4
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977249"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636439"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tarefas de aprendizado de máquina no ML.NET
 
-Ao criar um modelo de aprendizado de máquina, primeiro é preciso definir o que você espera conseguir com seus dados. Isso permite escolher a tarefa de aprendizado de máquina correta para sua situação. A lista a seguir descreve as diferentes tarefas de aprendizado de máquina que você pode escolher e alguns casos de uso comuns. Para obter mais informações sobre como escolher a tarefa apropriada para seu cenário, consulte [algoritmos](../how-to-choose-an-ml-net-algorithm.md).
+Uma tarefa de aprendizado de máquina é o tipo de previsão ou inferência que está sendo feita, com base no problema ou na pergunta que está sendo solicitada e nos dados disponíveis. Por exemplo, a tarefa de classificação atribui dados a categorias e a tarefa de clustering agrupa os dados de acordo com a similaridade.
+
+As tarefas de aprendizado de máquina dependem de padrões nos dados em vez de serem programadas explicitamente.
+
+Este artigo descreve as diferentes tarefas de aprendizado de máquina que você pode escolher em ML.NET e alguns casos de uso comuns.
 
 Depois de decidir a tarefa ideal para seu cenário, será preciso escolher o melhor algoritmo para treinar seu modelo. Os algoritmos disponíveis são listados na seção para cada tarefa.
 
@@ -91,7 +95,7 @@ A coluna de recursos deve ser um vetor de tamanho fixo de <xref:System.Single>.
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | Digite | Descrição|
+| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
 | -- | -- | -- |
 | `Score` | Vetor de <xref:System.Single> | As pontuações de todas as classes. Um valor mais alto significa maior probabilidade de se enquadrar na classe associada. Se o elemento iº elemento tiver o maior valor, o índice de rótulo previsto será i. Observe que i é o índice baseado em zero. |
 | `PredictedLabel` | Tipo de [chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do rótulo previsto. Se seu valor for i, o rótulo real será a iº categoria no tipo de rótulo de entrada com valor de chave. |
@@ -124,7 +128,7 @@ Os dados da coluna de rótulo de entrada devem ser <xref:System.Single>.
 
 Os treinadores para esta tarefa produzem a seguinte saída:
 
-| Nome de Saída | Digite | Descrição|
+| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação bruta prevista pelo modelo |
 
@@ -148,7 +152,7 @@ Os dados de recursos de entrada devem ser <xref:System.Single>. Nenhum rótulo �
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | Digite | Descrição|
+| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
 | -- | -- | -- |
 | `Score` | vetor de <xref:System.Single> | As distâncias do ponto de dados fornecido para todos os centroides |
 | `PredictedLabel` | Tipo de [chave](xref:Microsoft.ML.Data.KeyDataViewType) | O índice do cluster mais próximo previsto pelo modelo. |
@@ -180,9 +184,10 @@ Os recursos de entrada devem ser um vetor de tamanho fixo de <xref:System.Single
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | Digite | Descrição|
+| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação não negativa não associada calculada pelo modelo de detecção de anomalias |
+| `PredictedLabel` | <xref:System.Boolean> | Um valor true/false que representa se a entrada é uma anomalia (PredictedLabel = true) ou não (PredictedLabel = false) |
 
 ## <a name="ranking"></a>Classificação
 
@@ -203,7 +208,7 @@ Os dados do recurso devem ser um vetor de tamanho fixo de <xref:System.Single> e
 
 Este treinador produz o seguinte:
 
-| Nome de Saída | Digite | Descrição|
+| Nome de Saída | {1&gt;Tipo&lt;1} | Descrição|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | A pontuação não associada calculada pelo modelo para determinar a previsão |
 

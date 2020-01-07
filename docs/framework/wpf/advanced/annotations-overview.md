@@ -9,17 +9,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-ms.openlocfilehash: dc9c4125f9ac3c44be41efe92b9e495599e5c130
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: b82c7e7300ebc295ca06d565c2fb5f6f2b28e92c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004038"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636504"
 ---
 # <a name="annotations-overview"></a>Visão geral de anotações
 Escrever anotações ou comentários em documentos em papel é uma atividade tão comum que quase não valorizamos. Essas anotações ou comentários são "anotações" que adicionamos a um documento para sinalizar informações ou realçar itens de interesse para referência posterior. Embora gravar anotações em documentos impressos seja fácil e um lugar comum, a capacidade de adicionar comentários pessoais aos documentos eletrônicos normalmente é muito limitada, quando sequer está disponível.  
   
- Este tópico examina vários tipos comuns de anotações, anotações e destaques mais específicos e ilustra como a estrutura de anotações da Microsoft facilita esses tipos de anotações em aplicativos por meio do Windows Presentation Foundation (WPF ) controles de exibição de documento.  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] controles de exibição de documento que dão suporte a anotações incluem <xref:System.Windows.Controls.FlowDocumentReader> e <xref:System.Windows.Controls.FlowDocumentScrollViewer>, bem como controles derivados de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> como <xref:System.Windows.Controls.DocumentViewer> e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
+ Este tópico examina vários tipos comuns de anotações, anotações e destaques mais específicos e ilustra como a estrutura de anotações da Microsoft facilita esses tipos de anotações em aplicativos por meio do Windows Presentation Foundation (WPF ) controles de exibição de documento.  Os controles de exibição de documento do WPF que dão suporte a anotações incluem <xref:System.Windows.Controls.FlowDocumentReader> e <xref:System.Windows.Controls.FlowDocumentScrollViewer>, bem como controles derivados de <xref:System.Windows.Controls.Primitives.DocumentViewerBase> como <xref:System.Windows.Controls.DocumentViewer> e <xref:System.Windows.Controls.FlowDocumentPageViewer>.  
 
 <a name="caf1_type_stickynotes"></a>   
 ## <a name="sticky-notes"></a>Notas autoadesivas  
@@ -27,7 +27,7 @@ Escrever anotações ou comentários em documentos em papel é uma atividade tã
   
  A ilustração a seguir mostra alguns exemplos de realce, nota autoadesiva de texto e anotações em nota autoadesivas de tinta.  
   
- ![Anotações em notas autoadesivas de tinta, texto e realce.](./media/caf-stickynote.jpg "CAF_StickyNote")  
+ ![Anotações de realce, texto e anotação adesiva de tinta.](./media/caf-stickynote.jpg "CAF_StickyNote")  
   
  O exemplo a seguir mostra o método que você pode usar para habilitar o suporte a anotação em seu aplicativo.  
   
@@ -36,7 +36,7 @@ Escrever anotações ou comentários em documentos em papel é uma atividade tã
   
 <a name="caf1_type_callouts"></a>   
 ## <a name="highlights"></a>Destaques  
- As pessoas usam métodos criativos para chamar a atenção para itens de interesse quando marcam um documento em papel, como sublinhar, realçar, circular palavras em uma frase ou desenhar de marcas ou anotações nas margens.  As anotações de realce no Microsoft Annotations Framework fornecem um recurso semelhante para a marcação de informações exibidas em controles de exibição de documento [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ As pessoas usam métodos criativos para chamar a atenção para itens de interesse quando marcam um documento em papel, como sublinhar, realçar, circular palavras em uma frase ou desenhar de marcas ou anotações nas margens.  As anotações de realce no Microsoft Annotations Framework fornecem um recurso semelhante para a marcação de informações exibidas em controles de exibição de documento do WPF.  
   
  A ilustração a seguir mostra um exemplo de uma anotação de realce.  
   
@@ -50,7 +50,7 @@ Escrever anotações ou comentários em documentos em papel é uma atividade tã
 ## <a name="data-anchoring"></a>Ancoragem de dados  
  A estrutura de anotações vincula anotações aos dados que o usuário seleciona, não apenas a uma posição na exibição de exibição. Portanto, se a exibição de documento mudar, como quando o usuário rolar ou redimensionar a janela de exibição, a anotação permanecerá com a seleção de dados à qual está vinculada. Por exemplo, o gráfico a seguir ilustra uma anotação que o usuário fez em uma seleção de texto. Quando a exibição do documento muda (rola, é redimensionada, tem a escala ajustada ou se move de outra maneira), a anotação de realce se move com a seleção de dados original.  
   
- ![Ancoragem de dados de anotação](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
+ ![Ancoragem de dados da anotação](./media/caf-dataanchoring.png "CAF_DataAnchoring")  
   
 <a name="matching_annotations_with_annotated_objects"></a>   
 ## <a name="matching-annotations-with-annotated-objects"></a>Combinando anotações com objetos anotados  
@@ -63,7 +63,7 @@ Escrever anotações ou comentários em documentos em papel é uma atividade tã
   
  Outro cenário de exemplo envolve aplicativos que permitem a troca de anotações e anotações adesivas entre leitores de documentos por email. Esse recurso permite que esses aplicativos levem o leitor para a página que contém a anotação que está sendo trocada.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Controls.Primitives.DocumentViewerBase>
 - <xref:System.Windows.Controls.DocumentViewer>

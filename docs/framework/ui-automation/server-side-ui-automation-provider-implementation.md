@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 35754d49bf223e7afcdec32e8b24cfb749f48aa6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446854"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632305"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Implementação do provedor de automação de interface do usuário no lado do servidor
 
@@ -20,11 +20,11 @@ ms.locfileid: "74446854"
 
 Esta seção descreve como implementar um provedor de automação da interface do usuário do lado do servidor para um controle personalizado.
 
-A implementação para elementos de Windows Presentation Foundation (WPF) e elementos não[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (como os projetados para [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) é fundamentalmente diferente. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] elementos fornecem suporte para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] por meio de uma classe derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Elementos não[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fornecem suporte por meio de implementações de interfaces de provedor.
+A implementação para elementos de Windows Presentation Foundation (WPF) e elementos não-WPF (como os projetados para [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) é fundamentalmente diferente. Os elementos do WPF oferecem suporte para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] por meio de uma classe derivada de <xref:System.Windows.Automation.Peers.AutomationPeer>. Elementos não-WPF oferecem suporte por meio de implementações de interfaces de provedor.
 
 <a name="Security_Considerations"></a>
 
-## <a name="security-considerations"></a>Considerações sobre segurança
+## <a name="security-considerations"></a>considerações sobre segurança
 
 Os provedores devem ser escritos para que possam trabalhar em um ambiente de confiança parcial. Como UIAutomationClient. dll não está configurado para ser executado sob confiança parcial, o código do provedor não deve fazer referência a esse assembly. Se isso ocorrer, o código poderá ser executado em um ambiente de confiança total, mas, em seguida, falhar em um ambiente parcialmente confiável.
 
@@ -40,7 +40,7 @@ Para obter mais informações sobre este tópico, consulte [automação da inter
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>Implementação de provedor por elementos não-WPF
 
-Controles personalizados que não fazem parte do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Framework, mas que são escritos em código gerenciado (geralmente são controles [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]), fornecem suporte para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] implementando interfaces. Cada elemento deve implementar pelo menos uma das interfaces listadas na primeira tabela na próxima seção. Além disso, se o elemento oferecer suporte a um ou mais padrões de controle, ele deverá implementar a interface apropriada para cada padrão de controle.
+Controles personalizados que não fazem parte da estrutura do WPF, mas que são escritos em código gerenciado (geralmente são [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] controles), fornecem suporte para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] implementando interfaces. Cada elemento deve implementar pelo menos uma das interfaces listadas na primeira tabela na próxima seção. Além disso, se o elemento oferecer suporte a um ou mais padrões de controle, ele deverá implementar a interface apropriada para cada padrão de controle.
 
 Seu projeto de provedor de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] deve referenciar os seguintes assemblies:
 
@@ -59,8 +59,8 @@ Cada provedor de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla
 |Interface|Descrição|
 |---------------|-----------------|
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Fornece funcionalidade para um controle simples hospedado em uma janela, incluindo suporte para padrões de controle e propriedades.|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Herda de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Adiciona funcionalidade para um elemento em um controle complexo, incluindo navegação dentro do fragmento, configuração de foco e retorno do retângulo delimitador do elemento.|
-|<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|Herda de <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>. Adiciona a funcionalidade para o elemento raiz em um controle complexo, incluindo a localização de um elemento filho em coordenadas especificadas e a definição do estado de foco para todo o controle.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Herdada de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Adiciona funcionalidade para um elemento em um controle complexo, incluindo navegação dentro do fragmento, configuração de foco e retorno do retângulo delimitador do elemento.|
+|<xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>|Herdada de <xref:System.Windows.Automation.Provider.IRawElementProviderFragment>. Adiciona a funcionalidade para o elemento raiz em um controle complexo, incluindo a localização de um elemento filho em coordenadas especificadas e a definição do estado de foco para todo o controle.|
 
 As interfaces a seguir fornecem funcionalidade adicional, mas não precisam ser implementadas.
 
@@ -189,7 +189,7 @@ Um bom exemplo disso é um controle rebar. Um rebar contém bandas, e cada uma d
 
 Para fazer isso, o provedor raiz do fragmento do rebar expõe um conjunto de filhos representando as faixas. Cada banda tem um único provedor que pode expor propriedades e padrões. Em sua implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.HostRawElementProvider%2A>, o provedor de banda retorna o provedor de janela padrão para o HWND de controle, que é obtido chamando <xref:System.Windows.Automation.Provider.AutomationInteropProvider.HostProviderFromHandle%2A>, passando o identificador de janela do controle. Por fim, o provedor raiz do fragmento para o rebar implementa a interface <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride> e, em sua implementação de <xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride.GetOverrideProviderForHwnd%2A> ele retorna o provedor de banda apropriado para o controle contido no HWND especificado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral dos provedores de automação de interface do usuário](ui-automation-providers-overview.md)
 - [Expor um provedor de automação de interface do usuário do lado do servidor](expose-a-server-side-ui-automation-provider.md)

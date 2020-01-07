@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: bc3a139db80066c9cad5199c7734fe66a8639400
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 8fea61c463928ee69ef5dd0dfbf107f89c5384ff
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460034"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544474"
 ---
 # <a name="binding-declarations-overview"></a>Visão geral das declarações de associação
 
@@ -25,7 +25,7 @@ Este tópico discute as diferentes maneiras que você pode declarar uma associa�
 
 <a name="Prereq"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Antes de ler este tópico, é importante que você esteja familiarizado com o conceito e o uso de extensões de marcação. Para obter mais informações sobre extensões de marcação, consulte [Extensões de marcação e XAML WPF](../advanced/markup-extensions-and-wpf-xaml.md).
 
@@ -110,9 +110,9 @@ Use a propriedade <xref:System.Windows.Data.Binding.Path%2A> para especificar o 
 
 - Se você definir <xref:System.Windows.Data.Binding.Path%2A> em XAML, também precisará escapar (usando entidades XML) determinados caracteres que são especiais para a definição de linguagem XML:
 
-  - Use `&` para pular o caractere “&”.
+  - Use `&amp;` para pular o caractere "&".
 
-  - Use `>` para pular a marca de fim “>”.
+  - Use `&gt;` para pular a marca de fim ">".
 
 - Além disso, se você descreve a associação inteira em um atributo usando a sintaxe de extensão de marcação, você precisa pular (usando a barra invertida \\) caracteres que são especiais para o analisador de extensão de marcação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:
 
@@ -140,9 +140,9 @@ O comportamento padrão será o seguinte se não for especificado na declaraçã
 
 - O valor de <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> padrão varia entre <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged> e <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> dependendo da propriedade de dependência associada também. O valor padrão para a maioria das propriedades de dependência é <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>, enquanto a propriedade <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> tem um valor padrão de <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)
-- [Tópicos explicativos](data-binding-how-to-topics.md)
+- [Tópicos de instruções](data-binding-how-to-topics.md)
 - [Associação de dados](../advanced/optimizing-performance-data-binding.md)
 - [Sintaxe PropertyPath XAML](../advanced/propertypath-xaml-syntax.md)

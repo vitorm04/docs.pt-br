@@ -2,12 +2,12 @@
 title: Instruções do firewall
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
-ms.openlocfilehash: 3c94f0edbb244b6c378cc32f05c34fd029d253ff
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e2c4dd8e784599a5e110e7454d9d0e709cbc5776
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837838"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544783"
 ---
 # <a name="firewall-instructions"></a>Instruções do firewall
 Você deve habilitar várias portas ou programas no firewall para que os exemplos de Windows Communication Foundation (WCF) possam funcionar. Muitos dos exemplos se comunicam usando portas no intervalo de 8000-8003 e a porta 9000. O firewall é ativado por padrão e impede o acesso a essas portas. Para habilitar o firewall para os exemplos, conclua um dos seguintes procedimentos, dependendo de seus requisitos e ambiente de segurança:  
@@ -36,7 +36,7 @@ Você deve habilitar várias portas ou programas no firewall para que os exemplo
   
     - No Windows 7 ou no Windows Server 2008 R2, clique em **permitir um programa ou recurso pelo firewall do Windows**. Clique em **alterar configurações**, permitir **outro programa...** .  
   
-    - No Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], clique em **permitir um programa pelo firewall do Windows**.  
+    - No Windows Vista ou no Windows Server 2008, clique em **permitir um programa pelo firewall do Windows**.  
   
 4. Na guia **exceções** , clique em **Adicionar programa**.  
   
@@ -72,7 +72,7 @@ Você deve habilitar várias portas ou programas no firewall para que os exemplo
   
     10. Clique em **regras de saída** e repita as etapas de c a h.  
   
-3. No Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)], siga estas etapas.  
+3. No Windows Vista ou no Windows Server 2008, siga estas etapas.  
   
     1. Clique em **Permitir um programa pelo Firewall do Windows**.  
   

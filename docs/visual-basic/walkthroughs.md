@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: a6e45e31e2678ce05dc0f637ed1121b54d8d6cbb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352836"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636036"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Instruções passo a passo da linguagem Visual Basic
 
@@ -35,7 +35,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Descreve como declarar uma classe e seu campos, propriedades, métodos e eventos.
 
 - [Escrevendo consultas em Visual Basic](programming-guide/concepts/linq/walkthrough-writing-queries.md)  
- Demonstra como você pode usar recursos de linguagem do Visual Basic para escrever expressões de consulta [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].
+ Demonstra como você pode usar Visual Basic recursos de idioma para escrever expressões de consulta LINQ (consulta integrada à linguagem).
 
 - [Implementando IEnumerable(Of T) no Visual Basic](programming-guide/language-features/control-flow/walkthrough-implementing-ienumerable-of-t.md)  
  Demonstra como criar uma classe que implementa a interface `IEnumerable(Of String)` e uma classe que implementa a interface `IEnumerator(Of String)` para ler um arquivo de texto uma linha de cada vez.
@@ -53,7 +53,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Descreve as configurações `My.Application.Log` padrão e como determinar as configurações para seu aplicativo.
 
 - [Alterando onde My.Application.Log grava informações](developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- Mostra como substituir as configurações `My.Application.Log` e `My.Log` padrão para registrar em log as informações de evento e fazer com que o objeto `Log` grave em outros ouvintes de log.
+ Mostra como substituir as configurações `My.Log` e `Log` padrão para registrar em log as informações de evento e fazer com que o objeto `My.Application.Log` grave em outros ouvintes de log.
 
 - [Filtrando a saída de My.Application.Log](developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)  
  Demonstra como alterar a filtragem de log padrão do objeto `My.Application.Log`.

@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
-ms.openlocfilehash: ea6754d9d93a7d400ac3494b01b850374e9ec02d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 50d6c9ffb484dfbc6d33ed1a3e9a1f03f240990b
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354175"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636530"
 ---
 # <a name="linq-in-visual-basic"></a>LINQ no Visual Basic
-Esta seção contém exemplos, visões gerais e informações que ajudarão você a compreender e usar o Visual Basic e [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
+Esta seção contém visões gerais, exemplos e informações básicas que ajudarão você a entender e usar Visual Basic e LINQ (consulta integrada à linguagem).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
- Fornece uma introdução aos provedores, operadores, estrutura de consulta e recursos de linguagem [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ Fornece uma introdução aos provedores, operadores, estrutura de consulta e recursos de linguagem do LINQ.  
   
  [Como consultar um banco de dados](../../../../visual-basic/programming-guide/language-features/linq/how-to-query-a-database-by-using-linq.md)  
  Fornece um exemplo de como se conectar a um banco de dados do SQL Server e executar uma consulta usando LINQ.  
@@ -45,7 +45,7 @@ Esta seção contém exemplos, visões gerais e informações que ajudarão voc�
  [Como retornar um resultado de consulta LINQ como um tipo específico](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  Fornece um exemplo de como retornar os resultados de uma consulta LINQ como um tipo específico em vez de um tipo anônimo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ (Consulta Integrada à Linguagem)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visão geral do LINQ to XML no Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)

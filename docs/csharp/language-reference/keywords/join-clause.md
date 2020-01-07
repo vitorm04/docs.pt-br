@@ -9,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: 21d4d1f9878fb7df4692fdeacd23b042680c14f1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2e1304c9f38c82b43b0c6551d1b5e7aac523dfe4
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633618"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635958"
 ---
 # <a name="join-clause-c-reference"></a>Cláusula join (Referência de C#)
 
@@ -22,13 +22,13 @@ A cláusula `join` é útil para associar elementos de sequências de origem dif
 
 Uma cláusula `join` recebe duas sequências de origem como entrada. Os elementos em cada sequência devem ser ou conter uma propriedade que possa ser comparada com uma propriedade correspondente na outra sequência. A cláusula `join` compara a igualdade das chaves especificadas, usando a palavra-chave especial `equals`. Todas as junções realizadas pela cláusula `join` são junções por igualdade. A forma da saída de uma cláusula `join` depende do tipo específico de junção que você está realizando. A seguir estão os três tipos de junção mais comuns:
 
-- Junção interna
+- União interna
 
 - Junção de grupo
 
 - Junção externa esquerda
 
-## <a name="inner-join"></a>Junção interna
+## <a name="inner-join"></a>União interna
 
 O exemplo a seguir mostra uma junção por igualdade interna simples. Essa consulta produz uma sequência simples de pares "nome de produto / categoria". A mesma cadeia de caracteres de categoria aparecerá em vários elementos. Se um elemento de `categories` não tiver `products` correspondente, essa categoria não aparecerá nos resultados.
 
@@ -56,7 +56,7 @@ Para obter mais informações, consulte [Executar junções agrupadas](../../lin
 
 ## <a name="left-outer-join"></a>Junção externa esquerda
 
-Em uma junção externa esquerda, todos os elementos na sequência de origem à esquerda são retornados, mesmo que não haja elementos correspondentes na sequência à direita. Para executar uma junção externa esquerda em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], use o método `DefaultIfEmpty` em combinação com uma junção de grupo para especificar um elemento padrão do lado direito, que será produzido caso um elemento do lado esquerdo não tenha correspondência. Você pode usar `null` como o valor padrão para qualquer tipo de referência ou pode especificar um tipo padrão definido pelo usuário. No exemplo a seguir, é mostrado um tipo padrão definido pelo usuário:
+Em uma junção externa esquerda, todos os elementos na sequência de origem à esquerda são retornados, mesmo que não haja elementos correspondentes na sequência à direita. Para executar uma junção externa esquerda no LINQ, use o método `DefaultIfEmpty` em combinação com uma junção de grupo para especificar um elemento padrão do lado direito para produzir se um elemento do lado esquerdo não tiver correspondências. Você pode usar `null` como o valor padrão para qualquer tipo de referência ou pode especificar um tipo padrão definido pelo usuário. No exemplo a seguir, é mostrado um tipo padrão definido pelo usuário:
 
 [!code-csharp[cscsrefQueryKeywords#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#27)]
 
@@ -72,9 +72,9 @@ Você pode realizar junções por não igualdade, uniões cruzadas e outras oper
 
 ## <a name="joins-on-object-collections-vs-relational-tables"></a>Junções em coleções de objetos versus tabelas relacionais
 
-Em uma expressão de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], as operações de junção são realizadas em coleções de objetos. As coleções de objetos não podem ser "unidas" exatamente da mesma forma que duas tabelas relacionais. Em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], cláusulas `join` explícitas só são necessárias quando duas sequências de origem não são ligadas por nenhuma relação. Ao trabalhar com [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], as tabelas de chave estrangeira são representadas no modelo de objeto como propriedades da tabela primária. Por exemplo, no banco de dados Northwind, a tabela Cliente tem uma relação de chave estrangeira com a tabela Pedidos. Quando você mapear as tabelas para o modelo de objeto, a classe Cliente terá uma propriedade de Pedidos contendo a coleção de Pedidos associados a esse Cliente. Na verdade, a junção já foi feita para você.
+Em uma expressão de consulta LINQ, as operações de junção são executadas em coleções de objetos. As coleções de objetos não podem ser "unidas" exatamente da mesma forma que duas tabelas relacionais. No LINQ, as cláusulas `join` explícitas só são necessárias quando duas sequências de origem não são ligadas por nenhuma relação. Ao trabalhar com [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], as tabelas de chave estrangeira são representadas no modelo de objeto como propriedades da tabela primária. Por exemplo, no banco de dados Northwind, a tabela Cliente tem uma relação de chave estrangeira com a tabela Pedidos. Quando você mapear as tabelas para o modelo de objeto, a classe Cliente terá uma propriedade de Pedidos contendo a coleção de Pedidos associados a esse Cliente. Na verdade, a junção já foi feita para você.
 
-Para saber mais sobre como fazer consultas entre tabelas relacionadas no contexto de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], confira [Como mapear relações de banco de dados](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
+Para obter mais informações sobre como fazer consultas entre tabelas relacionadas no contexto de [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], consulte [Como mapear relações de banco de dados](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
 ## <a name="composite-keys"></a>Chaves compostas
 
@@ -90,7 +90,7 @@ O exemplo a seguir compara os resultados de uma junção interna, uma junção d
 
 Uma cláusula `join` que não é seguida por `into` é convertida em uma chamada de método <xref:System.Linq.Enumerable.Join%2A>. Uma cláusula `join` que é seguida por `into` é convertida em uma chamada de método <xref:System.Linq.Enumerable.GroupJoin%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Palavras-chave de Consulta (LINQ)](query-keywords.md)
 - [LINQ (Consulta Integrada à Linguagem)](../../linq/index.md)

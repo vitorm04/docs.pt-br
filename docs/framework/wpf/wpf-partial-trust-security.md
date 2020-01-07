@@ -15,17 +15,17 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: 907c1f02e07c60ac38c8e09e94fc96ae2573e97c
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455308"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636543"
 ---
 # <a name="wpf-partial-trust-security"></a>Segurança parcialmente confiável do WPF
-<a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, as linguagens de script HTML e do lado do cliente não são capazes de acessar recursos críticos do sistema. Como os aplicativos hospedados no navegador Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade com um conjunto semelhante de restrições. Para impor essas restrições, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] depende da CAS (segurança de acesso do código) e do ClickOnce (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, aplicativos hospedados em navegador solicitam o conjunto de permissões de CAS de zona da Internet, independentemente de serem iniciados da Internet, da intranet local ou do computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
+<a name="introduction"></a> Em geral, os aplicativos da Internet devem ter acesso restrito aos recursos críticos do sistema, para evitar danos mal-intencionados. Por padrão, as linguagens de script HTML e do lado do cliente não são capazes de acessar recursos críticos do sistema. Como os aplicativos hospedados no navegador Windows Presentation Foundation (WPF) podem ser iniciados no navegador, eles devem estar em conformidade com um conjunto semelhante de restrições. Para impor essas restrições, o WPF conta com a CAS (segurança de acesso do código) e o ClickOnce (consulte [estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)). Por padrão, aplicativos hospedados em navegador solicitam o conjunto de permissões de CAS de zona da Internet, independentemente de serem iniciados da Internet, da intranet local ou do computador local. Aplicativos que são executados com nada menos do que o conjunto completo de permissões devem ser executados com confiança parcial.  
   
- o [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fornece uma ampla variedade de suporte para garantir que a maior funcionalidade possível possa ser usada com segurança em confiança parcial e, juntamente com o CAS, fornece suporte adicional para programação de confiança parcial.  
+ O WPF fornece uma ampla variedade de suporte para garantir que a maior funcionalidade possível possa ser usada com segurança em confiança parcial e, juntamente com o CAS, fornece suporte adicional para programação de confiança parcial.  
   
  Esse tópico contém as seguintes seções:  
   
@@ -41,16 +41,16 @@ ms.locfileid: "73455308"
   
  Tabela 1: Recursos de WPF que são aceitos em confiança parcial  
   
-|Área de recursos|Recurso|  
+|Área do recurso|Recurso|  
 |------------------|-------------|  
 |Geral|Janela do Navegador<br /><br /> Local do acesso de origem<br /><br /> IsolatedStorage (limite de 512KB)<br /><br /> Provedores de UIAutomation<br /><br /> Comando<br /><br /> IMEs (Editores de Método de Entrada)<br /><br /> Tinta e caneta eletrônica<br /><br /> Simulação de arrastar/soltar usando eventos de movimento e captura do Mouse<br /><br /> OpenFileDialog<br /><br /> Desserialização de XAML (via XamlReader)|  
-|Integração da Web|Caixa de diálogo de download do Navegador<br /><br /> Navegação iniciada pelo usuário de nível superior<br /><br /> mailto:links<br /><br /> Parâmetros do Uniform Resource Identifier<br /><br /> HTTPWebRequest<br /><br /> Conteúdo do WPF hospedado em um IFRAME<br /><br /> Hospedagem de páginas do mesmo Site HTML usando o quadro<br /><br /> Hospedagem de páginas do mesmo Site HTML usando o navegador da Web<br /><br /> Serviços Web (ASMX)<br /><br /> Serviços Web (usando o Windows Communication Foundation)<br /><br /> Script<br /><br /> Document Object Model|  
-|Visuais|2D e 3D<br /><br /> Animação<br /><br /> Mídia (Site de origem e entre domínios)<br /><br /> Geração de imagens/áudio/vídeo|  
-|Leitura|FlowDocuments<br /><br /> Documentos XPS<br /><br /> Fontes internas e do sistema<br /><br /> Fontes CFF e TrueType|  
+|Integração da Web|Caixa de diálogo de download do Navegador<br /><br /> Navegação iniciada pelo usuário de nível superior<br /><br /> mailto:links<br /><br /> Parâmetros do Uniform Resource Identifier<br /><br /> HTTPWebRequest<br /><br /> Conteúdo do WPF hospedado em um IFRAME<br /><br /> Hospedagem de páginas do mesmo Site HTML usando o quadro<br /><br /> Hospedagem de páginas do mesmo Site HTML usando o navegador da Web<br /><br /> Serviços Web (ASMX)<br /><br /> Serviços Web (usando o Windows Communication Foundation)<br /><br /> {1&gt;Script&lt;1}<br /><br /> Document Object Model|  
+|Visuais|2D e 3D<br /><br /> {1&gt;Animação&lt;1}<br /><br /> Mídia (Site de origem e entre domínios)<br /><br /> Geração de imagens/áudio/vídeo|  
+|Lendo|FlowDocuments<br /><br /> Documentos XPS<br /><br /> Fontes internas e do sistema<br /><br /> Fontes CFF e TrueType|  
 |Edição|Verificação de ortografia<br /><br /> RichTextBox<br /><br /> Texto sem formatação e suporte à área de transferência de tinta<br /><br /> Colar iniciado pelo usuário<br /><br /> Copiando conteúdo selecionado|  
 |Controles|Controles gerais|  
   
- Esta tabela aborda os recursos de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] em um alto nível. Para obter informações mais detalhadas, o SDK do Windows documenta as permissões exigidas por cada membro em [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Além disso, os recursos a seguir possuem informações mais detalhadas sobre a execução em confiança parcial, incluindo considerações especiais.  
+ Esta tabela aborda os recursos do WPF em um alto nível. Para obter informações mais detalhadas, o SDK do Windows documenta as permissões exigidas por cada membro no WPF. Além disso, os recursos a seguir possuem informações mais detalhadas sobre a execução em confiança parcial, incluindo considerações especiais.  
   
 - [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (consulte [visão geral do XAML (WPF)](../../desktop-wpf/fundamentals/xaml.md)).  
   
@@ -66,11 +66,11 @@ ms.locfileid: "73455308"
   
 - Caixa de diálogo abrir arquivo (consulte <xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>).  
   
- A tabela a seguir descreve os recursos de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] que não são seguros para serem executados dentro dos limites do conjunto de permissões de zona da Internet.  
+ A tabela a seguir descreve os recursos do WPF que não são seguros para serem executados dentro dos limites do conjunto de permissões de zona da Internet.  
   
  Tabela 2: Recursos de WPF que não estão seguros em confiança parcial  
   
-|Área de recursos|Recurso|  
+|Área do recurso|Recurso|  
 |------------------|-------------|  
 |Geral|Janela (Caixas de diálogo e janelas definidas pelo aplicativo)<br /><br /> SaveFileDialog<br /><br /> Sistema de arquivos<br /><br /> Acesso ao Registro<br /><br /> Arrastar e soltar<br /><br /> Serialização de XAML (via XamlWriter.Save)<br /><br /> Clientes de UIAutomation<br /><br /> Acesso à fonte de janela (HwndHost)<br /><br /> Suporte completo à fala<br /><br /> Interoperabilidade dos Windows Forms|  
 |Visuais|Efeitos de bitmap<br /><br /> Codificação de imagem|  
@@ -89,7 +89,7 @@ ms.locfileid: "73455308"
 > [!NOTE]
 > O comportamento descrito na tabela anterior é de confiança total XBAPs que não seguem o modelo de implantação do ClickOnce confiáveis.  
   
- Em geral, o código que pode exceder as permissões permitidas é provavelmente código comum que é compartilhado entre autônomos e aplicativos hospedados pelo navegador. A CAS e a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] oferecem várias técnicas para gerenciar esse cenário.  
+ Em geral, o código que pode exceder as permissões permitidas é provavelmente código comum que é compartilhado entre autônomos e aplicativos hospedados pelo navegador. O CAS e o WPF oferecem várias técnicas para gerenciar esse cenário.  
   
 <a name="Detecting_Permissions_using_CAS"></a>   
 ### <a name="detecting-permissions-using-cas"></a>Detectando permissões usando o CAS  
@@ -132,14 +132,14 @@ ms.locfileid: "73455308"
 |----------------|---------------|-------------------|--------------|  
 |DNS|Acessar Servidores DNS|Sim|Não|  
 |Variáveis de ambiente|Ler|Sim|Não|  
-|Caixas de diálogo de arquivo|Abrir|Sim|Sim|  
+|Caixas de diálogo de arquivo|Open|Sim|Sim|  
 |Caixas de diálogo de arquivo|Irrestrito|Sim|Não|  
 |Armazenamentos isolado|Isolamento de assembly por usuário|Sim|Não|  
 |Armazenamentos isolado|Isolamento desconhecido|Sim|Sim|  
 |Armazenamentos isolado|Cota de usuário ilimitada|Sim|Não|  
 |Mídia|Imagens, vídeo e áudio seguro|Sim|Sim|  
-|Imprimindo|Impressão padrão|Sim|Não|  
-|Imprimindo|Impressão segura|Sim|Sim|  
+|Impressão|Impressão padrão|Sim|Não|  
+|Impressão|Impressão segura|Sim|Sim|  
 |Reflexão|Emitir|Sim|Não|  
 |Segurança|Execução de código gerenciado|Sim|Sim|  
 |Segurança|Declarar permissões concedidas|Sim|Não|  
@@ -163,7 +163,7 @@ ms.locfileid: "73455308"
   
  Como alternativa, você pode usar o modelo de implantação do ClickOnce confiáveis para implantação de confiança total de qualquer zona de segurança. Para obter mais informações, consulte Visão geral e [segurança](security-wpf.md)da [implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview) .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Security](security-wpf.md)
 - [Estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)

@@ -1,18 +1,18 @@
 ---
-title: 'Como: usar expressões lambda em um guia de C# programação de consulta'
+title: Como usar expressões lambda em um guia de C# programação de consulta
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: e7e7da211599b5ce0263377ecaf25b404399ce9c
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: e66239174d5598d7cf532d21426a9e15d5075085
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423162"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635113"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Como usar expressões lambda em uma consulta (Guia de Programação em C#)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Como usar expressões lambda em uma consulta (C# guia de programação)
 Você não usa expressões lambda diretamente na sintaxe da consulta, mas as usa em chamadas de método e as expressões de consulta podem conter chamadas de método. Na verdade, algumas operações de consulta podem ser expressas na sintaxe de método. Para obter mais informações sobre a diferença entre a sintaxe de consulta e sintaxe de método, consulte [Sintaxe de consulta e sintaxe de método em LINQ](../concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Exemplo  
@@ -27,10 +27,10 @@ Você não usa expressões lambda diretamente na sintaxe da consulta, mas as usa
   
  [!code-csharp[csProgGuideLINQ#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csrefLINQHowTos.cs#2)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
- Para executar esse código, copie e cole o método no `StudentClass` que é fornecido em [Como consultar uma coleção de objetos](../../linq/query-a-collection-of-objects.md) e chame-o do método `Main`.  
+## <a name="compiling-the-code"></a>Compilando o Código  
+ Para executar esse código, copie e cole o método no `StudentClass` fornecido em [consultar uma coleção de objetos](../../linq/query-a-collection-of-objects.md) e chame-o do método `Main`.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Expressões Lambda](./lambda-expressions.md)
 - [Árvores de expressão (C#)](../concepts/expression-trees/index.md)

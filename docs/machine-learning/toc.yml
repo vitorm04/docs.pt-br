@@ -46,7 +46,7 @@
         - name: Prever preços (Construtor de Modelos e regressão)
           href: tutorials/predict-prices-with-model-builder.md
         - name: Analisar sentimentos com a CLI do ML.NET
-          href: tutorials/mlnet-cli.md
+          href: tutorials/sentiment-analysis-cli.md
         - name: Analisar sentimentos no Razor Pages (Construtor de Modelos e classificação binária)
           href: tutorials/sentiment-analysis-model-builder.md
         - name: Categorizar violações de integridade (Construtor de Modelos e classificação multiclasse)
@@ -57,13 +57,13 @@
           href: how-to-guides/matchup-app-infer-net.md
 - name: Conceitos
   items:
-    - name: Tarefas (tipos de modelo) do ML.NET
+    - name: Tarefas do ML.NET
       href: resources/tasks.md
     - name: Algoritmos
       href: how-to-choose-an-ml-net-algorithm.md
     - name: Transformações de dados
       href: resources/transforms.md
-    - name: Métricas
+    - name: Métricas de avaliação de modelo
       href: resources/metrics.md
     - name: Melhorar a precisão do modelo
       href: resources/improve-machine-learning-model-ml-net.md

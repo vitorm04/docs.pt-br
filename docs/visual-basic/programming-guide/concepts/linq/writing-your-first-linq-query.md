@@ -1,25 +1,25 @@
 ---
-title: Escrevendo a primeira consulta LINQ
+title: Escrever sua primeira consulta LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
 - queries [LINQ in Visual Basic], writing
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: a9fe4241972815a04ec9c6a51a45760d72a8bbb2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: addf35afa2a4c88faf73ebc3d60fbcf9c4db1518
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349341"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636699"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Escrevendo a primeira consulta LINQ (Visual Basic)
 Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As consultas são expressas em uma linguagem de consulta dedicada. Ao longo do tempo, diferentes idiomas foram desenvolvidos para diferentes tipos de fontes de dados, por exemplo, SQL para bancos de dados relacionais e XQuery for XML. Isso torna necessário que o desenvolvedor do aplicativo aprenda uma nova linguagem de consulta para cada tipo de fonte de dados ou formato de dados com suporte.  
   
- o [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] simplifica a situação oferecendo um modelo consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], você está sempre trabalhando com objetos. Você usa os mesmos padrões básicos de codificação para consultar e transformar dados em documentos XML, bancos de dados SQL, conjuntos de ADO.NET e entidades, .NET Framework coleções e qualquer outra fonte ou formato para o qual um provedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] está disponível. Este documento descreve as três fases da criação e do uso de consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] básicas.  
+ A consulta integrada à linguagem (LINQ) simplifica a situação oferecendo um modelo consistente para trabalhar com dados em vários tipos de fontes de dados e formatos. Em uma consulta LINQ, você está sempre trabalhando com objetos. Você usa os mesmos padrões básicos de codificação para consultar e transformar dados em documentos XML, bancos de dados SQL, conjuntos de ADO.NET e entidades, .NET Framework coleções e qualquer outra fonte ou formato para o qual um provedor de LINQ esteja disponível. Este documento descreve as três fases da criação e do uso de consultas básicas do LINQ.  
   
 ## <a name="three-stages-of-a-query-operation"></a>Três Estágios de uma Operação de Consulta  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] operações de consulta consistem em três ações:  
+ As operações de consulta LINQ consistem em três ações:  
   
 1. Obtenha a fonte de dados ou as fontes.  
   
@@ -27,7 +27,7 @@ Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As co
   
 3. Executar a consulta.  
   
- No [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a execução de uma consulta é distinta da criação da consulta. Você não recupera dados apenas criando uma consulta. Esse ponto é abordado com mais detalhes posteriormente neste tópico.  
+ No LINQ, a execução de uma consulta é distinta da criação da consulta. Você não recupera dados apenas criando uma consulta. Esse ponto é abordado com mais detalhes posteriormente neste tópico.  
   
  O exemplo a seguir ilustra as três partes de uma operação de consulta. O exemplo usa uma matriz de inteiros como uma fonte de dados conveniente para fins de demonstração. No entanto, os mesmos conceitos também se aplicam a outras fontes de dados.  
   
@@ -41,11 +41,11 @@ Uma *consulta* é uma expressão que recupera dados de uma fonte de dados. As co
  `0 2 4 6`  
   
 ## <a name="the-data-source"></a>A Fonte de Dados  
- Como a fonte de dados no exemplo anterior é uma matriz, ela dá suporte implicitamente à interface de <xref:System.Collections.Generic.IEnumerable%601> genérica. É esse fato que permite que você use uma matriz como uma fonte de dados para uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Tipos que dão suporte a <xref:System.Collections.Generic.IEnumerable%601> ou uma interface derivada, como a genérica <xref:System.Linq.IQueryable%601>, são chamados *tipos passíveis de consulta*.  
+ Como a fonte de dados no exemplo anterior é uma matriz, ela dá suporte implicitamente à interface de <xref:System.Collections.Generic.IEnumerable%601> genérica. É esse fato que permite que você use uma matriz como uma fonte de dados para uma consulta LINQ. Tipos que dão suporte a <xref:System.Collections.Generic.IEnumerable%601> ou uma interface derivada, como a genérica <xref:System.Linq.IQueryable%601>, são chamados *tipos passíveis de consulta*.  
   
- Como um tipo implicitamente consultável, a matriz não requer nenhuma modificação ou tratamento especial para servir como uma fonte de dados [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. O mesmo é verdadeiro para qualquer tipo de coleção que dê suporte a <xref:System.Collections.Generic.IEnumerable%601>, incluindo o <xref:System.Collections.Generic.List%601>genérico, <xref:System.Collections.Generic.Dictionary%602>e outras classes na biblioteca de classes .NET Framework.  
+ Como um tipo implicitamente consultável, a matriz não requer nenhuma modificação ou tratamento especial para servir como uma fonte de dados LINQ. O mesmo é verdadeiro para qualquer tipo de coleção que dê suporte a <xref:System.Collections.Generic.IEnumerable%601>, incluindo o <xref:System.Collections.Generic.List%601>genérico, <xref:System.Collections.Generic.Dictionary%602>e outras classes na biblioteca de classes .NET Framework.  
   
- Se os dados de origem ainda não implementarem <xref:System.Collections.Generic.IEnumerable%601>, um provedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] será necessário para implementar a funcionalidade dos *operadores de consulta padrão* para essa fonte de dados. Por exemplo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] trata o trabalho de carregar um documento XML em um tipo de <xref:System.Xml.Linq.XElement> passível de consulta, conforme mostrado no exemplo a seguir. Para obter mais informações sobre operadores de consulta padrão, consulte [visão geral dos operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md).  
+ Se os dados de origem ainda não implementarem <xref:System.Collections.Generic.IEnumerable%601>, um provedor de LINQ será necessário para implementar a funcionalidade dos *operadores de consulta padrão* para essa fonte de dados. Por exemplo, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] trata o trabalho de carregar um documento XML em um tipo de <xref:System.Xml.Linq.XElement> passível de consulta, conforme mostrado no exemplo a seguir. Para obter mais informações sobre operadores de consulta padrão, consulte [visão geral dos operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md).  
   
  [!code-vb[VbLINQFirstQuery#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#2)]  
   
@@ -57,10 +57,10 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Para obter mais informações sobre como criar tipos específicos de fontes de dados, consulte a documentação para os diversos provedores do [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Para obter uma lista desses provedores, consulte [LINQ (consulta integrada à linguagem)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) A regra básica é simples: uma [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fonte de dados é qualquer objeto que dê suporte à interface genérica <xref:System.Collections.Generic.IEnumerable%601> ou uma interface que herde dela.  
+ Para obter mais informações sobre como criar tipos específicos de fontes de dados, consulte a documentação para os vários provedores de LINQ. (Para obter uma lista desses provedores, consulte [LINQ (consulta integrada à linguagem)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) A regra básica é simples: uma fonte de dados LINQ é qualquer objeto que dê suporte à interface de <xref:System.Collections.Generic.IEnumerable%601> genérica ou uma interface que herde dela.  
   
 > [!NOTE]
-> Tipos como <xref:System.Collections.ArrayList> que dão suporte à interface não genérica <xref:System.Collections.IEnumerable> também podem ser usados como [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] fontes de dados. Para obter um exemplo que usa um <xref:System.Collections.ArrayList>, consulte [como consultar um ArrayList com LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
+> Tipos como <xref:System.Collections.ArrayList> que dão suporte à interface não genérica <xref:System.Collections.IEnumerable> também podem ser usados como fontes de dados LINQ. Para obter um exemplo que usa um <xref:System.Collections.ArrayList>, consulte [como consultar um ArrayList com LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
   
 ## <a name="the-query"></a>A Consulta  
  Na consulta, você especifica quais informações deseja recuperar da fonte de dados ou das fontes. Você também tem a opção de especificar como essas informações devem ser classificadas, agrupadas ou estruturadas antes de serem retornadas. Para habilitar a criação de consultas, Visual Basic incorporou uma nova sintaxe de consulta à linguagem.  
@@ -69,7 +69,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- A expressão de consulta contém três cláusulas: `From`, `Where`e `Select`. A função específica e a finalidade de cada cláusula de expressão de consulta são discutidas em [operações de consulta básica (Visual Basic)](basic-query-operations.md). Para obter mais informações, consulte [consultas](../../../../visual-basic/language-reference/queries/index.md). Observe que em [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], uma definição de consulta geralmente é armazenada em uma variável e executada mais tarde. A variável de consulta, como `evensQuery` no exemplo anterior, deve ser um tipo consultável. O tipo de `evensQuery` é `IEnumerable(Of Integer)`, atribuído pelo compilador usando inferência de tipo local.  
+ A expressão de consulta contém três cláusulas: `From`, `Where`e `Select`. A função específica e a finalidade de cada cláusula de expressão de consulta são discutidas em [operações de consulta básica (Visual Basic)](basic-query-operations.md). Para obter mais informações, consulte [consultas](../../../../visual-basic/language-reference/queries/index.md). Observe que, no LINQ, uma definição de consulta geralmente é armazenada em uma variável e executada mais tarde. A variável de consulta, como `evensQuery` no exemplo anterior, deve ser um tipo consultável. O tipo de `evensQuery` é `IEnumerable(Of Integer)`, atribuído pelo compilador usando inferência de tipo local.  
   
  É importante lembrar que a variável de consulta não executa nenhuma ação e não retorna nenhum dado. Ele armazena apenas a definição de consulta. No exemplo anterior, é o loop de `For Each` que executa a consulta.  
   
@@ -77,7 +77,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
  A execução da consulta é separada da criação da consulta. A criação de consulta define a consulta, mas a execução é disparada por um mecanismo diferente. Uma consulta pode ser executada assim que é definida (*execução imediata*) ou a definição pode ser armazenada e a consulta pode ser executada mais tarde (*execução adiada*).  
   
 ### <a name="deferred-execution"></a>Execução Adiada  
- Uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] típica é semelhante à do exemplo anterior, na qual `evensQuery` está definida. Ele cria a consulta, mas não a executa imediatamente. Em vez disso, a definição de consulta é armazenada na variável de consulta `evensQuery`. Você executa a consulta mais tarde, normalmente usando um loop `For Each`, que retorna uma sequência de valores ou aplicando um operador de consulta padrão, como `Count` ou `Max`. Esse processo é conhecido como *execução adiada*.  
+ Uma consulta LINQ típica é semelhante à do exemplo anterior, na qual `evensQuery` é definida. Ele cria a consulta, mas não a executa imediatamente. Em vez disso, a definição de consulta é armazenada na variável de consulta `evensQuery`. Você executa a consulta mais tarde, normalmente usando um loop `For Each`, que retorna uma sequência de valores ou aplicando um operador de consulta padrão, como `Count` ou `Max`. Esse processo é conhecido como *execução adiada*.  
   
  [!code-vb[VbLINQFirstQuery#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#7)]  
   
@@ -118,9 +118,9 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Você também pode fazer com que uma consulta seja executada usando um método `IEnumerable`, como o método <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Introdução ao LINQ no Visual Basic](getting-started-with-linq.md)
+- [Introdução à LINQ no Visual Basic](getting-started-with-linq.md)
 - [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Visão geral de operadores de consulta padrão (Visual Basic)](standard-query-operators-overview.md)
 - [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
