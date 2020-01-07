@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 92942066b5f08ada0154781ae54b5d8494944ca1
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 4abcf20b851f349a2b5df78c1fe1d15f729a5462
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69963472"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345000"
 ---
 # <a name="events-overview-windows-forms"></a>Visão geral sobre eventos (Windows Forms)
 Um evento é uma ação a qual você pode responder ou "manipular", no código. Os eventos podem ser gerados por uma ação do usuário, como o clicar do mouse ou pressionar de uma tecla, pelo código de programa ou pelo sistema.
@@ -33,7 +33,7 @@ Um evento é uma ação a qual você pode responder ou "manipular", no código. 
 
  Esse modelo de evento usa *delegados* para associar eventos aos métodos que são usados para tratá-los. A classe delegate permite que outras classes se registrem para a notificação de eventos, especificando um método de manipulador. Quando o evento ocorre, a classe delegate chama o método associado. Para obter mais informações sobre como definir delegados, consulte [eventos](../../standard/events/index.md).
 
- Essas classes podem ser associadas a um único método ou a vários métodos, o que chamamos de multicasting. Ao criar um delegado para um evento, você (ou o Windows) normalmente cria um evento de multicast. Uma rara exceção pode ser um evento que resulta em um procedimento específico (como a exibição de uma caixa de diálogo) que não repetiria logicamente várias vezes por evento. Para obter informações sobre como criar um delegado de multicast, [consulte Como: Combinar delegados (delegados multicast)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
+Essas classes podem ser associadas a um único método ou a vários métodos, o que chamamos de multicasting. Ao criar um delegado para um evento, você (ou o Windows) normalmente cria um evento de multicast. Uma rara exceção pode ser um evento que resulta em um procedimento específico (como a exibição de uma caixa de diálogo) que não repetiria logicamente várias vezes por evento. Para obter informações sobre como criar um delegado de multicast, consulte [como combinar delegados (delegados de multicast)](../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md).
 
  Uma classe delegate multicast mantém uma lista de invocação dos métodos aos quais ela está associada. Essa classe é compatível com um método <xref:System.Delegate.Combine%2A> para adicionar um método à lista de invocação e um método <xref:System.Delegate.Remove%2A> para removê-lo.
 
@@ -43,7 +43,7 @@ Um evento é uma ação a qual você pode responder ou "manipular", no código. 
 
  O mecanismo de associação usado com essas classes é dinâmico: uma classe delegate pode ser associada em tempo de execução a qualquer método cuja assinatura corresponda à assinatura do manipulador de eventos. Com esse recurso, você pode configurar ou alterar o método associado de acordo com uma condição e anexar dinamicamente um manipulador de eventos a um controle.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Criando manipuladores de eventos no Windows Forms](creating-event-handlers-in-windows-forms.md)
 - [Visão geral de manipuladores de eventos](event-handlers-overview-windows-forms.md)

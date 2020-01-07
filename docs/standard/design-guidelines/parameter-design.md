@@ -10,14 +10,15 @@ helpviewer_keywords:
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: KrzysztofCwalina
-ms.openlocfilehash: 28b00f5911bb47536ec44b96f284e47b6c671149
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
-ms.translationtype: MT
+ms.openlocfilehash: 93554594b49b742a6a5e8461b6b16046701ec07c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353735"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347846"
 ---
 # <a name="parameter-design"></a>Design de parâmetro
+
 Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo seções com diretrizes para verificar argumentos. Além disso, você deve consultar as diretrizes descritas em [parâmetros de nomenclatura](../../../docs/standard/design-guidelines/naming-parameters.md).  
   
  **✓ DO** usar o tipo de parâmetro menos derivado que fornece a funcionalidade exigida pelo membro.  
@@ -40,7 +41,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
   
  Isso comunica melhor a relação entre os métodos.  
   
-### <a name="choosing-between-enum-and-boolean-parameters"></a>Escolhendo entre parâmetros de enumeração e boolianos  
+### <a name="choose-between-enum-and-boolean-parameters"></a>Escolha entre parâmetros de enumeração e boolianos  
  **✓ DO** usar enums se um membro tivesse dois ou mais parâmetros booleanos.  
   
  **X DO NOT** usar valores booleanos, a menos que você tiver certeza absoluta nunca haverá a necessidade de mais de dois valores.  
@@ -49,7 +50,7 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
   
  **✓ CONSIDER** usando boolianos para parâmetros de construtor que são valores de dois estados realmente e são usados simplesmente para inicializar propriedades Boolianas.  
   
-### <a name="validating-arguments"></a>Validando argumentos  
+### <a name="validate-arguments"></a>Validar argumentos  
  **✓ DO** validar argumentos passados para membros públicos, protegidos ou implementados explicitamente. Lance <xref:System.ArgumentException?displayProperty=nameWithType>, ou uma de suas subclasses, se a validação falhar.  
   
  Observe que a validação real não precisa necessariamente acontecer no próprio membro público ou protegido. Isso pode acontecer em um nível inferior em alguma rotina privada ou interna. O ponto principal é que toda a área de superfície exposta aos usuários finais verifica os argumentos.  
@@ -66,10 +67,10 @@ Esta seção fornece diretrizes amplas sobre o design de parâmetros, incluindo 
   
  Se o membro for sensível à segurança, você será incentivado a fazer uma cópia e, em seguida, validar e processar o argumento.  
   
-### <a name="parameter-passing"></a>Passagem de parâmetro  
+### <a name="pass-parameters"></a>Passar parâmetros  
  Da perspectiva de um designer de estrutura, há três grupos principais de parâmetros: parâmetros por valor, parâmetros de `ref` e parâmetros de `out`.  
   
- Quando um argumento é passado por um parâmetro por valor, o membro recebe uma cópia do argumento real passado. Se o argumento for um tipo de valor, uma cópia do argumento será colocada na pilha. Se o argumento for um tipo de referência, uma cópia da referência será colocada na pilha. As C#linguagens CLR mais populares, como, VB.net e C++, por padrão, passar parâmetros por valor.  
+ Quando um argumento é passado por um parâmetro por valor, o membro recebe uma cópia do argumento real passado. Se o argumento for um tipo de valor, uma cópia do argumento será colocada na pilha. Se o argumento for um tipo de referência, uma cópia da referência será colocada na pilha. As C#linguagens CLR mais populares, como, Visual Basic e C++, por padrão, passar parâmetros por valor.  
   
  Quando um argumento é passado através de um parâmetro `ref`, o membro recebe uma referência para o argumento real passado. Se o argumento for um tipo de valor, uma referência ao argumento será colocada na pilha. Se o argumento for um tipo de referência, uma referência à referência será colocada na pilha. `Ref` parâmetros podem ser usados para permitir que o membro modifique os argumentos passados pelo chamador.  
   
@@ -155,7 +156,7 @@ public class String {
   
  *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

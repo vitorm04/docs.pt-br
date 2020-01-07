@@ -13,19 +13,19 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 75e6c7b4886bd490c462e9128eca7ec13f233824
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837292"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636764"
 ---
 # <a name="security-wpf"></a>Segurança (WPF)
-<a name="introduction"></a>Ao desenvolver Windows Presentation Foundation (WPF) aplicativos autônomos e hospedados em navegador, você deve considerar o modelo de segurança. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos autônomos são executados com permissões irrestritas (conjunto de permissões do CAS**FullTrust** ), sejam implantados usando Windows Installer (. msi), xcopy ou ClickOnce. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo de host totalmente confiável pode criar um <xref:System.AppDomain> de confiança parcial usando o modelo de suplemento de .NET Framework. Para obter mais informações, consulte [visão geral dos suplementos do WPF](./app-development/wpf-add-ins-overview.md).  
+<a name="introduction"></a>Ao desenvolver Windows Presentation Foundation (WPF) aplicativos autônomos e hospedados em navegador, você deve considerar o modelo de segurança. Os aplicativos autônomos do WPF são executados com permissões irrestritas (conjunto de permissões do CAS**FullTrust** ), implantados usando Windows Installer (. msi), xcopy ou ClickOnce. Não há suporte para a implantação de aplicativos WPF autônomos e de confiança parcial com o ClickOnce. No entanto, um aplicativo de host totalmente confiável pode criar um <xref:System.AppDomain> de confiança parcial usando o modelo de suplemento de .NET Framework. Para obter mais informações, consulte [visão geral dos suplementos do WPF](./app-development/wpf-add-ins-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados em navegador são hospedados pelo Windows Internet Explorer ou pelo Firefox e podem ser aplicativos de navegador XAML (XBAPs) ou documentos soltos [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] para obter mais informações, consulte [visão geral de aplicativos de navegador XAML WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
+ Os aplicativos hospedados no navegador do WPF são hospedados pelo Windows Internet Explorer ou pelo Firefox e podem ser aplicativos de navegador XAML (XBAPs) ou documentos [!INCLUDE[TLA#tla_xaml](../../../includes/tlasharptla-xaml-md.md)] soltos para obter mais informações, consulte [visão geral de aplicativos de navegador XAML WPF](./app-development/wpf-xaml-browser-applications-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados em navegador são executados em uma área de segurança de confiança parcial, por padrão, que é limitada ao conjunto de permissões de zona da**Internet** CAS padrão. Isso isola efetivamente [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos hospedados por navegador do computador cliente da mesma forma que você esperaria que aplicativos Web típicos fossem isolados. Um XBAP é capaz de elevar privilégios, até confiança total, dependendo da zona de segurança da URL de implantação e da configuração de segurança do cliente. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md).  
+ Os aplicativos hospedados no navegador do WPF são executados em uma área restrita de segurança de confiança parcial, por padrão, que é limitada ao conjunto de permissões de zona da**Internet** CAS padrão. Isso isola efetivamente os aplicativos hospedados no navegador do WPF do computador cliente da mesma forma que você esperaria que aplicativos Web típicos fossem isolados. Um XBAP é capaz de elevar privilégios, até confiança total, dependendo da zona de segurança da URL de implantação e da configuração de segurança do cliente. Para obter mais informações, consulte [Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md).  
   
  Este tópico discute o modelo de segurança para aplicativos do Windows Presentation Foundation (WPF) autônomos e hospedados em navegador.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74837292"
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>Navegação segura  
- Para XBAPs, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] distingue dois tipos de navegação: aplicativo e navegador.  
+ Para XBAPs, o WPF distingue dois tipos de navegação: aplicativo e navegador.  
   
  *A navegação do aplicativo* é uma navegação entre itens de conteúdo dentro de um aplicativo hospedado por um navegador. *A navegação do navegador* é uma navegação que muda a URL de local e conteúdo do próprio navegador. A relação entre a navegação do aplicativo (normalmente XAML) e a navegação do navegador (normalmente HTML) é mostrada na ilustração a seguir:
   
@@ -62,7 +62,7 @@ ms.locfileid: "74837292"
 |Resource|Arquivos que são adicionados a um projeto com um tipo de **recurso**de compilação.|`pack://application:,,,/MyResourceFile.xaml`|  
 |Conteúdo|Arquivos que são adicionados a um projeto com um tipo de **conteúdo**de compilação.|`pack://application:,,,/MyContentFile.xaml`|  
 |Site de origem|Arquivos que são adicionados a um projeto com um tipo de compilação **nenhum**.|`pack://siteoforigin:,,,/MySiteOfOriginFile.xaml`|  
-|Código do aplicativo|Recursos XAML que têm um code-behind compilado.<br /><br /> \- ou -<br /><br /> Arquivos XAML que são adicionados a um projeto com um tipo de compilação de **página**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
+|Código do aplicativo|Recursos XAML que têm um code-behind compilado.<br /><br /> - ou -<br /><br /> Arquivos XAML que são adicionados a um projeto com um tipo de compilação de **página**.|`pack://application:,,,/MyResourceFile` `.xaml`|  
   
 > [!NOTE]
 > Para obter mais informações sobre os arquivos de dados de aplicativo e URIs de pacote, consulte [recursos de aplicativo WPF, conteúdo e arquivos de dados](./app-development/wpf-application-resource-content-and-data-files.md).  
@@ -220,7 +220,7 @@ ms.locfileid: "74837292"
   
  No entanto, é possível que um assembly APTCA exiba uma falha de segurança depois de ser instalado no GAC. Após a descoberta de uma falha de segurança, os publicadores de assembly podem produzir uma atualização de segurança para corrigir o problema em instalações existentes, além de protege de instalações que poderão ocorrer após a descoberta do problema. Uma opção para a atualização é desinstalar o assembly, embora isso possa interromper outros aplicativos clientes totalmente confiáveis que o utilizam.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] fornece um mecanismo pelo qual um assembly APTCA pode ser desabilitado para XBAPs parcialmente confiáveis sem desinstalar o assembly APTCA.  
+ O WPF fornece um mecanismo pelo qual um assembly APTCA pode ser desabilitado para XBAPs parcialmente confiáveis sem desinstalar o assembly APTCA.  
   
  Para desabilitar um assembly APTCA, é necessário criar uma chave do Registro especial:  
   
@@ -262,16 +262,16 @@ ms.locfileid: "74837292"
   
 <a name="BestPractices"></a>   
 ## <a name="resources-for-developing-wpf-applications-that-promote-security"></a>Recursos para o desenvolvimento de aplicativos do WPF que promovem a segurança  
- A seguir estão alguns recursos adicionais para ajudar a desenvolver [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos que promovem a segurança:  
+ A seguir estão alguns recursos adicionais para ajudar a desenvolver aplicativos WPF que promovem a segurança:  
   
 |Área|Resource|  
 |----------|--------------|  
 |Código gerenciado|[Padrões e práticas de orientação de segurança para aplicativos](https://docs.microsoft.com/previous-versions/msp-n-p/ff650760(v=pandp.10))|  
 |CAS|[Segurança de acesso do código](../misc/code-access-security.md)|  
 |ClickOnce|[Segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)|  
-|[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]|[Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)|  
+|WPF|[Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Segurança parcialmente confiável do WPF](wpf-partial-trust-security.md)
 - [Estratégia de segurança do WPF – segurança da plataforma](wpf-security-strategy-platform-security.md)

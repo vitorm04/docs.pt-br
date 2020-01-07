@@ -3,15 +3,15 @@ title: 'Tutorial: detectar objetos usando o aprendizado profundo com ONNX e ML.N
 description: Este tutorial mostra como usar um modelo de aprendizado profundo ONNX pré-treinado no ML.NET para detectar objetos em imagens.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 08/27/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1364b6a1cf6d424975828185a50175b2763c6516
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420049"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345041"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>Tutorial: detectar objetos usando ONNX no ML.NET
 
@@ -30,7 +30,7 @@ Neste tutorial, você aprenderá como:
 
 ## <a name="pre-requisites"></a>Pré-requisitos
 
-- [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
+- [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento multi-plataforma do .NET Core" instalada.
 - [Pacote NuGet do Microsoft.ML](https://www.nuget.org/packages/Microsoft.ML/)
 - [Pacote NuGet Microsoft.ML.ImageAnalytics](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Pacote NuGet Microsoft.ML.OnnxTransformer](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
@@ -51,7 +51,7 @@ Alguns casos de uso para detecção de objetos incluem:
 
 - Carros autônomos
 - Robótica
-- Detecção Facial
+- Detecção facial
 - Segurança do local de trabalho
 - Contagem de objetos
 - Reconhecimento de atividades
@@ -64,7 +64,7 @@ Há diferentes tipos de redes neurais, as mais comuns são a MLP (Perceptron Mul
 
 ### <a name="understand-the-model"></a>Entender o modelo
 
-A detecção de objetos é uma tarefa de processamento de imagem. Portanto, os modelos de aprendizado profundo mais treinados para resolver esse problema são as CNNs. O modelo usado neste tutorial é o pequeno modelo de YOLOv2, uma versão mais compacta do modelo YOLOv2 descrito no documento: ["YOLO9000: melhor, mais rápido e mais forte" por Redmon e Fadhari](https://arxiv.org/pdf/1612.08242.pdf). O Tiny YOLOv2 é treinado no conjunto de dados do Pascal VOC e é composto por 15 camadas que podem prever 20 classes diferentes de objetos. Como o Tiny YOLOv2 é uma versão condensada do modelo YOLOv2 original, é feita uma compensação entre velocidade e precisão. As diferentes camadas que compõem o modelo podem ser visualizadas usando ferramentas como o Netron. Inspecionar o modelo produziria um mapeamento das conexões entre todas as camadas que compõem a rede neural, em que cada camada conteria o nome da camada junto com as dimensões da respectiva entrada/saída. As estruturas de dados usadas para descrever as entradas e as saídas do modelo são conhecidas como tensores. Os tensores podem ser entendidos como contêineres que armazenam dados em N dimensões. No caso do Tiny YOLOv2, o nome da camada de entrada é `image` e ele espera um tensor de dimensões `3 x 416 x 416`. O nome da camada de saída é `grid` e gera um tensor de saída de dimensões `125 x 13 x 13`.
+A detecção de objetos é uma tarefa de processamento de imagens. Portanto, os modelos de aprendizado profundo mais treinados para resolver esse problema são as CNNs. O modelo usado neste tutorial é o pequeno modelo de YOLOv2, uma versão mais compacta do modelo YOLOv2 descrito no documento: ["YOLO9000: melhor, mais rápido e mais forte" por Redmon e Fadhari](https://arxiv.org/pdf/1612.08242.pdf). O Tiny YOLOv2 é treinado no conjunto de dados do Pascal VOC e é composto por 15 camadas que podem prever 20 classes diferentes de objetos. Como o Tiny YOLOv2 é uma versão condensada do modelo YOLOv2 original, é feita uma compensação entre velocidade e precisão. As diferentes camadas que compõem o modelo podem ser visualizadas usando ferramentas como o Netron. Inspecionar o modelo produziria um mapeamento das conexões entre todas as camadas que compõem a rede neural, em que cada camada conteria o nome da camada junto com as dimensões da respectiva entrada/saída. As estruturas de dados usadas para descrever as entradas e as saídas do modelo são conhecidas como tensores. Os tensores podem ser entendidos como contêineres que armazenam dados em N dimensões. No caso do Tiny YOLOv2, o nome da camada de entrada é `image` e ele espera um tensor de dimensões `3 x 416 x 416`. O nome da camada de saída é `grid` e gera um tensor de saída de dimensões `125 x 13 x 13`.
 
 ![Camada de entrada sendo dividida em camadas ocultas e, em seguida, camada de saída](./media/object-detection-onnx/netron-model-map-layers.png)
 
@@ -74,9 +74,9 @@ O modelo YOLO usa uma imagem `3(RGB) x 416px x 416px`. O modelo usa essa entrada
 
 O ONNX (Open Neural Network Exchange) é um formato de software livre para modelos de IA. O ONNX é compatível com a interoperabilidade entre estruturas. Isso significa que você pode treinar um modelo em uma das muitas estruturas de aprendizado de máquina populares, como PyTorch, convertê-la em formato ONNX e consumir o modelo ONNX em uma estrutura diferente, como ML.NET. Para saber mais, visite o [site do ONNX](https://onnx.ai/).
 
-![Diagrama de formatos com suporte ONNX que estão sendo usados.](./media/object-detection-onnx/onyx-supported-formats.png)
+![Diagrama de formatos com suporte ONNX que estão sendo usados.](./media/object-detection-onnx/onnx-supported-formats.png)
 
-O modelo Tiny YOLOv2 pré-treinado é armazenado no formato ONNX, uma representação serializada das camadas e dos padrões aprendidos dessas camadas. No ML.NET, a interoperabilidade com o ONNX é obtida com os pacotes NuGet [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) e [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer). O pacote [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) contém uma série de transformações que pegam uma imagem e a codificam em valores numéricos que podem ser usados como entrada em um pipeline de previsão ou de treinamento. O pacote [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) aproveita o tempo de execução do ONNX para carregar um modelo ONNX e usá-lo para fazer previsões com base na entrada fornecida.
+O modelo Tiny YOLOv2 pré-treinado é armazenado no formato ONNX, uma representação serializada das camadas e dos padrões aprendidos dessas camadas. No ML.NET, a interoperabilidade com o ONNX é obtida com os pacotes NuGet [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) e [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer). O pacote [`ImageAnalytics`](xref:Microsoft.ML.Transforms.Image) contém uma série de transformações que pegam uma imagem e a codificam em valores numéricos que podem ser usados como entrada em um pipeline de previsão ou de treinamento. O pacote [`OnnxTransformer`](xref:Microsoft.ML.Transforms.Onnx.OnnxTransformer) aproveita o runtime do ONNX para carregar um modelo ONNX e usá-lo para fazer previsões com base na entrada fornecida.
 
 ![Fluxo de dados do arquivo ONNX para o tempo de execução do ONNX.](./media/object-detection-onnx/onnx-ml-net-integration.png)
 
@@ -110,7 +110,7 @@ Agora que você tem um entendimento geral do que é o ONNX e de como o Tiny YOLO
     tar -xvzf tiny_yolov2.tar.gz
     ```
 
-1. Copie o arquivo `model.onnx` extraído do diretório que acabou de descompactar em seu diretório de projeto *ObjectDetection* `assets\Model` e renomeie-o como `TinyYolo2_model.onnx`. Este diretório contém o modelo necessário para este tutorial.
+1. Copie o arquivo `model.onnx` extraído do diretório que acabou de descompactar em seu diretório de projeto *ObjectDetection*`assets\Model` e renomeie-o como `TinyYolo2_model.onnx`. Este diretório contém o modelo necessário para este tutorial.
 
 1. No Gerenciador de Soluções, clique com o botão direito do mouse em cada um dos arquivos no diretório e nos subdiretórios do ativo e selecione**Propriedades**. Em **Avançado**, altere o valor de **Copiar para Diretório de Saída** para **Copiar se for mais novo**.
 
@@ -152,7 +152,7 @@ Crie sua classe de dados de entrada no diretório *DataStructures* recém-criado
     - Um `ImagePath` que contém o caminho no qual a imagem é armazenada.
     - Um `Label` que contém o nome do arquivo.
 
-    Além disso, o `ImageNetData` contém um método `ReadFromFile` que carrega vários arquivos de imagem armazenados no caminho `imageFolder` especificado e os retorna como uma coleção de objetos `ImageNetData`.
+    Além disso, `ImageNetData` contém um método `ReadFromFile` que carrega vários arquivos de imagem armazenados no caminho `imageFolder` especificado e os retorna como uma coleção de objetos `ImageNetData`.
 
 Crie sua classe de previsão no diretório *DataStructures*.
 
@@ -169,7 +169,7 @@ Crie sua classe de previsão no diretório *DataStructures*.
 
     O `ImageNetPrediction` é a classe de dados de previsão e conta com os seguintes `float[]` campos:
 
-    - `PredictedLabel` contém as dimensões, a pontuação de objeções e as probabilidades de classe para cada uma das caixas delimitadoras detectadas em uma imagem.
+    - `PredictedLabel` contém as dimensões, a pontuação de objeções e as probabilidades de classe para cada uma das caixas delimitadores detectadas em uma imagem.
 
 ### <a name="initialize-variables-in-main"></a>Inicializar variáveis em Main
 
@@ -229,7 +229,7 @@ Em seguida, crie uma classe para suas caixas delimitadoras.
 
     [!code-csharp [YoloBoundingBoxUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L1)]
 
-    Logo acima da definição de classe existente, adicione uma nova definição de classe chamada `BoundingBoxDimensions`, que herda da classe `DimensionsBase` para conter as dimensões da respectiva caixa delimitadora.
+    Logo acima da definição de classe existente, adicione uma nova definição de classe chamada `BoundingBoxDimensions` que herda da classe `DimensionsBase` para conter as dimensões da respectiva caixa delimitadora.
 
     [!code-csharp [BoundingBoxDimClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L5)]
 
@@ -256,7 +256,7 @@ Agora que as classes para dimensões e caixas delimitadoras estão criadas, é h
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L1-L4)]
 
-    Dentro da definição de classe `YoloOutputParser` existente, adicione uma classe aninhada que contém as dimensões de cada uma das células da imagem. Adicione o seguinte código para a classe `CellDimensions` que herda da classe `DimensionsBase` na parte superior da definição de classe `YoloOutputParser`.
+    Dentro da definição de classe `YoloOutputParser` existente, adicione uma classe aninhada que contém as dimensões de cada uma das células da imagem. Adicione o código a seguir para a classe `CellDimensions` que herda da classe `DimensionsBase` na parte superior da definição de classe `YoloOutputParser`.
 
     [!code-csharp [YoloParserUsings](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L10)]
 
@@ -274,13 +274,13 @@ Agora que as classes para dimensões e caixas delimitadoras estão criadas, é h
     - `CELL_HEIGHT` é a altura de uma célula na grade de imagens.
     - `channelStride` é a posição inicial da célula atual na grade.
 
-    Quando o modelo faz uma previsão, também conhecida como pontuação, ele divide a imagem de entrada `416px x 416px` em uma grade de células com o tamanho `13 x 13`. O conteúdo de cada célula é `32px x 32px`. Dentro de cada célula, há cinco caixas delimitadoras que contêm cinco recursos (x, y, largura, altura, confiança). Além disso, cada caixa delimitadora contém a probabilidade de cada uma das classes que, nesse caso, é 20. Portanto, cada célula contém 125 partes de informações (cinco recursos + 20 probabilidades de classe).
+    Quando o modelo faz uma previsão, também conhecida como pontuação, ele divide a imagem de entrada `416px x 416px` em uma grade de células com o tamanho `13 x 13`. O conteúdo de cada célula é `32px x 32px`. Dentro de cada célula, há cinco caixas delimitadoras que contêm cinco recursos (x, y, largura, altura, confiança). Além disso, cada caixa delimitadora contém a probabilidade de cada uma das classes, que nesse caso é 20. Portanto, cada célula contém 125 partes de informações (cinco recursos + 20 probabilidades de classe).
 
 Crie uma lista de âncoras abaixo de `channelStride` para todas as cinco caixas delimitadoras:
 
 [!code-csharp [ParserAnchors](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L23-L26)]
 
-As âncoras são taxas de altura e largura pré-definidas das caixas delimitadoras. A maioria dos objetos ou classes detectadas por um modelo tem taxas semelhantes. Isso é importante quando se trata de criar caixas delimitadoras. Em vez de prever as caixas delimitadoras, o deslocamento das dimensões pré-definidas é calculado, reduzindo a computação necessária para prever a caixa delimitadora. Normalmente, essas taxas de âncora são calculadas com base no conjunto de dados usado. Nesse caso, como o conjunto de dados é conhecido e os valores foram previamente computados, as âncoras podem ser embutidas em código.
+As âncoras são taxas de altura e largura pré-definidas das caixas delimitadoras. A maioria dos objetos ou classes detectadas por um modelo tem taxas semelhantes. Isso é importante quando se trata de criar caixas delimitadoras. Em vez de prever as caixas delimitadoras, o deslocamento das dimensões pré-definidas é calculado, reduzindo a computação necessária para prever a caixa delimitadora. Normalmente, essas taxas de âncora são calculadas com base no conjunto de dados usado. Nesse caso, como o conjunto de conhecimento é conhecido e os valores foram previamente computados, as âncoras podem ser embutidas em código.
 
 Em seguida, defina os rótulos ou as classes que o modelo preverá. Esse modelo prevê 20 classes, que é um subconjunto do número total de classes previstas pelo modelo YOLOv2 original.
 
@@ -302,7 +302,7 @@ Os métodos auxiliares usados pelo analisador são:
 - `Softmax`: normaliza um vetor de entrada em uma distribuição de probabilidade.
 - `GetOffset`: mapeia elementos na saída de um modelo unidimensional para a posição correspondente em um tensor `125 x 13 x 13`.
 - `ExtractBoundingBoxes`: extrai as dimensões da caixa delimitadora usando o método `GetOffset` da saída do modelo.
-- `GetConfidence`: extrai o valor de confiança que indica a certeza do modelo de que ele detectou um objeto e usa a função `Sigmoid` para transformá-lo em um percentual.
+- `GetConfidence` extrai o valor de confiança que informa como a certeza do modelo é que ele detectou um objeto e usa a função `Sigmoid` para transformá-lo em uma porcentagem.
 - `MapBoundingBoxToCell`: usa as dimensões da caixa delimitadora e as mapeia para sua respectiva célula na imagem.
 - `ExtractClasses`: extrai as previsões de classe para a caixa delimitadora da saída do modelo usando o método `GetOffset` e as transforma em uma distribuição de probabilidade usando o método `Softmax`.
 - `GetTopResult`: seleciona a classe na lista de classes previstas com a maior probabilidade.
@@ -436,7 +436,7 @@ for (var j = i + 1; j < boxes.Count; j++)
 }
 ```
 
-Como na primeira caixa, se a caixa adjacente estiver ativa ou pronta para ser processada, use o método `IntersectionOverUnion` para verificar se a primeira caixa e a segunda caixa excedem o limite especificado. Adicione o código a seguir ao seu loop for mais interno.
+Como na primeira caixa, se a caixa adjacente estiver ativa ou pronta para ser processada, use o método `IntersectionOverUnion` para verificar se a primeira caixa e a segunda caixa excedem o limite especificado. Adicione o código a seguir ao seu loop for interno.
 
 [!code-csharp [IOUBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L227-L239)]
 
@@ -448,7 +448,7 @@ Por fim, fora do loop for inicial do método `FilterBoundingBoxes`, retorne os r
 
 [!code-csharp [ReturnFilteredBBox](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloOutputParser.cs#L246)]
 
-Legal! Agora é hora de usar esse código junto com o modelo de pontuação.
+Ótimo! Agora é hora de usar esse código junto com o modelo de pontuação.
 
 ## <a name="use-the-model-for-scoring"></a>Usar o modelo para pontuação
 
@@ -473,7 +473,7 @@ Assim como ocorre com o pós-processamento, há algumas etapas nas etapas de pon
 
     [!code-csharp [ImageNetSettingStruct](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L26-L30)]
 
-    Depois disso, crie outro struct chamado `TinyYoloModelSettings`, que contém os nomes das camadas de entrada e saída do modelo. Para visualizar o nome das camadas de entrada e saída do modelo, você pode usar uma ferramenta como o [Netron.](https://github.com/lutzroeder/netron)
+    Depois disso, crie outra struct chamada `TinyYoloModelSettings` que contenha os nomes das camadas de entrada e saída do modelo. Para visualizar o nome das camadas de entrada e saída do modelo, você pode usar uma ferramenta como o [Netron.](https://github.com/lutzroeder/netron)
 
     [!code-csharp [YoloSettingsStruct](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/OnnxModelScorer.cs#L32-L43)]
 
@@ -703,7 +703,7 @@ person and its Confidence score: 0.5551759
 
 Para ver as imagens com as caixas delimitadoras, navegue até o diretório `assets/images/output/`. Abaixo está um exemplo de uma das imagens processadas.
 
-![Exemplo de imagem processada de uma sala dinning](./media/object-detection-onnx/dinning-room-table-chairs.png)
+![Exemplo de imagem processada de uma sala de jantar](./media/object-detection-onnx/dinning-room-table-chairs.png)
 
 Parabéns! Você criou com êxito um modelo de machine learning para detecção de objetos reutilizando um modelo `ONNX` pré-treinado no ML.NET.
 

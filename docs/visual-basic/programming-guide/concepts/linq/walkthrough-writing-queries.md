@@ -7,18 +7,18 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6a9f229697ce3d6328c6fb09d18d4cc2627eab10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351024"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636751"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Instruções passo a passo: escrevendo consultas em Visual Basic
 
-Este tutorial demonstra como você pode usar Visual Basic recursos de idioma para escrever [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressões de consulta. O tutorial demonstra como criar consultas em uma lista de objetos de aluno, como executar as consultas e como modificá-las. As consultas incorporam vários recursos, incluindo inicializadores de objeto, inferência de tipo local e tipos anônimos.
+Este tutorial demonstra como você pode usar Visual Basic recursos de idioma para escrever expressões de consulta LINQ (consulta integrada à linguagem). O tutorial demonstra como criar consultas em uma lista de objetos de aluno, como executar as consultas e como modificá-las. As consultas incorporam vários recursos, incluindo inicializadores de objeto, inferência de tipo local e tipos anônimos.
 
-Depois de concluir este passo a passos, você estará pronto para passar para os exemplos e a documentação do provedor de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] específico em que você está interessado. os provedores de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] incluem [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
+Depois de concluir este passo a passos, você estará pronto para passar para os exemplos e a documentação do provedor LINQ específico no qual você está interessado. Os provedores de LINQ incluem [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)], LINQ to DataSet e [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].
 
 ## <a name="create-a-project"></a>Criar um projeto
 
@@ -133,13 +133,13 @@ A variável `studentQuery` contém a definição da consulta, não os resultados
 
 ## <a name="additional-examples"></a>Exemplos adicionais
 
-Agora que você entende os conceitos básicos, veja a seguir uma lista de exemplos adicionais para ilustrar a flexibilidade e a potência das consultas de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Cada exemplo é precedido por uma breve descrição do que ele faz. Posicione o ponteiro do mouse sobre a variável de resultado da consulta para cada consulta para ver o tipo inferido. Use um loop de `For Each` para produzir os resultados.
+Agora que você entende os conceitos básicos, veja a seguir uma lista de exemplos adicionais para ilustrar a flexibilidade e a potência das consultas LINQ. Cada exemplo é precedido por uma breve descrição do que ele faz. Posicione o ponteiro do mouse sobre a variável de resultado da consulta para cada consulta para ver o tipo inferido. Use um loop de `For Each` para produzir os resultados.
 
 [!code-vb[VbLINQWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQWalkthrough/VB/Class1.vb#7)]
 
-## <a name="additional-information"></a>Informações adicionais
+## <a name="additional-information"></a>{1&gt;Informações Adicionais&lt;1}
 
-Depois de estar familiarizado com os conceitos básicos do trabalho com consultas, você está pronto para ler a documentação e os exemplos para o tipo específico de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] provedor no qual você está interessado:
+Depois de se familiarizar com os conceitos básicos do trabalho com consultas, você estará pronto para ler a documentação e os exemplos para o tipo específico de provedor de LINQ em que você está interessado:
 
 - [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 
@@ -149,10 +149,10 @@ Depois de estar familiarizado com os conceitos básicos do trabalho com consulta
 
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ (consulta integrada à linguagem) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Introdução à LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Inicializadores de objeto: tipos nomeados e anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

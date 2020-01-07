@@ -9,12 +9,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: 808c92e906a0bf6f8fdc368396d6d240573de501
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 258cf59fb8383fe131f4a0e78dac6189e1d9c91e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120786"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337667"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Formatos de caminho de arquivo em sistemas Windows
 
@@ -44,7 +44,7 @@ Se todos os três componentes estiverem presentes, o caminho será absoluto. Se 
 
 É possível determinar se um caminho de arquivo é totalmente qualificado (ou seja, se o caminho é independente do diretório atual e não se altera quando o diretório atual é alterado) chamando o método <xref:System.IO.Path.IsPathFullyQualified%2A?displayProperty=nameWthType>. Esse tipo de caminho poderá incluir segmentos de diretório relativo (`.` e `..`) e ainda ser totalmente qualificado se o caminho resolvido sempre apontar para o mesmo local.
 
-O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. Ele pressupõe que o diretório D:\FY2018\ existe e que nenhum diretório atual foi definido para D:\ no prompt de comando antes da execução do exemplo.
+O exemplo a seguir ilustra a diferença entre caminhos absolutos e relativos. Ele assume que o diretório D:\FY2018\ existe e que você não definiu nenhum diretório atual para D:\ no prompt de comando antes de executar o exemplo.
 
 [!code-csharp[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/cs/paths.cs)]
 [!code-vb[absolute-and-relative-paths](~/samples/snippets/standard/io/file-names/vb/paths.vb)]
@@ -71,7 +71,7 @@ Caminhos UNC devem sempre ser totalmente qualificados. Podem incluir segmentos d
 
 O sistema operacional Windows tem um modelo de objeto unificado que aponta para todos os recursos, incluindo arquivos. Esses caminhos de objeto podem ser acessados na janela do console e estão expostos à camada Win32 por meio de uma pasta especial de links simbólicos para as quais o DOS herdado e os caminhos UNC estão mapeados. Essa pasta especial é acessada pela sintaxe do caminho de dispositivo DOS, que é uma das opções a seguir:
 
-`\\.\C:\Test\Foo.txt`  
+`\\.\C:\Test\Foo.txt`
 `\\?\C:\Test\Foo.txt`
 
 Além de identificar uma unidade pela letra, você pode identificar um volume usando a GUID do volume. Ela assume o formato:
@@ -95,10 +95,10 @@ O caminho de dispositivo DOS tem os seguintes componentes:
 
    Há um link específico para UNCs que é chamado, não surpreendentemente, `UNC`. Por exemplo:
 
-  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\.\UNC\Server\Share\Test\Foo.txt`
   `\\?\UNC\Server\Share\Test\Foo.txt`
 
-    Para UNCs de dispositivo, a parte do servidor/compartilhamento forma o volume. Por exemplo, no `\\?\server1\e:\utilities\\filecomparer\`, a parte do servidor/compartilhamento é server1\utilities. Isso é importante ao chamar um método como <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> com segmentos de diretório relativo. Não é possível navegar além desse volume. 
+    Para UNCs de dispositivo, a parte do servidor/compartilhamento forma o volume. Por exemplo, no `\\?\server1\e:\utilities\\filecomparer\`, a parte do servidor/compartilhamento é server1\utilities. Isso é importante ao chamar um método como <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> com segmentos de diretório relativo. Não é possível navegar além desse volume.
 
 Caminhos de dispositivo DOS são totalmente qualificados por definição. Os segmento de diretório relativo (`.` e `..`) não são permitidos. Os diretórios atuais nunca são inseridos no uso deles.
 
@@ -126,7 +126,7 @@ Essa normalização ocorre de maneira implícita, mas é possível fazê-la expl
 O primeiro passo na normalização do caminho é identificar o tipo do caminho. Os caminhos são classificados em uma dentre algumas categorias:
 
 - São caminhos de dispositivo, ou seja, começam com dois separadores e um ponto de interrogação ou ponto final (`\\?` ou `\\.`).
-- São caminhos UNC, ou seja, começam com dois separadores sem um ponto de interrogação ou ponto final. 
+- São caminhos UNC, ou seja, começam com dois separadores sem um ponto de interrogação ou ponto final.
 - São caminhos DOS totalmente qualificados, ou seja, começam com uma letra da unidade, um separador de volume e um separador de componente (`C:\`).
 - Designam um dispositivo herdado (`CON`, `LPT1`).
 - Estão relacionados com a raiz da unidade atual, ou seja, começam com um separador de componente único (`\`).
@@ -137,7 +137,7 @@ O tipo do caminho determina se o diretório atual é aplicado de alguma maneira 
 
 ### <a name="handling-legacy-devices"></a>Tratamento de dispositivos herdados
 
-Se o caminho for um dispositivo DOS herdado como `CON`, `COM1` ou `LPT1`, será convertido em um caminho de dispositivo pelo `\\.\` precedente e retornado. 
+Se o caminho for um dispositivo DOS herdado como `CON`, `COM1` ou `LPT1`, será convertido em um caminho de dispositivo pelo `\\.\` precedente e retornado.
 
 Um caminho que começa com um nome do dispositivo herdado sempre é interpretado como um dispositivo herdado pelo método <xref:System.IO.Path.GetFullPath(System.String)?displayProperty=nameWithType>. Por exemplo, o caminho de dispositivo DOS de `CON.TXT` é `\\.\CON`, e o caminho de dispositivo DOS de `COM1.TXT\file1.txt` é `\\.\COM1`.
 
@@ -152,7 +152,7 @@ Se o caminho começar com uma letra da unidade, um separador de volume e sem um 
 Se o caminho começar com algo diferente de um separador, a unidade e o diretório atuais serão aplicados. Por exemplo, se o caminho for `filecompare` e o diretório atual for `C:\utilities\`, o resultado será `C:\utilities\filecompare\`.
 
 > [!IMPORTANT]
-> Os caminhos relativos são perigosos em aplicativos multi-threaded (ou seja, a maioria), porque o diretório atual tem uma configuração por processo. Qualquer thread pode alterar o diretório atual a qualquer momento. A partir do .NET Core 2.1, é possível chamar o método <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> para obter um caminho absoluto de um caminho relativo, bem como o caminho base (o diretório atual) que você precisa para resolvê-lo. 
+> Os caminhos relativos são perigosos em aplicativos multi-threaded (ou seja, a maioria), porque o diretório atual tem uma configuração por processo. Qualquer thread pode alterar o diretório atual a qualquer momento. A partir do .NET Core 2.1, é possível chamar o método <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> para obter um caminho absoluto de um caminho relativo, bem como o caminho base (o diretório atual) que você precisa para resolvê-lo.
 
 ### <a name="canonicalizing-separators"></a>Canonizar separadores
 
@@ -160,7 +160,7 @@ Todas as barras (`/`) são convertidas no separador padrão do Windows, a barra 
 
 ### <a name="evaluating-relative-components"></a>Avaliar componentes relativos
 
-Conforme o caminho é processado, quaisquer componentes ou segmentos compostos de um ponto final ou ponto duplo (`.` ou `..`) serão avaliados: 
+Conforme o caminho é processado, quaisquer componentes ou segmentos compostos de um ponto final ou ponto duplo (`.` ou `..`) serão avaliados:
 
 - No caso do ponto final, o segmento atual será removido, pois se refere ao diretório atual.
 
@@ -174,9 +174,9 @@ Alguns outros caracteres são removidos durante a normalização junto com os se
 
 - Se um segmento terminar em ponto final, esse ponto final será removido. Um segmento com ponto final ou ponto duplo foi normalizado na etapa anterior. Um segmento com três ou mais pontos não será normalizado e, na verdade, é um nome de arquivo/diretório válido.
 
-- Se o caminho não terminar em um separador, todos os pontos e espaços à direita (U+0020) serão removidos. Se o último segmento for simplesmente um ponto final ou duplo, será aplicada a regra de componentes relativos já mencionada. 
+- Se o caminho não terminar em um separador, todos os pontos e espaços à direita (U+0020) serão removidos. Se o último segmento for simplesmente um ponto final ou duplo, será aplicada a regra de componentes relativos já mencionada.
 
-   Essa regra significa que é possível criar um nome de diretório com um espaço à direita ao adicionar um separador à direita após o espaço.  
+   Essa regra significa que é possível criar um nome de diretório com um espaço à direita ao adicionar um separador à direita após o espaço.
 
    > [!IMPORTANT]
    > **Nunca** crie um diretório ou nome de arquivo com um espaço à direita. Os espaços à direita podem dificultar ou impossibilitar o acesso ao diretório e, normalmente, os aplicativos apresentam falha nas tentativas de tratar diretórios ou arquivos com nomes que contêm espaços à direita.
@@ -187,7 +187,7 @@ Normalmente, qualquer caminho passado para uma API do Windows é (efetivamente) 
 
 Por que ignorar a normalização? Existem três motivos principais:
 
-1. Para ter acesso a caminhos normalmente não disponíveis, mas legais. Um arquivo ou diretório chamado `hidden.`, por exemplo, não pode ser acessado de outra maneira. 
+1. Para ter acesso a caminhos normalmente não disponíveis, mas legais. Um arquivo ou diretório chamado `hidden.`, por exemplo, não pode ser acessado de outra maneira.
 
 1. Para melhorar o desempenho ignorando a normalização, se você já tiver normalizado.
 
@@ -200,7 +200,7 @@ Ignorar a normalização e as verificações de tamanho do caminho é a única d
 
 Os caminhos que começam com `\\?\` ainda serão normalizados se você os passar explicitamente para a [função GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Observe que é possível criar caminhos com mais de `MAX_PATH` caracteres para [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sem `\\?\`. Ele dá suporte caminhos de tamanho arbitrário, até o tamanho máximo da cadeia de caracteres que o Windows consegue tratar.
+Você pode passar caminhos com mais de `MAX_PATH` caracteres para [Getfullpathname](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) sem `\\?\`. Ele dá suporte caminhos de tamanho arbitrário, até o tamanho máximo da cadeia de caracteres que o Windows consegue tratar.
 
 ## <a name="case-and-the-windows-file-system"></a>Maiúsculas, minúsculas e o sistema de arquivos do Windows
 

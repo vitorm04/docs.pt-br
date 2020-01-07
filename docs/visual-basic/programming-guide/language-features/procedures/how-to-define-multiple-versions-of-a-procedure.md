@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: 83e96e271f6613aa325d59a0ca2fce9fc69fe059
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e8ed9a6356b7177b2c029a9280d0790a93676653
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350484"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347590"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>Como definir várias versões de um procedimento (Visual Basic)
 Você pode definir um procedimento em várias versões *sobrecarregando* -a, usando o mesmo nome, mas uma lista de parâmetros diferente para cada versão. A finalidade do sobrecarregamento é definir várias versões de um procedimento bem relacionadas sem precisar diferenciá-las por nome.  
@@ -39,10 +39,10 @@ Você pode definir um procedimento em várias versões *sobrecarregando* -a, usa
   
  Para obter informações sobre como chamar essas versões do procedimento de `post`, consulte [como: chamar um procedimento sobrecarregado](./how-to-call-an-overloaded-procedure.md).  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compile-the-code"></a>Compilar o código  
  Verifique se cada uma de suas versões sobrecarregadas tem o mesmo nome de procedimento, mas uma lista de parâmetros diferente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Procedimentos](./index.md)
 - [Parâmetros e Argumentos de Procedimento](./procedure-parameters-and-arguments.md)

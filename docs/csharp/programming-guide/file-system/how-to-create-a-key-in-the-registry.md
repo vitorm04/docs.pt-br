@@ -1,19 +1,19 @@
 ---
-title: 'Como: Criar uma chave no Registro (Visual C#)'
+title: Como criar uma chave no guia de C# programação de registro
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry, adding keys and values [C#]
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: e67a80fa8f9a088f0eefe2dd2eeaa983e0a5a2c3
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 16974db950a3a460416cfb917147439707e1d007
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590045"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635438"
 ---
-# <a name="how-to-create-a-key-in-the-registry-visual-c"></a>Como: Criar uma chave no Registro (Visual C#)
+# <a name="how-to-create-a-key-in-the-registry-c-programming-guide"></a>Como criar uma chave no registro (C# guia de programação)
 Este exemplo adiciona o par de valores, "Name" e "Isabella", ao Registro do usuário atual, sob a chave "Names".  
   
 ## <a name="example"></a>Exemplo  
@@ -25,7 +25,7 @@ key.SetValue("Name", "Isabella");
 key.Close();  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
   
 - Copie o código e cole-o no método `Main` de um aplicativo de console.  
   
@@ -33,7 +33,7 @@ key.Close();
   
 - Substitua o parâmetro `Name` pelo nome de um valor que existe diretamente sob o nó Names.  
   
-## <a name="robust-programming"></a>Programação robusta  
+## <a name="robust-programming"></a>Programação Robusta  
  Analise a estrutura do Registro para encontrar um local adequado para a chave. Por exemplo, caso você queira abrir a chave Software do usuário atual e criar uma chave com o nome da empresa. Em seguida, adicione os valores do Registro à chave da empresa.  
   
  As seguintes condições podem causar uma exceção:  
@@ -55,7 +55,7 @@ key.Close();
   
  Não é seguro armazenar segredos, como senhas, no Registro como texto sem formatação, mesmo se a chave do Registro estiver protegida por ACL (listas de controle de acesso).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [Guia de Programação em C#](../index.md)
