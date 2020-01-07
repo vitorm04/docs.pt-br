@@ -2,12 +2,12 @@
 title: Como gravar dados de objeto em um arquivo XML
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: b2181a74c83782cf4737b2a94fc5fb08fee28a10
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 989920709428f0e9cb4ddb8aeacfc71a2df220d2
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345449"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345972"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>Como: gravar dados de objeto em um arquivo XML (Visual Basic)
 Este exemplo grava o objeto de uma classe para um arquivo XML usando a classe <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -37,7 +37,7 @@ Public Module XMLWrite
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compile-the-code"></a>Compilar o código  
  A classe deve ter um construtor público sem parâmetros.  
   
 ## <a name="robust-programming"></a>Programação Robusta  
@@ -54,7 +54,7 @@ End Module
 ## <a name="net-framework-security"></a>Segurança do .NET Framework  
  Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, ele precisará de acesso `Create` para a pasta. Se o arquivo já existe, o aplicativo precisa apenas de acesso `Write`, um privilégio menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder acesso `Read` a um único arquivo, em vez de acesso `Create` a uma pasta.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO.StreamWriter>
 - [Como ler dados de objeto de um arquivo XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
