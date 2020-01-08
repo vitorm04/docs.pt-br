@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: a997cc62b03a0d92d5ef76173981f5a9e287b13a
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 11a58ddf246c77cf4372e940b184413054b10778
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204597"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634918"
 ---
 # <a name="c-walkthroughs"></a>Explicações passo a passo sobre o C#
 O passo a passo fornece instruções detalhadas para cenários comuns, o que os torna um bom local para começar a aprender sobre o produto ou uma área de recurso específica.  
@@ -48,7 +48,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  Demonstra algumas das tarefas mais comuns, como a adição ou remoção de uma guia em um `TabControl`, o encaixe de um controle em seu pai e a alteração da orientação de um controle `SplitContainer`.  
   
  [Escrevendo consultas em C# (LINQ)](./programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
- Demonstra os recursos de linguagem C# que são usados para gravar expressões de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
+ Demonstra os C# recursos de linguagem usados para gravar expressões de consulta LINQ.  
   
  [Manipulando dados (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  Descreve um cenário [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] para adicionar, modificar e excluir dados em um banco de dados.  
@@ -69,7 +69,7 @@ O passo a passo fornece instruções detalhadas para cenários comuns, o que os 
  [Exemplos e instruções passo a passo para implantações](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  Fornece exemplos passo a passo de cenários comuns de implantação.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](./programming-guide/index.md)
 - [Exemplos do Visual Studio](/visualstudio/ide/visual-studio-ide)

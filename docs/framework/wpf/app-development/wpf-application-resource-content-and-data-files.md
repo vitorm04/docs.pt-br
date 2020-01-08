@@ -17,21 +17,21 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: a31dc2c5431c8201607462e8bdef4b8bae0fb41d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d966116db09c2baef7deabf5d01138e8445098be
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460921"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636257"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Arquivos de recurso, conteúdo e dados do aplicativo WPF
 Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm dados não executáveis, como [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], imagens, vídeo e áudio. O Windows Presentation Foundation (WPF) oferece suporte especial para configurar, identificar e usar esses tipos de arquivos de dados, que são chamados de arquivos de dados de aplicativo. Esse suporte gira em torno de um conjunto específico de tipos de arquivo de dados do aplicativo, incluindo:  
   
-- **Arquivos de recurso**: Arquivos de dados que são compilados em um executável ou biblioteca [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **Arquivos de recurso**: Arquivos de dados que são compilados em um assembly executável ou de biblioteca do WPF.  
   
-- **Arquivos de conteúdo**: Arquivos de dados autônomos que têm uma associação explícita com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **Arquivos de conteúdo**: Arquivos de dados autônomos que têm uma associação explícita com um assembly executável do WPF.  
   
-- **Arquivos de site de origem**: Arquivos de dados autônomos que não têm associação com um executável [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] assembly.  
+- **Arquivos de site de origem**: Arquivos de dados autônomos que não têm associação com um assembly do WPF executável.  
   
  Uma distinção importante a se fazer entre esses três tipos de arquivos é que os arquivos de recurso e os arquivos de conteúdo são conhecidos em tempo de build; um assembly tem o conhecimento explícito sobre eles. Para arquivos de site de origem, no entanto, um assembly pode não ter nenhum conhecimento sobre eles ou conhecimento implícito por meio de uma referência de URI (identificador de recurso uniforme) de pacote; o caso do último, não há nenhuma garantia de que o site de origem do arquivo referenciado realmente existe.  
   
@@ -40,7 +40,7 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
  Este tópico descreve como configurar e usar arquivos de dados do aplicativo.  
 
 <a name="Resource_Files"></a>   
-## <a name="resource-files"></a>Arquivos de recursos  
+## <a name="resource-files"></a>Arquivos de recurso  
  Se um arquivo de dados do aplicativo precisar estar sempre disponível para um aplicativo, a única maneira de garantir essa disponibilidade será compilá-lo em um assembly executável principal do aplicativo ou em um de seus assemblies referenciados. Esse tipo de arquivo de dados de aplicativo é conhecido como um *arquivo de recurso*.  
   
  Você deve usar arquivos de recurso quando:  
@@ -55,7 +55,7 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
 > Os arquivos de recursos descritos nesta seção são diferentes dos arquivos de recursos descritos em [recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md) e diferentes dos recursos incorporados ou vinculados descritos em [gerenciar recursos do aplicativo (.net)](/visualstudio/ide/managing-application-resources-dotnet).  
   
 ### <a name="configuring-resource-files"></a>Configurando arquivos de recurso  
- No [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], um arquivo de recurso é um arquivo que é incluído em um projeto do Microsoft Build Engine (MSBuild) como um item de `Resource`.  
+ No WPF, um arquivo de recurso é um arquivo que é incluído em um projeto do Microsoft Build Engine (MSBuild) como um `Resource` item.  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -80,7 +80,7 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.cs#loadapageresourcefilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageResourceFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml.vb#loadapageresourcefilemanuallycode)]  
   
- Ao chamar <xref:System.Windows.Application.GetResourceStream%2A> fornece acesso ao <xref:System.IO.Stream>, você precisa executar o trabalho adicional de convertê-lo para o tipo da propriedade com a qual você irá configurá-lo. Em vez disso, você pode permitir que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se encarrega de abrir e converter o <xref:System.IO.Stream> carregando um arquivo de recursos diretamente na propriedade de um tipo usando código.  
+ Ao chamar <xref:System.Windows.Application.GetResourceStream%2A> fornece acesso ao <xref:System.IO.Stream>, você precisa executar o trabalho adicional de convertê-lo para o tipo da propriedade com a qual você irá configurá-lo. Em vez disso, você pode deixar o WPF cuidar da abertura e da conversão do <xref:System.IO.Stream> carregando um arquivo de recurso diretamente na propriedade de um tipo usando código.  
   
  O exemplo a seguir mostra como carregar um <xref:System.Windows.Controls.Page> diretamente em um <xref:System.Windows.Controls.Frame> (`pageFrame`) usando código.  
   
@@ -92,7 +92,7 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
  [!code-xaml[WPFAssemblyResourcesSnippets#LoadPageResourceFileFromXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetResourceStreamSnippetWindow.xaml#loadpageresourcefilefromxaml)]  
   
 ### <a name="application-code-files-as-resource-files"></a>Arquivos de código de aplicativo como arquivos de recurso  
- Um conjunto especial de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] arquivos de código do aplicativo pode ser referenciado usando URIs de pacote, incluindo janelas, páginas, documentos de fluxo e dicionários de recursos. Por exemplo, você pode definir a propriedade <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> com um pacote URI que faz referência à janela ou à página que você deseja carregar quando um aplicativo é iniciado.  
+ Um conjunto especial de arquivos de código do aplicativo WPF pode ser referenciado usando URIs de pacote, incluindo janelas, páginas, documentos de fluxo e dicionários de recursos. Por exemplo, você pode definir a propriedade <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType> com um pacote URI que faz referência à janela ou à página que você deseja carregar quando um aplicativo é iniciado.  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#SetApplicationStartupURI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/App.xaml#setapplicationstartupuri)]  
   
@@ -117,7 +117,7 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
 > Se um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] estiver configurado como um item de `Resource` e não tiver um arquivo code-behind, a [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] bruta será compilada em um assembly em vez de uma versão binária do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]bruto.  
   
 <a name="Content_Files"></a>   
-## <a name="content-files"></a>Arquivos de Conteúdo  
+## <a name="content-files"></a>Arquivos de conteúdo  
  Um *arquivo de conteúdo* é distribuído como um arquivo flexível junto com um assembly executável. Embora eles não sejam compilados em um assembly, os assemblies são compilados com metadados que estabelecem uma associação com cada arquivo de conteúdo.  
   
  Você deve usar arquivos de conteúdo quando o aplicativo requer um conjunto específico de arquivos de dados do aplicativo que você deseja ser capaz de atualizar sem recompilar o assembly que os consome.  
@@ -160,7 +160,7 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.cs#loadapagecontentfilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageContentFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/ApplicationGetContentStreamSnippetWindow.xaml.vb#loadapagecontentfilemanuallycode)]  
   
- Ao chamar <xref:System.Windows.Application.GetContentStream%2A> fornece acesso ao <xref:System.IO.Stream>, você precisa executar o trabalho adicional de convertê-lo para o tipo da propriedade com a qual você irá configurá-lo. Em vez disso, você pode permitir que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se encarrega de abrir e converter o <xref:System.IO.Stream> carregando um arquivo de recursos diretamente na propriedade de um tipo usando código.  
+ Ao chamar <xref:System.Windows.Application.GetContentStream%2A> fornece acesso ao <xref:System.IO.Stream>, você precisa executar o trabalho adicional de convertê-lo para o tipo da propriedade com a qual você irá configurá-lo. Em vez disso, você pode deixar o WPF cuidar da abertura e da conversão do <xref:System.IO.Stream> carregando um arquivo de recurso diretamente na propriedade de um tipo usando código.  
   
  O exemplo a seguir mostra como carregar um <xref:System.Windows.Controls.Page> diretamente em um <xref:System.Windows.Controls.Frame> (`pageFrame`) usando código.  
   
@@ -195,7 +195,7 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
 > Os arquivos de site de origem não são armazenados em cache com um aplicativo de navegador XAML (XBAP) em um computador cliente, enquanto os arquivos de conteúdo são. Consequentemente, eles são baixados somente quando solicitado especificamente. Se um aplicativo XBAP (aplicativo de navegador XAML) tiver arquivos de mídia grandes, configurá-los como arquivos de site de origem significa que a inicialização inicial do aplicativo é muito mais rápida e os arquivos só serão baixados sob demanda.  
   
 ### <a name="configuring-site-of-origin-files"></a>Configurando arquivos de site de origem  
- Se os arquivos do site de origem forem inexistentes ou desconhecidos no momento da compilação, você precisará usar mecanismos de implantação tradicionais para garantir que os arquivos necessários estejam disponíveis em tempo de execução, incluindo o uso do programa de linha de comando `XCopy` ou do Microsoft Windows Instalador.  
+ Se os arquivos do site de origem forem inexistentes ou desconhecidos no momento da compilação, você precisará usar mecanismos de implantação tradicionais para garantir que os arquivos necessários estejam disponíveis em tempo de execução, incluindo o uso do `XCopy` programa de linha de comando ou o Microsoft Windows Installer.  
   
  Se você souber em tempo de compilação os arquivos que deseja que estejam localizados no site de origem, mas ainda quiser evitar uma dependência explícita, poderá adicionar esses arquivos a um projeto do MSBuild como `None` item. Assim como os arquivos de conteúdo, você precisa definir o atributo de `CopyToOutputDirectory` do MSBuild para especificar que o arquivo de site de origem seja copiado para um local relativo ao assembly compilado, especificando o valor de `Always` ou o valor `PreserveNewest`.  
   
@@ -222,7 +222,7 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
  [!code-csharp[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/SOOPage.xaml.cs#loadapagesoofilemanuallycode)]
  [!code-vb[WPFAssemblyResourcesSnippets#LoadAPageSOOFileManuallyCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/VisualBasic/ResourcesSample/SOOPage.xaml.vb#loadapagesoofilemanuallycode)]  
   
- Ao chamar <xref:System.Windows.Application.GetRemoteStream%2A> fornece acesso ao <xref:System.IO.Stream>, você precisa executar o trabalho adicional de convertê-lo para o tipo da propriedade com a qual você irá configurá-lo. Em vez disso, você pode permitir que [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] se encarrega de abrir e converter o <xref:System.IO.Stream> carregando um arquivo de recursos diretamente na propriedade de um tipo usando código.  
+ Ao chamar <xref:System.Windows.Application.GetRemoteStream%2A> fornece acesso ao <xref:System.IO.Stream>, você precisa executar o trabalho adicional de convertê-lo para o tipo da propriedade com a qual você irá configurá-lo. Em vez disso, você pode deixar o WPF cuidar da abertura e da conversão do <xref:System.IO.Stream> carregando um arquivo de recurso diretamente na propriedade de um tipo usando código.  
   
  O exemplo a seguir mostra como carregar um <xref:System.Windows.Controls.Page> diretamente em um <xref:System.Windows.Controls.Frame> (`pageFrame`) usando código.  
   
@@ -237,6 +237,6 @@ Os aplicativos do Microsoft Windows geralmente dependem de arquivos que contêm 
 ## <a name="rebuilding-after-changing-build-type"></a>Recompilando após modificar o tipo de build  
  Depois de alterar o tipo de build de um arquivo de dados do aplicativo, você precisa recompilar o aplicativo inteiro para garantir que essas alterações sejam aplicadas. Se você apenas compilar o aplicativo, as alterações não serão aplicadas.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [URIs "pack://" no WPF](pack-uris-in-wpf.md)

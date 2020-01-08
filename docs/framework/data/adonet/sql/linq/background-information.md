@@ -2,12 +2,12 @@
 title: Informações gerais
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: d4466085419830e8fd91a3421271fde4e7e3a174
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: deb4d59dc2fb40b63e0362a9a4ee4b84c08dce49
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70248088"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634723"
 ---
 # <a name="background-information"></a>Informações gerais
 Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que estendem além dos fundamentos sobre o uso de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -18,7 +18,7 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
   
 - Participe do [Fórum do LINQ](https://go.microsoft.com/fwlink/?LinkId=76488), no qual você pode discutir tópicos mais complexos em detalhes com especialistas.  
   
-- Estude o White paper que [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] detalha a tecnologia, completo com C# Visual Basic e exemplos de código. Para obter mais informações, consulte [LINQ to SQL: consulta integrada à linguagem .net para dados relacionais](https://go.microsoft.com/fwlink/?LinkId=93205).  
+- Estude o White paper que detalha a tecnologia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], completo com C# Visual Basic e exemplos de código. Para obter mais informações, consulte [LINQ to SQL: consulta integrada à linguagem .net para dados relacionais](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [ADO.NET e LINQ to SQL](ado-net-and-linq-to-sql.md)  
@@ -31,7 +31,7 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
  Descreve como adicionar código de validação e outras personalizações.  
   
  [Associação de dados](data-binding.md)  
- Descreve como [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] o <xref:System.ComponentModel.IListSource> usa o para dar suporte à ligação de dados.  
+ Descreve como [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] usa <xref:System.ComponentModel.IListSource> para dar suporte à associação de dados.  
   
  [Suporte à herança](inheritance-support.md)  
  Descreve a função de herança no modelo de objeto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] , e como usar operadores relacionados em suas consultas.  
@@ -55,7 +55,7 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
  Descreve concorrência otimista e define termos.  
   
  [Conceitos de consulta](query-concepts.md)  
- Descreve aspectos de consultas em [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que diferem das consultas em [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)].  
+ Descreve os aspectos das consultas no [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] que diferem das consultas no LINQ.  
   
  [Recuperando objetos do cache de identidade](retrieving-objects-from-the-identity-cache.md)  
  Descreve os tipos de consultas que recuperam objetos de cache de identidade.  
@@ -81,6 +81,6 @@ Os tópicos nesta seção são pertinentes aos conceitos e procedimentos que est
  [Funções definidas pelo usuário](user-defined-functions.md)  
  Descreve como mapear em tempo de design funções definidas pelo usuário e como chamá-los do seu aplicativo.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Guia de Programação](programming-guide.md)  
  Inclui links para seções que explicam vários aspectos de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

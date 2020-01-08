@@ -1,15 +1,15 @@
 ---
-title: 'Como: Popular coleções de objetos de várias fontes (LINQ) (C#)'
+title: Como preencher coleções de objetos de várias fontes (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69593057"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345750"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Como: Popular coleções de objetos de várias fontes (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>Como preencher coleções de objetos de várias fontes (LINQ) (C#)
 
 Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de novos tipos.
 
@@ -18,7 +18,7 @@ Este exemplo mostra como mesclar dados de diferentes fontes em uma sequência de
 
 ## <a name="to-create-the-data-file"></a>Para criar o arquivo de dados
 
-Copie os arquivos names.csv e scores.csv para a pasta do projeto, conforme descrito em [Como: Unir o conteúdo de arquivos diferentes (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md).
+Copie os arquivos names. csv e Scores. csv para a pasta do projeto, conforme descrito em [como unir conteúdo de arquivos diferentes (LINQ)C#()](./how-to-join-content-from-dissimilar-files-linq.md).
 
 ## <a name="example"></a>Exemplo
 
@@ -41,8 +41,8 @@ class PopulateCollection
 {
     static void Main()
     {
-        // These data files are defined in How to: Join Content from
-        // Dissimilar Files (LINQ).
+        // These data files are defined in How to join content from
+        // dissimilar files (LINQ).
 
         // Each line of names.csv consists of a last name, a first name, and an
         // ID number, separated by commas. For example, Omelchenko,Svetlana,111
@@ -139,7 +139,7 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)
 - [Inicializadores de objeto e coleção](../../classes-and-structs/object-and-collection-initializers.md)

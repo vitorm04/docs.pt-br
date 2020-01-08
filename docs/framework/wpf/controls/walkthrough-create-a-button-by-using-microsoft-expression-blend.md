@@ -6,16 +6,16 @@ helpviewer_keywords:
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-ms.openlocfilehash: e1fdc3ef51e8658e07bc555238229bed9116e165
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 10d049288cf560dadedf7bc5e624deb7c42aae81
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460101"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636166"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Instruções passo a passo: criar um botão usando o Microsoft Expression Blend
 
-Estas instruções passo a passo demonstram o processo de criação de um botão personalizado [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] usando o Microsoft Expression Blend.
+Este passo a passos percorre o processo de criação de um botão personalizado do WPF usando o Microsoft Expression Blend.
 
 > [!IMPORTANT]
 > O Microsoft Expression Blend gera um [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], que é compilada para tornar o programa executável. Se você preferir trabalhar com o XAML diretamente, há outro passo a passos que cria o mesmo aplicativo que este usando XAML com o Visual Studio em vez de Blend. Consulte [Criar um botão usando XAML](walkthrough-create-a-button-by-using-xaml.md) para obter mais informações.
@@ -40,7 +40,7 @@ Na primeira parte deste passo a passo, você cria a aparência personalizada do 
 
 5. Nomeie o projeto `CustomButton` e pressione **OK**.
 
-Neste ponto, você tem um projeto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] em branco. É possível pressionar F5 para executar o aplicativo. Como pode ser esperado, o aplicativo consiste em apenas uma janela em branco. Em seguida, você cria um retângulo arredondado e o converte em um botão.
+Neste ponto, você tem um projeto do WPF em branco. É possível pressionar F5 para executar o aplicativo. Como pode ser esperado, o aplicativo consiste em apenas uma janela em branco. Em seguida, você cria um retângulo arredondado e o converte em um botão.
 
 ### <a name="to-convert-a-rectangle-to-a-button"></a>Para converter um retângulo em um botão
 
@@ -252,7 +252,7 @@ Para concluir, durante o processo de personalização de um modelo de botão, vo
 
 - Diversos: crie gradientes, adicione BitmapEffects, use transformações e defina as propriedades básicas dos objetos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Criar um botão usando XAML](walkthrough-create-a-button-by-using-xaml.md)
 - [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md)

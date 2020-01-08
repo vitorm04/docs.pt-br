@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a04e1569f77fed73a480fda3d63cabf6dbc30664
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f8b05f314be84e6104f1a9c7fe2edfdf826e51da
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460515"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559442"
 ---
 # <a name="dynamicresource-markup-extension"></a>Extensão de marcação DynamicResource
 Fornece um valor para qualquer atributo da propriedade [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] adiando esse valor para ser uma referência para um recurso definido. O comportamento de pesquisa desse recurso é análogo à pesquisa em tempo de execução.  
@@ -38,7 +38,7 @@ Fornece um valor para qualquer atributo da propriedade [!INCLUDE[TLA2#tla_xaml](
   
 |||  
 |-|-|  
-|`key`|A chave para o recurso solicitado. Essa chave foi inicialmente atribuída pela [diretiva x:Key](../../xaml-services/x-key-directive.md) se um recurso foi criado na marcação ou foi fornecido como o parâmetro `key` ao chamar <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> se o recurso foi criado no código.|  
+|`key`|A chave para o recurso solicitado. Essa chave foi inicialmente atribuída pela [diretiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) se um recurso foi criado na marcação ou foi fornecido como o parâmetro `key` ao chamar <xref:System.Windows.ResourceDictionary.Add%2A?displayProperty=nameWithType> se o recurso foi criado no código.|  
   
 ## <a name="remarks"></a>Comentários  
  Um `DynamicResource` criará uma expressão temporária durante a compilação inicial e, portanto, adiará a pesquisa por recursos até que o valor de recurso solicitado seja realmente necessário para construir um objeto. Isso pode ocorrer após o carregamento da página [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. O valor do recurso será encontrado com base na pesquisa pela chave em todos os dicionários de recursos ativos, no escopo da página atual, e substituirá a expressão de espaço reservado da compilação.  
@@ -48,9 +48,9 @@ Fornece um valor para qualquer atributo da propriedade [!INCLUDE[TLA2#tla_xaml](
   
  Determinados cenários de acesso a recursos são particularmente apropriados para `DynamicResource`, ao contrário de uma [Extensão de Marcação StaticResource](staticresource-markup-extension.md). Consulte [Recursos XAML](xaml-resources.md) para ver uma discussão sobre os méritos relativos e as implicações de desempenho de `DynamicResource` e `StaticResource`.  
   
- O <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> especificado deve corresponder a um recurso existente determinado pela [diretiva x:Key](../../xaml-services/x-key-directive.md) em algum nível em sua página, aplicativo, os temas de controle disponíveis e recursos externos, ou recursos do sistema, e a pesquisa de recursos ocorrerá em Essa ordem. Para obter mais informações sobre a pesquisa de recursos para recursos estáticos e dinâmicos, consulte [Recursos XAML](xaml-resources.md).  
+ O <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> especificado deve corresponder a um recurso existente determinado pela [diretiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) em algum nível em sua página, aplicativo, os temas de controle disponíveis e recursos externos, ou recursos do sistema, e a pesquisa de recursos ocorrerá nessa ordem. Para obter mais informações sobre a pesquisa de recursos para recursos estáticos e dinâmicos, consulte [Recursos XAML](xaml-resources.md).  
   
- Uma chave de recurso pode ser qualquer cadeia de caracteres definida na [Gramática XamlName](../../xaml-services/xamlname-grammar.md). Uma chave de recurso também pode ser outros tipos de objeto, como um <xref:System.Type>. Uma chave de <xref:System.Type> é fundamental para como os controles podem ser estilizados por temas. Para obter mais informações, consulte [Visão geral da criação de controle](../controls/control-authoring-overview.md).  
+ Uma chave de recurso pode ser qualquer cadeia de caracteres definida na [Gramática XamlName](../../../desktop-wpf/xaml-services/xamlname-grammar.md). Uma chave de recurso também pode ser outros tipos de objeto, como um <xref:System.Type>. Uma chave de <xref:System.Type> é fundamental para como os controles podem ser estilizados por temas. Para obter mais informações, consulte [Visão geral da criação de controle](../controls/control-authoring-overview.md).  
   
  As APIs para pesquisa de valores de recurso, como <xref:System.Windows.FrameworkElement.FindResource%2A>, seguem a mesma lógica de pesquisa de recursos usada pelo `DynamicResource`.  
   
@@ -72,11 +72,11 @@ Fornece um valor para qualquer atributo da propriedade [!INCLUDE[TLA2#tla_xaml](
   
  `DynamicResource` é uma extensão da marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usam os caracteres { e } na sintaxe de atributo, que é a convenção pela qual um processador [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] reconhece que uma extensão de marcação deve processar o atributo. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Recursos XAML](xaml-resources.md)
 - [Recursos e código](resources-and-code.md)
-- [Diretiva x:Key](../../xaml-services/x-key-directive.md)
+- [Diretiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md)
 - [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md)
 - [Extensão de marcação StaticResource](staticresource-markup-extension.md)

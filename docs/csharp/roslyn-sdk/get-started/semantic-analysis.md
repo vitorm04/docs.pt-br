@@ -3,12 +3,12 @@ title: Introdução à análise semântica
 description: Este tutorial fornece uma visão geral de como trabalhar com análise semântica usando o SDK do .NET Compiler.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70252942"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346973"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Introdução à análise semântica
 
@@ -22,7 +22,7 @@ Você deverá instalar o **SDK do .NET Compiler Platform**:
 
 ## <a name="understanding-compilations-and-symbols"></a>Noções básicas sobre compilações e símbolos
 
-Conforme você trabalha mais com o SDK do .NET Compiler, você se familiariza com as distinções entre a API de Sintaxe e a API de Semântica. A **API de Sintaxe** permite que você examine a _estrutura_ de um programa. Muitas vezes, no entanto, você deseja as informações sobre a semântica ou _significado_ de um programa. Enquanto um snippet ou arquivo de código livre VB ou C# pode ser analisado sintaticamente de modo isolado, não faz sentido fazer a esmo perguntas como "qual é o tipo dessa variável". O significado de um nome de tipo pode ser dependente de referências de assembly, importações de namespace ou outros arquivos de código. Essas perguntas são respondidas usando-se a **API de Semântica**, especificamente a classe <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType>.
+Conforme você trabalha mais com o SDK do .NET Compiler, você se familiariza com as distinções entre a API de Sintaxe e a API de Semântica. A **API de Sintaxe** permite que você examine a _estrutura_ de um programa. Muitas vezes, no entanto, você deseja as informações sobre a semântica ou _significado_ de um programa. Embora um arquivo de código flexível ou trecho de Visual Basic C# ou código possa ser analisado sintaticamente em isolamento, não é significativo fazer perguntas como "Qual é o tipo dessa variável" em um vácuo. O significado de um nome de tipo pode ser dependente de referências de assembly, importações de namespace ou outros arquivos de código. Essas perguntas são respondidas usando-se a **API de Semântica**, especificamente a classe <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType>.
 
 Uma instância de <xref:Microsoft.CodeAnalysis.Compilation> é análoga a um único projeto conforme visto pelo compilador e representa tudo o que é necessário para compilar um programa Visual Basic ou C#. A **compilação** inclui o conjunto de arquivos de origem a serem compilados, referências de assembly e opções de compilador. Você pode avaliar o significado do código usando todas as outras informações neste contexto. Um <xref:Microsoft.CodeAnalysis.Compilation> permite que você encontre **símbolos** – entidades como tipos, namespaces, membros e variáveis aos quais os nomes e outras expressões se referem. O processo de associar nomes e expressões com **símbolos** é chamado de **associação**.
 
@@ -35,7 +35,7 @@ Neste tutorial, você analisa novamente o programa "Olá, Mundo". Dessa vez, voc
 Você pode ver o código concluído para essa amostra no [nosso repositório do GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart).
 
 > [!NOTE]
-> Os tipos de árvore de sintaxe usam a herança para descrever os elementos de sintaxe diferentes que são válidos em locais diferentes no programa. Usar essas APIs geralmente significa converter propriedades ou membros da coleção em tipos derivados específicos. Nos exemplos a seguir, a atribuição e as conversões são instruções separadas, usando variáveis explicitamente tipadas. Você pode ler o código para ver os tipos de retorno da API e o tipo de tempo de execução dos objetos retornados. Na prática, é mais comum usar variáveis implicitamente tipadas e depender de nomes de API para descrever o tipo de objeto que está sendo examinado.
+> Os tipos de árvore de sintaxe usam a herança para descrever os elementos de sintaxe diferentes que são válidos em locais diferentes no programa. Usar essas APIs geralmente significa converter propriedades ou membros da coleção em tipos derivados específicos. Nos exemplos a seguir, a atribuição e as conversões são instruções separadas, usando variáveis explicitamente tipadas. Você pode ler o código para ver os tipos de retorno da API e o tipo de runtime dos objetos retornados. Na prática, é mais comum usar variáveis implicitamente tipadas e depender de nomes de API para descrever o tipo de objeto que está sendo examinado.
 
 Criar um novo projeto de **Ferramenta de Análise de Código Autônoma** do C#:
 

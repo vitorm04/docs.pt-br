@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: abd074701ca667abe4590f4f17a044b34325e874
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837396"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347079"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Como criar certificados X.509 que podem ser acessados pelo WCF
 Para tornar um certificado X. 509 acessível a Windows Communication Foundation (WCF), o código do aplicativo deve especificar o nome e o local do repositório de certificados. Em determinadas circunstâncias, a identidade do processo deve ter acesso ao arquivo que contém a chave privada associada ao certificado X. 509. Para obter a chave privada associada a um certificado X. 509 em um repositório de certificados, o WCF deve ter permissão para fazer isso. Por padrão, somente o proprietário e a conta do sistema podem acessar a chave privada de um certificado.  
@@ -59,7 +59,7 @@ Para tornar um certificado X. 509 acessível a Windows Communication Foundation 
         |--------------|----------------------|  
         |Cliente (aplicativo de console ou WinForms).|Usuário conectado no momento.|  
         |Serviço que é auto-hospedado.|Usuário conectado no momento.|  
-        |Serviço hospedado no IIS 6,0 ([!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]) ou no IIS 7,0 (Windows Vista).|NETWORK SERVICE|  
+        |Serviço hospedado no IIS 6,0 (Windows Server 2003) ou IIS 7,0 (Windows Vista).|SERVIÇO DE REDE|  
         |Serviço hospedado no IIS 5. X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]).|Controlado pelo elemento `<processModel>` no arquivo Machine. config. A conta padrão é ASPNET.|  
   
     5. Conceda acesso de leitura ao arquivo que contém a chave privada para a conta em que o WCF está sendo executado, usando uma ferramenta como icacls. exe.  
@@ -70,7 +70,7 @@ Para tornar um certificado X. 509 acessível a Windows Communication Foundation 
         icacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto\RSA\MachineKeys\8aeda5eb81555f14f8f9960745b5a40d_38f7de48-5ee9-452d-8a5a-92789d7110b1" /grant "NETWORK SERVICE":R  
         ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
 - [Como recuperar a impressão digital de um certificado](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-ms.openlocfilehash: 7ba2beae4ef8176764a5caaff609c365f283e285
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a9e0657aa9f9dd4de0ff3f8788c686bf1535b1ad
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459820"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559788"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Extensões de marcação e XAML WPF
 Este tópico apresenta o conceito de extensões de marcação para XAML, incluindo regras de sintaxe, finalidade e o modelo de objeto de classe subjacente. As extensões de marcação são um recurso geral da linguagem XAML e da implementação .NET de serviços XAML. Este tópico detalha, especificamente, as extensões de marcação para uso em XAML do WPF.  
@@ -41,13 +41,13 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 ## <a name="xaml-defined-markup-extensions"></a>Extensões de marcação definidas de XAML  
  Existem várias extensões de marcação que não são específicas à implementação de XAML do WPF, mas que são implementações de intrínsecos ou recursos de XAML como linguagem. Essas extensões de marcação são implementadas no assembly System.Xaml como parte dos serviços de XAML gerais do .NET Framework XAML e ficam dentro do namespace de XAML de linguagem XAML. Em termos de uso de marcação comum, essas extensões de marcação normalmente podem ser identificadas pelo prefixo `x:` no uso. A classe base <xref:System.Windows.Markup.MarkupExtension> (também definida em System. XAML) fornece o padrão que todas as extensões de marcação devem usar para serem suportadas em leitores XAML e gravadores XAML, incluindo no WPF XAML.  
   
-- `x:Type` fornece o objeto <xref:System.Type> para o tipo nomeado. Esse recurso é usado com mais frequência em estilos e modelos. Para ver os detalhes, consulte [Extensão de marcação x:Type](../../xaml-services/x-type-markup-extension.md).  
+- `x:Type` fornece o objeto <xref:System.Type> para o tipo nomeado. Esse recurso é usado com mais frequência em estilos e modelos. Para ver os detalhes, consulte [Extensão de marcação x:Type](../../../desktop-wpf/xaml-services/xtype-markup-extension.md).  
   
-- O `x:Static` produz valores estáticos. Os valores vêm de entidades de código de tipo de valor que não são, diretamente, o tipo de valor de uma propriedade de destino, mas podem ser avaliados para esse tipo. Para ver os detalhes, consulte [Extensão de marcação x:Static](../../xaml-services/x-static-markup-extension.md).  
+- O `x:Static` produz valores estáticos. Os valores vêm de entidades de código de tipo de valor que não são, diretamente, o tipo de valor de uma propriedade de destino, mas podem ser avaliados para esse tipo. Para ver os detalhes, consulte [Extensão de marcação x:Static](../../../desktop-wpf/xaml-services/xstatic-markup-extension.md).  
   
-- O `x:Null` especifica `null` como um valor para uma propriedade e pode ser utilizado para atributos ou valores de elemento de propriedade. Para ver os detalhes, consulte [Extensão de marcação x:Null](../../xaml-services/x-null-markup-extension.md).  
+- O `x:Null` especifica `null` como um valor para uma propriedade e pode ser utilizado para atributos ou valores de elemento de propriedade. Para ver os detalhes, consulte [Extensão de marcação x:Null](../../../desktop-wpf/xaml-services/xnull-markup-extension.md).  
   
-- O `x:Array` fornece suporte para a criação de matrizes gerais na sintaxe XAML, para casos em que o suporte da coleção oferecido por modelos de controle e elementos base do WPF não é usado deliberadamente. Para ver os detalhes, consulte [Extensão de marcação x:Array](../../xaml-services/x-array-markup-extension.md).  
+- O `x:Array` fornece suporte para a criação de matrizes gerais na sintaxe XAML, para casos em que o suporte da coleção oferecido por modelos de controle e elementos base do WPF não é usado deliberadamente. Para ver os detalhes, consulte [Extensão de marcação x:Array](../../../desktop-wpf/xaml-services/xarray-markup-extension.md).  
   
 > [!NOTE]
 > O prefixo `x:` é utilizado para o mapeamento típico do namespace de XAML dos intrínsecos da linguagem XAML, no elemento raiz de uma produção ou arquivo XAML. Por exemplo, os modelos do Visual Studio para aplicativos do WPF iniciam um arquivo XAML usando esse mapeamento de `x:`. Você poderia escolher um token de prefixo diferente no seu próprio mapeamento do namespace de XAML; porém, essa documentação assumirá o mapeamento padrão do `x:` como meio para identificar as entidades que são uma parte definida do namespace de XAML para a linguagem XAML, ao contrário do namespace padrão do WPF ou de outros namespaces XAML não relacionados a uma estrutura específica.  
@@ -74,7 +74,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 ## <a name="extension-classes"></a>\*classes de extensão  
  Para a linguagem XAML geral e extensões de marcação específicas do WPF, o comportamento de cada extensão de marcação é identificado para um processador XAML por meio de uma classe `*Extension` que deriva de <xref:System.Windows.Markup.MarkupExtension>e fornece uma implementação do método <xref:System.Windows.Markup.StaticExtension.ProvideValue%2A>. Esse método em cada extensão fornece o objeto que é retornado após a avaliação da extensão de marcação. Normalmente, o objeto retornado é avaliado com base em vários tokens de cadeia de caracteres que são passados para a extensão de marcação.  
   
- Por exemplo, a classe <xref:System.Windows.StaticResourceExtension> fornece a implementação de superfície da pesquisa de recursos real para que sua implementação de <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> retorne o objeto solicitado, com a entrada dessa implementação específica sendo uma cadeia de caracteres usada para pesquisar o recurso por sua `x:Key`. A maior parte dos detalhes da implementação não será importante se você estiver usando uma extensão de marcação existente.  
+ Por exemplo, a classe <xref:System.Windows.StaticResourceExtension> fornece a implementação de superfície da pesquisa de recursos real para que sua implementação de <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A> retorne o objeto solicitado, com a entrada dessa implementação específica sendo uma cadeia de caracteres usada para pesquisar o recurso por seu `x:Key`. A maior parte dos detalhes da implementação não será importante se você estiver usando uma extensão de marcação existente.  
   
  Algumas extensões de marcação não usam argumentos de token de cadeia de caracteres. Isso ocorre porque retornam um valor estático ou consistente ou porque o contexto para o valor que deve ser retornado está disponível por meio de um dos serviços passados através do parâmetro `serviceProvider`.  
   
@@ -98,7 +98,7 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Sequências de escape e extensões de marcação  
- A manipulação de atributos em um processador XAML utiliza as chaves como indicadores de uma sequência de extensão de marcação. Também é possível produzir um valor de atributo de caracteres de chave literais, se necessário, digitando uma sequência de escape usando um par de chaves vazias seguido da chave literal. Consulte [{} escape Sequence-Markup Extension](../../xaml-services/escape-sequence-markup-extension.md).  
+ A manipulação de atributos em um processador XAML utiliza as chaves como indicadores de uma sequência de extensão de marcação. Também é possível produzir um valor de atributo de caracteres de chave literais, se necessário, digitando uma sequência de escape usando um par de chaves vazias seguido da chave literal. Consulte [{} escape Sequence-Markup Extension](../../../desktop-wpf/xaml-services/escape-sequence-markup-extension.md).  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Aninhamento de extensões de marcação no uso do XAML  
@@ -114,14 +114,14 @@ Este tópico apresenta o conceito de extensões de marcação para XAML, incluin
 ## <a name="markup-extensions-and-property-element-syntax"></a>Extensões de marcação e sintaxe de elemento de propriedade  
  Quando usada como um elemento de objeto que preenche um valor de elemento de propriedade, uma classe de extensão de marcação é visualmente indistinguível de um elemento de objeto do tipo típico que pode ser usado em XAML. A diferença prática entre um elemento de objeto típico e uma extensão de marcação é que a extensão de marcação é avaliada como um valor tipado ou diferida como uma expressão. Portanto, os mecanismos para todos os possíveis erros de tipo de valores da propriedade para a extensão de marcação serão diferentes, de modo semelhante a como uma propriedade de associação tardia é tratada em outros modelos de programação. Um elemento de objeto comum será avaliado para correspondência de tipo com relação à propriedade de destino definida quando o XAML é analisado.  
   
- Quando usadas na sintaxe do elemento de objeto para preencher um elemento de propriedade, a maioria das extensões de marcação não teria conteúdo ou nenhuma sintaxe de elemento de propriedade adicional em seu interior. Portanto, a marca do elemento de objeto seria fechada e não forneceria nenhum elemento filho. Sempre que algum elemento de objeto é encontrado por um processador XAML, o construtor dessa classe é chamado, o que instancia o objeto criado do elemento analisado. Uma classe de extensão de marcação não é diferente: se você quiser que sua extensão de marcação seja utilizável na sintaxe do elemento de objeto, você deve fornecer um construtor sem parâmetros. Algumas extensões de marcação existentes têm pelo menos um valor da propriedade necessário que deve ser especificado para uma inicialização eficaz. Nesse caso, o valor da propriedade normalmente é fornecido como um atributo de propriedade no elemento de objeto. Nas páginas de referência [Recursos da linguagem (x:) do namespace de XAML](../../xaml-services/xaml-namespace-x-language-features.md) e [Extensões XAML do WPF](wpf-xaml-extensions.md), as extensões de marcação que têm as propriedades necessárias (e os nomes das propriedades necessárias) serão anotadas. As páginas de referência também indicarão se alguma sintaxe de elemento de objeto ou alguma sintaxe de atributo não está autorizada para extensões de marcação específicas. Um caso notável é a [Extensão de marcação x:Array](../../xaml-services/x-array-markup-extension.md), que não pode dar suporte à sintaxe do atributo, porque o conteúdo dessa matriz deve ser especificado dentro da marcação como conteúdo. Como o conteúdo da matriz é manipulado como objetos gerais, nenhum conversor de tipo padrão para o atributo é viável. Além disso, a [Extensão de marcação x:Array](../../xaml-services/x-array-markup-extension.md) exige um parâmetro `type`.  
+ Quando usadas na sintaxe do elemento de objeto para preencher um elemento de propriedade, a maioria das extensões de marcação não teria conteúdo ou nenhuma sintaxe de elemento de propriedade adicional em seu interior. Portanto, a marca do elemento de objeto seria fechada e não forneceria nenhum elemento filho. Sempre que algum elemento de objeto é encontrado por um processador XAML, o construtor dessa classe é chamado, o que instancia o objeto criado do elemento analisado. Uma classe de extensão de marcação não é diferente: se você quiser que sua extensão de marcação seja utilizável na sintaxe do elemento de objeto, você deve fornecer um construtor sem parâmetros. Algumas extensões de marcação existentes têm pelo menos um valor da propriedade necessário que deve ser especificado para uma inicialização eficaz. Nesse caso, o valor da propriedade normalmente é fornecido como um atributo de propriedade no elemento de objeto. Nas páginas de referência [Recursos da linguagem (x:) do namespace de XAML](../../../desktop-wpf/xaml-services/namespace-language-features.md) e [Extensões XAML do WPF](wpf-xaml-extensions.md), as extensões de marcação que têm as propriedades necessárias (e os nomes das propriedades necessárias) serão anotadas. As páginas de referência também indicarão se alguma sintaxe de elemento de objeto ou alguma sintaxe de atributo não está autorizada para extensões de marcação específicas. Um caso notável é a [Extensão de marcação x:Array](../../../desktop-wpf/xaml-services/xarray-markup-extension.md), que não pode dar suporte à sintaxe do atributo, porque o conteúdo dessa matriz deve ser especificado dentro da marcação como conteúdo. Como o conteúdo da matriz é manipulado como objetos gerais, nenhum conversor de tipo padrão para o atributo é viável. Além disso, a [Extensão de marcação x:Array](../../../desktop-wpf/xaml-services/xarray-markup-extension.md) exige um parâmetro `type`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de XAML (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
-- [Recursos da linguagem (x:) do namespace de XAML](../../xaml-services/xaml-namespace-x-language-features.md)
+- [Recursos da linguagem (x:) do namespace de XAML](../../../desktop-wpf/xaml-services/namespace-language-features.md)
 - [Extensões XAML WPF](wpf-xaml-extensions.md)
 - [Extensão de marcação StaticResource](staticresource-markup-extension.md)
 - [Extensão de marcação de associação](binding-markup-extension.md)
 - [Extensão de marcação DynamicResource](dynamicresource-markup-extension.md)
-- [Extensão de marcação x:Type](../../xaml-services/x-type-markup-extension.md)
+- [Extensão de marcação x:Type](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

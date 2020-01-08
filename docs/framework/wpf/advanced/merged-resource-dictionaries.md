@@ -5,12 +5,12 @@ helpviewer_keywords:
 - merged resource dictionaries [WPF]
 - dictionaries [WPF], merged resources
 ms.assetid: d159531f-05d4-49fd-b951-c332de51e5bc
-ms.openlocfilehash: 6647e52ef8477221dd5849a19809a34fb06189a6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 899955a9f3302e67de4efa0ce0cb6baf6bf0ec5d
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73455413"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559775"
 ---
 # <a name="merged-resource-dictionaries"></a>Dicionários de recursos mesclados
 Os recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] dão suporte a um recurso de dicionário de recursos mesclados. Esse recurso fornece uma maneira de definir a parte de recursos de um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fora do aplicativo [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] compilado. Os recursos podem ser compartilhados entre aplicativos e são também isolados de modo mais conveniente para localização.  
@@ -20,7 +20,7 @@ Os recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincli
   
  [!code-xaml[ResourceMergeDictionary#MergedXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourceMergeDictionary/CS/default.xaml#mergedxaml)]  
   
- Observe que o elemento <xref:System.Windows.ResourceDictionary> não tem uma [diretiva x:Key](../../xaml-services/x-key-directive.md), que geralmente é necessária para todos os itens em uma coleção de recursos. Mas outro <xref:System.Windows.ResourceDictionary> referência dentro da coleção de <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> é um caso especial, reservado para esse cenário de dicionário de Recursos mesclados. O <xref:System.Windows.ResourceDictionary> que introduz um dicionário de recurso mesclado não pode ter uma [diretiva x:Key](../../xaml-services/x-key-directive.md). Normalmente, cada <xref:System.Windows.ResourceDictionary> na coleção de <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> especifica um atributo <xref:System.Windows.ResourceDictionary.Source%2A>. O valor de <xref:System.Windows.ResourceDictionary.Source%2A> deve ser um URI (Uniform Resource Identifier) que resolve para o local do arquivo de recursos a ser mesclado. O destino desse URI deve ser outro [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo, com <xref:System.Windows.ResourceDictionary> como seu elemento raiz.  
+ Observe que o elemento <xref:System.Windows.ResourceDictionary> não tem uma [diretiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md), que geralmente é necessária para todos os itens em uma coleção de recursos. Mas outro <xref:System.Windows.ResourceDictionary> referência dentro da coleção de <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> é um caso especial, reservado para esse cenário de dicionário de Recursos mesclados. O <xref:System.Windows.ResourceDictionary> que introduz um dicionário de recurso mesclado não pode ter uma [diretiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md). Normalmente, cada <xref:System.Windows.ResourceDictionary> na coleção de <xref:System.Windows.ResourceDictionary.MergedDictionaries%2A> especifica um atributo <xref:System.Windows.ResourceDictionary.Source%2A>. O valor de <xref:System.Windows.ResourceDictionary.Source%2A> deve ser um URI (Uniform Resource Identifier) que resolve para o local do arquivo de recursos a ser mesclado. O destino desse URI deve ser outro [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] arquivo, com <xref:System.Windows.ResourceDictionary> como seu elemento raiz.  
   
 > [!NOTE]
 > É válido definir recursos dentro de um <xref:System.Windows.ResourceDictionary> que é especificado como um dicionário mesclado, como uma alternativa para especificar <xref:System.Windows.ResourceDictionary.Source%2A>ou além de quaisquer recursos incluídos na origem especificada. No entanto, esse não é um cenário comum. O cenário principal para dicionários mesclados é mesclar recursos de locais de arquivo externo. Se você quiser especificar recursos dentro da marcação de uma página, normalmente deverá defini-los no <xref:System.Windows.ResourceDictionary> principal e não nos dicionários mesclados.  
@@ -51,9 +51,9 @@ Os recursos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-wincli
 ### <a name="localization"></a>Localização  
  Se recursos que precisam ser localizados estiverem isolados para os dicionários que são mesclados em dicionários principais e mantidos como [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] flexível, esses arquivos poderão ser localizados separadamente. Essa técnica é uma alternativa simples para localizar os assemblies satélite de recursos. Para detalhes, consulte [Visão geral de globalização e localização do WPF](wpf-globalization-and-localization-overview.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.ResourceDictionary>
 - [Recursos XAML](../../../desktop-wpf/fundamentals/xaml-resources-define.md)
 - [Recursos e código](resources-and-code.md)
-- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](../app-development/wpf-application-resource-content-and-data-files.md)
+- [Arquivos de recurso, conteúdo e dados de aplicativo WPF](../app-development/wpf-application-resource-content-and-data-files.md)

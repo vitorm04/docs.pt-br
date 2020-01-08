@@ -7,16 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: bf673195f06475daf8341fd17cd701b84a970b39
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 48536d8fba3f86c2883e48cd4e5cf9a3a8752fcd
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740671"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636309"
 ---
 # <a name="building-a-wpf-application-wpf"></a>Compilando um aplicativo WPF (WPF)
 
-Os aplicativos Windows Presentation Foundation (WPF) podem ser criados como .NET Framework executáveis (. exe), bibliotecas (. dll) ou uma combinação de ambos os tipos de assemblies. Este tópico apresenta como compilar aplicativos [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e descreve as principais etapas no processo de build.
+Os aplicativos Windows Presentation Foundation (WPF) podem ser criados como .NET Framework executáveis (. exe), bibliotecas (. dll) ou uma combinação de ambos os tipos de assemblies. Este tópico apresenta como criar aplicativos do WPF e descreve as principais etapas no processo de compilação.
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>
 
@@ -34,7 +34,7 @@ Um aplicativo WPF pode ser compilado das seguintes maneiras:
 
 ## <a name="wpf-build-pipeline"></a>Pipeline de build do WPF
 
-Quando um projeto do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] é compilado, a combinação de destinos específicos a um idioma e específicos do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] são invocados. O processo de execução desses destinos denomina-se pipeline de build, e as principais etapas estão ilustradas na figura a seguir.
+Quando um projeto do WPF é criado, a combinação de destinos específicos a um idioma e ao WPF é invocada. O processo de execução desses destinos denomina-se pipeline de build, e as principais etapas estão ilustradas na figura a seguir.
 
 ![Processo de compilação do WPF](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")
 
@@ -48,7 +48,7 @@ Antes de Compilar, o MSBuild determina o local de ferramentas e bibliotecas impo
 
 - Os diretórios SDK do Windows.
 
-- O local dos assemblies de referência do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].
+- O local dos assemblies de referência do WPF.
 
 - A propriedade para os caminhos de pesquisa de assembly.
 
@@ -58,7 +58,7 @@ O primeiro local em que o MSBuild pesquisa por assemblies é o diretório do ass
 
 ### <a name="resolving-references"></a>Resolvendo referências
 
-O processo de build localiza e associa os assemblies necessários para compilar o projeto de aplicativo. Essa lógica está contida na tarefa `ResolveAssemblyReference`. Todos os assemblies declarados como `Reference` no arquivo de projeto são fornecidos para a tarefa, junto com as informações sobre os caminhos de pesquisa e metadados sobre os assemblies já instalados no sistema. A tarefa procura assemblies e usa os metadados do assembly instalado para filtrar os principais assemblies do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] que não precisam aparecer nos manifestos de saída. Isso é feito para evitar informações redundantes nos manifestos do ClickOnce. Por exemplo, como PresentationFramework. dll pode ser considerado representativo de um aplicativo criado e para o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e além do que ocorre porque todos os assemblies de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] existem no mesmo local em todos os computadores que têm o .NET Framework instalado, há Não é necessário incluir todas as informações em todos os .NET Framework assemblies de referência nos manifestos.
+O processo de build localiza e associa os assemblies necessários para compilar o projeto de aplicativo. Essa lógica está contida na tarefa `ResolveAssemblyReference`. Todos os assemblies declarados como `Reference` no arquivo de projeto são fornecidos para a tarefa, junto com as informações sobre os caminhos de pesquisa e metadados sobre os assemblies já instalados no sistema. A tarefa pesquisa assemblies e usa os metadados do assembly instalado para filtrar os assemblies principais do WPF que não precisam aparecer nos manifestos de saída. Isso é feito para evitar informações redundantes nos manifestos do ClickOnce. Por exemplo, como PresentationFramework. dll pode ser considerado representativo de um aplicativo criado e para o WPF, e como todos os assemblies do WPF existem no mesmo local em cada computador que tem o .NET Framework instalado, não há necessidade de incluir todos informações sobre todos os .NET Framework assemblies de referência nos manifestos.
 
 <a name="Markup_Compilation___Pass_1"></a>
 
@@ -142,13 +142,13 @@ O manifesto do aplicativo (um arquivo de manifesto .exe) descreve os assemblies 
 
 Esses arquivos de manifesto sempre são criados para XBAPs. Para aplicativos instalados, eles não são criados, a menos que a propriedade `GenerateManifests` seja especificada no arquivo de projeto com o valor `true`.
 
-XBAPs obtêm duas permissões adicionais acima das permissões atribuídas a aplicativos de zona da Internet típicos: <xref:System.Security.Permissions.WebBrowserPermission> e <xref:System.Security.Permissions.MediaPermission>. O sistema de build do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] declara essas permissões no manifesto do aplicativo.
+XBAPs obtêm duas permissões adicionais acima das permissões atribuídas a aplicativos de zona da Internet típicos: <xref:System.Security.Permissions.WebBrowserPermission> e <xref:System.Security.Permissions.MediaPermission>. O sistema de compilação do WPF declara essas permissões no manifesto do aplicativo.
 
 <a name="Incremental_Build_Support"></a>
 
 ## <a name="incremental-build-support"></a>Suporte ao build incremental
 
-O sistema de build do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dá suporte para builds incrementais. Ele é bastante inteligente para detectar as alterações feitas na marcação ou no código, e ele compila somente os artefatos afetados pela alteração. O mecanismo de build incremental usa os seguintes arquivos:
+O sistema de compilação do WPF oferece suporte a compilações incrementais. Ele é bastante inteligente para detectar as alterações feitas na marcação ou no código, e ele compila somente os artefatos afetados pela alteração. O mecanismo de build incremental usa os seguintes arquivos:
 
 - Um arquivo $(*AssemblyName*)_MarkupCompiler.Cache para manter o estado atual do compilador.
 
@@ -186,9 +186,9 @@ Os seguintes cenários de recompilação são possíveis:
 
 - Nada é recompilado (se nada no projeto tiver sido alterado).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md)
 - [Referência do WPF MSBuild](/visualstudio/msbuild/wpf-msbuild-reference)
 - [URIs "pack://" no WPF](pack-uris-in-wpf.md)
-- [Arquivos de recursos, de conteúdo e de dados de aplicativos do WPF](wpf-application-resource-content-and-data-files.md)
+- [Arquivos de recurso, conteúdo e dados de aplicativo WPF](wpf-application-resource-content-and-data-files.md)

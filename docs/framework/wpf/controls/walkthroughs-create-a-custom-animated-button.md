@@ -6,12 +6,12 @@ helpviewer_keywords:
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-ms.openlocfilehash: a3990a7dc446c264e0865e15dadcdaf3ba0a0ff6
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0f881c19516eb42a71e6cd91d612caf8f5cf7b5e
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460052"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636177"
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Instruções passo a passo: criar um botão animado personalizado
 Como seu nome sugere, Windows Presentation Foundation (WPF) é excelente para fazer experiências de apresentação avançadas para os clientes. Essas instruções passo a passo mostram como personalizar a aparência e o comportamento de um botão (incluindo animações). Essa personalização é feita usando um estilo e modelo para que você possa aplicar esse botão personalizado facilmente aos botões em seu aplicativo. A ilustração a seguir mostra o botão personalizado que você criará.
@@ -25,11 +25,11 @@ Como seu nome sugere, Windows Presentation Foundation (WPF) é excelente para fa
 
  [Criar um botão usando XAML](walkthrough-create-a-button-by-using-xaml.md) Demonstra como criar botões com comportamento personalizado usando [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e o Visual Studio.
 
-## <a name="related-sections"></a>Seções relacionadas
+## <a name="related-sections"></a>Seções Relacionadas
  [Estilo e modelagem](../../../desktop-wpf/fundamentals/styles-templates-overview.md) Descreve como estilos e modelos podem ser usados para determinar a aparência e o comportamento de controles.
 
- [Visão geral da animação](../graphics-multimedia/animation-overview.md) Descreve como os objetos podem ser animados usando a animação de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e o sistema de tempo.
+ [Visão geral da animação](../graphics-multimedia/animation-overview.md) Descreve como os objetos podem ser animados usando a animação do WPF e o sistema de tempo.
 
  [Visão geral de pintura com cores sólidas e gradientes](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md) Descreve como usar objetos de pincel para pintar com cores sólidas, gradientes lineares e gradientes radiais.
 
- [Visão geral de efeitos de bitmap](../graphics-multimedia/bitmap-effects-overview.md) Descreve os efeitos de bitmap com suporte pelo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e explica como aplicá-los.
+ [Visão geral de efeitos de bitmap](../graphics-multimedia/bitmap-effects-overview.md) Descreve os efeitos de bitmap com suporte pelo WPF e explica como aplicá-los.

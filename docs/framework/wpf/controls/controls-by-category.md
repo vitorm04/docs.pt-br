@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: 41cbe57f1e3711bb4e18b2b4da28c26ebbd2bc60
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5958793015d409678b67cdc7eedcb4289f5e885c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005699"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636205"
 ---
 # <a name="controls-by-category"></a>Controles por categoria
 Os controles de Windows Presentation Foundation (WPF) podem ser agrupados logicamente em várias categorias. Essas categorias podem ser usadas para selecionar o controle apropriado para seu cenário, ajudando a ver quais controles têm padrões de uso ou funcionalidades semelhantes.  
   
-## <a name="layout"></a>Layout  
+## <a name="layout"></a>{1&gt;{2&gt;Layout&lt;2}&lt;1}  
  Controles de layout são usados para gerenciar o tamanho, dimensões, posição e disposição dos elementos filho.  
   
 - <xref:System.Windows.Controls.Border>  
@@ -78,7 +78,7 @@ Os controles de Windows Presentation Foundation (WPF) podem ser agrupados logica
   
 - <xref:System.Windows.Controls.DatePicker>  
   
-## <a name="menus"></a>Menus  
+## <a name="menus"></a>{1&gt;Menus&lt;1}  
  Menus são usados para agrupar ações relacionadas ou para fornecer assistência contextual.  
   
 - <xref:System.Windows.Controls.ContextMenu>  
@@ -139,8 +139,8 @@ Os controles de Windows Presentation Foundation (WPF) podem ser agrupados logica
   
 - <xref:System.Windows.Controls.ToolTip>  
   
-## <a name="documents"></a>Documentos  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] inclui vários controles para exibir documentos. Esses controles otimizam a experiência de leitura, com base no cenário do usuário de destino.  
+## <a name="documents"></a>{1&gt;Documentos&lt;1}  
+ O WPF inclui vários controles especializados para exibir documentos. Esses controles otimizam a experiência de leitura, com base no cenário do usuário de destino.  
   
 - <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -162,7 +162,7 @@ Os controles de Windows Presentation Foundation (WPF) podem ser agrupados logica
 - <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>Mídia  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] inclui suporte integrado para hospedar conteúdo de áudio e vídeo, bem como [codecs] para os formatos de imagem mais populares.  
+ O WPF inclui suporte integrado para hospedar conteúdo de áudio e vídeo, bem como [codecs] para os formatos de imagem mais populares.  
   
 - <xref:System.Windows.Controls.Image>  
   
@@ -177,6 +177,6 @@ Os controles de Windows Presentation Foundation (WPF) podem ser agrupados logica
   
 - <xref:System.Windows.Controls.InkPresenter>  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Biblioteca de controles](control-library.md)

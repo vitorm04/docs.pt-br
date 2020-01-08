@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 47e11ff2bc5b1c3eca152ba1fa429b5785c2f01b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a73f6333a91cd8018fe8e0c34d44db87938b8058
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976119"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347089"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Como registrar e configurar um Moniker de serviço
 Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um aplicativo com com um contrato tipado, você deve registrar os tipos atribuídos necessários com com e configurar o aplicativo COM e o moniker com a associação necessária configuração.  
@@ -87,7 +87,7 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
     > [!NOTE]
     > : Se o moniker estiver malformado ou se o serviço estiver indisponível, a chamada para `GetObject` retornará um erro de "sintaxe inválida". Se você receber esse erro, verifique se o moniker que você está usando está correto e se o serviço está disponível.  
   
-     Embora este tópico se concentre no uso do moniker de serviço do código VB 6,0, você pode usar um moniker de serviço de outros idiomas. Ao usar um moniker do C++ código, o assembly gerado svcutil. exe deve ser importado com "no_namespace named_guids raw_interfaces_only", conforme mostrado no código a seguir.  
+     Embora este tópico se concentre em usar o moniker do serviço de Visual Basic código 6,0, você pode usar um moniker de serviço de outros idiomas. Ao usar um moniker do C++ código, o assembly gerado svcutil. exe deve ser importado com "no_namespace named_guids raw_interfaces_only", conforme mostrado no código a seguir.  
   
     ```cpp
     #import "ComTestProxy.tlb" no_namespace named_guids  
@@ -95,6 +95,6 @@ Antes de usar o moniker do serviço Windows Communication Foundation (WCF) em um
   
      Isso modifica as definições de interface importadas para que todos os métodos retornem um `HResult`. Quaisquer outros valores de retorno são convertidos em parâmetros de saída. A execução geral dos métodos permanece a mesma. Isso permite que você determine a causa de uma exceção ao chamar um método no proxy. Essa funcionalidade só está disponível no C++ código.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Ferramenta de utilitário de metadados ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

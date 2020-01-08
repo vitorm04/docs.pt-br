@@ -2,12 +2,12 @@
 title: Byrefs
 description: Saiba mais sobre tipos ByRef e ByRef no F#, que são usados para programação de baixo nível.
 ms.date: 11/04/2019
-ms.openlocfilehash: 2c46cea2329b6817dd753e67c6702fb163ce2193
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a6d3d69c4a163be9ecef7e33c284c4a73e800405
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976822"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545136"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -104,7 +104,7 @@ Todas essas regras em conjunto significam que o detentor de um ponteiro de `inre
 
 ### <a name="outref-semantics"></a>Semântica Outref
 
-A finalidade de `outref<'T>` é indicar que o ponteiro só deve ser lido de. Inesperadamente, `outref<'T>` permite ler o valor subjacente, apesar do seu nome. Isso é para fins de compatibilidade. Semanticamente, `outref<'T>` não é diferente de `byref<'T>`.
+A finalidade de `outref<'T>` é indicar que o ponteiro só deve ser gravado. Inesperadamente, `outref<'T>` permite ler o valor subjacente, apesar do seu nome. Isso é para fins de compatibilidade. Semanticamente, `outref<'T>` não é diferente de `byref<'T>`.
 
 ### <a name="interop-with-c"></a>Interoperabilidade com C\#
 
@@ -121,10 +121,10 @@ A tabela a seguir mostra F# o que são emitidos:
 
 |F#construir|Construção emitida|
 |------------|-----------------|
-|`inref<'T>` argumento|atributo de `[In]` no argumento|
+|Argumento `inref<'T>`|atributo de `[In]` no argumento|
 |`inref<'T>` retornar|`modreq` atributo no valor|
 |`inref<'T>` no slot abstrato ou na implementação|`modreq` no argumento ou retorno|
-|`outref<'T>` argumento|atributo de `[Out]` no argumento|
+|Argumento `outref<'T>`|atributo de `[Out]` no argumento|
 
 ### <a name="type-inference-and-overloading-rules"></a>Inferência de tipos e regras de sobrecarga
 

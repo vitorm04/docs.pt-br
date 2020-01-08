@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 9c237c06de1388de4c1fe6a6edb3fb5b52522d1f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: b2fd923de165c0926e6f812764c71127b7c27691
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424623"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636231"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Estratégia de segurança do WPF - segurança da plataforma
-Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviços de segurança, ele também aproveita os recursos de segurança da plataforma subjacente, que inclui o sistema operacional, o CLR e o Internet Explorer. Essas camadas se combinam para fornecer [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] um modelo de segurança forte e de defesa intensa que tenta evitar qualquer ponto único de falha, conforme mostrado na figura a seguir:  
+Embora o Windows Presentation Foundation (WPF) forneça uma variedade de serviços de segurança, ele também aproveita os recursos de segurança da plataforma subjacente, que inclui o sistema operacional, o CLR e o Internet Explorer. Essas camadas se combinam para fornecer ao WPF um modelo de segurança forte e de defesa intensa que tenta evitar qualquer ponto único de falha, conforme mostrado na figura a seguir:  
   
  ![Diagrama que mostra o modelo de segurança do WPF.](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
- O restante deste tópico aborda os recursos em cada uma dessas camadas que pertencem a [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] especificamente.  
+ O restante deste tópico aborda os recursos em cada uma dessas camadas que pertencem especificamente ao WPF.  
 
 ## <a name="operating-system-security"></a>Segurança do sistema operacional  
 O núcleo do Windows fornece vários recursos de segurança que formam a base de segurança para todos os aplicativos do Windows, incluindo os criados com o WPF. Este tópico aborda a amplitude desses recursos de segurança que são importantes para o WPF, além de como o WPF se integra a eles para fornecer mais proteção aprofundada.  
@@ -42,13 +42,13 @@ O núcleo do Windows fornece vários recursos de segurança que formam a base de
 - Microsoft Windows Update.  
   
 #### <a name="gs-compilation"></a>Compilação com /GS  
- o [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] fornece proteção recompilando muitas bibliotecas principais do sistema, incluindo todas as dependências de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], como o CLR, para ajudar a mitigar estouros de buffer. Isso é feito pelo uso do parâmetro /GS com o compilador de linha de comando C/C++. Embora seja necessário evitar estouros de buffer explicitamente, a compilação com /GS fornece um exemplo de uma proteção extensa contra possíveis vulnerabilidades que são criadas de maneira inadvertida ou mal-intencionada por eles.  
+ o [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] fornece proteção recompilando muitas bibliotecas principais do sistema, incluindo todas as dependências do WPF, como o CLR, para ajudar a mitigar estouros de buffer. Isso é feito pelo uso do parâmetro /GS com o compilador de linha de comando C/C++. Embora seja necessário evitar estouros de buffer explicitamente, a compilação com /GS fornece um exemplo de uma proteção extensa contra possíveis vulnerabilidades que são criadas de maneira inadvertida ou mal-intencionada por eles.  
   
  Historicamente, os estouros de buffer tem sido a causa de diversas explorações de segurança de alto impacto. Um estouro de buffer ocorre quando um invasor aproveita uma vulnerabilidade de código que permite a injeção de um código mal-intencionado escrito além dos limites de um buffer. Em seguida, isso permite que um invasor sequestre o processo no qual o código está em execução, substituindo o endereço de retorno de uma função para fazer com que o código do invasor seja executado. O resultado é um código mal-intencionado que executa um código arbitrário com os mesmos privilégios do processo sequestrado.  
   
  Em um alto nível, o sinalizador do compilador-GS protege contra algumas saturações de buffer em potencial injetando um cookie de segurança especial para proteger o endereço de retorno de uma função que tem buffers de cadeia de caracteres locais. Após o retorno de uma função, o cookie de segurança é comparado com seu valor anterior. Se o valor tiver sido alterado, poderá ter ocorrido um estouro de buffer e o processo será interrompido com uma condição de erro. A interrupção do processo impede a execução do código potencialmente mal-intencionado. Consulte [-GS (verificação de segurança do buffer)](/cpp/build/reference/gs-buffer-security-check) para obter mais detalhes.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] é compilado com o sinalizador/GS para adicionar ainda outra camada de defesa para [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] aplicativos.  
+ O WPF é compilado com o sinalizador/GS para adicionar ainda outra camada de defesa aos aplicativos do WPF.  
   
 ### <a name="windows-vista"></a>Windows Vista  
 Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segurança adicionais do sistema operacional, incluindo "acesso de usuário com privilégios mínimos", verificações de integridade de código e isolamento de privilégio.  
@@ -68,7 +68,7 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
  O Windows Vista incorpora verificações de integridade de código mais profundas para ajudar a impedir que códigos mal-intencionados sejam injetados em arquivos do sistema ou no kernel em tempo de carga/execução. Isso vai além da proteção de arquivo do sistema.  
    
 ### <a name="limited-rights-process-for-browser-hosted-applications"></a>Processos com direitos limitados para aplicativos hospedados pelo navegador  
- Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] hospedados no navegador são executados na área restrita da zona da Internet. a integração do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] com o Microsoft Internet Explorer estende essa proteção com suporte adicional.  
+ Os aplicativos WPF hospedados no navegador são executados na área restrita da zona da Internet. A integração do WPF com o Microsoft Internet Explorer estende essa proteção com suporte adicional.  
   
  Como os aplicativos de navegador XAML (XBAPs) geralmente são protegidos pelo conjunto de permissões de zona da Internet, a remoção desses privilégios não danifica os aplicativos de navegador XAML (XBAPs) de uma perspectiva de compatibilidade. Em vez disso, é criada uma camada adicional de proteção extensa; se um aplicativo em área restrita puder explorar outras camadas e sequestrar o processo, ainda assim, o processo apenas terá privilégios limitados.  
   
@@ -92,12 +92,12 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  O código gerenciado que não está em conformidade com as regras de verificação não tem permissão de ser executado, a menos que seja considerado um código confiável.  
   
- A vantagem do código verificável é um motivo importante pelo qual [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] se baseia na .NET Framework. Na medida em que um código verificável é usado, a possibilidade de exploração de possíveis vulnerabilidades é consideravelmente reduzida.  
+ A vantagem do código verificável é um dos principais motivos pelos quais o WPF se baseia no .NET Framework. Na medida em que um código verificável é usado, a possibilidade de exploração de possíveis vulnerabilidades é consideravelmente reduzida.  
   
 ### <a name="code-access-security"></a>Segurança de acesso do código  
  Um computador cliente expõe uma grande variedade de recursos aos quais um aplicativo gerenciado pode ter acesso, incluindo o sistema de arquivos, o Registro, serviços de impressão, a interface do usuário, reflexão e variáveis de ambiente. Antes que um aplicativo gerenciado possa acessar qualquer um dos recursos em um computador cliente, ele deve ter .NET Framework permissão para fazer isso. Uma permissão no CAS é uma subclasse da <xref:System.Security.CodeAccessPermission>; O CAS implementa uma subclasse para cada recurso que os aplicativos gerenciados podem acessar.  
   
- O conjunto de permissões que um aplicativo gerenciado recebe pelo CAS quando ele começa a ser executado é conhecido como um conjunto de permissões e é determinado pelas evidências fornecidas pelo aplicativo. Para os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], a evidência fornecida é o local, ou zona, do qual os aplicativos são iniciados. O CAS identifica as seguintes zonas:  
+ O conjunto de permissões que um aplicativo gerenciado recebe pelo CAS quando ele começa a ser executado é conhecido como um conjunto de permissões e é determinado pelas evidências fornecidas pelo aplicativo. Para aplicativos do WPF, a evidência fornecida é o local, ou zona, do qual os aplicativos são iniciados. O CAS identifica as seguintes zonas:  
   
 - **Meu Computador**. Aplicativos iniciados no computador cliente (Totalmente Confiável).  
   
@@ -123,14 +123,14 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  ![Diagrama que mostra os conjuntos de permissões CAS.](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- As restrições da área restrita de segurança de zona da Internet aplicam-se igualmente a qualquer código que um XBAP importa de uma biblioteca do sistema, incluindo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Isso garante que cada bit do código seja bloqueado, até mesmo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Infelizmente, para ser capaz de executar o, um XBAP precisa executar a funcionalidade que exige mais permissões do que aquelas habilitadas pela área restrita de segurança da zona da Internet.  
+ As restrições da área restrita de segurança de zona da Internet aplicam-se igualmente a qualquer código que um XBAP importa de uma biblioteca do sistema, incluindo o WPF. Isso garante que cada bit do código seja bloqueado, até mesmo WPF. Infelizmente, para ser capaz de executar o, um XBAP precisa executar a funcionalidade que exige mais permissões do que aquelas habilitadas pela área restrita de segurança da zona da Internet.  
   
  Considere um aplicativo XBAP que inclui a seguinte página:  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Para executar esse XBAP, o código de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] subjacente deve executar mais funcionalidade do que o que está disponível para o XBAP de chamada, incluindo:  
+ Para executar esse XBAP, o código subjacente do WPF deve executar mais funcionalidade do que o que está disponível para o XBAP de chamada, incluindo:  
   
 - Criando um identificador de janela (HWND) para renderização  
   
@@ -140,28 +140,28 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  De um ponto de vista de segurança, permitir o acesso direto a qualquer uma dessas operações pelo aplicativo em área restrita seria catastrófico.  
   
- Felizmente, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] atende a essa situação, permitindo que essas operações sejam executadas com privilégios elevados em nome do aplicativo em área restrita. Embora todas as operações de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sejam verificadas em relação às permissões de segurança de zona da Internet limitadas do domínio do aplicativo do XBAP, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (como com outras bibliotecas do sistema) recebe um conjunto de permissões que inclui todas as permissões possíveis.
+ Felizmente, o WPF atende a essa situação, permitindo que essas operações sejam executadas com privilégios elevados em nome do aplicativo em área restrita. Embora todas as operações do WPF sejam verificadas em relação às permissões de segurança de zona da Internet limitadas do domínio do aplicativo do XBAP, o WPF (como com outras bibliotecas do sistema) recebe um conjunto de permissões que inclui todas as permissões possíveis.
   
- Isso requer que [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] receba privilégios elevados ao impedir que esses privilégios sejam regidos pelo conjunto de permissões de zona da Internet do domínio do aplicativo host.  
+ Isso exige que o WPF receba privilégios elevados enquanto impede que esses privilégios sejam regidos pelo conjunto de permissões de zona da Internet do domínio do aplicativo host.  
   
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] faz isso usando o método **Assert** de uma permissão. O código a seguir mostra como isso acontece.  
+ O WPF faz isso usando o método **Assert** de uma permissão. O código a seguir mostra como isso acontece.  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- Essencialmente, a **Assert** impede que as permissões ilimitadas exigidas pelo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] sejam restritas pelas permissões de zona da Internet do XBAP.  
+ Essencialmente, a **Assert** impede que as permissões ilimitadas exigidas pelo WPF sejam restritas pelas permissões de zona da Internet do XBAP.  
   
- Do ponto de vista da plataforma, [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] é responsável por usar o **Assert** corretamente; um uso incorreto de **Assert** pode permitir que o código mal-intencionado eleve privilégios. Consequentemente, é importante chamar **Assert** apenas quando necessário e garantir que as restrições de área restrita permaneçam intactas. Por exemplo, um código em área restrita não tem permissão para abrir arquivos aleatórios, mas tem permissão para usar fontes. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] permite que os aplicativos em área restrita usem a funcionalidade de fonte chamando **Assert**e para [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] ler arquivos conhecidos por conter essas fontes em nome do aplicativo em área restrita.  
+ Da perspectiva da plataforma, o WPF é responsável por usar o **Assert** corretamente; um uso incorreto de **Assert** pode permitir que o código mal-intencionado eleve privilégios. Consequentemente, é importante chamar **Assert** apenas quando necessário e garantir que as restrições de área restrita permaneçam intactas. Por exemplo, um código em área restrita não tem permissão para abrir arquivos aleatórios, mas tem permissão para usar fontes. O WPF permite que os aplicativos em área restrita usem a funcionalidade de fonte chamando **Assert**e para que o WPF Leia arquivos conhecidos por conter essas fontes em nome do aplicativo em área restrita.  
   
 ### <a name="clickonce-deployment"></a>Implantação do ClickOnce  
- O ClickOnce é uma tecnologia de implantação abrangente que está incluída com o .NET Framework e se integra ao Visual Studio (consulte [segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) para obter informações detalhadas). Os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autônomos podem ser implantados usando o ClickOnce, enquanto aplicativos hospedados em navegador devem ser implantados com o ClickOnce.  
+ O ClickOnce é uma tecnologia de implantação abrangente que está incluída com o .NET Framework e se integra ao Visual Studio (consulte [segurança e implantação do ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) para obter informações detalhadas). Os aplicativos autônomos do WPF podem ser implantados usando o ClickOnce, enquanto aplicativos hospedados em navegador devem ser implantados com o ClickOnce.  
   
  Os aplicativos implantados usando o ClickOnce recebem uma camada de segurança adicional sobre a CAS (segurança de acesso ao código); essencialmente, os aplicativos implantados pelo ClickOnce solicitam as permissões necessárias. Eles recebem somente as permissões se eles não excedem o conjunto de permissões para a zona da qual o aplicativo é implantado. Ao reduzir o conjunto de permissões apenas para aqueles que são necessários, mesmo que eles sejam menores do que os fornecidos pelo conjunto de permissões da zona de inicialização, o número de recursos aos quais o aplicativo tem acesso é reduzido para um mínimo. Consequentemente, se o aplicativo for sequestrado, o potencial de danos ao computador cliente será reduzido.  
   
 ### <a name="security-critical-methodology"></a>Metodologia Crítica para Segurança  
- O código de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] que usa permissões para habilitar a área restrita da zona da Internet para aplicativos XBAP deve ser mantido no nível mais alto possível de auditoria e controle de segurança. Para facilitar esse requisito, .NET Framework fornece novo suporte para o gerenciamento de código que eleva o privilégio. Especificamente, o CLR permite que você identifique o código que eleva o privilégio e marque-o com o <xref:System.Security.SecurityCriticalAttribute>; qualquer código não marcado com <xref:System.Security.SecurityCriticalAttribute> se torna *transparente* usando essa metodologia. Por outro lado, o código gerenciado que não está marcado com <xref:System.Security.SecurityCriticalAttribute> é impedido de elevar o privilégio.  
+ O código do WPF que usa permissões para habilitar a área restrita da zona da Internet para aplicativos XBAP deve ser mantido no nível mais alto possível de auditoria e controle de segurança. Para facilitar esse requisito, .NET Framework fornece novo suporte para o gerenciamento de código que eleva o privilégio. Especificamente, o CLR permite que você identifique o código que eleva o privilégio e marque-o com o <xref:System.Security.SecurityCriticalAttribute>; qualquer código não marcado com <xref:System.Security.SecurityCriticalAttribute> se torna *transparente* usando essa metodologia. Por outro lado, o código gerenciado que não está marcado com <xref:System.Security.SecurityCriticalAttribute> é impedido de elevar o privilégio.  
   
- A metodologia de segurança crítica permite que a organização de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] código que eleva o privilégio em *kernel de segurança crítica*, com o restante sendo transparente. Isolar o código de segurança crítica permite que a equipe de engenharia de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] focalize uma análise de segurança adicional e um controle do código-fonte no kernel crítico de segurança acima e além das práticas de segurança padrão (consulte [estratégia de segurança do WPF – segurança Engenharia](wpf-security-strategy-security-engineering.md)).  
+ A metodologia de segurança crítica permite que a organização do código do WPF que eleva o privilégio em *kernel de segurança crítica*, com o restante sendo transparente. Isolar o código de segurança crítica permite que a equipe de engenharia do WPF focalize uma análise de segurança adicional e um controle do código-fonte no kernel crítico de segurança acima e além das práticas de segurança padrão (consulte [estratégia de segurança do WPF – engenharia de segurança](wpf-security-strategy-security-engineering.md)).  
   
  Observe que .NET Framework permite que o código confiável estenda a área restrita da zona da Internet do XBAP, permitindo que os desenvolvedores gravem assemblies gerenciados marcados com o <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) e implantados no GAC (cache de assembly global) do usuário. Marcar um assembly com um APTCA é uma operação de segurança altamente confidencial, pois permite que qualquer código chame esse assembly, incluindo um código mal-intencionado da Internet. Deve-se ter extremo cuidado e usar as melhores práticas ao fazer isso e os usuários devem optar por confiar nesse software para que ele seja instalado.  
   
@@ -180,13 +180,13 @@ Os usuários do WPF no Windows Vista se beneficiarão dos aprimoramentos de segu
   
  O IE6 SP2 inclui vários recursos para atenuar esses tipos de problemas, que giram em volta do conceito de iniciação do usuário. O IE6 SP2 detecta quando um usuário clicou em um elemento link ou Page antes de uma ação, que é conhecida como *inicialização do usuário*, e o trata de forma diferente de quando uma ação semelhante é disparada pelo script em uma página. Por exemplo, o IE6 SP2 incorpora um **bloqueador de pop-ups** que detecta quando um usuário clica em um botão antes da página que cria um pop-up. Isso permite que o IE6 SP2 permita os pop-ups mais inofensivos enquanto impede pop-ups que os usuários não pedem nem desejam. Os pop-ups bloqueados são interceptados na nova **barra de informações**, que permite ao usuário substituir manualmente o bloco e exibir o pop-up.  
   
- A mesma lógica de inicialização do usuário também é aplicada para **abrir** /**salvar** prompts de segurança. As caixas de diálogo de instalação do ActiveX são sempre interceptadas na barra de informações, a menos que elas representem uma atualização de um controle instalado anteriormente. Essas medidas são combinadas para fornecer aos usuários uma experiência do usuário mais segura e mais controlada, já que eles estão protegidos contra sites que os induzem a instalar software indesejado ou mal-intencionado.  
+ A mesma lógica de inicialização do usuário também é aplicada para **abrir**/**salvar** prompts de segurança. As caixas de diálogo de instalação do ActiveX são sempre interceptadas na barra de informações, a menos que elas representem uma atualização de um controle instalado anteriormente. Essas medidas são combinadas para fornecer aos usuários uma experiência do usuário mais segura e mais controlada, já que eles estão protegidos contra sites que os induzem a instalar software indesejado ou mal-intencionado.  
   
- Esses recursos também protegem os clientes que usam o IE6 SP2 para navegar para sites que permitem que eles baixem e instalem aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. Em particular, isso ocorre porque o IE6 SP2 oferece uma experiência de usuário melhor que reduz a chance de os usuários instalarem aplicativos mal-intencionados ou espertodos independentemente de qual tecnologia foi usada para compilá-lo, incluindo [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]. o [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] adiciona essas proteções usando o ClickOnce para facilitar o download de seus aplicativos pela Internet. Como os aplicativos de navegador XAML (XBAPs) são executados em uma área restrita de segurança de zona da Internet, eles podem ser iniciados diretamente. Por outro lado, os aplicativos [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] autônomos exigem confiança total para serem executados. Para esses aplicativos, o ClickOnce exibirá uma caixa de diálogo de segurança durante o processo de inicialização para notificar o uso dos requisitos de segurança adicionais do aplicativo. No entanto, isso deve ser iniciado pelo usuário, também será regido pela lógica iniciada pelo usuário e pode ser cancelado.  
+ Esses recursos também protegem os clientes que usam o IE6 SP2 para navegar para sites que permitem que eles baixem e instalem aplicativos do WPF. Em particular, isso ocorre porque o IE6 SP2 oferece uma experiência de usuário melhor que reduz a chance de os usuários instalarem aplicativos mal-intencionados ou espertodos independentemente de qual tecnologia foi usada para compilá-lo, incluindo o WPF. O WPF adiciona essas proteções usando o ClickOnce para facilitar o download de seus aplicativos pela Internet. Como os aplicativos de navegador XAML (XBAPs) são executados em uma área restrita de segurança de zona da Internet, eles podem ser iniciados diretamente. Por outro lado, os aplicativos autônomos do WPF exigem confiança total para serem executados. Para esses aplicativos, o ClickOnce exibirá uma caixa de diálogo de segurança durante o processo de inicialização para notificar o uso dos requisitos de segurança adicionais do aplicativo. No entanto, isso deve ser iniciado pelo usuário, também será regido pela lógica iniciada pelo usuário e pode ser cancelado.  
   
  O Internet Explorer 7 incorpora e estende os recursos de segurança do IE6 SP2 como parte de um compromisso contínuo com a segurança.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Segurança de acesso do código](../misc/code-access-security.md)
 - [Security](security-wpf.md)

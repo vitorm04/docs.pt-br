@@ -1,15 +1,15 @@
 ---
-title: 'Como: Popular uma árvore XML do sistema de arquivos (C#)'
+title: Como popular uma árvore XML do sistema de arquivos (C#)
 ms.date: 07/20/2015
 ms.assetid: 2aa2ccac-4a22-47ae-9107-3bb8df232576
-ms.openlocfilehash: dc3850c943ebac8980abbff0933413538823d21d
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
-ms.translationtype: HT
+ms.openlocfilehash: beb44be1a787fa09b091aa48022dbb5b10c4632b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66485165"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345777"
 ---
-# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Como: Popular uma árvore XML do sistema de arquivos (C#)
+# <a name="how-to-populate-an-xml-tree-from-the-file-system-c"></a>Como popular uma árvore XML do sistema de arquivos (C#)
 Um aplicativo comum e útil das árvores XML é como um armazenamento de dados hierárquica de nome/valor. Você pode preencher uma árvore XML com dados hierárquicos, e consultar-la em seguida, transformar-la e, se necessário, serializar-la. Neste cenário de uso, muitas de semântica específica XML, como namespaces e comportamento de espaço em branco, não são importantes. Em vez disso, você estiver usando a árvore XML como um pequeno, na memória, base de dados hierárquica de usuário único.  
   
 ## <a name="example"></a>Exemplo  

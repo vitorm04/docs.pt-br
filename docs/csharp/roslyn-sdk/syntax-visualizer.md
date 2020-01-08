@@ -3,12 +3,12 @@ title: Explorar código com o visualizador de sintaxe Roslyn no Visual Studio
 description: O visualizador de sintaxe fornece uma ferramenta visual para explorar os modelos que o SDK do .NET Compiler Platform gera para o código.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: c4b4414dabcb6c9749a23d726e4a69334376d988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972011"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346959"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Explorar código com o visualizador de sintaxe Roslyn no Visual Studio
 
@@ -20,7 +20,7 @@ Familiarize-se com os conceitos usados no SDK do.NET Compiler Platform lendo o a
 
 ## <a name="syntax-visualizer"></a>Visualizador de sintaxe
 
-O **Visualizador de sintaxe** permite a inspeção da árvore de sintaxe de arquivo de código C# ou VB na janela do editor atualmente ativa dentro do IDE do Visual Studio. O visualizador pode ser iniciado ao clicar em **Exibir** > **Outras Janelas** > **Visualizador de sintaxe**.  Você também pode usar a barra de ferramentas de **Início Rápido** no canto superior direito. Digite "sintaxe" e o comando para abrir o **Visualizador de sintaxe** deverá aparecer.
+O **Syntax Visualizer** habilita a inspeção da árvore de sintaxe para C# o arquivo de código ou Visual Basic na janela do editor ativo atual dentro do IDE do Visual Studio. O visualizador pode ser iniciado ao clicar em **Exibir** > **Outras Janelas** > **Visualizador de sintaxe**.  Você também pode usar a barra de ferramentas de **Início Rápido** no canto superior direito. Digite "sintaxe" e o comando para abrir o **Visualizador de sintaxe** deverá aparecer.
 
 Este comando abre o Visualizador de sintaxe como uma janela de ferramentas flutuante. Se você não tiver uma janela de editor de código aberta, a exibição ficará em branco, conforme mostrado na figura a seguir. 
 
@@ -28,14 +28,15 @@ Este comando abre o Visualizador de sintaxe como uma janela de ferramentas flutu
 
 Encaixe esta janela de ferramentas em um local conveniente dentro do Visual Studio, como o lado esquerdo. O Visualizador mostra informações sobre o arquivo de código atual.
 
-Crie um novo projeto usando o comando **Arquivo** > **Novo Projeto**. Você pode criar um projeto do VB ou C#. Quando o Visual Studio abre o arquivo de código principal deste projeto, o visualizador exibe a árvore de sintaxe dele. Você pode abrir qualquer arquivo de C# ou VB existente nesta instância do Visual Studio e o visualizador exibirá a árvore de sintaxe do arquivo correspondente. Se você tiver vários arquivos de código abertos no Visual Studio, o visualizador exibirá a árvore de sintaxe do arquivo de código atualmente ativo, (o arquivo de código que tem o foco do teclado).
+Crie um novo projeto usando o comando **Arquivo** > **Novo Projeto**. Você pode criar um Visual Basic ou C# um projeto. Quando o Visual Studio abre o arquivo de código principal deste projeto, o visualizador exibe a árvore de sintaxe dele. Você pode abrir qualquer arquivo C# /Visual Basic existente nessa instância do Visual Studio e o visualizador exibe a árvore de sintaxe do arquivo. Se você tiver vários arquivos de código abertos no Visual Studio, o visualizador exibirá a árvore de sintaxe do arquivo de código atualmente ativo, (o arquivo de código que tem o foco do teclado).
 
 <!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Visualizando uma árvore de sintaxe de C#](media/syntax-visualizer/visualize-csharp.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
-![Visualizando uma árvore de sintaxe do VB](media/syntax-visualizer/visualize-visual-basic.png)
+![Visualizando uma árvore de sintaxe de Visual Basic](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
 
@@ -48,7 +49,7 @@ Cada item da árvore também exibe sua própria **extensão**. A **extensão** �
 Há duas maneiras de navegar na árvore:
 
 * Expandir ou clicar em itens na árvore. O visualizador seleciona automaticamente o texto correspondente à extensão do item no editor de código.
-* Clicar ou selecionar texto no editor de código. No exemplo anterior do VB, se você seleciona a linha que contém "Module Module1" no editor de código, o visualizador navega automaticamente até o nó ModuleStatement correspondente na árvore. 
+* Clicar ou selecionar texto no editor de código. No exemplo de Visual Basic anterior, se você selecionar a linha que contém "Module Module1" no editor de código, o visualizador navegará automaticamente para o nó ModuleStatement correspondente na árvore. 
 
 O visualizador realça o item da árvore cuja extensão melhor corresponda com a extensão do texto selecionado no editor.
 
@@ -65,11 +66,12 @@ Clique com o botão direito do mouse em qualquer item da árvore e clique em **E
 O visualizador exibe uma representação gráfica da subárvore com raiz no item selecionado. Repita essas etapas para o nó **MethodDeclaration** correspondente ao método `Main()` no exemplo de C#. O visualizador exibe um gráfico de sintaxe que tem a seguinte aparência:
 
 ![Exibindo um gráfico de sintaxe de C#](media/syntax-visualizer/csharp-syntax-graph.png)
+
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
-Repita o mesmo para o nó **SubBlock** correspondente ao método `Main()` no exemplo anterior do VB. O visualizador exibe um gráfico de sintaxe que tem a seguinte aparência:
+Tente o mesmo para o nó de **subbloco** correspondente ao método `Main()` no exemplo anterior Visual Basic. O visualizador exibe um gráfico de sintaxe que tem a seguinte aparência:
 
-![Exibindo um gráfico de sintaxe do VB](media/syntax-visualizer/visual-basic-syntax-graph.png)
+![Exibindo um grafo de sintaxe de Visual Basic](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
 ---
 
@@ -87,7 +89,7 @@ Outra opção é colocar a janela de gráfico de sintaxe em um segundo monitor, 
 
 O Visualizador de sintaxe possibilita uma inspeção rudimentar de símbolos e informações semânticas. Digite `double x = 1 + 1;` dentro de Main() no exemplo de C#. Em seguida, selecione a expressão `1 + 1` na janela do editor de código. O visualizador realça o nó **AddExpression** no visualizador. Clique com o botão direito do mouse nesse **AddExpression** e clique em **Exibir Symbol (se houver)** . Observe que a maioria dos itens de menu tem o qualificador "se houver". O Visualizador de sintaxe inspeciona as propriedades de um Nó, incluindo propriedades que podem não estar presentes em todos os nós. 
 
-A grade de propriedades nas atualizações do visualizador, como mostra a figura a seguir: O símbolo da expressão é um **SynthesizedIntrinsicOperatorSymbol** com **Kind = Method**.
+A grade de propriedade do visualizador é atualizada conforme mostrado na figura a seguir: o símbolo da expressão é um **SynthesizedIntrinsicOperatorSymbol** com **Kind = Method**.
 
 ![Propriedades Symbol](media/syntax-visualizer/symbol-properties.png)
 
@@ -103,9 +105,9 @@ Por fim, experimente **Exibir Valor Constante (se houver)** para o mesmo nó **A
 
 ![Um valor constante](media/syntax-visualizer/constant-value.png)
 
-O exemplo anterior também pode ser replicado no VB. Digite `Dim x As Double = 1 + 1` em um arquivo do VB. Selecione a expressão `1 + 1` na janela do editor de código. O visualizador realça o nó **AddExpression** correspondente no visualizador. Repita as etapas anteriores para esta **AddExpression** e você verá resultados idênticos.
+O exemplo anterior também pode ser replicado no Visual Basic. Digite `Dim x As Double = 1 + 1` em um arquivo de Visual Basic. Selecione a expressão `1 + 1` na janela do editor de código. O visualizador realça o nó **AddExpression** correspondente no visualizador. Repita as etapas anteriores para esta **AddExpression** e você verá resultados idênticos.
 
-Examine mais código no VB. Atualize seu arquivo principal do VB com o seguinte código:
+Examine mais códigos em Visual Basic. Atualize o arquivo de Visual Basic principal com o seguinte código:
 
 ```vb
 Imports C = System.Console
@@ -129,7 +131,7 @@ Inspecione o símbolo correspondente a qualquer tipo, método e propriedade decl
 
 ![Exibindo o símbolo de uma declaração de método](media/syntax-visualizer/method-symbol.png)
 
-Os exemplos de VB acima podem ser facilmente replicados em C#. Digite `using C = System.Console;` no lugar de `Imports C = System.Console` para o alias. As etapas anteriores em C# geram resultados idênticos na janela do visualizador.
+Os exemplos de Visual Basic acima podem ser facilmente replicados C#no. Digite `using C = System.Console;` no lugar de `Imports C = System.Console` para o alias. As etapas anteriores em C# geram resultados idênticos na janela do visualizador.
 
 As operações de inspeção semântica estão disponíveis somente em nós. Elas não estão disponíveis em tokens nem trívia. Nem todos os nós têm informações semânticas interessantes para inspecionar. Quando um nó não tem informações semânticas interessantes, clicar em **Exibir \* Symbol (se houver)** mostrará uma grade de propriedade em branco.
 

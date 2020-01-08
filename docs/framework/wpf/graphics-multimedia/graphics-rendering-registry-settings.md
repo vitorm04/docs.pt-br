@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: adb4848e844ff091c45ec9a8a2e6d36f01c3cf91
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960154"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559645"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Configurações do Registro de renderização dos elementos gráficos
 Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] configurações do Registro de renderização de elementos gráficos que afetam [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos.  
@@ -24,7 +24,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>O que são XPDM e WDDM?  
- Algumas das configurações do Registro de renderização de elementos gráficos têm valores padrão diferentes, dependendo se a placa de vídeo usa um driver XPDM ou WDDM. XPDM é o modelo de driver de vídeo do Microsoft Windows XP e o WDDM é o modelo de driver de vídeo do Windows. O WDDM está disponível em computadores que executam o Windows Vista e o Windows 7. O XPDM está disponível em computadores que executam o Windows Vista, o Microsoft Windows XP e o [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Para obter mais informações sobre o WDDM, veja [Guia de Design do Windows Vista Display Driver Model](https://go.microsoft.com/fwlink/?LinkId=178394).  
+ Algumas das configurações do Registro de renderização de elementos gráficos têm valores padrão diferentes, dependendo se a placa de vídeo usa um driver XPDM ou WDDM. XPDM é o modelo de driver de vídeo do Microsoft Windows XP e o WDDM é o modelo de driver de vídeo do Windows. O WDDM está disponível em computadores que executam o Windows Vista e o Windows 7. O XPDM está disponível em computadores que executam o Windows Vista, o Microsoft Windows XP e o Microsoft Windows Server 2003. Para obter mais informações sobre o WDDM, veja [Guia de Design do Windows Vista Display Driver Model](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Configurações do registro  
@@ -68,7 +68,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
 |Chave do Registro|Tipo de valor|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Cadeia de Caracteres|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|Cadeia de caracteres|  
   
  Em novembro de 2004, a Microsoft lançou uma nova versão das diretrizes de teste de driver; os drivers gravados após essa data oferecem melhor estabilidade. Por padrão, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usará o pipeline de aceleração de hardware para esses drivers e restabelecerá a renderização de software para drivers XPDM publicados antes desta data.  
   
@@ -78,7 +78,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
 | |  
 |-|  
-|*AAAA* `/` *MM* `/` *DD*|  
+|*Aaaa* `/` *mm* `/` *DD*|  
   
  Em que *AAAA* é o ano de quatro dígitos, *MM* é o mês de dois dígitos, e *DD* é o dia de dois dígitos. Quando esse valor não for definido, [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usa de novembro de 2004 como a data do driver de vídeo necessária.  
   
@@ -95,7 +95,7 @@ Este tópico fornece uma visão geral de [!INCLUDE[TLA2#tla_winclient](../../../
   
  A opção **usar rasterizador de referência** assume um valor DWORD. Um valor de 0 indica que o rasterizador de referência não é usado. Qualquer outro valor diferente de zero força [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] para usar o rasterizador de referência.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Camadas de renderização de gráficos](../advanced/graphics-rendering-tiers.md)
 - [Visão geral de renderização de gráficos do WPF](wpf-graphics-rendering-overview.md)

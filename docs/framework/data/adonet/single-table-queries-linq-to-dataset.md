@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 8807125bd61c71217ca96f3b5a38148ed100073b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 1f4462f617eb81d30f893b52bdc674e1eee8961c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70794370"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634762"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Consultas de tabela única (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]as consultas funcionam em fontes de dados que <xref:System.Collections.Generic.IEnumerable%601> implementam a <xref:System.Linq.IQueryable%601> interface ou a interface. A <xref:System.Data.DataTable> classe não implementa nenhuma interface, portanto, você deve chamar o <xref:System.Data.DataTableExtensions.AsEnumerable%2A> método se quiser usar o <xref:System.Data.DataTable> como uma origem na `From` cláusula de uma [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] consulta.  
+As consultas de LINQ (consulta integrada à linguagem) funcionam em fontes de dados que implementam a interface <xref:System.Collections.Generic.IEnumerable%601> ou a interface <xref:System.Linq.IQueryable%601>. A classe <xref:System.Data.DataTable> não implementa nenhuma interface, portanto, você deve chamar o método <xref:System.Data.DataTableExtensions.AsEnumerable%2A> se quiser usar o <xref:System.Data.DataTable> como uma origem na cláusula `From` de uma consulta LINQ.  
   
  O exemplo a seguir obtém todos os pedidos online da tabela SalesOrderHeader e gera a identificação do pedido, a data do pedido e o número de ordem para o console.  
   
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- A consulta de variável local é inicializada com uma expressão de consulta, que opera em uma ou mais fontes de informações aplicando um ou mais operadores de consulta dos operadores de consulta padrão ou, no caso de LINQ to DataSet, operadores específicos para o <xref:System.Data.DataSet>classe. A expressão de consulta no exemplo anterior usa dois dos operadores de consulta padrão: `Where` e `Select`.  
+ A consulta de variável local é inicializada com uma expressão de consulta, que opera em uma ou mais fontes de informações aplicando um ou mais operadores de consulta dos operadores de consulta padrão ou, no caso de LINQ to DataSet, operadores específicos para a classe <xref:System.Data.DataSet>. A expressão de consulta no exemplo anterior usa dois dos operadores de consulta padrão: `Where` e `Select`.  
   
  A cláusula `Where` filtra a sequência com base em uma condição, nesse caso de que `OnlineOrderFlag` seja definido como `true`. O operador `Select` aloca e retorna um objeto enumerável que captura os argumentos passados para o operador. Nesse exemplo acima, um tipo anônimo é criado com três propriedades: `SalesOrderID`, `OrderDate` e `SalesOrderNumber`. Os valores dessas três propriedades são definidos como os valores das colunas `SalesOrderID`, `OrderDate` e `SalesOrderNumber` da tabela `SalesOrderHeader`.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "70794370"
   
  Observe que o tipo de dados especificado no parâmetro genérico `T` dos métodos <xref:System.Data.DataRowExtensions.Field%2A> e <xref:System.Data.DataRowExtensions.SetField%2A> deve corresponder ao tipo do valor subjacente ou <xref:System.InvalidCastException> será gerado. O nome da coluna especificado também deve corresponder ao nome de uma coluna no <xref:System.Data.DataSet> ou <xref:System.ArgumentException> será gerado. Em ambos os casos, a exceção é gerada na enumeração de dados em tempo de execução quando a consulta é executada.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Consultas de tabela cruzada](cross-table-queries-linq-to-dataset.md)
 - [Consultando DataSets tipados](querying-typed-datasets.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: ae4d7f23729f5bd39558902a58d33c6c45572d85
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a702456895cfdbd44a58059befefb69deee5afa3
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977016"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636192"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Estender quadro com efeito de transparência em um aplicativo WPF
 
@@ -30,7 +30,7 @@ A imagem a seguir ilustra o quadro de vidro estendido na barra de endereços do 
 
 ![Captura de tela mostrando o quadro de vidro estendido atrás da barra de endereços do IE7.](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
-Para estender o quadro de vidro em um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], é necessário ter acesso à API não gerenciada. O exemplo de código a seguir faz uma invocação de plataforma (PInvoke) para as duas APIs necessárias para estender o quadro para a área do cliente. Cada uma dessas APIs é declarada em uma classe chamada **NonClientRegionAPI**.
+Para estender o quadro de vidro em um aplicativo do WPF, é necessário o acesso à API não gerenciada. O exemplo de código a seguir faz uma invocação de plataforma (PInvoke) para as duas APIs necessárias para estender o quadro para a área do cliente. Cada uma dessas APIs é declarada em uma classe chamada **NonClientRegionAPI**.
 
 ```csharp
 [StructLayout(LayoutKind.Sequential)]
@@ -66,7 +66,7 @@ End Function
 
 ## <a name="example"></a>Exemplo
 
-Para usar a função [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), é necessário obter um identificador de janela. No [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], o identificador de janela pode ser obtido da propriedade <xref:System.Windows.Interop.HwndSource.Handle%2A> de um <xref:System.Windows.Interop.HwndSource>. No exemplo a seguir, o quadro é estendido para a área do cliente no evento <xref:System.Windows.FrameworkElement.Loaded> da janela.
+Para usar a função [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea), é necessário obter um identificador de janela. No WPF, o identificador de janela pode ser obtido na propriedade <xref:System.Windows.Interop.HwndSource.Handle%2A> de um <xref:System.Windows.Interop.HwndSource>. No exemplo a seguir, o quadro é estendido para a área do cliente no evento <xref:System.Windows.FrameworkElement.Loaded> da janela.
 
 ```csharp
 void OnLoaded(object sender, RoutedEventArgs e)
@@ -145,11 +145,11 @@ O exemplo a seguir mostra uma janela simples em que o quadro é estendido para a
 </Window>
 ```
 
-A imagem a seguir ilustra o quadro de vidro estendido em um aplicativo [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]:
+A imagem a seguir ilustra o quadro de vidro estendido em um aplicativo WPF:
 
 ![Captura de tela mostrando um quadro de vidro estendido em um aplicativo WPF.](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de Gerenciador de Janelas da Área de Trabalho](/windows/desktop/dwm/dwm-overview)
 - [Visão geral do Desfoque Gerenciador de Janelas da Área de Trabalho](/windows/desktop/dwm/blur-ovw)

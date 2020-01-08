@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 968154908bc6cb62bb221d42a1f71b329aa7096f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 728c17cd2ed8661e0a5f1f2b8e929059713a1edf
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349463"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545122"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Propriedade do eixo filho XML (Visual Basic)
 Fornece acesso aos descendentes de um dos seguintes: um objeto de <xref:System.Xml.Linq.XElement> , um objeto de <xref:System.Xml.Linq.XDocument> , uma coleção de objetos <xref:System.Xml.Linq.XElement> , ou uma coleção de <xref:System.Xml.Linq.XDocument> objeto.  
@@ -32,10 +32,10 @@ object.<child>
 |---|---|  
 |`object`|Necessária. Um objeto <xref:System.Xml.Linq.XElement>, um objeto <xref:System.Xml.Linq.XDocument>, uma coleção de objetos <xref:System.Xml.Linq.XElement> ou uma coleção de objetos <xref:System.Xml.Linq.XDocument>.|  
 |.<|Necessária. Denota o início de uma propriedade de eixo filho.|  
-|`child`|Necessária. Nome dos nós filho a serem acessados, no formato [`prefix:]name`.<br /><br /> -   `Prefix`-opcional. Prefixo do namespace XML para o nó filho. Deve ser um namespace XML global definido com uma instrução `Imports`.<br />-   `Name`-obrigatório. Nome do nó filho local. Consulte [nomes de elementos e atributos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`child`|Necessária. Nome dos nós filho a serem acessados, do formulário `[prefix:]name`.<br /><br /> -   `Prefix`-opcional. Prefixo do namespace XML para o nó filho. Deve ser um namespace XML global definido com uma instrução `Imports`.<br />-   `Name`-obrigatório. Nome do nó filho local. Consulte [nomes de elementos e atributos XML declarados](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
 |>|Necessária. Denota o final de uma propriedade do eixo filho.|  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Uma coleção de objetos <xref:System.Xml.Linq.XElement> .  
   
 ## <a name="remarks"></a>Comentários  
@@ -73,7 +73,7 @@ object.<child>
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Linq.XElement>
 - [Propriedades do Eixo XML](../../../visual-basic/language-reference/xml-axis/index.md)

@@ -1,23 +1,23 @@
 ---
-title: O que há de novo no .NET Core 3,1
+title: Novidades do .NET Core 3.1
 description: Saiba mais sobre os novos recursos encontrados no .NET Core 3,1.
 dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 08ae824b79ba6a1ff5a92a0b4306eabe5ccadfd2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838319"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342859"
 ---
-# <a name="whats-new-in-net-core-31"></a>O que há de novo no .NET Core 3,1
+# <a name="whats-new-in-net-core-31"></a>Novidades do .NET Core 3.1
 
 Este artigo descreve o que há de novo no .NET Core 3,1. Esta versão contém pequenas melhorias no .NET Core 3,0, concentrando-se em correções pequenas, mas importantes. O recurso mais importante sobre o .NET Core 3,1 é que ele é uma versão de [LTS (suporte a longo prazo)](#long-term-support) .
 
-Se você estiver usando o Visual Studio 2019, deverá atualizar para o [visual studio 2019 16,4](https://visualstudio.microsoft.com/downloads/) para trabalhar com projetos do .net Core 3,1. Para obter mais informações sobre o que há de novo no Visual Studio, consulte o [blog do Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
+Se você estiver usando o Visual Studio 2019, deverá atualizar para o [visual studio 2019 versão 16,4](https://visualstudio.microsoft.com/downloads/) para trabalhar com projetos do .net Core 3,1. Para obter mais informações sobre o que há de novo no Visual Studio, consulte o [blog do Visual Studio](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/).
 
 O Visual Studio para Mac também dá suporte e inclui o .NET Core 3,1, no canal de visualização Visual Studio para Mac 8,4. Você precisará optar pelo canal de visualização para usar o .NET Core 3,1.
 

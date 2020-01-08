@@ -3,12 +3,12 @@ title: Introdução à análise de sintaxe (APIs Roslyn)
 description: Uma introdução pela travessia, consulta e percurso por árvores de sintaxe.
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: HT
+ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931753"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347010"
 ---
 # <a name="get-started-with-syntax-analysis"></a>Introdução à análise de sintaxe
 
@@ -51,7 +51,7 @@ Uma árvore de sintaxe é uma estrutura de dados usada pelos compiladores C# e V
 
 Os quatro principais blocos de construção de árvores de sintaxe são:
 
-* A classe <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, uma instância da qual representa uma árvore de análise inteira. <xref:Microsoft.CodeAnalysis.SyntaxTree> é uma classe abstrata que tem derivativos específicos a um idioma. Você usa os métodos de análise da classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> ou (<xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) para analisar texto em C# ou VB.
+* A classe <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType>, uma instância da qual representa uma árvore de análise inteira. <xref:Microsoft.CodeAnalysis.SyntaxTree> é uma classe abstrata que tem derivativos específicos a um idioma. Você usa os métodos Parse da classe <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) para analisar o texto em C# ou Visual Basic.
 * A classe <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType>, instâncias da qual representam constructos sintáticos como declarações, instruções, cláusulas e expressões.
 * A estrutura <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType>, que representa uma pontuação, operador, identificador ou palavra-chave individual.
 * Finalmente, a estrutura <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType>, que representa os bits de informação sem significância sintática, tais como o espaço em branco entre tokens, diretivas de pré-processamento e comentários.
@@ -62,7 +62,7 @@ Trívia, tokens e nós são compostos hierarquicamente para formar uma árvore q
 
 Ao navegar nessa estrutura de árvore, você pode encontrar qualquer instrução, expressão, token ou bit de espaço em branco em um arquivo de código.
 
-Embora você possa encontrar tudo em um arquivo de código usando as APIs de sintaxe, a maioria dos cenários envolvem o exame de pequenos trechos de código ou a pesquisa por instruções ou fragmentos específicos. Os dois exemplos a seguir mostram usos típicos para navegar pela estrutura de códigos ou pesquisar por instruções individuais.
+Embora você possa encontrar tudo em um arquivo de código usando as APIs de sintaxe, a maioria dos cenários envolvem o exame de pequenos snippets de código ou a pesquisa por instruções ou fragmentos específicos. Os dois exemplos a seguir mostram usos típicos para navegar pela estrutura de códigos ou pesquisar por instruções individuais.
 
 ## <a name="traversing-trees"></a>Percorrendo árvores
 

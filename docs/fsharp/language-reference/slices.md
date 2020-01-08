@@ -1,17 +1,17 @@
 ---
-title: FatiasF#()
-description: Saiba mais sobre como usar fatias para F# tipos de dados existentes e como definir suas próprias fatias para outros tipos de dados.
-ms.date: 01/22/2019
-ms.openlocfilehash: 2f7b87cda87aad1fdac05b4e14b16f454f8c0461
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+title: Fatias
+description: Saiba como usar fatias para tipos F# de dados existentes e como definir suas próprias fatias para outros tipos de dados.
+ms.date: 12/23/2019
+ms.openlocfilehash: 3911139c7ce656043817eb23d30f3686555b6efe
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733378"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545106"
 ---
 # <a name="slices"></a>Fatias
 
-No F#, uma fatia é um subconjunto de um tipo de dados. Para poder tirar uma fatia de um tipo de dados, o tipo de dados deve definir um `GetSlice` método ou em uma [extensão de tipo](type-extensions.md) que esteja no escopo. Este artigo explica como obter fatias de tipos F# existentes e como definir seus próprios.
+No F#, uma fatia é um subconjunto de qualquer tipo de dados que tem um método `GetSlice` em sua definição ou em uma [extensão de tipo](type-extensions.md)no escopo. Ele é mais comumente usado com F# matrizes e listas. Este artigo explica como tirar fatias de tipos F# existentes e como definir suas próprias fatias.
 
 As fatias são semelhantes aos [indexadores](./members/indexed-properties.md), mas em vez de produzir um único valor da estrutura de dados subjacente, elas produzem várias delas.
 
@@ -89,7 +89,7 @@ let twoByTwo = A.[0..1,0..1]
 printfn "%A" twoByTwo
 ```
 
-A F# biblioteca principal não define`GetSlice`para matrizes 3D. Se você quiser segmentar essas ou outras matrizes de mais dimensões, você deve definir o membro `GetSlice` por conta própria.
+Atualmente F# , a biblioteca principal não define `GetSlice` para matrizes 3D. Se você quiser fatiar matrizes 3D ou outras matrizes de mais dimensões, defina o membro `GetSlice` por conta própria.
 
 ## <a name="defining-slices-for-other-data-structures"></a>Definindo fatias para outras estruturas de dados
 
@@ -142,6 +142,17 @@ printSpan sp.[0..3] // [|1; 2; 3|]
 printSpan sp.[1..2] // |2; 3|]
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="built-in-f-slices-are-end-inclusive"></a>As F# fatias internas são inclusivas
+
+Todas as fatias F# intrínsecas no são completas, inclusive ou seja, o limite superior é incluído na fatia. Para uma determinada fatia com `x` de índice inicial e `y`de índice final, a fatia resultante incluirá o valor *YTH* .
+
+```fsharp
+// Define a new list
+let xs = [1 .. 10]
+
+printfn "%A" xs.[2..5] // Includes the 5th index
+```
+
+## <a name="see-also"></a>Veja também
 
 - [Propriedades indexadas](./members/indexed-properties.md)
