@@ -6,12 +6,12 @@ metadata:
   description: Aprenda C# sobre programação – para desenvolvedores iniciantes, desenvolvedores novos C#e experientes C# /desenvolvedores .net
   ms.topic: landing-page
   ms.date: 11/19/2019
-  ms.openlocfilehash: fa778c4610dbfe8320d488098b5bfd39de8e4705
-  ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+  ms.openlocfilehash: 2bec49d0832a7d00d0fea247166a9ec073f37e11
+  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
   ms.translationtype: MT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/05/2019
-  ms.locfileid: "74835467"
+  ms.lasthandoff: 12/25/2019
+  ms.locfileid: "75339166"
 landingContent:
 - title: Aprenda a programar emC#
   linkLists:
@@ -95,6 +95,10 @@ landingContent:
       url: tutorials/mixins-with-default-interface-methods.md
     - text: Trabalhar com subconjuntos usando intervalos e índices
       url: tutorials/ranges-indexes.md
+  - linkListType: reference
+    links:
+    - text: Alterações recentes no C# compilador
+      url: whats-new/breaking-changes.md
 - title: Referência da linguagem C#
   linkLists:
   - linkListType: reference
@@ -107,5 +111,5 @@ landingContent:
       url: language-reference/operators/index.md
     - text: Configurar versão da linguagem
       url: language-reference/configure-language-version.md
-    - text: Especificação da linguagem C#
+    - text: especificação da linguagem C#
       url: ../../_csharplang/spec/introduction.md
