@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 0c4fc9645e43f23e340804b46bbe8a5faa19525d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 61f15550482e8499e57197e35970e7ec8a096947
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69922384"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345515"
 ---
 # <a name="class-c-reference"></a>class (Referência de C#)
 
@@ -31,9 +31,9 @@ class TestClass
 
 Somente a herança única é permitida em C#. Em outras palavras, uma classe pode herdar a implementação de apenas uma classe base. No entanto, uma classe pode implementar mais de uma interface. A tabela a seguir mostra exemplos de implementação de interface e herança de classe:
 
-|Herança|Exemplo|
+|{1&gt;Herança&lt;1}|Exemplo|
 |-----------------|-------------|
-|Nenhum|`class ClassA { }`|
+|{1&gt;Nenhum&lt;1}|`class ClassA { }`|
 |Simples|`class DerivedClass: BaseClass { }`|
 |Nenhuma, implementa duas interfaces|`class ImplClass: IFace1, IFace2 { }`|
 |Única, implementa uma interface|`class ImplDerivedClass: BaseClass, IFace1 { }`|
@@ -74,7 +74,7 @@ Uma classe pode conter declarações dos seguintes membros:
 
 - [Estruturas](../../programming-guide/classes-and-structs/structs.md)
 
-- [Enumerações](../../programming-guide/enumeration-types.md)
+- [Enumerações](../builtin-types/enum.md)
 
 ## <a name="example"></a>Exemplo
 
@@ -82,7 +82,7 @@ O exemplo a seguir demonstra a declaração de métodos, construtores e campos d
 
 [!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
-## <a name="comments"></a>Comentários
+## <a name="comments"></a>Comments
 
 Observe que, no exemplo anterior, os campos particulares (`name` e `age`) só podem ser acessados por meio dos métodos públicos da classe `Child`. Por exemplo, você não pode imprimir o nome do filho, do método `Main`, usando uma instrução como esta:
 
@@ -96,11 +96,11 @@ Tipos declarados dentro de uma classe sem um modificador de acesso têm o valor 
 
 Por fim, observe que, para o objeto criado usando o construtor sem parâmetro (`child3`), o campo `age` foi inicializado como zero por padrão.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

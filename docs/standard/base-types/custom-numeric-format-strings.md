@@ -16,12 +16,12 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-ms.openlocfilehash: 72b60d0a91fda3e89448a19b506a6f8457835304
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1eb9c3c189d7bba3a12fdcd0c3d600a66bf819ca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124407"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348302"
 ---
 # <a name="custom-numeric-format-strings"></a>Cadeias de caracteres de formato numérico personalizado
 
@@ -255,7 +255,7 @@ O exemplo a seguir usa as duas abordagem para incluir caracteres reservados em u
 
 <a name="NotesCustomFormatting"></a>
 
-## <a name="notes"></a>Anotações
+## <a name="notes"></a>{1&gt;Observações&lt;1}
 
 ### <a name="floating-point-infinities-and-nan"></a>Infinitos de ponto flutuante e NaN
 
@@ -285,7 +285,7 @@ O exemplo a seguir demonstra duas cadeias de caracteres de formato numérico per
 
 [Voltar à tabela](#table)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>
 - [Formatando Tipos](../../../docs/standard/base-types/formatting-types.md)

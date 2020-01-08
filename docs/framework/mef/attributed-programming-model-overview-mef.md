@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MEF, attributed programming model
 - attributed programming model [MEF]
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
-ms.openlocfilehash: 63fb3d627364810fac5ddb0bfd3adc3c0421c9cc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c6b1093d2e821a55cc5513b077a270748a780b71
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126380"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347622"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Visão geral do modelo de programação atribuído (MEF)
 
@@ -789,7 +789,7 @@ public class MyAttribute : ExportAttribute
 }
 ```
 
-Essa classe define um atributo personalizado denominado `MyAttribute` com o tipo de contrato `IMyData` e alguns metadados denominados `MyMetadata`. Todas as propriedades em uma classe marcada com o atributo `MetadataAttribute` são consideradas como sendo metadados definidos no atributo personalizado. As duas declarações a seguir são equivalentes.
+Essa classe define um atributo personalizado denominado `MyAttribute` com o tipo de contrato `IMyAddin` e alguns metadados denominados `MyMetadata`. Todas as propriedades em uma classe marcada com o atributo `MetadataAttribute` são consideradas como sendo metadados definidos no atributo personalizado. As duas declarações a seguir são equivalentes.
 
 ```vb
 <Export(GetType(IMyAddin))>
@@ -980,7 +980,7 @@ Para contêineres de composição de longa vida, o consumo de memória pelas par
 
 `IPartImportsSatisfiedNotification` contém um método chamado `OnImportsSatisfied`. Esse método é chamado pelo contêiner de composição em qualquer parte que implementar a interface quando a composição tiver sido concluída e as importações da parte estiverem prontas para uso. As partes são criadas pelo mecanismo de composição para preencher as importações de outras partes. Antes de as importações de uma parte terem sido definidas, você não pode realizar nenhuma inicialização que dependa de ou manipule valores importados no construtor da parte, a menos que esses valores tenham sido especificados como pré-requisitos usando o atributo `ImportingConstructor`. Normalmente, esse é o método preferido, mas, em alguns casos, a injeção do construtor pode não estar disponível. Na maioria dos casos, a inicialização pode ser realizada em `OnImportsSatisfied`, e a parte deve implementar `IPartImportsSatisfiedNotification`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Vídeo do Channel 9: Open Up Your Applications with the Managed Extensibility Framework (Abra seus aplicativos com o Managed Extensibility Framework)](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)
 - [Vídeo do Channel 9: Managed Extensibility Framework (MEF) 2.0 [MEF (Managed Extensibility Framework) 2.0]](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
