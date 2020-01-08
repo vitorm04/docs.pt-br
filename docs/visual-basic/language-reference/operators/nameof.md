@@ -1,19 +1,19 @@
 ---
-title: Operador NameOf-Visual Basic
+title: Operador NameOf
 description: Saiba como usar o operador NameOf no Visual Basic
 ms.date: 10/27/2019
 helpviewer_keywords:
 - NameOf operator [Visual Basic]
-ms.openlocfilehash: 8416bb1a1715c1c37b62cac6a9e0b427a9c72547
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e7dd55bfd98b34449b9f1a35375198598f57b46f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041313"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347014"
 ---
-# <a name="nameof-operator---visual-basic"></a><span data-ttu-id="b6f88-103">Operador NameOf-Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b6f88-103">NameOf operator - Visual Basic</span></span>
+# <a name="nameof-operator---visual-basic"></a><span data-ttu-id="8ed64-103">Operador NameOf-Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8ed64-103">NameOf operator - Visual Basic</span></span>
 
-<span data-ttu-id="b6f88-104">O operador `NameOf` obtém o nome de uma variável, tipo ou membro como uma cadeia de caracteres constante:</span><span class="sxs-lookup"><span data-stu-id="b6f88-104">The `NameOf` operator obtains the name of a variable, type, or member as the string constant:</span></span>
+<span data-ttu-id="8ed64-104">O operador `NameOf` obtém o nome de uma variável, tipo ou membro como uma cadeia de caracteres constante:</span><span class="sxs-lookup"><span data-stu-id="8ed64-104">The `NameOf` operator obtains the name of a variable, type, or member as the string constant:</span></span>
 
 ```vb
 Console.WriteLine(NameOf(System.Collections.Generic))  ' output: Generic
@@ -27,11 +27,11 @@ Console.WriteLine(NameOf(numbers.Count))  ' output: Count
 Console.WriteLine(NameOf(numbers.Add))  ' output: Add
 ```
 
-<span data-ttu-id="b6f88-105">Como mostra o exemplo anterior, no caso de um tipo e um namespace, o nome produzido geralmente não é [totalmente qualificado](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).</span><span class="sxs-lookup"><span data-stu-id="b6f88-105">As the preceding example shows, in the case of a type and a namespace, the produced name is usually not [fully qualified](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).</span></span>
+<span data-ttu-id="8ed64-105">Como mostra o exemplo anterior, no caso de um tipo e um namespace, o nome produzido geralmente não é [totalmente qualificado](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).</span><span class="sxs-lookup"><span data-stu-id="8ed64-105">As the preceding example shows, in the case of a type and a namespace, the produced name is usually not [fully qualified](~/_csharplang/spec/basic-concepts.md#fully-qualified-names).</span></span>
 
-<span data-ttu-id="b6f88-106">O operador `NameOf` é avaliado no tempo de compilação e não tem efeitos no tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="b6f88-106">The `NameOf` operator is evaluated at compile time, and has no effect at run time.</span></span>
+<span data-ttu-id="8ed64-106">O operador `NameOf` é avaliado no tempo de compilação e não tem efeitos no tempo de execução.</span><span class="sxs-lookup"><span data-stu-id="8ed64-106">The `NameOf` operator is evaluated at compile time, and has no effect at run time.</span></span>
 
-<span data-ttu-id="b6f88-107">Você pode usar o operador `NameOf` para tornar o código de verificação de argumentos mais passível de manutenção:</span><span class="sxs-lookup"><span data-stu-id="b6f88-107">You can use the `NameOf` operator to make the argument-checking code more maintainable:</span></span>
+<span data-ttu-id="8ed64-107">Você pode usar o operador `NameOf` para tornar o código de verificação de argumentos mais passível de manutenção:</span><span class="sxs-lookup"><span data-stu-id="8ed64-107">You can use the `NameOf` operator to make the argument-checking code more maintainable:</span></span>
 
 ```vb
 Private _name As String
@@ -48,9 +48,9 @@ Public Property Name As String
 End Property
 ```
 
-<span data-ttu-id="b6f88-108">O operador `NameOf` está disponível no Visual Basic 14 e posterior.</span><span class="sxs-lookup"><span data-stu-id="b6f88-108">The `NameOf` operator is available in Visual Basic 14 and later.</span></span>
+<span data-ttu-id="8ed64-108">O operador `NameOf` está disponível no Visual Basic 14 e posterior.</span><span class="sxs-lookup"><span data-stu-id="8ed64-108">The `NameOf` operator is available in Visual Basic 14 and later.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b6f88-109">Consulte também</span><span class="sxs-lookup"><span data-stu-id="b6f88-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8ed64-109">Veja também</span><span class="sxs-lookup"><span data-stu-id="8ed64-109">See also</span></span>
 
-- [<span data-ttu-id="b6f88-110">Referência da linguagem Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b6f88-110">Visual Basic Language Reference</span></span>](../index.md)
-- [<span data-ttu-id="b6f88-111">Operadores (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b6f88-111">Operators (Visual Basic)</span></span>](index.md)
+- [<span data-ttu-id="8ed64-110">Referência da linguagem Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8ed64-110">Visual Basic Language Reference</span></span>](../index.md)
+- [<span data-ttu-id="8ed64-111">Operadores (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8ed64-111">Operators (Visual Basic)</span></span>](index.md)

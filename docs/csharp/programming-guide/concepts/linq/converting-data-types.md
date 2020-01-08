@@ -2,82 +2,83 @@
 title: Convertendo Tipos de Dados (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: ddd9407c3b7e25dbfb8fc0bddb5daab7db2e4e53
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 328c790a1a360907c91f69b3b6330b0b25eb414b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418611"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347199"
 ---
-# <a name="converting-data-types-c"></a><span data-ttu-id="f112d-102">Convertendo Tipos de Dados (C#)</span><span class="sxs-lookup"><span data-stu-id="f112d-102">Converting Data Types (C#)</span></span>
-<span data-ttu-id="f112d-103">Os métodos de conversão alteram o tipo dos objetos de entrada.</span><span class="sxs-lookup"><span data-stu-id="f112d-103">Conversion methods change the type of input objects.</span></span>  
-  
- <span data-ttu-id="f112d-104">As operações de conversão em consultas LINQ são úteis em diversas aplicações.</span><span class="sxs-lookup"><span data-stu-id="f112d-104">Conversion operations in LINQ queries are useful in a variety of applications.</span></span> <span data-ttu-id="f112d-105">A seguir estão alguns exemplos:</span><span class="sxs-lookup"><span data-stu-id="f112d-105">Following are some examples:</span></span>  
-  
-- <span data-ttu-id="f112d-106">O método <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> pode ser usado para ocultar a implementação personalizada de um tipo de um operador de consulta padrão.</span><span class="sxs-lookup"><span data-stu-id="f112d-106">The <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> method can be used to hide a type's custom implementation of a standard query operator.</span></span>  
-  
-- <span data-ttu-id="f112d-107">O método <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> pode ser usado para habilitar coleções sem parâmetros para consulta LINQ.</span><span class="sxs-lookup"><span data-stu-id="f112d-107">The <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> method can be used to enable non-parameterized collections for LINQ querying.</span></span>  
-  
-- <span data-ttu-id="f112d-108">Os métodos <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> e <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> podem ser usados para forçar a execução de consulta imediata em vez de adiá-la até que a consulta seja enumerada.</span><span class="sxs-lookup"><span data-stu-id="f112d-108">The <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>, and <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> methods can be used to force immediate query execution instead of deferring it until the query is enumerated.</span></span>  
-  
-## <a name="methods"></a><span data-ttu-id="f112d-109">Métodos</span><span class="sxs-lookup"><span data-stu-id="f112d-109">Methods</span></span>  
- <span data-ttu-id="f112d-110">A tabela a seguir lista os métodos de operador de consulta padrão que realizam conversões de tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="f112d-110">The following table lists the standard query operator methods that perform data-type conversions.</span></span>  
-  
- <span data-ttu-id="f112d-111">Os métodos de conversão nesta tabela cujos nomes começam com "As" alteram o tipo estático da coleção de origem, mas não a enumeram.</span><span class="sxs-lookup"><span data-stu-id="f112d-111">The conversion methods in this table whose names start with "As" change the static type of the source collection but do not enumerate it.</span></span> <span data-ttu-id="f112d-112">Os métodos cujos nomes começam com "To" enumeram a coleção de origem e colocam os itens na coleção de tipo correspondente.</span><span class="sxs-lookup"><span data-stu-id="f112d-112">The methods whose names start with "To" enumerate the source collection and put the items into the corresponding collection type.</span></span>  
-  
-|<span data-ttu-id="f112d-113">Nome do método</span><span class="sxs-lookup"><span data-stu-id="f112d-113">Method Name</span></span>|<span data-ttu-id="f112d-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="f112d-114">Description</span></span>|<span data-ttu-id="f112d-115">Sintaxe de expressão de consulta C#</span><span class="sxs-lookup"><span data-stu-id="f112d-115">C# Query Expression Syntax</span></span>|<span data-ttu-id="f112d-116">Mais informações</span><span class="sxs-lookup"><span data-stu-id="f112d-116">More Information</span></span>|  
-|-----------------|-----------------|---------------------------------|----------------------|  
-|<span data-ttu-id="f112d-117">AsEnumerable</span><span class="sxs-lookup"><span data-stu-id="f112d-117">AsEnumerable</span></span>|<span data-ttu-id="f112d-118">Retorna a entrada digitada como <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="f112d-118">Returns the input typed as <xref:System.Collections.Generic.IEnumerable%601>.</span></span>|<span data-ttu-id="f112d-119">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="f112d-119">Not applicable.</span></span>|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="f112d-120">AsQueryable</span><span class="sxs-lookup"><span data-stu-id="f112d-120">AsQueryable</span></span>|<span data-ttu-id="f112d-121">Converte um <xref:System.Collections.IEnumerable> (genérico) em um <xref:System.Linq.IQueryable> (genérico).</span><span class="sxs-lookup"><span data-stu-id="f112d-121">Converts a (generic) <xref:System.Collections.IEnumerable> to a (generic) <xref:System.Linq.IQueryable>.</span></span>|<span data-ttu-id="f112d-122">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="f112d-122">Not applicable.</span></span>|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="f112d-123">Conversão</span><span class="sxs-lookup"><span data-stu-id="f112d-123">Cast</span></span>|<span data-ttu-id="f112d-124">Converte os elementos de uma coleção em um tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="f112d-124">Casts the elements of a collection to a specified type.</span></span>|<span data-ttu-id="f112d-125">Use uma variável de intervalo de tipo explícito.</span><span class="sxs-lookup"><span data-stu-id="f112d-125">Use an explicitly typed range variable.</span></span> <span data-ttu-id="f112d-126">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="f112d-126">For example:</span></span><br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="f112d-127">OfType</span><span class="sxs-lookup"><span data-stu-id="f112d-127">OfType</span></span>|<span data-ttu-id="f112d-128">Filtra valores, dependendo da capacidade de serem convertidos em um tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="f112d-128">Filters values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="f112d-129">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="f112d-129">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="f112d-130">ToArray</span><span class="sxs-lookup"><span data-stu-id="f112d-130">ToArray</span></span>|<span data-ttu-id="f112d-131">Converte uma coleção em uma matriz.</span><span class="sxs-lookup"><span data-stu-id="f112d-131">Converts a collection to an array.</span></span> <span data-ttu-id="f112d-132">Esse método força a execução de consulta.</span><span class="sxs-lookup"><span data-stu-id="f112d-132">This method forces query execution.</span></span>|<span data-ttu-id="f112d-133">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="f112d-133">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="f112d-134">ToDictionary</span><span class="sxs-lookup"><span data-stu-id="f112d-134">ToDictionary</span></span>|<span data-ttu-id="f112d-135">Coloca os elementos em um <xref:System.Collections.Generic.Dictionary%602> com base em uma função de seletor de chave.</span><span class="sxs-lookup"><span data-stu-id="f112d-135">Puts elements into a <xref:System.Collections.Generic.Dictionary%602> based on a key selector function.</span></span> <span data-ttu-id="f112d-136">Esse método força a execução de consulta.</span><span class="sxs-lookup"><span data-stu-id="f112d-136">This method forces query execution.</span></span>|<span data-ttu-id="f112d-137">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="f112d-137">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="f112d-138">ToList</span><span class="sxs-lookup"><span data-stu-id="f112d-138">ToList</span></span>|<span data-ttu-id="f112d-139">Converte uma coleção em um <xref:System.Collections.Generic.List%601>.</span><span class="sxs-lookup"><span data-stu-id="f112d-139">Converts a collection to a <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="f112d-140">Esse método força a execução de consulta.</span><span class="sxs-lookup"><span data-stu-id="f112d-140">This method forces query execution.</span></span>|<span data-ttu-id="f112d-141">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="f112d-141">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|  
-|<span data-ttu-id="f112d-142">ToLookup</span><span class="sxs-lookup"><span data-stu-id="f112d-142">ToLookup</span></span>|<span data-ttu-id="f112d-143">Coloca os elementos em um <xref:System.Linq.Lookup%602> (um dicionário one-to-many) com base em uma função de seletor de chave.</span><span class="sxs-lookup"><span data-stu-id="f112d-143">Puts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span> <span data-ttu-id="f112d-144">Esse método força a execução de consulta.</span><span class="sxs-lookup"><span data-stu-id="f112d-144">This method forces query execution.</span></span>|<span data-ttu-id="f112d-145">Não aplicável.</span><span class="sxs-lookup"><span data-stu-id="f112d-145">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
-  
-## <a name="query-expression-syntax-example"></a><span data-ttu-id="f112d-146">Exemplo de sintaxe de expressão de consulta</span><span class="sxs-lookup"><span data-stu-id="f112d-146">Query Expression Syntax Example</span></span>  
- <span data-ttu-id="f112d-147">O exemplo de código a seguir usa uma variável de intervalo de tipo explícito para converter um tipo em um subtipo antes de acessar um membro que está disponível somente no subtipo.</span><span class="sxs-lookup"><span data-stu-id="f112d-147">The following code example uses an explicitly-typed range variable  to cast a type to a subtype before accessing a member that is available only on the subtype.</span></span>  
-  
-```csharp  
-class Plant  
-{  
-    public string Name { get; set; }  
-}  
-  
-class CarnivorousPlant : Plant  
-{  
-    public string TrapType { get; set; }  
-}  
-  
-static void Cast()  
-{  
-    Plant[] plants = new Plant[] {  
-        new CarnivorousPlant { Name = "Venus Fly Trap", TrapType = "Snap Trap" },  
-        new CarnivorousPlant { Name = "Pitcher Plant", TrapType = "Pitfall Trap" },  
-        new CarnivorousPlant { Name = "Sundew", TrapType = "Flypaper Trap" },  
-        new CarnivorousPlant { Name = "Waterwheel Plant", TrapType = "Snap Trap" }  
-    };  
-  
-    var query = from CarnivorousPlant cPlant in plants  
-                where cPlant.TrapType == "Snap Trap"  
-                select cPlant;  
-  
-    foreach (Plant plant in query)  
-        Console.WriteLine(plant.Name);  
-  
-    /* This code produces the following output:  
-  
-        Venus Fly Trap  
-        Waterwheel Plant  
-    */  
-}  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="f112d-148">Consulte também</span><span class="sxs-lookup"><span data-stu-id="f112d-148">See also</span></span>
+# <a name="converting-data-types-c"></a><span data-ttu-id="3ff1b-102">Convertendo Tipos de Dados (C#)</span><span class="sxs-lookup"><span data-stu-id="3ff1b-102">Converting Data Types (C#)</span></span>
+<span data-ttu-id="3ff1b-103">Os métodos de conversão alteram o tipo dos objetos de entrada.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-103">Conversion methods change the type of input objects.</span></span>
+
+ <span data-ttu-id="3ff1b-104">As operações de conversão em consultas LINQ são úteis em diversas aplicações.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-104">Conversion operations in LINQ queries are useful in a variety of applications.</span></span> <span data-ttu-id="3ff1b-105">A seguir estão alguns exemplos:</span><span class="sxs-lookup"><span data-stu-id="3ff1b-105">Following are some examples:</span></span>
+
+- <span data-ttu-id="3ff1b-106">O método <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> pode ser usado para ocultar a implementação personalizada de um tipo de um operador de consulta padrão.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-106">The <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> method can be used to hide a type's custom implementation of a standard query operator.</span></span>
+
+- <span data-ttu-id="3ff1b-107">O método <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> pode ser usado para habilitar coleções sem parâmetros para consulta LINQ.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-107">The <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> method can be used to enable non-parameterized collections for LINQ querying.</span></span>
+
+- <span data-ttu-id="3ff1b-108">Os métodos <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> e <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> podem ser usados para forçar a execução de consulta imediata em vez de adiá-la até que a consulta seja enumerada.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-108">The <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>, <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>, and <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> methods can be used to force immediate query execution instead of deferring it until the query is enumerated.</span></span>
+
+## <a name="methods"></a><span data-ttu-id="3ff1b-109">{1&gt;Métodos&lt;1}</span><span class="sxs-lookup"><span data-stu-id="3ff1b-109">Methods</span></span>
+ <span data-ttu-id="3ff1b-110">A tabela a seguir lista os métodos de operador de consulta padrão que realizam conversões de tipo de dados.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-110">The following table lists the standard query operator methods that perform data-type conversions.</span></span>
+
+ <span data-ttu-id="3ff1b-111">Os métodos de conversão nesta tabela cujos nomes começam com "As" alteram o tipo estático da coleção de origem, mas não a enumeram.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-111">The conversion methods in this table whose names start with "As" change the static type of the source collection but do not enumerate it.</span></span> <span data-ttu-id="3ff1b-112">Os métodos cujos nomes começam com "To" enumeram a coleção de origem e colocam os itens na coleção de tipo correspondente.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-112">The methods whose names start with "To" enumerate the source collection and put the items into the corresponding collection type.</span></span>
+
+|<span data-ttu-id="3ff1b-113">Nome do método</span><span class="sxs-lookup"><span data-stu-id="3ff1b-113">Method Name</span></span>|<span data-ttu-id="3ff1b-114">Descrição</span><span class="sxs-lookup"><span data-stu-id="3ff1b-114">Description</span></span>|<span data-ttu-id="3ff1b-115">Sintaxe de expressão de consulta C#</span><span class="sxs-lookup"><span data-stu-id="3ff1b-115">C# Query Expression Syntax</span></span>|<span data-ttu-id="3ff1b-116">Mais Informações</span><span class="sxs-lookup"><span data-stu-id="3ff1b-116">More Information</span></span>|
+|-----------------|-----------------|---------------------------------|----------------------|
+|<span data-ttu-id="3ff1b-117">AsEnumerable</span><span class="sxs-lookup"><span data-stu-id="3ff1b-117">AsEnumerable</span></span>|<span data-ttu-id="3ff1b-118">Retorna a entrada digitada como <xref:System.Collections.Generic.IEnumerable%601>.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-118">Returns the input typed as <xref:System.Collections.Generic.IEnumerable%601>.</span></span>|<span data-ttu-id="3ff1b-119">{1&gt;Não aplicável.&lt;1}</span><span class="sxs-lookup"><span data-stu-id="3ff1b-119">Not applicable.</span></span>|<xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="3ff1b-120">AsQueryable</span><span class="sxs-lookup"><span data-stu-id="3ff1b-120">AsQueryable</span></span>|<span data-ttu-id="3ff1b-121">Converte um <xref:System.Collections.IEnumerable> (genérico) em um <xref:System.Linq.IQueryable> (genérico).</span><span class="sxs-lookup"><span data-stu-id="3ff1b-121">Converts a (generic) <xref:System.Collections.IEnumerable> to a (generic) <xref:System.Linq.IQueryable>.</span></span>|<span data-ttu-id="3ff1b-122">{1&gt;Não aplicável.&lt;1}</span><span class="sxs-lookup"><span data-stu-id="3ff1b-122">Not applicable.</span></span>|<xref:System.Linq.Queryable.AsQueryable%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="3ff1b-123">Conversão</span><span class="sxs-lookup"><span data-stu-id="3ff1b-123">Cast</span></span>|<span data-ttu-id="3ff1b-124">Converte os elementos de uma coleção em um tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-124">Casts the elements of a collection to a specified type.</span></span>|<span data-ttu-id="3ff1b-125">Use uma variável de intervalo de tipo explícito.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-125">Use an explicitly typed range variable.</span></span> <span data-ttu-id="3ff1b-126">Por exemplo:</span><span class="sxs-lookup"><span data-stu-id="3ff1b-126">For example:</span></span><br /><br /> `from string str in words`|<xref:System.Linq.Enumerable.Cast%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Cast%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="3ff1b-127">OfType</span><span class="sxs-lookup"><span data-stu-id="3ff1b-127">OfType</span></span>|<span data-ttu-id="3ff1b-128">Filtra valores, dependendo da capacidade de serem convertidos em um tipo especificado.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-128">Filters values, depending on their ability to be cast to a specified type.</span></span>|<span data-ttu-id="3ff1b-129">{1&gt;Não aplicável.&lt;1}</span><span class="sxs-lookup"><span data-stu-id="3ff1b-129">Not applicable.</span></span>|<xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.OfType%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="3ff1b-130">ToArray</span><span class="sxs-lookup"><span data-stu-id="3ff1b-130">ToArray</span></span>|<span data-ttu-id="3ff1b-131">Converte uma coleção em uma matriz.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-131">Converts a collection to an array.</span></span> <span data-ttu-id="3ff1b-132">Esse método força a execução de consulta.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-132">This method forces query execution.</span></span>|<span data-ttu-id="3ff1b-133">{1&gt;Não aplicável.&lt;1}</span><span class="sxs-lookup"><span data-stu-id="3ff1b-133">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="3ff1b-134">ToDictionary</span><span class="sxs-lookup"><span data-stu-id="3ff1b-134">ToDictionary</span></span>|<span data-ttu-id="3ff1b-135">Coloca os elementos em um <xref:System.Collections.Generic.Dictionary%602> com base em uma função de seletor de chave.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-135">Puts elements into a <xref:System.Collections.Generic.Dictionary%602> based on a key selector function.</span></span> <span data-ttu-id="3ff1b-136">Esse método força a execução de consulta.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-136">This method forces query execution.</span></span>|<span data-ttu-id="3ff1b-137">{1&gt;Não aplicável.&lt;1}</span><span class="sxs-lookup"><span data-stu-id="3ff1b-137">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="3ff1b-138">ToList</span><span class="sxs-lookup"><span data-stu-id="3ff1b-138">ToList</span></span>|<span data-ttu-id="3ff1b-139">Converte uma coleção em um <xref:System.Collections.Generic.List%601>.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-139">Converts a collection to a <xref:System.Collections.Generic.List%601>.</span></span> <span data-ttu-id="3ff1b-140">Esse método força a execução de consulta.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-140">This method forces query execution.</span></span>|<span data-ttu-id="3ff1b-141">{1&gt;Não aplicável.&lt;1}</span><span class="sxs-lookup"><span data-stu-id="3ff1b-141">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>|
+|<span data-ttu-id="3ff1b-142">ToLookup</span><span class="sxs-lookup"><span data-stu-id="3ff1b-142">ToLookup</span></span>|<span data-ttu-id="3ff1b-143">Coloca os elementos em um <xref:System.Linq.Lookup%602> (um dicionário one-to-many) com base em uma função de seletor de chave.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-143">Puts elements into a <xref:System.Linq.Lookup%602> (a one-to-many dictionary) based on a key selector function.</span></span> <span data-ttu-id="3ff1b-144">Esse método força a execução de consulta.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-144">This method forces query execution.</span></span>|<span data-ttu-id="3ff1b-145">{1&gt;Não aplicável.&lt;1}</span><span class="sxs-lookup"><span data-stu-id="3ff1b-145">Not applicable.</span></span>|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|
+
+## <a name="query-expression-syntax-example"></a><span data-ttu-id="3ff1b-146">Exemplo de sintaxe de expressão de consulta</span><span class="sxs-lookup"><span data-stu-id="3ff1b-146">Query Expression Syntax Example</span></span>
+
+<span data-ttu-id="3ff1b-147">O exemplo de código a seguir usa uma variável de intervalo digitada explicitamente para converter um tipo em um subtipo antes de acessar um membro que está disponível somente no subtipo.</span><span class="sxs-lookup"><span data-stu-id="3ff1b-147">The following code example uses an explicitly typed range variable to cast a type to a subtype before accessing a member that is available only on the subtype.</span></span>
+
+```csharp
+class Plant
+{
+    public string Name { get; set; }
+}
+
+class CarnivorousPlant : Plant
+{
+    public string TrapType { get; set; }
+}
+
+static void Cast()
+{
+    Plant[] plants = new Plant[] {
+        new CarnivorousPlant { Name = "Venus Fly Trap", TrapType = "Snap Trap" },
+        new CarnivorousPlant { Name = "Pitcher Plant", TrapType = "Pitfall Trap" },
+        new CarnivorousPlant { Name = "Sundew", TrapType = "Flypaper Trap" },
+        new CarnivorousPlant { Name = "Waterwheel Plant", TrapType = "Snap Trap" }
+    };
+
+    var query = from CarnivorousPlant cPlant in plants
+                where cPlant.TrapType == "Snap Trap"
+                select cPlant;
+
+    foreach (Plant plant in query)
+        Console.WriteLine(plant.Name);
+
+    /* This code produces the following output:
+
+        Venus Fly Trap
+        Waterwheel Plant
+    */
+}
+```
+
+## <a name="see-also"></a><span data-ttu-id="3ff1b-148">Veja também</span><span class="sxs-lookup"><span data-stu-id="3ff1b-148">See also</span></span>
 
 - <xref:System.Linq>
-- [<span data-ttu-id="f112d-149">Visão geral de operadores de consulta padrão (C#)</span><span class="sxs-lookup"><span data-stu-id="f112d-149">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
-- [<span data-ttu-id="f112d-150">Cláusula From</span><span class="sxs-lookup"><span data-stu-id="f112d-150">from clause</span></span>](../../../language-reference/keywords/from-clause.md)
-- [<span data-ttu-id="f112d-151">Expressões de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="f112d-151">LINQ Query Expressions</span></span>](../../../linq/index.md)
-- [<span data-ttu-id="f112d-152">Como consultar um ArrayList com LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="f112d-152">How to: Query an ArrayList with LINQ (C#)</span></span>](./how-to-query-an-arraylist-with-linq.md)
+- [<span data-ttu-id="3ff1b-149">Visão geral de operadores de consulta padrão (C#)</span><span class="sxs-lookup"><span data-stu-id="3ff1b-149">Standard Query Operators Overview (C#)</span></span>](./standard-query-operators-overview.md)
+- [<span data-ttu-id="3ff1b-150">Cláusula From</span><span class="sxs-lookup"><span data-stu-id="3ff1b-150">from clause</span></span>](../../../language-reference/keywords/from-clause.md)
+- [<span data-ttu-id="3ff1b-151">Expressões de consulta LINQ</span><span class="sxs-lookup"><span data-stu-id="3ff1b-151">LINQ Query Expressions</span></span>](../../../linq/index.md)
+- [<span data-ttu-id="3ff1b-152">Como consultar uma ArrayList com LINQ (C#)</span><span class="sxs-lookup"><span data-stu-id="3ff1b-152">How to query an ArrayList with LINQ (C#)</span></span>](./how-to-query-an-arraylist-with-linq.md)
