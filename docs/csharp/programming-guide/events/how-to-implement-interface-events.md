@@ -1,19 +1,19 @@
 ---
-title: 'Como: implementar eventos de interface – Guia de Programação em C#'
+title: Como implementar eventos de interface – C# guia de programação
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 574ea9927a22c24c356d84652fd29692c519247b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: cd2192d6146a431559f5cd9dd1a80da577695d66
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590509"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346346"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>Como: implementar eventos de interface (Guia de Programação em C#)
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>Como implementar eventos de interface (C# guia de programação)
 Um [interface](../../language-reference/keywords/interface.md) pode declarar uma [evento](../../language-reference/keywords/event.md). O exemplo a seguir mostra como implementar eventos de interface em uma classe. Basicamente, as regras são as mesmas aplicadas à implementação de qualquer método ou propriedade de interface.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Implementar eventos de interface em uma classe  
@@ -58,10 +58,10 @@ Ao fornecer acessadores próprios, é possível especificar se os dois eventos s
   
  [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Eventos](./index.md)
 - [Delegados](../delegates/index.md)
 - [Implementação de interface explícita](../interfaces/explicit-interface-implementation.md)
-- [Como: acionar eventos de classe base em classes derivadas](./how-to-raise-base-class-events-in-derived-classes.md)
+- [Como gerar eventos de classe base em classes derivadas](./how-to-raise-base-class-events-in-derived-classes.md)

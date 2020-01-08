@@ -1,13 +1,13 @@
 ---
-title: Programação assíncrona emF#
+title: Programação assíncrona
 description: Saiba como F# o fornece suporte claro para assincronia com base em um modelo de programação de nível de linguagem derivado dos principais conceitos de programação funcional.
 ms.date: 12/17/2018
-ms.openlocfilehash: 583b0f5154e6ad8875b21503cfb78f70a069ff7b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837097"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344668"
 ---
 # <a name="async-programming-in-f"></a>Programação assíncrona em F\#
 
@@ -16,7 +16,7 @@ A programação assíncrona é um mecanismo essencial para aplicativos modernos 
 - Apresentar um processo de servidor que pode atender a um número significativo de solicitações de entrada simultâneas, minimizando os recursos do sistema ocupados enquanto o processamento da solicitação aguarda entradas de sistemas ou serviços externos a esse processo
 - Manutenção de uma interface do usuário responsiva ou thread principal ao progredir o trabalho em segundo plano simultaneamente
 
-Embora o trabalho em segundo plano geralmente envolva a utilização de vários threads, é importante considerar os conceitos de assincronia e multithreading separadamente. Na verdade, eles são preocupações separadas e um não implica o outro. O que se segue neste artigo descreverá isso mais detalhadamente.
+Embora o trabalho em segundo plano geralmente envolva a utilização de vários threads, é importante considerar os conceitos de assincronia e multithreading separadamente. Na verdade, eles são preocupações separadas e um não implica o outro. O que segue neste artigo descreve isso em mais detalhes.
 
 ## <a name="asynchrony-defined"></a>Assincronia definida
 
@@ -39,7 +39,7 @@ Em termos práticos, as Computações assíncronas no F# são agendadas para exe
 
 O principal argumento que você deve ter é que as Computações assíncronas são independentes do fluxo do programa principal. Embora haja algumas garantias sobre quando ou como uma computação assíncrona é executada, há algumas abordagens para orquestrar e agendá-las. O restante deste artigo explora os principais conceitos de F# assincronia e como usar os tipos, funções e expressões incorporados ao. F#
 
-## <a name="core-concepts"></a>Conceitos básicos
+## <a name="core-concepts"></a>Conceitos fundamentais
 
 No F#, a programação assíncrona é centralizada em cerca de três conceitos principais:
 
@@ -69,13 +69,13 @@ let main argv =
     0
 ```
 
-No exemplo, a função `printTotalFileBytes` é do tipo `string -> Async<unit>`. Chamar a função não executa realmente a computação assíncrona. Em vez disso, ele retorna um `Async<unit>` que atua como uma especificação * do trabalho que deve ser executado de forma assíncrona. Ele chamará `Async.AwaitTask` em seu corpo, que converterá o resultado de <xref:System.IO.File.WriteAllBytesAsync%2A> para um tipo apropriado quando for chamado.
+No exemplo, a função `printTotalFileBytes` é do tipo `string -> Async<unit>`. Chamar a função não executa realmente a computação assíncrona. Em vez disso, ele retorna um `Async<unit>` que atua como uma *especificação* do trabalho que deve ser executado de forma assíncrona. Ele chama `Async.AwaitTask` em seu corpo, que converte o resultado de <xref:System.IO.File.WriteAllBytesAsync%2A> para um tipo apropriado.
 
 Outra linha importante é a chamada para `Async.RunSynchronously`. Essa é uma das funções que iniciam o módulo Async, que você precisará chamar se quiser realmente executar uma F# computação assíncrona.
 
-Essa é uma diferença fundamental com o C#estilo/vb da programação de `async`. No F#, as Computações assíncronas podem ser consideradas como **tarefas frias**. Eles devem ser iniciados explicitamente para realmente executar. Isso tem algumas vantagens, pois permite combinar e sequenciar trabalho assíncrono muito mais facilmente do que no C#/vb.
+Essa é uma diferença fundamental do estilo C#de programação de `async` de/Visual Basic. No F#, as Computações assíncronas podem ser consideradas como **tarefas frias**. Eles devem ser iniciados explicitamente para realmente executar. Isso tem algumas vantagens, pois permite combinar e sequenciar trabalho assíncrono muito mais facilmente do que no C# ou Visual Basic.
 
-## <a name="combining-asynchronous-computations"></a>Combinando Computações assíncronas
+## <a name="combine-asynchronous-computations"></a>Combinar Computações assíncronas
 
 Aqui está um exemplo que se baseia no anterior combinando cálculos:
 
@@ -110,7 +110,7 @@ Como você pode ver, a função `main` tem muito mais algumas chamadas feitas. C
 
 Quando esse programa é executado, `printTotalFileBytes` é executado em paralelo para cada argumento de linha de comando. Como as Computações assíncronas são executadas independentemente do fluxo do programa, não há nenhuma ordem na qual elas imprimem suas informações e concluam a execução. Os cálculos serão agendados em paralelo, mas a ordem de execução não será garantida.
 
-## <a name="sequencing-asynchronous-computations"></a>Sequenciando Computações assíncronas
+## <a name="sequence-asynchronous-computations"></a>Computações assíncronas de sequência
 
 Como `Async<'T>` é uma especificação de trabalho em vez de uma tarefa já em execução, você pode executar transformações mais complexas facilmente. Aqui está um exemplo que sequencia um conjunto de Computações assíncronas para que eles executem um após o outro.
 
@@ -162,7 +162,7 @@ O que deve ser observado:
 
 ### <a name="asyncstartimmediate"></a>Async. StartImmediate
 
-Executa uma computação assíncrona, iniciando imediatamente no thread atual do sistema operacional. Isso será útil se você precisar atualizar algo no thread de chamada durante o cálculo. Por exemplo, se uma computação assíncrona precisar atualizar uma interface do usuário (como atualizar uma barra de progresso), `Async.StartImmediate` deverá ser usada.
+Executa uma computação assíncrona, começando imediatamente no thread do sistema operacional atual. Isso será útil se você precisar atualizar algo no thread de chamada durante o cálculo. Por exemplo, se uma computação assíncrona precisar atualizar uma interface do usuário (como atualizar uma barra de progresso), `Async.StartImmediate` deverá ser usada.
 
 Assinatura:
 
@@ -180,7 +180,7 @@ O que deve ser observado:
 
 ### <a name="asyncstartastask"></a>Async. StartAsTask
 
-Executa uma computação no pool de segmentos. Retorna um <xref:System.Threading.Tasks.Task%601> que será concluído no estado correspondente depois que o cálculo for encerrado (produz o resultado, gera exceção ou é cancelado). Se nenhum token de cancelamento for fornecido, o token de cancelamento padrão será usado.
+Executa uma computação no pool de threads. Retorna um <xref:System.Threading.Tasks.Task%601> que será concluído no estado correspondente depois que o cálculo for encerrado (produz o resultado, gera exceção ou é cancelado). Se nenhum token de cancelamento for fornecido, o token de cancelamento padrão será usado.
 
 Assinatura:
 
@@ -273,7 +273,7 @@ O que deve ser observado:
 
 ### <a name="asyncignore"></a>Async. ignore
 
-Cria uma computação assíncrona que executa a computação determinada e ignora o resultado.
+Cria uma computação assíncrona que executa a computação específica e ignora seu resultado.
 
 Assinatura:
 
@@ -330,7 +330,7 @@ O que deve ser observado:
 - Exceções geradas por computações iniciadas com `Async.Start` não são propagadas para o chamador. A pilha de chamadas será completamente desbobinada.
 - Qualquer trabalho de efeito (como chamar `printfn`) iniciado com `Async.Start` não fará com que o efeito aconteça no thread principal da execução de um programa.
 
-## <a name="interoperating-with-net"></a>Interoperação com o .NET
+## <a name="interoperate-with-net"></a>Interoperar com o .NET
 
 Você pode estar trabalhando com uma biblioteca .NET ou C# codebase que usa programação assíncrona de estilo [assíncrono/Await](../../../standard/async.md). Como C# e a maioria das bibliotecas do .NET usa os tipos <xref:System.Threading.Tasks.Task%601> e <xref:System.Threading.Tasks.Task> como suas abstrações principais em vez de `Async<'T>`, você deve cruzar um limite entre essas duas abordagens para assincronia.
 
@@ -371,7 +371,7 @@ module Async =
 
 Já existe um `Async.AwaitTask` que aceita uma <xref:System.Threading.Tasks.Task> como entrada. Com isso e a função de `startTaskFromAsyncUnit` definida anteriormente, você pode iniciar e aguardar <xref:System.Threading.Tasks.Task> tipos F# de uma computação assíncrona.
 
-## <a name="relationship-to-multithreading"></a>Relação com multithreading
+## <a name="relationship-to-multi-threading"></a>Relação com multithreading
 
 Embora o Threading seja mencionado em todo este artigo, há duas coisas importantes a serem lembradas:
 
@@ -382,7 +382,7 @@ Por exemplo, uma computação pode ser realmente executada no thread do chamador
 
 Embora F# o forneça algumas capacidades para iniciar uma computação assíncrona no thread atual (ou não explicitamente no thread atual), a assincronia geralmente não está associada a uma estratégia de Threading específica.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [O F# modelo de programação assíncrona](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
 - [Guia assíncrono do F# Jet. com](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)

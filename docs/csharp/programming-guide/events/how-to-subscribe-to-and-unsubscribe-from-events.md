@@ -1,5 +1,5 @@
 ---
-title: 'Como: realizar e cancelar a assinatura de eventos – Guia de Programação em C#'
+title: Como assinar e cancelar a assinatura de eventos – C# guia de programação
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 523045e990532f1475e1c4816c98d1af76daa92b
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: e194501d7619d4bc04dec6a10d34fb2b01be2c7a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590406"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346309"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como: realizar e cancelar a assinatura de eventos (Guia de Programação em C#)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Como assinar e cancelar a assinatura de eventos (C# guia de programação)
 Você assina um evento publicado por outra classe quando quer escrever um código personalizado que é chamado quando esse evento é gerado. Por exemplo, você pode assinar o evento `click` de um botão para fazer com que seu aplicativo faça algo útil quando o usuário clicar no botão.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Para assinar eventos usando o IDE do Visual Studio  
@@ -98,10 +98,10 @@ Você assina um evento publicado por outra classe quando quer escrever um códig
   
      Quando todos os assinantes tiverem cancelado a assinatura de um evento, a instância do evento na classe do publicador será definida como `null`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eventos](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [Como: publicar eventos em conformidade com as diretrizes do .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [Como publicar eventos que estão em conformidade com as diretrizes de .NET Framework](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [Operadores - e -=](../../language-reference/operators/subtraction-operator.md)
 - [Operadores + e +=](../../language-reference/operators/addition-operator.md)

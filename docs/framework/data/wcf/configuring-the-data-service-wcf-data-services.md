@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
-ms.openlocfilehash: 80878c18143eaa603e624c8be63f11af91cfcfb6
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 6d6ce6ace41894672d285ff8f0733c1b9d52562c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569296"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346146"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Configurando o serviço de dados (WCF Data Services)
 Com WCF Data Services, você pode criar serviços de dados que expõem feeds Protocolo Open Data (OData). Os dados nesses feeds podem vir de uma variedade de fontes de dados. WCF Data Services usa provedores de dados para expor esses dados como um feed OData. Esses provedores incluem um provedor de Entity Framework, um provedor de reflexão e um conjunto de interfaces de provedor de serviços de dados personalizados. A implementação do provedor define o modelo de dados para o serviço. Para obter mais informações, consulte [provedores de serviços de dados](data-services-providers-wcf-data-services.md).  
@@ -29,15 +29,15 @@ Com WCF Data Services, você pode criar serviços de dados que expõem feeds Pro
   
 |{1&gt;Membro&lt;1}|Comportamento|  
 |------------|--------------|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|Permite que você desative as solicitações de contagem que são enviadas para o serviço de dados usando o segmento do caminho `$count` e a opção de consulta `$inlinecount`. Para obter mais informações, consulte [OData: convenções de URI](https://go.microsoft.com/fwlink/?LinkId=185564).|  
-|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|Permite que você desative o suporte para projeção de dados nas solicitações que são enviadas para o serviço de dados usando a opção de consulta `$select`. Para obter mais informações, consulte [OData: convenções de URI](https://go.microsoft.com/fwlink/?LinkId=185564).|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptCountRequests%2A>|Permite que você desative as solicitações de contagem que são enviadas para o serviço de dados usando o segmento do caminho `$count` e a opção de consulta `$inlinecount`. Para obter mais informações, consulte [OData: convenções de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
+|<xref:System.Data.Services.DataServiceBehavior.AcceptProjectionRequests%2A>|Permite que você desative o suporte para projeção de dados nas solicitações que são enviadas para o serviço de dados usando a opção de consulta `$select`. Para obter mais informações, consulte [OData: convenções de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeAccess%2A>|Permite que um tipo de dados seja exposto nos metadados para um provedor dinâmico de metadados definidos usando a interface <xref:System.Data.Services.Providers.IDataServiceMetadataProvider>.|  
 |<xref:System.Data.Services.DataServiceConfiguration.EnableTypeConversion%2A>|Permite que você especifique se o runtime do serviço de dados deve converter o tipo que está contido na carga para o tipo da propriedade real que é especificado na solicitação.|  
 |<xref:System.Data.Services.DataServiceBehavior.InvokeInterceptorsOnLinkDelete%2A>|Permite que você especifique se os interceptores de alteração registrados são chamados ou não nas entidades relacionadas quando um link de relação entre as duas entidades é excluído.|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Permite que você limite o número de conjuntos de alterações e operações de consulta que são permitidos em um único lote. Para obter mais informações, consulte [OData: operações em](https://go.microsoft.com/fwlink/?LinkId=185602) lote e [em lote](batching-operations-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxBatchCount%2A>|Permite que você limite o número de conjuntos de alterações e operações de consulta que são permitidos em um único lote. Para obter mais informações, consulte [OData: operações em](https://www.odata.org/documentation/odata-version-2-0/batch-processing/) lote e [em lote](batching-operations-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxChangesetCount%2A>|Permite que você limite o número de alterações que podem ser incluídas em um único conjunto de alteração. Para obter mais informações, consulte [como habilitar a paginação de resultados do serviço de dados](how-to-enable-paging-of-data-service-results-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Permite que você limite o tamanho de uma resposta limitando o número de entidades relacionadas que podem ser incluídas em uma única solicitação usando o operador de consulta `$expand`. Para obter mais informações, consulte [OData: convenções de URI](https://go.microsoft.com/fwlink/?LinkId=185564) e [carregamento de conteúdo adiado](loading-deferred-content-wcf-data-services.md).|  
-|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Permite que você limite o tamanho de uma resposta limitando a profundidade do grafo de entidades relacionadas que podem ser incluídas em uma única solicitação usando o operador de consulta `$expand`. Para obter mais informações, consulte [OData: convenções de URI](https://go.microsoft.com/fwlink/?LinkId=185564) e [carregamento de conteúdo adiado](loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandCount%2A>|Permite que você limite o tamanho de uma resposta limitando o número de entidades relacionadas que podem ser incluídas em uma única solicitação usando o operador de consulta `$expand`. Para obter mais informações, consulte [OData: convenções de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/) e [carregamento de conteúdo adiado](loading-deferred-content-wcf-data-services.md).|  
+|<xref:System.Data.Services.DataServiceConfiguration.MaxExpandDepth%2A>|Permite que você limite o tamanho de uma resposta limitando a profundidade do grafo de entidades relacionadas que podem ser incluídas em uma única solicitação usando o operador de consulta `$expand`. Para obter mais informações, consulte [OData: convenções de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/) e [carregamento de conteúdo adiado](loading-deferred-content-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxObjectCountOnInsert%2A>|Permite que você limite o número de entidades a serem inseridas que podem ser contidas em uma única solicitação POST.|  
 |<xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A>|Define a versão do protocolo Atom que é usado pelo serviço de dados. Quando o valor da <xref:System.Data.Services.DataServiceBehavior.MaxProtocolVersion%2A> é definido como um valor menor que o valor máximo de <xref:System.Data.Services.Common.DataServiceProtocolVersion>, a funcionalidade mais recente do WCF Data Services não está disponível para clientes que acessam o serviço de dados. Para obter mais informações, consulte [controle de versão do serviço de dados](data-service-versioning-wcf-data-services.md).|  
 |<xref:System.Data.Services.DataServiceConfiguration.MaxResultsPerCollection%2A>|Permite que você limite o tamanho de uma resposta limitando o número de entidades em cada conjunto de entidades que é retornado como um feed de dados.|  
@@ -83,7 +83,7 @@ Com WCF Data Services, você pode criar serviços de dados que expõem feeds Pro
   
  Para obter mais informações, consulte [controle de versão do serviço de dados](data-service-versioning-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Defining WCF Data Services](defining-wcf-data-services.md) (Definindo o WCF Data Services)
 - [Hospedagem o serviço de dados](hosting-the-data-service-wcf-data-services.md)

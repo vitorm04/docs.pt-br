@@ -1,13 +1,13 @@
 ---
-title: Referência da linguagem F#
+title: Referência de linguagem
 description: Encontre F# informações de recursos de idioma dessa referência a tokens de idioma, conceitos, tipos, expressões e tópicos de construção com suporte do compilador.
 ms.date: 05/16/2016
-ms.openlocfilehash: bd9894176fa736b9eed939d72972e676e2bd2671
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: d557cc71b34eb7c005eaeb904b01a38b506639fe
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552902"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348203"
 ---
 # <a name="f-language-reference"></a>Referência da linguagem F#
 
@@ -37,7 +37,7 @@ A tabela a seguir mostra os tópicos de referência disponíveis que descrevem o
 |[Membros](./members/index.md)|Descreve os membros de tipos de objeto do F#.|
 |[Parâmetros e Argumentos](Parameters-and-Arguments.md)|Descreve o suporte de linguagem para definir parâmetros e passar argumentos para funções, métodos e propriedades. Inclui informações sobre como passar referência.|
 |[Sobrecarga de Operador](operator-overloading.md)|Descreve como sobrecarregar operadores aritméticos em uma classe ou tipo de registro e no nível global.|
-|[Conversões Cast e conversões](casting-and-conversions.md)|Descreve o suporte para conversões de tipos no F#.|
+|[Conversões](casting-and-conversions.md)|Descreve o suporte para conversões de tipos no F#.|
 |[Controle de Acesso](access-control.md)|Descreve o controle de acesso no F#. Controle de acesso significa declarar que os clientes são capazes de usar determinados elementos de programação, como tipos, métodos, funções e assim por diante.|
 |[Correspondência Padrão](pattern-matching.md)|Descreve os padrões, que são regras para transformar os dados de entrada que são usados em toda a linguagem F# para extrair dados de comparação com um padrão, decompor os dados em partes constituintes ou extrair informações de dados de várias maneiras.|
 |[Padrões Ativos](active-patterns.md)|Descreve padrões ativos. Padrões ativos permitem definir partições nomeadas que subdividem os dados de entrada. Você pode usar padrões ativos para decompor os dados de uma maneira personalizada para cada partição.|

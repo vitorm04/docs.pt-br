@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous operations [WCF Data Services]
 - WCF Data Services, client library
 ms.assetid: 679644c7-e3fc-422c-b14a-b44b683900d0
-ms.openlocfilehash: 3e8d3ec46362751ea8bbfe5120e35a050d0e7a6c
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5191f3d03facaafc64f6df494ff90cd0ce1c1988
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569371"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346190"
 ---
 # <a name="asynchronous-operations-wcf-data-services"></a>Operações assíncronas (WCF Data Services)
 Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor do que os aplicativos que são executados dentro das redes internas. Para otimizar o desempenho e a experiência do usuário do seu aplicativo, é recomendável usar os métodos assíncronos do <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> classes ao acessar WCF Data Services servidores pela Web.  
@@ -21,7 +21,7 @@ Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor d
  Você pode executar operações assíncronas usando um par de métodos nas classes <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601> que começam com *begin* e *end* , respectivamente. Os métodos *begin* registram um delegado que o serviço chama quando a operação é concluída. Os métodos *end* devem ser chamados no delegado que está registrado para manipular o retorno de chamada das operações concluídas. Ao chamar o método *end* para concluir uma operação assíncrona, você deve fazer isso da mesma <xref:System.Data.Services.Client.DataServiceQuery%601> ou <xref:System.Data.Services.Client.DataServiceContext> instância usada para iniciar a operação. Cada método *begin* usa um parâmetro `state` que pode passar um objeto de estado para o retorno de chamada. Esse objeto de estado é recuperado do <xref:System.IAsyncResult> fornecido com o retorno de chamada e é usado para chamar o método *end* correspondente para concluir a operação assíncrona. Por exemplo, quando você fornece a instância <xref:System.Data.Services.Client.DataServiceQuery%601> como o parâmetro `state` quando chama o método <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> na instância, a mesma instância <xref:System.Data.Services.Client.DataServiceQuery%601> é retornada pelo <xref:System.IAsyncResult>. Essa instância de <xref:System.Data.Services.Client.DataServiceQuery%601> é em seguida usada para chamar o método <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> para concluir a operação de consulta. Para obter mais informações, consulte [How to: execute assíncronas Data Service queries](how-to-execute-asynchronous-data-service-queries-wcf-data-services.md).  
   
 > [!NOTE]
-> Somente operações assíncronas têm suporte pelas bibliotecas de cliente que são fornecidas no .NET Framework para Silverlight. Para obter mais informações, consulte [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149).  
+> Somente operações assíncronas têm suporte pelas bibliotecas de cliente que são fornecidas no .NET Framework para Silverlight. Para obter mais informações, consulte [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  As bibliotecas de cliente do .NET Framework dão suporte às seguintes operações assíncronas:  
   
@@ -36,6 +36,6 @@ Os aplicativos Web devem acomodar uma latência maior entre cliente e servidor d
 ## <a name="threading-considerations-for-asynchronous-operations"></a>Considerações de threads para operações assíncronas  
  Em um aplicativo multi-threaded, o delegado registrado como um retorno de chamada para a operação assíncrona não é necessariamente invocado no mesmo thread que foi usado para chamar o método *begin* , que cria a solicitação inicial. Em um aplicativo em que o retorno de chamada deve ser invocado em um thread específico, você deve realizar marshaling explicitamente da execução do método *end* , que manipula a resposta, para o thread desejado. Por exemplo, em aplicativos baseados no Windows Presentation Foundation (WPF) e aplicativos baseados no Silverlight, a resposta deverá ser lido de volta para o thread de interface de usuário usando o método <xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A> no objeto <xref:System.Windows.Threading.Dispatcher>. Para obter mais informações, consulte [consultando o serviço de dados (WCF Data Services/Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc903932(v=vs.95)).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [WCF Data Services Client Library](wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

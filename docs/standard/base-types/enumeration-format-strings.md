@@ -1,5 +1,5 @@
 ---
-title: Cadeias de caracteres de formato de enumeração – .NET
+title: Cadeias de caracteres de formato de enumeração
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - enumeration format strings
 - formatting [.NET Framework], enumeration
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
-ms.openlocfilehash: 316c042b05e505b3e3e857ea41ae808a2a0282f5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c32fd9d59f61b6befe94ff9eb85b0c39ce926adb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126417"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348263"
 ---
 # <a name="enumeration-format-strings"></a>Cadeias de caracteres de formato de enumeração
 
@@ -68,6 +68,6 @@ O método `Color.ToString(System.String)` pode, então, ser usado para exibir o 
 [!code-csharp[Formatting.Enum#7](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#7)]
 [!code-vb[Formatting.Enum#7](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Formatando Tipos](formatting-types.md)

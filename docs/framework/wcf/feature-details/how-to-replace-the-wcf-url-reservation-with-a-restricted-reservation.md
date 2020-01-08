@@ -2,19 +2,19 @@
 title: 'How to: Replace the WCF URL Reservation with a Restricted Reservation'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
-ms.openlocfilehash: 900b258a1119b069e5ef0a6ff66078281bb06f1b
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3d14d76334b15bdb490184a48da11ba48b84deea
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837383"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544655"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>How to: Replace the WCF URL Reservation with a Restricted Reservation
 Uma reserva de URL permite restringir quem pode receber mensagens de uma URL ou um conjunto de URLs. Uma reserva consiste em um modelo de URL, uma ACL (lista de controle de acesso) e um conjunto de sinalizadores. O modelo de URL define quais URLs a reserva afeta. Para obter mais informações sobre como os modelos de URL são processados, consulte [Roteamento de solicitações de entrada](https://go.microsoft.com/fwlink/?LinkId=136764). A ACL controla qual usuário ou grupo de usuários tem permissão para receber mensagens das URLs especificadas. Os sinalizadores indicam se a reserva é para conceder a um usuário ou grupo permissão para escutar na URL diretamente ou para delegar a permissão para escutar algum outro processo.  
   
  Como parte da configuração padrão do sistema operacional, o Windows Communication Foundation (WCF) cria uma reserva globalmente acessível para a porta 80 para permitir que todos os usuários executem aplicativos que usam uma associação HTTP dupla para comunicação duplex. Como a ACL nessa reserva é para todos, os administradores não podem explicitamente permitir ou impedir permissão para escutar em uma URL ou conjunto de URLs. Este tópico explica como excluir essa reserva e como recriar a reserva com uma ACL restrita.  
   
- No Windows Vista ou [!INCLUDE[lserver](../../../../includes/lserver-md.md)] você pode exibir todas as reservas de URL HTTP de um prompt de comando elevado digitando `netsh http show urlacl`.  O exemplo a seguir mostra o que uma reserva de URL do WCF deve ser semelhante.  
+No Windows Vista ou no Windows Server 2008, você pode exibir todas as reservas de URL HTTP de um prompt de comando elevado digitando `netsh http show urlacl`. O exemplo a seguir mostra o que uma reserva de URL do WCF deve ser semelhante a:
 
 ```
 Reserved URL : http://+:80/Temporary_Listen_Addresses/  

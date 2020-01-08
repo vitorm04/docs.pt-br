@@ -9,17 +9,17 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 2c120c6d71cb22bc38909f980b2f6faf2b5c3663
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395211"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636101"
 ---
 # <a name="advanced-text-formatting"></a>Formatação de texto avançada
-O Windows Presentation Foundation (WPF) fornece um conjunto robusto de APIs para incluir texto em seu aplicativo. As APIs de layout e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], como <xref:System.Windows.Controls.TextBlock>, fornecem os elementos de uso mais comuns e gerais para a apresentação de texto. As APIs de desenho, como <xref:System.Windows.Media.GlyphRunDrawing> e <xref:System.Windows.Media.FormattedText>, fornecem um meio para incluir texto formatado em desenhos. No nível mais avançado, o [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece um mecanismo de formatação de texto extensível para controlar cada aspecto da apresentação de texto, como gerenciamento de armazenamento de texto, gerenciamento de formatação de execução de texto e gerenciamento de objetos incorporados.  
+O Windows Presentation Foundation (WPF) fornece um conjunto robusto de APIs para incluir texto em seu aplicativo. As APIs de layout e [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], como <xref:System.Windows.Controls.TextBlock>, fornecem os elementos mais comuns e de uso geral para a apresentação de texto. As APIs de desenho, como <xref:System.Windows.Media.GlyphRunDrawing> e <xref:System.Windows.Media.FormattedText>, fornecem um meio para incluir texto formatado em desenhos. No nível mais avançado, o WPF fornece um mecanismo de formatação de texto extensível para controlar cada aspecto da apresentação de texto, como gerenciamento de armazenamento de texto, gerenciamento de formatação de execução de texto e gerenciamento de objetos incorporados.  
   
- Este tópico fornece uma introdução à formatação de texto de [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Ele se concentra na implementação do cliente e no uso do mecanismo de formatação de texto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
+ Este tópico fornece uma introdução à formatação de texto do WPF. Ele se concentra na implementação do cliente e no uso do mecanismo de formatação de texto do WPF.  
   
 > [!NOTE]
 > Todos os exemplos de código dentro deste documento podem ser encontrados no [exemplo de formatação de texto avançado](https://go.microsoft.com/fwlink/?LinkID=159965).  
@@ -30,13 +30,13 @@ O Windows Presentation Foundation (WPF) fornece um conjunto robusto de APIs para
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>Formatação de texto avançada  
- O layout de texto e os controles de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornecem propriedades de formatação que permitem que você inclua facilmente o texto formatado em seu aplicativo. Esses controles expõem várias propriedades para lidar com a apresentação do texto, que inclui sua face de tipos, tamanho e cor. Em circunstâncias normais, esses controles podem lidar com a maior parte da apresentação do texto em seu aplicativo. No entanto, alguns cenários avançados exigem o controle do armazenamento de texto, bem como a apresentação de texto. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] fornece um mecanismo de formatação de texto extensível para essa finalidade.  
+ O layout de texto e os controles de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no WPF fornecem propriedades de formatação que permitem que você inclua facilmente o texto formatado em seu aplicativo. Esses controles expõem várias propriedades para lidar com a apresentação do texto, que inclui sua face de tipos, tamanho e cor. Em circunstâncias normais, esses controles podem lidar com a maior parte da apresentação do texto em seu aplicativo. No entanto, alguns cenários avançados exigem o controle do armazenamento de texto, bem como a apresentação de texto. O WPF fornece um mecanismo de formatação de texto extensível para essa finalidade.  
   
- Os recursos avançados de formatação de texto encontrados em [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] consistem em um mecanismo de formatação de texto, um armazenamento de texto, execuções de texto e propriedades de formatação. O mecanismo de formatação de texto, <xref:System.Windows.Media.TextFormatting.TextFormatter>, cria linhas de texto a serem usadas para apresentação. Isso é obtido iniciando o processo de formatação de linha e chamando o <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>do formatador de texto. O formatador de texto recupera as execuções de texto do seu armazenamento de texto chamando o método de <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> do repositório. Os objetos <xref:System.Windows.Media.TextFormatting.TextRun> são então formados em objetos <xref:System.Windows.Media.TextFormatting.TextLine> pelo formatador de texto e fornecidos ao seu aplicativo para inspeção ou exibição.  
+ Os recursos avançados de formatação de texto encontrados no WPF consistem em um mecanismo de formatação de texto, um armazenamento de texto, execuções de texto e propriedades de formatação. O mecanismo de formatação de texto, <xref:System.Windows.Media.TextFormatting.TextFormatter>, cria linhas de texto a serem usadas para apresentação. Isso é obtido iniciando o processo de formatação de linha e chamando o <xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>do formatador de texto. O formatador de texto recupera as execuções de texto do seu armazenamento de texto chamando o método de <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> do repositório. Os objetos <xref:System.Windows.Media.TextFormatting.TextRun> são então formados em objetos <xref:System.Windows.Media.TextFormatting.TextLine> pelo formatador de texto e fornecidos ao seu aplicativo para inspeção ou exibição.  
   
 <a name="section2"></a>   
 ## <a name="using-the-text-formatter"></a>Usando o formatador de texto  
- <xref:System.Windows.Media.TextFormatting.TextFormatter> é o mecanismo de formatação de texto [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] e fornece serviços para formatação e quebra de linhas de texto. O formatador de texto pode lidar com formatos de caracteres de texto diferentes e estilos de parágrafo e inclui suporte para o layout de texto internacional.  
+ <xref:System.Windows.Media.TextFormatting.TextFormatter> é o mecanismo de formatação de texto do WPF e fornece serviços para formatação e quebra de linhas de texto. O formatador de texto pode lidar com formatos de caracteres de texto diferentes e estilos de parágrafo e inclui suporte para o layout de texto internacional.  
   
  Ao contrário de uma API de texto tradicional, a <xref:System.Windows.Media.TextFormatting.TextFormatter> interage com um cliente de layout de texto por meio de um conjunto de métodos de retorno de chamada. Ele requer que o cliente forneça esses métodos em uma implementação da classe <xref:System.Windows.Media.TextFormatting.TextSource>. O diagrama a seguir ilustra a interação de layout de texto entre o aplicativo cliente e <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
@@ -67,7 +67,7 @@ O Windows Presentation Foundation (WPF) fornece um conjunto robusto de APIs para
   
  A tabela a seguir mostra alguns dos objetos <xref:System.Windows.Media.TextFormatting.TextRun> predefinidos.  
   
-|Tipo de TextRun|Uso|  
+|Tipo de TextRun|Medição de|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|A execução de texto especializado para passar uma representação de glifos de caractere de volta para o formatador de texto.|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|A execução de texto especializado usada para fornecer conteúdo no qual a medição, o teste de hit e o desenho são feitos no todo, como um botão ou imagem dentro do texto.|  
@@ -91,7 +91,7 @@ O Windows Presentation Foundation (WPF) fornece um conjunto robusto de APIs para
 ## <a name="specifying-formatting-properties"></a>Especificando propriedades de formatação  
  <xref:System.Windows.Media.TextFormatting.TextRun> objetos são formatados usando as propriedades fornecidas pelo armazenamento de texto. Essas propriedades são fornecidas em dois tipos, <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> e <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> manipular propriedades inclusivas de parágrafo, como <xref:System.Windows.TextAlignment> e <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties> são propriedades que podem ser diferentes para cada execução de texto dentro de um parágrafo, como o pincel de primeiro plano, o <xref:System.Windows.Media.Typeface>e o tamanho da fonte. Para implementar um parágrafo personalizado e tipos de propriedade de execução de texto personalizado, seu aplicativo deve criar classes que derivam de <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> e <xref:System.Windows.Media.TextFormatting.TextRunProperties>, respectivamente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Tipografia no WPF](typography-in-wpf.md)
 - [Documentos no WPF](documents-in-wpf.md)

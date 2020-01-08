@@ -1,15 +1,15 @@
 ---
-title: Exemplo de FindPrivateKey – WCF
+title: Exemplo de FindPrivateKey
 ms.date: 12/04/2017
 helpviewer_keywords:
 - FindPrivateKey
 ms.assetid: 16b54116-0ceb-4413-af0c-753bb2a785a6
-ms.openlocfilehash: 4ba4316489c1494da9421bea5c513e44c6eb50a7
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0ed1e5e81a5d2f7f3586e5dce306e8244b5ebd48
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989881"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346010"
 ---
 # <a name="findprivatekey-sample"></a>Exemplo de FindPrivateKey
 
@@ -46,13 +46,13 @@ cacls.exe "C:\Documents and Settings\All Users\Application Data\Microsoft\Crypto
 
 Para baixar o projeto, visite [exemplos de Windows Communication Foundation (WCF) e Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459).
 
-1. Abra o explorador de arquivos e navegue até a pasta *WF_WCF_Samples\WCF\Setup\FindPrivateKey\CS* sob o local do diretório onde você instalou o exemplo.
+1. Abra o explorador de arquivos e navegue até a pasta *WF_WCF_Samples \wcf\setup\findprivatekey\cs* no local do diretório em que você instalou o exemplo.
 
 2. Clique duas vezes no ícone de arquivo. sln para abrir o arquivo no Visual Studio.
 
 3. No menu **Compilar** , selecione **Recompilar solução**.
 
-4. A criação da solução gera o arquivo: FindPrivateKey.exe.
+4. A criação da solução gera o arquivo: FindPrivateKey. exe.
 
 ## <a name="conventionscommand-line-entries"></a>Convenções — entradas de linha de comando
 
@@ -62,15 +62,15 @@ Para baixar o projeto, visite [exemplos de Windows Communication Foundation (WCF
 
  "*opção 1* &#124; *opção 2*" representa uma opção entre conjuntos de opções.
 
- "\<*Value*>" representa um valor de parâmetro a ser inserido.
+ "\<*value*>" representa um valor de parâmetro a ser inserido.
 
-## <a name="usage"></a>Uso
+## <a name="usage"></a>Medição de
 
 ```console
 FindPrivateKey <storeName> <storeLocation> [{ {-n <subjectName>} | {-t <thumbprint>} } [-f | -d | -a]]
 ```
 
-Sendo que:
+Em que:
 
 | Parâmetro         | Descrição                                                                       |
 |-----------------|-----------------------------------------------------------------------------------|

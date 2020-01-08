@@ -4,12 +4,12 @@ description: Este tutorial avançado ensina você a explorar dados usando interv
 ms.date: 09/20/2019
 ms.technology: csharp-fundamentals
 ms.custom: mvc
-ms.openlocfilehash: bbf3f257db9079c4f69f25c9ea08e7711b5ea04b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 3d4c022ff8d6e7f260632e34d6f28277014c85c8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039665"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345628"
 ---
 # <a name="indices-and-ranges"></a>Índices e intervalos
 
@@ -78,9 +78,11 @@ O exemplo a seguir mostra muitos dos motivos para essas escolhas. Modifique `x`,
 
 ## <a name="type-support-for-indices-and-ranges"></a>Suporte de tipo para índices e intervalos
 
-Se um tipo fornecer um [indexador](../programming-guide/indexers/index.md) com um parâmetro <xref:System.Index> ou <xref:System.Range>, ele dará suporte explicitamente a índices ou intervalos, respectivamente.
+Índices e intervalos fornecem sintaxe clara e concisa para acessar um único elemento ou um subintervalo de elementos em uma sequência. Uma expressão de índice normalmente retorna o tipo dos elementos de uma sequência. Uma expressão de intervalo normalmente retorna o mesmo tipo de sequência que a sequência de origem.
 
-Um tipo é **contável** se tiver uma propriedade chamada `Length` ou `Count` com um getter acessível e um tipo de retorno de `int`. Um tipo com contagem que não dá suporte explicitamente a índices ou intervalos pode fornecer um suporte implícito para eles. Para obter mais informações, consulte as seções [suporte ao índice implícito](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) e [suporte de intervalo implícito](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) da [Nota de proposta de recurso](~/_csharplang/proposals/csharp-8.0/ranges.md).
+Se um tipo fornecer um [indexador](../programming-guide/indexers/index.md) com um parâmetro <xref:System.Index> ou <xref:System.Range>, ele dará suporte explicitamente a índices ou intervalos, respectivamente. Quando o tipo fornece um indexador que usa um único parâmetro de <xref:System.Range>, ele pode optar por retornar um tipo de sequência diferente, como <xref:System.Span%601?displayProperty=nameWithType>.
+
+Um tipo é **contável** se tiver uma propriedade chamada `Length` ou `Count` com um getter acessível e um tipo de retorno de `int`. Um tipo com contagem que não dá suporte explicitamente a índices ou intervalos pode fornecer um suporte implícito para eles. Para obter mais informações, consulte as seções [suporte ao índice implícito](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-index-support) e [suporte de intervalo implícito](~/_csharplang/proposals/csharp-8.0/ranges.md#implicit-range-support) da [Nota de proposta de recurso](~/_csharplang/proposals/csharp-8.0/ranges.md). Intervalos usando o suporte de intervalo implícito retornam o mesmo tipo de sequência que a sequência de origem.
 
 Por exemplo, os seguintes tipos .NET oferecem suporte a índices e intervalos: <xref:System.Array>, <xref:System.String>, <xref:System.Span%601>e <xref:System.ReadOnlySpan%601>. O <xref:System.Collections.Generic.List%601> dá suporte a índices, mas não dá suporte a intervalos.
 

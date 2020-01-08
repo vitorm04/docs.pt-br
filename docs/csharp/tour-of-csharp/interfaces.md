@@ -3,12 +3,12 @@ title: Interfaces em C# - um tour pela linguagem C#
 description: As interfaces definem os contratos implementados pelos tipos no C#
 ms.date: 08/10/2016
 ms.assetid: a9bf82f4-efd1-4216-bd34-4ef0fa48c968
-ms.openlocfilehash: 240ddfb321c5a89c8aada4353845915d0e242ae0
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: d10d9f69cebe9a05cdff9b9ff5d817237bf8c56f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634550"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346833"
 ---
 # <a name="interfaces"></a>Interfaces
 
@@ -40,4 +40,4 @@ Os membros de interface explícita só podem ser acessados por meio do tipo de i
 
 >[!div class="step-by-step"]
 >[Anterior](arrays.md)
->[Próximo](enums.md)
+>[Próximo](delegates.md)

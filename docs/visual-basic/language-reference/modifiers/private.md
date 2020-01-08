@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Private keyword [Visual Basic]
 - Private keyword [Visual Basic], syntax
 ms.assetid: aba74a2e-5824-4613-bf63-b9ec7787f4e6
-ms.openlocfilehash: 5600744aeca79a54f51a1f9ecd0ef00fed4b00fd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c855c4e08b365b4cb75ab062d2ec304a79612ab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351325"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347911"
 ---
 # <a name="private-visual-basic"></a>Particular (Visual Basic)
 Especifica que um ou mais elementos de programação declarados são acessíveis somente de dentro de seu contexto de declaração, incluindo de dentro de qualquer tipo contido.  
@@ -59,13 +59,14 @@ Especifica que um ou mais elementos de programação declarados são acessíveis
   
  [Instrução Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Público](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protegido](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
 - [Particular Protegido](./private-protected.md)
-- [Níveis de acesso [Friend protegidos](./protected-friend.md) no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Amigo Protegido](./protected-friend.md)
+- [Níveis de acesso no Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [Procedimentos](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [Estruturas](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [Objetos e Classes](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

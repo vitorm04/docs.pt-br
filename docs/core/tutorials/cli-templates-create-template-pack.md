@@ -2,17 +2,17 @@
 title: Criar um pacote de modelos para dotnet new
 description: Saiba como criar um arquivo csproj que criará um pacote de modelos para o comando dotnet new.
 author: thraka
-ms.date: 06/25/2019
+ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117406"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340165"
 ---
-# <a name="tutorial-create-a-template-pack"></a>Tutorial: Criar um pacote de modelos
+# <a name="tutorial-create-a-template-pack"></a>Tutorial: criar um pacote de modelos
 
 Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquivos e até recursos. Este tutorial é a parte três de uma série que ensina como criar, instalar e desinstalar modelos para usar com o comando `dotnet new`.
 
@@ -20,18 +20,18 @@ Nesta parte da série, você aprenderá a:
 
 > [!div class="checklist"]
 >
-> * Criar um \*projeto. csproj para criar um pacote de modelos
+> * Criar um projeto \*. csproj para criar um pacote de modelos
 > * Configurar o arquivo de projeto para empacotamento
 > * Instalar o modelo de um arquivo do pacote NuGet
 > * Desinstalar um modelo pela ID do pacote
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 * Conclua a [parte 1](cli-templates-create-item-template.md) e a [parte 2](cli-templates-create-project-template.md) desta série de tutoriais.
 
-  Este tutorial usa os dois modelos criados nas duas primeiras partes deste tutorial. É possível usar um modelo diferente, contanto que você copie o modelo como uma pasta na _working\templates\\_ .
+  Este tutorial usa os dois modelos criados nas duas primeiras partes deste tutorial. Você pode usar um modelo diferente, desde que copie o modelo, como uma pasta, na pasta _working\templates\\_ .
 
-* Abra um terminal e navegue até a pasta _working\templates\\_ .
+* Abra um terminal e navegue até a pasta _working\\_ .
 
 ## <a name="create-a-template-pack-project"></a>Criar um projeto de pacote de modelos
 
@@ -180,7 +180,7 @@ Execute `dotnet new -u AdatumCorporation.Utility.Templates` para desinstalar o m
 
 Parabéns! você instalou e desinstalou um pacote de modelos. 
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Para saber mais sobre modelos, a maioria dos quais você já aprendeu, confira o artigo [Modelos personalizados para o dotnet new](../tools/custom-templates.md).
 

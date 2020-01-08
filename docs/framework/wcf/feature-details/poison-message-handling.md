@@ -2,12 +2,12 @@
 title: Manuseio de mensagem suspeita
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 3eba16097648bee1ea80cf62ab3bca900ddf6280
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ff1eaec99308b06250722b290b7005ac21731570
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837344"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337641"
 ---
 # <a name="poison-message-handling"></a>Manuseio de mensagem suspeita
 Uma *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentativas de entrega para o aplicativo. Essa situação pode surgir quando um aplicativo baseado em fila não pode processar uma mensagem devido a erros. Para atender às demandas de confiabilidade, um aplicativo em fila recebe mensagens em uma transação. Anular a transação na qual uma mensagem em fila foi recebida deixa a mensagem na fila para que a mensagem seja repetida em uma nova transação. Se o problema que causou a anulação da transação não for corrigido, o aplicativo receptor poderá ficar preso em um loop recebendo e anulando a mesma mensagem até que o número máximo de tentativas de entrega tenha sido excedido e uma mensagem suspeita resulte.  
@@ -21,7 +21,7 @@ Uma *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentati
   
 - `ReceiveRetryCount`. Um valor inteiro que indica o número máximo de vezes para repetir a entrega de uma mensagem da fila do aplicativo para o aplicativo. O valor padrão é 5. Isso é suficiente nos casos em que uma repetição imediata corrige o problema, como com um deadlock temporário em um banco de dados.  
   
-- `MaxRetryCycles`. Um valor inteiro que indica o número máximo de ciclos de repetição. Um ciclo de repetição consiste em transferir uma mensagem da fila do aplicativo para a subfila de repetição e, após um atraso configurável, da subfila de repetição para a fila do aplicativo para tentar a entrega novamente. O valor padrão é 2. No Windows Vista, a mensagem é tentada no máximo (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) vezes. `MaxRetryCycles` é ignorado em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- `MaxRetryCycles`. Um valor inteiro que indica o número máximo de ciclos de repetição. Um ciclo de repetição consiste em transferir uma mensagem da fila do aplicativo para a subfila de repetição e, após um atraso configurável, da subfila de repetição para a fila do aplicativo para tentar a entrega novamente. O valor padrão é 2. No Windows Vista, a mensagem é tentada no máximo (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) vezes. `MaxRetryCycles` é ignorado no Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 - `RetryCycleDelay`. O intervalo de tempo entre os ciclos de repetição. O valor padrão é 30 minutos. `MaxRetryCycles` e `RetryCycleDelay` juntos fornecem um mecanismo para resolver o problema em que uma nova tentativa após um atraso periódico corrige o problema. Por exemplo, isso manipula um conjunto de linhas bloqueado em SQL Server confirmação de transação pendente.  
   
@@ -39,12 +39,12 @@ Uma *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentati
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) no Windows Vista.  
   
-- (ReceiveRetryCount + 1) em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- (ReceiveRetryCount + 1) no Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 > [!NOTE]
 > Nenhuma nova tentativa é feita para uma mensagem entregue com êxito.  
   
- Para controlar o número de vezes que uma mensagem é tentada, o Windows Vista mantém uma propriedade de mensagem durável que conta o número de anulações e uma propriedade de contagem de movimento que conta o número de vezes que a mensagem se move entre a fila do aplicativo e as subfilas. O canal do WCF usa esses para calcular a contagem de repetição de recebimento e a contagem de ciclos de repetição. Em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], a contagem de anulações é mantida na memória pelo canal do WCF e é redefinida se o aplicativo falhar. Além disso, o canal do WCF pode conter as contagens de anulação de até 256 mensagens na memória a qualquer momento. Se uma mensagem 257th for lida, a contagem de anulação da mensagem mais antiga será redefinida.  
+ Para controlar o número de vezes que uma mensagem é tentada, o Windows Vista mantém uma propriedade de mensagem durável que conta o número de anulações e uma propriedade de contagem de movimento que conta o número de vezes que a mensagem se move entre a fila do aplicativo e as subfilas. O canal do WCF usa esses para calcular a contagem de repetição de recebimento e a contagem de ciclos de repetição. No Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], a contagem de anulações é mantida na memória pelo canal do WCF e é redefinida se o aplicativo falhar. Além disso, o canal do WCF pode conter as contagens de anulação de até 256 mensagens na memória a qualquer momento. Se uma mensagem 257th for lida, a contagem de anulação da mensagem mais antiga será redefinida.  
   
  As propriedades contagem de anulação e contagem de movimentação estão disponíveis para a operação de serviço por meio do contexto de operação. O exemplo de código a seguir mostra como acessá-los.  
   
@@ -66,7 +66,7 @@ Uma *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentati
   
  O aplicativo pode exigir algum tipo de manipulação automatizada de mensagens suspeitas que move as mensagens suspeitas para uma fila de mensagens suspeitas para que o serviço possa acessar o restante das mensagens na fila. O único cenário para usar o mecanismo do manipulador de erros para escutar exceções de mensagens suspeitas é quando a configuração <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> é definida como <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. O exemplo de mensagem suspeita para o enfileiramento de mensagens 3,0 demonstra esse comportamento. O seguinte descreve as etapas a serem seguidas para lidar com mensagens suspeitas, incluindo as práticas recomendadas:  
   
-1. Certifique-se de que suas configurações suspeitas reflitam os requisitos do seu aplicativo. Ao trabalhar com as configurações, certifique-se de entender as diferenças entre os recursos do enfileiramento de mensagens no Windows Vista, [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+1. Certifique-se de que suas configurações suspeitas reflitam os requisitos do seu aplicativo. Ao trabalhar com as configurações, verifique se você entendeu as diferenças entre os recursos do enfileiramento de mensagens no Windows Vista, no Windows Server 2003 e no [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
 2. Se necessário, implemente o `IErrorHandler` para manipular erros de mensagens suspeitas. Como a configuração `ReceiveErrorHandling` para `Fault` requer um mecanismo manual para mover a mensagem suspeita para fora da fila ou para corrigir um problema dependente externo, o uso típico é implementar `IErrorHandler` quando `ReceiveErrorHandling` estiver definido como `Fault`, conforme mostrado no código a seguir.  
   
@@ -95,15 +95,15 @@ Uma *mensagem suspeita* é uma mensagem que excedeu o número máximo de tentati
  A manipulação de mensagens suspeitas não termina quando uma mensagem é colocada na fila de mensagens suspeitas. As mensagens na fila de mensagens suspeitas ainda devem ser lidas e tratadas. Você pode usar um subconjunto das configurações de tratamento de mensagens suspeitas ao ler mensagens da subfila de suspeitas final. As configurações aplicáveis são `ReceiveRetryCount` e `ReceiveErrorHandling`. Você pode definir `ReceiveErrorHandling` para descartar, rejeitar ou falhar. `MaxRetryCycles` será ignorado e uma exceção será gerada se `ReceiveErrorHandling` for definido como mover.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Diferenças do Windows Vista, do Windows Server 2003 e do Windows XP  
- Conforme observado anteriormente, nem todas as configurações de manipulação de mensagens suspeitas se aplicam a [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. As seguintes diferenças principais entre o enfileiramento de mensagens em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)]e Windows Vista são relevantes para a manipulação de mensagens suspeitas:  
+ Conforme observado anteriormente, nem todas as configurações de manipulação de mensagens suspeitas se aplicam ao Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. As seguintes diferenças principais entre o enfileiramento de mensagens no Windows Server 2003, [!INCLUDE[wxp](../../../../includes/wxp-md.md)]e Windows Vista são relevantes para a manipulação de mensagens suspeitas:  
   
-- O enfileiramento de mensagens no Windows Vista dá suporte a subfilas, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não dão suporte a subfilas. As subfilas são usadas na manipulação de mensagens suspeitas. As filas de repetição e a fila de suspeitas são subfilas para a fila de aplicativo que é criada com base nas configurações de tratamento de mensagens suspeitas. O `MaxRetryCycles` determina quantas subfilas de repetição criar. Portanto, ao executar [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` são ignorados e `ReceiveErrorHandling.Move` não é permitido.  
+- O enfileiramento de mensagens no Windows Vista dá suporte a subfilas, enquanto o Windows Server 2003 e o [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não dão suporte a subfilas. As subfilas são usadas na manipulação de mensagens suspeitas. As filas de repetição e a fila de suspeitas são subfilas para a fila de aplicativo que é criada com base nas configurações de tratamento de mensagens suspeitas. O `MaxRetryCycles` determina quantas subfilas de repetição criar. Portanto, quando executado no Windows Server 2003 ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], `MaxRetryCycles` são ignorados e `ReceiveErrorHandling.Move` não é permitido.  
   
-- O enfileiramento de mensagens no Windows Vista dá suporte à confirmação negativa, enquanto [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não. Uma confirmação negativa do Gerenciador de filas de recebimento faz com que o Gerenciador de filas de envio Coloque a mensagem rejeitada na fila de mensagens mortas. Dessa forma, `ReceiveErrorHandling.Reject` não é permitido com [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+- O enfileiramento de mensagens no Windows Vista dá suporte à confirmação negativa, enquanto o Windows Server 2003 e o [!INCLUDE[wxp](../../../../includes/wxp-md.md)] não. Uma confirmação negativa do Gerenciador de filas de recebimento faz com que o Gerenciador de filas de envio Coloque a mensagem rejeitada na fila de mensagens mortas. Dessa forma, `ReceiveErrorHandling.Reject` não é permitido com o Windows Server 2003 e o [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
-- O enfileiramento de mensagens no Windows Vista dá suporte a uma propriedade Message que mantém a contagem do número de vezes que a entrega de mensagens é tentada. Esta propriedade de contagem de anulação não está disponível em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. O WCF mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não contenha um valor preciso quando a mesma mensagem é lida por mais de um serviço WCF em um farm.  
+- O enfileiramento de mensagens no Windows Vista dá suporte a uma propriedade Message que mantém a contagem do número de vezes que a entrega de mensagens é tentada. Esta propriedade de contagem de anulações não está disponível no Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. O WCF mantém a contagem de anulação na memória, portanto, é possível que essa propriedade não contenha um valor preciso quando a mesma mensagem é lida por mais de um serviço WCF em um farm.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Diferenças de recursos da Fila no Windows Vista, Windows Server 2003 e Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)

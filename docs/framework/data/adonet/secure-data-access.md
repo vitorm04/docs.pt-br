@@ -2,12 +2,12 @@
 title: Acesso seguro a dados
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: c08f41be67f5d87635021e86ba5a5b33af9304cd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ede8b1a2e840b56d6e7f45e6d26e09fa5e8bcc25
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73735270"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337533"
 ---
 # <a name="secure-data-access"></a>Acesso seguro a dados
 Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos de segurança disponíveis no armazenamento de dados subjacente ou no Database. Você também precisa considerar as implicações de segurança de outros recursos ou componentes que seu aplicativo pode conter.  
@@ -21,7 +21,7 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
  Para obter mais informações, consulte os seguintes recursos.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
 |[Protegendo informações de conexão](protecting-connection-information.md)|Descreve as práticas recomendadas de segurança e as técnicas para proteger as informações de conexão, como usar a configuração protegida para criptografar cadeias de conexão.|  
 |[Recomendações para estratégias de acesso a dados](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|Fornece recomendações para o acesso a dados e a execução de operações de Database.|  
@@ -33,7 +33,7 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
  Para obter mais informações sobre como usar comandos com parâmetros, consulte os recursos a seguir.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
 |[Parâmetros DataAdapter](dataadapter-parameters.md)|Descreve como usar parâmetros com um `DataAdapter`.|  
 |[Modificando dados com procedimentos armazenados](modifying-data-with-stored-procedures.md)|Descreve como especificar parâmetros e obter um valor de retorno.|  
@@ -44,7 +44,7 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
  Para obter mais informações, consulte os seguintes recursos.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
 |[Visão geral de scripts maliciosos](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Descreve como proteger contra scripts e explorações de instrução SQL.|  
   
@@ -53,7 +53,7 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
  Para obter mais informações, consulte os seguintes recursos.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
 |[Tratando e gerando exceções no .NET](../../../standard/exceptions/index.md)|Descreve as formas básicas de manipulação de exceção estruturada try/catch/finally.|  
 |[Práticas recomendadas para exceções](../../../standard/exceptions/best-practices-for-exceptions.md)|Descreve as práticas recomendadas para lidar com exceções.|  
@@ -63,17 +63,16 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
  Para obter mais informações sobre como proteger dados do Access e do Excel, consulte os recursos a seguir.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
-|[Considerações sobre segurança e diretrizes para o Access 2007](https://go.microsoft.com/fwlink/?LinkId=98354)|Descreve as técnicas de segurança para o acesso 2007, como criptografar arquivos, administrar senhas, converter bancos de dados para os novos formatos de ACCDB e ACCDE e usar outras opções de segurança.|  
-|[Compreendendo a função dos arquivos de informações do grupo de trabalho na segurança de acesso](https://support.microsoft.com/kb/305542)|Explica a função e a relação do arquivo de informações do grupo de trabalho no Access 2003 Security.|  
-|[Perguntas frequentes sobre a segurança do Microsoft Access para Microsoft Access versões 2,0 a 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|Versão para download das perguntas frequentes sobre segurança do Microsoft Access.|  
+|[Considerações sobre segurança e diretrizes para o Access 2007](https://docs.microsoft.com/previous-versions/office/developer/office-2007/bb421308(v=office.12))|Descreve as técnicas de segurança para o acesso 2007, como criptografar arquivos, administrar senhas, converter bancos de dados para os novos formatos de ACCDB e ACCDE e usar outras opções de segurança.|  
+|[Introdução à segurança do Access 2010](https://support.office.com/article/Introduction-to-Access-2010-security-CAE6D764-0318-4622-955F-68D9F186D6CA)|Fornece uma visão geral dos recursos de segurança oferecidos pelo Access 2010.|  
 ## <a name="enterprise-services"></a>Serviços corporativos  
  O COM+ contém seu próprio modelo de segurança que se baseia em contas do Windows NT e na representação de processo/thread. O namespace <xref:System.EnterpriseServices> fornece wrappers que permitem que aplicativos .NET integrem código gerenciado com os serviços de segurança do COM+ por meio da classe <xref:System.EnterpriseServices.ServicedComponent>.  
   
  Para obter mais informações, consulte o recurso a seguir.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
 |[Segurança baseada em Função](https://docs.microsoft.com/previous-versions/dotnet/netframework-1.1/s6y8k15h(v=vs.71))|Discute como integrar código gerenciado com os serviços de segurança do COM+.|  
   
@@ -82,12 +81,12 @@ Para escrever um código de ADO.NET seguro, você precisa entender os mecanismos
   
  Para obter mais informações, consulte os seguintes recursos.  
   
-|Recurso|Descrição|  
+|Resource|Descrição|  
 |--------------|-----------------|  
 |[Interoperação com código não gerenciado](../../interop/index.md)|Contém tópicos que descrevem como expor componentes COM ao .NET Framework e como expor .NET Framework componentes ao COM.|
 |[Interoperabilidade COM avançada](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|Contém tópicos avançados, como assemblies de interoperabilidade primária, threading e marshaling personalizado.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Securing ADO.NET Applications](securing-ado-net-applications.md) (Protegendo aplicativos ADO.NET)
 - [SQL Server Security](./sql/sql-server-security.md) (Segurança do SQL Server)

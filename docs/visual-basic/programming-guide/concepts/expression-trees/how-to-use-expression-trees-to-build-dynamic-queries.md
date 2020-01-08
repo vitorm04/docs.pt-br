@@ -2,12 +2,12 @@
 title: Como usar árvores de expressão para compilar consultas dinâmicas
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: bf15880c1988ac5639dd80ba56d330372dc3803b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344710"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346058"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>Como: usar árvores de expressão para criar consultas dinâmicas (Visual Basic)
 
@@ -101,7 +101,7 @@ Next
 
 Esse código usa um número fixo de expressões no predicado que é passado para o método `Queryable.Where`. No entanto, você pode escrever um aplicativo que combina um número variável de expressões de predicado que dependam da entrada do usuário. Você também pode variar os operadores de consulta padrão que são chamados na consulta, dependendo da entrada do usuário.
 
-## <a name="compiling-the-code"></a>Compilando o código
+## <a name="compile-the-code"></a>Compilar o código
 
 - Crie um novo projeto de **Aplicativo de Console**.
 
@@ -109,7 +109,7 @@ Esse código usa um número fixo de expressões no predicado que é passado para
 
 - Copie o código do exemplo e cole-o no procedimento de `Sub` de `Main`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
 - [Como: executar árvores de expressão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)

@@ -1,5 +1,5 @@
 ---
-title: Cadeias de caracteres de formato de data e hora personalizado - .NET
+title: Cadeias de caracteres de formato de data e hora personalizado
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: ce4aeda8c9fb3c73d133316f985d99e7271411c9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103765"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348286"
 ---
 # <a name="custom-date-and-time-format-strings"></a>Cadeias de caracteres de formato de data e hora personalizado
 
@@ -627,9 +627,9 @@ Os seguintes caracteres de uma cadeia de caracteres de formato de data e hora pe
 
 ||||||
 |-|-|-|-|-|
-|F|H|M|M|d|
-|f|g|h|m|s|
-|t|s|z|%|:|
+|F|{1&gt;H&lt;1}|M|M|d|
+|{1&gt;f&lt;1}|{1&gt;g&lt;1}|{1&gt;h&lt;1}|{1&gt;m&lt;1}|s|
+|t|{1&gt;y&lt;1}|{1&gt;de&lt;1}|%|:|
 |/|"|'|&#92;||
 
 Todos os outros caracteres sempre são interpretados como literais de caracteres e, em uma operação de formatação, são incluídos na cadeia de caracteres de resultado inalterada.  Em uma operação de análise, eles devem corresponder exatamente aos caracteres na cadeia de entrada; a comparação diferencia maiúsculas de minúsculas.
@@ -653,11 +653,11 @@ O exemplo a seguir inclui os caracteres literais "pst" (que indicam a Hora Padr�
 [!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
-## <a name="notes"></a>Anotações
+## <a name="notes"></a>{1&gt;Observações&lt;1}
 
 ### <a name="UsingSingleSpecifiers"></a> Usar especificadores de formato personalizado simples
 
-Uma cadeia de caracteres de formato de data e hora personalizado consiste em dois ou mais caracteres. Os métodos de formatação de data e hora interpretam qualquer cadeia de um único caractere como uma cadeia de caracteres de formato de data e hora padrão. Quando não reconhecem o caractere como um especificador de formato válido, eles geram uma <xref:System.FormatException>. Por exemplo, uma cadeia de caracteres de formato que consiste somente no especificador "h" é interpretada como uma cadeia de caracteres de formato padrão de data e hora. No entanto, nesse caso específico, uma exceção é gerada porque não há nenhum especificador "h" de formato padrão de data e hora.
+Uma cadeia de caracteres de formato de data e hora personalizado consiste em dois ou mais caracteres. Os métodos de formatação de data e hora interpretam qualquer cadeia de um único caractere como uma cadeia de caracteres de formato de data e hora padrão. Quando não reconhecem o caractere como um especificador de formato válido, eles geram uma <xref:System.FormatException>. Por exemplo, uma cadeia de caracteres de formato que consiste somente no especificador "h" é interpretada como uma cadeia de caracteres de formato padrão de data e hora. No entanto, nesse caso específico, uma exceção é gerada porque não há nenhum especificador "h"de formato padrão de data e hora.
 
 Para usar qualquer um dos especificadores de formato de data e hora personalizado como sendo o único especificador em uma cadeia de caracteres de formato (ou seja, para usar o especificador de formato personalizado "d", "f", "F", "g", "h", "H", "K", "m", "M", "s", "t", "y", "z", ":" ou “/” por si só), inclua um espaço antes ou após o especificador ou inclua um especificador de formato de porcentagem "%" antes do especificador de data e hora personalizado simples.
 
@@ -692,7 +692,7 @@ A formatação é influenciada pelas propriedades do objeto <xref:System.Globali
 
 A cadeia de caracteres de resultado produzida por muitos dos especificadores de formato de data e hora personalizado também depende das propriedades do objeto <xref:System.Globalization.DateTimeFormatInfo> atual. Seu aplicativo pode alterar o resultado produzido por alguns especificadores de formato personalizado de data e hora ao alterar a propriedade <xref:System.Globalization.DateTimeFormatInfo> correspondente. Por exemplo, o especificador de formato "ddd" adiciona um nome de dia da semana abreviado encontrado na matriz de cadeia de caracteres <xref:System.Globalization.DateTimeFormatInfo.AbbreviatedDayNames%2A> à cadeia de caracteres de resultado. Da mesma forma, o especificador de formato "MMMM" adiciona um nome de mês completo encontrado na matriz de cadeias de caracteres <xref:System.Globalization.DateTimeFormatInfo.MonthNames%2A> à cadeia de caracteres de resultado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>

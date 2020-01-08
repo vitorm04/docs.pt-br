@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 543f05cd52e62166b8a5ee318a588dee1e8ef76a
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4f52a89179e241dcfce5c888e03518d878009175
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838189"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348055"
 ---
 # <a name="net-architectural-components"></a>Componentes de arquitetura do .NET
 
@@ -37,7 +37,7 @@ Há quatro implementações principais de .NET que a Microsoft desenvolve e mant
 
 ### <a name="net-core"></a>.NET Core
 
-O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar com cargas de trabalho de servidor e na nuvem em escala. Ele é executado no Windows, no Linux e no macOS. Ele implementa o .NET Standard, portanto o código direcionado para o .NET Standard pode ser executados no .NET Core. O [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), o [Windows Forms](../framework/winforms/windows-forms-overview.md) e o [WPF (Windows Presentation Foundation)](../framework/wpf/index.md) são executados no .NET Core.
+O .NET Core é uma implementação multiplataforma do .NET, projetado para lidar com cargas de trabalho de servidor e na nuvem em escala. Ele é executado no Windows, no macOS e no Linux. Ele implementa o .NET Standard, portanto o código direcionado para o .NET Standard pode ser executados no .NET Core. O [ASP.NET Core](https://dotnet.microsoft.com/learn/aspnet/what-is-aspnet-core), o [Windows Forms](../framework/winforms/windows-forms-overview.md) e o [WPF (Windows Presentation Foundation)](../framework/wpf/index.md) são executados no .NET Core.
 
 Para saber mais sobre o .NET Core, consulte a [Guia .NET Core](../core/index.md) e [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md).
 
@@ -49,7 +49,7 @@ Para saber mais sobre o .NET Framework, consulte o [Guia do .NET Framework](../f
 
 ### <a name="mono"></a>Mono
 
-O Mono é uma implementação do .NET que é usada principalmente quando um pequeno runtime é necessário. É o runtime que impulsiona aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e concentra-se principalmente em um impacto pequeno. O Mono também é plataforma para jogos criados com o mecanismo Unity.
+O Mono é uma implementação do .NET que é usada principalmente quando um pequeno runtime é necessário. É o tempo de execução que capacita aplicativos Xamarin no Android, macOS, iOS, tvOS e watchOS e concentra-se principalmente em uma pequena superfície. O Mono também é plataforma para jogos criados com o mecanismo Unity.
 
 Ele dá suporte a todas as versões do .NET Standard publicadas atualmente.
 
@@ -61,7 +61,7 @@ Para saber mais sobre o Mono, consulte a [Documentação do Mono](https://www.mo
 
 ### <a name="universal-windows-platform-uwp"></a>UWP (Plataforma Universal do Windows)
 
-A UWP é uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, VB.NET e JavaScript. Ao usar o C# e VB.NET, as APIs do .NET são fornecidas pelo .NET Core.
+A UWP é uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos C++em C#,, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs do .NET são fornecidas pelo .NET Core.
 
 Para saber mais sobre a UWP, consulte [Introdução à Plataforma Universal do Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
@@ -104,7 +104,7 @@ Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO
 - **Tecnologia da informação — partições de Common Language Infrastructure (CLI) I para vi**: [ISO/IEC 23271:2012](https://standards.iso.org/ittf/PubliclyAvailableStandards/c058046_ISO_IEC_23271_2012(E).zip)
 - **Tecnologia da informação — Common Language Infrastructure (CLI) — relatório técnico sobre informações derivadas do arquivo XML da partição IV**: [ISO/IEC TR 23272:2011](https://standards.iso.org/ittf/PubliclyAvailableStandards/c057955_ISO_IEC_TR_23272_2011.zip)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Escolhendo entre o .NET Core e .NET Framework para aplicativos de servidor](choosing-core-framework-server.md)
 - [.NET Standard](net-standard.md)
@@ -112,4 +112,4 @@ Os documentos ISO/IEC oficiais estão disponíveis na página de padrões do ISO
 - [Guia do .NET Framework](../framework/index.md)
 - [Guia do C#](../csharp/index.yml)
 - [Guia do F#](../fsharp/index.yml)
-- [Guia do VB.NET](../visual-basic/index.yml)
+- [Guia do Visual Basic](../visual-basic/index.yml)

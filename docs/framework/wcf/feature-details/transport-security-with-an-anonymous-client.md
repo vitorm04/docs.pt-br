@@ -1,44 +1,44 @@
 ---
-title: Segurança de transporte com um cliente anônimo – WCF
+title: Segurança de transporte com um cliente anônimo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: aac3b2ac6cfcca137bddaefafd290e744ee991eb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c3e44c87dfa70ac3a7acc5a83ac596efc22b6155
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637433"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344751"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>Segurança de transporte com um cliente anônimo
 
-Este cenário do Windows Communication Foundation (WCF) usa a segurança de transporte (HTTPS) para garantir a confidencialidade e integridade. O servidor deve ser autenticado com um certificado Secure Sockets Layer (SSL) e os clientes devem confiar em certificado do servidor. O cliente não está autenticado por qualquer mecanismo e é, portanto, anônimo.
+Este cenário de Windows Communication Foundation (WCF) usa a segurança de transporte (HTTPS) para garantir a confidencialidade e a integridade. O servidor deve ser autenticado com um certificado protocolo SSL (SSL) e os clientes devem confiar no certificado do servidor. O cliente não é autenticado por nenhum mecanismo e, portanto, é anônimo.
 
-Para um aplicativo de exemplo, consulte [segurança de transporte WS](../samples/ws-transport-security.md). Para obter mais informações sobre a segurança de transporte, consulte [visão geral da segurança de transporte](transport-security-overview.md).
+Para um aplicativo de exemplo, consulte [segurança de transporte do WS](../samples/ws-transport-security.md). Para obter mais informações sobre segurança de transporte, consulte [visão geral de segurança de transporte](transport-security-overview.md).
 
-Para obter mais informações sobre como usar um certificado com um serviço, consulte [trabalhando com certificados](working-with-certificates.md) e [como: Configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).
+Para obter mais informações sobre como usar um certificado com um serviço, consulte [trabalhando com certificados](working-with-certificates.md) e [como configurar uma porta com um certificado SSL](how-to-configure-a-port-with-an-ssl-certificate.md).
 
-![Usando a segurança de transporte com um cliente anônimo](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
+![Usando segurança de transporte com um cliente anônimo](./media/8fa2e931-0cfb-4aaa-9272-91d652b85d8d.gif)
 
 |Característica|Descrição|
 |--------------------|-----------------|
-|Modo de segurança|Transporte|
-|Interoperabilidade|Com clientes e serviços Web existentes|
-|Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim<br /><br /> Nível de aplicativo (não há suporte do WCF)|
+|Modo de segurança|Transport|
+|Interoperabilidade|Com os serviços Web e clientes existentes|
+|Autenticação (servidor)<br /><br /> Autenticação (cliente)|Sim<br /><br /> Nível do aplicativo (sem suporte do WCF)|
 |Integridade|Sim|
 |Confidencialidade|Sim|
-|Transporte|HTTPS|
-|Associação|<xref:System.ServiceModel.WSHttpBinding>|
+|Transport|HTTPS|
+|Binding|<xref:System.ServiceModel.WSHttpBinding>|
 
-## <a name="service"></a>Serviço
+## <a name="service"></a>Service
 
-O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:
+O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:
 
-- Crie um serviço autônomo usando o código sem nenhuma configuração.
+- Crie um serviço autônomo usando o código sem configuração.
 
-- Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.
+- Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.
 
 ### <a name="code"></a>Código
 
@@ -47,9 +47,9 @@ O código a seguir mostra como criar um ponto de extremidade usando a segurança
 [!code-csharp[c_SecurityScenarios#5](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#5)]
 [!code-vb[c_SecurityScenarios#5](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#5)]
 
-### <a name="configuration"></a>Configuração
+### <a name="configuration"></a>Configuração do
 
-O código a seguir define o mesmo ponto de extremidade usando a configuração. O cliente não está autenticado por qualquer mecanismo e, portanto, é anônimo.
+O código a seguir configura o mesmo ponto de extremidade usando a configuração. O cliente não é autenticado por nenhum mecanismo e, portanto, é anônimo.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -80,11 +80,11 @@ O código a seguir define o mesmo ponto de extremidade usando a configuração. 
 
 ## <a name="client"></a>Cliente
 
-O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:
+O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:
 
 - Crie um cliente autônomo usando o código (e o código do cliente).
 
-- Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:
+- Crie um cliente que não defina nenhum endereço de ponto de extremidade. Em vez disso, use o construtor do cliente que usa o nome da configuração como um argumento. Por exemplo:
 
      [!code-csharp[C_SecurityScenarios#0](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
@@ -94,7 +94,7 @@ O código e a configuração a seguir destinam-se para executar de forma indepen
 [!code-csharp[c_SecurityScenarios#6](~/samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#6)]
 [!code-vb[c_SecurityScenarios#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#6)]
 
-### <a name="configuration"></a>Configuração
+### <a name="configuration"></a>Configuração do
 
 A configuração a seguir pode ser usada em vez do código para configurar o serviço.
 
@@ -121,9 +121,9 @@ A configuração a seguir pode ser usada em vez do código para configurar o ser
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](security-overview.md)
 - [Segurança de transporte de WS](../samples/ws-transport-security.md)
 - [Visão geral de segurança de transporte](transport-security-overview.md)
-- [Modelo de segurança do Windows Server App Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

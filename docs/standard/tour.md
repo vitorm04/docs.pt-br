@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 274fea83c474d4b67aab919b604eda893d8204d7
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552859"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337574"
 ---
 # <a name="tour-of-net"></a>Tour do .NET
 
@@ -27,13 +27,13 @@ Para saber como configurar um ambiente de desenvolvimento para executar os exemp
 
 O .NET dá suporte a várias linguagens de programação. As implementações do .NET implementam o [CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), que, entre outras coisas, especifica um runtime independente de linguagem e interoperabilidade de linguagem. Isso significa que você escolhe qualquer linguagem .NET para criar aplicativos e serviços no .NET.
 
-A Microsoft desenvolve ativamente e dá suporte a três linguagens de .NET: C#, F# e VB (Visual Basic). 
+A Microsoft desenvolve e dá suporte ativamente a três C#linguagens .net:, F#e Visual Basic. 
 
 * A C# é simples, poderosa, fortemente tipada e orientada a objeto, mantendo a expressividade e elegância das linguagens de estilo C. Qualquer pessoa familiarizada com C e linguagens semelhantes encontra poucos problemas para adaptar-se à C#. Confira o [Guia de C#](../csharp/index.yml) para saber mais sobre o C#.
 
 * F# é uma linguagem de programação de plataforma cruzada com prioridade para a parte funcional e que também dá suporte à programação imperativa e orientada a objeto tradicional. Confira o [Guia de F#](../fsharp/index.yml) para saber mais sobre o F#.
 
-* A Visual Basic é uma linguagem fácil de aprender, que você usa para criar uma variedade de aplicativos executados no .NET. Entre as linguagens de .NET, a sintaxe da VB é a mais próxima da linguagem humana comum, geralmente sendo mais fácil para pessoas novas no desenvolvimento de software.
+* A Visual Basic é uma linguagem fácil de aprender, que você usa para criar uma variedade de aplicativos executados no .NET. Entre as linguagens .NET, a sintaxe do Visual Basic é mais próxima da linguagem humana comum, geralmente facilitando o desenvolvimento de software por pessoas novas.
 
 ## <a name="automatic-memory-management"></a>Gerenciamento automático de memória
 
@@ -47,7 +47,7 @@ Não há nenhuma palavra-chave análoga para desalocar memória, pois a desaloca
 
 O coletor de lixo é um dos serviços que ajudam a garantir a *segurança da memória*. Um programa é considerado de memória segura se ele acessa somente a memória alocada. Por exemplo, o runtime garante que um aplicativo não acesse memória não alocada além dos limites de uma matriz.
 
-No exemplo a seguir, o runtime aciona uma exceção `InvalidIndexException` para impor segurança da memória:
+No exemplo a seguir, o runtime aciona uma exceção <xref:System.IndexOutOfRangeException> para impor segurança da memória:
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
@@ -65,7 +65,7 @@ Para obter mais detalhes, consulte os seguintes tópicos:
 
 * Para C#, consulte o tópico [Instrução Using (referência de C#)](../csharp/language-reference/keywords/using-statement.md).
 * Para F#, consulte [Gerenciamento de recursos: a palavra-chave Use](../fsharp/language-reference/resource-management-the-use-keyword.md).
-* Para VB, consulte o tópico [Instrução Using (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md).
+* Para Visual Basic, consulte o tópico [usando a instrução (Visual Basic)](../visual-basic/language-reference/statements/using-statement.md) .
 
 ## <a name="type-safety"></a>Segurança de tipos
 
@@ -79,11 +79,11 @@ A segurança de tipos também é usada para ajudar a forçar o encapsulamento, g
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-C#, VB e F# dão suporte à *inferência de tipo* de variável local. Inferência de tipos significa que o compilador deduz o tipo da expressão no lado esquerdo da expressão com base na expressão do lado direito. Isso não significa que a segurança de tipos é interrompida ou evitada. O tipo resultante realmente tem um tipo forte com tudo o que a expressão implica. No exemplo anterior, `dog` é reescrito para introduzir a inferência de tipos e o restante do exemplo permanece inalterado:
+C#, Visual Basic e F# dão suporte à *inferência de tipo* de variável local. Inferência de tipos significa que o compilador deduz o tipo da expressão no lado esquerdo da expressão com base na expressão do lado direito. Isso não significa que a segurança de tipos é interrompida ou evitada. O tipo resultante realmente tem um tipo forte com tudo o que a expressão implica. No exemplo anterior, `dog` é reescrito para introduzir a inferência de tipos e o restante do exemplo permanece inalterado:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
-O F# tem ainda mais recursos de inferência de tipos do que inferência de tipo de variável local de método encontrada no C# e no VB. Para obter mais informações, consulte [Inferência de tipos](../fsharp/language-reference/type-inference.md).
+F#tem ainda mais recursos de inferência de tipos do que a inferência de C# tipo de método local encontrada no e Visual Basic. Para obter mais informações, consulte [Inferência de tipos](../fsharp/language-reference/type-inference.md).
 
 ## <a name="delegates-and-lambdas"></a>Delegados e lambdas
 
@@ -97,7 +97,7 @@ No .NET, os delegados são comumente usados em manipuladores de eventos, na defi
 
 Os genéricos permitem que o programador introduza um *parâmetro de tipo* ao criar suas classes, o que permite que o código do cliente (os usuários do tipo) especifiquem o tipo exato a ser usado no lugar do parâmetro de tipo.
 
-Os genéricos foram adicionados para ajudar os programadores a implementar estruturas de dados genéricos. Antes de sua adição, para que um tipo como o `List` fosse genérico, seria necessário que ele trabalhasse com elementos do tipo `object`. Isso ocasionava vários problemas de desempenho e de semântica, junto com a possibilidade de erros sutis de runtime. O mais notório deles é quando uma estrutura de dados contém, por exemplo, inteiros e cadeias de caracteres e uma `InvalidCastException` é gerada ao trabalhar com os membros da lista.
+Os genéricos foram adicionados para ajudar os programadores a implementar estruturas de dados genéricos. Antes da chegada, para que um tipo como o tipo de `List` seja genérico, ele teria que trabalhar com elementos que eram do tipo `object`. Isso tinha vários problemas de desempenho e semânticos, juntamente com possíveis erros sutis de tempo de execução. Um erro de tempo de execução comum é quando uma estrutura de dados contém, por exemplo, inteiros e cadeias de caracteres, e um <xref:System.InvalidCastException> é lançado durante o processamento dos membros da lista.
 
 O exemplo a seguir mostra a execução de um programa básico usando uma instância de tipos <xref:System.Collections.Generic.List%601>:
 
@@ -113,7 +113,7 @@ Para saber mais sobre programação assíncrona no .NET, comece com o tópico [V
 
 ## <a name="language-integrated-query-linq"></a>Consulta Integrada à Linguagem (LINQ)
 
-O LINQ é um poderoso conjunto de recursos para C# e VB que permite que você escreva código simples e declarativo para operar em dados. Os dados podem ser de várias formas (como objetos na memória, um banco de dados SQL ou um documento XML), mas o código LINQ que você escreve não difere para cada fonte de dados.
+O LINQ é um conjunto poderoso de recursos C# para o e Visual Basic que permitem que você escreva um código declarativo simples para operar em dados. Os dados podem ser de várias formas (como objetos na memória, um banco de dados SQL ou um documento XML), mas o código LINQ que você escreve não difere para cada fonte de dados.
 
 Para obter mais informações e ver alguns exemplos, consulte o tópico [LINQ (Consulta integrada à linguagem)](using-linq.md).
 

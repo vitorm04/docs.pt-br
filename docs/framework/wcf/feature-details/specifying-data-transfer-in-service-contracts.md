@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: 47544cf74b4fa09fd8ee868ea940ef24a453840e
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 50f2444764ddb212513550ff0a62fcfecab2c45a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834643"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347992"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>Especificando transferência de dados em contratos de serviço
 O Windows Communication Foundation (WCF) pode ser considerado uma infraestrutura de mensagens. As operações de serviço podem receber mensagens, processá-las e enviar mensagens. As mensagens são descritas usando contratos de operação. Por exemplo, considere o contrato a seguir.  
@@ -141,13 +141,13 @@ public float GetAirfare(
 ```  
   
 ## <a name="describing-empty-messages"></a>Descrevendo mensagens vazias  
- Uma mensagem de solicitação vazia pode ser descrita por não ter parâmetros de entrada ou de referência. Por exemplo, C#em:  
+ Uma mensagem de solicitação vazia pode ser descrita por não ter parâmetros de entrada ou de referência. Por exemplo, em C#:  
   
  `[OperationContract]`  
   
  `public int GetCurrentTemperature();`  
   
- Por exemplo, no VB:  
+ Por exemplo, em Visual Basic:  
   
  `<OperationContract()>`  
   
@@ -574,7 +574,7 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  Para obter mais informações sobre conceitos de serialização avançada, consulte [serialização e desserialização](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Usando a classe XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
 - [Como habilitar o streaming](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

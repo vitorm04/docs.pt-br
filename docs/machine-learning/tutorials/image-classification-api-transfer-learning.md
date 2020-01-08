@@ -3,15 +3,15 @@ title: 'Tutorial: inspeção visual automatizada usando o aprendizado de transfe
 description: Este tutorial ilustra como usar o aprendizado de transferência para treinar um modelo de aprendizado profundo do TensorFlow no ML.NET usando a API de detecção de imagem para classificar imagens de superfícies concretas como rachadas ou não rachadas.
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 11/14/2019
+ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 443f9e9a83ebf31bb6c62323015af4a554323b67
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205052"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348175"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>Tutorial: inspeção visual automatizada usando o aprendizado de transferência com a API de classificação de imagem ML.NET
 
@@ -26,7 +26,7 @@ Neste tutorial, você aprenderá como:
 > - Usar o aprendizado de transferência para treinar um modelo de classificação de imagem TensorFlow personalizado
 > - Classificar imagens com o modelo personalizado
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - [Visual Studio 2017 15.6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "Desenvolvimento de plataforma cruzada do .NET Core" instalada.
 
@@ -41,7 +41,7 @@ A classificação de imagem é um problema de pesquisa Visual computacional. A c
 - Reconhecimento de rosto
 - Detecção de emoções
 - Diagnóstico médico
-- Detecção de ponto de referência
+- Detecção de monumentos
 
 Este tutorial treina um modelo de classificação de imagem personalizada para executar a inspeção visual automatizada de decks de ponte para identificar estruturas que estão danificadas por rachaduras.
 
@@ -76,7 +76,7 @@ Depois que os valores de saída da fase de afunilamento são computados, eles s�
 
 O modelo pretreinado usado neste tutorial é a variante de camada 101 do modelo de rede residual (ResNet) v2. O modelo original é treinado para classificar imagens em milhares de categorias. O modelo usa como entrada uma imagem de tamanho 224 x 224 e gera as probabilidades de classe para cada uma das classes em que é treinado. Parte desse modelo é usada para treinar um novo modelo usando imagens personalizadas para fazer previsões entre duas classes.
 
-## <a name="create-console-application"></a>Criar aplicativo de console
+## <a name="create-console-application"></a>Criar um aplicativo de console
 
 Agora que você tem uma compreensão geral do aprendizado de transferência e da API de classificação de imagem, é hora de criar o aplicativo.
 
@@ -398,7 +398,7 @@ Se você não estiver satisfeito com os resultados do modelo, poderá tentar mel
 
 - [Aprendizado profundo versus Machine Learning](/azure/machine-learning/service/concept-deep-learning-vs-machine-learning).
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Neste tutorial, você aprendeu a criar um modelo de aprendizado profundo personalizado usando o aprendizado de transferência, um modelo TensorFlow de classificação de imagem previamente treinado e a API de classificação de imagem ML.NET para classificar imagens de superfícies concretas como rachadas ou sem cracking.
 

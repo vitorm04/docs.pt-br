@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 542440d6bf9d6809abee1ec37c85c44ce72fd132
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 081dce85946fab85cff474508c46770c762b9e76
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715165"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338720"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Designer de compostos personalizados - apresentador de itens de fluxo de trabalho
 
@@ -24,11 +24,13 @@ Este exemplo demonstra:
 
 - Substituindo um designer padrão em um aplicativo rehosted.
 
-### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo
+## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar e executar o exemplo
 
-1. Abra a solução de exemplo **UsingWorkflowItemsPresenter. sln** para C# o ou para VB no Visual Studio 2010.
+1. Abra a solução de exemplo **UsingWorkflowItemsPresenter. sln** para C# o ou para Visual Basic no Visual Studio 2010.
 
-2. Criar e executar a solução. Um aplicativo rehosted de designer de fluxo de trabalho deve abrir, e você pode arrastar atividades na tela.
+2. Criar e executar a solução.
+
+   Um aplicativo de designer de fluxo de trabalho rehospedado é aberto e você pode arrastar atividades para a tela.
 
 ## <a name="sample-highlights"></a>Realces de exemplo
 
@@ -159,7 +161,7 @@ O código para esse exemplo mostra o seguinte:
 >
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - [Desenvolvendo aplicativos com o Designer de Fluxo de Trabalho](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

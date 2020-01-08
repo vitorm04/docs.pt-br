@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 268f14bc7294a4cbe6f7253dc7f3c71d89985133
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837955"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345565"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Utilizando filas de mensagens mortas para manuseio de transferência de mensagens com falha
 As mensagens em fila podem ser entregues com falha. Essas mensagens com falha são registradas em uma fila de mensagens mortas. A entrega com falha pode ser causada por motivos como falhas de rede, uma fila excluída, uma falha de autenticação completa ou uma falha de entrega no prazo.  
@@ -23,7 +23,7 @@ As mensagens em fila podem ser entregues com falha. Essas mensagens com falha s�
   
  A fila de mensagens mortas personalizada fornece isolamento entre clientes que compartilham o mesmo serviço MSMQ para enviar mensagens.  
   
- Em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], Windows Communication Foundation (WCF) fornece uma fila de mensagens mortas em todo o sistema para todos os aplicativos cliente em fila. No Windows Vista, o WCF fornece uma fila de mensagens mortas para cada aplicativo cliente em fila.  
+ No Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)], o Windows Communication Foundation (WCF) fornece uma fila de mensagens mortas de todo o sistema para todos os aplicativos cliente em fila. No Windows Vista, o WCF fornece uma fila de mensagens mortas para cada aplicativo cliente em fila.  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>Especificando o uso da fila de mensagens mortas  
  Uma fila de mensagens mortas está no Gerenciador de filas do aplicativo de envio. Ele armazena mensagens que expiraram ou que falharam na transferência ou entrega.  
@@ -69,7 +69,7 @@ As mensagens em fila podem ser entregues com falha. Essas mensagens com falha s�
   
  Veja a seguir o código para o arquivo de configuração do serviço fila de mensagens mortas.  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de filas](../../../../docs/framework/wcf/feature-details/queues-overview.md)
 - [Como trocar mensagens na fila com pontos de extremidade do WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)

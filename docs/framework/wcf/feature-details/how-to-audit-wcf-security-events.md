@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: b96c68c06099db2f396d16772cfaa8aee37390fe
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 7071aaf88346ee217226632501ebd6c82cfc1cb8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838007"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346754"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Como fazer auditoria de eventos de segurança do Windows Communication Foundation
 O Windows Communication Foundation (WCF) permite que você registre eventos de segurança no log de eventos do Windows, que pode ser exibido usando o Visualizador de Eventos do Windows. Este tópico explica como configurar um aplicativo para que ele registre eventos de segurança. Para obter mais informações sobre a auditoria do WCF, consulte [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
@@ -24,7 +24,7 @@ O Windows Communication Foundation (WCF) permite que você registre eventos de s
      [!code-csharp[AuditingSecurityEvents#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/auditingsecurityevents/cs/auditingsecurityevents.cs#2)]
      [!code-vb[AuditingSecurityEvents#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#2)]  
   
-     A enumeração <xref:System.ServiceModel.AuditLogLocation> tem três valores: `Application`, `Security`ou `Default`. O valor especifica um dos logs visíveis no Visualizador de Eventos, o log de segurança ou o log do aplicativo. Se você usar o valor `Default`, o log real dependerá do sistema operacional em que o aplicativo está sendo executado. Se a auditoria estiver habilitada e o local do log não for especificado, o padrão será o log de `Security` para as plataformas que dão suporte à gravação no log de segurança; caso contrário, ele gravará no log de `Application`. Somente [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e o Windows Vista dão suporte à gravação no log de segurança por padrão.  
+     A enumeração <xref:System.ServiceModel.AuditLogLocation> tem três valores: `Application`, `Security`ou `Default`. O valor especifica um dos logs visíveis no Visualizador de Eventos, o log de segurança ou o log do aplicativo. Se você usar o valor `Default`, o log real dependerá do sistema operacional em que o aplicativo está sendo executado. Se a auditoria estiver habilitada e o local do log não for especificado, o padrão será o log de `Security` para as plataformas que dão suporte à gravação no log de segurança; caso contrário, ele gravará no log de `Application`. Somente o Windows Server 2003 e o Windows Vista dão suporte à gravação no log de segurança por padrão.  
   
 2. Configure os tipos de eventos para auditar. Você pode auditar simultaneamente eventos de nível de serviço ou eventos de autorização no nível de mensagem. Para fazer isso, defina a propriedade <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A> ou a propriedade <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.MessageAuthenticationAuditLevel%2A> como um dos valores de enumeração <xref:System.ServiceModel.AuditLevel>, conforme mostrado no código a seguir.  
   
@@ -87,7 +87,7 @@ O Windows Communication Foundation (WCF) permite que você registre eventos de s
   
  Se a propriedade <xref:System.ServiceModel.AuditLogLocation> for definida como <xref:System.ServiceModel.AuditLogLocation.Security> e o **acesso ao objeto de auditoria** não estiver definido na política de **segurança local**, os eventos de auditoria não serão gravados no log de segurança. Observe que nenhuma falha é retornada, mas as entradas de auditoria não são gravadas no log de segurança.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>

@@ -3,12 +3,12 @@ title: Glossário .NET
 description: Descubra o significado de termos selecionados usados na documentação do .NET.
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e1894d57a613531fecba6786529a735431d01423
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
-ms.translationtype: MT
+ms.openlocfilehash: 21b2b0fb606333ace05b6525c9f461e6ee1709d1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929073"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338528"
 ---
 # <a name="net-glossary"></a>Glossário .NET
 
@@ -18,7 +18,7 @@ A principal meta deste glossário é esclarecer os significados de termos e acr�
 
 Compilador Ahead-of-Time.
 
-Semelhante ao [JIT](#jit), esse compilador também converte [IL](#il) em código de máquina. Diferentemente da compilação JIT, a compilação AOT acontece antes que o aplicativo seja executado e normalmente é executada em um computador diferente. Como as cadeias da ferramenta da AOT não compilam em tempo de execução, elas não têm que minimizar o tempo gasto na compilação. Isso significa que elas podem gastar mais tempo em otimização. Como o contexto da AOT é o aplicativo inteiro, o compilador AOT também executa a vinculação de módulo cruzado e a análise de programa inteiro, o que significa que todas as referências são seguidas e um único executável é produzido.
+Semelhante ao [JIT](#jit), esse compilador também converte [IL](#il) em código de máquina. Diferentemente da compilação JIT, a compilação AOT acontece antes que o aplicativo seja executado e normalmente é executada em um computador diferente. Como as cadeias da ferramenta da AOT não compilam em runtime, elas não têm que minimizar o tempo gasto na compilação. Isso significa que elas podem gastar mais tempo em otimização. Como o contexto da AOT é o aplicativo inteiro, o compilador AOT também executa a vinculação de módulo cruzado e a análise de programa inteiro, o que significa que todas as referências são seguidas e um único executável é produzido.
 
 Confira [CoreRT](#corert) e [.NET Native](#net-native).
 
@@ -46,13 +46,13 @@ Um assembly pode incluir tipos como interfaces, classes, estruturas, enumeraçõ
 
 Common Language Runtime.
 
-O significado exato depende do contexto, mas geralmente se refere ao tempo de execução do .NET Framework. O CLR manipula a alocação e o gerenciamento de memória. O CLR também é uma máquina virtual que não só executa aplicativos, mas também gera e compila código dinamicamente usando um compilador [JIT](#jit). A implementação atual do CLR da Microsoft é somente para Windows.
+O significado exato depende do contexto, mas geralmente se refere ao runtime do .NET Framework. O CLR manipula a alocação e o gerenciamento de memória. O CLR também é uma máquina virtual que não só executa aplicativos, mas também gera e compila código dinamicamente usando um compilador [JIT](#jit). A implementação atual do CLR da Microsoft é somente para Windows.
 
 ## <a name="coreclr"></a>CoreCLR
 
 Common Language Runtime do .NET Core.
 
-Esse CLR é criado com a mesma base de código que o CLR. Originalmente, o CoreCLR era o tempo de execução do Silverlight e foi projetado para ser executado em várias plataformas, especificamente o Windows e OS X. Agora o CoreCLR faz parte do .NET Core e representa uma versão simplificada do CLR. Ainda é um tempo de execução [multiplataforma](#cross-platform), incluindo também suporte para várias distribuições do Linux. O CoreCLR também é uma máquina virtual com recursos JIT e de execução de código.
+Esse CLR é criado com a mesma base de código que o CLR. Originalmente, o CoreCLR era o runtime do Silverlight e foi projetado para ser executado em várias plataformas, especificamente o Windows e OS X. Agora o CoreCLR faz parte do .NET Core e representa uma versão simplificada do CLR. Ainda é um runtime [multiplataforma](#cross-platform), incluindo também suporte para várias distribuições do Linux. O CoreCLR também é uma máquina virtual com recursos JIT e de execução de código.
 
 ## <a name="corefx"></a>CoreFX
 
@@ -62,9 +62,9 @@ Um conjunto de bibliotecas que compõem os namespaces System.* e, até certo lim
 
 ## <a name="corert"></a>CoreRT
 
-Tempo de execução do .NET Core.
+runtime do .NET Core.
 
-Ao contrário do CLR/CoreCLR, o CoreRT não é uma máquina virtual, o que significa que ele não inclui os recursos para gerar e executar código dinamicamente, já que não inclui um [JIT](#jit). No entanto, ele inclui a [GC](#gc) e a capacidade de RTTI (identificação de tipo de tempo de execução) e reflexão. Contudo, seu sistema de tipos é projetado para que os metadados para reflexão não sejam necessários. Isso permite ter uma cadeia de ferramentas [AOT](#aot) que possa desvincular metadados supérfluos e, mais importante, identificar código que o aplicativo não usa. O CoreRT está em desenvolvimento.
+Ao contrário do CLR/CoreCLR, o CoreRT não é uma máquina virtual, o que significa que ele não inclui os recursos para gerar e executar código dinamicamente, já que não inclui um [JIT](#jit). No entanto, ele inclui a [GC](#gc) e a capacidade de RTTI (identificação de tipo de runtime) e reflexão. Contudo, seu sistema de tipos é projetado para que os metadados para reflexão não sejam necessários. Isso permite ter uma cadeia de ferramentas [AOT](#aot) que possa desvincular metadados supérfluos e, mais importante, identificar código que o aplicativo não usa. O CoreRT está em desenvolvimento.
 
 Consulte [Introdução ao .NET Native e ao CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
@@ -74,7 +74,7 @@ A capacidade de desenvolver e executar um aplicativo que pode ser usado em vári
 
 ## <a name="ecosystem"></a>ecossistema
 
-Todos os softwares de tempo de execução, as ferramentas de desenvolvimento e os recursos da comunidade que são usados para compilar e executar aplicativos de uma determinada tecnologia.
+Todos os softwares de runtime, as ferramentas de desenvolvimento e os recursos da comunidade que são usados para compilar e executar aplicativos de uma determinada tecnologia.
 
 O termo "Ecossistema do .NET" difere de termos semelhantes, como "Pilha do .NET", em relação à inclusão de bibliotecas e aplicativos de terceiros. Veja um exemplo em uma frase:
 
@@ -92,7 +92,7 @@ A palavra "estrutura" tem um significado técnico mais específico nos seguintes
 
 Na documentação existente, "estrutura" às vezes se refere a uma [implementação do .NET](#implementation-of-net). Por exemplo, um artigo pode chamar o .NET Core de uma estrutura. Planejamos eliminar da documentação esse uso confuso da palavra.
 
-## <a name="gc"></a>GC
+## <a name="gc"></a>{1&gt;GC&lt;1}
 
 Coletor de lixo.
 
@@ -116,7 +116,7 @@ Semelhante ao [AOT](#aot), esse compilador converte a [IL](#il) em um código de
 
 Uma implementação do .NET inclui o seguinte:
 
-- Um ou mais tempos de execução. Exemplos: CLR, CoreCLR e CoreRT.
+- Um ou mais runtimes. Exemplos: CLR, CoreCLR e CoreRT.
 - Uma biblioteca de classes que implemente uma versão do .NET Standard, podendo incluir APIs adicionais. Exemplos: biblioteca de classes base do NET Framework, biblioteca de classes base do .NET Core.
 - Opcionalmente, uma ou mais estruturas de aplicativo. Exemplos: ASP.NET, Windows Forms e WPF estão incluídos no .NET Framework.
 - Opcionalmente, ferramentas de desenvolvimento. Algumas ferramentas de desenvolvimento são compartilhadas entre várias implementações.
@@ -141,7 +141,7 @@ Consulte [Pacotes, metapacotes e estruturas](../core/packages.md)
 
 ## <a name="mono"></a>Mono
 
-Mono é uma implementação do .NET [multiplataforma](#cross-platform) de software livre usada principalmente quando é necessário um pequeno tempo de execução. É o tempo de execução que impulsiona aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e se concentra, principalmente, em aplicativos que exigem superfície reduzida.
+Mono é uma implementação do .NET [multiplataforma](#cross-platform) de software livre usada principalmente quando é necessário um pequeno runtime. É o runtime que impulsiona aplicativos Xamarin no Android, Mac, iOS, tvOS e watchOS e se concentra, principalmente, em aplicativos que exigem superfície reduzida.
 
 Ele dá suporte a todas as versões do .NET Standard publicadas atualmente.
 
@@ -171,7 +171,7 @@ Consulte [Ferramentas da CLI (interface de linha de comando) do .NET Core](../co
 
 ## <a name="net-core-sdk"></a>SDK do .NET Core
 
-Um conjunto de bibliotecas e ferramentas que permitem aos desenvolvedores criar bibliotecas e aplicativos do .NET Core. Inclui a [CLI do .NET Core](#net-core-cli) para a criação de aplicativos, bibliotecas e tempo de execução do .NET Core para criar e executar aplicativos e o executável do dotnet (*dotnet.exe*) que executa comandos de CLI e executa aplicativos.
+Um conjunto de bibliotecas e ferramentas que permitem aos desenvolvedores criar bibliotecas e aplicativos do .NET Core. Inclui a [CLI do .NET Core](#net-core-cli) para a criação de aplicativos, bibliotecas e runtime do .NET Core para criar e executar aplicativos e o executável do dotnet (*dotnet.exe*) que executa comandos de CLI e executa aplicativos.
 
 Consulte a [Visão geral do SDK do .NET Core](../core/sdk.md).
 
@@ -211,7 +211,7 @@ Um pacote NuGet &mdash; ou apenas um pacote &mdash; é um arquivo *.zip* com um 
 
 O arquivo *.zip* tem uma extensão *.nupkg* e pode conter ativos, como arquivos *.dll* e arquivos *.xml*, para uso com várias versões e estruturas de destino. Quando instalado em um aplicativo ou uma biblioteca, os ativos apropriados são selecionados com base na estrutura de destino especificada pelo aplicativo ou pela biblioteca. Os ativos que definem a interface estão na pasta *ref* e os ativos que definem a implementação estão na pasta *lib*.
 
-## <a name="platform"></a>platform
+## <a name="platform"></a>Plataforma do
 
 Um sistema operacional e o hardware em que ele é executado, como macOS, Windows, Linux, iOS e Android.
 
@@ -222,22 +222,22 @@ Veja alguns exemplos de uso nessas frases:
 
 A documentação do .NET frequentemente usa "plataforma .NET" para significar uma implementação do .NET ou a pilha do .NET, incluindo todas as implementações. Os dois usos tendem a ser confundidos com o significado (SO/hardware) principal, portanto planejamos eliminar esses usos da documentação.
 
-## <a name="runtime"></a>tempo de execução
+## <a name="runtime"></a>Tempo de execução do
 
 O ambiente de execução de um programa gerenciado.
 
-O SO faz parte do ambiente do tempo de execução, mas não faz parte do tempo de execução do .NET. Aqui estão alguns exemplos de tempos de execução do .NET:
+O SO faz parte do ambiente do runtime, mas não faz parte do runtime do .NET. Aqui estão alguns exemplos de runtimes do .NET:
 
 - CLR (Common Language Runtime)
 - Core Common Language Runtime (CoreCLR)
 - .NET Native (para UWP)
-- tempo de execução Mono
+- runtime Mono
 
-Às vezes, a documentação do .NET usa "tempo de execução" para se referir a uma implementação do .NET. Por exemplo, nas seguintes sentenças "tempo de execução" deve ser substituído por "implementação":
+Às vezes, a documentação do .NET usa "runtime" para se referir a uma implementação do .NET. Por exemplo, nas seguintes sentenças "runtime" deve ser substituído por "implementação":
 
-- "Os diversos tempos de execução do .NET implementam versões específicas do .NET Standard."
-- "Bibliotecas destinadas à execução em vários tempos de execução devem ter essa estrutura como destino." (referindo-se ao .NET Standard)
-- "Os diversos tempos de execução do .NET implementam versões específicas do .NET Standard. … Cada versão de tempo de execução do .NET anuncia a última versão do .NET Standard à qual ele dá suporte..."
+- "Os diversos runtimes do .NET implementam versões específicas do .NET Standard."
+- "Bibliotecas destinadas à execução em vários runtimes devem ter essa estrutura como destino." (referindo-se ao .NET Standard)
+- "Os diversos runtimes do .NET implementam versões específicas do .NET Standard. . Cada versão de runtime do .NET anuncia a última versão do .NET Standard à qual ele dá suporte..."
 
 Planejamos eliminar esse uso inconsistente. 
 
@@ -269,9 +269,9 @@ Consulte [Estruturas de destino](frameworks.md).
 
 Plataforma Universal do Windows.
 
-Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos em C++, C#, VB.NET e JavaScript. Ao usar o C# e VB.NET, as APIs do .NET são fornecidas pelo .NET Core.
+Uma implementação do .NET que é usada para criar aplicativos do Windows modernos e sensíveis ao toque, bem como software para a IoT (Internet das Coisas). Ela foi projetada para unificar os diferentes tipos de dispositivos que você talvez tenha como destinho, incluindo PCs, tablets, phablets, telefones e até mesmo ao Xbox. A UWP fornece muitos serviços, como um repositório centralizado de aplicativos, um ambiente de execução (AppContainer) e um conjunto de APIs do Windows para usar em vez das APIS do Win32 (WinRT). Os aplicativos podem ser escritos C++em C#,, Visual Basic e JavaScript. Ao usar C# e Visual Basic, as APIs do .NET são fornecidas pelo .NET Core.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia do .NET](index.md)
 - [Guia do .NET Framework](../framework/index.md)

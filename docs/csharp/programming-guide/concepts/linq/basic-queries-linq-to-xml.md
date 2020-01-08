@@ -2,12 +2,12 @@
 title: Consultas básicas (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: d333bb7d-20c1-448a-95b7-e5ba07915744
-ms.openlocfilehash: ea2c4e76471d4cb438dd7c00c1e2e2110031cc51
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 4cfc29041ab9758bdef04bd7afe3fb2af3d886ff
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141551"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346595"
 ---
 # <a name="basic-queries-linq-to-xml-c"></a>Consultas básicas (LINQ to XML) (C#)
 Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] básicas.  
@@ -24,12 +24,12 @@ Esta seção fornece exemplos de consultas [!INCLUDE[sqltecxlinq](~/includes/sql
 |[Como escrever consultas com filtragem complexa (C#)](./how-to-write-queries-with-complex-filtering.md)|Mostra como escrever uma consulta com um filtro mais complexo.|  
 |[Como filtrar em um elemento opcional (C#)](./how-to-filter-on-an-optional-element.md)|Mostra como localizar nós em uma árvore moldada de maneira irregular.|
 |[Como localizar todos os nós em um namespace (C#)](./how-to-find-all-nodes-in-a-namespace.md)|Mostra como localizar todos os nós que estão em um namespace específico.|
-|[Como classificar os elementos (C#)](./how-to-sort-elements.md)|Mostra como escrever uma consulta que classifique seus resultados.|  
-|[Como classificar os elementos em múltiplas chaves (C#)](./how-to-sort-elements-on-multiple-keys.md)|Mostra como classificar sobre várias chaves.|  
+|[Como classificar elementos (C#)](./how-to-sort-elements.md)|Mostra como escrever uma consulta que classifique seus resultados.|  
+|[Como classificar elementos em várias chaves (C#)](./how-to-sort-elements-on-multiple-keys.md)|Mostra como classificar sobre várias chaves.|  
 |[Como calcular valores intermediários (C#)](./how-to-calculate-intermediate-values.md)|Mostra como usar a cláusula `Let` para calcular valores intermediários em uma consulta [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].|  
-|[Como escrever uma consulta que encontra elementos com base no contexto (C#)](./how-to-write-a-query-that-finds-elements-based-on-context.md)|Mostra como selecionar elementos com base em outros elementos na árvore.|  
+|[Como escrever uma consulta que localiza elementos com base no contexto (C#)](./how-to-write-a-query-that-finds-elements-based-on-context.md)|Mostra como selecionar elementos com base em outros elementos na árvore.|  
 |[Como depurar conjuntos de resultados de consulta vaziosC#()](./how-to-debug-empty-query-results-sets.md)|Mostra a correção apropriada ao depurar consultas em XML que está em um namespace padrão.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Consultando árvores XML (C#)](how-to-find-an-element-with-a-specific-attribute.md)

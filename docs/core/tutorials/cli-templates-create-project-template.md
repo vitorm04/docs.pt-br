@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318284"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340360"
 ---
 # <a name="tutorial-create-a-project-template"></a>Tutorial: criar um modelo de projeto
 
@@ -26,16 +26,16 @@ Nesta parte da série, você aprenderá a:
 > * Testar um modelo de item
 > * Desinstalar um modelo de item
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 * Conclua a [parte 1](cli-templates-create-item-template.md) desta série de tutoriais.
-* Abra um terminal e navegue até a pasta _working\templates\\_ .
+* Abra um terminal e navegue até a pasta _working\templates_
 
 ## <a name="create-a-project-template"></a>Criar um modelo de projeto
 
 Os modelos de projeto produzem projetos prontos para execução que ajudam os usuários a começar com um conjunto de códigos de trabalho. O .NET Core inclui alguns modelos de projeto, como um aplicativo de console ou uma biblioteca de classes. Neste exemplo, você criará um novo projeto de console que habilitará o C# 8.0 e produzirá um ponto de entrada `async main`.
 
-No terminal, navegue até a pasta _working\templates\\_ e crie uma nova subpasta chamada _consoleasync_. Insira a subpasta e execute `dotnet new console` para gerar o aplicativo de console padrão. Você editará os arquivos produzidos por este modelo para criar um novo modelo.
+No terminal, navegue até a pasta _working\templates_ e crie uma nova subpasta chamada _consoleasync_. Insira a subpasta e execute `dotnet new console` para gerar o aplicativo de console padrão. Você editará os arquivos produzidos por este modelo para criar um novo modelo.
 
 ```console
 working
@@ -98,7 +98,7 @@ Agora que você tem o conteúdo do modelo criado, é necessário criar a configu
 
 ## <a name="create-the-template-config"></a>Criar a configuração do modelo
 
-Os modelos são reconhecidos no .NET Core por uma pasta especial e um arquivo de configuração que está na raiz do modelo. Neste tutorial, a pasta de modelos está localizada em _working\templates\consoleasync\\_ .
+Os modelos são reconhecidos no .NET Core por uma pasta especial e um arquivo de configuração que está na raiz do modelo. Neste tutorial, a pasta de modelo está localizada em _working\templates\consoleasync_.
 
 Quando você cria um modelo, todos os arquivos e pastas na pasta de modelos são incluídos como parte do modelo, exceto a pasta de configuração especial. Esta pasta de configuração chama-se _.template.config_.
 
@@ -210,7 +210,7 @@ Currently installed items:
 C:\working> dotnet new -u C:\working\templates\consoleasync
 ```
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Neste tutorial, você criou um modelo de projeto. Para aprender como empacotar os modelos de item e projeto em um arquivo simples, continue a ver esta série de tutoriais.
 

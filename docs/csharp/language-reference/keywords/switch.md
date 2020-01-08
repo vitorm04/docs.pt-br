@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 6f0a2cfd5a6de9c8c05bc3daea1e242183ebf03e
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552348"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345389"
 ---
 # <a name="switch-c-reference"></a>switch (Referência em C#)
 
@@ -47,7 +47,7 @@ No C# 6 e versões anteriores, a expressão de correspondência deve ser uma exp
 - um [string](../builtin-types/reference-types.md).
 - um [bool](../builtin-types/bool.md).
 - um valor [integral](../builtin-types/integral-numeric-types.md) , como um `int` ou um `long`.
-- um valor [enum](enum.md).
+- um valor [enum](../builtin-types/enum.md).
 
 Começando com o C# 7.0, a expressão de correspondência pode ser qualquer expressão não nula.
 
@@ -193,11 +193,11 @@ O exemplo a seguir define uma classe `Shape` base, uma classe `Rectangle` que de
 
 Observe que a cláusula `when` no exemplo que tenta testar se um objeto `Shape` é `null` não é executada. O padrão de tipo correto para testar um `null` é `case null:`.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, consulte [A instrução switch](~/_csharplang/spec/statements.md#the-switch-statement) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

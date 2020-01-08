@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8479168b64153d3c729f8814a2649df8d46f2135
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cd13e7560ee98e0c862c5e2293521c6aaa273455
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394068"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344295"
 ---
 ### <a name="razor-runtime-compilation-moved-to-a-package"></a>Razor: compilação de tempo de execução movida para um pacote
 
@@ -20,14 +20,14 @@ A compilação em tempo de execução está disponível sem a necessidade de pac
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-A funcionalidade foi movida para o pacote `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
+A funcionalidade foi movida para o pacote [Microsoft. AspNetCore. Mvc. Razor. RuntimeCompilation](https://www.nuget.org/packages/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/) .
 
-As APIs a seguir estavam disponíveis anteriormente no `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions` para dar suporte à compilação em tempo de execução. As APIs agora estão disponíveis por meio de `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions`.
+As APIs a seguir estavam disponíveis anteriormente em `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions` para dar suporte à compilação em tempo de execução. As APIs agora estão disponíveis por meio de `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.MvcRazorRuntimeCompilationOptions`.
 
-- `RazorViewEngineOptions.FileProviders` -> `MvcRazorRuntimeCompilationOptions.FileProviders`
-- `RazorViewEngineOptions.AdditionalCompilationReferences` -> `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
+- `RazorViewEngineOptions.FileProviders` agora é `MvcRazorRuntimeCompilationOptions.FileProviders`
+- `RazorViewEngineOptions.AdditionalCompilationReferences` agora é `MvcRazorRuntimeCompilationOptions.AdditionalReferencePaths`
 
-Além disso, `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange` foi removido. A recompilação em alterações de arquivo é habilitada por padrão referenciando o pacote `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
+Além disso, `Microsoft.AspNetCore.Mvc.Razor.RazorViewEngineOptions.AllowRecompilingViewsOnFileChange` foi removido. A recompilação em alterações de arquivo é habilitada por padrão referenciando o pacote de `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 
@@ -37,12 +37,12 @@ Essa alteração foi necessária para remover a dependência de estrutura compar
 
 Aplicativos que exigem compilação em tempo de execução ou recompilação de arquivos Razor devem executar as seguintes etapas:
 
-1. Adicione uma referência ao pacote `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
-1. Atualize o método `Startup.ConfigureServices` do projeto para incluir uma chamada para `AddMvcRazorRuntimeCompilation`. Por exemplo, em `Startup.ConfigureServices`:
+1. Adicione uma referência ao pacote de `Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation`.
+1. Atualize o método de `Startup.ConfigureServices` do projeto para incluir uma chamada para `AddRazorRuntimeCompilation`. Por exemplo:
 
     ```csharp
     services.AddMvc()
-        .AddMvcRazorRuntimeCompilation();
+        .AddRazorRuntimeCompilation();
     ```
 
 #### <a name="category"></a>Categoria

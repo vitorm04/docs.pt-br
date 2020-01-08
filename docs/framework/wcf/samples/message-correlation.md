@@ -2,21 +2,22 @@
 title: Correlação de mensagem
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: 0f5124b8172a7a4d553d19e08309affb48e7468c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: adabf02cb8ec232a887bd4720ea9552a7d870fe3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714859"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348326"
 ---
 # <a name="message-correlation"></a>Correlação de mensagem
-Este exemplo demonstra como um aplicativo MSMQ (enfileiramento de mensagens) pode enviar uma mensagem MSMQ para um serviço Windows Communication Foundation (WCF) e como as mensagens podem ser correlacionadas entre os aplicativos do remetente e do destinatário em um cenário de solicitação/resposta. Este exemplo usa a associação msmqIntegrationBinding. O serviço, nesse caso, é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas. k  
-  
- O serviço processa a mensagem recebida do remetente e envia uma mensagem de resposta de volta para o remetente. O remetente correlaciona a resposta recebida para a solicitação que ele enviou originalmente. As propriedades `MessageID` e `CorrelationID` da mensagem são usadas para correlacionar as mensagens de solicitação e resposta.  
-  
- O contrato de serviço `IOrderProcessor` define uma operação de serviço unidirecional que é adequada para uso com o enfileiramento. Uma mensagem MSMQ não tem um cabeçalho Action, portanto, não é possível mapear diferentes mensagens MSMQ para contratos de operação automaticamente. Portanto, pode haver apenas um contrato de operação nesse caso. Se você quiser definir mais contratos de operação no serviço, o aplicativo deverá fornecer informações sobre qual cabeçalho na mensagem MSMQ (por exemplo, o rótulo ou CorrelationId) pode ser usado para decidir qual contrato de operação deve ser despachado. 
-  
- A mensagem MSMQ também não contém informações sobre quais cabeçalhos são mapeados para os diferentes parâmetros do contrato de operação. Portanto, pode haver apenas um parâmetro no contrato de operação. O parâmetro é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, que contém a mensagem do MSMQ subjacente. O tipo "T" na classe `MsmqMessage<T>` representa os dados que são serializados no corpo da mensagem MSMQ. Neste exemplo, o tipo de `PurchaseOrder` é serializado no corpo da mensagem MSMQ.  
+
+Este exemplo demonstra como um aplicativo MSMQ (enfileiramento de mensagens) pode enviar uma mensagem MSMQ para um serviço Windows Communication Foundation (WCF) e como as mensagens podem ser correlacionadas entre os aplicativos do remetente e do destinatário em um cenário de solicitação/resposta. Este exemplo usa a associação msmqIntegrationBinding. O serviço, nesse caso, é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas. k
+
+ O serviço processa a mensagem recebida do remetente e envia uma mensagem de resposta de volta para o remetente. O remetente correlaciona a resposta recebida para a solicitação que ele enviou originalmente. As propriedades `MessageID` e `CorrelationID` da mensagem são usadas para correlacionar as mensagens de solicitação e resposta.
+
+ O contrato de serviço `IOrderProcessor` define uma operação de serviço unidirecional que é adequada para uso com o enfileiramento. Uma mensagem MSMQ não tem um cabeçalho Action, portanto, não é possível mapear diferentes mensagens MSMQ para contratos de operação automaticamente. Portanto, pode haver apenas um contrato de operação nesse caso. Se você quiser definir mais contratos de operação no serviço, o aplicativo deverá fornecer informações sobre qual cabeçalho na mensagem MSMQ (por exemplo, o rótulo ou CorrelationId) pode ser usado para decidir qual contrato de operação deve ser despachado.
+
+ A mensagem MSMQ também não contém informações sobre quais cabeçalhos são mapeados para os diferentes parâmetros do contrato de operação. Portanto, pode haver apenas um parâmetro no contrato de operação. O parâmetro é do tipo <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601>, que contém a mensagem do MSMQ subjacente. O tipo "T" na classe `MsmqMessage<T>` representa os dados que são serializados no corpo da mensagem MSMQ. Neste exemplo, o tipo de `PurchaseOrder` é serializado no corpo da mensagem MSMQ.
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
@@ -269,7 +270,7 @@ static void DisplayOrderStatus()
 > [!NOTE]
 > Este exemplo requer a instalação do MSMQ (enfileiramento de mensagens). Consulte as instruções de instalação do MSMQ na seção Consulte também.
 
-### <a name="to-setup-build-and-run-the-sample"></a>A configuração, compilação, e executar o exemplo
+## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar e executar o exemplo
 
 1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
 
@@ -289,7 +290,7 @@ static void DisplayOrderStatus()
 
 4. Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
-### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo entre computadores
+## <a name="run-the-sample-across-computers"></a>Executar o exemplo entre computadores
 
 1. Copie os arquivos de programa do serviço da pasta \service\bin\, na pasta específica do idioma, para o computador do serviço.
 
@@ -304,15 +305,15 @@ static void DisplayOrderStatus()
 6. No computador cliente, inicie o Client. exe em um prompt de comando.
 
 > [!IMPORTANT]
-> Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
-  
-## <a name="see-also"></a>Consulte também
+> Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`
+
+## <a name="see-also"></a>Veja também
 
 - [Enfileiramento no WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [Enfileiramento de mensagens](https://go.microsoft.com/fwlink/?LinkId=94968)

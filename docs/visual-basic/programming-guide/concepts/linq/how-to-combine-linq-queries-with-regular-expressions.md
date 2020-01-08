@@ -2,12 +2,12 @@
 title: Como combinar consultas LINQ com expressões regulares
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 27fc46056ad78567339ca0c5818aef38d0fbb9a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a091418be1f7cc30d42a98f80ebae2d36d29b5d8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348413"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337553"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>Como combinar consultas LINQ com expressões regulares (Visual Basic)
 
@@ -84,11 +84,11 @@ End Class
 
 Observe que também é possível consultar o objeto <xref:System.Text.RegularExpressions.MatchCollection> retornado por uma pesquisa `RegEx`. Neste exemplo, apenas o valor de cada correspondência é produzido nos resultados. No entanto, também é possível usar a LINQ para executar todos os tipos de filtragem, classificação e agrupamento nessa coleção. Como <xref:System.Text.RegularExpressions.MatchCollection> é uma coleção <xref:System.Collections.IEnumerable> não genérica, é necessário declarar explicitamente o tipo da variável de intervalo na consulta.
 
-## <a name="compiling-the-code"></a>Compilando o código
+## <a name="compile-the-code"></a>Compilar o código
 
-Crie um projeto de aplicativo de console do VB.NET, copie e cole o exemplo de código e ajuste o valor do objeto de inicialização nas propriedades do projeto.
+Crie um projeto de aplicativo de console Visual Basic, copie e cole o exemplo de código e ajuste o valor do objeto de inicialização nas propriedades do projeto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ e cadeias de caracteres (Visual Basic)](linq-and-strings.md)
 - [LINQ e diretórios de arquivos (Visual Basic)](linq-and-file-directories.md)

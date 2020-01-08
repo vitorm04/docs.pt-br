@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: fec23439236fccb23964c0feb22691a973c787b1
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838085"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338025"
 ---
 # <a name="auditing-security-events"></a>Auditoria de eventos de segurança
 Os aplicativos criados com o Windows Communication Foundation (WCF) podem registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema do Windows e podem ser examinados usando o Visualizador de Eventos.  
@@ -73,7 +73,7 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
 </configuration>  
 ```  
   
- Se a auditoria estiver habilitada e um `auditLogLocation` não for especificado, o nome de log padrão será o log de "segurança" para a plataforma que dá suporte à gravação no log de segurança; caso contrário, será um log de "aplicativo". Somente os sistemas operacionais [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e Windows Vista dão suporte à gravação no log de segurança. Para obter mais informações, consulte a seção "sistema operacional" mais adiante neste tópico.  
+ Se a auditoria estiver habilitada e um `auditLogLocation` não for especificado, o nome de log padrão será o log de "segurança" para a plataforma que dá suporte à gravação no log de segurança; caso contrário, será um log de "aplicativo". Somente os sistemas operacionais Windows Server 2003 e Windows Vista dão suporte à gravação no log de segurança. Para obter mais informações, consulte a seção "sistema operacional" mais adiante neste tópico.  
   
 ## <a name="security-considerations"></a>considerações sobre segurança  
  Se um usuário mal-intencionado sabe que a auditoria está habilitada, esse invasor pode enviar mensagens inválidas que fazem com que as entradas de auditoria sejam gravadas. Se o log de auditoria for preenchido dessa maneira, o sistema de auditoria falhará. Para atenuar isso, defina a propriedade <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> como `true` e use as propriedades da Visualizador de Eventos para controlar o comportamento de auditoria. Para obter mais informações, consulte o artigo Suporte da Microsoft sobre como exibir e gerenciar logs de eventos usando o Visualizador de Eventos no Windows XP disponível em [como Visualizar e gerenciar logs de eventos no Visualizador de eventos no Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
@@ -88,7 +88,7 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
 |System|Log do aplicativo|Log de segurança|  
 |------------|---------------------|------------------|  
 |[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] ou posterior|Com suporte|Sem suporte|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] e Windows Vista|Com suporte|O contexto do thread deve ter `SeAuditPrivilege`|  
+|Windows Server 2003 SP1 e Windows Vista|Com suporte|O contexto do thread deve ter `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>Outros fatores  
  Além do sistema operacional, a tabela a seguir descreve outras configurações que controlam a habilitação do registro em log.  
@@ -98,7 +98,7 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
 |Gerenciamento de política de auditoria|{1&gt;Não aplicável.&lt;1}|Juntamente com a configuração, o log de segurança também é controlado pela política da autoridade de segurança local (LSA). A categoria "acesso ao objeto de auditoria" também deve ser habilitada.|  
 |Experiência do usuário padrão|Todos os usuários autenticados podem gravar no log do aplicativo, portanto, nenhuma etapa de permissão adicional é necessária para processos de aplicativo.|O processo do aplicativo (contexto) deve ter `SeAuditPrivilege`.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>

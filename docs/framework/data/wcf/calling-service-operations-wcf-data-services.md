@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: bc2338191bbf6922f56c833ebf115c5b21d92b00
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1b8a00c7716a60daec4e4f6af6ae8e3a7a45e943
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569307"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346170"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Chamando operações de serviço (WCF Data Services)
 O Protocolo Open Data (OData) define as operações de serviço para um serviço de dados. WCF Data Services permite que você defina operações como métodos no serviço de dados. Assim como outros recursos de serviço de dados, essas operações de serviço são endereçadas usando URIs. Uma operação de serviço pode retornar coleções de tipos de entidade, instâncias de tipo de entidade única e tipos primitivos, como inteiro e cadeia de caracteres. Uma operação de serviço também pode retornar `null` (`Nothing` em Visual Basic). A biblioteca de cliente WCF Data Services pode ser usada para acessar as operações de serviço que dão suporte a solicitações HTTP GET. Esses tipos de operações de serviço são definidos como métodos que têm o <xref:System.ServiceModel.Web.WebGetAttribute> aplicado. Para obter mais informações, consulte [operações de serviço](service-operations-wcf-data-services.md).  
@@ -32,7 +32,7 @@ O Protocolo Open Data (OData) define as operações de serviço para um serviço
   
 - Você não pode usar <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> para chamar uma operação GET Service que retorna um único resultado, de uma entidade ou tipo primitivo, ou que requer mais de um parâmetro de entrada. Em vez disso, você deve chamar o método <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>.  
   
-- Considere a criação de um método de extensão na classe parcial de <xref:System.Data.Services.Client.DataServiceContext> fortemente tipada, que é gerada pelas ferramentas, que usa o método <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> ou <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> para chamar uma operação de serviço. Isso permite que você chame operações de serviço diretamente do contexto. Para obter mais informações, consulte a postagem no blog [operações de serviço e o cliente de WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=215668).  
+- Considere a criação de um método de extensão na classe parcial de <xref:System.Data.Services.Client.DataServiceContext> fortemente tipada, que é gerada pelas ferramentas, que usa o método <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> ou <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> para chamar uma operação de serviço. Isso permite que você chame operações de serviço diretamente do contexto. Para obter mais informações, consulte a postagem no blog [operações de serviço e o cliente de WCF Data Services](https://blogs.msdn.microsoft.com/astoriateam/2010/05/26/service-operations-and-the-wcf-data-services-client/).  
   
 - Quando você usa <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> para chamar uma operação de serviço, a biblioteca de cliente automaticamente escapa os caracteres fornecidos para o <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> executando a codificação por porcentagem de caracteres reservados, como e comercial (&) e saída de aspas simples em cadeias de caractere. No entanto, ao chamar um dos métodos *Execute* para chamar uma operação de serviço, você deve se lembrar de executar essa saída de qualquer valor de cadeia de caracteres fornecido pelo usuário. As aspas simples em URIs têm escape como pares de aspas simples.  
   
@@ -124,6 +124,6 @@ O Protocolo Open Data (OData) define as operações de serviço para um serviço
  [!code-csharp[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#onasyncqueryexecutioncomplete)]
  [!code-vb[Astoria Northwind Client#OnAsyncQueryExecutionComplete](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#onasyncqueryexecutioncomplete)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [WCF Data Services Client Library](wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

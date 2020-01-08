@@ -2,18 +2,18 @@
 title: Como combinar e comparar coleções de cadeias de caracteres (LINQ)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: e9bc8a5f88585bd8625633c54796a1c658c7a7af
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348434"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337565"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>Como: combinar e comparar coleções de cadeias de caracteres (LINQ) (Visual Basic)
 
 Este exemplo mostra como mesclar arquivos que contêm linhas de texto e, em seguida, classificar os resultados. Especificamente, mostra como executar uma concatenação, uma união e uma interseção simples nos dois conjuntos de linhas de texto.
 
-### <a name="to-set-up-the-project-and-the-text-files"></a>Para configurar o projeto e os arquivos de texto
+## <a name="set-up-the-project-and-the-text-files"></a>Configurar o projeto e os arquivos de texto
 
 1. Copie esses nomes em um arquivo de texto chamado names1.txt e salve-o na sua pasta do projeto:
 
@@ -163,11 +163,11 @@ End Class
 ' 2 total names in list
 ```
 
-## <a name="compiling-the-code"></a>Compilando o Código
+## <a name="compile-the-code"></a>Compilar o código
 
-Crie um projeto de aplicativo de console do VB.NET, com uma instrução `Imports` para o namespace System. Linq.
+Crie um projeto de aplicativo de console Visual Basic. Adicione uma instrução `Imports` para o namespace System. Linq.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ e cadeias de caracteres (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ e diretórios de arquivos (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

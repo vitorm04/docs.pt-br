@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: 650b5eb6-c71d-4dc1-8b64-b6beaf752114
-ms.openlocfilehash: 0b75e9645f05e5e83ff76cc138ee37e90600769a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b6d49f20f72282ac2ce51c26fc4eb941b7ef6734
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569261"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346091"
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Provedor de Entity Framework (WCF Data Services)
-Assim como WCF Data Services, o Entity Framework ADO.NET é baseado no Modelo de Dados de Entidade, que é um tipo de modelo de relacionamento de entidade. O Entity Framework traduz as operações em relação a sua implementação do Modelo de Dados de Entidade, que é chamado de *modelo conceitual*, em operações equivalentes em relação a uma fonte de dados. Isso torna o Entity Framework um provedor ideal para serviços de dados que se baseiam em dados relacionais e qualquer banco de dados que tenha um provedor que ofereça suporte a Entity Framework pode ser usado com WCF Data Services. Para obter uma lista das fontes de dados que atualmente dão suporte à Entity Framework, consulte [provedores de terceiros para o Entity Framework](https://go.microsoft.com/fwlink/?LinkId=143699).  
+Assim como WCF Data Services, o Entity Framework ADO.NET é baseado no Modelo de Dados de Entidade, que é um tipo de modelo de relacionamento de entidade. O Entity Framework traduz as operações em relação a sua implementação do Modelo de Dados de Entidade, que é chamado de *modelo conceitual*, em operações equivalentes em relação a uma fonte de dados. Isso torna o Entity Framework um provedor ideal para serviços de dados que se baseiam em dados relacionais e qualquer banco de dados que tenha um provedor que ofereça suporte a Entity Framework pode ser usado com WCF Data Services. Para obter uma lista das fontes de dados que atualmente dão suporte à Entity Framework, consulte [provedores de Entity Framework](/ef/ef6/fundamentals/providers/).
   
  Em um modelo conceitual, o recipiente de entidade é a raiz do serviço. Você deve definir um modelo conceitual no Entity Framework antes de os dados serem expostos por um serviço de dados. Para obter mais informações, consulte [como criar um serviço de dados usando uma fonte de dados do ADO.NET Entity Framework](create-a-data-service-using-an-adonet-ef-data-wcf.md).  
   
@@ -20,7 +20,7 @@ Assim como WCF Data Services, o Entity Framework ADO.NET é baseado no Modelo de
   
  Para saber mais sobre o Entity Framework, consulte [Entity Framework visão geral](../adonet/ef/overview.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Provedores de Serviços de Dados](data-services-providers-wcf-data-services.md)
 - [Provedor de reflexão](reflection-provider-wcf-data-services.md)

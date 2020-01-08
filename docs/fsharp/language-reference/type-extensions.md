@@ -2,12 +2,12 @@
 title: Extensões de tipo
 description: Saiba como F# as extensões de tipo permitem adicionar novos membros a um tipo de objeto definido anteriormente.
 ms.date: 11/04/2019
-ms.openlocfilehash: d26d7b2b507f04e9cb68ade4c0409403643f74ba
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3e2c6971156bd562ed5d5428e6b7ffdc520c4cf5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978253"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341564"
 ---
 # <a name="type-extensions"></a>Extensões de tipo
 
@@ -98,7 +98,7 @@ As extensões opcionais não aparecem no tipo estendido quando examinadas por re
 
 Membros de extensão opcionais são compilados para membros estáticos para os quais a instância do objeto é passada implicitamente como o primeiro parâmetro. No entanto, eles atuam como se fossem membros de instância ou membros estáticos de acordo com o modo como eles são declarados.
 
-Os membros de extensão opcionais também não C# são visíveis para os consumidores do ou do VB. Eles só podem ser consumidos F# em outro código.
+Os membros de extensão opcionais também não C# são visíveis para os consumidores do ou Visual Basic. Eles só podem ser consumidos F# em outro código.
 
 ## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a>Limitação genérica de extensões de tipo intrínsecas e opcionais
 
@@ -166,7 +166,7 @@ As seguintes limitações também existem para extensões de tipo:
 
 Por fim, se existirem várias extensões de tipo intrínsecos para um tipo, todos os membros deverão ser exclusivos. Para extensões de tipo opcionais, os membros em extensões de tipo diferentes para o mesmo tipo podem ter os mesmos nomes. Os erros de ambiguidade ocorrem somente se o código do cliente abrir dois escopos diferentes que definem os mesmos nomes de membro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência da Linguagem F#](index.md)
 - [Membros](./members/index.md)

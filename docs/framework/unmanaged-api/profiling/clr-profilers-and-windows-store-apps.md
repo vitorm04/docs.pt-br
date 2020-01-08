@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: da5942f9a2138a536d158f75a6977d20bf31b41c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140392"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344765"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Criadores de perfil CLR e aplicativos da Windows Store
 
@@ -112,7 +112,7 @@ Em geral, os aplicativos da Windows Store só têm permissão para acessar um co
 
 ### <a name="startup-load"></a>Carga de inicialização
 
-Normalmente, em um aplicativo de área de trabalho, sua interface do usuário do profiler solicita uma carga de inicialização de sua DLL do criador de perfil inicializando um bloco de ambiente que contém as variáveis de ambiente de API de criação de perfil do CLR necessárias (ou seja, `COR_PROFILER`, `COR_ENABLE_PROFILING`e `COR_PROFILER_PATH`) e, em seguida, criar um novo processar com esse bloco de ambiente. O mesmo se aplica a aplicativos da Windows Store, mas os mecanismos são diferentes.
+Normalmente, em um aplicativo de área de trabalho, sua interface do usuário do profiler solicita uma carga de inicialização de sua DLL do criador de perfil inicializando um bloco de ambiente que contém as variáveis de ambiente de API de criação de perfil do CLR necessárias (ou seja, `COR_PROFILER`, `COR_ENABLE_PROFILING`e `COR_PROFILER_PATH`) e, em seguida, criar um novo processo com esse bloco de ambiente. O mesmo se aplica a aplicativos da Windows Store, mas os mecanismos são diferentes.
 
 **Não executar com privilégios elevados**
 
@@ -342,7 +342,7 @@ Ele está fora do escopo deste documento para entrar em detalhes sobre o que sã
 
 ### <a name="managed-and-non-managed-winmds"></a>WinMDs gerenciados e não gerenciados
 
-Se um desenvolvedor usar o Visual Studio para criar um novo projeto de componente Windows Runtime, uma compilação desse projeto produzirá um arquivo WinMD que descreve os metadados (as descrições de tipo das classes, interfaces, etc.) criados pelo desenvolvedor. Se esse projeto for um projeto de linguagem gerenciado escrito C# em ou VB, esse mesmo arquivo WinMD também conterá a implementação desses tipos (o que significa que ele contém todo o Il compilado a partir do código-fonte do desenvolvedor). Esses arquivos são conhecidos como arquivos WinMD gerenciados. Eles são interessantes, pois contêm tanto Windows Runtime metadados quanto a implementação subjacente.
+Se um desenvolvedor usar o Visual Studio para criar um novo projeto de componente Windows Runtime, uma compilação desse projeto produzirá um arquivo WinMD que descreve os metadados (as descrições de tipo das classes, interfaces, etc.) criados pelo desenvolvedor. Se esse projeto for um projeto de linguagem gerenciado escrito C# no ou Visual Basic, esse mesmo arquivo WinMD também conterá a implementação desses tipos (o que significa que ele contém todo o Il compilado do código-fonte do desenvolvedor). Esses arquivos são conhecidos como arquivos WinMD gerenciados. Eles são interessantes, pois contêm tanto Windows Runtime metadados quanto a implementação subjacente.
 
 Por outro lado, se um desenvolvedor cria um projeto de componente C++Windows Runtime para, uma compilação desse projeto produz um arquivo WinMD que contém apenas metadados e a implementação é compilada em uma DLL nativa separada. Da mesma forma, os arquivos WinMD que acompanham o SDK do Windows contêm apenas metadados, com a implementação compilada em DLLs nativas separadas que são fornecidas como parte do Windows.
 
@@ -364,7 +364,7 @@ Ao chamar o método [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getm
 
 ### <a name="modifying-metadata-from-winmds"></a>Modificando metadados de WinMDs
 
-Não há suporte para a modificação de metadados em WinMDs. Se você chamar o método [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) para um arquivo WinMD e especificar [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) no parâmetro `dwOpenFlags` ou solicitar uma interface de metadados gravável, como [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) falhará. Isso é de particular importância para os profileres de reescrita de IL, que precisam modificar metadados para dar suporte à sua instrumentação (por exemplo, para adicionar Refsdeassembly ou novos métodos). Portanto, você deve verificar o [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) primeiro (conforme discutido na seção anterior) e evitar que o solicite interfaces de metadados graváveis nesses módulos.
+Não há suporte para a modificação de metadados em WinMDs. Se você chamar o método [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) para um arquivo WinMD e especificar [ofWrite](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md) no parâmetro `dwOpenFlags` ou solicitar uma interface de metadados gravável, como [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md), [GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md) falhará. Isso é de particular importância para os profileres de reescrita de IL, que precisam modificar metadados para dar suporte à sua instrumentação (por exemplo, para adicionar Refsdeassembly ou novos métodos). Portanto, você deve verificar [COR_PRF_MODULE_WINDOWS_RUNTIME](cor-prf-module-flags-enumeration.md) primeiro (conforme discutido na seção anterior) e evitar que o solicite interfaces de metadados graváveis nesses módulos.
 
 ### <a name="resolving-assembly-references-with-winmds"></a>Resolvendo referências de assembly com WinMDs
 
@@ -378,11 +378,11 @@ O coletor de lixo e o heap gerenciado não são fundamentalmente diferentes em u
 
 Ao fazer a criação de perfil de memória, a DLL do criador de perfil normalmente cria um thread separado do qual chamar o método do [método ForceGC](icorprofilerinfo-forcegc-method.md) . Isso não é nada novo. Mas o que pode ser surpreendente é que o ato de fazer uma coleta de lixo dentro de um aplicativo da Windows Store pode transformar seu thread em um thread gerenciado (por exemplo, uma API de criação de perfil ThreadID será criada para esse thread).
 
-Para entender as consequências disso, é importante entender as diferenças entre chamadas síncronas e assíncronas, conforme definido pela API de criação de perfil do CLR. Observe que isso é muito diferente do conceito de chamadas assíncronas em aplicativos da Windows Store. Confira a postagem no blog [por que temos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) para obter mais informações.
+Para entender as consequências disso, é importante entender as diferenças entre chamadas síncronas e assíncronas, conforme definido pela API de criação de perfil do CLR. Observe que isso é muito diferente do conceito de chamadas assíncronas em aplicativos da Windows Store. Consulte a postagem de blog [por que temos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) para obter mais informações.
 
 O ponto relevante é que as chamadas feitas em threads criados por seu criador de perfil são sempre consideradas síncronas, mesmo que essas chamadas sejam feitas de fora de uma implementação de um dos métodos [ICorProfilerCallback](icorprofilercallback-interface.md) da dll do criador de perfil. Pelo menos, isso costumava ser o caso. Agora que o CLR transformou o thread do criador de perfil em um thread gerenciado devido à sua chamada para o [método ForceGC](icorprofilerinfo-forcegc-method.md), esse thread não é mais considerado o thread do criador de perfil. Assim, o CLR impõe uma definição mais estrita do que é qualificado como síncrono para esse thread – ou seja, uma chamada deve se originar de dentro de um dos métodos [ICorProfilerCallback](icorprofilercallback-interface.md) da dll do criador de perfil para se qualificar como síncrona.
 
-O que isso significa na prática? A maioria dos métodos de [ICorProfilerInfo](icorprofilerinfo-interface.md) só é segura para ser chamada de forma síncrona e, caso contrário, falhará imediatamente. Portanto, se a DLL do criador de perfil reutilizasse seu thread do [método ForceGC](icorprofilerinfo-forcegc-method.md) para outras chamadas normalmente feitas em threads criados pelo criador de perfil (por exemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), você terá problemas . Até mesmo uma função assíncrona segura, como o [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , tem regras especiais quando chamada de threads gerenciados. (Consulte a postagem de blog [pilha do criador de perfil: Noções básicas e além](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) de mais informações.)
+O que isso significa na prática? A maioria dos métodos de [ICorProfilerInfo](icorprofilerinfo-interface.md) só é segura para ser chamada de forma síncrona e, caso contrário, falhará imediatamente. Portanto, se a DLL do criador de perfil reutilizasse seu thread do [método ForceGC](icorprofilerinfo-forcegc-method.md) para outras chamadas normalmente feitas em threads criados pelo criador de perfil (por exemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), você terá problemas. Até mesmo uma função assíncrona segura, como o [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , tem regras especiais quando chamada de threads gerenciados. (Consulte a postagem de blog [pilha do criador de perfil: Noções básicas e além](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) de mais informações.)
 
 Portanto, é recomendável que qualquer thread que sua DLL do criador de perfil crie para chamar o [método ForceGC](icorprofilerinfo-forcegc-method.md) deve ser usado *apenas* com a finalidade de disparar GCS e, em seguida, responder aos retornos de chamada do GC. Ele não deve chamar a API de criação de perfil para executar outras tarefas, como amostragem de pilha ou desanexação.
 

@@ -2,14 +2,15 @@
 title: Windows Communication Foundation para enfileiramento de mensagens
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 1cbc1251a8e4eaaaf4b47357851dd681ae326f25
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 2e37a6efac6b979645b2dbb338b64f698b3b97e0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715055"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344607"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation para enfileiramento de mensagens
+
 Este exemplo demonstra como um aplicativo Windows Communication Foundation (WCF) pode enviar uma mensagem para um aplicativo de enfileiramento de mensagens (MSMQ). O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas. O serviço e o cliente não precisam estar em execução ao mesmo tempo.
 
  O serviço recebe mensagens da fila e processa os pedidos. O serviço cria uma fila transacional e configura um manipulador de mensagens recebidas de mensagem, como mostrado no código de exemplo a seguir.
@@ -130,50 +131,50 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  Quando você executa o exemplo, as atividades de cliente e serviço são exibidas nas janelas do console do cliente e do serviço. Você pode ver o serviço receber mensagens do cliente. Pressione ENTER em cada janela do console para desligar o serviço e o cliente. Observe que, como o enfileiramento está em uso, o cliente e o serviço não precisam estar em funcionamento ao mesmo tempo. Por exemplo, você pode executar o cliente, desligá-lo e, em seguida, iniciar o serviço e ele ainda receberia suas mensagens.
 
 > [!NOTE]
-> Este exemplo requer a instalação do serviço de enfileiramento de mensagens. Consulte as instruções de instalação no [enfileiramento de mensagens](https://go.microsoft.com/fwlink/?LinkId=94968).  
-  
-### <a name="to-setup-build-and-run-the-sample"></a>A configuração, compilação, e executar o exemplo  
-  
-1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-2. Se o serviço for executado primeiro, ele verificará se a fila está presente. Se a fila não estiver presente, o serviço criará uma. Você pode executar o serviço primeiro para criar a fila ou pode criar um por meio do Gerenciador de filas MSMQ. Siga estas etapas para criar uma fila no Windows 2008.  
-  
-    1. Abra Gerenciador do Servidor no Visual Studio 2012.  
-  
-    2. Expanda a guia **recursos** .  
-  
-    3. Clique com o botão direito do mouse em **filas de mensagens particulares**e selecione **nova** **fila privada**.  
-  
-    4. Marque a caixa **transacional** .  
-  
-    5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.  
-  
-3. Para compilar a C# edição do ou Visual Basic .NET da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-  
-4. Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
-  
-### <a name="to-run-the-sample-across-computers"></a>Para executar o exemplo entre computadores  
-  
-1. Copie os arquivos de programa do serviço da pasta \service\bin\, na pasta específica do idioma, para o computador do serviço.  
-  
-2. Copie os arquivos de programas do cliente da pasta \client\bin\, na pasta específica do idioma, para o computador cliente.  
-  
-3. No arquivo client. exe. config, altere o endereço do ponto de extremidade do cliente para especificar o nome do computador de serviço em vez de ".".  
-  
-4. No computador do serviço, inicie o Service. exe em um prompt de comando.  
-  
-5. No computador cliente, inicie o Client. exe em um prompt de comando.  
-  
+> Este exemplo requer a instalação do serviço de enfileiramento de mensagens. Consulte as instruções de instalação no [enfileiramento de mensagens](https://go.microsoft.com/fwlink/?LinkId=94968).
+
+## <a name="set-up-build-and-run-the-sample"></a>Configurar, compilar e executar o exemplo
+
+1. Verifique se você executou o [procedimento de configuração única para os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+
+2. Se o serviço for executado primeiro, ele verificará se a fila está presente. Se a fila não estiver presente, o serviço criará uma. Você pode executar o serviço primeiro para criar a fila ou pode criar um por meio do Gerenciador de filas MSMQ. Siga estas etapas para criar uma fila no Windows 2008.
+
+    1. Abra Gerenciador do Servidor no Visual Studio 2012.
+
+    2. Expanda a guia **recursos** .
+
+    3. Clique com o botão direito do mouse em **filas de mensagens particulares**e selecione **nova** > **fila particular**.
+
+    4. Marque a caixa **transacional** .
+
+    5. Insira `ServiceModelSamplesTransacted` como o nome da nova fila.
+
+3. Para criar a C# edição ou Visual Basic da solução, siga as instruções em [criando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+
+4. Para executar o exemplo em uma configuração de computador único, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).
+
+## <a name="run-the-sample-across-computers"></a>Executar o exemplo entre computadores
+
+1. Copie os arquivos de programa do serviço da pasta \service\bin\, na pasta específica do idioma, para o computador do serviço.
+
+2. Copie os arquivos de programas do cliente da pasta \client\bin\, na pasta específica do idioma, para o computador cliente.
+
+3. No arquivo client. exe. config, altere o endereço do ponto de extremidade do cliente para especificar o nome do computador de serviço em vez de ".".
+
+4. No computador do serviço, inicie o Service. exe em um prompt de comando.
+
+5. No computador cliente, inicie o Client. exe em um prompt de comando.
+
 > [!IMPORTANT]
-> Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.  
->   
-> `<InstallDrive>:\WF_WCF_Samples`  
->   
-> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.  
->   
-> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
-  
-## <a name="see-also"></a>Consulte também
+> Os exemplos podem mais ser instalados no seu computador. Verifique o seguinte diretório (padrão) antes de continuar.
+>
+> `<InstallDrive>:\WF_WCF_Samples`
+>
+> Se esse diretório não existir, vá para [Windows Communication Foundation (WCF) e exemplos de Windows Workflow Foundation (WF) para .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459) para baixar todas as Windows Communication Foundation (WCF) e [!INCLUDE[wf1](../../../../includes/wf1-md.md)] amostras. Este exemplo está localizado no seguinte diretório.
+>
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`
+
+## <a name="see-also"></a>Veja também
 
 - [Como trocar mensagens com pontos de extremidade do WCF e aplicativos de enfileiramento de mensagens](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [Enfileiramento de mensagens](https://go.microsoft.com/fwlink/?LinkId=94968)

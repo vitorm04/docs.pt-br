@@ -1,5 +1,5 @@
 ---
-title: Tipos de valor anulável-Visual Basic
+title: Tipos de valor que permitem valor nulo
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Nullable
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 1fb8f8d1657b8eab6b15858c2a6607cbde82e542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0d259e11a969f4eb7e64626a4adf498db06ece06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73732930"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347832"
 ---
 # <a name="nullable-value-types-visual-basic"></a>Tipos de valor que permitem valor nulo (Visual Basic)
 
@@ -105,7 +105,7 @@ Se um ou ambos os operandos tiverem um valor de `Nothing`, o resultado será `No
 
 Um banco de dados é um dos lugares mais importantes para usar tipos anuláveis. Nem todos os objetos de banco de dados dão suporte a tipos anuláveis atualmente, mas os adaptadores de tabela gerados pelo designer fazem. Consulte [suporte do TableAdapter para tipos anuláveis](/visualstudio/data-tools/fill-datasets-by-using-tableadapters#tableadapter-support-for-nullable-types).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>

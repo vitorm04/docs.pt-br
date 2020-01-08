@@ -3,7 +3,7 @@
 - name: Visão geral
   expanded: true
   items:
-    - name: O que é o Apache Spark?
+    - name: O que é Apache Spark?
       href: what-is-spark.md
     - name: O que é o .NET para o Apache Spark?
       href: what-is-apache-spark-dotnet.md
@@ -17,7 +17,9 @@
       href: tutorials/amazon-emr-spark-deployment.md
     - name: Implantar no Databricks
       href: tutorials/databricks-deployment.md
-    - name: Fluxo estruturado
+    - name: Processamento em lotes
+      href: tutorials/batch-processing.md
+    - name: Streaming estruturado
       href: tutorials/streaming.md
 - name: Guias de instruções
   items:

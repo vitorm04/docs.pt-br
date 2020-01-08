@@ -7,12 +7,12 @@ helpviewer_keywords:
 - API calls [Visual Basic], platform invoke
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
-ms.openlocfilehash: 6f3c53243d7aeb73be81796d5ca185c3a3c41c72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9de9f0fbcca291af0b6aadfd8e3fe7033708fbc6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348710"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347539"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>Como chamar APIs do Windows (Visual Basic)
 Este exemplo define e chama a função `MessageBox` no user32. dll e, em seguida, passa uma cadeia de caracteres para ela.  
@@ -20,7 +20,7 @@ Este exemplo define e chama a função `MessageBox` no user32. dll e, em seguida
 ## <a name="example"></a>Exemplo  
  [!code-vb[VbVbalrInterop#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compile-the-code"></a>Compilar o código  
  Este exemplo requer:  
   
 - Uma referência ao namespace <xref:System>.  
@@ -34,7 +34,7 @@ Este exemplo define e chama a função `MessageBox` no user32. dll e, em seguida
   
 - O tipo recipiente foi criado anteriormente usando `CreateType`. (<xref:System.InvalidOperationException>)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Um olhar detalhado sobre invocação de plataforma](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [Exemplos de invocação de plataforma](../../../framework/interop/platform-invoke-examples.md)

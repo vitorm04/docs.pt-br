@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 05a39388e8aa9681af60cf86a3df8346d744b69e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 293537ad33c8e751d49d820fc57ea525e68bc203
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345308"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347773"
 ---
 # <a name="lifetime-in-visual-basic"></a>Tempo de vida no Visual Basic
 O tempo de *vida* de um elemento declarado é o período durante o qual ele está disponível para uso. As variáveis são os únicos elementos que têm tempo de vida. Para essa finalidade, o compilador trata os parâmetros de procedimento e a função retorna como casos especiais de variáveis. O tempo de vida de uma variável representa o período durante o qual ele pode conter um valor. Seu valor pode mudar ao longo de seu tempo de vida, mas sempre tem algum valor.  
@@ -65,13 +65,13 @@ O tempo de *vida* de um elemento declarado é o período durante o qual ele est�
   
  Se `applesSold` tiver sido declarado sem usar `Static`, os valores acumulados anteriores não seriam preservados entre chamadas para `runningTotal`. Na próxima vez que `runningTotal` for chamado, o `applesSold` teria sido recriado e inicializado como 0, e `runningTotal` teria simplesmente retornado o mesmo valor com o qual foi chamado.  
   
-### <a name="compiling-the-code"></a>Compilando o Código  
+### <a name="compile-the-code"></a>Compilar o código  
  Você pode inicializar o valor de uma variável local estática como parte de sua declaração. Se você declarar uma matriz a ser `Static`, poderá inicializar sua classificação (número de dimensões), o comprimento de cada dimensão e os valores dos elementos individuais.  
   
 ### <a name="security"></a>Segurança  
  No exemplo anterior, você pode produzir o mesmo tempo de vida declarando `applesSold` em nível de módulo. Se você alterou o escopo de uma variável dessa forma, no entanto, o procedimento não teria mais acesso exclusivo a ele. Como outros procedimentos podem acessar `applesSold` e alterar seu valor, o total acumulado poderia ser não confiável e o código poderia ser mais difícil de manter.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compartilhado](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)

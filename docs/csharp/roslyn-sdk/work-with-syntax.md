@@ -3,12 +3,12 @@ title: Usar o modelo de sintaxe do SDK do .NET Compiler Platform
 description: Esta visão geral fornece uma compreensão dos tipos usados para entender e manipular nós de sintaxe.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 940d2756ef7735ee96d38d0286f99fadf7b81dc6
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 2cfd3c8bc8f47421c7992f7fea28c7b156450147
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774097"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346923"
 ---
 # <a name="work-with-syntax"></a>Trabalhar com sintaxe
 
@@ -35,7 +35,7 @@ Nós de sintaxe são um dos elementos principais das árvores de sintaxe. Esses 
 
 Todos os nós de sintaxe são nós não terminais na árvore de sintaxe, o que significa que eles sempre têm outros nós e tokens como filhos. Como filho de outro nó, cada nó tem um nó pai que pode ser acessado por meio da propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType>. Como os nós e as árvores são imutáveis, o pai de um nó nunca é alterado. A raiz da árvore tem um pai nulo.
 
-Cada nó tem um método <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, que retorna uma lista de nós filho em ordem sequencial com base em sua posição no texto de origem. Essa lista não contém tokens. Cada nó também tem métodos para examinar descendentes, como <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A> ou <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>-que representam uma lista de todos os nós, tokens ou Trívia que existem na subárvore com raiz por esse nó.
+Cada nó tem um método <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType>, que retorna uma lista de nós filho em ordem sequencial com base em sua posição no texto de origem. Essa lista não contém tokens. Cada nó também tem métodos para examinar descendentes, como <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>, <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>ou <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A>-que representam uma lista de todos os nós, tokens ou Trívia que existem na subárvore com raiz por esse nó.
 
 Além disso, cada subclasse de nó de sintaxe expõe os mesmos filhos por meio de propriedades fortemente tipadas. Por exemplo, uma classe de nó <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> tem três propriedades adicionais específicas aos operadores binários: <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right>. O tipo de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> é <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax> e o tipo de <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> é <xref:Microsoft.CodeAnalysis.SyntaxToken>.
 
@@ -85,13 +85,13 @@ O nó de instrução dentro do bloco tem um intervalo indicado pelas barras vert
 
 ## <a name="kinds"></a>Variantes
 
-Cada nó, token ou desafio tem uma propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, do tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica o elemento de sintaxe exato representado. Esse valor pode ser convertido em uma enumeração específica a uma linguagem; cada linguagem, C# ou VB, tem uma única enumeração `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que lista todos os possíveis elementos de nós, tokens e desafios na gramática. Esta conversão pode ser feita automaticamente acessando os métodos de extensão <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Cada nó, token ou desafio tem uma propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, do tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica o elemento de sintaxe exato representado. Esse valor pode ser convertido em uma enumeração específica a um idioma. Cada idioma, C# ou Visual Basic, tem uma única enumeração de `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que lista todos os nós, tokens e elementos Trívia possíveis na gramática. Esta conversão pode ser feita automaticamente acessando os métodos de extensão <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
 
 A propriedade <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite a desambiguidade fácil de tipos de nó de sintaxe que compartilham a mesma classe de nó. Para tokens e desafios, essa propriedade é a única maneira de diferenciar um tipo de elemento de outro.
 
 Por exemplo, uma única classe <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> tem <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> como filhos. A propriedade <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> distingue se ela é um tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> ou <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> de nó de sintaxe.
 
-## <a name="errors"></a>Erros
+## <a name="errors"></a>Erros do
 
 Mesmo quando o texto de origem contém erros de sintaxe, uma árvore de sintaxe completa com ida e volta para a origem é exposta. Quando o analisador encontra um código que não está em conformidade com a sintaxe definida da linguagem, ele usa uma das duas técnicas para criar uma árvore de sintaxe.
 

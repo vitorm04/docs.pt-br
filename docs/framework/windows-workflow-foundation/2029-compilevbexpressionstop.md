@@ -2,28 +2,28 @@
 title: 2029 - CompileVbExpressionStop
 ms.date: 03/30/2017
 ms.assetid: f0752c88-61f9-4579-81a1-d804fbc000a9
-ms.openlocfilehash: 2329434cd29bef1ad751fba9c2a3d44c646cdb54
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07e6843e17d832cb1ed9e6005c52d0c543de4b42
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61755669"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347959"
 ---
 # <a name="2029---compilevbexpressionstop"></a>2029 - CompileVbExpressionStop
-## <a name="properties"></a>Propriedades  
+## <a name="properties"></a>{1&gt;Propriedades&lt;1}  
   
 |||  
 |-|-|  
 |ID|2029|  
 |Palavras-chave|WFRuntime|  
-|Nível|Detalhado|  
+|Nível|Verboso|  
 |Canal|Os aplicativos de servidor de Microsoft-Windows- aplicativo/depuração|  
   
 ## <a name="description"></a>Descrição  
- Indica a conclusão de uma compilação da expressão de VB.  
+ Indica a conclusão de uma compilação de Visual Basic expressão.  
   
 ## <a name="message"></a>Mensagem  
- Compilação da expressão do VB concluída.  
+ Concluída a compilação de Visual Basic expressão.  
   
 ## <a name="details"></a>Detalhes  
   

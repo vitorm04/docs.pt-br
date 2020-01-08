@@ -1,5 +1,7 @@
 - name: Bem-vindo
   href: welcome.md
+- name: Novidades nos documentos do .NET
+  href: whats-new/index.yml
 - name: Guia do .NET
   href: standard/
 - name: Guia do .NET Core
@@ -8,7 +10,7 @@
   href: framework/
 - name: Guia de área de trabalho do .NET – WPF
   href: desktop-wpf/
-- name: 'Guia C#'
+- name: 'Guia do C#'
   href: csharp/index.yml
 - name: 'Guia do F#'
   href: fsharp/index.yml

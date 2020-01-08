@@ -1,15 +1,15 @@
 ---
-title: Como consultar caracteres em uma cadeia de caracteres (LINQ) (C#)
+title: Como consultar os caracteres em uma cadeia de caracteres (LINQ)C#()
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: bc72c4370ff408a60f48aa020a16dae7f48f702a
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140965"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345676"
 ---
-# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Como consultar caracteres em uma cadeia de caracteres (LINQ) (C#)
+# <a name="how-to-query-for-characters-in-a-string-linq-c"></a>Como consultar os caracteres em uma cadeia de caracteres (LINQ)C#()
 Já que a classe <xref:System.String> implementa a interface <xref:System.Collections.Generic.IEnumerable%601> genérica, qualquer cadeia de caracteres pode ser consultada como uma sequência de caracteres. No entanto, esse não é um uso comum da LINQ. Para operações de correspondência de padrões complexas, use a classe <xref:System.Text.RegularExpressions.Regex>.  
   
 ## <a name="example"></a>Exemplo  
@@ -54,10 +54,10 @@ class QueryAString
 */  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
  Criar um projeto de aplicativo de console em C# com diretivas `using` para os namespaces System.Linq e System.IO.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ e cadeias de caracteres (C#)](./linq-and-strings.md)
 - [Como combinar consultas LINQ com expressões regulares (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

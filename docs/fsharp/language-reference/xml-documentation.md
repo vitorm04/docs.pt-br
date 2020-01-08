@@ -1,13 +1,13 @@
 ---
-title: Documentação XML (F#)
+title: Documentação XML
 description: Saiba mais sobre o F# suporte no para gerar documentação de comentários.
 ms.date: 05/16/2016
-ms.openlocfilehash: b89ab4117f4dd71126f8e203f4a5271ab3c30021
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: 0a87915c361fc88f0c05264e1c17278fd656a167
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68630825"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344685"
 ---
 # <a name="xml-documentation"></a>Documentação XML
 
@@ -26,15 +26,15 @@ Há duas maneiras de escrever comentários de documentação XML. Uma delas é a
 |Sintaxe de marca|Descrição|
 |----------|-----------|
 |**\<c\>** _text_ **\</c\>**|Especifica que o *texto* é o código. Essa marca pode ser usada por geradores de documentação para exibir texto em uma fonte apropriada para o código.|
-|/Summary de textode resumo **\> \<** **\<\>**|Especifica que o *texto* é uma breve descrição do elemento Program. A descrição geralmente é uma ou duas frases.|
-|/Remarks de textode comentários **\> \<** **\<\>**|Especifica que o *texto* contém informações suplementares sobre o elemento Program.|
-|**\>**  **param\<Name = "** Name"**Descrição/param\<\>**|Especifica o nome e a descrição de um parâmetro de função ou método.|
-|**\>**  **typeparam\<Name = "** Name"**Descrição/typeparam\<\>**|Especifica o nome e a descrição de um parâmetro de tipo.|
-| **retorna\</Returns\>** de**texto\<\>**|Especifica que o *texto* descreve o valor de retorno de uma função ou método.|
+|**\<resumo\>** _texto_ **\</Summary\>**|Especifica que o *texto* é uma breve descrição do elemento Program. A descrição geralmente é uma ou duas frases.|
+|**\<comentários\>** _texto_ **\</Remarks\>**|Especifica que o *texto* contém informações suplementares sobre o elemento Program.|
+|**\<param Name = "** _Name_ **"\>** _Descrição_ **\</param\>**|Especifica o nome e a descrição de um parâmetro de função ou método.|
+|**\<typeparam Name = "** _Name_ **"\>** _Descrição_ **\</typeparam\>**|Especifica o nome e a descrição de um parâmetro de tipo.|
+|**\<retorna\>** _texto_ **\</Returns\>**|Especifica que o *texto* descreve o valor de retorno de uma função ou método.|
 |**\<exception cref="** _type_ **"\>** _description_ **\</exception\>**|Especifica o tipo de exceção que pode ser gerado e as circunstâncias sob as quais ela é gerada.|
-|**\>**  **consulte\<cref = "** Reference"**Text/See\<\>**|Especifica um link embutido para outro elemento de programa. A *referência* é o nome que aparece no arquivo de documentação XML. O *texto* é o texto mostrado no link.|
+|**\<ver cref = "** _referência_ **"\>** _texto_ **\</See\>**|Especifica um link embutido para outro elemento de programa. A *referência* é o nome que aparece no arquivo de documentação XML. O *texto* é o texto mostrado no link.|
 |**\<seealso cref="** _reference_ **"/\>**|Especifica um link consulte também a documentação de outro tipo. A *referência* é o nome que aparece no arquivo de documentação XML. Consulte também os links geralmente aparecem na parte inferior de uma página de documentação.|
-|/para de textopara  **\<\>** **\<\>**|Especifica um parágrafo de texto. Isso é usado para separar o texto dentro da marca de **comentários** .|
+|texto do **\<\>** **\</para\>**|Especifica um parágrafo de texto. Isso é usado para separar o texto dentro da marca de **comentários** .|
 
 ## <a name="example"></a>Exemplo
 
@@ -56,7 +56,7 @@ O exemplo a seguir mostra o método alternativo, sem marcas XML. Neste exemplo, 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet7102.fs)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência da Linguagem F#](index.md)
 - [Opções do Compilador](compiler-options.md)

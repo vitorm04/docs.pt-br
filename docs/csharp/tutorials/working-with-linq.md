@@ -4,42 +4,42 @@ description: Este tutorial ensina a gerar sequências com LINQ, escrever método
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b25cd1763511f460537bccaf6011a3d23390ea72
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039168"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345619"
 ---
-# <a name="working-with-linq"></a>Trabalhando com LINQ
+# <a name="work-with-language-integrated-query-linq"></a>Trabalhar com consulta integrada à linguagem (LINQ)
 
 ## <a name="introduction"></a>Introdução
 
-Este tutorial ensina os recursos no .NET Core e da linguagem C#. Você aprenderá:
+Este tutorial ensina os recursos no .NET Core e da linguagem C#. Você aprenderá a:
 
-- Como gerar sequências com LINQ.
-- Como escrever métodos que podem ser facilmente usados em consultas LINQ.
-- Como distinguir entre uma avaliação lenta e uma detalhada.
+- Gerar sequências com LINQ.
+- Métodos de gravação que podem ser facilmente usados em consultas LINQ.
+- Distinguir entre a avaliação rápida e lenta.
 
 Você aprenderá essas técnicas ao compilar um aplicativo que demonstra uma das habilidades básicas de qualquer mágico: o [embaralhamento faro](https://en.wikipedia.org/wiki/Faro_shuffle). Em resumo, um embaralhamento faro é uma técnica em que você divide um baralho de cartas exatamente na metade, então as cartas de cada metade são colocadas em ordem aleatória até recriar o conjunto original.
 
 Os mágicos usam essa técnica porque cada carta é fica em um local conhecido após o embaralhamento e a ordem é um padrão de repetição.
 
-Para os seus propósitos, vamos examinar rapidamente as sequências de manipulação de dados. O aplicativo que você criará construirá um baralho de cartas e, em seguida, executará uma sequência de embaralhamento, sempre gravando a sequência de saída. Você também comparará a ordem atualizada com a ordem original.
+Para os seus propósitos, vamos examinar rapidamente as sequências de manipulação de dados. O aplicativo que você criar construirá um baralho e, em seguida, executará uma sequência de embaralhamentos, gravando a sequência a cada vez. Você também comparará a ordem atualizada com a ordem original.
 
 Este tutorial tem várias etapas. Após cada etapa, você poderá executar o aplicativo e ver o progresso. Você também poderá ver o [exemplo concluído](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) no repositório dotnet/samples do GitHub. Para obter instruções de download, consulte [Exemplos e tutoriais](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
-Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [download do .NET Core](https://dotnet.microsoft.com/download) . Você pode executar esse aplicativo no Windows, Ubuntu Linux, OS X ou em um contêiner do Docker. Você precisará instalar o editor de código de sua preferência. As descrições a seguir usam o [Visual Studio Code](https://code.visualstudio.com/), que é uma software livre, no editor de plataforma. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
+Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [download do .NET Core](https://dotnet.microsoft.com/download) . Você pode executar esse aplicativo no Windows, Ubuntu Linux ou OS X ou em um contêiner do Docker. Será necessário instalar o editor de código de sua preferência. As descrições abaixo usam [Visual Studio Code](https://code.visualstudio.com/) que é um editor de plataforma cruzada de software livre. No entanto, você pode usar quaisquer ferramentas que esteja familiarizado.
 
-## <a name="create-the-application"></a>Criar o aplicativo
+## <a name="create-the-application"></a>{1&gt;Criar o aplicativo&lt;1}
 
 A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o comando `dotnet new console` no prompt de comando. Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico.
 
 Se você nunca usou C# antes, [este tutorial](console-teleprompter.md) explicará a estrutura de um programa C#. Você pode ler e, em seguida, voltar aqui para saber mais sobre o LINQ.
 
-## <a name="creating-the-data-set"></a>Criando o arquivo de dados
+## <a name="create-the-data-set"></a>Criar o conjunto de dados
 
 Antes de começar, verifique se as linhas a seguir estão na parte superior do arquivo `Program.cs` gerado pelo `dotnet new console`:
 
@@ -118,7 +118,7 @@ Vá em frente e execute o exemplo que você criou neste momento. Ele exibirá to
 
 ![Uma janela de console mostrando o aplicativo gravando 52 cartas.](./media/working-with-linq/console-52-card-application.png)
 
-## <a name="manipulating-the-order"></a>Manipulando a ordem
+## <a name="manipulate-the-order"></a>Manipular o pedido
 
 Em seguida, concentre-se em como você vai embaralhar as cartas no baralho. A primeira etapa de qualquer embaralhada é dividir o baralho em dois. Os métodos <xref:System.Linq.Enumerable.Take%2A> e <xref:System.Linq.Enumerable.Skip%2A> que fazem parte das APIs do LINQ fornecem esse recurso para você. Coloque-os sob o loop `foreach`:
 
@@ -351,8 +351,8 @@ Além do LINQ, você aprendeu um pouco sobre uma técnica usada por mágicos par
 Para saber mais sobre o LINQ, consulte:
 
 - [LINQ (Consulta Integrada à Linguagem)](../programming-guide/concepts/linq/index.md)
-  - [Introdução ao LINQ](../programming-guide/concepts/linq/index.md)
-  - [Operações de consulta LINQ básica (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-  - [Transformações de dados com LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-  - [Sintaxe de consulta e sintaxe de método em LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-  - [Recursos do C# que dão suporte a LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)
+- [Introdução ao LINQ](../programming-guide/concepts/linq/index.md)
+- [Operações de consulta LINQ básica (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+- [Transformações de dados com LINQ (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+- [Sintaxe de consulta e sintaxe de método em LINQ (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+- [Recursos do C# que dão suporte a LINQ](../programming-guide/concepts/linq/features-that-support-linq.md)

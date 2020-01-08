@@ -2,12 +2,12 @@
 title: Cenários sem suporte
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 67a4e64208e00f9124b3cdc53d743c060274dac2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 87c0d9984fe823eae0e3cc281ebda55bc33a541e
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837968"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75544798"
 ---
 # <a name="unsupported-scenarios"></a>Cenários sem suporte
 Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte a alguns cenários de segurança específicos. Por exemplo, [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition não implementa os protocolos de autenticação SSPI ou Kerberos e, portanto, o WCF não dá suporte à execução de um serviço com a autenticação do Windows nessa plataforma. Há suporte para outros mecanismos de autenticação, como nome de usuário/senha e autenticação integrada de HTTP/HTTPS ao executar o WCF no Windows XP Home Edition.  
@@ -62,7 +62,7 @@ Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte
  A criptografia AES compatível com FIPS não funciona em retornos de chamada duplex na representação do nível de identificação.  
   
 ### <a name="cngksp-certificates"></a>Certificados CNG/KSP  
- *CRYPTOGRAPHY API: CNG (próxima geração)* é a substituição de longo prazo para o CryptoAPI. Essa API está disponível em código não gerenciado no Windows Vista, [!INCLUDE[lserver](../../../../includes/lserver-md.md)] e versões posteriores do Windows.  
+ *CRYPTOGRAPHY API: CNG (próxima geração)* é a substituição de longo prazo para o CryptoAPI. Essa API está disponível em código não gerenciado no Windows Vista, no Windows Server 2008 e em versões posteriores do Windows.  
   
  .NET Framework 4.6.1 e versões anteriores não dão suporte a esses certificados porque usam o CryptoAPI herdado para manipular certificados CNG/KSP. O uso desses certificados com .NET Framework 4.6.1 e versões anteriores causará uma exceção.  
   
@@ -108,7 +108,7 @@ Por vários motivos, Windows Communication Foundation (WCF) não oferece suporte
   
  A correção é modificar a associação diretamente no cliente depois de fazer a importação.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Considerações sobre segurança](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [Divulgação de informações](../../../../docs/framework/wcf/feature-details/information-disclosure.md)

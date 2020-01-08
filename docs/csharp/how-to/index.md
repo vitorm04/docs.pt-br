@@ -2,26 +2,26 @@
 title: Artigos de instruções (Guia de C#)
 description: Uma coleção de dicas rápidas e exemplos de código curtos e focados
 ms.date: 12/20/2017
-ms.openlocfilehash: 855ea90d22174c2b7c0b53a526c47a5edbe5496d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e6cb657726b82a1710bbcd596fe48037b5c26352
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736879"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75339213"
 ---
 # <a name="how-to-c"></a>Instruções (C#)
 
-Na seção de Instruções do guia de C#, é possível encontrar respostas rápidas para perguntas comuns. Em alguns casos, os artigos podem ser listados em várias seções. Queremos facilitar que sejam localizados por vários caminhos de pesquisa.
+Na seção como do C# guia, você pode encontrar respostas rápidas para perguntas comuns. Em alguns casos, os artigos podem ser listados em várias seções. Queremos facilitar que sejam localizados por vários caminhos de pesquisa.
 
 ## <a name="general-c-concepts"></a>Conceitos gerais de C#
 
-Há vários truques e dicas que são práticas comuns do desenvolvedor de C#.
+Há várias dicas e truques que são práticas de C# desenvolvedor comuns:
 
 - [Inicializar objetos usando um inicializador de objeto](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [Aprenda as diferenças entre passar um struct e uma classe para um método](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Use a sobrecarga de operador](../language-reference/operators/operator-overloading.md).
 - [Implemente e chame um método de extensão personalizado](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
-- Até os programadores de C# podem querer [usar o `My`namespace do VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
+- Mesmo C# os programadores podem querer [usar o namespace `My` da Visual Basic](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Crie um novo método para um tipo `enum` usando métodos de extensão](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
 
 ### <a name="class-and-struct-members"></a>Membros de classe e struct

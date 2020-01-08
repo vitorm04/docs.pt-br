@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: cf2abd460dcf19346d9efb41e9a5ccef99120fbb
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 45b710c3b2d1647e1bf7e57b30a96192abb9d788
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837058"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345057"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 Define um transporte TCP que pode ser usado por um canal para transferir mensagens para uma associação personalizada.  
@@ -62,7 +62,7 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
 |maxPendingConnections|Obtém ou define o número máximo de conexões aguardando a expedição no serviço.|  
 |maxReceivedMessageSize|Obtém e define o tamanho máximo de mensagem permitido que pode ser recebido.|  
 |portSharingEnabled|Um valor booliano que especifica se o compartilhamento de porta TCP está habilitado para esta conexão. Se isso for `false`, cada associação usará sua própria porta exclusiva. O padrão é `false`.<br /><br /> Essa configuração é relevante apenas para serviços do. Os clientes não são afetados.<br /><br /> O uso dessa configuração requer a habilitação do serviço de compartilhamento de porta TCP Windows Communication Foundation (WCF) alterando seu tipo de inicialização para manual ou automático|  
-|teredoEnabled|Um valor booliano que especifica se Teredo (uma tecnologia para endereçar clientes que estão atrás de firewalls) está habilitado. O padrão é `false`.<br /><br /> Essa propriedade habilita a Teredo para o soquete TCP subjacente. Para obter mais informações, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Essa propriedade é aplicável somente em [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e [!INCLUDE[ws2003](../../../../../includes/ws2003-md.md)]. O Windows Vista tem uma opção de configuração de todo o computador para Teredo, portanto, ao executar o vista, essa propriedade é ignorada. O Teredo requer que o cliente e as máquinas de serviço tenham a pilha do Microsoft IPv6 instalada e configurada corretamente para uso de Teredo. Para obter mais informações sobre como configurar o Teredo, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Para obter mais informações, consulte [Windows Server 2003 Technology Centers](https://go.microsoft.com/fwlink/?LinkId=49888).|  
+|teredoEnabled|Um valor booliano que especifica se Teredo (uma tecnologia para endereçar clientes que estão atrás de firewalls) está habilitado. O padrão é `false`.<br /><br /> Essa propriedade habilita a Teredo para o soquete TCP subjacente. Para obter mais informações, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339).<br /><br /> Essa propriedade é aplicável somente em [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] e no Windows Server 2003. O Windows Vista tem uma opção de configuração de todo o computador para Teredo, portanto, ao executar o vista, essa propriedade é ignorada. O Teredo requer que o cliente e as máquinas de serviço tenham a pilha do Microsoft IPv6 instalada e configurada corretamente para uso de Teredo. Para obter mais informações sobre como configurar o Teredo, consulte [visão geral do Teredo](https://go.microsoft.com/fwlink/?LinkId=95339). Para obter mais informações, consulte [Windows Server 2003 Technology Centers](https://go.microsoft.com/fwlink/?LinkId=49888).|  
 |transferMode|Obtém ou define um valor que indica se as mensagens são armazenadas em buffer ou transmitidas com o transporte voltado para a conexão.|  
 |connectionPoolSettings|Especifica configurações de pool de conexões adicionais para uma associação de pipe nomeado.|  
   
@@ -80,7 +80,7 @@ Define um transporte TCP que pode ser usado por um canal para transferir mensage
   
  O elemento `tcpTransport` é o ponto de partida para criar uma associação personalizada que implementa o protocolo de transporte TCP. Esse transporte é otimizado para comunicação WCF para WCF.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Configuration.TcpTransportElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

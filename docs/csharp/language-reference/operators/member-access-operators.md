@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: ba2a8cd4995b9baab2071d3fb3c7980e45565692
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e69cc5a9634f0b5232562782557645894f94ce2e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039006"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345298"
 ---
 # <a name="member-access-operators-c-reference"></a>Operadores de acesso a membro (Referência de C#)
 
@@ -109,7 +109,13 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Operadores condicionais nulos ?. e ?[]
 
-Disponível no C# 6 e versões posteriores, um operador nulo condicional aplicará a seu operando uma operação de acesso a membro, `?.`, ou de acesso a elemento, `?[]`, somente se o operando for avaliado como não nulo. Se o operando for avaliado como `null`, o resultado da aplicação do operador será `null`. O operador de acesso do membro condicional nulo `?.` também é conhecido como o operador Elvis.
+Disponível em C# 6 e posteriores, um operador nulo-condicional aplica um [acesso de membro](#member-access-operator-), `?.`ou acesso de [elemento](#indexer-operator-), `?[]`, operação para seu operando somente se esse operando for avaliado como não nulo; caso contrário, ele retornará `null`. Isto é
+
+- Se `a` for avaliada como `null`, o resultado de `a?.x` ou `a?[x]` será `null`.
+- Se `a` for avaliada como não nula, o resultado de `a?.x` ou `a?[x]` será o mesmo que o resultado de `a.x` ou `a[x]`, respectivamente.
+
+  > [!NOTE]
+  > Se `a.x` ou `a[x]` gerar uma exceção, `a?.x` ou `a?[x]` lançaria a mesma exceção para um `a`não nulo. Por exemplo, se `a` for uma instância de matriz não nula e `x` estiver fora dos limites de `a`, `a?[x]` geraria um <xref:System.IndexOutOfRangeException>.
 
 Os operadores condicionais nulos estão entrando em curto-circuito. Ou seja, se uma operação em uma cadeia de membro operações condicionais de acesso a membro ou elemento retornar `null`, o restante da cadeia não será executado. No exemplo a seguir, `B` não será avaliado se `A` for avaliado como `null` e `C` não será avaliado se `A` ou `B` for avaliado como `null`:
 
@@ -123,6 +129,8 @@ O exemplo a seguir demonstra o uso dos operadores `?.` e `?[]`:
 [!code-csharp-interactive[null-conditional operators](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#NullConditional)]
 
 O exemplo anterior também usa o [operador de União nulo `??`](null-coalescing-operator.md) para especificar uma expressão alternativa a ser avaliada, caso o resultado de uma operação condicional nula seja `null`.
+
+O operador de acesso do membro condicional nulo `?.` também é conhecido como o operador Elvis.
 
 ### <a name="thread-safe-delegate-invocation"></a>Invocação de delegado thread-safe
 
@@ -160,7 +168,7 @@ Você também pode usar parênteses para ajustar a ordem na qual as operações 
 
 ## <a name="index-from-end-operator-"></a>Índice do operador end ^
 
-Disponível em C# 8,0 e posterior, o operador`^`indica a posição do elemento do final de uma sequência. Para uma sequência de comprimento `length`, `^n` aponta para o elemento com deslocamento `length - n` do início de uma sequência. Por exemplo, `^1` aponta para o último elemento de uma sequência e `^length` aponta para o primeiro elemento de uma sequência.
+Disponível em C# 8,0 e posterior, o operador `^` indica a posição do elemento do final de uma sequência. Para uma sequência de comprimento `length`, `^n` aponta para o elemento com deslocamento `length - n` do início de uma sequência. Por exemplo, `^1` aponta para o último elemento de uma sequência e `^length` aponta para o primeiro elemento de uma sequência.
 
 [!code-csharp[index from end](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#IndexFromEnd)]
 
@@ -170,7 +178,7 @@ Você também pode usar o operador `^` com o [operador Range](#range-operator-) 
 
 ## <a name="range-operator-"></a>Operador de intervalo..
 
-Disponível em C# 8,0 e posterior, o operador`..`especifica o início e o fim de um intervalo de índices como operandos. O operando à esquerda é um início *inclusivo* de um intervalo. O operando de lado direito é uma extremidade *exclusiva* de um intervalo. Qualquer um dos operandos pode ser um índice do início ou do final de uma sequência, como mostra o exemplo a seguir:
+Disponível em C# 8,0 e posterior, o operador `..` especifica o início e o fim de um intervalo de índices como operandos. O operando à esquerda é um início *inclusivo* de um intervalo. O operando de lado direito é uma extremidade *exclusiva* de um intervalo. Qualquer um dos operandos pode ser um índice do início ou do final de uma sequência, como mostra o exemplo a seguir:
 
 [!code-csharp[range examples](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Ranges)]
 
@@ -190,7 +198,7 @@ Para obter mais informações, consulte [índices e intervalos](../../tutorials/
 
 Os operadores `.`, `()`, `^`e `..` não podem ser sobrecarregados. O operador `[]` também é considerado um operador não sobrecarregável. Use [indexadores](../../programming-guide/indexers/index.md) para permitir a indexação com tipos definidos pelo usuário.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 
@@ -201,7 +209,7 @@ Para obter mais informações, confira as seguintes seções da [especificação
 
 Para obter mais informações sobre índices e intervalos, consulte a [Nota de proposta de recurso](~/_csharplang/proposals/csharp-8.0/ranges.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)

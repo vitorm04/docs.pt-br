@@ -1,5 +1,5 @@
 ---
-title: Formatação composta
+title: Formatação de composição
 ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-ms.openlocfilehash: 12666ca5ad8f223f2fba4a63a7cc7525601367a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ae0ba0bf15b6a02df5130d34d277322897826697
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091565"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338520"
 ---
-# <a name="composite-formatting"></a>Formatação composta
+# <a name="composite-formatting"></a>Formatação de composição
 
 O recurso de formatação de composição do .NET utiliza uma lista de objetos e uma cadeia de caracteres de formato de composição como entrada. Uma cadeia de formato de composição consiste em um texto fixo intercalado com espaços reservados indexados, chamados de itens de formato, que correspondem aos objetos na lista. A operação de formatação produz uma cadeia de caracteres de resultado que consiste no texto fixo original intercalado com a representação de cadeia de caracteres dos objetos na lista.  
   
@@ -43,7 +43,7 @@ O recurso de formatação de composição tem suporte de métodos como:
 - O método <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, que grava um método informativo para rastrear ouvintes.  
   
 ## <a name="composite-format-string"></a>Cadeia de formato de composição  
- Uma cadeia de formato de composição e uma lista de objetos são usadas como argumentos dos métodos que dão suporte ao recurso de formatação de composição. Uma cadeia de formato de composição consiste em zero ou mais sequências de texto fixo intercaladas com um ou mais itens de formato. O texto fixo é qualquer cadeia de caracteres que você escolher e cada item de formato corresponde a um objeto ou a uma estrutura demarcada na lista. O recurso de formatação de composição retorna uma nova cadeia de caracteres de resultado em que cada item de formato é substituído pela representação de cadeia de caracteres do objeto correspondente na lista.  
+ Uma cadeia de formato de composição e uma lista de objetos são usadas como argumentos dos métodos que dão suporte ao recurso de formatação de composição. Uma cadeia de caracteres de formato composto consiste de zero ou mais execuções de texto fixo misturadas a um ou mais itens de formato. O texto fixo é qualquer cadeia de caracteres que você escolher e cada item de formato corresponde a um objeto ou a uma estrutura demarcada na lista. O recurso de formatação de composição retorna uma nova cadeia de caracteres de resultado em que cada item de formato é substituído pela representação de cadeia de caracteres do objeto correspondente na lista.  
   
  Considere o fragmento de código <xref:System.String.Format%2A> a seguir.  
   
@@ -55,7 +55,7 @@ O recurso de formatação de composição tem suporte de métodos como:
 ## <a name="format-item-syntax"></a>Sintaxe do item de formato  
  Cada item de formato assume a forma a seguir e consiste nos seguintes componentes:  
   
- `{` *index*[`,`*alignment*][`:`*formatString*]`}`  
+ `{` *índice*[ *alinhamento*de`,`] [`:`*FormatString*]`}`  
   
  As chaves correspondentes ("{" e "}") são necessárias.  
   
@@ -65,12 +65,12 @@ O recurso de formatação de composição tem suporte de métodos como:
  [!code-csharp[Formatting.Composite#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#7)]
  [!code-vb[Formatting.Composite#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#7)]  
   
- Vários itens de formato podem fazer referência ao mesmo elemento na lista de objetos ao especificar o mesmo especificador de parâmetro. Por exemplo, você pode formatar o mesmo valor numérico em formato hexadecimal, científico e numérico especificando uma cadeia de formato de composição como "0x{0:X} {0:E} {0:N}", conforme demonstrado no exemplo a seguir.  
+ Vários itens de formato podem fazer referência ao mesmo elemento na lista de objetos ao especificar o mesmo especificador de parâmetro. Por exemplo, você pode formatar o mesmo valor numérico em formato hexadecimal, científico e numérico especificando uma cadeia de caracteres de formato composto, como: "0x{0:X} {0:E} {0:N}", como mostra o exemplo a seguir.  
   
  [!code-csharp[Formatting.Composite#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/index1.cs#10)]
  [!code-vb[Formatting.Composite#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/index1.vb#10)]  
   
- Cada item de formato pode fazer referência a qualquer objeto na lista. Por exemplo, se houver três objetos, você poderá formatar o segundo, o primeiro e o terceiro objetos especificando uma cadeia de formato de composição como esta: "{1} {0} {2}". Um objeto que não é referenciado por um item de formato é ignorado. Uma <xref:System.FormatException> será lançada no tempo de execução se um especificador de parâmetro designar um item fora dos limites da lista de objetos.  
+ Cada item de formato pode fazer referência a qualquer objeto na lista. Por exemplo, se houver três objetos, você poderá formatar o segundo, o primeiro e o terceiro objeto especificando uma cadeia de caracteres de formato composto como esta: "{1} {0} {2}". Um objeto que não é referenciado por um item de formato é ignorado. Uma <xref:System.FormatException> será lançada no runtime se um especificador de parâmetro designar um item fora dos limites da lista de objetos.  
   
 ### <a name="alignment-component"></a>Componente de alinhamento  
  O componente opcional *alignment* é um inteiro com sinal que indica a largura preferencial do campo formatado. Se o valor de *alignment* for menor que o comprimento da cadeia de caracteres formatada, *alignment* será ignorado e o comprimento da cadeia de caracteres formatada será usado como a largura do campo. Os dados formatados no campo serão alinhados à direita se *alignment* for positivo e serão alinhados à esquerda se *alignment* for negativo. Se for necessário preenchimento, espaços em branco serão usados. A vírgula é necessária se *alignment* for especificado.  
@@ -114,19 +114,19 @@ O recurso de formatação de composição tem suporte de métodos como:
  [!code-vb[Formatting.Composite#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Escaping1.vb#2)]  
   
 ### <a name="processing-order"></a>Ordem de processamento  
- Se a chamada ao método de formatação composto inclui um argumento <xref:System.IFormatProvider> cujo valor não é `null`, o tempo de execução chama seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> para solicitar uma implementação de <xref:System.ICustomFormatter>. Se o método conseguir retornar uma implementação de <xref:System.ICustomFormatter>, ela será armazenada em cache durante a chamada do método de formatação composta.
+ Se a chamada ao método de formatação composto inclui um argumento <xref:System.IFormatProvider> cujo valor não é `null`, o runtime chama seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> para solicitar uma implementação de <xref:System.ICustomFormatter>. Se o método conseguir retornar uma implementação de <xref:System.ICustomFormatter>, ela será armazenada em cache durante a chamada do método de formatação composta.
   
  Cada valor na lista de parâmetros que corresponde a um item de formato é convertido em uma cadeia de caracteres da seguinte maneira:  
   
 1. Se o valor a ser formatado for `null`, uma cadeia de caracteres vazia <xref:System.String.Empty?displayProperty=nameWithType> será retornada.  
   
-2. Se uma implementação de <xref:System.ICustomFormatter> estiver disponível, o tempo de execução chamará seu método <xref:System.ICustomFormatter.Format%2A>. Ele passará ao método o valor *formatString* do item de formato, se houver ou `null` se não houver, junto com a implementação de <xref:System.IFormatProvider>. Se a chamada ao método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> retorna `null`, a execução continua para a próxima etapa; caso contrário, o resultado da chamada <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> é retornado.
+2. Se uma implementação de <xref:System.ICustomFormatter> estiver disponível, o runtime chamará seu método <xref:System.ICustomFormatter.Format%2A>. Ele passará ao método o valor *formatString* do item de formato, se houver ou `null` se não houver, junto com a implementação de <xref:System.IFormatProvider>. Se a chamada ao método <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> retorna `null`, a execução continua para a próxima etapa; caso contrário, o resultado da chamada <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> é retornado.
   
 3. Se o valor implementa a interface <xref:System.IFormattable>, o método <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> da interface é chamado. O método receberá o valor *formatString* se houver um no item de formato, ou `null` se não houver. O argumento <xref:System.IFormatProvider> é determinado da seguinte forma:  
   
-    - Para um valor numérico, se um método de formatação composto com um argumento <xref:System.IFormatProvider> não nulo é chamado, o tempo de execução solicita um objeto <xref:System.Globalization.NumberFormatInfo> do seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se ele não conseguir fornecer um, se o valor do argumento for `null` ou se o método de formatação composta não tiver um parâmetro <xref:System.IFormatProvider>, o objeto <xref:System.Globalization.NumberFormatInfo> para a cultura do thread atual será usado.  
+    - Para um valor numérico, se um método de formatação composto com um argumento <xref:System.IFormatProvider> não nulo é chamado, o runtime solicita um objeto <xref:System.Globalization.NumberFormatInfo> do seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se ele não conseguir fornecer um, se o valor do argumento for `null` ou se o método de formatação composta não tiver um parâmetro <xref:System.IFormatProvider>, o objeto <xref:System.Globalization.NumberFormatInfo> para a cultura do thread atual será usado.  
   
-    - Para um valor de data e hora, se um método de formatação composto com um argumento <xref:System.IFormatProvider> não nulo é chamado, o tempo de execução solicita um objeto <xref:System.Globalization.DateTimeFormatInfo> do seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se ele não conseguir fornecer um, se o valor do argumento for `null` ou se o método de formatação composta não tiver um parâmetro <xref:System.IFormatProvider>, o objeto <xref:System.Globalization.DateTimeFormatInfo> para a cultura do thread atual será usado.  
+    - Para um valor de data e hora, se um método de formatação composto com um argumento <xref:System.IFormatProvider> não nulo é chamado, o runtime solicita um objeto <xref:System.Globalization.DateTimeFormatInfo> do seu método <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>. Se ele não conseguir fornecer um, se o valor do argumento for `null` ou se o método de formatação composta não tiver um parâmetro <xref:System.IFormatProvider>, o objeto <xref:System.Globalization.DateTimeFormatInfo> para a cultura do thread atual será usado.  
   
     - Para objetos de outros tipos, se um método de formatação de composição for chamado com um argumento <xref:System.IFormatProvider>, seu valor é passado diretamente para a implementação <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>. Caso contrário, `null` é passado para a implementação <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType>.  
   
@@ -157,7 +157,7 @@ O recurso de formatação de composição tem suporte de métodos como:
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Console.WriteLine%2A>
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

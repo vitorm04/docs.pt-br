@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: 61b9f8096e1b2093b1ea5589f4336618cd189c34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: ed1604bb8374f6f182b4408ed00ecfb23b172005
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422451"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345402"
 ---
 # <a name="reference-types-c-reference"></a>Tipos de referência (Referência em C#)
 
@@ -36,10 +36,10 @@ Há dois tipos em C#: tipos de referência e valor. Variáveis de tipos de refer
 
 - [string](../builtin-types/reference-types.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)
 - [Palavras-chave do C#](index.md)
-- [Tipos](/dotnet/csharp/language-reference/keywords)
+- [Tipos de ponteiro](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [Tipos de valor](value-types.md)

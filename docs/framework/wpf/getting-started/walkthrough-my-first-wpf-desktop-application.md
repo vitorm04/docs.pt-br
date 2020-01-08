@@ -9,15 +9,15 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
-ms.custom: vs-dotnet
+ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d45932f6a8822ec2aaa40cd52431d9981ab8fa1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453751"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336817"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: criar seu primeiro aplicativo do WPF no Visual Studio 2019
 
@@ -41,7 +41,7 @@ Ao final do tutorial, você terá criado um aplicativo autônomo do Windows que 
 >
 > Você pode alternar o idioma de código do código de exemplo C# entre e Visual Basic usando o seletor de idioma na parte superior desta página.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) com a carga de **trabalho de desenvolvimento do .net desktop** instalada.
 
@@ -83,7 +83,7 @@ A primeira etapa é criar a infraestrutura do aplicativo, que inclui uma defini�
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Abra *MainWindow. XAML*.
+3. Abra *MainWindow.xaml*.
 
     Esse arquivo XAML é a janela principal do seu aplicativo e exibe o conteúdo criado em páginas. A classe <xref:System.Windows.Window> define as propriedades de uma janela, como seu título, tamanho ou ícone, e manipula eventos, como fechar ou ocultar.
 
@@ -151,7 +151,7 @@ Nesta seção, você adicionará duas páginas e uma imagem ao aplicativo.
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Abra *MainWindow. XAML*.
+1. Abra *MainWindow.xaml*.
 
 1. Adicione uma propriedade <xref:System.Windows.Navigation.NavigationWindow.Source%2A> ao elemento <xref:System.Windows.Navigation.NavigationWindow> e defina-a como "`ExpenseItHome.xaml`".
 
@@ -161,7 +161,7 @@ Nesta seção, você adicionará duas páginas e uma imagem ao aplicativo.
 
     [!code-xaml[ExpenseIt#7_A](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/MainWindow.xaml#7_a)]
 
-    E em C#:
+    E, em c#:
 
     [!code-xaml[ExpenseIt#7](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/MainWindow.xaml#7)]
 
@@ -477,7 +477,7 @@ A ilustração a seguir mostra as duas páginas do aplicativo `ExpenseIt` com co
 > - [Globalização e localização do WPF](../advanced/wpf-globalization-and-localization-overview.md)
 > - [Desempenho do WPF](../advanced/optimizing-wpf-application-performance.md)
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Neste tutorial, você aprendeu várias técnicas para criar uma interface do usuário usando Windows Presentation Foundation (WPF). Agora você deve ter uma compreensão básica dos blocos de construção de um aplicativo .NET vinculado a dados. Para obter mais informações sobre os modelos de arquitetura e programação do WPF, consulte os seguintes tópicos:
 
@@ -494,7 +494,7 @@ Para obter mais informações sobre como criar aplicativos, consulte os seguinte
 - [Gráficos e multimídia](../graphics-multimedia/index.md)
 - [Documentos no WPF](../advanced/documents-in-wpf.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral dos painéis](../controls/panels-overview.md)
 - [Visão geral de modelagem de dados](../data/data-templating-overview.md)

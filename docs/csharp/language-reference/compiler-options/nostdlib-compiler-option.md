@@ -1,6 +1,6 @@
 ---
 title: -nostdlib (opções do compilador C#)
-ms.date: 07/20/2015
+ms.date: 12/20/2019
 f1_keywords:
 - /nostdlib
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [C#]
 - /nostdlib compiler option [C#]
 ms.assetid: ec197989-fa49-4725-a455-e06b551eb65f
-ms.openlocfilehash: 486539d7abdc3e65847a0bc0e228b1b20a2b2c37
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: ad8a2b5fc87dd7beee86d96331cf3961315be533
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602695"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345085"
 ---
 # <a name="-nostdlib-c-compiler-options"></a>-nostdlib (opções do compilador C#)
 
@@ -34,7 +34,7 @@ Se você não especificar **-nostdlib**, o mscorlib.dll será importado no progr
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Para definir essa opção do compilador no Visual Studio
 
 > [!NOTE]
-> As instruções a seguir se aplicam apenas ao Visual Studio 2015 (e a versões anteriores). A propriedade de build **Não referenciar mscorlib.dll** não existe no Visual Studio 2017.
+> As instruções a seguir se aplicam apenas ao Visual Studio 2015 (e a versões anteriores). A propriedade de compilação **não referencia mscorlib. dll** não existe nas versões mais recentes do Visual Studio.
 
 1. Abra a página **Propriedades** do projeto.
 
@@ -46,8 +46,8 @@ Se você não especificar **-nostdlib**, o mscorlib.dll será importado no progr
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Para definir essa opção do compilador via programação
 
-Para saber mais sobre como definir essa opção do compilador programaticamente, veja <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.
+Para obter informações sobre como definir essa opção do compilador programaticamente, consulte <xref:VSLangProj80.CSharpProjectConfigurationProperties3.NoStdLib%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Opções do compilador de C#](./index.md)

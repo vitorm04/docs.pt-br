@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 2cba5e704787ae6368b2543c985babf2fde3b4dd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 853faf481e546f2980d799d5daf50a14c608c052
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422748"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345468"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>Tabela de formatação de resultados numéricos (Referência de C#)
 
@@ -21,7 +21,7 @@ A tabela a seguir mostra os especificadores de formato compatíveis para formata
 
 |Especificador de formato|Descrição|Exemplos|Resultado|  
 |----------------------|-----------------|--------------|------------|  
-|“C” ou “c”|Moeda|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2,50)|  
+|“C” ou “c”|Moeda|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|\\$2.50<br /><br /> (\\$2.50)|  
 |D ou d|Decimal|`string s = $"{25:D5}";`|00025|  
 |"E" ou "e"|Exponencial|`string s = $"{250000:E2}";`|2.50E+005|  
 |F ou f|Ponto fixo|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2,50<br /><br /> 3|  
@@ -50,7 +50,7 @@ As cadeias de caractere de formato numérico padrão têm suporte de:
 
 Para obter mais informações, confira [Cadeias de caracteres de formato numérico padrão](../../../standard/base-types/standard-numeric-format-strings.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

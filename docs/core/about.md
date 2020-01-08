@@ -2,12 +2,12 @@
 title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: ed153e817746a88277c191dfb14c465ff2d8bfa1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801955"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344915"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -58,7 +58,7 @@ O .NET Core é composto pelas seguintes partes:
 
 - O [tempo de execução do .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr), que fornece um sistema de tipos, carregamento de assembly, coletor de lixo, interoperabilidade nativa e outros serviços básicos. As [bibliotecas do .NET Core Framework](https://github.com/dotnet/runtime/tree/master/src/libraries) fornecem tipos de dados primitivos, tipos de composição de aplicativo e utilitários fundamentais.
 - O [tempo de execução do ASP.net](https://github.com/aspnet/home), que fornece uma estrutura para a criação de aplicativos conectados à Internet modernos baseados em nuvem, como aplicativos Web, aplicativos de IOT e back-ends móveis.
-- As [ferramentas da CLI do .NET Core](https://github.com/dotnet/cli) e os compiladores de linguagem ([Roslyn](https://github.com/dotnet/roslyn) e [F#](https://github.com/microsoft/visualfsharp)) que permitem a experiência de desenvolvedor do .NET Core.
+- As [ferramentas da CLI do .NET Core](https://github.com/dotnet/sdk) e os compiladores de linguagem ([Roslyn](https://github.com/dotnet/roslyn) e [F#](https://github.com/microsoft/visualfsharp)) que permitem a experiência de desenvolvedor do .NET Core.
 - A [ferramenta dotnet](https://github.com/dotnet/core-setup), que é usada para iniciar aplicativos do .NET Core e ferramentas da CLI. Ele seleciona o tempo de execução e hospeda o tempo de execução, fornece uma política de carregamento de assembly e inicia aplicativos e ferramentas.
 
 Esses componentes são distribuídos das seguintes maneiras:
@@ -79,7 +79,7 @@ O produto é dividido em várias partes que podem se adaptar a novas plataformas
 
 As pessoas geralmente perguntam como o .NET Core é implementado para dar suporte a vários sistemas operacionais. Eles normalmente perguntam se há implementações separadas ou se a [compilação condicional](https://en.wikipedia.org/wiki/Conditional_compilation) é usada. A resposta é ambas, com uma forte tendência para a compilação condicional.
 
-Você pode ver no gráfico a seguir que a grande maioria das [bibliotecas do .NET Core](https://github.com/dotnet/runtime/tree/master/src/libraries) é um código de plataforma neutra que é compartilhado entre todas as plataformas. O código neutro de plataforma pode ser implementado como um único assembly portátil usado em todas as plataformas.
+Você pode ver no gráfico a seguir que a grande maioria das [bibliotecas do .NET Core](https://github.com/dotnet/runtime/tree/master/src/libraries) é um código de plataforma neutra que é compartilhado entre todas as plataformas. O código neutro com relação à plataforma pode ser implementado como um único assembly portátil usado em todas as plataformas.
 
 ![CoreFX: Linhas de código por plataforma](../images/corefx-platforms-loc.png)
 
@@ -105,7 +105,7 @@ Principais diferenças entre o .NET Core e o .NET Framework:
 - **APIs** – o .NET Core contém um grande subconjunto da biblioteca de classes base .NET Framework, com aspectos diferentes (os nomes de assembly são diferentes, os membros expostos nos tipos são diferentes em casos principais). Em alguns casos, essas diferenças exigem alterações na origem da porta para o .NET Core. Para obter mais informações, consulte [o .net Portability Analyzer](../standard/analyzers/portability-analyzer.md). O .NET Core implementa a especificação de API [.NET Standard](../standard/net-standard.md).
 - **Subsistemas** – O.NET Core implementa um subconjunto dos subsistemas no .NET Framework com o objetivo de proporcionar uma implementação e um modelo de programação mais simples. Por exemplo, a CAS (segurança de acesso do código) não tem suporte, enquanto a reflexão tem suporte.
 - **Plataformas** – O .NET Framework dá suporte a Windows e Windows Server, enquanto o .NET Core também dá suporte a macOS e Linux.
-- **Software Livre** – O .NET Core é um software livre, enquanto apenas um [subconjunto somente leitura do .NET Framework](https://github.com/microsoft/referencesource) é um software livre.
+- **Software Livre** – O.NET Core é um software livre, enquanto um [subconjunto somente leitura do .NET Framework](https://github.com/microsoft/referencesource) é um software livre.
 
 Embora o .NET Core seja exclusivo e tenha diferenças significativas no .NET Framework e em outras implementações do .NET, é simples compartilhar o código entre essas implementações, usando técnicas de compartilhamento de origem ou binária.
 
@@ -118,7 +118,7 @@ O [mono](https://www.mono-project.com/) é a implementação original de platafo
 Principais diferenças entre o .NET Core e o Mono:
 
 - **App-Models** --o mono dá suporte a um subconjunto do .NET Framework modelos de aplicativo (por exemplo, Windows Forms) e alguns outros para desenvolvimento móvel (por exemplo, [Xamarin. Ios](https://www.xamarin.com/platform)) por meio do produto xamarin. O .NET Core não dá suporte ao Xamarin.
-- **APIs** – O Mono dá suporte a um [grande subconjunto](http://docs.go-mono.com/?link=root%3a%2fclasslib) das APIs do .NET Framework, usando os mesmos nomes de assembly e assinaturas.
+- **APIs** – O Mono dá suporte a um [grande subconjunto](http://docs.go-mono.com/?link=root%3a%2fclasslib) das APIs do .NET Framework, usando os mesmos nomes de assembly e fatoração.
 - **Plataformas** – O Mono dá suporte a várias plataformas e CPUs.
 - **Software Livre** – O Mono e o .NET Core usam a licença MIT e são projetos do .NET Foundation.
 - **Foco** – o principal foco do Mono nos últimos anos são as plataformas móveis, enquanto o .NET Core se concentra em cargas de trabalho de nuvem e da área de trabalho.

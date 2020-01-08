@@ -42,23 +42,23 @@
           href: install/linux-package-manager-sles12.md
         - name: SLES 15
           href: install/linux-package-manager-sles15.md
+    - name: Instalar IntelliSense localizado
+      href: install/localized-intellisense.md
 - name: Introdução
   href: get-started.md
   items:
     - name: 'Introdução ao C# e ao Visual Studio Code'
       href: tutorials/with-visual-studio-code.md
-    - name: 'Criar um aplicativo Olá, Mundo do C# no Visual Studio'
+    - name: Introdução ao .NET Core no macOS usando o Visual Studio Code
+      href: tutorials/using-on-macos.md
+    - name: Crie seu primeiro aplicativo de console no Visual Studio
       href: tutorials/with-visual-studio.md
-    - name: 'Criar um aplicativo Olá, Mundo do Visual Basic no Visual Studio'
-      href: tutorials/vb-with-visual-studio.md
     - name: Depurar um aplicativo usando o Visual Studio
       href: tutorials/debugging-with-visual-studio.md
     - name: Publicar um aplicativo no Visual Studio
       href: tutorials/publishing-with-visual-studio.md
-    - name: 'Criar uma biblioteca .NET Standard com o C# no Visual Studio'
+    - name: Criar uma biblioteca .NET Standard no Visual Studio
       href: tutorials/library-with-visual-studio.md
-    - name: Criar uma biblioteca .NET Standard com o Visual Basic no Visual Studio
-      href: tutorials/vb-library-with-visual-studio.md
     - name: Testar uma biblioteca .NET Standard no Visual Studio
       href: tutorials/testing-library-with-visual-studio.md
     - name: Consumir uma biblioteca .NET Standard no Visual Studio
@@ -89,8 +89,6 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 – Criar um pacote de modelo
           href: tutorials/cli-templates-create-template-pack.md
-    - name: Introdução ao .NET Core no macOS
-      href: tutorials/using-on-macos.md
     - name: Introdução ao .NET Core usando o Visual Studio para Mac
       href: tutorials/using-on-mac-vs.md
     - name: Compilar uma solução completa do .NET Core no macOS
@@ -173,7 +171,7 @@
       href: diagnostics/index.md
     - name: Depuradores gerenciados
       href: diagnostics/managed-debuggers.md
-    - name: Log e rastreamento
+    - name: Registro em log e rastreamento
       href: diagnostics/logging-tracing.md
     - name: Ferramentas globais da CLI do .NET Core
       items:
@@ -183,6 +181,10 @@
           href: diagnostics/dotnet-dump.md
         - name: dotnet-trace
           href: diagnostics/dotnet-trace.md
+    - name: Tutoriais de diagnóstico do .NET Core
+      items:
+        - name: Depurar uma perda de memória
+          href: diagnostics/debug-memory-leak.md
 - name: Teste de unidade
   href: testing/index.md
   items:
@@ -326,6 +328,8 @@
 - name: Ferramentas adicionais do .NET Core
   href: additional-tools/index.md
   items:
+    - name: Ferramenta de Desinstalação do .NET Core
+      href: additional-tools/uninstall-tool.md
     - name: Provedor de Referência de Serviço Web do WCF
       href: additional-tools/wcf-web-service-reference-guide.md
     - name: dotnet-svcutil

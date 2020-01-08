@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: d45aca8b137f56cf058b63b9286504259c0005eb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 589b0b362cc25fd10e2780fd541cf9f7cfb546a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346700"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344633"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Objetos e classes no Visual Basic
 
@@ -121,7 +121,7 @@ Observe que um método é simplesmente um *procedimento* que é exposto por um o
 
 Para obter mais informações, consulte [Procedimentos](../../../../visual-basic/programming-guide/language-features/procedures/index.md).
 
-### <a name="events"></a>Eventos
+### <a name="events"></a>Events
 
 Um evento é uma ação reconhecida por um objeto, como clicar com o mouse ou pressionar uma tecla e para o qual você pode escrever código para responder. Os eventos podem ocorrer como resultado de uma ação do usuário ou código do programa, ou eles podem ser causados pelo sistema. O código que sinaliza um evento *aciona* o evento e o código que responde a ele *lida* com ele.
 
@@ -239,7 +239,7 @@ No exemplo a seguir, suponha que você deseja definir um tipo especial de <xref:
 
 As classes derivadas herdam membros da classe que eles se baseiam, permitindo que você adicione complexidade enquanto progride em uma hierarquia de classe. Para obter mais informações, consulte [Noções básicas de herança](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).
 
-### <a name="compiling-the-code"></a>Compilando o código
+### <a name="compile-the-code"></a>Compilar o código
 
 Certifique-se de que o compilador pode acessar a classe da qual você pretende derivar sua nova classe. Isso pode significar qualificar totalmente seu nome, como no exemplo anterior, ou identificar seu namespace em uma [Instrução Imports (Tipo e Namespace .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md). Se a classe estiver em um projeto diferente, você precisará adicionar uma referência ao projeto. Para obter mais informações, consulte [Gerenciando referências em um projeto](/visualstudio/ide/managing-references-in-a-project).
 

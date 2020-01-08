@@ -2,12 +2,12 @@
 title: Operações de conjunto (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 22079b1d41533803f694af210f98bc9fb8a5b322
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 170316b36705eaed51a9a17f8f79333a29e8c315
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711878"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346507"
 ---
 # <a name="set-operations-c"></a>Operações de conjunto (C#)
 As operações de conjunto na LINQ referem-se a operações de consulta que geram um conjunto de resultados baseado na presença ou ausência de elementos equivalentes dentro da mesma ou de coleções (ou conjuntos) separadas.  
@@ -21,7 +21,7 @@ As operações de conjunto na LINQ referem-se a operações de consulta que gera
 |Distinct|Remove os valores duplicados de uma coleção.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Distinct%2A?displayProperty=nameWithType>|  
 |Exceto|Retorna a diferença de conjunto, que significa os elementos de uma coleção que não aparecem em uma segunda coleção.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Except%2A?displayProperty=nameWithType>|  
 |Interseção|Retorna a interseção de conjunto, o que significa os elementos que aparecem em cada uma das duas coleções.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Intersect%2A?displayProperty=nameWithType>|  
-|Union|Retorna a união de conjunto, o que significa os elementos únicos que aparecem em qualquer uma das duas coleções.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|  
+|União|Retorna a união de conjunto, o que significa os elementos únicos que aparecem em qualquer uma das duas coleções.|{1&gt;Não aplicável.&lt;1}|<xref:System.Linq.Enumerable.Union%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Union%2A?displayProperty=nameWithType>|  
   
 ## <a name="comparison-of-set-operations"></a>Comparação de operações de conjuntos  
   
@@ -46,14 +46,14 @@ As operações de conjunto na LINQ referem-se a operações de consulta que gera
  
 [!code-csharp-interactive[Intersect](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#3)]
 
-### <a name="union"></a>Union  
+### <a name="union"></a>União  
  O exemplo a seguir descreve uma operação Union em duas sequências de caracteres. A sequência retornada contém os elementos exclusivos das duas sequências de entrada.  
   
  ![Gráfico mostrando a união de duas sequências.](./media/set-operations/union-operation-two-sequences.png)  
 
 [!code-csharp-interactive[Union](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQSetOperation/CS/SetOperation.cs#4)]
  
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Linq>
 - [Visão geral de operadores de consulta padrão (C#)](./standard-query-operators-overview.md)

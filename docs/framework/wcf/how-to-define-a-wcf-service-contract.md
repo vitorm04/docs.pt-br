@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Definir um contrato de serviço de Windows Communication Foundation'
+title: 'Tutorial: definir um contrato de serviço de Windows Communication Foundation'
 ms.date: 03/19/2019
 helpviewer_keywords:
 - service contracts [WCF], defining
@@ -7,22 +7,22 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: ba88fc6ba4cba8d46ed1b43080d471b1b7c4bd75
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 49526808a65b68c6df734bd7f3e76eff1e4a6bc5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928871"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338291"
 ---
-# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutorial: Definir um contrato de serviço de Windows Communication Foundation
+# <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>Tutorial: definir um contrato de serviço de Windows Communication Foundation
 
-Este tutorial descreve a primeira de cinco tarefas necessárias para criar um aplicativo de Windows Communication Foundation básico (WCF). Para obter uma visão geral dos tutoriais, [consulte o tutorial: Introdução aos aplicativos](getting-started-tutorial.md)Windows Communication Foundation.
+Este tutorial descreve a primeira de cinco tarefas necessárias para criar um aplicativo de Windows Communication Foundation básico (WCF). Para obter uma visão geral dos tutoriais, consulte [tutorial: introdução aos aplicativos Windows Communication Foundation](getting-started-tutorial.md).
 
-Quando você cria um serviço WCF, sua primeira tarefa é definir um contrato de serviço. O contrato de serviço especifica a quais operações os serviços dão suporte. Uma operação pode ser considerada como um método de serviço Web. Você cria contratos de serviço definindo uma interface C# Visual ou Visual Basic (VB). Uma interface tem as seguintes características:
+Quando você cria um serviço WCF, sua primeira tarefa é definir um contrato de serviço. O contrato de serviço especifica a quais operações os serviços dão suporte. Uma operação pode ser considerada como um método de serviço Web. Você cria contratos de serviço definindo uma C# interface ou Visual Basic. Uma interface tem as seguintes características:
 
 - Cada método na interface corresponde a uma operação de serviço específica. 
-- Para cada interface, você deve aplicar o <xref:System.ServiceModel.ServiceContractAttribute> atributo.
-- Para cada operação/método, você deve aplicar o <xref:System.ServiceModel.OperationContractAttribute> atributo. 
+- Para cada interface, você deve aplicar o atributo <xref:System.ServiceModel.ServiceContractAttribute>.
+- Para cada operação/método, você deve aplicar o atributo <xref:System.ServiceModel.OperationContractAttribute>. 
 
 Neste tutorial, você aprenderá como:
 > [!div class="checklist"]
@@ -47,7 +47,7 @@ Neste tutorial, você aprenderá como:
 
    4. Selecione **OK**.
 
-      O Visual Studio cria o projeto, que tem três arquivos: *IService1.cs* (ou *IService1. vb* para um projeto Visual Basic), *Service1.cs* (ou *Service1. vb* para um projeto Visual Basic) e *app. config*. O Visual Studio define esses arquivos da seguinte maneira: 
+      O Visual Studio cria o projeto, que tem três arquivos *: IService1.cs* (ou *IService1. vb* para um projeto Visual Basic), *Service1.cs* (ou *Service1. vb* para um projeto Visual Basic) e *app. config*. O Visual Studio define esses arquivos da seguinte maneira: 
       - O arquivo *IService1* contém a definição padrão do contrato de serviço. 
       - O arquivo *Service1* contém a implementação padrão do contrato de serviço. 
       - O arquivo *app. config* contém as informações de configuração necessárias para carregar o serviço padrão com a ferramenta de host do serviço WCF do Visual Studio. Para obter mais informações sobre a ferramenta host de serviço do WCF, consulte [host de serviço WCF (WcfSvcHost. exe)](wcf-service-host-wcfsvchost-exe.md).
@@ -98,9 +98,9 @@ Neste tutorial, você aprenderá como:
     End Namespace
     ```
 
-     Este contrato define uma calculadora online. Observe que `ICalculator` a interface está marcada com <xref:System.ServiceModel.ServiceContractAttribute> o atributo (simplificado como `ServiceContract`). Esse atributo define um namespace para desambiguar o nome do contrato. O código marca cada operação de calculadora com <xref:System.ServiceModel.OperationContractAttribute> o atributo (simplificado como `OperationContract`).
+     Este contrato define uma calculadora online. Observe que a interface `ICalculator` está marcada com o atributo <xref:System.ServiceModel.ServiceContractAttribute> (simplificado como `ServiceContract`). Esse atributo define um namespace para desambiguar o nome do contrato. O código marca cada operação de calculadora com o atributo <xref:System.ServiceModel.OperationContractAttribute> (simplificado como `OperationContract`).
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]
@@ -111,4 +111,4 @@ Neste tutorial, você aprendeu como:
 Avance para o próximo tutorial para aprender a implementar o contrato de serviço do WCF.
 
 > [!div class="nextstepaction"]
-> [Tutorial: Implementar um contrato de serviço WCF](how-to-implement-a-wcf-contract.md)
+> [Tutorial: implementar um contrato de serviço WCF](how-to-implement-a-wcf-contract.md)

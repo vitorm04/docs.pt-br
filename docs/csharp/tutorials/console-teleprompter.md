@@ -4,12 +4,12 @@ description: Este tutorial ensina vários recursos no .NET Core e da linguagem C
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 2b9948ce22eb221d9d757fcec4c556d365469fdf
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 0eb9883373484b72f771e0033936f56d00f9186d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039261"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346808"
 ---
 # <a name="console-application"></a>Aplicativo do Console
 
@@ -25,12 +25,12 @@ Você compilará um aplicativo que lê um arquivo de texto e exibe o conteúdo d
 
 Há vários recursos neste tutorial. Vamos compilá-los individualmente.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Você precisará configurar seu computador para executar o .NET Core. Você pode encontrar as instruções de instalação na página de [downloads do .NET Core](https://dotnet.microsoft.com/download) . Execute esse aplicativo no Windows, Linux, macOS ou em um contêiner do Docker.
-Você precisará instalar o editor de código de sua preferência.
+Será necessário instalar o editor de código de sua preferência.
 
-## <a name="create-the-application"></a>Criar o aplicativo
+## <a name="create-the-application"></a>{1&gt;Criar o aplicativo&lt;1}
 
 A primeira etapa é criar um novo aplicativo. Abra um prompt de comando e crie um novo diretório para seu aplicativo. Torne ele o diretório atual. Digite o comando `dotnet new console` no prompt de comando. Isso cria os arquivos iniciais de um aplicativo "Olá, Mundo" básico.
 
@@ -82,7 +82,8 @@ using System.IO;
 
 A interface <xref:System.Collections.Generic.IEnumerable%601> é definida no namespace <xref:System.Collections.Generic>. A classe <xref:System.IO.File> é definida no namespace <xref:System.IO>.
 
-Esse método é um tipo especial de método C# chamado de *Método iterador*. Os métodos enumeradores retornam sequências que são avaliadas lentamente. Isso significa que cada item na sequência é gerado conforme a solicitação do código que está consumindo a sequência. Os métodos enumeradores contêm uma ou mais instruções [`yield return`](../language-reference/keywords/yield.md). O objeto retornado pelo método `ReadFrom` contém o código para gerar cada item na sequência. Neste exemplo, isso envolve a leitura da próxima linha de texto do arquivo de origem e o retorno dessa cadeia de caracteres. Toda vez que o código de chamada solicita o próximo item da sequência, o código lê a próxima linha de texto do arquivo e a retorna. Após a leitura completa do arquivo, a sequência indicará que não há mais itens.
+Esse método é um tipo especial de método C# chamado de *Método iterador*.
+Os métodos enumeradores retornam sequências que são avaliadas lentamente. Isso significa que cada item na sequência é gerado conforme a solicitação do código que está consumindo a sequência. Os métodos enumeradores contêm uma ou mais instruções [`yield return`](../language-reference/keywords/yield.md). O objeto retornado pelo método `ReadFrom` contém o código para gerar cada item na sequência. Neste exemplo, isso envolve a leitura da próxima linha de texto do arquivo de origem e o retorno dessa cadeia de caracteres. Toda vez que o código de chamada solicita o próximo item da sequência, o código lê a próxima linha de texto do arquivo e a retorna. Após a leitura completa do arquivo, a sequência indicará que não há mais itens.
 
 Há dois outros elementos da sintaxe em C# que podem ser novidade para você. A instrução [`using`](../language-reference/keywords/using-statement.md) nesse método gerencia a limpeza de recursos. A variável inicializada na instrução `using` (`reader`, neste exemplo) deve implementar a interface <xref:System.IDisposable>. Essa interface define um único método, `Dispose`, que deve ser chamado quando o recurso for liberado. O compilador gera essa chamada quando a execução atingir a chave de fechamento da instrução `using`. O código gerado pelo compilador garante que o recurso seja liberado, mesmo se uma exceção for lançada do código no bloco definido pela instrução using.
 
@@ -156,7 +157,8 @@ Execute o exemplo e você poderá ler em voz alta de acordo com o ritmo pré-con
 
 ## <a name="async-tasks"></a>Tarefas assíncronas
 
-Nesta etapa final, você adicionará o código para gravar a saída de forma assíncrona em uma tarefa, enquanto executa também outra tarefa para ler a entrada do usuário, casos ele queira acelerar ou diminuir o ritmo da exibição do texto ou interromper a exibição do texto por completo. Essa etapa tem alguns passos e, no final, você terá todas as atualizações necessárias.
+Nesta etapa final, você adicionará o código para gravar a saída de forma assíncrona em uma tarefa, enquanto executa também outra tarefa para ler a entrada do usuário, casos ele queira acelerar ou diminuir o ritmo da exibição do texto ou interromper a exibição do texto por completo.
+Essa etapa tem alguns passos e, no final, você terá todas as atualizações necessárias.
 A primeira etapa é criar um método de retorno <xref:System.Threading.Tasks.Task> assíncrono que representa o código que você criou até agora para ler e exibir o arquivo.
 
 Adicione este método à sua classe `Program` (ele é obtido do corpo de seu método `Main`):
@@ -189,7 +191,7 @@ ShowTeleprompter().Wait();
 Aqui, em `Main`, o código aguarda de forma síncrona. Use o operador `await` em vez de esperar de forma síncrona sempre que possível. Porém, no método `Main` do aplicativo de console, não é possível usar o operador `await`. Isso resultaria no encerramento do aplicativo antes da conclusão de todas as tarefas.
 
 > [!NOTE]
-> Caso use o C# 7.1 ou posterior, você poderá criar aplicativos de console com o método [`async` `Main`](../whats-new/csharp-7-1.md#async-main).
+> Se você usar C# o 7,1 ou posterior, poderá criar aplicativos de console com [`async` método `Main`](../whats-new/csharp-7-1.md#async-main).
 
 Em seguida, é necessário escrever o segundo método assíncrono a ser lido no Console e ficar atento às teclas "<" (menor que), ">" (maior que) e "X" ou "x". Este é o método que você adiciona à tarefa:
 

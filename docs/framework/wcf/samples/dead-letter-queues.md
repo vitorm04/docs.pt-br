@@ -2,12 +2,12 @@
 title: Filas de mensagens de inatividade
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 244920eb9a0cdb33f4d5d83b939fe1166f4f5fcd
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837903"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344534"
 ---
 # <a name="dead-letter-queues"></a>Filas de mensagens de inatividade
 Este exemplo demonstra como tratar e processar mensagens que falharam na entrega. Ele se baseia no exemplo de [associação MSMQ transacionado](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) . Este exemplo usa a associação de `netMsmqBinding`. O serviço é um aplicativo de console auto-hospedado para permitir que você observe o serviço que recebe mensagens enfileiradas.
@@ -16,7 +16,7 @@ Este exemplo demonstra como tratar e processar mensagens que falharam na entrega
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.
 
 > [!NOTE]
-> Este exemplo demonstra cada fila de mensagens mortas do aplicativo que está disponível apenas no Windows Vista. O exemplo pode ser modificado para usar as filas padrão de todo o sistema para o MSMQ 3,0 em [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
+> Este exemplo demonstra cada fila de mensagens mortas do aplicativo que está disponível apenas no Windows Vista. O exemplo pode ser modificado para usar as filas padrão de todo o sistema para o MSMQ 3,0 no Windows Server 2003 e [!INCLUDE[wxp](../../../../includes/wxp-md.md)].
 
  Na comunicação em fila, o cliente se comunica com o serviço usando uma fila. Mais precisamente, o cliente envia mensagens para uma fila. O serviço recebe mensagens da fila. O serviço e o cliente, portanto, não precisam estar em execução ao mesmo tempo para se comunicarem usando uma fila.
 

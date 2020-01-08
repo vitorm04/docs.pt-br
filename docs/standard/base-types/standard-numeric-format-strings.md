@@ -16,12 +16,12 @@ helpviewer_keywords:
 - standard numeric format strings
 - formatting numbers [.NET Framework]
 - format specifiers, standard numeric format strings
-ms.openlocfilehash: c654ff2856891331f5680c673ac52f64ee2be141
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 04ac99c6b5100c3749eefc219e51b4d0084bef06
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121749"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346637"
 ---
 # <a name="standard-numeric-format-strings"></a>Cadeias de caracteres de formato numérico padrão
 
@@ -32,8 +32,8 @@ As cadeias de caracteres de formato numérico padrão são usadas para formatar 
 - `xx` é um inteiro opcional chamado *especificador de precisão*. O especificador de precisão varia de 0 a 99 e afeta o número de dígitos no resultado. Observe que o especificador de precisão controla o número de dígitos na representação da cadeia de caracteres de um número. Ele não arredonda o número em si. Para executar uma operação de arredondamento, use o método <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> ou <xref:System.Math.Round%2A?displayProperty=nameWithType>.
 
   Quando o *especificador de precisão* controla o número de dígitos fracionários na cadeia de caracteres de resultado, ela reflete um número que será arredondado para um resultado representável mais próximo do resultado infinitamente preciso. Se houver dois resultados representáveis igualmente próximos:
-  - **No .NET Framework e .NET Core até o .NET Core 2.0**, o tempo de execução selecionará o resultado com o dígito menos significativo maior (ou seja, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
-  - **No .NET Core 2.1 e versões posteriores**, o tempo de execução selecionará o resultado com um dígito até menos significativo (ou seja, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>).
+  - **No .NET Framework e .NET Core até o .NET Core 2.0**, o runtime selecionará o resultado com o dígito menos significativo maior (ou seja, usando <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+  - **No .NET Core 2.1 e versões posteriores**, o runtime selecionará o resultado com um dígito até menos significativo (ou seja, usando <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>).
 
   > [!NOTE]
   > O especificador de precisão determina o número de dígitos na cadeia de caracteres de resultado. Para acrescentar espaços à direita ou à esquerda em uma cadeia de caracteres de resultado, use o recurso [formatação de composição](../../../docs/standard/base-types/composite-formatting.md) e defina um *componente de alinhamento* no item de formato.
@@ -349,7 +349,7 @@ O exemplo a seguir formata valores <xref:System.Int32> com o especificador de fo
 
 <a name="NotesStandardFormatting"></a>
 
-## <a name="notes"></a>Anotações
+## <a name="notes"></a>{1&gt;Observações&lt;1}
 
 ### <a name="control-panel-settings"></a>Configurações do Painel de Controle
 
@@ -381,7 +381,7 @@ O exemplo a seguir formata um inteiro e um valor numérico de ponto flutuante us
 [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#FinalExample)]
 [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Globalization.NumberFormatInfo>
 - [Cadeias de caracteres de formato numérico personalizado](../../../docs/standard/base-types/custom-numeric-format-strings.md)

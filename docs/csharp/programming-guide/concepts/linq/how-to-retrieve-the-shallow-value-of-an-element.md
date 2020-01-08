@@ -1,15 +1,15 @@
 ---
-title: 'Como: Recuperar o valor superficial de um elemento (C#)'
+title: Como recuperar o valor superficial de um elemento (C#)
 ms.date: 07/20/2015
 ms.assetid: 924a2699-72f6-4be1-aaa6-de62f8ec73b9
-ms.openlocfilehash: 662c20cf2b17b9f93e00f0fd3c5cf925b5274de5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: b9b69b5a18106f82d13cb54208c2362f8239711e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253366"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347444"
 ---
-# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Como: Recuperar o valor superficial de um elemento (C#)
+# <a name="how-to-retrieve-the-shallow-value-of-an-element-c"></a>Como recuperar o valor superficial de um elemento (C#)
 Este tópico mostra como obter o valor raso de um elemento. O valor raso é o valor do elemento específico somente, diferentemente de valor maior, que inclui os valores de todos os elementos descendentes concatenados em uma única cadeia de caracteres.  
   
  Quando você recupera um valor de elemento usando conversão ou propriedade de <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> , você recupera o valor maior. Para recuperar o valor raso, você pode usar o método de extensão de `ShallowValue`, conforme mostrado no exemplo a seguir. Recuperar o valor raso é útil quando você deseja selecionar elementos com base no conteúdo.  
@@ -79,6 +79,6 @@ Column  Name="CustomerId"   =Customer.CustomerId
 Column  Name="Name"         =Customer.Name  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eixos do LINQ to XML (C#)](./linq-to-xml-axes-overview.md)

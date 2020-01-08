@@ -1,15 +1,15 @@
 ---
-title: 'Como: Ler e gravar um documento codificado (C#)'
+title: Como ler e gravar um documento codificado (C#)
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: a611fe064401c0da80d76ef8c64cd58d9b0fb5d6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253466"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347671"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>Como: Ler e gravar um documento codificado (C#)
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>Como ler e gravar um documento codificado (C#)
 Para criar um documento XML codificado, adicione um <xref:System.Xml.Linq.XDeclaration> à árvore XML, definindo a codificação para o nome da página de código desejada.  
   
  Qualquer valor retornado por <xref:System.Text.Encoding.WebName%2A> é um valor válido.  
@@ -76,6 +76,6 @@ Encoded document:
 Encoding of loaded document is:utf-16  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>

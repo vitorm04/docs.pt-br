@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 0c262d8b5460f236ef0429154ae337c7adf96714
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70989834"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338709"
 ---
 # <a name="impersonating-the-client"></a>Representando o cliente
 O exemplo de representação demonstra como representar o aplicativo chamador no serviço para que o serviço possa acessar recursos do sistema em nome do chamador.  
@@ -21,7 +21,7 @@ O exemplo de representação demonstra como representar o aplicativo chamador no
 > [!NOTE]
 > O procedimento de instalação e as instruções de Build para este exemplo estão localizados no final deste tópico.  
   
- O código de serviço foi modificado de modo que `Add` o método no serviço represente o chamador usando o <xref:System.ServiceModel.OperationBehaviorAttribute> , conforme mostrado no código de exemplo a seguir.  
+ O código de serviço foi modificado de modo que o método `Add` no serviço representa o chamador usando o <xref:System.ServiceModel.OperationBehaviorAttribute>, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 [OperationBehavior(Impersonation = ImpersonationOption.Required)]  
@@ -35,9 +35,9 @@ public double Add(double n1, double n2)
 }  
 ```  
   
- Como resultado, o contexto de segurança do thread em execução é alternado para representar o chamador antes de `Add` inserir o método e revertido ao sair do método.  
+ Como resultado, o contexto de segurança do thread em execução é alternado para representar o chamador antes de inserir o método `Add` e revertido ao sair do método.  
   
- O `DisplayIdentityInformation` método mostrado no código de exemplo a seguir é uma função de utilitário que exibe a identidade do chamador.  
+ O método `DisplayIdentityInformation` mostrado no código de exemplo a seguir é uma função de utilitário que exibe a identidade do chamador.  
   
 ```csharp
 static void DisplayIdentityInformation()  
@@ -52,7 +52,7 @@ static void DisplayIdentityInformation()
 }  
 ```  
   
- O `Subtract` método no serviço representa o chamador usando chamadas obrigatórias, conforme mostrado no código de exemplo a seguir.  
+ O método `Subtract` no serviço representa o chamador usando chamadas obrigatórias, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 public double Subtract(double n1, double n2)  
@@ -90,7 +90,7 @@ public double Subtract(double n1, double n2)
   
  Os outros métodos não representam o chamador.  
   
- O código do cliente foi modificado para definir o nível de representação <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>como. O cliente especifica o nível de representação a ser usado pelo serviço, usando a <xref:System.Security.Principal.TokenImpersonationLevel> enumeração. A enumeração oferece suporte aos seguintes valores <xref:System.Security.Principal.TokenImpersonationLevel.None>: <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> e <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Para executar uma verificação de acesso ao acessar um recurso do sistema no computador local que é protegido usando ACLs do Windows, o nível de representação deve <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>ser definido como, conforme mostrado no código de exemplo a seguir.  
+ O código do cliente foi modificado para definir o nível de representação como <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>. O cliente especifica o nível de representação a ser usado pelo serviço, usando a enumeração <xref:System.Security.Principal.TokenImpersonationLevel>. A enumeração oferece suporte aos seguintes valores: <xref:System.Security.Principal.TokenImpersonationLevel.None>, <xref:System.Security.Principal.TokenImpersonationLevel.Anonymous>, <xref:System.Security.Principal.TokenImpersonationLevel.Identification>, <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation> e <xref:System.Security.Principal.TokenImpersonationLevel.Delegation>. Para executar uma verificação de acesso ao acessar um recurso do sistema no computador local que é protegido usando ACLs do Windows, o nível de representação deve ser definido como <xref:System.Security.Principal.TokenImpersonationLevel.Impersonation>, conforme mostrado no código de exemplo a seguir.  
   
 ```csharp
 // Create a client with given client endpoint configuration  
@@ -102,10 +102,10 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  Quando você executa o exemplo, as solicitações e respostas da operação são exibidas nas janelas do console do cliente e do serviço. Pressione ENTER em cada janela do console para desligar o serviço e o cliente.  
   
 > [!NOTE]
-> O serviço deve ser executado em uma conta administrativa ou a conta em que ele é executado deve receber direitos para registrar `http://localhost:8000/ServiceModelSamples` o URI com a camada http. Esses direitos podem ser concedidos Configurando uma [reserva de namespace](https://go.microsoft.com/fwlink/?LinkId=95012) usando a [ferramenta Httpcfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+> O serviço deve ser executado em uma conta administrativa ou a conta em que ele é executado deve receber direitos para registrar o URI de `http://localhost:8000/ServiceModelSamples` com a camada HTTP. Esses direitos podem ser concedidos Configurando uma [reserva de namespace](https://go.microsoft.com/fwlink/?LinkId=95012) usando a [ferramenta Httpcfg. exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
-> Em computadores que [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]executam o, a representação só terá suporte se o aplicativo host. exe tiver o privilégio de representação. (Por padrão, somente os administradores têm essa permissão.) Para adicionar esse privilégio a uma conta em que o serviço está sendo executado, vá para **Ferramentas administrativas**, abra **política de segurança local**, abra **políticas locais**, clique em **atribuição de direitos de usuário**e selecione **representar um cliente após Autenticação** e clique duas vezes em **Propriedades** para adicionar um usuário ou grupo.  
+> Em computadores que executam o Windows Server 2003, haverá suporte para a representação apenas se o aplicativo host. exe tiver o privilégio de representação. (Por padrão, somente os administradores têm essa permissão.) Para adicionar esse privilégio a uma conta em que o serviço está sendo executado, vá para **Ferramentas administrativas**, abra **política de segurança local**, abra **políticas locais**, clique em **atribuição de direitos de usuário**e selecione **representar um cliente após a autenticação** e clique duas vezes em **Propriedades** para adicionar um usuário ou grupo.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Para configurar, compilar, e executar o exemplo  
   

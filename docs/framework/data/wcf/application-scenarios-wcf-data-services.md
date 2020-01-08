@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 38bba2e9f63ab6cce0ede1a82658b6a21f5d4a4b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 8eb1e6e2a9338230520ebf3aec1c9ba50aa15ed9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74569389"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346194"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Cenários de aplicativos (WCF Data Services)
 
@@ -52,9 +52,9 @@ Consuma um feed OData em um aplicativo cliente baseado em AJAX.
 
 - [Usando um serviço de dados em um aplicativo cliente](using-a-data-service-in-a-client-application-wcf-data-services.md)
 
-- [OData: convenções de URI](https://go.microsoft.com/fwlink/?LinkId=185564)
+- [OData: convenções de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)
 
-- [Formato OData: JavaScript Object Notation (JSON)](https://go.microsoft.com/fwlink/?LinkId=185790)
+- [Formato OData: JavaScript Object Notation (JSON)](https://www.odata.org/developers/protocols/json-format/)
 
 Crie uma solução de dados de ponta a ponta que usa OData para transferir dados entre o cliente e o servidor.
 
@@ -98,7 +98,7 @@ Crie pontos de extremidade em um serviço de dados para habilitar comportamentos
 
 - [Operações de serviço](service-operations-wcf-data-services.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Quickstart](quickstart-wcf-data-services.md) (Início rápido)
 - [Recursos](wcf-data-services-resources.md)

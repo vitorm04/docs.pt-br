@@ -1,16 +1,16 @@
 ---
-title: Visão geral de segurança-WCF
+title: Visão geral de segurança
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: ae03684449e902c0d05744a19671169f2e0b8be2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949352"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344701"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Visão geral da segurança do Windows Communication Foundation
 O Windows Communication Foundation (WCF) é uma plataforma de programação distribuída baseada em mensagem SOAP, e a proteção de mensagens entre clientes e serviços é essencial para proteger os dados. O WCF fornece uma plataforma versátil e interoperável para trocar mensagens seguras com base na infraestrutura de segurança existente e nos padrões de segurança reconhecidos para mensagens SOAP.  
@@ -68,15 +68,15 @@ O Windows Communication Foundation (WCF) é uma plataforma de programação dist
 ### <a name="standards-and-interoperability"></a>Padrões e interoperabilidade  
  Em um mundo com grandes implantações existentes, a homogeneidade é rara. Plataformas de computação/comunicações distribuídas precisam interoperar com a oferta de tecnologias diferentes de fornecedores. Da mesma forma, a segurança também deve ser interoperável.  
   
- Para habilitar sistemas de segurança interoperáveis, as empresas ativas no setor de serviços da Web criaram uma variedade de padrões. Especificamente em relação à segurança, alguns padrões notáveis foram propostos: WS-Security: Segurança de mensagem SOAP (aceita pelo corpo de padrões OASIS e conhecido como WS-Security), WS-Trust, WS-SecureConversation e WS-SecurityPolicy.  
+ Para habilitar sistemas de segurança interoperáveis, as empresas ativas no setor de serviços da Web criaram uma variedade de padrões. Especificamente em relação à segurança, alguns padrões notáveis foram propostos: WS-Security: segurança de mensagem SOAP (aceita pelo corpo de padrões OASIS e, anteriormente conhecido como WS-Security), WS-Trust, WS-SecureConversation e WS-SecurityPolicy.  
   
- O WCF dá suporte a uma ampla variedade de cenários de interoperabilidade. A <xref:System.ServiceModel.BasicHttpBinding> classe é destinada ao perfil de segurança básico (BSP) <xref:System.ServiceModel.WSHttpBinding> e a classe é direcionada aos padrões de segurança mais recentes, como WS-Security 1,1 e WS-SecureConversation. Ao aderir a esses padrões, a segurança do WCF pode interoperar e integrar os serviços da Web que são hospedados em sistemas operacionais e plataformas diferentes do Microsoft Windows.  
+ O WCF dá suporte a uma ampla variedade de cenários de interoperabilidade. A classe <xref:System.ServiceModel.BasicHttpBinding> é direcionada ao BSP (perfil de segurança básico) e a classe <xref:System.ServiceModel.WSHttpBinding> é direcionada aos padrões de segurança mais recentes, como WS-Security 1,1 e WS-SecureConversation. Ao aderir a esses padrões, a segurança do WCF pode interoperar e integrar os serviços da Web que são hospedados em sistemas operacionais e plataformas diferentes do Microsoft Windows.  
   
 ## <a name="wcf-security-functional-areas"></a>Áreas funcionais de segurança do WCF  
  A segurança do WCF é dividida em três áreas funcionais: segurança de transferência, controle de acesso e auditoria. As seções a seguir discutem brevemente essas áreas e fornecem links para obter mais informações.  
   
 ### <a name="transfer-security"></a>Segurança de transferência  
- A segurança de transferência abrange três funções de segurança principais: integridade, confidencialidade e autenticação. A *integridade* é a capacidade de detectar se uma mensagem foi violada. A confidencialidade é a capacidade de manter uma mensagem ilegível por qualquer outra pessoa que não seja o destinatário pretendido; Isso é obtido por meio de criptografia. A *autenticação* é a capacidade de verificar uma identidade solicitada. Juntas, essas três funções ajudam a garantir que as mensagens cheguem com segurança de um ponto para outro.  
+ A segurança de transferência abrange três funções de segurança principais: integridade, confidencialidade e autenticação. A *integridade* é a capacidade de detectar se uma mensagem foi violada. A *confidencialidade* é a capacidade de manter uma mensagem ilegível por qualquer outra pessoa que não seja o destinatário pretendido; Isso é obtido por meio de criptografia. A *autenticação* é a capacidade de verificar uma identidade solicitada. Juntas, essas três funções ajudam a garantir que as mensagens cheguem com segurança de um ponto para outro.  
   
 #### <a name="transport-and-message-security-modes"></a>Modos de segurança de transporte e mensagem  
  Dois mecanismos principais são usados para implementar a segurança de transferência no WCF: modo de segurança de *transporte* e modo de segurança de *mensagem* .  
@@ -87,17 +87,17 @@ O Windows Communication Foundation (WCF) é uma plataforma de programação dist
   
  Para obter mais informações sobre essas diferenças, consulte [protegendo serviços e clientes](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md).  
   
- Um terceiro modo de segurança usa ambos os modos anteriores e traz as vantagens de ambos. Esse modo é chamado `TransportWithMessageCredential`. Nesse modo, a segurança da mensagem é usada para autenticar o cliente e a segurança de transporte é usada para autenticar o servidor e fornecer confidencialidade e integridade da mensagem. Graças a isso, o `TransportWithMessageCredential` modo de segurança é quase tão rápido quanto o modo de segurança de transporte e fornece extensibilidade de autenticação de cliente da mesma maneira que a segurança de mensagem. No entanto, ao contrário do modo de segurança da mensagem, ele não fornece segurança completa de ponta a ponta.  
+ Um terceiro modo de segurança usa ambos os modos anteriores e traz as vantagens de ambos. Esse modo é chamado de `TransportWithMessageCredential`. Nesse modo, a segurança da mensagem é usada para autenticar o cliente e a segurança de transporte é usada para autenticar o servidor e fornecer confidencialidade e integridade da mensagem. Graças a isso, o modo de segurança de `TransportWithMessageCredential` é quase tão rápido quanto o modo de segurança de transporte e fornece extensibilidade de autenticação de cliente da mesma forma que a segurança de mensagem. No entanto, ao contrário do modo de segurança da mensagem, ele não fornece segurança completa de ponta a ponta.  
   
 ### <a name="access-control"></a>Controle de Acesso  
  O *controle de acesso* também é conhecido como autorização. A *autorização* permite que usuários diferentes tenham privilégios diferentes para exibir dados. Por exemplo, como os arquivos de recursos humanos de uma empresa contêm dados confidenciais de funcionários, somente os gerentes têm permissão para exibir dados de funcionários. Além disso, os gerentes podem exibir apenas os dados para seus subordinados diretos. Nesse caso, o controle de acesso é baseado na função ("gerente"), bem como na identidade específica do gerente (para impedir que um gerente examine os registros de funcionário de outro gerente).  
   
- No WCF, os recursos de controle de acesso são fornecidos por meio da integração com <xref:System.Security.Permissions.PrincipalPermissionAttribute> o Common Language Runtime (CLR) e por meio de um conjunto de APIs conhecido como *modelo de identidade*. Para obter detalhes sobre o controle de acesso e autorização baseada em declarações, consulte estendendo a [segurança](../../../../docs/framework/wcf/extending/extending-security.md).  
+ No WCF, os recursos de controle de acesso são fornecidos por meio da integração com o Common Language Runtime (CLR) <xref:System.Security.Permissions.PrincipalPermissionAttribute> e por meio de um conjunto de APIs conhecido como *modelo de identidade*. Para obter detalhes sobre o controle de acesso e autorização baseada em declarações, consulte [estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md).  
   
-### <a name="auditing"></a>Auditoria  
- A *auditoria* é o log de eventos de segurança no log de eventos do Windows. Você pode registrar eventos relacionados à segurança, como falhas de autenticação (ou êxitos). Para obter mais informações, consulte [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Para obter detalhes de programação [, consulte Como: Auditar eventos](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)de segurança.  
+### <a name="auditing"></a>Auditoria do  
+ A *auditoria* é o log de eventos de segurança no log de eventos do Windows. Você pode registrar eventos relacionados à segurança, como falhas de autenticação (ou êxitos). Para obter mais informações, consulte [auditoria](../../../../docs/framework/wcf/feature-details/auditing-security-events.md). Para obter detalhes de programação, consulte [como: auditar eventos de segurança](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [Protegendo serviços](../../../../docs/framework/wcf/securing-services.md)

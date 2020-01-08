@@ -1,15 +1,15 @@
 ---
-title: 'Como: Escrever uma consulta que localiza elementos com base no contexto (C#)'
+title: Como escrever uma consulta que localiza elementos com base no contexto (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70253210"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348374"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Como: Escrever uma consulta que localiza elementos com base no contexto (C#)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>Como escrever uma consulta que localiza elementos com base no contexto (C#)
 Muitas vezes você pode ter que escrever uma consulta que seleciona elementos com base no contexto. Você pode querer filtrar com base nos elementos irmãos precedentes ou seguintes. Você pode querer filtrar com base nos elementos filhos ou ancestrais.  
   
  Você pode fazer isso escrevendo uma consulta e usando os resultados da consulta na cláusula `where`. Se você primeiro tiver que testar com zero e, em seguida, testar o valor, é mais conveniente fazer a consulta em uma cláusula `let` e usar os resultados na cláusula `where`.  
@@ -98,7 +98,7 @@ id = 3
 id = 6  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Linq.XElement.Parse%2A>
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>

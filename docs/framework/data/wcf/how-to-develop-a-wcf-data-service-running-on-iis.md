@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 684361dbb97e70296a3061f71102662023f88d9a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 5c75425783d3468ac42ef7cb32cd9c93e812192a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800519"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75338345"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>Como: desenvolver um serviço de dados WCF em execução no IIS
 
@@ -132,7 +132,7 @@ Após criar o serviço, você deve fornecer explicitamente acesso aos recursos d
 
 5. Conecte o modelo de dados ao banco de dado executando uma das etapas a seguir e clique em **Avançar**:
 
-    - Se você não tiver uma conexão de banco de dados já configurada, clique em **nova conexão** e crie uma nova conexão. Para obter mais informações, consulte [como: criar conexões para bancos de dados SQL Server](https://go.microsoft.com/fwlink/?LinkId=123631). Esta instância de SQL Server deve ter o banco de dados de exemplo Northwind anexado.
+    - Se você não tiver uma conexão de banco de dados já configurada, clique em **nova conexão** e crie uma nova conexão. Para obter mais informações, consulte [como: criar conexões para bancos de dados SQL Server](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90)). Esta instância de SQL Server deve ter o banco de dados de exemplo Northwind anexado.
 
          \- ou -
 
@@ -162,6 +162,6 @@ Após criar o serviço, você deve fornecer explicitamente acesso aos recursos d
      [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
      [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Expondo seus dados como um serviço](exposing-your-data-as-a-service-wcf-data-services.md)

@@ -6,22 +6,20 @@ f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 82fc1649bac66c0e934db13c50390b977432c34c
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
-ms.translationtype: MT
+ms.openlocfilehash: 4f3ba6594eb16cf16db6a1de78fe05509c5f4d7d
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036138"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345280"
 ---
 # <a name="stackalloc-operator-c-reference"></a>Operador stackalloc (referência do C#)
 
 O operador `stackalloc` aloca um bloco de memória na pilha. Um bloco de memória alocado na pilha criado durante a execução do método é descartado automaticamente quando esse método é retornado. Não é possível liberar explicitamente a memória alocada com o operador `stackalloc`. Um bloco de memória alocado de pilha não está sujeito à [coleta de lixo](../../../standard/garbage-collection/index.md) e não precisa ser fixado com uma [instrução`fixed`](../keywords/fixed-statement.md).
 
-Na expressão `stackalloc T[E]`, `T` deve ser um [tipo não gerenciado](../builtin-types/unmanaged-types.md) e `E` deve ser uma expressão do tipo `int`.
-
 Você pode atribuir o resultado do operador `stackalloc` a uma variável de um dos seguintes tipos:
 
-- A partir C# do 7,2, <xref:System.Span%601?displayProperty=nameWithType>ou<xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, como mostra o exemplo a seguir:
+- A partir C# do 7,2, <xref:System.Span%601?displayProperty=nameWithType> ou <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>, como mostra o exemplo a seguir:
 
   [!code-csharp[stackalloc span](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AssignToSpan)]
 
@@ -31,7 +29,7 @@ Você pode atribuir o resultado do operador `stackalloc` a uma variável de um d
 
   [!code-csharp[stackalloc expression](~/samples/csharp/language-reference/operators/StackallocOperator.cs#AsExpression)]
 
-  A partir C# do 8,0, você pode usar uma`stackalloc`expressão dentro de outras expressões sempre que uma variável<xref:System.Span%601>ou<xref:System.ReadOnlySpan%601>é permitida, como mostra o exemplo a seguir:
+  A partir C# do 8,0, você pode usar uma `stackalloc` expressão dentro de outras expressões sempre que uma variável <xref:System.Span%601> ou <xref:System.ReadOnlySpan%601> é permitida, como mostra o exemplo a seguir:
 
   [!code-csharp[stackalloc in nested expressions](~/samples/csharp/language-reference/operators/StackallocOperator.cs#Nested)]
 
@@ -50,15 +48,17 @@ O conteúdo da memória recém-alocada é indefinido. A partir C# do 7,3, você 
 
 [!code-csharp[stackalloc initialization](~/samples/csharp/language-reference/operators/StackallocOperator.cs#StackallocInit)]
 
+No Expression `stackalloc T[E]`, `T` deve ser um [tipo não gerenciado](../builtin-types/unmanaged-types.md) e `E` deve ser uma expressão do tipo [int](../builtin-types/integral-numeric-types.md).
+
 ## <a name="security"></a>Segurança
 
 O uso de `stackalloc` habilita automaticamente os recursos de detecção de estouro de buffer no CLR (Common Language Runtime). Se for detectada uma estouro de buffer, o processo será encerrado assim que possível para minimizar a chance de o código mal-intencionado ser executado.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
-Para saber mais, confira a seção [Alocação de pilha](~/_csharplang/spec/unsafe-code.md#stack-allocation) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
+Para obter mais informações, consulte a seção [alocação de pilha](~/_csharplang/spec/unsafe-code.md#stack-allocation) da especificação de [ C# linguagem](~/_csharplang/spec/introduction.md) e a nota de proposta de recurso de [`stackalloc` em contextos aninhados](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md) .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)

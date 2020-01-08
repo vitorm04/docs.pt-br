@@ -5,14 +5,14 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926146"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340377"
 ---
-# <a name="tutorial-create-an-item-template"></a>Tutorial: Criar um modelo de item
+# <a name="tutorial-create-an-item-template"></a>Tutorial: criar um modelo de item
 
 Com o .NET Core, você pode criar e implantar modelos que geram projetos, arquivos e até recursos. Este tutorial é a parte um de uma série que ensina como criar, instalar e desinstalar modelos para usar com o comando `dotnet new`.
 
@@ -26,14 +26,14 @@ Nesta parte da série, você aprenderá a:
 > * Testar um modelo de item
 > * Desinstalar um modelo de item
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 * [SDK do .NET Core 2.2](https://dotnet.microsoft.com/download) ou versões posteriores.
 * Leia o artigo de referência [Modelos personalizados para dotnet new](../tools/custom-templates.md).
 
   O artigo de referência explica os conceitos básicos sobre modelos e como eles são agrupados. Algumas dessas informações serão reiteradas aqui.
 
-* Abra um terminal e navegue até a pasta _working\templates\\_ .
+* Abra um terminal e navegue até a pasta _working\templates_
 
 ## <a name="create-the-required-folders"></a>Criar as pastas obrigatórias
 
@@ -54,7 +54,7 @@ parent_folder
 
 Um modelo de item é um tipo específico de modelo que contém um ou mais arquivos. Esses tipos de modelos são úteis quando você deseja gerar algo como um arquivo de configuração, código ou solução. Neste exemplo, você criará uma classe que adiciona um método de extensão ao tipo de cadeia de caracteres.
 
-No terminal, navegue até a pasta _working\templates\\_ e crie uma nova subpasta chamada _extensions_. Insira a pasta.
+No terminal, navegue até a pasta _working\templates_ e crie uma nova subpasta denominada _extensões_. Insira a pasta.
 
 ```console
 working
@@ -85,7 +85,7 @@ Agora que você tem o conteúdo do modelo criado, é necessário criar a configu
 
 ## <a name="create-the-template-config"></a>Criar a configuração do modelo
 
-Os modelos são reconhecidos no .NET Core por uma pasta especial e um arquivo de configuração que está na raiz do modelo. Neste tutorial, a pasta de modelos está localizada em _working\templates\extensions\\_ .
+Os modelos são reconhecidos no .NET Core por uma pasta especial e um arquivo de configuração que está na raiz do modelo. Neste tutorial, a pasta de modelo está localizada em _working\templates\extensions_.
 
 Quando você cria um modelo, todos os arquivos e pastas na pasta de modelos são incluídos como parte do modelo, exceto a pasta de configuração especial. Esta pasta de configuração chama-se _.template.config_.
 
@@ -226,7 +226,7 @@ Currently installed items:
 C:\working> dotnet new -u C:\working\templates\extensions
 ```
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Neste tutorial, você criou um modelo de item. Para saber como criar um modelo de projeto, continue a ver essa série de tutoriais.
 

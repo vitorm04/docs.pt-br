@@ -1,5 +1,5 @@
 ---
-title: Cadeias de caracteres de formato TimeSpan personalizado - .NET
+title: Cadeias de caracteres de formato TimeSpan personalizado
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
-ms.openlocfilehash: f38ea3a1e2d687044f862e5d6c0a78c6c12965d6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5963f9afe422206627a1baea47339ecb81becf0
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73126562"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348316"
 ---
 # <a name="custom-timespan-format-strings"></a>Cadeias de caracteres de formato TimeSpan personalizado
 
-Uma cadeia de caracteres de formato <xref:System.TimeSpan> define a representação de cadeia de caracteres de um valor de <xref:System.TimeSpan> que é resultante de uma operação de formatação. Uma cadeia de caracteres de formato personalizado consiste em um ou mais O especificadores de formato <xref:System.TimeSpan> em conjunto com qualquer número de caracteres literais. Qualquer cadeia de caracteres que não é uma cadeia de caracteres de formato [TimeSpan padrão](standard-timespan-format-strings.md) é interpretada como uma cadeia de caracteres de formato <xref:System.TimeSpan> personalizada.
+Uma cadeia de caracteres de formato <xref:System.TimeSpan> define a representação de cadeia de caracteres de um valor de <xref:System.TimeSpan> que é resultante de uma operação de formatação. Uma cadeia de caracteres de formato personalizado consiste em um ou mais O especificadores de formato <xref:System.TimeSpan> em conjunto com qualquer número de caracteres literais. Qualquer cadeia de caracteres que não seja uma [cadeia de caracteres de formato TimeSpan padrão](standard-timespan-format-strings.md) é interpretada como uma cadeia de formato de <xref:System.TimeSpan> personalizada.
 
 > [!IMPORTANT]
 > Os especificadores de formato <xref:System.TimeSpan> personalizados não incluem símbolos de separador de espaço reservado, como os símbolos que separam dias de horas, horas de minutos ou segundos de frações de segundo. Em vez disso, esses símbolos devem ser incluídos na cadeia de caracteres de formato personalizado como literais de cadeia de caracteres. Por exemplo, `"dd\.hh\:mm"` define um ponto (.) como o separador entre dias e horas e dois-pontos (:) como o separador entre horas e minutos.
@@ -60,7 +60,7 @@ As sequências de formato <xref:System.TimeSpan> personalizado são usadas tamb�
 |"fffffff"|Os dez milionésimos de segundo (ou as marcas fracionárias) em um intervalo de tempo.<br /><br /> Mais informações: [o especificador de formato personalizado "fffffff"](#f7Specifier).|`TimeSpan.Parse("0:0:6.8954321")`:<br /><br /> `fffffff` --> 8954321<br /><br /> `ss\.fffffff` --> 06.8954321|
 |"F", "%F"|Os décimos de segundo em um intervalo de tempo. Nada será exibido se o dígito for zero.<br /><br /> Mais informações: [o especificador de formato personalizado "F"](#F_Specifier).|`TimeSpan.Parse("00:00:06.32")`:<br /><br /> `%F`: 3<br /><br /> `TimeSpan.Parse("0:0:3.091")`:<br /><br /> `ss\.F`: 03.|
 |"FF"|Os centésimos de segundo em um intervalo de tempo. Zeros à direita fracionais ou dois dígitos zero não são incluídos.<br /><br /> Mais informações: [o especificador de formato personalizado "FF"](#FF_Specifier).|`TimeSpan.Parse("00:00:06.329")`:<br /><br /> `FF`: 32<br /><br /> `TimeSpan.Parse("0:0:3.101")`:<br /><br /> `ss\.FF`: 03.1|
-|"FFF"|Os milissegundos em um intervalo de tempo. Zeros à direita fracionais não são incluídos.<br /><br /> Para saber mais:|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03.1|
+|"FFF"|Os milissegundos em um intervalo de tempo. Zeros à direita fracionais não são incluídos.<br /><br /> Mais informações:|`TimeSpan.Parse("00:00:06.3291")`:<br /><br /> `FFF`: 329<br /><br /> `TimeSpan.Parse("0:0:3.1009")`:<br /><br /> `ss\.FFF`: 03.1|
 |"FFFF"|Os décimos de milésimos de segundo em um intervalo de tempo. Zeros à direita fracionais não são incluídos.<br /><br /> Mais informações: [o especificador de formato personalizado "ffff"](#F4_Specifier).|`TimeSpan.Parse("00:00:06.32917")`:<br /><br /> `FFFFF`: 3291<br /><br /> `TimeSpan.Parse("0:0:3.10009")`:<br /><br /> `ss\.FFFF`: 03.1|
 |"FFFFF"|As centenas de milésimos de segundo em um intervalo de tempo. Zeros à direita fracionais não são incluídos.<br /><br /> Mais informações: [o especificador de formato personalizado "fffff"](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|Os milionésimos de segundo em um intervalo de tempo. Zeros à direita fracionais não são exibidos.<br /><br /> Mais informações: [o especificador de formato personalizado "FFFFFF"](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
@@ -391,7 +391,7 @@ O exemplo a seguir usa o caractere de escape e a aspa simples para definir uma c
 
 [Voltar à tabela](#table)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Formatando Tipos](formatting-types.md)
 - [Cadeias de caracteres de formato TimeSpan padrão](standard-timespan-format-strings.md)

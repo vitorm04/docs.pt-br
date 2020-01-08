@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 0ee11b67dcd9c7251df17dc7523dc20765e157c5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1e0290a4df688d39f84086dc4c1b41712f81076a
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716701"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345139"
 ---
 # <a name="srmp"></a>SRMP
 Este exemplo demonstra como executar a comunicação em fila transacionada usando o MSMQ (enfileiramento de mensagens) via HTTP.  
@@ -28,7 +28,7 @@ Este exemplo demonstra como executar a comunicação em fila transacionada usand
   
 5. Se você quiser ter certeza de que o HTTP é usado para comunicação, você pode habilitar o MSMQ para ser executado no modo protegido. Isso garante que nenhuma mensagem para qualquer fila hospedada no computador possa chegar usando qualquer transporte não HTTP.  
   
-6. Depois de selecionar o MSMQ para execução no modo protegido, o computador requer uma reinicialização no [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)].  
+6. Depois de selecionar o MSMQ para execução no modo protegido, o computador requer uma reinicialização no Windows Server 2003.  
   
 7. Executar o serviço.  
   

@@ -2,12 +2,12 @@
 title: Novidades no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 0a02ca3885524c5fcf8def603acdce33a972d283
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: db903f801994202ac50ac72ad5352f20367efed7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791262"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337017"
 ---
 # <a name="whats-new-in-adonet"></a>Novidades no ADO.NET
 
@@ -29,7 +29,7 @@ Os recursos a seguir são novos no .NET Framework Provedor de Dados para SQL Ser
 
 - Uma senha pode ser passada como um <xref:System.Security.SecureString> ao usar a autenticação SQL Server. Consulte <xref:System.Data.SqlClient.SqlCredential> para obter mais informações.
 
-- Quando `TrustServerCertificate` é false e `Encrypt` é true, o nome do servidor (ou endereço IP) em um certificado SSL SQL Server deve corresponder exatamente ao nome do servidor (ou endereço IP) especificado na cadeia de conexão. Caso contrário, a tentativa de conexão falhará. Para obter mais informações, consulte a descrição da opção de conexão de `Encrypt` em <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
+- Quando `TrustServerCertificate` é false e `Encrypt` é true, o nome do servidor (ou endereço IP) em um certificado SQL Server SSL deve corresponder exatamente ao nome do servidor (ou endereço IP) especificado na cadeia de conexão. Caso contrário, a tentativa de conexão falhará. Para obter mais informações, consulte a descrição da opção de conexão de `Encrypt` em <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
   Se esta alteração fizer um aplicativo existente não se conectar mais, você poderá corrigir o aplicativo usando um desses procedimentos:
 
@@ -39,21 +39,21 @@ Os recursos a seguir são novos no .NET Framework Provedor de Dados para SQL Ser
 
   - Use o nome de domínio totalmente qualificado na cadeia de conexão.
 
-- O SqlClient dá suporte à Proteção Estendido. Para obter mais informações sobre a proteção estendida, consulte [conectando-se ao mecanismo de banco de dados usando a proteção estendida](https://go.microsoft.com/fwlink/?LinkId=219978).
+- O SqlClient dá suporte à Proteção Estendido. Para obter mais informações sobre a proteção estendida, consulte [conectando-se ao mecanismo de banco de dados usando a proteção estendida](/sql/database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection).
 
 - O SqlClient dá suporte a conexões com bancos de dados LocalDB. Para obter mais informações, consulte [suporte a SqlClient para LocalDB](./sql/sqlclient-support-for-localdb.md).
 
 - `Type System Version=SQL Server 2012;` é o novo valor para passar para a propriedade de conexão `Type System Version`. O valor `Type System Version=Latest;` agora é obsoleto e agora é equivalente ao `Type System Version=SQL Server 2008;`. Para obter mais informações, consulte <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.
 
-- O SqlClient fornece suporte adicional a colunas esparsas, um recurso que foi adicionado no SQL Server 2008. Se o aplicativo já acessa dados em uma tabela que usa colunas esparsas, você deverá ver um aumento no desempenho. A coluna IsColumnSet do <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se uma coluna é uma esparsa que é membro de um conjunto de colunas. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A>indica se uma coluna é uma coluna esparsa (consulte [SQL Server coleções de esquema](sql-server-schema-collections.md) para obter mais informações). Para obter mais informações sobre colunas esparsas, consulte [usando colunas esparsas](https://go.microsoft.com/fwlink/?LinkId=224244).
+- O SqlClient fornece suporte adicional a colunas esparsas, um recurso que foi adicionado no SQL Server 2008. Se o seu aplicativo já acessa dados em uma tabela que usa colunas esparsas, você deverá ver uma melhora no desempenho. A coluna IsColumnSet do <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> indica se uma coluna é uma esparsa que é membro de um conjunto de colunas. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> indica se uma coluna é uma coluna esparsa (consulte [SQL Server coleções de esquema](sql-server-schema-collections.md) para obter mais informações). Para obter mais informações sobre colunas esparsas, consulte [usar colunas esparsas](/sql/relational-databases/tables/use-sparse-columns).
 
-- O Microsoft.SqlServer.Types.dll do assembly, que contém os tipos de dados espaciais, foi atualizada da versão 10.0 para a 11.0. Os aplicativos que fazem referência a esse assembly podem falhar. Para obter mais informações, consulte [alterações recentes em recursos de mecanismo de banco de dados](https://go.microsoft.com/fwlink/?LinkId=224367).
+- O assembly Microsoft.SqlServer.Types.dllque contém os tipos de dados espaciais foi atualizado da versão 10.0 para a versão 11.0. Os aplicativos que fazem referência a esse assembly podem falhar. Para obter mais informações, consulte [alterações recentes em recursos de mecanismo de banco de dados](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms143179(v=sql.110)).
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-O .NET Framework 4,5 adiciona APIs que habilitam novos cenários ao trabalhar com o Entity Framework 5,0. Para obter mais informações sobre melhorias e recursos que foram adicionados ao Entity Framework 5,0, consulte os seguintes tópicos: [O que há de novo](https://go.microsoft.com/fwlink/?LinkID=251106) e [Entity Framework versões e controle de versão](https://go.microsoft.com/fwlink/?LinkId=234899).
+O .NET Framework 4,5 adiciona APIs que habilitam novos cenários ao trabalhar com o Entity Framework 5,0. Para obter mais informações sobre melhorias e recursos que foram adicionados ao Entity Framework 5,0, consulte os seguintes tópicos: [novidades](https://docs.microsoft.com/previous-versions/gg696190(v=vs.103)) e [Entity Framework versões e controle de versão](/ef/ef6/what-is-new/past-releases).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [ADO.NET](index.md)
 - [ADO.NET Overview](ado-net-overview.md) (Visão geral do ADO.NET)

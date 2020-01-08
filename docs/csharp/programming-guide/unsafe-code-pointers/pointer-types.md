@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: b9b9f145f8f2d945fa06d53efa89f5754766963f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 1f394d3fe5a2cb03c39cb0416e4ae44d6e340a4e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423123"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345634"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -64,7 +64,7 @@ Passar ponteiros entre métodos pode causar um comportamento indefinido. Conside
 
 A tabela a seguir lista os operadores e as instruções que podem operar em ponteiros em um contexto inseguro:
 
-|Operador/Instrução|Use|
+|Operador/Instrução|Uso|
 |-------------------------|---------|
 |`*`|Executa indireção de ponteiro.|
 |`->`|Acessa um membro de um struct através de um ponteiro.|
@@ -78,14 +78,15 @@ A tabela a seguir lista os operadores e as instruções que podem operar em pont
 
 Para obter mais informações sobre operadores relacionados a ponteiro, veja [Operadores relacionados a ponteiro](../../language-reference/operators/pointer-related-operators.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para saber mais, confira a seção [Tipos de ponteiro](~/_csharplang/spec/unsafe-code.md#pointer-types) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Código não seguro e ponteiros](index.md)
 - [Conversões de ponteiro](pointer-conversions.md)
-- [Tipos](/dotnet/csharp/language-reference/keywords)
+- [Tipos de referência](../../language-reference/keywords/reference-types.md)
+- [Tipos de valor](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

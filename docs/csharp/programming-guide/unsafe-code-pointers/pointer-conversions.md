@@ -5,19 +5,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], conversions
 ms.assetid: f0e87502-477a-4ede-a31f-7a3e262e46fb
-ms.openlocfilehash: b0a517eacc505376c9502e9d095c7aac0cd54555
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
-ms.translationtype: MT
+ms.openlocfilehash: 663599ab9ba6755388603d5d3cc5a9ee522f3c9f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417527"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345649"
 ---
 # <a name="pointer-conversions-c-programming-guide"></a>Conversões de ponteiro (Guia de Programação em C#)
 A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas. As conversões implícitas podem ocorrer em diversas situações, incluindo instruções de atribuição e invocações de método.  
   
 ## <a name="implicit-pointer-conversions"></a>Conversões de ponteiro implícitas  
   
-|De|{1&gt;Para&lt;1}|  
+|Do|{1&gt;Para&lt;1}|  
 |----------|--------|  
 |Qualquer tipo de ponteiro|void*|  
 |{1&gt;nulo&lt;1}|Qualquer tipo de ponteiro|  
@@ -26,7 +26,7 @@ A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas. As
   
 ## <a name="explicit-pointer-conversions"></a>Conversões de ponteiro explícitas  
   
-|De|{1&gt;Para&lt;1}|  
+|Do|{1&gt;Para&lt;1}|  
 |----------|--------|  
 |Qualquer tipo de ponteiro|Qualquer outro tipo de ponteiro|  
 |sbyte, byte, short, ushort, int, uint, long ou ulong|Qualquer tipo de ponteiro|  
@@ -39,11 +39,12 @@ A tabela a seguir mostra as conversões de ponteiro implícitas predefinidas. As
   
  [!code-csharp[csProgGuidePointers#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuidePointers/CS/Pointers.cs#4)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
-- [Tipos de ponteiro](./pointer-types.md)
-- [Tipos](/dotnet/csharp/language-reference/keywords)
+- [Tipos de ponteiro](pointer-types.md)
+- [Tipos de referência](../../language-reference/keywords/reference-types.md)
+- [Tipos de valor](../../language-reference/keywords/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
 - [Instrução fixed](../../language-reference/keywords/fixed-statement.md)
 - [stackalloc](../../language-reference/operators/stackalloc.md)

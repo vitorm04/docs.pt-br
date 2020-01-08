@@ -1,13 +1,13 @@
 ---
-title: 'Codificador de mensagem personalizada: codificador de texto personalizado-WCF'
+title: 'Codificador personalizado de mensagem: codificador personalizado de texto'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 17ad1f2ab557c470a39ab5fff6c1c52d5e41a2a5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: ae9d7f3d24e70c5cc74378eaaaa224910ada8d25
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716832"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347939"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Codificador personalizado de mensagem: codificador personalizado de texto
 

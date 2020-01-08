@@ -11,12 +11,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: 7ccce94a-6ca0-47d1-9f3f-13385d34f5d5
-ms.openlocfilehash: 9ec4b4c07910100dd02cc86e882b44aa7dbd2ced
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 455c839702b90738ec5aea37c1b09d72eba42ff4
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346045"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347887"
 ---
 # <a name="how-to-use-a-class-that-defines-operators-visual-basic"></a>Como usar uma classe que define operadores (Visual Basic)
 Se você estiver usando uma classe ou estrutura que define seus próprios operadores, poderá acessar esses operadores de Visual Basic.  
@@ -24,7 +24,7 @@ Se você estiver usando uma classe ou estrutura que define seus próprios operad
  A definição de um operador em uma classe ou estrutura também é chamada de *sobrecarga* do operador.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir acessa a estrutura SQL <xref:System.Data.SqlTypes.SqlString>, que define os operadores de conversão ([função CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) em ambas as direções entre uma cadeia de caracteres SQL e uma Visual Basic Cadeia de caracteres. Use `CType(`*expressão de cadeia de caracteres SQL*, `String)` para converter uma cadeia de caracteres SQL em uma cadeia de caracteres de Visual Basic e `CType(`*expressão de cadeia de caracteres*de Visual Basic <xref:System.Data.SqlTypes.SqlString>para converter na outra direção.`)`  
+ O exemplo a seguir acessa a estrutura SQL <xref:System.Data.SqlTypes.SqlString>, que define os operadores de conversão ([função CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) em ambas as direções entre uma cadeia de caracteres SQL e uma Visual Basic Cadeia de caracteres. Use `CType(`*expressão de cadeia de caracteres SQL*, `String)` para converter uma cadeia de caracteres SQL em uma cadeia de caracteres de Visual Basic e `CType(`*expressão de cadeia de caracteres*de Visual Basic <xref:System.Data.SqlTypes.SqlString>para converter na outra direção.  
   
  [!code-vb[VbVbcnProcedures#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#30)]  
   
@@ -32,14 +32,14 @@ Se você estiver usando uma classe ou estrutura que define seus próprios operad
   
  A estrutura de <xref:System.Data.SqlTypes.SqlString> define um operador de conversão ([função CType](../../../../visual-basic/language-reference/functions/ctype-function.md)) de `String` para <xref:System.Data.SqlTypes.SqlString> e outro de <xref:System.Data.SqlTypes.SqlString> para `String`. A instrução que atribui `title` a `jobTitle` faz uso do primeiro operador e a chamada de função <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> usa a segunda.  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compile-the-code"></a>Compilar o código  
  Certifique-se de que a classe ou estrutura que você está usando define o operador que você deseja usar. Não presuma que a classe ou estrutura tenha definido todos os operadores disponíveis para sobrecarga. Para obter uma lista de operadores disponíveis, consulte a [instrução Operator](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
  Inclua a instrução de `Imports` apropriada para a cadeia de caracteres SQL no início do seu arquivo de origem (nesse caso <xref:System.Data.SqlTypes>).  
   
  Seu projeto deve ter referências a System. Data e System. XML.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Procedimentos de Operador](./operator-procedures.md)
 - [Como definir um operador](./how-to-define-an-operator.md)

@@ -4,12 +4,12 @@ description: Aprimoramentos recentes na linguagem C# permitem escrever código s
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 3dc3213cf24f4cdd8f0f1b7752263b4a609b2fa2
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039637"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346699"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>Escrever um código C# seguro e eficiente
 
@@ -72,42 +72,42 @@ Siga esta recomendação sempre que sua intenção de design for criar um tipo d
 
 ## <a name="declare-readonly-members-when-a-struct-cant-be-immutable"></a>Declarar membros ReadOnly quando um struct não puder ser imutável
 
-No C# 8,0 e posterior, quando um tipo de struct é mutável, você deve declarar membros que não causam a mutação para ser`readonly`. Por exemplo, a seguir está uma variação mutável da estrutura de ponto 3D:
+No C# 8,0 e posterior, quando um tipo de struct é mutável, você deve declarar membros que não causam a mutação para ser `readonly`. Por exemplo, a seguir está uma variação mutável da estrutura de ponto 3D:
 
 ```csharp
 public struct Point3D
 {
     public Point3D(double x, double y, double z)
     {
-        this.X = x;
-        this.Y = y;
-        this.Z = z;
+        _x = x;
+        _y = y;
+        _z = z;
     }
 
     private double _x;
-    public double X 
-    { 
-        readonly get { return _x;}; 
-        set { _x = value; }
+    public double X
+    {
+        readonly get => _x;
+        set => _x = value;
     }
-    
+
     private double _y;
-    public double Y 
-    { 
-        readonly get { return _y;}; 
-        set { _y = value; }
+    public double Y
+    {
+        readonly get => _y;
+        set => _y = value;
     }
 
     private double _z;
-    public double Z 
-    { 
-        readonly get { return _z;}; 
-        set { _z = value; }
+    public double Z
+    {
+        readonly get => _z;
+        set => _z = value;
     }
 
     public readonly double Distance => Math.Sqrt(X * X + Y * Y + Z * Z);
 
-    public readonly override string ToString() => $"{X, Y, Z }";
+    public readonly override string ToString() => $"{X}, {Y}, {Z}";
 }
 ```
 
@@ -137,7 +137,7 @@ public struct Point3D
 }
 ```
 
-Você não deseja chamadores que modificam a origem, então deve retornar o valor por `readonly ref`:
+Você não deseja chamadores que modificam a origem, então deve retornar o valor por `ref readonly`:
 
 ```csharp
 public struct Point3D
@@ -152,7 +152,7 @@ public struct Point3D
 
 Retornar `ref readonly` permite que você salvar a cópia de estruturas maiores e preserve a imutabilidade de seus membros de dados internos.
 
-No site de chamada, os chamadores fazem a opção de usar a propriedade `Origin` como um `readonly ref` ou como um valor:
+No site de chamada, os chamadores fazem a opção de usar a propriedade `Origin` como um `ref readonly` ou como um valor:
 
 [!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
@@ -220,7 +220,7 @@ As técnicas descritas acima explicam como evitar cópias retornando referência
 
 [!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
-A estrutura `Point3D` *não* é um struct somente leitura. Há seis chamadas de acesso de propriedade diferentes no corpo deste método. No primeiro exame, você pode ter achado que esses acessos estavam seguros. No fim das contas, um acessador `get` não deve modificar o estado do objeto. Mas não há nenhuma regra de linguagem que impõe isso. É apenas uma convenção comum. Qualquer tipo pode implementar um acessador `get` que modificou o estado interno. Sem alguma garantia de linguagem, o compilador deve criar uma cópia temporária do argumento antes de chamar qualquer membro. O armazenamento temporário é criado na pilha, os valores do argumento são copiados para o armazenamento temporário e o valor é copiado para a pilha para cada acesso de membro como o argumento `this`. Em muitas situações, essas cópias prejudicam tanto o desempenho que a passagem por valor é mais rápida do que a passagem por referência somente leitura quando o tipo de argumento não é um `readonly struct`.
+A estrutura `Point3D`*não* é um struct somente leitura. Há seis chamadas de acesso de propriedade diferentes no corpo deste método. No primeiro exame, você pode ter achado que esses acessos estavam seguros. No fim das contas, um acessador `get` não deve modificar o estado do objeto. Mas não há nenhuma regra de linguagem que impõe isso. É apenas uma convenção comum. Qualquer tipo pode implementar um acessador `get` que modificou o estado interno. Sem alguma garantia de linguagem, o compilador deve criar uma cópia temporária do argumento antes de chamar qualquer membro. O armazenamento temporário é criado na pilha, os valores do argumento são copiados para o armazenamento temporário e o valor é copiado para a pilha para cada acesso de membro como o argumento `this`. Em muitas situações, essas cópias prejudicam tanto o desempenho que a passagem por valor é mais rápida do que a passagem por referência somente leitura quando o tipo de argumento não é um `readonly struct`.
 
 Em vez disso, se o cálculo de distância usar a struct imutável, `ReadonlyPoint3D`, os objetos temporários não serão necessários:
 
@@ -262,7 +262,7 @@ Essas compensações geralmente têm o mínimo de impacto no desempenho. No enta
 
 Esses aprimoramentos na linguagem C# são criados para algoritmos de desempenho críticos, nos quais as alocações de memória são um importante fator para alcançar o desempenho necessário. Você pode achar que geralmente não usa esses recursos no código que grava. No entanto, esses aprimoramentos foram adotados por meio do .NET. À medida que cada vez mais APIs utilizam esses recursos, você verá o desempenho dos seus aplicativos melhorar.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [ref keyword](language-reference/keywords/ref.md)
 - [Retornos de ref e locais de ref](programming-guide/classes-and-structs/ref-returns.md)

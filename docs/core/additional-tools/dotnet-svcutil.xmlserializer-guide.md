@@ -1,25 +1,25 @@
 ---
-title: Usar o dotnet-svcutil.xmlserializer no .NET Core
+title: Usando dotNet-svcutil. XmlSerializer
 description: Saiba como você pode usar o pacote NuGet `dotnet-svcutil.xmlserializer` para pré-gerar um assembly de serialização para projetos .NET Core.
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: f1eebeb70206ce883a8e4e4bbd5216ae0ba5507c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117279"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344895"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>Usar o dotnet-svcutil.xmlserializer no .NET Core
 
 O pacote NuGet `dotnet-svcutil.xmlserializer` pode pré-gerar um assembly de serialização para projetos .NET Core. Ele pré-gera o código de serialização C# para os tipos no aplicativo cliente que são usados pelo Contrato de Serviço do WCF e que podem ser serializados pelo XmlSerializer. Isso melhora o desempenho de inicialização da serialização de XML ao serializar ou desserializar objetos desses tipos.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 * [SDK do .NET Core 2.1](https://dotnet.microsoft.com/download) ou posterior
 * Seu editor de código favorito
 
-Você pode usar o comando `dotnet --info` para verificar quais versões do SDK do .NET Core e do tempo de execução estão instaladas.
+Você pode usar o comando `dotnet --info` para verificar quais versões do SDK do .NET Core e do runtime estão instaladas.
 
 ## <a name="getting-started"></a>Introdução
 
@@ -98,4 +98,4 @@ Para usar `dotnet-svcutil.xmlserializer` em um aplicativo de console do .NET Cor
 
 6. Compile o aplicativo executando `dotnet build`. Se tudo for bem-sucedido, um assembly chamado *MyWCFClient.XmlSerializers.dll* será gerado na pasta de saída. Se a ferramenta não puder gerar o assembly, você verá avisos na saída do build.
 
-7. Inicie o serviço WCF, por exemplo, executando `http://localhost:2561/Service1.svc` no navegador. Depois, inicie o aplicativo cliente, e ele será carregado automaticamente e usará os serializadores pré-gerados no tempo de execução.
+7. Inicie o serviço WCF, por exemplo, executando `http://localhost:2561/Service1.svc` no navegador. Depois, inicie o aplicativo cliente, e ele será carregado automaticamente e usará os serializadores pré-gerados no runtime.

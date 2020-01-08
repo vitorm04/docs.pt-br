@@ -9,20 +9,20 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: c797b1e9a80030ce6a97fccb14da2c51d753a1dc
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
-ms.translationtype: MT
+ms.openlocfilehash: 31563eccd50e6acd27a8e5a4ee96046fd2728695
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552326"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345355"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
 Há dois tipos de valor:
 
-- [Structs](struct.md)
+- [Estruturas](struct.md)
 
-- [Enumerações](enum.md)
+- [Enumerações](../builtin-types/enum.md)
 
 ## <a name="main-features-of-value-types"></a>Principais recursos dos tipos de valor
 
@@ -102,7 +102,7 @@ Para saber mais sobre o operador `new`, confira [new](../operators/new-operator.
 
 Para saber mais sobre a formatação da saída de tipos numéricos, consulte [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)

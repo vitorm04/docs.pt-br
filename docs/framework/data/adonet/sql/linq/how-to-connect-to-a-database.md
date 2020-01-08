@@ -1,21 +1,21 @@
 ---
-title: 'Como: conectar-se a um banco de dados'
+title: Como conectar-se a um banco de dados
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: 48ff4af2c881104d5699910e20ef86eea0466d2a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 837919b1cfcdf46026ccfb37cbbec951c0ae41b8
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793868"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634671"
 ---
-# <a name="how-to-connect-to-a-database"></a>Como: conectar-se a um banco de dados
-O <xref:System.Data.Linq.DataContext> é o principal conduto pelo qual você se conecta a um banco de dados, recupera objetos deles e envia alterações de volta para ele. Você usa o <xref:System.Data.Linq.DataContext> da mesma maneira que usaria um ADO.NET <xref:System.Data.SqlClient.SqlConnection>. Na verdade, o <xref:System.Data.Linq.DataContext> é inicializado com uma conexão ou com uma cadeia de conexão que você fornece. Para obter mais informações, consulte [métodos DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
+# <a name="how-to-connect-to-a-database"></a>Como conectar-se a um banco de dados
+O <xref:System.Data.Linq.DataContext> é o principal conduto pelo qual você se conecta a um banco de dados, recupera objetos deles e envia alterações de volta para ele. Você usa o <xref:System.Data.Linq.DataContext> da mesma maneira que usaria um <xref:System.Data.SqlClient.SqlConnection>ADO.NET. Na verdade, o <xref:System.Data.Linq.DataContext> é inicializado com uma conexão ou com uma cadeia de conexão que você fornece. Para obter mais informações, consulte [métodos DataContext (O/R Designer)](/visualstudio/data-tools/datacontext-methods-o-r-designer).  
   
- O objetivo do <xref:System.Data.Linq.DataContext> é converter suas solicitações de objetos em consultas SQL a serem feitas no banco de dados e montar objetos a partir dos resultados. O <xref:System.Data.Linq.DataContext> permite o [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] implementando o mesmo padrão de operador que os operadores de consulta padrão, como `Where` e `Select`.  
+ O objetivo do <xref:System.Data.Linq.DataContext> é converter suas solicitações de objetos em consultas SQL a serem feitas no banco de dados e montar objetos a partir dos resultados. O <xref:System.Data.Linq.DataContext> habilita o LINQ (consulta integrada à linguagem) implementando o mesmo padrão de operador que os operadores de consulta padrão, como `Where` e `Select`.  
   
 > [!IMPORTANT]
 > É muito importante manter uma conexão segura. Para obter mais informações, consulte [segurança em LINQ to SQL](security-in-linq-to-sql.md).  
@@ -39,6 +39,6 @@ O <xref:System.Data.Linq.DataContext> é o principal conduto pelo qual você se 
  [!code-csharp[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#5)]
  [!code-vb[DLinqCommunicatingWithDatabase#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#5)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Comunicação com o banco de dados](communicating-with-the-database.md)

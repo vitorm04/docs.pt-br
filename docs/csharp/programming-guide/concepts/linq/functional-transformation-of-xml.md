@@ -2,12 +2,12 @@
 title: Transformação funcional de XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 3c563c5dde1543c6ede53de0a9bb627f34108eaf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 83ecd97f9319027dc50f346abf7a9888b5c23862
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69594308"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336805"
 ---
 # <a name="functional-transformation-of-xml-c"></a>Transformação funcional de XML (C#)
 Este tópico descreve a abordagem funcional pura de transformação aos documentos XML de alteração, e ele contrastes com uma abordagem procedural.  
@@ -26,14 +26,14 @@ Este tópico descreve a abordagem funcional pura de transformação aos document
 ### <a name="xml-functional-transformational-technologies"></a>Tecnologias transformacionais funcionais XML  
  A Microsoft oferece duas tecnologias funcionais de transformação para uso em documentos XML: XSLT e LINQ to XML. XSLT é suportado no namespace gerenciada <xref:System.Xml.Xsl> e na implementação nativo COM de MSXML. Embora XSLT é uma tecnologia robusta para documentos XML de tratamento, requer a experiência em um domínio especializado, como o idioma XSLT e seus APIs de suporte.  
   
- LINQ to XML fornece as ferramentas necessárias codificação transformações e puras de uma maneira poderosa completo expressive e, em C# ou de código Visual Basic. Por exemplo, muitos dos exemplos o uso da documentação LINQ to XML uma abordagem funcional pura. Além disso, no [Tutorial: Manipulando o conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md), usamos o LINQ to XML em uma abordagem funcional para manipular informações em um documento do Microsoft Word.  
+ LINQ to XML fornece as ferramentas necessárias codificação transformações e puras de uma maneira poderosa completo expressive e, em C# ou de código Visual Basic. Por exemplo, muitos dos exemplos o uso da documentação LINQ to XML uma abordagem funcional pura. Além disso, no [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md), usamos LINQ to XML em uma abordagem funcional para manipular informações em um documento do Microsoft Word.  
   
- Para obter uma comparação mais completa entre LINQ to XML e outras tecnologias Microsoft XML, consulte [LINQ to XML versus Outras Tecnologias XML](./linq-to-xml-vs-other-xml-technologies.md).  
+ Para obter uma comparação mais completa de LINQ to XML com outras tecnologias XML da Microsoft, consulte [LINQ to XML vs. outras tecnologias XML](./linq-to-xml-vs-other-xml-technologies.md).  
   
- XSLT a ferramenta é recomendada para transformações um documento céntricas quando o documento de origem tem uma estrutura denteada. No entanto, LINQ to XML também pode executar um documento centralizado em transformações. Para obter mais informações, confira [Como: Usar anotações para transformar árvores LINQ to XML em um estilo XSLT (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).  
+XSLT a ferramenta é recomendada para transformações um documento céntricas quando o documento de origem tem uma estrutura denteada. No entanto, LINQ to XML também pode executar um documento centralizado em transformações. Para obter mais informações, consulte [como usar anotações para transformar LINQ to XML árvores em um estilo XSLT (C#)](./how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md).
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Introdução às transformações funcionais puras (C#)](./introduction-to-pure-functional-transformations.md)
 - [Tutorial: manipulando conteúdo em um documento WordprocessingML (C#)](./shape-of-wordprocessingml-documents.md)
-- [LINQ to XML versus Outras Tecnologias XML](./linq-to-xml-vs-other-xml-technologies.md)
+- [LINQ to XML vs. outras tecnologias XML](./linq-to-xml-vs-other-xml-technologies.md)

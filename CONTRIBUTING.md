@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191689"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336719"
 ---
 # <a name="contributing"></a>Contribuição
 
@@ -22,12 +22,9 @@ O documento aborda o processo para contribuir para os artigos e exemplos de cód
 
 Esse repositório contém a documentação conceitual do .NET. O site de documentação do .NET foi criado com base em vários repositórios, além desse:
 
-- [Exemplos e snippets de código](https://github.com/dotnet/samples)  
-    Os problemas e as tarefas deste repositório são acompanhados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
-- [Referência da API REST](https://github.com/dotnet/dotnet-api-docs)  
-    Os problemas e as tarefas deste repositório são acompanhados em [dotnet/dotnet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
-- [Referência do SDK do .NET Compiler Platform](https://github.com/dotnet/roslyn-api-docs)  
-    Problemas e demora para este repositório são acompanhados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Exemplos de código e trechos](https://github.com/dotnet/samples) Os problemas e as tarefas deste repositório são acompanhados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
+- [Referência da API .net](https://github.com/dotnet/dotnet-api-docs) Os problemas e as tarefas deste repositório são acompanhados em [dotnet/dotnet-API-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues).
+- [Referência do SDK do .net Compiler Platform](https://github.com/dotnet/roslyn-api-docs) Os problemas e as tarefas deste repositório são acompanhados em [dotnet/docs/issues](https://github.com/dotnet/docs/issues).
 
 ## <a name="dos-and-donts"></a>O que FAZER e o que NÃO FAZER
 
@@ -37,7 +34,7 @@ A lista a seguir mostra algumas regras de orientação que você deve considerar
 - **Examine o** atual [para obter](https://github.com/dotnet/docs/labels/up-for-grabs) problemas de sugestões de tarefas.
 - **Crie uma** PR para cada tarefa. PRs que incluem várias alterações não relacionadas são muito mais difíceis de examinar. Isso atrasa as revisões e a mesclagem de PRs. Essa diretriz também se aplica a revisões: Nós tentamos não sugerir alterações não relacionadas em revisões; Pedimos que as revisões da Comunidade sigam essa orientação.
 - **Forneça uma** descrição clara do trabalho em sua pr. Diga-nos o que mudou e por quê. A descrição padrão de "Update article.md" não é útil para revisores.
-- **Não** envie PRS para alterações somente de estilo sem discussão anterior. Esses PRs levam mais tempo para revisar a precisão e mesclá-los geralmente causa conflitos de mesclagem com outras atualizações importantes. Estamos trabalhando para seguir um estilo consistente, mas estamos balanceando esse trabalho com outras tarefas. Os artigos são levados em conformidade com o estilo quando fazemos atualizações importantes por outros motivos. 
+- **Não** envie PRS para alterações somente de estilo sem discussão anterior. Esses PRs levam mais tempo para revisar a precisão e mesclá-los geralmente causa conflitos de mesclagem com outras atualizações importantes. Estamos trabalhando para seguir um estilo consistente, mas estamos balanceando esse trabalho com outras tarefas. Os artigos são levados em conformidade com o estilo quando fazemos atualizações importantes por outros motivos.
 - **FAZER:** leia o [guia de estilo](./styleguide/template.md) e as diretrizes sobre [voz e tom](./styleguide/voice-tone.md). Novas adições devem seguir estas diretrizes.
 - **FAZER:** crie um branch separado em seu fork antes de trabalhar nos artigos.
 - **FAZER:** siga o [fluxo de trabalho do GitHub Flow](https://guides.github.com/introduction/flow/).
@@ -54,7 +51,7 @@ Você precisa de uma compreensão básica do [Git e do GitHub.com](https://guide
 **Etapa 1:** Ignore esta etapa para alterações pequenas (por exemplo, se você estiver corrigindo um erro de digitação ou imediatamente abrindo uma solicitação de pull para resolver um problema encontrado nos documentos). Se você estiver interessado em escrever novos conteúdos ou em revisar minuciosamente um conteúdo existente, abra uma [questão](https://github.com/dotnet/docs/issues) descrevendo o que você deseja fazer.
 O conteúdo dentro da pasta *docs* é separado em seções organizadas que são refletidas no Índice (TOC). Defina onde o tópico será posicionado no TOC. Obter comentários sobre sua proposta.
 
-\- ou -
+- ou -
 
 Também é possível escolher entre as questões existentes, para as quais contribuições da comunidade são bem-vindas. [Projetos para os colaboradores da comunidade do .NET](https://github.com/dotnet/docs/projects/35) lista vários itens de trabalho que estão disponíveis para os colaboradores da comunidade. Dependendo de seus interesses e nível de compromisso, você pode escolher entre questões nas seguintes categorias:
 
@@ -64,7 +61,7 @@ Também é possível escolher entre as questões existentes, para as quais contr
 
 - **Criação de novo conteúdo**. Se você estiver interessado na criação do seu próprio tópico, estas questões listam tópicos que gostaríamos de adicionar ao nosso conjunto de documentos. Fale conosco antes de começar a trabalhar em um tópico, no entanto. Se você estiver interessado em escrever um tópico que não está listado aqui, abra uma questão.
 
-Você também pode consultar nossa lista de [questões abertas](https://github.com/dotnet/docs/issues) e se voluntariar para trabalhar naquelas em que está interessado. Usamos o rótulo [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (a distribuir) para marcar questões abertas para contribuição. 
+Você também pode consultar nossa lista de [questões abertas](https://github.com/dotnet/docs/issues) e se voluntariar para trabalhar naquelas em que está interessado. Usamos o rótulo [up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) (a distribuir) para marcar questões abertas para contribuição.
 
 **Etapa 2:** bifurque os repositórios `dotnet/docs`, `dotnet/samples` ou `dotnet/dotnet-api-docs` conforme necessário e crie um branch para suas alterações.
 
@@ -95,7 +92,7 @@ docs
             portability_report.png
 ```
 
-**Etapa 4:** Envie uma solicitação de pull (PR) de seu Branch para `dotnet/docs/master`, `dotnet/dotnet-api-docs/master` ou `dotnet/samples/master`.
+**Etapa 4:** Envie uma solicitação de pull (PR) de seu Branch para `dotnet/docs/master`, `dotnet/dotnet-api-docs/master`ou `dotnet/samples/master`.
 
 Sua PR deve *sempre* direcionar a ramificação padrão do repositório (a menos que você esteja trabalhando em um Branch de lançamento). Para dotnet/docs, a ramificação mestre é a ramificação padrão. Para os repositórios localizados, o Live Branch é o padrão. Você *nunca* deve abrir uma PR que tenha como alvo a ramificação ao vivo em dotNet/docs.
 
@@ -138,7 +135,7 @@ Para saber mais, confira o [Leiame da amostra](https://github.com/dotnet/samples
 
 ## <a name="the-c-interactive-experience"></a>A experiência interativa em C#
 
-Códigos de exemplo curtos em C# podem usar a marcação de linguagem `csharp-interactive` para especificar uma amostra em C# executada no navegador. (Os exemplos de código embutido usam a marca `csharp-interactive`, para trechos inclusos da origem, use a marca `code-csharp-interactive`.) Esses exemplos de código exibem uma janela de código e uma janela de saída no artigo. A janela de saída exibe qualquer resultado da execução do código interativo depois que o usuário tiver executado a amostra. 
+Códigos de exemplo curtos em C# podem usar a marcação de linguagem `csharp-interactive` para especificar uma amostra em C# executada no navegador. (Os exemplos de código embutido usam a marca de `csharp-interactive`, para trechos incluídos da origem, use a marca de `code-csharp-interactive`.) Esses exemplos de código exibem uma janela de código e uma janela de saída no artigo. A janela de saída exibe qualquer resultado da execução do código interativo depois que o usuário tiver executado a amostra.
 
 A experiência interativa em C# altera o modo como trabalhamos com amostras. Os visitantes podem executar a amostra para ver os resultados. Uma série de fatores ajuda a determinar se a amostra ou o texto correspondente deve incluir informações sobre a saída.
 
@@ -149,7 +146,7 @@ A experiência interativa em C# altera o modo como trabalhamos com amostras. Os 
 - Quando a amostra e a saída esperada são curtas, considere mostrar a saída. Isso economiza um pouco de tempo.
 - Artigos que explicam como a cultura atual ou a cultura invariável afetam a saída devem explicar a saída esperada. O Interactive REPL (Loop de Leitura-Avaliação-Impressão Interativo) é executado em um host baseado em Linux. A cultura padrão e a cultura invariável produzem uma saída diferente em computadores e sistemas operacionais diferentes. O artigo deve explicar a saída em sistemas Windows, Linux e Mac.
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>Quando excluir a saída esperada da amostra 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>Quando excluir a saída esperada da amostra
 
 - Artigos em que a amostra gera uma saída maior não devem incluí-la nos comentários. Isso obscurece o código após a execução da amostra.
 - Artigos em que a amostra demonstra um tópico, mas a saída não é fundamental para entendê-lo. Por exemplo, um código que executa uma consulta LINQ para explicar a sintaxe de consulta e, em seguida, exibir cada item da coleção de saída.

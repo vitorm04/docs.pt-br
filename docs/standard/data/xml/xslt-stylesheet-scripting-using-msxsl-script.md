@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3d1658b47d2cda344e2ec1fe7b48c929005563b
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 32695d3bc29693ab4cf1e2f9d721d35598ecfb86
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69912043"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344714"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>Script de folha de estilos XSLT usando \<msxsl:script>
 A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usando o elemento `script`.  
@@ -31,7 +31,7 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  onde `msxsl` é um prefixo associado ao namespace `urn:schemas-microsoft-com:xslt`.  
   
- O atributo `language` não é obrigatório, mas se for especificado, seu valor precisará ser um dos seguintes: C#, VB, JScript, JavaScript, VisualBasic ou CSharp. Se não for especificado, a linguagem padrão é JScript. O `language-name` não diferencia maiúsculas de minúsculas, portanto “JavaScript” e “Javascript” são equivalentes.  
+ O atributo `language` não é obrigatório, mas, se especificado, seu valor deve ser um dos seguintes: `C#`, `VB`, `JScript`, `JavaScript`, `VisualBasic`ou `CSharp`. Se não for especificado, a linguagem padrão é JScript. O `language-name` não diferencia maiúsculas de minúsculas, portanto “JavaScript” e “Javascript” são equivalentes.  
   
  O atributo `implements-prefix` é obrigatório. Esse atributo é usado para declarar um namespace e associá-lo ao bloco de script. O valor desse atributo é o prefixo que representa o namespace. Este namespace pode ser definido em qualquer lugar em uma folha de estilos.  
   
@@ -49,30 +49,30 @@ A classe <xref:System.Xml.Xsl.XslTransform> dá suporte a scripts inserido usand
   
  As funções podem ser declaradas no elemento `msxsl:script`. A tabela a seguir mostra os namespaces que têm suporte por padrão. Você pode usar as classes fora dos namespaces listados. No entanto, essas classes devem ser totalmente qualificadas.  
   
-|Namespaces padrão|DESCRIÇÃO|  
+|Namespaces padrão|Descrição|  
 |------------------------|-----------------|  
-|Sistema|Classe do sistema.|  
+|System|Classe do sistema.|  
 |System.Collection|Classes de coleção.|  
-|System.Text|Classes de texto.|  
-|System.Text.RegularExpressions|Classes de expressão regular.|  
-|System.Xml|Classes XML principais.|  
+|{1&gt;System.Text&lt;1}|Classes de texto.|  
+|{1&gt;System.Text.RegularExpressions&lt;1}|Classes de expressão regular.|  
+|{1&gt;System.Xml&lt;1}|Classes XML principais.|  
 |System.Xml.Xsl|Classes XSLT.|  
 |System.Xml.XPath|Classes da linguagem XPath.|  
-|Microsoft.VisualBasic|Classes para scripts do Microsoft Visual Basic.|  
+|{1&gt;Microsoft.VisualBasic&lt;1}|Classes para scripts do Microsoft Visual Basic.|  
   
  Quando uma função é declarada, ela está contida em um bloco de script. As folhas de estilos podem conter vários blocos de script, cada uma funcionando de maneira independente da outra. Isso significa que, se você estiver realizando a execução em um bloco de script, não poderá chamar uma função definida em outro bloco de script, a menos que tenha sido declarado que ela tem o mesmo namespace e a mesma linguagem de script. Como cada bloco de script pode estar em sua própria linguagem, e o bloco é analisado de acordo com as regras de gramática do analisador de linguagem, você deverá usar a sintaxe correta para a linguagem em uso. Por exemplo, se você estiver em um bloco de script C#, é um erro usar um nó de comentário XML `<!-- an XML comment -->` no bloco.  
   
  Os argumentos fornecidos e os valores de retorno definidos pelas funções de script devem ser do tipo XPath do W3C (World Wide Web Consortium) ou XSLT. A tabela a seguir mostra os tipos correspondentes de W3C, as classes equivalentes do .NET Framework (tipo) e se o tipo do W3C é XPath ou XSLT.  
   
-|Tipo|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
+|{1&gt;Tipo&lt;1}|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
 |----------|----------------------------------------------|-----------------------------|  
-|Cadeia de Caracteres|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Número|System.Double|XPath|  
+|Cadeia de caracteres|System.String|{1&gt;XPath&lt;1}|  
+|Booliano|System.Boolean|{1&gt;XPath&lt;1}|  
+|Número|System.Double|{1&gt;XPath&lt;1}|  
 |Fragmento da árvore de resultado|System.Xml.XPath.XPathNavigator|XSLT|  
-|Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
+|Node Set|System.Xml.XPath.XPathNodeIterator|{1&gt;XPath&lt;1}|  
   
- Se a função de script utilizar um dos seguintes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single ou Decimal, eles serão forçados para Double, que é mapeado para o número do tipo XPath do W3C. Todos os outros tipos são forçados para uma cadeia de caracteres chamando o método `ToString`.  
+ Se a função de script utilizar um dos seguintes tipos numéricos: Int16, UInt16, Int32, UInt32, Int64, UInt64, Single ou Decimal, eles serão forçados para Double, que mapeia para o número do tipo XPath do W3C. Todos os outros tipos são forçados para uma cadeia de caracteres chamando o método `ToString`.  
   
  Se a função de script utilizar um tipo diferente dos mencionados acima, ou se a função não compilar quando a folha de estilos for carregada no objeto <xref:System.Xml.Xsl.XslTransform>, uma exceção será gerada.  
   
@@ -231,6 +231,6 @@ public class Sample
 </circles>    
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

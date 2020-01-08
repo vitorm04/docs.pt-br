@@ -2,12 +2,12 @@
 title: Utilitário de configuração de transações WS-Atomic (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: 429e11cdafc154b6913ab9de76dabe9c5b81d924
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: c57d0266102c5ad79657e875cb0107a2c11cabca
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837708"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337606"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Utilitário de configuração de transações WS-Atomic (wsatConfig.exe)
 O utilitário de configuração WS-AtomicTransaction é usado para definir configurações básicas de suporte WS-AtomicTransaction.  
@@ -25,7 +25,7 @@ wsatConfig [Options]
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- Se você estiver executando [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], deverá baixar uma atualização antes de executar o WsatConfig. exe. Para obter mais informações sobre essa atualização, consulte [Update for Windows Communication Foundation (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520).  
+ Se você estiver executando o [!INCLUDE[wxp](../../../includes/wxp-md.md)] ou o Windows Server 2003, deverá baixar uma atualização antes de executar o WsatConfig. exe. Para obter mais informações sobre essa atualização, consulte [Update for Windows Communication Foundation (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520).  
   
  A tabela a seguir mostra as opções que podem ser usadas com o utilitário de configuração WS-AtomicTransaction (wsatConfig. exe).  
   
@@ -49,7 +49,7 @@ wsatConfig [Options]
 |-Mostrar|Exibe as configurações de protocolo WS-AtomicTransaction atuais.|  
 |-virtualServer:\<virtualServer>|Especifica o nome do cluster de recursos do DTC.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Usando o WS-AtomicTransaction](./feature-details/using-ws-atomictransaction.md)
 - [Configurando o suporte a transações WS-Atomic](./feature-details/configuring-ws-atomic-transaction-support.md)

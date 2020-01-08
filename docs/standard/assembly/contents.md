@@ -2,20 +2,19 @@
 title: Conteúdos do assembly
 ms.date: 08/20/2019
 helpviewer_keywords:
-- assemblies [.NET Framework], multifile
-- assemblies [.NET Framework], single-file
+- assemblies [.NET Framework]
 - assemblies [.NET Core]
 - single-file assemblies
-- multifile assemblies [.NET Framework]
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
-ms.openlocfilehash: 9ca12ee4bd993db3dd200a3b340c220ce5188796
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bee9d5422ec3101b2486f233ae0816ae3643f4e7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122530"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345569"
 ---
 # <a name="assembly-contents"></a>Conteúdos do assembly
+
 Em geral, um assembly estático pode consistir em quatro elementos:
 
 - O [manifesto do assembly](manifest.md), que contém metadados do assembly.
@@ -24,19 +23,17 @@ Em geral, um assembly estático pode consistir em quatro elementos:
 
 - Código MSIL (Microsoft Intermediate Language) que implementa os tipos. Ele é gerado pelo compilador de um ou mais arquivos de código-fonte.
 
-- Um conjunto de recursos.  
+- Um conjunto de [recursos](../../framework/resources/index.md).  
 
 Somente o manifesto do assembly é obrigatório, mas tipos e recursos são necessários para atribuir ao assembly uma funcionalidade significativa.
 
-A ilustração a seguir mostra esses elementos agrupados em um único arquivo físico.
+A ilustração a seguir mostra esses elementos agrupados em um único arquivo físico:
 
-![Diagrama que mostra um assembly de arquivo único chamado MyAssembly.dll.](./media/contents/single-file-assembly.gif)
+![Um assembly de arquivo único chamado MyAssembly. dll](./media/contents/single-file-assembly.gif)
 
-Nesta ilustração, todos os três arquivos pertencem a um assembly, conforme descrito no manifesto de assembly contido em MyAssembly.dll. No sistema de arquivos, eles são três arquivos separados. Observe que o arquivo Util.netmodule foi compilado como um módulo porque não contém informações de assembly. Quando o assembly foi criado, o manifesto do assembly foi adicionado a MyAssembly.dll, indicando seu relacionamento com Util.netmodule e Graphic.bmp.
+Ao projetar seu código-fonte, você toma decisões explícitas sobre como particionar a funcionalidade do seu aplicativo em um ou mais arquivos. Ao criar o código .NET, você tomará decisões semelhantes sobre como particionar a funcionalidade em um ou mais assemblies.
 
-À medida que cria seu código-fonte, você toma decisões sobre como particionar a funcionalidade do seu aplicativo em um ou mais arquivos. Ao criar código do .NET Framework, você tomará decisões semelhantes sobre como particionar a funcionalidade em um ou mais assemblies.
-
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Assemblies no .NET](index.md)
 - [Manifesto do assembly](manifest.md)

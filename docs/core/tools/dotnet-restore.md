@@ -2,18 +2,18 @@
 title: Comando dotnet restore
 description: Saiba como restaurar as dependências e ferramentas específicas de projeto com o comando dotnet restore.
 ms.date: 05/29/2018
-ms.openlocfilehash: 055a4250755af02ad392877663985f86a647f892
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: 82dd85e340a4cb520f781d977b0798b0f532a088
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275757"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340445"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet restore` – Restaura as dependências e as ferramentas de um projeto.
 
@@ -45,7 +45,7 @@ O comando `dotnet restore` usa o NuGet para restaurar as dependências e ferrame
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando as ferramentas da CLI são instaladas. Especifique mais feeds criando seu próprio arquivo *nuget.config* no diretório do projeto. Também é possível especificar outros feeds por invocação em um prompt de comando.
+Para restaurar as dependências, o NuGet precisa dos feeds nos quais os pacotes estão localizados. Os feeds são geralmente fornecidos por meio do arquivo de configuração *nuget.config*. Um arquivo de configuração padrão é fornecido quando as ferramentas da CLI são instaladas. Especifique mais feeds criando seu próprio arquivo *nuget.config* no diretório do projeto. Você pode substituir os feeds *NuGet. config* pela opção `-s`.
 
 Para dependências, especifique onde os pacotes restaurados são colocados durante a operação de restauração usando o argumento `--packages`. Se não é especificado, o cache do pacote NuGet padrão é usado, o qual pode ser encontrado no diretório `.nuget/packages` do diretório base do usuário em todos os sistemas operacionais. Por exemplo, */home/user1* no Linux ou *C:\Usuário\user1* no Windows.
 
@@ -85,7 +85,7 @@ Na maioria dos casos, você não precisa usar o comando `dotnet restore` explici
 
 Às vezes, pode ser inconveniente executar `dotnet restore` implicitamente. Por exemplo, alguns sistemas automatizados, como os sistemas de compilação, precisam chamar o `dotnet restore` explicitamente para controlar o momento em que a restauração ocorre para que possam controlar o uso de rede. Para evitar que o `dotnet restore` seja executado implicitamente, use o sinalizador `--no-restore` com um desses comandos para desabilitar a restauração implícita.
 
-## <a name="arguments"></a>Argumentos
+## <a name="arguments"></a>Arguments
 
 `ROOT`
 
@@ -129,7 +129,7 @@ Especifica o diretório para os pacotes restaurados.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Especifica um tempo de execução para a restauração do pacote. Isso é usado para restaurar pacotes para tempos de execução não listados explicitamente na marca `<RuntimeIdentifiers>` no arquivo *.csproj*. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md). Forneça diversas RIDs especificando essa opção várias vezes.
+Especifica um runtime para a restauração do pacote. Isso é usado para restaurar pacotes para runtimes não listados explicitamente na marca `<RuntimeIdentifiers>` no arquivo *.csproj*. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). Forneça diversas RIDs especificando essa opção várias vezes.
 
 `-s|--source <SOURCE>`
 
@@ -175,11 +175,11 @@ Especifica o diretório para os pacotes restaurados.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Especifica um tempo de execução para a restauração do pacote. Isso é usado para restaurar pacotes para tempos de execução não listados explicitamente na marca `<RuntimeIdentifiers>` no arquivo *.csproj*. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md). Forneça diversas RIDs especificando essa opção várias vezes.
+Especifica um runtime para a restauração do pacote. Isso é usado para restaurar pacotes para runtimes não listados explicitamente na marca `<RuntimeIdentifiers>` no arquivo *.csproj*. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). Forneça diversas RIDs especificando essa opção várias vezes.
 
 `-s|--source <SOURCE>`
 
-Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Isso substitui todas as fontes especificadas nos arquivos *NuGet. config* , lendo efetivamente o arquivo *NuGet. config* como se o elemento `<packageSource>` não estivesse lá. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
+Especifica uma origem de pacote NuGet a ser usada durante a operação de restauração. Isso substitui todas as fontes especificadas nos arquivos *NuGet. config* , lendo efetivamente o arquivo *NuGet. config* como se o elemento de `<packageSource>` não estivesse lá. Diversas fontes podem ser fornecidas especificando essa opção várias vezes.
 
 `--verbosity <LEVEL>`
 

@@ -2,12 +2,12 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: dd3dd026749ccc299cd922b79dcae8ccbcc722d8
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 3c7da8d5a473b801da8c48d1cb1504b95cc6c769
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73968821"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342127"
 ---
 # <a name="servicehost"></a>\@ServiceHost
 Associa a fábrica usada para produzir o host de serviço com o serviço a ser hospedado e outros aspectos de programação necessários para acessar ou compilar o código de hospedagem fornecido no arquivo. svc.  
@@ -24,21 +24,21 @@ CodeBehind = "CodeBehind"
 %>
 ```  
   
-## <a name="attributes"></a>Atributos  
+## <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}  
   
-#### <a name="service"></a>Serviço  
+#### <a name="service"></a>Service  
  O nome do tipo CLR do serviço hospedado. Deve ser um nome qualificado de um tipo que implementa um ou mais dos contatos de serviço.  
   
-#### <a name="factory"></a>padrões  
+#### <a name="factory"></a>Fábrica  
  O nome do tipo CLR da fábrica do host de serviço usada para instanciar o host de serviço. Esse atributo é opcional. Se não for especificado, o <xref:System.ServiceModel.Activation.ServiceHostFactory> padrão será usado, que retorna uma instância de <xref:System.ServiceModel.ServiceHost>.  
   
-#### <a name="debug"></a>Depurar  
+#### <a name="debug"></a>Depuração  
  Indica se o serviço de Windows Communication Foundation (WCF) deve ser compilado com símbolos de depuração. `true` se o serviço WCF deve ser compilado com símbolos de depuração; caso contrário, `false`.  
   
-#### <a name="language"></a>Idioma  
- Especifica o idioma usado ao compilar todo o código embutido no arquivo (. svc). Os valores podem representar qualquer. Linguagem com suporte .net, incluindo C#, VB e js, que se referem C#ao, Visual Basic .net e JScript .net, respectivamente. Esse atributo é opcional.  
+#### <a name="language"></a>{1&gt;Idioma&lt;1}  
+ Especifica o idioma usado ao compilar todo o código embutido no arquivo (. svc). Os valores podem representar qualquer. Linguagem com suporte .net, incluindo `C#`, `VB`e `JS`, que se referem C#, Visual Basic e JScript .net, respectivamente. Esse atributo é opcional.  
   
-#### <a name="codebehind"></a>Behind  
+#### <a name="codebehind"></a>CodeBehind  
  Especifica o arquivo de origem que implementa o serviço Web XML, quando a classe que implementa o serviço Web XML não reside no mesmo arquivo e não foi compilada em um assembly e colocada no diretório \bin.  
   
 ## <a name="remarks"></a>Comentários  
@@ -67,6 +67,6 @@ Factory="WebScriptServiceHostFactory"
 %>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Host de serviço personalizado](../../../wcf/samples/custom-service-host.md)

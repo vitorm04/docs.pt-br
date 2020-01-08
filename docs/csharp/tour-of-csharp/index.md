@@ -3,16 +3,18 @@ title: Um tour pelo C# – Guia do C#
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 04/05/2019
 ms.custom: seoapril2019
-ms.openlocfilehash: b497ff05b29ce349fe2be3f8b9bc1a8697d6b30b
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
-ms.translationtype: MT
+ms.openlocfilehash: 7398703dc75e7ad7ab8da497eb39e8eeba6d1eba
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774068"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346861"
 ---
-# <a name="a-tour-of-the-c-language"></a>Um tour pela linguagem C#
+# <a name="a-tour-of-the-c-language"></a>Um tour pelo C# idioma
 
-O C# (pronuncia-se "C Sharp") é uma linguagem de programação simples, moderna, orientada a objeto e fortemente tipada. O C# tem suas raízes na família de linguagens C e os programadores em C, C++, Java e JavaScript a reconhecerão imediatamente. Este tour dá uma visão geral dos principais componentes da linguagem. Se quiser explorar a linguagem por meio de exemplos interativos, experimente nossos tutoriais de [Introdução à linguagem C#](../tutorials/intro-to-csharp/index.md).
+O C# (pronuncia-se "C Sharp") é uma linguagem de programação simples, moderna, orientada a objeto e fortemente tipada. O C# tem suas raízes na família de linguagens C e os programadores em C, C++, Java e JavaScript a reconhecerão imediatamente.
+
+Este tour fornece uma visão geral dos principais componentes do idioma no C# 7 e posterior. Se você quiser explorar a linguagem por meio de exemplos interativos, experimente a [introdução aos C# ](../tutorials/intro-to-csharp/index.md) tutoriais.
 
 O C# é uma linguagem orientada a objeto, mas inclui ainda suporte para programação ***orientada a componentes***. O design de software atual depende cada vez mais dos componentes de software na forma de pacotes independentes e autodescritivos de funcionalidade. O principal é que esses componentes apresentam um modelo de programação com propriedades, métodos e eventos; eles têm atributos que fornecem informações declarativas sobre o componente; e incorporam sua própria documentação. C# fornece construções de linguagem para dar suporte diretamente a esses conceitos, tornando C# uma linguagem muito natural para criação e uso de componentes de software.
 
@@ -49,7 +51,9 @@ A classe `Hello` declarada pelo programa "Hello, World" tem um único membro, o 
 
 A saída do programa é produzida pelo método `WriteLine` da classe `Console` no namespace `System`. Essa classe é fornecida pelas bibliotecas de classe padrão, que, por padrão, são referenciadas automaticamente pelo compilador.
 
-Há muito mais para aprender sobre C#. Os tópicos a seguir fornecem uma visão geral dos elementos da linguagem C#. Essas visões gerais fornecerão informações básicas sobre todos os elementos da linguagem e fornecerão as informações necessárias para se aprofundar nos elementos da linguagem C#:
+## <a name="elements-of-the-c-language"></a>Elementos do C# idioma
+
+Há muito mais para aprender sobre C#. Os tópicos a seguir fornecem uma visão geral dos elementos da linguagem C#. Essas visões gerais fornecem informações básicas sobre todos os elementos da linguagem e fornecem as informações necessárias para se aprofundar:
 
 - [Estrutura do programa](program-structure.md)
   - Aprenda os principais conceitos organizacionais na linguagem C#: ***programas***, ***namespaces***, ***tipos***, ***membros*** e ***assemblies***.
@@ -61,18 +65,19 @@ Há muito mais para aprender sobre C#. Os tópicos a seguir fornecem uma visão 
   - Você usa ***instruções*** para expressar as ações de um programa.
 - [Classes e objetos](classes-and-objects.md)
   - As ***classes*** são os tipos do C# mais fundamentais. Os ***objetos*** são instâncias de uma classe. As classes são compiladas usando ***membros***, que também são abordados neste tópico.
-- [Structs](structs.md)
+- [Estruturas](structs.md)
   - Os ***structs*** são estruturas de dados que, diferentemente das classes, são tipos de valor.
 - [Matrizes](arrays.md)
   - Uma ***matriz*** é uma estrutura de dados que contém algumas variáveis acessadas por meio de índices calculados.
 - [Interfaces](interfaces.md)
   - Uma ***interface*** define um contrato que pode ser implementado por classes e estruturas. Uma interface pode conter métodos, propriedades, eventos e indexadores. Uma interface não fornece implementações dos membros que define — ela simplesmente especifica os membros que devem ser fornecidos por classes ou estruturas que implementam a interface.
-- [Enums](enums.md)
-  - Um ***tipo enum*** é um tipo de valor diferente com um conjunto de constantes nomeadas.
 - [Delegados](delegates.md)
   - Um ***delegado*** é um tipo que representa referências aos métodos com uma lista de parâmetros e tipo de retorno específicos. Delegados possibilitam o tratamento de métodos como entidades que podem ser atribuídos a variáveis e passadas como parâmetros. Os delegados são parecidos com o conceito de ponteiros de função em outras linguagens, mas ao contrário dos ponteiros de função, os delegados são orientados a objetos e fortemente tipados.
 - [Atributos](attributes.md)
   - ***Atributos*** permitem que programas especifiquem informações declarativas adicionais sobre tipos, membros e outras entidades.
+  
+> [!NOTE]
+> Esses artigos se aplicam ao C# 7,0 e posterior. Alguns recursos podem não estar disponíveis em versões anteriores.
 
 > [!div class="step-by-step"]
 > [Avançar](program-structure.md)
