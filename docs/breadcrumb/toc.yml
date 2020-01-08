@@ -19,7 +19,7 @@
             - name: Microsserviços do .NET – Livro eletrônico de arquitetura
               tocHref: /dotnet/architecture/microservices/
               topicHref: /dotnet/architecture/microservices/index
-            - name: Nativo de nuvem
+            - name: Nativo à nuvem
               tocHref: /dotnet/architecture/cloud-native/
               topicHref: /dotnet/architecture/cloud-native/index
             - name: Livro eletrônico Modernização de aplicativos .NET
@@ -66,6 +66,9 @@
             - name: Desenvolver para várias plataformas com .NET
               tocHref: /dotnet/standard/cross-platform/
               topicHref: /dotnet/standard/cross-platform/index
+            - name: Microsoft.Data.Sqlite
+              tocHref: /dotnet/standard/data/sqlite/
+              topicHref: /dotnet/standard/data/sqlite/index
             - name: Documentos e dados XML
               tocHref: /dotnet/standard/data/xml/
               topicHref: /dotnet/standard/data/xml/index
@@ -223,7 +226,7 @@
                     - name: Seção de configuração do Windows Forms
                       tocHref: /dotnet/framework/configure-apps/file-schema/winforms/
                       topicHref: /dotnet/framework/configure-apps/file-schema/winforms/index
-            - name: Dados e modelagem no .NET Framework
+            - name: Dados e modelagem
               tocHref: /dotnet/framework/data/
               topicHref: /dotnet/framework/data/index
               items:
@@ -248,7 +251,7 @@
                         - name: LINQ to SQL
                           tocHref: /dotnet/framework/data/adonet/sql/linq/
                           topicHref: /dotnet/framework/data/adonet/sql/linq/index
-                - name: Processamento de transação
+                - name: Processamento de transações
                   tocHref: /dotnet/framework/data/transactions/
                   topicHref: /dotnet/framework/data/transactions/index
                 - name: WCF Data Services
@@ -281,13 +284,13 @@
             - name: Compilar aplicativos com o .NET Nativo
               tocHref: /dotnet/framework/net-native/
               topicHref: /dotnet/framework/net-native/index
-            - name: Programação de rede no .NET Framework
+            - name: Programação de rede
               tocHref: /dotnet/framework/network-programming/
               topicHref: /dotnet/framework/network-programming/index
             - name: Desempenho do .NET Framework
               tocHref: /dotnet/framework/performance/
               topicHref: /dotnet/framework/performance/index
-            - name: Programação dinâmica no .NET Framework
+            - name: Programação dinâmica
               tocHref: /dotnet/framework/reflection-and-codedom/
               topicHref: /dotnet/framework/reflection-and-codedom/index
             - name: Recursos em aplicativos de área de trabalho
@@ -398,7 +401,7 @@
                 - name: Avançado
                   tocHref: /dotnet/framework/wpf/advanced/
                   topicHref: /dotnet/framework/wpf/advanced/index
-                - name: Desenvolvimento de aplicativo
+                - name: Desenvolvimento do aplicativo
                   tocHref: /dotnet/framework/wpf/app-development/
                   topicHref: /dotnet/framework/wpf/app-development/index
                 - name: Controles
@@ -429,7 +432,7 @@
             - name: Associação de dados
               tocHref: /dotnet/desktop-wpf/data
               topicHref: /dotnet/desktop-wpf/data/index
-        - name: 'Guia C#'
+        - name: 'Guia do C#'
           tocHref: /dotnet/csharp/
           topicHref: /dotnet/csharp/index
           items:
@@ -637,7 +640,7 @@
                 - name: Constantes e enumerações
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/constants-enums/index
-                - name: Controlar fluxo
+                - name: Fluxo de controle
                   tocHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/
                   topicHref: /dotnet/visual-basic/programming-guide/language-features/control-flow/index
                 - name: Tipos de dados
