@@ -11,29 +11,29 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: 8c201abef924766d52b1adb084970a24ebea2b50
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e839271ac254a5e96f8c99f59397016fb99540aa
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350561"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636907"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Relacionamentos de tipo em operações de consulta (Visual Basic)
 
-As variáveis usadas em [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] operações de consulta são fortemente tipadas e devem ser compatíveis entre si. A tipagem forte é usada na fonte de dados, na própria consulta e na execução da consulta. A ilustração a seguir identifica os termos usados para descrever uma consulta de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Para obter mais informações sobre as partes de uma consulta, consulte [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
+As variáveis usadas em operações de consulta do LINQ (consulta integrada à linguagem) são fortemente tipadas e devem ser compatíveis entre si. A tipagem forte é usada na fonte de dados, na própria consulta e na execução da consulta. A ilustração a seguir identifica os termos usados para descrever uma consulta LINQ. Para obter mais informações sobre as partes de uma consulta, consulte [Basic Query Operations (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).
 
 ![Captura de tela mostrando uma consulta de pseudocódigo com elementos realçados.](./media/type-relationships-in-query-operations/linq-query-description-terms.png)
 
 O tipo da variável de intervalo na consulta deve ser compatível com o tipo dos elementos na fonte de dados. O tipo da variável de consulta deve ser compatível com o elemento Sequence definido na cláusula `Select`. Por fim, o tipo dos elementos Sequence também deve ser compatível com o tipo da variável de controle loop que é usada na instrução `For Each` que executa a consulta. Essa tipagem forte facilita a identificação de erros de tipo no momento da compilação.
 
-Visual Basic facilita a digitação de rigidez, implementando a inferência de tipo local, também conhecida como *digitação implícita*. Esse recurso é usado no exemplo anterior, e você verá que ele é usado em todos os exemplos de [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] e documentação. Em Visual Basic, a inferência de tipo local é realizada simplesmente usando uma instrução `Dim` sem uma cláusula `As`. No exemplo a seguir, `city` é fortemente tipada como uma cadeia de caracteres.
+Visual Basic facilita a digitação de rigidez, implementando a inferência de tipo local, também conhecida como *digitação implícita*. Esse recurso é usado no exemplo anterior e você verá que ele é usado em todos os exemplos e documentação do LINQ. Em Visual Basic, a inferência de tipo local é realizada simplesmente usando uma instrução `Dim` sem uma cláusula `As`. No exemplo a seguir, `city` é fortemente tipada como uma cadeia de caracteres.
 
 [!code-vb[VbLINQTypeRels#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#1)]
 
 > [!NOTE]
 > A inferência de tipo local funciona somente quando `Option Infer` é definido como `On`. Para obter mais informações, consulte [instrução Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md).
 
-No entanto, mesmo se você usar a inferência de tipo local em uma consulta, as mesmas relações de tipo estarão presentes entre as variáveis na fonte de dados, a variável de consulta e o loop de execução da consulta. É útil ter um entendimento básico dessas relações de tipo quando você estiver escrevendo [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] consultas ou trabalhando com exemplos de exemplo e código na documentação.
+No entanto, mesmo se você usar a inferência de tipo local em uma consulta, as mesmas relações de tipo estarão presentes entre as variáveis na fonte de dados, a variável de consulta e o loop de execução da consulta. É útil ter um entendimento básico dessas relações de tipo quando você estiver escrevendo consultas LINQ ou trabalhando com exemplos e códigos de exemplo na documentação.
 
 Talvez seja necessário especificar um tipo explícito para uma variável de intervalo que não corresponda ao tipo retornado da fonte de dados. Você pode especificar o tipo da variável de intervalo usando uma cláusula `As`. No entanto, isso resultará em um erro se a conversão for uma [conversão de restrição](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md) e `Option Strict` estiver definida como `On`. Portanto, recomendamos que você execute a conversão nos valores recuperados da fonte de dados. Você pode converter os valores da fonte de dados para o tipo de variável de intervalo explícito usando o método <xref:System.Linq.Enumerable.Cast%2A>. Você também pode converter os valores selecionados na cláusula `Select` para um tipo explícito que seja diferente do tipo da variável de intervalo. Esses pontos são ilustrados no código a seguir.
 
@@ -41,7 +41,7 @@ Talvez seja necessário especificar um tipo explícito para uma variável de int
 
 ## <a name="queries-that-return-entire-elements-of-the-source-data"></a>Consultas que retornam elementos inteiros dos dados de origem
 
-O exemplo a seguir mostra uma operação de consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] que retorna uma sequência de elementos selecionados a partir dos dados de origem. A origem, `names`, contém uma matriz de cadeias de caracteres e a saída da consulta é uma sequência que contém cadeias de caracteres que começam com a letra M.
+O exemplo a seguir mostra uma operação de consulta LINQ que retorna uma sequência de elementos selecionados a partir dos dados de origem. A origem, `names`, contém uma matriz de cadeias de caracteres e a saída da consulta é uma sequência que contém cadeias de caracteres que começam com a letra M.
 
 [!code-vb[VbLINQTypeRels#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQTypeRels/VB/Class1.vb#2)]
 
@@ -120,9 +120,9 @@ Embora não seja possível especificar tipos para todas as variáveis no exemplo
 
 3. O tipo da variável de iteração no loop de `For Each` é o tipo anônimo criado na etapa 2. Como o tipo não tem nenhum nome utilizável, o tipo da variável de iteração de loop deve ser determinado implicitamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Introdução à LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Tipos Anônimos](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Inferência de Tipo de Variável Local](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

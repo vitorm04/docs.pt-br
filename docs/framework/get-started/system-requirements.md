@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: 0137066b3a351d60bf1cc2e06640030ba1216d03
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
+ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960067"
+ms.lasthandoff: 12/29/2019
+ms.locfileid: "75545016"
 ---
 # <a name="net-framework-system-requirements"></a>Requisitos do sistema do .NET Framework
 
@@ -78,7 +78,7 @@ A instalação do .NET Framework exige privilégios de administrador. Se você n
 
 - Para todas as plataformas, recomendamos que você atualize para o Service Pack mais recente do Windows e instale atualizações críticas disponíveis no [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq) para garantir a melhor compatibilidade e segurança.
 
-- Em sistemas operacionais de 64 bits, o .NET Framework dá suporte ao WOW64 (processamento de 32 bits em um computador de 64 bits) e ao processamento nativo de 64 bits.
+- Em sistemas operacionais 64 bits, o .NET Framework dá suporte ao WOW64 (processamento de 32 bits em um computador de 64 bits) e ao processamento de 64 bits nativo.
 
 ## <a name="supported-server-operating-systems"></a>Sistemas operacionais de servidor com suporte
 
@@ -96,7 +96,7 @@ A instalação do .NET Framework exige privilégios de administrador. Se você n
 
  **Observações:**
 
-- O Windows Server 2012 inclui .NET Framework 4,5, portanto, você não precisa instalá-lo separadamente. Da mesma forma, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] inclui o .NET Framework 4.5.1.
+- O Windows Server 2012 inclui .NET Framework 4,5, portanto, você não precisa instalá-lo separadamente. Da mesma forma, o Windows Server 2012 R2 inclui o .NET Framework 4.5.1.
 
 - O .NET Framework tem compatibilidade limitada na função Server Core no Windows Server 2008 R2 SP1 ou posterior. Consulte [Server Core .NET Functionality](https://docs.microsoft.com/previous-versions//dd745015(v=vs.85)) (Funcionalidade do Server Core .NET) para obter uma lista de APIs incompatíveis.
 
@@ -108,7 +108,7 @@ A instalação do .NET Framework exige privilégios de administrador. Se você n
 
 - Em sistemas operacionais 64 bits, o .NET Framework dá suporte ao WOW64 (processamento de 32 bits em um computador de 64 bits) e ao processamento de 64 bits nativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de instalação](../install/index.md)
 - [Introdução](index.md)

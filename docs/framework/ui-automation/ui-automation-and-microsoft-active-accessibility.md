@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UI Automation, Microsoft Active Accessibility
 - Active Accessibility, UI Automation compared to
 ms.assetid: 87bee662-0a3e-4232-a421-20e7a5968321
-ms.openlocfilehash: 96998b2e625c7e395dd61d6905bc437ef1ca697d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f9fc7e2e1a6d5ee26f04b239723c6b7d4283dbce
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436643"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632311"
 ---
 # <a name="ui-automation-and-microsoft-active-accessibility"></a>Automação de Interface do usuário e Microsoft Active Accessibility
 > [!NOTE]
@@ -28,7 +28,7 @@ ms.locfileid: "74436643"
   
 <a name="Support_in_Windows_Presentation_Foundation_"></a>   
 ## <a name="support-in-windows-presentation-foundation"></a>Suporte no Windows Presentation Foundation  
- Windows Presentation Foundation (WPF) é o novo modelo para criar interfaces do usuário. os elementos de [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] não contêm suporte nativo para Acessibilidade Ativa; no entanto, eles oferecem suporte a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], o que inclui suporte a pontes para clientes Acessibilidade Ativa. Somente os clientes escritos especificamente para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] podem aproveitar ao máximo os recursos de acessibilidade do [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)], como o suporte avançado para texto.  
+ Windows Presentation Foundation (WPF) é o novo modelo para criar interfaces do usuário. Os elementos do WPF não contêm suporte nativo para Acessibilidade Ativa; no entanto, eles oferecem suporte a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], o que inclui suporte a pontes para clientes Acessibilidade Ativa. Somente os clientes escritos especificamente para [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] podem aproveitar ao máximo os recursos de acessibilidade do WPF, como o suporte avançado para texto.  
   
 <a name="Servers_and_Clients_compare"></a>   
 ## <a name="servers-and-clients"></a>Servidores e clientes  
@@ -78,12 +78,12 @@ ms.locfileid: "74436643"
 |ROLE_SYSTEM_LIST|Grade de dados|  
 |ROLE_SYSTEM_LISTITEM|Item de dados|  
 |ROLE_SYSTEM_DOCUMENT|Documento|  
-|ROLE_SYSTEM_TEXT|Editar|  
+|ROLE_SYSTEM_TEXT|Edit|  
 |ROLE_SYSTEM_GROUPING|Grupo|  
 |ROLE_SYSTEM_LIST|Cabeçalho|  
 |ROLE_SYSTEM_COLUMNHEADER|Item de cabeçalho|  
 |ROLE_SYSTEM_LINK|Hiperlink|  
-|ROLE_SYSTEM_GRAPHIC|Imagem|  
+|ROLE_SYSTEM_GRAPHIC|Image|  
 |ROLE_SYSTEM_LIST|Lista|  
 |ROLE_SYSTEM_LISTITEM|Item de lista|  
 |ROLE_SYSTEM_MENUPOPUP|Menu|  
@@ -98,7 +98,7 @@ ms.locfileid: "74436643"
 |ROLE_SYSTEM_SPINBUTTON|Controle giratório|  
 |ROLE_SYSTEM_SPLITBUTTON|Botão de divisão|  
 |ROLE_SYSTEM_STATUSBAR|Barra de status|  
-|ROLE_SYSTEM_PAGETABLIST|Guia|  
+|ROLE_SYSTEM_PAGETABLIST|Tabulação|  
 |ROLE_SYSTEM_PAGETAB|Item de guia|  
 |ROLE_SYSTEM_TABLE|Table|  
 |ROLE_SYSTEM_STATICTEXT|Texto|  
@@ -153,7 +153,7 @@ ms.locfileid: "74436643"
 |STATE_SYSTEM_OFFSCREEN|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> = true|N|  
 |STATE_SYSTEM_PROTECTED|<xref:System.Windows.Automation.AutomationElement.IsPasswordProperty>|N|  
 |STATE_SYSTEM_READONLY|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty?displayProperty=nameWithType> e <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty?displayProperty=nameWithType>|N|  
-|STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> tem suporte|N|  
+|STATE_SYSTEM_SELECTABLE|<xref:System.Windows.Automation.SelectionItemPattern> é compatível|N|  
 |STATE_SYSTEM_SELECTED|<xref:System.Windows.Automation.SelectionItemPattern.IsSelectedProperty>|N|  
 |STATE_SYSTEM_SIZEABLE|<xref:System.Windows.Automation.TransformPattern.TransformPatternInformation.CanResize%2A>|N|  
 |STATE_SYSTEM_UNAVAILABLE|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>|S|  
@@ -179,7 +179,7 @@ ms.locfileid: "74436643"
  Para obter uma lista completa de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] identificadores de propriedade, consulte [visão geral das propriedades de automação da interface do usuário](ui-automation-properties-overview.md).  
   
 <a name="uiautomation_events_compare"></a>   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  O mecanismo de eventos no [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], diferentemente do em Acessibilidade Ativa, não depende do roteamento de eventos do Windows (que está fortemente ligado com identificadores de janela) e não requer que o aplicativo cliente configure os ganchos. As assinaturas para eventos podem ser ajustadas não apenas a eventos específicos, mas a partes específicas da árvore. Os provedores também podem ajustar sua geração de eventos mantendo o controle de quais eventos estão sendo ouvidos.  
   
  Também é mais fácil para os clientes recuperarem os elementos que geram eventos, pois eles são passados diretamente para o retorno de chamada do evento. As propriedades do elemento serão previamente buscadas automaticamente se uma solicitação de cache estava ativa quando o cliente assinou o evento.  
@@ -240,7 +240,7 @@ ms.locfileid: "74436643"
 |Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.ScrollPattern.VerticalViewSizeProperty>|  
 |Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.TogglePattern.ToggleStateProperty>|  
 |Não há equivalência|alteração da propriedade <xref:System.Windows.Automation.WindowPattern.WindowVisualStateProperty>|  
-|Não há equivalência|<xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent> evento|  
+|Não há equivalência|Evento <xref:System.Windows.Automation.AutomationElement.AsyncContentLoadedEvent>|  
 |Não há equivalência|<xref:System.Windows.Automation.AutomationElement.ToolTipOpenedEvent>|  
   
 <a name="Security_compare"></a>   
@@ -249,6 +249,6 @@ ms.locfileid: "74436643"
   
  O modelo de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] remove a necessidade de provedores chamarem para outro código de provedor. O serviço do [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Core faz toda a agregação necessária.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [UI Automation Fundamentals](index.md) (Fundamentos da Automação da Interface do Usuário)
