@@ -2,12 +2,12 @@
 title: Interpolação de cadeia de caracteres – tutorial de C#
 description: Este tutorial mostra como usar o recurso de interpolação de cadeias de caracteres em C# para incluir resultados de expressão formatada em uma cadeia de caracteres maior.
 ms.date: 10/23/2018
-ms.openlocfilehash: 53b9afa4c5ccdcb1f18d2947981aee6571b73134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120115"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346788"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>Usar interpolação de cadeia de caracteres para construir cadeia de caracteres formatadas
 
@@ -46,7 +46,7 @@ Vamos testar mais alguns exemplos de interpolação de cadeias de caracteres com
 
 Na seção anterior, você usou a interpolação de cadeias de caracteres para inserir uma cadeia de caracteres dentro de outra. Entretanto, o resultado de uma expressão de interpolação pode ser de qualquer tipo de dados. Vamos incluir valores de vários tipos de dados em uma cadeia de caracteres interpolada.
 
-No exemplo a seguir, primeiramente definimos um tipo de dados de [classe](../../programming-guide/classes-and-structs/classes.md) `Vegetable` que tem uma [propriedade](../../properties.md) `Name` e um [método](../../methods.md) `ToString`, que [substitui](../../language-reference/keywords/override.md) o comportamento do método <xref:System.Object.ToString?displayProperty=nameWithType>. O [modificador de acesso `public`](../../language-reference/keywords/public.md) disponibiliza esse método para qualquer código de cliente para obter a representação de cadeia de caracteres de uma instância de `Vegetable`. No exemplo, o método `Vegetable.ToString` retorna o valor da propriedade `Name` que é inicializada no [construtor](../../programming-guide/classes-and-structs/constructors.md) `Vegetable`:
+No exemplo a seguir, definimos primeiro um tipo de dados de [classe](../../programming-guide/classes-and-structs/classes.md) `Vegetable` que tem uma [Propriedade](../../properties.md) `Name` e um [método](../../methods.md)`ToString`, que [substitui](../../language-reference/keywords/override.md) o comportamento do método <xref:System.Object.ToString?displayProperty=nameWithType>. O [modificador de acesso `public`](../../language-reference/keywords/public.md) disponibiliza esse método para qualquer código de cliente para obter a representação de cadeia de caracteres de uma instância de `Vegetable`. No exemplo, o método `Vegetable.ToString` retorna o valor da propriedade `Name` que é inicializada no [construtor](../../programming-guide/classes-and-structs/constructors.md)`Vegetable`:
 
 ```csharp
 public Vegetable(string name) => Name = name;
@@ -58,7 +58,7 @@ Em seguida, criamos uma instância da classe `Vegetable` chamada `item` usando o
 var item = new Vegetable("eggplant");
 ```
 
-Por fim, incluímos a variável `item` em uma cadeia de caracteres interpolada que também contém um valor <xref:System.DateTime>, um valor <xref:System.Decimal> e um valor de [enumeração](../../programming-guide/enumeration-types.md) `Unit` valor. Substitua todo o código C# em seu editor pelo seguinte código e, depois, use o comando `dotnet run` para executá-lo:
+Por fim, incluímos a variável `item` em uma cadeia de caracteres interpolada que também contém um valor de <xref:System.DateTime>, um valor de <xref:System.Decimal> e um valor de [Enumeração](../../language-reference/builtin-types/enum.md) de `Unit`. Substitua todo o código C# em seu editor pelo seguinte código e, depois, use o comando `dotnet run` para executá-lo:
 
 ```csharp
 using System;
