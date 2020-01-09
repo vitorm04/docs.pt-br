@@ -2,12 +2,12 @@
 title: Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entender eventos de integração para implementar comunicação baseada em evento entre microsserviços.
 ms.date: 10/02/2018
-ms.openlocfilehash: a355ba9ede4e3390edd858d173dd88548e876202
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711222"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712397"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementando comunicação baseada em evento entre microsserviços (eventos de integração)
 
@@ -27,7 +27,7 @@ Conforme observado na seção de arquitetura, você pode escolher entre várias 
 
 Para implementar apenas uma prova de conceito de barramento de evento para seu ambiente de desenvolvimento, como fizemos no exemplo de eShopOnContainers, pode ser suficiente uma implementação simples sobre RabbitMQ em execução como um contêiner. Porém, para sistemas críticos e de produção que precisam de alta escalabilidade, talvez você queira avaliar e usar o Barramento de Serviço do Azure.
 
-Se você precisar de abstrações de alto nível e os recursos mais avançados, como [Sagas](https://docs.particular.net/nservicebus/sagas/), para processos de execução longa que facilitam o desenvolvimento distribuído barramentos, valerá a pena avaliar outros barramentos de serviço comerciais e de software livre como NServiceBus, MassTransit e Brighter. Nesse caso, as abstrações e a API a serem usadas em geral serão seriam diretamente aquelas fornecidas por esses barramentos de serviço de alto nível, em vez das suas próprias abstrações (como [abstrações de barramento de evento simples fornecidas no eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Para isso, você pode pesquisar o [eShopOnContainers bifurcado usando NServiceBus](https://go.particular.net/eShopOnContainers) (amostra derivada adicional implementada pelo Software Específico)
+Se você precisar de abstrações de alto nível e os recursos mais avançados, como [Sagas](https://docs.particular.net/nservicebus/sagas/), para processos de execução longa que facilitam o desenvolvimento distribuído barramentos, valerá a pena avaliar outros barramentos de serviço comerciais e de software livre como NServiceBus, MassTransit e Brighter. Nesse caso, as abstrações e a API a serem usadas em geral serão seriam diretamente aquelas fornecidas por esses barramentos de serviço de alto nível, em vez das suas próprias abstrações (como [abstrações de barramento de evento simples fornecidas no eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/BuildingBlocks/EventBus/EventBus/Abstractions/IEventBus.cs)). Para isso, você pode pesquisar o [eShopOnContainers bifurcado usando nServiceBus](https://go.particular.net/eShopOnContainers) (amostra derivada adicional implementada por software específico).
 
 Obviamente, você sempre pode criar seus próprios recursos de barramento de serviço sobre tecnologias de nível inferior, como RabbitMQ e o Docker, mas o trabalho necessário para "reinventar a roda" pode ser muito alto para um aplicativo empresarial personalizado.
 

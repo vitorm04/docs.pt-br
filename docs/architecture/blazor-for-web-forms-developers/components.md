@@ -4,12 +4,12 @@ description: Saiba como criar componentes de interface do usuário reutilizávei
 author: danroth27
 ms.author: daroth
 ms.date: 09/18/2019
-ms.openlocfilehash: 5e5ca128bea2e77d795cede17df73963d9b49a48
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b34bdf61a425807030cf7648df245cc7a01c95de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337397"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705724"
 ---
 # <a name="build-reusable-ui-components-with-blazor"></a>Crie componentes de interface do usuário reutilizáveis com mais utilidade
 
@@ -269,7 +269,7 @@ Os manipuladores de eventos podem ser executados de forma síncrona ou assíncro
 Depois que um evento é manipulado, o componente é renderizado para considerar qualquer alteração de estado de componente. Com manipuladores de eventos assíncronos, o componente é renderizado imediatamente após a execução do manipulador ser concluída. O componente é renderizado *novamente* após a conclusão da `Task` assíncrona. Esse modo de execução assíncrono fornece uma oportunidade de renderizar alguma interface do usuário apropriada enquanto o `Task` assíncrono ainda está em andamento.
 
 ```razor
-<button @onclick="Get message">Get message</button>
+<button @onclick="ShowMessage">Get message</button>
 
 @if (showMessage)
 {

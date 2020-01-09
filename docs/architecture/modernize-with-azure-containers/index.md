@@ -2,12 +2,12 @@
 title: Modernizar aplicativos .NET existentes com contêineres do Windows e da nuvem do Azure (2ª edição)
 description: Aprenda a migrar aplicativos usando o método lift-and-shift e modernizar os existentes para a nuvem e contêineres do Azure com este livro eletrônico.
 ms.date: 04/28/2018
-ms.openlocfilehash: 67b1c7743697832684e96225e3d365da625ce6a3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: fa20e606c9a1364fbdf8c9a58c8703420d9e65a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73089763"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714578"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Modernizar aplicativos .NET existentes com contêineres do Windows e da nuvem do Azure (2ª edição)
 
@@ -25,11 +25,11 @@ Todos os direitos reservados. Nenhuma parte do conteúdo deste guia pode ser rep
 
 Este livro está disponível gratuitamente na forma de um livro eletrônico (e-book) por meio de diversos canais da Microsoft, como <https://dot.net/architecture>.
 
-Se você tiver dúvidas relacionadas a esse livro, envie-as por email para [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
+Se você tiver dúvidas relacionadas a este livro, envie um email para [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 Este livro é fornecido “no estado em que se encontra” e expressa os pontos de vista e as opiniões do autor. Os pontos de vista, as opiniões e as informações expressos neste livro, incluindo URLs e outras referências a sites da Internet, podem ser alteradas sem aviso prévio.
 
-Alguns exemplos aqui representados são fornecidos apenas para ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser deduzida.
+Alguns exemplos usados aqui são fornecidos apenas como ilustração e são fictícios. Nenhuma associação ou conexão real é intencional ou deve ser deduzida.
 
 A Microsoft e as marcas listadas em <https://www.microsoft.com> na página da Web "Marcas" são marcas comerciais do grupo de empresas Microsoft. Todas as outras marcas são propriedade de seus respectivos proprietários.
 
@@ -81,7 +81,7 @@ A definição e a breve explicação de cada nível de maturidade do aplicativo 
 **Nível 1: aplicativos prontos para a infraestrutura de nuvem** : nessa abordagem de migração, você simplesmente migra ou rehospeda seus aplicativos locais atuais para uma plataforma[IaaS](https://azure.microsoft.com/overview/what-is-iaas/)(infraestrutura como serviço). Os aplicativos têm quase a mesma composição de antes, mas agora você os implanta em VMs na nuvem.
 Esse tipo simples de migração é normalmente conhecido no setor como "lift-and-shift".
 
-**Nível 2: aplicativos otimizados na nuvem** : nesse nível e ainda sem rearquitetar ou alterar código significativo, você pode obter benefícios adicionais da execução de seu aplicativo na nuvem com tecnologias modernas, como contêineres e adicionais serviços gerenciados na nuvem. Melhore a agilidade dos seus aplicativos para distribuição mais rápida refinando seus processos de DevOps (operações de desenvolvimento) corporativas. Faça isso usando tecnologias como Contêineres do Windows, que é baseada no Mecanismo do Docker. Os contêineres removem o atrito causado pelas dependências de aplicativo ao implantar em vários estágios. Nesse modelo de maturidade, você pode implantar contêineres ou IaaS ou PaaS ao usar serviços gerenciados por nuvem adicionais relacionados a bancos de dados, cache como serviço, monitoramento e pipelines de CI/CD (integração contínua/implantação contínua).
+**Nível 2: aplicativos otimizados na nuvem** : nesse nível e ainda sem rearquitetar ou alterar código significativo, você pode obter benefícios adicionais na execução de seu aplicativo na nuvem com tecnologias modernas, como contêineres e serviços adicionais gerenciados na nuvem. Melhore a agilidade dos seus aplicativos para distribuição mais rápida refinando seus processos de DevOps (operações de desenvolvimento) corporativas. Faça isso usando tecnologias como Contêineres do Windows, que é baseada no Mecanismo do Docker. Os contêineres removem o atrito causado pelas dependências de aplicativo ao implantar em vários estágios. Nesse modelo de maturidade, você pode implantar contêineres ou IaaS ou PaaS ao usar serviços gerenciados por nuvem adicionais relacionados a bancos de dados, cache como serviço, monitoramento e pipelines de CI/CD (integração contínua/implantação contínua).
 
 O terceiro nível de maturidade é a meta final na nuvem, mas é opcional para muitos aplicativos e não é o foco principal deste guia:
 
@@ -124,7 +124,7 @@ Em seguida, passando para a produção, você poderá implantar seus Contêinere
 
 Durante essa modernização inicial, também é possível adicionar ativos da nuvem, como monitoramento com ferramentas como o [Azure Application Insights](https://docs.microsoft.com/azure/application-insights/app-insights-overview); pipelines de CI/CD para os ciclos de vida de aplicativos com o [Azure DevOps Services](https://azure.microsoft.com/services/devops/) e muitos outros serviços de recurso de dados que estão disponíveis no Azure. Por exemplo, é possível modificar um aplicativo Web monolítico que foi originalmente desenvolvido usando [Web Forms do ASP.NET](https://www.asp.net/web-forms) ou [ASP.NET MVC](https://www.asp.net/mvc) tradicionais, mas agora ele é implantado usando os Contêineres do Windows. Se você usar Contêineres do Windows, também deverá migrar os dados para um banco de dados em uma [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/), tudo sem alterar a arquitetura principal do seu aplicativo.
 
-- **Nativo de nuvem**: como introduzido, você deve pensar na arquitetura [de aplicativos nativos de nuvem](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) quando estiver visando aplicativos grandes e complexos com várias equipes de desenvolvimento independentes trabalhando em diferentes microservices que podem ser desenvolvido e implantado de forma autônoma. Além disso, devido à escalabilidade granular e independente por microsserviço. Essas abordagens de arquitetura enfrentam desafios e complexidades muito importantes, mas podem ser bastante simplificadas com o uso de orquestradores e PaaS de nuvem como o [ACS/AKS (Serviço de Kubernetes do Azure)](https://azure.microsoft.com/services/container-service/) (Kubernetes gerenciado) e o [Azure Functions](https://azure.microsoft.com/services/functions/) para uma abordagem sem servidor. Todas essas abordagens (como microsserviços e sem servidor) geralmente requerem que você crie para a nuvem e escreva um novo código, adaptado a plataformas específicas do PaaS ou alinhado a arquiteturas específicas, como microsserviços.
+- **Nativo de nuvem**: como introduzido, você deve pensar na arquitetura [de aplicativos nativos de nuvem](https://www.gartner.com/doc/3181919/architect-design-cloudnative-applications) quando estiver visando aplicativos grandes e complexos com várias equipes de desenvolvimento independentes trabalhando em diferentes microservices que podem ser desenvolvidos e implantados de forma autônoma. Além disso, devido à escalabilidade granular e independente por microsserviço. Essas abordagens de arquitetura enfrentam desafios e complexidades muito importantes, mas podem ser bastante simplificadas com o uso de orquestradores e PaaS de nuvem como o [ACS/AKS (Serviço de Kubernetes do Azure)](https://azure.microsoft.com/services/container-service/) (Kubernetes gerenciado) e o [Azure Functions](https://azure.microsoft.com/services/functions/) para uma abordagem sem servidor. Todas essas abordagens (como microsserviços e sem servidor) geralmente requerem que você crie para a nuvem e escreva um novo código, adaptado a plataformas específicas do PaaS ou alinhado a arquiteturas específicas, como microsserviços.
 
 A Figura 1-3 mostra as tecnologias internas que você pode usar para cada nível de maturidade:
 
@@ -199,7 +199,7 @@ Esses aplicativos de exemplo têm uma segunda versão, com o código modernizado
 
 ## <a name="send-your-feedback"></a>Envie seus comentários
 
-Este guia foi escrito para ajudar você a entender suas opções para melhorar e modernizar aplicativos Web .NET existentes. O guia e os aplicativos de exemplo relacionados estão em evolução. Seus comentários são bem-vindos! Se você tiver comentários sobre como este guia poderia ser mais útil, envie-os para [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
+Este guia foi escrito para ajudar você a entender suas opções para melhorar e modernizar aplicativos Web .NET existentes. O guia e os aplicativos de exemplo relacionados estão em evolução. Agradecemos seus comentários! Se você tiver comentários sobre como este guia poderia ser mais útil, envie-os para [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
 >[Avançar](lift-and-shift-existing-apps-azure-iaas.md) <!-- Next Chapter -->
