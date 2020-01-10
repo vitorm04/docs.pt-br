@@ -1,6 +1,5 @@
 ---
 title: <c> – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - c
@@ -11,33 +10,33 @@ helpviewer_keywords:
 - c C# XML tag
 - <c> C# XML tag
 ms.assetid: aad5b16e-a29e-445e-bd0d-eea0b138d7b2
-ms.openlocfilehash: 9454ef8cc4b72d1d6bdcac26faf76eb17080328c
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 97d5949a1a1528befeffdc27a3e727ac510e8da2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523539"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75697228"
 ---
-# <a name="c-c-programming-guide"></a><span data-ttu-id="a408b-102">\<c> (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="a408b-102">\<c> (C# Programming Guide)</span></span>
-## <a name="syntax"></a><span data-ttu-id="a408b-103">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="a408b-103">Syntax</span></span>  
+# <a name="c-c-programming-guide"></a><span data-ttu-id="e2d2b-102">\<c> (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="e2d2b-102">\<c> (C# Programming Guide)</span></span>
+## <a name="syntax"></a><span data-ttu-id="e2d2b-103">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="e2d2b-103">Syntax</span></span>  
   
 ```xml  
 <c>text</c>  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a408b-104">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="a408b-104">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e2d2b-104">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="e2d2b-104">Parameters</span></span>  
  `text`  
- <span data-ttu-id="a408b-105">O texto que você deseja indicar como código.</span><span class="sxs-lookup"><span data-stu-id="a408b-105">The text you would like to indicate as code.</span></span>  
+ <span data-ttu-id="e2d2b-105">O texto que você deseja indicar como código.</span><span class="sxs-lookup"><span data-stu-id="e2d2b-105">The text you would like to indicate as code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="a408b-106">Comentários</span><span class="sxs-lookup"><span data-stu-id="a408b-106">Remarks</span></span>  
- <span data-ttu-id="a408b-107">A marca \<c> oferece uma maneira de indicar que o texto em uma descrição deve ser marcado como código.</span><span class="sxs-lookup"><span data-stu-id="a408b-107">The \<c> tag gives you a way to indicate that text within a description should be marked as code.</span></span> <span data-ttu-id="a408b-108">Use [\<code>](./code.md) para indicar várias linhas como código.</span><span class="sxs-lookup"><span data-stu-id="a408b-108">Use [\<code>](./code.md) to indicate multiple lines as code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e2d2b-106">Comentários</span><span class="sxs-lookup"><span data-stu-id="e2d2b-106">Remarks</span></span>  
+ <span data-ttu-id="e2d2b-107">A marca \<c> oferece uma maneira de indicar que o texto em uma descrição deve ser marcado como código.</span><span class="sxs-lookup"><span data-stu-id="e2d2b-107">The \<c> tag gives you a way to indicate that text within a description should be marked as code.</span></span> <span data-ttu-id="e2d2b-108">Use [\<code>](./code.md) para indicar várias linhas como código.</span><span class="sxs-lookup"><span data-stu-id="e2d2b-108">Use [\<code>](./code.md) to indicate multiple lines as code.</span></span>  
   
- <span data-ttu-id="a408b-109">Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="a408b-109">Compile with [-doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="e2d2b-109">Compile com [-doc](../../language-reference/compiler-options/doc-compiler-option.md) para processar comentários de documentação em um arquivo.</span><span class="sxs-lookup"><span data-stu-id="e2d2b-109">Compile with [-doc](../../language-reference/compiler-options/doc-compiler-option.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a408b-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="a408b-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e2d2b-110">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e2d2b-110">Example</span></span>  
  [!code-csharp[csProgGuideDocComments#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="a408b-111">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a408b-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2d2b-111">Veja também</span><span class="sxs-lookup"><span data-stu-id="e2d2b-111">See also</span></span>
 
-- [<span data-ttu-id="a408b-112">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="a408b-112">C# Programming Guide</span></span>](../index.md)
-- [<span data-ttu-id="a408b-113">Marcas recomendadas para comentários de documentação</span><span class="sxs-lookup"><span data-stu-id="a408b-113">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)
+- [<span data-ttu-id="e2d2b-112">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="e2d2b-112">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="e2d2b-113">Marcas recomendadas para comentários de documentação</span><span class="sxs-lookup"><span data-stu-id="e2d2b-113">Recommended Tags for Documentation Comments</span></span>](./recommended-tags-for-documentation-comments.md)

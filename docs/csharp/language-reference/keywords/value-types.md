@@ -1,6 +1,5 @@
 ---
 title: Tipos de valor – Referência de C#
-ms.custom: seodec18
 ms.date: 11/26/2018
 f1_keywords:
 - cs.valuetypes
@@ -9,102 +8,102 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 31563eccd50e6acd27a8e5a4ee96046fd2728695
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 0ab9b6e089f5add9963ffae73e196643ad999763
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345355"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712904"
 ---
-# <a name="value-types-c-reference"></a><span data-ttu-id="1ffe4-102">Tipos de valor (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="1ffe4-102">Value types (C# Reference)</span></span>
+# <a name="value-types-c-reference"></a><span data-ttu-id="e6401-102">Tipos de valor (Referência de C#)</span><span class="sxs-lookup"><span data-stu-id="e6401-102">Value types (C# Reference)</span></span>
 
-<span data-ttu-id="1ffe4-103">Há dois tipos de valor:</span><span class="sxs-lookup"><span data-stu-id="1ffe4-103">There are two kinds of value types:</span></span>
+<span data-ttu-id="e6401-103">Há dois tipos de valor:</span><span class="sxs-lookup"><span data-stu-id="e6401-103">There are two kinds of value types:</span></span>
 
-- [<span data-ttu-id="1ffe4-104">Estruturas</span><span class="sxs-lookup"><span data-stu-id="1ffe4-104">Structs</span></span>](struct.md)
+- [<span data-ttu-id="e6401-104">Structs</span><span class="sxs-lookup"><span data-stu-id="e6401-104">Structs</span></span>](struct.md)
 
-- [<span data-ttu-id="1ffe4-105">Enumerações</span><span class="sxs-lookup"><span data-stu-id="1ffe4-105">Enumerations</span></span>](../builtin-types/enum.md)
+- [<span data-ttu-id="e6401-105">Enumerações</span><span class="sxs-lookup"><span data-stu-id="e6401-105">Enumerations</span></span>](../builtin-types/enum.md)
 
-## <a name="main-features-of-value-types"></a><span data-ttu-id="1ffe4-106">Principais recursos dos tipos de valor</span><span class="sxs-lookup"><span data-stu-id="1ffe4-106">Main features of value types</span></span>
+## <a name="main-features-of-value-types"></a><span data-ttu-id="e6401-106">Principais recursos dos tipos de valor</span><span class="sxs-lookup"><span data-stu-id="e6401-106">Main features of value types</span></span>
 
-<span data-ttu-id="1ffe4-107">Uma variável de um tipo de valor contém um valor do tipo.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-107">A variable of a value type contains a value of the type.</span></span> <span data-ttu-id="1ffe4-108">Por exemplo, uma variável do tipo `int` pode conter o valor `42`.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-108">For example, a variable of the `int` type might contain the value `42`.</span></span> <span data-ttu-id="1ffe4-109">Isso é diferente de uma variável de um tipo de referência, que contém uma referência a uma instância do tipo, também conhecida como um objeto.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-109">This differs from a variable of a reference type, which contains a reference to an instance of the type, also known as an object.</span></span> <span data-ttu-id="1ffe4-110">Quando você atribui um novo valor a uma variável de um tipo de valor, esse valor é copiado.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-110">When you assign a new value to a variable of a value type, that value is copied.</span></span> <span data-ttu-id="1ffe4-111">Quando você atribui um novo valor a uma variável de um tipo de referência, a referência é copiada, não o objeto.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-111">When you assign a new value to a variable of a reference type, the reference is copied, not the object itself.</span></span>
+<span data-ttu-id="e6401-107">Uma variável de um tipo de valor contém um valor do tipo.</span><span class="sxs-lookup"><span data-stu-id="e6401-107">A variable of a value type contains a value of the type.</span></span> <span data-ttu-id="e6401-108">Por exemplo, uma variável do tipo `int` pode conter o valor `42`.</span><span class="sxs-lookup"><span data-stu-id="e6401-108">For example, a variable of the `int` type might contain the value `42`.</span></span> <span data-ttu-id="e6401-109">Isso é diferente de uma variável de um tipo de referência, que contém uma referência a uma instância do tipo, também conhecida como um objeto.</span><span class="sxs-lookup"><span data-stu-id="e6401-109">This differs from a variable of a reference type, which contains a reference to an instance of the type, also known as an object.</span></span> <span data-ttu-id="e6401-110">Quando você atribui um novo valor a uma variável de um tipo de valor, esse valor é copiado.</span><span class="sxs-lookup"><span data-stu-id="e6401-110">When you assign a new value to a variable of a value type, that value is copied.</span></span> <span data-ttu-id="e6401-111">Quando você atribui um novo valor a uma variável de um tipo de referência, a referência é copiada, não o objeto.</span><span class="sxs-lookup"><span data-stu-id="e6401-111">When you assign a new value to a variable of a reference type, the reference is copied, not the object itself.</span></span>
 
-<span data-ttu-id="1ffe4-112">Todos os tipos de valor são derivados implicitamente da <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-112">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>
+<span data-ttu-id="e6401-112">Todos os tipos de valor são derivados implicitamente da <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e6401-112">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>
 
-<span data-ttu-id="1ffe4-113">Ao contrário do que acontece com tipos de referência, você não pode derivar um novo tipo de um tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-113">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="1ffe4-114">No entanto, assim como com tipos de referência, os structs podem implementar interfaces.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-114">However, like reference types, structs can implement interfaces.</span></span>
+<span data-ttu-id="e6401-113">Ao contrário do que acontece com tipos de referência, você não pode derivar um novo tipo de um tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="e6401-113">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="e6401-114">No entanto, assim como com tipos de referência, os structs podem implementar interfaces.</span><span class="sxs-lookup"><span data-stu-id="e6401-114">However, like reference types, structs can implement interfaces.</span></span>
 
-<span data-ttu-id="1ffe4-115">Variáveis de tipo de valor não podem ser `null` por padrão.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-115">Value type variables cannot be `null` by default.</span></span> <span data-ttu-id="1ffe4-116">No entanto, as variáveis dos [tipos de valores anuláveis](../builtin-types/nullable-value-types.md) correspondentes podem ser `null`.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-116">However, variables of the corresponding [nullable value types](../builtin-types/nullable-value-types.md) can be `null`.</span></span>
+<span data-ttu-id="e6401-115">Variáveis de tipo de valor não podem ser `null` por padrão.</span><span class="sxs-lookup"><span data-stu-id="e6401-115">Value type variables cannot be `null` by default.</span></span> <span data-ttu-id="e6401-116">No entanto, as variáveis dos [tipos de valores anuláveis](../builtin-types/nullable-value-types.md) correspondentes podem ser `null`.</span><span class="sxs-lookup"><span data-stu-id="e6401-116">However, variables of the corresponding [nullable value types](../builtin-types/nullable-value-types.md) can be `null`.</span></span>
 
-<span data-ttu-id="1ffe4-117">Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o valor padrão desse tipo.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-117">Each value type has an implicit parameterless constructor that initializes the default value of that type.</span></span> <span data-ttu-id="1ffe4-118">Para saber mais sobre valores padrão de tipos de valor, consulte [Tabela de valores padrão](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="1ffe4-118">For information about default values of value types, see [Default values table](default-values-table.md).</span></span>
+<span data-ttu-id="e6401-117">Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o valor padrão desse tipo.</span><span class="sxs-lookup"><span data-stu-id="e6401-117">Each value type has an implicit parameterless constructor that initializes the default value of that type.</span></span> <span data-ttu-id="e6401-118">Para saber mais sobre valores padrão de tipos de valor, consulte [Tabela de valores padrão](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="e6401-118">For information about default values of value types, see [Default values table](default-values-table.md).</span></span>
 
-## <a name="simple-types"></a><span data-ttu-id="1ffe4-119">Tipos simples</span><span class="sxs-lookup"><span data-stu-id="1ffe4-119">Simple types</span></span>
+## <a name="simple-types"></a><span data-ttu-id="e6401-119">Tipos simples</span><span class="sxs-lookup"><span data-stu-id="e6401-119">Simple types</span></span>
 
-<span data-ttu-id="1ffe4-120">Os *tipos simples* são um conjunto de tipos de struct predefinidos fornecidos por C# e incluem os seguintes tipos:</span><span class="sxs-lookup"><span data-stu-id="1ffe4-120">The *simple types* are a set of predefined struct types provided by C# and comprise the following types:</span></span>
+<span data-ttu-id="e6401-120">Os *tipos simples* são um conjunto de tipos de struct predefinidos fornecidos por C# e incluem os seguintes tipos:</span><span class="sxs-lookup"><span data-stu-id="e6401-120">The *simple types* are a set of predefined struct types provided by C# and comprise the following types:</span></span>
 
-- <span data-ttu-id="1ffe4-121">[Tipos integrais](../builtin-types/integral-numeric-types.md): tipos numéricos inteiros e o tipo [char](../builtin-types/char.md)</span><span class="sxs-lookup"><span data-stu-id="1ffe4-121">[Integral types](../builtin-types/integral-numeric-types.md): integer numeric types and the [char](../builtin-types/char.md) type</span></span>
-- [<span data-ttu-id="1ffe4-122">Tipos de ponto flutuante</span><span class="sxs-lookup"><span data-stu-id="1ffe4-122">Floating-point types</span></span>](../builtin-types/floating-point-numeric-types.md)
-- [<span data-ttu-id="1ffe4-123">bool</span><span class="sxs-lookup"><span data-stu-id="1ffe4-123">bool</span></span>](../builtin-types/bool.md)
+- <span data-ttu-id="e6401-121">[Tipos integrais](../builtin-types/integral-numeric-types.md): tipos numéricos inteiros e o tipo [char](../builtin-types/char.md)</span><span class="sxs-lookup"><span data-stu-id="e6401-121">[Integral types](../builtin-types/integral-numeric-types.md): integer numeric types and the [char](../builtin-types/char.md) type</span></span>
+- [<span data-ttu-id="e6401-122">Tipos de ponto flutuante</span><span class="sxs-lookup"><span data-stu-id="e6401-122">Floating-point types</span></span>](../builtin-types/floating-point-numeric-types.md)
+- [<span data-ttu-id="e6401-123">bool</span><span class="sxs-lookup"><span data-stu-id="e6401-123">bool</span></span>](../builtin-types/bool.md)
 
-<span data-ttu-id="1ffe4-124">Os tipos simples são identificados por meio de palavras-chave, mas essas palavras-chave são simplesmente aliases para tipos de struct predefinidos no namespace <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-124">The simple types are identified through keywords, but these keywords are simply aliases for predefined struct types in the <xref:System> namespace.</span></span> <span data-ttu-id="1ffe4-125">Por exemplo, [int](../builtin-types/integral-numeric-types.md) é um alias de <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-125">For example, [int](../builtin-types/integral-numeric-types.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="1ffe4-126">Para obter uma lista completa de aliases, consulte [Tabela de tipos internos](built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="1ffe4-126">For a complete list of aliases, see [Built-in types table](built-in-types-table.md).</span></span>
+<span data-ttu-id="e6401-124">Os tipos simples são identificados por meio de palavras-chave, mas essas palavras-chave são simplesmente aliases para tipos de struct predefinidos no namespace <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="e6401-124">The simple types are identified through keywords, but these keywords are simply aliases for predefined struct types in the <xref:System> namespace.</span></span> <span data-ttu-id="e6401-125">Por exemplo, [int](../builtin-types/integral-numeric-types.md) é um alias de <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="e6401-125">For example, [int](../builtin-types/integral-numeric-types.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="e6401-126">Para obter uma lista completa de aliases, consulte [Tabela de tipos internos](built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="e6401-126">For a complete list of aliases, see [Built-in types table](built-in-types-table.md).</span></span>
 
-<span data-ttu-id="1ffe4-127">Os tipos simples diferem de outros tipos de struct, pois permitem determinadas operações adicionais:</span><span class="sxs-lookup"><span data-stu-id="1ffe4-127">The simple types differ from other struct types in that they permit certain additional operations:</span></span>
+<span data-ttu-id="e6401-127">Os tipos simples diferem de outros tipos de struct, pois permitem determinadas operações adicionais:</span><span class="sxs-lookup"><span data-stu-id="e6401-127">The simple types differ from other struct types in that they permit certain additional operations:</span></span>
 
-- <span data-ttu-id="1ffe4-128">Os tipos simples podem ser inicializados com o uso de literais.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="1ffe4-129">Por exemplo, `'A'` é um literal do tipo `char` e `2001` é um literal do tipo `int`.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-129">For example, `'A'` is a literal of the type `char` and `2001` is a literal of the type `int`.</span></span>
+- <span data-ttu-id="e6401-128">Os tipos simples podem ser inicializados com o uso de literais.</span><span class="sxs-lookup"><span data-stu-id="e6401-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="e6401-129">Por exemplo, `'A'` é um literal do tipo `char` e `2001` é um literal do tipo `int`.</span><span class="sxs-lookup"><span data-stu-id="e6401-129">For example, `'A'` is a literal of the type `char` and `2001` is a literal of the type `int`.</span></span>
 
-- <span data-ttu-id="1ffe4-130">Você pode declarar constantes dos tipos simples com a palavra-chave [const](const.md).</span><span class="sxs-lookup"><span data-stu-id="1ffe4-130">You can declare constants of the simple types with the [const](const.md) keyword.</span></span> <span data-ttu-id="1ffe4-131">Não é possível ter constantes de outros tipos de struct.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-131">It's not possible to have constants of other struct types.</span></span>
+- <span data-ttu-id="e6401-130">Você pode declarar constantes dos tipos simples com a palavra-chave [const](const.md).</span><span class="sxs-lookup"><span data-stu-id="e6401-130">You can declare constants of the simple types with the [const](const.md) keyword.</span></span> <span data-ttu-id="e6401-131">Não é possível ter constantes de outros tipos de struct.</span><span class="sxs-lookup"><span data-stu-id="e6401-131">It's not possible to have constants of other struct types.</span></span>
 
-- <span data-ttu-id="1ffe4-132">As expressões constantes, cujos operandos são todos constantes de tipo simples, são avaliadas em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-132">Constant expressions, whose operands are all simple type constants, are evaluated at compile time.</span></span>
+- <span data-ttu-id="e6401-132">As expressões constantes, cujos operandos são todos constantes de tipo simples, são avaliadas em tempo de compilação.</span><span class="sxs-lookup"><span data-stu-id="e6401-132">Constant expressions, whose operands are all simple type constants, are evaluated at compile time.</span></span>
 
-<span data-ttu-id="1ffe4-133">Para saber mais, confira a seção [Tipos simples](~/_csharplang/spec/types.md#simple-types) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).</span><span class="sxs-lookup"><span data-stu-id="1ffe4-133">For more information, see the [Simple types](~/_csharplang/spec/types.md#simple-types) section of the [C# language specification](/dotnet/csharp/language-reference/language-specification/introduction).</span></span>
+<span data-ttu-id="e6401-133">Para saber mais, confira a seção [Tipos simples](~/_csharplang/spec/types.md#simple-types) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction).</span><span class="sxs-lookup"><span data-stu-id="e6401-133">For more information, see the [Simple types](~/_csharplang/spec/types.md#simple-types) section of the [C# language specification](/dotnet/csharp/language-reference/language-specification/introduction).</span></span>
 
-## <a name="initializing-value-types"></a><span data-ttu-id="1ffe4-134">Inicializando tipos de valor</span><span class="sxs-lookup"><span data-stu-id="1ffe4-134">Initializing value types</span></span>
+## <a name="initializing-value-types"></a><span data-ttu-id="e6401-134">Inicializando tipos de valor</span><span class="sxs-lookup"><span data-stu-id="e6401-134">Initializing value types</span></span>
 
-<span data-ttu-id="1ffe4-135">As variáveis locais no C# devem ser inicializadas antes de serem usadas.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-135">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="1ffe4-136">Por exemplo, você pode declarar uma variável local sem inicialização, como no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="1ffe4-136">For example, you might declare a local variable without initialization as in the following example:</span></span>
+<span data-ttu-id="e6401-135">As variáveis locais no C# devem ser inicializadas antes de serem usadas.</span><span class="sxs-lookup"><span data-stu-id="e6401-135">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="e6401-136">Por exemplo, você pode declarar uma variável local sem inicialização, como no exemplo a seguir:</span><span class="sxs-lookup"><span data-stu-id="e6401-136">For example, you might declare a local variable without initialization as in the following example:</span></span>
 
 ```csharp
 int myInt;
 ```
 
-<span data-ttu-id="1ffe4-137">Você não pode usá-la antes de inicializá-la.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-137">You cannot use it before you initialize it.</span></span> <span data-ttu-id="1ffe4-138">Você pode inicializar a variável usando a instrução a seguir:</span><span class="sxs-lookup"><span data-stu-id="1ffe4-138">You can initialize it using the following statement:</span></span>
+<span data-ttu-id="e6401-137">Você não pode usá-la antes de inicializá-la.</span><span class="sxs-lookup"><span data-stu-id="e6401-137">You cannot use it before you initialize it.</span></span> <span data-ttu-id="e6401-138">Você pode inicializar a variável usando a instrução a seguir:</span><span class="sxs-lookup"><span data-stu-id="e6401-138">You can initialize it using the following statement:</span></span>
 
 ```csharp
 myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
-<span data-ttu-id="1ffe4-139">Essa instrução é equivalente à instrução a seguir:</span><span class="sxs-lookup"><span data-stu-id="1ffe4-139">This statement is equivalent to the following statement:</span></span>
+<span data-ttu-id="e6401-139">Essa instrução é equivalente à instrução a seguir:</span><span class="sxs-lookup"><span data-stu-id="e6401-139">This statement is equivalent to the following statement:</span></span>
 
 ```csharp
 myInt = 0;         // Assign an initial value, 0 in this example.
 ```
 
-<span data-ttu-id="1ffe4-140">É claro que a declaração e a inicialização podem ser feitas na mesma instrução, como nos exemplos a seguir:</span><span class="sxs-lookup"><span data-stu-id="1ffe4-140">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>
+<span data-ttu-id="e6401-140">É claro que a declaração e a inicialização podem ser feitas na mesma instrução, como nos exemplos a seguir:</span><span class="sxs-lookup"><span data-stu-id="e6401-140">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>
 
 ```csharp
 int myInt = new int();
 ```
 
-<span data-ttu-id="1ffe4-141">– ou –</span><span class="sxs-lookup"><span data-stu-id="1ffe4-141">–or–</span></span>
+<span data-ttu-id="e6401-141">– ou –</span><span class="sxs-lookup"><span data-stu-id="e6401-141">–or–</span></span>
 
 ```csharp
 int myInt = 0;
 ```
 
-<span data-ttu-id="1ffe4-142">Usando o operador [new](../operators/new-operator.md), chama o construtor sem parâmetro do tipo específico e atribui o valor padrão à variável.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-142">Using the [new](../operators/new-operator.md) operator calls the parameterless constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="1ffe4-143">No exemplo anterior, o construtor sem parâmetro atribuiu o valor `0` para `myInt`.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-143">In the preceding example, the parameterless constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="1ffe4-144">Para saber mais sobre valores atribuídos ao chamar construtores sem parâmetros, confira [Tabela de valores padrão](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="1ffe4-144">For more information about values assigned by calling parameterless constructors, see [Default values table](default-values-table.md).</span></span>
+<span data-ttu-id="e6401-142">Usando o operador [new](../operators/new-operator.md), chama o construtor sem parâmetro do tipo específico e atribui o valor padrão à variável.</span><span class="sxs-lookup"><span data-stu-id="e6401-142">Using the [new](../operators/new-operator.md) operator calls the parameterless constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="e6401-143">No exemplo anterior, o construtor sem parâmetro atribuiu o valor `0` para `myInt`.</span><span class="sxs-lookup"><span data-stu-id="e6401-143">In the preceding example, the parameterless constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="e6401-144">Para saber mais sobre valores atribuídos ao chamar construtores sem parâmetros, confira [Tabela de valores padrão](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="e6401-144">For more information about values assigned by calling parameterless constructors, see [Default values table](default-values-table.md).</span></span>
 
-<span data-ttu-id="1ffe4-145">Com tipos definidos pelo usuário, use [new](../operators/new-operator.md) para invocar o construtor sem parâmetro.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-145">With user-defined types, use [new](../operators/new-operator.md) to invoke the parameterless constructor.</span></span> <span data-ttu-id="1ffe4-146">Por exemplo, a instrução a seguir invoca o construtor sem parâmetro do struct `Point`:</span><span class="sxs-lookup"><span data-stu-id="1ffe4-146">For example, the following statement invokes the parameterless constructor of the `Point` struct:</span></span>
+<span data-ttu-id="e6401-145">Com tipos definidos pelo usuário, use [new](../operators/new-operator.md) para invocar o construtor sem parâmetro.</span><span class="sxs-lookup"><span data-stu-id="e6401-145">With user-defined types, use [new](../operators/new-operator.md) to invoke the parameterless constructor.</span></span> <span data-ttu-id="e6401-146">Por exemplo, a instrução a seguir invoca o construtor sem parâmetro do struct `Point`:</span><span class="sxs-lookup"><span data-stu-id="e6401-146">For example, the following statement invokes the parameterless constructor of the `Point` struct:</span></span>
 
 ```csharp
 var p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
-<span data-ttu-id="1ffe4-147">Após esta chamada, o struct é considerado para ser definitivamente atribuído, ou seja, todos os seus membros são inicializados com seus valores padrão.</span><span class="sxs-lookup"><span data-stu-id="1ffe4-147">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>
+<span data-ttu-id="e6401-147">Após esta chamada, o struct é considerado para ser definitivamente atribuído, ou seja, todos os seus membros são inicializados com seus valores padrão.</span><span class="sxs-lookup"><span data-stu-id="e6401-147">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>
 
-<span data-ttu-id="1ffe4-148">Para saber mais sobre o operador `new`, confira [new](../operators/new-operator.md).</span><span class="sxs-lookup"><span data-stu-id="1ffe4-148">For more information about the `new` operator, see [new](../operators/new-operator.md).</span></span>
+<span data-ttu-id="e6401-148">Para saber mais sobre o operador `new`, confira [new](../operators/new-operator.md).</span><span class="sxs-lookup"><span data-stu-id="e6401-148">For more information about the `new` operator, see [new](../operators/new-operator.md).</span></span>
 
-<span data-ttu-id="1ffe4-149">Para saber mais sobre a formatação da saída de tipos numéricos, consulte [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md).</span><span class="sxs-lookup"><span data-stu-id="1ffe4-149">For information about formatting the output of numeric types, see [Formatting numeric results table](formatting-numeric-results-table.md).</span></span>
+<span data-ttu-id="e6401-149">Para saber mais sobre a formatação da saída de tipos numéricos, consulte [Tabela de formatação de resultados numéricos](formatting-numeric-results-table.md).</span><span class="sxs-lookup"><span data-stu-id="e6401-149">For information about formatting the output of numeric types, see [Formatting numeric results table](formatting-numeric-results-table.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="1ffe4-150">Veja também</span><span class="sxs-lookup"><span data-stu-id="1ffe4-150">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e6401-150">Veja também</span><span class="sxs-lookup"><span data-stu-id="e6401-150">See also</span></span>
 
-- [<span data-ttu-id="1ffe4-151">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="1ffe4-151">C# reference</span></span>](../index.md)
-- [<span data-ttu-id="1ffe4-152">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="1ffe4-152">C# keywords</span></span>](index.md)
-- [<span data-ttu-id="1ffe4-153">Tipos de referência</span><span class="sxs-lookup"><span data-stu-id="1ffe4-153">Reference types</span></span>](reference-types.md)
-- [<span data-ttu-id="1ffe4-154">Tipos de valor anuláveis</span><span class="sxs-lookup"><span data-stu-id="1ffe4-154">Nullable value types</span></span>](../builtin-types/nullable-value-types.md)
+- [<span data-ttu-id="e6401-151">Referência de C#</span><span class="sxs-lookup"><span data-stu-id="e6401-151">C# reference</span></span>](../index.md)
+- [<span data-ttu-id="e6401-152">Palavras-chave do C#</span><span class="sxs-lookup"><span data-stu-id="e6401-152">C# keywords</span></span>](index.md)
+- [<span data-ttu-id="e6401-153">Tipos de referência</span><span class="sxs-lookup"><span data-stu-id="e6401-153">Reference types</span></span>](reference-types.md)
+- [<span data-ttu-id="e6401-154">Tipos de valor anuláveis</span><span class="sxs-lookup"><span data-stu-id="e6401-154">Nullable value types</span></span>](../builtin-types/nullable-value-types.md)
