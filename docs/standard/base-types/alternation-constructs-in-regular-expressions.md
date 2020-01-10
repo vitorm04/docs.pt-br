@@ -15,13 +15,12 @@ helpviewer_keywords:
 - constructs, alternation
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
-ms.custom: seodec18
-ms.openlocfilehash: 352cfd65cd4620d8274ff0a14ea507cd49522470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8db9ef72415f148aca2c975fc4e8b70421e3adc3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140558"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711552"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Construtores de alternância em expressões regulares
 
@@ -50,7 +49,7 @@ A expressão regular que usa o caractere `|`, `\bgr(a|e)y\b`, é interpretada co
 |<code>(a&#124;e)</code>|Corresponder a um "a" ou "e".|  
 |`y\b`|Corresponder a um “y” em um limite de palavra.|  
 
-O caractere `|` também pode ser usado para executar uma correspondência do tipo um/ou outro com vários caracteres ou subexpressões, que podem incluir qualquer combinação de literais de caracteres e elementos de linguagem de expressão regular. (A classe Character não fornece essa funcionalidade.) O exemplo a seguir usa o caractere `|` para extrair um número do seguro social (SSN) dos EUA, que é um número de 9 dígitos com o formato *ddd*-*DD*-*dddd*ou um Ein (número de identificação do empregador dos EUA), que é um número de 9 dígitos com o formato *dd*-*ddddddd*.
+O caractere `|` também pode ser usado para executar uma correspondência do tipo um/ou outro com vários caracteres ou subexpressões, que podem incluir qualquer combinação de literais de caracteres e elementos de linguagem de expressão regular. (A classe Character não fornece essa funcionalidade.) O exemplo a seguir usa o caractere `|` para extrair um número de previdência social (SSN) dos EUA, que é um número de 9 dígitos com o formato *ddd*-*DD*-*dddd*ou um Ein (número de identificação do empregador dos EUA), que é um número de 9 dígitos com o formato *DD*-*ddddddd*.
 
 [!code-csharp[RegularExpressions.Language.Alternation#2](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation2.cs#2)]
 [!code-vb[RegularExpressions.Language.Alternation#2](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation2.vb#2)]  
@@ -68,16 +67,16 @@ A expressão regular `\b(\d{2}-\d{7}|\d{3}-\d{2}-\d{4})\b` é interpretada confo
 
 Este elemento de linguagem tenta corresponder a um dos dois padrões dependendo de se ele pode corresponder a um padrão inicial. A sintaxe é:  
 
-`(?(` *expressão* `)` *sim* `|` *não* `)`
+*expressão* de `(?(` `)` *sim* `|` *não* `)`
 
 em que *expression* é o padrão inicial para correspondência, *yes* é o padrão para correspondência se *expression* for correspondida e *no* é o padrão opcional para correspondência se *expression* não for correspondida. O mecanismo de expressões regulares trata a *expressão* como uma asserção de largura zero, isto é, o mecanismo de expressões regulares não avança no fluxo de entrada após avaliar a *expressão*. Portanto, esse constructo é equivalente ao seguinte:
 
-`(?(?=` *expressão* `)` *sim* `|` *não* `)`
+*expressão* de `(?(?=` `)` *sim* `|` *não* `)`
 
 em que `(?=`*expression*`)` é um constructo de asserção de largura zero. (Para obter mais informações, consulte [agrupando construções](grouping-constructs-in-regular-expressions.md).) Como o mecanismo de expressões regulares interpreta a *expressão* como uma âncora (uma declaração de largura zero), a *expressão* deve ser uma asserção de largura zero (para obter mais informações, consulte [âncoras](anchors-in-regular-expressions.md)) ou uma subexpressão que também esteja contida em *Sim*. Caso contrário, o padrão *sim* não pode ser correspondido.  
   
 > [!NOTE]
-> Se a *expressão* for um grupo de captura nomeado ou numerado, o constructo de alternância é interpretado como um teste de captura. Para obter mais informações, confira [Correspondência condicional com base em um grupo capturado válido](#Conditional_Group). Em outras palavras, o mecanismo de expressões regulares não tenta corresponder a subcadeia de caracteres capturada, mas em vez disso, testa a presença ou ausência do grupo.  
+> Se *expression* for um grupo de captura nomeado ou numerado, o constructo de alternância será interpretado como um teste de captura; para obter mais informações, consulte a próxima seção, [correspondência condicional com base em um grupo de captura válido](#Conditional_Group). Em outras palavras, o mecanismo de expressões regulares não tenta corresponder a subcadeia de caracteres capturada, mas em vez disso, testa a presença ou ausência do grupo.  
   
 O exemplo a seguir é uma variação do exemplo que aparece na seção [E/Ou Correspondência de Padrões com &#124;](#Either_Or). Ele usa a correspondência condicional para determinar se os três primeiros caracteres após um limite de palavra são dois dígitos seguidos por um hífen. Se estiverem, ele tentará corresponder a um número de identificação do empregador (EIN) dos EUA. Caso contrário, ele tentará corresponder a um número de seguro social (SSN) dos EUA.
 
@@ -103,7 +102,7 @@ Este elemento de linguagem tenta corresponder a um dos dois padrões dependendo 
 
 ou
 
-`(?(` *number* `)` *yes* `|` *no* `)`
+*número* de `(?(` `)` *sim* `|` *não* `)`
 
 em que *name* é o nome e *number* é o número de um grupo de captura, *yes* é a expressão para correspondência se *name* ou *number* tiver uma correspondência e *no* for a expressão opcional para correspondência se não houver uma.
 
@@ -130,6 +129,6 @@ Uma variação desse exemplo que usa um grupo numerado em vez de um grupo nomead
 [!code-csharp[RegularExpressions.Language.Alternation#5](~/samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
 [!code-vb[RegularExpressions.Language.Alternation#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Linguagem de expressão regular – referência rápida](regular-expression-language-quick-reference.md)

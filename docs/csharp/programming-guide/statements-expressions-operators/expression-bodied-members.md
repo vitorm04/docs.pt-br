@@ -1,16 +1,15 @@
 ---
 title: Membros aptos para expressão – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 02/06/2019
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
-ms.openlocfilehash: 45dcc58b252963e80798ba86ca5c4f461d493fac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f212bb707d3dd2d4a7cc917d335a83cff01ed0cf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120140"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711981"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Membros aptos para expressão (Guia de Programação em C#)
 
@@ -24,7 +23,7 @@ em que *expression* é uma expressão válida.
 
 O suporte para definições de corpo da expressão foi introduzido para métodos e propriedades somente leitura no C# 6 e foi expandido no C# 7.0. As definições de corpo da expressão podem ser usadas com os membros de tipo listados na tabela a seguir:
 
-|Membro  |Com suporte desde... |
+|{1&gt;Membro&lt;1}  |Com suporte desde... |
 |---------|---------|
 |[Método](#methods)  |C# 6 |
 |[Propriedade somente leitura](#read-only-properties)   |C# 6  |
@@ -33,7 +32,7 @@ O suporte para definições de corpo da expressão foi introduzido para métodos
 |[Finalizador](#finalizers)     |C# 7.0 |
 |[Indexador](#indexers)       |C# 7.0 |
 
-## <a name="methods"></a>Métodos
+## <a name="methods"></a>{1&gt;Métodos&lt;1}
 
 Um método apto para expressão consiste em uma única expressão que retorna um valor cujo tipo corresponde ao tipo de retorno do método, ou, para métodos que retornam `void`, que executam uma operação. Por exemplo, os tipos que substituem o método <xref:System.Object.ToString%2A> normalmente incluem uma única expressão que retorna a representação da cadeia de caracteres do objeto atual.
 
@@ -57,7 +56,7 @@ O exemplo a seguir define uma classe `Location` cuja propriedade somente leitura
 
 Para obter mais informações sobre as propriedades, confira [Propriedades (Guia de Programação em C#)](../classes-and-structs/properties.md).
 
-## <a name="properties"></a>Propriedades
+## <a name="properties"></a>{1&gt;Propriedades&lt;1}
 
 Começando no C# 7.0, você pode usar as definições de corpo da expressão para implementar a propriedade `get` e os acessadores `set`. O exemplo a seguir demonstra como fazer isso:
 
@@ -65,7 +64,7 @@ Começando no C# 7.0, você pode usar as definições de corpo da expressão par
 
 Para obter mais informações sobre as propriedades, confira [Propriedades (Guia de Programação em C#)](../classes-and-structs/properties.md).
 
-## <a name="constructors"></a>Construtores
+## <a name="constructors"></a>{1&gt;Construtores&lt;1}
 
 Uma definição de corpo da expressão para um construtor normalmente consiste em uma expressão de atribuição simples ou uma chamada de método que manipula os argumentos do construtor ou inicializa o estado da instância.
 

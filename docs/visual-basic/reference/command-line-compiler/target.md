@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: bd79d95a18fb1935d97fff2d1b2c7767752b9765
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351725"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716682"
 ---
 # <a name="-target-visual-basic"></a>-Target (Visual Basic)
 
@@ -29,7 +29,7 @@ A tabela a seguir resume o efeito da opção `-target`.
 
 |**Opção**|**Comportamento**|
 |----------------|------------------|
-|`-target:exe`|Faz com que o compilador crie um aplicativo de console executável.<br /><br /> Essa é a opção padrão quando nenhuma opção de `-target` é especificada. O arquivo executável é criado com uma extensão. exe.<br /><br /> A menos que especificado de outra forma com a opção `/out`, o nome do arquivo de saída usa o nome do arquivo de entrada que contém o procedimento `Sub Main`.<br /><br /> Apenas um procedimento `Sub Main` é necessário nos arquivos de código-fonte que são compilados em um arquivo. exe. Use a opção de compilador `-main` para especificar qual classe contém o procedimento de `Sub Main`.|
+|`-target:exe`|Faz com que o compilador crie um aplicativo de console executável.<br /><br /> Essa é a opção padrão quando nenhuma opção de `-target` é especificada. O arquivo executável é criado com uma extensão. exe.<br /><br /> A menos que especificado de outra forma com a opção `-out`, o nome do arquivo de saída usa o nome do arquivo de entrada que contém o procedimento `Sub Main`.<br /><br /> Apenas um procedimento `Sub Main` é necessário nos arquivos de código-fonte que são compilados em um arquivo. exe. Use a opção de compilador `-main` para especificar qual classe contém o procedimento de `Sub Main`.|
 |`-target:library`|Faz com que o compilador crie uma DLL (biblioteca de vínculo dinâmico).<br /><br /> O arquivo da biblioteca de vínculo dinâmico é criado com uma extensão. dll.<br /><br /> A menos que especificado de outra forma com a opção `-out`, o nome do arquivo de saída usa o nome do primeiro arquivo de entrada.<br /><br /> Ao criar uma DLL, um procedimento de `Sub Main` não é necessário.|
 |`-target:module`|Faz com que o compilador gere um módulo que pode ser adicionado a um assembly.<br /><br /> O arquivo de saída é criado com uma extensão de. netmodule.<br /><br /> O .NET Common Language Runtime não pode carregar um arquivo que não tem um assembly. No entanto, você pode incorporar esse arquivo ao manifesto do assembly de um assembly usando `-reference`.<br /><br /> Quando o código em um módulo faz referência a tipos internos em outro módulo, ambos os módulos devem ser incorporados a um manifesto do assembly usando `-reference`.<br /><br /> A opção [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) importa os metadados de um módulo.|
 |`-target:winexe`|Faz com que o compilador crie um aplicativo executável baseado no Windows.<br /><br /> O arquivo executável é criado com uma extensão. exe. Um aplicativo baseado no Windows é aquele que fornece uma interface do usuário da biblioteca de classes .NET Framework ou com as APIs do Windows.<br /><br /> A menos que especificado de outra forma com a opção `-out`, o nome do arquivo de saída usa o nome do arquivo de entrada que contém o procedimento `Sub Main`.<br /><br /> Apenas um procedimento `Sub Main` é necessário nos arquivos de código-fonte que são compilados em um arquivo. exe. Nos casos em que o código tem mais de uma classe que tem um procedimento `Sub Main`, use a opção de compilador `-main` para especificar qual classe contém o procedimento de `Sub Main`|
@@ -58,7 +58,7 @@ O código a seguir compila `in.vb`, criando `in.dll`:
 vbc -target:library in.vb
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)

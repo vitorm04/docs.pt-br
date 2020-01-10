@@ -5,13 +5,13 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
-ms.custom: seodec18,updateeachrelease
-ms.openlocfilehash: 4c6a8e495d8532a0ab2e90368663a287731a9af0
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.custom: updateeachrelease
+ms.openlocfilehash: 6c394ad2721bcdd91fb750fe93c03f16ca9f799f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884273"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714085"
 ---
 # <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Introdução ao .NET Core no Windows/Linux/macOS usando a linha de comando
 
@@ -192,7 +192,7 @@ Hello World!
 
 E pronto. Agora, é possível começar a usar os conceitos básicos aprendidos aqui para criar seus próprios programas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Organizando e testando projetos com as ferramentas da CLI do .NET Core](testing-with-cli.md)
 - [Publicar aplicativos .NET Core com a CLI](../deploying/deploy-with-cli.md)

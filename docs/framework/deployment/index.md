@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, deploying
 - .NET Framework application deployment
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 04cbfb8d41135b57c3e090959e041f95fcda2840
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b1ba9810b4b0d5a1688318db1093a9ce9bdf8fda
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975687"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716471"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Implantando o .NET Framework e aplicativos
 
@@ -120,7 +118,7 @@ O .NET Framework fornece vários recursos básicos que facilitam a implantação
 
 Algumas das informações de empacotamento e implantação para o .NET Framework são descritas em outras seções da documentação. Essas seções fornecem informações sobre a autodescrição das unidades chamadas [assemblies](../../standard/assembly/index.md), que não exigem entradas de Registro, os [assemblies com nome forte](../../standard/assembly/strong-named.md), que garantem a exclusividade do nome e impedem sua falsificação, e o [controle de versão do assembly](../../standard/assembly/versioning.md), que soluciona muitos dos problemas associados ao conflitos de DLL. As seções a seguir fornecem informações sobre empacotamento e distribuição de aplicativos .NET Framework.
 
-### <a name="packaging"></a>Packaging
+### <a name="packaging"></a>{1&gt;Packaging&lt;1}
 
 O .NET Framework fornece as seguintes opções para empacotamento de aplicativos:
 
@@ -136,7 +134,7 @@ O .NET Framework fornece as seguintes opções para empacotamento de aplicativos
 
      Com essa opção, você cria arquivos .msi para uso com o Windows Installer ou empacota o aplicativo para uso com algum outro instalador.
 
-### <a name="distribution"></a>Distribuição
+### <a name="distribution"></a>Ponto de
 
 O .NET Framework fornece as seguintes opções para distribuição de aplicativos:
 
@@ -160,12 +158,12 @@ As considerações de segurança também podem afetar como você implanta o apli
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
 |[Como o runtime localiza assemblies](how-the-runtime-locates-assemblies.md)|Descreve como o Common Language Runtime determina qual assembly usar para atender a uma solicitação de associação.|
 |[Práticas recomendadas para carregamento de assemblies](best-practices-for-assembly-loading.md)|Descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros.|
 |[Redução de reinicializações do sistema durante instalações do .NET Framework 4.5](reducing-system-restarts.md)|Descreve o Gerenciador de Reinicialização, que impede reinicializações sempre que possível, além de explicar como os aplicativos que instalam o .NET Framework podem aproveitá-lo.|
-|[Guia de implantação para administradores](guide-for-administrators.md)|Explica como um administrador de sistema pode implantar o .NET Framework e suas dependências de sistema em uma rede usando o SCCM (System Center Configuration Manager).|
+|[Guia de implantação para administradores](guide-for-administrators.md)|Explica como um administrador do sistema pode implantar o .NET Framework e suas dependências do sistema em uma rede usando o Microsoft Endpoint Configuration Manager.|
 |[Guia de implantação para desenvolvedores](deployment-guide-for-developers.md)|Explica como os desenvolvedores podem instalar o .NET Framework nos computadores dos usuários com seus aplicativos.|
 |[Implantando aplicativos, serviços e componentes](/visualstudio/deployment/deploying-applications-services-and-components)|Aborda as opções de implantação no Visual Studio, incluindo instruções para publicar um aplicativo usando as tecnologias ClickOnce e Windows Installer.|
 |[Publicando aplicativos ClickOnce](/visualstudio/deployment/publishing-clickonce-applications)|Descreve como empacotar um aplicativo do Windows Forms e implantá-lo com o ClickOnce em computadores cliente em uma rede.|
@@ -173,6 +171,6 @@ As considerações de segurança também podem afetar como você implanta o apli
 |[Implantação de um aplicativo de interoperabilidade](../interop/deploying-an-interop-application.md)|Explica como enviar e instalar aplicativos de interoperabilidade, que geralmente incluem um assembly de cliente do .NET Framework, um ou mais assemblies de interoperabilidade que representam diferentes bibliotecas de tipo COM e um ou mais componentes COM registrados.|
 |[Como acompanhar o progresso do instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md)|Descreve como inicializar e rastrear silenciosamente o processo de instalação do .NET Framework ao mesmo tempo que mostra sua própria exibição do progresso de instalação.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de desenvolvimento](../development-guide.md)

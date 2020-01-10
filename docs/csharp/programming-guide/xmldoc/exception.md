@@ -1,6 +1,5 @@
 ---
 title: <exception> – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - exception
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - <exception> C# XML tag
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
-ms.openlocfilehash: 4e4204996c006ce6e943c9a09661001b0e0c2a14
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65c146684b7fd83a814f4b27d21efdd25c4da950
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523467"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711773"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -42,7 +41,7 @@ ms.locfileid: "72523467"
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#4)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](recommended-tags-for-documentation-comments.md)

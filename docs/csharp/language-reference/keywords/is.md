@@ -1,6 +1,5 @@
 ---
 title: is – Referência de C#
-ms.custom: seodec18
 ms.date: 06/21/2019
 f1_keywords:
 - is_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a04105137fad7cd3a25b869c3aa7fcbe91ed20ab
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
+ms.openlocfilehash: 1a1f539e80f8d843f40640fa798cf6122f316a9f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566313"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715232"
 ---
 # <a name="is-c-reference"></a>is (Referência de C#)
 
@@ -45,7 +44,7 @@ A expressão `is` será `true` se *expr* não for `null` e qualquer um dos segui
 
 - *expr* for uma instância de um tipo derivado de *type*. Em outras palavras, o resultado de *expr* pode sofrer upcast para uma instância de *type*.
 
-- *expr* tem um tipo de tempo de compilação que é uma classe base de *type*, e *expr* tem um tipo de tempo de execução que é *type* ou é derivado de *type*. O *tipo de tempo de compilação* de uma variável é o tipo da variável, conforme definido em sua declaração. O *tipo de tempo de execução* de uma variável é o tipo da instância atribuída a essa variável.
+- *expr* tem um tipo de tempo de compilação que é uma classe base de *type*, e *expr* tem um tipo de runtime que é *type* ou é derivado de *type*. O *tipo de tempo de compilação* de uma variável é o tipo da variável, conforme definido em sua declaração. O *tipo de runtime* de uma variável é o tipo da instância atribuída a essa variável.
 
 - *expr* é uma instância de um tipo que implementa a interface de *type*.
 
@@ -124,7 +123,7 @@ Para saber mais, confira a seção [O operador is](~/_csharplang/spec/expression
 - [Correspondência de padrões](~/_csharplang/proposals/csharp-7.0/pattern-matching.md)
 - [Correspondência de padrões com genéricos](~/_csharplang/proposals/csharp-7.1/generics-pattern-match.md)
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)

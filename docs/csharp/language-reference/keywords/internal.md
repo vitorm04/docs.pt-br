@@ -1,6 +1,5 @@
 ---
 title: internal – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - internal_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: f72866cafbf291310d88fc6f18a5a15dc77c621d
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: db653d0ed7f4835348484242b03392a8955c6392
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422721"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713436"
 ---
 # <a name="internal-c-reference"></a>internal (Referência de C#)
 A palavra-chave `internal` é um [modificador de acesso](./access-modifiers.md) para tipos e membros de tipo. 
@@ -87,11 +86,11 @@ public class TestAccess
 }  
 ```  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a>Especificação da linguagem C#  
 
 Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

@@ -1,16 +1,15 @@
 ---
 title: Modificador new – Referência em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-ms.openlocfilehash: 082cd37eca6b5de1251d73a5483665f8a98b0132
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 6c4fedd469efb79f91780dff26da89b586de2d1c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422676"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713337"
 ---
 # <a name="new-modifier-c-reference"></a>Modificador new (referência em C#)
 
@@ -58,7 +57,7 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 Para obter mais informações, consulte a seção [O modificador new](~/_csharplang/spec/classes.md#the-new-modifier) na [especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../../language-reference/index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

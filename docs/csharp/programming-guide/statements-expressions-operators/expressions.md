@@ -1,17 +1,16 @@
 ---
 title: Expressões – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 05/11/2017
 helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: e08220362c0acec6060ade75131e34a6b3fb7390
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4bbee8f15c2591e8b172df9a6759449d48697804
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73417690"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75699087"
 ---
 # <a name="expressions-c-programming-guide"></a>Expressões (Guia de Programação em C#)
 
@@ -87,7 +86,7 @@ O C# dá suporte a *membros aptos para expressão*, o que permite que você forn
 
 Para saber mais, confira a seção [Expressões](~/_csharplang/spec/expressions.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Operadores](../../language-reference/operators/index.md)

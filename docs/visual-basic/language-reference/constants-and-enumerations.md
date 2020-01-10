@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: e47fd1c606f7d4cd0cf2fa6398beaa183ed95076
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 5109bf42c9caa7528c5405bb1a5cff0cfb62a5ac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838150"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705750"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Constantes e enumerações (Visual Basic)
 
@@ -27,7 +27,7 @@ O Visual Basic fornece várias constantes predefinidas e enumerações para dese
 |---|---|  
 |`CONFIG`|Uma cadeia de caracteres que corresponde à configuração atual da caixa de **configuração de solução ativa** no **Configuration Manager**.|  
 |`DEBUG`|Um valor `Boolean` que pode ser definido na caixa de diálogo **Propriedades do projeto** . Por padrão, a configuração de depuração para um projeto define `DEBUG`. Quando `DEBUG` é definido, <xref:System.Diagnostics.Debug> métodos de classe geram saída para a janela de **saída** . Quando não é definido, <xref:System.Diagnostics.Debug> métodos de classe não são compilados e nenhuma saída de depuração é gerada.|  
-|`TARGET`|Uma cadeia de caracteres que representa o tipo de saída para o projeto ou a configuração da opção de linha de comando **/target** . Os valores possíveis de `TARGET` são:<br /><br /> -"winexe" para um aplicativo do Windows.<br />-"exe" para um aplicativo de console.<br />-"biblioteca" para uma biblioteca de classes.<br />-"módulo" para um módulo.<br />-A opção **/target** pode ser definida no ambiente de desenvolvimento integrado do Visual Studio. Para obter mais informações, consulte [-Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
+|`TARGET`|Uma cadeia de caracteres que representa o tipo de saída para o projeto ou a configuração da opção de **destino** de linha de comando. Os valores possíveis de `TARGET` são:<br /><br /> -"winexe" para um aplicativo do Windows.<br />-"exe" para um aplicativo de console.<br />-"biblioteca" para uma biblioteca de classes.<br />-"módulo" para um módulo.<br />-A opção **-target** pode ser definida no ambiente de desenvolvimento integrado do Visual Studio. Para obter mais informações, consulte [-Target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|Um valor `Boolean` que pode ser definido na caixa de diálogo **Propriedades do projeto** . Por padrão, todas as configurações para um projeto definem `TRACE`. Quando `TRACE` é definido, <xref:System.Diagnostics.Trace> métodos de classe geram saída para a janela de **saída** . Quando não é definido, <xref:System.Diagnostics.Trace> métodos de classe não são compilados e nenhuma saída de `Trace` é gerada.|  
 |`VBC_VER`|Um número que representa a versão de Visual Basic, em *Major*. formato *secundário* .|  
   
@@ -81,7 +81,7 @@ O Visual Basic fornece várias constantes predefinidas e enumerações para dese
 |<xref:Microsoft.VisualBasic.VariantType>|Indica o tipo de um objeto variante, retornado pela função <xref:Microsoft.VisualBasic.Information.VarType%2A>.|  
 |<xref:Microsoft.VisualBasic.VbStrConv>|Indica qual tipo de conversão executar ao chamar a função <xref:Microsoft.VisualBasic.Strings.StrConv%2A>.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência da linguagem Visual Basic](../../visual-basic/language-reference/index.md)
 - [Visão Geral de Constantes](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)

@@ -5,13 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: csharp-async
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.custom: seodec18
-ms.openlocfilehash: 86145e8971d9a59fba17368d9530f40d86bf2858
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 38d7c856e9a536db9ef26349175ad440a49f5fe2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73037681"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713947"
 ---
 # <a name="asynchronous-programming"></a>Programação assíncrona
 
@@ -107,9 +106,9 @@ Aqui estão duas perguntas que devem ser feitas antes de escrever qualquer códi
 
     Se você respondeu "sim", seu trabalho é **vinculado à CPU**.
 
-Se o seu trabalho for **vinculado à E/S**, use `async` e `await` *sem* `Task.Run`.  Você *não deve* usar a biblioteca de paralelismo de tarefas.  A razão para isso está descrita no [artigo Programação assíncrona em detalhes](../standard/async-in-depth.md).
+Se o trabalho que você tem é associado a e **/s**, use `async` e `await` *sem* `Task.Run`.  Você *não deve* usar a biblioteca de paralelismo de tarefas.  A razão para isso está descrita no [artigo Programação assíncrona em detalhes](../standard/async-in-depth.md).
 
-Se o seu trabalho for **vinculado à CPU** e você se importa com a capacidade de resposta, use `async` e `await`, mas gere o trabalho em outro thread *com* `Task.Run`.  Se o trabalho for adequado para a simultaneidade e paralelismo, você também deverá considerar o uso da [Biblioteca de paralelismo de tarefas](../standard/parallel-programming/task-parallel-library-tpl.md).
+Se o trabalho que você tem está **vinculado à CPU** e você se preocupa com a capacidade de resposta, use `async` e `await`, mas gera o trabalho em outro thread *com* `Task.Run`.  Se o trabalho for adequado para a simultaneidade e paralelismo, você também deverá considerar o uso da [Biblioteca de paralelismo de tarefas](../standard/parallel-programming/task-parallel-library-tpl.md).
 
 Além disso, você sempre deve medir a execução do seu código.  Por exemplo, talvez você tenha uma situação em que seu trabalho vinculado à CPU não é caro o suficiente em comparação com os custos gerais das trocas de contexto ao realizar o multithreading.  Cada opção tem vantagens e desvantagens e você deve escolher o que é correto para a sua situação.
 
@@ -219,7 +218,7 @@ Embora seja menos código, tome cuidado ao misturar LINQ com código assíncrono
 
 Embora a programação assíncrona seja relativamente simples, há alguns detalhes para ter em mente, que podem evitar um comportamento inesperado.
 
-* `async` Os métodos  **precisam ter uma palavra-chave** `await` **no corpo ou eles nunca transferirão!**
+* `async` **métodos precisam ter uma** **palavra-chave `await` em seu corpo ou nunca produzirão!**
 
 É importante ter isso em mente.  Se `await` não for usado no corpo de um método `async`, o compilador do C# gerará um aviso, mas o código será compilado e executado como se fosse um método normal.  Observe que isso também seria extremamente ineficiente, pois a máquina de estado, gerada pelo compilador do C# para o método assíncrono, não realizaria nada.
 
@@ -227,7 +226,7 @@ Embora a programação assíncrona seja relativamente simples, há alguns detalh
 
 Essa é a convenção usada no .NET para diferenciar mais facilmente os métodos síncronos e assíncronos. Observe que isso não se aplica, necessariamente, a alguns métodos que não são explicitamente chamados pelo seu código (como manipuladores de eventos ou métodos do controlador da Web). Como eles não são chamados explicitamente pelo seu código, ser explícito em relação à sua nomenclatura não é tão importante.
 
-* `async void` O  **só deve ser usado para manipuladores de eventos.**
+* `async void` **só deve ser usado para manipuladores de eventos.**
 
 O `async void` é a única maneira de permitir que os manipuladores de eventos assíncronos trabalhem, pois os eventos não têm tipos de retorno (portanto, não podem fazer uso de `Task` e `Task<T>`). Qualquer outro uso de `async void` não segue o modelo TAP e pode ser um desafio utilizá-lo, como:
 

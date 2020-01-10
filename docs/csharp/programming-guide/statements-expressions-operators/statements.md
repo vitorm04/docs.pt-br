@@ -1,17 +1,16 @@
 ---
 title: Instruções – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 8cac8144516666690715ff4e0bdc526c365765f5
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: d50b50bb291d0d087015ea5bd075ae90ced66ff5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635100"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711929"
 ---
 # <a name="statements-c-programming-guide"></a>Instruções (Guia de Programação em C#)
 
@@ -85,7 +84,7 @@ Se o compilador determinar que o fluxo de controle nunca pode atingir uma determ
 
 [!code-csharp[csProgGuideStatements#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#22)]
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para saber mais, confira a seção [Instruções](~/_csharplang/spec/statements.md) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 

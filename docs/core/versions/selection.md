@@ -4,13 +4,12 @@ description: Saiba como o .NET Core localiza e escolhe automaticamente versões 
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.custom: seodec18
-ms.openlocfilehash: 043b9b85633e81670783e7870f1be7726ab07e81
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454628"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713980"
 ---
 # <a name="select-the-net-core-version-to-use"></a>Selecionar a versão do .NET Core a ser usada
 
@@ -102,7 +101,7 @@ O roll forward de versão secundária tem um efeito colateral que pode afetar os
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>As implantações autossuficientes incluem o runtime selecionado
 
-É possível publicar um aplicativo como uma [ **distribuição autossuficiente**](../deploying/index.md#self-contained-deployments-scd). Essa abordagem inclui o runtime e as bibliotecas do .NET Core com seu aplicativo. As implantações autossuficientes não são dependentes dos ambientes de runtime. A seleção da versão do runtime ocorre no momento da publicação, não no runtime.
+É possível publicar um aplicativo como uma [**distribuição autossuficiente**](../deploying/index.md#self-contained-deployments-scd). Essa abordagem inclui o runtime e as bibliotecas do .NET Core com seu aplicativo. As implantações autossuficientes não são dependentes dos ambientes de runtime. A seleção da versão do runtime ocorre no momento da publicação, não no runtime.
 
 O processo de publicação seleciona a versão de patch mais recente da família de determinado runtime. Por exemplo, `dotnet publish` selecionará o .NET Core 2.0.4 se ele for a versão de patch mais recente da família do runtime do .NET Core 2.0. A estrutura de destino (incluindo os patches de segurança mais recentes instalados) é empacotada com o aplicativo.
 

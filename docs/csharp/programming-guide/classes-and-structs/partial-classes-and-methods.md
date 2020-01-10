@@ -1,18 +1,17 @@
 ---
 title: Classes e métodos partial – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 2df3492274c2abceebf1d37b87be9cc9bb455b5f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ea8d95c41df236897761ace1062ec325a069d52b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73419175"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714738"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Classes e métodos partial (Guia de Programação em C#)
 
@@ -61,7 +60,7 @@ Os itens a seguir são mesclados de todas as definições de tipo parcial:
 
 - atributos class
 
-- membros
+- Membros do
 
 Por exemplo, considere as declarações a seguir:
 
@@ -71,7 +70,7 @@ Elas são equivalentes às seguintes declarações:
 
 [!code-csharp[csProgGuideObjects#22](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#22)]
 
-### <a name="restrictions"></a>Restrições
+### <a name="restrictions"></a>{1&gt;Restrições&lt;1}
 
 Há várias regras para seguir quando você está trabalhando com definições de classes parciais:
 
@@ -166,11 +165,11 @@ partial void onNameChanged()
 
 - Você pode fazer um [delegado](../../language-reference/builtin-types/reference-types.md) para um método parcial que foi definido e implementado, mas não para um método parcial que só foi definido.
 
-## <a name="c-language-specification"></a>Especificação da Linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, veja [Tipos parciais](~/_csharplang/spec/classes.md#partial-types) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes](./classes.md)

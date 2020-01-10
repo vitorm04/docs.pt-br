@@ -3,14 +3,12 @@ title: XmlDataDocument inseriu a XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a5c2fb203a1a6975d2b30e47528b15a9005a2583
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5f2a7ef22eb07bb221b6a145db4453996ad8bf8c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916019"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709849"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XmlDataDocument inseriu a XslTransform
 > [!NOTE]
@@ -22,7 +20,7 @@ ms.locfileid: "69916019"
   
  Para saber mais sobre como aplicar uma transformação de dados relacional, confira [Aplicando uma transformação XSLT a um conjunto de dados](../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlDataDocument>
 - [Sincronização de DataSet e XmlDataDocument](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)

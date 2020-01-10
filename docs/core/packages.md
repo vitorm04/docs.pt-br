@@ -3,13 +3,12 @@ title: Pacotes, metapacotes e estruturas – .NET Core
 description: Aprenda a terminologia para pacotes, metapacotes e estruturas.
 author: richlander
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 7b019686df195a8cebdce126f7a0b2d22548dc0e
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72275770"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715515"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacotes, metapacotes e estruturas
 
@@ -76,9 +75,9 @@ Os principais metapacotes do .NET Core são:
 - [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) – inclui todos os pacotes com suporte do ASP.NET Core, Entity Framework Core e dependências internas e de terceiros usadas pelo ASP.NET Core e pelo Entity Framework Core. Consulte [Metapacote do Microsoft.AspNetCore.All para ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage) para obter mais informações.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) – Um conjunto de fachadas de compatibilidade que permitem que PCLs (Bibliotecas de Classes Portáteis) baseadas em mscorlib sejam executadas no .NET Core.
 
-## <a name="frameworks"></a>Estruturas
+## <a name="frameworks"></a>Frameworks
 
-Cada pacote do .NET Core dá suporte a um conjunto de estruturas de tempo de execução. As estruturas descrevem um conjunto de APIs disponível (e possivelmente outras características) com os quais você pode contar ao direcionar uma determinada estrutura. Eles têm controle de versão à medida que novas APIs são adicionadas.
+Cada pacote do .NET Core dá suporte a um conjunto de estruturas de runtime. As estruturas descrevem um conjunto de APIs disponível (e possivelmente outras características) com os quais você pode contar ao direcionar uma determinada estrutura. Eles têm controle de versão à medida que novas APIs são adicionadas.
 
 Por exemplo, [System.IO.FileSystem](https://www.nuget.org/packages/System.IO.FileSystem) dá suporte às seguintes estruturas:
 
@@ -109,7 +108,7 @@ As duas principais estruturas baseadas em pacote usadas com o .NET Core são:
 
 ### <a name="net-standard"></a>.NET Standard
 
-A estrutura do .NET Standard ([Moniker da Estrutura de Destino](../standard/frameworks.md): `netstandard`) representa as APIs definidas e criadas com base no [.NET Standard](../standard/net-standard.md). Bibliotecas destinadas à execução em vários tempos de execução devem ter essa estrutura como destino. Elas terão suporte em qualquer tempo de execução compatível com.NET Standard, como .NET Core, .NET Framework e Mono/Xamarin. Cada um desses tempos de execução dá suporte a um conjunto de versões do .NET Standard, dependendo de quais APIs eles implementam.
+A estrutura do .NET Standard ([Moniker da Estrutura de Destino](../standard/frameworks.md): `netstandard`) representa as APIs definidas e criadas com base no [.NET Standard](../standard/net-standard.md). Bibliotecas destinadas a execução em vários runtimes devem ter essa estrutura como alvo. Elas terão suporte em qualquer runtime em conformidade com.NET Standard, como .NET Core, .NET Framework e Mono/Xamarin. Cada um desses runtimes dá suporte a um conjunto de versões do .NET Standard, dependendo de quais APIs eles implementam.
 
 A estrutura `netstandard` faz referência implícita ao metapacote [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library). Por exemplo, o arquivo de projeto do MSBuild a seguir indica que o projeto é direcionado ao `netstandard1.6`, que faz referência ao metapacote [`NETStandard.Library` versão 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0).
 

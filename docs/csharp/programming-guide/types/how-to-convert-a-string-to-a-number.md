@@ -1,6 +1,5 @@
 ---
-title: Como converter uma cadeia de caracteres em um guia de C# programação de número
-ms.custom: seodec18
+title: Como converter uma cadeia de caracteres em um guia C# de programação de número
 ms.date: 02/11/2019
 helpviewer_keywords:
 - conversions [C#]
@@ -8,14 +7,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-ms.openlocfilehash: 8cd5a54bead2790d8e6e4c8e4a5649352f12869d
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 21732acd65eb4522b19ce84600fd8b333fb8a705
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552405"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711864"
 ---
-# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como converter uma cadeia de caracteres em um número (Guia de Programação em C#)
+# <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Como converter uma cadeia de caracteres em um númeroC# (guia de programação)
 
 É possível converter uma [cadeia de caracteres](../../language-reference/builtin-types/reference-types.md) em um número chamando o método `Parse` ou `TryParse` encontrado nos diversos tipos numéricos (`int`, `long`, `double` etc.) ou usando os métodos na classe <xref:System.Convert?displayProperty=nameWithType>.  
   
@@ -55,7 +54,7 @@ A tabela a seguir lista alguns dos métodos da classe <xref:System.Convert> que 
   
 [!code-csharp[Parsing with Convert methods](~/samples/snippets/csharp/programming-guide/string-to-number/convert/program.cs)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Tipos](./index.md)
 - [Como determinar se uma cadeia de caracteres representa um valor numérico](../strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)

@@ -38,14 +38,12 @@ helpviewer_keywords:
 - STA-dependent features
 - fibers
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40c1b98f82fe53819edc437bbac575c1df206496
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: bd51ea1b79ac1dbd89a862f3961cc8508a87f301
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834535"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715978"
 ---
 # <a name="reliability-best-practices"></a>Práticas recomendadas de confiabilidade
 
@@ -91,7 +89,7 @@ A maioria das classes que atualmente têm um finalizador apenas para limpar um i
 
 Observe que <xref:System.Runtime.InteropServices.SafeHandle> não é substituição para <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>.  Ainda há possibilidade de contenção de recursos e vantagens de desempenho para descartar explicitamente os recursos de sistema operacional.  Observe que apenas blocos `finally` que descartam explicitamente os recursos podem não ser executados até a conclusão.
 
-<xref:System.Runtime.InteropServices.SafeHandle> permite que você implemente seu próprio método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> que executa o trabalho para liberar o identificador, tal como passar o estado para uma rotina de liberação de identificador de sistema operacional ou liberar um conjunto de identificadores em um loop.  O CLR assegura que esse método seja executado.  É responsabilidade do autor da implementação de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> assegurar que o identificador seja liberado em todas as circunstâncias. Falha em fazê-lo causará perda do identificador, o que geralmente resultará em perda de recursos nativos associados com o identificador. Portanto, é essencial estruturar classes derivadas <xref:System.Runtime.InteropServices.SafeHandle> de modo que a implementação de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> não exija a alocação de todos os recursos que podem não estar disponíveis em tempo de invocação. Observe que é permitido chamar os métodos que podem falhar dentro da implementação do <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, contanto que seu código possa lidar com tais falhas e concluir o contrato para liberar o identificador nativo. Para fins de depuração, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> tem um valor retornado <xref:System.Boolean> que pode ser definido como `false` se é encontrado um erro catastrófico que impede a liberação do recurso. Isso ativará o MDA [releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md), se habilitado, para ajudar a identificar o problema. Ele não afeta o tempo de execução de nenhuma outra forma; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> não será chamado novamente para o mesmo recurso e, consequentemente, o identificador será perdido.
+<xref:System.Runtime.InteropServices.SafeHandle> permite que você implemente seu próprio método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> que executa o trabalho para liberar o identificador, tal como passar o estado para uma rotina de liberação de identificador de sistema operacional ou liberar um conjunto de identificadores em um loop.  O CLR assegura que esse método seja executado.  É responsabilidade do autor da implementação de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> assegurar que o identificador seja liberado em todas as circunstâncias. Falha em fazê-lo causará perda do identificador, o que geralmente resultará em perda de recursos nativos associados com o identificador. Portanto, é essencial estruturar classes derivadas <xref:System.Runtime.InteropServices.SafeHandle> de modo que a implementação de <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> não exija a alocação de todos os recursos que podem não estar disponíveis em tempo de invocação. Observe que é permitido chamar os métodos que podem falhar dentro da implementação do <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A>, contanto que seu código possa lidar com tais falhas e concluir o contrato para liberar o identificador nativo. Para fins de depuração, <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> tem um valor retornado <xref:System.Boolean> que pode ser definido como `false` se é encontrado um erro catastrófico que impede a liberação do recurso. Isso ativará o MDA [releaseHandleFailed](../debug-trace-profile/releasehandlefailed-mda.md), se habilitado, para ajudar a identificar o problema. Ele não afeta o runtime de nenhuma outra forma; <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> não será chamado novamente para o mesmo recurso e, consequentemente, o identificador será perdido.
 
 <xref:System.Runtime.InteropServices.SafeHandle> não é apropriado em determinados contextos.  Já que o método <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> pode ser executado em um thread do finalizador <xref:System.GC>, quaisquer identificadores que seja necessário liberar em um determinado thread não devem ser encapsulados em um <xref:System.Runtime.InteropServices.SafeHandle>.
 
@@ -241,7 +239,7 @@ Para o SQL Server, todos os métodos usados para apresentar a sincronização ou
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>Não bloquear indefinidamente em código não gerenciado
 
-Bloquear em código não gerenciado em vez de em código gerenciado pode causar um ataque de negação de serviço, pois o CLR não é capaz de anular o thread.  Um thread bloqueado impede que o CLR descarregue o <xref:System.AppDomain>, pelo menos até que algumas operações extremamente não seguras sejam feitas.  O bloqueio usando um primitivo de sincronização do Windows é um exemplo claro de algo que não podemos permitir.  O bloqueio em uma chamada `ReadFile` para em um soquete deve ser evitado, se possível — o ideal é que a API do Windows forneça um mecanismo para uma operação como essa para atingir o tempo limite.
+Bloquear em código não gerenciado em vez de em código gerenciado pode causar um ataque de negação de serviço, pois o CLR não é capaz de anular o thread.  Um thread bloqueado impede que o CLR descarregue o <xref:System.AppDomain>, pelo menos até que algumas operações extremamente não seguras sejam feitas.  O bloqueio usando um primitivo de sincronização do Windows é um exemplo claro de algo que não podemos permitir.  O bloqueio em uma chamada para `ReadFile` em um soquete deve ser evitado, se possível — o ideal é que a API do Windows forneça um mecanismo para uma operação como essa para atingir o tempo limite.
 
 Qualquer método que chame recursos nativos deve idealmente usar uma chamada de Win32 com um tempo limite razoável e finito.  Se o usuário tem permissão para especificar o tempo limite, o usuário não deve ter permissão para especificar um tempo limite infinito sem alguma permissão de segurança específica.  Como diretriz, se um método será bloqueado por mais de aprox. 10 segundos, você precisará estar usando uma versão que dê suporte a tempos limite ou precisará de mais suporte a CLR.
 
@@ -277,7 +275,7 @@ Considere a possibilidade de alterar todos os locais que capturam todas as exce�
 
 #### <a name="code-analysis-rule"></a>Regra de análise de código
 
-Examine todos os blocos catch no código gerenciado que captura todos os objetos ou captura todas as exceções.  No C# `catch` , isso significa sinalizar {} e `catch(Exception)`. {}  Considere tornar o tipo de exceção muito específico ou examine o código para garantir que ele não agirá de forma incorreta se detectar um tipo de exceção inesperado.
+Examine todos os blocos catch no código gerenciado que captura todos os objetos ou captura todas as exceções.  No C#, isso significa sinalizar `catch` {} e `catch(Exception)` {}.  Considere tornar o tipo de exceção muito específico ou examine o código para garantir que ele não agirá de forma incorreta se detectar um tipo de exceção inesperado.
 
 ### <a name="do-not-assume-a-managed-thread-is-a-win32-thread--it-is-a-fiber"></a>Não presuma que um thread gerenciado seja um Thread Win32 – é uma fibra
 
@@ -313,7 +311,7 @@ Uma CER é um bloco `try/finally` específico imediatamente precedido por uma ch
 
 Fazer isso instrui o compilador Just-In-Time para preparar a todo o código no bloco finally antes de executar o bloco `try`. Isso assegura que o código no bloco finally será criado e que será executado em todos os casos. Não é incomum que uma CER tenha um bloco `try` vazio. Usar uma CER protege contra anulações de thread assíncronas e exceções de falta de memória. Consulte <xref:System.Runtime.CompilerServices.RuntimeHelpers.ExecuteCodeWithGuaranteedCleanup%2A> para um formulário de uma CER que manipula excedentes de pilha de código excessivamente profundo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Runtime.ConstrainedExecution>
 - [Programação em SQL Server e atributos de proteção de host](sql-server-programming-and-host-protection-attributes.md)

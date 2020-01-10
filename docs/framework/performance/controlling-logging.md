@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - CLR ETW events, logging
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 924d209cd1177ffc1702ebe958c58bfc29c22c38
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 180cce516a1209711430429a46cb5b718b29f1d9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447680"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716102"
 ---
 # <a name="controlling-net-framework-logging"></a>Controlando o registro em log no .NET Framework
 
@@ -57,7 +55,7 @@ Para ativar o log, um usuário deve especificar três coisas:
 
     - `0x1CCBD` especifica as categorias de eventos que serão geradas.
 
-    - `0x5` define o nível de registro em log (neste caso, Detalhado (5)).
+    - `0x5` define o nível do log (nesse caso, detalhado (5)).
 
     - O parâmetro `-ets` instrui o Logman a enviar comandos para a seções de rastreamento de eventos.
 
@@ -111,7 +109,7 @@ Use os comandos listados abaixo para exibir os eventos ETW de CLR. Para obter um
 
      Este comando faz com que XPerf despeje os eventos na forma de um arquivo de valores separados por vírgula (CSV) que você pode abrir. Porque eventos diferentes possuem campos diferentes, esse arquivo CSV contém mais de uma linha de cabeçalho antes dos dados. O primeiro campo de cada linha é o tipo de evento, que indica qual cabeçalho deve ser usado para determinar o restante dos campos.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Kit de ferramentas de desempenho do Windows](/windows-hardware/test/wpt/)
+- [Kit de Ferramentas de Desempenho do Windows](/windows-hardware/test/wpt/)
 - [Eventos ETW no Common Language Runtime](etw-events-in-the-common-language-runtime.md)

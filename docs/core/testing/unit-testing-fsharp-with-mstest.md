@@ -4,13 +4,12 @@ description: Aprenda os conceitos de teste de unidade para F# no .NET Core por m
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.custom: seodec18
-ms.openlocfilehash: 68878073b031d155c9ff67f24ed950570e666523
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a685ed8a56393fb6e1c1b9400f0ed4bcef15f9b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117002"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714272"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-mstest"></a>Bibliotecas do F# de teste de unidade no .NET Core usando dotnet test e MSTest
 
@@ -21,7 +20,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 ## <a name="creating-the-source-project"></a>Criando o projeto de origem
 
 Abra uma janela do shell. Crie um diretório chamado *unit-testing-with-fsharp* para armazenar a solução.
-Nesse novo diretório, execute [`dotnet new sln`](../tools/dotnet-new.md) para criar uma nova solução. Isso facilita o gerenciamento da biblioteca de classes e o projeto de teste de unidade.
+Dentro desse novo diretório, execute `dotnet new sln` para criar uma nova solução. Isso facilita o gerenciamento da biblioteca de classes e o projeto de teste de unidade.
 No diretório da solução, crie um diretório *MathService*. A estrutura de arquivo e diretório até aqui é mostrada abaixo:
 
 ```
@@ -30,14 +29,14 @@ No diretório da solução, crie um diretório *MathService*. A estrutura de arq
     /MathService
 ```
 
-Torne *MathService* o diretório atual e execute [`dotnet new classlib -lang F#`](../tools/dotnet-new.md) para criar o projeto de origem.  Você criará uma implementação com falha do serviço de matemática:
+Torne o *MathService* o diretório atual e execute `dotnet new classlib -lang "F#"` para criar o projeto de origem.  Você criará uma implementação com falha do serviço de matemática:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Altere o diretório de volta para o diretório *unit-testing-with-fsharp*. Execute [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md) para adicionar o projeto de biblioteca de classes à solução.
+Altere o diretório de volta para o diretório *unit-testing-with-fsharp*. Execute `dotnet sln add .\MathService\MathService.fsproj` para adicionar o projeto de biblioteca de classes à solução.
 
 ## <a name="creating-the-test-project"></a>Criando o projeto de teste
 
@@ -52,7 +51,7 @@ Em seguida, crie o diretório *MathService.Tests*. O seguinte esquema mostra a e
     /MathService.Tests
 ```
 
-Torne o diretório *MathService.Tests* o diretório atual e crie um novo projeto usando [`dotnet new mstest -lang F#`](../tools/dotnet-new.md). Isso cria um projeto de teste que usa o MSTest como a estrutura de teste. O modelo gerado configura o executor de teste no *MathServiceTests.fsproj*:
+Transforme o diretório *MathService. Tests* no diretório atual e crie um novo projeto usando `dotnet new mstest -lang "F#"`. Isso cria um projeto de teste que usa o MSTest como a estrutura de teste. O modelo gerado configura o executor de teste no *MathServiceTests.fsproj*:
 
 ```xml
 <ItemGroup>
@@ -62,7 +61,7 @@ Torne o diretório *MathService.Tests* o diretório atual e crie um novo projeto
 </ItemGroup>
 ```
 
-O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new`, na etapa anterior, adicionou MSTest e o executor de MSTest. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+O projeto de teste requer outros pacotes para criar e executar testes de unidade. `dotnet new`, na etapa anterior, adicionou MSTest e o executor de MSTest. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use o comando `dotnet add reference`:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -83,7 +82,7 @@ Você tem o seguinte layout de solução final:
         MathServiceTests.fsproj
 ```
 
-Execute [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) no diretório *unit-testing-with-fsharp*.
+Execute `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` no diretório de *teste de unidade com o FSharp* .
 
 ## <a name="creating-the-first-test"></a>Criando o primeiro teste
 
@@ -107,7 +106,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.IsTrue(false)
 ```
 
-O atributo `[<TestClass>]` indica uma classe que contém testes. O atributo `[<TestMethod>]` indica um método de teste que é executado pelo executor de teste. No diretório *unit-testing-with-fsharp*, execute [`dotnet test`](../tools/dotnet-test.md) para criar os testes e a biblioteca de classes e execute os testes. O executor de teste do MSTest contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
+O atributo `[<TestClass>]` indica uma classe que contém testes. O atributo `[<TestMethod>]` indica um método de teste que é executado pelo executor de teste. No diretório de *teste de unidade com o FSharp* , execute `dotnet test` para criar os testes e a biblioteca de classes e, em seguida, execute os testes. O executor de teste do MSTest contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
 
 Esses dois testes mostram testes com aprovação e falha mais básicos. `My test` é aprovado e `Fail every time` falha. Agora, crie um teste para o método `squaresOfOdds`. O método `squaresOfOdds` retorna uma lista dos quadrados de todos os valores inteiros ímpares que fazem parte da sequência de entrada. Em vez de tentar gravar todas as funções de uma vez, você pode criar testes iterativamente que validam a funcionalidade. Fazer com que cada teste passe significa criar a funcionalidade necessária para o método.
 
@@ -180,3 +179,10 @@ let squaresOfOdds xs =
 ```
 
 Você criou uma pequena biblioteca e um conjunto de testes de unidade para essa biblioteca. Você estruturou a solução para que a adição de novos pacotes e testes fizesse parte do fluxo de trabalho normal. Você concentrou grande parte do seu tempo e esforço em resolver as metas do aplicativo.
+
+## <a name="see-also"></a>Veja também
+
+- [dotnet new](../tools/dotnet-new.md)
+- [dotnet sln](../tools/dotnet-sln.md)
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

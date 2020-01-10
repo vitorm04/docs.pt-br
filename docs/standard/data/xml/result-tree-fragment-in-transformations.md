@@ -3,14 +3,12 @@ title: Fragmento da árvore de resultado nas transformações
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: df363480-ba02-4233-9ddf-8434e421c4f1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e3b99606698124455ca9b325042ffbe430915aee
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: 33d66b0a835be8bacab76ef9295ce8158385d8d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170770"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710252"
 ---
 # <a name="result-tree-fragment-in-transformations"></a>Fragmento da árvore de resultado nas transformações
 
@@ -35,7 +33,7 @@ Para o elemento de `parameter` , o valor é atribuído ao nome qualificado (`Qna
 
 Para o elemento de `variable` , o valor é atribuído também em várias maneiras. Você pode atribuí-lo retornando o conteúdo de expressão XPath no atributo de `select` , ou atribuindo o conteúdo do corpo do modelo.
 
-Para os elementos `parameter` e `variable`, se um valor for atribuído pela expressão XPath, um dos quatro tipos XPath básicos será retornado: Booliano, cadeia de caracteres, número ou conjunto de nós. Quando o valor é fornecido usando um corpo não vazio de modelo, então um tipo de dados não XPath será retornado, e que será um fragmento da árvore de resultado.
+Para elementos de `parameter` e de `variable` , se um valor é determinado pela expressão XPath, então um dos quatro tipos básicos XPath será retornado: Booleano, cadeia de caracteres, número, ou conjunto de nó. Quando o valor é fornecido usando um corpo não vazio de modelo, então um tipo de dados não XPath será retornado, e que será um fragmento da árvore de resultado.
 
 Quando uma variável é associado a um fragmento da árvore de resultado em vez de um dos quatro tipos de dados básicos XPath, este é a única vez que uma consulta XPath retorna um tipo que não é um dos quatro tipos de objeto XPath. Os fragmentos da árvore de resultado e seu comportamento são discutidos na [especificação World Wide Web Consortium (W3C)](https://www.w3.org/TR/xslt-10/), da [seção 11.1 Fragmentos da Árvore do Resultado](https://www.w3.org/TR/xslt-10/#section-Result-Tree-Fragments) até [seção 11.6 Passando Parâmetros para os Modelos](https://www.w3.org/TR/xslt-10/#section-Passing-Parameters-to-Templates). Além disso, a [seção 1 Introdução](https://www.w3.org/TR/xslt-10/#section-Introduction) discute como os modelos podem conter elementos do namespace XSLT que retornam ou como podem criar fragmentos da árvore de resultado.
 
@@ -192,7 +190,7 @@ O seguinte é o resultado de transformar XML com essa folha de estilos:
 <books xmlns:user="urn:books">Book1Book2Book3Book4</books>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XPath.XPathNodeIterator>
 - [Transformações XSLT com a classe XslTransform](xslt-transformations-with-the-xsltransform-class.md)

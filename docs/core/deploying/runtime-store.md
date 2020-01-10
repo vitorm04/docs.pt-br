@@ -1,21 +1,20 @@
 ---
-title: Repositório de pacotes de tempo de execução
-description: Saiba como usar o repositório de pacotes de tempo de execução para direcionar a manifestos usados pelo .NET Core.
+title: Repositório de pacotes de runtime
+description: Saiba como usar o repositório de pacotes de runtime para direcionar a manifestos usados pelo .NET Core.
 author: bleroy
 ms.date: 08/12/2017
-ms.custom: seodec18
-ms.openlocfilehash: 8a8d2d3298f144347c36c640700a1e578dc14715
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: aa0fd3a0895bc79ddb80aeb599d3e3820b3be6db
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116549"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714454"
 ---
-# <a name="runtime-package-store"></a>Repositório de pacotes de tempo de execução
+# <a name="runtime-package-store"></a>Repositório de pacotes de runtime
 
 A partir do .NET Core 2.0, é possível empacotar e implantar aplicativos com relação a um conjunto conhecido de pacotes que existem no ambiente de destino. Os benefícios são implantações mais rápidas, menor uso de espaço em disco e desempenho aprimorado de inicialização em alguns casos.
 
-Esse recurso é implementado como um *repositório de pacotes de tempo de execução*, que é um diretório em disco no qual os pacotes são armazenados (normalmente em */usr/local/share/dotnet/store* em macOS/Linux e *C:/Arquivos de Programas/dotnet/store* no Windows). Nesse diretório, há subdiretórios para arquiteturas e [estruturas de destino](../../standard/frameworks.md). O layout do arquivo é semelhante à maneira como os [ativos do NuGet são dispostos no disco](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure):
+Esse recurso é implementado como um *repositório de pacotes de runtime*, que é um diretório em disco no qual os pacotes são armazenados (normalmente em */usr/local/share/dotnet/store* em macOS/Linux e *C:/Arquivos de Programas/dotnet/store* no Windows). Nesse diretório, há subdiretórios para arquiteturas e [estruturas de destino](../../standard/frameworks.md). O layout do arquivo é semelhante à maneira como os [ativos do NuGet são dispostos no disco](/nuget/create-packages/supporting-multiple-target-frameworks#framework-version-folder-structure):
 
 ```
 \dotnet
@@ -32,13 +31,13 @@ Esse recurso é implementado como um *repositório de pacotes de tempo de execu�
                 ...
 ```
 
-Um arquivo de *manifesto de destino* lista os pacotes no repositório de pacotes de tempo de execução. Os desenvolvedores podem direcionar esse manifesto ao publicar seu aplicativo. Normalmente, o manifesto de destino é fornecido pelo proprietário do ambiente de produção direcionado.
+Um arquivo de *manifesto de destino* lista os pacotes no repositório de pacotes de runtime. Os desenvolvedores podem direcionar esse manifesto ao publicar seu aplicativo. Normalmente, o manifesto de destino é fornecido pelo proprietário do ambiente de produção direcionado.
 
-## <a name="preparing-a-runtime-environment"></a>Preparação de um ambiente de tempo de execução
+## <a name="preparing-a-runtime-environment"></a>Preparação de um ambiente de runtime
 
-O administrador de um ambiente de tempo de execução pode otimizar aplicativos para oferecer implantações mais rápidas e menor uso do espaço em disco criando um repositório de pacotes de tempo de execução e o manifesto de destino correspondente.
+O administrador de um ambiente de runtime pode otimizar aplicativos para oferecer implantações mais rápidas e menor uso do espaço em disco criando um repositório de pacotes de runtime e o manifesto de destino correspondente.
 
-A primeira etapa é criar um *manifesto de repositório de pacotes* que lista os pacotes que compõem o repositório de pacotes de tempo de execução. Esse formato de arquivo é compatível com o formato de arquivo de projeto (*csproj*).
+A primeira etapa é criar um *manifesto de repositório de pacotes* que lista os pacotes que compõem o repositório de pacotes de runtime. Esse formato de arquivo é compatível com o formato de arquivo de projeto (*csproj*).
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -51,7 +50,7 @@ A primeira etapa é criar um *manifesto de repositório de pacotes* que lista os
 
 **Exemplo**
 
-O exemplo do manifesto do repositório de pacotes a seguir (*packages.csproj*) é usado para adicionar [`Newtonsoft.Json`](https://www.nuget.org/packages/Newtonsoft.Json/) e [`Moq`](https://www.nuget.org/packages/moq/) a um repositório de pacotes de tempo de execução:
+O exemplo do manifesto do repositório de pacotes a seguir (*packages.csproj*) é usado para adicionar [`Newtonsoft.Json`](https://www.nuget.org/packages/Newtonsoft.Json/) e [`Moq`](https://www.nuget.org/packages/moq/) a um repositório de pacotes de runtime:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -62,7 +61,7 @@ O exemplo do manifesto do repositório de pacotes a seguir (*packages.csproj*) �
 </Project>
 ```
 
-Provisione o repositório de pacotes de tempo de execução executando `dotnet store` com o manifesto, tempo de execução e estrutura do repositório de pacotes:
+Provisione o repositório de pacotes de runtime executando `dotnet store` com o manifesto, runtime e estrutura do repositório de pacotes:
 
 ```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
@@ -124,9 +123,9 @@ Especifique os manifestos de destino no arquivo de projeto somente quando o ambi
 
 O repositório implícito do ASP.NET Core é aplicável apenas ao ASP.NET Core 2.0. Recomendamos que os aplicativos usem o ASP.NET Core 2.1 e posterior, que **não** usa o repositório implícito. O ASP.NET Core 2.1 e posterior usam a estrutura compartilhada.
 
-O recurso do repositório de pacotes de tempo de execução é usado implicitamente por um aplicativo ASP.NET Core quando o aplicativo é implantado como um aplicativo [FDD (implantação dependente da estrutura)](index.md#framework-dependent-deployments-fdd). Os destinos em [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) incluem manifestos que referenciam o repositório de pacotes implícito no sistema de destino. Além disso, qualquer aplicativo FDD que dependa do pacote `Microsoft.AspNetCore.All` resulta em um aplicativo publicado que contém apenas o aplicativo e seus ativos e não os pacotes listados no metapackage `Microsoft.AspNetCore.All`. Pressupõe-se que esses pacotes estão presentes no sistema de destino.
+O recurso do repositório de pacotes de runtime é usado implicitamente por um aplicativo ASP.NET Core quando o aplicativo é implantado como um aplicativo [FDD (implantação dependente da estrutura)](index.md#framework-dependent-deployments-fdd). Os destinos em [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) incluem manifestos que referenciam o repositório de pacotes implícito no sistema de destino. Além disso, qualquer aplicativo FDD que dependa do pacote `Microsoft.AspNetCore.All` resulta em um aplicativo publicado que contém apenas o aplicativo e seus ativos e não os pacotes listados no metapackage `Microsoft.AspNetCore.All`. Pressupõe-se que esses pacotes estão presentes no sistema de destino.
 
-O repositório de pacotes de tempo de execução é instalado no host quando o SDK de .NET Core é instalado. Talvez outros instaladores forneçam o repositório de pacotes de tempo de execução, incluindo instalações Zip/tarball do SDK do .NET Core, `apt-get`, Red Hat Yum, o pacote de hospedagem do Windows Server do .NET Core e instalações manuais de repositório de pacotes de tempo de execução.
+O repositório de pacotes de runtime é instalado no host quando o SDK de .NET Core é instalado. Talvez outros instaladores forneçam o repositório de pacotes de runtime, incluindo instalações Zip/tarball do SDK do .NET Core, `apt-get`, Red Hat Yum, o pacote de hospedagem do Windows Server do .NET Core e instalações manuais de repositório de pacotes de runtime.
 
 Ao implantar um aplicativo [FDD (dependente da estrutura de implantação)](index.md#framework-dependent-deployments-fdd), certifique-se de que o ambiente de destino tem o SDK do .NET Core instalado. Se o aplicativo for implantado em um ambiente que não inclui o ASP.NET Core, será possível recusar o repositório implícito especificando o conjunto **\<PublishWithAspNetCoreTargetManifest>** definido como `false` no arquivo de projeto como no exemplo a seguir:
 
@@ -139,13 +138,13 @@ Ao implantar um aplicativo [FDD (dependente da estrutura de implantação)](inde
 > [!NOTE]
 > Para aplicativos [SCD (implantação autocontida)](index.md#self-contained-deployments-scd), pressupõe-se que o sistema de destino não contenha necessariamente os pacotes de manifesto necessários. Portanto, **\<PublishWithAspNetCoreTargetManifest>** não pode ser definido como `true` para um aplicativo SCD.
 
-Se você implantar um aplicativo com uma dependência de manifesto presente na implantação (o assembly está presente na pasta *bin*), o repositório de pacotes de tempo de execução *não será usado* no host desse assembly. O assembly da pasta *bin* é usado, independentemente de sua presença no repositório de pacotes de tempo de execução no host.
+Se você implantar um aplicativo com uma dependência de manifesto presente na implantação (o assembly está presente na pasta *bin*), o repositório de pacotes de runtime *não será usado* no host desse assembly. O assembly da pasta *bin* é usado, independentemente de sua presença no repositório de pacotes de runtime no host.
 
-A versão da dependência indicada no manifesto deve corresponder à versão da dependência no repositório de pacotes de tempo de execução. Se você tiver uma incompatibilidade de versão entre a dependência no manifesto de destino e a versão que existe no repositório de pacotes de tempo de execução e o aplicativo não incluir a versão necessária do pacote em sua implantação, a inicialização do aplicativo falhará. A exceção inclui o nome do manifesto de destino chamado que chamou o assembly do repositório de pacotes de tempo de execução, que ajuda você a solucionar problemas de incompatibilidade.
+A versão da dependência indicada no manifesto deve corresponder à versão da dependência no repositório de pacotes de runtime. Se você tiver uma incompatibilidade de versão entre a dependência no manifesto de destino e a versão que existe no repositório de pacotes de runtime e o aplicativo não incluir a versão necessária do pacote em sua implantação, a inicialização do aplicativo falhará. A exceção inclui o nome do manifesto de destino chamado que chamou o assembly do repositório de pacotes de runtime, que ajuda você a solucionar problemas de incompatibilidade.
 
 Quando a implantação é *cortada* na publicação, somente as versões específicas dos pacotes de manifesto indicadas são retidas na saída publicada. Os pacotes nas versões indicadas devem estar presentes no host do aplicativo a ser iniciado.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [dotnet-publish](../tools/dotnet-publish.md)
 - [dotnet-store](../tools/dotnet-store.md)

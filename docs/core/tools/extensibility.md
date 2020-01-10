@@ -2,13 +2,12 @@
 title: Modelo de extensibilidade da CLI do .NET Core
 description: Saiba como você pode estender as ferramentas da CLI (interface de linha de comando).
 ms.date: 04/12/2017
-ms.custom: seodec18
-ms.openlocfilehash: 400d47f9d5bca53a23d09eb4eb94519f9824b473
-ms.sourcegitcommit: d98fdb087d9c8aba7d2cb93fe4b4ee35a2308cee
+ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69012979"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714189"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelo de extensibilidade das ferramentas da CLI do .NET Core
 
@@ -69,7 +68,7 @@ Como mencionado anteriormente, ferramentas são apenas aplicativos de console po
 Depois de compilá-la, você usaria o comando [`dotnet pack`](dotnet-pack.md) para criar um pacote NuGet (arquivo .nupkg) que contém o código, as informações sobre suas dependências e assim por diante. Você pode atribuir qualquer nome ao pacote, mas o aplicativo dentro dele, o binário da ferramenta de fato, precisa estar em conformidade com a convenção de `dotnet-<command>` para que `dotnet` consiga invocá-lo.
 
 > [!NOTE]
-> Em versões pré-RC3 das ferramentas de linha de comando do .NET Core, o comando `dotnet pack` tinha um bug que fazia com que o *.runtimeconfig.json* não fosse adicionado ao pacote com a ferramenta. A falta desse arquivo resulta em erros em tempo de execução. Se você encontrar esse comportamento, certifique-se de atualizar para as ferramentas mais recentes e tente o `dotnet pack` novamente.
+> Em versões pré-RC3 das ferramentas de linha de comando do .NET Core, o comando `dotnet pack` tinha um bug que fazia com que o *.runtimeconfig.json* não fosse adicionado ao pacote com a ferramenta. A falta desse arquivo resulta em erros em runtime. Se você encontrar esse comportamento, certifique-se de atualizar para as ferramentas mais recentes e tente o `dotnet pack` novamente.
 
 Como ferramentas são aplicativos portáteis, o usuário que a consume precisa ter a versão das bibliotecas do .NET Core para as quais a biblioteca foi criada para executar a ferramenta. Qualquer outra dependência que a ferramenta usa e que não está contida em bibliotecas do .NET Core é restaurada e colocada no cache do NuGet. Toda a ferramenta é, portanto, executada usando os assemblies de bibliotecas .NET Core, bem como assemblies do cache do NuGet.
 

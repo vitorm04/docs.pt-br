@@ -4,13 +4,12 @@ description: Aprenda os conceitos de teste de unidade no C# e .NET Core por meio
 author: ncarandini
 ms.author: wiwagn
 ms.date: 09/08/2017
-ms.custom: seodec18
-ms.openlocfilehash: d9ad21aded45c8955e24b93fd4ddf8a86b989055
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 2d432f5efd6f8de3593f939abbd488f9fe68b73e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116176"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715394"
 ---
 # <a name="unit-testing-c-with-mstest-and-net-core"></a>C# de teste de unidade com MSTest e .NET Core
 
@@ -145,7 +144,7 @@ No diretório *unit-testing-using-mstest*, execute `dotnet test` novamente. O co
 
 ## <a name="add-more-features"></a>Adicionar mais recursos
 
-Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0 e -1. Você pode adicionar novos testes com o [atributo TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute), mas isso se torna rapidamente entediante. Há outros atributos do MSTest que permitem escrever um pacote de testes semelhantes.  Um [atributo DataTestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute) representa um pacote de testes que executa o mesmo código, mas com diferentes argumentos de entrada. Você pode usar o [atributo DataRow](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute) para especificar valores para essas entradas.
+Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0, -1. Você pode adicionar novos testes com o [atributo TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute), mas isso se torna rapidamente entediante. Há outros atributos do MSTest que permitem escrever um pacote de testes semelhantes.  Um [atributo DataTestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataTestMethodAttribute) representa um pacote de testes que executa o mesmo código, mas com diferentes argumentos de entrada. Você pode usar o [atributo DataRow](xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataRowAttribute) para especificar valores para essas entradas.
 
 Em vez de criar novos testes, aplique esses dois atributos para criar um único teste orientado a dados. O teste controlado por dados é um método que testa vários valores menores que dois, que é o menor número primo:
 
@@ -161,7 +160,7 @@ Continue iterando adicionando mais testes, mais teorias e mais código na biblio
 
 Você criou uma pequena biblioteca e um conjunto de testes de unidade para essa biblioteca. Você estruturou a solução para que a adição de novos pacotes e testes fizesse parte do fluxo de trabalho normal. Você concentrou grande parte do seu tempo e esforço em resolver as metas do aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:Microsoft.VisualStudio.TestTools.UnitTesting>
 - [Usar a estrutura do MSTest em testes de unidade](/visualstudio/test/using-microsoft-visualstudio-testtools-unittesting-members-in-unit-tests)

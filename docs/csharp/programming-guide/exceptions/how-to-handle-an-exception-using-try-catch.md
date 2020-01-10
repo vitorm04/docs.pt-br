@@ -1,18 +1,17 @@
 ---
 title: Como tratar uma exceção usando o guia de C# programação do try-catch
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], try/catch blocks
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: 14a24a42c533a8f3a281564955c4b45743b99c84
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: adfc53cbe4fd603ac3a6de6b9a0162320d5a2e19
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346248"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712280"
 ---
 # <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Como tratar uma exceção usando try/catch (guiaC# de programação)
 A finalidade de um bloco [try-catch](../../language-reference/keywords/try-catch.md) é capturar e manipular uma exceção gerada pelo código de trabalho. Algumas exceções podem ser manipuladas em um bloco `catch` e o problema pode ser resolvido sem que a exceção seja gerada novamente. No entanto, com mais frequência, a única coisa que você pode fazer é certificar-se de que a exceção apropriada seja gerada.  

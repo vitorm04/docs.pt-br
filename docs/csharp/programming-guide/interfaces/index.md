@@ -1,17 +1,16 @@
 ---
 title: Interfaces – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: d03917353a9e6879ccb3b368d7d190aeeacb702c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 3187b8b94c6e46ec13312fc31ac1ed9852199d6b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635230"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714616"
 ---
 # <a name="interfaces-c-programming-guide"></a>Interfaces (Guia de Programação em C#)
 
@@ -54,7 +53,7 @@ Uma interface tem as propriedades a seguir:
 - Uma interface é como uma classe base abstrata que contém apenas membros abstratos. Qualquer classe ou struct que implementa a interface deve implementar todos os seus membros.
 - Uma interface não pode ser instanciada diretamente. Seus membros são implementados por qualquer classe ou struct que implemente a interface.
 - As interfaces podem conter propriedades, indexadores, métodos e eventos.
-- As interfaces não têm implementações de métodos.
+- Interfaces não contêm implementação de métodos (em C# 8,0, as interfaces podem ter [a implementação padrão para métodos](../../whats-new/csharp-8.md#default-interface-methods)).
 - Uma classe ou struct pode implementar várias interfaces. Uma classe pode herdar uma classe base e também implementar uma ou mais interfaces.
 
 ## <a name="in-this-section"></a>Nesta seção

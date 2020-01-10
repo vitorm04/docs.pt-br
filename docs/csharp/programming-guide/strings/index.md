@@ -1,17 +1,16 @@
 ---
 title: Cadeias de caracteres – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 06/27/2019
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: c6e29781f566fac0fd1219ac842a4838d631afb6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dd76450c2a6a1726d630285f652d252c5f66183f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969713"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711903"
 ---
 # <a name="strings-c-programming-guide"></a>Cadeias de caracteres (Guia de Programação em C#)
 Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é texto. Internamente, o texto é armazenado como uma coleção sequencial somente leitura de objetos <xref:System.Char>. Não há um caractere de finalização null ao fim de uma cadeia em C#. Portanto, uma cadeia de caracteres em C# pode ter qualquer número de caracteres nulos inseridos ('\0'). A propriedade `Char` de uma cadeia de caracteres representa o número de objetos <xref:System.String.Length%2A> que ela contém e não o número de caracteres Unicode. Para acessar os pontos de código Unicode individuais em uma cadeia de caracteres, use o objeto <xref:System.Globalization.StringInfo>.  
@@ -56,7 +55,7 @@ Uma cadeia de caracteres é um objeto do tipo <xref:System.String> cujo valor é
 |\\"|Aspas duplas|0x0022|  
 |\\\\ |Barra invertida|0x005C|  
 |\0|Nulo|0x0000|  
-|\a|Alerta|0x0007|  
+|\a|Alert|0x0007|  
 |\b|Backspace|0x0008|  
 |\f|Avanço de página|0x000C|  
 |\n|Nova linha|0x000A|  
@@ -125,7 +124,7 @@ string s = String.Empty;
  [!code-csharp[TestStringBuilder#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/TestStringBuilder.cs)]
   
 ## <a name="strings-extension-methods-and-linq"></a>Cadeias de caracteres, métodos de extensão e LINQ  
- Uma vez que o tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, você pode usar os métodos de extensão definidos na classe <xref:System.Linq.Enumerable> em cadeias de caracteres. Para evitar a desordem visual, esses métodos são excluídos do IntelliSense para o tipo <xref:System.String>, mas estão disponíveis mesmo assim. Você também pode usar expressões [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] em cadeias de caracteres de consulta. Para saber mais, confira [LINQ e cadeias de caracteres](../concepts/linq/linq-and-strings.md).  
+ Uma vez que o tipo <xref:System.String> implementa <xref:System.Collections.Generic.IEnumerable%601>, você pode usar os métodos de extensão definidos na classe <xref:System.Linq.Enumerable> em cadeias de caracteres. Para evitar a desordem visual, esses métodos são excluídos do IntelliSense para o tipo <xref:System.String>, mas estão disponíveis mesmo assim. Você também pode usar expressões de consulta LINQ em cadeias de caracteres. Para saber mais, confira [LINQ e cadeias de caracteres](../concepts/linq/linq-and-strings.md).  
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   

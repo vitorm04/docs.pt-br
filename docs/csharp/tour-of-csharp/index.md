@@ -2,13 +2,12 @@
 title: Um tour pelo C# – Guia do C#
 description: Novato em C#? Conheça os fundamentos da linguagem.
 ms.date: 04/05/2019
-ms.custom: seoapril2019
-ms.openlocfilehash: 7398703dc75e7ad7ab8da497eb39e8eeba6d1eba
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346861"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711656"
 ---
 # <a name="a-tour-of-the-c-language"></a>Um tour pelo C# idioma
 
@@ -65,7 +64,7 @@ Há muito mais para aprender sobre C#. Os tópicos a seguir fornecem uma visão 
   - Você usa ***instruções*** para expressar as ações de um programa.
 - [Classes e objetos](classes-and-objects.md)
   - As ***classes*** são os tipos do C# mais fundamentais. Os ***objetos*** são instâncias de uma classe. As classes são compiladas usando ***membros***, que também são abordados neste tópico.
-- [Estruturas](structs.md)
+- [Structs](structs.md)
   - Os ***structs*** são estruturas de dados que, diferentemente das classes, são tipos de valor.
 - [Matrizes](arrays.md)
   - Uma ***matriz*** é uma estrutura de dados que contém algumas variáveis acessadas por meio de índices calculados.

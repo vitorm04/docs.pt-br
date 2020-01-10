@@ -1,16 +1,15 @@
 ---
 title: Como retornar subconjuntos de propriedades de elemento em um guia C# de programação de consulta
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 1266b866d671854c787d907b91f654c128681de9
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970455"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714866"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>Como retornar subconjuntos de propriedades de elemento em uma consultaC# (guia de programação)
 Use um tipo anônimo em uma expressão de consulta quando essas duas condições se aplicarem:  
@@ -42,11 +41,11 @@ select new { First = student.FirstName, Last = student.LastName };
 Console.WriteLine(student.First + " " + student.Last);  
 ```  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
   
 Para executar esse código, copie e cole a classe em um aplicativo de console em C# com uma diretiva `using` para System.Linq.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Tipos Anônimos](./anonymous-types.md)

@@ -16,13 +16,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.custom: seodec18
-ms.openlocfilehash: 53f16e65a3cd19cd516756f3a2d036039964e021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 319aa76754adc852528f35448d9906d4e903693b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971368"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711539"
 ---
 # <a name="anchors-in-regular-expressions"></a>Âncoras em expressões regulares
 Âncoras ou asserções atômicas de largura zero, especificam uma posição na cadeia de caracteres em que uma correspondência deve ocorrer. Quando você usa uma âncora na sua expressão de pesquisa, o mecanismo de expressões regulares não avança pela cadeia de caracteres ou consome caracteres, ele procura uma correspondência apenas na posição especificada. Por exemplo, `^` Especifica que a correspondência deve começar no início de uma linha ou cadeia de caracteres. Portanto, a expressão regular `^http:` corresponde a "http:" apenas quando ele ocorre no início de uma linha. A tabela a seguir lista as âncoras com suporte pelas expressões regulares no .NET.  
@@ -113,7 +112,7 @@ ms.locfileid: "73971368"
 |Padrão|Descrição|  
 |-------------|-----------------|  
 |`\G`|Começa onde a última correspondência terminou.|  
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|  
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|  
 |`\s?`|Corresponde a zero ou um espaço.|  
 |`\w*`|Corresponder a zero ou mais caracteres de palavra.|  
 |`(\w+\s?\w*)`|Corresponde a um ou mais caracteres de palavra seguidos por zero ou um espaço, seguido por zero ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
@@ -131,7 +130,7 @@ ms.locfileid: "73971368"
   
 |Padrão|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começa a correspondência em um limite de palavra.|  
+|`\b`|Começar a correspondência em um limite de palavra.|  
 |`are`|Corresponde à subcadeia de caracteres “are”.|  
 |`\w*`|Corresponder a zero ou mais caracteres de palavra.|  
 |`\b`|Termina a correspondência em um limite de palavra.|  
@@ -150,9 +149,9 @@ ms.locfileid: "73971368"
 |-------------|-----------------|  
 |`\B`|Não começa a correspondência em um limite de palavra.|  
 |`qu`|Corresponde à subcadeia de caracteres “qu”.|  
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|  
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [Opções de expressões regulares](../../../docs/standard/base-types/regular-expression-options.md)

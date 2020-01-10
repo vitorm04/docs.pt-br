@@ -7,48 +7,47 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-author: KrzysztofCwalina
-ms.openlocfilehash: c20430f9cdcd71cc2e178d38aeed48f9fa4e75c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 623391de63891c1695a63482a424bb76a861deba
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026374"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709303"
 ---
 # <a name="framework-design-guidelines"></a>Diretrizes de design de estrutura
-Esta seção fornece diretrizes para a criação de bibliotecas que estendem e interagem com o .NET Framework. O objetivo é ajudar os designers de bibliotecas a garantir a consistência de API e facilidade de uso, fornecendo um modelo de programação unificado que é independente da linguagem de programação usada para o desenvolvimento. É recomendável que você siga estas diretrizes de design ao desenvolver classes e componentes que estendam o .NET Framework. Design de bibliotecas inconsistente negativamente afeta a produtividade do desenvolvedor e desencoraja a adoção.  
+Esta seção fornece diretrizes para a criação de bibliotecas que estendem e interagem com o .NET Framework. O objetivo é ajudar os designers de biblioteca a garantir a consistência da API e a facilidade de uso, fornecendo um modelo de programação unificado que é independente da linguagem de programação usada para desenvolvimento. Recomendamos que você siga essas diretrizes de design ao desenvolver classes e componentes que estendam o .NET Framework. O design de biblioteca inconsistente afeta negativamente a produtividade do desenvolvedor e não incentiva a adoção.  
   
- As diretrizes são organizadas como recomendações simples prefixadas com os termos `Do`, `Consider`, `Avoid`, e `Do not`. Estas diretrizes destinam-se a ajudar os designers de biblioteca de classes a entender as compensações entre as diferentes soluções. Pode haver situações em que o design de boa biblioteca requer que você viole essas diretrizes de design. Nesses casos, devem ser raros, e é importante que você tenha um motivo claro e convincente para sua decisão.  
+ As diretrizes são organizadas como recomendações simples prefixadas com os termos `Do`, `Consider`, `Avoid`e `Do not`. Essas diretrizes destinam-se a ajudar os designers de biblioteca de classes a entender as compensações entre diferentes soluções. Pode haver situações em que um bom design de biblioteca exija que você viole essas diretrizes de design. Esses casos devem ser raros, e é importante que você tenha um motivo claro e convincente para sua decisão.  
   
- Estas diretrizes foram extraídas do livro *as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition*, por Krzysztof Cwalina e Brad Abrams.  
+ Essas diretrizes são extraídas das diretrizes de *design da estrutura de livros: convenções, idiomas e padrões para bibliotecas .net reutilizáveis, 2ª edição*, por Krzysztof Cwalina e Brad Abrams.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Diretrizes de nomenclatura](../../../docs/standard/design-guidelines/naming-guidelines.md)  
- Fornece diretrizes para a nomeação de assemblies, namespaces, tipos e membros em bibliotecas de classes.  
+ Fornece diretrizes para nomear assemblies, namespaces, tipos e membros em bibliotecas de classes.  
   
  [Diretrizes de Design de tipo](../../../docs/standard/design-guidelines/type.md)  
- Fornece diretrizes para usar classes abstratas e estáticas, interfaces, enumerações, estruturas e outros tipos.  
+ Fornece diretrizes para usar classes estáticas e abstratas, interfaces, enumerações, estruturas e outros tipos.  
   
  [Diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md)  
- Fornece diretrizes para criação e uso de propriedades, métodos, construtores, campos, eventos, operadores e parâmetros.  
+ Fornece diretrizes para criar e usar propriedades, métodos, construtores, campos, eventos, operadores e parâmetros.  
   
  [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
- Discute os mecanismos de extensibilidade, como a criação de subclasses, usando eventos, os membros virtuais e retornos de chamada e explica como escolher os mecanismos que melhor atendem aos requisitos da sua estrutura.  
+ Discute mecanismos de extensibilidade, como subclasses, uso de eventos, membros virtuais e retornos de chamada, e explica como escolher os mecanismos que melhor atendem aos requisitos da estrutura.  
   
  [Diretrizes de design para exceções](../../../docs/standard/design-guidelines/exceptions.md)  
- Descreve as diretrizes de design para projetar, lançar e capturar exceções.  
+ Descreve as diretrizes de design para criar, lançar e capturar exceções.  
   
  [Diretrizes de uso](../../../docs/standard/design-guidelines/usage-guidelines.md)  
- Descreve diretrizes para usando tipos comuns, como matrizes, atributos e coleções, suporte à serialização e sobrecarga de operadores de igualdade.  
+ Descreve as diretrizes para o uso de tipos comuns, como matrizes, atributos e coleções, suporte à serialização e sobrecarga de operadores de igualdade.  
   
  [Padrões comuns de Design](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Fornece diretrizes para escolher e implementar as propriedades de dependência.  
+ Fornece diretrizes para escolher e implementar propriedades de dependência.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Visão geral](../../../docs/framework/get-started/overview.md)
+- [Visão Geral](../../../docs/framework/get-started/overview.md)
 - [Guia de desenvolvimento](../../../docs/framework/development-guide.md)

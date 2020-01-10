@@ -1,18 +1,17 @@
 ---
 title: '#pragma – Referência de C#'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma'
 helpviewer_keywords:
 - '#pragma directive [C#]'
 ms.assetid: 5b7944cd-d402-46a1-ad8f-feffb2d83673
-ms.openlocfilehash: 65ca38ff6993117b6ed9f716d4ac93ba2d4a9ddf
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 3bd62364aeae0f21715711324655ef7d00d88afc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69605661"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712449"
 ---
 # <a name="pragma-c-reference"></a>#pragma (Referência de C#)
 O `#pragma` fornece ao compilador instruções especiais para a compilação do arquivo no qual ele é exibido. O compilador deve dar suporte às instruções. Em outras palavras, não é possível usar `#pragma` para criar instruções personalizadas de pré-processamento. O compilador Microsoft C# dá suporte a estas duas `#pragma` instruções:  
@@ -34,7 +33,7 @@ O `#pragma` fornece ao compilador instruções especiais para a compilação do 
  `pragma-arguments`  
  Argumentos específicos do pragma.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

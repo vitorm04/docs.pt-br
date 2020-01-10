@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4772f20e-1e7f-496e-93c2-1484473be555
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c2ce474dac44de1ac72811ecd3bc294ba57ce40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7040c2ccf6e3bfc6efcbec3505c633c6c3c6508f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570446"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710057"
 ---
 # <a name="user-defined-functions-and-variables"></a>Funções definidas pelo usuário e variáveis
 A classe de <xref:System.Xml.XPath.XPathNavigator> fornece um conjunto de métodos que são usados para interagir com os dados de <xref:System.Xml.XPath.XPathDocument> . Você pode complementar as funções padrão XPath implementando funções e variáveis de extensão para o uso de expressões de consulta XPath. O método de <xref:System.Xml.XPath.XPathExpression.SetContext%2A> pode aceitar um contexto definido pelo usuário derivado de <xref:System.Xml.Xsl.XsltContext>. As funções definidas pelo usuário são resolvidas pelo contexto personalizado.  

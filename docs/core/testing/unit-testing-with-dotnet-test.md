@@ -4,13 +4,12 @@ description: Aprenda os conceitos de teste de unidade no C# e .NET Core por meio
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.custom: seodec18
-ms.openlocfilehash: 420ab4c7f23ef3fd6cd26d91c2b4f075f1a205f5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835441"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714233"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>C# de teste de unidade no .NET Core usando dotnet test e xUnit
 
@@ -85,7 +84,7 @@ As instruções a seguir fornecem as etapas para criar a solução de teste. Con
   dotnet new xunit -o PrimeService.Tests
   ```
 
-* O comando anterior:
+* No comando anterior:
   * Cria o projeto *PrimeService. Tests* no diretório *PrimeService. Tests* . O projeto de teste usa [xUnit](https://xunit.github.io/) como a biblioteca de teste.
   * Configura o executor de teste adicionando os seguintes elementos de `<PackageReference />`ao arquivo de projeto:
     * "Microsoft. NET. Test. SDK"

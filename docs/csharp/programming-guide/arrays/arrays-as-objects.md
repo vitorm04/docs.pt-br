@@ -1,16 +1,15 @@
 ---
 title: Matrizes como objetos – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-ms.openlocfilehash: 9905168662496c46d20f191c04f21d8630d02fa2
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: d8b929eccf9be259874d03dd93f49a49798bb349
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72772106"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715098"
 ---
 # <a name="arrays-as-objects-c-programming-guide"></a>Matrizes como objetos (Guia de Programação em C#)
 
@@ -26,7 +25,7 @@ Este exemplo usa a propriedade <xref:System.Array.Rank%2A> para exibir a quantid
 
 [!code-csharp[csProgGuideArrays#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#2)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Matrizes](./index.md)

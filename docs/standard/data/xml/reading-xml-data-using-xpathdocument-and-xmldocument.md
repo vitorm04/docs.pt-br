@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 68d19784bab8a5d5a1994ea139b5631f56c7c680
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 87ae96944f9a9f2bbcefb54c343f429c75c3022d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580415"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710382"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Lendo dados XML usando XPathDocument e XmlDocument
 Há duas maneiras para ler um documento XML no namespace <xref:System.Xml.XPath?displayProperty=nameWithType>. Uma é ler um documento XML usando a classe <xref:System.Xml.XPath.XPathDocument> somente leitura e a outra é ler um documento XML usando a classe <xref:System.Xml.XmlDocument> editável no namespace <xref:System.Xml?displayProperty=nameWithType>.  
@@ -72,7 +70,7 @@ document.Load("books.xml");
 |<xref:System.Xml.XPath.XPathDocument>|`false`|  
 |<xref:System.Xml.XmlDocument>|`true`|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>

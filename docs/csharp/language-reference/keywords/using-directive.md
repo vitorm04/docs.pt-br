@@ -1,16 +1,15 @@
 ---
 title: Diretiva using – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 413d3ee6323aa601df84c0f402aaea7567a61e76
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a2028ccce47de54b59323194a0ffab3a643d878c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422282"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712969"
 ---
 # <a name="using-directive-c-reference"></a>Diretiva using (Referência de C#)
 
@@ -94,7 +93,7 @@ O exemplo a seguir mostra como definir uma diretiva `using` e um alias `using` p
 
 Para obter mais informações, consulte [Diretivas using](~/_csharplang/spec/namespaces.md#using-directives) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

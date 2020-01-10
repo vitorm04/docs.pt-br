@@ -5,14 +5,12 @@ helpviewer_keywords:
 - interop events [.NET Framework]
 - ETW, interop events (CLR)
 ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5db68cdce0db4f8f4d85e9d1dd03720bf235d865
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 80fd1f7487dbe3925b875e728eaeddac86927ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974928"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716013"
 ---
 # <a name="interop-etw-events"></a>Eventos ETW de interoperabilidade
 Eventos de interoperabilidade capturam informações sobre geração e cache de stub MSIL (Microsoft Intermediate Language).  
@@ -27,7 +25,7 @@ A tabela a seguir mostra a palavra-chave e o nível. (Para obter mais informaç�
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`ILStubGenerated`|88|O stub em MSIL foi gerado.|  
   
@@ -57,7 +55,7 @@ A tabela a seguir mostra a palavra-chave e o nível.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`ILStubCacheHit`|89|O cache MSIL foi acessado.|  
   
@@ -73,6 +71,6 @@ A tabela a seguir mostra a palavra-chave e o nível.
 |ManagedInteropMethodSignature|win:UnicodeString|A assinatura do método de interoperabilidade gerenciado.|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eventos de CLR ETW](clr-etw-events.md)

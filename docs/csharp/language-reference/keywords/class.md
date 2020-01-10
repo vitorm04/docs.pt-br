@@ -1,6 +1,5 @@
 ---
 title: Palavra-chave class – Referência de C#
-ms.custom: seodec18
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 61f15550482e8499e57197e35970e7ec8a096947
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 187a49131e903e00cab54d9db43b6cd8eb359a3a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345515"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713686"
 ---
 # <a name="class-c-reference"></a>class (Referência de C#)
 
@@ -72,7 +71,7 @@ Uma classe pode conter declarações dos seguintes membros:
 
 - [Interfaces](../../programming-guide/interfaces/index.md)
 
-- [Estruturas](../../programming-guide/classes-and-structs/structs.md)
+- [Structs](../../programming-guide/classes-and-structs/structs.md)
 
 - [Enumerações](../builtin-types/enum.md)
 
@@ -96,7 +95,7 @@ Tipos declarados dentro de uma classe sem um modificador de acesso têm o valor 
 
 Por fim, observe que, para o objeto criado usando o construtor sem parâmetro (`child3`), o campo `age` foi inicializado como zero por padrão.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

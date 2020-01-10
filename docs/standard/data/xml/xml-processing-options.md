@@ -3,14 +3,12 @@ title: Opções de processamento XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 33ced8ee-1745-4e71-8dee-ebe70ec067c7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3fc7def48bff71935fce7c6ed914ad20c66e5182
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 1707ed10d944a518872132dded40751026a4c8e7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73425172"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709914"
 ---
 # <a name="xml-processing-options"></a>Opções de processamento XML
 Veja nas tabelas a seguir uma lista das tecnologias da Microsoft que você pode usar para processar dados XML.  
@@ -33,7 +31,7 @@ Veja nas tabelas a seguir uma lista das tecnologias da Microsoft que você pode 
 |[XmlLite](https://docs.microsoft.com/previous-versions/windows/desktop/ms752872(v=vs.85))|-   Um analisador XML rápido, seguro, não armazenado em cache, apenas de encaminhamento que o ajuda a criar aplicativos XML de alto desempenho.<br />-   Funciona com qualquer linguagem que pode usar bibliotecas de vínculo dinâmico (DLLs); recomendamos usar C++.|  
 |[MSXML](https://docs.microsoft.com/previous-versions/windows/desktop/ms763742(v=vs.85))|-   Tecnologia baseada em COM para processar o XML que vem incluído no sistema operacional Windows.<br />-   Fornece uma implementação nativa do DOM com suporte para XPath e XSLT.<br />-   Contém o analisador baseado em evento SAX2.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Processar dados XML usando o modelo DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)
 - [Processar dados XML usando o modelo de dados XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

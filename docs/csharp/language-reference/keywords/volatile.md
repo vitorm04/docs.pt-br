@@ -1,6 +1,5 @@
 ---
 title: volatile – Referência de C#
-ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - volatile_CSharpKeyword
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: e72173ba1b91f03ccb1c15ca6451ac997666bc7f
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: c7a6c442c33ac2b41f652805837f455a957819de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422123"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712839"
 ---
 # <a name="volatile-c-reference"></a>volatile (Referência de C#)
 
-A palavra-chave `volatile` indica que um campo pode ser modificado por vários threads que estão em execução ao mesmo tempo. O compilador, o sistema do tempo de execução e até mesmo o hardware podem reorganizar as leituras e gravações para locais de memória por motivos de desempenho. Os campos que são declarados `volatile` não estão sujeitos a essas otimizações. A adição do modificador `volatile` garante que todos os threads observarão gravações voláteis executadas por qualquer outro thread na ordem em que elas foram executadas. Não há nenhuma garantia de uma única ordenação total de gravações voláteis como visto em todos os threads de execução.
+A palavra-chave `volatile` indica que um campo pode ser modificado por vários threads que estão em execução ao mesmo tempo. O compilador, o sistema do runtime e até mesmo o hardware podem reorganizar as leituras e gravações para locais de memória por motivos de desempenho. Os campos que são declarados `volatile` não estão sujeitos a essas otimizações. A adição do modificador `volatile` garante que todos os threads observarão gravações voláteis executadas por qualquer outro thread na ordem em que elas foram executadas. Não há nenhuma garantia de uma única ordenação total de gravações voláteis como visto em todos os threads de execução.
 
 A palavra-chave `volatile` pode ser aplicada a campos desses tipos:
 
@@ -48,7 +47,7 @@ Com o modificador `volatile` adicionado à declaração de `_shouldStop` definid
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Especificação da linguagem C#: palavra-chave volatile](../../../../_csharplang/spec/classes.md#volatile-fields)
 - [Referência de C#](../index.md)

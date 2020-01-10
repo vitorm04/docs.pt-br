@@ -2,13 +2,12 @@
 title: Migração do .NET Core com project.json
 description: Saiba como migrar um projeto .NET Core mais antigo usando project.json
 ms.date: 07/19/2017
-ms.custom: seodec18
-ms.openlocfilehash: 2912262d1191114d2314fed89e31c91c114f1935
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72773910"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714353"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Migração de projetos do .NET Core com project.json
 
@@ -29,7 +28,7 @@ A migração do *project.json* para o *.csproj* pode ser feita usando um dos seg
 
 Ambos os métodos usam o mesmo mecanismo subjacente para migrar os projetos. Portanto, os resultados serão os mesmos. Na maioria dos casos, usar uma dessas duas maneiras de migrar *Project. JSON* para *csproj* é a única coisa que é necessária e nenhuma outra edição manual do arquivo de projeto é necessária. O arquivo *.csproj* resultante terá o mesmo nome que o diretório contido.
 
-### <a name="visual-studio"></a>Visual Studio
+### <a name="visual-studio"></a>{1&gt;Visual Studio&lt;1}
 
 Quando você abre um arquivo *. xproj* ou um arquivo de solução que referencia arquivos *. Xproj* no Visual Studio 2017 ou no visual Studio 2019 versão 16,2 e anterior, a caixa de diálogo **atualização unidirecional** é exibida. A caixa de diálogo exibe os projetos a serem migrados. Se você abrir um arquivo de solução, todos os projetos especificados no arquivo de solução serão listados. Examine a lista de projetos a serem migrados e selecione **OK**.
 
@@ -79,7 +78,7 @@ O formato csproj do .NET Core foi mudando e evoluindo com cada nova versão de p
 - Remova o namespace de XML (`xmlns`) do elemento `<Project>`.
 - Se ele não existir, adicione o atributo `Sdk` ao elemento `<Project>` e defina-o como `Microsoft.NET.Sdk` ou `Microsoft.NET.Sdk.Web`. Esse atributo especifica que o projeto usa o SDK que será utilizado. `Microsoft.NET.Sdk.Web` é usado em aplicativos Web.
 - Remova as instruções `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` e `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` da parte superior e inferior do projeto. Essas instruções estão implícitas no SDK. Portanto, não é necessário que elas estejam no projeto.
-- Se os itens `Microsoft.NETCore.App` ou `NETStandard.Library` `<PackageReference>` estiverem em seu projeto, você deverá removê-los. Essas referências do pacote estão [implícitas no SDK](https://aka.ms/sdkimplicitrefs).
+- Se você tiver `Microsoft.NETCore.App` ou `NETStandard.Library` itens de `<PackageReference>` em seu projeto, remova-os. Essas referências do pacote estão [implícitas no SDK](https://aka.ms/sdkimplicitrefs).
 - Remova o elemento `Microsoft.NET.Sdk` `<PackageReference>`, se ele existir. A referência do SDK é fornecida por meio do atributo `Sdk` no elemento `<Project>`.
 - Remova os [globs](https://en.wikipedia.org/wiki/Glob_(programming)) que estão [implícitos no SDK](../tools/csproj.md#default-compilation-includes-in-net-core-projects). Deixar esses globs em seu projeto causará um erro no build, uma vez que os itens de compilação serão duplicados.
 
@@ -87,6 +86,6 @@ Após essas etapas, seu projeto deverá estar totalmente compatível com o forma
 
 Para obter exemplos de antes e depois da migração do formato csproj antigo para o novo, consulte o artigo [Updating Visual Studio 2017 RC – .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) (Atualizando o Visual Studio 2017 RC – melhorias na ferramenta .NET Core) no blog do .NET.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Portar, migrar e atualizar projetos do Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)

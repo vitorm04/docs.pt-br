@@ -1,16 +1,15 @@
 ---
 title: Tipos aninhados – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/10/2017
 helpviewer_keywords:
 - nested types [C#]
 ms.assetid: f2e1b315-e3d1-48ce-977f-7bae0960ba99
-ms.openlocfilehash: de2e369702c48047835bc49b98df8f48fbd13480
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 982eeceb2088dd6e1e57fe796b38e46c0f2d4de8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596529"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705490"
 ---
 # <a name="nested-types-c-programming-guide"></a>Tipos aninhados (Guia de Programação em C#)
 Um tipo definido em uma [classe](../../language-reference/keywords/class.md) ou [struct](../../language-reference/keywords/struct.md) é denominado tipo aninhado. Por exemplo:  
@@ -41,7 +40,7 @@ O exemplo a seguir torna a classe `Nested` pública:
   
  [!code-csharp[csProgGuideObjects#71](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#71)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes e Structs](./index.md)

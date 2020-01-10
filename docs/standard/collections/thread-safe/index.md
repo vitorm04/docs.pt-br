@@ -5,17 +5,15 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c7ffa98aec115db2d8c9a40e977f8cb7d33441a
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 30660c2fb89fd3738abb05122a5daf175677265c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962989"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711240"
 ---
 # <a name="thread-safe-collections"></a>Coleções thread-safe
-O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever um novo código, use as classes de coleção simultâneas sempre que vários threads forem ser gravados simultaneamente nas coleções. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o tempo de execução do .NET Framework 1.1 ou anterior.  
+O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever um novo código, use as classes de coleção simultâneas sempre que vários threads forem ser gravados simultaneamente nas coleções. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o runtime do .NET Framework 1.1 ou anterior.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>Sincronização de thread nas coleções do .NET Framework 1.0 e 2.0  
  As coleções introduzidas no .NET Framework 1.0 são encontradas no namespace <xref:System.Collections?displayProperty=nameWithType>. Essas coleções, que incluem os comumente usados <xref:System.Collections.ArrayList> e <xref:System.Collections.Hashtable>, fornecem algum acesso thread-safe por meio da propriedade `Synchronized`, que retorna um wrapper thread-safe em torno da coleção. O wrapper funciona bloqueando toda a coleção a cada operação de adição ou remoção. Portanto, cada thread que está tentando acessar a coleção deve aguardar por sua vez para receber esse bloqueio. Isso não é escalonável e pode causar degradação significativa no desempenho para coleções grandes. Além disso, o design não é totalmente protegido contra condições de corrida. Para saber mais, confira [Synchronization in Generic Collections](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/) (Sincronização em coleções genéricas).  
@@ -34,7 +32,7 @@ O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?disp
   
  A tabela a seguir lista os tipos de coleção no namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>.  
   
-|Tipo|DESCRIÇÃO|  
+|{1&gt;Tipo&lt;1}|Descrição|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|Fornece funcionalidade de delimitação e bloqueio de qualquer tipo que implemente <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>. Para obter mais informações, veja [Visão geral de BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|Implementação thread-safe de um dicionário de pares chave-valor.|  
@@ -45,15 +43,15 @@ O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?disp
   
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|DESCRIÇÃO|  
+|Cargo|Descrição|  
 |-----------|-----------------|  
 |[Visão geral de BlockingCollection](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Este tópico descreve a funcionalidade fornecida pelo tipo <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
-|[Como: Adicionar e remover itens de um ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descreve como adicionar e remover elementos de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
-|[Como: Adicionar e remover itens individualmente de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Descreve como adicionar e recuperar itens de uma coleta de bloqueio sem usar o enumerador de somente leitura.|  
-|[Como: Adicionar a funcionalidade de delimitação e bloqueio a uma coleção](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Descreve como usar qualquer classe de coleção como o mecanismo de armazenamento subjacente para uma coleção <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
-|[Como: Usar ForEach para remover itens de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Descreve como usar `foreach` (`For Each` no Visual Basic) para remover todos os itens em uma coleção de bloqueios.|  
-|[Como: Usar matrizes de coleções Blocking em um pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Descreve como usar várias coleções de bloqueio ao mesmo tempo para implementar um pipeline.|  
-|[Como: Criar um pool de objetos, usando um ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Mostra como usar um recipiente simultâneo para melhorar o desempenho em cenários nos quais, em vez de criar novos objetos continuamente, você pode reutilizá-los.|  
+|[Como Adicionar e Remover Itens de um ConcurrentDictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Descreve como adicionar e remover elementos de um <xref:System.Collections.Concurrent.ConcurrentDictionary%602>|  
+|[Como Adicionar e Retirar Itens Individualmente de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Descreve como adicionar e recuperar itens de uma coleta de bloqueio sem usar o enumerador de somente leitura.|  
+|[Como Adicionar a Funcionalidade de Delimitação e Bloqueio a uma Coleção](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Descreve como usar qualquer classe de coleção como o mecanismo de armazenamento subjacente para uma coleção <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
+|[Como Usar ForEach para Remover Itens de uma BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Descreve como usar `foreach` (`For Each` no Visual Basic) para remover todos os itens em uma coleção de bloqueios.|  
+|[Como Usar Matrizes de Coleções Blocking em um Pipeline](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Descreve como usar várias coleções de bloqueio ao mesmo tempo para implementar um pipeline.|  
+|[Como Criar um Pool de Objetos Usando um ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Mostra como usar um recipiente simultâneo para melhorar o desempenho em cenários nos quais, em vez de criar novos objetos continuamente, você pode reutilizá-los.|  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

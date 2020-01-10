@@ -1,15 +1,13 @@
 ---
 title: Interoperabilidade Nativa – .NET
 description: Saiba como fazer interface com componentes nativos no .NET.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 3ca213bc7228d2e4337607df2d47b334c5bea14f
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 330466d74cc268214f74c4f575e6a2961f678972
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70106811"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706329"
 ---
 # <a name="native-interoperability"></a>Interoperabilidade nativa
 
@@ -26,7 +24,7 @@ A lista acima não abrange todas as possíveis situações e cenários em que o 
 > [!NOTE]
 > A maioria dos exemplos nesta seção será apresentada para todas as três plataformas com suporte para .NET Core (Windows, Linux e macOS). No entanto, para alguns exemplos ilustrativos e curtos, é exibida apenas uma amostra que usa nomes de arquivo e extensões do Windows (ou seja, "dll" para bibliotecas). Isso não significa que tais recursos não estão disponíveis em Linux ou macOS; foi feito simplesmente para maior conveniência.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Invocação de plataforma (P/Invoke)](pinvoke.md)
 - [Marshaling de tipo](type-marshaling.md)

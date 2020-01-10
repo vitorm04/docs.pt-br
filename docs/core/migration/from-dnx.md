@@ -2,20 +2,19 @@
 title: Migrando do DNX para a CLI do .NET Core
 description: Migre para mudar do uso de ferramentas de DNX para ferramentas da CLI do .NET Core.
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 0f00ee6c05a47d976028c3cd4eade2b2b399260b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160830"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715524"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrando do DNX para a CLI do .NET Core (project.json)
 
-## <a name="overview"></a>Visão geral
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}
 A versão RC1 do .NET Core e ASP.NET Core 1.0 introduziu ferramentas DNX. A versão RC2 do .NET Core e ASP.NET Core 1.0 mudou do DNX para a CLI do .NET Core.
 
-Como um ligeiro lembrete, vamos recapitular o que foi o DNX. O DNX era um tempo de execução e um conjunto de ferramentas usado para criar aplicativos do .NET Core e, mais especificamente, do ASP.NET Core 1.0. Ele era composto por 3 partes principais:
+Como um ligeiro lembrete, vamos recapitular o que foi o DNX. O DNX era um runtime e um conjunto de ferramentas usado para criar aplicativos do .NET Core e, mais especificamente, do ASP.NET Core 1.0. Ele era composto por 3 partes principais:
 
 1. DNVM – um script de instalação para obter o DNX
 2. DNX (Dotnet Execution Runtime) – o tempo de execução que executa o código
@@ -38,9 +37,9 @@ As ferramentas da CLI são empacotadas de duas maneiras principais:
 1. Instaladores nativos para uma determinada plataforma
 2. Instalam o script em outras situações (como servidores CI)
 
-Devido a isso, os recursos de instalação do DNVM não são necessários. Mas e quanto aos recursos de seleção de tempo de execução?
+Devido a isso, os recursos de instalação do DNVM não são necessários. Mas e quanto aos recursos de seleção de runtime?
 
-Um tempo de execução é referenciado em seu `project.json` adicionando um pacote de uma determinada versão às suas dependências. Com essa alteração, seu aplicativo poderá usar os novos bits de tempo de execução. Levar esses bits para seu computador é o mesmo que na CLI: você instala o tempo de execução por meio de um dos instaladores nativos com suporte ou por meio do script de instalação.
+Um runtime é referenciado em seu `project.json` adicionando um pacote de uma determinada versão às suas dependências. Com essa alteração, seu aplicativo poderá usar os novos bits de runtime. Levar esses bits para seu computador é o mesmo que na CLI: você instala o runtime por meio de um dos instaladores nativos com suporte ou por meio do script de instalação.
 
 ### <a name="different-commands"></a>Comandos diferentes
 Se você estivesse usando o DNX, teria usado comandos de uma das suas três partes (DNX, DNU ou DNVM). Com a CLI, alguns desses comandos mudaram, outros não estão disponíveis e outros ainda permaneceram os mesmos, mas têm semântica ligeiramente diferente.
@@ -123,7 +122,7 @@ Depois de escolher qual tipo de portabilidade você deseja, será necessário al
 Se você estiver usando outros destinos `dnx` como o `dnx451`, será necessário alterá-los também. `dnx451` deve ser alterado para `net451`.
 Consulte o tópico [.NET Standard](../../standard/net-standard.md) para saber mais.
 
-Seu `project.json` agora está quase pronto. Você precisa examinar a lista de dependências e atualizá-las para suas versões mais recentes, especialmente se estiver usando dependências ASP.NET Core. Se estiver usando pacotes separados para as APIs BCL, poderá usar o pacote de tempo de execução, conforme explicado no documento [tipo de portabilidade do aplicativo](../deploying/index.md).
+Seu `project.json` agora está quase pronto. Você precisa examinar a lista de dependências e atualizá-las para suas versões mais recentes, especialmente se estiver usando dependências ASP.NET Core. Se estiver usando pacotes separados para as APIs BCL, poderá usar o pacote de runtime, conforme explicado no documento [tipo de portabilidade do aplicativo](../deploying/index.md).
 
 Quando estiver pronto, tente fazer a restauração com `dotnet restore` ([veja observação](#dotnet-restore-note)). Dependendo da versão das suas dependências, você poderá encontrar erros se o NuGet não puder resolvê-las para um das estruturas de destino acima. Este é um problema “pontual”, pois à medida que o tempo passa, cada vez mais pacotes incluirão suporte a essas estruturas. Por enquanto, se você enfrentar isso, poderá usar a instrução `imports` dentro do nó `framework` para especificar para o NuGet que ele pode restaurar os pacotes direcionando a estrutura dentro da instrução "imports".
 Os erros de restauração obtidos nesse caso devem fornecer informações suficientes para indicar quais estruturas você precisa importar. Se você ficar um pouco confuso ou não tiver experiência nisso, especificar `dnxcore50` e `portable-net45+win8` na instrução `imports` geralmente é suficiente. O snippet JSON a seguir mostra como isso se parece:

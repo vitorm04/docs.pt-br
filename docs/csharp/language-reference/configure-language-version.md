@@ -2,16 +2,16 @@
 title: Controle de versão da linguagem C# – Guia de C#
 description: Saiba mais como a versão da linguagem C# é determinada com base em seu projeto e os diferentes valores para os quais você pode ajustá-la manualmente.
 ms.date: 07/10/2019
-ms.openlocfilehash: aa4f16d91b38fec7f5d4cd0b2632e62552b64eb7
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 90624816a68de694cacd0017c6d3162f6a89431c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71698802"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713869"
 ---
 # <a name="c-language-versioning"></a>Controle de versão da linguagem C#
 
-O compilador do C# mais recente determina uma versão da linguagem padrão com base nas estruturas de destino do projeto. Isso ocorre porque a linguagem C# pode ter recursos que dependem de tipos ou de componentes de tempo de execução que não estão disponíveis em todas as implementações do .NET. Com isso, independentemente do destino no qual seu projeto é criado, você obtém a versão da linguagem mais compatível por padrão.
+O compilador do C# mais recente determina uma versão da linguagem padrão com base nas estruturas de destino do projeto. Isso ocorre porque a linguagem C# pode ter recursos que dependem de tipos ou de componentes de runtime que não estão disponíveis em todas as implementações do .NET. Com isso, independentemente do destino no qual seu projeto é criado, você obtém a versão da linguagem mais compatível por padrão.
 
 As regras deste artigo se aplicam ao compilador fornecido com o Visual Studio 2019 ou o SDK do .NET Core 3.0. Os compiladores do C# que fazem parte da instalação do Visual Studio 2017 ou de versões anteriores do SDK do .NET Core são direcionados ao C# 7.0 por padrão. 
 
@@ -19,9 +19,9 @@ As regras deste artigo se aplicam ao compilador fornecido com o Visual Studio 20
 
 O compilador determina um padrão com base nestas regras:
 
-|Estrutura de destino|version|Padrão da versão da linguagem C#|
+|Estrutura de destino|versão|Padrão da versão da linguagem C#|
 |----------------|-------|---------------------------|
-|.NET Core|Win|C# 8.0|
+|.NET Core|3.x|C# 8.0|
 |.NET Core|2.x|C# 7.3|
 |.NET Standard|2.1|C# 8.0|
 |.NET Standard|2.0|C# 7.3|
@@ -38,7 +38,7 @@ Se precisar especificar sua versão do C# explicitamente, poderá fazer isso de 
 
 - Edite manualmente o [arquivo de projeto](#edit-the-project-file).
 - Definir a versão da linguagem [para vários projetos em um subdiretório](#configure-multiple-projects).
-- Configurar a opção [`-langversion` do compilador](compiler-options/langversion-compiler-option.md)
+- Configurar a opção [`-langversion` do compilador](compiler-options/langversion-compiler-option.md).
 
 ### <a name="edit-the-project-file"></a>Editar o arquivo de projeto
 
@@ -70,10 +70,10 @@ Agora, os builds de todo subdiretório do diretório que contém esse arquivo us
 
 A tabela a seguir mostra todas as versões atuais da linguagem C#. Seu compilador talvez não entenda necessariamente todo valor se for mais antigo. Se instalar o .NET Core 3.0, você terá acesso a tudo que está listado.
 
-|Valor|Significado|
+|Value|Significado|
 |------------|-------------|
 |versão prévia|O compilador aceita todas as sintaxes de linguagem válidas da versão prévia mais recente.|
-|latest|O compilador aceita a sintaxe da versão lançada mais recente do compilador (incluindo a versão secundária).|
+|mais recente|O compilador aceita a sintaxe da versão lançada mais recente do compilador (incluindo a versão secundária).|
 |latestMajor|O compilador aceita a sintaxe da versão principal mais recente lançada do compilador.|
 |8.0|O compilador aceita somente a sintaxe incluída no C# 8.0 ou inferior.|
 |7.3|O compilador aceita somente a sintaxe incluída no C# 7.3 ou inferior.|

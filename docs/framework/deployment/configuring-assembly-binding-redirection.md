@@ -5,22 +5,20 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7e2add2756106234227c7b2dd62ae107adc58854
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: c7b9dcb99e08a1ef2844c5811897aa87ff86f866
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71052176"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716563"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>Configurando o redirecionamento de associações de assemblies
-Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que acompanha a versão do tempo de execução usada para compilar o aplicativo. Você pode usar o atributo **appliesTo** no elemento [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework. Esse atributo opcional usa um número de versão do .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework.  
+Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que acompanha a versão do runtime usada para compilar o aplicativo. Você pode usar o atributo **appliesTo** no elemento [\<assemblyBinding>](../configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) em um arquivo de configuração de aplicativo para redirecionar referências de associação de assembly para uma versão específica de assemblies do .NET Framework. Esse atributo opcional usa um número de versão do .NET Framework para indicar a qual versão ele se aplica. Se nenhum atributo **appliesTo** for especificado, o elemento **\<assemblyBinding>** se aplica a todas as versões do .NET Framework.  
   
  O atributo **appliesTo** foi introduzido no.NET Framework versão 1.1; ele é ignorado pelo .NET Framework versão 1.0. Isso significa que todos os elementos **\<assemblyBinding>** são aplicados ao usar o .NET Framework versão 1.0, mesmo se um atributo **appliesTo** for especificado.  
   
 > [!NOTE]
-> Use o atributo **appliesTo** para limitar o redirecionamento de associação de assembly para uma versão específica do tempo de execução.  
+> Use o atributo **appliesTo** para limitar o redirecionamento de associação de assembly para uma versão específica do runtime.  
   
  Por exemplo, para redirecionar a associação de assembly para um assembly do .NET Framework versão 1.0, inclua código XML a seguir no seu arquivo de configuração de aplicativo.  
   
@@ -53,10 +51,10 @@ Por padrão, os aplicativos usam o conjunto de assemblies do .NET Framework que 
 ```  
   
 ## <a name="debugging-configuration-file-errors"></a>Depurando erros de arquivos de configuração  
- O tempo de execução analisa os arquivos de configuração uma vez quando um domínio do aplicativo é criado e carrega o código para ele. O Common Language Runtime trata os erros em um arquivo de configuração ignorando a entrada. O tempo de execução ignorará todo o arquivo de configuração se ele contiver XML mal formado. Para XML inválido, apenas as seções inválidas serão ignoradas.  
+ O runtime analisa os arquivos de configuração uma vez quando um domínio do aplicativo é criado e carrega o código para ele. O Common Language Runtime trata os erros em um arquivo de configuração ignorando a entrada. O runtime ignorará todo o arquivo de configuração se ele contiver XML mal formado. Para XML inválido, apenas as seções inválidas serão ignoradas.  
   
  É possível identificar se um arquivo de configuração está sendo usado determinando se os redirecionamentos de associação de assembly estão ocorrendo. Use o [Visualizador de Log de Associação de Assembly (Fuslogvw.exe)](../tools/fuslogvw-exe-assembly-binding-log-viewer.md) para ver quais assemblies são carregados. Para ver todas as associações de assembly, você deve definir uma entrada para **ForceLog** no registro.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Como: Habilitar e desabilitar o redirecionamento automático de associações](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Como habilitar e desabilitar o redirecionamento automático de associações](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

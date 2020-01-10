@@ -6,14 +6,12 @@ helpviewer_keywords:
 - installing .NET Framework
 - installation [.NET Framework]
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e2b030508897f13cce1fc6439809b98bbae17813
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 6261a883e7b99b7fd38da2a17ab4820c81552506
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975665"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716424"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Reduzindo reinicializações do sistema durante instalações do .NET Framework 4.5
 O instalador do .NET Framework 4.5 usa o [Gerenciador de Reinicialização](/windows/win32/rstmgr/about-restart-manager) para impedir que o sistema seja reiniciado sempre que possível durante a instalação. Se o programa de instalação do aplicativo instala o .NET Framework, ele pode interagir com o Gerenciador de Reinicialização para aproveitar esse recurso. Para obter mais informações, consulte [Como acompanhar o progresso do instalador do .NET Framework 4.5](how-to-get-progress-from-the-dotnet-installer.md).  
@@ -33,7 +31,7 @@ O instalador do .NET Framework 4.5 usa o [Gerenciador de Reinicialização](/win
   
  Se você estiver usando um instalador encadeado, mas não quiser fornecer sua própria caixa de mensagem para fechar os aplicativos, você poderá usar as opções `/showrmui` e `/passive` na linha de comando quando encadear o processo de instalação do .NET Framework. Quando você usa essas opções juntas, o instalador mostra a caixa de mensagem para fechar os aplicativos se eles puderem ser fechados para evitar uma reinicialização do sistema. Essa caixa de mensagem se comporta no modo passivo da mesma forma que na interface do usuário completa. Consulte [Guia de implantação para desenvolvedores](deployment-guide-for-developers.md) para obter o conjunto completo de opções de linha de comando para o .NET Framework redistribuível.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Implantação](index.md)
 - [Guia de implantação para desenvolvedores](deployment-guide-for-developers.md)

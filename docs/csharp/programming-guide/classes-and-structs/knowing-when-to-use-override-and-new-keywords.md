@@ -1,22 +1,21 @@
 ---
 title: Quando usar as palavras-chave override e new – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: 00751cd8eac7979fe94d890ddeb7d13edb233f9e
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 0a209b9522202649765654013fdc3a468913c6b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69596479"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714787"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Quando usar as palavras-chave override e new (Guia de Programação em C#)
 
-No C#, um método em uma classe derivada pode ter o mesmo nome que um método na classe base. É possível especificar a maneira como os métodos interagem usando as palavras-chave [new](../../language-reference/keywords/new-modifier.md) e [override](../../language-reference/keywords/override.md). O modificador `override` *estende* o método `virtual` da classe base e o modificador`new` *oculta* um método de classe base acessível. A diferença é ilustrada nos exemplos deste tópico.  
+No C#, um método em uma classe derivada pode ter o mesmo nome que um método na classe base. É possível especificar a maneira como os métodos interagem usando as palavras-chave [new](../../language-reference/keywords/new-modifier.md) e [override](../../language-reference/keywords/override.md). O modificador `override`*estende* o método `virtual` da classe base e o modificador`new`*oculta* um método de classe base acessível. A diferença é ilustrada nos exemplos deste tópico.  
   
  Em um aplicativo de console, declare as duas classes a seguir, `BaseClass` e `DerivedClass`. `DerivedClass` herda de `BaseClass`.  
   
@@ -79,7 +78,7 @@ public void Method2()
 }  
 ```  
   
- Como `BaseClass` agora tem um método `Method2`, uma segunda instrução de chamada pode ser adicionada para variáveis de `BaseClass` `bc` e `bcdc`, conforme mostrado no código a seguir.  
+ Como `BaseClass` agora tem um método `Method2`, uma segunda instrução de chamada pode ser adicionada para variáveis de `BaseClass``bc` e `bcdc`, conforme mostrado no código a seguir.  
   
 ```csharp  
 bc.Method1();  
@@ -543,7 +542,7 @@ namespace OverrideAndNew2
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes e Structs](./index.md)

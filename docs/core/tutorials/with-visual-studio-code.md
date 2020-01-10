@@ -3,19 +3,18 @@ title: Introdução ao C# e ao Visual Studio Code
 description: Saiba como criar e depurar seu primeiro aplicativo .NET Core no C# usando o Visual Studio Code.
 author: kendrahavens
 ms.date: 12/05/2018
-ms.custom: seodec18
-ms.openlocfilehash: 4e283f631f463953185a37bf196a1a9b706eee2b
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72002327"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715314"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Introdução ao C# e ao Visual Studio Code
 
 O .NET Core oferece uma plataforma modular e rápida para a criação de aplicativos que são executados no Windows, Linux e macOS. Use o Visual Studio Code com a extensão do C# para obter uma excelente experiência de edição com suporte completo para IntelliSense em C# (conclusão de código inteligente) e depuração.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 1. Instalar o [Visual Studio Code](https://code.visualstudio.com/).
 2. Instalar o [SDK do .NET Core](https://dotnet.microsoft.com/download).
@@ -28,8 +27,8 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 1. Abra um projeto:
 
     - Abra o Visual Studio Core.
-    - Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Abrir Pasta**; ou.
-    - Selecione **Arquivo** > **Abrir Pasta** no menu principal para abrir a pasta em que você deseja armazenar seu projeto C# e clique em **Selecionar Pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
+    - Clique no ícone do Explorer no menu à esquerda e, em seguida, clique em **Abrir Pasta**.
+    - Selecione **Arquivo** > **Abrir Pasta** no menu principal para abrir a pasta na qual deseja colocar o projeto C# e clique em **Selecionar Pasta**. Para nosso exemplo, estamos criando uma pasta para nosso projeto chamado *HelloWorld*.
 
       ![Pasta aberta do Visual Studio Code](media/with-visual-studio-code/vs-code-open-folder.png)
 
@@ -41,7 +40,7 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
       ![O novo comando dotnet](media/with-visual-studio-code/dotnet-new-command.png)
 
-3. Resolva as dependências de build:
+3. Resolva os ativos do build:
 
     - Para o **.NET Core 1.x**, digite `dotnet restore`. Executar `dotnet restore` fornece acesso a pacotes .NET Core que são necessários para compilar seu projeto.
 
@@ -57,17 +56,17 @@ Vamos começar com um simples programa "Olá, Mundo" no .NET Core:
 
 Você também pode assistir a um tutorial breve em vídeo para obter ajuda na instalação em [Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core), [macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS) ou [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu).
 
-## <a name="debug"></a>Depurar
+## <a name="debug"></a>Depuração
 
 1. Abra *Program.cs* clicando nele. Na primeira vez que um arquivo do C# é aberto no Visual Studio Code, o [OmniSharp](https://www.omnisharp.net/) é carregado no editor.
 
     ![Abra o arquivo Program.cs](media/with-visual-studio-code/open-program-cs.png)
 
-2. O Visual Studio Code solicitará que você adicione os ativos ausentes para compilar e depurar seu projeto. Selecione **Sim** na barra superior.
+2. O Visual Studio Code deverá solicitar que você adicione os ativos ausentes para compilar e depurar o aplicativo. Selecione **Sim**.
 
     ![Prompt para ativos ausentes](media/with-visual-studio-code/missing-assets.png)
 
-3. Para exibir as ferramentas de Depuração, clique no ícone de depuração no menu do lado esquerdo.
+3. Para abrir e exibição Depuração, clique no ícone Depuração no menu do lado esquerdo.
 
     ![Abrir a guia Depurar no Visual Studio Code](media/with-visual-studio-code/open-debug-tab.png)
 
@@ -135,13 +134,13 @@ Você também pode assistir a um tutorial breve em vídeo para obter ajuda na in
     Hello World! Happy coding!
     ```
 
-## <a name="faq"></a>Perguntas Frequentes
+## <a name="faq"></a>Perguntas frequentes
 
 ### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Faltam os ativos necessários para compilar e depurar C# no Visual Studio Code. Meu depurador diz: "Nenhuma configuração".
 
-A extensão C# do Visual Studio Code pode gerar ativos para compilar e depurar para você. O Visual Studio Code solicita que você gere esses ativos ao abrir um projeto C# pela primeira vez. Se você não tiver gerado os ativos, ainda poderá executar esse comando abrindo a paleta de comandos (**Exibir > Paleta de Comandos**) e digitando ">.NET: Gerar ativos para build e depuração". Selecionar isso gera os arquivos de configuração *. vscode*, *Launch. JSON*e *Tasks. JSON* necessários.
+A extensão C# do Visual Studio Code pode gerar ativos para compilar e depurar para você. O Visual Studio Code solicita que você gere esses ativos ao abrir um projeto C# pela primeira vez. Se você não gerar os ativos em seguida, você ainda poderá executar esse comando abrindo a paleta de comandos (**Exibição > Paleta de comandos**) e digitando">.NET: Generate Assets for Build and Debug". Selecionar isso gera os arquivos de configuração *. vscode*, *Launch. JSON*e *Tasks. JSON* necessários.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Configurando o Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
 - [Depurando no Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging)

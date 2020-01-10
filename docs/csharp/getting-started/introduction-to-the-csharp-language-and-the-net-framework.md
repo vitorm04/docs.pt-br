@@ -6,14 +6,14 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: a9dddb4a3e7af2ca76bb5d3f953cc36c6142623a
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: d2fd879203932ea3f2211e38a2efdd626928962b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635997"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713907"
 ---
-# <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução à linguagem C# e ao .NET Framework
+# <a name="introduction-to-the-c-language-and-the-net-framework"></a>Introdução ao C# idioma e ao .NET Framework
 
 C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permite que os desenvolvedores criem uma variedade de aplicativos robustos e seguros executados no .NET Framework. Você pode usar C# para criar aplicativos de cliente do Windows, serviços Web XML, componentes distribuídos, aplicativos cliente-servidor, aplicativos de banco de dados e muito, muito mais. O Visual C# fornece um editor de código avançado, designers de interface do usuário convenientes, depurador integrado e muitas outras ferramentas para facilitar o desenvolvimento de aplicativos com base na linguagem C# e no .NET Framework.  
   
@@ -22,7 +22,7 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
 ## <a name="c-language"></a>Linguagem C#
 
- A sintaxe de C# é altamente expressiva, mas também é simples e fácil de aprender. A sintaxe de chaves de C# será instantaneamente reconhecível para qualquer pessoa familiarizada com C, C++ ou Java. Normalmente, os desenvolvedores que conhecem qualquer uma dessas linguagens são capazes de começar a trabalhar de forma produtiva em C# dentro de um período muito curto. A sintaxe de C# simplifica muitas complexidades de C++ e fornece recursos poderosos como tipos de valor anulável, enumerações, delegados, expressões lambda e acesso direto à memória, que não existem em Java. C# oferece suporte a tipos e métodos genéricos, o que proporciona mais segurança e desempenho para os tipos, e iteradores, que permitem aos implementadores das classes de coleção definir os comportamentos personalizados da iteração simples de usar pelo código do cliente. As expressões de consulta integrada à linguagem (LINQ) fazem com que a consulta fortemente tipada seja uma construção de linguagem de primeira classe.  
+A sintaxe de C# é altamente expressiva, mas também é simples e fácil de aprender. A sintaxe de chave do C# será reconhecível instantaneamente para qualquer pessoa que esteja familiarizada com C++C, ou Java. Normalmente, os desenvolvedores que conhecem qualquer uma dessas linguagens são capazes de começar a trabalhar de forma produtiva em C# dentro de um período muito curto. C#a sintaxe simplifica muitas das complexidades do C++ e fornece recursos avançados, como tipos de valor anulável, enumerações, delegados, expressões lambda e acesso direto à memória. C# oferece suporte a tipos e métodos genéricos, o que proporciona mais segurança e desempenho para os tipos, e iteradores, que permitem aos implementadores das classes de coleção definir os comportamentos personalizados da iteração simples de usar pelo código do cliente. As expressões de consulta integrada à linguagem (LINQ) fazem com que a consulta fortemente tipada seja uma construção de linguagem de primeira classe.  
   
  Por ser uma linguagem orientada a objeto, o C# oferece suporte aos conceitos de encapsulamento, herança e polimorfismo. Todas as variáveis e métodos, incluindo o método `Main`, o ponto de entrada do aplicativo, são encapsulados em definições de classe. Uma classe pode herdar diretamente de uma classe pai, mas pode implementar qualquer quantidade de interfaces. Métodos que substituem métodos virtuais em uma classe pai exigem a palavra-chave `override` como uma forma de evitar uma redefinição acidental. Em C#, um struct é como uma classe simplificada; é um tipo alocado na pilha que pode implementar interfaces, mas não oferece suporte a herança.  
   
@@ -38,7 +38,7 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
 - LINQ (consulta integrada à linguagem), que fornece recursos de consulta internos em uma variedade de fontes de dados.  
   
- Se você precisar interagir com outros softwares do Windows, como objetos COM ou DLLs Win32 nativas, faça isso em C# através de um processo denominado "Interoperabilidade". A interoperabilidade permite que programas em C# façam quase tudo que um aplicativo C++ nativo pode fazer. C# oferece suporte até mesmo para ponteiros, e o conceito de código "não seguro" para os casos nos quais o acesso direto à memória é absolutamente essencial.  
+ Se você precisar interagir com outros softwares do Windows, como objetos COM ou DLLs Win32 nativas, faça isso em C# através de um processo denominado "Interoperabilidade". A interoperabilidade permite que programas em C# façam quase tudo que um aplicativo C++ nativo pode fazer. C#suporta até mesmo ponteiros e o conceito de código "não seguro" para os casos em que o acesso direto à memória é crítico.  
   
  O processo de compilação de C# é simples comparado ao C e C++, e mais flexível do que em Java. Não há arquivos de cabeçalho separado, e nenhum requisito de que os métodos e os tipos sejam declarados em uma ordem específica. Um arquivo de código-fonte de C# pode definir qualquer quantidade de classes, estruturas, interfaces e eventos.  
   
@@ -56,9 +56,9 @@ C# é uma linguagem elegante, orientada a objeto e fortemente tipada, que permit
   
  O código-fonte escrito em C# é compilado em uma [IL (linguagem intermediária)](../../standard/managed-code.md) que está em conformidade com a especificação da CLI. O código e os recursos de IL, como bitmaps e cadeias de caracteres, são armazenados em disco em um arquivo executável chamado de assembly, normalmente com uma extensão .exe ou .dll. Um assembly contém um manifesto que fornece informações sobre os tipos, a versão, a cultura e os requisitos de segurança do assembly.  
   
- Quando o programa em C# é executado, o assembly é carregado no CLR, que pode executar várias ações de acordo com as informações no manifesto. Em seguida, se os requisitos de segurança forem atendidos, o CLR executará a compilação JIT (just in time) para converter o código de IL em instruções nativas da máquina. O CLR também oferece outros serviços relacionados à coleta automática de lixo, tratamento de exceções e gerenciamento de recursos. O código que é executado pelo CLR é, às vezes, chamado de "código gerenciado", ao contrário de "código não gerenciado", que é compilado em linguagem de máquina nativa e visa um sistema específico. O diagrama a seguir ilustra as relações em tempo de compilação e em tempo de execução dos arquivos de código-fonte em C#, as bibliotecas de classe do .NET Framework, assemblies e o CLR.  
+ Quando o programa em C# é executado, o assembly é carregado no CLR, que pode executar várias ações de acordo com as informações no manifesto. Em seguida, se os requisitos de segurança forem atendidos, o CLR executará a compilação JIT (just-in-time) para converter o código IL em instruções de máquina nativa. O CLR também oferece outros serviços relacionados à coleta automática de lixo, tratamento de exceções e gerenciamento de recursos. O código executado pelo CLR, às vezes, é chamado de "código gerenciado", em oposição ao "código não gerenciado", que é compilado em linguagem de máquina nativa direcionada a um sistema específico. O diagrama a seguir ilustra as relações em tempo de compilação e em tempo de execução dos arquivos de código-fonte em C#, as bibliotecas de classe do .NET Framework, assemblies e o CLR.  
   
- ![Do código-fonte de C&#35; até a execução no computador](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
+ ![Do C# código-fonte para execução do computador](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
  Interoperabilidade de linguagem é um recurso importante do .NET Framework. Como o código de IL produzido pelo compilador de C# está em conformidade com a CTS (Especificação de tipo comum), o código de IL gerado a partir de C# pode interagir com código gerado a partir das versões .NET do Visual Basic, Visual C++ ou qualquer uma das mais de 20 linguagens compatíveis com CTS. Um único assembly pode conter vários módulos escritos em linguagens .NET diferentes, e os tipos podem fazer referencia entre si, como se tivessem sido escritos na mesma linguagem.  
   

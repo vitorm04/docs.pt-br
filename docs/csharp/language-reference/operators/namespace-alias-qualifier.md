@@ -1,6 +1,5 @@
 ---
 title: 'Operador :: – referência do C#'
-ms.custom: seodec18
 ms.date: 08/09/2019
 f1_keywords:
 - ::_CSharpKeyword
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - namespace [C#]
 - global keyword [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 97ed24b050f79cf44ffd1c03c213ffcf91758260
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a18e52ea05d49bf2b3a468923f1433f09fff9a8b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038988"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712670"
 ---
 # <a name="-operator-c-reference"></a>Operador :: (referência do C#)
 
@@ -63,7 +62,7 @@ Você também pode usar o [operador de `.` de acesso de membro](member-access-op
 
 Saiba mais na seção [Qualificadores de alias de namespace](~/_csharplang/spec/namespaces.md#namespace-alias-qualifiers) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)

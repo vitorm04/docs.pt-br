@@ -1,6 +1,5 @@
 ---
 title: Tipos de referência – Referência em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.referencetypes
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - C# language, reference types
 - types [C#], reference types
 ms.assetid: 801cf030-6e2d-4a0d-9daf-1431b0c31f47
-ms.openlocfilehash: ed1604bb8374f6f182b4408ed00ecfb23b172005
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 16e7cdc624979f9a35e287ea5274bd9398c83132
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345402"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715172"
 ---
 # <a name="reference-types-c-reference"></a>Tipos de referência (Referência em C#)
 

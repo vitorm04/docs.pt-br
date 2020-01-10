@@ -1,55 +1,75 @@
 ---
-title: Publicar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
+title: Publicar seu aplicativo .NET Core Olá, Mundo com o Visual Studio
 description: A publicação cria o conjunto de arquivos necessários para executar seu aplicativo .NET Core.
 author: BillWagner
 ms.author: wiwagn
-ms.date: 10/05/2017
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f8c37f47cc8dfb999f2371773a50c2dd91e074a5
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.date: 12/10/2019
+ms.custom: vs-dotnet
+ms.openlocfilehash: 485d62ce67f284fe1bbe931dcaa00671be154f35
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69660483"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715364"
 ---
-# <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>Publicar seu aplicativo Olá, Mundo do .NET Core com o Visual Studio 2017
+# <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Publicar seu aplicativo .NET Core Olá, Mundo com o Visual Studio
 
-Em [Build a C# Hello World Application with .NET Core in Visual Studio 2017](with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em C# com o .NET Core no Visual Studio 2017) ou [Build a Visual Basic Hello World Application with .NET Core in Visual Studio 2017](vb-with-visual-studio.md) (Compilar um aplicativo Olá, Mundo em Visual Basic com o .NET Core no Visual Studio 2017), você compilou um aplicativo de console Olá, Mundo. Em [Debug your C# Hello World application with Visual Studio 2017](debugging-with-visual-studio.md) (Depurar um aplicativo Olá, Mundo em C# com o Visual Studio 2017), você o testou usando o depurador do Visual Studio. Agora que você tem certeza de que ele funciona conforme o esperado, publique-o para que outros usuários possam executá-lo. A publicação cria o conjunto de arquivos necessários para executar seu aplicativo e você pode implantá-los copiando-os para um computador de destino.
+Em [criar um aplicativo Olá, mundo com o .NET Core no Visual Studio](with-visual-studio.md), você criou um aplicativo de console Olá, mundo. Em [depurar seu aplicativo Olá, mundo com o Visual Studio](debugging-with-visual-studio.md), você o testou usando o depurador do Visual Studio. Agora que você tem certeza de que ele funciona conforme o esperado, publique-o para que outros usuários possam executá-lo. A publicação cria o conjunto de arquivos necessários para executar seu aplicativo. Para implantar os arquivos, copie-os para o computador de destino.
 
-Para publicar e executar seu aplicativo: 
+## <a name="publish-the-app"></a>Publique o aplicativo
 
 1. Certifique-se de que o Visual Studio esteja compilando a versão de lançamento de seu aplicativo. Se necessário, altere a configuração de build na barra de ferramentas de **Depuração** para **Lançamento**.
 
    ![Barra de ferramentas do Visual Studio com build de versão selecionado](media/publishing-with-visual-studio/visual-studio-toolbar-release.png)
 
-1. Clique com o botão direito do mouse no projeto **HelloWorld** (e não na solução HelloWorld) e selecione **Publicar** no menu. Também é possível selecionar **Publicar Hello World** no menu principal **Compilação** do Visual Studio.
+1. Clique com o botão direito do mouse no projeto **HelloWorld** (e não na solução HelloWorld) e selecione **Publicar** no menu. (Você também pode selecionar **publicar HelloWorld** no menu principal do **Build** .)
 
    ![Menu de contexto Publicar do Visual Studio](media/publishing-with-visual-studio/publish-context-menu.png)
+   
+1. Na página **escolha um destino de publicação** , selecione **pasta**e, em seguida, selecione **Criar perfil**.
 
-   ![Janela Publicar do Visual Studio](media/publishing-with-visual-studio/publish-settings-window.png)
+   ![Escolher um destino de publicação no Visual Studio](media/publishing-with-visual-studio/pick-publish-target.png)
+   
+1. Na página **publicar** , selecione **publicar**.
 
-1. Abra uma janela de console. Por exemplo, na caixa de texto **Digite aqui para pesquisar** na barra de tarefas do Windows, insira `Command Prompt` (ou apenas `cmd`) e abra uma janela do console selecionando o aplicativo da área de trabalho **Prompt de Comando** ou pressionando Enter se ele estiver selecionado nos resultados da pesquisa.
+   ![Janela Publicar do Visual Studio](media/publishing-with-visual-studio/publish-page.png)
+   
+## <a name="inspect-the-files"></a>Inspecionar os arquivos
 
-1. Navegue até o aplicativo publicado no subdiretório `bin\release\PublishOutput` do diretório de projeto do aplicativo. Como mostra a figura a seguir, a saída publicada inclui os seguintes quatro arquivos:
+O processo de publicação cria uma implantação dependente de estrutura, que é um tipo de implantação em que o aplicativo publicado é executado em qualquer plataforma com suporte do .NET Core com o .NET Core instalado no sistema. Os usuários podem executar o aplicativo publicado clicando duas vezes no executável ou emitindo o comando `dotnet HelloWorld.dll` em um prompt de comando.
 
-      * *HelloWorld.deps.json*
+Nas etapas a seguir, você examinará os arquivos criados pelo processo de publicação.
 
-         Arquivo de dependências de tempo de execução do aplicativo. Define os componentes e as bibliotecas do .NET Core (incluindo a biblioteca de vínculo dinâmico que contém o aplicativo) necessários para executar o aplicativo. Para obter mais informações, consulte [Arquivos de configuração de tempo de execução](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
- 
-      * *HelloWorld.dll*
+1. Abra um prompt de comando.
 
-         O arquivo que contém o aplicativo. É uma biblioteca de vínculo dinâmico que pode ser executada inserindo o comando `dotnet HelloWorld.dll` na janela do console. 
+   Uma maneira de abrir um prompt de comando é inserir o **prompt de comando** (ou **cmd** por curto) na caixa de pesquisa na barra de tarefas do Windows. Selecione o **prompt de comando** aplicativo da área de trabalho ou pressione **Enter** se ele já estiver selecionado nos resultados da pesquisa.
 
-      * *HelloWorld.pdb* (opcional para implantação)
-
-         Um arquivo que contém os símbolos de depuração. Não é necessário implantar esse arquivo juntamente com seu aplicativo, embora você deva salvá-lo caso precise depurar a versão publicada do seu aplicativo.
-
-      * *HelloWorld.runtimeconfig.json*
-
-         Arquivo de configuração de tempo de execução do aplicativo. Identifica a versão do .NET Core com base na qual o aplicativo foi criado para ser executado. Para obter mais informações, consulte [Arquivos de configuração de tempo de execução](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).  
+1. Navegue até o aplicativo publicado no subdiretório *bin\Release\netcoreapp3.1\publish* do diretório do projeto do aplicativo.
 
    ![Janela de console mostrando arquivos publicados](media/publishing-with-visual-studio/published-files-output.png)
 
-O processo de publicação cria uma implantação dependente da estrutura, que é um tipo de implantação em que o aplicativo publicado será executado em qualquer plataforma com suporte pelo .NET Core com o .NET Core instalado no sistema. Os usuários podem executar o aplicativo emitindo o comando `dotnet HelloWorld.dll` de uma janela de console.
+   Como mostra a imagem, a saída publicada inclui os seguintes arquivos:
 
-Para saber mais sobre a publicação e implantação de aplicativos .NET Core, consulte [Implantação de aplicativos .NET Core](../deploying/index.md).
+      * *HelloWorld.deps.json*
+
+         Este é o arquivo de dependências de tempo de execução do aplicativo. Ele define os componentes do .NET Core e as bibliotecas (incluindo a biblioteca de vínculo dinâmico que contém seu aplicativo) necessárias para executar o aplicativo. Para obter mais informações, consulte [arquivos de configuração de tempo de execução](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+
+      * *HelloWorld.dll*
+
+         Esta é a versão de [implantação dependente de estrutura](../deploying/deploy-with-cli.md#framework-dependent-deployment) do aplicativo. Para executar essa biblioteca de vínculo dinâmico, insira `dotnet HelloWorld.dll` em um prompt de comando.
+
+      * *HelloWorld. exe*
+      
+         Esta é a versão [executável dependente de estrutura](../deploying/deploy-with-cli.md#framework-dependent-executable) do aplicativo. Para executá-lo, insira `HelloWorld.exe` em um prompt de comando.
+
+      * *HelloWorld.pdb* (opcional para implantação)
+
+         Este é o arquivo de símbolos de depuração. Não é necessário implantar esse arquivo juntamente com seu aplicativo, embora você deva salvá-lo caso precise depurar a versão publicada do seu aplicativo.
+
+      * *HelloWorld.runtimeconfig.json*
+
+         Este é o arquivo de configuração de tempo de execução do aplicativo. Identifica a versão do .NET Core com base na qual o aplicativo foi criado para ser executado. Para obter mais informações, consulte [arquivos de configuração de tempo de execução](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md).
+
+## <a name="additional-resources"></a>Recursos adicionais
+
+- [Implantação de aplicativos do .NET Core](../deploying/index.md)

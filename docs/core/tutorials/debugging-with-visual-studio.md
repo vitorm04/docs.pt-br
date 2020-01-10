@@ -2,13 +2,13 @@
 title: Depurar seu aplicativo Olá, Mundo .NET Core com o Visual Studio
 description: Saiba como depurar um aplicativo Olá, Mundo escrito C# ou Visual Basic com o Visual Studio.
 ms.date: 12/05/2019
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 016b677639543c749a9940856f01b86e9a70859c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.custom: vs-dotnet
+ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340040"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714050"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Depurar seu C# ou Visual Basic aplicativo .net Core Olá, mundo usando o Visual Studio
 

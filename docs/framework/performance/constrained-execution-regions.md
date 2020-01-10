@@ -5,14 +5,12 @@ helpviewer_keywords:
 - constrained execution regions
 - CERs
 ms.assetid: 99354547-39c1-4b0b-8553-938e8f8d1808
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a0561ff5212fd6bc4e9015bea8da1d1082dd027e
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: fde2bab99f156ddffec678022a58e7b14e0af01e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046691"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716165"
 ---
 # <a name="constrained-execution-regions"></a>Regiões de execução restrita
 Uma CER (região de execução restrita) faz parte de um mecanismo para a criação de código gerenciado confiável. A CER define uma área na qual o CLR (Common Language Runtime) é restrito de gerar exceções fora de banda que possam impedir que o código na área seja executado em sua totalidade. Nessa região, o código do usuário é restrito de executar um código que poderá resultar na geração de exceções fora de banda. O método <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> deve preceder imediatamente um bloco `try` e marca os blocos `catch`, `finally` e `fault` como regiões de execução restrita. Depois de marcado como uma região restrita, o código deverá chamar apenas outro código com contratos de confiabilidade forte e o código não deverá alocar nem fazer chamadas virtuais a métodos não preparados ou não confiáveis, a menos que o código esteja preparado para manipular falhas. O CLR atrasa as anulações de thread do código que está sendo executado em uma CER.  
@@ -77,7 +75,7 @@ Uma CER (região de execução restrita) faz parte de um mecanismo para a criaç
 ## <a name="reliability-trycatchfinally"></a>Confiabilidade try/catch/finally  
  A confiabilidade `try/catch/finally` é um mecanismo de tratamento de exceção com o mesmo nível de garantias de previsibilidade da versão não gerenciada. O bloco `catch/finally` é a CER. Os métodos no bloco exigem preparação antecipada e não devem ser interrompíveis.  
   
- No .NET Framework versão 2.0, o código informa o tempo de execução de que um try é confiável chamando <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> imediatamente antes de um bloco try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> é membro do <xref:System.Runtime.CompilerServices.RuntimeHelpers>, uma classe de suporte do compilador. Chame <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> diretamente, pendente sua disponibilidade por meio dos compiladores.  
+ No .NET Framework versão 2.0, o código informa o runtime de que um try é confiável chamando <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> imediatamente antes de um bloco try. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> é membro do <xref:System.Runtime.CompilerServices.RuntimeHelpers>, uma classe de suporte do compilador. Chame <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> diretamente, pendente sua disponibilidade por meio dos compiladores.  
   
 ## <a name="noninterruptible-regions"></a>Regiões não interrompíveis  
  Uma região não interrompível agrupa um conjunto de instruções em uma CER.  
@@ -110,10 +108,10 @@ Uma CER (região de execução restrita) faz parte de um mecanismo para a criaç
   
 - Obtenção ou configuração de campos em um proxy transparente.  
   
-- Serialização.  
+- {1&gt;Serialização.&lt;1}  
   
 - Ponteiros de função e representantes.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Melhores práticas de confiabilidade](reliability-best-practices.md)

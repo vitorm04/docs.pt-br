@@ -1,6 +1,5 @@
 ---
 title: Palavra-chave public – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - public
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: dfb6e341ea0740225d7600f07af2813d39141b45
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 19906d7fd0f7d41ef9e4cdaf951c77825e0bbead
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422554"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713164"
 ---
 # <a name="public-c-reference"></a>public (Referência de C#)
 
@@ -42,7 +41,7 @@ Se alterar o nível de acesso de `public` para [particular](private.md) ou [prot
 
 Para obter mais informações, veja [Acessibilidade declarada](~/_csharplang/spec/basic-concepts.md#declared-accessibility) na [Especificação da Linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

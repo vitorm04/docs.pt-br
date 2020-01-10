@@ -12,14 +12,12 @@ helpviewer_keywords:
 - LoadWithPartialName method
 - load-from context
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a95679f659f13956fd230f07e9401af9097a043c
-ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
+ms.openlocfilehash: d1b6c2cd9f96a4acf48cbced48a86bc3e3409562
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71182473"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716584"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Práticas recomendadas para carregamento de assemblies
 Este artigo descreve maneiras de evitar problemas de identidade de tipo que podem levar a <xref:System.InvalidCastException>, <xref:System.MissingMethodException> e outros erros. O artigo aborda as seguintes recomendações:  
@@ -40,11 +38,11 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
 ## <a name="understand-the-advantages-and-disadvantages-of-load-contexts"></a>Entenda as vantagens e as desvantagens dos contextos de carregamento  
  Em um domínio do aplicativo, os assemblies podem ser carregados em um dos três contextos ou podem ser carregados sem contexto:  
   
-- O contexto de carregamento padrão contém assemblies localizados investigando o cache de assembly global, o armazenamento do assembly do host se o tempo de execução é hospedado (por exemplo, no SQL Server) e o <xref:System.AppDomainSetup.ApplicationBase%2A> e o <xref:System.AppDomainSetup.PrivateBinPath%2A> do domínio do aplicativo. A maioria das sobrecargas do método <xref:System.Reflection.Assembly.Load%2A> carrega os assemblies nesse contexto.  
+- O contexto de carregamento padrão contém assemblies localizados investigando o cache de assembly global, o armazenamento do assembly do host se o runtime é hospedado (por exemplo, no SQL Server) e o <xref:System.AppDomainSetup.ApplicationBase%2A> e o <xref:System.AppDomainSetup.PrivateBinPath%2A> do domínio do aplicativo. A maioria das sobrecargas do método <xref:System.Reflection.Assembly.Load%2A> carrega os assemblies nesse contexto.  
   
 - O contexto de origem de carregamento contém assemblies carregados a partir de locais que não são pesquisados pelo carregador. Por exemplo, suplementos podem ser instalados em um diretório que não está no caminho do aplicativo. <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> e <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType> são exemplos de métodos que carregam pelo caminho.  
   
-- O contexto somente para reflexão contém assemblies carregados com os métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. O código neste contexto não pode ser executado, portanto, não é discutido aqui. Para obter mais informações, confira [Como: carregar assemblies no contexto somente de reflexão](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+- O contexto somente para reflexão contém assemblies carregados com os métodos <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> e <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. O código neste contexto não pode ser executado, portanto, não é discutido aqui. Para obter mais informações, consulte [Como carregar assemblies no contexto de somente para reflexão](../reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 - Se você gerou um assembly dinâmico transitório usando a emissão de reflexo, o assembly não está em nenhum contexto. Além disso, a maioria dos assemblies carregados usando o método <xref:System.Reflection.Assembly.LoadFile%2A> são carregados sem contexto e os assemblies carregados de matrizes de bytes são carregados sem contexto, a menos que sua identidade (depois que a política é aplicada) estabeleça que estão no cache de assembly global.  
   
@@ -125,7 +123,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
  Agora, considere o que acontece quando o programa é executado. Os assemblies referenciados pelo seu programa são carregados no contexto de carregamento padrão. Se você carregar um assembly de destino por sua identidade, usando o método <xref:System.Reflection.Assembly.Load%2A>, ele estará no contexto de carregamento padrão, assim como suas dependências. O programa e o assembly de destino usarão o mesmo assembly `Utility`.  
   
- No entanto, suponha que você carregue o assembly de destino por seu caminho de arquivo, usando o método <xref:System.Reflection.Assembly.LoadFile%2A>. O assembly é carregado sem qualquer contexto, portanto, suas dependências não são carregadas automaticamente. Você pode ter um manipulador para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para fornecer a dependência e pode carregar o assembly `Utility` sem nenhum contexto usando o método <xref:System.Reflection.Assembly.LoadFile%2A>. Agora quando você cria uma instância de um tipo que está contido no assembly de destino e tente atribuí-la a uma variável do tipo `ICommunicate`, uma <xref:System.InvalidCastException> é gerada porque o tempo de execução considera as interfaces `ICommunicate` em duas cópias do assembly `Utility` para tipos diferentes.  
+ No entanto, suponha que você carregue o assembly de destino por seu caminho de arquivo, usando o método <xref:System.Reflection.Assembly.LoadFile%2A>. O assembly é carregado sem qualquer contexto, portanto, suas dependências não são carregadas automaticamente. Você pode ter um manipulador para o evento <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> para fornecer a dependência e pode carregar o assembly `Utility` sem nenhum contexto usando o método <xref:System.Reflection.Assembly.LoadFile%2A>. Agora quando você cria uma instância de um tipo que está contido no assembly de destino e tente atribuí-la a uma variável do tipo `ICommunicate`, uma <xref:System.InvalidCastException> é gerada porque o runtime considera as interfaces `ICommunicate` em duas cópias do assembly `Utility` para tipos diferentes.  
   
  Há muitos outros cenários em que um assembly pode ser carregado em vários contextos. A melhor abordagem é evitar conflitos realocando o assembly de destino no caminho do aplicativo e usando o método <xref:System.Reflection.Assembly.Load%2A> com o nome de exibição completo. O assembly é então carregado no contexto de carregamento padrão e ambos os assemblies usam o mesmo assembly `Utility`.  
   
@@ -139,7 +137,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
  Por exemplo, seu programa pode carregar uma versão do assembly `Utility` diretamente e posteriormente ele pode carregar outro assembly que carrega uma versão diferente do assembly `Utility`. Ou um erro de código pode fazer com que dois caminhos de código diferentes no aplicativo carreguem versões diferentes de um assembly.  
   
- No contexto de carregamento padrão, esse problema pode ocorrer quando você usa o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e especifica os nomes de exibição completos do assembly que incluem números de versão diferentes. Para assemblies que são carregados sem contexto, o problema pode ser causado pelo uso do método <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> para carregar o mesmo assembly de diferentes caminhos. O tempo de execução considera dois assemblies que são carregados de caminhos diferentes para serem assemblies diferentes, mesmo que suas identidades sejam as mesmas.  
+ No contexto de carregamento padrão, esse problema pode ocorrer quando você usa o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e especifica os nomes de exibição completos do assembly que incluem números de versão diferentes. Para assemblies que são carregados sem contexto, o problema pode ser causado pelo uso do método <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType> para carregar o mesmo assembly de diferentes caminhos. O runtime considera dois assemblies que são carregados de caminhos diferentes para serem assemblies diferentes, mesmo que suas identidades sejam as mesmas.  
   
  Além dos problemas de identidade de tipo, várias versões de um assembly podem causar um <xref:System.MissingMethodException> se um tipo carregado de uma versão do assembly é passado para o código que espera esse tipo de uma versão diferente. Por exemplo, o código pode esperar um método que foi adicionado à versão mais recente.  
   
@@ -164,7 +162,7 @@ Este artigo descreve maneiras de evitar problemas de identidade de tipo que pode
   
  Observe que você pode usar o método <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> para carregar esses assemblies. Como agora eles estão no caminho de investigação, eles serão carregados no contexto de carregamento padrão em vez de no contexto de origem do carregamento. No entanto, recomendamos que você alterne para o método <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> e forneça nomes de exibição completos do assembly para garantir que as versões corretas sejam sempre usadas.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

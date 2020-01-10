@@ -1,14 +1,13 @@
 ---
 title: Guias de instruções do ML.NET
 description: Saiba como realizar tarefas específicas para ajudar na criação de soluções de IA personalizadas e na integração do Machine Learning em seus aplicativos .NET.
-ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: e2b4ff77c7f76282d70c06b5ef534306fe4e93a6
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977103"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715662"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>Guias de instruções de aprendizado de máquina do .NET
 
@@ -38,7 +37,7 @@ Na seção de Instruções do Guia do ML.NET, é possível encontrar respostas r
 
 * [Usar modelos aditivos generalizados e funções de forma para explicação do modelo.](use-gams-for-model-explainability.md)
 
-## <a name="run"></a>Executar
+## <a name="run"></a>Execute
 
 * [Inspecionar valores de dados intermediários durante o processamento de pipeline do ML.NET.](inspect-intermediate-data-ml-net.md)
 

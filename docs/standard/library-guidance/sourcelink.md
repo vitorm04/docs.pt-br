@@ -1,15 +1,13 @@
 ---
 title: Source Link e bibliotecas .NET
 description: Recomendações de melhores práticas de uso do Source Link para melhorar a depuração de bibliotecas .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 89f9e3b1fd70003c528465f29a143b157468d539
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089293"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706433"
 ---
 # <a name="source-link"></a>Source Link
 

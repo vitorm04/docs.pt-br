@@ -3,14 +3,12 @@ title: Referências a entidades são preservadas
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 000a6cae-5972-40d6-bd6c-a9b7d9649b3c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e512f2077c2e6b9feba5024c4eabc2568357ecab
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 0fd427388a065bd4c689d087c22fd6d69046b8a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965911"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710915"
 ---
 # <a name="entity-references-are-preserved"></a>Referências a entidades são preservadas
 Quando a referência de entidade não é expandida, mas é preservada, o modelo de objeto (DOM) de documento XML cria um nó de **XmlEntityReference** quando encontra uma referência de entidade.  
@@ -34,6 +32,6 @@ Estrutura de árvore para as referências de entidade que são preservadas
   
  Por padrão, entidades gerais como `&abc;` são preservadas, e nós **XmlEntityReference** são sempre criados.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

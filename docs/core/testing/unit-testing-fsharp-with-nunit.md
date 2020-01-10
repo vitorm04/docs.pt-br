@@ -5,13 +5,12 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.custom: seodec18
-ms.openlocfilehash: 1a5320f47b880c2d84132d70e1d0be19d6de486b
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 3347e5b90c31589e9a0f99ac0d9298927a717f56
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71116209"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715439"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Teste de unidade de bibliotecas do F# no .NET Core usando dotnet test e NUnit
 
@@ -19,7 +18,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - [SDK do .NET Core 2.1](https://dotnet.microsoft.com/download) ou versões posteriores.
 - Um editor de texto ou de código de sua escolha.
@@ -44,7 +43,7 @@ Em seguida, crie um diretório *MathService*. A seguinte estrutura de tópicos m
 Torne *MathService* o diretório atual e execute o seguinte comando para criar o projeto de origem:
 
 ```dotnetcli
-dotnet new classlib -lang F#
+dotnet new classlib -lang "F#"
 ```
 
 Crie uma implementação com falha do serviço de matemática:
@@ -76,7 +75,7 @@ Em seguida, crie o diretório *MathService.Tests*. O seguinte esquema mostra a e
 Torne o diretório *MathService.Tests* o diretório atual e crie um novo projeto usando o seguinte comando:
 
 ```dotnetcli
-dotnet new nunit -lang F#
+dotnet new nunit -lang "F#"
 ```
 
 Isso cria um projeto de teste que usa o NUnit como a estrutura de teste. O modelo gerado configura o executor de teste no *MathServiceTests.fsproj*:
@@ -89,7 +88,7 @@ Isso cria um projeto de teste que usa o NUnit como a estrutura de teste. O model
 </ItemGroup>
 ```
 
-O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use o comando [`dotnet add reference`](../tools/dotnet-add-reference.md):
+O projeto de teste requer outros pacotes para criar e executar testes de unidade. O `dotnet new` na etapa anterior adicionou o NUnit e o adaptador de teste do NUnit. Agora, adicione a biblioteca de classes `MathService` como outra dependência ao projeto. Use o comando `dotnet add reference`:
 
 ```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
@@ -138,7 +137,7 @@ type TestClass () =
      member this.FailEveryTime() = Assert.True(false)
 ```
 
-O atributo `[<TestFixture>]` indica uma classe que contém testes. O atributo `[<Test>]` indica um método de teste que é executado pelo executor de teste. No diretório *unit-testing-with-fsharp*, execute [`dotnet test`](../tools/dotnet-test.md) para criar os testes e a biblioteca de classes e execute os testes. O executor de teste do NUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
+O atributo `[<TestFixture>]` indica uma classe que contém testes. O atributo `[<Test>]` indica um método de teste que é executado pelo executor de teste. No diretório de *teste de unidade com o FSharp* , execute `dotnet test` para criar os testes e a biblioteca de classes e, em seguida, execute os testes. O executor de teste do NUnit contém o ponto de entrada do programa para executar os testes. `dotnet test` inicia o executor de teste usando o projeto de teste de unidade que você criou.
 
 Esses dois testes mostram testes com aprovação e falha mais básicos. `My test` é aprovado e `Fail every time` falha. Agora, crie um teste para o método `squaresOfOdds`. O método `squaresOfOdds` retorna uma sequência dos quadrados de todos os valores inteiros ímpares que fazem parte da sequência de entrada. Em vez de tentar gravar todas as funções de uma vez, você pode criar testes iterativamente que validam a funcionalidade. Fazer com que cada teste passe significa criar a funcionalidade necessária para o método.
 
@@ -210,3 +209,8 @@ let squaresOfOdds xs =
 ```
 
 Você criou uma pequena biblioteca e um conjunto de testes de unidade para essa biblioteca. Você estruturou a solução para que a adição de novos pacotes e testes fizesse parte do fluxo de trabalho normal. Você concentrou grande parte do seu tempo e esforço em resolver as metas do aplicativo.
+
+## <a name="see-also"></a>Veja também
+
+- [dotnet add reference](../tools/dotnet-add-reference.md)
+- [dotnet test](../tools/dotnet-test.md)

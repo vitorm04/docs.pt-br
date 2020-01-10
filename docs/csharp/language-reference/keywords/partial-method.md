@@ -1,18 +1,17 @@
 ---
 title: Método partial – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - partialmethod_CSharpKeyword
 helpviewer_keywords:
 - partial methods [C#]
 ms.assetid: 43f40242-17e0-4452-8573-090503ad3137
-ms.openlocfilehash: 14bcd3329b6ca8e46f6c180c97174a561108d143
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: 62efd8b47fb565316b417a65e1b0fe37e40786c8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633351"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713216"
 ---
 # <a name="partial-method-c-reference"></a>Método parcial (C# Reference)
 
@@ -30,7 +29,7 @@ O exemplo a seguir mostra um método parcial definido em duas partes de uma clas
 
 Para obter mais informações, consulte [Classes e métodos parciais](../../programming-guide/classes-and-structs/partial-classes-and-methods.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Tipo parcial](partial-type.md)

@@ -1,6 +1,5 @@
 ---
 title: palavra-chave de base (Referência de C#)
-ms.custom: seodec18
 description: Saiba mais sobre a palavra-chave base, que é usada para acessar membros da classe base de dentro de uma classe derivada em C#.
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: b882a8d1e5979ac184d184be379dd76f7bf3600f
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: a4686fc5d4245a50de5d77dc0e71c231772f40ef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602263"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713764"
 ---
 # <a name="base-c-reference"></a>base (Referência de C#)
 
@@ -49,7 +48,7 @@ Este exemplo mostra como especificar o construtor da classe base chamado ao cria
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

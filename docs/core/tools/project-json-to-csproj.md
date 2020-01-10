@@ -3,13 +3,12 @@ title: Comparação entre project.json e csproj
 description: Veja um mapeamento entre os elementos project.json e csproj.
 author: natemcmaster
 ms.date: 03/13/2017
-ms.custom: seodec18
-ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
-ms.translationtype: HT
+ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747405"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714129"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Um mapeamento entre as propriedades de project.json e csproj
 
@@ -31,7 +30,7 @@ O novo formato, \*.csproj, é um formato baseado em XML. O exemplo a seguir most
 
 ## <a name="common-top-level-properties"></a>Propriedades comuns de nível superior
 
-### <a name="name"></a>name
+### <a name="name"></a>{1&gt;name&lt;1}
 
 ```json
 {
@@ -53,7 +52,7 @@ Por padrão, o nome de arquivo do projeto também especifica o valor das proprie
 O `<AssemblyName>` terá um valor diferente de `<PackageId>` se a propriedade `buildOptions\outputName` tiver sido definida em project.json.
 Para obter mais informações, consulte [Outras opções comuns de build](#other-common-build-options).
 
-### <a name="version"></a>version
+### <a name="version"></a>versão
 
 ```json
 {
@@ -562,7 +561,7 @@ No entanto, é possível definir todos esses valores em csproj, bem como proprie
 </PropertyGroup>
 ```
 
-## <a name="shared"></a>shared
+## <a name="shared"></a>{1&gt;shared&lt;1}
 
 ```json
 {
@@ -674,6 +673,6 @@ Para obter mais informações, consulte [Incluindo conteúdo em um pacote](/nuge
 </ItemGroup>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de alto nível das alterações na CLI](../tools/cli-msbuild-architecture.md)

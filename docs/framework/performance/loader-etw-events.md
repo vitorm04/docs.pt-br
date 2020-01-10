@@ -5,14 +5,12 @@ helpviewer_keywords:
 - loader events [.NET Framework]
 - ETW, loader events (CLR)
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a6928b5ac41a6af36dc7d5e7f5bb02074ba742e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 73665915a70225c2b1da47c7b60347b089564884
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974597"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716026"
 ---
 # <a name="loader-etw-events"></a>Eventos ETW de carregador
 Esses eventos coletam informações relacionadas ao carregamento e ao descarregamento de domínios, assemblies e módulos de aplicativos.  
@@ -22,7 +20,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
 ## <a name="application-domain-events"></a>Eventos de domínio do aplicativo
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|evento|Nível|  
+|Palavra-chave para acionar o evento|Event|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AppDomainLoad_V1` e `AppDomainUnLoad_V1`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|Informativo (4)|  
@@ -30,7 +28,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Descrição|  
+|Event|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`AppDomainLoad_V1` (registrado para todos os domínios do aplicativo)|156|Gerado sempre que um domínio do aplicativo é criado durante o tempo de vida de um processo.|  
 |`AppDomainUnLoad_V1`|157|Gerado sempre que um domínio do aplicativo é destruído durante o tempo de vida de um processo.|  
@@ -50,7 +48,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
 ## <a name="clr-loader-assembly-events"></a>Eventos de assembly do carregador CLR  
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|evento|Nível|  
+|Palavra-chave para acionar o evento|Event|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`AssemblyLoad` e `AssemblyUnload`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|Informativo (4)|  
@@ -58,7 +56,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Descrição|  
+|Event|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|Gerado quando um assembly é carregado.|  
 |`AssemblyUnload_V1`|155|Gerado quando um assembly é descarregado.|  
@@ -79,7 +77,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
 ## <a name="module-events"></a>Eventos de módulo
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|evento|Nível|  
+|Palavra-chave para acionar o evento|Event|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`ModuleLoad_V2` e `ModuleUnload_V2`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|Informativo (4)|  
@@ -88,7 +86,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Descrição|  
+|Event|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|Gerado quando um módulo é carregado durante o tempo de vida de um processo.|  
 |`ModuleUnload_V2`|153|Gerado quando um módulo é descarregado durante o tempo de vida de um processo.|  
@@ -124,7 +122,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
 ## <a name="clr-domain-module-events"></a>Eventos de módulo de domínio CLR
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|evento|Nível|  
+|Palavra-chave para acionar o evento|Event|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`LoaderKeyword` (0x8)|`DomainModuleLoad_V1`|Informativo (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`DomainModuleDCStart_V1`|Informativo (4)|  
@@ -132,7 +130,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Descrição|  
+|Event|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|Gerado quando um módulo é carregado para um domínio do aplicativo.|  
 |`DomainModuleDCStart_V1`|151|Enumera os módulos carregados para um domínio do aplicativo durante um encerramento inicial e é registrado para todos os domínios de aplicativo.|  
@@ -154,7 +152,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
 ## <a name="module-range-events"></a>Eventos de intervalo de módulo
  A tabela a seguir mostra a palavra-chave e o nível.  
   
-|Palavra-chave para acionar o evento|evento|Nível|  
+|Palavra-chave para acionar o evento|Event|Nível|  
 |-----------------------------------|-----------|-----------|  
 |`PerfTrackKeyWord`)|`ModuleRange`|Informativo (4)|  
 |`PerfTrackKeyWord`|`ModuleRangeDCStart`|Informativo (4)|  
@@ -162,7 +160,7 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Descrição|  
+|Event|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|Esse evento está presente se uma imagem carregada do gerador de imagem nativa (NGen) foi otimizada com IBC e contém informações sobre as seções quentes da imagem NGen.|  
 |`ModuleRangeDCStart`|160|Um evento `ModuleRange` disparado no início de um encerramento.|  
@@ -187,6 +185,6 @@ Esses eventos coletam informações relacionadas ao carregamento e ao descarrega
   
  Eventos de intervalo do módulo são acionados em qualquer nível de ETW maior ou igual a 4 e são classificados como eventos informativos.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eventos de CLR ETW](clr-etw-events.md)

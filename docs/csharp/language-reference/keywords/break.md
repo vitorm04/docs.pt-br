@@ -1,6 +1,5 @@
 ---
 title: Instrução break – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - break
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 2628da73364cf94a52e2862d349243c100d4afaf
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: ef276fd9e8da0ea25695c5afdf06a300bbd2a123
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179928"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713760"
 ---
 # <a name="break-c-reference"></a>break (Referência de C#)
 
@@ -54,7 +53,7 @@ Neste exemplo, a instrução `break` é usada apenas para interromper a ramifica
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

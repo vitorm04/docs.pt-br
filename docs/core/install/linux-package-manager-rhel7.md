@@ -4,12 +4,12 @@ description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e temp
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: f17a410ccea1ef4dec32de1d80ef6aac889aa6f3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bcc41bfcd7c6d03038952e3faaf07952c3deb69d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836951"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715530"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>Gerenciador de pacotes RHEL 7-instalar o .NET Core
 
@@ -35,7 +35,6 @@ scl enable rh-dotnet30 bash
 
 Após o registro com o Gerenciador de assinaturas, você estará pronto para instalar e habilitar o tempo de execução de ASP.NET Core. Em seu terminal, execute os comandos a seguir.
 
-<!-- TODO: is this the correct value? Taken from the webpage but it doesn't have aspnet in the name -->
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
 yum install rh-dotnet30-aspnetcore-runtime-3.0 -y
@@ -52,6 +51,6 @@ yum install rh-dotnet30-dotnet-runtime-3.0 -y
 scl enable rh-dotnet30 bash
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Usando o .NET Core 3,0 no Red Hat Enterprise Linux 7](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide/gs_install_dotnet)

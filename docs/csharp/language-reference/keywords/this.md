@@ -1,6 +1,5 @@
 ---
 title: Palavra-chave this – Referência de C#
-ms.custom: seodec18
 description: Palavra-chave this (Referência de C#)
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - this keyword [C#]
 ms.assetid: d4f827fe-4710-410b-89b8-867dad44b8a3
-ms.openlocfilehash: 4a3342e73fef3effd54f72e68283eb6085eef5b5
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 2a2c487ad93e6fc75ecf95c541e859b8b60bb5b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69608439"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715105"
 ---
 # <a name="this-c-reference"></a>this (Referência de C#)
 
@@ -51,7 +50,7 @@ Neste exemplo, `this` é usado para qualificar os membros de classe `Employee`, 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

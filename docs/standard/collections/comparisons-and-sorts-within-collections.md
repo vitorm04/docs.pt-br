@@ -12,19 +12,17 @@ helpviewer_keywords:
 - Equals method
 - collections [.NET Framework], comparisons
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2d9124c90d09e2fa94a0eaa2ff8cd4e4ab15206f
-ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
-ms.translationtype: HT
+ms.openlocfilehash: fc6972061994e17c2176d3ab278b8d2b37c725ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67135666"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711383"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Comparações e classificações dentro de coleções
 As classes <xref:System.Collections> executam comparações em quase todos os processos envolvidos no gerenciamento de coleções, seja procura pelo elemento para remoção ou retorno do valor de um par de chaves e valores.  
   
- As coleções normalmente usam um comparador de igualdade e/ou um comparador de classificação. Dois constructos são usados para comparações.  
+ As coleções normalmente usam um comparador de igualdade e/ou um comparador de ordenação. Dois constructos são usados para comparações.  
   
 <a name="BKMK_Checkingforequality"></a>   
 ## <a name="checking-for-equality"></a>Verificando a igualdade  
@@ -59,7 +57,7 @@ As classes <xref:System.Collections> executam comparações em quase todos os pr
  [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
  [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.IComparer>
 - <xref:System.IEquatable%601>

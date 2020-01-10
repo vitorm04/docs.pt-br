@@ -3,14 +3,12 @@ title: Implementação de comportamentos arbitrários na classe XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
-ms.translationtype: HT
+ms.openlocfilehash: b37cb0f4bf9a85053d70d549ae005c7d50a50bc0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170838"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710798"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>Implementação de comportamentos arbitrários na classe XslTransform
 
@@ -75,11 +73,11 @@ A tabela a seguir mostra o comportamento de classificação implementado para ca
 
 A tabela a seguir mostra os recursos que são opcionais para um processador XSLT implementa e é implementada na classe de <xref:System.Xml.Xsl.XslTransform> .
 
-|Recurso|Local de referência|Observações|
+|Recurso|Local de referência|{1&gt;Observações&lt;1}|
 |-------------|------------------------|-----------|
 |atributo de`disable-output-escaping` em `<xsl:text...>` e em marcas de `<xsl:value-of...>` .|Recomendação W3C XSLT, 1,0<br /><br /> Seção 16,4|O atributo de `disable-output-escaping` é ignorado quando os elementos de `xsl:text` ou de `xsl:value-of` são usados em `xsl:comment`, em `xsl:processing-instruction`, ou no elemento de `xsl:attribute` .<br /><br /> Os fragmentos da árvore de resultado que contêm texto e saída de texto que foram de escape não são suportados.<br /><br /> O atributo de escape é ignorado quando uma transformação a <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter> objetos.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.Xsl.XslTransform>
 - [A classe XslTransform implementa o processador XSLT](xsltransform-class-implements-the-xslt-processor.md)

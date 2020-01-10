@@ -2,16 +2,15 @@
 title: Formato de arquivo do assembly .NET
 description: Saiba mais sobre o formato de arquivo do assembly do .NET, que é usado para descrever e conter aplicativos e bibliotecas do .NET.
 author: richlander
-ms.author: mairaw
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: c9396c45e3c6cdbc9360485f6286a1746bf81fdd
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970160"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711578"
 ---
 # <a name="net-assembly-file-format"></a>Formato de arquivo do assembly .NET
 
@@ -19,20 +18,20 @@ O .NET define um formato de arquivo binário, *assembly*, que é usado para desc
 
 > Cada componente de CLI carrega os metadados para declarações, implementações e referências específicas para esse componente. Portanto, os metadados específicos do componente são conhecidos como metadados de componente e o componente resultante deve ser autodescritivo – do ECMA 335 I.9.1, Componentes e assemblies.
 
-O formato é totalmente especificado e padronizado como [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Todos os tempos de execução e compiladores .NET usam esse formato. A presença de um formato binário documentado e raramente atualizado foi um grande benefício (sem dúvida, um requisito) da interoperabilidade. O formato foi atualizado de forma substancial pela última vez em 2005 (.NET 2.0) para acomodar os genéricos e a arquitetura do processador.
+O formato é totalmente especificado e padronizado como [ECMA 335](https://www.ecma-international.org/publications/standards/Ecma-335.htm). Todos os runtimes e compiladores .NET usam esse formato. A presença de um formato binário documentado e raramente atualizado foi um grande benefício (sem dúvida, um requisito) da interoperabilidade. O formato foi atualizado de forma substancial pela última vez em 2005 (.NET 2.0) para acomodar os genéricos e a arquitetura do processador.
 
 O formato é independente de CPU e sistema operacional. Ele tem sido usado como parte de implementações do .NET que se destinam a muitos chips e CPUs. Embora o formato em si tenha patrimônio do Windows, é implementável em qualquer sistema operacional. Sua escolha indiscutivelmente mais significativa para a interoperabilidade do sistema operacional é que a maioria dos valores é armazenada no formato little endian. Ele não tem uma afinidade específica para o tamanho do ponteiro de computador (por exemplo, 32 bits, 64 bits).
 
 O formato do assembly .NET também é muito descritivo sobre a estrutura de um determinado programa ou biblioteca. Ele descreve os componentes internos de um assembly, especificamente referências de assembly e tipos definidos e sua estrutura interna. APIs ou ferramentas podem ler e processar essas informações para exibição ou para tomar decisões de programação.
 
-## <a name="format"></a>Formatar
+## <a name="format"></a>Formato
 
 O formato binário do .NET se baseia no formato de [arquivo PE](https://en.wikipedia.org/wiki/Portable_Executable) do Windows. Na verdade, as bibliotecas de classes do .NET são compatíveis com PEs do Windows e, a primeira vista, parecem ser DLLs (bibliotecas de vínculo dinâmico) do Windows ou EXEs (executáveis) de aplicativo. Essa é uma característica muito útil no Windows, no qual elas podem se mascarar como binários executáveis nativos e obter parte do mesmo tratamento (por exemplo, o carregamento do sistema operacional, ferramentas PE).
 
 ![Cabeçalhos de assembly](../media/assembly-format/assembly-headers.png)
 
-Cabeçalhos de assembly do ECMA 335 II.25.1, Estrutura do formato de arquivo do tempo de execução.
+Cabeçalhos de assembly do ECMA 335 II.25.1, Estrutura do formato de arquivo do runtime.
 
 ## <a name="process-the-assemblies"></a>Processar os assemblies
 
-É possível escrever APIs ou ferramentas para processar assemblies. As informações do assembly permitem tomar decisões de programação no tempo de execução, reescrever os assemblies, fornecer o IntelliSense de API em um editor e gerar a documentação. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> e [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) são bons exemplos de ferramentas que frequentemente são usadas para essa finalidade.
+É possível escrever APIs ou ferramentas para processar assemblies. As informações do assembly permitem tomar decisões de programação no runtime, reescrever os assemblies, fornecer o IntelliSense de API em um editor e gerar a documentação. <xref:System.Reflection?displayProperty=nameWithType>, <xref:System.Reflection.MetadataLoadContext?displayProperty=nameWithType> e [Mono.Cecil](https://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) são bons exemplos de ferramentas que frequentemente são usadas para essa finalidade.

@@ -1,17 +1,16 @@
 ---
 title: Níveis de acessibilidade – Referência de C#
-ms.custom: seodec18
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 2d6605a305e5003e19f4fe1dd260746302691215
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69602393"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713824"
 ---
 # <a name="accessibility-levels-c-reference"></a>Níveis de acessibilidade (Referência de C#)
 
@@ -38,17 +37,17 @@ Use os modificadores de acesso, `public`, `protected`, `internal` ou `private`, 
   
 |Membros de|Acessibilidade de membro padrão|Acessibilidade declarada permitida do membro|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|Nenhum|  
+|`enum`|`public`|{1&gt;Nenhum&lt;1}|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|Nenhum|  
+|`interface`|`public`|{1&gt;Nenhum&lt;1}|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  A acessibilidade de um tipo aninhado depende do [domínio de acessibilidade](./accessibility-domain.md), que é determinado pela acessibilidade declarada do membro e pelo domínio da acessibilidade do tipo imediatamente contido. Entretanto, o domínio de acessibilidade de um tipo aninhado não pode exceder o do tipo contido.  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a>Especificação da linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

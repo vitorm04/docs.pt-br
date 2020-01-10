@@ -2,15 +2,15 @@
 title: Ferramenta de desinstalação
 description: Uma visão geral da ferramenta de desinstalação do .NET Core, uma ferramenta guiada que permite a limpeza controlada de SDKs e tempos de execução do .NET Core.
 author: sfoslund
-ms.date: 12/17/2019
-ms.openlocfilehash: 5a1a419d5ad09643a7063cc03ec727c547268cc6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.date: 01/06/2020
+ms.openlocfilehash: 4944c983cbd02b456c3a09a1b03bc28ba6e458cc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75443543"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714548"
 ---
-# <a name="net-core-uninstall-tool"></a>Ferramenta de desinstalação do .NET Core
+# <a name="net-core-uninstall-tool"></a>Ferramenta de Desinstalação do .NET Core
 
 A [ferramenta de desinstalação do .NET Core](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) permite remover SDKs do .NET Core e tempos de execução de um sistema. Uma coleção de opções está disponível para especificar quais versões você deseja desinstalar.
 
@@ -446,7 +446,7 @@ Observações:
 
   Define o nível de detalhes. Os valores permitidos são `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` e `diag[nostic]`. O valor padrão é `normal`.
 
-* **`-y, --yes`** Executa o comando sem a necessidade de confirmação de Y/n.
+* **`-y, --yes`** Executa o comando sem a necessidade de confirmação de Y/N.
   
 * **`--force`** Força a remoção de versões que podem ser usadas pelo Visual Studio ou SDKs.
 
@@ -462,7 +462,7 @@ Observações:
 > [!NOTE]
 > Por padrão, os SDKs do .NET Core e os tempos de execução que podem ser exigidos pelo Visual Studio ou outros SDKs são mantidos. Nos exemplos a seguir, alguns dos SDKs e tempos de execução especificados podem permanecer, dependendo do estado do computador. Para remover todos os SDKs e tempos de execução, liste-os explicitamente como argumentos ou use a opção `--force`.
 
-* Remova todos os tempos de execução do .NET Core x86, exceto a versão `3.0.0-preview6-27804-01` sem exigir confirmação de Y/n:
+* Remova todos os tempos de execução do .NET Core, exceto a versão `3.0.0-preview6-27804-01` sem exigir confirmação de Y/N:
 
   ```console
   dotnet-core-uninstall remove --all-but 3.0.0-preview6-27804-01 --runtime --yes
@@ -477,7 +477,7 @@ Observações:
 * Remova o SDK do .NET Core 1.1.11 sem saída de console:
 
   ```console
-  dotnet-core-uninstall remove 1.1.11 --sdk --yes -verbosity q
+  dotnet-core-uninstall remove 1.1.11 --sdk --yes --verbosity q
   ```
 
 * Remova todos os SDKs do .NET Core que podem ser removidos com segurança por essa ferramenta:

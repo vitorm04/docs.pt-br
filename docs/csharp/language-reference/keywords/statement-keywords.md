@@ -1,17 +1,16 @@
 ---
 title: Palavras-chave de instrução – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], statements
 - statements [C#]
 ms.assetid: fad0c004-e282-4ec8-a127-bca7fd7a0b6f
-ms.openlocfilehash: 52eef49341922810772d257d4f50417a5f776fd4
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
-ms.translationtype: HT
+ms.openlocfilehash: c829414cc197b18ad0dbd9c2cf401a05f6f2fbc6
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422358"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715151"
 ---
 # <a name="statement-keywords-c-reference"></a>Palavras-chave de instrução (Referência de C#)
 
@@ -27,7 +26,7 @@ As instruções são instruções do programa. Exceto conforme descrito nos tóp
 [Instrução fixed](fixed-statement.md)|[fixed](fixed-statement.md)|
 |[Instrução lock](lock-statement.md)|[lock](lock-statement.md)|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Instruções](../../programming-guide/statements-expressions-operators/statements.md)

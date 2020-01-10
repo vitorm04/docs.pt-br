@@ -11,20 +11,18 @@ helpviewer_keywords:
 - generic collections [.NET]
 - generic types [.NET]
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 21d8ef3abfd16e11c9251edfc4f39b02e93eaab5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: dce0e38b0198396ec0dbc3ced7f2f59c2b112b56
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740931"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708404"
 ---
 # <a name="generic-collections-in-net"></a>Coleções genéricas no .NET
 
  A biblioteca de classes do .NET fornece várias classes de coleção genérica nos namespaces <xref:System.Collections.Generic> e <xref:System.Collections.ObjectModel>. Para obter informações detalhadas sobre essas classes, consulte [Tipos de coleção comumente usados](../../../docs/standard/collections/commonly-used-collection-types.md).  
   
-## <a name="systemcollectionsgeneric"></a>System.Collections.Generic
+## <a name="systemcollectionsgeneric"></a>{1&gt;System.Collections.Generic&lt;1}
 
  Muitos dos tipos de coleção genéricos são diretamente análogos aos tipos não genéricos. <xref:System.Collections.Generic.Dictionary%602> é uma versão genérica de <xref:System.Collections.Hashtable>; ele usa a estrutura genérica <xref:System.Collections.Generic.KeyValuePair%602> para enumeração em vez de <xref:System.Collections.DictionaryEntry>.  
   
@@ -34,7 +32,7 @@ ms.locfileid: "73740931"
   
  A classe genérica <xref:System.Collections.Generic.LinkedList%601> é uma verdadeira lista vinculada. Não tem nenhum equivalente não genérico.  
   
-## <a name="systemcollectionsobjectmodel"></a>System.Collections.ObjectModel
+## <a name="systemcollectionsobjectmodel"></a>{1&gt;System.Collections.ObjectModel&lt;1}
 
  A classe genérica <xref:System.Collections.ObjectModel.Collection%601> fornece uma classe base para derivar seus próprios tipos de coleção genérica. A classe <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> fornece uma maneira fácil de produzir uma coleção somente leitura de qualquer tipo que implementa a interface genérica <xref:System.Collections.Generic.IList%601>. A classe genérica <xref:System.Collections.ObjectModel.KeyedCollection%602> fornece uma maneira de armazenar objetos que contêm suas próprias chaves.  
   
@@ -53,7 +51,7 @@ ms.locfileid: "73740931"
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]
  [!code-vb[Conceptual.Generics.Overview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.generics.overview/vb/source2.vb#7)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>

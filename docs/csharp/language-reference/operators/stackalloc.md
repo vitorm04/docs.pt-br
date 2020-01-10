@@ -1,17 +1,16 @@
 ---
 title: Operador stackalloc – referência do C#
-ms.custom: seodec18
 ms.date: 09/20/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 helpviewer_keywords:
 - stackalloc operator [C#]
-ms.openlocfilehash: 4f3ba6594eb16cf16db6a1de78fe05509c5f4d7d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 5654cae622cd94c8dad7e58fbc8a99fcf48391a9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345280"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712618"
 ---
 # <a name="stackalloc-operator-c-reference"></a>Operador stackalloc (referência do C#)
 
@@ -54,7 +53,7 @@ No Expression `stackalloc T[E]`, `T` deve ser um [tipo não gerenciado](../built
 
 O uso de `stackalloc` habilita automaticamente os recursos de detecção de estouro de buffer no CLR (Common Language Runtime). Se for detectada uma estouro de buffer, o processo será encerrado assim que possível para minimizar a chance de o código mal-intencionado ser executado.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, consulte a seção [alocação de pilha](~/_csharplang/spec/unsafe-code.md#stack-allocation) da especificação de [ C# linguagem](~/_csharplang/spec/introduction.md) e a nota de proposta de recurso de [`stackalloc` em contextos aninhados](~/_csharplang/proposals/csharp-8.0/nested-stackalloc.md) .
 

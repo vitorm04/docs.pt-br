@@ -7,14 +7,12 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 56ecdc41c5b5a3f7ee272768d5c2a3745da26633
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 929ed00c44b52dd94fc9d15e564cce7eeff1619e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975509"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716199"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>Palavras-chave e níveis ETW no CLR
 Eventos ETW (rastreamento de eventos para Windows) podem ser filtrados por categoria e nível. As [palavras-chave CLR ETW](#clr-etw-keywords) do evento permitem a filtragem de eventos por categoria; elas são usadas em combinações para os provedores de runtime e de encerramento. Os [níveis de evento](#etw-event-levels) são identificados por sinalizadores.  
@@ -36,7 +34,7 @@ Eventos ETW (rastreamento de eventos para Windows) podem ser filtrados por categ
 ### <a name="clr-etw-runtime-keywords"></a>Palavras-Chave de Runtime CLR ETW  
  A tabela a seguir lista as palavras-chave de runtime CLR ETW, seus valores e sua finalidade de uso.  
   
-|Nome da palavra-chave de runtime|Valor|Finalidade|  
+|Nome da palavra-chave de runtime|Value|Finalidade|  
 |--------------------------|-----------|-------------|  
 |`GCKeyword`|0x00000001|Habilita a coleta de [eventos de coleta de lixo](garbage-collection-etw-events.md).|  
 |`LoaderKeyword`|0x00000008|Habilita a coleta de [eventos de carregador](loader-etw-events.md).|  
@@ -59,7 +57,7 @@ Eventos ETW (rastreamento de eventos para Windows) podem ser filtrados por categ
 ### <a name="clr-etw-rundown-keywords"></a>Palavras-Chave de Encerramento CLR ETW  
  A tabela a seguir lista as palavras-chave de encerramento CLR ETW, seus valores e sua finalidade de uso.  
   
-|Nome da palavra-chave de encerramento|Valor|Finalidade|  
+|Nome da palavra-chave de encerramento|Value|Finalidade|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|Habilita a coleta de eventos de carregador quando usado com `StartRundownKeyword` e `EndRundownKeyword`.|  
 |`JitRundownKeyword`|0x00000010|Habilita a coleta dos eventos `DCStart` e `DCEnd` do método para métodos compilados pelo JIT quando usado com `StartRundownKeyword` e `EndRundownKeyword`.|  
@@ -76,24 +74,24 @@ Eventos ETW (rastreamento de eventos para Windows) podem ser filtrados por categ
   
 |Palavras-chave e sinalizadores|Domínio do aplicativo, assembly, eventos de carregamento/descarregamento do módulo|Eventos de carregamento/descarregamento do método (exceto eventos dinâmicos)|Eventos de carregamento/destruição de método dinâmico|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|Eventos de carregamento e descarregamento.|nenhuma.|nenhuma.|  
-|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` não adiciona nada)|nenhuma.|Eventos de carregamento.|Eventos de carregamento e descarregamento.|  
-|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|nenhuma.|Eventos de carregamento e descarregamento.|Eventos de carregamento e descarregamento.|  
-|`NGenKeyword`|nenhuma.|nenhuma.|Não aplicável.|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|nenhuma.|Eventos de carregamento.|Não aplicável.|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|nenhuma.|Eventos de descarregamento.|Não aplicável.|  
+|`LoaderKeyword`|Eventos de carregamento e descarregamento.|Nenhuma.|Nenhuma.|  
+|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` não adiciona nada)|Nenhuma.|Eventos de carregamento.|Eventos de carregamento e descarregamento.|  
+|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|Nenhuma.|Eventos de carregamento e descarregamento.|Eventos de carregamento e descarregamento.|  
+|`NGenKeyword`|Nenhuma.|Nenhuma.|{1&gt;Não aplicável.&lt;1}|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|Nenhuma.|Eventos de carregamento.|{1&gt;Não aplicável.&lt;1}|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|Nenhuma.|Eventos de descarregamento.|{1&gt;Não aplicável.&lt;1}|  
   
 <a name="rundown_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>Combinações de palavras-chave para a resolução de símbolo do provedor de encerramento  
   
 |Palavras-chave e sinalizadores|Domínio do aplicativo, assembly, eventos de DCStart/DCEnd do módulo|Eventos de DCStart/DCEnd do módulo (incluindo eventos de método dinâmico)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Eventos `DCStart`.|nenhuma.|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Eventos `DCEnd`.|nenhuma.|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|nenhuma.|Eventos `DCStart`.|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|nenhuma.|Eventos `DCEnd`.|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|nenhuma.|Eventos `DCStart`.|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|nenhuma.|Eventos `DCEnd`.|  
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|Eventos `DCStart`.|Nenhuma.|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|Eventos `DCEnd`.|Nenhuma.|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|Nenhuma.|Eventos `DCStart`.|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|Nenhuma.|Eventos `DCEnd`.|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|Nenhuma.|Eventos `DCStart`.|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|Nenhuma.|Eventos `DCEnd`.|  
 
 ## <a name="etw-event-levels"></a>Níveis de eventos ETW  
  Os eventos ETW também podem ser filtrados por nível. Se o nível for definido como 0x5, eventos de todos os níveis serão acionados, incluindo 0x5 e abaixo (que são eventos que pertencem às categorias habilitadas por meio de palavras-chave). Se o nível for definido como 0x2, somente os eventos que pertencem ao nível 0x2 e abaixo serão acionados.  
@@ -112,7 +110,7 @@ Eventos ETW (rastreamento de eventos para Windows) podem ser filtrados por categ
   
  0x0 – LogAlways  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Provedores CLR ETW](clr-etw-providers.md)
 - [Eventos de CLR ETW](clr-etw-events.md)

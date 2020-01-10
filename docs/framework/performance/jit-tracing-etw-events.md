@@ -5,14 +5,12 @@ helpviewer_keywords:
 - JIT tracing events [.NET Framework]
 - ETW, JIT tracing events (CLR)
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4daa0fc0d689815e3a2c65df09c6c046d06a25c4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 37bfd09516589f3422ee005233e576b110ef1288
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975505"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716002"
 ---
 # <a name="jit-tracing-etw-events"></a>Eventos ETW de rastreamento JIT
 Esses eventos coletam informações relacionadas ao sucesso ou à falha de chamadas JIT (just-in-time) e de laço JIT.
@@ -28,7 +26,7 @@ Esses eventos coletam informações relacionadas ao sucesso ou à falha de chama
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|O inlining JIT falhou.|  
   
@@ -58,7 +56,7 @@ Esses eventos coletam informações relacionadas ao sucesso ou à falha de chama
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|O inlining do método foi bem-sucedido.|  
   
@@ -88,7 +86,7 @@ Esses eventos coletam informações relacionadas ao sucesso ou à falha de chama
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|Falha na chamada tail do método.|  
   
@@ -118,7 +116,7 @@ Esses eventos coletam informações relacionadas ao sucesso ou à falha de chama
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|A chamada tail de método bem-sucedida.|  
   
@@ -139,6 +137,6 @@ Esses eventos coletam informações relacionadas ao sucesso ou à falha de chama
 |TailCallType|win:UnicodeString|O tipo da chamada tail.|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eventos de CLR ETW](clr-etw-events.md)

@@ -2,14 +2,12 @@
 title: O .NET Framework e lançamentos fora da banda
 ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c1df04df8aa08fa66c91d03d4b67318b434a93d8
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a2dcd011548df857a1399c5bbdfe6ed33927672e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71051962"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716396"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>O .NET Framework e lançamentos fora da banda
 
@@ -53,6 +51,6 @@ As versões OOB para os componentes principais do CLR (Common Language Runtime) 
 
  Para encontrar pré-lançamentos e pacotes estáveis, selecione **Incluir Pré-lançamento** no Gerenciador de pacotes NuGet.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Introdução](index.md)

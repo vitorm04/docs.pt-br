@@ -7,14 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e8c8e1b0d9a79ff22f3194e86cd580f3a7e199b2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: c921331b00fe137d4ad52d62951e8c161768dfae
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69962021"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711136"
 ---
 # <a name="building-xml-schemas"></a>Compilando esquemas XML
 As classes no namespace <xref:System.Xml.Schema?displayProperty=nameWithType> mapeiam para as estruturas definidas na recomendação do W3C (World Wide Web Consortium) sobre esquemas XML e podem ser usadas para compilar esquemas XML na memória.  
@@ -88,7 +86,7 @@ As classes no namespace <xref:System.Xml.Schema?displayProperty=nameWithType> ma
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de modelo de objeto de esquema XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
 - [Lendo e gravando esquemas XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)

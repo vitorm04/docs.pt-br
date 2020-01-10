@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e9445f16b6470b1d2066fcae749b1623ec5e11ac
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 79a3390933256ed862d35c90db0aab2177cdfc41
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138951"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711006"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Criando novos atributos para elementos no DOM
 
@@ -126,6 +124,6 @@ Se você criar um elemento que está declarado para ter um atributo padrão, um 
 
 O valor de um nó de atributo se torna os seus nós filhos. Há apenas dois tipos de nós filho válidos: nós **XmlText** e nós **XmlEntityReference** . Esses são nós filhos no sentido de que métodos como **FirstChild** e **LastChild** os processam como nós filhos. Essa distinção de um atributo que possui nós filhos é importante ao tentar remover atributos ou nós filhos do atributo. Para saber mais, confira [Removendo atributos de um nó de elemento no DOM](removing-attributes-from-an-element-node-in-the-dom.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [DOM (Modelo de Objeto do Documento) de XML](xml-document-object-model-dom.md)

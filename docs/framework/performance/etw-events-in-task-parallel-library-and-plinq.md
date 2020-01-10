@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tasks, ETW events
 ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f1926d2699357163dbb8685b7ea875e369ca29b7
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 93fcd3215bdcbb30960f19e23ae15f32bb9ddd84
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71046653"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716090"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>Eventos ETW na biblioteca de tarefas paralelas e em PLINQ
 
@@ -29,7 +27,7 @@ EVENT_DESCRIPTOR.Task = 1
 
 EVENT_DESCRIPTOR.Id = 1
 
-#### <a name="user-data"></a>Dados de usuário
+#### <a name="user-data"></a>Dados do usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -45,7 +43,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 2
 
-#### <a name="user-data"></a>Dados de usuário
+#### <a name="user-data"></a>Dados do usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -59,7 +57,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 3
 
-#### <a name="user-data"></a>Dados de usuário
+#### <a name="user-data"></a>Dados do usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -75,7 +73,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 4
 
-#### <a name="user-data"></a>Dados de usuário
+#### <a name="user-data"></a>Dados do usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -93,7 +91,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 1
 
-#### <a name="user-data"></a>Dados de usuário
+#### <a name="user-data"></a>Dados do usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -106,7 +104,7 @@ EVENT_DESCRIPTOR.Id = 1
 
  EVENT_DESCRIPTOR.Id = 2
 
-#### <a name="user-data"></a>Dados de usuário
+#### <a name="user-data"></a>Dados do usuário
 
 |**Nome**|**Tipo**|**Descrição**|
 |--------------|--------------|---------------------|
@@ -114,7 +112,7 @@ EVENT_DESCRIPTOR.Id = 1
 |OriginatingTaskID|<xref:System.Int32?displayProperty=nameWithType>|A ID da tarefa que iniciou o loop.|
 |QueryID|<xref:System.Int32?displayProperty=nameWithType>|Um identificador exclusivo de consulta.|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eventos ETW no .NET Framework](etw-events.md)
 - [TPL (Biblioteca de Paralelismo de Tarefas)](../../standard/parallel-programming/task-parallel-library-tpl.md)

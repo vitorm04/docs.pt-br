@@ -3,25 +3,24 @@ title: Desenvolvendo bibliotecas com as Ferramentas de Plataforma Cruzada
 description: Saiba como criar bibliotecas do .NET Core usando ferramentas da CLI do .NET Core. Você criará uma biblioteca que dá suporte a várias estruturas.
 author: cartermp
 ms.date: 05/01/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd454f0bd1739597fc27dccf2849fc259767292
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420468"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714023"
 ---
-# <a name="developing-libraries-with-cross-platform-tools"></a>Desenvolvendo bibliotecas com as Ferramentas de Plataforma Cruzada
+# <a name="develop-libraries-with-cross-platform-tools"></a>Desenvolver bibliotecas com ferramentas multiplataforma
 
 Esse artigo aborda como escrever bibliotecas para .NET usando as ferramentas de plataforma cruzada da CLI. A CLI fornece uma experiência eficiente e de baixo nível que funciona em qualquer sistema operacional com suporte. Você ainda pode criar bibliotecas com o Visual Studio e, se essa for sua experiência preferida, [consultar o guia do Visual Studio](library-with-visual-studio.md).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Você precisa da [CLI e do SDK do .NET Core](https://dotnet.microsoft.com/download) instalados no seu computador.
 
 Para as seções deste documento que tratam de versões do .NET Framework, é necessário ter o [.NET Framework](https://dotnet.microsoft.com) instalado em um computador Windows.
 
-Além disso, se você quiser dar suporte a destinos mais antigos do .NET Framework, precisará instalar pacotes de direcionamento/desenvolvedor para versões mais antigas do framework na [página de arquivos de download do .NET](https://dotnet.microsoft.com/download/archives). Consulte esta tabela:
+Além disso, se você quiser dar suporte a destinos de .NET Framework mais antigos, será necessário instalar pacotes de direcionamento ou pacotes de desenvolvedor na [página de arquivos de download do .net](https://dotnet.microsoft.com/download/archives). Consulte esta tabela:
 
 | Versão do .NET Framework | O que baixar                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -31,23 +30,23 @@ Além disso, se você quiser dar suporte a destinos mais antigos do .NET Framewo
 | 4.5.1                  | Pacote de Desenvolvedor do .NET Framework 4.5.1                    |
 | 4.5                    | Software Development Kit do Windows (SDK do Windows) para Windows 8         |
 | 4.0                    | SDK do Windows para Windows 7 e .NET Framework 4         |
-| 2.0, 3.0 e 3.5      | Tempo de Execução do .NET Framework 3.5 SP1 (ou versão do Windows 8 ou superior) |
+| 2.0, 3.0 e 3.5      | Runtime do .NET Framework 3.5 SP1 (ou versão do Windows 8 ou superior) |
 
 ## <a name="how-to-target-the-net-standard"></a>Como direcionar para o .NET Standard
 
-Se você ainda não conhece o .NET Standard, veja [.NET Standard](../../standard/net-standard.md) para saber mais.
+Se você não estiver familiarizado com .NET Standard, consulte [.net Standard](../../standard/net-standard.md) para saber mais.
 
-Nesse artigo, há uma tabela que mapeia as versões do .NET Standard para várias implementações:
+Neste artigo, há uma tabela que mapeia .NET Standard versões para várias implementações:
 
 [!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 Veja aqui o que essa tabela significa para fins de criação de uma biblioteca:
 
-A versão do .NET Standard que você escolher será uma escolha entre acessar as APIs mais recentes e a capacidade de direcionar para mais implementações do .NET e versões do .NET Standard. Você controla o intervalo das plataformas que podem ser destinos e as versões escolhendo uma versão de `netstandardX.X` (em que `X.X` é um número de versão) e a adicionando ao seu arquivo de projeto (`.csproj` ou `.fsproj`).
+A versão do .NET Standard que você escolher será uma compensação entre o acesso às APIs mais recentes e a capacidade de direcionar mais implementações e .NET Standard versões do .NET. Você controla o intervalo de plataformas e versões de destino escolhendo uma versão de `netstandardX.X` (onde `X.X` é um número de versão) e adicionando-a ao arquivo de projeto (`.csproj` ou `.fsproj`).
 
-Você tem três opções principais ao direcionar para o .NET Standard, dependendo das suas necessidades.
+Você tem três opções principais ao direcionar .NET Standard, dependendo de suas necessidades.
 
-1. Você pode usar a versão padrão do .NET Standard fornecido por modelos, `netstandard1.4`, que fornece acesso à maioria das APIs no .NET Standard ao mesmo tempo que mantém a compatibilidade com UWP, .NET Framework 4.6.1 e o próximo .NET Standard 2.0.
+1. Você pode usar a versão padrão do .NET Standard fornecida por modelos, `netstandard1.4`, que fornece acesso à maioria das APIs no .NET Standard enquanto ainda é compatível com UWP, .NET Framework 4.6.1 e .NET Standard 2,0.
 
     ```xml
     <Project Sdk="Microsoft.NET.Sdk">
@@ -57,29 +56,29 @@ Você tem três opções principais ao direcionar para o .NET Standard, dependen
     </Project>
     ```
 
-2. Você pode usar uma versão inferior ou superior do .NET Standard, modificando o valor no nó `TargetFramework` do arquivo de projeto.
+2. Você pode usar uma versão inferior ou superior do .NET Standard modificando o valor no nó `TargetFramework` do arquivo do projeto.
 
-    Versões do .NET Standard são compatíveis com versões anteriores. Isso significa que as bibliotecas `netstandard1.0` são executadas em plataformas `netstandard1.1` e superior. No entanto, não há compatibilidade com versões posteriores: plataformas inferiores do .NET Standard não podem fazer referência às superiores. Isso significa que as bibliotecas `netstandard1.0` não podem fazer de referência a bibliotecas direcionadas a `netstandard1.1` ou superior. Selecione a versão Standard com a combinação de suporte a APIs e plataformas ideal para suas necessidades. É recomendável `netstandard1.4` por enquanto.
+    Versões do .NET Standard são compatíveis com versões anteriores. Isso significa que as bibliotecas `netstandard1.0` são executadas em plataformas `netstandard1.1` e superior. No entanto, não há compatibilidade com o encaminhamento. As plataformas de .NET Standard inferiores não podem fazer referência a mais altas. Isso significa que as bibliotecas `netstandard1.0` não podem fazer de referência a bibliotecas direcionadas a `netstandard1.1` ou superior. Selecione a versão Standard com a combinação de suporte a APIs e plataformas ideal para suas necessidades. É recomendável `netstandard1.4` por enquanto.
 
-3. Se desejar direcionar para o .NET Framework versões 4.0 ou inferior ou se desejar usar uma API disponível no .NET Framework, mas não no .NET Standard (por exemplo, `System.Drawing`), leia as seções a seguir para aprender a usar multiplataformas.
+3. Se você quiser direcionar .NET Framework versões 4,0 ou inferior, ou se quiser usar uma API disponível em .NET Framework, mas não em .NET Standard (por exemplo, `System.Drawing`), leia as seções a seguir e saiba como usar multidirecionar.
 
-## <a name="how-to-target-the-net-framework"></a>Como direcionar o .NET Framework
+## <a name="how-to-target-net-framework"></a>Como direcionar .NET Framework
 
 > [!NOTE]
-> Essas instruções pressupõem que você tenha o .NET Framework instalado no seu computador. Consulte os [Pré-requisitos](#prerequisites) para obter as dependências instaladas.
+> Estas instruções pressupõem que você tenha .NET Framework instalado em seu computador. Consulte os [Pré-requisitos](#prerequisites) para obter as dependências instaladas.
 
-Lembre que algumas das versões do .NET Framework usadas aqui não têm mais suporte. Consulte as [Perguntas Frequentes de Política do Ciclo de Vida de Suporte do .NET Framework](https://support.microsoft.com/gp/framework_faq/en-us) sobre versões sem suporte.
+Tenha em mente que algumas das versões .NET Framework usadas aqui não são mais suportadas. Consulte as [Perguntas Frequentes de Política do Ciclo de Vida de Suporte do .NET Framework](https://support.microsoft.com/gp/framework_faq/en-us) sobre versões sem suporte.
 
-Se desejar alcançar o número máximo de projetos e desenvolvedores, use o .NET Framework 4.0 como seu destino de linha de base. Para direcionar para o .NET Framework, você precisará começar usando o TFM (Moniker da Estrutura de Destino) correto correspondente à versão do .NET Framework à qual você deseja dar suporte.
+Se você quiser alcançar o número máximo de desenvolvedores e projetos, use .NET Framework 4,0 como seu destino de linha de base. Para direcionar .NET Framework, comece usando o moniker (TFM) da estrutura de destino correto que corresponde à versão do .NET Framework que você deseja dar suporte.
 
 | Versão do .NET Framework | TFM      |
 | ---------------------- | -------- |
 | .NET Framework 2.0     | `net20`  |
 | .NET Framework 3.0     | `net30`  |
-| .NET Framework 3,5     | `net35`  |
+| .NET Framework 3.5     | `net35`  |
 | .NET Framework 4.0     | `net40`  |
-| .NET Framework 4,5     | `net45`  |
-| .NET Framework 4.5.1   | `net451` |
+| {1&gt;{2&gt;.NET Framework 4.5&lt;2}&lt;1}     | `net45`  |
+| {1&gt;.NET Framework 4.5.1&lt;1}   | `net451` |
 | .NET Framework 4.5.2   | `net452` |
 | .NET Framework 4.6     | `net46`  |
 | .NET Framework 4.6.1   | `net461` |
@@ -87,7 +86,7 @@ Se desejar alcançar o número máximo de projetos e desenvolvedores, use o .NET
 | .NET Framework 4.7     | `net47`  |
 | .NET Framework 4.8     | `net48`  |
 
-Em seguida, insira esse TFM na seção `TargetFramework` do arquivo de projeto. Por exemplo, aqui está como você escreveria uma biblioteca direcionada ao .NET Framework 4.0:
+Em seguida, insira esse TFM na seção `TargetFramework` do arquivo de projeto. Por exemplo, veja como você escreveria uma biblioteca que tem como alvo .NET Framework 4,0:
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -97,9 +96,9 @@ Em seguida, insira esse TFM na seção `TargetFramework` do arquivo de projeto. 
 </Project>
 ```
 
-E pronto. Embora seja compilado somente para o .NET Framework 4, você pode usar a biblioteca em versões mais recentes do .NET Framework.
+E pronto. Embora isso seja compilado apenas para .NET Framework 4, você pode usar a biblioteca em versões mais recentes do .NET Framework.
 
-## <a name="how-to-multitarget"></a>Como usar Multiplataformas
+## <a name="how-to-multitarget"></a>Como multidirecionar
 
 > [!NOTE]
 > As instruções a seguir pressupõem que você tenha o .NET Framework instalado no seu computador. Consulte a seção [Pré-requisitos](#prerequisites) para saber quais dependências você precisa instalar e de onde baixá-las.
@@ -258,7 +257,7 @@ Cada um deles contém arquivos `.dll` para cada destino.
 
 1. Verifique se o xUnit é executado por meio da execução do comando `dotnet test`. Se você optar por usar o MSTest, o executor de console do MSTest deverá ser executado.
 
-E pronto. Agora você pode testar sua biblioteca em todas as plataformas usando as ferramentas de linha de comando. É muito simples testar sua biblioteca agora que está tudo configurado:
+E pronto. Agora você pode testar sua biblioteca em todas as plataformas usando ferramentas de linha de comando. É muito simples testar sua biblioteca agora que está tudo configurado:
 
 1. Faça alterações na sua biblioteca.
 1. Execute os testes de linha de comando no diretório de teste com o comando `dotnet test`.
@@ -269,7 +268,7 @@ Seu código será recriado automaticamente quando você invoca o comando `dotnet
 
 Uma necessidade comum das bibliotecas grandes é alocar funcionalidades em diferentes projetos.
 
-Imagine que você deseja compilar uma biblioteca que poderia ser consumida em expressões idiomáticas de C# e F#. Isso significa que os consumidores da sua biblioteca o farão de maneira natural ao C# ou F#. Por exemplo, você poderia consumir a biblioteca em C# dessa forma:
+Imagine que você deseja criar uma biblioteca que pode ser consumida C# em F#idiomática e. Isso significaria que os consumidores da sua biblioteca o consomem de formas naturais C# para F#ou. Por exemplo, você poderia consumir a biblioteca em C# dessa forma:
 
 ```csharp
 using AwesomeLibrary.CSharp;
@@ -295,7 +294,7 @@ let doWork data = async {
 
 Cenários de consumo como esse significam que as APIs que estão sendo acessadas devem ter uma estrutura diferente para C# e F#.  Uma abordagem comum para realizar isso é fatorar toda a lógica de uma biblioteca em um projeto principal, com projetos C# e F# definindo as camadas de API que chamam esse projeto principal.  O restante da seção usará os nomes a seguir:
 
-* **AwesomeLibrary.Core** – Um projeto principal que contém toda a lógica para a biblioteca
+* **AwesomeLibrary. Core** – um projeto principal que contém toda a lógica da biblioteca
 * **AwesomeLibrary.CSharp** – Um projeto com APIs públicas destinadas ao consumo em C#
 * **AwesomeLibrary.FSharp** – Um projeto com APIs públicas destinadas ao consumo em F#
 
@@ -308,14 +307,14 @@ mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib
 cd ..
 mkdir AwesomeLibrary.CSharp && cd AwesomeLibrary.CSharp && dotnet new classlib
 cd ..
-mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang F#
+mkdir AwesomeLibrary.FSharp && cd AwesomeLibrary.FSharp && dotnet new classlib -lang "F#"
 cd ..
 dotnet sln add AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 dotnet sln add AwesomeLibrary.CSharp/AwesomeLibrary.CSharp.csproj
 dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 ```
 
-Isso adicionará os três projetos acima e um arquivo de solução que os vincula. Criar o arquivo de solução e vincular projetos permitirá que você restaure e compile projetos de um nível superior.
+Isso adicionará os três projetos acima e um arquivo de solução que os vinculará juntos. Criar o arquivo de solução e vincular projetos permitirá que você restaure e crie projetos de um nível superior.
 
 ### <a name="project-to-project-referencing"></a>Referência projeto a projeto
 

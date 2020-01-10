@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c879375a4b0622311c8731acc276ec79fe0217d5
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: a1b061b480b3e22b136a6373ddb87cf9d2233457
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044887"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715777"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importador de Controle ActiveX do Windows Forms)
 O Importador de Controle ActiveX converte definições de tipo em uma biblioteca de tipos COM para um controle ActiveX em um controle do Windows Forms.  
@@ -36,7 +34,7 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Comentários  
   
-|Argumento|Descrição|  
+|Argument|Descrição|  
 |--------------|-----------------|  
 |*file*|O nome do arquivo de origem que contém o controle ActiveX a ser convertido. O argumento do arquivo deve ter a extensão .dll ou .ocx.|  
   
@@ -44,12 +42,12 @@ aximp [options]{file.dll | file.ocx}
 |------------|-----------------|  
 |`/delaysign`|Especifica Aximp.exe para assinar o controle resultante usando-se a assinatura com atraso. Você deve especificar essa opção com a opção `/keycontainer:`, `/keyfile:` ou `/publickey:`. Para obter mais informações sobre o processo de assinatura com atraso, consulte [Assinatura com Atraso de um Assembly](../../standard/assembly/delay-sign.md).|  
 |`/help`|Exibe sintaxe de comando e opções para a ferramenta.|  
-|`/keycontainer:` *containerName*|Assina o controle resultante com um nome forte usando o par de chaves pública/privada encontrado no contêiner de chave especificado por *containerName*.|  
-|`/keyfile:` *filename*|Assina o controle resultante com um nome forte usando o par de chaves pública/privada oficial do editor encontrado em *filename*.|  
+|*contêineres* `/keycontainer:`|Assina o controle resultante com um nome forte usando o par de chaves pública/privada encontrado no contêiner de chave especificado por *containerName*.|  
+|*nome de arquivo* `/keyfile:`|Assina o controle resultante com um nome forte usando o par de chaves pública/privada oficial do editor encontrado em *filename*.|  
 |`/nologo`|Suprime a exibição do banner de inicialização da Microsoft.|  
-|`/out:` *filename*|Especifica o nome do assembly a ser criado.|  
-|`/publickey:` *filename*|Assina o controle resultante com um nome forte usando a chave pública encontrada no arquivo especificado por *filename*.|  
-|`/rcw:` *filename*|Usa o runtime callable wrapper especificado, em vez de gerar um novo. Convém especificar várias instâncias. O diretório atual é usado em caminhos relativos. Para obter mais informações, consulte [RCW (Runtime Callable Wrapper)](../../standard/native-interop/runtime-callable-wrapper.md).|  
+|*nome de arquivo* `/out:`|Especifica o nome do assembly a ser criado.|  
+|*nome de arquivo* `/publickey:`|Assina o controle resultante com um nome forte usando a chave pública encontrada no arquivo especificado por *filename*.|  
+|*nome de arquivo* `/rcw:`|Usa o runtime callable wrapper especificado, em vez de gerar um novo. Convém especificar várias instâncias. O diretório atual é usado em caminhos relativos. Para obter mais informações, consulte [RCW (Runtime Callable Wrapper)](../../standard/native-interop/runtime-callable-wrapper.md).|  
 |`/silent`|Suprime a exibição de mensagens de sucesso.|  
 |`/source`|Gera o código-fonte do C# para o wrapper do Windows Forms.|  
 |`/verbose`|Especifica o modo detalhado; exibe informações de andamento adicionais.|  
@@ -70,7 +68,7 @@ aximp [options]{file.dll | file.ocx}
   
  Quando você executar Aximp.exe em shdocvw.dll, ele sempre criará outro arquivo chamado shdocvw.dll no diretório no qual a ferramenta é executada. Se esse arquivo gerado for colocado no diretório Documents and Settings, isso causará problemas para Microsoft Internet Explorer e Windows Explorer. Quando o computador é reinicializado, o Windows examina o diretório Documents and Settings antes do diretório system32 para encontrar uma cópia de shdocvw.dll. Ele usará a cópia encontrada em Documents and Settings e tentará carregar os wrappers gerenciados. O Internet Explorer e o Windows Explorer não funcionarão corretamente porque dependem do mecanismo de renderização na versão de shdocvw.dll localizado no diretório system32. Se esse problema ocorrer, exclua a cópia de shdocvw.dll no diretório Documents and Settings e reinicie o computador.  
   
- O uso de Aximp.exe com shdocvw.dll para criar um assembly do .NET. a ser usado no desenvolvimento de aplicativos também pode causar problemas. Nesse caso, o aplicativo carregará a versão do sistema de shdocvw.dll e a versão gerada, além de poder atribuir a prioridade à versão do sistema. Nesse caso, quando você tentar carregar uma página da Web no controle ActiveX WebBrowser, os usuários poderão ser avisados com uma caixa de diálogo Abrir/Salvar. Quando o usuário clica em **Abrir**, a página da Web é aberta no Internet Explorer. Isso ocorre apenas com computadores que estão executando o Internet Explorer versão 6 ou anterior. Para evitar esse problema, use o controle gerenciado <xref:System.Windows.Forms.WebBrowser> ou use o Visual Studio para gerar o shdocvw.dll gerenciado, conforme descrito em [Como adicionar referências a bibliotecas de tipos](../interop/how-to-add-references-to-type-libraries.md).  
+ O uso de Aximp.exe com shdocvw.dll para criar um assembly do .NET. a ser usado no desenvolvimento de aplicativos também pode causar problemas. Nesse caso, o aplicativo carregará a versão do sistema de shdocvw.dll e a versão gerada, além de poder atribuir a prioridade à versão do sistema. Nesse caso, quando você tentar carregar uma página da Web no controle ActiveX WebBrowser, os usuários poderão ser avisados com uma caixa de diálogo Abrir/Salvar. Quando o usuário clica em **Abrir**, a página da Web é aberta no Internet Explorer. Isso ocorre apenas com computadores que estão executando o Internet Explorer versão 6 ou anterior. Para evitar esse problema, use o controle gerenciado <xref:System.Windows.Forms.WebBrowser> ou o Visual Studio para gerar o shdocvw.dll gerenciado conforme descrito em [Como adicionar referências a bibliotecas de tipos](../interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Exemplo  
  O comando a seguir gera MediaPlayer.dll e AxMediaPlayer.dll para o controle `msdxm.ocx` do Media Player.  
@@ -79,7 +77,7 @@ aximp [options]{file.dll | file.ocx}
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Ferramentas](index.md)
 - [Ildasm.exe (IL Disassembler)](ildasm-exe-il-disassembler.md)
