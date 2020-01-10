@@ -1,5 +1,5 @@
 ---
-title: Campo HttpWebRequest._CoreResponse
+title: Campo HttpWebRequest. _CoreResponse
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,32 +10,32 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d16936f6984e73a886f5f48e05b53501ced63c1b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706059"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740451"
 ---
-# <a name="httpwebrequestcoreresponse-field"></a><span data-ttu-id="3df39-102">HttpWebRequest. \_Campo CoreResponse</span><span class="sxs-lookup"><span data-stu-id="3df39-102">HttpWebRequest.\_CoreResponse Field</span></span>
+# <a name="httpwebrequest_coreresponse-field"></a><span data-ttu-id="fbe97-102">HttpWebRequest.\_campo CoreResponse</span><span class="sxs-lookup"><span data-stu-id="fbe97-102">HttpWebRequest.\_CoreResponse Field</span></span>
 
-<span data-ttu-id="3df39-103">`HttpWebRequest._CoreResponse` é um objeto (qualquer um [CoreResponseData](coreresponsedata.md) ou um <xref:System.Exception>) que contém o resultado da análise da resposta HTTP.</span><span class="sxs-lookup"><span data-stu-id="3df39-103">`HttpWebRequest._CoreResponse` is an object (either a [CoreResponseData](coreresponsedata.md) or an <xref:System.Exception>) containing the result of HTTP response parsing.</span></span>
+<span data-ttu-id="fbe97-103">`HttpWebRequest._CoreResponse` é um objeto (um [CoreResponseData](coreresponsedata.md) ou um <xref:System.Exception>) que contém o resultado da análise de resposta http.</span><span class="sxs-lookup"><span data-stu-id="fbe97-103">`HttpWebRequest._CoreResponse` is an object (either a [CoreResponseData](coreresponsedata.md) or an <xref:System.Exception>) containing the result of HTTP response parsing.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="3df39-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="3df39-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="fbe97-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="fbe97-104">Syntax</span></span>
   
 ```csharp
 private object _CoreResponse
 ```
 
 > [!WARNING]
-> <span data-ttu-id="3df39-105">Essa API não se destina a ser usado diretamente em seu código.</span><span class="sxs-lookup"><span data-stu-id="3df39-105">This API is not meant to be used directly in your code.</span></span> <span data-ttu-id="3df39-106">Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para capturar o código de rede.</span><span class="sxs-lookup"><span data-stu-id="3df39-106">Instead, you should use a <xref:System.Diagnostics.DiagnosticSource> to hook networking code.</span></span> <span data-ttu-id="3df39-107">Ver [guia do usuário DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span><span class="sxs-lookup"><span data-stu-id="3df39-107">See [DiagnosticSource User's Guide](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span></span>
+> <span data-ttu-id="fbe97-105">Essa API não deve ser usada diretamente no seu código.</span><span class="sxs-lookup"><span data-stu-id="fbe97-105">This API is not meant to be used directly in your code.</span></span> <span data-ttu-id="fbe97-106">Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para conectar o código de rede.</span><span class="sxs-lookup"><span data-stu-id="fbe97-106">Instead, you should use a <xref:System.Diagnostics.DiagnosticSource> to hook networking code.</span></span> <span data-ttu-id="fbe97-107">Consulte o [Guia do usuário do diagnosticm](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span><span class="sxs-lookup"><span data-stu-id="fbe97-107">See [DiagnosticSource User's Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).</span></span>
 > 
-> <span data-ttu-id="3df39-108">Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.</span><span class="sxs-lookup"><span data-stu-id="3df39-108">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
+> <span data-ttu-id="fbe97-108">A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.</span><span class="sxs-lookup"><span data-stu-id="fbe97-108">Microsoft does not support the use of this class in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="3df39-109">Requisitos</span><span class="sxs-lookup"><span data-stu-id="3df39-109">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="fbe97-109">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="fbe97-109">Requirements</span></span>
 
-<span data-ttu-id="3df39-110">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="3df39-110">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="fbe97-110">**Namespace:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="fbe97-110">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="3df39-111">**Assembly:** Sistema (em System. dll)</span><span class="sxs-lookup"><span data-stu-id="3df39-111">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="fbe97-111">**Assembly:** Sistema (em System. dll)</span><span class="sxs-lookup"><span data-stu-id="fbe97-111">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="3df39-112">**Versões do .NET framework:** Disponível desde o 2.0.</span><span class="sxs-lookup"><span data-stu-id="3df39-112">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="fbe97-112">**.NET Framework versões:** Disponível desde 2,0.</span><span class="sxs-lookup"><span data-stu-id="fbe97-112">**.NET Framework versions:** Available since 2.0.</span></span>
