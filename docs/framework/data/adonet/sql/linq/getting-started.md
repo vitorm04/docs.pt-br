@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: bd82b7e83149aaa53cf1b240cb79f8747bccba47
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 3bff4e9f268e9eac84c244cb58eed8b4384e717d
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793918"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634684"
 ---
 # <a name="getting-started"></a>Guia de Introdução
-Usando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]o, você pode usar a [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] tecnologia para acessar bancos de dados SQL da mesma forma que acessaria uma coleção na memória.  
+Usando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], você pode usar a tecnologia LINQ para acessar bancos de dados SQL da mesma forma que acessaria uma coleção na memória.  
   
  Por exemplo, o objeto `nw` no código a seguir é criado para representar o banco de dados `Northwind`, a tabela `Customers` é destinada, as linhas são filtradas para `Customers` de `London` e uma cadeia de caracteres de `CompanyName` é selecionada para recuperação.  
   
@@ -27,9 +27,9 @@ Usando [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]o, voc
   
  Em seguida, tente alguns tutoriais e explicações passo a passo para ter uma experiência prática de uso do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Consulte [aprendendo por passo a passos](learning-by-walkthroughs.md).  
   
- Por fim, saiba como começar a usar seu próprio [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projeto lendo [as etapas típicas para o uso de LINQ to SQL](typical-steps-for-using-linq-to-sql.md).  
+ Por fim, saiba como começar em seu próprio projeto de [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] lendo [as etapas típicas para usar LINQ to SQL](typical-steps-for-using-linq-to-sql.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ to SQL](index.md)
 - [Introdução ao LINQ (C#)](../../../../../csharp/programming-guide/concepts/linq/index.md)

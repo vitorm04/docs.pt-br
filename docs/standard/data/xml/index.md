@@ -3,14 +3,12 @@ title: Documentos e dados XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60614a95e4091b4d7bd9ae3a71e2ddeca53e29ba
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e0c3f3e99b06b65caf79d87a7831369f6fb33b08
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424860"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710785"
 ---
 # <a name="xml-documents-and-data"></a>Documentos e dados XML
 
@@ -44,9 +42,9 @@ As classes XML do .NET Framework fornecem esses benefícios:
 
 - **Extensibilidade.** As classes XML no .NET Framework são extensíveis pelo uso de classes base abstratas e métodos virtuais. Por exemplo, você pode criar uma classe derivada da classe de <xref:System.Xml.XmlUrlResolver> que armazena o fluxo de cache no disco local.
 
-- **Arquitetura conectável.** O .NET Framework fornece uma arquitetura na qual os componentes podem se utilizar uns aos outros e os dados podem ser transmitidos entre os componentes. Por exemplo, um armazenamento de dados, tal como um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>, pode ser transformado com a classe <xref:System.Xml.Xsl.XslCompiledTransform> e a saída pode então ser transmitida para outro armazenamento ou retornados como um fluxo de um serviço da web.
+- **Arquitetura conectável.** O .NET Framework fornece uma arquitetura na qual componentes podem utilizar uns os outros e os dados podem ser transmitidos entre os componentes. Por exemplo, um armazenamento de dados, tal como um objeto <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>, pode ser transformado com a classe <xref:System.Xml.Xsl.XslCompiledTransform> e a saída pode então ser transmitida para outro armazenamento ou retornados como um fluxo de um serviço da web.
 
-- **Desempenho.** Para melhorar o desempenho do aplicativo, algumas das classes XML do .NET Framework dão suporte a um modelo baseado em streaming com as seguintes características:
+- **Desempenho.** Para melhorar o desempenho de aplicativos, algumas das classes XML do .NET Framework suportam um modelo baseado em fluxo contínuo com as seguintes características:
 
   - Armazenamento em cache mínimo para somente encaminhamento, análise de recepção modelo (<xref:System.Xml.XmlReader>).
 
@@ -79,7 +77,7 @@ Descreve como a classe <xref:System.Xml.XmlNamespaceManager> classe é usada par
 [Digite suporte nas classes de System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)\
 Descreve como mapa de tipos de dados XML para tipos de CLR, como converter tipos de dados XML e outros recursos de suporte de tipo nas classes <xref:System.Xml>.
 
-## <a name="related-sections"></a>Seções relacionadas
+## <a name="related-sections"></a>Seções Relacionadas
 
 [ADO.NET](../../../../docs/framework/data/adonet/index.md)\
 Fornece informações sobre como acessar dados usando ADO.NET.

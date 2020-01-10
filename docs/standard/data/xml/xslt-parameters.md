@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e76e0f35dd95c34d3a6fc81c2f6f3504591387cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306295"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709693"
 ---
 # <a name="xslt-parameters"></a>Parâmetros XSLT
 Os parâmetros XSLT são adicionados a <xref:System.Xml.Xsl.XsltArgumentList> usando o método <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> . Um nome qualificado e URI de namespace são associados com o objeto de parâmetro no momento.  
@@ -26,17 +24,17 @@ Os parâmetros XSLT são adicionados a <xref:System.Xml.Xsl.XsltArgumentList> us
   
 3. Passe o objeto de <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
   
-## <a name="parameter-types"></a>Tipos de parâmetro  
+## <a name="parameter-types"></a>Tipos de parâmetros  
  O objeto de parâmetro deve corresponder a um tipo W3C. A tabela seguinte mostra tipos correspondentes W3C, as classes equivalentes do Microsoft.NET (tipo), e se o tipo W3C é um tipo XPath ou tipo de fonte.  
   
 |Tipo W3C|Classe. NET equivalente (tipo)|XPath ou tipo XSLT|  
 |--------------|------------------------------------|------------------------|  
-|`String`|<xref:System.String?displayProperty=nameWithType>|XPath|  
-|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|XPath|  
-|`Number`|<xref:System.Double?displayProperty=nameWithType>|XPath|  
+|`String`|<xref:System.String?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
+|`Boolean`|<xref:System.Boolean?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
+|`Number`|<xref:System.Double?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
 |`Result Tree Fragment`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XSLT|  
-|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|XPath|  
-|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|XPath|  
+|`Node*`|<xref:System.Xml.XPath.XPathNavigator?displayProperty=nameWithType>|{1&gt;XPath&lt;1}|  
+|`Node Set`|<xref:System.Xml.XPath.XPathNodeIterator><br /><br /> **XPathNavigator[]**|{1&gt;XPath&lt;1}|  
   
  os *This são equivalentes a um nó definida que contém um único nó.  
   
@@ -68,6 +66,6 @@ Os parâmetros XSLT são adicionados a <xref:System.Xml.Xsl.XsltArgumentList> us
 </order>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

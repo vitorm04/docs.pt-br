@@ -8,57 +8,55 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 832ea3c976a0a2e6bb3b4df8a2541248cfc56933
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 0d34b06b44241feb7d6e3c8f76447b861563cfdc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663921"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705854"
 ---
 # <a name="security-and-user-input"></a>Segurança e entrada do usuário
 
-Dados de usuário, que é qualquer tipo de entrada (dados de uma solicitação da Web ou URL de entrada para controles de um aplicativo do Microsoft Windows Forms e assim por diante), negativamente pode influenciar o código porque frequentemente esses dados são usados diretamente como parâmetros para chamar outro código. Essa situação é análoga ao código malicioso chame seu código com parâmetros estranhos e as mesmas precauções devem ser tomadas. Entrada do usuário é, na verdade, mais difícil tornar segura porque não há nenhum quadro de pilha para rastrear a presença de dados potencialmente não confiáveis.
+Os dados do usuário, que são qualquer tipo de entrada (dados de uma solicitação da Web ou URL, entrada para controles de um aplicativo Microsoft Windows Forms e assim por diante) podem influenciar o código de forma adversa, pois geralmente esses dados são usados diretamente como parâmetros para chamar outro código. Essa situação é análoga ao código mal-intencionado que chama seu código com parâmetros estranhos e as mesmas precauções devem ser tomadas. A entrada do usuário é realmente mais difícil de se tornar segura, pois não há um quadro de pilha para rastrear a presença dos dados potencialmente não confiáveis.
 
-Eles estão entre os bugs de segurança mais sutil e mais difíceis de localizar porque, embora eles podem existir em código aparentemente não relacionado à segurança, eles são um gateway para passar dados inválidos por meio de outro código. Para procurar esses bugs, siga qualquer tipo de dados de entrada, imagine o que o intervalo de valores possíveis pode ser e considere se o código vendo esses dados pode lidar com todos esses casos. Você pode corrigir esses bugs por meio do intervalo de verificação e rejeitar qualquer entrada que o código não pode manipular.
+Esses são os bugs de segurança mais sutis e difíceis de serem encontrados porque, embora possam existir em código que pareça não estar relacionado à segurança, eles são um gateway para passar dados inválidos para outro código. Para procurar esses bugs, siga qualquer tipo de dado de entrada, imagine o que é o intervalo de possíveis valores e considere se o código que vê esses dados pode lidar com todos esses casos. Você pode corrigir esses bugs por meio da verificação de intervalo e rejeitar qualquer entrada que o código não possa manipular.
 
-Algumas considerações importantes que envolvem dados de usuário incluem o seguinte:
+Algumas considerações importantes envolvendo os dados do usuário incluem o seguinte:
 
-- Qualquer dado de usuário em uma resposta do servidor é executado no contexto do site do servidor no cliente. Se seu servidor Web usa dados de usuário e o insere na página da Web retornada, ele pode, por exemplo, incluir um  **\<script >** de marca e executar como se do servidor.
+- Qualquer dado de usuário em uma resposta de servidor é executado no contexto do site do servidor no cliente. Se o seu servidor Web usa os dados do usuário e os insere na página da Web retornada, ele pode, por exemplo, incluir um **script de\<** marca e executar como se fosse no servidor.
 
 - Lembre-se de que o cliente pode solicitar qualquer URL.
 
-- Considere caminhos complicados ou é inválidos:
+- Considere caminhos complicados ou inválidos:
 
   - .. \, caminhos extremamente longos.
 
   - Uso de caracteres curinga (*).
 
-  - Expansão de token (% % token).
+  - Expansão de token (% token%).
 
-  - Formulários estranhos dos caminhos com significado especial.
+  - Formas estranhas de caminhos com significado especial.
 
-  - Alternativa de nomes de fluxo de sistema de arquivos, como `filename::$DATA`.
+  - Nomes de fluxo do sistema de arquivos alternativos, como `filename::$DATA`.
 
-  - Curto versões dos nomes de arquivo, como `longfi~1` para `longfilename`.
+  - Versões curtas de nomes de arquivos, como `longfi~1` para `longfilename`.
 
-- Lembre-se de que Eval(userdata) pode fazer qualquer coisa.
+- Lembre-se de que Eval (UserData) pode fazer qualquer coisa.
 
-- Tenha cuidado de associação tardia a um nome que inclui alguns dados do usuário.
+- Tenha cuidado com a associação tardia a um nome que inclua alguns dados do usuário.
 
-- Se você estiver lidando com dados da Web, considere as diversas formas de escape que é permitido, incluindo:
+- Se você estiver lidando com dados da Web, considere as várias formas de escapes que são permitidas, incluindo:
 
-  - Escapa hexadecimal (% nn).
+  - Escapes hexadecimais (% nn).
 
-  - Escapes de Unicode (% nnn).
+  - Escapes Unicode (% nnn).
 
-  - Escapa extensa de UTF-8 (% nn % nn).
+  - Escapes UTF-8 longos (% nn% NN).
 
-  - Escapes de duplos (% nn se torna mmnn %, onde % mm é o escape para '% s').
+  - Escapes duplos (% nn torna-se% mmnn, em que% mm é o escape para '% ').
 
-- Esteja atento a nomes de usuário que podem ter mais de um formato canônico. Por exemplo, você geralmente pode usar ambos o MYDOMAIN\\*nome de usuário* formulário ou o *username* @mydomain.example.com formulário.
+- Tenha cuidado com nomes de usuário que possam ter mais de um formato canônico. Por exemplo, geralmente você pode usar o formulário de nome de *usuário* de\\de domínio ou o *nome de usuário*@mydomain.example.com formulário.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -1,20 +1,18 @@
 ---
-title: 'Como: configurar um aplicativo para dar suporte ao .NET Framework 4 ou a versões posteriores'
+title: Como configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores
 ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring apps to support .NET Framework
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cd267de1e632fdc40dc50e8acdeba7d16bf8e61a
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 586f39fc9b50dcd45bb959ebd0063e3c38d9c3ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70779486"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716242"
 ---
-# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Como: configurar um aplicativo para dar suporte ao .NET Framework 4 ou a versões posteriores
+# <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>Como configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores
 
 Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam iniciar ou *ativar* o CLR para executar o código gerenciado. Normalmente, um aplicativo .NET Framework é executado na versão do CLR em que foi criado, mas você pode alterar esse comportamento para aplicativos de área de trabalho usando um arquivo de configuração do aplicativo (às vezes chamado arquivo app.config). No entanto, você não pode alterar o comportamento padrão de ativação para aplicativos da Windows Store ou Windows Phone usando um arquivo de configuração de aplicativo. Este artigo explica como habilitar seu aplicativo da área de trabalho para ser executado em outra versão do .NET Framework e fornece um exemplo de como direcionar à versão 4 ou a outras versões.
 
@@ -45,7 +43,7 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
 1. Adicione ou localize o arquivo de configuração para o projeto do .NET Framework. O arquivo de configuração para um aplicativo está no mesmo diretório e tem o mesmo nome que o aplicativo, mas tem uma extensão .config. Por exemplo, no caso de um aplicativo chamado MyExecutable.exe, o arquivo de configuração do aplicativo chama-se MyExecutable.exe.config.
 
-     Para adicionar um arquivo de configuração, na barra de menus do Visual Studio, escolha **Projeto**, **Adicionar Novo Item**. Escolha **Geral** no painel esquerdo e, em seguida, escolha **Arquivo de Configuração**. Nomeie o arquivo de configuração como *appName*.exe.config. Essas opções de menu não estão disponíveis para projetos de aplicativos da Windows Store ou Windows Phone porque não é possível alterar a política de ativação nessas plataformas.
+     Para adicionar um arquivo de configuração, na barra de menus do Visual Studio, escolha **Projeto**, **Adicionar Novo Item**. Escolha **Geral** no painel esquerdo e, em seguida, escolha **Arquivo de Configuração**. Nomeie o arquivo de configuração *AppName*. exe. config. Essas opções de menu não estão disponíveis para projetos de aplicativo da Windows Store ou de aplicativos do Windows Phone, pois você não pode alterar a política de ativação nessas plataformas.
 
 2. Adicione o elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md) como a seguir ao arquivo de configuração do aplicativo:
 
@@ -73,15 +71,15 @@ Todos os aplicativos que hospedam o CLR (Common Language Runtime) precisam inici
 
 |Configuração do arquivo App.config|Em computadores com a versão 3.5 instalada|No computador com as versões 3.5 e 4 ou posteriores instaladas|No computador com a versão 4 ou posteriores instaladas|
 |-|-|-|-|
-|Nenhum|Executa na versão 3.5|Executa na versão 3.5|Exibe uma mensagem de erro que solicita ao usuário instalar a versão correta*|
+|{1&gt;Nenhum&lt;1}|Executa na versão 3.5|Executa na versão 3.5|Exibe uma mensagem de erro que solicita ao usuário instalar a versão correta*|
 |`<supportedRuntime version="v2.0.50727"/>`|Executa na versão 3.5|Executa na versão 3.5|Exibe uma mensagem de erro que solicita ao usuário instalar a versão correta*|
 |`<supportedRuntime version="v2.0.50727"/>` <br /> `<supportedRuntime version="v4.0"/>`|Executa na versão 3.5|Executa na versão 3.5|É executado na versão 4 ou posteriores|
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|Executa na versão 3.5|É executado na versão 4 ou posteriores|É executado na versão 4 ou posteriores|
 |`<supportedRuntime version="v4.0"/>`|Exibe uma mensagem de erro que solicita ao usuário instalar a versão correta*|É executado na versão 4 ou posteriores|É executado na versão 4 ou posteriores|
 
- \* Para obter mais informações sobre essa mensagem de erro e como evitá-la, confira [Erros de inicialização do .NET Framework: Gerenciando a experiência do usuário](../deployment/initialization-errors-managing-the-user-experience.md).
+ \* Para saber mais sobre essa mensagem de erro e como evitá-la, veja [Erros de inicialização do .NET Framework: Gerenciar a experiência do usuário](../deployment/initialization-errors-managing-the-user-experience.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Migrando do .NET Framework 1.1](migrating-from-the-net-framework-1-1.md)
-- [Guia de migração](index.md)
+- [Guia de Migração](index.md)

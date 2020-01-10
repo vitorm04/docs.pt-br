@@ -3,13 +3,12 @@ title: Ferramentas Globais do .NET Core
 description: Uma visão geral do que são as Ferramentas Globais do .NET Core e os comandos da CLI do .NET Core disponíveis para elas.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.custom: seodec18
-ms.openlocfilehash: 116739f80d5157632a8e44a19cbef6ba7971d339
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 665cee64cb92efd16f5528feb656b377f9f3283c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318309"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714152"
 ---
 # <a name="net-core-global-tools-overview"></a>Visão geral das Ferramentas Globais do .NET Core
 
@@ -72,7 +71,7 @@ As Ferramentas Globais podem ser instaladas no diretório padrão ou em um local
 | Sistema operacional          | Caminho                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
-| Windows     | `%USERPROFILE%\.dotnet\tools` |
+| Portal     | `%USERPROFILE%\.dotnet\tools` |
 
 Esses locais são adicionados ao caminho do usuário quando o SDK é executado pela primeira vez e, portanto, as Ferramentas Globais instaladas nesses locais podem ser chamadas diretamente.
 
@@ -137,6 +136,6 @@ Para exibir todas as Ferramentas Globais atualmente instaladas no computador, ju
 dotnet tool list -g
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 * [Solucionar problemas de uso da ferramenta .NET Core](troubleshoot-usage-issues.md)

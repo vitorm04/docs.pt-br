@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 870fc1d1f02dca7d4488a27385fcfeaec8098ced
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039183"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559710"
 ---
 # <a name="animation-overview"></a>Visão geral da animação
 
@@ -201,7 +201,7 @@ O exemplo a seguir mostra como criar um retângulo que aparece e desaparece de e
 
 Já que as animações geram valores de propriedade, existem diferentes tipos de animação para diferentes tipos de propriedades. Para animar uma propriedade que usa um <xref:System.Double>, como a propriedade <xref:System.Windows.FrameworkElement.Width%2A> de um elemento, use uma animação que produza valores de <xref:System.Double>. Para animar uma propriedade que usa um <xref:System.Windows.Point>, use uma animação que produz <xref:System.Windows.Point> valores, e assim por diante. Devido ao número de diferentes tipos de propriedade, há várias classes de animação no namespace <xref:System.Windows.Media.Animation>. Felizmente, elas seguem uma convenção de nomenclatura estrita que facilita a diferenciação entre elas:
 
-- *tipo*de \<> animação
+- \<*Type*>Animation
 
   Conhecida como "de/para/por" ou animação "básica", ela anima entre um valor inicial e outro de destino, ou então pela adição de um valor de deslocamento ao seu valor inicial.
 
@@ -217,13 +217,13 @@ Já que as animações geram valores de propriedade, existem diferentes tipos de
 
   Animações de quadro chave são mais avançadas que animações de/para/por porque você pode especificar qualquer número de valores de destino e até mesmo controlar seu método de interpolação. Alguns tipos só podem ser animados com animações de quadro chave. As animações de quadro-chave são descritas em detalhes na [visão geral das animações de quadro chave](key-frame-animations-overview.md).
 
-- *tipo*de \<> AnimationUsingPath
+- \<*Type*>AnimationUsingPath
 
   Animações de caminho permitem que você use um caminho geométrico para produzir valores animados.
 
-- *tipo*de \<> AnimationBase
+- \<*Type*>AnimationBase
 
-  Classe abstrata que, quando você a implementa, anima um *tipo*de \<> valor. Essa classe serve como a classe base para \<*tipo*> animação e \<*tipo*> classes AnimationUsingKeyFrames. Você só precisará lidar diretamente com essas classes se quiser criar suas próprias animações personalizadas. Caso contrário, use um *tipo*de \<> animação ou quadro-chave\<*tipo*> animação.
+  Classe abstrata que, quando você implementa, anima um valor \<*Type*>. Esta classe serve como a classe base para as classes \<*Type*>Animation e \<*Type*>AnimationUsingKeyFrames. Você só precisará lidar diretamente com essas classes se quiser criar suas próprias animações personalizadas. Caso contrário, use uma \<*Type*>Animation ou KeyFrame\<*Type*>Animation.
 
 Na maioria dos casos, você desejará usar o *tipo*de \<> classes de animação, como <xref:System.Windows.Media.Animation.DoubleAnimation> e <xref:System.Windows.Media.Animation.ColorAnimation>.
 
@@ -231,10 +231,10 @@ A tabela a seguir mostra vários tipos de animação comuns e algumas propriedad
 
 |Tipo de propriedade|Animação básica (De/Para/Por) correspondente|Animação de quadro chave correspondente|Animação de caminho correspondente|Exemplo de uso|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|Nenhum|Anime a <xref:System.Windows.Media.SolidColorBrush.Color%2A> de um <xref:System.Windows.Media.SolidColorBrush> ou um <xref:System.Windows.Media.GradientStop>.|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|{1&gt;Nenhum&lt;1}|Anime a <xref:System.Windows.Media.SolidColorBrush.Color%2A> de um <xref:System.Windows.Media.SolidColorBrush> ou um <xref:System.Windows.Media.GradientStop>.|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|Anime a <xref:System.Windows.FrameworkElement.Width%2A> de um <xref:System.Windows.Controls.DockPanel> ou a <xref:System.Windows.FrameworkElement.Height%2A> de um <xref:System.Windows.Controls.Button>.|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|Anime a posição de <xref:System.Windows.Media.EllipseGeometry.Center%2A> de um <xref:System.Windows.Media.EllipseGeometry>.|
-|<xref:System.String>|Nenhum|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|Nenhum|Anime a <xref:System.Windows.Controls.TextBlock.Text%2A> de um <xref:System.Windows.Controls.TextBlock> ou a <xref:System.Windows.Controls.ContentControl.Content%2A> de um <xref:System.Windows.Controls.Button>.|
+|<xref:System.String>|{1&gt;Nenhum&lt;1}|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|{1&gt;Nenhum&lt;1}|Anime a <xref:System.Windows.Controls.TextBlock.Text%2A> de um <xref:System.Windows.Controls.TextBlock> ou a <xref:System.Windows.Controls.ContentControl.Content%2A> de um <xref:System.Windows.Controls.Button>.|
 
 <a name="animationsaretimelines"></a>
 
@@ -292,7 +292,7 @@ Atribuir um nome a um <xref:System.Windows.FrameworkElement> difere da atribuiç
 
 - Para fazer uma <xref:System.Windows.FrameworkElement> um destino de animação, você dá um nome definindo sua propriedade <xref:System.Windows.FrameworkElement.Name%2A>. No código, você também deve usar o método <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar o nome do elemento com a página à qual ele pertence.
 
-- Para tornar um objeto de <xref:System.Windows.Freezable> um destino de animação no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use a [diretiva x:Name](../../xaml-services/x-name-directive.md) para atribuir um nome a ele. No código, basta usar o método <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar o objeto com a página à qual ele pertence.
+- Para tornar um objeto de <xref:System.Windows.Freezable> um destino de animação no [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], use a [diretiva x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) para atribuir um nome a ele. No código, basta usar o método <xref:System.Windows.FrameworkElement.RegisterName%2A> para registrar o objeto com a página à qual ele pertence.
 
 As seções a seguir fornecem um exemplo de nomear um elemento em [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] e código. Para obter informações mais detalhadas sobre nomenclatura e direcionamento, consulte a [visão geral dos storyboards](storyboards-overview.md).
 
@@ -367,7 +367,7 @@ As amostras a seguir podem ajudá-lo a começar a adicionar animações a seus a
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|{1&gt;Título&lt;1}|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
 |[Visão geral da animação e do sistema de tempo](animation-and-timing-system-overview.md)|Descreve como o sistema de tempo usa as classes <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock>, que permitem criar animações.|
 |[Dicas e truques de animação](animation-tips-and-tricks.md)|Lista dicas úteis para solucionar problemas com animações, por exemplo, desempenho.|
@@ -380,7 +380,7 @@ As amostras a seguir podem ajudá-lo a começar a adicionar animações a seus a
 |[Visão geral de storyboards](storyboards-overview.md)|Descreve como usar storyboards com várias linhas do tempo para criar animações complexas.|
 |[Visão geral dos comportamentos de tempo](timing-behaviors-overview.md)|Descreve os tipos de <xref:System.Windows.Media.Animation.Timeline> e as propriedades usadas em animações.|
 |[Visão geral de eventos de tempo](timing-events-overview.md)|Descreve os eventos disponíveis nos objetos <xref:System.Windows.Media.Animation.Timeline> e <xref:System.Windows.Media.Animation.Clock> para executar o código em pontos na linha do tempo, como iniciar, pausar, retomar, ignorar ou parar.|
-|[Tópicos de instruções](animation-and-timing-how-to-topics.md)|Contém exemplos de código para usar animações e linhas do tempo em seu aplicativo.|
+|[Tópicos explicativos](animation-and-timing-how-to-topics.md)|Contém exemplos de código para usar animações e linhas do tempo em seu aplicativo.|
 |[Tópicos explicativos de relógios](clocks-how-to-topics.md)|Contém exemplos de código para usar o objeto <xref:System.Windows.Media.Animation.Clock> em seu aplicativo.|
 |[Tópicos explicativos sobre quadros-chave](key-frame-animation-how-to-topics.md)|Contém exemplos de código para usar animações de quadro chave em seu aplicativo.|
 |[Tópicos explicativos de animação do caminho](path-animation-how-to-topics.md)|Contém exemplos de código para usar animações de caminho em seu aplicativo.|

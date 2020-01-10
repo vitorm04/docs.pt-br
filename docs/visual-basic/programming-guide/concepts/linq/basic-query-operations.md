@@ -15,15 +15,15 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: e9a646d60bb22507f4c6bcbcdf9222fd0ed18f02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b9216dba23f49e4d9fd99687e38f5c13addde8fb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345756"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636868"
 ---
 # <a name="basic-query-operations-visual-basic"></a>Operações de consulta básica (Visual Basic)
-Este tópico fornece uma breve introdução à [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] de expressões no Visual Basic e a alguns dos tipos típicos de operações que você executa em uma consulta. Para mais informações, consulte os seguintes tópicos:  
+Este tópico fornece uma breve introdução às expressões de LINQ (consulta integrada à linguagem) no Visual Basic e a alguns dos tipos típicos de operações que você executa em uma consulta. Para mais informações, consulte os seguintes tópicos:  
   
  [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)  
   
@@ -32,7 +32,7 @@ Este tópico fornece uma breve introdução à [!INCLUDE[vbteclinqext](~/include
  [Walkthrough: gravando consultas no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/walkthrough-writing-queries.md)  
   
 ## <a name="specifying-the-data-source-from"></a>Especificando a Fonte de Dados (De)  
- Em uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], a primeira etapa é especificar a fonte de dados que você deseja consultar. Portanto, a cláusula `From` em uma consulta sempre é exibida primeiro. Operadores de consulta Selecione e formate o resultado com base no tipo de origem.  
+ Em uma consulta LINQ, a primeira etapa é especificar a fonte de dados que você deseja consultar. Portanto, a cláusula `From` em uma consulta sempre é exibida primeiro. Operadores de consulta Selecione e formate o resultado com base no tipo de origem.  
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
@@ -124,7 +124,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Garcia, Hugo  
   
- Garcia, Débora  
+ Garcia, Debra  
   
  Tucker, lance  
   
@@ -152,10 +152,10 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  Para obter mais informações sobre `Group By`, consulte [cláusula Group by](../../../../visual-basic/language-reference/queries/group-by-clause.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [Introdução ao LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Introdução à LINQ no Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Consultas](../../../../visual-basic/language-reference/queries/index.md)
 - [Visão geral de operadores de consulta padrão (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)

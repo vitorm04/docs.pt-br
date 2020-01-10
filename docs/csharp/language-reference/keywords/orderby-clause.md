@@ -1,6 +1,5 @@
 ---
 title: Cláusula orderby – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - orderby
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - orderby clause [C#]
 - orderby keyword [C#]
 ms.assetid: 21f87f48-d69d-4e95-9a52-6fec47b37e1f
-ms.openlocfilehash: 09a745fe3da3a5acb71972b9cf56391774c7016a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: d88b2b40f63f0616cfd54e8abb62f1bc2183f776
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422652"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713304"
 ---
 # <a name="orderby-clause-c-reference"></a>Cláusula orderby (Referência de C#)
 
@@ -36,7 +35,7 @@ O exemplo a seguir executa uma classificação primária pelos sobrenomes dos al
 
 Em tempo de compilação, a cláusula `orderby` é convertida em uma chamada para o método <xref:System.Linq.Enumerable.OrderBy%2A>. Várias chaves na cláusula `orderby` são traduzidas para chamadas de método <xref:System.Linq.Enumerable.ThenBy%2A>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave de Consulta (LINQ)](query-keywords.md)

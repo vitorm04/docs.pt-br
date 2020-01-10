@@ -1,22 +1,20 @@
 ---
 title: Personalização do marshaling de estrutura – .NET
 description: Saiba como personalizar a forma como o .NET realiza marshal em suas estruturas para uma representação nativa.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: f4b8402413f4d2f558d8e61ad4f10490dece9835
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423985"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706342"
 ---
 # <a name="customizing-structure-marshaling"></a>Personalização do marshaling de estrutura
 
-Às vezes, as regras de marshaling padrão para estruturas não são exatamente o que você precisa. Os tempos de execução do .NET fornecem alguns pontos de extensão para você personalizar o layout de sua estrutura e como os campos têm o marshaling realizado.
+Às vezes, as regras de marshaling padrão para estruturas não são exatamente o que você precisa. Os runtimes do .NET fornecem alguns pontos de extensão para você personalizar o layout de sua estrutura e como os campos têm o marshaling realizado.
 
 ## <a name="customizing-structure-layout"></a>Personalização do layout de estrutura
 
@@ -26,11 +24,11 @@ O .NET fornece o atributo <xref:System.Runtime.InteropServices.StructLayoutAttri
 
 **✔️ USE** somente `LayoutKind.Explicit` no marshaling quando seu struct nativo também tiver um layout explícito, como uma união.
 
-**❌ Evite** usar `LayoutKind.Explicit` ao realizar o marshaling de estruturas em plataformas não Windows se você precisar direcionar os tempos de execução antes do .net Core 3,0. O tempo de execução do .NET Core antes de 3,0 não dá suporte à passagem de estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits que não sejam Windows. No entanto, o tempo de execução dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
+**❌ Evite** usar `LayoutKind.Explicit` ao realizar o marshaling de estruturas em plataformas não Windows se você precisar direcionar os tempos de execução antes do .net Core 3,0. O tempo de execução do .NET Core antes de 3,0 não dá suporte à passagem de estruturas explícitas por valor para funções nativas em sistemas Intel ou AMD de 64 bits que não sejam Windows. No entanto, o runtime dá suporte à passagem de estruturas explícitas por referência em todas as plataformas.
 
 ## <a name="customizing-boolean-field-marshaling"></a>Personalização do marshaling de campo booliano
 
-O código nativo tem muitas representações boolianas diferentes. Somente no Windows, há três formas de representar valores boolianos. O tempo de execução não conhece a definição nativa de sua estrutura, portanto, o melhor que ele pode fazer é estimar como realizar marshal de seus valores boolianos. O tempo de execução do .NET fornece uma maneira de indicar como realizar marshal de seu campo booliano. Os exemplos a seguir mostram como realizar marshal do .NET `bool` para diferentes tipos boolianos nativos.
+O código nativo tem muitas representações boolianas diferentes. Somente no Windows, há três formas de representar valores boolianos. O runtime não conhece a definição nativa de sua estrutura, portanto, o melhor que ele pode fazer é estimar como realizar marshal de seus valores boolianos. O runtime do .NET fornece uma maneira de indicar como realizar marshal de seu campo booliano. Os exemplos a seguir mostram como realizar marshal do .NET `bool` para diferentes tipos boolianos nativos.
 
 Valores boolianos padrão para realizar marshaling como um valor [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) Win32 nativo de 4 bytes conforme mostrado no exemplo a seguir:
 
@@ -65,7 +63,7 @@ struct WinBool
 };
 ```
 
-Usando os valores `UnmanagedType.U1` ou `UnmanagedType.I1` abaixo, você pode informar o tempo de execução para realizar marshal do campo `b` como um tipo `bool` nativo de 1 byte.
+Usando os valores `UnmanagedType.U1` ou `UnmanagedType.I1` abaixo, você pode informar o runtime para realizar marshal do campo `b` como um tipo `bool` nativo de 1 byte.
 
 ```csharp
 public struct CBool
@@ -82,7 +80,7 @@ struct CBool
 };
 ```
 
-No Windows, use o valor <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> para informar o tempo de execução para realizar marshal de seu valor booliano em um valor `VARIANT_BOOL` de 2 bytes:
+No Windows, use o valor <xref:System.Runtime.InteropServices.UnmanagedType.VariantBool?displayProperty=nameWithType> para informar o runtime para realizar marshal de seu valor booliano em um valor `VARIANT_BOOL` de 2 bytes:
 
 ```csharp
 public struct VariantBool
@@ -122,7 +120,7 @@ struct DefaultArray
 };
 ```
 
-Se você estiver interagindo com APIs COM, talvez seja necessário realizar marshal de matrizes como objetos `SAFEARRAY*`. Use o valor <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> para informar o tempo de execução para realizar marshal de uma matriz como uma `SAFEARRAY*`:
+Se você estiver interagindo com APIs COM, talvez seja necessário realizar marshal de matrizes como objetos `SAFEARRAY*`. Use o valor <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType> para informar o runtime para realizar marshal de uma matriz como uma `SAFEARRAY*`:
 
 ```csharp
 public struct SafeArrayExample
@@ -141,7 +139,7 @@ struct SafeArrayExample
 
 Se for necessário personalizar o tipo de elemento que está na `SAFEARRAY`, use os campos <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArraySubType?displayProperty=nameWithType> e <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType?displayProperty=nameWithType> para personalizar o tipo de elemento exato da `SAFEARRAY`.
 
-Se você precisar realizar marshal da matriz in-loco, use o valor <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> para informar o marshaler para realizar marshal da matriz in-loco. Ao usar esse marshaling, você também precisa fornecer um valor ao campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> para o número de elementos na matriz, para que o tempo de execução possa alocar espaço corretamente para a estrutura.
+Se você precisar realizar marshal da matriz in-loco, use o valor <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType> para informar o marshaler para realizar marshal da matriz in-loco. Ao usar esse marshaling, você também precisa fornecer um valor ao campo <xref:System.Runtime.InteropServices.MarshalAsAttribute.SizeConst?displayProperty=nameWithType> para o número de elementos na matriz, para que o runtime possa alocar espaço corretamente para a estrutura.
 
 ```csharp
 public struct InPlaceArray
@@ -394,7 +392,7 @@ struct ObjectVariant
 };
 ```
 
-A tabela a seguir descreve como diferentes tipos de tempo de execução do campo `obj` são mapeados para os vários tipos armazenados em um `VARIANT`:
+A tabela a seguir descreve como diferentes tipos de runtime do campo `obj` são mapeados para os vários tipos armazenados em um `VARIANT`:
 
 | Tipo .NET | Tipo de VARIANTE | | Tipo .NET | Tipo de VARIANTE |
 |------------|--------------|-|----------|--------------|

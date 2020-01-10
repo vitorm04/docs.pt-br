@@ -1,19 +1,17 @@
 ---
 title: Como personalizar o marshaling de parâmetro – .NET
 description: Saiba como personalizar a forma como o .NET realiza marshalling em seus parâmetros para uma representação nativa.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 877eb00c18c9108fe6bcfb50104ff5ed813e85f3
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 36fb8c105a8836d77b862095a616de3ba641073c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065969"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706355"
 ---
 # <a name="customizing-parameter-marshaling"></a>Como personalizar o marshaling de parâmetro
 
-Quando o comportamento de marshaling de parâmetro padrão do tempo de execução do .NET não fizer o que você deseja, use o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> para personalizar o modo como seus parâmetros passam pelo processo de marshaling.
+Quando o comportamento de marshaling de parâmetro padrão do runtime do .NET não fizer o que você deseja, use o atributo <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> para personalizar o modo como seus parâmetros passam pelo processo de marshaling.
 
 ## <a name="customizing-string-parameters"></a>Personalizar parâmetros de cadeias de caracteres
 
@@ -23,7 +21,7 @@ O .NET tem uma variedade de formatos para a realização de marshaling de cadeia
 
 Cada um desses formatos passa uma cadeia de caracteres terminada em nulo para o código nativo. Eles diferem pela codificação da cadeia de caracteres nativa.
 
-| Valor `System.Runtime.InteropServices.UnmanagedType` | Codificando |
+| Valor `System.Runtime.InteropServices.UnmanagedType` | Encoding |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 | 
@@ -50,7 +48,7 @@ Para saber mais sobre como realizar marshaling de parâmetros boolianos ou decim
 
 ## <a name="customizing-object-parameters-windows-only"></a>Personalizar parâmetros de objeto (somente Windows)
 
-No Windows, o tempo de execução do .NET fornece várias maneiras diferentes de realizar marshalling de parâmetros de objeto para código nativo.
+No Windows, o runtime do .NET fornece várias maneiras diferentes de realizar marshalling de parâmetros de objeto para código nativo.
 
 ### <a name="marshaling-as-specific-com-interfaces"></a>Marshaling como interfaces COM específicas
 

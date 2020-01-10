@@ -1,6 +1,5 @@
 ---
 title: Palavra-chave ref – Referência de C#
-ms.custom: seodec18
 ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: f11137b3c13bb9e8670c4df25fedf3251724a088
-ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
-ms.translationtype: HT
+ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/17/2019
-ms.locfileid: "69566889"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715179"
 ---
 # <a name="ref-c-reference"></a>ref (Referência de C#)
 
@@ -62,7 +61,7 @@ No entanto, os métodos podem ser sobrecarregados quando um método tem um parâ
 - Métodos assíncronos, que você define usando o modificador [async](async.md).  
 - Métodos de iterador, que incluem uma instrução [yield return](yield.md) ou `yield break`.  
 
-## <a name="passing-an-argument-by-reference-an-example"></a>Passando um argumento por referência: Um exemplo
+## <a name="passing-an-argument-by-reference-an-example"></a>Passando um argumento por referência: um exemplo
 
 Os exemplos anteriores passam tipos de valor por referência. Você também pode usar a palavra-chave `ref` para passar tipos de referência por referência. Passar um tipo de referência por referência permite que o método chamado substitua o objeto ao qual se refere o parâmetro de referência no chamador. O local de armazenamento do objeto é passado para o método como o valor do parâmetro de referência. Se você alterar o valor no local de armazenamento do parâmetro (para apontar para um novo objeto), irá alterar também o local de armazenamento ao qual se refere o chamador. O exemplo a seguir passa uma instância de um tipo de referência como um parâmetro `ref`.
   
@@ -151,7 +150,7 @@ Você pode combinar modificadores para declarar um struct como `readonly ref`. U
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Escrever código eficiente seguro](../../write-safe-efficient-code.md)
 - [Retornos de ref e locais de ref](../../programming-guide/classes-and-structs/ref-returns.md)

@@ -3,14 +3,12 @@ title: SOM (Schema Object Model) XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a897a599-ffd1-43f9-8807-e58c8a7194cd
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 40a792f91ecd343684ff4c7921d6b21d25abecf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 45bfba7bdab31b3edda59a350788e50182123ce0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570119"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709901"
 ---
 # <a name="xml-schema-object-model-som"></a>SOM (Schema Object Model) XML
 Um esquema XML é uma ferramenta poderosa e complexa para criar e validar a estrutura de documentos XML compatíveis. De maneira semelhante à modelagem de dados em um banco de dados relacional, um esquema fornece uma maneira de definir a estrutura de documentos XML, especificando os elementos que podem ser usados nos documentos, bem como a estrutura e os tipos que esses elementos devem seguir para serem válidos para esse esquema específico.  

@@ -2,21 +2,21 @@
 title: Visão geral do global.json
 description: Saiba como usar o arquivo global.json para definir a versão do SDK do .NET Core ao executar comandos de CLI do .NET Core.
 ms.date: 12/03/2018
-ms.custom: updateeachrelease, seodec18
-ms.openlocfilehash: 2c1fec102993b61e1eb699e8d3508b773302f569
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.custom: updateeachrelease
+ms.openlocfilehash: 4da703266e98b209cdd031f4ea856b4d7c83930c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117434"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714169"
 ---
 # <a name="globaljson-overview"></a>Visão geral do global.json
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-O arquivo *global.json* permite que você defina qual versão do SDK do .NET Core é usada ao executar comandos de CLI do .NET Core. A seleção do SDK do .NET Core não depende da especificação do tempo de execução ao qual o projeto é direcionado. A versão do SDK do .NET Core indica quais versões das ferramentas de CLI do .NET Core são usadas. Em geral, o ideal é usar a versão mais recente das ferramentas, portanto, não há necessidade de usar um arquivo *global.json*.
+O arquivo *global.json* permite que você defina qual versão do SDK do .NET Core é usada ao executar comandos de CLI do .NET Core. A seleção do SDK do .NET Core não depende da especificação do runtime ao qual o projeto é direcionado. A versão do SDK do .NET Core indica quais versões das ferramentas de CLI do .NET Core são usadas. Em geral, o ideal é usar a versão mais recente das ferramentas, portanto, não há necessidade de usar um arquivo *global.json*.
 
-Para obter mais informações de como especificar o tempo de execução nesse caso, confira [Estruturas de destino](../../standard/frameworks.md).
+Para obter mais informações de como especificar o runtime nesse caso, confira [Estruturas de destino](../../standard/frameworks.md).
 
 O SDK do .NET Core procura um arquivo *global.json* no diretório de trabalho atual (que não necessariamente é o mesmo que o diretório do projeto) ou um de seus diretórios pai.
 
@@ -24,13 +24,13 @@ O SDK do .NET Core procura um arquivo *global.json* no diretório de trabalho at
 
 ### <a name="sdk"></a>sdk
 
-Tipo: Objeto
+Tipo: Object
 
 Especifica as informações sobre o SDK do .NET Core a ser selecionado.
 
-#### <a name="version"></a>version
+#### <a name="version"></a>versão
 
-Tipo: Cadeia de Caracteres
+Tipo: String
 
 A versão do SDK do .NET Core a ser usada.
 
@@ -68,8 +68,8 @@ dotnet new globaljson --sdk-version 2.2.100
 ## <a name="matching-rules"></a>Regras de correspondência
 
 > [!NOTE]
-> As regras de correspondência são controladas pelo apphost, que faz parte do tempo de execução do .NET Core.
-> A versão mais recente do host é usada quando há vários tempos de execução instalados lado a lado.
+> As regras de correspondência são controladas pelo apphost, que faz parte do runtime do .NET Core.
+> A versão mais recente do host é usada quando há vários runtimes instalados lado a lado.
 
 Começando com o .NET Core 2.0, as seguintes regras se aplicam ao determinar qual versão do SDK será usada:
 
@@ -103,6 +103,6 @@ Este aviso indica que seu projeto está sendo compilado usando uma versão prév
 
 A partir do SDK do .NET Core 2.1 (versão 2.1.300), o comando `dotnet ef` vem incluído no SDK. Este aviso indica que o projeto é direcionado ao EF Core 1.0 ou 1.1, que não é compatível com o SDk do .NET Core 2.1 e versões posteriores. Para compilar seu projeto, instale o SDK do .NET Core 2.0 (versão 2.1.201) e versões anteriores em seu computador e defina a versão do SDK desejada usando o arquivo *global.json*. Para saber mais sobre o comando `dotnet ef`, confira [Ferramentas da linha de comando do .NET EF Core](/ef/core/miscellaneous/cli/dotnet).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como os SDKs do projeto são resolvidos](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

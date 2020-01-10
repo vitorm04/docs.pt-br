@@ -1,19 +1,17 @@
 ---
 title: Como serializar e desserializar JSON usando C# -.net
-author: tdykstra
-ms.author: tdykstra
 ms.date: 09/16/2019
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 3d3dc0011562e25854938aff857f2832a5978b49
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9c690e736a08c729a4099d5e7a519ed17ec282c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283329"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705789"
 ---
 # <a name="how-to-serialize-and-deserialize-json-in-net"></a>Como serializar e desserializar JSON no .NET
 
@@ -23,7 +21,7 @@ As direções e o código de exemplo usam a biblioteca diretamente, não por mei
 
 A maior parte do código de exemplo de serialização define <xref:System.Text.Json.JsonSerializerOptions.WriteIndented?displayProperty=nameWithType> a `true` como "muito impresso" o JSON (com recuo e espaço em branco para legibilidade humana). Para uso em produção, você normalmente aceitaria o valor padrão de `false` para essa configuração.
 
-## <a name="namespaces"></a>Namespaces
+## <a name="namespaces"></a>{1&gt;Namespaces&lt;1}
 
 O namespace <xref:System.Text.Json> contém todos os pontos de entrada e os tipos principais. O namespace <xref:System.Text.Json.Serialization> contém atributos e APIs para cenários avançados e personalização específicas para serialização e desserialização. Os exemplos de código mostrados neste artigo exigem `using` diretivas para um ou ambos os namespaces:
 
@@ -377,11 +375,11 @@ Para excluir todas as propriedades de valor nulo, defina a propriedade <xref:Sys
 
 Aqui está um objeto de exemplo para serializar e a saída JSON:
 
-|Propriedade |Valor  |
+|propriedade |Value  |
 |---------|---------|
 | Date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| Resumo| nulo|
+| Resumo| {1&gt;nulo&lt;1}|
 
 ```json
 {
@@ -460,7 +458,7 @@ Para minimizar a saída, você pode usar <xref:System.Text.Encodings.Web.JavaScr
 
 ## <a name="serialize-properties-of-derived-classes"></a>Serializar Propriedades de classes derivadas
 
-Não há suporte para a serialização polimórfica quando você especifica no momento da compilação o tipo a ser serializado. Por exemplo, suponha que você tenha uma classe `WeatherForecast` e uma classe derivada `WeatherForecastWithWind`:
+Não há suporte para a serialização polimórfica quando você especifica no momento da compilação o tipo a ser serializado. Por exemplo, suponha que você tenha uma classe `WeatherForecast` e uma classe derivada `WeatherForecastDerived`:
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWF)]
 
@@ -470,7 +468,7 @@ E suponha que o argumento de tipo do método de `Serialize` em tempo de compila�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/SerializePolymorphic.cs?name=SnippetSerializeDefault)]
 
-Nesse cenário, a propriedade `WindSpeed` não é serializada, mesmo que o objeto `weatherForecast` seja, na verdade, um objeto `WeatherForecastWithWind`. Somente as propriedades da classe base são serializadas:
+Nesse cenário, a propriedade `WindSpeed` não é serializada, mesmo que o objeto `weatherForecast` seja, na verdade, um objeto `WeatherForecastDerived`. Somente as propriedades da classe base são serializadas:
 
 ```json
 {
@@ -571,7 +569,7 @@ Se você desserializar o JSON mostrado no tipo mostrado, as propriedades `DatesA
 
 Quando você desserializar o JSON mostrado anteriormente neste tipo de exemplo, os dados extras se tornarão pares chave-valor da propriedade `ExtensionData`:
 
-|Propriedade |Valor  |Observações  |
+|propriedade |Value  |{1&gt;Observações&lt;1}  |
 |---------|---------|---------|
 | Date    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | Incompatibilidade de maiúsculas e minúsculas (`temperatureCelsius` no JSON), portanto, a propriedade não está definida. |

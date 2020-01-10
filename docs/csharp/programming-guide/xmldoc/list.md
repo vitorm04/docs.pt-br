@@ -1,6 +1,5 @@
 ---
 title: <list> – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -13,12 +12,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 0df6653171aa0366f555c39e4644f13b2b7384f9
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 6e6f3a3399f2bffe84b5cec733833c974a0bb51b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523437"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711747"
 ---
 # <a name="list-c-programming-guide"></a>\<list> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -55,7 +54,7 @@ ms.locfileid: "72523437"
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

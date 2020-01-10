@@ -1,14 +1,13 @@
 ---
 title: protected internal (referência do C#)
-ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 6e5a4c6e63c2c05df54df6bed542eab3f43f9272
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422578"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713190"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (referência do C#)
 
@@ -66,7 +65,7 @@ Membros de struct não podem ser `protected internal` porque o struct não pode 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

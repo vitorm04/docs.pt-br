@@ -1,18 +1,17 @@
 ---
 title: Classes – Guia de Programação em C#
-ms.custom: seodec18
 description: Saiba mais sobre tipos de classes e como criá-las
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
-ms.translationtype: HT
+ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69597181"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714972"
 ---
 # <a name="classes-c-programming-guide"></a>Classes (Guia de Programação em C#)
 
@@ -86,7 +85,7 @@ Quando uma classe declara uma classe base, ela herda todos os membros da classe 
   
 Ao contrário do C++, uma classe no C# só pode herdar diretamente de uma classe base. No entanto, como uma classe base pode herdar de outra classe, uma classe pode herdar indiretamente várias classes base. Além disso, uma classe pode implementar diretamente mais de uma interface. Para obter mais informações, consulte [Interfaces](../interfaces/index.md).  
   
-Uma classe pode ser declarada [abstract](../../language-reference/keywords/abstract.md). Uma classe abstrata contém métodos abstratos que têm uma definição de assinatura, mas não têm implementação. As classes abstratas não podem ser instanciadas. Elas só podem ser usadas por meio de classes derivadas que implementam os métodos abstratos. Por outro lado, uma classe [lacrada](../../language-reference/keywords/sealed.md) não permite que outras classes sejam derivadas dela. Para obter mais informações, consulte [Classes e Membros de Classes Abstratos e Lacrados](abstract-and-sealed-classes-and-class-members.md).  
+Uma classe pode ser declarada [abstract](../../language-reference/keywords/abstract.md). Uma classe abstrata contém métodos abstratos que têm uma definição de assinatura, mas não têm implementação. As classes abstratas não podem ser instanciadas. Elas só podem ser usadas por meio de classes derivadas que implementam os métodos abstratos. Por outro lado, uma classe [lacrada](../../language-reference/keywords/sealed.md) não permite que outras classes sejam derivadas dela. Para obter mais informações, consulte [Classes e membros de classes abstratos e lacrados](abstract-and-sealed-classes-and-class-members.md).  
   
 As definições de classe podem ser divididas entre arquivos de origem diferentes. Para obter mais informações, consulte [Classes e métodos parciais](partial-classes-and-methods.md).  
   
@@ -96,11 +95,11 @@ No exemplo a seguir, é definida uma classe pública que contém uma [propriedad
   
 [!code-csharp[Class Example](~/samples/snippets/csharp/programming-guide/classes-and-structs/class-example.cs)] 
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Programação Orientada a Objeto](../concepts/object-oriented-programming.md)

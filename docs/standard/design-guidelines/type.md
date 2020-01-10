@@ -8,28 +8,27 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-author: KrzysztofCwalina
-ms.openlocfilehash: 16f2a095f461a406eedbd2b34b0c91d3ac43bbe5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e2fe7168bd0029d8f0e8f69a136c9089032973f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650096"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709017"
 ---
 # <a name="type-design-guidelines"></a>Diretrizes de Design de tipo
-Da perspectiva do CLR, há apenas duas categorias de tipos — fazer referência a tipos e tipos de valor — mas com a finalidade de uma discussão sobre o design de estrutura, dividimos tipos em grupos mais lógicos, cada um com suas próprias regras de design específico.  
+Da perspectiva do CLR, há apenas duas categorias de tipos — tipos de referência e tipos de valor — mas, para fins de uma discussão sobre design de estrutura, dividimos os tipos em mais grupos lógicos, cada um com suas próprias regras de design específicas.  
   
- As classes são o caso geral de tipos de referência. Eles formam a maior parte dos tipos na maioria das estruturas. Classes deve sua popularidade, para o amplo conjunto de recursos orientados a objeto, que oferecem suporte e sua aplicabilidade geral. Classes base e classes abstratas são grupos lógicos especiais relacionados à extensibilidade.  
+ As classes são o caso geral dos tipos de referência. Eles compõem a massa de tipos na maioria das estruturas. As classes conferem sua popularidade ao conjunto avançado de recursos orientados a objeto que dão suporte e à aplicabilidade geral. As classes base e as classes abstratas são grupos lógicos especiais relacionados à extensibilidade.  
   
- Interfaces são tipos que podem ser implementados por tipos de referência e tipos de valor. Assim, elas servem como raízes de polimórficas hierarquias de tipos de referência e tipos de valor. Além disso, as interfaces podem ser usadas para simular a herança múltipla, que não tem suporte nativo pelo CLR.  
+ Interfaces são tipos que podem ser implementados por tipos de referência e tipos de valor. Assim, eles podem servir como raízes de hierarquias polimórficas de tipos de referência e tipos de valor. Além disso, as interfaces podem ser usadas para simular várias heranças, o que não tem suporte nativo do CLR.  
   
- Structs são o caso geral de tipos de valor e deve ser reservados para tipos de pequenos e simples, semelhantes a primitivos de linguagem.  
+ As structs são o caso geral dos tipos de valor e devem ser reservadas para tipos pequenos e simples, semelhantes aos primitivos de linguagem.  
   
- Enumerações são um caso especial de tipos de valor usados para definir conjuntos de curtos de valores, como dias da semana, cores de console e assim por diante.  
+ Enums são um caso especial de tipos de valor usados para definir conjuntos curtos de valores, como dias da semana, cores do console e assim por diante.  
   
- Classes estáticas são tipos que se destina a ser contêineres para membros estáticos. Normalmente, eles são usados para fornecer atalhos para outras operações.  
+ Classes estáticas são tipos destinados a contêineres para membros estáticos. Normalmente, eles são usados para fornecer atalhos para outras operações.  
   
- Delegados, exceções, atributos, matrizes e coleções são todos os casos especiais de tipos de referência que se destina para usos específicos, e diretrizes para design e uso são discutidas em outro lugar neste livro.  
+ Delegados, exceções, atributos, matrizes e coleções são casos especiais de tipos de referência destinados a usos específicos, e as diretrizes para seu design e uso são discutidas em outro lugar neste livro.  
   
  **✓ DO** Certifique-se de que cada tipo é um conjunto bem definido de membros relacionados, não apenas um conjunto aleatório de funcionalidades relacionadas.  
   
@@ -41,10 +40,10 @@ Da perspectiva do CLR, há apenas duas categorias de tipos — fazer referência
  [Design de Struct](../../../docs/standard/design-guidelines/struct.md)  
  [Design de enumeração](../../../docs/standard/design-guidelines/enum.md)  
  [Tipos aninhados](../../../docs/standard/design-guidelines/nested-types.md)  
- *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

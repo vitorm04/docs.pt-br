@@ -3,14 +3,12 @@ title: Notas de implementação de suporte do tipo XML
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 817d48e15f3a1d370e1953ca9c9aa8e10baa7f29
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 40ab0f746ef82ccd195fc6b873f5c8edb255f868
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69916030"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709862"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Notas de implementação de suporte do tipo XML
 Este tópico descreve alguns detalhes de implementação de que você deseja estar ciente.  
@@ -34,7 +32,7 @@ Este tópico descreve alguns detalhes de implementação de que você deseja est
   
  A classe de <xref:System.TimeSpan> não suporta este pedido parcial. Em vez disso, escolher um número específico de dias para 1 e 1 ano mês; 365 dias e 30 dias respectivamente.  
   
- Para saber mais sobre o tipo `xs:duration`, confira a Parte 2 do [Esquema XML do W3C: recomendação de tipos de dados](https://www.w3.org/TR/xmlschema-2/).
+ Para obter mais informações sobre o tipo `xs:duration`, confira a Parte 2 do [Esquema XML do W3C: recomendação de tipos de dados](https://www.w3.org/TR/xmlschema-2/).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>xs:time, tipos gregorianos de data, e System.DateTime  
  Quando um valor de `xs:time` é mapeado para um objeto de <xref:System.DateTime> , o campo de <xref:System.DateTime.MinValue> é usado para inicializar propriedades de data do objeto de <xref:System.DateTime> (como <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A>, e <xref:System.DateTime.Day%2A>) para o valor possível com o menor de <xref:System.DateTime> .  
@@ -47,6 +45,6 @@ Este tópico descreve alguns detalhes de implementação de que você deseja est
 ### <a name="xsanyuri-and-systemuri"></a>xs:anyURI e System.Uri  
  Quando uma instância de `xs:anyURI` que representa o URL relativa é mapeada a <xref:System.Uri>, o objeto de <xref:System.Uri> não tem URI base.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Type Support in the System.Xml Classes](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md) (Suporte a tipo nas classes System.XML)

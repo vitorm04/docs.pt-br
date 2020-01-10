@@ -1,6 +1,5 @@
 ---
 title: Operador => – referência do C#
-ms.custom: seodec18
 ms.date: 01/22/2019
 f1_keywords:
 - =>_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: b8d1a4e3971eb30e76bf543497931ce029c5541d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 61cc3c3ab4f0b22c4040a9b8a025c81071f4d942
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73036373"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712696"
 ---
 # <a name="-operator-c-reference"></a>Operador => (referência do C#)
 
@@ -74,7 +73,7 @@ O operador `=>` não pode ser sobrecarregado.
 
 Para obter mais informações sobre o operador lambda, consulte a seção [expressões de função anônimas](~/_csharplang/spec/expressions.md#anonymous-function-expressions) da [ C# especificação da linguagem](~/_csharplang/spec/introduction.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)

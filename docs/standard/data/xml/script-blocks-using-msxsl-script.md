@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1488fb6b7671acd86286bcac6fbfce8bee9429ad
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69939583"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710187"
 ---
 # <a name="script-blocks-using-msxslscript"></a>Blocos de script usando msxsl:script
 A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts inserido usando o elemento `msxsl:script`. Quando a folha de estilos é carregada, todas as funções definidas são compiladas para Microsoft Intermediate Language (MSIL) pelo Code Document Object Model (CodeDOM) e executadas durante o tempo de execução. O assembly gerado no bloco de script inserido é separado do assembly gerado para a folha de estilos.  
@@ -91,18 +89,18 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts in
   
  O atributo `name` contém o nome do assembly e o atributo `href` contém o caminho para o assembly. O nome do assembly pode ser um nome completo, como "System.Data, Version=2.0.3600.0, Culture=neutral, PublicKeyToken=b77a5c561934e089", ou um nome curto, como "System.Web".  
   
-#### <a name="namespaces"></a>Namespaces  
+#### <a name="namespaces"></a>{1&gt;Namespaces&lt;1}  
  Os seguintes namespaces são incluídos por padrão:  
   
-- Sistema  
+- System  
   
 - System.Collection  
   
-- System.Text  
+- {1&gt;System.Text&lt;1}  
   
-- System.Text.RegularExpressions  
+- {1&gt;System.Text.RegularExpressions&lt;1}  
   
-- System.Xml  
+- {1&gt;System.Xml&lt;1}  
   
 - System.Xml.Xsl  
   
@@ -148,7 +146,7 @@ A classe <xref:System.Xml.Xsl.XslCompiledTransform> oferece suporte a scripts in
 </circles>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Dynamic Source Code Generation and Compilation](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md) (Compilação e geração de código-fonte dinâmico)

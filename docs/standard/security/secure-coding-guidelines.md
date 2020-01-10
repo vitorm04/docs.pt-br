@@ -14,77 +14,75 @@ helpviewer_keywords:
 - security-neutral code
 - security [.NET], coding guidelines
 ms.assetid: 4f882d94-262b-4494-b0a6-ba9ba1f5f177
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b3a8f0dfc1a2b5e09722876b73281ed1d8b6334e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 51f835803cc545e2a9982c1c8a90d0c998c2bcb8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018639"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705906"
 ---
 # <a name="secure-coding-guidelines"></a>Diretrizes de codificação segura
 
-Segurança baseada em evidência e segurança de acesso do código fornecem mecanismos muito poderosos, explícitos para implementar a segurança. A maioria dos códigos de aplicativo pode simplesmente usar a infra-estrutura implementada pelo .NET. Em alguns casos, os adicionais de segurança específicos do aplicativo é necessária, compilada estendendo o sistema de segurança ou usando novos métodos ad hoc.
+Segurança baseada em evidências e segurança de acesso a código fornecem mecanismos muito poderosos e explícitos para implementar a segurança. A maioria dos códigos de aplicativo pode simplesmente usar a infraestrutura implementada pelo .NET. Em alguns casos, é necessária uma segurança adicional específica do aplicativo, criada por meio da extensão do sistema de segurança ou usando novos métodos ad hoc.
 
-Usando o .NET imposta permissões e outra imposição em seu código, você deve colocar as barreiras para impedir que códigos mal-intencionados de acessar informações que você não deseja que ela tenha ou executar outras ações indesejáveis. Além disso, você deve obter um equilíbrio entre segurança e usabilidade em todos os cenários esperados usando código confiável.
+Usando as permissões impostas do .NET e outras imposição em seu código, você deve colocar barreiras para impedir que um código mal-intencionado acesse informações que você não deseja que ele tenha ou execute outras ações indesejadas. Além disso, você deve ter um equilíbrio entre segurança e usabilidade em todos os cenários esperados usando código confiável.
 
-Esta visão geral descreve as diferentes maneiras de código pode ser projetado para trabalhar com o sistema de segurança.
+Esta visão geral descreve as diferentes maneiras como o código pode ser projetado para funcionar com o sistema de segurança.
 
 ## <a name="securing-resource-access"></a>Protegendo o acesso aos recursos
 
-Ao projetar e escrever seu código, você precisa proteger e limitar o acesso que o código tem a recursos, especialmente ao usar ou chamar o código de origem desconhecida. Portanto, tenha em mente as seguintes técnicas para garantir que o código está seguro:
+Ao projetar e escrever seu código, você precisa proteger e limitar o acesso que o código tem aos recursos, especialmente ao usar ou invocar o código de origem desconhecida. Portanto, tenha em mente as seguintes técnicas para garantir que seu código seja seguro:
 
-- Não use a segurança de acesso do código (CAS).
+- Não use a CAS (segurança de acesso do código).
 
-- Não use o código de confiança parcial.
+- Não use código parcialmente confiável.
 
-- Não use o [AllowPartiallyTrustedCaller](xref:System.Security.AllowPartiallyTrustedCallersAttribute) atributo (APTCA).
+- Não use o atributo [AllowPartiallyTrustedCaller](xref:System.Security.AllowPartiallyTrustedCallersAttribute) (APTCA).
 
 - Não use a comunicação remota do .NET.
 
-- Não use o modelo de objeto componente distribuído (DCOM).
+- Não use Component Object Model distribuída (DCOM).
 
 - Não use formatadores binários.
 
-Não há suporte para segurança de acesso do código e o código transparente de segurança como um limite de segurança com código parcialmente confiável. Não aconselhamos carregar e executar códigos de origens desconhecidas sem a adoção de medidas de segurança alternativas no local. As medidas de segurança alternativas são:
+Segurança de acesso a código e segurança-o código transparent não tem suporte como um limite de segurança com código parcialmente confiável. Não aconselhamos carregar e executar códigos de origens desconhecidas sem a adoção de medidas de segurança alternativas no local. As medidas de segurança alternativas são:
 
 - Virtualização
 
 - AppContainers
 
-- Permissões e os usuários do sistema operacional (SO)
+- Usuários e permissões do sistema operacional (SO)
 
 - Contêineres do Hyper-V
 
-## <a name="security-neutral-code"></a>Código de segurança neutra
+## <a name="security-neutral-code"></a>Segurança-código neutro
 
-Código de segurança neutra não faz nada explícito com o sistema de segurança. Ele é executado com quaisquer permissões que ele recebe. Embora os aplicativos que falham ao capturar exceções de segurança associadas a operações protegidas (como o uso de arquivos, rede e assim por diante) podem resultar em uma exceção sem tratamento, o código neutro de segurança ainda aproveita as tecnologias de segurança no .NET .
+O código de segurança neutra não faz nada de explícito com o sistema de segurança. Ele é executado com qualquer permissão que receber. Embora os aplicativos que não consigam capturar as exceções de segurança associadas a operações protegidas (como usar arquivos, redes e assim por diante) possam resultar em uma exceção sem tratamento, o código de segurança neutra ainda aproveita as tecnologias de segurança no .NET .
 
-Uma biblioteca de segurança neutra tem características especiais que você deve compreender. Suponha que sua biblioteca fornece os elementos de API que usam arquivos ou chamam código não gerenciado. Se seu código não tiver a permissão correspondente, ele não será executado conforme descrito. No entanto, mesmo que o código tenha a permissão, qualquer código de aplicativo que faz a chamada deve ter a mesma permissão para trabalhar. Se o código de chamada não tem a permissão correta, uma <xref:System.Security.SecurityException> aparece como resultado a movimentação de pilha de segurança de acesso de código.
+Uma biblioteca com segurança neutra tem características especiais que você deve entender. Suponha que sua biblioteca forneça elementos de API que usam arquivos ou chamam código não gerenciado. Se o seu código não tiver a permissão correspondente, ele não será executado conforme descrito. No entanto, mesmo que o código tenha a permissão, qualquer código de aplicativo que o chame deve ter a mesma permissão para funcionar. Se o código de chamada não tiver a permissão correta, um <xref:System.Security.SecurityException> aparecerá como resultado da movimentação da pilha de segurança de acesso ao código.
 
 ## <a name="application-code-that-isnt-a-reusable-component"></a>Código do aplicativo que não é um componente reutilizável
 
-Se seu código fizer parte de um aplicativo que não será chamado por outro código, a segurança é simple e codificação especial pode não ser necessário. No entanto, lembre-se de que o código mal-intencionado pode chamar seu código. Enquanto a segurança de acesso do código poderá parar de códigos mal-intencionados de acessar os recursos, tal código ainda pode ler os valores de seus campos ou propriedades que podem conter informações confidenciais.
+Se seu código fizer parte de um aplicativo que não será chamado por outro código, a segurança será simples e a codificação especial poderá não ser necessária. No entanto, lembre-se de que o código mal-intencionado pode chamar seu código. Embora a segurança de acesso ao código possa impedir que o código mal-intencionado acesse recursos, esse código ainda pode ler valores de seus campos ou propriedades que podem conter informações confidenciais.
 
-Além disso, se seu código aceita entrada do usuário da Internet ou de outras fontes não confiáveis, você deve ser cuidadoso com entrada mal-intencionada.
+Além disso, se o seu código aceitar entrada do usuário da Internet ou de outras fontes não confiáveis, você deverá ter cuidado com a entrada mal-intencionada.
 
-## <a name="managed-wrapper-to-native-code-implementation"></a>Gerenciado wrapper para a implementação de código nativo
+## <a name="managed-wrapper-to-native-code-implementation"></a>Wrapper gerenciado para implementação de código nativo
 
-Normalmente nesse cenário, algumas funcionalidades úteis é implementada em código nativo que você deseja disponibilizar para código gerenciado. Invólucros gerenciados são fáceis de gravação usando invocação de qualquer plataforma ou a interoperabilidade COM. No entanto, se você fizer isso, os chamadores de sua wrappers devem ter direitos de código não gerenciado para ser bem-sucedido. Sob a política padrão, isso significa que o código baixado de uma intranet ou Internet não funcionará com os wrappers.
+Normalmente, nesse cenário, algumas funcionalidades úteis são implementadas no código nativo que você deseja disponibilizar para o código gerenciado. Wrappers gerenciados são fáceis de escrever usando a invocação de plataforma ou a interoperabilidade COM. No entanto, se você fizer isso, os chamadores de seus wrappers deverão ter direitos de código não gerenciados para serem bem-sucedidos. Na política padrão, isso significa que o código baixado de uma intranet ou da Internet não funcionará com os wrappers.
 
-Em vez de conceder direitos de código não gerenciado para todos os aplicativos que usam esses wrappers, é melhor fornecer esses direitos somente para o código de wrapper. Se a funcionalidade subjacente não expõe nenhum recurso e a implementação é segura da mesma forma, o wrapper só precisa declarar seus direitos, que permite que qualquer código chame por meio dele. Quando os recursos estão envolvidos, codificação de segurança deve ser o mesmo que o caso de código da biblioteca descrito na próxima seção. Porque o wrapper está potencialmente expondo os chamadores a esses recursos, verificação de cuidado do que a segurança do código nativo é necessária e é responsabilidade do wrapper.
+Em vez de fornecer direitos de código não gerenciado a todos os aplicativos que usam esses wrappers, é melhor fornecer esses direitos somente ao código do wrapper. Se a funcionalidade subjacente não expõe recursos e a implementação é segura, o wrapper só precisa declarar seus direitos, o que permite que qualquer código chame através dele. Quando os recursos estão envolvidos, a codificação de segurança deve ser a mesma do caso de código de biblioteca descrito na próxima seção. Como o wrapper está potencialmente expondo chamadores a esses recursos, a verificação cuidadosa da segurança do código nativo é necessária e é responsabilidade do wrapper.
 
-## <a name="library-code-that-exposes-protected-resources"></a>Recursos do código da biblioteca que expõe protegidos
+## <a name="library-code-that-exposes-protected-resources"></a>Código de biblioteca que expõe recursos protegidos
 
-A abordagem a seguir é mais poderosa e, portanto, potencialmente perigosa (caso seja realizado incorretamente) para a codificação de segurança: sua biblioteca serve como uma interface para outro código para acessar determinados recursos que não disponíveis, caso contrário, assim como impõem as classes do .NET permissões para os recursos que eles usam. Sempre que você exponha um recurso, seu código deve exigir primeiro a permissão apropriada para o recurso (ou seja, ele deve executar uma verificação de segurança) e, em seguida, normalmente, declarar seus direitos para executar a operação real.
+A abordagem a seguir é a mais poderosa e, portanto, potencialmente perigosa (se tiver sido feita incorretamente) para codificação de segurança: sua biblioteca serve como uma interface para que outro código acesse determinados recursos que não estão disponíveis de outra forma, assim como as classes .NET se aplicam permissões para os recursos que eles usam. Sempre que você expor um recurso, seu código deve primeiro solicitar a permissão apropriada para o recurso (ou seja, ele deve executar uma verificação de segurança) e, em seguida, declarar seus direitos para executar a operação real.
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
-|[Proteção de dados de estado](securing-state-data.md)|Descreve como proteger os membros privados.|
-|[Segurança e entrada do usuário](security-and-user-input.md)|Descreve problemas de segurança para aplicativos que aceitam a entrada do usuário.|
+|[Proteção de dados de estado](securing-state-data.md)|Descreve como proteger membros privados.|
+|[Segurança e entrada do usuário](security-and-user-input.md)|Descreve as preocupações de segurança para aplicativos que aceitam a entrada do usuário.|
 |[Segurança e condições de corrida](security-and-race-conditions.md)|Descreve como evitar condições de corrida em seu código.|
-|[Segurança e geração dinâmica de código](security-and-on-the-fly-code-generation.md)|Descreve problemas de segurança para aplicativos que geram código dinâmico.|
-|[Segurança baseada em Função](role-based-security.md)|Descreve a segurança baseada em função do .NET em detalhes e fornece instruções sobre como usá-lo em seu código.|
+|[Segurança e geração dinâmica de código](security-and-on-the-fly-code-generation.md)|Descreve as preocupações de segurança para aplicativos que geram código dinâmico.|
+|[Segurança baseada em Função](role-based-security.md)|Descreve a segurança baseada em funções do .NET em detalhes e fornece instruções para usá-las em seu código.|

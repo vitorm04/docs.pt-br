@@ -1,16 +1,15 @@
 ---
 title: Como fornecer uma caixa de diálogo de progresso para operações de C# arquivo – guia de programação
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: bec718660b998c6d29fe014abffef1bae705deb0
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 30ab84054d26f5b32a3f042a8d35d5ef1211d928
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635633"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705126"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>Como fornecer uma caixa de diálogo de progresso para operações deC# arquivo (guia de programação)
 Você pode fornecer uma caixa de diálogo padrão que mostra o andamento em operações de arquivos no Windows se você usar o método <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> no namespace <xref:Microsoft.VisualBasic?displayProperty=nameWithType>.  
@@ -34,4 +33,4 @@ Você pode fornecer uma caixa de diálogo padrão que mostra o andamento em oper
   
 ## <a name="see-also"></a>Veja também
 
-- [Sistema de arquivos e o Registro (Guia de Programação em C#)](./index.md)
+- [Sistema de arquivos e o Registro (Guia de programação em C#)](./index.md)

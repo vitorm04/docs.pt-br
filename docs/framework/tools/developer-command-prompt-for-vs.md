@@ -1,6 +1,6 @@
 ---
 title: Prompt de Comando do Desenvolvedor para o Visual Studio
-ms.date: 08/14/2018
+ms.date: 01/05/2020
 helpviewer_keywords:
 - command prompt, Windows SDK
 - Visual Studio command prompt
@@ -10,87 +10,89 @@ helpviewer_keywords:
 - environment variables, setting for tools
 - developer command prompt
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: f028281d477284acf3ac4dac63f5ddbbd79f5259
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71044737"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715820"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Prompt de Comando do Desenvolvedor para o Visual Studio
 
-O Prompt de Comando do Desenvolvedor para Visual Studio permite que você use ferramentas do .NET Framework com mais facilidade. Trata-se de um prompt de comando que define variáveis de ambiente específicas automaticamente.
+O Prompt de Comando do Desenvolvedor para Visual Studio permite que você use .NET Framework ferramentas com mais facilidade. É um prompt de comando que define automaticamente variáveis de ambiente específicas. Depois de abrir Prompt de Comando do Desenvolvedor, você pode inserir os comandos para [.NET Framework ferramentas](index.md) como `ildasm` ou `clrver`.
 
-> [!div class="button"]
-> [Baixar o Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
+
+- [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>Pesquisar pelo prompt de comando em seu computador
 
-É possível que haja vários prompts de comando, dependendo da versão do Visual Studio e de todos os SDKs adicionais instalados. Por exemplo, as versões 64 bits do Visual Studio oferecem prompts de comando 32 e 64 bits. (As versões 32 e 64 bits da maioria das ferramentas são iguais; porém, algumas ferramentas fazem alterações específicas em ambientes 32 e 64 bits.) Se as etapas a seguir não funcionarem, você poderá tentar [Localizar manualmente os arquivos em seu computador](#manually-locate-the-files-on-your-machine) ou [Executar o prompt de comando de dentro do Visual Studio](#run-the-command-prompt-from-inside-visual-studio).
+Você pode ter vários prompts de comando, dependendo da versão do Visual Studio e de quaisquer SDKs e cargas de trabalho adicionais instalados. Se as etapas a seguir não funcionarem, você poderá tentar [localizar manualmente os arquivos em seu computador](#manually-locate-the-files-on-your-machine) ou [iniciar o prompt de comando de dentro do Visual Studio](#start-the-command-prompt-from-inside-visual-studio).
 
-### <a name="in-windows-10"></a>No Windows 10
+### <a name="windows-10"></a>Windows 10
 
-1. Na caixa de pesquisa na barra de tarefas, comece a digitar o nome da ferramenta, como `dev` ou `developer command prompt`. Isso abre uma lista de aplicativos instalados que correspondem ao seu padrão de pesquisa. Se você estiver procurando por um prompt de comando diferente, experimente digitar um termo de pesquisa diferente, como `prompt`.
+1. Selecione **iniciar** ![tecla do logotipo do Windows no teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) e role até a letra **V**.
 
-2. Escolha o **Prompt de Comando do Desenvolvedor para Visual Studio** (ou o prompt de comando que você deseja usar).
+1. Expanda a pasta do **Visual Studio 2019** .
 
-### <a name="in-windows-81"></a>No Windows 8.1
+1. Escolha **prompt de comando do desenvolvedor para VS 2019** (ou o prompt de comando que você deseja usar).
 
-1. Vá para a tela **Inicial** pressionando a tecla do logotipo do Windows ![tecla do logotipo do Windows no teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) no seu teclado, por exemplo.
+   Como alternativa, você pode começar a digitar o nome do prompt de comando na caixa de pesquisa na barra de tarefas e escolher o resultado desejado, pois a lista de resultados começa a exibir as correspondências de pesquisa.
 
-2. Na tela **Iniciar**, pressione **Ctrl**+**Tab** para abrir a lista **Aplicativos** e digite `V`. Isso mostra uma lista que inclui todos os prompts de comando do Visual Studio instalados.
+   ![GIF animado mostrando o comportamento de pesquisa no Windows 10](./media/developer-command-prompt-for-vs/windows10-search.gif)
 
-3. Escolha o **Prompt de Comando do Desenvolvedor** (ou o prompt de comando que você deseja usar).
-
-### <a name="in-windows-8"></a>No Windows 8
+### <a name="windows-81"></a>Windows 8.1
 
 1. Vá para a tela **Inicial** pressionando a tecla do logotipo do Windows ![tecla do logotipo do Windows no teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) no seu teclado, por exemplo.
 
-2. Na tela **Iniciar**, pressione a tecla do logotipo do Windows ![tecla do logotipo do Windows no teclado.](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) `+ Z`.
+1. Na tela **Iniciar** , pressione **Ctrl**+**Tab** para abrir a lista de **aplicativos** e, em seguida, pressione **V**. Isso abre uma lista que inclui todos os prompts de comando instalados do Visual Studio.
 
-3. Escolha o ícone **Exibição de aplicativos** na parte inferior da tela e digite `V`. Isso mostra uma lista que inclui todos os prompts de comando do Visual Studio instalados.
+1. Escolha **prompt de comando do desenvolvedor para VS 2019** (ou o prompt de comando que você deseja usar).
 
-4. Escolha o **Prompt de Comando do Desenvolvedor** (ou o prompt de comando que você deseja usar).
+### <a name="windows-7"></a>Windows 7
 
-### <a name="in-windows-7"></a>No Windows 7
+1. Escolha **Iniciar** e expanda **todos os programas**.
 
-1. Escolha **Iniciar**, expanda **Todos os Programas** e expanda **Microsoft Visual Studio**.
+1. Escolha **Visual Studio 2019** > **Ferramentas do Visual Studio** > **prompt de comando do desenvolvedor para vs 2019**ou o prompt de comando que você deseja usar.
 
-2. Dependendo da versão do Visual Studio que você instalou, escolha **Ferramentas do Visual Studio**, **Prompt de Comando do Visual Studio** ou o prompt de comando que você deseja usar.
+   ![Menu Iniciar do Windows 7 com o prompt de comando realçado](./media/developer-command-prompt-for-vs/windows7-menu.png)
 
-Se houver outros SDKs instalados, como o [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk) ou [versões anteriores](https://developer.microsoft.com/windows/downloads/sdk-archive), poderão ser exibidos outros prompts de comando, para as arquiteturas ARM, x86 ou x64. Consulte a documentação das ferramentas individuais para determinar qual versão do prompt de comando você deve usar.
+Se você tiver outros SDKs instalados, como o [SDK do Windows 10](https://developer.microsoft.com/windows/downloads/windows-10-sdk) ou [versões anteriores](https://developer.microsoft.com/windows/downloads/sdk-archive), poderá ver prompts de comando adicionais. Consulte a documentação das ferramentas individuais para determinar qual versão do prompt de comando você deve usar.
 
 ## <a name="manually-locate-the-files-on-your-machine"></a>Localizar manualmente os arquivos em seu computador
 
-Normalmente, os atalhos para os prompts de comando que você instalou serão colocados na pasta **Menu Iniciar** do Visual Studio, como em C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools. Porém, se por algum motivo a pesquisa do prompt de comando não gerar os resultados esperados, você poderá tentar localizar manualmente o atalho em seu computador. Tente pesquisar pelo nome do arquivo do prompt de comando, como *VsDevCmd.bat* ou acesse a pasta Tools, como C:\Arquivos de Programas (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools (o caminho mudará conforme seu local de instalação, edição e versão do Visual Studio).
+Normalmente, os atalhos para os prompts de comando que você instalou são colocados na pasta do **menu iniciar** do Visual Studio, como no *%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2019 \ Ferramentas do Visual Studio*. Mas se, por algum motivo, pesquisar o prompt de comando não produzir os resultados esperados, você poderá tentar localizar manualmente o atalho em seu computador. Tente pesquisar o nome do arquivo de prompt de comando, como *VsDevCmd. bat*, ou vá para a pasta ferramentas, como *% ProgramFiles (x86)% \ Microsoft Visual Studio\2019\Community\Common7\Tools* (o caminho muda de acordo com sua versão, edição e local de instalação do Visual Studio).
 
-## <a name="run-the-command-prompt-from-inside-visual-studio"></a>Executar o prompt de comando de dentro do Visual Studio
+## <a name="start-the-command-prompt-from-inside-visual-studio"></a>Iniciar o prompt de comando de dentro do Visual Studio
 
-Para facilitar o acesso, você pode adicionar o Prompt de Comando do Desenvolvedor do Visual Studio ou qualquer outro prompt de comando ao menu **Ferramentas** do Visual Studio. Para disponibilizar a ferramenta, adicione-a à lista de ferramentas externas. Aqui estão as etapas:
+Para facilitar o acesso, você pode adicionar Prompt de Comando do Desenvolvedor, ou qualquer outro prompt de comando, ao menu ferramentas no Visual Studio. Para disponibilizar a ferramenta, adicione-a à lista de ferramentas externas. Aqui estão as etapas:
 
-1. Abra o Visual Studio.
+1. {1&gt;Abra o Visual Studio.&lt;1}
 
-2. Selecione o menu **Ferramentas** e, em seguida, escolha **Ferramentas Externas**.
+1. Na janela de início, escolha **Continuar sem código**.
 
-3. Na caixa de diálogo **Ferramentas Externas**, escolha o botão **Adicionar**. Uma nova entrada é exibida.
+1. Na barra de menus, escolha **ferramentas** > **Ferramentas externas**.
 
-4. Insira um **Título** para o novo item de menu, como `Command Prompt`.
+1. Na caixa de diálogo **Ferramentas Externas**, escolha o botão **Adicionar**. Uma nova entrada é exibida.
 
-5. No campo **Comando**, especifique o arquivo que deseja iniciar, como `%comspec%` ou `C:\Windows\System32\cmd.exe`.
+1. Insira um **Título** para o novo item de menu, como `Command Prompt`.
 
-6. No campo **Argumentos**, especifique em que ponto encontrar o prompt de comando específico que você deseja usar como `/k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\Tools\VsDevCmd.bat"` (esse comando inicializa o Prompt de Comando do Desenvolvedor que é instalado com o Visual Studio 2017 Enterprise). Altere este valor de acordo com a sua versão, edição e local de instalação do Visual Studio.
+1. No campo **Comando**, especifique o arquivo que deseja iniciar, como `%comspec%` ou `C:\Windows\System32\cmd.exe`.
 
-7. Escolha um valor para o campo **Diretório inicial**, como **Diretório do Projeto**.
+1. No campo **argumentos** , especifique onde encontrar o prompt de comando específico que você deseja usar, como `/k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\Tools\VsDevCmd.bat"`. Esse comando inicia o Prompt de Comando do Desenvolvedor instalado com a Comunidade do Visual Studio 2019. Altere este valor de acordo com a sua versão, edição e local de instalação do Visual Studio.
 
-8. Escolha o botão **OK**.
+1. No campo **diretório inicial** , especifique o diretório no qual o prompt de comando será iniciado. Escolha um valor, como **diretório do projeto** , selecionando a seta ao lado do campo.
 
-   O novo item de menu foi adicionado e você pode acessar o prompt de comando no menu **Ferramentas**.
+1. Escolha o botão **OK**.
 
-   ![Item de menu do prompt de comando no Visual Studio](./media/command-prompt-vs-menu.png)
+   ![Caixa de diálogo Ferramentas externas com os valores de campo preenchidos.](./media/developer-command-prompt-for-vs/add-external-tool.png)
 
-## <a name="see-also"></a>Consulte também
+   O novo item de menu é adicionado e você pode acessar o prompt de comando no menu ferramentas.
 
-- [Ferramentas](index.md)
+   ![Item de menu do prompt de comando no Visual Studio](./media/developer-command-prompt-for-vs/command-prompt-vs-menu.png)
+
+## <a name="see-also"></a>Veja também
+
+- [Ferramentas de .NET Framework](index.md)
 - [Gerenciando ferramentas externas](/visualstudio/ide/managing-external-tools)
+- [Usar o conjunto C++ de ferramentas da Microsoft na linha de comando](/cpp/build/building-on-the-command-line)

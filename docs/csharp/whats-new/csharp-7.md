@@ -3,12 +3,12 @@ title: Novidades no C# 7.0 – Guia do C#
 description: Obtenha uma visão geral dos novos recursos na versão 7.0 da linguagem C#.
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 0f26a9647503ebb667d961fefaa05a25a71ec6f5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 73563a04dea04c942a6326d6a04ddd54bb80b0ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926570"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694576"
 ---
 # <a name="whats-new-in-c-70"></a>Novidades no C# 7.0
 
@@ -57,7 +57,7 @@ Você talvez queira especificar o tipo da variável `out` para maior clareza, co
 - Não é necessário atribuir um valor inicial.
   - Ao declarar a variável `out` no local em que ela é usada em uma chamada de método, você não pode usá-la acidentalmente antes de ela ser atribuída.
 
-## <a name="tuples"></a>Tuplas
+## <a name="tuples"></a>Tuples
 
 O C# fornece uma sintaxe avançada para classes e structs que são usados para explicar a intenção do design. Mas, às vezes, essa sintaxe avançada requer trabalho adicional com poucas vantagens. Geralmente, você pode escrever métodos que precisam de uma estrutura simples que contém mais de um elemento de dados. Para dar suporte a esses cenários foram adicionadas *tuplas* ao C#. As tuplas são estruturas de dados leves que contêm vários campos para representar os membros de dados.
 Os campos não são validados, e você não pode definir seus próprios métodos
@@ -70,7 +70,7 @@ Você pode criar uma tupla atribuindo um valor a cada membro e, opcionalmente, f
 
 [!code-csharp[NamedTuple](~/samples/snippets/csharp/new-in-7/program.cs#NamedTuple "Named tuple")]
 
-A tupla `namedLetters` contém campos denominados `Alpha` e `Beta`. Esses nomes existem somente em tempo de compilação e não são preservados, por exemplo, ao inspecionar a tupla usando a reflexão em tempo de execução.
+A tupla `namedLetters` contém campos denominados `Alpha` e `Beta`. Esses nomes existem somente em tempo de compilação e não são preservados, por exemplo, ao inspecionar a tupla usando a reflexão em runtime.
 
 Em uma atribuição de tupla, você também pode especificar os nomes dos campos no lado direito da atribuição:
 
@@ -211,7 +211,7 @@ A mesma técnica pode ser empregada com métodos `async` para garantir que as ex
 [!code-csharp[TaskExample](~/samples/snippets/csharp/new-in-7/AsyncWork.cs#TaskExample "Task returning method with local function")]
 
 > [!NOTE]
-> Alguns dos designs com suporte pelas funções locais também podem ser feitos usando *expressões lambda*. Os interessados podem [ler mais sobre as diferenças](../local-functions-vs-lambdas.md)
+> Alguns dos designs com suporte pelas funções locais também podem ser feitos usando *expressões lambda*. Para obter mais informações, consulte [funções locais versus expressões lambda](../local-functions-vs-lambdas.md).
 
 ## <a name="more-expression-bodied-members"></a>Mais membros aptos para expressão
 
@@ -222,7 +222,7 @@ O C# 6 introduziu [membros aptos para expressão](csharp-6.md#expression-bodied-
 > [!NOTE]
 > Este exemplo não precisa de um finalizador, mas ele é mostrado para demonstrar a sintaxe. Você não deve implementar um finalizador em sua classe a menos que seja necessário para liberar recursos não gerenciados. Você também deve considerar o uso da classe <xref:System.Runtime.InteropServices.SafeHandle> em vez de gerenciar recursos não gerenciados diretamente.
 
-Esses novos locais para membros aptos para expressão representam um marco importante para a linguagem C#: Esses recursos foram implementados por membros da comunidade que trabalham no projeto [Roslyn](https://github.com/dotnet/Roslyn) de software livre.
+Esses novos locais para membros aptos para expressão representam uma etapa importante para a linguagem C#: esses recursos foram implementados por membros da comunidade trabalhando no projeto [Roslyn](https://github.com/dotnet/Roslyn) de software livre.
 
 A alteração de um método para um membro de corpo da expressão é uma [alteração compatível com binário](version-update-considerations.md#binary-compatible-changes).
 

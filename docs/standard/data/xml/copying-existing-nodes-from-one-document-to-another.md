@@ -3,14 +3,12 @@ title: Copiando nós existentes de um documento para outro
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e08c86ebdd71746520085844de5743692e84640e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 4ee3f8d280b8bf0f2de067e7529d777e62bff406
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69965924"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711019"
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Copiando nós existentes de um documento para outro
 O método **ImportNode** é o mecanismo pelo qual um nó ou uma subárvore inteira do nó são copiados de um **XmlDocument** para outro. O nó retornado de chamada é uma cópia do nó do documento de origem, incluindo valores de atributo, nome de nó, tipo de nó, e todos os atributos URL relacionados como o prefixo, o nome local, e namespace Uniform Resource Identifier (URI). O documento de origem não é alterado. Depois que você importou o nó, você ainda precisará adicioná-lo à árvore usando um dos métodos usados para nós de inserção.  
@@ -28,7 +26,7 @@ O método **ImportNode** é o mecanismo pelo qual um nó ou uma subárvore intei
 |XmlComment|Copia o nó, incluindo seus dados.|Copia o nó, incluindo seus dados.|  
 |XmlDocumentFragment|Os descendentes nó de origem recursivamente serão importados e os nós resultantes são remontados para formar a subárvore correspondente.|Um **XmlDocumentFragment** vazio é criado.|  
 |XmlDocumentType|Copia o nó, incluindo seu data.*|Copia o nó, incluindo seu data.*|  
-|XmlElement|Os descendentes do elemento de origem recursivamente serão importados e os nós resultantes são remontados para formar a subárvore correspondente. **Observação:**  os atributos padrão não são copiados. Se o documento que está sendo importado define atributos padrão para este nome de elemento, esses são atribuídos.|Os nós de atributo especificados do elemento de origem são importados, e os nós **XmlAttribute** gerados são anexados ao novo elemento. Os nós descendentes não são copiados. **Observação:**  os atributos padrão não são copiados. Se o documento que está sendo importado define atributos padrão para este nome de elemento, esses são atribuídos.|  
+|XmlElement|Os descendentes do elemento de origem recursivamente serão importados e os nós resultantes são remontados para formar a subárvore correspondente. **Observação:** os atributos padrão não são copiados. Se o documento que está sendo importado define atributos padrão para este nome de elemento, esses são atribuídos.|Os nós de atributo especificados do elemento de origem são importados, e os nós **XmlAttribute** gerados são anexados ao novo elemento. Os nós descendentes não são copiados. **Observação:** os atributos padrão não são copiados. Se o documento que está sendo importado define atributos padrão para este nome de elemento, esses são atribuídos.|  
 |XmlEntityReference|Como os documentos de origem e destino podem ter as entidades definidas de maneira diferente, esse método copia somente o nó **XmlEntityReference**. O texto de substituição não é incluído. Se o documento de destino tem a entidade definida, o valor é atribuído.|Como os documentos de origem e destino podem ter as entidades definidas de maneira diferente, esse método copia somente o nó **XmlEntityReference**. O texto de substituição não é incluído. Se o documento de destino tem a entidade definida, o valor é atribuído.|  
 |XmlProcessingInstruction|Copia o destino e o valor do nó importado.|Copia o destino e o valor do nó importado.|  
 |XmlText|Copia o nó, incluindo seus dados.|Copia o nó, incluindo seus dados.|  
@@ -40,6 +38,6 @@ O método **ImportNode** é o mecanismo pelo qual um nó ou uma subárvore intei
 > [!NOTE]
 > Embora os nós de DocumentType possam ser importados, um documento pode ter apenas um DocumentType. Assim, uma vez que você importou o tipo de documento, antes de inseri-lo na árvore você precisará certificar-se que não há documento tipo no documento. Para saber mais sobre como remover nós, confira [Removendo nós, conteúdo e valores de um documento XML](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

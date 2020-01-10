@@ -1,6 +1,5 @@
 ---
 title: <code> - C# Programming Guide
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - code
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: 31143b1da423ab762ac996acb1e74bae66000c11
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: eddf00c5fd51308d6d0f618282931190b43e92b5
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523523"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711799"
 ---
 # <a name="code-c-programming-guide"></a>\<code> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -35,7 +34,7 @@ ms.locfileid: "72523523"
 ## <a name="example"></a>Exemplo  
  Consulte o tópico [\<example>](./example.md) para obter um exemplo de como usar a marca \<code>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

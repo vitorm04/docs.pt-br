@@ -4,12 +4,12 @@ description: Saiba porque você não pode usar uma declaração de variável tip
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: a3851da9-e018-4389-9922-233db7d0f841
-ms.openlocfilehash: c6b0f2666a5c67ce8c89222da5959304ecb8fb93
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: cf16bb4d9ed27f536ae163284f36a0f305877139
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039135"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713883"
 ---
 # <a name="implicitly-typed-lambda-expressions"></a>Expressões lambda tipadas implicitamente
 
@@ -18,4 +18,4 @@ Isso cria um problema de lógica circular para o compilador. A declaração `var
 
 Os dois lados da atribuição não podem estar dizendo ao compilador para examinar o objeto do outro lado do operador de atribuição para ver se meu tipo é correspondente.
 
-Você pode obter mais detalhes sobre por quê a linguagem C# especifica esse comportamento lendo [este artigo](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (download do PDF)
+Você pode obter ainda mais detalhes sobre por que C# o idioma especifica esse comportamento lendo [Este artigo](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/type-inference.pdf) (download do pdf).

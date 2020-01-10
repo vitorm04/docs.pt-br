@@ -5,14 +5,12 @@ helpviewer_keywords:
 - strong-named assemblies, about strong-named assemblies
 - assemblies [.NET Framework], strong-named
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 67beeba6ce33fb1a8c3d02337d98282ccf30341a
-ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
+ms.openlocfilehash: 12b8df3195b2708e4556d4f8065227054db9eb14
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70991300"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711565"
 ---
 # <a name="strong-named-assemblies"></a>Assemblies de nome forte
 
@@ -22,7 +20,7 @@ Uma nomeação forte na assembly cria uma única identidade para assembly e pode
 
 Um assembly de nome forte é gerado por meio da utilização de uma chave privada que corresponde a uma chave pública distribuída com o assembly e por ele mesmo. O assembly inclui o manifesto assembly que contém os nomes e os hashes de todos os arquivos que compõem o assembly. Assemblies que têm o mesmo nome forte devem ser idênticos.
 
-Você pode usar nomes fortes nos assemblies usando o Visual Studio ou uma ferramenta de linha de comando. Para obter mais informações, confira [Como: Assine um assembly com um nome](sign-strong-name.md) forte ou [sn. exe (Strong Name Tool)](../../framework/tools/sn-exe-strong-name-tool.md).
+Você pode usar nomes fortes nos assemblies usando o Visual Studio ou uma ferramenta de linha de comando. Para obter mais informações, consulte [como assinar um assembly com um nome forte](sign-strong-name.md) ou [sn. exe (ferramenta Strong Name)](../../framework/tools/sn-exe-strong-name-tool.md).
 
 Quando um assembly de nome forte é criado, ele contém o nome de texto simples do assembly, o número de versão, informação cultural opcional, uma assinatura digital e uma chave pública que corresponde a uma chave privada utilizada para assinar.
 
@@ -45,9 +43,9 @@ Assemblies de nome forte são úteis nos seguintes cenários:
 
 Se você for um desenvolvedor de software livre e quiser os benefícios de identidade de um assembly de nome forte, considere a verificação da chave privada associada a um assembly para o sistema de controle do código-fonte.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Cache de assembly global](../../framework/app-domains/gac.md)
-- [Como: assinar um assembly com um nome forte](sign-strong-name.md)
+- [Como assinar um assembly com um nome forte](sign-strong-name.md)
 - [Sn. exe (ferramenta Strong Name)](../../framework/tools/sn-exe-strong-name-tool.md)
 - [Criar e usar assemblies de nome forte](create-use-strong-named.md)

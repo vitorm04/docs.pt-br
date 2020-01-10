@@ -4,14 +4,14 @@ description: Saiba como documentar seu código com comentários de documentaçã
 ms.date: 02/14/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 92a64a8f7a652f8b957013fc05f426e6b983655d
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74710983"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713934"
 ---
-# <a name="documenting-your-code-with-xml-comments"></a>Documentando seu código com comentários em XML
+# <a name="document-your-code-with-xml-comments"></a>Documente seu código com comentários XML
 
 Comentários em documentação XML são um tipo especial de comentário, adicionados acima da definição de qualquer membro ou tipo definido pelo usuário.
 Eles são especiais porque podem ser processados pelo compilador para gerar um arquivo de documentação XML em tempo de compilação.
@@ -137,7 +137,7 @@ Pode ser qualquer tipo definido no projeto ou um assembly referenciado.
 
 ## <a name="param"></a>\<param>
 
-Você usa a marca `<param>` para descrever os parâmetros de um método. Este é um exemplo do método `Add` duplo: o parâmetro que a marca descreve é especificado no atributo `name` **obrigatório**.
+Você usa a marca `<param>` para descrever os parâmetros de um método. Veja um exemplo no método de `Add` duplo: o parâmetro que a marca descreve é especificado no atributo **obrigatório** `name`.
 
 [!code-csharp[Param Tag](~/samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
@@ -150,7 +150,7 @@ Adicione um método genérico rápido à sua classe `Math` para verificar se uma
 
 ## <a name="paramref"></a>\<paramref>
 
-Às vezes, você pode estar descrevendo o que um método faz, no que poderia ser uma marcação `<summary>` e talvez queira fazer uma referência a um parâmetro. A marcação `<paramref>` é excelente para exatamente isso. Vamos atualizar o resumo de nosso método `Add` de base dupla. Assim como a marca `<param>`, o nome do parâmetro é especificado no atributo `name` **obrigatório**.
+Às vezes, você pode estar descrevendo o que um método faz, no que poderia ser uma marcação `<summary>` e talvez queira fazer uma referência a um parâmetro. A marcação `<paramref>` é excelente para exatamente isso. Vamos atualizar o resumo de nosso método `Add` de base dupla. Assim como a marca de `<param>`, o nome do parâmetro é especificado no atributo **obrigatório** `name`.
 
 [!code-csharp[Paramref Tag](~/samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
@@ -170,7 +170,7 @@ Crie uma lista não ordenada de cada operação matemática a que sua biblioteca
 
 É possível fazer uma lista ordenada ou tabela alterando o atributo `type` para `number` ou `table`, respectivamente.
 
-### <a name="putting-it-all-together"></a>Juntando as peças
+### <a name="put-it-all-together"></a>Colocar tudo isso junto
 
 Se você seguiu o tutorial e aplicou as marcas ao seu código quando necessário, seu código deve ser semelhante ao seguinte:
 
@@ -206,7 +206,7 @@ O atributo `id` que pode ser usado no lugar de `name` representa a ID da marca q
 ### <a name="user-defined-tags"></a>Marcas definidas pelo usuário
 
 Todas as marcas descritas acima representam as marcas que são reconhecidas pelo compilador C#. No entanto, o usuário é livre para definir suas próprias marcas.
-Ferramentas como o Sandcastle dão suporte para marcas extras, como [`<event>`](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm), [`<note>`](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm) e até mesmo à [documentação de namespaces](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
+Ferramentas como Sandcastle dão suporte a marcas adicionais como [> de evento\<](https://ewsoftware.github.io/XMLCommentsGuide/html/81bf7ad3-45dc-452f-90d5-87ce2494a182.htm) e [\<Note >](https://ewsoftware.github.io/XMLCommentsGuide/html/4302a60f-e4f4-4b8d-a451-5f453c4ebd46.htm)e até mesmo dão suporte a [namespaces de documentação](https://ewsoftware.github.io/XMLCommentsGuide/html/BD91FAD4-188D-4697-A654-7C07FD47EF31.htm).
 Ferramentas de geração de documentação internas ou personalizadas também podem ser usadas com as marcas padrão e vários formatos de saída, de HTML a PDF, podem ter suporte.
 
 ## <a name="recommendations"></a>Recomendações
@@ -218,10 +218,10 @@ Documentar o código é recomendável por vários motivos. A seguir, temos algum
 - No mínimo, os tipos e seus membros devem ter uma marca `<summary>`, porque seu conteúdo é necessário para o IntelliSense.
 - O texto da documentação deve ser escrito usando frases terminadas com ponto final.
 - Classes parciais têm suporte total e informações da documentação serão concatenadas em uma única entrada para esse tipo.
-- O compilador verifica a sintaxe das marcas `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>` e `<typeparam>`.
+- O compilador verifica a sintaxe das marcas `<exception>`, `<include>`, `<param>`, `<see>`, `<seealso>`e `<typeparam>`.
 - O compilador valida os parâmetros que contêm caminhos de arquivo e referências para outras partes do código.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Comentários de documentação XML (Guia de Programação em C#)](programming-guide/xmldoc/index.md)
 - [Marcas recomendadas para comentários de documentação (Guia de Programação em C#)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

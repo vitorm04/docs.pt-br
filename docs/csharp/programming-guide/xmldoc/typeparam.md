@@ -1,6 +1,5 @@
 ---
 title: <typeparam> – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - typeparam
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - <typeparam> C# XML tag
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
-ms.openlocfilehash: e5e0d7be46e02bd30799b54246db729ae63ca300
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 04145b82cbed0e9a5cae38ff9ef33d061ee792c9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523290"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75694524"
 ---
 # <a name="typeparam-c-programming-guide"></a>\<typeparam> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -41,7 +40,7 @@ ms.locfileid: "72523290"
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../../language-reference/index.md)
 - [Guia de Programação em C#](../index.md)

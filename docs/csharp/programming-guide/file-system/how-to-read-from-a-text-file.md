@@ -1,6 +1,5 @@
 ---
 title: Como ler de um guia de C# programação de arquivos de texto
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - StreamReader.ReadToEnd
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: 4e15d82a303c1a92739c72a2ddffd411debf99d4
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: d401a1d1bb2c6fccb203c440f367bd14c80e70e3
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635321"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705009"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Como ler de um arquivo de texto (C# guia de programação)
 Este exemplo lê o conteúdo de um arquivo de texto usando os métodos estáticos <xref:System.IO.File.ReadAllText%2A> e <xref:System.IO.File.ReadAllLines%2A> da classe <xref:System.IO.File?displayProperty=nameWithType>.  
@@ -45,4 +44,4 @@ Se você não estiver usando os arquivos de texto de [como gravar em um arquivo 
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [Guia de Programação em C#](../index.md)
-- [Sistema de arquivos e o Registro (Guia de Programação em C#)](./index.md)
+- [Sistema de arquivos e o Registro (Guia de programação em C#)](./index.md)

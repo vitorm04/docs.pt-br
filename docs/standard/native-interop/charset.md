@@ -1,15 +1,13 @@
 ---
 title: Conjuntos de caracteres e marshaling – .NET
 description: Saiba como os diferentes valores de um conjunto de caracteres podem alterar a forma como o .NET realiza marshaling dos dados para o código nativo.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: a29d53f8e422da1a78e131110972d83987c5464a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: HT
+ms.openlocfilehash: 4be4bd5a968eb5c0d6959a0f378ee1223ed906ed
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337915"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706381"
 ---
 # <a name="charsets-and-marshaling"></a>Conjuntos de caracteres e marshaling
 

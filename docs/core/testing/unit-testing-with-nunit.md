@@ -3,13 +3,12 @@ title: Teste de unidade em C# com NUnit e .NET Core
 description: Aprenda conceitos de teste de unidade no C# e .NET Core por meio de uma experiência interativa, criando passo a passo uma solução de exemplo, usando dotnet test e NUnit.
 author: rprouse
 ms.date: 08/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 20f81981458b7e805a917202edce671ced69d89a
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1ea17d9f830d8ac20e2bad79eebab5db767e0af8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117319"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714222"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>Teste de unidade em C# com NUnit e .NET Core
 
@@ -17,7 +16,7 @@ Este tutorial apresenta uma experiência interativa de compilação de uma solu�
 
 [!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 - [SDK do .NET Core 2.1](https://dotnet.microsoft.com/download) ou versões posteriores.
 - Um editor de texto ou de código de sua escolha.
@@ -172,7 +171,7 @@ No diretório *unit-testing-using-nunit*, execute `dotnet test` novamente. O com
 
 ## <a name="adding-more-features"></a>Adicionando mais recursos
 
-Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0 e -1. Você pode adicionar novos testes com o atributo `[Test]`, mas isso se torna entediante rapidamente. Há outros atributos de NUnit que permitem que você grave um pacote com testes semelhantes.  Um atributo `[TestCase]` é usado para criar um pacote com testes que executa o mesmo código, mas têm diferentes argumentos de entrada. Você pode usar o atributo `[TestCase]` para especificar valores para essas entradas.
+Agora que você fez um teste ser aprovado, é hora de escrever mais. Existem alguns outros casos simples de números primos: 0, -1. Você pode adicionar novos testes com o atributo `[Test]`, mas isso se torna entediante rapidamente. Há outros atributos de NUnit que permitem que você grave um pacote com testes semelhantes.  Um atributo `[TestCase]` é usado para criar um pacote com testes que executa o mesmo código, mas têm diferentes argumentos de entrada. Você pode usar o atributo `[TestCase]` para especificar valores para essas entradas.
 
 Em vez de criar novos testes, aplique esse atributo para criar um único teste controlado por dados. O teste controlado por dados é um método que testa vários valores menores que dois, que é o menor número primo:
 

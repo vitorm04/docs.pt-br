@@ -6,12 +6,12 @@ helpviewer_keywords:
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: d14d7c9bc701b5e06c51202c07c3b79832aba7cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 454c4e3d926640934a8edc4fcb16e4308a89dd50
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331075"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632331"
 ---
 # <a name="function-expression-visual-basic"></a>Expressão de função (Visual Basic)
 Declara os parâmetros e o código que definem uma expressão lambda de função.  
@@ -72,7 +72,7 @@ End Function
  [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
 ## <a name="example"></a>Exemplo  
- As expressões lambda são a base de muitos dos operadores de consulta no [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]e podem ser usadas explicitamente em consultas baseadas em método. O exemplo a seguir mostra uma consulta [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] típica, seguida pela conversão da consulta em formato de método.  
+ As expressões lambda são a base de muitos dos operadores de consulta em LINQ (consulta integrada à linguagem) e podem ser usadas explicitamente em consultas baseadas em método. O exemplo a seguir mostra uma consulta LINQ típica, seguida pela conversão da consulta em formato de método.  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -87,7 +87,7 @@ Dim londonCusts = db.Customers.
   
  Para obter mais informações sobre métodos de consulta, consulte [consultas](../../../visual-basic/language-reference/queries/index.md). Para obter mais informações sobre operadores de consulta padrão, consulte [visão geral de operadores de consulta padrão](../../programming-guide/concepts/linq/standard-query-operators-overview.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Instrução Function](../../../visual-basic/language-reference/statements/function-statement.md)
 - [Expressões Lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: acionar exceções explicitamente'
+title: Como lançar exceções explicitamente
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,14 +12,12 @@ helpviewer_keywords:
 - exceptions, throwing
 - implicitly throwing exceptions
 ms.assetid: 72bdd157-caa9-4478-9ee3-cb4500b84528
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a71cefc0a6483dbbe6513a64d8111a07a2e5af42
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 750da20b8c1c40901cc363ac0eff8af888821ce9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696737"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708856"
 ---
 # <a name="how-to-explicitly-throw-exceptions"></a>Como gerar exceções explicitamente
 
@@ -30,6 +28,6 @@ O exemplo de código a seguir usa um bloco `try`/`catch` para capturar uma poss�
 [!code-csharp[Exception.Throwing#1](~/samples/snippets/csharp/VS_Snippets_CLR/Exception.Throwing/CS/throw.cs#1)]
 [!code-vb[Exception.Throwing#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/Exception.Throwing/VB/throw.vb#1)]  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Exceções](index.md)

@@ -3,14 +3,12 @@ title: Erros recuperáveis XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: e3ff86cc80887d14fdffe50f256409cb70ff2d88
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64590051"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710369"
 ---
 # <a name="recoverable-xslt-errors"></a>Erros recuperáveis XSLT
 A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as áreas no qual o provedor de implementação pode decidir como manipular uma situação. Essas áreas são consideradas como comportamento arbitrário. Por exemplo, em instruções de processamento criadoras da seção 7,3, XSLT 1,0 estados de recomendação que é um erro se criar uma instância do conteúdo de `xsl:processing-instruction` cria nós diferentes de nós de texto. Para alguns problemas, a recomendação XSLT 1,0 indica o que a decisão deve ser feita se o processador decidir recuperar de erro. Para o problema da seção 7,3, o W3C com a implementação pode recuperar esse erro ignorando os nós e seu conteúdo.  
@@ -41,7 +39,7 @@ A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as 
 |O resultado de criar uma instância do conteúdo de `xsl:processing-instruction` contém a cadeia de caracteres “--” ou termina com “-”.|7.4|Recupere|  
 |O resultado de criar uma instância do conteúdo de `xsl:comment` cria nós diferentes de nós de texto.|7.4|Error*|  
 |O modelo dentro de um elemento de variável associação retorna um nó de atributo ou um nó de namespace.|11.2|Error*|  
-|Há um erro que recupera o recurso URI passado na função do documento.|12.1|Erro|  
+|Há um erro que recupera o recurso URI passado na função do documento.|12.1|Erro do|  
 |A referência URI na função do documento contém um identificador de fragmento e há um erro que processa o identificador do fragmento.|12.1|Recover*|  
 |Há vários atributos com o mesmo nome, mas os valores diferentes, que não são nomeados elementos de cdata- seção em `xsl:output` com a mesma precedência de importação.|16|Recupere|  
 |O processador não oferece suporte a codificação em `xsl:output` que codifica o atributo.|16.1|Recupere|  
@@ -54,6 +52,6 @@ A recomendação de versão 1,0 do W3C de transformações XSL (XSLT) inclui as 
   
  <sup>*</sup> Esse comportamento é diferente da classe de <xref:System.Xml.Xsl.XslTransform>. Para saber mais, confira [Implementação de comportamentos discricionários na classe XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

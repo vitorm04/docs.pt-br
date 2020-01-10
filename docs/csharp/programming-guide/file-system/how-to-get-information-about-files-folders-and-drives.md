@@ -1,16 +1,15 @@
 ---
 title: Como obter informações sobre arquivos, pastas e unidades – guia de C# programação
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: e8bd65b1c8c24f69d280cf69deaf25daf7cf8818
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: 6024b1be4ce826900c6f9b367323fb19ac55d2c7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635386"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705204"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Como obter informações sobre arquivos, pastas e unidades (guia deC# programação)
 No .NET Framework, você pode acessar informações do sistema de arquivos usando as classes a seguir:  
@@ -57,4 +56,4 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [Guia de Programação em C#](../index.md)
-- [Sistema de arquivos e o Registro (Guia de Programação em C#)](./index.md)
+- [Sistema de arquivos e o Registro (Guia de programação em C#)](./index.md)

@@ -3,14 +3,12 @@ title: Processamento de Dados XML na memória
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7fee2b5f4950efedc6ee335d5fbd417b8c178fbd
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 038bcfcb9d40ee6087efa3487b6f27f252393f2c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424405"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710421"
 ---
 # <a name="processing-xml-data-in-memory"></a>Processamento de Dados XML na memória
 O Microsoft .NET Framework inclui três modelos para processar dados XML: as classes <xref:System.Xml.XmlDocument> e <xref:System.Xml.XPath.XPathDocument>, além de [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) e [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md).  
@@ -31,5 +29,5 @@ O Microsoft .NET Framework inclui três modelos para processar dados XML: as cla
  [Processar dados XML usando LINQ to XML](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
  Fornece uma visão geral do LINQ to XML e fornece links para a documentação do LINQ to XML.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Documentos e dados XML](../../../../docs/standard/data/xml/index.md)

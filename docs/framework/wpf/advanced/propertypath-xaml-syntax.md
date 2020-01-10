@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: f9176e61915b6c5cc05f120eade69a6d19cc4e6a
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 17c8982a66960626a5d049fa2da90f5f2d995d14
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740786"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559762"
 ---
 # <a name="propertypath-xaml-syntax"></a>Sintaxe PropertyPath (XAML)
 
@@ -99,7 +99,7 @@ A / nessa sintaxe é usada para navegar dentro de um objeto de fonte de dados hi
 > [!NOTE]
 > Superficialmente, essa sintaxe é semelhante ao XPath. Uma expressão XPath verdadeira para associação a uma fonte de dados XML não é usada como um valor <xref:System.Windows.Data.Binding.Path%2A> e, em vez disso, deve ser usada para a propriedade <xref:System.Windows.Data.Binding.XPath%2A> mutuamente exclusiva.
 
-### <a name="collection-views"></a>Modos de exibição de coleção
+### <a name="collection-views"></a>Exibições de coleção
 
 Para fazer referência a um modo de exibição de coleção nomeado, o nome do modo de exibição da coleção deve ter o caractere (`#`) como prefixo.
 
@@ -139,7 +139,7 @@ Para determinados objetos de negócios, é possível encontrar um caso em que a 
 
 - Dentro dos indexadores ([]), o caractere de acento circunflexo (^) pula o próximo caractere.
 
-- É necessário pular (usando entidades XML) alguns caracteres que são especiais para a definição da linguagem XML. Use `&` para pular o caractere “&”. Use `>` para pular a marca de fim “>”.
+- É necessário pular (usando entidades XML) alguns caracteres que são especiais para a definição da linguagem XML. Use `&` para pular o caractere "&". Use `>` para pular a marca de fim ">".
 
 - É necessário pular (usando a barra invertida `\`) caracteres que são especiais para o comportamento de analisador de XAML do WPF, para o processamento de uma extensão de marcação.
 
@@ -192,13 +192,13 @@ Para dar suporte à clonagem para animar uma <xref:System.Windows.Freezable> que
 
 `propertyName2` deve ser o nome de uma propriedade de dependência que existe no objeto que é o valor de `propertyName`. Em outras palavras, `propertyName2` deve existir como uma propriedade de dependência no tipo que é o <xref:System.Windows.DependencyProperty.PropertyType%2A>`propertyName`.
 
-O direcionamento indireto de animações é necessário por causa dos estilos e modelos aplicados. Para direcionar uma animação, você precisa de um <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> em um objeto de destino, e esse nome é estabelecido por [x:Name](../../xaml-services/x-name-directive.md) ou <xref:System.Windows.FrameworkElement.Name%2A>. Embora os elementos de modelo e estilo também possam ter nomes, esses nomes são válidos somente dentro do escopo de nome do estilo e do modelo. (Se os modelos e estilos compartilhassem os escopos de nome com a marcação do aplicativo, os nomes não poderiam ser exclusivos. Os estilos e modelos são literalmente compartilhados entre instâncias e perpetuariam nomes duplicados.) Portanto, se as propriedades individuais de um elemento que você deseja animar vierem de um estilo ou modelo, você precisará começar com uma instância de elemento nomeada que não seja de um modelo de estilo e, em seguida, direcionar para a árvore visual de estilo ou modelo para chegar à propriedade você deseja animar.
+O direcionamento indireto de animações é necessário por causa dos estilos e modelos aplicados. Para direcionar uma animação, você precisa de um <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A> em um objeto de destino, e esse nome é estabelecido por [x:Name](../../../desktop-wpf/xaml-services/xname-directive.md) ou <xref:System.Windows.FrameworkElement.Name%2A>. Embora os elementos de modelo e estilo também possam ter nomes, esses nomes são válidos somente dentro do escopo de nome do estilo e do modelo. (Se os modelos e estilos compartilhassem os escopos de nome com a marcação do aplicativo, os nomes não poderiam ser exclusivos. Os estilos e modelos são literalmente compartilhados entre instâncias e perpetuariam nomes duplicados.) Portanto, se as propriedades individuais de um elemento que você deseja animar vierem de um estilo ou modelo, você precisará começar com uma instância de elemento nomeada que não seja de um modelo de estilo e, em seguida, direcionar para a árvore visual de estilo ou modelo para chegar à propriedade você deseja animar.
 
 Por exemplo, a propriedade <xref:System.Windows.Controls.Panel.Background%2A> de uma <xref:System.Windows.Controls.Panel> é uma <xref:System.Windows.Media.Brush> completa (na verdade, uma <xref:System.Windows.Media.SolidColorBrush>) que veio de um modelo de tema. Para animar um <xref:System.Windows.Media.Brush> completamente, precisa haver um BrushAnimation (provavelmente um para cada tipo de <xref:System.Windows.Media.Brush>) e não há tal tipo. Para animar um pincel, em vez disso, você anima as propriedades de um determinado tipo de <xref:System.Windows.Media.Brush>. Você precisa obter de <xref:System.Windows.Media.SolidColorBrush> ao seu <xref:System.Windows.Media.SolidColorBrush.Color%2A> para aplicar um <xref:System.Windows.Media.Animation.ColorAnimation> lá. O caminho da propriedade para esse exemplo seria `Background.Color`.
 
 <a name="attachedanim"></a>
 
-### <a name="attached-properties"></a>Propriedades anexadas
+### <a name="attached-properties"></a>Propriedades Anexadas
 
 ```xml
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>
@@ -224,7 +224,7 @@ O uso de código para <xref:System.Windows.PropertyPath>, incluindo como constru
 
 Em geral, <xref:System.Windows.PropertyPath> é projetada para usar dois construtores diferentes, um para os usos de associação e usos mais simples de animação, e outro para os usos complexos de animação. Use a assinatura <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> para os usos de associação, onde o objeto é uma cadeia de caracteres. Use a assinatura <xref:System.Windows.PropertyPath.%23ctor%28System.Object%29> para caminhos de animação de uma etapa, onde o objeto é um <xref:System.Windows.DependencyProperty>. Use a assinatura <xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29> para animações complexas. Esse último construtor usa uma cadeia de caracteres de token para o primeiro parâmetro e uma matriz de objetos que preenchem posições na cadeia de caracteres de token para definir uma relação de caminho da propriedade.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.PropertyPath>
 - [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)

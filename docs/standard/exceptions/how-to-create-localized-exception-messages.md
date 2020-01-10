@@ -2,13 +2,16 @@
 title: Como criar exceções definidas pelo usuário com mensagens de exceção localizadas
 description: Saiba como criar exceções definidas pelo usuário com mensagens de exceção localizadas
 author: Youssef1313
+dev_langs:
+- csharp
+- vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 453e332541628770932da2a6802fdcaee5211a84
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9360fccf27a0900d8380461e03baa5806ce1e0da
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73141529"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708912"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>Como criar exceções definidas pelo usuário com mensagens de exceção localizadas
 
@@ -27,6 +30,13 @@ Para criar uma exceção personalizada, siga estas etapas:
     [Serializable]
     public class StudentNotFoundException : Exception { }
     ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+    End Class
+    ```
 
 1. Adicione os construtores padrão:
 
@@ -42,6 +52,24 @@ Para criar uma exceção personalizada, siga estas etapas:
         public StudentNotFoundException(string message, Exception inner)
             : base(message, inner) { }
     }
+    ```
+    
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+    End Class
     ```
 
 1. Defina quaisquer propriedades e construtores adicionais:
@@ -68,12 +96,41 @@ Para criar uma exceção personalizada, siga estas etapas:
     }
     ```
 
+    ```vb
+    <Serializable>
+    Public Class StudentNotFoundException
+        Inherits Exception
+
+        Public ReadOnly Property StudentName As String
+
+        Public Sub New()
+        End Sub
+
+        Public Sub New(message As String)
+            MyBase.New(message)
+        End Sub
+
+        Public Sub New(message As String, inner As Exception)
+            MyBase.New(message, inner)
+        End Sub
+
+        Public Sub New(message As String, studentName As String)
+            Me.New(message)
+            StudentName = studentName
+        End Sub
+    End Class
+    ```
+
 ## <a name="create-localized-exception-messages"></a>Criar mensagens de exceção localizadas
 
 Você criou uma exceção personalizada e pode jogá-la em qualquer lugar com um código semelhante ao seguinte:
 
 ```csharp
 throw new StudentNotFoundException("The student cannot be found.", "John");
+```
+
+```vb
+Throw New StudentNotFoundException("The student cannot be found.", "John")
 ```
 
 O problema com a linha anterior é que `"The student cannot be found."` é apenas uma cadeia de caracteres constante. Em um aplicativo localizado, você deseja ter mensagens diferentes dependendo da cultura do usuário.
@@ -100,10 +157,10 @@ Para criar as mensagens de exceção localizadas:
     throw new StudentNotFoundException(resourceManager.GetString("StudentNotFound"), "John");
     ```
 
-  > [!NOTE]
-  > Se o nome do projeto for `TestProject` e o arquivo de recurso *ExceptionMessages. resx* residir na pasta *Resources* do projeto, o nome totalmente qualificado do arquivo de recurso será `TestProject.Resources.ExceptionMessages`.
+    > [!NOTE]
+    > Se o nome do projeto for `TestProject` e o arquivo de recurso *ExceptionMessages. resx* residir na pasta *Resources* do projeto, o nome totalmente qualificado do arquivo de recurso será `TestProject.Resources.ExceptionMessages`.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como criar exceções definidas pelo usuário](how-to-create-user-defined-exceptions.md)
 - [Criando assemblies satélite para aplicativos da área de trabalho](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

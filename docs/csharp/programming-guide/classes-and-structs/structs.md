@@ -1,17 +1,16 @@
 ---
 title: Structs – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - C# language, structs
 - structs [C#]
 ms.assetid: b7cf4ff2-0eb7-4e5c-93d5-b2196b4f5d89
-ms.openlocfilehash: 35b39da0b15c41b7b2c7a6567bea5dca3fb430e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 5150ff2d6edde0ac91bc6548fd499b76af614007
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970313"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705412"
 ---
 # <a name="structs-c-programming-guide"></a>Structs (Guia de Programação em C#)
 
@@ -31,7 +30,7 @@ Os structs compartilham a maioria da mesma sintaxe que as classes. O nome da str
 - Um struct pode implementar interfaces.
 - Um struct não pode ser `null`e uma variável de struct não pode ser atribuída `null` a menos que a variável seja declarada como um tipo de valor anulável.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes e Structs](index.md)

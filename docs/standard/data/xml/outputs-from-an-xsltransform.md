@@ -3,14 +3,12 @@ title: Saída de um XslTransform
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0a6c2ea2fe2f02dc1897cb1348f4c2585b730036
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 178b1e949868d3af893cbcb6df63590053341a3e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924964"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710486"
 ---
 # <a name="outputs-from-an-xsltransform"></a>Saída de um XslTransform
 Como as folhas de estilos podem determinar o formato de saída usando uma instrução de `<xsl:output>` com o atributo de `method` , a tabela a seguir descreve quais o formato de saída é quando o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> é usado para gravar a saída, e o formato de saída é declarado como <xref:System.IO.Stream> ou <xref:System.IO.TextWriter>.  
@@ -22,20 +20,20 @@ Como as folhas de estilos podem determinar o formato de saída usando uma instru
   
 |\<xsl:output method = > attribute|Formato de resultado|  
 |-----------------------------------------|-------------------|  
-|method= " XML”|XML|  
+|method= " XML”|{1&gt;XML&lt;1}|  
 |method= " HTML”|HTML|  
 |method= " texto”|Texto|  
   
 > [!NOTE]
-> Observação: A instrução `<xsl:output>` é ignorada quando a saída do método <xref:System.Xml.Xsl.XslTransform.Transform%2A> é um <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter>.  
+> Observação: A declaração de `<xsl:output>` é ignorado quando a saída de método <xref:System.Xml.Xsl.XslTransform.Transform%2A> são <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter>.  
   
  Os seguintes atributos são suportados quando a saída de método <xref:System.Xml.Xsl.XslTransform.Transform%2A> são <xref:System.IO.Stream> ou <xref:System.IO.TextWriter>:  
   
 - encoding*  
   
-- omit-xml-declaration  
+- {1&gt;omit-xml-declaration&lt;1}  
   
-- autônomos  
+- {1&gt;standalone&lt;1}  
   
 - doctype-public  
   
@@ -43,7 +41,7 @@ Como as folhas de estilos podem determinar o formato de saída usando uma instru
   
 - cdata-section-elements  
   
-- indent  
+- {1&gt;indent&lt;1}  
   
     > [!NOTE]
     > \*O atributo de codificação é ignorado quando o método <xref:System.Xml.Xsl.XslTransform.Transform%2A> está enviando sua saída para um <xref:System.IO.TextWriter>. A propriedade de codificação em <xref:System.IO.TextWriter> é usada em vez. 
@@ -57,6 +55,6 @@ Como as folhas de estilos podem determinar o formato de saída usando uma instru
 ## <a name="escaping-special-characters"></a>Caracteres de escape especiais  
  A marca de `<xsl:text disable-output-escaping>` é usada para indicar se os caracteres especiais precisam ser escapados em um formulário XML (por exemplo, usando `<&lt>` no lugar do símbolo de `"<"` ) ou esquerdo em condição atual. O atributo de `disable-output-escaping` é ignorado quando uma transformação a <xref:System.Xml.XmlReader> ou <xref:System.Xml.XmlWriter> objetos e não tem efeito em caracteres especiais.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

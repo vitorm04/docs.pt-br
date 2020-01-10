@@ -1,15 +1,13 @@
 ---
 title: Registro em log e rastreamento – .NET Core
 description: Uma introdução ao rastreamento e registro em log do .NET Core.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926359"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714418"
 ---
 # <a name="net-core-logging-and-tracing"></a>Log e rastreamento do .NET Core
 
@@ -29,7 +27,7 @@ Essa técnica simples é surpreendentemente poderosa. Ele pode ser usado em situ
 
 ### <a name="print-style-apis"></a>APIs de estilo de impressão
 
-As <xref:System.Console?displayProperty=nameWithType>classes <xref:System.Diagnostics.Trace?displayProperty=nameWithType>, e<xref:System.Diagnostics.Debug?displayProperty=nameWithType> fornecem, cada uma, APIs semelhantes de estilo de impressão conveniente para o registro em log.
+As classes <xref:System.Console?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace?displayProperty=nameWithType>e <xref:System.Diagnostics.Debug?displayProperty=nameWithType> fornecem APIs de estilo de impressão semelhantes convenientes para o registro em log.
 
 A escolha da API de estilo de impressão a ser usada cabe a você. As principais diferenças são:
 
@@ -39,15 +37,15 @@ A escolha da API de estilo de impressão a ser usada cabe a você. As principais
   - Por ser a abordagem mais simples, ela é frequentemente usada para depuração temporária ad hoc. Geralmente, esse código de depuração nunca é verificado no controle do código-fonte.
 - <xref:System.Diagnostics.Trace?displayProperty=nameWithType>
   - Habilitado somente quando `TRACE` é definido.
-  - Grava em anexado <xref:System.Diagnostics.Trace.Listeners>, por padrão, <xref:System.Diagnostics.DefaultTraceListener>o.
+  - Grava no <xref:System.Diagnostics.Trace.Listeners>anexado, por padrão, o <xref:System.Diagnostics.DefaultTraceListener>.
   - Use essa API ao criar logs que serão habilitados na maioria das compilações.
 - <xref:System.Diagnostics.Debug?displayProperty=nameWithType>
   - Habilitado somente quando `DEBUG` é definido.
   - Grava em um depurador anexado.
-  - Em `*nix` gravações em stderr, `COMPlus_DebugWriteToStdErr` se estiver definido.
+  - Em `*nix` grava em stderr se `COMPlus_DebugWriteToStdErr` estiver definido.
   - Use essa API ao criar logs que serão habilitados somente em compilações de depuração.
 
-### <a name="logging-events"></a>Eventos de log
+### <a name="logging-events"></a>Registro de eventos
 
 As APIs a seguir são mais orientadas a eventos. Em vez de registrar cadeias de caracteres simples, eles registram objetos de evento.
 
@@ -64,13 +62,13 @@ As APIs a seguir são mais orientadas a eventos. Em vez de registrar cadeias de 
 - <xref:System.Diagnostics.DiagnosticSource?displayProperty=nameWithType>
   - Incluído no .NET Core e como um [pacote NuGet](https://www.nuget.org/packages/System.Diagnostics.DiagnosticSource) para .NET Framework.
   - Permite o rastreamento em processo de objetos não serializáveis.
-  - Inclui uma ponte para permitir que os campos selecionados de objetos registrados sejam gravados <xref:System.Diagnostics.Tracing.EventSource>em um.
+  - Inclui uma ponte para permitir que os campos selecionados de objetos registrados sejam gravados em um <xref:System.Diagnostics.Tracing.EventSource>.
 
 - <xref:System.Diagnostics.Activity?displayProperty=nameWithType>
   - Fornece uma maneira definitiva de identificar mensagens de log resultantes de uma atividade ou transação específica. Esse objeto pode ser usado para correlacionar logs entre diferentes serviços.
 
 - <xref:System.Diagnostics.EventLog?displayProperty=nameWithType>
-  - Somente Windows.
+  - Windows somente.
   - Grava mensagens no log de eventos do Windows.
   - Os administradores do sistema esperam que as mensagens de erro fatais do aplicativo apareçam no log de eventos do Windows.
 
@@ -78,7 +76,7 @@ As APIs a seguir são mais orientadas a eventos. Em vez de registrar cadeias de 
 
 As APIs de nível baixo podem não ser a escolha certa para suas necessidades de registro em log. Talvez você queira considerar uma estrutura de registro em log.
 
-A <xref:Microsoft.Extensions.Logging.ILogger> interface foi usada para criar uma interface de log comum em que os agentes podem ser inseridos por meio da injeção de dependência.
+A interface <xref:Microsoft.Extensions.Logging.ILogger> foi usada para criar uma interface de log comum em que os agentes podem ser inseridos por meio de injeção de dependência.
 
 Por exemplo, para permitir que você faça a melhor escolha para seu aplicativo `ASP.NET` oferece suporte para uma seleção de estruturas internas e de terceiros:
 
@@ -87,19 +85,19 @@ Por exemplo, para permitir que você faça a melhor escolha para seu aplicativo 
 
 ## <a name="logging-related-references"></a>Referências relacionadas ao log
 
-- [Como: compilar condicionalmente com Trace e Debug](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [Como compilar condicionalmente com Trace e Debug](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
-- [Como: Adicionar instruções de rastreamento ao código do aplicativo](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [Como adicionar instruções de rastreamento ao código do aplicativo](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
 - O [log do ASP.net](/aspnet/core/fundamentals/logging) fornece uma visão geral das técnicas de log que ele suporta.
 
 - [A interpolação de cadeias de caracteres pode simplificar a gravação do código C# ](../../csharp/language-reference/tokens/interpolated.md)
 
-- A <xref:System.Exception.Message?displayProperty=nameWithType> propriedade é útil para registrar exceções.
+- A propriedade <xref:System.Exception.Message?displayProperty=nameWithType> é útil para registrar exceções.
 
-- A <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> classe pode ser útil para fornecer informações de pilha em seus logs.
+- A classe <xref:System.Diagnostics.StackTrace?displayProperty=nameWithType> pode ser útil para fornecer informações de pilha em seus logs.
 
-## <a name="performance-considerations"></a>Considerações sobre o desempenho
+## <a name="performance-considerations"></a>Considerações sobre desempenho
 
 A formatação da cadeia de caracteres pode levar tempo de processamento de CPU perceptível.
 

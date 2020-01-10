@@ -1,21 +1,19 @@
 ---
 title: Marshaling de tipo – .NET
 description: Saiba como o .NET realizar marshal de seus tipos para uma representação nativa.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: bc44a2c63dfa3fde3e3c4197e5d1fe79857ea717
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 91b8f3d6cb53fd7a0adea7ea9669e7459e81445f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929061"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706260"
 ---
 # <a name="type-marshaling"></a>Marshaling de tipo
 
 **Marshaling** é o processo de transformar tipos quando precisam atravessar entre código nativo e gerenciado.
 
-O marshaling é necessário porque os tipos são diferentes, no código gerenciado e não gerenciado. No código gerenciado, por exemplo, você tem uma `String`; no mundo não gerenciado, as cadeias de caracteres podem ser Unicode ("larga"), não Unicode, terminada em nulo, ASCII, etc. Por padrão, o subsistema do P/Invoke tenta fazer a coisa certa com base no comportamento padrão, descrito neste artigo. Contudo, nas situações em que você precisa de controle extra, pode utilizar o atributo [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) para especificar qual é o tipo esperado no lado não gerenciado. Por exemplo, se você quiser que a cadeia de caracteres seja enviada como uma cadeia de caracteres ANSI terminada em nulo, faça o seguinte:
+O marshaling é necessário porque os tipos são diferentes, no código gerenciado e não gerenciado. No código gerenciado, por exemplo, você tem uma `String`, enquanto nas cadeias de caracteres do mundo não gerenciadas pode ser Unicode ("largo"), não-Unicode, terminação nula, ASCII, etc. Por padrão, o subsistema P/Invoke tenta fazer a coisa certa com base no comportamento padrão, descrito neste artigo. Contudo, nas situações em que você precisa de controle extra, pode utilizar o atributo [MarshalAs](xref:System.Runtime.InteropServices.MarshalAsAttribute) para especificar qual é o tipo esperado no lado não gerenciado. Por exemplo, se você quiser que a cadeia de caracteres seja enviada como uma cadeia de caracteres ANSI terminada em nulo, faça o seguinte:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]
@@ -24,7 +22,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 ## <a name="default-rules-for-marshaling-common-types"></a>Regras padrão para tipos comuns de marshaling
 
-Geralmente, o tempo de execução tenta fazer a "coisa certa" ao realizar marshaling para exigir a menor quantidade de trabalho de você. As tabelas a seguir descrevem como cada tipo tem o marshaling realizado por padrão quando usado em um parâmetro ou campo. Os tipos de caracteres e números inteiros de largura fixa C99/C++11 são usados ​​para garantir que a tabela a seguir esteja correta para todas as plataformas. Use qualquer tipo nativo que tenha os mesmos requisitos de alinhamento e tamanho que esses tipos.
+Geralmente, o runtime tenta fazer a "coisa certa" ao realizar marshaling para exigir a menor quantidade de trabalho de você. As tabelas a seguir descrevem como cada tipo tem o marshaling realizado por padrão quando usado em um parâmetro ou campo. Os tipos de caracteres e números inteiros de largura fixa C99/C++11 são usados ​​para garantir que a tabela a seguir esteja correta para todas as plataformas. Use qualquer tipo nativo que tenha os mesmos requisitos de alinhamento e tamanho que esses tipos.
 
 Esta primeira tabela descreve os mapeamentos para vários tipos para os quais o marshaling é o mesmo para ambos P/Invoke e o marshaling do campo.
 
@@ -55,7 +53,7 @@ Algumas categorias de marshaling terão padrões diferentes se você estiver rea
 
 | Tipo .NET | Tipo nativo (parâmetro) | Tipo nativo (campo) |
 |-----------|-------------------------|---------------------|
-| Matriz .NET | Um ponteiro para o início de uma matriz de representações nativas dos elementos da matriz. | Não é permitido sem um atributo `[MarshalAs]`|
+| Matriz .NET | Um ponteiro para o início de uma matriz de representações nativas dos elementos da matriz. | Não é permitida sem um atributo `[MarshalAs]`|
 | Uma classe com um `LayoutKind` de `Sequential` ou `Explicit` | Um ponteiro para a representação nativa da classe | A representação nativa da classe |
 
 A tabela a seguir inclui as regras de marshaling padrão que são somente do Windows. Em plataformas que não são Windows, você não pode realizar marshal desses tipos.
@@ -82,7 +80,7 @@ Se esses padrões não fizerem exatamente o que você deseja, personalize como o
 
 ## <a name="default-marshaling-in-com-scenarios"></a>Marshaling padrão em cenários COM
 
-Quando você chama métodos em objetos COM no .NET, o tempo de execução do .NET altera a regras de marshaling padrão para corresponder à semântica de COM. A tabela a seguir lista as regras que os tempos de execução do .NET usam em cenários COM:
+Quando você chama métodos em objetos COM no .NET, o runtime do .NET altera a regras de marshaling padrão para corresponder à semântica de COM. A tabela a seguir lista as regras que os runtimes do .NET usam em cenários COM:
 
 | Tipo .NET | Tipo nativo (chamadas de método COM) |
 |-----------|--------------------------------|

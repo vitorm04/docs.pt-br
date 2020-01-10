@@ -1,6 +1,5 @@
 ---
 title: Olá, Mundo--seu primeiro programa usando o Visual Studio no Windows ou o C# guia de programação de Mac
-ms.custom: seodec18
 ms.date: 09/12/2019
 f1_keywords:
 - cs.program
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: edab64bf02a2b60cce21af536d2da98193dea9a1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 910fa4af1b4e45ce627b589a06910dc168490047
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196222"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712137"
 ---
 # <a name="hello-world----your-first-program"></a>Olá, Mundo--seu primeiro programa
 
@@ -22,7 +21,7 @@ Neste artigo, você usará o Visual Studio para criar o "Olá, Mundo!" tradicion
 
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]
 
-## <a name="create-a-new-application"></a>Criar um novo aplicativo
+## <a name="create-a-new-application"></a>Crie um novo aplicativo
 
 <!-- markdownlint-disable MD025 -->
 
@@ -105,7 +104,7 @@ O método `Main` é um método [estático](../../language-reference/keywords/sta
 
 [!code-csharp[csProgGuideMain#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#19)]
 
-\- ou -
+- ou -
 
 [!code-csharp[csProgGuideMain#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#18)]
 
@@ -123,7 +122,7 @@ Os programas em C# geralmente usam os serviços de entrada/saída fornecidos pel
 
 Para saber mais sobre os métodos de entrada/saída, veja <xref:System.IO>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Exemplos e tutoriais](../../../samples-and-tutorials/index.md)

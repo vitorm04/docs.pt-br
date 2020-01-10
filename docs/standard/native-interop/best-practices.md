@@ -1,15 +1,13 @@
 ---
 title: Práticas recomendadas de interoperabilidade nativa - .NET
 description: Saiba mais sobre as práticas recomendadas para fazer interface com componentes nativos no .NET.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 0405fd5aef9d89fc1f47123ed358e6358656d95b
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 7fe0dd0545f8ba800174f8be18bb2f11f39463f9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923765"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706394"
 ---
 # <a name="native-interoperability-best-practices"></a>Práticas recomendadas de interoperabilidade nativa
 
@@ -34,30 +32,30 @@ As diretrizes nesta seção se aplicam a todos os cenários de interoperabilidad
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  manter padrão  | Quando esta configuração é definida como false, valores de retorno HRESULT com falha serão considerados exceções (e o valor de retorno na definição torna-se nulo).|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | depende da API  | Defina esta configuração como true se a API usa GetLastError e usa Marshal.GetLastWin32Error para obter o valor. Se a API definir uma condição que informa um erro, obtenha o erro antes de fazer outras chamadas para evitar que ele seja sobrescrito inadvertidamente.|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None`, que reverte para o comportamento `CharSet.Ansi`  | Use explicitamente `CharSet.Unicode` ou `CharSet.Ansi` quando os caracteres ou cadeias de caracteres estiverem presentes na definição | Isso especifica o comportamento de marshaling de cadeias de caracteres e o que `ExactSpelling` faz quando `false`. Note que `CharSet.Ansi` é na verdade UTF8 no Unix. O Windows usa Unicode a _maior parte_ do tempo, enquanto o Unix usa UTF8. Veja mais informações na [documentação sobre conjuntos de caracteres](./charset.md). |
-| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Defina como true e obtenha um pequeno benefício de desempenho: o tempo de execução não irá buscar por nomes de função alternativos com o sufixo "A" ou "W" dependendo do valor da configuração `CharSet` ("A" para `CharSet.Ansi` e "W" para `CharSet.Unicode`). |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | Defina como true e obtenha um pequeno benefício de desempenho: o runtime não irá buscar por nomes de função alternativos com o sufixo "A" ou "W" dependendo do valor da configuração `CharSet` ("A" para `CharSet.Ansi` e "W" para `CharSet.Unicode`). |
 
 ## <a name="string-parameters"></a>Parâmetros de cadeia de caracteres
 
-Quando o CharSet é Unicode ou o argumento é explicitamente marcado como `[MarshalAs(UnmanagedType.LPWSTR)]` _e_ a cadeia de caracteres é passada por valor (não `ref` ou `out`), a cadeia de caracteres será fixada e usada diretamente pelo código nativo (em vez de copiado).
+Quando o conjunto de caracteres é Unicode ou o argumento é explicitamente marcado como `[MarshalAs(UnmanagedType.LPWSTR)]` _e_ a cadeia de caracteres é passada por valor (não `ref` ou `out`), a cadeia de caracteres será fixada e usada diretamente pelo código nativo (em vez de copiada).
 
 Lembre-se de marcar `[DllImport]` como `Charset.Unicode`, a menos que você queira explicitamente o tratamento ANSI de suas cadeias de caracteres.
 
-**❌ NÃO** use parâmetros `[Out] string`. Os parâmetros de cadeia de caracteres passados por valor com o atributo `[Out]` podem desestabilizar o tempo de execução se a cadeia de caracteres for uma cadeia de caracteres internada. Veja mais informações sobre a centralização da cadeia de caracteres na documentação do <xref:System.String.Intern%2A?displayProperty=nameWithType>.
+**❌ não** use parâmetros `[Out] string`. Os parâmetros de cadeia de caracteres passados por valor com o atributo `[Out]` podem desestabilizar o runtime se a cadeia de caracteres for uma cadeia de caracteres internada. Veja mais informações sobre a centralização da cadeia de caracteres na documentação do <xref:System.String.Intern%2A?displayProperty=nameWithType>.
 
-**❌ EVITE** parâmetros `StringBuilder`. Marshaling de `StringBuilder` *sempre* cria uma cópia do buffer nativo. Dessa forma, ele pode ser extremamente ineficiente. Veja o cenário típico da chamada de uma API do Windows que usa uma cadeia de caracteres:
+**❌ evitar** `StringBuilder` parâmetros. Marshaling de `StringBuilder`*sempre* cria uma cópia do buffer nativo. Dessa forma, ele pode ser extremamente ineficiente. Veja o cenário típico da chamada de uma API do Windows que usa uma cadeia de caracteres:
 
 1. Criar um SB da capacidade desejada (aloca capacidade gerenciada) **{1}**
-2. Chamar
+2. Invocar
    1. Aloca um buffer nativo **{2}**  
    2. Copia o conteúdo se `[In]` _(o padrão para um parâmetro `StringBuilder`)_  
-   3. Copia o buffer nativo em uma matriz gerenciada recém-alocada se `[Out]` **{3}** _(também é o padrão para `StringBuilder`)_  
+   3. Copia o buffer nativo em uma matriz gerenciada alocada recentemente se `[Out]` **{3}** _(também o padrão para `StringBuilder`)_  
 3. `ToString()` aloca outra matriz gerenciada **{4}**
 
 Ou seja, *{4}* alocações para obter uma cadeia de caracteres fora do código nativo. O melhor que você pode fazer para limitar isso é reutilizar o `StringBuilder` em outra chamada, mas isso economiza apenas *1* alocação. É muito melhor usar e armazenar em cache um buffer de caractere de `ArrayPool` - você pode então reduzir para apenas a alocação para `ToString()` nas chamadas subsequentes.
 
 O outro problema com `StringBuilder` é que esta configuração sempre copia o buffer de retorno de volta para o primeiro nulo. Se a cadeia de caracteres transmitida não estiver terminada, ou terminar por dois caracteres nulos, na melhor das hipóteses, o recurso P/Invoke estará incorreto.
 
-Se você *usar* o `StringBuilder`, uma última pegadinha é que a capacidade **não** inclui um nulo oculto, que é sempre contabilizado na interoperabilidade. É comum as pessoas entenderem errado, já que a maioria das APIs deseja o tamanho do buffer, *incluindo* o valor nulo. Isso pode resultar em alocações desnecessárias/desperdiçadas. Além disso, esse problema impede que o tempo de execução otimize o marshaling de `StringBuilder` para minimizar as cópias.
+Se você *usar* o `StringBuilder`, uma última pegadinha é que a capacidade **não** inclui um nulo oculto, que é sempre contabilizado na interoperabilidade. É comum as pessoas entenderem errado, já que a maioria das APIs deseja o tamanho do buffer, *incluindo* o valor nulo. Isso pode resultar em alocações desnecessárias/desperdiçadas. Além disso, esse problema impede que o runtime otimize o marshaling de `StringBuilder` para minimizar as cópias.
 
 **✔️ CONSIDERE** usar `char[]`s de um `ArrayPool`.
 
@@ -68,8 +66,8 @@ Para obter mais informações sobre o marshaling de cadeia de caracteres, veja [
 **Para a maioria das APIs com um buffer de cadeia de caracteres de saída:**  
 > A contagem de caracteres transmitidos deve incluir o nulo. Se o valor retornado for menor que a contagem de caracteres transmitidos, a chamada foi bem-sucedida e o valor consiste no número de caracteres *sem* o nulo à direita. Caso contrário, a contagem consiste no tamanho necessário do buffer *incluindo* o caractere nulo.  
 >
-> - Passe cinco, obtenha quatro: A cadeia de caracteres tem quatro caracteres e um nulo à direita.
-> - Passe cinco, obtenha seis: A cadeia de caracteres tem cinco caracteres, precisa de um buffer de seis caracteres para manter o valor nulo.  
+> - Pass em 5, Get 4: a cadeia de caracteres tem 4 caracteres de comprimento com um nulo à direita.
+> - Passar em 5, obter 6: a cadeia de caracteres tem 5 caracteres de comprimento, precisa de um buffer de 6 caracteres para manter o valor nulo.  
 > [Tipos de dados do Windows para cadeias de caracteres](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>Parâmetros e campos boolianos
@@ -84,7 +82,7 @@ Os GUIDs podem ser usados diretamente em assinaturas. Muitas APIs do Windows usa
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-**❌ NÃO** use `[MarshalAs(UnmanagedType.LPStruct)]` para qualquer coisa diferente de parâmetros GUID `ref`.
+**❌ não** Use `[MarshalAs(UnmanagedType.LPStruct)]` para qualquer outra coisa que não seja `ref` parâmetros GUID.
 
 ## <a name="blittable-types"></a>Tipos blittable
 
@@ -124,7 +122,7 @@ Você pode verificar se um tipo é blittable pela tentativa de criar um `GCHandl
 
 **✔️ TORNE** suas estruturas mais blittable quando possível.
 
-Para obter mais informações, consulte:
+Para obter mais informações, consulte .
 
 - [Tipos blittable e não blittable](../../framework/interop/blittable-and-non-blittable-types.md)  
 - [Marshaling de Tipo](type-marshaling.md)
@@ -165,7 +163,7 @@ Veja a seguir uma lista dos tipos de dados comumente usados em APIs do Windows e
 
 Os tipos a seguir são do mesmo tamanho no Windows de 32 e 64 bits, apesar de seus nomes.
 
-| Largura | Windows          | C (Windows)          | C#       | Alternativa                          |
+| Largura | Portal          | C (Windows)          | C#       | Alternativa                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
@@ -219,7 +217,7 @@ Os ponteiros para structs nas definições devem ser transmitidos por `ref` ou u
 
 **✔️ BUSQUE** a struct gerenciada o mais próximo possível da forma e dos nomes usados na documentação ou no cabeçalho da plataforma oficial.
 
-**✔️ USE** `sizeof()` C# em vez de `Marshal.SizeOf<MyStruct>()` para estruturas blittable a fim de melhorar o desempenho.
+**✔️ USE**`sizeof()` C# em vez de `Marshal.SizeOf<MyStruct>()` para estruturas blittable a fim de melhorar o desempenho.
 
 Uma matriz como `INT_PTR Reserved1[2]` precisa ser empacotada para dois campos `IntPtr`, `Reserved1a` e `Reserved1b`. Quando a matriz nativa é um tipo primitivo, podemos usar a palavra-chave `fixed` para escrevê-la um pouco mais limpa. Por exemplo, `SYSTEM_PROCESS_INFORMATION` se parece com isso no cabeçalho nativo:
 

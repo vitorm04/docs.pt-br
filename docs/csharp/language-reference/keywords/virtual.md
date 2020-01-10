@@ -1,6 +1,5 @@
 ---
 title: virtual – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - virtual_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: d5e087647adced0b41cc6e42fcf534b274c70592
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 47b77792fd3a2b2700ec0734851fdec534361596
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72395158"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712865"
 ---
 # <a name="virtual-c-reference"></a>virtual (Referência de C#)
 
@@ -62,7 +61,7 @@ O programa a seguir calcula e exibe a área apropriada para cada figura invocand
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Polimorfismo](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Como: adicionar detalhes de linha a um controle DataGrid'
+title: Como adicionar detalhes de linha a um controle DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - row details [WPF], DataGrid
 - DataGrid [WPF], row details
 ms.assetid: 0bdc6f50-9b4c-483f-9df6-a47a1fde998b
-ms.openlocfilehash: d5b6539f3d379088528b9654861267988b6fc69b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4db414e1907d42071f7251c390077d4020fa577c
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61911375"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559671"
 ---
-# <a name="how-to-add-row-details-to-a-datagrid-control"></a>Como: adicionar detalhes de linha a um controle DataGrid
-Ao usar o <xref:System.Windows.Controls.DataGrid> controle, você pode personalizar a apresentação de dados adicionando uma seção de detalhes da linha. Adicionar uma seção de detalhes de linha permite agrupar alguns dados em um modelo que fica opcionalmente visível ou recolhido. Por exemplo, você pode adicionar detalhes da linha para um <xref:System.Windows.Controls.DataGrid> que apresente apenas um resumo dos dados para cada linha a <xref:System.Windows.Controls.DataGrid>, mas apresenta mais campos de dados quando o usuário seleciona uma linha. Você define o modelo para a seção detalhes da linha de <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> propriedade. A ilustração a seguir mostra um exemplo de uma seção de detalhes da linha.  
+# <a name="how-to-add-row-details-to-a-datagrid-control"></a>Como adicionar detalhes de linha a um controle DataGrid
+Ao usar o controle de <xref:System.Windows.Controls.DataGrid>, você pode personalizar a apresentação de dados adicionando uma seção de detalhes de linha. Adicionar uma seção de detalhes de linha permite agrupar alguns dados em um modelo que fica opcionalmente visível ou recolhido. Por exemplo, você pode adicionar detalhes de linha a um <xref:System.Windows.Controls.DataGrid> que apresenta apenas um resumo dos dados para cada linha na <xref:System.Windows.Controls.DataGrid>, mas apresenta mais campos de dados quando o usuário seleciona uma linha. Defina o modelo para a seção detalhes da linha na propriedade <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>. A ilustração a seguir mostra um exemplo de uma seção de detalhes da linha.  
   
- ![DataGrid mostrada com detalhes de linha](./media/ndp-rowdetails.png "NDP_RowDetails")  
+ ![DataGrid mostrado com detalhes da linha](./media/ndp-rowdetails.png "NDP_RowDetails")  
   
  Defina o modelo de detalhes de linha como XAML embutido ou como um recurso. Ambas as abordagens são mostradas nos procedimentos a seguir. Um modelo de dados adicionado como um recurso pode ser usado em todo o projeto sem recriar o modelo. Um modelo de dados que é adicionado como XAML embutido só é acessível pelo controle no qual ele está definido.  
   
@@ -29,9 +29,9 @@ Ao usar o <xref:System.Windows.Controls.DataGrid> controle, você pode personali
   
 2. No elemento <xref:System.Windows.Controls.DataGrid>, adicione um elemento <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A>.  
   
-3. Criar um <xref:System.Windows.DataTemplate> que define a aparência da seção de detalhes da linha.  
+3. Crie um <xref:System.Windows.DataTemplate> que defina a aparência da seção detalhes da linha.  
   
-     O XAML a seguir mostra a <xref:System.Windows.Controls.DataGrid> e como definir o <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> embutido. O <xref:System.Windows.Controls.DataGrid> exibe três valores em cada linha e três valores mais quando a linha está selecionada.  
+     O XAML a seguir mostra o <xref:System.Windows.Controls.DataGrid> e como definir o <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> embutido. O <xref:System.Windows.Controls.DataGrid> exibe três valores em cada linha e mais três valores quando a linha é selecionada.  
   
      [!code-xaml[DataGrid_RowDetails#1](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/mainwindow.xaml#1)]  
   
@@ -44,26 +44,26 @@ Ao usar o <xref:System.Windows.Controls.DataGrid> controle, você pode personali
   
 1. Criar um <xref:System.Windows.Controls.DataGrid> que exibe dados de uma fonte de dados.  
   
-2. Adicionar um <xref:System.Windows.FrameworkElement.Resources%2A> elemento para o elemento raiz, como um <xref:System.Windows.Window> controle ou uma <xref:System.Windows.Controls.Page> controlar ou adicionar um <xref:System.Windows.Application.Resources%2A> elemento para o <xref:System.Windows.Application> classe no arquivo App. XAML (ou Application. XAML).  
+2. Adicione um elemento <xref:System.Windows.FrameworkElement.Resources%2A> ao elemento raiz, como um controle de <xref:System.Windows.Window> ou um controle de <xref:System.Windows.Controls.Page>, ou adicione um elemento <xref:System.Windows.Application.Resources%2A> à classe <xref:System.Windows.Application> no arquivo app. XAML (ou Application. XAML).  
   
-3. No elemento recursos, crie um <xref:System.Windows.DataTemplate> que define a aparência da seção de detalhes da linha.  
+3. No elemento resources, crie um <xref:System.Windows.DataTemplate> que define a aparência da seção detalhes da linha.  
   
-     O XAML a seguir mostra a <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> definido no <xref:System.Windows.Application> classe.  
+     O XAML a seguir mostra o <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> definido na classe <xref:System.Windows.Application>.  
   
      [!code-xaml[DataGrid_RowDetails#3](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/app.xaml#3)]  
   
-4. Sobre o <xref:System.Windows.DataTemplate>, defina a [X:Key](../../xaml-services/x-key-directive.md) como um valor que identifica exclusivamente o modelo de dados.  
+4. Na <xref:System.Windows.DataTemplate>, defina a [diretiva x:Key](../../../desktop-wpf/xaml-services/xkey-directive.md) com um valor que identifique exclusivamente o modelo de dados.  
   
-5. No <xref:System.Windows.Controls.DataGrid> elemento, defina o <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> propriedade para o recurso definido nas etapas anteriores. Atribua o recurso como um recurso estático.  
+5. No elemento <xref:System.Windows.Controls.DataGrid>, defina a propriedade <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> para o recurso definido nas etapas anteriores. Atribua o recurso como um recurso estático.  
   
-     O XAML a seguir mostra o <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> propriedade definida para o recurso do exemplo anterior.  
+     O XAML a seguir mostra a propriedade <xref:System.Windows.Controls.DataGrid.RowDetailsTemplate%2A> definida como o recurso do exemplo anterior.  
   
      [!code-xaml[DataGrid_RowDetails#4](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_rowdetails/cs/window2.xaml#4)]  
   
 ### <a name="to-set-visibility-and-prevent-horizontal-scrolling-for-row-details"></a>Para definir a visibilidade e evitar a rolagem horizontal para detalhes de linha  
   
-1. Se necessário, defina as <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> propriedade para um <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode> valor.  
+1. Se necessário, defina a propriedade <xref:System.Windows.Controls.DataGrid.RowDetailsVisibilityMode%2A> como um valor de <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode>.  
   
-     Por padrão, o valor é definido como <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected>. Você pode defini-lo <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Visible> para mostrar os detalhes de todas as linhas ou <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Collapsed> para ocultar os detalhes de todas as linhas.  
+     Por padrão, o valor é definido como <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.VisibleWhenSelected>. Você pode defini-lo como <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Visible> para mostrar os detalhes de todas as linhas ou <xref:System.Windows.Controls.DataGridRowDetailsVisibilityMode.Collapsed> para ocultar os detalhes de todas as linhas.  
   
-2. Se necessário, defina as <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> propriedade para `true` para impedir que a linha de detalhes de seção de rolar horizontalmente.
+2. Se necessário, defina a propriedade <xref:System.Windows.Controls.DataGrid.AreRowDetailsFrozen%2A> como `true` para impedir que a seção detalhes da linha seja rolada horizontalmente.

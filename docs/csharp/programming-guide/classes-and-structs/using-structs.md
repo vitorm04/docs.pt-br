@@ -1,16 +1,15 @@
 ---
 title: Como usar structs – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 491ee0224ffa39262992f7f42d20e5f97560b73f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429499"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714669"
 ---
 # <a name="using-structs-c-programming-guide"></a>Usando structs (C# guia de programação)
 
@@ -48,7 +47,7 @@ Este exemplo demonstra um recurso que é exclusivo para struct. Ele cria um obje
 
 [!code-csharp[csProgGuideObjects#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#3)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes e Structs](index.md)

@@ -1,18 +1,17 @@
 ---
 title: Operadores de atribuição C# -referência
-ms.custom: seodec18
 ms.date: 09/10/2019
 f1_keywords:
 - =_CSharpKeyword
 helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
-ms.openlocfilehash: 103bc823ab6a56d53a3f2ec05b8de9295f1de400
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 19f74e6835ae555a3a38aa6ca8679948c7f290dd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039077"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712748"
 ---
 # <a name="assignment-operators-c-reference"></a>Operadores de atribuiçãoC# (referência)
 
@@ -62,7 +61,7 @@ A atribuição composta é tem suporte dos operadores [aritmético](arithmetic-o
 
 ## <a name="null-coalescing-assignment"></a>Atribuição de União nula
 
-A partir C# do 8,0, você pode usar o operador de atribuição de união nula`??=`para atribuir o valor do seu operando à direita para o operando à esquerda somente se o operando à esquerda for avaliado como`null`. Para obter mais informações, consulte [?? e?? =](null-coalescing-operator.md) artigo de operadores.
+A partir C# do 8,0, você pode usar o operador de atribuição de união nula `??=` para atribuir o valor do seu operando à direita para o operando à esquerda somente se o operando à esquerda for avaliado como `null`. Para obter mais informações, consulte [?? e?? =](null-coalescing-operator.md) artigo de operadores.
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
@@ -76,7 +75,7 @@ Saiba mais na seção [Operadores de atribuição](~/_csharplang/spec/expression
 
 Para obter mais informações sobre o operador de atribuição de referência `= ref`, consulte a [Nota de proposta de recurso](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)

@@ -1,15 +1,13 @@
 ---
 title: Direcionamento para bibliotecas do .NET multiplataforma
 description: Recomendações de melhores práticas para a criação de bibliotecas do .NET multiplataforma.
-author: jamesnk
-ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: 6bd310f2e4b7a9bd7bb550ed9c7da9ebabdf64ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
+ms.date: 08/12/2019
+ms.openlocfilehash: 45eb67837c924558ec51381dd924abf9fd0fa315
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129708"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706511"
 ---
 # <a name="cross-platform-targeting"></a>Direcionamento multiplataforma
 
@@ -33,7 +31,7 @@ Ter como destino o .NET Standard e compilar com êxito o projeto não assegura q
 
 > A maioria das bibliotecas de uso não deve precisar de APIs fora do .NET Standard 2.0. O .NET standard 2.0 é compatível com todas as plataformas modernas e é a maneira recomendada de dar suporte a várias plataformas com um destino.
 
-**EVITE** incluir um destino `netstandard1.x`.
+**❌ evitar** incluir um destino de `netstandard1.x`.
 
 > O .NET standard 1.x é distribuído como um conjunto granular de pacotes do NuGet, que cria um grande grafo de dependência de pacote e resulta em os desenvolvedores baixarem muitos pacotes durante o build. Plataformas .NET modernas, incluindo .NET Framework 4.6.1, UWP e Xamarin, dão suporte para .NET Standard 2.0. Você somente deverá direcionar o .NET Standard 1.x se precisar especificamente ter como destino uma plataforma mais antiga.
 
@@ -41,7 +39,7 @@ Ter como destino o .NET Standard e compilar com êxito o projeto não assegura q
 
 > Todas as plataformas que dão suporte a .NET Standard 2.0 usarão o destino `netstandard2.0` e se beneficiarão de um grafo de pacote menor, enquanto plataformas mais antigas ainda funcionarão e farão fallback usando o destino `netstandard1.x`.
 
-**NÃO** inclua um destino do .NET Standard se a biblioteca se basear em um modelo de aplicativo específico da plataforma.
+**❌ não** inclua um destino de .net Standard se a biblioteca depender de um modelo de aplicativo específico da plataforma.
 
 > Por exemplo, uma biblioteca do kit de ferramentas de controle UWP depende de um modelo de aplicativo disponível apenas em UWP. APIs específicas do modelo de aplicativo não estarão disponíveis no .NET Standard.
 
@@ -57,13 +55,44 @@ Para proteger seus consumidores de precisarem criar estrutura individuais, você
 
 > Ter como destinos implementações do .NET permite que você chame APIs específicas da plataforma que estão fora do .NET Standard.
 >
-> Não remova o suporte para o .NET Standard ao fazer isso. Em vez disso, geram da implementação e oferecem APIs de funcionalidade. Dessa forma, sua biblioteca pode ser usada em qualquer lugar e dá suporte à iluminação em tempo de execução de recursos.
+> Não remova o suporte para o .NET Standard ao fazer isso. Em vez disso, geram da implementação e oferecem APIs de funcionalidade. Dessa forma, sua biblioteca pode ser usada em qualquer lugar e dá suporte à iluminação em runtime de recursos.
 
-**EVITE** usar multi-targeting, bem como o direcionamento do .NET Standard se o código-fonte for o mesmo para todos os destinos.
+```csharp
+public static class GpsLocation
+{
+    // This project uses multi-targeting to expose device-specific APIs to .NET Standard.
+    public static async Task<(double latitude, double longitude)> GetCoordinatesAsync()
+    {
+#if NET461
+        return CallDotNetFramworkApi();
+#elif WINDOWS_UWP
+        return CallUwpApi();
+#else
+        throw new PlatformNotSupportedException();
+#endif
+    }
+
+    // Allows callers to check without having to catch PlatformNotSupportedException
+    // or replicating the OS check.
+    public static bool IsSupported
+    {
+        get
+        {
+#if NET461 || WINDOWS_UWP
+            return true;
+#else
+            return false;
+#endif
+        }
+    }
+}
+```
+
+**❌ evitar** várias direcionamentos, bem como direcionamento .net Standard, se o código-fonte for o mesmo para todos os destinos.
 
 > O assembly .NET padrão será usado automaticamente pelo NuGet. Ter como destino implementações do .NET individuais aumenta o tamanho de `*.nupkg` sem nenhum benefício.
 
-**✔️ CONSIDERE** adicionar um destino para `net461` quando você está oferecendo um destino `netstandard2.0`. 
+**✔️ CONSIDERE** adicionar um destino para `net461` quando você está oferecendo um destino `netstandard2.0`.
 
 > Usar o .NET Standard 2.0 do .NET Framework tem alguns problemas que foram resolvidos no .NET Framework 4.7.2. Você pode melhorar a experiência para desenvolvedores que ainda estão no .NET Framework 4.6.1 a 4.7.1 oferecendo a eles um binário compilado para .NET Framework 4.6.1.
 
@@ -88,11 +117,11 @@ Para proteger seus consumidores de precisarem criar estrutura individuais, você
 
 O .NET dá suporte a ter como destino versões do .NET Framework que há muito tempo estão sem suporte, bem como plataformas que não são mais usadas comumente. Embora haja valor fazer sua biblioteca funcionar no máximo possível de destinos, precisar contornar APIs ausentes pode adicionar sobrecarga significativa. Acreditamos que não vale mais a pena ter determinadas estruturas como destino, considerando seu alcance e limitações.
 
-**NÃO** inclua um destino de PCL (Biblioteca de Classes Portátil). Por exemplo, `portable-net45+win8+wpa81+wp8`.
+**❌ não** incluem um destino PCL (biblioteca de classes portátil). Por exemplo, `portable-net45+win8+wpa81+wp8`.
 
 > O .NET standard é a maneira moderna de dar suporte a bibliotecas do .NET multiplataforma e substitui PCLs.
 
-**NÃO** inclua destinos para plataformas do .NET que não têm mais suporte. Por exemplo, `SL4`, `WP`.
+**❌ não** incluir destinos para plataformas .NET que não têm mais suporte. Por exemplo, `SL4`, `WP`.
 
 >[!div class="step-by-step"]
 >[Anterior](get-started.md)

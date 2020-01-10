@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 21c708f63faaedb9fbce60d7e4aef314f7a41ef8
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
-ms.translationtype: HT
+ms.openlocfilehash: fb03200c810290c970f7aa56a0e15d385aca7ca8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185552"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711344"
 ---
 # <a name="selecting-a-collection-class"></a>Selecionando uma classe de coleção
 
@@ -52,13 +50,13 @@ Certifique-se de escolher sua classe de coleção com cuidado. A utilização do
   
 - Cada elemento conterá um valor, uma combinação de uma chave e um valor ou uma combinação de uma chave e diversos valores?  
   
-  - Um valor: Use uma das coleções baseadas na interface <xref:System.Collections.IList> ou na interface genérica <xref:System.Collections.Generic.IList%601>.  
+  - Um valor: use qualquer uma das coleções baseadas na interface do <xref:System.Collections.IList> ou na interface genérica do <xref:System.Collections.Generic.IList%601>.  
   
-  - Uma chave e um valor: Use uma das coleções baseadas na interface <xref:System.Collections.IDictionary> ou na interface genérica <xref:System.Collections.Generic.IDictionary%602>.  
+  - Uma chave e um valor: use qualquer uma das coleções baseadas na interface do <xref:System.Collections.IDictionary> ou na interface genérica do <xref:System.Collections.Generic.IDictionary%602>.  
   
-  - Um valor com uma chave inserida: Use a classe genérica <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
+  - Um valor com chave incorporada: use a classe genérica <xref:System.Collections.ObjectModel.KeyedCollection%602>.  
   
-  - Uma chave e vários valores: Use a classe <xref:System.Collections.Specialized.NameValueCollection>.  
+  - Uma chave e vários valores: use a classe <xref:System.Collections.Specialized.NameValueCollection>.  
   
 - Você precisa classificar os elementos de forma diferente de como foram inseridos?  
   
@@ -83,7 +81,7 @@ Certifique-se de escolher sua classe de coleção com cuidado. A utilização do
   
  PLINQ fornece uma implementação paralela de LINQ to Objects que pode oferecer uma execução de consulta mais rápida em muitos cenários, por meio do uso mais eficiente dos computadores de vários núcleos. Para obter mais informações, consulte [PLINQ (Parallel LINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>

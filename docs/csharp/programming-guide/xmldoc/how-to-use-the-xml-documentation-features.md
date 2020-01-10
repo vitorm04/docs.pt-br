@@ -1,17 +1,16 @@
 ---
-title: 'Como: usar os recursos de documentação XML- C# guia de programação'
-ms.custom: seodec18
+title: Como usar os recursos de documentação XML- C# guia de programação
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 3e59783a7f306d3d2a510fe3337a4c6490dcb3e8
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523458"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75696708"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>Como usar as funcionalidades da documentação XML
 
@@ -132,7 +131,7 @@ A documentação XML começa com ///. Quando você cria um novo projeto, os assi
     > [!NOTE]
     > O arquivo XML não fornece informações completas sobre o tipo e os membros (por exemplo, ele não contém nenhuma informação de tipo). Para obter informações completas sobre um tipo ou membro, o arquivo de documentação deve ser usado com a reflexão no membro ou tipo real.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [-doc (opções do compilador do C#)](../../language-reference/compiler-options/doc-compiler-option.md)

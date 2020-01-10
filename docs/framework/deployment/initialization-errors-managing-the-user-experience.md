@@ -6,14 +6,12 @@ helpviewer_keywords:
 - initialization errors [.NET Framework]
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: cadcb5c2e85f046b5c1c561c17663b7c94829f4f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802248"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716450"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Erros de inicialização de .NET Framework: Gerenciando a experiência do usuário
 
@@ -91,7 +89,7 @@ Quando o .NET Framework 3,5 é instalado, os usuários podem executar aplicativo
 
 Do .NET Framework 4.5 em diante, o registro em log de ativação do CLR foi aprimorado para incluir entradas de log que registram quando e por que a mensagem de erro de inicialização é exibida. Para obter mais informações, consulte [Como depurar problemas de ativação do CLR](how-to-debug-clr-activation-issues.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de implantação para desenvolvedores](deployment-guide-for-developers.md)
 - [Como configurar um aplicativo para dar suporte a .NET Framework 4 ou versões posteriores](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

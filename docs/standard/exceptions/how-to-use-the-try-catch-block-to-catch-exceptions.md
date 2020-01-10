@@ -1,5 +1,5 @@
 ---
-title: 'Como: Usar o bloco try-catch para capturar exceções'
+title: Como usar o bloco try-catch para capturar exceções
 ms.date: 02/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,12 @@ helpviewer_keywords:
 - try/catch blocks
 - catch blocks
 ms.assetid: a3ce6dfd-1f64-471b-8ad8-8cfaf406275d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eaa389f461e70aae41f2e09437fd725a3bcefa5e
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 5a9218d394b76e897f4263708a10f1bc895ad4e1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696729"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708460"
 ---
 # <a name="how-to-use-the-trycatch-block-to-catch-exceptions"></a>Como usar o bloco try/catch para capturar exceções
 
@@ -38,7 +36,7 @@ O CLR (Common Language Runtime) captura exceções não manipuladas pelos blocos
 > [!NOTE]
 > A maioria dos códigos pode lançar uma exceção, sendo que algumas exceções, tais como <xref:System.OutOfMemoryException>, podem ser geradas pelo próprio CLR, a qualquer momento. Embora os aplicativos não precisem lidar com essas exceções, esteja ciente dessa possibilidade ao gravar bibliotecas para serem usadas por outros. Para obter sugestões sobre quando definir código em um bloco `try`, confira [Práticas recomendadas para exceções](best-practices-for-exceptions.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Exceções](index.md)
 - [Tratamento de erros de E/S no .NET](../io/handling-io-errors.md)

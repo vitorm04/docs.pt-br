@@ -1,6 +1,5 @@
 ---
 title: Palavra-chave null – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - "null"
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 932649bf063beb8cb334966c0bec0a8df86c7625
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ef64972a476ce348495565e09c06d0122c5ee628
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736902"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713324"
 ---
 # <a name="null-c-reference"></a>null (Referência de C#)
 
@@ -27,7 +26,7 @@ O exemplo a seguir demonstra alguns comportamentos da palavra-chave null:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](index.md)

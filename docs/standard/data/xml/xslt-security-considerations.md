@@ -3,14 +3,12 @@ title: Considerações de segurança XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 683cf4a38ed08e0c569df62778c2ff80323ef261
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: e6e490c0f637aace57dacc88ef49cc9be87532cd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910484"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709680"
 ---
 # <a name="xslt-security-considerations"></a>Considerações de segurança XSLT
 O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e flexibilidade. Inclui muitos recursos que, quando úteis, podem também ser explorados por fontes fora. Para usar com segurança XSLT, você deve compreender os tipos de problemas de segurança que ocorrem ao usar XSLT, e as estratégias básicas que você pode usar para atenuar esses riscos.  
@@ -31,7 +29,7 @@ O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e fl
 #### <a name="guidelines"></a>Diretrizes  
  Habilitar scripts somente quando a folha de estilos vem de uma fonte confiável. Se você não pode verificar a fonte da folha de estilos, ou se a folha de estilos não vem de uma fonte confiável, passe em `null` para o argumento configurações de fonte.  
   
-## <a name="external-resources"></a>Recursos externos  
+## <a name="external-resources"></a>Recursos Externos  
  O idioma XSLT tem recursos como `xsl:import`, `xsl:include`, ou a função de `document()` , onde o processador precisa resolver referências de um URI. A classe de <xref:System.Xml.XmlResolver> é usada para resolver recursos externos. Os recursos externos podem precisar ser resolvido nos dois seguintes casos:  
   
 - Ao criar uma folha de estilos, <xref:System.Xml.XmlResolver> é usado para `xsl:import` e resolução de `xsl:include` .  
@@ -56,7 +54,7 @@ O idioma XSLT tem um conjunto rico de recursos que oferecem várias energia e fl
   
 - Se você quiser garantir que nenhum recurso externo é acessado, você pode especificar `null` para o argumento de <xref:System.Xml.XmlResolver> .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Resolvendo recursos externos durante processamento XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)

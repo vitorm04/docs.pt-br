@@ -1,6 +1,5 @@
 ---
 title: Classes static e membros de classes static – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 2eda5a44d4c2dfd9a745871bdc345b7c50e6af49
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 7add512b262afbabe996f752c083566a2c394dfd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418802"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705425"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Classes static e membros de classes static (Guia de Programação em C#)
 
@@ -85,11 +84,11 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  Uma chamada para um método estático gera uma instrução de chamada em MSIL (Microsoft Intermediate Language), enquanto uma chamada para um método de instância gera uma instrução `callvirt`, que também verifica se há referências de objeto nulas. No entanto, na maioria das vezes, a diferença de desempenho entre os dois não é significativa.  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a>Especificação da linguagem C#  
 
 Para saber mais, confira [Classes estáticas](~/_csharplang/spec/classes.md#static-classes) e [Membros estáticos e de instância](~/_csharplang/spec/classes.md#static-and-instance-members) na [Especificação da linguagem C#](/dotnet/csharp/language-reference/language-specification/introduction). A especificação da linguagem é a fonte definitiva para a sintaxe e o uso de C#.
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [static](../../language-reference/keywords/static.md)

@@ -7,38 +7,37 @@ helpviewer_keywords:
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-author: KrzysztofCwalina
-ms.openlocfilehash: 4943ddcdf1bc4e3e32c8d664cbcc5c50ae3959bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c1e6d9aeafa1c9d7ee4b0c2c626b6fd7be6cf99
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778697"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708965"
 ---
 # <a name="virtual-members"></a>Membros virtuais
-Membros virtuais podem ser substituídos, portanto, alterar o comportamento da subclasse. Eles são muito semelhantes aos retornos de chamada em termos de extensibilidade que eles fornecem, mas eles são melhores em termos de desempenho de execução e o consumo de memória. Além disso, os membros virtuais se sentir mais naturais em cenários que exigem a criação de um especial de um tipo existente (especialização).  
+Os membros virtuais podem ser substituídos, alterando assim o comportamento da subclasse. Eles são bastante semelhantes aos retornos de chamada em termos da extensibilidade que eles fornecem, mas são melhores em termos de desempenho de execução e consumo de memória. Além disso, os membros virtuais sentem-se mais naturais em cenários que exigem a criação de um tipo especial de um Type (especialização) existente.  
   
- Membros virtuais executam melhor eventos e retornos de chamada, mas não executam melhor do que métodos não virtuais.  
+ Os membros virtuais têm um desempenho melhor do que retornos de chamada e eventos, mas não têm melhor desempenho do que métodos não virtuais.  
   
- A principal desvantagem de membros virtuais é que o comportamento de um membro virtual só pode ser modificado no momento da compilação. O comportamento de um retorno de chamada pode ser modificado no tempo de execução.  
+ A principal desvantagem dos membros virtuais é que o comportamento de um membro virtual só pode ser modificado no momento da compilação. O comportamento de um retorno de chamada pode ser modificado em tempo de execução.  
   
- Membros virtuais, assim como os retornos de chamada (e talvez mais do que os retornos de chamada), são caros de criar, testar e manter, porque qualquer chamada para um membro virtual pode ser substituída de forma imprevisível e pode executar código arbitrário. Além disso, muito mais esforço geralmente é necessário para definir claramente o contrato de membros virtuais, portanto, o custo de criação e documentá-los é maior.  
+ Membros virtuais, como retornos de chamada (e talvez mais de retornos de chamada), são caros de projetar, testar e manter, pois qualquer chamada para um membro virtual pode ser substituída de maneiras imprevisíveis e pode executar código arbitrário. Além disso, geralmente é necessário muito mais esforço para definir claramente o contrato de membros virtuais, de modo que o custo de criá-los e documentá-los é maior.  
   
  **X DO NOT** tornar membros virtuais, a menos que você tem uma boa razão para isso e você está ciente de todos os custos relacionados à criação, teste e manutenção membros virtuais.  
   
- Os membros virtuais serão menos tolerante em termos das alterações que podem ser feitas a eles sem interromper a compatibilidade. Além disso, eles são mais lentos que os membros não-virtual, principalmente porque as chamadas para os membros virtuais não são embutidas.  
+ Os membros virtuais são menos tolerante em termos de alterações que podem ser feitas a eles sem a necessidade de perder a compatibilidade. Além disso, eles são mais lentos que os membros não virtuais, principalmente porque as chamadas para membros virtuais não são embutidas.  
   
  **✓ CONSIDER** limitando extensibilidade apenas o que é absolutamente necessário.  
   
- **✓ DO** prefira acessibilidade protegida acessibilidade pública para membros virtuais. Os membros públicos devem fornecer extensibilidade (se necessário) chamando um membro virtual protegida.  
+ **✓ DO** prefira acessibilidade protegida acessibilidade pública para membros virtuais. Os membros públicos devem fornecer extensibilidade (se necessário) chamando um membro virtual protegido.  
   
- Os membros públicos de uma classe devem fornecer o conjunto certo de funcionalidade para os consumidores diretos dessa classe. Membros virtuais são projetados para ser substituído em subclasses e acessibilidade protegida é uma ótima maneira de definir o escopo de todos os pontos de extensibilidade virtual onde eles podem ser usados.  
+ Os membros públicos de uma classe devem fornecer o conjunto certo de funcionalidade para consumidores diretos dessa classe. Os membros virtuais são projetados para serem substituídos em subclasses e a acessibilidade protegida é uma ótima maneira de definir o escopo de todos os pontos de extensibilidade virtual para onde eles podem ser usados.  
   
- *Portions © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
+ *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
   
- *Reimpresso com permissão da Pearson Education, Inc. de [as diretrizes de Design do Framework: As convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicados 22 de outubro de 2008 pela Addison-Wesley Professional, como parte da série de desenvolvimento do Microsoft Windows.*  
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)
 - [Designer voltado para extensibilidade](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

@@ -1,15 +1,13 @@
 ---
 title: Publicar um pacote NuGet
 description: Práticas recomendadas para a publicação de bibliotecas .NET para NuGet.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 9c8442b52ed2c54d2fb3368a2e886c5fc2b19148
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: HT
+ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640760"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706459"
 ---
 # <a name="publishing-a-nuget-package"></a>Publicar um pacote NuGet
 
@@ -24,7 +22,7 @@ Os pacotes NuGet são publicados e consumidos dos repositórios de pacote. Embor
 > [!NOTE]
 > O NuGet.org [não permite que um pacote seja excluído](/nuget/policies/deleting-packages) depois que ele foi carregado. Um pacote pode ser não listado para que não seja visível publicamente na interface do usuário, mas o `*.nupkg` ainda pode ser baixado na restauração. Além disso, o nuget.org não permite versões duplicadas do pacote. Para corrigir um pacote NuGet com um erro, você precisa remover o pacote incorreto, aumentar o número de versão e publicar uma nova versão do pacote.
 
-**✔️ SIM:** [publique pacotes estáveis e pacotes de pré-lançamento](/nuget/create-packages/publish-a-package) para os quais você deseja comentários da comunidade no NuGet.org.
+**✔️** [publicar pacotes estáveis e pacotes de pré-lançamento](/nuget/create-packages/publish-a-package) nos quais você deseja que os comentários da Comunidade NuGet.org.
 
 **✔️ CONSIDERE:** publique pacotes de pré-lançamento no feed MyGet de uma compilação de integração contínua.
 
@@ -34,7 +32,7 @@ Os pacotes NuGet são publicados e consumidos dos repositórios de pacote. Embor
 
 É importante que os invasores não possam acessar sua conta do NuGet e carregar uma versão mal-intencionado da sua biblioteca. O NuGet.org oferece autenticação de dois fatores e notificações por email quando um pacote é publicado. Habilite esses recursos após fazer logon no NuGet.org, na página **Configurações de conta**.
 
-![O texto alt](./media/publish-nuget-package/nuget-2fa.png "Segurança da conta do NuGet")
+![alt text](./media/publish-nuget-package/nuget-2fa.png "Segurança da conta do NuGet")
 
 **✔️ SIM:** use uma conta da Microsoft para entrar no NuGet.
 

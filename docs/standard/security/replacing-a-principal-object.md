@@ -10,31 +10,29 @@ helpviewer_keywords:
 - security [.NET Framework], replacing principal objects
 - security [.NET Framework], principals
 ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5f33be207dd6166b16a04844f3d92b6e017d1c7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 89b7036215cb7998222e280ceef02073d455a1b2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018782"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705932"
 ---
 # <a name="replacing-a-principal-object"></a>Substituindo um objeto Principal
-Aplicativos que fornecem serviços de autenticação devem ser capazes de substituir os **Principal** objeto (<xref:System.Security.Principal.IPrincipal>) para um determinado thread. Além disso, o sistema de segurança deve ajudar a proteger a capacidade de substituir **Principal** objetos porque um maliciosamente anexado incorreto **Principal** comprometa a segurança do seu aplicativo por reivindicar uma identidade irreais ou função. Portanto, aplicativos que exigem a capacidade de substituir **Principal** objetos devem ser concedidos a <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> objeto para o controle principal. (Observe que essa permissão não é necessária para realizar verificações de segurança baseada em função ou de criação **Principal** objetos.)  
+Os aplicativos que fornecem serviços de autenticação devem ser capazes de substituir o objeto **principal** (<xref:System.Security.Principal.IPrincipal>) para um determinado thread. Além disso, o sistema de segurança deve ajudar a proteger a capacidade de substituir os objetos **principais** , pois uma **entidade** de segurança incorreta, comprometida de forma mal-intencionada, compromete o seu aplicativo reivindicando uma identidade ou função inverdadeira. Portanto, os aplicativos que exigem a capacidade de substituir objetos de **entidade de segurança** devem receber o objeto <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType> para o controle principal. (Observe que essa permissão não é necessária para executar verificações de segurança baseadas em função ou para a criação de objetos **principal** .)  
   
- O atual **Principal** objeto pode ser substituído por meio das seguintes tarefas:  
+ O objeto **principal** atual pode ser substituído executando as seguintes tarefas:  
   
-1. Criar a substituição **Principal** do objeto e associados **identidade** objeto.  
+1. Crie o objeto **principal** de substituição e o objeto de **identidade** associado.  
   
-2. Anexar o novo **Principal** objeto para o contexto de chamada.  
+2. Anexe o novo objeto **principal** ao contexto de chamada.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como criar um objeto de entidade genérico e usá-lo para definir a entidade de um thread.  
+ O exemplo a seguir mostra como criar um objeto principal genérico e usá-lo para definir a entidade de segurança de um thread.  
   
  [!code-csharp[SetCurrentPrincipal#1](../../../samples/snippets/csharp/VS_Snippets_CLR/SetCurrentPrincipal/CS/program.cs#1)]
  [!code-vb[SetCurrentPrincipal#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/SetCurrentPrincipal/VB/program.vb#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Security.Permissions.SecurityPermission?displayProperty=nameWithType>
 - [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)

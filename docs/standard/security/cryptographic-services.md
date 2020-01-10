@@ -24,14 +24,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6f0e268995449bc27b93c92ac8654c09fca9cd14
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975822"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709199"
 ---
 # <a name="cryptographic-services"></a>Serviços criptográficos
 
@@ -59,7 +57,7 @@ A criptografia é usada para atingir as seguintes metas:
 
 Para atingir essas metas, você pode usar uma combinação de algoritmos e práticas conhecidas como primitivos de criptografia para criar um esquema criptográfico. A tabela a seguir lista os primitivos criptográficos e seus usos.
 
-|Primitivo de criptografia|Use|
+|Primitivo de criptografia|Uso|
 |-----------------------------|---------|
 |Criptografia de chave secreta (criptografia simétrica)|Executa uma transformação nos dados para impedir que sejam lidos por terceiros. Esse tipo de criptografia usa uma única chave secreta compartilhada para criptografar e descriptografar dados.|
 |Criptografia de chave pública (criptografia assimétrica)|Executa uma transformação nos dados para impedir que sejam lidos por terceiros. Esse tipo de criptografia usa um par de chaves pública/privada para criptografar e descriptografar dados.|
@@ -90,15 +88,15 @@ O .NET Framework fornece as seguintes classes que implementam algoritmos de crip
 
 - <xref:System.Security.Cryptography.AesManaged> (introduzido no .NET Framework 3,5).
 
-- <xref:System.Security.Cryptography.DESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
 - <xref:System.Security.Cryptography.HMACSHA1> (tecnicamente, trata-se de um algoritmo de chave secreta porque ele representa o código de autenticação de mensagens que é calculado usando uma função de hash criptográfico combinada com uma chave secreta. Consulte [valores de hash](#hash-values), mais adiante neste tópico.)
 
-- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>
+- <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RijndaelManaged>
+- <xref:System.Security.Cryptography.RijndaelManaged>.
 
-- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>
+- <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.
 
 ## <a name="public-key-encryption"></a>Criptografia de chave pública
 
@@ -142,7 +140,7 @@ O .NET Framework fornece as seguintes classes que implementam algoritmos de crip
 
 A RSA permite criptografia e assinatura, mas o DSA pode ser usado apenas para assinatura, e o Diffie-Hellman pode ser usado somente para geração de chave. Em geral, os algoritmos de chave pública são mais limitados em seus usos que os algoritmos de chave privada.
 
-## <a name="digital-signatures"></a>Assinaturas digitais
+## <a name="digital-signatures"></a>Assinaturas Digitais
 
 Os algoritmos de chave pública também podem ser usados para formar assinaturas digitais. As assinaturas digitais autenticam a identidade de um remetente (se você confia na chave pública do remetente) e ajudam a proteger a integridade dos dados. Usando uma chave pública gerada por Alice, o destinatário dos dados de Alice pode verificar se Alice o enviou comparando a assinatura digital para os dados de Alice e a chave pública de Alice.
 
@@ -187,21 +185,21 @@ Nenhum dos métodos anteriores impedirá que alguém leia as mensagens de Alice,
 
 O .NET Framework fornece as seguintes classes que implementam algoritmos de hash:
 
-- <xref:System.Security.Cryptography.HMACSHA1>
+- <xref:System.Security.Cryptography.HMACSHA1>.
 
-- <xref:System.Security.Cryptography.MACTripleDES>
+- <xref:System.Security.Cryptography.MACTripleDES>.
 
-- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>
+- <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.
 
-- <xref:System.Security.Cryptography.RIPEMD160>
+- <xref:System.Security.Cryptography.RIPEMD160>.
 
-- <xref:System.Security.Cryptography.SHA1Managed>
+- <xref:System.Security.Cryptography.SHA1Managed>.
 
-- <xref:System.Security.Cryptography.SHA256Managed>
+- <xref:System.Security.Cryptography.SHA256Managed>.
 
-- <xref:System.Security.Cryptography.SHA384Managed>
+- <xref:System.Security.Cryptography.SHA384Managed>.
 
-- <xref:System.Security.Cryptography.SHA512Managed>
+- <xref:System.Security.Cryptography.SHA512Managed>.
 
 - As variantes HMAC de todos os algoritmos de SHA (algoritmo de hash seguro), Message Digest 5 (MD5) e RIPEMD-160.
 
@@ -212,7 +210,7 @@ O .NET Framework fornece as seguintes classes que implementam algoritmos de hash
 > [!NOTE]
 > As falhas de design MD5 foram descobertas em 1996 e, em vez disso, o SHA-1 era recomendado. Em 2004, falhas adicionais foram descobertas e o algoritmo MD5 não é mais considerado seguro. O algoritmo SHA-1 também foi considerado inseguro e, em vez disso, o SHA-2 é recomendado.
 
-## <a name="random-number-generation"></a>Geração de números aleatórios
+## <a name="random-number-generation"></a>A geração de números aleatórios
 
 A geração de números aleatórios é integral para muitas operações criptográficas. Por exemplo, as chaves de criptografia precisam ser o mais aleatório possível para que seja impraticável reproduzi-las. Os geradores de número aleatório criptográfico devem gerar uma saída que seja computacionalmente inviável para prever com uma probabilidade melhor do que uma metade. Portanto, qualquer método de previsão do próximo bit de saída não deve funcionar melhor do que a adivinhação aleatória. As classes no .NET Framework usam geradores de números aleatórios para gerar chaves criptográficas.
 
@@ -238,7 +236,7 @@ No .NET Framework 3,5, as seguintes classes de criptografia permitem obter e ver
 
 - <xref:System.Security.Cryptography.X509Certificates.TrustStatus> fornece uma maneira simples de verificar se uma assinatura Authenticode é confiável.
 
-## <a name="suite-b-support"></a>Suporte a Suite B
+## <a name="suite-b-support"></a>Suporte para Suite B
 
 O .NET Framework 3,5 dá suporte ao Suite B conjunto de algoritmos de criptografia publicados pela NSA (Agência de segurança nacional). Para obter mais informações sobre Suite B, consulte a [folha de fatos da criptografia Suite B do NSA](https://www.nsa.gov/what-we-do/information-assurance/).
 
@@ -270,7 +268,7 @@ O .NET Framework 3,5 também inclui uma variedade de classes CNG com suporte, co
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
 |[Modelo de criptografia](../../../docs/standard/security/cryptography-model.md)|Descreve como a criptografia é implementada na biblioteca de classes base.|
 |[Instruções passo a passo: criando um aplicativo criptográfico](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Demonstra as tarefas básicas de criptografia e descriptografia.|

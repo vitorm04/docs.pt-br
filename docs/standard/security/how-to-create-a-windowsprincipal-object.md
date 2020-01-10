@@ -1,5 +1,5 @@
 ---
-title: 'Como: criar um objeto WindowsPrincipal'
+title: Como criar um objeto WindowsPrincipal
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,23 +11,21 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - principal objects, creating
 ms.assetid: 56eb10ca-e61d-4ed2-af7a-555fc4c25a25
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f298a7b036857e783efa128ce45ee8634ce993d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d409c0e9a2a6564e5fb16e4e2c72ab661ae2d5ce
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795169"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706156"
 ---
-# <a name="how-to-create-a-windowsprincipal-object"></a>Como: criar um objeto WindowsPrincipal
-Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> do objeto, dependendo se o código deve repetidamente executar a validação baseada em função ou ele deve executar apenas uma vez.  
+# <a name="how-to-create-a-windowsprincipal-object"></a>Como criar um objeto WindowsPrincipal
+Há duas maneiras de criar um objeto de <xref:System.Security.Principal.WindowsPrincipal>, dependendo se o código deve executar repetidamente a validação baseada em função ou deve executá-la apenas uma vez.  
   
- Se o código repetidamente deve executar a validação baseada em função, o primeiro dos procedimentos a seguir produz menos sobrecarga. Quando o código precisa para fazer validações baseado em função, somente uma vez, você pode criar um <xref:System.Security.Principal.WindowsPrincipal> objeto usando o segundo dos procedimentos a seguir.  
+ Se o código precisar executar a validação baseada em função repetidamente, o primeiro dos procedimentos a seguir produzirá menos sobrecarga. Quando o código precisa fazer validações baseadas em função apenas uma vez, você pode criar um <xref:System.Security.Principal.WindowsPrincipal> objeto usando o segundo dos procedimentos a seguir.  
   
 ### <a name="to-create-a-windowsprincipal-object-for-repeated-validation"></a>Para criar um objeto WindowsPrincipal para validação repetida  
   
-1. Chame o <xref:System.AppDomain.SetPrincipalPolicy%2A> método na <xref:System.AppDomain> objeto que é retornado pelo estático <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> propriedade, passando o método um <xref:System.Security.Principal.PrincipalPolicy> valor de enumeração que indica qual deve ser a nova política. Valores com suporte são <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal>, e <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>. O código a seguir demonstra essa chamada de método.  
+1. Chame o método <xref:System.AppDomain.SetPrincipalPolicy%2A> no objeto <xref:System.AppDomain> que é retornado pela propriedade <xref:System.AppDomain.CurrentDomain%2A?displayProperty=nameWithType> estática, passando o método a <xref:System.Security.Principal.PrincipalPolicy> valor de enumeração que indica qual deve ser a nova política. Os valores com suporte são <xref:System.Security.Principal.PrincipalPolicy.NoPrincipal>, <xref:System.Security.Principal.PrincipalPolicy.UnauthenticatedPrincipal> e <xref:System.Security.Principal.PrincipalPolicy.WindowsPrincipal>. O código a seguir demonstra essa chamada de método.  
   
     ```csharp  
     AppDomain.CurrentDomain.SetPrincipalPolicy(  
@@ -39,7 +37,7 @@ Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> 
         PrincipalPolicy.WindowsPrincipal)  
     ```  
   
-2. Com a política definida, use estático <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> propriedade para recuperar a entidade de segurança que encapsula o usuário atual do Windows. Como a propriedade de tipo de retorno é <xref:System.Security.Principal.IPrincipal>, você deve converter o resultado para um <xref:System.Security.Principal.WindowsPrincipal> tipo. O código a seguir inicializa uma nova <xref:System.Security.Principal.WindowsPrincipal> objeto para o valor da entidade de segurança associado ao thread atual.  
+2. Com a política definida, use a propriedade <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> estática para recuperar a entidade de segurança que encapsula o usuário atual do Windows. Como o tipo de retorno da propriedade é <xref:System.Security.Principal.IPrincipal>, você deve converter o resultado em um tipo de <xref:System.Security.Principal.WindowsPrincipal>. O código a seguir inicializa um novo objeto <xref:System.Security.Principal.WindowsPrincipal> para o valor da entidade de segurança associada ao thread atual.  
   
     ```csharp  
     WindowsPrincipal myPrincipal =   
@@ -51,11 +49,11 @@ Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> 
         CType(Thread.CurrentPrincipal, WindowsPrincipal)   
     ```  
   
-3. Quando o objeto de entidade tiver sido criado, você pode usar um dos vários métodos para validá-la.  
+3. Quando o objeto principal tiver sido criado, você poderá usar um dos vários métodos para validá-lo.  
   
-### <a name="to-create-a-windowsprincipal-object-for-a-single-validation"></a>Para criar um objeto WindowsPrincipal para uma validação único  
+### <a name="to-create-a-windowsprincipal-object-for-a-single-validation"></a>Para criar um objeto WindowsPrincipal para uma única validação  
   
-1. Inicializar uma nova <xref:System.Security.Principal.WindowsIdentity> objeto chamando estático <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType> método, que consulta a conta do Windows atual e coloca informações sobre essa conta para o objeto de identidade recém-criada. O código a seguir cria um novo <xref:System.Security.Principal.WindowsIdentity> do objeto e inicializa-o para o usuário autenticado atual.  
+1. Inicialize um novo objeto <xref:System.Security.Principal.WindowsIdentity> chamando o método estático <xref:System.Security.Principal.WindowsIdentity.GetCurrent%2A?displayProperty=nameWithType>, que consulta a conta atual do Windows e coloca as informações sobre essa conta no objeto de identidade recém-criado. O código a seguir cria um novo objeto <xref:System.Security.Principal.WindowsIdentity> e o inicializa para o usuário autenticado atual.  
   
     ```csharp  
     WindowsIdentity myIdentity = WindowsIdentity.GetCurrent();  
@@ -65,7 +63,7 @@ Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> 
     Dim myIdentity As WindowsIdentity = WindowsIdentity.GetCurrent()  
     ```  
   
-2. Criar um novo <xref:System.Security.Principal.WindowsPrincipal> do objeto e passe-o valor da <xref:System.Security.Principal.WindowsIdentity> objeto criado na etapa anterior.  
+2. Crie um novo objeto <xref:System.Security.Principal.WindowsPrincipal> e passe-o para o valor do objeto <xref:System.Security.Principal.WindowsIdentity> criado na etapa anterior.  
   
     ```csharp  
     WindowsPrincipal myPrincipal = new WindowsPrincipal(myIdentity);  
@@ -75,8 +73,8 @@ Há duas maneiras de criar um <xref:System.Security.Principal.WindowsPrincipal> 
     Dim myPrincipal As New WindowsPrincipal(myIdentity)  
     ```  
   
-3. Quando o objeto de entidade tiver sido criado, você pode usar um dos vários métodos para validá-la.  
+3. Quando o objeto principal tiver sido criado, você poderá usar um dos vários métodos para validá-lo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Objetos Principal e Identity](../../../docs/standard/security/principal-and-identity-objects.md)

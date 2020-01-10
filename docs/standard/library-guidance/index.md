@@ -1,15 +1,13 @@
 ---
 title: Diretrizes da biblioteca .NET de software livre
 description: Práticas recomendadas para que os desenvolvedores criem bibliotecas .NET de alta qualidade.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: eff6c822757af6fb85622e88714accd40c32bcf5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70928960"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706446"
 ---
 # <a name="open-source-library-guidance"></a>Diretrizes da biblioteca de software livre
 
@@ -30,7 +28,7 @@ Aspectos das bibliotecas .NET de software livre de alta qualidade:
 
 ## <a name="types-of-recommendations"></a>Tipos de recomendações
 
-Cada artigo apresenta quatro tipos de recomendações: **Fazer**, **Considerar**, **Evitar**, e **Não Fazer**. O tipo de recomendação indica a intensidade em que ela deve ser seguida.
+Cada artigo apresenta quatro tipos de recomendação: **Fazer**, **Considerar**, **Evitar** e **Não fazer**. O tipo de recomendação indica a intensidade em que ela deve ser seguida.
 
 Procure quase sempre seguir a recomendação **Fazer**. Por exemplo:
 
@@ -42,11 +40,11 @@ Por outro lado, as recomendações **Considerar** geralmente devem ser seguidas,
 
 As recomendações **Evitar** mencionam coisas que em geral não são ideais, mas há casos em que, às vezes, quebrar a regra faz sentido:
 
-**❌ EVITAR** referências do pacote NuGet que demandam uma versão exata.
+**❌ evitar** As referências do pacote NuGet que exigem uma versão exata.
 
 Por fim, as recomendações **Não fazer** indicam algo que você quase nunca deve fazer:
 
-**❌ NÃO FAZER** a publicação de versões de nome forte e sem nome forte da biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+**❌ não** publique versões de nome forte e não forte da sua biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Avançar](get-started.md)

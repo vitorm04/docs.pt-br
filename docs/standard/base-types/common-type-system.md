@@ -16,13 +16,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], types
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
-ms.custom: seodec18
-ms.openlocfilehash: 5590bb07c3927ba50000d7f9d99f11e30373343d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5223c9b2031b1e25ec2f84326c811da1a78ddc15
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105703"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711409"
 ---
 # <a name="common-type-system"></a>Common Type System
 O Common Type System define como os tipos são declarados, usados e gerenciados no Common Language Runtime e também é uma parte importante do suporte do tempo de execução para a integração entre linguagens. O Common Type System executa as seguintes funções:  
@@ -73,9 +72,9 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|sealed|Especifica que outra classe não pode ser derivada desse tipo.|  
+|lacrados|Especifica que outra classe não pode ser derivada desse tipo.|  
 |implementa|Indica que a classe usa uma ou mais interfaces, fornecendo implementações de membros da interface.|  
-|abstract|Indica que a classe não pode ser instanciada. Para usá-la, você deve derivar outra classe a partir dela.|  
+|{1&gt;abstract&lt;1}|Indica que a classe não pode ser instanciada. Para usá-la, você deve derivar outra classe a partir dela.|  
 |herda|Indica que as instâncias da classe podem ser usadas em qualquer lugar em que a classe base for especificada. Uma classe derivada que herda de uma classe base pode usar a implementação de todos os membros públicos fornecidos pela classe base ou a classe derivada pode substituir a implementação dos membros públicos com sua própria implementação.|  
 |exportado ou não exportado|Indica se uma classe está visível fora do assembly em que ela está definida. Essa característica só se aplica a classes de nível superior e não a classes aninhadas.|  
   
@@ -180,7 +179,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 - Definições para cada um dos membros do tipo.  
   
-### <a name="attributes"></a>Atributos  
+### <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}  
  Atributos fornecem metadados adicionais definidos pelo usuário. Com frequência, eles são usados para armazenar informações adicionais sobre um tipo em seu assembly ou para modificar o comportamento de um membro de tipo no ambiente do tempo de design ou do tempo de execução.  
   
  Os atributos são as próprias classe herdadas de <xref:System.Attribute?displayProperty=nameWithType>. Linguagens que dão suporte ao uso de atributos têm sua própria sintaxe para aplicar atributos a um elemento de linguagem. Os atributos podem ser aplicados a praticamente qualquer elemento de linguagem; os elementos específicos para os quais um atributo pode ser aplicado são definidos pelo <xref:System.AttributeUsageAttribute> aplicado à classe de atributo.  
@@ -190,7 +189,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 |Acessibilidade|Descrição|  
 |-------------------|-----------------|  
-|públicos|O tipo é acessível por todos os assemblies.|  
+|{1&gt;públicos&lt;1}|O tipo é acessível por todos os assemblies.|  
 |assembly|O tipo é acessível somente dentro do assembly.|  
   
  A acessibilidade de um tipo aninhado depende do domínio de acessibilidade, que é determinado pela acessibilidade declarada do membro e pelo domínio da acessibilidade do tipo imediatamente contido. Entretanto, o domínio de acessibilidade de um tipo aninhado não pode exceder o do tipo contido.  
@@ -253,7 +252,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  [!code-vb[Conceptual.Types.Members.Fields#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.members.fields/vb/example.vb#1)]  
   
 <a name="Properties"></a>   
-### <a name="properties"></a>Propriedades  
+### <a name="properties"></a>{1&gt;Propriedades&lt;1}  
  Uma propriedade nomeia um valor ou um estado do tipo e define métodos para obter ou definir o valor da propriedade. Propriedades podem ser tipos primitivos, coleções de tipos primitivos, tipos definidos pelo usuário ou coleções de tipos definidos pelo usuário. Propriedades são, frequentemente, usadas para manter a interface pública de um tipo independente da representação real do tipo. Isso permite que as propriedades reflitam os valores que não estão armazenados diretamente na classe (por exemplo, quando uma propriedade retorna um valor computado) ou para realizar uma validação antes de os valores serem atribuídos a campos privados. O exemplo a seguir ilustra o padrão mais recente.  
   
  [!code-csharp[Conceptual.Types.Members.Properties#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.members.properties/cs/example.cs#1)]
@@ -262,13 +261,13 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  Além de incluir a própria propriedade, a MSIL (Microsoft Intermediate Language) para um tipo que contém uma propriedade legível inclui um método `get_`*propertyname* e a MSIL para um tipo que contém uma propriedade gravável inclui um método `set_`*propertyname*.  
   
 <a name="Methods"></a>   
-### <a name="methods"></a>Métodos  
+### <a name="methods"></a>{1&gt;Métodos&lt;1}  
  Um método descreve as operações disponíveis no tipo. A assinatura do método especifica os tipos permitidos de todos seus parâmetros e o valor retornado.  
   
  Embora a maioria dos métodos defina o número exato de parâmetros necessários para chamadas de método, alguns métodos dão suporte a um número variável de parâmetros. O parâmetro final declarado desses métodos é marcado com o atributo <xref:System.ParamArrayAttribute>. Compiladores de linguagem normalmente fornecem uma palavra-chave, como `params` no C# e `ParamArray` no Visual Basic, que tornam o uso explícito de <xref:System.ParamArrayAttribute> desnecessário.  
   
 <a name="Constructors"></a>   
-### <a name="constructors"></a>Construtores  
+### <a name="constructors"></a>{1&gt;Construtores&lt;1}  
  Um construtor é um tipo especial de método que cria novas instâncias de uma classe ou estrutura. Assim como qualquer outro método, um construtor pode incluir parâmetros. No entanto, os construtores não têm nenhum valor retornado (ou seja, eles retornam `void`).  
   
  Se o código-fonte para uma classe não definir explicitamente um construtor, o compilador incluirá um construtor sem parâmetros. No entanto, se o código-fonte de uma classe definir apenas construtores com parâmetros, os compiladores do Visual Basic e do C# não gerarão um construtor sem parâmetros.  
@@ -276,7 +275,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
  Se o código-fonte de uma estrutura definir construtores, eles deverão ser parametrizados. Uma estrutura não pode definir um construtor sem parâmetros e os compiladores não geram construtores sem parâmetros para estruturas ou outros tipos de valor. Todos os tipos de valor têm um construtor sem parâmetros implícito. Esse construtor é implementado pelo Common Language Runtime e inicializa todos os campos da estrutura com seus valores padrão.  
   
 <a name="Events"></a>   
-### <a name="events"></a>Eventos  
+### <a name="events"></a>Events  
  Um evento define um incidente que pode ser respondido e define métodos para assinar, cancelar a assinatura e acionar o evento. Eventos são frequentemente usados para informar outros tipos de alterações de estado. Para obter mais informações, consulte [Events](../../../docs/standard/events/index.md).  
   
 <a name="NestedTypes"></a>   
@@ -291,13 +290,13 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 |Característica|Pode ser aplicado a|Descrição|  
 |--------------------|------------------|-----------------|  
-|abstract|Métodos, propriedades e eventos|O tipo não fornece a implementação do método. Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método. A única exceção é quando o tipo derivado é um tipo abstrato. Todos os métodos abstratos são virtuais.|  
-|privado, família, assembly, família e assembly, família ou assembly ou público|Todos|Define a acessibilidade de um membro:<br /><br /> particulares<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> públicos<br /> Acessíveis dentro de qualquer tipo.|  
-|final|Métodos, propriedades e eventos|Um método virtual não pode ser substituído em um tipo derivado.|  
+|{1&gt;abstract&lt;1}|Métodos, propriedades e eventos|O tipo não fornece a implementação do método. Tipos que herdam ou implementam métodos abstratos devem fornecer uma implementação para o método. A única exceção é quando o tipo derivado é um tipo abstrato. Todos os métodos abstratos são virtuais.|  
+|privado, família, assembly, família e assembly, família ou assembly ou público|{1&gt;Todos&lt;1}|Define a acessibilidade de um membro:<br /><br /> particulares<br /> Acessível somente dentro do mesmo tipo que o membro ou de um tipo aninhado.<br /><br /> família<br /> Acessível dentro do mesmo tipo que o membro e de tipos derivados herdados dele.<br /><br /> assembly<br /> Acessível somente no assembly no qual o tipo é definido.<br /><br /> família e assembly<br /> Acessíveis somente em tipos qualificados para acesso de família e assembly.<br /><br /> família ou assembly<br /> Acessíveis somente dentro de tipos qualificados para acesso de família ou assembly.<br /><br /> {1&gt;públicos&lt;1}<br /> Acessíveis dentro de qualquer tipo.|  
+|{1&gt;final&lt;1}|Métodos, propriedades e eventos|Um método virtual não pode ser substituído em um tipo derivado.|  
 |initialize-only|Campos|O valor pode apenas ser inicializado e não pode ser gravado após a inicialização.|  
-|instância|Campos, métodos, propriedades e eventos|Se um membro não estiver marcado como `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) ou `Overridable` (Visual Basic), ele será um membro de instância (não há palavra-chave de instância). Haverá tantas cópias desses membros na memória quanto objetos que as usam.|  
+|Instância de|Campos, métodos, propriedades e eventos|Se um membro não estiver marcado como `static` (C# e C++), `Shared` (Visual Basic), `virtual` (C# e C++) ou `Overridable` (Visual Basic), ele será um membro de instância (não há palavra-chave de instância). Haverá tantas cópias desses membros na memória quanto objetos que as usam.|  
 |literal|Campos|O valor atribuído ao campo é um valor fixo, conhecido no tempo de compilação, de um tipo de valor interno. Às vezes, campos literais são conhecidos como constantes.|  
-|newslot ou override|Todos|Define como o membro interage com os membros herdados que possuam a mesma assinatura:<br /><br /> newslot<br /> Oculta os membros herdados que possuam a mesma assinatura.<br /><br /> override<br /> Substitui a definição de um método virtual herdado.<br /><br /> O padrão é newslot.|  
+|newslot ou override|{1&gt;Todos&lt;1}|Define como o membro interage com os membros herdados que possuam a mesma assinatura:<br /><br /> newslot<br /> Oculta os membros herdados que possuam a mesma assinatura.<br /><br /> substituir<br /> Substitui a definição de um método virtual herdado.<br /><br /> O padrão é newslot.|  
 |static|Campos, métodos, propriedades e eventos|O membro pertence ao tipo no qual está definido e não a uma instância particular do tipo; o membro existirá mesmo se uma instância do tipo não tiver sido criada e será compartilhado entre todas as instâncias do tipo.|  
 |virtual|Métodos, propriedades e eventos|O método pode ser implementado por um tipo derivado e pode ser invocado estática ou dinamicamente. Se a invocação dinâmica for usada, o tipo da instância que faz a chamada no tempo de execução (em vez do tipo conhecido no tempo de compilação) determinará qual implementação do método será chamada. Para invocar um método virtual estaticamente, a variável precisará ser convertida em um tipo que usa a versão desejada do método.|  
   
@@ -314,7 +313,7 @@ O Common Type System define como os tipos são declarados, usados e gerenciados 
   
 - Um tipo derivado pode substituir um método virtual herdado. O método de substituição fornece uma nova definição do método que será invocado com base no tipo do valor no tempo de execução em vez do tipo de variável conhecido no tempo de compilação. Um método poderá substituir um método virtual somente se o método virtual não estiver marcado como `final` e o novo método for tão acessível quanto o método virtual.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Navegador de API do .NET](/dotnet/api)
 - [Common Language Runtime](../../../docs/standard/clr.md)

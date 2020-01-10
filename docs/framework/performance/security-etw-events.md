@@ -5,14 +5,12 @@ helpviewer_keywords:
 - security events [.NET Framework]
 - ETW, security events (CLR)
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b1dad042595608a805f978673858acaa5c01130f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c443bda8cdc2c6b32760e9dcba8b81a29d81660b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974872"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715936"
 ---
 # <a name="security-etw-events"></a>Eventos ETW de segurança
 
@@ -27,7 +25,7 @@ Os eventos de segurança são gerados durante a verificação de nome forte e a 
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`StrongNameVerificationStart_V1`|181|Início da verificação de nome forte.|  
 |`StrongNameVerificationStop_V1`|182|Fim da verificação de nome forte.|  
@@ -50,7 +48,7 @@ Os eventos de segurança são gerados durante a verificação de nome forte e a 
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`AuthenticodeVerificationStart_V1`|183|Início da verificação de Authenticode.|  
 |`AuthenticodeVerificationStop_V1`|184|Fim da verificação de Authenticode.|  
@@ -64,6 +62,6 @@ Os eventos de segurança são gerados durante a verificação de nome forte e a 
 |ModulePath|win:UnicodeString|O caminho do módulo.|  
 |ClrInstanceID|win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eventos de CLR ETW](clr-etw-events.md)

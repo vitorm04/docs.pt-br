@@ -1,6 +1,5 @@
 ---
 title: Palavra-chave contextual yield – referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - yield
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: 0d2c3f67715b9b2161a6c908576ac9f964ff13d6
-ms.sourcegitcommit: 30a83efb57c468da74e9e218de26cf88d3254597
-ms.translationtype: HT
+ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2019
-ms.locfileid: "68363121"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712774"
 ---
 # <a name="yield-c-reference"></a>yield (Referência de C#)
 
-Ao usar a [palavra-chave contextual](index.md#contextual-keywords) `yield` em uma instrução, você indica que o método, o operador ou o acessador `get` em que ela é exibida é um iterador. Usar `yield` para definir um iterador elimina a necessidade de uma classe adicional explícita (a classe que mantém o estado de uma enumeração, consulte <xref:System.Collections.Generic.IEnumerator%601> para obter um exemplo) ao implementar o padrão <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para um tipo de coleção personalizado.
+Quando você usa o `yield` [palavra-chave contextual](index.md#contextual-keywords) em uma instrução, você indica que o método, operador ou acessador de `get` no qual ele aparece é um iterador. Usar `yield` para definir um iterador elimina a necessidade de uma classe adicional explícita (a classe que mantém o estado de uma enumeração, consulte <xref:System.Collections.Generic.IEnumerator%601> para obter um exemplo) ao implementar o padrão <xref:System.Collections.IEnumerable> e <xref:System.Collections.IEnumerator> para um tipo de coleção personalizado.
 
 O exemplo a seguir mostra as duas formas de instrução `yield`.
 
@@ -42,7 +41,7 @@ A declaração de um iterador deve atender aos seguintes requisitos:
 
 - O tipo de retorno deve ser <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator> ou <xref:System.Collections.Generic.IEnumerator%601>.
 
-- A declaração não pode ter os parâmetros [in](in-parameter-modifier.md), [ref](ref.md) nem [out](out-parameter-modifier.md).
+- A declaração não pode ter nenhum parâmetro [em](in-parameter-modifier.md) [ref](ref.md) ou [out](out-parameter-modifier.md) .
 
 O tipo `yield` de um iterador que retorna <xref:System.Collections.IEnumerable> ou <xref:System.Collections.IEnumerator> é `object`.  Se o iterador retornar <xref:System.Collections.Generic.IEnumerable%601> ou <xref:System.Collections.Generic.IEnumerator%601>, uma conversão implícita deverá existir do tipo da expressão na instrução `yield return` para o parâmetro de tipo genérico.
 
@@ -96,7 +95,7 @@ O exemplo a seguir demonstra um acessador `get` que é um iterador. No exemplo, 
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../../language-reference/index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

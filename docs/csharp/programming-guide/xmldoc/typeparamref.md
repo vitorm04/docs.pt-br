@@ -1,6 +1,5 @@
 ---
 title: <typeparamref> – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - typeparamref
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: 451f101a3002a9590bdf616b01c6c8bab27efd69
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 3e96d55d7cf60b2a9085cf065ef3b8193b173c5d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523320"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711669"
 ---
 # <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (Guia de Programação em C#)
 ## <a name="syntax"></a>Sintaxe  
@@ -36,7 +35,7 @@ ms.locfileid: "72523320"
 ## <a name="example"></a>Exemplo  
  [!code-csharp[csProgGuideDocComments#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#13)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Marcas recomendadas para comentários de documentação](./recommended-tags-for-documentation-comments.md)

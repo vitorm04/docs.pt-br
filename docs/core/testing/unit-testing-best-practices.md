@@ -4,13 +4,12 @@ description: Conheça as melhores práticas para escrever testes de unidade que 
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.custom: seodec18
-ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926382"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714294"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>Melhores práticas de teste de unidade com .NET Core e .NET Standard
 
@@ -33,7 +32,7 @@ Defeitos de regressão são defeitos introduzidos quando uma alteração foi fei
 Com o teste de unidade, é possível executar novamente todo o conjunto de testes após todo build ou até mesmo após a alteração de uma linha de código. Você poderá confiar que o novo código não interromperá a funcionalidade existente.
 
 ### <a name="executable-documentation"></a>Documentação executável
-Nem sempre pode ser óbvio o que um método específico faz ou como ele se comporta diante de uma determinada entrada. Você pode se perguntar: Como esse método se comportará se eu passar uma cadeia de caracteres em branco? Nulo?
+Nem sempre pode ser óbvio o que um método específico faz ou como ele se comporta diante de uma determinada entrada. Você pode se perguntar: como este método se comportará se eu passar uma cadeia de caracteres em branco? Nulo?
 
 Quando você tem um conjunto de testes de unidade bem nomeados, cada teste deve ser capaz de explicar claramente a saída esperada de uma determinada entrada. Além disso, ele deve ser capaz de verificar se isso realmente funciona.
 

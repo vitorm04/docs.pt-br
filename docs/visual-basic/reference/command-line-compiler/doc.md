@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 3da049b912d791f26814bb4b6cbb70998803726a
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: a818fd46bd93682f0bede1d22b8cbc2ca6467a40
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005642"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716736"
 ---
 # <a name="-doc"></a>-doc
 Processa comentários de documentação para um arquivo XML.  
@@ -28,7 +28,7 @@ ou
 -doc:file  
 ```  
   
-## <a name="arguments"></a>Argumentos  
+## <a name="arguments"></a>Arguments  
   
 |Termo|Definição|  
 |---|---|  
@@ -46,18 +46,18 @@ ou
   
  Para usar o arquivo XML gerado com o recurso [IntelliSense](/visualstudio/ide/using-intellisense) do Visual Studio, deixe o nome do arquivo XML ser o mesmo que o assembly para o qual você deseja dar suporte. Certifique-se de que o arquivo XML esteja no mesmo diretório que o assembly de modo que, ao referenciar o assembly no projeto do Visual Studio, o arquivo .xml também seja encontrado. Os arquivos de documentação XML não são necessários para o IntelliSense funcionar com o código dentro do projeto ou em projetos referenciados por um projeto.  
   
- A menos que você compile com `/target:module`, o arquivo XML contém as marcações `<assembly></assembly>`. Essas marcações especificam o nome do arquivo que contém o manifesto do assembly para o arquivo de saída da compilação.  
+ A menos que você compile com `-target:module`, o arquivo XML contém as marcações `<assembly></assembly>`. Essas marcações especificam o nome do arquivo que contém o manifesto do assembly para o arquivo de saída da compilação.  
   
  Veja [Marcas de Comentário XML](../../../visual-basic/language-reference/xmldoc/index.md) para descobrir as maneiras de gerar documentação de comentários em seu código.  
   
 |Para configurar -doc no ambiente de desenvolvimento integrado do Visual Studio|  
 |---|  
-|1.  Selecione um projeto no **Gerenciador de Soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2.  Clique na guia **Compilar**.<br />3.  Defina o valor na caixa **Gerar arquivo de documentação XML**.|  
+|1. ter um projeto selecionado em **Gerenciador de soluções**. No menu **Projeto**, clique em **Propriedades**. <br />2. Clique na guia **Compilar** .<br />3. defina o valor na caixa **gerar arquivo de documentação XML** .|  
   
 ## <a name="example"></a>Exemplo  
  Veja [Como documentar o código com XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md) para obter um exemplo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Compilador de linha de comando do Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)
 - [Documentando o Código com XML](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)

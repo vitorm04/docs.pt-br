@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f075d646539de5d68e1c9c75d9664451125e9919
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a5ad7d8bce9bc0a760868e483278d1836f9472af
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73733557"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559690"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>Como associar dados XML usando um XMLDataProvider e consultas XPath
 Este exemplo mostra como associar dados XML usando um <xref:System.Windows.Data.XmlDataProvider>.  
@@ -26,7 +26,7 @@ Este exemplo mostra como associar dados XML usando um <xref:System.Windows.Data.
   
  [!code-xaml[XMLDataSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/XmlDataSource/CS/Window1.xaml#1)]  
   
- Conforme mostrado neste exemplo, para criar a mesma declaração de associação na sintaxe do atributo, você precisa fazer o escape de caracteres especiais corretamente. Para obter mais informações, consulte [Entidades de caractere XML e XAML](../../xaml-services/xml-character-entities-and-xaml.md).  
+ Conforme mostrado neste exemplo, para criar a mesma declaração de associação na sintaxe do atributo, você precisa fazer o escape de caracteres especiais corretamente. Para obter mais informações, consulte [Entidades de caractere XML e XAML](../../../desktop-wpf/xaml-services/xml-character-entities.md).  
   
  O <xref:System.Windows.Controls.ListBox> mostrará os itens a seguir quando este exemplo for executado. Esses são os *Título*s de todos os elementos em *Livros* com um valor de *Estoque* de "*sem*" ou um valor de *Número* de 3 ou maior ou igual a 8. Observe que nenhum item de *CD* é retornado porque o valor de <xref:System.Windows.Data.XmlDataProvider.XPath%2A> definido na <xref:System.Windows.Data.XmlDataProvider> indica que somente os elementos *Books* devem ser expostos (essencialmente definindo um filtro).  
   
@@ -58,7 +58,7 @@ Este exemplo mostra como associar dados XML usando um <xref:System.Windows.Data.
 <XmlDataProvider x:Key="BookData" Source="http://MyUrl" XPath="Books"/>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Data.ObjectDataProvider>
 - [Associar a XDocument, XElement ou LINQ para resultados de consulta XML](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)

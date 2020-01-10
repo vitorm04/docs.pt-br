@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 9d08399933f37c4110639bf1f4a81f222dd597b4
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 5cd733d557dabe66145fdbb848c473411d63c62b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910319"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709615"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>XsltArgumentList para parâmetros de folha de estilos e objetos de extensão
 A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível de folha de estilos para objetos de parâmetros de transformações (XSLT) e a extensão XSLT. Quando passados para o método de <xref:System.Xml.Xsl.XslTransform.Transform%2A> , esses parâmetros e objetos de extensão podem ser chamados de folhas de estilos.  
@@ -40,11 +38,11 @@ A classe de <xref:System.Xml.Xsl.XsltArgumentList> contém o idioma extensível 
   
 |Tipo W3C|Classe equivalente do .NET Framework (tipo)|Tipo XPath ou XSLT|  
 |--------------|----------------------------------------------|-----------------------------|  
-|Cadeia de Caracteres|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Número|System.Double|XPath|  
+|Cadeia de caracteres|System.String|{1&gt;XPath&lt;1}|  
+|Booliano|System.Boolean|{1&gt;XPath&lt;1}|  
+|Número|System.Double|{1&gt;XPath&lt;1}|  
 |Fragmento da árvore de resultado|System.Xml.XPath.XPathNavigator|XSLT|  
-|Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
+|Node Set|System.Xml.XPath.XPathNodeIterator|{1&gt;XPath&lt;1}|  
   
  Se o objeto de parâmetro não é uma das classes anterior, é forçado a um double ou para a cadeia de caracteres, como apropriado. Int16, UInt16, Int32, UInt32, UInt64, Int64, e escolha os tipos decimais são forçados para um double. Todos os outros tipos são forçados a uma cadeia de caracteres usando o método `ToString` .  
   
@@ -364,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [A classe XslTransform implementa o processador XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

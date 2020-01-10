@@ -11,14 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee8cc1b677ad6f6c2718c155edbba632df38dbd3
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974691"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708391"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Covariância e contravariância em genéricos
 Covariância e contravariância são termos que se referem à capacidade de usar um tipo mais derivado (mais específico) ou um tipo menos derivado (menos específico) do que o especificado originalmente. Os parâmetros de tipo genéricos oferecem suporte a covariância e contravariância para fornecer maior flexibilidade na atribuição e no uso de tipos genéricos. Quando você se refere a um sistema de tipos, a covariância, contravariância e invariância possuem as definições a seguir. Os exemplos assumem uma classe base chamada `Base` e uma classe derivada chamada `Derived`.  
@@ -146,7 +144,7 @@ Covariância e contravariância são termos que se referem à capacidade de usar
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>Lista de tipos de interfaces e delegados genéricos variantes
  No .NET Framework 4, os tipos de interface e de delegado a seguir têm parâmetros de tipo covariantes e/ou contravariantes.  
   
-|Digite|Parâmetros de tipo covariantes|Parâmetros de tipo contravariantes|  
+|{1&gt;Tipo&lt;1}|Parâmetros de tipo covariantes|Parâmetros de tipo contravariantes|  
 |----------|-------------------------------|-----------------------------------|  
 |<xref:System.Action%601> para <xref:System.Action%6016>||Sim|  
 |<xref:System.Comparison%601>||Sim|  
@@ -164,7 +162,7 @@ Covariância e contravariância são termos que se referem à capacidade de usar
 |<xref:System.Linq.IOrderedQueryable%601>|Sim||  
 |<xref:System.Linq.IQueryable%601>|Sim||  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Covariância e contravariância (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)
 - [Covariância e contravariância (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)

@@ -1,61 +1,60 @@
 ---
 title: Usar o Pacote de Compatibilidade do Windows para fazer a portabilidade pra o .NET Core
-description: Saiba mais sobre o Pacote de Compatibilidade do Windows e como você pode usá-lo para portar um código existente do .NET Framework para o .NET Core
+description: Saiba mais sobre o pacote de compatibilidade do Windows e como você pode usá-lo para portar o código de .NET Framework existente para o .NET Core.
 author: terrajobst
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: adf2aaab27b5a8afcc89fceac67184d3b1974037
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 65530987a3cded941b6a292118ed9bfdb6f5b86c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521285"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715476"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Usar o Pacote de Compatibilidade do Windows para fazer a portabilidade pra o .NET Core
 
-Alguns dos problemas mais comuns durante a portabilidade do código existente para o .NET Core são as dependências de APIs e tecnologias encontradas apenas no .NET Framework. O *Pacote de Compatibilidade do Windows* fornece muitas dessas tecnologias, portanto, é muito mais fácil compilar aplicativos .NET Core e bibliotecas do .NET Standard.
+Alguns dos problemas mais comuns encontrados ao portar código existente para o .NET Core são dependências de APIs e tecnologias que só são encontradas no .NET Framework. O *Pacote de Compatibilidade do Windows* fornece muitas dessas tecnologias, portanto, é muito mais fácil compilar aplicativos .NET Core e bibliotecas do .NET Standard.
 
-Esse pacote é uma [extensão lógica do .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) que aumenta consideravelmente o conjunto de APIs e o código existente é compilado quase sem modificações. No entanto, para manter a promessa do .NET Standard (“é o conjunto de APIs fornecido por todas as implementações do .NET”), isso não inclui tecnologias que não funcionam em todas as plataformas, como o Registro, o WMI (Instrumentação de Gerenciamento do Windows) ou as APIs de emissão de reflexão.
+Esse pacote é uma [extensão lógica do .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) que aumenta consideravelmente o conjunto de APIs e o código existente é compilado quase sem modificações. Para manter a promessa do .NET Standard ("é o conjunto de APIs que todas as implementações do .NET fornecem"), o pacote não inclui tecnologias que não funcionam em todas as plataformas, como registro, Instrumentação de Gerenciamento do Windows (WMI) ou emissão de reflexo API.
 
-O *Pacote de Compatibilidade do Windows* se baseia no .NET Standard e fornece acesso às tecnologias somente Windows. É especialmente útil para os clientes que desejam migrar para o .NET Core, mas pretendem permanecer no Windows como uma primeira etapa. Nesse cenário, não conseguir usar as tecnologias somente Windows é apenas um obstáculo de migração sem nenhum benefício de arquitetura.
+O pacote de compatibilidade do Windows fica sobre o .NET Standard e fornece acesso a tecnologias que são somente Windows. É especialmente útil para os clientes que desejam migrar para o .NET Core, mas pretendem permanecer no Windows como uma primeira etapa. Nesse cenário, não ser capaz de usar tecnologias somente do Windows é apenas um obstáculo de migração sem benefícios arquitetônicos.
 
 ## <a name="package-contents"></a>Conteúdo do pacote
 
-O *Pacote de Compatibilidade do Windows* é fornecido por meio do Pacote NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) e pode ser referenciado em projetos direcionados ao .NET Core ou .NET Standard.
+O pacote de compatibilidade do Windows é fornecido por meio do [pacote NuGet Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility) e pode ser referenciado de projetos direcionados ao .NET Core ou .net Standard.
 
 Ele fornece cerca de 20.000 APIs, incluindo APIs somente Windows, bem como APIs de multiplataforma das seguintes áreas de tecnologia:
 
 - Páginas de código
 - CodeDom
-- Configuração
+- Configuração do
 - Serviços de Diretório
 - Desenho
 - ODBC
 - Permissões
 - Portas
 - ACL (Listas de Controle de Acesso) do Windows
-- Windows Communication Foundation (WCF)
+- {1&gt;{2&gt;Windows Communication Foundation (WCF)&lt;2}&lt;1}
 - Criptografia do Windows
 - EventLog do Windows
 - WMI (Instrumentação de Gerenciamento do Windows)
 - Contadores de Desempenho do Windows
 - Registro do Windows
 - Cache do Windows Runtime
-- Serviços Windows
+- Serviços do Windows
 
 Para obter mais informações, confira a [especificação do pacote de compatibilidade](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md).
 
 ## <a name="get-started"></a>Introdução
 
-1. Antes da portabilidade, examine o [Processo de portabilidade](index.md).
+1. Antes de portar, certifique-se de dar uma olhada no [processo de portabilidade](index.md).
 
-2. Ao portar um código existente para o .NET Core ou .NET Standard, instale o pacote NuGet [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).
+2. Ao portar código existente para .NET Core ou .NET Standard, instale o [pacote NuGet Microsoft. Windows. Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility).
 
-3. Caso deseje permanecer no Windows, você estará pronto.
+   Caso deseje permanecer no Windows, você estará pronto.
 
-4. Se desejar executar o aplicativo .NET Core ou a biblioteca .NET Standard no Linux ou macOS, use o [Analisador de API](../../standard/analyzers/api-analyzer.md) para localizar o uso de APIs que não funcionarão com multiplataforma.
+3. Se desejar executar o aplicativo .NET Core ou a biblioteca .NET Standard no Linux ou macOS, use o [Analisador de API](../../standard/analyzers/api-analyzer.md) para localizar o uso de APIs que não funcionarão com multiplataforma.
 
-5. Remova os usos dessas APIs, substitua-os por alternativas de multiplataforma ou proteja-os usando uma verificação de plataforma, como:
+4. Remova os usos dessas APIs, substitua-os por alternativas de multiplataforma ou proteja-os usando uma verificação de plataforma, como:
 
     ```csharp
     private static string GetLoggingPath()

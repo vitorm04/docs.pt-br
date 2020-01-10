@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
-ms.openlocfilehash: 6e8697379a6fbb5cc15b60291e5b822897c2c013
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 49e6f79c13c94a3f2f6891b259c4bb2bec54ae6f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348324"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344517"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>Instruções passo a passo: validando senhas complexas (Visual Basic)
 Esse método verifica algumas características de senha forte e atualiza um parâmetro de cadeia de caracteres com informações sobre quais verificações a senha falha.  
@@ -23,7 +23,7 @@ Esse método verifica algumas características de senha forte e atualiza um par�
 ### <a name="code"></a>Código  
  [!code-vb[VbVbcnRegEx#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnRegEx/VB/Class1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Compilando o Código  
+## <a name="compile-the-code"></a>Compilar o código  
  Chame esse método passando a cadeia de caracteres que contém essa senha.  
   
  Este exemplo requer:  
@@ -43,7 +43,7 @@ Esse método verifica algumas características de senha forte e atualiza um par�
   
 - Não permita senhas em que todos os símbolos sejam inseridos da linha superior do teclado.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Text.RegularExpressions.Regex>
 - [Segurança de aplicativo Web ASP .NET](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))

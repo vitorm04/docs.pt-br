@@ -1,16 +1,15 @@
 ---
 title: in (modificador genérico) – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: 0806169b9b1c3521dcf89f5ea0fa5aec188030c2
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 57da13f6dc6719166b9051afeb2532ba5fbeff3a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422780"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713482"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in (modificador genérico) (Referência de C#)
 
@@ -42,7 +41,7 @@ O exemplo a seguir mostra como declarar, instanciar e invocar um delegado genér
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [out](out-generic-modifier.md)
 - [Covariância e Contravariância](../../programming-guide/concepts/covariance-contravariance/index.md)

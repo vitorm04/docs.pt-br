@@ -1,6 +1,5 @@
 ---
 title: Como criar um arquivo ou guia de programação C# de pasta
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - folders [C#]
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: 97231a2e4818be3b99c796a407ae4b167e27f669
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: HT
+ms.openlocfilehash: e0d0a7fbbc7e6a5c9a0bd00dec1188c5cfdcf896
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635698"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705243"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Como criar um arquivo ou uma pasta (C# guia de programação)
 Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arquivo na subpasta e gravar dados no arquivo programaticamente.  
@@ -72,4 +71,4 @@ Você pode criar uma pasta no seu computador, criar uma subpasta, criar um arqui
 
 - <xref:System.IO?displayProperty=nameWithType>
 - [Guia de Programação em C#](../index.md)
-- [Sistema de arquivos e o Registro (Guia de Programação em C#)](./index.md)
+- [Sistema de arquivos e o Registro (Guia de programação em C#)](./index.md)

@@ -2,12 +2,12 @@
 title: Introdução ao F# no Visual Studio Code
 description: Saiba como usar F# o com Visual Studio Code e o pacote de plug-in Ionide.
 ms.date: 12/23/2018
-ms.openlocfilehash: 2802438144eb2352c3abeeccfc126b16c6a87d8f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204906"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559658"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Introdução ao F# no Visual Studio Code
 
@@ -20,7 +20,7 @@ Para começar, verifique se você tem [ F# o e o plug-in Ionide instalado corret
 Para criar um novo F# projeto, abra uma linha de comando e crie um novo projeto com o CLI do .NET Core:
 
 ```dotnetcli
-dotnet new console -lang F# -o FirstIonideProject
+dotnet new console -lang "F#" -o FirstIonideProject
 ```
 
 Após a conclusão, altere o diretório para o projeto e abra Visual Studio Code:
@@ -42,7 +42,7 @@ Primeiro, verifique se o script do .NET Core é o seu ambiente de script padrão
 
 Isso é necessário no momento devido a alguns comportamentos herdados em scripts baseados em .NET Framework que não funcionam com o script do .NET Core e o Ionide está se empenhando atualmente para a compatibilidade com versões anteriores. No futuro, o script do .NET Core se tornará o padrão.
 
-### <a name="write-your-first-script"></a>Escreva seu primeiro script
+### <a name="write-your-first-script"></a>Escrever seu primeiro script
 
 Depois de configurar Visual Studio Code para usar o script do .NET Core, navegue até o modo de exibição do Explorer em Visual Studio Code e crie um novo arquivo. Nomeie-o como *MyFirstScript. fsx*.
 
@@ -68,7 +68,7 @@ Como o que você enviou foi uma [função](../language-reference/functions/index
 toPigLatin "banana";;
 ```
 
-Você deverá ver o seguinte resultado:
+Você deverá ver o resultado a seguir:
 
 ```fsharp
 val it : string = "ananabay"
@@ -80,7 +80,7 @@ Agora, vamos tentar com uma vogal como a primeira letra. Insira o seguinte:
 toPigLatin "apple";;
 ```
 
-Você deverá ver o seguinte resultado:
+Você deverá ver o resultado a seguir:
 
 ```fsharp
 val it : string = "appleyay"
@@ -133,7 +133,7 @@ Para começar, abra o arquivo *Program. FS* criado anteriormente com o CLI do .N
 
 Em seguida, crie um novo [`module`](../language-reference/modules.md) chamado `PigLatin` e copie a função `toPigLatin` que você criou anteriormente como tal:
 
-[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L1-L14)]
+[!code-fsharp[ToPigLatin](~/samples/snippets/fsharp/getting-started/pig-latin.fs#L3-L14)]
 
 Esse módulo deve estar acima da função `main` e abaixo da declaração `open System`. A ordem das declarações é F#importante no, portanto, você precisará definir a função antes de chamá-la em um arquivo.
 
@@ -151,7 +151,7 @@ let main argv =
 
 Agora você pode executar o aplicativo de console na linha de comando:
 
-```console
+```dotnetcli
 dotnet run apple banana
 ```
 
@@ -164,7 +164,7 @@ Aqui estão algumas maneiras de solucionar alguns problemas que você pode encon
 1. Para obter os recursos de edição de código do Ionide F# , os arquivos precisam ser salvos em disco e dentro de uma pasta que está aberta no espaço de trabalho Visual Studio Code.
 1. Se você fez alterações no seu sistema ou instalou os pré-requisitos do Ionide com Visual Studio Code abrir, reinicie o Visual Studio Code.
 1. Se você tiver caracteres inválidos em seus diretórios de projeto, o Ionide poderá não funcionar.  Renomeie os diretórios do projeto se esse for o caso.
-1. Se nenhum dos comandos Ionide estiver funcionando, verifique suas [associações de teclas Visual Studio Code](https://code.visualstudio.com/docs/customization/keybindings#_customizing-shortcuts) para ver se você está substituindo-as por acidente.
+1. Se nenhum dos comandos Ionide estiver funcionando, verifique suas [associações de chave de Visual Studio Code](https://code.visualstudio.com/docs/getstarted/keybindings#_advanced-customization) para ver se você está substituindo-os por acidente.
 1. Se o Ionide for interrompido em seu computador e nenhuma das opções acima tiver corrigido o problema, tente remover o diretório `ionide-fsharp` em seu computador e reinstalar o pacote de plug-in.
 1. Se um projeto não for carregado (o F# Gerenciador de soluções mostrará isso), clique com o botão direito do mouse no projeto e clique em **Ver detalhes** para obter mais informações de diagnóstico.
 

@@ -1,6 +1,5 @@
 ---
 title: struct – Referência de C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - struct_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: a78488ad902b0a96a30ad197b0ece043543c3d69
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 9363cff913027d491f7df0e0d0dac61638d6f802
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73422310"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715131"
 ---
 # <a name="struct-c-reference"></a>struct (Referência de C#)
 
@@ -46,7 +45,7 @@ Para obter exemplos e mais informações, consulte [Usando structs](../../progra
 
 Para obter exemplos, consulte [Usando structs](../../programming-guide/classes-and-structs/using-structs.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

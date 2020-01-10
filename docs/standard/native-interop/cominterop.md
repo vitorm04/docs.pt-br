@@ -1,15 +1,13 @@
 ---
 title: Interoperabilidade COM no .NET
 description: Saiba como executar a interoperação com bibliotecas COM no .NET.
-author: jkoritzinsky
-ms.author: jekoritz
 ms.date: 07/11/2019
-ms.openlocfilehash: 9355e2ae84da623ffa725f5b2ac1bdee25b966d8
-ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
-ms.translationtype: HT
+ms.openlocfilehash: 4ea5c2330f8f90d676bfe7003a7307fc38822edf
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68971890"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706368"
 ---
 # <a name="com-interop-in-net"></a>Interoperabilidade COM no .NET
 

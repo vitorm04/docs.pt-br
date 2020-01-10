@@ -14,22 +14,20 @@ helpviewer_keywords:
 - encryption [.NET Framework], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 995f54e81a48fb3f809d99981ad135974544eb28
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: 98bdce59ccbbb3b1d00ea5521169214c2bd7a10b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71353173"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706195"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Assegurando a integridade dos dados com códigos hash
 Um valor de hash é um valor numérico de um comprimento fixo que identifica dados exclusivamente. Os valores de hash representam grandes quantidades de dados como valores numéricos muito menores, para que sejam usados com assinaturas digitais. Você pode assinar um valor de hash com mais eficiência do que assinar o valor maior. Os valores de hash também são úteis para verificar a integridade dos dados enviados por meio de canais inseguros. O valor de hash dos dados recebidos pode ser comparado ao valor de hash dos dados conforme eles foram enviados para determinar se os dados foram alterados.  
   
- Este tópico descreve como gerar e verificar os códigos de hash usando as classes no <xref:System.Security.Cryptography?displayProperty=nameWithType> namespace.  
+ Este tópico descreve como gerar e verificar os códigos de hash usando as classes no namespace <xref:System.Security.Cryptography?displayProperty=nameWithType>.  
   
 ## <a name="generating-a-hash"></a>Gerando um hash  
- As classes de hash gerenciadas podem aplicar hash a uma matriz de bytes ou a um objeto de fluxo gerenciado. O exemplo a seguir usa o algoritmo de hash SHA1 para criar um valor de hash para uma cadeia de caracteres. O exemplo usa a <xref:System.Text.UnicodeEncoding> classe para converter a cadeia de caracteres em uma matriz de bytes com hash usando a <xref:System.Security.Cryptography.SHA1Managed> classe. O valor de hash é exibido para o console.  
+ As classes de hash gerenciadas podem aplicar hash a uma matriz de bytes ou a um objeto de fluxo gerenciado. O exemplo a seguir usa o algoritmo de hash SHA1 para criar um valor de hash para uma cadeia de caracteres. O exemplo usa a classe <xref:System.Text.UnicodeEncoding> para converter a cadeia de caracteres em uma matriz de bytes com hash usando a classe <xref:System.Security.Cryptography.SHA1Managed>. O valor de hash é exibido para o console.  
 
  Devido a problemas de colisão com o SHA1, a Microsoft recomenda SHA256 ou melhor.
   
@@ -60,6 +58,6 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Serviços criptográficos](../../../docs/standard/security/cryptographic-services.md)

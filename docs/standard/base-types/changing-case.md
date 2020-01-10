@@ -14,18 +14,17 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-ms.custom: seodec18
-ms.openlocfilehash: a8eb45e45a905f0b366642050f4845460e14aaf8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 91fc0022eae3f036e0ec046ea12446871926ab27
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132902"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711461"
 ---
 # <a name="changing-case-in-net"></a>Como alterar a capitalização no .NET
 Se você gravar um aplicativo que aceita a inserção de informações por um usuário, talvez você nunca tenha certeza se ele ou ela usará maiúsculas ou minúsculas para inserir os dados. Muitas vezes, você quer que as cadeias de caracteres tenham a grafia de maiúsculas e minúsculas consistente, especialmente se você estiver exibindo-as na interface do usuário. A tabela seguinte descreve três métodos de alteração de capitalização. Os primeiros dois métodos fornecem uma sobrecarga que aceita uma cultura.  
   
-|Nome do método|Use|  
+|Nome do método|Uso|  
 |-----------------|---------|  
 |<xref:System.String.ToUpper%2A?displayProperty=nameWithType>|Converte todos os caracteres em uma cadeia de caracteres para maiúsculas.|  
 |<xref:System.String.ToLower%2A?displayProperty=nameWithType>|Converte todos os caracteres em uma cadeia de caracteres para minúsculas.|  
@@ -70,7 +69,7 @@ Se você gravar um aplicativo que aceita a inserção de informações por um us
   
  Embora diferencie a cultura, o método <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> não fornece regras linguisticamente corretas de capitalização. No exemplo anterior, o método converte "um conto de duas cidades" para "Um Conto De Duas Cidades". No entanto, a capitalização linguisticamente correta para a cultura en-US seria "Um Conto de Duas Cidades."  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Operações básicas de cadeias de caracteres](../../../docs/standard/base-types/basic-string-operations.md)
 - [Executando operações de cadeia de caracteres que não levam em conta a cultura](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

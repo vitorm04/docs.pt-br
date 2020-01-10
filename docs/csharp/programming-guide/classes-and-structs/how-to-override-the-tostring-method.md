@@ -1,17 +1,16 @@
 ---
 title: Como substituir o método ToString – guia C# de programação
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 3d5b63609ea61764d4042d534c40d8032fb82841
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7c7196df56821c134b31982d7956a75039e9f929
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970470"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705568"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Como substituir o método ToString (guiaC# de programação)
 
@@ -44,7 +43,7 @@ Substituir o método `ToString` na classe ou struct:
   
      [!code-csharp[csProgGuideInheritance#38](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#38)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IFormattable>
 - [Guia de Programação em C#](../index.md)

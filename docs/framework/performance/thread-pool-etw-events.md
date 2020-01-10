@@ -5,14 +5,12 @@ helpviewer_keywords:
 - thread pool events [.NET Framework]
 - ETW, thread pool events (CLR)
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f1c92154fe62b1b6ba6981606680daf37d087f4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e1deb17dfdfea4c8b66eb8d836a10bf888727e1a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974859"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715896"
 ---
 # <a name="thread-pool-etw-events"></a>Eventos ETW de pool de threads
 Esses eventos coletam informações sobre threads de e/s de trabalho.  
@@ -35,7 +33,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|Um thread de trabalho é criado.|  
 |`ThreadPoolWorkerThreadStop`|51|Um thread de trabalho é interrompido.|  
@@ -62,7 +60,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Descrição|  
+|Event|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|Refere-se à coleta de informações para uma amostra; ou seja, uma medida da taxa de transferência com determinado nível de simultaneidade, em um instante.|  
   
@@ -82,7 +80,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Descrição|  
+|Event|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|Registra uma alteração no controle, quando o algoritmo de injeção de threads (escalada) determina se uma alteração no nível de simultaneidade está em vigor.|  
   
@@ -92,7 +90,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
 |----------------|---------------|-----------------|  
 |AverageThroughput|win:Double|Taxa de transferência média de uma amostra de medidas.|  
 |NewWorkerThreadCount|win:UInt32|Novo número de threads de trabalho ativos.|  
-|Motivo|win:UInt32|Motivo do ajuste.<br /><br /> 0x00 – Aquecimento.<br /><br /> 0x01 – Inicialização.<br /><br /> 0x02 – Movimentação aleatória.<br /><br /> 0x03 – Movimentação ascendente.<br /><br /> 0x04 – Alteração de ponto.<br /><br /> 0x05 – Estabilização.<br /><br /> 0x06 – Privação.<br /><br /> 0x07 – O thread atingiu o tempo limite.|  
+|Reason|win:UInt32|Motivo do ajuste.<br /><br /> 0x00 – Aquecimento.<br /><br /> 0x01 – Inicialização.<br /><br /> 0x02 – Movimentação aleatória.<br /><br /> 0x03 – Movimentação ascendente.<br /><br /> 0x04 – Alteração de ponto.<br /><br /> 0x05 – Estabilização.<br /><br /> 0x06 – Privação.<br /><br /> 0x07 – O thread atingiu o tempo limite.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
 #### <a name="threadpoolworkerthreadadjustmentstats"></a>ThreadPoolWorkerThreadAdjustmentStats  
@@ -104,7 +102,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Descrição|  
+|Event|ID do evento|Descrição|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|Coleta de dados no pool de threads.|  
   
@@ -119,7 +117,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
 |ThroughputErrorEstimate|win:Double|Reservado para uso interno.|  
 |AverageThroughputErrorEstimate|win:Double|Reservado para uso interno.|  
 |ThroughputRatio|win:Double|A melhoria relativa na taxa de transferência causada por variações na contagem de threads de trabalho ativos durante esse intervalo.|  
-|Confiança|win:Double|Uma medida da validade do campo ThroughputRatio.|  
+|Confidence|win:Double|Uma medida da validade do campo ThroughputRatio.|  
 |NewcontrolSetting|win:Double|O número de threads de trabalho ativos que servirão como a linha de base para variações futuras na contagem de threads ativos.|  
 |NewThreadWaveMagnitude|Win:UInt16|A magnitude das variações futuras na contagem de threads ativos.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
@@ -136,7 +134,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|Um thread de E/S é criado no pool de threads.|  
   
@@ -144,7 +142,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
 |Nome do campo|Tipo de dados|Descrição|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt64|Número de threads de E/S, incluindo o thread recém-criado.|  
+|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt64|Número de threads de E/S, incluindo o thread recém-criado.|  
 |NumRetired|win:UInt64|Número de threads de trabalho desativados.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
@@ -157,7 +155,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|Um thread de E/S se torna um candidato para desativação.|  
   
@@ -165,7 +163,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
 |Nome do campo|Tipo de dados|Descrição|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
+|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
 |NumRetired|win:UInt64|Número de threads de E/S desativados.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
@@ -178,7 +176,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|Um thread de E/S é ativado novamente devido à E/S que chega em um período de espera depois que o thread se torna um candidato para desativação.|  
   
@@ -186,7 +184,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
 |Nome do campo|Tipo de dados|Descrição|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt64|Número de threads de E/S no pool de threads, incluindo esse.|  
+|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt64|Número de threads de E/S no pool de threads, incluindo esse.|  
 |NumRetired|win:UInt64|Número de threads de E/S desativados.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
@@ -199,7 +197,7 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
  A tabela a seguir mostra as informações do evento.  
   
-|evento|ID do evento|Acionado quando|  
+|Event|ID do evento|Acionado quando|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|Um thread de E/S é criado no pool de threads.|  
   
@@ -207,10 +205,10 @@ Esses eventos coletam informações sobre threads de e/s de trabalho.
   
 |Nome do campo|Tipo de dados|Descrição|  
 |----------------|---------------|-----------------|  
-|Contagem|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
+|{1&gt;{2&gt;Contagem&lt;2}&lt;1}|win:UInt64|Número de threads de E/S restantes no pool de threads.|  
 |NumRetired|win:UInt64|Número de threads de E/S desativados.|  
 |ClrInstanceID|Win:UInt16|ID exclusiva da instância do CLR ou do CoreCLR.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Eventos de CLR ETW](clr-etw-events.md)

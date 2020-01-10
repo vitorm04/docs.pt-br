@@ -1,6 +1,5 @@
 ---
 title: Palavra-chave readonly – Referência de C#
-ms.custom: seodec18
 ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 30419200cfce785d7fcbbf59650241580a1f0ce4
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f9fa6f893e7f999564c4dcb43d40755547d3c793
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454966"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713112"
 ---
 # <a name="readonly-c-reference"></a>readonly (Referência de C#)
 
@@ -103,7 +102,7 @@ Você tem duas vantagens aplicando o modificador de `readonly` aos métodos `str
 
 O modificador de `readonly` é válido na maioria dos membros de um `struct`, incluindo métodos que substituem os métodos declarados em <xref:System.Object?displayProperty=nameWithType>. Há algumas restrições:
 
-- Você não pode declarar `readonly` membros estáticos.
+- Você não pode declarar `readonly` métodos estáticos ou propriedades.
 - Você não pode declarar construtores de `readonly`.
 
 Você pode adicionar o modificador de `readonly` a uma propriedade ou declaração de indexador:
@@ -156,7 +155,7 @@ Você também pode ver as propostas de especificação de idioma:
 - [struct de ref e ReadOnly ReadOnly](~/_csharplang/proposals/csharp-7.2/readonly-ref.md)
 - [Membros de struct ReadOnly](~/_csharplang/proposals/csharp-8.0/readonly-instance-members.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

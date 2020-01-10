@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RelativeSource markup extensions [WPF]
 - XAML [WPF], RelativeSource markup extension
 ms.assetid: 26be4721-49b5-4717-a92e-7d54ad0d3a81
-ms.openlocfilehash: 28f3aa500014b768bd07723511613a42df8689aa
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 15fdc9d093bb3efb4ea4cef5d4cdfa8474042f12
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458766"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559738"
 ---
 # <a name="relativesource-markupextension"></a>RelativeSource MarkupExtension
 
@@ -40,7 +40,7 @@ Especifica as propriedades de uma fonte de associação de <xref:System.Windows.
 </Binding>
 ```
 
-\- ou -
+- ou -
 
 ```xml
 <Binding>
@@ -58,7 +58,7 @@ Especifica as propriedades de uma fonte de associação de <xref:System.Windows.
 
 |||
 |-|-|
-|`modeEnumValue`|Um dos seguintes:<br /><br /> -O token da cadeia de caracteres `Self`; corresponde a um <xref:System.Windows.Data.RelativeSource> criado com sua propriedade <xref:System.Windows.Data.RelativeSource.Mode%2A> definida como <xref:System.Windows.Data.RelativeSourceMode.Self>.<br />-O token da cadeia de caracteres `TemplatedParent`; corresponde a um <xref:System.Windows.Data.RelativeSource> criado com sua propriedade <xref:System.Windows.Data.RelativeSource.Mode%2A> definida como <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>.<br />-O token da cadeia de caracteres `PreviousData`; corresponde a um <xref:System.Windows.Data.RelativeSource> criado com sua propriedade <xref:System.Windows.Data.RelativeSource.Mode%2A> definida como <xref:System.Windows.Data.RelativeSourceMode.PreviousData>.<br />– Veja abaixo para obter informações sobre o modo `FindAncestor`.|
+|`modeEnumValue`|Um das seguintes condições:<br /><br /> -O token da cadeia de caracteres `Self`; corresponde a um <xref:System.Windows.Data.RelativeSource> criado com sua propriedade <xref:System.Windows.Data.RelativeSource.Mode%2A> definida como <xref:System.Windows.Data.RelativeSourceMode.Self>.<br />-O token da cadeia de caracteres `TemplatedParent`; corresponde a um <xref:System.Windows.Data.RelativeSource> criado com sua propriedade <xref:System.Windows.Data.RelativeSource.Mode%2A> definida como <xref:System.Windows.Data.RelativeSourceMode.TemplatedParent>.<br />-O token da cadeia de caracteres `PreviousData`; corresponde a um <xref:System.Windows.Data.RelativeSource> criado com sua propriedade <xref:System.Windows.Data.RelativeSource.Mode%2A> definida como <xref:System.Windows.Data.RelativeSourceMode.PreviousData>.<br />– Veja abaixo para obter informações sobre o modo `FindAncestor`.|
 |`FindAncestor`|O token da cadeia de caracteres `FindAncestor`. Ao usar este token entra-se em um modo por meio do qual `RelativeSource` especifica um tipo de ancestral e opcionalmente um nível de ancestral. Isso corresponde a <xref:System.Windows.Data.RelativeSource>, conforme criado com a propriedade <xref:System.Windows.Data.RelativeSource.Mode%2A>, definida como <xref:System.Windows.Data.RelativeSourceMode.FindAncestor>.|
 |`typeName`|Necessário para o modo `FindAncestor`. O nome de um tipo que preenche a propriedade <xref:System.Windows.Data.RelativeSource.AncestorType%2A>.|
 |`intLevel`|Opcional para o modo `FindAncestor`. Um nível de ancestral (avaliado de acordo com a direção do pai na árvore lógica).|
@@ -69,7 +69,7 @@ Usos de associação `{RelativeSource TemplatedParent}` são técnicas-chave que
 
 O `{RelativeSource FindAncestor}` é usado principalmente em modelos de controle ou em composições de interface do usuário independentes previsíveis para casos em que um controle deve estar sempre em uma árvore visual de um determinado tipo de ancestral. Por exemplo, os itens de um controle de itens podem utilizar os usos `FindAncestor` para se associar às propriedades do ancestral pai do controle de itens. Ou, os elementos que fazem parte da composição de controle em um modelo podem usar associações `FindAncestor` para elementos pai na mesma estrutura da composição.
 
-Na sintaxe de elemento de objeto do modo `FindAncestor` exibida nas seções de Sintaxe XAML, a segunda sintaxe de elemento de objeto é usada especificamente para o modo `FindAncestor`. O modo `FindAncestor` requer um valor <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Você deve definir <xref:System.Windows.Data.RelativeSource.AncestorType%2A> como um atributo usando uma referência de [extensão de marcação x:Type](../../xaml-services/x-type-markup-extension.md) para o tipo de ancestral a ser procurado. O valor <xref:System.Windows.Data.RelativeSource.AncestorType%2A> é usado quando a requisição de associação é processada em tempo de execução.
+Na sintaxe de elemento de objeto do modo `FindAncestor` exibida nas seções de Sintaxe XAML, a segunda sintaxe de elemento de objeto é usada especificamente para o modo `FindAncestor`. O modo `FindAncestor` requer um valor <xref:System.Windows.Data.RelativeSource.AncestorType%2A>. Você deve definir <xref:System.Windows.Data.RelativeSource.AncestorType%2A> como um atributo usando uma referência de [extensão de marcação x:Type](../../../desktop-wpf/xaml-services/xtype-markup-extension.md) para o tipo de ancestral a ser procurado. O valor <xref:System.Windows.Data.RelativeSource.AncestorType%2A> é usado quando a requisição de associação é processada em tempo de execução.
 
 Para o modo `FindAncestor`, a propriedade opcional <xref:System.Windows.Data.RelativeSource.AncestorLevel%2A> pode ajudar a desambiguar a consulta de ancestral em casos em que exista possivelmente mais de um ancestral daquele tipo na árvore de elemento.
 
@@ -109,12 +109,12 @@ Na implementação do processador XAML [!INCLUDE[TLA2#tla_winclient](../../../..
 
 `RelativeSource` é uma extensão da marcação. Extensões de marcação são tipicamente implementadas quando existe um requisito que permite que valores de atributo sejam diferentes de valores literais ou nomes de manipuladores, e o requisito é mais global do que simplesmente colocar conversores de tipo em certos tipos ou propriedades. Todas as extensões de marcação em XAML usam os caracteres `{` e `}` na sintaxe de atributo, que é a convenção pela qual o processador XAML reconhece que uma extensão de marcação precisa processar o atributo. Para obter mais informações, consulte [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Data.Binding>
 - [Estilo e modelagem](../controls/styling-and-templating.md)
 - [Visão geral de XAML (WPF)](xaml-overview-wpf.md)
-- [Extensões de marcação e XAML do WPF](markup-extensions-and-wpf-xaml.md)
+- [Extensões de marcação e XAML WPF](markup-extensions-and-wpf-xaml.md)
 - [Visão geral da vinculação de dados](../../../desktop-wpf/data/data-binding-overview.md)
 - [Visão geral das declarações de associação](../data/binding-declarations-overview.md)
-- [Extensão de marcação x:Type](../../xaml-services/x-type-markup-extension.md)
+- [Extensão de marcação x:Type](../../../desktop-wpf/xaml-services/xtype-markup-extension.md)

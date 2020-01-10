@@ -3,14 +3,12 @@ title: XML Document Object Model (DOM)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 160d056491ca71f6de039e8cac7302a61504fcd5
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
-ms.translationtype: HT
+ms.openlocfilehash: 4faa481a6331863112b7dba65bdbccb69cd12b7d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67662477"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709953"
 ---
 # <a name="xml-document-object-model-dom"></a>XML Document Object Model (DOM)
 
@@ -60,7 +58,7 @@ Os objetos **Node** têm um conjunto de métodos e propriedades e característic
 
   - **Elemento**
 
-  - **Atributo**
+  - **Attribute**
 
   Os nós **XmlDeclaration**, **Notation**, **Entity**, **CDATASection**, **Text**, **Comment**, **ProcessingInstruction** e **DocumentType** não têm nós filho.
 
@@ -76,7 +74,7 @@ A Microsoft estendeu as APIs que estão disponíveis no Nível 1 e no Nível 2 d
 
 O DOM é mais útil para ler dados XML na memória para alterar sua estrutura, para adicionar ou remover nós ou para modificar os dados mantidos por um nó, como no texto contido por um elemento. No entanto, estão disponíveis outras classes que são mais rápidas do que o DOM em outros cenários. Para acesso rápido, não armazenado em cache, de fluxo apenas de encaminhamento ao XML, use **XmlReader** e **XmlWriter**. Se você precisar de acesso aleatório com um modelo de cursor e **XPath**, use a classe **XPathNavigator**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Tipos de nós XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)
 - [Mapeando a hierarquia de objetos para dados XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

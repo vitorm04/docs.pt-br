@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 097b0cb1-5743-4c3a-86ef-caf5cbe6750d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a35e06837ac35a743a3f0424cb2a7ad5bbeb5400
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 0af160b720b9eddd9e72689c920316bffdc6d21e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589955"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710213"
 ---
 # <a name="saving-and-writing-a-document"></a>Salvando e escrevendo um documento
 Quando você carrega e salvar <xref:System.Xml.XmlDocument>, o documento salvo pode diferir do original das seguintes maneiras:  
@@ -22,7 +20,7 @@ Quando você carrega e salvar <xref:System.Xml.XmlDocument>, o documento salvo p
   
 - Todos os espaços em branco entre atributos são reduzidos a um único caractere de espaço.  
   
-- O espaço em branco entre elementos é alterado. O espaço em branco significativo é preservado e o espaço em branco insignificante não é. Mas quando o documento é salvo, ele usará o modo <xref:System.Xml.XmlTextWriter> **Recuo** por padrão para imprimir ordenadamente a saída e torná-la mais legível.  
+- O espaço em branco entre elementos é alterado. O espaço em branco significativo é preservado e o espaço em branco insignificante não é. Mas quando o documento for salvo, ele usará o <xref:System.Xml.XmlTextWriter> modo de **recuo** por padrão para imprimir a saída de forma mais legível para torná-la mais legíveis.  
   
 - O caractere de aspas usado ao redor de valores de atributo é alterado para aspas duplas por padrão. Você pode usar a propriedade <xref:System.Xml.XmlTextReader.QuoteChar%2A> em <xref:System.Xml.XmlTextWriter> para definir o caractere de aspas para aspas duplas ou aspas simples.  
   
@@ -35,7 +33,7 @@ Quando você carrega e salvar <xref:System.Xml.XmlDocument>, o documento salvo p
 ## <a name="writing-an-xmldeclaration"></a>Escrevendo um XmlDeclaration  
  Os membros <xref:System.Xml.XmlDocument> e <xref:System.Xml.XmlDeclaration> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlNode.InnerXml%2A> e <xref:System.Xml.XmlNode.WriteTo%2A>, além dos métodos <xref:System.Xml.XmlDocument> de <xref:System.Xml.XmlDocument.Save%2A> e de <xref:System.Xml.XmlDocument.WriteContentTo%2A>, criam uma declaração XML.  
   
- Para as propriedades <xref:System.Xml.XmlDocument> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDocument.InnerXml%2A> e <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A>, e os métodos <xref:System.Xml.XmlDocument.WriteContentTo%2A>, a codificação escrita na declaração XML é obtida do nó <xref:System.Xml.XmlDeclaration>. Se não houver nenhum nó <xref:System.Xml.XmlDeclaration>, <xref:System.Xml.XmlDeclaration> não será escrito. Se não houver nenhuma codificação no nó <xref:System.Xml.XmlDeclaration>, a codificação não será escrita na declaração XML.  
+ Para as propriedades <xref:System.Xml.XmlDocument> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDocument.InnerXml%2A> e <xref:System.Xml.XmlDocument.Save%2A>, <xref:System.Xml.XmlDocument.WriteTo%2A>, e os métodos <xref:System.Xml.XmlDocument.WriteContentTo%2A>, a codificação escrita na declaração XML é obtida do nó <xref:System.Xml.XmlDeclaration>. Se não houver nenhum nó <xref:System.Xml.XmlDeclaration>, <xref:System.Xml.XmlDeclaration> não será gravado. Se não houver nenhuma codificação no nó <xref:System.Xml.XmlDeclaration>, a codificação não será gravada na declaração XML.  
   
  Os métodos <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> e <xref:System.Xml.XmlDocument.Save%2A?displayProperty=nameWithType> sempre escrevem <xref:System.Xml.XmlDeclaration>. Esses métodos utilizam a codificação do escritor para o qual eles estão escrevendo. Isto é, o valor de codificação no escritor substitui a codificação no documento e no <xref:System.Xml.XmlDeclaration>. Por exemplo, o código a seguir não escreve uma codificação na declaração XML encontrada no arquivo de saída `out.xml`.  
   
@@ -55,7 +53,7 @@ doc.Save(tw);
   
  Para o método <xref:System.Xml.XmlDocument.Save%2A>, a declaração XML é escrita usando o método <xref:System.Xml.XmlWriter.WriteStartDocument%2A> na classe <xref:System.Xml.XmlWriter>. Portanto, substituir o método <xref:System.Xml.XmlWriter.WriteStartDocument%2A> altera o modo como o início do documento é escrito.  
   
- Para os membros <xref:System.Xml.XmlDeclaration> de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A> e <xref:System.Xml.XmlNode.InnerXml%2A>, se a propriedade <xref:System.Xml.XmlDeclaration.Encoding%2A> não estiver definida, nenhuma codificação será escrita. Caso contrário, a codificação escrita na declaração XML será a mesma codificação localizada na propriedade <xref:System.Xml.XmlDeclaration.Encoding%2A>.  
+ Para o <xref:System.Xml.XmlDeclaration> membros de <xref:System.Xml.XmlNode.OuterXml%2A>, <xref:System.Xml.XmlDeclaration.WriteTo%2A>e <xref:System.Xml.XmlNode.InnerXml%2A>, se a propriedade <xref:System.Xml.XmlDeclaration.Encoding%2A> não estiver definida, nenhuma codificação será gravada. Caso contrário, a codificação escrita na declaração XML é igual à codificação encontrada na propriedade <xref:System.Xml.XmlDeclaration.Encoding%2A>.  
   
 ## <a name="writing-document-content-using-the-outerxml-property"></a>Escrevendo o conteúdo do documento usando a propriedade OuterXml  
  A propriedade <xref:System.Xml.XmlNode.OuterXml%2A> é uma extensão da Microsoft para os padrões DOM (Document Object Model) de XML do W3C (World Wide Web Consortium). A propriedade <xref:System.Xml.XmlNode.OuterXml%2A> é usada para obter a marcação do documento XML inteiro ou apenas a marcação de um único nó e seus nós filho. <xref:System.Xml.XmlNode.OuterXml%2A> retorna a marcação que representa o nó determinado e todos os seus nós filho.  
@@ -90,6 +88,6 @@ string xml = mydoc.DocumentElement.OuterXml;
   
  Ao contrário, você pode usar a propriedade <xref:System.Xml.XmlNode.InnerText%2A> se quiser o conteúdo dos nós filho.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [DOM (Modelo de Objeto do Documento) de XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

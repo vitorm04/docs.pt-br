@@ -1,15 +1,13 @@
 ---
 title: dotnet-ferramenta de rastreamento-.NET Core
 description: Instalando e usando a ferramenta de linha de comando dotnet-Trace.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 11/21/2019
-ms.openlocfilehash: 07eaec843e27f5d291b6d18fab53c43051794626
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428886"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714429"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-utilitário de análise de desempenho de rastreamento
 
@@ -50,7 +48,7 @@ A ferramenta de `dotnet-trace`:
 
 ## <a name="commands"></a>Comandos
 
-| Command                                                     |
+| {1&gt;Comando&lt;1}                                                     |
 | ----------------------------------------------------------- |
 | [dotnet-coleta de rastreamento](#dotnet-trace-collect)               |
 | [dotnet-conversão de rastreamento](#dotnet-trace-convert)               |
@@ -210,7 +208,7 @@ O comando anterior desabilita os eventos de tempo de execução e o profiler de 
 
 O tempo de execução do .NET Core dá suporte aos provedores .NET a seguir. O .NET Core usa as mesmas palavras-chave para habilitar rastreamentos `Event Tracing for Windows (ETW)` e `EventPipe`.
 
-| Nome do provedor                            | Informações |
+| Nome do provedor                            | Informações do |
 |------------------------------------------|-------------|
 | `Microsoft-Windows-DotNETRuntime`        | [O provedor de tempo de execução](../../framework/performance/clr-etw-providers.md#the-runtime-provider)<br>[Palavras-chave de tempo de execução CLR](../../framework/performance/clr-etw-keywords-and-levels.md#runtime) |
 | `Microsoft-Windows-DotNETRuntimeRundown` | [O provedor de encerramento](../../framework/performance/clr-etw-providers.md#the-rundown-provider)<br>[Palavras-chave de resumo do CLR](../../framework/performance/clr-etw-keywords-and-levels.md#rundown) |

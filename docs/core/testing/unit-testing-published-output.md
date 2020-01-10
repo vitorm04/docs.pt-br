@@ -4,13 +4,12 @@ description: Saiba como executar testes em bibliotecas publicadas, em vez de no 
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: e4fd25dc9ff30bdfe85cd1167a1dc41ea20a5f80
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 7618d37782de3a16f1963380bbb56945fb73e8eb
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771934"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714261"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>Testar a saída publicada com dotnet vstest
 
@@ -36,7 +35,7 @@ dotnet vstest out/MyProject.Tests.dll
 > [!NOTE]
 > Observação: se seu aplicativo for destinado a uma estrutura diferente de `netcoreapp`, você ainda poderá executar o comando `dotnet vstest` passando a estrutura de destino com um sinalizador de estrutura. Por exemplo, `dotnet vstest <MyPublishedTests>.dll --Framework:".NETFramework,Version=v4.6"`. No Visual Studio 2017 atualização 5 e posteriores, a estrutura desejada é detectada automaticamente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Teste de unidade com dotnet test e xUnit](unit-testing-with-dotnet-test.md)
 - [Teste de unidade com dotnet test e NUnit](unit-testing-with-nunit.md)

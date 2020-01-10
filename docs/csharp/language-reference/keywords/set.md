@@ -1,6 +1,5 @@
 ---
 title: Palavra-chave set – Referência de C#
-ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - set
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - set keyword [C#]
 ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
-ms.openlocfilehash: 0322f1bb94174dd3a0cdd2089c8626d25a80cc1c
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
-ms.translationtype: HT
+ms.openlocfilehash: 97b0dbf8716edc4cd465eb5ac693efa0ecaa498b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147987"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713073"
 ---
 # <a name="set-c-reference"></a>set (Referência de C#)
 
@@ -27,7 +26,7 @@ Geralmente, o acessador `set` consiste em uma única instrução que retorna um 
 
 [!code-csharp[set#3](~/samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]
   
-Para casos simples em que os acessadores `get` e `set` de uma propriedade não realizam nenhuma outra operação, a não ser a configuração ou a recuperação de um valor em um campo de suporte particular, você pode tirar proveito do suporte do compilador do C# para propriedades autoimplementadas. O exemplo a seguir implementa `Hours` como uma propriedade autoimplementada. 
+Para casos simples em que os acessadores `get` e `set` de uma propriedade não realizam nenhuma outra operação além da configuração ou da recuperação de um valor em um campo de suporte particular, você pode tirar proveito do suporte do compilador do C# para propriedades autoimplementadas. O exemplo a seguir implementa `Hours` como uma propriedade autoimplementada. 
 
 [!code-csharp[set#2](~/samples/snippets/csharp/language-reference/keywords/get/get-2.cs)]
   
@@ -35,7 +34,7 @@ Para casos simples em que os acessadores `get` e `set` de uma propriedade não r
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../../language-reference/index.md)
 - [Guia de Programação em C#](../../programming-guide/index.md)

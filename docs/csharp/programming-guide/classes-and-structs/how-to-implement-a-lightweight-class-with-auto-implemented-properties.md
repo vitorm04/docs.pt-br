@@ -1,17 +1,16 @@
 ---
 title: Como implementar uma classe leve com o guia de programação de C# Propriedades implementadas automaticamente
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - auto-implemented properties [C#]
 - properties [C#], auto-implemented
 ms.assetid: 1dc5a8ad-a4f7-4f32-8506-3fc6d8c8bfed
-ms.openlocfilehash: b5bf2e84ffe47cd1eaf17e877a20a700e98339ff
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 170a36e2a10896d9e4d29af602694700fa122e69
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73970919"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714908"
 ---
 # <a name="how-to-implement-a-lightweight-class-with-auto-implemented-properties-c-programming-guide"></a>Como implementar uma classe leve com propriedades implementadas automaticamente (C# guia de programação)
 
@@ -119,7 +118,7 @@ public class Program
 
 O compilador cria campos de suporte para cada propriedade autoimplementada. Os campos não são acessíveis diretamente do código-fonte.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Propriedades](./properties.md)
 - [struct](../../language-reference/keywords/struct.md)

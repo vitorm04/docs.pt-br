@@ -1,6 +1,5 @@
 ---
 title: Herança – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - abstract methods [C#]
@@ -10,12 +9,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: 3211a4741eb56ad9e138a848e52fabbc1d3daaeb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 3c59741fa646111d27f6d1087a9275178c1a41a1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924464"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705542"
 ---
 # <a name="inheritance-c-programming-guide"></a>Herança (Guia de Programação em C#)
 
@@ -40,7 +39,7 @@ A herança, assim como o encapsulamento e o polimorfismo, é uma das três princ
  Quando uma classe base declara um método como [virtual](../../language-reference/keywords/virtual.md), uma classe derivada pode [substituir](../../language-reference/keywords/override.md) o método por sua própria implementação. Se uma classe base declarar um membro como [abstrato](../../language-reference/keywords/abstract.md), esse método deve ser substituído em qualquer classe não abstrata que herdar diretamente da classe. Se uma classe derivada for abstrato, ele herdará membros abstratos sem implementá-los. Membros abstratos e virtuais são a base do polimorfismo, que é a segunda característica principal da programação orientada a objetos. Para obter mais informações, consulte [Polimorfismo](./polymorphism.md).  
   
 ## <a name="abstract-base-classes"></a>Classes base abstratas  
- Você poderá declarar uma classe como [abstrata](../../language-reference/keywords/abstract.md) se quiser impedir a instanciação direta usando o operador [new](../../language-reference/operators/new-operator.md). Se você fizer isso, a classe poderá ser usada somente se uma nova classe for derivada dela. Uma classe abstrata pode conter uma ou mais assinaturas de método que também são declaradas como abstratas. Essas assinaturas especificam os parâmetros e o valor retornado, mas não têm nenhuma implementação (corpo do método). Uma classe abstrata não precisa conter membros abstratos. No entanto, se uma classe contiver um membro abstrato, a própria classe deverá ser declarada como abstrata. Classes derivadas que não são abstratas devem fornecer a implementação para qualquer método abstrato de uma classe base abstrata. Para obter mais informações, consulte [Classes e Membros de Classes Abstratos e Lacrados](./abstract-and-sealed-classes-and-class-members.md).  
+ Você poderá declarar uma classe como [abstrata](../../language-reference/keywords/abstract.md) se quiser impedir a instanciação direta usando o operador [new](../../language-reference/operators/new-operator.md). Se você fizer isso, a classe poderá ser usada somente se uma nova classe for derivada dela. Uma classe abstrata pode conter uma ou mais assinaturas de método que também são declaradas como abstratas. Essas assinaturas especificam os parâmetros e o valor retornado, mas não têm nenhuma implementação (corpo do método). Uma classe abstrata não precisa conter membros abstratos. No entanto, se uma classe contiver um membro abstrato, a própria classe deverá ser declarada como abstrata. Classes derivadas que não são abstratas devem fornecer a implementação para qualquer método abstrato de uma classe base abstrata. Para obter mais informações, consulte [Classes e membros de classes abstratos e lacrados](./abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="interfaces"></a>Interfaces  
  Uma *interface* é um tipo de referência semelhante a uma classe base abstrata que consiste somente em membros abstratos. Quando uma classe implementa uma interface, ela deve fornecer uma implementação para todos os membros da interface. Uma classe pode implementar várias interfaces, mesmo que ela possa derivar de apenas uma classe base direta.  
@@ -48,12 +47,12 @@ A herança, assim como o encapsulamento e o polimorfismo, é uma das três princ
  Interfaces são usadas para definir recursos específicos para classes que não têm necessariamente uma relação do tipo “é um". Por exemplo, a interface <xref:System.IEquatable%601?displayProperty=nameWithType> pode ser implementada por qualquer classe ou struct que precise habilitar o código do cliente para determinar se dois objetos do tipo são equivalentes (como quer que o tipo defina a equivalência). <xref:System.IEquatable%601> não implica o mesmo tipo de relação "é um" existente entre uma classe base e uma classe derivada (por exemplo, um `Mammal` é um `Animal`). Para obter mais informações, consulte [Interfaces](../interfaces/index.md).  
   
 ## <a name="preventing-further-derivation"></a>Impedindo derivações adicionais  
- Uma classe pode impedir que outras classes herdem dela ou de qualquer um de seus membros, declarando a si mesmo ou o membro como [lacrado](../../language-reference/keywords/sealed.md). Para obter mais informações, consulte [Classes e Membros de Classes Abstratos e Lacrados](./abstract-and-sealed-classes-and-class-members.md).  
+ Uma classe pode impedir que outras classes herdem dela ou de qualquer um de seus membros, declarando a si mesmo ou o membro como [lacrado](../../language-reference/keywords/sealed.md). Para obter mais informações, consulte [Classes e membros de classes abstratos e lacrados](./abstract-and-sealed-classes-and-class-members.md).  
   
 ## <a name="derived-class-hiding-of-base-class-members"></a>Ocultação de membros da classe base pela classe derivada  
  Uma classe derivada pode ocultar membros da classe base declarando membros com mesmo nome e assinatura. O modificador [new](../../language-reference/keywords/new-modifier.md) pode ser usado para indicar explicitamente que o membro não pretende ser uma substituição do membro base. O uso de [new](../../language-reference/keywords/new-modifier.md) não é obrigatório, mas um aviso do compilador será gerado se [new](../../language-reference/keywords/new-modifier.md) não for usado. Para obter mais informações, consulte [Controle de versão com as palavras-chave override e new](./versioning-with-the-override-and-new-keywords.md) e [Quando usar as palavras-chave override e new](./knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Classes e Structs](./index.md)

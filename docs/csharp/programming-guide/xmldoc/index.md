@@ -1,6 +1,5 @@
 ---
 title: Comentários de documentação XML – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.xml
@@ -12,12 +11,12 @@ helpviewer_keywords:
 - C# language, XML code comments
 - XML documentation comments [C#]
 ms.assetid: 803b7f7b-7428-4725-b5db-9a6cff273199
-ms.openlocfilehash: 6405b094ccc50499bfeb4db4522f0ec9b01f68ad
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 07daff8b819220fad07e516281b93b24e39cba46
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72523486"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711760"
 ---
 # <a name="xml-documentation-comments-c-programming-guide"></a>Comentários de documentação XML (Guia de Programação em C#)
 No Visual C#, você pode criar documentação para seu código ao incluir elementos XML nos campos de comentários especiais (indicados por barras triplas) no código-fonte logo antes do bloco de código ao qual os comentários se referem, por exemplo:  
@@ -44,16 +43,16 @@ public class MyClass {}
   
 - [Delimitadores para marcas de documentação](./delimiters-for-documentation-tags.md)  
   
-- [Como usar os recursos da documentação XML](./how-to-use-the-xml-documentation-features.md)  
+- [Como usar os recursos de documentação XML](./how-to-use-the-xml-documentation-features.md)
   
-## <a name="related-sections"></a>Seções relacionadas  
- Para obter mais informações, consulte:  
+## <a name="related-sections"></a>Seções Relacionadas  
+ Para obter mais informações, consulte .  
   
 - [-Doc (comentários de documentação do processo)](../../language-reference/compiler-options/doc-compiler-option.md)  
   
-## <a name="c-language-specification"></a>Especificação da Linguagem C#  
+## <a name="c-language-specification"></a>Especificação da linguagem C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)

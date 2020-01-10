@@ -3,14 +3,12 @@ title: Objetos de extensão XSLT
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 25c9c1c81db0bb6775aa9226318d7ec726a93e09
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
-ms.translationtype: HT
+ms.openlocfilehash: 6ad5b5140239ad7dc0ad72e65d10af744dfbd784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69924932"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709706"
 ---
 # <a name="xslt-extension-objects"></a>Objetos de extensão XSLT
 Os objetos de extensão são usados para estender a funcionalidade de folhas de estilos. Os objetos de extensão são mantidos pela classe de <xref:System.Xml.Xsl.XsltArgumentList> .  
@@ -38,7 +36,7 @@ Os objetos de extensão são usados para estender a funcionalidade de folhas de 
   
 3. Passe o objeto de <xref:System.Xml.Xsl.XsltArgumentList> para o método de <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> .  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Transformações XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
 - [Considerações de segurança de XSLT](../../../../docs/standard/data/xml/xslt-security-considerations.md)

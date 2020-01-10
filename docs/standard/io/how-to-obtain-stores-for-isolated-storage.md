@@ -1,5 +1,5 @@
 ---
-title: 'Como: Obter repositórios para o armazenamento isolado'
+title: Como obter repositórios para o armazenamento isolado
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,16 +13,14 @@ helpviewer_keywords:
 - data stores, obtaining
 - data storage using isolated storage, obtaining stores
 ms.assetid: fcb6b178-d526-47c4-b029-e946f880f9db
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d6fbc78c379951e05869a433875d057c49d44594
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 7104ba665f60c2d55217a2d8628c85f6e469ad6f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969254"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706925"
 ---
-# <a name="how-to-obtain-stores-for-isolated-storage"></a>Como: Obter repositórios para o armazenamento isolado
+# <a name="how-to-obtain-stores-for-isolated-storage"></a>Como obter repositórios para o armazenamento isolado
 Um repositório isolado expõe um sistema de arquivos virtual dentro de um compartimento de dados. A classe <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece vários métodos para interagir com um repositório isolado. Para criar e recuperar repositórios, o <xref:System.IO.IsolatedStorage.IsolatedStorageFile> fornece três métodos estáticos:  
   
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A> retorna o armazenamento que é isolado pelo usuário e pelo assembly.  
@@ -56,7 +54,7 @@ Um repositório isolado expõe um sistema de arquivos virtual dentro de um compa
  [!code-csharp[Conceptual.IsolatedStorage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source6.cs#7)]
  [!code-vb[Conceptual.IsolatedStorage#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source6.vb#7)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageFile>
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>

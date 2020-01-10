@@ -11,20 +11,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8980122acdd069bc840aa09129483a1cb9a379fd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933803"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705867"
 ---
 # <a name="security-and-race-conditions"></a>Segurança e condições de corrida
-Outra área de interesse é o potencial para brechas de segurança exploradas por condições de corrida. Há várias maneiras em que isso pode acontecer. Os subtópicos seguir descrevem algumas das principais armadilhas que o desenvolvedor deve evitar.  
+Outra área de preocupação é o potencial de brechas de segurança exploradas por condições de corrida. Há várias maneiras pelas quais isso pode acontecer. Os subtópicos a seguir descrevem algumas das principais armadilhas que o desenvolvedor deve evitar.  
   
 ## <a name="race-conditions-in-the-dispose-method"></a>Condições de corrida no método Dispose  
- Se uma classe **Dispose** método (para obter mais informações, consulte [coleta de lixo](../../../docs/standard/garbage-collection/index.md)) não é sincronizado, é possível esse código de limpeza dentro **Dispose** pode ser executado mais de uma vez, conforme mostrado no exemplo a seguir.  
+ Se o método **Dispose** de uma classe (para obter mais informações, consulte [coleta de lixo](../../../docs/standard/garbage-collection/index.md)) não estiver sincronizado, é possível que o código de limpeza dentro de **Dispose** possa ser executado mais de uma vez, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 Sub Dispose()  
@@ -46,13 +44,13 @@ void Dispose()
 }  
 ```  
   
- Porque isso **Dispose** implementação não está sincronizada, é possível `Cleanup` a ser chamado pelo primeiro um thread e, em seguida, um segundo thread antes `_myObj` está definido como **nulo**. Se esta é uma preocupação de segurança depende do que acontece quando o `Cleanup` código é executado. Um grande problema com não sincronizadas **Dispose** implementações envolve o uso de identificadores de recurso, como arquivos. Descarte inadequado pode fazer com que o identificador errado a ser usado, o que muitas vezes leva a vulnerabilidades de segurança.  
+ Como essa implementação **Dispose** não é sincronizada, é possível que `Cleanup` seja chamado pelo primeiro thread e, depois, por um segundo thread antes que `_myObj` seja definido como **NULL**. Se essa é uma preocupação de segurança depende do que acontece quando o código de `Cleanup` é executado. Um grande problema com implementações de **Dispose** não sincronizadas envolve o uso de identificadores de recursos, como arquivos. A alienação imprópria pode fazer com que o identificador errado seja usado, o que geralmente leva a vulnerabilidades de segurança.  
   
 ## <a name="race-conditions-in-constructors"></a>Condições de corrida em construtores  
- Em alguns aplicativos, pode ser possível que outros threads acessar membros de classe antes de executaram completamente seus construtores de classe. Você deve examinar todos os construtores de classe para certificar-se de que não há nenhum problema de segurança se isso deve acontecer ou sincronizar threads, se necessário.  
+ Em alguns aplicativos, pode ser possível que outros threads acessem os membros da classe antes que seus construtores de classe tenham sido executados completamente. Você deve examinar todos os construtores de classe para garantir que não haja problemas de segurança se isso ocorrer ou sincronizar threads, se necessário.  
   
 ## <a name="race-conditions-with-cached-objects"></a>Condições de corrida com objetos armazenados em cache  
- Código que armazena em cache informações de segurança ou usa a segurança de acesso do código [Assert](../../../docs/framework/misc/using-the-assert-method.md) operação também pode ser vulnerável a condições de corrida se outras partes da classe não estão sincronizados corretamente, conforme mostrado no exemplo a seguir.  
+ O código que armazena em cache informações de segurança ou usa a operação de [declaração](../../../docs/framework/misc/using-the-assert-method.md) de segurança de acesso ao código também pode ser vulnerável a condições de corrida se outras partes da classe não estiverem sincronizadas adequadamente, conforme mostrado no exemplo a seguir.  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -97,13 +95,13 @@ void DoOtherWork()
 }  
 ```  
   
- Se houver outros caminhos para `DoOtherWork` que podem ser chamados de outro thread com o mesmo objeto, um chamador não confiável pode ser adiada uma demanda passada.  
+ Se houver outros caminhos para `DoOtherWork` que podem ser chamados de outro thread com o mesmo objeto, um chamador não confiável poderá passar por uma demanda.  
   
- Se seu código armazena em cache informações de segurança, certifique-se de que você examine essa vulnerabilidade.  
+ Se o código armazenar em cache as informações de segurança, certifique-se de analisá-las para essa vulnerabilidade.  
   
 ## <a name="race-conditions-in-finalizers"></a>Condições de corrida em finalizadores  
- Condições de corrida também podem ocorrer em um objeto que faz referência a um recurso estático ou não gerenciado que ele libera, em seguida, no seu finalizador. Se vários objetos compartilham um recurso que é manipulado no finalizador de uma classe, os objetos devem sincronizar todo o acesso a esse recurso.  
+ As condições de corrida também podem ocorrer em um objeto que faz referência a um recurso estático ou não gerenciado que ele libera em seu finalizador. Se vários objetos compartilharem um recurso que é manipulado no finalizador de uma classe, os objetos deverão sincronizar todo o acesso a esse recurso.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Diretrizes de codificação segura](../../../docs/standard/security/secure-coding-guidelines.md)

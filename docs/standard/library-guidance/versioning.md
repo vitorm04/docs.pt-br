@@ -1,17 +1,15 @@
 ---
 title: Bibliotecas de controle de versão e .NET
 description: Recomendações de melhores práticas para controle de versão de bibliotecas do .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 12/10/2018
-ms.openlocfilehash: 9250e48707c0ea72cdf8bef9663f5a3516309b86
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 8ed3217e39b1fe0f330a650ec72cda224866e207
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70969014"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706407"
 ---
-# <a name="versioning"></a>Controle de versão
+# <a name="versioning"></a>{1&gt;Controle de versão&lt;1}
 
 Uma biblioteca de software raramente está completa na versão 1.0. Boas bibliotecas evoluem com o tempo, adicionando recursos, corrigindo bugs e melhorando o desempenho. É importante que você possa liberar novas versões de uma biblioteca do .NET, fornecendo valor adicional a cada versão, sem interromper os usuários existentes.
 
@@ -63,7 +61,7 @@ Nomenclatura forte combinada com a versão do assembly habilita [carregamento de
 
 > A versão do AssemblyVersion é incluída em algumas mensagens informativas exibidas ao usuário, por exemplo, o nome do assembly e os nomes de tipo qualificados do assembly em mensagens de exceção. Manter uma relação entre as versões fornece mais informações para desenvolvedores sobre qual versão eles estão usando.
 
-**❌ NÃO** tenha uma AssemblyVersion fixa.
+**❌ não** tem um AssemblyVersion fixo.
 
 > Embora um AssemblyVersion inalterável evite a necessidade de redirecionamentos de associação, isso significa que apenas uma única versão do assembly pode ser instalada no GAC (Cache de Assembly Global). Além disso, os aplicativos que fazem referência ao assembly no GAC serão interrompidos se outro aplicativo atualizar o assembly do GAC com alterações significativas.
 
@@ -96,7 +94,7 @@ A versão informativa do assembly é usada para registrar informações adiciona
 > [!NOTE]
 > As versões mais antigas do Visual Studio acionam um aviso de build caso essa versão não siga o formato `Major.Minor.Build.Revision`. O aviso pode ser ignorado com segurança.
 
-**❌ EVITE** definir a versão informativa do assembly você mesmo.
+**❌ Evite** definir a versão informativa do assembly por conta própria.
 
 > Permita a SourceLink gerar automaticamente a versão que contém metadados de controle do código-fonte e NuGet.
 

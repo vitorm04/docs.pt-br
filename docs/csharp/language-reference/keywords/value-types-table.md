@@ -1,17 +1,16 @@
 ---
 title: Referência de tabela de C# tipos de valor
-ms.custom: seodec18
 ms.date: 11/06/2019
 helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 2f2d81d90f6d68f1bada40c81f0f28febd51bd1f
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: c0db75cc502426490d82c369a919079e8f53284c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552355"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712917"
 ---
 # <a name="value-types-table-c-reference"></a>Tabela de tipos deC# valor (referência)
 
@@ -24,7 +23,7 @@ A tabela a seguir mostra os tipos de valor de C#:
 |[char](../builtin-types/char.md)|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|
 |`decimal`|Numérico, [ponto flutuante](../builtin-types/floating-point-numeric-types.md)|
 |`double`|Numérico, [ponto flutuante](../builtin-types/floating-point-numeric-types.md)|
-|[enum](enum.md)|Enumeração|
+|[enum](../builtin-types/enum.md)|Enumeração|
 |`float`|Numérico, [ponto flutuante](../builtin-types/floating-point-numeric-types.md)|
 |`int`|Assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|
 |`long`|Assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|
@@ -35,7 +34,7 @@ A tabela a seguir mostra os tipos de valor de C#:
 |`ulong`|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|
 |`ushort`|Não assinado, numérico, [integral](../builtin-types/integral-numeric-types.md)|
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Tabela de valores padrão](default-values-table.md)

@@ -1,17 +1,16 @@
 ---
 title: Buffers de tamanho fixo – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: deb057929871ffb50da466e3628c34f336ffd5ee
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: b5be6892a265f0a2b7f3109321fdcf46d4b0ea22
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552392"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711838"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Buffers de tamanho fixo (Guia de Programação em C#)
 
@@ -49,7 +48,7 @@ Buffers não seguros diferem de matrizes regulares das seguintes maneiras:
 - A declaração de matriz deve incluir uma contagem, como `char id[8]`. Não é possível usar `char id[]`.
 - Buffers não seguros só podem ser structs ou campos de instância em um contexto não seguro.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Guia de Programação em C#](../index.md)
 - [Código não seguro e ponteiros](index.md)

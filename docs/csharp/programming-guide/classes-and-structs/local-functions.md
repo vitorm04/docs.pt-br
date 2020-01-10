@@ -1,22 +1,21 @@
 ---
 title: Funções locais – Guia de Programação em C#
-ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-ms.openlocfilehash: 24b7d6f98e331110ddcd971d0d0b21003dbe023d
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 2036e576a44aa3e1e7829e2091e5a9243d6b6010
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736843"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705516"
 ---
 # <a name="local-functions-c-programming-guide"></a>Funções locais (Guia de Programação em C#)
 
 Começando com o C# 7.0, o C# é compatível com *funções locais*. Funções locais são métodos privados de um tipo que estão aninhados em outro membro. Eles só podem ser chamados do membro que os contém. Funções locais podem ser declaradas em e chamadas de:
 
 - Métodos, especialmente os métodos iteradores e os métodos assíncronos
-- Construtores
+- {1&gt;Construtores&lt;1}
 - Acessadores de propriedade
 - Acessadores de eventos
 - Métodos anônimos
@@ -76,6 +75,6 @@ Assim como foi feito com o método iterador, podemos refatorar o código deste e
 
 [!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Métodos](methods.md)

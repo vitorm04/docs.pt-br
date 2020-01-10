@@ -26,14 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0eb88b8f46d425ae840c2bf8ed8eb479971d1cbc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974675"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708365"
 ---
 # <a name="generics-in-net"></a>Generics in .NET (Genéricos no .NET)
 
@@ -133,7 +131,7 @@ Os genéricos permitem que você personalize um método, uma classe, uma estrutu
 
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Cargo|Descrição|  
 |-----------|-----------------|  
 |[Coleções genéricas no .NET](../../../docs/standard/generics/collections.md)|Descreve as classes de coleção genérica e outros tipos genéricos no .NET.|  
 |[Delegados genéricos para manipulação de matrizes e listas](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|Descreve delegados genéricos para conversões, predicados de pesquisa e ações a serem tomadas nos elementos de uma matriz ou coleção.|  
