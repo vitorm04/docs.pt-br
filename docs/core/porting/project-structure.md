@@ -3,24 +3,23 @@ title: Organizar projetos do .NET Framework e .NET Core
 description: Ajuda para os proprietários de projeto que desejam compilar sua solução no .NET Framework e .NET Core lado a lado.
 author: conniey
 ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: 789f50ffb61b80f590a24bc45693df895b3424f7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: d71cc3102846c08f4e35831921b8cc4ca82f9e1b
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801931"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777329"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>Organize seu projeto para oferecer suporte ao .NET Framework e ao .NET Core
 
-Saiba como criar uma solução compilada para .NET Framework e .NET Core simultaneamente. Veja várias opções para organizar projetos que o ajudam a atingir esse objetivo. Estes são alguns cenários típicos que você deve considerar ao decidir como configurar o layout de projeto com o .NET Core. A lista pode não abordar tudo o que você deseja, priorize dependendo das necessidades do seu projeto.
+Você pode criar uma solução que compila para o .NET Framework e o .NET Core lado a lado. Este artigo aborda várias opções de organização de projeto para ajudá-lo a atingir essa meta. Aqui estão alguns cenários típicos a considerar quando você está decidindo como configurar o layout do projeto com o .NET Core. A lista pode não abordar tudo o que você deseja, priorize dependendo das necessidades do seu projeto.
 
 - [**Combinar projetos existentes e projetos do .NET Core em um mesmo projeto**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *Isso é bom para:*
-  - Simplificar o processo de compilação ao compilar um único projeto em vez de vários, cada um direcionado para uma versão ou plataforma diferente do .NET Framework.
-  - Simplificar o gerenciamento de arquivos de origem para projetos multiplataforma, pois é necessário gerenciar um único arquivo de projeto. Ao adicionar/remover arquivos da origem, as alternativas exigem que você sincronize manualmente esses recursos com outros projetos.
-  - Fácil geração de um pacote NuGet para consumo.
+  - Simplifica o processo de compilação Compilando um único projeto em vez de vários projetos que têm como destino uma versão ou plataforma diferente .NET Framework.
+  - Simplifica o gerenciamento de arquivos de origem para projetos multiplataforma porque você deve gerenciar um único arquivo de projeto. Ao adicionar ou remover arquivos de origem, as alternativas exigem que você os sincronize manualmente com seus outros projetos.
+  - Gere facilmente um pacote NuGet para consumo.
   - Permite que você escreva código para uma versão específica do .NET Framework nas suas bibliotecas usando diretivas de compilador.
 
   *Cenários sem suporte:*
@@ -29,8 +28,8 @@ Saiba como criar uma solução compilada para .NET Framework e .NET Core simulta
 - <a name="support-vs"></a>[**Manter os projetos existentes e os novos projetos do .NET Core separados**](#keep-existing-projects-and-create-a-net-core-project)
 
   *Isso é bom para:*
-  - Suporte ao desenvolvimento em projetos existentes para desenvolvedores e colaboradores que podem não ter o Visual Studio 2017 ou uma versão posterior.
-  - Diminuir a possibilidade de criar novos bugs em projetos existentes porque nenhuma variação de código é necessária nesses projetos.
+  - Dá suporte ao desenvolvimento em projetos existentes para desenvolvedores e colaboradores que podem não ter o Visual Studio 2017 ou uma versão posterior.
+  - Diminui a possibilidade de criar novos bugs em projetos existentes porque nenhuma variação de código é necessária nesses projetos.
 
 ## <a name="example"></a>Exemplo
 
@@ -44,9 +43,9 @@ A seguir são descritas várias maneiras de adicionar suporte ao .NET Core para 
 
 ## <a name="replace-existing-projects-with-a-multi-targeted-net-core-project"></a>Substituir os projetos existentes por um projeto multiplataforma do .NET Core
 
-Reorganize o repositório para que todos os arquivos *\*.csproj* existentes sejam removidos e seja criado um único arquivo *\*.csproj* direcionado a várias estruturas. Essa é uma ótima opção, pois um único projeto é capaz de ser compilado para estruturas diferentes. Ela também tem a capacidade de lidar com diferentes opções de compilação e dependências por estrutura de destino.
+Reorganize o repositório para que todos os arquivos *\*.csproj* existentes sejam removidos e seja criado um único arquivo *\*.csproj* direcionado a várias estruturas. Essa é uma ótima opção, pois um único projeto é capaz de Compilar para estruturas diferentes. Ela também tem a capacidade de lidar com diferentes opções de compilação e dependências por estrutura de destino.
 
-![Criar um csproj direcionado a várias estruturas](./media/project-structure/multi-targeted-project.png)
+![Criar um csproj que tem como alvo várias estruturas](./media/project-structure/multi-targeted-project.png)
 
 [**Código-fonte**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
@@ -62,11 +61,8 @@ Se houver projetos existentes que usam estruturas mais antigas, poderá ser úti
 
 [**Código-fonte**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
-Observe as seguintes alterações:
+O .NET Core e projetos existentes são mantidos em pastas separadas. Manter projetos em pastas separadas evita forçá-lo a ter o Visual Studio 2017 ou versões posteriores. Você pode criar uma solução separada que abre somente os projetos antigos.
 
-- O .NET Core e projetos existentes são mantidos em pastas separadas.
-  - Manter projetos em pastas separadas evita forçá-lo a ter o Visual Studio 2017 ou versões posteriores. Você pode criar uma solução separada que abre somente os projetos antigos.
-
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Documentação de portabilidade do .NET Core](index.md)

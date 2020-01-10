@@ -1,49 +1,47 @@
 ---
-title: Como controlar a versão do SDK e do Tempo de Execução do .NET Core
+title: Como controlar a versão do SDK e do Runtime do .NET Core
 description: Este artigo ensina como controlar a versão do SDK do .NET Core (semelhante ao controle de versão semântico).
-author: bleroy
 ms.date: 07/26/2018
-ms.custom: seodec18
-ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
-ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72179954"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777323"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>Visão geral de como o .NET Core tem a versão controlada
 
-O .NET Core refere-se ao Tempo de Execução do .NET Core e ao SDK do .NET Core, que contém as ferramentas que necessárias para desenvolver aplicativos. Os SDKs do .NET Core são projetados para funcionar com qualquer versão anterior do Tempo de Execução do .NET Core. Este artigo explica o tempo de execução e a estratégia de versão do SDK. Uma explicação de números de versão do .NET Standard pode ser encontrada no artigo que faz a introdução do [.NET Standard](../../standard/net-standard.md#net-implementation-support).
+O .NET Core refere-se ao Runtime do .NET Core e ao SDK do .NET Core, que contém as ferramentas que necessárias para desenvolver aplicativos. Os SDKs do .NET Core são projetados para funcionar com qualquer versão anterior do Runtime do .NET Core. Este artigo explica o runtime e a estratégia de versão do SDK. Uma explicação de números de versão do .NET Standard pode ser encontrada no artigo que faz a introdução do [.NET Standard](../../standard/net-standard.md#net-implementation-support).
 
-O Tempo de Execução do .NET Core e o SDK do .NET Core adicionam novos recursos em uma taxa diferente – em geral, o SDK do .NET Core fornece ferramentas atualizadas mais rapidamente do que o Tempo de Execução do .NET Core altera o tempo de execução que você usa em produção.
+O Runtime do .NET Core e o SDK do .NET Core adicionam novos recursos em uma taxa diferente – em geral, o SDK do .NET Core fornece ferramentas atualizadas mais rapidamente do que o Runtime do .NET Core altera o runtime que você usa em produção.
 
 ## <a name="versioning-details"></a>Detalhes de controle de versão
 
-O ".NET Core 2.1" refere-se ao número de versão do Tempo de Execução do .NET Core. O Tempo de Execução do .NET Core tem uma abordagem principal/secundária/de patch para o controle de versão que segue o [controle de versão semântico](#semantic-versioning).
+O ".NET Core 2.1" refere-se ao número de versão do Runtime do .NET Core. O Runtime do .NET Core tem uma abordagem principal/secundária/de patch para o controle de versão que segue o [controle de versão semântico](#semantic-versioning).
 
-O SDK do .NET Core não segue o controle de versão semântico. O SDK do .NET Core libera mais rapidamente e suas versões devem comunicar tanto o tempo de execução alinhado quanto as versões de patch e a própria versão secundária do SDK. As duas primeiras posições da versão do SDK do .NET Core estão bloqueadas no Tempo de Execução do .NET Core com que foi lançado. Cada versão do SDK pode criar aplicativos para esse tempo de execução ou qualquer versão inferior.
+O SDK do .NET Core não segue o controle de versão semântico. O SDK do .NET Core libera mais rapidamente e suas versões devem comunicar tanto o runtime alinhado quanto as versões de patch e a própria versão secundária do SDK. As duas primeiras posições da versão do SDK do .NET Core estão bloqueadas no Runtime do .NET Core com que foi lançado. Cada versão do SDK pode criar aplicativos para esse runtime ou qualquer versão inferior.
 
 A terceira posição do número de versão do SDK comunica o número de patch e da versão secundária. A versão secundária é multiplicada por 100. Versão secundária 1, versão de patch 2 seria representada como 102. Os últimos dois dígitos representam o número de patch. Por exemplo, a versão do .NET Core 2.2 pode criar versões, como a tabela a seguir:
 
-| Alteração                | Tempo de Execução do .NET Core | SDK do .NET Core (*) |
+| Alteração                | Runtime do .NET Core | SDK do .NET Core (\*) |
 |-----------------------|-------------------|-------------------|
 | Versão inicial       | 2.2.0             | 2.2.100           |
 | Patch do SDK             | 2.2.0             | 2.2.101           |
-| Tempo de Execução e Patch do SDK | 2.2.1             | 2.2.102           |
+| Runtime e Patch do SDK | 2.2.1             | 2.2.102           |
 | Alteração de Recurso do SDK    | 2.2.1             | 2.2.200           |
 
-(\*) Este gráfico usa um Tempo de Execução do .NET Core 2.2 futuro como exemplo porque um artefato de histórico que significou o primeiro SDK para .NET Core 2.1 é 2.1.300. Para obter mais informações, veja a [seleção de versão do .NET Core](selection.md).
+(\*) Este gráfico usa o tempo de execução do .NET Core 2,2 como o exemplo porque um artefato histórico significava que o primeiro SDK para .NET Core 2,1 é 2.1.300. Para obter mais informações, veja a [seleção de versão do .NET Core](selection.md).
 
 OBSERVAÇÕES:
 
-- Se o SDK tiver 10 atualizações de recurso antes de uma atualização de recurso de tempo de execução, os números de versão serão passados na série 1000 com números como 2.2.1000 de acordo com a versão do recurso 2.2.900 a seguir. Essa situação não deve ocorrer.
+- Se o SDK tiver 10 atualizações de recurso antes de uma atualização de recurso de runtime, os números de versão serão passados na série 1000 com números como 2.2.1000 de acordo com a versão do recurso 2.2.900 a seguir. Essa situação não deve ocorrer.
 - As versões de patch 99 sem uma versão do recurso não ocorrerão. Se uma versão se aproximar desse número, ela forçará uma versão do recurso.
 
 Você poderá ver mais detalhes na proposta inicial no repositório [dotnet/designs](https://github.com/dotnet/designs/pull/29).
 
 ## <a name="semantic-versioning"></a>Controle de versão semântico
 
-O *Tempo de Execução* do .NET Core se adere ao [SemVer (Controle de Versão Semântico)](https://semver.org/), adotando o uso do controle de versão do `MAJOR.MINOR.PATCH`, usando as várias partes do número de versão para descrever o grau e o tipo de alteração.
+O *Runtime* do .NET Core se adere ao [SemVer (Controle de Versão Semântico)](https://semver.org/), adotando o uso do controle de versão do `MAJOR.MINOR.PATCH`, usando as várias partes do número de versão para descrever o grau e o tipo de alteração.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
@@ -51,7 +49,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 As partes `PRERELEASE` e `BUILDNUMBER` opcionais nunca farão parte das versões compatíveis e existem apenas em builds noturnos, compilados localmente de destinos de origem e versões prévias sem suporte.
 
-### <a name="understand-runtime-version-number-changes"></a>Entender as alterações do número de versão do tempo de execução
+### <a name="understand-runtime-version-number-changes"></a>Entender as alterações do número de versão do runtime
 
 `MAJOR` é incrementado quando:
 
@@ -82,11 +80,11 @@ Os arquivos baixados para .NET Core têm a versão, por exemplo, `dotnet-sdk-2.1
 
 ### <a name="preview-versions"></a>Versões prévias
 
-As versões prévias têm um `-preview[number]-([build]|"final")` anexado à versão. Por exemplo: `2.0.0-preview1-final`.
+As versões prévias têm um `-preview[number]-([build]|"final")` anexado à versão. Por exemplo, `2.0.0-preview1-final`.
 
 ### <a name="servicing-versions"></a>Versões de manutenção
 
-Depois que uma versão sai, os branches de versão geralmente param de produzir builds diários e, em vez disso, iniciam a produção de builds de manutenção. As versões de manutenção têm um `-servicing-[number]` anexado à versão. Por exemplo: `2.0.1-servicing-006924`.
+Depois que uma versão sai, os branches de versão geralmente param de produzir builds diários e, em vez disso, iniciam a produção de builds de manutenção. As versões de manutenção têm um `-servicing-[number]` anexado à versão. Por exemplo, `2.0.1-servicing-006924`.
 
 ## <a name="relationship-to-net-standard-versions"></a>Relacionamento com versões do .NET Standard
 
@@ -106,7 +104,7 @@ Cada versão do .NET Core implementa uma versão do .NET Standard. Implementar u
 | 2.2       | até 2.0     |
 | 3.0       | até 2,1     |
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Estruturas de destino](../../standard/frameworks.md)
 - [Pacote de distribuição do .NET Core](../build/distribution-packaging.md)

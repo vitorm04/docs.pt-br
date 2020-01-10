@@ -2,12 +2,12 @@
 title: Ordenação
 ms.date: 12/13/2019
 description: Saiba como criar uma sequência de Agrupamento Personalizada.
-ms.openlocfilehash: 0942ad4523a149ad74321cbe0f63021f53303579
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9cc574a75c8f5347dd9bb44e36af72e50afa57b4
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447023"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777385"
 ---
 # <a name="collation"></a>Ordenação
 
@@ -21,7 +21,7 @@ As sequências de agrupamento são usadas pelo SQLite ao comparar valores de tex
 
 ## <a name="custom-collation"></a>Agrupamento personalizado
 
-Você também pode definir suas próprias sequências de agrupamento ou substituir as internas usando <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>. O exemplo a seguir mostra a substituição do agrupamento nocase para dar suporte a caracteres Unicode. O [código de exemplo completo](https://github.com/dotnet/samples/blob/master/samples/snippets/standard/data/sqlite/CollationSample/Program.cs) está disponível no github.
+Você também pode definir suas próprias sequências de agrupamento ou substituir as internas usando <xref:Microsoft.Data.Sqlite.SqliteConnection.CreateCollation%2A>. O exemplo a seguir mostra a substituição do agrupamento nocase para dar suporte a caracteres Unicode. O [código de exemplo completo](https://github.com/dotnet/samples/blob/master/snippets/standard/data/sqlite/CollationSample/Program.cs) está disponível no github.
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/CollationSample/Program.cs?name=snippet_Collation)]
 

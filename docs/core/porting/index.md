@@ -3,26 +3,25 @@ title: Porta do .NET Framework para o .NET Core
 description: Entenda o processo de compatibilidade e descubra ferramentas que podem ser úteis ao realizar a portabilidade de um projeto do .NET Framework para o .NET Core.
 author: cartermp
 ms.date: 10/22/2019
-ms.custom: seodec18
-ms.openlocfilehash: 89f00e5c6ce7f3cea7a3135c9b2856c54a70da40
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: b5b010acbccf134afe800aa5bb98a0ae6e9ffa25
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73038525"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777357"
 ---
-# <a name="overview-of-the-porting-process-from-net-framework-to-net-core"></a>Visão geral do processo de portabilidade do .NET Framework para o .NET Core
+# <a name="overview-of-porting-from-net-framework-to-net-core"></a>Visão geral da portabilidade do .NET Framework para o .NET Core
 
-Você pode ter um código que atualmente é executado no .NET Framework que você está interessado em portar para o .NET Core. Este artigo fornece:
+Você pode ter um código que atualmente é executado no .NET Framework que você está interessado em portar para o .NET Core. Esse artigo fornece:
 
 * Uma visão geral do processo de portabilidade.
-* Uma lista das ferramentas que você pode achar útil quando está portando seu código para o .NET Core.
+* Uma lista de ferramentas que você pode achar útil quando está portando seu código para o .NET Core.
 
 ## <a name="overview-of-the-porting-process"></a>Visão geral do processo de portabilidade
 
 Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET Core:
 
-1. Redirecione todos os projetos que você deseja portar para o .NET Framework 4.7.2 ou posterior.
+1. Redirecione todos os projetos que você deseja que a porta direcione .NET Framework 4.7.2 ou superior.
 
    Essa etapa garante que você possa usar alternativas de API para destinos específicos do .NET Framework quando o .NET Core não oferecer suporte a determinada API.
 
@@ -32,7 +31,7 @@ Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET
 
 3. Instale o [.NET API Analyzer](../../standard/analyzers/api-analyzer.md) em seus projetos para identificar as APIs que geram <xref:System.PlatformNotSupportedException> em algumas plataformas e outros problemas de compatibilidade em potencial.
 
-   Essa ferramenta é semelhante ao analisador de portabilidade, mas em vez de analisar se as coisas podem ser criadas no .NET Core, ela analisará se você estiver usando uma API de uma forma que irá lançar o <xref:System.PlatformNotSupportedException> em tempo de execução. Embora isso não seja comum se você estiver mudando de .NET Framework 4.7.2 ou superior, é bom verificar.
+   Essa ferramenta é semelhante ao analisador de portabilidade, mas em vez de analisar se as coisas podem ser criadas no .NET Core, ele analisa se você está usando uma API de uma forma que gerará o <xref:System.PlatformNotSupportedException> em tempo de execução. Embora isso não seja comum se você estiver mudando de .NET Framework 4.7.2 ou superior, é bom verificar.
 
 4. Converta todas as suas dependências de `packages.config` para o formato [PackageReference](/nuget/consume-packages/package-references-in-project-files) com a [ferramenta de conversão no Visual Studio](/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
@@ -44,9 +43,11 @@ Recomendamos que você use o seguinte processo ao portar seu projeto para o .NET
 
 6. Portar seu código de teste.
 
-   Como a portabilidade para o .NET Core é uma mudança significativa para sua base de código, é altamente recomendável portar seus testes para poder realizar testes à medida que o código é portado. MSTest, xUnit e NUnit funcionam no .NET Core.
+   Como a portabilidade para o .NET Core é uma alteração significativa na base de código, é altamente recomendável portar seus projetos de teste para que você possa executar testes à medida que você portar seu código. MSTest, xUnit e NUnit funcionam no .NET Core.
 
-Além disso, você pode tentar portar soluções menores ou projetos individuais para o formato de arquivo de projeto do .NET Core com a ferramenta [dotnet try-Convert](https://github.com/dotnet/try-convert) em uma única operação. Não há garantia de que o `dotnet try-convert` funcione para todos os seus projetos, e isso pode causar alterações sutis no comportamento que você já dependa. Ele deve ser usado como um _ponto de partida_ que automatiza as coisas básicas que podem ser automatizadas. Não é uma solução garantida para migrar um projeto.
+Além disso, você pode tentar portar soluções menores ou projetos individuais em uma operação para o formato de arquivo de projeto do .NET Core com a ferramenta [dotnet try-Convert](https://github.com/dotnet/try-convert) . Não há garantia de que o `dotnet try-convert` funcione para todos os seus projetos e pode causar alterações sutis no comportamento que você dependou. Use-o como um _ponto de partida_ que automatize as coisas básicas que podem ser automatizadas. Não é uma solução garantida para migrar um projeto.
 
->[!div class="step-by-step"]
->[Avançar](net-framework-tech-unavailable.md)
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
+
+>[!div class="nextstepaction"]
+>[Tecnologias indisponíveis no .NET Core](net-framework-tech-unavailable.md)

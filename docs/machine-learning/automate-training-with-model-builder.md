@@ -1,15 +1,14 @@
 ---
 title: O que é o Construtor de Modelo e como ele funciona?
 description: Como usar o Construtor de Modelo do ML.NET para treinar automaticamente um modelo de machine learning
-author: natke
-ms.date: 08/07/2019
+ms.date: 01/07/2020
 ms.custom: overview
-ms.openlocfilehash: 77fe56dba3532617ad9fb0c89bfaac7c8e031ce7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ac704b7961a8442a9174cdef5a4cd2a619236a4e
+ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971519"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75777401"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>O que é o Construtor de Modelo e como ele funciona?
 
@@ -35,18 +34,9 @@ Um cenário é uma descrição do tipo de previsão que você deseja fazer usand
 - detectar se uma transação bancária é fraudulenta
 - encaminhar problemas de comentários de clientes para a equipe correta em sua empresa
 
-## <a name="choose-a-model-type"></a>Escolha um tipo de modelo
+### <a name="which-machine-learning-scenario-is-right-for-me"></a>Qual cenário do aprendizado de máquina é adequado para mim?
 
-No Construtor de Modelos, é necessário selecionar um tipo de modelo de machine learning. O tipo de modelo depende de qual tipo de previsão você está tentando fazer.
-
-Para cenários que preveem um número, o tipo de modelo de machine learning é chamado `regression`.
-
-Para cenários que preveem uma categoria, o tipo de modelo é `classification`. Há dois tipos de classificação:
-
-- em que há apenas duas categorias: `binary classification`.
-- em que há apenas três ou mais categorias: `multiclass classification`.
-
-### <a name="which-model-type-is-right-for-me"></a>Qual tipo de modelo é certo para mim?
+No construtor de modelos, você precisa selecionar um cenário. O tipo de cenário depende do tipo de previsão que você está tentando fazer.
 
 #### <a name="predict-a-category-when-there-are-only-two-categories"></a>Prever uma categoria (quando há apenas duas categorias)
 
@@ -54,7 +44,7 @@ A classificação binária é usada para classificar dados em duas categorias (s
 
 ![Diagrama mostrando exemplos de classificação binária incluindo detecção de fraude, mitigação de risco e triagem de aplicativo](media/binary-classification-examples.png)
 
-A análise de sentimento pode ser usada para prever o sentimento positivo ou negativo de comentários do cliente. É um exemplo de tipo de modelo de classificação binária.
+A análise de sentimento pode ser usada para prever o sentimento positivo ou negativo de comentários do cliente. É um exemplo da tarefa de aprendizado de máquina de classificação binária.
 
 Se seu cenário exigir a classificação em duas categorias, você poderá usar esse modelo com seu próprio conjunto de dados.
 
@@ -64,7 +54,7 @@ A classificação multiclasse pode ser usada para categorizar os dados em três 
 
 ![Os exemplos de classificação multiclasse que incluem a classificação de documentos e de produtos, roteamento de tíquete de suporte e priorização de problemas do cliente](media/multiclass-classification-examples.png)
 
-A classificação de problema pode ser usada para categorizar os problemas de comentários (por exemplo, sobre o GitHub) do cliente usando o título do problema e a descrição. É um exemplo do tipo de modelo de classificação multiclasse.
+A classificação de problema pode ser usada para categorizar os problemas de comentários (por exemplo, sobre o GitHub) do cliente usando o título do problema e a descrição. É um exemplo da tarefa de aprendizado de máquina de classificação de várias classes.
 
 Você poderá usar o modelo de classificação do problema para seu cenário se quiser categorizar os dados em três ou mais categorias.
 
@@ -74,19 +64,33 @@ A regressão é usada para prever números.
 
 ![Diagrama mostrando exemplos de regressão, como a previsão de preços, a previsão de vendas e a manutenção preditiva](media/regression-examples.png)
 
-A previsão de preço pode ser usada para prever preços de casas usando local, tamanho e outras características da casa. É um exemplo de um tipo de modelo de regressão.
+A previsão de preço pode ser usada para prever preços de casas usando local, tamanho e outras características da casa. É um exemplo da tarefa de aprendizado de máquina de regressão.
 
 Você poderá usar o modelo de previsão de preço para o seu cenário se quiser prever um valor numérico com seu próprio conjunto de dados.
 
-#### <a name="custom-scenario-choose-your-model-type"></a>Cenário personalizado (escolha seu tipo de modelo)
+#### <a name="classify-images-into-categories"></a>Classificar imagens em categorias
 
-O cenário personalizado permite que você escolha manualmente seu tipo de modelo.
+Esse cenário é um caso especial de classificação multiclasse, em que os dados de entrada a serem categorizados são um conjunto de imagens.
+
+A classificação de imagem pode ser usada para identificar imagens de diferentes categorias. Por exemplo, tipos diferentes de terrenos, animais ou defeitos de fabricação.
+
+Você pode usar o modelo de classificação de imagem para seu cenário se tiver um conjunto de imagens e quiser classificar as imagens em diferentes categorias.
+
+#### <a name="custom-scenario"></a>Cenário personalizado
+
+O cenário personalizado permite que você escolha manualmente seu cenário.
 
 ## <a name="data"></a>Dados
 
-Depois de escolher seu tipo de modelo, o Construtor de Modelos solicita que você forneça um conjunto de dados. Os dados são usados para treinar, avaliar e escolher o melhor modelo para seu cenário.
+Depois de escolher seu cenário, o construtor de modelos solicitará que você forneça um conjunto de um. Os dados são usados para treinar, avaliar e escolher o melhor modelo para seu cenário.
 
 ![Diagrama mostrando as etapas do Construtor de Modelos](media/model-builder-steps.png)
+
+O construtor de modelos dá suporte a conjuntos de dados nos formatos. TSV,. csv,. txt, bem como no formato de banco de dados SQL. Se você tiver um arquivo. txt, as colunas deverão ser separadas com `,`, `;` ou `/t` e o arquivo deverá ter uma linha de cabeçalho.
+
+Se o conjunto de ativos for composto de imagens, os tipos de arquivo com suporte serão `.jpg` e `.png`.
+
+Para obter mais informações, consulte [carregar dados de treinamento no construtor de modelos](how-to-guides/load-data-model-builder.md).
 
 ### <a name="choose-the-output-to-predict-label"></a>Escolha a saída para prever (rótulo)
 
@@ -109,15 +113,16 @@ O rótulo é o preço histórico de casas para essa linha de valores de metro qu
 
 Se você ainda não tiver seus próprios dados, experimente um desses conjuntos de dados:
 
-|Cenário|Tipo de modelo|Dados|Rotular|Recursos|
+|Cenário|Tarefa ML|Dados|Rótulo|Recursos|
 |-|-|-|-|-|
 |Previsão de preço|regressão|[dados de tarifas de táxi](https://github.com/dotnet/machinelearning-samples/blob/master/datasets/taxi-fare-train.csv)|Tarifa|Tempo da corrida, distância|
 |Detecção de anomalias|classificação binária|[dados de vendas do produto](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/AnomalyDetection_Sales/SpikeDetection/Data/product-sales.csv)|Vendas do Produto|Mês|
-|Análise de sentimentos|classificação binária|[dados de comentário do site](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Rótulo (0 quando o sentimento é negativo, 1 quando é positivo)|Comentário, ano|
-|Detecção de fraudes|classificação binária|[dados do cartão de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudulenta, caso contrário, 0)|Quantidade, V1-V28 (recursos anônimos)|
+|Análise de Sentimento|classificação binária|[dados de comentário do site](https://raw.githubusercontent.com/dotnet/machinelearning/master/test/data/wikipedia-detox-250-line-data.tsv)|Rótulo (0 quando o sentimento é negativo, 1 quando é positivo)|Comentário, ano|
+|Detecção de fraude|classificação binária|[dados do cartão de crédito](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/getting-started/BinaryClassification_CreditCardFraudDetection/CreditCardFraudDetection.Trainer/assets/input/creditcardfraud-dataset.zip)|Classe (1 quando fraudulenta, caso contrário, 0)|Quantidade, V1-V28 (recursos anônimos)|
 |Classificação de texto|classificação multiclasse|[dados de problema do GitHub](https://github.com/dotnet/machinelearning-samples/blob/master/samples/csharp/end-to-end-apps/MulticlassClassification-GitHubLabeler/GitHubLabeler/Data/corefx-issues-train.tsv)|Área|Título, Descrição|
+|Classificação de imagens|classificação multiclasse|[Imagens de flores](http://download.tensorflow.org/example_images/flower_photos.tgz)|O tipo de flor: Margarida, dandelion, rosas, flores, tulips|Os próprios dados da imagem|
 
-## <a name="train"></a>Trem
+## <a name="train"></a>Treinar
 
 Depois de selecionar seu cenário, dados e rótulo, o Construtor de Modelo treina o modelo.
 
@@ -127,11 +132,65 @@ O treinamento é um processo automático pelo qual Construtor de Modelo ensina s
 
 Como o Construtor de Modelo usa aprendizado de máquina automatizado (AutoML), ele não requer nenhuma entrada ou ajuste de você durante o treinamento.
 
+### <a name="how-long-should-i-train-for"></a>Por quanto tempo devo treinar?
+
+O construtor de modelos usa AutoML para explorar vários modelos para encontrar o modelo de melhor desempenho.
+
+Períodos de treinamento mais longos permitem que o AutoML Explore mais modelos com uma ampla gama de configurações.
+
+A tabela a seguir resume o tempo médio necessário para obter um bom desempenho para um conjunto de conjuntos de data de exemplo, em um computador local.
+
+|Tamanho do conjunto de um|Tempo médio para treinar|
+|------------|---------------------|
+|0-10 MB|10 s|
+|10-100 MB|10 min|
+|100-500 MB|30 min|
+|500-1 GB|60 min|
+|1 GB +|mais de 3 horas|
+
+Esses números são apenas um guia. O tamanho exato do treinamento depende de:
+
+- o número de recursos (colunas) que estão sendo usados como entrada para o modelo
+- o tipo de colunas
+- a tarefa ML
+- o desempenho de CPU, disco e memória do computador usado para treinamento
+
 ## <a name="evaluate"></a>Avaliar o
 
-A avaliação é o processo de usar o modelo treinado para fazer previsões com novos dados de teste e, em seguida, medir quão boas são as previsões.
+A avaliação é o processo de medir a qualidade do seu modelo. O construtor de modelos usa o modelo treinado para fazer previsões com novos dados de teste e, em seguida, mede a qualidade das previsões.
 
-O Construtor de Modelo divide os dados de treinamento em um conjunto de treinamento e um conjunto de teste. Os dados de treinamento (80%) são usados para treinar seu modelo e os dados de teste (20%) são retidos para avaliar seu modelo. O Construtor de Modelos usa métricas para medir a qualidade do modelo. As métricas específicas usadas dependem do tipo de modelo. Para obter mais informações, consulte [métricas de avaliação de modelo](resources/metrics.md).
+O Construtor de Modelo divide os dados de treinamento em um conjunto de treinamento e um conjunto de teste. Os dados de treinamento (80%) são usados para treinar seu modelo e os dados de teste (20%) são retidos para avaliar seu modelo. 
+
+### <a name="how-do-i-understand-my-model-performance"></a>Como fazer entender o desempenho do meu modelo?
+
+Um cenário é mapeado para uma tarefa de aprendizado de máquina. Cada tarefa ML tem seu próprio conjunto de métricas de avaliação.
+
+#### <a name="regression-for-example-price-prediction"></a>Regressão (por exemplo, previsão de preço)
+
+A métrica padrão para problemas de regressão é RSquared, o valor de RSquared intervalos entre 0 e 1. 1 é o melhor valor possível ou, em outras palavras, quanto mais perto o valor de RSquared para 1 melhor o seu modelo está sendo executado.
+
+Outras métricas relatadas como perda absoluta, perda de quadrado e perda de RMS são métricas adicionais, que podem ser usadas para entender como o modelo está sendo executado e compará-lo com outros modelos de regressão.
+
+#### <a name="binary-classification-for-example-sentiment-analysis"></a>Classificação binária (por exemplo, Análise de Sentimento)
+
+A métrica padrão para problemas de classificação é a precisão. A precisão define a proporção de previsões corretas que seu modelo está fazendo sobre o conjunto de testes. Quanto mais perto de 100% ou 1,0, melhor será.
+
+Outras métricas relatadas como AUC (área sob a curva), que mede a taxa positiva real versus a taxa de falsos positivos deve ser maior que 0,50 para que os modelos sejam aceitáveis.
+
+Métricas adicionais, como a pontuação F1, podem ser usadas para controlar o equilíbrio entre precisão e RECALL.
+
+#### <a name="multi-class-classification-for-example-issue-classification-image-classification"></a>Classificação de várias classes (por exemplo, classificação de emissão, classificação de imagem)
+
+A métrica padrão para classificação de várias classes é micro exatidão. Quanto mais próximo for a 100% ou 1,0, melhor será.
+
+Outra métrica importante para a classificação de várias classes é a precisão da macro, semelhante à superprecisão mais próxima de 1,0 a melhor delas. Uma boa maneira de pensar sobre esses dois tipos de precisão é:
+
+- Micro-exatidão: com que frequência um tíquete de entrada é classificado para a equipe certa?
+- Precisão da macro: para uma equipe média, com que frequência um tíquete de entrada é correto para sua equipe?
+
+### <a name="more-information-on-evaluation-metrics"></a>Mais informações sobre métricas de avaliação
+
+Para obter mais informações, consulte [métricas de avaliação de modelo](resources/metrics.md).
 
 ## <a name="improve"></a>Aprimorar
 
