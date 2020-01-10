@@ -2,12 +2,12 @@
 title: Categorias de alteração da falha – .NET Core
 description: Saiba mais sobre as maneiras como as alterações da falha são categorizadas no .NET Core.
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567922"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343593"
 ---
 # <a name="breaking-change-categories"></a>Categorias de alteração significativa
 
@@ -18,8 +18,7 @@ A *compatibilidade* refere-se à capacidade de compilar ou executar código em u
 - [compatibilidade de origem](#source-compatibility)
 - [compatibilidade de tempo de design](#design-time-compatibility)
 - [compatibilidade com versões anteriores](#backwards-compatibility)
-
-A compatibilidade com o [encaminhamento](#forward-compatibility) não é uma meta do .NET Core.
+- [compatibilidade com o encaminhamento](#forward-compatibility) (não é uma meta do .NET Core)
 
 ## <a name="behavioral-change"></a>Alteração de comportamento
 
@@ -43,7 +42,7 @@ A compatibilidade de tempo de design refere-se à preservação da experiência 
 
 A compatibilidade com versões anteriores refere-se à capacidade de um consumidor existente de executar em uma nova versão quando se comporta da mesma maneira. As alterações de comportamento e as alterações na compatibilidade binária afetam a compatibilidade com versões anteriores. Se um consumidor não puder executar ou se comportar de maneira diferente ao ser executado na versão mais recente da API, a API será *incompatível com versões anteriores*.
 
-Alterações que afetam a compatibilidade com versões anteriores são altamente desencorajadas, pois os desenvolvedores esperam, por padrão, a compatibilidade com versões anteriores em versões mais recentes de uma API.
+As alterações que afetam a compatibilidade com versões anteriores são desencorajadas, uma vez que os desenvolvedores esperam compatibilidade com a versão mais recente de uma API.
 
 ## <a name="forward-compatibility"></a>Compatibilidade com versões posteriores
 

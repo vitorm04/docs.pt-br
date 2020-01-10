@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 1d6430ba5969d8a05db47baf9521d2409e596c23
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740860"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559429"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta problemas que você deve estar atento ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização são definidos no .NET no namespace <xref:System.Globalization>.
@@ -36,7 +36,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Codificando
+### <a name="encoding"></a>Codificação
  A codificação com suporte do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é ASCII, Unicode UTF-16 e UTF-8. A instrução Encoding está no início do documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se nenhum atributo de codificação existe e não há nenhuma ordem de bytes, o analisador padrão é UTF-8. UTF-8 e UTF-16 são as codificações preferenciais. UTF-7 não tem suporte. O exemplo a seguir demonstra como especificar uma codificação UTF-8 em um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
@@ -45,7 +45,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 
 <a name="lang_attrib"></a>
 ### <a name="language-attribute"></a>Atributo de idioma
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa [XML: lang](../../xaml-services/xml-lang-handling-in-xaml.md) para representar o atributo language de um elemento.  Para aproveitar a classe <xref:System.Globalization.CultureInfo>, o valor do atributo language precisa ser um dos nomes de cultura predefinidos por <xref:System.Globalization.CultureInfo>. [xml:lang](../../xaml-services/xml-lang-handling-in-xaml.md) é herdável na árvore de elementos (pelas regras de XML, não necessariamente devido a herança de propriedade de dependência) e seu valor padrão será uma cadeia de caracteres vazia se ele não for definido explicitamente.
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] usa [XML: lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) para representar o atributo language de um elemento.  Para aproveitar a classe <xref:System.Globalization.CultureInfo>, o valor do atributo language precisa ser um dos nomes de cultura predefinidos por <xref:System.Globalization.CultureInfo>. [xml:lang](../../../desktop-wpf/xaml-services/xml-language-handling.md) é herdável na árvore de elementos (pelas regras de XML, não necessariamente devido a herança de propriedade de dependência) e seu valor padrão será uma cadeia de caracteres vazia se ele não for definido explicitamente.
 
  O atributo de idioma é muito útil para especificar dialetos. Por exemplo, francês tem ortografia, vocabulário e pronúncia diferentes na França, Bélgica, Quebec e Suíça. Além disso, o chinês, o japonês e o coreano compartilham pontos de código em Unicode, mas as formas ideográficas são diferentes e usam fontes totalmente diferentes.
 
@@ -171,7 +171,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 ## <a name="using-clickonce-with-localized-applications"></a>Usando o ClickOnce com aplicativos localizados
  O ClickOnce é uma nova tecnologia de implantação Windows Forms que será fornecida com o Visual Studio 2005. Ele permite a instalação do aplicativo e a atualização de aplicativos da Web. Quando um aplicativo que foi implantado com o ClickOnce é localizado, ele somente pode ser exibido na cultura localizada. Por exemplo, se um aplicativo implantado for localizado para japonês, ele só poderá ser exibido no Microsoft Windows em Japonês, não em janelas em inglês. Isso apresenta um problema porque é um cenário comum para os usuários japoneses executarem uma versão em inglês do Windows.
 
- A solução para esse problema é configurar o atributo de fallback de idioma neutro. Um desenvolvedor de aplicativos pode, opcionalmente, remover recursos do assembly principal e especificar que os recursos podem ser encontrados em um assembly satélite correspondente a uma cultura específica. Para controlar esse processo, use o <xref:System.Resources.NeutralResourcesLanguageAttribute>. O construtor da classe <xref:System.Resources.NeutralResourcesLanguageAttribute> tem duas assinaturas, uma que usa um parâmetro <xref:System.Resources.UltimateResourceFallbackLocation> para especificar o local em que o <xref:System.Resources.ResourceManager> deve extrair os recursos de fallback: assembly principal ou assembly satélite. O exemplo a seguir mostra como usar o atributo. Para o local de fallback final, o código faz com que o <xref:System.Resources.ResourceManager> procure os recursos no subdiretório "de" do diretório do assembly em execução no momento.
+ A solução para esse problema é configurar o atributo de fallback de idioma neutro. Um desenvolvedor de aplicativos pode, opcionalmente, remover recursos do assembly principal e especificar que os recursos podem ser encontrados em um assembly satélite correspondente a uma cultura específica. Para controlar esse processo, use o <xref:System.Resources.NeutralResourcesLanguageAttribute>. O construtor da classe <xref:System.Resources.NeutralResourcesLanguageAttribute> tem duas assinaturas, uma que usa um parâmetro <xref:System.Resources.UltimateResourceFallbackLocation> para especificar o local em que a <xref:System.Resources.ResourceManager> deve extrair os recursos de fallback: assembly principal ou assembly satélite. O exemplo a seguir mostra como usar o atributo. Para o local de fallback final, o código faz com que a <xref:System.Resources.ResourceManager> procure os recursos no subdiretório "de" do diretório do assembly em execução no momento.
 
 ```csharp
 [assembly: NeutralResourcesLanguageAttribute(
