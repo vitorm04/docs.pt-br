@@ -105,7 +105,7 @@ Vamos nos aprofundar um pouco mais nesses conceitos.
 
 Um modelo do ML.NET é um objeto que contém transformações para executar em seus dados de entrada para chegar na saída prevista.
 
-### <a name="basic"></a>Basic
+### <a name="basic"></a>Básico
 
 O modelo mais básico é regressão linear bidimensional, em que uma quantidade contínua é proporcional a outro, como no exemplo de preço de residência acima.
 
