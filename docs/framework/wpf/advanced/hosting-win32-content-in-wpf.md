@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: 3b6e30a612c87880121c227c85c4bd6a7ef31f40
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: a9d9de1f35375e48981f895d096e46fd501ef8ec
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920241"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740366"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>Hospedando conteúdo Win32 no WPF
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Consulte [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md).
 
 ## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>Um passo a passo do Win32 no Windows Presentation Framework (HwndHost)
 
-Para reutilizar [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] conteúdo dentro de aplicativos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], use <xref:System.Windows.Interop.HwndHost>, que é um controle que faz com que os HWNDs se pareçam com [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo. Assim como o <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> é simples de usar: derive de <xref:System.Windows.Interop.HwndHost> e implemente os métodos `BuildWindowCore` e `DestroyWindowCore` e, em seguida, instancie sua classe derivada de <xref:System.Windows.Interop.HwndHost> e coloque-a dentro de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
+Para reutilizar o conteúdo Win32 dentro de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos, use <xref:System.Windows.Interop.HwndHost>, que é um controle que torna os HWNDs semelhantes a [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo. Assim como o <xref:System.Windows.Interop.HwndSource>, <xref:System.Windows.Interop.HwndHost> é simples de usar: derive de <xref:System.Windows.Interop.HwndHost> e implemente os métodos `BuildWindowCore` e `DestroyWindowCore` e, em seguida, instancie sua classe derivada de <xref:System.Windows.Interop.HwndHost> e coloque-a dentro de seu aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-Se sua lógica [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] já estiver empacotada como um controle, sua implementação `BuildWindowCore` será um pouco mais do que uma chamada para `CreateWindow`. Por exemplo, para criar um controle LISTBOX de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] C++no:
+Se a lógica do Win32 já estiver empacotada como um controle, então sua implementação de `BuildWindowCore` será pouco mais do que uma chamada para `CreateWindow`. Por exemplo, para criar um controle LISTBOX do Win32 C++no:
 
 ```cpp
 virtual HandleRef BuildWindowCore(HandleRef hwndParent) override {
@@ -46,7 +46,7 @@ virtual void DestroyWindowCore(HandleRef hwnd) override {
 }
 ```
 
-Mas suponha que o código [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] não é tão independente. Se ele for, você poderá criar uma caixa de diálogo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] e inserir seu conteúdo em um aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] maior. O exemplo mostra isso no Visual Studio e C++, embora também seja possível fazer isso em um idioma diferente ou na linha de comando.
+Mas suponha que o código Win32 não seja tão independente? Nesse caso, você pode criar uma caixa de diálogo do Win32 e inserir seu conteúdo em um aplicativo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] maior. O exemplo mostra isso no Visual Studio e C++, embora também seja possível fazer isso em um idioma diferente ou na linha de comando.
 
 Comece com uma caixa de diálogo simples, que é compilada em um projeto de C++ dll.
 
@@ -81,7 +81,7 @@ Altere a segunda linha para:
 STYLE DS_SETFONT | WS_CHILD | WS_BORDER | DS_CONTROL
 ```
 
-Essa ação não faz o empacotamento completo em um controle independente. Você ainda precisará chamar `IsDialogMessage()` para que [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] possa processar determinadas mensagens, mas a alteração do controle fornece uma maneira simples de colocar estes controles dentro de outro HWND.
+Essa ação não o empacota totalmente em um controle independente; Você ainda precisa chamar `IsDialogMessage()` para que o Win32 possa processar determinadas mensagens, mas a alteração de controle fornece uma maneira simples de colocar esses controles dentro de outro HWND.
 
 ## <a name="subclass-hwndhost"></a>Subclasse HwndHost
 
@@ -120,7 +120,7 @@ public ref class MyHwndHost : public HwndHost, IKeyboardInputSink {
         }
 ```
 
-Aqui você vai usar o `CreateDialog` para criar a caixa de diálogo que é, na realidade, um controle. Como esse é um dos primeiros métodos chamados dentro da DLL, você também deve fazer uma inicialização de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] padrão chamando uma função que será definida posteriormente, chamada `InitializeGlobals()`:
+Aqui você vai usar o `CreateDialog` para criar a caixa de diálogo que é, na realidade, um controle. Como esse é um dos primeiros métodos chamados dentro da DLL, você também deve fazer alguma inicialização padrão do Win32 chamando uma função que você definirá posteriormente, chamada `InitializeGlobals()`:
 
 ```cpp
 bool initialized = false;
@@ -193,7 +193,7 @@ Se executar este exemplo agora, você obterá um controle de caixa de diálogo q
         }
 ```
 
-É muito código de uma vez, então as explicações poderiam ser um pouco mais detalhadas. Primeiro, o código usando C++ macros e C++ ; Você precisa estar ciente de que já existe uma macro chamada`TranslateAccelerator`, que é definida em winuser. h:
+É muito código de uma vez, então as explicações poderiam ser um pouco mais detalhadas. Primeiro, o código usando C++ macros e C++ ; Você precisa estar ciente de que já existe uma macro chamada `TranslateAccelerator`, que é definida em winuser. h:
 
 ```cpp
 #define TranslateAccelerator  TranslateAcceleratorW
@@ -201,7 +201,7 @@ Se executar este exemplo agora, você obterá um controle de caixa de diálogo q
 
 Certifique-se de definir um método `TranslateAccelerator` e não um método `TranslateAcceleratorW`.
 
-Da mesma forma, há o winuser.h MSG não gerenciado e o struct `Microsoft::Win32::MSG` gerenciado. Você pode desambiguar entre os dois usando C++ o operador de`::`.
+Da mesma forma, há o winuser.h MSG não gerenciado e o struct `Microsoft::Win32::MSG` gerenciado. Você pode desambiguar entre os dois usando C++ o operador de `::`.
 
 ```cpp
 virtual bool TranslateAccelerator(System::Windows::Interop::MSG% msg,
@@ -231,7 +231,7 @@ Both MSGs have the same data, but sometimes it is easier to work with the unmana
 }
 ```
 
-Voltar para `TranslateAccelerator`. O princípio básico é chamar a função [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] `IsDialogMessage` para fazer o máximo de trabalho possível, mas `IsDialogMessage` não tem acesso a nada fora da caixa de diálogo. Como uma guia de usuário na caixa de diálogo, quando a tabulação passar do último controle na nossa caixa de diálogo, você precisará definir o foco para a parte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] chamando `IKeyboardInputSite::OnNoMoreStops`.
+Voltar para `TranslateAccelerator`. O princípio básico é chamar a função do Win32 `IsDialogMessage` para fazer o máximo de trabalho possível, mas `IsDialogMessage` não tem acesso a nada fora da caixa de diálogo. Como uma guia de usuário na caixa de diálogo, quando a tabulação passar do último controle na nossa caixa de diálogo, você precisará definir o foco para a parte [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] chamando `IKeyboardInputSite::OnNoMoreStops`.
 
 ```cpp
 // Win32's IsDialogMessage() will handle most of the tabbing, but doesn't know
@@ -253,7 +253,7 @@ if (m.message == WM_KEYDOWN && m.wParam == VK_TAB) {
 }
 ```
 
-Finalmente, chame `IsDialogMessage`. Mas uma das responsabilidades de um método `TranslateAccelerator` está informando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se você lidou com o pressionamento de teclas ou não. Se você não lidou com isso, o evento de entrada poderá criar um túnel e uma bolha pelo resto do aplicativo. Aqui, você vai expor uma peculiaridade do tratamento de mensagens do teclado e da natureza da arquitetura de entrada no [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Infelizmente, `IsDialogMessage` não é retornado de nenhuma forma independentemente de lidar ou não com um determinado pressionamento de tecla. Ainda pior, ele chamará `DispatchMessage()` nos pressionamentos de teclas que ele não deveria manipular!  Assim você terá que fazer engenharia reversa de `IsDialogMessage` e apenas chamá-lo para as teclas que você sabe que ele manipulará:
+Finalmente, chame `IsDialogMessage`. Mas uma das responsabilidades de um método `TranslateAccelerator` está informando [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] se você lidou com o pressionamento de teclas ou não. Se você não lidou com isso, o evento de entrada poderá criar um túnel e uma bolha pelo resto do aplicativo. Aqui, você vai expor uma peculiaridade da manipulação de messange de teclado e da natureza da arquitetura de entrada no Win32. Infelizmente, `IsDialogMessage` não é retornado de nenhuma forma independentemente de lidar ou não com um determinado pressionamento de tecla. Ainda pior, ele chamará `DispatchMessage()` nos pressionamentos de teclas que ele não deveria manipular!  Assim você terá que fazer engenharia reversa de `IsDialogMessage` e apenas chamá-lo para as teclas que você sabe que ele manipulará:
 
 ```cpp
 // Only call IsDialogMessage for keys it will do something with.
@@ -368,6 +368,6 @@ O que fornece:
 
 ![Captura de tela do aplicativo WPF em execução.](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)

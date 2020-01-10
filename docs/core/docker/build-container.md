@@ -3,13 +3,13 @@ title: 'Tutorial: Colocar em contêiner um aplicativo com o Docker'
 description: Neste tutorial, você aprenderá como colocar em contêiner um aplicativo .NET Core com o Docker.
 ms.date: 06/26/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: b344731c7d356f3705d9909b6901234f91ec7d6d
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: e012fcf78c88e7f64f6ee205cd69b69683bed9c3
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72521880"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740764"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>Tutorial: colocar um aplicativo .NET Core em contêineres
 
@@ -26,7 +26,7 @@ Você aprenderá a:
 
 Você aprenderá as tarefas de build e implantação de contêiner do Docker para um aplicativo .NET Core. A *plataforma Docker* usa o *Mecanismo do Docker* para criar e empacotar aplicativos como *imagens do Docker* com agilidade. Essas imagens são gravadas no formato *Dockerfile* para serem implantadas e executadas em um contêiner em camadas.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Instale os seguintes pré-requisitos:
 
@@ -124,7 +124,7 @@ namespace myapp
 }
 ```
 
-Salve o arquivo e teste o programa novamente com `dotnet run`. Lembre-se de que esse aplicativo é executado indefinidamente. Use o comando Cancel <kbd>CTRL</kbd> +<kbd>C</kbd> para interrompê-lo. Você verá a seguinte saída:
+Salve o arquivo e teste o programa novamente com `dotnet run`. Lembre-se de que esse aplicativo é executado indefinidamente. Use o comando Cancel <kbd>CTRL</kbd>+<kbd>C</kbd> para interrompê-lo. Você verá a seguinte saída:
 
 ```console
 > dotnet run
@@ -369,9 +369,9 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 
 O comando `docker run` também permite modificar o comando `ENTRYPOINT` do *Dockerfile* e executar outra coisa, mas apenas para esse contêiner. Por exemplo, use o seguinte comando para executar `bash` ou `cmd.exe`. Edite o comando conforme necessário.
 
-#### <a name="windows"></a>Windows
+#### <a name="windows"></a>Portal
 
-Neste exemplo, `ENTRYPOINT` é alterado para `cmd.exe`. <kbd>CTRL</kbd> +<kbd>C</kbd> é pressionado para encerrar o processo e parar o contêiner.
+Neste exemplo, `ENTRYPOINT` é alterado para `cmd.exe`. <kbd>CTRL</kbd>+<kbd>C</kbd> é pressionado para encerrar o processo e parar o contêiner.
 
 ```console
 > docker run -it --rm --entrypoint "cmd.exe" myimage
@@ -454,7 +454,7 @@ Use o comando `docker images` para ver uma lista de imagens instaladas.
 > [!NOTE]
 > Arquivos de imagem podem ser grandes. Normalmente, você removeria contêineres temporários criados durante o teste e o desenvolvimento de seu aplicativo. Em geral, mantenha as imagens de base com o runtime instalado se você planeja construir outras imagens com base nesse runtime.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 - [Experimentar o Tutorial de Microsserviço do ASP.NET Core.](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
 - [Revisar os serviços do Azure que oferecem suporte a contêineres.](https://azure.microsoft.com/overview/containers/)

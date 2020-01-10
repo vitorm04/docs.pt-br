@@ -5,13 +5,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: f80b483fedc600a1e1a48d36ce9b7b95c6de9f27
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.custom: vs-dotnet
+ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428901"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740843"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Implantar aplicativos .NET Core com o Visual Studio
 
@@ -36,7 +36,7 @@ Implantar uma implantação dependente de estrutura sem dependências de terceir
 
 1. Adicione o código-fonte do aplicativo.
 
-   Abra o arquivo *Program.cs* ou *Program.vb* no editor e substitua o código gerado automaticamente com o seguinte código. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
+   Abra o arquivo *Program.cs* ou *Program. vb* no editor e substitua o código gerado automaticamente pelo código a seguir. Ele solicitará que o usuário insira texto e exibirá as palavras individuais inseridas pelo usuário. Ele usa a expressão regular `\w+` para separar as palavras no texto de entrada.
 
    [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
    [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
@@ -75,7 +75,7 @@ Implantar uma implantação dependente de estrutura com uma ou mais dependência
 
 1. Se `Newtonsoft.Json` já estiver instalado no sistema, adicione-o ao projeto selecionando o projeto no painel direito da guia **Gerenciar Pacotes para a Solução**.
 
-Observe que uma implantação dependente de estrutura com dependências de terceiros tem a mesma portabilidade que suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Runtime)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
+Uma implantação dependente da estrutura com dependências de terceiros é tão portável quanto suas dependências de terceiros. Por exemplo, se uma biblioteca de terceiros der suporte apenas a macOS, o aplicativo não será portátil para sistemas Windows. Isso acontecerá se a dependência de terceiros em si depender do código nativo. Um bom exemplo disso é o [servidor Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), que requer uma dependência nativa no [libuv](https://github.com/libuv/libuv). Quando uma FDD é criada para um aplicativo com esse tipo de dependência de terceiros, a saída publicada contém uma pasta para cada [RID (Identificador de Runtime)](../rid-catalog.md) que dá suporte a dependência nativa (e que existe em seu pacote NuGet).
 
 ## <a name="simpleSelf"></a> Implantação autocontida sem dependências de terceiros
 
@@ -94,7 +94,7 @@ Implantar uma implantação autocontida sem dependências de terceiros inclui a 
 
 1. Determine se você deseja usar o modo de invariável de globalização.
 
-   Especialmente se seu aplicativo for destinado ao Linux, será possível reduzir o tamanho total da sua implantação usando o [modo invariável de globalização](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). O modo invariável de globalização é útil para aplicativos que não são conhecidos globalmente e que podem usar as convenções de formatação, de maiúsculas e minúsculas e a comparação de cadeia de caracteres e ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture).
+   Especialmente se seu aplicativo for destinado ao Linux, será possível reduzir o tamanho total da sua implantação usando o [modo invariável de globalização](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md). O modo invariável de globalização é útil para aplicativos que não são conhecidos globalmente e que podem usar as convenções de formatação, de maiúsculas e minúsculas e a comparação de cadeia de caracteres e ordem de classificação da [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture).
 
    Para habilitar o modo invariável, clique com o botão direito do mouse no seu projeto (não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj** ou **Editar SCD.vbproj**. Em seguida, adicione as seguintes linhas realçadas ao arquivo:
 
@@ -120,7 +120,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
    1. Clique com o botão direito do mouse no projeto (e não na solução) no **Gerenciador de Soluções** e selecione **Editar SCD.csproj**.
 
-   1. Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de runtime) de cada plataforma que você selecionar. Observe que você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Runtime](../rid-catalog.md) para obter uma lista de identificadores de runtime.
+   1. Crie uma marcação `<RuntimeIdentifiers>` na seção `<PropertyGroup>` de seu arquivo *csproj* que define as plataformas de destino do seu aplicativo e especifique o RID (identificador de runtime) de cada plataforma que você selecionar. Você também precisa adicionar um ponto e vírgula para separar os RIDs. Consulte o [Catálogo de Identificador de Runtime](../rid-catalog.md) para obter uma lista de identificadores de runtime.
 
    Por exemplo, o exemplo a seguir indica que o aplicativo é executado em sistemas operacionais Windows 10 de 64 bits e no sistema de operacional OS X Versão 10.11 de 64 bits.
 
@@ -130,7 +130,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
    </PropertyGroup>
    ```
 
-   Observe que o elemento `<RuntimeIdentifiers>` pode entrar em qualquer `<PropertyGroup>` que você tenha em seu arquivo *csproj*. Um arquivo *csproj* de exemplo completo aparece mais adiante nesta seção.
+   O elemento `<RuntimeIdentifiers>` pode entrar em qualquer `<PropertyGroup>` que você tenha em seu arquivo *csproj* . Um arquivo *csproj* de exemplo completo aparece mais adiante nesta seção.
 
 1. Publique seu aplicativo.
 
@@ -158,7 +158,7 @@ Para publicar seu aplicativo do Visual Studio, faça o seguinte:
 
          1. Siga as etapas anteriores novamente para criar um perfil para a plataforma `osx.10.11-x64`. O **Local de Destino** é *bin\Release\PublishOutput\osx.10.11-x64* e o **Runtime de Destino** é `osx.10.11-x64`. O nome que o Visual Studio atribui a este perfil é **FolderProfile2**.
 
-      Observe que cada local de destino contém o conjunto completo de arquivos (arquivos do seu aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
+      Cada local de destino contém o conjunto completo de arquivos (seus arquivos de aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
 Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não empacotá-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
 
@@ -192,9 +192,9 @@ Para cada plataforma que seu aplicativo direciona, faça o seguinte:
   
 1. Selecione o local em que o Visual Studio publica seu aplicativo.
 
-   Se você estiver apenas publicando em uma única plataforma, poderá aceitar o valor padrão na caixa de texto **escolher uma pasta** ; Isso publica a implantação dependente da estrutura do seu aplicativo para o *\<diretório de projeto > \bin\Release\netcoreapp2.1\publish* .
+   Se você estiver apenas publicando em uma única plataforma, poderá aceitar o valor padrão na caixa de texto **escolher uma pasta** ; Isso publica a implantação dependente de estrutura de seu aplicativo para o *\<diretório de projeto > \bin\Release\netcoreapp2.1\publish* .
 
-   Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você acrescentar a cadeia de caracteres "linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura do seu aplicativo no diretório *\<diretório-do-projeto>\bin\Release\netcoreapp2.1\publish\linux*.
+   Se você estiver publicando em mais de uma plataforma, acrescente uma cadeia de caracteres que identifique a plataforma de destino. Por exemplo, se você acrescentar a cadeia de caracteres "Linux" ao caminho do arquivo, o Visual Studio publicará a implantação dependente da estrutura de seu aplicativo no *diretório\<projeto > diretório \bin\Release\netcoreapp2.1\publish\linux* .
 
 1. Crie o perfil selecionando o ícone de lista suspensa ao lado do botão **Publicar** e selecionando **Criar perfil**. Em seguida, selecione o botão **Criar perfil** para criar o perfil.
 
@@ -222,7 +222,7 @@ Você configurou seus perfis e agora está pronto para publicar seu aplicativo. 
 
    2. Selecione o perfil que você deseja publicar e, em seguida, selecione **Publicar**. Faça isso para cada perfil a ser publicado.
 
-   Observe que cada local de destino (no caso de nosso exemplo, bin\release\netcoreapp2.1\publish\\*profile-name* contém o conjunto completo de arquivos (seus arquivos de aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
+   Cada local de destino (no caso do nosso exemplo, bin\release\netcoreapp2.1\publish\\*profile-name* contém o conjunto completo de arquivos (seus arquivos de aplicativo e todos os arquivos do .NET Core) necessários para iniciar seu aplicativo.
 
 Junto com os arquivos do aplicativo, o processo de publicação emite um arquivo de banco de dados do programa (.pdb) que contém informações de depuração sobre seu aplicativo. O arquivo é útil principalmente para exceções de depuração. Você pode optar por não empacotá-lo com os arquivos do aplicativo. No entanto, você deve salvá-lo no caso de desejar depurar o build de lançamento para seu aplicativo.
 
@@ -307,9 +307,9 @@ A seguir está o arquivo *csproj* completo para esse projeto:
 
 Quando você implanta seu aplicativo, todas as dependências de terceiros usadas em seu aplicativo também contém os arquivos do aplicativo. As bibliotecas de terceiros não são necessárias no sistema em que o aplicativo está em execução.
 
-Observe que você só pode implantar uma implantação autocontida com uma biblioteca de terceiros para plataformas compatíveis com essa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em sua implantação dependente de estrutura, em que as dependências nativas não existem na plataforma de destino a menos que elas tenham sido instaladas anteriormente.
+Você só pode implantar uma implantação independente com uma biblioteca de terceiros em plataformas com suporte nessa biblioteca. Isso é semelhante a ter dependências de terceiros com dependências nativas em sua implantação dependente de estrutura, em que as dependências nativas não existem na plataforma de destino a menos que elas tenham sido instaladas anteriormente.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Implantação de um aplicativo .NET Core](index.md)
 - [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

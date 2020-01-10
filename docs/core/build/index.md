@@ -3,13 +3,12 @@ title: Compilar Build .NET Core da origem
 description: Saiba como compilar o .NET Core e a CLI do .NET Core no código-fonte.
 author: bleroy
 ms.date: 06/28/2017
-ms.custom: seodec18
-ms.openlocfilehash: dcd7c909325eec5a79db74098d7ac880000eafa1
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.openlocfilehash: fe5431667d861d830c2ec56252e6e3e2ca08a866
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70105395"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740924"
 ---
 # <a name="build-net-core-from-source"></a>Compilar Build .NET Core da origem
 
@@ -18,7 +17,7 @@ Este artigo fornece orientações para desenvolvedores que desejam criar e distr
 
 ## <a name="build-the-clr-from-source"></a>Compilar o CLR da fonte
 
-O código-fonte para o .NET CoreCLR pode ser encontrado no repositório [dotnet/coreclr](https://github.com/dotnet/coreclr/) no GitHub.
+O código-fonte para o CoreCLR do .NET pode ser encontrado no repositório [dotnet/tempo de execução](https://github.com/dotnet/runtime/) no github.
 
 O build atualmente depende dos seguintes pré-requisitos:
 
@@ -27,7 +26,7 @@ O build atualmente depende dos seguintes pré-requisitos:
 - [Python](https://www.python.org/)
 - um compilador C++.
 
-Após instalar esses pré-requisitos, você poderá compilar o CLR ao invocar o script de build (`build.cmd` no Windows ou `build.sh` no Linux e no macOS) na base do repositório [dotnet/coreclr](https://github.com/dotnet/coreclr/).
+Depois de instalar esses pré-requisitos, você pode criar o CLR invocando o script de compilação (`build.cmd` no Windows ou `build.sh` no Linux e no macOS) na base do repositório [dotnet/tempo de execução](https://github.com/dotnet/runtime/) .
 
 A instalação dos componentes será diferente dependendo do sistema operacional (SO). Confira as instruções de build do seu sistema operacional específico:
 
@@ -42,10 +41,10 @@ Você precisa estar na plataforma específica para criar essa plataforma.
 
 O build tem dois `buildTypes` principais:
 
-- Debug (padrão) – compila o tempo de execução com otimizações mínimas e verificações de tempo de execução adicionais (declarações). Essa redução no nível de otimização e as verificações adicionais tornam a execução do tempo de execução mais lenta, mas são importantes para a depuração. Essa é a configuração recomendada para ambientes de desenvolvimento e teste.
-- Versão – compila o tempo de execução com otimizações completas e sem verificações de tempo de execução adicionais. Isso produzirá um desempenho muito mais rápido no tempo de execução, mas pode demorar um pouco mais para compilar e pode ser difícil de depurar. Passe `release` para o script de build para selecionar este tipo de build.
+- Debug (padrão) – compila o runtime com otimizações mínimas e verificações de runtime adicionais (declarações). Essa redução no nível de otimização e as verificações adicionais tornam a execução do runtime mais lenta, mas são importantes para a depuração. Essa é a configuração recomendada para ambientes de desenvolvimento e teste.
+- Versão – compila o runtime com otimizações completas e sem verificações de runtime adicionais. Isso produzirá um desempenho muito mais rápido em tempo de execução, mas pode levar um pouco mais para compilar e pode ser difícil de depurar. Passe `release` para o script de build para selecionar este tipo de build.
 
-Além disso, por padrão, o build não só cria os executáveis de tempo de execução, mas também compila todos os testes.
+Além disso, por padrão, o build não só cria os executáveis de runtime, mas também compila todos os testes.
 Há alguns testes, tomando a uma quantidade significativa de tempo que não é necessária se quiser apenas experimentar as alterações.
 Você pode ignorar os builds de testes, adicionando o argumento `skiptests` ao script de build, como no exemplo a seguir (substitua `.\build` por `./build.sh` em computadores UNIX):
 
@@ -69,16 +68,16 @@ A saída real é colocada em um diretório *bin\Product\[plataforma]. [ Arquitet
 
 Embora a saída “bruta” do build, às vezes, seja útil, normalmente, você só está interessado nos pacotes NuGet, que são colocados no subdiretório `.nuget\pkg` do diretório de saída anterior.
 
-Há duas técnicas básicas para usar o novo tempo de execução:
+Há duas técnicas básicas para usar o novo runtime:
 
  1. **Use dotnet.exe e NuGet para compor um aplicativo**.
-    Confira [Usando sua compilação](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingYourBuild.md) para obter instruções sobre como criar um programa que usa o novo tempo de execução usando pacotes de NuGet que acabaram de ser criados e a interface de linha de comando 'dotnet' (CLI). Essa técnica é a maneira esperada com que desenvolvedores que não sejam de tempo de execução provavelmente consumirão o novo tempo de execução.
+    Confira [Usando sua compilação](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-your-build.md) para obter instruções sobre como criar um programa que usa o novo runtime usando pacotes de NuGet que acabaram de ser criados e a interface de linha de comando 'dotnet' (CLI). Essa técnica é a maneira esperada com que desenvolvedores que não sejam de runtime provavelmente consumirão o novo runtime.
 
  2. **Use corerun.exe para executar um aplicativo usando DLLs não empacotadas**.
     Esse repositório também define um host simples chamado corerun.exe que NÃO tem nenhuma dependência do NuGet.
-    É necessário informar ao host em que local obter as DLLs necessárias que você realmente usa, além de reuni-las manualmente.
-    Essa técnica é usada por todos os testes no repositório [dotnet/coreclr](https://github.com/dotnet/coreclr) e é útil para um loop local rápido 'edit-compile-debug', como os testes de unidade preliminar.
-    Confira [Executando aplicativos do .NET Core com CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) para obter detalhes sobre como usar essa técnica.
+    É necessário informar ao host onde obter as DLLs necessárias que você realmente usa, além de reuni-las manualmente.
+    Essa técnica é usada por todos os testes no repositório [dotnet/tempo de execução](https://github.com/dotnet/runtime) e é útil para o loop "Edit-compile-debug" local rápido, como o teste de unidade preliminar.
+    Consulte [Executando aplicativos do .NET Core com CoreRun.exe](https://github.com/dotnet/runtime/blob/master/docs/workflow/testing/using-corerun.md) para obter detalhes sobre como usar essa técnica.
 
 ## <a name="build-the-cli-from-source"></a>Compilar a CLI da fonte
 
@@ -91,7 +90,7 @@ Para criar a CLI do .NET Core, será necessário os seguintes itens instalados e
 - macOS:
   - git no CAMINHO
   - Xcode
-  - OpenSSL
+  - Openssl
 
 Para criar, execute `build.cmd` no Windows ou `build.sh` no Linux e macOS da raiz. Se não desejar executar testes, execute `build.cmd -t:Compile` ou `./build.sh -t:Compile`. Para criar a CLI em macOS Sierra, é necessário definir a variável de ambiente DOTNET_RUNTIME_ID executando `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
 
@@ -101,6 +100,6 @@ Use o `dotnet` executável de *artefatos/{os}-{arch}/stage2* para testar a CLI r
 
 ## <a name="see-also"></a>Veja também
 
-- [Common Language Runtime do .NET Core (CoreCLR)](https://github.com/dotnet/coreclr/blob/master/README.md)
+- [Tempo de execução do .NET](https://github.com/dotnet/runtime/blob/master/README.md)
 - [Guia do Desenvolvedor da CLI do .NET Core](https://github.com/dotnet/cli/blob/master/Documentation/project-docs/developer-guide.md)
 - [Pacote de distribuição do .NET Core](./distribution-packaging.md)

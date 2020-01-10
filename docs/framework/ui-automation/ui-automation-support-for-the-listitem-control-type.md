@@ -6,12 +6,12 @@ helpviewer_keywords:
 - List Item control type
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
-ms.openlocfilehash: 4b7c3b6bbdc38227871ea020047bc21987b18ee9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8664d7a4c26d69792a00eadfcb7b6d5f7082829c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446722"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741191"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ListItem
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74446722"
   
  Os controles de item de lista são um exemplo de controles que implementam o tipo de controle ListItem.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ListItem. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ListItem. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -37,11 +37,11 @@ ms.locfileid: "74446722"
 ## <a name="required-ui-automation-properties"></a>Propriedades de automação da interface do usuário necessárias  
  A tabela a seguir lista as propriedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cujo valor ou definição é especialmente relevante para controles de item de lista. Para obter mais informações sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Propriedades, consulte [Propriedades de automação da interface do usuário para clientes](ui-automation-properties-for-clients.md).  
   
-|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valor|{1&gt;Observações&lt;1}|  
+|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|{1&gt;Observações&lt;1}|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Consulte observações.|O valor dessa propriedade precisa ser exclusivo em todos os controles em um aplicativo.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Consulte observações.|Esse valor dessa propriedade deve incluir a área do conteúdo de imagem e texto do item de lista.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Dependem|Se o controle de lista tiver um ponto clicável (um ponto que pode ser clicado para fazer com que a lista tenha foco), esse ponto deverá ser exposto por meio dessa propriedade. Se o controle de lista for completamente coberto por itens de lista descendente, ele gerará uma <xref:System.Windows.Automation.NoClickablePointException> para indicar que o cliente deve solicitar um item dentro do controle de lista para um ponto clicável.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|Depende|Se o controle de lista tiver um ponto clicável (um ponto que pode ser clicado para fazer com que a lista tenha foco), esse ponto deverá ser exposto por meio dessa propriedade. Se o controle de lista for completamente coberto por itens de lista descendente, ele gerará uma <xref:System.Windows.Automation.NoClickablePointException> para indicar que o cliente deve solicitar um item dentro do controle de lista para um ponto clicável.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Consulte observações.|O valor de uma propriedade de nome de controle de item de lista provém do conteúdo de texto do item.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Consulte observações.|Se houver um rótulo de texto estático, essa propriedade deverá expor uma referência a esse controle.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|ListItem|Esse valor é o mesmo para todas as estruturas de interface do usuário.|  
@@ -50,45 +50,45 @@ ms.locfileid: "74446722"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|verdadeiro|O controle de lista é sempre incluído na exibição de controle da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|verdadeiro|Se o contêiner puder aceitar entrada de teclado, esse valor de propriedade deverá ser verdadeiro.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>|""|O texto de ajuda para controles de lista deve explicar por que o usuário está sendo solicitado a fazer uma escolha em uma lista de opções, que geralmente é o mesmo tipo de informações apresentadas por meio de uma dica de ferramenta. Por exemplo, "Selecione um item para definir a resolução de vídeo para o monitor".|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemTypeProperty>|Dependem|Essa propriedade deve ser exposta para controles de item de lista que estão representando um objeto subjacente. Esses controles de item de lista normalmente têm um ícone associado ao controle que os usuários associam ao objeto subjacente.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Dependem|Essa propriedade deve retornar um valor para se o item de lista estiver rolado no momento na exibição dentro do contêiner pai que implementa o padrão de controle Scroll.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemTypeProperty>|Depende|Essa propriedade deve ser exposta para controles de item de lista que estão representando um objeto subjacente. Esses controles de item de lista normalmente têm um ícone associado ao controle que os usuários associam ao objeto subjacente.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty>|Depende|Essa propriedade deve retornar um valor para se o item de lista estiver rolado no momento na exibição dentro do contêiner pai que implementa o padrão de controle Scroll.|  
   
 <a name="Required_UI_Automation_Control_Patterns"></a>   
 ## <a name="required-ui-automation-control-patterns"></a>Padrões de controle de automação da interface do usuário necessários  
  A tabela a seguir lista os padrões de controle de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necessários para serem suportados pelos controles de item de lista. Para obter mais informações sobre padrões de controle, consulte [visão geral dos padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md).  
   
-|Padrão de controle|Suporte|{1&gt;Observações&lt;1}|  
+|Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|Sim|O controle de item de lista deve implementar esse padrão de controle. Isso permite que os controles de itens de lista sejam transmitidos quando são selecionados.|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Dependem|Se o item de lista estiver contido em um contêiner que é rolável, esse padrão de controle deverá ser implementado.|  
-|<xref:System.Windows.Automation.Provider.IToggleProvider>|Dependem|Se o item de lista for verificável e a ação não executar uma alteração de estado de seleção, esse padrão de controle deverá ser implementado.|  
-|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Dependem|Se o item puder ser manipulado para mostrar ou ocultar informações, esse padrão de controle deverá ser implementado.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Dependem|Se o item puder ser editado, esse padrão de controle deverá ser implementado. As alterações no controle de item de lista causarão alterações nos valores de <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>e <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Dependem|Se houver suporte para a navegação espacial de item para item no contêiner de lista e o contêiner for organizado em linhas e colunas, o padrão de controle de item de grade deverá ser implementado.|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Dependem|Se o item tiver um comando que possa ser executado nele, separado da seleção, esse padrão deverá ser implementado. Normalmente, essa é uma ação associada ao clique duplo no controle de item de lista. Os exemplos devem iniciar um documento no Microsoft Windows Explorer ou reproduzir um arquivo de música no Microsoft Windows Media Player.|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider>|Depende|Se o item de lista estiver contido em um contêiner que é rolável, esse padrão de controle deverá ser implementado.|  
+|<xref:System.Windows.Automation.Provider.IToggleProvider>|Depende|Se o item de lista for verificável e a ação não executar uma alteração de estado de seleção, esse padrão de controle deverá ser implementado.|  
+|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Depende|Se o item puder ser manipulado para mostrar ou ocultar informações, esse padrão de controle deverá ser implementado.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Se o item puder ser editado, esse padrão de controle deverá ser implementado. As alterações no controle de item de lista causarão alterações nos valores de <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>e <xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>.|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Depende|Se houver suporte para a navegação espacial de item para item no contêiner de lista e o contêiner for organizado em linhas e colunas, o padrão de controle de item de grade deverá ser implementado.|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider>|Depende|Se o item tiver um comando que possa ser executado nele, separado da seleção, esse padrão deverá ser implementado. Normalmente, essa é uma ação associada ao clique duplo no controle de item de lista. Os exemplos devem iniciar um documento no Microsoft Windows Explorer ou reproduzir um arquivo de música no Microsoft Windows Media Player.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
  A tabela a seguir lista os eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necessários para serem suportados por todos os controles de item de lista. Para obter mais informações sobre eventos, consulte [visão geral dos eventos de automação da interface do usuário](ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte|{1&gt;Observações&lt;1}|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Dependem|Nenhum|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty> evento de alteração de propriedade.|Dependem|Nenhum|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Dependem|Nenhum|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Dependem|Nenhum|  
-|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> evento de alteração de propriedade.|Dependem|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obrigatório|Nenhum|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ItemStatusProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.TogglePatternIdentifiers.ToggleStateProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.ListItem>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

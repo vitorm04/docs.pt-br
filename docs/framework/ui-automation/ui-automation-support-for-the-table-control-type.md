@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Table
 - UI Automation, Table control type
 ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
-ms.openlocfilehash: d3776b9b4edb550ef6b484a0060d364cd5a17bc2
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: af87fefae8c6e0a8166d7cf02419282bc0661f35
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800278"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741484"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Suporte de Automação de Interface de Usuário para o Tipo de Controle de Tabela
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800278"
   
  Os controles de tabela contêm linhas e colunas de texto e, opcionalmente, cabeçalhos de linha e cabeçalhos de coluna.  
   
- As seções a seguir definem as [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] estrutura de árvore, propriedades, padrões de controle e eventos necessários para o tipo de controle de tabela. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de tabela, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem as [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] estrutura de árvore, propriedades, padrões de controle e eventos necessários para o tipo de controle de tabela. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de tabela, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -74,7 +74,7 @@ ms.locfileid: "74800278"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.Table>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

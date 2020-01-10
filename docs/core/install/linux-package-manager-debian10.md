@@ -4,12 +4,12 @@ description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e temp
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 2c24a02423f5aa8f011cfb4705efb51d97cfaf1e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2f3f04ef67115b28b1be91909e88c7ae714260db
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836944"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740728"
 ---
 # <a name="debian-10-package-manager---install-net-core"></a>Gerenciador de pacotes do Debian 10 – instalar o .NET Core
 
@@ -21,9 +21,9 @@ Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Co
 
 Antes de instalar o .NET, você precisará:
 
-- Registrar a chave da Microsoft
-- registrar o repositório do produto
-- Instalar dependências necessárias
+- Registre a chave da Microsoft.
+- Registre o repositório do produto.
+- Instale as dependências necessárias.
 
 Isso só precisa ser feito uma vez por computador.
 

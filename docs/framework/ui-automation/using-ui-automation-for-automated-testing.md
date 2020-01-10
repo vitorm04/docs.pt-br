@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: 2da0f994e809ff0ea9cd3165cd788ac467a87aef
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 59c4076712823faa1602448653680a31b8cd8c69
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800787"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741073"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Usando automação de interface do usuário para testes automatizados
 > [!NOTE]
@@ -37,7 +37,7 @@ ms.locfileid: "74800787"
 > Com outros modelos de acessibilidade, os desenvolvedores devem reunir informações diretamente de botões, menus ou outros controles individuais. Infelizmente, cada tipo de controle vem em dezenas de pequenas variações. Em outras palavras, embora dez variações de um botão de pressão possam funcionar da mesma forma e executar a mesma função, todas elas devem ser tratadas como controles exclusivos. Não é possível saber que esses controles são funcionalmente equivalentes. Padrões de controle foram desenvolvidos para representar esses comportamentos de controle comuns. Para obter mais informações, consulte [visão geral dos padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md).  
   
 ### <a name="implementing-ui-automation"></a>Implementando a automação da interface do usuário  
- Conforme mencionado anteriormente, sem o modelo unificado fornecido pelo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], as ferramentas de teste e os desenvolvedores precisam conhecer informações específicas da estrutura para expor propriedades e comportamentos de controles nessa estrutura. Como pode haver várias estruturas de interface do usuário diferentes em um único momento dentro dos sistemas operacionais Windows, incluindo [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]e Windows Presentation Foundation (WPF), pode ser uma tarefa assustadora para testar vários aplicativos com controles que parecem semelhantes. Por exemplo, a tabela a seguir descreve os nomes de propriedade específicos da estrutura necessários para recuperar o nome (ou texto) associado a um controle de botão e mostra a propriedade equivalente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] única.  
+ Conforme mencionado anteriormente, sem o modelo unificado fornecido pelo [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], as ferramentas de teste e os desenvolvedores precisam conhecer informações específicas da estrutura para expor propriedades e comportamentos de controles nessa estrutura. Como pode haver várias estruturas de interface do usuário diferentes em um único momento dentro dos sistemas operacionais Windows, incluindo Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]e Windows Presentation Foundation (WPF), pode ser uma tarefa assustadora para testar vários aplicativos com controles que parecem semelhantes. Por exemplo, a tabela a seguir descreve os nomes de propriedade específicos da estrutura necessários para recuperar o nome (ou texto) associado a um controle de botão e mostra a propriedade equivalente [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] única.  
   
 |Tipo de controle de automação da interface do usuário|Estrutura de interface do usuário|Propriedade específica da estrutura|Propriedade de automação da interface do usuário|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -86,7 +86,7 @@ ms.locfileid: "74800787"
   
 |||  
 |-|-|  
-|Adicione as referências de automação da interface do usuário.|O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] DLL necessário para clientes de automação da interface do usuário estão listados aqui.<br /><br /> -UIAutomationClient. dll fornece acesso ao [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] APIs do lado do cliente.<br />-UIAutomationClientSideProvider. dll fornece a capacidade de automatizar controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]. Consulte [suporte à automação da interface do usuário para controles padrão](ui-automation-support-for-standard-controls.md).<br />-UIAutomationTypes. dll fornece acesso aos tipos específicos definidos em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
+|Adicione as referências de automação da interface do usuário.|O [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] DLL necessário para clientes de automação da interface do usuário estão listados aqui.<br /><br /> -UIAutomationClient. dll fornece acesso ao [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] APIs do lado do cliente.<br />-UIAutomationClientSideProvider. dll fornece a capacidade de automatizar controles do Win32. Consulte [suporte à automação da interface do usuário para controles padrão](ui-automation-support-for-standard-controls.md).<br />-UIAutomationTypes. dll fornece acesso aos tipos específicos definidos em [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |Adicione o namespace <xref:System.Windows.Automation>.|Esse namespace contém tudo que os clientes de automação da interface do usuário precisam para usar os recursos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], exceto a manipulação de texto.|  
 |Adicione o namespace <xref:System.Windows.Automation.Text>.|Esse namespace contém tudo o que um cliente de automação da interface do usuário precisa para usar os recursos de manipulação de texto [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |Localizar controles de interesse|Scripts de teste automatizados localizam elementos de automação da interface do usuário que representam controles de interesse na árvore de automação.<br /><br /> Há várias maneiras de obter elementos de automação da interface do usuário com código.<br /><br /> -Consultar o [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] usando uma instrução <xref:System.Windows.Automation.Condition>. Normalmente, esse é o local em que o <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> com neutralidade de idioma é usado. **Observação:**  Um <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> pode ser obtido usando uma ferramenta como inspecionar. exe que é capaz de discriminar as propriedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] de um controle. <br /><br /> -Use a classe <xref:System.Windows.Automation.TreeWalker> para atravessar toda a árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ou um subconjunto dela.<br />-Controle o foco.<br />-Use o hWnd do controle.<br />-Use o local da tela, como o local do cursor do mouse.<br /><br /> Consulte [obtendo elementos de automação da interface do usuário](obtaining-ui-automation-elements.md)|  
@@ -103,6 +103,6 @@ ms.locfileid: "74800787"
 ## <a name="security"></a>Segurança  
  Para obter informações de segurança, consulte [visão geral de segurança de automação da interface do usuário](ui-automation-security-overview.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [UI Automation Fundamentals](index.md) (Fundamentos da Automação da Interface do Usuário)

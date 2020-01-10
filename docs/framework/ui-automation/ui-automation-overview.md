@@ -6,12 +6,12 @@ helpviewer_keywords:
 - user interface, see UI
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
-ms.openlocfilehash: a306bfe4b794409f7f64359daee7e18d34826921
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e3619214bcd8830e82c827680d08260e95dc2b36
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441437"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741721"
 ---
 # <a name="ui-automation-overview"></a>Visão geral de automação da interface do usuário
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "74441437"
 > [!NOTE]
 > [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] não permite a comunicação entre os processos iniciados por usuários diferentes por meio do comando **Executar como** .  
   
- Os aplicativos cliente de automação da interface do usuário podem ser escritos com a garantia de que funcionarão em várias estruturas. O núcleo de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mascara quaisquer diferenças nas estruturas que dão a base de várias partes de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Por exemplo, a propriedade `Content` de um botão [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], a propriedade `Caption` de um botão [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] e a propriedade `ALT` de uma imagem HTML são mapeadas para uma única propriedade, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, na exibição [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
+ Os aplicativos cliente de automação da interface do usuário podem ser escritos com a garantia de que funcionarão em várias estruturas. O núcleo de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] mascara quaisquer diferenças nas estruturas que dão a base de várias partes de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Por exemplo, a propriedade `Content` de um botão [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)], a propriedade `Caption` de um botão Win32 e a propriedade `ALT` de uma imagem HTML são todas mapeadas para uma única propriedade, <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A>, na exibição [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
 A automação da interface do usuário fornece funcionalidade completa em sistemas operacionais Windows com suporte que executam o .NET Framework (Confira [.NET Framework requisitos do sistema](../get-started/system-requirements.md) ou versões do .NET Core a partir do .net Core 3,0.  
   
@@ -54,7 +54,7 @@ A automação da interface do usuário fornece funcionalidade completa em sistem
   
  A tabela a seguir lista os namespaces [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], as DLLs que os contêm e o público-alvo que os utiliza.  
   
-|espaço de nome|DLLs referenciadas|Público-alvo|  
+|Namespace|DLLs referenciadas|Público-alvo|  
 |---------------|---------------------|--------------|  
 |<xref:System.Windows.Automation>|UIAutomationClientUIAutomationTypes|Desenvolvedores de cliente de automação da interface do usuário; usado para localizar <xref:System.Windows.Automation.AutomationElement> objetos, registrar-se para eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e trabalhar com padrões de controle de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |<xref:System.Windows.Automation.Provider>|UIAutomationProviderUIAutomationTypes|Desenvolvedores de provedores de automação de interface do usuário para estruturas diferentes de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].|  
@@ -74,7 +74,7 @@ A automação da interface do usuário fornece funcionalidade completa em sistem
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] também fornece informações para aplicativos cliente por meio de eventos. Ao contrário de WinEvents, os eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] não são baseados em um mecanismo de difusão. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] clientes se registram para notificações de eventos específicas e podem solicitar que as propriedades específicas de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e informações de padrão de controle sejam passadas para seus manipuladores de eventos. Além disso, um evento [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] contém uma referência ao elemento que o gerou. Os provedores podem melhorar o desempenho gerando eventos de forma seletiva, dependendo se algum cliente está ouvindo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de árvore de automação de interface do usuário](ui-automation-tree-overview.md)
 - [Visão geral de padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md)

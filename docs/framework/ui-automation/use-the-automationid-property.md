@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, AutomationId property
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
-ms.openlocfilehash: 43a67a8dd73931172a6fa729c054ad494b29134e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: a07a9c9bf6b0bf1e2f8ce56653a90a3aad3c4b2f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800305"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741380"
 ---
 # <a name="use-the-automationid-property"></a>Usar a propriedade AutomationID
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "74800305"
  Foram identificados três cenários principais de aplicativo cliente de automação da interface do usuário que exigem o uso de <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> para obter resultados precisos e consistentes ao Pesquisar elementos.  
   
 > [!NOTE]
-> o <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> tem suporte de todos os elementos de automação da interface do usuário no modo de exibição de controle, exceto janelas de aplicativo de nível superior, elementos de automação da interface do usuário derivados de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] controles que não têm uma ID ou x:Uid e elementos de automação da interface do usuário derivados de [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] controles que não têm uma ID de controle.  
+> o <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> tem suporte de todos os elementos de automação da interface do usuário no modo de exibição de controle, exceto janelas de aplicativo de nível superior, elementos de automação da interface do usuário derivados de controles de [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] que não têm uma ID ou x:Uid e elementos de automação da interface do usuário derivados de controles Win32 que não têm uma ID de controle.  
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>Usar um AutomationID exclusivo e detectável para localizar um elemento específico na árvore de automação da interface do usuário  
   
@@ -56,7 +56,7 @@ ms.locfileid: "74800305"
   
 - Em determinadas circunstâncias, como o AutomationID só é garantido como exclusivo entre irmãos, vários elementos na árvore de automação da interface do usuário podem ter valores de propriedade AutomationID idênticos. Nessas situações, os elementos podem ser identificados exclusivamente com base em um pai e, se necessário, um avô. Por exemplo, um desenvolvedor pode fornecer uma barra de menus com vários itens de menu cada um com vários itens de menu filho em que os filhos são identificados com AutomationID sequenciais, como "Item1", "Item2" e assim por diante. Cada item de menu poderia, então, ser identificado exclusivamente por seu AutomationID junto com o AutomationID de seu pai e, se necessário, seu avô.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>
 - [Visão geral de árvore de automação de interface do usuário](ui-automation-tree-overview.md)

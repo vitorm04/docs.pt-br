@@ -4,12 +4,12 @@ description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e temp
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 7996cd74a250370c2212ca1977cb8c44ad0bd078
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: bd7a199f551be0c51032510279ee9da74bcf0c7c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74836972"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740697"
 ---
 # <a name="fedora-30-package-manager---install-net-core"></a>Fedora 30 Package Manager – instalar o .NET Core
 
@@ -21,9 +21,9 @@ Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Co
 
 Antes de instalar o .NET, você precisará:
 
-- Registrar a chave da Microsoft
-- registrar o repositório do produto
-- Instalar dependências necessárias
+- Registre a chave da Microsoft.
+- Registre o repositório do produto.
+- Instale as dependências necessárias.
 
 Isso só precisa ser feito uma vez por computador.
 

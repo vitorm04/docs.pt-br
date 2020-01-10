@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Header control type
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-ms.openlocfilehash: 077083a375c7415d1e6b3f79cea4a0574c0f3257
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f6fae230b2acdae5dcd1b3c1f027c8c4ec63e90f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429863"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741656"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Header
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74429863"
   
  O controle de cabeçalho fornece um contêiner Visual para os rótulos de linhas ou colunas de informações.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de cabeçalho. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de cabeçalho, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de cabeçalho. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de cabeçalho, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -29,7 +29,7 @@ ms.locfileid: "74429863"
   
 |Exibição de controle|Exibição de conteúdo|  
 |------------------|------------------|  
-|Cabeçalho<br /><br /> -HeaderItem (1 ou mais)|Nenhum|  
+|Cabeçalho<br /><br /> -HeaderItem (1 ou mais)|{1&gt;Nenhum&lt;1}|  
   
  Controles de cabeçalho sempre têm um ou mais filhos na exibição de controle da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "74429863"
 ## <a name="required-ui-automation-properties"></a>Propriedades de automação da interface do usuário necessárias  
  A tabela a seguir lista as propriedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cujo valor ou definição é especialmente relevante para os controles de cabeçalho. Para obter mais informações sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Propriedades, consulte [Propriedades de automação da interface do usuário para clientes](ui-automation-properties-for-clients.md).  
   
-|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valor|{1&gt;Observações&lt;1}|  
+|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|{1&gt;Observações&lt;1}|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Consulte observações.|O valor dessa propriedade precisa ser exclusivo em todos os controles em um aplicativo.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Consulte observações.|O retângulo mais externo que contém o controle inteiro.|  
@@ -57,23 +57,23 @@ ms.locfileid: "74429863"
 ## <a name="required-ui-automation-control-patterns"></a>Padrões de controle de automação da interface do usuário necessários  
  A tabela a seguir lista os padrões de controle de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necessários para serem suportados por todos os controles de cabeçalho. Para obter mais informações sobre padrões de controle, consulte [visão geral dos padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md).  
   
-|Padrão de controle|Suporte|{1&gt;Observações&lt;1}|  
+|Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider>|Dependem|Implemente esse padrão de controle se o controle de cabeçalho puder ser redimensionado.|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider>|Depende|Implemente esse padrão de controle se o controle de cabeçalho puder ser redimensionado.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
  A tabela a seguir lista os eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necessários para serem suportados por todos os controles de cabeçalho. Para obter mais informações sobre eventos, consulte [visão geral dos eventos de automação da interface do usuário](ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte|{1&gt;Observações&lt;1}|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Obrigatório|Nenhum|  
+|<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElement.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElement.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.Header>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

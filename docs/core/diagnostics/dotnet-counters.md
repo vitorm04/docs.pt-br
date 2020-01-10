@@ -1,15 +1,13 @@
 ---
 title: dotnet-contadores-.NET Core
 description: Saiba como instalar e usar a ferramenta de linha de comando dotnet-Counter.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: b2fab239713d9d19c580580496e73a91ceafcc52
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72321585"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740797"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
@@ -43,7 +41,7 @@ dotnet-counters [-h|--help] [--version] <command>
 
   Mostra a ajuda da linha de comando.
 
-## <a name="commands"></a>Commands
+## <a name="commands"></a>Comandos
 
 | {1&gt;Comando&lt;1}                                             |
 | --------------------------------------------------- |
@@ -60,7 +58,7 @@ Exibe uma lista de nomes e descrições de contadores, agrupados por provedor.
 dotnet-counters list [-h|--help]
 ```
 
-### <a name="example"></a>{1&gt;Exemplo&lt;1}
+### <a name="example"></a>Exemplo
 
 ```console
 > dotnet-counters list
@@ -129,7 +127,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       GC Heap Size (MB)                            811
   ```
 
-- Monitorar `EventCounter` valores de `EventSource`definidos pelo usuário. Para obter mais informações, consulte [tutorial: como medir o desempenho de eventos muito frequentes usando o EventCounters](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
+- Monitorar `EventCounter` valores de `EventSource`definidos pelo usuário. Para obter mais informações, consulte [tutorial: como medir o desempenho de eventos muito frequentes usando o EventCounters](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.Tracing/documentation/EventCounterTutorial.md).
 
   ```console
   > dotnet-counters monitor --process-id 1902 Samples-EventCounterDemos-Minimal

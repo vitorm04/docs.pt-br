@@ -1,15 +1,13 @@
 ---
 title: dotnet-despejo-.NET Core
 description: Instalando e usando a ferramenta de linha de comando dotnet-dump.
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 10/14/2019
-ms.openlocfilehash: bb4f7827f898431c55603b070f5b7a23fe44cba5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: dcd5dd42620010c1a9b6dffd3365fc1b777c0eeb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973448"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740778"
 ---
 # <a name="dump-collection-and-analysis-utility-dotnet-dump"></a>Utilitário de coleta e análise de despejo (`dotnet-dump`)
 
@@ -34,7 +32,7 @@ dotnet-dump [-h|--help] [--version] <command>
 
 ## <a name="description"></a>Descrição
 
-A ferramenta global `dotnet-dump` é uma maneira de coletar e analisar despejos do Windows e do Linux sem nenhum depurador nativo envolvido como `lldb` no Linux. Essa ferramenta é importante em plataformas como o Alpine Linux, em que um `lldb` totalmente funcional não está disponível. A ferramenta `dotnet-dump` permite executar comandos do SOS para analisar falhas e o GC (coletor de lixo), mas não é um depurador nativo para que não haja suporte para a exibição de quadros de pilha nativos.
+A ferramenta global `dotnet-dump` é uma maneira de coletar e analisar despejos do Windows e do Linux sem nenhum depurador nativo envolvido como `lldb` no Linux. Essa ferramenta é importante em plataformas como o Alpine Linux, em que um `lldb` totalmente funcional não está disponível. A ferramenta `dotnet-dump` permite executar comandos SOS para analisar falhas e o GC (coletor de lixo), mas não é um depurador nativo, de modo que não haja suporte para a exibição de quadros de pilha nativos.
 
 ## <a name="options"></a>Opções
 
@@ -48,7 +46,7 @@ A ferramenta global `dotnet-dump` é uma maneira de coletar e analisar despejos 
 
 ## <a name="commands"></a>Comandos
 
-| Comando                                     |
+| {1&gt;Comando&lt;1}                                     |
 | ------------------------------------------- |
 | [dotnet-despejo de coleta](#dotnet-dump-collect) |
 | [dotnet-análise de despejo](#dotnet-dump-analyze) |
@@ -77,7 +75,7 @@ dotnet-dump collect [-h|--help] [-p|--process-id] [--type] [-o|--output] [--diag
 
   Especifica o tipo de despejo, que determina os tipos de informações que são coletadas do processo. Há dois tipos:
 
-  - `Heap`-um despejo grande e relativamente abrangente contendo listas de módulos, listas de threads, todas as pilhas, informações de exceção, informações de identificador e toda a memória, exceto para imagens mapeadas.
+  - `Heap`-um despejo grande e relativamente abrangente contendo listas de módulos, listas de threads, todas as pilhas, informações de exceção, informações de identificador e toda a memória, exceto imagens mapeadas.
   - `Mini`-um despejo pequeno contendo listas de módulos, listas de threads, informações de exceção e todas as pilhas.
 
   Se não for especificado, `Heap` será o padrão.
@@ -121,7 +119,7 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 
 ### <a name="analyze-sos-commands"></a>Analisar comandos SOS
 
-| Comando                             | Função                                                                                      |
+| {1&gt;Comando&lt;1}                             | Função                                                                                      |
 | ----------------------------------- | --------------------------------------------------------------------------------------------- |
 | `soshelp`                           | Exibe todos os comandos disponíveis                                                               |
 | `soshelp|help <command>`            | Exibe o comando especificado.                                                               |
@@ -153,14 +151,14 @@ dotnet-dump analyze <dump_path> [-h|--help] [-c|--command]
 | `histroot <arguments>`              | Exibe informações relacionadas a ambas as promoções e realocações da raiz especificada.        |
 | `lm|modules`                        | Exibe os módulos nativos no processo.                                                   |
 | `name2ee <arguments>`               | Exibe a estrutura de MethodTable e a estrutura EEClass para o `<argument>`.                |
-| `pe|printexception <arguments>`     | Exibe qualquer objeto derivado da classe de exceção no endereço `<argument>`.             |
+| `pe|printexception <arguments>`     | Exibe qualquer objeto derivado da classe de exceção no `<argument>`de endereço.             |
 | `setsymbolserver <arguments>`       | Habilita o suporte ao servidor de símbolos                                                             |
 | `syncblk <arguments>`               | Exibe as informações do SyncBlock de suporte.                                                           |
 | `threads|setthread <threadid>`      | Define ou exibe a ID de thread atual para os comandos SOS.                                  |
 
 ## <a name="using-dotnet-dump"></a>Usando `dotnet-dump`
 
-A primeira etapa é coletar um despejo. Esta etapa poderá ser ignorada se um dump principal já tiver sido gerado. O sistema operacional ou o [recurso de geração de despejo](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md#configurationpolicy) interno do tempo de execução do .NET Core pode criar dumps de núcleo.
+A primeira etapa é coletar um despejo. Esta etapa poderá ser ignorada se um dump principal já tiver sido gerado. O sistema operacional ou o [recurso de geração de despejo](https://github.com/dotnet/runtime/blob/master/docs/design/coreclr/botr/xplat-minidump-generation.md) interno do tempo de execução do .NET Core pode criar dumps de núcleo.
 
 ```console
 $ dotnet-dump collect --process-id 1902

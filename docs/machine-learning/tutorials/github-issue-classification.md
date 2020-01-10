@@ -4,12 +4,12 @@ description: Descubra como usar o ML.NET em um cenário de classificação multi
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 65b83c4396c1f80281cbb60b5e9e6e91c802472b
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 44e6234a56ae1890a7f485ffaca827945c1a33ff
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74205046"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739649"
 ---
 # <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>Tutorial: categorizar problemas de suporte usando classificação multiclasse com ML .NET
 
@@ -27,9 +27,9 @@ Neste tutorial, você aprenderá como:
 
 Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification).
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
-* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
+* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento multi-plataforma do .NET Core" instalada.
 
 * O [arquivo de problemas do Github separados por tabulação (issues_train.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv).
 * O [arquivo de testes de problemas do Github separados por tabulação (issues_test.tsv)](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv).
@@ -42,7 +42,7 @@ Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/
 
 2. Crie um diretório chamado *Data* no seu projeto para salvar seus arquivos do conjunto de dados:
 
-    No **Gerenciador de Soluções**, clique com o botão direito do mouse no seu projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Data" e pressione Enter.
+    No **Gerenciador de Soluções**, clique com o botão direito do mouse no seu projeto e selecione **Adicionar** > **Nova Pasta**. Digite "Dados" e pressione Enter.
 
 3. Crie um diretório chamado *Modelos* em seu projeto para salvar seu modelo:
 
@@ -102,7 +102,7 @@ Use o atributo [LoadColumnAttribute](xref:Microsoft.ML.Data.LoadColumnAttribute)
 * a terceira coluna `Title` (título do problema de GitHub) é o primeiro `feature` usado para prever o `Area`
 * a quarta coluna `Description` é o segundo `feature` usado para prever o `Area`
 
-`IssuePrediction` é a classe usada para previsão depois que o modelo foi treinado. Tem um único `string` (`Area`) e um atributo `PredictedLabel` `ColumnName`.  O `PredictedLabel` é usado durante a previsão e avaliação. Para avaliação, uma entrada com dados de treinamento, os valores previstos e o modelo são usados.
+`IssuePrediction` é a classe usada para previsão depois que o modelo foi treinado. Ele tem um único `string` (`Area`) e um atributo de `ColumnName` de `PredictedLabel`.  O `PredictedLabel` é usado durante a previsão e avaliação. Para avaliação, uma entrada com dados de treinamento, os valores previstos e o modelo são usados.
 
 Todas as operações do ML.NET iniciam na classe [MLContext](xref:Microsoft.ML.MLContext). Inicializar `mlContext` cria um novo ambiente do ML.NET que pode ser compartilhado entre os objetos do fluxo de trabalho de criação de modelo. É similar, conceitualmente, a `DBContext` em `Entity Framework`.
 
@@ -340,7 +340,7 @@ Como você fez anteriormente, crie uma instância de `PredictionEngine` com o c�
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/GitHubIssueClassification/Program.cs#CreatePredictionEngine)]
 
-O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite que você execute uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. É aceitável usar em ambientes de protótipo ou de thread único. Para melhorar o desempenho e a segurança de thread em ambientes de produção, use o serviço `PredictionEnginePool`, que cria uma [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API Web do ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application)
+O [PredictionEngine](xref:Microsoft.ML.PredictionEngine%602) é uma API de conveniência, que permite que você execute uma previsão em uma única instância de dados. [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) não é thread-safe. É aceitável usar em ambientes de protótipo ou de thread único. Para melhorar o desempenho e a segurança de thread em ambientes de produção, use o serviço `PredictionEnginePool`, que cria uma [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) de objetos [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) para uso em todo o aplicativo. Consulte este guia sobre como [usar `PredictionEnginePool` em uma API Web do ASP.NET Core](../how-to-guides/serve-model-web-api-ml-net.md#register-predictionenginepool-for-use-in-the-application).
 
 > [!NOTE]
 > A extensão de serviço `PredictionEnginePool` está atualmente em versão prévia.
@@ -374,7 +374,7 @@ Seus resultados devem ser semelhantes aos seguintes. Conforme o pipeline process
 
 Parabéns! Agora você criou com sucesso um modelo de machine learning para classificar e prever um rótulo de Área para um problema do GitHub. Você pode encontrar o código-fonte para este tutorial no repositório [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification).
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Neste tutorial, você aprendeu como:
 > [!div class="checklist"]

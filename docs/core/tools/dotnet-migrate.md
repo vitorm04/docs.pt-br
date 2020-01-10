@@ -1,19 +1,19 @@
 ---
 title: Comando dotnet migrate
 description: O comando dotnet migrate migra um projeto e todas as suas dependências.
-ms.date: 08/08/2019
-ms.openlocfilehash: afc16161761d151e743e53a8572a6564add43517
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.date: 01/07/2020
+ms.openlocfilehash: d746069b897a7458e0262663e96cc8743a586aa9
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117695"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740520"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
 **Este artigo aplica-se a: ✓** .NET Core 1. x SDK **✓** .NET Core 2. x SDK
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet migrate` – Migrar um projeto do .NET Core Versão Prévia 2 para um projeto no estilo do SDK do .NET Core.
 
@@ -26,9 +26,9 @@ dotnet migrate [-h|--help]
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet migrate` migra um projeto válido baseado em *project.json* da Versão Prévia 2 para um projeto *csproj* válido no estilo do SDK do .NET Core.
+Este comando foi preterido. O comando `dotnet migrate` não está mais disponível a partir do SDK do .NET Core 3,0. Ele só pode migrar um projeto do .NET Core da versão prévia 2 para um projeto do .NET Core 1. x, que está sem suporte.
 
-Por padrão, o comando migra o projeto raiz e as referências de projeto que o projeto raiz contém. Esse comportamento é desabilitado usando a opção `--skip-project-references` no tempo de execução.
+Por padrão, o comando migra o projeto raiz e as referências de projeto que o projeto raiz contém. Esse comportamento é desabilitado usando a opção `--skip-project-references` no runtime.
 
 A migração pode ser realizada nos seguintes ativos:
 
@@ -42,8 +42,6 @@ O comando `dotnet migrate` mantém o arquivo *project.json* migrado em um diret�
 Por padrão, a operação de migração produzirá o estado do processo de migração para a saída padrão (STDOUT). Se você usar a opção `--report-file <REPORT_FILE>`, a saída será salva no arquivo especificado.
 
 O comando `dotnet migrate` dá suporte apenas a projetos com base em *project.json* da Visualização 2. Isso significa que você não pode usá-lo para migrar projetos com base em *project.json* de DNX ou Visualização 1 diretamente para projetos de MSBuild/csproj. Primeiro, você precisa migrar manualmente o projeto para um projeto com base em *project.json* de Visualização 2 e, em seguida, usar o comando `dotnet migrate` para migrar o projeto.
-
-O `dotnet migrate` comando não está mais disponível a partir do SDK do .NET Core 3,0.
 
 ## <a name="arguments"></a>Arguments
 

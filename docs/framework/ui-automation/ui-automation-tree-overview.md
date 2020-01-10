@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: d1edbb82e0d5d6a6275c09646fbf8e54b4ff90df
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f541aab7ed5aae48b943ba5699366fe6a3f21a4c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800285"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741397"
 ---
 # <a name="ui-automation-tree-overview"></a>Visão geral da árvore de automação de interface do usuário
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "74800285"
   
 <a name="uiautomation_raw_view"></a>   
 ### <a name="raw-view"></a>Exibição bruta  
- A exibição bruta da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] é a árvore completa de objetos <xref:System.Windows.Automation.AutomationElement> para os quais a área de trabalho é a raiz. A exibição bruta segue melhor a estrutura programática nativa de um aplicativo e, portanto, é a exibição mais detalhada disponível. Também é a base na qual as outras exibições da árvore são criadas. Como essa exibição depende da estrutura de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] subjacente, a exibição bruta de um botão de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] terá uma exibição bruta diferente de um botão de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].  
+ A exibição bruta da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] é a árvore completa de objetos <xref:System.Windows.Automation.AutomationElement> para os quais a área de trabalho é a raiz. A exibição bruta segue melhor a estrutura programática nativa de um aplicativo e, portanto, é a exibição mais detalhada disponível. Também é a base na qual as outras exibições da árvore são criadas. Como essa exibição depende da estrutura de [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] subjacente, a exibição bruta de um botão de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] terá uma exibição bruta diferente de um botão do Win32.  
   
  A exibição bruta é obtida pesquisando elementos sem especificar propriedades ou usando o <xref:System.Windows.Automation.TreeWalker.RawViewWalker> para navegar pela árvore.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "74800285"
   
  O modo de exibição de conteúdo é obtido pesquisando os elementos que têm a propriedade <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> definida como `true`ou usando o <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> para navegar na árvore.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.AutomationElement>
 - [Visão geral de Automação da Interface do Usuário](ui-automation-overview.md)

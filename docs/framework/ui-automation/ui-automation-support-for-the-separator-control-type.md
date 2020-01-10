@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Separator control type
 - control types, Separator
 ms.assetid: 89f42247-c699-4afa-91e1-2baaf0d86c9d
-ms.openlocfilehash: 2f2b68b2d36d49313f443e1d49776ecb4feb16fe
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adc97cd3294b1107a277c157293fd5232f06b226
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800259"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741551"
 ---
 # <a name="ui-automation-support-for-the-separator-control-type"></a>Suporte de Automação de Interface de Usuário para o Tipo de Controle Separator
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800259"
   
  Os controles separadores são usados para dividir visualmente um espaço em duas regiões. Por exemplo, um controle Separator pode ser uma barra que define dois painéis em uma janela. Se o separador puder ser movido, o controle deverá ser exposto como Thumb no tipo de controle.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Separator. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Separator. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -64,7 +64,7 @@ ms.locfileid: "74800259"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.Separator>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

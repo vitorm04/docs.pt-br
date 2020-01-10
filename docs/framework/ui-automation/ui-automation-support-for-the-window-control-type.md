@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Window control type
 - control types, Window
 ms.assetid: 53be78a6-cdcc-4af3-a464-5927d19c54e8
-ms.openlocfilehash: b8e5a55de2c8e4e2bc0f4ce0427d79483b9b3288
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 6e8d854cf38f1ad5db29520e1bd4e9039497856f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801401"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741405"
 ---
 # <a name="ui-automation-support-for-the-window-control-type"></a>Suporte de Automação de Interface de Usuário para o Tipo de Controle Window
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74801401"
   
  O controle janela consiste no quadro de janela, que contém objetos filho, como barra de título, cliente e outros objetos.  
   
- Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nas seções a seguir se aplicam a todos os controles que implementam o tipo de controle de janela, seja [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] nas seções a seguir se aplicam a todos os controles que implementam o tipo de controle de janela, seja [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
  A tabela a seguir descreve a exibição de controle e a exibição de conteúdo da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertence a controles de janela e descreve o que pode ser contido em cada exibição. Para obter mais informações sobre a árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [visão geral da árvore de automação da interface do usuário](ui-automation-tree-overview.md).  
@@ -78,7 +78,7 @@ ms.locfileid: "74801401"
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowOpenedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.WindowPatternIdentifiers.WindowVisualStateProperty> evento de alteração de propriedade.|Depende|{1&gt;Nenhum&lt;1}|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.Window>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

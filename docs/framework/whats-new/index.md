@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 82a2c1780c6e0e1d94a206b9b959d8e1944fd0a9
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 4c5c7ffcab118978baf1b2f7602f39291452d1e6
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802329"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740416"
 ---
 # <a name="whats-new-in-the-net-framework"></a>Novidades no .NET Framework
 
@@ -1755,7 +1755,7 @@ O .NET 2015 apresenta o .NET Framework 4.6 e o .NET Core. Alguns recursos novos 
 
 - **Pacotes do código-fonte aberto do .NET Framework**
 
-  Os pacotes do .NET Core, como as coleções imutáveis, as [APIs SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd) e as APIs de rede, como as encontradas no namespace <xref:System.Net.Http>, agora estão disponíveis como pacotes de software livre no [GitHub](https://github.com/). Para acessar o código, confira [CoreFx no GitHub](https://github.com/dotnet/corefx). Para saber mais e saber como contribuir com esses pacotes, confira [.NET Core e código-fonte aberto](../get-started/net-core-and-open-source.md), [Home Page do .NET no GitHub](https://github.com/dotnet/home).
+  Os pacotes do .NET Core, como as coleções imutáveis, as [APIs SIMD](https://www.nuget.org/packages/Microsoft.Bcl.Simd) e as APIs de rede, como as encontradas no namespace <xref:System.Net.Http>, agora estão disponíveis como pacotes de software livre no [GitHub](https://github.com/). Para acessar o código, consulte [.net no GitHub](https://github.com/dotnet/runtime). Para saber mais e saber como contribuir com esses pacotes, confira [.NET Core e código-fonte aberto](../get-started/net-core-and-open-source.md), [Home Page do .NET no GitHub](https://github.com/dotnet/home).
 
 <a name="v452" />
 
@@ -2122,9 +2122,9 @@ Os aplicativos Windows 8.x Store foram projetados para fatores forma específico
 
 ### <a name="portable-class-libraries-a-nameportable-"></a>Bibliotecas de Classe Portáteis <a name="portable" />
 
-O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões posteriores) permite gravar e compilar assemblies gerenciados que funcionem em várias plataformas do .NET Framework. Usando um projeto de biblioteca de classes portátil, você escolhe as plataformas (como Windows Phone e .NET para aplicativos da loja do Windows 8. x) para o destino. Os tipos e membros disponíveis em seu projeto são restritos automaticamente aos tipos e membros comuns através dessas plataformas. Para saber mais, confira [Biblioteca de Classes Portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+O projeto Biblioteca de Classes Portátil no Visual Studio 2012 (e em versões posteriores) permite gravar e compilar assemblies gerenciados que funcionem em várias plataformas do .NET Framework. Usando um projeto de biblioteca de classes portátil, você escolhe as plataformas (como Windows Phone e .NET para aplicativos da loja do Windows 8. x) para o destino. Os tipos e membros disponíveis em seu projeto são restritos automaticamente aos tipos e membros comuns através dessas plataformas. Para saber mais, veja [Biblioteca de Classes Portátil](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [O .NET Framework e lançamentos fora da banda](../get-started/the-net-framework-and-out-of-band-releases.md)
 - [Novidades na acessibilidade do .NET Framework](whats-new-in-accessibility.md)

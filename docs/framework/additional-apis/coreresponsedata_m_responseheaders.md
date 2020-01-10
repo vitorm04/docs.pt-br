@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: ea93b70ae8e1a710b4208050d7ec823a28b218b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705968"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741013"
 ---
-# <a name="coreresponsedatamresponseheaders-field"></a>CoreResponseData.m\_ResponseHeaders campo
+# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData. m\_campo ResponseHeaders
 
-`CoreResponseData.m_ResponseHeaders` é um <xref:System.Net.WebHeaderCollection> de cabeçalhos associados a resposta do servidor.
+`CoreResponseData.m_ResponseHeaders` é um <xref:System.Net.WebHeaderCollection> de cabeçalhos associados à resposta do servidor.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> Essa API não se destina a ser usado diretamente em seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para capturar o código de rede. Ver [guia do usuário DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Essa API não deve ser usada diretamente no seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para conectar o código de rede. Consulte o [Guia do usuário do diagnosticm](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Namespace:** <xref:System.Net>
 
 **Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** Disponível desde o 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

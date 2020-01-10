@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0ba4e8ff639cdfbbec596da45a6e950fff921974
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740726"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740281"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem qualidade e desempenho aprimorados de renderização de texto, suporte a tipografia OpenType, texto internacional aprimorado, suporte avançado a fontes e novas APIs (interfaces de programação de aplicativo) de texto.  
@@ -59,7 +59,7 @@ Texto com suavização da direção y do ClearType
   
 - Comportamento de fonte independente de configurações globais, como localidade do sistema.  
   
-- Separe <xref:System.Windows.FontWeight>tipos, <xref:System.Windows.FontStretch>e <xref:System.Windows.FontStyle> para definir um <xref:System.Windows.Media.FontFamily>. Isso fornece maior flexibilidade do que na programação [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)], em que as combinações boolianas de negrito e itálico são utilizadas para definir uma família de fontes.  
+- Separe <xref:System.Windows.FontWeight>tipos, <xref:System.Windows.FontStretch>e <xref:System.Windows.FontStyle> para definir um <xref:System.Windows.Media.FontFamily>. Isso proporciona maior flexibilidade do que na programação do Win32, na qual as combinações booleanas de itálico e negrito são usadas para definir uma família de fontes.  
   
 - Direção de escrita (horizontal versus vertical) manipulada de forma independente do nome da fonte.  
   
@@ -142,13 +142,13 @@ Texto com suavização da direção y do ClearType
 ### <a name="advanced-text-formatting"></a>Formatação de texto avançada  
  No nível mais avançado das APIs de texto, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] oferece a capacidade de criar layout de texto personalizado usando o objeto <xref:System.Windows.Media.TextFormatting.TextFormatter> e outros tipos no namespace <xref:System.Windows.Media.TextFormatting>. O <xref:System.Windows.Media.TextFormatting.TextFormatter> e as classes associadas permitem que você implemente layout de texto personalizado que dá suporte à sua própria definição de formatos de caractere, estilos de parágrafo, regras de quebra de linha e outros recursos de layout para texto internacional. Há poucos casos em que você desejaria substituir a implementação padrão do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] suporte ao layout de texto. No entanto, se você estivesse criando um aplicativo ou controle de edição de texto, poderia exigir uma implementação diferente da implementação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] padrão.  
   
- Ao contrário de uma API de texto tradicional, o <xref:System.Windows.Media.TextFormatting.TextFormatter> interage com um cliente de layout de texto por meio de um conjunto de métodos de retorno de chamada. Ele requer que o cliente forneça esses métodos em uma implementação da classe <xref:System.Windows.Media.TextFormatting.TextSource>. O diagrama a seguir ilustra a interação de layout de texto entre o aplicativo cliente e <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
+ Ao contrário de uma API de texto tradicional, a <xref:System.Windows.Media.TextFormatting.TextFormatter> interage com um cliente de layout de texto por meio de um conjunto de métodos de retorno de chamada. Ele requer que o cliente forneça esses métodos em uma implementação da classe <xref:System.Windows.Media.TextFormatting.TextSource>. O diagrama a seguir ilustra a interação de layout de texto entre o aplicativo cliente e <xref:System.Windows.Media.TextFormatting.TextFormatter>.  
   
  ![Diagrama de cliente de layout de texto e TextFormatter](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
  Para obter mais detalhes sobre como criar o layout de texto personalizado, consulte [formatação de texto avançada](advanced-text-formatting.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>

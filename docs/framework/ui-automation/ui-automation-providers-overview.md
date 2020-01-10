@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, providers
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
-ms.openlocfilehash: 417cc17986fa1481505a88d778dcaa747860efbe
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f41fc102dfbe24d47e194da7477791a46f8d712d
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447981"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741736"
 ---
 # <a name="ui-automation-providers-overview"></a>Visão Geral dos Provedores de Automação de Interface do Usuário
 > [!NOTE]
@@ -18,9 +18,9 @@ ms.locfileid: "74447981"
   
  Provedores de automação de interface do usuário permitem que controles se comuniquem com aplicativos cliente de automação de interface Em geral, cada controle ou outro elemento distinto em um [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] é representado por um provedor. O provedor expõe informações sobre o elemento e, opcionalmente, implementa padrões de controle que permitem que o aplicativo cliente interaja com o controle.  
   
- Normalmente, os aplicativos cliente não precisam trabalhar diretamente com os provedores. A maioria dos controles padrão em aplicativos que usam as estruturas [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]ou [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] são expostas automaticamente para o sistema [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Os aplicativos que implementam controles personalizados também podem implementar provedores de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para esses controles, e os aplicativos cliente não precisam realizar etapas especiais para obter acesso a eles.  
+ Normalmente, os aplicativos cliente não precisam trabalhar diretamente com os provedores. A maioria dos controles padrão em aplicativos que usam as estruturas Win32, [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]ou [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] são expostas automaticamente para o sistema [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Os aplicativos que implementam controles personalizados também podem implementar provedores de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] para esses controles, e os aplicativos cliente não precisam realizar etapas especiais para obter acesso a eles.  
   
- Este tópico fornece uma visão geral de como os desenvolvedores de controle implementam provedores de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], especialmente para controles em [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] e [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] Windows.  
+ Este tópico fornece uma visão geral de como os desenvolvedores de controle implementam provedores de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], especialmente para controles nas janelas [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] e Win32.  
   
 <a name="Types_of_Providers"></a>   
 ## <a name="types-of-providers"></a>Tipos de provedores  
@@ -29,10 +29,10 @@ ms.locfileid: "74447981"
 ### <a name="client-side-providers"></a>Provedores do lado do cliente  
  Os provedores do lado do cliente são implementados por clientes de automação da interface do usuário para se comunicar com um aplicativo que não dá suporte a, ou não dá suporte total ao [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Provedores do lado do cliente geralmente se comunicam com o servidor pelo limite do processo enviando e recebendo mensagens do Windows.  
   
- Como os provedores de automação da interface do usuário para controles em [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] aplicativos são fornecidos como parte do sistema operacional, os aplicativos cliente raramente precisam implementar seus próprios provedores, e essa visão geral não os cobre.  
+ Como os provedores de automação da interface do usuário para controles em Win32, Windows Forms ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] aplicativos são fornecidos como parte do sistema operacional, os aplicativos cliente raramente precisam implementar seus próprios provedores, e essa visão geral não os cobre.  
   
 ### <a name="server-side-providers"></a>Provedores do lado do servidor  
- Os provedores do lado do servidor são implementados por controles personalizados ou por aplicativos baseados em uma estrutura de interface do usuário diferente de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Os provedores do lado do servidor são implementados por controles personalizados ou por aplicativos baseados em uma estrutura de interface do usuário que não seja Win32, Windows Forms ou [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  Os provedores do lado do servidor se comunicam com aplicativos cliente durante o limite do processo expondo interfaces ao sistema [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Core, que, por sua vez, atende a solicitações de clientes.  
   
@@ -62,20 +62,20 @@ ms.locfileid: "74447981"
  É responsabilidade da implementação do provedor definir um elemento como um elemento de conteúdo ou um elemento de controle. Elementos de controle podem ou não ser elementos de conteúdo, mas todos os elementos de conteúdo são elementos de controle.  
   
 ### <a name="frameworks"></a>Frameworks  
- Uma estrutura é um componente que gerencia controles filho, testes de clique e renderização em uma área da tela. Por exemplo, uma janela de [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)], geralmente conhecida como HWND, pode servir como uma estrutura que contém vários elementos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], como uma barra de menus, uma barra de status e botões.  
+ Uma estrutura é um componente que gerencia controles filho, testes de clique e renderização em uma área da tela. Por exemplo, uma janela do Win32, geralmente conhecida como HWND, pode servir como uma estrutura que contém vários elementos [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], como uma barra de menus, uma barra de status e botões.  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] controles de contêiner, como caixas de listagem e exibições de árvore, são considerados estruturas, pois contêm seu próprio código para renderizar itens filho e executar testes de impacto sobre eles. Por outro lado, uma [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] caixa de listagem não é uma estrutura, porque a renderização e o teste de impacto estão sendo tratados pela janela de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] que a contém.  
+ Os controles de contêiner do Win32, como caixas de listagem e exibições de árvore, são considerados estruturas, pois contêm seu próprio código para renderizar itens filho e executar testes de impacto neles. Por outro lado, uma [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] caixa de listagem não é uma estrutura, porque a renderização e o teste de impacto estão sendo tratados pela janela de [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] que a contém.  
   
  O [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] em um aplicativo pode ser composto de estruturas diferentes. Por exemplo, uma janela de aplicativo HWND pode conter HTML dinâmico (DHTML) que, por sua vez, contém um componente, como uma caixa de combinação em um HWND.  
   
 ### <a name="fragments"></a>Fragmentos  
- Um fragmento é uma subárvore completa de elementos de uma estrutura específica. O elemento no nó raiz da subárvore é chamado de raiz do fragmento. Uma raiz de fragmento não tem um pai, mas é hospedada em alguma outra estrutura, geralmente uma janela de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] (HWND).  
+ Um fragmento é uma subárvore completa de elementos de uma estrutura específica. O elemento no nó raiz da subárvore é chamado de raiz do fragmento. Uma raiz de fragmento não tem um pai, mas está hospedada em alguma outra estrutura, geralmente uma janela Win32 (HWND).  
   
 ### <a name="hosts"></a>Hosts  
- O nó raiz de cada fragmento deve ser hospedado em um elemento, geralmente uma janela de [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] (HWND). A exceção é a área de trabalho, que não está hospedada em nenhum outro elemento. O host de um controle personalizado é o HWND do próprio controle, não a janela do aplicativo ou qualquer outra janela que possa conter grupos de controles de nível superior.  
+ O nó raiz de cada fragmento deve ser hospedado em um elemento, geralmente uma janela Win32 (HWND). A exceção é a área de trabalho, que não está hospedada em nenhum outro elemento. O host de um controle personalizado é o HWND do próprio controle, não a janela do aplicativo ou qualquer outra janela que possa conter grupos de controles de nível superior.  
   
  O host de um fragmento desempenha um papel importante no fornecimento de serviços [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]s. Ele permite a navegação para a raiz do fragmento e fornece algumas propriedades padrão para que o provedor personalizado não precise implementá-las.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Implementação de provedor de Automação da Interface do Usuário no lado do servidor](server-side-ui-automation-provider-implementation.md)

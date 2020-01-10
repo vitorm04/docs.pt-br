@@ -1,15 +1,13 @@
 ---
 title: Alterações da falha e bibliotecas do .NET
 description: Práticas recomendadas para navegar por alterações da falha ao criar bibliotecas .NET.
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6881b8737d9dd3fa7fa71f099fa1dc97b747033d
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
-ms.translationtype: HT
+ms.openlocfilehash: 8536662ae1cd9733efbcc0c6526bd69d34a13177
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70104652"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740988"
 ---
 # <a name="breaking-changes"></a>Alterações da falha
 
@@ -66,9 +64,9 @@ Uma alteração da falha binária acontece quando você altera a API pública de
 
 Um alteração da falha binária também pode interromper um **assembly inteiro**. Renomear um assembly com `AssemblyName` alterará a identidade do assembly, o que também ocorrerá ao adicionar, remover ou alterar a chave de nomenclatura forte do assembly. Uma alteração da identidade de um assembly interromperá todo o código compilado que o utiliza.
 
-**❌ NÃO** altere um nome de assembly.
+**❌ não** alterar um nome de assembly.
 
-**❌ NÃO** adicione, remova nem altere a chave de nome forte.
+**❌ não** adicionar, remover ou alterar a chave de nomenclatura forte.
 
 **✔️ CONSIDERE** a possibilidade de usar classes base abstratas em vez de interfaces.
 
@@ -98,11 +96,11 @@ public class Document
 
 > Remover APIs é uma alteração da falha binária. Considere a possibilidade de manter métodos e tipos obsoletos se mantê-los tem baixo custo e não adiciona muitas dívidas técnicas à sua biblioteca. Não remover tipos e métodos pode ajudar a evitar os piores cenários mencionados acima.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Considerações sobre versão e atualização para os desenvolvedores de C#](../../csharp/whats-new/version-update-considerations.md)
 - [Um guia definitivo para as alterações da falha de API no .NET](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
-- [Regras de alteração da falha do CoreFX](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/breaking-change-rules.md)
+- [Regras de alteração significativa do .NET](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
 >[Anterior](versioning.md)

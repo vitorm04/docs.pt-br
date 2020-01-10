@@ -6,21 +6,21 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 5bc6e6d805d74bcf01044a16d94d6b3fc0ccf881
-ms.sourcegitcommit: 337bdc5a463875daf2cc6883e5a2da97d56f5000
+ms.openlocfilehash: 4ac1690e7b11d908af9354e9d72097ab7db7fc61
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72846845"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740257"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>Instruções passo a passo: hospedando conteúdo do WPF em Win32
-O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente sofisticado para criação de aplicativos. No entanto, quando você tem um investimento substancial em [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] código, pode ser mais eficiente adicionar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funcionalidade ao seu aplicativo em vez de reescrever o código original. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um mecanismo direto para hospedar conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em uma janela de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
+O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial no código Win32, pode ser mais eficiente adicionar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funcionalidade ao seu aplicativo em vez de reescrever o código original. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] fornece um mecanismo direto para hospedar conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em uma janela do Win32.  
   
- Este tutorial descreve como escrever um aplicativo de exemplo, [hospedando conteúdo do WPF em um exemplo de janela do Win32](https://go.microsoft.com/fwlink/?LinkID=160004), que hospeda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em uma janela [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Você pode estender esse exemplo para hospedar qualquer janela de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Como ele envolve a combinação de código gerenciado e não gerenciado, o aplicativo é escrito C++em/CLI.  
+ Este tutorial descreve como escrever um aplicativo de exemplo, [hospedando conteúdo do WPF em um exemplo de janela do Win32](https://go.microsoft.com/fwlink/?LinkID=160004), que hospeda [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em uma janela do Win32. Você pode estender esse exemplo para hospedar qualquer janela Win32. Como ele envolve a combinação de código gerenciado e não gerenciado, o aplicativo é escrito C++em/CLI.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Requisitos  
- Este tutorial pressupõe uma familiaridade básica com a programação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Para obter uma introdução básica à programação de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [introdução](../getting-started/index.md). Para obter uma introdução à programação de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], você deve fazer referência a qualquer um dos vários livros sobre o assunto, em particular as *janelas de programação* de Charles Petzold.  
+## <a name="requirements"></a>Requisitos do  
+ Este tutorial pressupõe uma familiaridade básica com a programação [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e Win32. Para obter uma introdução básica à programação de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], consulte [introdução](../getting-started/index.md). Para obter uma introdução à programação do Win32, você deve fazer referência a qualquer um dos vários livros sobre o assunto, em particular as *janelas de programação* de Charles Petzold.  
   
  Como o exemplo que acompanha este tutorial é implementado na C++/CLI, este tutorial pressupõe familiaridade com o uso do C++ para programar a API do Windows mais uma compreensão da programação de código gerenciado. A familiaridade C++com a/CLI é útil, mas não essencial.  
   
@@ -29,17 +29,17 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>O procedimento básico  
- Esta seção descreve o procedimento básico usado para hospedar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em uma janela de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. As outras seções explicam os detalhes de cada etapa.  
+ Esta seção descreve o procedimento básico usado para hospedar [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo em uma janela do Win32. As outras seções explicam os detalhes de cada etapa.  
   
- A chave para hospedar conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em uma janela de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] é a classe <xref:System.Windows.Interop.HwndSource>. Essa classe encapsula o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em uma janela de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], permitindo que ele seja incorporado ao seu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] como uma janela filho. A abordagem a seguir combina o [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] e o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em um único aplicativo.  
+ A chave para hospedar conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em uma janela Win32 é a classe <xref:System.Windows.Interop.HwndSource>. Essa classe encapsula o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em uma janela do Win32, permitindo que ele seja incorporado ao seu [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] como uma janela filho. A abordagem a seguir combina o Win32 e o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em um único aplicativo.  
   
 1. Implemente seu conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] como uma classe gerenciada.  
   
-2. Implementar um aplicativo do Windows C++com o/CLI. Se você estiver começando com um aplicativo existente e um C++ código não gerenciado, geralmente poderá habilitá-lo para chamar código gerenciado alterando as configurações do projeto para incluir o sinalizador do compilador`/clr`.  
+2. Implementar um aplicativo do Windows C++com o/CLI. Se você estiver começando com um aplicativo existente e um C++ código não gerenciado, geralmente poderá habilitá-lo para chamar código gerenciado alterando as configurações do projeto para incluir o sinalizador do compilador `/clr`.  
   
 3. Defina o modelo de threading como STA (Single-Threaded Apartment).  
   
-4. Manipule a notificação [WM_CREATE](/windows/desktop/winmsg/wm-create)em seu procedimento de janela e faça o seguinte:  
+4. Manipule a notificação de [WM_CREATE](/windows/desktop/winmsg/wm-create)no procedimento de janela e faça o seguinte:  
   
     1. Crie um novo objeto <xref:System.Windows.Interop.HwndSource> com a janela pai como seu parâmetro `parent`.  
   
@@ -49,7 +49,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
     4. Obtenha o HWND do conteúdo. A propriedade <xref:System.Windows.Interop.HwndSource.Handle%2A> do objeto <xref:System.Windows.Interop.HwndSource> contém o identificador de janela (HWND). Para obter um HWND que você possa usar na parte não gerenciada de seu aplicativo, transmita `Handle.ToPointer()` para um HWND.  
   
-5. Implemente uma classe gerenciada que contenha um campo estático para manter uma referência ao seu conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essa classe permite que você obtenha uma referência para o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do seu código de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].  
+5. Implemente uma classe gerenciada que contenha um campo estático para manter uma referência ao seu conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essa classe permite que você obtenha uma referência para o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] do seu código Win32.  
   
 6. Atribua o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ao campo estático.  
   
@@ -58,11 +58,11 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 8. Comunique-se com o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] usando a referência que você armazenou no campo estático para definir propriedades e assim por diante.  
   
 > [!NOTE]
-> Você também pode usar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para implementar seu conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. No entanto, você precisará compilá-lo separadamente como uma DLL (biblioteca de vínculo dinâmico) e fazer referência a essa DLL do seu aplicativo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. O restante do procedimento é semelhante ao descrito acima.
+> Você também pode usar [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] para implementar seu conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. No entanto, você precisará compilá-lo separadamente como uma DLL (biblioteca de vínculo dinâmico) e fazer referência a essa DLL do seu aplicativo Win32. O restante do procedimento é semelhante ao descrito acima.
 
 <a name="implementing_the_application"></a>
 ## <a name="implementing-the-host-application"></a>Implementando o aplicativo host
- Esta seção descreve como hospedar conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em um aplicativo de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] básico. O conteúdo em si é implementado C++em/CLI como uma classe gerenciada. Na maior parte, é simples [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programação. Os principais aspectos da implementação de conteúdo são discutidos na [implementação do conteúdo do WPF](#implementing_the_wpf_page).
+ Esta seção descreve como hospedar conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em um aplicativo Win32 básico. O conteúdo em si é implementado C++em/CLI como uma classe gerenciada. Na maior parte, é simples [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] programação. Os principais aspectos da implementação de conteúdo são discutidos na [implementação do conteúdo do WPF](#implementing_the_wpf_page).
 
 - [O aplicativo básico](#the_basic_application)
 
@@ -84,7 +84,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 
 4. Aceite as configurações padrão do assistente e clique em **concluir** para iniciar o projeto.
 
- O modelo cria um aplicativo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] básico, incluindo:
+ O modelo cria um aplicativo Win32 básico, incluindo:
 
 - Um ponto de entrada do aplicativo.
 
@@ -115,7 +115,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 ### <a name="hosting-the-wpf-content"></a>Hospedando o conteúdo do WPF
  O conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é um aplicativo de entrada de endereço simples. Ele consiste em vários controles de <xref:System.Windows.Controls.TextBox> para pegar o nome de usuário, o endereço e assim por diante. Também há dois controles de <xref:System.Windows.Controls.Button>, **OK** e **Cancelar**. Quando o usuário clica em **OK**, o manipulador de eventos de <xref:System.Windows.Controls.Primitives.ButtonBase.Click> do botão coleta os dados dos controles de <xref:System.Windows.Controls.TextBox>, atribui-os às propriedades correspondentes e gera um evento personalizado `OnButtonClicked`. Quando o usuário clica em **Cancelar**, o manipulador simplesmente gera `OnButtonClicked`. O objeto de argumento de evento para `OnButtonClicked` contém um campo booliano que indica qual botão foi clicado.
 
- O código para hospedar o conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é implementado em um manipulador para a notificação [WM_CREATE](/windows/desktop/winmsg/wm-create) na janela do host.
+ O código para hospedar o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é implementado em um manipulador para a notificação de [WM_CREATE](/windows/desktop/winmsg/wm-create) na janela do host.
 
  [!code-cpp[Win32HostingWPFPage#WMCreate](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#wmcreate)]
 
@@ -126,19 +126,19 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 
- Você não pode hospedar o conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diretamente na janela do aplicativo. Em vez disso, você primeiro cria um objeto <xref:System.Windows.Interop.HwndSource> para encapsular o conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esse objeto é basicamente uma janela projetada para hospedar um conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Você hospeda o objeto <xref:System.Windows.Interop.HwndSource> na janela pai criando-o como um filho de uma janela [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] que faz parte do seu aplicativo. Os parâmetros do Construtor <xref:System.Windows.Interop.HwndSource> contêm muito as mesmas informações que você passaria para CreateWindow ao criar uma janela filho [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)].
+ Você não pode hospedar o conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] diretamente na janela do aplicativo. Em vez disso, você primeiro cria um objeto <xref:System.Windows.Interop.HwndSource> para encapsular o conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esse objeto é basicamente uma janela projetada para hospedar um conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Você hospeda o objeto <xref:System.Windows.Interop.HwndSource> na janela pai criando-o como um filho de uma janela Win32 que faz parte de seu aplicativo. Os parâmetros do Construtor <xref:System.Windows.Interop.HwndSource> contêm muito as mesmas informações que você passaria para CreateWindow ao criar uma janela filho do Win32.
 
  Em seguida, você cria uma instância do objeto de conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Nesse caso, o conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é implementado como uma classe separada, `WPFPage`, usando C++/CLI. Você também pode implementar o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] com [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. No entanto, para fazer isso, você precisa configurar um projeto separado e criar o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] como uma DLL. Você pode adicionar uma referência a essa DLL ao seu projeto e usar essa referência para criar uma instância do conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
  Você exibe o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] em sua janela filho atribuindo uma referência ao conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] à propriedade <xref:System.Windows.Interop.HwndSource.RootVisual%2A> do <xref:System.Windows.Interop.HwndSource>.
 
- A próxima linha de código anexa um manipulador de eventos, `WPFButtonClicked`, ao evento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Content `OnButtonClicked`. Esse manipulador é chamado quando o usuário clica no botão **OK** ou **Cancelar** . Consulte [conteúdo do communicating_with_the_WPF](#communicating_with_the_page) para obter mais informações sobre esse manipulador de eventos.
+ A próxima linha de código anexa um manipulador de eventos, `WPFButtonClicked`, ao evento [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Content `OnButtonClicked`. Esse manipulador é chamado quando o usuário clica no botão **OK** ou **Cancelar** . Consulte [communicating_with_the_WPF conteúdo](#communicating_with_the_page) para obter mais informações sobre esse manipulador de eventos.
 
- A linha final do código mostrado retorna o identificador de janela (HWND) associado ao objeto <xref:System.Windows.Interop.HwndSource>. Você pode usar esse identificador do seu código de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] para enviar mensagens para a janela hospedada, embora o exemplo não faça isso. O objeto <xref:System.Windows.Interop.HwndSource> gera um evento toda vez que recebe uma mensagem. Para processar as mensagens, chame o método <xref:System.Windows.Interop.HwndSource.AddHook%2A> para anexar um manipulador de mensagens e, em seguida, processar as mensagens nesse manipulador.
+ A linha final do código mostrado retorna o identificador de janela (HWND) associado ao objeto <xref:System.Windows.Interop.HwndSource>. Você pode usar esse identificador do seu código Win32 para enviar mensagens para a janela hospedada, embora o exemplo não faça isso. O objeto <xref:System.Windows.Interop.HwndSource> gera um evento toda vez que recebe uma mensagem. Para processar as mensagens, chame o método <xref:System.Windows.Interop.HwndSource.AddHook%2A> para anexar um manipulador de mensagens e, em seguida, processar as mensagens nesse manipulador.
 
 <a name="holding_a_reference"></a>
 ### <a name="holding-a-reference-to-the-wpf-content"></a>Mantendo uma referência ao conteúdo do WPF
- Para muitos aplicativos, você desejará se comunicar com o conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mais tarde. Por exemplo, talvez você queira modificar as propriedades de conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ou talvez o <xref:System.Windows.Interop.HwndSource> de objeto hospede [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo diferente. Para fazer isso, você precisa de uma referência ao objeto <xref:System.Windows.Interop.HwndSource> ou ao conteúdo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O objeto <xref:System.Windows.Interop.HwndSource> e seu conteúdo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] associado permanecem na memória até que você destrua o identificador de janela. No entanto, a variável que você atribui ao objeto <xref:System.Windows.Interop.HwndSource> será desativada assim que você retornar do procedimento de janela. A maneira personalizada de lidar com esse problema com [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplicativos é usar uma variável estática ou global. Infelizmente, não é possível atribuir um objeto gerenciado a esses tipos de variáveis. Você pode atribuir o identificador de janela associado a <xref:System.Windows.Interop.HwndSource> objeto a uma variável global ou estática, mas que não fornece acesso ao próprio objeto.
+ Para muitos aplicativos, você desejará se comunicar com o conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mais tarde. Por exemplo, talvez você queira modificar as propriedades de conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ou talvez o <xref:System.Windows.Interop.HwndSource> de objeto hospede [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] conteúdo diferente. Para fazer isso, você precisa de uma referência ao objeto <xref:System.Windows.Interop.HwndSource> ou ao conteúdo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. O objeto <xref:System.Windows.Interop.HwndSource> e seu conteúdo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] associado permanecem na memória até que você destrua o identificador de janela. No entanto, a variável que você atribui ao objeto <xref:System.Windows.Interop.HwndSource> será desativada assim que você retornar do procedimento de janela. A maneira personalizada de lidar com esse problema com os aplicativos Win32 é usar uma variável estática ou global. Infelizmente, não é possível atribuir um objeto gerenciado a esses tipos de variáveis. Você pode atribuir o identificador de janela associado a <xref:System.Windows.Interop.HwndSource> objeto a uma variável global ou estática, mas que não fornece acesso ao próprio objeto.
 
  A solução mais simples para esse problema é implementar uma classe gerenciada que contém um conjunto de campos estáticos para manter referências a todos os objetos gerenciados aos quais você precisa ter acesso. O exemplo usa a classe `WPFPageHost` para manter uma referência ao conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], além dos valores iniciais de um número de suas propriedades que podem ser alteradas posteriormente pelo usuário. Isso é definido no cabeçalho.
 
@@ -156,7 +156,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 
  O manipulador recebe um objeto de argumento de evento personalizado do conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], `MyPageEventArgs`. A propriedade `IsOK` do objeto é definida como `true` se o botão **OK** foi clicado e `false` se o botão **Cancelar** foi clicado.
 
- Se o botão **OK** foi clicado, o manipulador obtém uma referência para o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da classe de contêiner. Em seguida, ele coleta as informações do usuário mantidas pelas propriedades de conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] associadas e usa os controles estáticos para exibir as informações na janela pai. Como os dados de conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estão na forma de uma cadeia de caracteres gerenciada, ele precisa ser empacotado para uso por um controle de [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]. Se o botão **Cancelar** tiver sido clicado, o manipulador limpará os dados dos controles estáticos.
+ Se o botão **OK** foi clicado, o manipulador obtém uma referência para o conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] da classe de contêiner. Em seguida, ele coleta as informações do usuário mantidas pelas propriedades de conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] associadas e usa os controles estáticos para exibir as informações na janela pai. Como os dados de conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] estão na forma de uma cadeia de caracteres gerenciada, ele precisa ser empacotado para uso por um controle Win32. Se o botão **Cancelar** tiver sido clicado, o manipulador limpará os dados dos controles estáticos.
 
  O [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] de aplicativos fornece um conjunto de botões de opção que permitem ao usuário modificar a cor do plano de fundo do conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] e várias propriedades relacionadas à fonte. O exemplo a seguir é um trecho do procedimento de janela (WndProc) do aplicativo e sua manipulação de mensagens que define várias propriedades em diferentes mensagens, incluindo a cor da tela de fundo. As outras são semelhantes e não são mostradas. Consulte a amostra completa para obter detalhes e o contexto.
 
@@ -175,7 +175,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 - [Definindo as propriedades do WPF](#set_page_properties)
 
 <a name="page_layout"></a>
-### <a name="layout"></a>Layout
+### <a name="layout"></a>{1&gt;{2&gt;Layout&lt;2}&lt;1}
  Os elementos de [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] no conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consistem em cinco controles de <xref:System.Windows.Controls.TextBox>, com controles <xref:System.Windows.Controls.Label> associados: nome, endereço, cidade, estado e CEP. Também há dois controles <xref:System.Windows.Controls.Button>, **OK** e **Cancelar**
 
  O conteúdo do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é implementado na classe `WPFPage`. O layout é manipulado com um elemento de layout <xref:System.Windows.Controls.Grid>. A classe herda de <xref:System.Windows.Controls.Grid>, o que efetivamente o torna o elemento de raiz de conteúdo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
@@ -214,7 +214,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 
 <a name="set_page_properties"></a>
 ### <a name="setting-the-wpf-properties"></a>Definindo as propriedades do WPF
- O host [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] permite que o usuário altere várias propriedades de conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Do lado do [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)], é simplesmente uma questão de alterar as propriedades. A implementação na classe de conteúdo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é um pouco mais complicada, porque não há nenhuma propriedade global única que controle as fontes de todos os controles. Em vez disso, a propriedade apropriada de cada controle é alterada nos acessadores set das propriedades. O exemplo a seguir mostra o código para a propriedade `DefaultFontFamily`. A definição da propriedade chama um método privado que, por sua vez, define as propriedades <xref:System.Windows.Controls.Control.FontFamily%2A> para os vários controles.
+ O host Win32 permite que o usuário altere várias propriedades de conteúdo de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Do lado do Win32, é simplesmente uma questão de alterar as propriedades. A implementação na classe de conteúdo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é um pouco mais complicada, porque não há nenhuma propriedade global única que controle as fontes de todos os controles. Em vez disso, a propriedade apropriada de cada controle é alterada nos acessadores set das propriedades. O exemplo a seguir mostra o código para a propriedade `DefaultFontFamily`. A definição da propriedade chama um método privado que, por sua vez, define as propriedades <xref:System.Windows.Controls.Control.FontFamily%2A> para os vários controles.
 
  Em WPFPage.h:
 
@@ -224,7 +224,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 
  [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Interop.HwndSource>
 - [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)

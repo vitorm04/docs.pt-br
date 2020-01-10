@@ -1,5 +1,5 @@
 ---
-title: Campo HttpWebRequest._CoreResponse
+title: Campo HttpWebRequest. _CoreResponse
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 3627c9bf0d72ccec3a0d6d9c7c89b62f83dcd4b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d16936f6984e73a886f5f48e05b53501ced63c1b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706059"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740451"
 ---
-# <a name="httpwebrequestcoreresponse-field"></a>HttpWebRequest. \_Campo CoreResponse
+# <a name="httpwebrequest_coreresponse-field"></a>HttpWebRequest.\_campo CoreResponse
 
-`HttpWebRequest._CoreResponse` é um objeto (qualquer um [CoreResponseData](coreresponsedata.md) ou um <xref:System.Exception>) que contém o resultado da análise da resposta HTTP.
+`HttpWebRequest._CoreResponse` é um objeto (um [CoreResponseData](coreresponsedata.md) ou um <xref:System.Exception>) que contém o resultado da análise de resposta http.
 
 ## <a name="syntax"></a>Sintaxe
   
@@ -28,14 +28,14 @@ private object _CoreResponse
 ```
 
 > [!WARNING]
-> Essa API não se destina a ser usado diretamente em seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para capturar o código de rede. Ver [guia do usuário DiagnosticSource](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
+> Essa API não deve ser usada diretamente no seu código. Em vez disso, você deve usar um <xref:System.Diagnostics.DiagnosticSource> para conectar o código de rede. Consulte o [Guia do usuário do diagnosticm](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md).
 > 
-> Microsoft não suporta o uso dessa classe em um aplicativo de produção sob nenhuma circunstância.
+> A Microsoft não oferece suporte ao uso dessa classe em um aplicativo de produção em nenhuma circunstância.
 
-## <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos do
 
 **Namespace:** <xref:System.Net>
 
 **Assembly:** Sistema (em System. dll)
 
-**Versões do .NET framework:** Disponível desde o 2.0.
+**.NET Framework versões:** Disponível desde 2,0.

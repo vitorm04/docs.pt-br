@@ -3,12 +3,12 @@ title: Definições de configuração de globalização
 description: Saiba mais sobre as configurações de tempo de execução que configuram aspectos de globalização de um aplicativo .NET Core, por exemplo, como ele analisa as datas japonesas.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 0571c64eff5b38aafa37026fb2ba7f4aef778beb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802774"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740544"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Opções de configuração de tempo de execução para globalização
 
@@ -16,7 +16,7 @@ ms.locfileid: "74802774"
 
 - Determina se um aplicativo .NET Core é executado no modo invariável de globalização sem acesso a dados e comportamento específicos de cultura ou se tem acesso a dados culturais.
 - Padrão: execute o aplicativo com acesso a dados culturais (`false`).
-- Para obter mais informações, consulte [modo invariável de globalização do .NET Core](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md).
+- Para obter mais informações, consulte [modo invariável de globalização do .NET Core](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md).
 
 | | Nome da configuração | Valores |
 | - | - | - |

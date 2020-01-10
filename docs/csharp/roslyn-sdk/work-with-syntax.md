@@ -3,12 +3,12 @@ title: Usar o modelo de sintaxe do SDK do .NET Compiler Platform
 description: Esta visão geral fornece uma compreensão dos tipos usados para entender e manipular nós de sintaxe.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 2cfd3c8bc8f47421c7992f7fea28c7b156450147
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346923"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740480"
 ---
 # <a name="work-with-syntax"></a>Trabalhar com sintaxe
 
@@ -65,11 +65,11 @@ Ao contrário dos nós e tokens de sintaxe, os desafios de sintaxe não têm pai
 
 Cada nó, token ou desafio conhece sua posição dentro do texto de origem e o número de caracteres no qual ele consiste. Uma posição de texto é representada como um inteiro de 32 bits, que é um índice `char` baseado em zero. Um objeto <xref:Microsoft.CodeAnalysis.Text.TextSpan> é a posição inicial e uma contagem de caracteres, ambas representadas como inteiros. Se <xref:Microsoft.CodeAnalysis.Text.TextSpan> tem comprimento zero, ele se refere a um local entre dois caracteres.
 
-Cada nó tem duas propriedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> e <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>.
+Cada nó tem duas propriedades <xref:Microsoft.CodeAnalysis.Text.TextSpan>: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> e <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A>.
 
-A propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> é o intervalo de texto do início do primeiro token na subárvore do nó ao final do último token. Esse intervalo não inclui nenhum desafio à esquerda ou à direita.
+A propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> é o intervalo de texto do início do primeiro token na subárvore do nó ao final do último token. Esse intervalo não inclui nenhum desafio à esquerda ou à direita.
 
-A propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*> é o intervalo de texto que inclui o intervalo normal do nó mais o intervalo de qualquer desafio à esquerda ou à direita.
+A propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> é o intervalo de texto que inclui o intervalo normal do nó mais o intervalo de qualquer desafio à esquerda ou à direita.
 
 Por exemplo:
 
@@ -85,11 +85,11 @@ O nó de instrução dentro do bloco tem um intervalo indicado pelas barras vert
 
 ## <a name="kinds"></a>Variantes
 
-Cada nó, token ou desafio tem uma propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, do tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica o elemento de sintaxe exato representado. Esse valor pode ser convertido em uma enumeração específica a um idioma. Cada idioma, C# ou Visual Basic, tem uma única enumeração de `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que lista todos os nós, tokens e elementos Trívia possíveis na gramática. Esta conversão pode ser feita automaticamente acessando os métodos de extensão <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType>.
+Cada nó, token ou desafio tem uma propriedade <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType>, do tipo <xref:System.Int32?displayProperty=nameWithType>, que identifica o elemento de sintaxe exato representado. Esse valor pode ser convertido em uma enumeração específica a um idioma. Cada idioma, C# ou Visual Basic, tem uma única enumeração de `SyntaxKind` (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> e <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>, respectivamente) que lista todos os nós, tokens e elementos Trívia possíveis na gramática. Esta conversão pode ser feita automaticamente acessando os métodos de extensão <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> ou <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType>.
 
 A propriedade <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> permite a desambiguidade fácil de tipos de nó de sintaxe que compartilham a mesma classe de nó. Para tokens e desafios, essa propriedade é a única maneira de diferenciar um tipo de elemento de outro.
 
-Por exemplo, uma única classe <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> tem <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> como filhos. A propriedade <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*> distingue se ela é um tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> ou <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> de nó de sintaxe.
+Por exemplo, uma única classe <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> tem <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>, <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> e <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> como filhos. A propriedade <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A> distingue se ela é um tipo <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.AddExpression>, <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SubtractExpression> ou <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.MultiplyExpression> de nó de sintaxe.
 
 ## <a name="errors"></a>Erros do
 

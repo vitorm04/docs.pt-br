@@ -4,12 +4,12 @@ description: Este tutorial avançado demonstra como migrar código existente com
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: 75bc8d278efb66363212e3e000154ffc70f373bf
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634905"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740459"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>Tutorial: migrar código existente com tipos de referência anuláveis
 
@@ -167,4 +167,4 @@ O parâmetro `IMapper` é tipado como uma referência não anulável. Ele é cha
 
 Você corrigiu os avisos identificados na compilação de teste inicial, portanto, agora você pode ativar o contexto de anotação anulável para os dois projetos. Recompile os projetos; o compilador não relatará nenhum aviso. Você pode obter o código do projeto concluído no repositório do GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/csharp/tutorials/nullable-reference-migration/finished).
 
-Os novos recursos que dão suporte aos tipos de referência anuláveis ajudam você a encontrar e corrigir possíveis erros no modo de manipulação de valores `null` em seu código. A habilitação do contexto de anotação anulável permite que você expresse sua intenção de design: algumas variáveis nunca devem ser nulas, outras variáveis podem conter valores nulos. Esses recursos facilitam a declaração de sua intenção de design. Da mesma forma, o contexto de aviso anulável instrui o compilador a emitir avisos quando você violar essa intenção. Esses avisos servirão como orientação para criar atualizações que tornem seu código mais resiliente e menos propensa a lançar uma `NullReferenceException` durante a execução. Você pode controlar o escopo desses contextos para se concentrar na migração de áreas locais do código, enquanto a base de código restante permanece inalterada. Na prática, você pode tornar essa tarefa de migração uma parte da manutenção regular das suas classes. Este tutorial demonstrou o processo para migrar um aplicativo a fim de usar tipos de referência anuláveis. Você pode explorar um exemplo real maior desse processo examinando a solicitação de pull feita por [Jon Skeet](https://github.com/jskeet) para incorporar tipos de referência anuláveis em [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits).
+Os novos recursos que dão suporte aos tipos de referência anuláveis ajudam você a encontrar e corrigir possíveis erros no modo de manipulação de valores `null` em seu código. A habilitação do contexto de anotação anulável permite que você expresse sua intenção de design: algumas variáveis nunca devem ser nulas, outras variáveis podem conter valores nulos. Esses recursos facilitam a declaração de sua intenção de design. Da mesma forma, o contexto de aviso anulável instrui o compilador a emitir avisos quando você violar essa intenção. Esses avisos servirão como orientação para criar atualizações que tornem seu código mais resiliente e menos propensa a lançar uma `NullReferenceException` durante a execução. Você pode controlar o escopo desses contextos para se concentrar na migração de áreas locais do código, enquanto a base de código restante permanece inalterada. Na prática, você pode tornar essa tarefa de migração uma parte da manutenção regular das suas classes. Este tutorial demonstrou o processo para migrar um aplicativo a fim de usar tipos de referência anuláveis. Você pode explorar um exemplo real maior desse processo examinando a solicitação de pull feita por [Jon Skeet](https://github.com/jskeet) para incorporar tipos de referência anuláveis em [NodaTime](https://github.com/nodatime/nodatime/pull/1240/commits). Ou apenas além disso, você pode aprender técnicas para usar tipos de referência anuláveis com Entity Framework Core em [Entity Framework Core-trabalhando com tipos de referência anuláveis](/ef/core/miscellaneous/nullable-reference-types).

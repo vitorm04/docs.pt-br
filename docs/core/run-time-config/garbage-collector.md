@@ -3,12 +3,12 @@ title: Definições de configuração do coletor de lixo
 description: Saiba mais sobre as configurações de tempo de execução para configurar como o coletor de lixo gerencia a memória para aplicativos .NET Core.
 ms.date: 11/13/2019
 ms.topic: reference
-ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 41157db7770a89f4402fa6675f7031c508f33aca
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800628"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740550"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opções de configuração de tempo de execução para coleta de lixo
 
@@ -217,7 +217,7 @@ Para obter mais informações sobre algumas dessas configurações, consulte o m
 ### <a name="complus_gcname"></a>COMPlus_GCName
 
 - Especifica um caminho para a biblioteca que contém o coletor de lixo que o tempo de execução pretende carregar.
-- Para obter mais informações, consulte [design de carregador de GC autônomo](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/standalone-gc-loading.md).
+- Para obter mais informações, consulte [design de carregador de GC autônomo](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md).
 
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |

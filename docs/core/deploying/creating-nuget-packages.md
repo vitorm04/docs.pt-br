@@ -1,16 +1,15 @@
 ---
-title: Criar um pacote NuGet com ferramentas da interface de linha de comando (CLI) do .NET Core
+title: Criar um pacote NuGet com CLI do .NET Core
 description: Saiba como criar um pacote do NuGet com o comando 'dotnet pack'.
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.custom: seodec18
-ms.openlocfilehash: 2d876f921d079972e2a638788195aa69a2423c49
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771940"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740869"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>Como criar um pacote NuGet com ferramentas da interface de linha de comando (CLI) do .NET Core
 
@@ -19,9 +18,9 @@ ms.locfileid: "72771940"
 
 Espera-se que as bibliotecas .NET Standard e .NET Core sejam distribuídas como pacotes NuGet. Isso na verdade mostra como todas as bibliotecas .NET Standard são distribuídas e consumidas. Isso é realizado mais facilmente com o comando `dotnet pack`.
 
-Imagine que você acabou de criar uma nova biblioteca incrível e deseja distribuí-la no NuGet. Você pode criar um pacote NuGet com várias ferramentas de plataforma cruzada para fazer exatamente isso. O exemplo a seguir pressupõe uma biblioteca chamada **SuperAwesomeLibrary** direcionada para `netstandard1.0`.
+Imagine que você acabou de criar uma nova biblioteca incrível e deseja distribuí-la no NuGet. Você pode criar um pacote NuGet com ferramentas de plataforma cruzada para fazer exatamente isso! O exemplo a seguir pressupõe uma biblioteca chamada **SuperAwesomeLibrary** que tem como destino `netstandard1.0`.
 
-Se você tiver dependências transitivas, ou seja, um projeto que depende de outro pacote, será preciso garantir a restauração dos pacotes para toda a sua solução com o comando `dotnet restore` antes de criar um pacote NuGet. Caso contrario, o comando `dotnet pack` não funcionará corretamente.
+Se você tiver dependências transitivas, ou seja, um projeto que dependa de outro pacote, certifique-se de restaurar pacotes para toda a solução com o comando `dotnet restore` antes de criar um pacote NuGet. A falha ao fazer isso resultará na `dotnet pack` comando não funcionar corretamente.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -46,7 +45,7 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-Observe que isso gerará um pacote que pode ser depurado. Se você deseja criar um pacote NuGet com binários de versão, tudo que você precisa fazer é adicionar o comutador `--configuration` (ou `-c`) e usar `release` como argumento.
+Isso produz um pacote que é capaz de ser depurado. Se você deseja criar um pacote NuGet com binários de versão, tudo que você precisa fazer é adicionar o comutador `--configuration` (ou `-c`) e usar `release` como argumento.
 
 ```dotnetcli
 dotnet pack --configuration release
@@ -67,6 +66,6 @@ E agora você tem os arquivos necessários para publicar um pacote NuGet.
 
 É importante observar que em nenhum momento o comando `dotnet publish` está envolvido. O comando `dotnet publish` é usado para implantar aplicativos com todas as suas dependências no mesmo pacote, não para gerar um pacote NuGet para ser distribuído e consumidos por meio do NuGet.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Início Rápido: Criar e publicar um pacote](/nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli)

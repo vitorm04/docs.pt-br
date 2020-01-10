@@ -2,12 +2,12 @@
 title: Tipos de alterações significativas – .NET Core
 description: Saiba como o .NET Core tenta manter a compatibilidade para desenvolvedores em versões do .NET e que tipo de alteração é considerada uma alteração significativa.
 ms.date: 06/10/2019
-ms.openlocfilehash: 5624a35a0d71224faf9adc5df2b02a529e650314
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a84468c0c0e04f367dc7e89ce806ac01b2b49b48
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567711"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740887"
 ---
 # <a name="changes-that-affect-compatibility"></a>Alterações que afetam a compatibilidade
 
@@ -19,7 +19,7 @@ Ao longo de sua história, o .NET tentou manter um alto nível de compatibilidad
 
 Além da compatibilidade entre as implementações do .NET, os desenvolvedores esperam um alto nível de compatibilidade nas versões do .NET Core. Em particular, o código escrito para uma versão anterior do .NET Core precisam ser executado sem problemas em uma versão posterior do .NET Core. Na verdade, muitos desenvolvedores esperam que as novas APIs encontradas em versões recém-lançadas do .NET Core também sejam compatíveis com as versões de pré-lançamento em que essas APIs foram apresentadas.
 
-Este artigo descreve as categorias de alterações de compatibilidade (ou alterações significativas) e a maneira como a equipe do .NET avalia alterações em cada uma dessas categorias. Entender como a equipe .NET se aproxima das possíveis alterações significativas é particularmente útil para os desenvolvedores que abrem solicitações pull no repositório do GitHub [dotnet/corefx](https://github.com/dotnet/corefx) que modificam o comportamento das APIs existentes.
+Este artigo descreve as categorias de alterações de compatibilidade (ou alterações significativas) e a maneira como a equipe do .NET avalia alterações em cada uma dessas categorias. Entender como a equipe .NET se aproxima das possíveis alterações significativas é particularmente útil para os desenvolvedores que abrem solicitações pull no repositório do GitHub [dotnet/tempo de execução](https://github.com/dotnet/runtime) que modificam o comportamento das APIs existentes.
 
 > [!NOTE]
 > Para obter uma definição das categorias de compatibilidade, como compatibilidade binária e compatibilidade com versões anteriores, confira [Categorias de alterações significativas](categories.md).
@@ -178,7 +178,7 @@ As alterações nessa categoria modificam a área de superfície pública de um 
 
 - **❌ reduzir a visibilidade de um membro**
 
-   Isso inclui restringir a visibilidade de um membro [protegido](../../csharp/language-reference/keywords/protected.md) quando o tipo não tem construtores *acessíveis* (públicos ou protegidos) e o tipo *não* é [sealed](../../csharp/language-reference/keywords/sealed.md). Se esse não for o caso, será permitido reduzir a visibilidade de um membro protegido.
+   Isso inclui reduzir a visibilidade de um membro [protegido](../../csharp/language-reference/keywords/protected.md) quando há construtores *acessíveis* (públicos ou protegidos) e o tipo *não* é [lacrado](../../csharp/language-reference/keywords/sealed.md). Se esse não for o caso, será permitido reduzir a visibilidade de um membro protegido.
 
    Aumentar a visibilidade de um tipo é permitido.
 
@@ -192,7 +192,7 @@ As alterações nessa categoria modificam a área de superfície pública de um 
 
 - **❌ acionar um evento existente quando ele nunca foi acionado antes**
 
-## <a name="behavioral-changes"></a>Alterações comportamentais
+## <a name="behavioral-changes"></a>Alterações de comportamento
 
 ### <a name="assemblies"></a>Assemblies
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: 04e6c6fb5dd903e0f52a29bb2c0739d899ce2bb1
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 382facef15e79c4ce49fdedaeb1a072b7591e4a0
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636348"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740218"
 ---
 # <a name="wpf-architecture"></a>Arquitetura do WPF
 Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presentation Foundation (WPF). Ele cobre a maioria dos principais subsistemas do WPF e descreve como eles interagem. Ele também detalha algumas das opções feitas pelos arquitetos do WPF.  
@@ -38,7 +38,7 @@ Este tópico fornece um tour guiado pela hierarquia de classes do Windows Presen
   
 <a name="System_Threading_DispatcherObject"></a>   
 ## <a name="systemthreadingdispatcherobject"></a>System.Threading.DispatcherObject  
- A maioria dos objetos no WPF deriva de <xref:System.Windows.Threading.DispatcherObject>, que fornece as construções básicas para lidar com a simultaneidade e a Threading. O WPF é baseado em um sistema de mensagens implementado pelo Dispatcher. Isso funciona muito como o familiar [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] bombeamento de mensagens; na verdade, o Dispatcher do WPF usa mensagens user32 para executar chamadas entre threads.  
+ A maioria dos objetos no WPF deriva de <xref:System.Windows.Threading.DispatcherObject>, que fornece as construções básicas para lidar com a simultaneidade e a Threading. O WPF é baseado em um sistema de mensagens implementado pelo Dispatcher. Isso funciona muito bem como o familiar bombeamento de mensagens Win32; na verdade, o Dispatcher do WPF usa mensagens user32 para executar chamadas entre threads.  
   
  Há realmente dois conceitos principais a serem compreendidos ao discutir a simultaneidade no WPF – a afinidade de Dispatcher e thread.  
   

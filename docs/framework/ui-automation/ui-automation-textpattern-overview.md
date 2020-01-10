@@ -6,19 +6,19 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-ms.openlocfilehash: b7e378d79109d33859a38ea398cffd2193044abd
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 22966c8ed80be99497e7d05b56455c3057fdd81a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800206"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741422"
 ---
 # <a name="ui-automation-textpattern-overview"></a>Visão geral de TextPattern de automação da interface do usuário
 
 > [!NOTE]
 > Esta documentação destina-se a desenvolvedores do .NET Framework que querem usar as classes da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] gerenciadas definidas no namespace <xref:System.Windows.Automation>. Para obter as informações mais recentes sobre a [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [Windows Automation API: UI Automation](/windows/win32/winauto/entry-uiauto-win32) (API de Automação do Windows: Automação da Interface do Usuário).
 
-Esta visão geral descreve como usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para expor o conteúdo textual, incluindo atributos de formato e estilo, de controles de texto em plataformas com suporte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Esses controles incluem, entre outros, o Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox>, bem como seus equivalentes de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)].
+Esta visão geral descreve como usar [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] para expor o conteúdo textual, incluindo atributos de formato e estilo, de controles de texto em plataformas com suporte [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Esses controles incluem, entre outros, o Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> e <xref:System.Windows.Controls.RichTextBox>, bem como seus equivalentes do Win32.
 
 Expor o conteúdo textual de um controle é realizado por meio do uso do padrão de controle de <xref:System.Windows.Automation.TextPattern>, que representa o conteúdo de um contêiner de texto como um fluxo de texto. Por sua vez, <xref:System.Windows.Automation.TextPattern> requer o suporte da classe <xref:System.Windows.Automation.Text.TextPatternRange> para expor atributos de formato e estilo. o <xref:System.Windows.Automation.Text.TextPatternRange> dá suporte a <xref:System.Windows.Automation.TextPattern> ao representar trechos de texto contíguos ou múltiplos, separados em um contêiner de texto com uma coleção de pontos de extremidade <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> e <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>. <xref:System.Windows.Automation.Text.TextPatternRange> dá suporte a funcionalidades como seleção, comparação, recuperação e passagem.
 
@@ -143,7 +143,7 @@ Uma representação de um intervalo de texto, com pontos inicial e final, em um 
 <xref:System.Windows.Automation.Text.TextUnit>\
 Uma unidade de texto predefinida (caractere, palavra, linha ou parágrafo) usada para navegar por segmentos lógicos de um intervalo de texto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Padrões de controle de automação de interface do usuário para clientes](ui-automation-control-patterns-for-clients.md)
 - [Visão geral de padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md)

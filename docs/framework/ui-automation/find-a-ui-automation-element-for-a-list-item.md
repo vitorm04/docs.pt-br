@@ -9,12 +9,12 @@ helpviewer_keywords:
 - elements, finding for list items
 - UI Automation, finding elements for List items
 ms.assetid: c326ad2b-2144-4f64-ae4c-d850c74f95c5
-ms.openlocfilehash: 63181de26f7d8efda99d5b5d71b006cde44823a3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2474edf95bf598ba9284b5f6ac36a9e0af1317a1
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433554"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741760"
 ---
 # <a name="find-a-ui-automation-element-for-a-list-item"></a>Encontrar um Elemento de Automação de Interface de Usuário para um Item de Lista
 > [!NOTE]
@@ -25,11 +25,11 @@ ms.locfileid: "74433554"
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra duas maneiras de recuperar um item especificado de uma lista, um usando <xref:System.Windows.Automation.TreeWalker> e outro usando <xref:System.Windows.Automation.AutomationElement.FindAll%2A>.  
   
- A primeira técnica tende a ser mais rápida para controles de [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], mas a segunda é mais rápida para controles de Windows Presentation Foundation (WPF).  
+ A primeira técnica tende a ser mais rápida para controles do Win32, mas a segunda é mais rápida para controles de Windows Presentation Foundation (WPF).  
   
  [!code-csharp[UIAClient_snip#184](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#184)]
  [!code-vb[UIAClient_snip#184](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#184)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Obtendo elementos de automação de interface do usuário](obtaining-ui-automation-elements.md)

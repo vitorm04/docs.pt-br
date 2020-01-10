@@ -4,14 +4,12 @@ description: Saiba como transferir o conhecimento de um modelo TensorFlow existe
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-author: natke
-ms.author: nakersha
-ms.openlocfilehash: 952ce5c52bcd09b8c4e4e40d5ddf85835a26478d
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 5fe47c42d0cf24ebfdc33a937e1afbd11a976680
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204996"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738957"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>Tutorial: gerar um modelo de classificação de imagem ML.NET de um modelo de TensorFlow pré-treinado
 
@@ -37,9 +35,9 @@ O aprendizado de transferência é o processo de uso do conhecimento obtido ao r
 
 Para este tutorial, você usa parte de um modelo TensorFlow treinado para classificar imagens em mil categorias – em um modelo ML.NET que classifica imagens em três categorias.
 
-## <a name="prerequisites"></a>Pré-requisitos
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
-* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento de plataforma cruzada do .NET Core" instalada.
+* [Visual Studio 2017 versão 15,6 ou posterior](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) com a carga de trabalho "desenvolvimento multi-plataforma do .NET Core" instalada.
 * [O arquivo .ZIP do diretório de recursos do tutorial](https://github.com/dotnet/samples/blob/master/machine-learning/tutorials/TransferLearningTF/image-classifier-assets.zip)
 * [O modelo de machine learning do InceptionV1](https://storage.googleapis.com/download.tensorflow.org/models/inception5h.zip)
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - glyphs [WPF]
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
-ms.openlocfilehash: 2f7bb3fb4f28b063c78dde9f9f354b38a5e707f3
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 9af07d48877fee0e94f8e5fa2556c4361795df6a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581901"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740363"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>Introdução ao objeto GlyphRun e ao elemento de glifos
 Este tópico descreve o objeto <xref:System.Windows.Media.GlyphRun> e o elemento <xref:System.Windows.Documents.Glyphs>.  
@@ -31,14 +31,14 @@ Este tópico descreve o objeto <xref:System.Windows.Media.GlyphRun> e o elemento
   
     - Microsoft XPS Document Writer.  
   
-    - A saída de drivers de impressão anteriores é de aplicativos [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] para o formato fixo.  
+    - Drivers de impressora anteriores, saída de aplicativos Win32 para o formato fixo.  
   
     - Formato do spool de impressão.  
   
 3. Representação de documento de formato fixo, incluindo clientes para versões anteriores do Windows e outros dispositivos de computação.  
   
 > [!NOTE]
-> <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun> são projetados para cenários de impressão e de apresentação de documentos de formato fixo. o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece vários elementos para o layout geral e cenários de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], como <xref:System.Windows.Controls.Label> e <xref:System.Windows.Controls.TextBlock>. Para mais informações sobre layout e cenários [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], consulte [Tipografia no WPF](typography-in-wpf.md).  
+> <xref:System.Windows.Documents.Glyphs> e <xref:System.Windows.Media.GlyphRun> são projetados para cenários de impressão e apresentação de documentos de formato fixo. o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] fornece vários elementos para o layout geral e cenários de [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], como <xref:System.Windows.Controls.Label> e <xref:System.Windows.Controls.TextBlock>. Para mais informações sobre layout e cenários [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], consulte [Tipografia no WPF](typography-in-wpf.md).  
   
 <a name="text_glyphrunovw_glyphrunobject"></a>   
 ## <a name="the-glyphrun-object"></a>O Objeto GlyphRun  
@@ -46,7 +46,7 @@ Este tópico descreve o objeto <xref:System.Windows.Media.GlyphRun> e o elemento
   
  <xref:System.Windows.Media.GlyphRun> inclui os detalhes da fonte, como glifo <xref:System.Windows.Documents.Glyphs.Indices%2A> e posições de glifo individuais. Ele também inclui os pontos de código Unicode originais para os quais a execução foi gerada, informações de mapeamento de deslocamento de buffer de caractere para glifo e sinalizadores por caractere e por glifo.  
   
- <xref:System.Windows.Media.GlyphRun> tem uma <xref:System.Windows.FrameworkElement> de alto nível correspondente, <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> pode ser usada na árvore de elementos e na marcação [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para representar <xref:System.Windows.Media.GlyphRun> saída.  
+ <xref:System.Windows.Media.GlyphRun> tem uma <xref:System.Windows.FrameworkElement>de alto nível correspondente, <xref:System.Windows.Documents.Glyphs>. <xref:System.Windows.Documents.Glyphs> pode ser usada na árvore de elementos e na marcação [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] para representar <xref:System.Windows.Media.GlyphRun> saída.  
   
 <a name="text_glyphrunovw_glyphselement"></a>   
 ## <a name="the-glyphs-element"></a>O Elemento Glyphs  
@@ -93,7 +93,7 @@ Este tópico descreve o objeto <xref:System.Windows.Media.GlyphRun> e o elemento
   
  [!code-xaml[GlyphsOvwSamp2#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GlyphsOvwSamp2/CS/default.xaml#1)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Tipografia no WPF](typography-in-wpf.md)
 - [Documentos no WPF](documents-in-wpf.md)

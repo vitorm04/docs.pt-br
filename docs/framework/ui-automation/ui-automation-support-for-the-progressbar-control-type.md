@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ProgressBar control type
 - UI Automation, Progress Bar control type
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
-ms.openlocfilehash: 10b8ac8c47fd396f51b40cffc3547ea10cb7467b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: adad35dda464e5fcd47849228dbfae22938e3bf3
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801824"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741174"
 ---
 # <a name="ui-automation-support-for-the-progressbar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ProgressBar
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74801824"
   
  Os controles de barra de progresso são um exemplo de controles que implementam o tipo de controle ProgressBar. Os controles de barra de progresso são usados para indicar o progresso de uma operação demorada. O controle consiste em um retângulo que é gradualmente preenchido com a cor de realce do sistema conforme uma operação progride.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ProgressBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ProgressBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -79,7 +79,7 @@ ms.locfileid: "74801824"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.ProgressBar>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

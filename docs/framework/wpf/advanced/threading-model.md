@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: ae120311e7e58b34437de987e9f9a18e917043c0
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974081"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740274"
 ---
 # <a name="threading-model"></a>Modelo de threading
 O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] foi projetado para livrar os desenvolvedores das dificuldades de threading. Como resultado, a maioria dos [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] desenvolvedores não precisará escrever uma interface que use mais de um thread. Como os programas multi-threaded são complexos e difíceis de serem depurados, deve-se evitá-los quando existem soluções single-threaded.
@@ -203,7 +203,7 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
  É possível que `handler2` levará muito tempo processando esse evento. `handler2` pode usar <xref:System.Windows.Threading.Dispatcher.PushFrame%2A> para iniciar um loop de mensagem aninhado que não retorna por horas. Se `handler2` não marcar o evento como manipulado quando esse loop de mensagem for concluído, o evento será passado para a árvore, embora seja muito antigo.
 
 ### <a name="reentrancy-and-locking"></a>Reentrada e bloqueio
- O mecanismo de bloqueio do Common Language Runtime (CLR) não se comporta exatamente como alguém pode imaginar; uma delas pode esperar que um thread interrompa completamente a operação ao solicitar um bloqueio. Na realidade, o thread continua recebendo e processando mensagens de alta prioridade. Isso ajuda a impedir bloqueios e torna a interface minimamente dinâmica, mas introduz a possibilidade de bugs sutis.  A grande maioria do tempo que você não precisa saber nada a respeito disso, mas em circunstâncias raras (geralmente envolvendo [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] mensagens de janela ou componentes COM STA), vale a pena saber.
+ O mecanismo de bloqueio do Common Language Runtime (CLR) não se comporta exatamente como alguém pode imaginar; uma delas pode esperar que um thread interrompa completamente a operação ao solicitar um bloqueio. Na realidade, o thread continua recebendo e processando mensagens de alta prioridade. Isso ajuda a impedir bloqueios e torna a interface minimamente dinâmica, mas introduz a possibilidade de bugs sutis.  A grande maioria do tempo que você não precisa saber nada sobre isso, mas em circunstâncias raras (geralmente envolvendo mensagens de janela do Win32 ou componentes COM STA), vale a pena saber.
 
  A maioria das interfaces não é criada com a segurança de thread em mente porque os desenvolvedores trabalham sob a suposição de que um [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] nunca é acessado por mais de um thread. Nesse caso, esse único thread pode fazer alterações ambientais em tempos inesperados, causando os efeitos indesejados que o <xref:System.Windows.Threading.DispatcherObject> mecanismo de exclusão mútua deve resolver. Considere o seguinte pseudocódigo:
 
@@ -215,6 +215,6 @@ O [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
 
  A tarefa para [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] é evitar a reentrância inesperada sem reintroduzir o vazamento de memória, motivo pelo qual não bloqueamos a reentrância em todos os lugares.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Amostra de aplicativo single-threaded com um cálculo de execução longa](https://go.microsoft.com/fwlink/?LinkID=160038)

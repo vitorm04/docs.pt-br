@@ -18,19 +18,19 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-ms.openlocfilehash: e6c4baae854e5997b153e1363ca8ed4204e10e2b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 297bc3f9182e76523eda4d4be3112f4d1d7e3fee
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73085204"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741796"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Gerador de Imagens Nativas)
 
 O Gerador de Imagem Nativa (Ngen.exe) é uma ferramenta que melhora o desempenho de aplicativos gerenciados. Ngen.exe cria imagens nativas, que são arquivos que contém o código de máquina específico do processamento compilado e as instala no cache de imagem nativa do computador local. O runtime pode usar imagens nativas do cache em vez de usar o compilador JIT (Just-In-Time) para compilar o assembly original.
 
 > [!NOTE]
-> Ngen.exe compila imagens nativas para assemblies que visam somente o .NET Framework. O gerador de imagem nativa equivalente para o .NET Core é [CrossGen](https://github.com/dotnet/coreclr/blob/master/Documentation/building/crossgen.md). 
+> Ngen.exe compila imagens nativas para assemblies que visam somente o .NET Framework. O gerador de imagem nativa equivalente para o .NET Core é [CrossGen](https://github.com/dotnet/runtime/blob/master/docs/workflow/building/coreclr/crossgen.md).
 
 Alterações feitas em Ngen.exe no .NET Framework versão 4:
 
@@ -71,24 +71,24 @@ ngen action [options]
 ngen /? | /help
 ```
 
-## <a name="actions"></a>Ações
+## <a name="actions"></a>{1&gt;Ações&lt;1}
 
 A tabela a seguir mostra a sintaxe de cada `action`. Para obter descrições das partes individuais de um `action`, confira as tabelas [Argumentos](#ArgumentTable), [Níveis de Prioridade](#PriorityTable), [Cenários](#ScenarioTable) e [Configuração](#ConfigTable). A tabela [Opções](#OptionTable) descreve o `options` e as opções da ajuda.
 
-|Ação|Descrição|
+|Action|Descrição|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|Gere imagens nativas para um assembly e suas dependências e instale as imagens no cache de imagem nativa.<br /><br /> Se `/queue` for especificado, a ação será enfileirada para o serviço de imagem nativa. A prioridade padrão é 3. Confira a tabela [Níveis de Prioridade](#PriorityTable).|
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|Exclua as imagens nativas de um assembly e suas dependências do cache de imagem nativa.<br /><br /> Para desinstalar uma única imagem e suas dependências, use os mesmos argumentos de linha de comando que foram usados para instalar a imagem. **Observação:**  A partir do .NET Framework 4, a ação `uninstall` * não é mais suportada.|
 |`update` [`/queue`]|Atualize imagens nativas que se tornaram inválidas.<br /><br /> Se `/queue` for especificado, as atualizações serão enfileiradas para o serviço de imagem nativa. Como as atualizações estão sempre programadas na prioridade 3, elas são executadas quando o computador está ocioso.|
 |`display` [`assemblyName` &#124; `assemblyPath`]|Exiba o estado das imagens nativas para um assembly e suas dependências.<br /><br /> Se nenhum argumento for fornecido, tudo no cache de imagem nativa será exibido.|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> \- ou -<br /><br /> `eqi` [1&#124;2&#124;3]|Execute o trabalho de compilação enfileirado.<br /><br /> Se uma prioridade for especificada, trabalhos de compilação com prioridade maior ou igual serão executados. Se nenhuma prioridade for especificada, todos os trabalhos de compilação enfileirados serão executados.|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - ou -<br /><br /> `eqi` [1&#124;2&#124;3]|Execute o trabalho de compilação enfileirado.<br /><br /> Se uma prioridade for especificada, trabalhos de compilação com prioridade maior ou igual serão executados. Se nenhuma prioridade for especificada, todos os trabalhos de compilação enfileirados serão executados.|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|Pause o serviço de imagem nativa, deixe o serviço pausado continuar ou consulte o status do serviço.|
 
 <a name="ArgumentTable"></a>
 
 ## <a name="arguments"></a>Arguments
 
-|Argumento|Descrição|
+|Argument|Descrição|
 |--------------|-----------------|
 |`assemblyName`|O nome para exibição completo do assembly. Por exemplo, `"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"`. **Observação:** é possível fornecer um nome de assembly parcial, por exemplo, `myAssembly` para as ações `display` e `uninstall`. <br /><br /> Somente um assembly pode ser especificado por linha de comando de Ngen.exe.|
 |`assemblyPath`|O caminho explícito do assembly. É possível especificar um caminho completo ou relativo.<br /><br /> Se você especificar um nome de arquivo sem um caminho, o assembly deverá estar localizado no diretório atual.<br /><br /> Somente um assembly pode ser especificado por linha de comando de Ngen.exe.|
@@ -117,7 +117,7 @@ A tabela a seguir mostra a sintaxe de cada `action`. Para obter descrições das
 
 ## <a name="config"></a>Config
 
-|Configuração|Descrição|
+|Configuração do|Descrição|
 |-------------------|-----------------|
 |`/ExeConfig:` `exePath`|Use a configuração do assembly executável especificado.<br /><br /> Ngen.exe precisa tomar as mesmas decisões do carregador durante a associação a dependências. Quando um componente compartilhado é carregado no tempo de execução, usando-se o método <xref:System.Reflection.Assembly.Load%2A>, o arquivo de configuração do aplicativo determina as dependências carregadas para o componente compartilhado — por exemplo, a versão de uma dependência carregada. A opção `/ExeConfig` dá a Ngen.exe orientações sobre quais dependências seriam carregadas no tempo de execução.|
 |`/AppBase:` `directoryPath`|Para localizar dependências, use o diretório especificado como a base do aplicativo.|
@@ -202,7 +202,7 @@ Nesta seção Observações:
 
 Depois que você tiver gerado uma imagem nativa para um assembly, o runtime tenta localizar e usar automaticamente essa imagem nativa sempre que executa o assembly. Várias imagens podem ser geradas, dependendo dos cenários de uso.
 
-Por exemplo, se você executar um assembly em um cenário de depuração ou de criação de perfil, o tempo de execução procurará uma imagem nativa gerada com as opções `/Debug` ou `/Profile`. Caso ele não consiga encontrar uma imagem nativa correspondente, o runtime é revertido para a compilação JIT padrão. A única maneira de depurar imagens nativas é criando uma imagem nativa com a opção `/Debug`.
+Por exemplo, se você executar um assembly em um cenário de depuração ou de criação de perfil, o runtime procurará uma imagem nativa gerada com as opções `/Debug` ou `/Profile`. Caso ele não consiga encontrar uma imagem nativa correspondente, o runtime é revertido para a compilação JIT padrão. A única maneira de depurar imagens nativas é criando uma imagem nativa com a opção `/Debug`.
 
 Como a ação `uninstall` também reconhece cenários, é possível desinstalar todos os cenários ou apenas os cenários selecionados.
 
@@ -635,9 +635,9 @@ Depois de iniciado pela execução de um comando Ngen.exe que inclui a opção `
 
 No .NET Framework versão 2.0, a única interação com o serviço de imagem nativa ocorre por meio da ferramenta de linha de comando Ngen.exe. Use a ferramenta de linha de comando em scripts de instalação para enfileirar ações para o serviço de imagem nativa e para interagir com o serviço.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Ferramentas](index.md)
 - [Processo de execução gerenciada](../../standard/managed-execution-process.md)
-- [Como o tempo de execução localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
+- [Como o runtime localiza assemblies](../deployment/how-the-runtime-locates-assemblies.md)
 - [Prompts de Comando](developer-command-prompt-for-vs.md)

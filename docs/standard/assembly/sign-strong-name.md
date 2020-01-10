@@ -11,17 +11,17 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: c9ddbcf8f7b6307ab2d89b819aee4809f753a0fe
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64f3a51b29a7116c736fea0e76465a4a73c640c2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138607"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738775"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Como assinar um assembly com um nome forte
 
 > [!NOTE]
-> Embora o .NET Core dê suporte a assemblies de nome forte e todos os assemblies na biblioteca do .NET Core sejam assinados, a maioria dos assemblies de terceiros não precisa de nomes fortes. Para obter mais informações, consulte [assinatura de nome forte](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) no github.
+> Embora o .NET Core dê suporte a assemblies de nome forte e todos os assemblies na biblioteca do .NET Core sejam assinados, a maioria dos assemblies de terceiros não precisa de nomes fortes. Para obter mais informações, consulte [assinatura de nome forte](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) no github.
 
 Há vários modos de assinar um assembly com um nome forte:  
   
@@ -52,9 +52,9 @@ Há vários modos de assinar um assembly com um nome forte:
   
 No [prompt de comando do desenvolvedor para o Visual Studio](../../framework/tools/developer-command-prompt-for-vs.md), digite o seguinte comando:  
 
-**al** **/out:** \<*assemblyName*>  *\<moduleName>* **/keyfile:** \<*keyfileName*>  
+**Al** **/out:** \<*assemblyName*>  *\<ModuleName >* **/keyfile:** \<*fileFileName*>  
 
-Sendo que:  
+Em que:  
 
 - *AssemblyName* é o nome do assembly com assinatura forte (um arquivo *. dll* ou *. exe* ) que o vinculador de assembly emitirá.  
   
@@ -107,7 +107,7 @@ O exemplo a seguir usa C# o compilador e assina o assembly *UtilityLibrary. dll*
 csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
 ```  
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Criar e usar assemblies de nome forte](create-use-strong-named.md)
 - [Como criar um par de chaves pública/privada](create-public-private-key-pair.md)

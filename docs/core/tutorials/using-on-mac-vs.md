@@ -1,19 +1,17 @@
 ---
-title: Introdução ao .NET Core no macOS, usando o Visual Studio para Mac
+title: Introdução ao .NET Core usando o Visual Studio para Mac
 description: Este tópico explica como compilar um aplicativo de console simples usando o Visual Studio para Mac e o .NET Core.
-author: mairaw
-ms.date: 07/11/2019
-ms.custom: seodec18
-ms.openlocfilehash: feaed88e902080c5c3b07578b78f8437489a690c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.date: 12/19/2019
+ms.openlocfilehash: 4cd7e311411bce62698e291e763227496877ea39
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428589"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740486"
 ---
 # <a name="get-started-with-net-core-on-macos-using-visual-studio-for-mac"></a>Introdução ao .NET Core no macOS, usando o Visual Studio para Mac
 
-O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) completo para desenvolver aplicativos .NET Core. Este tópico explica como compilar um aplicativo de console simples usando o Visual Studio para Mac e o .NET Core.
+O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) completo para desenvolver aplicativos .NET Core. Este artigo orienta você pela criação de um aplicativo de console simples usando o Visual Studio para Mac e o .NET Core.
 
 > [!NOTE]
 > Seus comentários são muito importantes. Há duas maneiras de enviar comentários à equipe de desenvolvimento no Visual Studio para Mac:
@@ -21,9 +19,9 @@ O Visual Studio para Mac fornece um IDE (Ambiente de desenvolvimento integrado) 
 > * No Visual Studio para Mac, escolha **Ajuda** > **Relatar um Problema** no menu, ou **Relatar um Problema** na tela de boas-vindas. Isso abrirá uma janela para registrar um relatório de bugs. Você pode acompanhar seus comentários no portal [Developer Community (Comunidade do Desenvolvedor)](https://developercommunity.visualstudio.com/spaces/8/index.html).
 > * Para fazer uma sugestão, escolha **Ajuda** > **Forneça uma Sugestão** no menu ou **Forneça uma Sugestão** na tela de boas-vindas. Isso levará você até a página da Web da [Comunidade de Desenvolvedores do Visual Studio para Mac](https://developercommunity.visualstudio.com/content/idea/post.html?space=41).
 
-## <a name="prerequisites"></a>{1&gt;Pré-requisitos&lt;1}
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
-Consulte o tópico [dependências e requisitos do .NET Core](../install/dependencies.md?tabs=netcore30&pivots=os-macos) .
+Consulte o artigo [dependências e requisitos do .NET Core](../install/dependencies.md?pivots=os-macos) .
 
 Verifique o artigo de [suporte do .NET Core](/visualstudio/mac/net-core-support) para garantir que você esteja usando uma versão com suporte do .NET Core.
 
@@ -35,7 +33,7 @@ Baixe o [Instalador do Visual Studio para Mac](https://visualstudio.microsoft.co
 
 ## <a name="creating-a-project"></a>Criar um projeto
 
-1. Escolha **Novo** na Janela de Início.
+1. Selecione **novo** na janela iniciar.
 
    ![O botão Novo na tela de Boas-vindas do Visual Studio para Mac](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 

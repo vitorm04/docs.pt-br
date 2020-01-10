@@ -5,19 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: ab6ff2ba6e0f3f1ea9e34de80b67276a990bc83b
-ms.sourcegitcommit: 3ac05b2c386c8cc5e73f4c7665f6c0a7ed3da1bd
+ms.openlocfilehash: 6143cf835cc44a6c6cc50372b2ac1a4d24d65311
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71151842"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740387"
 ---
 # <a name="cleartype-registry-settings"></a>Configurações do Registro de ClearType
 Este tópico fornece uma visão geral das configurações do registro do Microsoft ClearType que são usadas por aplicativos do WPF.  
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>Visão geral da tecnologia  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]os aplicativos que renderizam texto para um dispositivo de vídeo usam recursos de ClearType para fornecer uma experiência de leitura aprimorada. O ClearType é uma tecnologia de software desenvolvida pela Microsoft que melhora a legibilidade do texto em LCDs existentes (monitores Liquid Crystal), como telas de laptops, telas de Pocket PC e monitores de tela plana. O ClearType funciona acessando os elementos da faixa de cor vertical individual em cada pixel de uma tela de LCD. Para obter mais informações sobre ClearType, consulte [visão geral de ClearType](cleartype-overview.md).  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos que processam texto para um dispositivo de vídeo usam recursos de ClearType para fornecer uma experiência de leitura aprimorada. O ClearType é uma tecnologia de software desenvolvida pela Microsoft que melhora a legibilidade do texto em LCDs existentes (monitores Liquid Crystal), como telas de laptops, telas de Pocket PC e monitores de tela plana. O ClearType funciona acessando os elementos da faixa de cor vertical individual em cada pixel de uma tela de LCD. Para obter mais informações sobre ClearType, consulte [visão geral de ClearType](cleartype-overview.md).  
   
  O texto que é processado com ClearType pode parecer significativamente diferente quando exibido em vários dispositivos de vídeo. Por exemplo, um pequeno número de monitores implementam os elementos de faixas de cores na ordem azul, verde e vermelha em vez da ordem mais comum de vermelho, verde, azul (RGB).  
   
@@ -27,7 +27,7 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Configurações do registro  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Especifica quatro configurações do registro para controlar os recursos de ClearType:  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] especifica quatro configurações do registro para controlar os recursos de ClearType:  
   
 |Configuração|Descrição|  
 |-------------|-----------------|  
@@ -36,12 +36,12 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
 |Estrutura de Pixel|Descreve a disposição dos pixels para um dispositivo de vídeo.|  
 |Nível de contraste do texto|Descreve o nível de contraste para o texto exibido.|  
   
- Essas configurações podem ser acessadas por um utilitário de configuração externo que sabe como referenciar as configurações de registro de ClearType identificadas [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o editor do registro do Windows.  
+ Essas configurações podem ser acessadas por um utilitário de configuração externo que sabe como referenciar as configurações de registro [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType identificadas. Essas configurações também podem ser criadas ou modificadas acessando os valores diretamente usando o editor do registro do Windows.  
   
- Se as [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]configurações do registro ClearType não estiverem definidas (que é o estado padrão), [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] o aplicativo consultará as informações de parâmetros do sistema do Windows para configurações de suavização de fontes.  
+ Se as configurações do registro [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ClearType não estiverem definidas (que é o estado padrão), o aplicativo [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] consultará as informações de parâmetros do sistema do Windows para configurações de suavização de fontes.  
   
 > [!NOTE]
-> Para obter informações sobre como enumerar nomes de dispositivos de `SystemParametersInfo` exibição, consulte a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
+> Para obter informações sobre como enumerar nomes de dispositivos de exibição, consulte a `SystemParametersInfo`função do Win32.  
   
 <a name="ClearType_level"></a>   
 ## <a name="cleartype-level"></a>Nível de ClearType  
@@ -54,12 +54,12 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
   
  `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Para cada nome de dispositivo de exibição para um usuário `ClearTypeLevel` , um valor DWORD é definido. A captura de tela a seguir mostra a configuração do editor do registro para o nível ClearType.  
+ Para cada nome de dispositivo de exibição para um usuário, um valor de `ClearTypeLevel` DWORD é definido. A captura de tela a seguir mostra a configuração do editor do registro para o nível ClearType.  
   
  ![Configurações de ClearType no editor do registro.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
-> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]os aplicativos renderizam o texto em um dos dois modos, com e sem ClearType. Quando o texto é renderizado sem ClearType, ele é referido como renderização de escala cinza.  
+> [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplicativos renderizam o texto em um dos dois modos, com e sem ClearType. Quando o texto é renderizado sem ClearType, ele é referido como renderização de escala cinza.  
   
 <a name="gamma_level"></a>   
 ## <a name="gamma-level"></a>Nível de Gama  
@@ -72,7 +72,7 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Para cada nome de dispositivo de exibição para um usuário `GammaLevel` , um valor DWORD é definido. A captura de tela a seguir mostra a configuração do Editor do Registro para o nível de gama.  
+ Para cada nome de dispositivo de exibição para um usuário, um valor de `GammaLevel` DWORD é definido. A captura de tela a seguir mostra a configuração do Editor do Registro para o nível de gama.  
   
  ![Configurações de nível de gama ClearType no editor do registro](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
@@ -80,7 +80,7 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
 ## <a name="pixel-structure"></a>Estrutura de pixel  
  A estrutura de pixel descreve o tipo de pixels que compõem um dispositivo de vídeo. A estrutura de pixel é definida como um de três tipos:  
   
-|Tipo|Valor|Descrição|  
+|{1&gt;Tipo&lt;1}|Value|Descrição|  
 |----------|-----------|-----------------|  
 |Plano|0|O dispositivo de vídeo não tem uma estrutura de pixel. Isso significa que as fontes de luz para cada cor são distribuídas igualmente na área de pixel — isso é conhecido como renderização em escala de cinza. É assim que um dispositivo de vídeo padrão funciona. ClearType nunca é aplicado ao texto renderizado.|  
 |RGB|1|O dispositivo de vídeo tem pixels que consistem em três faixas na seguinte ordem: vermelho, verde e azul. ClearType é aplicado ao texto renderizado.|  
@@ -89,14 +89,14 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
  A estrutura de pixel corresponde a um valor inteiro que vai de 0 a 2. O nível padrão é 0, que representa uma estrutura de pixel plana.  
   
 > [!NOTE]
-> Para obter informações sobre como enumerar nomes de dispositivos de `EnumDisplayDevices` exibição, consulte a [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] função.  
+> Para obter informações sobre como enumerar nomes de dispositivos de exibição, consulte a `EnumDisplayDevices`função do Win32.  
   
 ### <a name="registry-setting"></a>Configuração do Registro  
  A localização da configuração do Registro para a estrutura de pixel é uma configuração do computador local que corresponde a um nome de dispositivo de vídeo específico:  
   
  `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Avalon.Graphics\<displayName>`  
   
- Para cada nome de dispositivo de exibição para um usuário `PixelStructure` , um valor DWORD é definido. A captura de tela a seguir mostra a configuração do Editor do Registro para a estrutura de pixel.  
+ Para cada nome de dispositivo de exibição para um usuário, um valor de `PixelStructure` DWORD é definido. A captura de tela a seguir mostra a configuração do Editor do Registro para a estrutura de pixel.  
   
  ![Configurações de nível de gama ClearType no editor do registro](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
@@ -109,11 +109,11 @@ Este tópico fornece uma visão geral das configurações do registro do Microso
   
  `HKEY_CURRENT_USER\Software\Microsoft\Avalon.Graphics\<displayName>`  
   
- Para cada nome de dispositivo de exibição para um usuário `TextContrastLevel` , um valor DWORD é definido. A captura de tela a seguir mostra a configuração do Editor do Registro para o nível de contraste do texto.  
+ Para cada nome de dispositivo de exibição para um usuário, um valor de `TextContrastLevel` DWORD é definido. A captura de tela a seguir mostra a configuração do Editor do Registro para o nível de contraste do texto.  
   
  ![Configurações de ClearType no editor do registro.](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de ClearType](cleartype-overview.md)
 - [Suavização de ClearType](/windows/desktop/gdi/cleartype-antialiasing)

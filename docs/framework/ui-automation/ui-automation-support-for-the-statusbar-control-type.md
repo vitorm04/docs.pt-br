@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Status Bar control type
 - control types, Status Bar
 ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
-ms.openlocfilehash: a0cca769c9b305d4b59663a85a0de2262597022b
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: dde84c7550621eed350986b55739106a3ce9e7f4
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801765"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741510"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle StatusBar
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74801765"
   
  Um controle barra de status exibe informações sobre um objeto que está sendo exibido em uma janela de um aplicativo, o componente do objeto ou informações contextuais relacionadas à operação desse objeto em seu aplicativo.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle StatusBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de barra de status, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle StatusBar. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de barra de status, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -72,7 +72,7 @@ ms.locfileid: "74801765"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.StatusBar>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

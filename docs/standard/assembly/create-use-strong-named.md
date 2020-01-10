@@ -1,5 +1,5 @@
 ---
-title: Criar e usar ssemblies de nome forte
+title: Criar e usar assemblies com nome forte
 ms.date: 08/19/2019
 helpviewer_keywords:
 - strong-name bypass feature
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 - assembly binding, strong-named
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
-ms.openlocfilehash: 700eca16e7755823456c3e3ace17eb5e6b3526ac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18a0b7d657290835a34c705513d0d7a4ccbfc61c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122505"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738676"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>Criar e usar assemblies com nome forte
 
@@ -29,7 +29,7 @@ Um nome forte consiste na identidade do assembly — seu nome de texto simples, 
 Assembly de nome forte só pode usar tipos de outros assemblies de nome forte. Caso contrário, a integridade do assembly de nome forte estaria comprometida.
 
 > [!NOTE]
-> Embora o .NET Core dê suporte a assemblies de nome forte e todos os assemblies na biblioteca do .NET Core sejam assinados, a maioria dos assemblies de terceiros não precisa de nomes fortes. Para obter mais informações, consulte [assinatura de nome forte](https://github.com/dotnet/corefx/blob/master/Documentation/project-docs/strong-name-signing.md) no github.
+> Embora o .NET Core dê suporte a assemblies de nome forte e todos os assemblies na biblioteca do .NET Core sejam assinados, a maioria dos assemblies de terceiros não precisa de nomes fortes. Para obter mais informações, consulte [assinatura de nome forte](https://github.com/dotnet/runtime/blob/master/docs/project/strong-name-signing.md) no github.
 
 ## <a name="strong-name-scenario"></a>Cenário de nome forte
 
@@ -68,7 +68,7 @@ Esse recurso pode ser desabilitado para aplicativos individuais ou para um compu
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
 |[Como criar um par de chaves pública/privada](create-public-private-key-pair.md)|Descreve como criar um par de chaves de criptografia para assinar um assembly.|
 |[Como assinar um assembly com um nome forte](sign-strong-name.md)|Descreve como criar um assembly de nome forte.|

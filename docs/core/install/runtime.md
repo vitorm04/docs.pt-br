@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a45cb570ccf572a699359598319fd3867fb5e5dd
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340954"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740597"
 ---
 # <a name="install-the-net-core-runtime"></a>Instalar o tempo de execução do .NET Core
 
@@ -97,7 +97,7 @@ Os [scripts dotnet-install](../tools/dotnet-install-script.md) são usados para 
 O script assume como padrão a instalação da versão mais recente do [LTS (suporte a longo prazo)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) , que é o .net Core 3,1. Você pode escolher uma versão específica especificando a opção `current`. Inclua a opção `runtime` para instalar um tempo de execução. Caso contrário, o script instalará o [SDK](sdk.md).
 
 ```bash
-./dotnet-install.sh --current 3.1 --runtime aspnetcore
+./dotnet-install.sh --channel 3.1 --runtime aspnetcore
 ```
 
 > [!NOTE]

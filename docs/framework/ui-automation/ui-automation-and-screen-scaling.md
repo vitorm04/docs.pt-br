@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: ceab7db1f9eeb47ec020e220ec702af8181855e2
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 645c44998812453008fc91d5cf4b8463c51bef9a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442484"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741730"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automação da Interface do Usuário e Escala da Tela
 > [!NOTE]
@@ -58,14 +58,14 @@ A partir do Windows Vista, o Windows permite que os usuários alterem a configur
   
  A solução está em duas partes.  
   
-1. Primeiro, torne o reconhecimento de DPI do aplicativo cliente. Para fazer isso, chame a função [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `SetProcessDPIAware` na inicialização. No código gerenciado, a declaração a seguir torna essa função disponível.  
+1. Primeiro, torne o reconhecimento de DPI do aplicativo cliente. Para fazer isso, chame a função do Win32 `SetProcessDPIAware` na inicialização. No código gerenciado, a declaração a seguir torna essa função disponível.  
   
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
      Essa função faz com que todo o processo reconheça o DPI, o que significa que todas as janelas que pertencem ao processo não são dimensionadas. No [exemplo de realce](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter), por exemplo, as quatro janelas que compõem o retângulo de realce estão localizadas nas coordenadas físicas obtidas da automação da interface do usuário, não nas coordenadas lógicas. Se o exemplo não tiver reconhecimento de DPI, o realce seria desenhado nas coordenadas lógicas na área de trabalho, o que resultaria em um posicionamento incorreto em um ambiente diferente de 96 dpi.  
   
-2. Para obter as coordenadas do cursor, chame a função [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `GetPhysicalCursorPos`. O exemplo a seguir mostra como declarar e usar essa função.  
+2. Para obter as coordenadas do cursor, chame a função do Win32 `GetPhysicalCursorPos`. O exemplo a seguir mostra como declarar e usar essa função.  
   
      [!code-csharp[UIAClient_snip#185](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAClient_snip/CSharp/ClientForm.cs#185)]
      [!code-vb[UIAClient_snip#185](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#185)]  
@@ -73,8 +73,8 @@ A partir do Windows Vista, o Windows permite que os usuários alterem a configur
 > [!CAUTION]
 > Não use <xref:System.Windows.Forms.Cursor.Position%2A?displayProperty=nameWithType>. O comportamento dessa propriedade fora das janelas cliente em um ambiente dimensionado é indefinido.  
   
- Se seu aplicativo executa comunicação direta entre processos com aplicativos que não reconhecem dpi, você pode ter convertido entre coordenadas lógicas e físicas usando as funções [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] `PhysicalToLogicalPoint` e `LogicalToPhysicalPoint`.  
+ Se seu aplicativo executa comunicação direta entre processos com aplicativos que não reconhecem dpi, você pode ter convertido entre coordenadas lógicas e físicas usando as funções do Win32 `PhysicalToLogicalPoint` e `LogicalToPhysicalPoint`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Exemplo de realçador](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

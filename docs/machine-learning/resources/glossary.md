@@ -1,15 +1,14 @@
 ---
 title: Glossário de aprendizado de máquina
 description: Um glossário de termos essenciais sobre o aprendizado de máquina, que são úteis ao criar seus modelos personalizados no ML.NET.
-ms.custom: seodec18
 ms.topic: reference
 ms.date: 07/31/2019
-ms.openlocfilehash: bd4f2db701f537d5c87529115a6bd44035432534
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977295"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739880"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Glossário de aprendizado de máquina com termos importantes
 
@@ -57,7 +56,7 @@ Os dados são essenciais para qualquer aplicativo de aprendizado de máquina. No
 
 Uma classe em ML.NET que implementa a interface <xref:Microsoft.ML.IEstimator%601>.
 
-Um estimador é uma especificação de uma transformação (transformação de preparação de dados e transformação de treinamento do modelo de machine learning). Estimadores podem ser encadeados em um pipeline de transformações. Os parâmetros de um estimador ou pipeline de estimadores são aprendidos quando <xref:Microsoft.ML.IEstimator`1.Fit*> é chamado. O resultado de <xref:Microsoft.ML.IEstimator`1.Fit*> é um [Transformador](#transformer).
+Um estimador é uma especificação de uma transformação (transformação de preparação de dados e transformação de treinamento do modelo de machine learning). Estimadores podem ser encadeados em um pipeline de transformações. Os parâmetros de um estimador ou pipeline de estimadores são aprendidos quando <xref:Microsoft.ML.IEstimator%601.Fit%2A> é chamado. O resultado de <xref:Microsoft.ML.IEstimator%601.Fit%2A> é um [Transformador](#transformer).
 
 ## <a name="extension-method"></a>Método de extensão
 
@@ -73,7 +72,7 @@ Uma propriedade mensurável do fenômeno que está sendo medido, normalmente um 
 
 A engenharia de recursos é o processo que envolve a definição de um conjunto de [recursos](#feature) e o desenvolvimento de software que produz vetores de recursos a partir de dados de fenômenos disponíveis, ou seja, a extração de recursos. Para obter mais informações, consulte o artigo [Engenharia de recursos](https://en.wikipedia.org/wiki/Feature_engineering) na Wikipédia.
 
-## <a name="f-score"></a>F-score
+## <a name="f-score"></a>Classificação de F
 
 Na [classificação](#classification), uma métrica de avaliação que equilibra [precisão](#precision) e [recall](#recall).
 
@@ -81,7 +80,7 @@ Na [classificação](#classification), uma métrica de avaliação que equilibra
 
 Um parâmetro de um algoritmo de aprendizado de máquina. Os exemplos incluem o número de árvores a serem aprendidas em uma floresta de decisão ou o tamanho da etapa em um algoritmo descendente de gradiente. Os valores de *Hiperparâmetros* são definidos antes de treinar o modelo e controlar o processo de localização dos parâmetros da função de previsão, por exemplo, os pontos de comparação em uma árvore de decisão ou os pesos em um modelo de regressão linear. Para obter mais informações, consulte o artigo [Hiperparâmetro](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) na Wikipédia.
 
-## <a name="label"></a>Rotular
+## <a name="label"></a>Rótulo
 
 O elemento a ser previsto com o modelo de aprendizado de máquina. Por exemplo, a raça do cão ou um preço futuro da ação.
 
@@ -123,7 +122,7 @@ Um vetor de [recurso](#feature) consistindo apenas em valores numéricos. Simila
 
 Todas as operações necessárias para ajustar um modelo a um conjunto de dados. Um pipeline consiste em etapas de importação, transformação, personalização e aprendizado de dados. Uma vez que um pipeline é treinado, ele se torna um modelo.
 
-## <a name="precision"></a>Precisão
+## <a name="precision"></a>Precision
 
 Na [classificação](#classification), a precisão de uma classe é o número de itens preditos corretamente como pertencentes a essa classe dividido pelo número total de itens previstos como pertencentes à classe.
 
@@ -146,7 +145,7 @@ Uma tarefa de [aprendizado de máquina supervisionado](#supervised-machine-learn
 
 Na [regressão](#regression), uma métrica de avaliação que é a soma de todos os erros absolutos dividida pela soma das distâncias entre os valores de [rótulo](#label) corretos e a média de todos os valores de rótulo corretos.
 
-## <a name="relative-squared-error"></a>Erro quadrático relativo
+## <a name="relative-squared-error"></a>Erro ao quadrado relativo
 
 Na [regressão](#regression), uma métrica de avaliação que é a soma de todos os erros absolutos quadráticos dividida pela soma das distâncias quadráticas entre os valores de [rótulo](#label) corretos e a média de todos os valores de rótulo corretos.
 
@@ -154,7 +153,7 @@ Na [regressão](#regression), uma métrica de avaliação que é a soma de todos
 
 Na [regressão](#regression), uma métrica de avaliação que é a raiz quadrada da média dos quadrados dos erros.
 
-## <a name="scoring"></a>Classificação
+## <a name="scoring"></a>Pontuação
 
 A pontuação é o processo de aplicar novos dados a um modelo de machine learning treinado e gerar previsões. A pontuação também é conhecida como inferência. Dependendo do tipo de modelo, a pontuação pode ser um valor bruto, uma probabilidade ou uma categoria.
 

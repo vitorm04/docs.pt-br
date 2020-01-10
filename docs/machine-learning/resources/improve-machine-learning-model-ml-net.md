@@ -1,16 +1,16 @@
 ---
-title: 'Como fazer: Melhorar a precisão do modelo'
+title: 'Como: melhorar a precisão do modelo'
 description: Saiba como melhorar a precisão do modelo
 ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
-ms.openlocfilehash: 8bb47102ede8e135090b1381eb815dccd512e03d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
-ms.translationtype: HT
+ms.openlocfilehash: 8f3b283de378a37bfe429688207ea9fb52f9ca7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557791"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739577"
 ---
 # <a name="improve-mlnet-model-accuracy"></a>Melhorar a precisão do modelo do ML.NET
 
@@ -32,7 +32,7 @@ O significado de um único ponto de dados pode ser difícil de interpretar. Cria
 
 Embora mais exemplos de dados e recursos possam ajudar a melhorar a precisão do modelo, também podem introduzir ruído, já que nem todos os dados e recursos são significativos. Portanto, é importante entender quais recursos são os que mais afetam as decisões tomadas pelo algoritmo. Usar técnicas como PFI (Importância de Recurso de Permutação) pode ajudar a identificar os principais recursos, e não apenas ajudar a explicar o modelo, como também usar a saída como um método de seleção de recurso para reduzir a quantidade de recursos com ruídos que entram no processo de treinamento.
 
-Saiba como usar PFI acessando o seguinte [link](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md)
+Para obter mais informações sobre como usar o PFI, consulte [explicar previsões de modelo usando a importância do recurso de permuta](../how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md).
 
 ## <a name="cross-validation"></a>Validação cruzada
 

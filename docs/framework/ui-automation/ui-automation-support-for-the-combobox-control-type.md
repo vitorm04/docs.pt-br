@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Combo Box control type
 - ComboBox controls
 ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
-ms.openlocfilehash: eea5068fa5e5e9401a8197c1be9e14f8064b1aa4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6cdabc3b8d55f6f1b4568b513cbb812e043db689
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441091"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741696"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle ComboBox
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74441091"
   
  Uma caixa de combinação é uma caixa de listagem combinada com um controle estático ou um controle de edição que exibe o item atualmente selecionado na parte da caixa de listagem da caixa de combinação. A parte da caixa de listagem do controle é exibida sempre ou só aparece quando o usuário seleciona a seta suspensa (que é um botão de ação) ao lado do controle. Se o campo de seleção for um controle de edição, o usuário poderá inserir informações que não estejam na lista; caso contrário, o usuário só poderá selecionar itens na lista.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ComboBox. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de caixa de combinação, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle ComboBox. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de caixa de combinação, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -37,7 +37,7 @@ ms.locfileid: "74441091"
 ## <a name="required-ui-automation-properties"></a>Propriedades de automação da interface do usuário necessárias  
  A tabela a seguir lista as propriedades de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cujo valor ou definição é especialmente relevante para os controles de caixa de combinação. Para obter mais informações sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Propriedades, consulte [Propriedades de automação da interface do usuário para clientes](ui-automation-properties-for-clients.md).  
   
-|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valor|Observações|  
+|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|{1&gt;Observações&lt;1}|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Consulte observações.|O valor dessa propriedade precisa ser exclusivo em todos os controles em um aplicativo.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Consulte observações.|O retângulo mais externo que contém o controle inteiro.|  
@@ -55,28 +55,28 @@ ms.locfileid: "74441091"
 ## <a name="required-ui-automation-control-patterns"></a>Padrões de controle de automação da interface do usuário necessários  
  A tabela a seguir lista os padrões de controle de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necessários para serem suportados por todos os controles de caixa de combinação. Para obter mais informações sobre padrões de controle, consulte [visão geral dos padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md).  
   
-|Padrão de controle|Suporte|Observações|  
+|Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Sim|O controle caixa de combinação sempre deve conter o botão suspenso para ser uma caixa de combinação.|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|Sim|Exibe a seleção atual na caixa de combinação. Esse suporte é delegado à caixa de listagem abaixo da caixa de combinação.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider>|Dependem|Se a caixa de combinação tiver a capacidade de obter valores de texto arbitrários, o padrão de valor deverá ser suportado. Esse padrão fornece a capacidade de definir programaticamente o conteúdo da cadeia de caracteres da caixa de combinação. Se não houver suporte para o padrão de valor, isso indica que o usuário deve fazer uma seleção a partir dos itens da lista na subárvore da caixa de combinação.|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider>|Nunca|O padrão de rolagem nunca é suportado em uma caixa de combinação diretamente. Haverá suporte se uma caixa de listagem contida em uma caixa de combinação puder ser rolada. Ele só pode ter suporte quando a caixa de listagem estiver visível na tela.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider>|Depende|Se a caixa de combinação tiver a capacidade de obter valores de texto arbitrários, o padrão de valor deverá ser suportado. Esse padrão fornece a capacidade de definir programaticamente o conteúdo da cadeia de caracteres da caixa de combinação. Se não houver suporte para o padrão de valor, isso indica que o usuário deve fazer uma seleção a partir dos itens da lista na subárvore da caixa de combinação.|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider>|{1&gt;Nunca&lt;1}|O padrão de rolagem nunca é suportado em uma caixa de combinação diretamente. Haverá suporte se uma caixa de listagem contida em uma caixa de combinação puder ser rolada. Ele só pode ter suporte quando a caixa de listagem estiver visível na tela.|  
   
 <a name="Required_Events"></a>   
 ## <a name="required-events"></a>Eventos necessários  
  A tabela a seguir lista os eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necessários para serem suportados por todos os controles de caixa de combinação. Para obter mais informações sobre eventos, consulte [visão geral dos eventos de automação da interface do usuário](ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte|Observações|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessária|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessária|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessária|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessária|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessária|Nenhum|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Necessária|Nenhum|  
-|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Dependem|Se o controle der suporte ao padrão de valor, ele deverá dar suporte a esse evento.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.ValuePatternIdentifiers.ValueProperty> evento de alteração de propriedade.|Depende|Se o controle der suporte ao padrão de valor, ele deverá dar suporte a esse evento.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.ComboBox>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

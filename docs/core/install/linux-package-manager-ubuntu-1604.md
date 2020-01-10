@@ -4,12 +4,12 @@ description: Use um Gerenciador de pacotes para instalar SDK do .NET Core e temp
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 77033e327349e7543148dab27f7229c69de4aa1c
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: eae847232f5f89e81acfb90027c555d8ccd1a0b8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959735"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740635"
 ---
 # <a name="ubuntu-1604-package-manager---install-net-core"></a>Gerenciador de pacotes do Ubuntu 16, 4 – instalar o .NET Core
 
@@ -21,9 +21,9 @@ Este artigo descreve como usar um Gerenciador de pacotes para instalar o .NET Co
 
 Antes de instalar o .NET, você precisará:
 
-- Registrar a chave da Microsoft
-- registrar o repositório do produto
-- Instalar dependências necessárias
+- Registre a chave da Microsoft.
+- Registre o repositório do produto.
+- Instale as dependências necessárias.
 
 Isso só precisa ser feito uma vez por computador.
 

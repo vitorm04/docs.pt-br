@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: cc063eccfafa915908e66815b5b7535c66636716
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: caf12296b208b3d2e57c3a74300cced225e4db66
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636933"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75738764"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>Analisar sentimentos com a CLI do ML.NET
 
@@ -115,7 +115,7 @@ Usaremos um conjunto de dados existente usado para um cenário de 'análise de s
 
     No entanto, há casos em que apenas medir com a métrica de precisão não é suficiente, especialmente quando o rótulo (0 e 1 neste caso) é desbalanceado no conjunto de dados de teste.
 
-    Para obter métricas adicionais e muito mais **informações detalhadas sobre as métricas** (tais como precisão, AUC, AUCPR, pontuação F1) usadas para avaliar os modelos diferentes, você pode ler [Noções básicas sobre métricas do ML.NET](../resources/metrics.md)
+    Para obter métricas adicionais e **informações mais detalhadas sobre as métricas** , como precisão, AUC, AUCPR e a pontuação de F1 usada para avaliar os modelos diferentes, consulte [noções básicas sobre métricas de ml.net](../resources/metrics.md).
 
     > [!NOTE]
     > Você pode experimentar esse mesmo conjunto de dados e especificar alguns minutos para `--max-exploration-time` (por exemplo, três minutos, então você especifica 180 segundos) que encontrará um "melhor modelo" para você com uma configuração de pipeline de treinamento diferente para esse conjunto de dados (que é bem pequeno, 1.000 linhas).

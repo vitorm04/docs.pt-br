@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Pane control type
 - control types, Pane
 ms.assetid: 79761191-4449-4630-899c-9cbdb8867d3f
-ms.openlocfilehash: fcba014a1ff13204688ce176a5efcb5fecb58b8f
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 0a445d0631fe6a24d8e9b5cb21cd78f260465486
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74800338"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741594"
 ---
 # <a name="ui-automation-support-for-the-pane-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Pane
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74800338"
   
  O tipo de controle de painel é usado para representar um objeto em uma janela de quadro ou de documento. Os usuários podem navegar entre controles de painel e dentro do conteúdo do painel atual, mas não podem navegar entre itens em painéis diferentes. Portanto, os controles de painel representam um nível de agrupamento menor que o Windows ou documentos, mas acima dos controles individuais. O usuário navega entre os painéis pressionando TAB, F6 ou CTRL + TAB, dependendo do contexto. Nenhuma navegação de teclado específica é exigida pelo tipo de controle de painel.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de painel. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle de painel. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de lista, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -93,7 +93,7 @@ ms.locfileid: "74800338"
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>Painel</li><li>Tree (padrão de rolagem)<br /><br /> <ul><li>TreeItem</li><li>Painel</li><li>Editar (padrão de rolagem</li></ul></li></ul>|-Painel<br />-Tree (padrão de rolagem)<br />-   TreeItem<br />- ... Painel<br />-Editar<br />-(Padrão de rolagem)|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.Pane>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

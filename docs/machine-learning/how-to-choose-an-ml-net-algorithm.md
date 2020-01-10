@@ -1,15 +1,14 @@
 ---
 title: Como escolher um algoritmo do ML.NET
 description: Saiba como escolher um algoritmo do ML.NET para seu modelo de machine learning
-author: natke
 ms.topic: overview
 ms.date: 06/05/2019
-ms.openlocfilehash: 0721418d8b0b3c9ab645eb9885b0f4951c37762e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 0fed33203c02303e37e47f548e08ec131eeb1c77
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976693"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740000"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>Como escolher um algoritmo do ML.NET
 
@@ -39,7 +38,7 @@ Algoritmos lineares fazem várias passagens sobre os dados de treinamento. Se se
 
 **Treinadores Lineares**
 
-|Algoritmo|Propriedades|Treinadores|
+|Algoritmo|{1&gt;Propriedades&lt;1}|Treinadores|
 |---------|----------|--------|
 |Perceptron médio|Melhor para classificação de texto|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
 |Ascendente de coordenada dupla estocástico|Não é necessário ajuste para o bom desempenho padrão|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
@@ -62,7 +61,7 @@ Algoritmos de árvore de decisão consomem mais recursos e não são dimensionad
 
 **Treinadores da árvore de decisão**
 
-|Algoritmo|Propriedades|Treinadores|
+|Algoritmo|{1&gt;Propriedades&lt;1}|Treinadores|
 |---------|----------|--------|
 |Computador aprimorado com gradiente de luz|Mais rápido e mais preciso entre os treinadores da árvore de classificação binária. Altamente ajustável|<xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmMulticlassTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRegressionTrainer> <xref:Microsoft.ML.Trainers.LightGbm.LightGbmRankingTrainer>|
 |Árvore rápida|Use para dados de imagem destacados. Resiliente a dados desbalanceados. Altamente ajustável | <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRegressionTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeTweedieTrainer> <xref:Microsoft.ML.Trainers.FastTree.FastTreeRankingTrainer>|
@@ -71,7 +70,7 @@ Algoritmos de árvore de decisão consomem mais recursos e não são dimensionad
 
 ## <a name="matrix-factorization"></a>Fatoração de matriz
 
-|Propriedades|Treinadores|
+|{1&gt;Propriedades&lt;1}|Treinadores|
 |----------|--------|
 |Melhor para dados categóricos esparsos com grandes conjuntos de dados|<xref:Microsoft.ML.Trainers.FieldAwareFactorizationMachineTrainer>|
 
@@ -79,31 +78,31 @@ Algoritmos de árvore de decisão consomem mais recursos e não são dimensionad
 
 Esses treinadores criam um treinador de várias classe de um instrutor binário. Use com <xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>, <xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer>, <xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>, <xref:Microsoft.ML.Trainers.LightGbm.LightGbmBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastTreeBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.FastForestBinaryTrainer>, <xref:Microsoft.ML.Trainers.FastTree.GamBinaryTrainer>.
 
-|Algoritmo|Propriedades|Treinadores|
+|Algoritmo|{1&gt;Propriedades&lt;1}|Treinadores|
 |---------|----------|--------|
 |Um versus todos|Esse classificador multiclasse treina um classificador binário para cada classe, que distingue essa classe de todas as outras. É limitado em escala pelo número de classes para categorizar|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
 |Acoplamento por pares|Esse classificador multiclasse treina um algoritmo de classificação binária em cada par de classes. É limitado em escala pelo número de classes, uma vez que cada combinação de duas classes deve ser treinada.|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
-|Propriedades|Treinadores|
+|{1&gt;Propriedades&lt;1}|Treinadores|
 |----------|--------|
 |Use para clustering|<xref:Microsoft.ML.Trainers.KMeansTrainer>|
 
 ## <a name="principal-component-analysis"></a>Análise de componente principal
 
-|Propriedades|Treinadores|
+|{1&gt;Propriedades&lt;1}|Treinadores|
 |----------|--------|
 |Use para detecção de anomalias|<xref:Microsoft.ML.Trainers.RandomizedPcaTrainer>|
 
-## <a name="naive-bayes"></a>Naive Bayes
+## <a name="naive-bayes"></a>Naive Bayes da
 
-|Propriedades|Treinadores|
+|{1&gt;Propriedades&lt;1}|Treinadores|
 |----------|--------|
 |Use este treinador de classificação multiclasse quando os recursos são independentes e o conjunto de dados de treinamento é pequeno.|<xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>|
 
 ## <a name="prior-trainer"></a>Treinador anterior
 
-|Propriedades|Treinadores|
+|{1&gt;Propriedades&lt;1}|Treinadores|
 |----------|--------|
 |Use esse treinador de classificação binária para definir a linha de base de desempenho de outros treinadores. Para ser eficaz, as métricas dos outros treinadores devem ser melhores do que a do treinador anterior. |<xref:Microsoft.ML.Trainers.PriorTrainer>|

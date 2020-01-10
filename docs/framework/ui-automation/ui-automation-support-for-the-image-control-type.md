@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Image
 - Image control type
 ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
-ms.openlocfilehash: 52ccece88284724b03a6eb2d678bb27ab1d687c1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 504ef2e8ceb5a359ecb9ac74c5da5c8dfabccaa2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446758"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741199"
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>Suporte de automação de interface de usuário para o Tipo de Controle Image
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74446758"
   
  Os controles de imagem usados como ícones, gráficos informativos e gráficos terão suporte para o tipo de controle de imagem. Os controles usados como imagens de plano de fundo ou marca d' água não oferecerão suporte ao tipo de controle Image.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Image. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de imagem, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle Image. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de imagem, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
@@ -29,13 +29,13 @@ ms.locfileid: "74446758"
   
 |Exibição de controle|Exibição de conteúdo|  
 |------------------|------------------|  
-|Imagem|Imagem (depende se a imagem contém informações (com base no valor da propriedade `IsContentElement`))|  
+|Image|Imagem (depende se a imagem contém informações (com base no valor da propriedade `IsContentElement`))|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Propriedades de automação da interface do usuário necessárias  
  A tabela a seguir lista as propriedades [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] cujo valor ou definição é especialmente relevante para o tipo de controle imagem. Para obter mais informações sobre [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Propriedades, consulte [Propriedades de automação da interface do usuário para clientes](ui-automation-properties-for-clients.md).  
   
-|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Valor|{1&gt;Observações&lt;1}|  
+|Propriedade [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]|Value|{1&gt;Observações&lt;1}|  
 |------------------------------------------------------------------------------------|-----------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationIdProperty>|Consulte observações.|O valor dessa propriedade precisa ser exclusivo em todos os controles em um aplicativo.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty>|Consulte observações.|O retângulo mais externo que contém o controle inteiro.|  
@@ -43,7 +43,7 @@ ms.locfileid: "74446758"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|Consulte observações.|Se o controle puder receber o foco do teclado, ele deverá dar suporte a essa propriedade.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|Consulte observações.|A propriedade Name deve ser exposta para todos os controles de imagem que contêm informações. O acesso programático a essas informações requer que um equivalente textual para o gráfico seja fornecido. Se o controle de imagem for puramente decorativo, ele só deverá aparecer na exibição de controle da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] e não precisará ter um nome. As estruturas de interface do usuário devem oferecer suporte a uma propriedade ALT ou de texto alternativo em imagens que podem ser definidas de dentro de sua estrutura. Essa propriedade será mapeada para a propriedade nome da [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|Consulte observações.|Se houver um rótulo de texto estático, essa propriedade deverá expor uma referência a esse controle.|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Imagem|Esse valor é o mesmo para todas as estruturas de interface do usuário.|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|Image|Esse valor é o mesmo para todas as estruturas de interface do usuário.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|imagem|Cadeia de caracteres localizada correspondente ao tipo de controle de imagem.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|Consulte observações.|O controle de imagem deve ser incluído na exibição de conteúdo da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] quando ela contém informações significativas ainda não expostas ao usuário final.|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsControlElementProperty>|verdadeiro|O controle de imagem é sempre incluído no modo de exibição de controle da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)].|  
@@ -54,10 +54,10 @@ ms.locfileid: "74446758"
 ## <a name="required-ui-automation-control-patterns"></a>Padrões de controle de automação da interface do usuário necessários  
  A tabela a seguir lista os padrões de controle de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necessários para serem suportados por todos os controles de imagem. Para obter mais informações sobre padrões de controle, consulte [visão geral dos padrões de controle de automação da interface do usuário](ui-automation-control-patterns-overview.md).  
   
-|Padrão de controle|Suporte|{1&gt;Observações&lt;1}|  
+|Padrão de controle|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Dependem|O controle de imagem dá suporte ao padrão de item de grade se o controle estiver dentro de um contêiner de grade.|  
-|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Dependem|O controle de imagem dá suporte ao padrão de item de tabela se o controle estiver dentro de um contêiner que tem controles de cabeçalho.|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider>|Depende|O controle de imagem dá suporte ao padrão de item de grade se o controle estiver dentro de um contêiner de grade.|  
+|<xref:System.Windows.Automation.Provider.ITableItemProvider>|Depende|O controle de imagem dá suporte ao padrão de item de tabela se o controle estiver dentro de um contêiner que tem controles de cabeçalho.|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|{1&gt;Nunca&lt;1}|Se o controle de imagem contiver uma imagem clicável, o controle deverá dar suporte a um tipo de controle que ofereça suporte ao padrão Invoke, como o tipo de controle Button.|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|{1&gt;Nunca&lt;1}|Os controles de imagem não devem oferecer suporte ao padrão de item de seleção.|  
   
@@ -65,20 +65,20 @@ ms.locfileid: "74446758"
 ## <a name="required-ui-automation-events"></a>Eventos de automação da interface do usuário necessários  
  A tabela a seguir lista os eventos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] necessários para serem suportados por todos os controles de imagem. Para obter mais informações sobre eventos, consulte [visão geral dos eventos de automação da interface do usuário](ui-automation-events-overview.md).  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte|{1&gt;Observações&lt;1}|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] evento|Suporte do|{1&gt;Observações&lt;1}|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|{1&gt;Nunca&lt;1}|Nenhum|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|{1&gt;Nunca&lt;1}|Nenhum|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|{1&gt;Nunca&lt;1}|Nenhum|  
-|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|{1&gt;Nunca&lt;1}|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> evento de alteração de propriedade.|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Obrigatório|Nenhum|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Obrigatório|Nenhum|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent>|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>|{1&gt;Nunca&lt;1}|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> evento de alteração de propriedade.|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|Necessário|{1&gt;Nenhum&lt;1}|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.Image>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)

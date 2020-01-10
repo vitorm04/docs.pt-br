@@ -1,19 +1,19 @@
 ---
 title: Scripts dotnet-install
-description: Saiba mais sobre os scripts dotnet-install para instalar as ferramentas da CLI do .NET Core e o tempo de execução compartilhado.
+description: Saiba mais sobre os scripts dotnet-install para instalar as ferramentas da CLI do .NET Core e o runtime compartilhado.
 ms.date: 01/16/2019
-ms.openlocfilehash: 867be93b5a4c66258df438ce718dabbd4ef2891c
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: f72e12fc415824a9c69eba6f52e3c01717cf654c
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849570"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740523"
 ---
 # <a name="dotnet-install-scripts-reference"></a>referência de scripts dotnet-install
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
-`dotnet-install.ps1` | `dotnet-install.sh` – script usado para instalar as ferramentas de CLI e o tempo de execução compartilhado do .NET Core.
+`dotnet-install.ps1` | `dotnet-install.sh` – script usado para instalar as ferramentas de CLI e o runtime compartilhado do .NET Core.
 
 ## <a name="synopsis"></a>Sinopse
 
@@ -27,7 +27,7 @@ macOS/Linux:
 
 ## <a name="description"></a>Descrição
 
-O scripts `dotnet-install` são usados para executar uma instalação não administrativa do SDK do .NET Core, que inclui as ferramentas de CLI e o tempo de execução compartilhado do .NET Core.
+O scripts `dotnet-install` são usados para executar uma instalação não administrativa do SDK do .NET Core, que inclui as ferramentas de CLI e o runtime compartilhado do .NET Core.
 
 É recomendável usar a versão estável que está hospedada no [site principal do .NET Core](https://dot.net). Os caminhos diretos para os scripts são:
 
@@ -36,7 +36,7 @@ O scripts `dotnet-install` são usados para executar uma instalação não admin
 
 A principal utilidade desses scripts é para cenários de automação e instalações não administrativas. Há dois scripts, um do PowerShell que funciona no Windows e um script bash que funciona no Linux/macOS. Ambos os scripts têm o mesmo comportamento. O script de bash também lê comutadores do PowerShell. Portanto, você pode usar comutadores do PowerShell com o script nos sistemas Linux/macOS.
 
-Os scripts de instalação baixam o arquivo ZIP/tarball dos destinos de build da CLI e o instalam no local padrão ou em um local especificado por `-InstallDir|--install-dir`. Por padrão, os scripts de instalação baixam o SDK e o instalam. Se você quiser obter somente o tempo de execução compartilhado, especifique o argumento `--runtime`.
+Os scripts de instalação baixam o arquivo ZIP/tarball dos destinos de build da CLI e o instalam no local padrão ou em um local especificado por `-InstallDir|--install-dir`. Por padrão, os scripts de instalação baixam o SDK e o instalam. Se você quiser obter somente o runtime compartilhado, especifique o argumento `--runtime`.
 
 Por padrão, o script adiciona o local de instalação ao $PATH da sessão atual. Substitua esse comportamento padrão especificando o argumento `--no-path`.
 
@@ -80,14 +80,14 @@ Você pode instalar uma versão específica usando o argumento `--version`. A ve
   > [!NOTE]
   > Esse parâmetro está obsoleto e pode ser removido em uma versão futura do script. A alternativa recomendada é a opção `Runtime`.
 
-  Instala apenas os bits de tempo de execução compartilhado, não todo o SDK. Isso é equivalente a especificar `-Runtime dotnet`.
+  Instala apenas os bits de runtime compartilhado, não todo o SDK. Isso é equivalente a especificar `-Runtime dotnet`.
 
 - **`-Runtime <RUNTIME>`**
 
-  Instala apenas o tempo de execução compartilhado, não todo o SDK. Os valores possíveis são:
+  Instala apenas o runtime compartilhado, não todo o SDK. Os valores possíveis são:
 
-  - `dotnet`: o tempo de execução compartilhado `Microsoft.NETCore.App`.
-  - `aspnetcore`: o tempo de execução compartilhado `Microsoft.AspNetCore.App`.
+  - `dotnet`: o runtime compartilhado `Microsoft.NETCore.App`.
+  - `aspnetcore`: o runtime compartilhado `Microsoft.AspNetCore.App`.
 
 - **`-DryRun`**
 
@@ -163,7 +163,7 @@ Você pode instalar uma versão específica usando o argumento `--version`. A ve
   ./dotnet-install.sh --channel 2.0 --install-dir ~/cli
   ```
 
-- Instale a versão 1.1.0 do tempo de execução compartilhado:
+- Instale a versão 1.1.0 do runtime compartilhado:
 
   Windows:
 
@@ -195,10 +195,10 @@ Você pode instalar uma versão específica usando o argumento `--version`. A ve
   macOS/Linux:
 
   ```bash
-  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  curl -ssl https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Versões do .NET Core](https://github.com/dotnet/core/releases)
-- [Arquivo de download de tempo de execução e SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+- [Arquivo de download de runtime e SDK do .NET Core](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

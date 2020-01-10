@@ -3,13 +3,12 @@ title: Pacote de distribuição do .NET Core
 description: Aprenda a empacotar, nomear e controlar a versão do .NET Core para distribuição.
 author: tmds
 ms.date: 10/09/2019
-ms.custom: seodec18
-ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cfd6003cfac5c00fc06ebc6195eccd55a0d7afe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393589"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740927"
 ---
 # <a name="net-core-distribution-packaging"></a>Pacote de distribuição do .NET Core
 
@@ -84,7 +83,7 @@ A pasta **compartilhada** contém estruturas. Uma estrutura compartilhada fornec
 
 - (8) **LICENSE.txt,ThirdPartyNotices.txt** são a licença do .NET Core e licenças de bibliotecas de terceiros usadas no .NET Core, respectivamente.
 
-- (9,10) **dotnet.1.gz, dotnet** `dotnet.1.gz` é a página de manual do dotnet. `dotnet` é um symlink ao host(1) dotnet. Esses arquivos são instalados em locais bem conhecidos para a integração do sistema.
+- (9, 10) **dotnet. 1. gz, dotnet** `dotnet.1.gz` é a página manual dotnet. `dotnet` é um symlink ao host(1) dotnet. Esses arquivos são instalados em locais bem conhecidos para a integração do sistema.
 
 - (11, 12) **Microsoft. NetCore. app. ref, Microsoft. AspNetCore. app. ref** descreve a API de uma versão `x.y` do .NET Core e ASP.NET Core, respectivamente. Esses pacotes são usados durante a compilação para essas versões de destino.
 
@@ -126,7 +125,7 @@ Veja a seguir uma lista dos pacotes recomendados:
 - `dotnet-runtime-deps-[major].[minor]` _(opcional)_ – instala as dependências para executar aplicativos independentes
   - **Versão:** \<versão de tempo de execução >
   - **Exemplo:** dotnet-Runtime-deps-2,1
-  - **Dependências:** _dependências específicas do distribuição_
+  - **Dependências:** _dependências específicas de distribuição_
 
 - `dotnet-runtime-[major].[minor]`-instala um tempo de execução específico
   - **Versão:** \<versão de tempo de execução >

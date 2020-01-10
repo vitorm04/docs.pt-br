@@ -3,13 +3,12 @@ title: Reduzindo as dependências de pacote com o project.json
 description: Reduza as dependências do pacote ao criar bibliotecas com base no project.json.
 author: cartermp
 ms.date: 06/20/2016
-ms.custom: seodec18
-ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: HT
+ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674959"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740832"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>Reduzindo as dependências de pacote com o project.json
 
@@ -17,13 +16,13 @@ Este artigo aborda o que você precisa saber sobre como reduzir suas dependênci
 
 ## <a name="why-its-important"></a>Por que isso é importante
 
-O .NET Core é um produto composto por pacotes NuGet.  Um pacote essencial é o [metapacote .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), que é um pacote NuGet composto por outros pacotes.  Ele fornece o conjunto de pacotes que com certeza funcionam com diversas implementações .NET, como o .NET Framework, .NET Core e Xamarin/Mono.
+O .NET Core é um produto composto por pacotes NuGet.  Um pacote essencial é o [metapacote .NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library), que é um pacote NuGet composto por outros pacotes. Ele fornece o conjunto de pacotes que têm garantia de trabalho em várias implementações do .NET, como .NET Framework, .NET Core e Xamarin/mono.
 
 No entanto, há uma boa chance de que a biblioteca não use todos os pacotes que ele contém.  Ao criar uma biblioteca e distribuí-la com o NuGet, é uma melhor prática “cortar” suas dependências para deixar apenas os pacotes que realmente serão usados.  Isso resulta em uma menor superfície geral de pacotes NuGet.
 
 ## <a name="how-to-do-it"></a>Como fazer isso
 
-Atualmente, não há nenhum comando `dotnet` oficial para cortar as referências de pacote.  Em vez disso, você terá que fazê-lo manualmente.  O processo geral é semelhante ao seguinte:
+Atualmente, não há nenhum comando `dotnet` oficial que corte as referências do pacote.  Em vez disso, você terá que fazê-lo manualmente.  O processo geral é semelhante ao seguinte:
 
 1. Faça referência à `NETStandard.Library` versão `1.6.0` em uma seção `dependencies` de seu `project.json`.
 2. Restaure pacotes com `dotnet restore` ([veja observação](#dotnet-restore-note)) por meio da linha de comando.
@@ -34,12 +33,12 @@ Atualmente, não há nenhum comando `dotnet` oficial para cortar as referências
 
 Você pode descobrir quais pacotes não são necessários das seguintes maneiras:
 
-1. Tentativa e erro.  Isso significa remover um pacote, restaurar, ver se sua biblioteca ainda é compilada e repetir esse processo.
-2. Usar uma ferramenta como [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) ou [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) para inspecionar as referências e ver o que seu código realmente está usando.  Você poderá então remover os pacotes que não correspondem aos tipos que você está usando.
+1. Tentativa e erro. Isso significa remover um pacote, restaurar, ver se sua biblioteca ainda é compilada e repetir esse processo.
+2. Usar uma ferramenta como [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) ou [.NET Reflector](https://www.red-gate.com/products/dotnet-development/reflector) para inspecionar as referências e ver o que seu código realmente está usando. Em seguida, você pode remover pacotes que não correspondem aos tipos que você está usando.
 
 ## <a name="example"></a>Exemplo
 
-Imagine que você criou uma biblioteca que fornecia uma funcionalidade adicional para tipos de coleção genérica.  Uma biblioteca precisaria depender de pacotes como `System.Collections`, mas pode não de pacotes como `System.Net.Http`.  Dessa forma, seria bom cortar as dependências do pacote para reduzir até o que essa biblioteca realmente precisa.
+Imagine que você escreveu uma biblioteca que forneceu funcionalidade adicional para tipos de coleção genéricos. Uma biblioteca precisaria depender de pacotes como `System.Collections`, mas pode não de pacotes como `System.Net.Http`. Dessa forma, seria bom cortar as dependências do pacote para reduzir até o que essa biblioteca realmente precisa.
 
 Para cortar essa biblioteca, você deve começar com o arquivo `project.json` e adicionar uma referência ao `NETStandard.Library` versão `1.6.0`.
 

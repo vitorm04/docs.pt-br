@@ -2,13 +2,12 @@
 title: Implantação do .NET Core Application
 description: Conheça maneiras de implantar um aplicativo .NET Core.
 ms.date: 12/03/2018
-ms.custom: seodec18
-ms.openlocfilehash: fd15d41065b0a6ecb1a0bf04a0f0ab292a0a5fb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73089188"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740814"
 ---
 # <a name="net-core-application-deployment"></a>Implantação de um aplicativo .NET Core
 
@@ -44,7 +43,7 @@ Contudo, também há algumas desvantagens:
 
 ## <a name="self-contained-deployments-scd"></a>SCD (implantação autocontida)
 
-No caso de uma implantação autocontida, você implanta o aplicativo e as dependências de terceiros necessárias, juntamente com a versão do .NET Core que usou para criar o aplicativo. A criação de uma SCD não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) de várias plataformas, por isso elas devem estar presentes antes de executar o aplicativo. Para saber mais sobre associação de versão em tempo de execução, confira o artigo sobre [associação de versão no .NET Core](../versions/selection.md).
+No caso de uma implantação autocontida, você implanta o aplicativo e as dependências de terceiros necessárias, juntamente com a versão do .NET Core que usou para criar o aplicativo. A criação de uma SCD não inclui as [dependências nativas do .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) de várias plataformas, por isso elas devem estar presentes antes de executar o aplicativo. Para saber mais sobre associação de versão em runtime, confira o artigo sobre [associação de versão no .NET Core](../versions/selection.md).
 
 Começando com o SDK do .NET Core 2.1 (versão 2.1.300), o .NET Core é compatível com *roll forward da versão de patch*. Ao criar uma implantação autocontida, as ferramentas do .NET Core incluem automaticamente o runtime de manutenção mais recente da versão do .NET Core que seu aplicativo utiliza. (O tempo de execução de serviço mais recente inclui patches de segurança e outras correções de bugs.) O tempo de execução de serviço não precisa estar presente em seu sistema de compilação; Ele é baixado automaticamente de NuGet.org. Para obter mais informações, incluindo instruções sobre como recusar o roll-out da versão do patch, consulte [roll forward do tempo de execução de implantação autocontido](runtime-patch-selection.md).
 
@@ -64,7 +63,7 @@ Ela também apresenta algumas desvantagens:
 
 - O tamanho do seu pacote de implantação é relativamente grande, visto que você precisa incluir o .NET Core, bem como seu aplicativo e suas dependências de terceiros.
 
-  A partir do .NET Core 2.0, você pode reduzir o tamanho da sua implantação em sistemas Linux em aproximadamente 28 MB usando o [*modo invariável de globalização*](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md) do .NET Core. Normalmente, o .NET Core no Linux se baseia nas [bibliotecas de ICU](http://icu-project.org) para suporte à globalização. No modo invariável, as bibliotecas não são incluídas na implantação e todas as culturas se comportam como a [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
+  A partir do .NET Core 2.0, você pode reduzir o tamanho da sua implantação em sistemas Linux em aproximadamente 28 MB usando o [*modo invariável de globalização*](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) do .NET Core. Normalmente, o .NET Core no Linux se baseia nas [bibliotecas de ICU](http://icu-project.org) para suporte à globalização. No modo invariável, as bibliotecas não são incluídas na implantação e todas as culturas se comportam como a [cultura invariável](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType).
 
 - Implantar vários aplicativos .NET Core autocontidos em um sistema pode consumir um volume significativo de espaço em disco, visto que cada aplicativo duplica os arquivos do .NET Core.
 
@@ -94,9 +93,9 @@ Contudo, também há algumas desvantagens:
 
 Para obter exemplos passo a passo de como implantar aplicativos .NET Core com ferramentas da CLI, confira o artigo [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md). Para obter exemplos passo a passo de como implantar aplicativos .NET Core com o Visual Studio, confira o artigo [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md). 
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Implantação de aplicativos .NET Core com ferramentas da CLI](deploy-with-cli.md)
 - [Implantação de aplicativos .NET Core com o Visual Studio](deploy-with-vs.md)
 - [Pacotes, Metapacotes e Estruturas](../packages.md)
-- [Catálogo do Identificador de Tempo de Execução do .NET Core](../rid-catalog.md)
+- [Catálogo do Identificador de Runtime do .NET Core](../rid-catalog.md)

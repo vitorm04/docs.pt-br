@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Split Button
 - UI Automation, Split Button control type
 ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
-ms.openlocfilehash: c2c5a0d2994040f0eba8408e5fbd0d61d62aeecf
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: d0470f23942c7df868c6cc8fce158f1575c66bec
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801776"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741142"
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>Suporte de automação de interface de usuário para o tipo de controle SplitButton
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "74801776"
   
  O controle botão de divisão habilita a capacidade de executar uma ação em um controle e expandir o controle para ver uma lista de outras ações possíveis que podem ser executadas.  
   
- As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle SplitButton. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de botão de divisão, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)]ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
+ As seções a seguir definem a estrutura de árvore [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], propriedades, padrões de controle e eventos necessários para o tipo de controle SplitButton. Os requisitos de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] se aplicam a todos os controles de botão de divisão, sejam [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)], Win32 ou [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)].  
   
 ## <a name="required-ui-automation-tree-structure"></a>Estrutura de árvore de automação da interface do usuário necessária  
  A tabela a seguir descreve a exibição de controle e a exibição de conteúdo da árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] que pertence aos controles de botão de divisão e descreve o que pode ser contido em cada exibição. Para obter mais informações sobre a árvore de [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], consulte [visão geral da árvore de automação da interface do usuário](ui-automation-tree-overview.md).  
@@ -79,7 +79,7 @@ ms.locfileid: "74801776"
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>SplitButton "Name" (Invoke, ExpandCollapse)</li><li>Botão "mais opções" (Invoke)<br /><br /> <ul><li>Menu</li><li>MenuItem</li><li>.</li></ul></li></ul>|<ul><li>SplitButton "Name" (Invoke, ExpandCollapse)</li><li>Botão "mais opções" (Invoke)<br /><br /> <ul><li>Menu</li><li>MenuItem</li><li>.</li></ul></li></ul>|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Automation.ControlType.SplitButton>
 - [Visão geral de tipos de controle de automação da interface do usuário](ui-automation-control-types-overview.md)
