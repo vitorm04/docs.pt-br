@@ -2,12 +2,12 @@
 title: Implementando objetos de valor
 description: Arquitetura de microsserviços do .NET para aplicativos .NET em contêineres | Obtenha os detalhes e as opções para implementar objetos de valor usando as novas funcionalidades do Entity Framework.
 ms.date: 10/08/2018
-ms.openlocfilehash: 2608517c4006f5e8da1d31b2c337d8ddd3ddd542
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 70c92fe86fda20ed4e909b945b843e8e71092f09
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739853"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899769"
 ---
 # <a name="implement-value-objects"></a>Implementar objetos de valor
 
@@ -320,7 +320,7 @@ public class Address
   [https://docs.microsoft.com/ef/core/modeling/shadow-properties](/ef/core/modeling/shadow-properties)
 
 - **Tipos complexos e/ou objetos de valor**. Discussão no repositório GitHub do EF Core (guia Problemas) \
-  <https://github.com/aspnet/EntityFramework/issues/246>
+  <https://github.com/dotnet/efcore/issues/246>
 
 - **ValueObject.cs.** Classe de objeto de valor base no eShopOnContainers. \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>

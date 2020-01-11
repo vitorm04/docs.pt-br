@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: b57741ed68b3481ad2c85b1c3d62717f09c7570e
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73971594"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899699"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -500,7 +500,7 @@ Considere maneiras pelas quais os aplicativos se comunicam diretamente com aplic
 > ### <a name="references--client-communication"></a>Referências – Comunicação do cliente
 >
 > - **SignalR do ASP.NET Core**  
->   <https://github.com/aspnet/SignalR>
+>   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
 > - **WebSocket Manager**  
 >   https://github.com/radu-matei/websocket-manager
 
