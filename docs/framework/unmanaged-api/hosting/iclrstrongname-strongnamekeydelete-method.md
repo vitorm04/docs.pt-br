@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0163412f-f617-4428-89e0-03992fec31e8
 topic_type:
 - apiref
-ms.openlocfilehash: 4e72818be6808c519677192d3744bbc5ec414d0d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 95098cbb060c06d2d5a5a4c04b6fa9017bca66a1
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135089"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899592"
 ---
-# <a name="iclrstrongnamestrongnamekeydelete-method"></a><span data-ttu-id="7f5db-102">Método ICLRStrongName::StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="7f5db-102">ICLRStrongName::StrongNameKeyDelete Method</span></span>
-<span data-ttu-id="7f5db-103">Exclui o contêiner de chave especificado.</span><span class="sxs-lookup"><span data-stu-id="7f5db-103">Deletes the specified key container.</span></span>  
+# <a name="iclrstrongnamestrongnamekeydelete-method"></a><span data-ttu-id="6b6fc-102">Método ICLRStrongName::StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="6b6fc-102">ICLRStrongName::StrongNameKeyDelete Method</span></span>
+<span data-ttu-id="6b6fc-103">Exclui o contêiner de chave especificado.</span><span class="sxs-lookup"><span data-stu-id="6b6fc-103">Deletes the specified key container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7f5db-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="7f5db-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b6fc-104">Sintaxe</span><span class="sxs-lookup"><span data-stu-id="6b6fc-104">Syntax</span></span>  
   
 ```cpp  
 HRESULT StrongNameKeyDelete (  
@@ -33,26 +33,26 @@ HRESULT StrongNameKeyDelete (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7f5db-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="7f5db-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6b6fc-105">Parâmetros</span><span class="sxs-lookup"><span data-stu-id="6b6fc-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="7f5db-106">no O nome do contêiner de chave a ser excluído.</span><span class="sxs-lookup"><span data-stu-id="7f5db-106">[in] The name of the key container to delete.</span></span>  
+ <span data-ttu-id="6b6fc-106">no O nome do contêiner de chave a ser excluído.</span><span class="sxs-lookup"><span data-stu-id="6b6fc-106">[in] The name of the key container to delete.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7f5db-107">Valor retornado</span><span class="sxs-lookup"><span data-stu-id="7f5db-107">Return Value</span></span>  
- <span data-ttu-id="7f5db-108">`S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).</span><span class="sxs-lookup"><span data-stu-id="7f5db-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6b6fc-107">Valor de retorno</span><span class="sxs-lookup"><span data-stu-id="6b6fc-107">Return Value</span></span>  
+ <span data-ttu-id="6b6fc-108">`S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).</span><span class="sxs-lookup"><span data-stu-id="6b6fc-108">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](/windows/win32/seccrypto/common-hresult-values) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7f5db-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="7f5db-109">Remarks</span></span>  
- <span data-ttu-id="7f5db-110">Use o método [ICLRStrongName:: StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) para importar um par de chaves pública/privada para um contêiner.</span><span class="sxs-lookup"><span data-stu-id="7f5db-110">Use the [ICLRStrongName::StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) method to import a public/private key pair into a container.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6b6fc-109">Comentários</span><span class="sxs-lookup"><span data-stu-id="6b6fc-109">Remarks</span></span>  
+ <span data-ttu-id="6b6fc-110">Use o método [ICLRStrongName:: StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) para importar um par de chaves pública/privada para um contêiner.</span><span class="sxs-lookup"><span data-stu-id="6b6fc-110">Use the [ICLRStrongName::StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) method to import a public/private key pair into a container.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7f5db-111">Requisitos</span><span class="sxs-lookup"><span data-stu-id="7f5db-111">Requirements</span></span>  
- <span data-ttu-id="7f5db-112">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7f5db-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b6fc-111">Requisitos do</span><span class="sxs-lookup"><span data-stu-id="6b6fc-111">Requirements</span></span>  
+ <span data-ttu-id="6b6fc-112">**Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b6fc-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7f5db-113">**Cabeçalho:** MetaHost. h</span><span class="sxs-lookup"><span data-stu-id="7f5db-113">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="6b6fc-113">**Cabeçalho:** MetaHost. h</span><span class="sxs-lookup"><span data-stu-id="6b6fc-113">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="7f5db-114">**Biblioteca:** Incluído como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="7f5db-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6b6fc-114">**Biblioteca:** Incluído como um recurso em MSCorEE. dll</span><span class="sxs-lookup"><span data-stu-id="6b6fc-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7f5db-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7f5db-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="6b6fc-115">**Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b6fc-115">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f5db-116">Consulte também</span><span class="sxs-lookup"><span data-stu-id="7f5db-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6b6fc-116">Veja também</span><span class="sxs-lookup"><span data-stu-id="6b6fc-116">See also</span></span>
 
-- [<span data-ttu-id="7f5db-117">Método StrongNameKeyInstall</span><span class="sxs-lookup"><span data-stu-id="7f5db-117">StrongNameKeyInstall Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
-- [<span data-ttu-id="7f5db-118">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="7f5db-118">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [<span data-ttu-id="6b6fc-117">Método StrongNameKeyInstall</span><span class="sxs-lookup"><span data-stu-id="6b6fc-117">StrongNameKeyInstall Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [<span data-ttu-id="6b6fc-118">Interface ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="6b6fc-118">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
