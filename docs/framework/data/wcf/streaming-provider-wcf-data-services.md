@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: a5793eae92ffdfa65872c93273bd7cfefdc6f674
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568802"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900916"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 
@@ -39,7 +39,7 @@ A configuração de um serviço de dados para oferecer suporte ao streaming de d
 
 5. Habilitar o acesso aos recursos binários no servidor ou em uma fonte de dados.
 
-Os exemplos neste tópico baseiam-se em um exemplo de serviço de foto de streaming, que é discutido em detalhes na [série do provedor de streaming do serviços de dados de postagem: Implementando um provedor de streaming (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989). O código-fonte para este serviço de exemplo está disponível na [página de exemplo do serviço de dados de fotos de streaming](https://go.microsoft.com/fwlink/?LinkID=198988) na Galeria de códigos do MSDN.
+Os exemplos neste tópico baseiam-se em um exemplo de serviço de foto de streaming, que é discutido em detalhes na [série do provedor de streaming do serviços de dados de postagem: Implementando um provedor de streaming (parte 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1). O código-fonte do exemplo de serviço de dados de fotos de streaming está disponível no [GitHub](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/Streaming%20Photo%20OData%20Service%20Sample).
 
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definindo uma entrada de link de mídia no modelo de dados
 
@@ -53,7 +53,7 @@ Para indicar que uma entidade é uma entrada de link de mídia, adicione o atrib
 
 Você também deve adicionar o namespace `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` à entidade ou à raiz do arquivo .edmx ou .csdl que define o modelo de dados.
 
-Para obter um exemplo de um serviço de dados que usa o provedor de Entity Framework e expõe um recurso de mídia, consulte a série do provedor de streaming do serviços de dados de postagem [: Implementando um provedor de streaming (parte 1)](https://go.microsoft.com/fwlink/?LinkID=198989).
+Para obter um exemplo de um serviço de dados que usa o provedor de Entity Framework e expõe um recurso de mídia, consulte a série do provedor de streaming do serviços de dados de postagem [: Implementando um provedor de streaming (parte 1)](https://docs.microsoft.com/archive/blogs/astoriateam/data-services-streaming-provider-series-implementing-a-streaming-provider-part-1).
 
 **Provedor de reflexão**
 
@@ -137,7 +137,7 @@ O provedor de streaming tem os seguintes requisitos de controle de versão do pr
 
 Para obter mais informações, consulte [controle de versão do serviço de dados](data-service-versioning-wcf-data-services.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Provedores de Serviços de Dados](data-services-providers-wcf-data-services.md)
 - [Provedores de serviços de dados personalizados](custom-data-service-providers-wcf-data-services.md)

@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
-ms.openlocfilehash: bb6447c39c3de9605f6f7bc280da2778be2b3070
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: c445f0d6117abfd1ac7a5153f8f80d55051a3f5a
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568861"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900931"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>Como especificar credenciais de cliente para uma solicitação de serviço de dados (WCF Data Services)
 Por padrão, a biblioteca de cliente não fornece credenciais ao enviar uma solicitação para um serviço OData. No entanto, você pode especificar que as credenciais sejam enviadas para autenticar solicitações para o serviço de dados, fornecendo um <xref:System.Net.NetworkCredential> para a propriedade <xref:System.Data.Services.Client.DataServiceContext.Credentials%2A> do <xref:System.Data.Services.Client.DataServiceContext>. Para obter mais informações, consulte [securing WCF Data Services](securing-wcf-data-services.md). O exemplo neste tópico mostra como fornecer explicitamente as credenciais que são usadas pelo cliente do WCF Data Services ao solicitar dados do serviço de dados.  
   
- O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente. Esse serviço e as classes de dados do cliente são criados quando você conclui o guia de [início rápido do WCF Data Services](quickstart-wcf-data-services.md). Você também pode usar o [serviço de dados de exemplo Northwind](https://go.microsoft.com/fwlink/?LinkId=187426) que é publicado no site do OData; Este serviço de dados de exemplo é somente leitura e a tentativa de salvar alterações retorna um erro. Os serviços de dados de exemplo no site OData permitem autenticação anônima.  
+ O exemplo deste tópico usa o serviço de dados de exemplo Northwind e as classes de serviço de dados do cliente geradas automaticamente. Esse serviço e as classes de dados do cliente são criados quando você conclui o guia de [início rápido do WCF Data Services](quickstart-wcf-data-services.md). Você também pode usar o [serviço de dados de exemplo Northwind](https://services.odata.org/Northwind/Northwind.svc/) que é publicado no site do OData; Este serviço de dados de exemplo é somente leitura e a tentativa de salvar alterações retorna um erro. Os serviços de dados de exemplo no site OData permitem autenticação anônima.  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir é da página code-behind para um arquivo de Extensible Application Markup Language (XAML) que é a página principal do aplicativo Windows Presentation Framework. Este exemplo exibe uma instância de `LoginWindow` para coletar credenciais de autenticação do usuário e, em seguida, usa essas credenciais ao fazer uma solicitação para o serviço de dados.  
@@ -52,7 +52,7 @@ Por padrão, a biblioteca de cliente não fornece credenciais ao enviar uma soli
   
  Para obter mais informações, consulte [securing WCF Data Services](securing-wcf-data-services.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Protegendo o WCF Data Services](securing-wcf-data-services.md)
 - [WCF Data Services Client Library](wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)

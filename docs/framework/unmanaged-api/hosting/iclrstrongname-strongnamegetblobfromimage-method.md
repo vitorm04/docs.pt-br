@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f5a2ec8-e776-4fd8-bda6-937b6834575a
 topic_type:
 - apiref
-ms.openlocfilehash: ad3b151165eb233bd3a4a78d8f4d612a696b7e93
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a0bcc62a1715fb455f0affee64a351cabe0ba3f6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135103"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901130"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>Método ICLRStrongName::StrongNameGetBlobFromImage
 Obtém uma representação binária da imagem do assembly no endereço de memória especificado.  
@@ -49,10 +49,10 @@ HRESULT StrongNameGetBlobFromImage (
  `pcbBlob`  
  [entrada, saída] O tamanho máximo solicitado, em bytes, de `pbBlob`. No retorno, o tamanho real, em bytes, de `pbBlob`.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -61,7 +61,7 @@ HRESULT StrongNameGetBlobFromImage (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Método StrongNameGetBlob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 41f1d1f0ca04dff0faa9eb070882f845ef4827d2
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: f6ff9cf732e11bbf61eeb7e5cff3f1cba2b744e6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568957"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900978"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Considerações sobre o LINQ (WCF Data Services)
 Este tópico fornece informações sobre a maneira como as consultas LINQ são compostas e executadas quando você está usando o cliente WCF Data Services e as limitações de usar o LINQ para consultar um serviço de dados que implementa o Protocolo Open Data (OData). Para obter mais informações sobre como compor e executar consultas em um serviço de dados baseado em OData, consulte [consultando o serviço de dados](querying-the-data-service-wcf-data-services.md).  
@@ -164,7 +164,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |Operadores de agrupamento|Todos os operadores de agrupamento não são suportados em um <xref:System.Data.Services.Client.DataServiceQuery%601>, incluindo os seguintes:<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> As operações de agrupamento devem ser executadas no cliente.|  
 |Operadores de agregação|Todos os operadores de agregação não são suportados em um <xref:System.Data.Services.Client.DataServiceQuery%601>, incluindo os seguintes:<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> As operações de agregação devem ser executadas no cliente ou ser encapsuladas por uma operação de serviço.|  
 |Operadores de paginação|Os seguintes operadores de paginação não são suportados em um <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Observação:** os operadores de paginação executados em uma sequência vazia retornam NULL.|  
-|Outros operadores|Os seguintes outros operadores não são suportados em um <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> 1. <xref:System.Linq.Enumerable.Empty%2A><br />2. <xref:System.Linq.Enumerable.Range%2A><br />3. <xref:System.Linq.Enumerable.Repeat%2A><br />4. <xref:System.Linq.Enumerable.ToDictionary%2A><br />5. <xref:System.Linq.Enumerable.ToLookup%2A>|  
+|Outros operadores|Os seguintes outros operadores não são suportados em um <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
 ## <a name="supported-expression-functions"></a>Funções de expressão suportadas  
@@ -210,9 +210,9 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  O cliente também pode avaliar funções de CLR adicionais no cliente. Um <xref:System.NotSupportedException> é gerado para qualquer expressão que não possa ser avaliada no cliente e não possa ser convertida em um URI de solicitação válido para avaliação no servidor.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Querying the Data Service](querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)
 - [Projeções de consulta](query-projections-wcf-data-services.md)
 - [Materialização de objetos](object-materialization-wcf-data-services.md)
-- [OData: convenções de URI](https://go.microsoft.com/fwlink/?LinkID=185564)
+- [OData: convenções de URI](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/)

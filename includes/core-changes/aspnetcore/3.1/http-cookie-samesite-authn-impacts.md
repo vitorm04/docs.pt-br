@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552157"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901677"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP: navegador SameSite alterações de impacto na autenticação
 
 Alguns navegadores, como Chrome e Firefox, fizeram alterações significativas em suas implementações de `SameSite` para cookies. As alterações afetam os cenários de autenticação remota, como OpenID Connect e WS-Federation, que devem ser recusadas com o envio de `SameSite=None`. No entanto, `SameSite=None` quebras no iOS 12 e em algumas versões mais antigas de outros navegadores. O aplicativo precisa farejar essas versões e omitir `SameSite`.
 
-Para obter uma discussão sobre esse problema, consulte [ASPNET/AspNetCore # 14996](https://github.com/aspnet/AspNetCore/issues/14996).
+Para obter uma discussão sobre esse problema, consulte [dotnet/aspnetcore # 14996](https://github.com/dotnet/aspnetcore/issues/14996).
 
 #### <a name="version-introduced"></a>Versão introduzida
 

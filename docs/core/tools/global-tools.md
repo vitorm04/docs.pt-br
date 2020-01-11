@@ -3,12 +3,12 @@ title: Ferramentas Globais do .NET Core
 description: Uma visão geral do que são as Ferramentas Globais do .NET Core e os comandos da CLI do .NET Core disponíveis para elas.
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 665cee64cb92efd16f5528feb656b377f9f3283c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714152"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899859"
 ---
 # <a name="net-core-global-tools-overview"></a>Visão geral das Ferramentas Globais do .NET Core
 
@@ -34,7 +34,7 @@ Atualmente, há não uma funcionalidade de pesquisa de Ferramenta Global na CLI 
 
 * Encontre Ferramentas Globais do .NET Core no [NuGet](https://www.nuget.org). No entanto, o NuGet ainda não permite a pesquisa especificamente de Ferramentas Globais do .NET Core.
 * Você pode encontrar recomendações de ferramentas em Postagens de blog ou no repositório GitHub [natemcmaster/dotnet-Tools](https://github.com/natemcmaster/dotnet-tools) .
-* Você pode ver o código-fonte das ferramentas globais criadas pela equipe do ASP.NET no repositório GitHub do [ASPNET/DotNetTools](https://github.com/aspnet/DotNetTools/) .
+* Você pode ver o código-fonte para as ferramentas globais criadas pela equipe do ASP.NET no repositório do GitHub [dotnet/aspnetcore](https://github.com/dotnet/aspnetcore/tree/master/src/Tools) .
 * Você pode aprender sobre as ferramentas de diagnóstico em [ferramentas globais de diagnóstico dotnet do .NET Core](../diagnostics/index.md#net-core-dotnet-diagnostic-global-tools).
 
 ## <a name="check-the-author-and-statistics"></a>Verificar o autor e as estatísticas

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f91d0f89-f356-49ac-aafb-50fad963c13d
 topic_type:
 - apiref
-ms.openlocfilehash: 0c9adcc252fe16c95da8b2afca45bb2ee5dc545a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b42079d138e754996470e07b884d49c1ebb625c3
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135200"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901161"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Método ICLRStrongName::GetHashFromBlob
 Obtém um hash do assembly no endereço de memória especificado, usando o algoritmo de hash especificado.  
@@ -57,10 +57,10 @@ HRESULT GetHashFromBlob (
  `pchHash`  
  fora O tamanho, em bytes, do `pbHash`retornado.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -69,6 +69,6 @@ HRESULT GetHashFromBlob (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

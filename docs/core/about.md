@@ -2,12 +2,12 @@
 title: Sobre o .NET Core
 description: Saiba mais sobre o .NET Core.
 ms.date: 09/17/2019
-ms.openlocfilehash: c6d120445bc6625b37c461c1bf2686b10833dc13
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740947"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900616"
 ---
 # <a name="about-net-core"></a>Sobre o .NET Core
 
@@ -57,7 +57,7 @@ Várias estruturas já foram criadas com base no .NET Core:
 O .NET Core é composto pelas seguintes partes:
 
 - O [tempo de execução do .NET Core](https://github.com/dotnet/runtime/tree/master/src/coreclr), que fornece um sistema de tipos, carregamento de assembly, coletor de lixo, interoperabilidade nativa e outros serviços básicos. As [bibliotecas do .NET Core Framework](https://github.com/dotnet/runtime/tree/master/src/libraries) fornecem tipos de dados primitivos, tipos de composição de aplicativo e utilitários fundamentais.
-- O [tempo de execução do ASP.net](https://github.com/aspnet/home), que fornece uma estrutura para a criação de aplicativos conectados à Internet modernos baseados em nuvem, como aplicativos Web, aplicativos de IOT e back-ends móveis.
+- O [tempo de execução de ASP.NET Core](https://github.com/dotnet/aspnetcore), que fornece uma estrutura para criar aplicativos conectados à Internet modernos baseados em nuvem, como aplicativos Web, aplicativos de IOT e back-ends móveis.
 - As [ferramentas da CLI do .NET Core](https://github.com/dotnet/sdk) e os compiladores de linguagem ([Roslyn](https://github.com/dotnet/roslyn) e [F#](https://github.com/microsoft/visualfsharp)) que permitem a experiência de desenvolvedor do .NET Core.
 - A [ferramenta dotnet](https://github.com/dotnet/core-setup), que é usada para iniciar aplicativos do .NET Core e ferramentas da CLI. Ele seleciona o tempo de execução e hospeda o tempo de execução, fornece uma política de carregamento de assembly e inicia aplicativos e ferramentas.
 

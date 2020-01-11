@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 656b8d9eb2bda2d01f001748c992958e95387744
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712501"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899847"
 ---
-# <a name="if-c-reference"></a>#if (Referência de C#)
+# <a name="if-c-reference"></a>#if (C# referência)
 
-Quando o Compilador do Visual C# encontra uma diretiva `#if`, seguida eventualmente por uma diretiva [#endif](preprocessor-endif.md), ele compila o código entre as diretivas somente quando o símbolo especificado é definido. Ao contrário do C e do C++, não é possível atribuir um valor numérico a um símbolo. A instrução #if em C# é booliana e testa apenas quando o símbolo foi definido ou não. Por exemplo:
+Quando o Compilador do Visual C# encontra uma diretiva `#if`, seguida eventualmente por uma diretiva [#endif](preprocessor-endif.md), ele compila o código entre as diretivas somente quando o símbolo especificado é definido. Ao contrário do C e do C++, não é possível atribuir um valor numérico a um símbolo. A instrução `#if` em C# é booleana e apenas testa se o símbolo foi definido ou não. Por exemplo:
 
 ```csharp
 #if DEBUG
@@ -23,7 +23,7 @@ Quando o Compilador do Visual C# encontra uma diretiva `#if`, seguida eventualme
 #endif
 ```
 
-Você pode usar os operadores [==](../operators/equality-operators.md#equality-operator-) (igualdade) e [! =](../operators/equality-operators.md#inequality-operator-) (desigualdade) somente para testar os valores [bool](../builtin-types/bool.md) `true` ou `false`. True significa que o símbolo foi definido. A instrução `#if DEBUG` tem o mesmo significado que `#if (DEBUG == true)`. É possível usar os operadores [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (e), [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (ou) e [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (não) para avaliar se vários símbolos foram definidos. Também é possível agrupar os símbolos e operadores com parênteses.
+Você pode usar os operadores [==](../operators/equality-operators.md#equality-operator-) (igualdade) e [! =](../operators/equality-operators.md#inequality-operator-) (desigualdade) somente para testar os valores [bool](../builtin-types/bool.md) `true` ou `false`. `true` significa que o símbolo está definido. A instrução `#if DEBUG` tem o mesmo significado que `#if (DEBUG == true)`. Você pode usar o [& & (e)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-), [ &#124; &#124; (ou)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)e [! (não)](../operators/boolean-logical-operators.md#logical-negation-operator-) operadores para avaliar se vários símbolos foram definidos. Também é possível agrupar os símbolos e operadores com parênteses.
 
 ## <a name="remarks"></a>Comentários
 

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - query projection [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
-ms.openlocfilehash: 03fa40a895d322a8b5ad543f75424ef5b379672b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 764ea6a77ba267e691d48bc72d17c02f6b3c18ca
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568896"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900967"
 ---
 # <a name="query-projections-wcf-data-services"></a>Projeções de consulta (WCF Data Services)
 
-A projeção fornece um mecanismo no Protocolo Open Data (OData) para reduzir a quantidade de dados no feed retornada por uma consulta, especificando que apenas determinadas propriedades de uma entidade são retornadas na resposta. Para obter mais informações, consulte [OData: selecionar opção de consulta do sistema ($SELECT)](https://go.microsoft.com/fwlink/?LinkId=186076).
+A projeção fornece um mecanismo no Protocolo Open Data (OData) para reduzir a quantidade de dados no feed retornada por uma consulta, especificando que apenas determinadas propriedades de uma entidade são retornadas na resposta. Para obter mais informações, consulte a seção 4,8. Selecione a opção de consulta do sistema ($select) em [convenções de URI (OData versão 2,0)](https://www.odata.org/documentation/odata-version-2-0/uri-conventions/).
 
 Este tópico descreve como definir uma projeção de consulta, quais são os requisitos para tipos de entidade e não de entidade, fazer atualizações em resultados projetados, criar tipos projetados e listar algumas considerações de projeção.
 
@@ -116,6 +116,6 @@ As considerações adicionais a seguir se aplicam ao definir uma projeção de c
 
 Para obter mais informações, consulte [como: projetar resultados da consulta](how-to-project-query-results-wcf-data-services.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Querying the Data Service](querying-the-data-service-wcf-data-services.md) (Consultando o serviço de dados)

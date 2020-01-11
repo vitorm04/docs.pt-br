@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ac5c1245-9acf-4271-9c08-3d9b7c670df3
 topic_type:
 - apiref
-ms.openlocfilehash: 4f3574e282d24fa11ffa2f85463f682c42098ae7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e437ee2ab04d3b1126ec2911553e87586e74e54e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135045"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899621"
 ---
 # <a name="iclrstrongnamestrongnamekeygen-method"></a>Método ICLRStrongName::StrongNameKeyGen
 Cria um novo par de chaves públicas/privadas para uso de nome forte.  
@@ -41,7 +41,7 @@ HRESULT StrongNameKeyGen (
  no O nome do contêiner de chave solicitado. `wszKeyContainer` deve ser uma cadeia de caracteres não vazia ou nula para gerar um nome temporário.  
   
  `dwFlags`  
- no Um valor que especifica se a chave deve ser desregistrada. Há suporte para os seguintes valores:  
+ no Um valor que especifica se a chave deve ser desregistrada. Os valores a seguir têm suporte:  
   
 - 0x00000000-usado quando `wszKeyContainer` é nulo para gerar um nome de contêiner de chave temporário.  
   
@@ -53,13 +53,13 @@ HRESULT StrongNameKeyGen (
  `pcbKeyBlob`  
  fora O tamanho, em bytes, de `ppbKeyBlob`.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
  O método [ICLRStrongName:: StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md) cria uma chave de 1024 bits. Depois que a chave for recuperada, você deverá chamar o método [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) para liberar a memória alocada.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -68,7 +68,7 @@ HRESULT StrongNameKeyGen (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Método StrongNameKeyGenEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

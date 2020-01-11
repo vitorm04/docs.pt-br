@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b67ea03-d474-4605-acaa-57455790250c
 topic_type:
 - apiref
-ms.openlocfilehash: 3fd9efd3961be1d6e6e91b881327628c598e364e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8131a9838cc958405ca23c75c702db5ec65a41c8
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092718"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901189"
 ---
 # <a name="iclrstrongnamegethashfromassemblyfile-method"></a>Método ICLRStrongName::GetHashFromAssemblyFile
 Obtém um hash do arquivo do assembly especificado, usando o algoritmo de hash especificado.  
@@ -53,10 +53,10 @@ HRESULT GetHashFromAssemblyFile (
  `pchHash`  
  fora O tamanho retornado, em bytes, de `pbHash`.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -65,7 +65,7 @@ HRESULT GetHashFromAssemblyFile (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Método GetHashFromAssemblyFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

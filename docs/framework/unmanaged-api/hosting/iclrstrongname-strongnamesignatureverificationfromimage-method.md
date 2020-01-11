@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da91c138-ee30-4fd4-a040-464d97d7e41a
 topic_type:
 - apiref
-ms.openlocfilehash: adb3b4e33edafe6d25c8259e316a9b62e339f896
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1bfc41fdad35a7e0560d251179ea035c96aecab7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092676"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899527"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>Método ICLRStrongName::StrongNameSignatureVerificationFromImage
 Verifica se um assembly, que já foi mapeado para a memória, é válido para a chave pública associada.  
@@ -44,7 +44,7 @@ HRESULT StrongNameSignatureVerificationFromImage (
  no O tamanho, em bytes, da imagem mapeada.  
   
  `dwInFlags`  
- no Sinalizadores que influenciam o comportamento da verificação. Há suporte para os seguintes valores:  
+ no Sinalizadores que influenciam o comportamento da verificação. Os valores a seguir têm suporte:  
   
 - `SN_INFLAG_FORCE_VER` (0x00000001) – força a verificação mesmo que seja necessário substituir as configurações do registro.  
   
@@ -63,10 +63,10 @@ HRESULT StrongNameSignatureVerificationFromImage (
   
 - `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-esse valor é definido como `false` para especificar que a verificação foi bem-sucedida devido às configurações do registro.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -75,6 +75,6 @@ HRESULT StrongNameSignatureVerificationFromImage (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

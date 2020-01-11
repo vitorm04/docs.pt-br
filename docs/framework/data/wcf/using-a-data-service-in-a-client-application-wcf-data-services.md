@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: 26fd25a268204ad2644a07b6a56967cc5d2df95e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 41d3af831ff3c99e7f3000593db52d307d37ac38
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568828"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900905"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usando um serviço de dados em um aplicativo cliente (WCF Data Services)
 Você pode acessar um serviço que expõe um feed Protocolo Open Data (OData) fornecendo um URI para um navegador da Web. O URI fornece o endereço de um recurso e, em seguida, são enviadas a esses endereços mensagens de solicitação para acessar ou alterar os dados subjacentes que o recurso representa. O navegador emite um comando HTTP GET e retorna o recurso solicitado como um feed OData. Para obter mais informações, consulte [acessando o serviço em um navegador da Web](accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -33,25 +33,25 @@ Você pode acessar um serviço que expõe um feed Protocolo Open Data (OData) fo
   
 - **Mesclagem http** -devido a ineficiências na execução de uma exclusão seguida por uma inserção na fonte de dados apenas para alterar os dados da entidade, o OData apresenta uma nova ação de mesclagem http. A carga da mensagem de solicitação contém as propriedades que devem ser alteradas no recurso de entidade direcionado. Como a MESCLAgem HTTP não é definida na especificação HTTP, ela pode exigir processamento adicional para rotear uma solicitação de MESCLAgem HTTP por meio de servidores não cientes de OData.  
   
- Para obter mais informações, consulte [OData: Operations](https://go.microsoft.com/fwlink/?LinkId=185792).  
+ Para obter mais informações, consulte [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ### <a name="payload-formats"></a>Formatos de carga  
  Para uma solicitação HTTP PUT, HTTP POST ou HTTP MERGE, a carga de uma mensagem de solicitação contém os dados de entidade que você envia ao serviço de dados. O conteúdo da carga depende do formato de dados da mensagem. As respostas HTTP a todas as ações, exceto DELETE, também contêm tal carga. O OData dá suporte aos seguintes formatos de carga para acessar e alterar dados com o serviço:  
   
-- **Atom** – uma codificação de mensagem baseada em XML que é definida pelo OData como uma extensão para o protocolo de publicação Atom (AtomPub) para habilitar a troca de dados por http para Web feeds, podcasts, wikis e funcionalidade de Internet baseada em XML. Para obter mais informações, consulte [OData: Atom Format](https://go.microsoft.com/fwlink/?LinkId=185794).  
+- **Atom** – uma codificação de mensagem baseada em XML que é definida pelo OData como uma extensão para o protocolo de publicação Atom (AtomPub) para habilitar a troca de dados por http para Web feeds, podcasts, wikis e funcionalidade de Internet baseada em XML. Para obter mais informações, consulte [OData: Atom Format](https://www.odata.org/documentation/odata-version-2-0/atom-format/).
   
-- **JSON** -JavaScript Object Notation (JSON) é um formato de intercâmbio de dados leve baseado em um subconjunto da linguagem de programação JavaScript. Para obter mais informações, consulte [OData: JSON Format](https://go.microsoft.com/fwlink/?LinkId=185795).  
+- **JSON** -JavaScript Object Notation (JSON) é um formato de intercâmbio de dados leve baseado em um subconjunto da linguagem de programação JavaScript. Para obter mais informações, consulte [OData: JSON Format](https://www.odata.org/documentation/odata-version-2-0/json-format/).
   
- O formato de mensagem da carga é solicitado no cabeçalho da mensagem de solicitação HTTP. Para obter mais informações, consulte [OData: Operations](https://go.microsoft.com/fwlink/?LinkID=185792).  
+ O formato de mensagem da carga é solicitado no cabeçalho da mensagem de solicitação HTTP. Para obter mais informações, consulte [OData: Operations](https://www.odata.org/documentation/odata-version-2-0/operations/).
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Acessando e alterando dados usando bibliotecas de cliente  
  O WCF Data Services inclui bibliotecas de cliente que permitem consumir com mais facilidade um feed OData de aplicativos cliente baseados em .NET Framework e Silverlight. Essas bibliotecas simplificam o envio e o recebimento de mensagens HTTP. Elas também convertem a carga da mensagem em objetos CLR que representam dados de entidade. As bibliotecas de cliente apresentam as duas classes principais <xref:System.Data.Services.Client.DataServiceContext> e <xref:System.Data.Services.Client.DataServiceQuery%601>. Essas classes permitem consultar um serviço de dados e trabalhar com os dados de entidade retornados como objetos CLR. Para obter mais informações, consulte [WCF Data Services biblioteca de cliente](wcf-data-services-client-library.md) e [WCF Data Services (Silverlight)](https://docs.microsoft.com/previous-versions/windows/silverlight/dotnet-windows-silverlight/cc838234(v=vs.95)).  
   
  Você pode usar a caixa de diálogo **Adicionar referência de serviço** no Visual Studio para adicionar uma referência a um serviço de dados. Essa ferramenta solicita os metadados de serviço de um serviço de dados referenciado e gera o <xref:System.Data.Services.Client.DataServiceContext> que representa um serviço de dados, além de gerar as classes de serviço de dados cliente que representam entidades. Para obter mais informações, consulte [gerando a biblioteca de cliente do serviço de dados](generating-the-data-service-client-library-wcf-data-services.md).  
   
- Há bibliotecas de programação disponíveis que você pode usar para consumir um feed OData em outros tipos de aplicativos cliente. Para obter mais informações, consulte o [SDK do OData](https://go.microsoft.com/fwlink/?LinkId=185796).  
+ Há bibliotecas de programação disponíveis que você pode usar para consumir um feed OData em outros tipos de aplicativos cliente. Para obter mais informações sobre o SDK do OData, consulte [SDK do OData – código de exemplo](https://www.odata.org/ecosystem/#sdk).
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Acessando recursos do serviço de dados](accessing-data-service-resources-wcf-data-services.md)
 - [Quickstart](quickstart-wcf-data-services.md) (Início rápido)

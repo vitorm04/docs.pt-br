@@ -1,5 +1,5 @@
 ---
-title: O que está obsoleto na biblioteca de classes do .NET Framework
+title: O que é obsoleto no .NET Framework
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
 helpviewer_keywords:
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - what's obsolete [.NET Framework]
 - deprecated [.NET Framework]
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
-ms.openlocfilehash: 4de441ff55c3728f43742d6e467deeb47f400507
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: eda60ce9e1396805541229c9756b13cdd167dc72
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140600"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901329"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>O que está obsoleto na biblioteca de classes do .NET Framework
 
-O .NET Framework muda com o passar do tempo. Cada nova versão adiciona novos tipos e membros de tipo que oferecem uma nova funcionalidade. Tipos existentes e seus membros também mudam com o passar do tempo. Por exemplo, alguns tipos se tornam menos importantes conforme a tecnologia compatível é substituída por uma nova tecnologia e alguns métodos são substituídos por métodos mais novos que sejam mais práticos ou mais repletos de recursos.
+O .NET muda ao longo do tempo. Cada nova versão adiciona novos tipos e membros de tipo que oferecem uma nova funcionalidade. Tipos existentes e seus membros também mudam com o passar do tempo. Por exemplo, alguns tipos se tornam menos importantes à medida que a tecnologia à qual eles dão suporte é substituída por uma nova tecnologia e alguns métodos são substituídos por métodos mais novos que são superiores de alguma maneira.
 
-O .NET Framework e o Common Language Runtime procuram dar suporte à compatibilidade com versões anteriores (permitindo que aplicativos desenvolvidos com uma versão do .NET Framework sejam executados na próxima versão do .NET Framework). Isso dificulta a simples remoção de um tipo ou de um membro de tipo. Em vez disso, o .NET Framework indica que um tipo ou um membro de tipo não deve mais ser usado marcando-o como obsoleto ou substituído. A substituição de um tipo ou membro envolve marcá-lo para que os desenvolvedores estejam cientes de que eles sumirão e tenham tempo para responder a essa remoção. No entanto, o código existente que usa o tipo ou o membro continua sendo executado na nova versão do .NET Framework.
+.NET Framework e a Common Language Runtime buscam suporte à compatibilidade com versões anteriores (permitindo que os aplicativos desenvolvidos com uma versão do .NET Framework sejam executados na próxima versão do .NET Framework). Isso dificulta a simples remoção de um tipo ou de um membro de tipo. Em vez disso, o .NET indica que um tipo ou um membro de tipo não deve mais ser usado, marcando-o como obsoleto ou preterido. A substituição de um tipo ou membro envolve marcá-lo para que os desenvolvedores estejam cientes de que eles sumirão e tenham tempo para responder a essa remoção. No entanto, o código existente que usa o tipo ou o membro continua a ser executado na nova versão do .NET.
 
 > [!NOTE]
-> Os termos *obsoleto* e *preterido* têm o mesmo significado quando aplicados aos tipos e membros do .NET Framework.
+> Os termos *obsoletos* e *preteridos* têm o mesmo significado quando aplicados a tipos e membros do .net.
 
 ## <a name="the-obsoleteattribute-attribute"></a>O atributo ObsoleteAttribute
 
@@ -37,13 +37,13 @@ Quando você atualiza e depois recompila o código existente, o uso de um tipo o
 
 - Altere seu código removendo o uso do tipo ou do membro, se possível.
 
-     \- ou -
+     - ou -
 
 - Examine a documentação dessa área de tecnologia para determinar como responder à substituição.
 
 Você pode optar por não recompilar o código existente em comparação com uma versão posterior do .NET Framework. Em vez disso, você pode especificar a versão do .NET Framework na qual o código existente compilado é executado. Por exemplo, suponhamos que você tenha um aplicativo chamado app1.exe, compilado no .NET Framework 3.5, mas queira que o aplicativo seja executado no .NET Framework 4.5. Isso exige as seguintes etapas:
 
-1. Crie um arquivo de configuração para o executável principal e denomine-o *appName*.exe.config, em que *appName* é o nome do executável do aplicativo. Para o aplicativo chamado app1.exe em nosso exemplo, você criaria um arquivo de configuração chamado app1.exe.config.
+1. Crie um arquivo de configuração para o executável principal e denomine-o *appName*.exe.config, em que *appName* é o nome do executável do aplicativo. Para o aplicativo chamado *App1. exe* em nosso exemplo, você criaria um arquivo de configuração chamado *App1. exe. config*.
 
 2. Adicione o seguinte ao arquivo de configuração.
 
@@ -55,7 +55,7 @@ Você pode optar por não recompilar o código existente em comparação com uma
     </configuration>
     ```
 
-A tabela a seguir lista os valores da cadeia de caracteres que você pode atribuir ao atributo `version` para segmentar uma versão específica do .NET Framework:
+Para direcionar uma versão específica do .NET Framework, atribua um dos seguintes valores de cadeia de caracteres ao atributo `version`:
 
 |Versão do .NET Framework|Cadeia de caracteres `version`|
 |-|-|
@@ -69,21 +69,18 @@ A tabela a seguir lista os valores da cadeia de caracteres que você pode atribu
 |1.1|v1.1.4322|
 |1.0|v1.0.3705|
 
-## <a name="obsolete-lists-for-the-net-framework-45-and-later-versions"></a>Listas obsoletas para o .NET Framework 4.5 e versões posteriores
+## <a name="obsolete-apis-for-net-framework-45-and-later-versions"></a>APIs obsoletas para o .NET Framework 4,5 e versões posteriores
 
 - [Tipos obsoletos](obsolete-types.md)
 - [Membros obsoletos](obsolete-members.md)
 
-## <a name="obsolete-lists-for-previous-versions"></a>Listas obsoletas de versões anteriores
+## <a name="obsolete-apis-for-previous-versions"></a>APIs obsoletas para versões anteriores
 
 - [Tipos obsoletos no .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee461503(v=vs.100))
-
 - [Membros obsoletos no .NET Framework 4](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ee471421(v=vs.100))
-
 - [Lista obsoleta do .NET Framework 3.5](https://docs.microsoft.com/previous-versions/cc835481(v=msdn.10))
-
 - [Lista obsoleta do .NET Framework 2.0](https://docs.microsoft.com/previous-versions/aa497286(v=msdn.10))
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - Elemento [\<supportedRuntime>](../configure-apps/file-schema/startup/supportedruntime-element.md)

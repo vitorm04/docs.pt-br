@@ -6,12 +6,12 @@ helpviewer_keywords:
 - garbage collection, troubleshooting
 - garbage collection, performance
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
-ms.openlocfilehash: 8d40091420c29c86f2ebb25f14c17ae4f7a1c44a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 72cf742aae26f9441229b355dc6e70da7a5fc9cd
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974760"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900577"
 ---
 # <a name="garbage-collection-and-performance"></a>Coleta de lixo e desempenho
 
@@ -133,7 +133,7 @@ No heap de objetos grandes sempre ocorre fragmentação, porque ele não é comp
 
 A fragmentação pode se tornar um problema na geração 1 e geração 2. Se esses gerações tiverem uma grande quantidade de espaço livre após uma coleta de lixo, o uso de objetos de um aplicativo poderá precisar de modificações e você deverá considerar reavaliar o tempo de vida dos objetos de longo prazo.
 
-O excesso de fixação de objetos pode aumentar a fragmentação. Se a fragmentação for alta, poderá ocorrer fixação de objetos demais.
+O excesso de fixação de objetos pode aumentar a fragmentação. Se a fragmentação for alta, muitos objetos poderão ter sido fixados.
 
 Se a fragmentação da memória virtual estiver impedindo que o coletor de lixo adicione segmentos, as causas poderão ser uma dos seguintes:
 
@@ -209,7 +209,7 @@ A menos que você esteja usando um criador de perfil, você terá que estabelece
 
 - Se você medir imediatamente antes de uma coleta de lixo, você medirá o máximo de alocação possível antes do início da coleta de lixo.
 
-- Medir durante uma coleta de lixo é problemático, pois as estruturas de dados do coletor de lixo não estão em um estado válido para passagem e podem não ser capazes de fornecer a você os resultados completos. Esse comportamento é esperado.
+- Medir durante uma coleta de lixo é problemático, pois as estruturas de dados do coletor de lixo não estão em um estado válido para passagem e podem não ser capazes de fornecer a você os resultados completos. Isso faz parte do design.
 
 - Quando você usa a coleta de lixo de estação de trabalho com coleta de lixo simultânea, os objetos recuperados não são compactados, portanto, o tamanho do heap pode ser igual ou maior (a fragmentação pode fazer com que pareça maior).
 
@@ -327,7 +327,7 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Neste exemplo, o tamanho da maior região livre é aproximadamente 24.000 KB (3A980 em hexadecimal). Essa região é menor do que o tamanho requerido pelo coletor de lixo para um segmento.
 
-  \- ou -
+  - ou -
 
 - Use o comando **vmstat**:
 
@@ -794,6 +794,6 @@ Esta seção descreve os procedimentos a seguir para isolar a causa do problema 
 
   Se o valor de `% Time in GC` subir ao mesmo tempo que o tempo de processamento, isso significará que a coleta de lixo está causando um alto uso da CPU. Caso contrário, crie o perfil do aplicativo para encontrar o local de ocorrência do alto uso.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Coleta de lixo](../../../docs/standard/garbage-collection/index.md)

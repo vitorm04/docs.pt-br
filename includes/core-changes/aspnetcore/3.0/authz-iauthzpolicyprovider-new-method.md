@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 74b989a2413d2192f7cf5208e400eaed879ea096
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58dbb73902c0226fa81acf1a70de2160f406f6c6
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198332"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901954"
 ---
 ### <a name="authorization-iauthorizationpolicyprovider-implementations-require-new-method"></a>Autorização: implementações de IAuthorizationPolicyProvider exigem novo método
 
 No ASP.NET Core 3,0, um novo método `GetFallbackPolicyAsync` foi adicionado a `IAuthorizationPolicyProvider`. Essa política de fallback é usada pelo middleware de autorização quando nenhuma política é especificada.
 
-Para obter mais informações, consulte [ASPNET/AspNetCore # 9759](https://github.com/aspnet/AspNetCore/pull/9759).
+Para obter mais informações, consulte [dotnet/aspnetcore # 9759](https://github.com/dotnet/aspnetcore/pull/9759).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -22,7 +22,7 @@ As implementações de `IAuthorizationPolicyProvider` não exigiam um método `G
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-As implementações de `IAuthorizationPolicyProvider` exigem um método `GetFallbackPolicyAsync`.
+Implementações de `IAuthorizationPolicyProvider` exigem um método `GetFallbackPolicyAsync`.
 
 #### <a name="reason-for-change"></a>Motivo da alteração
 

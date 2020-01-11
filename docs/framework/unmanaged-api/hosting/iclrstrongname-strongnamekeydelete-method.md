@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0163412f-f617-4428-89e0-03992fec31e8
 topic_type:
 - apiref
-ms.openlocfilehash: 4e72818be6808c519677192d3744bbc5ec414d0d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 95098cbb060c06d2d5a5a4c04b6fa9017bca66a1
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135089"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899592"
 ---
 # <a name="iclrstrongnamestrongnamekeydelete-method"></a>Método ICLRStrongName::StrongNameKeyDelete
 Exclui o contêiner de chave especificado.  
@@ -37,13 +37,13 @@ HRESULT StrongNameKeyDelete (
  `wszKeyContainer`  
  no O nome do contêiner de chave a ser excluído.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
  Use o método [ICLRStrongName:: StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md) para importar um par de chaves pública/privada para um contêiner.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -52,7 +52,7 @@ HRESULT StrongNameKeyDelete (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Método StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

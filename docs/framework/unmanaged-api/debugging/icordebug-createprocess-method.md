@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: 8812a98b0f28dd1336903dc34682f638a291f53b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111004"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901005"
 ---
 # <a name="icordebugcreateprocess-method"></a>Método ICorDebug::CreateProcess
 Inicia um processo e seu thread principal sob o controle do depurador.  
@@ -61,7 +61,7 @@ HRESULT CreateProcess (
  no Defina como `true` para indicar que cada identificador herdável no processo de chamada é herdado pelo processo iniciado ou `false` para indicar que os identificadores não são herdados. Os identificadores herdados têm o mesmo valor e direitos de acesso que os identificadores originais.  
   
  `dwCreationFlags`  
- no Uma combinação de bits de bit que indica os [sinalizadores de criação de processos do Win32](https://go.microsoft.com/fwlink/?linkid=69981) que controlam a classe de prioridade e o comportamento do processo iniciado.  
+ no Uma combinação de bits de bit que indica os [sinalizadores de criação de processos do Win32](/windows/win32/procthread/process-creation-flags) que controlam a classe de prioridade e o comportamento do processo iniciado.  
   
  `lpEnvironment`  
  no Ponteiro para um bloco de ambiente para o novo processo.  
@@ -90,7 +90,7 @@ HRESULT CreateProcess (
   
  Não há suporte para depuração de interoperabilidade em plataformas Win9x e não x86, como plataformas baseadas em IA-64 e AMD64.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorDebug.idl, CorDebug.h  
@@ -99,6 +99,6 @@ HRESULT CreateProcess (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

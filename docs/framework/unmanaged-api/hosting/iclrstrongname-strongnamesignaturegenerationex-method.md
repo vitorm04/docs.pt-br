@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3f34584-c6e2-41fd-bb44-e44da8546309
 topic_type:
 - apiref
-ms.openlocfilehash: 3ca11cfe948a53292de8e68d87e3e45816a18162
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 34614fe24127787a113bab4975a50f1c8d2d875e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134992"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899505"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>Método ICLRStrongName::StrongNameSignatureGenerationEx
 Gera uma assinatura de nome forte para o assembly especificado, de acordo com os sinalizadores especificados.  
@@ -71,8 +71,8 @@ HRESULT StrongNameSignatureGenerationEx (
   
 - `SN_TEST_SIGN` (0x00000002)-testar o assembly.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
  Especifique NULL para `wszFilePath` calcular o tamanho da assinatura sem criar a assinatura.  
@@ -83,7 +83,7 @@ HRESULT StrongNameSignatureGenerationEx (
   
  Se `SN_TEST_SIGN` for especificado, o cabeçalho Common Language Runtime não será modificado para indicar que o assembly é assinado com um nome forte.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -92,7 +92,7 @@ HRESULT StrongNameSignatureGenerationEx (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Método StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegeneration-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

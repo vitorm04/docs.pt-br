@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 4ce9227839a610308071c36185b63db8b1ee86ed
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739303"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899878"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -72,9 +72,9 @@ A seguinte tabela mostra qual elemento e quais [globs](https://en.wikipedia.org/
 
 | Elemento           | Incluir glob                              | Excluir glob                                                  | Remover glob              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
-| Compilar           | \*\*/\*.cs (ou outras extensões de linguagem) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | N/A                      |
-| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | N/A                      |
-| Nenhum              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
+| Compilar           | \*\*/\*.cs (ou outras extensões de linguagem) | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc  | {1&gt;N/A&lt;1}                      |
+| EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | {1&gt;N/A&lt;1}                      |
+| {1&gt;Nenhum&lt;1}              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\*proj; \*\*/\*.sln; \*\*/\*.vssscc     | \*\*/\*.cs; \*\*/\*.resx   |
 
 > [!NOTE]
 > **Excluir glob** sempre exclui as pastas `./bin` e `./obj`, representadas pelas propriedades `$(BaseOutputPath)` e `$(BaseIntermediateOutputPath)` do MSBuild, respectivamente. Como um todo, todas as exclusões são representadas por `$(DefaultItemExcludes)`.
@@ -143,7 +143,7 @@ Um elemento de item `<PackageReference>` especifica uma [dependência do NuGet n
 <PackageReference Include="<package-id>" Version="" PrivateAssets="" IncludeAssets="" ExcludeAssets="" />
 ```
 
-#### <a name="version"></a>Version
+#### <a name="version"></a>Versão do
 
 O atributo `Version` obrigatório especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/reference/package-versioning#version-ranges-and-wildcards). O comportamento padrão é uma correspondência exata de versão. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação NuGet `[1.2.3]` para a versão exata 1.2.3 do pacote.
 
@@ -156,7 +156,7 @@ O atributo `ExcludeAssets` especifica quais ativos que pertencem ao pacote espec
 O atributo `PrivateAssets` especifica quais ativos que pertencem ao pacote especificado pelo `<PackageReference>` devem ser consumidos, mas não fluir para o próximo projeto. Quando esse atributo não estiver presente, os ativos `Analyzers`, `Build` e `ContentFiles` serão privados por padrão.
 
 > [!NOTE]
-> `PrivateAssets` é equivalente ao elemento *project.json*/*xproj* `SuppressParent`.
+> `PrivateAssets` é equivalente ao elemento *Project. json*/*xproj* `SuppressParent`.
 
 Esses atributos podem conter um ou mais dos itens a seguir, separados pelo caractere de ponto e vírgula `;` se houver mais de um:
 
@@ -180,7 +180,9 @@ Um elemento de item `<DotNetCliToolReference>` especifica a ferramenta da CLI qu
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
-#### <a name="version"></a>Version
+Observe que `DotNetCliToolReference` [agora é preterido](https://github.com/dotnet/announcements/issues/107) em favor das [ferramentas locais do .NET Core](https://aka.ms/local-tools).
+
+#### <a name="version"></a>Versão do
 
 `Version` especifica a versão do pacote para restauração. O atributo respeita as regras do esquema de [controle de versão do NuGet](/nuget/create-packages/dependency-versions#version-ranges). O comportamento padrão é uma correspondência exata de versão. Por exemplo, especificar `Version="1.2.3"` é equivalente à notação NuGet `[1.2.3]` para a versão exata 1.2.3 do pacote.
 
@@ -264,7 +266,7 @@ Especifica a versão que o pacote resultante terá. Aceita todos os formatos de 
 
 Especifica o nome para o pacote resultante. Se não for especificado, a operação `pack` usará como padrão o `AssemblyName` ou o nome do diretório como o nome do pacote.
 
-### <a name="title"></a>Título
+### <a name="title"></a>Cargo
 
 Um título amigável do pacote, geralmente usado em exibições de interface do usuário como em nuget.org e no Gerenciador de Pacotes do Visual Studio. Se não for especificado, a ID do pacote será usada em seu lugar.
 
@@ -440,7 +442,7 @@ Cada atributo tem uma propriedade que controla seu conteúdo e outra para desabi
 | <xref:System.Reflection.AssemblyVersionAttribute>              | `AssemblyVersion`      | `GenerateAssemblyVersionAttribute`              |
 | <xref:System.Resources.NeutralResourcesLanguageAttribute>      | `NeutralLanguage`      | `GenerateNeutralResourcesLanguageAttribute`     |
 
-Notas:
+Observações:
 
 - O padrão de `AssemblyVersion` e `FileVersion` é usar o valor de `$(Version)` sem sufixo. Por exemplo, se `$(Version)` fosse `1.2.3-beta.4`, então o valor seria `1.2.3`.
 - `InformationalVersion` usa por padrão o valor de `$(Version)`.

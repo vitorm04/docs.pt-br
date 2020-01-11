@@ -2,12 +2,12 @@
 title: Limitações do Dapper
 ms.date: 12/13/2019
 description: Descreve algumas das limitações que você encontrará ao usar o Dapper.
-ms.openlocfilehash: 90c7fb24f068d663081390bdba9b1b222b4be56e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 396507f25f591a9ab5c3bb07c0af6fd8d175e4ea
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75447275"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901203"
 ---
 # <a name="dapper-limitations"></a>Limitações do Dapper
 
@@ -15,7 +15,7 @@ Há algumas limitações que você deve conhecer ao usar o Microsoft. Data. sqli
 
 ## <a name="parameters"></a>Parâmetros
 
-Os nomes de parâmetro do SQLite diferenciam maiúsculas de minúsculas. Verifique se os nomes de parâmetro usados no SQL correspondem ao caso das propriedades do objeto anônimo. O problema [#18861](https://github.com/aspnet/EntityFrameworkCore/issues/18861) melhoraria essa experiência.
+Os nomes de parâmetro do SQLite diferenciam maiúsculas de minúsculas. Verifique se os nomes de parâmetro usados no SQL correspondem ao caso das propriedades do objeto anônimo. O problema [#18861](https://github.com/dotnet/efcore/issues/18861) melhoraria essa experiência.
 
 Dapper também espera parâmetros para usar o prefixo `@`. Outros prefixos não funcionarão.
 

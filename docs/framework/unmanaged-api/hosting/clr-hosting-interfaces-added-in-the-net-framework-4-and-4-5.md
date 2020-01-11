@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .NET Framework 4, hosting interfaces
 - interfaces [.NET Framework hosting], version 4
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
-ms.openlocfilehash: aea88430d8f83234a1568bcaf433c2a75492e23a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8484b47549f83795778420048d610e2d1626d87b
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73195922"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899726"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>Interfaces de hospedagem CLR adicionadas no .NET Framework 4 e 4.5
 Esta seção descreve as interfaces que os hosts não gerenciados podem usar para integrar o Common Language Runtime (CLR) no .NET Framework 4, .NET Framework 4,5 e versões posteriores em seus aplicativos. Essas interfaces fornecem métodos para um host configurar e carregar o tempo de execução em um processo.  
@@ -22,7 +22,7 @@ Esta seção descreve as interfaces que os hosts não gerenciados podem usar par
   
 - Eles não usam tipos COM, como `BSTR`, `SAFEARRAY`ou `VARIANT`.  
   
-- Não há modelos de apartamento, agregação ou ativação de registro que usam a [função CoCreateInstance](https://go.microsoft.com/fwlink/?LinkId=142894).  
+- Não há modelos de apartamento, agregação ou ativação de registro que usam a [função CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Interface ICLRAppDomainResourceMonitor](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
@@ -52,7 +52,7 @@ Esta seção descreve as interfaces que os hosts não gerenciados podem usar par
  [Interface ICLRTask2](../../../../docs/framework/unmanaged-api/hosting/iclrtask2-interface.md)  
  Fornece toda a funcionalidade da [interface ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md); Além disso, o fornece métodos que permitem que as anulações de thread sejam atrasadas no thread atual.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Interfaces e coclasses de hospedagem CLR preteridas](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
  Descreve as interfaces de hospedagem fornecidas com as versões 1,0 e 1,1 do .NET Framework.  
   

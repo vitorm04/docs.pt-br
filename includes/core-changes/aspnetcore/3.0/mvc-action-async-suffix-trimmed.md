@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 503d61cb86c83e2f32ad40c60a127ae255ef71b0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 58b1190e3e6a3168d35700eed655f6756e076a29
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198337"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901638"
 ---
 ### <a name="mvc-async-suffix-trimmed-from-controller-action-names"></a>MVC: sufixo assíncrono cortado dos nomes de ação do controlador
 
-Como parte do endereçamento [ASPNET/AspNetCore # 4849](https://github.com/aspnet/AspNetCore/issues/4849), ASP.NET Core MVC apara o sufixo `Async` dos nomes de ação por padrão. A partir do ASP.NET Core 3,0, essa alteração afeta o roteamento e a geração de link.
+Como parte do endereçamento [dotnet/aspnetcore # 4849](https://github.com/dotnet/aspnetcore/issues/4849), ASP.NET Core MVC apara o sufixo `Async` de nomes de ação por padrão. A partir do ASP.NET Core 3,0, essa alteração afeta o roteamento e a geração de link.
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -29,7 +29,7 @@ public class ProductController : Controller
 }
 ```
 
-A ação é roteável via `Product/ListAsync`. A geração de link requer a especificação do sufixo `Async`. Por exemplo:
+A ação é roteável via `Product/ListAsync`. A geração de link requer a especificação do sufixo de `Async`. Por exemplo:
 
 ```cshtml
 <a asp-controller="Product" asp-action="ListAsync">List</a>
@@ -37,13 +37,13 @@ A ação é roteável via `Product/ListAsync`. A geração de link requer a espe
 
 #### <a name="new-behavior"></a>Novo comportamento
 
-No ASP.NET Core 3,0, a ação é roteável via `Product/List`. O código de geração de link deve omitir o sufixo `Async`. Por exemplo:
+No ASP.NET Core 3,0, a ação é roteável via `Product/List`. O código de geração de link deve omitir o sufixo de `Async`. Por exemplo:
 
 ```cshtml
 <a asp-controller="Product" asp-action="List">List</a>
 ```
 
-Essa alteração não afeta os nomes especificados usando o atributo `[ActionName]`. O novo comportamento pode ser desabilitado definindo `MvcOptions.SuppressAsyncSuffixInActionNames` como `false` em `Startup.ConfigureServices`:
+Essa alteração não afeta os nomes especificados usando o atributo `[ActionName]`. O novo comportamento pode ser desabilitado definindo `MvcOptions.SuppressAsyncSuffixInActionNames` como `false` no `Startup.ConfigureServices`:
 
 ```csharp
 services.AddMvc(options =>
@@ -58,10 +58,10 @@ Por convenção, os métodos .NET assíncronos têm um sufixo `Async`. No entant
 
 #### <a name="recommended-action"></a>Ação recomendada
 
-Se seu aplicativo depende de ações do MVC preservando o sufixo `Async` do nome, escolha uma das seguintes atenuações:
+Se seu aplicativo depende de ações do MVC preservando o sufixo de `Async` do nome, escolha uma das seguintes atenuações:
 
 - Use o atributo `[ActionName]` para preservar o nome original.
-- Desabilite a renomeação total definindo `MvcOptions.SuppressAsyncSuffixInActionNames` como `false` em `Startup.ConfigureServices`:
+- Desabilite a renomeação total definindo `MvcOptions.SuppressAsyncSuffixInActionNames` como `false` no `Startup.ConfigureServices`:
 
 ```csharp
 services.AddMvc(options =>
@@ -76,7 +76,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>APIs afetadas
 
-Nenhum
+{1&gt;Nenhum&lt;1}
 
 <!-- 
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c15cf3b-164c-49d1-8e57-e42949d55acf
 topic_type:
 - apiref
-ms.openlocfilehash: 693a5831934647256ac48c8f3a2d30325dee4349
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 2a76377857c3cf1e40a328b9a13fb4834321707e
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135031"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899563"
 ---
 # <a name="iclrstrongnamestrongnamekeyinstall-method"></a>Método ICLRStrongName::StrongNameKeyInstall
 Importa um par de chaves públicas/privadas em um contêiner.  
@@ -45,13 +45,13 @@ HRESULT StrongNameKeyInstall (
  `cbKeyBlob`  
  no O tamanho, em bytes, de `pbKeyBlob`.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
  Use o método [ICLRStrongName:: StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) para excluir o contêiner de chave.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -60,7 +60,7 @@ HRESULT StrongNameKeyInstall (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Método StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

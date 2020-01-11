@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3bedbb7d-3cdd-4175-b370-10ae734062db
 topic_type:
 - apiref
-ms.openlocfilehash: 19d4518b7ec125df717b2f901bbd92cbd1b659bc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c095c99ee60d6b2ea0e5bce7010a66d40160443d
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135162"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75899679"
 ---
 # <a name="iclrstrongnamegethashfromhandle-method"></a>Método ICLRStrongName::GetHashFromHandle
 Gera um hash sobre o conteúdo do arquivo que tem o identificador de arquivo especificado, usando o algoritmo de hash especificado.  
@@ -54,10 +54,10 @@ HRESULT GetHashFromHandle (
  `pchHash`  
  fora O tamanho, em bytes, do `pbHash`retornado.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -66,6 +66,6 @@ HRESULT GetHashFromHandle (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

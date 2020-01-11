@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 1ce152b84f17a35982a75f54b5418623ba39210f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 890f0ba25d8320008228c73660753b9899269fd7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975229"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900994"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
-WCF Data Services (anteriormente conhecido como "ADO.NET Data Services") é um componente da .NET Framework que permite criar serviços que usam o Protocolo Open Data (OData) para expor e consumir dados pela Web ou intranet usando a semântica da [REST (transferência de estado de reapresentação)](https://go.microsoft.com/fwlink/?LinkId=113919). OData expõem dados como recursos que são endereçáveis por URIs. Os dados são acessados e alterados usando os verbos HTTP padrão GET, PUT, POST e DELETE. O OData usa as convenções de relacionamento de entidade do [modelo de dados de entidade](../adonet/entity-data-model.md) para expor recursos como conjuntos de entidades relacionadas por associações.
+WCF Data Services (anteriormente conhecido como "ADO.NET Data Services") é um componente da .NET Framework que permite criar serviços que usam o Protocolo Open Data (OData) para expor e consumir dados pela Web ou intranet usando a semântica da [REST (transferência de estado de reapresentação)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm). OData expõe dados como recursos endereçáveis por URIs. Os dados são acessados e modificados usando verbos HTTP padrão, que são GET, PUT, POST e DELETE. O OData usa as convenções de relacionamento de entidade do [modelo de dados de entidade](../adonet/entity-data-model.md) para expor recursos como conjuntos de entidades relacionadas por associações.
 
 WCF Data Services usa o protocolo OData para endereçar e atualizar recursos. Dessa forma, você pode acessar esses serviços de qualquer cliente que ofereça suporte a OData. O OData permite que você solicite e grave dados em recursos usando formatos de transferência conhecidos: Atom, um conjunto de padrões para a troca e atualização de dados como XML e JavaScript Object Notation (JSON), um formato de troca de dados baseado em texto usado extensivamente no AJAX aplicativos.
 
@@ -32,10 +32,6 @@ Desejo ir diretamente para...
 
 - [Introdução](getting-started-with-wcf-data-services.md)
 
-- [Silverlight Quickstart](https://go.microsoft.com/fwlink/?LinkID=192782) (Início rápido do Silverlight)
-
-- [Silverlight Quickstart for Windows Phone Development](https://go.microsoft.com/fwlink/?LinkID=214535) (Guia de início rápido do Silverlight para desenvolvimento do Windows Phone)
-
 Mostrar apenas alguns códigos...
 
 - [Quickstart](quickstart-wcf-data-services.md) (Início rápido)
@@ -46,29 +42,14 @@ Mostrar apenas alguns códigos...
 
 Quero saber mais sobre o OData...
 
-- [Whitepaper: Introducing OData](https://go.microsoft.com/fwlink/?LinkId=220867) (White paper: Introdução ao OData)
-
-- [Site do Protocolo Open Data](https://go.microsoft.com/fwlink/?LinkID=184554)
-
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
-
-- [OData: Frequently Asked Questions](https://go.microsoft.com/fwlink/?LinkId=185867) (OData: perguntas frequentes)
-
-Quero assistir a alguns vídeos...
-
-- [Beginner's Guide to WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=220864) (Guia do iniciante do WCF Data Services)
-
-- [WCF Data Services Developer Videos](https://go.microsoft.com/fwlink/?LinkId=220861) (Vídeos para desenvolvedores do WCF Data Services)
-
-- [OData: Developers Web site](https://go.microsoft.com/fwlink/?LinkId=185866) (OData: site para desenvolvedores)
+- [Whitepaper: Introducing OData](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf) (White paper: Introdução ao OData)
+- [Site do Protocolo Open Data](https://www.odata.org/)
+- [OData: SDK](https://www.odata.org/ecosystem/)
 
 Quero ver exemplos de ponta a ponta...
 
-- [WCF Data Services Documentation Samples on MSDN Samples Gallery](https://go.microsoft.com/fwlink/?LinkID=220865) (Amostras de documentação do WCF Data Services na galeria de amostras do MSDN)
-
-- [Other WCF Data Services Samples on MSDN Samples Gallery](https://go.microsoft.com/fwlink/?LinkId=220866) (Outras amostras do WCF Data Services na galeria de amostras do MSDN)
-
-- [OData: SDK](https://go.microsoft.com/fwlink/?LinkID=185248)
+- [Guia de início rápido WCF Data Services](https://github.com/microsoftarchive/msdn-code-gallery-community-s-z/tree/master/WCF%20Data%20Services%20Quickstart%20(OData%20Service%20and%20WPF%20Client))
+- [SDK do OData – código de exemplo](https://www.odata.org/ecosystem/#sdk)
 
 Como ele se integra ao Visual Studio?
 
@@ -82,17 +63,7 @@ O que posso fazer com ele?
 
 - [Visão Geral](wcf-data-services-overview.md)
 
-- [Whitepaper: Introducing OData](https://go.microsoft.com/fwlink/?LinkId=220867) (White paper: Introdução ao OData)
-
 - [Application Scenarios](application-scenarios-wcf-data-services.md) (Cenários de aplicativo)
-
-Quero usar o Silverlight...
-
-- [Silverlight Quickstart](https://go.microsoft.com/fwlink/?LinkID=192782) (Início rápido do Silverlight)
-
-- [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)
-
-- [Getting Started with Silverlight](https://go.microsoft.com/fwlink/?LinkId=148366) (Introdução ao Silverlight)
 
 Quero usar LINQ...
 
@@ -104,13 +75,9 @@ Quero usar LINQ...
 
 Ainda preciso de mais algumas informações...
 
-- [Blog da equipe do WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=150511)
+- [Blog da equipe do WCF Data Services](https://docs.microsoft.com/archive/blogs/astoriateam/)
 
 - [Recursos](wcf-data-services-resources.md)
-
-- [WCF Data Services Developer Center](https://go.microsoft.com/fwlink/?LinkId=220868) (Central de desenvolvedores do WCF Data Services)
-
-- [Site do Protocolo Open Data](https://go.microsoft.com/fwlink/?LinkID=184554)
 
 ## <a name="in-this-section"></a>Nesta seção
 
@@ -134,6 +101,6 @@ Descreve como criar e configurar um serviço de dados que expõe feeds OData.
 
 Descreve como usar bibliotecas de cliente para consumir feeds OData de um aplicativo cliente .NET Framework.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919) [REST (Transferência de Estado Representacional)]
+- [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) [REST (Transferência de Estado Representacional)]

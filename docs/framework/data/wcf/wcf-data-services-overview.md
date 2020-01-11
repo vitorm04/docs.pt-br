@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: b3feb2a22fc38c6a2d13d6802b94386d6f7841ac
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: a4121bb10de7bfe51c5fec6bc14a40ad4bdcdaf7
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568798"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900888"
 ---
 # <a name="wcf-data-services-overview"></a>Visão geral do WCF Data Services
 WCF Data Services habilita a criação e o consumo de serviços de dados para a Web ou uma intranet usando o Protocolo Open Data (OData). O OData permite que você exponha seus dados como recursos que são endereçáveis por URIs. Isso permite que você acesse e altere dados usando a semântica da REST (transferência de estado de reapresentação), especificamente os verbos HTTP padrão de GET, PUT, POST e DELETE. Este tópico fornece uma visão geral dos padrões e das práticas definidas pelo OData e também dos recursos fornecidos pelo WCF Data Services para aproveitar o OData em aplicativos baseados em .NET Framework.  
@@ -25,7 +25,7 @@ WCF Data Services habilita a criação e o consumo de serviços de dados para a 
 ## <a name="interoperable-data-access"></a>Acesso a dados interoperáveis  
  O OData se baseia em protocolos padrão de Internet para tornar os serviços de dados interoperáveis com aplicativos que não usam o .NET Framework. Como você pode usar URIs padrão para endereçar dados, seu aplicativo pode acessar e alterar os dados usando a semântica de REST (transferência de estado de reapresentação), especificamente os verbos HTTP padrão de GET, PUT, POST e DELETE. Isso permite acessar esses serviços de qualquer cliente que possa analisar e acessar dados transmitidos por protocolos HTTP padrão.  
   
- O OData define um conjunto de extensões para o protocolo de publicação Atom (AtomPub). Ele dá suporte a solicitações e respostas HTTP em mais de um formato de dados para acomodar vários aplicativos e plataformas cliente. Um feed OData pode representar dados em Atom, JavaScript Object Notation (JSON) e como XML simples. Quando Atom é o formato padrão, o formato do feed é especificado no cabeçalho da solicitação HTTP. Para obter mais informações, consulte formato [OData: Atom](https://go.microsoft.com/fwlink/?LinkID=185794) e [OData: JSON](https://go.microsoft.com/fwlink/?LinkID=185795).  
+O OData define um conjunto de extensões para o protocolo de publicação Atom (AtomPub). Ele dá suporte a solicitações e respostas HTTP em mais de um formato de dados para acomodar vários aplicativos e plataformas cliente. Um feed OData pode representar dados em Atom, JavaScript Object Notation (JSON) e como XML simples. Quando Atom é o formato padrão, o formato do feed é especificado no cabeçalho da solicitação HTTP. Para obter mais informações, consulte formato [OData: Atom](https://www.odata.org/documentation/odata-version-2-0/atom-format/) e [OData: JSON](https://www.odata.org/documentation/odata-version-2-0/json-format/).  
   
  Ao publicar dados como um feed OData, WCF Data Services se baseia em outros recursos da Internet existentes para operações como cache e autenticação. Para fazer isso, WCF Data Services integra-se com os aplicativos e serviços de hospedagem existentes, como ASP.NET, Windows Communication Foundation (WCF) e Serviços de Informações da Internet (IIS).  
   
@@ -48,18 +48,18 @@ WCF Data Services habilita a criação e o consumo de serviços de dados para a 
   
  WCF Data Services inclui bibliotecas de cliente para aplicativos cliente baseados em .NET Framework e Silverlight. Essas bibliotecas cliente permitem interagir com serviços de dados usando objetos .NET Framework. Eles também dão suporte a consultas baseadas em objeto e consultas LINQ, carregamento de objetos relacionados, controle de alterações e resolução de identidade. Para obter mais informações, consulte [WCF Data Services biblioteca de cliente](wcf-data-services-client-library.md).  
   
- Além das bibliotecas de cliente OData incluídas com o .NET Framework e com o Silverlight, há outras bibliotecas de cliente que permitem que você consuma um feed OData em aplicativos cliente, como PHP, AJAX e aplicativos Java. Para obter mais informações, consulte o [SDK do OData](https://go.microsoft.com/fwlink/?LinkID=185796).  
+ Além das bibliotecas de cliente OData incluídas com o .NET Framework e com o Silverlight, há outras bibliotecas de cliente que permitem que você consuma um feed OData em aplicativos cliente, como PHP, AJAX e aplicativos Java. Para obter mais informações sobre o SDK do OData, consulte [SDK do OData – código de exemplo](https://www.odata.org/ecosystem/#sdk).
   
 ## <a name="architecture-overview"></a>Visão geral sobre arquitetura  
  O diagrama a seguir ilustra a arquitetura de WCF Data Services para expor feeds OData e usar esses feeds em bibliotecas de cliente habilitadas para OData:  
   
  ![Captura de tela mostrando um diagrama de arquitetura de WCF Data Services.](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [WCF Data Services 4.5](index.md)
 - [Introdução](getting-started-with-wcf-data-services.md)
 - [Defining WCF Data Services](defining-wcf-data-services.md) (Definindo o WCF Data Services)
 - [Acessando recursos do serviço de dados (WCF Data Services)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd728283(v=vs.100))
 - [WCF Data Services Client Library](wcf-data-services-client-library.md) (Biblioteca de clientes do WCF Data Services)
-- [Representational State Transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919) [REST (Transferência de Estado Representacional)]
+- [Representational State Transfer (REST)](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm) [REST (Transferência de Estado Representacional)]

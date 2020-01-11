@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4cdb1284-947a-4ed4-94c1-c5ff5cdfce56
 topic_type:
 - apiref
-ms.openlocfilehash: 8013d805716bbe6407eeed664966fe667282188a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ced7540afe931fb91240c770d76d205400157a51
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73135002"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901097"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>Método ICLRStrongName::StrongNameSignatureGeneration
 Gera uma assinatura de nome forte para o assembly especificado.  
@@ -65,15 +65,15 @@ HRESULT StrongNameSignatureGeneration (
  `pcbSignatureBlob`  
  fora O tamanho, em bytes, da assinatura retornada.  
   
-## <a name="return-value"></a>Valor retornado  
- `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](https://go.microsoft.com/fwlink/?LinkId=213878) para uma lista).  
+## <a name="return-value"></a>Valor de retorno  
+ `S_OK` se o método foi concluído com êxito; caso contrário, um valor HRESULT que indica falha (consulte [valores de HRESULT comuns](/windows/win32/seccrypto/common-hresult-values) para uma lista).  
   
 ## <a name="remarks"></a>Comentários  
  Especifique NULL para `wszFilePath` calcular o tamanho da assinatura sem criar a assinatura.  
   
  A assinatura pode ser armazenada diretamente no arquivo ou retornada ao chamador.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** MetaHost. h  
@@ -82,7 +82,7 @@ HRESULT StrongNameSignatureGeneration (
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Método StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)
 - [Interface ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
