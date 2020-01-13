@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: fb7ad54f61d9dcfe94379aef14930a0395da5291
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a4d3b808aee14d5d2f29053b0c60798f9f626e8c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424589"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75636322"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Visão geral dos aplicativos de navegador XAML do WPF
 <a name="introduction"></a>Os aplicativos de navegador XAML (XBAPs) combinam recursos de aplicativos Web e aplicativos cliente avançados. Assim como aplicativos Web, os XBAPs podem ser implantados em um servidor Web e iniciados no Internet Explorer ou no Firefox. Como aplicativos de cliente avançado, os XBAPs podem aproveitar os recursos do WPF. O desenvolvimento de XBAPs também é semelhante ao desenvolvimento de cliente avançado. Este tópico fornece uma introdução simples e de alto nível ao desenvolvimento de XBAP e descreve em que o desenvolvimento XBAP difere do desenvolvimento padrão de cliente avançado.
@@ -45,13 +45,13 @@ ms.locfileid: "73424589"
 ## <a name="deploying-an-xbap"></a>Implantando um XBAP
  Quando você compila um XBAP, a saída inclui os três arquivos a seguir:
 
-|Arquivo|Descrição|
+|File|Descrição|
 |----------|-----------------|
 |Executável (.exe)|Este arquivo contém o código compilado e tem uma extensão .exe.|
 |Manifesto do aplicativo (.manifest)|Este arquivo contém os metadados associados ao aplicativo e tem uma extensão .manifest.|
 |Manifesto de implantação (.xbap)|Esse arquivo contém as informações que o ClickOnce usa para implantar o aplicativo e tem a extensão. XBAP.|
 
- Você implanta XBAPs em um servidor Web, por exemplo, Microsoft Serviços de Informações da Internet (IIS) 5,0 ou versões posteriores. Não é necessário instalar o .NET Framework no servidor Web, mas você precisa registrar os tipos MIME (Multipurpose Internet Mail Extensions) e extensões de nome de arquivo do [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Para obter mais informações, consulte [Configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).
+ Você implanta XBAPs em um servidor Web, por exemplo, Microsoft Serviços de Informações da Internet (IIS) 5,0 ou versões posteriores. Não é necessário instalar o .NET Framework no servidor Web, mas você precisa registrar os tipos MIME (Multipurpose Internet Mail Extensions) do WPF e extensões de nome de arquivo. Para obter mais informações, consulte [Configurar o IIS 5.0 e o IIS 6.0 para implantar aplicativos WPF](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md).
 
  Para preparar seu XBAP para implantação, copie o .exe e os manifestos associados para o servidor Web. Crie uma página HTML que contenha um hiperlink para abrir o manifesto de implantação, que é o arquivo que tem a extensão .xbap. Quando o usuário clica no link para o arquivo. XBAP, o ClickOnce manipula automaticamente a mecânica de download e inicialização do aplicativo. O exemplo de código a seguir mostra uma página HTML que contém um hiperlink que aponta para um XBAP.
 
@@ -185,7 +185,7 @@ ms.locfileid: "73424589"
 
  Além disso, a simultaneidade aprimorada da sequência de download do ClickOnce melhora a hora de início em até dez por cento. Depois que o ClickOnce baixa e valida os manifestos, o download do aplicativo é iniciado e a barra de progresso começa a ser atualizada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Configurar o Visual Studio para depurar um aplicativo de navegador XAML para chamar um serviço Web](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [Implantando um aplicativo WPF](deploying-a-wpf-application-wpf.md)
