@@ -2,12 +2,12 @@
 title: Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 description: Aprenda as etapas do "loop externo" do fluxo de trabalho de DevOps
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c465ab380770441005f7365f53bc585236c31bd
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 735f92c00cd6279649ec3b0c35cfb00543f21a8c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738265"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936777"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Etapas no fluxo de trabalho de DevOps loop externo para um aplicativo de Docker
 
@@ -91,7 +91,7 @@ Com essas tarefas do Visual Studio Team Services, um Host/VM de build do Linux-D
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
 > - Como criar imagens Linux Docker do .NET Core com o Azure DevOps Services: \
->   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
+>   <https://docs.microsoft.com/archive/blogs/stevelasker/building-net-core-linux-docker-images-with-visual-studio-team-services>
 >
 > - Como criar um computador de build do Visual Studio Team Services baseada em Linux com suporte para Docker: \
 >   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>

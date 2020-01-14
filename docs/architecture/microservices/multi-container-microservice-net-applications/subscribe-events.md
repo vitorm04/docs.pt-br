@@ -2,12 +2,12 @@
 title: Assinando eventos
 description: Arquitetura de microsserviços .NET para aplicativos .NET em contêineres | Entenda os detalhes de publicação e assinatura de eventos de integração.
 ms.date: 10/02/2018
-ms.openlocfilehash: c607f8b980f7dffacf3564688c6c9bb498264d96
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: facbb04d322c5df03498a0313556dd9b5b3161d2
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737038"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937141"
 ---
 # <a name="subscribing-to-events"></a>Assinando eventos
 
@@ -368,7 +368,7 @@ Se o sinalizador "redelivered" for definido, o destinatário deverá considerar 
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Rick saling. A CAP teorema: por que "tudo é diferente" com a nuvem e a Internet** \
-    <https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
+    <https://docs.microsoft.com/archive/blogs/rickatmicrosoft/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/>
 
 - **Eric Brewer. LIMITE de doze anos mais tarde: como as "regras" foram alteradas** \
     <https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed>

@@ -2,12 +2,12 @@
 title: Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 description: Conheça o fluxo de trabalho de "loop interno" para desenvolvimento de aplicativos do Docker.
 ms.date: 02/15/2019
-ms.openlocfilehash: 5f534b23f5e0042e68343deb0c1e9e0ee2e64600
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: 3d2fc889d22dbf02acccfbf9231ad98fca224cff
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394773"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936806"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Fluxo de trabalho de desenvolvimento do loop interno para aplicativos do Docker
 
@@ -266,7 +266,7 @@ O Visual Studio Code dá suporte à depuração do Docker quando você está usa
 Você também pode depurar contêineres do .NET Core ou .NET Framework no Docker ao usar o Visual Studio para Windows ou Mac, conforme descrito na próxima seção.
 
 > [!TIP]
-> Para saber mais sobre como depurar contêineres do Docker do node. js, confira <https://blog.docker.com/2016/07/live-debugging-docker/> e <https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/>.
+> Para saber mais sobre como depurar contêineres do Docker do node. js, confira <https://blog.docker.com/2016/07/live-debugging-docker/> e <https://docs.microsoft.com/archive/blogs/user_ed/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more>.
 
 >[!div class="step-by-step"]
 >[Anterior](docker-apps-development-environment.md)
