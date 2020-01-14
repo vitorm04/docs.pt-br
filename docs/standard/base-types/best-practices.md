@@ -10,13 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.custom: seodec18
-ms.openlocfilehash: 56014469f14280deae5f220da6d786f4363ea98f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105716"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711487"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
 
@@ -126,11 +125,11 @@ O padrão de expressão regular usado neste exemplo, `\b(\w+((\r?\n)|,?\s))*\w+[
 
 |Padrão|Descrição|
 |-------------|-----------------|
-|`\b`|Começa a correspondência em um limite de palavra.|
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|
+|`\b`|Começar a correspondência em um limite de palavra.|
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|
 |<code>(\r?\n)&#124;,?\s)</code>|Corresponde a um zero ou um retorno de carro seguido por um caractere de nova linha, ou zero ou uma vírgula seguida por um caractere de espaço em branco.|
 |<code>(\w+((\r?\n)&#124;,?\s))*</code>|Corresponde a zero ou mais ocorrências de um ou mais caracteres de palavra que são seguidos por zero ou por retornos de carro e por um caractere de nova linha ou por zero ou uma vírgula seguida por um caractere de espaço em branco.|
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|
 |`[.?:;!]`|Corresponde a um ponto, um ponto de interrogação, dois-pontos, ponto-e-vírgula ou ponto de exclamação.|
 
 ### <a name="regular-expressions-compiled-to-an-assembly"></a>Expressões regulares: compiladas para um assembly
@@ -170,7 +169,7 @@ Frequentemente, os aplicativos pagam uma penalidade de desempenho por usar o ret
 
 |Padrão|Descrição|
 |-|-|
-|`\b`|Começa a correspondência em um limite de palavra.|
+|`\b`|Começar a correspondência em um limite de palavra.|
 |`\p{Lu}`|Corresponder a um caractere maiúsculo.|
 |`\w*`|Corresponder a zero ou mais caracteres de palavra.|
 |`\b`|Termina a correspondência em um limite de palavra.|
@@ -207,7 +206,7 @@ O exemplo a seguir ilustra o uso dessa expressão regular para corresponder a um
 
 A linguagem de expressões regulares no .NET inclui os seguintes elementos de linguagem que você pode usar para eliminar quantificadores aninhados. Para saber mais, confira [Constructos de agrupamento](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).
 
-|Elemento de linguagem|Descrição|
+|Elemento Language|Descrição|
 |----------------------|-----------------|
 |`(?=` `subexpression` `)`|Lookahead positivo de largura zero. Examine além da posição atual para determinar se `subexpression` coincide com a cadeia de caracteres de entrada.|
 |`(?!` `subexpression` `)`|Lookahead negativo de largura zero. Examine além da posição atual para determinar se `subexpression` não coincide com a cadeia de caracteres de entrada.|
@@ -243,8 +242,8 @@ Muitas vezes, os construtores de agrupamento são usados somente em uma express�
 
 |Padrão|Descrição|
 |-------------|-----------------|
-|`\b`|Começa a correspondência em um limite de palavra.|
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|
+|`\b`|Começar a correspondência em um limite de palavra.|
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|
 |`[;,]?`|Corresponde a zero ou uma vírgula ou ponto e vírgula.|
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|
 |`(\w+[;,]?\s?)+`|Corresponde a uma ou mais ocorrências de um ou mais caracteres de palavra seguidos por uma vírgula opcional ou por ponto-e-vírgula seguido por um caractere de espaço em branco opcional. Isso define o primeiro grupo de captura, que é necessário para que a combinação de vários caracteres de palavra (ou seja, uma palavra) seguido por um símbolo de pontuação opcional seja repetida até que o mecanismo de expressões regulares atinja o final de uma sentença.|
@@ -272,7 +271,7 @@ Quando você usa subexpressões apenas para aplicar quantificadores a elas e nã
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Título|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
 |[Detalhes do comportamento da expressão regular](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Examina a implementação do mecanismo de expressões regulares no .NET. O tópico concentra-se na flexibilidade de expressões regulares e explica a responsabilidade do desenvolvedor para garantir o funcionamento eficiente e robusto do mecanismo de expressões regulares.|
 |[Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Explica o que é o retrocesso é como ele afeta o desempenho da expressão regular e examina os elementos de linguagem que fornecem alternativas ao retrocesso.|
