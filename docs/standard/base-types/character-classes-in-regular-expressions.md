@@ -12,13 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.custom: seodec18
-ms.openlocfilehash: dbfa61077cbfdd7da104dc12f304a4096b3c032d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120609"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711448"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Classes de caracteres em expressões regulares
 
@@ -152,7 +151,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
 |`\b`|Iniciar em um limite de palavra.|  
 |`th`|Corresponder aos caracteres literais “th”.|  
 |`[^o]`|Corresponder a qualquer caractere que não seja um “o”.|  
-|`\w+`|Corresponde a um ou mais caracteres de palavra.|  
+|`\w+`|Fazer a correspondência a um ou mais caracteres de palavra.|  
 |`\b`|Terminar em um limite de palavra.|  
   
 <a name="AnyCharacter"></a>   
@@ -183,7 +182,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  A constructo da expressão regular  
   
- `\p{` *nome* `}`  
+ *nome* do `\p{` `}`  
   
  corresponde a qualquer caractere que pertence a uma categoria geral de Unicode ou a um bloco nomeado, em que *name* é a abreviação da categoria ou o nome do bloco nomeado. Para obter uma lista de abreviações de categoria, consulte a seção [Categorias gerais Unicode com suporte](#SupportedUnicodeGeneralCategories) posteriormente neste tópico. Para obter uma lista dos blocos nomeados, consulte a seção [Blocos nomeados com suporte](#SupportedNamedBlocks) posteriormente neste tópico.  
   
@@ -212,7 +211,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
  A constructo da expressão regular  
   
- `\P{` *nome* `}`  
+ *nome* do `\P{` `}`  
   
  corresponde a qualquer caractere que não pertença a uma categoria geral de Unicode ou a um bloco nomeado, em que *name* é a abreviação da categoria ou o nome do bloco nomeado. Para obter uma lista de abreviações de categoria, consulte a seção [Categorias gerais Unicode com suporte](#SupportedUnicodeGeneralCategories) posteriormente neste tópico. Para obter uma lista dos blocos nomeados, consulte a seção [Blocos nomeados com suporte](#SupportedNamedBlocks) posteriormente neste tópico.  
   
@@ -281,8 +280,8 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|\b|Começa a correspondência em um limite de palavra.|  
-|(\w+)|Corresponde a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
+|\b|Começar a correspondência em um limite de palavra.|  
+|(\w+)|Fazer a correspondência a um ou mais caracteres de palavra. Este é o primeiro grupo de captura.|  
 |(\W){1,2}|Corresponde a um caractere não pertencente a palavras uma ou duas vezes. Este é o segundo grupo de captura.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwordchar1.cs#9)]
@@ -310,8 +309,8 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|\b|Começa a correspondência em um limite de palavra.|  
-|\w+|Corresponde a um ou mais caracteres de palavra.|  
+|\b|Começar a correspondência em um limite de palavra.|  
+|\w+|Fazer a correspondência a um ou mais caracteres de palavra.|  
 |(e)?|Corresponder a um “e” zero ou uma vez.|  
 |s|Corresponder a um “s”.|  
 |(\s&#124;$)|Corresponder a um caractere de espaço em branco ou ao fim da cadeia de caracteres de entrada.|  
@@ -329,7 +328,7 @@ em que *firstCharacter* é o caractere que inicia o intervalo e *lastCharacter* 
   
 |Elemento|Descrição|  
 |-------------|-----------------|  
-|`\b`|Começa a correspondência em um limite de palavra.|  
+|`\b`|Começar a correspondência em um limite de palavra.|  
 |`(\S+)`|Corresponder a um ou mais caracteres diferentes de espaço em branco. Este é o primeiro grupo de captura.|  
 |`\s?`|Corresponder a zero ou a um caractere de espaço em branco.|  
   
@@ -440,7 +439,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
 |0250 - 02AF|`IsIPAExtensions`|  
 |02B0 - 02FF|`IsSpacingModifierLetters`|  
 |0300 - 036F|`IsCombiningDiacriticalMarks`|  
-|0370 - 03FF|`IsGreek`<br /><br /> \- ou -<br /><br /> `IsGreekandCoptic`|  
+|0370 - 03FF|`IsGreek`<br /><br /> - ou -<br /><br /> `IsGreekandCoptic`|  
 |0400 - 04FF|`IsCyrillic`|  
 |0500 - 052F|`IsCyrillicSupplement`|  
 |0530 - 058F|`IsArmenian`|  
@@ -484,7 +483,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
 |2000 - 206F|`IsGeneralPunctuation`|  
 |2070 - 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 - 20CF|`IsCurrencySymbols`|  
-|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> \- ou -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 - 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - ou -<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 - 214F|`IsLetterlikeSymbols`|  
 |2150 - 218F|`IsNumberForms`|  
 |2190 - 21FF|`IsArrows`|  
@@ -568,7 +567,7 @@ O .NET fornece os blocos nomeados listados na tabela a seguir. O conjunto de blo
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Char.GetUnicodeCategory%2A>
 - [Linguagem de expressão regular – referência rápida](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
