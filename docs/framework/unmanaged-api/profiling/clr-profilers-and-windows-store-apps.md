@@ -12,12 +12,12 @@ helpviewer_keywords:
 - profiling managed code
 - profiling managed code [Windows Store Apps]
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
-ms.openlocfilehash: a3e60f715c4c61e671980e4f36813e864469d28e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1a839c4cd99e21bc2a3ebd90cf3302a475c02e17
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344765"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938139"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Criadores de perfil CLR e aplicativos da Windows Store
 
@@ -76,7 +76,7 @@ Os dispositivos Windows RT estão bem bloqueados. Os profileres de terceiros sim
 
 Em vários cenários discutidos nas seções a seguir, seu aplicativo de área de trabalho do profiler precisa consumir algumas novas APIs de Windows Runtime. Convém consultar a documentação para entender quais Windows Runtime APIs podem ser usadas em aplicativos de desktop e se seu comportamento é diferente quando chamado de aplicativos da área de trabalho e aplicativos da Windows Store.
 
-Se sua interface do usuário do Profiler for escrita em código gerenciado, haverá algumas etapas que você precisará fazer para facilitar o consumo dessas APIs de Windows Runtime. Consulte o artigo [aplicativos e Windows Runtime de área de trabalho gerenciada](https://go.microsoft.com/fwlink/?LinkID=271858) para obter mais informações.
+Se sua interface do usuário do Profiler for escrita em código gerenciado, haverá algumas etapas que você precisará fazer para facilitar o consumo dessas APIs de Windows Runtime. Para obter mais informações, consulte o artigo [aplicativos e Windows Runtime de área de trabalho gerenciada](https://docs.microsoft.com/previous-versions/windows/apps/jj856306(v=win.10)) .
 
 ## <a name="loading-the-profiler-dll"></a>Carregando a DLL do criador de perfil
 
@@ -378,11 +378,11 @@ O coletor de lixo e o heap gerenciado não são fundamentalmente diferentes em u
 
 Ao fazer a criação de perfil de memória, a DLL do criador de perfil normalmente cria um thread separado do qual chamar o método do [método ForceGC](icorprofilerinfo-forcegc-method.md) . Isso não é nada novo. Mas o que pode ser surpreendente é que o ato de fazer uma coleta de lixo dentro de um aplicativo da Windows Store pode transformar seu thread em um thread gerenciado (por exemplo, uma API de criação de perfil ThreadID será criada para esse thread).
 
-Para entender as consequências disso, é importante entender as diferenças entre chamadas síncronas e assíncronas, conforme definido pela API de criação de perfil do CLR. Observe que isso é muito diferente do conceito de chamadas assíncronas em aplicativos da Windows Store. Consulte a postagem de blog [por que temos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://blogs.msdn.microsoft.com/davbr/2008/12/23/why-we-have-corprof_e_unsupported_call_sequence/) para obter mais informações.
+Para entender as consequências disso, é importante entender as diferenças entre chamadas síncronas e assíncronas, conforme definido pela API de criação de perfil do CLR. Observe que isso é muito diferente do conceito de chamadas assíncronas em aplicativos da Windows Store. Consulte a postagem de blog [por que temos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) para obter mais informações.
 
 O ponto relevante é que as chamadas feitas em threads criados por seu criador de perfil são sempre consideradas síncronas, mesmo que essas chamadas sejam feitas de fora de uma implementação de um dos métodos [ICorProfilerCallback](icorprofilercallback-interface.md) da dll do criador de perfil. Pelo menos, isso costumava ser o caso. Agora que o CLR transformou o thread do criador de perfil em um thread gerenciado devido à sua chamada para o [método ForceGC](icorprofilerinfo-forcegc-method.md), esse thread não é mais considerado o thread do criador de perfil. Assim, o CLR impõe uma definição mais estrita do que é qualificado como síncrono para esse thread – ou seja, uma chamada deve se originar de dentro de um dos métodos [ICorProfilerCallback](icorprofilercallback-interface.md) da dll do criador de perfil para se qualificar como síncrona.
 
-O que isso significa na prática? A maioria dos métodos de [ICorProfilerInfo](icorprofilerinfo-interface.md) só é segura para ser chamada de forma síncrona e, caso contrário, falhará imediatamente. Portanto, se a DLL do criador de perfil reutilizasse seu thread do [método ForceGC](icorprofilerinfo-forcegc-method.md) para outras chamadas normalmente feitas em threads criados pelo criador de perfil (por exemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), você terá problemas. Até mesmo uma função assíncrona segura, como o [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , tem regras especiais quando chamada de threads gerenciados. (Consulte a postagem de blog [pilha do criador de perfil: Noções básicas e além](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/) de mais informações.)
+O que isso significa na prática? A maioria dos métodos de [ICorProfilerInfo](icorprofilerinfo-interface.md) só é segura para ser chamada de forma síncrona e, caso contrário, falhará imediatamente. Portanto, se a DLL do criador de perfil reutilizasse seu thread do [método ForceGC](icorprofilerinfo-forcegc-method.md) para outras chamadas normalmente feitas em threads criados pelo criador de perfil (por exemplo, para [RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md), [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)ou [RequestRevert](icorprofilerinfo4-requestrevert-method.md)), você terá problemas. Até mesmo uma função assíncrona segura, como o [DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md) , tem regras especiais quando chamada de threads gerenciados. (Consulte a postagem de blog [pilha do criador de perfil: Noções básicas e além](https://docs.microsoft.com/archive/blogs/davbr/profiler-stack-walking-basics-and-beyond) de mais informações.)
 
 Portanto, é recomendável que qualquer thread que sua DLL do criador de perfil crie para chamar o [método ForceGC](icorprofilerinfo-forcegc-method.md) deve ser usado *apenas* com a finalidade de disparar GCS e, em seguida, responder aos retornos de chamada do GC. Ele não deve chamar a API de criação de perfil para executar outras tarefas, como amostragem de pilha ou desanexação.
 

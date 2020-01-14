@@ -1,30 +1,30 @@
 ---
 title: Introdução ao armazenamento de Tabelas do Azure usando F#
-description: Armazene dados estruturados na nuvem usando o armazenamento de tabelas do Azure ou Azure Cosmos DB.
+description: Armazene dados estruturados na nuvem usando o Armazenamento de Tabelas do Azure ou o Azure Cosmos DB.
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 6833e2264f7543f50b94892b6980140e4bf1cdd1
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 23f5e40e1d9b3d5a0ee27d675362930ef86e90c5
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424601"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935582"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>Introdução ao armazenamento de tabelas do Azure e ao Azure Cosmos DB API de Tabela usando F\#
 
-O armazenamento de tabelas do Azure é um serviço que armazena dados NoSQL estruturados na nuvem. O armazenamento de tabela é um repositório de chave/atributo com um design sem esquema. Como o armazenamento de tabelas não tem Esquema, é fácil adaptar seus dados à medida que as necessidades de seu aplicativo evoluem. O acesso aos dados é rápido e econômico para todos os tipos de aplicativos. O armazenamento de tabela normalmente é significativamente menor em relação ao custo do que o SQL tradicional para volumes de dados semelhantes.
+O Armazenamento de Tabelas do Azure é um serviço que armazena dados NoSQL estruturados na nuvem. O armazenamento de Tabelas é um repositório de chaves/atributos com um design sem esquema. Como o armazenamento de Tabelas não tem um esquema, é fácil adaptar seus dados à medida que as necessidades de seu aplicativo evoluem. O acesso aos dados é rápido e econômico para todos os tipos de aplicativos. O armazenamento de tabela normalmente tem um custo significativamente mais baixo do que o SQL tradicional para volumes de dados semelhantes.
 
-Você pode usar o armazenamento de tabelas para armazenar conjuntos de dados flexíveis, como os de usuário para aplicativos Web, catálogos de endereços, informações de dispositivo e qualquer outro tipo de metadados que seu serviço requer. Você pode armazenar qualquer número de entidades em uma tabela e uma conta de armazenamento pode conter qualquer número de tabelas, até o limite de capacidade da conta de armazenamento.
+Você pode usar o armazenamento de tabela para armazenar conjuntos de dados flexíveis, como dados de usuário para aplicativos web, catálogos de endereços, informações sobre dispositivos e qualquer outro tipo de metadados que o serviço requeira. Você pode armazenar qualquer número de entidades em uma tabela e uma conta de armazenamento pode conter um número ilimitado de tabelas, até o limite de capacidade da conta de armazenamento.
 
 Azure Cosmos DB fornece a API de Tabela para aplicativos que são escritos para o armazenamento de tabelas do Azure e que exigem recursos premium, como:
 
-- Distribuição global pronta para uso.
+- Distribuição global turnkey.
 - Taxa de transferência dedicada em todo o mundo.
-- Latências de milissegundos de dígito único no 99 º percentil.
-- Alta disponibilidade garantida.
-- Indexação secundária automática.
+- Latências de dígito único em milissegundos no percentil 99.
+- Alta disponibilidade garantia.
+- Indexação automática secundária.
 
-Os aplicativos escritos para o armazenamento de tabelas do Azure podem migrar para Azure Cosmos DB usando o API de Tabela sem alterações de código e aproveitar os recursos premium. O API de Tabela tem SDKs de cliente disponíveis para .NET, Java, Python e node. js.
+Esses aplicativos escritos para o armazenamento de Tabelas do Azure podem migrar para o Azure Cosmos DB usando a API de Tabelas, sem alterações de código, e tirar proveito dos recursos premium. A API de Tabela tem SDKs de cliente disponíveis para .NET, Java, Python e Node.js.
 
 Para obter mais informações, consulte [introdução ao Azure Cosmos DB API de tabela](https://docs.microsoft.com/azure/cosmos-db/table-introduction).
 
@@ -32,7 +32,7 @@ Para obter mais informações, consulte [introdução ao Azure Cosmos DB API de 
 
 Este tutorial mostra como escrever F# código para fazer algumas tarefas comuns usando o armazenamento de tabelas do Azure ou o Azure Cosmos DB API de tabela, incluindo a criação e a exclusão de uma tabela e inserção, atualização, exclusão e consulta de dados de tabela.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Azure](/azure/storage/storage-create-storage-account) ou [Azure Cosmos DB conta](https://azure.microsoft.com/try/cosmosdb/).
 
@@ -40,7 +40,7 @@ Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Az
 
 Os exemplos neste artigo podem ser usados em um F# aplicativo ou um F# script. Para criar um F# script, crie um arquivo com a extensão `.fsx`, por exemplo, `tables.fsx`, em F# seu ambiente de desenvolvimento.
 
-Em seguida, use um [Gerenciador de pacotes](package-management.md) , como [paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) , para instalar o pacote `WindowsAzure.Storage` e referência `WindowsAzure.Storage.dll` em seu script usando uma diretiva `#r`. Faça isso novamente para `Microsoft.WindowsAzure.ConfigurationManager` a fim de obter o namespace Microsoft. Azure.
+Em seguida, use um [Gerenciador de pacotes](package-management.md) como [paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) para instalar o pacote de `WindowsAzure.Storage` e referência `WindowsAzure.Storage.dll` em seu script usando uma diretiva `#r`. Faça isso novamente por `Microsoft.WindowsAzure.ConfigurationManager` para obter o namespace Microsoft. Azure.
 
 ### <a name="add-namespace-declarations"></a>Adicionar declarações de namespace
 
@@ -60,13 +60,13 @@ Para o tutorial, insira sua cadeia de conexão em seu script, como no exemplo a 
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L11-L11)]
 
-No entanto, isso **não é recomendado** para projetos reais. Sua chave de conta de armazenamento é semelhante à senha raiz da sua conta de armazenamento. Sempre tenha cuidado para proteger sua chave de conta de armazenamento. Evite distribuí-lo a outros usuários, embuti-lo em código ou salvá-lo em um arquivo de texto sem formatação que seja acessível para outras pessoas. Você pode regenerar sua chave usando o portal do Azure se acreditar que ele pode ter sido comprometido.
+No entanto, isso **não é recomendado** para projetos reais. Sua chave de conta de armazenamento é semelhante para a senha raiz da sua conta de armazenamento. Sempre tenha cuidado para proteger a chave de sua conta de armazenamento. Evite distribuí-la a outros usuários, embuti-la no código ou salvá-lo em um arquivo de texto sem formatação que esteja acessível a outras pessoas. Você pode regenerar sua chave usando o portal do Azure se acreditar que ele pode ter sido comprometido.
 
 Para aplicativos reais, a melhor maneira de manter a cadeia de conexão de armazenamento está em um arquivo de configuração. Para buscar a cadeia de conexão de um arquivo de configuração, você pode fazer isso:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L13-L15)]
 
-Usar o Configuration Manager do Azure é opcional. Você também pode usar uma API como o tipo de `ConfigurationManager` do .NET Framework.
+O uso do Gerenciador de Configurações do Azure é opcional. Você também pode usar uma API como o tipo de `ConfigurationManager` .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analisar a cadeia de conexão
 
@@ -76,31 +76,31 @@ Para analisar a cadeia de conexão, use:
 
 Isso retorna um `CloudStorageAccount`.
 
-### <a name="create-the-table-service-client"></a>Criar o cliente do serviço tabela
+### <a name="create-the-table-service-client"></a>Criar o cliente do serviço Tabela
 
-A classe `CloudTableClient` permite que você recupere tabelas e entidades no armazenamento de tabelas. Aqui está uma maneira de criar o cliente de serviço:
+A classe `CloudTableClient` permite que você recupere tabelas e entidades no armazenamento de tabelas. Veja uma maneira de criar o cliente de serviço:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L28-L29)]
 
-Agora você está pronto para escrever código que lê dados e grava dados no armazenamento de tabelas.
+Agora você está pronto para escrever um código que lê e grava dados no Armazenamento de Tabelas.
 
 ### <a name="create-a-table"></a>Criar uma tabela
 
-Este exemplo mostra como criar uma tabela se ela ainda não existir:
+Este exemplo mostra como criar uma tabela se ela ainda não existe:
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L35-L39)]
 
 ### <a name="add-an-entity-to-a-table"></a>Adicionar uma entidade a uma tabela
 
-Uma entidade deve ter um tipo que herde de `TableEntity`. Você pode estender `TableEntity` da maneira que desejar, mas seu tipo *deve* ter um construtor sem parâmetros. Somente as propriedades que têm `get` e `set` são armazenadas em sua tabela do Azure.
+Uma entidade deve ter um tipo que herda de `TableEntity`. Você pode estender `TableEntity` de qualquer forma que desejar, mas seu tipo *deve* ter um construtor sem parâmetros. Somente as propriedades que têm `get` e `set` são armazenadas em sua tabela do Azure.
 
-A chave de partição e de linha de uma entidade identifica exclusivamente a entidade na tabela. As entidades com a mesma chave de partição podem ser consultadas mais rápido do que aquelas com chaves de partição diferentes, mas o uso de chaves de partição diversas permite maior escalabilidade de operações paralelas.
+A chave de partição e de linha de uma entidade identifica exclusivamente a entidade na tabela. As entidades com a mesma chave de partição podem ser consultadas mais rápido do que aquelas com chaves de partição diferentes, mas usar chaves de partição diferentes permite uma escalabilidade maior de operações paralelas.
 
 Aqui está um exemplo de um `Customer` que usa o `lastName` como a chave de partição e o `firstName` como a chave de linha.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L45-L52)]
 
-Agora, adicione `Customer` à tabela. Para fazer isso, crie um `TableOperation` que é executado na tabela. Nesse caso, você cria uma operação `Insert`.
+Agora, adicione `Customer` à tabela. Para fazer isso, crie um `TableOperation` que é executado na tabela. Nesse caso, você cria uma operação de `Insert`.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L54-L55)]
 
@@ -129,7 +129,7 @@ Agora você imprime os resultados:
 
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>Recuperar um intervalo de entidades em uma partição
 
-Se você não quiser consultar todas as entidades em uma partição, poderá especificar um intervalo combinando o filtro de chave de partição com um filtro de chave de linha. Aqui, você usa dois filtros para obter todas as entidades na partição "Smith", em que a chave de linha (primeiro nome) começa com uma letra anterior à "M" no alfabeto.
+Se não desejar consultar todas as entidades em uma partição, você poderá especificar um intervalo combinando o filtro de chave de partição com um filtro de chave de linha. Aqui, você usa dois filtros para obter todas as entidades na partição "Smith", em que a chave de linha (primeiro nome) começa com uma letra anterior à "M" no alfabeto.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L91-L100)]
 
@@ -139,7 +139,7 @@ Agora você imprime os resultados:
 
 ### <a name="retrieve-a-single-entity"></a>Recuperar uma única entidade
 
-Você pode escrever uma consulta para recuperar uma única entidade específica. Aqui, você usa um `TableOperation` para especificar o cliente "Ben Smith". Em vez de uma coleção, você obtém um `Customer`. A especificação da chave de partição e da chave de linha em uma consulta é a maneira mais rápida de recuperar uma única entidade do serviço tabela.
+Você pode escrever uma consulta para recuperar uma entidade única e específica. Aqui, você usa um `TableOperation` para especificar o cliente "Ben Smith". Em vez de uma coleção, você obtém um `Customer`. A especificação da chave de partição e da chave de linha em uma consulta é a maneira mais rápida de recuperar uma única entidade do serviço tabela.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L109-L111)]
 
@@ -159,13 +159,13 @@ Para atualizar uma entidade, recupere-a do serviço tabela, modifique o objeto d
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L134-L141)]
 
-### <a name="query-a-subset-of-entity-properties"></a>Consultar um subconjunto de propriedades de entidade
+### <a name="query-a-subset-of-entity-properties"></a>consultar um subconjunto de propriedades da entidade
 
-Uma consulta de tabela pode recuperar apenas algumas propriedades de uma entidade em vez de todas elas. Essa técnica, chamada projeção, pode melhorar o desempenho da consulta, especialmente para grandes entidades. Aqui, você retorna apenas endereços de email usando `DynamicTableEntity` e `EntityResolver`. Observe que a projeção não tem suporte no emulador de armazenamento local, portanto, esse código é executado somente quando você está usando uma conta no serviço tabela.
+Uma consulta de tabela pode recuperar apenas algumas propriedades de uma entidade em vez de todas elas. Essa técnica, chamada projeção, pode melhorar o desempenho da consulta, especialmente para grandes entidades. Aqui, você retorna apenas endereços de email usando `DynamicTableEntity` e `EntityResolver`. Observe que a projeção não é compatível com o emulador de armazenamento local, portanto, esse código é executado somente ao usar uma conta no serviço Tabela.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L147-L158)]
 
-### <a name="retrieve-entities-in-pages-asynchronously"></a>Recuperar entidades em páginas de forma assíncrona
+### <a name="retrieve-entities-in-pages-asynchronously"></a>Recuperar entidades nas páginas de forma assíncrona
 
 Se você estiver lendo um grande número de entidades e quiser processá-las à medida que elas forem recuperadas em vez de esperar que todas elas retornem, você poderá usar uma consulta segmentada. Aqui, você retorna resultados em páginas usando um fluxo de trabalho assíncrono para que a execução não seja bloqueada enquanto você estiver aguardando um grande conjunto de resultados ser retornado.
 
@@ -183,16 +183,16 @@ Você pode excluir uma entidade depois de recuperá-la. Assim como a atualizaç�
 
 ### <a name="delete-a-table"></a>Excluir uma tabela
 
-Você pode excluir uma tabela de uma conta de armazenamento. Uma tabela que foi excluída não estará disponível para ser recriada por um período de tempo após a exclusão.
+Você pode excluir uma tabela de uma conta de armazenamento. Uma tabela excluída não estará disponível para ser recriada durante um período após a exclusão.
 
 [!code-fsharp[TableStorage](~/samples/snippets/fsharp/azure/table-storage.fsx#L193-L193)]
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 Agora que você aprendeu os conceitos básicos do armazenamento de tabelas, siga estes links para saber mais sobre tarefas de armazenamento mais complexas e o Azure Cosmos DB API de Tabela.
 
 - [Introdução ao Azure Cosmos DB API de Tabela](https://docs.microsoft.com/azure/cosmos-db/table-introduction)
-- [Referência da biblioteca de cliente de armazenamento para .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
+- [Referência à Biblioteca de Cliente de Armazenamento para .NET](https://docs.microsoft.com/dotnet/api/overview/azure/storage)
 - [Provedor de tipo de armazenamento do Azure](https://fsprojects.github.io/AzureStorageTypeProvider/)
-- [Blog da equipe de armazenamento do Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Configurando cadeias de conexão](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)
+- [Blog da equipe de Armazenamento do Azure](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
+- [Configurar cadeias de conexão](https://docs.microsoft.com/azure/storage/common/storage-configure-connection-string)

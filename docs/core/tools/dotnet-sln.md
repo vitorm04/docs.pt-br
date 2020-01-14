@@ -2,12 +2,12 @@
 title: Comando dotnet sln
 description: O comando dotnet-sln oferece uma opção conveniente para adicionar, remover e listar projetos em um arquivo de solução.
 ms.date: 10/29/2019
-ms.openlocfilehash: 18702c7638798117bd04d5c6a829d64cc6bf18a8
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: c0badfeba1438a795106691a86c09a8b1675829b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191824"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937246"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -137,38 +137,38 @@ dotnet sln list [-h|--help]
 
 ## <a name="examples"></a>Exemplos
 
-Adicione um projeto C# a uma solução:
+- Adicione um projeto C# a uma solução:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj
+  ```
 
-Remova um projeto C# de uma solução:
+- Remova um projeto C# de uma solução:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj
+  ```
 
-Adicione vários projetos C# a uma solução:
+- Adicione vários projetos C# a uma solução:
 
-```dotnetcli
-dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Remova vários projetos C# de uma solução:
+- Remova vários projetos C# de uma solução:
 
-```dotnetcli
-dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove todo-app/todo-app.csproj back-end/back-end.csproj
+  ```
 
-Adicionar vários C# projetos a uma solução usando um padrão de mascaramento (somente UNIX/Linux):
+- Adicionar vários C# projetos a uma solução usando um padrão de mascaramento (somente UNIX/Linux):
 
-```dotnetcli
-dotnet sln todo.sln add **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln add **/*.csproj
+  ```
 
-Remover vários C# projetos de uma solução usando um padrão de mascaramento (somente UNIX/Linux):
+- Remover vários C# projetos de uma solução usando um padrão de mascaramento (somente UNIX/Linux):
 
-```dotnetcli
-dotnet sln todo.sln remove **/*.csproj
-```
+  ```dotnetcli
+  dotnet sln todo.sln remove **/*.csproj
+  ```

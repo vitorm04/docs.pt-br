@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: 3256f6f64e2ee4678b2627eea81e12cb4a02fd1e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 226f24ad8f1636101b283c3cb6662905cbf7eebe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449616"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938217"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>Método ICorProfilerInfo3::RequestProfilerDetach
 Instrui o tempo de execução para desanexar o criador de perfil.  
@@ -36,13 +36,13 @@ HRESULT RequestProfilerDetach(
  `dwExpectedCompletionMilliseconds`  
  no O período de tempo, em milissegundos, que o Common Language Runtime (CLR) deve aguardar antes de verificar se é seguro descarregar o criador de perfil.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Esse método retorna os HRESULTs específicos a seguir, bem como os erros de HRESULT que indicam falha de método.  
   
 |HRESULT|Descrição|  
 |-------------|-----------------|  
 |S_OK|A solicitação de desanexação é válida e o procedimento de desanexação agora está continuando em outro thread. Quando a desanexação estiver totalmente concluída, um evento `ProfilerDetachSucceeded` será emitido.|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|O criador de perfil falhou em uma tentativa de [IUnknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) para a interface [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) , que deve ser implementada para oferecer suporte à operação de desanexação. A desanexação não foi tentada.|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|O criador de perfil falhou em uma tentativa de [IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q)) para a interface [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md) , que deve ser implementada para oferecer suporte à operação de desanexação. A desanexação não foi tentada.|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|A desanexação é impossível porque o criador de perfil define sinalizadores imutáveis na inicialização. A desanexação não foi tentada; o criador de perfil ainda está totalmente anexado.|  
 |CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|A desanexação é impossível porque o criador de perfil usou o código MSIL (Microsoft Intermediate Language) instrumentado ou inseriu `enter`/`leave` ganchos. A desanexação não foi tentada; o criador de perfil ainda está totalmente anexado.<br /><br /> **Observação** O código MSIL instrumentado é o código que é fornecido pelo criador de perfil usando o método [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) .|  
 |CORPROF_E_RUNTIME_UNINITIALIZED|O tempo de execução ainda não foi inicializado no aplicativo gerenciado. (Ou seja, o tempo de execução não foi totalmente carregado.) Esse código de erro pode ser retornado quando a desanexação é solicitada dentro do método [ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md) do retorno de perfil.|  
@@ -55,7 +55,7 @@ HRESULT RequestProfilerDetach(
   
  Se o criador de perfil especificar `dwExpectedCompletionMilliseconds` como 0 (zero), o CLR usará um valor padrão de 5000, o que significa que ele executará uma verificação após 5 segundos, novamente após 10 segundos e, em seguida, a cada 10 minutos depois.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -64,7 +64,7 @@ HRESULT RequestProfilerDetach(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICorProfilerInfo3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

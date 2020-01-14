@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Astoria
 - WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
-ms.openlocfilehash: 890f0ba25d8320008228c73660753b9899269fd7
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: aace683b1a105445b5a3ba3de0a6a671859588b5
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900994"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937438"
 ---
 # <a name="wcf-data-services-45"></a>WCF Data Services 4.5
 
@@ -42,8 +42,8 @@ Mostrar apenas alguns códigos...
 
 Quero saber mais sobre o OData...
 
-- [Whitepaper: Introducing OData](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf) (White paper: Introdução ao OData)
-- [Site do Protocolo Open Data](https://www.odata.org/)
+- [White Paper: introdução ao OData](https://download.microsoft.com/download/E/5/A/E5A59052-EE48-4D64-897B-5F7C608165B8/IntroducingOData.pdf)
+- [Protocolo Open Data site](https://www.odata.org/)
 - [OData: SDK](https://www.odata.org/ecosystem/)
 
 Quero ver exemplos de ponta a ponta...

@@ -1,18 +1,18 @@
 ---
 title: Introdução ao armazenamento de Filas do Azure usando F#
-description: As filas do Azure fornecem mensagens confiáveis e assíncronas entre os componentes do aplicativo. O Cloud Messaging permite que os componentes do aplicativo sejam dimensionados de forma independente.
+description: As filas do Azure fornecem uma mensagem assíncrona e confiável entre os componentes do aplicativo. A mensagem na nuvem permite que os componentes do aplicativo se dimensionem de modo independente.
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: a09cbdd4b995e34177c110ce91b02162bb19dfa8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 841068ac91aecc53811359e27d984907569a2c6d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73423853"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935488"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Introdução ao armazenamento de filas do Azure usando o F\#
 
-O armazenamento de filas do Azure fornece mensagens de nuvem entre componentes do aplicativo. Na criação de aplicativos para escala, os componentes do aplicativo geralmente são desacoplados, para que possam ser dimensionados de forma independente. O armazenamento de filas fornece mensagens assíncronas para comunicação entre componentes de aplicativos, estejam eles em execução na nuvem, na área de trabalho, em um servidor local ou em um dispositivo móvel. O armazenamento de filas também dá suporte ao gerenciamento de tarefas assíncronas e à criação de fluxos de trabalho
+O armazenamento de filas do Azure fornece mensagens na nuvem entre os componentes do aplicativo. Na criação de aplicativos para escala, os componentes do aplicativo geralmente são desassociados, para que possam ser redimensionados independentemente. O armazenamento de filas fornece mensagens assíncronas para a comunicação entre os componentes do aplicativo, estando eles em execução na nuvem, na área de trabalho, em um servidor local ou em um dispositivo móvel. O armazenamento de Fila também dá suporte ao gerenciamento de tarefas assíncronas e à criação de fluxos de trabalho do processo.
 
 ### <a name="about-this-tutorial"></a>Sobre este tutorial
 
@@ -20,7 +20,7 @@ Este tutorial mostra como escrever F# código para algumas tarefas comuns usando
 
 Para obter uma visão geral conceitual do armazenamento de filas, consulte [o guia .net para armazenamento de filas](/azure/storage/storage-dotnet-how-to-use-queues).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Para usar este guia, você deve primeiro [criar uma conta de armazenamento do Azure](/azure/storage/storage-create-storage-account).
 Você também precisará da sua chave de acesso de armazenamento para essa conta.
@@ -29,15 +29,15 @@ Você também precisará da sua chave de acesso de armazenamento para essa conta
 
 Os exemplos neste artigo podem ser usados em um F# aplicativo ou um F# script. Para criar um F# script, crie um arquivo com a extensão `.fsx`, por exemplo, `queues.fsx`, em F# seu ambiente de desenvolvimento.
 
-Em seguida, use um [Gerenciador de pacotes](package-management.md) , como [paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) , para instalar o pacote `WindowsAzure.Storage` e referência `WindowsAzure.Storage.dll` em seu script usando uma diretiva `#r`.
+Em seguida, use um [Gerenciador de pacotes](package-management.md) como [paket](https://fsprojects.github.io/Paket/) ou [NuGet](https://www.nuget.org/) para instalar o pacote de `WindowsAzure.Storage` e referência `WindowsAzure.Storage.dll` em seu script usando uma diretiva `#r`.
 
 ### <a name="add-namespace-declarations"></a>Adicionar declarações de namespace
 
-Adicione as seguintes instruções de `open` à parte superior do arquivo de `queues.fsx`:
+Adicione as seguintes instruções `open` à parte superior do arquivo `queues.fsx`:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L1-L3)]
 
-### <a name="get-your-connection-string"></a>Obter sua cadeia de conexão
+### <a name="get-your-connection-string"></a>Obter a cadeia de conexão
 
 Você precisará de uma cadeia de conexão de armazenamento do Azure para este tutorial. Para obter mais informações sobre cadeias de conexão, consulte [Configurar cadeias de conexão de armazenamento](/azure/storage/storage-configure-connection-string).
 
@@ -45,13 +45,13 @@ Para o tutorial, você inserirá sua cadeia de conexão em seu script, da seguin
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L9-L9)]
 
-No entanto, isso **não é recomendado** para projetos reais. Sua chave de conta de armazenamento é semelhante à senha raiz da sua conta de armazenamento. Sempre tenha cuidado para proteger sua chave de conta de armazenamento. Evite distribuí-lo a outros usuários, embuti-lo em código ou salvá-lo em um arquivo de texto sem formatação que seja acessível para outras pessoas. Você pode regenerar sua chave usando o portal do Azure se acreditar que ele pode ter sido comprometido.
+No entanto, isso **não é recomendado** para projetos reais. Sua chave de conta de armazenamento é semelhante para a senha raiz da sua conta de armazenamento. Sempre tenha cuidado para proteger a chave de sua conta de armazenamento. Evite distribuí-la a outros usuários, embuti-la no código ou salvá-lo em um arquivo de texto sem formatação que esteja acessível a outras pessoas. Você pode regenerar sua chave usando o portal do Azure se acreditar que ele pode ter sido comprometido.
 
 Para aplicativos reais, a melhor maneira de manter a cadeia de conexão de armazenamento está em um arquivo de configuração. Para buscar a cadeia de conexão de um arquivo de configuração, você pode fazer isso:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L11-L13)]
 
-Usar o Configuration Manager do Azure é opcional. Você também pode usar uma API como o tipo de `ConfigurationManager` do .NET Framework.
+O uso do Gerenciador de Configurações do Azure é opcional. Você também pode usar uma API como o tipo de `ConfigurationManager` .NET Framework.
 
 ### <a name="parse-the-connection-string"></a>Analisar a cadeia de conexão
 
@@ -61,13 +61,13 @@ Para analisar a cadeia de conexão, use:
 
 Isso retornará um `CloudStorageAccount`.
 
-### <a name="create-the-queue-service-client"></a>Criar o cliente serviço Fila
+### <a name="create-the-queue-service-client"></a>Criar o cliente do serviço Fila
 
-A classe `CloudQueueClient` permite que você recupere filas armazenadas no armazenamento de filas. Aqui está uma maneira de criar o cliente de serviço:
+A classe `CloudQueueClient` permite que você recupere filas armazenadas no armazenamento de filas. Veja uma maneira de criar o cliente de serviço:
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L26-L26)]
 
-Agora você está pronto para escrever código que lê e grava dados no armazenamento de filas.
+Agora você está pronto para escrever um código que lê e grava dados no Armazenamento de Filas.
 
 ## <a name="create-a-queue"></a>Criar uma fila
 
@@ -81,7 +81,7 @@ Para inserir uma mensagem em uma fila existente, primeiro crie uma nova `CloudQu
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L42-L44)]
 
-## <a name="peek-at-the-next-message"></a>Inspecionar a próxima mensagem
+## <a name="peek-at-the-next-message"></a>Espiar a próxima mensagem
 
 Você pode inspecionar a mensagem na frente de uma fila, sem removê-la da fila, chamando o método `PeekMessage`.
 
@@ -95,15 +95,15 @@ Você pode recuperar a mensagem na frente de uma fila para processamento chamand
 
 Posteriormente, você indicará o processamento bem-sucedido da mensagem usando `DeleteMessage`.
 
-## <a name="change-the-contents-of-a-queued-message"></a>Alterar o conteúdo de uma mensagem em fila
+## <a name="change-the-contents-of-a-queued-message"></a>Alterar o conteúdo de uma mensagem na fila
 
-Você pode alterar o conteúdo de uma mensagem recuperada in-loco na fila. Se a mensagem representar uma tarefa de trabalho, você poderá usar esse recurso para atualizar o status da tarefa de trabalho. O código a seguir atualiza a mensagem da fila com novo conteúdo e define o tempo limite de visibilidade para estender outros 60 segundos. Isso salva o estado do trabalho associado à mensagem e dá ao cliente outro minuto para continuar a trabalhar na mensagem. Você poderia usar essa técnica para rastrear fluxos de trabalho de várias etapas em mensagens de fila, sem precisar começar desde o início se uma etapa de processamento falhar devido a uma falha de hardware ou de software. Normalmente, você manteria uma contagem de repetições também e, se a mensagem for repetida mais do que um número de vezes, você a excluiria. Isso protege contra uma mensagem que dispara um erro de aplicativo cada vez que é processado.
+Você pode alterar o conteúdo de uma mensagem recuperada in-loco na fila. Se a mensagem representar uma tarefa de trabalho, você poderá usar esse recurso para atualizar o status da tarefa de trabalho. O código a seguir atualiza a mensagem da fila com novo conteúdo e define o tempo limite de visibilidade para estender mais 60 segundos. Isso salva o estado do trabalho associado à mensagem e dá ao cliente mais um minuto para continuar trabalhando na mensagem. Você pode usar essa técnica para acompanhar fluxos de trabalho de várias etapas em mensagens em fila, sem a necessidade de começar desde o início, caso uma etapa de processamento falhar devido a uma falha de hardware ou de software. Normalmente, você manteria uma contagem de repetições também e, se a mensagem for repetida mais do que um número de vezes, você a excluiria. Isso protege contra uma mensagem que dispara um erro do aplicativo sempre que for processada.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L65-L69)]
 
 ## <a name="de-queue-the-next-message"></a>Remover a próxima mensagem da fila
 
-Seu código retira a fila de uma mensagem de uma fila em duas etapas. Ao chamar `GetMessage`, você receberá a próxima mensagem em uma fila. Uma mensagem retornada de `GetMessage` torna-se invisível para qualquer outra mensagem de leitura de código dessa fila. Por padrão, essa mensagem permanece invisível por 30 segundos. Para concluir a remoção da mensagem da fila, você também deve chamar `DeleteMessage`. Esse processo de duas etapas para remover uma mensagem garante que, se o código não processar uma mensagem devido a uma falha de hardware ou de software, outra instância do seu código poderá obter a mesma mensagem e tentar novamente. Seu código chama `DeleteMessage` logo após a mensagem ser processada.
+Seu código remove uma mensagem de um fila em duas etapas. Ao chamar `GetMessage`, você receberá a próxima mensagem em uma fila. Uma mensagem retornada de `GetMessage` torna-se invisível para todas as outras mensagens de leitura de código da fila. Por padrão, essa mensagem permanece invisível por 30 segundos. Para concluir a remoção da mensagem da fila, você também deve chamar `DeleteMessage`. Este processo de duas etapas de remover uma mensagem garante que quando o código não processa uma mensagem devido à falhas de hardware ou de software, outra instância do seu código pode receber a mesma mensagem e tentar novamente. Seu código chama `DeleteMessage` logo após a mensagem ser processada.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L75-L76)]
 
@@ -113,14 +113,14 @@ Este exemplo mostra como usar um fluxo de trabalho assíncrono com APIs de armaz
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L82-L91)]
 
-## <a name="additional-options-for-de-queuing-messages"></a>Opções adicionais para a remoção de mensagens da fila
+## <a name="additional-options-for-de-queuing-messages"></a>Opções adicionais para remover mensagens da fila
 
-Há duas maneiras de personalizar a recuperação de mensagens de uma fila.
-Primeiro, você pode obter um lote de mensagens (até 32). Em segundo lugar, você pode definir um tempo limite de invisibilidade mais longo ou mais curto, permitindo que seu código tenha mais ou menos tempo para processar totalmente cada mensagem. O exemplo de código a seguir usa `GetMessages` para obter 20 mensagens em uma chamada e, em seguida, processa cada mensagem. Ele também define o tempo limite de invisibilidade para cinco minutos para cada mensagem. Observe que os 5 minutos começam para todas as mensagens ao mesmo tempo, portanto, depois de 5 minutos desde a chamada para `GetMessages`, todas as mensagens que não foram excluídas ficarão visíveis novamente.
+Há duas maneiras de personalizar a recuperação da mensagem de uma fila.
+Primeiro, você pode obter um lote de mensagens (até 32). Segundo, você pode definir um tempo limite de invisibilidade mais longo ou mais curto, permitindo mais ou menos tempo para seu código processar totalmente cada mensagem. O exemplo de código a seguir usa `GetMessages` para obter 20 mensagens em uma chamada e, em seguida, processa cada mensagem. Ele também define o tempo limite de invisibilidade de cinco minutos para cada mensagem. Observe que os 5 minutos começam para todas as mensagens ao mesmo tempo, portanto, depois de 5 minutos desde a chamada para `GetMessages`, todas as mensagens que não foram excluídas ficarão visíveis novamente.
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L97-L99)]
 
-## <a name="get-the-queue-length"></a>Obter o comprimento da fila
+## <a name="get-the-queue-length"></a>Obter o tamanho da fila
 
 Você pode obter uma estimativa do número de mensagens em uma fila. O método `FetchAttributes` solicita que o serviço Fila recupere os atributos da fila, incluindo a contagem de mensagens. A propriedade `ApproximateMessageCount` retorna o último valor recuperado pelo método `FetchAttributes`, sem chamar o serviço Fila.
 
@@ -132,12 +132,12 @@ Para excluir uma fila e todas as mensagens contidas nela, chame o método `Delet
 
 [!code-fsharp[QueueStorage](~/samples/snippets/fsharp/azure/queue-storage.fsx#L112-L113)]
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
-Agora que você aprendeu os conceitos básicos do armazenamento de filas, siga estes links para saber mais sobre tarefas de armazenamento mais complexas.
+Agora que você aprendeu os conceitos básicos do armazenamento de Fila, siga estes links para saber mais sobre tarefas de armazenamento mais complexas.
 
-- [APIs de armazenamento do Azure para .NET](/dotnet/api/overview/azure/storage)
+- [APIs do Armazenamento do Microsoft Azure para .NET](/dotnet/api/overview/azure/storage)
 - [Provedor de tipo de armazenamento do Azure](https://github.com/fsprojects/AzureStorageTypeProvider)
-- [Blog da equipe de armazenamento do Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/)
-- [Configurar cadeias de conexão do armazenamento do Azure](/azure/storage/common/storage-configure-connection-string)
-- [Referência da API REST dos serviços de armazenamento do Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [Blog da equipe de Armazenamento do Azure](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
+- [Configurar cadeias de conexão do Armazenamento do Azure](/azure/storage/common/storage-configure-connection-string)
+- [Referência de API REST dos Serviços de Armazenamento do Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

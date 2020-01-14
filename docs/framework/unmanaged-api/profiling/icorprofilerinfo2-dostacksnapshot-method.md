@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 287b11e9-7c52-4a13-ba97-751203fa97f4
 topic_type:
 - apiref
-ms.openlocfilehash: 64bcf6ee58d743a26e31c49a425f36cc808b5080
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5d90f414a945d346ca7721745ea7d86cb24a085c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74426831"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936863"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>Método ICorProfilerInfo2::DoStackSnapshot
 Percorre os quadros gerenciados na pilha para o thread especificado e envia informações para o criador de perfil por meio de um retorno de chamada.  
@@ -71,7 +71,7 @@ HRESULT DoStackSnapshot(
   
  A ordem na qual a pilha é movimentada é o inverso de como os quadros foram enviados para a pilha: quadro (último a ser enviado) primeiro, principal (primeiro a ser enviado).  
   
- Para obter mais informações sobre como programar o criador de perfil para movimentar pilhas gerenciadas, consulte [movimentação de pilha do profiler no .NET Framework 2,0: Noções básicas e além disso](https://go.microsoft.com/fwlink/?LinkId=73638).  
+ Para obter mais informações sobre como programar o criador de perfil para movimentar pilhas gerenciadas, consulte [movimentação de pilha do profiler no .NET Framework 2,0: Noções básicas e além disso](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).  
   
  Uma movimentação de pilha pode ser síncrona ou assíncrona, conforme explicado nas seções a seguir.  
   
@@ -93,11 +93,11 @@ HRESULT DoStackSnapshot(
   
 - Bloquear sempre em seu retorno de chamada [ICorProfilerCallback:: ThreadDestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) até que a movimentação da pilha desse thread seja concluída.  
   
-- Não mantenha um bloqueio enquanto o criador de perfil chamar uma função CLR que possa disparar uma coleta de lixo. Ou seja, não mantenha um bloqueio se o thread de propriedade puder fazer uma chamada que dispara uma coleta de lixo.  
+- Não segure um bloqueio enquanto seu gerador de perfil chamar uma função CLR que possa disparar coleta de lixo. Ou seja, não mantenha um bloqueio se o thread de propriedade puder fazer uma chamada que dispara uma coleta de lixo.  
   
  Também há um risco de deadlock se você chamar `DoStackSnapshot` de um thread que seu criador de perfil criou para que você possa percorrer a pilha de um thread-alvo separado. Na primeira vez que o thread que você criou insere determinados métodos de `ICorProfilerInfo*` (incluindo `DoStackSnapshot`), o CLR executará a inicialização específica do CLR por thread nesse thread. Se o seu criador de perfil tiver suspenso o thread de destino cuja pilha você está tentando percorrer e se esse thread de destino tiver causado um bloqueio necessário para executar essa inicialização por thread, ocorrerá um deadlock. Para evitar esse deadlock, faça uma chamada inicial em `DoStackSnapshot` de seu thread criado pelo criador de perfil para percorrer um thread de destino separado, mas não suspenda o thread-alvo primeiro. Essa chamada inicial garante que a inicialização por thread possa ser concluída sem deadlock. Se `DoStackSnapshot` tiver sucesso e reportar pelo menos um quadro, depois desse ponto, será seguro que esse thread criado pelo criador de perfil suspenda qualquer thread de destino e chame `DoStackSnapshot` para percorrer a pilha do thread-alvo.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Cabeçalho:** CorProf. idl, CorProf. h  
@@ -106,7 +106,7 @@ HRESULT DoStackSnapshot(
   
  **Versões do .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Interface ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [Interface ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

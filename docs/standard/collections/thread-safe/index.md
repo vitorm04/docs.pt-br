@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
-ms.openlocfilehash: 30660c2fb89fd3738abb05122a5daf175677265c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711240"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938104"
 ---
 # <a name="thread-safe-collections"></a>Coleções thread-safe
 O .NET Framework 4 introduz o namespace <xref:System.Collections.Concurrent?displayProperty=nameWithType>, que inclui várias classes de coleção que são tanto thread-safe quanto escalonáveis. Vários threads podem adicionar ou remover itens dessas coleções de modo seguro e eficiente sem a necessidade de sincronização adicional no código do usuário. Ao escrever um novo código, use as classes de coleção simultâneas sempre que vários threads forem ser gravados simultaneamente nas coleções. Se estiver lendo apenas de uma coleção compartilhada, você poderá usar as classes no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. É recomendável não usar as classes da coleção 1.0, a menos que você precise ter como destino o runtime do .NET Framework 1.1 ou anterior.  
   
 ## <a name="thread-synchronization-in-the-net-framework-10-and-20-collections"></a>Sincronização de thread nas coleções do .NET Framework 1.0 e 2.0  
- As coleções introduzidas no .NET Framework 1.0 são encontradas no namespace <xref:System.Collections?displayProperty=nameWithType>. Essas coleções, que incluem os comumente usados <xref:System.Collections.ArrayList> e <xref:System.Collections.Hashtable>, fornecem algum acesso thread-safe por meio da propriedade `Synchronized`, que retorna um wrapper thread-safe em torno da coleção. O wrapper funciona bloqueando toda a coleção a cada operação de adição ou remoção. Portanto, cada thread que está tentando acessar a coleção deve aguardar por sua vez para receber esse bloqueio. Isso não é escalonável e pode causar degradação significativa no desempenho para coleções grandes. Além disso, o design não é totalmente protegido contra condições de corrida. Para saber mais, confira [Synchronization in Generic Collections](https://blogs.msdn.microsoft.com/bclteam/2005/03/15/synchronization-in-generic-collections-brian-grunkemeyer/) (Sincronização em coleções genéricas).  
+ As coleções introduzidas no .NET Framework 1.0 são encontradas no namespace <xref:System.Collections?displayProperty=nameWithType>. Essas coleções, que incluem os comumente usados <xref:System.Collections.ArrayList> e <xref:System.Collections.Hashtable>, fornecem algum acesso thread-safe por meio da propriedade `Synchronized`, que retorna um wrapper thread-safe em torno da coleção. O wrapper funciona bloqueando toda a coleção a cada operação de adição ou remoção. Portanto, cada thread que está tentando acessar a coleção deve aguardar por sua vez para receber esse bloqueio. Isso não é escalonável e pode causar degradação significativa no desempenho para coleções grandes. Além disso, o design não é totalmente protegido contra condições de corrida. Para saber mais, confira [Synchronization in Generic Collections](https://docs.microsoft.com/archive/blogs/bclteam/synchronization-in-generic-collections-brian-grunkemeyer) (Sincronização em coleções genéricas).  
   
  As classes de coleções introduzidas no .NET Framework 2.0 são encontradas no namespace <xref:System.Collections.Generic?displayProperty=nameWithType>. Entre elas <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.Dictionary%602> e assim por diante. Essas classes fornecem desempenho e segurança de tipos aprimorados em comparação com as classes do .NET Framework 1.0. No entanto, as classes de coleção do .NET Framework 2.0 não fornecem nenhuma sincronização de thread; o código de usuário deve fornecer sincronização quando itens são adicionados ou removidos simultaneamente em vários threads.  
   

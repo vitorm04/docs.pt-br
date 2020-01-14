@@ -2,12 +2,12 @@
 title: Problemas de segurança de registro em log de mensagens
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: c5efd2990a00045e920c005f6658d5fdfb858481
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 679975be44244f10232b805a6cc2776b48ed6058
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70795936"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935764"
 ---
 # <a name="security-concerns-for-message-logging"></a>Problemas de segurança de registro em log de mensagens
 Este tópico descreve como você pode proteger dados confidenciais de serem expostos em logs de mensagens, bem como eventos gerados pelo log de mensagens.  
@@ -23,11 +23,11 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
   
 - Verifique se os arquivos de log estão protegidos por listas de controle de acesso (ACL) tanto em cenários de host da Web quanto de hospedagem interna.  
   
-- Escolha uma extensão de arquivo que não possa ser facilmente servida usando uma solicitação da Web. Por exemplo, a extensão de arquivo. xml não é uma opção segura. Você pode verificar o guia de administração do Serviços de Informações da Internet (IIS) para ver uma lista de extensões que podem ser servidas.  
+- Escolha uma extensão de arquivo que não possa ser facilmente servida usando uma solicitação da Web. Por exemplo, a extensão de arquivo. xml não é uma opção segura. Você pode conferir o guia de administração de ISS (Serviços de Informações da Internet) para ver uma lista das extensões que podem ser usadas.  
   
 - Especifique um caminho absoluto para o local do arquivo de log, que deve estar fora do diretório público do Web host vroot para impedir que ele seja acessado por uma parte externa usando um navegador da Web.  
   
- Por padrão, as chaves e as informações de identificação pessoal (PII), como nome de usuário e senha, não são registradas em rastreamentos e mensagens registradas. Um administrador de máquina, no entanto, `enableLoggingKnownPII` pode usar o `machineSettings` atributo no elemento do arquivo Machine. config para permitir que os aplicativos em execução no computador registrem PII (informações de identificação pessoal) conhecidas. A configuração a seguir demonstra como fazer isso:  
+ Por padrão, as chaves e as informações de identificação pessoal (PII), como nome de usuário e senha, não são registradas em rastreamentos e mensagens registradas. Um administrador de máquina, no entanto, pode usar o atributo `enableLoggingKnownPII` no elemento `machineSettings` do arquivo Machine. config para permitir que os aplicativos em execução no computador registrem PII (informações de identificação pessoal) conhecidas. A configuração a seguir demonstra como fazer isso:  
   
 ```xml  
 <configuration>  
@@ -37,7 +37,7 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
 </configuration>   
 ```  
   
- Um implantador de aplicativo pode usar `logKnownPii` o atributo no arquivo app. config ou Web. config para habilitar o log de PII da seguinte maneira:  
+ Um implantador de aplicativo pode usar o atributo `logKnownPii` no arquivo app. config ou Web. config para habilitar o log de PII da seguinte maneira:  
   
 ```xml  
 <system.diagnostics>  
@@ -54,10 +54,10 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
 </system.diagnostics>  
 ```  
   
- Somente quando as duas configurações `true` são o log de PII habilitado. A combinação de duas opções permite a flexibilidade de registrar PII conhecida para cada aplicativo.  
+ Somente quando as duas configurações são `true` o log PII está habilitado. A combinação de duas opções permite a flexibilidade de registrar PII conhecida para cada aplicativo.  
   
 > [!IMPORTANT]
-> [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] `true` Nos sinalizadores e`logKnownPii`também devem ser definidos como no arquivo Web. config ou no arquivo app. config para habilitar o log de PII, como mostrado no exemplo `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`a seguir. `logEntireMessage`  
+> Em [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] os sinalizadores de `logEntireMessage` e `logKnownPii` também devem ser definidos como `true` no arquivo Web. config ou no arquivo app. config para habilitar o log de PII, como mostrado no exemplo a seguir `<system.serviceModel><messageLogging logEntireMessage="true" logKnownPii="true" …`.  
   
  Você deve estar ciente de que, se você especificar duas ou mais fontes personalizadas em um arquivo de configuração, somente os atributos da primeira fonte serão lidos. Os outros são ignorados. Isso significa que, para o seguinte app. config, o arquivo, PII não é registrado para ambas as fontes, embora o log de PII esteja explicitamente habilitado para a segunda fonte.  
   
@@ -84,11 +84,11 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
 </system.diagnostics>  
 ```  
   
- Se o `<machineSettings enableLoggingKnownPii="Boolean"/>` elemento existir fora do arquivo Machine. config, o sistema lançará <xref:System.Configuration.ConfigurationErrorsException>um.  
+ Se o elemento `<machineSettings enableLoggingKnownPii="Boolean"/>` existir fora do arquivo Machine. config, o sistema lançará uma <xref:System.Configuration.ConfigurationErrorsException>.  
   
- As alterações entram em vigor somente quando o aplicativo é iniciado ou reiniciado. Um evento é registrado na inicialização quando ambos os atributos são definidos `true`como. Um evento também será registrado se `logKnownPii` for definido como `true` , `enableLoggingKnownPii` mas `false`for.  
+ As alterações entram em vigor somente quando o aplicativo é iniciado ou reiniciado. Um evento é registrado na inicialização quando ambos os atributos são definidos como `true`. Um evento também será registrado se `logKnownPii` for definido como `true`, mas `enableLoggingKnownPii` for `false`.  
   
- O administrador do computador e o implantador de aplicativos devem ter muito cuidado ao usar essas duas opções. Se o log de PII estiver habilitado, as chaves de segurança e PII serão registradas. Se estiver desabilitado, os dados confidenciais e específicos do aplicativo ainda serão registrados em cabeçalhos e corpos de mensagens. Para obter uma discussão mais detalhada sobre privacidade e proteger a PII de ser exposta, consulte [privacidade do usuário](https://go.microsoft.com/fwlink/?LinkID=94647).  
+ O administrador do computador e o implantador de aplicativos devem ter muito cuidado ao usar essas duas opções. Se o log de PII estiver habilitado, as chaves de segurança e PII serão registradas. Se estiver desabilitado, os dados confidenciais e específicos do aplicativo ainda serão registrados em cabeçalhos e corpos de mensagens. Para obter uma discussão mais detalhada sobre privacidade e proteger a PII de ser exposta, consulte [privacidade do usuário](https://docs.microsoft.com/previous-versions/dotnet/articles/aa480490(v=msdn.10)).  
   
 > [!CAUTION]
 > PII não está oculta em mensagens malformadas. Essa mensagem é registrada como está sem qualquer modificação. Os atributos mencionados anteriormente não têm nenhum efeito sobre isso.  
@@ -99,17 +99,17 @@ Este tópico descreve como você pode proteger dados confidenciais de serem expo
 ## <a name="events-triggered-by-message-logging"></a>Eventos disparados pelo log de mensagens  
  O a seguir lista todos os eventos emitidos pelo log de mensagens.  
   
-- Log de mensagens em: Esse evento é emitido quando o log de mensagens está habilitado na configuração ou por meio do WMI. O conteúdo do evento é "o log de mensagens foi ativado. As informações confidenciais podem ser registradas em texto não criptografado, mesmo que elas tenham sido criptografadas na conexão, por exemplo, corpos de mensagens. "  
+- Log de mensagens ativado: esse evento é emitido quando o log de mensagens está habilitado na configuração ou por meio do WMI. O conteúdo do evento é "o log de mensagens foi ativado. As informações confidenciais podem ser registradas em texto não criptografado, mesmo que elas tenham sido criptografadas na conexão, por exemplo, corpos de mensagens. "  
   
-- Registro em log de mensagem: Esse evento é emitido quando o log de mensagens é desabilitado por meio do WMI. O conteúdo do evento é "o registro de mensagem foi desativado".  
+- Logoff de mensagem: esse evento é emitido quando o log de mensagens é desabilitado por meio do WMI. O conteúdo do evento é "o registro de mensagem foi desativado".  
   
-- Registrar PII conhecido em: Esse evento é emitido quando o log de PII conhecido está habilitado. Isso acontece quando o `enableLoggingKnownPii` atributo `machineSettings` no elemento do arquivo Machine. config é definido como `true`, e o `logKnownPii` atributo do `source` elemento no arquivo app. config ou Web. config é definido como `true`.  
+- Registrar PII conhecido em: esse evento é emitido quando o log de PII conhecido está habilitado. Isso acontece quando o atributo `enableLoggingKnownPii` no elemento `machineSettings` do arquivo Machine. config é definido como `true`e o atributo `logKnownPii` do elemento `source` no arquivo app. config ou Web. config é definido como `true`.  
   
-- PII conhecida de log não permitido: Esse evento é emitido quando o log de PII conhecido não é permitido. Isso acontece quando o `logKnownPii` atributo `source` do elemento no arquivo app. config ou Web. config é definido como `true`, mas o `enableLoggingKnownPii` atributo no `machineSettings` elemento do arquivo Machine. config é definido como `false`. Nenhuma exceção é lançada.  
+- PII conhecida de log não permitido: esse evento é emitido quando o log de PII conhecido não é permitido. Isso acontece quando o atributo `logKnownPii` do elemento `source` no arquivo app. config ou Web. config é definido como `true`, mas o atributo `enableLoggingKnownPii` no elemento `machineSettings` do arquivo Machine. config é definido como `false`. Nenhuma exceção é lançada.  
   
  Esses eventos podem ser exibidos na ferramenta de Visualizador de Eventos que vem com o Windows. Para obter mais informações sobre isso, consulte [log de eventos](./event-logging/index.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Registro de mensagens em log](message-logging.md)
 - [Questões de segurança e dicas úteis para rastreamento](./tracing/security-concerns-and-useful-tips-for-tracing.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 90e57c3d332155d42a38b8a01aba7dbb2c812d62
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: c320d004b05e58fc7c239cd8c1f3bcec84ad8f78
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458025"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937917"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Escrevendo aplicativos .NET Framework grandes e dinâmicos
 
@@ -130,7 +130,7 @@ public class BoxingExample
   
  Mantenha o fator do primeiro desempenho em mente (ou seja, não otimize antes) e não comece a gravar novamente todo o código dessa forma. Esteja atento aos custos da conversão boxing, mas só altere o código depois de criar o perfil do aplicativo e encontrar os pontos de acesso. 
   
-### <a name="strings"></a>Cadeias de caracteres  
+### <a name="strings"></a>{1&gt;Cadeias de caracteres&lt;1}  
  As manipulações da cadeia de caracteres são as maiores responsáveis pelas alocações e costumam aparecer no PerfView entre as cinco primeiras alocações. Os programas usam cadeias de caracteres na serialização, em JSON e nas APIs REST. É possível usar cadeias de caracteres como constantes programáticas na interoperação com sistemas quando não é possível usar tipos de enumeração. Quando a criação de perfis mostrar que as cadeias de caracteres estão afetando muito o desempenho, procure chamadas para métodos <xref:System.String> como <xref:System.String.Format%2A>, <xref:System.String.Concat%2A>, <xref:System.String.Split%2A>, <xref:System.String.Join%2A>, <xref:System.String.Substring%2A> e assim por diante. O uso de <xref:System.Text.StringBuilder> para evitar o custo com a criação de uma cadeia de caracteres com base em muitas peças ajuda, mas mesmo a alocação do objeto <xref:System.Text.StringBuilder> pode se tornar um gargalo que precisa ser gerenciado. 
   
  **Exemplo 3: operações da cadeia de caracteres**  
@@ -281,7 +281,7 @@ A consulta integrada à linguagem (LINQ), em conjunto com expressões lambda, é
   
  **Exemplo 5: Lambdas, List\<T> e IEnumerable\<T>**  
   
- Esse exemplo usa [o LINQ e um código de estilo funcional](https://blogs.msdn.microsoft.com/charlie/2007/01/27/anders-hejlsberg-on-linq-and-functional-programming/) para localizar um símbolo no modelo do compilador, considerando uma cadeia de caracteres de nome:  
+ Esse exemplo usa [o LINQ e um código de estilo funcional](https://docs.microsoft.com/archive/blogs/charlie/anders-hejlsberg-on-linq-and-functional-programming) para localizar um símbolo no modelo do compilador, considerando uma cadeia de caracteres de nome:  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- Na primeira linha, a [expressão lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [fecha sobre](https://blogs.msdn.microsoft.com/ericlippert/2003/09/17/what-are-closures/) a variável local `name`. Isso significa que, além de alocar um objeto para o [representante](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`. O compilador gera um código semelhante ao seguinte:  
+ Na primeira linha, a [expressão lambda](../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [fecha sobre](https://docs.microsoft.com/archive/blogs/ericlippert/what-are-closures) a variável local `name`. Isso significa que, além de alocar um objeto para o [representante](../../csharp/language-reference/builtin-types/reference-types.md#the-delegate-type) que `predicate` mantém, o código aloca uma classe estática para manter o ambiente que captura o valor `name`. O compilador gera um código semelhante ao seguinte:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -462,7 +462,7 @@ class Compilation { /*...*/
   
 - É tudo uma questão de alocação – é onde a equipe da plataforma do compilador passa boa parte do tempo melhorando o desempenho dos novos compiladores. 
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Vídeo de apresentação deste tópico](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)
 - [Guia do iniciante à criação de perfil de desempenho](/visualstudio/profiling/beginners-guide-to-performance-profiling)

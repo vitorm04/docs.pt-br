@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394484"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937276"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>Estrutura de destino: suporte a .NET Framework Descartado
 
 A partir do ASP.NET Core 3,0, .NET Framework é uma estrutura de destino sem suporte.
 
-#### <a name="change-description"></a>Alterar descrição
+#### <a name="change-description"></a>Descrição das alterações
 
 .NET Framework 4,8 é a última versão principal do .NET Framework. Novos aplicativos de ASP.NET Core devem ser criados no .NET Core. A partir da versão 3,0 do .NET Core, você pode considerar ASP.NET Core 3,0 como parte do .NET Core.
 
@@ -18,9 +18,9 @@ Os clientes que usam ASP.NET Core com .NET Framework podem continuar de uma mane
 
 Para obter mais informações sobre como portar do .NET Framework para o .NET Core, consulte [portando para o .NET Core](~/docs/core/porting/index.md).
 
-os pacotes `Microsoft.Extensions` (como registro em log, injeção de dependência e configuração) e Entity Framework Core não são afetados. Eles continuarão a dar suporte a .NET Standard.
+`Microsoft.Extensions` pacotes (como registro em log, injeção de dependência e configuração) e Entity Framework Core não são afetados. Eles continuarão a dar suporte a .NET Standard.
 
-Para obter mais informações sobre a motivação para essa alteração, consulte [a postagem do blog original](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0).
+Para obter mais informações sobre a motivação para essa alteração, consulte [a postagem do blog original](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/).
 
 #### <a name="version-introduced"></a>Versão introduzida
 
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>APIs afetadas
 
-Nenhum
+{1&gt;Nenhum&lt;1}
 
 <!-- 
 

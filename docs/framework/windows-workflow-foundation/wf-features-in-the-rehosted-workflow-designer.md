@@ -2,12 +2,12 @@
 title: Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bf5c12fe7892bf81fda9714ba02870a9c8ab8b4e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 1c554c60bf2e50a8eb89764a21ad15b95343b182
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837591"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937735"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Suporte para novos recursos do Workflow Foundation 4.5 no Designer de Fluxo de Trabalho hospedado novamente
 O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recursos novos, incluindo vários aprimoramentos na experiência do designer de fluxo de trabalho. Este tópico detalha quais desses recursos têm suporte no designer hospedado novamente e que não têm suporte no momento.
@@ -122,7 +122,7 @@ O Windows Workflow Foundation (WF) no .NET Framework 4,5 introduziu muitos recur
  Além do fluxograma e de modelos sequenciais de desenvolvimento de fluxo de trabalho, esta versão inclui fluxos de trabalho da Máquina de Estado e serviços de fluxo de trabalho de primeiro contrato.  
   
 ### <a name="state-machine-workflows"></a>Fluxo de trabalho de máquina de estado  
- Os fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4.0.1 na [atualização 1 da plataforma Microsoft .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o .NET Framework 4,5. As atualizações incluem:  
+ Os fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4.0.1 na [atualização 1 da plataforma Microsoft .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o .NET Framework 4,5. As atualizações incluem:  
   
 1. A capacidade de definir pontos de interrupção em estados  
   

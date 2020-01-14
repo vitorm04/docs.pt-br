@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: d3a3539904c5d8b5db23b99ca6128bf5860a1917
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346106"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937455"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>Desenvolva e implante WCF Data Services
 
@@ -70,7 +70,7 @@ Ao desenvolver um serviço de dados WCF como um aplicativo ASP.NET ou site ASP.N
 
 3. **Ambiente de desenvolvimento do Windows Azure**
 
-     As ferramentas do Windows Azure para Visual Studio incluem um conjunto integrado de ferramentas para o desenvolvimento de serviços do Windows Azure no Visual Studio. Com essas ferramentas, você pode desenvolver um serviço de dados que pode ser implantado no Microsoft Azure e você pode testar o serviço de dados no computador local antes da implantação. Use essas ferramentas ao usar o Visual Studio para desenvolver um serviço de dados executado na plataforma Windows Azure. Você pode baixar as ferramentas do Windows Azure para Visual Studio no [centro de download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Para obter mais informações sobre como desenvolver um serviço de dados que é executado no Windows Azure, consulte o post [implantando um serviço OData no Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
+     As ferramentas do Windows Azure para Visual Studio incluem um conjunto integrado de ferramentas para o desenvolvimento de serviços do Windows Azure no Visual Studio. Com essas ferramentas, você pode desenvolver um serviço de dados que pode ser implantado no Microsoft Azure e você pode testar o serviço de dados no computador local antes da implantação. Use essas ferramentas ao usar o Visual Studio para desenvolver um serviço de dados executado na plataforma Windows Azure. Você pode baixar as ferramentas do Windows Azure para Visual Studio no [centro de download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Para obter mais informações sobre como desenvolver um serviço de dados que é executado no Windows Azure, consulte o post [implantando um serviço OData no Windows Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="development-tips"></a>Dicas de desenvolvimento
 
@@ -115,7 +115,7 @@ O WCF Data Service fornece flexibilidade na escolha do processo que hospeda o se
 
 - **Windows Azure**
 
-     Você pode implantar um serviço de dados no Windows Azure usando as ferramentas do Windows Azure para Visual Studio. Você pode baixar as ferramentas do Windows Azure para Visual Studio no [centro de download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Para obter mais informações sobre como implantar um serviço de dados no Windows Azure, consulte o post [implantando um serviço OData no Windows Azure](https://blogs.msdn.microsoft.com/astoriateam/2010/07/20/deploying-an-odata-service-in-windows-azure/).
+     Você pode implantar um serviço de dados no Windows Azure usando as ferramentas do Windows Azure para Visual Studio. Você pode baixar as ferramentas do Windows Azure para Visual Studio no [centro de download da Microsoft](https://go.microsoft.com/fwlink/?LinkID=201848). Para obter mais informações sobre como implantar um serviço de dados no Windows Azure, consulte o post [implantando um serviço OData no Windows Azure](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure).
 
 ### <a name="deployment-considerations"></a>Considerações de implantação
 
@@ -123,7 +123,7 @@ Você deve considerar o seguinte ao implantar um serviço de dados:
 
 - Quando você implanta um serviço de dados que usa o provedor de Entity Framework para acessar um banco de dados do SQL Server, você também pode precisar propagar estruturas, dados ou ambos com a implantação do serviço de dados. O Visual Studio pode criar scripts automaticamente (arquivos. Sql) para fazer isso no banco de dados de destino, e esses scripts podem ser incluídos no pacote de implantação da Web de um aplicativo ASP.NET. Para obter mais informações, consulte [como: implantar um banco de dados com um projeto de aplicativo Web](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100)). Para um site da Web do ASP.NET, você pode fazer isso usando o **Assistente de publicação de banco de dados** no Visual Studio. Para obter mais informações, consulte [publicando um banco de dados SQL](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100)).
 
-- Como o WCF Data Services inclui uma implementação básica do WCF, você pode usar o Windows Server AppFabric para monitorar um serviço de dados implantado no IIS em execução no Windows Server. Para obter mais informações sobre como usar o Windows Server AppFabric para monitorar um serviço de dados, consulte o WCF Data Services de rastreamento de postagem [com o Windows Server AppFabric](https://blogs.msdn.microsoft.com/rjacobs/2010/06/09/tracking-wcf-data-services-with-windows-server-appfabric/).
+- Como o WCF Data Services inclui uma implementação básica do WCF, você pode usar o Windows Server AppFabric para monitorar um serviço de dados implantado no IIS em execução no Windows Server. Para obter mais informações sobre como usar o Windows Server AppFabric para monitorar um serviço de dados, consulte o WCF Data Services de rastreamento de postagem [com o Windows Server AppFabric](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric).
 
 ## <a name="see-also"></a>Veja também
 

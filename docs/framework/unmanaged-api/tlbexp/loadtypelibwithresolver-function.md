@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7123a89b-eb9b-463a-a552-a081e33b0a3a
 topic_type:
 - apiref
-ms.openlocfilehash: 82fa0903474ee04b767fd9c68812efe7f0cc4fa0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adbb5eca3b7ffa36d0c963d0dacc3b2afdb664d4
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124156"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935559"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Função LoadTypeLibWithResolver
 Carrega uma biblioteca de tipos e usa a [interface ITypeLibResolver](itypelibresolver-interface.md) fornecida para resolver quaisquer bibliotecas de tipos referenciadas internamente.  
@@ -39,7 +39,7 @@ HRESULT LoadTypeLibWithResolver(
  no O caminho do arquivo da biblioteca de tipos.  
   
  `regkind`  
- no Um sinalizador de [Enumeração regkind](https://docs.microsoft.com/windows/win32/api/oleauto/ne-oleauto-regkind) que controla como a biblioteca de tipos é registrada. Seus valores possíveis são:  
+ no Um sinalizador de [Enumeração regkind](/windows/win32/api/oleauto/ne-oleauto-regkind) que controla como a biblioteca de tipos é registrada. Seus valores possíveis são:  
   
 - `REGKIND_DEFAULT`: usar o comportamento de registro padrão.  
   
@@ -53,7 +53,7 @@ HRESULT LoadTypeLibWithResolver(
  `pptlib`  
  fora Uma referência à biblioteca de tipos que está sendo carregada.  
   
-## <a name="return-value"></a>Valor retornado  
+## <a name="return-value"></a>Valor de retorno  
  Um dos valores HRESULT listados na tabela a seguir.  
   
 |Valor retornado|Significado|  
@@ -82,7 +82,7 @@ HRESULT LoadTypeLibWithResolver(
   
  Se você chamar `LoadTypeLibWithResolver` diretamente, deverá fornecer sua própria implementação de [interface ITypeLibResolver](itypelibresolver-interface.md) .  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  **Plataformas:** confira [Requisitos do sistema](../../get-started/system-requirements.md).  
   
  **Cabeçalho:** TlbRef. h  
@@ -91,7 +91,7 @@ HRESULT LoadTypeLibWithResolver(
   
  **Versão do .NET Framework:** 3,5, 3,0, 2,0  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Funções auxiliares do Tlbexp](index.md)
 - [Função LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

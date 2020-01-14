@@ -2,12 +2,12 @@
 title: Novidades no Windows Foundation Workflow no .NET 4.5
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 80919dd7a726cbac5fa13680e0c79292745a7bca
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: b14f18dce64bc5738f3d3c6af11d6d6224764486
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837578"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937885"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>Novidades no Windows Foundation Workflow no .NET 4.5
 
@@ -220,7 +220,7 @@ Além do fluxograma e de modelos sequenciais de desenvolvimento de fluxo de trab
 
 ### <a name="BKMK_StateMachine"></a>Fluxos de trabalho de máquina de estado
 
-Os fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4, versão 4.0.1 na [atualização 1 da plataforma Microsoft .NET Framework 4](https://blogs.msdn.microsoft.com/endpoint/2011/04/18/microsoft-net-framework-4-platform-update-1/). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o .NET Framework 4,5. As atualizações incluem:
+Os fluxos de trabalho de máquina de estado foram introduzidos como parte do .NET Framework 4, versão 4.0.1 na [atualização 1 da plataforma Microsoft .NET Framework 4](https://docs.microsoft.com/archive/blogs/endpoint/microsoft-net-framework-4-platform-update-1). Essa atualização incluiu várias novas classes e atividades que permitiram que os desenvolvedores criassem fluxos de trabalho de máquina do estado. Essas classes e atividades foram atualizadas para o .NET Framework 4,5. As atualizações incluem:
 
 1. A capacidade de definir pontos de interrupção em estados
 

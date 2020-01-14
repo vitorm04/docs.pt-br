@@ -2,12 +2,12 @@
 title: Diretrizes de migração
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 672ed1a93b4409f491d76ffeeaaac5f67a1c4b6e
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: f0c21d32b745a51bada9133230dd0c87be9c915e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802603"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937962"
 ---
 # <a name="migration-guidance"></a>Diretrizes de migração
 
@@ -21,7 +21,8 @@ No .NET Framework 4, a Microsoft está lançando a segunda versão principal do 
   
  Portanto, a decisão de adotar o .NET Framework 4 é dissociada de sua decisão de mover para WF4 (System. Activities.\*) de WF3 (System. Workflow.\*). Este tópico fornece links para a orientação de migração do WF que fornece informações sobre como trabalhar com WF3 e WF4.  
   
-## <a name="wf-migration-whitepapers-and-cookbooks"></a>Artigos e livros de receitas de migração do WF  
+## <a name="wf-migration-white-papers-and-cookbooks"></a>White papers e manuais de migração do WF
+
  O tópico [visão geral da migração do WF](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10)) fornece uma ampla visão geral da relação entre WF3 e WF4 e estratégias de migração. Os tópicos complementares aprofundam tópicos específicos.  
   
  [Visão geral da migração do WF](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
@@ -56,6 +57,6 @@ No .NET Framework 4, a Microsoft está lançando a segunda versão principal do 
  [Diretrizes do WF: serviços de fluxo de trabalho](https://docs.microsoft.com/previous-versions/appfabric/ff383417(v=azure.10))  
  Fornece instruções passo a passo orientadas para exemplos para recriar os fluxos de trabalho que implementam os serviços Web do Windows Communication Foundation (WCF) (geralmente chamado de serviços de fluxo de trabalho) criados no WF3 para usar WF4, para cenários comuns para atividades prontas.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Activities.Statements.Interop>

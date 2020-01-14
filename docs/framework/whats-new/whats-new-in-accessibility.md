@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 681328af3f3624a8398d5125b952593f2c0510c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427663"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938144"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>Novidades na acessibilidade do .NET Framework
 
@@ -22,7 +22,7 @@ O .NET Framework pretende tornar os aplicativos mais acessíveis para os usuári
 
 Configure seu aplicativo para aceitar os recursos de acessibilidade se ele for direcionado ao .NET Framework 4.7 ou a uma versão anterior, mas estiver em execução no .NET Framework 4.7.1 ou posterior. Além disso, configure seu aplicativo para usar recursos herdados (e não aproveitar os recursos de acessibilidade) se ele for direcionado ao .NET Framework 4.7.1 ou posterior. Cada versão do .NET Framework que inclui recursos de acessibilidade tem uma opção de acessibilidade específica à versão, que você adiciona ao elemento [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) na seção [`<runtime>`](../configure-apps/file-schema/runtime/index.md) do arquivo de configuração do aplicativo. Estas são as opções compatíveis:
 
-|{1&gt;{2&gt;Versão&lt;2}&lt;1}|Alternar|
+|Versão do|Alternar|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication
 
 **Eventos de notificação de UIA**
 
-O evento de notificação de UIA, apresentado no Windows 10 Fall Creators Update, permite que seu aplicativo gere um evento UIA, que leva o Narrador a simplesmente fazer um anúncio com base no texto que você forneceu com o evento, sem a necessidade de ter um controle correspondente na interface do usuário. Em alguns cenários, isso é uma maneira direta de melhorar consideravelmente a acessibilidade de seu aplicativo. Também pode ser útil para notificar sobre o progresso de algum processo que pode levar muito tempo. Para obter mais informações sobre eventos de Notificação de UIA, consulte [Seu aplicativo da área de trabalho pode utilizar o novo evento de Notificação de UIA?](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/).
+O evento de notificação de UIA, apresentado no Windows 10 Fall Creators Update, permite que seu aplicativo gere um evento UIA, que leva o Narrador a simplesmente fazer um anúncio com base no texto que você forneceu com o evento, sem a necessidade de ter um controle correspondente na interface do usuário. Em alguns cenários, isso é uma maneira direta de melhorar consideravelmente a acessibilidade de seu aplicativo. Também pode ser útil para notificar sobre o progresso de algum processo que pode levar muito tempo. Para obter mais informações sobre eventos de Notificação de UIA, consulte [Seu aplicativo da área de trabalho pode utilizar o novo evento de Notificação de UIA?](https://docs.microsoft.com/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need).
 
 O exemplo a seguir gera o [Evento de notificação](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A):
 
@@ -228,7 +228,7 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 
 No .NET Framework 4.7.2 e versões anteriores, as dicas de ferramentas são exibidas somente quando o usuário passar o cursor do mouse sobre um controle. No .NET Framework 4.8, as dicas de ferramentas também são exibidas no foco do teclado, bem como por meio de um atalho de teclado.
 
-Para habilitar esse recurso, um aplicativo precisa direcionar o .NET Framework 4.8 ou aceitar ao usar as opções `Switch.UseLegacyAccessibilityFeatures.3` e `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md). Veja a seguir um arquivo de exemplo de configuração de aplicativo:
+Para habilitar esse recurso, um aplicativo precisa direcionar .NET Framework 4,8 ou aceitar usando as opções `Switch.UseLegacyAccessibilityFeatures.3` e `Switch.UseLegacyToolTipDisplay` [AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) . Veja a seguir um arquivo de exemplo de configuração de aplicativo:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -291,7 +291,7 @@ A partir do .NET Framework 4.8, o WPF expõe essas duas propriedades para o UIAu
 
 Além disso, os itens nas instâncias <xref:System.Windows.Controls.ItemsControl> fornecem um valor para essas propriedades automaticamente sem ação adicional do desenvolvedor. Se um <xref:System.Windows.Controls.ItemsControl> for agrupado, a coleção de grupos será representada como um conjunto e cada grupo será contado como um conjunto separado, com cada item dentro desse grupo fornecendo sua posição dentro desse grupo, bem como o tamanho do grupo. Valores automáticos não são afetados pela virtualização. Mesmo que um item não seja percebido, ele ainda é contado para o tamanho total do conjunto e afeta a posição no conjunto de seus itens irmãos.
 
-Valores automáticos serão fornecidos apenas se o aplicativo for destinado ao .NET Framework 4.8. Para aplicativos que se destinam a uma versão anterior do .NET Framework, você pode definir a `Switch.UseLegacyAccessibilityFeatures.3` [opção AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), conforme mostrado no seguinte arquivo App.config:
+Valores automáticos serão fornecidos apenas se o aplicativo for destinado ao .NET Framework 4.8. Para aplicativos direcionados a uma versão anterior do .NET Framework, você pode definir a [opção `Switch.UseLegacyAccessibilityFeatures.3` AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md), conforme mostrado no seguinte arquivo app. config:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -317,7 +317,7 @@ O designer de fluxo de trabalho inclui as seguintes alterações no .NET Framewo
 
 - Usuários que escolherem temas de Alto Contraste verão melhorias na visibilidade do Designer de Fluxo de Trabalho e em seus controles, como melhores taxas de contraste entre elementos e caixas de seleção mais perceptíveis usadas para elementos de foco.
 
-Se o seu aplicativo for destinado ao .NET Framework 4.7.2 ou uma versão anterior, você poderá aceitar essas alterações, definindo a `Switch.UseLegacyAccessibilityFeatures.3` [opção de AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) para `false` no seu arquivo de configuração de aplicativo. Para obter mais informações, consulte a seção [Aproveitando os aprimoramentos de acessibilidade](#taking-advantage-of-accessibility-enhancements) neste artigo.
+Se o seu aplicativo tiver como destino .NET Framework 4.7.2 ou uma versão anterior, você poderá aceitar essas alterações definindo a [opção `Switch.UseLegacyAccessibilityFeatures.3` AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) como `false` no arquivo de configuração do aplicativo. Para obter mais informações, consulte a seção [Aproveitando os aprimoramentos de acessibilidade](#taking-advantage-of-accessibility-enhancements) neste artigo.
 
 ## <a name="whats-new-in-accessibility-in-net-framework-472"></a>Novidades na acessibilidade do .NET Framework 4.7.2
 
@@ -707,6 +707,6 @@ As alterações de acessibilidade no Designer de Fluxo de Trabalho incluem as se
 
 - Usuários que escolherem temas de Alto Contraste verão muitas melhorias na visibilidade do Designer de Fluxo de Trabalho e em seus controles, como melhores taxas de contraste entre elementos e caixas de seleção mais perceptíveis usadas para elementos de foco.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Novidades do .NET Framework](index.md)

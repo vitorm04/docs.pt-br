@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3809c8f-1737-4f0f-9442-0c01ee689871
 topic_type:
 - apiref
-ms.openlocfilehash: 0ce84e1545523302cd47e60b9f047bc470e6bf0f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a4e9268d292004f447b30c82f1db4d0fe58404fe
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443620"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937957"
 ---
 # <a name="corelementtype-enumeration"></a>Enumeração CorElementType
 
@@ -121,7 +121,7 @@ typedef enum CorElementType {
 Os modificadores de tipo formam a base para representar tipos mais complexos. Um valor de modificador de tipo `CorElementType` é aplicado ao valor que imediatamente o segue na assinatura de tipo. O valor que segue o valor do modificador de tipo de `CorElementType` pode ser um `CorElementType` valor de tipo simples, um token de metadados ou outro valor, conforme especificado na tabela a seguir.
 
 > [!NOTE]
-> Todos os números (*número*, *contagem de argumentos*, token de *metadados*, *classificação*, *contagem*e *associado*) são armazenados como inteiros compactados. Consulte [Standard ECMA-335-Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) no site da ECMA para obter detalhes.
+> Todos os números (*número*, *contagem de argumentos*, token de *metadados*, *classificação*, *contagem*e *associado*) são armazenados como inteiros compactados. Consulte [Standard ECMA-335-Common Language Infrastructure (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm) no site da ECMA para obter detalhes.
 
 |Modificador de tipo|Formato|
 |-------------------|------------|
@@ -129,16 +129,16 @@ Os modificadores de tipo formam a base para representar tipos mais complexos. Um
 |`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF \<um valor de `CorElementType` >|
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE \<um token de metadados `mdTypeDef` >|
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS \<um token de metadados `mdTypeDef` >|
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR número de \<>|
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR número de \<|
 |`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY \<um valor de `CorElementType` > \<classificação > \<count1 > \<bound1 >... \<contagem > \<limitado >|
 |`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST \<um token de metadados de `mdTypeDef` > \<contagem de argumentos > \<arg1 >... \<argN >|
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<assinatura completa da função, incluindo a Convenção de chamada >|
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY \<um valor de `CorElementType` >|
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR número de \<>|
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR número de \<|
 |`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_\<um `mdTypeRef` ou `mdTypeDef` token de metadados >|
 |`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT \<um `mdTypeRef` ou `mdTypeDef` token de metadados >|
 
-## <a name="requirements"></a>{1&gt;{2&gt;Requisitos&lt;2}&lt;1}
+## <a name="requirements"></a>Requisitos do
 
 **Plataformas:** confira [Requisitos do sistema](../../../../docs/framework/get-started/system-requirements.md).
 
@@ -146,6 +146,6 @@ Os modificadores de tipo formam a base para representar tipos mais complexos. Um
 
 **Versões do .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Enumerações de metadados](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

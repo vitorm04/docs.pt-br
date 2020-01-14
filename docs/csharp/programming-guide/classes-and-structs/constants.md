@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, constants
 - constants [C#]
 ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
-ms.openlocfilehash: 0abb728c58d50e3d7709d680dd91794c4be6afef
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: fc3dc534756c462fdc368d997da40277e5dc2869
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705737"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937573"
 ---
 # <a name="constants-c-programming-guide"></a>Constantes (Guia de Programação em C#)
 As constantes são valores imutáveis que são conhecidos no tempo de compilação e não são alterados durante a vida útil do programa. Constantes são declaradas com o modificador [const](../../language-reference/keywords/const.md). Apenas os tipos C# internos (excluindo <xref:System.Object?displayProperty=nameWithType>) podem ser declarados como `const`. Para obter uma lista dos tipos internos, consulte [Tabela de tipos internos](../../language-reference/keywords/built-in-types-table.md). Tipos definidos pelo usuário, incluindo classes, struct e matrizes, não podem ser `const`. Use o modificador [readonly](../../language-reference/keywords/readonly.md) para criar uma classe, struct ou matriz que é inicializada uma vez em runtime (por exemplo, em um construtor) e, assim, não pode ser alterada.  
@@ -52,4 +52,4 @@ As constantes são valores imutáveis que são conhecidos no tempo de compilaç�
 - [Propriedades](./properties.md)
 - [Tipos](../types/index.md)
 - [readonly](../../language-reference/keywords/readonly.md)
-- [Immutability in C# Part One: Kinds of Immutability](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability) (Imutabilidade no C#, parte um: tipos de imutabilidade)
+- [Immutability in C# Part One: Kinds of Immutability](https://docs.microsoft.com/archive/blogs/ericlippert/immutability-in-c-part-one-kinds-of-immutability) (Imutabilidade no C#, parte um: tipos de imutabilidade)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 48b62990abf85eac4d4ab30c9a4b891de0875cd7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 12e8d9398a1cf76267f4e8441845007da17949cd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444537"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937894"
 ---
 # <a name="net-performance-tips"></a>Dicas de desempenho do .NET
 O termo *desempenho* geralmente se refere à velocidade de execução de um programa. Às vezes, você pode aumentar a velocidade de execução seguindo algumas regras básicas em seu código-fonte. Em alguns programas, é importante examinar atentamente o código e usar criadores de perfil para verificar se eles estão executando o mais rápido possível. Em outros programas, você não precisa executar essa otimização porque o código é executado em velocidade aceitável conforme ele é gravado. Este artigo lista algumas áreas comuns em que o desempenho pode ser prejudicado e dicas para melhorá-lo, bem como links para tópicos adicionais sobre desempenho. Para obter mais informações sobre como planejar e medir o desempenho, consulte [Desempenho](index.md)  
@@ -22,7 +22,7 @@ O termo *desempenho* geralmente se refere à velocidade de execução de um prog
 ## <a name="boxing-and-unboxing"></a>Conversão boxing e unboxing  
  É melhor evitar o uso de tipos de valor em situações em que eles devem sofrer conversão boxing um grande número de vezes, por exemplo, em classes de coleções não genéricas como <xref:System.Collections.ArrayList?displayProperty=nameWithType>. Você pode evitar a conversão boxing de tipos de valor por meio de coleções genéricas como <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. As conversões boxing e unboxing são processos computacionalmente dispendiosos. Quando um tipo de valor é convertido, um objeto totalmente novo deve ser criado. Isso pode levar até 20 vezes mais tempo que a atribuição de uma referência simples. Ao fazer unboxing, o processo de conversão pode demorar quatro vezes mais que uma atribuição. Para obter mais informações, consulte [Conversões boxing e unboxing](../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
-## <a name="strings"></a>Cadeias de caracteres  
+## <a name="strings"></a>{1&gt;Cadeias de caracteres&lt;1}  
  Ao concatenar um grande número de variáveis de cadeia de caracteres, por exemplo em um loop estreito, use <xref:System.Text.StringBuilder?displayProperty=nameWithType> em vez do [operador +](../../csharp/language-reference/operators/addition-operator.md) de C# ou dos [operadores de concatenação](../../visual-basic/language-reference/operators/concatenation-operators.md) do Visual Basic. Para obter mais informações, consulte [como concatenar várias cadeias de caracteres](../../csharp/how-to/concatenate-multiple-strings.md) e [operadores de concatenação no Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md).  
   
 ## <a name="destructors"></a>Destruidores  
@@ -38,11 +38,11 @@ O termo *desempenho* geralmente se refere à velocidade de execução de um prog
   
 - [Dicas e truques sobre desempenho em aplicativos .NET](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973839(v=msdn.10))  
 
-- [Informações úteis sobre desempenho, por Rico Mariani](https://blogs.msdn.microsoft.com/ricom/)  
+- [Informações úteis sobre desempenho, por Rico Mariani](https://docs.microsoft.com/archive/blogs/ricom/)  
 
-- [Blog de Vance Morrison](https://blogs.msdn.microsoft.com/vancem/)
+- [Blog de Vance Morrison](https://docs.microsoft.com/archive/blogs/vancem/)
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Desempenho](index.md)
 - [Guia de programação do Visual Basic](../../visual-basic/programming-guide/index.md)

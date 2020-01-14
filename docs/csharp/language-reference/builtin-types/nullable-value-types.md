@@ -4,12 +4,12 @@ description: Saiba mais C# sobre os tipos de valor anulável e como usá-los
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: b9400cd76eb0430dbe9c278e835a3cec7f9f131e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 661b5e8502cba42588a07d757f056c715c1c82e8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73741161"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936895"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valores anuláveis (C# referência)
 
@@ -130,10 +130,10 @@ Para obter mais informações, confira as seguintes seções da [especificação
 - [Conversões anuláveis explícitas](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [Operadores de conversão levantados](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
-- [O que exatamente "levantado" significa?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [O que exatamente "levantado" significa?](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

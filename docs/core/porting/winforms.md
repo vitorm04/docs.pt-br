@@ -4,12 +4,12 @@ description: Ensina como portar um aplicativo .NET Framework Windows Forms para 
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: b1048c2d725a2bcf8398af1d2d53f40efc36c82e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567281"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936963"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Como portar um aplicativo de área de trabalho Windows Forms para o .NET Core
 
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-É recomendável adicionar o projeto **MyFormsCore.csproj** a **MyApps.sln** com o Visual Studio ou a CLI do .NET Core a partir do diretório **SolutionFolder**:
+Adicione o projeto **MyFormsCore. csproj** a **myapps. sln** com o Visual Studio ou o CLI do .NET Core do diretório **SolutionFolder** :
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -287,7 +287,7 @@ O comando anterior adiciona o seguinte ao projeto **MyFormsCore.csproj**:
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ Depois que o Visual Studio 2019 oferecer suporte ao Designer de Formulários do 
 
 ## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
+- Saiba mais sobre [as alterações recentes do .NET Framework para o .NET Core](../compatibility/fx-core.md).
 - Leia mais sobre o [Pacote de Compatibilidade do Windows][compat-pack].
 - Assista a um [vídeo sobre como portar](https://www.youtube.com/watch?v=upVQEUc_KwU) seu projeto do Windows Forms do .NET Framework para o .NET Core.
 

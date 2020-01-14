@@ -6,22 +6,22 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 94284a196030d784909c41aae7fef9a5ad3cb52a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567328"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937232"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
-Este artigo descreve o que há de novo no .NET Core 3,0. Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
+Este artigo descreve o que há de novo no .NET Core 3.0. Um dos maiores avanços é o suporte para aplicativos Windows de área de trabalho (somente Windows). Usando a Área de Trabalho do Windows do componente de SDK do .NET Core 3.0, você pode portar seus aplicativos Windows Forms e WPF (Windows Presentation Foundation). Para deixar claro, o componente Windows Desktop só é compatível com o Windows e só é incluído nele. Para obter mais informações, consulte a seção [Área de Trabalho do Windows](#windows-desktop) mais adiante neste artigo.
 
 O .NET Core 3.0 adiciona suporte para C# 8.0. É altamente recomendável que você use o [Visual Studio 2019 versão 16,3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) ou mais recente, [Visual Studio para Mac 8,3](/visualstudio/mac/install-preview) ou mais recente ou [Visual Studio Code](https://code.visualstudio.com/) com a  **C# extensão**mais recente.
 
-[Baixe e comece a usar o .NET Core 3,0](https://aka.ms/netcore3download) agora no Windows, no MacOS ou no Linux.
+[Baixe e comece a usar o .NET Core 3.0](https://aka.ms/netcore3download) agora no Windows, no MacOS ou no Linux.
 
-Para obter mais informações sobre a versão, consulte o [anúncio do .NET Core 3,0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
+Para obter mais informações sobre a versão, consulte o [anúncio do .NET Core 3.0](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0/).
 
 O .NET Core RC1 foi considerado pronto para produção pela Microsoft e foi totalmente suportado. Se você estiver usando uma versão de visualização, deverá mover para a versão RTM para obter suporte contínuo.
 
@@ -74,7 +74,7 @@ Para publicar um único arquivo executável, defina o `PublishSingleFile` em seu
 </PropertyGroup>
 ```
 
-\- ou -
+- ou -
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -309,7 +309,7 @@ Para saber mais sobre o suporte limitado para a porta serial no Linux, confira o
 
 ### <a name="docker-and-cgroup-memory-limits"></a>Limites de memória do Docker e cgroup
 
-A execução do .NET Core 3,0 no Linux com o Docker funciona melhor com limites de memória CGroup. Executar um contêiner do Docker com limites de memória, tais como `docker run -m`, altera o comportamento do .NET Core.
+A execução do .NET Core 3.0 no Linux com o Docker funciona melhor com limites de memória CGroup. Executar um contêiner do Docker com limites de memória, tais como `docker run -m`, altera o comportamento do .NET Core.
 
 - Tamanho de heap do GC (coletor de lixo) padrão: máximo de 20 MB ou 75% do limite de memória no contêiner.
 - O tamanho explícito pode ser definido como um número absoluto ou um percentual do limite de cgroup.
@@ -520,4 +520,4 @@ Muitas vezes, quando você está desenvolvendo um aplicativo, quer usar uma cone
 ## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 - [Examine as alterações significativas entre o .NET Core 2,2 e 3,0.](../compatibility/2.2-3.0.md)
-- [Examine as alterações significativas entre .NET Framework e o .NET Core 3,0 para aplicativos Windows Forms.](../porting/winforms-breaking-changes.md)
+- [Examine as alterações significativas no .NET Core 3,0 para aplicativos Windows Forms.](../compatibility/winforms.md#net-core-30)

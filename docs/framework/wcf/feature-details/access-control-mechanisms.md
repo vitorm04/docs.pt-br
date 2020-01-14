@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF security
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
-ms.openlocfilehash: 14f348300d8ab9276a86b4cf8d91823d39b9aba3
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 7dcdcff9470a7c2777f856e8c1c2143a3a92b73b
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964993"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938181"
 ---
 # <a name="access-control-mechanisms"></a>Mecanismos de controle de acesso
 Você pode controlar o acesso de várias maneiras com o Windows Communication Foundation (WCF). Este tópico aborda brevemente os vários mecanismos e fornece sugestões sobre quando usar cada um deles; Ele destina-se a ajudá-lo a selecionar o mecanismo correto a ser usado. As tecnologias de acesso são listadas em ordem de complexidade. O mais simples é o <xref:System.Security.Permissions.PrincipalPermissionAttribute>; o mais complexo é o modelo de identidade.  
@@ -20,9 +20,9 @@ Você pode controlar o acesso de várias maneiras com o Windows Communication Fo
 ## <a name="principalpermissionattribute"></a>PrincipalPermissionAttribute  
  O <xref:System.Security.Permissions.PrincipalPermissionAttribute> é usado para restringir o acesso a um método de serviço. Quando o atributo é aplicado a um método, ele pode ser usado para solicitar uma identidade ou associação de um chamador específico em um grupo do Windows ou uma função ASP.NET. Se o cliente for autenticado usando um certificado X. 509, ele receberá uma identidade primária que consiste no nome da entidade mais a impressão digital do certificado.  
   
- Use o <xref:System.Security.Permissions.PrincipalPermissionAttribute> para controlar o acesso aos recursos no computador em que o serviço está sendo executado e, se os usuários do serviço forem sempre parte do mesmo domínio do Windows em que o serviço está sendo executado. Você pode criar facilmente grupos do Windows que tenham níveis especificados de acesso (como nenhum, somente leitura ou leitura e gravação).  
+ Use o <xref:System.Security.Permissions.PrincipalPermissionAttribute> para controlar o acesso a recursos no computador em que o serviço está sendo executado, e se os usuários do serviço sempre fizerem parte do mesmo domínio do Windows em que o serviço está sendo executado. Você pode criar facilmente grupos do Windows que tenham níveis especificados de acesso (como nenhum, somente leitura ou leitura e gravação).  
   
- Para obter mais informações sobre como usar o atributo [, consulte Como: Restrinja o acesso com a classe](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)PrincipalPermissionAttribute. Para obter mais informações sobre identidade, consulte [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Para obter mais informações sobre como usar o atributo, consulte [como: restringir o acesso com a classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md). Para obter mais informações sobre identidade, consulte [identidade de serviço e autenticação](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
 ## <a name="aspnet-membership-provider"></a>Provedor de associação do ASP.NET  
  Um recurso do ASP.NET é o provedor de associação. Embora o provedor de associação não seja tecnicamente um mecanismo de controle de acesso, ele permite controlar o acesso ao serviço, limitando o conjunto de possíveis identidades que podem acessar o ponto de extremidade do serviço. O recurso de associação inclui um banco de dados que pode ser preenchido com combinações de nome de usuário/senha que permitem que os usuários de um site estabeleçam contas com o site. Para acessar um serviço que usa o provedor de associação, um usuário deve fazer logon com seu nome de usuário e senha.  
@@ -32,21 +32,21 @@ Você pode controlar o acesso de várias maneiras com o Windows Communication Fo
   
  Você também pode usar o recurso de associação se já tiver um banco de dados de associação de um site ASP.NET existente e desejar habilitar os mesmos usuários para usar seu serviço, autorizado com os mesmos nomes de usuário e senhas.  
   
- Para obter mais informações sobre como usar o recurso de associação em um serviço [WCF, consulte Como: Use o provedor](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)de associação do ASP.net.  
+ Para obter mais informações sobre como usar o recurso de associação em um serviço WCF, consulte [como: usar o provedor de associação ASP.net](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md).  
   
 ## <a name="aspnet-role-provider"></a>Provedor de função ASP.NET  
- Outro recurso do ASP.NET é a capacidade de gerenciar a autorização usando funções. O provedor de função ASP.NET permite que um desenvolvedor crie funções para usuários e atribua a cada usuário uma função ou funções. Assim como com o provedor de associação, as funções e atribuições são armazenadas em um banco de dados e podem ser populadas usando as ferramentas fornecidas por uma implementação específica do provedor de função ASP.NET. Assim como com o recurso de associação, os desenvolvedores do WCF podem usar as informações no banco de dados para autorizar usuários de serviço por funções. Eles podem, por exemplo, usar o provedor de função em combinação com `PrincipalPermissionAttribute` o mecanismo de controle de acesso descrito acima.  
+ Outro recurso do ASP.NET é a capacidade de gerenciar a autorização usando funções. O provedor de função ASP.NET permite que um desenvolvedor crie funções para usuários e atribua a cada usuário uma função ou funções. Assim como com o provedor de associação, as funções e atribuições são armazenadas em um banco de dados e podem ser populadas usando as ferramentas fornecidas por uma implementação específica do provedor de função ASP.NET. Assim como com o recurso de associação, os desenvolvedores do WCF podem usar as informações no banco de dados para autorizar usuários de serviço por funções. Eles podem, por exemplo, usar o provedor de função em combinação com o mecanismo de controle de acesso `PrincipalPermissionAttribute` descrito acima.  
   
  Você também pode usar o provedor de função ASP.NET se tiver um banco de dados de provedor de função do ASP.NET existente e quiser usar o mesmo conjunto de regras e atribuições de usuário em seu serviço WCF.  
   
- Para obter mais informações sobre como usar o recurso de provedor [de função, consulte Como: Use o provedor de função ASP.NET com um](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)serviço.  
+ Para obter mais informações sobre como usar o recurso de provedor de função, consulte [como: usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md).  
   
-## <a name="authorization-manager"></a>Gerenciador de autorização  
+## <a name="authorization-manager"></a>Gerenciador de Autorização  
  Outro recurso combina o AzMan (Gerenciador de autorização) com o provedor de função ASP.NET para autorizar clientes. Quando o ASP.NET hospeda um serviço Web, o AzMan pode ser integrado ao aplicativo para que a autorização para o serviço seja feita por meio do AzMan. O Gerenciador de funções do ASP.NET fornece uma API que permite que você gerencie funções de aplicativo, adicione e remova usuários de funções e verifique a associação de função, mas não permite que você consulte se um usuário está autorizado a executar uma tarefa ou operação nomeada. O AzMan permite que você defina operações individuais e combine-as em tarefas. Com o AZMan, além das verificações de função, você também pode verificar se um usuário pode executar uma tarefa. A atribuição de função e a autorização de tarefa podem ser configuradas fora do aplicativo ou executadas programaticamente no aplicativo. O snap-in do MMC (console de gerenciamento Microsoft) de administração do AzMan permite que os administradores alterem as tarefas que uma função pode executar em tempo de execução e para gerenciar a associação de funções de cada usuário.  
   
  Você também pode usar o AzMan e o provedor de função ASP.NET se você já tiver acesso a uma instalação existente do AzMan e quiser autorizar os usuários de serviço usando os recursos da combinação de provedor de AzMan/função.  
   
- Para obter mais informações sobre o AzMan e o provedor de função [ASP.net, consulte Como: Use o AzMan (Gerenciador de autorização) com](https://go.microsoft.com/fwlink/?LinkId=88951)o ASP.NET 2,0. Para obter mais informações sobre como usar o AzMan e o provedor de função para [serviços WCF, consulte Como: Use o provedor de função Gerenciador de autorização ASP.NET com](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)um serviço.  
+ Para obter mais informações sobre o AzMan e o provedor de função ASP.NET, consulte [como: usar o Gerenciador de autorização (AzMan) com o ASP.NET 2,0](https://docs.microsoft.com/previous-versions/msp-n-p/ff649313(v=pandp.10)). Para obter mais informações sobre como usar o AzMan e o provedor de função para serviços WCF, consulte [como: usar o provedor de função Gerenciador de autorização ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md).  
   
 ## <a name="identity-model"></a>Modelo de identidade  
  O modelo de identidade é um conjunto de APIs que permite que você gerencie declarações e políticas para autorizar clientes. Com o modelo de identidade, você pode examinar todas as declarações contidas nas credenciais que o chamador usou para se autenticar no serviço, comparar as declarações com o conjunto de políticas para o serviço e conceder ou negar acesso com base na comparação.  
@@ -57,11 +57,11 @@ Você pode controlar o acesso de várias maneiras com o Windows Communication Fo
   
  Para obter mais informações sobre o modelo de identidade, consulte [Gerenciando declarações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [Como: Restringir o acesso com a classe PrincipalPermissionattribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [Como: Usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [Como: Usar o provedor de função Gerenciador de autorização ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [Como restringir o acesso com a classe PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [Como usar o provedor de função ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [Como usar o provedor de função do gerenciador de autorização do ASP.NET com um serviço](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
 - [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [Delegação e representação](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

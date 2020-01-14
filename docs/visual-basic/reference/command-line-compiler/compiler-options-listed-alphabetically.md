@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: c529c03fd3856bbd3d3b26371415907c94ca8d30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343514"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937753"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic opções de compilador listadas em ordem alfabética
 O compilador de linha de comando Visual Basic é fornecido como uma alternativa à compilação de programas do IDE (ambiente de desenvolvimento integrado) do Visual Studio. Veja a seguir uma lista de Visual Basic opções do compilador de linha de comando classificadas em ordem alfabética.  
@@ -57,7 +57,7 @@ O compilador de linha de comando Visual Basic é fornecido como uma alternativa 
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|Permite o uso de inferência de tipo local nas declarações de variáveis.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|Impõe semântica de linguagem estrita.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Especifica um arquivo de saída.|  
-|`-parallel[+&#124;-]`|Especifica se deve o build simultâneo deve ser usado (+).|  
+|<code>-parallel[+&#124;-]</code>|Especifica se deve o build simultâneo deve ser usado (+).|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|Especifica a plataforma do processador que o compilador tem como destino para o arquivo de saída.|  
 |`-preferreduilang`|Especifique o nome de idioma de saída preferencial.|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Impede que o compilador exiba código para erros e avisos relacionados à sintaxe.|  
@@ -80,7 +80,7 @@ O compilador de linha de comando Visual Basic é fornecido como uma alternativa 
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Identifica um arquivo de manifesto do aplicativo Win32 definido pelo usuário para ser inserido no arquivo executável portátil (PE) de um projeto.|  
 |[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)|Insere um recurso do Win32 no arquivo de saída.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Opções do compilador do Visual Basic listadas por categoria](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)
-- [Gerenciar propriedades de solução e de projeto](/visualstudio/ide/managing-project-and-solution-properties)
+- [Gerenciar propriedades do projeto e da solução](/visualstudio/ide/managing-project-and-solution-properties)

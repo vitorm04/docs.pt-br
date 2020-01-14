@@ -27,12 +27,12 @@ helpviewer_keywords:
 - security, profiling API considerations
 - stack depth [.NET Framework profiling]
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
-ms.openlocfilehash: 08015e2e5918ca64f601ec912a906cfb6319ed6c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a13470b970b35a2f6f088fd305ba455167c8e107
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427094"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937827"
 ---
 # <a name="profiling-overview"></a>Visão geral da criação de perfil
 
@@ -91,7 +91,7 @@ A API de criação de perfil recupera informações sobre as seguintes ações e
 
 - Eventos de entrada e saída de função.
 
-- Exceção.
+- Exceções.
 
 - Transições entre a execução de código gerenciado e não gerenciado.
 
@@ -175,7 +175,7 @@ A API de criação de perfil fornece duas maneiras de obter pilhas de chamadas: 
 
 Um instantâneo de pilha é um rastreamento da pilha de um thread em um instante no tempo. A API de criação de perfil dá suporte ao rastreamento de funções gerenciadas na pilha, mas deixa o rastreamento de funções não gerenciadas para o próprio Stack Walker do criador de perfil.
 
-Para obter mais informações sobre como programar o criador de perfil para movimentar pilhas gerenciadas, consulte o método [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) neste conjunto de documentação e [movimentação de pilha do profiler no .NET Framework 2,0: Noções básicas e além disso](https://go.microsoft.com/fwlink/?LinkId=73638).
+Para obter mais informações sobre como programar o criador de perfil para movimentar pilhas gerenciadas, consulte o método [ICorProfilerInfo2::D ostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) neste conjunto de documentação e [movimentação de pilha do profiler no .NET Framework 2,0: Noções básicas e além disso](https://docs.microsoft.com/previous-versions/dotnet/articles/bb264782(v=msdn.10)).
 
 ### <a name="shadow-stack"></a>Pilha de sombra
 
@@ -189,7 +189,7 @@ Os retornos de chamada do profiler podem ser emitidos em circunstâncias com res
 
 ## <a name="related-topics"></a>Tópicos relacionados
 
-|Title|Descrição|
+|Cargo|Descrição|
 |-----------|-----------------|
 |[Configurando um ambiente de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Explica como inicializar um profiler, definir notificações de eventos e criar um perfil de um serviço do Windows.|
 |[Interfaces de criação de perfil](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|Descreve as interfaces não gerenciadas que a API de criação de perfil usa.|

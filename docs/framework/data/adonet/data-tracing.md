@@ -2,12 +2,12 @@
 title: Rastreamento de dados no ADO.NET
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: be82500920ce9d5f8bc7ee979cf8ec5006f4f12b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f92a17374cf3df1281e51d54bae1a1dcf9e5ea03
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347796"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937622"
 ---
 # <a name="data-tracing-in-adonet"></a>Rastreamento de dados no ADO.NET
 
@@ -33,7 +33,7 @@ Para obter mais informações sobre como configurar e configurar o rastreamento 
 
 No .NET Framework Provedor de Dados para SQL Server, o rastreamento de acesso a dados ([rastreamento de acesso a dados](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh880086(v=msdn.10))) foi atualizado para facilitar a correlação de eventos de cliente com informações de diagnóstico, como falhas de conexão, do buffer de anéis de conectividade do servidor e das informações de desempenho do aplicativo no log de eventos estendidos. Para obter mais informações sobre como ler o log de eventos estendidos, consulte [View Event Session Data](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh710068(v=sql.110)).
 
-Para operações de conexão, o ADO.NET enviará uma ID de conexão de cliente. Se a conexão falhar, você poderá acessar o buffer de anéis de conectividade ([solução de problemas de conectividade no SQL Server 2008 com o buffer de anéis de conectividade](https://blogs.msdn.microsoft.com/sql_protocols/2008/05/20/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer/)) e localizar o campo `ClientConnectionID` e obter informações de diagnóstico sobre a falha de conexão. As IDs de conexão de cliente estarão registradas no buffer de anéis se um erro ocorrer. (Se uma conexão falhar antes de enviar o pacote de pré-logon, uma ID de conexão de cliente não será gerada.) A ID de conexão do cliente é um GUID de 16 bytes. Você também pode encontrar a ID de conexão do cliente na saída de destino de eventos estendidos, se a ação de `client_connection_id` for adicionada a eventos em uma sessão de eventos estendidos. Você pode habilitar o rastreamento de acesso a dados e executar novamente o comando de conexão e observar o campo `ClientConnectionID` no rastreamento de acesso a dados, se precisar de mais assistência de diagnóstico de driver de cliente.
+Para operações de conexão, o ADO.NET enviará uma ID de conexão de cliente. Se a conexão falhar, você poderá acessar o buffer de anéis de conectividade ([solução de problemas de conectividade no SQL Server 2008 com o buffer de anéis de conectividade](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer)) e localizar o campo `ClientConnectionID` e obter informações de diagnóstico sobre a falha de conexão. As IDs de conexão de cliente estarão registradas no buffer de anéis se um erro ocorrer. (Se uma conexão falhar antes de enviar o pacote de pré-logon, uma ID de conexão de cliente não será gerada.) A ID de conexão do cliente é um GUID de 16 bytes. Você também pode encontrar a ID de conexão do cliente na saída de destino de eventos estendidos, se a ação de `client_connection_id` for adicionada a eventos em uma sessão de eventos estendidos. Você pode habilitar o rastreamento de acesso a dados e executar novamente o comando de conexão e observar o campo `ClientConnectionID` no rastreamento de acesso a dados, se precisar de mais assistência de diagnóstico de driver de cliente.
 
 Você pode obter a ID de conexão do cliente programaticamente usando a propriedade `SqlConnection.ClientConnectionID`.
 

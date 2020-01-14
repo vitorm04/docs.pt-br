@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 65990c699bafa8eec1ba7dcbce624c88316cbb72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283279"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938061"
 ---
 # <a name="working-with-certificates"></a>Trabalhando com certificados
 
 Para programar a segurança do WCF (Windows Communication Foundation), os certificados digitais X.509 são normalmente usados para autenticar clientes e servidores, criptografar e assinar mensagens digitalmente. Este tópico explica rapidamente as funcionalidades dos certificados digitais X.509 e como usá-los no WCF. Inclui também links para tópicos que explicam esses conceitos mais detalhadamente ou que mostram como realizar tarefas comuns usando o WCF e certificados.
 
-Em resumo, um certificado digital faz parte de uma *PKI* (infraestrutura de chave pública), que é um sistema de certificados digitais, autoridades de certificação e outras autoridades de registro que verificam e autenticam a validade de cada parte envolvida em uma transação eletrônica por meio do uso da criptografia de chave pública. Uma autoridade de certificação emite certificados e cada certificado tem um conjunto de campos que contêm dados, como a *entidade* (a entidade para a qual o certificado é emitido), as datas de validade (quando o certificado é válido), o emissor (a entidade que emitiu o certificado) e uma chave pública. No WCF, cada uma dessas propriedades é processada como uma <xref:System.IdentityModel.Claims.Claim> e cada declaração é dividida em dois tipos: identidade e direito. Para obter mais informações sobre os certificados X.509, confira [Certificados de chave pública X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Para obter mais informações sobre Declarações e Autorização no WCF, confira [Gerenciando declarações e autorização com o modelo de identidade](managing-claims-and-authorization-with-the-identity-model.md). Para obter mais informações sobre como implementar uma PKI, consulte [Enterprise PKI com Windows Server 2012 R2 Active Directory Certificate Services](https://blogs.technet.microsoft.com/yungchou/2013/10/21/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2/).
+Em resumo, um certificado digital faz parte de uma *PKI* (infraestrutura de chave pública), que é um sistema de certificados digitais, autoridades de certificação e outras autoridades de registro que verificam e autenticam a validade de cada parte envolvida em uma transação eletrônica por meio do uso da criptografia de chave pública. Uma autoridade de certificação emite certificados e cada certificado tem um conjunto de campos que contêm dados, como a *entidade* (a entidade para a qual o certificado é emitido), as datas de validade (quando o certificado é válido), o emissor (a entidade que emitiu o certificado) e uma chave pública. No WCF, cada uma dessas propriedades é processada como uma <xref:System.IdentityModel.Claims.Claim> e cada declaração é dividida em dois tipos: identidade e direito. Para obter mais informações sobre os certificados X.509, confira [Certificados de chave pública X.509](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates). Para obter mais informações sobre Declarações e Autorização no WCF, confira [Gerenciando declarações e autorização com o modelo de identidade](managing-claims-and-authorization-with-the-identity-model.md). Para obter mais informações sobre como implementar uma PKI, consulte [Enterprise PKI com Windows Server 2012 R2 Active Directory Certificate Services](https://docs.microsoft.com/archive/blogs/yungchou/enterprise-pki-with-windows-server-2012-r2-active-directory-certificate-services-part-1-of-2).
 
 A função principal de um certificado é autenticar a identidade do proprietário do certificado para outras pessoas. Um certificado contém a *chave pública* do proprietário, enquanto o proprietário retém a chave privada. A chave pública pode ser usada para criptografar as mensagens enviadas para o proprietário do certificado. Somente o proprietário tem acesso à chave privada; portanto, somente o proprietário pode descriptografar essas mensagens.
 
@@ -72,7 +72,7 @@ Os certificados digitais são usados para autenticar uma entidade confiando ness
 
 Ao criar um novo serviço, você pode usar um certificado que não seja emitido por um certificado raiz confiável ou o próprio certificado de emissão pode não estar no repositório das Autoridades de Certificação Confiáveis. Somente para a finalidade de desenvolvimento, você pode desativar temporariamente o mecanismo que verifica a cadeia de confiança para um certificado. Para fazer isso, defina a propriedade `CertificateValidationMode` para `PeerTrust` ou `PeerOrChainTrust`. Qualquer um dos modos especifica que o certificado pode ser emitido por conta própria (confiança de par) ou parte de uma cadeia de confiança. Você pode definir a propriedade em qualquer uma das seguintes classes.
 
-|Classe|Propriedade|
+|Classe|propriedade|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -188,7 +188,7 @@ Ao usar o .NET Framework 3,5 ou versões posteriores, o WCF garante que o certif
 
 Na primeira versão do WCF, o mapeamento é feito sem consulta à política de domínio. Portanto, é possível que aplicativos mais antigos que funcionavam ao serem executados na primeira versão falhem se o mapeamento for habilitado e o certificado X.509 não atender a política de domínio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>

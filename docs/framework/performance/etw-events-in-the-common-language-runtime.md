@@ -6,17 +6,17 @@ helpviewer_keywords:
 - ETW, common language runtime
 - ETW, CLR events
 ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
-ms.openlocfilehash: 99fa331a1ad94e85b4a501449b7700d60d8c6f70
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 49d1141540fb00ab7ef462da5af84f02e6d9fc4d
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716117"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937865"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>Eventos ETW no Common Language Runtime
 O CLR (Common Language Runtime) fornece informações úteis de diagnóstico ETW (rastreamento de eventos para Windows) por meio de uma grande variedade de eventos de depuração e criação de perfil. Os eventos CLR ETW aproveitam o sistema de rastreamento ETW do Windows para ampliar o suporte existente de depuração e criação de perfil fornecido pelo Common Language Runtime.  
   
- Mais informações sobre o ETW estão disponíveis no artigo [melhorar a depuração e o ajuste de desempenho com o ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) . Informações sobre o XPerf podem ser encontradas na entrada [Windows Performance Toolkit – XPerf](https://blogs.msdn.microsoft.com/ntdebugging/2008/04/03/windows-performance-toolkit-xperf/) no blog NTDebugging.  
+ Mais informações sobre o ETW estão disponíveis no artigo [melhorar a depuração e o ajuste de desempenho com o ETW](https://docs.microsoft.com/archive/msdn-magazine/2007/april/event-tracing-improve-debugging-and-performance-tuning-with-etw) . Informações sobre o XPerf podem ser encontradas na entrada [Windows Performance Toolkit – XPerf](https://docs.microsoft.com/archive/blogs/ntdebugging/windows-performance-toolkit-xperf) no blog NTDebugging.  
   
  O .NET Framework 4 ou posterior é necessário para todos os eventos descritos nos tópicos de evento. O sistema operacional Windows Vista é o cliente com suporte mínimo e o Windows Server 2008 é o servidor com suporte mínimo.  
   
