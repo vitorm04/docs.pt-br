@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: f435c149f7ec2768ee6c954c1f0ae12a95cc326f
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 465dbb9120e6e81e5ef216c34dc6a92283956033
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937534"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964667"
 ---
 # <a name="constructors-c-programming-guide"></a>Construtores (Guia de Programação em C#)
 
@@ -19,7 +19,7 @@ Sempre que uma [classe](../../language-reference/keywords/class.md) ou [struct](
 
 ## <a name="parameterless-constructors"></a>Construtores sem parâmetros
   
-Se um construtor não for fornecido para a classe, o C# criará por padrão um construtor que instancia o objeto e define variáveis de membro para os valores padrão, conforme listado na [Tabela de Valores Padrão](../../language-reference/keywords/default-values-table.md). Se você não fornecer um construtor para o struct, o C# dependerá de um *construtor sem parâmetro implícito* para inicializar automaticamente a cada campo de um tipo de valor para o valor padrão conforme listado na [Tabela de Valores Padrão](../../language-reference/keywords/default-values-table.md). Para obter mais informações e exemplos, consulte [Construtores de Instância](./instance-constructors.md).  
+Se você não fornecer um construtor para sua classe, C# o criará um por padrão que instancia o objeto e define as variáveis de membro para os valores padrão, conforme listado no artigo [valores padrão de C# tipos](../../language-reference/builtin-types/default-values.md) . Se você não fornecer um construtor para sua estrutura, C# o dependerá de um *Construtor implícito sem parâmetros* para inicializar automaticamente cada campo com seu valor padrão. Para obter mais informações e exemplos, consulte [construtores de instância](instance-constructors.md).  
 
 ## <a name="constructor-syntax"></a>Sintaxe do construtor
 
@@ -33,13 +33,13 @@ Se um construtor puder ser implementado como uma única instrução, você poder
 
 ## <a name="static-constructors"></a>Construtores estáticos
 
-Os exemplos anteriores têm todos os construtores de instância mostrado, que criam um novo objeto. Uma classe ou struct também pode ter um construtor estático, que inicializa membros estáticos do tipo.  Construtores estáticos não têm parâmetros. Se você não fornecer um construtor estático para inicializar campos estáticos, o compilador C# inicializará campos estáticos com seu valor padrão, conforme listado na [Tabela de Valores Padrão](../../language-reference/keywords/default-values-table.md).
+Os exemplos anteriores têm todos os construtores de instância mostrado, que criam um novo objeto. Uma classe ou struct também pode ter um construtor estático, que inicializa membros estáticos do tipo.  Construtores estáticos não têm parâmetros. Se você não fornecer um construtor estático para inicializar campos estáticos, C# o compilador inicializará campos estáticos para seu valor padrão, conforme listado no artigo [valores padrão de C# tipos](../../language-reference/builtin-types/default-values.md) .
 
 O exemplo a seguir usa um construtor estático para inicializar um campo estático.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#2)]  
 
-Você também pode definir um construtor estático com uma definição de corpo da expressão, como mostra o exemplo a seguir. 
+Você também pode definir um construtor estático com uma definição de corpo da expressão, como mostra o exemplo a seguir.
 
 [!code-csharp[constructors](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/constructors1.cs#3)]  
 

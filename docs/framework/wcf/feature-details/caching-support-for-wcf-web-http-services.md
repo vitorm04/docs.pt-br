@@ -2,15 +2,16 @@
 title: Cache com suporte para serviços HTTP Web do WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: 7c60deab635c29785398a1b50f9cf14c0f688420
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: 5964c58ce28f67815774741815bba0fcbe3b2de7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74141781"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964230"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Cache com suporte para serviços HTTP Web do WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] permite que você use o mecanismo de cache declarativo já disponível em ASP.NET em seus serviços HTTP Web WCF. Isso permite que você armazene em cache as respostas de suas operações de serviço HTTP Web do WCF. Quando um usuário envia um HTTP GET para seu serviço configurado para caching, o ASP.NET envia de volta a resposta armazenada em cache e o método de serviço não é chamado. Quando o cache expira, na próxima vez que um usuário envia um HTTP GET, seu método de serviço é chamado e a resposta é armazenada novamente em cache. Para obter mais informações sobre o cache ASP.NET, consulte [visão geral do cache de ASP.net](https://go.microsoft.com/fwlink/?LinkId=152534)  
+
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] permite que você use o mecanismo de cache declarativo já disponível em ASP.NET em seus serviços HTTP Web WCF. Isso permite que você armazene em cache as respostas de suas operações de serviço HTTP Web do WCF. Quando um usuário envia um HTTP GET para seu serviço configurado para caching, o ASP.NET envia de volta a resposta armazenada em cache e o método de serviço não é chamado. Quando o cache expira, na próxima vez que um usuário envia um HTTP GET, seu método de serviço é chamado e a resposta é armazenada novamente em cache. Para obter mais informações sobre o cache ASP.NET, consulte [visão geral do cache de ASP.net](https://docs.microsoft.com/previous-versions/aspnet/ms178597(v=vs.100)).  
   
 ## <a name="basic-web-http-service-caching"></a>Cache de serviço HTTP básico da Web  
  Para habilitar o Caching de serviço HTTP WEB, primeiro você deve habilitar a compatibilidade ASP.NET aplicando o <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> à configuração de serviço <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> a <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> ou <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
@@ -122,10 +123,10 @@ public class Service
  Aqui, a duração do cache é definida como 60 segundos, `varyByParam` é definido como nenhum e `sqlDependency` é definido como uma lista delimitada por ponto e vírgula de pares de nome de banco de dados/tabela separados por dois-pontos. Quando os dados em `MyTable` são alterados, a resposta armazenada em cache para a operação de serviço é removida e quando a operação é invocada, uma nova resposta é gerada (chamando a operação de serviço), armazenada em cache e retornada ao cliente.  
   
 > [!IMPORTANT]
-> Para que o ASP.NET acesse um banco de dados SQL, você deve usar a [ferramenta de registro do ASP.NET SQL Server](https://go.microsoft.com/fwlink/?LinkId=152536). Além disso, você deve permitir o acesso apropriado à conta de usuário ao banco de dados e à tabela. Para obter mais informações, consulte [Acessando SQL Server de um aplicativo Web](https://go.microsoft.com/fwlink/?LinkId=178988).  
+> Para que o ASP.NET acesse um banco de dados SQL, você deve usar a [ferramenta de registro do ASP.NET SQL Server](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229862(v=vs.90)). Além disso, você deve permitir o acesso apropriado à conta de usuário ao banco de dados e à tabela. Para obter mais informações, consulte [Acessando SQL Server de um aplicativo Web](https://docs.microsoft.com/previous-versions/aspnet/ht43wsex(v=vs.100)).  
   
 ## <a name="conditional-http-get-based-caching"></a>Cache baseado em HTTP GET condicional  
- Em cenários de HTTP da Web, uma GET HTTP condicional é frequentemente usada pelos serviços para implementar o cache HTTP inteligente, conforme descrito na [especificação http](https://go.microsoft.com/fwlink/?LinkId=165800). Para fazer isso, o serviço deve definir o valor do cabeçalho ETag na resposta HTTP. Ele também deve verificar o cabeçalho If-None-Match na solicitação HTTP para ver se qualquer ETag especificado corresponde ao ETag atual.  
+ Em cenários de HTTP da Web, uma GET HTTP condicional é frequentemente usada pelos serviços para implementar o cache HTTP inteligente, conforme descrito na [especificação http](https://www.w3.org/Protocols/rfc2616/rfc2616.html). Para fazer isso, o serviço deve definir o valor do cabeçalho ETag na resposta HTTP. Ele também deve verificar o cabeçalho If-None-Match na solicitação HTTP para ver se qualquer ETag especificado corresponde ao ETag atual.  
   
  Para solicitações GET e HEAD, <xref:System.ServiceModel.Web.IncomingWebRequestContext.CheckConditionalRetrieve%2A> usa um valor ETag e o verifica em relação ao cabeçalho If-None-Match da solicitação. Se o cabeçalho estiver presente e houver uma correspondência, um <xref:System.ServiceModel.Web.WebFaultException> com um código de status HTTP 304 (não modificado) será gerado e um cabeçalho ETag será adicionado à resposta com o ETag correspondente.  
   
@@ -162,5 +163,5 @@ public Customer GetCustomer(string id)
 }
 ```  
   
-## <a name="security-considerations"></a>Considerações sobre segurança  
+## <a name="security-considerations"></a>considerações sobre segurança  
  As solicitações que exigem autorização não devem ter suas respostas armazenadas em cache, pois a autorização não é executada quando a resposta é servida do cache.  Armazenar essas respostas em cache introduziria uma séria vulnerabilidade de segurança.  Normalmente, as solicitações que exigem autorização fornecem dados específicos do usuário e, portanto, o armazenamento em cache do lado do servidor não é ainda benéfico.  Nessas situações, o armazenamento em cache do lado do cliente ou simplesmente não o armazenamento em cache será mais apropriado.

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0a7be97ec157638db3eb2d656fe263b37b8d676c
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: e71664b4361ba28a50b29499585b20a8adbaefd2
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837409"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964461"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Como instalar e configurar componentes de ativação do WCF
 
@@ -101,9 +101,9 @@ Depois de instalar e configurar o WAS, consulte [como hospedar um serviço WCF n
     > [!NOTE]
     > Esse comando é uma única linha de texto.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [Ativação de MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [NamedPipe Activation](../../../../docs/framework/wcf/samples/namedpipe-activation.md)
-- [Recursos de hospedagem do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

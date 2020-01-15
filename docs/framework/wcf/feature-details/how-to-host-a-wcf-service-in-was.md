@@ -1,25 +1,25 @@
 ---
-title: 'Como: hospedar um serviço WCF no WAS'
+title: Como hospedar um serviço do WCF em WAS
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
-ms.openlocfilehash: b6d3ace054260de1ca649fbf4bd54156bbea24ce
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9945e398bbd33776cce808b44388a4415da297a1
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972215"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964780"
 ---
-# <a name="how-to-host-a-wcf-service-in-was"></a>Como: hospedar um serviço WCF no WAS
+# <a name="how-to-host-a-wcf-service-in-was"></a>Como hospedar um serviço do WCF em WAS
 Este tópico descreve as etapas básicas necessárias para criar um serviço do Windows Process Activation Services (também conhecido como WAS) hospedado Windows Communication Foundation (WCF). O WAS é o novo serviço de ativação de processos que é uma generalização dos recursos de Serviços de Informações da Internet (IIS) que funciona com protocolos de transporte não HTTP. O WCF usa a interface do adaptador de escuta para comunicar as solicitações de ativação recebidas nos protocolos não HTTP com suporte do WCF, como TCP, pipes nomeados e enfileiramento de mensagens.  
   
- Essa opção de hospedagem requer que os componentes WAS de ativação sejam instalados e configurados corretamente, mas não exige que nenhum código de hospedagem seja gravado como parte do aplicativo. Para obter mais informações sobre como instalar e configurar o [was, consulte Como: Instale e configure os componentes](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)de ativação do WCF.  
+ Essa opção de hospedagem requer que os componentes WAS de ativação sejam instalados e configurados corretamente, mas não exige que nenhum código de hospedagem seja gravado como parte do aplicativo. Para obter mais informações sobre como instalar e configurar o WAS, consulte [como instalar e configurar componentes de ativação do WCF](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md).  
   
 > [!WARNING]
 > A ativação do WAS não terá suporte se o pipeline de processamento de solicitação do servidor Web estiver definido para o modo clássico. O pipeline de processamento de solicitações do servidor Web deverá ser definido como modo integrado se a ativação do WAS for usada.  
   
- Quando um serviço WCF é hospedado no WAS, as associações padrão são usadas da maneira usual. No entanto, ao <xref:System.ServiceModel.NetTcpBinding> usar o <xref:System.ServiceModel.NetNamedPipeBinding> e o para configurar um serviço was hospedado, uma restrição deve ser satisfeita. Quando pontos de extremidade diferentes usam o mesmo transporte, as configurações de associação precisam corresponder às sete Propriedades a seguir:  
+ Quando um serviço WCF é hospedado no WAS, as associações padrão são usadas da maneira usual. No entanto, ao usar o <xref:System.ServiceModel.NetTcpBinding> e o <xref:System.ServiceModel.NetNamedPipeBinding> para configurar um serviço WAS hospedado, uma restrição deve ser satisfeita. Quando pontos de extremidade diferentes usam o mesmo transporte, as configurações de associação precisam corresponder às sete Propriedades a seguir:  
   
-- ConnectionBufferSize  
+- connectionBufferSize  
   
 - ChannelInitializationTimeout  
   
@@ -33,7 +33,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
 - ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
- Caso contrário, o ponto de extremidade que é inicializado primeiro sempre determina os valores dessas propriedades, e os pontos de extremidade <xref:System.ServiceModel.ServiceActivationException> adicionados posteriormente lançam um se não corresponderem a essas configurações.  
+ Caso contrário, o ponto de extremidade que é inicializado primeiro sempre determina os valores dessas propriedades, e os pontos de extremidade adicionados posteriormente geram um <xref:System.ServiceModel.ServiceActivationException> se eles não corresponderem a essas configurações.  
   
  Para a cópia de origem deste exemplo, consulte [ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md).  
   
@@ -47,7 +47,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
      [!code-csharp[C_HowTo_HostInWAS#1122](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/service.cs#1122)]  
   
-3. Crie um arquivo Web. config para definir a <xref:System.ServiceModel.NetTcpBinding> associação a ser usada pelos pontos `CalculatorService` de extremidade.  
+3. Crie um arquivo Web. config para definir a associação de <xref:System.ServiceModel.NetTcpBinding> a ser usada pelos pontos de extremidade de `CalculatorService`.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -80,7 +80,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>
     ```  
   
-2. O cliente gerado contém a `ICalculator` interface que define o contrato de serviço que a implementação do cliente deve satisfazer.  
+2. O cliente gerado contém a interface `ICalculator` que define o contrato de serviço que a implementação do cliente deve satisfazer.  
   
      [!code-csharp[C_HowTo_HostInWAS#1221](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinwas/cs/client.cs#1221)]  
   
@@ -98,7 +98,7 @@ Este tópico descreve as etapas básicas necessárias para criar um serviço do 
   
 6. Compile e execute o cliente.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Ativação TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)
-- [Recursos de hospedagem do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

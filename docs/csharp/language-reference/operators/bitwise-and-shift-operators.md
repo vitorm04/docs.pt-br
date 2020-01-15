@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 4e4dbe085b11751416f69c9fa7f790f18a68f5d7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345335"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964368"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operadores bit a bit e de deslocamento (referência do C#)
 
@@ -60,7 +60,7 @@ Você também pode usar o símbolo `~` para declarar finalizadores. Para mais in
 
 ## <a name="left-shift-operator-"></a>Operador de deslocamento à esquerda \<\<
 
-O operador `<<` desloca para esquerda o operando à esquerda pelo número de bits definido pelo seu operando à direita.
+O operador `<<` muda seu operando esquerdo para a esquerda pelo [número de bits definido pelo seu operando à direita](#shift-count-of-the-shift-operators).
 
 A operação de deslocamento à esquerda descarta os bits de ordem superior que estão fora do intervalo do tipo de resultado e define as posições de bits vazios de ordem inferior como zero, como mostra o exemplo a seguir:
 
@@ -74,7 +74,7 @@ Para saber mais sobre como o operando à direita do operador `<<` define a conta
 
 ## <a name="right-shift-operator-"></a>Operador de deslocamento à direita >>
 
-O operador `>>` desloca para direita o operando à esquerda pelo número de bits definido pelo seu operando à direita.
+O operador `>>` muda seu operando da esquerda para a direita pelo [número de bits definidos pelo seu operando à direita](#shift-count-of-the-shift-operators).
 
 A operação de deslocamento à direita descarta os bits de ordem inferior, como mostra o exemplo a seguir:
 
@@ -170,6 +170,9 @@ O exemplo a seguir demonstra esse comportamento:
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
+> [!NOTE]
+> Como mostra o exemplo anterior, o resultado de uma operação de deslocamento pode ser diferente de zero, mesmo se o valor do operando à direita for maior que o número de bits no operando à esquerda.
+
 ## <a name="enumeration-logical-operators"></a>Operadores lógicos de enumeração
 
 Os operadores `~`, `&`, `|`e `^` também têm suporte de qualquer tipo de [Enumeração](../builtin-types/enum.md) . Para operandos do mesmo tipo de enumeração, uma operação lógica é executada nos valores correspondentes do tipo integral subjacente. Por exemplo, para qualquer `x` e `y` de um tipo de enumeração `T` com um tipo subjacente `U`, a expressão `x & y` produz o mesmo resultado que a expressão `(T)((U)x & (U)y)`.
@@ -182,7 +185,7 @@ Um tipo definido pelo usuário pode [sobrecarregar](operator-overloading.md) os 
 
 Se um tipo definido pelo usuário `T` sobrecarregar o operador `<<` ou `>>`, o tipo do operando à esquerda deverá ser `T` e o tipo do operando à direita deverá ser `int`.
 
-## <a name="c-language-specification"></a>especificação da linguagem C#
+## <a name="c-language-specification"></a>Especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 

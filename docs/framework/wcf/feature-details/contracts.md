@@ -6,24 +6,24 @@ helpviewer_keywords:
 - contracts [WCF]
 - Windows Communication Foundation [WCF], contracts
 ms.assetid: c8364183-4ac1-480b-804a-c5e6c59a5d7d
-ms.openlocfilehash: 839f7790a5dd300313931672c60e7826af39aeea
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b94feaf0a45edd87b4da25f4969a27136e4fd29
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651099"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964392"
 ---
 # <a name="contracts"></a>Contratos
-Esta seção mostra como definir e implementar contratos do Windows Communication Foundation (WCF). Um contrato de serviço Especifica o que um ponto de extremidade comunica ao mundo externo. Em um nível mais concreto, é uma afirmação sobre um conjunto de mensagens específicas, organizados em padrões de troca de mensagens básicas (MEPs), como solicitação/resposta, unidirecional e duplex. Se um contrato de serviço é um conjunto de trocas de mensagens relacionadas logicamente, uma operação de serviço é uma troca de mensagens única. Por exemplo, um `Hello` operação obviamente deve aceitar uma mensagem (de modo que o chamador pode anunciar a saudação) e podem ou não pode retornar uma mensagem (dependendo de cortesia da operação).  
+Esta seção mostra como definir e implementar contratos de Windows Communication Foundation (WCF). Um contrato de serviço especifica o que um ponto de extremidade se comunica com o mundo exterior. Em um nível mais concreto, trata-se de uma declaração sobre um conjunto de mensagens específicas organizadas em padrões de troca de mensagens básicos (MEPs), como solicitação/resposta, unidirecional e duplex. Se um contrato de serviço for um conjunto de trocas de mensagens logicamente relacionado, uma operação de serviço será uma única troca de mensagens. Por exemplo, uma operação de `Hello` deve, obviamente, aceitar uma mensagem (para que o chamador possa anunciar a saudação) e pode ou não retornar uma mensagem (dependendo da cortesia da operação).  
   
- Para obter mais informações sobre contratos e outros conceitos de WCF, consulte [conceitos fundamentais do Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md). Este tópico enfoca a compreensão de contratos de serviço. Para obter mais informações sobre como criar os clientes que usam os contratos de serviço para se conectar aos serviços, consulte [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Para obter mais informações sobre os canais de cliente, a arquitetura do cliente e outros problemas de cliente, consulte [clientes](../../../../docs/framework/wcf/feature-details/clients.md).  
+ Para obter mais informações sobre contratos e outros conceitos principais do WCF, consulte [conceitos fundamentais de Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md). Este tópico se concentra na compreensão dos contratos de serviço. Para obter mais informações sobre como criar clientes que usam contratos de serviço para se conectar a serviços, consulte [visão geral do cliente WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Para obter mais informações sobre canais de cliente, a arquitetura de cliente e outros problemas de cliente, consulte [clientes](../../../../docs/framework/wcf/feature-details/clients.md).  
   
-## <a name="overview"></a>Visão geral  
- Este tópico fornece uma orientação conceitual de alto nível para projetar e implementar serviços WCF. Subtópicos fornecem que informações mais detalhadas sobre as especificações de design e implementação. Antes de criar e implementar seu aplicativo do WCF, é recomendável que você:  
+## <a name="overview"></a>{1&gt;Visão Geral&lt;1}  
+ Este tópico fornece uma orientação conceitual de alto nível para projetar e implementar serviços WCF. Os subtópicos fornecem informações mais detalhadas sobre as especificidades de design e implementação. Antes de projetar e implementar seu aplicativo WCF, é recomendável que você:  
   
-- Entender é que um contrato de serviço, como ele funciona e como criá-lo.  
+- Entenda o que é um contrato de serviço, como ele funciona e como criar um.  
   
-- Entender o que os contratos de estado requisitos mínimos não pode dar suporte a essa configuração de tempo de execução ou o ambiente de hospedagem.  
+- Entenda que os contratos atendem aos requisitos mínimos de que a configuração em tempo de execução ou o ambiente de hospedagem pode não dar suporte.  
   
 ## <a name="service-contracts"></a>Contratos de serviço  
  Um contrato de serviço é uma instrução que fornece informações sobre:  
@@ -36,37 +36,37 @@ Esta seção mostra como definir e implementar contratos do Windows Communicatio
   
 - O local das operações.  
   
-- Os protocolos específicos e formatos de serialização que são usados para dar suporte à comunicação bem-sucedida com o serviço.  
+- Os protocolos específicos e os formatos de serialização usados para dar suporte à comunicação bem-sucedida com o serviço.  
   
- Por exemplo, um contrato de ordem de compra pode ter um `CreateOrder` tipos de operação que aceita uma entrada de informações do pedido e retorna informações de êxito ou falha, incluindo um identificador do pedido. Ele também pode ter um `GetOrderStatus` operação que aceita um identificador do pedido e retorna informações de status do pedido. Um contrato de serviço desse tipo deve especificar:  
+ Por exemplo, um contrato de ordem de compra pode ter uma operação `CreateOrder` que aceita uma entrada de tipos de informações de pedidos e retorna informações de êxito ou falha, incluindo um identificador de pedido. Ele também pode ter uma operação `GetOrderStatus` que aceita um identificador de pedido e retorna informações de status do pedido. Um contrato de serviço dessa classificação especificaria:  
   
-- Se o contrato de ordem de compra consistiu `CreateOrder` e `GetOrderStatus` operações.  
+- O contrato de ordem de compra consistiu em operações de `CreateOrder` e `GetOrderStatus`.  
   
-- Que especificou as operações de mensagens de entrada e as mensagens de saída.  
+- Se as operações especificaram mensagens de entrada e mensagens de saída.  
   
-- Os dados que podem ser executadas por essas mensagens.  
+- Os dados que essas mensagens podem transportar.  
   
-- Categóricas instruções sobre a infraestrutura de comunicação necessária para processar com êxito as mensagens. Por exemplo, esses detalhes incluem se e que formas de segurança são necessárias para estabelecer a comunicação bem-sucedida.  
+- Instruções categóricas sobre a infraestrutura de comunicação necessária para processar as mensagens com êxito. Por exemplo, esses detalhes incluem se e quais formas de segurança são necessárias para estabelecer uma comunicação bem-sucedida.  
   
- Para transmitir esse tipo de informação para aplicativos em outras plataformas (incluindo plataformas de não-Microsoft), os contratos de serviço XML são publicamente expressas em formatos XML padrão, como [descrição linguagem WSDL (Web Services)](https://go.microsoft.com/fwlink/?LinkId=87004) e [esquema XML (XSD)](https://go.microsoft.com/fwlink/?LinkId=87005), entre outros. Os desenvolvedores para várias plataformas podem usar essas informações de contrato público para criar aplicativos que podem se comunicar com o serviço, pois eles entendem o idioma da especificação e como essas linguagens são projetadas para habilitar a interoperação descrevendo o públicos formulários, formatos e protocolos que o serviço oferece suporte. Para obter mais informações sobre como o WCF trata esse tipo de informação, consulte [metadados](../../../../docs/framework/wcf/feature-details/metadata.md).  
+ Para transmitir esse tipo de informação a aplicativos em outras plataformas (incluindo plataformas não Microsoft), os contratos de serviço XML são publicamente expressos em formatos XML padrão, como [WSDL (Web Services Description Language)](https://www.w3.org/TR/2001/NOTE-wsdl-20010315) e [XSD (XML Schema)](https://www.w3.org/XML/Schema), entre outros. Os desenvolvedores de várias plataformas podem usar essas informações de contrato público para criar aplicativos que podem se comunicar com o serviço, ambos porque entendem o idioma da especificação e porque esses idiomas foram projetados para permitir interoperação descrevendo os formulários públicos, os formatos e os protocolos aos quais o serviço dá suporte. Para obter mais informações sobre como o WCF lida com esse tipo de informação, consulte [metadados](../../../../docs/framework/wcf/feature-details/metadata.md).  
   
- Contratos podem ser expressos muitas maneiras, no entanto, e embora WSDL e XSD são excelentes linguagens para descrever serviços de forma acessível, elas são difíceis de idiomas a serem usados diretamente — em qualquer caso, eles são meramente descrições de um contrato de serviço, o service não implementações. Portanto, os aplicativos do WCF usarem atributos gerenciados, interfaces e classes para definir a estrutura de e para implementar um serviço.  
+ Os contratos podem ser expressos de várias maneiras, no entanto, enquanto WSDL e XSD são excelentes linguagens para descrever os serviços de forma acessível, eles são linguagens difíceis de usar diretamente — em qualquer caso, são meramente descrições de um serviço, não contrato de serviço implementações. Portanto, os aplicativos WCF usam atributos, interfaces e classes gerenciados para definir a estrutura de e para implementar um serviço.  
   
- O contrato resultante definido em tipos gerenciados pode ser convertido (também chamado de *exportados*) como metadados — WSDL e XSD — quando necessário, os clientes ou outros implementadores de serviço, especialmente em outras plataformas. O resultado é um modelo de programação simples que pode ser descrito usando metadados públicos para qualquer aplicativo cliente. Os detalhes das mensagens SOAP subjacentes, como o transporte e informações relacionadas à segurança, podem ser mantidos no WCF, que executa automaticamente as conversões necessárias para e do sistema de tipo de contrato de serviço para o sistema de tipo XML.  
+ O contrato resultante definido em tipos gerenciados pode ser convertido (também chamado de *exportado*) como metadados — WSDL e XSD — quando necessário para clientes ou outros implementadores de serviço, especialmente em outras plataformas. O resultado é um modelo de programação simples que pode ser descrito usando metadados públicos para qualquer aplicativo cliente. Os detalhes das mensagens SOAP subjacentes, como as informações relacionadas ao transporte e à segurança, podem ser deixados para o WCF, que executa automaticamente as conversões necessárias de e para o sistema de tipo de contrato de serviço para o sistema de tipos XML.  
   
- Para obter mais informações sobre a criação de contratos, consulte [Criando contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md). Para obter mais informações sobre como implementar contratos, consulte [implementar contratos de serviço](../../../../docs/framework/wcf/implementing-service-contracts.md).  
+ Para obter mais informações sobre como criar contratos, consulte [projetando contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md). Para obter mais informações sobre como implementar contratos, consulte [implementando contratos de serviço](../../../../docs/framework/wcf/implementing-service-contracts.md).  
   
- Além disso, o WCF também fornece a capacidade de desenvolver os contratos de serviço inteiramente no nível da mensagem. Para obter mais informações sobre o desenvolvimento de contratos de serviço no nível da mensagem, consulte [contratos de mensagem usando](../../../../docs/framework/wcf/feature-details/using-message-contracts.md). Para obter mais informações sobre o desenvolvimento de serviços em XML não SOAP, consulte [interoperabilidade com aplicativos de POX](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
+ Além disso, o WCF também fornece a capacidade de desenvolver contratos de serviço inteiramente no nível da mensagem. Para obter mais informações sobre como desenvolver contratos de serviço no nível da mensagem, consulte [usando contratos de mensagem](../../../../docs/framework/wcf/feature-details/using-message-contracts.md). Para obter mais informações sobre como desenvolver serviços em XML não SOAP, consulte [interoperabilidade com aplicativos Pox](../../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   
 ### <a name="understanding-the-hierarchy-of-requirements"></a>Noções básicas sobre a hierarquia de requisitos  
- Um contrato de serviço agrupa as operações; Especifica MEP, tipos de mensagem, e a realização dessas mensagens; tipos de dados e indica as categorias de comportamento de tempo de execução, uma implementação deve ter para o contrato de suporte (por exemplo, ele pode exigir que as mensagens de ser criptografadas e assinadas). No entanto, o contrato de serviço em si, não especifica exatamente como esses requisitos forem atendidos, é só isso, eles devem ser. O tipo de criptografia ou como uma mensagem for assinada é até a implementação e configuração de um serviço em conformidade.  
+ Um contrato de serviço agrupa as operações; Especifica o MEP, os tipos de mensagem e os tipos de dados que essas mensagens transportam; e indica categorias de comportamento de tempo de execução que uma implementação deve ter para dar suporte ao contrato (por exemplo, pode exigir que as mensagens sejam criptografadas e assinadas). O próprio contrato de serviço, no entanto, não especifica precisamente como esses requisitos são atendidos, apenas que eles devem ser. O tipo de criptografia ou como uma mensagem é assinada é a implementação e a configuração de um serviço em conformidade.  
   
- Observe a maneira que o contrato requer certas coisas da implementação do contrato de serviço e a configuração de tempo de execução para Adicionar comportamento. O conjunto de requisitos que devem ser atendidos para expor um serviço para uso se baseia o conjunto anterior de requisitos. Se um contrato de tornar os requisitos da implementação, uma implementação pode exigir ainda mais da configuração e as associações que permitem que o serviço seja executado. Por fim, o aplicativo host deve também dão suporte a todos os requisitos que adicionar a configuração de serviço e associações.  
+ Observe a maneira como o contrato requer determinadas coisas da implementação do contrato de serviço e a configuração de tempo de execução para adicionar o comportamento. O conjunto de requisitos que devem ser atendidos para expor um serviço para uso se baseia no conjunto de requisitos anterior. Se um contrato fizer requisitos da implementação, uma implementação poderá exigir ainda mais a configuração e as associações que permitem a execução do serviço. Por fim, o aplicativo host também deve oferecer suporte a todos os requisitos que a configuração de serviço e as associações adicionam.  
   
- Esse processo aditivas requisito é importante ter em mente ao projetar, implementar, configurando e hospedando seu aplicativo de serviço do Windows Communication Foundation (WCF). Por exemplo, o contrato pode especificar que ele precisa dar suporte a uma sessão. Nesse caso, em seguida, você deve configurar a associação para dar suporte a esse requisito contratual ou a implementação do serviço não funcionará. Ou, se seu serviço requer autenticação do Windows integrada e está hospedado no Internet Information Services (IIS), o aplicativo Web no qual reside o serviço deve ter autenticação Windows integrada ativada e suporte anônimo desativado. Para obter mais informações sobre os recursos e o impacto dos tipos de aplicativos de host de serviço diferentes, consulte [hospedagem](../../../../docs/framework/wcf/feature-details/hosting.md).  
+ Esse processo de requisito aditivo é importante para ter em mente ao projetar, implementar, configurar e hospedar seu aplicativo de serviço de Windows Communication Foundation (WCF). Por exemplo, o contrato pode especificar que ele precisa oferecer suporte a uma sessão. Nesse caso, você deve configurar a associação para dar suporte a esse requisito contratual ou a implementação do serviço não funcionará. Ou, se o serviço exigir autenticação integrada do Windows e estiver hospedado no Serviços de Informações da Internet (IIS), o aplicativo Web no qual o serviço reside deve ter a autenticação integrada do Windows ativada e o suporte anônimo desativado. Para obter mais informações sobre os recursos e o impacto dos diferentes tipos de aplicativo de host de serviço, consulte [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Pontos de extremidade: Endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [Pontos de extremidade: endereços, associações e contratos](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [Criando contratos de serviço](../../../../docs/framework/wcf/designing-service-contracts.md)
 - [Implementando contratos de serviço](../../../../docs/framework/wcf/implementing-service-contracts.md)

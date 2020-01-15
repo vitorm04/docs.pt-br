@@ -5,12 +5,12 @@ helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: ee3cc30334154ef8aae6d7d26286463c537ff3dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 621b8ca7510b0b9916c9c46f201ff77402c3c655
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714808"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964720"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Construtores de instâncias (Guia de Programação em C#)
 
@@ -31,7 +31,7 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
   
  [!code-csharp[csProgGuideObjects#77](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#77)]  
   
- Se uma classe não tiver um construtor, um construtor sem parâmetros será gerado automaticamente e os valores padrão serão usados para inicializar os campos de objeto. Por exemplo, um [int](../../language-reference/builtin-types/integral-numeric-types.md) é inicializada como 0. Para obter mais informações sobre valores padrão, consulte [Tabela de valores padrão](../../language-reference/keywords/default-values-table.md). Portanto, como construtor sem parâmetros da classe `Coords` inicializa todos os membros de dados como zero, ele pode ser totalmente removido sem alterar a maneira como a classe funciona. Um exemplo completo que usa vários construtores é fornecido no Exemplo 1 posteriormente neste tópico e um exemplo de um construtor gerado automaticamente é fornecido no Exemplo 2.  
+ Se uma classe não tiver um construtor, um construtor sem parâmetros será gerado automaticamente e os valores padrão serão usados para inicializar os campos de objeto. Por exemplo, um [int](../../language-reference/builtin-types/integral-numeric-types.md) é inicializada como 0. Para obter informações sobre os valores padrão de tipo, consulte [valores C# padrão de tipos](../../language-reference/builtin-types/default-values.md). Portanto, como construtor sem parâmetros da classe `Coords` inicializa todos os membros de dados como zero, ele pode ser totalmente removido sem alterar a maneira como a classe funciona. Um exemplo completo que usa vários construtores é fornecido no Exemplo 1 posteriormente neste tópico e um exemplo de um construtor gerado automaticamente é fornecido no Exemplo 2.  
   
  Construtores de instância também podem ser usados para chamar os construtores de instância de classes base. O construtor de classe pode invocar o construtor da classe base por meio do inicializador, da seguinte maneira:  
   
@@ -49,7 +49,7 @@ Os construtores de instância são usados para criar e inicializar quaisquer var
   
  [!code-csharp[csProgGuideObjects#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#8)]  
   
- Observe que o valor padrão de `age` é `0` e o valor padrão de `name` é `null`. Para obter mais informações sobre valores padrão, consulte [Tabela de valores padrão](../../language-reference/keywords/default-values-table.md).  
+ Observe que o valor padrão de `age` é `0` e o valor padrão de `name` é `null`.
   
 ## <a name="example-3"></a>Exemplo 3:  
  O exemplo a seguir demonstra como usar o inicializador de classe base. A classe `Circle` é derivada da classe geral `Shape` e a classe `Cylinder` é derivada da classe `Circle`. O construtor em cada classe derivada está usando seu inicializador de classe base.  

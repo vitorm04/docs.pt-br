@@ -4,12 +4,12 @@ description: Saiba mais C# sobre os tipos de valor anulável e como usá-los
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 661b5e8502cba42588a07d757f056c715c1c82e8
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936895"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964321"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valores anuláveis (C# referência)
 
@@ -56,7 +56,7 @@ Se você quiser atribuir um valor de tipo de valor anulável a uma variável de 
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-Se você quiser usar o valor [padrão](../keywords/default-values-table.md) do tipo de valor subjacente no lugar de `null`, use o método <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
+Se você quiser usar o valor [padrão](default-values.md) do tipo de valor subjacente no lugar de `null`, use o método <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>.
 
 Você também pode converter explicitamente um tipo de valor anulável para um tipo não anulável, como mostra o exemplo a seguir:
 

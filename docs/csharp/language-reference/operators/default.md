@@ -4,16 +4,16 @@ description: Usar o operador padrão para produzir o valor padrão de um tipo
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712709"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964615"
 ---
 # <a name="default-operator-c-reference"></a>operador padrão (referência do C#)
 
-O operador `default` produz o [valor padrão](../keywords/default-values-table.md) de um tipo. O argumento para o operador `default` deve ser o nome ou um parâmetro de tipo.
+O operador `default` produz o [valor padrão](../builtin-types/default-values.md) de um tipo. O argumento para o operador `default` deve ser o nome ou um parâmetro de tipo.
 
 O exemplo a seguir mostra o uso do operador `default`:
 
@@ -44,5 +44,5 @@ Para obter mais informações sobre o literal `default`, confira a [nota da prop
 
 - [Referência de C#](../index.md)
 - [Operadores do C#](index.md)
-- [Tabela de valores padrão](../keywords/default-values-table.md)
+- [Valores padrão de C# tipos](../builtin-types/default-values.md)
 - [Genéricos no .NET](../../../standard/generics/index.md)

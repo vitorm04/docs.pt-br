@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: b8e8bbe35ec3091816a4a943662f93f1b4581663
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 108048f6bdd2c02a67e331bd7b07b724d0e86527
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544677"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963797"
 ---
 # <a name="host-in-internet-information-services"></a>Host no Serviços de Informações da Internet
 
@@ -25,7 +25,7 @@ O WCF pode ser hospedado nas seguintes versões do IIS nos seguintes sistemas op
 
 - IIS 7,0 no Windows Vista e no Windows Server 2008. O IIS 7,0 fornece o mesmo modelo de processo avançado que o IIS 6,0, mas usa o WAS (serviço de ativação de processos do Windows) para permitir a ativação e a comunicação de rede por meio de protocolos diferentes de HTTP. Esse ambiente é adequado para o desenvolvimento de serviços WCF que se comunicam em qualquer protocolo de rede com suporte do WCF (incluindo HTTP, net. TCP, net. pipe e net. MSMQ). Para obter mais informações sobre o WAS, consulte [hospedagem no serviço de ativação de processos do Windows](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md).
 
-- O [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) funciona com o IIS 7,0 e o WAS (serviço de ativação de processos do Windows) para fornecer um ambiente de Hospedagem de aplicativos avançado para serviços WCF e WF do NET4. Esses benefícios incluem gerenciamento do ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida de falhas, órfão de processo, ativação sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem do AppFabric](https://go.microsoft.com/fwlink/?LinkId=196494) e conceitos de hospedagem do [AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495).
+- O [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)) funciona com o IIS 7,0 e o WAS (serviço de ativação de processos do Windows) para fornecer um ambiente de Hospedagem de aplicativos avançado para serviços WCF e WF do NET4. Esses benefícios incluem gerenciamento do ciclo de vida do processo, reciclagem de processo, hospedagem compartilhada, proteção rápida de falhas, órfão de processo, ativação sob demanda e monitoramento de integridade. Para obter informações detalhadas, consulte [recursos de hospedagem do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10)) e conceitos de hospedagem do [AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10)).
 
 ## <a name="benefits-of-iis-hosting"></a>Benefícios da hospedagem do IIS
 
@@ -68,4 +68,4 @@ Os serviços WCF podem ser hospedados lado a lado com o ASP.NET ou no modo de co
 - [Serviços do WCF e ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
 - [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
 - [Configurando os Serviços de Informações da Internet 7.0 para Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
-- [Recursos de hospedagem do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 0956c174f4d5742780baf00a6f2785a9efd1d93f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 27a7cbb1490f42811c79778382063980f3828395
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714682"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964084"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Construtores estáticos (Guia de Programação em C#)
 Um construtor estático é usado para inicializar quaisquer dados [estáticos](../../language-reference/keywords/static.md) ou para executar uma ação específica que precisa ser executada apenas uma vez. Ele é chamado automaticamente antes que a primeira instância seja criada ou que quaisquer membros estáticos sejam referenciados.  
@@ -32,7 +32,7 @@ Construtores estáticos têm as seguintes propriedades:
   
 - Um construtor estático é chamado automaticamente para inicializar a [classe](../../language-reference/keywords/class.md) antes que a primeira instância seja criada ou que quaisquer membros estáticos sejam referenciados. Um construtor estático será executado antes de um construtor de instância. Observe que um construtor de tipo estático é chamado quando um método estático atribuído a um evento ou um delegado é invocado, e não quando ele é atribuído. Se os inicializadores de variável de campo estático estiverem presentes na classe do construtor estático, eles serão executados na ordem textual na qual eles aparecem na declaração de classe imediatamente antes da execução do construtor estático.
 
-- Se você não fornecer um construtor estático para inicializar campos estáticos, todos os campos estáticos serão inicializados com seu valor padrão, conforme listado na [Tabela de Valores Padrão](../../language-reference/keywords/default-values-table.md). 
+- Se você não fornecer um construtor estático para inicializar campos estáticos, todos os campos estáticos serão inicializados para seu valor padrão, conforme listado em [valores padrão de C# tipos](../../language-reference/builtin-types/default-values.md).
   
 - Se um construtor estático gera uma exceção, o runtime não o invocará uma segunda vez e o tipo permanecerá não inicializado durante o tempo de vida do domínio do aplicativo no qual o programa está sendo executado. Normalmente, uma exceção <xref:System.TypeInitializationException> é lançada quando um construtor estático não consegue instanciar um tipo ou uma exceção sem tratamento que ocorre em um construtor estático. Para construtores estáticos implícitos que não são definidos explicitamente no código-fonte, a solução de problemas pode exigir inspeção do código de linguagem intermediária (IL).
 

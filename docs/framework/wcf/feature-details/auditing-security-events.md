@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 62b218a7259d824930a2eb2c7f810b480034e2b6
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75338025"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964707"
 ---
 # <a name="auditing-security-events"></a>Auditoria de eventos de segurança
 Os aplicativos criados com o Windows Communication Foundation (WCF) podem registrar eventos de segurança (êxito, falha ou ambos) com o recurso de auditoria. Os eventos são gravados no log de eventos do sistema do Windows e podem ser examinados usando o Visualizador de Eventos.  
@@ -76,7 +76,7 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
  Se a auditoria estiver habilitada e um `auditLogLocation` não for especificado, o nome de log padrão será o log de "segurança" para a plataforma que dá suporte à gravação no log de segurança; caso contrário, será um log de "aplicativo". Somente os sistemas operacionais Windows Server 2003 e Windows Vista dão suporte à gravação no log de segurança. Para obter mais informações, consulte a seção "sistema operacional" mais adiante neste tópico.  
   
 ## <a name="security-considerations"></a>considerações sobre segurança  
- Se um usuário mal-intencionado sabe que a auditoria está habilitada, esse invasor pode enviar mensagens inválidas que fazem com que as entradas de auditoria sejam gravadas. Se o log de auditoria for preenchido dessa maneira, o sistema de auditoria falhará. Para atenuar isso, defina a propriedade <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> como `true` e use as propriedades da Visualizador de Eventos para controlar o comportamento de auditoria. Para obter mais informações, consulte o artigo Suporte da Microsoft sobre como exibir e gerenciar logs de eventos usando o Visualizador de Eventos no Windows XP disponível em [como Visualizar e gerenciar logs de eventos no Visualizador de eventos no Windows XP](https://go.microsoft.com/fwlink/?LinkId=89150).  
+ Se um usuário mal-intencionado sabe que a auditoria está habilitada, esse invasor pode enviar mensagens inválidas que fazem com que as entradas de auditoria sejam gravadas. Se o log de auditoria for preenchido dessa maneira, o sistema de auditoria falhará. Para atenuar isso, defina a propriedade <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> como `true` e use as propriedades da Visualizador de Eventos para controlar o comportamento de auditoria.  
   
  Eventos de auditoria que são gravados no log do aplicativo em [!INCLUDE[wxp](../../../../includes/wxp-md.md)] são visíveis para qualquer usuário autenticado.  
   
@@ -107,4 +107,4 @@ Os aplicativos criados com o Windows Communication Foundation (WCF) podem regist
 - [Como auditar de eventos de segurança](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<comportamentos >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

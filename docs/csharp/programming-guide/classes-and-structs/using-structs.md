@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: d85b11204eb1f1de3a95efc67054cdffc4c219e8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714669"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964752"
 ---
 # <a name="using-structs-c-programming-guide"></a>Usando structs (C# guia de programação)
 
@@ -21,7 +21,7 @@ O tipo `struct` é adequado para representar objetos leves como `Point`, `Rectan
 
 Quando você cria um objeto de struct usando o operador [new](../../language-reference/operators/new-operator.md), ele é criado e o construtor apropriado é chamado de acordo com a [assinatura do construtor](constructors.md#constructor-syntax). Diferentemente das classes, os structs podem ser instanciados sem usar o operador `new`. Nesse caso, não há nenhuma chamada do construtor, o que torna a alocação mais eficiente. No entanto, os campos permanecerão não atribuídos e o objeto não poderá ser usado até que todos os campos sejam inicializados. Isso inclui a incapacidade de obter ou definir valores por meio de propriedades.
 
-Se você criar uma instância de um objeto struct usando o construtor sem parâmetros, todos os membros serão atribuídos de acordo com seus [valores padrão](../../language-reference/keywords/default-values-table.md).
+Se você criar uma instância de um objeto struct usando o construtor sem parâmetros, todos os membros serão atribuídos de acordo com seus [valores padrão](../../language-reference/builtin-types/default-values.md).
 
 Ao gravar um construtor com parâmetros para uma struct, você deve inicializar explicitamente todos os membros; caso contrário, um ou mais membros permanecerão não atribuídos e a estrutura não poderá ser usada, produzindo o erro [CS0171](../../misc/cs0171.md)do compilador.
 

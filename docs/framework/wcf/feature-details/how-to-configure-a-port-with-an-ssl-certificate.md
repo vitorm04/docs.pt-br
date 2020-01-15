@@ -9,19 +9,19 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: d56da60f174933af789a6abd7d8aa90f3f29d9c1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1ea7680d092a4270b8c0969c50db8accf7c23d49
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344622"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963302"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Como configurar uma porta com um certificado SSL
 Ao criar um serviço de Windows Communication Foundation (WCF) auto-hospedado com a classe <xref:System.ServiceModel.WSHttpBinding> que usa a segurança de transporte, você também deve configurar uma porta com um certificado X. 509. Se você estiver criando um serviço auto-hospedado, você poderá hospedá-lo serviço no IIS (Serviços de Informações da Internet). Para obter mais informações, consulte [segurança de transporte http](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
  Para configurar uma porta, a ferramenta usada depende do sistema operacional que está sendo executado no computador.  
   
- Se você estiver executando o Windows Server 2003 ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use a ferramenta HttpCfg. exe. Com o Windows Server 2003, essa ferramenta está instalada. Com o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], você pode baixar a ferramenta em [ferramentas de suporte do Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Para obter mais informações, consulte a [visão geral do Httpcfg](https://go.microsoft.com/fwlink/?LinkId=88605). A [documentação das ferramentas de suporte do Windows](https://go.microsoft.com/fwlink/?LinkId=94840) explica a sintaxe da ferramenta Httpcfg. exe.  
+ Se você estiver executando o Windows Server 2003 ou [!INCLUDE[wxp](../../../../includes/wxp-md.md)], use a ferramenta HttpCfg. exe. Com o Windows Server 2003, essa ferramenta está instalada. Com o [!INCLUDE[wxp](../../../../includes/wxp-md.md)], você pode baixar a ferramenta em [ferramentas de suporte do Windows XP Service Pack 2](https://go.microsoft.com/fwlink/?LinkId=88606). Para obter mais informações, consulte a [visão geral do Httpcfg](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc787508(v=ws.10)). A [documentação das ferramentas de suporte do Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781601(v=ws.10)) explica a sintaxe da ferramenta Httpcfg. exe.  
   
  Se você estiver executando o Windows Vista, use a ferramenta Netsh. exe que já está instalada.  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Await operator [Visual Basic]
 - Await [Visual Basic]
 ms.assetid: 6b1ce283-e92b-4ba7-b081-7be7b3d37af9
-ms.openlocfilehash: e0c617ce32f80bdde1bcfda31da40ae610e07452
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: b5943e509bb850abc6c74e1b97ccd5fb0038f1e0
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712357"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964329"
 ---
 # <a name="await-operator-visual-basic"></a>Operador Await (Visual Basic)
 
@@ -58,7 +58,7 @@ Await AsyncMethodThatReturnsTask()
 
 Uma expressão `Await` ou instrução não bloqueia o thread no qual está sendo executada. Em vez disso, faz com que o compilador inscreva o restante do método assíncrono, após a expressão de `Await`, como uma continuação na tarefa esperada. Em seguida, o controle retorna para o chamador do método assíncrono. Quando a tarefa for concluída, ela invoca a sua continuação e a execução do método assíncrono continua de onde parou.
 
-Uma expressão de `Await` pode ocorrer somente no corpo de um método de circunscrição ou expressão lambda que é marcada por um modificador de `Async`. O termo *Await* serve como uma palavra-chave somente nesse contexto. Em outro local, ele será interpretado como um identificador. Dentro do método assíncrono ou expressão lambda, uma expressão `Await` não pode ocorrer em uma expressão de consulta, no `catch` ou `finally` bloco de uma [tentativa... Capturar... Instrução Finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md) , na expressão de variável de controle de loop de um loop de `For` ou de `For Each` ou no corpo de uma instrução [SyncLock](../../../visual-basic/language-reference/statements/synclock-statement.md) .
+Uma expressão de `Await` pode ocorrer somente no corpo de um método de circunscrição ou expressão lambda que é marcada por um modificador de `Async`. O termo *Await* serve como uma palavra-chave somente nesse contexto. Em outro local, ele será interpretado como um identificador. Dentro do método `Async` ou expressão lambda, uma expressão `Await` não pode ocorrer em uma expressão de consulta, no bloco `Catch` ou `Finally` de uma [tentativa... Capturar... Instrução Finally](../statements/try-catch-finally-statement.md), na expressão de variável de controle de loop de um loop de `For` ou de `For Each` ou no corpo de uma instrução [SyncLock](../statements/synclock-statement.md) .
 
 ## <a name="exceptions"></a>Exceções
 
@@ -106,7 +106,7 @@ Public Async Function WaitSynchronously() As Task(Of String)
 End Function
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Programação assíncrona com Async e Await](../../../visual-basic/programming-guide/concepts/async/index.md)
 - [Instruções passo a passo: acessando a Web e usando Async e Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)

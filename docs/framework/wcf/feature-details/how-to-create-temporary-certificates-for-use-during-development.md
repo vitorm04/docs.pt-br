@@ -1,18 +1,18 @@
 ---
-title: 'Como: criar certificados temporários para uso durante o desenvolvimento'
+title: Como criar certificados temporários para uso durante o desenvolvimento
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: e2df35959f9821c65d694079aefa0ae6ba01897f
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 9e01ccb29ad017a2657ab08b54d7f01ef4564481
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053302"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964543"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como: criar certificados temporários para uso durante o desenvolvimento
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Como criar certificados temporários para uso durante o desenvolvimento
 
 Ao desenvolver um serviço ou cliente seguro usando Windows Communication Foundation (WCF), geralmente é necessário fornecer um certificado X. 509 para ser usado como uma credencial. O certificado normalmente faz parte de uma cadeia de certificados com uma autoridade raiz encontrada no repositório de autoridades de certificação raiz confiáveis do computador. Ter uma cadeia de certificados permite que você defina o escopo de um conjunto de certificados em que normalmente a autoridade raiz é de sua organização ou unidade de negócios. Para emular isso no momento do desenvolvimento, você pode criar dois certificados para atender aos requisitos de segurança. O primeiro é um certificado autoassinado que é colocado no repositório de autoridades de certificação raiz confiáveis e o segundo certificado é criado a partir do primeiro e é colocado no repositório pessoal do local do computador local ou no repositório pessoal do Local do usuário atual. Este tópico percorre as etapas para criar esses dois certificados usando o cmdlet [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) do PowerShell.
 
@@ -21,7 +21,7 @@ Ao desenvolver um serviço ou cliente seguro usando Windows Communication Founda
 >
 > Por padrão, o cmdlet [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) cria certificados que são autoassinados e esses certificados são inseguros. Colocar os certificados autoassinados no repositório de autoridades de certificação raiz confiáveis permite que você crie um ambiente de desenvolvimento que simula mais de forma mais minuciosa seu ambiente de implantação.
 
- Para obter mais informações sobre como criar e usar certificados, consulte [trabalhando com certificados](working-with-certificates.md). Para obter mais informações sobre como usar um certificado como uma credencial, consulte [protegendo serviços e clientes](securing-services-and-clients.md). Para obter um tutorial sobre como usar a tecnologia Authenticode da Microsoft, consulte [visões gerais e tutoriais do Authenticode](https://go.microsoft.com/fwlink/?LinkId=88919).
+ Para obter mais informações sobre como criar e usar certificados, consulte [trabalhando com certificados](working-with-certificates.md). Para obter mais informações sobre como usar um certificado como uma credencial, consulte [protegendo serviços e clientes](securing-services-and-clients.md). Para obter um tutorial sobre como usar a tecnologia Authenticode da Microsoft, consulte [visões gerais e tutoriais do Authenticode](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537360(v=vs.85)).
 
 ## <a name="to-create-a-self-signed-root-authority-certificate-and-export-the-private-key"></a>Para criar um certificado de autoridade raiz autoassinado e exportar a chave privada
 
@@ -42,7 +42,7 @@ Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>Para criar um novo certificado assinado por um certificado de autoridade raiz
 
-O comando a seguir cria um certificado assinado pelo `RootCA` com um nome de assunto de "SignedByRootCA" usando a chave privada do emissor.
+O comando a seguir cria um certificado assinado pelo `RootCA` com o nome da entidade "SignedByRootCA" usando a chave privada do emissor.
 
 ```powershell
 $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
@@ -62,7 +62,7 @@ Depois que um certificado autoassinado for criado, você poderá instalá-lo no 
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>Para instalar um certificado autoassinado nas autoridades de certificação raiz confiáveis
 
-1. Abra o snap-in certificado. Para obter mais informações, confira [Como: Exibir certificados com o snap-in](how-to-view-certificates-with-the-mmc-snap-in.md)do MMC.
+1. Abra o snap-in certificado. Para obter mais informações, confira [Como exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md).
 
 2. Abra a pasta para armazenar o certificado, o **computador local** ou o **usuário atual**.
 
@@ -112,8 +112,8 @@ Para obter mais informações sobre como usar certificados no WCF, consulte [tra
 
 Certifique-se de excluir qualquer certificado de autoridade raiz temporário das **autoridades de certificação raiz confiáveis** e pastas **pessoais** clicando com o botão direito do mouse no certificado e clicando em **excluir**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Trabalhando com certificados](working-with-certificates.md)
-- [Como: Exibir certificados com o snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [Como exibir certificados com o Snap-in do MMC](how-to-view-certificates-with-the-mmc-snap-in.md)
 - [Protegendo serviços e clientes](securing-services-and-clients.md)

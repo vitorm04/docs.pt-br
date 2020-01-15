@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7d027a67e533cb1ed7b2cea38112b4f585bf5fbc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714638"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964353"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Usando construtores (Guia de Programação em C#)
 
@@ -29,7 +29,7 @@ Quando uma [classe](../../language-reference/keywords/class.md) ou [struct](../.
   
  Para obter mais informações, consulte [Construtores particulares](./private-constructors.md).  
   
- Os construtores de tipos [struct](../../language-reference/keywords/struct.md) são semelhantes aos construtores de classe, mas `structs` não podem conter um construtor sem parâmetros explícito porque um é fornecido automaticamente pelo compilador. Este construtor inicializa todos os campos no `struct` com os valores padrão. Para obter mais informações, consulte [Tabela de opções padrão](../../language-reference/keywords/default-values-table.md). No entanto, esse construtor sem parâmetro será invocado apenas se o `struct` for instanciado com `new`. Por exemplo, esse código usa o construtor sem parâmetros para <xref:System.Int32>, de modo que você tenha certeza de que o inteiro é inicializado:  
+ Os construtores de tipos [struct](../../language-reference/keywords/struct.md) são semelhantes aos construtores de classe, mas `structs` não podem conter um construtor sem parâmetros explícito porque um é fornecido automaticamente pelo compilador. Esse construtor inicializa cada campo no `struct` para o [valor padrão](../../language-reference/builtin-types/default-values.md). No entanto, esse construtor sem parâmetro será invocado apenas se o `struct` for instanciado com `new`. Por exemplo, esse código usa o construtor sem parâmetros para <xref:System.Int32>, de modo que você tenha certeza de que o inteiro é inicializado:  
   
 ```csharp  
 int i = new int();  

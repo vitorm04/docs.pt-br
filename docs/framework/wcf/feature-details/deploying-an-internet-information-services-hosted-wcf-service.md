@@ -2,12 +2,12 @@
 title: Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: e46bcec846fcc8f9455c436bb551564e1cb5b5ea
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 36bdd22ec838af8b1a6b3be8c5636beced9b9132
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71053308"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964851"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>Implantando um Serviço WCF hospedado do Internet Information Services dos Serviços de Informações da Internet
 
@@ -23,7 +23,7 @@ O desenvolvimento e a implantação de um serviço Windows Communication Foundat
 
 - Configure o serviço WCF.
 
-Para obter uma explicação detalhada da criação de um serviço WCF hospedado pelo IIS [, consulte Como: Hospede um serviço WCF no IIS](how-to-host-a-wcf-service-in-iis.md).
+Para obter uma explicação detalhada da criação de um serviço WCF hospedado pelo IIS, consulte [como hospedar um serviço WCF no IIS](how-to-host-a-wcf-service-in-iis.md).
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>Verificar se o IIS, o ASP.NET, o WCF estão corretamente instalados e registrados
 
@@ -37,13 +37,13 @@ O processo de instalação para .NET Framework registrará automaticamente o WCF
 
 - Windows 7 e Windows Server 2003: Use a ferramenta de [registro ServiceModel (ServiceModelReg. exe)](../../../../docs/framework/wcf/servicemodelreg-exe.md) para registrar o WCF com o IIS. Para usar essa ferramenta, digite **ServiceModelReg. exe/i/x** no [prompt de comando do desenvolvedor para Visual Studio](../../tools/developer-command-prompt-for-vs.md).
 
-- Windows 7: Por fim, você deve verificar se o ASP.NET está configurado para usar o .NET Framework versão 4 ou posterior. Faça isso executando a ferramenta ASPNET_Regiis com a `–i` opção. Para obter mais informações, consulte [ferramenta de registro do IIS ASP.net](https://go.microsoft.com/fwlink/?LinkId=201186).
+- Windows 7: por fim, você deve verificar se o ASP.NET está configurado para usar o .NET Framework versão 4 ou posterior. Faça isso executando a ferramenta ASPNET_Regiis com a opção `–i`. Para obter mais informações, consulte [ferramenta de registro do IIS ASP.net](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)).
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>Criar um novo aplicativo do IIS ou reutilizar um existente do ASP.NET
 
 Os serviços WCF hospedados pelo IIS devem residir dentro de um aplicativo IIS. Você pode criar um novo aplicativo do IIS para hospedar exclusivamente os serviços WCF. Como alternativa, você pode implantar um serviço WCF em um aplicativo existente que já hospeda conteúdo ASP.NET 2,0 (como páginas. aspx e ASP.NET Web Services [ASMX]). Para obter mais informações sobre essas opções, consulte as seções "hospedando o WCF lado a lado com ASP.NET" e "hospedando serviços WCF no modo de compatibilidade ASP.NET" nos [Serviços WCF e ASP.net](wcf-services-and-aspnet.md).
 
-Observe que o IIS 6,0 e versões posteriores reiniciam periodicamente um aplicativo de programação orientado a objeto isolado. O valor padrão é 1740 minutos. O valor máximo valor com suporte é 71.582 minutos. Esse reinício pode ser desabilitado. Para obter mais informações sobre essa propriedade, consulte o [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968).
+Observe que o IIS 6,0 e versões posteriores reiniciam periodicamente um aplicativo de programação orientado a objeto isolado. O valor padrão é 1740 minutos. O valor máximo valor com suporte é 71.582 minutos. Esse reinício pode ser desabilitado. Para obter mais informações sobre essa propriedade, consulte o [PeriodicRestartTime](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms525914(v=vs.90)).
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>Criar um arquivo .svc para o serviço WCF
 
@@ -51,15 +51,15 @@ Os serviços WCF hospedados no IIS são representados como arquivos de conteúdo
 
 `<% @ServiceHost Service="MyNamespace.MyServiceImplementationTypeName" %>`
 
-Ele consiste na [ \@diretiva ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) e em um único atributo, `Service`. O valor do atributo `Service` é o nome do tipo CLR (Common Language Runtime) da implementação do serviço. Usar essa diretiva é basicamente equivalente a criar um host de serviço usando o código a seguir.
+Ele consiste na diretiva [\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) e em um único atributo, `Service`. O valor do atributo `Service` é o nome do tipo CLR (Common Language Runtime) da implementação do serviço. Usar essa diretiva é basicamente equivalente a criar um host de serviço usando o código a seguir.
 
 ```csharp
 new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 ```
 
-A configuração de hospedagem adicional, como a criação de uma lista de endereços de base para o serviço também pode ser feita. Você também pode usar um <xref:System.ServiceModel.Activation.ServiceHostFactory> personalizado para estender a política para usar com soluções de hospedagem personalizadas. Os aplicativos IIS que hospedam os serviços WCF não são responsáveis por gerenciar a criação e <xref:System.ServiceModel.ServiceHost> o tempo de vida de instâncias. A infraestrutura de hospedagem do WCF gerenciada <xref:System.ServiceModel.ServiceHost> cria a instância necessária dinamicamente quando a primeira solicitação é recebida para o arquivo. svc. A instância não é liberada até que seja fechada explicitamente pelo código ou quando o aplicativo for reciclado.
+A configuração de hospedagem adicional, como a criação de uma lista de endereços de base para o serviço também pode ser feita. Você também pode usar um <xref:System.ServiceModel.Activation.ServiceHostFactory> personalizado para estender a política para usar com soluções de hospedagem personalizadas. Os aplicativos IIS que hospedam os serviços WCF não são responsáveis por gerenciar a criação e o tempo de vida de instâncias de <xref:System.ServiceModel.ServiceHost>. A infraestrutura de hospedagem do WCF gerenciada cria a instância de <xref:System.ServiceModel.ServiceHost> necessária dinamicamente quando a primeira solicitação é recebida para o arquivo. svc. A instância não é liberada até que seja fechada explicitamente pelo código ou quando o aplicativo for reciclado.
 
-Para obter mais informações sobre a sintaxe para arquivos. svc, consulte [ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).
+Para obter mais informações sobre a sintaxe para arquivos. svc, consulte [\@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md).
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>Implantar a implementação do serviço para o aplicativo do IIS
 
@@ -67,11 +67,11 @@ Os serviços WCF hospedados no IIS usam o mesmo modelo de compilação dinâmica
 
 - Como um arquivo .dll pré-compilado localizado no GAC (cache de assembly global) ou no diretório \bin do aplicativo. Os binários pré-compilados não são atualizados até que uma nova versão da biblioteca de classe seja implantada.
 
-- Como arquivos de origem não compilados localizados no diretório \App_Code do aplicativo. Os arquivos de origem localizados nesse diretório são exigidos dinamicamente ao processar a primeira solicitação do aplicativo. As alterações nos arquivos no diretório \App_Code fazem o aplicativo inteiro ser reciclado e recompilado quando a próxima solicitação é recebida.
+- Como arquivos de origem não compilados localizados no diretório \ App_Code do aplicativo. Os arquivos de origem localizados nesse diretório são exigidos dinamicamente ao processar a primeira solicitação do aplicativo. As alterações nos arquivos no diretório \App_Code fazem o aplicativo inteiro ser reciclado e recompilado quando a próxima solicitação é recebida.
 
-- Como código não compilado colocado diretamente no arquivo. svc. O código de implementação também pode ser colocado embutido no arquivo. svc do serviço, \@após a diretiva ServiceHost. As alterações ao código embutido fazem o aplicativo ser reciclado e recompilado quando a próxima solicitação é recebida.
+- Como código não compilado colocado diretamente no arquivo. svc. O código de implementação também pode ser colocado embutido no arquivo. svc do serviço, após a diretiva \@ServiceHost. As alterações ao código embutido fazem o aplicativo ser reciclado e recompilado quando a próxima solicitação é recebida.
 
-Para obter mais informações sobre o modelo de compilação do ASP.NET 2,0, consulte [visão geral da compilação do ASP.net](https://go.microsoft.com/fwlink/?LinkId=94773).
+Para obter mais informações sobre o modelo de compilação do ASP.NET 2,0, consulte [visão geral da compilação do ASP.net](https://docs.microsoft.com/previous-versions/aspnet/ms178466(v=vs.100)).
 
 ## <a name="configure-the-wcf-service"></a>Configurar o serviço WCF
 
@@ -79,25 +79,25 @@ Os serviços WCF hospedados pelo IIS armazenam sua configuração no arquivo Web
 
 - Endereços de base para serviços hospedados no IIS.
 
-- Os aplicativos que hospedam serviços WCF fora do IIS podem controlar o endereço base dos serviços que eles hospedam passando um conjunto de URIs de <xref:System.ServiceModel.ServiceHost> endereço base para o construtor ou fornecendo um [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) elemento de > de host no configuração. Os serviços hospedados no IIS não têm a capacidade de controlar seu endereço de base; o endereço de base de um serviço hospedado no IIS é o endereço de seu arquivo .svc.
+- Os aplicativos que hospedam serviços WCF fora do IIS podem controlar o endereço base dos serviços que eles hospedam passando um conjunto de URIs de endereço base para o construtor de <xref:System.ServiceModel.ServiceHost> ou fornecendo um elemento de [> de host\<](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) na configuração do serviço. Os serviços hospedados no IIS não têm a capacidade de controlar seu endereço de base; o endereço de base de um serviço hospedado no IIS é o endereço de seu arquivo .svc.
 
 ### <a name="endpoint-addresses-for-iis-hosted-services"></a>Endereços de ponto de extremidade para serviços hospedados no IIS
 
-Quando estão hospedados no IIS, os endereços de ponto de extremidade são sempre considerados relativos para o endereço do arquivo .svc que representa o serviço. Por exemplo, se o endereço base de um serviço WCF for `http://localhost/Application1/MyService.svc` com a seguinte configuração de ponto de extremidade:
+Quando estão hospedados no IIS, os endereços de ponto de extremidade são sempre considerados relativos para o endereço do arquivo .svc que representa o serviço. Por exemplo, se o endereço base de um serviço WCF estiver `http://localhost/Application1/MyService.svc` com a seguinte configuração de ponto de extremidade:
 
 ```xml
 <endpoint address="anotherEndpoint" .../>
 ```
 
-Isso fornece um ponto de extremidade que pode ser `http://localhost/Application1/MyService.svc/anotherEndpoint`acessado em.
+Isso fornece um ponto de extremidade que pode ser acessado em `http://localhost/Application1/MyService.svc/anotherEndpoint`.
 
-Da mesma forma, o elemento de configuração do ponto de extremidade que usa uma cadeia de caracteres vazia como `http://localhost/Application1/MyService.svc`o endereço relativo fornece um ponto de extremidade acessível em, que é o endereço base.
+Da mesma forma, o elemento de configuração de ponto de extremidade que usa uma cadeia de caracteres vazia como o endereço relativo fornece um ponto de extremidade acessível em `http://localhost/Application1/MyService.svc`, que é o endereço base.
 
 ```xml
 <endpoint address="" ... />
 ```
 
-Você sempre deve usar endereços de ponto de extremidade relativos para pontos de extremidade de serviço hospedados no IIS. Fornecer um endereço de ponto de extremidade totalmente qualificado (por exemplo `http://localhost/MyService.svc`,) pode levar a erros na implantação do serviço se o endereço do ponto de extremidade não apontar para o aplicativo IIS que hospeda o serviço expondo o ponto de extremidade. Usar endereços de ponto de extremidade relativos para serviços hospedados evita esses conflitos em potencial.
+Você sempre deve usar endereços de ponto de extremidade relativos para pontos de extremidade de serviço hospedados no IIS. O fornecimento de um endereço de ponto de extremidade totalmente qualificado (por exemplo, `http://localhost/MyService.svc`) pode levar a erros na implantação do serviço se o endereço do ponto de extremidade não apontar para o aplicativo IIS que hospeda o serviço expondo o ponto de extremidade. Usar endereços de ponto de extremidade relativos para serviços hospedados evita esses conflitos em potencial.
 
 ### <a name="available-transports"></a>Transportes disponíveis
 
@@ -109,8 +109,8 @@ Os serviços WCF hospedados pelo IIS podem usar a segurança de transporte HTTP 
 
 Por exemplo, um ponto de extremidade WCF configurado para usar a autenticação digest HTTP deve residir em um diretório virtual do IIS que também esteja configurado para permitir a autenticação digest HTTP. As combinações sem correspondência das configurações do IIS e das configurações do ponto de extremidade do WCF resultam em um erro durante a ativação do serviço.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Hospedagem nos Serviços de Informações da Internet](hosting-in-internet-information-services.md)
 - [Práticas recomendadas de hospedagem de Serviços de Informações da Internet](internet-information-services-hosting-best-practices.md)
-- [Recursos de hospedagem do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

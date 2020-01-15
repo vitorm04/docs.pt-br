@@ -2,38 +2,38 @@
 title: Hosting2
 ms.date: 03/30/2017
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
-ms.openlocfilehash: 575b2a3e34246e1082d34545baaf812203a1dde1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7276fda3e5503a431b7de1507a9e5316920ec457
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61855836"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75963713"
 ---
 # <a name="hosting"></a>Hospedagem
-Os tópicos na seção descrevem a hospedagem de serviços. Um serviço pode ser hospedado pelo Internet Information Services (IIS), o serviço de ativação de processos do Windows (WAS), o Windows Server AppFabric, um serviço do Windows, ou por um aplicativo gerenciado — essa opção é geralmente denominada *hospedar automaticamente*.  
+Os tópicos na seção descrevem a hospedagem de serviço. Um serviço pode ser hospedado pelo Serviços de Informações da Internet (IIS), pelo WAS (serviço de ativação de processos do Windows), pelo Windows Server AppFabric, por um serviço do Windows ou por um aplicativo gerenciado – essa opção é geralmente conhecida como *hospedagem própria*.  
   
- É importante observar que executando um serviço ou qualquer extensão de um host não confiável comprometimentos de segurança.  
+ É importante observar que a execução de um serviço ou de qualquer extensão de um host não confiável compromete a segurança.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Hospedagem nos Serviços de Informações da Internet](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- Descreve como um serviço do Windows Communication Foundation (WCF) está hospedado no Internet Information Services ou [do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496).  
+ Descreve como um serviço de Windows Communication Foundation (WCF) é hospedado no Serviços de Informações da Internet ou no [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10)).  
   
  [Hosting in Windows Process Activation Service](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md) (Hospedagem no Serviço de Ativação de Processos do Windows)  
- Descreve como um serviço WCF está hospedado pelo serviço de ativação de processos do Windows.  
+ Descreve como um serviço WCF é hospedado pelo serviço de ativação de processos do Windows.  
   
  [Hospedagem em um aplicativo de serviço Windows](../../../../docs/framework/wcf/feature-details/hosting-in-a-windows-service-application.md)  
- Descreve como um serviço WCF está hospedado por um serviço do Windows.  
+ Descreve como um serviço WCF é hospedado por um serviço do Windows.  
   
  [Hospedagem em um aplicativo gerenciado](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)  
- Descreve como um serviço WCF está hospedado em um aplicativo gerenciado.  
+ Descreve como um serviço WCF é hospedado em um aplicativo gerenciado.  
   
  [Ativação baseada em configuração no IIS e WAS](../../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
- Descreve como um serviço WCF está hospedado em IIS ou WAS sem usar um arquivo. svc.  
+ Descreve como um serviço WCF é hospedado no IIS ou no WAS sem usar um arquivo. svc.  
   
  [Suporte a ligações de site do IIS](../../../../docs/framework/wcf/feature-details/supporting-multiple-iis-site-bindings.md)  
- Descreve como especificar vários endereços de base para um serviço usando o mesmo esquema de URI em um único site.  
+ Descreve como especificar vários endereços base para um serviço usando o mesmo esquema de URI em um único site.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Hospedando serviços](../../../../docs/framework/wcf/hosting-services.md)
-- [Recursos de hospedagem do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

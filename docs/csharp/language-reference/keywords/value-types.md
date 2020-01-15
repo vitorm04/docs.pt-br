@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 0ab9b6e089f5add9963ffae73e196643ad999763
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfa92923ff5c7d5e7e4e2a9a965dc1562c183b74
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712904"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964643"
 ---
 # <a name="value-types-c-reference"></a>Tipos de valor (Referência de C#)
 
@@ -33,7 +33,7 @@ Ao contrário do que acontece com tipos de referência, você não pode derivar 
 
 Variáveis de tipo de valor não podem ser `null` por padrão. No entanto, as variáveis dos [tipos de valores anuláveis](../builtin-types/nullable-value-types.md) correspondentes podem ser `null`.
 
-Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o valor padrão desse tipo. Para saber mais sobre valores padrão de tipos de valor, consulte [Tabela de valores padrão](default-values-table.md).
+Cada tipo de valor tem um construtor sem parâmetro implícito que inicializa o valor padrão desse tipo. Para obter informações sobre valores padrão de tipos de valor, consulte [valores C# padrão de tipos](../builtin-types/default-values.md).
 
 ## <a name="simple-types"></a>Tipos simples
 
@@ -87,7 +87,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-Usando o operador [new](../operators/new-operator.md), chama o construtor sem parâmetro do tipo específico e atribui o valor padrão à variável. No exemplo anterior, o construtor sem parâmetro atribuiu o valor `0` para `myInt`. Para saber mais sobre valores atribuídos ao chamar construtores sem parâmetros, confira [Tabela de valores padrão](default-values-table.md).
+Usando o operador [new](../operators/new-operator.md), chama o construtor sem parâmetro do tipo específico e atribui o valor padrão à variável. No exemplo anterior, o construtor sem parâmetro atribuiu o valor `0` para `myInt`. Para obter mais informações sobre valores atribuídos pela chamada de construtores sem parâmetros, consulte [valores padrão C# de tipos](../builtin-types/default-values.md).
 
 Com tipos definidos pelo usuário, use [new](../operators/new-operator.md) para invocar o construtor sem parâmetro. Por exemplo, a instrução a seguir invoca o construtor sem parâmetro do struct `Point`:
 
