@@ -38,10 +38,6 @@
               href: how-to-define-and-use-custom-numeric-format-providers.md
             - name: 'Como: Valores de data e hora de viagem de ida e volta'
               href: how-to-round-trip-date-and-time-values.md
-            - name: 'Como: Converter em números as entradas numéricas do usuário em controles da Web'
-              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
-            - name: 'Como: Exibir informações localizadas de data e hora para usuários da Web'
-              href: how-to-display-localized-date-and-time-information-to-web-users.md
             - name: 'Como: Exibir milissegundos em valores de data e hora'
               href: how-to-display-milliseconds-in-date-and-time-values.md
             - name: 'Como: exibir datas em calendários não gregorianos'

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: 158964d1e04091faaa9b3acf82bf4ce2b5aba797
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cb1764d1a6f363f3011268eae5fbcb2c76d9cc89
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711487"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938007"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Práticas recomendadas para expressões regulares no .NET
 
@@ -62,7 +62,7 @@ Para resolver este problema, você pode fazer o seguinte:
 No coração do modelo de objeto de expressões regulares do .NET está a classe <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>, a qual representa o mecanismo de expressões regulares. Muitas vezes, o maior fator individual que afeta o desempenho das expressões regulares é a forma como o mecanismo <xref:System.Text.RegularExpressions.Regex> é usado. Definir uma expressão regular envolve o acoplamento vigoroso do mecanismo de expressões regulares com um padrão de expressão regular. Esse processo de acoplamento, seja envolvendo a instanciação de um objeto <xref:System.Text.RegularExpressions.Regex> ao passar para seu construtor um padrão de expressão regular ou chamando um método estático ao passar o padrão de expressão regular com a cadeia de caracteres a ser analisada, é necessariamente caro.
 
 > [!NOTE]
-> Para uma discussão mais detalhada das implicações de desempenho do uso de expressões regulares interpretadas e compiladas, confira [Otimizando o desempenho de expressões regulares, parte II: Tomando conta do retrocesso](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) no blog da equipe de BCL.
+> Para uma discussão mais detalhada das implicações de desempenho do uso de expressões regulares interpretadas e compiladas, confira [Otimizando o desempenho de expressões regulares, parte II: Tomando conta do retrocesso](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) no blog da equipe de BCL.
 
 É possível acoplar o mecanismo de expressões regulares com um padrão específico de expressão regular e usar o mecanismo para fazer a correspondência com texto de várias maneiras:
 
@@ -161,7 +161,7 @@ Quando o exemplo é compilado em um executável e executado, ele cria um assembl
 Normalmente, o mecanismo de expressões regulares usa progressão linear para percorrer uma cadeia de caracteres de entrada e compará-la a uma expressão regular padrão. No entanto, quando quantificadores indefinidos, como `*`, `+` e `?` são usados em uma expressão regular padrão, o mecanismo de expressões regulares pode desistir de uma parte das correspondências parciais com êxito e retornar a um estado salvo anteriormente para procurar uma correspondência com êxito para o padrão inteiro. Esse processo é conhecido como retrocesso.
 
 > [!NOTE]
-> Para saber mais sobre o retrocesso, confira [Detalhes do comportamento de expressões regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) e [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Para uma discussão mais detalhada do retrocesso, confira [Como otimizar o desempenho de expressões regulares, Parte II: Como tolar conta do retrocesso](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) no blog da equipe do BCL.
+> Para saber mais sobre o retrocesso, confira [Detalhes do comportamento de expressões regulares](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) e [Retrocesso](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Para uma discussão mais detalhada do retrocesso, confira [Como otimizar o desempenho de expressões regulares, Parte II: Como tolar conta do retrocesso](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha) no blog da equipe do BCL.
 
 O suporte ao retrocesso proporciona poder e flexibilidade às expressões regulares. Ele também coloca a responsabilidade por controlar o funcionamento do mecanismo de expressões regulares nas mãos dos desenvolvedores de expressões regulares. Como os desenvolvedores geralmente não estão cientes dessa responsabilidade, o uso indevido do retrocesso ou a confiança no retrocesso excessivo geralmente exerce o papel mais significativo na degradação do desempenho da expressão regular. Em um cenário de pior caso, o tempo de execução pode dobrar para cada caractere adicional na cadeia de caracteres de entrada. Na verdade, quando o retrocesso é usado excessivamente, é fácil criar o equivalente programático de um loop infinito se a entrada quase corresponder ao padrão da expressão regular; o mecanismo de expressões regulares pode levar horas ou mesmo dias para processar uma cadeia de caracteres de entrada relativamente curta.
 

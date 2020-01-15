@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ce0777ba71e5433b42b51ef1530e7a1a46905b25
-ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71957012"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709992"
 ---
 # <a name="xdr-validation-with-xmlschemacollection"></a>Validação de XDR com XmlSchemaCollection
 
@@ -22,7 +20,7 @@ Se o Esquema Reduzido de Dados XML (XDR) com o qual você está validando estive
 > [!IMPORTANT]
 > A classe <xref:System.Xml.Schema.XmlSchemaCollection> agora está obsoleta e foi substituída pela classe <xref:System.Xml.Schema.XmlSchemaSet>. Para saber mais sobre a classe <xref:System.Xml.Schema.XmlSchemaSet>, veja [XmlSchemaSet para compilação de esquema](xmlschemaset-for-schema-compilation.md).
 
-Por exemplo, se o elemento raiz do documento XML é `<bookstore xmlns="urn:newbooks-schema">`, quando o esquema é adicionado a **XmlSchemaCollection** referencia a mesma namespace, como segue:
+Por exemplo, se o elemento raiz do documento XML é `<bookstore>`, quando o esquema é adicionado a **XmlSchemaCollection** referencia a mesma namespace, como segue:
 
 ```vb
 xsc.Add("urn:newbooks-schema", "newbooks.xdr")
@@ -156,7 +154,7 @@ O seguinte descreve o conteúdo do arquivo de esquema XDR, *HeadCount.xdr*, a se
 </Schema>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Xml.XmlValidatingReader.ValidationType%2A>
 - [Compilação do esquema de XmlSchemaCollection](xmlschemacollection-schema-compilation.md)
