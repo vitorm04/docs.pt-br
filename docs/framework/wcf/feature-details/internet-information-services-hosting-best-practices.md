@@ -2,12 +2,12 @@
 title: Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: e09a42f0f4a98728e588961425d8b6f5b50e6ccb
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 092e6ab675cf807db44c2085f8b0e7bbf67d7b28
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69957221"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211912"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Práticas recomendadas de hospedagem dos Serviços de Informações da Internet
 Este tópico descreve algumas práticas recomendadas para hospedar serviços de Windows Communication Foundation (WCF).  
@@ -30,24 +30,24 @@ Este tópico descreve algumas práticas recomendadas para hospedar serviços de 
 ## <a name="optimizing-performance-in-middle-tier-scenarios"></a>Otimizando o desempenho em cenários de camada intermediária  
  Para um desempenho ideal em um *cenário de camada intermediária*— um serviço que chama outros serviços em resposta a mensagens de entrada — instancie o cliente do serviço WCF para o serviço remoto uma vez e reutilize-o em várias solicitações de entrada. A instanciação de clientes de serviço WCF é uma operação cara em relação à criação de uma chamada de serviço em uma instância de cliente pré-existente, e os cenários de camada intermediária produzem ganhos de desempenho distintos ao armazenar em cache clientes remotos entre solicitações. Os clientes de serviço WCF são thread-safe, portanto não é necessário sincronizar o acesso a um cliente em vários threads.  
   
- Cenários de camada intermediária também produzem ganhos de desempenho usando as APIs assíncronas geradas pela `svcutil /a` opção. A `/a` opção faz com que a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) gere `BeginXXX/EndXXX` métodos para cada operação de serviço, o que permite que as chamadas de longa duração para serviços remotos sejam feitas em threads em segundo plano.  
+ Cenários de camada intermediária também produzem ganhos de desempenho usando as APIs assíncronas geradas pela opção `svcutil /a`. A opção `/a` faz com que a [ferramenta de utilitário de metadados ServiceModel (svcutil. exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) gere `BeginXXX/EndXXX` métodos para cada operação de serviço, o que permite que as chamadas de longa duração para serviços remotos sejam feitas em threads em segundo plano.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF em cenários de hospedagem múltipla ou vários nomes  
- Você pode implantar serviços WCF dentro de um Web farm do IIS, em que um conjunto de computadores compartilha um nome externo comum ( `http://www.contoso.com`como), mas que é endereçado individualmente por diferentes nomes de `http://www.contoso.com` host (por exemplo, pode direcionar o tráfego para dois computadores diferentes chamado `http://machine1.internal.contoso.com` e`http://machine2.internal.contoso.com`). Esse cenário de implantação tem suporte total do WCF, mas requer configuração especial do site do IIS que hospeda serviços WCF para exibir o nome de host correto (externo) nos metadados do serviço (linguagem de descrição dos serviços Web).  
+ Você pode implantar serviços WCF dentro de um Web farm do IIS, em que um conjunto de computadores compartilha um nome externo comum (como `http://www.contoso.com`), mas é endereçado individualmente por diferentes nomes de host (por exemplo, `http://www.contoso.com` pode direcionar o tráfego para dois computadores diferentes chamados `http://machine1.internal.contoso.com` e `http://machine2.internal.contoso.com`). Esse cenário de implantação tem suporte total do WCF, mas requer configuração especial do site do IIS que hospeda serviços WCF para exibir o nome de host correto (externo) nos metadados do serviço (linguagem de descrição dos serviços Web).  
   
- Para garantir que o nome de host correto apareça no serviço de metadados do WCF gerado, configure a identidade padrão para o site do IIS que hospeda os serviços WCF para usar um nome de host explícito. Por exemplo, os computadores que residem dentro do `www.contoso.com` farm devem usar uma associação de site do IIS de *: 80: www. contoso. com para \*http e: 443: www. contoso. com para https.  
+ Para garantir que o nome de host correto apareça no serviço de metadados do WCF gerado, configure a identidade padrão para o site do IIS que hospeda os serviços WCF para usar um nome de host explícito. Por exemplo, os computadores que residem dentro do farm de `www.contoso.com` devem usar uma associação de site do IIS de *: 80: www. contoso. com para HTTP e \*: 443: www. contoso. com para HTTPS.  
   
  Você pode configurar as associações de site do IIS usando o snap-in MMC (console de gerenciamento Microsoft) do IIS.  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>Pools de aplicativos em execução em diferentes contextos de usuário substituem assemblies de outras contas na pasta temporária  
  Para garantir que os pools de aplicativos executados em diferentes contextos de usuário não possam substituir assemblies de outras contas na pasta Temporary ASP.NET Files, use diferentes identidades e pastas temporárias para aplicativos diferentes. Por exemplo, se você tiver dois aplicativos virtuais/Application1 e/Application2, poderá criar dois pools de aplicativos, A e B, com duas identidades diferentes. O pool de aplicativos A pode ser executado em uma identidade de usuário (Usuário1), enquanto o pool de aplicativos B pode ser executado em outra identidade de usuário (Usuário2) e configurar o/Application1 para usar um e/Application2 para usar B.  
   
- Em Web. config, você pode configurar a pasta temporária usando \< system.web/compilation/@tempFolder>. Para/Application1, ele pode ser "c:\tempForUser1" e, para Application2, pode ser "c:\tempForUser2". Conceda permissão de gravação correspondente a essas pastas para as duas identidades.  
+ Em Web. config, você pode configurar a pasta temporária usando \<system.web/compilation/@tempFolder>. Para/Application1, ele pode ser "c:\tempForUser1" e, para Application2, pode ser "c:\tempForUser2". Conceda permissão de gravação correspondente a essas pastas para as duas identidades.  
   
  Em seguida, o User2 não pode alterar a pasta de geração de código para/Application2 (em c:\tempForUser1).  
   
 ## <a name="enabling-asynchronous-processing"></a>Habilitando o processamento assíncrono  
- Por padrão, as mensagens enviadas para um serviço WCF hospedados no IIS 6,0 e versões anteriores são processadas de maneira síncrona. ASP.NET chama o WCF em seu próprio thread (o thread de trabalho do ASP.NET) e o WCF usa outro thread para processar a solicitação. O WCF mantém-se no thread de trabalho do ASP.NET até concluir seu processamento. Isso leva ao processamento síncrono de solicitações. O processamento de solicitações assincronamente permite maior escalabilidade porque reduz o número de threads necessários para processar uma solicitação – o WCF não mantém o thread ASP.NET durante o processamento da solicitação. O uso do comportamento assíncrono não é recomendado para computadores que executam o IIS 6,0 porque não há nenhuma maneira de limitar as solicitações de entrada que abrem o servidor para ataques de dos ( *negação de serviço* ). A partir do IIS 7,0, foi introduzido um limite de solicitação simultâneo: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu`. Com essa nova limitação, é seguro usar o processamento assíncrono.  Por padrão, no IIS 7,0, o manipulador assíncrono e o módulo são registrados. Se isso tiver sido desativado, você poderá habilitar manualmente o processamento assíncrono de solicitações no arquivo Web. config do seu aplicativo. As configurações usadas dependem de sua `aspNetCompatibilityEnabled` configuração. Se você tiver `aspNetCompatibilityEnabled` definido como `false`, configure o `System.ServiceModel.Activation.ServiceHttpModule` conforme mostrado no trecho de configuração a seguir.  
+ Por padrão, as mensagens enviadas para um serviço WCF hospedados no IIS 6,0 e versões anteriores são processadas de maneira síncrona. ASP.NET chama o WCF em seu próprio thread (o thread de trabalho do ASP.NET) e o WCF usa outro thread para processar a solicitação. O WCF mantém-se no thread de trabalho do ASP.NET até concluir seu processamento. Isso leva ao processamento síncrono de solicitações. O processamento de solicitações assincronamente permite maior escalabilidade porque reduz o número de threads necessários para processar uma solicitação – o WCF não mantém o thread ASP.NET durante o processamento da solicitação. O uso do comportamento assíncrono não é recomendado para computadores que executam o IIS 6,0 porque não há nenhuma maneira de limitar as solicitações de entrada que abrem o servidor para ataques de dos ( *negação de serviço* ). A partir do IIS 7,0, foi introduzido um limite de solicitação simultâneo: `[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ASP.NET\2.0.50727.0]"MaxConcurrentRequestsPerCpu`. Com essa nova limitação, é seguro usar o processamento assíncrono.  Por padrão, no IIS 7,0, o manipulador assíncrono e o módulo são registrados. Se isso tiver sido desativado, você poderá habilitar manualmente o processamento assíncrono de solicitações no arquivo Web. config do seu aplicativo. As configurações usadas dependem de sua configuração de `aspNetCompatibilityEnabled`. Se você tiver `aspNetCompatibilityEnabled` definido como `false`, configure o `System.ServiceModel.Activation.ServiceHttpModule` conforme mostrado no trecho de configuração a seguir.  
   
 ```xml  
 <system.serviceModel>  
@@ -81,7 +81,7 @@ Este tópico descreve algumas práticas recomendadas para hospedar serviços de 
   </system.webServer>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Exemplos de Hospedagem de serviço](../samples/hosting.md)
-- [Recursos de hospedagem do Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkId=201276)
+- [Recursos de hospedagem do Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

@@ -5,49 +5,49 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
-ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fccdd021e392e6c37615a9091ce13f0e94167246
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62038578"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212000"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Mensagem de segurança com um cliente anônimo
 
-O cenário a seguir mostra um cliente e serviço protegidos pela segurança de mensagem do Windows Communication Foundation (WCF). Uma meta de design é usar segurança de mensagem em vez de segurança de transporte, para que no futuro ele pode dar suporte a um modelo mais avançado baseado em declarações. Para obter mais informações sobre como usar rica de declarações para autorização, consulte [Gerenciando reivindicações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
+O cenário a seguir mostra um cliente e um serviço protegido pela segurança de mensagem do Windows Communication Foundation (WCF). Uma meta de design é usar a segurança de mensagens em vez da segurança de transporte, para que, no futuro, ela possa dar suporte a um modelo mais rico baseado em declarações. Para obter mais informações sobre como usar declarações avançadas para autorização, consulte [Gerenciando declarações e autorização com o modelo de identidade](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).
 
-Para um aplicativo de exemplo, consulte [mensagem de segurança anônima](../../../../docs/framework/wcf/samples/message-security-anonymous.md).
+Para um aplicativo de exemplo, consulte [segurança da mensagem anônimo](../../../../docs/framework/wcf/samples/message-security-anonymous.md).
 
-![Segurança com um cliente anônimo da mensagem](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
+![Segurança de mensagem com um cliente anônimo](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 
 |Característica|Descrição|
 |--------------------|-----------------|
 |Modo de segurança|Mensagem|
-|Interoperabilidade|Somente o WCF|
-|Autenticação (servidor)|Negociação inicial exige a autenticação do servidor, mas não a autenticação do cliente|
-|Autenticação (cliente)|Nenhum|
+|Interoperabilidade|Somente WCF|
+|Autenticação (servidor)|A negociação inicial requer autenticação de servidor, mas não autenticação de cliente|
+|Autenticação (cliente)|{1&gt;Nenhum&lt;1}|
 |Integridade|Sim, usando o contexto de segurança compartilhado|
 |Confidencialidade|Sim, usando o contexto de segurança compartilhado|
-|Transporte|HTTP|
+|Transport|HTTP|
 
-## <a name="service"></a>Serviço
+## <a name="service"></a>Service
 
-O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:
+O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:
 
-- Crie um serviço autônomo usando o código sem nenhuma configuração.
+- Crie um serviço autônomo usando o código sem configuração.
 
-- Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.
+- Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.
 
 ### <a name="code"></a>Código
 
-O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem.
+O código a seguir mostra como criar um ponto de extremidade de serviço que usa a segurança de mensagem.
 
 [!code-csharp[C_SecurityScenarios#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#8)]
 [!code-vb[C_SecurityScenarios#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#8)]
 
-### <a name="configuration"></a>Configuração
+### <a name="configuration"></a>Configuração do
 
-A configuração a seguir pode ser usada em vez do código. O elemento de comportamento de serviço é usado para especificar um certificado que é usado para autenticar o serviço ao cliente. O elemento de serviço deve especificar o comportamento usando o `behaviorConfiguration` atributo. O elemento de associação Especifica que o tipo de credencial de cliente `None`, permitindo que os clientes anônimos usar o serviço.
+A configuração a seguir pode ser usada em vez do código. O elemento de comportamento do serviço é usado para especificar um certificado que é usado para autenticar o serviço para o cliente. O elemento de serviço deve especificar o comportamento usando o atributo `behaviorConfiguration`. O elemento Binding especifica que o tipo de credencial do cliente é `None`, permitindo que clientes anônimos usem o serviço.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -90,23 +90,23 @@ A configuração a seguir pode ser usada em vez do código. O elemento de compor
 
 ## <a name="client"></a>Cliente
 
-O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:
+O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:
 
 - Crie um cliente autônomo usando o código (e o código do cliente).
 
-- Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:
+- Crie um cliente que não defina nenhum endereço de ponto de extremidade. Em vez disso, use o construtor do cliente que usa o nome da configuração como um argumento. Por exemplo:
 
     [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
     [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]
 
 ### <a name="code"></a>Código
 
-O código a seguir cria uma instância do cliente. A associação usa segurança de modo de mensagem e o tipo de credencial de cliente é definido como none.
+O código a seguir cria uma instância do cliente. A associação usa a segurança do modo de mensagem e o tipo de credencial do cliente é definido como nenhum.
 
 [!code-csharp[C_SecurityScenarios#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#15)]
 [!code-vb[C_SecurityScenarios#15](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#15)]
 
-### <a name="configuration"></a>Configuração
+### <a name="configuration"></a>Configuração do
 
 O código a seguir configura o cliente.
 
@@ -138,10 +138,10 @@ O código a seguir configura o cliente.
 </configuration>
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Segurança de aplicativos distribuídos](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [Segurança de mensagem anônima](../../../../docs/framework/wcf/samples/message-security-anonymous.md)
 - [Autenticação e identidade de serviço](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

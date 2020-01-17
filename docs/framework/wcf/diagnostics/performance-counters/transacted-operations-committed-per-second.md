@@ -2,19 +2,19 @@
 title: Operações Transacionadas Confirmadas por Segundo
 ms.date: 03/30/2017
 ms.assetid: 7318921b-47c4-4c8c-9fdd-41a92061c53f
-ms.openlocfilehash: 124eae3b36a731ac50a147782b19c87e3adfa7be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b81146516413c4afa9baf9a533797f0867a1b20d
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766370"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163846"
 ---
 # <a name="transacted-operations-committed-per-second"></a>Operações Transacionadas Confirmadas por Segundo
-Nome do contador: Operações transacionadas confirmadas por segundo.  
+Nome do contador: operações transacionadas confirmadas por segundo.  
   
 ## <a name="description"></a>Descrição  
  Número de operações transacionais que foram confirmadas neste serviço em um segundo.  
   
- Esse contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cujo valor é calculado usando a fórmula a seguir.  
+ Este contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), cujo valor é calculado usando a fórmula a seguir.  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)

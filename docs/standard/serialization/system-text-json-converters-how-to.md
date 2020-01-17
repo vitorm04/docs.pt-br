@@ -1,18 +1,21 @@
 ---
 title: Como escrever conversores personalizados para serialização JSON-.NET
 ms.date: 01/10/2020
+no-loc:
+- System.Text.Json
+- Newtonsoft.Json
 helpviewer_keywords:
 - JSON serialization
 - serializing objects
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116716"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76164054"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Como escrever conversores personalizados para serialização JSON (Marshalling) no .NET
 
@@ -285,7 +288,7 @@ O código do conversor no exemplo anterior lê e grava cada propriedade manualme
 
 ## <a name="other-custom-converter-samples"></a>Outras amostras de conversor personalizadas
 
-O artigo [migrar do Newtonsoft. JSON para System. Text. JSON](system-text-json-migrate-from-newtonsoft-how-to.md) contém exemplos adicionais de conversores personalizados.
+O artigo [migrar do Newtonsoft.Json para System.Text.Json](system-text-json-migrate-from-newtonsoft-how-to.md) contém exemplos adicionais de conversores personalizados.
 
 A [pasta de testes de unidade](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/) no código-fonte `System.Text.Json.Serialization` inclui outras amostras de conversores personalizados, como:
 
@@ -300,10 +303,10 @@ Se você precisar criar um conversor que modifique o comportamento de um convers
 ## <a name="additional-resources"></a>Recursos adicionais
 
 * [Código-fonte para conversores internos](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
-* [Suporte a DateTime e DateTimeOffset em System. Text. JSON](../datetime/system-text-json-support.md)
-* [Visão geral de System. Text. JSON](system-text-json-overview.md)
-* [Como usar System. Text. JSON](system-text-json-how-to.md)
-* [Como migrar do Newtonsoft. JSON](system-text-json-migrate-from-newtonsoft-how-to.md)
-* [Referência da API System. Text. JSON](xref:System.Text.Json)
-* [Referência da API System. Text. JSON. Serialization](xref:System.Text.Json.Serialization)
+* [Suporte a DateTime e DateTimeOffset no System.Text.Json](../datetime/system-text-json-support.md)
+* [Visão geral de System.Text.Json](system-text-json-overview.md)
+* [Como usar System.Text.Json](system-text-json-how-to.md)
+* [Como migrar do Newtonsoft.Json](system-text-json-migrate-from-newtonsoft-how-to.md)
+* [referência de API de System.Text.Json](xref:System.Text.Json)
+* [System.Text.Json. Referência de API de serialização](xref:System.Text.Json.Serialization)
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)-->

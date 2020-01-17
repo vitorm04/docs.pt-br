@@ -1,20 +1,20 @@
 ---
-title: 'Serviço: Chamadas por segundo'
+title: 'Serviço: chamadas por segundo'
 ms.date: 03/30/2017
 ms.assetid: 6261d28d-d449-425a-b9fc-a4ee14079134
-ms.openlocfilehash: 5189a78e2655707d165f187e06ac9a60d055eac0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: be5d77169a71d6f44205a1150da5239eceff7d9c
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773302"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163887"
 ---
-# <a name="service-calls-per-second"></a>Serviço: Chamadas por segundo
-Nome do contador: Chamadas por segundo.  
+# <a name="service-calls-per-second"></a>Serviço: chamadas por segundo
+Nome do contador: chamadas por segundo.  
   
 ## <a name="description"></a>Descrição  
  Número de chamadas para esse serviço em um segundo.  
   
- Esse contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), cujo valor é calculado usando a fórmula a seguir.  
+ Este contador é do tipo de contador de desempenho [PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10)), cujo valor é calculado usando a fórmula a seguir.  
   
- (N 1 - N 0) / ((1 de D -D 0) / F) em que o numerador (N) representa o número de operações executadas durante o último intervalo de amostragem, representa o denominador (D) o número de tiques decorrido desde o último intervalo de amostragem, e F é a frequência de tiques.
+ (N 1-N 0)/((D 1-D 0)/F) em que o numerador (N) representa o número de operações executadas durante o último intervalo de amostragem, o denominador (D) representa o número de tiques decorridos durante o último intervalo de amostragem e F é a frequência das tiques.

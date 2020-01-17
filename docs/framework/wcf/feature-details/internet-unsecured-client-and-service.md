@@ -5,34 +5,34 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 5ceda5b9c89fdd1770c6573b132c449997fb62b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a84b32664c16dad48dd415e430134c5fb98303a
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638625"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76211927"
 ---
 # <a name="internet-unsecured-client-and-service"></a>Serviço e cliente de internet desprotegido
-A ilustração a seguir mostra um exemplo de um público, não segura cliente do Windows Communication Foundation (WCF) e serviço:  
+A ilustração a seguir mostra um exemplo de um cliente e serviço de Windows Communication Foundation (WCF) não seguros e público:  
   
- ![Captura de tela que mostra um cenário de Internet desprotegido](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
+ ![Captura de tela que mostra um cenário de Internet não seguro](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
-|Modo de segurança|Nenhum|  
-|Transporte|HTTP|  
-|Associação|<xref:System.ServiceModel.BasicHttpBinding> no código, ou o [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) elemento na configuração.|  
-|Interoperabilidade|Com os serviços e clientes de serviço Web existentes|  
-|Autenticação|Nenhum|  
-|Integridade|Nenhum|  
-|Confidencialidade|Nenhum|  
+|Modo de segurança|{1&gt;Nenhum&lt;1}|  
+|Transport|HTTP|  
+|Binding|<xref:System.ServiceModel.BasicHttpBinding> no código ou o elemento [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) na configuração.|  
+|Interoperabilidade|Com serviços e clientes de serviços Web existentes|  
+|Autenticação|{1&gt;Nenhum&lt;1}|  
+|Integridade|{1&gt;Nenhum&lt;1}|  
+|Confidencialidade|{1&gt;Nenhum&lt;1}|  
   
-## <a name="service"></a>Serviço  
- O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
+## <a name="service"></a>Service  
+ O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:  
   
-- Crie um serviço autônomo usando o código sem nenhuma configuração.  
+- Crie um serviço autônomo usando o código sem configuração.  
   
-- Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
+- Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
  O código a seguir mostra como criar um ponto de extremidade sem segurança. Por padrão, o <xref:System.ServiceModel.BasicHttpBinding> tem o modo de segurança definido como <xref:System.ServiceModel.BasicHttpSecurityMode.None>.  
@@ -40,8 +40,8 @@ A ilustração a seguir mostra um exemplo de um público, não segura cliente do
  [!code-csharp[C_UnsecuredService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#1)]
  [!code-vb[C_UnsecuredService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#1)]  
   
-### <a name="service-configuration"></a>Configuração de Serviço  
- O código a seguir define o mesmo ponto de extremidade usando a configuração.  
+### <a name="service-configuration"></a>Configuração do serviço  
+ O código a seguir configura o mesmo ponto de extremidade usando a configuração.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -68,11 +68,11 @@ A ilustração a seguir mostra um exemplo de um público, não segura cliente do
 ```  
   
 ## <a name="client"></a>Cliente  
- O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
+ O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:  
   
 - Crie um cliente autônomo usando o código (e o código do cliente).  
   
-- Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:  
+- Crie um cliente que não defina nenhum endereço de ponto de extremidade. Em vez disso, use o construtor do cliente que usa o nome da configuração como um argumento. Por exemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -83,7 +83,7 @@ A ilustração a seguir mostra um exemplo de um público, não segura cliente do
  [!code-csharp[C_UnsecuredClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#1)]
  [!code-vb[C_UnsecuredClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#1)]  
   
-### <a name="client-configuration"></a>Configuração do cliente  
+### <a name="client-configuration"></a>Configuração de cliente  
  O código a seguir configura o cliente.  
   
 ```xml  
@@ -109,8 +109,8 @@ A ilustração a seguir mostra um exemplo de um público, não segura cliente do
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

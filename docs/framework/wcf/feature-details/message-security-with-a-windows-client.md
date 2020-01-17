@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: 36193090349f5b8ddb07ee7c3c6c663621cc6d06
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c1661acf4d4aa2de8b6eca7015c74ba7f80af1
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637845"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76212024"
 ---
 # <a name="message-security-with-a-windows-client"></a>Segurança de mensagem com um cliente do Windows
-Este cenário mostra que um cliente do Windows Communication Foundation (WCF) e o servidor protegido pelo modo de segurança de mensagem. O cliente e o serviço são autenticados usando credenciais do Windows.  
+Esse cenário mostra um cliente Windows Communication Foundation (WCF) e um servidor protegido pelo modo de segurança da mensagem. O cliente e o serviço são autenticados usando as credenciais do Windows.  
   
- ![Segurança com um cliente do Windows da mensagem](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Segurança de mensagem com um cliente Windows](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |Característica|Descrição|  
 |--------------------|-----------------|  
 |Modo de segurança|Mensagem|  
-|Interoperabilidade|Somente o WCF|  
-|Autenticação (servidor)|Autenticação mútua do servidor e cliente|  
-|Autenticação (cliente)|Autenticação mútua do servidor e cliente|  
+|Interoperabilidade|Somente WCF|  
+|Autenticação (servidor)|Autenticação mútua do servidor e do cliente|  
+|Autenticação (cliente)|Autenticação mútua do servidor e do cliente|  
 |Integridade|Sim, usando o contexto de segurança compartilhado|  
 |Confidencialidade|Sim, usando o contexto de segurança compartilhado|  
-|Transporte|NET.TCP|  
-|Associação|<xref:System.ServiceModel.NetTcpBinding>|  
+|Transport|Virtual. Protocol|  
+|Binding|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a>Serviço  
- O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
+## <a name="service"></a>Service  
+ O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:  
   
-- Crie um serviço autônomo usando o código sem nenhuma configuração.  
+- Crie um serviço autônomo usando o código sem configuração.  
   
-- Criar um serviço usando a configuração fornecida, mas não definir nenhum ponto de extremidade.  
+- Crie um serviço usando a configuração fornecida, mas não defina nenhum ponto de extremidade.  
   
 ### <a name="code"></a>Código  
- O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem para estabelecer um contexto de seguro com uma máquina Windows.  
+ O código a seguir mostra como criar um ponto de extremidade de serviço que usa segurança de mensagem para estabelecer um contexto seguro com um computador Windows.  
   
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
-### <a name="configuration"></a>Configuração  
+### <a name="configuration"></a>Configuração do  
  A configuração a seguir pode ser usada em vez do código para configurar o serviço:  
   
 ```xml  
@@ -73,23 +73,23 @@ Este cenário mostra que um cliente do Windows Communication Foundation (WCF) e 
 ```  
   
 ## <a name="client"></a>Cliente  
- O código e a configuração a seguir destinam-se para executar de forma independente. Realize um dos seguintes procedimentos:  
+ O código e a configuração a seguir devem ser executados de forma independente. Siga um destes procedimentos:  
   
 - Crie um cliente autônomo usando o código (e o código do cliente).  
   
-- Crie um cliente que não define os endereços de ponto de extremidade. Em vez disso, use o construtor de cliente que usa o nome da configuração como um argumento. Por exemplo:  
+- Crie um cliente que não defina nenhum endereço de ponto de extremidade. Em vez disso, use o construtor do cliente que usa o nome da configuração como um argumento. Por exemplo:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Código  
- O código a seguir cria um cliente. A associação é a segurança de modo de mensagem e o tipo de credencial de cliente é definido como `Windows`.  
+ O código a seguir cria um cliente. A associação é a segurança do modo de mensagem e o tipo de credencial do cliente é definido como `Windows`.  
   
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
-### <a name="configuration"></a>Configuração  
- A configuração a seguir é usada para definir as propriedades de cliente.  
+### <a name="configuration"></a>Configuração do  
+ A configuração a seguir é usada para definir as propriedades do cliente.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -116,7 +116,7 @@ Este cenário mostra que um cliente do Windows Communication Foundation (WCF) e 
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de segurança](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

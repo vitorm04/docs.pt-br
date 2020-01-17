@@ -2,16 +2,16 @@
 title: Ferramentas da CLI (Interface de Linha de Comando) do .NET Core
 description: Uma visão geral das ferramentas e recursos da CLI (Interface de linha de comando) do .NET Core.
 ms.date: 08/14/2017
-ms.openlocfilehash: b3bffb47ff973bd0da90e3f943e817756e563138
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714145"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163209"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Ferramentas da CLI (Interface de linha de comando) do .NET Core
 
-A CLI (Interface de linha de comando) do .NET Core é uma nova cadeia de ferramentas de plataforma cruzada para desenvolvimento de aplicativos em .NET Core. A CLI é a base na qual outras ferramentas de nível superior, como IDEs (Ambientes de Desenvolvimento Integrado), editores e orquestradores de build, se baseiam.
+A CLI (interface de linha de comando) do .NET Core é uma ferramentas de plataforma cruzada para o desenvolvimento de aplicativos .NET. A CLI é uma base sobre a qual as ferramentas de nível superior, como IDEs (ambientes de desenvolvimento integrado), editores e orquestradores de compilação, podem ser REST.
 
 ## <a name="installation"></a>Instalação
 

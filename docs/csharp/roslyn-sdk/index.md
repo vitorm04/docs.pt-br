@@ -3,12 +3,12 @@ title: O SDK do .NET Compiler Platform (APIs do Roslyn)
 description: Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 3a202d977237ce716e3f8c0cf906894efd02196d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346948"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163131"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>O SDK do .NET Compiler Platform
 
@@ -21,7 +21,7 @@ O SDK do .NET Compiler Platform diminui drasticamente a barreira de entrada para
 
 O SDK do .NET Compiler Platform permite que você crie ***analisadores*** e ***correções de código*** que encontram e corrigem os erros de codificação. Os ***analisadores*** entendem a sintaxe e a estrutura do código e detectam práticas que devem ser corrigidas. As ***correções de código*** fornecem uma ou mais correções sugeridas para tratar erros de codificação encontrados pelos analisadores. Normalmente, um analisador e as correções de código associadas são empacotados em um único projeto.
 
-Os analisadores e as correções de código usam a análise estática para entender o código. Eles não executam o código ou fornecem outros benefícios de teste. No entanto, eles podem destacar práticas que frequentemente levam a erros, códigos de difícil manutenção ou validação de diretrizes padrão.
+Os analisadores e as correções de código usam a análise estática para entender o código. Eles não executam o código ou fornecem outros benefícios de teste. No entanto, eles podem destacar práticas que geralmente levam a bugs, código não sustentável ou violação de diretriz padrão.
 
 O SDK do .NET Compiler Platform fornece um único conjunto de APIs que permitem que você examine e compreenda uma base de código C# ou Visual Basic. Uma vez que você pode usar essa base de código única, é possível escrever analisadores e correções de código com mais facilidade aproveitando as APIs de análise de sintaxe e de semântica fornecidas pelo SDK do .NET Compiler Platform. Liberado da enorme tarefa de replicar a análise feita pelo compilador, você pode se concentrar na tarefa de localizar e corrigir os erros de codificação comuns no projeto ou na biblioteca.
 

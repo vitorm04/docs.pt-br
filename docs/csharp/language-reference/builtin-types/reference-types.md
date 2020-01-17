@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973009"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163092"
 ---
 # <a name="built-in-reference-types-c-reference"></a>Tipos de referência internos (Referência de C#)
 
@@ -33,7 +33,7 @@ O C# tem um número de tipos de referência internos. Eles têm palavras-chave o
 
 ## <a name="the-object-type"></a>O tipo de objeto
 
-O tipo `object` é um alias de <xref:System.Object?displayProperty=nameWithType> no .NET. No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object?displayProperty=nameWithType>. Você pode atribuir valores de qualquer tipo a variáveis do tipo `object`. Qualquer variável `object` pode ser atribuída ao seu valor padrão usando o literal `null`. Quando uma variável de um tipo de valor é convertida para um objeto, ela é chamada de *boxed*. Quando uma variável do objeto do tipo é convertida para um tipo de valor, ela é chamada de *unboxed*. Para obter mais informações, consulte [Boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
+O tipo `object` é um alias de <xref:System.Object?displayProperty=nameWithType> no .NET. No sistema de tipos unificado do C#, todos os tipos, predefinidos e definidos pelo usuário, tipos de referência e tipos de valor, herdam direta ou indiretamente de <xref:System.Object?displayProperty=nameWithType>. Você pode atribuir valores de qualquer tipo a variáveis do tipo `object`. Qualquer variável `object` pode ser atribuída ao seu valor padrão usando o literal `null`. Quando uma variável de um tipo de valor é convertida para um objeto, ela é chamada de *boxed*. Quando uma variável do tipo `object` é convertida em um tipo de valor, ela é considerada *desemoldurada*. Para obter mais informações, consulte [Conversões boxing e unboxing](../../programming-guide/types/boxing-and-unboxing.md). 
 
 ## <a name="the-string-type"></a>O tipo de cadeia de caracteres
 
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-O [operador](../operators/member-access-operators.md#indexer-operator-) `[]` pode ser usado para acesso somente leitura a caracteres individuais de um `string`. Os valores válidos começam em `0` e devem ser menores do que o comprimento do `string`:
+O [operador](../operators/member-access-operators.md#indexer-operator-) `[]` pode ser usado para acesso somente leitura a caracteres individuais de uma cadeia de caracteres. Os valores de índice válidos começam em `0` e devem ser menores que o comprimento da cadeia de caracteres:
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-De maneira semelhante, o operador `[]` também pode ser usado para iterar em cada caractere em um `string`:
+De maneira semelhante, o operador de `[]` também pode ser usado para iterar em cada caractere em uma cadeia de caracteres:
 
 ```csharp-interactive
 string str = "test";
@@ -168,7 +168,7 @@ O exemplo a seguir usa `dynamic` em várias declarações. O método `Main` tamb
 
 [!code-csharp[csrefKeywordsTypes#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic2.cs#25)]
 
-### <a name="see-also"></a>Consulte também
+### <a name="see-also"></a>Veja também
 
 - [Referência de C#](../index.md)
 - [Palavras-chave do C#](../keywords/index.md)
