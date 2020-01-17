@@ -4,24 +4,80 @@ description: Lista as alterações significativas em ASP.NET Core.
 ms.date: 01/10/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 815dfbc217cc486659988dd00840484d6ec03276
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 261788722e09a6fa5b9427b5a220b69a2367b751
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937258"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116580"
 ---
-# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="f2a37-103">ASP.NET Core alterações significativas</span><span class="sxs-lookup"><span data-stu-id="f2a37-103">ASP.NET Core breaking changes</span></span>
+# <a name="aspnet-core-breaking-changes"></a><span data-ttu-id="f6397-103">ASP.NET Core alterações significativas</span><span class="sxs-lookup"><span data-stu-id="f6397-103">ASP.NET Core breaking changes</span></span>
 
-<span data-ttu-id="f2a37-104">A seguir está uma lista de ASP.NET Core alterações significativas por versão ASP.NET Core.</span><span class="sxs-lookup"><span data-stu-id="f2a37-104">The following is a list of ASP.NET Core breaking changes by ASP.NET Core version.</span></span> <span data-ttu-id="f2a37-105">ASP.NET Core fornece os recursos de desenvolvimento de aplicativo Web usados pelo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="f2a37-105">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
+<span data-ttu-id="f6397-104">ASP.NET Core fornece os recursos de desenvolvimento de aplicativo Web usados pelo .NET Core.</span><span class="sxs-lookup"><span data-stu-id="f6397-104">ASP.NET Core provides the web app development features used by .NET Core.</span></span>
 
-## <a name="aspnet-core-31"></a><span data-ttu-id="f2a37-106">ASP.NET Core 3,1</span><span class="sxs-lookup"><span data-stu-id="f2a37-106">ASP.NET Core 3.1</span></span>
+<span data-ttu-id="f6397-105">As seguintes alterações significativas estão documentadas nesta página:</span><span class="sxs-lookup"><span data-stu-id="f6397-105">The following breaking changes are documented on this page:</span></span>
+
+- [<span data-ttu-id="f6397-106">HTTP: navegador SameSite alterações de impacto na autenticação</span><span class="sxs-lookup"><span data-stu-id="f6397-106">HTTP: Browser SameSite changes impact authentication</span></span>](#http-browser-samesite-changes-impact-authentication)
+- [<span data-ttu-id="f6397-107">APIs antifalsificação obsoletas, CORS, diagnóstico, MVC e roteamento removidas</span><span class="sxs-lookup"><span data-stu-id="f6397-107">Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed</span></span>](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
+- [<span data-ttu-id="f6397-108">Autenticação: Google + substituição</span><span class="sxs-lookup"><span data-stu-id="f6397-108">Authentication: Google+ deprecation</span></span>](#authentication-google-deprecated-and-replaced)
+- [<span data-ttu-id="f6397-109">Autenticação: Propriedade HttpContext. Authentication removida</span><span class="sxs-lookup"><span data-stu-id="f6397-109">Authentication: HttpContext.Authentication property removed</span></span>](#authentication-httpcontextauthentication-property-removed)
+- [<span data-ttu-id="f6397-110">Autenticação: tipos Newtonsoft. JSON substituídos</span><span class="sxs-lookup"><span data-stu-id="f6397-110">Authentication: Newtonsoft.Json types replaced</span></span>](#authentication-newtonsoftjson-types-replaced)
+- [<span data-ttu-id="f6397-111">Autenticação: assinatura OAuthHandler ExchangeCodeAsync alterada</span><span class="sxs-lookup"><span data-stu-id="f6397-111">Authentication: OAuthHandler ExchangeCodeAsync signature changed</span></span>](#authentication-oauthhandler-exchangecodeasync-signature-changed)
+- [<span data-ttu-id="f6397-112">Autorização: sobrecarga de addautoria movida para um assembly diferente</span><span class="sxs-lookup"><span data-stu-id="f6397-112">Authorization: AddAuthorization overload moved to different assembly</span></span>](#authorization-addauthorization-overload-moved-to-different-assembly)
+- [<span data-ttu-id="f6397-113">Autorização: IAllowAnonymous removido de AuthorizationFilterContext. Filters</span><span class="sxs-lookup"><span data-stu-id="f6397-113">Authorization: IAllowAnonymous removed from AuthorizationFilterContext.Filters</span></span>](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
+- [<span data-ttu-id="f6397-114">Autorização: implementações de IAuthorizationPolicyProvider exigem novo método</span><span class="sxs-lookup"><span data-stu-id="f6397-114">Authorization: IAuthorizationPolicyProvider implementations require new method</span></span>](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [<span data-ttu-id="f6397-115">Caching: Propriedade CompactOnMemoryPressure removida</span><span class="sxs-lookup"><span data-stu-id="f6397-115">Caching: CompactOnMemoryPressure property removed</span></span>](#caching-compactonmemorypressure-property-removed)
+- [<span data-ttu-id="f6397-116">Caching: o Microsoft. Extensions. Caching. SqlServer usa o novo pacote SqlClient</span><span class="sxs-lookup"><span data-stu-id="f6397-116">Caching: Microsoft.Extensions.Caching.SqlServer uses new SqlClient package</span></span>](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
+- [<span data-ttu-id="f6397-117">Caching: tipos de ResponseCaching "pubternal" alterados para interno</span><span class="sxs-lookup"><span data-stu-id="f6397-117">Caching: ResponseCaching "pubternal" types changed to internal</span></span>](#caching-responsecaching-pubternal-types-changed-to-internal)
+- [<span data-ttu-id="f6397-118">Proteção de dados: dataprotection. AzureStorage usa novas APIs de armazenamento do Azure</span><span class="sxs-lookup"><span data-stu-id="f6397-118">Data Protection: DataProtection.AzureStorage uses new Azure Storage APIs</span></span>](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [<span data-ttu-id="f6397-119">Hospedagem: AspNetCoreModule v1 removido do pacote de hospedagem do Windows</span><span class="sxs-lookup"><span data-stu-id="f6397-119">Hosting: AspNetCoreModule V1 removed from Windows Hosting Bundle</span></span>](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
+- [<span data-ttu-id="f6397-120">Hospedagem: host genérico restringe injeção de construtor de inicialização</span><span class="sxs-lookup"><span data-stu-id="f6397-120">Hosting: Generic host restricts Startup constructor injection</span></span>](#hosting-generic-host-restricts-startup-constructor-injection)
+- [<span data-ttu-id="f6397-121">Hospedagem: redirecionamento de HTTPS habilitado para aplicativos fora do processo do IIS</span><span class="sxs-lookup"><span data-stu-id="f6397-121">Hosting: HTTPS redirection enabled for IIS out-of-process apps</span></span>](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
+- [<span data-ttu-id="f6397-122">Hospedagem: tipos IHostingEnvironment e IApplicationLifetime substituídos</span><span class="sxs-lookup"><span data-stu-id="f6397-122">Hosting: IHostingEnvironment and IApplicationLifetime types replaced</span></span>](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
+- [<span data-ttu-id="f6397-123">Hospedagem: objectpoolprovider removido de dependências WebHostBuilder</span><span class="sxs-lookup"><span data-stu-id="f6397-123">Hosting: ObjectPoolProvider removed from WebHostBuilder dependencies</span></span>](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [<span data-ttu-id="f6397-124">HTTP: extensibilidade defaulthttpcontext removida</span><span class="sxs-lookup"><span data-stu-id="f6397-124">HTTP: DefaultHttpContext extensibility removed</span></span>](#http-defaulthttpcontext-extensibility-removed)
+- [<span data-ttu-id="f6397-125">Campos HTTP: Headernames alterados para static readonly</span><span class="sxs-lookup"><span data-stu-id="f6397-125">HTTP: HeaderNames fields changed to static readonly</span></span>](#http-headernames-constants-changed-to-static-readonly)
+- [<span data-ttu-id="f6397-126">HTTP: alterações de infraestrutura de corpo de resposta</span><span class="sxs-lookup"><span data-stu-id="f6397-126">HTTP: Response body infrastructure changes</span></span>](#http-response-body-infrastructure-changes)
+- [<span data-ttu-id="f6397-127">HTTP: alguns SameSite de cookie foram alterados valores padrão</span><span class="sxs-lookup"><span data-stu-id="f6397-127">HTTP: Some cookie SameSite default values changed</span></span>](#http-some-cookie-samesite-defaults-changed-to-none)
+- [<span data-ttu-id="f6397-128">HTTP: e/s síncrona desabilitada por padrão</span><span class="sxs-lookup"><span data-stu-id="f6397-128">HTTP: Synchronous IO disabled by default</span></span>](#http-synchronous-io-disabled-in-all-servers)
+- [<span data-ttu-id="f6397-129">Identidade: sobrecarga do método AddDefaultUI removida</span><span class="sxs-lookup"><span data-stu-id="f6397-129">Identity: AddDefaultUI method overload removed</span></span>](#identity-adddefaultui-method-overload-removed)
+- [<span data-ttu-id="f6397-130">Identidade: alteração da versão de inicialização da interface do usuário</span><span class="sxs-lookup"><span data-stu-id="f6397-130">Identity: UI Bootstrap version change</span></span>](#identity-default-bootstrap-version-of-ui-changed)
+- [<span data-ttu-id="f6397-131">Identidade: o SignInAsync gera uma exceção para a identidade não autenticada</span><span class="sxs-lookup"><span data-stu-id="f6397-131">Identity: SignInAsync throws exception for unauthenticated identity</span></span>](#identity-signinasync-throws-exception-for-unauthenticated-identity)
+- [<span data-ttu-id="f6397-132">Identity: o Construtor SignInManager aceita o novo parâmetro</span><span class="sxs-lookup"><span data-stu-id="f6397-132">Identity: SignInManager constructor accepts new parameter</span></span>](#identity-signinmanager-constructor-accepts-new-parameter)
+- [<span data-ttu-id="f6397-133">Identidade: a interface do usuário usa o recurso de ativos da Web estáticos</span><span class="sxs-lookup"><span data-stu-id="f6397-133">Identity: UI uses static web assets feature</span></span>](#identity-ui-uses-static-web-assets-feature)
+- [<span data-ttu-id="f6397-134">Kestrel: adaptadores de conexão removidos</span><span class="sxs-lookup"><span data-stu-id="f6397-134">Kestrel: Connection adapters removed</span></span>](#kestrel-connection-adapters-removed)
+- [<span data-ttu-id="f6397-135">Kestrel: assembly HTTPS vazio removido</span><span class="sxs-lookup"><span data-stu-id="f6397-135">Kestrel: Empty HTTPS assembly removed</span></span>](#kestrel-empty-https-assembly-removed)
+- [<span data-ttu-id="f6397-136">Kestrel: Solicitar cabeçalhos de trailer movidos para nova coleção</span><span class="sxs-lookup"><span data-stu-id="f6397-136">Kestrel: Request trailer headers moved to new collection</span></span>](#kestrel-request-trailer-headers-moved-to-new-collection)
+- [<span data-ttu-id="f6397-137">Kestrel: alterações na camada de abstração de transporte</span><span class="sxs-lookup"><span data-stu-id="f6397-137">Kestrel: Transport abstraction layer changes</span></span>](#kestrel-transport-abstractions-removed-and-made-public)
+- [<span data-ttu-id="f6397-138">Localização: APIs marcadas como obsoletas</span><span class="sxs-lookup"><span data-stu-id="f6397-138">Localization: APIs marked obsolete</span></span>](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [<span data-ttu-id="f6397-139">Log: classe DebugLogger criada internamente</span><span class="sxs-lookup"><span data-stu-id="f6397-139">Logging: DebugLogger class made internal</span></span>](#logging-debuglogger-class-made-internal)
+- [<span data-ttu-id="f6397-140">MVC: sufixo assíncrono de ação do controlador removido</span><span class="sxs-lookup"><span data-stu-id="f6397-140">MVC: Controller action Async suffix removed</span></span>](#mvc-async-suffix-trimmed-from-controller-action-names)
+- [<span data-ttu-id="f6397-141">MVC: JsonResult movido para Microsoft. AspNetCore. Mvc. Core</span><span class="sxs-lookup"><span data-stu-id="f6397-141">MVC: JsonResult moved to Microsoft.AspNetCore.Mvc.Core</span></span>](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
+- [<span data-ttu-id="f6397-142">MVC: ferramenta de pré-compilação preterida</span><span class="sxs-lookup"><span data-stu-id="f6397-142">MVC: Precompilation tool deprecated</span></span>](#mvc-precompilation-tool-deprecated)
+- [<span data-ttu-id="f6397-143">MVC: tipos alterados para interno</span><span class="sxs-lookup"><span data-stu-id="f6397-143">MVC: Types changed to internal</span></span>](#mvc-pubternal-types-changed-to-internal)
+- [<span data-ttu-id="f6397-144">MVC: Shim de compatibilidade da API Web removido</span><span class="sxs-lookup"><span data-stu-id="f6397-144">MVC: Web API compatibility shim removed</span></span>](#mvc-web-api-compatibility-shim-removed)
+- [<span data-ttu-id="f6397-145">Razor: compilação de tempo de execução movida para um pacote</span><span class="sxs-lookup"><span data-stu-id="f6397-145">Razor: Runtime compilation moved to a package</span></span>](#razor-runtime-compilation-moved-to-a-package)
+- [<span data-ttu-id="f6397-146">Estado da sessão: APIs obsoletas removidas</span><span class="sxs-lookup"><span data-stu-id="f6397-146">Session state: Obsolete APIs removed</span></span>](#session-state-obsolete-apis-removed)
+- [<span data-ttu-id="f6397-147">Estrutura compartilhada: remoção de assembly do Microsoft. AspNetCore. app</span><span class="sxs-lookup"><span data-stu-id="f6397-147">Shared framework: Assembly removal from Microsoft.AspNetCore.App</span></span>](#shared-framework-assemblies-removed-from-microsoftaspnetcoreapp)
+- [<span data-ttu-id="f6397-148">Estrutura compartilhada: Microsoft. AspNetCore. All removidas</span><span class="sxs-lookup"><span data-stu-id="f6397-148">Shared framework: Microsoft.AspNetCore.All removed</span></span>](#shared-framework-removed-microsoftaspnetcoreall)
+- [<span data-ttu-id="f6397-149">Signalr: HandshakeProtocol. SuccessHandshakeData substituído</span><span class="sxs-lookup"><span data-stu-id="f6397-149">SignalR: HandshakeProtocol.SuccessHandshakeData replaced</span></span>](#signalr-handshakeprotocolsuccesshandshakedata-replaced)
+- [<span data-ttu-id="f6397-150">Signalr: métodos HubConnection removidos</span><span class="sxs-lookup"><span data-stu-id="f6397-150">SignalR: HubConnection methods removed</span></span>](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
+- [<span data-ttu-id="f6397-151">Signalr: construtores HubConnectionContext alterados</span><span class="sxs-lookup"><span data-stu-id="f6397-151">SignalR: HubConnectionContext constructors changed</span></span>](#signalr-hubconnectioncontext-constructors-changed)
+- [<span data-ttu-id="f6397-152">Signalr: alteração de nome de pacote de cliente JavaScript</span><span class="sxs-lookup"><span data-stu-id="f6397-152">SignalR: JavaScript client package name change</span></span>](#signalr-javascript-client-package-name-changed)
+- [<span data-ttu-id="f6397-153">Signalr: APIs obsoletas</span><span class="sxs-lookup"><span data-stu-id="f6397-153">SignalR: Obsolete APIs</span></span>](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
+- [<span data-ttu-id="f6397-154">SPAs: SpaServices e Nodeservices marcados como obsoletos</span><span class="sxs-lookup"><span data-stu-id="f6397-154">SPAs: SpaServices and NodeServices marked obsolete</span></span>](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [<span data-ttu-id="f6397-155">SPAs: SpaServices e Nodeservices console agente de fallback alterar padrão</span><span class="sxs-lookup"><span data-stu-id="f6397-155">SPAs: SpaServices and NodeServices console logger fallback default change</span></span>](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [<span data-ttu-id="f6397-156">Estrutura de destino: .NET Framework sem suporte</span><span class="sxs-lookup"><span data-stu-id="f6397-156">Target framework: .NET Framework not supported</span></span>](#target-framework-net-framework-support-dropped)
+
+## <a name="aspnet-core-31"></a><span data-ttu-id="f6397-157">ASP.NET Core 3,1</span><span class="sxs-lookup"><span data-stu-id="f6397-157">ASP.NET Core 3.1</span></span>
 
 [!INCLUDE[HTTP: Browser SameSite changes impact authentication](~/includes/core-changes/aspnetcore/3.1/http-cookie-samesite-authn-impacts.md)]
 
-## <a name="aspnet-core-30"></a><span data-ttu-id="f2a37-107">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="f2a37-107">ASP.NET Core 3.0</span></span>
+***
 
-[!INCLUDE[obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
+## <a name="aspnet-core-30"></a><span data-ttu-id="f6397-158">ASP.NET Core 3,0</span><span class="sxs-lookup"><span data-stu-id="f6397-158">ASP.NET Core 3.0</span></span>
+
+[!INCLUDE[Obsolete Antiforgery, CORS, Diagnostics, MVC, and Routing APIs removed](~/includes/core-changes/aspnetcore/3.0/obsolete-apis-removed.md)]
 
 ***
 
@@ -33,7 +89,7 @@ ms.locfileid: "75937258"
 
 ***
 
-[!INCLUDE[Authentication: Json.NET types replaced](~/includes/core-changes/aspnetcore/3.0/authn-apis-json-types.md)]
+[!INCLUDE[Authentication: Newtonsoft.Json types replaced](~/includes/core-changes/aspnetcore/3.0/authn-apis-json-types.md)]
 
 ***
 
@@ -218,3 +274,5 @@ ms.locfileid: "75937258"
 ***
 
 [!INCLUDE[Target framework: .NET Framework not supported](~/includes/core-changes/aspnetcore/3.0/targetfx-netfx-tfm-support.md)]
+
+***
