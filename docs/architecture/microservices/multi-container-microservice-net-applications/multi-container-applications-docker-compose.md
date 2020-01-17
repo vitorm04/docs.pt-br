@@ -2,12 +2,12 @@
 title: Definindo o aplicativo de vários contêineres com o docker-compose.yml
 description: Como especificar a composição de microsserviços para um aplicativo de vários contêineres com o docker-compose.yml.
 ms.date: 10/02/2018
-ms.openlocfilehash: fa863495c785d89a0b244162e58948ff622e139a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937161"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116545"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definindo o aplicativo de vários contêineres com o docker-compose.yml
 
@@ -82,7 +82,7 @@ services:
     image: redis
 ```
 
-A chave de raiz desse arquivo é services. Sob essa chave, você define os serviços que deseja implantar e executar ao executar o comando `docker-compose up` ou ao implantar por meio do Visual Studio usando esse arquivo docker-compose.yml. Nesse caso, o arquivo docker-compose.yml tem vários serviços definidos, conforme descrito na tabela a seguir.
+A chave de raiz desse arquivo é services. Sob essa chave, você define os serviços que deseja implantar e executar quando executa o comando `docker-compose up` ou quando implanta a partir do Visual Studio usando esse arquivo Docker-Compose. yml. Nesse caso, o arquivo docker-compose.yml tem vários serviços definidos, conforme descrito na tabela a seguir.
 
 | Nome do serviço | Descrição |
 |--------------|-------------|
@@ -129,7 +129,7 @@ Como a cadeia de conexão é definida por uma variável de ambiente, você pode 
 
 - Ele vincula o serviço Web ao serviço sql.data (a instância do SQL Server para o banco de dados do Linux em execução em um contêiner). Ao especificar essa dependência, o contêiner catalog.api não será iniciado até que o contêiner sql.data seja iniciado. Isso é importante porque o catalog.api precisa que o banco de dados do SQL Server esteja em execução. No entanto, esse tipo de dependência de contêiner não é suficiente em muitos casos, porque o Docker verifica apenas no nível de contêiner. Às vezes, o serviço (o SQL Server, neste caso) poderá ainda não estar pronto, portanto, é aconselhável implementar uma lógica de repetição com retirada exponencial no microsserviço cliente. Dessa forma, se um contêiner de dependência não estiver pronto durante um breve período de tempo, o aplicativo continuará resiliente.
 
-- Ele é configurado para permitir o acesso a servidores externos: a configuração extra\_hosts permite que você acesse servidores externos ou computadores fora do host do Docker (ou seja, fora da VM do Linux padrão, que é um host do Docker para desenvolvimento), como uma Instância do SQL Server local em seu computador de desenvolvimento.
+- Ele está configurado para permitir o acesso a servidores externos: a configuração de hosts\_extras permite que você acesse servidores externos ou computadores fora do host do Docker (ou seja, fora da VM do Linux padrão, que é um host do Docker de desenvolvimento), como uma instância de SQL Server local no seu PC de desenvolvimento.
 
 Também há outras configurações mais avançadas do docker-compose.yml que discutiremos nas próximas seções.
 
@@ -141,7 +141,7 @@ Portanto, ao usar o comando docker-compose você pode ter os seguintes principai
 
 #### <a name="development-environments"></a>Ambientes de desenvolvimento
 
-Ao desenvolver aplicativos, é importante ser capaz de executar um aplicativo em um ambiente de desenvolvimento isolado. Você pode usar o comando de CLI docker-compose para criar esse ambiente ou usar o Visual Studio, que usa o docker-compose nos bastidores.
+Ao desenvolver aplicativos, é importante ser capaz de executar um aplicativo em um ambiente de desenvolvimento isolado. Você pode usar o comando Docker-Compose CLI para criar esse ambiente ou o Visual Studio, que usa o Docker-Compose nos bastidores.
 
 O arquivo docker-compose.yml permite que você configure e documente todas as dependências de serviço do seu aplicativo (outros serviços, cache, bancos de dados, filas, etc.). Usando o comando da CLI docker-compose, você pode criar e iniciar um ou mais contêineres para cada dependência com um único comando (docker-compose up).
 
@@ -151,7 +151,7 @@ Os docker-compose.yml são arquivos de configuração interpretados pelo mecanis
 
 Uma parte importante de qualquer processo de CD (implantação contínua) ou CI (integração contínua) são os testes de unidade e testes de integração. Esses testes automatizados exigem um ambiente isolado para que não sejam afetados por usuários ou qualquer outra alteração nos dados do aplicativo.
 
-Com o Docker Compose, você pode criar e destruir esse ambiente isolado facilmente por meio de alguns comandos no prompt de comando ou por meio de scripts, como os comandos a seguir:
+Com o Docker Compose, você pode criar e destruir esse ambiente isolado com muito facilidade em alguns comandos do prompt de comando ou scripts, como os seguintes comandos:
 
 ```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
@@ -201,7 +201,7 @@ Um caso de uso típico é aquele em que você define vários arquivos compose pa
 
 **Figura 6-12**. Vários arquivos docker-compose substituindo valores no arquivo base docker-compose.yml
 
-Você pode combinar vários arquivos Docker-Compose*. yml para lidar com ambientes diferentes. Você inicia com o arquivo base docker-compose.yml. Esse arquivo base deve conter as definições de configuração base ou estáticas que não se alteram de acordo com o ambiente. Por exemplo, o eShopOnContainers tem o arquivo docker-compose.yml a seguir (simplificado com menos serviços) como o arquivo base.
+Você pode combinar vários arquivos Docker-Compose*. yml para lidar com ambientes diferentes. Você inicia com o arquivo base docker-compose.yml. Esse arquivo base deve conter as definições de configuração base ou estáticas que não se alteram de acordo com o ambiente. Por exemplo, o eShopOnContainers tem o seguinte arquivo Docker-Compose. yml (simplificado com menos serviços) que o arquivo base.
 
 ```yml
 #docker-compose.yml (Base)
@@ -390,7 +390,7 @@ Neste exemplo, a configuração de substituição de desenvolvimento expõe algu
 
 Quando você executa `docker-compose up` (ou o inicia no Visual Studio), o comando lerá as substituições automaticamente como se estivesse mesclando os dois arquivos.
 
-Suponha que você deseja outro arquivo do Compose para o ambiente de produção, com valores de configuração, de portas ou de cadeias de conexão diferentes. Você pode criar outro arquivo de substituição, como um arquivo chamado `docker-compose.prod.yml`, com diferentes configurações e variáveis de ambiente. Esse arquivo poderá ser armazenado em outro repositório GIT ou gerenciado e protegido por uma equipe diferente.
+Suponha que você deseja outro arquivo de composição para o ambiente de produção, com valores de configuração, portas ou cadeias de conexão diferentes. Você pode criar outro arquivo de substituição, como um arquivo chamado `docker-compose.prod.yml`, com diferentes configurações e variáveis de ambiente. Esse arquivo poderá ser armazenado em outro repositório GIT ou gerenciado e protegido por uma equipe diferente.
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>Como implantar com um arquivo de substituição específico
 
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 O docker-compose espera que cada linha de um arquivo .env esteja no formato \<variável\>=\<valor\>.
 
-Observe que os valores definidos no ambiente do runtime sempre substituem os valores definidos no arquivo .env. De maneira semelhante, os valores passados por meio de argumentos de linha de comando também substituem os valores padrão definidos no arquivo .env.
+Os valores definidos no ambiente de tempo de execução sempre substituem os valores definidos dentro do arquivo. env. De forma semelhante, os valores passados por meio de argumentos de linha de comando também substituem os valores padrão definidos no arquivo. env.
 
 #### <a name="additional-resources"></a>Recursos adicionais
 

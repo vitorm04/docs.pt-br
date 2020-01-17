@@ -4,12 +4,12 @@ description: Projetar aplicativos Web modernos com o ASP.NET Core e o Azure | de
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: efb57b4290825be9f21c61c8dee5af073d264d3a
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 7bc30db084f361e6c4654b89e69230b379b0136c
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899699"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116536"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Desenvolver aplicativos ASP.NET Core MVC
 
@@ -26,15 +26,15 @@ Ao criar um aplicativo ASP.NET Core, você deve ter um plano em mente para o tip
 
 ### <a name="why-razor-pages"></a>Por que usar Razor Pages?
 
-As Razor Pages são a abordagem padrão para novos aplicativos Web no Visual Studio. Elas oferecem uma maneira mais simples de criar recursos de aplicativo baseados em página, como formulários que não são de SPA. Com controladores e exibições, era comum que os aplicativos tivessem controladores muito grandes que funcionavam com muitas dependências e modelos de exibição diferentes e retornavam várias exibições. O resultado disso era muita complexidade e, geralmente, controladores que não seguiam o Princípio da Responsabilidade Única ou os Princípios de Aberto/Fechado com eficiência. As Razor Pages resolvem esse problema encapsulando a lógica do lado do servidor para uma determinada "página" lógica em um aplicativo Web com sua marcação Razor. Uma Razor Page sem nenhuma lógica do lado do servidor pode consistir simplesmente em um arquivo Razor (por exemplo, "Index.cshtml"). No entanto, a maioria das Razor Pages menos triviais têm uma classe de modelo de página associada, que, por convenção, tem o mesmo nome que o arquivo do Razor, com uma extensão ".cs" (por exemplo, "Index.cshtml.cs").
+As Razor Pages são a abordagem padrão para novos aplicativos Web no Visual Studio. Elas oferecem uma maneira mais simples de criar recursos de aplicativo baseados em página, como formulários que não são de SPA. Com controladores e exibições, era comum que os aplicativos tivessem controladores muito grandes que funcionavam com muitas dependências e modelos de exibição diferentes e retornavam várias exibições. Isso resultou em muita complexidade e, muitas vezes, resultou em controladores que não seguiram o princípio de responsabilidade única ou princípios abertos/fechados com eficiência. As Razor Pages resolvem esse problema encapsulando a lógica do lado do servidor para uma determinada "página" lógica em um aplicativo Web com sua marcação Razor. Uma Razor Page sem nenhuma lógica do lado do servidor pode consistir simplesmente em um arquivo Razor (por exemplo, "Index.cshtml"). No entanto, a maioria das Razor Pages menos triviais têm uma classe de modelo de página associada, que, por convenção, tem o mesmo nome que o arquivo do Razor, com uma extensão ".cs" (por exemplo, "Index.cshtml.cs").
 
 O modelo de página de uma Razor Page combina as responsabilidades de um controlador MVC e de um viewmodel. Em vez de manipular as solicitações com métodos de ação do controlador, são executados manipuladores de modelo de página, como "OnGet()", renderizando suas próprias páginas associadas por padrão. As Razor Pages simplificam o processo de criação de páginas individuais em um aplicativo ASP.NET Core, fornecendo ainda todos os recursos de arquiteturas ASP.NET Core MVC. Elas são uma boa opção padrão para a nova funcionalidade baseada em página.
 
 ### <a name="when-to-use-mvc"></a>Quando usar o MVC
 
-Se você estiver criando APIs Web, o padrão MVC fará mais sentido do que tentar usar Razor Pages. Se o projeto pretender expor apenas pontos de extremidade de API Web, o ideal será começar com o modelo de projeto de API Web, mas caso contrário, será fácil adicionar controladores e pontos de extremidade de API associados a qualquer aplicativo ASP.NET Core. Se estiver migrando um aplicativo ASP.NET MVC 5 existente ou anterior para o ASP.NET Core MVC e desejar fazê-lo com o mínimo de esforço, você também deverá usar a abordagem do MVC com base no modo de exibição. Depois de fazer a migração inicial, você poderá avaliar se faz sentido adotar as Razor Pages para os novos recursos ou até mesmo como uma migração em grande escala.
+Se você estiver criando APIs Web, o padrão MVC fará mais sentido do que tentar usar Razor Pages. Se o seu projeto apenas expor pontos de extremidade da API Web, você deve começar a usar o modelo de projeto de API Web. Caso contrário, é fácil adicionar controladores e pontos de extremidade de API associados a qualquer aplicativo ASP.NET Core. Use a abordagem MVC baseada em exibição se estiver migrando um aplicativo existente do ASP.NET MVC 5 ou anterior para ASP.NET Core MVC e desejar fazer isso com a menor quantidade de esforço. Depois de fazer a migração inicial, você poderá avaliar se faz sentido adotar as Razor Pages para os novos recursos ou até mesmo como uma migração em grande escala.
 
-Se quiser criar seu aplicativo Web usando Razor Pages ou exibições do MVC, ele terá um desempenho semelhante e incluirá o suporte para injeção de dependência, filtros, model binding e validação, entre outros.
+Independentemente de você optar por criar seu aplicativo Web usando exibições Razor Pages ou MVC, seu aplicativo terá um desempenho semelhante e incluirá suporte para injeção de dependência, filtros, associação de modelo, validação e assim por diante.
 
 ## <a name="mapping-requests-to-responses"></a>Mapeando solicitações para respostas
 
@@ -420,7 +420,7 @@ A maioria das APIs Web deve implementar um sistema de autenticação baseada em 
 
 **Figura 7-4.** Autenticação baseada em token para APIs Web.
 
-Você pode criar seu próprio serviço de autenticação, integrar ao Azure AD e ao OAuth ou implementar um serviço usando uma ferramenta de software livre, como [IdentityServer](https://github.com/IdentityServer).
+Você pode criar seu próprio serviço de autenticação, integrá-lo ao Azure AD e ao OAuth ou implementar um serviço usando uma ferramenta de código-fonte aberto como [IdentityServer](https://github.com/IdentityServer).
 
 #### <a name="custom-security"></a>Segurança personalizada
 
@@ -540,7 +540,7 @@ O DDD também recomenda o uso da Arquitetura Limpa abordada anteriormente, permi
 
 ### <a name="when-should-you-apply-ddd"></a>Quando você deve aplicar o DDD
 
-O DDD é adequado para aplicativos grandes com complexidade significativa de negócios (não apenas técnica). O aplicativo deve exigir o conhecimento de especialistas no domínio. Deve haver um comportamento significativo no próprio modelo de domínio, que representa as regras de negócio e as interações, além de simplesmente armazenar e recuperar o estado atual de vários registros de armazenamentos de dados.
+O DDD é bem adequado para aplicativos grandes com complexidade significativa (não apenas técnica). O aplicativo deve exigir o conhecimento de especialistas no domínio. Deve haver um comportamento significativo no próprio modelo de domínio, que representa as regras de negócio e as interações, além de simplesmente armazenar e recuperar o estado atual de vários registros de armazenamentos de dados.
 
 ### <a name="when-shouldnt-you-apply-ddd"></a>Quando você não deve aplicar o DDD
 
