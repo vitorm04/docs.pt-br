@@ -1,17 +1,17 @@
 ---
-title: 'Ponto de extremidade: Duração de chamada'
+title: 'Ponto de extremidade: duração das chamadas'
 ms.date: 03/30/2017
 ms.assetid: 1aebe748-ad05-4ade-819c-d480379ccfb9
-ms.openlocfilehash: e807d05998be4009ef26de7d6228813fb6f8bde7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed5abfff6560568908951d9337a144b65343be1e
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797313"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163560"
 ---
-# <a name="endpoint-calls-duration"></a><span data-ttu-id="56156-102">Ponto de extremidade: Duração de chamada</span><span class="sxs-lookup"><span data-stu-id="56156-102">Endpoint: Calls Duration</span></span>
-<span data-ttu-id="56156-103">A duração média das chamadas para esse ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="56156-103">The average duration of calls to this endpoint.</span></span>  <span data-ttu-id="56156-104">A duração média é calculada com base na equação: (N1-N0)/(D1-D0).</span><span class="sxs-lookup"><span data-stu-id="56156-104">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
+# <a name="endpoint-calls-duration"></a><span data-ttu-id="bef96-102">Ponto de extremidade: duração das chamadas</span><span class="sxs-lookup"><span data-stu-id="bef96-102">Endpoint: Calls Duration</span></span>
+<span data-ttu-id="bef96-103">A duração média de chamadas para este ponto de extremidade.</span><span class="sxs-lookup"><span data-stu-id="bef96-103">The average duration of calls to this endpoint.</span></span>  <span data-ttu-id="bef96-104">A duração média é calculada com base nesta equação: (N1-N0)/(D1-D0).</span><span class="sxs-lookup"><span data-stu-id="bef96-104">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56156-105">Consulte também</span><span class="sxs-lookup"><span data-stu-id="56156-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bef96-105">Veja também</span><span class="sxs-lookup"><span data-stu-id="bef96-105">See also</span></span>
 
-- [<span data-ttu-id="56156-106">PERF_COUNTER_TYPE</span><span class="sxs-lookup"><span data-stu-id="56156-106">PERF_COUNTER_TYPE</span></span>](https://go.microsoft.com/fwlink/?LinkID=94649)
+- <span data-ttu-id="bef96-106">[PERF_COUNTER_TYPE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))</span><span class="sxs-lookup"><span data-stu-id="bef96-106">[PERF_COUNTER_TYPE](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))</span></span>
