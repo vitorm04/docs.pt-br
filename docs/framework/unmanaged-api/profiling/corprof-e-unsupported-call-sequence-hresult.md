@@ -6,32 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT [.NET Framework profiling]
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
-ms.openlocfilehash: a0b117949190bcaffc334c208fff6e04a6a2c5bf
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
-ms.translationtype: HT
+ms.openlocfilehash: 0cf3e05a0353a17541ee890f0871d694acac09fd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964496"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116564"
 ---
 # <a name="corprof_e_unsupported_call_sequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
-O CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT foi introduzido na versão .NET Framework 2,0. O .NET Framework 4 retorna esse HRESULT em dois cenários:  
+
+O CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT foi introduzido na versão .NET Framework 2,0. .NET Framework 4 retorna esse HRESULT em dois cenários:  
   
 - Quando um criador de perfil de seqüestro redefine forçosamente o contexto de registro de um thread em um momento arbitrário para que o thread tente acessar as estruturas que estão em um estado inconsistente.  
   
 - Quando um criador de perfil tenta chamar um método informativo que dispara a coleta de lixo de um método de retorno de chamada que proíbe a coleta de lixo.  
   
- Esses dois cenários são discutidos nas seções a seguir.  
+Esses dois cenários são discutidos nas seções a seguir.  
   
 ## <a name="hijacking-profilers"></a>Profileres de seqüestro  
- (Esse cenário é basicamente um problema com os profileres de seqüestro, embora haja casos em que os profileres de não-seqüestro possam ver esse HRESULT.)  
+
+  (Esse cenário é basicamente um problema com os profileres de seqüestro, embora haja casos em que os profileres de não-seqüestro possam ver esse HRESULT.)  
   
- Nesse cenário, um criador de perfil de seqüestro redefine forçosamente o contexto de registro de um thread em um momento arbitrário para que o thread possa inserir o código do criador de perfil ou inserir novamente o Common Language Runtime (CLR) por meio de um método [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) .  
+ Nesse cenário, um criador de perfil de seqüestro redefine forçosamente o contexto de registro de um thread em um momento arbitrário para que o thread possa inserir o código do criador de perfil ou reinserir o Common Language Runtime (CLR) por meio de um método [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) .  
   
- Muitas das IDs que a API de criação de perfil fornece aponta para estruturas de dados no CLR. Muitas chamadas de `ICorProfilerInfo` simplesmente lêem informações dessas estruturas de dados e as transmitem de volta. No entanto, o CLR pode alterar as coisas nessas estruturas à medida que é executado e pode usar bloqueios para fazer isso. Suponha que o CLR já esteja mantendo (ou tentando adquirir) um bloqueio no momento em que o criador de perfil seqüestrar o thread. Se o thread inserir novamente o CLR e tentar obter mais bloqueios ou inspecionar estruturas que estavam no processo de ser modificado, essas estruturas poderão estar em um estado inconsistente. Deadlocks e violações de acesso podem ocorrer facilmente nessas situações.  
+ Muitas das IDs que a API de criação de perfil fornece aponta para estruturas de dados no CLR. Muitas chamadas de `ICorProfilerInfo` simplesmente lêem informações dessas estruturas de dados e as transmitem de volta. No entanto, o CLR pode alterar as coisas nessas estruturas à medida que é executado e pode usar bloqueios para fazer isso. Suponha que o CLR já esteja mantendo (ou tentando adquirir) um bloqueio no momento em que o criador de perfil seqüestrar o thread. Se o thread reinserir o CLR e tentar obter mais bloqueios ou inspecionar estruturas que estavam no processo de ser modificado, essas estruturas poderão estar em um estado inconsistente. Deadlocks e violações de acesso podem ocorrer facilmente nessas situações.  
   
- Em geral, quando um profiler sem seqüestro executa o código dentro de um método [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e chama um método de `ICorProfilerInfo` com parâmetros válidos, ele não deve ter um deadlock ou receber uma violação de acesso. Por exemplo, o código do criador de perfil que é executado dentro do método [ICorProfilerCallback:: ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) pode solicitar informações sobre a classe chamando o método [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) . O código pode receber um CORPROF_E_DATAINCOMPLETE HRESULT para indicar que as informações estão indisponíveis; no entanto, ele não causará deadlock ou receberá uma violação de acesso. Essa classe de chamadas em `ICorProfilerInfo` é chamada de Synchronous, pois são feitas de um método `ICorProfilerCallback`.  
+ Em geral, quando um profiler sem seqüestro executa o código dentro de um método [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) e chama um método de `ICorProfilerInfo` com parâmetros válidos, ele não deve ter um deadlock ou receber uma violação de acesso. Por exemplo, o código do criador de perfil que é executado dentro do método [ICorProfilerCallback:: ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md) pode solicitar informações sobre a classe chamando o método [ICorProfilerInfo2:: GetClassIDInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getclassidinfo2-method.md) . O código pode receber um CORPROF_E_DATAINCOMPLETE HRESULT para indicar que as informações não estão disponíveis. No entanto, ele não causará deadlock ou receberá uma violação de acesso. Essas chamadas em `ICorProfilerInfo` são consideradas síncronas, pois são feitas de um método `ICorProfilerCallback`.  
   
- No entanto, um thread gerenciado que executa o código que não está dentro de um método de `ICorProfilerCallback` é considerado como tendo uma chamada assíncrona. No .NET Framework versão 1, era difícil determinar o que pode acontecer em uma chamada assíncrona. A chamada pode travar, falhar ou dar uma resposta inválida. O .NET Framework versão 2,0 introduziu algumas verificações simples para ajudá-lo a evitar esse problema. No .NET Framework 2,0, se você chamar uma função de `ICorProfilerInfo` não segura de forma assíncrona, ela falhará com um HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE.  
+ No entanto, um thread gerenciado que executa o código que não está dentro de um método de `ICorProfilerCallback` é considerado como tendo uma chamada assíncrona. No .NET Framework versão 1, era difícil determinar o que pode acontecer em uma chamada assíncrona. A chamada pode travar, falhar ou dar uma resposta inválida. .NET Framework versão 2,0 introduziu algumas verificações simples para ajudá-lo a evitar esse problema. No .NET Framework 2,0, se você chamar uma função de `ICorProfilerInfo` não segura de forma assíncrona, ela falhará com um HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE.  
   
  Em geral, as chamadas assíncronas não são seguras. No entanto, os métodos a seguir são seguros e oferecem suporte especificamente a chamadas assíncronas:  
   
@@ -67,7 +69,7 @@ O CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT foi introduzido na versão .NET Fr
   
 - [DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)  
   
- Para obter informações adicionais, consulte a entrada [por que temos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) no blog da API de criação de perfil do CLR.  
+ Para obter mais informações, consulte a entrada [por que temos CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](https://docs.microsoft.com/archive/blogs/davbr/why-we-have-corprof_e_unsupported_call_sequence) no blog da API de criação de perfil do CLR.  
   
 ## <a name="triggering-garbage-collections"></a>Disparando coleções de lixo  
  Esse cenário envolve um criador de perfil que está sendo executado dentro de um método de retorno de chamada (por exemplo, um dos métodos `ICorProfilerCallback`) que proíbe a coleta de lixo. Se o criador de perfil tentar chamar um método informativo (por exemplo, um método na interface `ICorProfilerInfo`) que possa disparar uma coleta de lixo, o método informativo falhará com uma CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT.  

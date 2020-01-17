@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 8b3ffc885691264548a19f694d159ce07aba7550
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 01f94bcfce97da8c71b1b709baa34c2b7509a5e5
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904680"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116691"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Como migrar de Newtonsoft. JSON para System. Text. JSON
 
@@ -136,17 +136,6 @@ Para implementar a inferência de tipos para propriedades de `object`, crie um c
 ### <a name="maximum-depth"></a>Profundidade máxima
 
 o `Newtonsoft.Json` não tem um limite de profundidade máximo por padrão. Por <xref:System.Text.Json> há um limite padrão de 64 e é configurável por meio da definição de <xref:System.Text.Json.JsonSerializerOptions.MaxDepth?displayProperty=nameWithType>.
-
-### <a name="stack-type-handling"></a>Manipulação de tipo de pilha
-
-No <xref:System.Text.Json>, a ordem do conteúdo de uma pilha é invertida quando ela é serializada. Esse comportamento se aplica aos tipos e à interface e aos tipos definidos pelo usuário a seguir que derivam deles:
-
-* <xref:System.Collections.Stack>
-* <xref:System.Collections.Generic.Stack%601>
-* <xref:System.Collections.Immutable.ImmutableStack%601>
-* <xref:System.Collections.Immutable.IImmutableStack%601>
-
-Um conversor personalizado pode ser implementado para manter o conteúdo da pilha na mesma ordem.
 
 ### <a name="omit-null-value-properties"></a>Omitir Propriedades de valor nulo
 

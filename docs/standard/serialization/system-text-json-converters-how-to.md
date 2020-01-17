@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: 8a2af76ca64359c12fafce6678def14d11d9f029
-ms.sourcegitcommit: dfad244ba549702b649bfef3bb057e33f24a8fb2
+ms.openlocfilehash: 0f8b89ec7d7b1677de085631958b888e154aa4fa
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/12/2020
-ms.locfileid: "75904561"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116716"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>Como escrever conversores personalizados para serialização JSON (Marshalling) no .NET
 
@@ -280,6 +280,8 @@ O conversor pode desserializar o JSON criado usando o mesmo conversor para seria
   }
 ]
 ```
+
+O código do conversor no exemplo anterior lê e grava cada propriedade manualmente. Uma alternativa é chamar `Deserialize` ou `Serialize` fazer parte do trabalho. Para obter um exemplo, consulte [esta postagem de StackOverflow](https://stackoverflow.com/a/59744873/12509023).
 
 ## <a name="other-custom-converter-samples"></a>Outras amostras de conversor personalizadas
 

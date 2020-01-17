@@ -4,12 +4,12 @@ description: Ensina como portar um aplicativo .NET Framework Windows Forms para 
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: b1048c2d725a2bcf8398af1d2d53f40efc36c82e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936963"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116029"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Como portar um aplicativo de área de trabalho Windows Forms para o .NET Core
 
@@ -261,7 +261,7 @@ Veja um exemplo de como o arquivo de projeto de biblioteca de controles do Windo
 
 Como você pode ver, o nó `<OutputType>` foi removido, o que padroniza o compilador para produzir uma biblioteca em vez de um arquivo executável. O `<AssemblyName>` e `<RootNamespace>` foram alterados. Especificamente, o `<RootNamespace>` deve corresponder ao namespace da biblioteca de controles do Windows Forms que está passando pela portabilidade. Por fim, os nós `<Compile>` e `<EmbeddedResource>` foram ajustados para apontar para a pasta da biblioteca de controles de Windows Forms que você está portando.
 
-Em seguida, no projeto principal do .NET Core **MyFormsCore.csproj**, inclua referência à nova biblioteca de controles do Windows Forms do .NET Core. Adicione uma referência com o Visual Studio ou a CLI do .NET Core a partir do diretório **SolutionFolder**:
+Em seguida, no projeto principal do .NET Core **MyFormsCore. csproj** , adicione uma referência à nova biblioteca de controle de Windows Forms do .NET Core. Adicione uma referência com o Visual Studio ou a CLI do .NET Core a partir do diretório **SolutionFolder**:
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj

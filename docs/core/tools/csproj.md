@@ -2,12 +2,12 @@
 title: Adições ao formato csproj para .NET Core
 description: Saiba mais sobre as diferenças entre arquivos existentes e de csproj do .NET Core
 ms.date: 04/08/2019
-ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: da066625b445eca9186acedf06a941564921a6dd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899878"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115843"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Adições ao formato csproj para .NET Core
 
@@ -15,7 +15,7 @@ Este documento descreve as alterações adicionadas aos arquivos de projeto como
 
 ## <a name="implicit-package-references"></a>Referências de pacote implícitas
 
-Os metapacotes são referenciados implicitamente de acordo com as estruturas de destino especificadas na propriedade `<TargetFramework>` ou `<TargetFrameworks>` do arquivo de projeto. `<TargetFrameworks>` será ignorado se `<TargetFramework>` for especificado, independente da ordem. Para obter mais informações, veja [Pacotes, metapacotes e estruturas](../packages.md). 
+Os metapacotes são referenciados implicitamente de acordo com as estruturas de destino especificadas na propriedade `<TargetFramework>` ou `<TargetFrameworks>` do arquivo de projeto. `<TargetFrameworks>` será ignorado se `<TargetFramework>` for especificado, independente da ordem. Para obter mais informações, consulte [pacotes, metapacotes e estruturas](../packages.md). 
 
 ```xml
  <PropertyGroup>
@@ -280,7 +280,7 @@ Uma descrição longa do pacote para exibição de interface do usuário.
 
 ### <a name="description"></a>Descrição
 
-Uma descrição longa para o manifesto do assembly. Se `PackageDescription` não for especificada, essa propriedade também será usada como a descrição do pacote.
+Uma descrição longa para o manifesto do assembly. Se `PackageDescription` não for especificado, essa propriedade também será usada como a descrição do pacote.
 
 ### <a name="copyright"></a>Copyright
 
@@ -366,7 +366,7 @@ Esse valor booliano indica se o processo do pacote deve criar um pacote de orige
 
 ### <a name="istool"></a>IsTool
 
-Especifica se todos os arquivos de saída são copiados para a pasta *tools* em vez da pasta *lib*. Observe que isso é diferente de um `DotNetCliTool` que é especificado pela configuração do `PackageType` no arquivo *.csproj*.
+Especifica se todos os arquivos de saída são copiados para a pasta *tools* em vez da pasta *lib*. Isso é diferente de um `DotNetCliTool`, que é especificado definindo o `PackageType` no arquivo *. csproj* .
 
 ### <a name="repositoryurl"></a>RepositoryUrl
 
@@ -392,7 +392,7 @@ Especifica a versão mínima do cliente NuGet que pode instalar esse pacote, imp
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
 
-Esses valores boolianos especificam se os assemblies de saída do build devem ser empacotados ou não no arquivo *.nupkg*.
+Esse valor booliano especifica se os assemblies de saída da compilação devem ser empacotados no arquivo *. nupkg* ou não.
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 

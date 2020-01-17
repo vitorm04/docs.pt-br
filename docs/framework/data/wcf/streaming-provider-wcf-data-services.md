@@ -10,18 +10,18 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 1eb1267ae0b08d558d5afc41d03270917473a669
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 83f28c50c53281692e1c3c6d55cc55e8d9304ad9
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900916"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116592"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Provedor de streaming (WCF Data Services)
 
 Um serviço de dados pode expor dados de objeto binário grande. Esses dados binários podem representar fluxos de vídeo e áudio, imagens, arquivos de documento ou outros tipos de mídia binária. Quando uma entidade no modelo de dados inclui uma ou mais propriedades binárias, o serviço de dados retorna esses dados binários codificados como base 64 no feed de resposta. Como carregar e serializar dados binários grandes dessa maneira pode afetar o desempenho, o Protocolo Open Data (OData) define um mecanismo para recuperar dados binários independentemente da entidade à qual ele pertence. Isso é feito separando os dados binários da entidade em um ou mais fluxos de dados.
 
-- Recurso de mídia - dados binários que pertencem a uma entidade, como vídeo, áudio, imagem ou outro tipo de fluxo de recurso de mídia.
+- Recursos de mídia-dados binários que pertencem a uma entidade, como um vídeo, áudio, imagem ou outro tipo de fluxo de recursos de mídia.
 
 - Entrada de link de mídia - uma entidade que tem uma referência a um fluxo de recurso de mídia relacionado.
 
@@ -88,14 +88,14 @@ Para obter informações gerais sobre como criar um serviço de dados, consulte 
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>Ativando os fluxos de binário grandes no ambiente de hospedagem
 
-Quando você cria um serviço de dados em um aplicativo Web ASP.NET, o Windows Communication Foundation (WCF) é usado para fornecer a implementação do protocolo HTTP. Por padrão, o WCF limita o tamanho das mensagens HTTP para apenas 65 mil bytes. Para transmitir dados binários grandes para e do serviço de dados, você também deve configurar o aplicativo Web para ativar arquivos binários grandes e usar fluxos de transferência. Para fazer isso, adicione o seguinte ao elemento `<configuration />` do arquivo Web.config do aplicativo:
+Quando você cria um serviço de dados em um aplicativo Web ASP.NET, o Windows Communication Foundation (WCF) é usado para fornecer a implementação do protocolo HTTP. Por padrão, o WCF limita o tamanho das mensagens HTTP a apenas 65 KB. Para transmitir dados binários grandes para e do serviço de dados, você também deve configurar o aplicativo Web para ativar arquivos binários grandes e usar fluxos de transferência. Para fazer isso, adicione o seguinte ao elemento `<configuration />` do arquivo Web.config do aplicativo:
 
 > [!NOTE]
 > Você deve usar um modo de transferência <xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType> para garantir que os dados binários nas mensagens de solicitação e resposta sejam transmitidos e não armazenados em buffer pelo WCF.
 
 Para obter mais informações, consulte [streaming de transferência de mensagens](../../wcf/feature-details/streaming-message-transfer.md) e [cotas de transporte](../../wcf/feature-details/transport-quotas.md).
 
-Por padrão, os Serviços de Informações da Internet (IIS) também limita o tamanho das solicitações a 4 MB. Para permitir que seu serviço de dados receba fluxos maiores que 4 MB ao serem executados no IIS, você também deve definir o atributo `maxRequestLength` do [elemento httpRuntime (esquema de configurações ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) na seção de configuração `<system.web />`, conforme mostrado no exemplo a seguir:
+Por padrão, Serviços de Informações da Internet (IIS) também limita o tamanho das solicitações para 4 MB. Para permitir que o serviço de dados receba fluxos com mais de 4 MB durante a execução no IIS, você também deve definir o atributo `maxRequestLength` do [elemento httpRuntime (esquema de configurações ASP.net)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e1f13641(v=vs.100)) na seção de configuração `<system.web />`, conforme mostrado no exemplo a seguir:
 
 ## <a name="using-data-streams-in-a-client-application"></a>Usando fluxos de dados em um aplicativo cliente
 

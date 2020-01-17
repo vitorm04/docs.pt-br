@@ -1,14 +1,14 @@
 ---
-title: Pacotes, metapacotes e estruturas – .NET Core
+title: Pacotes, metapacotes e estruturas-.NET Core
 description: Aprenda a terminologia para pacotes, metapacotes e estruturas.
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715515"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116060"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pacotes, metapacotes e estruturas
 
@@ -18,7 +18,7 @@ Cada um dos pacotes .NET Core dá suporte à execução de várias implementaç�
 
 ## <a name="packages"></a>Pacotes
 
-O .NET Core é dividido em um conjunto de pacotes, que fornecem tipos de dados primitivos de nível superior, tipos de composição de aplicativos e utilitários comuns. Cada um desses pacotes representa um único assembly de mesmo nome. Por exemplo, [System.Runtime](https://www.nuget.org/packages/System.Runtime) contém System.Runtime.dll. 
+O .NET Core é dividido em um conjunto de pacotes que fornecem primitivos, tipos de dados de nível superior, tipos de composição de aplicativo e utilitários comuns. Cada um desses pacotes representa um único assembly de mesmo nome. Por exemplo, o [pacote System. Runtime](https://www.nuget.org/packages/System.Runtime) contém System. Runtime. dll. 
 
 Há vantagens em definir pacotes de forma refinada:
 
@@ -108,7 +108,7 @@ As duas principais estruturas baseadas em pacote usadas com o .NET Core são:
 
 ### <a name="net-standard"></a>.NET Standard
 
-A estrutura do .NET Standard ([Moniker da Estrutura de Destino](../standard/frameworks.md): `netstandard`) representa as APIs definidas e criadas com base no [.NET Standard](../standard/net-standard.md). Bibliotecas destinadas a execução em vários runtimes devem ter essa estrutura como alvo. Elas terão suporte em qualquer runtime em conformidade com.NET Standard, como .NET Core, .NET Framework e Mono/Xamarin. Cada um desses runtimes dá suporte a um conjunto de versões do .NET Standard, dependendo de quais APIs eles implementam.
+A estrutura do .NET Standard ([Moniker da Estrutura de Destino](../standard/frameworks.md): `netstandard`) representa as APIs definidas e criadas com base no [.NET Standard](../standard/net-standard.md). Bibliotecas destinadas a execução em vários runtimes devem ter essa estrutura como alvo. Eles terão suporte em qualquer tempo de execução compatível com .NET Standard, como .NET Core, .NET Framework e mono/Xamarin. Cada um desses runtimes dá suporte a um conjunto de versões do .NET Standard, dependendo de quais APIs eles implementam.
 
 A estrutura `netstandard` faz referência implícita ao metapacote [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library). Por exemplo, o arquivo de projeto do MSBuild a seguir indica que o projeto é direcionado ao `netstandard1.6`, que faz referência ao metapacote [`NETStandard.Library` versão 1.6](https://www.nuget.org/packages/NETStandard.Library/1.6.0).
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 27a7cbb1490f42811c79778382063980f3828395
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 7b8171e75bbd27a1079f2c6cc1b7aef6400d7419
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964084"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115751"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Construtores estáticos (Guia de Programação em C#)
 Um construtor estático é usado para inicializar quaisquer dados [estáticos](../../language-reference/keywords/static.md) ou para executar uma ação específica que precisa ser executada apenas uma vez. Ele é chamado automaticamente antes que a primeira instância seja criada ou que quaisquer membros estáticos sejam referenciados.  
@@ -30,7 +30,7 @@ Construtores estáticos têm as seguintes propriedades:
 
 - O usuário não tem controle sobre quando o construtor estático é executado no programa.
   
-- Um construtor estático é chamado automaticamente para inicializar a [classe](../../language-reference/keywords/class.md) antes que a primeira instância seja criada ou que quaisquer membros estáticos sejam referenciados. Um construtor estático será executado antes de um construtor de instância. Observe que um construtor de tipo estático é chamado quando um método estático atribuído a um evento ou um delegado é invocado, e não quando ele é atribuído. Se os inicializadores de variável de campo estático estiverem presentes na classe do construtor estático, eles serão executados na ordem textual na qual eles aparecem na declaração de classe imediatamente antes da execução do construtor estático.
+- Um construtor estático é chamado automaticamente para inicializar a [classe](../../language-reference/keywords/class.md) antes que a primeira instância seja criada ou que quaisquer membros estáticos sejam referenciados. Um construtor estático será executado antes de um construtor de instância. O construtor estático de um tipo é chamado quando um método estático atribuído a um evento ou um delegado é invocado e não quando é atribuído. Se os inicializadores de variável de campo estático estiverem presentes na classe do construtor estático, eles serão executados na ordem textual na qual eles aparecem na declaração de classe imediatamente antes da execução do construtor estático.
 
 - Se você não fornecer um construtor estático para inicializar campos estáticos, todos os campos estáticos serão inicializados para seu valor padrão, conforme listado em [valores padrão de C# tipos](../../language-reference/builtin-types/default-values.md).
   
@@ -48,14 +48,14 @@ Construtores estáticos têm as seguintes propriedades:
 - Um uso típico de construtores estáticos é quando a classe está usando um arquivo de log e o construtor é usado para gravar entradas nesse arquivo.  
 - Construtores estáticos também são úteis ao criar classes wrapper para código não gerenciado quando o construtor pode chamar o método `LoadLibrary`.  
 
-- Os construtores estáticos também são um local conveniente para impor verificações em tempo de execução no parâmetro de tipo que não pode ser verificado em tempo de compilação por meio de restrições (restrições de parâmetro de tipo).
+- Construtores estáticos também são um local conveniente para impor verificações em tempo de execução no parâmetro de tipo que não pode ser verificado no tempo de compilação por meio de restrições (restrições de parâmetro de tipo).
 
 ## <a name="example"></a>Exemplo
  Nesse exemplo, a classe `Bus` tem um construtor estático. Quando a primeira instância do `Bus` for criada (`bus1`), o construtor estático será invocado para inicializar a classe. O exemplo de saída verifica se o construtor estático é executado somente uma vez, mesmo se duas instâncias de `Bus` forem criadas e se é executado antes que o construtor da instância seja executado.  
   
  [!code-csharp[csProgGuideObjects#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#15)]
  
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 Para saber mais, confira a seção [Construtores estáticos](~/_csharplang/spec/classes.md#static-constructors) da [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
   
 ## <a name="see-also"></a>Veja também

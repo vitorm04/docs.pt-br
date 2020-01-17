@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4e4dbe085b11751416f69c9fa7f790f18a68f5d7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964368"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115836"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>Operadores bit a bit e de deslocamento (referência do C#)
 
@@ -171,13 +171,13 @@ O exemplo a seguir demonstra esse comportamento:
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
 
 > [!NOTE]
-> Como mostra o exemplo anterior, o resultado de uma operação de deslocamento pode ser diferente de zero, mesmo se o valor do operando à direita for maior que o número de bits no operando à esquerda.
+> Como mostra o exemplo anterior, o resultado de uma operação de deslocamento pode ser diferente de zero, mesmo que o valor do operando à direita seja maior que o número de bits no operando à esquerda.
 
 ## <a name="enumeration-logical-operators"></a>Operadores lógicos de enumeração
 
 Os operadores `~`, `&`, `|`e `^` também têm suporte de qualquer tipo de [Enumeração](../builtin-types/enum.md) . Para operandos do mesmo tipo de enumeração, uma operação lógica é executada nos valores correspondentes do tipo integral subjacente. Por exemplo, para qualquer `x` e `y` de um tipo de enumeração `T` com um tipo subjacente `U`, a expressão `x & y` produz o mesmo resultado que a expressão `(T)((U)x & (U)y)`.
 
-Geralmente, você usa os operadores lógicos bit a bit com um tipo de enumeração definido com o atributo [sinalizadores](xref:System.FlagsAttribute). Para obter mais informações, veja a seção [Tipos de enumeração como sinalizadores de bit](../builtin-types/enum.md#enumeration-types-as-bit-flags) do artigo [Tipos de enumeração](../builtin-types/enum.md).
+Em geral, você usa operadores lógicos de bit a bit com um tipo de enumeração que é definido com o atributo [flags](xref:System.FlagsAttribute) . Para obter mais informações, veja a seção [Tipos de enumeração como sinalizadores de bit](../builtin-types/enum.md#enumeration-types-as-bit-flags) do artigo [Tipos de enumeração](../builtin-types/enum.md).
 
 ## <a name="operator-overloadability"></a>Capacidade de sobrecarga do operador
 
@@ -185,7 +185,7 @@ Um tipo definido pelo usuário pode [sobrecarregar](operator-overloading.md) os 
 
 Se um tipo definido pelo usuário `T` sobrecarregar o operador `<<` ou `>>`, o tipo do operando à esquerda deverá ser `T` e o tipo do operando à direita deverá ser `int`.
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 

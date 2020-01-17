@@ -4,14 +4,14 @@ description: Aprenda a visitar cada nó em uma árvore de expressão, enquanto e
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: a4cb40e439726e5fff60fe697da70d61bb24cb68
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937227"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115785"
 ---
-# <a name="translating-expression-trees"></a>Movendo árvores de expressão
+# <a name="translate-expression-trees"></a>Traduzir árvores de expressões
 
 [Anterior – Compilando expressões](expression-trees-building.md)
 
@@ -91,7 +91,7 @@ Console.WriteLine(theSum);
 ```
 
 Tem bastante código nisso, mas os conceitos são bastante acessíveis.
-Esse código visita filhos em uma pesquisa de profundidade inicial. Ao encontrar um nó constante, o visitante retorna o valor da constante. Depois de visitar ambos os filhos, os visitantes terão a soma que foi calculada para essa subárvore. Agora o nó de adição poderá computar sua soma.
+Esse código visita filhos em uma pesquisa de profundidade inicial. Ao encontrar um nó constante, o visitante retorna o valor da constante. Depois que o visitante visitar ambos os filhos, esses filhos terão calculado a soma calculada para essa subárvore. Agora o nó de adição poderá computar sua soma.
 Uma vez que todos os nós da árvore de expressão forem visitados, a soma será calculada. Você pode executar o exemplo no depurador e rastrear a execução.
 
 Vamos facilitar o rastreamento de como os nós são analisados e como a soma é calculada, percorrendo a árvore. Esta é uma versão atualizada do método de agregação que inclui bastante informação de rastreamento:
