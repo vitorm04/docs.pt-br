@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 610f2a1020cc15f855b3ddfc0917e14aae34fb82
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f58edf326ab9415d78d7065d74d8c1954fbbf37
+ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344931"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76315857"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Introdução a LINQ no Visual Basic
 A consulta integrada à linguagem (LINQ) adiciona funcionalidades de consulta para Visual Basic e fornece recursos simples e poderosos quando você trabalha com todos os tipos de dados. Em vez de enviar uma consulta para um banco de dados a ser processado ou trabalhar com sintaxe de consulta diferente para cada tipo de dado que você está pesquisando, o LINQ apresenta consultas como parte da linguagem de Visual Basic. Ele usa uma sintaxe unificada, independentemente do tipo de dados.  
@@ -38,7 +38,7 @@ A consulta integrada à linguagem (LINQ) adiciona funcionalidades de consulta pa
   
  O Visual Basic inclui os seguintes provedores de LINQ.  
   
-|Provedor|Descrição|  
+|Provider|Descrição|  
 |---|---|  
 |Objetos LINQ to|O provedor de LINQ to Objects permite consultar coleções e matrizes na memória. Se um objeto oferecer suporte à interface <xref:System.Collections.IEnumerable> ou <xref:System.Collections.Generic.IEnumerable%601>, o provedor de LINQ to Objects permitirá que você a consulte.<br /><br /> Você pode habilitar o provedor de LINQ to Objects importando o namespace <xref:System.Linq>, que é importado por padrão para todos os projetos de Visual Basic.<br /><br /> Para obter mais informações sobre o provedor de LINQ to Objects, consulte [LINQ to Objects](../../concepts/linq/linq-to-objects.md).|  
 |LINQ to SQL|O provedor de LINQ to SQL permite consultar e modificar dados em um banco de SQL Server. Isso facilita mapear o modelo de objeto para um aplicativo para as tabelas e objetos em um banco de dados.<br /><br /> Visual Basic torna mais fácil trabalhar com o LINQ to SQL incluindo o Object Relational Designer (O/R Designer). Esse designer é usado para criar um modelo de objeto em um aplicativo que é mapeado para objetos em um banco de dados. O o/R Designer também fornece funcionalidade para mapear procedimentos armazenados e funções para o objeto <xref:System.Data.Linq.DataContext>, que gerencia a comunicação com o banco de dados e armazena o estado para verificações de simultaneidade otimistas.<br /><br /> Para obter mais informações sobre o provedor de LINQ to SQL, consulte [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md). Para obter mais informações sobre o Object Relational Designer, consulte [ferramentas de LINQ to SQL no Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
@@ -94,9 +94,9 @@ Opcional. Uma [cláusula`Where`](../../../../visual-basic/language-reference/que
 
  [!code-vb[VbVbalrIntroToLINQ#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#9)]
 
-### <a name="order-by-clause"></a>Cláusula order by]
+### <a name="order-by-clause"></a>cláusula Order By
 
-| Adicional. Uma [cláusula`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) especifica a ordem de classificação das colunas em uma consulta. Por exemplo:
+Opcional. Uma [cláusula`Order By`](../../../../visual-basic/language-reference/queries/order-by-clause.md) especifica a ordem de classificação das colunas em uma consulta. Por exemplo:
 
  [!code-vb[VbVbalrIntroToLINQ#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#10)]
 
@@ -245,7 +245,7 @@ Você pode usar recursos adicionais de consulta LINQ chamando membros dos tipos 
 ## <a name="featured-book-chapters"></a>Capítulos do livro em destaque  
  [Capítulo 17: LINQ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652502(v=orm.10)) em [programação Visual Basic 2008](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652504(v=orm.10))  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [LINQ (Consulta Integrada à Linguagem)](../../concepts/linq/index.md)
 - [Visão geral do LINQ to XML no Visual Basic](../../language-features/xml/overview-of-linq-to-xml.md)
