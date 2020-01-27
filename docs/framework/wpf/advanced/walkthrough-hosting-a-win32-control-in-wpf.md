@@ -1,5 +1,6 @@
 ---
-title: 'Instruções passo a passo: hospedando um controle Win32 no WPF'
+title: Hospedar um controle Win32 no WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +9,20 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 56f096dd7ba4feb677394cd26be9858a33842018
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: eb497a88c119dece85d61d6a32e7b86fb03b44b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040815"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744939"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Instruções passo a passo: hospedando um controle Win32 no WPF
+# <a name="walkthrough-host-a-win32-control-in-wpf"></a>Walkthrough: hospedar um controle Win32 no WPF
 O Windows Presentation Foundation (WPF) fornece um ambiente avançado para a criação de aplicativos. No entanto, quando você tem um investimento substancial no código Win32, pode ser mais eficiente reutilizar pelo menos um pouco esse código em seu aplicativo WPF em vez de reescrevê-lo completamente. O WPF fornece um mecanismo direto para hospedar uma janela do Win32, em uma página do WPF.  
   
  Este tópico orienta você por um aplicativo, [hospedando um controle ListBox do Win32 no exemplo do WPF](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control), que hospeda um controle de caixa de listagem do Win32. Esse procedimento geral pode ser estendido para hospedar qualquer janela Win32.  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>Requisitos  
+## <a name="requirements"></a>Requisitos do  
  Este tópico pressupõe uma familiaridade básica com a programação do WPF e da API do Windows. Para obter uma introdução básica à programação do WPF, consulte [introdução](../getting-started/index.md). Para obter uma introdução à programação da API do Windows, confira qualquer um dos vários livros sobre o assunto, em particular, as *janelas de programação* , de Charles Petzold.  
   
  Como o exemplo que acompanha este tópico é implementado no C#, ele faz uso de PInvoke (serviços de invocação de plataforma) para acessar a API do Windows. Alguma familiaridade com o PInvoke é útil, mas não essencial.  
@@ -45,7 +46,7 @@ O Windows Presentation Foundation (WPF) fornece um ambiente avançado para a cri
   
 5. Depois de criar a janela do host, retorne o HWND da janela hospedada. Se você quiser hospedar um ou mais controles do Win32, você normalmente criará uma janela de host como um filho do HWND e tornará os controles filhos dessa janela do host. Encapsular os controles em uma janela de host fornece uma maneira simples de sua página do WPF receber notificações dos controles, que lida com alguns problemas específicos do Win32 com notificações entre o limite de HWND.  
   
-6. Manipule as mensagens selecionadas enviadas à janela de host, como notificações dos controles filho. Há duas formas de fazer isso.  
+6. Manipule as mensagens selecionadas enviadas à janela de host, como notificações dos controles filho. Existem duas maneiras para isso  
   
     - Se você preferir manipular mensagens em sua classe de hospedagem, substitua o método <xref:System.Windows.Interop.HwndHost.WndProc%2A> da classe <xref:System.Windows.Interop.HwndHost>.  
   
@@ -61,7 +62,7 @@ O Windows Presentation Foundation (WPF) fornece um ambiente avançado para a cri
 ## <a name="implement-the-page-layout"></a>Implementar o layout da página  
  O layout da página do WPF que hospeda o controle ListBox consiste em duas regiões. O lado esquerdo da página hospeda vários controles WPF que fornecem um [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] que permite que você manipule o controle Win32. O canto superior direito da página tem uma região quadrada para o controle ListBox hospedado.  
   
- O código para implementar esse layout é bem simples. O elemento raiz é um <xref:System.Windows.Controls.DockPanel> que tem dois elementos filho. O primeiro é um elemento <xref:System.Windows.Controls.Border> que hospeda o controle ListBox. Ele ocupa um quadrado de 200x200 no canto superior direito da página. O segundo é um elemento <xref:System.Windows.Controls.StackPanel> que contém um conjunto de controles WPF que exibem informações e permitem que você manipule o controle ListBox Definindo Propriedades de interoperação expostas. Para cada um dos elementos que são filhos do <xref:System.Windows.Controls.StackPanel>, consulte o material de referência para os vários elementos usados para obter detalhes sobre o que esses elementos fazem ou o que eles fazem, eles são listados no código de exemplo abaixo, mas não serão explicados aqui (o básico o modelo de interoperação não requer nenhum deles, eles são fornecidos para adicionar alguma interatividade ao exemplo).  
+ O código para implementar esse layout é bem simples. O elemento raiz é um <xref:System.Windows.Controls.DockPanel> que tem dois elementos filho. O primeiro é um elemento <xref:System.Windows.Controls.Border> que hospeda o controle ListBox. Ele ocupa um quadrado de 200x200 no canto superior direito da página. O segundo é um elemento <xref:System.Windows.Controls.StackPanel> que contém um conjunto de controles WPF que exibem informações e permitem que você manipule o controle ListBox Definindo Propriedades de interoperação expostas. Para cada um dos elementos que são filhos do <xref:System.Windows.Controls.StackPanel>, consulte o material de referência para os vários elementos usados para obter detalhes sobre o que esses elementos fazem ou o que eles fazem, eles são listados no código de exemplo abaixo, mas não serão explicados aqui (o modelo de interoperação básica não exige nenhum deles, eles são fornecidos para adicionar alguma interatividade ao exemplo).  
   
  [!code-xaml[WPFHostingWin32Control#WPFUI](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFHostingWin32Control/CSharp/Page1.xaml#wpfui)]  
   
@@ -152,7 +153,7 @@ O Windows Presentation Foundation (WPF) fornece um ambiente avançado para a cri
   
  Por fim, defina `handled` como `true` para indicar que a mensagem foi tratada.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Interop.HwndHost>
 - [Interoperação Win32 e WPF](wpf-and-win32-interoperation.md)

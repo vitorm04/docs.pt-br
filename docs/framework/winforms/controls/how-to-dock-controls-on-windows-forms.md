@@ -1,5 +1,5 @@
 ---
-title: Como encaixar controles nos Windows Forms
+title: encaixar controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], docking
@@ -9,12 +9,12 @@ ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 82aef0ae9abacad33b21920f88591c0e4c33dfcb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 02f1c26dcb322a39c41781c83d8c820bd2fd27e0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460554"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745515"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>Como encaixar controles em Windows Forms
 
@@ -40,9 +40,9 @@ A propriedade <xref:System.Windows.Forms.Control.Dock%2A> interage com a proprie
    > [!NOTE]
    > Controles herdados devem ser `Protected` para poderem ser encaixados. Para alterar o nível de acesso de um controle, defina sua propriedade **modificador** na janela **Propriedades** .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Controles dos Windows Forms](index.md)
+- [Controles do Windows Forms](index.md)
 - [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)

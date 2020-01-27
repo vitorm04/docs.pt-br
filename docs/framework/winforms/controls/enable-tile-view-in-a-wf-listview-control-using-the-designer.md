@@ -1,17 +1,17 @@
 ---
-title: Como habilitar exibição lado a lado em um controle ListView dos Windows Forms usando o designer
+title: Habilitar exibição de bloco no controle ListView usando o designer
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 4f51d3a596bc3358942cdfd654b3e4515d96cd07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a0429efaab14995ab1e3f3b0dfd91db61de72fbf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960106"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745808"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Como habilitar exibição lado a lado em um controle ListView dos Windows Forms usando o designer
 O recurso de exibição de bloco do controle de <xref:System.Windows.Forms.ListView> permite que você forneça um equilíbrio visual entre informações gráficas e textuais. As informações textuais exibidas para um item na exibição lado a lado são as mesmas que as informações de coluna definidas para exibição de detalhes. As funções de exibição de bloco em combinação com os recursos de agrupamento ou marca de inserção no controle de <xref:System.Windows.Forms.ListView>.
@@ -30,7 +30,7 @@ O recurso de exibição de bloco do controle de <xref:System.Windows.Forms.ListV
 
 2. Na janela **Propriedades** , selecione a propriedade <xref:System.Windows.Forms.ListView.View%2A> e escolha **bloco**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [Visão geral do controle ListView](listview-control-overview-windows-forms.md)

@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message security [WCF]
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
-ms.openlocfilehash: e455c7a48e1484d5acdcc5f6cdc9098997a3ba83
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 719ab26198bd7b83310025e03e541fa11b109612
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990932"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746419"
 ---
 # <a name="securing-services-and-clients"></a>Protegendo serviços e clientes
-As informações nesta seção se concentra na programação de segurança no Windows Communication Foundation (WCF). Em geral, isso inclui a seleção de uma associação fornecida pelo sistema apropriada, definindo as propriedades do elemento de segurança e, em seguida, definindo as propriedades dos comportamentos de serviço que determinam como as credenciais são recuperadas para uso pelo serviço ou cliente. Essas técnicas para abordar os requisitos de segurança da maioria dos usuários para a maioria dos cenários, conforme mostrado na [cenários comuns de segurança](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Se seu cenário exigir mais recursos, consulte primeiro [recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); se uma solução não está aparente, consulte [estendendo segurança](../../../../docs/framework/wcf/extending/extending-security.md). Se você estiver criando (ou interoperação com) um sistema que usa rica de declarações, consulte os tópicos [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+As informações contidas nesta seção concentram-se na segurança de programação no Windows Communication Foundation (WCF). Em geral, isso inclui a seleção de uma associação apropriada fornecida pelo sistema, a definição das propriedades do elemento de segurança e a configuração das propriedades dos comportamentos de serviço que regem o modo como as credenciais são recuperadas para uso pelo serviço ou pelo cliente. Essas técnicas abrangem os requisitos de segurança da maioria dos usuários para a maioria dos cenários, conforme mostrado em [cenários de segurança comuns](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Se seu cenário exigir mais recursos, primeiro consulte [recursos de segurança com associações personalizadas](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); se uma solução não for aparente, consulte [estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md). Se você estiver criando (ou Interoperando com) um sistema que usa declarações avançadas, consulte os tópicos em [autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Programação de segurança do WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
- Uma visão geral do modelo de programação usada para proteger mensagens.  
+ Uma visão geral do modelo de programação usado para proteger mensagens.  
   
  [Visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
  Uma visão geral de como proteger mensagens por meio da camada de transporte.  
@@ -25,10 +25,10 @@ As informações nesta seção se concentra na programação de segurança no Wi
  Resume os motivos para usar a segurança em nível de mensagem no Windows Communication Foundation (WCF).  
   
  [Sessões seguras](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
- Uma discussão das considerações necessárias ao proteger uma sessão do WCF.  
+ Uma discussão sobre as considerações necessárias ao proteger uma sessão do WCF.  
   
  [Trabalhando com certificados](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- Uma explicação de algumas das tarefas comuns necessárias ao usar certificados x. 509.  
+ Uma explicação de algumas das tarefas comuns necessárias ao usar certificados X. 509.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.ServiceModel>  
@@ -37,7 +37,7 @@ As informações nesta seção se concentra na programação de segurança no Wi
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Conceitos de segurança](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
  [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)  
@@ -52,7 +52,7 @@ As informações nesta seção se concentra na programação de segurança no Wi
   
  [Autorização](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Programação básica do WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [Modelo de segurança do Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 58057709e2d5c5e34d0aa37158ea9b033840f840
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1e551572fa6d94e9fd1170eb7e3b258f2e8fb926
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344701"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728896"
 ---
 # <a name="windows-communication-foundation-security-overview"></a>Visão geral da segurança do Windows Communication Foundation
 O Windows Communication Foundation (WCF) é uma plataforma de programação distribuída baseada em mensagem SOAP, e a proteção de mensagens entre clientes e serviços é essencial para proteger os dados. O WCF fornece uma plataforma versátil e interoperável para trocar mensagens seguras com base na infraestrutura de segurança existente e nos padrões de segurança reconhecidos para mensagens SOAP.  
   
 > [!NOTE]
-> Para obter um guia abrangente sobre a segurança do WCF, consulte [diretrizes de segurança do WCF](https://go.microsoft.com/fwlink/?LinkID=158912).  
+> Para obter um guia abrangente sobre a segurança do WCF, consulte [diretrizes de segurança do WCF](https://archive.codeplex.com/?p=WCFSecurity).  
   
  O WCF usa conceitos que são familiares se você tiver criado aplicativos seguros e distribuídos com tecnologias existentes, como HTTPS, segurança integrada do Windows ou nomes de usuário e senhas para autenticar usuários. O WCF não só se integra a infraestruturas de segurança existentes, mas também estende a segurança distribuída além dos domínios somente do Windows usando mensagens SOAP seguras. Considere o WCF uma implementação de mecanismos de segurança existentes com a principal vantagem de usar o SOAP como o protocolo, além dos protocolos existentes. Por exemplo, as credenciais que identificam um cliente ou um serviço, como nome de usuário e senha ou certificados X. 509, têm perfis SOAP baseados em XML interoperáveis. Usando esses perfis, as mensagens são trocadas com segurança, tirando proveito de especificações abertas, como assinaturas digitais XML e criptografia XML. Para obter uma lista de especificações, consulte [protocolos de serviços Web com suporte em associações de interoperabilidade fornecidas pelo sistema](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md).  
   
@@ -113,4 +113,4 @@ O Windows Communication Foundation (WCF) é uma plataforma de programação dist
 - [Associações fornecidas pelo sistema](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [Visão geral de criação de ponto de extremidade](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [Estendendo a segurança](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Modelo de segurança para o Windows Server app Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Modelo de segurança para o Windows Server app Fabric](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

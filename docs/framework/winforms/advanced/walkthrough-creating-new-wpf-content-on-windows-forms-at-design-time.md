@@ -1,5 +1,6 @@
 ---
-title: 'Instruções passo a passo: criando novo conteúdo WPF em Windows Forms na hora do design'
+title: Criar novo conteúdo do WPF no Windows Forms
+titleSuffix: ''
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,18 +12,18 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 395543a3141af66038cabef9a3c9fed40a36b47e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 69a0598b05d1b2bff84b203317d6d5a166ce109d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460659"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746395"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>Walkthrough: criar novo conteúdo do WPF em Windows Forms em tempo de design
 
 Este artigo mostra como criar um controle Windows Presentation Foundation (WPF) para uso em seus aplicativos baseados em Windows Forms.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 É necessário o Visual Studio para concluir este passo a passo.
 
@@ -65,7 +66,7 @@ Para criar um novo controle WPF:
    > [!NOTE]
    > No geral, é necessário hospedar conteúdos do WPF mais sofisticados. O controle de <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> é usado aqui apenas para fins ilustrativos.
 
-6. Compile o projeto.
+6. Crie o projeto.
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>Adicionar um controle WPF a um formulário do Windows
 
@@ -91,7 +92,7 @@ Para adicionar um controle WPF a um formulário do Windows:
 
 5. Pressione **F5** para compilar e executar o aplicativo.
 
-## <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
 O Windows Forms e o WPF são tecnologias diferentes, mas são projetados para interoperar estreitamente. Para fornecer aparência e comportamento mais ricos em seus aplicativos, tente o seguinte:
 
@@ -101,7 +102,7 @@ O Windows Forms e o WPF são tecnologias diferentes, mas são projetados para in
 
 - Altere o estilo do conteúdo do WPF. Para obter mais informações, consulte [Instruções Passo a Passo: Definindo o Estilo do Conteúdo do WPF](walkthrough-styling-wpf-content.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

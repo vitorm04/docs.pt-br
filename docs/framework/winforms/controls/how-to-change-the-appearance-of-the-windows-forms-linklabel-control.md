@@ -1,5 +1,5 @@
 ---
-title: 'Como: Alterar a aparência do controle LinkLabel do Windows Forms'
+title: Alterar a aparência do controle LinkLabel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: f0a5805561509501ca38a7fec6b4731af190e3c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0b38722fb1647ea215c3bb8978dd3f54b300a0e0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322011"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746626"
 ---
-# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Como: Alterar a aparência do controle LinkLabel do Windows Forms
-Você pode alterar o texto exibido pelo <xref:System.Windows.Forms.LinkLabel> controle para atender a uma variedade de finalidades. Por exemplo, é uma prática comum para indicar ao usuário que o texto é clicável configurando o texto a ser exibido em uma cor específica com um sublinhado. Depois que o usuário clica no texto, a cor é alterada para uma cor diferente. Para controlar esse comportamento, você pode definir cinco propriedades diferentes: o <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>, e <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedades.  
+# <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>Como alterar a aparência do controle LinkLabel dos Windows Forms
+Você pode alterar o texto exibido pelo controle de <xref:System.Windows.Forms.LinkLabel> para atender a uma variedade de finalidades. Por exemplo, é uma prática comum para indicar ao usuário que o texto é clicável configurando o texto a ser exibido em uma cor específica com um sublinhado. Depois que o usuário clica no texto, a cor é alterada para uma cor diferente. Para controlar esse comportamento, você pode definir cinco propriedades diferentes: as propriedades <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>, <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>, <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>, <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>e <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>.  
   
 ### <a name="to-change-the-appearance-of-a-linklabel-control"></a>Alterar a aparência de um controle LinkLabel  
   
-1. Defina as <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> e <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> propriedades para as cores que você deseja.  
+1. Defina as propriedades <xref:System.Windows.Forms.LinkLabel.LinkColor%2A> e <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> para as cores desejadas.  
   
      Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.  
   
@@ -49,7 +49,7 @@ Você pode alterar o texto exibido pelo <xref:System.Windows.Forms.LinkLabel> co
     linkLabel1->VisitedLinkColor = Color::Purple;  
     ```  
   
-2. Defina o <xref:System.Windows.Forms.LinkLabel.Text%2A> propriedade para uma legenda apropriada.  
+2. Defina a propriedade <xref:System.Windows.Forms.LinkLabel.Text%2A> como uma legenda apropriada.  
   
      Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.  
   
@@ -65,9 +65,9 @@ Você pode alterar o texto exibido pelo <xref:System.Windows.Forms.LinkLabel> co
     linkLabel1->Text = "Click here to see more.";  
     ```  
   
-3. Defina o <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> propriedade para determinar qual parte da legenda será indicada como um link.  
+3. Defina a propriedade <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> para determinar qual parte da legenda será indicada como um link.  
   
-     O <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> valor é representado com uma <xref:System.Windows.Forms.LinkArea> contendo dois números, a posição do caractere inicial e o número de caracteres. Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.  
+     O valor <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> é representado com um <xref:System.Windows.Forms.LinkArea> contendo dois números, a posição do caractere inicial e o número de caracteres. Isso pode ser feito por meio de programação ou no tempo de design na janela **Propriedades**.  
   
     ```vb  
     LinkLabel1.LinkArea = new LinkArea(6,4)  
@@ -81,13 +81,13 @@ Você pode alterar o texto exibido pelo <xref:System.Windows.Forms.LinkLabel> co
     linkLabel1->LinkArea = LinkArea(6,4);  
     ```  
   
-4. Defina as <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> propriedade para <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, ou <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.  
+4. Defina a propriedade <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A> como <xref:System.Windows.Forms.LinkBehavior.AlwaysUnderline>, <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>ou <xref:System.Windows.Forms.LinkBehavior.NeverUnderline>.  
   
-     Se ele for definido como <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, a parte da legenda determinada pelo <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> só será sublinhada quando o ponteiro for posicionado sobre ele.  
+     Se estiver definido como <xref:System.Windows.Forms.LinkBehavior.HoverUnderline>, a parte da legenda determinada por <xref:System.Windows.Forms.LinkLabel.LinkArea%2A> só será sublinhada quando o ponteiro for colocado sobre ele.  
   
-5. No <xref:System.Windows.Forms.LinkLabel.LinkClicked> manipulador de eventos, defina a <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> propriedade `true`.  
+5. No manipulador de eventos <xref:System.Windows.Forms.LinkLabel.LinkClicked>, defina a propriedade <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A> como `true`.  
   
-     Quando um link foi visitado, é uma prática comum alterar sua aparência de alguma maneira, geralmente a cor. O texto será alterado para a cor especificada pela <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A> propriedade.  
+     Quando um link foi visitado, é uma prática comum alterar sua aparência de alguma maneira, geralmente a cor. O texto será alterado para a cor especificada pela propriedade <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>.  
   
     ```vb  
     Protected Sub LinkLabel1_LinkClicked (ByVal sender As Object, _  
@@ -121,12 +121,12 @@ Você pode alterar o texto exibido pelo <xref:System.Windows.Forms.LinkLabel> co
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
 - [Visão geral do controle LinkLabel](linklabel-control-overview-windows-forms.md)
-- [Como: Vincular a um objeto ou página com o controle LinkLabel dos Windows Forms da Web](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [Como vincular a um objeto ou página da Web com o controle LinkLabel dos Windows Forms](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [Controle LinkLabel](linklabel-control-windows-forms.md)

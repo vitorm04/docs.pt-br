@@ -2,12 +2,12 @@
 title: Tarefas de aprendizado de máquina
 description: Explore as diferentes tarefas de aprendizado de máquina e as tarefas associadas compatíveis com o ML.NET.
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739633"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745108"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>Tarefas de aprendizado de máquina no ML.NET
 
@@ -85,6 +85,7 @@ Você pode treinar um modelo de classificação multiclasse usando os seguintes 
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>Saídas e entradas de classificação multiclasse
 
@@ -219,3 +220,13 @@ Uma tarefa de recomendação permite produzir uma lista de produtos ou serviços
 Você pode treinar um modelo de recomendação usando os seguintes algoritmos:
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>Previsão
+
+A tarefa de previsão usa dados de série temporal anteriores para fazer previsões sobre o comportamento futuro. Os cenários aplicáveis à previsão incluem previsão do tempo, previsões de vendas sazonais e manutenção preditiva,
+
+### <a name="forecasting-trainers"></a>Prevendo treinadores
+
+Você pode treinar um modelo de previsão com o seguinte algoritmo:
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

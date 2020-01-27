@@ -1,5 +1,5 @@
 ---
-title: Identificando controles dos Windows Forms individuais e fornecendo atalhos para eles
+title: Controles de rótulo e fornecer atalhos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], access keys
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: e06fe547e867ec368369fbe4f320be903ed11bc6
-ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
+ms.openlocfilehash: b3e2bd691ed9652ef484dd67da994f474ce4420b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70373665"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745264"
 ---
 # <a name="label-individual-windows-forms-controls-and-provide-shortcuts"></a>Rotular controles de Windows Forms individuais e fornecer atalhos
 
@@ -20,13 +20,13 @@ Os controles adicionados a Windows Forms têm propriedades e métodos que são u
 
 ## <a name="in-this-section"></a>Nesta seção
 
-[Como: Definir o texto exibido por um controle de Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)\
+[Como definir o texto exibido por um controle dos Windows Forms](how-to-set-the-text-displayed-by-a-windows-forms-control.md)\
 Descreve como atribuir um rótulo de texto a um controle.
 
-[Como: Definir a imagem exibida por um controle de Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md)\
+[Como definir a imagem exibida por um controle de Windows Forms](how-to-set-the-image-displayed-by-a-windows-forms-control.md)\
 Explica como configurar um controle para exibir imagens.
 
-[Como: Criar chaves de acesso para controles de Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)\
+[Como criar teclas de acesso para controles dos Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)\
 Fornece informações sobre como criar atalhos de teclado predefinidos.
 
 [Fornecendo informações de acessibilidade para controles em um Windows Form](providing-accessibility-information-for-controls-on-a-windows-form.md)\
@@ -34,5 +34,5 @@ Fornece informações sobre como habilitar seus controles para trabalhar com aux
 
 ## <a name="related-sections"></a>Seções relacionadas
 
-[Controles dos Windows Forms](index.md)\
+[Controles do Windows Forms](index.md)\
 Links para outras coisas básicas que você pode fazer com controles.

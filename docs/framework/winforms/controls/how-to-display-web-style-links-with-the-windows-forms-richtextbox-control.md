@@ -1,5 +1,5 @@
 ---
-title: 'Como: Exibir links em estilo da Web com o controle RichTextBox do Windows Forms'
+title: Exibir links de estilo da Web com controle RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: ce71981f7b233d3e168689c766128646eed3e981
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 78a07a250744018f121b03f2973b1661ed6bf764
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046181"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745535"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Como: Exibir links em estilo da Web com o controle RichTextBox do Windows Forms
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Como exibir links em estilo da Web com o controle RichTextBox dos Windows Forms
 
-O controle <xref:System.Windows.Forms.RichTextBox> Windows Forms pode exibir links da Web como coloridos e sublinhados. Você pode gravar o código que abre uma janela do navegador mostrando o site da Web especificado no texto do link quando o link é clicado.
+O controle de <xref:System.Windows.Forms.RichTextBox> de Windows Forms pode exibir links da Web como coloridos e sublinhados. Você pode gravar o código que abre uma janela do navegador mostrando o site da Web especificado no texto do link quando o link é clicado.
 
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>Para vincular a uma página da Web com o controle RichTextBox
 
 1. Defina a <xref:System.Windows.Forms.RichTextBox.Text%2A> Propriedade como uma cadeia de caracteres que inclui uma URL válida (por exemplo"http://www.microsoft.com/").
 
-2. Verifique se a <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> Propriedade está definida como `true` (o padrão).
+2. Verifique se a propriedade <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A> está definida como `true` (o padrão).
 
-3. Crie uma nova instância global do <xref:System.Diagnostics.Process> objeto.
+3. Crie uma nova instância global do objeto <xref:System.Diagnostics.Process>.
 
-4. Escreva um manipulador de eventos para <xref:System.Windows.Forms.RichTextBox.LinkClicked> o evento que envia ao navegador o texto desejado.
+4. Escreva um manipulador de eventos para o evento <xref:System.Windows.Forms.RichTextBox.LinkClicked> que envia ao navegador o texto desejado.
 
-    No exemplo a seguir, o <xref:System.Windows.Forms.RichTextBox.LinkClicked> evento abre uma instância do Internet Explorer para a URL especificada <xref:System.Windows.Forms.RichTextBox.Text%2A> na Propriedade do <xref:System.Windows.Forms.RichTextBox> controle. Este exemplo assume um formulário com um <xref:System.Windows.Forms.RichTextBox> controle.
+    No exemplo a seguir, o evento <xref:System.Windows.Forms.RichTextBox.LinkClicked> abre uma instância do Internet Explorer para a URL especificada na propriedade <xref:System.Windows.Forms.RichTextBox.Text%2A> do controle de <xref:System.Windows.Forms.RichTextBox>. Este exemplo assume um formulário com um controle de <xref:System.Windows.Forms.RichTextBox>.
 
     > [!IMPORTANT]
-    > Ao chamar o <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> método, você encontrará uma <xref:System.Security.SecurityException> exceção se estiver executando o código em um contexto de confiança parcial devido a privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../misc/code-access-security-basics.md).
+    > Ao chamar o método <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>, você encontrará uma exceção de <xref:System.Security.SecurityException> se estiver executando o código em um contexto de confiança parcial devido a privilégios insuficientes. Para obter mais informações, consulte [Noções Básicas da Segurança de Acesso do Código](../../misc/code-access-security-basics.md).
 
     ```vb
     Public p As New System.Diagnostics.Process
@@ -75,7 +75,7 @@ O controle <xref:System.Windows.Forms.RichTextBox> Windows Forms pode exibir lin
        }
     ```
 
-    (Visual C++) Você deve inicializar o `p`processo, o que pode ser feito incluindo a seguinte instrução no construtor do seu formulário:
+    (Visual C++) Você deve inicializar o processo `p`, que pode ser feito incluindo a seguinte instrução no construtor do seu formulário:
 
     ```cpp
     p = gcnew System::Diagnostics::Process();
@@ -117,7 +117,7 @@ O controle <xref:System.Windows.Forms.RichTextBox> Windows Forms pode exibir lin
     }
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>

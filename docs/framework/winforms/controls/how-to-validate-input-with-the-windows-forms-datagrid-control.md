@@ -1,5 +1,5 @@
 ---
-title: 'Como: Validar a entrada com o controle DataGrid do Windows Forms'
+title: Validar entrada com controle DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,25 +11,25 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3958089007401d2e977c9c96f07c9196e6216596
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796468"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728292"
 ---
-# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Como: Validar a entrada com o controle DataGrid do Windows Forms
+# <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>Como validar a entrada com o controle DataGrid dos Windows Forms
 
 > [!NOTE]
 > O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
-Há dois tipos de validação de entrada disponíveis para os formulários do Windows <xref:System.Windows.Forms.DataGrid> controle. Se o usuário tentar inserir um valor que é de um tipo de dados inaceitável para a célula, por exemplo uma cadeia de caracteres em um número inteiro, o valor inválido será substituído pelo valor anterior. Esse tipo de validação de entrada é feita automaticamente e não pode ser personalizada.
+Há dois tipos de validação de entrada disponíveis para o controle de <xref:System.Windows.Forms.DataGrid> de Windows Forms. Se o usuário tentar inserir um valor que é de um tipo de dados inaceitável para a célula, por exemplo uma cadeia de caracteres em um número inteiro, o valor inválido será substituído pelo valor anterior. Esse tipo de validação de entrada é feita automaticamente e não pode ser personalizada.
 
-O outro tipo de validação de entrada pode ser usado para rejeitar quaisquer dados inaceitáveis, por exemplo, um valor 0 em um campo que deve ser maior ou igual a 1 ou uma cadeia de caracteres inadequada. Isso é feito no conjunto de dados, escrevendo um manipulador de eventos para o <xref:System.Data.DataTable.ColumnChanging> ou <xref:System.Data.DataTable.RowChanging> eventos. O exemplo a seguir usa o <xref:System.Data.DataTable.ColumnChanging> evento porque o valor inaceitável não é permitido para a coluna "Produto" em particular. Você pode usar o <xref:System.Data.DataTable.RowChanging> evento para verificar se o valor de uma coluna "Data de término" é posterior a coluna "Data de início" na mesma linha.
+O outro tipo de validação de entrada pode ser usado para rejeitar quaisquer dados inaceitáveis, por exemplo, um valor 0 em um campo que deve ser maior ou igual a 1 ou uma cadeia de caracteres inadequada. Isso é feito no DataSet escrevendo um manipulador de eventos para o <xref:System.Data.DataTable.ColumnChanging> ou <xref:System.Data.DataTable.RowChanging> evento. O exemplo a seguir usa o evento <xref:System.Data.DataTable.ColumnChanging> porque o valor inaceitável não é permitido para a coluna "Product" em particular. Você pode usar o evento <xref:System.Data.DataTable.RowChanging> para verificar se o valor de uma coluna "data de término" é posterior à coluna "data de início" na mesma linha.
 
 ## <a name="to-validate-user-input"></a>Validando entrada do usuário
 
-1. Escrever código para manipular o <xref:System.Data.DataTable.ColumnChanging> evento na tabela apropriada. Quando for detectada entrada inadequada, chame o <xref:System.Data.DataRow.SetColumnError%2A> método da <xref:System.Data.DataRow> objeto.
+1. Escreva o código para manipular o evento de <xref:System.Data.DataTable.ColumnChanging> para a tabela apropriada. Quando for detectada uma entrada inadequada, chame o método <xref:System.Data.DataRow.SetColumnError%2A> do objeto <xref:System.Data.DataRow>.
 
     ```vb
     Private Sub Customers_ColumnChanging(ByVal sender As Object, _
@@ -68,7 +68,7 @@ O outro tipo de validação de entrada pode ser usado para rejeitar quaisquer da
 
 2. Conecte o manipulador de eventos ao evento.
 
-    Coloque o seguinte código dentro de qualquer um do formulário <xref:System.Windows.Forms.Form.Load> evento ou do construtor.
+    Coloque o código a seguir no evento de <xref:System.Windows.Forms.Form.Load> do formulário ou em seu construtor.
 
     ```vb
     ' Assumes the grid is bound to a dataset called customersDataSet1
@@ -84,7 +84,7 @@ O outro tipo de validação de entrada pode ser usado para rejeitar quaisquer da
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>

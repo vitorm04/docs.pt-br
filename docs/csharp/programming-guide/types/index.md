@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711877"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745381"
 ---
 # <a name="types-c-programming-guide"></a>Tipos (Guia de Programação em C#)
 
@@ -113,7 +113,7 @@ Você usa a palavra-chave [struct](../../language-reference/keywords/struct.md) 
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-Para obter mais informações sobre structs, consulte [Structs](../classes-and-structs/structs.md). Para saber mais sobre os tipos de valor do .NET, confira [Tipos de valor](../../language-reference/keywords/value-types.md).
+Para obter mais informações sobre structs, consulte [Structs](../classes-and-structs/structs.md). Para obter mais informações sobre tipos de valor, consulte [tipos de valor](../../language-reference/builtin-types/value-types.md).
 
 A outra categoria de tipos de valor é [enum](../../language-reference/builtin-types/enum.md). Uma enum define um conjunto de constantes integrais nomeadas. Por exemplo, a enumeração <xref:System.IO.FileMode?displayProperty=nameWithType> na biblioteca de classes do .NET contém um conjunto de números inteiros constantes nomeados que especificam como um arquivo deve ser aberto. Ela é definida conforme mostrado no exemplo abaixo:
 
@@ -148,7 +148,7 @@ Os tipos de referência dão suporte completo à herança. Ao criar uma classe, 
 
 ## <a name="types-of-literal-values"></a>Tipos de valores literais
 
-No C#, valores literais recebem um tipo do compilador. Você pode especificar como um literal numérico deve ser digitado anexando uma letra ao final do número. Por exemplo, para especificar que o valor 4,56 deve ser tratado como um float, acrescente um "f" ou "F" após o número: `4.56f`. Se nenhuma letra for anexada, o compilador inferirá um tipo para o literal. Para obter mais informações sobre quais tipos podem ser especificados com sufixos de letra, consulte as páginas de referência de tipos individuais em [Tipos de valor](../../language-reference/keywords/value-types.md).
+No C#, valores literais recebem um tipo do compilador. Você pode especificar como um literal numérico deve ser digitado anexando uma letra ao final do número. Por exemplo, para especificar que o valor 4,56 deve ser tratado como um float, acrescente um "f" ou "F" após o número: `4.56f`. Se nenhuma letra for anexada, o compilador inferirá um tipo para o literal. Para obter mais informações sobre quais tipos podem ser especificados com sufixos de letra, consulte [tipos numéricos inteiros](../../language-reference/builtin-types/integral-numeric-types.md) e [tipos numéricos de ponto flutuante](../../language-reference/builtin-types/floating-point-numeric-types.md).
 
 Como os literais são tipados e todos os tipos derivam basicamente de <xref:System.Object?displayProperty=nameWithType>, você pode escrever e compilar o código como o seguinte:
 
@@ -185,7 +185,7 @@ Para mais informações, consulte os seguintes tópicos:
 
 - [Usando o tipo dynamic](./using-type-dynamic.md)
 
-- [Tipos de valor](../../language-reference/keywords/value-types.md)
+- [Tipos de valor](../../language-reference/builtin-types/value-types.md)
 
 - [Tipos de referência](../../language-reference/keywords/reference-types.md)
 
@@ -195,7 +195,7 @@ Para mais informações, consulte os seguintes tópicos:
 
 - [Genéricos](../generics/index.md)
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar uma tela inicial a um aplicativo WPF'
+title: Como adicionar uma tela inicial
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 3120ee64d65822d323800a89466c6b707169aaaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39f53e21c40f036c65894b4f275cd5fb414999be
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947895"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740454"
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Como: Adicionar uma tela inicial a um aplicativo WPF
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Como adicionar uma tela inicial a um aplicativo WPF
 
 Este tópico mostra como adicionar uma janela de inicialização ou *tela inicial*, para um aplicativo do Windows Presentation Foundation (WPF).
 
@@ -24,7 +24,7 @@ Este tópico mostra como adicionar uma janela de inicialização ou *tela inicia
 
 2. Adicione o arquivo de imagem ao projeto de aplicativo do WPF.
 
-3. Na **Gerenciador de soluções**, selecione a imagem.
+3. Em **Gerenciador de soluções**, selecione a imagem.
 
 4. Na janela Propriedades, clique na seta suspensa para a propriedade **Build Action**.
 
@@ -34,17 +34,17 @@ Este tópico mostra como adicionar uma janela de inicialização ou *tela inicia
 
      A imagem da tela inicial aparece no centro da tela e, em seguida, desaparece quando a janela principal do aplicativo aparecer.
 
-## <a name="to-exclude-the-splash-screen-from-build"></a>Para excluir a tela inicial de build
+## <a name="to-exclude-the-splash-screen-from-build"></a>Para excluir a tela inicial da compilação
 
-1. Na **Gerenciador de soluções**, selecione a imagem da tela inicial.
+1. Em **Gerenciador de soluções**, selecione a imagem da tela inicial.
 
-2. No **propriedades** janela, defina as **Build Action** para **None**.
+2. Na janela **Propriedades** , defina a **ação de compilação** como **nenhuma**.
 
 ## <a name="to-remove-the-splash-screen-from-an-application"></a>Para remover a tela inicial de um aplicativo
 
-Na **Gerenciador de soluções**, exclua a imagem da tela inicial.
+Em **Gerenciador de soluções**, exclua a imagem da tela inicial.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.SplashScreen>
-- [Como: Adicionar itens existentes a um projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))
+- [Como: adicionar itens existentes a um projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

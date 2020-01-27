@@ -1,5 +1,5 @@
 ---
-title: Visão geral dos suplementos do WPF
+title: Visão geral dos suplementos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421093"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738946"
 ---
 # <a name="wpf-add-ins-overview"></a>Visão geral dos suplementos do WPF
 
@@ -25,7 +25,7 @@ ms.locfileid: "73421093"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 É necessário ter familiaridade com o modelo de suplemento de .NET Framework. Para obter mais informações, consulte [Suplementos e extensibilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).
 
@@ -252,7 +252,7 @@ Por sua natureza, <xref:System.Windows.Interop.HwndHost> tem determinadas limita
 
 ## <a name="wpf-add-in-benefits"></a>Benefícios de suplementos do WPF
 
-Como as interfaces de usuário do suplemento WPF são exibidas de aplicativos host usando uma classe interna que deriva de <xref:System.Windows.Interop.HwndHost>, essas interfaces de usuário são restritas pelos recursos do <xref:System.Windows.Interop.HwndHost> em relação aos serviços de interface do usuário do WPF, como layout, renderização, dados Associação, estilos, modelos e recursos. No entanto, o WPF aumenta sua subclasse <xref:System.Windows.Interop.HwndHost> interna com recursos adicionais que incluem o seguinte:
+Como as interfaces de usuário do suplemento WPF são exibidas de aplicativos host usando uma classe interna que deriva de <xref:System.Windows.Interop.HwndHost>, essas interfaces de usuário são restritas pelos recursos do <xref:System.Windows.Interop.HwndHost> em relação aos serviços de interface do usuário do WPF, como layout, renderização, vinculação de dados, estilos, modelos e recursos. No entanto, o WPF aumenta sua subclasse <xref:System.Windows.Interop.HwndHost> interna com recursos adicionais que incluem o seguinte:
 
 - Tabulação entre a interface do usuário de um aplicativo host e a interface do usuário de um suplemento. Observe que o modelo de programação "suplemento é uma interface do usuário" requer que o adaptador do suplemento substitua <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> para habilitar a tabulação, se o suplemento é totalmente confiável ou parcialmente confiável.
 
@@ -308,11 +308,11 @@ Além dos benefícios que o WPF adiciona aos comportamentos padrão fornecidos p
 
 Por padrão, quando vários domínios de aplicativo são usados, os vários assemblies de .NET Framework exigidos por cada aplicativo são carregados no domínio desse aplicativo. Como resultado, o tempo necessário para criar novos domínios de aplicativo e iniciar aplicativos neles pode afetar o desempenho. No entanto, a .NET Framework fornece uma maneira de reduzir os tempos de início ao instruir os aplicativos a compartilharem assemblies entre domínios de aplicativo se eles já estiverem carregados. Você pode fazer isso usando o atributo <xref:System.LoaderOptimizationAttribute>, que deve ser aplicado ao método de ponto de entrada (`Main`). Nesse caso, você deve usar apenas código para implementar sua definição de aplicativo (consulte [Visão geral de gerenciamento do aplicativo](application-management-overview.md)).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.LoaderOptimizationAttribute>
 - [Suplementos e extensibilidade](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [Domínios do aplicativo](../../app-domains/application-domains.md)
 - [Visão geral de .NET Framework comunicação remota](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [Tornando objetos remotos](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [Tópicos explicativos](how-to-topics.md)
+- [Tópicos de instruções](how-to-topics.md)

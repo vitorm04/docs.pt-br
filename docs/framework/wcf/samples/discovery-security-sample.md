@@ -2,15 +2,16 @@
 title: Exemplo de segurança de descoberta
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cfee226f52bc5f001b2952b76b40ce0eb8aebceb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712048"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728859"
 ---
 # <a name="discovery-security-sample"></a>Exemplo de segurança de descoberta
-A especificação de descoberta não exige que os pontos de extremidade que participam do processo de descoberta sejam seguros. Aprimorar as mensagens de descoberta com segurança atenua vários tipos de ataques (alteração de mensagem, negação de serviço, repetição, falsificação). Este exemplo implementa canais personalizados que computam e verificam assinaturas de mensagens usando o formato de assinatura Compact (descrito na seção 8,2 da especificação do WS-Discovery). O exemplo dá suporte à [especificação de descoberta 2005](https://go.microsoft.com/fwlink/?LinkId=177912) e à [versão 1,1](https://go.microsoft.com/fwlink/?LinkId=179677).  
+
+A especificação de descoberta não exige que os pontos de extremidade que participam do processo de descoberta sejam seguros. Aprimorar as mensagens de descoberta com segurança atenua vários tipos de ataques (alteração de mensagem, negação de serviço, repetição, falsificação). Este exemplo implementa canais personalizados que computam e verificam assinaturas de mensagens usando o formato de assinatura Compact (descrito na seção 8,2 da especificação do WS-Discovery). O exemplo dá suporte à [especificação de descoberta 2005](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf) e à [versão 1,1](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf).  
   
  O canal personalizado é aplicado na parte superior da pilha de canais existente para pontos de extremidade de descoberta e anúncio. Dessa forma, um cabeçalho de assinatura é aplicado a cada mensagem enviada. A assinatura é verificada em mensagens recebidas e quando não corresponde ou quando as mensagens não têm uma assinatura, as mensagens são descartadas. Para assinar e verificar mensagens, o exemplo usa certificados.  
   

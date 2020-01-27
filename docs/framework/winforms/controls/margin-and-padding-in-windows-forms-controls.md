@@ -1,5 +1,5 @@
 ---
-title: Margem e preenchimento em controles dos Windows Forms
+title: Margem e preenchimento em controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Padding property [Windows Forms]
@@ -7,27 +7,27 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: bf1f88f6efcedd740bff92dda391470391f16ce5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 02cabccd0d51a3501a8aafb8733a5273deef6c49
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752498"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728563"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Margem e preenchimento em controles dos Windows Forms
-O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O <xref:System.Windows.Forms?displayProperty=nameWithType> namespace fornece muitos recursos de layout para fazer isso. Duas das mais importantes são as <xref:System.Windows.Forms.Control.Margin%2A> e <xref:System.Windows.Forms.Control.Padding%2A> propriedades.  
+O posicionamento exato dos controles no formulário é uma prioridade alta para muitos aplicativos. O namespace <xref:System.Windows.Forms?displayProperty=nameWithType> oferece muitos recursos de layout para fazer isso. Duas das mais importantes são as propriedades <xref:System.Windows.Forms.Control.Margin%2A> e <xref:System.Windows.Forms.Control.Padding%2A>.  
   
- O <xref:System.Windows.Forms.Control.Margin%2A> propriedade define o espaço em torno do controle que mantém outros controla uma distância especificada da bordas do controle.  
+ A propriedade <xref:System.Windows.Forms.Control.Margin%2A> define o espaço em torno do controle que mantém outros controles uma distância especificada das bordas do controle.  
   
- O <xref:System.Windows.Forms.Control.Padding%2A> propriedade define o espaço no interior de um controle que mantém o conteúdo do controle (por exemplo, o valor de seu <xref:System.Windows.Forms.Control.Text%2A> propriedade) uma distância especificada da bordas do controle.  
+ A propriedade <xref:System.Windows.Forms.Control.Padding%2A> define o espaço no interior de um controle que mantém o conteúdo do controle (por exemplo, o valor de sua propriedade <xref:System.Windows.Forms.Control.Text%2A>) uma distância especificada das bordas do controle.  
   
- A ilustração a seguir mostra a <xref:System.Windows.Forms.Control.Padding%2A> e <xref:System.Windows.Forms.Control.Margin%2A> propriedades em um controle.  
+ A ilustração a seguir mostra as propriedades <xref:System.Windows.Forms.Control.Padding%2A> e <xref:System.Windows.Forms.Control.Margin%2A> em um controle.  
   
- ![Preenchimento e margem para controles dos Windows Forms](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![Preenchimento e margem para controles de Windows Forms](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Não há suporte de tempo de design para esse recurso no Visual Studio. Consulte também [passo a passo: Definindo o layout dos Windows Forms a controles com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md).  
+ Há suporte para o tempo de design para esse recurso no Visual Studio. Além disso, veja [o passo a passos: dispor Windows Forms controles com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>

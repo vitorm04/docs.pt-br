@@ -1,5 +1,5 @@
 ---
-title: 'Como: Salvar arquivos com o controle RichTextBox do Windows Forms'
+title: Salvar arquivos com controle RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: c5d88e4942d96ee12e8b9f40156090c874386668
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: a87b93a53347aeba54f944b0f4c455aa272ea243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046259"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744821"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Como: Salvar arquivos com o controle RichTextBox do Windows Forms
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>Como salvar arquivos com o controle RichTextBox dos Windows Forms
 
-O controle <xref:System.Windows.Forms.RichTextBox> de Windows Forms pode gravar as informações exibidas em um dos vários formatos:
+O controle de <xref:System.Windows.Forms.RichTextBox> de Windows Forms pode gravar as informações exibidas em um dos vários formatos:
 
 - Texto sem formatação
 
@@ -36,17 +36,17 @@ O controle <xref:System.Windows.Forms.RichTextBox> de Windows Forms pode gravar 
 
 - Texto sem formatação com uma representação textual de objetos OLE
 
-Para salvar um arquivo, chame o <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> método. Você também pode usar o método **SaveFile** para salvar dados em um fluxo. Para obter mais informações, consulte <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
+Para salvar um arquivo, chame o método <xref:System.Windows.Forms.RichTextBox.SaveFile%2A>. Você também pode usar o método **SaveFile** para salvar dados em um fluxo. Para obter mais informações, consulte <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>.
 
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>Para salvar o conteúdo do controle em um arquivo
 
 1. Determine o caminho do arquivo a ser salvo.
 
-    Para fazer isso em um aplicativo do mundo real, você normalmente usaria o <xref:System.Windows.Forms.SaveFileDialog> componente. Para obter uma visão geral, consulte [Visão geral do componente SaveFileDialog](savefiledialog-component-overview-windows-forms.md).
+    Para fazer isso em um aplicativo do mundo real, você normalmente usará o componente <xref:System.Windows.Forms.SaveFileDialog>. Para obter uma visão geral, consulte [Visão geral do componente SaveFileDialog](savefiledialog-component-overview-windows-forms.md).
 
-2. Chame o <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> método <xref:System.Windows.Forms.RichTextBox> do controle, especificando o arquivo a ser salvo e, opcionalmente, um tipo de arquivo. Se você chamar o método com um nome de arquivo como seu único argumento, o arquivo será salvo como RTF. Para especificar outro tipo de arquivo, chame o método com um valor da <xref:System.Windows.Forms.RichTextBoxStreamType> enumeração como seu segundo argumento.
+2. Chame o método <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> do controle <xref:System.Windows.Forms.RichTextBox>, especificando o arquivo a ser salvo e, opcionalmente, um tipo de arquivo. Se você chamar o método com um nome de arquivo como seu único argumento, o arquivo será salvo como RTF. Para especificar outro tipo de arquivo, chame o método com um valor da enumeração <xref:System.Windows.Forms.RichTextBoxStreamType> como seu segundo argumento.
 
-    No exemplo de código a seguir, o caminho definido para o do arquivo rich-text é a pasta **Meus documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem com mais segurança o aplicativo. O exemplo a seguir pressupõe um formulário com <xref:System.Windows.Forms.RichTextBox> um controle já adicionado.
+    No exemplo de código a seguir, o caminho definido para o do arquivo rich-text é a pasta **Meus documentos**. Esse local é usado porque você pode supor que a maioria dos computadores que executam o sistema operacional Windows inclui essa pasta. Escolher esse local também permite que os usuários com níveis mínimos de acesso ao sistema executem com mais segurança o aplicativo. O exemplo a seguir pressupõe um formulário com um controle de <xref:System.Windows.Forms.RichTextBox> já adicionado.
 
     ```vb
     Public Sub SaveFile()
@@ -88,7 +88,7 @@ Para salvar um arquivo, chame o <xref:System.Windows.Forms.RichTextBox.SaveFile%
     > [!IMPORTANT]
     > Este exemplo cria um novo arquivo, se o arquivo ainda não existe. Se um aplicativo precisar criar um arquivo, essa aplicativo precisará de acesso Criar para a pasta. As permissões são definidas usando listas de controle de acesso. Se o arquivo já existir, o aplicativo precisará apenas de acesso Gravar, um privilégio menor. Sempre que possível, é mais seguro criar o arquivo durante a implantação e somente conceder acesso de leitura a um único arquivo, em vez de acesso Criar a uma pasta. Além disso, é mais seguro gravar dados em pastas de usuário do que na pasta raiz ou na pasta Arquivos de Programas.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>

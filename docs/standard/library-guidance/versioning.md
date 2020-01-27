@@ -2,12 +2,12 @@
 title: Bibliotecas de controle de versão e .NET
 description: Recomendações de melhores práticas para controle de versão de bibliotecas do .NET.
 ms.date: 12/10/2018
-ms.openlocfilehash: 8ed3217e39b1fe0f330a650ec72cda224866e207
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706407"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745021"
 ---
 # <a name="versioning"></a>{1&gt;Controle de versão&lt;1}
 
@@ -33,11 +33,11 @@ O identificador de pacote do NuGet combinado com a versão do pacote NuGet é us
 
 Como a versão do pacote NuGet é a versão mais visível para os desenvolvedores, é uma boa ideia atualizá-la usando [SemVer (Controle de Versão de Semântica)](https://semver.org/). SemVer indica a importância das alterações entre as versões e ajuda os desenvolvedores a tomarem uma decisão bem informada ao escolherem qual versão usar. Por exemplo, ir de `1.0` para `2.0` indica que potencialmente há alterações significativas.
 
-**✔️ CONSIDERAR** o uso do [SemVer 2.0.0](https://semver.org/) para criar a versão do seu pacote NuGet.
+✔️ Considere usar [SemVer 2.0.0](https://semver.org/) para versão do seu pacote NuGet.
 
-**✔️ FAÇA** uso da versão do pacote NuGet na documentação pública, uma vez que é o número de versão que os usuários verão normalmente.
+✔️ usar a versão do pacote NuGet na documentação pública, pois é o número de versão que os usuários normalmente verão.
 
-**✔️ FAÇA** a inclusão de um sufixo de pré-lançamento ao liberar um pacote não estável.
+✔️ inclui um sufixo de pré-lançamento ao liberar um pacote não estável.
 
 > Os usuários devem aceitar receberem pacotes de pré-lançamento, assim, eles entenderão que o pacote não está concluído.
 
@@ -53,15 +53,15 @@ O Windows .NET Framework CLR exige uma correspondência exata para carregar um a
 
 Nomenclatura forte combinada com a versão do assembly habilita [carregamento de versão do assembly estrita](../assembly/versioning.md). Embora dar um nome forte a uma biblioteca tenha uma série de benefícios, isso tenderá a resultar em exceções de runtime de que um assembly não pode ser encontrado e [exigirá que redirecionamentos de associação](../../framework/configure-apps/redirect-assembly-versions.md) em `app.config`/`web.config` sejam corrigidos. O carregamento do assembly do .NET Core foi relaxado e o .NET Core CLR carregará automaticamente os assemblies no runtime com uma versão posterior.
 
-**✔️ CONSIDERE** incluir apenas uma versão principal em AssemblyVersion.
+✔️ Considere apenas a inclusão de uma versão principal no AssemblyVersion.
 
 > Por exemplo, Biblioteca 1.0 e Biblioteca 1.0.1 têm ambas uma AssemblyVersion de `1.0.0.0`, enquanto a Biblioteca 2.0 tem uma AssemblyVersion de `2.0.0.0`. Quando a versão do assembly é alterada com menos frequência, ela reduz os redirecionamentos de associação.
 
-**✔️ CONSIDERE** manter o número de versão principal do AssemblyVersion e a versão do pacote NuGet em sincronia.
+✔️ Considere manter o número de versão principal do AssemblyVersion e a versão do pacote NuGet em sincronia.
 
 > A versão do AssemblyVersion é incluída em algumas mensagens informativas exibidas ao usuário, por exemplo, o nome do assembly e os nomes de tipo qualificados do assembly em mensagens de exceção. Manter uma relação entre as versões fornece mais informações para desenvolvedores sobre qual versão eles estão usando.
 
-**❌ não** tem um AssemblyVersion fixo.
+❌ não tem um AssemblyVersion fixo.
 
 > Embora um AssemblyVersion inalterável evite a necessidade de redirecionamentos de associação, isso significa que apenas uma única versão do assembly pode ser instalada no GAC (Cache de Assembly Global). Além disso, os aplicativos que fazem referência ao assembly no GAC serão interrompidos se outro aplicativo atualizar o assembly do GAC com alterações significativas.
 
@@ -75,11 +75,11 @@ A versão de arquivo do assembly é usada para exibir uma versão de arquivo no 
 
 ![Windows Explorer](./media/versioning/win-properties.png "Windows Explorer")
 
-**✔️ CONSIDERE** incluir um número de build de integração contínua como a revisão AssemblyFileVersion.
+✔️ Considere incluir um número de Build de integração contínua como a revisão AssemblyFileVersion.
 
 > Por exemplo, você está criando a versão 1.0.0 do seu projeto e o número de build de integração contínua é 99, portanto, sua AssemblyFileVersion é 1.0.0.99.
 
-**✔️** Use o formato `Major.Minor.Build.Revision` para a versão de arquivo.
+✔️ Use o formato `Major.Minor.Build.Revision` para a versão do arquivo.
 
 > Embora a versão de arquivo nunca seja usada pelo .NET, o [Windows espera que a versão de arquivo](/windows/desktop/menurc/versioninfo-resource) esteja no formato `Major.Minor.Build.Revision`. Um aviso é acionado se a versão não segue esse formato.
 
@@ -94,7 +94,7 @@ A versão informativa do assembly é usada para registrar informações adiciona
 > [!NOTE]
 > As versões mais antigas do Visual Studio acionam um aviso de build caso essa versão não siga o formato `Major.Minor.Build.Revision`. O aviso pode ser ignorado com segurança.
 
-**❌ Evite** definir a versão informativa do assembly por conta própria.
+❌ Evite definir a versão informativa do assembly por conta própria.
 
 > Permita a SourceLink gerar automaticamente a versão que contém metadados de controle do código-fonte e NuGet.
 

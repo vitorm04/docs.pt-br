@@ -1,5 +1,5 @@
 ---
-title: Controle ListBox (Windows Forms)
+title: Controle ListBox
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListBox control [Windows Forms]
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - list items [Windows Forms], Windows Forms controls that display
 - list boxes
 ms.assetid: b0172473-c5f2-411e-aaa4-c8f17cb5eed4
-ms.openlocfilehash: 09b58bb0440f8ec187c4fa047e280d802747cd3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36ae8140a2d81aafe983b5f1f56e180a0f91e96c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012809"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745170"
 ---
 # <a name="listbox-control-windows-forms"></a>Controle ListBox (Windows Forms)
-Um Windows Forms `ListBox` controle exibe uma lista de itens dos quais o usuário pode selecionar um ou mais.  
+Um controle de `ListBox` de Windows Forms exibe uma lista de itens da qual o usuário pode selecionar um ou mais.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do controle ListBox](listbox-control-overview-windows-forms.md)  
@@ -27,6 +27,6 @@ Um Windows Forms `ListBox` controle exibe uma lista de itens dos quais o usuári
  Classe <xref:System.Windows.Forms.ListBox>  
  Descreve essa classe e tem links para todos os seus membros.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)  
- Fornece uma lista de coisas que você pode fazer com caixas de listagem, caixas de combinação e caixas de listagem marcada.
+ Fornece uma lista de coisas que você pode fazer com caixas de listagem, caixas de combinação e caixas de listagem marcadas.
