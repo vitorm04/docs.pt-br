@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar uma tela inicial a um aplicativo WPF'
+title: Como adicionar uma tela inicial
 ms.date: 08/18/2018
 helpviewer_keywords:
 - WPF [WPF], splash screen
@@ -7,44 +7,44 @@ helpviewer_keywords:
 - SplashScreen class [WPF]
 - splash screen [WPF]
 ms.assetid: d70a25c4-5fb9-4c27-b01d-b1b8ef39b3fd
-ms.openlocfilehash: 3120ee64d65822d323800a89466c6b707169aaaa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 39f53e21c40f036c65894b4f275cd5fb414999be
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947895"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740454"
 ---
-# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="4867a-102">Como: Adicionar uma tela inicial a um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="4867a-102">How to: Add a Splash Screen to a WPF Application</span></span>
+# <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a><span data-ttu-id="0a3a6-102">Como adicionar uma tela inicial a um aplicativo WPF</span><span class="sxs-lookup"><span data-stu-id="0a3a6-102">How to: Add a Splash Screen to a WPF Application</span></span>
 
-<span data-ttu-id="4867a-103">Este tópico mostra como adicionar uma janela de inicialização ou *tela inicial*, para um aplicativo do Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="4867a-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>
+<span data-ttu-id="0a3a6-103">Este tópico mostra como adicionar uma janela de inicialização ou *tela inicial*, para um aplicativo do Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="0a3a6-103">This topic shows how to add a startup window, or *splash screen*, to a Windows Presentation Foundation (WPF) application.</span></span>
 
-## <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="4867a-104">Para adicionar uma imagem existente como uma tela inicial</span><span class="sxs-lookup"><span data-stu-id="4867a-104">To add an existing image as a splash screen</span></span>
+## <a name="to-add-an-existing-image-as-a-splash-screen"></a><span data-ttu-id="0a3a6-104">Para adicionar uma imagem existente como uma tela inicial</span><span class="sxs-lookup"><span data-stu-id="0a3a6-104">To add an existing image as a splash screen</span></span>
 
-1. <span data-ttu-id="4867a-105">Crie ou localize uma imagem que deseja usar para a tela inicial.</span><span class="sxs-lookup"><span data-stu-id="4867a-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="4867a-106">Você pode usar qualquer formato de imagem com suporte do Windows Imaging Component (WIC).</span><span class="sxs-lookup"><span data-stu-id="4867a-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="4867a-107">Por exemplo, você pode usar o formato TIFF, GIF, JPEG, PNG ou BMP.</span><span class="sxs-lookup"><span data-stu-id="4867a-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>
+1. <span data-ttu-id="0a3a6-105">Crie ou localize uma imagem que deseja usar para a tela inicial.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-105">Create or find an image that you want to use for the splash screen.</span></span> <span data-ttu-id="0a3a6-106">Você pode usar qualquer formato de imagem com suporte do Windows Imaging Component (WIC).</span><span class="sxs-lookup"><span data-stu-id="0a3a6-106">You can use any image format that is supported by the Windows Imaging Component (WIC).</span></span> <span data-ttu-id="0a3a6-107">Por exemplo, você pode usar o formato TIFF, GIF, JPEG, PNG ou BMP.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-107">For example, you can use the BMP, GIF, JPEG, PNG, or TIFF format.</span></span>
 
-2. <span data-ttu-id="4867a-108">Adicione o arquivo de imagem ao projeto de aplicativo do WPF.</span><span class="sxs-lookup"><span data-stu-id="4867a-108">Add the image file to the WPF Application project.</span></span>
+2. <span data-ttu-id="0a3a6-108">Adicione o arquivo de imagem ao projeto de aplicativo do WPF.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-108">Add the image file to the WPF Application project.</span></span>
 
-3. <span data-ttu-id="4867a-109">Na **Gerenciador de soluções**, selecione a imagem.</span><span class="sxs-lookup"><span data-stu-id="4867a-109">In **Solution Explorer**, select the image.</span></span>
+3. <span data-ttu-id="0a3a6-109">Em **Gerenciador de soluções**, selecione a imagem.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-109">In **Solution Explorer**, select the image.</span></span>
 
-4. <span data-ttu-id="4867a-110">Na janela Propriedades, clique na seta suspensa para a propriedade **Build Action**.</span><span class="sxs-lookup"><span data-stu-id="4867a-110">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>
+4. <span data-ttu-id="0a3a6-110">Na janela Propriedades, clique na seta suspensa para a propriedade **Build Action**.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-110">In the Properties window, click the drop-down arrow for the **Build Action** property.</span></span>
 
-5. <span data-ttu-id="4867a-111">Selecione **SplashScreen** na lista suspensa.</span><span class="sxs-lookup"><span data-stu-id="4867a-111">Select **SplashScreen** from the drop-down list.</span></span>
+5. <span data-ttu-id="0a3a6-111">Selecione **SplashScreen** na lista suspensa.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-111">Select **SplashScreen** from the drop-down list.</span></span>
 
-6. <span data-ttu-id="4867a-112">Pressione **F5** para compilar e executar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="4867a-112">Press **F5** to build and run the application.</span></span>
+6. <span data-ttu-id="0a3a6-112">Pressione **F5** para compilar e executar o aplicativo.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-112">Press **F5** to build and run the application.</span></span>
 
-     <span data-ttu-id="4867a-113">A imagem da tela inicial aparece no centro da tela e, em seguida, desaparece quando a janela principal do aplicativo aparecer.</span><span class="sxs-lookup"><span data-stu-id="4867a-113">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>
+     <span data-ttu-id="0a3a6-113">A imagem da tela inicial aparece no centro da tela e, em seguida, desaparece quando a janela principal do aplicativo aparecer.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-113">The splash screen image appears in the center of the screen, and then fades when the main application window appears.</span></span>
 
-## <a name="to-exclude-the-splash-screen-from-build"></a><span data-ttu-id="4867a-114">Para excluir a tela inicial de build</span><span class="sxs-lookup"><span data-stu-id="4867a-114">To exclude the splash screen from build</span></span>
+## <a name="to-exclude-the-splash-screen-from-build"></a><span data-ttu-id="0a3a6-114">Para excluir a tela inicial da compilação</span><span class="sxs-lookup"><span data-stu-id="0a3a6-114">To exclude the splash screen from build</span></span>
 
-1. <span data-ttu-id="4867a-115">Na **Gerenciador de soluções**, selecione a imagem da tela inicial.</span><span class="sxs-lookup"><span data-stu-id="4867a-115">In **Solution Explorer**, select the splash screen image.</span></span>
+1. <span data-ttu-id="0a3a6-115">Em **Gerenciador de soluções**, selecione a imagem da tela inicial.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-115">In **Solution Explorer**, select the splash screen image.</span></span>
 
-2. <span data-ttu-id="4867a-116">No **propriedades** janela, defina as **Build Action** para **None**.</span><span class="sxs-lookup"><span data-stu-id="4867a-116">In the **Properties** window, set the **Build Action** to **None**.</span></span>
+2. <span data-ttu-id="0a3a6-116">Na janela **Propriedades** , defina a **ação de compilação** como **nenhuma**.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-116">In the **Properties** window, set the **Build Action** to **None**.</span></span>
 
-## <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="4867a-117">Para remover a tela inicial de um aplicativo</span><span class="sxs-lookup"><span data-stu-id="4867a-117">To remove the splash screen from an application</span></span>
+## <a name="to-remove-the-splash-screen-from-an-application"></a><span data-ttu-id="0a3a6-117">Para remover a tela inicial de um aplicativo</span><span class="sxs-lookup"><span data-stu-id="0a3a6-117">To remove the splash screen from an application</span></span>
 
-<span data-ttu-id="4867a-118">Na **Gerenciador de soluções**, exclua a imagem da tela inicial.</span><span class="sxs-lookup"><span data-stu-id="4867a-118">In **Solution Explorer**, delete the splash screen image.</span></span>
+<span data-ttu-id="0a3a6-118">Em **Gerenciador de soluções**, exclua a imagem da tela inicial.</span><span class="sxs-lookup"><span data-stu-id="0a3a6-118">In **Solution Explorer**, delete the splash screen image.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4867a-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="4867a-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a3a6-119">Veja também</span><span class="sxs-lookup"><span data-stu-id="0a3a6-119">See also</span></span>
 
 - <xref:System.Windows.SplashScreen>
-- <span data-ttu-id="4867a-120">[Como: Adicionar itens existentes a um projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="4867a-120">[How to: Add Existing Items to a Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span></span>
+- <span data-ttu-id="0a3a6-120">[Como: adicionar itens existentes a um projeto](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="0a3a6-120">[How to: Add Existing Items to a Project](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))</span></span>
