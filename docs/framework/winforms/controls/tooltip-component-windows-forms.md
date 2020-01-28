@@ -1,37 +1,37 @@
 ---
-title: Componente ToolTip (Windows Forms)
+title: Componente ToolTip
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tooltips [Windows Forms]
 - ToolTip component [Windows Forms]
 ms.assetid: 82e71dc3-0159-4f91-9f22-499224f004a0
-ms.openlocfilehash: eb68b614046fc10c4af9d58354125f76e119c782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c905fe493d3f49bef414853814fef174140e3120
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009273"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747252"
 ---
-# <a name="tooltip-component-windows-forms"></a><span data-ttu-id="589ed-102">Componente ToolTip (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="589ed-102">ToolTip Component (Windows Forms)</span></span>
-<span data-ttu-id="589ed-103">Os formulários do Windows <xref:System.Windows.Forms.ToolTip> componente exibe o texto quando o usuário aponta para controles.</span><span class="sxs-lookup"><span data-stu-id="589ed-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="589ed-104">Uma dica de ferramenta pode ser associada a qualquer controle.</span><span class="sxs-lookup"><span data-stu-id="589ed-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="589ed-105">Um exemplo de uso deste controle: Para economizar espaço em um formulário, você pode exibir um pequeno ícone em um botão e usar uma dica de ferramenta para explicar a função do botão.</span><span class="sxs-lookup"><span data-stu-id="589ed-105">An example use of this control: In order to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  
+# <a name="tooltip-component-windows-forms"></a><span data-ttu-id="82d72-102">Componente ToolTip (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="82d72-102">ToolTip Component (Windows Forms)</span></span>
+<span data-ttu-id="82d72-103">O componente Windows Forms <xref:System.Windows.Forms.ToolTip> exibe texto quando o usuário aponta para os controles.</span><span class="sxs-lookup"><span data-stu-id="82d72-103">The Windows Forms <xref:System.Windows.Forms.ToolTip> component displays text when the user points at controls.</span></span> <span data-ttu-id="82d72-104">Uma dica de ferramenta pode ser associada a qualquer controle.</span><span class="sxs-lookup"><span data-stu-id="82d72-104">A ToolTip can be associated with any control.</span></span> <span data-ttu-id="82d72-105">Um exemplo de uso deste controle: para economizar espaço em um formulário, você pode exibir um ícone pequeno em um botão e usar uma dica de ferramenta para explicar a função do botão.</span><span class="sxs-lookup"><span data-stu-id="82d72-105">An example use of this control: In order to save space on a form, you can display a small icon on a button and use a ToolTip to explain the button's function.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="589ed-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="589ed-106">In This Section</span></span>  
- [<span data-ttu-id="589ed-107">Visão geral do componente ToolTip</span><span class="sxs-lookup"><span data-stu-id="589ed-107">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)  
- <span data-ttu-id="589ed-108">Apresenta os conceitos gerais do <xref:System.Windows.Forms.ToolTip> componente, que permite que os usuários vejam o texto quando eles apontem o mouse para um controle.</span><span class="sxs-lookup"><span data-stu-id="589ed-108">Introduces the general concepts of the <xref:System.Windows.Forms.ToolTip> component, which allows users to see text when they point the mouse at a control.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="82d72-106">Nesta seção</span><span class="sxs-lookup"><span data-stu-id="82d72-106">In This Section</span></span>  
+ [<span data-ttu-id="82d72-107">Visão geral do componente ToolTip</span><span class="sxs-lookup"><span data-stu-id="82d72-107">ToolTip Component Overview</span></span>](tooltip-component-overview-windows-forms.md)  
+ <span data-ttu-id="82d72-108">Apresenta os conceitos gerais do componente <xref:System.Windows.Forms.ToolTip>, que permite que os usuários vejam o texto quando apontam o mouse em um controle.</span><span class="sxs-lookup"><span data-stu-id="82d72-108">Introduces the general concepts of the <xref:System.Windows.Forms.ToolTip> component, which allows users to see text when they point the mouse at a control.</span></span>  
   
- [<span data-ttu-id="589ed-109">Como: Definir ToolTips para controles em um Windows Form no tempo de Design</span><span class="sxs-lookup"><span data-stu-id="589ed-109">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
- <span data-ttu-id="589ed-110">Descreve como definir Tooltips em código ou no designer.</span><span class="sxs-lookup"><span data-stu-id="589ed-110">Describes how to set Tooltips in code or in the designer.</span></span>  
+ [<span data-ttu-id="82d72-109">Como definir ToolTips para controles em um Windows Form no tempo de design</span><span class="sxs-lookup"><span data-stu-id="82d72-109">How to: Set ToolTips for Controls on a Windows Form at Design Time</span></span>](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)  
+ <span data-ttu-id="82d72-110">Descreve como definir dicas de ferramentas no código ou no designer.</span><span class="sxs-lookup"><span data-stu-id="82d72-110">Describes how to set Tooltips in code or in the designer.</span></span>  
   
- [<span data-ttu-id="589ed-111">Como: Alterar o atraso do componente ToolTip dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="589ed-111">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
- <span data-ttu-id="589ed-112">Explica como definir valores que controlam quanto tempo demora uma dica de ferramenta aparecer e o período de tempo para o qual ele é mostrado.</span><span class="sxs-lookup"><span data-stu-id="589ed-112">Explains how to set values that control how long a Tooltip takes to appear and the length of time for which it is shown.</span></span>  
+ [<span data-ttu-id="82d72-111">Como alterar o atraso do componente ToolTip dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="82d72-111">How to: Change the Delay of the Windows Forms ToolTip Component</span></span>](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+ <span data-ttu-id="82d72-112">Explica como definir valores que controlam quanto tempo uma dica de ferramenta leva para aparecer e o período para o qual ela é mostrada.</span><span class="sxs-lookup"><span data-stu-id="82d72-112">Explains how to set values that control how long a Tooltip takes to appear and the length of time for which it is shown.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="589ed-113">Referência</span><span class="sxs-lookup"><span data-stu-id="589ed-113">Reference</span></span>  
- <span data-ttu-id="589ed-114">Classe <xref:System.Windows.Forms.ToolTip></span><span class="sxs-lookup"><span data-stu-id="589ed-114"><xref:System.Windows.Forms.ToolTip> class</span></span>  
- <span data-ttu-id="589ed-115">Fornece informações de referência sobre a classe e seus membros.</span><span class="sxs-lookup"><span data-stu-id="589ed-115">Provides reference information on the class and its members.</span></span>  
+## <a name="reference"></a><span data-ttu-id="82d72-113">Referência</span><span class="sxs-lookup"><span data-stu-id="82d72-113">Reference</span></span>  
+ <span data-ttu-id="82d72-114">Classe <xref:System.Windows.Forms.ToolTip></span><span class="sxs-lookup"><span data-stu-id="82d72-114"><xref:System.Windows.Forms.ToolTip> class</span></span>  
+ <span data-ttu-id="82d72-115">Fornece informações de referência sobre a classe e seus membros.</span><span class="sxs-lookup"><span data-stu-id="82d72-115">Provides reference information on the class and its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="589ed-116">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="589ed-116">Related Sections</span></span>  
- [<span data-ttu-id="589ed-117">Controles a serem usados nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="589ed-117">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="589ed-118">Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.</span><span class="sxs-lookup"><span data-stu-id="589ed-118">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="82d72-116">Seções Relacionadas</span><span class="sxs-lookup"><span data-stu-id="82d72-116">Related Sections</span></span>  
+ [<span data-ttu-id="82d72-117">Controles a serem usados nos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="82d72-117">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="82d72-118">Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.</span><span class="sxs-lookup"><span data-stu-id="82d72-118">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- [<span data-ttu-id="589ed-119">Ajuda de Controle Usando ToolTips</span><span class="sxs-lookup"><span data-stu-id="589ed-119">Control Help Using ToolTips</span></span>](../advanced/control-help-using-tooltips.md)  
- <span data-ttu-id="589ed-120">Discute as dicas de ferramenta como uma forma de tornar breve, especializada em mensagens de ajuda para controles individuais em formulários do Windows.</span><span class="sxs-lookup"><span data-stu-id="589ed-120">Discusses Tooltips as a way to make brief, specialized Help messages for individual controls on Windows Forms.</span></span>
+ [<span data-ttu-id="82d72-119">Ajuda de Controle Usando ToolTips</span><span class="sxs-lookup"><span data-stu-id="82d72-119">Control Help Using ToolTips</span></span>](../advanced/control-help-using-tooltips.md)  
+ <span data-ttu-id="82d72-120">Discute dicas de ferramenta como uma maneira de tornar as mensagens de ajuda breves e especializadas para controles individuais em Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="82d72-120">Discusses Tooltips as a way to make brief, specialized Help messages for individual controls on Windows Forms.</span></span>

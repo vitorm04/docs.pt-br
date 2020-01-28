@@ -9,117 +9,111 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 32156ad0fe4b3dce4371fe757d15f5b8040aaf19
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115857"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745419"
 ---
-# <a name="boxing-and-unboxing-c-programming-guide"></a><span data-ttu-id="718f9-102">Conversões boxing e unboxing (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="718f9-102">Boxing and Unboxing (C# Programming Guide)</span></span>
+# <a name="boxing-and-unboxing-c-programming-guide"></a><span data-ttu-id="e2113-102">Conversões boxing e unboxing (Guia de Programação em C#)</span><span class="sxs-lookup"><span data-stu-id="e2113-102">Boxing and Unboxing (C# Programming Guide)</span></span>
 
-<span data-ttu-id="718f9-103">Conversão boxing é o processo de conversão de um [tipo de valor](../../language-reference/keywords/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="718f9-103">Boxing is the process of converting a [value type](../../language-reference/keywords/value-types.md) to the type `object` or to any interface type implemented by this value type.</span></span> <span data-ttu-id="718f9-104">Quando as caixas de Common Language Runtime (CLR) um tipo de valor, ele encapsula o valor dentro de uma instância de <xref:System.Object?displayProperty=nameWithType> e a armazena no heap gerenciado.</span><span class="sxs-lookup"><span data-stu-id="718f9-104">When the common language runtime (CLR) boxes a value type, it wraps the value inside a <xref:System.Object?displayProperty=nameWithType> instance and stores it on the managed heap.</span></span> <span data-ttu-id="718f9-105">A conversão unboxing extrai o tipo de valor do objeto.</span><span class="sxs-lookup"><span data-stu-id="718f9-105">Unboxing extracts the value type from the object.</span></span> <span data-ttu-id="718f9-106">A conversão boxing é implícita, a conversão unboxing é explícita.</span><span class="sxs-lookup"><span data-stu-id="718f9-106">Boxing is implicit; unboxing is explicit.</span></span> <span data-ttu-id="718f9-107">O conceito de conversões boxing e unboxing serve como base para a exibição unificada de C# do sistema de tipos em que um valor de qualquer tipo pode ser tratado como um objeto.</span><span class="sxs-lookup"><span data-stu-id="718f9-107">The concept of boxing and unboxing underlies the C# unified view of the type system in which a value of any type can be treated as an object.</span></span>
+<span data-ttu-id="e2113-103">Conversão boxing é o processo de conversão de um [tipo de valor](../../language-reference/builtin-types/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="e2113-103">Boxing is the process of converting a [value type](../../language-reference/builtin-types/value-types.md) to the type `object` or to any interface type implemented by this value type.</span></span> <span data-ttu-id="e2113-104">Quando as caixas de Common Language Runtime (CLR) um tipo de valor, ele encapsula o valor dentro de uma instância de <xref:System.Object?displayProperty=nameWithType> e a armazena no heap gerenciado.</span><span class="sxs-lookup"><span data-stu-id="e2113-104">When the common language runtime (CLR) boxes a value type, it wraps the value inside a <xref:System.Object?displayProperty=nameWithType> instance and stores it on the managed heap.</span></span> <span data-ttu-id="e2113-105">A conversão unboxing extrai o tipo de valor do objeto.</span><span class="sxs-lookup"><span data-stu-id="e2113-105">Unboxing extracts the value type from the object.</span></span> <span data-ttu-id="e2113-106">A conversão boxing é implícita, a conversão unboxing é explícita.</span><span class="sxs-lookup"><span data-stu-id="e2113-106">Boxing is implicit; unboxing is explicit.</span></span> <span data-ttu-id="e2113-107">O conceito de conversões boxing e unboxing serve como base para a exibição unificada de C# do sistema de tipos em que um valor de qualquer tipo pode ser tratado como um objeto.</span><span class="sxs-lookup"><span data-stu-id="e2113-107">The concept of boxing and unboxing underlies the C# unified view of the type system in which a value of any type can be treated as an object.</span></span>
 
-<span data-ttu-id="718f9-108">No exemplo a seguir, a variável de inteiro `i` é submetida à *conversão boxing* e atribuída ao objeto `o`.</span><span class="sxs-lookup"><span data-stu-id="718f9-108">In the following example, the integer variable `i` is *boxed* and assigned to object `o`.</span></span>
+<span data-ttu-id="e2113-108">No exemplo a seguir, a variável de inteiro `i` é submetida à *conversão boxing* e atribuída ao objeto `o`.</span><span class="sxs-lookup"><span data-stu-id="e2113-108">In the following example, the integer variable `i` is *boxed* and assigned to object `o`.</span></span>
 
 [!code-csharp[csProgGuideTypes#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#14)]
 
-<span data-ttu-id="718f9-109">O objeto `o` pode ser submetido à conversão unboxing e atribuído à variável de inteiro `i`:</span><span class="sxs-lookup"><span data-stu-id="718f9-109">The object `o` can then be unboxed and assigned to integer variable `i`:</span></span>
+<span data-ttu-id="e2113-109">O objeto `o` pode ser submetido à conversão unboxing e atribuído à variável de inteiro `i`:</span><span class="sxs-lookup"><span data-stu-id="e2113-109">The object `o` can then be unboxed and assigned to integer variable `i`:</span></span>
 
 [!code-csharp[csProgGuideTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#15)]
 
-<span data-ttu-id="718f9-110">Os exemplos a seguir ilustram como a conversão boxing é usada em C#.</span><span class="sxs-lookup"><span data-stu-id="718f9-110">The following examples illustrate how boxing is used in C#.</span></span>
+<span data-ttu-id="e2113-110">Os exemplos a seguir ilustram como a conversão boxing é usada em C#.</span><span class="sxs-lookup"><span data-stu-id="e2113-110">The following examples illustrate how boxing is used in C#.</span></span>
 
 [!code-csharp[csProgGuideTypes#47](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#47)]
 
-## <a name="performance"></a><span data-ttu-id="718f9-111">Desempenho</span><span class="sxs-lookup"><span data-stu-id="718f9-111">Performance</span></span>
+## <a name="performance"></a><span data-ttu-id="e2113-111">Desempenho</span><span class="sxs-lookup"><span data-stu-id="e2113-111">Performance</span></span>
 
-<span data-ttu-id="718f9-112">Em relação às atribuições simples, as conversões boxing e unboxing são processos computacionalmente dispendiosos.</span><span class="sxs-lookup"><span data-stu-id="718f9-112">In relation to simple assignments, boxing and unboxing are computationally expensive processes.</span></span> <span data-ttu-id="718f9-113">Quando um tipo de valor é submetido à conversão boxing, um novo objeto deve ser alocado e construído.</span><span class="sxs-lookup"><span data-stu-id="718f9-113">When a value type is boxed, a new object must be allocated and constructed.</span></span> <span data-ttu-id="718f9-114">A um grau menor, a conversão necessária para a conversão unboxing também é computacionalmente dispendiosa.</span><span class="sxs-lookup"><span data-stu-id="718f9-114">To a lesser degree, the cast required for unboxing is also expensive computationally.</span></span> <span data-ttu-id="718f9-115">Para obter mais informações, consulte [Desempenho](../../../framework/performance/performance-tips.md).</span><span class="sxs-lookup"><span data-stu-id="718f9-115">For more information, see [Performance](../../../framework/performance/performance-tips.md).</span></span>
+<span data-ttu-id="e2113-112">Em relação às atribuições simples, as conversões boxing e unboxing são processos computacionalmente dispendiosos.</span><span class="sxs-lookup"><span data-stu-id="e2113-112">In relation to simple assignments, boxing and unboxing are computationally expensive processes.</span></span> <span data-ttu-id="e2113-113">Quando um tipo de valor é submetido à conversão boxing, um novo objeto deve ser alocado e construído.</span><span class="sxs-lookup"><span data-stu-id="e2113-113">When a value type is boxed, a new object must be allocated and constructed.</span></span> <span data-ttu-id="e2113-114">A um grau menor, a conversão necessária para a conversão unboxing também é computacionalmente dispendiosa.</span><span class="sxs-lookup"><span data-stu-id="e2113-114">To a lesser degree, the cast required for unboxing is also expensive computationally.</span></span> <span data-ttu-id="e2113-115">Para obter mais informações, consulte [Desempenho](../../../framework/performance/performance-tips.md).</span><span class="sxs-lookup"><span data-stu-id="e2113-115">For more information, see [Performance](../../../framework/performance/performance-tips.md).</span></span>
 
-## <a name="boxing"></a><span data-ttu-id="718f9-116">Boxing</span><span class="sxs-lookup"><span data-stu-id="718f9-116">Boxing</span></span>
+## <a name="boxing"></a><span data-ttu-id="e2113-116">Boxing</span><span class="sxs-lookup"><span data-stu-id="e2113-116">Boxing</span></span>
 
-<span data-ttu-id="718f9-117">A conversão boxing é usada para armazenar tipos de valor no heap coletado como lixo.</span><span class="sxs-lookup"><span data-stu-id="718f9-117">Boxing is used to store value types in the garbage-collected heap.</span></span> <span data-ttu-id="718f9-118">A conversão boxing é uma conversão implícita de um [tipo de valor](../../language-reference/keywords/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="718f9-118">Boxing is an implicit conversion of a [value type](../../language-reference/keywords/value-types.md) to the type `object` or to any interface type implemented by this value type.</span></span> <span data-ttu-id="718f9-119">A conversão boxing de um tipo de valor aloca uma instância de objeto no heap e copia o valor no novo objeto.</span><span class="sxs-lookup"><span data-stu-id="718f9-119">Boxing a value type allocates an object instance on the heap and copies the value into the new object.</span></span>
+<span data-ttu-id="e2113-117">A conversão boxing é usada para armazenar tipos de valor no heap coletado como lixo.</span><span class="sxs-lookup"><span data-stu-id="e2113-117">Boxing is used to store value types in the garbage-collected heap.</span></span> <span data-ttu-id="e2113-118">A conversão boxing é uma conversão implícita de um [tipo de valor](../../language-reference/builtin-types/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="e2113-118">Boxing is an implicit conversion of a [value type](../../language-reference/builtin-types/value-types.md) to the type `object` or to any interface type implemented by this value type.</span></span> <span data-ttu-id="e2113-119">A conversão boxing de um tipo de valor aloca uma instância de objeto no heap e copia o valor no novo objeto.</span><span class="sxs-lookup"><span data-stu-id="e2113-119">Boxing a value type allocates an object instance on the heap and copies the value into the new object.</span></span>
 
-<span data-ttu-id="718f9-120">Considere a seguinte declaração de uma variável de tipo de valor:</span><span class="sxs-lookup"><span data-stu-id="718f9-120">Consider the following declaration of a value-type variable:</span></span>
+<span data-ttu-id="e2113-120">Considere a seguinte declaração de uma variável de tipo de valor:</span><span class="sxs-lookup"><span data-stu-id="e2113-120">Consider the following declaration of a value-type variable:</span></span>
 
 [!code-csharp[csProgGuideTypes#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#17)]
 
-<span data-ttu-id="718f9-121">A instrução a seguir aplica implicitamente a operação de conversão boxing na variável `i`:</span><span class="sxs-lookup"><span data-stu-id="718f9-121">The following statement implicitly applies the boxing operation on the variable `i`:</span></span>
+<span data-ttu-id="e2113-121">A instrução a seguir aplica implicitamente a operação de conversão boxing na variável `i`:</span><span class="sxs-lookup"><span data-stu-id="e2113-121">The following statement implicitly applies the boxing operation on the variable `i`:</span></span>
 
 [!code-csharp[csProgGuideTypes#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#18)]
 
-<span data-ttu-id="718f9-122">O resultado dessa instrução é a criação de uma referência de objeto `o`, na pilha, que faz referência a um valor do tipo `int`, no heap.</span><span class="sxs-lookup"><span data-stu-id="718f9-122">The result of this statement is creating an object reference `o`, on the stack, that references a value of the type `int`, on the heap.</span></span> <span data-ttu-id="718f9-123">Esse valor é uma cópia do valor do tipo de valor atribuído à variável `i`.</span><span class="sxs-lookup"><span data-stu-id="718f9-123">This value is a copy of the value-type value assigned to the variable `i`.</span></span> <span data-ttu-id="718f9-124">A diferença entre as duas variáveis, `i` e `o`, é ilustrada na figura de conversão boxing a seguir:</span><span class="sxs-lookup"><span data-stu-id="718f9-124">The difference between the two variables, `i` and `o`, is illustrated in the following image of boxing conversion:</span></span>
+<span data-ttu-id="e2113-122">O resultado dessa instrução é a criação de uma referência de objeto `o`, na pilha, que faz referência a um valor do tipo `int`, no heap.</span><span class="sxs-lookup"><span data-stu-id="e2113-122">The result of this statement is creating an object reference `o`, on the stack, that references a value of the type `int`, on the heap.</span></span> <span data-ttu-id="e2113-123">Esse valor é uma cópia do valor do tipo de valor atribuído à variável `i`.</span><span class="sxs-lookup"><span data-stu-id="e2113-123">This value is a copy of the value-type value assigned to the variable `i`.</span></span> <span data-ttu-id="e2113-124">A diferença entre as duas variáveis, `i` e `o`, é ilustrada na figura de conversão boxing a seguir:</span><span class="sxs-lookup"><span data-stu-id="e2113-124">The difference between the two variables, `i` and `o`, is illustrated in the following image of boxing conversion:</span></span>
 
 ![Gráfico mostrando a diferença entre variáveis i e o.](./media/boxing-and-unboxing/boxing-operation-i-o-variables.gif)
 
-<span data-ttu-id="718f9-126">Também é possível executar a conversão boxing explicitamente como no exemplo a seguir, mas a conversão boxing explícita nunca é necessária:</span><span class="sxs-lookup"><span data-stu-id="718f9-126">It is also possible to perform the boxing explicitly as in the following example, but explicit boxing is never required:</span></span>
+<span data-ttu-id="e2113-126">Também é possível executar a conversão boxing explicitamente como no exemplo a seguir, mas a conversão boxing explícita nunca é necessária:</span><span class="sxs-lookup"><span data-stu-id="e2113-126">It is also possible to perform the boxing explicitly as in the following example, but explicit boxing is never required:</span></span>
 
 [!code-csharp[csProgGuideTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#19)]
 
-## <a name="description"></a><span data-ttu-id="718f9-127">Descrição</span><span class="sxs-lookup"><span data-stu-id="718f9-127">Description</span></span>
+## <a name="description"></a><span data-ttu-id="e2113-127">Descrição</span><span class="sxs-lookup"><span data-stu-id="e2113-127">Description</span></span>
 
-<span data-ttu-id="718f9-128">Este exemplo converte uma variável de inteiro `i` em um objeto `o` usando a conversão boxing.</span><span class="sxs-lookup"><span data-stu-id="718f9-128">This example converts an integer variable `i` to an object `o` by using boxing.</span></span> <span data-ttu-id="718f9-129">Em seguida, o valor armazenado na variável `i` é alterado de `123` para `456`.</span><span class="sxs-lookup"><span data-stu-id="718f9-129">Then, the value stored in the variable `i` is changed from `123` to `456`.</span></span> <span data-ttu-id="718f9-130">O exemplo mostra que o tipo do valor original e o objeto submetido à conversão boxing usa locais de memória separados e, portanto, pode armazenar valores diferentes.</span><span class="sxs-lookup"><span data-stu-id="718f9-130">The example shows that the original value type and the boxed object use separate memory locations, and therefore can store different values.</span></span>
+<span data-ttu-id="e2113-128">Este exemplo converte uma variável de inteiro `i` em um objeto `o` usando a conversão boxing.</span><span class="sxs-lookup"><span data-stu-id="e2113-128">This example converts an integer variable `i` to an object `o` by using boxing.</span></span> <span data-ttu-id="e2113-129">Em seguida, o valor armazenado na variável `i` é alterado de `123` para `456`.</span><span class="sxs-lookup"><span data-stu-id="e2113-129">Then, the value stored in the variable `i` is changed from `123` to `456`.</span></span> <span data-ttu-id="e2113-130">O exemplo mostra que o tipo do valor original e o objeto submetido à conversão boxing usa locais de memória separados e, portanto, pode armazenar valores diferentes.</span><span class="sxs-lookup"><span data-stu-id="e2113-130">The example shows that the original value type and the boxed object use separate memory locations, and therefore can store different values.</span></span>
 
-## <a name="example"></a><span data-ttu-id="718f9-131">Exemplo</span><span class="sxs-lookup"><span data-stu-id="718f9-131">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e2113-131">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e2113-131">Example</span></span>
 
 [!code-csharp[csProgGuideTypes#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#16)]
 
-## <a name="unboxing"></a><span data-ttu-id="718f9-132">Unboxing</span><span class="sxs-lookup"><span data-stu-id="718f9-132">Unboxing</span></span>
+## <a name="unboxing"></a><span data-ttu-id="e2113-132">Unboxing</span><span class="sxs-lookup"><span data-stu-id="e2113-132">Unboxing</span></span>
 
-<span data-ttu-id="718f9-133">A conversão unboxing é uma conversão explícita do tipo `object` para um [tipo de valor](../../language-reference/keywords/value-types.md) ou de um tipo de interface para um tipo de valor que implementa a interface.</span><span class="sxs-lookup"><span data-stu-id="718f9-133">Unboxing is an explicit conversion from the type `object` to a [value type](../../language-reference/keywords/value-types.md) or from an interface type to a value type that implements the interface.</span></span> <span data-ttu-id="718f9-134">Uma operação de conversão unboxing consiste em:</span><span class="sxs-lookup"><span data-stu-id="718f9-134">An unboxing operation consists of:</span></span>
+<span data-ttu-id="e2113-133">A conversão unboxing é uma conversão explícita do tipo `object` para um [tipo de valor](../../language-reference/builtin-types/value-types.md) ou de um tipo de interface para um tipo de valor que implementa a interface.</span><span class="sxs-lookup"><span data-stu-id="e2113-133">Unboxing is an explicit conversion from the type `object` to a [value type](../../language-reference/builtin-types/value-types.md) or from an interface type to a value type that implements the interface.</span></span> <span data-ttu-id="e2113-134">Uma operação de conversão unboxing consiste em:</span><span class="sxs-lookup"><span data-stu-id="e2113-134">An unboxing operation consists of:</span></span>
 
-- <span data-ttu-id="718f9-135">Verificar a instância do objeto para garantir que ele é um valor da conversão boxing de um determinado tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="718f9-135">Checking the object instance to make sure that it is a boxed value of the given value type.</span></span>
+- <span data-ttu-id="e2113-135">Verificar a instância do objeto para garantir que ele é um valor da conversão boxing de um determinado tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="e2113-135">Checking the object instance to make sure that it is a boxed value of the given value type.</span></span>
 
-- <span data-ttu-id="718f9-136">Copiar o valor da instância para a variável de tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="718f9-136">Copying the value from the instance into the value-type variable.</span></span>
+- <span data-ttu-id="e2113-136">Copiar o valor da instância para a variável de tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="e2113-136">Copying the value from the instance into the value-type variable.</span></span>
 
-<span data-ttu-id="718f9-137">As instruções a seguir demonstram operações conversão boxing e unboxing:</span><span class="sxs-lookup"><span data-stu-id="718f9-137">The following statements demonstrate both boxing and unboxing operations:</span></span>
+<span data-ttu-id="e2113-137">As instruções a seguir demonstram operações conversão boxing e unboxing:</span><span class="sxs-lookup"><span data-stu-id="e2113-137">The following statements demonstrate both boxing and unboxing operations:</span></span>
 
 [!code-csharp[csProgGuideTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#21)]
 
-<span data-ttu-id="718f9-138">A figura a seguir demonstra o resultado das instruções anteriores:</span><span class="sxs-lookup"><span data-stu-id="718f9-138">The following figure demonstrates the result of the previous statements:</span></span>
+<span data-ttu-id="e2113-138">A figura a seguir demonstra o resultado das instruções anteriores:</span><span class="sxs-lookup"><span data-stu-id="e2113-138">The following figure demonstrates the result of the previous statements:</span></span>
 
 ![Gráfico mostrando uma conversão unboxing.](./media/boxing-and-unboxing/unboxing-conversion-operation.gif)
 
-<span data-ttu-id="718f9-140">Para a conversão unboxing de tipos de valor ter êxito em tempo de execução, o item sendo submetido à conversão unboxing deve ser uma referência para um objeto que foi criado anteriormente ao realizar a conversão boxing de uma instância desse tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="718f9-140">For the unboxing of value types to succeed at run time, the item being unboxed must be a reference to an object that was previously created by boxing an instance of that value type.</span></span> <span data-ttu-id="718f9-141">Tentar realizar a conversão unboxing de `null` causa uma <xref:System.NullReferenceException>.</span><span class="sxs-lookup"><span data-stu-id="718f9-141">Attempting to unbox `null` causes a <xref:System.NullReferenceException>.</span></span> <span data-ttu-id="718f9-142">Tentar realizar a conversão unboxing de uma referência para um tipo de valor incompatível causa uma <xref:System.InvalidCastException>.</span><span class="sxs-lookup"><span data-stu-id="718f9-142">Attempting to unbox a reference to an incompatible value type causes an <xref:System.InvalidCastException>.</span></span>
+<span data-ttu-id="e2113-140">Para a conversão unboxing de tipos de valor ter êxito em tempo de execução, o item sendo submetido à conversão unboxing deve ser uma referência para um objeto que foi criado anteriormente ao realizar a conversão boxing de uma instância desse tipo de valor.</span><span class="sxs-lookup"><span data-stu-id="e2113-140">For the unboxing of value types to succeed at run time, the item being unboxed must be a reference to an object that was previously created by boxing an instance of that value type.</span></span> <span data-ttu-id="e2113-141">Tentar realizar a conversão unboxing de `null` causa uma <xref:System.NullReferenceException>.</span><span class="sxs-lookup"><span data-stu-id="e2113-141">Attempting to unbox `null` causes a <xref:System.NullReferenceException>.</span></span> <span data-ttu-id="e2113-142">Tentar realizar a conversão unboxing de uma referência para um tipo de valor incompatível causa uma <xref:System.InvalidCastException>.</span><span class="sxs-lookup"><span data-stu-id="e2113-142">Attempting to unbox a reference to an incompatible value type causes an <xref:System.InvalidCastException>.</span></span>
 
-## <a name="example"></a><span data-ttu-id="718f9-143">Exemplo</span><span class="sxs-lookup"><span data-stu-id="718f9-143">Example</span></span>
+## <a name="example"></a><span data-ttu-id="e2113-143">Exemplo</span><span class="sxs-lookup"><span data-stu-id="e2113-143">Example</span></span>
 
-<span data-ttu-id="718f9-144">O exemplo a seguir demonstra um caso de conversão unboxing inválida e o `InvalidCastException` resultante.</span><span class="sxs-lookup"><span data-stu-id="718f9-144">The following example demonstrates a case of invalid unboxing and the resulting `InvalidCastException`.</span></span> <span data-ttu-id="718f9-145">Usando `try` e `catch`, uma mensagem de erro é exibida quando o erro ocorre.</span><span class="sxs-lookup"><span data-stu-id="718f9-145">Using `try` and `catch`, an error message is displayed when the error occurs.</span></span>
+<span data-ttu-id="e2113-144">O exemplo a seguir demonstra um caso de conversão unboxing inválida e o `InvalidCastException` resultante.</span><span class="sxs-lookup"><span data-stu-id="e2113-144">The following example demonstrates a case of invalid unboxing and the resulting `InvalidCastException`.</span></span> <span data-ttu-id="e2113-145">Usando `try` e `catch`, uma mensagem de erro é exibida quando o erro ocorre.</span><span class="sxs-lookup"><span data-stu-id="e2113-145">Using `try` and `catch`, an error message is displayed when the error occurs.</span></span>
 
 [!code-csharp[csProgGuideTypes#20](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#20)]
 
-<span data-ttu-id="718f9-146">Este programa produz:</span><span class="sxs-lookup"><span data-stu-id="718f9-146">This program outputs:</span></span>
+<span data-ttu-id="e2113-146">Este programa produz:</span><span class="sxs-lookup"><span data-stu-id="e2113-146">This program outputs:</span></span>
 
 `Specified cast is not valid. Error: Incorrect unboxing.`
 
-<span data-ttu-id="718f9-147">Se você alterar a instrução:</span><span class="sxs-lookup"><span data-stu-id="718f9-147">If you change the statement:</span></span>
+<span data-ttu-id="e2113-147">Se você alterar a instrução:</span><span class="sxs-lookup"><span data-stu-id="e2113-147">If you change the statement:</span></span>
 
 ```csharp
 int j = (short) o;
 ```
 
-<span data-ttu-id="718f9-148">para:</span><span class="sxs-lookup"><span data-stu-id="718f9-148">to:</span></span>
+<span data-ttu-id="e2113-148">para:</span><span class="sxs-lookup"><span data-stu-id="e2113-148">to:</span></span>
 
 ```csharp
 int j = (int) o;
 ```
 
-<span data-ttu-id="718f9-149">a conversão será executada e você receberá a saída:</span><span class="sxs-lookup"><span data-stu-id="718f9-149">the conversion will be performed, and you will get the output:</span></span>
+<span data-ttu-id="e2113-149">a conversão será executada e você receberá a saída:</span><span class="sxs-lookup"><span data-stu-id="e2113-149">the conversion will be performed, and you will get the output:</span></span>
 
 `Unboxing OK.`
 
-## <a name="c-language-specification"></a><span data-ttu-id="718f9-150">especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="718f9-150">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="e2113-150">especificação da linguagem C#</span><span class="sxs-lookup"><span data-stu-id="e2113-150">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="related-sections"></a><span data-ttu-id="718f9-151">Seções relacionadas</span><span class="sxs-lookup"><span data-stu-id="718f9-151">Related sections</span></span>
+## <a name="see-also"></a><span data-ttu-id="e2113-151">Veja também</span><span class="sxs-lookup"><span data-stu-id="e2113-151">See also</span></span>
 
-<span data-ttu-id="718f9-152">Para obter mais informações: ,</span><span class="sxs-lookup"><span data-stu-id="718f9-152">For more information:</span></span>
-
-- [<span data-ttu-id="718f9-153">Tipos de referência</span><span class="sxs-lookup"><span data-stu-id="718f9-153">Reference Types</span></span>](../../language-reference/keywords/reference-types.md)
-
-- [<span data-ttu-id="718f9-154">Tipos de valor</span><span class="sxs-lookup"><span data-stu-id="718f9-154">Value Types</span></span>](../../language-reference/keywords/value-types.md)
-
-## <a name="see-also"></a><span data-ttu-id="718f9-155">Veja também</span><span class="sxs-lookup"><span data-stu-id="718f9-155">See also</span></span>
-
-- [<span data-ttu-id="718f9-156">Guia de Programação em C#</span><span class="sxs-lookup"><span data-stu-id="718f9-156">C# Programming Guide</span></span>](../index.md)
+- [<span data-ttu-id="e2113-152">Guia de programação em C#</span><span class="sxs-lookup"><span data-stu-id="e2113-152">C# programming guide</span></span>](../index.md)
+- [<span data-ttu-id="e2113-153">Tipos de referência</span><span class="sxs-lookup"><span data-stu-id="e2113-153">Reference types</span></span>](../../language-reference/keywords/reference-types.md)
+- [<span data-ttu-id="e2113-154">Tipos de valor</span><span class="sxs-lookup"><span data-stu-id="e2113-154">Value types</span></span>](../../language-reference/builtin-types/value-types.md)
