@@ -1,5 +1,5 @@
 ---
-title: Controles e componentes da caixa de diálogo (Windows Forms)
+title: Controles e componentes da caixa de diálogo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CommonDialog control
@@ -7,39 +7,39 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-ms.openlocfilehash: 9beacc84001aa1a5d505b8563794c49f3287cbc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3f90384eff092e9198787e08e19ffc59bbe9d761
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972270"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745971"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Controles e componentes da caixa de diálogo (Windows Forms)
 Os seguintes controles e componentes dos Windows Forms apresentam caixas de diálogo padrão. Siga os links para obter mais informações sobre as funções disponíveis em cada caixa de diálogo.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.ColorDialog>  
- Fornece informações de referência sobre o <xref:System.Windows.Forms.ColorDialog> classe e seus membros.  
+ Fornece informações de referência sobre a classe <xref:System.Windows.Forms.ColorDialog> e seus membros.  
   
  <xref:System.Windows.Forms.FontDialog>  
- Fornece informações de referência sobre o <xref:System.Windows.Forms.FontDialog> classe e seus membros.  
+ Fornece informações de referência sobre a classe <xref:System.Windows.Forms.FontDialog> e seus membros.  
   
  <xref:System.Windows.Forms.OpenFileDialog>  
- Fornece informações de referência sobre o <xref:System.Windows.Forms.OpenFileDialog> classe e seus membros.  
+ Fornece informações de referência sobre a classe <xref:System.Windows.Forms.OpenFileDialog> e seus membros.  
   
  <xref:System.Windows.Forms.PageSetupDialog>  
- Fornece informações de referência sobre o <xref:System.Windows.Forms.PageSetupDialog> classe e seus membros.  
+ Fornece informações de referência sobre a classe <xref:System.Windows.Forms.PageSetupDialog> e seus membros.  
   
  <xref:System.Windows.Forms.PrintDialog>  
- Fornece informações de referência sobre o <xref:System.Windows.Forms.PrintDialog> classe e seus membros.  
+ Fornece informações de referência sobre a classe <xref:System.Windows.Forms.PrintDialog> e seus membros.  
   
  <xref:System.Windows.Forms.PrintPreviewDialog>  
- Fornece informações de referência sobre o <xref:System.Windows.Forms.PrintPreviewDialog> classe e seus membros.  
+ Fornece informações de referência sobre a classe <xref:System.Windows.Forms.PrintPreviewDialog> e seus membros.  
   
  <xref:System.Windows.Forms.SaveFileDialog>  
- Fornece informações de referência sobre o <xref:System.Windows.Forms.SaveFileDialog> classe e seus membros.  
+ Fornece informações de referência sobre a classe <xref:System.Windows.Forms.SaveFileDialog> e seus membros.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Caixas de diálogo nos Windows Forms](../dialog-boxes-in-windows-forms.md)  
  Descreve como criar uma caixa de diálogo para um Windows Form.  
   

@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: fe0eacbd67917826c88c5ef68bb8d8aeab9ba251
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ad6e6f17f9a8c30339a74b8ab41af3a99e716d3f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711812"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745353"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Tipos de ponteiro (Guia de Programação em C#)
 
@@ -77,7 +77,7 @@ A tabela a seguir lista os operadores e as instruções que podem operar em pont
 
 Para obter mais informações sobre operadores relacionados a ponteiro, veja [Operadores relacionados a ponteiro](../../language-reference/operators/pointer-related-operators.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para saber mais, confira a seção [Tipos de ponteiro](~/_csharplang/spec/unsafe-code.md#pointer-types) na [Especificação da linguagem C#](~/_csharplang/spec/introduction.md).
 
@@ -87,5 +87,5 @@ Para saber mais, confira a seção [Tipos de ponteiro](~/_csharplang/spec/unsafe
 - [Código não seguro e ponteiros](index.md)
 - [Conversões de ponteiro](pointer-conversions.md)
 - [Tipos de referência](../../language-reference/keywords/reference-types.md)
-- [Tipos de valor](../../language-reference/keywords/value-types.md)
+- [Tipos de valor](../../language-reference/builtin-types/value-types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)

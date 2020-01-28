@@ -2,12 +2,12 @@
 title: Selecionando um tipo de credencial
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: b5dd757328fc04ccbbce7eaed2bd1a28b3e1282e
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 6737f7daeb37e2e296ca0429d73b963743c409a2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69949219"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746145"
 ---
 # <a name="selecting-a-credential-type"></a>Selecionando um tipo de credencial
 As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) para estabelecer uma identidade ou recursos reivindicados. Por exemplo, um passaporte é uma credencial que um governo emite para provar a cidadania em um país ou região. No WCF, as credenciais podem ter muitas formas, como tokens de nome de usuário e certificados X. 509. Este tópico discute as credenciais, como elas são usadas no WCF e como selecionar a credencial correta para seu aplicativo.  
@@ -18,19 +18,19 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
   
  Para a credencial de nome de usuário, o nome de usuário representa a identidade solicitada e a senha fornece uma prova de posse. Nesse caso, a autoridade confiável é o sistema que valida o nome de usuário e a senha.  
   
- Com uma credencial de certificado X. 509, o nome da entidade, o nome alternativo da entidade ou campos específicos dentro do certificado podem ser usados como declarações de identidade, enquanto outros `Valid From` campos `Valid To` , como os campos e, especificam a validade do Certificate.  
+ Com uma credencial de certificado X. 509, o nome da entidade, o nome alternativo da entidade ou campos específicos dentro do certificado podem ser usados como declarações de identidade, enquanto outros campos, como os campos `Valid From` e `Valid To`, especificam a validade do certificado.  
   
 ## <a name="transport-credential-types"></a>Tipos de credencial de transporte  
- A tabela a seguir mostra os possíveis tipos de credenciais de cliente que podem ser usadas por uma associação no modo de segurança de transporte. Ao criar um serviço, defina a `ClientCredentialType` Propriedade como um desses valores para especificar o tipo de credencial que o cliente deve fornecer para se comunicar com o serviço. Você pode definir os tipos no código ou nos arquivos de configuração.  
+ A tabela a seguir mostra os possíveis tipos de credenciais de cliente que podem ser usadas por uma associação no modo de segurança de transporte. Ao criar um serviço, defina a propriedade `ClientCredentialType` como um desses valores para especificar o tipo de credencial que o cliente deve fornecer para se comunicar com o serviço. Você pode definir os tipos no código ou nos arquivos de configuração.  
   
 |Configuração|Descrição|  
 |-------------|-----------------|  
-|Nenhum|Especifica que o cliente não precisa apresentar nenhuma credencial. Isso se traduz em um cliente anônimo.|  
-|Basic|Especifica a autenticação básica para o cliente. Para obter informações adicionais, consulte RFC2617[– autenticação http: Autenticação Básica e Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
-|Digest|Especifica a autenticação Digest para o cliente. Para obter informações adicionais, consulte RFC2617[– autenticação http: Autenticação Básica e Digest](https://go.microsoft.com/fwlink/?LinkID=88313).|  
-|NTLM|Especifica a autenticação NTLM (NT LAN Manager). Isso é usado quando você não pode usar a autenticação Kerberos por algum motivo. Você também pode desabilitar seu uso como um fallback definindo a propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> como `false`, o que faz com que o WCF faça um melhor esforço para gerar uma exceção se o NTLM for usado. Observe que a definição dessa propriedade `false` como pode não impedir que credenciais NTLM sejam enviadas pela conexão.|  
-|Windows|Especifica autenticação do Windows. Para especificar apenas o protocolo Kerberos em um domínio do Windows, defina <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> a propriedade `false` como (o padrão `true`é).|  
-|Certificate|Executa a autenticação de cliente usando um certificado X. 509.|  
+|{1&gt;Nenhum&lt;1}|Especifica que o cliente não precisa apresentar nenhuma credencial. Isso se traduz em um cliente anônimo.|  
+|Basic|Especifica a autenticação básica para o cliente. Para obter informações adicionais, consulte RFC2617 –[autenticação http: autenticação básica e resumida](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
+|Digest|Especifica a autenticação Digest para o cliente. Para obter informações adicionais, consulte RFC2617 –[autenticação http: autenticação básica e resumida](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt).|  
+|NTLM|Especifica a autenticação NTLM (NT LAN Manager). Isso é usado quando você não pode usar a autenticação Kerberos por algum motivo. Você também pode desabilitar seu uso como um fallback definindo a propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> como `false`, o que faz com que o WCF faça um melhor esforço para gerar uma exceção se o NTLM for usado. Observe que a definição dessa propriedade como `false` não pode impedir que credenciais NTLM sejam enviadas pela conexão.|  
+|Portal|Especifica autenticação do Windows. Para especificar apenas o protocolo Kerberos em um domínio do Windows, defina a propriedade <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> como `false` (o padrão é `true`).|  
+|Certificado|Executa a autenticação de cliente usando um certificado X. 509.|  
 |Senha|O usuário deve fornecer um nome de usuário e senha. Valide o par de nome de usuário/senha usando a autenticação do Windows ou outra solução personalizada.|  
   
 ### <a name="message-client-credential-types"></a>Tipos de credencial do cliente da mensagem  
@@ -38,16 +38,16 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
   
 |Configuração|Descrição|  
 |-------------|-----------------|  
-|Nenhum|Especifica que o cliente não precisa apresentar uma credencial. Isso se traduz em um cliente anônimo.|  
-|Windows|Permite que as trocas de mensagens SOAP ocorram sob o contexto de segurança estabelecido com uma credencial do Windows.|  
+|{1&gt;Nenhum&lt;1}|Especifica que o cliente não precisa apresentar uma credencial. Isso se traduz em um cliente anônimo.|  
+|Portal|Permite que as trocas de mensagens SOAP ocorram sob o contexto de segurança estabelecido com uma credencial do Windows.|  
 |Nome de usuário|Permite que o serviço exija que o cliente seja autenticado com uma credencial de nome de usuário. Observe que o WCF não permite nenhuma operação criptográfica com nomes de usuário, como gerar uma assinatura ou criptografar dados. O WCF garante que o transporte seja protegido ao usar credenciais de nome de usuário.|  
-|Certificate|Permite que o serviço exija que o cliente seja autenticado usando um certificado X. 509.|  
+|Certificado|Permite que o serviço exija que o cliente seja autenticado usando um certificado X. 509.|  
 |Token emitido|Um tipo de token personalizado configurado de acordo com uma política de segurança. O tipo de token padrão é SAML (Security Asserties Markup Language). O token é emitido por um serviço de token seguro. Para obter mais informações, consulte [Federação e tokens emitidos](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).|  
   
 ### <a name="negotiation-model-of-service-credentials"></a>Modelo de negociação de credenciais de serviço  
  *Negociação* é o processo de estabelecer confiança entre um cliente e um serviço por meio da troca de credenciais. O processo é executado iterativamente entre o cliente e o serviço, portanto, para divulgar apenas as informações necessárias para a próxima etapa no processo de negociação. Na prática, o resultado final é a entrega da credencial de um serviço para o cliente a ser usada em operações subsequentes.  
   
- Com uma exceção, por padrão, as associações fornecidas pelo sistema no WCF negociam automaticamente a credencial de serviço ao usar a segurança em nível de mensagem. (A exceção é o <xref:System.ServiceModel.BasicHttpBinding>, que não habilita a segurança por padrão.) Para desabilitar esse comportamento, consulte as <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> propriedades <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A> e.  
+ Com uma exceção, por padrão, as associações fornecidas pelo sistema no WCF negociam automaticamente a credencial de serviço ao usar a segurança em nível de mensagem. (A exceção é a <xref:System.ServiceModel.BasicHttpBinding>, que não habilita a segurança por padrão.) Para desabilitar esse comportamento, consulte as propriedades <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> e <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.NegotiateServiceCredential%2A>.  
   
 > [!NOTE]
 > Quando a segurança SSL é usada com o .NET Framework 3,5 e posterior, um cliente WCF usa os certificados intermediários em seu repositório de certificados e os certificados intermediários recebidos durante a negociação SSL para executar a validação da cadeia de certificados nos serviços Certificate. .NET Framework 3,0 usa apenas os certificados intermediários instalados no repositório de certificados local.  
@@ -56,7 +56,7 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
  Se a negociação automática estiver desabilitada, a credencial de serviço deverá ser provisionada no cliente antes do envio de qualquer mensagem para o serviço. Isso também é conhecido como provisionamento *fora de banda* . Por exemplo, se o tipo de credencial especificado for um certificado e a negociação automática estiver desabilitada, o cliente deverá entrar em contato com o proprietário do serviço para receber e instalar o certificado no computador que executa o aplicativo cliente. Isso pode ser feito, por exemplo, quando você deseja controlar estritamente quais clientes podem acessar um serviço em um cenário entre empresas. Essa negociação fora de banda pode ser feita por email, e o certificado X. 509 é armazenado no repositório de certificados do Windows, usando uma ferramenta como o snap-in de certificados do MMC (console de gerenciamento Microsoft).  
   
 > [!NOTE]
-> A <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> propriedade é usada para fornecer o serviço com um certificado que foi obtido por meio da negociação fora de banda. Isso é necessário ao usar a <xref:System.ServiceModel.BasicHttpBinding> classe porque a associação não permite a negociação automatizada. A propriedade também é usada em um cenário duplex não correlacionado. Esse é um cenário em que um servidor envia uma mensagem ao cliente sem exigir que o cliente envie uma solicitação ao servidor primeiro. Como o servidor não tem uma solicitação do cliente, ele deve usar o certificado do cliente para criptografar a mensagem para o cliente.  
+> A propriedade <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> é usada para fornecer o serviço com um certificado que foi obtido por meio da negociação fora de banda. Isso é necessário ao usar a classe <xref:System.ServiceModel.BasicHttpBinding> porque a associação não permite a negociação automatizada. A propriedade também é usada em um cenário duplex não correlacionado. Esse é um cenário em que um servidor envia uma mensagem ao cliente sem exigir que o cliente envie uma solicitação ao servidor primeiro. Como o servidor não tem uma solicitação do cliente, ele deve usar o certificado do cliente para criptografar a mensagem para o cliente.  
   
 ## <a name="setting-credential-values"></a>Definindo valores de credenciais  
  Depois de selecionar um modo de segurança, você deve especificar as credenciais reais. Por exemplo, se o tipo de credencial for definido como "certificado", você deverá associar uma credencial específica (como um certificado X. 509 específico) ao serviço ou cliente.  
@@ -66,24 +66,24 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
 ### <a name="setting-service-credentials"></a>Definindo credenciais de serviço  
  Se você estiver usando o modo de transporte e estiver usando HTTP como transporte, deverá usar Serviços de Informações da Internet (IIS) ou configurar a porta com um certificado. Para obter mais informações, consulte [visão geral de segurança de transporte](../../../../docs/framework/wcf/feature-details/transport-security-overview.md) e segurança de [transporte http](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
   
- Para provisionar um serviço com credenciais no código, crie uma instância <xref:System.ServiceModel.ServiceHost> da classe e especifique a credencial apropriada <xref:System.ServiceModel.Description.ServiceCredentials> usando a classe, acessada por meio da <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> propriedade.  
+ Para provisionar um serviço com credenciais no código, crie uma instância da classe <xref:System.ServiceModel.ServiceHost> e especifique a credencial apropriada usando a classe <xref:System.ServiceModel.Description.ServiceCredentials>, acessada por meio da propriedade <xref:System.ServiceModel.ServiceHostBase.Credentials%2A>.  
   
 #### <a name="setting-a-certificate"></a>Configurando um certificado  
- Para provisionar um serviço com um certificado X. 509 a ser usado para autenticar o serviço para clientes <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A> , use o <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential> método da classe.  
+ Para provisionar um serviço com um certificado X. 509 a ser usado para autenticar o serviço para clientes, use o método <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A> da classe <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>.  
   
- Para provisionar um serviço com um certificado <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential> de cliente, use o método da classe.  
+ Para provisionar um serviço com um certificado de cliente, use o método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> da classe <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>.  
   
 #### <a name="setting-windows-credentials"></a>Configurando credenciais do Windows  
  Se o cliente especificar um nome de usuário e senha válidos, essa credencial será usada para autenticar o cliente. Caso contrário, as credenciais do usuário conectado no momento serão usadas.  
   
 ### <a name="setting-client-credentials"></a>Definindo as credenciais do cliente  
- No WCF, os aplicativos cliente usam um cliente WCF para se conectar aos serviços. Cada cliente deriva da <xref:System.ServiceModel.ClientBase%601> classe e a <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> Propriedade no cliente permite a especificação de vários valores de credenciais do cliente.  
+ No WCF, os aplicativos cliente usam um cliente WCF para se conectar aos serviços. Cada cliente deriva da classe <xref:System.ServiceModel.ClientBase%601>, e a propriedade <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> no cliente permite a especificação de vários valores de credenciais do cliente.  
   
 #### <a name="setting-a-certificate"></a>Configurando um certificado  
- Para provisionar um serviço com um certificado X. 509 que é usado para autenticar o cliente para um serviço <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> , use o <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> método da classe.  
+ Para provisionar um serviço com um certificado X. 509 que é usado para autenticar o cliente para um serviço, use o método <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> da classe <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>.  
   
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>Como as credenciais do cliente são usadas para autenticar um cliente para o serviço  
- As informações de credenciais de cliente necessárias para se comunicar com um serviço são <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> fornecidas usando a <xref:System.ServiceModel.ChannelFactory.Credentials%2A> propriedade ou a propriedade. O canal de segurança usa essas informações para autenticar o cliente para o serviço. A autenticação é realizada por meio de um dos dois modos:  
+ As informações de credenciais de cliente necessárias para se comunicar com um serviço são fornecidas usando a propriedade <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> ou a propriedade <xref:System.ServiceModel.ChannelFactory.Credentials%2A>. O canal de segurança usa essas informações para autenticar o cliente para o serviço. A autenticação é realizada por meio de um dos dois modos:  
   
 - As credenciais do cliente são usadas uma vez antes que a primeira mensagem seja enviada, usando a instância do cliente WCF para estabelecer um contexto de segurança. Todas as mensagens de aplicativo são então protegidas por meio do contexto de segurança.  
   
@@ -97,7 +97,7 @@ As *credenciais* são o uso de Windows Communication Foundation de dados (WCF) p
   
  Para obter mais informações sobre credenciais e sessões seguras, consulte [considerações de segurança para sessões seguras](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>

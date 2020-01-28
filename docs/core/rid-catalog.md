@@ -2,12 +2,12 @@
 title: Catálogo do RID (Identificador de Runtime) do .NET Core
 description: Saiba mais sobre o RID (Identificador de runtime) e como os RIDs são usados no .NET Core.
 ms.date: 02/22/2019
-ms.openlocfilehash: d401cf3a8a147a16c1aea0ba7d5e799cf182583e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
-ms.translationtype: MT
+ms.openlocfilehash: b4e0226afa3f68d7c0d17b19e66489d70b759cf8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740582"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733544"
 ---
 # <a name="net-core-rid-catalog"></a>Catálogo de RIDs do .NET Core
 
@@ -39,7 +39,7 @@ RIDs que representem sistemas operacionais concretos geralmente seguem este padr
 
 ## <a name="rid-graph"></a>Gráfico RID
 
-O gráfico RID ou gráfico de fallback de runtime é uma lista de RIDs que são compatíveis entre si. Os RIDs são definidos no pacote [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/). Você pode ver a lista de RIDs suportados e o gráfico RID no arquivo [*runtime.json*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json), que está localizado no repositório CoreFX. Nesse arquivo, você pode ver todos os RIDs, exceto para a base um, que contém uma instrução `"#import"`. Essas instruções indicam RIDs compatíveis.
+O gráfico RID ou gráfico de fallback de runtime é uma lista de RIDs que são compatíveis entre si. Os RIDs são definidos no pacote [Microsoft.NETCore.Platforms](https://www.nuget.org/packages/Microsoft.NETCore.Platforms/). Você pode ver a lista de RIDs com suporte e o grafo RID no arquivo [*Runtime. JSON*](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) , localizado no repositório de `dotnet/runtime`. Nesse arquivo, você pode ver todos os RIDs, exceto para a base um, que contém uma instrução `"#import"`. Essas instruções indicam RIDs compatíveis.
 
 Quando o NuGet restaura pacotes, ele tenta encontrar uma correspondência exata para o runtime especificado.
 Se uma correspondência exata não for encontrada, o NuGet voltará ao gráfico até encontrar o sistema compatível mais próximo de acordo com o gráfico RID.
@@ -80,7 +80,7 @@ Há algumas considerações sobre RIDs das quais você precisa se lembrar ao tra
 ## <a name="using-rids"></a>Usando RIDs
 
 Para poder usar RIDs, você precisa saber quais RIDs existem. Novos RIDs são adicionados regularmente à plataforma.
-Para obter a versão completa e mais recente, confira o arquivo [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório CoreFX.
+Para obter a versão mais recente e completa, consulte o arquivo [Runtime. JSON](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório `dotnet/runtime`.
 
 O SDK do .NET Core 2.0 apresenta o conceito de RIDs portáteis. Eles são novos valores adicionados ao gráfico RID que não estão associados a uma versão específica ou distribuição de SO e são a opção preferida ao usar o .NET Core 2.0 e posterior. Eles são particularmente úteis ao lidar com várias distribuições Linux, já que a maioria dos RIDs de distribuição são mapeados para os RIDs portáteis.
 
@@ -88,7 +88,7 @@ A lista a seguir mostra um pequeno subconjunto dos RIDs mais comuns usados para 
 
 ## <a name="windows-rids"></a>RIDs do Windows
 
-Apenas os valores comuns são listados. Para obter a versão completa e mais recente, confira o arquivo [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório CoreFX.
+Apenas os valores comuns são listados. Para obter a versão mais recente e completa, consulte o arquivo [Runtime. JSON](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório `dotnet/runtime`.
 
 - Portátil (.NET Core 2.0 ou versões posteriores)
   - `win-x64`
@@ -112,7 +112,7 @@ Consulte [dependências e requisitos do .NET Core](install/dependencies.md?tabs=
 
 ## <a name="linux-rids"></a>RIDs do Linux
 
-Apenas os valores comuns são listados. Para obter a versão completa e mais recente, confira o arquivo [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório CoreFX. Os dispositivos que executam uma distribuição não listada abaixo podem funcionar com um dos RIDs Portáteis. Por exemplo, os dispositivos Raspberry Pi executando uma distribuição Linux não listada podem ser direcionados com `linux-arm`.
+Apenas os valores comuns são listados. Para obter a versão mais recente e completa, consulte o arquivo [Runtime. JSON](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório `dotnet/runtime`. Os dispositivos que executam uma distribuição não listada abaixo podem funcionar com um dos RIDs Portáteis. Por exemplo, os dispositivos Raspberry Pi executando uma distribuição Linux não listada podem ser direcionados com `linux-arm`.
 
 - Portátil (.NET Core 2.0 ou versões posteriores)
   - `linux-x64` (A maioria das distribuições de área de trabalho como CentOS, Debian, Fedora, Ubuntu e derivados)
@@ -130,7 +130,7 @@ Consulte [dependências e requisitos do .NET Core](install/dependencies.md?tabs=
 
 ## <a name="macos-rids"></a>RIDs do macOS
 
-Os RIDs do macOS usam a identidade visual “OSX” mais antiga. Apenas os valores comuns são listados. Para obter a versão completa e mais recente, confira o arquivo [runtime.json](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório CoreFX.
+Os RIDs do macOS usam a identidade visual “OSX” mais antiga. Apenas os valores comuns são listados. Para obter a versão mais recente e completa, consulte o arquivo [Runtime. JSON](https://github.com/dotnet/runtime/blob/master/src/libraries/pkg/Microsoft.NETCore.Platforms/runtime.json) no repositório `dotnet/runtime`.
 
 - Portátil (.NET Core 2.0 ou versões posteriores)
   - `osx-x64` (A versão mínima do sistema operacional é macOS 10.12 Sierra)

@@ -2,12 +2,12 @@
 title: Referência do arquivo de configuração de diretivas do runtime (rd.xml)
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
-ms.openlocfilehash: f4c51dc269775d14d395cb464b3787cc987e086d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128136"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738415"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>Referência do arquivo de configuração de diretivas do runtime (rd.xml)
 
@@ -33,35 +33,77 @@ O arquivo de diretivas de runtime (. rd.xml) é um arquivo de configuração XML
 
 ## <a name="the-structure-of-a-runtime-directives-file"></a>A estrutura de um arquivo de diretivas de runtime
 
-O arquivo de diretivas de tempo de execução usa o namespace `http://schemas.microsoft.com/netfx/2013/01/metadata`.
+O arquivo de diretivas de runtime usa o namespace `http://schemas.microsoft.com/netfx/2013/01/metadata`.
 
-O elemento raiz é o elemento [Directives](directives-element-net-native.md). Ele pode conter zero ou mais elementos [Library](library-element-net-native.md) e zero ou um elemento [Application](application-element-net-native.md), conforme mostrado na estrutura a seguir. Os atributos do elemento [Application](application-element-net-native.md) podem definir a política de reflexão do tempo de execução de todo o aplicativo ou podem servir como um contêiner para elementos filhos. O elemento [Library](library-element-net-native.md), por outro lado, é simplesmente um contêiner. Os filhos dos elementos [Application](application-element-net-native.md) e [Library](library-element-net-native.md) definem os tipos, métodos, campos, propriedades e eventos que estão disponíveis para reflexão.
+O elemento raiz é o elemento [Directives](directives-element-net-native.md). Ele pode conter zero ou mais elementos [Library](library-element-net-native.md) e zero ou um elemento [Application](application-element-net-native.md), conforme mostrado na estrutura a seguir. Os atributos do elemento [Application](application-element-net-native.md) podem definir a política de reflexão do runtime de todo o aplicativo ou podem servir como um contêiner para elementos filhos. O elemento [Library](library-element-net-native.md), por outro lado, é simplesmente um contêiner. Os filhos dos elementos [Application](application-element-net-native.md) e [Library](library-element-net-native.md) definem os tipos, métodos, campos, propriedades e eventos que estão disponíveis para reflexão.
 
-Para obter informações de referência, escolha os elementos na estrutura de seguir ou consulte [Elementos da diretiva de tempo de execução](runtime-directive-elements.md). Na seguinte hierarquia, as reticências marcam uma estrutura recursiva. As informações entre colchetes indicam se o elemento é necessário ou opcional e, se usado, quantas instâncias (uma ou várias) são permitidas.
+Para obter informações de referência, escolha os elementos na estrutura de seguir ou consulte [Elementos da diretiva de runtime](runtime-directive-elements.md). Na seguinte hierarquia, as reticências marcam uma estrutura recursiva. As informações entre colchetes indicam se o elemento é necessário ou opcional e, se usado, quantas instâncias (uma ou várias) são permitidas.
 
-[Diretivas](directives-element-net-native.md) [1:1] [aplicativo](application-element-net-native.md) [0:1] [assembly](assembly-element-net-native.md) [0: M] [namespace](namespace-element-net-native.md) [0: m]. . .
-[Digite](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Namespace [0](namespace-element-net-native.md) : m] [namespace](namespace-element-net-native.md) [0: M]. . .
-[Digite](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Digite](type-element-net-native.md) [0: M] [subtipos](subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1] [tipo](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[AttributeImplies](attributeimplies-element-net-native.md) (tipo recipiente é um atributo) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: m] [método](method-element-net-native.md) [0: M] [parâmetro](parameter-element-net-native.md) [0: m] [TypeParameter](typeparameter-element-net-native.md) [0: m] [GenericParameter](genericparameter-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) ( método genérico construído) [0: M] [Propriedade](property-element-net-native.md) [0: m] [campo](field-element-net-native.md) [0: m] [evento](event-element-net-native.md) [0: m] [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: m] [tipo](type-element-net-native.md) [0: m]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Método](method-element-net-native.md) [0: m] [parâmetro](parameter-element-net-native.md) [0: m] [TypeParameter](typeparameter-element-net-native.md) [0: M] [GenericParameter](genericparameter-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0: m] [Propriedade](property-element-net-native.md) [0: M] [campo](field-element-net-native.md) [0: m] [evento](event-element-net-native.md) [0: m] [ Biblioteca](library-element-net-native.md) [0: m] [assembly](assembly-element-net-native.md) [0: m] [namespace](namespace-element-net-native.md) [0: M]. . .
-[Digite](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Namespace [0](namespace-element-net-native.md) : m] [namespace](namespace-element-net-native.md) [0: M]. . .
-[Digite](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Digite](type-element-net-native.md) [0: M] [subtipos](subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1] [tipo](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[AttributeImplies](attributeimplies-element-net-native.md) (tipo recipiente é um atributo) [O:1] [GenericParameter](genericparameter-element-net-native.md) [0: m] [método](method-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0: m] [Propriedade](property-element-net-native.md) [0: m] [campo](field-element-net-native.md) [0: m] [evento](event-element-net-native.md) [0 : M] [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: m] [tipo](type-element-net-native.md) [0: M]. . .
-[TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
-[Método](method-element-net-native.md) [0: m] [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0: m] [Propriedade](property-element-net-native.md) [0: M] [campo](field-element-net-native.md) [0: m] [evento](event-element-net-native.md) [0: m]
+- [Directives](directives-element-net-native.md) [1:1]
+  - [Application](application-element-net-native.md) [0:1]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [Namespace](namespace-element-net-native.md) [0: M]. . .
+      - [Digite](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [Namespace](namespace-element-net-native.md) [0: M]. . .
+      - [Digite](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1]
+      - [Digite](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+      - [AttributeImplies](attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]
+      - [Digite](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+      - [Method](method-element-net-native.md) [0:M]
+        - [Parameter](parameter-element-net-native.md) [0:M]
+        - [TypeParameter](typeparameter-element-net-native.md) [0:M]
+        - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+  - [Library](library-element-net-native.md) [0:M]
+    - [Assembly](assembly-element-net-native.md) [0:M]
+      - [Namespace](namespace-element-net-native.md) [0: M]. . .
+      - [Digite](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+    - [Namespace](namespace-element-net-native.md) [0:M]
+      - [Namespace](namespace-element-net-native.md) [0: M]. . .
+      - [Digite](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+    - [Type](type-element-net-native.md) [0:M]
+      - [Subtypes](subtypes-element-net-native.md) (subclasses do tipo recipiente) [O:1]
+      - [Digite](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+      - [AttributeImplies](attributeimplies-element-net-native.md) (o tipo recipiente é um atributo) [O:1]
+      - [GenericParameter](genericparameter-element-net-native.md) [0:M]
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
+    - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0:M]
+      - [Digite](type-element-net-native.md) [0: M]. . .
+      - [TypeInstantiation](typeinstantiation-element-net-native.md) (tipo genérico construído) [0: M]. . .
+      - [Method](method-element-net-native.md) [0:M]
+      - [MethodInstantiation](methodinstantiation-element-net-native.md) (método genérico construído) [0:M]
+      - [Property](property-element-net-native.md) [0:M]
+      - [Field](field-element-net-native.md) [0:M]
+      - [Event](event-element-net-native.md) [0:M]
 
-O elemento [Application](application-element-net-native.md) pode não ter nenhum atributo ou pode ter os atributos de política discutidos na [seção de Política e diretiva de tempo de execução](#Directives).
+O elemento [Application](application-element-net-native.md) pode não ter nenhum atributo ou pode ter os atributos de política discutidos na [seção de Política e diretiva de runtime](#Directives).
 
 Um elemento [Library](library-element-net-native.md) tem um único atributo, `Name`, que especifica o nome de uma biblioteca ou um assembly, sem a extensão do arquivo. Por exemplo, o elemento [Library](library-element-net-native.md) a seguir aplica-se a um assembly denominado Extensions.dll.
 
@@ -90,43 +132,43 @@ A política que pode ser expressa pelos elementos [Application](application-elem
 
 Os elementos [Application](application-element-net-native.md), [Assembly](assembly-element-net-native.md), [AttributeImplies](attributeimplies-element-net-native.md), [Namespace](namespace-element-net-native.md), [Subtypes](subtypes-element-net-native.md) e [Type](type-element-net-native.md) dão suporte aos seguintes tipos de política:
 
-- `Activate` Controla o acesso de runtime a construtores para habilitar a ativação de instâncias.
+- `Activate`. Controla o acesso de runtime a construtores para habilitar a ativação de instâncias.
 
-- `Browse` Controla as consultas para obter informações sobre elementos do programa, mas não permite qualquer acesso do runtime.
+- `Browse`. Controla as consultas para obter informações sobre elementos do programa, mas não permite qualquer acesso do runtime.
 
-- `Dynamic` Controla o acesso a todos os tipos de membro ao runtime, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.
+- `Dynamic`. Controla o acesso a todos os tipos de membro ao runtime, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica.
 
-- `Serialize` Controla o acesso ao runtime para construtores, campos e propriedades para habilitar a serialização por bibliotecas de terceiros como o serializador Newtonsoft JSON.
+- `Serialize`. Controla o acesso ao runtime para construtores, campos e propriedades para habilitar a serialização por bibliotecas de terceiros como o serializador Newtonsoft JSON.
 
-- `DataContractSerializer` Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractSerializer`. Controla a política de serialização que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `DataContractJsonSerializer` Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
+- `DataContractJsonSerializer`. Controla a política de serialização JSON que usa a classe <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>.
 
-- `XmlSerializer` Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
+- `XmlSerializer`. Controla a política de serialização XML que usa a classe <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>.
 
-- `MarshalObject` Controla a política de marshaling de tipos de referência do WinRT e COM.
+- `MarshalObject`. Controla a política de marshaling de tipos de referência do WinRT e COM.
 
-- `MarshalDelegate` Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.
+- `MarshalDelegate`. Controla a diretiva de marshaling de tipos delegados como ponteiros de função para código nativo.
 
 - `MarshalStructure` . Controla a política de estruturas de marshaling para código nativo.
 
 As configurações associadas a esses tipos de política são:
 
-- `All` Habilite a política para todos os tipos e membros que a cadeia de ferramentas não remover.
+- `All`. Habilite a política para todos os tipos e membros que a cadeia de ferramentas não remover.
 
-- `Auto` Use o comportamento padrão. (Não especificar uma política é equivalente à configurar a política para `Auto`, a menos que essa política seja substituída, por exemplo, por um elemento pai.)
+- `Auto`. Use o comportamento padrão. (Não especificar uma política é equivalente à configurar a política para `Auto`, a menos que essa política seja substituída, por exemplo, por um elemento pai.)
 
-- `Excluded` Desabilite a política para o elemento de programa.
+- `Excluded`. Desabilite a política para o elemento de programa.
 
-- `Public` Habilite a política para tipos públicos ou membros, a menos que a cadeia de ferramentas determine que o membro é desnecessário e, portanto, remove-o. (No segundo caso, você deve usar `Required Public` para garantir que o membro é mantido e tem recursos de reflexão.)
+- `Public`. Habilite a política para tipos públicos ou membros, a menos que a cadeia de ferramentas determine que o membro é desnecessário e, portanto, remove-o. (No segundo caso, você deve usar `Required Public` para garantir que o membro é mantido e tem recursos de reflexão.)
 
-- `PublicAndInternal` Habilite a política para tipos ou membros internos e públicos se a cadeia de ferramenta não removê-los.
+- `PublicAndInternal`. Habilite a política para tipos ou membros internos e públicos se a cadeia de ferramenta não removê-los.
 
-- `Required Public` Necessita da cadeia de ferramentas para manter os tipos e membros públicos, sejam usados ou não, e habilita a política para eles.
+- `Required Public`. Necessita da cadeia de ferramentas para manter os tipos e membros públicos, sejam usados ou não, e habilita a política para eles.
 
-- `Required PublicAndInternal` Necessita da cadeia de ferramentas para manter os tipos e membros públicos e internos, sejam usados ou não, e habilita a política para eles.
+- `Required PublicAndInternal`. Necessita da cadeia de ferramentas para manter os tipos e membros públicos e internos, sejam usados ou não, e habilita a política para eles.
 
-- `Required All` Necessita da cadeia de ferramentas para manter todos os tipos e membros públicos, sejam usados ou não, e habilita a política para eles.
+- `Required All`. Necessita da cadeia de ferramentas para manter todos os tipos e membros públicos, sejam usados ou não, e habilita a política para eles.
 
 Por exemplo, o seguinte arquivo de diretivas de runtime define a política para todos os tipos e membros no assembly DataClasses.dll. Ele habilita a reflexão para serialização de todas as propriedades públicas, permite procurar todos os tipos e membros de tipo, permite a ativação de todos os tipos de (devido ao atributo `Dynamic`) e permite a reflexão para todos os tipos e membros públicos.
 
@@ -147,17 +189,17 @@ Por exemplo, o seguinte arquivo de diretivas de runtime define a política para 
 
 Os elementos [Property](property-element-net-native.md) e [Field](field-element-net-native.md) dão suporte aos seguintes tipos de política:
 
-- `Browse` - Controla as consultas para obter informações este membro, mas não permite qualquer acesso do tempo de execução.
+- `Browse` - Controla as consultas para obter informações este membro, mas não permite qualquer acesso do runtime.
 
-- `Dynamic` - Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica. Também controla a consulta para obter informações sobre o tipo recipiente.
+- `Dynamic` - Controla o acesso a todos os tipos de membro ao runtime, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica. Também controla a consulta para obter informações sobre o tipo recipiente.
 
-- `Serialize` - Controla o acesso de tempo de execução ao membro para habilitar as instâncias do tipo a serem serializadas e desserializadas por bibliotecas como o serializador Newtonsoft JSON. Esta política pode ser aplicada a construtores, campos e propriedades.
+- `Serialize` - Controla o acesso de runtime ao membro para habilitar as instâncias do tipo a serem serializadas e desserializadas por bibliotecas como o serializador Newtonsoft JSON. Esta política pode ser aplicada a construtores, campos e propriedades.
 
 Os elementos [Method](method-element-net-native.md) e [Event](event-element-net-native.md) dão suporte aos seguintes tipos de política:
 
-- `Browse` - Controla as consultas para obter informações este membro, mas não permite qualquer acesso do tempo de execução.
+- `Browse` - Controla as consultas para obter informações este membro, mas não permite qualquer acesso do runtime.
 
-- `Dynamic` - Controla o acesso a todos os tipos de membro ao tempo de execução, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica. Também controla a consulta para obter informações sobre o tipo recipiente.
+- `Dynamic` - Controla o acesso a todos os tipos de membro ao runtime, incluindo construtores, métodos, campos, propriedades e eventos, habilitando a programação dinâmica. Também controla a consulta para obter informações sobre o tipo recipiente.
 
  As configurações associadas a esses tipos de política são:
 
@@ -189,7 +231,7 @@ Se dois elementos em arquivos de diretivas de runtime diferentes tentarem defini
 
 4. Qualquer configuração explícita tem precedência sobre `Auto`.
 
-Por exemplo, se um único projeto inclui os dois seguintes arquivos de diretivas de tempo de execução, a política de serialização para DataClasses.dll é definida para `Required Public` e `All`. Nesse caso, a política de serialização seria resolvida como `Required All`.
+Por exemplo, se um único projeto inclui os dois seguintes arquivos de diretivas de runtime, a política de serialização para DataClasses.dll é definida para `Required Public` e `All`. Nesse caso, a política de serialização seria resolvida como `Required All`.
 
 ```xml
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -411,7 +453,7 @@ Essas políticas não têm efeito nos campos ou métodos.
 
 Para obter mais informações, consulte a seção "Diferenças em serializadores" em [Migrar seu aplicativo da Windows Store para .NET Native](migrating-your-windows-store-app-to-net-native.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Elementos da diretiva de tempo de execução](runtime-directive-elements.md)
+- [Elementos da diretiva de runtime](runtime-directive-elements.md)
 - [Reflexão e .NET Native](reflection-and-net-native.md)

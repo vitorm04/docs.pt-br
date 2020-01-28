@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: criar seu primeiro aplicativo do WPF no Visual Studio 2019-.NET Framework'
+title: Criar seu primeiro aplicativo do WPF no Visual Studio 2019-.NET Framework
+titleSuffix: ''
 ms.date: 09/06/2019
 dev_langs:
 - csharp
@@ -12,12 +13,12 @@ ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b5f74448ffce448740937c06a476a29c8659879
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 232605850c65aebd9aafdc9b76c90af42f2c901c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336817"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746980"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>Tutorial: criar seu primeiro aplicativo do WPF no Visual Studio 2019
 
@@ -83,7 +84,7 @@ A primeira etapa é criar a infraestrutura do aplicativo, que inclui uma defini�
 
     [!code-xaml[ExpenseIt#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]
 
-3. Abra *MainWindow.xaml*.
+3. Abra *MainWindow. XAML*.
 
     Esse arquivo XAML é a janela principal do seu aplicativo e exibe o conteúdo criado em páginas. A classe <xref:System.Windows.Window> define as propriedades de uma janela, como seu título, tamanho ou ícone, e manipula eventos, como fechar ou ocultar.
 
@@ -151,7 +152,7 @@ Nesta seção, você adicionará duas páginas e uma imagem ao aplicativo.
 
     [!code-xaml[ExpenseIt#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]
 
-1. Abra *MainWindow.xaml*.
+1. Abra *MainWindow. XAML*.
 
 1. Adicione uma propriedade <xref:System.Windows.Navigation.NavigationWindow.Source%2A> ao elemento <xref:System.Windows.Navigation.NavigationWindow> e defina-a como "`ExpenseItHome.xaml`".
 

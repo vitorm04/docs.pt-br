@@ -1,5 +1,5 @@
 ---
-title: Visão geral do componente FolderBrowserDialog (Windows Forms)
+title: Visão geral do componente FolderBrowserDialog
 ms.date: 03/30/2017
 f1_keywords:
 - FolderBrowserDialog
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - directories [Windows Forms], enabling browsing in applications
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-ms.openlocfilehash: cd89980ccad7e6c73094c1fb462d93cee8094959
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8b017ba08ae4205e930ac00177c89a89fde17d3b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210408"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745728"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>Visão geral do componente FolderBrowserDialog (Windows Forms)
 
-Os formulários do Windows <xref:System.Windows.Forms.FolderBrowserDialog> componente é uma caixa de diálogo modal que é usada para procurar e selecionar pastas. Novas pastas também podem ser criadas de dentro do <xref:System.Windows.Forms.FolderBrowserDialog> componente.
+O componente Windows Forms <xref:System.Windows.Forms.FolderBrowserDialog> é uma caixa de diálogo modal que é usada para procurar e selecionar pastas. Novas pastas também podem ser criadas de dentro do componente <xref:System.Windows.Forms.FolderBrowserDialog>.
 
 > [!NOTE]
-> Para selecionar arquivos, em vez de pastas, use o [OpenFileDialog](openfiledialog-component-windows-forms.md) componente.
+> Para selecionar arquivos, em vez de pastas, use o componente [OpenFileDialog](openfiledialog-component-windows-forms.md) .
 
-O <xref:System.Windows.Forms.FolderBrowserDialog> componente é exibido em tempo de execução usando o <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> método. Defina o <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> propriedade para determinar a pasta principal e todas as subpastas que aparecerão na exibição de árvore da caixa de diálogo. Depois que a caixa de diálogo tenha sido mostrada, você pode usar o <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> propriedade para obter o caminho da pasta que foi selecionado.
+O componente <xref:System.Windows.Forms.FolderBrowserDialog> é exibido em tempo de execução usando o método <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>. Defina a propriedade <xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A> para determinar a pasta superior e todas as subpastas que aparecerão dentro do modo de exibição de árvore da caixa de diálogo. Depois que a caixa de diálogo for exibida, você poderá usar a propriedade <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> para obter o caminho da pasta que foi selecionada.
 
-Quando ele é adicionado a um formulário, o <xref:System.Windows.Forms.FolderBrowserDialog> componente aparece na bandeja na parte inferior do Designer de formulários do Windows no Visual Studio.
+Quando ele é adicionado a um formulário, o componente <xref:System.Windows.Forms.FolderBrowserDialog> aparece na bandeja na parte inferior da Designer de Formulários do Windows no Visual Studio.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [Como: Escolher pastas com o componente do Windows Forms FolderBrowserDialog](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [Como escolher pastas com o componente FolderBrowserDialog dos Windows Forms](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
 - [Componente FolderBrowserDialog](folderbrowserdialog-component-windows-forms.md)

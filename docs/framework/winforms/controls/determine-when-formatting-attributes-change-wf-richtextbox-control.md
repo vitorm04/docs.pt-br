@@ -1,5 +1,5 @@
 ---
-title: 'Como: Determinar quando os atributos de formatação mudam no controle RichTextBox do Windows Forms'
+title: Determinar quando os atributos de formatação são alterados no controle RichTextBox
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9b2a1028f79059ec7d4d6bf3683100455bb5dea
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972283"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746040"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Como: Determinar quando os atributos de formatação mudam no controle RichTextBox do Windows Forms
-Um uso comum dos formulários Windows <xref:System.Windows.Forms.RichTextBox> controle é formatar texto com atributos como opções de fonte ou estilos de parágrafo. Seu aplicativo pode precisar controlar as alterações no texto de formatação para fins de exibição de uma barra de ferramentas, como muitos aplicativos de processamento de texto.  
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>Como determinar quando os atributos de formatação mudam no controle RichTextBox dos Windows Forms
+Um uso comum do controle de <xref:System.Windows.Forms.RichTextBox> de Windows Forms é a formatação de texto com atributos como opções de fonte ou estilos de parágrafo. Seu aplicativo pode precisar controlar as alterações no texto de formatação para fins de exibição de uma barra de ferramentas, como muitos aplicativos de processamento de texto.  
   
 ### <a name="to-respond-to-changes-in-formatting-attributes"></a>Para responder a alterações em atributos de formatação  
   
-1. Escrever código no <xref:System.Windows.Forms.RichTextBox.SelectionChanged> manipulador de eventos para executar a ação apropriada dependendo do valor do atributo. O exemplo a seguir altera a aparência de um botão de barra de ferramentas, dependendo do valor da <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> propriedade. O botão de barra de ferramentas será atualizado somente quando o ponto de inserção for movido no controle.  
+1. Escreva o código no manipulador de eventos <xref:System.Windows.Forms.RichTextBox.SelectionChanged> para executar uma ação apropriada dependendo do valor do atributo. O exemplo a seguir altera a aparência de um botão da barra de ferramentas, dependendo do valor da propriedade <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>. O botão de barra de ferramentas será atualizado somente quando o ponto de inserção for movido no controle.  
   
-     O exemplo a seguir supõe um formulário com um <xref:System.Windows.Forms.RichTextBox> controle e um <xref:System.Windows.Forms.ToolBar> controle que contém um botão de barra de ferramentas. Para obter mais informações sobre as barras de ferramentas e botões de barra de ferramentas, consulte [como: Adicionar botões a um controle de barra de ferramentas](how-to-add-buttons-to-a-toolbar-control.md).  
+     O exemplo a seguir pressupõe um formulário com um controle de <xref:System.Windows.Forms.RichTextBox> e um controle de <xref:System.Windows.Forms.ToolBar> que contém um botão de barra de ferramentas. Para obter mais informações sobre barras de ferramentas e botões de barra de ferramentas, veja [Como adicionar botões a um controle de barra de ferramentas](how-to-add-buttons-to-a-toolbar-control.md).  
   
     ```vb  
     ' The following code assumes the existence of a toolbar control  
@@ -80,7 +80,7 @@ Um uso comum dos formulários Windows <xref:System.Windows.Forms.RichTextBox> co
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>

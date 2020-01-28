@@ -1,5 +1,6 @@
 ---
-title: 'Instruções passo a passo: organizando conteúdo WPF em Windows Forms na hora do design'
+title: Organizar o conteúdo do WPF em Windows Forms em tempo de design
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -12,18 +13,18 @@ ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c9db49ae299870479a5cfa6372c25d793a92ff8f
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5a6b12def45052e117fb149555946ea42d6cd3c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460688"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746820"
 ---
 # <a name="walkthrough-arrange-wpf-content-on-windows-forms-at-design-time"></a>Walkthrough: organizar o conteúdo do WPF em Windows Forms em tempo de design
 
 Este artigo mostra como usar os recursos de layout de Windows Forms, como ancoragem e snaplines, para organizar os controles de Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 É necessário o Visual Studio para concluir este passo a passo.
 
@@ -46,7 +47,7 @@ Depois de adicionar um controle WPF ao projeto, você pode organizá-lo no formu
 
 4. Defina o valor da propriedade <xref:System.Windows.Controls.Control.Background%2A> como **azul**.
 
-5. Compile o projeto.
+5. Crie o projeto.
 
 ## <a name="host-wpf-controls-in-a-layout-panel"></a>Hospedar controles WPF em um painel de layout
 
@@ -128,7 +129,7 @@ Um controle WPF hospedado em um formulário tem o mesmo comportamento de ancorag
 
     Para obter mais informações, consulte [Como ancorar e encaixar controles filho em um controle TableLayoutPanel](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

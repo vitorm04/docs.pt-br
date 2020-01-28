@@ -1,5 +1,5 @@
 ---
-title: Como criar controles para Windows Forms
+title: 'Como: criar controles'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
@@ -9,12 +9,12 @@ ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3776e47191d9b10431acbb9a2a7257996e531ba8
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 169104f51898f9bda08efa08685207e50406a7ff
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459416"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746713"
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Como: criar controles para Windows Forms
 
@@ -40,7 +40,7 @@ Um controle representa um link gráfico entre o usuário e o programa. Um contro
 
 5. Se uma pintura personalizada for necessária para o controle, adicione código a ele. Para obter detalhes, consulte [Pintura e renderização de controle personalizado](custom-control-painting-and-rendering.md).
 
-6. Se o controle for herdado de <xref:System.Windows.Forms.UserControl>, você poderá testar seu comportamento de tempo de execução criando o projeto de controle e executando-o no **contêiner de teste de UserControl**. Para obter mais informações, consulte [How to: Test the Run-Time Behavior of a UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md) (Como testar o comportamento de tempo de execução de um UserControl).
+6. Se o controle for herdado de <xref:System.Windows.Forms.UserControl>, você poderá testar seu comportamento de tempo de execução criando o projeto de controle e executando-o no **contêiner de teste de UserControl**. Para obter mais informações, consulte [Como testar o comportamento em tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md).
 
 7. Também é possível testar e depurar o controle criando um novo projeto, como um Aplicativo do Windows, e colocá-lo em um contêiner. Esse processo é demonstrado como parte do [passo a passos: criar um controle composto](walkthrough-authoring-a-composite-control-with-visual-csharp.md).
 
@@ -50,10 +50,10 @@ Um controle representa um link gráfico entre o usuário e o programa. Um contro
 
 10. Empacote e implante o controle. Para obter detalhes, consulte [primeira olhada na implantação no Visual Studio](/visualstudio/deployment/deploying-applications-services-and-components).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como herdar da classe UserControl](how-to-inherit-from-the-usercontrol-class.md)
 - [Como herdar da classe de controle](how-to-inherit-from-the-control-class.md)
 - [Como herdar de controles dos Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)
 - [Como testar o comportamento de tempo de execução de um UserControl](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [Variedades de controles personalizados](varieties-of-custom-controls.md)
+- [Variedades de Controles Personalizados](varieties-of-custom-controls.md)

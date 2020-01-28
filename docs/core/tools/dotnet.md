@@ -2,18 +2,18 @@
 title: Comando dotnet
 description: Saiba mais sobre o comando dotnet (o driver genérico para as ferramentas da CLI do .NET Core) e seu uso.
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117509"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734071"
 ---
 # <a name="dotnet-command"></a>Comando dotnet
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet` – Uma ferramenta para gerenciar o código-fonte e os binários do .NET.
 
@@ -67,7 +67,7 @@ Caminho que contém a política de investigação e os assemblies a serem invest
 
 Caminho para um arquivo *deps.json*.
 
-Um arquivo *deps.json* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly. Para obter mais informações sobre esse arquivo, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.
+Um arquivo *deps. JSON* contém uma lista de dependências, dependências de compilação e informações de versão usadas para resolver conflitos de assembly. Para obter mais informações sobre esse arquivo, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.
 
 `-d|--diagnostics`
 
@@ -75,7 +75,7 @@ Habilita a saída de diagnóstico.
 
 `--fx-version <VERSION>`
 
-Versão do tempo de execução do .NET Core a ser usada para executar o aplicativo.
+Versão do runtime do .NET Core a ser usada para executar o aplicativo.
 
 `-h|--help`
 
@@ -87,7 +87,7 @@ Imprime informações detalhadas sobre uma instalação do .NET Core e o ambient
 
 `--list-runtimes`
 
-Exibe os tempos de execução do .NET Core instalado.
+Exibe os runtimes do .NET Core instalado.
 
 `--list-sdks`
 
@@ -107,7 +107,7 @@ Define o comportamento quando a estrutura compartilhada necessária não está d
 
 Caminho para um arquivo *runtimeconfig.json*.
 
-Um arquivo *runtimeconfig.json* é um arquivo de configuração que contém as definições de configuração de runtime. Para obter mais informações, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.
+Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém as configurações de tempo de execução. Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -139,7 +139,7 @@ Habilita a saída de diagnóstico.
 
 `--fx-version <VERSION>`
 
-Versão do tempo de execução do .NET Core a ser usada para executar o aplicativo.
+Versão do runtime do .NET Core a ser usada para executar o aplicativo.
 
 `-h|--help`
 
@@ -157,7 +157,7 @@ Imprime informações detalhadas sobre uma instalação do .NET Core e o ambient
 
 Caminho para um arquivo *runtimeconfig.json*.
 
-Um arquivo *runtimeconfig.json* é um arquivo de configuração que contém as definições de configuração de runtime. Para obter mais detalhes, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.
+Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém as configurações de tempo de execução. Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -185,7 +185,7 @@ Habilita a saída de diagnóstico.
 
 `--fx-version <VERSION>`
 
-Versão do tempo de execução do .NET Core a ser usada para executar o aplicativo.
+Versão do runtime do .NET Core a ser usada para executar o aplicativo.
 
 `-h|--help`
 
@@ -199,7 +199,7 @@ Imprime informações detalhadas sobre uma instalação do .NET Core e o ambient
 
 Caminho para um arquivo *runtimeconfig.json*.
 
-Um arquivo *runtimeconfig.json* é um arquivo de configuração que contém as definições de configuração de runtime. Para obter mais detalhes, confira [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md) no GitHub.
+Um arquivo *runtimeconfig. JSON* é um arquivo de configuração que contém as configurações de tempo de execução. Para obter mais informações, consulte [definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md#runtimeconfigjson).
 
 `-v|--verbosity <LEVEL>`
 
@@ -217,7 +217,7 @@ Imprime a versão do SDK do .NET Core em uso.
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-| Comando                                       | Função                                                            |
+| {1&gt;Comando&lt;1}                                       | Função                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)               | Compila um aplicativo .NET Core.                                     |
 | [dotnet build-server](dotnet-build-server.md) | Interage com servidores iniciados por um build.                          |
@@ -231,12 +231,12 @@ Imprime a versão do SDK do .NET Core em uso.
 | [dotnet restore](dotnet-restore.md)           | Restaura as dependências para um determinado aplicativo.                  |
 | [dotnet run](dotnet-run.md)                   | Executa o aplicativo na origem.                                   |
 | [dotnet sln](dotnet-sln.md)                   | Opções para adicionar, remover e listar projetos em um arquivo de solução.       |
-| [dotnet store](dotnet-store.md)               | Armazena os assemblies no repositório de pacotes de tempo de execução.                     |
+| [dotnet store](dotnet-store.md)               | Armazena os assemblies no repositório de pacotes de runtime.                     |
 | [dotnet test](dotnet-test.md)                 | Executa testes usando um executor de teste.                                     |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-| Comando                             | Função                                                            |
+| {1&gt;Comando&lt;1}                             | Função                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Compila um aplicativo .NET Core.                                     |
 | [dotnet clean](dotnet-clean.md)     | Limpa saídas de build.                                              |
@@ -249,12 +249,12 @@ Imprime a versão do SDK do .NET Core em uso.
 | [dotnet restore](dotnet-restore.md) | Restaura as dependências para um determinado aplicativo.                  |
 | [dotnet run](dotnet-run.md)         | Executa o aplicativo na origem.                                   |
 | [dotnet sln](dotnet-sln.md)         | Opções para adicionar, remover e listar projetos em um arquivo de solução.       |
-| [dotnet store](dotnet-store.md)     | Armazena os assemblies no repositório de pacotes de tempo de execução.                     |
+| [dotnet store](dotnet-store.md)     | Armazena os assemblies no repositório de pacotes de runtime.                     |
 | [dotnet test](dotnet-test.md)       | Executa testes usando um executor de teste.                                     |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-| Comando                             | Função                                                            |
+| {1&gt;Comando&lt;1}                             | Função                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
 | [dotnet build](dotnet-build.md)     | Compila um aplicativo .NET Core.                                     |
 | [dotnet clean](dotnet-clean.md)     | Limpa saídas de build.                                              |
@@ -272,7 +272,7 @@ Imprime a versão do SDK do .NET Core em uso.
 
 ### <a name="project-references"></a>Referências de projeto
 
-Comando | Função
+{1&gt;Comando&lt;1} | Função
 --- | ---
 [dotnet add reference](dotnet-add-reference.md) | Adiciona uma referência ao projeto.
 [dotnet list reference](dotnet-list-reference.md) | Lista referências ao projeto.
@@ -280,14 +280,14 @@ Comando | Função
 
 ### <a name="nuget-packages"></a>Pacotes NuGet
 
-Comando | Função
+{1&gt;Comando&lt;1} | Função
 --- | ---
 [dotnet add package](dotnet-add-package.md) | Adiciona um pacote NuGet.
 [dotnet remove package](dotnet-remove-package.md) | Remove um pacote NuGet.
 
 ### <a name="nuget-commands"></a>Comandos NuGet
 
-Comando | Função
+{1&gt;Comando&lt;1} | Função
 --- | ---
 [dotnet nuget delete](dotnet-nuget-delete.md) | Exclui ou retira da lista um pacote do servidor.
 [dotnet nuget locals](dotnet-nuget-locals.md) | Limpa ou lista os recursos locais do NuGet, como cache de solicitação http, cache temporário ou pasta de pacotes globais em todo o computador.
@@ -297,7 +297,7 @@ Comando | Função
 
 [Ferramentas Globais do .NET Core](global-tools.md) estão disponíveis a partir do SDK do .NET Core 2.1.300:
 
-Comando | Função
+{1&gt;Comando&lt;1} | Função
 --- | ---
 [dotnet tool install](dotnet-tool-install.md) | Instala uma Ferramenta Global no seu computador.
 [dotnet tool list](dotnet-tool-list.md) | Lista todas as Ferramentas Globais atualmente instaladas no diretório padrão do computador ou no caminho especificado.
@@ -348,7 +348,7 @@ A pasta de pacotes globais. Se não estiver definido, o padrão será `~/.nuget/
 
 `DOTNET_SERVICING`
 
-Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o tempo de execução.
+Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
@@ -356,7 +356,7 @@ Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e env
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-Especifica se o tempo de execução, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global. Se não estiver definida, o padrão será `true`. Definida como `false` para não resolver no local global e ter instalações do NET Core isoladas (os valores `0` ou `false` são aceitos). Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+Especifica se o runtime, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global. Se não estiver definida, o padrão será `true`. Definida como `false` para não resolver no local global e ter instalações do NET Core isoladas (os valores `0` ou `false` são aceitos). Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
 
@@ -370,7 +370,7 @@ O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.n
 
 `DOTNET_SERVICING`
 
-Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o tempo de execução.
+Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
@@ -378,7 +378,7 @@ Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e env
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-Especifica se o tempo de execução, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global. Se não estiver definida, o padrão será `true`. Definida como `false` para não resolver no local global e ter instalações do NET Core isoladas (os valores `0` ou `false` são aceitos). Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+Especifica se o runtime, a estrutura compartilhada ou o SDK do .NET Core são resolvidos no local global. Se não estiver definida, o padrão será `true`. Definida como `false` para não resolver no local global e ter instalações do NET Core isoladas (os valores `0` ou `false` são aceitos). Para obter mais informações sobre a pesquisa de vários níveis, consulte [Pesquisa SharedFX de vários níveis](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -388,7 +388,7 @@ O cache do pacote principal. Se não estiver definido, o padrão será `$HOME/.n
 
 `DOTNET_SERVICING`
 
-Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o tempo de execução.
+Especifica o local do índice de manutenção a ser usado pelo host compartilhado ao carregar o runtime.
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
@@ -396,6 +396,7 @@ Especifica se os dados sobre o uso de ferramentas .NET Core são coletados e env
 
 ---
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Arquivos de configuração de runtime](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [Definições de configuração de tempo de execução do .NET Core](../run-time-config/index.md)

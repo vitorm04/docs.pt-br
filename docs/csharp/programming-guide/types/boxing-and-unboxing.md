@@ -9,16 +9,16 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 32156ad0fe4b3dce4371fe757d15f5b8040aaf19
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 62df08bf4ae3580e9b8d5b3aab0697d396674ca1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115857"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745419"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Conversões boxing e unboxing (Guia de Programação em C#)
 
-Conversão boxing é o processo de conversão de um [tipo de valor](../../language-reference/keywords/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor. Quando as caixas de Common Language Runtime (CLR) um tipo de valor, ele encapsula o valor dentro de uma instância de <xref:System.Object?displayProperty=nameWithType> e a armazena no heap gerenciado. A conversão unboxing extrai o tipo de valor do objeto. A conversão boxing é implícita, a conversão unboxing é explícita. O conceito de conversões boxing e unboxing serve como base para a exibição unificada de C# do sistema de tipos em que um valor de qualquer tipo pode ser tratado como um objeto.
+Conversão boxing é o processo de conversão de um [tipo de valor](../../language-reference/builtin-types/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor. Quando as caixas de Common Language Runtime (CLR) um tipo de valor, ele encapsula o valor dentro de uma instância de <xref:System.Object?displayProperty=nameWithType> e a armazena no heap gerenciado. A conversão unboxing extrai o tipo de valor do objeto. A conversão boxing é implícita, a conversão unboxing é explícita. O conceito de conversões boxing e unboxing serve como base para a exibição unificada de C# do sistema de tipos em que um valor de qualquer tipo pode ser tratado como um objeto.
 
 No exemplo a seguir, a variável de inteiro `i` é submetida à *conversão boxing* e atribuída ao objeto `o`.
 
@@ -38,7 +38,7 @@ Em relação às atribuições simples, as conversões boxing e unboxing são pr
 
 ## <a name="boxing"></a>Boxing
 
-A conversão boxing é usada para armazenar tipos de valor no heap coletado como lixo. A conversão boxing é uma conversão implícita de um [tipo de valor](../../language-reference/keywords/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor. A conversão boxing de um tipo de valor aloca uma instância de objeto no heap e copia o valor no novo objeto.
+A conversão boxing é usada para armazenar tipos de valor no heap coletado como lixo. A conversão boxing é uma conversão implícita de um [tipo de valor](../../language-reference/builtin-types/value-types.md) para o tipo `object` ou para qualquer tipo de interface implementada por esse tipo de valor. A conversão boxing de um tipo de valor aloca uma instância de objeto no heap e copia o valor no novo objeto.
 
 Considere a seguinte declaração de uma variável de tipo de valor:
 
@@ -66,7 +66,7 @@ Este exemplo converte uma variável de inteiro `i` em um objeto `o` usando a con
 
 ## <a name="unboxing"></a>Unboxing
 
-A conversão unboxing é uma conversão explícita do tipo `object` para um [tipo de valor](../../language-reference/keywords/value-types.md) ou de um tipo de interface para um tipo de valor que implementa a interface. Uma operação de conversão unboxing consiste em:
+A conversão unboxing é uma conversão explícita do tipo `object` para um [tipo de valor](../../language-reference/builtin-types/value-types.md) ou de um tipo de interface para um tipo de valor que implementa a interface. Uma operação de conversão unboxing consiste em:
 
 - Verificar a instância do objeto para garantir que ele é um valor da conversão boxing de um determinado tipo de valor.
 
@@ -112,14 +112,8 @@ a conversão será executada e você receberá a saída:
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="related-sections"></a>Seções relacionadas
-
-Para obter mais informações: ,
-
-- [Tipos de referência](../../language-reference/keywords/reference-types.md)
-
-- [Tipos de valor](../../language-reference/keywords/value-types.md)
-
 ## <a name="see-also"></a>Veja também
 
-- [Guia de Programação em C#](../index.md)
+- [Guia de programação em C#](../index.md)
+- [Tipos de referência](../../language-reference/keywords/reference-types.md)
+- [Tipos de valor](../../language-reference/builtin-types/value-types.md)

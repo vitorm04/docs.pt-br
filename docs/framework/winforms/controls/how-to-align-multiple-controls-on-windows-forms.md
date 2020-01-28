@@ -1,5 +1,5 @@
 ---
-title: Como alinhar vários controles nos Windows Forms
+title: alinhar vários controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - forms [Windows Forms], aligning controls
@@ -10,12 +10,12 @@ ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 48441fe7c7c2745638a8aa95fd899d7e55697e85
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5593c20e0e00e646949bf7357ecd126cbd1271f4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459474"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747197"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>Como alinhar vários controles nos Windows Forms
 
@@ -29,9 +29,9 @@ Para padronizar o layout da interface do usuário (IU) do seu aplicativo baseado
 
 3. No menu **Formatar** , selecione **alinhar**e, em seguida, selecione uma das sete opções disponíveis.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Controles dos Windows Forms](index.md)
+- [Controles do Windows Forms](index.md)
 - [Como Adicionar Controles ao Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)

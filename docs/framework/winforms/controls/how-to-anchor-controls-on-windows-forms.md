@@ -1,5 +1,5 @@
 ---
-title: Como ancorar controles nos Windows Forms
+title: ancorar controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Anchor property [Windows Forms], enabling resizable forms
@@ -15,12 +15,12 @@ ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 15f12cb0d389344351c4ddf97ee9db37882de460
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7c307d8c5b3bc32e15e6de048c434854ef1bbc65
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459684"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747186"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>Como: ancorar controles em Windows Forms
 
@@ -54,11 +54,11 @@ Quando o formulário é exibido em tempo de execução, o controle é redimensio
 
 Controles herdados devem ser `Protected` para serem ancorados. Para alterar o nível de acesso de um controle, defina sua propriedade `Modifiers` na janela **Propriedades**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Controles dos Windows Forms](index.md)
+- [Controles do Windows Forms](index.md)
 - [Visão geral da propriedade AutoSize](autosize-property-overview.md)
-- [Como encaixar controles nos Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Como encaixar controles no Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Passo a passo: organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Passo a passo: definindo o layout de controles dos Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)

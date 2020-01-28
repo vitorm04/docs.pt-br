@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: herdando um controle dos Windows Forms com Visual C#'
+title: Herdar de um controle
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -11,16 +11,16 @@ ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 713ccf97a73ce9684b9124a121369f22751861d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460585"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740142"
 ---
 # <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>Walkthrough: herdar de um controle de Windows Forms com C\#
 
-Com o C#Visual, você pode criar controles personalizados avançados por meio de *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão irá herdar a funcionalidade do controle de <xref:System.Windows.Forms.Button> de Windows Forms padrão e exporá uma propriedade personalizada chamada `ButtonValue`.
+Com C#o, você pode criar controles personalizados avançados por meio de *herança*. Com a herança, você é capaz de criar controles que mantêm todas as funcionalidades inerentes de controles padrão dos Windows Forms, mas também incorporam funcionalidades personalizadas. Neste passo a passo, você criará um controle herdado simples chamado `ValueButton`. Esse botão irá herdar a funcionalidade do controle de <xref:System.Windows.Forms.Button> de Windows Forms padrão e exporá uma propriedade personalizada chamada `ButtonValue`.
 
 ## <a name="create-the-project"></a>Criar o projeto
 
@@ -141,7 +141,7 @@ No menu **Compilar**, clique em **Compilar Solução**. O build deve ser bem-suc
 
      O numeral "5" é exibido em `label1`, demonstrando que a propriedade `ButtonValue` de seu controle herdado foi passada para `label1` por meio do método `valueButton1_Click`. Portanto, seu controle `ValueButton` herda todas as funcionalidades do botão padrão dos Windows Forms, mas expõe uma propriedade adicional personalizada.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como exibir um controle na caixa de diálogo Escolher Itens da Caixa de Ferramentas](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
 - [Passo a passo: criando um controle de composição com o Visual C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

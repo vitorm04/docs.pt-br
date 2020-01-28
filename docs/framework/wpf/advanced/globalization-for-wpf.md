@@ -1,5 +1,5 @@
 ---
-title: Globalização do WPF
+title: Globalização
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], international user interface
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 95c0368889dfa4e69b5e40b32ea19ba845aa5c30
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559429"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747057"
 ---
 # <a name="globalization-for-wpf"></a>Globalização do WPF
 Este tópico apresenta problemas que você deve estar atento ao escrever [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplicativos para o mercado global. Os elementos de programação de globalização são definidos no .NET no namespace <xref:System.Globalization>.
@@ -36,7 +36,7 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Codificação
+### <a name="encoding"></a>Encoding
  A codificação com suporte do [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] é ASCII, Unicode UTF-16 e UTF-8. A instrução Encoding está no início do documento [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Se nenhum atributo de codificação existe e não há nenhuma ordem de bytes, o analisador padrão é UTF-8. UTF-8 e UTF-16 são as codificações preferenciais. UTF-7 não tem suporte. O exemplo a seguir demonstra como especificar uma codificação UTF-8 em um arquivo de [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)].
 
 ```xaml
@@ -178,6 +178,6 @@ O exemplo a seguir mostra uma referência de caractere hexadecimal. Observe que 
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral de globalização e localização do WPF](wpf-globalization-and-localization-overview.md)

@@ -1,22 +1,22 @@
 ---
-title: Funcionalidade padrão no controle DataGridView dos Windows Forms
+title: Funcionalidade padrão no controle DataGridView
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: b84d5a279bfe7cd99262ca904daeceabc9d0355d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b695883ac7ec3fb0c459adb66214b0eceab3a128
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648064"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746127"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Funcionalidade padrão no controle DataGridView dos Windows Forms
-Os formulários do Windows <xref:System.Windows.Forms.DataGridView> controle fornece aos usuários uma quantidade significativa de funcionalidade padrão.  
+O controle de <xref:System.Windows.Forms.DataGridView> de Windows Forms fornece aos usuários uma quantidade significativa de funcionalidade padrão.  
   
 ## <a name="default-functionality"></a>Funcionalidade padrão  
- Por padrão, um <xref:System.Windows.Forms.DataGridView> controle:  
+ Por padrão, um controle de <xref:System.Windows.Forms.DataGridView>:  
   
 - Exibe automaticamente os cabeçalhos de coluna e de linha que permanecem visíveis enquanto a tabela rola verticalmente.  
   
@@ -26,17 +26,17 @@ Os formulários do Windows <xref:System.Windows.Forms.DataGridView> controle for
   
 - Tem colunas que podem ser redimensionadas automaticamente quando o usuário clicar duas vezes nos divisores de coluna.  
   
-- Automaticamente dá suporte a estilos visuais no Windows XP e na família do Windows Server 2003 quando o <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> método é chamado a partir do aplicativo `Main` método.  
+- Dá suporte automaticamente a estilos visuais no Windows XP e na família Windows Server 2003 quando o método <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> é chamado a partir do método `Main` do aplicativo.  
   
- Além disso, o conteúdo de um <xref:System.Windows.Forms.DataGridView> controle pode ser editado por padrão:  
+ Além disso, o conteúdo de um controle de <xref:System.Windows.Forms.DataGridView> pode ser editado por padrão:  
   
 - Se o usuário clica duas vezes ou pressiona F2 em uma célula, o controle automaticamente coloca a célula no modo de edição e atualiza o conteúdo da célula à medida que o usuário digita.  
   
-- Se o usuário rolar até o final da grade, o usuário verá que existe uma linha para adicionar novos registros. Quando o usuário clica nessa linha, uma nova linha é adicionada para o <xref:System.Windows.Forms.DataGridView> controle, com valores padrão. Quando o usuário pressiona ESC, essa nova linha desaparece.  
+- Se o usuário rolar até o final da grade, o usuário verá que existe uma linha para adicionar novos registros. Quando o usuário clica nessa linha, uma nova linha é adicionada ao controle de <xref:System.Windows.Forms.DataGridView>, com valores padrão. Quando o usuário pressiona ESC, essa nova linha desaparece.  
   
 - Se o usuário clicar em um cabeçalho de linha, a linha inteira será selecionada.  
   
- Quando você associa um <xref:System.Windows.Forms.DataGridView> controle a uma fonte de dados, definindo seu <xref:System.Windows.Forms.DataGridView.DataSource%2A> propriedade, o controle:  
+ Quando você associa um controle de <xref:System.Windows.Forms.DataGridView> a uma fonte de dados definindo sua propriedade <xref:System.Windows.Forms.DataGridView.DataSource%2A>, o controle:  
   
 - Usa automaticamente os nomes das colunas da fonte de dados como o texto do cabeçalho de coluna.  
   
@@ -46,7 +46,7 @@ Os formulários do Windows <xref:System.Windows.Forms.DataGridView> controle for
   
 - Classifica automaticamente as linhas com base nos dados subjacentes quando o usuário clica em um cabeçalho de coluna.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Controle DataGridView](datagridview-control-windows-forms.md)

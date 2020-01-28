@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar tabelas e colunas ao controle DataGrid do Windows Forms'
+title: Adicionar tabelas e colunas ao controle DataGrid
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: bfb0296566fecc2029df16d91c9c04d7daa4b4b5
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2db2e38c326cbcd78c58ee4fe00cd9ed20ae0e8a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046162"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747212"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Como: Adicionar tabelas e colunas ao controle DataGrid do Windows Forms
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>Como adicionar tabelas e colunas ao controle DataGrid dos Windows Forms
 
 > [!NOTE]
 > O controle <xref:System.Windows.Forms.DataGridView> substitui e adiciona funcionalidade ao controle <xref:System.Windows.Forms.DataGrid>, no entanto, o controle <xref:System.Windows.Forms.DataGrid> é mantido para compatibilidade com versões anteriores e para uso futuro, se desejado. Para obter mais informações, consulte [Diferenças Entre o Windows Forms DataGridView e os Controles do DataGrid](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).
 
-Você pode exibir dados no controle de <xref:System.Windows.Forms.DataGrid> Windows Forms em tabelas e colunas criando objetos **DataGridTableStyle** e adicionando-os ao objeto **GridTableStylesCollection** , que é acessado por <xref:System.Windows.Forms.DataGrid> meio do controle Propriedade TableStyles. Cada estilo de tabela exibe o conteúdo da tabela de dados especificada na propriedade **MappingName** do objeto **DataGridTableStyle**. Por padrão, um estilo de tabela sem estilos de coluna especificados exibirá todas as colunas dentro dessa tabela de dados. Você pode restringir quais colunas da tabela aparecem adicionando objetos **DataGridColumnStyle** ao objeto **GridColumnStylesCollection**, que é acessado por meio da propriedade **GridColumnStyles** de cada objeto **DataGridTableStyle**.
+Você pode exibir dados no Windows Forms <xref:System.Windows.Forms.DataGrid> controle em tabelas e colunas criando objetos **DataGridTableStyle** e adicionando-os ao objeto **GridTableStylesCollection** , que é acessado por meio da propriedade **tablestyles** do controle de <xref:System.Windows.Forms.DataGrid>. Cada estilo de tabela exibe o conteúdo da tabela de dados especificada na propriedade **MappingName** do objeto **DataGridTableStyle**. Por padrão, um estilo de tabela sem estilos de coluna especificados exibirá todas as colunas dentro dessa tabela de dados. Você pode restringir quais colunas da tabela aparecem adicionando objetos **DataGridColumnStyle** ao objeto **GridColumnStylesCollection**, que é acessado por meio da propriedade **GridColumnStyles** de cada objeto **DataGridTableStyle**.
 
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>Adicionar uma tabela e uma coluna a um DataGrid com programação
 
-1. Para exibir dados na tabela, primeiro você deve associar o <xref:System.Windows.Forms.DataGrid> controle a um conjunto de dado. Para obter mais informações, confira [Como: Associar o Windows Forms controle DataGrid a uma fonte](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)de dados.
+1. Para exibir os dados na tabela, primeiro você deve associar o controle de <xref:System.Windows.Forms.DataGrid> a um DataSet. Para obter mais informações, consulte [Como associar o controle DataGrid dos Windows Forms a uma fonte de dados](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).
 
     > [!CAUTION]
     > Ao especificar os estilos de coluna com programação, sempre crie os objetos **DataGridColumnStyle** e adicione-os ao objeto **GridColumnStylesCollection** objeto antes de adicionar objetos **DataGridTableStyle** para o objeto **GridTableStylesCollection**. Ao adicionar um objeto **DataGridTableStyle** vazio à coleção, os objetos **DataGridColumnStyle** são gerados automaticamente para você. Consequentemente, uma exceção será gerada se você tentar adicionar novos objetos **DataGridColumnStyle** com valores de **MappingName** duplicados ao objeto **GridColumnStylesCollection**.
@@ -96,7 +96,7 @@ Você pode exibir dados no controle de <xref:System.Windows.Forms.DataGrid> Wind
     dataGrid1->TableStyles->Add(ts1);
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Controle DataGrid](datagrid-control-windows-forms.md)
-- [Como: Excluir ou ocultar colunas no controle DataGrid de Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Como excluir ou ocultar colunas no controle DataGrid do Windows Forms](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

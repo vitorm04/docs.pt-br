@@ -1,5 +1,6 @@
 ---
 title: Erros de tempo de design no Designer de Formulários do Windows
+titleSuffix: ''
 ms.date: 09/09/2019
 f1_keywords:
 - DTELErrorList
@@ -11,12 +12,12 @@ ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0dd112f89071f6981b438a79f350dfab02af73d5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2a39c76d011c6d129f91647fabe3f129245b9466
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460113"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746094"
 ---
 # <a name="windows-forms-designer-error-page"></a>Designer de Formulários do Windows página de erro
 
@@ -123,7 +124,7 @@ O Visual Studio tentou adicionar um manipulador de eventos a um componente que n
 
 ### <a name="cannot-name-the-object-name-because-it-is-already-named-name"></a>Não é possível nomear o objeto '\<Name > ' porque ele já é denominado '\<Name > '
 
-Este é um erro interno no serializador do Visual Studio. Isso indica que o serializador tentou nomear um objeto duas vezes, o que não tem suporte. Se você vir esse erro, registre um problema usando [relatar um problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
+This is an internal error in the Visual Studio serializer. Isso indica que o serializador tentou nomear um objeto duas vezes, o que não tem suporte. If you see this error, please log an issue by using [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
 ### <a name="cannot-remove-or-destroy-inherited-component-component-name"></a>Não é possível remover ou destruir o componente herdado '\<nome do componente > '
 
@@ -171,7 +172,7 @@ O Visual Studio tentou conectar um método de manipulação de eventos e não p�
 
 ### <a name="could-not-locate-the-project-item-templates-for-inherited-components"></a>Não foi possível localizar os modelos de itens do projeto para componentes herdados
 
-Os modelos para formulários herdados no Visual Studio não estão disponíveis. Se você vir esse erro, registre um problema usando [relatar um problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
+Os modelos para formulários herdados no Visual Studio não estão disponíveis. If you see this error, please log an issue by using [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
 ### <a name="delegate-class-class-name-has-no-invoke-method-is-this-class-a-delegate"></a>A classe delegada '\<nome da classe > ' não tem um método Invoke. Essa classe é um delegado?
 
@@ -227,71 +228,71 @@ Esse erro é semelhante a "o tipo\<nome > ' não pôde ser encontrado", mas esse
 
 Um componente solicitou um assembly específico, mas o nome fornecido pelo componente não é um nome de assembly válido. Contate o fornecedor do componente.
 
-### <a name="the-base-class-class-name-cannot-be-designed"></a>A classe base '\<nome da classe > ' não pode ser projetada
+### <a name="the-base-class-class-name-cannot-be-designed"></a>The base class '\<class name>' cannot be designed
 
-O Visual Studio carregou a classe, mas a classe não pode ser projetada porque o implementador da classe não forneceu um designer. Se a classe oferecer suporte a um designer, certifique-se de que não haja nenhum problema que cause problemas ao exibi-lo em um designer, como erros do compilador. Além disso, verifique se todas as referências à classe estão corretas e se todos os nomes de classe estão escritos corretamente. Caso contrário, se a classe não for designável, edite-a no modo de exibição de código.
+Visual Studio loaded the class, but the class cannot be designed because the implementer of the class did not provide a designer. If the class supports a designer, make sure there are no problems that would cause issues with displaying it in a designer, such as compiler errors. Also, make sure that all references to the class are correct and all class names are correctly spelled. Otherwise, if the class is not designable, edit it in Code view.
 
-### <a name="the-base-class-class-name-could-not-be-loaded"></a>A classe base '\<nome da classe > ' não pôde ser carregada
+### <a name="the-base-class-class-name-could-not-be-loaded"></a>The base class '\<class name>' could not be loaded
 
-A classe não é referenciada no projeto, portanto o Visual Studio não pode carregá-la. Para corrigir esse erro, adicione uma referência à classe no projeto e feche e reabra a janela de Designer de Formulários do Windows.
+The class is not referenced in the project, so Visual Studio can't load it. To correct this error, add a reference to the class in the project, and close and reopen the Windows Forms Designer window.
 
-### <a name="the-class-class-name-cannot-be-designed-in-this-version-of-visual-studio"></a>A classe '\<nome da classe > ' não pode ser projetada nesta versão do Visual Studio
+### <a name="the-class-class-name-cannot-be-designed-in-this-version-of-visual-studio"></a>The class '\<class name>' cannot be designed in this version of Visual Studio
 
-O designer deste controle ou componente não oferece suporte aos mesmos tipos que o Visual Studio faz. Contate o fornecedor do componente.
+The designer for this control or component does not support the same types that Visual Studio does. Contate o fornecedor do componente.
 
 ### <a name="the-class-name-is-not-a-valid-identifier-for-this-language"></a>O nome da classe não é um identificador válido para este idioma
 
-O código-fonte que está sendo criado pelo usuário tem um nome de classe que não é válido para o idioma que está sendo usado. Para corrigir esse erro, nomeie a classe de forma que ela esteja de acordo com os requisitos de idioma.
+The source code being created by the user has a class name that is not valid for the language being used. To correct this error, name the class such that it conforms to the language requirements.
 
-### <a name="the-component-cannot-be-added-because-it-contains-a-circular-reference-to-reference-name"></a>O componente não pode ser adicionado porque contém uma referência circular para '\<nome de referência > '
+### <a name="the-component-cannot-be-added-because-it-contains-a-circular-reference-to-reference-name"></a>The component cannot be added because it contains a circular reference to '\<reference name>'
 
-Você não pode adicionar um controle ou componente a si mesmo. Outra situação em que isso pode ocorrer é o código no método InitializeComponent de um formulário (por exemplo, Form1) que cria outra instância do Form1.
+You cannot add a control or component to itself. Another situation where this might occur is if there is code in the InitializeComponent method of a form (for example, Form1) that creates another instance of Form1.
 
 ### <a name="the-designer-cannot-be-modified-at-this-time"></a>O designer não pode ser modificado no momento
 
-Esse erro ocorre quando o arquivo no editor é marcado como somente leitura. Verifique se o arquivo não está marcado como somente leitura e se o aplicativo não está em execução.
+This error occurs when the file in the editor is marked as read-only. Ensure that the file is not marked read-only and the application is not running.
 
 ### <a name="the-designer-could-not-be-shown-for-this-file-because-none-of-the-classes-within-it-can-be-designed"></a>O designer não pôde ser mostrado para esse arquivo porque nenhuma das classes existentes nele podem ser criadas
 
-Esse erro ocorre quando o Visual Studio não pode encontrar uma classe base que atenda aos requisitos do designer. Formulários e controles devem derivar de uma classe base que ofereça suporte a designers. Se você estiver derivando de um formulário ou controle herdado, verifique se o projeto foi compilado.
+This error occurs when Visual Studio cannot find a base class that satisfies designer requirements. Forms and controls must derive from a base class that supports designers. If you're deriving from an inherited form or control, make sure the project has been built.
 
-### <a name="the-designer-for-base-class-class-name-is-not-installed"></a>O designer da classe base '\<nome da classe > ' não está instalado
+### <a name="the-designer-for-base-class-class-name-is-not-installed"></a>The designer for base class '\<class name>' is not installed
 
-O Visual Studio não pôde carregar o designer para a classe. Se você vir esse erro, registre um problema usando [relatar um problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
+Visual Studio could not load the designer for the class. If you see this error, please log an issue by using [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
-### <a name="the-designer-must-create-an-instance-of-type-type-name-but-it-cant-because-the-type-is-declared-as-abstract"></a>O designer deve criar uma instância do tipo '\<nome do tipo > ', mas não pode porque o tipo é declarado como abstrato
+### <a name="the-designer-must-create-an-instance-of-type-type-name-but-it-cant-because-the-type-is-declared-as-abstract"></a>The designer must create an instance of type '\<type name>', but it can't because the type is declared as abstract
 
-Esse erro ocorreu porque a classe base do objeto que está sendo passado para o designer é [abstrata](../../../csharp/language-reference/keywords/abstract.md), o que não é permitido.
+This error occurred because the base class of the object being passed to the designer is [abstract](../../../csharp/language-reference/keywords/abstract.md), which is not allowed.
 
 ### <a name="the-file-could-not-be-loaded-in-the-designer"></a>Não foi possível carregar o arquivo no designer
 
-A classe base deste arquivo não oferece suporte a designers. Como alternativa, use a exibição de código para trabalhar no arquivo. Clique com o botão direito do mouse no arquivo em Gerenciador de Soluções e escolha **Exibir código**.
+The base class of this file does not support any designers. As a workaround, use Code view to work on the file. Right-click the file in Solution Explorer and choose **View Code**.
 
 ### <a name="the-language-for-this-file-does-not-support-the-necessary-code-parsing-and-generation-services"></a>A linguagem deste arquivo não suporta a análise de código e geração de serviços necessários
 
-Mensagem de erro: "o idioma deste arquivo não dá suporte aos serviços de análise e geração de código necessários. Verifique se o arquivo que você está abrindo é membro de um projeto e tente abri-lo novamente. "
+Error message: "The language for this file does not support the necessary code parsing and generation services. Please ensure the file you are opening is a member of a project and then try to open the file again."
 
-Esse erro provavelmente resultou na abertura de um arquivo que está em um projeto que não oferece suporte a designers.
+This error most likely resulted from opening a file that's in a project that does not support designers.
 
-### <a name="the-language-parser-class-class-name-is-not-implemented-properly"></a>A classe do analisador de linguagem '\<nome da classe > ' não está implementada corretamente
+### <a name="the-language-parser-class-class-name-is-not-implemented-properly"></a>The language parser class '\<class name>' is not implemented properly
 
-Mensagem de erro: "a classe do analisador de linguagem '\<nome da classe > ' não está implementada corretamente. Contate o fornecedor para obter um módulo Analisador atualizado. "
+Error message: "The language parser class '\<class name>' is not implemented properly. Contact the vendor for an updated parser module."
 
-O idioma em uso registrou uma classe de designer que não deriva da classe base correta. Contate o fornecedor do idioma que você está usando.
+The language in use has registered a designer class that doesn't derive from the correct base class. Contact the vendor of the language you're using.
 
-### <a name="the-name-name-is-already-used-by-another-object"></a>O nome '\<nome > ' já está sendo usado por outro objeto
+### <a name="the-name-name-is-already-used-by-another-object"></a>The name '\<name>' is already used by another object
 
-Este é um erro interno no serializador do Visual Studio. Se você vir esse erro, registre um problema usando [relatar um problema](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
+This is an internal error in the Visual Studio serializer. If you see this error, please log an issue by using [Report a Problem](/visualstudio/ide/how-to-report-a-problem-with-visual-studio).
 
-### <a name="the-object-object-name-does-not-implement-the-icomponent-interface"></a>O objeto '\<nome do objeto > ' não implementa a interface IComponent
+### <a name="the-object-object-name-does-not-implement-the-icomponent-interface"></a>The object '\<object name>' does not implement the IComponent interface
 
-O Visual Studio tentou criar um componente, mas o objeto criado não implementa a interface <xref:System.ComponentModel.IComponent>. Contate o fornecedor do componente para obter uma correção.
+Visual Studio tried to create a component, but the object created does not implement the <xref:System.ComponentModel.IComponent> interface. Contact the component vendor for a fix.
 
-### <a name="the-object-object-name-returned-null-for-the-property-property-name-but-this-is-not-allowed"></a>O objeto '\<nome do objeto > ' retornou nulo para a propriedade '\<nome da propriedade > ', mas isso não é permitido
+### <a name="the-object-object-name-returned-null-for-the-property-property-name-but-this-is-not-allowed"></a>The object '\<object name>' returned null for the property '\<property name>' but this is not allowed
 
-Há algumas propriedades do .NET que sempre devem retornar um objeto. Por exemplo, a coleção **Controls** de um formulário sempre deve retornar um objeto, mesmo quando não há controles nele.
+There are some .NET properties that should always return an object. For example, the **Controls** collection of a form should always return an object, even when there are no controls in it.
 
-Para corrigir esse erro, verifique se a propriedade especificada no erro não é nula.
+To correct this error, ensure that the property specified in the error is not null.
 
 ### <a name="the-serialization-data-object-is-not-of-the-proper-type"></a>O objeto de dados de serialização não é do tipo adequado
 
@@ -405,7 +406,7 @@ Esse erro indica que o idioma do projeto não oferece suporte a um designer e su
 
 O Visual Studio carregou a classe, mas a classe não pode ser projetada. Em vez disso, edite a classe na exibição de código clicando com o botão direito do mouse na classe e escolhendo **Exibir código**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Desenvolver Windows Forms controles usando o designer](developing-windows-forms-controls-at-design-time.md)
 - [Fórum de Designer de Formulários do Windows](https://social.msdn.microsoft.com/Forums/windows/home?forum=winformsdesigner)

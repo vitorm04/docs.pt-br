@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar recursos do navegador da Web a um Aplicativo do Windows Forms'
+title: Adicionar recursos do navegador da Web ao aplicativo
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 - Windows Forms, adding Web browser functionality
 ms.assetid: 3871f072-b57a-435b-9976-e5da28df04a7
-ms.openlocfilehash: 60b544c630fc5c7c876293b27a5c5e159e57a797
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5feecd975700745541103e81fd09bfc5e788c729
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65588885"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747218"
 ---
-# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Como: Adicionar recursos do navegador da Web a um Aplicativo do Windows Forms
-Com o <xref:System.Windows.Forms.WebBrowser> controle, você pode adicionar a funcionalidade do navegador da Web ao seu aplicativo. O controle funciona como um navegador da Web por padrão. Depois que você carregar uma URL inicial definindo a <xref:System.Windows.Forms.WebBrowser.Url%2A> propriedade, você poderá navegar clicando nos hiperlinks ou usando atalhos de teclado para retroceder e Avançar no histórico de navegação. Por padrão, você pode acessar a funcionalidade adicional do navegador por meio do menu de atalho acessado quando se clica com o botão direito do mouse. Você também pode abrir novos documentos soltando-os no controle. O <xref:System.Windows.Forms.WebBrowser> controle também tem várias propriedades, métodos e eventos que você pode usar para implementar recursos de interface do usuário semelhantes àqueles encontrados no Internet Explorer.  
+# <a name="how-to-add-web-browser-capabilities-to-a-windows-forms-application"></a>Como adicionar recursos do navegador da Web a um Aplicativo do Windows Forms
+Com o controle <xref:System.Windows.Forms.WebBrowser>, você pode adicionar a funcionalidade do navegador da Web ao seu aplicativo. O controle funciona como um navegador da Web por padrão. Depois de carregar uma URL inicial definindo a propriedade <xref:System.Windows.Forms.WebBrowser.Url%2A>, você pode navegar clicando em hiperlinks ou usando atalhos de teclado para voltar e avançar pelo histórico de navegação. Por padrão, você pode acessar a funcionalidade adicional do navegador por meio do menu de atalho acessado quando se clica com o botão direito do mouse. Você também pode abrir novos documentos soltando-os no controle. O controle de <xref:System.Windows.Forms.WebBrowser> também tem várias propriedades, métodos e eventos que você pode usar para implementar recursos de interface de usuário semelhantes àqueles encontrados no Internet Explorer.  
   
  O exemplo de código a seguir implementa uma barra de endereços, botões de navegador típicos, um menu **Arquivo**, uma barra de status e uma barra de título que exibe o título da página atual.  
   
@@ -29,12 +29,12 @@ Com o <xref:System.Windows.Forms.WebBrowser> controle, você pode adicionar a fu
  [!code-csharp[System.Windows.Forms.WebBrowser#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/CS/form1.cs#0)]
  [!code-vb[System.Windows.Forms.WebBrowser#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.WebBrowser/VB/form1.vb#0)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- Referências para o `System`, `System.Drawing`, e `System.Windows.Forms` assemblies.  
+- Referências aos assemblies `System`, `System.Drawing`e `System.Windows.Forms`.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.WebBrowser>
 - [Controle WebBrowser](webbrowser-control-windows-forms.md)

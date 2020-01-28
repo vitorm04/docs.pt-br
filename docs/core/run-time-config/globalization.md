@@ -3,12 +3,12 @@ title: Definições de configuração de globalização
 description: Saiba mais sobre as configurações de tempo de execução que configuram aspectos de globalização de um aplicativo .NET Core, por exemplo, como ele analisa as datas japonesas.
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3764d0eb714c094b44ae843a1e626073ff8d82e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740544"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733460"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>Opções de configuração de tempo de execução para globalização
 
@@ -21,7 +21,34 @@ ms.locfileid: "75740544"
 | | Nome da configuração | Valores |
 | - | - | - |
 | **runtimeconfig. JSON** | `System.Globalization.Invariant` | `false`-acesso a dados culturais<br/>`true`-executar em modo invariável |
+| **Propriedade do MSBuild** | `InvariantGlobalization` | `false`-acesso a dados culturais<br/>`true`-executar em modo invariável |
 | **Variável de ambiente** | `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` | `0`-acesso a dados culturais<br/>`1`-executar em modo invariável |
+
+### <a name="examples"></a>Exemplos
+
+arquivo *runtimeconfig. JSON* :
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Globalization.Invariant": true
+      }
+   }
+}
+```
+
+Arquivo de projeto:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="era-year-ranges"></a>Intervalos de ano da era
 
