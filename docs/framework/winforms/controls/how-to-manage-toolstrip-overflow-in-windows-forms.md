@@ -1,5 +1,5 @@
 ---
-title: 'Como: Gerenciar o estouro de ToolStrip nos Windows Forms'
+title: Como gerenciar o estouro de ToolStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
-ms.openlocfilehash: 53f610a728925d454a8833a49e705818f027aec5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 52cc02e626bee2d2457355028ecddc17e462d8fa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913751"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736152"
 ---
-# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Como: Gerenciar o estouro de ToolStrip nos Windows Forms
+# <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>Como gerenciar o estouro de ToolStrip nos Windows Forms
 
-Quando todos os itens em uma <xref:System.Windows.Forms.ToolStrip> controle não se ajustarem no espaço reservado, você pode habilitar a funcionalidade de estouro em de <xref:System.Windows.Forms.ToolStrip> e determine o comportamento de estouro de determinado <xref:System.Windows.Forms.ToolStripItem>s.
+Quando todos os itens em um controle de <xref:System.Windows.Forms.ToolStrip> não couberem no espaço alocado, você poderá habilitar a funcionalidade de estouro na <xref:System.Windows.Forms.ToolStrip> e determinar o comportamento de estouro de <xref:System.Windows.Forms.ToolStripItem>s específicos.
 
-Quando você adiciona <xref:System.Windows.Forms.ToolStripItem>s que exigem mais espaço do que está alocado para o <xref:System.Windows.Forms.ToolStrip> dado o tamanho do formulário atual, um <xref:System.Windows.Forms.ToolStripOverflowButton> aparece automaticamente no <xref:System.Windows.Forms.ToolStrip>. O <xref:System.Windows.Forms.ToolStripOverflowButton> for exibida, e os itens habilitados para estouro são movidos para o menu suspenso de estouro. Isso permite que você personalize e priorizar como seu <xref:System.Windows.Forms.ToolStrip> itens se ajustam a diferentes tamanhos de formulários. Você também pode alterar a aparência dos itens quando eles caem no estouro usando o <xref:System.Windows.Forms.ToolStripItem.Placement%2A> e <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> propriedades e o <xref:System.Windows.Forms.ToolStrip.LayoutCompleted> eventos. Se você amplie o formulário no tempo de design ou tempo de execução, mais <xref:System.Windows.Forms.ToolStripItem>s poderão ser exibidos no principal <xref:System.Windows.Forms.ToolStrip> e o <xref:System.Windows.Forms.ToolStripOverflowButton> poderá até desaparecer até que você diminuir o tamanho do formulário.
+Quando você adiciona <xref:System.Windows.Forms.ToolStripItem>s que exigem mais espaço do que é alocado para o <xref:System.Windows.Forms.ToolStrip> dado o tamanho atual do formulário, um <xref:System.Windows.Forms.ToolStripOverflowButton> aparece automaticamente na <xref:System.Windows.Forms.ToolStrip>. O <xref:System.Windows.Forms.ToolStripOverflowButton> aparece e os itens habilitados para estouro são movidos para o menu suspenso de estouro. Isso permite que você personalize e Priorize como seus <xref:System.Windows.Forms.ToolStrip> itens se ajustam adequadamente para diferentes tamanhos de formulário. Você também pode alterar a aparência de seus itens quando eles se enquadram no estouro usando as propriedades <xref:System.Windows.Forms.ToolStripItem.Placement%2A> e <xref:System.Windows.Forms.ToolStripOverflow.DisplayedItems%2A?displayProperty=nameWithType> e o evento <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>. Se você aumentar o formulário em tempo de design ou em tempo de execução, mais <xref:System.Windows.Forms.ToolStripItem>s poderão ser exibidos na <xref:System.Windows.Forms.ToolStrip> principal e a <xref:System.Windows.Forms.ToolStripOverflowButton> poderá até mesmo desaparecer até que você diminua o tamanho do formulário.
 
 ## <a name="to-enable-overflow-on-a-toolstrip-control"></a>Para habilitar o estouro em um controle ToolStrip
 
-- Certifique-se de que o <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> propriedade não está definida como `false` para o <xref:System.Windows.Forms.ToolStrip>. O padrão é `True`.
+- Verifique se a propriedade <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> não está definida como `false` para o <xref:System.Windows.Forms.ToolStrip>. O padrão é `True`.
 
-     Quando <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> está `True` (padrão), um <xref:System.Windows.Forms.ToolStripItem> é enviada para o menu suspenso de estouro quando o conteúdo do <xref:System.Windows.Forms.ToolStripItem> excede a largura da horizontal <xref:System.Windows.Forms.ToolStrip> ou a altura de uma vertical <xref:System.Windows.Forms.ToolStrip>.
+     Quando <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> é `True` (o padrão), um <xref:System.Windows.Forms.ToolStripItem> é enviado para o menu suspenso de estouro quando o conteúdo da <xref:System.Windows.Forms.ToolStripItem> excede a largura de um <xref:System.Windows.Forms.ToolStrip> horizontal ou a altura de uma <xref:System.Windows.Forms.ToolStrip>vertical.
 
 ## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>Especificar comportamento de estouro de um item ToolStripItem específico
 
-- Defina as <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> propriedade do <xref:System.Windows.Forms.ToolStripItem> para o valor desejado. As possibilidades são `Always`, `Never` e `AsNeeded`. O padrão é `AsNeeded`.
+- Defina a propriedade <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> do <xref:System.Windows.Forms.ToolStripItem> para o valor desejado. As possibilidades são `Always`, `Never` e `AsNeeded`. O padrão é `AsNeeded`.
 
     ```vb
     toolStripTextBox1.Overflow = _
@@ -43,7 +43,7 @@ Quando você adiciona <xref:System.Windows.Forms.ToolStripItem>s que exigem mais
     System.Windows.Forms.ToolStripItemOverflow.Never;
     ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripOverflowButton>

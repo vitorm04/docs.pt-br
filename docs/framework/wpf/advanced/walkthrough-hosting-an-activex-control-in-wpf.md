@@ -1,5 +1,6 @@
 ---
-title: 'Instruções passo a passo: hospedando um controle ActiveX no WPF'
+title: Hospedar um controle ActiveX no WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - ActiveX controls [WPF interoperability]
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
-ms.openlocfilehash: 8679181d720d9550cf60034a7cf1809b79198e83
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: f2d9345eaaba7b85a217e6b230ae202f27ad3af8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197890"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742616"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>Instruções passo a passo: hospedando um controle ActiveX no WPF
 Para habilitar a interação aprimorada com navegadores, você pode usar os controles do Microsoft ActiveX em seu aplicativo baseado em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tutorial demonstra como você pode hospedar o Microsoft Windows Media Player como um controle em uma página [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
@@ -28,7 +29,7 @@ Para habilitar a interação aprimorada com navegadores, você pode usar os cont
 
  Quando você tiver concluído este tutorial, saberá como usar os controles do Microsoft ActiveX em seu aplicativo baseado em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
  Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
 
 - Microsoft Windows Media Player instalado no computador em que o Visual Studio está instalado.
@@ -105,7 +106,7 @@ O Visual Studio gera automaticamente uma classe wrapper <xref:System.Windows.For
   
 10. Pressione F5 para compilar e executar o aplicativo.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

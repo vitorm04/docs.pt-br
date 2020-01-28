@@ -4,16 +4,16 @@ description: Saiba mais C# sobre os tipos de valor anulável e como usá-los
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964321"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740940"
 ---
 # <a name="nullable-value-types-c-reference"></a>Tipos de valores anuláveis (C# referência)
 
-Um tipo de valor anulável `T?` representa todos os valores de seu [tipo de valor](../keywords/value-types.md) subjacente `T` e um valor [nulo](../keywords/null.md) adicional. Por exemplo, você pode atribuir qualquer um dos três valores a seguir a uma `bool?` variável: `true`, `false`ou `null`. Um tipo de valor subjacente `T` não pode ser um tipo de valor anulável em si.
+Um tipo de valor anulável `T?` representa todos os valores de seu [tipo de valor](value-types.md) subjacente `T` e um valor [nulo](../keywords/null.md) adicional. Por exemplo, você pode atribuir qualquer um dos três valores a seguir a uma `bool?` variável: `true`, `false`ou `null`. Um tipo de valor subjacente `T` não pode ser um tipo de valor anulável em si.
 
 > [!NOTE]
 > C#8,0 apresenta o recurso de tipos de referência anulável. Para obter mais informações, consulte [tipos de referência anuláveis](../../nullable-references.md). Os tipos de valor anulável estão disponíveis a C# partir de 2.
@@ -120,7 +120,7 @@ Você pode usar o código apresentado no exemplo a seguir para determinar se uma
 > [!NOTE]
 > Os métodos descritos nesta seção não são aplicáveis no caso de tipos de [referência anuláveis](../../nullable-references.md).
 
-## <a name="c-language-specification"></a>Especificação da linguagem C#
+## <a name="c-language-specification"></a>especificação da linguagem C#
 
 Para obter mais informações, confira as seguintes seções da [especificação da linguagem C#](~/_csharplang/spec/introduction.md):
 

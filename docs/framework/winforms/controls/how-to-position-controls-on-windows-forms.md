@@ -1,5 +1,5 @@
 ---
-title: Como posicionar controles nos Windows Forms
+title: posicionar controles
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: bb57d14397a4626e01c41dd687dfed7331282a10
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 144a0021c74f0fb5afec1d511315168fb28528e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458333"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735918"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>Como: posicionar controles em Windows Forms
 
@@ -96,9 +96,9 @@ button1->Left += 200;
 > [!NOTE]
 > Use a propriedade <xref:System.Windows.Forms.Control.Location%2A> para definir as posições X e Y de um controle simultaneamente. Para definir uma posição individualmente, use o <xref:System.Windows.Forms.Control.Left%2A> do controle (**X**) ou <xref:System.Windows.Forms.Control.Top%2A> (**Y**) subpropriedade. Não tente definir implicitamente as coordenadas X e Y da estrutura de <xref:System.Drawing.Point> que representa o local do botão, pois essa estrutura contém uma cópia das coordenadas do botão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Controles dos Windows Forms](index.md)
+- [Controles do Windows Forms](index.md)
 - [Instruções passo a passo: organizando controles no Windows Forms usando guias de alinhamento](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [Passo a passo: organizando controles nos Windows Forms utilizando um FlowLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)

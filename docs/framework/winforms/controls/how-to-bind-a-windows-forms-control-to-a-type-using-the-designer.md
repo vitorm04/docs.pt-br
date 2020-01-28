@@ -1,29 +1,29 @@
 ---
-title: 'Como: Associar um controle do Windows Forms a um tipo usando o Designer'
+title: Associar o controle a um tipo usando o designer
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], binding to a type
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 5ab984b5-c2d0-4638-a572-1c84013e8746
-ms.openlocfilehash: 5069d7d3b5ef4c5b05159dac521d32f5be8abdd1
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: 2257489e123ceeea819ad3538952db51b726c7e5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70046041"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742022"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Como: Associar um controle do Windows Forms a um tipo usando o Designer
+# <a name="how-to-bind-a-windows-forms-control-to-a-type-using-the-designer"></a>Como associar um controle dos Windows Forms a um tipo usando o designer
 
-Quando estiver compilando controles que interagem com os dados, pode ser necessário associar um controle a um tipo, em vez de um objeto. Geralmente é necessário associar um controle a um tipo no tempo de design, quando os dados podem não estar disponíveis, mas ainda é recomendável fazer com que os controles associados a dados exibam dados da interface pública de um tipo. Os procedimentos a seguir demonstram como criar um <xref:System.Windows.Forms.BindingSource> novo que está associado a um tipo e como associar uma das propriedades do tipo <xref:System.Windows.Forms.TextBox.Text%2A> à propriedade de um <xref:System.Windows.Forms.TextBox>.
+Quando estiver compilando controles que interagem com os dados, pode ser necessário associar um controle a um tipo, em vez de um objeto. Geralmente é necessário associar um controle a um tipo no tempo de design, quando os dados podem não estar disponíveis, mas ainda é recomendável fazer com que os controles associados a dados exibam dados da interface pública de um tipo. Os procedimentos a seguir demonstram como criar um novo <xref:System.Windows.Forms.BindingSource> associado a um tipo e como associar uma das propriedades do tipo à propriedade <xref:System.Windows.Forms.TextBox.Text%2A> de um <xref:System.Windows.Forms.TextBox>.
 
 ### <a name="to-bind-the-bindingsource-to-a-type"></a>Associar o BindingSource a um tipo
 
-1. Criar um projeto Windows Forms (**arquivo** > **novo** > **projeto** > **Visual C#**  ou **Visual Basic** **área de** trabalhoclássica >   >  **Windows Forms aplicativo**).
+1. Criar um projeto de Windows Forms **(arquivo** > **novo** **projeto** de >  > **Visual C#**  ou **Visual Basic** > área de **trabalho clássica** > Windows Forms **aplicativo**).
 
-2. No modo **design** , arraste um <xref:System.Windows.Forms.BindingSource> componente para o formulário.
+2. No modo **design** , arraste um componente <xref:System.Windows.Forms.BindingSource> para o formulário.
 
-3. Na janela **Propriedades** , clique na seta <xref:System.Windows.Forms.BindingSource.DataSource%2A> da propriedade.
+3. Na janela **Propriedades** , clique na seta da propriedade <xref:System.Windows.Forms.BindingSource.DataSource%2A>.
 
 4. No **Editor de tipo de interface do usuário de DataSource**, clique em **Adicionar fonte de dados do projeto**.
 
@@ -35,7 +35,7 @@ Quando estiver compilando controles que interagem com os dados, pode ser necess�
 
       \-ou-
 
-    - Se o tipo ao qual você deseja associar está em outro assembly, e não na lista de referências atual, clique em **Adicionar referência** e, em seguida, na guia **Projetos**. Selecione o projeto que contém o objeto comercial que você deseja e clique em **OK**. Este projeto será exibido na lista de assemblies, portanto é possível expandir os nós para encontrar o tipo desejado e, em seguida, selecioná-lo.
+    - Se o tipo ao qual você deseja associar estiver em outro assembly, não atualmente na lista de referências, clique em **Adicionar referência**e, em seguida, clique na guia **projetos** . Selecione o projeto que contém o objeto comercial desejado e clique em **OK**. Este projeto será exibido na lista de assemblies, portanto é possível expandir os nós para encontrar o tipo desejado e, em seguida, selecioná-lo.
 
       > [!NOTE]
       > Se você desejar associar a um tipo em uma estrutura ou assembly Microsoft, desmarque a caixa de seleção **Ocultar assemblies que começam com Microsoft ou System**.
@@ -48,12 +48,12 @@ Quando estiver compilando controles que interagem com os dados, pode ser necess�
 
 2. Na janela **Propriedades**, expanda o nó **(DataBindings)** .
 
-3. Clique na seta ao lado da <xref:System.Windows.Forms.TextBox.Text%2A> propriedade.
+3. Clique na seta ao lado da propriedade <xref:System.Windows.Forms.TextBox.Text%2A>.
 
-4. No **Editor de tipo de interface do usuário do DataSource**, expanda o nó para <xref:System.Windows.Forms.BindingSource> o adicionado anteriormente e selecione a propriedade do tipo vinculado que você deseja associar à <xref:System.Windows.Forms.TextBox.Text%2A> propriedade <xref:System.Windows.Forms.TextBox>do.
+4. No **Editor de tipo de interface do usuário do DataSource**, expanda o nó para o <xref:System.Windows.Forms.BindingSource> adicionado anteriormente e selecione a propriedade do tipo vinculado que você deseja associar à propriedade <xref:System.Windows.Forms.TextBox.Text%2A> da <xref:System.Windows.Forms.TextBox>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Como: Associar um controle de Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Associar controles a dados no Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

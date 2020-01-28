@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: 22d63465c534090a8918348ea5f050739c0cf01c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 47a1da4982d22c63cb762a27313590c8ec0c5dd4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964752"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743967"
 ---
 # <a name="using-structs-c-programming-guide"></a>Usando structs (C# guia de programação)
 
@@ -27,7 +27,7 @@ Ao gravar um construtor com parâmetros para uma struct, você deve inicializar 
 
 Não há nenhuma herança para structs como há para classes. Um struct não pode herdar de outra estrutura ou classe e ele não pode ser a base de uma classe. No entanto, os structs herdam da classe base <xref:System.Object>. Um struct pode implementar interfaces e ele faz isso exatamente como as classes.
 
-Você não pode declarar uma classe usando a palavra-chave `struct`. No C#, as classes e os structs são semanticamente diferentes. Um struct é um tipo de valor, enquanto uma classe é um tipo de referência. Para obter mais informações, consulte [tipos de valor](../../language-reference/keywords/value-types.md) e tipos de [referência](../../language-reference/keywords/reference-types.md).
+Você não pode declarar uma classe usando a palavra-chave `struct`. No C#, as classes e os structs são semanticamente diferentes. Um struct é um tipo de valor, enquanto uma classe é um tipo de referência. Para obter mais informações, consulte [tipos de valor](../../language-reference/builtin-types/value-types.md) e tipos de [referência](../../language-reference/keywords/reference-types.md).
 
 A menos que você precise de semântica de tipo de referência, uma pequena classe pode ser tratada com mais eficiência pelo sistema se você declará-la como um struct em vez disso.
 
@@ -51,4 +51,4 @@ Este exemplo demonstra um recurso que é exclusivo para struct. Ele cria um obje
 
 - [Guia de Programação em C#](../index.md)
 - [Classes e Structs](index.md)
-- [Structs](structs.md)
+- [Estruturas](structs.md)

@@ -1,5 +1,5 @@
 ---
-title: Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
+title: Visão geral de aplicativos não gerenciados
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: 02f3224a8069fd091833bb09744389592c769818
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 0b4c3e738848be1ead2adeb1945e168c9db60071
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592506"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732529"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Visão geral sobre aplicativos do Windows Forms e aplicativos não gerenciados
 Aplicativos do Windows Forms e controles podem interoperar com aplicativos não gerenciados, com algumas restrições. As seções a seguir descrevem os cenários e as configurações com suporte em controles e aplicativos do Windows Forms e aqueles que não têm suporte.  
@@ -27,7 +27,7 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
   
  A tabela a seguir mostra o suporte para hospedagem do ActiveX para controles do Windows Forms.  
   
-|Versão do Windows Forms|Suporte|  
+|Versão do Windows Forms|Suporte do|  
 |---------------------------|-------------|  
 |.NET Framework versão 1.0|Internet Explorer 5.01 e versões posteriores|  
 |.NET framework versão 1.1 e posterior|Internet Explorer 5.01 e versões posteriores<br /><br /> MFC (Microsoft Foundation Classes) 7.0 e posterior|  
@@ -40,22 +40,22 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
  Para usar controles do Windows Forms em seu aplicativo não gerenciado, hospede o CLR usando as APIs de hospedagem de CLR não gerenciadas ou use os recursos de interoperabilidade C++. A solução recomendada é usar os recursos de interoperabilidade C++.  
   
 ## <a name="windows-forms-in-com-client-applications"></a>Windows Forms em aplicativos cliente COM  
- Quando você abre um Formulário do Windows de um aplicativo cliente COM, como um aplicativo Visual Basic 6.0 ou um aplicativo MFC, o formulário pode se comportar de modo inesperado. Por exemplo, quando você pressiona a tecla TAB, o foco não muda de um controle para outro. Quando você pressiona a tecla ENTER enquanto um botão de comando tem o foco, o botão <xref:System.Windows.Forms.Control.Click> não é gerado. Você também pode enfrentar um comportamento inesperado de pressionamentos de teclas ou atividade do mouse.  
+ Quando você abre um Formulário do Windows de um aplicativo cliente COM, como um aplicativo Visual Basic 6.0 ou um aplicativo MFC, o formulário pode se comportar de modo inesperado. Por exemplo, quando você pressiona a tecla TAB, o foco não muda de um controle para outro. Quando você pressiona a tecla ENTER enquanto um botão de comando tem foco, o evento de <xref:System.Windows.Forms.Control.Click> do botão não é gerado. Você também pode enfrentar um comportamento inesperado de pressionamentos de teclas ou atividade do mouse.  
   
  Esse comportamento ocorre porque o aplicativo não gerenciado não implementa o suporte de loop de mensagem que o Windows Forms requer para funcionar corretamente. O loop de mensagem fornecido pelo aplicativo cliente COM é fundamentalmente diferente do loop de mensagem do Windows Forms.  
   
  Um loop de mensagem do aplicativo é um loop interno do programa que recupera mensagens da fila de mensagens do thread, converte-as e envia-as para o aplicativo para serem processadas. O loop de mensagem para um Windows Form não tem a mesma arquitetura que loops de mensagem que aplicativos anteriores, como aplicativos do Visual Basic 6.0 e do MFC, forneciam. As mensagens de janela que são lançadas para o loop de mensagem podem ser processadas de maneira diferente daquela que o Formulário do Windows espera. Portanto, pode ocorrer um comportamento inesperado. Algumas combinações de teclas e atividades do mouse podem não funcionar ou alguns eventos podem não ser gerados como o esperado.  
   
 ## <a name="resolving-interoperability-issues"></a>Resolvendo problemas de interoperabilidade  
- Você pode resolver esses problemas exibindo o formulário em um loop de mensagem do .NET Framework, que é criado usando o <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> método.  
+ Você pode resolver esses problemas exibindo o formulário em um loop de mensagem .NET Framework, que é criado usando o método <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType>.  
   
  Para fazer um Formulário do Windows funcionar corretamente em um aplicativo cliente COM, execute-o em um loop de mensagem do Windows Forms. Para fazer isso, use uma das abordagens a seguir:  
   
-- Use o <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> método para exibir o formulário do Windows. Para obter mais informações, confira [Como: Dar suporte à interoperabilidade com exibindo um formulário do Windows com o método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
+- Use o método <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> para exibir o formulário do Windows. Para mais informações, consulte [Como dar suporte à interoperabilidade COM exibindo um Formulário do Windows Forms com o método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md).  
   
-- Exiba cada Formulário do Windows em um novo thread. Para obter mais informações, confira [Como: Dar suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
+- Exiba cada Formulário do Windows em um novo thread. Para obter mais informações, consulte [Como dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Windows Forms e Aplicativos Não Gerenciados](windows-forms-and-unmanaged-applications.md)
 - [Interoperabilidade COM](../../../visual-basic/programming-guide/com-interop/index.md)
@@ -65,5 +65,5 @@ Aplicativos do Windows Forms e controles podem interoperar com aplicativos não 
 - [Expondo componentes do .NET Framework ao COM](../../interop/exposing-dotnet-components-to-com.md)
 - [Empacotando um assembly para COM](../../interop/packaging-an-assembly-for-com.md)
 - [Registrando assemblies usando COM](../../interop/registering-assemblies-with-com.md)
-- [Como: Dar suporte à interoperabilidade com exibindo um formulário do Windows com o método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Como: Dar suporte à interoperabilidade com exibindo cada formulário do Windows em seu próprio Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Como dar suporte à interoperabilidade COM exibindo um Windows Form com o método ShowDialog](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Como dar suporte à interoperabilidade COM exibindo cada formulário do Windows Forms em um thread separado](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

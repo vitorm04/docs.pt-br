@@ -1,20 +1,20 @@
 ---
-title: Controle de separador (Windows Forms)
+title: Controle de separador
 ms.date: 03/30/2017
 helpviewer_keywords:
 - multiple views
 - Splitter control [Windows Forms]
 - views [Windows Forms], multiple per frame
 ms.assetid: 6f287407-e895-4b07-a46a-a5bff8388d46
-ms.openlocfilehash: ac4ba64bc4bbec94171cee73625d18330728b66d
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 42c28d8dd53c29be5ac149da44adc0a9482fd60d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69964442"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742887"
 ---
 # <a name="splitter-control-windows-forms"></a>Controle de separador (Windows Forms)
-Windows Forms `Splitter` controles são usados para redimensionar controles encaixados em tempo de execução. O `Splitter` controle é geralmente usado em formulários com controles que têm comprimentos variáveis de dados a serem apresentados, como o Windows Explorer, cujos painéis de dados contêm informações de larguras variadas em momentos diferentes.  
+Windows Forms `Splitter` controles são usados para redimensionar controles encaixados em tempo de execução. O controle de `Splitter` geralmente é usado em formulários com controles que têm tamanhos variáveis de dados a serem apresentados, como o Windows Explorer, cujos painéis de dados contêm informações de larguras variadas em momentos diferentes.  
   
 > [!NOTE]
 > Embora <xref:System.Windows.Forms.SplitContainer> substitua e adicione funcionalidade ao controle `Splitter` de versões anteriores, `Splitter` é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.  
@@ -27,6 +27,6 @@ Windows Forms `Splitter` controles são usados para redimensionar controles enca
  Classe <xref:System.Windows.Forms.Splitter>  
  Descreve essa classe e tem links para todos os seus membros.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)  
  Fornece uma lista completa dos controles dos Windows Forms, com links para informações sobre seu uso.

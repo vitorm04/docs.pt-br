@@ -1,5 +1,5 @@
 ---
-title: 'Como: redimensionar o Windows Forms'
+title: Redimensionar formulário
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: aa7ee2bbbf6983a371ea71edc0dfd0cc12cd0c9d
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211660"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739309"
 ---
-# <a name="how-to-resize-windows-forms"></a>Como: redimensionar o Windows Forms
+# <a name="how-to-resize-windows-forms"></a>Como redimensionar formulários do Windows Forms
 
-Você pode especificar o tamanho do seu Windows Forms de várias maneiras. Você pode alterar a altura e a largura do formulário programaticamente, definindo um novo valor para o <xref:System.Windows.Forms.Form.Size%2A> propriedade, ou ajustar a <xref:System.Windows.Forms.Control.Height%2A> ou <xref:System.Windows.Forms.Control.Width%2A> propriedades individualmente. Se você estiver usando o Visual Studio, você pode alterar o tamanho usando o Designer de formulários do Windows. Consulte também [como: Redimensionar Formulários do Windows usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).
+Você pode especificar o tamanho do seu Windows Forms de várias maneiras. Você pode alterar a altura e a largura do formulário programaticamente definindo um novo valor para a propriedade <xref:System.Windows.Forms.Form.Size%2A> ou ajustar as propriedades <xref:System.Windows.Forms.Control.Height%2A> ou <xref:System.Windows.Forms.Control.Width%2A> individualmente. Se você estiver usando o Visual Studio, poderá alterar o tamanho usando o Designer de Formulários do Windows. Consulte também [Como redimensionar Windows Forms usando o Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100)).
 
 ## <a name="resize-a-form-programmatically"></a>Redimensionar um formulário programaticamente
 
-Definir o tamanho de um formulário em tempo de execução, definindo o <xref:System.Windows.Forms.Form.Size%2A> propriedade do formulário.
+Defina o tamanho de um formulário em tempo de execução definindo a propriedade <xref:System.Windows.Forms.Form.Size%2A> do formulário.
 
 O exemplo de código a seguir mostra o tamanho do formulário definido como 100 x 100 pixels.
 
@@ -38,9 +38,9 @@ Form1.Size = new System.Drawing.Size(100, 100);
 Form1->Size = System::Drawing::Size(100, 100);
 ```
 
-## <a name="change-form-width-and-height-programmatically"></a>Alterar a altura e largura do formulário programaticamente
+## <a name="change-form-width-and-height-programmatically"></a>Alterar a largura e a altura do formulário programaticamente
 
-Após o <xref:System.Windows.Forms.Form.Size%2A> é definido, alterar a altura ou a largura usando o <xref:System.Windows.Forms.Control.Width%2A> ou <xref:System.Windows.Forms.Control.Height%2A> propriedades.
+Depois que o <xref:System.Windows.Forms.Form.Size%2A> for definido, altere a altura ou a largura do formulário usando as propriedades <xref:System.Windows.Forms.Control.Width%2A> ou <xref:System.Windows.Forms.Control.Height%2A>.
 
 O exemplo de código a seguir mostra a largura do formulário definida para 300 pixels da borda esquerda do formulário, enquanto a altura permanece constante.
 
@@ -58,9 +58,9 @@ Form1->Width = 300;
 
 - ou -
 
-Alteração <xref:System.Drawing.Size.Width%2A> ou <xref:System.Drawing.Size.Height%2A> definindo o <xref:System.Windows.Forms.Form.Size%2A> propriedade.
+Altere <xref:System.Drawing.Size.Width%2A> ou <xref:System.Drawing.Size.Height%2A> definindo a propriedade <xref:System.Windows.Forms.Form.Size%2A>.
 
-No entanto, como mostra o exemplo de código a seguir, essa abordagem é mais complicada do que apenas configurando <xref:System.Windows.Forms.Control.Width%2A> ou <xref:System.Windows.Forms.Control.Height%2A> propriedades.
+No entanto, como mostra o exemplo de código a seguir, essa abordagem é mais complicada do que apenas definir <xref:System.Windows.Forms.Control.Width%2A> ou <xref:System.Windows.Forms.Control.Height%2A> Propriedades.
 
 ```vb
 Form1.Size = New Size(300, Form1.Size.Height)
@@ -74,9 +74,9 @@ Form1.Size = new Size(300, Form1.Size.Height);
 Form1->Size = System::Drawing::Size(300, Form1->Size.Height);
 ```
 
-## <a name="change-form-size-by-increments-programmatically"></a>Alterar o tamanho do formulário em incrementos de forma programática
+## <a name="change-form-size-by-increments-programmatically"></a>Alterar o tamanho do formulário por incrementos programaticamente
 
-Para aumentar o tamanho do formulário, defina as <xref:System.Drawing.Size.Width%2A> e <xref:System.Drawing.Size.Height%2A> propriedades.
+Para incrementar o tamanho do formulário, defina as propriedades <xref:System.Drawing.Size.Width%2A> e <xref:System.Drawing.Size.Height%2A>.
 
 O exemplo de código a seguir mostra a largura do formulário definida para 200 pixels mais larga do que a configuração atual.
 
@@ -93,7 +93,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> Sempre use a <xref:System.Drawing.Size.Height%2A> ou <xref:System.Drawing.Size.Width%2A> propriedade para alterar uma dimensão de um formulário, a menos que você está definindo as dimensões de altura e largura ao mesmo tempo, definindo o <xref:System.Windows.Forms.Form.Size%2A> propriedade para um novo <xref:System.Drawing.Size> estrutura. O <xref:System.Windows.Forms.Form.Size%2A> propriedade retorna um <xref:System.Drawing.Size> estrutura, que é um tipo de valor. Não é possível atribuir um novo valor para a propriedade de um tipo de valor. Portanto, o código a seguir não será compilado.
+> Sempre use a propriedade <xref:System.Drawing.Size.Height%2A> ou <xref:System.Drawing.Size.Width%2A> para alterar uma dimensão de um formulário, a menos que você esteja definindo dimensões de altura e largura ao mesmo tempo definindo a propriedade <xref:System.Windows.Forms.Form.Size%2A> como uma nova estrutura de <xref:System.Drawing.Size>. A propriedade <xref:System.Windows.Forms.Form.Size%2A> retorna uma estrutura de <xref:System.Drawing.Size>, que é um tipo de valor. Não é possível atribuir um novo valor para a propriedade de um tipo de valor. Portanto, o código a seguir não será compilado.
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE
@@ -113,7 +113,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Guia de introdução ao Windows Forms](getting-started-with-windows-forms.md)
-- [Aprimorando aplicativos do Windows Forms](./advanced/index.md)
+- [Introdução ao Windows Forms](getting-started-with-windows-forms.md)
+- [Aprimorando Aplicativos dos Windows Forms](./advanced/index.md)

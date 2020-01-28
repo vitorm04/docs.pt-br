@@ -1,5 +1,5 @@
 ---
-title: Visão geral da Segurança do Windows Forms
+title: Visão geral da segurança
 ms.date: 03/30/2017
 helpviewer_keywords:
 - code access security [Windows Forms], Windows Forms
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 08c80eccee395d9141978a7d4594205af1a51ed9
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: 9010b45383f856079661359fdf82180526d96dde
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70972128"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734847"
 ---
 # <a name="security-in-windows-forms-overview"></a>Visão geral da Segurança do Windows Forms
 
@@ -50,7 +50,7 @@ Se seu aplicativo precisa de mais permissões que as concedidas pela confiança 
 
 Ao desenvolver um aplicativo que será executado em confiança parcial, mantenha o controle sobre quais permissões seu aplicativo deve executar e quais permissões seu aplicativo pode usar opcionalmente. Quando todas as permissões forem conhecidas, você deverá fazer uma solicitação declarativa de permissão no nível do aplicativo. A solicitação de permissões informa o .NET Framework tempo de execução sobre quais permissões seu aplicativo precisa e quais permissões ele não deseja especificamente. Para obter mais informações sobre a solicitação de permissões, consulte [Solicitando permissões](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100)).
 
-Ao solicitar permissões opcionais, você deverá tratar as exceções de segurança que serão geradas se o aplicativo realizar uma ação que exija permissões que não foram concedidas a ele. A manipulação apropriada do <xref:System.Security.SecurityException> garantirá que seu aplicativo possa continuar a operar. Seu aplicativo pode usar a exceção para determinar se um recurso deve ser desabilitado para o usuário. Por exemplo, um aplicativo poderá desabilitar a opção de menu **Salvar** se a permissão de arquivo necessária não for concedida.
+Ao solicitar permissões opcionais, você deverá tratar as exceções de segurança que serão geradas se o aplicativo realizar uma ação que exija permissões que não foram concedidas a ele. O tratamento apropriado do <xref:System.Security.SecurityException> garantirá que seu aplicativo possa continuar a operar. Seu aplicativo pode usar a exceção para determinar se um recurso deve ser desabilitado para o usuário. Por exemplo, um aplicativo poderá desabilitar a opção de menu **Salvar** se a permissão de arquivo necessária não for concedida.
 
 Às vezes é difícil saber se você declarou todas as permissões apropriadas. Uma chamada de método que parece inofensiva na superfície, por exemplo, pode acessar o sistema de arquivos em algum ponto durante sua execução. Se você não implantar seu aplicativo com todas as permissões necessárias, poderá ser bem sucedido em teste, quando você depurá-lo na área de trabalho, mas falhar ao ser implantado. O SDK .NET Framework 2,0 e o Visual Studio 2005 contêm ferramentas para calcular as permissões que um aplicativo precisa: a ferramenta de linha de comando MT. exe e o recurso Calculate Permissions do Visual Studio, respectivamente.
 
@@ -77,15 +77,15 @@ A tabela a seguir descreve essas tecnologias.
 
 A tecnologia escolhida dependerá de seu ambiente de implantação. Para obter mais informações, consulte [Escolhendo uma estratégia de implantação do ClickOnce](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy).
 
-Por padrão, os aplicativos ClickOnce implantados usando o Visual Studio ou as ferramentas SDK do .NET Framework (Mage. exe e MageUI. exe) são configurados para serem executados em um computador cliente com confiança total. Se você estiver implantando seu aplicativo usando a confiança parcial ou usando somente algumas permissões adicionais, você terá que alterar esse padrão. Isso pode ser feito com o Visual Studio ou com a ferramenta SDK do .NET Framework MageUI. exe quando você configura a implantação. Para obter mais informações sobre como usar o MageUI. exe, [consulte Passo a passos: Implantando manualmente um aplicativo](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)ClickOnce.  Consulte [também como: Defina permissões personalizadas para um aplicativo](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) ClickOnce ou [como: Defina permissões personalizadas para um aplicativo](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)ClickOnce.
+Por padrão, os aplicativos ClickOnce implantados usando o Visual Studio ou as ferramentas SDK do .NET Framework (Mage. exe e MageUI. exe) são configurados para serem executados em um computador cliente com confiança total. Se você estiver implantando seu aplicativo usando a confiança parcial ou usando somente algumas permissões adicionais, você terá que alterar esse padrão. Isso pode ser feito com o Visual Studio ou com a ferramenta SDK do .NET Framework MageUI. exe quando você configura a implantação. Para obter mais informações sobre como usar o MageUI. exe, consulte [passo a passos: Implantando manualmente um aplicativo ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).  Consulte também [Como definir permissões personalizadas para um aplicativo ClickOnce](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110)) ou [Como definir permissões personalizadas para um aplicativo ClickOnce](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application).
 
 Para obter mais informações sobre os aspectos de segurança do ClickOnce e a elevação de permissões, consulte [Securing ClickOnce Applications](/visualstudio/deployment/securing-clickonce-applications). Para obter mais informações sobre a implantação de aplicativo confiável, consulte [Visão geral da implantação de aplicativos confiáveis](/visualstudio/deployment/trusted-application-deployment-overview).
 
 ### <a name="testing-the-application"></a>Testando o aplicativo
 
-Se você tiver implantado seu aplicativo Windows Forms usando o Visual Studio, poderá habilitar a depuração em confiança parcial ou um conjunto de permissões restritos do ambiente de desenvolvimento.  Consulte [também como: Depurar um aplicativo ClickOnce com permissões restritas](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
+Se você tiver implantado seu aplicativo Windows Forms usando o Visual Studio, poderá habilitar a depuração em confiança parcial ou um conjunto de permissões restritos do ambiente de desenvolvimento.  Consulte também [como: Depurar um aplicativo ClickOnce com permissões restritas](/visualstudio/deployment/how-to-debug-a-clickonce-application-with-restricted-permissions).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Segurança do Windows Forms](windows-forms-security.md)
 - [Noções Básicas da Segurança de Acesso do Código](../misc/code-access-security-basics.md)

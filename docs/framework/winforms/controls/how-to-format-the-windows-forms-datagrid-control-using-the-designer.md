@@ -1,5 +1,5 @@
 ---
-title: Como formatar o controle DataGrid dos Windows Forms usando o designer
+title: Formatar controle DataGrid usando o designer
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: b3a85f5f9e51dae50a40058b8f07f92976da66f2
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: 548acac0fc7724490bfe89927ec0662b3488c230
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "69666170"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736801"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Como formatar o controle DataGrid dos Windows Forms usando o designer
 
@@ -45,7 +45,7 @@ O procedimento a seguir requer um projeto de **aplicativo do Windows** com um fo
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|A propriedade `BackColor` define a cor das linhas de numeração par da grade. Quando você define a propriedade <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> com uma cor diferente, todas as outras linhas são definidas com essa nova cor (linhas 1, 3, 5 e assim por diante).|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|A cor da tela de fundo das linhas de numeração par da grade (linhas 0, 2, 4, 6 e assim por diante).|
-    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Enquanto as propriedades <xref:System.Windows.Forms.DataGrid.BackColor%2A> e <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> determinam a cor das linhas na grade, a propriedade <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> determina a cor da área fora da área de linha, que só fica visível quando a grade é rolada para baixo, ou se apenas algumas linhas estão contidas no grade.|
+    |<xref:System.Windows.Forms.DataGrid.BackgroundColor%2A>|Enquanto as propriedades <xref:System.Windows.Forms.DataGrid.BackColor%2A> e <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> determinam a cor das linhas na grade, a propriedade <xref:System.Windows.Forms.DataGrid.BackgroundColor%2A> determina a cor da área fora da área de linha, que só fica visível quando a grade é rolada para baixo, ou se apenas algumas linhas estão contidas na grade.|
     |<xref:System.Windows.Forms.DataGrid.BorderStyle%2A>|O estilo de borda da grade, um dos valores de enumeração <xref:System.Windows.Forms.BorderStyle>.|
     |<xref:System.Windows.Forms.DataGrid.CaptionBackColor%2A>|A cor da tela de fundo da legenda da janela da grade que aparece logo acima da grade.|
     |<xref:System.Windows.Forms.DataGrid.CaptionFont%2A>|A fonte da legenda na parte superior da grade.|
@@ -76,7 +76,7 @@ O procedimento a seguir requer um projeto de **aplicativo do Windows** com um fo
 
 1. Selecione o controle de <xref:System.Windows.Forms.DataGrid> no formulário.
 
-2. Na janela **Propriedades** , selecione a propriedade <xref:System.Windows.Forms.DataGrid.TableStyles%2A> e clique nas **reticências** (![The botão de reticências (...) no botão janela Propriedades do Visual Studio. ](./media/visual-studio-ellipsis-button.png)).
+2. Na janela **Propriedades** , selecione a propriedade <xref:System.Windows.Forms.DataGrid.TableStyles%2A> e clique nas **reticências** (![botão de reticências (...) no botão janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)).
 
 3. Na caixa de diálogo **Editor de Coleção DataGridTableStyle**, clique em **Adicionar** para adicionar um estilo de tabela à coleção.
 
@@ -95,7 +95,7 @@ O procedimento a seguir requer um projeto de **aplicativo do Windows** com um fo
     > [!NOTE]
     > Para obter mais informações sobre as cadeias de caracteres de formatação, consulte [Tipos de formatação](../../../standard/base-types/formatting-types.md).
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>

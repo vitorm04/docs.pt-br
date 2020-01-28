@@ -2,42 +2,42 @@
 title: Comando dotnet pack
 description: O comando dotnet pack cria pacotes NuGet para seu projeto .NET Core.
 ms.date: 08/08/2019
-ms.openlocfilehash: 99dd8e35601f82adf2a3101121028f191a4c3da4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117651"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734116"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**Este tópico aplica-se a: ✓** SDK do .NET Core 1.x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet pack` – Empacota o código em um pacote NuGet.
 
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive] 
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable] 
+dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--interactive]
+    [--no-build] [--no-dependencies] [--no-restore] [--nologo] [-o|--output] [--runtime] [-s|--serviceable]
     [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
 ## <a name="description"></a>Descrição
 
-O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado desse comando é um pacote NuGet (ou seja, um arquivo *. nupkg* ). 
+O comando `dotnet pack` compila o projeto e cria pacotes NuGet. O resultado desse comando é um pacote NuGet (ou seja, um arquivo *. nupkg* ).
 
 Se você quiser gerar um pacote que contém os símbolos de depuração, terá duas opções disponíveis:
 
-- `--include-symbols`-Ele cria o pacote de símbolos.
-- `--include-source`-Ele cria o pacote de símbolos com `src` uma pasta dentro de contendo os arquivos de origem.
+- `--include-symbols`-ele cria o pacote de símbolos.
+- `--include-source`-ele cria o pacote de símbolos com uma pasta `src` dentro do que contém os arquivos de origem.
 
 As dependências do NuGet do projeto empacotado são adicionadas ao arquivo *.nuspec* para que possam ser resolvidas apropriadamente quando o pacote for instalado. As referências de projeto a projeto não são empacotadas dentro do projeto. No momento, você precisa ter um pacote por projeto se tiver dependências de projeto a projeto.
 
@@ -77,7 +77,7 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 - **`--include-source`**
 
-  Inclui os pacotes de depuração do NuGet, além dos pacotes NuGet regulares no diretório de saída. Os arquivos de origem são incluídos na `src` pasta dentro do pacote de símbolos.
+  Inclui os pacotes de depuração do NuGet, além dos pacotes NuGet regulares no diretório de saída. Os arquivos de origem são incluídos na pasta `src` dentro do pacote de símbolos.
 
 - **`--include-symbols`**
 
@@ -109,7 +109,7 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  Especifica o tempo de execução de destino para o qual restaurar os pacotes. Para obter uma lista de RIDs (Identificadores de Tempo de Execução), veja o [Catálogo de RIDs](../rid-catalog.md). Opção disponível desde o SDK do .NET Core 2.0.
+  Especifica o runtime de destino para o qual restaurar os pacotes. Para obter uma lista de RIDs (Identificadores de Runtime), veja o [Catálogo de RIDs](../rid-catalog.md). Opção disponível desde o SDK do .NET Core 2.0.
 
 - **`-s|--serviceable`**
 
@@ -167,7 +167,7 @@ Projetos da Web não são empacotáveis por padrão. Para substituir o comportam
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- Empacote o projeto e use um tempo de execução específico (Windows 10) para a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):
+- Empacote o projeto e use um runtime específico (Windows 10) para a operação de restauração (SDK do .NET Core 2.0 e versões posteriores):
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

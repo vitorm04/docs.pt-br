@@ -2,12 +2,12 @@
 title: Diretrizes da biblioteca .NET de software livre
 description: Práticas recomendadas para que os desenvolvedores criem bibliotecas .NET de alta qualidade.
 ms.date: 10/17/2018
-ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706446"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731430"
 ---
 # <a name="open-source-library-guidance"></a>Diretrizes da biblioteca de software livre
 
@@ -32,19 +32,19 @@ Cada artigo apresenta quatro tipos de recomendação: **Fazer**, **Considerar**,
 
 Procure quase sempre seguir a recomendação **Fazer**. Por exemplo:
 
-**✔️ FAZER** a distribuição de sua biblioteca usando um pacote NuGet.
+✔️ Distribua sua biblioteca usando um pacote NuGet.
 
 Por outro lado, as recomendações **Considerar** geralmente devem ser seguidas, mas há exceções à regra legítimas e você não precisará se preocupar caso não possa seguir as diretrizes:
 
-**✔️ CONSIDERAR** o uso do [SemVer 2.0.0](https://semver.org/) para criar a versão do seu pacote NuGet.
+✔️ Considere usar [SemVer 2.0.0](https://semver.org/) para versão do seu pacote NuGet.
 
 As recomendações **Evitar** mencionam coisas que em geral não são ideais, mas há casos em que, às vezes, quebrar a regra faz sentido:
 
-**❌ evitar** As referências do pacote NuGet que exigem uma versão exata.
+❌ evitar referências de pacote NuGet que exigem uma versão exata.
 
 Por fim, as recomendações **Não fazer** indicam algo que você quase nunca deve fazer:
 
-**❌ não** publique versões de nome forte e não forte da sua biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
+❌ não publique versões de nome forte e não forte da sua biblioteca. Por exemplo, `Contoso.Api` e `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
 >[Avançar](get-started.md)

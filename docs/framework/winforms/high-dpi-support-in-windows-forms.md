@@ -1,5 +1,5 @@
 ---
-title: Suporte a alto DPI no Windows Forms
+title: Suporte para DPI alto
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c3125475c2de2cf83a3d97e356b26c0acdde99
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139071"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741887"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Suporte a alto DPI no Windows Forms
 
@@ -128,7 +128,7 @@ Você também pode verificar a versão do .NET Framework em que o aplicativo foi
 Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Windows Forms adicionar elemento de configuração](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
 - [Ajustando o tamanho e a escala dos Windows Forms](adjusting-the-size-and-scale-of-windows-forms.md)

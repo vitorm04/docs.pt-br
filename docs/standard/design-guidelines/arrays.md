@@ -7,26 +7,26 @@ helpviewer_keywords:
 - arrays [.NET Framework], usage guidelines
 - empty arrays
 ms.assetid: 66a1b3d8-6f3f-4715-b235-e1ff95e32d8e
-ms.openlocfilehash: ac4b073d2d3291922498a0e56c7e81f7e7868c65
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d4a1f379a88231654c710b1df7b505316377c915
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709563"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741797"
 ---
 # <a name="arrays"></a>Matrizes
-**✓ DO** preferir usar coleções em matrizes em APIs públicas. A seção [coleções](../../../docs/standard/design-guidelines/guidelines-for-collections.md) fornece detalhes sobre como escolher entre coleções e matrizes.  
-  
- **X DO NOT** usar campos de matriz de somente leitura. O próprio campo é somente leitura e não pode ser alterado, mas os elementos na matriz podem ser alterados.  
-  
- **✓ CONSIDER** usando matrizes denteadas em vez de matrizes multidimensionais.  
-  
- Uma matriz denteada é uma matriz com elementos que também são matrizes. As matrizes que compõem os elementos podem ser de tamanhos diferentes, levando a menos espaço desperdiçado para alguns conjuntos de dados (por exemplo, matriz esparsa) em comparação com matrizes multidimensionais. Além disso, o CLR otimiza as operações de índice em matrizes denteadas, para que possam apresentar um melhor desempenho de tempo de execução em alguns cenários.  
-  
- *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
-  
- *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
-  
+✔️ preferir usar coleções em matrizes em APIs públicas. A seção [coleções](../../../docs/standard/design-guidelines/guidelines-for-collections.md) fornece detalhes sobre como escolher entre coleções e matrizes.
+
+ ❌ não use campos de matriz somente leitura. O próprio campo é somente leitura e não pode ser alterado, mas os elementos na matriz podem ser alterados.
+
+ ✔️ Considere o uso de matrizes denteadas em vez de matrizes multidimensionais.
+
+ Uma matriz denteada é uma matriz com elementos que também são matrizes. As matrizes que compõem os elementos podem ser de tamanhos diferentes, levando a menos espaço desperdiçado para alguns conjuntos de dados (por exemplo, matriz esparsa) em comparação com matrizes multidimensionais. Além disso, o CLR otimiza as operações de índice em matrizes denteadas, para que possam apresentar um melhor desempenho de tempo de execução em alguns cenários.
+
+ *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
+
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
+
 ## <a name="see-also"></a>Veja também
 
 - <xref:System.Array>

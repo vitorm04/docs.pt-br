@@ -1,5 +1,5 @@
 ---
-title: 'Como: Responder a cliques no botão do Windows Forms'
+title: responder a cliques em botão
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,23 +15,23 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: ebcde2b5e749c5a3621c623a864578b2a654ce63
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd6cf75a316257c86a23b44a818422336c12aa67
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638379"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735720"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Como: Responder a cliques no botão do Windows Forms
-O uso mais básico de um Windows Forms <xref:System.Windows.Forms.Button> controle é executar algum código quando o botão é clicado.  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>Como responder a cliques no botão dos Windows Forms
+O uso mais básico de um controle de <xref:System.Windows.Forms.Button> de Windows Forms é executar algum código quando o botão é clicado.  
   
- Clicar em um <xref:System.Windows.Forms.Button> controle também gera um número de outros eventos, como o <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, e <xref:System.Windows.Forms.Control.MouseUp> eventos. Se você pretende anexar manipuladores de eventos para esses eventos relacionados, verifique se suas ações não entrem em conflito. Por exemplo, se clicar no botão limpa as informações que o usuário digitou na caixa de texto, pausar o ponteiro do mouse sobre o botão não deverá exibir uma dica de ferramenta com essas informações agora inexistentes.  
+ Clicar em um controle de <xref:System.Windows.Forms.Button> também gera vários outros eventos, como os eventos <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>e <xref:System.Windows.Forms.Control.MouseUp>. Se você pretende anexar manipuladores de eventos para esses eventos relacionados, verifique se suas ações não entrem em conflito. Por exemplo, se clicar no botão limpa as informações que o usuário digitou na caixa de texto, pausar o ponteiro do mouse sobre o botão não deverá exibir uma dica de ferramenta com essas informações agora inexistentes.  
   
- Se o usuário tentar clicar duas vezes o <xref:System.Windows.Forms.Button> controle, cada clique será processado separadamente; ou seja, o controle não dá suporte para o evento de clique duplo.  
+ Se o usuário tentar clicar duas vezes no controle de <xref:System.Windows.Forms.Button>, cada clique será processado separadamente; ou seja, o controle não oferece suporte ao evento de clique duplo.  
   
 ### <a name="to-respond-to-a-button-click"></a>Para responder a um clique de botão  
   
-- O botão `Click` <xref:System.EventHandler> escrever o código seja executado. `Button1_Click` deve ser associado ao controle. Para obter mais informações, confira [Como: Criar manipuladores de eventos em tempo de execução para formulários do Windows](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
+- No `Click` do botão <xref:System.EventHandler> escreva o código a ser executado. `Button1_Click` deve ser associado ao controle. Para saber mais, veja [Como criar manipuladores de eventos em tempo de execução para formulários dos Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -55,7 +55,7 @@ O uso mais básico de um Windows Forms <xref:System.Windows.Forms.Button> contro
        }  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Visão geral do controle de botão](button-control-overview-windows-forms.md)
 - [Formas de selecionar um controle de botão dos Windows Forms](ways-to-select-a-windows-forms-button-control.md)

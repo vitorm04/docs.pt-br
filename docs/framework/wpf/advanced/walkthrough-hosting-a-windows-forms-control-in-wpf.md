@@ -1,5 +1,6 @@
 ---
-title: 'Instruções passo a passo: hospedando um controle dos Windows Forms no WPF'
+title: Hospedar um controle de Windows Forms no WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 ms.assetid: 9cb88415-39b0-4c46-80c4-ff325b674286
-ms.openlocfilehash: e353c35e9989e5887e038371672adbb6c2d3598d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: f7e925529f1bf194664c4f776bcc0322314f8857
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976527"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744906"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-control-in-wpf"></a>Instruções passo a passo: hospedando um controle dos Windows Forms no WPF
 
@@ -22,7 +23,7 @@ Este tutorial mostra como hospedar um [!INCLUDE[TLA#tla_winforms](../../../../in
 
 Para obter uma listagem de código completa das tarefas mostradas neste passo a passos, consulte [hospedando um controle de Windows Forms no exemplo do WPF](https://go.microsoft.com/fwlink/?LinkID=160057).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 É necessário o Visual Studio para concluir este passo a passo.
 
@@ -62,7 +63,7 @@ Para obter uma listagem de código completa das tarefas mostradas neste passo a 
 
 10. Pressione **F5** para compilar e executar o aplicativo.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

@@ -1,5 +1,5 @@
 ---
-title: Coletar tinta em aplicativos do WPF
+title: Coletar tinta digital
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -13,18 +13,18 @@ helpviewer_keywords:
 - properties [WPF], DefaultDrawingAttributes
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
-ms.openlocfilehash: 8109e0d6a746d6ca23c25643c510014c1a1e656c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 813a5313a6fbf83c36cdbed1f64ce69a217ad788
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740880"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747033"
 ---
 # <a name="collect-ink"></a>Coletar tinta
 
 A plataforma [Windows Presentation Foundation](../index.md) coleta tinta digital como uma parte importante da sua funcionalidade. Este tópico discute métodos para a coleta de tinta no Windows Presentation Foundation (WPF).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Para usar os exemplos a seguir, você deve primeiro instalar o Visual Studio e o SDK do Windows. Você também deve entender como escrever aplicativos para o WPF. Para obter mais informações sobre como começar a usar o WPF, consulte [Walkthrough: meu primeiro aplicativo de área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
@@ -88,7 +88,7 @@ Depois de copiar esse código, pressione **F5** no Visual Studio para executar o
 
 Observe como o <xref:System.Windows.Controls.StackPanel> coloca os botões na parte superior do <xref:System.Windows.Controls.InkCanvas>. Se você tentar passar a tinta sobre a parte superior dos botões, a <xref:System.Windows.Controls.InkCanvas> coleta e renderiza a tinta por trás dos botões. Isso ocorre porque os botões são irmãos da <xref:System.Windows.Controls.InkCanvas> em vez de filhos. Além disso, os botões estão mais altos na ordem z, de modo que a tinta é renderizada atrás deles.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

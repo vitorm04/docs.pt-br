@@ -1,5 +1,5 @@
 ---
-title: 'Como: Colocar aspas em uma cadeia de caracteres (Windows Forms)'
+title: Como inserir aspas em uma cadeia de caracteres
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-ms.openlocfilehash: 20828f75eeae9df33fcc22d8558b26a8a1ab2bdc
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: c14747291d6c41144eef97b258f852bbe14ef07d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69910430"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735904"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Como: Colocar aspas em uma cadeia de caracteres (Windows Forms)
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Como inserir aspas em uma cadeia de caracteres (Windows Forms)
 Às vezes, você pode querer colocar aspas (" ") em uma cadeia de caracteres de texto. Por exemplo:  
   
  Ela disse: "Você merece um agrado!"  
   
- Como alternativa, você também pode usar o <xref:Microsoft.VisualBasic.ControlChars.Quote> campo como uma constante.  
+ Como alternativa, você também pode usar o campo <xref:Microsoft.VisualBasic.ControlChars.Quote> como uma constante.  
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Para colocar as aspas em uma cadeia de caracteres no código  
   
-1. Em Visual Basic, insira duas aspas em uma linha como uma aspa incorporada. No Visual C# e Visual C++, insira a sequência \\de escape "como uma aspa incorporada. Por exemplo, para criar a cadeia de caracteres anterior, use o código a seguir.  
+1. Em Visual Basic, insira duas aspas em uma linha como uma aspa incorporada. No Visual C# e Visual C++, insira a sequência de escape \\"como uma aspa incorporada. Por exemplo, para criar a cadeia de caracteres anterior, use o código a seguir.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -88,14 +88,14 @@ ms.locfileid: "69910430"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
 - [Visão geral do controle TextBox](textbox-control-overview-windows-forms.md)
-- [Como: Controlar o ponto de inserção em um controle de caixa de texto Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [Como: Criar uma caixa de texto de senha com o controle caixa de texto Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [Como: Criar uma caixa de texto somente leitura](how-to-create-a-read-only-text-box-windows-forms.md)
-- [Como: Selecionar texto no controle de caixa de texto Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [Como: Exibir várias linhas no controle de caixa de texto Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [Como controlar o ponto de inserção em um controle TextBox dos Windows Forms](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [Como criar uma caixa de texto de senha com o controle TextBox dos Windows Forms](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [Como criar uma caixa de texto somente leitura](how-to-create-a-read-only-text-box-windows-forms.md)
+- [Como selecionar texto no controle TextBox dos Windows Forms](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [Como exibir várias linhas no controle TextBox dos Windows Forms](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [Controle TextBox](textbox-control-windows-forms.md)

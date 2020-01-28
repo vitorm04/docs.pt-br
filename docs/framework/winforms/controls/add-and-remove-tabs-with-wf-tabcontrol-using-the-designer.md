@@ -1,5 +1,5 @@
 ---
-title: 'Como: Adicionar e remover guias com o TabControl do Windows Forms usando o designer'
+title: Adicionar e remover guias com TabControl usando o designer
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tabs [Windows Forms], removing from pages
@@ -8,17 +8,17 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 480633db-413a-45d2-9c8f-0427cc13adbe
-ms.openlocfilehash: da9a9d40529a1902c58f67d6a8696d8906eb34c9
-ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
+ms.openlocfilehash: 445342ffb3b53c880ac38da52076e0c0cb0a9f23
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69040055"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746291"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Como: Adicionar e remover guias com o TabControl do Windows Forms usando o designer
-Quando você coloca um <xref:System.Windows.Forms.TabControl> controle no formulário, ele contém duas guias por padrão. Você pode adicionar ou remover guias usando o designer.
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol-using-the-designer"></a>Como adicionar e remover guias com o TabControl dos Windows Forms usando o designer
+Quando você coloca um controle de <xref:System.Windows.Forms.TabControl> no formulário, ele contém duas guias por padrão. Você pode adicionar ou remover guias usando o designer.
 
- O procedimento a seguir requer um projeto de **aplicativo do Windows** com um <xref:System.Windows.Forms.TabControl> formulário que contém um controle. Para obter informações sobre como configurar esse projeto, consulte [como: Crie um projeto](/visualstudio/ide/step-1-create-a-windows-forms-application-project) de aplicativo Windows Forms [e como: Adicione controles a Windows Forms](how-to-add-controls-to-windows-forms.md).
+ O procedimento a seguir requer um projeto de **aplicativo do Windows** com um formulário que contém um controle <xref:System.Windows.Forms.TabControl>. Para obter informações sobre como configurar esse projeto, consulte [como: criar um projeto de aplicativo Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) e [como adicionar controles ao Windows Forms](how-to-add-controls-to-windows-forms.md).
 
 ## <a name="to-add-or-remove-a-tab-using-the-designer"></a>Para adicionar ou remover uma guia usando o designer
 
@@ -26,12 +26,12 @@ Quando você coloca um <xref:System.Windows.Forms.TabControl> controle no formul
 
      - ou -
 
-     Na janela **Propriedades** , clique no botão de reticências![(o botão de reticências (...) na janela Propriedades do Visual](./media/visual-studio-ellipsis-button.png)Studio.) ao <xref:System.Windows.Forms.TabControl.TabPages%2A> lado da propriedade para abrir o **Editor de coleção TabPage**. Clique no botão **Adicionar** ou **remover** .
+     Na janela **Propriedades** , clique no botão de **reticências** (![botão de reticências (...) na janela Propriedades do Visual Studio.](./media/visual-studio-ellipsis-button.png)) ao lado da propriedade <xref:System.Windows.Forms.TabControl.TabPages%2A> para abrir o **Editor de coleção TabPage**. Clique no botão **Adicionar** ou **remover** .
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Controle TabControl](tabcontrol-control-windows-forms.md)
 - [Visão geral do controle TabControl](tabcontrol-control-overview-windows-forms.md)
-- [Como: Adicionar um controle a uma página de guia](how-to-add-a-control-to-a-tab-page.md)
-- [Como: Desabilitar páginas de guias](how-to-disable-tab-pages.md)
-- [Como: Alterar a aparência do TabControl Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [Como adicionar um controle a uma página da guia](how-to-add-a-control-to-a-tab-page.md)
+- [Como desabilitar páginas de guia](how-to-disable-tab-pages.md)
+- [Como alterar a aparência do TabControl dos Windows Forms](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

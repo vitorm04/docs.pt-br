@@ -1,5 +1,5 @@
 ---
-title: 'Como: Acrescentar um MenuStrip a uma janela pai do MDI (Windows Forms)'
+title: Como acrescentar um MenuStrip a uma janela pai MDI
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,41 +9,41 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: fdd5a24d444e494caedeed56402658399e97b90a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 06e5c9daab8b7eb72024fff27d661c0eb3bf84c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457498"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747163"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Como: Acrescentar um MenuStrip a uma janela pai do MDI (Windows Forms)
-Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos) filho pode ser diferente da janela MDI pai. Por exemplo, a MDI pai pode ser uma planilha e a MDI filho pode ser um gráfico. Nesse caso, é recomendável atualizar o conteúdo do menu da MDI pai com o conteúdo do menu da MDI filho, visto que janelas MDI filho de tipos diferentes são ativadas.  
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Como acrescentar um MenuStrip a uma janela pai MDI (Windows Forms)
+Em alguns aplicativos, o tipo de uma janela filho MDI (interface de vários documentos) pode ser diferente da janela MDI pai. Por exemplo, a MDI pai pode ser uma planilha e a MDI filho pode ser um gráfico. Nesse caso, é recomendável atualizar o conteúdo do menu do MDI pai com o conteúdo do menu do MDI filho, visto que janelas MDI filho de tipos diferentes são ativadas.  
   
- O procedimento a seguir usa o <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>, e <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> propriedades para acrescentar o menu filho MDI ao menu MDI pai. Fechar a janela filho MDI remove o menu acrescentado do MDI pai.  
+ O procedimento a seguir usa as propriedades <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction>e <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> para acrescentar o menu filho MDI ao menu pai MDI. Fechar a janela filho MDI remove o menu acrescentado do MDI pai.  
   
  Consulte também [Aplicativos MDI (Interface de Vários Documentos)](../advanced/multiple-document-interface-mdi-applications.md).  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>Acrescentar um item de menu a um pai MDI  
   
-1. Criar um formulário e defina suas <xref:System.Windows.Forms.Form.IsMdiContainer%2A> propriedade para `true`.  
+1. Crie um formulário e defina sua propriedade <xref:System.Windows.Forms.Form.IsMdiContainer%2A> como `true`.  
   
-2. Adicionar um <xref:System.Windows.Forms.MenuStrip> para `Form1` e defina o <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriedade o <xref:System.Windows.Forms.MenuStrip> para `true`.  
+2. Adicione um <xref:System.Windows.Forms.MenuStrip> a `Form1` e defina a propriedade <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> do <xref:System.Windows.Forms.MenuStrip> como `true`.  
   
-3. Defina as <xref:System.Windows.Forms.ToolStripItem.Visible%2A> propriedade do `Form1` <xref:System.Windows.Forms.MenuStrip> para `false`.  
+3. Defina a propriedade <xref:System.Windows.Forms.ToolStripItem.Visible%2A> do <xref:System.Windows.Forms.MenuStrip> de `Form1`como `false`.  
   
-4. Adicionar um item de menu de nível superior para o `Form1` <xref:System.Windows.Forms.MenuStrip> e defina seu <xref:System.Windows.Forms.Control.Text%2A> propriedade `&File`.  
+4. Adicione um item de menu de nível superior ao `Form1`<xref:System.Windows.Forms.MenuStrip> e defina sua propriedade <xref:System.Windows.Forms.Control.Text%2A> como `&File`.  
   
-5. Adicionar um item de submenu para o `&File` item de menu e defina seu <xref:System.Windows.Forms.Form.Text%2A> propriedade para `&Open`.  
+5. Adicione um item de submenu ao item de menu `&File` e defina sua propriedade <xref:System.Windows.Forms.Form.Text%2A> como `&Open`.  
   
-6. Adicionar um formulário ao projeto, adicione uma <xref:System.Windows.Forms.MenuStrip> para o formulário e defina o <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> propriedade da `Form2` <xref:System.Windows.Forms.MenuStrip> para `true`.  
+6. Adicione um formulário ao projeto, adicione um <xref:System.Windows.Forms.MenuStrip> ao formulário e defina a propriedade <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> do `Form2`<xref:System.Windows.Forms.MenuStrip> como `true`.  
   
-7. Adicionar um item de menu de nível superior para o `Form2` <xref:System.Windows.Forms.MenuStrip> e defina seu <xref:System.Windows.Forms.Form.Text%2A> propriedade `&Special`.  
+7. Adicione um item de menu de nível superior ao `Form2`<xref:System.Windows.Forms.MenuStrip> e defina sua propriedade <xref:System.Windows.Forms.Form.Text%2A> como `&Special`.  
   
-8. Adicionar dois itens de submenu para o `&Special` item de menu e defina seus <xref:System.Windows.Forms.Form.Text%2A> propriedades a serem `Command&1` e `Command&2`, respectivamente.  
+8. Adicione dois itens de submenu ao item de menu `&Special` e defina suas propriedades <xref:System.Windows.Forms.Form.Text%2A> como `Command&1` e `Command&2`, respectivamente.  
   
-9. Defina a <xref:System.Windows.Forms.MergeAction> propriedade do `&Special`, `Command&1`, e `Command&2` itens de menu <xref:System.Windows.Forms.MergeAction.Append>.  
+9. Defina a propriedade <xref:System.Windows.Forms.MergeAction> dos itens de menu `&Special`, `Command&1`e `Command&2` como <xref:System.Windows.Forms.MergeAction.Append>.  
   
-10. Crie um manipulador de eventos para o <xref:System.Windows.Forms.Control.Click> eventos do `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>.  
+10. Crie um manipulador de eventos para o evento <xref:System.Windows.Forms.Control.Click> do <xref:System.Windows.Forms.ToolStripMenuItem>de `&Open`.  
   
 11. No manipulador de eventos, insira um código semelhante ao exemplo de código a seguir para criar e exibir novas instâncias de `Form2` como filhos MDI de `Form1`.  
   
@@ -68,7 +68,7 @@ Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos
     }  
     ```  
   
-12. Coloque um código semelhante ao seguinte exemplo de código na `&Open` <xref:System.Windows.Forms.ToolStripMenuItem> para registrar o manipulador de eventos.  
+12. Coloque um código semelhante ao exemplo de código a seguir no `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> para registrar o manipulador de eventos.  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  
@@ -79,11 +79,11 @@ Em alguns aplicativos, o tipo de uma janela MDI (interface de vários documentos
     this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
-- Duas <xref:System.Windows.Forms.Form> controles denominados `Form1` e `Form2`.  
+- Dois controles de <xref:System.Windows.Forms.Form> chamados `Form1` e `Form2`.  
   
-- Um <xref:System.Windows.Forms.MenuStrip> control em `Form1` denominado `menuStrip1`e uma <xref:System.Windows.Forms.MenuStrip> control em `Form2` chamado `menuStrip2`.  
+- Um controle <xref:System.Windows.Forms.MenuStrip> em `Form1` chamado `menuStrip1`e um controle <xref:System.Windows.Forms.MenuStrip> em `Form2` chamado `menuStrip2`.  
   
 - Referências aos assemblies <xref:System?displayProperty=nameWithType> e <xref:System.Windows.Forms?displayProperty=nameWithType>.

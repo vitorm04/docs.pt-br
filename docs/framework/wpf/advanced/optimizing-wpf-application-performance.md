@@ -1,5 +1,5 @@
 ---
-title: Otimizando o desempenho do aplicativo WPF
+title: Otimizar o desempenho do aplicativo
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-ms.openlocfilehash: 98c7022eab9153808d47d7da69c23349032165c3
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: cc6ea051401199a87965565c920068fd55cb05d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460855"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743952"
 ---
 # <a name="optimizing-wpf-application-performance"></a>Otimizando o desempenho do aplicativo WPF
 Esta seção destina-se a ser uma referência para os desenvolvedores de aplicativos [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] que estão procurando maneiras de melhorar o desempenho de seus aplicativos. Se você for um desenvolvedor que é novo no Microsoft .NET Framework e [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], primeiro você deve se familiarizar com ambas as plataformas. Esta seção pressupõe o conhecimento prático de ambos, e é escrito para programadores que já conhecem o suficiente para colocar seus aplicativos em funcionamento.  
@@ -43,7 +43,7 @@ Esta seção destina-se a ser uma referência para os desenvolvedores de aplicat
   
  [Tempo de inicialização do aplicativo](application-startup-time.md)  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>

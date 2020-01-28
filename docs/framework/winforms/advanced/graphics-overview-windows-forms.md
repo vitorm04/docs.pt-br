@@ -1,5 +1,5 @@
 ---
-title: Visão geral de elementos gráficos (Windows Forms)
+title: Visão geral de elementos gráficos
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, graphics
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: e14d60e5b77fab8490c373ad76ee2d829aad7c74
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: cc99f0fda4625b278b2bea56e7d8642edb0a63d9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67505384"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742272"
 ---
 # <a name="graphics-overview-windows-forms"></a>Visão geral de elementos gráficos (Windows Forms)
-GDI+ é uma Interface gráfica de dispositivo que permite que os desenvolvedores escrevam aplicativos independentes de dispositivo. Os serviços de GDI+ são expostos por meio de um conjunto de classes gerenciadas.  
+GDI+ é uma Graphics Device Interface que permite aos programadores gravar aplicativos independentes de dispositivo. Os serviços do GDI+ são expostos por meio de um conjunto de classes gerenciadas.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão Geral de Elementos Gráficos](overview-of-graphics.md)  
@@ -26,23 +26,23 @@ GDI+ é uma Interface gráfica de dispositivo que permite que os desenvolvedores
  Descreve as três categorias que compõem a programação com o GDI+.  
   
  [Estrutura da Interface Gráfica](structure-of-the-graphics-interface.md)  
- Descreve a interface de classe gerenciada de GDI+.  
+ Descreve a interface de classe gerenciada do GDI+.  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Drawing>  
- Fornece acesso à funcionalidade gráficas básicas GDI+.  
+ Fornece acesso à funcionalidade gráfica básica do GDI+.  
   
  <xref:System.Drawing.Drawing2D>  
  Fornece funcionalidade avançada bidimensional e de gráfico vetorial.  
   
  <xref:System.Drawing.Imaging>  
- Fornece a funcionalidade de imagem GDI+ avançada.  
+ Fornece a funcionalidade avançada de geração de imagens do GDI+.  
   
  <xref:System.Drawing.Text>  
- Fornece funcionalidade GDI+ tipografia avançada.  
+ Fornece a funcionalidade de tipografia de GDI+ avançada.  
   
  <xref:System.Drawing.Printing>  
- Fornece serviços de impressão.  
+ Fornece serviços relacionados à impressão.  
   
  <xref:System.Windows.Forms.TextRenderer>  
- Fornece o desenho de texto GDI e medindo a funcionalidade.
+ Fornece a funcionalidade de medição e desenho de texto GDI.

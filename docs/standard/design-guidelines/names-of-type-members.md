@@ -12,94 +12,93 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-ms.openlocfilehash: a9cd531100057fbad4884a20e6e7db6ef94e7956
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 81c837bd045992043208a59f6ee16803c1d6eb3c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709212"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744181"
 ---
 # <a name="names-of-type-members"></a>Nomes de membros de tipo
-Tipos são compostos de membros: métodos, propriedades, eventos, construtores e campos. As seções a seguir descrevem as diretrizes de nomenclatura de membros de tipo.  
-  
-## <a name="names-of-methods"></a>Nomes de métodos  
- Como os métodos são os meios para executar uma ação, as diretrizes de design exigem que os nomes de métodos sejam verbos ou frases verbais. Seguir essa diretriz também serve para distinguir os nomes de métodos de nomes de propriedades e tipos, que são substantivos ou frases adjetivas.  
-  
- **✓ DO** nomeie os métodos que são verbos ou frases verbais.  
-  
-```csharp  
-public class String {  
-    public int CompareTo(...);  
-    public string[] Split(...);  
-    public string Trim();  
-}  
-```  
-  
-## <a name="names-of-properties"></a>Nomes de propriedades  
- Diferentemente de outros membros, as propriedades devem ser nomeadas com uma frase substantivada ou um adjetivo. Isso porque uma propriedade se refere a dados, e o nome da propriedade reflete isso. PascalCasing sempre é usado para nomes de propriedade.  
-  
- **✓ DO** nomeie as propriedades usando um substantivo, uma frase substantivada ou um adjetivo.  
-  
- **X DO NOT** não tenha propriedades que correspondam ao nome dos métodos "Get", como no exemplo a seguir:  
-  
- `public string TextWriter { get {...} set {...} }`  
- `public string GetTextWriter(int value) { ... }`  
-  
- Esse padrão geralmente indica que a propriedade deveria realmente ser um método.  
-  
- **✓** As propriedades da coleção de nomes com uma frase plural que descreve os itens na coleção em vez de usar uma frase singular seguida de "List" ou "Collection".  
-  
- **✓ DO** nomeie as propriedades boolianas com uma frase afirmativa (`CanSeek` em vez de `CantSeek`). Opcionalmente, você também pode prefixar propriedades booleanas com "is", "Can" ou "tem", mas apenas onde ele agrega valor.  
-  
- **✓ CONSIDER** nomeie uma propriedade com o mesmo nome de seu tipo.  
-  
- Por exemplo, a seguinte propriedade obtém e define corretamente um valor de enumeração denominado `Color`, portanto, a propriedade é chamada `Color`:  
-  
-```csharp  
-public enum Color {...}  
-public class Control {  
-    public Color Color { get {...} set {...} }  
-}  
-```  
-  
-## <a name="names-of-events"></a>Nomes de eventos  
- Eventos sempre fazem referência a uma ação, seja uma ação que está acontecendo ou que já ocorreu. Portanto, assim como acontece com os métodos, os eventos são nomeados com verbos e o tempo verbal é usado para indicar o horário em que o evento é acionado.  
-  
- **✓ DO** nomeie os eventos com um verbo ou uma frase verbal.  
-  
- Os exemplos incluem `Clicked`, `Painting`, `DroppedDown`, etc.  
-  
- **✓ DO** nomeie os eventos com um conceito de antes e depois, usando os tempos verbais Pretérito e Presente.  
-  
- Por exemplo, um evento de fechamento gerado antes de uma janela ser fechada seria chamado de `Closing`, e um gerado após a janela ser fechada seria chamado de `Closed`.  
-  
- **X DO NOT** não use os sufixos ou prefixos "Before" ou "After" para indicar eventos anteriores e posteriores. Use os tempos verbais Pretérito e Presente conforme descrito.  
-  
- **✓ DO** nomeie manipuladores de eventos (delegados usados como tipos de eventos) com o sufixo "EventHandler", conforme mostrado no exemplo a seguir:  
-  
- `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`  
-  
- **✓ DO** use dois parâmetros nomeados `sender` e `e` nos manipuladores de eventos.  
-  
- O parâmetro do remetente representa o objeto que acionou o evento. O parâmetro do remetente normalmente é do tipo `object`, mesmo se for possível empregar um tipo mais específico.  
-  
- **✓ DO** nomeie classes de argumento de evento com o sufixo "EventArgs".  
-  
-## <a name="names-of-fields"></a>Nomes de campos  
- As diretrizes de nomenclatura de campo se aplicam a campos públicos e protegidos estáticos. Campos particulares e internos não são cobertos pelas diretrizes, e campos de instância pública ou protegida não são permitidos pelas [diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md).  
-  
- **✓ DO** use PascalCasing nos nomes de campos.  
-  
- **✓ DO** nomeie os campos usando um substantivo, uma frase substantivada ou um adjetivo.  
-  
- **X DO NOT** não use um prefixo para nomes de campos.  
-  
- Por exemplo, não use "g_" ou "s_" para indicar campos estáticos.  
-  
- *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*  
-  
- *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*  
-  
+Tipos são compostos de membros: métodos, propriedades, eventos, construtores e campos. As seções a seguir descrevem as diretrizes de nomenclatura de membros de tipo.
+
+## <a name="names-of-methods"></a>Nomes de métodos
+ Como os métodos são os meios para executar uma ação, as diretrizes de design exigem que os nomes de métodos sejam verbos ou frases verbais. Seguir essa diretriz também serve para distinguir os nomes de métodos de nomes de propriedades e tipos, que são substantivos ou frases adjetivas.
+
+ ✔️ fornecem nomes de métodos que são verbos ou frases de verbo.
+
+```csharp
+public class String {
+    public int CompareTo(...);
+    public string[] Split(...);
+    public string Trim();
+}
+```
+
+## <a name="names-of-properties"></a>Nomes de propriedades
+ Diferentemente de outros membros, as propriedades devem ser nomeadas com uma frase substantivada ou um adjetivo. Isso porque uma propriedade se refere a dados, e o nome da propriedade reflete isso. PascalCasing sempre é usado para nomes de propriedade.
+
+ ✔️ as propriedades de nome usando um substantivo, uma frase de substantivo ou um adjetivo.
+
+ ❌ não tem propriedades que correspondam ao nome dos métodos "Get", como no exemplo a seguir:
+
+ `public string TextWriter { get {...} set {...} }` `public string GetTextWriter(int value) { ... }`
+
+ Esse padrão geralmente indica que a propriedade deveria realmente ser um método.
+
+ ✔️ as propriedades da coleção de nomes com uma frase plural que descreve os itens na coleção em vez de usar uma frase singular seguida de "List" ou "Collection".
+
+ ✔️ as propriedades booleanas de nome com uma frase afirmativo (`CanSeek` em vez de `CantSeek`). Opcionalmente, você também pode prefixar propriedades booleanas com "is", "Can" ou "tem", mas apenas onde ele agrega valor.
+
+ ✔️ Considere atribuir uma propriedade com o mesmo nome que o seu tipo.
+
+ Por exemplo, a seguinte propriedade obtém e define corretamente um valor de enumeração denominado `Color`, portanto, a propriedade é chamada `Color`:
+
+```csharp
+public enum Color {...}
+public class Control {
+    public Color Color { get {...} set {...} }
+}
+```
+
+## <a name="names-of-events"></a>Nomes de eventos
+ Eventos sempre fazem referência a uma ação, seja uma ação que está acontecendo ou que já ocorreu. Portanto, assim como acontece com os métodos, os eventos são nomeados com verbos e o tempo verbal é usado para indicar o horário em que o evento é acionado.
+
+ ✔️ eventos de nome com um verbo ou uma frase verbal.
+
+ Os exemplos incluem `Clicked`, `Painting`, `DroppedDown`, etc.
+
+ ✔️ fornecer nomes de eventos com um conceito de antes e depois, usando as dezenas e as últimas.
+
+ Por exemplo, um evento de fechamento gerado antes de uma janela ser fechada seria chamado de `Closing`, e um gerado após a janela ser fechada seria chamado de `Closed`.
+
+ ❌ não use prefixos ou "Before" ou "After" para indicar pré e pós-eventos. Use os tempos verbais Pretérito e Presente conforme descrito.
+
+ ✔️ manipuladores de eventos de nome (delegados usados como tipos de eventos) com o sufixo "EventHandler", conforme mostrado no exemplo a seguir:
+
+ `public delegate void ClickedEventHandler(object sender, ClickedEventArgs e);`
+
+ ✔️ Use dois parâmetros chamados `sender` e `e` em manipuladores de eventos.
+
+ O parâmetro do remetente representa o objeto que acionou o evento. O parâmetro do remetente normalmente é do tipo `object`, mesmo se for possível empregar um tipo mais específico.
+
+ ✔️ classes de argumento de evento de nome com o sufixo "EventArgs".
+
+## <a name="names-of-fields"></a>Nomes de campos
+ As diretrizes de nomenclatura de campo se aplicam a campos públicos e protegidos estáticos. Campos particulares e internos não são cobertos pelas diretrizes, e campos de instância pública ou protegida não são permitidos pelas [diretrizes de design de membro](../../../docs/standard/design-guidelines/member.md).
+
+ ✔️ Use PascalCasing em nomes de campo.
+
+ ✔️ os campos de nome usando um substantivo, uma frase de substantivo ou um adjetivo.
+
+ ❌ não use um prefixo para nomes de campo.
+
+ Por exemplo, não use "g_" ou "s_" para indicar campos estáticos.
+
+ *Partes © 2005, 2009 Microsoft Corporation. Todos os direitos reservados.*
+
+ *Reimpresso com permissão da Pearson Education, Inc. das [Diretrizes de Design do Framework: convenções, linguagens e padrões para bibliotecas do .NET reutilizável, 2ª edição](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) por Krzysztof Cwalina e Brad Abrams, publicado em 22 de outubro de 2008 por Addison-Wesley Professional como parte da série de desenvolvimento do Microsoft Windows.*
+
 ## <a name="see-also"></a>Veja também
 
 - [Diretrizes de design do Framework](../../../docs/standard/design-guidelines/index.md)

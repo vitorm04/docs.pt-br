@@ -1,5 +1,5 @@
 ---
-title: Suporte bidirecional para aplicativos do Windows Forms
+title: Suporte bidirecional
 ms.date: 09/30/2017
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - localization [Windows Forms], bi-directional support in Windows
 - bi-directional language support [Windows Forms], Windows applications
 - Windows Forms, bi-directional support
-ms.openlocfilehash: 0b99dcdb9549a2319efe8a78eb4bca33f40f2cb0
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 8b2e842fc08be78b74cede85927352fafca7bc8f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197498"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742069"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Suporte bidirecional para aplicativos do Windows Forms
 Você pode usar o Visual Studio para criar aplicativos baseados no Windows que dão suporte a idiomas bidirecionais (da direita para a esquerda), como árabe e Hebraico. Isso inclui formulários padrão, caixas de diálogo, formulários MDI e todos os controles com os quais você pode trabalhar nesses formulários — ou seja, todos os objetos no namespace <xref:System.Windows.Forms.Control>.
@@ -76,7 +76,7 @@ Você pode usar o Visual Studio para criar aplicativos baseados no Windows que d
 |<xref:System.Windows.Forms.UserControl>|Barra de rolagem vertical aparece à esquerda; barra de rolagem horizontal tem o ícone à direita|Não há suporte direto; usar um <xref:System.Windows.Forms.TableLayoutPanel>|Não|
 |<xref:System.Windows.Forms.VScrollBar>|Exibido no lado esquerdo em vez do lado direito de controles roláveis|Sem efeito|Não|
 
-## <a name="encoding"></a>Codificando
+## <a name="encoding"></a>Encoding
  Windows Forms oferece suporte a Unicode, para que você possa incluir qualquer caractere definido quando você cria seus aplicativos bi-direcionais. No entanto, nem todos os controles dos Windows Forms oferecem suporte a Unicode em todas as plataformas.
 
 ## <a name="gdi"></a>GDI+
@@ -115,6 +115,6 @@ Você pode usar o Visual Studio para criar aplicativos baseados no Windows que d
 
  Alguns controles são lacrados. Portanto, você não pode derivar um novo controle deles. Isso inclui os controles <xref:System.Windows.Forms.ImageList> e <xref:System.Windows.Forms.ProgressBar>.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Suporte bidirecional para aplicativos Web ASP.NET](https://docs.microsoft.com/previous-versions/aspnet/6eedwbtt(v=vs.100))

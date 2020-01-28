@@ -8,15 +8,15 @@ helpviewer_keywords:
 - <cryptoClasses> element
 - cryptoClasses element
 ms.assetid: 290d5f96-946d-4f02-babb-1d31ec0b8295
-ms.openlocfilehash: 89f1d89ea397794e366b53205ac23b94d7892869
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 6601417f0b80f623b7698c4b072c35eca44343b7
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699751"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732883"
 ---
 # <a name="cryptoclasses-element"></a>\<elemento de > cryptoClasses
-Contém uma lista de classes de criptografia que têm um mapeamento para um nome amigável no elemento [ \<nameEntry>](nameentry-element.md).  
+Contém uma lista de classes de criptografia que têm um mapeamento para um nome amigável no elemento [\<nameEntry>](nameentry-element.md).  
   
 [ **\<configuration>** ](../configuration-element.md)  
 &nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
@@ -34,8 +34,8 @@ Contém uma lista de classes de criptografia que têm um mapeamento para um nome
 ## <a name="attributes-and-elements"></a>Atributos e elementos  
  As seções a seguir descrevem os atributos, bem como os elementos filhos e pais.  
   
-### <a name="attributes"></a>Atributos  
- None.  
+### <a name="attributes"></a>{1&gt;{2&gt;Atributos&lt;2}&lt;1}  
+ Nenhuma.  
   
 ### <a name="child-elements"></a>Elementos filho  
   
@@ -52,7 +52,7 @@ Contém uma lista de classes de criptografia que têm um mapeamento para um nome
 |`cryptoNameMapping`|Contém mapeamentos de classes para nomes amigáveis.|  
 |`mscorlib`|Contém o elemento `cryptographySettings`.|  
   
-## <a name="example"></a>{1&gt;Exemplo&lt;1}  
+## <a name="example"></a>Exemplo  
  O exemplo a seguir mostra como usar o elemento **\<cryptoClass >** para fazer referência a uma classe de criptografia e configurar o tempo de execução. Em seguida, você pode passar a cadeia de caracteres "RSA" para o método <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> e usar o método <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> para retornar um objeto `MyCryptoRSAClass`.  
   
 ```xml  
@@ -76,11 +76,11 @@ Contém uma lista de classes de criptografia que têm um mapeamento para um nome
 </configuration>  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Security.Cryptography>
 - [Esquema de arquivos de configuração](../index.md)
 - [Esquema de configurações de criptografia](index.md)
 - [Serviços criptográficos](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](Overload:System.Security.Cryptography.CryptoConfig.CreateFromName)
+- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [Configurando classes de criptografia](../../configure-cryptography-classes.md)

@@ -1,17 +1,17 @@
 ---
-title: 'Explicação passo a passo: organizando controles no Windows Forms utilizando um TableLayoutPanel'
+title: Organizando controles usando um TableLayoutPanel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with TableLayoutPanel
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 7b7380690d8668f46b98272e1d42640f23679b19
-ms.sourcegitcommit: 9bd1c09128e012b6e34bdcbdf3576379f58f3137
+ms.openlocfilehash: 803a56f6416cf3b718890e96cf9f36ae6c4ee471
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72799118"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740323"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>Explicação passo a passo: organizando controles no Windows Forms utilizando um TableLayoutPanel
 
@@ -55,7 +55,7 @@ A primeira etapa é criar o projeto e configurar o formulário.
 
 1. Crie um projeto de aplicativo do Windows chamado "TableLayoutPanelExample". Para obter mais informações, consulte [como: criar um projeto de aplicativo Windows Forms](/visualstudio/ide/step-1-create-a-windows-forms-application-project) .
 
-2. Selecione o formulário no **Designer de Formulários** **do Windows**.
+2. Selecione o formulário no **Windows** **Forms Designer**.
 
 ## <a name="arranging-controls-in-rows-and-columns"></a>Organização de controles em linhas e colunas
 
@@ -187,7 +187,7 @@ Você pode obter um layout complexo usando uma combinação de controles e pain�
 
 - Encaixe o controle de <xref:System.Windows.Forms.TableLayoutPanel> no formulário pai. Redimensione o formulário e observe o efeito no layout.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
@@ -197,6 +197,6 @@ Você pode obter um layout complexo usando uma combinação de controles e pain�
 - [Walkthrough: Criando um formulário do Windows localizável](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [Práticas recomendadas para o controle TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)
 - [Visão geral da propriedade AutoSize](autosize-property-overview.md)
-- [Como encaixar controles nos Windows Forms](how-to-dock-controls-on-windows-forms.md)
+- [Como encaixar controles no Windows Forms](how-to-dock-controls-on-windows-forms.md)
 - [Como ancorar controles no Windows Forms](how-to-anchor-controls-on-windows-forms.md)
 - [Passo a passo: definindo o layout de controles dos Windows Forms com preenchimento, margens e a propriedade AutoSize](windows-forms-controls-padding-autosize.md)

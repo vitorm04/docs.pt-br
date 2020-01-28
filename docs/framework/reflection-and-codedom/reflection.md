@@ -21,16 +21,16 @@ helpviewer_keywords:
 - discovering type information at run time
 - type system, reflection
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
-ms.openlocfilehash: 1768acd65b738af068cf98a8b8340c3179e9b885
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 42944d8267d2e99fd9eb1a2cb28c0c81d3e9af75
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130058"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744573"
 ---
 # <a name="reflection-in-net"></a>Reflexão no .NET
 
-As classes no namespace <xref:System.Reflection>, juntamente com <xref:System.Type?displayProperty=nameWithType> permitem que você obtenha informações sobre os [assemblies](../../standard/assembly/index.md) carregados e os tipos definidos neles, como [classes](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces) e [tipos de valor](../../csharp/language-reference/keywords/value-types.md). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.
+As classes no namespace <xref:System.Reflection>, junto com <xref:System.Type?displayProperty=nameWithType>, permitem que você obtenha informações sobre [assemblies](../../standard/assembly/index.md) carregados e os tipos definidos dentro deles, como [classes](../../standard/base-types/common-type-system.md#classes), [interfaces](../../standard/base-types/common-type-system.md#interfaces)e tipos de valor (ou seja, [estruturas](../../standard/base-types/common-type-system.md#structures) e [enumerações](../../standard/base-types/common-type-system.md#enumerations)). Você também pode usar a reflexão para criar instâncias de tipo em tempo de execução e para invocá-los e acessá-los. Para tópicos sobre aspectos específicos da reflexão, consulte [Tópicos relacionados](#related_topics) no final dessa visão geral.
   
 O carregador [Common Language Runtime](../../standard/clr.md) gerencia os [domínios do aplicativo](../app-domains/application-domains.md), que constituem limites definidos em torno de objetos que têm o mesmo escopo de aplicativo. Esse gerenciamento inclui carregar cada assembly no domínio do aplicativo apropriado e controlar o layout da memória da hierarquia de tipo em cada assembly.  
   
@@ -65,13 +65,13 @@ A reflexão fornece classes, como <xref:System.Type> e <xref:System.Reflection.M
   
 Por exemplo, quando você usa o operador `typeof` C# (`GetType` no Visual Basic) para obter um objeto <xref:System.Type>, o objeto é na verdade um `RuntimeType`. `RuntimeType` deriva de <xref:System.Type> e fornece implementações de todos os métodos abstratos.  
   
-Essas classes de tempo de execução são `internal` (`Friend` no Visual Basic). Elas não são documentadas separadamente de suas classes base porque seu comportamento é descrito na documentação da classe base.  
+Essas classes de runtime são `internal` (`Friend` no Visual Basic). Elas não são documentadas separadamente de suas classes base porque seu comportamento é descrito na documentação da classe base.  
   
 <a name="related_topics"></a>   
 
 ## <a name="related-topics"></a>Tópicos relacionados  
   
-|Título|Descrição|  
+|Cargo|Descrição|  
 |-----------|-----------------|  
 |[Exibindo informações de tipo](viewing-type-information.md)|Descreve a classe <xref:System.Type> e fornece exemplos de código que ilustram como usar <xref:System.Type> com várias classes de reflexão para obter informações sobre construtores, métodos, campos, propriedades e eventos.|  
 |[Reflexão e tipos genéricos](reflection-and-generic-types.md)|Explica como a reflexão trata os parâmetros de tipo e argumentos de tipo de tipos genéricos e métodos genéricos.|  

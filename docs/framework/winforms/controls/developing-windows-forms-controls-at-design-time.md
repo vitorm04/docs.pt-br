@@ -1,5 +1,5 @@
 ---
-title: Desenvolvendo controles dos Windows Forms na hora de design
+title: Desenvolver controles em tempo de design
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls [Windows Forms]
@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: f6afb13a01075d3aa2d101100a0c3bfe31c6ee29
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460086"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745991"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>Desenvolver Windows Forms controles em tempo de design
 
@@ -48,7 +48,7 @@ Mostra como depurar o comportamento de tempo de design de um controle dos Window
 [Passo a passo: criando um controle dos Windows Forms que aproveita os recursos de tempo de design do Visual Studio](creating-a-wf-control-design-time-features.md)\
 Mostra como integrar fortemente um controle de composição ao ambiente de design.
 
-[Como Criar Controles para o Windows Forms](how-to-author-controls-for-windows-forms.md)\
+[Como criar controles para Windows Forms](how-to-author-controls-for-windows-forms.md)\
 Apresenta uma visão geral de considerações para implementar um controle dos Windows Forms.
 
 [Como criar controles de composição](how-to-author-composite-controls.md)\
@@ -57,7 +57,7 @@ Mostra como criar um controle herdando de um controle de composição.
 [Como herdar da classe UserControl](how-to-inherit-from-the-usercontrol-class.md)\
 Fornece uma visão geral do procedimento para criar um controle de composição.
 
-[Como herdar de controles do Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)\
+[Como herdar de controles dos Windows Forms existentes](how-to-inherit-from-existing-windows-forms-controls.md)\
 Mostra como criar um controle estendido herdando da classe de controle <xref:System.Windows.Forms.Button>.
 
 [Como herdar da classe de controle](how-to-inherit-from-the-control-class.md)\

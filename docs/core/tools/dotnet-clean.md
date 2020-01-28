@@ -2,29 +2,29 @@
 title: Comando dotnet clean
 description: O comando dotnet clean limpa o diretório atual.
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117748"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734243"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**Este tópico aplica-se a: ✓** SDK do .NET Core 1.x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>Nome
+## <a name="name"></a>Name
 
 `dotnet clean` – limpa a saída de um projeto.
 
 ## <a name="synopsis"></a>Sinopse
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
@@ -67,7 +67,7 @@ O projeto do MSBuild ou a solução para limpar. Se um arquivo de solução ou p
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  Limpa a pasta de saída do tempo de execução especificado. Isso é usado quando uma [implantação autocontida](../deploying/index.md#self-contained-deployments-scd) foi criada. Opção disponível desde o SDK do .NET Core 2.0.
+  Limpa a pasta de saída do runtime especificado. Isso é usado quando uma [implantação autocontida](../deploying/index.md#self-contained-deployments-scd) foi criada. Opção disponível desde o SDK do .NET Core 2.0.
 
 * **`-v|--verbosity <LEVEL>`**
 

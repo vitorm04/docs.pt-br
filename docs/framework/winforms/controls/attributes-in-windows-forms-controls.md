@@ -1,5 +1,5 @@
 ---
-title: Atributos em controles dos Windows Forms
+title: Atributos em controles
 ms.date: 03/30/2017
 helpviewer_keywords:
 - attributes [Windows Forms]
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b32e4f87e953438a3bb11569445a9270e11c7922
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954369"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732132"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Atributos em controles dos Windows Forms
-O .NET Framework fornece uma variedade de atributos que podem ser aplicados aos membros de seus controles personalizados e componentes. Alguns desses atributos afetam o comportamento de uma classe no tempo de execução, enquanto outros afetam o comportamento no tempo de design.  
+O .NET Framework fornece uma variedade de atributos que podem se aplicados aos membros de seus controles personalizados e componentes. Alguns desses atributos afetam o comportamento de uma classe no tempo de execução, enquanto outros afetam o comportamento no tempo de design.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>Atributos de propriedades de controles e componentes  
- A tabela a seguir mostra os atributos que podem ser aplicados a propriedades ou outros membros de seus controles e componentes personalizados. Para obter um exemplo que usa muitos desses atributos, consulte [como: Aplicar atributos em controles dos Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
+ A tabela a seguir mostra os atributos que podem ser aplicados a propriedades ou outros membros de seus controles e componentes personalizados. Para ver um exemplo que usa muitos desses atributos, consulte [Como aplicar atributos a controles dos Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md).  
   
 |Atributo|Descrição|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|Especifica o valor a ser passado para uma propriedade para fazer com que a propriedade obtenha o seu valor de outra origem. Isso é conhecido como *ambiente*.|  
 |<xref:System.ComponentModel.BrowsableAttribute>|Especifica se uma propriedade ou evento deve ser exibido em uma janela **Propriedades**.|  
-|<xref:System.ComponentModel.CategoryAttribute>|Especifica o nome da categoria na qual grupo de propriedade ou evento quando exibido em uma <xref:System.Windows.Forms.PropertyGrid> controle definido como <xref:System.Windows.Forms.PropertySort.Categorized> modo.|  
-|<xref:System.ComponentModel.DefaultValueAttribute>|Especifica o valor padrão de uma propriedade.|  
+|<xref:System.ComponentModel.CategoryAttribute>|Especifica o nome da categoria na qual agrupar a propriedade ou evento quando exibido em um controle de <xref:System.Windows.Forms.PropertyGrid> definido como <xref:System.Windows.Forms.PropertySort.Categorized> modo.|  
+|<xref:System.ComponentModel.DefaultValueAttribute>|{1&gt;Especifica o valor padrão de uma propriedade.&lt;1}|  
 |<xref:System.ComponentModel.DescriptionAttribute>|Especifica uma descrição de uma propriedade ou evento.|  
 |<xref:System.ComponentModel.DisplayNameAttribute>|Especifica o nome de exibição de uma propriedade, evento ou método `public void` que não usa argumentos.|  
 |<xref:System.ComponentModel.EditorAttribute>|Especifica o editor que deve ser usado para alterar uma propriedade.|  
@@ -60,9 +60,9 @@ O .NET Framework fornece uma variedade de atributos que podem ser aplicados aos 
 |<xref:System.ComponentModel.ToolboxItemAttribute>|Representa um atributo de um item de caixa de ferramentas.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|Especifica a cadeia de caracteres de filtro e o tipo de filtro para um item de Caixa de ferramentas.|  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Attribute>
-- [Como: Aplicar atributos em controles dos Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
+- [Como aplicar atributos a controles dos Windows Forms](how-to-apply-attributes-in-windows-forms-controls.md)
 - [Estendendo o suporte ao tempo de design](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Desenvolvendo controles dos Windows Forms personalizados com o .NET Framework](developing-custom-windows-forms-controls.md)

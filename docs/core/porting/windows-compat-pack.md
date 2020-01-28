@@ -3,20 +3,18 @@ title: Usar o Pacote de Compatibilidade do Windows para fazer a portabilidade pr
 description: Saiba mais sobre o pacote de compatibilidade do Windows e como você pode usá-lo para portar o código de .NET Framework existente para o .NET Core.
 author: terrajobst
 ms.date: 12/07/2018
-ms.openlocfilehash: 65530987a3cded941b6a292118ed9bfdb6f5b86c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 91a653b2345d414c18ebdb6e8b7d6d49bbdbb83e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715476"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733615"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Usar o Pacote de Compatibilidade do Windows para fazer a portabilidade pra o .NET Core
 
 Alguns dos problemas mais comuns encontrados ao portar código existente para o .NET Core são dependências de APIs e tecnologias que só são encontradas no .NET Framework. O *Pacote de Compatibilidade do Windows* fornece muitas dessas tecnologias, portanto, é muito mais fácil compilar aplicativos .NET Core e bibliotecas do .NET Standard.
 
-Esse pacote é uma [extensão lógica do .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) que aumenta consideravelmente o conjunto de APIs e o código existente é compilado quase sem modificações. Para manter a promessa do .NET Standard ("é o conjunto de APIs que todas as implementações do .NET fornecem"), o pacote não inclui tecnologias que não funcionam em todas as plataformas, como registro, Instrumentação de Gerenciamento do Windows (WMI) ou emissão de reflexo API.
-
-O pacote de compatibilidade do Windows fica sobre o .NET Standard e fornece acesso a tecnologias que são somente Windows. É especialmente útil para os clientes que desejam migrar para o .NET Core, mas pretendem permanecer no Windows como uma primeira etapa. Nesse cenário, não ser capaz de usar tecnologias somente do Windows é apenas um obstáculo de migração sem benefícios arquitetônicos.
+O Compatibility Pack é uma [extensão lógica do .NET Standard 2,0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support) que aumenta significativamente o conjunto de APIs. O código existente é compilado com quase nenhuma modificação. Para manter sua promessa de "o conjunto de APIs que todas as implementações do .NET fornecem", .NET Standard não inclui tecnologias que não funcionam em todas as plataformas, como registro, Instrumentação de Gerenciamento do Windows (WMI) ou APIs de emissão de reflexo. O pacote de compatibilidade do Windows fica sobre o .NET Standard e fornece acesso a essas tecnologias somente do Windows. Ele é especialmente útil para clientes que desejam migrar para o .NET Core, mas planejam permanecer no Windows, pelo menos como uma primeira etapa. Nesse cenário, ser capaz de usar tecnologias somente do Windows elimina o obstáculo de migração.
 
 ## <a name="package-contents"></a>Conteúdo do pacote
 

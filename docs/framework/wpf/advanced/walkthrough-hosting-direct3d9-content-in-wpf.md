@@ -1,16 +1,17 @@
 ---
-title: 'Instruções passo a passo: hospedando conteúdo de Direct3D9 no WPF'
+title: Hospedar conteúdo de Direct3D9 no WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 03c93ea3813d3572abd7ca60519478c9bf54cf7d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: e65b0c59268b44abed289e54181bf0bda9355664
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976516"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742612"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Instruções passo a passo: hospedando conteúdo de Direct3D9 no WPF
 
@@ -26,7 +27,7 @@ Nesta instrução passo a passo, as seguintes tarefas serão executadas:
 
  Quando tiver terminado, você saberá como hospedar conteúdo Direct3D9 em um aplicativo WPF.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Você precisa dos seguintes componentes para concluir esta instrução passo a passo:
 
@@ -68,7 +69,7 @@ Por fim, use a classe <xref:System.Windows.Interop.D3DImage> para hospedar o con
 
     [!code-xaml[System.Windows.Interop.D3DImage#10](~/samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]
 
-2. Compile o projeto.
+2. Crie o projeto.
 
 3. Copie a DLL que contém o conteúdo Direct3D9 para a pasta lixeira/Debug.
 
@@ -76,7 +77,7 @@ Por fim, use a classe <xref:System.Windows.Interop.D3DImage> para hospedar o con
 
     O conteúdo Direct3D9 aparece dentro do aplicativo do WPF.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Considerações sobre desempenho para interoperabilidade entre Direct3D9 e WPF](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

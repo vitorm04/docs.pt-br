@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
-ms.translationtype: MT
+ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115805"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742596"
 ---
 # <a name="whats-new-in-net-core-30"></a>Novidades do .NET Core 3.0
 
@@ -112,20 +112,20 @@ Para saber mais sobre a ferramenta Vinculador de IL, confira a [documentação](
 
 ### <a name="tiered-compilation"></a>Compilação em camadas
 
-A TC ([compilação em camadas](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o runtime use de modo mais adaptável o compilador JIT (just-in-time) para obter um melhor desempenho.
+A TC ([compilação em camadas](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md)) está ativa por padrão com o .NET Core 3.0. Esse recurso permite que o tempo de execução use de forma mais adaptável o compilador JIT (just-in-time) para obter um melhor desempenho.
 
-O principal benefício de TC é habilitar métodos de (re)jitting com uma camada de qualidade inferior, porém mais rápida, ou uma camada de qualidade superior, porém mais lenta. Isso ajuda a aumentar o desempenho de um aplicativo quando ele passa por vários estágios da execução, desde a inicialização até o estado estável. Isso contrasta com a abordagem de não TC, em que cada método é compilado de uma única maneira (o mesmo que a camada de alta qualidade) que é mais voltada para o estado estável em detrimento do desempenho de inicialização.
+O principal benefício da compilação em camadas é fornecer duas maneiras de métodos de jitting: em uma camada de qualidade inferior, mas mais rápida, ou em uma camada de qualidade superior, mas mais lenta. A qualidade refere-se ao quão bem o método é otimizado. O TC ajuda a melhorar o desempenho de um aplicativo à medida que passa por vários estágios de execução, desde a inicialização até o estado estável. Quando a compilação em camadas é desabilitada, cada método é compilado de uma única maneira que é ajustada ao desempenho de estado estável no desempenho de inicialização.
 
-Quando TC está habilitado, durante a inicialização para um método que é chamado:
+Quando TC está habilitado, o comportamento a seguir se aplica à compilação do método quando um aplicativo é inicializado:
 
-- Se o método tiver código compilado por AOT (ReadyToRun), o código gerado previamente será usado.
-- Caso contrário, o método será JIT. Normalmente, esses métodos atualmente são genéricos sobre tipos de valor.
-  - O Quick JIT produz código de menor qualidade mais rapidamente. O Quick JIT é habilitado por padrão no .NET Core 3,0 para métodos que não contêm loops e são preferenciais durante a inicialização.
-  - O JIT com otimização total produz um código de qualidade mais lento. Para métodos em que a JIT rápida não seria usada (por exemplo, se o método é atribuído com `[MethodImpl(MethodImplOptions.AggressiveOptimization)]`), o JIT com otimização total é usado.
+- Se o método tiver código com compilação antecipada de tempo ou [ReadyToRun](#readytorun-images), o código gerado previamente será usado.
+- Caso contrário, o método é JIT. Normalmente, esses métodos são genéricos sobre tipos de valor.
+  - O *Quick JIT* produz código mais rápido (ou menos otimizado) com mais rapidez. No .NET Core 3,0, o JIT rápido é habilitado por padrão para métodos que não contêm loops e são preferenciais durante a inicialização.
+  - O JIT totalmente otimizado produz um código de qualidade mais alta (ou mais otimizado) mais lentamente. Para métodos em que a JIT rápida não seria usada (por exemplo, se o método é atribuído com <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType>), o JIT com otimização total é usado.
 
-Eventualmente, depois que os métodos são chamados várias vezes, eles são novamente JIT com o JIT totalmente otimizado em segundo plano.
+Para métodos chamados com frequência, o compilador just-in-time, eventualmente, cria código totalmente otimizado em segundo plano. Em seguida, o código otimizado substitui o código pré-compilado para esse método.
 
-O código gerado pelo Quick JIT pode ser executado mais lentamente, alocar mais memória ou usar mais espaço de pilha. Se houver problemas, o Quick JIT poderá ser desabilitado usando essa configuração em seu arquivo de projeto:
+O código gerado pelo Quick JIT pode ser executado mais lentamente, alocar mais memória ou usar mais espaço de pilha. Se houver problemas, você poderá desabilitar o JIT rápido usando essa propriedade do MSBuild no arquivo de projeto:
 
 ```xml
 <PropertyGroup>
@@ -133,7 +133,7 @@ O código gerado pelo Quick JIT pode ser executado mais lentamente, alocar mais 
 </PropertyGroup>
 ```
 
-Para desabilitar completamente a TC, use esta configuração em seu arquivo de projeto:
+Para desabilitar completamente o TC, use essa propriedade do MSBuild em seu arquivo de projeto:
 
 ```xml
 <PropertyGroup>
@@ -141,7 +141,10 @@ Para desabilitar completamente a TC, use esta configuração em seu arquivo de p
 </PropertyGroup>
 ```
 
-Qualquer alteração nas configurações acima no arquivo de projeto pode exigir que uma compilação limpa seja refletida (exclua os diretórios `obj` e `bin` e recompile).
+> [!TIP]
+> Se você alterar essas configurações no arquivo de projeto, talvez seja necessário executar uma compilação limpa para que as novas configurações sejam refletidas (exclua os diretórios `obj` e `bin` e recompile).
+
+Para obter mais informações sobre como configurar a compilação em tempo de execução, consulte [Opções de configuração de tempo de execução para compilação](../run-time-config/compilation.md).
 
 ### <a name="readytorun-images"></a>Imagens ReadyToRun
 
@@ -182,7 +185,7 @@ Exceções ao direcionamento cruzado:
 O .NET Core 3.0 introduz um recurso opcional que permite que seu aplicativo efetue roll forward para a versão principal mais recente do .NET Core. Adicionalmente, foi adicionada uma nova configuração para controlar como o roll forward é aplicado ao seu aplicativo. Isso pode ser configurado das seguintes maneiras:
 
 - Propriedade do arquivo de projeto: `RollForward`
-- Propriedade do arquivo de configuração de runtime: `rollForward`
+- Propriedade do arquivo de configuração de tempo de execução: `rollForward`
 - Variável de ambiente: `DOTNET_ROLL_FORWARD`
 - Argumento de linha de comando: `--roll-forward`
 

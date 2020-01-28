@@ -1,5 +1,5 @@
 ---
-title: 'Como: Associar a um serviço Web usando o BindingSource do Windows Forms'
+title: Associar a um serviço Web usando BindingSource
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: 94564ba2614e335da36828912e43fb9db7eca91b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 0680c73e578577cf40158761f6c635fe30ff9f4d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833992"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746672"
 ---
-# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Como: Associar a um serviço Web usando o BindingSource do Windows Forms
-Se você quiser associar um controle de formulário do Windows aos resultados obtidos chamando um serviço Web XML, você pode usar um <xref:System.Windows.Forms.BindingSource> componente. Esse procedimento é semelhante à associação de um <xref:System.Windows.Forms.BindingSource> um tipo de componente. É necessário criar um proxy do lado do cliente que contenha os métodos e tipos expostos pelo serviço Web. O proxy do lado do cliente será gerado pelo próprio serviço Web (.asmx) ou pelo arquivo de linguagem WSDL. Além disso, o proxy do lado do cliente deve expor os campos dos tipos complexos usados pelo serviço Web como propriedades públicas. Em seguida, você associa o <xref:System.Windows.Forms.BindingSource> para um dos tipos expostos na Web do proxy de serviço.  
+# <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Como associar a um serviço Web usando o BindingSource dos Windows Forms
+Se você quiser associar um controle de formulário do Windows aos resultados obtidos da chamada de um Web Service XML, poderá usar um componente <xref:System.Windows.Forms.BindingSource>. Esse procedimento é semelhante a associar um componente de <xref:System.Windows.Forms.BindingSource> a um tipo. É necessário criar um proxy do lado do cliente que contenha os métodos e tipos expostos pelo serviço Web. O proxy do lado do cliente será gerado pelo próprio serviço Web (.asmx) ou pelo arquivo de linguagem WSDL. Além disso, o proxy do lado do cliente deve expor os campos dos tipos complexos usados pelo serviço Web como propriedades públicas. Em seguida, você associa o <xref:System.Windows.Forms.BindingSource> a um dos tipos expostos no proxy do serviço Web.  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>Criar e associar a um proxy do lado do cliente  
   
 1. Crie um formulário do Windows Forms em um diretório de sua escolha, com um namespace apropriado.  
   
-2. Adicionar um <xref:System.Windows.Forms.BindingSource> componente para o formulário.  
+2. Adicione um componente <xref:System.Windows.Forms.BindingSource> ao formulário.  
   
-3. Abra o prompt de comando do Windows Software Development Kit (SDK) e navegue até que o formulário está localizado no mesmo diretório.  
+3. Abra o prompt de comando do SDK (Software Development Kit) do Windows e navegue até o mesmo diretório em que seu formulário está localizado.  
   
 4. Com a ferramenta WSDL, digite `wsdl` e a URL do arquivo .asmx ou WSDL para o serviço Web, seguida pelo namespace do aplicativo e, opcionalmente, o idioma de trabalho.  
   
@@ -42,7 +42,7 @@ Se você quiser associar um controle de formulário do Windows aos resultados ob
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#4)]  
   
-6. Defina as <xref:System.Windows.Forms.BindingSource.DataSource%2A> propriedade do <xref:System.Windows.Forms.BindingSource> para o tipo desejado, que é contido no proxy do lado do cliente de serviço Web.  
+6. Defina a propriedade <xref:System.Windows.Forms.BindingSource.DataSource%2A> do <xref:System.Windows.Forms.BindingSource> como o tipo que você deseja que esteja contido no proxy do lado do cliente do serviço Web.  
   
      [!code-cpp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#2)]
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#2)]
@@ -50,27 +50,27 @@ Se você quiser associar um controle de formulário do Windows aos resultados ob
   
 ### <a name="to-bind-controls-to-the-bindingsource-that-is-bound-to-a-web-service"></a>Associar controles ao BindingSource que está associado a um serviço Web  
   
-- Vincular controles a <xref:System.Windows.Forms.BindingSource>, passando a propriedade pública do tipo de serviço da Web que você deseja como um parâmetro.  
+- Associe os controles à <xref:System.Windows.Forms.BindingSource>, passando a propriedade pública do tipo de serviço Web que você deseja como um parâmetro.  
   
      [!code-cpp[System.Windows.Forms.DataConnectorWebService#3](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#3)]
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#3)]
      [!code-vb[System.Windows.Forms.DataConnectorWebService#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#3)]  
   
 ## <a name="example"></a>Exemplo  
- O exemplo de código a seguir demonstra como associar um <xref:System.Windows.Forms.BindingSource> componente a um serviço Web e, em seguida, como associar uma caixa de texto para o <xref:System.Windows.Forms.BindingSource> componente. Ao clicar no botão, um método de serviço Web será chamado e os resultados serão exibidos no `textbox1`.  
+ O exemplo de código a seguir demonstra como associar um componente <xref:System.Windows.Forms.BindingSource> a um serviço Web e como associar uma caixa de texto ao componente <xref:System.Windows.Forms.BindingSource>. Ao clicar no botão, um método de serviço Web será chamado e os resultados serão exibidos no `textbox1`.  
   
  [!code-cpp[System.Windows.Forms.DataConnectorWebService#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#1)]
  [!code-csharp[System.Windows.Forms.DataConnectorWebService#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorWebService#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
  Este é um exemplo completo que inclui um método `Main` e uma versão abreviada do código de proxy do lado do cliente.  
   
  Este exemplo requer:  
   
 - Referências aos assemblies System, System.Drawing, System.Web.Services, System.Windows.Forms e System.Xml.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Componente BindingSource](bindingsource-component.md)
-- [Como: Associar um controle dos Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [Como associar um controle do Windows Forms a um tipo](how-to-bind-a-windows-forms-control-to-a-type.md)

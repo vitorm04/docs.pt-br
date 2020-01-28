@@ -1,5 +1,5 @@
 ---
-title: Visão geral de pincéis do WPF
+title: Visão geral de pincéis
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458631"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746213"
 ---
 # <a name="wpf-brushes-overview"></a>Visão geral de pincéis do WPF
 Tudo o que é visível na tela é visível porque foi pintado por um pincel. Por exemplo, um pincel é usado para descrever a tela de fundo de um botão, o primeiro plano do texto e o preenchimento de uma forma. Este tópico apresenta os conceitos de pintura com pincéis [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] e fornece exemplos. Os pincéis permitem que você pinte objetos [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] com qualquer coisa, desde cores simples e sólidas a conjuntos complexos de padrões e imagens.  
@@ -26,7 +26,7 @@ Exemplos de pincel
   
  A maioria dos objetos visuais permite especificar como eles são pintados. A tabela a seguir lista alguns objetos e propriedades comuns com os quais você pode usar um <xref:System.Windows.Media.Brush>.  
   
-|Class|Propriedades do pincel|  
+|Classe|Propriedades do pincel|  
 |-----------|----------------------|  
 |<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
 |<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
@@ -160,7 +160,7 @@ Um retângulo pintado usando um VisualBrush
   
  Para obter mais informações sobre por que <xref:System.Windows.Media.VisualBrush> objetos não podem ser congelados, consulte a página tipo de <xref:System.Windows.Media.VisualBrush>.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
@@ -170,5 +170,5 @@ Um retângulo pintado usando um VisualBrush
 - [Exemplo de pincéis](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [Exemplo de ImageBrush](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [Exemplo de VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [Tópicos explicativos](brushes-how-to-topics.md)
+- [Tópicos de instruções](brushes-how-to-topics.md)
 - [Outras recomendações de desempenho](../advanced/optimizing-performance-other-recommendations.md)

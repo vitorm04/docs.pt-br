@@ -3,12 +3,12 @@ title: O SDK do .NET Compiler Platform (APIs do Roslyn)
 description: Aprenda a usar o SDK do .NET Compiler Platform (também chamado de APIs do Roslyn) para entender o código .NET, identificar os erros e corrigi-los.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: 98984edad3a25daa8b0ea13b903c4e6447b8a22a
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: a1ceb1d11cf846e67be2c6558978e01133e591da
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163131"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742741"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>O SDK do .NET Compiler Platform
 
@@ -43,7 +43,7 @@ As equipes podem criar analisadores e correções de código que procurem as pr�
 
 ## <a name="provide-guidance-with-library-packages"></a>Fornecer diretrizes com pacotes de biblioteca
 
-Há uma grande variedade de bibliotecas para desenvolvedores de .NET no NuGet.
+Há uma infinidade de bibliotecas disponíveis para desenvolvedores do .NET no NuGet.
 Algumas dessas provenientes da Microsoft, algumas de terceiros e outras de membros e de voluntários da comunidade. Essas bibliotecas obtêm mais adoção e análises mais positivas quando os desenvolvedores são bem-sucedidos com elas.
 
 Além de fornecer a documentação, você pode fornecer analisadores e correções de código que encontram e corrigem os usos inadequados comuns da sua biblioteca. Essas correções imediatas ajudarão os desenvolvedores a obter êxito mais rapidamente.
@@ -58,7 +58,7 @@ Esses analisadores podem ser carregados no [Visual Studio Marketplace](https://m
 
 ## <a name="next-steps"></a>{1&gt;{2&gt;Próximas etapas&lt;2}&lt;1}
 
-O SDK do .NET Compiler Platform inclui os modelos de objeto de linguagem mais recentes para geração de código, análise e refatoração. Esta seção fornece uma visão geral conceitual do SDK do .NET Compiler Platform. Mais detalhes podem ser encontrados nas seções de inícios rápidos, de exemplos e de tutoriais.
+O SDK do .NET Compiler Platform inclui os modelos de objeto de linguagem mais recentes para geração de código, análise e refatoração. Esta seção fornece uma visão geral conceitual do SDK do .NET Compiler Platform. Mais detalhes podem ser encontrados nas seções guias de início rápido, exemplos e tutoriais.
 
 Você pode saber mais sobre os conceitos no SDK do .NET Compiler Platform nestes cinco tópicos:
 
