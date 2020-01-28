@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: Como usar e depurar a capacidade de descarregamento de assembly no .NET Core
           href: ../standard/assembly/unloadability-howto.md
-- name: Compilar Build .NET Core da origem
-  href: build/index.md
+- name: Pacote de distribuição do .NET Core
   items:
-    - name: Pacote de distribuição do .NET Core
-      href: build/distribution-packaging.md
-- name: Docs do VS 2015/project.json
-  href: ../project-json.md
+    - name: Visão geral
+      href: distribution-packaging.md
