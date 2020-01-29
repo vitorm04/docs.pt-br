@@ -1,5 +1,5 @@
 ---
-title: Controle TableLayoutPanel (Windows Forms)
+title: Controle TableLayoutPanel
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms]
@@ -9,55 +9,55 @@ helpviewer_keywords:
 - layout [Windows Forms], TableLayoutPanel control
 - automatic sizing
 ms.assetid: f55175c6-424e-4782-a86e-3f79c1550235
-ms.openlocfilehash: b51d3bd8e9d8816dfae6c10fc752adb0b3cea59c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12b40d4ce47770b3ffe9bfdebca74eca4afd3dd1
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932490"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735512"
 ---
 # <a name="tablelayoutpanel-control-windows-forms"></a>Controle TableLayoutPanel (Windows Forms)
-O <xref:System.Windows.Forms.TableLayoutPanel> controle organiza seu conteúdo em uma grade. Como o layout é executado tanto em tempo de design quanto em tempo de execução, ele pode ser alterado dinamicamente à medida que o ambiente do aplicativo muda. Assim, os controles no painel têm a capacidade de redimensionar proporcionalmente, portanto ele pode responder a alterações como o redimensionamento do controle pai ou à alteração de comprimento do texto devido à localização.  
+O controle de <xref:System.Windows.Forms.TableLayoutPanel> organiza seu conteúdo em uma grade. Como o layout é executado tanto em tempo de design quanto em tempo de execução, ele pode ser alterado dinamicamente à medida que o ambiente do aplicativo muda. Assim, os controles no painel têm a capacidade de redimensionar proporcionalmente, portanto ele pode responder a alterações como o redimensionamento do controle pai ou à alteração de comprimento do texto devido à localização.  
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Visão geral do controle TableLayoutPanel](tablelayoutpanel-control-overview.md)  
- Apresenta os conceitos gerais do <xref:System.Windows.Forms.TableLayoutPanel> controle, que permite que você crie um layout com linhas e colunas.  
+ Apresenta os conceitos gerais do controle de <xref:System.Windows.Forms.TableLayoutPanel>, que permite criar um layout com linhas e colunas.  
   
  [Práticas recomendadas para o controle TableLayoutPanel](best-practices-for-the-tablelayoutpanel-control.md)  
- Descreve as recomendações para ajudá-lo a aproveitar ao máximo os recursos de layout do <xref:System.Windows.Forms.TableLayoutPanel> controle.  
+ Descreve as recomendações para ajudá-lo a obter o máximo dos recursos de layout do controle de <xref:System.Windows.Forms.TableLayoutPanel>.  
   
  [Comportamento de AutoSize no controle TableLayoutPanel](autosize-behavior-in-the-tablelayoutpanel-control.md)  
- Explica as formas nas quais o <xref:System.Windows.Forms.TableLayoutPanel> controle dá suporte ao comportamento de dimensionamento automático.  
+ Explica as maneiras em que o controle de <xref:System.Windows.Forms.TableLayoutPanel> dá suporte ao comportamento de dimensionamento automático.  
   
- [Como: Ancorar e encaixar controles filho em um controle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- Mostra como ancorar e encaixar controles filho em um <xref:System.Windows.Forms.TableLayoutPanel> controle.  
+ [Como ancorar e encaixar controles filho em um controle TableLayoutPanel](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ Mostra como ancorar e encaixar controles filho em um controle <xref:System.Windows.Forms.TableLayoutPanel>.  
   
- [Como: Projetar um Layout de formulários do Windows que responde bem à localização](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
- Demonstra como usar um <xref:System.Windows.Forms.TableLayoutPanel> controle para criar um formulário que responde bem à localização.  
+ [Como criar um layout dos Windows Forms que responda bem à localização](how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md)  
+ Demonstra o uso de um controle <xref:System.Windows.Forms.TableLayoutPanel> para criar um formulário que responda bem à localização.  
   
- [Como: Criar um formulário do Windows redimensionável para entrada de dados](how-to-create-a-resizable-windows-form-for-data-entry.md)  
- Demonstra como usar um <xref:System.Windows.Forms.TableLayoutPanel> controle para criar um formulário que responde bem ao redimensionamento.  
+ [Como criar um Windows Form redimensionável para entrada de dados](how-to-create-a-resizable-windows-form-for-data-entry.md)  
+ Demonstra o uso de um controle <xref:System.Windows.Forms.TableLayoutPanel> para criar um formulário que responda bem ao redimensionamento.  
   
-1. [Como: Alinhar e Alongar um controle em um controle TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
+1. [Como alinhar e alongar um controle em um controle TableLayoutPanel](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
   
-2. [Como: Abranger linhas e colunas em um controle TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
+2. [Como abranger linhas e colunas em um controle TableLayoutPanel](how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md)  
   
-3. [Como: Editar colunas e linhas em um controle TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
+3. [Como editar colunas e linhas em um controle TableLayoutPanel](how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md)  
   
-4. [Passo a passo: Organizando controles nos Windows Forms utilizando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
+4. [Passo a passo: organizando controles nos Windows Forms usando um TableLayoutPanel](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
 ## <a name="reference"></a>Referência  
  <xref:System.Windows.Forms.TableLayoutPanel>  
- Fornece documentação de referência para o <xref:System.Windows.Forms.TableLayoutPanel> controle.  
+ Fornece documentação de referência para o controle de <xref:System.Windows.Forms.TableLayoutPanel>.  
   
  <xref:System.Windows.Forms.TableLayoutSettings>  
- Fornece documentação de referência para o <xref:System.Windows.Forms.TableLayoutSettings> tipo.  
+ Fornece documentação de referência para o tipo de <xref:System.Windows.Forms.TableLayoutSettings>.  
   
  <xref:System.Windows.Forms.FlowLayoutPanel>  
- Fornece documentação de referência para o <xref:System.Windows.Forms.FlowLayoutPanel> controle.  
+ Fornece documentação de referência para o controle de <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Localização](../../../standard/globalization-localization/localization.md)  
  Fornece uma visão geral dos tópicos relacionados à localização.  
   
- Consulte também [localizando aplicativos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/z68135h5(v=vs.120)).
+ Consulte também [Localizando aplicativos](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/z68135h5(v=vs.120)).

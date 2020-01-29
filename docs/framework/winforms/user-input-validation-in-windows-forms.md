@@ -1,5 +1,5 @@
 ---
-title: Validação da entrada do usuário no Windows Forms
+title: Validação de entrada do usuário
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, validating user input
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 2b83e94f188f46d0cedc9fed9e9c5a946ada59c5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dc56c09677d1054e8f264169b78638fa83bd7d9e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960423"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734694"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Validação da entrada do usuário no Windows Forms
 Quando os usuários inserem dados em seu aplicativo, convém verificar se os dados são válidos antes de seu aplicativo utilizá-los. Você pode exigir que determinados campos de texto não sejam de comprimento zero, que um campo seja formatado como um número de telefone ou outros tipos de dados bem formados ou que uma cadeia de caracteres não contenha caracteres desprotegidos que poderiam ser usados para comprometer a segurança de um banco de dados. O Windows Forms fornece várias maneiras para validar a entrada em seu aplicativo.  
@@ -90,7 +90,7 @@ Quando os usuários inserem dados em seu aplicativo, convém verificar se os dad
 > [!NOTE]
 > Se você forçar o formulário a fechar desta maneira, todos os dados nos controles do formulário que ainda não tiverem sido salvos serão perdidos. Além disso, os formulários modais não validam o conteúdo dos controles quando eles são fechados. Você ainda pode usar a validação de controle para bloquear o foco em um controle, mas você não precisa se preocupar com o comportamento associado ao fechamento do formulário.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>

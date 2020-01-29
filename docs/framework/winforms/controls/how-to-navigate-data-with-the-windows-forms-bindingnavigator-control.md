@@ -1,5 +1,5 @@
 ---
-title: 'Como: Navegar em dados com o controle BindingNavigator do Windows Forms'
+title: Navegar pelos dados com o controle BindingNavigator
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,32 +10,32 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-ms.openlocfilehash: 81a265d13e94cb623040ad28cf279c0ec5b7887b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 10508cb447e70cc387f9d98effa3bc4b5ccbbaa9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590966"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736003"
 ---
-# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Como: Navegar em dados com o controle BindingNavigator do Windows Forms
-O advento do <xref:System.Windows.Forms.BindingNavigator> controle no Windows Forms permite aos desenvolvedores fornecer aos usuários finais com um simples de dados de navegação e manipulação de interface do usuário em formulários que criam.  
+# <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>Como navegar em dados com o controle BindingNavigator dos Windows Forms
+O advento do controle de <xref:System.Windows.Forms.BindingNavigator> no Windows Forms permite aos desenvolvedores fornecer aos usuários finais uma interface de usuário de navegação e manipulação de dados simples nos formulários que criam.  
   
- O <xref:System.Windows.Forms.BindingNavigator> controle é um <xref:System.Windows.Forms.ToolStrip> controle com botões pré-configurados para navegação para a primeira, por último, próximo e anterior registro em um conjunto de dados, bem como os botões para adicionar e excluir registros. Adicionando botões para o <xref:System.Windows.Forms.BindingNavigator> controle é fácil, porque ele é um <xref:System.Windows.Forms.ToolStrip> controle. Para ver mais exemplos, veja [Como: Adicione carga, salvar, e botões de cancelamento para o Windows Forms controle BindingNavigator](load-save-and-cancel-bindingnavigator.md).  
+ O controle de <xref:System.Windows.Forms.BindingNavigator> é um controle de <xref:System.Windows.Forms.ToolStrip> com botões pré-configurados para navegação no primeiro, último, próximo e registro anterior em um conjunto de dados, bem como botões para adicionar e excluir registros. Adicionar botões ao controle de <xref:System.Windows.Forms.BindingNavigator> é fácil, pois é um controle de <xref:System.Windows.Forms.ToolStrip>. Para obter exemplos, consulte [como: adicionar botões carregar, salvar e cancelar ao controle do Windows Forms BindingNavigator](load-save-and-cancel-bindingnavigator.md).  
   
- Para cada botão de <xref:System.Windows.Forms.BindingNavigator> de controle, há um membro correspondente do <xref:System.Windows.Forms.BindingSource> componente que permite programaticamente a mesma funcionalidade. Por exemplo, o <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> botão corresponde à <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> método da <xref:System.Windows.Forms.BindingSource> componente, o <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> botão corresponde à <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> método e assim por diante. Como resultado, permitindo que o <xref:System.Windows.Forms.BindingNavigator> controle naveguem nos registros de dados é tão simples como a configuração de seu <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> propriedade ao apropriado <xref:System.Windows.Forms.BindingSource> componente no formulário.  
+ Para cada botão no controle de <xref:System.Windows.Forms.BindingNavigator>, há um membro correspondente do componente <xref:System.Windows.Forms.BindingSource> que permite programaticamente a mesma funcionalidade. Por exemplo, o botão de <xref:System.Windows.Forms.BindingNavigator.MoveFirstItem%2A> corresponde ao método <xref:System.Windows.Forms.BindingSource.MoveFirst%2A> do componente <xref:System.Windows.Forms.BindingSource>, o botão <xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> corresponde ao método <xref:System.Windows.Forms.BindingSource.RemoveCurrent%2A> e assim por diante. Como resultado, a habilitação do controle de <xref:System.Windows.Forms.BindingNavigator> para navegar pelos registros de dados é simples como definir sua propriedade <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> para o componente de <xref:System.Windows.Forms.BindingSource> apropriado no formulário.  
   
 ### <a name="to-set-up-the-bindingnavigator-control"></a>Configurar o controle BindingNavigator  
   
-1. Adicionar um <xref:System.Windows.Forms.BindingSource> componente denominado `bindingSource1` e duas <xref:System.Windows.Forms.TextBox> controles denominados `textBox1` e `textBox2`.  
+1. Adicione um componente de <xref:System.Windows.Forms.BindingSource> chamado `bindingSource1` e dois controles de <xref:System.Windows.Forms.TextBox> chamados `textBox1` e `textBox2`.  
   
-2. Associe `bindingSource1` a dados e os controles da caixa de texto a `bindingSource1`. Para fazer isso, cole o código a seguir no formulário e chame `LoadData` do construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método manipulador de eventos.  
+2. Associe `bindingSource1` a dados e os controles da caixa de texto a `bindingSource1`. Para fazer isso, Cole o código a seguir em seu formulário e chame `LoadData` no construtor do formulário ou <xref:System.Windows.Forms.Form.Load> método de manipulação de eventos.  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#2)]  
   
-3. Adicionar um <xref:System.Windows.Forms.BindingNavigator> controle chamado `bindingNavigator1` ao seu formulário.  
+3. Adicione um controle de <xref:System.Windows.Forms.BindingNavigator> chamado `bindingNavigator1` ao formulário.  
   
-4. Defina as <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> propriedade para `bindingNavigator1` para `bindingSource1`. É possível fazer isso com o designer ou em código.  
+4. Defina a propriedade <xref:System.Windows.Forms.BindingNavigator.BindingSource%2A> para `bindingNavigator1` como `bindingSource1`. É possível fazer isso com o designer ou em código.  
   
      [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#3)]  
@@ -46,12 +46,12 @@ O advento do <xref:System.Windows.Forms.BindingNavigator> controle no Windows Fo
  [!code-csharp[System.Windows.Forms.BindingNavigatorNavigate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.BindingNavigatorNavigate#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingNavigatorNavigate/VB/Form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>Compilando o código  
+## <a name="compiling-the-code"></a>Compilando o Código  
  Este exemplo requer:  
   
 - Referência aos conjuntos System, System.Data, System.Drawing, System.Windows.Forms e System.Xml.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - [Controle BindingNavigator](bindingnavigator-control-windows-forms.md)

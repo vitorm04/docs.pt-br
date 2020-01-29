@@ -1,5 +1,5 @@
 ---
-title: Documentos no WPF
+title: '{1&gt;Documentos&lt;1}'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: eccb333b8e9a71ea30454f8bdf9fd2bf6dc90b9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974678"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737963"
 ---
 # <a name="documents-in-wpf"></a>Documentos no WPF
 o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oferece uma ampla gama de recursos de documentos que permitem a criação de conteúdo de alta fidelidade que foi projetada para ser acessada e lida com mais facilidade do que nas gerações anteriores do Windows. Além das capacidades e da qualidade aprimoradas, o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] também oferece serviços integrados para exibição, empacotamento e segurança de documentos. Este tópico fornece uma introdução aos tipos de documento e ao empacotamento de documento do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -46,7 +46,7 @@ o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
  A exibição do conteúdo do documento de fluxo tem suporte em três controles: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>e <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- o <xref:System.Windows.Controls.FlowDocumentReader> inclui recursos que permitem que o usuário escolha dinamicamente entre vários modos de exibição, incluindo um modo de exibição de página única (página por vez), um modo de exibição de duas páginas por vez (formato de leitura de livros) e uma rolagem contínua (sem fim) modo de exibição.  Para obter mais informações sobre esses modos de exibição, consulte <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Se você não precisar da capacidade de alternar dinamicamente entre modos de exibição diferentes, <xref:System.Windows.Controls.FlowDocumentPageViewer> e <xref:System.Windows.Controls.FlowDocumentScrollViewer> fornecer visualizadores de conteúdo de fluxo mais leves que são corrigidos em um modo de exibição específico.  
+ <xref:System.Windows.Controls.FlowDocumentReader> inclui recursos que permitem que o usuário escolha dinamicamente entre vários modos de exibição, incluindo um modo de exibição de página única (página por vez), um modo de exibição de duas páginas por vez (formato de leitura de livros) e um modo de exibição de rolagem contínua (sem fim).  Para obter mais informações sobre esses modos de exibição, consulte <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>.  Se você não precisar da capacidade de alternar dinamicamente entre modos de exibição diferentes, <xref:System.Windows.Controls.FlowDocumentPageViewer> e <xref:System.Windows.Controls.FlowDocumentScrollViewer> fornecer visualizadores de conteúdo de fluxo mais leves que são corrigidos em um modo de exibição específico.  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer e FlowDocumentScrollViewer  
  <xref:System.Windows.Controls.FlowDocumentPageViewer> mostra o conteúdo no modo de exibição de página por vez, enquanto <xref:System.Windows.Controls.FlowDocumentScrollViewer> mostra o conteúdo no modo de rolagem contínua.  Os <xref:System.Windows.Controls.FlowDocumentPageViewer> e <xref:System.Windows.Controls.FlowDocumentScrollViewer> são corrigidos em um modo de exibição específico. Compare com <xref:System.Windows.Controls.FlowDocumentReader>, que inclui recursos que permitem que o usuário escolha dinamicamente entre vários modos de exibição (conforme fornecido pela enumeração <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>), com o custo de ser mais intensivo em recursos do que <xref:System.Windows.Controls.FlowDocumentPageViewer> ou <xref:System.Windows.Controls.FlowDocumentScrollViewer>.  
@@ -135,7 +135,7 @@ o [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)
   
 - Roteamento de documentos diretamente para uma impressora compatível com XPS.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>

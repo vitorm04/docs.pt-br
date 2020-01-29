@@ -3,12 +3,12 @@ title: Definições de configuração do coletor de lixo
 description: Saiba mais sobre as configurações de tempo de execução para configurar como o coletor de lixo gerencia a memória para aplicativos .NET Core.
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900103"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733523"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>Opções de configuração de tempo de execução para coleta de lixo
 
@@ -38,10 +38,13 @@ Use as seguintes configurações para selecionar tipos de coleta de lixo:
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Server` | `false`-estação de trabalho<br/>servidor de `true` | .NET Core 1.0 |
+| **Propriedade do MSBuild** | `ServerGarbageCollection` | `false`-estação de trabalho<br/>servidor de `true` | .NET Core 1.0 |
 | **Variável de ambiente** | `COMPlus_gcServer` | `0`-estação de trabalho<br/>servidor de `1` | .NET Core 1.0 |
 | **App. config para .NET Framework** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false`-estação de trabalho<br/>servidor de `true` |  |
 
-Exemplo:
+### <a name="examples"></a>Exemplos
+
+arquivo *runtimeconfig. JSON* :
 
 ```json
 {
@@ -53,6 +56,18 @@ Exemplo:
 }
 ```
 
+Arquivo de projeto:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System. GC. simultaneamente/COMPlus_gcConcurrent
 
 - Configura se a coleta de lixo em segundo plano (simultânea) está habilitada.
@@ -62,10 +77,13 @@ Exemplo:
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
 | **runtimeconfig. JSON** | `System.GC.Concurrent` | GC de `true` em segundo plano<br/>`false`-GC não simultâneo | .NET Core 1.0 |
+| **Propriedade do MSBuild** | `ConcurrentGarbageCollection` | GC de `true` em segundo plano<br/>`false`-GC não simultâneo | .NET Core 1.0 |
 | **Variável de ambiente** | `COMPlus_gcConcurrent` | GC de `true` em segundo plano<br/>`false`-GC não simultâneo | .NET Core 1.0 |
 | **App. config para .NET Framework** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | GC de `true` em segundo plano<br/>`false`-GC não simultâneo |  |
 
-Exemplo:
+### <a name="examples"></a>Exemplos
+
+arquivo *runtimeconfig. JSON* :
 
 ```json
 {
@@ -75,6 +93,18 @@ Exemplo:
       }
    }
 }
+```
+
+Arquivo de projeto:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>Gerenciar o uso de recursos
@@ -261,10 +291,13 @@ Exemplo:
 
 | | Nome da configuração | Valores | Versão introduzida |
 | - | - | - | - |
-| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-versão para o sistema operacional<br/>`true`-Put em espera| .NET Core 1.0 |
+| **runtimeconfig. JSON** | `System.GC.RetainVM` | `false`-versão para o sistema operacional<br/>`true`-Put em espera | .NET Core 1.0 |
+| **Propriedade do MSBuild** | `RetainVMGarbageCollection` | `false`-versão para o sistema operacional<br/>`true`-Put em espera | .NET Core 1.0 |
 | **Variável de ambiente** | `COMPlus_GCRetainVM` | `0`-versão para o sistema operacional<br/>`1`-Put em espera | .NET Core 1.0 |
 
-Exemplo:
+### <a name="examples"></a>Exemplos
+
+arquivo *runtimeconfig. JSON* :
 
 ```json
 {
@@ -274,6 +307,18 @@ Exemplo:
       }
    }
 }
+```
+
+Arquivo de projeto:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>Páginas grandes

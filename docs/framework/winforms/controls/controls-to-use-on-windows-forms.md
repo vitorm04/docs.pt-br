@@ -1,16 +1,16 @@
 ---
-title: Controles a serem usados nos Windows Forms
+title: Controles a serem usados
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: bedfaef9a3d0cc81641006d254926f7bf9861c10
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 2bcefd2ee2c9533d9f0afa2d12cd2e7437fc3d37
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69930201"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737452"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Controles a serem usados nos Windows Forms
 Esta é uma lista alfabética de controles e componentes que podem ser usados nos Windows Forms. Além dos controles dos Windows Forms abordados nesta seção, você pode adicionar ActiveX e controles personalizados ao Windows Forms. Se não encontrar o controle necessário listado aqui, você poderá criar seus próprios. Para mais detalhes, consulte [Desenvolvendo controles dos Windows Forms no tempo de design](developing-windows-forms-controls-at-design-time.md). Para mais informações sobre como escolher o controle necessário, consulte [Controles dos Windows Forms por função](windows-forms-controls-by-function.md).  
@@ -50,10 +50,10 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  Exibe dados em uma caixa de combinação suspensa.  
   
  [Componente ContextMenu](contextmenu-component-windows-forms.md)  
- Fornece aos usuários um menu facilmente acessível dos comandos usados com frequência que são associados ao objeto selecionado. Embora <xref:System.Windows.Forms.ContextMenuStrip> <xref:System.Windows.Forms.ContextMenu> o <xref:System.Windows.Forms.ContextMenu> substitua e adicione funcionalidade ao controle de versões anteriores, o é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.  
+ Fornece aos usuários um menu facilmente acessível dos comandos usados com frequência que são associados ao objeto selecionado. Embora <xref:System.Windows.Forms.ContextMenuStrip> substitua e adicione funcionalidade ao controle de <xref:System.Windows.Forms.ContextMenu> de versões anteriores, <xref:System.Windows.Forms.ContextMenu> é retido para compatibilidade com versões anteriores e uso futuro, se desejado.  
   
  [Controle ContextMenuStrip](contextmenustrip-control.md)  
- Representa um menu de atalho. Embora <xref:System.Windows.Forms.ContextMenuStrip> <xref:System.Windows.Forms.ContextMenu> o <xref:System.Windows.Forms.ContextMenu> substitua e adicione funcionalidade ao controle de versões anteriores, o é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.  
+ Representa um menu de atalho. Embora <xref:System.Windows.Forms.ContextMenuStrip> substitua e adicione funcionalidade ao controle de <xref:System.Windows.Forms.ContextMenu> de versões anteriores, <xref:System.Windows.Forms.ContextMenu> é retido para compatibilidade com versões anteriores e uso futuro, se desejado.  
   
  [Controle DataGrid](datagrid-control-windows-forms.md)  
  Exibe dados tabulares de um conjunto de dados e permite atualizações para a fonte de dados.  
@@ -195,13 +195,13 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  Cria menus e barras de ferramentas personalizadas em seus aplicativos dos Windows Forms. Embora <xref:System.Windows.Forms.ToolStrip> substitua e adicione funcionalidade ao controle <xref:System.Windows.Forms.ToolBar> de versões anteriores, <xref:System.Windows.Forms.ToolBar> é mantido para compatibilidade com versões anteriores e uso futuro, se desejado.  
   
  [Controle ToolStripContainer](toolstripcontainer-control.md)  
- Fornece painéis em cada lado de um formulário para encaixar, rafting e organizar <xref:System.Windows.Forms.ToolStrip> controles e um central <xref:System.Windows.Forms.ToolStripContentPanel> para controles tradicionais.  
+ Fornece painéis em cada lado de um formulário para encaixar, raftingr e organizar <xref:System.Windows.Forms.ToolStrip> controles e uma <xref:System.Windows.Forms.ToolStripContentPanel> central para controles tradicionais.  
   
  [Controle ToolStripPanel](toolstrippanel-control.md)  
- Fornece um painel para encaixe, rafting e organização <xref:System.Windows.Forms.ToolStrip> de controles.  
+ Fornece um painel para encaixe, rafting e organização de controles de <xref:System.Windows.Forms.ToolStrip>.  
   
  [Visão geral do controle ToolStripProgressBar](toolstripprogressbar-control-overview.md)  
- Indica o andamento de uma ação em relação à conclusão graficamente. O <xref:System.Windows.Forms.ToolStripProgressBar> normalmente está contido em um <xref:System.Windows.Forms.StatusStrip>.  
+ Indica o andamento de uma ação em relação à conclusão graficamente. A <xref:System.Windows.Forms.ToolStripProgressBar> normalmente está contida em um <xref:System.Windows.Forms.StatusStrip>.  
   
  [Controle ToolStripStatusLabel](toolstripstatuslabel-control.md)  
  Representa um painel em um controle <xref:System.Windows.Forms.StatusStrip>.  
@@ -221,8 +221,8 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  [Controles dos Windows Forms usados para listar opções](windows-forms-controls-used-to-list-options.md)  
  Descreve um conjunto de controles usados para fornecer aos usuários uma lista de opções de escolha.  
   
-## <a name="related-sections"></a>Seções relacionadas  
- [Controles dos Windows Forms](index.md)  
+## <a name="related-sections"></a>Seções Relacionadas  
+ [Controles do Windows Forms](index.md)  
  Explica o uso de controles dos Windows Forms e descreve conceitos importantes para trabalhar com eles.  
   
  [Desenvolvendo controles dos Windows Forms em tempo de design](developing-windows-forms-controls-at-design-time.md)  
@@ -231,5 +231,5 @@ Esta é uma lista alfabética de controles e componentes que podem ser usados no
  [Controles e objetos programáveis comparados em diversas linguagens e bibliotecas](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
  Fornece uma tabela que mapeia controles no Visual Basic 6,0 para o controle correspondente no Visual Basic .NET. Observe que os controles agora são classes no .NET Framework.  
   
- [Como: Adicionar controles ActiveX a Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
+ [Como adicionar controles do ActiveX ao Windows Forms](how-to-add-activex-controls-to-windows-forms.md)  
  Descreve como usar controles ActiveX em Windows Forms.

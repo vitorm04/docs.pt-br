@@ -2,16 +2,16 @@
 title: Comando dotnet build
 description: O comando dotnet build compila um projeto e todas as suas dependências.
 ms.date: 10/14/2019
-ms.openlocfilehash: b85ef06aa445e4708487deed9ec6bfeffeab3657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454220"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734320"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**Este artigo se aplica a: ✓** SDK do .NET Core 1.x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "73454220"
 
 ```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
-    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo] 
+    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]
@@ -59,7 +59,7 @@ O fato de o projeto ser executável ou não é determinado pela propriedade `<Ou
 
 Para produzir uma biblioteca, omita a propriedade `<OutputType>` ou altere seu valor para `Library`. A DLL de IL para uma biblioteca não contém pontos de entrada e não pode ser executada.
 
-### <a name="msbuild"></a>MSBuild
+### <a name="msbuild"></a>{1&gt;MSBuild&lt;1}
 
 O `dotnet build` usa o MSBuild para compilar o projeto e, portanto, dá suporte a builds paralelos e incrementais. Para obter mais informações, consulte [Compilações incrementais](/visualstudio/msbuild/incremental-builds).
 
@@ -153,7 +153,7 @@ O arquivo de projeto ou solução a ser compilado. Se um arquivo de solução ou
   dotnet build --source c:\packages\mypackages
   ```
 
-- Compile o projeto e defina a versão 1.2.3.4 como um parâmetro de compilação usando a `-p` [opção MSBuild](#msbuild):
+- Compile o projeto e defina a versão 1.2.3.4 como um parâmetro de compilação usando a [opção `-p` MSBuild](#msbuild):
 
   ```dotnetcli
   dotnet build -p:Version=1.2.3.4

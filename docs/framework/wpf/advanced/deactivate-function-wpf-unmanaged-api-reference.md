@@ -1,5 +1,6 @@
 ---
-title: Desativar a função (referência de API não gerenciada WPF)
+title: Desativar função-referência de API não gerenciada do WPF
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -8,17 +9,17 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 3e81be16-24c7-4399-b242-6268feaa49d7
-ms.openlocfilehash: ec1811998a60cda21c54a8e94e566ff4d06aa863
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bc1f347526f161fe2d0b7d7c8e08a1c1829ec08e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928759"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737975"
 ---
-# <a name="deactivate-function-wpf-unmanaged-api-reference"></a>Desativar a função (referência de API não gerenciada WPF)
-Essa API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usado diretamente do seu código.  
+# <a name="deactivate-function-wpf-unmanaged-api-reference"></a>Função Deactivate (referência de API não gerenciada do WPF)
+Esta API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) e não se destina a ser usada diretamente do seu código.  
   
- Usado pela infraestrutura do Windows Presentation Foundation (WPF) para gerenciamento do windows.  
+ Usado pela infraestrutura do Windows Presentation Foundation (WPF) para o gerenciamento do Windows.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -26,17 +27,17 @@ Essa API dá suporte à infraestrutura do Windows Presentation Foundation (WPF) 
 void Deactivate()  
 ```  
   
-## <a name="requirements"></a>Requisitos  
- **Plataformas:** Ver [requisitos de sistema do .NET Framework](../../get-started/system-requirements.md).  
+## <a name="requirements"></a>Requisitos do  
+ **Plataformas:** Consulte [.NET Framework requisitos do sistema](../../get-started/system-requirements.md).  
   
  **DLL:**  
   
- No .NET Framework 3.0 e 3.5: PresentationHostDLL.dll  
+ No .NET Framework 3,0 e 3,5: PresentationHostDLL. dll  
   
- No .NET Framework 4 e posterior: PresentationHost_v0400.dll  
+ No .NET Framework 4 e posterior: PresentationHost_v0400. dll  
   
- **Versão do .NET framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **Versão do .NET Framework:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Referência de API não gerenciada do WPF](wpf-unmanaged-api-reference.md)

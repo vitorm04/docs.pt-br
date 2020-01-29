@@ -3,16 +3,16 @@ title: Comando dotnet nuget push
 description: O comando dotnet nuget push efetua push de um pacote no servidor e o publica.
 author: karann-msft
 ms.date: 12/04/2019
-ms.openlocfilehash: 5e80295a570adc30a06d86b6735cb0387e39d5a3
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
-ms.translationtype: MT
+ms.openlocfilehash: a483c559dee8b4a82cc2c792f5c2c5e4a8ff3f87
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835513"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733100"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**Este tópico aplica-se a: ✓** SDK do .NET Core 1.x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -77,7 +77,7 @@ O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comand
 * **`--skip-duplicate`**
 
   Ao enviar vários pacotes para um servidor HTTP (S), o trata qualquer resposta de conflito 409 como um aviso para que o envio por push possa continuar. Disponível desde o SDK do .NET Core 3,1.
-                                 
+
 * **`-sk|--symbol-api-key <API_KEY>`**
 
   A chave da API para o servidor de símbolos.
@@ -127,11 +127,11 @@ O comando `dotnet nuget push` envia um pacote ao servidor e os publica. O comand
   ```dotnetcli
   dotnet nuget push *.nupkg
   ```
-  
+
   > [!NOTE]
   > Se esse comando não funcionar, talvez seja devido a um bug que existia em versões mais antigas do SDK (SDK do .NET Core 2.1 e versões anteriores).
   > Para corrigir esse problema, atualize sua versão do SDK ou execute o seguinte comando em vez disso: `dotnet nuget push **/*.nupkg`
-  
+
 * Envia todos os arquivos *. nupkg* mesmo se uma resposta de conflito 409 for retornada por um servidor http (S):
 
   ```dotnetcli

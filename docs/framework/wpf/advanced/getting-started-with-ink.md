@@ -1,5 +1,5 @@
 ---
-title: Criar um InkCanvas em um aplicativo WPF no Visual Studio
+title: Criar InkCanvas no Visual Studio
 ms.date: 08/15/2018
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: ebbf25037921e7802b2bfcb6ffa562d16a849ffa
-ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
+ms.openlocfilehash: b8087d6db04f7024b9ee48f28002bee04045a14b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920247"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737895"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>Introdução à tinta no WPF
 
 O Windows Presentation Foundation (WPF) tem um recurso de tinta que facilita a incorporação de tinta digital em seu aplicativo.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 Para usar os exemplos a seguir, primeiro instale o [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019). Também ajuda a saber como escrever aplicativos básicos do WPF. Para obter ajuda sobre como começar a usar o WPF, consulte [Walkthrough: meu primeiro aplicativo de área de trabalho do WPF](../getting-started/walkthrough-my-first-wpf-desktop-application.md).
 
-## <a name="quick-start"></a>Início rápido
+## <a name="quick-start"></a>Início rápido do
 
 Esta seção ajuda você a escrever um aplicativo simples do WPF que coleta tinta.
 
@@ -32,7 +32,7 @@ Esta seção ajuda você a escrever um aplicativo simples do WPF que coleta tint
 
 Para criar um aplicativo do WPF que dá suporte à tinta:
 
-1. Abra o Visual Studio.
+1. {1&gt;Abra o Visual Studio.&lt;1}
 
 2. Crie um novo **aplicativo do WPF**.
 
@@ -108,7 +108,7 @@ Você pode acessar todos os recursos do WPF do código de procedimento. Siga est
 
 1. Crie o aplicativo pressionando **F5**.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Tinta digital](digital-ink.md)
 - [Coletando tinta](collecting-ink.md)

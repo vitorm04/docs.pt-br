@@ -2,16 +2,16 @@
 title: Comando dotnet migrate
 description: O comando dotnet migrate migra um projeto e todas as suas dependências.
 ms.date: 01/07/2020
-ms.openlocfilehash: d746069b897a7458e0262663e96cc8743a586aa9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b81669d3e4cffeaf10bea39639410d5f06579d84
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740520"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734148"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
-**Este artigo aplica-se a: ✓** .NET Core 1. x SDK **✓** .NET Core 2. x SDK
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x ✔️ SDK do .NET Core 2. x
 
 ## <a name="name"></a>Name
 

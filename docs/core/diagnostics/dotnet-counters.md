@@ -2,16 +2,16 @@
 title: dotnet-contadores-.NET Core
 description: Saiba como instalar e usar a ferramenta de linha de comando dotnet-Counter.
 ms.date: 10/14/2019
-ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740797"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737713"
 ---
 # <a name="dotnet-counters"></a>dotnet-counters
 
-**Este artigo aplica-se a: ✓ o** SDK do .net Core 3,0 e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 3,0 e versões posteriores
 
 ## <a name="install-dotnet-counters"></a>Instalar dotnet-contadores
 

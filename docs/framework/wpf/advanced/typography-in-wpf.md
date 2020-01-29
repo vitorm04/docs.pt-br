@@ -1,15 +1,15 @@
 ---
-title: Tipografia no WPF
+title: Tipografia
 ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 0c98d0e7363e7732f44f2edf238b9cb6d2bf11fb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3d94873931e3ee6df780df214f508258aa07a791
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740281"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735541"
 ---
 # <a name="typography-in-wpf"></a>Tipografia no WPF
 Este tópico apresenta os principais recursos tipográficos de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Esses recursos incluem qualidade e desempenho aprimorados de renderização de texto, suporte a tipografia OpenType, texto internacional aprimorado, suporte avançado a fontes e novas APIs (interfaces de programação de aplicativo) de texto.  

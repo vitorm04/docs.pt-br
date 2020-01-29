@@ -2,12 +2,12 @@
 title: Visão geral de descoberta do WCF
 ms.date: 03/30/2017
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
-ms.openlocfilehash: 56d19aa72cc5e7217a2135ef919d611c8b2c2f27
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 46092c3bce87d426f4d465367e99a9ebb6dc37fa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424530"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737483"
 ---
 # <a name="wcf-discovery-overview"></a>Visão geral de descoberta do WCF
 As APIs de descoberta fornecem um modelo de programação unificado para a publicação dinâmica e a descoberta de serviços Web usando o protocolo WS-Discovery. Essas APIs permitem que os serviços se publiquem e os clientes localizem serviços publicados. Depois que um serviço é detectável, o serviço tem a capacidade de enviar mensagens de comunicado, além de escutar e responder às solicitações de descoberta. Os serviços detectáveis podem enviar mensagens de saudação para anunciar sua chegada em uma rede e até mesmo as mensagens para anunciar sua partida de uma rede. Para localizar um serviço, os clientes enviam uma solicitação de `Probe` que contém critérios específicos, como tipo de contrato de serviço, palavras-chave e escopo na rede. Os serviços recebem a solicitação de `Probe` e determinam se correspondem aos critérios. Se um serviço corresponder, ele responderá enviando uma mensagem de `ProbeMatch` de volta ao cliente com as informações necessárias para entrar em contato com o serviço. Os clientes também podem enviar `Resolve` solicitações que permitem encontrar serviços que podem ter alterado seu endereço de ponto de extremidade. Os serviços de correspondência respondem a solicitações de `Resolve` enviando uma mensagem de `ResolveMatch` de volta para o cliente.  
@@ -57,7 +57,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
   
  Uma instância de <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> deve ser adicionada a uma descrição de serviço para que o serviço seja detectável. Uma instância de <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> deve ser adicionada ao host de serviço para informar ao serviço onde ouvir as solicitações de descoberta. Neste exemplo, um <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> (que é derivado de <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>) é adicionado para especificar que o serviço deve escutar solicitações de descoberta por meio do transporte multicast UDP. O <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> é usado para descoberta ad hoc porque todas as mensagens são enviadas de forma multicast.  
   
-## <a name="announcement"></a>Nascimento  
+## <a name="announcement"></a>Anúncio  
  Por padrão, a publicação do serviço não envia mensagens de comunicado. O serviço deve ser configurado para enviar mensagens de comunicado. Isso fornece flexibilidade adicional para gravadores de serviço porque eles podem anunciar o serviço separadamente da escuta de mensagens de descoberta. O comunicado de serviço também pode ser usado como um mecanismo para registrar serviços com um proxy de descoberta ou outros registros de serviço. O código a seguir mostra como configurar um serviço para enviar mensagens de anúncio por uma associação UDP.  
   
 ```csharp  
@@ -91,7 +91,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```  
   
-## <a name="service-discovery"></a>Descoberta de serviço  
+## <a name="service-discovery"></a>Descoberta de serviços  
  Um aplicativo cliente pode usar a classe <xref:System.ServiceModel.Discovery.DiscoveryClient> para localizar serviços. O desenvolvedor cria uma instância da classe <xref:System.ServiceModel.Discovery.DiscoveryClient> que passa em um ponto de extremidade de descoberta que especifica onde enviar `Probe` ou `Resolve` mensagens. Em seguida, o cliente chama <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> que especifica os critérios de pesquisa em uma instância de <xref:System.ServiceModel.Discovery.FindCriteria>. Se os serviços correspondentes forem encontrados, <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> retornará uma coleção de <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. O código a seguir mostra como chamar o método `Find` e, em seguida, conectar-se a um serviço descoberto.  
   
 ```csharp  
@@ -153,7 +153,7 @@ class Client
   
 2. Usar um proxy de descoberta para se comunicar em nome do serviço  
   
- O Windows Server AppFabric tem um recurso de início automático que permitirá que um serviço seja iniciado antes de receber qualquer mensagem. Com esse conjunto de início automático, um serviço hospedado do IIS/WAS pode ser configurado para ser detectável. Para obter mais informações sobre o recurso de início automático, consulte o [recurso de início automático do Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=205545). Além de ativar o recurso de início automático, você deve configurar o serviço para descoberta. Para obter mais informações, consulte [como: programaticamente adicionar detectabilidade a um serviço WCF e cliente](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configurando a descoberta em um arquivo de configuração](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
+ O Windows Server AppFabric tem um recurso de início automático que permitirá que um serviço seja iniciado antes de receber qualquer mensagem. Com esse conjunto de início automático, um serviço hospedado do IIS/WAS pode ser configurado para ser detectável. Para obter mais informações sobre o recurso de início automático, consulte o [recurso de início automático do Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ee677260(v=azure.10)). Além de ativar o recurso de início automático, você deve configurar o serviço para descoberta. Para obter mais informações, consulte [como: programaticamente adicionar detectabilidade a um serviço WCF e cliente](../../../../docs/framework/wcf/feature-details/how-to-programmatically-add-discoverability-to-a-wcf-service-and-client.md)[Configurando a descoberta em um arquivo de configuração](../../../../docs/framework/wcf/feature-details/configuring-discovery-in-a-configuration-file.md).  
   
  Um proxy de descoberta pode ser usado para se comunicar em nome do serviço WCF quando o serviço não estiver em execução. O proxy pode escutar a investigação ou resolver mensagens e responder ao cliente. O cliente pode enviar mensagens diretamente para o serviço. Quando o cliente envia uma mensagem para o serviço, ele será instanciado para responder à mensagem. Para obter mais informações sobre como implementar um proxy de descoberta, consulte [implementando um proxy de descoberta](../../../../docs/framework/wcf/feature-details/implementing-a-discovery-proxy.md).  
   

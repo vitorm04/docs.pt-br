@@ -1,5 +1,6 @@
 ---
-title: 'Instruções passo a passo: organizando controles dos Windows Forms no WPF'
+title: Organizar controles de Windows Forms no WPF
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197848"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735293"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>Instruções passo a passo: organizando controles dos Windows Forms no WPF
 
@@ -31,7 +32,7 @@ As tarefas ilustradas neste passo a passo incluem:
 - Encaixe.
 - Definindo a visibilidade.
 - Hospedando um controle que não se alonga.
-- Dimensionamento.
+- Dimensionando.
 - Girando.
 - Margens e preenchimento de configuração.
 - Usando contêineres de layout dinâmico.
@@ -40,7 +41,7 @@ Para obter uma listagem de código completa das tarefas ilustradas neste passo a
 
 Quando tiver terminado, você terá uma compreensão dos recursos de layout de [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] em aplicativos baseados em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 É necessário o Visual Studio para concluir este passo a passo.
 
@@ -149,7 +150,7 @@ Elementos de <xref:System.Windows.Forms.Integration.WindowsFormsHost> visíveis 
 
 2. Pressione <kbd>F5</kbd> para compilar e executar o aplicativo. O elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> é pintado sobre o elemento Label.
 
-## <a name="docking"></a>Encaixe
+## <a name="docking"></a>Docking
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost> elemento dá suporte ao encaixe de [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Defina a propriedade <xref:System.Windows.Controls.DockPanel.Dock%2A> anexada para encaixar o controle hospedado em um elemento <xref:System.Windows.Controls.DockPanel>.
 
@@ -255,7 +256,7 @@ Para usar um contêiner de layout dinâmico, siga estas etapas:
 
 4. Pressione <kbd>F5</kbd> para compilar e executar o aplicativo. O elemento <xref:System.Windows.Forms.Integration.WindowsFormsHost> preenche a <xref:System.Windows.Controls.DockPanel>e <xref:System.Windows.Forms.FlowLayoutPanel> organiza seus controles filho no <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>padrão.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

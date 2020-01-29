@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir o texto exibido por um controle do Windows Forms'
+title: Definir o texto exibido por um controle
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -21,26 +21,26 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 887aa5ec9b97770903cd87459d6df5adc3f7ddf0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666149"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738427"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Como: Definir o texto exibido por um controle de Windows Forms
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Como definir o texto exibido por um controle de Windows Forms
 
-Os controles de Windows Forms geralmente exibem algum texto relacionado à função principal do controle. Por exemplo, um <xref:System.Windows.Forms.Button> controle geralmente exibe uma legenda indicando qual ação será executada se o botão for clicado. Para todos os controles, você pode definir ou retornar o texto usando a <xref:System.Windows.Forms.Control.Text%2A> propriedade. Você pode alterar a fonte usando a <xref:System.Windows.Forms.Control.Font%2A> propriedade.
+Os controles de Windows Forms geralmente exibem algum texto relacionado à função principal do controle. Por exemplo, um controle de <xref:System.Windows.Forms.Button> geralmente exibe uma legenda indicando qual ação será executada se o botão for clicado. Para todos os controles, você pode definir ou retornar o texto usando a propriedade <xref:System.Windows.Forms.Control.Text%2A>. Você pode alterar a fonte usando a propriedade <xref:System.Windows.Forms.Control.Font%2A>.
 
 Você também pode definir o texto usando o [Designer](#designer).
 
 ## <a name="programmatic"></a>Program
 
-1. Defina a <xref:System.Windows.Forms.Control.Text%2A> Propriedade como uma cadeia de caracteres.
+1. Defina a propriedade <xref:System.Windows.Forms.Control.Text%2A> como uma cadeia de caracteres.
 
    Para criar uma tecla de acesso sublinhada, inclua um e comercial (&) antes da letra que será a tecla de acesso.
 
-2. Defina a <xref:System.Windows.Forms.Control.Font%2A> Propriedade como um objeto do tipo <xref:System.Drawing.Font>.
+2. Defina a propriedade <xref:System.Windows.Forms.Control.Font%2A> como um objeto do tipo <xref:System.Drawing.Font>.
 
     ```vb
     Button1.Text = "Click here to save changes"
@@ -78,12 +78,12 @@ Você também pode definir o texto usando o [Designer](#designer).
 
    Para criar uma tecla de atalho sublinhada, inclua um e comercial (&) antes da letra que será a tecla de atalho.
 
-2. Na janela **Propriedades** , selecione o botão de reticências![(botão de reticências (...) na janela Propriedades do](./media/visual-studio-ellipsis-button.png)Visual Studio) ao lado da propriedade **Font** .
+2. Na janela **Propriedades** , selecione o botão de reticências (![botão de reticências (...) na janela Propriedades do Visual Studio](./media/visual-studio-ellipsis-button.png)) ao lado da propriedade **fonte** .
 
    Na caixa de diálogo de fonte padrão, escolha a fonte, o estilo da fonte, o tamanho, efeitos (como riscado ou sublinhado) e o script que você deseja.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [Como: Criar chaves de acesso para controles de Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
-- [Como: Responder a Windows Forms cliques de botão](how-to-respond-to-windows-forms-button-clicks.md)
+- [Como criar teclas de acesso para controles dos Windows Forms](how-to-create-access-keys-for-windows-forms-controls.md)
+- [Como responder a cliques no botão dos Windows Forms](how-to-respond-to-windows-forms-button-clicks.md)

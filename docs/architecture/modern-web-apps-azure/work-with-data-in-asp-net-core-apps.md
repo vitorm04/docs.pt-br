@@ -4,12 +4,12 @@ description: Arquitetar aplicativos Web modernos com o ASP.NET Core e o Azure | 
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 7e84da784d34be1646df982fa2594764d43d99dd
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.openlocfilehash: fa30deb16be323f059aa0ec12df08793598a6da2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966883"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738352"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Trabalhando com os dados em aplicativos ASP.NET Core
 
@@ -374,7 +374,7 @@ Além das opções de armazenamento relacional e NoSQL, os aplicativos ASP.NET C
 - Introdução ao Armazenamento do Azure  
   <https://docs.microsoft.com/azure/storage/storage-introduction>
 
-## <a name="caching"></a>Cache
+## <a name="caching"></a>Armazenamento em cache
 
 Em aplicativos Web, cada solicitação da Web deve ser concluída no menor tempo possível. Uma maneira de fazer isso é limitar o número de chamadas externas que o servidor deve fazer para concluir a solicitação. O cache envolve o armazenamento de uma cópia dos dados no servidor (ou em outro armazenamento de dados que é consultado com mais facilidade do que a fonte dos dados). Os aplicativos Web, e especialmente aplicativos Web tradicionais não SPA, precisam criar toda a interface do usuário a cada solicitação. Isso geralmente envolve fazer muitas das mesmas consultas de banco de dados repetidamente de uma solicitação de usuário para a próxima. Na maioria dos casos, esses dados são raramente alterados e, portanto, há pouca justificativa para solicitá-los constantemente do banco de dados. O ASP.NET Core é compatível com cache de resposta, armazenamento em cache de páginas inteiras e cache de dados, que é compatível com um comportamento de cache mais granular.
 
@@ -385,10 +385,9 @@ Ao implementar o cache, é importante ter em mente a separação de interesses. 
 O ASP.NET Core é compatível com dois níveis de cache de resposta. O primeiro nível não armazena nada em cache no servidor, mas adiciona cabeçalhos HTTP que instruem os clientes e servidores proxy a armazenar as respostas em cache. Isso é implementado pela adição do atributo ResponseCache a controladores ou ações individuais:
 
 ```csharp
-    [ResponseCache(Duration = 60)]
-    public IActionResult Contact()
-    { }
-
+[ResponseCache(Duration = 60)]
+public IActionResult Contact()
+{
     ViewData["Message"] = "Your contact page.";
     return View();
 }

@@ -1,17 +1,17 @@
 ---
-title: Como agrupar itens em um controle ListView dos Windows Forms usando o designer
+title: Agrupar itens no controle ListView usando o designer
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 03958109d4daa3fc369660de66973bb659e29c60
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 935d8d75517e1028e686ca229f6ada656f58b01e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960183"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736674"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Como agrupar itens em um controle ListView dos Windows Forms usando o designer
 
@@ -41,7 +41,7 @@ Para habilitar o agrupamento, você deve primeiro criar um ou mais objetos <xref
 
 3. Selecione a propriedade <xref:System.Windows.Forms.ListViewItem.Group%2A> e escolha um grupo na lista suspensa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>

@@ -1,5 +1,5 @@
 ---
-title: Segurança do Windows Forms
+title: Segurança
 ms.date: 03/30/2017
 helpviewer_keywords:
 - designer access security [Windows Forms]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 - security policy [Windows Forms], Windows Forms
 ms.assetid: 932d438a-5285-46d8-a958-8c93d0ad6cae
-ms.openlocfilehash: f64d5ef2e9bb0e977b4c007e8c5109ac0c331a84
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3debf487b9b2a04277d9ce3007f28662fa4899e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799366"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734494"
 ---
 # <a name="windows-forms-security"></a>Segurança do Windows Forms
 O Windows Forms oferece um modelo de segurança baseado em código (os níveis de segurança são definidos para o código, independentemente do usuário que o executa). Isso vai além de qualquer esquema de segurança que já pode estar em vigor no seu sistema de computador. Eles podem incluir os do navegador (como a segurança baseada em zonas disponível no Internet Explorer) ou do sistema operacional (como a segurança baseada em credenciais do Windows NT).  
@@ -26,13 +26,13 @@ O Windows Forms oferece um modelo de segurança baseado em código (os níveis d
  [Acesso mais seguro a arquivos e a dados nos Windows Forms](more-secure-file-and-data-access-in-windows-forms.md)  
  Descreve como acessar arquivos e dados em um ambiente de confiança parcial.  
   
- [Impressão mais segura nos Windows Forms](more-secure-printing-in-windows-forms.md)  
+ [Impressão mais segura no Windows Forms](more-secure-printing-in-windows-forms.md)  
  Descreve como acessar recursos de impressão em um ambiente de confiança parcial.  
   
  [Considerações adicionais sobre segurança nos Windows Forms](additional-security-considerations-in-windows-forms.md)  
  Descreve como realizar manipulação de janela, como usar a Área de Transferência e como fazer chamadas a código não gerenciado em um ambiente de confiança parcial.  
   
-## <a name="related-sections"></a>Seções relacionadas  
+## <a name="related-sections"></a>Seções Relacionadas  
  [Política de segurança padrão](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  Lista as permissões padrão concedidas nos conjuntos de permissão de Confiança Total, Intranet Local e Internet.  
   
@@ -46,7 +46,7 @@ O Windows Forms oferece um modelo de segurança baseado em código (os níveis d
  Fornece links para tópicos que explicam as práticas recomendadas para escrever código com segurança no .NET Framework.  
   
  [Solicitando permissões](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))  
- Discute o uso de atributos que permitem que o tempo de execução saiba quais permissões seu código precisa executar.  
+ Discute o uso de atributos que permitem que o runtime saiba quais permissões seu código precisa executar.  
   
  [Principais conceitos de segurança](../../standard/security/key-security-concepts.md)  
  Links para tópicos que abrangem aspectos básicos de segurança de código.  
@@ -57,5 +57,5 @@ O Windows Forms oferece um modelo de segurança baseado em código (os níveis d
  [Determinando quando modificar a política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/xky659fc(v=vs.100))  
  Explica como determinar quando seus aplicativos precisam divergir da política de segurança padrão.  
   
- [Implantar política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
+ [Implantando política de segurança](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/13wcxx6y(v=vs.100))  
  Discute a melhor maneira de implantar alterações de política de segurança.

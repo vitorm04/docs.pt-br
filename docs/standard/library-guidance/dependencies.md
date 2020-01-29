@@ -2,12 +2,12 @@
 title: Dependências e bibliotecas do .NET
 description: Melhores práticas para gerenciar as dependências do NuGet em bibliotecas do .NET.
 ms.date: 10/02/2018
-ms.openlocfilehash: b5742bf4724c4aff4beb4ca40a543bd096528a00
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706498"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731485"
 ---
 # <a name="dependencies"></a>Dependências
 
@@ -29,7 +29,7 @@ A maioria das dependências de losangos é facilmente resolvida. No entanto, pod
 
 Não é possível saber quais pacotes serão usados junto com o seu. Uma boa maneira de reduzir a probabilidade de uma dependência de losango provocar falha na sua biblioteca é minimizar o número de pacotes dos quais você depende.
 
-**✔️ FAÇA** a análise da sua biblioteca do .NET quanto a dependências desnecessárias.
+✔️ Examine sua biblioteca do .NET para obter dependências desnecessárias.
 
 ## <a name="nuget-dependency-version-ranges"></a>Intervalos de versão de dependência do NuGet
 
@@ -56,11 +56,11 @@ Limites de versão superior fará com que o NuGet falhe se houver um conflito. P
 
 ![Conflito de dependência de losango](./media/dependencies/diamond-dependency-conflict.png "Conflito de dependência de losango")
 
-**❌ não** têm referências de pacote NuGet sem versão mínima.
+❌ não têm referências de pacote NuGet sem versão mínima.
 
-**❌ evitar** As referências do pacote NuGet que exigem uma versão exata.
+❌ evitar referências de pacote NuGet que exigem uma versão exata.
 
-**❌ evitar** O pacote NuGet faz referência a um limite superior de versão.
+❌ evitar referências de pacote NuGet com um limite superior de versão.
 
 ## <a name="nuget-shared-source-packages"></a>Pacotes de código-fonte compartilhado do NuGet
 
@@ -78,19 +78,19 @@ Pacotes de origem compartilhados são ótimos para incluir pequenas funcionalida
 
 Pacotes de origem compartilhado têm algumas limitações. Eles só podem ser referenciados por `PackageReference`, portanto, projetos `packages.config` mais antigos são excluídos. Também pacotes de origem compartilhados somente são utilizáveis por projetos com o mesmo tipo de linguagem. Devido a essas limitações, pacotes de origem compartilhados são melhor usados para compartilhar a funcionalidade dentro de um projeto de código-fonte aberto.
 
-**✔️ CONSIDERE** fazer referência a de código-fonte compartilhados para pequenas funcionalidades internas.
+✔️ CONSIDERE fazer referência a pacotes de origem compartilhados para partes pequenas e internas de funcionalidade.
 
-**✔️ CONSIDERE** tornar seu pacote de um pacote de origem compartilhado se ele oferecer pequenas funcionalidades internas.
+✔️ Considere tornar seu pacote um pacote de origem compartilhado se ele fornecer partes pequenas e internas de funcionalidade.
 
-**✔️ FAÇA** referência a pacotes de origem compartilhados com `PrivateAssets="All"`.
+✔️ FAZER referência a pacotes de origem compartilhados com `PrivateAssets="All"`.
 
 > Essa configuração informa que o pacote do NuGet deve ser usado apenas no tempo de desenvolvimento e não deve ser exposto como uma dependência pública.
 
-**❌ não** têm tipos de pacote de origem compartilhados em sua API pública.
+❌ não têm tipos de pacote de origem compartilhados em sua API pública.
 
 > Tipos de origem compartilhada são compilados no assembly de referência e não podem ser trocados entre os limites de assembly. Por exemplo, um tipo `IRepository` de origem compartilhada em um projeto é um tipo separado do mesmo `IRepository` de origem compartilhada em outro projeto. Tipos em pacotes de origem compartilhados devem ter uma visibilidade `internal`.
 
-**❌ não** publicar pacotes de origem compartilhados em NuGet.org.
+❌ não publicar pacotes de origem compartilhados em NuGet.org.
 
 > Pacotes de origem compartilhados contêm código-fonte e só podem ser usados por projetos com o mesmo tipo de linguagem. Por exemplo, um pacote de origem compartilhado em C# não pode ser usado por um aplicativo em F#.
 >

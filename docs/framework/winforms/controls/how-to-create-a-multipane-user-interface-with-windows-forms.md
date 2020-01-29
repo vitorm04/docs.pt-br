@@ -1,5 +1,5 @@
 ---
-title: 'Como: Criar uma Interface do Usuário com Vários Painéis nos Windows Forms'
+title: Criar uma interface do usuário de multipainel
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,25 +12,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b168a6d566e20814d4403f90e157d80efe3bf12
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747089"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731343"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Como: Criar uma Interface do Usuário com Vários Painéis nos Windows Forms
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Como criar uma interface do usuário multipainel com Windows Forms
 No procedimento a seguir, você vai criar uma interface do usuário com vários painéis semelhante à que é usada no Microsoft Outlook, com uma lista **Pasta**, um painel **Mensagens** e um painel **Visualização**. Essa organização é obtida principalmente por meio de controles de encaixe com o formulário.  
   
- Ao encaixar um controle, você determina a qual borda do contêiner pai um controle é fixado. Portanto, se você definir a <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade para <xref:System.Windows.Forms.DockStyle.Right>, a borda direita do controle será encaixada na borda direita do controle pai. Além disso, a borda encaixada do controle será redimensionada para corresponder à borda de sua caixa de controles. Para obter mais informações sobre como o <xref:System.Windows.Forms.SplitContainer.Dock%2A> propriedade funciona, consulte [como: Encaixar controles nos Windows Forms](how-to-dock-controls-on-windows-forms.md).  
+ Ao encaixar um controle, você determina a qual borda do contêiner pai um controle é fixado. Portanto, se você definir a propriedade <xref:System.Windows.Forms.SplitContainer.Dock%2A> como <xref:System.Windows.Forms.DockStyle.Right>, a borda direita do controle será encaixada na borda direita de seu controle pai. Além disso, a borda encaixada do controle será redimensionada para corresponder à borda de sua caixa de controles. Para obter mais informações sobre como a propriedade de <xref:System.Windows.Forms.SplitContainer.Dock%2A> funciona, consulte [como: encaixar controles em Windows Forms](how-to-dock-controls-on-windows-forms.md).  
   
- Este procedimento se concentra em Organizando o <xref:System.Windows.Forms.SplitContainer> e os outros controles no formulário, não na adição de funcionalidade para fazer com que o aplicativo simular o Microsoft Outlook.  
+ Este procedimento se concentra em organizar o <xref:System.Windows.Forms.SplitContainer> e os outros controles no formulário, não na adição de funcionalidade para fazer com que o aplicativo simule o Microsoft Outlook.  
   
- Para criar essa interface do usuário, você coloca todos os controles dentro de um <xref:System.Windows.Forms.SplitContainer> controle, que contém um <xref:System.Windows.Forms.TreeView> controle no painel esquerdo. O painel à direita do <xref:System.Windows.Forms.SplitContainer> controle contiver um segundo <xref:System.Windows.Forms.SplitContainer> controlar com um <xref:System.Windows.Forms.ListView> controle acima uma <xref:System.Windows.Forms.RichTextBox> controle. Eles <xref:System.Windows.Forms.SplitContainer> controles permitem que um redimensionamento independente dos outros controles no formulário. Você pode adaptar as técnicas neste procedimento para criar interfaces do usuário personalizadas.  
+ Para criar essa interface do usuário, coloque todos os controles dentro de um controle de <xref:System.Windows.Forms.SplitContainer>, que contém um controle de <xref:System.Windows.Forms.TreeView> no painel esquerdo. O painel à direita do controle de <xref:System.Windows.Forms.SplitContainer> contém um segundo controle de <xref:System.Windows.Forms.SplitContainer> com um controle de <xref:System.Windows.Forms.ListView> acima de um controle de <xref:System.Windows.Forms.RichTextBox>. Esses <xref:System.Windows.Forms.SplitContainer> controles habilitam o redimensionamento independente dos outros controles no formulário. Você pode adaptar as técnicas neste procedimento para criar interfaces do usuário personalizadas.  
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>Para criar uma interface do usuário no estilo do Outlook de forma programática  
   
-1. Em um formulário, declare cada controle que compõe a interface do usuário. Para este exemplo, use o <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>, e <xref:System.Windows.Forms.RichTextBox> controles para imitar a interface de usuário do Microsoft Outlook.  
+1. Em um formulário, declare cada controle que compõe a interface do usuário. Para este exemplo, use os controles <xref:System.Windows.Forms.TreeView>, <xref:System.Windows.Forms.ListView>, <xref:System.Windows.Forms.SplitContainer>e <xref:System.Windows.Forms.RichTextBox> para imitar a interface do usuário do Microsoft Outlook.  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -164,7 +164,7 @@ No procedimento a seguir, você vai criar uma interface do usuário com vários 
     }  
     ```  
   
-3. No Visual Basic, adicione uma chamada para o procedimento que você acabou de criar no `New()` procedimento. No Visual C#, adicione esta linha de código para o construtor da classe de formulário.  
+3. Em Visual Basic, adicione uma chamada para o procedimento que você acabou de criar no procedimento de `New()`. No Visual C#, adicione esta linha de código ao construtor para a classe Form.  
   
     ```vb  
     ' Add this to the New procedure.  
@@ -176,8 +176,8 @@ No procedimento a seguir, você vai criar uma interface do usuário com vários 
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [Controle SplitContainer](splitcontainer-control-windows-forms.md)
-- [Como: Criar uma Interface do usuário Multipainel com Windows Forms usando o Designer](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [Como criar uma interface do usuário com vários painéis com o Windows Forms usando o designer](create-a-multipane-user-interface-with-wf-using-the-designer.md)

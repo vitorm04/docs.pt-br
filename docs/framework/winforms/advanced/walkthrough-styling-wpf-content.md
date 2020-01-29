@@ -1,5 +1,5 @@
 ---
-title: 'Instruções passo a passo: criando o conteúdo WPF'
+title: 'Walkthrough: estilo de conteúdo do WPF'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
@@ -9,18 +9,18 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: e52297f51c74fc3dba93c987fd5b9bd5b6801777
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138922"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732551"
 ---
 # <a name="walkthrough-style-wpf-content"></a>Walkthrough: estilo de conteúdo do WPF
 
 Este artigo mostra como aplicar o estilo a um controle Windows Presentation Foundation (WPF) hospedado em um formulário do Windows.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>{1&gt;{2&gt;Pré-requisitos&lt;2}&lt;1}
 
 É necessário o Visual Studio para concluir este passo a passo.
 
@@ -45,7 +45,7 @@ Depois de adicionar um tipo de controle do WPF ao projeto, você pode hospedá-l
 
 5. Adicione um segundo controle de <xref:System.Windows.Controls.Button?displayProperty=nameWithType> à <xref:System.Windows.Controls.UserControl> e defina o valor da propriedade <xref:System.Windows.Controls.ContentControl.Content%2A> como **OK**.
 
-6. Compile o projeto.
+6. Crie o projeto.
 
 ## <a name="apply-a-style-to-a-wpf-control"></a>Aplicar um estilo a um controle WPF
 
@@ -124,7 +124,7 @@ Você pode aplicar um estilo diferente a um controle WPF para alterar sua aparê
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-1. Compile o projeto.
+1. Crie o projeto.
 
 1. Abra `Form1` no Designer de Formulários do Windows.
 
@@ -134,7 +134,7 @@ Você pode aplicar um estilo diferente a um controle WPF para alterar sua aparê
 
 1. Clique nos botões **OK** e **Cancelar** e exiba as diferenças.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

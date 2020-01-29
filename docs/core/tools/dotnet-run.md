@@ -2,16 +2,16 @@
 title: Comando dotnet run
 description: O comando dotnet run oferece uma opção conveniente para executar o aplicativo do código-fonte.
 ms.date: 10/31/2019
-ms.openlocfilehash: 87e9a57e874116533951a9c5eb676be76be2c98d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5920f0d1f04204b286fdf6f51f5fd13644846390
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454782"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734109"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**Este artigo se aplica a: ✓** SDK do .NET Core 1.x e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .NET Core 1. x e versões posteriores
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]

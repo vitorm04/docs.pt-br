@@ -1,5 +1,5 @@
 ---
-title: Comentários da Comunidade do WPF
+title: Recursos da comunidade
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a9e903045195d6f464659876334f7fedc5c695e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196999"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733813"
 ---
 # <a name="wpf-community-feedback"></a>Comentários da Comunidade do WPF
 
@@ -101,10 +101,10 @@ Os bugs podem pertencer às ferramentas usadas para desenvolver e compilar seus 
   - Aplicativos instalados autônomos
   - Aplicativos autônomos implantados por ClickOnce
 - A ferramenta de desenvolvimento, como:
-  - MSBuild
+  - {1&gt;MSBuild&lt;1}
   - Designer de gráfico de expressão
   - Designer interativo de expressão
-  - Visual Studio
+  - {1&gt;Visual Studio&lt;1}
 - A configuração da solução, como:
   - Uma solução
   - Um único projeto
@@ -118,6 +118,6 @@ Forneça informações sobre o cenário que manifesta o bug e seu impacto. Essas
 
 Normalmente, os cenários de perda de dados e de falhas são de alto impacto e, portanto, os mais fáceis de priorizar. Alguns bugs, no entanto, só aparecem em situações incomuns, que também podem ser cenários principais em alguns casos. Fornecer contexto em relação ao cenário e ao impacto ajuda a equipe do WPF a tomar a decisão certa.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
 - [Como relatar um problema com o Visual Studio](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

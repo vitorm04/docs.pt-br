@@ -1,5 +1,5 @@
 ---
-title: Como colocar objetos em camadas nos Windows Forms
+title: colocar objetos em camadas
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 5b8f6c00e70df94ae3a82c2c195fa781f0840a53
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 1615b9c4df222edd95cda9bceae622ba6f1d8d78
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458360"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736346"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Como: objetos de camada no Windows Forms
 
@@ -53,9 +53,9 @@ txtFirstName->BringToFront();
 > [!NOTE]
 > Windows Forms dá suporte a *Contenção de controle*. A contenção de controle envolve colocar um número de controles dentro de um controle recipiente, como um número de controles de <xref:System.Windows.Forms.RadioButton> dentro de um controle de <xref:System.Windows.Forms.GroupBox>. Em seguida, é possível dispor os controles em camadas no controle de contenção. Mover a caixa de grupo move também os controles, já que estes estão contidos dentro dela.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Controles dos Windows Forms](index.md)
+- [Controles do Windows Forms](index.md)
 - [Rotulando controles individuais dos Windows Forms e fornecendo atalhos para eles](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Controles a serem usados nos Windows Forms](controls-to-use-on-windows-forms.md)
 - [Controles dos Windows Forms por função](windows-forms-controls-by-function.md)

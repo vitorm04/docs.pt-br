@@ -1,17 +1,18 @@
 ---
 title: Controles dos Windows Forms e controles WPF equivalentes
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: e80379700b43ed5d0e74ea890c2a0eafe67159e6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
-ms.translationtype: MT
+ms.openlocfilehash: 7f531b60d8b31181688f3d0a6753b234ffc6c7dd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740231"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735212"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Controles dos Windows Forms e controles WPF equivalentes
 Muitos controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] têm controles [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] equivalentes, mas alguns controles [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] não têm equivalentes em [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Este tópico compara os tipos de controle fornecidos pelas duas tecnologias.  

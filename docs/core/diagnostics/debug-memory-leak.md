@@ -3,16 +3,16 @@ title: Tutorial de depuração de perda de memória
 description: Saiba como depurar um vazamento de memória no .NET Core.
 ms.topic: tutorial
 ms.date: 12/17/2019
-ms.openlocfilehash: cb137503cbc81f5ab9438dadcf1dc1c6750a1ca8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 014945394f87edd02c94f7c3b28043bd07470d8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715599"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737734"
 ---
 # <a name="tutorial-debug-a-memory-leak-in-net-core"></a>Tutorial: Depurar um vazamento de memória no .NET Core
 
-**Este artigo aplica-se a: ✓ o** SDK do .net Core 3,0 e versões posteriores
+**Este artigo aplica-se a:** ✔️ SDK do .net Core 3,0 e versões posteriores
 
 Este tutorial demonstra as ferramentas para analisar um vazamento de memória do .NET Core.
 

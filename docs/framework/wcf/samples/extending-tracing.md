@@ -2,12 +2,12 @@
 title: Estendendo rastreamento
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: 64f9d18b68e5f2604631a72579eb45bf7f7b8372
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: c6d62f6c334261b0dc897a1c1a2cd71d40ee4f51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716393"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734926"
 ---
 # <a name="extending-tracing"></a>Estendendo rastreamento
 Este exemplo demonstra como estender o recurso de rastreamento de Windows Communication Foundation (WCF) gravando rastreamentos de atividade definidos pelo usuário no código do cliente e do serviço. Isso permite que o usuário crie atividades de rastreamento e rastreamentos de grupo em unidades lógicas de trabalho. Também é possível correlacionar atividades por meio de transferências (dentro do mesmo ponto de extremidade) e da propagação (entre pontos de extremidade). Neste exemplo, o rastreamento está habilitado para o cliente e o serviço. Para obter mais informações sobre como habilitar o rastreamento em arquivos de configuração de cliente e serviço, consulte [rastreamento e log de mensagens](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md).  
@@ -96,6 +96,6 @@ Este exemplo demonstra como estender o recurso de rastreamento de Windows Commun
   
 3. Para executar o exemplo em uma configuração de computador único ou entre computadores, siga as instruções em [executando os exemplos de Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Veja também
 
-- [Exemplos de monitoramento do AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)
+- [Exemplos de monitoramento do AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))
