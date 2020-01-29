@@ -1,5 +1,5 @@
 ---
-title: 'Como: Definir o texto exibido por um controle do Windows Forms'
+title: Definir o texto exibido por um controle
 ms.date: 08/20/2019
 dev_langs:
 - csharp
@@ -21,26 +21,26 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 887aa5ec9b97770903cd87459d6df5adc3f7ddf0
-ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
+ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69666149"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738427"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a><span data-ttu-id="a519b-102">Como: Definir o texto exibido por um controle de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a519b-102">How to: Set the text displayed by a Windows Forms control</span></span>
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a><span data-ttu-id="b9b2f-102">Como definir o texto exibido por um controle de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9b2f-102">How to: Set the text displayed by a Windows Forms control</span></span>
 
-<span data-ttu-id="a519b-103">Os controles de Windows Forms geralmente exibem algum texto relacionado à função principal do controle.</span><span class="sxs-lookup"><span data-stu-id="a519b-103">Windows Forms controls usually display some text that's related to the primary function of the control.</span></span> <span data-ttu-id="a519b-104">Por exemplo, um <xref:System.Windows.Forms.Button> controle geralmente exibe uma legenda indicando qual ação será executada se o botão for clicado.</span><span class="sxs-lookup"><span data-stu-id="a519b-104">For example, a <xref:System.Windows.Forms.Button> control usually displays a caption indicating what action will be performed if the button is clicked.</span></span> <span data-ttu-id="a519b-105">Para todos os controles, você pode definir ou retornar o texto usando a <xref:System.Windows.Forms.Control.Text%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="a519b-105">For all controls, you can set or return the text by using the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="a519b-106">Você pode alterar a fonte usando a <xref:System.Windows.Forms.Control.Font%2A> propriedade.</span><span class="sxs-lookup"><span data-stu-id="a519b-106">You can change the font by using the <xref:System.Windows.Forms.Control.Font%2A> property.</span></span>
+<span data-ttu-id="b9b2f-103">Os controles de Windows Forms geralmente exibem algum texto relacionado à função principal do controle.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-103">Windows Forms controls usually display some text that's related to the primary function of the control.</span></span> <span data-ttu-id="b9b2f-104">Por exemplo, um controle de <xref:System.Windows.Forms.Button> geralmente exibe uma legenda indicando qual ação será executada se o botão for clicado.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-104">For example, a <xref:System.Windows.Forms.Button> control usually displays a caption indicating what action will be performed if the button is clicked.</span></span> <span data-ttu-id="b9b2f-105">Para todos os controles, você pode definir ou retornar o texto usando a propriedade <xref:System.Windows.Forms.Control.Text%2A>.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-105">For all controls, you can set or return the text by using the <xref:System.Windows.Forms.Control.Text%2A> property.</span></span> <span data-ttu-id="b9b2f-106">Você pode alterar a fonte usando a propriedade <xref:System.Windows.Forms.Control.Font%2A>.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-106">You can change the font by using the <xref:System.Windows.Forms.Control.Font%2A> property.</span></span>
 
-<span data-ttu-id="a519b-107">Você também pode definir o texto usando o [Designer](#designer).</span><span class="sxs-lookup"><span data-stu-id="a519b-107">You can also set the text by using the [designer](#designer).</span></span>
+<span data-ttu-id="b9b2f-107">Você também pode definir o texto usando o [Designer](#designer).</span><span class="sxs-lookup"><span data-stu-id="b9b2f-107">You can also set the text by using the [designer](#designer).</span></span>
 
-## <a name="programmatic"></a><span data-ttu-id="a519b-108">Program</span><span class="sxs-lookup"><span data-stu-id="a519b-108">Programmatic</span></span>
+## <a name="programmatic"></a><span data-ttu-id="b9b2f-108">Program</span><span class="sxs-lookup"><span data-stu-id="b9b2f-108">Programmatic</span></span>
 
-1. <span data-ttu-id="a519b-109">Defina a <xref:System.Windows.Forms.Control.Text%2A> Propriedade como uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="a519b-109">Set the <xref:System.Windows.Forms.Control.Text%2A> property to a string.</span></span>
+1. <span data-ttu-id="b9b2f-109">Defina a propriedade <xref:System.Windows.Forms.Control.Text%2A> como uma cadeia de caracteres.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-109">Set the <xref:System.Windows.Forms.Control.Text%2A> property to a string.</span></span>
 
-   <span data-ttu-id="a519b-110">Para criar uma tecla de acesso sublinhada, inclua um e comercial (&) antes da letra que será a tecla de acesso.</span><span class="sxs-lookup"><span data-stu-id="a519b-110">To create an underlined access key, includes an ampersand (&) before the letter that will be the access key.</span></span>
+   <span data-ttu-id="b9b2f-110">Para criar uma tecla de acesso sublinhada, inclua um e comercial (&) antes da letra que será a tecla de acesso.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-110">To create an underlined access key, includes an ampersand (&) before the letter that will be the access key.</span></span>
 
-2. <span data-ttu-id="a519b-111">Defina a <xref:System.Windows.Forms.Control.Font%2A> Propriedade como um objeto do tipo <xref:System.Drawing.Font>.</span><span class="sxs-lookup"><span data-stu-id="a519b-111">Set the <xref:System.Windows.Forms.Control.Font%2A> property to an object of type <xref:System.Drawing.Font>.</span></span>
+2. <span data-ttu-id="b9b2f-111">Defina a propriedade <xref:System.Windows.Forms.Control.Font%2A> como um objeto do tipo <xref:System.Drawing.Font>.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-111">Set the <xref:System.Windows.Forms.Control.Font%2A> property to an object of type <xref:System.Drawing.Font>.</span></span>
 
     ```vb
     Button1.Text = "Click here to save changes"
@@ -58,7 +58,7 @@ ms.locfileid: "69666149"
     ```
 
     > [!NOTE]
-    > <span data-ttu-id="a519b-112">Você pode usar um caractere de escape para exibir um caractere especial nos elementos de interface do usuário que seriam normalmente interpretados de maneira diferente, como itens de menu.</span><span class="sxs-lookup"><span data-stu-id="a519b-112">You can use an escape character to display a special character in user-interface elements that would normally interpret them differently, such as menu items.</span></span> <span data-ttu-id="a519b-113">Por exemplo, a linha de código a seguir define o texto do item de menu para ler "& agora para algo completamente diferente":</span><span class="sxs-lookup"><span data-stu-id="a519b-113">For example, the following line of code sets the menu item's text to read "& Now For Something Completely Different":</span></span>
+    > <span data-ttu-id="b9b2f-112">Você pode usar um caractere de escape para exibir um caractere especial nos elementos de interface do usuário que seriam normalmente interpretados de maneira diferente, como itens de menu.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-112">You can use an escape character to display a special character in user-interface elements that would normally interpret them differently, such as menu items.</span></span> <span data-ttu-id="b9b2f-113">Por exemplo, a linha de código a seguir define o texto do item de menu para ler "& agora para algo completamente diferente":</span><span class="sxs-lookup"><span data-stu-id="b9b2f-113">For example, the following line of code sets the menu item's text to read "& Now For Something Completely Different":</span></span>
 
     ```vb
     MPMenuItem.Text = "&& Now For Something Completely Different"
@@ -72,18 +72,18 @@ ms.locfileid: "69666149"
     mpMenuItem->Text = "&& Now For Something Completely Different";
     ```
 
-## <a name="designer"></a><span data-ttu-id="a519b-114">Designer</span><span class="sxs-lookup"><span data-stu-id="a519b-114">Designer</span></span>
+## <a name="designer"></a><span data-ttu-id="b9b2f-114">Designer</span><span class="sxs-lookup"><span data-stu-id="b9b2f-114">Designer</span></span>
 
-1. <span data-ttu-id="a519b-115">Na janela **Propriedades** no Visual Studio, defina a propriedade **Text** do controle como uma cadeia de caracteres apropriada.</span><span class="sxs-lookup"><span data-stu-id="a519b-115">In the **Properties** window in Visual Studio, set the **Text** property of the control to an appropriate string.</span></span>
+1. <span data-ttu-id="b9b2f-115">Na janela **Propriedades** no Visual Studio, defina a propriedade **Text** do controle como uma cadeia de caracteres apropriada.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-115">In the **Properties** window in Visual Studio, set the **Text** property of the control to an appropriate string.</span></span>
 
-   <span data-ttu-id="a519b-116">Para criar uma tecla de atalho sublinhada, inclua um e comercial (&) antes da letra que será a tecla de atalho.</span><span class="sxs-lookup"><span data-stu-id="a519b-116">To create an underlined shortcut key, includes an ampersand (&) before the letter that will be the shortcut key.</span></span>
+   <span data-ttu-id="b9b2f-116">Para criar uma tecla de atalho sublinhada, inclua um e comercial (&) antes da letra que será a tecla de atalho.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-116">To create an underlined shortcut key, includes an ampersand (&) before the letter that will be the shortcut key.</span></span>
 
-2. <span data-ttu-id="a519b-117">Na janela **Propriedades** , selecione o botão de reticências![(botão de reticências (...) na janela Propriedades do](./media/visual-studio-ellipsis-button.png)Visual Studio) ao lado da propriedade **Font** .</span><span class="sxs-lookup"><span data-stu-id="a519b-117">In the **Properties** window, select the ellipsis button (![Ellipsis button (...) in the Properties window of Visual Studio](./media/visual-studio-ellipsis-button.png)) next to the **Font** property.</span></span>
+2. <span data-ttu-id="b9b2f-117">Na janela **Propriedades** , selecione o botão de reticências (![botão de reticências (...) na janela Propriedades do Visual Studio](./media/visual-studio-ellipsis-button.png)) ao lado da propriedade **fonte** .</span><span class="sxs-lookup"><span data-stu-id="b9b2f-117">In the **Properties** window, select the ellipsis button (![Ellipsis button (...) in the Properties window of Visual Studio](./media/visual-studio-ellipsis-button.png)) next to the **Font** property.</span></span>
 
-   <span data-ttu-id="a519b-118">Na caixa de diálogo de fonte padrão, escolha a fonte, o estilo da fonte, o tamanho, efeitos (como riscado ou sublinhado) e o script que você deseja.</span><span class="sxs-lookup"><span data-stu-id="a519b-118">In the standard font dialog box, select the font, font style, size, effects (such as strikeout or underline), and script that you want.</span></span>
+   <span data-ttu-id="b9b2f-118">Na caixa de diálogo de fonte padrão, escolha a fonte, o estilo da fonte, o tamanho, efeitos (como riscado ou sublinhado) e o script que você deseja.</span><span class="sxs-lookup"><span data-stu-id="b9b2f-118">In the standard font dialog box, select the font, font style, size, effects (such as strikeout or underline), and script that you want.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="a519b-119">Consulte também</span><span class="sxs-lookup"><span data-stu-id="a519b-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b9b2f-119">Veja também</span><span class="sxs-lookup"><span data-stu-id="b9b2f-119">See also</span></span>
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="a519b-120">Como: Criar chaves de acesso para controles de Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a519b-120">How to: Create Access Keys for Windows Forms Controls</span></span>](how-to-create-access-keys-for-windows-forms-controls.md)
-- [<span data-ttu-id="a519b-121">Como: Responder a Windows Forms cliques de botão</span><span class="sxs-lookup"><span data-stu-id="a519b-121">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="b9b2f-120">Como criar teclas de acesso para controles dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9b2f-120">How to: Create Access Keys for Windows Forms Controls</span></span>](how-to-create-access-keys-for-windows-forms-controls.md)
+- [<span data-ttu-id="b9b2f-121">Como responder a cliques no botão dos Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b9b2f-121">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
